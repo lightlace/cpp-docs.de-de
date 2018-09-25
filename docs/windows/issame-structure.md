@@ -1,28 +1,30 @@
 ---
 title: IsSame-Struktur | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::IsSame
+- internal/Microsoft::WRL::Details::IsSame::value
 dev_langs:
 - C++
 helpviewer_keywords:
-- IsSame structure
+- Microsoft::WRL::Details::IsSame structure
+- Microsoft::WRL::Details::IsSame::value constant
 ms.assetid: 1eddbc3f-3cc5-434f-8495-e4477e1f868e
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7d1879217ac43e2d7d3714f491f44b8245f4f27
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a6d1e22d52a2e618357357555a549437ae453abe
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390518"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169696"
 ---
 # <a name="issame-structure"></a>IsSame-Struktur
 
@@ -58,9 +60,9 @@ Einen anderen Typ.
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
-|name|Beschreibung|
-|----------|-----------------|
-|[IsSame::value-Konstante](../windows/issame-value-constant.md)|Gibt an, ob ein Typ mit einer anderen identisch ist.|
+name                    | Beschreibung
+----------------------- | --------------------------------------------------
+[Issame:: value](#value) | Gibt an, ob ein Typ mit einer anderen identisch ist.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -72,6 +74,26 @@ Einen anderen Typ.
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>Siehe auch
+## <a name="value"></a>Issame:: value
 
-[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+```cpp
+template <typename T1, typename T2>
+struct IsSame
+{
+    static const bool value = false;
+};
+
+template <typename T1>
+struct IsSame<T1, T1>
+{
+    static const bool value = true;
+};
+```
+
+### <a name="remarks"></a>Hinweise
+
+Gibt an, ob ein Typ mit einer anderen identisch ist.
+
+`value` ist `true` , wenn die Vorlagenparameter identisch sind und `false` Wenn sich die Vorlagenparameter unterscheiden.

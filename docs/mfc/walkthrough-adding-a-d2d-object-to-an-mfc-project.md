@@ -1,7 +1,7 @@
 ---
-title: 'Exemplarische Vorgehensweise: Hinzufügen eines D2D-Objekts zu einem MFC-Projekt | Microsoft Docs'
+title: 'Exemplarische Vorgehensweise: Hinzufügen eines D2D-Objekts zu einem MFC-Projekt | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 06/19/2018
+ms.date: 09/20/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,24 +15,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87e1c696f3da374d7b71e1b24e3a8bd3ebfe41b9
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6117b17421e37238c9bc585677eb7b0c8ed557fb
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954870"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169657"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>Exemplarische Vorgehensweise: Hinzufügen eines D2D-Objekts zu einem MFC-Projekt
 
-In dieser exemplarischen Vorgehensweise erfahren Sie, wie eine grundlegende Direct2D hinzugefügt (D2D)-Objekt an einer Visual C++-Projekt für Microsoft Foundation Class-Bibliothek (MFC), und erstellen Sie das Projekt in eine Anwendung, die druckt "Hello, World" auf einem Farbverlaufshintergrund.
+In dieser exemplarischen Vorgehensweise erfahren, wie Sie einen einfachen Direct2D hinzufügen (D2D)-Objekt in ein Visual C++-Projekt für Microsoft Foundation Class-Bibliothek (MFC), und erstellen Sie das Projekt klicken Sie dann in eine Anwendung, die gibt "Hello, World" auf einem Farbverlaufshintergrund.
 
-Erläutert, wie Sie diese Aufgaben ausführen:
+Die exemplarische Vorgehensweise zeigt, wie folgende Aufgaben ausgeführt wird:
 
 - Erstellen Sie eine MFC-Anwendung.
 
-- Erstellen Sie einen Pinsel mit Volltonfarbe und einem linearen Farbverlaufspinsel.
+- Erstellen Sie einen Pinsel mit Volltonfarbe und einen Pinsel mit linearem Farbverlauf.
 
-- Ändern Sie die Farbverlaufspinsel, sodass es entsprechend geändert wird, wenn die Fenstergröße geändert wird.
+- Ändern Sie den Farbverlaufspinsel, damit sie ordnungsgemäß beim Ändern des Fensters angepasst wird.
 
 - Implementieren Sie einen zeichnen D2D-Handler.
 
@@ -42,19 +42,19 @@ Erläutert, wie Sie diese Aufgaben ausführen:
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie Visual Studio installiert, mit der **Desktopentwicklung mit C++** arbeitsauslastung und den optionalen **Visual C++ MFC für X86- und X64** Komponente.
+Um diese exemplarische Vorgehensweise abzuschließen, benötigen Sie Visual Studio installiert, mit der **Desktopentwicklung mit C++** arbeitsauslastung und den optionalen **Visual C++ MFC für X86 und X64** Komponente.
 
 ## <a name="to-create-an-mfc-application"></a>Zum Erstellen einer MFC_Anwendung
 
-1. Auf der **Datei** Sie im Menü **neu** und wählen Sie dann **Projekt**.
+1. Auf der **Datei** Startmenü **neu** und wählen Sie dann **Projekt**.
 
-2. In der **neues Projekt** im Dialogfeld im linken Bereich unter **installierte Vorlagen**, erweitern Sie **Visual C++** und wählen Sie dann **MFC**. Wählen Sie im mittleren Bereich **MFC-Anwendung**. In der **Namen** geben *MFCD2DWalkthrough*. Klicken Sie auf **OK**.
+1. In der **neues Projekt** im Dialogfeld im linken Bereich unter **installierte Vorlagen**, erweitern Sie **Visual C++** und wählen Sie dann **MFC**. Wählen Sie im mittleren Bereich **MFC-Anwendung**. In der **Namen** geben *MFCD2DWalkthrough*. Klicken Sie auf **OK**.
 
-3. In der **MFC-Anwendung-Assistent**, wählen Sie **Fertig stellen** ohne Änderung von Einstellungen.
+1. In der **MFS-Anwendungsassistenten**, wählen Sie **Fertig stellen** ohne Änderung von Einstellungen.
 
-## <a name="to-create-a-solid-color-brush-and-a-linear-gradient-brush"></a>So erstellen einen Pinsel mit Volltonfarbe und einem linearen Farbverlaufspinsel
+## <a name="to-create-a-solid-color-brush-and-a-linear-gradient-brush"></a>Um einen Pinsel mit Volltonfarbe und einen Pinsel mit linearem Farbverlauf zu erstellen
 
-1. In **Projektmappen-Explorer**in der **MFCD2DWalkthrough** in-Projekt die **Headerdateien** Ordner öffnen Element "MFCD2DWalkthroughView.h". Fügen Sie diesen Code, um die `CMFCD2DWalkthroughView` Klasse, um drei Datenvariablen zu erstellen:
+1. In **Projektmappen-Explorer**in die **MFCD2DWalkthrough** in-Projekt die **Headerdateien** Ordner öffnen Element "MFCD2DWalkthroughView.h". Fügen Sie folgenden Code, der `CMFCD2DWalkthroughView` Klasse, um drei Data-Variablen zu erstellen:
 
    ```cpp
    CD2DTextFormat* m_pTextFormat;
@@ -62,9 +62,9 @@ Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie Visual Stud
    CD2DLinearGradientBrush* m_pLinearGradientBrush;
    ```
 
-   Speichern Sie die Datei, und schließen Sie es.
+   Speichern Sie die Datei, und schließen Sie sie.
 
-2. In der **Quelldateien** Ordner öffnen Element "MFCD2DWalkthroughView.cpp". Im Konstruktor für die `CMFCD2DWalkthroughView` Klasse, fügen Sie Code hinzu:
+1. In der **Quelldateien** Ordner öffnen Element "MFCD2DWalkthroughView.cpp". Im Konstruktor für die `CMFCD2DWalkthroughView` Klasse, fügen Sie folgenden Code:
 
    ```cpp
    // Enable D2D support for this window:
@@ -106,35 +106,35 @@ Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie Visual Stud
            D2D1::Point2F(0,0)));
    ```
 
-   Speichern Sie die Datei, und schließen Sie es.
+   Speichern Sie die Datei, und schließen Sie sie.
 
 ## <a name="to-modify-the-gradient-brush-so-that-it-will-change-appropriately-when-the-window-is-resized"></a>Der Pinsel mit Farbverlauf ändern, sodass es entsprechend beim Ändern des Fensters angepasst wird
 
-1. Auf der **Projekt** Menü wählen **Klassen-Assistent**.
+1. Auf der **Projekt** Menü wählen **-Klassen-Assistent**.
 
-2. In der **MFC-Klassen-Assistent**unter **Klassenname**Option `CMFCD2DWalkthroughView`.
+1. In der **MFC-Klassenassistent**unter **Klassenname**Option `CMFCD2DWalkthroughView`.
 
-3. Auf der **Nachrichten** Registerkarte die **Nachrichten** wählen Sie im `WM_SIZE` und wählen Sie dann **Handler hinzufügen**. Mit dieser Aktion wird die `OnSize` Nachrichtenhandler, an die `CMFCD2DWalkthroughView` Klasse.
+1. Auf der **Nachrichten** Registerkarte die **Nachrichten** Kontrollkästchen `WM_SIZE` und wählen Sie dann **Handler hinzufügen**. Diese Aktion fügt der `OnSize` Nachrichtenhandler, an die `CMFCD2DWalkthroughView` Klasse.
 
-4. In der **vorhandene Handler** wählen Sie im `OnSize`. Wählen Sie **-Code bearbeiten** zum Anzeigen der `CMFCD2DWalkthroughView::OnSize` Methode. Fügen Sie am Ende der Methode den folgenden Code ein.
+1. In der **vorhandene Handler** Kontrollkästchen `OnSize`. Wählen Sie **Code bearbeiten** zum Anzeigen der `CMFCD2DWalkthroughView::OnSize` Methode. Fügen Sie am Ende der Methode den folgenden Code ein.
 
    ```cpp
    m_pLinearGradientBrush->SetEndPoint(CPoint(cx, cy));
    ```
 
-   Speichern Sie die Datei, und schließen Sie es.
+   Speichern Sie die Datei, und schließen Sie sie.
 
-## <a name="to-implement-a-d2d-drawing-handler"></a>Zum Implementieren eines Zeichnung D2D-Handlers
+## <a name="to-implement-a-d2d-drawing-handler"></a>Um eine Zeichnung D2D-Handler zu implementieren
 
-1. Auf der **Projekt** Menü wählen **Klassen-Assistent**.
+1. Auf der **Projekt** Menü wählen **-Klassen-Assistent**.
 
-2. In der **MFC-Klassen-Assistent**unter **Klassenname**Option `CMFCD2DWalkthroughView`.
+1. In der **MFC-Klassenassistent**unter **Klassenname**Option `CMFCD2DWalkthroughView`.
 
-3. Auf der **Nachrichten** Registerkarte **benutzerdefinierte Meldung hinzufügen**.
+1. Auf der **Nachrichten** Registerkarte **benutzerdefinierte Meldung hinzufügen**.
 
-4. In der **benutzerdefinierte Meldung hinzufügen** Dialogfeld die **benutzerdefinierte Windows-Meldung** geben *AFX_WM_DRAW2D*. In der **Handler Nachrichtenname** geben *OnDraw2D*. Wählen Sie die **registrierte Meldung** aus, und wählen Sie dann **OK**. Dieser Vorgang fügt einen Meldungshandler für die AFX_WM_DRAW2D-Nachricht an die `CMFCD2DWalkthroughView` Klasse.
+1. In der **benutzerdefinierte Meldung hinzufügen** Dialogfeld die **benutzerdefinierte Windows-Meldung** geben *AFX_WM_DRAW2D*. In der **Meldungshandlername** geben *OnDraw2D*. Wählen Sie die **registrierte Meldung** aus, und wählen Sie dann **OK**. Diese Aktion Fügt einen Meldungshandler für die AFX_WM_DRAW2D-Nachricht an die `CMFCD2DWalkthroughView` Klasse.
 
-5. In der **vorhandene Handler** wählen Sie im `OnDraw2D`. Wählen Sie **-Code bearbeiten** zum Anzeigen der `CMFCD2DWalkthroughView::OnDraw2D` Methode. Verwenden Sie diesen Code für die `CMFCD2DWalkthroughView::OnDrawD2D` Methode:
+1. In der **vorhandene Handler** Kontrollkästchen `OnDraw2D`. Wählen Sie **Code bearbeiten** zum Anzeigen der `CMFCD2DWalkthroughView::OnDraw2D` Methode. Verwenden Sie diesen Code für die `CMFCD2DWalkthroughView::OnDrawD2D` Methode:
 
    ```cpp
    afx_msg LRESULT CMFCD2DWalkthroughView::OnDraw2D(
@@ -159,12 +159,12 @@ Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie Visual Stud
    }
    ```
 
-   Speichern Sie die Datei, und schließen Sie es.
+   Speichern Sie die Datei, und schließen Sie sie.
 
 ## <a name="to-verify-the-results"></a>Die Ergebnisse überprüfen
 
-- Erstellen Sie die Anwendung, und führen Sie sie aus. Es muss ein Farbverlauf Rechteck verfügen, die beim Ändern der Größe des Fensters ändert. "Hello World!" sollte in der Mitte des Rechtecks angezeigt werden.
+Erstellen Sie die Anwendung, und führen Sie sie aus. Sie müssen ein Farbverlauf, der sich ändert, wenn Sie die Größe des Fensters. "Hello World!" sollte in der Mitte des Rechtecks angezeigt werden.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Exemplarische Vorgehensweisen](../mfc/walkthroughs-mfc.md)
+[Exemplarische Vorgehensweisen](../mfc/walkthroughs-mfc.md)
