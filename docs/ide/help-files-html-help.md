@@ -14,25 +14,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d180fe4f9cf1baf26b27423ffda975bfe0fe85ba
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 04d3171f1bba6b803c68b7a3b753cc70825671bb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325074"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383544"
 ---
 # <a name="help-files-html-help"></a>Hilfedateien (HTML-Hilfe)
-Die folgenden Dateien werden erstellt, wenn Sie den HTML-Hilfstyp der Hilfsunterstützung Ihrer Anwendung hinzufügen, indem Sie das Kontrollkästchen **Kontextbezogene Hilfe** aktivieren und das **HTML-Hilfeformat** auf der Seite [Erweiterte Funktionen](../mfc/reference/advanced-features-mfc-application-wizard.md) des MFC-Anwendungs-Assistenten auswählen.  
-  
-|Dateiname|Speicherort für das Verzeichnis|Speicherort für den Projektmappen-Explorer|description|  
-|---------------|------------------------|--------------------------------|-----------------|  
-|*Projname*.hhp|*Projname*\hlp|HTML-Hilfedateien|Die Hilfsprojektdatei. Sie enthält die Daten, die zum Kompilieren der Hilfedateien in eine HXS- oder CHM-Datei erforderlich sind.|  
-|*Projname*.hhk|*Projname*\hlp|HTML-Hilfedateien|Enthält einen Index der Hilfethemen.|  
-|*Projname*.hhc|*Projname*\hlp|HTML-Hilfedateien|Der Inhalt des Hilfeprojekts.|  
-|Makehtmlhelp.bat|*Projname*|Quelldateien|Wird vom System zum Erstellen des Hilfeprojekts verwendet, wenn das Projekt kompiliert wird.|  
-|Afxcore.htm|*Projname*\hlp|HTML-Hilfethemen|Enthält die Standardhilfethemen für standardmäßige MFC-Befehle und Bildschirmobjekte. Dieser Datei können Sie Ihre eigenen Hilfethemen hinzufügen.|  
-|Afxprint.htm|*Projname*\hlp|HTML-Hilfethemen|Enthält Hilfethemen für die Druckbefehle.|  
-|*.jpg; \*.gif|*Projname*\hlp\Images|Ressourcendateien|Enthält Bilder zu den verschiedenen generierten Hilfedateithemen.|  
-  
-## <a name="see-also"></a>Siehe auch  
- [Für Visual C++-Projekte erstellte Dateitypen](../ide/file-types-created-for-visual-cpp-projects.md)
+
+Die folgenden Dateien werden erstellt, wenn Sie den HTML-Hilfstyp der Hilfsunterstützung Ihrer Anwendung hinzufügen, indem Sie das Kontrollkästchen **Kontextbezogene Hilfe** aktivieren und das **HTML-Hilfeformat** auf der Seite [Erweiterte Funktionen](../mfc/reference/advanced-features-mfc-application-wizard.md) des MFC-Anwendungs-Assistenten auswählen.
+
+|Dateiname|Speicherort für das Verzeichnis|Speicherort für den Projektmappen-Explorer|Beschreibung |
+|---------------|------------------------|--------------------------------|-----------------|
+|*Projname*.hhp|*Projname*\hlp|HTML-Hilfedateien|Die Hilfsprojektdatei. Sie enthält die Daten, die zum Kompilieren der Hilfedateien in eine HXS- oder CHM-Datei erforderlich sind.|
+|*Projname*.hhk|*Projname*\hlp|HTML-Hilfedateien|Enthält einen Index der Hilfethemen.|
+|*Projname*.hhc|*Projname*\hlp|HTML-Hilfedateien|Der Inhalt des Hilfeprojekts.|
+|Makehtmlhelp.bat|*Projname*|Quelldateien|Wird vom System zum Erstellen des Hilfeprojekts verwendet, wenn das Projekt kompiliert wird.|
+|Afxcore.htm|*Projname*\hlp|HTML-Hilfethemen|Enthält die Standardhilfethemen für standardmäßige MFC-Befehle und Bildschirmobjekte. Dieser Datei können Sie Ihre eigenen Hilfethemen hinzufügen.|
+|Afxprint.htm|*Projname*\hlp|HTML-Hilfethemen|Enthält Hilfethemen für die Druckbefehle.|
+|*.jpg; \*.gif|*Projname*\hlp\Images|Ressourcendateien|Enthält Bilder zu den verschiedenen generierten Hilfedateithemen.|
+
+## <a name="see-also"></a>Siehe auch
+
+[Für Visual C++-Projekte erstellte Dateitypen](../ide/file-types-created-for-visual-cpp-projects.md)

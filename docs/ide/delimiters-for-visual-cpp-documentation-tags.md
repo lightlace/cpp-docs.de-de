@@ -14,67 +14,69 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2394516773f428ae62fb9e8e39dd78dd790bebd
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 44d867f9bc33c56bf57f55d75a4f8babbbf70748
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46033913"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401757"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Trennzeichen für Visual C++-Dokumentationstags
-Die Verwendung von Dokumentationstags erfordert Trennzeichen, die dem Compiler angeben, wo ein Dokumentationskommentar beginnt und endet.  
-  
- Sie können die folgenden Arten von Trennzeichen mit den XML-Dokumentationstags verwenden:  
+
+Die Verwendung von Dokumentationstags erfordert Trennzeichen, die dem Compiler angeben, wo ein Dokumentationskommentar beginnt und endet.
+
+Sie können die folgenden Arten von Trennzeichen mit den XML-Dokumentationstags verwenden:
 |||
 |-|-|
 |`///`  | Dies ist die Form, die in den Dokumentationsbeispielen und von den Visual C++-Projektvorlagen verwendet wird.  |
 | `/** */`  | Dies sind mehrzeilige Trennzeichen.  |
-  
-Für die Verwendung von `/** */`-Trennzeichen gibt es einige Formatierungsregeln:  
-  
--   Wenn der Rest der Zeile, die das `/**`-Trennzeichen enthält, Leerraum ist, wird die Zeile nicht für Kommentare verarbeitet. Wenn das erste Zeichen ein Leerzeichen ist, wird dieses Leerzeichen ignoriert und der Rest der Zeile verarbeitet. Andernfalls wird de gesamte Text der Zeile nach dem `/**`-Trennzeichen als Teil des Kommentars verarbeitet.  
-  
--   Wenn die Zeile mit dem `*/`-Trennzeichen bis zum `*/`-Trennzeichen nur Leerzeichen enthält, wird die Zeile ignoriert. Andernfalls wird der Text in der Zeile bis zum `*/`-Trennzeichen als Teil des Kommentars verarbeitet, gemäß den Mustervergleichsregeln, die im folgenden Aufzählungszeichen beschriebenen werden.  
-  
--   Bei Zeilen nach der Zeile mit dem `/**`-Trennzeichen sucht der Compiler zu Beginn jeder Zeile nach einem gemeinsamen Muster, das aus optionalen Leerzeichen und einem Sternchen (`*`) gefolgt von weiteren optionalen Leerzeichen besteht. Wenn der Compiler mehrere übereinstimmende Zeichen am Anfang jeder Zeile findet, wird das Muster für alle Zeilen nach dem `/**`-Trennzeichen ignoriert, bis zu und ggf. einschließlich der Zeile, die das `*/`-Trennzeichen enthält.  
-  
-Einige Beispiele:  
-  
--   Der einzige Teil des folgenden Kommentars, der verarbeitet wird, ist die Zeile, die mit `<summary>` beginnt. Die folgenden zwei Tagformate erzeugen die gleichen Kommentare:  
-  
-    ```  
-    /**  
-    <summary>text</summary>   
-    */  
-    /** <summary>text</summary> */  
-    ```  
-  
--   Der Compiler wendet ein Muster von „\*“ an, um den Anfang der zweiten und dritten Zeile zu ignorieren.  
-  
-    ```  
-    /**  
-     * <summary>  
-     *  text </summary>*/  
-    ```  
-  
--   Der Compiler findet in diesem Kommentar kein Muster, da sich in der zweiten Zeile kein Sternchen befindet. Daher wird der gesamte Text in der zweiten und dritten Zeile bis zum `*/` als Teil des Kommentars verarbeitet.  
-  
-    ```  
-    /**  
-     * <summary>  
-       text </summary>*/  
-    ```  
-  
--   Der Compiler findet aus zwei Gründen kein Muster in diesem Kommentar. Erstens gibt es keine Zeile, die mit einer konsistenten Anzahl von Leerzeichen vor dem Sternchen beginnt. Zweitens beginnt die fünfte Zeile mit einem Tab, der mit Leerzeichen nicht übereinstimmt. Daher wird der gesamte Text ab der zweiten Zeile bis zum `*/` als Teil des Kommentar verarbeitet.  
-  
-    ```  
-    /**  
-      * <summary>  
-      * text   
-     *  text2  
-       *  </summary>  
-    */  
-    ```  
-  
-## <a name="see-also"></a>Siehe auch  
- [XML-Dokumentation](../ide/xml-documentation-visual-cpp.md)
+
+Für die Verwendung von `/** */`-Trennzeichen gibt es einige Formatierungsregeln:
+
+- Wenn der Rest der Zeile, die das `/**`-Trennzeichen enthält, Leerraum ist, wird die Zeile nicht für Kommentare verarbeitet. Wenn das erste Zeichen ein Leerzeichen ist, wird dieses Leerzeichen ignoriert und der Rest der Zeile verarbeitet. Andernfalls wird de gesamte Text der Zeile nach dem `/**`-Trennzeichen als Teil des Kommentars verarbeitet.
+
+- Wenn die Zeile mit dem `*/`-Trennzeichen bis zum `*/`-Trennzeichen nur Leerzeichen enthält, wird die Zeile ignoriert. Andernfalls wird der Text in der Zeile bis zum `*/`-Trennzeichen als Teil des Kommentars verarbeitet, gemäß den Mustervergleichsregeln, die im folgenden Aufzählungszeichen beschriebenen werden.
+
+- Bei Zeilen nach der Zeile mit dem `/**`-Trennzeichen sucht der Compiler zu Beginn jeder Zeile nach einem gemeinsamen Muster, das aus optionalen Leerzeichen und einem Sternchen (`*`) gefolgt von weiteren optionalen Leerzeichen besteht. Wenn der Compiler mehrere übereinstimmende Zeichen am Anfang jeder Zeile findet, wird das Muster für alle Zeilen nach dem `/**`-Trennzeichen ignoriert, bis zu und ggf. einschließlich der Zeile, die das `*/`-Trennzeichen enthält.
+
+Einige Beispiele:
+
+- Der einzige Teil des folgenden Kommentars, der verarbeitet wird, ist die Zeile, die mit `<summary>` beginnt. Die folgenden zwei Tagformate erzeugen die gleichen Kommentare:
+
+    ```cpp
+    /**
+    <summary>text</summary>
+    */
+    /** <summary>text</summary> */
+    ```
+
+- Der Compiler wendet ein Muster von „\*“ an, um den Anfang der zweiten und dritten Zeile zu ignorieren.
+
+    ```cpp
+    /**
+     * <summary>
+     *  text </summary>*/
+    ```
+
+- Der Compiler findet in diesem Kommentar kein Muster, da sich in der zweiten Zeile kein Sternchen befindet. Daher wird der gesamte Text in der zweiten und dritten Zeile bis zum `*/` als Teil des Kommentars verarbeitet.
+
+    ```cpp
+    /**
+     * <summary>
+       text </summary>*/
+    ```
+
+- Der Compiler findet aus zwei Gründen kein Muster in diesem Kommentar. Erstens gibt es keine Zeile, die mit einer konsistenten Anzahl von Leerzeichen vor dem Sternchen beginnt. Zweitens beginnt die fünfte Zeile mit einem Tab, der mit Leerzeichen nicht übereinstimmt. Daher wird der gesamte Text ab der zweiten Zeile bis zum `*/` als Teil des Kommentar verarbeitet.
+
+    ```cpp
+    /**
+      * <summary>
+      * text
+     *  text2
+       *  </summary>
+    */
+    ```
+
+## <a name="see-also"></a>Siehe auch
+
+[XML-Dokumentation](../ide/xml-documentation-visual-cpp.md)

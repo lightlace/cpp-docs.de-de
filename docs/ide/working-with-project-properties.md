@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9961eaa6529773e8d21d9c953242d1656a6a443
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 85439e191ac8676603c9d7fab8a41bb126e97b9e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211662"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398663"
 ---
 # <a name="working-with-project-properties"></a>Arbeiten mit Projekteigenschaften
 
@@ -141,11 +141,11 @@ Ein benutzerdefiniertes Makro wird in einem Eigenschaftenblatt gespeichert. Wenn
 
 ##### <a name="to-create-a-user-defined-macro"></a>So erstellen Sie ein benutzerdefiniertes Makro
 
-1.  Öffnen Sie im Fenster **Eigenschaften-Manager** (klicken Sie auf der Menüleiste auf **Ansicht** > **Eigenschaften-Manager**) das Kontextmenü für ein Eigenschaftenblatt (der Name endet auf „.user“), und wählen Sie „Eigenschaften“ aus. Das Dialogfeld **Eigenschaftenseiten** für dieses Eigenschaftenblatt wird geöffnet.
+1. Öffnen Sie im Fenster **Eigenschaften-Manager** (klicken Sie auf der Menüleiste auf **Ansicht** > **Eigenschaften-Manager**) das Kontextmenü für ein Eigenschaftenblatt (der Name endet auf „.user“), und wählen Sie „Eigenschaften“ aus. Das Dialogfeld **Eigenschaftenseiten** für dieses Eigenschaftenblatt wird geöffnet.
 
-2.  Klicken Sie im linken Bereich des Dialogfelds auf **Benutzermakros**. Klicken Sie im rechten Bereich auf die Schaltfläche **Makro hinzufügen**, um das Dialogfeld **Benutzermakro hinzufügen** zu öffnen.
+1. Klicken Sie im linken Bereich des Dialogfelds auf **Benutzermakros**. Klicken Sie im rechten Bereich auf die Schaltfläche **Makro hinzufügen**, um das Dialogfeld **Benutzermakro hinzufügen** zu öffnen.
 
-3.  Geben Sie im Dialogfeld einen Namen und einen Wert für das Makro an. Optional können Sie das Kontrollkästchen **Makro als Umgebungsvariable in Buildumgebung festlegen** aktivieren.
+1. Geben Sie im Dialogfeld einen Namen und einen Wert für das Makro an. Optional können Sie das Kontrollkästchen **Makro als Umgebungsvariable in Buildumgebung festlegen** aktivieren.
 
 ## <a name="property-editor"></a>Eigenschaften-Editor
 

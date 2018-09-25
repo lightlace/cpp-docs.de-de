@@ -1,7 +1,7 @@
 ---
 title: 'Visual C++-Handbuch: Portieren und Aktualisieren | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-language
 ms.topic: conceptual
@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06350e851501cfa26d1ea4d326c26d7a37270889
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 1b573a22b9502548cc84f2bd459cda72d071cf68
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578202"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494399"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++-Handbuch: Portieren und Aktualisieren
+
 Dieses Thema enthält eine Anleitung zum Aktualisieren von Visual C++-Code. Dazu gehört dafür zu sorgen, dass der Code in einer neueren Version der Tools fehlerfrei kompiliert und ausgeführt wird, und dass die Vorteile neuer Sprach- und Visual Studio-Features genutzt werden. Dieses Thema enthält außerdem Informationen zum Migrieren von Legacy-Apps zu moderneren Plattformen.  
   
 ## <a name="reasons-to-upgrade-visual-c-code"></a>Gründe für ein Upgrade von Visual C++-Code  
@@ -92,7 +93,6 @@ Vielleicht haben sich auch Ihre Anforderungen geändert, oder Sie können absehe
 |[Portieren auf die universelle Windows-Plattform](porting-to-the-universal-windows-platform-cpp.md)|Enthält Informationen zum Portieren von Code für Windows 10|  
 |[Einführung in Visual C++ für UNIX-Benutzer](introduction-to-visual-cpp-for-unix-users.md)|Enthält Informationen für UNIX-Benutzer, die noch keine Erfahrungen mit Visual C++ sammeln konnten und die Anwendung produktiv einsetzen möchten.|  
 |[Portieren von UNIX auf Win32](porting-from-unix-to-win32.md)|Erläutert die Optionen zum Migrieren von UNIX-Anwendungen zu Windows.|  
-|[Einführung in die C++/CLI-Migration](../dotnet/cpp-cli-migration-primer.md)|Erläutert ausführlich das Upgrade der Managed Extensions for C++-Syntax auf die neue Syntax. Weitere Informationen finden Sie unter [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md).|  
   
 ## <a name="see-also"></a>Siehe auch  
 

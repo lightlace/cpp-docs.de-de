@@ -16,41 +16,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f3c92fa219c32ca00050597dab5adfcec17e86b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 92312bc130ed24f2aafe2e4b95e2c4bcf6381215
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703546"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429668"
 ---
 # <a name="implement-connection-point-wizard"></a>Assistent zum Implementieren von Verbindungspunkten
 
-Dieser Assistent implementiert einen Verbindungspunkt für ein COM-Objekt. Ein verbindungsfähiges Objekt (d.h. eine Quelle) kann einen Verbindungspunkt für seine eigenen Schnittstellen oder für Ausgangsschnittstellen zur Verfügung stellen. Visual C++ und Windows stellen Typbibliotheken bereit, die über Ausgangsschnittstellen verfügen. Jede Ausgangsschnittstelle kann von einem Client auf einem Objekt (d.h. eine Senke) implementiert werden.  
-  
-Weitere Informationen finden Sie unter [ATL Connection Points (ATL-Verbindungspunkte)](../atl/atl-connection-points.md).  
-  
+Dieser Assistent implementiert einen Verbindungspunkt für ein COM-Objekt. Ein verbindungsfähiges Objekt (d.h. eine Quelle) kann einen Verbindungspunkt für seine eigenen Schnittstellen oder für Ausgangsschnittstellen zur Verfügung stellen. Visual C++ und Windows stellen Typbibliotheken bereit, die über Ausgangsschnittstellen verfügen. Jede Ausgangsschnittstelle kann von einem Client auf einem Objekt (d.h. eine Senke) implementiert werden.
+
+Weitere Informationen finden Sie unter [ATL Connection Points (ATL-Verbindungspunkte)](../atl/atl-connection-points.md).
+
 - **Verfügbare Typbibliotheken**
 
-   Zeigt die verfügbaren Typbibliotheken an, die die Schnittstellendefinitionen enthalten, für die Sie Verbindungspunkte implementieren können. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um eine Datei zu suchen, die die zu verwendende Typbibliothek enthält.  
-  
+   Zeigt die verfügbaren Typbibliotheken an, die die Schnittstellendefinitionen enthalten, für die Sie Verbindungspunkte implementieren können. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um eine Datei zu suchen, die die zu verwendende Typbibliothek enthält.
+
 - **Position**
 
-   Zeigt den Speicherort der Typbibliothek an, die in der Liste **Verfügbare Typbibliotheken** aktuell ausgewählt ist.  
-  
+   Zeigt den Speicherort der Typbibliothek an, die in der Liste **Verfügbare Typbibliotheken** aktuell ausgewählt ist.
+
 - **Schnittstellen**
 
-   Zeigt die Schnittstellen an, deren Definitionen in der aktuell im Feld **Verfügbare Typbibliotheken** ausgewählten Typbibliothek enthalten sind.  
-  
-   |Schaltfläche „Übertragen“|Beschreibung |  
-   |---------------------|-----------------|  
-   |**>**|Fügt den Namen der aktuell in der Liste **Schnittstellen** ausgewählten Schnittstelle der Liste **Verbindungspunkte implementieren** hinzu.|  
-   |**>>**|Fügt alle Namen der in der Liste **Schnittstellen** verfügbaren Schnittstellen der Liste **Verbindungspunkte implementieren** hinzu.|  
-   |**\<**|Entfernt den Namen der Schnittstelle, die aktuell in der Liste **Verbindungspunkte implementieren** ausgewählt ist.|  
-   |**\<\<**|Entfernt alle Namen der Schnittstellen, die aktuell in der Liste **Verbindungspunkte implementieren** aufgelistet sind.|  
-  
+   Zeigt die Schnittstellen an, deren Definitionen in der aktuell im Feld **Verfügbare Typbibliotheken** ausgewählten Typbibliothek enthalten sind.
+
+   |Schaltfläche „Übertragen“|Beschreibung |
+   |---------------------|-----------------|
+   |**>**|Fügt den Namen der aktuell in der Liste **Schnittstellen** ausgewählten Schnittstelle der Liste **Verbindungspunkte implementieren** hinzu.|
+   |**>>**|Fügt alle Namen der in der Liste **Schnittstellen** verfügbaren Schnittstellen der Liste **Verbindungspunkte implementieren** hinzu.|
+   |**\<**|Entfernt den Namen der Schnittstelle, die aktuell in der Liste **Verbindungspunkte implementieren** ausgewählt ist.|
+   |**\<\<**|Entfernt alle Namen der Schnittstellen, die aktuell in der Liste **Verbindungspunkte implementieren** aufgelistet sind.|
+
 - **Verbindungspunkte implementieren**
 
-   Zeigt den Namen der Schnittstellen an, für die Sie Verbindungspunkte implementieren, wenn Sie auf **Fertig stellen** klicken.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Implementieren eines Verbindungspunktes](../ide/implementing-a-connection-point-visual-cpp.md)
+   Zeigt den Namen der Schnittstellen an, für die Sie Verbindungspunkte implementieren, wenn Sie auf **Fertig stellen** klicken.
+
+## <a name="see-also"></a>Siehe auch
+
+[Implementieren eines Verbindungspunktes](../ide/implementing-a-connection-point-visual-cpp.md)

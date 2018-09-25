@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44211105429e33c136999a7877ac6ee42af29f17
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 5058e0b3bab1fb5fb5e8d52b55e3fa7c37fd8a4e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327839"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430044"
 ---
 # <a name="move-definition-location"></a>Definitionsspeicherort verschieben
 **Zweck:** Sofortiges Verschieben einer Funktionsdefinition zu der entsprechenden Headerdatei.
 
-**Anwendung:** Wenn Sie über eine Funktion verfügen, die in eine Headerdatei verschoben werden soll.  
+**Anwendung:** Wenn Sie über eine Funktion verfügen, die in eine Headerdatei verschoben werden soll.
 
 **Grund:** Sie könnten des Feature manuell verschieben, jedoch verschiebt dieses Feature sie automatisch und erstellt bei Bedarf die Headerdatei.
 

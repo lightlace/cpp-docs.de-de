@@ -17,23 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4ea6619804c4215ecb53fa0e92a2b12bbdc5e31
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9dfadd39281143baa35d8a4e30fcef345335cacc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33334398"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401912"
 ---
 # <a name="makefile-project-wizard"></a>Makefile-Projekt-Assistent
-Verwenden Sie diesen Assistenten zum Erstellen einer Befehlszeile zum Ausführen der Build-Engine. Nachdem Sie das Projekt erstellt haben, können Sie die Eigenschaften des Projekts in der [Eigenschaftenseite](../ide/working-with-project-properties.md) anzeigen und bearbeiten.  
-  
-## <a name="overview"></a>Übersicht  
- Auf dieser Seite des Assistenten werden die aktuellen Projekteinstellungen für das Projekt beschrieben, das Sie erstellen. Standardmäßig ist das Projekt so eingerichtet, dass es die Debug- und Releasekonfigurationen der Datei *ProjName.exe* erstellt.  
-  
- Klicken Sie zum Ändern dieser Standardeinstellungen auf die Registerkarte [Anwendungseinstellungen](../ide/application-settings-makefile-project-wizard.md) in der linken Spalte des Assistenten, und nehmen Sie die gewünschten Änderungen vor.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Creating a Makefile Project (Erstellen eines Makefile-Projekts)](../ide/creating-a-makefile-project.md)   
- [NMAKE Reference (NMAKE-Referenz)](../build/nmake-reference.md)   
- [Special Characters in a Makefile (Sonderzeichen in einem Makefile)](../build/special-characters-in-a-makefile.md)   
- [Inhalt eines Makefiles](../build/contents-of-a-makefile.md)
+
+Verwenden Sie diesen Assistenten zum Erstellen einer Befehlszeile zum Ausführen der Build-Engine. Nachdem Sie das Projekt erstellt haben, können Sie die Eigenschaften des Projekts in der [Eigenschaftenseite](../ide/working-with-project-properties.md) anzeigen und bearbeiten.
+
+## <a name="overview"></a>Übersicht
+
+Auf dieser Seite des Assistenten werden die aktuellen Projekteinstellungen für das Projekt beschrieben, das Sie erstellen. Standardmäßig ist das Projekt so eingerichtet, dass es die Debug- und Releasekonfigurationen der Datei *ProjName.exe* erstellt.
+
+Klicken Sie zum Ändern dieser Standardeinstellungen auf die Registerkarte [Anwendungseinstellungen](../ide/application-settings-makefile-project-wizard.md) in der linken Spalte des Assistenten, und nehmen Sie die gewünschten Änderungen vor.
+
+## <a name="see-also"></a>Siehe auch
+
+[Erstellen eines Makefile-Projekts](../ide/creating-a-makefile-project.md)<br>
+[NMAKE-Referenz](../build/nmake-reference.md)<br>
+[Sonderzeichen in einem Makefile](../build/special-characters-in-a-makefile.md)<br>
+[Inhalt eines Makefiles](../build/contents-of-a-makefile.md)

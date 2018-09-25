@@ -18,51 +18,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dae0eef25b11d49e5f869d88862e602d862135c1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f1a81bc910ca9d1682fa5093b4d3027b8090f585
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082247"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397350"
 ---
 # <a name="ltsummarygt-visual-c"></a>&lt;summary&gt; (Visual C++)
-Das \<summary>-Tag sollte verwendet werden, um einen Typ oder einen Typmember zu beschreiben. Verwenden Sie [\<remarks>](../ide/remarks-visual-cpp.md), um zusätzliche Informationen zu einer Typbeschreibung hinzuzufügen.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-<summary>description</summary>  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+
+Das \<summary>-Tag sollte verwendet werden, um einen Typ oder einen Typmember zu beschreiben. Verwenden Sie [\<remarks>](../ide/remarks-visual-cpp.md), um zusätzliche Informationen zu einer Typbeschreibung hinzuzufügen.
+
+## <a name="syntax"></a>Syntax
+
+```
+<summary>description</summary>
+```
+
+#### <a name="parameters"></a>Parameter
+
 *Beschreibung*<br/>
-Eine Übersicht des Objekts.  
-  
-## <a name="remarks"></a>Hinweise  
- Der Text für das \<summary>-Tag ist die einzige Informationsquelle über den Typ in IntelliSense und wird auch im [Objektkatalog](/visualstudio/ide/viewing-the-structure-of-code) und im Webbericht über Codekommentare angezeigt.  
-  
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// xml_summary_tag.cpp  
-// compile with: /LD /clr /doc  
-// post-build command: xdcmake xml_summary_tag.dll  
-  
-/// Text for class MyClass.  
-public ref class MyClass {  
-public:  
-   /// <summary>MyMethod is a method in the MyClass class.  
-   /// <para>Here's how you could make a second paragraph in a description. <see cref="System::Console::WriteLine"/> for information about output statements.</para>  
-   /// <seealso cref="MyClass::MyMethod2"/>  
-   /// </summary>  
-   void MyMethod(int Int1) {}  
-  
-   /// text  
-   void MyMethod2() {}  
-};  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [XML-Dokumentation](../ide/xml-documentation-visual-cpp.md)
+Eine Übersicht des Objekts.
+
+## <a name="remarks"></a>Hinweise
+
+Der Text für das \<summary>-Tag ist die einzige Informationsquelle über den Typ in IntelliSense und wird auch im [Objektkatalog](/visualstudio/ide/viewing-the-structure-of-code) und im Webbericht über Codekommentare angezeigt.
+
+Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.
+
+## <a name="example"></a>Beispiel
+
+```
+// xml_summary_tag.cpp
+// compile with: /LD /clr /doc
+// post-build command: xdcmake xml_summary_tag.dll
+
+/// Text for class MyClass.
+public ref class MyClass {
+public:
+   /// <summary>MyMethod is a method in the MyClass class.
+   /// <para>Here's how you could make a second paragraph in a description. <see cref="System::Console::WriteLine"/> for information about output statements.</para>
+   /// <seealso cref="MyClass::MyMethod2"/>
+   /// </summary>
+   void MyMethod(int Int1) {}
+
+   /// text
+   void MyMethod2() {}
+};
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[XML-Dokumentation](../ide/xml-documentation-visual-cpp.md)

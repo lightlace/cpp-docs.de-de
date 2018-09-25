@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f913f0b3065b136f626ef15cc2a77dce8d0254f
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 0007cf50eafa7b61e48b550172eb2d316270c61f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33335090"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448322"
 ---
 # <a name="change-signature"></a>Signatur ändern
 **Zweck:** Ändern der Parameter einer Funktion.
 
-**Wann:** Wenn Sie die Parameter einer Funktion neu anordnen, hinzufügen, entfernen oder ändern möchten, die derzeit an vielen Stellen verwendet wird.  
+**Wann:** Wenn Sie die Parameter einer Funktion neu anordnen, hinzufügen, entfernen oder ändern möchten, die derzeit an vielen Stellen verwendet wird.
 
 **Grund:** Sie können diese Parameter eigenhändig manuell ändern und dann alle Aufrufe dieser Funktion suchen und nacheinander ändern, was jedoch zu Fehlern führen kann.  Bei diesem Refactoringtool wird der Task automatisch ausgeführt.
 
@@ -42,7 +42,7 @@ ms.locfileid: "33335090"
 
    ![Dialogfeld „Signatur ändern“](images/changesignature_dialog.png)
 
-   | Schaltfläche | description
+   | Schaltfläche | Beschreibung 
    | ------ | ---
    | **Nach oben/unten**    | Den ausgewählten Parameter in der Liste nach oben oder nach unten verschieben
    | **Add**        | Hinzufügen eines neuen Parameters zur Liste
@@ -60,7 +60,7 @@ ms.locfileid: "33335090"
 
    Hier stehen Ihnen folgende Optionen zur Verfügung:
 
-   | Eingabe | description
+   | Eingabe | Beschreibung 
    | ----- | ---
    | **Type**               | Der Typ des Parameters (int, double, float usw.)
    | **Name**               | Der Name des Parameters

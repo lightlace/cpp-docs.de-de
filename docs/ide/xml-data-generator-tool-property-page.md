@@ -18,33 +18,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74c95c8e8364630416025242633126f91cafbc30
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bd101d5cbea106c356fcfab5b556dc3f49fe8e87
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699933"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385039"
 ---
 # <a name="xml-data-generator-tool-property-page"></a>Tool zum Generieren von XML-Daten (Eigenschaftenseite)
-Die Eigenschaftenseite **Tool zum Generieren von XML-Daten** wird verfügbar, wenn Sie einem Projekt ein Dataset hinzufügen.  
-  
-Die Eigenschaftenseite **Tool zum Generieren von XML-Daten** enthält folgende Eigenschaften:  
-  
+
+Die Eigenschaftenseite **Tool zum Generieren von XML-Daten** wird verfügbar, wenn Sie einem Projekt ein Dataset hinzufügen.
+
+Die Eigenschaftenseite **Tool zum Generieren von XML-Daten** enthält folgende Eigenschaften:
+
 - **Ausgabedatei**
 
-   Gibt den zu verwendenden Ausgabedateinamen an.  
-  
+   Gibt den zu verwendenden Ausgabedateinamen an.
+
 - **Startbanner unterdrücken**
 
-   Unterdrückt die Anzeige von Startbanner und Informationsmeldungen.  
-  
+   Unterdrückt die Anzeige von Startbanner und Informationsmeldungen.
+
 - **Sprache des generierten Proxys**
 
-   Legt fest, ob der verwaltete Code ausgegeben wird oder nicht.  
-  
-Informationen über das Zugreifen auf die Eigenschaftenseite **Tool zum Generieren von XML-Daten** finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../ide/working-with-project-properties.md).  
-  
-Informationen über den programmgesteuerten Zugriff auf Members dieses Objekts finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCXMLDataGeneratorTool>  
-  
-## <a name="see-also"></a>Siehe auch  
- [Eigenschaftenseiten](../ide/property-pages-visual-cpp.md)
+   Legt fest, ob der verwaltete Code ausgegeben wird oder nicht.
+
+Informationen über das Zugreifen auf die Eigenschaftenseite **Tool zum Generieren von XML-Daten** finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../ide/working-with-project-properties.md).
+
+Informationen über den programmgesteuerten Zugriff auf Members dieses Objekts finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCXMLDataGeneratorTool>
+
+## <a name="see-also"></a>Siehe auch
+
+[Eigenschaftenseiten](../ide/property-pages-visual-cpp.md)
