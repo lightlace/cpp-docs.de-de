@@ -1,7 +1,7 @@
 ---
 title: 'Exemplarische Vorgehensweise: Hinzufügen ein CTaskDialog zu einer Anwendung | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 06/28/2018
+ms.date: 09/19/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f803af896c1bb2a0e5f58e45f4ef9f588f4e66d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 48efa5d85ac6c7ba7e989cc55196f12fb391fa6d
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420479"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169722"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Exemplarische Vorgehensweise: Hinzufügen eines CTaskDialog zu einer Anwendung
 
@@ -49,11 +49,11 @@ Das folgende Verfahren veranschaulicht die grundlegende Verwendung des `CTaskDia
 
 1. Erstellen Sie ein neues MFC-Anwendungsprojekt mit den Standardeinstellungen. Rufen sie *"meinProjekt"*.
 
-2. Verwenden Sie den **Projektmappen-Explorer** , die Datei „MyProject.cpp“ zu öffnen.
+1. Verwenden Sie den **Projektmappen-Explorer** , die Datei „MyProject.cpp“ zu öffnen.
 
-3. Fügen Sie nach der include-Liste `#include "afxtaskdialog.h"` ein.
+1. Fügen Sie nach der include-Liste `#include "afxtaskdialog.h"` ein.
 
-4. Suchen Sie die Methode `CMyProjectApp::InitInstance`. Fügen Sie die folgenden Codezeilen vor der `return TRUE;` -Anweisung ein. Dieser Code erstellt die Zeichenfolgen, die wir im Windows-Meldungsfeld oder im `CTaskDialog`verwenden.
+1. Suchen Sie die Methode `CMyProjectApp::InitInstance`. Fügen Sie die folgenden Codezeilen vor der `return TRUE;` -Anweisung ein. Dieser Code erstellt die Zeichenfolgen, die wir im Windows-Meldungsfeld oder im `CTaskDialog`verwenden.
 
     ```cpp
     CString message("My message to the user");
@@ -61,7 +61,7 @@ Das folgende Verfahren veranschaulicht die grundlegende Verwendung des `CTaskDia
     CString emptyString;
     ```
 
-5. Fügen Sie den folgenden Code nach dem Code aus Schritt 4 ein. Dieser Code stellt sicher, dass der Computer des Benutzers den `CTaskDialog`unterstützt. Wenn das Dialogfeld nicht unterstützt wird, zeigt die Anwendung stattdessen ein Windows-Meldungsfeld an.
+1. Fügen Sie den folgenden Code nach dem Code aus Schritt 4 ein. Dieser Code stellt sicher, dass der Computer des Benutzers den `CTaskDialog`unterstützt. Wenn das Dialogfeld nicht unterstützt wird, zeigt die Anwendung stattdessen ein Windows-Meldungsfeld an.
 
     ```cpp
     if (CTaskDialog::IsSupported())
@@ -74,19 +74,19 @@ Das folgende Verfahren veranschaulicht die grundlegende Verwendung des `CTaskDia
     }
     ```
 
-6. Fügen Sie folgenden Code zwischen den Klammern hinter der `if` -Anweisung aus Schritt 5 ein. Dieser Code erstellt den `CTaskDialog`.
+1. Fügen Sie folgenden Code zwischen den Klammern hinter der `if` -Anweisung aus Schritt 5 ein. Dieser Code erstellt den `CTaskDialog`.
 
     ```cpp
     CTaskDialog taskDialog(message, emptyString, dialogTitle, TDCBF_OK_BUTTON);
     ```
 
-7. Fügen Sie in der nächsten Zeile den folgenden Code ein. Dieser Code legt das Warnsymbol fest.
+1. Fügen Sie in der nächsten Zeile den folgenden Code ein. Dieser Code legt das Warnsymbol fest.
 
     ```cpp
     taskDialog.SetMainIcon(TD_WARNING_ICON);
     ```
 
-8. Fügen Sie in der nächsten Zeile den folgenden Code ein. Dieser Code zeigt das Aufgabendialogfeld an.
+1. Fügen Sie in der nächsten Zeile den folgenden Code ein. Dieser Code zeigt das Aufgabendialogfeld an.
 
     ```cpp
     taskDialog.DoModal();
@@ -104,15 +104,15 @@ Das folgende Verfahren zeigt, wie Sie dem `CTaskDialog` Funktionen hinzufügen k
 
 1. Navigieren Sie zur **Ressourcenansicht**. Wenn Sie die **Ressourcenansicht**nicht sehen, können Sie sie über das Menü **Ansicht** öffnen.
 
-2. Erweitern Sie die **Ressourcenansicht** , bis Sie den Ordner **Zeichenfolgentabelle** auswählen können. Erweitern Sie ihn, und doppelklicken Sie auf den Eintrag **Zeichenfolgentabelle** .
+1. Erweitern Sie die **Ressourcenansicht** , bis Sie den Ordner **Zeichenfolgentabelle** auswählen können. Erweitern Sie ihn, und doppelklicken Sie auf den Eintrag **Zeichenfolgentabelle** .
 
-3. Führen Sie einen Bildlauf zum unteren Rand der Tabelle durch, und fügen Sie einen neuen Eintrag hinzu. Ändern Sie die ID in `TEMP_LINE1`. Legen Sie **Befehlszeile 1**als Beschriftung fest.
+1. Führen Sie einen Bildlauf zum unteren Rand der Tabelle durch, und fügen Sie einen neuen Eintrag hinzu. Ändern Sie die ID in `TEMP_LINE1`. Legen Sie **Befehlszeile 1**als Beschriftung fest.
 
-4. Fügen Sie einen weiteren neuen Eintrag hinzu. Ändern Sie die ID in `TEMP_LINE2`. Legen Sie **Befehlszeile 2**als Beschriftung fest.
+1. Fügen Sie einen weiteren neuen Eintrag hinzu. Ändern Sie die ID in `TEMP_LINE2`. Legen Sie **Befehlszeile 2**als Beschriftung fest.
 
-5. Navigieren Sie zurück zu „MyProject.cpp“.
+1. Navigieren Sie zurück zu „MyProject.cpp“.
 
-6. Fügen Sie nach `CString emptyString;`den folgenden Code hinzu:
+1. Fügen Sie nach `CString emptyString;`den folgenden Code hinzu:
 
     ```cpp
     CString expandedLabel("Hide extra information");
@@ -120,7 +120,7 @@ Das folgende Verfahren zeigt, wie Sie dem `CTaskDialog` Funktionen hinzufügen k
     CString expansionInfo("This is the additional information to the user,\nextended over two lines.");
     ```
 
-7. Suchen Sie die `taskDialog.DoModal()` -Anweisung, und ersetzen Sie sie durch den folgenden Code. Dieser Code aktualisiert das Aufgabendialogfeld und fügt neue Steuerelemente hinzu:
+1. Suchen Sie die `taskDialog.DoModal()` -Anweisung, und ersetzen Sie sie durch den folgenden Code. Dieser Code aktualisiert das Aufgabendialogfeld und fügt neue Steuerelemente hinzu:
 
     ```cpp
     taskDialog.SetMainInstruction(L"Warning");
@@ -133,13 +133,13 @@ Das folgende Verfahren zeigt, wie Sie dem `CTaskDialog` Funktionen hinzufügen k
     taskDialog.SetVerificationCheckboxText(L"Remember your selection");
     ```
 
-8. Fügen Sie die folgende Codezeile hinzu, die das Aufgabendialogfeld für den Benutzer anzeigt und die Auswahl des Benutzers abruft:
+1. Fügen Sie die folgende Codezeile hinzu, die das Aufgabendialogfeld für den Benutzer anzeigt und die Auswahl des Benutzers abruft:
 
     ```cpp
     INT_PTR result = taskDialog.DoModal();
     ```
 
-9. Fügen Sie nach dem Aufruf von `taskDialog.DoModal()`den folgenden Code ein. Mit diesem Codeabschnitt wird die Eingabe des Benutzers verarbeitet:
+1. Fügen Sie nach dem Aufruf von `taskDialog.DoModal()`den folgenden Code ein. Mit diesem Codeabschnitt wird die Eingabe des Benutzers verarbeitet:
 
     ```cpp
     if (taskDialog.GetVerificationCheckboxState())
@@ -171,7 +171,7 @@ Das folgende Verfahren zeigt, wie Sie dem `CTaskDialog` Funktionen hinzufügen k
     }
     ```
 
-Ersetzen Sie im Code in Schritt 9 die Kommentare, die mit PROCESS IF beginnen, durch den Code, den Sie unter den angegebenen Bedingungen ausführen möchten.
+Ersetzen Sie im Code in Schritt 9 die Kommentare, die mit beginnen `PROCESS IF` durch den Code, der unter den angegebenen Bedingungen ausgeführt werden soll.
 
 Kompilieren Sie die Anwendung, und führen Sie sie aus. Die Anwendung zeigt das Aufgabendialogfeld an, das die neuen Steuerelemente und zusätzliche Informationen verwendet.
 
@@ -183,9 +183,9 @@ Das folgende Verfahren veranschaulicht, wie Sie ein `CTaskDialog` anzeigen, ohne
 
 1. Öffnen Sie die Datei „MyProject.cpp“, sofern noch nicht geöffnet.
 
-2. Navigieren Sie zur schließenden Klammer für die `if (CTaskDialog::IsSupported())` -Anweisung.
+1. Navigieren Sie zur schließenden Klammer für die `if (CTaskDialog::IsSupported())` -Anweisung.
 
-3. Fügen Sie den folgenden Code direkt vor der schließenden Klammer der `if` -Anweisung (vor dem `else` -Block) ein:
+1. Fügen Sie den folgenden Code direkt vor der schließenden Klammer der `if` -Anweisung (vor dem `else` -Block) ein:
 
     ```cpp
     HRESULT result2 = CTaskDialog::ShowDialog(L"My error message",
@@ -195,7 +195,7 @@ Das folgende Verfahren veranschaulicht, wie Sie ein `CTaskDialog` anzeigen, ohne
         TEMP_LINE2);
     ```
 
-Kompilieren Sie die Anwendung, und führen Sie sie aus. Die Anwendung zeigt zwei Aufgabendialogfelder an. Das erste Dialogfeld stammt aus der Prozedur „So fügen Sie Funktionen zum CTaskDialog hinzu“. Das zweite Dialogfeld stammt aus der vorherigen Prozedur.
+Kompilieren Sie die Anwendung, und führen Sie sie aus. Die Anwendung zeigt zwei Aufgabendialogfelder an. Das erste Dialogfeld stammt aus dem **um hinzufügen-Funktionen zum CTaskDialog** Prozedur; das zweite Dialogfeld stammt aus der vorherigen Prozedur.
 
 Diese Beispiele zeigen nicht alle verfügbaren Optionen für ein `CTaskDialog`, sind jedoch ein guter Anfangspunkt. Eine vollständige Beschreibung der Klasse finden Sie unter [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) .
 

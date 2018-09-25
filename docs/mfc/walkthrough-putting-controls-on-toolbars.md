@@ -1,7 +1,7 @@
 ---
 title: 'Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf der Symbolleiste | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/20/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c50be81cbddb30752f401ca7a1784cfe428c379b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a8267704e6bb1b43a13cc05d21d0572695365fd6
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384558"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169748"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Exemplarische Vorgehensweise: Steuerelemente in eine Symbolleiste einfügen
 
@@ -30,11 +30,11 @@ In diesem Thema wird das Hinzufügen einer Symbolleistenschaltfläche beschriebe
 
 Führen Sie zum Hinzufügen eines Steuerelements zu einer Symbolleiste die folgenden Schritte aus:
 
-1. Reservieren Sie eine Platzhalterressourcen-ID für die Schaltfläche in der übergeordneten Symbolleistenressource. Weitere Informationen dazu, wie Sie die Schaltflächen erstellen, indem Sie mit der Symbolleisten-Editor in Visual Studio finden Sie unter den [Symbolleisten-Editor](../windows/toolbar-editor.md) Thema.
+1. Reservieren Sie eine Platzhalterressourcen-ID für die Schaltfläche in der übergeordneten Symbolleistenressource. Weitere Informationen zum Erstellen von Schaltflächen mit den **Symbolleisten-Editor** in Visual Studio finden Sie unter den [Symbolleisten-Editor](../windows/toolbar-editor.md) Thema.
 
 1. Reservieren Sie ein Symbolleistenbild (Schaltflächensymbol) für die Schaltfläche in allen Bitmaps der übergeordneten Symbolleiste.
 
-1. Führen Sie in der Message-Handler, der die Nachricht AFX_WM_RESETTOOLBAR verarbeitet wird folgende Schritte aus:
+1. Führen Sie im Meldungshandler, der die Meldung `AFX_WM_RESETTOOLBAR` verarbeitet, folgende Schritte aus:
 
    1. Erstellen Sie das Schaltflächensteuerelement mithilfe einer von `CMFCToolbarButton` abgeleiteten Klasse.
 
@@ -55,22 +55,22 @@ Dieser Abschnitt enthält Informationen zum Erstellen einer **finden** Kombinati
 
 ### <a name="creating-the-find-control"></a>Erstellen des Suchen-Steuerelements
 
-Erstellen Sie zuerst das `Find`-Kombinationsfeld-Steuerelement:
+Erstellen Sie zunächst die **finden** Kombinationsfeld-Steuerelement:
 
 1. Fügen Sie den Anwendungsressourcen die Schaltfläche und die zugehörigen Befehle hinzu:
 
    1. Fügen Sie in den Anwendungsressourcen eine neue Schaltfläche mit einer `ID_EDIT_FIND`-Befehls-ID zu einer Symbolleiste in Ihrer Anwendung und zu allen der Symbolleiste zugeordneten Bitmaps hinzu.
 
-   1. Erstellen Sie ein neues Menüelement mit der Befehls-ID ID_EDIT_FIND.
+   1. Erstellen Sie ein neues Menüelement mit der `ID_EDIT_FIND` Befehls-ID
 
-   1. Fügen Sie der Zeichenfolgentabelle eine neue Zeichenfolge "Text suchen\nSuchen" hinzu, und weisen Sie ihr eine `ID_EDIT_FIND_COMBO`-Befehls-ID zu. Diese ID wird als Befehls-ID der `Find`-Kombinationsfelds-Schaltfläche verwendet.
+   1. Fügen Sie der Zeichenfolgentabelle eine neue Zeichenfolge "Text suchen\nSuchen" hinzu, und weisen Sie ihr eine `ID_EDIT_FIND_COMBO`-Befehls-ID zu. Diese ID wird als Befehls-ID der verwendet die **finden** Kombinationsfelds-Schaltfläche.
 
         > [!NOTE]
-        >  Da `ID_EDIT_FIND` ein Standardbefehl ist, der von `CEditView` verarbeitet wird, ist es nicht erforderlich, einen speziellen Handler für diesen Befehl zu implementieren.  Sie müssen jedoch einen Handler für den neuen Befehl `ID_EDIT_FIND_COMBO` implementieren.
+        > Da `ID_EDIT_FIND` ein Standardbefehl ist, der von `CEditView` verarbeitet wird, ist es nicht erforderlich, einen speziellen Handler für diesen Befehl zu implementieren.  Sie müssen jedoch einen Handler für den neuen Befehl `ID_EDIT_FIND_COMBO` implementieren.
 
 1. Erstellen Sie eine neue Klasse `CFindComboBox`, abgeleitet von [CComboBox-Klasse](../mfc/reference/ccombobox-class.md).
 
-1. Überschreiben Sie in der Klasse `CFindComboBox` die virtuelle Methode `PreTranslateMessage`. Diese Methode ermöglicht das Kombinationsfeld zum Verarbeiten der [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) Nachricht. Wenn der Benutzer die ESC-TASTE (`VK_ESCAPE`) drückt, kehren Sie zum Hauptrahmenfenster zurück. Wenn der Benutzer die EINGABETASTE drückt (`VK_ENTER`), senden an das Hauptrahmenfenster eine WM_COMMAND-Meldung, enthält die `ID_EDIT_FIND_COMBO` Befehls-ID
+1. Überschreiben Sie in der Klasse `CFindComboBox` die virtuelle Methode `PreTranslateMessage`. Diese Methode ermöglicht das Kombinationsfeld zum Verarbeiten der [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) Nachricht. Wenn der Benutzer die ESC-TASTE (`VK_ESCAPE`) drückt, kehren Sie zum Hauptrahmenfenster zurück. Wenn der Benutzer die EINGABETASTE (`VK_ENTER`) drückt, geben Sie im Hauptrahmenfenster eine `WM_COMMAND`-Meldung aus, die die Befehls-ID `ID_EDIT_FIND_COMBO` enthält.
 
 1. Erstellen Sie eine Klasse für den **finden** kombinationsfeldschaltfläche, abgeleitet [CMFCToolBarComboBoxButton-Klasse](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). In diesem Beispiel hat sie den Namen `CFindComboButton`.
 
@@ -88,7 +88,7 @@ Erstellen Sie zuerst das `Find`-Kombinationsfeld-Steuerelement:
 
 1. Implementieren Sie den `ID_EDIT_FIND_COMBO`-Handler in der Dokumentenansicht. Verwendung [CMFCToolBar::GetCommandButtons](../mfc/reference/cmfctoolbar-class.md#getcommandbuttons) mit `ID_EDIT_FIND_COMBO` abzurufenden alle **finden** -kombinationsfeldschaltflächen. Aufgrund der Anpassung können mehrere Kopien einer Schaltfläche mit derselben Befehls-ID vorhanden sein.
 
-9. In der ID_EDIT_FIND-Meldungshandler `OnFind`, verwenden Sie [CMFCToolBar::IsLastCommandFromButton](../mfc/reference/cmfctoolbar-class.md#islastcommandfrombutton) zu bestimmen, ob der Suchbefehl von gesendet wurde die **finden** Kombinationsfelds-Schaltfläche. Wenn dies der Fall ist, suchen Sie den Text, und fügen Sie dem Kombinationsfeld die Suchzeichenfolge hinzu.
+1. In der `ID_EDIT_FIND` Meldungshandler `OnFind`, verwenden Sie [CMFCToolBar::IsLastCommandFromButton](../mfc/reference/cmfctoolbar-class.md#islastcommandfrombutton) zu bestimmen, ob der Suchbefehl von gesendet wurde der **finden** Kombinationsfelds-Schaltfläche. Wenn dies der Fall ist, suchen Sie den Text, und fügen Sie dem Kombinationsfeld die Suchzeichenfolge hinzu.
 
 ### <a name="adding-the-find-control-to-the-main-toolbar"></a>Hinzufügen des Suchen-Steuerelements zur Hauptsymbolleiste
 
@@ -97,16 +97,16 @@ Führen Sie zum Hinzufügen der Kombinationsfeldschaltfläche zur Symbolleiste d
 1. Implementieren Sie den `AFX_WM_RESETTOOLBAR`-Meldungshandler `OnToolbarReset` im Hauptrahmenfenster.
 
     > [!NOTE]
-    >  Das Framework sendet diese Meldung an das Hauptrahmenfenster, wenn während des Anwendungsstarts eine Symbolleiste initialisiert wird oder wenn eine Symbolleiste während der Anpassung zurückgesetzt wird. In beiden Fällen müssen Sie die standard-Symbolleistenschaltfläche ersetzen, mit dem benutzerdefinierten **finden** Kombinationsfelds-Schaltfläche.
+    > Das Framework sendet diese Meldung an das Hauptrahmenfenster, wenn während des Anwendungsstarts eine Symbolleiste initialisiert wird oder wenn eine Symbolleiste während der Anpassung zurückgesetzt wird. In beiden Fällen müssen Sie die standard-Symbolleistenschaltfläche ersetzen, mit dem benutzerdefinierten **finden** Kombinationsfelds-Schaltfläche.
 
 1. In der `AFX_WM_RESETTOOLBAR` Handler auf, untersuchen Sie die Symbolleisten-ID, d. h., die *WPARAM* der AFX_WM_RESETTOOLBAR Nachricht. Wenn die Symbolleisten-ID entspricht, der Symbolleiste ist, enthält die **finden** kombinationsfeldschaltfläche, rufen [CMFCToolBar::ReplaceButton](../mfc/reference/cmfctoolbar-class.md#replacebutton) ersetzen die **finden** Schaltfläche (, also die Schaltfläche mit den Befehls-ID `ID_EDIT_FIND)` mit einem `CFindComboButton` Objekt.
 
     > [!NOTE]
-    >  Sie können ein `CFindComboBox`-Objekt auf dem Stapel erstellen, da `ReplaceButton` das Schaltflächenobjekt kopiert und die Kopie beibehält.
+    > Sie können ein `CFindComboBox`-Objekt auf dem Stapel erstellen, da `ReplaceButton` das Schaltflächenobjekt kopiert und die Kopie beibehält.
 
 ### <a name="adding-the-find-control-to-the-customize-dialog-box"></a>Hinzufügen des Suchen-Steuerelements zum Dialogfeld "Anpassen"
 
-Im anpassungshandler `OnViewCustomize`, rufen Sie [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) ersetzen die **finden** Schaltfläche (d. h. die Schaltfläche mit den Befehls-ID `ID_EDIT_FIND)` mit einem `CFindComboButton` Objekt.
+Im anpassungshandler `OnViewCustomize`, rufen Sie [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) ersetzen die **finden** Schaltfläche (d. h. die Schaltfläche mit den Befehls-ID `ID_EDIT_FIND`) mit einem `CFindComboButton` Objekt.
 
 ## <a name="see-also"></a>Siehe auch
 

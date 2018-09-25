@@ -1,7 +1,7 @@
 ---
 title: 'Exemplarische Vorgehensweise: Hinzufügen von Animationen zu einem MFC-Projekt | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 06/28/2018
+ms.date: 09/20/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfcab237070b401d78c3fc52fc765930272832da
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 326535395599a76f521100475cfc80b014ba6cd9
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439275"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169436"
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>Exemplarische Vorgehensweise: Hinzufügen von Animationen zu einem MFC-Projekt
 
@@ -50,27 +50,27 @@ Um diese exemplarische Vorgehensweise abzuschließen, müssen Sie Visual Studio 
 
 1. Zeigen Sie im Menü **Datei** auf **Neu** , und klicken Sie dann auf **Projekt**.
 
-2. In der **neues Projekt** im Dialogfeld im linken Bereich unter **installierte Vorlagen**, erweitern Sie **Visual C++** und wählen Sie dann **MFC**. Wählen Sie im mittleren Bereich **MFC-Anwendung**. In der **Namen** geben *MFCAnimationWalkthrough*. Klicken Sie auf **OK**.
+1. In der **neues Projekt** im Dialogfeld im linken Bereich unter **installierte Vorlagen**, erweitern Sie **Visual C++** und wählen Sie dann **MFC**. Wählen Sie im mittleren Bereich **MFC-Anwendung**. In der **Namen** geben *MFCAnimationWalkthrough*. Klicken Sie auf **OK**.
 
-3. In der **MFS-Anwendungsassistenten** Dialogfeld überprüfen Sie, ob **Anwendungstyp** ist **mehrere Dokumente**, **Projektstil** ist **Visual Studio**, und die **Document/View Architecture Support** ausgewählt ist. Klicken Sie auf **Fertig stellen**.
+1. In der **MFS-Anwendungsassistenten** Dialogfeld überprüfen Sie, ob **Anwendungstyp** ist **mehrere Dokumente**, **Projektstil** ist **Visual Studio**, und die **Unterstützung für die Dokument-/Ansicht** ausgewählt ist. Klicken Sie auf **Fertig stellen**.
 
 ### <a name="to-add-a-menu-and-then-add-commands-to-start-and-stop-an-animation"></a>Hinzufügen eines Menüs und Befehle zum Starten und beenden eine Animation hinzufügen
 
 1. Auf der **Ansicht** Startmenü **andere Windows** , und klicken Sie dann auf **Ressourcenansicht**.
 
-2. In **Ressourcenansicht**, navigieren Sie zu der **Menü** Ordner und öffnen Sie sie. Doppelklicken Sie auf die `IDR_MFCAnimationWalTYPE` Ressource, die sie für die Änderung zu öffnen.
+1. In **Ressourcenansicht**, navigieren Sie zu der **Menü** Ordner und öffnen Sie sie. Doppelklicken Sie auf die **IDR_MFCAnimationWalkthroughTYPE** Ressource, die sie für die Änderung zu öffnen.
 
-3. Klicken Sie auf der Menüleiste in der **Text hier eingeben** geben *& Imation* zum Erstellen einer Animation-Menüs.
+1. Klicken Sie auf der Menüleiste in der **Text hier eingeben** geben *& Imation* zum Erstellen einer Animation-Menüs.
 
-4. Klicken Sie unter **Animation**in die **Text hier eingeben** geben *starten & Vorwärts* zu einen Befehl starten zu erstellen.
+1. Klicken Sie unter **Animation**in die **Text hier eingeben** geben *starten & Vorwärts* zu einen Befehl starten zu erstellen.
 
-5. Klicken Sie unter **vorwärts starten**in die **Text hier eingeben** geben *& rückwärts starten*.
+1. Klicken Sie unter **vorwärts starten**in die **Text hier eingeben** geben *& rückwärts starten*.
 
-6. Klicken Sie unter **rückwärts starten**in die **Text hier eingeben** geben *Agen & t beenden* erstellen Sie einen Befehl zum Beenden.
+1. Klicken Sie unter **rückwärts starten**in die **Text hier eingeben** geben *Agen & t beenden* erstellen Sie einen Befehl zum Beenden.
 
-7. Speichern Sie MFCAnimationWalkthrough.rc und schließen Sie sie.
+1. Speichern Sie MFCAnimationWalkthrough.rc und schließen Sie sie.
 
-8. In **Projektmappen-Explorer**, doppelklicken Sie auf "MainFrm.cpp", um sie für die Änderung zu öffnen. In der `CMainFrame::OnCreate` -Methode, suchen Sie den Abschnitt aus, die mehrere Aufrufe `lstBasicCommands.AddTail`. Fügen Sie den folgenden Code direkt nach diesem Abschnitt.
+1. In **Projektmappen-Explorer**, doppelklicken Sie auf "MainFrm.cpp", um sie für die Änderung zu öffnen. In der `CMainFrame::OnCreate` -Methode, suchen Sie den Abschnitt aus, die mehrere Aufrufe `lstBasicCommands.AddTail`. Fügen Sie den folgenden Code direkt nach diesem Abschnitt.
 
     ```cpp
     lstBasicCommands.AddTail(ID_ANIMATION_STARTFORWARD);
@@ -78,29 +78,29 @@ Um diese exemplarische Vorgehensweise abzuschließen, müssen Sie Visual Studio 
     lstBasicCommands.AddTail(ID_ANIMATION_STOP);
     ```
 
-9. Speichern Sie die Datei, und schließen Sie sie.
+1. Speichern Sie die Datei, und schließen Sie sie.
 
 ### <a name="to-create-handlers-for-the-start-and-stop-commands"></a>Erstellen Ereignishandler für das Starten und Beenden von Befehle
 
 1. Auf der **Projekt** Menü klicken Sie auf **-Klassen-Assistent**.
 
-2. In der **MFC-Klassenassistent**unter **Klassenname**Option `CMFCAnimationWalkthroughView`.
+1. In der **MFC-Klassenassistent**unter **Klassenname**Option **CMFCAnimationWalkthroughView**.
 
-3. Auf der **Befehle** Registerkarte die **Objekt-IDs** wählen Sie im `ID_ANIMATION_STARTFORWARD`, und klicken Sie dann in der **Nachrichten** wählen Sie im `COMMAND`. Klicken Sie auf **Hinzufügehandlers**.
+1. Auf der **Befehle** Registerkarte die **Objekt-IDs** wählen Sie im **ID_ANIMATION_STARTFORWARD**, und klicken Sie dann in der **Nachrichten** wählen  **Befehl**. Klicken Sie auf **Hinzufügehandlers**.
 
-4. In der **Memberfunktion hinzufügen** Dialogfeld klicken Sie auf **OK**.
+1. In der **Memberfunktion hinzufügen** Dialogfeld klicken Sie auf **OK**.
 
-5. In der **Objekt-IDs** wählen Sie im `ID_ANIMATION_STARTBACKWARD`, und klicken Sie dann in der **Nachrichten** wählen Sie im `COMMAND`. Klicken Sie auf **Hinzufügehandlers**.
+1. In der **Objekt-IDs** wählen Sie im **ID_ANIMATION_STARTBACKWARD**, und klicken Sie dann in der **Nachrichten** wählen Sie im **Befehl**. Klicken Sie auf **Hinzufügehandlers**.
 
-6. In der **Memberfunktion hinzufügen** Dialogfeld klicken Sie auf **OK**.
+1. In der **Memberfunktion hinzufügen** Dialogfeld klicken Sie auf **OK**.
 
-7. In der **Objekt-IDs** wählen Sie im `ID_ANIMATION_STOP`, und klicken Sie dann in der **Nachrichten** wählen Sie im `COMMAND`. Klicken Sie auf **Handler hinzufügen** , und klicken Sie dann auf **OK**.
+1. In der **Objekt-IDs** wählen Sie im **ID_ANIMATION_STOP**, und klicken Sie dann in der **Nachrichten** wählen Sie im **Befehl**. Klicken Sie auf **Handler hinzufügen** , und klicken Sie dann auf **OK**.
 
-8. In der **Memberfunktion hinzufügen** Dialogfeld klicken Sie auf **OK**.
+1. In der **Memberfunktion hinzufügen** Dialogfeld klicken Sie auf **OK**.
 
-9. In der **MFC-Klassenassistent**, klicken Sie auf **OK**.
+1. In der **MFC-Klassenassistent**, klicken Sie auf **OK**.
 
-10. Speichern von "MFCAnimationWalkthroughView.cpp", die im Editor geöffnet ist, aber schließen Sie es nicht.
+1. Speichern von "MFCAnimationWalkthroughView.cpp", die im Editor geöffnet ist, aber schließen Sie es nicht.
 
 ### <a name="to-add-an-animated-object-to-the-project"></a>Das Projekt ein animiertes Objekt hinzu
 
@@ -123,7 +123,7 @@ Um diese exemplarische Vorgehensweise abzuschließen, müssen Sie Visual Studio 
     };
     ```
 
-2. Am Ende der `CMFCAnimationWalkthroughView` Klasse, fügen Sie den folgenden Code hinzu.
+1. Am Ende der `CMFCAnimationWalkthroughView` Klasse, fügen Sie den folgenden Code hinzu.
 
     ```cpp
     CCustomAnimationController m_animationController;
@@ -131,22 +131,22 @@ Um diese exemplarische Vorgehensweise abzuschließen, müssen Sie Visual Studio 
     CAnimationRect m_animationRect;
     ```
 
-3. Nach der `DECLARE_MESSAGE_MAP()` Zeile, fügen Sie den folgenden Code hinzu.
+1. Nach der `DECLARE_MESSAGE_MAP()` Zeile, fügen Sie den folgenden Code hinzu.
 
     ```cpp
     void Animate(BOOL bDirection);
     ```
 
-4. Speichern Sie die Datei, und schließen Sie sie.
+1. Speichern Sie die Datei, und schließen Sie sie.
 
-5. In "MFCAnimationWalkthroughView.cpp" am Anfang der Datei nach der `#include` Anweisungen jedoch vor einer Klasse von Methoden, fügen Sie folgenden Code.
+1. In "MFCAnimationWalkthroughView.cpp" am Anfang der Datei nach der `#include` Anweisungen jedoch vor einer Klasse von Methoden, fügen Sie folgenden Code.
 
     ```cpp
     static int nAnimationGroup = 0;
     static int nInfoAreaHeight = 40;
     ```
 
-6. Am Ende des Konstruktors für `CMFCAnimationWalkthroughView`, fügen Sie den folgenden Code hinzu.
+1. Am Ende des Konstruktors für `CMFCAnimationWalkthroughView`, fügen Sie den folgenden Code hinzu.
 
     ```cpp
     m_animationController.EnableAnimationTimerEventHandler();
@@ -159,7 +159,7 @@ Um diese exemplarische Vorgehensweise abzuschließen, müssen Sie Visual Studio 
     m_animationController.AddAnimationObject(&m_animationRect);
     ```
 
-7. Suchen Sie die `CAnimationWalthroughView::PreCreateWindow` Methode und Ersetzen Sie ihn durch den folgenden Code.
+1. Suchen Sie die `CAnimationWalthroughView::PreCreateWindow` Methode und Ersetzen Sie ihn durch den folgenden Code.
 
     ```cpp
     BOOL CMFCAnimationWalkthroughView::PreCreateWindow(CREATESTRUCT& cs)
@@ -172,7 +172,7 @@ Um diese exemplarische Vorgehensweise abzuschließen, müssen Sie Visual Studio 
     }
     ```
 
-8. Suchen Sie die `CAnimationWalkthroughView::OnDraw` Methode und Ersetzen Sie ihn durch den folgenden Code.
+1. Suchen Sie die `CAnimationWalkthroughView::OnDraw` Methode und Ersetzen Sie ihn durch den folgenden Code.
 
     ```cpp
     void CMFCAnimationWalkthroughView::OnDraw(CDC* pDC)
@@ -209,7 +209,7 @@ Um diese exemplarische Vorgehensweise abzuschließen, müssen Sie Visual Studio 
     }
     ```
 
-9. Fügen Sie am Ende der Datei den folgenden Code ein.
+1. Fügen Sie am Ende der Datei den folgenden Code ein.
 
     ```cpp
     void CMFCAnimationWalkthroughView::Animate(BOOL bDirection)
@@ -219,9 +219,9 @@ Um diese exemplarische Vorgehensweise abzuschließen, müssen Sie Visual Studio 
         static BYTE nStartColor = 50;
         static BYTE nEndColor = 255;
 
-        BYTE nRedColorFinal = bDirection  nStartColor : nEndColor;
-        BYTE nGreenColorFinal = bDirection  nStartColor : nEndColor;
-        BYTE nBlueColorFinal = bDirection  nStartColor : nEndColor;
+        BYTE nRedColorFinal = bDirection ? nStartColor : nEndColor;
+        BYTE nGreenColorFinal = bDirection ? nStartColor : nEndColor;
+        BYTE nBlueColorFinal = bDirection ? nStartColor : nEndColor;
 
         CLinearTransition* pRedTransition =
             new CLinearTransition(duration, (DOUBLE)nRedColorFinal);
@@ -278,13 +278,13 @@ Um diese exemplarische Vorgehensweise abzuschließen, müssen Sie Visual Studio 
     }
     ```
 
-10. Auf der **Projekt** Menü klicken Sie auf **-Klassen-Assistent**.
+1. Auf der **Projekt** Menü klicken Sie auf **-Klassen-Assistent**.
 
-11. In der **MFC-Klassenassistent**unter **Klassenname**Option `CMFCAnimationWalkthroughView`.
+1. In der **MFC-Klassenassistent**unter **Klassenname**Option **CMFCAnimationWalkthroughView**.
 
-12. Auf der **Nachrichten** Registerkarte die **Nachrichten** Kontrollkästchen `WM_ERASEBKGND`, klicken Sie auf **Handler hinzufügen**, und klicken Sie dann auf **OK**.
+1. Auf der **Nachrichten** Registerkarte die **Nachrichten** Kontrollkästchen **WM_ERASEBKGND**, klicken Sie auf **Handler hinzufügen**, und klicken Sie dann auf **OK** .
 
-13. Ersetzen Sie in "MFCAnimationWalkthroughView.cpp", die Implementierung von `OnEraseBkgnd` durch den folgenden Code, zu reduzieren, in das animierte Objekt Flimmern, wenn es neu gezeichnet wird.
+1. Ersetzen Sie in "MFCAnimationWalkthroughView.cpp", die Implementierung von `OnEraseBkgnd` durch den folgenden Code, zu reduzieren, in das animierte Objekt Flimmern, wenn es neu gezeichnet wird.
 
     ```cpp
     BOOL CMFCAnimationWalkthroughView::OnEraseBkgnd(CDC* /*pDC*/)
@@ -293,7 +293,7 @@ Um diese exemplarische Vorgehensweise abzuschließen, müssen Sie Visual Studio 
     }
     ```
 
-14. Ersetzen Sie die Implementierungen der `CMFCAnimationWalkthroughView::OnAnimationStartforward`, `CMFCAnimationWalkthroughView::OnAnimationStartbackward`, und `CMFCAnimationWalkthroughView::OnAnimationStop` durch den folgenden Code.
+1. Ersetzen Sie die Implementierungen der `CMFCAnimationWalkthroughView::OnAnimationStartforward`, `CMFCAnimationWalkthroughView::OnAnimationStartbackward`, und `CMFCAnimationWalkthroughView::OnAnimationStop` durch den folgenden Code.
 
     ```cpp
     void CMFCAnimationWalkthroughView::OnAnimationStartforward()
@@ -317,7 +317,7 @@ Um diese exemplarische Vorgehensweise abzuschließen, müssen Sie Visual Studio 
     }
     ```
 
-15. Speichern Sie die Datei, und schließen Sie sie.
+1. Speichern Sie die Datei, und schließen Sie sie.
 
 ### <a name="to-center-the-animated-object-in-the-window"></a>Das animierte Objekt im Fenster zentrieren
 
@@ -327,15 +327,15 @@ Um diese exemplarische Vorgehensweise abzuschließen, müssen Sie Visual Studio 
     BOOL m_bCurrentDirection;
     ```
 
-2. Speichern Sie die Datei, und schließen Sie sie.
+1. Speichern Sie die Datei, und schließen Sie sie.
 
-3. Auf der **Projekt** Menü klicken Sie auf **-Klassen-Assistent**.
+1. Auf der **Projekt** Menü klicken Sie auf **-Klassen-Assistent**.
 
-4. In der **MFC-Klassenassistent**unter **Klassenname**Option `CMFCAnimationWalkthroughView`.
+1. In der **MFC-Klassenassistent**unter **Klassenname**Option **CMFCAnimationWalkthroughView**.
 
-5. Auf der **Nachrichten** Registerkarte die **Nachrichten** Kontrollkästchen `WM_SIZE`, klicken Sie auf **Handler hinzufügen**, und klicken Sie dann auf **OK**.
+1. Auf der **Nachrichten** Registerkarte die **Nachrichten** Kontrollkästchen **WM_SIZE**, klicken Sie auf **Handler hinzufügen**, und klicken Sie dann auf **OK**.
 
-6. Ersetzen Sie in "MFCAnimationWalkthroughView.cpp", den Code für `CMFCAnimationWalkthroughView::OnSize` durch den folgenden Code.
+1. Ersetzen Sie in "MFCAnimationWalkthroughView.cpp", den Code für `CMFCAnimationWalkthroughView::OnSize` durch den folgenden Code.
 
     ```cpp
     void CMFCAnimationWalkthroughView::OnSize(UINT nType, int cx, int cy)
@@ -358,19 +358,19 @@ Um diese exemplarische Vorgehensweise abzuschließen, müssen Sie Visual Studio 
     }
     ```
 
-7. Am Anfang des Konstruktors für `CMFCAnimationWalkthroughView`, fügen Sie den folgenden Code hinzu.
+1. Am Anfang des Konstruktors für `CMFCAnimationWalkthroughView`, fügen Sie den folgenden Code hinzu.
 
     ```cpp
     m_bCurrentDirection = TRUE;
     ```
 
-8. Am Anfang der `CMFCAnimationWalkthroughView::Animate` -Methode, fügen Sie den folgenden Code hinzu.
+1. Am Anfang der `CMFCAnimationWalkthroughView::Animate` -Methode, fügen Sie den folgenden Code hinzu.
 
     ```cpp
     m_bCurrentDirection = bDirection;
     ```
 
-9. Speichern Sie die Datei, und schließen Sie sie.
+1. Speichern Sie die Datei, und schließen Sie sie.
 
 ### <a name="to-verify-the-results"></a>Die Ergebnisse überprüfen
 
