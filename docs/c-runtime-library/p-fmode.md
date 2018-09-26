@@ -27,33 +27,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c520f81062f1bbbb295f17c6bc041afb8b5f2877
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c4dcea9e3f35bf5fd8dbfbed9273562ac3db551
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389835"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056338"
 ---
 # <a name="pfmode"></a>__p__fmode
-Verweist auf die globale Variable `_fmode`, die den Standard *Datei-Commit-Modus* für E/A-Dateivorgänge angibt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-int* __p__fmode(  
-   );  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Zeiger auf die globale Variable `_fmode`.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `__p__fmode`-Funktion steht nur für die interne Verwendung zur Verfügung und sollte nicht vom Benutzercode aufgerufen werden.  
-  
- Der Dateiübersetzungsmodus gibt entweder `binary`- oder `text`-Übersetzungen für [_open](../c-runtime-library/reference/open-wopen.md)- und [_pipe](../c-runtime-library/reference/pipe.md)-E/A-Vorgänge an. Weitere Informationen finden Sie unter [_fmode](../c-runtime-library/fmode.md).  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
+
+Verweist auf die globale Variable `_fmode`, die den Standard *Datei-Commit-Modus* für E/A-Dateivorgänge angibt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+int* __p__fmode(
+   );
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Zeiger auf die globale Variable `_fmode`.
+
+## <a name="remarks"></a>Hinweise
+
+Die `__p__fmode`-Funktion steht nur für die interne Verwendung zur Verfügung und sollte nicht vom Benutzercode aufgerufen werden.
+
+Der Dateiübersetzungsmodus gibt entweder `binary`- oder `text`-Übersetzungen für [_open](../c-runtime-library/reference/open-wopen.md)- und [_pipe](../c-runtime-library/reference/pipe.md)-E/A-Vorgänge an. Weitere Informationen finden Sie unter [_fmode](../c-runtime-library/fmode.md).
+
+## <a name="requirements"></a>Anforderungen
+
+|-Routine zurückgegebener Wert|Erforderlicher Header|
+|-------------|---------------------|
 |__p\__fmode|stdlib.h|

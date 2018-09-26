@@ -18,67 +18,61 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffb239db12111f80e894c68cff568338bb3ed038
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2448a34f85ab33c1a8d587b0eb44530e5e2417a7
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207269"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754045"
 ---
 # <a name="structure-declarations"></a>Strukturdeklarationen
 Eine "Strukturdeklaration" benennt einen Typ und gibt eine Sequenz von Variablenwerten an (so genannte "Member" oder "Felder" der Struktur), die unterschiedliche Typen aufweisen können. Ein optionaler Bezeichner, "Tag" genannt, gibt den Namen des Strukturtyps an und kann in nachfolgenden Verweisen für den Strukturtyp verwendet werden. Eine Variable des Strukturtyps enthält die gesamte Sequenz, die durch diesen Typ definiert ist. Strukturen in C ähneln den Typen, die als "Datensätze" in anderen Sprachen bekannt sind.  
   
-## <a name="syntax"></a>Syntax  
- *struct-or-union-specifier*:  
- *struct-or-union identifier* opt **{** *struct-declaration-list* **}**  
+## <a name="syntax"></a>Syntax
+
+*struct-or-union-specifier*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*<sub>opt</sub> **{** *struct-declaration-list* **}**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*
+
+*struct-or-union*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**struct**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**union**
+
+*struct-declaration-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration-list* *struct-declaration*
+
+*struct-declaration*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*specifier-qualifier-list* *struct-declarator-list* **;**
+
+*specifier-qualifier-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *specifier-qualifier-list*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *specifier-qualifier-list*<sub>opt</sub>
+
+*struct-declarator-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator* *struct-declarator-list* **,** *struct-declarator*
+
+*struct-declarator*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declarator*<sub>opt</sub> **:** *constant-expression*
   
- *struct-or-union identifier*  
+Die Deklaration eines Strukturtyps hält keinen Platz für eine Struktur bereit. Es ist nur eine Vorlage für spätere Deklarationen von Strukturvariablen.  
   
- *struct-or-union*:  
- **struct**  
+Ein zuvor definierter *Identifier* (Tag) kann verwendet werden, um auf einen Strukturtyp zu verweisen, der an anderer Stelle definiert ist. In diesem Fall kann *struct-declaration-list* nicht wiederholt werden, solange die Definition sichtbar ist. Deklarationen von Zeigern auf Strukturen und Typedefs für Strukturtypen können das Strukturtag verwenden, bevor der Strukturtyp definiert ist. Allerdings muss die Strukturdefinition vor jeder tatsächlichen Verwendung der Größe der Felder gefunden werden. Dies ist eine unvollständige Definition des Typs und des Typ-Tags. Damit diese Definition abgeschlossen werden kann, muss eine Typdefinition später im gleichen Bereich angezeigt werden.  
   
- **union**  
+Mit *struct-declaration-list* werden die Typen und Namen der Strukturmember angegeben. Ein *struct-declaration-list*-Argument enthält mindestens eine Variable oder Bitfelddeklaration.  
   
- *struct-declaration-list*:  
- *struct-declaration*  
+Jede Variable, die in der *struct-declaration-list* deklariert wurde, wird als Member des Strukturtyps definiert. Variablendeklarationen in *struct-declaration-list* verfügen über das gleiche Format wie andere Variablendeklarationen, die in diesem Abschnitt erläutert werden, mit der Ausnahme, dass die Deklarationen keine Speicherklassenspezifizierer oder -initialisierer enthalten dürfen. Die Strukturmember können mit Ausnahme des Typs `void` alle Variablentypen, einen unvollständigen Typ oder einen Funktionstyp aufweisen.  
   
- *struct-declaration-list struct-declaration*  
+Ein Member kann nicht mit dem Typ oder der Struktur deklariert werden, in dem/der er enthalten ist. Allerdings kann ein Member als Zeiger auf den Strukturtyp deklariert werden, in dem er angezeigt wird, solange der Strukturtyp über einen Tag verfügt. Dadurch können Sie verknüpfte Listen von Strukturen erstellen.  
   
- Der Strukturinhalt wird folgendermaßen definiert  
+Für Strukturen gilt derselbe Gültigkeitsbereich wie für andere Bezeichner. Strukturbezeichner müssen sich von anderen Struktur-, Union- und Enumerations-Tags derselben Sichtbarkeit unterscheiden.  
   
- *struct-declaration*:  
- *specifier-qualifier-list struct-declarator-list*  **;**  
+Jede *struct-declaration* in einer *struct-declaration-list* muss in der Liste eindeutig sein. Allerdings müssen sich Bezeichnernamen in einer *struct-declaration-list* nicht von gewöhnlichen Variablennamen oder Bezeichnern in anderen Strukturdeklarationslisten unterscheiden.  
   
- *specifier-qualifier-list*:  
- *type-specifier specifier-qualifier-list* opt  
+Auf geschachtelte Strukturen kann auch so zugegriffen werden, als wären sie auf der Dateibereichsebene deklariert wurden. Beispielsweise bei dieser Deklaration:  
   
- *type-qualifier specifier-qualifier-list* opt  
-  
- *struct-declarator-list*:  
- *struct-declarator*  
-  
- *struct-declarator-list*  **,**  *struct-declarator*  
-  
- *struct-declarator*:  
- `declarator`  
-  
- Die Deklaration eines Strukturtyps hält keinen Platz für eine Struktur bereit. Es ist nur eine Vorlage für spätere Deklarationen von Strukturvariablen.  
-  
- Ein zuvor definierter *Identifier* (Tag) kann verwendet werden, um auf einen Strukturtyp zu verweisen, der an anderer Stelle definiert ist. In diesem Fall kann *struct-declaration-list* nicht wiederholt werden, solange die Definition sichtbar ist. Deklarationen von Zeigern auf Strukturen und Typedefs für Strukturtypen können das Strukturtag verwenden, bevor der Strukturtyp definiert ist. Allerdings muss die Strukturdefinition vor jeder tatsächlichen Verwendung der Größe der Felder gefunden werden. Dies ist eine unvollständige Definition des Typs und des Typ-Tags. Damit diese Definition abgeschlossen werden kann, muss eine Typdefinition später im gleichen Bereich angezeigt werden.  
-  
- Mit *struct-declaration-list* werden die Typen und Namen der Strukturmember angegeben. Ein *struct-declaration-list*-Argument enthält mindestens eine Variable oder Bitfelddeklaration.  
-  
- Jede Variable, die in der *struct-declaration-list* deklariert wurde, wird als Member des Strukturtyps definiert. Variablendeklarationen in *struct-declaration-list* verfügen über das gleiche Format wie andere Variablendeklarationen, die in diesem Abschnitt erläutert werden, mit der Ausnahme, dass die Deklarationen keine Speicherklassenspezifizierer oder -initialisierer enthalten dürfen. Die Strukturmember können mit Ausnahme des Typs `void` alle Variablentypen, einen unvollständigen Typ oder einen Funktionstyp aufweisen.  
-  
- Ein Member kann nicht mit dem Typ oder der Struktur deklariert werden, in dem/der er enthalten ist. Allerdings kann ein Member als Zeiger auf den Strukturtyp deklariert werden, in dem er angezeigt wird, solange der Strukturtyp über einen Tag verfügt. Dadurch können Sie verknüpfte Listen von Strukturen erstellen.  
-  
- Für Strukturen gilt derselbe Gültigkeitsbereich wie für andere Bezeichner. Strukturbezeichner müssen sich von anderen Struktur-, Union- und Enumerations-Tags derselben Sichtbarkeit unterscheiden.  
-  
- Jede *struct-declaration* in einer *struct-declaration-list* muss in der Liste eindeutig sein. Allerdings müssen sich Bezeichnernamen in einer *struct-declaration-list* nicht von gewöhnlichen Variablennamen oder Bezeichnern in anderen Strukturdeklarationslisten unterscheiden.  
-  
- Auf geschachtelte Strukturen kann auch so zugegriffen werden, als wären sie auf der Dateibereichsebene deklariert wurden. Beispielsweise bei dieser Deklaration:  
-  
-```  
+```C
 struct a  
 {  
     int x;  
@@ -89,17 +83,17 @@ struct a
 } var1;  
 ```  
   
- diese Deklarationen sind beide gültig:  
+diese Deklarationen sind beide gültig:  
   
-```  
+```C
 struct a var3;  
 struct b var4;  
 ```  
   
 ## <a name="examples"></a>Beispiele  
- Diese Beispiele veranschaulichen Strukturdeklarationen:  
+Diese Beispiele veranschaulichen Strukturdeklarationen:  
   
-```  
+```C
 struct employee   /* Defines a structure variable named temp */  
 {  
     char name[20];  
@@ -108,24 +102,24 @@ struct employee   /* Defines a structure variable named temp */
 } temp;  
 ```  
   
- Die `employee`-Struktur hat drei Member: `name`, `id` und `class`. Der `name`-Member ist ein Array mit 20 Elementen, und `id` und `class` sind einfache Member vom Typ `int` und **long**. Der Bezeichner `employee` ist der Strukturbezeichner.  
+Die `employee`-Struktur hat drei Member: `name`, `id` und `class`. Der `name`-Member ist ein Array mit 20 Elementen, und `id` und `class` sind einfache Member vom Typ `int` und **long**. Der Bezeichner `employee` ist der Strukturbezeichner.  
   
-```  
+```C
 struct employee student, faculty, staff;  
 ```  
   
- Dieses Beispiel definiert drei Strukturvariablen: `student`, `faculty` und `staff`. Jede Struktur verfügt über die gleiche Liste von drei Membern. Member müssen den Strukturtyp `employee` im vorherigen Beispiel definiert haben.  
+Dieses Beispiel definiert drei Strukturvariablen: `student`, `faculty` und `staff`. Jede Struktur verfügt über die gleiche Liste von drei Membern. Member müssen den Strukturtyp `employee` im vorherigen Beispiel definiert haben.  
   
-```  
+```C
 struct           /* Defines an anonymous struct and a */  
 {                /* structure variable named complex  */  
     float x, y;  
 } complex;  
 ```  
   
- Die `complex`-Struktur verfügt über zwei Member vom Typ **float**, `x` und `y`. Der Strukturtyp hat kein Tag und ist somit unbenannt oder anonym.  
+Die `complex`-Struktur verfügt über zwei Member vom Typ **float**, `x` und `y`. Der Strukturtyp hat kein Tag und ist somit unbenannt oder anonym.  
   
-```  
+```C
 struct sample   /* Defines a structure named x */  
 {  
     char c;  
@@ -134,11 +128,11 @@ struct sample   /* Defines a structure named x */
 } x;  
 ```  
   
- Die ersten beiden Member der Struktur sind eine `char`-Variable und ein Zeiger auf einen **float**-Wert. Der dritte Member, `next`, wird als Zeiger auf den definierten Strukturtyp deklariert (`sample`).  
+Die ersten beiden Member der Struktur sind eine `char`-Variable und ein Zeiger auf einen **float**-Wert. Der dritte Member, `next`, wird als Zeiger auf den definierten Strukturtyp deklariert (`sample`).  
   
- Anonyme Strukturen können nützlich sein, wenn der angegebene Tag nicht benötigt wird. Dies ist der Fall, wenn eine Deklaration alle Strukturinstanzen definiert. Zum Beispiel:  
+Anonyme Strukturen können nützlich sein, wenn der angegebene Tag nicht benötigt wird. Dies ist der Fall, wenn eine Deklaration alle Strukturinstanzen definiert. Zum Beispiel:  
   
-```  
+```C
 struct  
 {  
     int x;  
@@ -146,9 +140,9 @@ struct
 } mystruct;  
 ```  
   
- Eingebettete Strukturen sind häufig anonym.  
+Eingebettete Strukturen sind häufig anonym.  
   
-```  
+```C
 struct somestruct  
 {  
     struct    /* Anonymous structure */  
@@ -159,17 +153,17 @@ struct somestruct
 } w;  
 ```  
   
- **Microsoft-spezifisch**  
+**Microsoft-spezifisch**  
   
- Der Compiler lässt ein Array ohne Größenangabe oder ein Array der Größe 0 (null) als letzten Member einer Struktur zu. Dies kann hilfreich sein, wenn sich die Größe eines konstanten Arrays in verschiedenen Situationen unterscheidet. Die Deklaration einer solchen Struktur sieht wie folgt aus:  
+Der Compiler lässt ein Array ohne Größenangabe oder ein Array der Größe 0 (null) als letzten Member einer Struktur zu. Dies kann hilfreich sein, wenn sich die Größe eines konstanten Arrays in verschiedenen Situationen unterscheidet. Die Deklaration einer solchen Struktur sieht wie folgt aus:  
   
 **struct** *identifier* **{** *set-of-declarations* *type* <em>array-name</em>**\[]; };**  
   
- Arrays ohne Größenangabe können nur als letzter Member einer Struktur angegeben werden. Die Strukturen, die Arraydeklarationen ohne Größenangabe enthalten, können in andere Strukturen geschachtelt werden, solange keine weiteren Member in anderen einschließenden Strukturen deklariert werden. Arrays von solchen Strukturen sind nicht zulässig. Der `sizeof`-Operator nimmt bei Anwendung auf eine Variable dieses Typs oder auf den Typ selbst 0 für die Größe des Arrays an.  
+Arrays ohne Größenangabe können nur als letzter Member einer Struktur angegeben werden. Die Strukturen, die Arraydeklarationen ohne Größenangabe enthalten, können in andere Strukturen geschachtelt werden, solange keine weiteren Member in anderen einschließenden Strukturen deklariert werden. Arrays von solchen Strukturen sind nicht zulässig. Der `sizeof`-Operator nimmt bei Anwendung auf eine Variable dieses Typs oder auf den Typ selbst 0 für die Größe des Arrays an.  
   
- Strukturdeklarationen können auch ohne Deklaration angegeben werden, wenn diese Member einer anderen Struktur oder Union sind. Die Feldnamen werden in die einschließende Struktur hochgestuft. Eine namenlose Struktur sieht beispielsweise wie folgt aus:  
-  
-```  
+Strukturdeklarationen können auch ohne Deklaration angegeben werden, wenn diese Member einer anderen Struktur oder Union sind. Die Feldnamen werden in die einschließende Struktur hochgestuft. Eine namenlose Struktur sieht beispielsweise wie folgt aus:
+
+```C
 struct s  
 {  
     float y;  
@@ -185,9 +179,9 @@ struct s
 p_s->b = 100;  /* A reference to a field in the s structure */  
 ```  
   
- Weitere Informationen zu Strukturverweisen erhalten Sie unter [Struktur- und Unionmember](../c-language/structure-and-union-members.md).  
+Weitere Informationen zu Strukturverweisen erhalten Sie unter [Struktur- und Unionmember](../c-language/structure-and-union-members.md).  
   
- **Ende Microsoft-spezifisch**  
+**Ende Microsoft-spezifisch**  
   
 ## <a name="see-also"></a>Siehe auch  
- [Deklaratoren und Variablendeklarationen](../c-language/declarators-and-variable-declarations.md)
+[Deklaratoren und Variablendeklarationen](../c-language/declarators-and-variable-declarations.md)
