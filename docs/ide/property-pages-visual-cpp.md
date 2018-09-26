@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1dc831dff6d1e3dbef4fc762712e8125a5b20e1
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c24ed9328f77d26a8ad11a6ff6bdbf47bad9fbe3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33339708"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381412"
 ---
 # <a name="property-pages-visual-c"></a>Eigenschaftenseiten (Visual C++)
 
@@ -143,5 +143,5 @@ Beachten Sie, dass eine Eigenschaftsseite nur die Einstellungen auf der aktuelle
 
 ## <a name="see-also"></a>Siehe auch
 
-[Gewusst wie: Erstellen und Entfernen von Projektabhängigkeiten](/visualstudio/ide/how-to-create-and-remove-project-dependencies)  
-[Gewusst wie: Erstellen und Bearbeiten von Konfigurationen](/visualstudio/ide/how-to-create-and-edit-configurations)  
+[Gewusst wie: Erstellen und Entfernen von Projektabhängigkeiten](/visualstudio/ide/how-to-create-and-remove-project-dependencies)<br>
+[Gewusst wie: Erstellen und Bearbeiten von Konfigurationen](/visualstudio/ide/how-to-create-and-edit-configurations)
