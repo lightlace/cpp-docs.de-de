@@ -31,101 +31,104 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b17abb975ea9f3212d4bd6171bcd2bffb78e483c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5ea13f86b99dd0a4678a715452122ee3f1a64d98
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392418"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054947"
 ---
 # <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno, _doserrno, _sys_errlist und _sys_nerr
-Globale Makros, die während der Programmausführung festgelegte Fehlercodes und mit den Fehlercodes identische Zeichenfolgen zur Anzeige enthalten.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-#define errno   (*_errno())  
-#define _doserrno   (*__doserrno())  
-#define _sys_errlist (__sys_errlist())  
-#define _sys_nerr (*__sys_nerr())  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Sowohl `errno` als auch `_doserrno` werden von der Laufzeit während des Programmstarts auf 0 festgelegt. `errno` wird bei einem Fehler bei einem Aufruf auf Systemebene festgelegt. Weil `errno` den Wert für den letzten Aufruf enthält, der ihn festlegte, wird dieser Wert möglicherweise durch darauffolgende Aufrufe geändert. Laufzeit-Bibliothekaufrufe, die bei einem Fehler `errno` festlegen, löschen `errno` bei Erfolg nicht. Löschen Sie `errno` immer sofort vor einem Aufruf, der es möglicherweise festlegt, durch Aufrufen von `_set_errno(0)`, und überprüfen Sie es sofort nach dem Aufruf.  
-  
- Bei einem Fehler wird `errno` nicht zwangsläufig auf den gleichen Wert festgelegt, wie der durch einen Systemaufruf zurückgegebene Fehlercode. Bei E/A-Vorgängen speichert `_doserrno` die Betriebssystem-Fehlercodeäquivalente von `errno`-Codes. Bei den meisten Nicht-E/A-Vorgängen ist der Wert von `_doserrno` nicht definiert.  
-  
- Jeder `errno`-Wert wird einer Fehlermeldung in `_sys_errlist` zugeordnet, die mithilfe einer der [perror](../c-runtime-library/reference/perror-wperror.md)-Funktionen gedruckt werden kann oder mithilfe einer der [strerror](../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md)- oder [strerror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)-Funktionen in einer Zeichenfolge gespeichert werden kann. `perror` und `strerror` verwenden das Array `_sys_errlist` und `_sys_nerr` – die Anzahl von Elementen in `_sys_errlist` –, um Fehlerinformationen zu verarbeiten. Der direkte Zugriff auf `_sys_errlist` und `_sys_nerr` ist aus Codesicherheitsgründen veraltet. Es wird empfohlen, wie hier gezeigt anstatt der globalen Makros die sichereren, funktionsbereiten Versionen zu verwenden:  
-  
-|Globales Makro|Funktionsbereite Äquivalente|  
-|------------------|----------------------------|  
-|`_doserrno`|[_get_doserrno](../c-runtime-library/reference/get-doserrno.md), [_set_doserrno](../c-runtime-library/reference/set-doserrno.md)|  
-|`errno`|[_get_errno](../c-runtime-library/reference/get-errno.md), [_set_errno](../c-runtime-library/reference/set-errno.md)|  
-|`_sys_errlist`, `_sys_nerr`|[strerror_s, _strerror_s, _wcserror_s, \__wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)|  
-  
- Bibliotheksmathematikroutinen legen `errno` fest, indem sie [_matherr](../c-runtime-library/reference/matherr.md) aufrufen. Um Mathematikfehler anders zu handhaben, schreiben Sie Ihre eigene Routine gemäß der `_matherr`-Verweisbeschreibung und nennen sie `_matherr`.  
-  
- Alle `errno`-Werte in der folgenden Tabelle sind vordefinierte Konstanten in \<errno.h> und kompatibel mit UNIX. Nur `ERANGE`, `EILSEQ` und `EDOM` werden im Standard ISO C99 festgelegt.  
-  
-|Konstante|Systemfehlermeldung|Wert|  
-|--------------|--------------------------|-----------|  
-|`EPERM`|Dieser Vorgang ist unzulässig|1|  
-|`ENOENT`|Keine solche Datei oder Verzeichnis|2|  
-|`ESRCH`|Kein solcher Prozess|3|  
-|`EINTR`|Unterbrochene Funktion|4|  
-|`EIO`|E/A-Fehler|5|  
-|`ENXIO`|Kein solches Gerät oder Adresse|6|  
-|`E2BIG`|Argumentliste zu lang|7|  
-|`ENOEXEC`|Exec-Formatfehler|8|  
-|`EBADF`|Ungültige Dateinummer|9|  
-|`ECHILD`|Keine erzeugten Prozesse|10|  
-|`EAGAIN`|Keine weiteren Prozesse oder nicht genug Speicher oder maximale Schachtelungsebene erreicht|11|  
-|`ENOMEM`|Nicht genügend Speicher|12|  
-|`EACCES`|Berechtigung verweigert|13|  
-|`EFAULT`|Ungültige Adresse|14|  
-|`EBUSY`|Gerät oder Ressource beschäftigt|16|  
-|`EEXIST`|Datei ist vorhanden|17|  
-|`EXDEV`|Geräteübergreifende Verbindung|18|  
-|`ENODEV`|Kein solches Gerät|19|  
-|`ENOTDIR`|Kein Verzeichnis|20|  
-|`EISDIR`|Ist ein Verzeichnis|21|  
-|`EINVAL`|Ungültiges Argument|22|  
-|`ENFILE`|Zu viele Dateien im System offen|23|  
-|`EMFILE`|Zu viele geöffnete Dateien|24|  
-|`ENOTTY`|Unzulässiger E/A-Steuerelementvorgang|25|  
-|`EFBIG`|Datei zu groß|27|  
-|`ENOSPC`|Kein Speicherplatz auf Gerät übrig|28|  
-|`ESPIPE`|Ungültige Suche|29|  
-|`EROFS`|Schreibgeschütztes Dateisystem|30|  
-|`EMLINK`|Zu viele Links|31|  
-|`EPIPE`|Unterbrochener senkrechter Strich|32|  
-|`EDOM`|Mathematikargument|33|  
-|`ERANGE`|Ergebnis zu groß|34|  
-|`EDEADLK`|Deadlock von Ressourcen würde auftreten|36|  
-|`EDEADLOCK`|Gleich wie EDEADLK hinsichtlich Kompatibilität mit älteren Versionen von Microsoft C|36|  
-|`ENAMETOOLONG`|Dateiname zu lang|38|  
-|`ENOLCK`|Keine Sperren verfügbar|39|  
-|`ENOSYS`|Funktion wird nicht unterstützt|40|  
-|`ENOTEMPTY`|Verzeichnis nicht leer|41|  
-|`EILSEQ`|Ungültige Bytesequenz|42|  
-|`STRUNCATE`|Zeichenfolge wurde abgeschnitten|80|  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Globales Makro|Erforderlicher Header|Optionaler Header|  
-|------------------|---------------------|---------------------|  
-|`errno`|\<errno.h> oder \<stdlib.h>, \<cerrno> oder \<cstdlib> (C++)||  
-|`_doserrno`, `_sys_errlist`, `_sys_nerr`|\<stdlib.h>, \<cstdlib> (C++)|\<errno.h >, \<cerrno > (C++)|  
-  
- Die Makros `_doserrno`, `_sys_errlist` und `_sys_nerr` sind Microsoft-Erweiterungen. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Globale Variablen](../c-runtime-library/global-variables.md)   
- [errno-Konstanten](../c-runtime-library/errno-constants.md)   
- [perror, _wperror](../c-runtime-library/reference/perror-wperror.md)   
- [strerror, _strerror, _wcserror, \__wcserror](../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md)   
- [strerror_s, _strerror_s, _wcserror_s, \__wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)   
- [_get_doserrno](../c-runtime-library/reference/get-doserrno.md)   
- [_set_doserrno](../c-runtime-library/reference/set-doserrno.md)   
- [_get_errno](../c-runtime-library/reference/get-errno.md)   
- [_set_errno](../c-runtime-library/reference/set-errno.md)
+
+Globale Makros, die während der Programmausführung festgelegte Fehlercodes und mit den Fehlercodes identische Zeichenfolgen zur Anzeige enthalten.
+
+## <a name="syntax"></a>Syntax
+
+```
+#define errno   (*_errno())
+#define _doserrno   (*__doserrno())
+#define _sys_errlist (__sys_errlist())
+#define _sys_nerr (*__sys_nerr())
+```
+
+## <a name="remarks"></a>Hinweise
+
+Sowohl `errno` als auch `_doserrno` werden von der Laufzeit während des Programmstarts auf 0 festgelegt. `errno` wird bei einem Fehler bei einem Aufruf auf Systemebene festgelegt. Weil `errno` den Wert für den letzten Aufruf enthält, der ihn festlegte, wird dieser Wert möglicherweise durch darauffolgende Aufrufe geändert. Laufzeit-Bibliothekaufrufe, die bei einem Fehler `errno` festlegen, löschen `errno` bei Erfolg nicht. Löschen Sie `errno` immer sofort vor einem Aufruf, der es möglicherweise festlegt, durch Aufrufen von `_set_errno(0)`, und überprüfen Sie es sofort nach dem Aufruf.
+
+Bei einem Fehler wird `errno` nicht zwangsläufig auf den gleichen Wert festgelegt, wie der durch einen Systemaufruf zurückgegebene Fehlercode. Bei E/A-Vorgängen speichert `_doserrno` die Betriebssystem-Fehlercodeäquivalente von `errno`-Codes. Bei den meisten Nicht-E/A-Vorgängen ist der Wert von `_doserrno` nicht definiert.
+
+Jeder `errno`-Wert wird einer Fehlermeldung in `_sys_errlist` zugeordnet, die mithilfe einer der [perror](../c-runtime-library/reference/perror-wperror.md)-Funktionen gedruckt werden kann oder mithilfe einer der [strerror](../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md)- oder [strerror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)-Funktionen in einer Zeichenfolge gespeichert werden kann. `perror` und `strerror` verwenden das Array `_sys_errlist` und `_sys_nerr` – die Anzahl von Elementen in `_sys_errlist` –, um Fehlerinformationen zu verarbeiten. Der direkte Zugriff auf `_sys_errlist` und `_sys_nerr` ist aus Codesicherheitsgründen veraltet. Es wird empfohlen, wie hier gezeigt anstatt der globalen Makros die sichereren, funktionsbereiten Versionen zu verwenden:
+
+|Globales Makro|Funktionsbereite Äquivalente|
+|------------------|----------------------------|
+|`_doserrno`|[_get_doserrno](../c-runtime-library/reference/get-doserrno.md), [_set_doserrno](../c-runtime-library/reference/set-doserrno.md)|
+|`errno`|[_get_errno](../c-runtime-library/reference/get-errno.md), [_set_errno](../c-runtime-library/reference/set-errno.md)|
+|`_sys_errlist`, `_sys_nerr`|[strerror_s, _strerror_s, _wcserror_s, \__wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)|
+
+Bibliotheksmathematikroutinen legen `errno` fest, indem sie [_matherr](../c-runtime-library/reference/matherr.md) aufrufen. Um Mathematikfehler anders zu handhaben, schreiben Sie Ihre eigene Routine gemäß der `_matherr`-Verweisbeschreibung und nennen sie `_matherr`.
+
+Alle `errno`-Werte in der folgenden Tabelle sind vordefinierte Konstanten in \<errno.h> und kompatibel mit UNIX. Nur `ERANGE`, `EILSEQ` und `EDOM` werden im Standard ISO C99 festgelegt.
+
+|Konstante|Systemfehlermeldung|Wert|
+|--------------|--------------------------|-----------|
+|`EPERM`|Dieser Vorgang ist unzulässig|1|
+|`ENOENT`|Keine solche Datei oder Verzeichnis|2|
+|`ESRCH`|Kein solcher Prozess|3|
+|`EINTR`|Unterbrochene Funktion|4|
+|`EIO`|E/A-Fehler|5|
+|`ENXIO`|Kein solches Gerät oder Adresse|6|
+|`E2BIG`|Argumentliste zu lang|7|
+|`ENOEXEC`|Exec-Formatfehler|8|
+|`EBADF`|Ungültige Dateinummer|9|
+|`ECHILD`|Keine erzeugten Prozesse|10|
+|`EAGAIN`|Keine weiteren Prozesse oder nicht genug Speicher oder maximale Schachtelungsebene erreicht|11|
+|`ENOMEM`|Nicht genügend Speicher|12|
+|`EACCES`|Berechtigung verweigert|13|
+|`EFAULT`|Ungültige Adresse|14|
+|`EBUSY`|Gerät oder Ressource beschäftigt|16|
+|`EEXIST`|Datei ist vorhanden|17|
+|`EXDEV`|Geräteübergreifende Verbindung|18|
+|`ENODEV`|Kein solches Gerät|19|
+|`ENOTDIR`|Kein Verzeichnis|20|
+|`EISDIR`|Ist ein Verzeichnis|21|
+|`EINVAL`|Ungültiges Argument|22|
+|`ENFILE`|Zu viele Dateien im System offen|23|
+|`EMFILE`|Zu viele geöffnete Dateien|24|
+|`ENOTTY`|Unzulässiger E/A-Steuerelementvorgang|25|
+|`EFBIG`|Datei zu groß|27|
+|`ENOSPC`|Kein Speicherplatz auf Gerät übrig|28|
+|`ESPIPE`|Ungültige Suche|29|
+|`EROFS`|Schreibgeschütztes Dateisystem|30|
+|`EMLINK`|Zu viele Links|31|
+|`EPIPE`|Unterbrochener senkrechter Strich|32|
+|`EDOM`|Mathematikargument|33|
+|`ERANGE`|Ergebnis zu groß|34|
+|`EDEADLK`|Deadlock von Ressourcen würde auftreten|36|
+|`EDEADLOCK`|Gleich wie EDEADLK hinsichtlich Kompatibilität mit älteren Versionen von Microsoft C|36|
+|`ENAMETOOLONG`|Dateiname zu lang|38|
+|`ENOLCK`|Keine Sperren verfügbar|39|
+|`ENOSYS`|Funktion wird nicht unterstützt|40|
+|`ENOTEMPTY`|Verzeichnis nicht leer|41|
+|`EILSEQ`|Ungültige Bytesequenz|42|
+|`STRUNCATE`|Zeichenfolge wurde abgeschnitten|80|
+
+## <a name="requirements"></a>Anforderungen
+
+|Globales Makro|Erforderlicher Header|Optionaler Header|
+|------------------|---------------------|---------------------|
+|`errno`|\<errno.h> oder \<stdlib.h>, \<cerrno> oder \<cstdlib> (C++)||
+|`_doserrno`, `_sys_errlist`, `_sys_nerr`|\<stdlib.h>, \<cstdlib> (C++)|\<errno.h >, \<cerrno > (C++)|
+
+Die Makros `_doserrno`, `_sys_errlist` und `_sys_nerr` sind Microsoft-Erweiterungen. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Globale Variablen](../c-runtime-library/global-variables.md)<br/>
+[errno-Konstanten](../c-runtime-library/errno-constants.md)<br/>
+[perror, _wperror](../c-runtime-library/reference/perror-wperror.md)<br/>
+[strerror, _strerror, _wcserror, \__wcserror](../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md)<br/>
+[strerror_s, _strerror_s, _wcserror_s, \__wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)<br/>
+[_get_doserrno](../c-runtime-library/reference/get-doserrno.md)<br/>
+[_set_doserrno](../c-runtime-library/reference/set-doserrno.md)<br/>
+[_get_errno](../c-runtime-library/reference/get-errno.md)<br/>
+[_set_errno](../c-runtime-library/reference/set-errno.md)
