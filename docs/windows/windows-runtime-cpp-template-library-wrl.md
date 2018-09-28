@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8b220ecd69ce539c03339ac73048efb2750d2e32
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cefa28145e1a53aa4db0bd713a9835c0a35b4151
+ms.sourcegitcommit: 7838764e09819822a105accf5d773b2e37ffa0ae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401798"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47429747"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows Runtime C++ Template Library (WRL)
 
@@ -50,7 +50,7 @@ Die Windows Runtime C++ Template Library und C++ / CX bieten unterschiedliche Vo
 
 Hier sind einige Ressourcen, mit die Sie mit der Windows Runtime C++ Template Library sofort loslegen können.
 
-[Die Windows-Runtime-Bibliothek (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
+[Die Windows-Runtime-Bibliothek (WRL)](https://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
 Erfahren Sie in diesem Channel 9-Video mehr darüber, wie die Windows Runtime C++ Template Library hilft, dass Sie die apps der universellen Windows-Plattform (UWP) und Informationen zum Erstellen und nutzen die Windows-Runtime-Komponenten schreiben.
 
 [Vorgehensweise: Aktivieren und Verwenden einer Windows-Runtime-Komponente](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
@@ -77,16 +77,16 @@ Zeigt, wie benutzerdefinierte Komponenten für Windows-Runtime von WRL durch Ers
 [Exemplarische Vorgehensweise: Verbinden von Verwendungsaufgaben und XML-HTTP-Anforderungen](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
 Zeigt, wie die [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) und [IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) Schnittstellen zusammen mit Aufgaben für HTTP-GET und POST-Anforderungen an einen Webdienst in einer UWP-app zu senden.
 
-[Beispiel des Reise-Optimierer von Bing Maps](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
+[Beispiel des Reise-Optimierer von Bing Maps](https://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
 Verwendet die `HttpRequest` -Klasse, die in definierten [Exemplarische Vorgehensweise: Verbinden von Verwendungsaufgaben und XML-HTTP-Anforderungen](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) im Rahmen einer vollständigen UWP-app.
 
-[Beispiel zum Erstellen einer Windows Runtime DLL-Komponente mit C++](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
+[Beispiel zum Erstellen einer Windows Runtime DLL-Komponente mit C++](https://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
 Zeigt, wie die Windows Runtime C++ Template Library eine prozessinterne DLL-Komponente zu erstellen und nutzen es in C++ / CX, JavaScript und c#.
 
-[DirectX marble Maze-Beispiel](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
+[DirectX marble Maze-Beispiel](https://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
 Veranschaulicht, wie die Windows Runtime C++ Template Library verwenden, um die Lebensdauer von COM-Komponenten wie DirectX und Media Foundation im Rahmen eines vollständigen 3D-Spiels verwalten.
 
-[Senden von toastbenachrichtigungen aus desktop-apps-Beispiel](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
+[Senden von toastbenachrichtigungen aus desktop-apps-Beispiel](https://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
 Veranschaulicht, wie Sie die Windows Runtime C++ Template Library mit toastbenachrichtigungen aus einer desktop-app verwenden.
 
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Windows Runtime C++ Template Library, die im Vergleich mit ATL
