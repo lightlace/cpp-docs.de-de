@@ -1,7 +1,7 @@
 ---
 title: ATL COM+ 1.0 Komponenten-Assistent | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -17,18 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcf97c08680583dde686c68fb7e26f323e22716e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 102ec4f85c8915cf6afb70f03d470cec4e9e807f
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717904"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250405"
 ---
 # <a name="atl-com-10-component-wizard"></a>ATL COM+ 1.0 Komponenten-Assistent
 
 Verwenden Sie diesen Assistenten, um ein Objekt zu Ihrem Projekt hinzuzufügen, die COM+ 1.0-Dienste, einschließlich Transaktionen unterstützt.
 
 Sie können angeben, ob das Objekt duale Schnittstellen und die Automatisierung unterstützt. Sie können auch Unterstützung für den Fehler Informationen der Schnittstelle, erweiterte Objekt Kontrolle, Transaktionen und asynchrone Message Queuing-angeben.
+
+> [!WARNING]
+> Dieser Code-Assistenten ist veraltet und wird in einer zukünftigen Version von Visual Studio entfernt, in Visual Studio 2017 Version 15.9. Dieser Assistent ist nur selten verwendet. Allgemeine Unterstützung für ATL und MFC wird durch das Entfernen dieses Assistenten nicht beeinträchtigt. Wenn Sie uns Ihr Feedback zu dieser Einstellung freigeben möchten, füllen Sie bitte [diese Umfrage](https://www.surveymonkey.com/r/QDWKKCN). Ihr Feedback ist uns wichtig.
 
 ## <a name="remarks"></a>Hinweise
 

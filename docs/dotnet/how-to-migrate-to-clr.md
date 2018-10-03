@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 210cf8d3183e9fcd94cfa51d875a0b26e4a8fa07
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 165ea5b42ea4e293eb60b7a798778e3a461e0385
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029657"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235450"
 ---
 # <a name="how-to-migrate-to-clr"></a>Gewusst wie: Migrieren zu /clr
 
@@ -118,7 +118,7 @@ Vorkompilierte Header werden unter unterstützt **"/ CLR"**. Jedoch wenn Sie nur
 
 Die einfachste Möglichkeit, ein Projekt zu kompilieren, in dem einige Module werden kompiliert **"/ CLR"** besteht darin, vorkompilierte Header vollständig zu deaktivieren. (Öffnen Sie im Dialogfeld der Eigenschaftenseiten des Projekts den Knoten C/C++, und wählen Sie „Vorkompilierte Header“ aus. Ändern Sie dann die Eigenschaft „Erstellen/Verwenden“ vorkompilierter Header in „Vorkompilierte Header nicht verwenden“.)
 
-Allerdings beschleunigen vorkompilierte Header insbesondere in großen Projekten die Kompilierung, insofern ist eine Deaktivierung dieser Funktion nicht wünschenswert. In diesem Fall empfiehlt sich, konfigurieren Sie die **"/ CLR"** und nicht **"/ CLR"** Dateien in die Verwendung separater vorkompilierter Header. Dies kann erfolgen in einem Schritt Auswahl mehrerer Module zu kompilierenden **"/ CLR"** Projektmappen-Explorer, mit der rechten Maustaste auf die Gruppe, und die Eigenschaften. Ändern Sie dann die beiden Eigenschaften „PCH durch Datei erstellen/verwenden“ und „Vorkompilierte Headerdatei“ auf einen anderen Headerdateinamen bzw. eine andere PCH-Datei.
+Allerdings beschleunigen vorkompilierte Header insbesondere in großen Projekten die Kompilierung, insofern ist eine Deaktivierung dieser Funktion nicht wünschenswert. In diesem Fall empfiehlt sich, konfigurieren Sie die **"/ CLR"** und nicht **"/ CLR"** Dateien in die Verwendung separater vorkompilierter Header. Dies kann erfolgen in einem Schritt Auswahl mehrerer Module zu kompilierenden **"/ CLR"** mit **Projektmappen-Explorer**, mit der rechten Maustaste auf die Gruppe, und wählen Sie Eigenschaften. Ändern Sie dann die beiden Eigenschaften „PCH durch Datei erstellen/verwenden“ und „Vorkompilierte Headerdatei“ auf einen anderen Headerdateinamen bzw. eine andere PCH-Datei.
 
 ## <a name="fixing-errors"></a>Beheben von Fehlern
 

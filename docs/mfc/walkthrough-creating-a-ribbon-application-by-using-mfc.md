@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb7039481469bbd6c307ab1ec88b508ff089733
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 2d86749cc8481f2472ed2ebe29dd535e05dcb2e2
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169579"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48236022"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Exemplarische Vorgehensweise: Erstellen einer Menübandanwendung mithilfe von MFC
 
@@ -28,7 +28,7 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie mit der **MFS-Anwe
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-In dieser exemplarischen Vorgehensweise wird davon ausgegangen, dass Sie Visual Studio für die Verwendung festgelegt haben **allgemeine Entwicklungseinstellungen**. Wenn Sie andere Einstellungen verwenden, werden möglicherweise einige Elemente der Benutzeroberfläche, auf die in den folgenden Anweisungen verwiesen wird, nicht angezeigt.
+In dieser exemplarischen Vorgehensweise wird davon ausgegangen, dass Sie Visual Studio für die Verwendung festgelegt haben **allgemeine Entwicklungseinstellungen**. Wenn Sie andere Einstellungen verwenden, können einige der Elemente der Benutzeroberfläche (UI), die in den folgenden Anweisungen referenziert werden nicht angezeigt.
 
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>So erstellen Sie eine MFC-Anwendung mit einem Menüband
 
@@ -73,7 +73,7 @@ In dieser exemplarischen Vorgehensweise wird davon ausgegangen, dass Sie Visual 
 
 1. Passen Sie danach den Bereich an. Bereiche werden zum Gruppieren von Elementen verwendet, die sich logisch aufeinander beziehen. Z. B. auf die **Startseite** dieser Anwendung auf der Registerkarte die **Ausschneiden**, **Kopie**, und **einfügen** Befehle alle befinden sich auf die  **Zwischenablage** Bereich. Um den Bereich anzupassen, Maustaste **Panel1** , und klicken Sie dann auf **Eigenschaften**. In der **Eigenschaften** ändern **Beschriftung** zu *Favoriten*.
 
-    Sie können angeben, die **Abbildindex** für den Bereich. Diese Zahl gibt das Symbol, das angezeigt wird, wenn der Menübandbereich hinzugefügt wird die **Symbolleiste für den Schnellzugriff**. Das Symbol wird nicht im Menübandbereich selbst angezeigt.
+    Sie können angeben, die **Abbildindex** für den Bereich. Diese Zahl gibt das Symbol, das angezeigt wird, wenn der Menübandbereich hinzugefügt wird die **Symbolleiste für den Schnellzugriff**. Das Symbol ist nicht im Menübandbereich selbst angezeigt.
 
 1. Um sicherzustellen, dass die Menübandkategorie und der entsprechende Bereich erfolgreich erstellt wurden, rufen Sie eine Vorschau des Menüband-Steuerelements auf. Auf der **Ribbon-Editor-Symbolleiste**, klicken Sie auf die **Ribbon testen** Schaltfläche. Ein **benutzerdefinierte** Registerkarte und **Favoriten** Bereich im Menüband angezeigt werden soll.
 
@@ -81,7 +81,7 @@ In dieser exemplarischen Vorgehensweise wird davon ausgegangen, dass Sie Visual 
 
 1. Zum Hinzufügen von Elementen in den Bereich, den Sie im vorherigen Verfahren erstellt haben, ziehen Sie Steuerelemente aus der **Ribbon-Editor** Teil der **Toolbox** in den Bereich in der Entwurfsansicht.
 
-1. Fügen Sie zunächst eine **Drucken** Schaltfläche. Die **Drucken** Schaltfläche weist einem Untermenü, das enthält eine **Schnelldruck** -Befehl, der mit dem Standarddrucker gedruckt. Beide Befehle sind bereits für diese Anwendung definiert. Sie befinden sich auf dem Anwendungsmenü.
+1. Fügen Sie zunächst eine **Drucken** Schaltfläche. Die **Drucken** Schaltfläche weist einem Untermenü, das enthält eine **Schnelldruck** -Befehl, der mit dem Standarddrucker gedruckt. Beide Befehle sind bereits für diese Anwendung definiert. Sie sind auf dem Anwendungsmenü befindet.
 
     Zum Erstellen der **Drucken** Schaltfläche, ziehen Sie ein schaltflächentool in den Zugriffsbereich.
 

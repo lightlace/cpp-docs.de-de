@@ -16,16 +16,16 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a85789123b1dd9129916683c08484bf6607a0687
-ms.sourcegitcommit: 9799816278ffa3e6b64199862ec57143c1b1ea56
+ms.openlocfilehash: 90754db9c648395ad916cf03682a5c87c0b7da3b
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47188118"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235307"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>Exemplarische Vorgehensweise: Erstellen und Verwenden einer statischen Bibliothek (C++)
 
-In dieser schrittweise erläuterten exemplarischen Vorgehensweise wird die Erstellung einer statischen Bibliothek (LIB-Datei) für die Verwendung mit C++-Apps erläutert. Die Verwendung einer statischen Bibliothek stellt eine gute Möglichkeit zur Wiederverwendung von Code dar. Anstatt die gleichen Routinen in jeder von Ihnen erstellten App, für die diese Funktion erforderlich ist, erneut zu implementieren, schreiben Sie die Routinen einmal in eine statische Bibliothek und verweisen dann von den Apps darauf. Der Code, der von einer statischen Bibliothek verknüpft ist, wird Teil der App. Sie müssen keine andere Datei installieren, um den Code zu verwenden.
+In dieser schrittweise erläuterten exemplarischen Vorgehensweise wird die Erstellung einer statischen Bibliothek (LIB-Datei) für die Verwendung mit C++-Apps erläutert. Die Verwendung einer statischen Bibliothek stellt eine gute Möglichkeit zur Wiederverwendung von Code dar. Anstatt die gleichen Routinen in jede app, die die Funktionalität ist erforderlich, Sie schreiben eine neuimplementierung Zeit in einer statischen Bibliothek aus, und dann aus den apps darauf verweisen. Der Code, der von einer statischen Bibliothek verknüpft ist, wird Teil der App. Sie müssen keine andere Datei installieren, um den Code zu verwenden.
 
 In dieser exemplarischen Vorgehensweise werden die folgenden Aufgaben behandelt:
 
@@ -76,17 +76,17 @@ Grundlegende Kenntnisse der Programmiersprache C++.
 
 1. Zum Erstellen einer Headerdatei für eine neue Klasse öffnen Sie das Kontextmenü für die **MathFuncsLib** Projekt **Projektmappen-Explorer**, und wählen Sie dann **hinzufügen**  >   **Neues Element**. Wählen Sie im linken Bereich des Dialogfelds **Neues Element hinzufügen** unter **Visual C++** die Option **Code**aus. Wählen Sie im mittleren Bereich die Option **Headerdatei (.h)**. Geben Sie einen Namen für die Header-Datei – z. B. *MathFuncsLib.h*, und wählen Sie dann die **hinzufügen** Schaltfläche. Eine leere Headerdatei wird angezeigt.
 
-1. Fügen Sie eine Klasse, die mit dem Namen `MyMathFuncs` zu geläufigen mathematischen Operationen wie Addition, Subtraktion, Multiplikation und Division. Der Code sollte diesem ähneln:
+1. Fügen Sie eine Klasse, die mit dem Namen `MyMathFuncs` zu geläufigen mathematischen Operationen wie Addition, Subtraktion, Multiplikation und Division. Der Code in etwa:
 
    [!code-cpp[NVC_Walkthrough_Create_Static_Lib#100](../windows/codesnippet/CPP/walkthrough-creating-and-using-a-static-library-cpp_1.h)]
 
 1. Zum Erstellen einer Quelldatei für die neue Klasse öffnen Sie das Kontextmenü für die **MathFuncsLib** Projekt **Projektmappen-Explorer**, und wählen Sie dann **hinzufügen**  >   **Neues Element**. Wählen Sie im linken Bereich des Dialogfelds **Neues Element hinzufügen** unter **Visual C++** die Option **Code**aus. Wählen Sie im mittleren Bereich die Option **C++-Datei (.cpp)**. Geben Sie einen Namen für die Quelldatei, z. B. *MathFuncsLib.cpp*, und wählen Sie dann die **hinzufügen** Schaltfläche. Eine leere Quelldatei wird angezeigt.
 
-1. Verwenden Sie diese Quelldatei zum Implementieren der Funktionalität von **MyMathFuncs**. Der Code sollte diesem ähneln:
+1. Verwenden Sie diese Quelldatei zum Implementieren der Funktionalität von **MyMathFuncs**. Der Code in etwa:
 
    [!code-cpp[NVC_Walkthrough_Create_Static_Lib#110](../windows/codesnippet/CPP/walkthrough-creating-and-using-a-static-library-cpp_2.cpp)]
 
-1. Kompilieren Sie die statische Bibliothek dazu **erstellen** > **Projektmappe** in der Menüleiste. Dadurch wird eine statische Bibliothek erstellt, die in anderen Programmen verwendet werden kann.
+1. Kompilieren Sie die statische Bibliothek dazu **erstellen** > **Projektmappe** in der Menüleiste. Beim Kompilieren erstellt eine statische Bibliothek, die von anderen Programmen verwendet werden kann.
 
    > [!NOTE]
    > Beim Erstellen über die Befehlszeile von Visual Studio müssen Sie das Programm in zwei Schritten erstellen. Führen Sie zunächst `cl /c /EHsc MathFuncsLib.cpp` zum Kompilieren des Codes und Erstellen einer Objektdatei mit dem Namen `MathFuncsLib.obj`. (Mit dem `cl`-Befehl wird der Compiler, "Cl.exe", aufgerufen, und mit der `/c`-Option wird Kompilieren ohne zu verknüpfen angegeben. Weitere Informationen finden Sie unter [/c (Kompilieren ohne Verknüpfen)](../build/reference/c-compile-without-linking.md).) Führen Sie `lib MathFuncsLib.obj` zum Verknüpfen des Codes und Erstellen der statischen Bibliothek `MathFuncsLib.lib`. (Mit dem `lib` Befehl wird der Bibliotheks-Manager, "Lib.exe", aufgerufen. Weitere Informationen finden Sie unter [LIB Reference](../build/reference/lib-reference.md).)
@@ -102,7 +102,7 @@ Grundlegende Kenntnisse der Programmiersprache C++.
    > [!NOTE]
    > Für Versionen von Visual Studio, die älter als 2017 in der **neues Projekt** Dialogfeld erweitern Sie **installiert** > **Vorlagen**  >  **Visual C++**, und wählen Sie dann **Win32**. Wählen Sie im mittleren Bereich **Win32-Konsolenanwendung**aus.
 
-1. Geben Sie einen Namen für das Projekt, z. B. *MyExecRefsLib*– in der **Namen** Feld. Wählen Sie in der Dropdownliste neben **Projektmappe**die Option **Hinzufügen**aus. Dadurch wird das neue Projekt in die Projektmappe eingefügt, in der auch die statische Bibliothek enthalten ist. Klicken Sie auf die Schaltfläche **OK** .
+1. Geben Sie einen Namen für das Projekt, z. B. *MyExecRefsLib*– in der **Namen** Feld. Wählen Sie in der Dropdownliste neben **Projektmappe**die Option **Hinzufügen**aus. Der Befehl fügt das neue Projekt der Projektmappe, die die statische Bibliothek enthält. Klicken Sie auf die Schaltfläche **OK** .
 
     - Für Visual Studio 2017
 
@@ -122,17 +122,17 @@ Grundlegende Kenntnisse der Programmiersprache C++.
 
 ### <a name="to-use-the-functionality-from-the-static-library-in-the-app"></a>So verwenden Sie die Funktionalität der statischen Bibliothek in der App
 
-1. Nach dem Erstellen einer Konsolenanwendung wird ein leeres Programm für Sie erstellt. Die Quelldatei erhält denselben Namen, den Sie zuvor ausgewählt haben. In diesem Beispiel heißt es `MyExecRefsLib.cpp`.
+1. Nach dem Erstellen einer Konsolenanwendung wird ein leeres Programm für Sie erstellt. Die Quelldatei erhält denselben Namen, den Sie zuvor ausgewählt haben. Im Beispiel heißt es `MyExecRefsLib.cpp`.
 
-1. Bevor Sie die mathematischen Routinen verwenden können, müssen Sie auf die erstellte statische Bibliothek verweisen. Zu diesem Zweck öffnen Sie das Kontextmenü für die **MyExecRefsLib** Projekt **Projektmappen-Explorer**, und wählen Sie dann **hinzufügen** > **Verweis**.
+1. Bevor Sie die mathematischen Routinen verwenden können, müssen Sie auf die erstellte statische Bibliothek verweisen. Öffnen Sie das Kontextmenü für die **MyExecRefsLib** Projekt **Projektmappen-Explorer**, und wählen Sie dann **hinzufügen** > **Verweis**.
 
-1. Im Dialogfeld **Verweis hinzufügen** werden Bibliotheken aufgeführt, auf die Sie verweisen können. Auf der Registerkarte **Projekte** werden alle Projekte in der aktuellen Projektmappe und darin enthaltenen Bibliotheken aufgelistet. Aktivieren Sie auf der Registerkarte **Projekte** das Kontrollkästchen **MathFuncsLib** aus, und wählen Sie dann die Schaltfläche **OK** aus.
+1. Im Dialogfeld **Verweis hinzufügen** werden Bibliotheken aufgeführt, auf die Sie verweisen können. Die **Projekte** Registerkarte listet die Projekte in der aktuellen Projektmappe und alle Bibliotheken, die sie verweisen. Aktivieren Sie auf der Registerkarte **Projekte** das Kontrollkästchen **MathFuncsLib** aus, und wählen Sie dann die Schaltfläche **OK** aus.
 
-1. Verweis der `MathFuncsLib.h` -Headerdatei müssen Sie den enthaltenen Verzeichnispfad ändern. Erweitern Sie im Dialogfeld **Eigenschaftenseiten** von **MyExecRefsLib**den Knoten **Konfigurationseigenschaften** , erweitern Sie den Knoten **C/C++** , und wählen Sie dann **Allgemein**aus. Geben Sie neben **Zusätzliche Includeverzeichnisse**den Pfad des **MathFuncsLib** -Verzeichnisses ein, oder suchen Sie danach.
+1. Verweis der `MathFuncsLib.h` -Headerdatei müssen Sie den enthaltenen Verzeichnispfad ändern. Erweitern Sie im Dialogfeld **Eigenschaftenseiten** von **MyExecRefsLib**den Knoten **Konfigurationseigenschaften** , erweitern Sie den Knoten **C/C++** , und wählen Sie dann **Allgemein**aus. Neben **Additional Include Directories**, geben Sie den Pfad, der die **MathFuncsLib** Verzeichnis, oder suchen Sie danach.
 
    Um nach dem Verzeichnispfad zu suchen, öffnen Sie die Dropdownliste für Eigenschaftswerte, und wählen Sie dann **Bearbeiten**aus. In der **Additional Include Directories** Dialogfeld, in das Textfeld ein, wählen Sie eine leere Zeile, und wählen Sie dann die Schaltfläche mit den Auslassungspunkten (**...** ) am Ende der Zeile. Wählen Sie im Dialogfeld **Verzeichnis auswählen** das **MathFuncsLib** -Verzeichnis aus, und wählen Sie dann die **Ordner auswählen** -Schaltfläche aus, um die Auswahl zu speichern und das Dialogfeld zu schließen. Wählen Sie im Dialogfeld **Zusätzliche Includeverzeichnisse** die Schaltfläche **OK** aus, und wählen Sie dann im Dialogfeld **Eigenschaftenseiten** die Schaltfläche **OK** aus, um die Änderungen am Projekt zu speichern.
 
-1. Sie können nun die `MyMathFuncs` Klasse in dieser app. Zu diesem Zweck ersetzen Sie den Inhalt der `MyExecRefsLib.cpp` durch den folgenden Code:
+1. Können Sie jetzt die `MyMathFuncs` Klasse in dieser app durch Einschließen der `#include "MathFuncsLib.h"` Header in Ihrem Code. Ersetzen Sie den Inhalt der `MyExecRefsLib.cpp` durch den folgenden Code:
 
    [!code-cpp[NVC_Walkthrough_Create_Static_Lib#120](../windows/codesnippet/CPP/walkthrough-creating-and-using-a-static-library-cpp_3.cpp)]
 
@@ -144,7 +144,7 @@ Grundlegende Kenntnisse der Programmiersprache C++.
 
 1. Stellen Sie sicher, dass **MyExecRefsLib** als Standardprojekt ausgewählt wurde. Öffnen Sie dazu das Kontextmenü von **MyExecRefsLib** im **Projektmappen-Explorer**, und wählen Sie anschließend **Als Startprojekt festlegen**aus.
 
-1. Führen Sie das Projekt, in der Menüleiste wählen **Debuggen** > **Starten ohne Debugging**. Die Ausgabe sollte dieser Ausgabe ähneln:
+1. Führen Sie das Projekt, in der Menüleiste wählen **Debuggen** > **Starten ohne Debugging**. Die Ausgabe in etwa:
 
     ```Output
     a + b = 106.4

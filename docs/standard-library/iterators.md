@@ -15,30 +15,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb8efba0146a0a230a85a7980f1e71381fcf4b2
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 858612ebdda30e68972d11072b4c2ac7f4f88954
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208401"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235489"
 ---
 # <a name="iterators"></a>Iterators
 
 Ein Iterator ist ein Objekt, das Elemente in einem C++-Standardbibliothekscontainer durchlaufen kann und den Zugriff auf einzelne Elemente bereitstellt. Alle C++-Standardbibliothekscontainer stellen Iteratoren bereit, damit Algorithmen standardisiert auf ihre Elemente zugreifen können, ohne dass die Art des Containers von Bedeutung ist, in dem die Elemente gespeichert werden.
 
-Sie können Iteratoren explizit mit Member- und globalen Funktionen wie z. B. begin() und end() verwenden und sich mit Operatoren wie z. B. ++ und --vorwärts oder rückwärts bewegen. Sie können Iteratoren auch implizit mit einer range-for-Schleife (für bestimmte Iteratortypen) oder dem Unterskriptoperator [] verwenden.
+Sie können Iteratoren explizit mit Member- und globalen Funktionen wie z. B. `begin()` und `end()` und Operatoren, z. B. **++** und **--** voranschreiten oder rückwärts. Sie können Iteratoren auch implizit verwenden, mit einer Range-for-Schleife oder (für bestimmte iteratortypen) den tiefgestellt-Operator  **\[]**.
 
-In der C++-Standardbibliothek ist der Anfang einer Sequenz oder eines Bereichs das erste Element. Das Ende einer Sequenz oder eines Bereichs wird immer als eins hinter dem letzten Element definiert. Die globalen Funktionen „begin“ und „end“ geben Iteratoren zu einem angegebenen Container zurück. Die typische explizite Iteratorschleife durch alle Elemente in einem Container sieht folgendermaßen aus:
+In der C++-Standardbibliothek ist der Anfang einer Sequenz oder eines Bereichs das erste Element. Das Ende einer Sequenz oder eines Bereichs wird immer als eins hinter dem letzten Element definiert. Die globalen Funktionen `begin` und `end` geben Iteratoren zu einem angegebenen Container zurück. Die typische explizite Iteratorschleife durch alle Elemente in einem Container sieht folgendermaßen aus:
 
 ```cpp
 vector<int> vec{ 0,1,2,3,4 };
-for (auto it = begin(vec);
-
-it != end(vec);
-
-it++)
-{  // Access element using dereference operator
-    cout <<*it <<" ";
+for (auto it = begin(vec); it != end(vec); it++)
+{
+    // Access element using dereference operator
+    cout << *it << " ";
 }
 ```
 
@@ -46,22 +43,23 @@ Das Gleiche kann einfacher mit einer range-for-Schleife erreicht werden:
 
 ```cpp
 for (auto num : vec)
- {  // no deference operator
-    cout <<num <<" ";
- }
+{
+    // no deference operator
+    cout << num << " ";
+}
 ```
 
 Es gibt fünf Kategorien von Iteratoren. Die Kategorien zum Erhöhen der Leistung sind:
 
-- **Output**. Ein Ausgabeiterator `X` kann vorwärts Durchlaufen einer Sequenz mithilfe der ++-Operator, und Sie können ein Element nur einmal mit schreiben die \* Operator.
+- **Output**. Ein *Ausgabeiterator* `X` kann vorwärts Durchlaufen einer Sequenz mithilfe der **++** -Operator, und ein Element mit nur einmal schreiben zu können die **&ast;** Operator.
 
-- **Input**. Ein eingabeiterator `X` kann vorwärts Durchlaufen einer Sequenz mithilfe der ++-Operator, und erhalten ein Element beliebig häufig mithilfe der \* Operator. Sie können Eingabeiteratoren mithilfe der Iteratoren ++ und != vergleichen. Nach der Inkrementierung einer Kopie eines Eingabeiterators kann keine der anderen Kopien sicher verglichen, dereferenziert oder inkrementiert werden.
+- **Input**. Ein *eingabeiterator* `X` kann vorwärts Durchlaufen einer Sequenz mithilfe der ++-Operator, und erhalten ein Element beliebig häufig mithilfe der **&ast;** Operator. Sie können eingabeiteratoren mithilfe von Vergleichen die **++** und **! =** Operatoren. Nach der Inkrementierung einer Kopie eines Eingabeiterators kann keine der anderen Kopien sicher verglichen, dereferenziert oder inkrementiert werden.
 
-- **Forward**. Ein forward-Iterator `X` eine Sequenz mit kann vorwärts durchlaufen die ++-Operator und beliebiges Element lesen oder Schreiben nicht Konstante Elemente beliebig häufig mithilfe der \* Operator. Sie können mithilfe des Operators -> auf Elementmitglieder zugreifen und Forward-Iteratoren mithilfe der Operatoren == und != vergleichen. Sie können mehrere Kopien eines Forward-Iterators anfertigen, wobei jede einzelne unabhängig dereferenziert und inkrementiert werden kann. Ein Forward-Iterator, der ohne Bezug zu einem beliebigen Container initialisiert ist, wird Null-Forward-Iterator genannt. Null-Forward-Iteratoren vergleichen immer gleich.
+- **Forward**. Ein *forward-Iterator* `X` eine Sequenz mit kann vorwärts durchlaufen den-Operator und beliebiges Element lesen oder Schreiben nicht Konstante Elemente beliebig häufig mithilfe der **&ast;** Operator. Sie können auf elementmitglieder zugreifen, mithilfe der **->** Iteratoren mithilfe weiterleiten, Operator und Vergleichen der **==** und **! =** Operatoren. Sie können mehrere Kopien eines Forward-Iterators anfertigen, wobei jede einzelne unabhängig dereferenziert und inkrementiert werden kann. Ein forward-Iterator, der initialisiert wird, ohne Verweis auf einen beliebigen Container aufgerufen wird, eine *null-forward-Iterator*. Null-Forward-Iteratoren vergleichen immer gleich.
 
-- Bidirektional. Ein bidirektionaler Iterator `X` kann an die Stelle eines Forward-Iterators treten. Sie können jedoch auch einen bidirektionaler Iterator, wie in--verringern`X`, `X`–, oder (`V` = \*`X`–). Sie können auf Elementmitglieder zugreifen und bidirektionale Iteratoren genauso wie Forward-Iteratoren vergleichen.
+- **Bidirektionale**. Ein *bidirektionaler Iterator, der* `X` kann die Stelle eines forward-Iterators treten. Sie können jedoch auch einen bidirektionaler Iterator, wie in verringern `--X`, `X--`, oder `(V = *X--)`. Sie können auf Elementmitglieder zugreifen und bidirektionale Iteratoren genauso wie Forward-Iteratoren vergleichen.
 
-- **Random Access**. Ein Random-Access-Iterator `X` kann an die Stelle eines bidirektionalen Iterators treten. Mit einem Random-Access-Iterator können Sie den Unterskriptoperator [] zum Zugriff auf Elemente verwenden. Sie können sich mit dem Operatoren +, -, += und -= eine bestimmte Anzahl an Elementen vorwärts oder rückwärts bewegen und den Abstand zwischen Iteratoren berechnen. Sie können bidirektionale Iteratoren mithilfe von ==, !=, \<, >, \<=, und >= vergleichen.
+- **Random Access**. Ein *Iterator mit wahlfreiem Zugriff* `X` kann die Stelle eines bidirektionalen Iterators treten. Mit einem Iterator mit wahlfreiem Zugriff können Sie den tiefgestellten-Operator  **\[]** Zugriff auf Elemente. Sie können die **+**, **-**, **+=** und **-=** Operatoren verschieben Vorwärts oder rückwärts eine angegebene Anzahl von Elementen und den Abstand zwischen Iteratoren berechnen. Sie können Bidirektionale Iteratoren vergleichen, mithilfe von **==**, **! =**, **\<**, **>**, **\< =**, und **>=**.
 
 Alle Iteratoren können zugewiesen oder kopiert werden. Es wird angenommen, dass es sich bei ihnen um Lightweight-Objekte handelt, und sie werden oftmals nach Wert und nicht nach Verweis weiter- und zurückgegeben. Beachten Sie zudem, dass einer der zuvor beschriebenen Vorgänge eine Ausnahme auslösen kann, wenn er für einen gültigen Iterator ausgeführt wird.
 

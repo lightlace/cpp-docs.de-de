@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05255f71f304b32de95faf96eaa23f5ce3da9f96
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 9d96ce9ade06c849716a680bd3c0c8bb6feeccc6
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169410"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235658"
 ---
 # <a name="walkthroughs-mfc"></a>Exemplarische Vorgehensweisen (MFC)
 
@@ -28,7 +28,7 @@ Dieser Abschnitt enthält Artikel, die Sie durch verschiedene Aufgaben im Zusamm
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 [Exemplarische Vorgehensweise: Verwenden der neuen MFC-Shell-Steuerelemente](../mfc/walkthrough-using-the-new-mfc-shell-controls.md)<br/>
-In dieser exemplarischen Vorgehensweise erstellen Sie eine Anwendung, die Datei-Explorer ähnelt. Sie erstellen ein Fenster, das zwei Bereiche enthält. Der linke Bereich enthält eine [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) -Objekt, das Ihrem Desktop in einer hierarchischen Ansicht angezeigt wird. Der rechte Bereich enthält eine [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) wird, die die Dateien angezeigt, in dem Ordner, der im linken Bereich ausgewählt ist.
+In dieser exemplarischen Vorgehensweise erstellen Sie eine Anwendung, die Datei-Explorer ähnelt. Erstellen Sie ein Fenster, das zwei Bereiche enthält. Im linke Bereich verfügt über eine [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) -Objekt, das Ihrem Desktop in einer hierarchischen Ansicht angezeigt wird. Im rechte Bereich verfügt über eine [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) wird, die die Dateien angezeigt, in dem Ordner, der im linken Bereich ausgewählt ist.
 
 [Exemplarische Vorgehensweise: Steuerelemente in eine Symbolleiste einfügen](../mfc/walkthrough-putting-controls-on-toolbars.md)<br/>
 Moderne MFC-Symbolleisten können als Host für andere Steuerelemente als einfache Schaltflächen fungieren. In diesem Artikel wird die entsprechende Vorgehensweise erläutert.

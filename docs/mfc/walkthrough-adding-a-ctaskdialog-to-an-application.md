@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48efa5d85ac6c7ba7e989cc55196f12fb391fa6d
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 899ddba8ee72039702f05b0d369b79e347f7db7e
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169722"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235606"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Exemplarische Vorgehensweise: Hinzufügen eines CTaskDialog zu einer Anwendung
 
@@ -43,7 +43,7 @@ Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgend
 
 ## <a name="replacing-a-windows-message-box-with-a-ctaskdialog"></a>Ersetzen eines Windows-Meldungsfeld mit einem CTaskDialog
 
-Das folgende Verfahren veranschaulicht die grundlegende Verwendung des `CTaskDialog`, sprich die Ersetzung des Windows-Meldungsfelds. In diesem Beispiel wird auch das Symbol geändert, das dem Aufgabendialogfeld zugeordnet ist. Durch Ändern des Symbols wird das Erscheinungsbild des `CTaskDialog` mit dem des Windows-Meldungsfelds identisch.
+Das folgende Verfahren veranschaulicht die grundlegende Verwendung des `CTaskDialog`, sprich die Ersetzung des Windows-Meldungsfelds. In diesem Beispiel wird auch das Symbol geändert, das dem Aufgabendialogfeld zugeordnet ist. Ändern das Symbol wird die `CTaskDialog` gleichen auf das Windows-Meldungsfeld angezeigt.
 
 ### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>So ersetzen Sie ein Windows-Meldungsfeld durch einen CTaskDialog
 
@@ -92,7 +92,7 @@ Das folgende Verfahren veranschaulicht die grundlegende Verwendung des `CTaskDia
     taskDialog.DoModal();
     ```
 
-Sie können Schritt 7 weglassen, wenn Sie im `CTaskDialog` nicht das gleiche Symbol wie im Windows-Meldungsfeld angezeigt werden soll. Wenn Sie diesen Schritt auslassen, hat der `CTaskDialog` kein Symbol, wenn er von der Anwendung angezeigt wird.
+Sie können Schritt 7 vermeiden, wenn Sie nicht möchten die `CTaskDialog` das gleiche Symbol wie das Windows-Meldungsfeld angezeigt. Wenn Sie diesen Schritt, das Vermeiden der `CTaskDialog` hat kein Symbol, wenn die Anwendung angezeigt wird.
 
 Kompilieren Sie die Anwendung, und führen Sie sie aus. Die Anwendung zeigt das Aufgabendialogfeld nach dem Start an.
 
@@ -102,7 +102,7 @@ Das folgende Verfahren zeigt, wie Sie dem `CTaskDialog` Funktionen hinzufügen k
 
 ### <a name="to-add-functionality-to-the-ctaskdialog"></a>So fügen Sie Funktionen zum CTaskDialog hinzu
 
-1. Navigieren Sie zur **Ressourcenansicht**. Wenn Sie die **Ressourcenansicht**nicht sehen, können Sie sie über das Menü **Ansicht** öffnen.
+1. Navigieren Sie zur **Ressourcenansicht**. Wenn Sie nicht angezeigt wird der **Ressourcenansicht**, können Sie es aus öffnen die **anzeigen** im Menü.
 
 1. Erweitern Sie die **Ressourcenansicht** , bis Sie den Ordner **Zeichenfolgentabelle** auswählen können. Erweitern Sie ihn, und doppelklicken Sie auf den Eintrag **Zeichenfolgentabelle** .
 
@@ -181,7 +181,7 @@ Das folgende Verfahren veranschaulicht, wie Sie ein `CTaskDialog` anzeigen, ohne
 
 ### <a name="to-display-a-ctaskdialog-without-creating-a-ctaskdialog-object"></a>So zeigen Sie einen CTaskDialog an, ohne ein CTaskDialog-Objekt zu erstellen
 
-1. Öffnen Sie die Datei „MyProject.cpp“, sofern noch nicht geöffnet.
+1. Öffnen Sie die Datei "MyProject.cpp" aus, wenn es nicht bereits geöffnet ist.
 
 1. Navigieren Sie zur schließenden Klammer für die `if (CTaskDialog::IsSupported())` -Anweisung.
 
@@ -197,7 +197,7 @@ Das folgende Verfahren veranschaulicht, wie Sie ein `CTaskDialog` anzeigen, ohne
 
 Kompilieren Sie die Anwendung, und führen Sie sie aus. Die Anwendung zeigt zwei Aufgabendialogfelder an. Das erste Dialogfeld stammt aus dem **um hinzufügen-Funktionen zum CTaskDialog** Prozedur; das zweite Dialogfeld stammt aus der vorherigen Prozedur.
 
-Diese Beispiele zeigen nicht alle verfügbaren Optionen für ein `CTaskDialog`, sind jedoch ein guter Anfangspunkt. Eine vollständige Beschreibung der Klasse finden Sie unter [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) .
+Diese Beispiele nicht alle verfügbaren Optionen für zeigen eine `CTaskDialog`, jedoch sollten Sie beim Einstieg zu helfen. Eine vollständige Beschreibung der Klasse finden Sie unter [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) .
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,28 +1,32 @@
 ---
 title: SRWLockExclusiveTraits-Struktur | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/27/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::GetInvalidValue
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
-- SRWLockExclusiveTraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::GetInvalidValue method
+- Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::Unlock method
 ms.assetid: 38a996ef-c2d7-4886-b413-a426ecee8f05
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 542ad92aa636c934e3250817931dd7f31d1fe85b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7737c802634b618b9ea363c231a44d9381ad30ae
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601602"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235164"
 ---
 # <a name="srwlockexclusivetraits-structure"></a>SRWLockExclusiveTraits-Struktur
 
@@ -38,16 +42,16 @@ struct SRWLockExclusiveTraits;
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
-|----------|-----------------|
-|`Type`|Synonym für einen Zeiger auf die [SRWLOCK](../windows/srwlock-class.md) Klasse.|
+Name   | Beschreibung
+------ | --------------------------------------------------------------------------
+`Type` | Synonym für einen Zeiger auf die [SRWLOCK](../windows/srwlock-class.md) Klasse.
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
-|----------|-----------------|
-|[SRWLockExclusiveTraits::GetInvalidValue-Methode](../windows/srwlockexclusivetraits-getinvalidvalue-method.md)|Ruft eine **SRWLockExclusiveTraits** -Objekt, das immer ungültig ist.|
-|[SRWLockExclusiveTraits::Unlock-Methode](../windows/srwlockexclusivetraits-unlock-method.md)|Exklusive Kontrolle über den angegebenen Versionen `SRWLock` Objekt.|
+Name                                                        | Beschreibung
+----------------------------------------------------------- | --------------------------------------------------------------------
+[Srwlockexclusivetraits:: Getinvalidvalue](#getinvalidvalue) | Ruft eine `SRWLockExclusiveTraits` -Objekt, das immer ungültig ist.
+[Srwlockexclusivetraits:: Unlock](#unlock)                   | Exklusive Kontrolle über den angegebenen Versionen `SRWLock` Objekt.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -59,6 +63,29 @@ struct SRWLockExclusiveTraits;
 
 **Namespace:** Microsoft::WRL::Wrappers::HandleTraits
 
-## <a name="see-also"></a>Siehe auch
+## <a name="getinvalidvalue"></a>Srwlockexclusivetraits:: Getinvalidvalue
 
-[Microsoft::WRL::Wrappers::HandleTraits-Namespace](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+Ruft eine `SRWLockExclusiveTraits` -Objekt, das immer ungültig ist.
+
+```cpp
+inline static Type GetInvalidValue();
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein leeres `SRWLockExclusiveTraits`-Objekt.
+
+## <a name="unlock"></a>Srwlockexclusivetraits:: Unlock
+
+Exklusive Kontrolle über den angegebenen Versionen `SRWLock` Objekt.
+
+```cpp
+inline static void Unlock(
+   _In_ Type srwlock
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*SRWLOCK*<br/>
+Handle für ein `SRWLock` Objekt.
