@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 208ae27e694396a21b76bc482c87084e03a21975
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: d3623eb594ff82660e97809eef609a33e74e74dc
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169683"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235437"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Exemplarische Vorgehensweise: Aktualisieren der MFC Scribble-Anwendung (Teil 2)
 
@@ -116,17 +116,17 @@ Die ursprüngliche Scribble-Anwendung ermöglicht dem Benutzer, die Breite des S
 
 1. Klicken Sie auf das zweite Kombinationsfeld. Änderung **Beschriftung** zu `Thick Pen`, **ID** zu `ID_PEN_THICK_WIDTH`, **Typ** zu `Drop List`, **Daten** zu `5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`, und **Text** zu `5`.
 
-1. Die neue Kombinationsfelder entsprechen keine vorhandenen Menüelementen. Aus diesem Grund müssen Sie ein Menüelement für jede Stiftoption erstellen.
+1. Die neue Kombinationsfelder entsprechen keine vorhandenen Menüelemente, daher müssen Sie ein Menüelement für jede Stiftoption erstellen.
 
    1. In der **Ressourcenansicht** geöffnete Fenster die **IDR_SCRIBBTYPE** Menüressource.
 
    1. Klicken Sie auf **Stift** auf das Pen-Menü zu öffnen. Klicken Sie dann auf **Text hier eingeben** und `Thi&n Pen`.
 
-   1. Mit der rechten Maustaste in des Texts, der Sie gerade eingegeben, zum Öffnen haben der **Eigenschaften** Fenster, und klicken Sie dann ändern Sie die ID-Eigenschaft, um `ID_PEN_THIN_WIDTH`.
+   1. Mit der rechten Maustaste in des Texts, die von Ihnen zum Öffnen eingegebene der **Eigenschaften** Fenster, und klicken Sie dann ändern Sie die ID-Eigenschaft, um `ID_PEN_THIN_WIDTH`.
 
-   1. Sie müssen auch einen Ereignishandler für jedes Menüelement Stift erstellen. Mit der rechten Maustaste die **Di & n Stift** Menüelement, das Sie gerade erstellt haben, und klicken Sie dann auf **Ereignishandler hinzufügen**. Die **Ereignishandler-Assistent** wird angezeigt.
+   1. Erstellen Sie einen Ereignishandler für jedes Menüelement Stift. Mit der rechten Maustaste die **Di & n Stift** Menüelement, das Sie erstellt, und klicken Sie dann auf **Ereignishandler hinzufügen**. Die **Ereignishandler-Assistent** wird angezeigt.
 
-   1. In der **Klassenliste** wählen Sie im Assistenten im Feld **CScribbleDoc** , und klicken Sie dann auf **hinzufügen und Bearbeiten von**. Dadurch wird einen Ereignishandler mit dem Namen erstellt `CScribbleDoc::OnPenThinWidth`.
+   1. In der **Klassenliste** wählen Sie im Assistenten im Feld **CScribbleDoc** , und klicken Sie dann auf **hinzufügen und Bearbeiten von**. Der Befehl erstellt einen Ereignishandler namens `CScribbleDoc::OnPenThinWidth`.
 
    1. Fügen Sie `CScribbleDoc::OnPenThinWidth` den folgenden Code hinzu.
 
@@ -156,11 +156,11 @@ Die ursprüngliche Scribble-Anwendung ermöglicht dem Benutzer, die Breite des S
 
    1. Klicken Sie auf **Stift** auf das Pen-Menü zu öffnen. Klicken Sie dann auf **Text hier eingeben** und `Thic&k Pen`.
 
-   1. Mit der rechten Maustaste in des Texts, der Sie gerade eingegeben, zum Anzeigen haben der **Eigenschaften** Fenster. Ändern Sie die ID-Eigenschaft in `ID_PEN_THICK_WIDTH`.
+   1. Mit der rechten Maustaste in des Texts, die von Ihnen zum Anzeigen eingegebene der **Eigenschaften** Fenster. Ändern Sie die ID-Eigenschaft in `ID_PEN_THICK_WIDTH`.
 
-   1. Mit der rechten Maustaste die **Stift dick** Menüelement, das Sie gerade erstellt haben, und klicken Sie dann auf **Ereignishandler hinzufügen**. Die **Ereignishandler-Assistent** wird angezeigt.
+   1. Mit der rechten Maustaste die **Stift dick** Menüelement, das Sie erstellt, und klicken Sie dann auf **Ereignishandler hinzufügen**. Die **Ereignishandler-Assistent** wird angezeigt.
 
-   1. In der **Klassenliste** im Feld Wählen Sie im Assistenten **CScribbleDoc** , und klicken Sie dann auf **hinzufügen und Bearbeiten von**. Dadurch wird einen Ereignishandler mit dem Namen erstellt `CScribbleDoc::OnPenThickWidth`.
+   1. In der **Klassenliste** im Feld Wählen Sie im Assistenten **CScribbleDoc** , und klicken Sie dann auf **hinzufügen und Bearbeiten von**. Der Befehl erstellt einen Ereignishandler namens `CScribbleDoc::OnPenThickWidth`.
 
    1. Fügen Sie `CScribbleDoc::OnPenThickWidth` den folgenden Code hinzu.
 
@@ -190,17 +190,17 @@ Fügen Sie als Nächstes eine [CMFCRibbonColorButton](../mfc/reference/cmfcribbo
 
 ### <a name="to-add-a-color-button-to-the-pen-panel"></a>Eine Schaltfläche "Farbe" das Bedienfeld "Stift" hinzu
 
-1. Bevor Sie die Schaltfläche "Farbe" hinzufügen, erstellen Sie ein Menüelement für. In der **Ressourcenansicht** geöffnete Fenster die **IDR_SCRIBBTYPE** Menüressource. Klicken Sie auf die **Stift** Menüelement, das Pen-Menü zu öffnen. Klicken Sie dann auf **Text hier eingeben** und `&Color`. Mit der rechten Maustaste in des Texts, der Sie gerade eingegeben, zum Anzeigen haben der **Eigenschaften** Fenster. Ändern Sie die ID, `ID_PEN_COLOR`.
+1. Bevor Sie die Schaltfläche "Farbe" hinzufügen, erstellen Sie ein Menüelement für. In der **Ressourcenansicht** geöffnete Fenster die **IDR_SCRIBBTYPE** Menüressource. Klicken Sie auf die **Stift** Menüelement, das Pen-Menü zu öffnen. Klicken Sie dann auf **Text hier eingeben** und `&Color`. Mit der rechten Maustaste in des Texts, die von Ihnen zum Anzeigen eingegebene der **Eigenschaften** Fenster. Ändern Sie die ID, `ID_PEN_COLOR`.
 
 1. Fügen Sie jetzt die Schaltfläche "Farbe" hinzu. Von der **Toolbox**, ziehen Sie eine **Farbenschaltfläche** auf die **Stift** Bereich.
 
 1. Klicken Sie auf die Schaltfläche "Farbe". Änderung **Beschriftung** zu `Color`, **ID** zu `ID_PEN_COLOR`, **Simple Look** zu `True`, **Large Image Index** auf `1`, und **Teilen Modus** zu `False`.
 
-1. Speichern Sie die Änderungen, erstellen Sie anschließend die Anwendung, und führen Sie sie aus. Schaltfläche für die neue Farbe angezeigt werden soll, auf die **Stift** Bereich. Allerdings kann nicht verwendet werden, da er noch nicht über einen Ereignishandler verfügt. Die nächsten Schritte zeigen, wie einen Ereignishandler für die Schaltfläche "Farbe" hinzuzufügen.
+1. Speichern Sie die Änderungen, erstellen Sie anschließend die Anwendung, und führen Sie sie aus. Schaltfläche für die neue Farbe angezeigt werden soll, auf die **Stift** Bereich. Allerdings kann nicht verwendet werden, da er noch nicht über einen Ereignishandler verfügen. Die nächsten Schritte zeigen, wie einen Ereignishandler für die Schaltfläche "Farbe" hinzuzufügen.
 
 ##  <a name="addcolormember"></a> Hinzufügen eines Color-Members zur Dokumentklasse
 
-Da die ursprüngliche Scribble-Anwendung keine Farbe Stifte, müssen Sie eine Implementierung für sie schreiben. Speichern die Stiftfarbe des Dokuments, die Dokumentenklasse, ein neues Mitglied hinzugefügt `CscribbleDoc`.
+Da die ursprüngliche Scribble-Anwendung Farbe Stifte hat, müssen Sie eine Implementierung für sie schreiben. Speichern die Stiftfarbe des Dokuments, die Dokumentenklasse, ein neues Mitglied hinzugefügt `CscribbleDoc`.
 
 ### <a name="to-add-a-color-member-to-the-document-class"></a>Der Dokumentklasse eine Color-Member hinzu
 
@@ -211,7 +211,7 @@ Da die ursprüngliche Scribble-Anwendung keine Farbe Stifte, müssen Sie eine Im
    COLORREF m_penColor;
    ```
 
-1. Jedes Dokument enthält eine Liste der Tastenanschläge aufzeichnen, dass der Benutzer bereits gezeichnet hat. Jedes Strichs wird definiert, indem eine `CStroke` Objekt. Die `CStroke` Klasse enthält keine Informationen über die Stiftfarbe. Aus diesem Grund müssen Sie die Klasse ändern. In scribdoc.h in der `CStroke` -Klasse verwenden, fügen Sie die folgenden Codezeilen, nach der Definition von der `m_nPenWidth` -Datenmember.
+1. Jedes Dokument enthält eine Liste der Tastenanschläge aufzeichnen, dass der Benutzer bereits gezeichnet hat. Jedes Strichs wird definiert, indem eine `CStroke` Objekt. Die `CStroke` Klasse keine Informationen zu Stiftfarbe, sodass Sie die Klasse ändern müssen. In scribdoc.h in der `CStroke` -Klasse verwenden, fügen Sie die folgenden Codezeilen, nach der Definition von der `m_nPenWidth` -Datenmember.
 
    ```cpp
    // Pen color for the stroke
@@ -267,7 +267,7 @@ Da die ursprüngliche Scribble-Anwendung keine Farbe Stifte, müssen Sie eine Im
 
    1. Mit der rechten Maustaste die **Farbe** Menüelement, und klicken Sie auf **Ereignishandler hinzufügen**. Die **Ereignishandler-Assistent** angezeigt wird.
 
-   1. In der **Klassenliste** wählen Sie im Assistenten im Feld **CScribbleDoc** , und klicken Sie dann auf die **hinzufügen und Bearbeiten von** Schaltfläche. Dies erstellt die `CScribbleDoc::OnPenColor` Ereignisstubs-Handler.
+   1. In der **Klassenliste** wählen Sie im Assistenten im Feld **CScribbleDoc** , und klicken Sie dann auf die **hinzufügen und Bearbeiten von** Schaltfläche. Der Befehl erstellt die `CScribbleDoc::OnPenColor` Ereignisstubs-Handler.
 
 1. Ersetzen Sie den Stub für die `CScribbleDoc::OnPenColor` -Ereignishandler durch den folgenden Code.
 
@@ -287,7 +287,7 @@ Da die ursprüngliche Scribble-Anwendung keine Farbe Stifte, müssen Sie eine Im
    }
    ```
 
-1. Speichern Sie die Änderungen, erstellen Sie anschließend die Anwendung, und führen Sie sie aus. Sie sollten in der Lage, drücken die Schaltfläche "Farbe", und ändern Sie die Stiftfarbe.
+1. Speichern Sie die Änderungen, erstellen Sie anschließend die Anwendung, und führen Sie sie aus. Sie können jetzt drücken Sie die Schaltfläche "Farbe" und ändern die Stiftfarbe.
 
 ##  <a name="initpensave"></a> Initialisieren die Stifte, und Speichern von Einstellungen
 

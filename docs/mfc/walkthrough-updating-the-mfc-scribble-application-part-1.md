@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d028d1cb3a42a68aab67d2b6fa90165a7d6264b
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 48cbc29685660f00665fbbb08be76779272d0fcf
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169774"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235503"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Exemplarische Vorgehensweise: Aktualisieren der MFC Scribble-Anwendung (Teil 1)
 
@@ -54,7 +54,7 @@ Dieser Teil der exemplarischen Vorgehensweise enthält die folgenden Abschnitte:
 
 ##  <a name="replaceclass"></a> Ersetzen der Basisklassen
 
-Zum Konvertieren einer Anwendung, die ein Menü unterstützt, in eine Anwendung, die ein Menüband unterstützt, müssen Sie die Anwendung, das Rahmenfenster und die Symbolleistenklassen von den aktualisierten Basisklassen ableiten. (Es wird empfohlen, das ursprüngliche Scribble-Beispiel nicht zu ändern. Bereinigen Sie stattdessen das Scribble-Projekt, kopieren Sie es in ein anderes Verzeichnis, und ändern Sie dann die Kopie.)
+Zum Konvertieren einer Anwendung, die ein Menü unterstützt, in eine Anwendung, die ein Menüband unterstützt, müssen Sie die Anwendung, das Rahmenfenster und die Symbolleistenklassen von den aktualisierten Basisklassen ableiten. (Es wird empfohlen, dass Sie nicht, dass das ursprüngliche Scribble-Beispiel ändern. Stattdessen bereinigen Sie das Scribble-Projekt zu, kopieren Sie ihn in ein anderes Verzeichnis und ändern Sie die Kopie dann.)
 
 ### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>So ersetzen Sie die Basisklassen in der Scribble-Anwendung
 
@@ -115,9 +115,9 @@ Zum Konvertieren einer Anwendung, die ein Menü unterstützt, in eine Anwendung,
 
 ##  <a name="addbitmap"></a> Hinzufügen von Bitmaps zum Projekt
 
-Für die nächsten vier Schritte dieser exemplarischen Vorgehensweise sind Bitmapressourcen erforderlich. Sie erhalten die entsprechenden Bitmaps auf verschiedene Arten:
+Für die nächsten vier Schritte dieser exemplarischen Vorgehensweise sind Bitmapressourcen erforderlich. Sie können die entsprechenden Bitmaps auf verschiedene Weise abrufen:
 
-- Verwenden der [Ressourcen-Editoren](../windows/resource-editors.md) auf Ihre eigenen Bitmaps. Oder verwenden Sie die Ressourcen-Editoren, um Bitmaps portable Network Graphics (PNG) über Images aus dem zusammenzustellen, die in Visual Studio enthalten und kann von heruntergeladen der [Visual Studio-Bildbibliothek](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library).
+- Verwenden der [Ressourcen-Editoren](../windows/resource-editors.md) auf Ihre eigenen Bitmaps. Oder verwenden Sie die Ressourcen-Editoren, um Bitmaps portable Network Graphics (PNG) über Images aus dem zusammenzustellen, die in Visual Studio enthalten und kann heruntergeladen werden die [Visual Studio-Bildbibliothek](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library).
 
     Allerdings die **Menüband** Benutzeroberfläche erfordert, dass bestimmte Bitmaps transparente Bilder unterstützen. Transparente Bitmaps verwenden 32 Bits / Pixel, in denen 24 Bits geben die Rot-, Grün- und blauen-Komponenten der Farbe, und Definieren von 8 Bits einen *alpha-Kanal* , der die Transparenz der Farbe angibt. Die aktuellen Ressourcen-Editoren können Bitmaps mit 32 Bits/Pixel anzeigen, aber nicht ändern. Verwenden Sie daher einen externen Bild-Editor anstelle der Ressourcen-Editoren, um transparente Bitmaps zu bearbeiten.
 
@@ -165,7 +165,7 @@ In dieser exemplarischen Vorgehensweise werden Ressourcendateien aus dem Beispie
 
 ##  <a name="addribbon"></a> Hinzufügen einer Menübandressource zum Projekt
 
-Wenn Sie eine Anwendung, die Menüs verwendet, in eine Anwendung konvertieren, die ein Menüband verwendet, müssen Sie die vorhandenen Menüs nicht entfernen oder deaktivieren. Stattdessen erstellen Sie eine Menübandressource, fügen Menübandschaltflächen hinzu, und weisen die neuen Schaltflächen dann den vorhandenen Menüelementen zu. Obwohl die Menüs nicht mehr sichtbar sind, werden Meldungen von der Menübandleiste über die Menüs weitergeleitet. Darüber hinaus funktionieren Tastenkombinationen für Menüs weiterhin.
+Wenn Sie eine Anwendung, die Menüs zu einer Anwendung verwendet, die ein Menüband verwendet konvertieren, müssen Sie nicht entfernen oder deaktivieren Sie die vorhandenen Menüs. Erstellen Sie einfach eine menübandressource, fügen Menübandschaltflächen hinzu und ordnen Sie die neuen Schaltflächen dann den vorhandenen Menüelementen. Obwohl die Menüs nicht mehr sichtbar sind, Nachrichten von der menübandleiste über die Menüs weitergeleitet werden, und Tastenkombinationen für Menüs weiterhin funktionieren.
 
 Ein Menüband besteht aus den **Anwendung** Schaltfläche, die die große Schaltfläche auf der oberen linken Seite des Menübands befindet, und mindestens einer kategorienregisterkarte. Jede Kategorienregisterkarte enthält einen oder mehrere Bereiche, die als Container für Menübandschaltflächen und Steuerelemente dienen. Das folgende Verfahren zeigt, wie Sie eine menübandressource erstellen, und klicken Sie dann Anpassen der **Anwendung** Schaltfläche.
 
@@ -213,7 +213,7 @@ Ein Menüband besteht aus den **Anwendung** Schaltfläche, die die große Schalt
 
    1. Mit der **Element** Typ **Schaltfläche** ausgewählt ist, klicken Sie auf **hinzufügen** um eine Schaltfläche hinzuzufügen. Änderung **Beschriftung** zu `E&xit`, **ID** zu `ID_APP_EXIT`, **Image** zu `8`.
 
-   1. Sie wurden geändert, die **Schaltflächen**. Klicken Sie auf **schließen** zum Beenden der **Elemente-Editor**.
+   1. Verändert die **Schaltflächen**. Klicken Sie auf **schließen** zum Beenden der **Elemente-Editor**.
 
 ##  <a name="createinstance"></a> Erstellen einer Instanz der Menübandleiste
 
@@ -221,14 +221,14 @@ Die folgenden Schritte zeigen, wie beim Starten Ihrer Anwendung eine Instanz der
 
 ### <a name="to-create-an-instance-of-the-ribbon-bar"></a>So erstellen Sie eine Instanz der Menübandleiste
 
-1. Fügen Sie in der Datei "mainfrm.h" einen Datenmember zum geschützten Abschnitt von `CMainFrame`, der Klassendefinition für den Hauptframe, hinzu. Dieser Member stellt die Menübandleiste dar.
+1. Fügen Sie in der Datei "mainfrm.h" einen Datenmember zum geschützten Abschnitt von `CMainFrame`, der Klassendefinition für den Hauptframe, hinzu. Dieser Member ist für die menübandleiste.
 
     ```cpp
     // Ribbon bar for the application
     CMFCRibbonBar m_wndRibbonBar;
     ```
 
-2. Fügen Sie in der Datei "mainfrm.cpp" den folgenden Code vor der letzten `return`-Anweisung am Ende der `CMainFrame::OnCreate`-Funktion hinzu. Dadurch wird eine Instanz der Menübandleiste erstellt.
+2. Fügen Sie in der Datei "mainfrm.cpp" den folgenden Code vor der letzten `return`-Anweisung am Ende der `CMainFrame::OnCreate`-Funktion hinzu. Erstellt eine Instanz der menübandleiste.
 
     ```cpp
     // Create the ribbon bar
@@ -241,7 +241,7 @@ Die folgenden Schritte zeigen, wie beim Starten Ihrer Anwendung eine Instanz der
 
 ##  <a name="addcategory"></a> Anpassen der Menübandressource
 
-Nun, Sie haben die **Anwendung** Schaltfläche können Sie Elemente zum Menüband hinzufügen.
+Sie erstellt haben die **Anwendung** Schaltfläche können Sie Elemente zum Menüband hinzufügen.
 
 > [!NOTE]
 > In dieser exemplarischen Vorgehensweise wird das gleiche Bereichssymbol für alle Bereiche verwendet. Sie können jedoch auch andere Bildlistenindizes verwenden, um andere Symbole anzuzeigen.
@@ -250,9 +250,9 @@ Nun, Sie haben die **Anwendung** Schaltfläche können Sie Elemente zum Menüban
 
 1. Das Scribble-Programm erfordert nur eine Kategorie. In der Entwurfsansicht in der **Toolbox**, doppelklicken Sie auf **Kategorie** hinzufügen und seine Eigenschaften anzuzeigen. Eigenschaftswerte wie folgt ändern: **Beschriftung** zu `&Home`, **große Bilder** zu `IDB_RIBBON_HOMELARGE`, **kleine Bilder** zu `IDB_RIBBON_HOMESMALL`.
 
-1. Jede Menübandkategorie ist in benannte Bereiche unterteilt. Jeder Bereich enthält einen Satz von Steuerelementen, die verwandte Vorgänge ausführen. Diese Kategorie verfügt über einen Bereich. Klicken Sie auf **Bereich**, und ändern Sie dann **Beschriftung** zu `Edit`.
+1. Jede Menübandkategorie ist in benannte Bereiche unterteilt. Jeder Bereich enthält einem Satz von Steuerelementen, dass vollständige verwandte Vorgänge. Diese Kategorie verfügt über einen Bereich. Klicken Sie auf **Bereich**, und ändern Sie dann **Beschriftung** zu `Edit`.
 
-1. Um die **bearbeiten** panel, fügen Sie eine Schaltfläche, die für das Löschen des Inhalts des Dokuments zuständig ist. Die Nachrichten-ID für diese Schaltfläche wurde bereits definiert wurde, der `IDR_SCRIBBTYPE` Menüressource. Geben Sie `Clear All` als Text der Schaltfläche und der Index der Bitmap, die die Schaltfläche dekoriert. Öffnen der **Toolbox**, und ziehen Sie dann eine **Schaltfläche** auf die **bearbeiten** Bereich. Klicken Sie auf die Schaltfläche, und ändern Sie dann **Beschriftung** zu `Clear All`, **ID** zu `ID_EDIT_CLEAR_ALL`, **Abbildindex** zu `0`, **Large Image Index**  zu `0`.
+1. Um die **bearbeiten** panel, fügen Sie eine Schaltfläche, die verantwortlich für das Löschen des Inhalts des Dokuments. Die Nachrichten-ID für diese Schaltfläche wurde bereits definiert wurde, der `IDR_SCRIBBTYPE` Menüressource. Geben Sie `Clear All` als Text der Schaltfläche und der Index der Bitmap, die die Schaltfläche dekoriert. Öffnen der **Toolbox**, und ziehen Sie dann eine **Schaltfläche** auf die **bearbeiten** Bereich. Klicken Sie auf die Schaltfläche, und ändern Sie dann **Beschriftung** zu `Clear All`, **ID** zu `ID_EDIT_CLEAR_ALL`, **Abbildindex** zu `0`, **Large Image Index**  zu `0`.
 
 1. Speichern Sie die Änderungen, erstellen Sie anschließend die Anwendung, und führen Sie sie aus. Die Scribble-Anwendung sollte angezeigt werden, und sie sollte am oberen Rand des Fensters über eine Menübandleiste anstelle einer Menüleiste verfügen. Die menübandleiste sollte eine Kategorie verfügen **Startseite**, und **Startseite** müssen Sie einen Bereich **bearbeiten**. Die Menübandschaltflächen, die Sie hinzugefügt haben mit den vorhandenen Ereignishandlern zugeordnet werden soll und die **öffnen**, **schließen**, **speichern**, **Drucken**, und **alle löschen** Schaltflächen sollte wie erwartet funktionieren.
 
@@ -274,7 +274,7 @@ Ein *visuellen Manager* ist ein globales Objekt, das alle Zeichnungen für eine 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Sie wurden geändert, dass das klassische 1.0 MFC Scribble-Beispiel verwendet die **Menüband-Designer**. Wechseln Sie nun zur [Teil 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md).
+Verändert das klassische 1.0 MFC Scribble-Beispiel verwendet die **Menüband-Designer**. Wechseln Sie nun zur [Teil 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md).
 
 ## <a name="see-also"></a>Siehe auch
 

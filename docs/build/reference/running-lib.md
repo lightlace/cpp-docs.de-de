@@ -1,7 +1,7 @@
 ---
 title: Ausführen von LIB | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 09/28/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff75c149ff3cfff5a360314386cc4828d00f4e8d
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 5d8a221a829d3cded8d974c608bdd27edab07f60
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894602"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235417"
 ---
 # <a name="running-lib"></a>Ausführen von LIB
 
@@ -62,25 +62,29 @@ Sie können Befehlszeilenargumente an LIB in einer Befehlsdatei, die mit der fol
 
 Die Datei *Commandfile* ist eine Textdatei. Keine Leerzeichen oder Tabstopp kann zwischen den at-Zeichen (**\@**) und den Dateinamen. Es gibt keine standardmäßige Erweiterung. Sie müssen den vollständigen Namen, Einbinden von Erweiterungen angeben. Platzhalter können verwendet werden. Sie können einen absoluten oder relativen Pfad mit dem Dateinamen angeben.
 
-In der Befehlsdatei können Argumente durch Leerzeichen oder Tabulatorzeichen, getrennt werden, wie sie in der Befehlszeile können; Sie können auch durch Zeilenumbruchzeichen getrennt werden. Verwenden Sie ein Semikolon (;), um einen Kommentar zu kennzeichnen. LIB ignoriert den gesamten Text aus dem Semikolon am Ende der Zeile.
+In der Befehlsdatei können Argumente durch Leerzeichen oder Tabulatorzeichen, getrennt werden, wie sie in der Befehlszeile können; Sie können auch durch Zeilenumbruchzeichen getrennt werden. Verwenden Sie ein Semikolon (**;**) um einen Kommentar zu markieren. LIB ignoriert den gesamten Text aus dem Semikolon am Ende der Zeile.
 
 Sie können entweder vollständig oder teilweise von der Befehlszeile angeben, in einer Befehlsdatei aus, und Sie können mehr als eine Befehlsdatei in eine LIB-Befehl verwenden. LIB akzeptiert die Befehlsdatei-Eingaben, als ob es an diesem Speicherort in der Befehlszeile angegeben wurden. Befehlsdateien werden nicht geschachtelt. LIB gibt den Inhalt der Befehlsdateien, es sei denn, die/nologo-Option verwendet wird.
 
 ## <a name="using-lib-options"></a>Verwenden die LIB-Optionen
 
-Eine Option besteht aus einem Optionsbezeichner, entweder einen Bindestrich (-) oder einem Schrägstrich (/), gefolgt vom Namen der Option. Optionsnamen können nicht abgekürzt werden. Einige Optionen haben ein Argument, das nach einem Doppelpunkt (:) angegeben. Innerhalb einer Optionsangabe sind keine Leerzeichen oder Tabstopps zulässig. Verwenden Sie eines oder mehrere Leerzeichen bzw. Tabstopps, um Optionsangaben in der Befehlszeile voneinander zu trennen. Optionsnamen und ihren Schlüsselwörtern oder Dateinamen bestehenden Argumenten sind nicht Groß-/Kleinschreibung beachtet, aber Bezeichner, die als Argumente verwendet werden Groß-/Kleinschreibung beachtet. LIB verarbeitet die Optionen in der Reihenfolge, in der Befehlszeile angegeben und in Befehlsdateien. Wenn Sie eine Option mit verschiedenen Argumenten wiederholt wird, hat der letzte Suchvorgang zu verarbeitenden Vorrang vor.
+Eine Option besteht aus einem Optionsbezeichner, handelt es sich entweder einem Bindestrich (**-**) oder einem Schrägstrich (**/**), gefolgt vom Namen der Option. Optionsnamen können nicht abgekürzt werden. Einige Optionen haben ein Argument, das nach einem Doppelpunkt angegeben (**:**). Innerhalb einer Optionsangabe sind keine Leerzeichen oder Tabstopps zulässig. Verwenden Sie eines oder mehrere Leerzeichen bzw. Tabstopps, um Optionsangaben in der Befehlszeile voneinander zu trennen. Optionsnamen und ihren Schlüsselwörtern oder Dateinamen bestehenden Argumenten sind nicht Groß-/Kleinschreibung beachtet, aber Bezeichner, die als Argumente verwendet werden Groß-/Kleinschreibung beachtet. LIB verarbeitet die Optionen in der Reihenfolge, in der Befehlszeile angegeben und in Befehlsdateien. Wenn Sie eine Option mit verschiedenen Argumenten wiederholt wird, hat der letzte Suchvorgang zu verarbeitenden Vorrang vor.
 
 Die folgenden Optionen gelten für alle LIB-Modi:
 
 > **/ ERRORREPORT** [**NONE** &AMP;#124; **EINGABEAUFFORDERUNG** &AMP;#124; **WARTESCHLANGE** &AMP;#124; **SENDEN**]
 
-Wenn lib.exe zur Laufzeit ein Fehler auftritt, können Sie die/errorreport verwenden, um Informationen über diese internen Fehler an Microsoft gesendet.
+Wenn lib.exe zur Laufzeit ein Fehler auftritt, können Sie **/errorreport** Informationen zu diesen internen Fehlern an Microsoft zu senden.
 
-Weitere Informationen zu/errorreport, finden Sie unter [/errorreport (interne Compilerfehler Bericht)](../../build/reference/errorreport-report-internal-compiler-errors.md).
+Weitere Informationen zu **/errorreport**, finden Sie unter [/errorreport (interne Compilerfehler Bericht)](../../build/reference/errorreport-report-internal-compiler-errors.md).
 
 > **/LTCG**
 
-Bewirkt, dass die Bibliothek mit Link-zeitcodegenerierung erstellt werden.  Weitere Informationen finden Sie unter ["/ LTCG"](../../build/reference/ltcg-link-time-code-generation.md).
+"LTCG" steht für *Link-zeitcodegenerierung*. Dieses Feature erfordert die Zusammenarbeit zwischen den Compiler ([cl.exe](compiler-options.md)), LIB und der Linker ([LINK](linker-options.md)) um die Code über eine beliebige Komponente selbst Möglichkeiten zu optimieren.
+
+Für LIB die **"/ LTCG"** Option gibt an, dass die Eingaben von cl.exe Objektdateien, die mithilfe von generiert wurden die ["/ GL"](gl-whole-program-optimization.md) -Compileroption. Wenn LIB derartige Eingaben auftreten und **"/ LTCG"** nicht angegeben ist, er wird neu gestartet, mit "/ LTCG" aktiviert, nachdem die Meldung dient zu Informationszwecken angezeigt. Das heißt, es ist nicht erforderlich, diese Option explizit festzulegen, aber beschleunigt Buildleistung, da LIB nicht unbedingt selbst neu.
+
+Im Buildprozess wird die Ausgabe von LIB Link gesendet. LINK verfügt über einen eigenen separaten **"/ LTCG"** Option aus, die zum Ausführen von verschiedenen Optimierungen, einschließlich der Optimierung des ganzen Programms und Profilgesteuerte Optimierung (PGO)-Instrumentation verwendet wird. Weitere Informationen über die LINK-Option finden Sie unter ["/ LTCG"](ltcg-link-time-code-generation.md).
 
 > **/ COMPUTER**
 

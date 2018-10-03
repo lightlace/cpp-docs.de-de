@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2355a5341259978e402ecc6f8de5c684c9435e3a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5867f9524d897657641ab9db392d77585117a465
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433061"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234988"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Hosten eines Windows Form-Benutzersteuerelements als MFC-Dialogfeld
 
@@ -56,7 +56,7 @@ Eine beispielanwendung, die Windows Forms, die mit MFC verwendet wird, finden Si
 
 1. Fügen Sie eine neue Klasse hinzu, die `CDialog` als Unterklasse verwendet.
 
-     Klicken Sie mit der rechten Maustaste auf den Projektnamen, und fügen Sie eine MFC-Klasse mit dem Namen CHostForWinForm hinzu, die `CDialog` als Unterklasse verwendet. Da Sie die Dialogfeldressource nicht benötigen, können Sie die ID der Ressource löschen. (Wählen Sie die Ressourcenansicht aus, erweitern Sie den Ordner Dialog, und löschen Sie die Ressource IDD_HOSTFORWINFORM.  Entfernen Sie dann alle Verweise auf die ID aus dem Code.)
+     Klicken Sie mit der rechten Maustaste auf den Projektnamen, und fügen Sie eine MFC-Klasse mit dem Namen CHostForWinForm hinzu, die `CDialog` als Unterklasse verwendet. Da Sie die Dialogfeldressource nicht benötigen, können Sie die Ressourcen-ID löschen (Wählen Sie **Ressourcenansicht**, erweitern Sie die **Dialogfeld** Ordner "und" Delete `IDD_HOSTFORWINFORM` Ressource.  Entfernen Sie dann alle Verweise auf die ID aus dem Code.)
 
 1. Ersetzen Sie in den Dateien CHostForWinForm.h und CHostForWinForm.cpp `CDialog` durch `CWinFormsDialog<WindowsControlLibrary1::UserControl1>`.
 

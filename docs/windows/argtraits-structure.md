@@ -1,28 +1,30 @@
 ---
 title: ArgTraits-Struktur | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Details::ArgTraits
+- event/Microsoft::WRL::Details::ArgTraits::args
 dev_langs:
 - C++
 helpviewer_keywords:
-- ArgTraits structure
+- Microsoft::WRL::Details::ArgTraits structure
+- Microsoft::WRL::Details::ArgTraits::args constant
 ms.assetid: 58ae4115-c1bc-48c8-b01b-e60554841c30
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 047754338566d476fa8e832d58dd2d4cd0776a63
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b84658271793b5f8c48ad54df44aec27022ea5a1
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418397"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48236074"
 ---
 # <a name="argtraits-structure"></a>ArgTraits-Struktur
 
@@ -155,29 +157,29 @@ Der Typ des neunten Arguments der der `Invoke` Methode.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **ArgTraits** Struktur deklariert einen Delegaten angegebenen Schnittstelle und eine anonyme Memberfunktion, die eine angegebene Anzahl von Parametern.
+Die `ArgTraits` Struktur deklariert einen Delegaten angegebenen Schnittstelle und eine anonyme Memberfunktion, die eine angegebene Anzahl von Parametern.
 
 ## <a name="members"></a>Member
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
-|----------|-----------------|
-|`Arg1Type`|Die Typedef für TArg1.|
-|`Arg2Type`|Die Typedef für TArg2.|
-|`Arg3Type`|Die Typedef für TArg3.|
-|`Arg4Type`|Die Typedef für TArg4.|
-|`Arg5Type`|Die Typedef für TArg5.|
-|`Arg6Type`|Die Typedef für TArg6.|
-|`Arg7Type`|Die Typedef für TArg7.|
-|`Arg8Type`|Die Typedef für TArg8.|
-|`Arg9Type`|Die Typedef für TArg9.|
+Name       | Beschreibung
+---------- | ----------------------
+`Arg1Type` | Die Typedef für TArg1.
+`Arg2Type` | Die Typedef für TArg2.
+`Arg3Type` | Die Typedef für TArg3.
+`Arg4Type` | Die Typedef für TArg4.
+`Arg5Type` | Die Typedef für TArg5.
+`Arg6Type` | Die Typedef für TArg6.
+`Arg7Type` | Die Typedef für TArg7.
+`Arg8Type` | Die Typedef für TArg8.
+`Arg9Type` | Die Typedef für TArg9.
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
-|name|Beschreibung|
-|----------|-----------------|
-|[ArgTraits::args-Konstante](../windows/argtraits-args-constant.md)|Verfolgt die Anzahl von Parametern für die `Invoke` Methode einer Schnittstelle des Delegaten.|
+name                     | Beschreibung
+------------------------ | ---------------------------------------------------------------------------------------
+[Argtraits:: args](#args) | Verfolgt die Anzahl von Parametern für die `Invoke` Methode einer Schnittstelle des Delegaten.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -189,6 +191,14 @@ Die **ArgTraits** Struktur deklariert einen Delegaten angegebenen Schnittstelle 
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>Siehe auch
+## <a name="args"></a>Argtraits:: args
 
-[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+```cpp
+static const int args = -1;
+```
+
+### <a name="remarks"></a>Hinweise
+
+Verfolgt die Anzahl von Parametern für die `Invoke` Methode einer Schnittstelle des Delegaten. Wenn `args` gleich-1 ist, es darf keine Übereinstimmung für die `Invoke` Methodensignatur.

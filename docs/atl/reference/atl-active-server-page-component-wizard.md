@@ -17,18 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 017dac5f9cba676980629109b53f4b2aec4af940
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 57f6e24ec664128a47813c29ce07a4272ce4a771
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713218"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250366"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>ATL-Assistent für Active Server Page-Komponenten
 
 Dieser Assistent fügt dem Projekt eine Komponente für Active Server Pages (ASP). Microsoft Internet Information Services (IIS) verwendet die ASP-Komponenten als Teil der erweiterten Webseite Development-Architektur.
 
 Mithilfe dieses Assistenten können Sie angeben, dass die Komponente threading-Modell und die aggregationsunterstützung der. Sie können auch Unterstützung für die Informationen fehlerschnittstelle, Verbindungspunkte und das Marshalling von Freethreadobjekten angeben.
+
+> [!WARNING]
+> Dieser Code-Assistenten ist veraltet und wird in einer zukünftigen Version von Visual Studio entfernt, in Visual Studio 2017 Version 15.9. Dieser Assistent ist nur selten verwendet. Allgemeine Unterstützung für ATL und MFC wird durch das Entfernen dieses Assistenten nicht beeinträchtigt. Wenn Sie uns Ihr Feedback zu dieser Einstellung freigeben möchten, füllen Sie bitte [diese Umfrage](https://www.surveymonkey.com/r/QDWKKCN). Ihr Feedback ist uns wichtig.
 
 ## <a name="remarks"></a>Hinweise
 

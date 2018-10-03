@@ -1,28 +1,42 @@
 ---
 title: ActivationFactory-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/28/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::ActivationFactory
+- module/Microsoft::WRL::ActivationFactory::ActivationFactory
+- module/Microsoft::WRL::ActivationFactory::AddRef
+- module/Microsoft::WRL::ActivationFactory::GetIids
+- module/Microsoft::WRL::ActivationFactory::GetRuntimeClassName
+- module/Microsoft::WRL::ActivationFactory::GetTrustLevel
+- module/Microsoft::WRL::ActivationFactory::QueryInterface
+- module/Microsoft::WRL::ActivationFactory::Release
 dev_langs:
 - C++
 helpviewer_keywords:
-- ActivationFactory class
+- Microsoft::WRL::ActivationFactory class
+- Microsoft::WRL::ActivationFactory::ActivationFactory, constructor
+- Microsoft::WRL::ActivationFactory::AddRef method
+- Microsoft::WRL::ActivationFactory::GetIids method
+- Microsoft::WRL::ActivationFactory::GetRuntimeClassName method
+- Microsoft::WRL::ActivationFactory::GetTrustLevel method
+- Microsoft::WRL::ActivationFactory::QueryInterface method
+- Microsoft::WRL::ActivationFactory::Release method
 ms.assetid: 5faddf1f-43b6-4f8a-97de-8c9d3ae1e1ff
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 55c82290c3a96ab71419b36a7ec4a4eb2b528753
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3997ee3e435aceec536215599ea0d95321fd5a38
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419814"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234670"
 ---
 # <a name="activationfactory-class"></a>ActivationFactory-Klasse
 
@@ -52,7 +66,7 @@ Die zweite Schnittstelle.
 
 ## <a name="remarks"></a>Hinweise
 
-**ActivationFactory** bietet Registrierungsmethoden und die grundlegende Funktionalität für die `IActivationFactory` Schnittstelle. **ActivationFactory** können Sie eine benutzerdefinierte Factory-Implementierung bereitzustellen.
+`ActivationFactory` Stellt die Registrierungsmethoden und die grundlegenden Funktionen für die `IActivationFactory` Schnittstelle. `ActivationFactory` Außerdem können Sie eine benutzerdefinierte Factory-Implementierung bereitstellen.
 
 Das folgende Codefragment veranschaulicht symbolisch ActivationFactory verwenden.
 
@@ -66,20 +80,20 @@ Das folgende Codefragment zeigt, wie Sie mit der [implementiert](../windows/impl
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
-|----------|-----------------|
-|[ActivationFactory::ActivationFactory-Konstruktor](../windows/activationfactory-activationfactory-constructor.md)|Initialisiert die **ActivationFactory** Klasse.|
+Name                                                       | Beschreibung
+---------------------------------------------------------- | ------------------------------------------
+[Activationfactory:: Activationfactory](#activationfactory) | Initialisiert die `ActivationFactory` Klasse.
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
-|----------|-----------------|
-|[ActivationFactory::AddRef-Methode](../windows/activationfactory-addref-method.md)|Inkrementiert den Verweiszähler des aktuellen **ActivationFactory** Objekt.|
-|[ActivationFactory::GetIids-Methode](../windows/activationfactory-getiids-method.md)|Ruft ein Array von implementierten Schnittstellen-IDs ab.|
-|[ActivationFactory::GetRuntimeClassName-Methode](../windows/activationfactory-getruntimeclassname-method.md)|Ruft den Common Language Runtime-Klassennamen des Objekts ab, die die aktuelle **ActivationFactory** instanziiert.|
-|[ActivationFactory::GetTrustLevel-Methode](../windows/activationfactory-gettrustlevel-method.md)|Ruft der Vertrauensebene des Objekts ab, das aktuelle **ActivationFactory** instanziiert.|
-|[ActivationFactory::QueryInterface-Methode](../windows/activationfactory-queryinterface-method.md)|Ruft einen Zeiger auf die angegebene Schnittstelle ab.|
-|[ActivationFactory::Release-Methode](../windows/activationfactory-release-method.md)|Dekrementiert den Verweiszähler des aktuellen **ActivationFactory** Objekt.|
+Name                                                           | Beschreibung
+-------------------------------------------------------------- | --------------------------------------------------------------------------------------------
+[Activationfactory:: AddRef](#addref)                           | Inkrementiert den Verweiszähler des aktuellen `ActivationFactory` Objekt.
+[Activationfactory:: Getiids](#getiids)                         | Ruft ein Array von implementierten Schnittstellen-IDs ab.
+[Activationfactory:: Getruntimeclassname](#getruntimeclassname) | Ruft den Common Language Runtime-Klassennamen des Objekts ab, die die aktuelle `ActivationFactory` instanziiert.
+[Activationfactory:: Gettrustlevel](#gettrustlevel)             | Ruft der Vertrauensebene des Objekts ab, das aktuelle `ActivationFactory` instanziiert.
+[Activationfactory:: QueryInterface](#queryinterface)           | Ruft einen Zeiger auf die angegebene Schnittstelle ab.
+[Activationfactory:: Release](#release)                         | Dekrementiert den Verweiszähler des aktuellen `ActivationFactory` Objekt.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -109,6 +123,122 @@ Das folgende Codefragment zeigt, wie Sie mit der [implementiert](../windows/impl
 
 **Namespace:** Microsoft::WRL
 
-## <a name="see-also"></a>Siehe auch
+## <a name="activationfactory"></a>Activationfactory:: Activationfactory
 
-[Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)
+Initialisiert die `ActivationFactory` Klasse.
+
+```cpp
+ActivationFactory();
+```
+
+## <a name="addref"></a>Activationfactory:: AddRef
+
+Inkrementiert den Verweiszähler des aktuellen `ActivationFactory` Objekt.
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   AddRef
+)();
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+„S_OK“ im Erfolgsfall, andernfalls ein HRESULT, das den Fehler beschreibt.
+
+## <a name="getiids"></a>Activationfactory:: Getiids
+
+Ruft ein Array von implementierten Schnittstellen-IDs ab.
+
+```cpp
+STDMETHOD(
+   GetIids
+)(_Out_ ULONG *iidCount, _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);
+```
+
+### <a name="parameters"></a>Parameter
+
+*iidCount*<br/>
+Wenn dieser Vorgang abgeschlossen ist, die Anzahl der interace-IDs in die *Iids* Array.
+
+*IIDs*<br/>
+Wenn dieser Vorgang abgeschlossen ist, implementiert ein Array von Schnittstellen-IDs an.
+
+### <a name="return-value"></a>Rückgabewert
+
+„S_OK“ im Erfolgsfall, andernfalls ein HRESULT, das den Fehler beschreibt. E_OUTOFMEMORY ist möglicherweise ein Fehler HRESULT.
+
+## <a name="getruntimeclassname"></a>Activationfactory:: Getruntimeclassname
+
+Ruft den Common Language Runtime-Klassennamen des Objekts ab, die die aktuelle `ActivationFactory` instanziiert.
+
+```cpp
+STDMETHOD(
+   GetRuntimeClassName
+)(_Out_ HSTRING* runtimeName);
+```
+
+### <a name="parameters"></a>Parameter
+
+*runtimeName*<br/>
+Wenn dieser Vorgang abgeschlossen ist, ein Handle für eine Zeichenfolge, die den Common Language Runtime-Klassennamen des Objekts enthält, die die aktuelle `ActivationFactory` instanziiert.
+
+### <a name="return-value"></a>Rückgabewert
+
+„S_OK“ im Erfolgsfall, andernfalls ein HRESULT, das den Fehler beschreibt.
+
+## <a name="gettrustlevel"></a>Activationfactory:: Gettrustlevel
+
+Ruft der Vertrauensebene des Objekts ab, das aktuelle `ActivationFactory` instanziiert.
+
+```cpp
+STDMETHOD(
+   GetTrustLevel
+)(_Out_ TrustLevel* trustLvl);
+```
+
+### <a name="parameters"></a>Parameter
+
+*trustLvl*<br/>
+Wenn dieser Vorgang abgeschlossen ist, die Vertrauensebene der Runtime-Klasse, die `ActivationFactory` instanziiert.
+
+### <a name="return-value"></a>Rückgabewert
+
+S_OK, wenn erfolgreich; Andernfalls wird ein Assertionsfehler ausgegeben und *TrustLvl* nastaven NA hodnotu `FullTrust`.
+
+## <a name="queryinterface"></a>Activationfactory:: QueryInterface
+
+Ruft einen Zeiger auf die angegebene Schnittstelle ab.
+
+```cpp
+STDMETHOD(
+   QueryInterface
+)(REFIID riid, _Deref_out_ void **ppvObject);
+```
+
+### <a name="parameters"></a>Parameter
+
+*riid*<br/>
+Eine Schnittstellen-ID.
+
+*ppvObject*<br/>
+Wenn dieser Vorgang abgeschlossen ist, ein Zeiger auf die Schnittstelle, die vom Parameter angegebene *Riid*.
+
+### <a name="return-value"></a>Rückgabewert
+
+„S_OK“ im Erfolgsfall, andernfalls ein HRESULT, das den Fehler beschreibt.
+
+## <a name="release"></a>Activationfactory:: Release
+
+Dekrementiert den Verweiszähler des aktuellen `ActivationFactory` Objekt.
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   Release
+)();
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+„S_OK“ im Erfolgsfall, andernfalls ein HRESULT, das den Fehler beschreibt.

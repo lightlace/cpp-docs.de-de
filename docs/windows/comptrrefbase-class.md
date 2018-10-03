@@ -1,28 +1,34 @@
 ---
 title: ComPtrRefBase-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::Details::ComPtrRefBase
+- client/Microsoft::WRL::Details::ComPtrRefBase::operator IInspectable**
+- client/Microsoft::WRL::Details::ComPtrRefBase::operator IUnknown**
+- client/Microsoft::WRL::Details::ComPtrRefBase::ptr_
 dev_langs:
 - C++
 helpviewer_keywords:
-- ComPtrRefBase class
+- Microsoft::WRL::Details::ComPtrRefBase class
+- Microsoft::WRL::Details::ComPtrRefBase::operator IInspectable** operator
+- Microsoft::WRL::Details::ComPtrRefBase::operator IUnknown** operator
+- Microsoft::WRL::Details::ComPtrRefBase::ptr_ data member
 ms.assetid: 6d344c1a-cc13-4a3f-8a0d-f167ccb9348f
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ca2cb8cdc748abcac61bd548491187095b71a3f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 02e430184c5fa7418eb02ed6ef2f63951af89a5c
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415316"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48233956"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase-Klasse
 
@@ -40,7 +46,7 @@ class ComPtrRefBase;
 ### <a name="parameters"></a>Parameter
 
 *T*<br/>
-Ein [ComPtr\<T >](../windows/comptr-class.md) Typ oder einem Typ abgeleitet ist, nicht nur die Schnittstelle der **ComPtr**.
+Ein [ComPtr\<T >](../windows/comptr-class.md) Typ oder einem Typ abgeleitet ist, nicht nur die Schnittstelle der `ComPtr`.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -50,22 +56,22 @@ Stellt die Basisklasse für die [ComPtrRef](../windows/comptrref-class.md) Klass
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
-|----------|-----------------|
-|`InterfaceType`|Ein Synonym für den Typ des Vorlagenparameters *T*.|
+Name            | Beschreibung
+--------------- | -------------------------------------------------
+`InterfaceType` | Ein Synonym für den Typ des Vorlagenparameters *T*.
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
-|Name|Beschreibung|
-|----------|-----------------|
-|[ComPtrRefBase::operator IInspectable**-Operator](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|Wandelt das aktuelle [Ptr_](../windows/comptrrefbase-ptr-data-member.md) Datenmembers, der einen Zeiger an eine-Zeiger-an die `IInspectable` Schnittstelle.|
-|[ComPtrRefBase::operator IUnknown**-Operator](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|Wandelt das aktuelle [Ptr_](../windows/comptrrefbase-ptr-data-member.md) Datenmembers, der einen Zeiger an eine-Zeiger-an die `IUnknown` Schnittstelle.|
+Name                                                                       | Beschreibung
+-------------------------------------------------------------------------- | -----------------------------------------------------------------------------------------------------
+[Comptrrefbase:: IInspectable **](#operator-iinspectable-star-star) | Wandelt das aktuelle [Ptr_](#ptr) Datenmembers, der einen Zeiger an eine-Zeiger-an die `IInspectable` Schnittstelle.
+[Comptrrefbase:: IUnknown **](#operator-iunknown-star-star)         | Wandelt das aktuelle [Ptr_](#ptr) Datenmembers, der einen Zeiger an eine-Zeiger-an die `IUnknown` Schnittstelle.
 
 ### <a name="protected-data-members"></a>Geschützte Datenmember
 
-|name|Beschreibung|
-|----------|-----------------|
-|[ComPtrRefBase::ptr_-Datenmember](../windows/comptrrefbase-ptr-data-member.md)|Zeiger auf den Typ, durch den aktuellen Vorlagenparameter angegeben.|
+name                        | Beschreibung
+--------------------------- | ----------------------------------------------------------------
+[Comptrrefbase:: Ptr_](#ptr) | Zeiger auf den Typ, durch den aktuellen Vorlagenparameter angegeben.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -77,6 +83,44 @@ Stellt die Basisklasse für die [ComPtrRef](../windows/comptrref-class.md) Klass
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>Siehe auch
+## <a name="operator-iinspectable-star-star"></a>Comptrrefbase:: "iinspectable"\* \* Operator
 
-[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+```cpp
+operator IInspectable**() const;
+```
+
+### <a name="remarks"></a>Hinweise
+
+Wandelt das aktuelle [Ptr_](#ptr) Datenmembers, der einen Zeiger an eine-Zeiger-an die `IInspectable` Schnittstelle.
+
+Ein Fehler wird ausgegeben, wenn die aktuelle `ComPtrRefBase` nicht abgeleitet `IInspectable`.
+
+Diese Umwandlung ist verfügbar nur, wenn `__WRL_CLASSIC_COM__` definiert ist.
+
+## <a name="operator-iunknown-star-star"></a>Comptrrefbase:: Operator IUnknown **
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+```cpp
+operator IUnknown**() const;
+```
+
+### <a name="remarks"></a>Hinweise
+
+Wandelt das aktuelle [Ptr_](#ptr) Datenmembers, der einen Zeiger an eine-Zeiger-an die `IUnknown` Schnittstelle.
+
+Ein Fehler wird ausgegeben, wenn die aktuelle `ComPtrRefBase` nicht abgeleitet `IUnknown`.
+
+## <a name="ptr"></a>Comptrrefbase:: Ptr_
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+```cpp
+T* ptr_;
+```
+
+### <a name="remarks"></a>Hinweise
+
+Zeiger auf den Typ, durch den aktuellen Vorlagenparameter angegeben. `ptr_` ist das Element für die geschützten Daten.
