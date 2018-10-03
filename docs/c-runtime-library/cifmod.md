@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46bcc0fa01a05b3942bb1588153ee35b5d6d25e3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 605febb4ad76051ca79e0b03388fbb7739ebb076
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090463"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234598"
 ---
 # <a name="cifmod"></a>_CIfmod
 
@@ -53,7 +53,8 @@ Diese Version der `fmod`-Funktion verfügt über eine spezielle Aufrufkonvention
 Der resultierende Wert wird oben auf dem Stapel abgelegt.
 
 ## <a name="requirements"></a>Anforderungen
- **Plattform:** x86
+
+**Plattform:** x86
 
 ## <a name="see-also"></a>Siehe auch
 
