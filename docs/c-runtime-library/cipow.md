@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c09801841e25b5de2f98e64c01bf48b1eea9992b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 01fa112fe70094cbf97537e6288751ac14acd2db
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46052087"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235947"
 ---
 # <a name="cipow"></a>_CIpow
 
@@ -53,7 +53,8 @@ Diese Version der `pow`-Funktion verfügt über eine spezielle Aufrufkonvention,
 Der resultierende Wert wird oben auf dem Stapel abgelegt.
 
 ## <a name="requirements"></a>Anforderungen
- **Plattform:** x86
+
+**Plattform:** x86
 
 ## <a name="see-also"></a>Siehe auch
 
