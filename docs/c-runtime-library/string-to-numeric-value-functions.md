@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b65ceb18eb6b8f24db0a85ba2ed13277b13f657
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 45428f1642b428640509978f29c0a36b60696cb0
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117496"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235060"
 ---
 # <a name="string-to-numeric-value-functions"></a>Funktionen zur Konvertierung von Zeichenfolgen in numerische Werte
 
@@ -94,7 +94,7 @@ Wenn der von diesen Funktionen zurückgegebene Wert zu einem Überlauf oder Unte
 |`_strtoui64`|Überlauf|**_UI64_MAX**|
 |`_strtoui64`|Keine Konvertierung|0|
 
- **_I64_MAX**, **_I64_MIN** und **_UI64_MAX** sind in LIMITS.H definiert.
+**_I64_MAX**, **_I64_MIN** und **_UI64_MAX** sind in LIMITS.H definiert.
 
 `wcstod`, `wcstol`, `wcstoul`, `_wcstoi64` und `_wcstoui64` sind Breitzeichenversionen von `strtod`, `strtol`, `strtoul`, `_strtoi64` bzw. `_strtoui64`. Der Zeiger auf das Argument zum Beenden der Konvertierung ist für jede dieser Breitzeichenfunktionen eine Breitzeichenfolge. Anderenfalls verhält sich jede dieser Breitzeichenfunktionen genau wie ihre entsprechende Einzelbytezeichen-Version.
 
