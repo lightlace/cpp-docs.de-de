@@ -1,7 +1,7 @@
 ---
 title: Benutzerdefinierte Attribute (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/02/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 605759e241498e83174f4d6b16435c3119c56671
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3c2f5568b067c119bfa65744290c39d7ca577072
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600380"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789227"
 ---
 # <a name="user-defined-attributes--c-component-extensions"></a>Benutzerdefinierte Attribute (Komponentenerweiterungen für C++)
 
@@ -47,7 +47,7 @@ Benutzerdefinierte Attribute können Sie die Metadaten eines verwalteten Element
 
 ### <a name="remarks"></a>Hinweise
 
-Die Informationen und die in diesem Thema vorgestellten Syntax soll die Informationen im ablösen [Attribut](../windows/attribute.md).
+Die Informationen und die in diesem Thema vorgestellten Syntax soll die Informationen im ablösen [Attribut](attributes/attribute.md).
 
 Sie können ein benutzerdefiniertes Attribut definieren, indem Sie einen Typ definieren und vornehmen <xref:System.Attribute> eine Basisklasse für den Typ und optional Anwenden der <xref:System.AttributeUsageAttribute> Attribut.
 
@@ -55,9 +55,9 @@ Z. B. in Microsoft Transaction Server (MTS) 1.0, Verhalten in Bezug auf Transakt
 
 Weitere Informationen finden Sie unter
 
-- [Attributziele](../windows/attribute-targets-cpp-component-extensions.md)
+- [Attributziele](attribute-targets-cpp-component-extensions.md)
 
-- [Attributparametertypen](../windows/attribute-parameter-types-cpp-component-extensions.md)
+- [Attributparametertypen](attribute-parameter-types-cpp-component-extensions.md)
 
 Weitere Informationen zum Signieren von Assemblys in Visual C++, finden Sie unter [Assemblys mit starken Namen (Assemblysignierung) (C++ / CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
@@ -177,7 +177,7 @@ Die `Object^` -Typ ersetzt den variant-Datentyp. Das folgende Beispiel definiert
 
 Aufruferinfoattribut-Argumente müssen Konstanten zur Kompilierzeit werden; in den meisten Fällen sollten sie Konstanten Literale sein.
 
-Finden Sie unter [Typeid](../windows/typeid-cpp-component-extensions.md) Informationen dazu, wie auf einen Wert von System:: Type aus einem benutzerdefinierten Attributblock zurückzugeben.
+Finden Sie unter [Typeid](typeid-cpp-component-extensions.md) Informationen dazu, wie auf einen Wert von System:: Type aus einem benutzerdefinierten Attributblock zurückzugeben.
 
 ```cpp
 // extending_metadata_e.cpp
@@ -216,4 +216,4 @@ ref struct B {};
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für Laufzeitplattformen](component-extensions-for-runtime-platforms.md)

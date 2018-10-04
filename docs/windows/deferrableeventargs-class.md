@@ -1,7 +1,7 @@
 ---
 title: DeferrableEventArgs-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/12/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 082cae10bbd01c4c46fcfaa84bfd94ba6178bc1a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 20cb959727cb2c515bd82d5b4d5d8e45019c6875
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401783"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788486"
 ---
 # <a name="deferrableeventargs-class"></a>DeferrableEventArgs-Klasse
 
@@ -35,11 +35,8 @@ Eine für die Ereignisargumenttypen für Verzögerungen verwendete Vorlagenklass
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-template <
-typename TEventArgsInterface,
-typename TEventArgsClass
->
-class DeferrableEventArgs : public TEventArgsInterface
+template <typename TEventArgsInterface, typename TEventArgsClass>
+class DeferrableEventArgs : public TEventArgsInterface;
 ```
 
 ### <a name="parameters"></a>Parameter

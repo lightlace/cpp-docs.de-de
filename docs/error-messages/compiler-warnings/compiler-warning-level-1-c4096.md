@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef2aaf3f37e9699547c3a85c55a2f72d4baab7a6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 86387103d4d8257a109928a665579621468a3cf3
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46047693"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788691"
 ---
 # <a name="compiler-warning-level-1-c4096"></a>Compilerwarnung (Stufe 1) C4096
 
@@ -29,7 +29,7 @@ ms.locfileid: "46047693"
 
 Eine Schnittstellendefinition, die Sie als COM-Schnittstelle für verfügen möglicherweise nicht als COM-Schnittstelle definiert wurde und daher nicht ausgegeben, um die IDL-Datei.
 
-Finden Sie unter [Schnittstellenattribute](../../windows/interface-attributes.md) für eine Liste der Attribute, die angeben, eine Schnittstelle ist eine COM-Schnittstelle.
+Finden Sie unter [Schnittstellenattribute](../../windows/attributes/interface-attributes.md) für eine Liste der Attribute, die angeben, eine Schnittstelle ist eine COM-Schnittstelle.
 
 Im folgende Beispiel wird die C4096 generiert:
 

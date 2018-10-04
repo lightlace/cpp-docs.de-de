@@ -16,18 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d26a8f3e404eaa19a102be4cb3f11350c4fe674
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a10c91f34cd00b8524a047131e9a39b901c83fce
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46089358"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788590"
 ---
 # <a name="compiler-error-c3455"></a>Compilerfehler C3455
 
 'attribut': Keiner der Attributkonstruktoren stimmte mit den Argumenten überein.
 
-Ein ungültiger Wert wurde verwendet, um ein Attribut zu deklarieren.  Weitere Informationen finden Sie unter [attribute](../../windows/attribute.md) .
+Ein ungültiger Wert wurde verwendet, um ein Attribut zu deklarieren.  Finden Sie unter [Attribut](../../windows/attributes/attribute.md) für Weitere Informationen.
 
 ## <a name="example"></a>Beispiel
 
