@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbcc791d4e39f58146ed13bb41c8ec43941d3527
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 32fcf4f8f99f80e44758c107a8941c51bd8a767f
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087811"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821165"
 ---
 # <a name="switch-statement-c"></a>switch-Anweisung (C++)
 
@@ -119,14 +119,14 @@ int main()
 **Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): eine Switch-Anweisung kann einführen und initialisieren Sie eine Variable, deren Bereich auf den Block der Switch-Anweisung beschränkt ist:
 
 ```cpp
-switch (Gadget gadget(args); auto s = gadget.get_status())
-        {
-        case status::good:
-            gadget.zip();
-            break;
-        case status::bad:
-            throw BadGadget();
-        };
+    switch (Gadget gadget(args); auto s = gadget.get_status())
+    {
+    case status::good:
+        gadget.zip();
+        break;
+    case status::bad:
+        throw BadGadget();
+    };
 ```
 
 Ein innerer Block einer **wechseln** -Anweisung kann Definitionen mit Initialisierungen enthalten, solange sie erreichbar sind, d. h. nicht von allen möglichen Ausführungspfaden umgangen. Namen, die mit diesen Deklarationen eingeführt werden, weisen einen lokalen Gültigkeitsbereich auf. Zum Beispiel:
@@ -138,35 +138,35 @@ Ein innerer Block einer **wechseln** -Anweisung kann Definitionen mit Initialisi
 using namespace std;
 int main(int argc, char *argv[])
 {
-   switch( tolower( *argv[1] ) )
-   {
-       // Error. Unreachable declaration.
-       char szChEntered[] = "Character entered was: ";
+    switch( tolower( *argv[1] ) )
+    {
+        // Error. Unreachable declaration.
+        char szChEntered[] = "Character entered was: ";
 
-   case 'a' :
-       {
-       // Declaration of szChEntered OK. Local scope.
-       char szChEntered[] = "Character entered was: ";
-       cout << szChEntered << "a\n";
-       }
-       break;
+    case 'a' :
+        {
+        // Declaration of szChEntered OK. Local scope.
+        char szChEntered[] = "Character entered was: ";
+        cout << szChEntered << "a\n";
+        }
+        break;
 
-   case 'b' :
-       // Value of szChEntered undefined.
-       cout << szChEntered << "b\n";
-       break;
+    case 'b' :
+        // Value of szChEntered undefined.
+        cout << szChEntered << "b\n";
+        break;
 
-   default:
-       // Value of szChEntered undefined.
-       cout << szChEntered << "neither a nor b\n";
-       break;
-   }
+    default:
+        // Value of szChEntered undefined.
+        cout << szChEntered << "neither a nor b\n";
+        break;
+    }
 }
 ```
 
 Ein **wechseln** Anweisung kann geschachtelt sein. In solchen Fällen **Fall** oder **Standard** Bezeichnungen ordnen Sie die nächstgelegene **wechseln** -Anweisung, die sie umschließt.
 
-## <a name="microsoft-specific"></a>Microsoft-spezifisch
+**Microsoft-spezifisch**
 
 Microsoft C beschränkt nicht die Anzahl der Case-Werten in einer **wechseln** Anweisung. Die Anzahl wird nur durch den verfügbaren Speicher beschränkt. ANSI C erfordert, dass mindestens 257 Case-Bezeichnungen werden innerhalb von einer **wechseln** Anweisung.
 

@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82c9ad08977e6b24886060c49b74c66697113cdf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 03d418fc45d3947248c78d70af5d036bd93b204d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447426"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821503"
 ---
 # <a name="ccombobox-class"></a>CComboBox-Klasse
 
@@ -256,7 +256,7 @@ Bei der Erstellung einer `CComboBox` Objekt in einem Dialogfeld (mithilfe einer 
 
 Wenn Sie Einbetten einer `CComboBox` Objekt in ein anderes Fenster-Objekt, Sie müssen nicht zerstören. Bei der Erstellung der `CComboBox` Objekt im Stapel automatisch zerstört wird. Bei der Erstellung der `CComboBox` Objekt auf dem Heap mit dem **neue** -Funktion, die Sie aufrufen müssen **löschen** auf das Objekt, das es zerstört, wenn das Windows-Kombinationsfeld zerstört wird.
 
-**Beachten Sie** Wenn WM_KEYDOWN und WM_CHAR-Nachrichten verarbeitet werden sollen, müssen Sie Unterklasse des Kombinationsfelds bearbeiten und Auflisten von Steuerelementen, leiten eine Klasse von `CEdit` und `CListBox`, und fügen Sie Handler für diese Nachrichten in die abgeleiteten Klassen hinzu. Weitere Informationen finden Sie unter [ http://support.microsoft.com/default.aspxscid=kb; En-us; Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667) und [CWnd:: SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).
+**Beachten Sie** Wenn WM_KEYDOWN und WM_CHAR-Nachrichten verarbeitet werden sollen, müssen Sie Unterklasse des Kombinationsfelds bearbeiten und Auflisten von Steuerelementen, leiten eine Klasse von `CEdit` und `CListBox`, und fügen Sie Handler für diese Nachrichten in die abgeleiteten Klassen hinzu. Weitere Informationen finden Sie unter [ http://support.microsoft.com/default.aspxscid=kb; Q174667](http://support.microsoft.com/default.aspxscid=kb;q174667) und [CWnd:: SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 

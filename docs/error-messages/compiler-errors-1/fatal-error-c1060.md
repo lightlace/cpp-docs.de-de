@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5288400b5c7303840dfef98c7e1a48e7cf5d06f8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1961784efc61c3c31f87c76cd2bdfe00fe954c5d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46032567"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820699"
 ---
 # <a name="fatal-error-c1060"></a>Schwerwiegender Fehler C1060
 
@@ -37,7 +37,7 @@ Das Betriebssystem oder die Laufzeitbibliothek können keine Speicheranforderung
 
 1. Wenn Sie auf einer 64-Bit-Plattform kompilieren, verwenden Sie das 64-Bit-Compilertoolset. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren ein 64-Bit-Visual C++-Toolsets in der Befehlszeile](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).
 
-1. Auf 32-Bit-Windows, versuchen Sie es mit der [/3 GB](https://support.microsoft.com/en-us/help/833721/available-switch-options-for-the-windows-xp-and-the-windows-server-200) Switch "Boot.ini".
+1. Auf 32-Bit-Windows, versuchen Sie es mit der [/3 GB](https://support.microsoft.com/help/833721/available-switch-options-for-the-windows-xp-and-the-windows-server-200) Switch "Boot.ini".
 
 1. Vergrößern Sie die Windows-Auslagerungsdatei.
 
