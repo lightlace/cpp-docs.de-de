@@ -1,7 +1,7 @@
 ---
 title: Hinzufügen einer Eigenschaft zum Steuerelement (ATL-Lernprogramm, Teil 3) | Microsoft-Dokumentation
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/26/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -12,52 +12,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1e90da3fe44613b0c530e801d963eaddd9d783e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2373d2d703f18824274df158b31023669d8df945
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756903"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820467"
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>Hinzufügen einer Eigenschaft zum Steuerelement (ATL-Lernprogramm, Teil 3)
 
 `IPolyCtl` ist die Schnittstelle, die das Steuerelement die benutzerdefinierten Methoden und Eigenschaften enthält, und fügen Sie eine Eigenschaft zuzuweisen.
 
-### <a name="to-add-a-property-using-the-add-property-wizard"></a>Zum Hinzufügen einer Eigenschaft mithilfe des Assistenten zum Hinzufügen von Eigenschaften
+### <a name="to-add-the-property-definitions-to-your-project"></a>Die Eigenschaftendefinitionen zu Ihrem Projekt hinzufügen
 
-1. Erweitern Sie in der Klassenansicht den Polygon-Branch aus.
+1. In **Klassenansicht**, erweitern Sie die `Polygon` Branch.
 
-2. Mit der rechten Maustaste IPolyCtl.
+1. Mit der rechten Maustaste `IPolyCtl`.
 
-3. Klicken Sie im Kontextmenü auf **hinzufügen**, und klicken Sie dann auf **Eigenschaft hinzufügen**.
+1. Klicken Sie im Kontextmenü auf **hinzufügen**, und klicken Sie dann auf **Eigenschaft hinzufügen**. Die **Eigenschaft hinzufügen** -Assistent wird angezeigt.
 
-     Der Assistent zum Hinzufügen von Eigenschaften wird angezeigt.
+1. Typ `Sides` als die **Eigenschaftennamen**.
 
-4. Wählen Sie in der Dropdown-Liste von Eigenschaftentypen `SHORT`.
+1. In der Dropdown-Liste der **Eigenschaftentyp**Option `short`.
 
-5. Typ *Seiten* als die **Eigenschaftenname.**
+1. Klicken Sie auf **OK** auf die Eigenschaft hinzuzufügen.
 
-6. Klicken Sie auf **Fertig stellen** auf die Eigenschaft hinzuzufügen.
+1. Von **Projektmappen-Explorer**Polygon.idl öffnen, und Ersetzen Sie die folgenden Zeilen am Ende der `IPolyCtl : IDispatch` Schnittstelle:
 
-MIDL (das Programm, die IDL-Dateien kompiliert) wird definiert, wenn Sie die Eigenschaft auf die Schnittstelle hinzufügen, eine `Get` Methode zum Abrufen des Wertes und `Put` -Methode für einen neuen Wert festlegen. Die Methoden werden mit dem Namen vorangestellt `put_` und `get_` an den Eigenschaftennamen an.
+    ```cpp
+    short get_Sides();
+    void set_Sides(short value);
+    ```
 
-Der Assistent zum Hinzufügen von Eigenschaften fügt die erforderlichen Zeilen der IDL-Datei. Sie fügt außerdem die `Get` und `Put` Funktionsprototypen der Klassendefinition in PolyCtl.h hinzu und fügt eine leere Implementierung PolyCtl.cpp. Sie können dies überprüfen, indem Sie die PolyCtl.cpp öffnen, und suchen Sie für die Funktionen `get_Sides` und `put_Sides`.
+    durch
 
-Obwohl Sie Gerüstfunktionen festlegen und Abrufen der Eigenschaft jetzt verfügen, benötigt es einen Ort gespeichert werden. Erstellen Sie eine Variable zum Speichern der Eigenschaft, die Funktionen entsprechend aktualisieren.
+    ```cpp
+    [propget, id(1), helpstring("property Sides")] HRESULT Sides([out, retval] short *pVal);
+    [propput, id(1), helpstring("property Sides")] HRESULT Sides([in] short newVal);
+    ```
 
-#### <a name="to-create-a-variable-to-store-the-property-and-update-the-put-and-get-methods"></a>Erstellen Sie eine Variable zum Speichern der Eigenschaft, und aktualisieren die Put, get-Methoden
+1. Von **Projektmappen-Explorer**, öffnen Sie PolyCtl.h hinzu, und fügen Sie die folgenden Zeilen nach der Definition der `m_clrFillColor`:
 
-1. Öffnen Sie im Projektmappen-Explorer PolyCtl.h hinzu, und fügen Sie die folgende Zeile nach der Definition der `m_clrFillColor`:
+    [!code-cpp[NVC_ATL_Windowing#44](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_1.h)]
 
-     [!code-cpp[NVC_ATL_Windowing#44](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_1.h)]
+Obwohl Sie Gerüstfunktionen zum Festlegen und Abrufen der Eigenschaft und eine Variable zum Speichern der Eigenschaft jetzt haben, müssen Sie entsprechend die Funktionen implementieren.
 
-2. Legen Sie den Standardwert `m_nSides`. Stellen Sie die Standardeinstellung, die ein Dreieck Form durch Hinzufügen einer Zeile an den Konstruktor in PolyCtl.h hinzu:
+### <a name="to-update-the-get-and-put-methods"></a>Aktualisieren die Get und put-Methoden
 
-     [!code-cpp[NVC_ATL_Windowing#45](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_2.h)]
+1. Legen Sie den Standardwert `m_nSides`. Stellen Sie die Standardeinstellung, die ein Dreieck Form durch Hinzufügen einer Zeile an den Konstruktor in PolyCtl.h hinzu:
 
-3. Implementieren der `Get` und `Put` Methoden. Die `get_Sides` und `put_Sides` Funktionsdeklarationen PolyCtl.h hinzugefügt wurden. Ersetzen Sie den Code in PolyCtl.cpp für `get_Sides` und `put_Sides` durch den folgenden Code:
+    [!code-cpp[NVC_ATL_Windowing#45](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_2.h)]
 
-     [!code-cpp[NVC_ATL_Windowing#46](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_3.cpp)]
+1. Implementieren der `Get` und `Put` Methoden. Die `get_Sides` und `put_Sides` Funktionsdeklarationen PolyCtl.h hinzugefügt wurden. Fügen Sie nun den Code für `get_Sides` und `put_Sides` PolyCtl.cpp durch Folgendes:
+
+    [!code-cpp[NVC_ATL_Windowing#46](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_3.cpp)]
 
 Die `get_Sides` Methode gibt den aktuellen Wert des der `Sides` Eigenschaft über die `pVal` Zeiger. In der `put_Sides` -Methode, die der Code stellt sicher ist der Benutzer das Festlegen der `Sides` Eigenschaft einen zulässigen Wert. Der Minimalwert muss 3 sein, und da ein Array von Punkten für jede Seite verwendet wird, handelt es sich bei 100 ist ein vernünftiges Maß beschränken für einen maximalen Wert.
 
@@ -68,4 +76,3 @@ Sie verfügen nun über eine Eigenschaft namens `Sides`. Im nächsten Schritt ä
 ## <a name="see-also"></a>Siehe auch
 
 [Tutorial](../atl/active-template-library-atl-tutorial.md)
-

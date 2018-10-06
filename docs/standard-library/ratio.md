@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a5ffa7666f9b976312bf1c3115d93204bdd8f8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 53f3e618378abd70506e2fed45767c7c856320b0
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853751"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821128"
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
 
@@ -62,7 +62,7 @@ Schließen Sie den Standardheader \<ratio> zum Definieren von Konstanten und Vor
 
 ```cpp
 template<std::intmax_t Numerator, std::intmax_t Denominator = 1>
-   struct ratio // holds the ratio of Numerator to Denominator
+struct ratio // holds the ratio of Numerator to Denominator
 {
    static constexpr std::intmax_t num;
    static constexpr std::intmax_t den;
@@ -70,7 +70,7 @@ template<std::intmax_t Numerator, std::intmax_t Denominator = 1>
 }
 ```
 
-Die Vorlage `ratio` definiert die statischen Konstanten `num` und `den` so, dass `num`  /  `den` == Zähler / Nenner und `num` und `den` keine allgemeinen Faktoren haben. `num` / `den` ist der Wert, der von der Vorlagenklasse dargestellt wird. Aus diesem Grund `type` kennzeichnet die Instanziierung `ratio<num, den>`.
+Die Vorlage `ratio` definiert die statische Konstanten `num` und `den` so, dass `num`  /  `den` Zähler == / Nenner und `num` und `den` keine gemeinsamen Faktoren haben. `num` / `den` ist der Wert, der von der Vorlagenklasse dargestellt wird. Aus diesem Grund `type` kennzeichnet die Instanziierung `ratio<num, den>`.
 
 ### <a name="specializations"></a>Spezialisierungen
 
@@ -95,7 +95,7 @@ Jede Spezialisierung nimmt zwei Vorlagenparameter, die auch `ratio`-Spezialisier
 
 ### <a name="typedefs"></a>Typedefs
 
-Der Einfachheit halber wird der Header Verhältnis für die standardmäßige SI Präfixe definiert:
+Der Einfachheit halber definiert der Header Verhältnis für die standard-SI-Präfixe:
 
 ```cpp
 typedef ratio<1, 1000000000000000000> atto;

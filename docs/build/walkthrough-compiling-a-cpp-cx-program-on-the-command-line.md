@@ -1,7 +1,7 @@
 ---
 title: 'Exemplarische Vorgehensweise: Kompilieren eines C++ / CX-Programms in der Befehlszeile | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/24/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -12,25 +12,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdde74f1612986fab8f88f4659b006bbcfbd3901
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9d9e6fa7cb30a14a3c5914e1cb80e22db118df9e
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703755"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821204"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Exemplarische Vorgehensweise: Kompilieren eines C++/CX-Programms in der Befehlszeile
 
 Sie können Visual C++-Programme erstellen, die auf die Windows Runtime abzielen und diese in der Befehlszeile erstellen. Visual C++ unterstützt Visual C++-Komponentenerweiterungen (C++/CX), die zusätzliche Typen und Operatoren für das Windows-Runtime-Programmiermodell bereitstellen. Sie können C++ / CX verwenden, um apps für universelle Windows-Plattform (UWP), Windows Phone 8.1 und Windows-Desktop zu erstellen. Weitere Informationen finden Sie unter [eine Einführung in c++ / CX](https://msdn.microsoft.com/magazine/dn166929.aspx) und [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md).
 
-In dieser exemplarischen Vorgehensweise verwenden Sie einen Texteditor zur Erstellung eines grundlegenden C++/CX-Programms und kompilieren es dann auf der Befehlszeile. (Sie können Sie Ihr C++/CX-Programm verwenden, statt das gezeigte einzugeben oder Sie können ein C++/CX-Codebeispiel aus einem anderen Hilfeartikel verwenden. Diese Technik ist nützlich zum Erstellen und Testen von kleinen Modulen, die keine Benutzeroberflächenelemente enthalten.)
+In dieser exemplarischen Vorgehensweise verwenden Sie einen Texteditor zur Erstellung eines grundlegenden C++/CX-Programms und kompilieren es dann auf der Befehlszeile. (Sie können Sie Ihr C++/CX-Programm verwenden, statt das gezeigte einzugeben oder Sie können ein C++/CX-Codebeispiel aus einem anderen Hilfeartikel verwenden. Dieses Verfahren ist nützlich zum Erstellen und Testen von kleinen Modulen, die keine Benutzeroberflächenelemente verfügen.)
 
 > [!NOTE]
 > Sie können auch die Visual Studio IDE für die Kompilierung von C++/CX-Programmen verwenden. Da die IDE enthält, Design, Debuggen, Emulation und Unterstützung für die Bereitstellung, die nicht in der Befehlszeile zur Verfügung steht, empfehlen wir die Verwendung der IDE zum Erstellen von apps für universelle Windows-Plattform (UWP). Weitere Informationen finden Sie unter [Erstellen einer UWP-app in C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
-Sie benötigen grundlegende Kenntnisse der Programmiersprache C++.
+Sie kennen die Grundlagen der Programmiersprache C++.
 
 ## <a name="compiling-a-ccx-program"></a>Kompilieren eines C++/CX-Programms
 
@@ -44,7 +44,7 @@ Zur Aktivierung der Kompilierung für C++ / CX verwenden, müssen Sie verwenden 
 
 1. Geben Sie an der Eingabeaufforderung den Befehl **Notepad basiccx.cpp ein**.
 
-   Wählen Sie **Ja** Wenn Sie zum Erstellen einer Datei aufgefordert werden.
+   Wählen Sie **Ja** Wenn Sie aufgefordert werden, eine Datei zu erstellen.
 
 1. Geben Sie die folgenden Zeilen in Notepad ein:
 
@@ -55,12 +55,11 @@ Zur Aktivierung der Kompilierung für C++ / CX verwenden, müssen Sie verwenden 
     {
         Platform::Details::Console::WriteLine("This is a C++/CX program.");
     }
-
     ```
 
-1. Wählen Sie auf der Menüleiste **Datei**, **speichern**.
+1. Wählen Sie auf der Menüleiste **Datei** > **speichern**.
 
-   Sie haben eine Visual C++-Quelldatei mit der Windows-Runtime wird [plattformnamespace](../cppcx/platform-namespace-c-cx.md) Namespace.
+   Sie haben eine Visual C++-Quelldatei mit der Windows-Runtime wird erstellt [plattformnamespace](../cppcx/platform-namespace-c-cx.md) Namespace.
 
 1. Geben Sie an der Eingabeaufforderung den Befehl **cl/EHsc/Zw basiccx.cpp/Link / Subsystem: Console**. Der cl.exe-Compiler kompiliert den Quellcode in eine .obj-Datei und führt dann den Linker aus, um ein ausführbares Programm namens basiccx.exe zu generieren. (Die [/EHsc](../build/reference/eh-exception-handling-model.md) Compiler-Option gibt an, die C++-Ausnahmebehandlungsmodell und das [/link](../build/reference/link-pass-options-to-linker.md) -Flag gibt an, eine Konsolenanwendung.)
 

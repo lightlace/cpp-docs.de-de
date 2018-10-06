@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32a58d35a78fce6a0a6bb499df1363a80200de5a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dced1bd7db0f3eec9d9d070deb8cf990496116ae
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017559"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821659"
 ---
 # <a name="member-access-control-c"></a>Memberzugriffssteuerung (C++)
 
@@ -47,7 +47,7 @@ protected:      // Declare protected function for derived classes only.
 
 Der Standardzugriff ist **private** in einer Klasse und **öffentliche** in einer Struktur oder Union. Zugriffsspezifizierer in einer Klasse können beliebig oft in jeder Reihenfolge verwendet werden. Die Speicherbelegung für Objekte von Klassentypen ist implementierungsabhängig, aber Member werden garantiert immer höheren Speicheradressen zwischen Zugriffsspezifizierern zugewiesen.
 
-### <a name="member-access-control"></a>Memberzugriffssteuerung
+## <a name="member-access-control"></a>Memberzugriffssteuerung
 
 |Zugriffstyp|Bedeutung|
 |--------------------|-------------|

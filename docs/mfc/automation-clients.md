@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cca4818d0ace6270b986ddb9b99068ca9532f1b2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c4a4327e1c3e4d65c5bdc3b822cf2cdfc1ec0353
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395510"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820593"
 ---
 # <a name="automation-clients"></a>Automatisierungsclients
 
@@ -46,7 +46,7 @@ Anschließend geben Sie die Typbibliothek-Datei, die die Eigenschaften und Funkt
 
 ### <a name="handling-events-in-automation-clients"></a>Behandeln von Ereignissen in Benutzeroberflächenautomatisierungs-Clients
 
-Sie können zum Behandeln von Ereignissen in Ihrem Automatisierungsclient müssen Sie eine Senkenschnittstelle hinzufügen. MFC enthält assistentenunterstützung senkenschnittstellen für ActiveX-Steuerelemente hinzufügen, jedoch nicht für andere COM_Server unterstützt. Informationen zum Hinzufügen einer Ereignissenken-Schnittstelle in einem MFC-Client für Quellschnittstellen durch COM-Server beschrieben wird, finden Sie unter So wird's gemacht: Erstellen Sie eine Ereignissenken-Schnittstelle in COM-Client für die MFC-basierte (KB 181845) auf [ http://support.microsoft.com/default.aspxscid=kb; En-us; 181845](http://support.microsoft.com/default.aspxscid=kb;en-us;181845).
+Sie können zum Behandeln von Ereignissen in Ihrem Automatisierungsclient müssen Sie eine Senkenschnittstelle hinzufügen. MFC enthält assistentenunterstützung senkenschnittstellen für ActiveX-Steuerelemente hinzufügen, jedoch nicht für andere COM_Server unterstützt. Informationen zum Hinzufügen einer Ereignissenken-Schnittstelle in einem MFC-Client für Quellschnittstellen durch COM-Server beschrieben wird, finden Sie unter So wird's gemacht: Erstellen Sie eine Ereignissenken-Schnittstelle in COM-Client für die MFC-basierte (KB 181845) auf [ http://support.microsoft.com/default.aspxscid=kb; 181845](http://support.microsoft.com/default.aspxscid=kb;181845).
 
 ## <a name="see-also"></a>Siehe auch
 

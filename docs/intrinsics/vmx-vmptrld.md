@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7126dc3b6a0ece4a5b7627859d0b80abf962d88
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4f3304106662d290a208545061bf9f71b7f30c10
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429102"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820944"
 ---
 # <a name="vmxvmptrld"></a>__vmx_vmptrld
 
@@ -54,7 +54,7 @@ int __vmx_vmptrld(
 
 Der Zeiger VMCS ist eine physische 64-Bit-Adresse.
 
-Die `__vmx_vmptrld` -Funktion ist gleichbedeutend mit der `VMPTRLD` computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Dokumentieren Sie weitere Informationen suchen Sie nach dem Dokument "Intel Virtualization Technical Specification for the IA-32 Intel Architecture," Dokumentnummer C97063-002 auf der [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) Standort.
+Die `__vmx_vmptrld` -Funktion ist gleichbedeutend mit der `VMPTRLD` computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Dokumentieren Sie weitere Informationen suchen Sie nach dem Dokument "Intel Virtualization Technical Specification for the IA-32 Intel Architecture," Dokumentnummer C97063-002 auf der [Intel Corporation](https://software.intel.com/articles/intel-sdm) Standort.
 
 ## <a name="requirements"></a>Anforderungen
 

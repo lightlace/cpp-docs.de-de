@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28d1df72efcc1fa7408922876ad91bafcd2b005a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2ba89aadc8e1c617ed8e101a226560b80cb9e431
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422663"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821399"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>C++-Entwickler-Leitfaden für spekulative Ausführung dienstseitige Kanäle
 
@@ -73,7 +73,7 @@ Die oben genannten Schritte geben Sie ein Beispiel der Verwendung von Technik le
 
 ## <a name="what-software-scenarios-can-be-impacted"></a>Welche Szenarien für die Software können betroffen sein?
 
-Entwicklung von sicherer Software, die mit einem Prozess wie die [Security Development Lifecycle](https://www.microsoft.com/en-us/sdl/) (SDL) in der Regel muss die Vertrauensgrenzen zu identifizieren, die in der Anwendung vorhanden sind. An Orten, in denen eine Anwendung mit Daten von einem weniger vertrauenswürdigen Kontext, wie z. B. ein anderer Prozess auf dem System oder einen Benutzer ohne Administratorrechte-Modus-Prozess bei einem Kernelmodus-Gerätetreiber interagieren kann, ist eine Vertrauensgrenze vorhanden. Die neue Klasse von Sicherheitsrisiken, die im Zusammenhang mit spekulativer Ausführung dienstseitige Kanäle ist relevant für viele die Vertrauensgrenzen in Software Security Modelle, die Isolieren von Code und Daten auf einem Gerät.
+Entwicklung von sicherer Software, die mit einem Prozess wie die [Security Development Lifecycle](https://www.microsoft.com/sdl/) (SDL) in der Regel muss die Vertrauensgrenzen zu identifizieren, die in der Anwendung vorhanden sind. An Orten, in denen eine Anwendung mit Daten von einem weniger vertrauenswürdigen Kontext, wie z. B. ein anderer Prozess auf dem System oder einen Benutzer ohne Administratorrechte-Modus-Prozess bei einem Kernelmodus-Gerätetreiber interagieren kann, ist eine Vertrauensgrenze vorhanden. Die neue Klasse von Sicherheitsrisiken, die im Zusammenhang mit spekulativer Ausführung dienstseitige Kanäle ist relevant für viele die Vertrauensgrenzen in Software Security Modelle, die Isolieren von Code und Daten auf einem Gerät.
 
 Die folgende Tabelle enthält eine Zusammenfassung der Software Sicherheitsmodelle, in denen Entwickler kümmern diese Sicherheitsrisiken, die auftreten müssen unter Umständen:
 
@@ -341,7 +341,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>Spekulationsbarriere über Compiler-Time-instrumentation
 
-Visual C++-Compiler in Visual Studio 2017 (ab Version 15.5.5) bietet Unterstützung für die `/Qspectre` fügt automatisch eine spekulationsbarriere für einen begrenzten Satz von potenziell anfällige Codierungsmuster-Schalter im Zusammenhang mit der CVE-2017-5753. Die Dokumentation für die ["/ qspectre"](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) Flag enthält weitere Informationen zu dessen Auswirkungen und Nutzung. Es ist wichtig zu beachten, dass dieses Flag nicht alle der potenziell anfällige Codierungsmuster deckt und als solche Entwickler nicht darauf als eine umfassende Lösung für diese Klasse von Sicherheitsrisiken basieren sollten.
+Visual C++-Compiler in Visual Studio 2017 (ab Version 15.5.5) bietet Unterstützung für die `/Qspectre` fügt automatisch eine spekulationsbarriere für einen begrenzten Satz von potenziell anfällige Codierungsmuster-Schalter im Zusammenhang mit der CVE-2017-5753. Die Dokumentation für die ["/ qspectre"](https://docs.microsoft.com/cpp/build/reference/qspectre) Flag enthält weitere Informationen zu dessen Auswirkungen und Nutzung. Es ist wichtig zu beachten, dass dieses Flag nicht alle der potenziell anfällige Codierungsmuster deckt und als solche Entwickler nicht darauf als eine umfassende Lösung für diese Klasse von Sicherheitsrisiken basieren sollten.
 
 ### <a name="masking-array-indices"></a>Maskieren von Arrayindizes
 
