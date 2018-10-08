@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e95ad940aac14892ac14e8d56ba64f49d0bbf7c0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 66cbf25324b71c3fd28bdd344c7a217348cdb5d9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423831"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861615"
 ---
 # <a name="12-definition-of-terms"></a>1.2. Begriffsdefinition
 
@@ -43,7 +43,7 @@ Die folgenden Begriffe werden in diesem Dokument verwendet:
 
    Lexikalisch enthaltenen Anweisungen eine *vor einem strukturierten Block*.
 
--  Master-thread
+- Master-thread
 
    Der Thread, der ein Team erstellt bei einer *parallelen Bereichs* eingegeben wird.
 
@@ -75,7 +75,7 @@ Die folgenden Begriffe werden in diesem Dokument verwendet:
 
    Ein strukturierter Block ist eine Anweisung aus (einzelne oder zusammengesetzte), die einen einzelnen Eintrag, und eine einzelne beenden. Keine Anweisung ist einem strukturierten Block bei ein Sprung in oder aus dieser Anweisung (einschließlich einen Aufruf von **Longjmp**(3 C) oder die Verwendung der **auslösen**, aber ein Aufruf von **beenden** ist zulässig). Eine verbundanweisung ist einem strukturierten Block aus, wenn die Ausführung immer an das öffnende beginnt **{** und immer endet mit dem schließenden **}**. Eine Ausdrucksanweisung, auswahlanweisung, iterationsanweisung oder **versuchen** Block ist einem strukturierten Block auf, wenn die entsprechende verbundanweisung erworben haben, schließen Sie ihn in **{** und **}** ein strukturierter Block wäre. Eine Jump-Anweisung, die Anweisung mit Bezeichnung oder die deklarationsanweisung ist keinem strukturierten Block.
 
--  Team
+- Team
 
    Ein oder mehrere Threads, die bei der Ausführung eines Konstrukts darstellen.
 

@@ -16,26 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c37a9d99ce84290885265257e1d723196277892e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1d22d3daa5f44021dcfd228b2928ef866e1d38dc
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753447"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860991"
 ---
 # <a name="creating-an-atl-dhtml-control"></a>Erstellen eines ATL-DHTML-Steuerelements
 
 Der ATL-Steuerelement-Assistent automatisiert den Prozess der Erstellung eines DHTML-Steuerelements. Es wird die erforderlichen Ressourcendateien, einschließlich einer HTML-Datei mit Beispielcode generiert.
 
-#### <a name="to-create-an-atl-dhtml-control"></a>So erstellen Sie eine ATL-DHTML-Steuerelement
+## <a name="to-create-an-atl-dhtml-control"></a>So erstellen Sie eine ATL-DHTML-Steuerelement
 
 1. Führen Sie die Schritte in [Erstellen eines ATL-Projekts](../atl/reference/creating-an-atl-project.md).
 
-2. In der Klassenansicht, Maustaste den Knoten des Projekts, zeigen Sie auf **hinzufügen**, und klicken Sie auf **Klasse hinzufügen** aus dem Kontextmenü. In der **Klasse hinzufügen** (Dialogfeld), doppelklicken Sie auf die [ATL-Steuerelement-Assistent](../atl/reference/atl-control-wizard.md). Klicken Sie in der ATL-Steuerelement-Assistent, auf die **Optionen** Registerkarte, und wählen Sie **DHTML-Steuerelements**.
+1. In **Klassenansicht**mit der rechten Maustaste auf den Projektknoten, zeigen Sie auf **hinzufügen**, und klicken Sie auf **Klasse hinzufügen** aus dem Kontextmenü. In der **Klasse hinzufügen** (Dialogfeld), doppelklicken Sie auf die [ATL-Steuerelement-Assistent](../atl/reference/atl-control-wizard.md). In der **ATL-Steuerelement-Assistent**, klicken Sie auf die **Optionen** Registerkarte, und wählen Sie **DHTML-Steuerelements**.
 
 Sie können jetzt [testen Sie das Standardsteuerelement](../atl/testing-the-atl-dhtml-control.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 [Unterstützung für DHTML-Steuerelement](../atl/atl-support-for-dhtml-controls.md)
-

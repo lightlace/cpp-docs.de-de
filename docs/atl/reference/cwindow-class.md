@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46e3926f31ec7d12da539d868cacb37e18134e96
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: bd4f5ac780b36e51be63aef7ce87884284542cbb
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46109685"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861940"
 ---
 # <a name="cwindow-class"></a>CWindow-Klasse
 
@@ -382,7 +382,7 @@ class CWindow
 
 [CDialogImpl](../../atl/reference/cdialogimpl-class.md) können Sie ein modales oder nicht modales Dialogfeld zu erstellen.
 
-Weitere Informationen zu Fenstern finden Sie unter [Windows](https://msdn.microsoft.com/library/windows/desktop/ms632595) und weiteren Themen im Windows SDK. Weitere Informationen zum Verwenden von Fenstern in ATL finden Sie im Artikel [ATL-Fensterklassen](../../atl/atl-window-classes.md).
+Weitere Informationen zu Fenstern finden Sie unter [Windows](/windows/desktop/winmsg/windows) und weiteren Themen im Windows SDK. Weitere Informationen zum Verwenden von Fenstern in ATL finden Sie im Artikel [ATL-Fensterklassen](../../atl/atl-window-classes.md).
 
 ## <a name="requirements"></a>Anforderungen
 

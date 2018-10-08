@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75ec7271950a2aee28e55d4b7b9fdcf7c8c894d0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b7d895671efdec4649faf1f0611380d2065770ac
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039373"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861446"
 ---
 # <a name="standard-conversions"></a>Standardkonvertierungen
 
@@ -162,7 +162,7 @@ Viele binäre Operatoren (ausführlicher [Ausdrücke mit Binäroperatoren](../cp
 |Einer der Operanden ist vom Typ **long double**.|Anderer Operand wird in den Typ konvertiert **long double**.|
 |Vorangehende Bedingung nicht erfüllt und jeder Operand ist vom Typ **doppelte**.|Anderer Operand wird in den Typ konvertiert **doppelte**.|
 |Vorangehende Bedingungen nicht erfüllt und jeder Operand ist vom Typ **"float"**.|Anderer Operand wird in den Typ konvertiert **"float"**.|
-|Vorausgehende Bedingungen nicht erfüllt (keiner der Operanden ist vom Typ „floating“).|Ganzzahlige Erweiterungen werden bei den Operanden wie folgt ausgeführt:<br /><br /> – Wenn ein Operand vom Typ **unsigned long**, der andere Operand wird in den Typ konvertiert **unsigned long**.<br />– Wenn vorherige Bedingung nicht erfüllt, und wenn ein Operand vom Typ **lange** und der andere vom Typ **ganze Zahl ohne Vorzeichen**, beide Operanden sind in den Typ konvertiert **unsigned long**.<br />– Wenn die oben genannten zwei Bedingungen nicht erfüllt sind, und wenn ein Operand vom Typ **lange**, der andere Operand wird in den Typ konvertiert **lange**.<br />– Wenn die oben genannten drei Bedingungen nicht erfüllt sind, und wenn ein Operand vom Typ **ganze Zahl ohne Vorzeichen**, der andere Operand wird in den Typ konvertiert **ganze Zahl ohne Vorzeichen**.<br />– Wenn keines der oben genannten Bedingungen erfüllt sind, werden beide Operanden Typ konvertiert **Int**.|
+|Vorausgehende Bedingungen nicht erfüllt (keiner der Operanden ist vom Typ „floating“).|Ganzzahlige Erweiterungen werden bei den Operanden wie folgt ausgeführt:<br /><br />– Wenn ein Operand vom Typ **unsigned long**, der andere Operand wird in den Typ konvertiert **unsigned long**.<br />– Wenn vorherige Bedingung nicht erfüllt, und wenn ein Operand vom Typ **lange** und der andere vom Typ **ganze Zahl ohne Vorzeichen**, beide Operanden sind in den Typ konvertiert **unsigned long**.<br />– Wenn die oben genannten zwei Bedingungen nicht erfüllt sind, und wenn ein Operand vom Typ **lange**, der andere Operand wird in den Typ konvertiert **lange**.<br />– Wenn die oben genannten drei Bedingungen nicht erfüllt sind, und wenn ein Operand vom Typ **ganze Zahl ohne Vorzeichen**, der andere Operand wird in den Typ konvertiert **ganze Zahl ohne Vorzeichen**.<br />– Wenn keines der oben genannten Bedingungen erfüllt sind, werden beide Operanden Typ konvertiert **Int**.|
 
 Das folgende Codebeispiel veranschaulicht die Konvertierungsregeln, die in der Tabelle beschrieben werden:
 

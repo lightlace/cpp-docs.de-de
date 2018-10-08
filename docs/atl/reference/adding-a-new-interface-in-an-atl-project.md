@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d468e6e2770eca3bc01fca95fb585d1753210a3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fec98fd785f5e99875c5f73b13ce1082c16add2b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039022"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861758"
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>Hinzufügen einer neuen Schnittstelle in einem ATL-Projekt
 
@@ -32,23 +32,23 @@ Wenn Sie eine Schnittstelle zu Ihrem Objekt oder ein Steuerelement hinzufügen, 
 
 Sie können eine neue Schnittstelle zu Ihrem Steuerelement auf zwei Arten hinzufügen: manuell oder mithilfe von Code-Assistenten in der Klassenansicht.
 
-### <a name="to-use-code-wizards-in-class-view-to-add-an-interface-to-an-existing-object-or-control"></a>Code-Assistenten in der Klassenansicht zu verwenden, um eine Schnittstelle zu einem vorhandenen Objekt oder ein Steuerelement hinzufügen
+## <a name="to-use-code-wizards-in-class-view-to-add-an-interface-to-an-existing-object-or-control"></a>Code-Assistenten in der Klassenansicht zu verwenden, um eine Schnittstelle zu einem vorhandenen Objekt oder ein Steuerelement hinzufügen
 
 1. In [Klassenansicht](/visualstudio/ide/viewing-the-structure-of-code), mit der rechten Maustaste des Klassennamen eines Steuerelements. Z. B. eine Vollzugriff oder zusammengesetzten Steuerelement oder jede andere Control-Klasse, die in der Headerdatei ein-Makro implementiert.
 
-2. Klicken Sie im Kontextmenü auf **hinzufügen**, und klicken Sie dann auf **Schnittstelle implementieren**.
+1. Klicken Sie im Kontextmenü auf **hinzufügen**, und klicken Sie dann auf **Schnittstelle implementieren**.
 
-3. Wählen Sie die Schnittstellen implementieren in der [Assistent zum Implementieren von Schnittstellen](../../ide/implement-interface-wizard.md). Wenn die Schnittstelle in keiner verfügbaren nicht vorhanden ist, müssen dann Sie die IDL-Datei manuell hinzufügen.
+1. Wählen Sie die Schnittstellen implementieren in der [Assistent zum Implementieren von Schnittstellen](../../ide/implement-interface-wizard.md). Wenn die Schnittstelle in keiner verfügbaren nicht vorhanden ist, müssen dann Sie die IDL-Datei manuell hinzufügen.
 
-### <a name="to-add-a-new-interface-manually"></a>So fügen Sie eine neue Schnittstelle manuell hinzu
+## <a name="to-add-a-new-interface-manually"></a>So fügen Sie eine neue Schnittstelle manuell hinzu
 
 1. Fügen Sie die Definition der neuen Schnittstelle der IDL-Datei ein.
 
-2. Leiten Sie Ihre Objekt oder ein Steuerelement die Schnittstelle an.
+1. Leiten Sie Ihre Objekt oder ein Steuerelement die Schnittstelle an.
 
-3. Erstellen Sie ein neues [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) für die Schnittstelle oder, wenn das Projekt attributiert ist, fügen Sie der `coclass` Attribut.
+1. Erstellen Sie ein neues [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) für die Schnittstelle oder, wenn das Projekt attributiert ist, fügen Sie der `coclass` Attribut.
 
-4. Implementieren Sie Methoden für die Schnittstelle.
+1. Implementieren Sie Methoden für die Schnittstelle.
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -58,4 +58,3 @@ Sie können eine neue Schnittstelle zu Ihrem Steuerelement auf zwei Arten hinzuf
 [Programmieren mit ATL- und C-Laufzeitcode](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Grundlagen von ARL COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Standardmäßige ATL-Projektkonfigurationen](../../atl/reference/default-atl-project-configurations.md)
-

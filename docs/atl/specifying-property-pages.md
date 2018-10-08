@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db0445e83bbcae6baa45d4a482489e6761fa945a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f80abd3b6270f105fecd7ef8b9988a379901b541
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069429"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860211"
 ---
 # <a name="specifying-property-pages"></a>Festlegen der Eigenschaftenseiten
 
@@ -32,12 +32,12 @@ Zum Implementieren `ISpecifyPropertyPages` mit ATL, gehen Sie folgendermaßen vo
 
 1. Leiten Sie eine Klasse von [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md).
 
-2. Fügen Sie einen Eintrag für `ISpecifyPropertyPages` COM-Zuordnung Ihrer Klasse fest.
+1. Fügen Sie einen Eintrag für `ISpecifyPropertyPages` COM-Zuordnung Ihrer Klasse fest.
 
-3. Hinzufügen einer [PROP_PAGE](reference/property-map-macros.md#prop_page) einen Eintrag in der eigenschaftenzuordnung für jede Seite, die mit Ihrem Steuerelement verknüpft ist.
+1. Hinzufügen einer [PROP_PAGE](reference/property-map-macros.md#prop_page) einen Eintrag in der eigenschaftenzuordnung für jede Seite, die mit Ihrem Steuerelement verknüpft ist.
 
 > [!NOTE]
->  Beim Generieren von einem Standardsteuerelement mithilfe der [ATL-Steuerelement-Assistent](../atl/reference/atl-control-wizard.md), Sie müssen nur die eigenschaftenzuordnung PROP_PAGE Einträge hinzugefügt. Der Assistent generiert den erforderlichen Code für den weiteren Schritten.
+> Beim Generieren von einem Standardsteuerelement mithilfe der [ATL-Steuerelement-Assistent](../atl/reference/atl-control-wizard.md), Sie müssen nur die eigenschaftenzuordnung PROP_PAGE Einträge hinzugefügt. Der Assistent generiert den erforderlichen Code für den weiteren Schritten.
 
 Konzipierten Container werden die angegebene Eigenschaftenseiten in der gleichen Reihenfolge wie die PROP_PAGE Einträge in der eigenschaftenzuordnung angezeigt. Im Allgemeinen sollten Sie seiteneinträge Standardeigenschaft nach den Einträgen für Ihre benutzerdefinierten Seiten in der eigenschaftenzuordnung abgelegt, damit Benutzer die Seiten, die spezifisch für das Steuerelement zuerst angezeigt.
 
@@ -51,4 +51,3 @@ Die folgende Klasse für einen Kalender steuern verwendet der `ISpecifyPropertyP
 
 [Eigenschaftenseiten](../atl/atl-com-property-pages.md)<br/>
 [ATLPages-Beispiel](../visual-cpp-samples.md)
-

@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12982c212cf8ff4fe502638a5c466306bfe15eb1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 32456b15cc00d296354016f8769e020f8133b609
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374287"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861732"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd-Klasse
 
@@ -351,7 +351,7 @@ Identifiziert den Namen der Menüressource mit dem Fenster verwendet werden. Ver
 *dwExStyle*<br/>
 Gibt an, das erweiterte Fenster [Stil](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) Attribute.
 
-*"pContext"*<br/>
+*pContext*<br/>
 Gibt einen Zeiger auf eine [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) Struktur. Dieser Parameter kann NULL sein.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -376,7 +376,7 @@ CWnd* CreateView(
 
 ### <a name="parameters"></a>Parameter
 
-*"pContext"*<br/>
+*pContext*<br/>
 Gibt den Typ der Ansicht und des Dokuments.
 
 *nID*<br/>
@@ -796,7 +796,7 @@ Des Frames [Stil](../../mfc/reference/styles-used-by-mfc.md#window-styles). Füg
 *pParentWnd*<br/>
 Ein Zeiger auf den Rand des übergeordneten.
 
-*"pContext"*<br/>
+*pContext*<br/>
 Ein Zeiger auf eine [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) Struktur. Dieser Parameter kann NULL sein.
 
 ### <a name="remarks"></a>Hinweise
@@ -914,7 +914,7 @@ virtual BOOL OnCreateClient(
 *LPCs*<br/>
 Ein Zeiger auf ein Windows [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) Struktur.
 
-*"pContext"*<br/>
+*pContext*<br/>
 Ein Zeiger auf eine [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1103,7 +1103,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*nState*|[in] Gibt an, ob die Menü anzeigen oder ausblenden. Die *nState* Parameter kann die folgenden Werte aufweisen:<br /><br /> -AFX_MBS_VISIBLE (0 x 01) – zeigt das Menü an, wenn es ausgeblendet ist, aber Sie hat keine Auswirkungen, wenn es sichtbar ist.<br />-AFX_MBS_HIDDEN (0 x 02) – Blendet das Menü aus, wenn es sichtbar ist, aber Sie hat keine Auswirkungen, wenn es ausgeblendet ist.|
+|*nState*|[in] Gibt an, ob die Menü anzeigen oder ausblenden. Die *nState* Parameter kann die folgenden Werte aufweisen:<br /><br />-AFX_MBS_VISIBLE (0 x 01) – zeigt das Menü an, wenn es ausgeblendet ist, aber Sie hat keine Auswirkungen, wenn es sichtbar ist.<br />-AFX_MBS_HIDDEN (0 x 02) – Blendet das Menü aus, wenn es sichtbar ist, aber Sie hat keine Auswirkungen, wenn es ausgeblendet ist.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1125,7 +1125,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*nStyle*|[in] Gibt an, ob im Menü standardmäßig ausgeblendet ist oder sichtbar ist und den Fokus besitzt. Die *nStyle* Parameter kann die folgenden Werte aufweisen:<br /><br /> -AFX_MBV_KEEPVISIBLE (0 X 01 –)<br />     Klicken Sie im Menü angezeigt wird, jederzeit und standardmäßig verfügt nicht über den Fokus.<br />-AFX_MBV_DISPLAYONFOCUS (0 X 02):<br />     Klicken Sie im Menü ist standardmäßig ausgeblendet. Wenn Sie im Menü ausgeblendet ist, drücken Sie ALT gedrückt, um das Menü anzuzeigen, und geben Sie ihm den Fokus. Wenn Sie im Menü angezeigt wird, drücken Sie die ALT-Taste oder die ESC-Taste So blenden Sie im Menü aus.<br />-AFX_MBV_ DISPLAYONFOCUS (0 x 02) &#124; AFX_MBV_DISPLAYONF10 (0 x 04)<br />     (bitweise Kombination (OR)) – klicken Sie im Menü ist standardmäßig ausgeblendet. Wenn Sie im Menü ausgeblendet ist, drücken Sie die Taste F10, um das Menü anzuzeigen, und geben Sie ihm den Fokus. Wenn Sie im Menü angezeigt wird, drücken Sie die Taste F10, um den Fokus aktivieren oder deaktivieren Sie im Menü zu wechseln. Klicken Sie im Menü wird angezeigt, bis Sie der ALT-Taste oder die ESC-Taste drücken, um es auszublenden.|
+|*nStyle*|[in] Gibt an, ob im Menü standardmäßig ausgeblendet ist oder sichtbar ist und den Fokus besitzt. Die *nStyle* Parameter kann die folgenden Werte aufweisen:<br /><br />-AFX_MBV_KEEPVISIBLE (0 X 01 –)<br />     Klicken Sie im Menü angezeigt wird, jederzeit und standardmäßig verfügt nicht über den Fokus.<br />-AFX_MBV_DISPLAYONFOCUS (0 X 02):<br />     Klicken Sie im Menü ist standardmäßig ausgeblendet. Wenn Sie im Menü ausgeblendet ist, drücken Sie ALT gedrückt, um das Menü anzuzeigen, und geben Sie ihm den Fokus. Wenn Sie im Menü angezeigt wird, drücken Sie die ALT-Taste oder die ESC-Taste So blenden Sie im Menü aus.<br />-AFX_MBV_ DISPLAYONFOCUS (0 x 02) &#124; AFX_MBV_DISPLAYONF10 (0 x 04)<br />     (bitweise Kombination (OR)) – klicken Sie im Menü ist standardmäßig ausgeblendet. Wenn Sie im Menü ausgeblendet ist, drücken Sie die Taste F10, um das Menü anzuzeigen, und geben Sie ihm den Fokus. Wenn Sie im Menü angezeigt wird, drücken Sie die Taste F10, um den Fokus aktivieren oder deaktivieren Sie im Menü zu wechseln. Klicken Sie im Menü wird angezeigt, bis Sie der ALT-Taste oder die ESC-Taste drücken, um es auszublenden.|
 
 ### <a name="remarks"></a>Hinweise
 

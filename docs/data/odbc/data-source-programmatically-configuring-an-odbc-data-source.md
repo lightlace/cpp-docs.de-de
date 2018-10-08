@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 36f8233d7d3683a885fc0f38468ad5a7b9b59c57
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6c9b9cb66e64f85ad8800faf11011e351a3f3539
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030767"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861355"
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Datenquelle: Programmgesteuertes Konfigurieren einer ODBC-Datenquelle
 
@@ -85,7 +85,7 @@ Hierbei handelt es sich um die Treiberbeschreibung. Dies ist der Name, der dem B
 *lpszAttributes*<br/>
 Die Liste der Attribute in der Form "Schlüsselname=Wert". Diese Zeichenfolgen werden durch NULL-Zeichen getrennt. Zwei aufeinander folgende NULL-Zeichen kennzeichnen das Ende der Liste. Diese Attribute sind in erster Linie treiberspezifische Standardeinträge, die für die neue Datenquelle in die Registrierung geschrieben werden. Ein wichtiger Schlüssel, der in der ODBC-API-Referenz zu dieser Funktion nicht erwähnt wird, ist "DSN" (Data Source Name, Datenquellenname). Hierdurch wird der Name der neuen Datenquelle angegeben. Die übrigen Einträge betreffen den Treiber für die neue Datenquelle. Meist ist es nicht erforderlich, alle Einträge zur Verfügung zu stellen, da der Benutzer durch den Treiber in Dialogfeldern zur Eingabe der neuen Werte aufgefordert werden kann. (Legen Sie *HwndParent* auf NULL, um dies zu verursachen.) Es können auch explizit Standardwerte bereitgestellt werden, damit der Benutzer nicht zu einer Eingabe aufgefordert wird.  
   
-###### <a name="to-determine-the-description-of-a-driver-for-the-lpszdriver-parameter-using-odbc-administrator"></a>So ermitteln Sie mit ODBC-Administrator die Beschreibung eines Treibers für den lpszDriver-Parameter  
+#### <a name="to-determine-the-description-of-a-driver-for-the-lpszdriver-parameter-using-odbc-administrator"></a>So ermitteln Sie mit ODBC-Administrator die Beschreibung eines Treibers für den lpszDriver-Parameter  
   
 1. Starten Sie den ODBC-Administrator.  
   
@@ -97,23 +97,23 @@ Wahlweise kann auch die Registrierung oder, bei 16 Bit-Systemen, die Datei Odbci
   
 Eine Möglichkeit zum Suchen von Schlüsselnamen und Werte für die *LpszAttributes* Parameter ist die Untersuchung der Datei Odbc.ini einer bereits konfigurierten Datenquelle (z. B. eins, die vom ODBC-Administrator konfiguriert wurde).  
   
-###### <a name="to-find-keynames-and-values-for-the-lpszattributes-parameter"></a>So suchen Sie Schlüsselnamen und Werte für den Parameter lpszAttributes  
+#### <a name="to-find-keynames-and-values-for-the-lpszattributes-parameter"></a>So suchen Sie Schlüsselnamen und Werte für den Parameter lpszAttributes  
   
 1. Führen Sie den Registrierungs-Editor von Windows aus, oder öffnen Sie bei einem 16-Bit-System die Datei Odbc.ini.  
   
 1. Suchen Sie nach den Informationen zu ODBC-Datenquellen mit einer der folgenden Methoden:  
   
-    -   Suchen Sie den Schlüssel für die 32-Bit **HKEY_CURRENT_USER\Software\ODBC\ODBC. Datenquellen INI\ODBC** im linken Bereich.  
+   - Suchen Sie den Schlüssel für die 32-Bit **HKEY_CURRENT_USER\Software\ODBC\ODBC. Datenquellen INI\ODBC** im linken Bereich.  
   
-         Im rechten Fenster werden die Einträge der Form: "Pub: REG_SZ:*<data source name>*", wobei *<data source name>* ist eine Datenquelle, die bereits mit den gewünschten Einstellungen für den Treiber konfiguriert wurde werden sollen zu verwenden. Wählen Sie die Datenquelle, die Sie möchten, die z. b. SQL Server. Die Elemente, die nach der Zeichenfolge "Pub:" sind, die Reihenfolge der Schlüsselname und Wert für die Verwendung in Ihrem *LpszAttributes* Parameter.  
+      Im rechten Fenster werden die Einträge der Form: "Pub: REG_SZ:*<data source name>*", wobei *<data source name>* ist eine Datenquelle, die bereits mit den gewünschten Einstellungen für den Treiber konfiguriert wurde werden sollen zu verwenden. Wählen Sie die Datenquelle, die Sie möchten, die z. b. SQL Server. Die Elemente, die nach der Zeichenfolge "Pub:" sind, die Reihenfolge der Schlüsselname und Wert für die Verwendung in Ihrem *LpszAttributes* Parameter.  
   
-    -   Suchen Sie den Abschnitt für 16-Bit in der Datei Odbc.ini nach [*\<Datenquellenname >*].  
+   - Suchen Sie den Abschnitt für 16-Bit in der Datei Odbc.ini nach [*\<Datenquellenname >*].  
   
-         Die Zeilen im Anschluss an diese Zeile haben die Form "Schlüsselname=Wert". Hierbei handelt es sich um genau die Einträge für die Verwendung in Ihrem *LpszAttributes* Parameter.  
+      Die Zeilen im Anschluss an diese Zeile haben die Form "Schlüsselname=Wert". Hierbei handelt es sich um genau die Einträge für die Verwendung in Ihrem *LpszAttributes* Parameter.  
   
 Sie können auch die Dokumentation des Treibers durchsuchen, den Sie verwenden möchten. Sie finden nützliche Informationen in der Onlinehilfe zu diesem Treiber, auf die Sie mit ODBC-Administrator zugreifen können. Diese Hilfedateien werden in der Regel im Verzeichnis WINDOWS\SYSTEM von Windows NT, Windows 3.1 oder Windows 95 platziert.  
   
-###### <a name="to-obtain-online-help-for-your-odbc-driver"></a>So greifen Sie auf die Onlinehilfe des ODBC-Treibers zu  
+#### <a name="to-obtain-online-help-for-your-odbc-driver"></a>So greifen Sie auf die Onlinehilfe des ODBC-Treibers zu  
   
 1. Starten Sie den ODBC-Administrator.  
   

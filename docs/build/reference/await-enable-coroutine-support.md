@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5da401f940a39c135ba0b64571b6330a42fed796
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 09cab9f0c7d94c3c51eb63008ec6b7cfb1292f89
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725503"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860575"
 ---
 # <a name="await-enable-coroutine-support"></a>/ await (coroutineunterstützung aktivieren)
 
@@ -44,9 +44,9 @@ Die **"/ await"** Option ist ab, die in Visual Studio 2015 verfügbar.
 
 1. Öffnen des Projekts **Eigenschaftenseiten** Dialogfeld.
 
-2. Unter **Konfigurationseigenschaften**, erweitern Sie die **C/C++-** Ordner, und wählen Sie die **Befehlszeile** Eigenschaftenseite.
+1. Unter **Konfigurationseigenschaften**, erweitern Sie die **C/C++-** Ordner, und wählen Sie die **Befehlszeile** Eigenschaftenseite.
 
-3. Geben Sie die **"/ await"** -Compileroption in der **zusätzliche Optionen** Feld. Wählen Sie **OK** oder **übernehmen** zum Speichern der Änderungen.
+1. Geben Sie die **"/ await"** -Compileroption in der **zusätzliche Optionen** Feld. Wählen Sie **OK** oder **übernehmen** zum Speichern der Änderungen.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
 

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 829afe53d5fde976b7877475cf577b6204be8aed
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1d0aa647f6f94d31f1a06bb09b143554dba51b68
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46051086"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861745"
 ---
 # <a name="overview-of-file-translation"></a>Übersicht über die Dateiübersetzung
 
@@ -32,9 +32,9 @@ C++-Programme wie C-Programme bestehen aus mindestens einer Datei. Jede dieser D
 
 1. Lexikalische Tokenisierung. Zeichenzuordnung und Trigraphverarbeitung, Splicing von Zeilen und Tokenisierung werden in dieser Übersetzungsphase ausgeführt.
 
-2. Vorverarbeitung. Diese übersetzungsphase werden zusätzliche Quelldateien verweist `#include` Direktiven, kümmert sich um "Zeichenfolgen" und "eingebracht"-Direktiven und führt token eingefügt und Makros erweitert (finden Sie unter [Präprozessoranweisungen](../preprocessor/preprocessor-directives.md) in der *Präprozessorreferenz* Informationen). Das Ergebnis der Vorverarbeitungsphase ist eine Sequenz von Token, die zusammen eine "Übersetzungseinheit" definieren.
+1. Vorverarbeitung. Diese übersetzungsphase werden zusätzliche Quelldateien verweist `#include` Direktiven, kümmert sich um "Zeichenfolgen" und "eingebracht"-Direktiven und führt token eingefügt und Makros erweitert (finden Sie unter [Präprozessoranweisungen](../preprocessor/preprocessor-directives.md) in der *Präprozessorreferenz* Informationen). Das Ergebnis der Vorverarbeitungsphase ist eine Sequenz von Token, die zusammen eine "Übersetzungseinheit" definieren.
 
-     Präprozessoranweisungen beginnen immer mit dem Nummernzeichen (**#**) Zeichen (d. h. das erste Zeichen für Zeichen in der Zeile muss ein Nummernzeichen sein). In einer angegebenen Zeile kann nur eine Präprozessoranweisung stehen. Zum Beispiel:
+   Präprozessoranweisungen beginnen immer mit dem Nummernzeichen (**#**) Zeichen (d. h. das erste Zeichen für Zeichen in der Zeile muss ein Nummernzeichen sein). In einer angegebenen Zeile kann nur eine Präprozessoranweisung stehen. Zum Beispiel:
 
     ```cpp
     #include <iostream>  // Include text of iostream in
@@ -43,9 +43,9 @@ C++-Programme wie C-Programme bestehen aus mindestens einer Datei. Jede dieser D
                          //  text string).
     ```
 
-3. Codegenerierung. Diese Übersetzungsphase verwendet die Token, die in der Vorverarbeitungsphase zum Generieren von Objektcode generiert wurden.
+1. Codegenerierung. Diese Übersetzungsphase verwendet die Token, die in der Vorverarbeitungsphase zum Generieren von Objektcode generiert wurden.
 
-     Während dieser Phase wird die syntaktische und semantische Prüfung des Quellcodes ausgeführt.
+   Während dieser Phase wird die syntaktische und semantische Prüfung des Quellcodes ausgeführt.
 
 Finden Sie unter [Phasen der Übersetzung](../preprocessor/phases-of-translation.md) in die *Präprozessorreferenz* für Weitere Informationen.
 

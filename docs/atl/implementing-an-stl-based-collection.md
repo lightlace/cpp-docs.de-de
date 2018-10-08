@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d414df9d5e5f7d930497d42b5ec73d92a65ac3cc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cc7df3233b5605c4b19269571d1afa0f5a6215ae
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116704"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861095"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>Implementieren einer C++-Standard Standardbibliothek basierten Auflistung
 
@@ -57,15 +57,15 @@ Dies ist das Standardformat für die eine schreibgeschützte Auflistung-Schnitts
 
 1. Collection-Schnittstellen sind in der Regel zwei, da Benutzeroberflächenautomatisierungs-Clients greift auf die `_NewEnum` Eigenschaft mithilfe des `IDispatch::Invoke`. Allerdings können Automatisierungsclients die verbleibenden Methoden über Vtable zugreifen, duale Schnittstellen, Dispatchschnittstellen vorzuziehen sind.
 
-2. Wenn eine duale Schnittstelle oder Disp-Schnittstelle nicht zur Laufzeit erweitert wird (d. h. Sie wird nicht angeben, zusätzlichen Methoden oder Eigenschaften über `IDispatch::Invoke`), gelten die **nonextensible** -Attribut auf die Definition. Mit diesem Attribut können Automatisierungsclients zum Ausführen der Überprüfung der vollständigen Code zum Zeitpunkt der Kompilierung. In diesem Fall sollte die Schnittstelle nicht erweitert werden.
+1. Wenn eine duale Schnittstelle oder Disp-Schnittstelle nicht zur Laufzeit erweitert wird (d. h. Sie wird nicht angeben, zusätzlichen Methoden oder Eigenschaften über `IDispatch::Invoke`), gelten die **nonextensible** -Attribut auf die Definition. Mit diesem Attribut können Automatisierungsclients zum Ausführen der Überprüfung der vollständigen Code zum Zeitpunkt der Kompilierung. In diesem Fall sollte die Schnittstelle nicht erweitert werden.
 
-3. Die richtige DISPID ist wichtig, wenn Sie möchten, dass Benutzeroberflächenautomatisierungs-Clients, um diese Eigenschaft verwenden zu können. (Beachten Sie, dass nur ein Unterstrich in DISPID_NEWENUM vorhanden ist.)
+1. Die richtige DISPID ist wichtig, wenn Sie möchten, dass Benutzeroberflächenautomatisierungs-Clients, um diese Eigenschaft verwenden zu können. (Beachten Sie, dass nur ein Unterstrich in DISPID_NEWENUM vorhanden ist.)
 
-4. Sie können einen beliebigen Wert angeben, wie die DISPID eines der `Item` Eigenschaft. Allerdings `Item` verwendet in der Regel DISPID_VALUE, erleichtern die Standardeigenschaft der Auflistung. Dadurch können Benutzeroberflächenautomatisierungs-Clients, auf die Eigenschaft zu verweisen, ohne explizit zu benennen.
+1. Sie können einen beliebigen Wert angeben, wie die DISPID eines der `Item` Eigenschaft. Allerdings `Item` verwendet in der Regel DISPID_VALUE, erleichtern die Standardeigenschaft der Auflistung. Dadurch können Benutzeroberflächenautomatisierungs-Clients, auf die Eigenschaft zu verweisen, ohne explizit zu benennen.
 
-5. Der Datentyp für den Rückgabewert verwendet die `Item` Eigenschaft ist der Typ des Elements in der Auflistung gespeichert werden, als COM-Clients betroffen sind. Die Schnittstelle gibt Zeichenfolgen zurück, daher sollten Sie den standardmäßigen COM-String-Datentyp, BSTR verwenden. Sie können die Daten intern in einem anderen Format speichern, wie Sie bald sehen werden.
+1. Der Datentyp für den Rückgabewert verwendet die `Item` Eigenschaft ist der Typ des Elements in der Auflistung gespeichert werden, als COM-Clients betroffen sind. Die Schnittstelle gibt Zeichenfolgen zurück, daher sollten Sie den standardmäßigen COM-String-Datentyp, BSTR verwenden. Sie können die Daten intern in einem anderen Format speichern, wie Sie bald sehen werden.
 
-6. Der Wert für die DISPID eines der `Count` Eigenschaft ist beliebig. Es gibt keine standardmäßige DISPID für diese Eigenschaft.
+1. Der Wert für die DISPID eines der `Count` Eigenschaft ist beliebig. Es gibt keine standardmäßige DISPID für diese Eigenschaft.
 
 ##  <a name="vcconstorage_and_exposure_typedefs"></a> Erstellen von Typdefinitionen für die Speicherung und Offenlegung
 
@@ -114,4 +114,3 @@ Jetzt können Sie den Code mit dem Client Ihrer Wahl testen.
 [Auflistungen und-Enumerationen](../atl/atl-collections-and-enumerators.md)<br/>
 [-Beispiel](../visual-cpp-samples.md)<br/>
 [ATL-Kopierrichtlinienklasse](../atl/atl-copy-policy-classes.md)
-

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69058c00757cea466683246c1aee2e89f806c931
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7c199f687f5004066bf67d087daa1bd7a5b27d01
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058606"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861160"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Explizit vorgegebene und gelöschte Funktionen
 
@@ -48,8 +48,8 @@ Dies ist für einfache Typen praktisch, komplexe Typen definieren jedoch häufig
 > [!NOTE]
 >  Darüber hinaus gibt der C++11-Standard die folgenden zusätzlichen Regeln an:
 >
->  -   Wenn ein Kopierkonstruktor oder Destruktor explizit deklariert wird, wird die automatische Generierung des Kopierzuweisungsoperators abgelehnt.
-> -   Wenn ein Kopierzuweisungsoperator oder Destruktor explizit deklariert wird, wird die automatische Generierung eines Kopierkonstruktors abgelehnt.
+> - Wenn ein Kopierkonstruktor oder Destruktor explizit deklariert wird, wird die automatische Generierung des Kopierzuweisungsoperators abgelehnt.
+> - Wenn ein Kopierzuweisungsoperator oder Destruktor explizit deklariert wird, wird die automatische Generierung eines Kopierkonstruktors abgelehnt.
 >
 >  In beiden Fällen werden die erforderlichen Funktionen weiterhin automatisch von Visual Studio implizit generiert, und es wird keine Warnung+ ausgegeben.
 

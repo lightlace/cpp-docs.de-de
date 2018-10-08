@@ -105,12 +105,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0f8e2c5e3feea1c7607b8303bc42cef5b2f21e0
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: deee159c9da6fce9001d010a1a6b1db9b3b1d666
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601612"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861420"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Compilerwarnungen C4800 durch C5999
 
@@ -153,6 +153,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Compilerwarnung (Stufe 4) C4842|Das Ergebnis von 'Offsetof' wird auf einen Typ mit mehrfacher Vererbung ist nicht garantiert konsistent Compiler-Versionen|
 |Compilerwarnung C4843|"*type1*": ein Ausnahmehandler des Verweises zum Array oder Funktionstypen ist nicht erreichbar ist, verwenden Sie '*Typ2*"stattdessen|
 |Compilerwarnung C4844|"export Module *Module_name*;" ist jetzt die bevorzugte Syntax zum Deklarieren einer Modulschnittstelle|
+|[Compilerwarnung (Stufe 4) C4866](c4866.md)| Erzwingen Compiler möglicherweise nicht die Reihenfolge der Auswertung von links nach rechts für Aufruf *Operatorname*|
 |[Compilerwarnung C4867 (Fehler)](compiler-warning-c4867.md)|"*Funktion*': Funktionsaufruf fehlt die Argumentliste; verwenden Sie '*Aufrufen*" um einen Zeiger auf Member zu erstellen.|
 |[Compilerwarnung C4868 (Stufe 4)](compiler-warning-c4868.md)|"_Datei_(*Line_number*)" erzwingen Compiler möglicherweise nicht die Reihenfolge der Auswertung von links nach rechts in der Initialisierungsliste|
 |Compilerwarnung (Stufe 2) C4872|eine Gleitkommadivision durch Null festgestellt wird, beim Kompilieren des Aufrufdiagramms für: "*Speicherort*"|
