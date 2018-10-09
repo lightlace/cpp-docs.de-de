@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dfda5807aab0c9930780b8374ffc934dde001c0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6993f209f5e7c5ab6f56ae886f2d57ba90a19936
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46096807"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860650"
 ---
 # <a name="while-statement-c"></a>while-Anweisung (C)
 
@@ -37,7 +37,7 @@ Der *Ausdruck* muss einen arithmetischen Typ oder einen Zeigertyp aufweisen. Die
 
 1. Der *Ausdruck* wird ausgewertet.
 
-2. Wenn der *Ausdruck* zu Beginn den Wert „false“ hat, wird der Text der `while`-Anweisung nicht ausgeführt, und das Steuerelement wird von der `while`-Anweisung an die nächste Anweisung im Programm übergeben.
+1. Wenn der *Ausdruck* zu Beginn den Wert „false“ hat, wird der Text der `while`-Anweisung nicht ausgeführt, und das Steuerelement wird von der `while`-Anweisung an die nächste Anweisung im Programm übergeben.
 
    Wenn der *Ausdruck* den Wert „true“ hat (ungleich null), wird der Text der Anweisung ausgeführt und der Prozess ab Schritt 1 wiederholt.
 
