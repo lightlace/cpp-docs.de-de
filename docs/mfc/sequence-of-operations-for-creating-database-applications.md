@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef9c66324f886da27431a94a464554e2a8ddb00a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 483a36f62a147d9b71a489c2f611fc45c1b7fa54
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391571"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860731"
 ---
 # <a name="sequence-of-operations-for-creating-database-applications"></a>Reihenfolge der Operationen zur Erstellung Datenbankanwendungen
 
@@ -36,7 +36,7 @@ Die folgende Tabelle zeigt Ihre Rolle und des Frameworks zum Schreiben von daten
 |Aufgabe|Sie tun|Das Framework ermöglicht|
 |----------|------------|------------------------|
 |Entscheiden Sie, ob die MFC-ODBC oder DAO-Klassen verwenden.|Verwenden von ODBC für neue MFC-Projekte. Verwenden Sie DAO, nur für vorhandene Anwendungen zu verwalten. Weitere Informationen finden Sie im Artikel [Datenzugriffsprogrammierung](../data/data-access-programming-mfc-atl.md).|Das Framework stellt Klassen, die Zugriff auf die Datenbank zu unterstützen.|
-|Erstellen Sie Ihre skelettanwendung mit Database-Optionen.|Führen Sie den Assistenten zum MFC-Anwendungen. Wählen Sie Optionen auf der Seite Datenbank-Unterstützung. Wenn Sie eine Option, die eine Datensatzansicht erstellt auswählen, auch Folgendes angeben:<br /><br /> -Data Source "und" Tabelle oder die Namen<br />-Fragen Sie oder die Namen ab.|Der MFC-Anwendung-Assistent erstellt Dateien, und gibt an, dass die erforderlichen enthält. Abhängig von den Optionen, die Sie angeben, können die Dateien eine Recordset-Klasse enthalten.|
+|Erstellen Sie Ihre skelettanwendung mit Database-Optionen.|Führen Sie den Assistenten zum MFC-Anwendungen. Wählen Sie Optionen auf der Seite Datenbank-Unterstützung. Wenn Sie eine Option, die eine Datensatzansicht erstellt auswählen, auch Folgendes angeben:<br /><br />-Data Source "und" Tabelle oder die Namen<br />-Fragen Sie oder die Namen ab.|Der MFC-Anwendung-Assistent erstellt Dateien, und gibt an, dass die erforderlichen enthält. Abhängig von den Optionen, die Sie angeben, können die Dateien eine Recordset-Klasse enthalten.|
 |Entwerfen Sie Ihr mindestens ein Datenbankformular.|Verwenden Sie den Visual C++-Dialog-Editor, um Steuerelemente auf die Ressourcen der Dialogfeldvorlage für Ihre Datensatzansichts-Klassen zu platzieren.|Die MFC-Anwendungs-Assistent erstellt eine leere Dialogfeldvorlagen-Ressource für Sie ausgefüllt.|
 |Erstellen Sie nach Bedarf zusätzliche aufzeichnen und Recordset-Klassen.|Verwenden Sie Klassenansicht, um die Klassen und das Dialogfeld-Editor, um die Sichten entwerfen, erstellen.|Klassenansicht erstellt zusätzliche Dateien für die neuen Klassen.|
 |Erstellen Sie Recordset-Objekte nach Bedarf in Ihrem Code. Verwenden Sie jedes Recordsets Datensätze bearbeiten...|Die Recordsets basieren auf die von abgeleiteten Klassen [CRecordset](../mfc/reference/crecordset-class.md) mit den Assistenten.|ODBC verwendet die Datensatzfeldaustausch (RFX) zum Austauschen von Daten zwischen der Datenbank und des Recordset-Felddatenmembern. Bei Verwendung eine Datensatzansicht Datenaustausch Dialogdatenaustausch (DDX) zwischen dem Recordset und die Steuerelemente der Datensatzansicht angezeigt.|

@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da6f078741c598099e71da9164f54b56da3f355
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f5bccddd2ddd5c0f9dfbc828a7da3a66fa13339d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726647"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861719"
 ---
 # <a name="struct-unwindcode"></a>struct UNWIND_CODE
 
@@ -112,17 +112,17 @@ Diese entladungscode wird immer in ein dummy-Prolog angezeigt, die nie ausgefüh
 
 1. POP-RIP-Absenderadresse vom Anfang des Stapels in *Temp*
 
-2. SS mithilfe von Push übertragen
+1. SS mithilfe von Push übertragen
 
-3. Alte RSP mithilfe von Push übertragen
+1. Alte RSP mithilfe von Push übertragen
 
-4. Der EFLAGS
+1. Der EFLAGS
 
-5. CS mithilfe von Push übertragen
+1. CS mithilfe von Push übertragen
 
-6. Mithilfe von Push übertragen *Temp*
+1. Mithilfe von Push übertragen *Temp*
 
-7. Übertragen von Fehlercode (falls Op Info 1 ist)
+1. Übertragen von Fehlercode (falls Op Info 1 ist)
 
 Die simulierten `UWOP_PUSH_MACHFRAME` Vorgang dekrementiert RSP um 40 (Op Info ist 0) oder 48 (Op Info ist 1).
 

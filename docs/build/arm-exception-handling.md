@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2251aefebd6805cfd071d014ad6be30cbea065bb
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ae80e1f7f824f41f6bc0b3f979973f5867666354
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711229"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861654"
 ---
 # <a name="arm-exception-handling"></a>ARM-Ausnahmebehandlung
 
@@ -82,15 +82,15 @@ Diese Tabelle zeigt das Format eines .pdata-Datensatzes, der Entladedaten gepack
 |Wortoffset|Bits|Zweck|
 |-----------------|----------|-------------|
 |0|0-31|*Funktion RVA starten* ist die 32-Bit-RVA des Starts der Funktion. Wenn die Funktion Thumb-Code enthält, muss der niedrigste Bitwert dieser Adresse festgelegt werden.|
-|1|0-1|*Flag* ist ein 2-Bit-Feld, das folgende Bedeutungen hat:<br /><br /> -00 = gepackte Entladedaten nicht verwendet. Verbleibende Bits zeigen auf .xdata-Datensatz.<br />– 01 = gepackte Entladedaten.<br />– 10 = gepackte Entladedaten, in dem die Funktion wird davon ausgegangen, dass keinen Prolog haben. Das ist nützlich beim Beschreiben von Funktionsfragmenten, die nicht mit dem Start der Funktion verbunden sind.<br />– 11 = reserviert.|
+|1|0-1|*Flag* ist ein 2-Bit-Feld, das folgende Bedeutungen hat:<br /><br />-00 = gepackte Entladedaten nicht verwendet. Verbleibende Bits zeigen auf .xdata-Datensatz.<br />– 01 = gepackte Entladedaten.<br />– 10 = gepackte Entladedaten, in dem die Funktion wird davon ausgegangen, dass keinen Prolog haben. Das ist nützlich beim Beschreiben von Funktionsfragmenten, die nicht mit dem Start der Funktion verbunden sind.<br />– 11 = reserviert.|
 |1|2-12|*Länge-Funktion* ist ein 11-Bit-Feld, das die Länge der gesamten Funktion in Bytes geteilt durch 2 enthält. Wenn die Funktion größer als 4 KB ist, muss stattdessen ein voller .xdata-Datensatz verwendet werden.|
-|1|13-14|*Ret* ist ein 2-Bit-Feld, der angibt, wie die Funktion zurückgibt:<br /><br /> -00 = Rückgabe über Pop {pc} (die *L* flagbit muss in diesem Fall auf 1 festgelegt werden).<br />– 01 = gibt mithilfe einer 16-Bit-Verzweigung.<br />– 10 = gibt mithilfe einer 32-Bit-Verzweigung.<br />– 11 = Sie gar kein Epilog. Das ist nützlich, wenn ein nicht verbundenes Funktionsfragment beschrieben werden soll, das nur aus ein Prolog bestehen kann, aber dessen Epilog sich anderswo befindet.|
+|1|13-14|*Ret* ist ein 2-Bit-Feld, der angibt, wie die Funktion zurückgibt:<br /><br />-00 = Rückgabe über Pop {pc} (die *L* flagbit muss in diesem Fall auf 1 festgelegt werden).<br />– 01 = gibt mithilfe einer 16-Bit-Verzweigung.<br />– 10 = gibt mithilfe einer 32-Bit-Verzweigung.<br />– 11 = Sie gar kein Epilog. Das ist nützlich, wenn ein nicht verbundenes Funktionsfragment beschrieben werden soll, das nur aus ein Prolog bestehen kann, aber dessen Epilog sich anderswo befindet.|
 |1|15|*H* ist ein 1-Bit-Flag, das angibt, ob die Funktion "die herausgreift" (r0-r3) registriert, indem sie am Anfang der Funktion zu übertragen, und die 16 Bytes des Stapel vor der Rückgabe freigibt. (0 = greift die Register nicht heraus, 1 = Greift Register heraus.)|
 |1|16-18|*Reg* ein 3-Bit-Feld, das der Index des letzten gibt nicht flüchtigen Register gespeichert. Wenn die *R* Bit 0, dann werden nur die Ganzzahlregister gespeichert werden, und wird angenommen, dass im Bereich r4-rn, wobei N gleich 4 ist + *Reg*. Wenn die *R* Bit 1 ist, dann werden nur die Gleitkommaregister gespeichert werden, und wird angenommen, dass im Bereich d8-dN befinden, wobei N gleich 8 + *Reg*. Die spezielle Kombination von *R* = 1 und *Reg* = 7 gibt an, dass keine Register gespeichert werden.|
 |1|19|*R* ist ein 1-Bit-Flag, der angibt, ob die gespeicherten nicht flüchtigen Register Ganzzahlregister (0) oder Gleitkommaregister (1). Wenn *R* auf 1 festgelegt ist und die *Reg* Feld auf 7 festgelegt ist, wird keine nicht flüchtigen Register per Push abgelegt.|
 |1|20|*L* ist ein 1-Bit-Flag, das angibt, ob die Funktion speichert und LR, zusammen mit anderen Registern Wiederherstellung der *Reg* Feld. (0 = speichert nicht/stellt nicht wieder her, 1 = speichert/stellt wieder her.)|
 |1|21|*C* ist ein 1-Bit-Flag, das angibt, ob die Funktion zusätzliche Anweisungen zum Einrichten einer rahmenkette für schnelles Stack walking (1), oder nicht (0) enthält. Wen das Bit festgelegt wurde, wird r11 implizit in der Liste nicht flüchtiger Ganzzahlregister gespeichert. (Finden Sie unter Einschränkungen unten für den Fall der *C* Flag verwendet wird.)|
-|1|22-31|*Passen Sie Stack* ist ein 10-Bit-Feld, das die Anzahl der Bytes vom Stapel gibt an, die für diese Funktion, geteilt durch 4 zugeordnet sind. Es lassen sich allerdings nur Werte zwischen 0x000 und 0x3F3 direkt codieren. Funktionen, die über 4044 Bytes an Stapel zuzuordnen, müssen einen vollständigen .xdata-Datensatz verwenden. Wenn die *Stack anpassen* Feld 0x3f4 oder größer ist, und klicken Sie dann die niedrigste 4 Bits eine besondere Bedeutung haben:<br /><br /> -Bits 0-1-geben die Anzahl der Worte der stapelanpassung (1-4) minus 1.<br />-Bit-2 wird auf 1 festgelegt, wenn der Prolog diese Anpassung in seinen pushübertagungsvorgang kombiniert.<br />-Bit-3 wird auf 1 festgelegt, wenn der Epilog diese Anpassung in seinen popvorgang kombiniert.|
+|1|22-31|*Passen Sie Stack* ist ein 10-Bit-Feld, das die Anzahl der Bytes vom Stapel gibt an, die für diese Funktion, geteilt durch 4 zugeordnet sind. Es lassen sich allerdings nur Werte zwischen 0x000 und 0x3F3 direkt codieren. Funktionen, die über 4044 Bytes an Stapel zuzuordnen, müssen einen vollständigen .xdata-Datensatz verwenden. Wenn die *Stack anpassen* Feld 0x3f4 oder größer ist, und klicken Sie dann die niedrigste 4 Bits eine besondere Bedeutung haben:<br /><br />-Bits 0-1-geben die Anzahl der Worte der stapelanpassung (1-4) minus 1.<br />-Bit-2 wird auf 1 festgelegt, wenn der Prolog diese Anpassung in seinen pushübertagungsvorgang kombiniert.<br />-Bit-3 wird auf 1 festgelegt, wenn der Epilog diese Anpassung in seinen popvorgang kombiniert.|
 
 Wegen möglicher Redundanzen in den oben genannten Codierungen gelten folgende Einschränkungen:
 
@@ -187,7 +187,7 @@ Wenn das gepackte Entladeformat nicht zur Beschreibung der Entladung einer Funkt
    |1|16-23|*Erweiterte Code Wörter* ist eine 8-Bit-Feld, das mehr Speicherplatz für das encoding bietet eine ungewöhnlich große Anzahl von entladungscodeworten. Das erweiterungswort, das enthält dieses Feld ist nur vorhanden, wenn die *Epiloganzahl* und *Code Wörter* Felder im ersten headerwort beide auf 0 festgelegt sind.|
    |1|24-31|Reserviert|
 
-2. Nach den Ausnahmedaten (wenn die *E* -Bit im Header auf 0 festgelegt wurde) wird eine Liste mit Informationen über epilogbereiche, die auf ein Wort gepackt und in der Reihenfolge zunehmender startoffsets gespeichert werden. Jeder Bereich enthält folgende Felder:
+1. Nach den Ausnahmedaten (wenn die *E* -Bit im Header auf 0 festgelegt wurde) wird eine Liste mit Informationen über epilogbereiche, die auf ein Wort gepackt und in der Reihenfolge zunehmender startoffsets gespeichert werden. Jeder Bereich enthält folgende Felder:
 
    |Bits|Zweck|
    |----------|-------------|
@@ -196,9 +196,9 @@ Wenn das gepackte Entladeformat nicht zur Beschreibung der Entladung einer Funkt
    |20-23|*Bedingung* ist ein 4-Bit-Feld, das die Bedingung liefert, unter denen der Epilog ausgeführt wird. Für bedingungslose Epiloge muss es auf 0xE festgelegt sein, was "immer" bedeutet. (Ein Epilog muss vollständig beginnt oder bedingungslos sein und im Thumb-2-Modus beginnt der Epilog mit der ersten Anweisung nach dem IT-Opcode.)|
    |24-31|*StartIndex Epilog* ist eine 8-Bit-Feld, das den Byte-Index des ersten entladungscodes angibt, der diesen Epilog beschreibt.|
 
-3. Nach der Liste von Epilogbereichen kommt ein Array von Bytes, das Entladungscodes enthält. Diese werden detailliert im Abschnitt Entladungscodes dieses Artikels beschrieben. Dieses Array ist am Ende aufgefüllt bis zur nächsten vollen Wortgrenze. Die Bytes werden in Little-Endian-Reihenfolge gespeichert, sodass sie im Little-Endian-Modus direkt abgerufen werden können.
+1. Nach der Liste von Epilogbereichen kommt ein Array von Bytes, das Entladungscodes enthält. Diese werden detailliert im Abschnitt Entladungscodes dieses Artikels beschrieben. Dieses Array ist am Ende aufgefüllt bis zur nächsten vollen Wortgrenze. Die Bytes werden in Little-Endian-Reihenfolge gespeichert, sodass sie im Little-Endian-Modus direkt abgerufen werden können.
 
-4. Wenn die *X* -Feld im Header 1 ist, folgt den entladungscodebytes die ausnahmehandlerinformationen. Dies besteht aus einem *Ausnahme-Handler RVA* , enthält die Adresse des ausnahmehandlers, unmittelbar gefolgt von der (mit variabler Länge) Datenmenge, die vom Ausnahmehandler erforderlich.
+1. Wenn die *X* -Feld im Header 1 ist, folgt den entladungscodebytes die ausnahmehandlerinformationen. Dies besteht aus einem *Ausnahme-Handler RVA* , enthält die Adresse des ausnahmehandlers, unmittelbar gefolgt von der (mit variabler Länge) Datenmenge, die vom Ausnahmehandler erforderlich.
 
 Der Datensatz „.xdata“ ist so gestaltet, dass es möglich ist, die ersten 8 Bytes abzurufen und die volle Größe des Datensatzes zu berechnen, ausgenommen die Länge der folgenden Ausnahmedaten mit variabler Größe. Dieser Codeausschnitt berechnet die Datensatzgröße:
 

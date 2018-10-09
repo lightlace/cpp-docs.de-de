@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 238f26e8955d4be676c3bf37f7cc8b2d842b3de9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82aaa2dc43177963b9b38c398e74aaa0ffff11dd
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394438"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821217"
 ---
 # <a name="vc-directories-property-page-windows"></a>Eigenschaftenseite „VC++-Verzeichnisse“ (Windows)
 
@@ -76,11 +76,13 @@ Hinweis: Diese Liste wird während Ihrer Eingabe aufgefüllt. Drücken Sie nicht
 
 Weitere Informationen zu Makros und warum Sie diese möglichst anstelle von hartcodierten Pfaden verwenden sollten, finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../ide/working-with-project-properties.md#bkmkPropertiesVersusMacros).
 
-Eine Liste der häufig verwendeten Makros finden Sie unter [Gängige Makros für Buildbefehle und -eigenschaften](https://docs.microsoft.com/en-us/cpp/ide/common-macros-for-build-commands-and-properties).
+Eine Liste der häufig verwendeten Makros finden Sie unter [Gängige Makros für Buildbefehle und -eigenschaften](https://docs.microsoft.com/cpp/ide/common-macros-for-build-commands-and-properties).
 
 Sie können eigene Makros auf zwei Arten definieren:
--   Legen Sie Umgebungsvariablen in einer Developer-Eingabeaufforderung fest. Alle Umgebungsvariablen werden als MSBuild-Eigenschaften oder -Makros behandelt.
--   Definieren Sie Benutzermakros in einer PROPS-Datei. Weitere Informationen finden Sie unter [Property page macros (Makros für Eigenschaftenseiten)](working-with-project-properties.md#bkmkPropertiesVersusMacros).
+
+- Legen Sie Umgebungsvariablen in einer Developer-Eingabeaufforderung fest. Alle Umgebungsvariablen werden als MSBuild-Eigenschaften oder -Makros behandelt.
+
+- Definieren Sie Benutzermakros in einer PROPS-Datei. Weitere Informationen finden Sie unter [Property page macros (Makros für Eigenschaftenseiten)](working-with-project-properties.md#bkmkPropertiesVersusMacros).
 
 Weitere Informationen finden Sie in den Blogbeiträgen zu den Themen [VC++ Directories (VC++-Verzeichnisse)](http://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [Inherited Properties and Property Sheets (Geerbte Eigenschaften und Eigenschaftenblätter)](http://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx) sowie im [Visual Studio 2010 C++ Project Upgrade Guide (Visual Studio 2010-Handbuch für Upgrades von C++-Projekten)](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx).
 

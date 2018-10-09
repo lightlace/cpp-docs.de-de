@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfb5ec444be55d7b595660f7777ae54e19143fd4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c46adc199a5d6b0bc814cc203b94ac3d268a560d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021615"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860627"
 ---
 # <a name="adding-an-atl-property-page"></a>Hinzufügen einer ATL-Eigenschaftenseite
 
@@ -30,15 +30,15 @@ Um eine Eigenschaftenseite für die Active Template Library (ATL) zu Ihrem Proje
 Wenn Sie eine Eigenschaftenseite für ein Steuerelement hinzufügen, muss das Steuerelement unterstützen die [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) Schnittstelle. Diese Schnittstelle wird standardmäßig in der Ableitungsliste des Steuerelements Klasse an, wenn Sie [Erstellen eines ATL-Steuerelements](../../atl/reference/adding-an-atl-control.md) mithilfe der [ATL-Steuerelement-Assistent](../../atl/reference/atl-control-wizard.md).
 
 > [!NOTE]
->  Wenn eine Klasse keinen [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) in der Ableitungsliste, Sie müssen diese manuell hinzufügen.
+> Wenn eine Klasse keinen [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) in der Ableitungsliste, Sie müssen diese manuell hinzufügen.
 
-### <a name="to-add-an-atl-property-page-to-your-project"></a>Eine ATL-Eigenschaftenseite zu Ihrem Projekt hinzufügen
+## <a name="to-add-an-atl-property-page-to-your-project"></a>Eine ATL-Eigenschaftenseite zu Ihrem Projekt hinzufügen
 
 1. In einem **Projektmappen-Explorer** oder [Klassenansicht](/visualstudio/ide/viewing-the-structure-of-code), mit der rechten Maustaste in des Namens des Projekts, dem Sie die ATL-Eigenschaftenseite hinzufügen möchten.
 
-2. Klicken Sie im Kontextmenü auf **hinzufügen** , und klicken Sie dann auf **Klasse hinzufügen**.
+1. Klicken Sie im Kontextmenü auf **hinzufügen** , und klicken Sie dann auf **Klasse hinzufügen**.
 
-3. In der [Klasse hinzufügen](../../ide/add-class-dialog-box.md) klicken Sie im Dialogfeld im Vorlagenbereich die **ATL-Eigenschaftenseite** , und klicken Sie dann auf **öffnen** zum Anzeigen der [ATL-Eigenschaftenseiten-Assistent](../../atl/reference/atl-property-page-wizard.md).
+1. In der [Klasse hinzufügen](../../ide/add-class-dialog-box.md) Dialogfeld die **Vorlagen** Bereich, klicken Sie auf **ATL-Eigenschaftenseite** , und klicken Sie dann auf **öffnen** zum Anzeigen der [ATL-Eigenschaftenseiten-Assistent](../../atl/reference/atl-property-page-wizard.md).
 
 Wenn Sie eine Eigenschaftenseite für ein Steuerelement erstellen, müssen Sie angeben der [PROP_PAGE](property-map-macros.md#prop_page) Eintrag in der eigenschaftenzuordnung für das Steuerelement.
 
@@ -47,4 +47,3 @@ Wenn Sie eine Eigenschaftenseite für ein Steuerelement erstellen, müssen Sie a
 [Eigenschaftenseiten](../../atl/atl-com-property-pages.md)<br/>
 [Grundlagen von ARL COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Beispiel: Implementieren einer Eigenschaftenseite](../../atl/example-implementing-a-property-page.md)
-

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f0090195506e26cab165e3ddadca0342c0b35b6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a6ad4b23e6caef15b5dabaaa3102d72e3ff84fbc
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46084054"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860588"
 ---
 # <a name="for-statement-c"></a>for-Anweisung (C)
 
@@ -34,7 +34,7 @@ Eine **for**-Anweisung wird wie folgt ausgeführt:
 
 1. *init-expression* wird ausgewertet, falls vorhanden. Dadurch wird die Initialisierung für die Schleife angegeben. Für den Typ *init-expression* besteht keine Einschränkung.
 
-2. *cond-expression* wird ausgewertet, falls vorhanden. Dieser Ausdruck muss einen arithmetischen Typ oder einen Zeigertyp aufweisen. Er wird vor jeder Iteration ausgewertet. Drei Ergebnisse sind möglich:
+1. *cond-expression* wird ausgewertet, falls vorhanden. Dieser Ausdruck muss einen arithmetischen Typ oder einen Zeigertyp aufweisen. Er wird vor jeder Iteration ausgewertet. Drei Ergebnisse sind möglich:
 
    - Wenn *cond-expression* **TRUE** ist (ungleich 0), wird *statement* ausgeführt; anschließend wird *loop-expression* ausgeführt, falls vorhanden. *loop-expression* wird nach dem Abschluss jeder Iteration ausgewertet. Für den zugehörigen Typ besteht keine Einschränkung. Nebeneffekte werden in der Reihenfolge ausgeführt. Der Prozess beginnt anschließend erneut mit der Auswertung von *cond-expression*.
 
@@ -81,7 +81,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Ausgabe
+## <a name="output"></a>Output
 
 ```Output
 Number of spaces: 4

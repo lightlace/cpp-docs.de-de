@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc23cf3c692eef37a86b5385d2e9e3a68340374e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cde499e919a7b222a41229576ef3b2d37d55d648
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080921"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860641"
 ---
 # <a name="c-runtime-error-r6002"></a>C-Laufzeitfehler von R6002
 
@@ -30,13 +30,13 @@ gleitkommaunterstützung nicht geladen
 Die erforderlichen Gleitkomma-Bibliothek wurde nicht verknüpft.
 
 > [!NOTE]
->  Wenn Sie diese Fehlermeldung beim Ausführen einer app auftritt, wurde die app beendet, da er ein internes Problem aufweist. Es gibt mehrere mögliche Gründe für diesen Fehler, aber dies wird häufig verursacht einen Fehler im Code der app oder beim Versuch, eine app auszuführen, die für den bestimmten Computer-Prozessor nicht erstellt wurde.
+> Wenn Sie diese Fehlermeldung beim Ausführen einer app auftritt, wurde die app beendet, da er ein internes Problem aufweist. Es gibt mehrere mögliche Gründe für diesen Fehler, aber dies wird häufig verursacht einen Fehler im Code der app oder beim Versuch, eine app auszuführen, die für den bestimmten Computer-Prozessor nicht erstellt wurde.
 >
->  Sie können versuchen, diesen Fehler zu beheben, indem Sie folgende Schritte ausführen:
+> Sie können versuchen, diesen Fehler zu beheben, indem Sie folgende Schritte ausführen:
 >
->  -   Verwenden der **Apps und Features** oder **Programme und Funktionen** auf der Seite die **Systemsteuerung** zu reparieren oder installieren Sie das Programm neu.
-> -   Überprüfen Sie **Windows Update** in die **Systemsteuerung** für Softwareupdates.
-> -   Überprüfen Sie nach einer aktualisierten Version der app. Wenn das Problem weiterhin besteht, wenden Sie sich an den app-Anbieter.
+> - Verwenden der **Apps und Features** oder **Programme und Funktionen** auf der Seite die **Systemsteuerung** zu reparieren oder installieren Sie das Programm neu.
+> - Überprüfen Sie **Windows Update** in die **Systemsteuerung** für Softwareupdates.
+> - Überprüfen Sie nach einer aktualisierten Version der app. Wenn das Problem weiterhin besteht, wenden Sie sich an den app-Anbieter.
 
 **Informationen für Programmierer**
 

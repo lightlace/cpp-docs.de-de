@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 28426e2ca75638f5ad45188a8790d1c281afa99b
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: c846cecb415365db92e3097bbf04ab06cd4209d0
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317915"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860445"
 ---
 # <a name="menu-command-properties-c"></a>Menübefehlseigenschaften (C++)
 
@@ -28,7 +28,7 @@ Die folgenden Informationen sind entsprechend so aufgebaut, dass die **Menü** E
 
 |Eigenschaft|Beschreibung|
 |--------------|-----------------|
-|**Break**|Einer der folgenden Werte ist möglich:<br /><br /> -   **Keine** (Standard): kein Wechsel.<br />-   **Spalte**: Bei statischen Menüs bewirkt dieser Wert, dass der Menübefehl in eine neue Zeile gesetzt wird. Bei Popupmenüs bewirkt dieser Wert, dass der Menübefehl in eine neue Spalte gesetzt wird, ohne dass zwischen den Spalten eine Trennlinie angezeigt wird. Diese Eigenschaft wirkt sich nicht im Menü-Editor, sondern erst zur Laufzeit auf die Darstellung des Menüs aus.<br />-   **Leiste**: identisch mit **Spalte** außer dass bei Popupmenüs dieser Wert die neue Spalte von der alten Spalte getrennt durch eine vertikale Linie. Diese Eigenschaft wirkt sich auf die Darstellung des Menüs nur zur Laufzeit nicht in der **Menü** Editor.|
+|**Break**|Einer der folgenden Werte ist möglich:<br /><br />- **Keine** (Standard): kein Wechsel.<br />- **Spalte**: bei statischen Menüs bewirkt, dass dieser Wert der Menübefehl in eine neue Zeile gesetzt. Bei Popupmenüs bewirkt dieser Wert, dass der Menübefehl in eine neue Spalte gesetzt wird, ohne dass zwischen den Spalten eine Trennlinie angezeigt wird. Diese Eigenschaft wirkt sich nicht im Menü-Editor, sondern erst zur Laufzeit auf die Darstellung des Menüs aus.<br />- **Leiste**: identisch mit **Spalte** außer dass bei Popupmenüs dieser Wert die neue Spalte von der alten Spalte getrennt durch eine vertikale Linie. Diese Eigenschaft wirkt sich auf die Darstellung des Menüs nur zur Laufzeit nicht in der **Menü** Editor.|
 |**Beschriftung**|Text zur Beschreibung des Menübefehls (der Menüname). Einem der Buchstaben in der Beschriftung eines Menübefehls kann eine Zugriffstaste zugeordnet werden, indem ihm ein kaufmännisches Und-Zeichen (&) vorangestellt wird.|
 |**Aktiviert**|Wenn **"true"**, der Menübefehl zu Beginn aktiviert ist. Typ: **"bool"**. Standardwert: **FALSE**.|
 |**Aktiviert**|Wenn **FALSE**, ist das Menüelement deaktiviert.|

@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985ff4eb96b904dc9c5b4377b336109b00e06b40
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ba4cb1411bca452de0f146626421315fa7dc177e
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716587"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48859860"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI (Metadatenverzeichnisse festlegen)
 
@@ -49,9 +49,9 @@ Nur ein Verzeichnis übergeben werden kann, um eine **/AI** aufrufen. Geben Sie 
 
 1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
 
-2. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **allgemeine** Eigenschaftenseite.
+1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **allgemeine** Eigenschaftenseite.
 
-3. Ändern der **zusätzliche #using using Verzeichnisse** Eigenschaft.
+1. Ändern der **zusätzliche #using using Verzeichnisse** Eigenschaft.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
 

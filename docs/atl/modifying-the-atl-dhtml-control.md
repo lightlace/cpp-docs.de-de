@@ -16,50 +16,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a08563396a77dec5f72ea35e10dd8a349095077
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ed2e1f8f24b3d33dd7d45bb597b252ead1453647
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314234"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861147"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>Ändern des ATL-DHTML-Steuerelements
 
 Der ATL-Steuerelement-Assistent bietet Startcode, damit können Sie erstellen und führen Sie das Steuerelement, und Sie sehen, wie die Methoden in den Projektdateien geschrieben werden und wie für die DHTML in C++-Code des Steuerelements mithilfe der Dispatchmethoden aufruft. Sie können alle Dispatch-Methode der Schnittstelle hinzufügen. Anschließend können Sie die Methoden in der HTML-Ressource aufrufen.
 
-#### <a name="to-modify-the-atl-dhtml-control"></a>So ändern Sie das ATL-DHTML-Steuerelement
+## <a name="to-modify-the-atl-dhtml-control"></a>So ändern Sie das ATL-DHTML-Steuerelement
 
-1. Erweitern Sie in der Klassenansicht das Projekt aus.
+1. In **Klassenansicht**, erweitern Sie das Projekt.
 
    Beachten Sie, dass die Schnittstelle, die in der "UI" endet eine Methode, `OnClick`. Alle Methoden keinen für die Schnittstelle, die nicht in "Benutzeroberfläche" endet.
 
-2. Fügen Sie eine Methode namens `MethodInvoked` auf die Schnittstelle, die nicht in "UI". endet
+1. Fügen Sie eine Methode namens `MethodInvoked` auf die Schnittstelle, die nicht in "UI". endet
 
    Diese Methode wird der Schnittstelle hinzugefügt werden, die in der Steuerelement-Container für die Containerinteraktion, nicht auf die Schnittstelle, die vom DHTML verwendet werden, um die Interaktion mit dem Steuerelement verwendet wird. Nur der Container kann diese Methode aufrufen.
 
-3. Suchen Sie die Stub-Out-Methode in der CPP-Datei, und fügen Sie Code aus, um das Anzeigen eines Meldungsfelds, z.B.:
+1. Suchen Sie die Stub-Out-Methode in der CPP-Datei, und fügen Sie Code aus, um das Anzeigen eines Meldungsfelds, z.B.:
 
    [!code-cpp[NVC_ATL_COM#5](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_1.cpp)]
 
-4. Fügen Sie eine weitere Methode namens `HelloHTML`, nur dieses Mal fügen Sie es hinzu, auf die Schnittstelle, die Enden "UI". Suchen Sie die Stub-Out `HelloHTML` -Methode in der CPP-Datei, und fügen Sie Code, um das Anzeigen eines Meldungsfelds, z. B.:
+1. Fügen Sie eine weitere Methode namens `HelloHTML`, nur dieses Mal fügen Sie es hinzu, auf die Schnittstelle, die Enden "UI". Suchen Sie die Stub-Out `HelloHTML` -Methode in der CPP-Datei, und fügen Sie Code, um das Anzeigen eines Meldungsfelds, z. B.:
 
    [!code-cpp[NVC_ATL_COM#6](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_2.cpp)]
 
-5. Fügen Sie eine dritte Methode, `GoToURL`, auf die Schnittstelle, die nicht in "UI". endet Implementieren Sie diese Methode durch Aufrufen von [IWebBrowser2::Navigate](https://msdn.microsoft.com/library/aa752133.aspx)wie folgt:
+1. Fügen Sie eine dritte Methode, `GoToURL`, auf die Schnittstelle, die nicht in "UI". endet Implementieren Sie diese Methode durch Aufrufen von [IWebBrowser2::Navigate](https://msdn.microsoft.com/library/aa752133.aspx)wie folgt:
 
    [!code-cpp[NVC_ATL_COM#7](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_3.cpp)]
 
-   Sie können die **IWebBrowser2** Methoden da ATL einen Zeiger auf die Schnittstelle für die Sie in der h-Datei bereitstellt.
+   Sie können die `IWebBrowser2` Methoden da ATL einen Zeiger auf die Schnittstelle für die Sie in der h-Datei bereitstellt.
 
 Als Nächstes ändern Sie die HTML-Ressource, um die Methoden aufzurufen, die Sie erstellt haben. Fügen Sie drei Schaltflächen zum Aufrufen dieser Methoden.
 
-#### <a name="to-modify-the-html-resource"></a>So ändern Sie die HTML-Ressource
+## <a name="to-modify-the-html-resource"></a>So ändern Sie die HTML-Ressource
 
-1. Doppelklicken Sie im Projektmappen-Explorer auf die HTM-Datei, um die HTML-Ressource anzuzeigen.
+1. In **Projektmappen-Explorer**, doppelklicken Sie auf die HTM-Datei, um die HTML-Ressource anzuzeigen.
 
    Überprüfen Sie den HTML-Code, insbesondere die Aufrufe an die externe Windows-Dispatch-Methoden. Der HTML-Code Aufrufe des Projekts `OnClick` -Methode, und die Parameter geben den Text des Steuerelements (`theBody`) und die Farbe zuweisen ("`red`"). Der Text nach dem Methodenaufruf ist die Bezeichnung, die auf die Schaltfläche angezeigt wird.
 
-2. Fügen Sie ein weiteres `OnClick` -Methode, nur die Änderung der Farbe. Zum Beispiel:
+1. Fügen Sie ein weiteres `OnClick` -Methode, nur die Änderung der Farbe. Zum Beispiel:
 
     ```html
     <br>
@@ -69,7 +69,7 @@ Als Nächstes ändern Sie die HTML-Ressource, um die Methoden aufzurufen, die Si
 
    Diese Methode erstellt eine Schaltfläche, mit der Bezeichnung **aktualisieren**, dass der Benutzer klicken kann, um das Steuerelement auf den ursprünglichen, weißen Hintergrund zurückzugeben.
 
-3. Fügen Sie den Aufruf von der `HelloHTML` Methode, die Sie erstellt haben. Zum Beispiel:
+1. Fügen Sie den Aufruf von der `HelloHTML` Methode, die Sie erstellt haben. Zum Beispiel:
 
     ```html
     <br>

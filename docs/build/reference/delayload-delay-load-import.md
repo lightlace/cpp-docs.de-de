@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 800b3d7d588d1038ac61cb7c9c4b9f1913bec9d4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 509464ba78a6b7693a849d9f753b13328ab868f9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722370"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860744"
 ---
 # <a name="delayload-delay-load-import"></a>/DELAYLOAD (Laden von Import verzögern)
 
@@ -46,9 +46,9 @@ Die [/DELAY](../../build/reference/delay-delay-load-import-settings.md) Option g
 
 1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
 
-2. In der **Linker** Ordner, wählen die **Eingabe** Eigenschaftenseite.
+1. In der **Linker** Ordner, wählen die **Eingabe** Eigenschaftenseite.
 
-3. Ändern der **verzögert geladene DLLs** Eigenschaft.
+1. Ändern der **verzögert geladene DLLs** Eigenschaft.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest
 

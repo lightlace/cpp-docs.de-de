@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 086de927a6927087b8cbf3d1501ba6420e1027ed
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 61b9943488a9d6a720e8d86750b14ad044677112
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110804"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861836"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Optionen für Compiler und Linker (C++/CX)
 
@@ -28,7 +28,7 @@ Die %LIBPATH%-Umgebungsvariable gibt den Standardpfad für die Suche nach WINMD-
 
 |Option|Beschreibung|
 |------------|-----------------|
-|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|Ermöglicht es Windows-Runtime-spracherweiterungen.<br /><br /> Der `nostdlib` -Parameter verhindert, dass der Compiler den standardmäßigen, vordefinierten Suchpfad verwendet, um Assembly- und WINMD-Dateien zu finden.<br /><br /> Die Compileroption **/ZW** gibt die folgenden Compileroptionen implizit an:<br /><br /> -   **/ Fi** vccorlib.h: Erzwingt die Einbindung der Headerdatei "vccorlib.h", die viele Typen definiert, die vom Compiler benötigt werden.<br />-   [/ FU](../build/reference/fu-name-forced-hash-using-file.md) Windows.winmd, erzwingt die Einbindung der Windows.winmd-Metadatendatei, die vom Betriebssystem bereitgestellt wird, und viele Typen in der Windows-Runtime definiert.<br />-   **/FU** Platform.winmd: Erzwingt die Einbindung der Platform.winmd-Metadatendatei, die vom Compiler bereitgestellt wird und die meisten Typen in der Plattformfamilie von Namespaces definiert.|
+|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|Ermöglicht es Windows-Runtime-spracherweiterungen.<br /><br /> Der `nostdlib` -Parameter verhindert, dass der Compiler den standardmäßigen, vordefinierten Suchpfad verwendet, um Assembly- und WINMD-Dateien zu finden.<br /><br /> Die Compileroption **/ZW** gibt die folgenden Compileroptionen implizit an:<br /><br />- **/ Fi** vccorlib.h: Erzwingt die Einbindung der Headerdatei "vccorlib.h", die viele Typen definiert, die vom Compiler benötigt werden.<br />- [/ FU](../build/reference/fu-name-forced-hash-using-file.md) Windows.winmd, erzwingt die Einbindung der Windows.winmd-Metadatendatei, die vom Betriebssystem bereitgestellt wird, und viele Typen in der Windows-Runtime definiert.<br />- **/ FU** Platform.winmd, erzwingt die Einbindung der Platform.winmd-Metadatendatei, die vom Compiler bereitgestellt wird und die meisten Typen in der plattformfamilie von Namespaces definiert.|
 |[/AI](../build/reference/ai-specify-metadata-directories.md) *dir*|Fügt ein durch den *dir* -Parameter angegebenes Verzeichnis zum Suchpfad hinzu, der vom Compiler für die Suche nach Assembly- und WINMD-Dateien verwendet wird.|
 |**/FU**  *Datei*|Erzwingt die Einbindung des angegebenen Moduls oder der WINMD-Datei. D. h. Sie müssen keine geben `#using` *Datei* in Ihrem Quellcode. Der Compiler erzwingt automatisch die Einbindung der eigenen Windows-Metadatendatei „Platform.winmd“.|
 |/D "WINAPI_FAMILY=2"|Erstellt eine Definition, die die Verwendung einer Teilmenge des Win32-SDKS ermöglicht, die mit der Windows-Runtime kompatibel ist.|

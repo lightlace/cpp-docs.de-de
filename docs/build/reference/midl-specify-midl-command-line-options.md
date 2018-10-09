@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d9ecfada513e16ce10bab37bb38b6ce6d67f907
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d2fa03920f60d7da4730bc46b23605ccfa13f6d7
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397623"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860381"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Optionen für MIDL-Befehlszeile festlegen)
 
@@ -51,9 +51,9 @@ Die Datei sollte eine MIDL-Befehlszeilenoption pro Zeile enthalten.
 
 1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
 
-2. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **eingebettete IDL** Eigenschaftenseite.
+1. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **eingebettete IDL** Eigenschaftenseite.
 
-3. Ändern der **MIDL-Befehle** Eigenschaft.
+1. Ändern der **MIDL-Befehle** Eigenschaft.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest
 

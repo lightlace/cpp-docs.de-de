@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 486e7ba1b91f1e5b8a7f99f27b89183ed32608a1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c5a71e6f358a682adad2d12f7b567dc0bad3d0f3
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409648"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861881"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl-Klasse
 
@@ -440,11 +440,11 @@ Die Elemente sind wie folgt aus:
 
    Nullbasierte Index des Schaltflächensymbols an, 1, wenn kein Bild für diese Schaltfläche.
 
--  `idCommand`
+- `idCommand`
 
    Befehls-ID der Schaltfläche zugeordnet. Dieser Bezeichner wird in einer WM_COMMAND-Meldung gesendet, wenn die Schaltfläche ausgewählt wird. Wenn die `fsStyle` Member der TBSTYLE_SEP-Wert enthält, ist dieser Member muss 0 (null) sein.
 
--  `fsState`
+- `fsState`
 
    Zustandsflags für Schaltflächen. Sie können eine Kombination der unten aufgeführten Werte sein:
 

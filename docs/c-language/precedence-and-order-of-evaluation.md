@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e318687dfa3cc8e841643e5caf6fe1fbcc00d051
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 953473102a42792dc3ae3afa3b1a8caf507e5648
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080765"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861498"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Vorrang und Auswertungsreihenfolge
 
@@ -53,7 +53,7 @@ In der folgenden Tabelle werden die Rangfolge und Assoziativität (die Reihenfol
 
 1. Operatoren werden in absteigender Prioritätsreihenfolge aufgeführt. Wenn mehrere Operatoren in der gleichen Zeile oder in einer Gruppe stehen, haben sie denselben Rang.
 
-2. Alle einfachen und zusammengesetzten Zuweisungsoperatoren haben denselben Rang.
+1. Alle einfachen und zusammengesetzten Zuweisungsoperatoren haben denselben Rang.
 
 Ein Ausdruck kann mehrere Operatoren mit gleichem Rang enthalten. Wenn mehrere solcher Operatoren auf der gleichen Ebene in einem Ausdruck vorkommen, wird die Auswertung entsprechend der Assoziativität des Operators entweder von rechts nach links oder von links nach rechts fortgesetzt. Die Richtung der Überprüfung wirkt sich nicht auf die Ergebnisse der Ausdrücke aus, welche mehr als eine Multiplikation (<strong>\*</strong>), Addition (**+**) oder einen binären, bitweisen (**&**, **&#124;** oder **^**) Operator auf der gleichen Ebene umfassen. Die Reihenfolge der Vorgänge wird von der Sprache nicht definiert. Der Compiler kann solche Ausdrücke in beliebiger Reihenfolge auswerten, wenn der Compiler ein einheitliches Ergebnis garantieren kann.
 

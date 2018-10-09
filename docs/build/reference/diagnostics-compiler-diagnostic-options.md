@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97b5e3ef2e5c14ae93d4fcc3b016f4dbc955edbd
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f2d0e6567f8666df4ec170ad7911ef08f5a1d335
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709162"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861628"
 ---
 # <a name="diagnostics-compiler-diagnostic-options"></a>/ Diagnostics (Diagnose-Compileroptionen)
 
@@ -56,9 +56,9 @@ Die **/Diagnostics** Option ist ab Visual Studio 2017 verfügbar.
 
 1. Öffnen des Projekts **Eigenschaftenseiten** Dialogfeld.
 
-2. Unter **Konfigurationseigenschaften**, erweitern Sie die **C/C++-** Ordner, und wählen Sie die **allgemeine** Eigenschaftenseite.
+1. Unter **Konfigurationseigenschaften**, erweitern Sie die **C/C++-** Ordner, und wählen Sie die **allgemeine** Eigenschaftenseite.
 
-3. Verwenden Sie das Dropdown-Steuerelement in der **Diagnoseformat** Feld Wählen Sie eine Diagnose Anzeigeoption. Wählen Sie **OK** oder **übernehmen** zum Speichern der Änderungen.
+1. Verwenden Sie das Dropdown-Steuerelement in der **Diagnoseformat** Feld Wählen Sie eine Diagnose Anzeigeoption. Wählen Sie **OK** oder **übernehmen** zum Speichern der Änderungen.
 
 ## <a name="see-also"></a>Siehe auch
 

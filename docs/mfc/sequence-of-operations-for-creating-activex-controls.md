@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d794b8bf762503900dad18c7457c31101ea6d62
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c79a9cace0cf2eacabdba63f327f86e95959f3fb
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377713"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861472"
 ---
 # <a name="sequence-of-operations-for-creating-activex-controls"></a>Operationssequenz zur Erstellung von ActiveX-Steuerelementen
 
@@ -36,7 +36,7 @@ Die folgende Tabelle zeigt Ihre Rolle und des Frameworks, bei der Erstellung von
 |Erstellen Sie ein Framework für ActiveX-Steuerelement.|Führen Sie die MFC-ActiveX-Steuerelement-Assistent um das Steuerelement zu erstellen. Geben Sie die gewünschten Optionen auf den Optionsseiten. Unter anderem den Datentyp und den Namen des Steuerelements in das Projekt, Lizenzierung, Unterklassen und eine im Info-Methode.|Die MFC-ActiveX-Steuerelement-Assistent erstellt die Dateien für ein ActiveX-Steuerelement mit grundlegender Funktionalität, einschließlich der Quelldateien für Ihre Anwendung, den-Steuerelement, und die auf der Seite oder Seiten; eine Ressourcendatei; eine Projektdatei; und anderen Benutzern, alle Ihren Anforderungen entsprechend angepasst.|
 |Sehen Sie, was das Steuerelement und der ActiveX-Steuerelement-Assistent bieten, ohne eine Zeile mit Ihren eigenen Code hinzuzufügen.|Erstellen Sie das ActiveX-Steuerelement und Testen Sie es mit Internet Explorer oder die [TSTCON Beispiel](../visual-cpp-samples.md).|Das ausgeführte Steuerelement kann die Größe verändert und verschoben werden. Es verfügt auch über eine **Infofeld** -Methode (sofern ausgewählt), die aufgerufen werden kann.|
 |Implementieren von Methoden und Eigenschaften des Steuerelements.|Implementieren Sie Ihre steuerelementspezifische Methoden und Eigenschaften, durch das Hinzufügen von Memberfunktionen, um eine verfügbar gemachte Schnittstelle, die Daten des Steuerelements bereitzustellen. Hinzufügen von Membervariablen zum Speichern von Datenstrukturen, und verwenden Sie Ereignishandler, um Ereignisse auszulösen, wenn Sie bestimmen.|Das Framework wurde bereits eine Zuordnung zur Unterstützung von Ereignissen, Eigenschaften und Methoden, sodass Sie sich auf das konzentrieren, wie die Eigenschaften und Methoden implementiert werden des Steuerelements definiert. Die Standardseite für die Eigenschaft angezeigt werden kann und eine Standardmethode für das Feld über bereitgestellt wird.|
-|Erstellen Sie auf der Seite oder Seiten des Steuerelements.|Verwenden Sie die Visual C++-Ressourcen-Editoren, um die visuelle Benutzeroberfläche für die Eigenschaftenseite des Steuerelements bearbeiten:<br /><br /> – Erstellen Sie zusätzliche Eigenschaftenseiten.<br />– Erstellen und Bearbeiten von Bitmaps, Symbole und Cursor.<br /><br /> Sie können auch die Eigenschaftenseiten der Dialog-Editor testen.|Die vom MFC-Anwendungs-Assistenten erstellte Ressourcendatei stellt viele der Ressourcen, die Sie benötigen. Visual C++ können Sie die vorhandene Ressourcen bearbeiten und neue Ressourcen hinzufügen, einfache und visuelle.|
+|Erstellen Sie auf der Seite oder Seiten des Steuerelements.|Verwenden Sie die Visual C++-Ressourcen-Editoren, um die visuelle Benutzeroberfläche für die Eigenschaftenseite des Steuerelements bearbeiten:<br /><br />– Erstellen Sie zusätzliche Eigenschaftenseiten.<br />– Erstellen und Bearbeiten von Bitmaps, Symbole und Cursor.<br /><br /> Sie können auch die Eigenschaftenseiten der Dialog-Editor testen.|Die vom MFC-Anwendungs-Assistenten erstellte Ressourcendatei stellt viele der Ressourcen, die Sie benötigen. Visual C++ können Sie die vorhandene Ressourcen bearbeiten und neue Ressourcen hinzufügen, einfache und visuelle.|
 |Testen Sie die Ereignisse, Methoden und Eigenschaften des Steuerelements.|Erstellen Sie das Steuerelement neu ein, und Verwenden von Testcontainer um zu testen, ob die Handler ordnungsgemäß ausgeführt.|Sie können die Methoden des Steuerelements aufrufen und die Eigenschaften, die über die Schnittstelle der Eigenschaftenseite oder Testcontainer bearbeiten. Darüber hinaus können Sie Testcontainer Nachverfolgen von Ereignissen aus dem Steuerelement ausgelöst und Benachrichtigungen, die von der Container des Steuerelements empfangen.|
 
 ## <a name="see-also"></a>Siehe auch

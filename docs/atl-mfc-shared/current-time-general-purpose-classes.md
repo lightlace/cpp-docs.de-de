@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fff4c581b91ed789b501d3866eb9b3b259a662b3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9edf381864121d4e3f6c5a2b6cf7c01198368e1e
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755462"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860523"
 ---
 # <a name="current-time-general-purpose-classes"></a>Aktuelle Zeit: Allgemeine Klassen
 
 Das folgende Verfahren zeigt, wie Sie erstellen eine `CTime` Objekt, und initialisieren Sie es mit der aktuellen Zeit.
 
-#### <a name="to-get-the-current-time"></a>Um die aktuelle Uhrzeit abzurufen.
+### <a name="to-get-the-current-time"></a>Um die aktuelle Uhrzeit abzurufen.
 
 1. Zuordnen einer `CTime` Objekt wie folgt:
 
@@ -38,7 +38,7 @@ Das folgende Verfahren zeigt, wie Sie erstellen eine `CTime` Objekt, und initial
    > [!NOTE]
    > Nicht initialisierte `CTime` Objekte werden nicht in eine gültige Zeit initialisiert.
 
-2. Rufen Sie die `CTime::GetCurrentTime` Funktion, um die aktuelle Uhrzeit vom Betriebssystem abzurufen. Diese Funktion gibt eine `CTime` -Objekt, das verwendet werden kann, zum Festlegen des Werts der `CTime`wie folgt:
+1. Rufen Sie die `CTime::GetCurrentTime` Funktion, um die aktuelle Uhrzeit vom Betriebssystem abzurufen. Diese Funktion gibt eine `CTime` -Objekt, das verwendet werden kann, zum Festlegen des Werts der `CTime`wie folgt:
 
    [!code-cpp[NVC_ATLMFC_Utilities#172](../atl-mfc-shared/codesnippet/cpp/current-time-general-purpose-classes_2.cpp)]
 

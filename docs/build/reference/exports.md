@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62b49c20248ca4825bcf2c95b6c7adc956a39025
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6bf350b0a129c642678fc6af1bac7d35633fe909
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714522"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860978"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -82,11 +82,11 @@ Es gibt vier Möglichkeiten für das Exportieren einer Definition, aufgelistet i
 
 1. Die [__declspec(dllexport)](../../cpp/dllexport-dllimport.md) Schlüsselwort im Quellcode
 
-2. Eine `EXPORTS`-Anweisung in einer .DEF-Datei
+1. Eine `EXPORTS`-Anweisung in einer .DEF-Datei
 
-3. Ein [/EXPORT](../../build/reference/export-exports-a-function.md) Spezifikation in einem LINK-Befehl
+1. Ein [/EXPORT](../../build/reference/export-exports-a-function.md) Spezifikation in einem LINK-Befehl
 
-4. Ein [Kommentar](../../preprocessor/comment-c-cpp.md) -Anweisung im Quellcode, der das Formular `#pragma comment(linker, "/export: definition ")`. Das folgende Beispiel zeigt eine #pragma Comment-Anweisung vor der Deklaration einer Funktion, in denen `PlainFuncName` ist von der nicht ergänzte Namen, und `_PlainFuncName@4` ist der ergänzte Name der Funktion:
+1. Ein [Kommentar](../../preprocessor/comment-c-cpp.md) -Anweisung im Quellcode, der das Formular `#pragma comment(linker, "/export: definition ")`. Das folgende Beispiel zeigt eine #pragma Comment-Anweisung vor der Deklaration einer Funktion, in denen `PlainFuncName` ist von der nicht ergänzte Namen, und `_PlainFuncName@4` ist der ergänzte Name der Funktion:
 
     ```cpp
     #pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")

@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c176e77a1704e3311d8c814d1c1b530b9f94f1ec
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 420fd702aa97d07e8aadb16a90c0a6a6636f6aa9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070053"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860263"
 ---
 # <a name="c-runtime-error-r6025"></a>C-Laufzeitfehler R6025
 
 rein virtuellen Funktionsaufruf
 
 > [!NOTE]
->  Wenn Sie diese Fehlermeldung beim Ausführen einer app auftritt, wurde die app beendet, da er ein internes Problem aufweist. Die häufigste Ursache für diesen Fehler ist ein Fehler in der app oder eine beschädigte Installation.
+> Wenn Sie diese Fehlermeldung beim Ausführen einer app auftritt, wurde die app beendet, da er ein internes Problem aufweist. Die häufigste Ursache für diesen Fehler ist ein Fehler in der app oder eine beschädigte Installation.
 >
->  Sie können versuchen, diesen Fehler zu beheben, indem Sie folgende Schritte ausführen:
+> Sie können versuchen, diesen Fehler zu beheben, indem Sie folgende Schritte ausführen:
 >
->  -   Verwenden der **Apps und Features** oder **Programme und Funktionen** auf der Seite die **Systemsteuerung** zu reparieren oder installieren Sie das Programm neu.
-> -   Überprüfen Sie **Windows Update** in die **Systemsteuerung** für Softwareupdates.
-> -   Überprüfen Sie nach einer aktualisierten Version der app. Wenn das Problem weiterhin besteht, wenden Sie sich an den app-Anbieter.
+> - Verwenden der **Apps und Features** oder **Programme und Funktionen** auf der Seite die **Systemsteuerung** zu reparieren oder installieren Sie das Programm neu.
+> - Überprüfen Sie **Windows Update** in die **Systemsteuerung** für Softwareupdates.
+> - Überprüfen Sie nach einer aktualisierten Version der app. Wenn das Problem weiterhin besteht, wenden Sie sich an den app-Anbieter.
 
 **Informationen für Programmierer**
 

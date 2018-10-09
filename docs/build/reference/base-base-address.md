@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f6f287f98b542a3d8eb24f9cc2b5e725e27dceb
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 28e4e2ea0118d79e2746db93ba30478ed2563434
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725971"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860536"
 ---
 # <a name="base-base-address"></a>/BASE (Basisadresse)
 
@@ -78,9 +78,9 @@ Eine weitere Möglichkeit zum Festlegen der Basisadresse ist die Verwendung der 
 
 1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
 
-2. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **erweitert** Eigenschaftenseite.
+1. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **erweitert** Eigenschaftenseite.
 
-3. Ändern der **Basisadresse** Eigenschaft.
+1. Ändern der **Basisadresse** Eigenschaft.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest
 

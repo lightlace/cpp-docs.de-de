@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fcaffc3eba3711accdfa13d311f5284e564b703
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 163949c4421cca8e4d5e414a18bda4ed98f32d3d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020432"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861641"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL-OLE DB-Consumer-Assistent
 
@@ -52,7 +52,7 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
 
       1. **Wählen Sie aus, oder geben Sie einen Servernamen:** klicken Sie auf das Dropdown-Listenfeld-Menü, um alle registrierten Daten-Server im Netzwerk angezeigt, und wählen Sie eine.
 
-      2. **Geben Sie Informationen zum Anmelden an den Server:** Geben Sie einen Benutzernamen und Kennwort, mit dem Datenserver anzumelden.
+      1. **Geben Sie Informationen zum Anmelden an den Server:** Geben Sie einen Benutzernamen und Kennwort, mit dem Datenserver anzumelden.
 
          > [!NOTE]
          > Es gibt ein Sicherheitsproblem mit der Funktion "Speichern des Kennworts zulassen" des Dialogfelds Eigenschaften für Datenlinks. Es gibt zwei Optionsfelder, in "Geben Sie Informationen zum Anmelden an den Server":
@@ -63,7 +63,7 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
          > Bei Auswahl von **bestimmten Benutzernamen und bestimmtes Kennwort**, Sie haben die Möglichkeit, speichern Sie das Kennwort (mit der Sie das Kontrollkästchen für "Speichern des Kennworts zulassen"); diese Option ist jedoch nicht sicher. Es wird empfohlen, die Sie auswählen, **Windows NT integrated Security verwenden**; diese Option ist sicherer, da das Kennwort verschlüsselt.
          > Es kann jedoch Situationen, in denen gewünschten "Speichern von Kennwort zulassen". Z. B. Wenn Sie eine Bibliothek mit einer privaten datenbanklösung freigeben, sollten Sie nicht greifen direkt auf die Datenbank jedoch stattdessen eine Anwendung der mittleren Ebene verwenden, überprüfen den Benutzer (über den Authentifizierungsschema, das Sie auswählen), und klicken Sie dann die Art der Daten zu beschränken für den Benutzer verfügbar.
 
-      3. **Wählen Sie die Datenbank auf dem Server:** klicken Sie auf das Dropdown-Listenfeld-Menü, um alle registrierten Datenbanken auf dem Datenserver angezeigt, und wählen Sie eine.
+      1. **Wählen Sie die Datenbank auf dem Server:** klicken Sie auf das Dropdown-Listenfeld-Menü, um alle registrierten Datenbanken auf dem Datenserver angezeigt, und wählen Sie eine.
 
          \- oder –
 
@@ -80,13 +80,13 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
          **Verwenden Sie die Verbindungszeichenfolge:** Geben Sie eine Verbindungszeichenfolge, die Sie bereits erworben haben, oder klicken Sie auf die **erstellen** Schaltfläche der **Auswählen einer Datenquelle** Dialogfeld wird angezeigt. Vybrat zdroj DAT-Datei oder der Computer, und klicken Sie auf **OK**.
 
          > [!NOTE]
-         > Sie können eine Verbindungszeichenfolge abrufen, indem Sie in Server-Explorer die Eigenschaften einer vorhandenen Verbindung anzeigen, oder Sie können eine Verbindung erstellen, durch Doppelklicken auf **Verbindung hinzufügen** im Server-Explorer.
+         > Sie erhalten eine Verbindungszeichenfolge durch Anzeigen der Eigenschaften einer vorhandenen Verbindung in **Server-Explorer**, oder Sie können eine Verbindung erstellen, durch Doppelklicken auf **Verbindung hinzufügen** in **Server Explorer**.
 
-      2. **Geben Sie Informationen zum Anmelden an den Server:** Geben Sie einen Benutzernamen und Kennwort, mit dem Datenserver anzumelden.
+      1. **Geben Sie Informationen zum Anmelden an den Server:** Geben Sie einen Benutzernamen und Kennwort, mit dem Datenserver anzumelden.
 
-      3. Geben Sie den ersten Katalog verwenden.
+      1. Geben Sie den ersten Katalog verwenden.
 
-      4. Klicken Sie auf **Verbindung testen**; Wenn der Test erfolgreich ist, klicken Sie auf **OK**. Wenn dies nicht der Fall ist, überprüfen Sie Ihre Anmeldeinformationen, versuchen Sie es einer anderen Datenbank oder einen anderen Datenserver.
+      1. Klicken Sie auf **Verbindung testen**; Wenn der Test erfolgreich ist, klicken Sie auf **OK**. Wenn dies nicht der Fall ist, überprüfen Sie Ihre Anmeldeinformationen, versuchen Sie es einer anderen Datenbank oder einen anderen Datenserver.
 
    - **Erweiterte** Registerkarte
 

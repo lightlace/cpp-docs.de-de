@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9265c54175236d96391c64e343771c896de1c744
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a2a35d57bb0136be6f47319c7f268d4fface3641
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031716"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861591"
 ---
 # <a name="c-runtime-error-r6018"></a>C-Laufzeitfehler R6018
 
 unerwarteter Heapfehler
 
 > [!NOTE]
->  Wenn Sie diese Fehlermeldung beim Ausführen einer app auftritt, wurde die app beendet, da er ein internes Problem aufweist. Es gibt mehrere mögliche Gründe für diesen Fehler, aber dies wird häufig durch einen Fehler in der app-Code verursacht.
+> Wenn Sie diese Fehlermeldung beim Ausführen einer app auftritt, wurde die app beendet, da er ein internes Problem aufweist. Es gibt mehrere mögliche Gründe für diesen Fehler, aber dies wird häufig durch einen Fehler in der app-Code verursacht.
 >
->  Sie können versuchen, diesen Fehler zu beheben, indem Sie folgende Schritte ausführen:
+> Sie können versuchen, diesen Fehler zu beheben, indem Sie folgende Schritte ausführen:
 >
->  -   Verwenden der **Apps und Features** oder **Programme und Funktionen** auf der Seite die **Systemsteuerung** zu reparieren oder installieren Sie das Programm neu.
-> -   Überprüfen Sie **Windows Update** in die **Systemsteuerung** für Softwareupdates.
-> -   Überprüfen Sie nach einer aktualisierten Version der app. Wenn das Problem weiterhin besteht, wenden Sie sich an den app-Anbieter.
+> - Verwenden der **Apps und Features** oder **Programme und Funktionen** auf der Seite die **Systemsteuerung** zu reparieren oder installieren Sie das Programm neu.
+> - Überprüfen Sie **Windows Update** in die **Systemsteuerung** für Softwareupdates.
+> - Überprüfen Sie nach einer aktualisierten Version der app. Wenn das Problem weiterhin besteht, wenden Sie sich an den app-Anbieter.
 
 **Informationen für Programmierer**
 

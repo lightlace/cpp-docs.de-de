@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7f8fad0c4676e8dfedcf8e80332c0a239f230cb
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 122d33be06755b92a17db62237787151a0811898
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821191"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860406"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Exemplarische Vorgehensweise: Kompilieren eines systemeigenen C++-Programms in der Befehlszeile
 
@@ -53,7 +53,7 @@ Bevor Sie ein C- oder C++-Programm in der Befehlszeile erstellen können, müsse
 
    Wenn Sie eine andere Version von Visual Studio verwenden oder eine andere Version von Windows ausgeführt werden, suchen Sie im Startmenü oder -Startseite für den Ordner ein Visual Studio-Tools, der eine Developer-eingabeaufforderungsverknüpfung enthält. Sie können auch den Windows Search-Funktion verwenden, suchen Sie nach "Developer Command Prompt", und wählen Sie eine, die die installierte Version von Visual Studio entspricht. Verwenden Sie die Verknüpfung, um das Eingabeaufforderungsfenster zu öffnen.
 
-1. Als Nächstes stellen Sie sicher, dass Visual C++ Developer-Eingabeaufforderung ordnungsgemäß eingerichtet ist. Geben Sie im Eingabeaufforderungsfenster Befehl `cl` und stellen Sie sicher, dass die Ausgabe sieht in etwa so:
+1. Als Nächstes stellen Sie sicher, dass Visual C++ Developer-Eingabeaufforderung ordnungsgemäß eingerichtet ist. Geben Sie im Eingabeaufforderungsfenster Befehl `cl` und stellen Sie sicher, dass die Ausgabe sieht in etwa wie folgt:
 
    ```Output
    C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
@@ -140,7 +140,7 @@ Bevor Sie ein C- oder C++-Programm in der Befehlszeile erstellen können, müsse
    > [!NOTE]
    > Wenn Sie einen anderen Compiler oder Linker-Fehler oder Warnung erhalten, überprüfen Sie Ihren Quellcode zum Korrigieren Sie eventuelle Fehler, speichern Sie ihn, und führen den Compiler erneut aus. Informationen zu bestimmten Fehlern verwenden Sie das Suchfeld auf dieser Seite des MSDN nach der Fehlernummer gesucht werden soll.
 
-7. Geben Sie zum Ausführen des hello.exe-Programms an der Eingabeaufforderung `hello`ein.
+1. Geben Sie zum Ausführen des hello.exe-Programms an der Eingabeaufforderung `hello`ein.
 
    Das Programm zeigt folgenden Text an und wird anschließend beendet:
 

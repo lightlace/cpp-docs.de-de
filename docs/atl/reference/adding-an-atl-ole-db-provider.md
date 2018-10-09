@@ -16,30 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d41e4895d3a26225bb2c34e688df9619414c339
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 298e504ff0f24291730d05a0595368a3b7e6415f
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765706"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860003"
 ---
 # <a name="adding-an-atl-ole-db-provider"></a>Hinzufügen eines ATL-OLE DB-Anbieters
 
 Verwenden Sie diesen Assistenten zum Hinzufügen von ATL-OLE DB-Anbieter zu einem Projekt ein. ATL-OLE DB-Anbieter besteht aus einer Datenquelle "," Sitzung "," Befehl "und" Schemarowset-Klassen. Das Projekt muss als eine ATL-COM-Anwendung erstellt wurde.
 
-### <a name="to-add-an-atl-ole-db-provider-to-your-project"></a>ATL-OLE DB-Anbieter zu Ihrem Projekt hinzufügen
+## <a name="to-add-an-atl-ole-db-provider-to-your-project"></a>ATL-OLE DB-Anbieter zu Ihrem Projekt hinzufügen
 
-1. Klicken Sie in der Klassenansicht das Projekt ein. Klicken Sie im Kontextmenü auf **hinzufügen** , und klicken Sie dann auf **Klasse hinzufügen**.
+1. In **Klassenansicht**, mit der rechten Maustaste in des Projekts. Klicken Sie im Kontextmenü auf **hinzufügen** , und klicken Sie dann auf **Klasse hinzufügen**.
 
-2. Doppelklicken Sie in Visual C++-Ordner, auf die **ATL-OLE DB-Anbieter** Symbol oder wählen Sie ihn, und klicken Sie auf **öffnen**.
+1. In der **Visual C++** Ordner doppelklicken Sie auf die **ATL-OLE DB-Anbieter** Symbol oder wählen Sie ihn, und klicken Sie auf **öffnen**.
 
-     Der ATL-OLE DB-Anbieter-Assistent wird geöffnet.
+   Der ATL-OLE DB-Anbieter-Assistent wird geöffnet.
 
-3. Definieren Sie Einstellungen wie in beschrieben [ATL-OLE DB-Anbieter-Assistenten](../../atl/reference/atl-ole-db-provider-wizard.md).
+1. Definieren Sie Einstellungen wie in beschrieben [ATL-OLE DB-Anbieter-Assistenten](../../atl/reference/atl-ole-db-provider-wizard.md).
 
-4. Klicken Sie auf **Fertig stellen** zum Schließen des Assistenten, die den neu erstellten Code für die OLE DB-Anbieter in Ihrem Projekt eingefügt wird.
+1. Klicken Sie auf **Fertig stellen** zum Schließen des Assistenten, die den neu erstellten Code für die OLE DB-Anbieter in Ihrem Projekt eingefügt wird.
 
 ## <a name="see-also"></a>Siehe auch
 
 [Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../../ide/adding-functionality-with-code-wizards-cpp.md)
-

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a66ca33aa95ea6ffd59860cf0a55e51266ef5cb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3bde1d369ce5339f07ea36979ef50ddccb0d30d1
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757697"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860276"
 ---
 # <a name="setting-up-a-static-link-to-the-registrar-code-c-only"></a>Das Einrichten eines statischen Links zum Registrierungscode (nur C++)
 
@@ -28,13 +28,12 @@ C++-Clients können mit eine statische Verknüpfung zum Code der Registrierung e
 
 Die einfachste Möglichkeit zum Einrichten der statischen Verknüpfung wird angenommen, Sie haben angegeben [DECLARE_REGISTRY_RESOURCEID](reference/registry-macros.md#declare_registry_resourceid) in der Deklaration des Objekts. (Dies ist der Standardspezifikation verwendet die ATL)
 
-### <a name="to-create-a-static-link-using-declareregistryresourceid"></a>Zum Erstellen eines statischen Links mit Hilfe von DECLARE_REGISTRY_RESOURCEID
+## <a name="to-create-a-static-link-using-declareregistryresourceid"></a>Zum Erstellen eines statischen Links mit Hilfe von DECLARE_REGISTRY_RESOURCEID
 
 1. Geben Sie [/d](../build/reference/d-preprocessor-definitions.md) `_ATL_STATIC_REGISTRY` anstelle von/d **_ATL_DLL**.
 
-2. Kompilieren Sie neu.
+1. Kompilieren Sie neu.
 
 ## <a name="see-also"></a>Siehe auch
 
 [Registrierungskomponente (Registrar)](../atl/atl-registry-component-registrar.md)
-

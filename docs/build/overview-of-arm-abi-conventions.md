@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: def07f92cc05828c132ba7d34d3dcc06d4aecf50
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4254506345ab72eccaa43968a0af9aab2dada3b9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721447"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861485"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Übersicht über die ABI-Konventionen ARM32
 
@@ -153,11 +153,11 @@ Die Initialisierung wird genau einmal durchgeführt, bevor die Argumentsverarbei
 
 1. Die Next Core Register Number (NCRN) wird auf r0 gesetzt.
 
-2. Die VFP-Register werden als nicht zugewiesen markiert.
+1. Die VFP-Register werden als nicht zugewiesen markiert.
 
-3. Die Next Stacked Argument Address (NSAA) wird auf die aktuelle SP gesetzt.
+1. Die Next Stacked Argument Address (NSAA) wird auf die aktuelle SP gesetzt.
 
-4. Wenn eine Funktion aufgerufen wird, die ein Ergebnis im Speicher zurückgibt, wird die Adresse für das Ergebnis in r0 platziert und die NCRN wird auf r1 gesetzt.
+1. Wenn eine Funktion aufgerufen wird, die ein Ergebnis im Speicher zurückgibt, wird die Adresse für das Ergebnis in r0 platziert und die NCRN wird auf r1 gesetzt.
 
 ### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Schritt B: vorab-Padding und Erweiterung von Argumenten
 
@@ -165,9 +165,9 @@ Auf jedes Argument in der Liste wird die erste übereinstimmende Regel aus der f
 
 1. Wenn das Argument ein zusammengesetzter Typ ist, dessen Größe nicht statisch vom Aufrufer und dem Aufgerufenen bestimmt werden kann, wird das Argument in den Arbeitsspeicher kopiert und durch einen Verweis auf die Kopie ersetzt.
 
-2. Wenn das Argument ein Byte oder 16-Bit-Halbwort ist, wird es durch eine Null oder ein Symbol auf ein 32-Bit-Vollwort erweitert und als ein 4-Byte-Argument behandelt.
+1. Wenn das Argument ein Byte oder 16-Bit-Halbwort ist, wird es durch eine Null oder ein Symbol auf ein 32-Bit-Vollwort erweitert und als ein 4-Byte-Argument behandelt.
 
-3. Wenn das Argument ein zusammengesetzter Typ ist, wird die Größe auf das nächste Vielfache von 4 aufgerundet.
+1. Wenn das Argument ein zusammengesetzter Typ ist, wird die Größe auf das nächste Vielfache von 4 aufgerundet.
 
 ### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Phase "c:"-Zuweisung von Argumenten zu Registern und zum stack
 
@@ -175,17 +175,17 @@ Auf jedes Argument in der Liste werden die folgenden Regeln abwechselnd angewend
 
 1. Wenn das Argument ein VFP-Typ ist und es ausreichend aufeinander folgende nicht zugewiesene VFP-Register vom entsprechenden Typ gibt, wird das Argument zur Registerreihe mit der niedrigsten Nummer zugeordnet.
 
-2. Wenn das Argument ein VFP-Typ ist, werden alle verbleibenden nicht zugewiesenen Register als nicht verfügbar markiert. Die NSAA wird nach oben angepasst, bis sie ordnungsgemäß für den Argumententyp ausgerichtet ist und das Argument in den Stack an der angepassten NSAA kopiert wird. Die NSAA wird dann um die Größe des Arguments inkrementiert.
+1. Wenn das Argument ein VFP-Typ ist, werden alle verbleibenden nicht zugewiesenen Register als nicht verfügbar markiert. Die NSAA wird nach oben angepasst, bis sie ordnungsgemäß für den Argumententyp ausgerichtet ist und das Argument in den Stack an der angepassten NSAA kopiert wird. Die NSAA wird dann um die Größe des Arguments inkrementiert.
 
-3. Wenn das Argument eine 8-Byte-Ausrichtung benötigt, wird die NCRN auf die nächste gerade Registernummer aufgerundet.
+1. Wenn das Argument eine 8-Byte-Ausrichtung benötigt, wird die NCRN auf die nächste gerade Registernummer aufgerundet.
 
-4. Wenn die Größe des Arguments in 32-Bit-Wörtern nicht mehr als r4 minus NCRN ist, wird das Argument in Core-Register kopiert, beginnend bei der NCRN, wobei die am niedrigstwertigen Bits die niedrig nummerierten Register belegen. Die NCRN wird um die Anzahl der verwendeten Register inkrementiert.
+1. Wenn die Größe des Arguments in 32-Bit-Wörtern nicht mehr als r4 minus NCRN ist, wird das Argument in Core-Register kopiert, beginnend bei der NCRN, wobei die am niedrigstwertigen Bits die niedrig nummerierten Register belegen. Die NCRN wird um die Anzahl der verwendeten Register inkrementiert.
 
-5. Wenn die NCRN kleiner als r4 ist und die NSAA mit der SP übereinstimmt, wird das Argument in Core-Register und den Stack unterteilt. Der erste Teil des Arguments wird in die Core-Register kopiert, beginnend bei der NCRN bis hin zu einschließlich r3. Der Rest des Arguments wird in den Stack kopiert, beginnend bei der NSAA. Die NCRN wird auf r4 gesetzt, und die NSAA wird um die Größe des Arguments minus der an die Register übergegebene Anzahl inkrementiert.
+1. Wenn die NCRN kleiner als r4 ist und die NSAA mit der SP übereinstimmt, wird das Argument in Core-Register und den Stack unterteilt. Der erste Teil des Arguments wird in die Core-Register kopiert, beginnend bei der NCRN bis hin zu einschließlich r3. Der Rest des Arguments wird in den Stack kopiert, beginnend bei der NSAA. Die NCRN wird auf r4 gesetzt, und die NSAA wird um die Größe des Arguments minus der an die Register übergegebene Anzahl inkrementiert.
 
-6. Wenn das Argument eine 8-Byte-Ausrichtung benötigt, wird die NSAA auf die nächste 8-Byte-ausgerichtete Adresse aufgerundet.
+1. Wenn das Argument eine 8-Byte-Ausrichtung benötigt, wird die NSAA auf die nächste 8-Byte-ausgerichtete Adresse aufgerundet.
 
-7. Das Argument wird an der NSAA in den Arbeitsspeicher kopiert. Die NSAA wird um die Größe des Arguments inkrementiert.
+1. Das Argument wird an der NSAA in den Arbeitsspeicher kopiert. Die NSAA wird um die Größe des Arguments inkrementiert.
 
 Die VFP-Register werden nicht für variadic-Funktionen verwendet, und die Regeln 1 und 2 aus Stufe C werden ignoriert. Das bedeutet, dass eine variadic-Funktion mit einem optionalen Push {r0-r3} beginnen kann, um die Registerargumente vor zusätzliche vom Aufrufer übergegebene Argumente voranzustellen und um dann direkt vom Stack aus auf die gesamte Argumentenliste zuzugreifen.
 
