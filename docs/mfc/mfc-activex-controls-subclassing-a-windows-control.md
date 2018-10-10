@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94b989594316f2eac3e65fad2cb5bf419e7ee2eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 03fc15cc2d2a73c0e8a1a016a2a477a5c65cdc15
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407536"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890556"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC-ActiveX-Steuerelemente: Erstellen einer Fenstersteuerelement-Unterklasse
 
@@ -48,10 +48,8 @@ Um eine Unterklasse einer Windows-Steuerelement können führen Sie die folgende
 
 - [Behandeln Sie alle ActiveX-Steuerelement-Nachrichten (OCM) reflektiert, um das Steuerelement](#_core_handling_reflected_window_messages)
 
-    > [!NOTE]
-    >  Ein Großteil dieser Arbeit erfolgt vom ActiveX-Steuerelement-Assistenten bei Auswahl des Steuerelements in Unterklassen unterteilt werden mithilfe der **übergeordneten Fenster-Klasse auswählen** Dropdown-Liste auf die **Steuerelementeinstellungen** Seite.
-
-Finden Sie in Knowledge Base-Artikel Q243454 Informationen auf den Unterklassen eines Steuerelements.
+   > [!NOTE]
+   > Ein Großteil dieser Arbeit erfolgt vom ActiveX-Steuerelement-Assistenten bei Auswahl des Steuerelements in Unterklassen unterteilt werden mithilfe der **übergeordneten Fenster-Klasse auswählen** Dropdown-Liste auf die **Steuerelementeinstellungen** Seite.
 
 ##  <a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a> Überschreiben von IsSubclassedControl und PreCreateWindow
 
