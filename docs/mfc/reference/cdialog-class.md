@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bda3bcbd8686d985406842a4b7a64536616ae8ac
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fdbbda6956e3265e7b17aa63ea26ac760b1fda5a
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419547"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890620"
 ---
 # <a name="cdialog-class"></a>CDialog-Klasse
 
@@ -133,11 +133,7 @@ Ein modales Dialogfeld wird automatisch geschlossen, wenn der Benutzer die Schal
 
 Wenn Sie ein nicht modales Dialogfeld implementieren, immer außer Kraft setzen der `OnCancel` Member-Funktion und rufen `DestroyWindow` aus darin. Rufen Sie die Basisklasse nicht `CDialog::OnCancel`, da er aufruft `EndDialog`, dem wird das Dialogfeld ausgeblendet, jedoch wird nicht zerstört. Sie sollten auch überschreiben, `PostNcDestroy` für nicht modale Dialogfelder zum Löschen **dies**, da nicht modale Dialogfelder in der Regel zugeordnet sind **neue**. Modale Dialogfelder sind in der Regel auf den Frame erstellt und müssen nicht `PostNcDestroy` bereinigen.
 
-Weitere Informationen zu `CDialog` finden Sie unter:
-
-- [Dialogfelder](../../mfc/dialog-boxes.md)
-
-- Knowledge Base-Artikel Q262954: So wird's gemacht: Erstellen Sie ein Dialogfeld Protokollanzeige mit Bildlaufleisten
+Weitere Informationen zu `CDialog`, finden Sie unter [Dialogfelder](../../mfc/dialog-boxes.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -281,7 +277,7 @@ Verwenden Sie WS_VISIBLE-Stil in der Vorlage im Dialogfeld aus, wenn das Dialogf
 
 Verwenden der `CWnd::DestroyWindow` Funktion zerstört ein Dialogfeld erstellt die `CreateIndirect` Funktion.
 
-Dialogfelder, die ActiveX-Steuerelemente enthalten erfordern zusätzliche Informationen, die in einer Ressource DLGINIT bereitgestellt. Weitere Informationen finden Sie im Knowledge Base-Artikel Q231591, "So wird's gemacht: verwenden eine Dialogvorlage um ein MFC-Dialogfeld mit einem ActiveX-Steuerelement zu erstellen." Knowledge Base-Artikeln finden Sie unter [ http://support.microsoft.com ](http://support.microsoft.com/).
+Dialogfelder, die ActiveX-Steuerelemente enthalten erfordern zusätzliche Informationen, die in einer Ressource DLGINIT bereitgestellt.
 
 ##  <a name="domodal"></a>  Methode CDialog:: DoModal
 
@@ -410,7 +406,7 @@ Ungleich NULL, wenn das Dialogfeldobjekt erstellt und erfolgreich initialisiert 
 
 Um ein modales Dialogfeld indirekt zu erstellen, zunächst belegen Sie einen Speicherblock auf dem globalen und füllen Sie es mit der Dialogfeldvorlage. Rufen Sie dann auf die leere `CDialog` Konstruktor zum Erstellen des Dialogfeld-Objekts. Rufen Sie als Nächstes `InitModalIndirect` Ihr Handle an die in-Memory-Dialogfeld-Vorlage zu speichern. Das Dialogfeld "Windows" erstellt und angezeigt wird später bei der [DoModal](#domodal) Memberfunktion aufgerufen wird.
 
-Dialogfelder, die ActiveX-Steuerelemente enthalten erfordern zusätzliche Informationen, die in einer Ressource DLGINIT bereitgestellt. Weitere Informationen finden Sie im Knowledge Base-Artikel Q231591, "So wird's gemacht: verwenden eine Dialogvorlage um ein MFC-Dialogfeld mit einem ActiveX-Steuerelement zu erstellen." Knowledge Base-Artikeln finden Sie unter [ http://support.microsoft.com ](http://support.microsoft.com/).
+Dialogfelder, die ActiveX-Steuerelemente enthalten erfordern zusätzliche Informationen, die in einer Ressource DLGINIT bereitgestellt.
 
 ##  <a name="mapdialogrect"></a>  CDialog::MapDialogRect
 

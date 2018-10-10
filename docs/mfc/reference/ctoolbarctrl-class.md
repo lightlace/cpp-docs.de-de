@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5a71e6f358a682adad2d12f7b567dc0bad3d0f3
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 2473f33508274bb0f0aa9aebcb462973ec80b267
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861881"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890815"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl-Klasse
 
@@ -731,8 +731,6 @@ void Customize();
 ### <a name="remarks"></a>Hinweise
 
 Dieses Dialogfeld ermöglicht den Benutzer zum Anpassen der Symbolleiste hinzufügen und Löschen von Schaltflächen. Um Anpassungen zu unterstützen, muss der Symbolleiste des übergeordneten Fensters die benachrichtigungsmeldungen Anpassung behandeln, wie in beschrieben [Behandeln von Anpassungsbenachrichtigungen](../../mfc/handling-customization-notifications.md). Eine Symbolleiste muss auch erstellt worden im CCS_ADJUSTABLE-Format, wie in beschrieben [CToolBarCtrl::Create](#create).
-
-Weitere Informationen finden Sie im Knowledge Base-Artikel Q241850: PRB: Aufruf CToolBarCtrl::Customize behält keine anpassen Dialogfeld angezeigt.
 
 ##  <a name="deletebutton"></a>  CToolBarCtrl::DeleteButton
 

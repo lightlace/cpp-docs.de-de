@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0910c23202b975999e10ef2effaebc470c62fb9d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: e8b9f8614feb98f7e21392565aa610b7d42cd512
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821074"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890165"
 ---
 # <a name="linker-tools-error-lnk1168"></a>Linkertoolfehler LNK1168
 
@@ -38,7 +38,3 @@ Wenn die Datei von einem Antivirenprogramm gesperrt wird, können Sie dieses Pro
 Wenn die Datei durch einen Indexdienst für Suchvorgänge gesperrt wird, können Sie dieses Problem beheben, indem Sie die Buildausgabeverzeichnisse von der automatischen Indizierung ausschließen. Weitere Informationen zum Indexdienst finden Sie in der Dokumentation. Verwenden Sie zum Ändern der Windows-Suche Indexdienst **Indizierungsoptionen** in der Windows **Systemsteuerung**. Weitere Informationen finden Sie unter [Windows verbessern Suchvorgängen mithilfe des Index: häufig gestellte Fragen](http://windows.microsoft.com/windows/improve-windows-searches-using-index-faq#1TC=windows-7).
 
 Wenn die ausführbare Datei nicht vom Buildprozess überschrieben werden kann, wird sie möglicherweise durch den Datei-Explorer gesperrt. Wenn die **Anwendungskomfort** Dienst wurde deaktiviert, Datei-Explorer kann an eine Sperre der ausführbaren Datei-Handle für einen längeren Zeitraum fest. Um dieses Problem zu beheben, führen Sie **"Services.msc"** und öffnen Sie dann die **Eigenschaften** im Dialogfeld für die **Anwendungskomfort** Service. Ändern der **Starttyp** aus **deaktiviert** zu **manuelle**.
-
-## <a name="see-also"></a>Siehe auch
-
-[Sie können ein "Fehler PRJ0008" oder "Schwerwiegender Fehler LNK1168"-Fehlermeldung erhalten, wenn Sie versuchen, eine Projektmappe oder ein ActiveX-Projekt in Visual C++ erstellen](http://support.microsoft.com/kb/308358)

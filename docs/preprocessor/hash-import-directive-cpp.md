@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bb62a61762c2c4e042777376f4d2b9f3ffc747e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 60397fea85e3fd121469ae4568dac18fa6b9ddb1
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429746"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890321"
 ---
 # <a name="import-directive-c"></a>#import-Anweisung (C++)
 **C++-spezifisch**  
@@ -121,7 +121,7 @@ Wenn Sie keine Lokalisierungs-ID angeben, wird eine ProgID gemäß den folgenden
   
 Beim Importieren einer Dispinterface-Eigenschaft, die Byref-Parameter wird verwendet, generiert #import keine __declspec ([Eigenschaft](../cpp/property-cpp.md))-Anweisung für die Funktion.  
   
-Beide Headerdateien werden in das Ausgabeverzeichnis eingefügt, das durch die /Fo-Option (Name der Objektdatei) festgelegt wird. Sie werden dann vom Compiler gelesen und kompiliert, als wäre die primäre Headerdatei durch eine `#include`-Direktive benannt.  
+Beide Headerdateien werden in das Ausgabeverzeichnis eingefügt, das durch die /Fo-Option (Name der Objektdatei) festgelegt wird. Sie werden dann vom Compiler gelesen und kompiliert, als wäre die primäre Headerdatei durch eine `#include`-Anweisung benannt.  
   
 Die folgenden compileroptimierungen sind in der **#import** Richtlinie:  
   
@@ -185,11 +185,9 @@ Wenn eine Typbibliothek Verweise auf Typen enthält, die in anderen Typbibliothe
 Der eigentliche Dateiname in der **#import** Kommentar ist der vollständige Pfad der übergreifenden Typbibliothek, wie in der Registrierung gespeichert. Wenn Fehler aufgrund fehlender Typdefinitionen auftreten, überprüfen Sie die Kommentare am Anfang der TLH-Datei, um festzustellen, welche abhängigen Typbibliotheken möglicherweise zuerst importiert werden müssen. Wahrscheinliche Fehler sind Syntaxfehler (z. B. C2143, C2146, C2321), C2501 (fehlende decl-Spezifizierer) oder C2433 ("inline" bei Datendeklaration nicht zulässig) beim Kompilieren der TLI-Datei.  
   
 Müssen Sie bestimmen, welche der Kommentare sind nicht anderweitig bereitgestellt von Systemheadern ist, und geben Sie dann eine **#import** -Direktive an einem Punkt vor der **#import** -Direktive des abhängigen Elements der Typbibliothek die Fehler zu beheben.  
-  
-Weitere Informationen finden Sie im Knowledge Base-Artikel über mögliche Zugriffsverletzungen durch #import-Wrappermethoden (Q242527) oder im Artikel über Compilerfehler bei der Verwendung von #import mit XML (Q269194). Sie finden Knowledge Base-Artikeln auf der MSDN Library-Medien oder unter [Microsoft-Support](https://support.microsoft.com/).  
-  
-##  <a name="_predir_the_23import_directive_import_attributes"></a> #import-Attribute  
- 
+
+##  <a name="_predir_the_23import_directive_import_attributes"></a> #import-Attribute
+
 **#import** kann optional ein oder mehrere Attribute enthalten. Diese Attribute weisen den Compiler an, den Inhalt der Typbibliotheksheader zu ändern. Ein umgekehrter Schrägstrich (**\\**) Symbol kann verwendet werden, um zusätzliche Zeilen in einer einzelnen enthalten **#import** Anweisung. Zum Beispiel:  
   
 ```  

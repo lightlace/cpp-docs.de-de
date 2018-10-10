@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd69813251a96051f844051f27155e1d4ed404d6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 27121334345556a744a6fc838c238352ccc36621
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393417"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890530"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -104,7 +104,7 @@ class CControlBar : public CWnd
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CControlBar::m_bAutoDelete](#m_bautodelete)|Wenn der Wert ungleich 0 (null) ist, wird das `CControlBar`-Objekt gelöscht, sobald die Windows-Steuerleiste beschädigt wird.|
+|[CControlBar::m_bAutoDelete](#m_bautodelete)|Wenn der Wert ungleich 0 (null) ist, wird das `CControlBar`-Objekt gelöscht, sobald die Windows-Steuerleiste zerstört wird.|
 |[CControlBar::m_pInPlaceOwner](#m_pinplaceowner)|Der direkte Besitzer der Steuerleiste.|
 
 ## <a name="remarks"></a>Hinweise
@@ -118,8 +118,6 @@ Weitere Informationen zu `CControlBar` finden Sie unter:
 - [Steuerleisten](../../mfc/control-bars.md)
 
 - [Technischer Hinweis 31: Steuerleisten](../../mfc/tn031-control-bars.md).
-
-- Knowledge Base-Artikel Q242577: PRB: Update-Befehlshandler für Benutzeroberflächen funktionieren für das an ein Dialogfeld angefügte Menü nicht mehr
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -412,7 +410,7 @@ Ungleich NULL, wenn die Steuerleiste unverankert ist; andernfalls 0.
 
 ##  <a name="m_bautodelete"></a>  CControlBar::m_bAutoDelete
 
-Wenn der Wert ungleich 0 (null) ist, wird das `CControlBar`-Objekt gelöscht, sobald die Windows-Steuerleiste beschädigt wird.
+Wenn der Wert ungleich 0 (null) ist, wird das `CControlBar`-Objekt gelöscht, sobald die Windows-Steuerleiste zerstört wird.
 
 ```
 BOOL m_bAutoDelete;
@@ -549,7 +547,7 @@ void SetInPlaceOwner(CWnd* pWnd);
 ### <a name="parameters"></a>Parameter
 
 *Aufnehmen*<br/>
-Ein Zeiger auf eine `CWnd` Objekt.
+Ein Zeiger auf ein `CWnd` -Objekt.
 
 ### <a name="remarks"></a>Hinweise
 

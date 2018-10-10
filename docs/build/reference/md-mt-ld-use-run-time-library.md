@@ -45,12 +45,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee8e59fbc88e63343d4da75a4cbf95d4f83bf815
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1aefd61d724f7716392b5fd2d15ef3a2f9ff0006
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701362"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890230"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD, /MT, /LD (Laufzeitbibliothek verwenden)
 
@@ -80,8 +80,6 @@ Weitere Informationen zu C-Laufzeitbibliotheken und welche Bibliotheken verwende
 Alle an einen bestimmten Aufruf des Linkers übergebenen Module müssen mit derselben Compileroption für die Laufzeitbibliothek kompiliert wurde (**/MD**, **"/ MT"**, **/ld**).
 
 Weitere Informationen zur Verwendung der Debugversionen der Laufzeitbibliotheken finden Sie unter [C Run-Time Library Reference](../../c-runtime-library/c-run-time-library-reference.md).
-
-Auch im Knowledge Base-Artikel Q140584 wird beschrieben, wie die passende C-Laufzeitbibliothek auszuwählen ist.
 
 Weitere Informationen über DLLs finden Sie unter [-DLLs in Visual C++](../../build/dlls-in-visual-cpp.md).
 

@@ -344,12 +344,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 292121e95b20061e95e85b49c60d4758bd18a568
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 160d9857097c4cac1912d2ca44b0433905c238f5
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435531"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890867"
 ---
 # <a name="colecontrol-class"></a>COleControl-Klasse
 
@@ -957,7 +957,7 @@ virtual void DoPropExchange(CPropExchange* pPX);
 ### <a name="parameters"></a>Parameter
 
 *pPX*<br/>
-Ein Zeiger auf eine `CPropExchange` Objekt. Das Framework stellt dieses Objekt aus, um den Kontext der Exchange-Eigenschaft, darunter seine Richtung einzurichten.
+Ein Zeiger auf ein `CPropExchange` -Objekt. Das Framework stellt dieses Objekt aus, um den Kontext der Exchange-Eigenschaft, darunter seine Richtung einzurichten.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1093,7 +1093,7 @@ BOOL ExchangeVersion(
 ### <a name="parameters"></a>Parameter
 
 *pPX*<br/>
-Ein Zeiger auf eine `CPropExchange` Objekt. Das Framework stellt dieses Objekt aus, um den Kontext der Exchange-Eigenschaft, darunter seine Richtung einzurichten.
+Ein Zeiger auf ein `CPropExchange` -Objekt. Das Framework stellt dieses Objekt aus, um den Kontext der Exchange-Eigenschaft, darunter seine Richtung einzurichten.
 
 *dwVersionDefault*<br/>
 Die aktuelle Versionsnummer des Steuerelements.
@@ -2158,7 +2158,7 @@ Ungleich NULL, wenn das Steuerelement initialisiert wurde; andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Framework Implementierung von `IDispatch::Invoke` Aufrufe `IsInvokeAllowed` bestimmen, ob eine bestimmte Funktion (identifizierte `dispid`) aufgerufen werden kann. Das Standardverhalten für OLE-Steuerelements ist zum Zulassen von Automatisierungsmethoden, die aufgerufen werden, nur dann, wenn das Steuerelement initialisiert wurde. allerdings `IsInvokeAllowed` ist eine virtuelle Funktion, und kann überschrieben werden, bei Bedarf (z. B., wenn das Steuerelement als Automatisierungsserver verwendet wird). Weitere Informationen finden Sie im Knowledge Base-Artikel Q166472, "So wird's gemacht: verwenden ein OLE-Steuerelements als Automatisierungsserver." Knowledge Base-Artikeln finden Sie unter [ http://support.microsoft.com ](http://support.microsoft.com/).
+Die Framework Implementierung von `IDispatch::Invoke` Aufrufe `IsInvokeAllowed` bestimmen, ob eine bestimmte Funktion (identifizierte `dispid`) aufgerufen werden kann. Das Standardverhalten für OLE-Steuerelements ist zum Zulassen von Automatisierungsmethoden, die aufgerufen werden, nur dann, wenn das Steuerelement initialisiert wurde. allerdings `IsInvokeAllowed` ist eine virtuelle Funktion, und kann überschrieben werden, bei Bedarf (z. B., wenn das Steuerelement als Automatisierungsserver verwendet wird).
 
 ##  <a name="ismodified"></a>  COleControl::IsModified
 

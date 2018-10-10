@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067f31d837b4b83a477d6b919f2d5bbd5efa00f3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 552252c8826e167b4aaa21aa41e489bbc8179ec3
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381074"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890374"
 ---
 # <a name="cdocobjectserver-class"></a>CDocObjectServer-Klasse
 
@@ -74,10 +74,6 @@ Ein DocObject-Server-Dokument enthalten kann [CDocObjectServerItem](../../mfc/re
 Informationen zum Anpassen Ihrer DocObject-Servers leiten Sie eine eigene Klasse von `CDocObjectServer` und überschreiben seine Ansicht Setupfunktionen [OnActivateView](#onactivateview), [OnApplyViewState](#onapplyviewstate), und [OnSaveViewState ](#onsaveviewstate). Sie benötigen, geben Sie eine neue Instanz der Klasse als Reaktion auf Framework-Aufrufe.
 
 Weitere Informationen zu DocObjects, finden Sie unter [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md) und [COleCmdUI](../../mfc/reference/colecmdui-class.md) in die *MFC-Referenz*.
-
-Außerdem finden Sie im folgenden Knowledge Base-Artikel:
-
-- Q247382: PRB: QuickInfos für Steuerelemente in ActiveX-Dokument-Server werden ausgeblendet, durch den Container für ActiveX-Dokument
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 

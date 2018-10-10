@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa5cf1be80b22d3577347dbf7de9ee262125aa86
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: c2d5a0f2f5f7515e36997b876373dcf25bb6fc03
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821360"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890633"
 ---
 # <a name="message-map-macros-mfc"></a>Meldungszuordnungsmakros (MFC)
 
@@ -352,7 +352,7 @@ Benutzerdefinierte Meldungen sind alle Nachrichten, die nicht standardmäßige W
 Es sollte genau eine ON_MESSAGE-Makro-Anweisung in der meldungszuordnung für jede benutzerdefinierte Nachricht, die eine Message-Handler-Funktion zugeordnet werden muss.
 
 > [!NOTE]
->  Zusätzlich zu den benutzerdefinierten Nachrichten behandelt ON_MESSAGE weniger gängige Windows-Meldungen. Weitere Informationen finden Sie im Knowledge Base-Artikel [99848: INFO: ON_MESSAGE()-Makro verwenden, um Karte weniger übliche Nachrichten](http://go.microsoft.com/fwlink/p/?linkid=192022).
+>  Zusätzlich zu den benutzerdefinierten Nachrichten behandelt ON_MESSAGE weniger gängige Windows-Meldungen. Weitere Informationen finden Sie unter [Meldungszuordnungen](../../mfc/tn006-message-maps.md).
 
 Weitere Informationen und Beispiele finden Sie unter [Nachrichtenbehandlung und Zuordnen von Themen](../../mfc/message-handling-and-mapping.md) und [benutzerdefinierte Handler](user-defined-handlers.md)
 

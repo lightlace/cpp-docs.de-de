@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2935ac160f5d778faf119390d1f023d00d6d322b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d4ae42373ddf70cf4945c540e781397d7d67bd21
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448544"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890750"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -225,15 +225,11 @@ Bei der Erstellung einer `CEdit` Objekt innerhalb eines Zeitfensters, Sie müsse
 
 So ändern Sie bestimmte Formate in einem Bearbeitungssteuerelement (z. B. ES_READONLY) müssen Sie bestimmte Nachrichten senden, auf das Steuerelement anstelle von [ModifyStyle](cwnd-class.md#modifystyle). Finden Sie unter [Bearbeiten der Stile von Listensteuerelementen](/windows/desktop/Controls/edit-control-styles) in das Windows SDK.
 
-Weitere Informationen zu `CEdit` finden Sie unter:
-
-- [Steuerelemente](../../mfc/controls-mfc.md)
-
-- Knowledge Base-Artikel Q259949: INFO: SetCaretPos() ist keine entsprechende CEdit oder Steuerelemente für von CRichEditCtrl
+Weitere Informationen zu `CEdit`, finden Sie unter [Steuerelemente](../../mfc/controls-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
-[Von CObject](cobject-class.md)
+[CObject](cobject-class.md)
 
 [CCmdTarget](ccmdtarget-class.md)
 

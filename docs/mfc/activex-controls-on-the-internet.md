@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47d1a5308b379d8bd1923bb9ad1ad805cb6bded3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6004c3acd052d1424004017941a5e4aa110c602c
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432816"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890335"
 ---
 # <a name="activex-controls-on-the-internet"></a>ActiveX-Steuerelemente für das Internet
 
@@ -170,10 +170,6 @@ Asynchrone Moniker bieten eine Möglichkeit zum Herunterladen von Daten asynchro
 Beispielsweise nur 10 Bytes verfügbar sind, und Lesen für eine 1-KB-Datei asynchron aufgerufen wird, Lesen nicht blockiert, jedoch mit den derzeit verfügbaren 10 Bytes zurückgibt.
 
 Implementieren Sie [asynchronen Monikern](../mfc/asynchronous-monikers-on-the-internet.md) mithilfe der `CAsyncMonikerFile` Klasse. ActiveX-Steuerelemente können jedoch die `CDataPathProperty` -Klasse, die abgeleitet wird `CAsyncMonikerFile`, damit die asynchronen Eigenschaften implementieren.
-
-Das ASYNDOWN demonstriert das Einrichten einer asynchronen Schleife Timer zum Lesen der Daten verwenden. ASYNDOWN ist ausführlich im Knowledge Base-Artikel "So wird's gemacht: AsyncDown veranschaulicht asynchrone Herunterladen von Daten" (Q177244) und steht zum Download aus dem Microsoft Download Center. (Weitere Informationen zum Herunterladen von Dateien aus dem Microsoft Download Center finden Sie im "Wie auf erhalten Microsoft Support-Dateien aus Online Services" (Q119591) in der Microsoft Knowledge Base-Artikel.) Sie finden Knowledge Base-Artikel unter [ http://support.microsoft.com/support ](http://support.microsoft.com/support).
-
-Die grundlegende Technik in ASYNDOWN verwendet wird, legen Sie einen Timer in **CDataPathProperty** , um anzugeben, wenn Daten verfügbar sind. Wenn die Timer-Nachricht empfangen wird, wird die Anwendung liest die 128-Byte-Blöcken der Daten und füllt eine Bearbeitungssteuerelement. Wenn Daten nicht verfügbar ist, wenn die Timer-Nachricht verarbeitet wird, wird der Zeitgeber deaktiviert. `OnDataAvailable` aktiviert den Zeitgeber, falls später weitere Daten empfangen.
 
 ## <a name="displaying-a-control-on-a-web-page"></a>Anzeigen eines Steuerelements auf einer Webseite
 

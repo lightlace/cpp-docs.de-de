@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a93294e955dcdc04b320302c573dcbbb827670d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: c530a9853aad3e16e5e4094f4d90e30c2643c0d8
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821568"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890893"
 ---
 # <a name="clistctrl-class"></a>CListCtrl-Klasse
 
@@ -458,12 +458,6 @@ Listenansicht-Steuerelemente können in vier verschiedene Arten, namens "Views".
 
      Jedes Element wird in einer eigenen Zeile, mit zusätzlichen Informationen, die in Spalten nach rechts angeordnet. Die am weitesten links stehende Spalte enthält, das kleine Symbol und die Bezeichnung, und nachfolgende Spalten enthalten die Unterelemente darstellen, wie von der Anwendung angegeben. Eine eingebettete Kopfzeilen-Steuerelement (Klasse [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementiert diese Spalten. Weitere Informationen auf dem Kopfzeilen-Steuerelement und die Spalten in einer Berichtsansicht finden Sie unter [Verwenden von CListCtrl: Hinzufügen von Spalten zum Steuerelement (Berichtsansicht)](../../mfc/adding-columns-to-the-control-report-view.md).
 
-Siehe auch:
-
-- Knowledge Base-Artikel Q250614: So wird's gemacht: Sortieren von Elementen in einem CListCtrl in der Berichtsansicht
-
-- Knowledge Base-Artikel Q200054: PRB: OnTimer() wird nicht aufgerufen, wiederholt für ein Listensteuerelement
-
 Das Format der aktuellen Liste-Ansicht des Steuerelements bestimmt die aktuelle Ansicht. Weitere Informationen zu dieser Stile und deren Verwendung, finden Sie unter [Verwenden von CListCtrl: Ändern der Stile von Listensteuerelementen](../../mfc/changing-list-control-styles.md).
 
 ## <a name="extended-styles"></a>Erweiterte Stile
@@ -520,7 +514,7 @@ Standardmäßig Löscht ein Listenansicht-Steuerelement der Bildliste zugewiesen
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
-[Von CObject](cobject-class.md)
+[CObject](cobject-class.md)
 
 [CCmdTarget](ccmdtarget-class.md)
 

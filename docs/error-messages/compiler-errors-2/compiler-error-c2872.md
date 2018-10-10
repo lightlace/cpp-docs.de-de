@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 038c3475a6041dfb719bb2270a87ac2898f8b958
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e4bdc67e13db11949371e2f9e3d8a205b146d701
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036756"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890113"
 ---
 # <a name="compiler-error-c2872"></a>Compilerfehler C2872
 
@@ -31,7 +31,11 @@ Der Compiler ermitteln nicht, welches Symbol auf verwiesen wird. Mehr als ein Sy
 
 C2872 kann auftreten, wenn eine Headerdatei umfasst eine [using-Direktive](../../cpp/namespaces-cpp.md#using_directives), und eine nachfolgenden Header-Datei enthalten ist, die einen Typ, der auch in den im angegebenen Namespace enthält die `using` Richtlinie. Geben Sie einen `using` Direktive erst alle Headerdateien werden mit angegeben `#include`.
 
-Finden Sie weitere Informationen zu C2872, Knowledge Base-Artikel [PRB: Compiler Fehler bei der Sie verwenden #import mit XML in Visual C++ .NET](http://support.microsoft.com/kb/316317) und ["Fehler C2872: 'Platform': Mehrdeutiges Symbol" Fehlermeldung bei Verwendung der Windows::Foundation::Metadata-Namespace in Visual Studio 2013](https://support.microsoft.com/kb/2890859).
+C2872 kann in Visual Studio 2013 auftreten, aufgrund eines Konflikts zwischen der der `Windows::Foundation::Metadata::Platform` Enum Typ und den C++ / CX definierte `Platform` Namespace. Um dieses Problem zu umgehen, gehen Sie folgendermaßen vor:
+
+- Entfernen Sie die "using Namespace Windows::Foundation::Metadata"-Klausel aus den Projektdateien.
+
+- Geben Sie den vollqualifizierten Namen für jeden Typ, der in diesem Namespace enthalten ist.
 
 ## <a name="example"></a>Beispiel
 

@@ -16,18 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0b096e5cacc64359887d7cf74f94f4febea70e6
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 48816aa801e5085d1646efdeff2af40e233cbf3f
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820547"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889862"
 ---
 # <a name="fatal-error-c1033"></a>Schwerwiegender Fehler C1033
 
 Programmdatenbank Pdb kann nicht geöffnet werden.
 
-Dieser Fehler kann durch Datenträgerfehler verursacht werden.
-
-
-Weitere Informationen finden Sie unter [ http://support.microsoft.com/default.aspx?scid=kb; 246007](http://support.microsoft.com/default.aspx?scid=kb;246007).
+Dieser Fehler kann verursacht werden, indem ein Datenträgerfehler, eine temporäre Sperre, die durch ein Antivirenprogramm, eine vorherige Debugger-Instanz, die nicht vollständig heruntergefahren wurde erstellt oder parallele mspdbsrv.exe Buildprozesse, die versuchen, Zugriff auf dieselbe Datei auf andere möglichen Ursachen.

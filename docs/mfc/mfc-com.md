@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d23a9be38ebb870adf098b34fac79afff6345cd8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 660b2fc2f6ece6f60ff7bd1868b3a65bc8f045c1
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394739"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890035"
 ---
 # <a name="mfc-com"></a>MFC COM
 
@@ -57,8 +57,6 @@ Active Technology umfassen sowohl Client-als auch Technologien, einschließlich 
 - Dieser Abschnitt enthält auch Informationen zum Schreiben von COM-Komponenten, die mithilfe von MFC, z. B. [Verbindungspunkte](../mfc/connection-points.md).
 
 Eine Erläuterung der zuerst immer noch eine so genannte OLE im Vergleich zu, die jetzt active-Technologie bezeichnet wird, finden Sie in den Themen zu [OLE](../mfc/ole-in-mfc.md).
-
-Siehe auch die Knowledge Base-Artikel Q248019: So wird's gemacht: zu verhindern, dass Server ausgelastet Dialogfeld im aus angezeigt werden während einer langwierigen com-Vorgang.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

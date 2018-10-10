@@ -16,20 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c6352c87748bafa635d8d6dae29bf37b78ac6c1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5c729ecbdea13c36cf5df71efa16d12853fc4433
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46041986"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890493"
 ---
 # <a name="compiler-error-c2143"></a>Compilerfehler C2143
 
 Syntaxfehler: Fehlendes "ttoken1" vor "token2"
 
 Der Compiler erwartet ein bestimmtes Tokens (d. h. ein Sprachelement außer Leerzeichen) und stattdessen ein anderes Token gefunden.
-
-Informationen zu diesem Fehler auftreten, wenn Sie einen Function-Try-Block verwenden, finden Sie unter [Knowledge Base-Artikel 241706](http://support.microsoft.com/kb/241706).
 
 Überprüfen Sie die [C++-Sprachreferenz](../../cpp/cpp-language-reference.md) um zu bestimmen, in denen Code syntaktisch falsch ist. Da der Compiler diesen Fehler zu melden kann, nachdem er die Zeile trifft, die das Problem verursacht, überprüfen Sie mehrere Codezeilen, die den Fehler vorausgegangen sind.
 
