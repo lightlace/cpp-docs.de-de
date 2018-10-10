@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddf4b505689521fbdfd702eb1944ac0779f16bf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dc5bca0f7ff1b2fdb2650eadbcdca4778d9b53ef
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409570"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890359"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Upgrading eines vorhandenen ActiveX-Steuerelements
 
@@ -56,7 +56,7 @@ Sie können auch Optimierungen, hinzufügen, wie in beschrieben [ActiveX-Steuere
 
 ##  <a name="_core_packaging_code_for_downloading"></a> Verpacken von Code zum Herunterladen
 
-Weitere Informationen zu diesem Thema finden Sie unter im Knowledge Base-Artikel "Verpackung MFC-Steuerelemente für die Verwendung über das Internet" (Q167158). Sie finden Knowledge Base-Artikel unter [ http://support.microsoft.com/support ](http://support.microsoft.com/support).
+Weitere Informationen zu diesem Thema finden Sie unter [Paketerstellung ActiveX-Steuerelemente](https://docs.microsoft.com//previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa751974%28v%3dvs.85%29).
 
 ### <a name="the-codebase-tag"></a>Die CODEBASE-Tags
 
@@ -94,7 +94,7 @@ CAB-Dateien sind die empfohlene Methode zum Packen von ActiveX-Steuerelementen, 
 
 ### <a name="creating-cab-files"></a>Erstellen von CAB-Dateien
 
-Sie können das Entwicklungskit CAB-Datei herunterladen, aus dem Knowledge Base-Artikel [310618: Microsoft Cabinet-Software Development Kit](http://go.microsoft.com/fwlink/p/?linkid=148204). In diesem Kit finden Sie die erforderlichen Tools zum Erstellen der CAB-Dateien.
+Tools zum Erstellen von CAB-Dateien sind nun Bestandteil der [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk).
 
 Die CAB-Datei verweist `CODEBASE` OCX-Datei für das ActiveX-Steuerelement und eine INF-Datei zur Steuerung der Installation enthalten. Erstellen Sie die CAB-Datei den Namen der Steuerelementdatei angeben und eine INF-Datei. Fügen Sie keine abhängigen DLLs, die möglicherweise bereits auf dem System in der CAB-Datei vorhanden sind. MFC-DLLs sind z. B. in einer separaten CAB-Datei verpackt und auf die steuernde INF-Datei verweist.
 

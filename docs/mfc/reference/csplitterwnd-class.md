@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e56ab939cd6b3cfcb0601eaec1e450835069705f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 549669841a4b10468679795ca045f5626f5e9101
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389541"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890672"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd-Klasse
 
@@ -181,11 +181,7 @@ Ein Teilungsfenster unterstützt spezielle Bildlaufleisten (abgesehen von den Bi
 
 Sie erstellen diese spezielle Bildlaufleisten, bei der Erstellung von Teilungsfenster. Z. B. eine `CSplitterWnd` , besitzt eine Zeile, die zwei Spalten und der Stil WS_VSCROLL zeigt eine vertikale Bildlaufleiste angezeigt, die von den beiden Fenstern gemeinsam verwendet wird. Wenn der Benutzer die Schiebeleiste verschoben wird, werden die WM_VSCROLL-Meldungen an beider Bereiche gesendet. Wenn die Bereiche die Bildlaufleisten-Position festgelegt, wird die freigegebene Bildlaufleiste festgelegt.
 
-Weitere Informationen über Splitterfenster finden Sie unter:
-
-- [Technischer Hinweis 29](../../mfc/tn029-splitter-windows.md)
-
-- Knowledge Base-Artikel Q262024: So wird's gemacht: verwenden CPropertySheet als ein untergeordnetes Element des CSplitterWnd
+Weitere Informationen über Splitterfenster, finden Sie unter [technischen Hinweis 29](../../mfc/tn029-splitter-windows.md).
 
 Weitere Informationen zum Erstellen von dynamischen Splitterfenstern finden Sie unter:
 
@@ -274,7 +270,7 @@ Die maximale Anzahl der Spalten im Teilungsfenster. Dieser Wert darf 2 nicht üb
 *sizeMin*<br/>
 Gibt die minimale Größe, an der ein Bereich angezeigt werden kann.
 
-*"pContext"*<br/>
+*pContext*<br/>
 Ein Zeiger auf eine [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) Struktur. Dies kann in den meisten Fällen werden die *"pContext"* an den übergeordneten Rahmenfensters übergeben.
 
 *dwStyle*<br/>
@@ -414,7 +410,7 @@ Gibt an, die [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) der
 *sizeInit*<br/>
 Gibt die Anfangsgröße der neuen Ansicht an.
 
-*"pContext"*<br/>
+*pContext*<br/>
 Ein Zeiger auf einen erstellen-Kontext verwendet, um die Ansicht zu erstellen (in der Regel die *"pContext"* übergebenen des übergeordneten Rahmens außer Kraft gesetzte [CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient) Memberfunktion in der Teilungsfenster. erstellt wird).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -898,7 +894,7 @@ Wenn *aufnehmen* NULL ist, gibt die Zeile im Bereich, der aktiv sein werden.
 Wenn *aufnehmen* NULL ist, gibt die Spalte im Bereich, der aktiv sein werden.
 
 *Aufnehmen*<br/>
-Ein Zeiger auf eine `CWnd` Objekt. Wenn der Wert NULL ist, im Bereich gemäß *Zeile* und *Col* aktiv festgelegt ist. Falls ungleich NULL, gibt den Bereich, der aktiv festgelegt ist.
+Ein Zeiger auf ein `CWnd` -Objekt. Wenn der Wert NULL ist, im Bereich gemäß *Zeile* und *Col* aktiv festgelegt ist. Falls ungleich NULL, gibt den Bereich, der aktiv festgelegt ist.
 
 ### <a name="remarks"></a>Hinweise
 

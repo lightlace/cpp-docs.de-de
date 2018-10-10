@@ -18,24 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d87682d9110aa37fbb806f7d1dcd70009cf2ad63
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4ac1eef12a3f782f3ad9ba8a9bb526989876251e
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406957"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890217"
 ---
 # <a name="steps-in-a-typical-ftp-client-application"></a>Schritte in einer typischen FTP-Clientanwendung
 
 Eine typische Anwendung des FTP-Client erstellt eine [CInternetSession](../mfc/reference/cinternetsession-class.md) und ein [CFtpConnection](../mfc/reference/cftpconnection-class.md) Objekt. Beachten Sie, dass diese MFC-WinInet-Klassen nicht tatsächlich die Proxyeinstellungen des Typs steuert. IIS führt.
-
-Darüber hinaus finden Sie in folgenden Knowledge Base-Artikeln:
-
-- So wird's gemacht: FTP-mit CERN-basierte Proxys, die mit WinInet-API (Artikel-ID: Q166961)
-
-- Beispiel: FTP mit CERN-basierte Kennwort-geschützt Proxy (Artikel-ID: Q216214)
-
-- Internetdienste-Manager kann keine installierte Proxydienste anzuzeigen (Artikel-ID: Q216802)
 
 Die folgende Tabelle zeigt die Schritte, die Sie in einer typischen FTP-Client-Anwendung ausführen können.
 

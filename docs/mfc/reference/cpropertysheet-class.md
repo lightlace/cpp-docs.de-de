@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec12275291321751c539d095c60fa9dabffa2b7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 50b1816320521f8ad20ee64fc4a051f938e902ec
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445177"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890776"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet-Klasse
 
@@ -155,7 +155,7 @@ Sie können einen Typ von Tab-Dialogfeld wird aufgerufen, einen Assistenten, der
 
 Um ein Dialogfeld des Benutzens eines assistentartigen zu erstellen, die gleichen Schritte, die Sie ausführen müssen, um das Erstellen eines standardmäßigen Eigenschaftenblatts Aufruf jedoch [SetWizardMode](#setwizardmode) vor dem Aufruf [DoModal](#domodal). Rufen Sie zum Aktivieren der Schaltflächen des Assistenten [SetWizardButtons](#setwizardbuttons), mit der Flags, deren Funktion und Darstellung anpassen. So aktivieren Sie die **Fertig stellen** Schaltfläche, rufen Sie [SetFinishText](#setfinishtext) , nachdem der Benutzer eine Aktion auf der letzten Seite des Assistenten vorgenommen hat.
 
-Weitere Informationen zur Verwendung von `CPropertySheet` Objekte finden Sie im Artikel [Eigenschaftenblätter und Eigenschaftenseiten](../../mfc/property-sheets-and-property-pages-in-mfc.md). Siehe auch die Knowledge Base-Artikel Q146916: So wird's gemacht: Erstellen Sie eine ohne Modus CPropertySheet mit Standard-Schaltflächen und Artikel Q300606: So wird's gemacht: Entwerfen Sie in der Größe veränderbaren MFC Eigenschaftenblatt.
+Weitere Informationen zur Verwendung von `CPropertySheet` Objekte finden Sie im Artikel [Eigenschaftenblätter und Eigenschaftenseiten](../../mfc/property-sheets-and-property-pages-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 

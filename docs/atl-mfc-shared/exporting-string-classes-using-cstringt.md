@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5355b6e81354ef04b7cc4d2c3495289c9d1d029d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f2d77516ae53b0ee1c4f39e4d8f095848aa00acc
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444203"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889970"
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>Exportieren von Zeichenfolgenklassen mit CStringT
 
@@ -29,7 +29,7 @@ In der Vergangenheit MFC-Entwickler abgeleitet haben `CString` eigene Zeichenfol
 
 - Mit dem neuen `CStringT` Vorlagenklasse, die Sie anpassen können `CString` -Verhaltens mithilfe der Vorlagenparameter, mit denen Zeichenmerkmale, ähnlich wie die Vorlagen in der C++-Standardbibliothek angegeben.
 
-- Wenn Sie eigene String-Klasse aus einer DLL exportieren `CStringT`, der Compiler automatisch exportiert die `CString` Basisklasse. Da `CString` selbst eine Vorlagenklasse, ist es instanziiert werden vom Compiler bei verwendet, es sei denn, die dem Compiler bekannt ist, die `CString` aus einer DLL importiert wird. Wenn Sie Projekte von Visual C++ 6.0 auf Visual c++.NET migriert haben, Sie haben eventuell bereits Symbol Linkerfehler für ein mehrfach definiertes `CString` aufgrund der Konflikte zwischen der `CString` aus einer DLL und die lokal instanziierte Version importiert. Der richtige Weg zu diesem Zweck wird unten beschrieben. Weitere Informationen zu diesem Problem finden Sie unter im Knowledge Base-Artikel "Verknüpfen von Fehlern beim Importieren von CString abgeleitete Klassen" (Q309801) am [ http://support.microsoft.com/default.aspx ](http://support.microsoft.com/default.aspx).
+- Wenn Sie eigene String-Klasse aus einer DLL exportieren `CStringT`, der Compiler automatisch exportiert die `CString` Basisklasse. Da `CString` selbst eine Vorlagenklasse, ist es instanziiert werden vom Compiler bei verwendet, es sei denn, die dem Compiler bekannt ist, die `CString` aus einer DLL importiert wird. Wenn Sie Projekte von Visual C++ 6.0 auf Visual c++.NET migriert haben, Sie haben eventuell bereits Symbol Linkerfehler für ein mehrfach definiertes `CString` aufgrund der Konflikte zwischen der `CString` aus einer DLL und die lokal instanziierte Version importiert. Der richtige Weg zu diesem Zweck wird unten beschrieben.
 
 Das folgende Szenario führt dazu, dass der Linker symbolfehler für mehrfach definiertes Klassen erstellt. Angenommen, Sie exportieren eine `CString`-abgeleitete Klasse (`CMyString`) aus einer MFC-Erweiterungs-DLL:
 

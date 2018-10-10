@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 575ba3786e6639e5d6801ec9555c4a85f9732b20
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 13b71838bb4db152fb76fa1115a426e2711422ea
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415732"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890581"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget-Klasse
 
@@ -223,7 +223,7 @@ void EnableTypeLib();
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie diese Memberfunktion im Konstruktor der Ihre `CCmdTarget`-abgeleitetes Objekt aus, wenn diese Typinformationen bereitstellt. Weitere Informationen finden Sie im Knowledge Base-Artikel Q185720, "So wird's gemacht: Bereitstellen von Typinformationen aus einer MFC-Automation-Server." Knowledge Base-Artikeln finden Sie unter [ http://support.microsoft.com ](http://support.microsoft.com/).
+Rufen Sie diese Memberfunktion im Konstruktor der Ihre `CCmdTarget`-abgeleitetes Objekt aus, wenn diese Typinformationen bereitstellt.
 
 ##  <a name="endwaitcursor"></a>  CCmdTarget::EndWaitCursor
 
@@ -303,8 +303,6 @@ TRUE, wenn erfolgreich, andernfalls "false". Im Erfolgsfall \* *pIID* festgelegt
 ### <a name="remarks"></a>Hinweise
 
 Abgeleitete Klassen müssen diese Memberfunktion überschreiben (wenn nicht überschrieben, `GetDispatchIID` gibt FALSE zurück). Finden Sie unter [COleControl](../../mfc/reference/colecontrol-class.md).
-
-Weitere Informationen finden Sie im Knowledge Base-Artikel Q185720, "So wird's gemacht: Bereitstellen von Typinformationen aus einer MFC-Automation-Server." Knowledge Base-Artikeln finden Sie unter [ http://support.microsoft.com ](http://support.microsoft.com/).
 
 ##  <a name="getidispatch"></a>  CCmdTarget::GetIDispatch
 
@@ -407,7 +405,7 @@ virtual CTypeLibCache* GetTypeLibCache();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf eine `CTypeLibCache` Objekt.
+Ein Zeiger auf ein `CTypeLibCache` -Objekt.
 
 ### <a name="remarks"></a>Hinweise
 

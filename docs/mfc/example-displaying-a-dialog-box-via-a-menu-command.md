@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2869e936115317ff34183b55ba16fe8e9cdc4d2d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1abb923a52ccce181782d5387636c45491c342cd
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378188"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890204"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Beispiel: Anzeigen eines Dialogfelds mit einem Menübefehl
 
@@ -98,12 +98,7 @@ Die Verfahren verwenden Sie die folgenden Namen und Werte:
 
          [!code-cpp[NVC_MFCControlLadenDialog#48](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_7.cpp)]
 
-Darüber hinaus finden Sie im folgenden Knowledge Base-Artikel:
-
-- Q251059: So wird's gemacht: Geben Sie Ihre eigenen Fensterklassenname für MFC-Dialogfeld
-
 ## <a name="see-also"></a>Siehe auch
 
 [Dialogfelder](../mfc/dialog-boxes.md)<br/>
 [Modale und nicht modale Dialogfelder](../mfc/modal-and-modeless-dialog-boxes.md)
-

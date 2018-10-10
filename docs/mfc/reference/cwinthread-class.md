@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c01336094077cc1f451f2e7b479ca4acf9fb77
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 412d9150836511c88b85326d2ce59181a0566c57
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441355"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890594"
 ---
 # <a name="cwinthread-class"></a>CWinThread-Klasse
 
@@ -455,7 +455,7 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 Die bereitgestellte Nachricht wird an den entsprechenden Meldungshandler durch das Makro ON_THREAD_MESSAGE der Message-Zuordnung zugeordnet.
 
 > [!NOTE]
->  Beim Aufrufen der Windows [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946) Funktion in einer MFC-Anwendung die MFC-Nachricht, die Handler werden nicht aufgerufen. Weitere Informationen finden Sie im Knowledge Base-Artikel "PRB: MFC-Message-Handler nicht aufgerufen mit PostThreadMessage()" (Q142415).
+> Beim Aufruf [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946), die Nachricht wird in der Thread die Warteschlange eingefügt. Jedoch, da auf diese Weise zu geposteten Nachrichten keinem Fenster zugeordnet sind, wird MFC nicht diese an die Nachricht oder einen Befehl Handler ausgewählt werden. Um diese Nachrichten zu verarbeiten, überschreiben die `PreTranslateMessage()` Funktion Ihrer CWinApp-abgeleitete Klasse, und die Nachrichten manuell verarbeiten.
 
 ##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage
 
