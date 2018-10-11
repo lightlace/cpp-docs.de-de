@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f34bd3f1594a49737f4298316b5eb3fe08b866a3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fb88721c64666cc5b74bb51c1f92bd612b66fc4c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46038554"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083319"
 ---
 # <a name="string-and-character-literals--c"></a>Zeichenfolgen- und Zeichenliterale (C++)
 
@@ -80,7 +80,7 @@ int main()
 }
 ```
 
-Ein Zeichenfolgenliteral kann kein Präfix, auch kein `u8`-, `L`-, `u`- und  `U` -Präfix haben, um Codierung für schmale Zeichen (Einzelbyte oder Multibyte), UTF-8, breite Zeichen (UCS-2- oder UTF-16), UTF-16 bzw. UTF-32 zu kennzeichnen. Ein unformatiertes Zeichenfolgenliteral kann ein `R`-, `u8R`-, `LR`, `uR` - oder `UR` -Präfix für die jeweils in unformatierter Version vorliegende Entsprechung dieser Codierungen haben.  Um temporäre oder statische std::string-Werte zu erstellen, können Sie Zeichenfolgenliterale oder unformatierte Zeichenfolgenliterale mit einem `s` -Suffix verwenden. Weitere Informationen finden Sie im Abschnitt „Zeichenfolgenliterale“ weiter unten. Weitere Informationen zu den grundlegenden quellzeichensätzen, zu universellen Zeichennamen sowie mithilfe von Zeichen aus erweiterten Codepages in Ihrem Quellcode finden Sie [Zeichensätze](../cpp/character-sets.md).
+Ein Zeichenfolgenliteral kann kein Präfix, auch kein `u8`-, `L`-, `u`- und  `U` -Präfix haben, um Codierung für schmale Zeichen (Einzelbyte oder Multibyte), UTF-8, breite Zeichen (UCS-2- oder UTF-16), UTF-16 bzw. UTF-32 zu kennzeichnen. Ein unformatiertes Zeichenfolgenliteral kann ein `R`-, `u8R`-, `LR`, `uR` - oder `UR` -Präfix für die jeweils in unformatierter Version vorliegende Entsprechung dieser Codierungen haben.  Um temporäre oder statische std::string-Werte zu erstellen, können Sie Zeichenfolgenliterale oder unformatierte Zeichenfolgenliterale mit einem `s` -Suffix verwenden. Weitere Informationen finden Sie im Abschnitt „Zeichenfolgenliterale“ weiter unten. Weitere Informationen zu den grundlegenden Quellzeichensätzen, zu den universellen Zeichennamen sowie dazu, wie Sie Zeichen aus erweiterten Codepages in Ihrem Quellcode verwenden können, finden Sie unter [Character Sets](../cpp/character-sets.md).
 
 ## <a name="character-literals"></a>Zeichenliterale
 
@@ -211,7 +211,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
 
 Mit universellen Zeichennamen können keine Werte codiert werden, die sich im Ersatzcodepunktbereich D800 DFFF befinden. Für Unicode-Ersatzzeichenpaare geben Sie den universellen Zeichennamen an, indem Sie `\UNNNNNNNN`verwenden, wobei NNNNNNNN ein achtstellige Codepunkt für das Zeichen ist. Der Compiler generiert ggf. ein Ersatzzeichenpaar.
 
-In C++03 kann in der Sprache nur eine Teilmenge der Zeichen durch deren universelle Zeichennamen dargestellt werden und sind einige universelle Zeichennamen zulässig, die tatsächlich keine gültigen Unicode-Zeichen darstellen. Dieses Problem wurde in Standard C ++ 11 behoben. In C++11 können sowohl für Zeichen- und Zeichenfolgenliterale als auch für Bezeichner universelle Zeichennamen verwendet werden.  Weitere Informationen zu universellen Zeichennamen finden Sie unter [Zeichensätze](../cpp/character-sets.md). Weitere Informationen zu Unicode finden Sie unter [Unicode](https://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx). Weitere Informationen zu Ersatzzeichenpaaren finden Sie unter [Ersatzzeichenpaare und zusätzliche Zeichen](/windows/desktop/Intl/surrogates-and-supplementary-characters).
+In C++03 kann in der Sprache nur eine Teilmenge der Zeichen durch deren universelle Zeichennamen dargestellt werden und sind einige universelle Zeichennamen zulässig, die tatsächlich keine gültigen Unicode-Zeichen darstellen. Dieses Problem wurde in Standard C ++ 11 behoben. In C++11 können sowohl für Zeichen- und Zeichenfolgenliterale als auch für Bezeichner universelle Zeichennamen verwendet werden.  Weitere Informationen zu universellen Zeichennamen finden Sie unter [Character Sets](../cpp/character-sets.md). Weitere Informationen zu Unicode finden Sie unter [Unicode](https://msdn.microsoft.com/library/dd374081). Weitere Informationen zu Ersatzzeichenpaaren finden Sie im Artikel über [Ersatzzeichenpaare und zusätzliche Zeichen](/windows/desktop/Intl/surrogates-and-supplementary-characters).
 
 ## <a name="string-literals"></a>Zeichenfolgenliterale
 
@@ -257,7 +257,7 @@ auto s4 = U"hello"; // const char32_t*
 
 ### <a name="raw-string-literals-c11"></a>Unformatierte Zeichenfolgenliterale (C++11)
 
-Ein unformatiertes Zeichenfolgenliteral ist ein mit Null endendes Array – eines beliebigen Zeichentyps –, das jedes Schriftzeichen, einschließlich der doppelte Anführungszeichen ("), umgekehrtem Schrägstrich enthält (\\), oder die Zeilenendemarke enthält. Unformatierte Zeichenfolgenliterale werden häufig in regulären Ausdrücken, die Zeichenklassen verwenden, und in HTML-Zeichenfolgen und XML-Zeichenfolgen verwendet. Beispiele finden Sie im folgenden Artikel: [Bjarne Stroustrups FAQ zu C ++ 11](http://www.stroustrup.com/C++11FAQ.html).
+Ein unformatiertes Zeichenfolgenliteral ist ein mit Null endendes Array – eines beliebigen Zeichentyps –, das jedes Schriftzeichen, einschließlich der doppelte Anführungszeichen ("), umgekehrtem Schrägstrich enthält (\\), oder die Zeilenendemarke enthält. Unformatierte Zeichenfolgenliterale werden häufig in regulären Ausdrücken, die Zeichenklassen verwenden, und in HTML-Zeichenfolgen und XML-Zeichenfolgen verwendet. Beispiele finden Sie im folgenden Artikel: [Bjarne Stroustrups FAQ zu C++11](http://www.stroustrup.com/C++11FAQ.html).
 
 ```cpp
 // represents the string: An unescaped \ character

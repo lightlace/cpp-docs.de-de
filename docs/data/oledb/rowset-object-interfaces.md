@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 87b8b6893c8fdd04374919ceff1d28a61bc315e5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 58986c7b80f2bb84b222047efc7aae359c0cd5b1
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024663"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083891"
 ---
 # <a name="rowset-object-interfaces"></a>Rowsetobjekt-Schnittstellen
 
@@ -32,30 +32,30 @@ Die folgende Tabelle zeigt die erforderlichen und optionalen Schnittstellen, die
   
 |Interface|Erforderlich?|Vom OLE DB-Vorlagen implementiert?|  
 |---------------|---------------|--------------------------------------|  
-|[IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\))|Erforderlich|Ja|  
-|[IColumnsInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\))|Erforderlich|Ja|  
-|[IConvertType](/previous-versions/windows/desktop/ms715926\(v=vs.85\))|Erforderlich|Ja|  
-|[IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\))|Erforderlich|Ja|  
-|[IRowsetInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\))|Erforderlich|Ja|  
-|[IChapteredRowset](/previous-versions/windows/desktop/ms718180\(v=vs.85\))|Optional|Nein|  
-|[IColumnsInfo2](/previous-versions/windows/desktop/ms712953\(v=vs.85\))|Optional|Nein|  
-|[IColumnsRowset](/previous-versions/windows/desktop/ms722657\(v=vs.85\))|Optional|Nein|  
+|[IAccessor](/previous-versions/windows/desktop/ms719672)|Erforderlich|Ja|  
+|[IColumnsInfo](/previous-versions/windows/desktop/ms724541)|Erforderlich|Ja|  
+|[IConvertType](/previous-versions/windows/desktop/ms715926)|Erforderlich|Ja|  
+|[IRowset](/previous-versions/windows/desktop/ms720986)|Erforderlich|Ja|  
+|[IRowsetInfo](/previous-versions/windows/desktop/ms724541)|Erforderlich|Ja|  
+|[IChapteredRowset](/previous-versions/windows/desktop/ms718180)|Optional|Nein|  
+|[IColumnsInfo2](/previous-versions/windows/desktop/ms712953)|Optional|Nein|  
+|[IColumnsRowset](/previous-versions/windows/desktop/ms722657)|Optional|Nein|  
 |[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Optional|Ja (per ATL)|  
-|[IDBAsynchStatus](/previous-versions/windows/desktop/ms709832\(v=vs.85\))|Optional|Nein|  
-|[IGetRow](/previous-versions/windows/desktop/ms718047\(v=vs.85\))|Optional|Nein|  
-|[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))|Optional|Ja|  
-|[IRowsetChapterMember](/previous-versions/windows/desktop/ms725430\(v=vs.85\))|Optional|Nein|  
-|[IRowsetCurrentIndex](/previous-versions/windows/desktop/ms709700\(v=vs.85\))|Optional|Nein|  
-|[IRowsetFind](/previous-versions/windows/desktop/ms724221\(v=vs.85\))|Optional|Nein|  
-|[IRowsetIdentity](/previous-versions/windows/desktop/ms715913\(v=vs.85\))|Optional (jedoch erforderlich, für den Anbieter der Ebene 0)|Ja|  
-|[IRowsetIndex](/previous-versions/windows/desktop/ms719604\(v=vs.85\))|Optional|Nein|  
-|[IRowsetLocate](/previous-versions/windows/desktop/ms721190\(v=vs.85\))|Optional|Ja|  
-|[IRowsetRefresh](/previous-versions/windows/desktop/ms714892\(v=vs.85\))|Optional|Nein|  
-|[IRowsetScroll](/previous-versions/windows/desktop/ms712984\(v=vs.85\))|Optional|Nein|  
-|[IRowsetUpdate](/previous-versions/windows/desktop/ms714401\(v=vs.85\))|Optional|Ja|  
-|[IRowsetView](/previous-versions/windows/desktop/ms709755\(v=vs.85\))|Optional|Nein|  
-|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816\(v=vs.85\))|Optional|Ja|  
-|[IRowsetBookmark](/previous-versions/windows/desktop/ms714246\(v=vs.85\))|Optional|Nein|  
+|[IDBAsynchStatus](/previous-versions/windows/desktop/ms709832)|Optional|Nein|  
+|[IGetRow](/previous-versions/windows/desktop/ms718047)|Optional|Nein|  
+|[IRowsetChange](/previous-versions/windows/desktop/ms715790)|Optional|Ja|  
+|[IRowsetChapterMember](/previous-versions/windows/desktop/ms725430)|Optional|Nein|  
+|[IRowsetCurrentIndex](/previous-versions/windows/desktop/ms709700)|Optional|Nein|  
+|[IRowsetFind](/previous-versions/windows/desktop/ms724221)|Optional|Nein|  
+|[IRowsetIdentity](/previous-versions/windows/desktop/ms715913)|Optional (jedoch erforderlich, für den Anbieter der Ebene 0)|Ja|  
+|[IRowsetIndex](/previous-versions/windows/desktop/ms719604)|Optional|Nein|  
+|[IRowsetLocate](/previous-versions/windows/desktop/ms721190)|Optional|Ja|  
+|[IRowsetRefresh](/previous-versions/windows/desktop/ms714892)|Optional|Nein|  
+|[IRowsetScroll](/previous-versions/windows/desktop/ms712984)|Optional|Nein|  
+|[IRowsetUpdate](/previous-versions/windows/desktop/ms714401)|Optional|Ja|  
+|[IRowsetView](/previous-versions/windows/desktop/ms709755)|Optional|Nein|  
+|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816)|Optional|Ja|  
+|[IRowsetBookmark](/previous-versions/windows/desktop/ms714246)|Optional|Nein|  
   
 Vom Assistenten generierte Rowset-Objekt implementiert `IAccessor`, `IRowset`, und `IRowsetInfo` durch Vererbung. Die `IAccessorImpl` bindet beide Ausgabespalten. Die `IRowset` Schnittstelle kümmert sich um Abrufvorgänge Zeilen und Daten. Die `IRowsetInfo` Schnittstelle behandelt die Rowseteigenschaften.  
   

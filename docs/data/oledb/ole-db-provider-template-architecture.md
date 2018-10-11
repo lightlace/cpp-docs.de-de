@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 71e693c09d59643a272a0b2736a5a229ef444aa9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ebea06a70f82c8014b52bc8f8db081ca2f0264c7
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46078893"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082994"
 ---
 # <a name="ole-db-provider-template-architecture"></a>Architektur von OLE DB-Anbietervorlagen
 
@@ -50,7 +50,7 @@ Der OLE DB-Anbietervorlagen bieten vorgefertigte Implementierungen für alle erf
   
 Beachten Sie, dass der OLE DB-Anbietervorlagen nicht die Zeile und den Speicher implementiert werden.  
   
-Die folgende Tabelle enthält die erforderliche und optionale Schnittstellen für die oben aufgeführten Objekte gemäß den [OLE DB 2.6 SDK-Dokumentation](/previous-versions/windows/desktop/ms722784\(v=vs.85\)).  
+Die folgende Tabelle enthält die erforderliche und optionale Schnittstellen für die oben aufgeführten Objekte gemäß den [OLE DB 2.6 SDK-Dokumentation](/previous-versions/windows/desktop/ms722784).  
   
 |Komponente|Interface|Kommentar|  
 |---------------|---------------|-------------|  
@@ -69,4 +69,4 @@ Weitere Informationen finden Sie unter den folgenden Themen:
 ## <a name="see-also"></a>Siehe auch  
 
 [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB-Schnittstellen](/previous-versions/windows/desktop/ms709709\(v=vs.85\))
+[OLE DB-Schnittstellen](/previous-versions/windows/desktop/ms709709)

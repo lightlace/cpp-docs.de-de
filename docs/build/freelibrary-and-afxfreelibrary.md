@@ -23,16 +23,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e6c7e498100a60a3d4c592c343cc86b5ee0a0ea
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a86300b4814c8712f3cf88f91421dc1d0842e8a7
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713361"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081519"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>"FreeLibrary" und "AfxFreeLibrary"
 
-Prozesse, die explizite mit einer DLL-Aufrufs Verknüpfung der [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152(v=vs.85).aspx) funktionieren, wenn die DLL-Modul nicht mehr benötigt wird. Dieser Funktion verringert die Anzahl der Verweise des Moduls und, wenn der Verweiszähler NULL ist, wird herab aus dem Adressraum des Prozesses.
+Prozesse, die explizite mit einer DLL-Aufrufs Verknüpfung der [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary) funktionieren, wenn die DLL-Modul nicht mehr benötigt wird. Dieser Funktion verringert die Anzahl der Verweise des Moduls und, wenn der Verweiszähler NULL ist, wird herab aus dem Adressraum des Prozesses.
 
 In einer MFC-Anwendung verwenden ["AfxFreeLibrary"](../mfc/reference/application-information-and-management.md#afxfreelibrary) anstelle von `FreeLibrary` , eine MFC-Erweiterungs-DLL zu entladen. Die Schnittstelle (Funktionsprototyp) für `AfxFreeLibrary` ist identisch mit `FreeLibrary`.
 
@@ -51,5 +51,5 @@ In einer MFC-Anwendung verwenden ["AfxFreeLibrary"](../mfc/reference/application
 ## <a name="see-also"></a>Siehe auch
 
 [DLLs in Visual C++](../build/dlls-in-visual-cpp.md)<br/>
-[FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152(v=vs.85).aspx)
+[FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
 ["AfxFreeLibrary"](../mfc/reference/application-information-and-management.md#afxfreelibrary)

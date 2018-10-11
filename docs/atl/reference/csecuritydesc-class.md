@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 591465ed9c16485498174a710d2d37ff68425058
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3df63cbed5fcb17b01450435aa2d991ca3e0c5a8
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116866"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083917"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc-Klasse
 
@@ -563,7 +563,7 @@ bool SetControl(
 ### <a name="parameters"></a>Parameter
 
 *ControlBitsOfInterest*<br/>
-Eine SECURITY_DESCRIPTOR_CONTROL-Maske, die die festzulegenden Steuerungsbits angibt. Eine Liste der Flags, die festgelegt werden können, finden Sie unter [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).
+Eine SECURITY_DESCRIPTOR_CONTROL-Maske, die die festzulegenden Steuerungsbits angibt. Eine Liste der Flags, die festgelegt werden können, finden Sie unter [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582).
 
 *ControlBitsToSet*<br/>
 Eine SECURITY_DESCRIPTOR_CONTROL-Maske, die die neuen Werte für die Steuerbits gemäß gibt an die *ControlBitsOfInterest* Maske. Dieser Parameter kann eine Kombination der Flags für aufgeführt sein der *ControlBitsOfInterest* Parameter.
@@ -574,7 +574,7 @@ Gibt bei Erfolg true zurück, bei einem Fehler false.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode ruft [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).
+Diese Methode ruft [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582).
 
 ##  <a name="setdacl"></a>  CSecurityDesc:: SetDacl
 

@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c662099f3e7c42b75dc0cf197117144790f9df1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: be82fb1c1f77ae3204bed54257062f362d286844
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46108351"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083826"
 ---
 # <a name="updating-rowsets"></a>Aktualisieren von Rowsets
 
 Eine der grundlegenden Datenbankoperationen stellt das Aktualisieren des Datenspeichers bzw. das Schreiben von Daten in den Datenspeicher dar. In OLE DB ist der Aktualisierungsmechanismus einfach: Die Consumeranwendung legt die Werte gebundener Datenmember fest und schreibt diese Werte dann in das Rowset. Anschließend fordert der Consumer den Anbieter auf, den Datenspeicher zu aktualisieren.  
   
-Consumer können Rowsetdaten mithilfe folgender Methoden aktualisieren: Festlegen von Spaltenwerten innerhalb einer Zeile, Einfügen einer Zeile und Löschen einer Zeile. Zum Ausführen dieser Vorgänge, die OLE DB-Vorlagenklasse [CRowset](../../data/oledb/crowset-class.md) implementiert die [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) -Schnittstelle und überschreibt die folgenden Schnittstellenmethoden:  
+Consumer können Rowsetdaten mithilfe folgender Methoden aktualisieren: Festlegen von Spaltenwerten innerhalb einer Zeile, Einfügen einer Zeile und Löschen einer Zeile. Um diese Operationen vornehmen zu können, implementiert die OLE DB-Vorlagenklasse [CRowset](../../data/oledb/crowset-class.md) die [IRowsetChange](/previous-versions/windows/desktop/ms715790) -Schnittstelle und überschreibt die folgenden Schnittstellenmethoden:  
   
 - [SetData](../../data/oledb/crowset-setdata.md) ändert Spaltenwerte in einer Zeile eines Rowsets. Dies entspricht dem SQL-Befehl UPDATE.  
   
@@ -223,4 +223,4 @@ Schließlich ist einer der Hauptgründe für die Verwendung verzögerter Aktuali
 
 [Arbeiten mit OLE DB-Consumervorlagen](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
 [CRowset-Klasse](../../data/oledb/crowset-class.md)<br/>
-[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))
+[IRowsetChange](/previous-versions/windows/desktop/ms715790)

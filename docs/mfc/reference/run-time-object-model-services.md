@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6fb948efd63a8392661cc38a80393bc90d5e694
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 163ef22563141b9365bc2c086870877c7ad2bf00
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396447"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083592"
 ---
 # <a name="run-time-object-model-services"></a>Objektmodelldienste zur Laufzeit
 
@@ -92,7 +92,7 @@ Zeiger auf eine Null-terminierte Zeichenfolge, die den Namen der Funktion enthä
 
 ### <a name="remarks"></a>Hinweise
 
-Verwenden Sie dieses Makro, um zu bestimmen, ob die allgemeine Steuerelemente-Bibliothek die Funktion vom angegeben *Proc* (statt [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212).
+Verwenden Sie dieses Makro, um zu bestimmen, ob die allgemeine Steuerelemente-Bibliothek die Funktion vom angegeben *Proc* (statt [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -119,7 +119,7 @@ Zeiger auf eine Null-terminierte Zeichenfolge, die den Namen der Funktion enthä
 
 ### <a name="remarks"></a>Hinweise
 
-Verwenden Sie dieses Makro, um zu bestimmen, ob die allgemeine Steuerelemente-Bibliothek die Funktion vom angegeben *Proc* (statt [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212). Dieses Makro ist die Unicode-Version von AFX_COMCTL32_IF_EXISTS.
+Verwenden Sie dieses Makro, um zu bestimmen, ob die allgemeine Steuerelemente-Bibliothek die Funktion vom angegeben *Proc* (statt [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress). Dieses Makro ist die Unicode-Version von AFX_COMCTL32_IF_EXISTS.
 
 ### <a name="requirements"></a>Anforderungen
 

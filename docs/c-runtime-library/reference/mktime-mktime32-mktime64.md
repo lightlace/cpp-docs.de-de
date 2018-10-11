@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc8fbe595259b0f5e59d3ac844710222042540c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 68211c3807893d28adb5e90e8863967b7f60318f
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206067"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083566"
 ---
 # <a name="mktime-mktime32-mktime64"></a>mktime, _mktime32, _mktime64
 
@@ -93,7 +93,7 @@ Diese Funktionen können zum Überprüfen und Ausfüllen einer tm-Struktur verwe
 
 - Ein Wert kleiner als null gibt an, dass der C-Laufzeitbibliothekscode berechnet, ob Normalzeit oder Sommerzeit gilt.
 
-Die C-Laufzeitbibliothek bestimmt das Sommerzeitverhalten anhand der [ZZ](tzset.md)-Umgebungsvariable. Wenn **TZ** nicht festgelegt ist, den Win32-API-Aufruf [GetTimeZoneInformation](https://msdn.microsoft.com/library/windows/desktop/ms724421.aspx) wird verwendet, um die Sommerzeit Informationen vom Betriebssystem abzurufen. Wenn dies fehlschlägt, geht die Bibliothek davon aus, dass die Regeln der Vereinigten Staaten für die Implementierung der Berechnung der Sommerzeit angewendet werden. **Tm_isdst** ist ein Pflichtfeld. Wenn es nicht festgelegt wird, wird sein Wert nicht definiert und der Rückgabewert dieser Funktionen ist unvorhersehbar. Wenn *Timeptr* verweist auf eine **tm** durch einen vorherigen Aufruf zurückgegebene Struktur [Asctime](asctime-wasctime.md), [Gmtime](gmtime-gmtime32-gmtime64.md), oder [Localtime](localtime-localtime32-localtime64.md) (oder Varianten dieser Funktionen), die **Tm_isdst** Feld enthält den richtigen Wert.
+Die C-Laufzeitbibliothek bestimmt das Sommerzeitverhalten anhand der [ZZ](tzset.md)-Umgebungsvariable. Wenn **TZ** nicht festgelegt ist, den Win32-API-Aufruf [GetTimeZoneInformation](/windows/desktop/api/timezoneapi/nf-timezoneapi-gettimezoneinformation) wird verwendet, um die Sommerzeit Informationen vom Betriebssystem abzurufen. Wenn dies fehlschlägt, geht die Bibliothek davon aus, dass die Regeln der Vereinigten Staaten für die Implementierung der Berechnung der Sommerzeit angewendet werden. **Tm_isdst** ist ein Pflichtfeld. Wenn es nicht festgelegt wird, wird sein Wert nicht definiert und der Rückgabewert dieser Funktionen ist unvorhersehbar. Wenn *Timeptr* verweist auf eine **tm** durch einen vorherigen Aufruf zurückgegebene Struktur [Asctime](asctime-wasctime.md), [Gmtime](gmtime-gmtime32-gmtime64.md), oder [Localtime](localtime-localtime32-localtime64.md) (oder Varianten dieser Funktionen), die **Tm_isdst** Feld enthält den richtigen Wert.
 
 Beachten Sie, dass **Gmtime** und **Localtime** (und **_gmtime32**, **_gmtime64**, **_localtime32**, und **_localtime64**) verwenden Sie einen einzelnen Puffer pro Thread für die Konvertierung. Wenn Sie diesen Puffer für angeben **Mktime**, **_mktime32** oder **_mktime64**, der vorherige Inhalt zerstört.
 

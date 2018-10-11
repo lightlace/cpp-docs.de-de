@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5254adbf533a30da65349f2f8aadd100b8776d7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ef670aca60b2e3156ea70480a1dafc315ae60624
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755550"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061474"
 ---
 # <a name="do-while-statement-c"></a>do-while-Anweisung (C)
 
@@ -30,8 +30,7 @@ Mit der *do-while*-Anweisung wird eine Anweisung oder ein Anweisungsblock wieder
 
 ## <a name="syntax"></a>Syntax
 
-*iteration-statement*:  
-&nbsp;&nbsp;&nbsp;&nbsp;**do**  *statement*  **while (**  *Ausdruck*  **) ;**
+*iteration-statement*: &nbsp;&nbsp;&nbsp;&nbsp;**do** *Anweisung* **while (** *Ausdruck* **) ;**
 
 Der *Ausdruck* in einer *do-while*-Anweisung wird ausgewertet, nachdem der Text der Schleife ausgeführt wird. Daher wird der Text der Schleife immer mindestens einmal ausgeführt.
 
@@ -47,10 +46,10 @@ In diesem Beispiel wird die *do-while*-Anweisung veranschaulicht:
 
 ```C
 do
-{  
-    y = f( x );  
-    x--;  
-} while ( x > 0 );  
+{
+    y = f( x );
+    x--;
+} while ( x > 0 );
 ```
 
 In dieser *do-while*-Anweisung werden die beiden Anweisungen `y = f( x );` und `x--;` unabhängig vom Anfangswert von `x` ausgeführt. Anschließend wird `x > 0` ausgewertet. Wenn `x` größer als 0 ist, wird der Anweisungstext noch einmal ausgeführt und `x > 0` erneut ausgewertet. Der Anweisungstext wird wiederholt ausgeführt, solange `x` größer als 0 ist. Die Ausführung der *do-while*-Anweisung wird beendet, wenn `x` 0 oder negativ ist. Der Text der Schleife wird mindestens einmal ausgeführt.

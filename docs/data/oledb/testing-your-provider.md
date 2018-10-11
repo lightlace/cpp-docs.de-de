@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d175216fedb2e6a9139d970fc7696672576f7423
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 04687ed080013d9ae96a11eda32e060c02c61dec
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46042896"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081980"
 ---
 # <a name="testing-your-provider"></a>Testen des Anbieters
 
@@ -32,7 +32,7 @@ Bevor Sie einen Anbieter freigeben, sollten Sie die folgenden Tests in der angeg
   
 1. Testen Sie den Anbieter, die mit einer Consumeranwendung, die mit ADO geschrieben wurden. Die meisten Entwickler (insbesondere Microsoft Visual Basic und Microsoft C#-Entwickler) verwenden ADO- oder ADO.NET-Objekt für Consumer-Anwendungen. Der Testconsumer sollte alle Funktionsbereiche des Anbieters behandelt. Ein Beispiel für eine ADO-Consumer-Anwendung, finden Sie unter [ADO-Codebeispiele in Microsoft Visual Basic](https://msdn.microsoft.com/library/ms807514.aspx).  
   
-1. Führen Sie die OLE DB-Konformitätstests (einschließlich der ADO-Konformitätstests), um sicherzustellen, dass es sich bei Ihrem Anbieter die Ebene 0-standard für OLE DB-Anbieter erfüllt. (Eine Erläuterung der Ebene 0, suchen Sie nach "OLE DB-Ebene 0-Konformitätstests" am [OLE DB Programmer's Guide](/previous-versions/windows/desktop/ms713643\(v=vs.85\)). Diese Tests und die zugehörige Dokumentation sind in Visual C++ in das Data Access SDK enthalten. Diese Tests auch dabei helfen, um sicherzustellen, dass es sich bei Ihrem Anbieter ausgeführt wird, gut, wenn Sie von anderen aggregiert [-Dienstanbieter](../../data/oledb/ole-db-resource-pooling-and-services.md) und sind besonders nützlich, wenn Sie ändern oder Hinzufügen von Eigenschaften. Weitere Informationen zu den Konformitätstests finden Sie unter der Readme-Datei für das Data Access SDK, der auf einem der Visual Studio-CDs befindet.  
+1. Führen Sie die OLE DB-Konformitätstests (einschließlich der ADO-Konformitätstests), um sicherzustellen, dass es sich bei Ihrem Anbieter die Ebene 0-standard für OLE DB-Anbieter erfüllt. (Eine Erläuterung der Ebene 0, suchen Sie nach "OLE DB-Ebene 0-Konformitätstests" am [OLE DB Programmer's Guide](/previous-versions/windows/desktop/ms713643). Diese Tests und die zugehörige Dokumentation sind in Visual C++ in das Data Access SDK enthalten. Diese Tests auch dabei helfen, um sicherzustellen, dass es sich bei Ihrem Anbieter ausgeführt wird, gut, wenn Sie von anderen aggregiert [-Dienstanbieter](../../data/oledb/ole-db-resource-pooling-and-services.md) und sind besonders nützlich, wenn Sie ändern oder Hinzufügen von Eigenschaften. Weitere Informationen zu den Konformitätstests finden Sie unter der Readme-Datei für das Data Access SDK, der auf einem der Visual Studio-CDs befindet.  
   
 ## <a name="see-also"></a>Siehe auch  
 

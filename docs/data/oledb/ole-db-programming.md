@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 99d647e2e5a98c7e4c4433baaface66d1f987b32
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3ed6610f71561a62d3ff99a794bb166bdcabd3d3
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46073669"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083514"
 ---
 # <a name="ole-db-programming"></a>OLE DB-Programmierung
 
@@ -40,7 +40,7 @@ Darüber hinaus können Sie Attribute verwenden, um die OLE DB-Verbrauchervorla
 |Verwenden von OLE DB-Anbietervorlagen (konzeptionelle Themen)|[OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)|  
 |OLE DB-Vorlagenklassen und -Makros|[Referenz der OLE DB-Vorlagen](../../data/oledb/ole-db-templates.md) (Visual C++)|  
 |OLE DB-Consumerattribute|[OLE DB-Consumerattribute](../../windows/ole-db-consumer-attributes.md)|  
-|OLE DB-Schnittstellen|[OLE DB-Programmierreferenz](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) (im Windows SDK)|  
+|OLE DB-Schnittstellen|[OLE DB-Programmierreferenz](/previous-versions/windows/desktop/ms713643) (im Windows SDK)|  
 |OLE DB-Vorlagenbeispiele|[Beispiele für OLE DB-Vorlagen](https://github.com/Microsoft/VCSamples)| 
 |Übersicht über die Datenzugriffsprogrammierung (Visual C++)|[Datenzugriffsprogrammierung](../../data/data-access-programming-mfc-atl.md)|  
 |Konzeptionelle ODBC-Themen|[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)|  

@@ -101,16 +101,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a92f52f7d97e3c89de3d147c2c1b798d4af6d3a4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d0db07c8419db53d30612e6edbbe134634e37a74
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019457"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083943"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor-Klasse
 
-Ähnlich wie [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) Ruft Parameterinformationen durch Aufrufen von festgelegt werden, aber die [ICommandWithParameters](/sql/relational-databases/native-client-ole-db-interfaces/icommandwithparameters) Schnittstelle.
+Ähnlich wie [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) , ruft festzulegende Parameterinformationen aber durch Aufrufen der [ICommandWithParameters](/sql/relational-databases/native-client-ole-db-interfaces/icommandwithparameters) -Schnittstelle ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -323,7 +323,7 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 [in] Die Anzahl der Parameter (Offset von 1). Parameter 0 ist für Rückgabewerte reserviert. Die Anzahl der Parameter ist der Index des Parameters, die basierend auf der Reihenfolge, in der SQL oder der Aufruf der gespeicherten Prozedur. Finden Sie unter [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) verdeutlicht.  
   
 *pStatus*<br/>
-[out] Ein Zeiger auf die Variable mit dem DBSTATUS Status des angegebenen Parameters. Informationen zu DBSTATUS Werten finden Sie unter [Status](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) in die *OLE DB-Programmierreferenz*, oder suchen Sie nach DBSTATUS in der Datei oledb.h.  
+[out] Ein Zeiger auf die Variable mit dem DBSTATUS Status des angegebenen Parameters. Informationen zu DBSTATUS Werten finden Sie unter [Status](/previous-versions/windows/desktop/ms722617) in die *OLE DB-Programmierreferenz*, oder suchen Sie nach DBSTATUS in der Datei oledb.h.  
   
 ### <a name="remarks"></a>Hinweise  
 
@@ -434,8 +434,8 @@ Ein auf Vorlagen basierenden Parameter, der den Datentyp darstellt.
 *pData*<br/>
 [in] Der Zeiger auf den Arbeitsspeicher mit den Daten in den Puffer geschrieben werden sollen.  
   
-*status*<br/>
-[in] Folgender Spaltenstatus DBSTATUS. Informationen zu DBSTATUS Werten finden Sie unter [Status](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) in die *OLE DB-Programmierreferenz*, oder suchen Sie nach DBSTATUS in der Datei oledb.h.  
+*Status*<br/>
+[in] Folgender Spaltenstatus DBSTATUS. Informationen zu DBSTATUS Werten finden Sie unter [Status](/previous-versions/windows/desktop/ms722617) in die *OLE DB-Programmierreferenz*, oder suchen Sie nach DBSTATUS in der Datei oledb.h.  
   
 ### <a name="return-value"></a>Rückgabewert  
 
@@ -482,8 +482,8 @@ bool SetParamStatus(DBORDINAL nParam,
 *nParam*<br/>
 [in] Die Anzahl der Parameter (Offset von 1). Parameter 0 ist für Rückgabewerte reserviert. Die Anzahl der Parameter ist der Index des Parameters, die basierend auf der Reihenfolge, in der SQL oder der Aufruf der gespeicherten Prozedur. Finden Sie unter [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) verdeutlicht.  
   
-*status*<br/>
-[in] Der DBSTATUS Status des angegebenen Parameters. Informationen zu DBSTATUS Werten finden Sie unter [Status](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) in die *OLE DB-Programmierreferenz*, oder suchen Sie nach DBSTATUS in der Datei oledb.h.  
+*Status*<br/>
+[in] Der DBSTATUS Status des angegebenen Parameters. Informationen zu DBSTATUS Werten finden Sie unter [Status](/previous-versions/windows/desktop/ms722617) in die *OLE DB-Programmierreferenz*, oder suchen Sie nach DBSTATUS in der Datei oledb.h.  
   
 ### <a name="remarks"></a>Hinweise  
 
@@ -511,8 +511,8 @@ bool SetParamString(DBORDINAL nParam,
 *pString*<br/>
 [in] Ein Zeiger auf die ANSI (**CHAR**) oder Unicode (**WCHAR**) Zeichenfolgendaten des angegebenen Parameters. Sehen Sie in der Datei oledb.h DBSTATUS.  
   
-*status*<br/>
-[in] Der DBSTATUS Status des angegebenen Parameters. Informationen zu DBSTATUS Werten finden Sie unter [Status](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) in die *OLE DB-Programmierreferenz*, oder suchen Sie nach DBSTATUS in der Datei oledb.h.  
+*Status*<br/>
+[in] Der DBSTATUS Status des angegebenen Parameters. Informationen zu DBSTATUS Werten finden Sie unter [Status](/previous-versions/windows/desktop/ms722617) in die *OLE DB-Programmierreferenz*, oder suchen Sie nach DBSTATUS in der Datei oledb.h.  
   
 ### <a name="remarks"></a>Hinweise  
 

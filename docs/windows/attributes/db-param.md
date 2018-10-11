@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dda702a9c9df9662dc6ca3c38143853e8a407f43
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 153e1bba37b10da64b394c48ee1cf8c059ae86e9
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791241"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083022"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -49,16 +49,16 @@ Die Nummer der Spalte (DBCOLUMNINFO-Ordnungszahl) für ein Feld in das Rowset, u
 - DBPARAMIO_NOTPARAM der Accessor hat keine Parameter. Festlegen von `eParamIO` auf diesen Wert in Zeile Accessoren daran erinnert werden dem Benutzer, dass Parameter ignoriert werden.
 
 *DbType*<br/>
-(Optional) OLE DB [Typindikator](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) für den Eintrag in der Spalte.
+(Optional) OLE DB [Typindikator](/previous-versions/windows/desktop/ms711251) für den Eintrag in der Spalte.
 
 *precision*<br/>
-(Optional) Die Genauigkeit für den Eintrag in der Spalte verwendet werden soll. Weitere Informationen finden Sie unter der Beschreibung der `bPrecision` Element der [DBBINDING-Struktur](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+(Optional) Die Genauigkeit für den Eintrag in der Spalte verwendet werden soll. Weitere Informationen finden Sie unter der Beschreibung der `bPrecision` Element der [DBBINDING-Struktur](/previous-versions/windows/desktop/ms716845)
 
 *Skalieren*<br/>
-(Optional) Die Dezimalstellen für den Eintrag in der Spalte verwendet werden soll. Weitere Informationen finden Sie unter der Beschreibung der `bScale` Element der [DBBINDING-Struktur](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+(Optional) Die Dezimalstellen für den Eintrag in der Spalte verwendet werden soll. Weitere Informationen finden Sie unter der Beschreibung der `bScale` Element der [DBBINDING-Struktur](/previous-versions/windows/desktop/ms716845)
 
-*status*<br/>
-(Optional) Eine Membervariable verwendet, um den Status dieser Spalte zu speichern. Der Status gibt an, ob der Wert der Spalte einen Datenwert oder einen anderen Wert, z. B. die NULL ist. Mögliche Werte finden Sie unter [Status](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.
+*Status*<br/>
+(Optional) Eine Membervariable verwendet, um den Status dieser Spalte zu speichern. Der Status gibt an, ob der Wert der Spalte einen Datenwert oder einen anderen Wert, z. B. die NULL ist. Mögliche Werte finden Sie unter [Status](/previous-versions/windows/desktop/ms722617) in die *OLE DB-Programmierreferenz*.
 
 *length*<br/>
 (Optional) Eine Membervariable verwendet, um die Größe der Spalte in Bytes zu speichern.
@@ -124,7 +124,7 @@ struct CSalesbyYear {
 |**Erforderliche Attribute**|Keiner|
 |**Ungültige Attribute**|Keiner|
 
-Weitere Informationen zu den attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 60bed04015060bd65f4d4c771a228e3b50c3486e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8c4e3003beb0e50887f6b765904095c65dd8f1b6
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057098"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083657"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Abrufen von Metadaten mit Schemarowsets
 
@@ -63,7 +63,7 @@ CRestrictions<CAccessor<CColumnsInfo>
   
 Die [CRestrictions](../../data/oledb/crestrictions-class.md) -Klasse stellt Unterstützung für die Einschränkung. Rufen Sie nach der Erstellung einer Instanz des Schemarowsets [CRestrictions:: Open](../../data/oledb/crestrictions-open.md). Diese Methode gibt auf der Grundlage der von Ihnen angegebenen Einschränkungen ein Resultset zurück.  
   
-Einschränkungen finden Sie unter [Anhang B: Schemarowsets](/previous-versions/windows/desktop/ms712921\(v=vs.85\)) und suchen Sie das Rowset, das Sie verwenden. Z. B. `CColumns` entspricht der [COLUMNS-Rowset](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); dieses Themas werden die einchränkungsspalten im COLUMNS-Rowset aufgelistet: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Sie müssen diese Reihenfolge beim Angeben der Einschränkungen einhalten.  
+Einschränkungen finden Sie unter [Anhang B: Schemarowsets](/previous-versions/windows/desktop/ms712921) und suchen Sie das Rowset, das Sie verwenden. Z. B. `CColumns` entspricht der [COLUMNS-Rowset](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); dieses Themas werden die einchränkungsspalten im COLUMNS-Rowset aufgelistet: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Sie müssen diese Reihenfolge beim Angeben der Einschränkungen einhalten.  
   
 Also beispielsweise, wenn Sie möchten die Grundlage des Tabellennamens einzuschränken, beachten Sie, dass TABLE_NAME die dritte Einschränkungsspalte ist, und rufen Sie anschließend `Open`, den gewünschten Tabellennamen als dritten Einschränkungsparameter an, angeben, wie im folgenden Beispiel gezeigt.  
   
@@ -93,7 +93,7 @@ Also beispielsweise, wenn Sie möchten die Grundlage des Tabellennamens einzusch
   
 Für den Verweis auf das Schemarowset, TypeDef-Klassen, die in den OLE DB-Vorlagen bereitgestellt (siehe [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)).  
   
-Weitere Informationen zu OLE DB-Schemarowsets, einschließlich der einchränkungsspalten, finden Sie unter [Anhang B: Schemarowsets](/previous-versions/windows/desktop/ms712921\(v=vs.85\)) in der OLE DB Programmer's Reference.  
+Weitere Informationen zu OLE DB-Schemarowsets, einschließlich der einchränkungsspalten, finden Sie unter [Anhang B: Schemarowsets](/previous-versions/windows/desktop/ms712921) in der OLE DB Programmer's Reference.  
   
 Komplexere Beispiele zur Verwendung von Schemarowset-Klassen finden Sie in der [CatDB](https://github.com/Microsoft/VCSamples) und [DBViewer](https://github.com/Microsoft/VCSamples) Beispiele.  
   

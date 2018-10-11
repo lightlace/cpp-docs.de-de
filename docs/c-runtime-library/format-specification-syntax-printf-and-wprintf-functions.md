@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfb885a5d29c26f4a40d5b93490a06652eff1ffc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6253b52d322982efe8beafc45c9942fb3787818a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216671"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082494"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Syntax der Formatangabe: printf- und wprintf-Funktionen
 
@@ -58,8 +58,7 @@ Die Argumente, die der Formatzeichenfolge folgen, werden nach dem entsprechenden
 Ganzzahlige Typen wie `short`, `int`, `long`, `long long` und ihre `unsigned`-Varianten werden durch **d**, **i**, **o**, **u**, **x** und **X** angegeben. Gleitkommatypen wie `float`, `double` und `long double`, werden durch **a**, **A**, **e**, **E**, **f**, **F**, **g** und **G** angegeben. Sofern Sie nicht durch ein *Größen*präfix geändert werden, werden ganzzahlige Argumente standardmäßig in den `int`-Typ umgewandelt. Gleitkommaargumente werden in `double` umgewandelt. Bei 64-Bit-Systemen ist `int` ein 32-Bit-Wert. Daher werden ganze 64-Bit-Zahlen verkürzt, wenn sie für Ausgabe formatiert werden, sofern nicht ein *Größen*präfix von **ll** oder **I64** verwendet wird. Durch **p** angegebene Zeigertypen verwenden die Standardzeigergröße für die Plattform.
 
 > [!NOTE]
-> **Microsoft-spezifisch**  
-> Das **Z**-Typzeichen sowie das Verhalten der **c**-, **C**-, **s**- und **S**-Typzeichen stellen bei Verwendung mit `printf`- und `wprintf`-Funktionen Microsoft-Erweiterungen dar. Der ISO C-Standard verwendet konsistent **c** und **s** für schmale Zeichen und Zeichenfolgen sowie **C** und **S** für Breitzeichen und Zeichenfolgen in allen Formatierungsfunktionen.
+> **Microsoft-spezifisch**: Das **Z**-Typzeichen sowie das Verhalten der **c**-, **C**-, **s**- und **S**-Typzeichen stellen bei Verwendung mit `printf`- und `wprintf`-Funktionen Microsoft-Erweiterungen dar. Der ISO C-Standard verwendet konsistent **c** und **s** für schmale Zeichen und Zeichenfolgen sowie **C** und **S** für Breitzeichen und Zeichenfolgen in allen Formatierungsfunktionen.
 
 ### <a name="type-field-characters"></a>Typenfeldzeichen
 
@@ -212,11 +211,10 @@ Obwohl `long double` in Visual C++ ein gesonderter Typ ist, hat er die gleiche i
 Ein **hc**- oder **hC**-Typspezifizierer ist mit **c** in `printf`-Funktionen und mit **C** in `wprintf`-Funktionen synonym. Ein **lc**-, **lC**-, **wc**- oder **wC**-Typspezifizierer ist mit **C** in `printf`-Funktionen und mit **c** in `wprintf`-Funktionen synonym. Ein **hs**- oder **hS**-Typspezifizierer ist mit **s** in `printf`-Funktionen und mit **S** in `wprintf`-Funktionen synonym. Ein **ls**-, **lS**-, **ws**- oder **wS**-Typspezifizierer ist mit **S** in `printf`-Funktionen und mit **s** in `wprintf`-Funktionen synonym.
 
 > [!NOTE]
-> **Microsoft-spezifisch**  
-> Die Präfixe der Argumentgrößenmodifizierer **I** (i als Großbuchstabe), **I32**, **I64** und **w** sind Microsoft-Erweiterungen und nicht ISO C-konform. Das **h**-Präfix, wenn es mit Daten des Typs `char` und das **I**-Präfix (Kleinbuchstabe „l“), wenn es mit Daten des Typs `double` verwendet wird, sind Microsoft-Erweiterungen.
+> **Microsoft-spezifisch**: Die Präfixe der Argumentgrößenmodifizierer **I** (i als Großbuchstabe), **I32**, **I64** und **w** sind Microsoft-Erweiterungen und nicht ISO C-konform. Das **h**-Präfix, wenn es mit Daten des Typs `char` und das **I**-Präfix (Kleinbuchstabe „l“), wenn es mit Daten des Typs `double` verwendet wird, sind Microsoft-Erweiterungen.
 
 ## <a name="see-also"></a>Siehe auch
 
-[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)  
-[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)  
-[printf_p-Positionsparameter](../c-runtime-library/printf-p-positional-parameters.md)  
+[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)<br/>
+[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>
+[printf_p-Positionsparameter](../c-runtime-library/printf-p-positional-parameters.md)

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f87b8ce4c8270b8f0d22c2396358e8e1118a4bbd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 57bd79e1df35f650d78da3108137d58405b33f25
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765042"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082013"
 ---
 # <a name="c-string-literals"></a>C-Zeichenfolgenliterale
 
@@ -29,17 +29,11 @@ Ein „Zeichenfolgenliteral“ ist eine Folge von Zeichen aus dem Quellzeichensa
 
 ## <a name="syntax"></a>Syntax
 
-*string-literal*:  
-&nbsp;&nbsp;&nbsp;&nbsp;**"** *s-char-sequence*<sub>opt</sub> **"**  
-&nbsp;&nbsp;&nbsp;&nbsp;**L"** *s-char-sequence*<sub>opt</sub> **"**
+*string-literal*: &nbsp;&nbsp;&nbsp;&nbsp;**"** *s-char-sequence*<sub>opt</sub> **"** &nbsp;&nbsp;&nbsp;&nbsp;**L"** *s-char-sequence*<sub>opt</sub> **"**
 
-*s-char-sequence*:  
-&nbsp;&nbsp;&nbsp;&nbsp;*s-char*  
-&nbsp;&nbsp;&nbsp;&nbsp;*s-char-sequence* *s-char*
+*s-char-sequence*: &nbsp;&nbsp;&nbsp;&nbsp;*s-char* &nbsp;&nbsp;&nbsp;&nbsp;*s-char-sequence* *s-char*
 
-*s-char*:  
-&nbsp;&nbsp;&nbsp;&nbsp;alle Elemente des Quellzeichensatzes mit Ausnahme von doppelten Anführungszeichen ("), umgekehrtem Schrägstrich (\\) oder Zeilenumbruchzeichen  
-&nbsp;&nbsp;&nbsp;&nbsp;*escape-sequence*
+*s-char*: &nbsp;&nbsp;&nbsp;&nbsp;Alle Elemente des Quellzeichensatzes mit Ausnahme von doppelten Anführungszeichen ("), umgekehrtem Schrägstrich (\\) oder Zeilenumbruchzeichen&nbsp;&nbsp;&nbsp;&nbsp;*Escapesequenz*
 
 ## <a name="remarks"></a>Hinweise
 
@@ -53,4 +47,4 @@ Alle Umschaltcodes, die in der Tabelle [Escapesequenzen](../c-language/escape-se
 
 ## <a name="see-also"></a>Siehe auch
 
-[C-Elemente](../c-language/elements-of-c.md)  
+[C-Elemente](../c-language/elements-of-c.md)

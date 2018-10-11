@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 71ada4927d1a29c2f4d9a95ed93554b0cbffc92d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: e999928e2080796c013107e3bc862d19426dbf88
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791411"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083527"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -57,7 +57,7 @@ Definiert den Bibliotheksblock in der IDL-Datei.
 Eindeutige ID für die Bibliothek. Wenn Sie diesen Parameter weglassen, wird automatisch eine ID für die Bibliothek generiert. Müssen Sie möglicherweise Abrufen der *Uuid* des Blocks Bibliothek, die Sie mithilfe des Bezeichners können **__uuidof (** *Libraryname* **)**.
 
 *lcid*<br/>
-Der Lokalisierungsparameter. Finden Sie unter [Lcid](/windows/desktop/Midl/lcid) für Weitere Informationen.
+Der Lokalisierungsparameter. Weitere Informationen finden Sie unter [lcid](/windows/desktop/Midl/lcid) .
 
 *Steuerelement*<br/>
 (Optional) Gibt an, dass alle Co-Klassen in der Bibliothek Steuerelemente sind.
@@ -66,7 +66,7 @@ Der Lokalisierungsparameter. Finden Sie unter [Lcid](/windows/desktop/Midl/lcid)
 Gibt die Typbibliothek an.
 
 *helpstringdll*<br/>
-(Optional) Legt den Namen der DLL-Datei zu verwenden, um eine Suche nach Dokument auszuführen. Finden Sie unter [Helpstringdll](/windows/desktop/Midl/helpstringdll) für Weitere Informationen.
+(Optional) Legt den Namen der DLL-Datei zu verwenden, um eine Suche nach Dokument auszuführen. Weitere Informationen finden Sie unter [helpstringdll](/windows/desktop/Midl/helpstringdll) .
 
 *helpfile*<br/>
 (Optional) Der Name des der **Hilfe** -Datei für die Typbibliothek.
@@ -78,10 +78,10 @@ Gibt die Typbibliothek an.
 (Optional) Finden Sie unter [Helpstringcontext](helpstringcontext.md) für Weitere Informationen.
 
 *hidden*<br/>
-(Optional) Verhindert, dass die gesamte Bibliothek angezeigt wird. Dies ist für die Verwendung mit Steuerelementen vorgesehen. Hosts müssen eine neue Typbibliothek erstellen, die das Steuerelement mit erweiterten Eigenschaften umschließt. Finden Sie unter den [ausgeblendeten](/windows/desktop/Midl/hidden) MIDL-Attribut für Weitere Informationen.
+(Optional) Verhindert, dass die gesamte Bibliothek angezeigt wird. Dies ist für die Verwendung mit Steuerelementen vorgesehen. Hosts müssen eine neue Typbibliothek erstellen, die das Steuerelement mit erweiterten Eigenschaften umschließt. Weitere Informationen finden Sie unter [hidden](/windows/desktop/Midl/hidden) MIDL-Attribut.
 
 *restricted*<br/>
-(Optional) Mitglieder der Bibliothek können nicht beliebig aufgerufen werden. Finden Sie unter den [eingeschränkten](/windows/desktop/Midl/restricted) MIDL-Attribut für Weitere Informationen.
+(Optional) Mitglieder der Bibliothek können nicht beliebig aufgerufen werden. Weitere Informationen finden Sie unter [restricted](/windows/desktop/Midl/restricted) MIDL-Attribut.
 
 *Benutzerdefinierte*<br/>
 (Optional) Ein oder mehrere Attribute; Dies ist vergleichbar mit der [benutzerdefinierte](custom-cpp.md) Attribut. Der erste Parameter für *benutzerdefinierte* ist die GUID des Attributs. Zum Beispiel:
@@ -98,9 +98,9 @@ Die Zeichenfolgenressource-ID der RGS-Datei, die verwendet wird, um die APP-ID d
 
 ## <a name="remarks"></a>Hinweise
 
-Es sei denn, Sie geben die *eingeschränkten* Parameter, um [Emitidl](emitidl.md), **Modul** muss in jedem Programm, das C++-Attribute verwendet.
+Wenn Sie nicht den Parameter *restricted* auf [emitidl](emitidl.md)setzen, ist **module** in jedem Programm erforderlich, das C++-Attribute verwendet.
 
-Ein bibliotheksblock wird erstellt, wenn Sie zusätzlich zu den **Modul** -Attribut, Quellcode verwendet, die auch [Dispinterface](dispinterface.md), [dual](dual.md), [Objekt](object-cpp.md), oder ein Attribut, impliziert [Co-Klasse](coclass.md).
+Ein Bibliotheksblock wird erstellt, wenn Sie zusätzlich zum **module** -Attribut im Quellcode auch [dispinterface](dispinterface.md), [dual](dual.md), [object](object-cpp.md)oder ein Attribut, das [coclass](coclass.md)impliziert, verwenden.
 
 Pro IDL-Datei ist ein Bibliotheksblock zulässig. Mehrere Modul-Einträge im Quellcode werden zusammengeführt und die neuesten Parameterwerte werden implementiert.
 
@@ -108,7 +108,7 @@ Wenn dieses Attribut in einem Projekt verwendet wird, das ATL verwendet, ändert
 
 - `type` = **dll**
 
-   [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) dient als Basisklasse und standard-DLL-Einstiegspunkte Punkte, die für einen COM-Server erforderlich sind. Diese Einstiegspunkte sind [DllMain](/windows/desktop/Dlls/dllmain), [DllRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms682162), [DllUnRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms691457), ["DllCanUnloadNow"](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), und [ DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891).
+   [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) dient als Basisklasse und als für einen COM-Server erforderliche Standard-DLL-Einstiegspunkte. Diese Einstiegspunkte sind [DllMain](/windows/desktop/Dlls/dllmain), [DllRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllregisterserver), [DllUnRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllunregisterserver), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)und [DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891).
 
 - `type` = **exe**
 
@@ -132,7 +132,7 @@ Der folgende Code zeigt, wie ein Bibliotheksblock in der generierten IDL-Datei e
 [module(name="MyLibrary", version="1.2", helpfile="MyHelpFile")];
 ```
 
-Der folgende Code zeigt, dass Sie Ihre eigene Implementierung einer Funktion angeben können, die in dem Code angezeigt wird, der durch die Verwendung von **module**eingefügt wurde. Finden Sie unter [/FX](../../build/reference/fx-merge-injected-code.md) Weitere Informationen zum Anzeigen von injiziertem Code. Um eine der Funktionen zu überschreiben, die vom Attribut **module** eingefügt wurden, erstellen Sie eine Klasse, die die Implementierung der Funktion enthält, und wenden Sie das Attribut **module** auf diese Klasse an.
+Der folgende Code zeigt, dass Sie Ihre eigene Implementierung einer Funktion angeben können, die in dem Code angezeigt wird, der durch die Verwendung von **module**eingefügt wurde. Weitere Informationen zum Anzeigen von eingefügtem Code finden Sie unter [/Fx](../../build/reference/fx-merge-injected-code.md) . Um eine der Funktionen zu überschreiben, die vom Attribut **module** eingefügt wurden, erstellen Sie eine Klasse, die die Implementierung der Funktion enthält, und wenden Sie das Attribut **module** auf diese Klasse an.
 
 ```cpp
 // cpp_attr_ref_module2.cpp

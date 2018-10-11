@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 24701e2bab154f0815408f4e2e3e37e56ad6d823
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5e5972eab67e19752700ac5f8a027288eb6fc43c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092531"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083683"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: Direktes Aufrufen von ODBC-API-Funktionen
 
@@ -49,7 +49,7 @@ Zum Aufrufen von einer ODBC-API-Funktion müssen Sie direkt die gleichen Schritt
   
 - Wenn Sie fertig sind, heben Sie die Zuordnung "Storage".  
   
-Weitere Informationen zu diesen Schritten finden Sie unter den [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) -SDK in der MSDN-Dokumentation.  
+Weitere Informationen zu diesen Schritten finden Sie unter den [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252) -SDK in der MSDN-Dokumentation.  
   
 Zusätzlich zu diesen Schritten müssen Sie auch zusätzliche Schritte zum Überprüfen von Rückgabewerten der Funktion, stellen Sie sicher, dass das Programm nicht wartet, für einen asynchronen Aufruf abzuschließen, und so weiter. Sie können diese letzten Schritte vereinfachen, mit der AFX_SQL_ASYNC und AFX_SQL_SYNC-Makros. Weitere Informationen finden Sie unter [Makros und Globals](../../mfc/reference/mfc-macros-and-globals.md) in die *MFC-Referenz*.  
 

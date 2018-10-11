@@ -27,48 +27,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 279f4beb3b550f672ac3950c31f3653ca1f00ba2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: defd5f630f1d3832014e2cc7e9746c0e00e8d816
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409357"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070664"
 ---
 # <a name="signal-constants"></a>Signalkonstanten
-## <a name="syntax"></a>Syntax  
-  
-```  
-#include <signal.h>  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Das `sig`-Argument muss eine der unten aufgelisteten (und in SIGNAL.H definierten) Manifestkonstanten sein.  
-  
- `SIGABRT`  
- Nicht ordnungsgemäße Beendigung. Die Standardaktion beendet das aufrufende Programm mit Exitcode 3.  
-  
- `SIGABRT_COMPAT`  
- Identisch mit SIGABRT. Zur Kompatibilität mit anderen Plattformen.  
-  
- `SIGFPE`  
- Gleitkommafehler, z.B. Überlauf, Division durch 0 (null) oder eine ungültige Operation. Die Standardaktion beendet das aufrufende Programm.  
-  
- `SIGILL`  
- Ungültige Anweisung. Die Standardaktion beendet das aufrufende Programm.  
-  
- `SIGINT`  
- STRG+C-Unterbrechung. Die Standardaktion beendet das aufrufende Programm mit Exitcode 3.  
-  
- `SIGSEGV`  
- Ungültiger Speicherzugriff. Die Standardaktion beendet das aufrufende Programm.  
-  
- `SIGTERM`  
- An das Programm gesendete Beendigungsanforderung. Die Standardaktion beendet das aufrufende Programm mit Exitcode 3.  
-  
- `SIG_ERR`  
- Ein Rückgabetyp aus einem Signal, der angibt, das ein Fehler aufgetreten ist.  
-  
-## <a name="see-also"></a>Siehe auch  
- [signal](../c-runtime-library/reference/signal.md)   
- [__raise](../c-runtime-library/reference/raise.md)   
- [Globale Konstanten](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Syntax
+
+```
+#include <signal.h>
+```
+
+## <a name="remarks"></a>Hinweise
+
+Das `sig`-Argument muss eine der unten aufgelisteten (und in SIGNAL.H definierten) Manifestkonstanten sein.
+
+|||
+|-|-|
+|SIGABRT|Nicht ordnungsgemäße Beendigung. Die Standardaktion beendet das aufrufende Programm mit Exitcode 3.  |
+|SIGABRT_COMPAT|Identisch mit SIGABRT. Zur Kompatibilität mit anderen Plattformen.  |
+|SIGFPE|Gleitkommafehler, z.B. Überlauf, Division durch 0 (null) oder eine ungültige Operation. Die Standardaktion beendet das aufrufende Programm.  |
+|SIGILL|Ungültige Anweisung. Die Standardaktion beendet das aufrufende Programm.  |
+|SIGINT|STRG+C-Unterbrechung. Die Standardaktion beendet das aufrufende Programm mit Exitcode 3.  |
+|SIGSEGV|Ungültiger Speicherzugriff. Die Standardaktion beendet das aufrufende Programm.  |
+|SIGTERM|An das Programm gesendete Beendigungsanforderung. Die Standardaktion beendet das aufrufende Programm mit Exitcode 3.  |
+|SIG_ERR|Ein Rückgabetyp aus einem Signal, der angibt, das ein Fehler aufgetreten ist.  |
+
+## <a name="see-also"></a>Siehe auch
+
+[signal](../c-runtime-library/reference/signal.md)<br/>
+[raise](../c-runtime-library/reference/raise.md)<br/>
+[Globale Konstanten](../c-runtime-library/global-constants.md)

@@ -15,29 +15,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a9b2aa4389d693cfc6734a29f3a744e955ca3ea
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 201e6f0591d446dc0e6b036cfd7ac6f3028eb812
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213792"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430262"
 ---
 # <a name="stock-properties"></a>Basiseigenschaften
-Wenn Sie einer MFC-Disp-Schnittstelle mithilfe des [Assistenten zum Hinzufügen von Eigenschaften](../ide/idl-attributes-add-property-wizard.md) eine Eigenschaft hinzufügen, können Sie auf der [Namen](../ide/names-add-property-wizard.md)-Seite des Assistenten eine Basiseigenschaft aus der Liste **Eigenschaftennamen** auswählen. Dort stehen die folgenden Eigenschaften zur Auswahl:  
-  
-|Name der Eigenschaft|Beschreibung |  
-|-------------------|-----------------|  
-|**Darstellung**|Ruft einen Wert ab, der die Darstellung des Steuerelements bestimmt, oder legt diesen fest. Die Eigenschaft **Darstellung** des Steuerelements kann dreidimensionale Anzeigeeffekte anzeigen oder ausblenden. Dies ist eine Ambient-Lese-/Schreibeigenschaft.|  
-|`BackColor`|Gibt die Ambient-Eigenschaft `BackColor` des Steuerelements zurück oder legt diese auf eine Palettenfarbe (RGB) oder eine vordefinierte Systemfarbe fest. Der Wert entspricht standardmäßig der Vordergrundfarbe des Containers des Steuerelements. Dies ist eine Ambient-Lese-/Schreibeigenschaft.|  
-|`BorderStyle`|Gibt die Rahmenart eines Steuerelements zurück oder legt diese fest. Dies ist eine Lese-/Schreibeigenschaft.|  
-|**Beschriftung**|Gibt die Eigenschaft **Beschriftung** des Steuerelements zurück oder legt diese fest. Die Beschriftung ist der Titel des Fensters. **Beschriftung** verfügt nicht über den Implementierungstyp **Membervariable**.|  
-|**Aktiviert**|Gibt die Eigenschaft **Aktiviert** des Steuerelements zurück oder legt diese fest. Ein aktiviertes Steuerelement kann auf vom Benutzer generierte Ereignisse reagieren.|  
-|**Schriftart**|Gibt die Ambient-Schriftart des Steuerelements zurück oder legt diese fest. Wenn das Steuerelement über keine Schriftart verfügt, wird NULL zurückgegeben.|  
-|`ForeColor`|Gibt die Ambient-Eigenschaft `ForeColor` des Steuerelements zurück oder legt diese fest.|  
-|**hWnd**|Gibt die **hWnd**-Eigenschaft des Steuerelements zurück oder legt diese fest. **hWnd** verfügt nicht über den Implementierungstyp **Membervariable**.|  
-|**ReadyState**|Gibt die **ReadyState**-Eigenschaft des Steuerelements zurück oder legt diese fest. Ein Steuerelement kann folgenden Status aufweisen: nicht initialisiert, initialisiert, wird geladen, interaktiv und abgeschlossen. Weitere Informationen finden Sie unter [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx) im *Internet SDK*.|  
-|**Text**|Gibt den Text zurück, der in einem Steuerelement enthalten ist, oder legt diesen fest. **Text** verfügt nicht über den Implementierungstyp **Membervariable**.|  
-  
-## <a name="see-also"></a>Siehe auch  
- [Adding a Property (Hinzufügen einer Eigenschaft)](../ide/adding-a-property-visual-cpp.md)   
- [IDL-Attribute, Assistent zum Hinzufügen von Eigenschaften](../ide/idl-attributes-add-property-wizard.md)
+
+Wenn Sie einer MFC-Disp-Schnittstelle mithilfe des [Assistenten zum Hinzufügen von Eigenschaften](../ide/idl-attributes-add-property-wizard.md) eine Eigenschaft hinzufügen, können Sie auf der [Namen](../ide/names-add-property-wizard.md)-Seite des Assistenten eine Basiseigenschaft aus der Liste **Eigenschaftennamen** auswählen. Dort stehen die folgenden Eigenschaften zur Auswahl:
+
+|Name der Eigenschaft|Beschreibung |
+|-------------------|-----------------|
+|**Darstellung**|Ruft einen Wert ab, der die Darstellung des Steuerelements bestimmt, oder legt diesen fest. Die Eigenschaft **Darstellung** des Steuerelements kann dreidimensionale Anzeigeeffekte anzeigen oder ausblenden. Dies ist eine Ambient-Lese-/Schreibeigenschaft.|
+|`BackColor`|Gibt die Ambient-Eigenschaft `BackColor` des Steuerelements zurück oder legt diese auf eine Palettenfarbe (RGB) oder eine vordefinierte Systemfarbe fest. Der Wert entspricht standardmäßig der Vordergrundfarbe des Containers des Steuerelements. Dies ist eine Ambient-Lese-/Schreibeigenschaft.|
+|`BorderStyle`|Gibt die Rahmenart eines Steuerelements zurück oder legt diese fest. Dies ist eine Lese-/Schreibeigenschaft.|
+|**Beschriftung**|Gibt die Eigenschaft **Beschriftung** des Steuerelements zurück oder legt diese fest. Die Beschriftung ist der Titel des Fensters. **Beschriftung** verfügt nicht über den Implementierungstyp **Membervariable**.|
+|**Aktiviert**|Gibt die Eigenschaft **Aktiviert** des Steuerelements zurück oder legt diese fest. Ein aktiviertes Steuerelement kann auf vom Benutzer generierte Ereignisse reagieren.|
+|**Schriftart**|Gibt die Ambient-Schriftart des Steuerelements zurück oder legt diese fest. Wenn das Steuerelement über keine Schriftart verfügt, wird NULL zurückgegeben.|
+|`ForeColor`|Gibt die Ambient-Eigenschaft `ForeColor` des Steuerelements zurück oder legt diese fest.|
+|**hWnd**|Gibt die **hWnd**-Eigenschaft des Steuerelements zurück oder legt diese fest. **hWnd** verfügt nicht über den Implementierungstyp **Membervariable**.|
+|**ReadyState**|Gibt die **ReadyState**-Eigenschaft des Steuerelements zurück oder legt diese fest. Ein Steuerelement kann folgenden Status aufweisen: nicht initialisiert, initialisiert, wird geladen, interaktiv und abgeschlossen. Weitere Informationen finden Sie unter [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx) im *Internet SDK*.|
+|**Text**|Gibt den Text zurück, der in einem Steuerelement enthalten ist, oder legt diesen fest. **Text** verfügt nicht über den Implementierungstyp **Membervariable**.|
+
+## <a name="see-also"></a>Siehe auch
+
+[Hinzufügen einer Eigenschaft](../ide/adding-a-property-visual-cpp.md)<br>
+[IDL-Attribute, Assistent zum Hinzufügen von Eigenschaften](../ide/idl-attributes-add-property-wizard.md)

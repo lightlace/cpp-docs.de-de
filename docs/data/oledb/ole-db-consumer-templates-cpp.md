@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 18bbcf64bc76d26535f9a5c2c51229048422af56
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b22f97401900a24ae864174872027b18509dfe0c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021576"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082422"
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB-Consumervorlagen (C++)
 
@@ -35,7 +35,7 @@ Die OLE DB-Consumervorlagen unterstützen die Spezifikation der OLE DB Version
   
 - Systemeigene C/C++-Datentypen für die OLE DB-Programmierung.  
   
-Sie sollten mit C++-Vorlagen, COM und den OLE DB-Schnittstellen vertraut sein, um OLE DB-Vorlagen verwenden zu können. Wenn Sie nicht mit OLE DB vertraut sind, finden Sie unter [OLE DB-Programmierreferenz](/previous-versions/windows/desktop/ms718124\(v=vs.85\)).  
+Sie sollten mit C++-Vorlagen, COM und den OLE DB-Schnittstellen vertraut sein, um OLE DB-Vorlagen verwenden zu können. Wenn Sie nicht mit OLE DB vertraut sind, finden Sie entsprechende Informationen in der [OLE DB-Programmierreferenz](/previous-versions/windows/desktop/ms718124).  
   
 Die OLE DB-Vorlagen unterstützen eher das vorhandene OLE DB-Objektmodell als das Hinzufügen eines neuen Objektmodells. Die Klassen der obersten Ebene in den OLE DB-Consumervorlagen gleichen den in der der OLE DB-Spezifikation definierten Komponenten. Das Design der OLE DB-Consumervorlagen umfasst erweiterte Features, z. B. mehrere Accessoren für ein Rowset. Durch die Verwendung von Vorlagen und der mehrfachen Vererbung ergibt sich eine kleine und flexible Bibliothek.  
   
@@ -71,5 +71,5 @@ Weitere Informationen finden Sie unter den folgenden Themen:
 
 [OLE DB-Programmierung](../../data/oledb/ole-db-programming.md)<br/>
 [Datenzugriff](../data-access-in-cpp.md)<br/>
-[OLE DB-SDK-Dokumentation](/previous-versions/windows/desktop/ms722784\(v=vs.85\))   
-[OLE DB-Programmierreferenz](/previous-versions/windows/desktop/ms713643\(v=vs.85\))
+[OLE DB SDK-Dokumentation](/previous-versions/windows/desktop/ms722784)   
+[OLE DB-Programmierreferenz](/previous-versions/windows/desktop/ms713643)

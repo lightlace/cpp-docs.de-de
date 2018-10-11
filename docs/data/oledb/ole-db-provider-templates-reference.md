@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3bafe1aa7197ef037bdd54b7215173866e8c15d3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8ede88e44c957ae34e9bb9c3f451e0f058310346
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039152"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083553"
 ---
 # <a name="ole-db-provider-templates-reference"></a>Referenz der OLE DB-Anbietervorlagen
 
@@ -63,7 +63,7 @@ Implementiert die `IDBSchemaRowset` Schnittstelle und die vorlagenbasierte erste
 Öffnet und gibt ein Rowset, das alle Zeilen aus einer einzelnen Basistabelle oder einem Index enthält. Verbindliche Schnittstelle für ein Sitzungsobjekt.  
   
 [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md)<br/>
-Implementiert die OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) -Schnittstelle, die ermöglicht, der die Werte der Spalten in vorhandenen Zeilen löschen von Zeilen sowie das Einfügen neuer Zeilen aktualisiert.  
+Implementiert die OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790) -Schnittstelle, die ermöglicht, der die Werte der Spalten in vorhandenen Zeilen löschen von Zeilen sowie das Einfügen neuer Zeilen aktualisiert.  
   
 [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)<br/>
 Diese Klasse erbt von [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) und überschreibt [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite). `IRowsetCreatorImpl` führt die gleichen Funktionen wie `IObjectWithSite` kann jedoch auch die OLE DB-Eigenschaften `DBPROPCANSCROLLBACKWARDS` und `DBPROPCANFETCHBACKWARDS`.  
@@ -78,13 +78,13 @@ Stellt eine Implementierung der `IRowset` -Schnittstelle, die die grundlegende R
 Implementiert die Rowset-Eigenschaften mithilfe der Eigenschaft-Zuordnung, die definiert, die in Ihrer Klasse des Befehls festgelegt. Erforderliche Schnittstelle für Rowsets.  
   
 [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)<br/>
-Implementiert die OLE DB [IRowsetLocate](/previous-versions/windows/desktop/ms721190\(v=vs.85\)) -Schnittstelle, die beliebige Zeilen aus einem Rowset abruft. Stellen Sie zur Unterstützung von OLE DB-Lesezeichen in einem Rowset, das Rowset, das von dieser Klasse erben.  
+Implementiert die OLE DB [IRowsetLocate](/previous-versions/windows/desktop/ms721190) -Schnittstelle, die beliebige Zeilen aus einem Rowset abruft. Stellen Sie zur Unterstützung von OLE DB-Lesezeichen in einem Rowset, das Rowset, das von dieser Klasse erben.  
   
 [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)<br/>
-Broadcast-implementiert Funktionen zum Listener auf dem Verbindungspunkt empfehlen `IID_IRowsetNotify` von Änderungen an den Inhalt des Rowsets. Implementieren von Consumern, die Benachrichtigungen verarbeitet [IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\)) und registrieren Sie ihn auf diesen Verbindungspunkt verweist.  
+Broadcast-implementiert Funktionen zum Listener auf dem Verbindungspunkt empfehlen `IID_IRowsetNotify` von Änderungen an den Inhalt des Rowsets. Implementieren von Consumern, die Benachrichtigungen verarbeitet [IRowsetNotify](/previous-versions/windows/desktop/ms712959) und registrieren Sie ihn auf diesen Verbindungspunkt verweist.  
   
 [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)<br/>
-Implementiert die OLE DB [IRowsetUpdate](/previous-versions/windows/desktop/ms714401\(v=vs.85\)) -Schnittstelle, die Consumer die Übertragung von Änderungen mit Verzögerung ermöglicht [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) auf die Datenquelle und die Änderungen vor der Übertragung rückgängig zu machen.  
+Implementiert die OLE DB [IRowsetUpdate](/previous-versions/windows/desktop/ms714401) -Schnittstelle, die Consumer die Übertragung von Änderungen mit Verzögerung ermöglicht [IRowsetChange](/previous-versions/windows/desktop/ms715790) auf die Datenquelle und die Änderungen vor der Übertragung rückgängig zu machen.  
   
 ## <a name="command-classes"></a>Command-Klassen  
 
@@ -120,7 +120,7 @@ Die Eigenschaften für eine Vielzahl von Schnittstellen für OLE DB-Eigenschaft 
   
 [IErrorRecordsImpl](../../data/oledb/ierrorrecordsimpl-class.md)  
   
-Implementiert die OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) Schnittstelle, Hinzufügen von Einträgen zu und Abrufen von Datensätzen aus einem Datenelement.  
+Implementiert die OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112) Schnittstelle, Hinzufügen von Einträgen zu und Abrufen von Datensätzen aus einem Datenelement.  
   
 ## <a name="see-also"></a>Siehe auch  
 

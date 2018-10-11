@@ -19,70 +19,63 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3608e40db2aa3eb0c49942de278c1d428e26689f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e4ceed8fa38ae2b6801fa13c65e54f1cd1cc711d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385096"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097691"
 ---
 # <a name="c-floating-point-constants"></a>C-Gleitkommakonstanten
-Eine "Gleitkommakonstante" ist eine Dezimalzahl, die eine reelle Zahl mit Vorzeichen darstellt. Die Darstellung einer reellen Zahl mit Vorzeichen enthält einen Ganzzahlbereich, einen Teil mit Bruchzahlen und einen Exponenten. Verwenden Sie Gleitkommakonstanten zum Darstellen von unveränderbaren Gleitkommawerten.  
-  
-## <a name="syntax"></a>Syntax  
- *floating-point-constant*:  
- &nbsp;&nbsp; *fractional-constant exponent-part*<sub>opt</sub> *floating-suffix*<sub>opt</sub>  
- &nbsp;&nbsp; *digit-sequence exponent-part floating-suffix*<sub>opt</sub>  
-  
- *fractional-constant*:  
- &nbsp;&nbsp; *digit-sequence*<sub>opt</sub> **.** *digit-sequence*  
- &nbsp;&nbsp; *digit-sequence*  **.**  
-  
- *exponent-part*:  
- &nbsp;&nbsp; **e**  *sign*<sub>opt</sub> *digit-sequence*  
- &nbsp;&nbsp; **E**  *sign*<sub>opt</sub> *digit-sequence*  
-  
- *sign* : eins der folgenden Zeichen  
- &nbsp;&nbsp; **+ -**  
-  
- *digit-sequence*:  
- &nbsp;&nbsp; *digit*  
- &nbsp;&nbsp; *digit-sequence digit*  
-  
- *floating-suffix* : eins der folgenden Zeichen  
- &nbsp;&nbsp; **f l F L**  
-  
- Sie können entweder die Stellen vor dem Dezimaltrennzeichen (der ganzzahlige Teil des Werts) oder die Stellen nach dem Dezimaltrennzeichen (der Bruchteil) auslassen, aber nicht Beides. Sie können das Dezimaltrennzeichen nur dann weglassen, wenn Sie einen Exponenten einschließen. Die Ziffern oder Zeichen der Konstante können nicht durch Leerzeichen getrennt werden.  
-  
- In den folgenden Beispielen werden einige Formen von Gleitkommakonstanten und Ausdrücken veranschaulicht:  
-  
-```  
-15.75  
-1.575E1   /* = 15.75   */  
-1575e-2   /* = 15.75   */  
--2.5e-3   /* = -0.0025 */  
-25E-4     /* =  0.0025 */  
-```  
-  
- Gleitkommakonstanten sind positiv, es sei denn, ihnen wird ein Minuszeichen (**-**) vorangestellt. In diesem Fall wird das Minuszeichen als unärer arithmetischer Negationsoperator behandelt. Gleitkommakonstanten weisen den Typ `float`, `double` oder `long double` auf.  
-  
- Eine Gleitkommakonstante ohne das Suffix **f**, **F**, **l** oder **L** ist vom Typ `double`. Wenn der Buchstabe **f** oder **F** als Suffix verwendet wird, ist die Konstante vom Typ `float`. Mit dem Suffix **l** oder **L** ist sie vom Typ `long double`. Zum Beispiel:  
-  
-```  
-100L  /* Has type long double  */  
-100F  /* Has type float        */  
-```  
-  
- Beachten Sie, dass der Microsoft C-Compiler `long double` intern genauso darstellt wie den Typ `double`. Weitere Informationen über die Typen `double`, `float` und `long double` finden Sie unter [Speicherung von einfachen Typen](../c-language/storage-of-basic-types.md).  
-  
- Wie in den folgenden Beispielen veranschaulicht, ist es möglich, den ganzzahligen Teil der Gleitkommakonstante auszulassen. Die Zahl .75 kann auf unterschiedliche Weise ausgedrückt werden, z. B. wie folgt:  
-  
-```  
-.0075e2  
-0.075e1  
-.075e1  
-75e-2  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [C-Konstanten](../c-language/c-constants.md)
+
+Eine "Gleitkommakonstante" ist eine Dezimalzahl, die eine reelle Zahl mit Vorzeichen darstellt. Die Darstellung einer reellen Zahl mit Vorzeichen enthält einen Ganzzahlbereich, einen Teil mit Bruchzahlen und einen Exponenten. Verwenden Sie Gleitkommakonstanten zum Darstellen von unveränderbaren Gleitkommawerten.
+
+## <a name="syntax"></a>Syntax
+
+*floating-point-constant*: &nbsp;&nbsp; *fractional-constant exponent-part*<sub>opt</sub> *floating-suffix*<sub>opt</sub> &nbsp;&nbsp; *digit-sequence exponent-part floating-suffix*<sub>opt</sub>
+
+*fractional-constant*: &nbsp;&nbsp; *digit-sequence*<sub>opt</sub> **.** *digit-sequence* &nbsp;&nbsp; *digit-sequence*  **.**
+
+*exponent-part*: &nbsp;&nbsp; **e**  *sign*<sub>opt</sub> *digit-sequence* &nbsp;&nbsp; **E**  *sign*<sub>opt</sub> *digit-sequence*
+
+*sign*: eines der folgenden Zeichen &nbsp;&nbsp; **+ -**
+
+*digit-sequence*: &nbsp;&nbsp; *digit* &nbsp;&nbsp; *digit-sequence digit*
+
+*floating-suffix*: eines der folgenden Zeichen &nbsp;&nbsp; **f l F L**
+
+Sie können entweder die Stellen vor dem Dezimaltrennzeichen (der ganzzahlige Teil des Werts) oder die Stellen nach dem Dezimaltrennzeichen (der Bruchteil) auslassen, aber nicht Beides. Sie können das Dezimaltrennzeichen nur dann weglassen, wenn Sie einen Exponenten einschließen. Die Ziffern oder Zeichen der Konstante können nicht durch Leerzeichen getrennt werden.
+
+In den folgenden Beispielen werden einige Formen von Gleitkommakonstanten und Ausdrücken veranschaulicht:
+
+```
+15.75
+1.575E1   /* = 15.75   */
+1575e-2   /* = 15.75   */
+-2.5e-3   /* = -0.0025 */
+25E-4     /* =  0.0025 */
+```
+
+Gleitkommakonstanten sind positiv, es sei denn, ihnen wird ein Minuszeichen (**-**) vorangestellt. In diesem Fall wird das Minuszeichen als unärer arithmetischer Negationsoperator behandelt. Gleitkommakonstanten weisen den Typ `float`, `double` oder `long double` auf.
+
+Eine Gleitkommakonstante ohne das Suffix **f**, **F**, **l** oder **L** ist vom Typ `double`. Wenn der Buchstabe **f** oder **F** als Suffix verwendet wird, ist die Konstante vom Typ `float`. Mit dem Suffix **l** oder **L** ist sie vom Typ `long double`. Zum Beispiel:
+
+```
+100L  /* Has type long double  */
+100F  /* Has type float        */
+```
+
+Beachten Sie, dass der Microsoft C-Compiler `long double` intern genauso darstellt wie den Typ `double`. Weitere Informationen über die Typen `double`, `float` und `long double` finden Sie unter [Speicherung von einfachen Typen](../c-language/storage-of-basic-types.md).
+
+Wie in den folgenden Beispielen veranschaulicht, ist es möglich, den ganzzahligen Teil der Gleitkommakonstante auszulassen. Die Zahl .75 kann auf unterschiedliche Weise ausgedrückt werden, z. B. wie folgt:
+
+```
+.0075e2
+0.075e1
+.075e1
+75e-2
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[C-Konstanten](../c-language/c-constants.md)

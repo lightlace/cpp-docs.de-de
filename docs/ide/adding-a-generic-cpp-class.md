@@ -18,27 +18,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2773c38561a36ab72dfe33dccc5d98ea9d09ebce
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c870768ff438e556f11cc0f6e101710c658010f5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33326471"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405904"
 ---
 # <a name="adding-a-generic-c-class"></a>Hinzufügen einer generischen C++-Klasse
-Sie können eine generische C++-Klasse mithilfe der **Klassenansicht** hinzufügen. Eine generische C++-Klasse ist eine Klasse, die Sie definieren oder die von einer Klasse abgeleitet wird, die Sie definieren.  
-  
-### <a name="to-add-a-generic-c-class-to-a-project"></a>So fügen Sie einem Projekt eine generische C++-Klasse hinzu  
-  
-1.  Klicken Sie in der **Klassenansicht** mit der rechten Maustaste auf das Projekt, dem die neue Klasse hinzugefügt werden soll, und klicken Sie dann auf **Hinzufügen** und **Klasse**.  
-  
-2.  Klicken Sie im Dialogfeld [Klasse hinzufügen](../ide/add-class-dialog-box.md) im Bereich „Vorlagen“ auf **C++-Klasse**. Klicken Sie zum Anzeigen des [generischen C++-Klassen-Assistenten](../ide/generic-cpp-class-wizard.md) auf **Hinzufügen**.  
-  
-3.  Geben Sie im Assistenten einen Klassennamen an, und definieren Sie die Einstellungen, oder akzeptieren Sie die Standardwerte.  
-  
-4.  Klicken Sie zum Schließen des Assistenten und Anzeigen der neuen generischen C++-Klasse auf **Fertig stellen**.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Adding a Class (Hinzufügen einer Klasse)](../ide/adding-a-class-visual-cpp.md)   
- [MFC Class (MFC-Klasse)](../mfc/reference/adding-an-mfc-class.md)   
- [ATL Simple Object (Einfaches ATL-Objekt)](../atl/reference/adding-an-atl-simple-object.md)
+
+Sie können eine generische C++-Klasse mithilfe der **Klassenansicht** hinzufügen. Eine generische C++-Klasse ist eine Klasse, die Sie definieren oder die von einer Klasse abgeleitet wird, die Sie definieren.
+
+### <a name="to-add-a-generic-c-class-to-a-project"></a>So fügen Sie einem Projekt eine generische C++-Klasse hinzu
+
+1. Klicken Sie in der **Klassenansicht** mit der rechten Maustaste auf das Projekt, dem die neue Klasse hinzugefügt werden soll, und klicken Sie dann auf **Hinzufügen** und **Klasse**.
+
+1. Klicken Sie im Dialogfeld [Klasse hinzufügen](../ide/add-class-dialog-box.md) im Bereich „Vorlagen“ auf **C++-Klasse**. Klicken Sie zum Anzeigen des [generischen C++-Klassen-Assistenten](../ide/generic-cpp-class-wizard.md) auf **Hinzufügen**.
+
+1. Geben Sie im Assistenten einen Klassennamen an, und definieren Sie die Einstellungen, oder akzeptieren Sie die Standardwerte.
+
+1. Klicken Sie zum Schließen des Assistenten und Anzeigen der neuen generischen C++-Klasse auf **Fertig stellen**.
+
+## <a name="see-also"></a>Siehe auch
+
+[Hinzufügen einer Klasse](../ide/adding-a-class-visual-cpp.md)<br>
+[MFC-Klasse](../mfc/reference/adding-an-mfc-class.md)<br>
+[ATL Simple Object (Einfaches ATL-Objekt)](../atl/reference/adding-an-atl-simple-object.md)

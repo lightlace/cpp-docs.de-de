@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 76dc4cb86601be714e7ca1d442eb904d016e877b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 47b869ffc6ad3dd1492ab052d648bcb8acde7e52
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46102780"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083696"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Unterstützen von Transaktionen in OLE DB
 
@@ -33,11 +33,11 @@ Ein [Transaktion](../../data/transactions-mfc-data-access.md) ist eine Möglichk
   
 OLE DB unterstützt Transaktionen mit den folgenden drei Methoden:  
   
-- [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\))  
+- [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786)  
   
-- [ITransaction::Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\))  
+- [ITransaction::Commit](/previous-versions/windows/desktop/ms713008)  
   
-- [ITransaction::Abort](/previous-versions/windows/desktop/ms709833\(v=vs.85\))  
+- [ITransaction::Abort](/previous-versions/windows/desktop/ms709833)  
   
 ## <a name="relationship-of-sessions-and-transactions"></a>Beziehung zwischen Sitzungen und Transaktionen  
 
@@ -59,7 +59,7 @@ Aufrufen von `ITransaction::Commit` oder `ITransaction::Abort` beendet die Trans
   
 ## <a name="nested-transactions"></a>Geschachtelte Transaktionen  
 
-Ein [geschachtelten Transaktionen](/previous-versions/windows/desktop/ms716985\(v=vs.85\)) tritt auf, wenn Sie eine neue lokale Transaktion starten, wenn die Sitzung bereits eine aktive Transaktion vorhanden ist. Die neue Transaktion wird als eine geschachtelte Transaktion unter der aktuellen Transaktion gestartet. Wenn der Anbieter geschachtelte Transaktionen nicht unterstützt, wird beim Aufrufen `StartTransaction` bei bereits gibt eine aktive Transaktion in der Sitzung wird XACT_E_XTIONEXISTS zurückgegeben.  
+Ein [geschachtelten Transaktionen](/previous-versions/windows/desktop/ms716985) tritt auf, wenn Sie eine neue lokale Transaktion starten, wenn die Sitzung bereits eine aktive Transaktion vorhanden ist. Die neue Transaktion wird als eine geschachtelte Transaktion unter der aktuellen Transaktion gestartet. Wenn der Anbieter geschachtelte Transaktionen nicht unterstützt, wird beim Aufrufen `StartTransaction` bei bereits gibt eine aktive Transaktion in der Sitzung wird XACT_E_XTIONEXISTS zurückgegeben.  
   
 ## <a name="distributed-transactions"></a>Verteilte Transaktionen  
 

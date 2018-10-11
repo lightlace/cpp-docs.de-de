@@ -18,51 +18,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e13824780a5c73d4423bd544a97108b45d1b770a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 3a5e9a6dd5b7e6399a0752981d0ea1e5add32405
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33324082"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437403"
 ---
 # <a name="ltpermissiongt-visual-c"></a>&lt;permission&gt; (Visual C++)
-Mit dem \<permission>-Tag können Sie den Zugriff auf einen Member dokumentieren. Mit der Klasse <xref:System.Security.PermissionSet> können Sie den Zugriff auf einen Member angeben.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-<permission cref="member">description</permission>  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `member`  
- Ein Verweis auf einen Member oder ein Feld, das von der aktuellen Kompilierungsumgebung aufgerufen werden kann. Der Compiler prüft, ob das angegebene Codeelement vorhanden ist, und übersetzt in der Ausgabe-XML `member` in den kanonischen Elementnamen.  Setzen Sie den Namen in einfache oder doppelte Anführungszeichen.  
-  
- Der Compiler gibt eine Warnung aus, wenn er `member` nicht findet.  
-  
- Weitere Informationen zum Erstellen eines cref-Verweises auf einen generischen Typ finden Sie unter [\<see>](../ide/see-visual-cpp.md).  
-  
- `description`  
- Eine Beschreibung des Zugriffs auf den Member  
-  
-## <a name="remarks"></a>Hinweise  
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
-  
- Der Visual C++-Compiler versucht, cref-Verweise in einem einzigen Durchlauf durch die Dokumentationskommentare aufzulösen.  Bei Verwendung der C++-Suchregeln wird deshalb, wenn ein Symbol vom Compiler nicht gefunden wird, der Verweis als nicht aufgelöst markiert. Weitere Informationen finden Sie unter [\<seealso>](../ide/seealso-visual-cpp.md).  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// xml_permission_tag.cpp  
-// compile with: /clr /doc /LD  
-// post-build command: xdcmake xml_permission_tag.dll  
-using namespace System;  
-/// Text for class TestClass.  
-public ref class TestClass {  
-   /// <permission cref="System::Security::PermissionSet">Everyone can access this method.</permission>  
-   void Test() {}  
-};  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [XML-Dokumentation](../ide/xml-documentation-visual-cpp.md)
+
+Mit dem \<permission>-Tag können Sie den Zugriff auf einen Member dokumentieren. Mit der Klasse <xref:System.Security.PermissionSet> können Sie den Zugriff auf einen Member angeben.
+
+## <a name="syntax"></a>Syntax
+
+```
+<permission cref="member">description</permission>
+```
+
+#### <a name="parameters"></a>Parameter
+
+*member*<br/>
+Ein Verweis auf einen Member oder ein Feld, das von der aktuellen Kompilierungsumgebung aufgerufen werden kann. Der Compiler prüft, ob das angegebene Codeelement vorhanden ist, und übersetzt in der Ausgabe-XML `member` in den kanonischen Elementnamen.  Setzen Sie den Namen in einfache oder doppelte Anführungszeichen.
+
+Der Compiler gibt eine Warnung aus, wenn er `member` nicht findet.
+
+Weitere Informationen zum Erstellen eines cref-Verweises auf einen generischen Typ finden Sie unter [\<see>](../ide/see-visual-cpp.md).
+
+*Beschreibung*<br/>
+Eine Beschreibung des Zugriffs auf den Member
+
+## <a name="remarks"></a>Hinweise
+
+Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.
+
+Der Visual C++-Compiler versucht, cref-Verweise in einem einzigen Durchlauf durch die Dokumentationskommentare aufzulösen.  Bei Verwendung der C++-Suchregeln wird deshalb, wenn ein Symbol vom Compiler nicht gefunden wird, der Verweis als nicht aufgelöst markiert. Weitere Informationen finden Sie unter [\<seealso>](../ide/seealso-visual-cpp.md).
+
+## <a name="example"></a>Beispiel
+
+```
+// xml_permission_tag.cpp
+// compile with: /clr /doc /LD
+// post-build command: xdcmake xml_permission_tag.dll
+using namespace System;
+/// Text for class TestClass.
+public ref class TestClass {
+   /// <permission cref="System::Security::PermissionSet">Everyone can access this method.</permission>
+   void Test() {}
+};
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[XML-Dokumentation](../ide/xml-documentation-visual-cpp.md)
