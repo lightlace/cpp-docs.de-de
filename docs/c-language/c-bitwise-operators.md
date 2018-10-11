@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c5c360246282f8b6062d21061856a57bd2c7194
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26b313aa3e1dec6d401ed27e1a4f8ae0bd870eaa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384332"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118517"
 ---
 # <a name="c-bitwise-operators"></a>C-Operatoren zur Bitmanipulation
 
@@ -35,23 +35,17 @@ Die bitweisen Operatoren führen bitweise AND (**&**)-, bitweise exklusive OR (*
 
 ## <a name="syntax"></a>Syntax
 
-*AND-expression*:  
-&nbsp;&nbsp;*equality-expression*  
-&nbsp;&nbsp;*AND-expression* **&** *equality-expression*
+*AND-expression*: &nbsp;&nbsp;*equality-expression* &nbsp;&nbsp;*AND-expression* **&** *equality-expression*
 
-*exclusive-OR-expression*:  
-&nbsp;&nbsp;*AND-expression*  
-&nbsp;&nbsp;*exclusive-OR-expression* **^** *AND-expression*
+*exclusive-OR-expression*: &nbsp;&nbsp;*AND-expression* &nbsp;&nbsp;*exclusive-OR-expression* **^** *AND-expression*
 
-*inclusive-OR-expression*:  
-&nbsp;&nbsp;*exclusive-OR-expression*  
-&nbsp;&nbsp;*inclusive-OR-expression* &#124; *exclusive-OR-expression*
+*inclusive-OR-expression*: &nbsp;&nbsp;*exclusive-OR-expression* &nbsp;&nbsp;*inclusive-OR-expression* &#124; *exclusive-OR-expression*
 
 Die Operanden für bitweise Operatoren müssen Ganzzahltypen aufweisen, aber ihre Typen können unterschiedlich sein. Diese Operatoren führen die üblichen arithmetischen Konvertierungen aus. Der Typ des Ergebnisses ist der Typ der Operanden nach der Konvertierung.
 
 Die bitweisen C-Operatoren sind im Folgenden beschrieben:
 
-|Operator|description|
+|Operator|Beschreibung |
 |--------------|-----------------|
 |**&**|Der bitweise AND-Operator vergleicht jedes Bit seines ersten Operanden mit dem entsprechenden Bit seines zweiten Operanden. Wenn beide Bits 1 sind, wird das entsprechende Ergebnisbit auf 1 festgelegt. Andernfalls wird das entsprechende Ergebnisbit auf 0 (null) festgelegt.|
 |**^**|Der bitweise exklusive OR-Operator vergleicht jedes Bit seines ersten Operanden mit dem entsprechenden Bit seines zweiten Operanden. Wenn ein Bit 0 (null) und das andere Bit 1 ist, wird das entsprechende Ergebnisbit auf 1 festgelegt. Andernfalls wird das entsprechende Ergebnisbit auf 0 (null) festgelegt.|
@@ -96,6 +90,6 @@ Das Ergebnis der bitweisen AND-Operation ist 96 dezimal.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Bitweiser AND-Operator (&)](../cpp/bitwise-and-operator-amp.md)  
-[Bitweiser exklusiver OR-Operator: ^](../cpp/bitwise-exclusive-or-operator-hat.md)  
-[Bitweiser inklusiver OR-Operator: &#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)  
+[Bitweiser AND-Operator (&)](../cpp/bitwise-and-operator-amp.md)<br/>
+[Bitweiser exklusiver OR-Operator: ^](../cpp/bitwise-exclusive-or-operator-hat.md)<br/>
+[Bitweiser inklusiver OR-Operator: &#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)

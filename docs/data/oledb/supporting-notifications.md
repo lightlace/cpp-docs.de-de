@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7ab24f981e90342a679b1a0a542b540192fee06e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a98848799163fd31037dc137b92b94878a1ee675
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107845"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082461"
 ---
 # <a name="supporting-notifications"></a>Unterstützen von Benachrichtigungen
 
@@ -33,7 +33,7 @@ ms.locfileid: "46107845"
 
 Um Benachrichtigungen zu implementieren, muss von eine Klasse erben [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md) und [IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md).  
   
-`IRowsetNotifyCP` die Website für die Verbindungspunkt-Schnittstelle implementiert [IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\)). `IRowsetNotifyCP` broadcast-implementiert Funktionen, um den Listener auf dem Verbindungspunkt empfehlen `IID_IRowsetNotify` von Änderungen an den Inhalt des Rowsets.  
+`IRowsetNotifyCP` die Website für die Verbindungspunkt-Schnittstelle implementiert [IRowsetNotify](/previous-versions/windows/desktop/ms712959). `IRowsetNotifyCP` broadcast-implementiert Funktionen, um den Listener auf dem Verbindungspunkt empfehlen `IID_IRowsetNotify` von Änderungen an den Inhalt des Rowsets.  
   
 Beachten Sie, dass Sie auch implementieren registrieren müssen `IRowsetNotify` vom Consumer (auch bekannt als die Senke) mit [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) , damit der Consumer mit Benachrichtigungen behandeln kann. Informationen zur Implementierung der vom Consumer der Verbindungspunkt-Schnittstelle finden Sie unter [empfangen von Benachrichtigungen](../../data/oledb/receiving-notifications.md).  
   

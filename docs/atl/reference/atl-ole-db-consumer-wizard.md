@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 163949c4421cca8e4d5e414a18bda4ed98f32d3d
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 2555bdd9c1de130cd692131c12b7b2afc37537be
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861641"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083046"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL-OLE DB-Consumer-Assistent
 
@@ -36,7 +36,7 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
 
 - **Datenquelle**
 
-   Die **Datenquelle** Schaltfläche können Sie die angegebene Datenquelle, die mit dem angegebenen OLE DB-Anbieter einrichten. Wenn Sie auf diese Schaltfläche, klicken Sie auf die **Datenlinkeigenschaften** Dialogfeld wird angezeigt. Weitere Informationen zum Erstellen von Verbindungszeichenfolgen und die **Datenlinkeigenschaften** im Dialogfeld finden Sie unter [Data Link-API – Übersicht](/previous-versions/windows/desktop/ms718102\(v=vs.85\)) in der Windows SDK-Dokumentation.
+   Die **Datenquelle** Schaltfläche können Sie die angegebene Datenquelle, die mit dem angegebenen OLE DB-Anbieter einrichten. Wenn Sie auf diese Schaltfläche, klicken Sie auf die **Datenlinkeigenschaften** Dialogfeld wird angezeigt. Weitere Informationen zum Erstellen von Verbindungszeichenfolgen und die **Datenlinkeigenschaften** im Dialogfeld finden Sie unter [Data Link-API – Übersicht](/previous-versions/windows/desktop/ms718102) in der Windows SDK-Dokumentation.
 
    Die folgende zusätzliche Informationen beschreibt die Registerkarten in der **Datenlinkeigenschaften** Dialogfeld.
 
@@ -177,7 +177,7 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
 
 - **Unterstützung**
 
-   Wählen Sie die Kontrollkästchen, um die Art der Updates, die im Consumer unterstützt werden (der Standardwert ist "None") anzugeben. Folgendes wird festgelegt, [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892\(v=vs.85\)) und die entsprechenden Einträge für [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676\(v=vs.85\)) -Zuordnung in der Eigenschaft festgelegt.
+   Wählen Sie die Kontrollkästchen, um die Art der Updates, die im Consumer unterstützt werden (der Standardwert ist "None") anzugeben. Folgendes wird festgelegt, [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892) und die entsprechenden Einträge für [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676) -Zuordnung in der Eigenschaft festgelegt.
 
    - **Änderung**
 
@@ -195,4 +195,4 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
 
 [ATL-OLE DB-Consumers](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
 [Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Verbindungszeichenfolgen und Datenverknüpfungen (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))
+[Verbindungszeichenfolgen und Datenverknüpfungen (OLE DB)](/previous-versions/windows/desktop/ms718376)

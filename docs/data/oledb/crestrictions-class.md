@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c66200acab5fc1be509136fc45895fdf08e40fdb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2e850b5ebad231b07ce7d6c7dca79126a9b2ba15
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46072069"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082357"
 ---
 # <a name="crestrictions-class"></a>CRestrictions-Klasse
 
@@ -103,7 +103,7 @@ Einer der standardmäßigen HRESULT-Werte.
 
 Sie können maximal sieben Einschränkungen für ein Schemarowset angeben.  
   
-Finden Sie unter [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) für Informationen zu den definierten Einschränkungen für jedes Schemarowset.  
+Finden Sie unter [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) für Informationen zu den definierten Einschränkungen für jedes Schemarowset.  
   
 ## <a name="see-also"></a>Siehe auch  
 

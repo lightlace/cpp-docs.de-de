@@ -21,63 +21,65 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f307860ce71e8c9fc74b2ab97e88ced02e08332f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 98b01db4d842775dcb239aef9d40c661328d1544
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387049"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107877"
 ---
 # <a name="if-statement-c"></a>if-Anweisung (C)
-Die Anweisung **if** steuert den bedingten Branch. Der Text einer **if**-Anweisung wird ausgeführt, wenn der Wert des Ausdrucks ungleich 0 (null) ist. Die Syntax für die **if**-Anweisung weist zwei Formen auf.  
-  
-## <a name="syntax"></a>Syntax  
- *selection-statement*:  
- **if (**  *expression*  **)**  *statement*  
-  
- **if (**  *expression*  **)**  *statement*  **else**  *statement*  
-  
- In beiden Formen der **if**-Anweisung werden Ausdrücke ausgewertet, die über einen beliebigen Wert außer einer Struktur verfügen können, einschließlich aller Nebeneffekte.  
-  
- In der ersten Form der Syntax, wenn *expression* auf „true“ (Wert ungleich 0 [null]) festgelegt ist, wird *statement* ausgeführt. Wenn *expression* „false“ ist, wird *statement* ignoriert. In der zweiten Form der Syntax, die **else** verwendet, wird das zweite *statement* ausgeführt, wenn *expression* „false“ ist. Bei beiden Formen geht die Steuerung von der **if**-Anweisung zur nächsten Anweisung im Programm, es sei denn, eine der Anweisungen enthält **break**, **continue** oder `goto`.  
-  
- Nachfolgend einige Beispiele für die **if**-Anweisung:  
-  
-```  
-if ( i > 0 )  
-    y = x / i;  
-else   
-{  
-    x = i;  
-    y = f( x );  
-}  
-```  
-  
- In diesem Beispiel wird die Anweisung `y = x/i;` ausgeführt, wenn `i` größer als 0 ist. Wenn `i` kleiner oder gleich 0 ist, wird `i` `x` und `f( x )` `y` zugewiesen. Beachten Sie, dass die Anweisung, die die **if**-Klausel bildet, mit einem Semikolon endet.  
-  
- Wenn Sie **if**-Anweisungen und **else**-Klauseln schachteln, verwenden Sie geschweifte Klammern, um die Anweisungen und Klauseln in Verbundanweisungen zu gruppieren, die Ihre Absicht verdeutlichen. Wenn keine Klammern vorhanden sind, löst der Compiler Mehrdeutigkeiten auf, indem er jedes **else** dem nächstliegenden **if** zuordnet, dem ein **else** fehlt.  
-  
-```  
-if ( i > 0 )           /* Without braces */  
-    if ( j > i )  
-        x = j;  
-    else  
-        x = i;  
-```  
-  
- Die Klausel **else** ist mit der inneren **if**-Anweisung in diesem Beispiel verbunden. Wenn `i` kleiner oder gleich 0 ist, wird `x` kein Wert zugewiesen.  
-  
-```  
-if ( i > 0 )   
-{                      /* With braces */  
-    if ( j > i )  
-        x = j;  
-}  
-else  
-    x = i;  
-```  
-  
- Die geschweiften Klammern, die die innere **if**-Anweisung in diesem Beispiel umgeben, machen den **else**-Teil der Klausel der äußeren **if**-Anweisung aus. Wenn `i` kleiner oder gleich 0 ist, wird `i` `x` zugewiesen.  
-  
-## <a name="see-also"></a>Siehe auch  
- [if-else-Anweisung (C++)](../cpp/if-else-statement-cpp.md)
+
+Die Anweisung **if** steuert den bedingten Branch. Der Text einer **if**-Anweisung wird ausgeführt, wenn der Wert des Ausdrucks ungleich 0 (null) ist. Die Syntax für die **if**-Anweisung weist zwei Formen auf.
+
+## <a name="syntax"></a>Syntax
+
+*selection-statement*: **if (** *Ausdruck* **)** *Anweisung*
+
+**if (**  *expression*  **)**  *statement*  **else**  *statement*
+
+In beiden Formen der **if**-Anweisung werden Ausdrücke ausgewertet, die über einen beliebigen Wert außer einer Struktur verfügen können, einschließlich aller Nebeneffekte.
+
+In der ersten Form der Syntax, wenn *expression* auf „true“ (Wert ungleich 0 [null]) festgelegt ist, wird *statement* ausgeführt. Wenn *expression* „false“ ist, wird *statement* ignoriert. In der zweiten Form der Syntax, die **else** verwendet, wird das zweite *statement* ausgeführt, wenn *expression* „false“ ist. Bei beiden Formen geht die Steuerung von der **if**-Anweisung zur nächsten Anweisung im Programm, es sei denn, eine der Anweisungen enthält **break**, **continue** oder `goto`.
+
+Nachfolgend einige Beispiele für die **if**-Anweisung:
+
+```
+if ( i > 0 )
+    y = x / i;
+else
+{
+    x = i;
+    y = f( x );
+}
+```
+
+In diesem Beispiel wird die Anweisung `y = x/i;` ausgeführt, wenn `i` größer als 0 ist. Wenn `i` kleiner oder gleich 0 ist, wird `i` `x` und `f( x )` `y` zugewiesen. Beachten Sie, dass die Anweisung, die die **if**-Klausel bildet, mit einem Semikolon endet.
+
+Wenn Sie **if**-Anweisungen und **else**-Klauseln schachteln, verwenden Sie geschweifte Klammern, um die Anweisungen und Klauseln in Verbundanweisungen zu gruppieren, die Ihre Absicht verdeutlichen. Wenn keine Klammern vorhanden sind, löst der Compiler Mehrdeutigkeiten auf, indem er jedes **else** dem nächstliegenden **if** zuordnet, dem ein **else** fehlt.
+
+```
+if ( i > 0 )           /* Without braces */
+    if ( j > i )
+        x = j;
+    else
+        x = i;
+```
+
+Die Klausel **else** ist mit der inneren **if**-Anweisung in diesem Beispiel verbunden. Wenn `i` kleiner oder gleich 0 ist, wird `x` kein Wert zugewiesen.
+
+```
+if ( i > 0 )
+{                      /* With braces */
+    if ( j > i )
+        x = j;
+}
+else
+    x = i;
+```
+
+Die geschweiften Klammern, die die innere **if**-Anweisung in diesem Beispiel umgeben, machen den **else**-Teil der Klausel der äußeren **if**-Anweisung aus. Wenn `i` kleiner oder gleich 0 ist, wird `i` `x` zugewiesen.
+
+## <a name="see-also"></a>Siehe auch
+
+[if-else-Anweisung (C++)](../cpp/if-else-statement-cpp.md)

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dca97238310c42b9a537baa4056563b25c20c617
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 98734522410b867d735d0af25f440d5b45874563
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895226"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393281"
 ---
 # <a name="hint-files"></a>Hinweisdateien
 
@@ -52,9 +52,9 @@ Die folgenden Makrodefinitionen befinden sich in einer separaten Headerdatei.
 
 ```cpp
 // Header file.
-#define STDMETHOD(method) HRESULT (STDMETHODCALLTYPE * method)  
+#define STDMETHOD(method) HRESULT (STDMETHODCALLTYPE * method)
 #define STDMETHODCALLTYPE __stdcall
-#define HRESULT void*  
+#define HRESULT void*
 ```
 
 Das Analysesystem kann den Quellcode nicht interpretieren, da eine Funktion namens `STDMETHOD` deklariert zu sein scheint. Diese Deklaration ist jedoch syntaktisch falsch, da sie über zwei Parameterlisten verfügt. Das Analysesystem öffnet nicht die Headerdatei, um die Definition für die Makros `STDMETHOD`, `STDMETHODCALLTYPE` und `HRESULT` zu ermitteln. Da das Analysesystem das Makro `STDMETHOD` nicht interpretieren kann, ignoriert es die gesamte Anweisung und setzt die Analyse fort.
@@ -127,21 +127,21 @@ Einige Makros führen dazu, dass das Analysesystem den Quellcode falsch interpre
 
 Im folgenden Quellcode ist der Parametertyp für die `FormatWindowClassName()`-Funktion `PXSTR`, und der Parametername ist `szBuffer`. Das Analysesystem verwechselt die SAL-Anmerkungen `_Pre_notnull_` und `_Post_z_` jedoch entweder mit dem Parametertyp oder mit dem Parameternamen.
 
-**Quellcode:**  
+**Quellcode:**
 
-```  
-static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)  
-```  
+```cpp
+static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
+```
 
 **Strategie:** NULL-Definition
 
-Die Strategie besteht in dieser Situation darin, die SAL-Anmerkungen so zu behandeln, als wären sie nicht vorhanden. Geben Sie hierzu einen Hinweis an, dessen Ersatzzeichenfolge NULL ist. In Folge ignoriert das Analysesystem die Anmerkungen, und die **Klassenansicht** zeigt diese nicht an. (Visual C++ enthält eine integrierte Hinweisdatei, die SAL-Anmerkungen ausblendet.)  
+Die Strategie besteht in dieser Situation darin, die SAL-Anmerkungen so zu behandeln, als wären sie nicht vorhanden. Geben Sie hierzu einen Hinweis an, dessen Ersatzzeichenfolge NULL ist. In Folge ignoriert das Analysesystem die Anmerkungen, und die **Klassenansicht** zeigt diese nicht an. (Visual C++ enthält eine integrierte Hinweisdatei, die SAL-Anmerkungen ausblendet.)
 
-**Hinweisdatei:**  
+**Hinweisdatei:**
 
-```  
+```cpp.hint
 #define _Pre_notnull_
-```  
+```
 
 ### <a name="concealed-cc-language-elements"></a>Ausgeblendete C/C++-Sprachelemente
 
@@ -149,11 +149,11 @@ Häufig ist der Grund dafür, dass das Analysesystem den Quellcode falsch interp
 
 Im folgenden Quellcode blendet das Makro `START_NAMESPACE` eine linke geschweifte Klammer (`{`) aus, die kein Paar bildet.
 
-**Quellcode:**  
+**Quellcode:**
 
-```  
+```cpp
 #define START_NAMESPACE namespace MyProject {
-```  
+```
 
 **Strategie:** direktes Kopieren
 
@@ -161,11 +161,11 @@ Wenn die Semantik eines Makros für die Suchfunktion wichtig ist, erstellen Sie 
 
 Wenn das Makro in der Quelldatei andere Makros enthält, sollten Sie beachten, dass diese nur interpretiert werden, wenn sie bereits in den effektiven Hinweisen enthalten sind.
 
-**Hinweisdatei:**  
+**Hinweisdatei:**
 
-```  
+```cpp.hint
 #define START_NAMESPACE namespace MyProject {
-```  
+```
 
 ### <a name="maps"></a>Karten
 
@@ -173,9 +173,9 @@ Eine Zuordnung besteht aus Makros, die ein Startelement, ein Endelement und null
 
 Der folgende Quellcode definiert die Makros `BEGIN_CATEGORY_MAP`, `IMPLEMENTED_CATEGORY` und `END_CATEGORY_MAP`.
 
-**Quellcode:**  
+**Quellcode:**
 
-```  
+```cpp
 #define BEGIN_CATEGORY_MAP(x)\
 static const struct ATL::_ATL_CATMAP_ENTRY* GetCategoryMap() throw() {\
 static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
@@ -183,15 +183,15 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 #define END_CATEGORY_MAP()\
    { _ATL_CATMAP_ENTRY_END, NULL } };\
    return( pMap ); }
-```  
+```
 
 **Strategie:** Identifizieren von Zuordnungselementen
 
 Geben Sie Hinweise für die Start-, Zwischen- und Endelemente einer Zuordnung an. Verwenden Sie die speziellen Ersatzzeichenfolgen für Zuordnungen (`@<`, `@=` und `@>`). Weitere Informationen finden Sie im Abschnitt `Syntax` dieses Artikels.
 
-**Hinweisdatei:**  
+**Hinweisdatei:**
 
-```  
+```cpp.hint
 // Start of the map.
 #define BEGIN_CATEGORY_MAP(x) @<
 // Intermediate map element.
@@ -200,7 +200,7 @@ Geben Sie Hinweise für die Start-, Zwischen- und Endelemente einer Zuordnung an
 #define REQUIRED_CATEGORY( catid ) @=
 // End of the map.
 #define END_CATEGORY_MAP() @>
-```  
+```
 
 ### <a name="composite-macros"></a>Zusammengesetzte Makros
 
@@ -208,11 +208,11 @@ Zusammengesetzte Makros enthalten einen oder mehrere Arten von Makros, die beim 
 
 Der folgende Quellcode enthält das Makro `START_NAMESPACE`, das den Anfang eines Namespacebereichs festlegt, sowie das Makro `BEGIN_CATEGORY_MAP`, das den Anfang einer Zuordnung festlegt.
 
-**Quellcode:**  
+**Quellcode:**
 
-```  
+```cpp
 #define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP
-```  
+```
 
 **Strategie:** direktes Kopieren
 
@@ -220,31 +220,31 @@ Erstellen Sie Hinweise für die Makros `START_NAMESPACE` und `BEGIN_CATEGORY_MAP
 
 Gehen Sie in diesem Beispiel davon aus, dass `START_NAMESPACE` wie in diesem Artikel unter `Concealed C/C++ Language Elements` beschrieben bereits einen Hinweis besitzt. Gehen Sie ebenfalls davon aus, dass `BEGIN_CATEGORY_MAP` wie zuvor unter `Maps` beschrieben einen Hinweis besitzt.
 
-**Hinweisdatei:**  
+**Hinweisdatei:**
 
-```  
+```cpp.hint
 #define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP
-```  
+```
 
 ### <a name="inconvenient-macros"></a>Unpraktische Makros
 
 Einige Makros können vom Analysesystem interpretiert werden, der Quellcode ist jedoch schwer lesbar, da das Makro lang oder komplex ist. Aus Gründen der Lesbarkeit können Sie einen Hinweis bereitstellen, der die Anzeige des Makros vereinfacht.
 
-**Quellcode:**  
+**Quellcode:**
 
-```  
-#define STDMETHOD(methodName) HRESULT (STDMETHODCALLTYPE * methodName)  
-```  
+```cpp
+#define STDMETHOD(methodName) HRESULT (STDMETHODCALLTYPE * methodName)
+```
 
 **Strategie:** Vereinfachung
 
 Erstellen Sie einen Hinweis, der eine einfachere Makrodefinition anzeigt.
 
-**Hinweisdatei:**  
+**Hinweisdatei:**
 
-```  
+```cpp.hint
 #define STDMETHOD(methodName) void* methodName
-```  
+```
 
 ## <a name="example"></a>Beispiel
 
@@ -254,7 +254,7 @@ Die folgende Abbildung stellt einige der physischen Verzeichnisse in einem Visua
 
 ### <a name="hint-file-directories"></a>Hinweisdateiverzeichnisse
 
-![Allgemeine und projektspezifische Hinweisdateiverzeichnisse](../ide/media/hintfile.png "Hinweisdatei")  
+![Allgemeine und projektspezifische Hinweisdateiverzeichnisse](../ide/media/hintfile.png "Hinweisdatei")
 
 ### <a name="directories-and-hint-file-contents"></a>Verzeichnisse und Hinweisdateiinhalte
 
@@ -262,41 +262,41 @@ Die folgende Liste zeigt die Verzeichnisse in diesem Projekt an, die Hinweisdate
 
 - vcpackages
 
-    ```  
-    // vcpackages (partial list)  
+    ```cpp.hint
+    // vcpackages (partial list)
     #define _In_
     #define _In_opt_
     #define _In_z_
     #define _In_opt_z_
-    #define _In_count_(size)  
-    ```  
+    #define _In_count_(size)
+    ```
 
 - Debug
 
-    ```  
+    ```cpp.hint
     // Debug
     #undef _In_
     #define OBRACE {
     #define CBRACE }
-    #define RAISE_EXCEPTION(x) throw (x)  
+    #define RAISE_EXCEPTION(x) throw (x)
     #define START_NAMESPACE namespace MyProject {
     #define END_NAMESPACE }
-    ```  
+    ```
 
 - A1
 
-    ```  
+    ```cpp.hint
     // A1
     #define START_NAMESPACE namespace A1Namespace {
-    ```  
+    ```
 
 - A2
 
-    ```  
+    ```cpp.hint
     // A2
     #undef OBRACE
     #undef CBRACE
-    ```  
+    ```
 
 ### <a name="effective-hints"></a>Effektive Hinweise
 
@@ -306,19 +306,19 @@ Die folgende Tabelle führt die effektiven Hinweise für die Quelldateien in die
 
 - Effektive Hinweise:
 
-    ```  
-    // vcpackages (partial list)  
+    ```cpp.hint
+    // vcpackages (partial list)
     #define _In_opt_
     #define _In_z_
     #define _In_opt_z_
-    #define _In_count_(size)  
+    #define _In_count_(size)
     // Debug...
-    #define RAISE_EXCEPTION(x) throw (x)  
+    #define RAISE_EXCEPTION(x) throw (x)
     // A1
     #define START_NAMESPACE namespace A1Namespace {
     // ...Debug
     #define END_NAMESPACE }
-    ```  
+    ```
 
 Die folgenden Hinweise gelten für die vorangehende Liste.
 
@@ -332,10 +332,10 @@ Die folgenden Hinweise gelten für die vorangehende Liste.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Für Visual C++-Projekte erstellte Dateitypen](../ide/file-types-created-for-visual-cpp-projects.md)    
-[#define-Direktive (C/C++)](../preprocessor/hash-define-directive-c-cpp.md)   
-[#undef-Direktive (C/C++)](../preprocessor/hash-undef-directive-c-cpp.md)   
-[SAL-Anmerkungen](../c-runtime-library/sal-annotations.md)   
-[Meldungszuordnungen](../mfc/reference/message-maps-mfc.md)   
-[Meldungszuordnungsmakros](../atl/reference/message-map-macros-atl.md)   
+[Für Visual C++-Projekte erstellte Dateitypen](../ide/file-types-created-for-visual-cpp-projects.md)<br>
+[#define-Direktive (C/C++)](../preprocessor/hash-define-directive-c-cpp.md)<br>
+[#undef-Direktive (C/C++)](../preprocessor/hash-undef-directive-c-cpp.md)<br>
+[SAL-Anmerkungen](../c-runtime-library/sal-annotations.md)<br>
+[Meldungszuordnungen](../mfc/reference/message-maps-mfc.md)<br>
+[Meldungszuordnungsmakros](../atl/reference/message-map-macros-atl.md)<br>
 [Objektzuordnungs-Makros](../atl/reference/object-map-macros.md)

@@ -33,16 +33,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 22f4aee2ac7cbefee19a33d929ec80b319b537d4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6f85fafe213fa7e53f67fb6a3035f415235c8794
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117477"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082448"
 ---
 # <a name="cenumerator-class"></a>CEnumerator-Klasse
 
-Verwendet eine OLE DB-Enumerator-Objekt, das macht der [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) -Schnittstelle zur Rückgabe eines Rowsets, die alle Datenquellen und Enumeratoren beschreibt.  
+Verwendet eine OLE DB-Enumerator-Objekt, das macht der [ISourcesRowset](/previous-versions/windows/desktop/ms715969) -Schnittstelle zur Rückgabe eines Rowsets, die alle Datenquellen und Enumeratoren beschreibt.  
   
 ## <a name="syntax"></a>Syntax
 
@@ -61,7 +61,7 @@ class CEnumerator :
   
 |||  
 |-|-|  
-|[Suchen](#find)|Durchsucht verfügbare Anbieter (Datenquellen) mit dem angegebenen Namen gesucht.|  
+|[Find](#find)|Durchsucht verfügbare Anbieter (Datenquellen) mit dem angegebenen Namen gesucht.|  
 |[GetMoniker](#getmoniker)|Ruft die `IMoniker` Schnittstelle für den aktuellen Datensatz.|  
 |[Öffnen](#open)|Öffnet den Enumerator.|  
   
@@ -90,7 +90,7 @@ bool Find(TCHAR* szSearchName) throw();
   
 ### <a name="remarks"></a>Hinweise  
 
-Dieser Name zugeordnet wird, um die `SOURCES_NAME` Mitglied der [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) Schnittstelle.  
+Dieser Name zugeordnet wird, um die `SOURCES_NAME` Mitglied der [ISourcesRowset](/previous-versions/windows/desktop/ms715969) Schnittstelle.  
   
 ## <a name="getmoniker"></a> CEnumerator:: GetMoniker
 
@@ -119,7 +119,7 @@ Ein standard-HRESULT.
 
 ## <a name="open"></a> CEnumerator:: Open
 
-Den Moniker für den Enumerator, gebunden wird, wenn eine angegeben ist und ruft dann das Rowset für den Enumerator durch Aufrufen von [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)).  
+Den Moniker für den Enumerator, gebunden wird, wenn eine angegeben ist und ruft dann das Rowset für den Enumerator durch Aufrufen von [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200).  
   
 ### <a name="syntax"></a>Syntax  
   

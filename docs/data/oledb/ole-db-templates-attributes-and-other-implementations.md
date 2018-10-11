@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6e5fa63a0da718b80c2b0d61e5215a947e21d496
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8b2cbe36a933580edc09e8139dca0ed6ec090f90
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101711"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082656"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>Vorlagen, Attribute und andere Implementierungen von OLE DB
 
@@ -36,7 +36,7 @@ Diese Vorlagenbibliothek besteht aus zwei Teilen:
   
 - **OLE DB-Anbietervorlagen** verwendet, um eine OLE DB-Server (Provider)-Anwendung zu implementieren.  
   
-Sie sollten mit C++-Vorlagen, COM und den OLE DB-Schnittstellen vertraut sein, um OLE DB-Vorlagen verwenden zu können. Wenn Sie nicht mit OLE DB vertraut sind, finden Sie unter [OLE DB-Programmierreferenz](/previous-versions/windows/desktop/ms713643\(v=vs.85\)).  
+Sie sollten mit C++-Vorlagen, COM und den OLE DB-Schnittstellen vertraut sein, um OLE DB-Vorlagen verwenden zu können. Wenn Sie nicht mit OLE DB vertraut sind, finden Sie entsprechende Informationen in der [OLE DB-Programmierreferenz](/previous-versions/windows/desktop/ms713643).  
   
 Weitere Informationen können Sie folgende Aktionen ausführen:  
   
@@ -48,7 +48,7 @@ Weitere Informationen können Sie folgende Aktionen ausführen:
   
 - Die Liste der [OLE DB-Vorlagenbeispiele](https://github.com/Microsoft/VCSamples).  
   
-- Finden Sie unter [OLE DB-Programmierreferenz](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) (in der Windows-SDK).  
+- Finden Sie unter [OLE DB-Programmierreferenz](/previous-versions/windows/desktop/ms713643) (in der Windows-SDK).  
   
 ## <a name="ole-db-attributes"></a>OLE DB-Attribute  
 
@@ -60,7 +60,7 @@ Die MFC-Bibliothek enthält eine Klasse, [COleDBRecordView](../../mfc/reference/
   
 ## <a name="ole-db-sdk-interfaces"></a>OLE DB-SDK-Schnittstellen  
 
-In den Fällen, in denen OLE DB-Vorlagen keine OLE DB-Funktionen unterstützen, müssen Sie den OLE DB-Schnittstellen verwenden. Weitere Informationen finden Sie unter [OLE DB-Programmierreferenz](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) im Windows SDK.  
+In den Fällen, in denen OLE DB-Vorlagen keine OLE DB-Funktionen unterstützen, müssen Sie den OLE DB-Schnittstellen verwenden. Weitere Informationen finden Sie unter [OLE DB-Programmierreferenz](/previous-versions/windows/desktop/ms713643) im Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
 

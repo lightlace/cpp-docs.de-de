@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 42545b24bff14daf66f719a78ba414f1ae86c5c0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 52b5c5bea282e4ebb4106d8e9c2fede40f375ae3
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791806"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083609"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -45,23 +45,23 @@ Die Spaltenordnungszahl (`DBCOLUMNINFO` Ordnungszahl) oder einen Spaltennamen (A
 ```
 
 *DbType*<br/>
-(Optional) OLE DB [Typindikator](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) für den Eintrag in der Spalte.
+(Optional) OLE DB [Typindikator](/previous-versions/windows/desktop/ms711251) für den Eintrag in der Spalte.
 
 *precision*<br/>
-(Optional) Die Genauigkeit für den Eintrag in der Spalte verwendet werden soll. Weitere Informationen finden Sie unter der Beschreibung des der `bPrecision` Element der [DBBINDING-Struktur](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+(Optional) Die Genauigkeit für den Eintrag in der Spalte verwendet werden soll. Weitere Informationen finden Sie unter der Beschreibung des der `bPrecision` Element der [DBBINDING-Struktur](/previous-versions/windows/desktop/ms716845)
 
 *Skalieren*<br/>
-(Optional) Die Dezimalstellen für den Eintrag in der Spalte verwendet werden soll. Weitere Informationen finden Sie unter der Beschreibung der `bScale` Element der [DBBINDING-Struktur](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+(Optional) Die Dezimalstellen für den Eintrag in der Spalte verwendet werden soll. Weitere Informationen finden Sie unter der Beschreibung der `bScale` Element der [DBBINDING-Struktur](/previous-versions/windows/desktop/ms716845)
 
-*status*<br/>
-(Optional) Eine Membervariable verwendet, um den Status dieser Spalte zu speichern. Der Status gibt an, ob der Wert der Spalte einen Datenwert oder einen anderen Wert, z. B. die NULL ist. Mögliche Werte finden Sie unter [Status](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.
+*Status*<br/>
+(Optional) Eine Membervariable verwendet, um den Status dieser Spalte zu speichern. Der Status gibt an, ob der Wert der Spalte einen Datenwert oder einen anderen Wert, z. B. die NULL ist. Mögliche Werte finden Sie unter [Status](/previous-versions/windows/desktop/ms722617) in die *OLE DB-Programmierreferenz*.
 
 *length*<br/>
 (Optional) Eine Membervariable verwendet, um die Größe der Spalte in Bytes zu speichern.
 
 ## <a name="remarks"></a>Hinweise
 
-**Db_column** bindet die angegebene Tabellenspalte an eine Variable im Rowset. Er begrenzt die Daten, die in der OLE DB teilnehmen kann `IAccessor`-basierten Bindung. Dieses Attribut richtet die spaltenzuordnung, die normalerweise definiert mithilfe der OLE DB-Consumer-Makros [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../../data/oledb/end-column-map.md), und [COLUMN_ENTRY](../../data/oledb/column-entry.md). Diese Bearbeitung der OLE DB [DBBINDING-Struktur](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) die angegebene Spalte zu binden. Jedes Element, markieren Sie Sie mit, der **Db_column** Attribut nimmt einen Eintrag in der spaltenzuordnung in Form von einem Eintrag in der Spalte. Daher rufen Sie dieses Attribut, in denen würden Sie die spaltenzuordnung, d. h. in der Klasse-Befehl oder eine Tabelle platzieren.
+**Db_column** bindet die angegebene Tabellenspalte an eine Variable im Rowset. Er begrenzt die Daten, die in der OLE DB teilnehmen kann `IAccessor`-basierten Bindung. Dieses Attribut richtet die spaltenzuordnung, die normalerweise definiert mithilfe der OLE DB-Consumer-Makros [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../../data/oledb/end-column-map.md), und [COLUMN_ENTRY](../../data/oledb/column-entry.md). Diese Bearbeitung der OLE DB [DBBINDING-Struktur](/previous-versions/windows/desktop/ms716845) die angegebene Spalte zu binden. Jedes Element, markieren Sie Sie mit, der **Db_column** Attribut nimmt einen Eintrag in der spaltenzuordnung in Form von einem Eintrag in der Spalte. Daher rufen Sie dieses Attribut, in denen würden Sie die spaltenzuordnung, d. h. in der Klasse-Befehl oder eine Tabelle platzieren.
 
 Verwendung **Db_column** in Verbindung mit der [Db_table](db-table.md) oder [Db_command](db-command.md) Attribute.
 
@@ -120,7 +120,7 @@ class CProducts {
 |**Erforderliche Attribute**|Keiner|
 |**Ungültige Attribute**|Keiner|
 
-Weitere Informationen zu den attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Siehe auch
 

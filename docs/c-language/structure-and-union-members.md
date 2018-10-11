@@ -21,72 +21,75 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b497745177bce165277e3a6e4ece2a3c47f20a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c244a55b4e0ebdfadf13e5ee0a3120f024d318af
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194874"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099667"
 ---
 # <a name="structure-and-union-members"></a>Struktur- und Unionmember
-Ein Memberauswahlausdruck bezieht sich auf Member von Strukturen und Unions. Ein solcher Ausdruck hat den Wert und Typ des ausgewählten Members.  
-  
-> *postfix-expression* **.** *identifier*  
-> *postfix-expression* **->** *identifier*
-  
-Diese Liste beschreibt die zwei Arten von Memberauswahlausdrücken:  
-  
-1.  Im ersten Formular steht *postfix-expression* für einen Wert des Typs **struct** oder **union**; mit *identifier* wird ein Member der angegebenen Struktur oder Union benannt. Der Wert des Vorgangs entspricht *identifier* und ist ein L-Wert, sofern *postfix-expression* ein L-Wert ist. Weitere Informationen finden Sie unter [L-Wert-und R-Wert-Ausdrücke](../c-language/l-value-and-r-value-expressions.md).  
-  
-2.  Im zweiten Formular steht *postfix-expression* für einen Zeiger auf eine Struktur oder Union; mit *identifier* wird ein Member der angegebenen Struktur oder Union benannt. Der Wert entspricht *identifier* und ist ein L-Wert.  
-  
- Die beiden Formen der Memberauswahlausdrücke verfügen über ähnliche Auswirkungen.  
-  
- Tatsächlich ist ein Ausdruck, der den Memberauswahloperator (**->**) enthält, eine Kurznotationsversion eines Ausdrucks, der den Punkt (**.**) verwendet, wenn der Ausdruck vor dem Punkt aus dem Dereferenzierungsoperator (<strong>\*</strong>) besteht, der auf einen Zeigerwert angewendet wird. Daher eignet sich  
+
+Ein Memberauswahlausdruck bezieht sich auf Member von Strukturen und Unions. Ein solcher Ausdruck hat den Wert und Typ des ausgewählten Members.
+
+> *postfix-expression* **.** *Bezeichner*
+> *postfix-expression* **->** *Bezeichner*
+
+Diese Liste beschreibt die zwei Arten von Memberauswahlausdrücken:
+
+1. Im ersten Formular steht *postfix-expression* für einen Wert des Typs **struct** oder **union**; mit *identifier* wird ein Member der angegebenen Struktur oder Union benannt. Der Wert des Vorgangs entspricht *identifier* und ist ein L-Wert, sofern *postfix-expression* ein L-Wert ist. Weitere Informationen finden Sie unter [L-Wert-und R-Wert-Ausdrücke](../c-language/l-value-and-r-value-expressions.md).
+
+1. Im zweiten Formular steht *postfix-expression* für einen Zeiger auf eine Struktur oder Union; mit *identifier* wird ein Member der angegebenen Struktur oder Union benannt. Der Wert entspricht *identifier* und ist ein L-Wert.
+
+Die beiden Formen der Memberauswahlausdrücke verfügen über ähnliche Auswirkungen.
+
+Tatsächlich ist ein Ausdruck, der den Memberauswahloperator (**->**) enthält, eine Kurznotationsversion eines Ausdrucks, der den Punkt (**.**) verwendet, wenn der Ausdruck vor dem Punkt aus dem Dereferenzierungsoperator (<strong>\*</strong>) besteht, der auf einen Zeigerwert angewendet wird. Daher eignet sich
 
 ```cpp
-expression->identifier  
+expression->identifier
 ```
 
-für die folgende Syntax:  
+für die folgende Syntax:
 
 ```cpp
 (*expression).identifier
 ```
 
- wenn *expression* ein Zeigerwert ist  
-  
-## <a name="examples"></a>Beispiele  
- Die folgenden Beispiele beziehen sich auf diese Strukturdeklaration. Weitere Informationen zum Dereferenzierungsoperator (<strong>\*</strong>), der in diesen Beispielen verwendet wird, finden Sie unter [Dereferenzierungs- und Address-of-Operatoren](../c-language/indirection-and-address-of-operators.md).  
-  
-```  
-struct pair   
-{  
-    int a;  
-    int b;  
-    struct pair *sp;  
-} item, list[10];  
-```  
-  
- Ein Memberauswahlausdruck für die `item`-Struktur sieht wie folgt aus:  
-  
-```  
-item.sp = &item;  
-```  
-  
- Im obigen Beispiel wird die Adresse der `item`-Struktur dem `sp`-Member der Struktur zugewiesen. Dies bedeutet, dass `item` einen Zeiger auf sich selbst enthält.  
-  
-```  
-(item.sp)->a = 24;  
-```  
-  
- In diesem Beispiel wird der Zeigerausdruck `item.sp` mit dem Memberauswahloperator (**->**) verwendet, um dem Member `a` einen Wert zuzuweisen.  
-  
-```  
-list[8].b = 12;  
-```  
-  
- Diese Anweisung zeigt, wie ein einzelner Strukturmember aus einem Array von Strukturen ausgewählt wird.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Operatoren für den Memberzugriff: . und ->](../cpp/member-access-operators-dot-and.md)
+wenn *expression* ein Zeigerwert ist
+
+## <a name="examples"></a>Beispiele
+
+Die folgenden Beispiele beziehen sich auf diese Strukturdeklaration. Weitere Informationen zum Dereferenzierungsoperator (<strong>\*</strong>), der in diesen Beispielen verwendet wird, finden Sie unter [Dereferenzierungs- und Address-of-Operatoren](../c-language/indirection-and-address-of-operators.md).
+
+```
+struct pair
+{
+    int a;
+    int b;
+    struct pair *sp;
+} item, list[10];
+```
+
+Ein Memberauswahlausdruck für die `item`-Struktur sieht wie folgt aus:
+
+```
+item.sp = &item;
+```
+
+Im obigen Beispiel wird die Adresse der `item`-Struktur dem `sp`-Member der Struktur zugewiesen. Dies bedeutet, dass `item` einen Zeiger auf sich selbst enthält.
+
+```
+(item.sp)->a = 24;
+```
+
+In diesem Beispiel wird der Zeigerausdruck `item.sp` mit dem Memberauswahloperator (**->**) verwendet, um dem Member `a` einen Wert zuzuweisen.
+
+```
+list[8].b = 12;
+```
+
+Diese Anweisung zeigt, wie ein einzelner Strukturmember aus einem Array von Strukturen ausgewählt wird.
+
+## <a name="see-also"></a>Siehe auch
+
+[Operatoren für den Memberzugriff: . und ->](../cpp/member-access-operators-dot-and.md)

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a49cb4fa88b3a014d79969cc86fc03fa1136efa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5491f8a761eee80595265150ee0cb89c682b3079
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405345"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084047"
 ---
 # <a name="changing-the-font-of-text-on-an-image-image-editor-for-icons"></a>Ändern der Schriftart von Text in einem Bild (Bildbearbeitung für Symbole)
 
@@ -32,7 +32,7 @@ Das folgende Verfahren ist ein Beispiel an:
 
 ### <a name="to-change-the-font-of-text-on-an-image"></a>Ändern die Schriftart von Text in einem Bild
 
-1. Erstellen einer C++-Windows Forms-Anwendung. Weitere Informationen finden Sie unter [Erstellen eines Windows-Anwendungsprojekts](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5\(v=vs.100\)). Ein `app.ico` Datei wird standardmäßig zum Projekt hinzugefügt.
+1. Erstellen einer C++-Windows Forms-Anwendung. Weitere Informationen finden Sie unter [Erstellen eines Windows-Anwendungsprojekts](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5). Ein `app.ico` Datei wird standardmäßig zum Projekt hinzugefügt.
 
 2. In **Projektmappen-Explorer**, doppelklicken Sie auf die Datei app.ico. Die [Bildbearbeitung](../windows/image-editor-for-icons.md) wird geöffnet.
 

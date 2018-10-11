@@ -20,23 +20,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c072074c24466458ebd19e1335f49169c5c22bd5
-ms.sourcegitcommit: 3b78ddea5fd3e22b7c5cd2d787ec71a518a52223
+ms.openlocfilehash: 2622702cd19dab3cad2613aa3df28b5cef464853
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578471"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076007"
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>Gebietsschema-Namen, Sprachen und Zeichenfolgen für Länder und Regionen
 
 Das *locale*-Argument für die Funktionen `setlocale` und `_create_locale` kann mithilfe der Gebietsschemanamen, Sprachen, Länder-/Regionscodes und Codepages festgelegt werden, die von der Windows NLS API unterstützt werden. Das *locale*-Argument weist folgende Form auf:
 
-> *locale* :: "*locale_name*"  
-&nbsp;&nbsp;&nbsp;&nbsp;| "*language*\[\_*country-region*]\[.*code_page*]]"  
-&nbsp;&nbsp;&nbsp;&nbsp;| ".*code_page*"  
-&nbsp;&nbsp;&nbsp;&nbsp;| "C"  
-&nbsp;&nbsp;&nbsp;&nbsp;| ""  
-&nbsp;&nbsp;&nbsp;&nbsp;| NULL  
+> *locale* :: "*gebietsschema_Name*" &nbsp;&nbsp;&nbsp;&nbsp;| "*language*\[\_*country-region*]\[.*code_page*]]" &nbsp;&nbsp;&nbsp;&nbsp;| ".*code_page*" &nbsp;&nbsp;&nbsp;&nbsp;| "C" &nbsp;&nbsp;&nbsp;&nbsp;| "" &nbsp;&nbsp;&nbsp;&nbsp;| NULL
 
 Die Form des Gebietsschemanamens wird bevorzugt. Verwenden Sie z.B. `en-US` für Englisch (USA) oder `bs-Cyrl-BA` für Bosnisch (Kyrillisch, Bosnien und Herzegowina). Der Satz von Gebietsschemanamen wird in [Gebietsschemanamen](/windows/desktop/Intl/locale-names)beschrieben. Eine Liste der unterstützten Gebietsschemanamen nach Windows-Betriebssystemversionen finden Sie in der Spalte **Sprachtag** der Tabelle unter [Anhang A: Produktverhalten](https://msdn.microsoft.com/library/cc233982.aspx) in [MS-LCID]: Windows-Sprachcodebezeichner – Referenz. Unter dieser Ressource finden Sie die unterstützte Sprache, das Skript und die regionalen Teile der Gebietsschemanamen. Informationen zu den unterstützten Gebietsschemanamen ohne standardmäßige Sortierreihenfolge finden Sie in der Spalte des **Gebietsschemanamens** unter den [Sortierreihenfolgen-IDs](/windows/desktop/Intl/sort-order-identifiers). Unter Windows 10 und höher sind Gebietsschemanamen zulässig, die gültigen BCP-47-Sprachtags entsprechen. `jp-US` z.B. ist ein gültiges BCP-47-Tag, für die locale-Funktion ist es jedoch effektiv nur `US`.
 
@@ -50,8 +45,7 @@ Ein *locale*-Argumentwert von `C` gibt die Umgebung mit minimaler ANSI-Konformit
 
 Sie können für die Funktionen `setlocale` und `_wsetlocale` alle Gebietsschemakategorien gleichzeitig mithilfe der `LC_ALL` -Kategorie angeben. Die Kategorien können alle auf das gleiche Gebietsschema festgelegt werden, oder Sie können jede Kategorie einzeln festlegen, indem Sie ein Gebietsschemaargument mit dieser Form verwenden:
 
-> LC_ALL_specifier :: locale  
-&nbsp;&nbsp;&nbsp;&nbsp;| [LC_COLLATE=locale][;LC_CTYPE=locale][;LC_MONETARY=locale][;LC_NUMERIC=locale][;LC_TIME=locale]
+> LC_ALL_specifier :: locale &nbsp;&nbsp;&nbsp;&nbsp;| [LC_COLLATE=locale][;LC_CTYPE=locale][;LC_MONETARY=locale][;LC_NUMERIC=locale][;LC_TIME=locale]
 
 Sie können mehrere Kategorientypen angeben, durch Semikolons getrennt. Bei nicht angegebenen Kategorientypen werden die aktuellen Gebietsschemaeinstellungen verwendet. Dieser Codeausschnitt legt beispielsweise das aktuelle Gebietsschema für alle Kategorien auf `de-DE` fest und legt dann die Kategorien `LC_MONETARY` auf `en-GB` und `LC_TIME` auf `es-ES` fest:
 
@@ -62,9 +56,9 @@ _wsetlocale(LC_ALL, L"LC_MONETARY=en-GB;LC_TIME=es-ES");
 
 ## <a name="see-also"></a>Siehe auch
 
-[C-Laufzeitbibliotheksreferenz](../c-runtime-library/c-run-time-library-reference.md)  
-[_get_current_locale](../c-runtime-library/reference/get-current-locale.md)  
-[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)  
-[_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)  
-[Language Strings](../c-runtime-library/language-strings.md)  
-[Länder-/Regionszeichenfolgen](../c-runtime-library/country-region-strings.md)  
+[C-Laufzeitbibliotheksreferenz](../c-runtime-library/c-run-time-library-reference.md)<br/>
+[_get_current_locale](../c-runtime-library/reference/get-current-locale.md)<br/>
+[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
+[_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)<br/>
+[Language Strings](../c-runtime-library/language-strings.md)<br/>
+[Länder-/Regionszeichenfolgen](../c-runtime-library/country-region-strings.md)

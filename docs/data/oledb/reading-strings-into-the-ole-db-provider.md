@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4e052de60234b065a137c5528c77d2d6c97490e8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 88272c935c3e610ee633a1e076a2d2d76b5840f2
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46034850"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082565"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Einlesen von Zeichenfolgen in den OLE DB-Anbieter
 
-Die `RMyProviderRowset::Execute` Funktion eine Datei öffnet und liest Zeichenfolgen. Der Consumer übergibt den Dateinamen an dem Anbieter an, durch den Aufruf [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757\(v=vs.85\)). Der Anbieter erhält den Dateinamen und speichert sie in der Membervariablen `m_szCommandText`. `Execute` liest den Dateinamen aus `m_szCommandText`. Wenn der Dateiname ungültig ist, oder die Datei nicht verfügbar ist ist, `Execute` gibt einen Fehler zurück. Sie geöffnet wird, andernfalls die Datei, und Aufrufe `fgets` die Zeichenfolgen ab. Für jede von Zeichenfolgen es liest, legen Sie `Execute` erstellt eine Instanz des Benutzerdatensatzes (`CAgentMan`) und setzt es in ein Array.  
+Die `RMyProviderRowset::Execute` Funktion eine Datei öffnet und liest Zeichenfolgen. Der Consumer übergibt den Dateinamen an dem Anbieter an, durch den Aufruf [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757). Der Anbieter erhält den Dateinamen und speichert sie in der Membervariablen `m_szCommandText`. `Execute` liest den Dateinamen aus `m_szCommandText`. Wenn der Dateiname ungültig ist, oder die Datei nicht verfügbar ist ist, `Execute` gibt einen Fehler zurück. Sie geöffnet wird, andernfalls die Datei, und Aufrufe `fgets` die Zeichenfolgen ab. Für jede von Zeichenfolgen es liest, legen Sie `Execute` erstellt eine Instanz des Benutzerdatensatzes (`CAgentMan`) und setzt es in ein Array.  
   
 Wenn die Datei kann nicht geöffnet werden, `Execute` DB_E_NOTABLE zurückgeben. Wenn sie stattdessen E_FAIL zurückgibt, wird der Anbieter funktioniert nicht mit vielen Consumern und der OLE DB wird nicht übergeben [Konformitätstests](../../data/oledb/testing-your-provider.md).  
   

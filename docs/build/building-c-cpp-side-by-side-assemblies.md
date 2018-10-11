@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e3c80b383c592d3eebf892981c088e26529c515
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 93e02ee27fb8b5a1f4f4f7b2e435a737e1c637a2
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860939"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083839"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>Erstellen von parallelen C/C++-Assemblys
 
@@ -30,7 +30,7 @@ Visual C++-Anwendung kann eine oder mehrere DLLs in verschiedenen Teilen der Anw
 Standardmäßig, wenn eine DLL, mit Visual Studio erstellt wird hat ein [Anwendungsmanifest](/windows/desktop/SbsCs/application-manifests) eingebettet als Ressource "RT_MANIFEST" mit der ID gleich 2. Genau wie bei einer ausführbaren Datei beschreibt dieses Manifest diese DLL-Abhängigkeiten von anderen Assemblys. Dies setzt voraus, dass die DLL nicht Teil einer Seite-an-Seite-Assembly ist und Anwendungen, die diese DLL abhängig sind nicht für das ein Anwendungsmanifest zu laden, aber verwenden stattdessen auf das Ladeprogramm des Betriebssystems finden Sie diese DLL-Datei unter dem Systempfad verwenden möchte.
 
 > [!NOTE]
-> Es ist wichtig für eine DLL, die ein Anwendungsmanifest verwendet, um das Manifest als Ressource eingebettet ist, mit der ID gleich 2 zu erhalten. Wenn die DLL zur Laufzeit dynamisch geladen wird (z. B. die [LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175) Funktion), vom Ladeprogramm des Betriebssystems lädt die abhängigen Assemblys, die im Manifest der DLL angegeben. Ein externes Anwendungsmanifest für DLLs nicht aktiviert ist, während eine `LoadLibrary` aufrufen. Wenn das Manifest nicht eingebettet werden, das Ladeprogramm möglicherweise falsche Versionen von Assemblys zu laden oder Fehler beim abhängigen Assemblys finden.
+> Es ist wichtig für eine DLL, die ein Anwendungsmanifest verwendet, um das Manifest als Ressource eingebettet ist, mit der ID gleich 2 zu erhalten. Wenn die DLL zur Laufzeit dynamisch geladen wird (z. B. die [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) Funktion), vom Ladeprogramm des Betriebssystems lädt die abhängigen Assemblys, die im Manifest der DLL angegeben. Ein externes Anwendungsmanifest für DLLs nicht aktiviert ist, während eine `LoadLibrary` aufrufen. Wenn das Manifest nicht eingebettet werden, das Ladeprogramm möglicherweise falsche Versionen von Assemblys zu laden oder Fehler beim abhängigen Assemblys finden.
 
 Eine oder mehrere bezogene DLLs können neu verpackt werden, in eine Seite-an-Seite-Assembly mit einem entsprechenden [Assemblymanifest](/windows/desktop/SbsCs/assembly-manifests), das beschreibt, welche Dateien der Assembly als auch die Abhängigkeit von der Assembly auf der anderen Seite-an-Seite bilden Assemblys.
 

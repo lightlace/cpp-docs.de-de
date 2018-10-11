@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b64e92eaca38743f0bc9de31f9be7684271c4674
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9783da47a22260f0edbe5ddf6d8f5021aae31e5c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374358"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083800"
 ---
 # <a name="application-information-and-management"></a>Anwendungsinformationen und Anwendungsverwaltung
 
@@ -591,7 +591,7 @@ Wenn die Funktion erfolgreich ist, ist der Rückgabewert ein Handle für das Mod
 
 ### <a name="remarks"></a>Hinweise
 
-Gibt ein Handle, das verwendet werden kann [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) um die Adresse einer DLL-Funktion abzurufen. `AfxLoadLibrary` kann auch verwendet werden, um andere ausführbare Module zuzuordnen.
+Gibt ein Handle, das verwendet werden kann [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) um die Adresse einer DLL-Funktion abzurufen. `AfxLoadLibrary` kann auch verwendet werden, um andere ausführbare Module zuzuordnen.
 
 Jeder Prozess verwaltet einen Verweiszähler für jedes Modul geladenen Bibliothek. Diese Verweiszähler erhöht sich beim `AfxLoadLibrary` aufgerufen wird, und erniedrigt wird jedes Mal `AfxFreeLibrary` aufgerufen wird. Wenn der Verweiszähler null erreicht, wird das Modul nicht aus dem Adressraum des aufrufenden Prozesses zugeordnet ist, und das Handle ist nicht mehr gültig.
 
@@ -752,7 +752,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 
 Vor Windows Vista Anwendungen, die die Registrierung in der Regel verwendet, Zugriff auf die **HKEY_CLASSES_ROOT** Knoten. Mit Windows Vista oder höher, müssen Sie jedoch eine Anwendung im erweiterten Modus, in HKCR schreiben ausführen.
 
-Diese Methode ermöglicht Ihrer Anwendung zu lesen und Schreiben in die Registrierung ohne im Modus mit erhöhten Rechten ausgeführt werden, indem Sie Zugriff auf die Registrierung von HKCR auf HKCU umleiten. Weitere Informationen finden Sie unter [Linker-Eigenschaftenseiten](../../ide/linker-property-pages.md).
+Diese Methode ermöglicht Ihrer Anwendung zu lesen und Schreiben in die Registrierung ohne im Modus mit erhöhten Rechten ausgeführt werden, indem Sie Zugriff auf die Registrierung von HKCR auf HKCU umleiten. Weitere Informationen finden Sie unter [Linker Property Pages](../../ide/linker-property-pages.md).
 
 Wenn Sie den registrierungsumleitung aktivieren, leitet das Framework den Zugriff von HKCR geschriebenen Daten in **HKEY_CURRENT_USER\Software\Classes**. Nur die MFC und ATL-Frameworks sind von der Umleitung betroffen.
 

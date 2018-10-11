@@ -1,7 +1,7 @@
 ---
 title: Konfigurieren eines C++ Linux-Projekts in Visual Studio | Microsoft Docs
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 09/18/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -14,12 +14,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: fbc0674a7659ffccd5ab5c655f74167acebdca97
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 17597ae7497288312b8ddcfcf53a77130fbbf2d8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895200"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383238"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurieren eines Linux-Projekts
 
@@ -33,9 +33,11 @@ Für ein Linux-Projekt mit Visual Studio lassen sich eine Vielzahl von Optionen 
 
 Standardmäßig wird eine ausführbare Datei (.out) mit dem Tool erstellt.  Zum Erstellen einer statischen oder dynamischen Bibliothek oder um eine vorhandene Makefile zu nutzen, verwenden Sie die Auswahl **Konfigurationstyp**.
 
+Weitere Informationen zu den Optionen auf den Eigenschaftenseiten finden Sie unter [Referenz zur Linux-Projekteigenschaftenseite](prop-pages-linux.md).
+
 ## <a name="remote-settings"></a>Remoteeinstellungen
 
-Um die Einstellungen für den Linux-Remotecomputer zu ändern, konfigurieren Sie die Remoteoptionen, die in den Einstellungen unter **Allgemein** angezeigt werden:
+Um die Einstellungen für den Linux-Remotecomputer zu ändern, konfigurieren Sie die Remoteoptionen, die in den Einstellungen unter [Allgemein](prop-pages/general-linux.md) angezeigt werden:
 
 - Verwenden Sie zum Ändern des Linux-Zielcomputers den Eintrag **Remotebuildcomputer**.  Dadurch können Sie eine der zuvor erstellten Verbindungen auswählen.  Weitere Informationen dazu, wie Sie einen neuen Eintrag erstellen, finden Sie im Abschnitt [Connecting to Your Remote Linux Computer (Verbindung mit Ihren Linux-Remotecomputer](connect-to-your-remote-linux-computer.md).
 
@@ -44,11 +46,12 @@ Um die Einstellungen für den Linux-Remotecomputer zu ändern, konfigurieren Sie
 - Das **Remotebuild-Projektverzeichnis** ist das Verzeichnis, in dem dieses spezifische Projekt auf dem Linux-Remotecomputer erstellt wird.  Standardmäßig handelt es sich dabei um das Verzeichnis **$(RemoteRootDir)/$(ProjektName)**. Es wird zu einem Verzeichnis erweitert, das den Namen des aktuellen Projekts unter dem oben angegebenen Stammverzeichnis trägt.
 
 > [!NOTE]
-> Verwenden Sie zum Ändern der C- und C++-Standardcompiler bzw. der Linker und Archivierungsprogramme, die zur Erstellung des Projekts verwendet werden, die entsprechenden Einträge im Abschnitt **C/C++ > Allgemein** sowie im Abschnitt **Linker > Allgemein**.  Diese können beispielsweise für die Verwendung einer bestimmten GCC-Version oder sogar des Clang-Compilers festgelegt werden.
+> Verwenden Sie zum Ändern der C- und C++-Standardcompiler bzw. der Linker und Archivierungsprogramme, die zur Erstellung des Projekts verwendet werden, die entsprechenden Einträge im Abschnitt **C/C++ > Allgemein** sowie im Abschnitt **Linker > Allgemein**.  Diese können beispielsweise für die Verwendung einer bestimmten GCC-Version oder sogar des Clang-Compilers festgelegt werden. Weitere Informationen finden Sie unter [C/C++-Eigenschaften (Linux C++)](prop-pages/c-cpp-linux.md) und [Linkereigenschaften (Linux C++)](prop-pages/linker-linux.md).
 
 ## <a name="include-directories-and-intellisense-support"></a>Einschließen von Verzeichnissen und IntelliSense-Unterstützung
 
-**Visual Studio 2017-Version 15.6 und früher:** Standardmäßig enthält Visual Studio keine Includedateien auf Systemebene des Linux-Computers.  So sind in Visual Studio beispielsweise keine Element aus dem Verzeichnis **/Usr/include** vorhanden.
+**Visual Studio 2017 Version 15.6 oder früher:**<br/>
+Standardmäßig enthält Visual Studio keine Includedateien auf Systemebene des Linux-Computers.  So sind in Visual Studio beispielsweise keine Element aus dem Verzeichnis **/Usr/include** vorhanden.
 Für vollständige [IntelliSense](/visualstudio/ide/using-intellisense)-Unterstützung müssen Sie diese Dateien an einen Speicherort auf dem Entwicklungscomputer kopieren und Visual Studio auf diesen Speicherort verweisen.  Eine Möglichkeit besteht darin, die Dateien über SCP (Secure Copy) zu kopieren.  Unter Windows 10 können Sie [Bash unter Windows ](https://msdn.microsoft.com/commandline/wsl/about) verwenden, um SCP ausführen.  Unter früheren Versionen von Windows können Sie beispielsweise [PSCP (PuTTY Secure Copy)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) nutzen.
 
 Sie können die Dateien mithilfe eines Befehls wie dem folgenden kopieren:
@@ -61,7 +64,8 @@ Nachdem Sie die Dateien kopiert haben, verwenden Sie in den Projekteigenschaften
 
 ![VC++-Verzeichnisse](media/settings_directories.png)
 
-**Visual Studio 2017-Version 15.7 und höher:** Weitere Informationen finden Sie unter [IntelliSense für Remoteheader (Visual Studio 2017-Version 15.7 und höher)](#remote_intellisense).
+**Visual Studio 2017, Version 15.7 und höher**:<br/>
+Weitere Informationen finden Sie unter [Verwalten von Remoteheadern für IntelliSense](#remote_intellisense).
 
 ## <a name="copy-sources"></a>Kopieren der Quellen
 
@@ -97,8 +101,8 @@ Navigieren Sie zum Verwalten Ihres Header-Caches zu **Extras > Optionen > Plattf
 
 ## <a name="see-also"></a>Siehe auch
 
-[Arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md)  
-[Allgemeine C++-Eigenschaften (Linux C++)](../linux/prop-pages/general-linux.md)  
-[VC++-Verzeichnisse (Linux C++)](../linux/prop-pages/directories-linux.md)  
-[Kopieren von Quellprojekteigenschaften (Linux C++)](../linux/prop-pages/copy-sources-project.md)  
+[Arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md)<br/>
+[Allgemeine C++-Eigenschaften (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
+[VC++-Verzeichnisse (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
+[Kopieren von Quellprojekteigenschaften (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
 [Buildereigniseigenschaften (Linux C++)](../linux/prop-pages/build-events-linux.md)

@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce1a287a9fa608881a39f82a2b86cfc541674218
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ef48157d1f4efb467fd33270ff05271bedd1a563
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713720"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081889"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 
-Prozesse, die explizit Verknüpfen mit einer DLL-Aufrufs [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) zum Abrufen der Adresse einer exportierten Funktion in der DLL. Sie rufen die DLL-Funktion dann über den zurückgegebenen Funktionszeiger auf. **GetProcAddress** nimmt als Parameter das DLL-Modulhandle (entweder vom **LoadLibrary**, `AfxLoadLibrary`, oder **GetModuleHandle**), und Sie gelangen Sie entweder den Namen der gewünschten-Funktion zum Aufruf oder die Ordnungszahl für einen Export der Funktion.
+Prozesse, die explizit Verknüpfen mit einer DLL-Aufrufs [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) zum Abrufen der Adresse einer exportierten Funktion in der DLL. Sie rufen die DLL-Funktion dann über den zurückgegebenen Funktionszeiger auf. **GetProcAddress** nimmt als Parameter das DLL-Modulhandle (entweder vom **LoadLibrary**, `AfxLoadLibrary`, oder **GetModuleHandle**), und Sie gelangen Sie entweder den Namen der gewünschten-Funktion zum Aufruf oder die Ordnungszahl für einen Export der Funktion.
 
 Da Sie die DLL-Funktion über einen Zeiger aufrufen und zur Kompilierzeit keine Typüberprüfung erfolgt, sollten Sie sicherstellen, dass die Parameter für die Funktion korrekt sind, damit Sie nicht den auf dem Stapel belegten Speicherbereich überschreiten und eine Zugriffsverletzung verursachen. Eine Möglichkeit die Typsicherheit zu gewährleisten besteht darin, sich die Funktionsprototypen der exportierten Funktionen anzusehen und entsprechende Typdefinitionen für die Funktionszeiger zu erstellen. Zum Beispiel:
 
@@ -73,7 +73,7 @@ Sie können die Exportordinalzahl nur ermitteln, wenn die DLL, die Sie zum Verkn
 
 - [LoadLibrary und AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)
 
-- [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152)
+- [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
 
 - [Exportieren aus einer DLL mithilfe von DEF-Dateien](../build/exporting-from-a-dll-using-def-files.md)
 

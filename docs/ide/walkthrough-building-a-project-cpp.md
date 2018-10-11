@@ -1,7 +1,7 @@
 ---
 title: 'Exemplarische Vorgehensweise: Erstellen eines Projekts (C++) | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/14/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -16,54 +16,58 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c8d04dc3692076b867302af0e793eaac7ed25cb
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: eca30330e721575443ba9d3f7b0b19c315427eb2
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332454"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234124"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Exemplarische Vorgehensweise: Erstellen eines Projekts (C++)
-In dieser exemplarischen Vorgehensweise fügen Sie absichtlich einen Visual C++-Syntaxfehler in den Code ein, um zu lernen, wie ein Kompilierungsfehler aussieht und wie Sie diesen beheben. Beim Kompilieren des Projekts wird eine Fehlermeldung angezeigt. Diese gibt an, worin das Problem besteht und wo es aufgetreten ist.  
-  
-## <a name="prerequisites"></a>Erforderliche Komponenten  
-  
--   In dieser exemplarischen Vorgehensweise wird davon ausgegangen, dass Sie die Grundlagen der Programmiersprache C++ beherrschen.  
-  
--   Es wird ebenfalls davon ausgegangen, dass Sie die früheren exemplarischen Vorgehensweisen abgeschlossen haben, die unter [Using the Visual Studio IDE for C++ Desktop Development (Verwenden der Visual Studio-IDE für die C++-Desktopentwicklung)](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md) aufgeführt sind.  
-  
-### <a name="to-fix-compilation-errors"></a>So beheben Sie Kompilierungsfehler  
-  
-1.  Löschen Sie das Semikolon in der letzten Zeile von TestGames.cpp, sodass diese Zeile ungefähr wie folgt aussieht:  
-  
-     `return 0`  
-  
-2.  Wählen Sie in der Menüleiste **Erstellen**, **Projektmappe erstellen**.  
-  
-3.  Eine Meldung im Fenster **Fehlerliste** gibt an, dass bei der Erstellung des Projekts ein Fehler aufgetreten ist. Die Beschreibung sieht ungefähr so aus:  
-  
-     `error C2143: syntax error : missing ';' before '}'`  
-  
-     Markieren Sie einen Fehler im Fenster **Fehlerliste**, und drücken Sie die F1-TASTE, um Hilfeinformationen anzuzeigen.  
-  
-4.  Fügen Sie das Semikolon wieder am Ende der Zeile mit dem Syntaxfehler ein:  
-  
-     `return 0;`  
-  
-5.  Wählen Sie in der Menüleiste **Erstellen**, **Projektmappe erstellen**.  
-  
-     Die im Fenster **Ausgabe** angezeigte Meldung gibt an, dass das Projekt ordnungsgemäß kompiliert wurde.  
-  
-    ```Output  
-    1>------ Build started: Project: Game, Configuration: Debug Win32 ------  
-    1>  TestGames.cpp  
-    1>  Game.vcxproj -> C:\Users\<username>\Documents\Visual Studio <version>\Projects\Game\Debug\Game.exe  
-    ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========  
-    ```  
-  
-## <a name="next-steps"></a>Nächste Schritte  
- **Zurück:** [Walkthrough: Working with Projects and Solutions (C++) (Exemplarische Vorgehensweise: Arbeiten mit Projekten und Projektmappen (C++))](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) &#124; **Weiter:**[Walkthrough: Testing a Project (C++) (Exemplarische Vorgehensweise: Testen eines Projekts (C++))](../ide/walkthrough-testing-a-project-cpp.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [C++ Language Reference (C++-Programmiersprachenreferenz)](../cpp/cpp-language-reference.md)   
- [Erstellen von C/C++-Programmen](../build/building-c-cpp-programs.md)
+
+In dieser exemplarischen Vorgehensweise fügen Sie absichtlich einen Visual C++-Syntaxfehler in den Code ein, um zu lernen, wie ein Kompilierungsfehler aussieht und wie Sie diesen beheben. Beim Kompilieren des Projekts wird eine Fehlermeldung angezeigt. Diese gibt an, worin das Problem besteht und wo es aufgetreten ist.
+
+## <a name="prerequisites"></a>Erforderliche Komponenten
+
+- In dieser exemplarischen Vorgehensweise wird davon ausgegangen, dass Sie die Grundlagen der Programmiersprache C++ beherrschen.
+
+- Es wird ebenfalls davon ausgegangen, dass Sie die früheren exemplarischen Vorgehensweisen abgeschlossen haben, die unter [Verwenden der Visual Studio-IDE für die C++-Desktopentwicklung](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md) aufgeführt sind.
+
+### <a name="to-fix-compilation-errors"></a>So beheben Sie Kompilierungsfehler
+
+1. Löschen Sie das Semikolon in der letzten Zeile von „Games.cpp“, sodass diese Zeile ungefähr wie die folgende Anweisung aussieht:
+
+    `return 0`
+
+1. Wählen Sie auf der Menüleiste **Erstellen** > **Projektmappe erstellen** aus.
+
+1. Eine Meldung im Fenster **Fehlerliste** gibt an, dass bei der Erstellung des Projekts ein Fehler aufgetreten ist. Die Beschreibung sieht in etwa wie die folgende Fehlermeldung aus:
+
+    `error C2143: syntax error: missing ';' before '}'`
+
+  Markieren Sie einen Fehler im Fenster **Fehlerliste**, und drücken Sie die Taste **F1**, um Hilfeinformationen anzuzeigen.
+
+1. Fügen Sie das Semikolon wieder am Ende der Zeile mit dem Syntaxfehler ein:
+
+     `return 0;`
+
+1. Wählen Sie auf der Menüleiste **Erstellen** > **Projektmappe erstellen** aus.
+
+  Die im Fenster **Ausgabe** angezeigte Meldung gibt an, dass das Projekt ordnungsgemäß kompiliert wurde.
+
+    ```Output
+    1>------ Build started: Project: Game, Configuration: Debug Win32 ------
+    1>Game.cpp
+    1>Game.vcxproj -> C:\Users\<username>\source\repos\Game\Debug\Game.exe
+    ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+    ```
+
+## <a name="next-steps"></a>Nächste Schritte
+
+**Zurück:** [Exemplarische Vorgehensweise: Arbeiten mit Projekten und Projektmappen (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)<br/>
+**Weiter:** [Exemplarische Vorgehensweise: Testen eines Projekts (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
+
+## <a name="see-also"></a>Siehe auch
+
+[C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)<br/>
+[Erstellen von C/C++-Programmen](../build/building-c-cpp-programs.md)<br/>

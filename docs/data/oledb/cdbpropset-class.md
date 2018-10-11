@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c6d62b8d4b033d1b90c753d5de1752f0cb737f0d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e998f0bed867356218e4a1b1c772d396c53afecb
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46114656"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082981"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet-Klasse
 
@@ -138,7 +138,7 @@ bool AddProperty(DWORD dwPropertyID,
 
 ## <a name="cdbpropset"></a> CDBPropSet:: CDBPropSet
 
-Der Konstruktor. Initialisiert die `rgProperties`, `cProperties`, und `guidPropertySet` Felder der [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) Struktur.  
+Der Konstruktor. Initialisiert die `rgProperties`, `cProperties`, und `guidPropertySet` Felder der [DBPROPSET](/previous-versions/windows/desktop/ms714367) Struktur.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -171,7 +171,7 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>Parameter  
 
 *GUID*<br/>
-[in] Eine GUID zum Festlegen der `guidPropertySet` Feld der [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) Struktur.  
+[in] Eine GUID zum Festlegen der `guidPropertySet` Feld der [DBPROPSET](/previous-versions/windows/desktop/ms714367) Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
 
@@ -192,5 +192,5 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
 [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CDBPropIDSet-Klasse](../../data/oledb/cdbpropidset-class.md)<br/>
-[DBPROPSET-Struktur](/previous-versions/windows/desktop/ms714367\(v=vs.85\))   
-[DBPROP-Struktur](/previous-versions/windows/desktop/ms717970\(v=vs.85\))
+[DBPROPSET-Struktur](/previous-versions/windows/desktop/ms714367)   
+[DBPROP-Struktur](/previous-versions/windows/desktop/ms717970)

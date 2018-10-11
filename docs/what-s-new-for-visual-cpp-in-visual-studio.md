@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 996a891d62ee254fe2ce769483d34941ffb300b6
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: cc82a45c181d4a2b56670af9cc0d6da055737b8d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680538"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722318"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Neuerungen bei Visual C++ in Visual Studio 2017
 
@@ -394,8 +394,7 @@ C++ wird als optionale Komponente für die Arbeitsauslastung der Universellen Wi
 ## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>Neue Optionen für C++ auf der universellen Windows-Plattform (UWP)
 Jetzt stehen Ihnen neue Optionen für das Schreiben und Packen von C++-Anwendungen für die universelle Windows-Plattform und den Microsoft Store zur Verfügung: Sie können die Desktop Bridge-Infrastruktur zum Packen Ihrer vorhandenen Desktopanwendung oder das COM-Objekt für die Bereitstellung über den Microsoft Store oder mittels Querladen über Ihre vorhandenen Kanäle nutzen. Mit den neuen Funktionen in Windows 10 können Sie Ihre Desktopanwendung auf unterschiedliche Weise um die Funktionalität der universellen Windows-Plattform (UWP) erweitern. Weitere Informationen finden Sie unter [Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root).
 
-**Visual Studio 2017, Version 15.5**  
-Eine Projektvorlage **Paketerstellungsprojekt für Windows-Anwendungen** wurde hinzugefügt, die die Paketerstellung von Desktopanwendungen mithilfe von Desktop Bridge unterstützt. Sie ist unter **Datei > Neu > Projekt > Installiert > Visual C++ > Universelle Windows-Plattform** verfügbar. Weitere Informationen finden Sie unter [Packen einer App mit Visual Studio (Desktop Bridge)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
+**Visual Studio 2017 Version 15.5**: Eine Projektvorlage **Paketerstellungsprojekt für Windows-Anwendungen** wurde hinzugefügt, die die Paketerstellung von Desktopanwendungen mithilfe von Desktop Bridge unterstützt. Sie ist unter **Datei > Neu > Projekt > Installiert > Visual C++ > Universelle Windows-Plattform** verfügbar. Weitere Informationen finden Sie unter [Packen einer App mit Visual Studio (Desktop Bridge)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
 Beim Schreiben von neuem Code können Sie nun C++/WinRT verwenden. Dies ist eine C++-Standardsprachprojektion für Windows-Runtime (WinRT), die nur in Headerdateien implementiert wird. Mit ihr können Sie Windows-Runtime-APIs mit jedem C+-Compiler erstellen und nutzen, der mit Standards kompatibel ist. C++/WinRT wurde dafür konzipiert, C++-Entwicklern erstklassigen Zugriff auf die moderne Windows-API zur Verfügung zu stellen. Weitere Informationen finden Sie im Blogbeitrag [C++/WinRT Available on GitHub](https://moderncpp.com/).
 

@@ -102,12 +102,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 17e353f044a3b003736589f52c538101e18fd7ea
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b495a756cbccc88f00c42dc8de78bf80a39f4b7a
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085549"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083359"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl-Klasse
 
@@ -173,7 +173,7 @@ Storage-Einheit für alle Zeilenhandles, die vom Anbieter.
   
 ## <a name="remarks"></a>Hinweise  
 
-[IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\)) ist die grundlegende Rowset-Schnittstelle.  
+[IRowset](/previous-versions/windows/desktop/ms720986) ist die grundlegende Rowset-Schnittstelle.  
 
 ## <a name="addrefrows"></a> IRowsetImpl:: Addrefrows
 
@@ -190,7 +190,7 @@ STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
   
 #### <a name="parameters"></a>Parameter  
 
-Finden Sie unter [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+Finden Sie unter [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) in die *OLE DB-Programmierreferenz*.  
 
 ## <a name="createrow"></a> IRowsetImpl:: CreateRow
 
@@ -233,7 +233,7 @@ STDMETHOD(GetData )(HROW hRow,
   
 #### <a name="parameters"></a>Parameter  
 
-Finden Sie unter [IRowset:: GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+Finden Sie unter [IRowset:: GetData](/previous-versions/windows/desktop/ms716988) in die *OLE DB-Programmierreferenz*.  
   
 Einige Parameter entsprechen den *OLE DB-Programmierreferenz* Parameter mit unterschiedlichen Namen, die in beschriebenen `IRowset::GetData`:  
   
@@ -266,7 +266,7 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
   
 ### <a name="return-value"></a>Rückgabewert  
 
-Die [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) Flags für die Spalte. 
+Die [DBSTATUS](/previous-versions/windows/desktop/ms722617) Flags für die Spalte. 
 
 ## <a name="getnextrows"></a> IRowsetImpl:: GetNextRows
 
@@ -284,7 +284,7 @@ STDMETHOD(GetNextRows )(HCHAPTER hReserved,
   
 #### <a name="parameters"></a>Parameter  
 
-Finden Sie unter [IRowset:: GetNextRows](/previous-versions/windows/desktop/ms709827\(v=vs.85\)) in die *OLE DB-Programmierreferenz*. 
+Finden Sie unter [IRowset:: GetNextRows](/previous-versions/windows/desktop/ms709827) in die *OLE DB-Programmierreferenz*. 
 
 ## <a name="irowsetimpl"></a> IRowsetImpl:: IRowsetImpl
 
@@ -316,7 +316,7 @@ HRESULT RefRows(DBCOUNTITEM cRows,
   
 #### <a name="parameters"></a>Parameter  
 
-Finden Sie unter [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+Finden Sie unter [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) in die *OLE DB-Programmierreferenz*.  
   
 ### <a name="return-value"></a>Rückgabewert  
 
@@ -338,7 +338,7 @@ STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,
   
 #### <a name="parameters"></a>Parameter  
 
-Finden Sie unter [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+Finden Sie unter [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771) in die *OLE DB-Programmierreferenz*.  
 
 ## <a name="restartposition"></a> IRowsetImpl:: RestartPosition
 
@@ -352,7 +352,7 @@ STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);
   
 #### <a name="parameters"></a>Parameter  
 
-Finden Sie unter [IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+Finden Sie unter [IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877) in die *OLE DB-Programmierreferenz*.  
   
 ### <a name="remarks"></a>Hinweise  
 
@@ -373,7 +373,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
 #### <a name="parameters"></a>Parameter  
 
 *statusFlags*<br/>
-Die [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) Flags, die für die Spalte festgelegt.  
+Die [DBSTATUS](/previous-versions/windows/desktop/ms722617) Flags, die für die Spalte festgelegt.  
   
 *currentRow*<br/>
 Die aktuelle Zeile.  

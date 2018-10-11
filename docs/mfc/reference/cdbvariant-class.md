@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14e2e646a2b05ba8514f22fb9ffb027aa0a570c1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0c3ab06de159722e4aae4e15d93e057b12dc8864
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419645"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083293"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant-Klasse
 
@@ -226,7 +226,7 @@ Ein Zeiger auf ein Objekt des Typs TIMESTAMP_STRUCT gespeichert.
 
 Die `m_pdate` -Datenmember auf eine Union gehört. Vor dem Zugriff auf `m_pdate`, überprüfen Sie zunächst den Wert der [CDBVariant::m_dwType](#m_dwtype). Wenn `m_dwType` nastaven NA hodnotu DBVT_DATE, klicken Sie dann `m_pdate` enthält einen gültigen Zeiger; andernfalls den Zugriff auf `m_pdate` wird zu unzuverlässige Ergebnissen führen.
 
-Weitere Informationen zu den TIMESTAMP_STRUCT-Datentyp, finden Sie im Thema [C-Datentypen](/previous-versions/windows/desktop/ms714556\(v=vs.85\)) in Anhang D des der *ODBC Programmer's Reference* im Windows SDK.
+Weitere Informationen zu den TIMESTAMP_STRUCT-Datentyp, finden Sie im Thema [C-Datentypen](/previous-versions/windows/desktop/ms714556) in Anhang D des der *ODBC Programmer's Reference* im Windows SDK.
 
 ##  <a name="m_pstring"></a>  CDBVariant::m_pstring
 

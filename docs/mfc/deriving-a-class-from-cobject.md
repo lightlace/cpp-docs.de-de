@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 177d4160972f521eeeaee56087c29e18433be87e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f673f0212884fce33069f044b34d5396cf72b7c3
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440230"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081929"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Ableiten einer Klasse von CObject
 
@@ -69,7 +69,7 @@ Die folgende Tabelle zeigt die Beziehung zwischen den Makros verwendet, um Seria
 
      [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
 
-In der Regel, möchten Sie jedoch möglicherweise einige der überschreiben `CObject`Member-Funktionen, die Einzelheiten der neuen Klasse behandeln. Angenommen, Sie können in der Regel überschreiben möchten die `Dump` Funktion `CObject` Debugausgabe für den Inhalt der Klasse bereitstellen. Weitere Informationen zum Außerkraftsetzen `Dump`, finden Sie im Artikel [Diagnose: Objektdumps](/previous-versions/visualstudio/visual-studio-2010/sc15kz85\(v=vs.100\)). Sie sollten auch außer Kraft setzen der `AssertValid` Funktion `CObject` bereitstellen, angepasste testen, um die Konsistenz der Datenmember der Klassenobjekte zu überprüfen. Eine Beschreibung der Außerkraftsetzen `AssertValid`, finden Sie unter [MFC ASSERT_VALID und CObject:: AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa\(v=vs.100\)).
+In der Regel, möchten Sie jedoch möglicherweise einige der überschreiben `CObject`Member-Funktionen, die Einzelheiten der neuen Klasse behandeln. Angenommen, Sie können in der Regel überschreiben möchten die `Dump` Funktion `CObject` Debugausgabe für den Inhalt der Klasse bereitstellen. Weitere Informationen zum Außerkraftsetzen `Dump`, finden Sie im Artikel [Diagnose: Objektdumps](/previous-versions/visualstudio/visual-studio-2010/sc15kz85). Sie sollten auch außer Kraft setzen der `AssertValid` Funktion `CObject` bereitstellen, angepasste testen, um die Konsistenz der Datenmember der Klassenobjekte zu überprüfen. Eine Beschreibung der Außerkraftsetzen `AssertValid`, finden Sie unter [MFC ASSERT_VALID und CObject:: AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa).
 
 Der Artikel [Ebenen von Funktionen angeben](../mfc/specifying-levels-of-functionality.md) beschreibt, wie andere Stufen der Funktionalität, einschließlich der Laufzeit Klasseninformationen, dynamische objekterstellung und Serialisierung.
 

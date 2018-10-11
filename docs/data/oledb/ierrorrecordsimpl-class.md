@@ -76,16 +76,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 13e00d3d5ac7cb6cf6e4078ee24a7c3b02a2778e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 26d443aaa5a160968a461bbdb81444f5a9f097c9
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46043390"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084086"
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl-Klasse
 
-Implementiert die OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) Schnittstelle, Hinzufügen von Einträgen zu und Abrufen von Datensätzen aus einem Datenmember ([M_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) vom Typ **CAtlArray <** `RecordClass`**>**.  
+Implementiert die OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112) Schnittstelle, Hinzufügen von Einträgen zu und Abrufen von Datensätzen aus einem Datenmember ([M_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) vom Typ **CAtlArray <** `RecordClass`**>**.  
   
 ## <a name="syntax"></a>Syntax
 
@@ -125,7 +125,7 @@ Eine Klasse, die ein OLE DB-Error-Objekt darstellt.
 |[AddErrorRecord](#adderrorrecord)|Fügt einen Datensatz auf den OLE DB-Error-Objekt.|  
 |[GetBasicErrorInfo](#getbasicerrorinfo)|Gibt grundlegende Informationen über den Fehler, z. B. den Rückgabecode und die Anzahl der Anbieter-spezifischer Fehler zurück.|  
 |[GetCustomErrorObject](#getcustomerrorobject)|Gibt einen Zeiger auf eine Schnittstelle für einen benutzerdefinierten Fehler-Objekt zurück.|  
-|[GetErrorInfo](#geterrorinfo)|Gibt eine [IErrorInfo](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) Schnittstellenzeiger auf den angegebenen Datensatz.|  
+|[GetErrorInfo](#geterrorinfo)|Gibt eine [IErrorInfo](/previous-versions/windows/desktop/ms718112) Schnittstellenzeiger auf den angegebenen Datensatz.|  
 |[GetErrorParameters](#geterrorparameters)|Gibt die Fehlerparameter zurück.|  
 |[GetRecordCount](#getrecordcount)|Gibt die Anzahl der Datensätze in der OLE DB-Datensatz-Objekt zurück.|  
   
@@ -246,7 +246,7 @@ STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,
   
 #### <a name="parameters"></a>Parameter  
 
-Finden Sie unter [IErrorRecords::AddErrorRecord](/previous-versions/windows/desktop/ms725362\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+Finden Sie unter [IErrorRecords::AddErrorRecord](/previous-versions/windows/desktop/ms725362) in die *OLE DB-Programmierreferenz*.  
 
 ## <a name="getbasicerrorinfo"></a> IErrorRecordsImpl:: Getbasicerrorinfo
 
@@ -261,7 +261,7 @@ STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,
   
 #### <a name="parameters"></a>Parameter  
 
-Finden Sie unter [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907\(v=vs.85\)) in die *OLE DB-Programmierreferenz*. 
+Finden Sie unter [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907) in die *OLE DB-Programmierreferenz*. 
 
 ## <a name="getcustomerrorobject"></a> IErrorRecordsImpl:: Getcustomerrorobject
 
@@ -277,11 +277,11 @@ STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,
   
 #### <a name="parameters"></a>Parameter  
 
-Finden Sie unter [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+Finden Sie unter [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417) in die *OLE DB-Programmierreferenz*.  
 
 ## <a name="geterrorinfo"></a> IErrorRecordsImpl:: GetErrorInfo
 
-Gibt eine [IErrorInfo](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) Schnittstellenzeiger auf den angegebenen Datensatz.  
+Gibt eine [IErrorInfo](/previous-versions/windows/desktop/ms718112) Schnittstellenzeiger auf den angegebenen Datensatz.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -293,7 +293,7 @@ STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,
   
 #### <a name="parameters"></a>Parameter  
 
-Finden Sie unter [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230) in die *OLE DB-Programmierreferenz*.
 
 ## <a name="geterrorparameters"></a> IErrorRecordsImpl:: Geterrorparameters
 
@@ -308,7 +308,7 @@ STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,
   
 #### <a name="parameters"></a>Parameter  
 
-Finden Sie unter [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+Finden Sie unter [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793) in die *OLE DB-Programmierreferenz*.  
 
 ## <a name="getrecordcount"></a> IErrorRecordsImpl:: GetRecordCount
 
@@ -322,7 +322,7 @@ STDMETHOD(GetRecordCount )(ULONG *pcRecords);
   
 #### <a name="parameters"></a>Parameter  
 
-Finden Sie unter [IErrorRecords::GetRecordCount](/previous-versions/windows/desktop/ms722724\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+Finden Sie unter [IErrorRecords::GetRecordCount](/previous-versions/windows/desktop/ms722724) in die *OLE DB-Programmierreferenz*.  
 
 ## <a name="rgerrors"></a> IErrorRecordsImpl:: M_rgerrors
 

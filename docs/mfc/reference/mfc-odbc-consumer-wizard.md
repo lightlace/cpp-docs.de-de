@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23a264c48f0a03888f8b6ac744129de75d8ad757
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: e9623fae94891c62cca2ce34c621823251b65fe9
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250470"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082604"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>MFC-ODBC-Consumer-Assistent
 
@@ -35,13 +35,13 @@ Dieser Assistent richtet eine ODBC-Recordset-Klasse und datenbindungen, die zum 
 
 - **Datenquelle**
 
-   Die **Datenquelle** Schaltfläche können Sie festlegen, um die angegebene Datenquelle, die mit dem angegebenen ODBC-Treiber. Weitere Informationen zu Datenquellendateien (DSN), finden Sie unter [Dateidatenquellen](/previous-versions/windows/desktop/ms715401\(v=vs.85\)) im ODBC-SDK.
+   Die **Datenquelle** Schaltfläche können Sie festlegen, um die angegebene Datenquelle, die mit dem angegebenen ODBC-Treiber. Weitere Informationen zu Datenquellendateien (DSN), finden Sie unter [Dateidatenquellen](/previous-versions/windows/desktop/ms715401) im ODBC-SDK.
 
    Die **Auswählen einer Datenquelle** Dialogfeld verfügt über zwei Registerkarten:
 
    - **Datei-Datenquelle** Registerkarte:
 
-      Die **Suchen in** Feld gibt das Verzeichnis, wählen Sie die Dateien als Datenquellen verwendet werden soll. Der Standardwert ist \Programme\Gemeinsame Dateien\ODBC\Data Sources. Die vorhandene Datei-Datenquellen (DSN-Dateien) werden in der wichtigsten Listenfelder angezeigt. Können Sie entweder die Datenquellen vor der Nutzung der **Datei-DSN** Registerkarte die [ODBC-Datenquellenadministrator](/previous-versions/windows/desktop/ms714024\(v=vs.85\)), oder erstellen Sie mithilfe dieses Dialogfelds neue.
+      Die **Suchen in** Feld gibt das Verzeichnis, wählen Sie die Dateien als Datenquellen verwendet werden soll. Der Standardwert ist \Programme\Gemeinsame Dateien\ODBC\Data Sources. Die vorhandene Datei-Datenquellen (DSN-Dateien) werden in der wichtigsten Listenfelder angezeigt. Können Sie entweder die Datenquellen vor der Nutzung der **Datei-DSN** Registerkarte die [ODBC-Datenquellenadministrator](/previous-versions/windows/desktop/ms714024), oder erstellen Sie mithilfe dieses Dialogfelds neue.
 
       In diesem Dialogfeld eine neue Datenquelle erstellen, klicken Sie auf `New` an einen DSN-Namen, den **neue Datenquelle erstellen** Dialogfeld wird angezeigt. In der **neue Datenquelle erstellen** Dialogfeld Feld, wählen Sie einen geeigneten Treiber aus, und klicken Sie auf `Next`; klicken Sie auf **Durchsuchen**, und wählen Sie den Namen der Datei, die als Datenquelle verwendet werden (Sie haben "Alle Dateien" auswählen keine DSN-Dateien anzeigen, wie z. B. xls-Dateien); Klicken Sie auf `Next`, und klicken Sie dann auf **Fertig stellen**. (Wenn Sie eine nicht-DSN-Datei ausgewählt haben, erhalten Sie ein Dialogfeld treiberspezifische, z. B. "ODBC Microsoft Excel Setup" die Datei in einem DSN konvertiert.)
 
@@ -50,13 +50,13 @@ Dieser Assistent richtet eine ODBC-Recordset-Klasse und datenbindungen, die zum 
 
       Die **DSN-Namen** im können Sie einen Namen für die Datei als Datenquelle angeben. Sie müssen sicherstellen, dass die entsprechende Dateierweiterung, z. B. xls für Excel-Dateien oder MDB für den Zugriff auf Dateien der DSN-Namen endet.
 
-      Weitere Informationen zu DSNs, finden Sie unter [Dateidatenquellen](/previous-versions/windows/desktop/ms715401\(v=vs.85\)) im ODBC-SDK.
+      Weitere Informationen zu DSNs, finden Sie unter [Dateidatenquellen](/previous-versions/windows/desktop/ms715401) im ODBC-SDK.
 
    - **Computer-Datenquelle** Registerkarte:
 
-      Auf dieser Registerkarte werden die System- und Benutzer-Datenquellen aufgelistet. Benutzerdatenquellen sind spezifisch für einen Benutzer auf diesem Computer. System-Datenquellen können von allen Benutzern, die auf diesem Computer oder in einem systemweiten-Dienst verwendet werden. Finden Sie unter [Computerdatenquellen](/previous-versions/windows/desktop/ms710952\(v=vs.85\)) in ODBC-SDK
+      Auf dieser Registerkarte werden die System- und Benutzer-Datenquellen aufgelistet. Benutzerdatenquellen sind spezifisch für einen Benutzer auf diesem Computer. System-Datenquellen können von allen Benutzern, die auf diesem Computer oder in einem systemweiten-Dienst verwendet werden. Finden Sie unter [Computerdatenquellen](/previous-versions/windows/desktop/ms710952) in ODBC-SDK
 
-      Weitere Informationen zu ODBC-Datenquellen, finden Sie unter [Datenquellen](/previous-versions/windows/desktop/ms711688\(v=vs.85\)) im ODBC-SDK.
+      Weitere Informationen zu ODBC-Datenquellen, finden Sie unter [Datenquellen](/previous-versions/windows/desktop/ms711688) im ODBC-SDK.
 
    Klicken Sie auf **OK** um den Vorgang abzuschließen. Die **Datenbankobjekt auswählen** Dialogfeld wird angezeigt. Wählen Sie in diesem Dialogfeld die Tabelle, oder zeigen Sie an, die vom Consumer verwendet wird. Beachten Sie, dass Sie mehrere Ansichten und Tabellen auswählen können, durch die Control-Taste gedrückt halten, während Sie auf die Elemente auf. Klicken Sie auf **OK** um den Vorgang abzuschließen.
 

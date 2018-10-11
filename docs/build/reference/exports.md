@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf350b0a129c642678fc6af1bac7d35633fe909
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: b650c2a20d18f3f638f924cce1e4b475f7e33a0d
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860978"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084060"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -67,7 +67,7 @@ Um die vom Compiler erzeugten, ergänzten Namen zu suchen, verwenden die [DUMPBI
 
 Sie können \@ *ordinal* um anzugeben, dass eine Zahl und nicht der Funktionsname wird in der Exporttabelle der. Viele Windows-DLLs exportieren Ordinalzahlen, um Legacycode zu unterstützen. Es war üblich, Ordinalzahlen in 16-Bit-Windows-Code zu verwenden, weil das dazu beitragen kann, die Größe einer DLL zu minimieren. Es wird nicht empfohlen, Funktionen anhand der Ordinalzahl zu exportieren, es sei denn, die Clients Ihrer DLL benötigen sie zur Legacyunterstützung. Da die .LIB-Datei die Zuordnung zwischen der Ordinalzahl und der Funktion enthält, können Sie den Funktionsnamen verwenden, wie Sie es normalerweise in Projekten tun würden, die die DLL verwenden.
 
-Mithilfe des optionalen **NONAME** -Schlüsselwort, Sie können nur anhand der Ordinalzahl exportieren und die Größe der Exporttabelle in der resultierenden DLL reduzieren. Allerdings sollten Sie verwenden [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) in der DLL, müssen Sie die Ordinalzahl kennen, da der Name nicht gültig ist.
+Mithilfe des optionalen **NONAME** -Schlüsselwort, Sie können nur anhand der Ordinalzahl exportieren und die Größe der Exporttabelle in der resultierenden DLL reduzieren. Allerdings sollten Sie verwenden [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) in der DLL, müssen Sie die Ordinalzahl kennen, da der Name nicht gültig ist.
 
 Das optionale Schlüsselwort **PRIVATE** wird verhindert, dass *Eintragsname* aus, die in der von LINK generierte Importbibliothek eingeschlossen wird. Es wirkt sich nicht auf den Export des ebenfalls von LINK generierten Image aus.
 

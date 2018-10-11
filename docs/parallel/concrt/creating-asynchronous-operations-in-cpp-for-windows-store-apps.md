@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3461c4965dd40d0aecc7515185592a13f30c08c9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4014d0d7cea999c105a5ee513d9dd1be410546f4
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423001"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084073"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Erstellen von asynchronen Vorgängen in C++ für UWP-Apps
 
@@ -113,7 +113,7 @@ Fügen Sie der generierten C++-Quelldatei folgenden Code hinzu (in diesem Beispi
 
 [!code-cpp[concrt-windowsstore-primes#2](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_3.cpp)]
 
-Jede Methode führt zuerst eine Validierung, um sicherzustellen, dass die Eingabeparameter nicht negativ sind. Wenn der Eingabewert negativ ist, löst die Methode [Platform:: InvalidArgumentException](https://msdn.microsoft.com/library/windows/apps/hh755794\(v=vs.110\).aspx). Die Fehlerbehandlung wird weiter unten in diesem Abschnitt erläutert.
+Jede Methode führt zuerst eine Validierung, um sicherzustellen, dass die Eingabeparameter nicht negativ sind. Im Fall eines negativen Eingabewerts wird von der Methode [Platform::InvalidArgumentException](https://msdn.microsoft.com/library/windows/apps/hh755794.aspx)ausgelöst. Die Fehlerbehandlung wird weiter unten in diesem Abschnitt erläutert.
 
 Um diese Methoden in einer UWP-app zu nutzen, verwenden Sie die Visual C#- **leere App (XAML)** Vorlage Visual Studio-Projektmappe ein zweites Projekt hinzu. In diesem Beispiel wird das Projekt `Primes`genannt. Fügen Sie anschließend im Projekt `Primes` einen Verweis auf das Projekt `PrimesLibrary` hinzu.
 
@@ -136,7 +136,7 @@ In der folgenden Abbildung wird die `Primes` -App nach Auswahl aller Optionen da
 
 ![Windows-Runtime-Primes-app](../../parallel/concrt/media/concrt_windows_primes.png "Concrt_windows_primes")
 
-Beispiele für die Verwendung `create_async` zum Erstellen asynchroner Aufgaben, die von anderen Sprachen genutzt werden können, finden Sie unter [mithilfe C++ im Beispiel zum Reise-Optimierer von Bing Maps](https://msdn.microsoft.com/library/windows/apps/hh699891\(v=vs.110\).aspx) und [Windows 8 Asynchronous Operations in C++ mit PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).
+Beispiele für das Verwenden von `create_async` zum Erstellen asynchroner Aufgaben, die von anderen Sprachen genutzt werden können, finden Sie unter [Verwenden von C++ im Beispiel zum Reise-Optimierer von Bing Maps](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) und [Windows 8 Asynchronous Operations in C++ with PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d)(Asynchrone Vorgänge unter Windows 8 in C++ mit PPL).
 
 ##  <a name="exethread"></a> Steuern des Ausführungs-Threads
 
@@ -166,7 +166,7 @@ Im folgenden Abschnitt wird eine App dargestellt, die eine Datei auf dem Datentr
 
 ##  <a name="example-app"></a> Beispiel: Steuern der Ausführung in einer Windows-Runtime-App mit C++ und XAML
 
-Betrachten Sie eine App mit C++ und XAML, die eine Datei auf dem Datenträger liest, die häufigsten Wörter in dieser Datei sucht und die Ergebnisse anschließend auf der Benutzeroberfläche anzeigt. Um diese app zu erstellen, erstellen Sie zunächst in Visual Studio eine **leere App (Universelles Windows)** -Projekt und nennen dieses `CommonWords`. Geben Sie im App-Manifest die **Dokumentbibliothek** -Funktion an, damit die App auf den Ordner "Dokumente" zugreifen kann. Fügen Sie im Deklarationsabschnitt des App-Manifests außerdem den Textdateityp (.txt) hinzu. Weitere Informationen zu app-Funktionen und-Deklarationen finden Sie unter [App-Pakete und-Bereitstellung](https://msdn.microsoft.com/library/windows/apps/hh464929.aspx).
+Betrachten Sie eine App mit C++ und XAML, die eine Datei auf dem Datenträger liest, die häufigsten Wörter in dieser Datei sucht und die Ergebnisse anschließend auf der Benutzeroberfläche anzeigt. Um diese app zu erstellen, erstellen Sie zunächst in Visual Studio eine **leere App (Universelles Windows)** -Projekt und nennen dieses `CommonWords`. Geben Sie im App-Manifest die **Dokumentbibliothek** -Funktion an, damit die App auf den Ordner "Dokumente" zugreifen kann. Fügen Sie im Deklarationsabschnitt des App-Manifests außerdem den Textdateityp (.txt) hinzu. Weitere Informationen zu App-Funktionen und -Deklarationen finden Sie unter [App-Pakete und -Bereitstellung](https://msdn.microsoft.com/library/windows/apps/hh464929.aspx).
 
 Aktualisieren Sie in "MainPage.xaml" das `Grid` -Element mit einem `ProgressRing` -Element und einem `TextBlock` -Element. `ProgressRing` gibt an, dass der Vorgang ausgeführt wird, und `TextBlock` zeigt die Ergebnisse der Berechnung an.
 

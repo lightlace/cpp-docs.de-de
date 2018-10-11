@@ -25,16 +25,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1431fb9b35ab83f6cb0fc167eff4ba4508f2e301
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b47cbf2b30323cf51881ebaae9f546001a2d61b3
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036188"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081499"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl-Klasse
 
-Implementiert die OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913\(v=vs.85\)) -Schnittstelle, die Tests für die Zeilenidentität.  
+Implementiert die OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913) -Schnittstelle, die Tests für die Zeilenidentität.  
   
 ## <a name="syntax"></a>Syntax
 
@@ -77,7 +77,7 @@ STDMETHOD(IsSameRow )(HROW hThisRow,
   
 #### <a name="parameters"></a>Parameter  
 
-Finden Sie unter [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+Finden Sie unter [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629) in die *OLE DB-Programmierreferenz*.  
   
 ### <a name="remarks"></a>Hinweise  
 

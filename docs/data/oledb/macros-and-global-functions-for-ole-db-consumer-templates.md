@@ -111,12 +111,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 06b33f5003b073e854f68dc2083baee10a650b2d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0f6bb0949525bd844d4c9faf4a712a0b28f3fb23
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080544"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083878"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>Makros und globale Funktionen für OLE-Consumervorlagen
 
@@ -377,7 +377,7 @@ Hier sehen Sie ein Beispiel für eine Spalten- und Parameterzuordnung:
 
 ### <a name="blob_entry"></a> BLOB_ENTRY
 
-Mit BEGIN_COLUMN_MAP und END_COLUMN_MAP verwendet, um ein großes binäres Objekt zu binden ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\))).  
+Mit BEGIN_COLUMN_MAP und END_COLUMN_MAP verwendet, um ein großes binäres Objekt zu binden ([BLOB](/previous-versions/windows/desktop/ms711511)).  
   
 #### <a name="syntax"></a>Syntax  
   
@@ -405,7 +405,7 @@ Finden Sie unter [wie kann ich einen BLOB abrufen?](../../data/oledb/retrieving-
 
 ### <a name="blob_entry_length"></a> BLOB_ENTRY_LENGTH
 
-Mit BEGIN_COLUMN_MAP und END_COLUMN_MAP verwendet, um ein großes binäres Objekt zu binden ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Ähnlich wie [BLOB_ENTRY](../../data/oledb/blob-entry.md), außer dass dieses Makro, auch über die Länge in Bytes der BLOB-Spalte erhält.  
+Mit BEGIN_COLUMN_MAP und END_COLUMN_MAP verwendet, um ein großes binäres Objekt zu binden ([BLOB](/previous-versions/windows/desktop/ms711511)). Ähnlich wie [BLOB_ENTRY](../../data/oledb/blob-entry.md), außer dass dieses Makro, auch über die Länge in Bytes der BLOB-Spalte erhält.  
   
 #### <a name="syntax"></a>Syntax  
   
@@ -436,7 +436,7 @@ Finden Sie unter [wie kann ich einen BLOB abrufen?](../../data/oledb/retrieving-
 
 ### <a name="blob_entry_length_status"></a> BLOB_ENTRY_LENGTH_STATUS
 
-Mit BEGIN_COLUMN_MAP und END_COLUMN_MAP verwendet, um ein großes binäres Objekt zu binden ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Ähnlich wie [BLOB_ENTRY](../../data/oledb/blob-entry.md), außer dass dieses Makro auch die Länge und den Status der BLOB-Spalte erhält.  
+Mit BEGIN_COLUMN_MAP und END_COLUMN_MAP verwendet, um ein großes binäres Objekt zu binden ([BLOB](/previous-versions/windows/desktop/ms711511)). Ähnlich wie [BLOB_ENTRY](../../data/oledb/blob-entry.md), außer dass dieses Makro auch die Länge und den Status der BLOB-Spalte erhält.  
   
 #### <a name="syntax"></a>Syntax  
   
@@ -467,7 +467,7 @@ BLOB_ENTRY_LENGTH_STATUS(
 *length*<br/>
 [out] Die (tatsächlich) Länge in Bytes der BLOB-Spalte.  
   
-*status*<br/>
+*Status*<br/>
 [out] Der Status der BLOB-Spalte.  
   
 #### <a name="example"></a>Beispiel  
@@ -476,7 +476,7 @@ Finden Sie unter [wie kann ich einen BLOB abrufen?](../../data/oledb/retrieving-
 
 ### <a name="blob_entry_status"></a> BLOB_ENTRY_STATUS
 
-BEGIN_COLUMN_MAP oder BEGIN_ACCESSOR_MAP verwendet werden, um ein großes binäres Objekt zu binden ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Ähnlich wie [BLOB_ENTRY](../../data/oledb/blob-entry.md), außer dass dieses Makro auch den Status der BLOB-Spalte erhält.  
+BEGIN_COLUMN_MAP oder BEGIN_ACCESSOR_MAP verwendet werden, um ein großes binäres Objekt zu binden ([BLOB](/previous-versions/windows/desktop/ms711511)). Ähnlich wie [BLOB_ENTRY](../../data/oledb/blob-entry.md), außer dass dieses Makro auch den Status der BLOB-Spalte erhält.  
   
 #### <a name="syntax"></a>Syntax  
   
@@ -498,7 +498,7 @@ BLOB_ENTRY_STATUS(nOrdinal, IID, flags, data, status)
 *data*<br/>
 [in] Der entsprechenden Datenmember im Benutzerdatensatz.  
   
-*status*<br/>
+*Status*<br/>
 [out] Der Status des BLOB-Felds.  
   
 #### <a name="example"></a>Beispiel  
@@ -507,7 +507,7 @@ Finden Sie unter [wie kann ich einen BLOB abrufen?](../../data/oledb/retrieving-
 
 ### <a name="blob_name"></a> BLOB_NAME
 
-Mit BEGIN_COLUMN_MAP und END_COLUMN_MAP verwendet, um ein großes binäres Objekt zu binden ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Ähnlich wie [BLOB_ENTRY](../../data/oledb/blob-entry.md), außer dass dieses Makro anstelle eine Spaltennummer des Namens einer Spalte verwendet.  
+Mit BEGIN_COLUMN_MAP und END_COLUMN_MAP verwendet, um ein großes binäres Objekt zu binden ([BLOB](/previous-versions/windows/desktop/ms711511)). Ähnlich wie [BLOB_ENTRY](../../data/oledb/blob-entry.md), außer dass dieses Makro anstelle eine Spaltennummer des Namens einer Spalte verwendet.  
   
 #### <a name="syntax"></a>Syntax  
   
@@ -535,7 +535,7 @@ Finden Sie unter [wie kann ich einen BLOB abrufen?](../../data/oledb/retrieving-
 
 ### <a name="blob_name_length"></a> BLOB_NAME_LENGTH
 
-Mit BEGIN_COLUMN_MAP und END_COLUMN_MAP verwendet, um ein großes binäres Objekt zu binden ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Ähnlich wie [BLOB_NAME](../../data/oledb/blob-name.md), außer dass dieses Makro, auch über die Länge in Bytes der BLOB-Spalte erhält.  
+Mit BEGIN_COLUMN_MAP und END_COLUMN_MAP verwendet, um ein großes binäres Objekt zu binden ([BLOB](/previous-versions/windows/desktop/ms711511)). Ähnlich wie [BLOB_NAME](../../data/oledb/blob-name.md), außer dass dieses Makro, auch über die Länge in Bytes der BLOB-Spalte erhält.  
   
 #### <a name="syntax"></a>Syntax  
   
@@ -562,7 +562,7 @@ BLOB_NAME_LENGTH(pszName, IID, flags, data, length )
 
 ### <a name="blob_name_length_status"></a> BLOB_NAME_LENGTH_STATUS
 
-Mit BEGIN_COLUMN_MAP und END_COLUMN_MAP verwendet, um ein großes binäres Objekt zu binden ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Ähnlich wie [BLOB_NAME](../../data/oledb/blob-name.md), außer dass dieses Makro auch die Länge und den Status der BLOB-Spalte erhält.  
+Mit BEGIN_COLUMN_MAP und END_COLUMN_MAP verwendet, um ein großes binäres Objekt zu binden ([BLOB](/previous-versions/windows/desktop/ms711511)). Ähnlich wie [BLOB_NAME](../../data/oledb/blob-name.md), außer dass dieses Makro auch die Länge und den Status der BLOB-Spalte erhält.  
   
 #### <a name="syntax"></a>Syntax  
   
@@ -587,12 +587,12 @@ BLOB_NAME_LENGTH_STATUS(pszName, IID, flags, data, length, status )
 *length*<br/>
 [out] Die (tatsächlich) Länge in Bytes der BLOB-Spalte.  
   
-*status*<br/>
+*Status*<br/>
 [out] Der Status des BLOB-Felds.  
 
 ### <a name="blob_name_status"></a> BLOB_NAME_STATUS
 
-Mit BEGIN_COLUMN_MAP und END_COLUMN_MAP verwendet, um ein großes binäres Objekt zu binden ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Ähnlich wie [BLOB_NAME](../../data/oledb/blob-name.md), außer dass dieses Makro auch den Status der BLOB-Spalte erhält.  
+Mit BEGIN_COLUMN_MAP und END_COLUMN_MAP verwendet, um ein großes binäres Objekt zu binden ([BLOB](/previous-versions/windows/desktop/ms711511)). Ähnlich wie [BLOB_NAME](../../data/oledb/blob-name.md), außer dass dieses Makro auch den Status der BLOB-Spalte erhält.  
   
 #### <a name="syntax"></a>Syntax  
   
@@ -614,7 +614,7 @@ BLOB_NAME_STATUS(pszName, IID, flags, data, status )
 *data*<br/>
 [in] Der entsprechenden Datenmember im Benutzerdatensatz.  
   
-*status*<br/>
+*Status*<br/>
 [out] Der Status des BLOB-Felds.  
   
 ### <a name="bookmark_entry"></a> BOOKMARK_ENTRY
@@ -683,7 +683,7 @@ END_COLUMN_MAP()
 #### <a name="see-also"></a>Siehe auch  
 
 [CBookmark-Klasse](../../data/oledb/cbookmark-class.md)<br/>
-[DBPROP_BOOKMARKS](/previous-versions/windows/desktop/ms709728\(v=vs.85\))
+[DBPROP_BOOKMARKS](/previous-versions/windows/desktop/ms709728)
 
 ### <a name="column_entry"></a> COLUMN_ENTRY
 
@@ -697,7 +697,7 @@ COLUMN_ENTRY(nOrdinal, data)
   
 #### <a name="parameters"></a>Parameter  
 
-Finden Sie unter [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+Finden Sie unter [DBBINDING](/previous-versions/windows/desktop/ms716845) in die *OLE DB-Programmierreferenz*.  
   
 *nOrdinal*<br/>
 [in] Die Nummer der Spalte.  
@@ -731,7 +731,7 @@ COLUMN_ENTRY_EX(nOrdinal, wType, nLength, nPrecision, nScale, data, length, stat
   
 #### <a name="parameters"></a>Parameter  
 
-Finden Sie unter [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+Finden Sie unter [DBBINDING](/previous-versions/windows/desktop/ms716845) in die *OLE DB-Programmierreferenz*.  
   
 *nOrdinal*<br/>
 [in] Die Nummer der Spalte.  
@@ -754,7 +754,7 @@ Finden Sie unter [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.8
 *length*<br/>
 [in] Die Variable an die Länge der Spalte gebunden werden muss.  
   
-*status*<br/>
+*Status*<br/>
 [in] Die Variable auf den Status der Spalte gebunden werden soll.  
   
 #### <a name="remarks"></a>Hinweise  
@@ -783,7 +783,7 @@ COLUMN_ENTRY_LENGTH(nOrdinal, data, length)
   
 #### <a name="parameters"></a>Parameter  
 
-Finden Sie unter [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+Finden Sie unter [DBBINDING](/previous-versions/windows/desktop/ms716845) in die *OLE DB-Programmierreferenz*.  
   
 *nOrdinal*<br/>
 [in] Die Nummer der Spalte, beginnend bei eins. Lesezeichen entspricht Spalte 0 (null).  
@@ -816,7 +816,7 @@ COLUMN_ENTRY_LENGTH_STATUS(nOrdinal, data, length, status)
   
 #### <a name="parameters"></a>Parameter  
 
-Finden Sie unter [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+Finden Sie unter [DBBINDING](/previous-versions/windows/desktop/ms716845) in die *OLE DB-Programmierreferenz*.  
   
 *nOrdinal*<br/>
 [in] Die Nummer der Spalte.  
@@ -827,7 +827,7 @@ Finden Sie unter [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.8
 *length*<br/>
 [in] Die Variable an die Länge der Spalte gebunden werden muss.  
   
-*status*<br/>
+*Status*<br/>
 [in] Die Variable auf den Status der Spalte gebunden werden soll.  
   
 #### <a name="remarks"></a>Hinweise  
@@ -852,7 +852,7 @@ COLUMN_ENTRY_PS(nOrdinal, nPrecision, nScale, data)
   
 #### <a name="parameters"></a>Parameter  
 
-Finden Sie unter [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+Finden Sie unter [DBBINDING](/previous-versions/windows/desktop/ms716845) in die *OLE DB-Programmierreferenz*.  
   
 *nOrdinal*<br/>
 [in] Die Nummer der Spalte.  
@@ -888,7 +888,7 @@ COLUMN_ENTRY_PS_LENGTH(nOrdinal, nPrecision, nScale, data, length)
   
 #### <a name="parameters"></a>Parameter  
 
-Finden Sie unter [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+Finden Sie unter [DBBINDING](/previous-versions/windows/desktop/ms716845) in die *OLE DB-Programmierreferenz*.  
   
 *nOrdinal*<br/>
 [in] Die Nummer der Spalte, beginnend bei eins. Lesezeichen entspricht Spalte 0 (null).  
@@ -927,7 +927,7 @@ COLUMN_ENTRY_PS_LENGTH_STATUS(nOrdinal, nPrecision, nScale, data, length, status
   
 #### <a name="parameters"></a>Parameter  
 
-Finden Sie unter [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+Finden Sie unter [DBBINDING](/previous-versions/windows/desktop/ms716845) in die *OLE DB-Programmierreferenz*.  
   
 *nOrdinal*<br/>
 [in] Die Nummer der Spalte.  
@@ -944,7 +944,7 @@ Finden Sie unter [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.8
 *length*<br/>
 [in] Die Variable an die Länge der Spalte gebunden werden muss.  
   
-*status*<br/>
+*Status*<br/>
 [in] Die Variable auf den Status der Spalte gebunden werden soll.  
   
 #### <a name="remarks"></a>Hinweise  
@@ -969,7 +969,7 @@ COLUMN_ENTRY_PS_STATUS(nOrdinal, nPrecision, nScale, data, status)
   
 #### <a name="parameters"></a>Parameter  
 
-Finden Sie unter [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+Finden Sie unter [DBBINDING](/previous-versions/windows/desktop/ms716845) in die *OLE DB-Programmierreferenz*.  
   
 *nOrdinal*<br/>
 [in] Die Nummer der Spalte.  
@@ -983,7 +983,7 @@ Finden Sie unter [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.8
 *data*<br/>
 [in] Der entsprechenden Datenmember im Benutzerdatensatz.  
   
-*status*<br/>
+*Status*<br/>
 [in] Die Variable auf den Status der Spalte gebunden werden soll.  
   
 #### <a name="remarks"></a>Hinweise  
@@ -1008,7 +1008,7 @@ COLUMN_ENTRY_STATUS(nOrdinal, data, status)
   
 #### <a name="parameters"></a>Parameter  
 
-Finden Sie unter [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+Finden Sie unter [DBBINDING](/previous-versions/windows/desktop/ms716845) in die *OLE DB-Programmierreferenz*.  
   
 *nOrdinal*<br/>
 [in] Die Nummer der Spalte.  
@@ -1016,7 +1016,7 @@ Finden Sie unter [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.8
 *data*<br/>
 [in] Der entsprechenden Datenmember im Benutzerdatensatz.  
   
-*status*<br/>
+*Status*<br/>
 [in] Die Variable auf den Status der Spalte gebunden werden soll.  
   
 #### <a name="remarks"></a>Hinweise  
@@ -1143,7 +1143,7 @@ COLUMN_NAME_EX(pszName, wType, nLength, nPrecision, nScale, data, length, status
 *length*<br/>
 [in] Die Variable an die Länge der Spalte gebunden werden muss.  
   
-*status*<br/>
+*Status*<br/>
 [in] Die Variable auf den Status der Spalte gebunden werden soll.  
   
 #### <a name="remarks"></a>Hinweise  
@@ -1196,7 +1196,7 @@ COLUMN_NAME_LENGTH_STATUS(pszName, data, length, status )
 *length*<br/>
 [in] Die Variable an die Länge der Spalte gebunden werden muss.  
   
-*status*<br/>
+*Status*<br/>
 [in] Die Variable auf den Status der Spalte gebunden werden soll.  
   
 #### <a name="remarks"></a>Hinweise  
@@ -1289,7 +1289,7 @@ COLUMN_NAME_PS_LENGTH_STATUS(pszName, nPrecision, nScale, data, length, status )
 *length*<br/>
 [in] Die Variable an die Länge der Spalte gebunden werden muss.  
   
-*status*<br/>
+*Status*<br/>
 [in] Die Variable auf den Status der Spalte gebunden werden soll.  
   
 #### <a name="remarks"></a>Hinweise  
@@ -1320,7 +1320,7 @@ COLUMN_NAME_PS_STATUS(pszName, nPrecision, nScale, data, status )
 *data*<br/>
 [in] Der entsprechenden Datenmember im Benutzerdatensatz.  
   
-*status*<br/>
+*Status*<br/>
 [in] Die Variable auf den Status der Spalte gebunden werden soll.  
   
 #### <a name="remarks"></a>Hinweise  
@@ -1345,7 +1345,7 @@ COLUMN_NAME_STATUS(pszName, data, status )
 *data*<br/>
 [in] Der entsprechenden Datenmember im Benutzerdatensatz.  
   
-*status*<br/>
+*Status*<br/>
 [in] Die Variable auf den Status der Spalte gebunden werden soll.  
   
 #### <a name="remarks"></a>Hinweise  
@@ -1454,7 +1454,7 @@ COLUMN_NAME_TYPE_STATUS(pszName, wType, status, data)
 *wType*<br/>
 [in] Der Datentyp.  
   
-*status*<br/>
+*Status*<br/>
 [in] Die Variable auf den Status der Spalte gebunden werden soll.  
   
 *data*<br/>
@@ -1558,7 +1558,7 @@ BEGIN_PARAM_MAP(x)
   
 #### <a name="remarks"></a>Hinweise  
 
-Parameter werden verwendet, indem [Befehle](/previous-versions/windows/desktop/ms724608\(v=vs.85\)).  
+Parameter werden verwendet, indem [Befehle](/previous-versions/windows/desktop/ms724608).  
   
 #### <a name="example"></a>Beispiel  
 
@@ -1595,7 +1595,7 @@ SET_PARAM_TYPE(type)
   
 #### <a name="remarks"></a>Hinweise  
 
-Anbieter unterstützen nur Parametereingabe-/-ausgabetypen, die von der zugrunde liegenden Datenquelle unterstützt werden. Der Typ ist eine Kombination aus einem oder mehreren `DBPARAMIO` Werte (finden Sie unter [DBBINDING-Strukturen](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) in die *OLE DB-Programmierreferenz*):  
+Anbieter unterstützen nur Parametereingabe-/-ausgabetypen, die von der zugrunde liegenden Datenquelle unterstützt werden. Der Typ ist eine Kombination aus einem oder mehreren `DBPARAMIO` Werte (finden Sie unter [DBBINDING-Strukturen](/previous-versions/windows/desktop/ms716845) in die *OLE DB-Programmierreferenz*):  
   
 - `DBPARAMIO_NOTPARAM` Der Accessor hat keine Parameter. Legen Sie in der Regel `eParamIO` auf diesen Wert in zeilenaccessoren, um dem Benutzer daran zu erinnern, dass Parameter ignoriert werden.  
   

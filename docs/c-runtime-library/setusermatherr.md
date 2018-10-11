@@ -28,34 +28,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4384d67060d2f5d992c098841f76a6b858b78c15
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5c118cc5537690e8978ed2fd96b7727054ce5920
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408132"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101493"
 ---
 # <a name="setusermatherr"></a>__setusermatherr
-Gibt eine benutzerdefinierte Routine an, die anstelle der [_matherr](../c-runtime-library/reference/matherr.md)-Routine verwendet wird, um Mathematikfehler zu behandeln.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-void __setusermatherr(  
-   _HANDLE_MATH_ERROR pf   
-   )  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `pf`  
- Zeiger zu einer Implementierung von `_matherr`, die vom Benutzer bereitgestellt wird.  
-  
- Der Typ des `pf`-Parameters ist als `typedef int (__cdecl * _HANDLE_MATH_ERROR)(struct _exception *)` deklariert.  
-  
-## <a name="remarks"></a>Hinweise  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
+
+Gibt eine benutzerdefinierte Routine an, die anstelle der [_matherr](../c-runtime-library/reference/matherr.md)-Routine verwendet wird, um Mathematikfehler zu behandeln.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+void __setusermatherr(
+   _HANDLE_MATH_ERROR pf
+   )
+```
+
+#### <a name="parameters"></a>Parameter
+
+*pf*<br/>
+Zeiger zu einer Implementierung von `_matherr`, die vom Benutzer bereitgestellt wird.
+
+Der Typ des *pf*-Parameters ist als `typedef int (__cdecl * _HANDLE_MATH_ERROR)(struct _exception *)` deklariert.
+
+## <a name="remarks"></a>Hinweise
+
+## <a name="requirements"></a>Anforderungen
+
+|-Routine zurückgegebener Wert|Erforderlicher Header|
+|-------------|---------------------|
 |__setusermatherr|matherr.c|

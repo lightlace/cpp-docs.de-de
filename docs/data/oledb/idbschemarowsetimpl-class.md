@@ -47,12 +47,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d998654b92e2e75836bb9dad9e3d7fc17bfa0bd
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e4701b3731233144550ddbc1dd38ae43d14c786f
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46103106"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083072"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl-Klasse
 
@@ -93,15 +93,15 @@ Die Klasse, mit der `IDBSchemaRowsetImpl` geerbt wird. Diese Klasse ist in der R
   
 ## <a name="remarks"></a>Hinweise  
 
-Diese Klasse implementiert die [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) Schnittstelle und die vorlagenbasierte erstellerfunktion [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md).  
+Diese Klasse implementiert die [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) -Schnittstelle und die vorlagenbasierte Erstellerfunktion [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md).  
   
-OLE DB verwendet die Schemarowsets, um Daten zu den Daten in einem Anbieter zurückzugeben. Solche Daten werden häufig als „Metadaten“ bezeichnet. Ein Anbieter muss standardmäßig immer unterstützen `DBSCHEMA_TABLES`, `DBSCHEMA_COLUMNS`, und `DBSCHEMA_PROVIDER_TYPES`, wie in beschrieben [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) in die *OLE DB-Programmierreferenz*. Schemarowsets werden in einer Schemazuordnung festgelegt. Informationen zu den Schemazuordnungseinträgen finden Sie unter [SCHEMA_ENTRY](../../data/oledb/schema-entry.md).  
+OLE DB verwendet die Schemarowsets, um Daten zu den Daten in einem Anbieter zurückzugeben. Solche Daten werden häufig als „Metadaten“ bezeichnet. Ein Anbieter muss standardmäßig immer unterstützen `DBSCHEMA_TABLES`, `DBSCHEMA_COLUMNS`, und `DBSCHEMA_PROVIDER_TYPES`, wie in beschrieben [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) in die *OLE DB-Programmierreferenz*. Schemarowsets werden in einer Schemazuordnung festgelegt. Informationen zu den Schemazuordnungseinträgen finden Sie unter [SCHEMA_ENTRY](../../data/oledb/schema-entry.md).  
   
 Der OLE DB-Anbieterassistent im ATL-Objektassistenten generiert automatisch Code für die Schemarowsets in Ihrem Projekt. (Standardmäßig unterstützt der Assistent die bereits erwähnten obligatorischen Schemarowsets.) Wenn Sie einen Consumer mithilfe des ATL-Objektassistenten erstellen, verwendet der Assistent Schemarowsets, um die richtigen Daten an einen Anbieter zu binden. Wenn Sie die Schemarowsets nicht implementieren, um die richtigen Metadaten bereitzustellen, bindet der Assistent nicht die richtigen Daten.  
   
 Informationen über die Unterstützung für Schemarowsets in Ihrem Anbieter finden Sie unter [Supporting Schema Rowsets](../../data/oledb/supporting-schema-rowsets.md)(Unterstützen von Schemarowsets).  
   
-Weitere Informationen zu Schemarowsets finden Sie unter [Schemarowsets](/previous-versions/windows/desktop/ms712921\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
+Weitere Informationen zu Schemarowsets finden Sie unter [Schema Rowsets](/previous-versions/windows/desktop/ms712921) (Schemarowsets) in der *OLE DB-Programmiererreferenz*.  
 
 ## <a name="checkrestrictions"></a> IDBSchemaRowsetImpl:: Checkrestrictions
 
@@ -131,7 +131,7 @@ Verwenden Sie `CheckRestrictions` , um die Gültigkeit von Einschränkungen für
   
 `CheckRestrictions` Bestimmt, ob der Consumer [GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) mit der richtigen Einschränkung und dem richtigen Einschränkungstyp (z. B. eine VT_BSTR nach einer Zeichenfolge), die der Anbieter unterstützt. Es bestimmt außerdem, ob die richtige Anzahl von Einschränkungen unterstützt werden. Standardmäßig fragt `CheckRestrictions` den Anbieter mittels des Aufrufs von [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) , welche Einschränkungen für ein angegebenes Rowset unterstützt werden. Es vergleicht dann die Einschränkungen vom Consumer mit den vom Anbieter unterstützten, wobei der Vergleich entweder erfolgreich ist oder fehlschlägt.  
   
-Weitere Informationen zu Schemarowsets finden Sie unter [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) in die *OLE DB-Programmierreferenz* im Windows SDK.  
+Weitere Informationen zu Schemarowsets finden Sie unter [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) in die *OLE DB-Programmierreferenz* im Windows SDK.  
 
 ## <a name="createschemarowset"></a> IDBSchemaRowsetImpl:: CreateSchemaRowset
 
@@ -169,7 +169,7 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
 [in] Die Anzahl festzulegender Eigenschaftensätze.  
   
 *rgPropertySets*<br/>
-[in] Ein Array von [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) Strukturen, die die festzulegenden Eigenschaften angeben.  
+[in] Ein Array von [DBPROPSET](/previous-versions/windows/desktop/ms714367) -Strukturen, die die festzulegenden Eigenschaften angeben.  
   
 *ppRowset*<br/>
 [out] Die ausgehende `IUnknown` vom angeforderten *Riid*. Dies `IUnknown` ist eine Schnittstelle des Schemarowsetobjekts.  
@@ -206,7 +206,7 @@ void SetRestrictions(ULONG cRestrictions,
 [in] Ein Array von GUIDs der Schemarowsets, für die Einschränkungen abgerufen werden sollen. Jedes Arrayelement enthält die GUID eines Schemarowsets (z. B. `DBSCHEMA_TABLES`).  
   
 *rgRestrictions*<br/>
-[in] Ein Längenarray von *cRestrictions* von festzulegenden Einschränkungswerten. Jedes Element entspricht den Einschränkungen für das Schemarowset, das mit der GUID identifiziert wird. Wenn ein Schemarowset nicht vom Anbieter unterstützt wird, wird das Element auf 0 (null) festgelegt. Andernfalls enthält der **ULONG** -Wert eine Bitmaske, die die Einschränkungen darstellt, die für dieses Schemarowset unterstützt werden. Weitere Informationen darüber, welche Einschränkungen, die einem bestimmten Schemarowset entsprechen, finden Sie in der Tabelle der Schemarowset-GUIDs in [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) in die *OLE DB-Programmierreferenz* in die Windows SDK.  
+[in] Ein Längenarray von *cRestrictions* von festzulegenden Einschränkungswerten. Jedes Element entspricht den Einschränkungen für das Schemarowset, das mit der GUID identifiziert wird. Wenn ein Schemarowset nicht vom Anbieter unterstützt wird, wird das Element auf 0 (null) festgelegt. Andernfalls enthält der **ULONG** -Wert eine Bitmaske, die die Einschränkungen darstellt, die für dieses Schemarowset unterstützt werden. Weitere Informationen darüber, welche Einschränkungen, die einem bestimmten Schemarowset entsprechen, finden Sie in der Tabelle der Schemarowset-GUIDs in [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) in die *OLE DB-Programmierreferenz* in die Windows SDK.  
   
 ### <a name="remarks"></a>Hinweise  
 
@@ -216,9 +216,9 @@ Die Standardimplementierung dieser Methode legt die *RgRestrictions* Arrayelemen
   
 Informationen zum Implementieren der Schemarowset-Unterstützung finden Sie unter [Unterstützen von Schemarowsets](../../data/oledb/supporting-schema-rowsets.md).  
   
-Ein Beispiel für einen Anbieter, der Schemarowsets unterstützt, finden Sie unter den [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) Beispiel.  
+Ein Beispiel für einen Anbieter, der Schemarowsets unterstützt, finden Sie unter dem Beispiel [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) .  
   
-Weitere Informationen zu Schemarowsets finden Sie unter [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) in die *OLE DB-Programmierreferenz* im Windows SDK. 
+Weitere Informationen zu Schemarowsets finden Sie unter [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) in die *OLE DB-Programmierreferenz* im Windows SDK. 
   
 ## <a name="getrowset"></a> IDBSchemaRowsetImpl:: GetRowset
 
@@ -258,7 +258,7 @@ STDMETHOD (GetRowset)(IUnknown *pUnkOuter,
 [in] Die Anzahl festzulegender Eigenschaftensätze.  
   
 *rgPropertySets*<br/>
-[in/Out] Ein Array von [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) Strukturen, die für das neu erstellte Schemarowset festgelegt.  
+[in/out] Ein Array von [DBPROPSET](/previous-versions/windows/desktop/ms714367) -Strukturen, die für das neu erstellte Schemarowset festgelegt werden sollen.  
   
 *ppRowset*<br/>
 [out] Ein Zeiger auf die angeforderte Schnittstelle für das neu erstellte Schemarowset.  
@@ -267,7 +267,7 @@ STDMETHOD (GetRowset)(IUnknown *pUnkOuter,
 
 Für diese Methode muss der Benutzer eine Schemazuordnung in der Sitzungsklasse haben. Mithilfe der schemazuordnungsinformationen `GetRowset` erstellt ein angegebenes Rowsetobjekt, wenn die *RguidSchema* Parameter entspricht einem der Zuordnungseintrags-GUIDs. Unter [SCHEMA_ENTRY](../../data/oledb/schema-entry.md) finden Sie eine Beschreibung des Zuordnungseintrags.  
   
-Finden Sie unter [IDBSchemaRowset:: GetRowset](/previous-versions/windows/desktop/ms722634\(v=vs.85\)) in das Windows SDK.  
+Finden Sie unter [IDBSchemaRowset:: GetRowset](/previous-versions/windows/desktop/ms722634) in das Windows SDK.  
 
 ## <a name="getschemas"></a> IDBSchemaRowsetImpl:: GetSchemas
 
@@ -294,7 +294,7 @@ STDMETHOD (GetSchema s )(ULONG * pcSchemas,
   
 ### <a name="remarks"></a>Hinweise  
 
-Diese Methode gibt ein Array aller Schemarowsets zurück, die vom Anbieter unterstützt werden. Finden Sie unter [IDBSchemaRowset:: GetSchemas](/previous-versions/windows/desktop/ms719605\(v=vs.85\)) in das Windows SDK.  
+Diese Methode gibt ein Array aller Schemarowsets zurück, die vom Anbieter unterstützt werden. Finden Sie unter [IDBSchemaRowset:: GetSchemas](/previous-versions/windows/desktop/ms719605) in das Windows SDK.  
   
 Für die Implementierung dieser Funktion muss der Benutzer eine Schemazuordnung in der Sitzungsklasse haben. Mithilfe der Schemazuordnungsinformationen antwortet die Funktion dann mit dem Array von GUIDs für die Schemas in der Zuordnung. Dies stellt die Schemas dar, die vom Anbieter unterstützt werden.  
 

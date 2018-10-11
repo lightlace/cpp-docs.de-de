@@ -1,7 +1,7 @@
 ---
 title: Erstellen eines neuen C++ Linux-Projekts in Visual Studio | Microsoft Docs
 ms.custom: ''
-ms.date: 07/20/2018
+ms.date: 09/12/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,14 +12,17 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: f64f8eaf09e92df3dd776180db5904af039d6ad7
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 2386d89afcd566dac77f62cd0afc36e5952674ab
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207969"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601417"
 ---
 # <a name="create-a-new-linux-project"></a>Erstellen eines neuen Linux-Projekts
+
+Stellen Sie zunächst sicher, dass Sie die **Workload „Linux-Entwicklung“** für Visual Studio installiert haben. Weitere Informationen finden Sie unter [Herunterladen, Installieren und Einrichten der Linux-Workload](download-install-and-setup-the-linux-development-workload.md).
+
 Beim Codieren von C++ in Visual Studio für Linux können Sie zwischen dem Erstellen eines Visual Studio-Projekts oder eines CMake-Projekts wählen. Dieses Thema beschreibt das Erstellen eines Visual Studio-Projekts. Informationen zu CMake-Projekten finden Sie unter [Konfigurieren eines Linux CMake-Projekts](cmake-linux-project.md).
 
 Um ein neues Linux-Projekt in Visual Studio zu erstellen, führen Sie folgende Schritte aus:

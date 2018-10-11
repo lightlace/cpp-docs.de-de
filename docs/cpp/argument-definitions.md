@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cf75e1c0fe2b3ff0d883a8785e69aef489c0545
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e0c42478e5e6ce3c9efe66c45ed32292f2040a83
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056390"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084151"
 ---
 # <a name="argument-definitions"></a>Argumentdefinitionen
 
@@ -45,7 +45,7 @@ Ein Array von Zeigern auf Zeichenfolgen, die auf NULL enden und von den Benutzer
 Das erste Befehlszeilenargument ist immer `argv` **[1]** und das letzte ist `argv` **[** `argc` - 1 **]**.
 
 > [!NOTE]
->  Gemäß der Konvention ist `argv`**[0]** der Befehl, mit dem das Programm aufgerufen wird.  Es ist jedoch möglich, einen Prozess mit [CreateProcess](https://msdn.microsoft.com/library/windows/desktop/ms683197) und bei der Verwendung der ersten und zweiten Argument (*LpApplicationName* und *LpCommandLine*), `argv` **[0]** möglicherweise nicht die ausführbare Datei benennen; verwenden Sie [GetModuleFileName](https://msdn.microsoft.com/library/windows/desktop/ms683197) Name der ausführbaren Datei und den vollständig qualifizierten Pfad abrufen.
+>  Gemäß der Konvention ist `argv`**[0]** der Befehl, mit dem das Programm aufgerufen wird.  Es ist jedoch möglich, einen Prozess mit [CreateProcess](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea) und bei der Verwendung der ersten und zweiten Argument (*LpApplicationName* und *LpCommandLine*), `argv` **[0]** möglicherweise nicht die ausführbare Datei benennen; verwenden Sie [GetModuleFileName](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea) Name der ausführbaren Datei und den vollständig qualifizierten Pfad abrufen.
 
 ## <a name="microsoft-specific"></a>Microsoft-spezifisch
 

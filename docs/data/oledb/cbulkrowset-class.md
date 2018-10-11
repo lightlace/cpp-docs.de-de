@@ -113,12 +113,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3406614b99e2057c9469fe69d02a9fcbe4eae23b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3538a8cd15fc315f4d91d1c83c517811acce1802
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116762"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082903"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset-Klasse
 
@@ -165,7 +165,7 @@ Das folgende Beispiel veranschaulicht die Verwendung der `CBulkRowset` Klasse.
 
 ## <a name="addrefrows"></a> CBulkRowset:: Addrefrows
 
-Aufrufe [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) erhöht den Verweiszähler für alle Zeilen, die derzeit von der Bulk-Rowset abgerufen.  
+Aufrufe [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) erhöht den Verweiszähler für alle Zeilen, die derzeit von der Bulk-Rowset abgerufen.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -264,7 +264,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
   
 ### <a name="return-value"></a>Rückgabewert  
 
-Finden Sie unter [IRowset:: GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) in die *OLE DB-Programmierreferenz*. 
+Finden Sie unter [IRowset:: GetData](/previous-versions/windows/desktop/ms716988) in die *OLE DB-Programmierreferenz*. 
 
 ## <a name="movetoratio"></a> CBulkRowset:: Movetoratio
 
@@ -295,11 +295,11 @@ Ein standard-HRESULT.
   
 `(nNumerator *  RowsetSize ) / nDenominator`  
   
-Wo `RowsetSize` ist die Größe des Rowsets, gemessen in Zeilen. Die Genauigkeit zu dieser Formel hängt von dem Anbieter ab. Weitere Informationen finden Sie unter [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.   
+Wo `RowsetSize` ist die Größe des Rowsets, gemessen in Zeilen. Die Genauigkeit zu dieser Formel hängt von dem Anbieter ab. Weitere Informationen finden Sie unter [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602) in die *OLE DB-Programmierreferenz*.   
 
 ## <a name="releaserows"></a> CBulkRowset:: ReleaseRows
 
-Aufrufe [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) dekrementiert den Verweiszähler für alle Zeilen, die derzeit von der Bulk-Rowset abgerufen.  
+Aufrufe [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771) dekrementiert den Verweiszähler für alle Zeilen, die derzeit von der Bulk-Rowset abgerufen.  
   
 ### <a name="syntax"></a>Syntax  
   

@@ -62,12 +62,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8953b277ff5512e71b3821d6f1f32bc897322d8c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e26210bd5c856be43e281c57eaafc9c6e16b6d69
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46100499"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083488"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Makros für OLE DB-Anbietervorlagen
 
@@ -169,11 +169,11 @@ BEGIN_PROPSET_MAP(Class)
 *Klasse*<br/>
 [in] Die Klasse, die in der diese Eigenschaft festgelegt angegeben wird. Eine Eigenschaft festgelegt, kann in den folgenden OLE DB-Objekten angegeben werden:  
   
-- [Datenquellenobjekte](/previous-versions/windows/desktop/ms721278\(v=vs.85\))  
+- [Datenquellenobjekte](/previous-versions/windows/desktop/ms721278)  
   
-- [Session-Objekte](/previous-versions/windows/desktop/ms711572\(v=vs.85\))  
+- [Session-Objekte](/previous-versions/windows/desktop/ms711572)  
   
-- [Befehle](/previous-versions/windows/desktop/ms724608\(v=vs.85\))  
+- [Befehle](/previous-versions/windows/desktop/ms724608)  
   
 #### <a name="example"></a>Beispiel  
 
@@ -249,11 +249,11 @@ PROPERTY_INFO_ENTRY(dwPropID)
 #### <a name="parameters"></a>Parameter  
 
 *dwPropID*<br/>
-[in] Ein [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) -Wert, der in Verbindung mit der Eigenschaft verwendet werden kann soll, GUID, die eine Eigenschaft zu identifizieren.  
+[in] Ein [DBPROPID](/previous-versions/windows/desktop/ms723882) -Wert, der in Verbindung mit dem GUID-Eigenschaftensatz verwendet werden kann, um eine Eigenschaft zu identifizieren.  
   
 #### <a name="remarks"></a>Hinweise  
 
-Dieses Makro legt den Wert der Eigenschaft vom Typ `DWORD` auf einen in ATLDB.H definierten Standardwert fest. Verwenden Sie [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md), um die Eigenschaft auf einen Wert Ihrer Wahl festzulegen. Festlegen der `VARTYPE` und [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) verwenden Sie für die Eigenschaft zur gleichen Zeit [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
+Dieses Makro legt den Wert der Eigenschaft vom Typ `DWORD` auf einen in ATLDB.H definierten Standardwert fest. Verwenden Sie [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md), um die Eigenschaft auf einen Wert Ihrer Wahl festzulegen. Festlegen der `VARTYPE` und [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342) verwenden Sie für die Eigenschaft zur gleichen Zeit [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
   
 #### <a name="example"></a>Beispiel  
 
@@ -272,13 +272,13 @@ PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
 #### <a name="parameters"></a>Parameter  
 
 *dwPropID*<br/>
-[in] Ein [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) -Wert, der in Verbindung mit der Eigenschaft verwendet werden kann soll, GUID, die eine Eigenschaft zu identifizieren.  
+[in] Ein [DBPROPID](/previous-versions/windows/desktop/ms723882) -Wert, der in Verbindung mit dem GUID-Eigenschaftensatz verwendet werden kann, um eine Eigenschaft zu identifizieren.  
   
 *vt*<br/>
 [in] Die `VARTYPE` dieses Eigenschaftseintrags. (Definiert in wtypes.h)  
   
 *dwFlags*<br/>
-[in] Ein [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) Wert, der diesen Eigenschaftseintrag beschreibt.  
+[in] Ein [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342) -Wert, der diesen Eigenschaftseintrag beschreibt.  
   
 *Wert*<br/>
 [in] Der Eigenschaftswert von Typ `DWORD`.  
@@ -307,7 +307,7 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 #### <a name="parameters"></a>Parameter  
 
 *dwPropID*<br/>
-[in] Ein [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) -Wert, der in Verbindung mit der Eigenschaft verwendet werden kann soll, GUID, die eine Eigenschaft zu identifizieren.  
+[in] Ein [DBPROPID](/previous-versions/windows/desktop/ms723882) -Wert, der in Verbindung mit dem GUID-Eigenschaftensatz verwendet werden kann, um eine Eigenschaft zu identifizieren.  
   
 *Wert*<br/>
 [in] Der Eigenschaftswert von Typ `DWORD`.  
@@ -395,7 +395,7 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 [in] Die Nummer der Spalte. Wenn die Spalte eine Lesezeichenspalte ist, muss die Nummer der Spalte nicht 0 sein.  
   
 *DbType*<br/>
-[in] Der Datentyp im [DBTYPE](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
+[in] Der Datentyp im [DBTYPE](/previous-versions/windows/desktop/ms711251).  
   
 *Member*<br/>
 [in] Die Membervariable in `dataClass` , die die Daten speichert.  
@@ -427,22 +427,22 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 [in] Die Nummer der Spalte. Wenn die Spalte eine Lesezeichenspalte ist, muss die Nummer der Spalte nicht 0 sein.  
   
 *flags*<br/>
-[in] Gibt an, wie Daten zurückgegeben werden. Finden Sie unter den `dwFlags` Beschreibung im [DBBINDING-Strukturen](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
+[in] Gibt an, wie Daten zurückgegeben werden. Finden Sie unter den `dwFlags` Beschreibung im [DBBINDING-Strukturen](/previous-versions/windows/desktop/ms716845).  
   
 *colSize*<br/>
 [in] Die Größe der Spalte.  
   
 *DbType*<br/>
-[in] Gibt den Datentyp des Werts an. Finden Sie unter den `wType` Beschreibung im [DBBINDING-Strukturen](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
+[in] Gibt den Datentyp des Werts an. Finden Sie unter den `wType` Beschreibung im [DBBINDING-Strukturen](/previous-versions/windows/desktop/ms716845).  
   
 *precision*<br/>
-[in] Gibt die Genauigkeit verwenden, beim Abrufen von Daten, wenn *DbType* DBTYPE_NUMERIC oder DBTYPE_DECIMAL ist. Finden Sie unter den `bPrecision` Beschreibung im [DBBINDING-Strukturen](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
+[in] Gibt die Genauigkeit verwenden, beim Abrufen von Daten, wenn *DbType* DBTYPE_NUMERIC oder DBTYPE_DECIMAL ist. Finden Sie unter den `bPrecision` Beschreibung im [DBBINDING-Strukturen](/previous-versions/windows/desktop/ms716845).  
   
 *Skalieren*<br/>
-[in] Gibt die zu verwendende beim Abrufen von Daten, wenn DbType DBTYPE_NUMERIC oder DBTYPE_DECIMAL Skala an. Finden Sie unter den `bScale` Beschreibung im [DBBINDING-Strukturen](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
+[in] Gibt die zu verwendende beim Abrufen von Daten, wenn DbType DBTYPE_NUMERIC oder DBTYPE_DECIMAL Skala an. Finden Sie unter den `bScale` Beschreibung im [DBBINDING-Strukturen](/previous-versions/windows/desktop/ms716845).  
   
 *GUID*<br/>
-Ein Schemarowset-GUID. Finden Sie unter [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) in die *OLE DB-Programmierreferenz* eine Liste der Schemarowsets und die GUIDs.  
+Ein Schemarowset-GUID. Finden Sie unter [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) in die *OLE DB-Programmierreferenz* eine Liste der Schemarowsets und die GUIDs.  
   
 #### <a name="remarks"></a>Hinweise  
 
@@ -503,7 +503,7 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
   
 #### <a name="remarks"></a>Hinweise  
 
-Wenn die Spaltendaten als angesehen werden, verwenden Sie dieses Makro [DBTYPE_STR](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
+Wenn die Spaltendaten als angesehen werden, verwenden Sie dieses Makro [DBTYPE_STR](/previous-versions/windows/desktop/ms711251).  
   
 #### <a name="example"></a>Beispiel  
 
@@ -528,7 +528,7 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 [in] Die Nummer der Spalte. Wenn die Spalte eine Lesezeichenspalte ist, muss die Nummer der Spalte nicht 0 sein.  
   
 *DbType*<br/>
-[in] Der Datentyp im [DBTYPE](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
+[in] Der Datentyp im [DBTYPE](/previous-versions/windows/desktop/ms711251).  
   
 *size*<br/>
 [in] Die Spaltengröße in Bytes.  
@@ -563,7 +563,7 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
   
 #### <a name="remarks"></a>Hinweise  
 
-Verwenden Sie dieses Makro aus, wenn die Spaltendaten ist eine Null-terminierte Unicode-Zeichenfolge, [DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
+Verwenden Sie dieses Makro aus, wenn die Spaltendaten ist eine Null-terminierte Unicode-Zeichenfolge, [DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251).  
 
 ### <a name="begin_schema_map"></a> BEGIN_SCHEMA_MAP
 
@@ -582,7 +582,7 @@ Die Klasse, die die Zuordnung enthält. Dies wird in der Regel die Sitzungsklass
   
 #### <a name="remarks"></a>Hinweise  
 
-Finden Sie unter [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) im Windows SDK für Weitere Informationen zu Schemarowsets.  
+Finden Sie unter [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) im Windows SDK für Weitere Informationen zu Schemarowsets.  
 
 ### <a name="end_schema_map"></a> END_SCHEMA_MAP
 
@@ -612,7 +612,7 @@ SCHEMA_ENTRY(guid,
 #### <a name="parameters"></a>Parameter  
 
 *GUID*<br/>
-Ein Schemarowset-GUID. Finden Sie unter [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) in die *OLE DB-Programmierreferenz* eine Liste der Schemarowsets und die GUIDs.  
+Ein Schemarowset-GUID. Finden Sie unter [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) in die *OLE DB-Programmierreferenz* eine Liste der Schemarowsets und die GUIDs.  
   
 *rowsetClass*<br/>
 Die Klasse, die erstellt werden, um die Schemarowsets darstellen.  
@@ -627,7 +627,7 @@ HRESULT Execute (LONG* pcRowsAffected,
     const VARIANT* rgRestrictions);  
 ```  
   
-Dies `Execute` Funktion füllt die Rowset-Daten. ATL-Projektassistenten erstellt, wie in beschrieben [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) in die *OLE DB-Programmierreferenz*, drei ersten Schemarowsets in das Projekt, für jedes der drei obligatorische OLE DB-Schemas:  
+Dies `Execute` Funktion füllt die Rowset-Daten. ATL-Projektassistenten erstellt, wie in beschrieben [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) in die *OLE DB-Programmierreferenz*, drei ersten Schemarowsets in das Projekt, für jedes der drei obligatorische OLE DB-Schemas:  
   
 - DBSCHEMA_TABLES  
   

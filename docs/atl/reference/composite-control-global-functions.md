@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54e4ab00a0d0df90601d06d9e2ffa100d82d4c03
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dee59f5e86cddeec47da47c648b0cf12789cc85a
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46037358"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084099"
 ---
 # <a name="composite-control-global-functions"></a>Globale Funktionen zusammengesetzter Steuerelemente
 
@@ -81,7 +81,7 @@ ATLAPI_(int) AtlAxDialogBox(
 [in] Identifiziert eine Instanz des Moduls, deren ausführbare Datei der Dialogfeldvorlage enthält.
 
 *lpTemplateName*<br/>
-[in] Identifiziert die Dialogfeldvorlage. Dieser Parameter ist entweder der Zeiger auf eine Null-terminierte Zeichenfolge, die gibt den Namen der Dialogfeldvorlage oder ein ganzzahliger Wert, der angibt, den Ressourcenbezeichner, der die Dialogfeldvorlage. Wenn der Parameter einen Ressourcenbezeichner angegeben ist, dessen höherwertiges Wort muss 0 (null) sein, und seine niederwertige Wort muss den Bezeichner enthalten. Sie können die [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) Makro zum Erstellen dieses Werts.
+[in] Identifiziert die Dialogfeldvorlage. Dieser Parameter ist entweder der Zeiger auf eine Null-terminierte Zeichenfolge, die gibt den Namen der Dialogfeldvorlage oder ein ganzzahliger Wert, der angibt, den Ressourcenbezeichner, der die Dialogfeldvorlage. Wenn der Parameter einen Ressourcenbezeichner angegeben ist, dessen höherwertiges Wort muss 0 (null) sein, und seine niederwertige Wort muss den Bezeichner enthalten. Sie können die [MAKEINTRESOURCE](/windows/desktop/api/winuser/nf-winuser-makeintresourcea) Makro zum Erstellen dieses Werts.
 
 *hWndParent*<br/>
 [in] Gibt das Fenster, das Dialogfeld besitzt.
@@ -128,7 +128,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 [in] Identifiziert eine Instanz des Moduls, deren ausführbare Datei der Dialogfeldvorlage enthält.
 
 *lpTemplateName*<br/>
-[in] Identifiziert die Dialogfeldvorlage. Dieser Parameter ist entweder der Zeiger auf eine Null-terminierte Zeichenfolge, die gibt den Namen der Dialogfeldvorlage oder ein ganzzahliger Wert, der angibt, den Ressourcenbezeichner, der die Dialogfeldvorlage. Wenn der Parameter einen Ressourcenbezeichner angegeben ist, dessen höherwertiges Wort muss 0 (null) sein, und seine niederwertige Wort muss den Bezeichner enthalten. Sie können die [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) Makro zum Erstellen dieses Werts.
+[in] Identifiziert die Dialogfeldvorlage. Dieser Parameter ist entweder der Zeiger auf eine Null-terminierte Zeichenfolge, die gibt den Namen der Dialogfeldvorlage oder ein ganzzahliger Wert, der angibt, den Ressourcenbezeichner, der die Dialogfeldvorlage. Wenn der Parameter einen Ressourcenbezeichner angegeben ist, dessen höherwertiges Wort muss 0 (null) sein, und seine niederwertige Wort muss den Bezeichner enthalten. Sie können die [MAKEINTRESOURCE](/windows/desktop/api/winuser/nf-winuser-makeintresourcea) Makro zum Erstellen dieses Werts.
 
 *hWndParent*<br/>
 [in] Gibt das Fenster, das Dialogfeld besitzt.

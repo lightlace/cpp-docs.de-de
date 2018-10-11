@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ddfd6de46d6d0700265f5308f06458b3cdd984a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: b2870aa742806671e39728c3b73604dcf4e810e9
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677826"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083085"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Übersicht über Windows-Programmierung in C++
 
@@ -58,7 +58,7 @@ Weitere Informationen zu diesen Konzepten finden Sie unter [Anleitung für unive
 
 ##  <a name="BK_Native"></a> Desktop- und serveranwendungen
 
-Die Grundlagen zum Schreiben von Windows-Clientanwendungen für den Desktop finden Sie unter [Entwickeln von Windows-Anwendungen in C++](https://msdn.microsoft.com/vstudio//hh304489) und [Einführung in die Windows-Programmierung in C++](https://msdn.microsoft.com/library/windows/desktop/ff381398\(v=vs.85\).aspx).
+Informationen über die Grundlagen zum Schreiben von Windows-Clientanwendungen für den Desktop finden Sie unter [Entwickeln von Windows-Anwendungen in C++](https://msdn.microsoft.com/vstudio//hh304489) und [Einführung in die Windows-Programmierung in C++](https://msdn.microsoft.com/library/windows/desktop/ff381398).
 
 Unter Windows 10 können Sie Visual C++ um Erstellen vieler Arten von Desktopprogramme:
 
