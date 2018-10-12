@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cbe2269bfe4a67ba4e8c6952980216fce92165f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bd35c0879896ca7edfd6524c31a86765bbcce219
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448609"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084190"
 ---
 # <a name="cwnd-class"></a>CWnd-Klasse
 
@@ -1047,7 +1047,7 @@ class CWnd : public CCmdTarget
 |[CWnd::RunModalLoop](#runmodalloop)|Ruft Meldungen für ein Fenster, das sich im modalen Status befindet, ab, übersetzt oder sendet sie.|
 |[CWnd::ScreenToClient](#screentoclient)|Konvertiert die Bildschirmkoordinaten eines bestimmten Punkts oder Rechtecks auf der Anzeige zu Clientkoordinaten.|
 |[CWnd::ScrollWindow](#scrollwindow)|Scrollt durch Inhalte im Clientbereich.|
-|[CWnd::ScrollWindowEx](#scrollwindowex)|Scrollt durch Inhalte im Clientbereich. Ähnelt `ScrollWindow`, weist jedoch zusätzliche Features auf.|
+|[CWnd::ScrollWindowEx](#scrollwindowex)|Scrollt durch Inhalte im Clientbereich. Ähnelt `ScrollWindow`, weist jedoch zusätzliche Funktionen auf.|
 |[CWnd::SendChildNotifyLastMsg](#sendchildnotifylastmsg)|Stellt einem untergeordneten Fenster über das übergeordnete Fenster eine Benachrichtigungsmeldung bereit, sodass das untergeordnete Fenster eine Aufgabe verarbeiten kann.|
 |[CWnd::SendDlgItemMessage](#senddlgitemmessage)|Sendet eine Nachricht an das angegebene Steuerelement.|
 |[CWnd::SendMessage](#sendmessage)|Sendet eine Nachricht an das `CWnd`-Objekt und gibt erst etwas zurück, nachdem die Meldung verarbeitet wurde.|
@@ -1662,7 +1662,7 @@ void BringWindowToTop();
 
 Darüber hinaus aktiviert `BringWindowToTop` Popupfenster, Fenster der obersten Ebene und untergeordnete MDI-Fenster. Die Memberfunktion `BringWindowToTop` sollte dazu verwendet werden, um jedes Fenster aufzudecken, das von irgendeinem überlappenden Fenster teilweise oder vollständig verdeckt ist.
 
-Diese Funktion ruft nur die Win32 [BringWindowToTop](https://msdn.microsoft.com/library/windows/desktop/ms632673\(v=vs.85\).aspx) Funktion. Rufen Sie die [SetWindowPos](#setwindowpos) Funktion, um die Position eines Fensters in der Z-Reihenfolge zu ändern. Die `BringWindowToTop`-Funktion ändert nicht den Fensterstil, um daraus ein Fenster oberster Ebene zu machen. Weitere Informationen finden Sie unter [Was ist der Unterschied zwischen HWND_TOP and HWND_TOPMOST](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
+Diese Funktion ruft nur die Win32 [BringWindowToTop](https://msdn.microsoft.com/library/windows/desktop/ms632673) Funktion. Rufen Sie die [SetWindowPos](#setwindowpos) Funktion, um die Position eines Fensters in der Z-Reihenfolge zu ändern. Die `BringWindowToTop`-Funktion ändert nicht den Fensterstil, um daraus ein Fenster oberster Ebene zu machen. Weitere Informationen finden Sie unter [Was ist der Unterschied zwischen HWND_TOP and HWND_TOPMOST](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
 
 ### <a name="example"></a>Beispiel
 
@@ -1942,7 +1942,7 @@ virtual BOOL Create(
 *nID*<br/>
 [in] Die ID des Fensters.
 
-*"pContext"*<br/>
+*pContext*<br/>
 [in] Zeiger auf eine [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) -Struktur, die zum Anpassen der Dokument-/ Ansichtarchitektur für die Anwendung verwendet wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -3207,7 +3207,7 @@ Ein HWND eines Windows-Fensters.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf eine `CWnd` Objekt.
+Ein Zeiger auf ein `CWnd` -Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -4417,7 +4417,7 @@ CWnd* GetOwner() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf eine `CWnd` Objekt.
+Ein Zeiger auf ein `CWnd` -Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -4467,7 +4467,7 @@ CWnd* GetParentOwner() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf eine `CWnd` Objekt. Wenn ein `CWnd`-Objekt nicht an das Handle angefügt ist, wird ein temporäres `CWnd`-Objekt erstellt und angefügt. Der Zeiger kann temporär sein und sollte nicht für eine spätere Verwendung gespeichert werden.
+Ein Zeiger auf ein `CWnd` -Objekt. Wenn ein `CWnd`-Objekt nicht an das Handle angefügt ist, wird ein temporäres `CWnd`-Objekt erstellt und angefügt. Der Zeiger kann temporär sein und sollte nicht für eine spätere Verwendung gespeichert werden.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -4492,7 +4492,7 @@ void GetProperty(
 Bezeichnet die Eigenschaft abgerufen werden sollen.
 
 *vtProp*<br/>
-Gibt den Typ der Eigenschaft abgerufen werden sollen. Mögliche Werte finden Sie im Abschnitt "Hinweise" für [COleDispatchDriver:: InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Gibt den Typ der Eigenschaft abgerufen werden sollen. Informationen zu den möglichen Werten finden Sie im Abschnitt „Anmerkungen“ für [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *pvProp*<br/>
 Adresse der Variablen, die, auf, erhalten den Wert der Eigenschaft. Es muss den vom angegebenen Typ übereinstimmen *VtProp*.
@@ -5363,7 +5363,7 @@ Bezeichnet die aufzurufende Methode oder Eigenschaft.
 Flags, die den Kontext des Aufrufs von beschreiben `IDispatch::Invoke`.
 
 *vtRet*<br/>
-Gibt den Typ des Rückgabewerts an. Mögliche Werte finden Sie im Abschnitt "Hinweise" für [COleDispatchDriver:: InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Gibt den Typ des Rückgabewerts an. Informationen zu den möglichen Werten finden Sie im Abschnitt „Anmerkungen“ für [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *pvRet*<br/>
 Adresse der Variablen, die, die wird erhalten den Wert der Eigenschaft oder Rückgabewert. Es muss den vom angegebenen Typ übereinstimmen *VtRet*.
@@ -5376,9 +5376,9 @@ Variable Parameterliste, der in der angegebenen Typen *PbParamInfo*.
 
 ### <a name="remarks"></a>Hinweise
 
-Die *PbParamInfo* Parameter gibt die Typen der an die Methode oder Eigenschaft übergebenen Parameter. Die Variable Liste von Argumenten wird durch dargestellt *...*  in der Syntax-Deklaration.
+Die *PbParamInfo* Parameter gibt die Typen der an die Methode oder Eigenschaft übergebenen Parameter. Die variable Argumentliste wird in der Syntaxdeklaration durch *...* dargestellt.
 
-Diese Funktion konvertiert die Parameter auf VARIANTARG-Werte und ruft anschließend die `IDispatch::Invoke` Methode für das ActiveX-Steuerelement. Wenn der Aufruf von `IDispatch::Invoke` ein Fehler auftritt, wird diese Funktion eine Ausnahme ausgelöst. Wenn die SCODE (Statuscode) von zurückgegeben `IDispatch::Invoke` DISP_E_EXCEPTION, ist diese Funktion löst eine [COleException](../../mfc/reference/coleexception-class.md) Objekt ist, andernfalls löst eine [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).
+Diese Funktion konvertiert die Parameter auf VARIANTARG-Werte und ruft anschließend die `IDispatch::Invoke` Methode für das ActiveX-Steuerelement. Bei einem Fehler des Aufrufs von `IDispatch::Invoke` löst diese Funktion eine Ausnahme aus. Wenn die SCODE (Statuscode) von zurückgegeben `IDispatch::Invoke` DISP_E_EXCEPTION, ist diese Funktion löst eine [COleException](../../mfc/reference/coleexception-class.md) Objekt ist, andernfalls löst eine [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).
 
 > [!NOTE]
 > Diese Funktion sollte aufgerufen werden, nur auf eine `CWnd` -Objekt, ein ActiveX-Steuerelement darstellt.
@@ -8805,7 +8805,7 @@ afx_msg void OnPaintClipboard(
 Gibt einen Zeiger auf das Zwischenablageanwendungsfenster an. Der Zeiger kann temporär sein und sollte nicht für eine spätere Verwendung gespeichert werden.
 
 *hPaintStruct*<br/>
-Identifiziert eine [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) -Datenstruktur, die definiert welcher Teil des Clientbereichs gezeichnet werden.
+Identifiziert eine [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) -Datenstruktur, die definiert welcher Teil des Clientbereichs gezeichnet werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -10602,7 +10602,7 @@ virtual void PreSubclassWindow();
 
 ##  <a name="pretranslatemessage"></a>  CWnd:: PreTranslateMessage
 
-Von Klasse verwendeten [CWinApp](../../mfc/reference/cwinapp-class.md) um fenstermeldungen zu übersetzen, bevor sie um weitergeleitet werden die [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows-Funktionen.
+Wird von der [CWinApp](../../mfc/reference/cwinapp-class.md) -Klasse verwendet, um Fenstermeldungen zu übersetzen, bevor diese an die Windows-Funktionen [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) gesendet werden.
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -11592,7 +11592,7 @@ void AFX_CDECL SetProperty(
 Gibt die festzulegende Eigenschaft an.
 
 *vtProp*<br/>
-Gibt den Typ der festzulegenden Eigenschaft an. Mögliche Werte finden Sie im Abschnitt "Hinweise" für [COleDispatchDriver:: InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Gibt den Typ der festzulegenden Eigenschaft an. Informationen zu den möglichen Werten finden Sie im Abschnitt „Anmerkungen“ für [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *...*<br/>
 Einen einzelnen Parameter des Typs vom angegebenen *VtProp*.
