@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13ddf5a303096d3244f6b8b59e58bcb41bafe91f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ee06d9a30339a72bd7137db6f277a1eb41028d50
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374261"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163087"
 ---
 # <a name="singleassignment-class"></a>single_assignment-Klasse
 
@@ -58,7 +58,7 @@ Der Nutzlasttyp der Nachricht gespeichert und vom Puffer weitergegeben.
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[single_assignment](#ctor)|Überladen. Erstellt eine `single_assignment` Meldungsblock.|
+|[single_assignment](#ctor)|Überladen. Erstellt einen `single_assignment` -Meldungsblock.|
 |[~ Single_assignment-Destruktor](#dtor)|Zerstört die `single_assignment` Meldungsblock.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
@@ -66,7 +66,7 @@ Der Nutzlasttyp der Nachricht gespeichert und vom Puffer weitergegeben.
 |Name|Beschreibung|
 |----------|-----------------|
 |[has_value](#has_value)|Überprüft, ob dies `single_assignment` Meldungsblock noch mit einem Wert initialisiert wurde.|
-|[value](#value)|Ruft einen Verweis auf die aktuelle Nutzlast der Nachricht gespeichert werden, der `single_assignment` Meldungsblock.|
+|[Wert](#value)|Ruft einen Verweis auf die aktuelle Nutzlast der Nachricht gespeichert werden, der `single_assignment` Meldungsblock.|
 
 ### <a name="protected-methods"></a>Geschützte Methoden
 
@@ -158,7 +158,7 @@ bool has_value() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn der Block einen Wert erhalten hat `false` andernfalls.
+**"true"** , wenn der Block einen Wert erhalten hat **"false"** andernfalls.
 
 ##  <a name="link_target_notification"></a> link_target_notification
 
@@ -236,11 +236,11 @@ Die `runtime_object_identity` von der `message` Objekt reserviert wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn die Nachricht erfolgreich reserviert wurde, `false` andernfalls.
+**"true"** , wenn die Nachricht erfolgreich reserviert wurde, **"false"** andernfalls.
 
 ### <a name="remarks"></a>Hinweise
 
-Nach dem `reserve` aufgerufen wird, wenn zurückgegeben `true`, entweder `consume` oder `release` aufgerufen werden, um zu übernehmen oder den Besitz der Nachricht.
+Nach dem `reserve` aufgerufen wird, wenn zurückgegeben **"true"**, entweder `consume` oder `release` aufgerufen werden, um zu übernehmen oder den Besitz der Nachricht.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -274,7 +274,7 @@ Ein [Message_status](concurrency-namespace-enums.md) Überblick, was das Ziel be
 
 ##  <a name="ctor"></a> single_assignment
 
-Erstellt eine `single_assignment` Meldungsblock.
+Erstellt einen `single_assignment` -Meldungsblock.
 
 ```
 single_assignment();
@@ -303,10 +303,10 @@ single_assignment(
 Eine Filterfunktion, die bestimmt, ob angebotene Nachrichten akzeptiert werden sollen.
 
 *_PScheduler*<br/>
-Das `Scheduler`-Objekt, in dem die Weiterleitungsaufgabe für den `single_assignment`-Meldungsblock geplant ist.
+Das `Scheduler` -Objekt, in dem die Weiterleitungsaufgabe für den `single_assignment` -Meldungsblock geplant ist.
 
 *_PScheduleGroup*<br/>
-Das `ScheduleGroup`-Objekt, in dem die Weiterleitungsaufgabe für den `single_assignment`-Meldungsblock geplant ist. Das verwendete `Scheduler` -Objekt wird von der Planungsgruppe impliziert.
+Das `ScheduleGroup` -Objekt, in dem die Weiterleitungsaufgabe für den `single_assignment` -Meldungsblock geplant ist. Das verwendete `Scheduler` -Objekt wird von der Planungsgruppe impliziert.
 
 ### <a name="remarks"></a>Hinweise
 

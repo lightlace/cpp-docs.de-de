@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78cbd53baf9e9ade8c20f3b9f5fa419eeb2d1c80
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 211005f273500992440c0e95d2c3c4e3adcef581
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441914"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163412"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Concurrency-Namespace-Funktionen (AMP)
 
@@ -92,7 +92,7 @@ Der Wert, der an dem von `_Dest` angegebenen Speicherort abgelegt werden soll, w
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn der Vorgang erfolgreich ist, andernfalls `false`.
+**"true"** , wenn der Vorgang erfolgreich; andernfalls ist **"false"**.
 
 ##  <a name="atomic_exchange"></a>  Atomic_exchange-Funktion (C++-AMP)
 
@@ -554,7 +554,7 @@ Ein `future<void>`-Objekt, auf das gewartet werden kann.
 
 ##  <a name="direct3d_abort"></a>  direct3d_abort
 
-Bricht die Ausführung einer Funktion mit der Einschränkungsklausel `restrict(amp)` ab. Wenn die AMP-Laufzeit den Aufruf erkennt, löst es eine [Runtime_exception](runtime-exception-class.md) Ausnahme mit der Fehlermeldung "Referenzrasterprogramm: Abbrechen von Shader ermittelt der Anweisung".
+Bricht die Ausführung einer Funktion mit der Einschränkungsklausel `restrict(amp)` ab. Wenn die AMP-Laufzeit den Aufruf erkennt, löst sie eine [runtime_exception](runtime-exception-class.md) -Ausnahme mit der Fehlermeldung „Referenzrasterprogramm: Anweisung zum Abbrechen von Shader ermittelt“ aus.
 
 ```
 void direct3d_abort() restrict(amp);

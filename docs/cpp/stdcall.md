@@ -1,12 +1,14 @@
 ---
 title: __stdcall | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 10/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __stdcall_cpp
+- __stdcall
+- _stdcall
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb65ff85346412587fab96934ca5438bb6a4dfe5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 06eafcd4303e01be523554f2a164e6cb14f79a26
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031378"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162255"
 ---
 # <a name="stdcall"></a>__stdcall
 
@@ -46,6 +48,8 @@ Die folgende Liste zeigt die Implementierung dieser Aufrufkonvention.
 |Konvention zur Umwandlung von Groß- in Kleinbuchstaben und umgekehrt|Keiner|
 
 Die [/GZ](../build/reference/gd-gr-gv-gz-calling-convention.md) -Compileroption gibt **__stdcall** für alle Funktionen, die nicht explizit mit einer anderen Aufrufkonvention deklariert.
+
+Für die Kompatibilität mit früheren Versionen **_stdcall** ist ein Synonym für **__stdcall** , wenn Compileroption [/Za \(spracherweiterungen deaktivieren)](../build/reference/za-ze-disable-language-extensions.md) ist angegeben.
 
 Funktionen, die mithilfe von deklariert die **__stdcall** Modifizierer zurückgegeben Werte die gleiche Weise wie Funktionen, die mithilfe von deklariert [__cdecl](../cpp/cdecl.md).
 

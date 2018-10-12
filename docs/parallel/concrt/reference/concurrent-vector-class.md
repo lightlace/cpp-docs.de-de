@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa50628e9c63eee585eebe2ce63b2c5ec9b6f5fe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 68ea93c137962e48f8a627e9a9409e4e7fceef65
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422206"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163373"
 ---
 # <a name="concurrentvector-class"></a>concurrent_vector-Klasse
 
@@ -410,7 +410,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn der Vektor leer war die Funktion wird aufgerufen wurde, im Moment `false` andernfalls.
+**"true"** Wenn zum Zeitpunkt der Vektor leer die Funktion aufgerufen war wurde, **"false"** andernfalls.
 
 ##  <a name="end"></a> Ende
 

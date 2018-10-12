@@ -14,18 +14,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad6feef707d991d07fa4e086bc8535f32b991825
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9c337ec94f863e6c19851bcf962db61f277491cf
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716857"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163243"
 ---
 # <a name="msbuild-visual-c-overview"></a>Übersicht über MSBuild (Visual C++)
 
 MSBuild ist das Standardbuildsystem für Visual C++-Projekte. Wenn Sie ein Projekt in der integrierten Entwicklungsumgebung von Visual Studio (IDE) erstellen, werden das Tool "msbuild.exe", eine XML-basierte Projektdatei und optionale Einstellungsdateien verwendet. Obwohl Sie "msbuild.exe" und eine Projektdatei in der Befehlszeile verwenden können, stellt die IDE eine Benutzeroberfläche zur leichteren Konfiguration von Einstellungen und Erstellung von Projekten bereit. In dieser Übersicht wird beschrieben, wie Visual C++ das MSBuild-System verwendet.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Lesen Sie die folgenden Dokumente zu MSBuild.
 
@@ -111,7 +111,7 @@ Legen Sie z. B. die `PreferredToolArchitecture` Eigenschaft `x64` auf dem 64-Bit
 
 ### <a name="useenv-property"></a>UseEnv-Eigenschaft
 
-Standardmäßig setzen die plattformspezifischen Einstellungen für das aktuelle Projekt die PATH-, INCLUDE-, LIB-, LIBPATH-, CONFIGURATION- und PLATFORM-Umgebungsvariablen außer Kraft. Legen Sie die `UseEnv`-Eigenschaft auf `true` fest, um zu gewährleisten, dass die Umgebungsvariablen nicht überschrieben werden.
+Standardmäßig setzen die plattformspezifischen Einstellungen für das aktuelle Projekt die PATH-, INCLUDE-, LIB-, LIBPATH-, CONFIGURATION- und PLATFORM-Umgebungsvariablen außer Kraft. Legen Sie die `UseEnv` Eigenschaft **"true"** um sicherzustellen, dass die Umgebungsvariablen nicht überschrieben werden.
 
 `msbuild myProject.vcxproj /p:UseEnv=true`
 
@@ -121,7 +121,7 @@ In den Visual C++-Supportdateien sind Hunderte von Zielen enthalten. Die meisten
 
 Die folgende Tabelle enthält einige nützliche benutzerorientierte Ziele.
 
-|Ziel|Beschreibung|
+|Target|Beschreibung|
 |------------|-----------------|
 |BscMake|Führt das Microsoft-Wartungshilfsprogramm zum Durchsuchen von Informationen aus ("bscmake.exe").|
 |Build|Erstellt das Projekt.<br /><br /> Dies ist das Standardziel für ein Projekt.|

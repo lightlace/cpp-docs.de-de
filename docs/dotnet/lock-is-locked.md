@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 130ffcb372e3791af74ae6ec70e7b9bcfaff9376
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 64c0a3fbc197af66e8a57928cadc29c28b1ece1a
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438092"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163763"
 ---
 # <a name="lockislocked"></a>lock::is_locked
 
@@ -40,13 +40,13 @@ bool is_locked();
 
 ## <a name="return-value"></a>Rückgabewert
 
-`true` Wenn eine Sperre aufrechterhalten wird, `false` andernfalls.
+**"true"** , wenn eine Sperre aufrechterhalten wird, **"false"** andernfalls.
 
 ## <a name="example"></a>Beispiel
 
 Dieses Beispiel verwendet eine einzelne Instanz einer Klasse auf mehrere Threads.  Die Klasse verwendet eine Sperre auf sich selbst, um sicherzustellen, dass der Zugriff auf seine internen Daten für jeden Thread konsistent sind.  Thread der hauptanwendung verwendet eine Sperre für dieselbe Instanz der Klasse verwendet, um in regelmäßigen Abständen überprüfen, um festzustellen, ob alle Worker-Threads noch vorhanden sind, und wartet, bis alle Worker-Threads zu beenden, ihre Aufgaben abgeschlossen haben.
 
-```
+```cpp
 // msl_lock_is_locked.cpp
 // compile with: /clr
 #include <msclr/lock.h>

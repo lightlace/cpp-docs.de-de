@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e3639bb9d6ca88862b3a2fb4367fc429a665287
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 4facba4a35e28818f22ba17f6d835b781cd76061
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788668"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163269"
 ---
 # <a name="classfactory-class"></a>ClassFactory-Klasse
 
@@ -158,7 +158,7 @@ STDMETHOD(
 ### <a name="parameters"></a>Parameter
 
 *Bestand*<br/>
-`true` die Anzahl der überwachten Objekte erhöht. `false` um die Anzahl der überwachten Objekte zu verringern.
+**"true"** erhöht die Anzahl der überwachten Objekte. **"false"** um die Anzahl der überwachten Objekte zu verringern.
 
 ### <a name="return-value"></a>Rückgabewert
 

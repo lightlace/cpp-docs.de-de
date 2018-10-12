@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 845addc73d0dd542b7bb6a4abccbf915005ddd41
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 4dab192b2d5d4210461bd791e3f4d9996363c953
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235814"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163295"
 ---
 # <a name="safeint-class"></a>SafeInt-Klasse
 
@@ -194,7 +194,7 @@ Wenn Sie einen logischen Vergleich mit einem SafeInt-Objekt durchführen, ist de
 
 - `((uint)~0) > -1`
 
-Die erste Anweisung in aufgelöst `true`, aber die zweite Anweisung löst in `false`. Die bitweise Negation von 0 ist 0xFFFFFFFF. In der zweiten Anweisung wird der standardvergleichsoperator "0xFFFFFFFF", "0xFFFFFFFF" vergleicht, und Sie werden diese gleich sind. Der Vergleichsoperator für die `SafeInt` Klasse erkennt, dass der zweite Parameter negativ ist, während der erste Parameter ohne Vorzeichen ist. Aus diesem Grund, obwohl die Darstellung identisch sind, ist die `SafeInt` logischer Operator erkennt, dass die Ganzzahl ohne Vorzeichen größer als-1 ist.
+Die erste Anweisung in aufgelöst **"true"**, aber die zweite Anweisung löst in `false`. Die bitweise Negation von 0 ist 0xFFFFFFFF. In der zweiten Anweisung wird der standardvergleichsoperator "0xFFFFFFFF", "0xFFFFFFFF" vergleicht, und Sie werden diese gleich sind. Der Vergleichsoperator für die `SafeInt` Klasse erkennt, dass der zweite Parameter negativ ist, während der erste Parameter ohne Vorzeichen ist. Aus diesem Grund, obwohl die Darstellung identisch sind, ist die `SafeInt` logischer Operator erkennt, dass die Ganzzahl ohne Vorzeichen größer als-1 ist.
 
 Seien Sie vorsichtig bei der Verwendung der `SafeInt` -Klasse zusammen mit den `?:` ternärer Operator. Erwägen Sie die folgende Codezeile ein.
 
@@ -270,7 +270,7 @@ SafeInt (
 *b*<br/>
 [in] Der boolesche Wert für die neue `SafeInt` Objekt.
 
-*u*<br/>
+*n*<br/>
 [in] Ein `SafeInt` u Die neue `SafeInt` Objekt hat den gleichen Wert wie *u*, aber vom Typ "t".
 
 U den Typ der Daten in die `SafeInt`. Dies kann entweder ein boolescher Wert, Zeichen oder ganze Zahl sein. Wenn sie ein ganzzahliger Typ ist, es kann sein mit oder ohne Vorzeichen und zwischen 8 und 64-Bit sein.

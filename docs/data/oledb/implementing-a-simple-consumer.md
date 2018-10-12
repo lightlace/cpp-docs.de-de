@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 681aa3ef5a1434ab191854f23a9e7bc908b65728
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ce6f57846a0dcad79eead500286525e94c66a8e6
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082416"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162294"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementieren eines einfachen Consumers
 
@@ -34,17 +34,17 @@ Die folgenden Themen zeigen, wie Sie die MFC-Anwendung und ATL-OLE DB-Consumer-A
 - "Hinzufügen von XML-Unterstützung für den Consumer" zeigt, wie so ändern Sie den Consumercode, um die abgerufenen Rowsetdaten als XML-Daten ausgegeben.  
   
 > [!NOTE]
->  Sie können die Consumer-Anwendung, die in diesem Abschnitt beschriebenen verwenden, die Beispielanbieter MyProv und Anbieter zu testen.  
+> Sie können die Consumer-Anwendung, die in diesem Abschnitt beschriebenen verwenden, die Beispielanbieter MyProv und Anbieter zu testen.  
   
 > [!NOTE]
->  Erstellen Sie eine Consumeranwendung MyProv testen (die gleiche Anbieter, die in beschriebenen [Erweitern des einfachen schreibgeschützten Anbieters](../../data/oledb/enhancing-the-simple-read-only-provider.md)), müssen Sie lesezeichenunterstützung einschließen, siehe "Hinzufügen von Lesezeichen-Unterstützung für den Consumer."  
+> Erstellen Sie eine Consumeranwendung MyProv testen (die gleiche Anbieter, die in beschriebenen [Erweitern des einfachen schreibgeschützten Anbieters](../../data/oledb/enhancing-the-simple-read-only-provider.md)), müssen Sie lesezeichenunterstützung einschließen, siehe "Hinzufügen von Lesezeichen-Unterstützung für den Consumer."  
   
 > [!NOTE]
->  Erstellen Sie eine Consumeranwendung zum Testen der Anbieter, lassen Sie die lesezeichenunterstützung in "Hinzufügen von Lesezeichen unterstützen, Consumer" beschrieben aus, und fahren Sie mit "Hinzufügen von XML-Unterstützung für den Consumer."  
+> Erstellen Sie eine Consumeranwendung zum Testen der Anbieter, lassen Sie die lesezeichenunterstützung in "Hinzufügen von Lesezeichen unterstützen, Consumer" beschrieben aus, und fahren Sie mit "Hinzufügen von XML-Unterstützung für den Consumer."  
   
 ## <a name="retrieving-data-with-the-consumer"></a>Abrufen von Daten mit dem Consumer  
   
-#### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>So ändern Sie die Konsolenanwendung verwendet die OLE DB-consumer  
+### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>So ändern Sie die Konsolenanwendung verwendet die OLE DB-consumer  
   
 1. Ändern Sie in MyCons.cpp den Hauptcode, indem Sie den fett formatierten Text wie folgt einfügen:  
   
@@ -94,9 +94,9 @@ Die vorherigen Schritten erhalten Sie lesezeichenunterstützung und ein Bookmark
 - Geben Sie den mit Lesezeichen versehenen Zeile, die an das Ende der Datei angefügt.  
   
 > [!NOTE]
->  Wenn Sie diese Consumeranwendung verwenden, um die Anbieter Anbieter-beispielanwendung zu testen, lassen Sie Sie die lesezeichenunterstützung, die in diesem Abschnitt beschrieben.  
+> Wenn Sie diese Consumeranwendung verwenden, um die Anbieter Anbieter-beispielanwendung zu testen, lassen Sie Sie die lesezeichenunterstützung, die in diesem Abschnitt beschrieben.  
   
-#### <a name="to-instantiate-the-bookmark"></a>Um das Lesezeichen zu instanziieren.  
+### <a name="to-instantiate-the-bookmark"></a>Um das Lesezeichen zu instanziieren.  
   
 1. Der Accessor muss ein Objekt des Typs enthalten [CBookmark](../../data/oledb/cbookmark-class.md). Die *nSize* Parameter gibt die Größe des Lesezeichenpuffers in Bytes (in der Regel 4 für 32-Bit-Plattformen) und 8 für 64-Bit-Plattformen. Fügen Sie die folgende Deklaration, um der Spaltenelemente für die Daten in die Benutzerdatensatz-Klasse:  
   
@@ -111,7 +111,7 @@ Die vorherigen Schritten erhalten Sie lesezeichenunterstützung und ein Bookmark
        ...  
     ```  
   
-#### <a name="to-request-a-bookmark-column-from-the-provider"></a>Eine Lesezeichenspalte vom Anbieter anfordern  
+### <a name="to-request-a-bookmark-column-from-the-provider"></a>Eine Lesezeichenspalte vom Anbieter anfordern  
   
 1. Fügen Sie den folgenden Code in die `GetRowsetProperties` -Methode in der die Benutzerdatensatz-Klasse:  
   
@@ -125,7 +125,7 @@ Die vorherigen Schritten erhalten Sie lesezeichenunterstützung und ein Bookmark
     }  
     ```  
   
-#### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>Einen Lesezeicheneintrag zu der spaltenzuordnung hinzufügen  
+### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>Einen Lesezeicheneintrag zu der spaltenzuordnung hinzufügen  
   
 1. Fügen Sie den folgenden Eintrag, um die spaltenzuordnung in der Benutzerdatensatz-Klasse:  
   
@@ -139,7 +139,7 @@ Die vorherigen Schritten erhalten Sie lesezeichenunterstützung und ein Bookmark
     END_COLUMN_MAP()  
     ```  
   
-#### <a name="to-use-a-bookmark-in-your-main-code"></a>Verwenden Sie ein Lesezeichen in Ihrem Code main  
+### <a name="to-use-a-bookmark-in-your-main-code"></a>Verwenden Sie ein Lesezeichen in Ihrem Code main  
   
 1. Ändern Sie den Hauptcode wie folgt, in der Datei MyCons.cpp der Konsolenanwendung, die Sie zuvor erstellt haben. Um Lesezeichen zu verwenden, muss der Hauptcode eigene Bookmark-Objekt zu instanziieren (`myBookmark`); Dies ist ein anderes Lesezeichen in die Zugriffsmethode (`m_bookmark`).  
   
@@ -184,7 +184,7 @@ Die vorherigen Schritten erhalten Sie lesezeichenunterstützung und ein Bookmark
        {  
           nCounter++;  
           if(nCounter == 5 )  
-             myBookmark = rs.bookmark;  
+             myBookmark = rs.m_bookmark;  
           // Output the column information for each row:  
           outfile << rs.m_ProductID << rs.m_ProductName << lPrice << rs.m_QuantityPerUnit << rs.m_UnitsInStock << rs.m_ReorderLevel << endl;  
           hr = rs.MoveNext();  
@@ -216,7 +216,7 @@ Weitere Informationen über Lesezeichen finden Sie unter [mithilfe von Lesezeich
 
 Siehe [den Zugriff auf XML-Daten](../../data/oledb/accessing-xml-data.md), es gibt zwei Möglichkeiten zum Abrufen von XML-Daten aus einer Datenquelle: mit [CStreamRowset](../../data/oledb/cstreamrowset-class.md) oder [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md). Dieses Beispiel verwendet `CStreamRowset`, die wesentlich effizienter, jedoch benötigen Sie SQL Server 2000 ausgeführt wird, auf dem Computer, auf der Sie diese beispielanwendung ausführen.  
   
-#### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>So ändern Sie die Befehlsklasse von CStreamRowset erben  
+### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>So ändern Sie die Befehlsklasse von CStreamRowset erben  
   
 1. Ändern Sie in der Consumeranwendung, die Sie zuvor erstellt haben, Ihre `CCommand` Deklaration an `CStreamRowset` als Rowset-Klasse wie folgt:  
   
@@ -224,7 +224,7 @@ Siehe [den Zugriff auf XML-Daten](../../data/oledb/accessing-xml-data.md), es gi
     class CProducts : public CCommand<CAccessor<CProductsAccessor>, CStreamRowset >  
     ```  
   
-#### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>So ändern Sie den Hauptcode zum Abrufen und Ausgeben der XML-Daten  
+### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>So ändern Sie den Hauptcode zum Abrufen und Ausgeben der XML-Daten  
   
 1. Ändern Sie in der MyCons.cpp-Datei der Konsolenanwendung, die Sie zuvor erstellt haben, den Hauptcode, sodass er folgendermaßen ein:  
   

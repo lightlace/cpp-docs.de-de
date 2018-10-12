@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b3997f8beb414992464c51ca1c1fd944145c43d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d8c8c3cc219f0cf658dc2669ccc10adf3aba55bd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715142"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163529"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (bettet UAC-Informationen in Manifest ein)
 
@@ -50,7 +50,7 @@ Eine Zeichenfolge, die den `level`-Wert und den `uiAccess`-Wert enthält. Weiter
 Einer der *"asInvoker"*, *"highestAvailable"*, oder *"requireAdministrator"*. Wird standardmäßig auf "asInvoker" festgelegt. Weitere Informationen finden Sie unter "Hinweise" weiter unten in diesem Thema.
 
 *_uiAccess*<br/>
-`true`, wenn die Anwendung Sicherheitsebenen für Benutzeroberflächen umgehen und Eingabe in Fenster mit höheren Berechtigungen auf dem Desktop lenken soll; andernfalls `false`. Wird standardmäßig auf `false` festgelegt. Nur für barrierefreie Anwendungen mit Benutzeroberflächen auf `true` festlegen.
+**"true"** sollten Sie die Anwendung Sicherheitsebenen für Benutzeroberflächen umgehen und das Laufwerk input mit höheren Berechtigungen von Windows auf dem Desktop; andernfalls **"false"**. Standardmäßig **"false"**. Legen Sie auf **"true"** nur für barrierefreiheitsanwendungen mit Benutzeroberflächen.
 
 ## <a name="remarks"></a>Hinweise
 

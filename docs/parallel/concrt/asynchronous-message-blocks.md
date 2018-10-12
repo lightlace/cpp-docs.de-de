@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e9379dd15dbb0d814da1e617fb1f3f8408d1da0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0b180b1a92defb2c29d0e54b0ecf9700dd299170
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388484"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163425"
 ---
 # <a name="asynchronous-message-blocks"></a>Asynchrone Nachrichtenblöcke
 
@@ -67,7 +67,7 @@ Die Agents Library verwendet zwei abstrakte Klassen zum Darstellen von Quellen u
 
 ##  <a name="propagation"></a> Nachrichtenweitergabe
 
-*Die Weitergabe* ist der Vorgang des Sendens einer Nachricht von einer Komponente zu einem anderen. Wenn eine Nachricht für einen Nachrichtenblock bereitgestellt wird, kann er diese Nachricht akzeptieren, ablehnen oder verschieben. Jeder Nachrichtenblocktyp speichert und überträgt Nachrichten auf unterschiedliche Weise. Beispielsweise speichert die `unbounded_buffer`-Klasse eine unendliche Anzahl von Nachrichten, die `overwrite_buffer`-Klasse speichert jeweils nur eine Nachricht, und die Transformatorklasse speichert eine geänderte Version jeder Nachricht. Diese Nachrichtenblocktypen werden im Folgenden ausführlicher beschrieben.
+*Die Weitergabe* ist der Vorgang des Sendens einer Nachricht von einer Komponente zu einem anderen. Wenn eine Nachricht für einen Nachrichtenblock bereitgestellt wird, kann er diese Nachricht akzeptieren, ablehnen oder verschieben. Jeder Nachrichtenblocktyp speichert und überträgt Nachrichten auf unterschiedliche Weise. Beispielsweise speichert die `unbounded_buffer`-Klasse eine unendliche Anzahl von Nachrichten, die `overwrite_buffer`-Klasse speichert jeweils nur eine Nachricht, und die Transformerklasse speichert eine geänderte Version jeder Nachricht. Diese Nachrichtenblocktypen werden im Folgenden ausführlicher beschrieben.
 
 Wenn ein Nachrichtenblock eine Meldung akzeptiert, können optionale Arbeiten durchgeführt werden, und wenn es sich bei dem Nachrichtenblock um eine Quelle handelt, kann die resultierende Nachricht an einen anderen Member im Netzwerk weitergegeben werden. Mithilfe einer Filterfunktion können Nachrichtenblöcke einzelne Nachrichten ablehnen, die nicht empfangen werden sollen. Filter werden ausführlich weiter unten in diesem Thema im Abschnitt [Nachrichtenfilterung](#filtering). Ein Nachrichtenblock, der eine Meldung verschiebt, kann sie reservieren und später verarbeiten. Nachrichtenreservierung wird weiter unten in diesem Thema im Abschnitt ausführlicher beschrieben [Nachrichtenreservierung](#reservation).
 
@@ -122,7 +122,7 @@ In der folgenden Tabelle wird der Bezug dieser Eigenschaften auf die verschieden
 |`unbounded_buffer`|Beides|Geordnete|Unbegrenzt|Unbegrenzt|
 |`overwrite_buffer`|Beides|Geordnete|Unbegrenzt|Unbegrenzt|
 |`single_assignment`|Beides|Geordnete|Unbegrenzt|Unbegrenzt|
-|`call`|Ziel|Geordnete|Unbegrenzt|Nicht zutreffend|
+|`call`|Target|Geordnete|Unbegrenzt|Nicht zutreffend|
 |`transformer`|Beides|Geordnete|Unbegrenzt|1|
 |`choice`|Beides|Geordnete|10|1|
 |`join`|Beides|Geordnete|Unbegrenzt|1|
@@ -273,7 +273,7 @@ Ein vollständiges Beispiel, das zeigt, wie Sie mit der `choice` Klasse, finden 
 
 Die [Concurrency:: Join](../../parallel/concrt/reference/join-class.md) und [multitype_join](../../parallel/concrt/reference/multitype-join-class.md) -Klassen können Sie für jedes Mitglied einer Gruppe von Quellen zum Empfangen einer Nachricht zu warten. Die `join`-Klasse wird für Quellobjekte verwendet, die einen allgemeinen Nachrichtentyp aufweisen. Die `multitype_join`-Klasse wird für Quellobjekte verwendet, die andere Nachrichtentypen aufweisen können.
 
-Der Lesevorgang bei einem `join` oder einem `multitype_join`-Objekt ähnelt dem Aufrufen der API-Funktion `WaitForMultipleObjects` von Windows, wenn der `bWaitAll`-Parameter auf `TRUE` festgelegt ist. Ähnlich wie ein `choice`-Objekt verwenden das `join`- und das  `multitype_join`-Objekt einen Ereignismechanismus, der Daten nicht an ein externes Synchronisierungsobjekt, sondern an das Ereignis selbst bindet.
+Der Lesevorgang bei einem `join` oder einem `multitype_join`-Objekt ähnelt dem Aufrufen der API-Funktion `WaitForMultipleObjects` von Windows, wenn der `bWaitAll`-Parameter auf `TRUE` festgelegt ist. Ähnlich wie ein `choice`-Objekt verwenden das `join`- und das `multitype_join`-Objekt einen Ereignismechanismus, der Daten nicht an ein externes Synchronisierungsobjekt, sondern an das Ereignis selbst bindet.
 
 Lesen aus einer `join` Objekt erzeugt einen std::[Vektor](../../standard-library/vector-class.md) Objekt. Lesen aus einer `multitype_join` Objekt erzeugt einen std::[Tupel](../../standard-library/tuple-class.md) Objekt. Elemente treten in diesen Objekten in der Reihenfolge auf, in der die entsprechenden Quellpuffer mit dem `join`-Objekt oder mit dem `multitype_join`-Objekt verknüpft werden. Da die Reihenfolge, in der Quellpuffer mit einem `join`-Objekt oder einem `multitype_join`-Objekt verknüpft werden, von der Reihenfolge der Elemente im resultierenden `vector`-Objekt oder `tuple`-Objekt abhängig ist, wird empfohlen, die Verknüpfung zwischen einem vorhandenen Quellpuffer und einem Join nicht aufzuheben. Andernfalls ist das daraus folgende Verhalten möglicherweise undefiniert.
 
@@ -307,7 +307,7 @@ Die Concurrency::[Timer-Klasse](../../parallel/concrt/reference/timer-class.md) 
 
 Die `timer`-Klasse sendet die eigene Nachricht an nur ein Ziel. Setzen Sie die `_PTarget` Parameter im Konstruktor auf `NULL`, können Sie das Ziel später angeben, durch den Aufruf der [Concurrency::ISource::link_target](reference/source-block-class.md#link_target) Methode.
 
-Ein `timer`-Objekt kann ein sich wiederholendes oder ein sich nicht wiederholendes Objekt sein. Um ein sich wiederholendes timer-Objekt zu erstellen, übergeben Sie beim Aufruf des Konstruktors für den `true`-Parameter das `_Repeating`-Argument. Andernfalls übergeben Sie für den `false`-Parameter das `_Repeating`-Argument, um ein sich nicht wiederholendes timer-Objekt zu erstellen. Wenn das timer-Objekt ein sich wiederholendes Objekt ist, wird dieselbe Nachricht nach jedem Intervall an das entsprechende Ziel gesendet.
+Ein `timer`-Objekt kann ein sich wiederholendes oder ein sich nicht wiederholendes Objekt sein. Um einen sich wiederholenden Timer erstellen, übergeben **"true"** für die `_Repeating` Parameter an, wenn Sie den Konstruktor aufrufen. Andernfalls übergeben Sie **"false"** für die `_Repeating` Parameter, um einen nicht wiederholendes Timer erstellen. Wenn das Timer-Objekt ein sich wiederholendes Objekt ist, wird dieselbe Nachricht nach jedem Intervall an das entsprechende Ziel gesendet.
 
 Die Agents Library erstellt `timer`-Objekte im nicht gestarteten Zustand. Um ein Timer-Objekt zu starten, rufen die [Concurrency::timer::start](reference/timer-class.md#start) Methode. Zum Beenden einer `timer` Objekt, das Objekt zerstört oder Aufruf dem [Concurrency::timer::stop](reference/timer-class.md#stop) Methode. Um einen sich wiederholenden Timer anzuhalten, rufen Sie die [Concurrency::timer::pause](reference/timer-class.md#pause) Methode.
 

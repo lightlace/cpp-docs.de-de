@@ -1,7 +1,7 @@
 ---
 title: Versuchen Sie es – except-Anweisung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 10/05/2018
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -11,6 +11,7 @@ f1_keywords:
 - EXCEPTION_CONTINUE_SEARCH
 - _exception_info
 - __except
+- _except
 - EXCEPTION_CONTINUE_EXECUTION
 - _exception_code
 - __except_cpp
@@ -35,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e938f5b7e5f25461ae921fbfa3c49920eca86eb
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: af4d14eb3fad691a5ff10665a83879ae4319a3d9
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861927"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162034"
 ---
 # <a name="try-except-statement"></a>try-except-Anweisung
 
@@ -89,6 +90,8 @@ Da die **__except** -Ausdruck als C-Ausdruck ausgewertet wird, wird er auf einen
 Jede Anwendung kann einen eigenen Ausnahmehandler haben.
 
 Es ist nicht zulässig, springen Sie in einem **__try** -Anweisung, aber aus einer solchen gültig. Der Ausnahmehandler wird nicht aufgerufen, wenn ein Prozess, während der Ausführung beendet wird eine **Testen – mit Ausnahme von** Anweisung.
+
+Für die Kompatibilität mit früheren Versionen **_finally**, **_except**, und **_leave** sind Synonyme für **__try**, **__except** , und **__leave-** , wenn Compileroption [/Za \(spracherweiterungen deaktivieren)](../build/reference/za-ze-disable-language-extensions.md) angegeben ist.
 
 ### <a name="the-leave-keyword"></a>Das __leave-Schlüsselwort
 

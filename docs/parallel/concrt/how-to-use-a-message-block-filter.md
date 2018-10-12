@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b16dee4d0a3c5a6d09c1fd19006c832be400d5a4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 93578f9d798e0c0bab0fe58a3211c20507dd99d4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411071"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162060"
 ---
 # <a name="how-to-use-a-message-block-filter"></a>Gewusst wie: Verwenden eines Nachrichtenblockfilters
 
@@ -48,7 +48,7 @@ Da das `transformer`-Objekt nur Primzahlen empfängt, kann das `transformer`-Obj
 
 [!code-cpp[concrt-primes-filter#2](../../parallel/concrt/codesnippet/cpp/how-to-use-a-message-block-filter_2.cpp)]
 
-Das `transformer`-Objekt verarbeitet jetzt nur die Werte, die Primzahlen sind. Im vorherigen Beispiel verarbeitet das `transformer`-Objekt alle Nachrichten. Daher muss im vorherigen Beispiel die gleiche Anzahl von Nachrichten empfangen werden, wie gesendet wurden. In diesem Beispiel wird anhand des Ergebnisses der [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) Funktion, um zu bestimmen, wie viele Nachrichten zum Empfangen von der `transformer` Objekt. Die `send`-Funktion gibt `true` zurück, wenn der Nachrichtenpuffer die Nachricht annimmt, und `false`, wenn der Nachrichtenpuffer die Nachricht ablehnt. Daher stimmt die Häufigkeit, mit der der Nachrichtenpuffer die Nachricht annimmt, mit der Anzahl der Primzahlen überein.
+Das `transformer`-Objekt verarbeitet jetzt nur die Werte, die Primzahlen sind. Im vorherigen Beispiel verarbeitet das `transformer`-Objekt alle Nachrichten. Daher muss im vorherigen Beispiel die gleiche Anzahl von Nachrichten empfangen werden, wie gesendet wurden. In diesem Beispiel wird anhand des Ergebnisses der [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) Funktion, um zu bestimmen, wie viele Nachrichten zum Empfangen von der `transformer` Objekt. Die `send` -Funktion zurückgegeben **"true"** bei der der Nachrichtenpuffer die Nachricht annimmt und **"false"** bei der Nachrichtenpuffer die Nachricht ablehnt. Daher stimmt die Häufigkeit, mit der der Nachrichtenpuffer die Nachricht annimmt, mit der Anzahl der Primzahlen überein.
 
 ## <a name="example"></a>Beispiel
 

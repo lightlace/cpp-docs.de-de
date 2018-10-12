@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b821dcc3426c6e1d9f3cd2f2ff8eb057197ca8d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e37348fe92354d2ea7be3168dc5b3c9aee9fcd63
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416200"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163100"
 ---
 # <a name="timer-class"></a>Timer-Klasse
 
@@ -66,7 +66,7 @@ Der Nutzlasttyp der ausgabemeldungen dieses Blocks.
 |----------|-----------------|
 |[Anhalten](#pause)|Beendet die `timer` Meldungsblock. Ist dies eine wiederholte `timer` -Meldungsblock, es kann neu gestartet werden mit einer nachfolgenden `start()` aufrufen. Für nicht wiederholte Zeitgeber, dies hat dieselbe Wirkung wie ein `stop` aufrufen.|
 |[start](#start)|Startet die `timer` Meldungsblock. Die angegebene Anzahl von Millisekunden nach dem aufgerufen wird, wird der angegebene Wert wird übernommen downstream als eine `message`.|
-|[Beenden](#stop)|Beendet die `timer` Meldungsblock.|
+|[stop](#stop)|Beendet die `timer` Meldungsblock.|
 
 ### <a name="protected-methods"></a>Geschützte Methoden
 
@@ -193,11 +193,11 @@ Die `runtime_object_identity` von der `message` Objekt reserviert wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn die Nachricht erfolgreich reserviert wurde, `false` andernfalls.
+**"true"** , wenn die Nachricht erfolgreich reserviert wurde, **"false"** andernfalls.
 
 ### <a name="remarks"></a>Hinweise
 
-Nach dem `reserve` aufgerufen wird, wenn zurückgegeben `true`, entweder `consume` oder `release` aufgerufen werden, um zu übernehmen oder den Besitz der Nachricht.
+Nach dem `reserve` aufgerufen wird, wenn zurückgegeben **"true"**, entweder `consume` oder `release` aufgerufen werden, um zu übernehmen oder den Besitz der Nachricht.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -267,11 +267,11 @@ True gibt an, dass der Zeitgeber, das in regelmäßigen Abständen ausgelöst we
 Die `Scheduler` Objekt, in dem die Weiterleitungsaufgabe für, den `timer` -Meldungsblock geplant ist geplant ist.
 
 *_ScheduleGroup*<br/>
-Das `ScheduleGroup`-Objekt, in dem die Weiterleitungsaufgabe für den `timer`-Meldungsblock geplant ist. Das verwendete `Scheduler` -Objekt wird von der Planungsgruppe impliziert.
+Das `ScheduleGroup` -Objekt, in dem die Weiterleitungsaufgabe für den `timer` -Meldungsblock geplant ist. Das verwendete `Scheduler` -Objekt wird von der Planungsgruppe impliziert.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Laufzeit mithilfe des Standardplaners aus, wenn Sie keinen angeben der `_Scheduler` oder `_ScheduleGroup` Parameter.
+Die Runtime verwendet das Standardplanungsprogramm, wenn Sie den `_Scheduler` -Parameter oder den `_ScheduleGroup` -Parameter nicht angeben.
 
 ##  <a name="dtor"></a> ~ Timer
 

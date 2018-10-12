@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a674d63c52f6f204d0bb69c69cd5814cd6d9761a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 85f9498f44f4f1ec2598e6263c003d041f519105
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788941"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162216"
 ---
 # <a name="comptrref-class"></a>ComPtrRef-Klasse
 
@@ -176,11 +176,11 @@ Ein Verweis auf einen anderen `ComPtrRef` Objekt oder ein Zeiger auf einen anony
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der erste Operator ergibt `true` Wenn Objekt *eine* Objekt entspricht *b*ist, andernfalls `false`.
+Der erste Operator ergibt **"true"** Wenn Objekt *eine* Objekt entspricht *b*ist, andernfalls **"false"**.
 
-Führen Sie die zweite und dritte Operator `true` Wenn Objekt *eine* gleich `nullptr`ist, andernfalls `false`.
+Führen Sie die zweite und dritte Operator **"true"** Wenn Objekt *eine* gleich **"nullptr"** ist, andernfalls **"false"**.
 
-Die vierten und fünften-Operatoren ergeben `true` Wenn Objekt *eine* Objekt entspricht *b*ist, andernfalls `false`.
+Die vierten und fünften-Operatoren ergeben **"true"** Wenn Objekt *eine* Objekt entspricht *b*ist, andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -227,11 +227,11 @@ Ein Verweis auf einen anderen `ComPtrRef` Objekt oder ein Zeiger auf ein anonyme
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der erste Operator ergibt `true` Wenn Objekt *eine* ist nicht gleich Objekt *b*ist, andernfalls `false`.
+Der erste Operator ergibt **"true"** Wenn Objekt *eine* ist nicht gleich Objekt *b*ist, andernfalls **"false"**.
 
-Führen Sie die zweite und dritte Operator `true` Wenn Objekt *eine* ist nicht gleich `nullptr`ist, andernfalls `false`.
+Führen Sie die zweite und dritte Operator **"true"** Wenn Objekt *eine* ist nicht gleich **"nullptr"** ist, andernfalls **"false"**.
 
-Die vierten und fünften-Operatoren ergeben `true` Wenn Objekt *eine* ist nicht gleich Objekt *b*ist, andernfalls `false`.
+Die vierten und fünften-Operatoren ergeben **"true"** Wenn Objekt *eine* ist nicht gleich Objekt *b*ist, andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 

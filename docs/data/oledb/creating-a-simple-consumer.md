@@ -1,7 +1,7 @@
 ---
 title: Erstellen eines einfachen Consumers | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,46 +15,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 120829b08ab65c10cca7ab922fc4f9be732ccc53
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 85efb2a1d699914c6d7ffb1fd079a38be70f0b52
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860809"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163841"
 ---
 # <a name="creating-a-simple-consumer"></a>Erstellen eines einfachen Consumers
 
 Verwenden Sie die ATL-Projektassistenten und ATL-OLE DB-Consumer-Assistenten, um einen OLE DB-Vorlagen-Consumer zu generieren.
 
-### <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>Zum Erstellen einer Konsolenanwendung für einen OLE DB-consumer
+## <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>Zum Erstellen einer Konsolenanwendung für einen OLE DB-consumer
 
 1. Klicken Sie im Menü **Datei** auf **Neu**und dann auf **Projekt**.
 
    Das Dialogfeld **Neues Projekt** wird angezeigt.
 
-1. Klicken Sie im Bereich Projekttypen auf der **Visual C++-Projekte** Ordner, und klicken Sie dann auf die **Win32-Projekt** Symbol im Bereich Vorlagen. In der **Namen** Geben Sie den Namen des Projekts, z. B. **MyCons**.
+1. In der **Projekttypen** Bereich, klicken Sie auf die **installiert** > **Vorlagen** > **Visual C++** Ordner und Klicken Sie dann auf die **Win32-Konsolenanwendung** Symbol in der **Vorlagen** Bereich. In der **Namen** Geben Sie den Namen des Projekts, z. B. *MyCons*.
 
 1. Klicken Sie auf **OK**.
 
-   Die Win32-Projekt-Assistent wird angezeigt.
+   Die Win32-Anwendungsassistenten wird angezeigt.
 
-1. Auf der **Anwendungseinstellungen** Seite **Konsolenanwendung**, und wählen Sie dann **ATL-Unterstützung hinzufügen**.
+1. Auf der **Anwendungseinstellungen** Seite **Konsolenanwendung**, und wählen Sie dann **allgemeine Headerdateien für ATL hinzufügen**.
 
 1. Klicken Sie auf **Fertig stellen** den Assistenten zu schließen und das Projekt zu erstellen.
 
 Verwenden Sie anschließend die ATL-OLE DB-Consumer-Assistenten zum Hinzufügen eines OLE DB-Consumer-Objekts.
 
-#### <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>Um einen Consumer mit dem ATL-OLE DB-Consumer-Assistenten erstellen
+## <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>Um einen Consumer mit dem ATL-OLE DB-Consumer-Assistenten erstellen
 
-1. In der Klassenansicht, Maustaste den `MyCons` Projekt.
+1. In **Projektmappen-Explorer**, mit der rechten Maustaste die `MyCons` Projekt.
 
-1. Klicken Sie im Kontextmenü auf **hinzufügen**, und klicken Sie dann auf **Klasse hinzufügen**.
+1. Klicken Sie im Kontextmenü auf **hinzufügen**, und klicken Sie dann auf **Klasse**.
 
    Die **Klasse hinzufügen** Dialogfeld wird angezeigt.
 
-1. Klicken Sie in den Bereich "Kategorien" auf **Visual C++**, klicken Sie auf die **ATL-OLE DB-Consumer** in den Vorlagen (Bereich), und klicken Sie dann auf **öffnen**.
+1. In der **Kategorien** Bereich, klicken Sie auf **installiert** > **Visual C++** > **ATL**, klicken Sie auf die **ATL-OLEDB-Consumer** Symbol in der **Vorlagen** , und klicken Sie dann auf **hinzufügen**.
 
-   Der ATL-OLE DB-Consumer-Assistent wird angezeigt.
+   Der ATL-OLEDB-Consumer-Assistent wird angezeigt.
 
 1. Klicken Sie auf die **Datenquelle** Schaltfläche.
 
@@ -64,10 +64,10 @@ Verwenden Sie anschließend die ATL-OLE DB-Consumer-Assistenten zum Hinzufügen 
 
    - Auf der **Anbieter** Registerkarte, geben Sie einen OLE DB-Anbieter.
 
-   - Auf der **Verbindung** an, der Servernamen, Anmelde-ID und das Kennwort für die Datenquelle und die Datenbank auf dem Server.
+   - Auf der **Verbindung** Registerkarte, geben Sie die erforderliche Informationen, z. B. Servername, Anmelde-ID und Kennwort für die Datenquelle und die Datenbank auf dem Server.
 
    > [!NOTE]
-   > Es wurde ein Sicherheitsproblem mit der **Speichern des Kennworts zulassen** Feature von der **Datenlinkeigenschaften** im Dialogfeld. In **Geben Sie Informationen zum Anmelden an den Server**, es gibt zwei Optionsfelder: **Windows NT integrated Security verwenden** und **bestimmten Benutzernamen und bestimmtes Kennwort**.
+   > Es wurde ein Sicherheitsproblem mit der **Speichern von Kennwort zulassen** Feature von der **Datenlinkeigenschaften** im Dialogfeld. In **Geben Sie Informationen zum Anmelden an den Server**, es gibt zwei Optionsfelder: **Windows NT integrated Security verwenden** und **bestimmten Benutzernamen und bestimmtes Kennwort**.
 
    > [!NOTE]
    > Bei Auswahl von **bestimmten Benutzernamen und bestimmtes Kennwort**, Sie haben die Möglichkeit, speichern Sie das Kennwort (mit der **Speichern von Kennwort zulassen** Kontrollkästchen), aber diese Option ist nicht sicher. Es wird empfohlen, die Sie auswählen, **Windows NT integrated Security verwenden**; diese Option verwendet die Windows NT zur Überprüfung Ihrer Identität.
@@ -79,7 +79,7 @@ Verwenden Sie anschließend die ATL-OLE DB-Consumer-Assistenten zum Hinzufügen 
 
    Die **Datenbankobjekt auswählen** Dialogfeld wird angezeigt.
 
-1. Verwenden Sie die Strukturansicht-Steuerelement, um eine Tabelle, Sicht oder gespeicherte Prozedur auszuwählen. Wählen Sie für diese Prozedur die Products-Tabelle aus der Northwind-Datenbank.
+1. Verwenden Sie die Strukturansicht-Steuerelement, um eine Tabelle, Sicht oder gespeicherte Prozedur auszuwählen. Wählen Sie für diese Prozedur die `Products` -Tabelle aus dem `Northwind` Datenbank.
 
 1. Klicken Sie auf **OK**. Dies gibt Sie an der ATL-OLE DB-Consumer-Assistenten zurück.
 

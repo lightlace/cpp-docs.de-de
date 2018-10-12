@@ -1,12 +1,13 @@
 ---
 title: __assume | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
 f1_keywords:
 - __assume
+- _assume
 - __assume_cpp
 dev_langs:
 - C++
@@ -17,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1c8c37bc46580db42bfa2a91d215b09bc1dbaf4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 41542065a4fc7d3b90fd3159dca4c7a7d169c115
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405696"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163668"
 ---
 # <a name="assume"></a>__assume
 
@@ -57,6 +58,8 @@ Wenn die `__assume`-Anweisung als Widerspruch geschrieben wurde (ein Ausdruck, d
 Verwendung `__assume` in einer [ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) nur, wenn die Assertion nicht wiederherstellbar ist. Verwenden Sie `__assume` nicht in einer Assert-Anweisung, für die Sie über den folgenden Fehlerwiederherstellungscode verfügen, da der Compiler den Fehlerbehebungscode aus Optimierungsgründen möglicherweise löscht.
 
 Die `__assume(0)`-Anweisung ist ein Sonderfall. Verwenden Sie `__assume(0)`, um einen Codepfad anzugeben, der nicht erreicht werden kann. Im folgenden Beispiel wird veranschaulicht, wie `__assume(0)` verwendet wird, um anzugeben, dass der Standardfall einer Switch-Anweisung nicht erreicht werden kann. Dies zeigt die typische Verwendung von `__assume(0)`.
+
+Für die Kompatibilität mit früheren Versionen **_assume** ist ein Synonym für **__assume** , wenn Compileroption [/Za \(spracherweiterungen deaktivieren)](../build/reference/za-ze-disable-language-extensions.md) ist angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 

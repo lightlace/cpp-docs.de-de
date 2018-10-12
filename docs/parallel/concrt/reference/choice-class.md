@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 039f69f31c5a92cf07f96442c30bd59b0cc6f40e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9d38b8415b5ca214800c968d186f37c020dce6dc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414575"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163958"
 ---
 # <a name="choice-class"></a>choice-Klasse
 
@@ -85,7 +85,7 @@ Ein `tuple`-basierten Typ, der die Nutzlast der Eingabequellen darstellt.
 |[reserve](#reserve)|Reserviert eine Meldung, die zuvor von diesem angebotenen `choice` Meldungsblock.|
 |[unlink_target](#unlink_target)|Hebt die Verknüpfung mit einem Zielblock und dadurch `choice` Meldungsblock.|
 |[unlink_targets](#unlink_targets)|Hebt die Verknüpfung alle Ziele aus diesem `choice` Meldungsblock. (Überschreibt [ISource:: Unlink_targets](isource-class.md#unlink_targets).)|
-|[value](#value)|Ruft die Meldung ab, dessen Index, indem ausgewählt wurde, die `choice` Meldungsblock.|
+|[Wert](#value)|Ruft die Meldung ab, dessen Index, indem ausgewählt wurde, die `choice` Meldungsblock.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -216,7 +216,7 @@ Ein Zeiger auf die `message` Objekt, mit der Aufrufer jetzt besitzt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die `consume` -Methode ist vergleichbar mit `accept`, jedoch immer durch einen Aufruf von vorangestellt werden muss `reserve` zurückgegebenen `true`.
+Die `consume` -Methode ist vergleichbar mit `accept`, jedoch immer durch einen Aufruf von vorangestellt werden muss `reserve` zurückgegebenen **"true"**.
 
 ##  <a name="has_value"></a> has_value
 
@@ -229,7 +229,7 @@ bool has_value() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn der Block einen Wert erhalten hat `false` andernfalls.
+**"true"** , wenn der Block einen Wert erhalten hat **"false"** andernfalls.
 
 ##  <a name="index"></a> Index
 
@@ -315,7 +315,7 @@ Ein Zeiger auf den Zielblock, der aufgerufen wird, wird die `reserve` Methode.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn die Nachricht erfolgreich reserviert wurde, `false` andernfalls. Reservierungen können für viele Gründe, z. B. Fehler auftreten: die Nachricht wurde bereits reserviert oder von einem anderen Ziel akzeptiert wird, kann die Quelle Reservierungen verweigern und so weiter.
+**"true"** , wenn die Nachricht erfolgreich reserviert wurde, **"false"** andernfalls. Reservierungen können für viele Gründe, z. B. Fehler auftreten: die Nachricht wurde bereits reserviert oder von einem anderen Ziel akzeptiert wird, kann die Quelle Reservierungen verweigern und so weiter.
 
 ### <a name="remarks"></a>Hinweise
 

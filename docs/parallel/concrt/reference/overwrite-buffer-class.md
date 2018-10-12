@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 622f439355c9d8b059ac48f0bdc1f57c1b32e5eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82266e387bcba3e4e7f2e377c666ce890d258e0f
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387665"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162112"
 ---
 # <a name="overwritebuffer-class"></a>overwrite_buffer-Klasse
 
@@ -67,7 +67,7 @@ Der Nutzlasttyp der Nachrichten gespeichert und vom Puffer weitergegeben.
 |Name|Beschreibung|
 |----------|-----------------|
 |[has_value](#has_value)|Überprüft, ob dies `overwrite_buffer` -Meldungsblock ist einen Wert noch nicht.|
-|[value](#value)|Ruft einen Verweis auf die aktuelle Nutzlast der Nachricht gespeichert werden, der `overwrite_buffer` Meldungsblock.|
+|[Wert](#value)|Ruft einen Verweis auf die aktuelle Nutzlast der Nachricht gespeichert werden, der `overwrite_buffer` Meldungsblock.|
 
 ### <a name="protected-methods"></a>Geschützte Methoden
 
@@ -160,7 +160,7 @@ bool has_value() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn der Block einen Wert erhalten hat `false` andernfalls.
+**"true"** , wenn der Block einen Wert erhalten hat **"false"** andernfalls.
 
 ##  <a name="link_target_notification"></a> link_target_notification
 
@@ -214,10 +214,10 @@ overwrite_buffer(
 Eine Filterfunktion, die bestimmt, ob angebotene Nachrichten akzeptiert werden sollen.
 
 *_PScheduler*<br/>
-Das `Scheduler`-Objekt, in dem die Weiterleitungsaufgabe für den `overwrite_buffer`-Meldungsblock geplant ist.
+Das `Scheduler` -Objekt, in dem die Weiterleitungsaufgabe für den `overwrite_buffer` -Meldungsblock geplant ist.
 
 *_PScheduleGroup*<br/>
-Das `ScheduleGroup`-Objekt, in dem die Weiterleitungsaufgabe für den `overwrite_buffer`-Meldungsblock geplant ist. Das verwendete `Scheduler` -Objekt wird von der Planungsgruppe impliziert.
+Das `ScheduleGroup` -Objekt, in dem die Weiterleitungsaufgabe für den `overwrite_buffer` -Meldungsblock geplant ist. Das verwendete `Scheduler` -Objekt wird von der Planungsgruppe impliziert.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -296,7 +296,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Da der Block nicht verschieben Sie angebotene Nachrichten ist.
+**"true"** , weil der Block nicht verschieben wird angeboten Nachrichten.
 
 ##  <a name="release_message"></a> release_message
 
@@ -326,11 +326,11 @@ Die `runtime_object_identity` von der `message` Objekt reserviert wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn die Nachricht erfolgreich reserviert wurde, `false` andernfalls.
+**"true"** , wenn die Nachricht erfolgreich reserviert wurde, **"false"** andernfalls.
 
 ### <a name="remarks"></a>Hinweise
 
-Nach dem `reserve` aufgerufen wird, wenn zurückgegeben `true`, entweder `consume` oder `release` aufgerufen werden, um zu übernehmen oder den Besitz der Nachricht.
+Nach dem `reserve` aufgerufen wird, wenn zurückgegeben **"true"**, entweder `consume` oder `release` aufgerufen werden, um zu übernehmen oder den Besitz der Nachricht.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 

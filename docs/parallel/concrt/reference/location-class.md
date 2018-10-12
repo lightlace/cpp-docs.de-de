@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e4e2b7af8e99059151963398215a18411797101
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8c2352662de2d55be823064afd16354ff7f2c72e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380151"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163620"
 ---
 # <a name="location-class"></a>location-Klasse
 
@@ -57,7 +57,7 @@ class location;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[operator!=](#operator_neq)|Bestimmt, ob zwei `location` Objekte darstellen, anderen Speicherort.|
+|[Operator!=](#operator_neq)|Bestimmt, ob zwei `location` Objekte darstellen, anderen Speicherort.|
 |[operator=](#operator_eq)|Weist den Inhalt von einem anderen `location` -Objekts in dieses Objekt.|
 |[operator==](#operator_eq_eq)|Bestimmt, ob zwei `location` Objekte darstellen, am gleichen Speicherort.|
 
@@ -157,7 +157,7 @@ Operand `location`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn die zwei Orten unterschiedlich sind, `false` andernfalls.
+**"true"** Wenn die zwei Orten unterschiedlich sind, **"false"** andernfalls.
 
 ##  <a name="operator_eq"></a> Operator =
 
@@ -189,7 +189,7 @@ Operand `location`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn es sich bei die beiden Standorten identisch sind und `false` andernfalls.
+**"true"** Wenn es sich bei die beiden Standorten identisch sind und **"false"** andernfalls.
 
 ## <a name="see-also"></a>Siehe auch
 

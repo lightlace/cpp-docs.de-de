@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41e4c6f3a540f44f6cec0d94ffab74d65a1ffe52
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7f8f864dcbf412b9dea0d96f6a0ba046792d7827
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386586"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162970"
 ---
 # <a name="concurrentqueue-class"></a>concurrent_queue-Klasse
 
@@ -177,7 +177,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn zum Zeitpunkt die gleichzeitige Warteschlange leer erläutert war, `false` andernfalls.
+**"true"** Wenn zum Zeitpunkt die gleichzeitige Warteschlange leer erläutert war, **"false"** andernfalls.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -229,11 +229,11 @@ Ein Verweis auf einen Speicherort zum Speichern des Elements aus der Warteschlan
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn ein Element erfolgreich aus der Warteschlange entfernt wurde `false` andernfalls.
+**"true"** Wenn ein Element erfolgreich aus der Warteschlange entfernt wurde **"false"** andernfalls.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn ein Element erfolgreich aus der Warteschlange entfernt wurde. der Parameter `_Dest` empfängt den aus der Warteschlange entfernte Wert, der ursprüngliche Wert in die Warteschlange eingereiht wird zerstört, und diese Funktion gibt `true`. Wenn kein Element aus der Warteschlange entfernt wurde, gibt diese Funktion `false` ohne Blockieren und den Inhalt der `_Dest` Parameter sind nicht definiert.
+Wenn ein Element erfolgreich aus der Warteschlange entfernt wurde. der Parameter `_Dest` empfängt den aus der Warteschlange entfernte Wert, der ursprüngliche Wert in die Warteschlange eingereiht wird zerstört, und diese Funktion gibt **"true"**. Wenn kein Element aus der Warteschlange entfernt wurde, gibt diese Funktion `false` ohne Blockieren und den Inhalt der `_Dest` Parameter sind nicht definiert.
 
 `try_pop` parallelitätssicher ist in Bezug auf Aufrufe der Methoden `push`, `try_pop`, und `empty`.
 

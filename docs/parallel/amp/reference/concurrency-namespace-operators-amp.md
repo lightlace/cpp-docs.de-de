@@ -10,18 +10,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5844afa476510e4b4984ae69c75193fdf048ddd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f1e313dbda3dfc75f291310818d593b9a4daf90b
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382361"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162177"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Concurrency-Namespace-Operatoren (AMP)
 
 ||||
 |-|-|-|
-|[operator!=](#operator_neq)|[operator%](#operator_mod)|[operator*](#operator_star)|
+|[Operator!=](#operator_neq)|[operator%](#operator_mod)|[operator*](#operator_star)|
 |[operator+](#operator_add)|[operator-](#operator-)|[operator/](#operator_div)|
 |[operator==](#operator_eq_eq)|
 
@@ -52,7 +52,7 @@ Eines der zu vergleichenden Tupel.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn die Tupel gleich sind, andernfalls `false`.
+**"true"** , wenn die Tupel gleich; andernfalls sind, **"false"**.
 
 ##  <a name="operator_neq"></a> operator!=
 
@@ -81,7 +81,7 @@ Eines der zu vergleichenden Tupel.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn die Tupel nicht gleich sind, andernfalls `false`.
+**"true"** , wenn die Tupel nicht gleich; andernfalls sind, **"false"**.
 
 ##  <a name="operator_add"></a> operator+
 

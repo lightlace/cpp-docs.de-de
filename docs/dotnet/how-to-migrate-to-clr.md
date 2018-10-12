@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 165ea5b42ea4e293eb60b7a798778e3a461e0385
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: f7ecf84317f8d88748e4a50a43c173a3fe41e0e2
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235450"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163737"
 ---
 # <a name="how-to-migrate-to-clr"></a>Gewusst wie: Migrieren zu /clr
 
@@ -84,7 +84,7 @@ NewFunc2 = (MYPROC)GetProcAddress( hLib, "Func2" );
 
 C++ verlangt außerdem, dass Funktionen entweder einen Prototyp haben oder vollständig definiert sind, bevor auf sie verwiesen wird oder sie aufgerufen werden können.
 
-In C-Code verwendete Bezeichner, die in C++ Schlüsselwörter sind, (wie `virtual`, `new`, `delete`, `bool`, `true`, `false` usw.) müssen umbenannt werden. Dies kann im Allgemeinen durch einfache Such- und Ersetzungsvorgänge erfolgen.
+In C-Code verwendete Bezeichner, die in C++ Schlüsselwörter sind (z. B. **virtuellen**, **neue**, **löschen**, **"bool"**, **"true"** , **"false"** usw.) müssen umbenannt werden. Dies kann im Allgemeinen durch einfache Such- und Ersetzungsvorgänge erfolgen.
 
 ```
 COMObj1->lpVtbl->Method(COMObj, args);  // C code

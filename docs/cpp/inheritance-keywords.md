@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1106ad878f4053cacae67d9d0e343e9469b1a1c1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f4b3703d0bd4556090c08a874bce362120817397
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061174"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161800"
 ---
 # <a name="inheritance-keywords"></a>Vererbungsschlüsselwörter
 
@@ -83,6 +83,8 @@ Unabhängig von Befehlszeilenoptionen oder Pragmas verwenden Zeiger auf Member v
 
 > [!NOTE]
 >  Dieselbe Vorwärtsdeklaration einer pointer-to-member-Klassendarstellung sollte in jeder Übersetzungseinheit auftreten, die Zeiger auf Member dieser Klasse deklariert. Die Deklaration sollte vor der pointer-to-member-Deklaration erfolgen.
+
+Für die Kompatibilität mit früheren Versionen **_single_inheritance**, **_multiple_inheritance**, und **_virtual_inheritance** sind Synonyme für **__ Single_inheritance**, **__multiple_inheritance**, und **__virtual_inheritance** , wenn Compileroption [/Za \(Sprache deaktivieren Extensions)](../build/reference/za-ze-disable-language-extensions.md) angegeben ist.
 
 **Ende Microsoft-spezifisch**
 

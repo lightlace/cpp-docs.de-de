@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 912cdb59a1841bbe3bbe3e71202a796a3e67a94e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 642b73f81146fa8df68d36ee3b63b1902ed66619
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390258"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162398"
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource-Struktur
 
@@ -79,7 +79,7 @@ Die aktuelle Abonnementstufe.
 
 Die Abonnementstufe teilt Ihnen mit, wie viele aktive Threads mit der Hardwarethread verknüpft sind. Dies schließt nur die Threads, die den Ressourcen-Manager beachtet in Form von abonnierten Threads und Stämme virtueller Prozessoren, die aktiv Threadproxys ausgeführt werden.
 
-Aufrufen der Methode [ISchedulerProxy:: SubscribeCurrentThread](ischedulerproxy-structure.md#subscribecurrentthread), oder die Methode [ISchedulerProxy:: RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) mit dem Parameter `doSubscribeCurrentThread` legen Sie auf den Wert `true`wird die Abonnementstufe des einen Hardwarethread um 1 erhöht. Sondern auch Zurückgeben einer `IExecutionResource` Schnittstelle, die das Abonnement darstellt. Einen zugehörigen Aufruf an die [IExecutionResource:: Remove](#remove) verringert die Hardwarethread Abonnementstufe um eins.
+Aufrufen der Methode [ISchedulerProxy:: SubscribeCurrentThread](ischedulerproxy-structure.md#subscribecurrentthread), oder die Methode [ISchedulerProxy:: RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) mit dem Parameter `doSubscribeCurrentThread` legen Sie auf den Wert **"true"** wird die Abonnementstufe des einen Hardwarethread um 1 erhöht. Sondern auch Zurückgeben einer `IExecutionResource` Schnittstelle, die das Abonnement darstellt. Einen zugehörigen Aufruf an die [IExecutionResource:: Remove](#remove) verringert die Hardwarethread Abonnementstufe um eins.
 
 Das Aktivieren von einem virtuellen Prozessorstamm, die mit der Methode [IVirtualProcessorRoot:: Activate](ivirtualprocessorroot-structure.md#activate) wird die Abonnementstufe des einen Hardwarethread um 1 erhöht. Die Methoden [IVirtualProcessorRoot:: Deactivate](ivirtualprocessorroot-structure.md#deactivate), oder [IExecutionResource:: Remove](#remove) verringern Sie die Abonnementebene um eins, wenn auf einen aktivierten virtuellen Prozessorstamm aufgerufen.
 

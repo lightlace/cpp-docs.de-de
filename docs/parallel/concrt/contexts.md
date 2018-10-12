@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7be66658c9452fa97c1971ae6719dccb06dbd836
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9fb14544a799861053c2fdf2a5bb92f210eb5c46
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378216"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163828"
 ---
 # <a name="contexts"></a>Kontexte
 
@@ -67,7 +67,7 @@ Für die Ausführung rechenintensiver Vorgänge skaliert Überzeichnung in der R
 > [!NOTE]
 >  Aktivieren Sie die Überzeichnung nur von einem Thread, der von der Concurrency Runtime erstellt wurde. Überzeichnung hat keine Auswirkungen, wenn sie von einem anderen Thread aufgerufen wird, die nicht von der Laufzeit (einschließlich des Haupt-Threads) erstellt wurde.
 
-Rufen Sie zum Aktivieren der Überzeichnung im aktuellen Kontext der [Oversubscribe](reference/context-class.md#oversubscribe) -Methode mit dem `_BeginOversubscription` Parametersatz zu `true`. Wenn Sie die Überzeichnung in einem Thread, die von der Concurrency Runtime erstellt wurde aktivieren, wird die Laufzeit einen zusätzlichen Thread erstellt wird. Rufen Sie nach dem alle Aufgaben, die Überzeichnung "Fertig stellen" erfordern, `Context::Oversubscribe` mit der `_BeginOversubscription` Parametersatz zu `false`.
+Rufen Sie zum Aktivieren der Überzeichnung im aktuellen Kontext der [Oversubscribe](reference/context-class.md#oversubscribe) -Methode mit dem `_BeginOversubscription` Parametersatz zu **"true"**. Wenn Sie die Überzeichnung in einem Thread, die von der Concurrency Runtime erstellt wurde aktivieren, wird die Laufzeit einen zusätzlichen Thread erstellt wird. Rufen Sie nach dem alle Aufgaben, die Überzeichnung "Fertig stellen" erfordern, `Context::Oversubscribe` mit der `_BeginOversubscription` Parametersatz zu **"false"**.
 
 Überzeichnung mehrmals aus dem aktuellen Kontext können, aber Sie müssen es deaktivieren, die gleiche Anzahl von Wiederholungen, die Sie ihn aktivieren. Überzeichnung kann auch geschachtelt werden. d. h. kann eine Aufgabe, die von einer anderen Aufgabe erstellt wird, die Überzeichnung verwendet seinen Kontext überzeichnen. Allerdings, wenn sowohl das übergeordnete Element als auch eine geschachtelte Aufgabe zum gleichen Kontext ist nur beim Aufruf von gehören `Context::Oversubscribe` bewirkt, dass ein zusätzlicher Thread.
 

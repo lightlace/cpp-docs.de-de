@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 561173e2b451a0b736d97042667a2fb14b3a7eb7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 80f831d527e918fce0551f6a1336fd2fe994917d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094896"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161280"
 ---
 # <a name="compiler-warning-level-4-c4127"></a>Compilerwarnung (Stufe 4) C4127
 
@@ -29,9 +29,9 @@ ms.locfileid: "46094896"
 
 ## <a name="remarks"></a>Hinweise
 
-Der Kontrollausdruck einer `if` -Anweisung oder `while` -Schleife wird in eine Konstante ausgewertet. Aufgrund ihrer allgemeinen idiomatische Verwendung, ab Visual Studio 2015 Update 3, trivialen Konstanten wie z. B. 1 oder `true` lösen keine Warnung aus, es sei denn, sie sind, dass das Ergebnis eines Vorgangs in einem Ausdruck.
+Der steuernde Ausdruck einer **Wenn** Anweisung oder **während** Schleife, die mit einer Konstante ausgewertet wird. Aufgrund ihrer allgemeinen idiomatische Verwendung, ab Visual Studio 2015 Update 3, trivialen Konstanten wie z. B. 1 oder **"true"** lösen keine Warnung aus, es sei denn, sie sind, dass das Ergebnis eines Vorgangs in einem Ausdruck.
 
-Wenn der steuernde Ausdruck einer `while` Schleife ist eine Konstante, da die Schleife in der Mitte beendet wird, ersetzen Sie die `while` -Schleife mit einem `for` Schleife. Lassen Sie die Initialisierung, den Beendigungstest und die schleifenerhöhung einer `for` -Schleife, die bewirkt, die Schleife dass zu einer unendlichen, genau wie `while(1)`, und Sie beenden die Schleife, aus dem Text der der `for` Anweisung.
+Wenn der steuernde Ausdruck einer **während** Schleife ist eine Konstante, da die Schleife in der Mitte beendet wird, ersetzen Sie die **während** -Schleife mit einem **für** Schleife. Lassen Sie die Initialisierung, den Beendigungstest und die schleifenerhöhung einer **für** -Schleife, die bewirkt, die Schleife dass zu einer unendlichen, genau wie `while(1)`, und Sie beenden die Schleife, aus dem Text der der **für** -Anweisung.
 
 ## <a name="example"></a>Beispiel
 

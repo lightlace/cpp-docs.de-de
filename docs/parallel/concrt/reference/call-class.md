@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b4f993c357ef3d4f66f9b2f22c9fb37a4e10c77
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0a99de307ec64c3b6d4e49f4e0a6eef532314bf9
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423896"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161865"
 ---
 # <a name="call-class"></a>call-Klasse
 
@@ -55,7 +55,7 @@ Die Signatur der Funktionen, die dieser Block annehmen kann.
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[call](#ctor)|Überladen. Erstellt eine `call` Meldungsblock.|
+|[call](#ctor)|Überladen. Erstellt einen `call` -Meldungsblock.|
 |[~ Destruktor aufrufen](#dtor)|Zerstört die `call` Meldungsblock.|
 
 ### <a name="protected-methods"></a>Geschützte Methoden
@@ -88,7 +88,7 @@ Weitere Informationen finden Sie unter [asynchrone Meldungsblöcke](../../../par
 
 ##  <a name="ctor"></a> Rufen Sie
 
-Erstellt eine `call` Meldungsblock.
+Erstellt einen `call` -Meldungsblock.
 
 ```
 call(
@@ -126,10 +126,10 @@ Eine Funktion, die für jede akzeptierte Nachricht aufgerufen wird.
 Eine Filterfunktion, die bestimmt, ob angebotene Nachrichten akzeptiert werden sollen.
 
 *_PScheduler*<br/>
-Das `Scheduler`-Objekt, in dem die Weiterleitungsaufgabe für den `call`-Meldungsblock geplant ist.
+Das `Scheduler` -Objekt, in dem die Weiterleitungsaufgabe für den `call` -Meldungsblock geplant ist.
 
 *_PScheduleGroup*<br/>
-Das `ScheduleGroup`-Objekt, in dem die Weiterleitungsaufgabe für den `call`-Meldungsblock geplant ist. Das verwendete `Scheduler` -Objekt wird von der Planungsgruppe impliziert.
+Das `ScheduleGroup` -Objekt, in dem die Weiterleitungsaufgabe für den `call` -Meldungsblock geplant ist. Das verwendete `Scheduler` -Objekt wird von der Planungsgruppe impliziert.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -227,7 +227,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Da der Block nicht verschieben Sie angebotene Nachrichten ist.
+**"true"** , weil der Block nicht verschieben wird angeboten Nachrichten.
 
 ## <a name="see-also"></a>Siehe auch
 

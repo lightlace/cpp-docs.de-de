@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c9af03549eec7b62cc34aec2840764c54d2a21e
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: e2dae7809a5926fa93626fa33148d444fe12807b
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494360"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161891"
 ---
 # <a name="modulereleasenotifier-class"></a>Module::ReleaseNotifier-Klasse
 
@@ -56,7 +56,7 @@ Name                                                                            
 Name                                                         | Beschreibung
 ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------
 [Module:: releasenotifier:: Invoke](#releasenotifier-invoke)   | Ruft bei Implementierung einen Ereignishandler aus, wenn das letzte Objekt in einem Modul veröffentlicht wird.
-[Module::ReleaseNotifier::Release](#releasenotifier-release) | Löscht die aktuelle `Module::ReleaseNotifier` Objekt, wenn das Objekt, mit dem Parameter erstellt wurde `true`.
+[Module::ReleaseNotifier::Release](#releasenotifier-release) | Löscht die aktuelle `Module::ReleaseNotifier` Objekt, wenn das Objekt, mit dem Parameter erstellt wurde **"true"**.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -86,7 +86,7 @@ virtual void Invoke() = 0;
 
 ## <a name="releasenotifier-release"></a>Module::ReleaseNotifier::Release
 
-Löscht die aktuelle `Module::ReleaseNotifier` Objekt, wenn das Objekt, mit dem Parameter erstellt wurde `true`.
+Löscht die aktuelle `Module::ReleaseNotifier` Objekt, wenn das Objekt, mit dem Parameter erstellt wurde **"true"**.
 
 ```cpp
 void Release() throw();

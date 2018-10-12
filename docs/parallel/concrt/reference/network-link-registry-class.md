@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2798c4abe33e49d2ac6199ad6f9a1013805fde7b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0bcdb05230cdacbf626235e315e605414c435493
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424416"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163062"
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry-Klasse
 
@@ -124,7 +124,7 @@ Ein Zeiger auf einen Block, der in gesucht wird die `network_link_registry` Obje
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn der Block gefunden wurde, `false` andernfalls.
+**"true"** der Block gefunden wurde, **"false"** andernfalls.
 
 ##  <a name="count"></a> Anzahl
 
@@ -153,7 +153,7 @@ Ein Zeiger auf einen Block, wenn entfernt wurde gefunden.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn der Link wurde gefunden und entfernt, `false` andernfalls.
+**"true"** , wenn der Link wurde gefunden und entfernt, **"false"** andernfalls.
 
 ## <a name="see-also"></a>Siehe auch
 

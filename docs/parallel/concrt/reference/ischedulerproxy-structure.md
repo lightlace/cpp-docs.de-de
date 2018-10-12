@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8adba73274fbc9821eb8096e82268b24b41718f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 72fa49d763159385607330231994d15952f0c771
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430040"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163139"
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy-Struktur
 
@@ -77,7 +77,7 @@ virtual void BindContext(_Inout_ IExecutionContext* pContext) = 0;
 
 ### <a name="parameters"></a>Parameter
 
-*"pContext"*<br/>
+*pContext*<br/>
 Eine Schnittstelle zum Ausführungskontext, ein Threadproxy zugeordnet werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -124,7 +124,7 @@ Ob den aktuellen Thread abonnieren und bei der Ressourcenzuordnung für dieses K
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die `IExecutionResource` Schnittstelle für den aktuellen Thread, wenn der Parameter `doSubscribeCurrentThread` hat den Wert `true`. Wenn der Wert ist `false`, gibt die Methode zurück `NULL`.
+Die `IExecutionResource` Schnittstelle für den aktuellen Thread, wenn der Parameter `doSubscribeCurrentThread` hat den Wert **"true"**. Wenn der Wert ist **"false"**, die Methode gibt NULL zurück.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -132,7 +132,7 @@ Bevor Sie ein Planer die Arbeit ausgeführt wird, sollten sie diese Methode verw
 
 Der Ressourcen-Manager gewährt das Ressourcen durch Aufrufen der Methode, der einem Planer [AddVirtualProcessors](ischeduler-structure.md#addvirtualprocessors) mit einer Liste der Stämme virtueller Prozessoren. Die Methode wird in der Scheduler als Rückruf aufgerufen, vor dem Beenden dieser Methode.
 
-Wenn der Planer Abonnement für den aktuellen Thread angefordert wird, indem der Parameter `doSubscribeCurrentThread` zu `true`, gibt die Methode eine `IExecutionResource` Schnittstelle. Das Abonnement muss zu einem späteren Zeitpunkt beendet werden, mithilfe der [IExecutionResource:: Remove](iexecutionresource-structure.md#remove) Methode.
+Wenn der Planer Abonnement für den aktuellen Thread angefordert wird, indem der Parameter `doSubscribeCurrentThread` zu **"true"**, gibt die Methode eine `IExecutionResource` Schnittstelle. Das Abonnement muss zu einem späteren Zeitpunkt beendet werden, mithilfe der [IExecutionResource:: Remove](iexecutionresource-structure.md#remove) Methode.
 
 Wenn Sie bestimmen, welche Hardwarethreads ausgewählt sind, versucht der Ressourcen-Manager, Prozessoraffinität-Knoten zu optimieren. Wenn Abonnements für den aktuellen Thread angefordert wird, ist dies ein Hinweis, der der aktuelle Thread zur Teilnahme an der Arbeit, die diesem Planer zugewiesen werden soll. In diesem Fall befinden die Stämme zugeordneten virtuellen Prozessoren auf dem Prozessorknoten, die, denen der aktuelle Thread auf, wenn möglich ausgeführt wird.
 
@@ -184,7 +184,7 @@ virtual void UnbindContext(_Inout_ IExecutionContext* pContext) = 0;
 
 ### <a name="parameters"></a>Parameter
 
-*"pContext"*<br/>
+*pContext*<br/>
 Der Ausführungskontext aus der Threadproxy Zuordnung aufzuheben.
 
 ## <a name="see-also"></a>Siehe auch

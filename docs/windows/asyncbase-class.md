@@ -65,12 +65,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1003553cb0c3fc3abc8c24a6870485816397eaa
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 9647e18af021caf67dea5d946c9e5bf00fb50807
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861953"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162931"
 ---
 # <a name="asyncbase-class"></a>AsyncBase-Klasse
 
@@ -233,7 +233,7 @@ inline bool ContinueAsyncOperation();
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn der aktuelle Status des asynchronen Vorgangs ist *Schritte*, was bedeutet, dass den Vorgang sollte weiterhin. Andernfalls `false`, was bedeutet, dass den Vorgang sollte beendet werden.
+**"true"** ist von der aktuelle Status des asynchronen Vorgangs *Schritte*, was bedeutet, dass den Vorgang sollte weiterhin. Andernfalls **"false"**, was bedeutet, dass den Vorgang sollte beendet werden.
 
 ## <a name="currentstatus"></a>Asyncbase:: currentStatus
 
@@ -247,7 +247,7 @@ inline void CurrentStatus(
 
 ### <a name="parameters"></a>Parameter
 
-*status*<br/>
+*Status*<br/>
 Der Speicherort, in dem dieser Vorgang für den aktuellen Status speichert.
 
 ### <a name="remarks"></a>Hinweise
@@ -362,7 +362,7 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parameter
 
-*status*<br/>
+*Status*<br/>
 Der Speicherort, an dem der Status gespeichert werden. Weitere Informationen finden Sie unter `Windows::Foundation::AsyncStatus` Enumeration.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -528,7 +528,7 @@ bool TryTransitionToCompleted(
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn der asynchrone Vorgang abgeschlossen wurde. andernfalls `false`.
+**"true"** Wenn der asynchrone Vorgang abgeschlossen wurde, andernfalls **"false"**.
 
 ## <a name="trytransitiontoerror"></a>Asyncbase:: Trytransitiontoerror
 
@@ -547,7 +547,7 @@ Ein fehlerhaftes HRESULT.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn Sie der internen Fehlerzustand geändert wurde. andernfalls `false`.
+**"true"** bei der internen Fehlerzustand geändert wurde, andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 

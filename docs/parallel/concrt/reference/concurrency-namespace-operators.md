@@ -13,18 +13,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9eb820b533b74d5634695ddabda26f081a35f95
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8065be6cc53cad04d5d52bea91da05bb3125dd63
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436922"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162567"
 ---
 # <a name="concurrency-namespace-operators"></a>Concurrency-Namespace-Operatoren
 
 ||||
 |-|-|-|
-|[operator!=](#operator_neq)|[operator&amp;&amp;](#operator_amp_amp)|[operator&gt;](#operator_gt)|
+|[Operator!=](#operator_neq)|[operator&amp;&amp;](#operator_amp_amp)|[operator&gt;](#operator_gt)|
 |[operator&gt;=](#operator_gt_eq)|[operator&lt;](#operator_lt)|[operator&lt;=](#operator_lt_eq)|
 |[operator==](#operator_eq_eq)|[operator||](#operator_lor)|
 
@@ -151,7 +151,7 @@ Ein Objekt vom Typ `concurrent_vector`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn die gleichzeitige Vektor auf der linken Seite des Operators gleich dem gleichzeitigen Vektor rechts vom Operator ist; andernfalls `false`.
+**"true"** ist der gleichzeitige Vektor links vom Operator gleich dem gleichzeitigen Vektor rechts vom Operator ist; andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -189,7 +189,7 @@ Ein Objekt vom Typ `concurrent_vector`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn die gleichzeitigen Vektoren ungleich sind; `false` Wenn gleichzeitigen Vektoren gleich sind.
+**"true"** Wenn gleichzeitigen Vektoren ungleich sind; **"false"** Wenn gleichzeitigen Vektoren gleich sind.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -227,7 +227,7 @@ Ein Objekt vom Typ `concurrent_vector`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn Sie der gleichzeitige Vektor links vom Operator kleiner als der gleichzeitigen Vektor rechts vom Operator ist. andernfalls `false`.
+**"true"** ist der gleichzeitige Vektor links vom Operator kleiner als der gleichzeitigen Vektor rechts vom Operator ist; andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -265,7 +265,7 @@ Ein Objekt vom Typ `concurrent_vector`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn die gleichzeitige Vektor links vom Operator kleiner oder gleich dem gleichzeitigen Vektor rechts vom Operator ist; andernfalls `false`.
+**"true"** kleiner als oder gleich dem gleichzeitigen Vektor auf der rechten Seite des Operators ist; andernfalls ist der gleichzeitige Vektor auf der linken Seite des Operators **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -303,7 +303,7 @@ Ein Objekt vom Typ `concurrent_vector`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn der gleichzeitige Vektor links vom Operator größer als der gleichzeitigen Vektor rechts vom Operator ist; andernfalls `false`.
+**"true"** ist der gleichzeitige Vektor links vom Operator größer als der gleichzeitigen Vektor rechts vom Operator ist; andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -341,7 +341,7 @@ Ein Objekt vom Typ `concurrent_vector`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn Sie der gleichzeitige Vektor links vom Operator größer als oder gleich dem gleichzeitigen Vektor rechts vom Operator ist. andernfalls `false`.
+**"true"** ist der gleichzeitige Vektor links vom Operator größer als oder gleich dem gleichzeitigen Vektor rechts vom Operator ist; andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 

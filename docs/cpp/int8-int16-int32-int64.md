@@ -1,7 +1,7 @@
 ---
 title: __int8, __int16, __int32, __int64 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -10,6 +10,14 @@ f1_keywords:
 - __int16_cpp
 - __int32_cpp
 - __int64_cpp
+- __int8
+- __int16
+- __int32
+- __int64
+- _int8
+- _int16
+- _int32
+- _int64
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 723724a477a5cdb714aa2644e1db938d67fb7b73
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b639e7a65bbe206d029a5ba28109170cb0f6a610
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194250"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163542"
 ---
 # <a name="int8-int16-int32-int64"></a>__int8, __int16, __int32, __int64
 
@@ -47,6 +55,8 @@ __int64 nHuge;      // Declares 64-bit integer
 ```
 
 Die Typen **__int8**, **__int16**, und **__int32** sind Synonyme für die ANSI-Typen mit der gleichen Größe, und eignen sich für das Schreiben von übertragbarem Code, der identisch verhält. auf mehreren Plattformen. Die **__int8** -Datentyp ist mit dem Typ **Char**, **__int16** ist mit dem Typ **kurze**, und **__int32**  ist mit dem Typ **Int**. Die **__int64** Typ ist mit dem Typ **long long**.
+
+Für die Kompatibilität mit früheren Versionen **_int8**, **__int16**, **__int32**, und **__int64** sind Synonyme für **__int8** , **__int16**, **__int32**, und **__int64** , wenn Compileroption [/Za \(Sprache deaktivieren Extensions)](../build/reference/za-ze-disable-language-extensions.md) angegeben ist.
 
 ## <a name="example"></a>Beispiel
 

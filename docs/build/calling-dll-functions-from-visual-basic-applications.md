@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1cedafaea33ac642e3a5593468b996f2442bd50
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 47504b7a471dc38f30e4ceb59b5feeffcc53db6d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894563"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161832"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Aufrufen von DLL-Funktionen aus Visual Basic-Anwendungen heraus
 
@@ -33,7 +33,7 @@ Für Visual Basic-Anwendungen (oder Anwendungen in anderen Sprachen wie Pascal o
 
 Mithilfe von `__stdcall` wird zwar die richtige Aufrufkonvention für die Funktion erstellt (die aufgerufene Funktion bereinigt den Stapel, und die Parameter werden von rechts nach links übergeben), der Funktionsname wird jedoch unterschiedlich ergänzt. Daher werden beim **__declspec(dllexport)** wird verwendet, auf eine exportierte Funktion in einer DLL, wird der ergänzte Name exportiert.
 
-Die `__stdcall` namensergänzung beginnt der Symbolname mit einem Unterstrich (_) und endet mit einem at-Zeichen (**\@**) Zeichens, gefolgt von der Anzahl der Bytes in der Argumentliste (dem erforderlichen Stapelplatz). Ist daher eine Funktion wie folgt deklariert:
+Die `__stdcall` namensergänzung beginnt der Symbolname mit einem Unterstrich ( **\_** ) und endet mit einem at-Zeichen (**\@**) Zeichens, gefolgt von der Anzahl von Bytes in der Argumentliste (dem erforderlichen Stapelplatz). Ist daher eine Funktion wie folgt deklariert:
 
 ```C
 int __stdcall func (int a, double b)
@@ -45,7 +45,7 @@ Durch die C-Aufrufkonvention (`__cdecl`) wird der Name mit `_func` ergänzt.
 
 Verwenden Sie zum Abrufen des ergänzten Namens [/MAP](../build/reference/map-generate-mapfile.md). Verwenden von **__declspec(dllexport)** bewirkt Folgendes:
 
-- Wenn die Funktion der C-Aufrufkonvention exportiert wird (**_cdecl**), den führenden Unterstrich (_) entfernt, wenn der Name exportiert wird.
+- Wenn die Funktion der C-Aufrufkonvention exportiert wird (`__cdecl`), entfernt den führenden Unterstrich ( **\_** ) Wenn der Name wird exportiert.
 
 - Wenn für die exportierte Funktion nicht die C-Aufrufkonvention (z. B. `__stdcall`) verwendet wird, wird der ergänzte Name exportiert.
 

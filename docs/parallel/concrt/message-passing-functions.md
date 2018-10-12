@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0b7a7afb25d46fa3b521353c4577fbed66e69fd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7435bdbc4d5959771a1f80e2ad12f038a8157bae
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436987"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162281"
 ---
 # <a name="message-passing-functions"></a>Funktionen zum Übergeben von Meldungen
 
@@ -41,9 +41,9 @@ In diesem Thema werden die folgenden Nachrichtenaustausch-Funktionen beschrieben
 
 Die [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) Funktion sendet eine Nachricht synchron an das angegebene Ziel und die [Concurrency:: asend](reference/concurrency-namespace-functions.md#asend) -Funktion sendet eine Nachricht asynchron an das angegebene Ziel. Sowohl die `send` und `asend` Funktionen warten, bis das Ziel angibt, dass es schließlich akzeptieren oder ablehnen wird.
 
-Die `send` Funktion wartet, bis das Ziel akzeptiert, oder die Nachricht ablehnt, bevor sie zurückkehrt. Die `send` -Funktion zurückgegeben `true` , wenn die Nachricht übermittelt wurde und `false` andernfalls. Da die `send` Funktion funktioniert synchron, die `send` Funktion wartet, bis das Ziel die Nachricht empfangen, bevor sie zurückkehrt.
+Die `send` Funktion wartet, bis das Ziel akzeptiert, oder die Nachricht ablehnt, bevor sie zurückkehrt. Die `send` -Funktion zurückgegeben **"true"** , wenn die Nachricht übermittelt wurde und **"false"** andernfalls. Da die `send` Funktion funktioniert synchron, die `send` Funktion wartet, bis das Ziel die Nachricht empfangen, bevor sie zurückkehrt.
 
-Im Gegensatz dazu die `asend` Funktion wartet nicht das Ziel zum annehmen oder Ablehnen der Nachricht, bevor sie zurückkehrt. Stattdessen die `asend` -Funktion zurückgegeben `true` Wenn das Ziel die Nachricht annimmt und schließlich. Andernfalls `asend` gibt `false` um anzugeben, dass das Ziel die Meldung abgelehnt hat oder die Entscheidung, ob die Meldung zurückgestellt.
+Im Gegensatz dazu die `asend` Funktion wartet nicht das Ziel zum annehmen oder Ablehnen der Nachricht, bevor sie zurückkehrt. Stattdessen die `asend` -Funktion zurückgegeben **"true"** Wenn das Ziel die Nachricht annimmt und schließlich. Andernfalls `asend` gibt **"false"** um anzugeben, dass das Ziel die Meldung abgelehnt hat oder die Entscheidung, ob die Meldung zurückgestellt.
 
 [[Nach oben](#top)]
 
