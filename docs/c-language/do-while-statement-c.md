@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef670aca60b2e3156ea70480a1dafc315ae60624
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4b86fa6444889f77b306e4ae543e7d2db41d721b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061474"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860679"
 ---
 # <a name="do-while-statement-c"></a>do-while-Anweisung (C)
 
@@ -38,7 +38,7 @@ Der *Ausdruck* muss einen arithmetischen Typ oder einen Zeigertyp aufweisen. Die
 
 1. Der Anweisungstext wird ausgeführt.
 
-2. Danach wird *expression*, der Ausdruck, ausgewertet. Wenn der *Ausdruck* „false“ ist, wird die *do-while*-Anweisung beendet und die Steuerung an die nächste Anweisung im Programm weitergegeben. Wenn *expression* „true“ (ungleich 0 [null]) ist, wird der Prozess wiederholt, beginnend mit Schritt 1.
+1. Danach wird *expression*, der Ausdruck, ausgewertet. Wenn der *Ausdruck* „false“ ist, wird die *do-while*-Anweisung beendet und die Steuerung an die nächste Anweisung im Programm weitergegeben. Wenn *expression* „true“ (ungleich 0 [null]) ist, wird der Prozess wiederholt, beginnend mit Schritt 1.
 
 Die *do-while*-Anweisung kann auch beendet werden, wenn eine **break**-, **goto**- oder **return**-Anweisung innerhalb des Anweisungstexts ausgeführt wird.
 
