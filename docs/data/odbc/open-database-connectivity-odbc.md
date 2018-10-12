@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6e5282d1944ca789e56ac6890c10f41c15ec59e4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d28194b44fca4360fc7a0ca1614e9f5685cc0d98
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46111276"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082331"
 ---
 # <a name="open-database-connectivity-odbc"></a>Open Database Connectivity (ODBC)
 
 Die MFC-Bibliothek (Microsoft Foundation Classes) stellt Klassen für die Programmierung mit ODBC (Open Database Connectivity) zur Verfügung. Ab Visual Studio 2015 und SQL Server 2012-ODBC-die ist die bevorzugte Methode für die Verbindung mit SQL-Datenquellen aus.
   
-Weitere Informationen zur Verwendung der ODBC-API ohne MFC finden Sie unter den [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) -SDK in MSDN.  
+Weitere Informationen zur Verwendung der ODBC-API ohne MFC finden Sie unter den [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252) -SDK in MSDN.  
   
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
@@ -69,7 +69,7 @@ Weitere Informationen zur Verwendung der ODBC-API ohne MFC finden Sie unter den 
   
 ## <a name="odbc-database-tasks"></a>Aufgaben bei ODBC-Datenbanken  
 
-Diese Aufgaben basieren auf die MFC-Bibliothek [ODBC](odbc-basics.md) Klassen. Weitere Informationen zur Verwendung der ODBC-API ohne MFC finden Sie unter den [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) SDK.  
+Diese Aufgaben basieren auf die MFC-Bibliothek [ODBC](odbc-basics.md) Klassen. Weitere Informationen zur Verwendung der ODBC-API ohne MFC finden Sie unter den [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252) SDK.  
   
 - [Installation und erste Schritte mit dem ODBC-](installing-and-getting-started-with-odbc.md)  
   
