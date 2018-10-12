@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16778adeb898759a9c15d08175d9482f8411b44c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 867f94cd290e6b8ee5f9e50b266b0e4c9df63adf
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413769"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163256"
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event-Klasse
 
@@ -96,11 +96,11 @@ Das Ergebnis, das für dieses Ereignis festgelegt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Methode gibt `true` zurück, wenn die Festlegung des Ereignisses erfolgreich war. Sie gibt `false` zurück, wenn das Ereignis bereits festgelegt ist.
+Gibt die Methode zurück **"true"** Falls diese Festlegung des Ereignisses erfolgreich war. Es gibt **"false"** , wenn das Ereignis bereits festgelegt wurde.
 
 ### <a name="remarks"></a>Hinweise
 
-Bei mehrfachen oder gleichzeitigen Aufrufen von `set` ist nur der erste Aufruf erfolgreich, und sein Ergebnis (falls vorhanden) wird im Aufgabenabschlussereignis gespeichert. Die verbleibenden Sätze werden ignoriert, und die Methode gibt "false" zurück. Wenn Sie ein Aufgabenabschlussereignis festlegen, werden alle Aufgaben, die aus diesem Ereignis erstellt wurden, abgeschlossen, und ihre Fortsetzungen, falls vorhanden, werden geplant. Aufgabenabschlussobjekte, die eine `_ResultType` außer `void` übergeben den Wert an ihre Fortsetzungen.
+Bei mehrfachen oder gleichzeitigen Aufrufen von `set` ist nur der erste Aufruf erfolgreich, und sein Ergebnis (falls vorhanden) wird im Aufgabenabschlussereignis gespeichert. Die verbleibenden Sätze werden ignoriert, und die Methode gibt "false" zurück. Wenn Sie ein Aufgabenabschlussereignis festlegen, werden alle Aufgaben, die aus diesem Ereignis erstellt wurden, abgeschlossen, und ihre Fortsetzungen, falls vorhanden, werden geplant. Aufgabenabschlussobjekte, die eine `_ResultType` außer **"void"** übergeben den Wert an ihre Fortsetzungen.
 
 ##  <a name="set_exception"></a> set_exception
 

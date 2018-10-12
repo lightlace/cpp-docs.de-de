@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9b438725a5a725597a81f0587936618a06cbb4b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 218451b0483e569bf4c944e139aff3446f5925e7
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414302"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162073"
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token-Klasse
 
@@ -55,7 +55,7 @@ class cancellation_token;
 |----------|-----------------|
 |[deregister_callback](#deregister_callback)|Entfernt einen Rückruf, der zuvor über die Methode `register` registriert wurde, auf Grundlage des `cancellation_token_registration`-Objekts, das zum Zeitpunkt der Registrierung zurückgegeben wurde.|
 |[is_cancelable](#is_cancelable)|Gibt einen Hinweis zurück, ob dieses Token abgebrochen werden kann oder nicht.|
-|[is_canceled](#is_canceled)|Gibt `true` zurück, wenn das Token abgebrochen wurde.|
+|[is_canceled](#is_canceled)|Gibt **"true"** , wenn das Token abgebrochen wurde.|
 |[none](#none)|Gibt ein Abbruchtoken zurück, das nie abgebrochen werden kann.|
 |[register_callback](#register_callback)|Verknüpft eine Rückruffunktion mit dem Token. Wenn das Token abgebrochen wird, wird der Rückruf vorgenommen. Wurde das Token bereits abgebrochen, wenn diese Methode aufgerufen wird, wird der Rückruf sofort und synchron ausgeführt.|
 
@@ -63,7 +63,7 @@ class cancellation_token;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[operator!=](#operator_neq)||
+|[Operator!=](#operator_neq)||
 |[operator=](#operator_eq)||
 |[operator==](#operator_eq_eq)||
 
@@ -123,7 +123,7 @@ Ein Hinweis darauf, ob dieses Token abgebrochen werden kann oder nicht.
 
 ##  <a name="is_canceled"></a> is_canceled
 
-Gibt `true` zurück, wenn das Token abgebrochen wurde.
+Gibt **"true"** , wenn das Token abgebrochen wurde.
 
 ```
 bool is_canceled() const;
@@ -131,7 +131,7 @@ bool is_canceled() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Wert `true`, wenn das Token abgebrochen wurde, andernfalls der Wert `false`.
+Der Wert **"true"** Wenn das Token abgebrochen wurde, andernfalls ist der Wert **"false"**.
 
 ##  <a name="none"></a> Keine
 

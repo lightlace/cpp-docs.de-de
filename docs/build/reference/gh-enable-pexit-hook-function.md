@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 489ff00571c79d89c9e807f0d8796989e7a0f84f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e9b8ee4c80310c4d94ed432d48ee9702c41f80bf
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714987"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161787"
 ---
 # <a name="gh-enable-pexit-hook-function"></a>/GH (_pexit-Hookfunktion aktivieren)
 
@@ -43,7 +43,7 @@ Die `_pexit` Funktion ist nicht Teil einer Bibliothek, und es ist Ihre Aufgabe, 
 Es sei denn, Sie planen, die explizit aufrufen `_pexit`, Sie müssen sich nicht um einen Prototyp bereitzustellen. Die Funktion muss angezeigt werden, als ob es den folgenden Prototyp hatte und Fördern Sie den Inhalt aller Register auf den Eintrag und pop die unveränderten Inhalt beim Beenden müssen:
 
 ```
-void __declspec(naked) _cdecl _pexit( void );
+void __declspec(naked) __cdecl _pexit( void );
 ```
 
 `_pexit` ist vergleichbar mit `_penter`; finden Sie unter [/GH (aktivieren _penter-Hookfunktion)](../../build/reference/gh-enable-penter-hook-function.md) verdeutlicht, wie Sie schreiben eine `_pexit` Funktion.

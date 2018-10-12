@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04202b647910914de8ebe92397efe1373e9508be
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8d6d91f312b028f44e0671c7960d4b06c2634928
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401367"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162508"
 ---
 # <a name="agent-class"></a>agent-Klasse
 
@@ -108,7 +108,7 @@ Die `ScheduleGroup` -Objekt in dem der ausführungstask des Agents geplant ist. 
 
 ### <a name="remarks"></a>Hinweise
 
-Die Laufzeit mithilfe des Standardplaners aus, wenn Sie keinen angeben der `_PScheduler` oder `_PGroup` Parameter.
+Die Runtime verwendet das Standardplanungsprogramm, wenn Sie den `_PScheduler` -Parameter oder den `_PGroup` -Parameter nicht angeben.
 
 ##  <a name="dtor"></a> ~ Agent
 
@@ -132,7 +132,7 @@ bool cancel();
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn der Agent abgebrochen wurde, `false` andernfalls. Ein Agent kann nicht abgebrochen werden, wenn es bereits gestartet oder abgeschlossen wurde.
+**"true"** , wenn der Agent abgebrochen wurde, **"false"** andernfalls. Ein Agent kann nicht abgebrochen werden, wenn es bereits gestartet oder abgeschlossen wurde.
 
 ##  <a name="done"></a> Fertig
 
@@ -144,7 +144,7 @@ bool done();
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn der Agent, um verschoben wird die `agent_done` Zustand `false` andernfalls. Ein Agent, der abgebrochen wurde nicht verschoben werden, um die `agent_done` Zustand.
+**"true"** Wenn der Agent, um verschoben wird die `agent_done` Zustand **"false"** andernfalls. Ein Agent, der abgebrochen wurde nicht verschoben werden, um die `agent_done` Zustand.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -172,7 +172,7 @@ bool start();
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn der Agent ordnungsgemäß gestartet `false` andernfalls. Ein Agent, der abgebrochen wurde, kann nicht gestartet werden.
+**"true"** Wenn der Agent ordnungsgemäß gestartet **"false"** andernfalls. Ein Agent, der abgebrochen wurde, kann nicht gestartet werden.
 
 ##  <a name="status"></a> Status
 

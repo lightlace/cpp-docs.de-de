@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c960e73604a915dbb15c0efac958dc229c16b3b1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 045cdeab321e9e3f88ee9bd50d337101e8512718
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379527"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163815"
 ---
 # <a name="join-class"></a>join-Klasse
 
@@ -60,7 +60,7 @@ Die Art der `join` Blocks, entweder `greedy` oder `non_greedy`
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[join](#ctor)|Überladen. Erstellt eine `join` Meldungsblock.|
+|[join](#ctor)|Überladen. Erstellt einen `join` -Meldungsblock.|
 |[~ join-Destruktor](#dtor)|Zerstört die `join` Block.|
 
 ### <a name="protected-methods"></a>Geschützte Methoden
@@ -138,7 +138,7 @@ Ein Zeiger auf die `message` Objekt, mit der Aufrufer jetzt besitzt.
 
 ##  <a name="ctor"></a> Join
 
-Erstellt eine `join` Meldungsblock.
+Erstellt einen `join` -Meldungsblock.
 
 ```
 join(
@@ -176,10 +176,10 @@ Die Anzahl von Eingaben, die diesem `join` Block werden darf.
 Eine Filterfunktion, die bestimmt, ob angebotene Nachrichten akzeptiert werden sollen.
 
 *_PScheduler*<br/>
-Das `Scheduler`-Objekt, in dem die Weiterleitungsaufgabe für den `join`-Meldungsblock geplant ist.
+Das `Scheduler` -Objekt, in dem die Weiterleitungsaufgabe für den `join` -Meldungsblock geplant ist.
 
 *_PScheduleGroup*<br/>
-Das `ScheduleGroup`-Objekt, in dem die Weiterleitungsaufgabe für den `join`-Meldungsblock geplant ist. Das verwendete `Scheduler` -Objekt wird von der Planungsgruppe impliziert.
+Das `ScheduleGroup` -Objekt, in dem die Weiterleitungsaufgabe für den `join` -Meldungsblock geplant ist. Das verwendete `Scheduler` -Objekt wird von der Planungsgruppe impliziert.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -261,11 +261,11 @@ Die `runtime_object_identity` von den angebotenen `message` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn die Nachricht erfolgreich reserviert wurde, `false` andernfalls.
+**"true"** , wenn die Nachricht erfolgreich reserviert wurde, **"false"** andernfalls.
 
 ### <a name="remarks"></a>Hinweise
 
-Nach dem `reserve` aufgerufen wird, wenn zurückgegeben `true`, entweder `consume` oder `release` aufgerufen werden, um zu übernehmen oder den Besitz der Nachricht.
+Nach dem `reserve` aufgerufen wird, wenn zurückgegeben **"true"**, entweder `consume` oder `release` aufgerufen werden, um zu übernehmen oder den Besitz der Nachricht.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 

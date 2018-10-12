@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e07c5b985552fcf30b2acb18030ab3288efb9be
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b89c1a3057e9753b99aaac837c903b6fd5f6d3ea
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428147"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163347"
 ---
 # <a name="concurrency-namespace-functions"></a>Concurrency-Namespace-Funktionen
 
@@ -118,7 +118,7 @@ Ein Verweis auf die Daten gesendet werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn die Meldung akzeptiert wurde, bevor die Methode zurückgegeben, `false` andernfalls.
+**"true"** , wenn die Meldung akzeptiert wurde, bevor die Methode zurückgegeben, **"false"** andernfalls.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -151,7 +151,7 @@ void concurrent_queue<T, _Ax>::clear();
 
 ##  <a name="create_async"></a>  create_async-Methode
 
-Erstellt ein asynchrones Konstrukt der Windows Runtime auf einem vom Benutzer angegebenes Lambda oder Funktionsobjekt. Der Rückgabetyp von `create_async` ist entweder `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` oder `IAsyncOperationWithProgress<TResult, TProgress>^` auf Grundlage der Signatur des Lambda-Ausdrucks, der an die Methode übergeben wurde.
+Erstellt ein asynchrones Konstrukt der Windows Runtime auf einem vom Benutzer angegebenes Lambda oder Funktionsobjekt. Der Rückgabetyp von `create_async` ist entweder `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` oder `IAsyncOperationWithProgress<TResult, TProgress>^` auf Grundlage der Signatur des Lambdaausdrucks, der an die Methode übergeben wurde.
 
 ```
 template<typename _Function>
@@ -177,7 +177,7 @@ Der Rückgabetyp des Lambdaausdrucks bestimmt, ob das Konstrukt eine Aktion oder
 
 Lambda-Ausdrücke, die "void" zurückgeben, führen zur Erstellung von Aktionen. Lambda-Ausdrücke, die ein Ergebnis vom Typ `TResult` zurückgeben, führen zur Erstellung von TResult-Vorgängen.
 
-Der Lambda-Ausdruck kann auch `task<TResult>` zurückgeben, was die asynchronen Abläufe kapselt, oder die Fortsetzung einer Kette von Aufgaben ist, die die asynchronen Abläufe darstellen. In diesem Fall wird der Lambda-Ausdruck selbst inline ausgeführt, da die Aufgaben asynchron ausgeführt werden, und der Rückgabetyp des Lambda-Ausdrucks wird entpackt, um das von `create_async` zurückgegebene asynchrone Konstrukt zu erstellen. Dies bedeutet, dass ein Lambda-Ausdruck, der eine Aufgabe zurückgibt\<"void" > bewirkt, dass die Erstellung von Aktionen und einen Lambda-Ausdruck, der eine Aufgabe zurückgibt\<TResult > bewirkt, dass die Erstellung von TResult-Vorgängen.
+Der Lambda-Ausdruck kann auch `task<TResult>` zurückgeben, was die asynchronen Abläufe kapselt, oder die Fortsetzung einer Kette von Aufgaben ist, die die asynchronen Abläufe darstellen. In diesem Fall wird der Lambdaausdruck selbst inline ausgeführt, da die Aufgaben asynchron ausgeführt werden, und der Rückgabetyp des Lambdaausdrucks wird entpackt, um das von `create_async` zurückgegebene asynchrone Konstrukt zu erstellen. Dies bedeutet, dass ein Lambda-Ausdruck, der eine Aufgabe zurückgibt\<"void" > bewirkt, dass die Erstellung von Aktionen und einen Lambda-Ausdruck, der eine Aufgabe zurückgibt\<TResult > bewirkt, dass die Erstellung von TResult-Vorgängen.
 
 Der Lambda-Ausdruck akzeptiert null, ein oder zwei Argumente. Die gültigen Argumente sind `progress_reporter<TProgress>` und `cancellation_token` in dieser Reihenfolge, wenn beide verwendet werden. Ein Lambda-Ausdruck ohne Argumente bewirkt die Erstellung eines asynchronen Konstrukts ohne die Möglichkeit der Statusberichterstellung. Ein Lambda-Ausdruck, der eine "progress_reporter" akzeptiert\<TProgress > bewirkt, dass `create_async` ein asynchrones Konstrukt zurückgibt, das den Status des Typs TProgress jedes Mal meldet die `report` -Methode des Objekts "progress_reporter" aufgerufen wird. Ein Lambda-Ausdruck, der ein „cancellation_token“ verwendet, kann dieses Token verwenden, um auf einen Abbruch zu prüfen, oder es an Aufgaben übergeben, die er erstellt, sodass ein Abbruch des asynchronen Konstrukts den Abbruch dieser Aufgaben verursacht.
 
@@ -207,7 +207,7 @@ Mehrere nachfolgende Aufrufe dieser Methode geben die gleiche Instanz des Ressou
 
 ##  <a name="create_task"></a>  create_task
 
-Erstellt ein PPL- [Aufgabe](task-class.md) Objekt. Das Element `create_task` kann überall dort verwendet werden, wo Sie einen Aufgabenkonstruktor verwendet hätten. Es wird hauptsächlich der Einfachheit halber bereitgestellt, da es beim Erstellen eines Tasks die Verwendung des `auto`-Schlüsselwort ermöglicht.
+Erstellt ein PPL- [Aufgabe](task-class.md) Objekt. Das Element `create_task` kann überall dort verwendet werden, wo Sie einen Aufgabenkonstruktor verwendet hätten. Es wird hauptsächlich der Einfachheit halber bereitgestellt, da es beim Erstellen einer Aufgabe die Verwendung des `auto`-Schlüsselwort ermöglicht.
 
 ```
 template<typename T>
@@ -237,7 +237,7 @@ Die Aufgabe zu erstellen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein neuer Task des Typs `T`, der von `_Param` abgeleitet wird.
+Eine neue Aufgabe des Typs `T`, der von `_Param` abgeleitet wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -245,7 +245,7 @@ Die erste Überladung verhält sich wie ein Aufgabenkonstruktor, der einen einze
 
 Die zweite Überladung weist das Abbruchtoken, das der neu erstellten Aufgabe bereitgestellt wird, zu. Wenn Sie diese Überladung verwenden, ist die Übergabe eines anderen `task`-Objekts als erster Parameter nicht zulässig.
 
-Der Typ des zurückgegebenen Tasks wird vom ersten Parameter zur Funktion abgeleitet. Wenn `_Param` ein `task_completion_event<T>`, ein `task<T>` oder ein Funktionselement ist, das entweder den Typ `T` oder `task<T>` zurückgibt, ist der Typ des erstellten Tasks `task<T>`.
+Der Typ des zurückgegebenen Tasks wird vom ersten Parameter zur Funktion abgeleitet. Wenn `_Param` ein `task_completion_event<T>`, ein `task<T>` oder ein Funktionselement ist, das entweder den Typ `T` oder `task<T>` zurückgibt, ist der Typ der erstellten Aufgabe `task<T>`.
 
 In einer UWP-app Wenn `_Param` ist vom Typ iasyncoperation\<T > ^ oder Windows::Foundation::IAsyncOperationWithProgress\<T, P > ^, oder ein Funktionselement ist, das einen dieser Typen zurückgibt, wird die erstellte Aufgabe von Typ `task<T>`. Wenn `_Param` ist vom Typ Windows::Foundation::IAsyncAction ^ oder Windows::Foundation::IAsyncActionWithProgress\<P > ^, oder ein Funktionselement ist, das einen dieser Typen zurückgibt, die erstellte Aufgabe von Typ `task<void>`.
 
@@ -424,7 +424,7 @@ bool __cdecl is_current_task_group_canceling();
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn die Aufgabengruppe, die gerade ausgeführt wird, abgebrochen wird, `false` andernfalls.
+**"true"** , wenn die Aufgabengruppe, die gerade ausgeführt wird, abgebrochen wird, **"false"** andernfalls.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -687,7 +687,7 @@ Ein zufälliger Eingabeiterator, der die Position des ersten Elements direkt hin
 Eine Instanz einer C++-Standardbibliothek-kompatiblen Speicher-Zuweisung.
 
 *_Func*<br/>
-Eine benutzerdefinierte prädikatfunktionsobjekt, das das Vergleichskriterium erfüllt werden muss, indem aufeinander folgende Elemente in der Reihenfolge definiert. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung `true` und bei Nichterfüllung `false` zurück. Diese Vergleichoperatorfunktion muss eine strikte schwache Sortierung auf Elementenpaare der Sequenz anwenden.
+Eine benutzerdefinierte prädikatfunktionsobjekt, das das Vergleichskriterium erfüllt werden muss, indem aufeinander folgende Elemente in der Reihenfolge definiert. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung **true** und bei Nichterfüllung **false** zurück. Diese Vergleichoperatorfunktion muss eine strikte schwache Sortierung auf Elementenpaare der Sequenz anwenden.
 
 *_Chunk_size*<br/>
 Die Mindestgröße des AutoBildlaufs ein Segment, das in zwei für die parallele Ausführung aufgeteilt werden soll.
@@ -831,7 +831,7 @@ Weitere Informationen finden Sie unter [parallele Algorithmen](../../../parallel
 
 ##  <a name="parallel_invoke"></a>  parallel_invoke
 
-Führt die als Parameter angegebenen Funktionsobjekte parallel aus, und blockiert, bis die Ausführung beendet ist. Jedes Funktionsobjekt kann ein Lambda-Ausdruck, ein Zeiger auf eine Funktion oder ein anderes Objekt sein, das den Funktionsaufrufoperator mit der Signatur `void operator()()` unterstützt.
+Führt die als Parameter angegebenen Funktionsobjekte parallel aus, und blockiert, bis die Ausführung beendet ist. Jedes Funktionsobjekt kann ein Lambdaausdruck, ein Zeiger auf eine Funktion oder ein anderes Objekt sein, das den Funktionsaufrufoperator mit der Signatur `void operator()()` unterstützt.
 
 ```
 template <typename _Function1, typename _Function2>
@@ -1217,7 +1217,7 @@ Ein zufälliger Eingabeiterator, der die Position des ersten Elements in dem Ber
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements direkt hinter dem letzten Element in dem Bereich adressiert, der sortiert werden soll.
 
 *_Func*<br/>
-Eine benutzerdefinierte prädikatfunktionsobjekt, das das Vergleichskriterium erfüllt werden muss, indem aufeinander folgende Elemente in der Reihenfolge definiert. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung `true` und bei Nichterfüllung `false` zurück. Diese Vergleichoperatorfunktion muss eine strikte schwache Sortierung auf Elementenpaare der Sequenz anwenden.
+Eine benutzerdefinierte prädikatfunktionsobjekt, das das Vergleichskriterium erfüllt werden muss, indem aufeinander folgende Elemente in der Reihenfolge definiert. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung **true** und bei Nichterfüllung **false** zurück. Diese Vergleichoperatorfunktion muss eine strikte schwache Sortierung auf Elementenpaare der Sequenz anwenden.
 
 *_Chunk_size*<br/>
 Die Mindestgröße des AutoBildlaufs ein Segment, das in zwei für die parallele Ausführung aufgeteilt werden soll.
@@ -1460,7 +1460,7 @@ Ein Verweis auf die Daten gesendet werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn die Nachricht akzeptiert wurde, `false` andernfalls.
+**"true"** , wenn die Meldung akzeptiert wurde, **"false"** andernfalls.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1613,7 +1613,7 @@ Der Name für das angegebene Objekt.
 
 ##  <a name="try_receive"></a>  try_receive
 
-Eine allgemeine try-receive-Implementierung, mit der ein Kontext Daten von genau einer Quelle suchen und die akzeptierten Werte filtern kann. Wenn die Daten nicht bereit sind, gibt die Methode "false" zurück.
+Eine allgemeine try-receive-Implementierung, mit der ein Kontext Daten von genau einer Quelle suchen und die akzeptierten Werte filtern kann. Die Methode gibt zurück, wenn die Daten nicht bereit ist, **"false"**.
 
 ```
 template <class T>

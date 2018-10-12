@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fc41bdccf9cce3d455d4effd3541731929e5de2
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 90ceaf20a5d601fc2904b7ce8610b4a3906e30ac
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789266"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161202"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict-Struktur
 
@@ -52,7 +52,7 @@ Der abgeleitete Typ.
 
 Testet, ob ein Typ die Basis eines anderen ist.
 
-Die erste Vorlage testet, ob ein Typ von einem Basistyp abgeleitet ist, die ergeben können `true` oder `false`. Die zweite Vorlage testet, ob ein Typ von sich selbst zu abgeleitet ist, die führt zu immer `false`.
+Die erste Vorlage testet, ob ein Typ von einem Basistyp abgeleitet ist, die ergeben können **"true"** oder **"false"**. Die zweite Vorlage testet, ob ein Typ von sich selbst zu abgeleitet ist, die führt zu immer **"false"**.
 
 ## <a name="members"></a>Member
 
@@ -84,4 +84,4 @@ static const bool value = __is_base_of(Base, Derived);
 
 Gibt an, ob ein Typ die Basis eines anderen ist.
 
-`value` ist `true` Wenn Typ `Base` ist eine Basisklasse des Typs `Derived`, ansonsten ist der `false`.
+`value` ist **"true"** Wenn Typ `Base` ist eine Basisklasse des Typs `Derived`, ansonsten ist der **"false"**.

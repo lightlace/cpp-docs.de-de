@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7748ae0f3993c1df97dcf97308fd6dfbfafdc8b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a154d266ead19cfef00f30a5327c5b18809a4111
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375874"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163165"
 ---
 # <a name="accelerator-class"></a>Zugriffstastenklasse
 
@@ -102,9 +102,9 @@ class accelerator;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[operator!=](#operator_neq)|Vergleicht dieses `accelerator`-Objekt mit einem anderen und gibt `false` zurück, wenn sie identisch sind; gibt andernfalls `true` zurück.|
+|[Operator!=](#operator_neq)|Vergleicht diese `accelerator` Objekt mit einem anderen und gibt **"false"** , wenn sie gleich sind, andernfalls **"true"**.|
 |[operator=](#operator_eq)|Kopiert den Inhalt des angegebenen `accelerator`-Objekts in dieses Objekt.|
-|[operator==](#operator_eq_eq)|Vergleicht dieses `accelerator`-Objekt mit einem anderen und gibt `true` zurück, wenn sie identisch sind; gibt andernfalls `false` zurück.|
+|[operator==](#operator_eq_eq)|Vergleicht diese `accelerator` Objekt mit einem anderen und gibt **"true"** , wenn sie gleich sind, andernfalls **"false"**.|
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
 
@@ -362,7 +362,7 @@ bool get_has_display() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn die `accelerator` an eine Anzeige ausgeben kann; andernfalls `false`.
+**"true"** Wenn die `accelerator` an eine Anzeige ausgeben kann, andernfalls **"false"**.
 
 ##  <a name="get_is_debug"></a> get_is_debug
 
@@ -375,7 +375,7 @@ bool get_is_debug() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn für das `accelerator`-Objekt die DEBUG-Ebene für eine umfangreiche Fehlerberichterstattung aktiviert ist. Andernfalls `false`.
+**"true"** Wenn die `accelerator` die DEBUG-Ebene, die für eine umfangreiche Fehlerberichterstattung aktiviert ist. Andernfalls **"false"**.
 
 ##  <a name="get_is_emulated"></a> get_is_emulated
 
@@ -388,7 +388,7 @@ bool get_is_emulated() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn das `accelerator`-Objekt emuliert wird. Andernfalls `false`.
+**"true"** Wenn die `accelerator` emuliert wird. Andernfalls **"false"**.
 
 ##  <a name="get_supports_cpu_shared_memory"></a> get_supports_cpu_shared_memory
 
@@ -401,11 +401,11 @@ bool get_supports_cpu_shared_memory() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn die Zugriffstaste freigegebenen CPU-Arbeitsspeicher unterstützt; andernfalls `false`.
+**"true"** Wenn die CPU-Zugriffstaste unterstützt Arbeitsspeicher freigegeben, andernfalls **"false"**.
 
 ##  <a name="get_supports_double_precision"></a> get_supports_double_precision
 
-Gibt einen booleschen Wert zurück, der angibt, ob die Zugriffstaste mathematische Funktionen mit doppelter Genauigkeit unterstützt, einschließlich Fused Multiply Add (FMA), Division, Kehrwert und Umwandlung zwischen `int` und `double`.
+Gibt ein boolescher Wert, der angibt, ob die Zugriffstaste mathematische Funktionen double mit Genauigkeit unterstützt, einschließlich fused multiply add (FMA), Division, Kehrwert und Umwandlung zwischen **Int** und **double**
 
 ```
 bool get_supports_double_precision() const;
@@ -414,11 +414,11 @@ bool get_supports_double_precision() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn die Zugriffstaste mathematische Funktionen mit doppelter Genauigkeit unterstützt; andernfalls `false`.
+**"true"** , wenn die Zugriffstaste mathematische double Precision; unterstützt, andernfalls **"false"**.
 
 ##  <a name="get_supports_limited_double_precision"></a> get_supports_limited_double_precision
 
-Gibt einen booleschen Wert, der angibt, ob die Zugriffstaste über beschränkte Unterstützung für double Precision mathematische hat. Verfügt die Zugriffstaste nur eingeschränkte Unterstützung, klicken Sie dann die fused multiply hinzufügen (FMA), Division, Kehrwert und Umwandlung zwischen `int` und `double` werden nicht unterstützt.
+Gibt einen booleschen Wert, der angibt, ob die Zugriffstaste über beschränkte Unterstützung für double Precision mathematische hat. Verfügt die Zugriffstaste nur eingeschränkte Unterstützung, klicken Sie dann die fused multiply hinzufügen (FMA), Division, Kehrwert und Umwandlung zwischen **Int** und **doppelte** werden nicht unterstützt.
 
 ```
 bool get_supports_limited_double_precision() const;
@@ -427,7 +427,7 @@ bool get_supports_limited_double_precision() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn die Zugriffstaste über beschränkte Unterstützung für double Precision mathematische; hat andernfalls `false`.
+**"true"** , wenn die Zugriffstaste über beschränkte Unterstützung für double Precision mathematische; hat, andernfalls **"false"**.
 
 ##  <a name="get_version"></a> get_version
 
@@ -468,7 +468,7 @@ __declspec(property(get= get_is_emulated)) bool is_emulated;
 
 ##  <a name="operator_neq"></a> Operator! =
 
-Vergleicht dieses `accelerator`-Objekt mit einem anderen und gibt `false` zurück, wenn sie identisch sind; gibt andernfalls `true` zurück.
+Vergleicht diese `accelerator` Objekt mit einem anderen und gibt **"false"** , wenn sie gleich sind, andernfalls **"true"**.
 
 ```
 bool operator!= (const accelerator& _Other) const;
@@ -482,7 +482,7 @@ Die `accelerator` Objekt, das mit dieser verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`false` Wenn die beiden `accelerator` -Objekte gleich sind; andernfalls `true`.
+**"false"** Wenn die beiden `accelerator` -Objekte gleich sind; andernfalls **"true"**.
 
 ##  <a name="operator_eq"></a> Operator =
 
@@ -503,7 +503,7 @@ Ein Verweis auf das `accelerator`-Objekt.
 
 ##  <a name="operator_eq_eq"></a> Operator ==
 
-Vergleicht dieses `accelerator`-Objekt mit einem anderen und gibt `true` zurück, wenn sie identisch sind; gibt andernfalls `false` zurück.
+Vergleicht diese `accelerator` Objekt mit einem anderen und gibt **"true"** , wenn sie gleich sind, andernfalls **"false"**.
 
 ```
 bool operator== (const accelerator& _Other) const;
@@ -517,7 +517,7 @@ Die `accelerator` Objekt, das mit dieser verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn die andere `accelerator` Objekt entspricht dies `accelerator` Objekt; andernfalls `false`.
+**"true"** Wenn die andere `accelerator` Objekt entspricht dies `accelerator` Objekt; andernfalls **"false"**.
 
 ##  <a name="set_default"></a> set_default
 
@@ -534,7 +534,7 @@ Der Pfad zur Zugriffstaste.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn der Aufruf die Einstellung der Standardzugriffstaste erfolgreich vornimmt. Andernfalls `false`.
+**"true"** , wenn der Aufruf an die Einstellung der standardzugriffstaste erfolgreich ist. Andernfalls **"false"**.
 
 ##  <a name="set_default_cpu_access_type"></a> set_default_cpu_access_type
 
@@ -664,7 +664,7 @@ bool get_is_auto_selection() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn die Laufzeit eine entsprechende Zugriffstaste automatisch auswählt; andernfalls `false`.
+**"true"** , wenn die Laufzeit automatisch eine entsprechende Zugriffstaste; auswählt, andernfalls **"false"**.
 
 ##  <a name="get_is_debug"></a> get_is_debug
 
@@ -737,7 +737,7 @@ Die `accelerator_view` Objekt, das mit dieser verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`false`, wenn die beiden Objekte identisch sind, andernfalls `true`.
+**"false"** , wenn die beiden Objekte gleich sind, andernfalls **"true"**.
 
 ##  <a name="operator_eq"></a> Operator =
 
@@ -758,7 +758,7 @@ Ein Verweis auf die geänderte `accelerator_view` Objekt.
 
 ##  <a name="operator_eq_eq"></a> Operator ==
 
-Vergleicht diese ["accelerator_view"](accelerator-view-class.md) Objekt mit einem anderen und gibt `true` , wenn sie gleich sind, andernfalls `false`.
+Vergleicht diese ["accelerator_view"](accelerator-view-class.md) Objekt mit einem anderen und gibt **"true"** , wenn sie gleich sind, andernfalls **"false"**.
 
 ```
 bool operator== (const accelerator_view& _Other) const;
@@ -772,7 +772,7 @@ Die `accelerator_view` Objekt, das mit dieser verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn die beiden Objekte identisch sind, andernfalls `false`.
+**"true"** , wenn die beiden Objekte gleich sind, andernfalls **"false"**.
 
 ##  <a name="queuing_mode"></a> queuing_mode
 

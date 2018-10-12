@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60e1f944d19efd22cb2c6c7d6a3752d6d32ae1e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d544ac392e2eb227d7e1c37412110d09272f10d5
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381672"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162504"
 ---
 # <a name="combinable-class"></a>combinable-Klasse
 
@@ -182,7 +182,7 @@ T& local(bool& _Exists);
 ### <a name="parameters"></a>Parameter
 
 *_Exists*<br/>
-Ein Verweis auf einen booleschen Wert. Der boolesche Wert, der auf die dieses Argument verweist auf festgelegt `true` , wenn die untergeordnete Berechnung bereits auf diesem Thread vorhanden war, und legen Sie auf `false` war dies die erste untergeordnete Berechnung für diesen Thread.
+Ein Verweis auf einen booleschen Wert. Der boolesche Wert, der auf die dieses Argument verweist auf festgelegt **"true"** , wenn die untergeordnete Berechnung bereits auf diesem Thread vorhanden war, und legen Sie auf **"false"** war dies die erste untergeordnete Berechnung für diesen Thread.
 
 ### <a name="return-value"></a>Rückgabewert
 

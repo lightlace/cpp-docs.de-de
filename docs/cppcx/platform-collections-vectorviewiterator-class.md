@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d45bd056bff41832a98c7936510d22a321891fd0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 36e0421e002efbcabc4c4525ddcf592258f6f7d1
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102038"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163698"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections::VectorViewIterator-Klasse
 
@@ -123,7 +123,7 @@ Die erste Syntax dekrementiert den aktuellen VectorViewIterator und gibt ihn dan
 
 In der ersten VectorViewIterator-Syntax wird der aktuelle VectorViewIterator vordekrementiert.
 
-In der zweiten Syntax wird der aktuelle VectorViewIterator nachdekrementiert. Die `int` Typ in der zweiten Syntax gibt eine nach-dekrementierungsoperation, keinen tatsächlichen ganzzahligen Operanden an.
+In der zweiten Syntax wird der aktuelle VectorViewIterator nachdekrementiert. Der Typ `int` in der zweiten Syntax gibt eine Nach-Dekrementierungsoperation an, keinen tatsächlichen ganzzahligen Operanden.
 
 ## <a name="operator-dereference"></a>  Vectorviewiterator::\* Operator
 
@@ -156,7 +156,7 @@ Ein weiterer VectorViewIterator.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn der aktuelle VectorViewIterator gleich ist `other`ist, andernfalls `false`.
+**"true"** Wenn die aktuelle `VectorViewIterator` gleich *andere*ist, andernfalls **"false"**.
 
 ## <a name="operator-greater-than"></a>  Vectorviewiterator::&gt; Operator
 
@@ -176,11 +176,11 @@ Ein weiterer VectorViewIterator.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn der aktuelle VectorViewIterator größer als `other` ist, andernfalls `false`.
+**"true"** ist der aktuelle VectorViewIterator größer als *andere*ist, andernfalls **"false"**.
 
 ## <a name="operator-greater-than-or-equals"></a>  Vectorviewiterator::&gt;Operator =-Operator
 
-Gibt an, ob der aktuelle VectorViewIterator größer oder gleich dem angegebenen VectorViewIterator ist.
+Gibt an, ob die aktuelle `VectorViewIterator` ist größer als oder gleich der angegebenen `VectorViewIterator`.
 
 ### <a name="syntax"></a>Syntax
 
@@ -196,7 +196,7 @@ Ein weiterer VectorViewIterator.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn der aktuelle VectorViewIterator größer oder gleich `other` ist, andernfalls `false`.
+**"true"** Wenn die aktuelle `VectorViewIterator` ist größer als oder gleich *andere*ist, andernfalls **"false"**.
 
 ## <a name="operator-increment"></a>  Vectorviewiterator:: Operator++-Operator
 
@@ -237,7 +237,7 @@ Ein weiterer VectorViewIterator.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn der aktuelle VectorViewIterator nicht gleich ist `other`ist, andernfalls `false`.
+**"true"** Wenn die aktuelle `VectorViewIterator` ist nicht gleich *andere*ist, andernfalls **"false"**.
 
 ## <a name="operator-less-than"></a>  Vectorviewiterator::&lt; Operator
 
@@ -252,15 +252,15 @@ bool operator<(const VectorViewIterator& other) const;
 ### <a name="parameters"></a>Parameter
 
 *other*<br/>
-Ein weiterer VectorIterator.
+Eine andere `VectorIterator`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn der aktuelle VectorIterator kleiner als `other` ist, andernfalls `false`.
+**"true"** Wenn die aktuelle `VectorIterator` ist kleiner als *andere*ist, andernfalls **"false"**.
 
 ## <a name="operator-less-than-or-equals"></a>  Vectorviewiterator::&lt;Operator =-Operator
 
-Gibt an, ob der aktuelle VectorIterator kleiner oder gleich einem angegebenen VectorIterator ist.
+Gibt an, ob die aktuelle `VectorIterator` ist kleiner als oder gleich einem angegebenen `VectorIterator`.
 
 ### <a name="syntax"></a>Syntax
 
@@ -272,11 +272,11 @@ bool operator<=(const VectorViewIterator& other) const;
 ### <a name="parameters"></a>Parameter
 
 *other*<br/>
-Ein weiterer VectorIterator.
+Eine andere `VectorIterator`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn der aktuelle VectorIterator kleiner als oder gleich `other`ist, andernfalls `false`.
+**"true"** Wenn die aktuelle `VectorIterator` ist kleiner als oder gleich *andere*ist, andernfalls **"false"**.
 
 ## <a name="operator-minus"></a>  Vectorviewiterator:: Operator-
 
@@ -353,7 +353,7 @@ In der zweiten Syntax ein VectorViewIterator.
 
 In der ersten Syntax ein VectorViewIterator, der auf das Element an der angegebenen Verschiebung vom aktuellen VectorViewIterator verweist.
 
-In der zweiten Syntax ein VectorViewIterator, der das Element an der angegebenen Verschiebung vom Anfang des Parameters verweist `i`.
+In der zweiten Syntax ein VectorViewIterator, der auf das Element an der angegebenen Verschiebung vom Anfang des Parameters `i` verweist.
 
 ## <a name="operator-minus-assign"></a>  Vectorviewiterator:: Operator-=-Operator
 

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7466c00ec1a5c507a84a098b3dca79d57ffee91e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 891fcd96901423e5d5c23b840784f9e050dbbe81
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445983"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162918"
 ---
 # <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot-Struktur
 
@@ -77,7 +77,7 @@ virtual void Activate(_Inout_ IExecutionContext* pContext) = 0;
 
 ### <a name="parameters"></a>Parameter
 
-*"pContext"*<br/>
+*pContext*<br/>
 Eine Schnittstelle zum Ausführungskontext, der auf diesem virtuellen Prozessorstamm gesendet werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -106,12 +106,12 @@ virtual bool Deactivate(_Inout_ IExecutionContext* pContext) = 0;
 
 ### <a name="parameters"></a>Parameter
 
-*"pContext"*<br/>
+*pContext*<br/>
 Der Kontext, der derzeit von diesem Stamm weitergeleitet wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein boolescher Wert. Der Wert `true` gibt an, dass der Threadproxy zurückgegeben der `Deactivate` -Methode in der Antwort auf einen Aufruf der `Activate` Methode. Der Wert `false` gibt an, dass der Threadproxy von der Methode als Reaktion auf ein Benachrichtigungsereignis im Ressourcen-Manager zurückgegeben. Auf einem im Benutzermodus planbare (UMS) Threadplaner bedeutet dies, dass Elemente in der Vervollständigungsliste des Planers erschienen sind, und der Scheduler erforderlich ist, um sie zu behandeln.
+Ein boolescher Wert. Der Wert **"true"** gibt an, dass der Threadproxy zurückgegeben der `Deactivate` -Methode in der Antwort auf einen Aufruf der `Activate` Methode. Der Wert `false` gibt an, dass der Threadproxy von der Methode als Reaktion auf ein Benachrichtigungsereignis im Ressourcen-Manager zurückgegeben. Auf einem im Benutzermodus planbare (UMS) Threadplaner bedeutet dies, dass Elemente in der Vervollständigungsliste des Planers erschienen sind, und der Scheduler erforderlich ist, um sie zu behandeln.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -119,9 +119,9 @@ Verwenden Sie diese Methode, einen virtuellen Prozessorstamm ausgeführt, wenn S
 
 Ein deaktivierter virtueller Prozessorstamm möglicherweise durch einen Aufruf von reaktiviert werden die `Activate` Methode, mit dem gleichen Argument, das in übergeben wurde, die `Deactivate` Methode. Der Planer ist dafür verantwortlich, sicherzustellen, dass Aufrufe der `Activate` und `Deactivate` Methoden kombiniert werden, aber sie sind nicht erforderlich, um in einer bestimmten Reihenfolge empfangen werden. Der Ressourcen-Manager kann einen Anruf zu verarbeiten. die `Activate` -Methode auf, bevor er einen Aufruf empfängt die `Deactivate` Methode, die er vorgesehen war.
 
-Wenn es sich bei ein virtuellen Prozessorstamm aktiviert und der Rückgabewert der `Deactivate` Methode ist der Wert `false`, das Zeitplanungsmodul, sollten die UMS-Vervollständigungsliste über Abfragen die `IUMSCompletionList::GetUnblockNotifications` -Methode, diese Informationen nutzen und anschließend rufen Sie dann die `Deactivate`-Methode erneut auf. Dies sollte wiederholt werden, solange die `Deactivate` -Methode gibt den Wert `true`.
+Wenn es sich bei ein virtuellen Prozessorstamm aktiviert und der Rückgabewert der `Deactivate` Methode ist der Wert **"false"**, das Zeitplanungsmodul, sollten die UMS-Vervollständigungsliste über Abfragen die `IUMSCompletionList::GetUnblockNotifications` -Methode, diese Informationen nutzen und dann Rufen Sie anschließend die `Deactivate` -Methode erneut auf. Dies sollte wiederholt werden, solange die `Deactivate` -Methode gibt den Wert `true`.
 
-`invalid_argument` wird ausgelöst, wenn das Argument `pContext` hat den Wert `NULL`.
+`invalid_argument` wird ausgelöst, wenn das Argument `pContext` den Wert NULL aufweist.
 
 `invalid_operation` wird ausgelöst, wenn der virtuelle Prozessorstamm nie aktiviert wurde, oder das Argument `pContext` stellt den Ausführungskontext, der von diesem virtuellen Prozessorstamm zuletzt weitergeleitet wurde keine dar.
 
@@ -137,7 +137,7 @@ virtual void EnsureAllTasksVisible(_Inout_ IExecutionContext* pContext) = 0;
 
 ### <a name="parameters"></a>Parameter
 
-*"pContext"*<br/>
+*pContext*<br/>
 Der Kontext, der derzeit von diesem virtuellen Prozessorstamm weitergeleitet wird.
 
 ### <a name="remarks"></a>Hinweise

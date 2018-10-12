@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46789b74d0b7b8d882a1e2ea90103c4c2f1e934b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ffc1ea1f512e049f3a6af15170429a3618323dc5
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396349"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162996"
 ---
 Ein `unbounded_buffer`-Meldungsblock ist ein geordneter `propagator_block` mit mehreren Zielen und mehreren Quellen, der eine unbegrenzte Anzahl von Meldungen speichern kann.
 
@@ -175,7 +175,7 @@ Das Element, das hinzugefügt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn das Element akzeptiert wurde, `false` andernfalls.
+**"true"** Wenn das Element akzeptiert wurde, **"false"** andernfalls.
 
 ##  <a name="link_target_notification"></a> link_target_notification
 
@@ -274,11 +274,11 @@ Die `runtime_object_identity` von der `message` Objekt reserviert wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn die Nachricht erfolgreich reserviert wurde, `false` andernfalls.
+**"true"** , wenn die Nachricht erfolgreich reserviert wurde, **"false"** andernfalls.
 
 ### <a name="remarks"></a>Hinweise
 
-Nach dem `reserve` aufgerufen wird, wenn zurückgegeben `true`, entweder `consume` oder `release` aufgerufen werden, um zu übernehmen oder den Besitz der Nachricht.
+Nach dem `reserve` aufgerufen wird, wenn zurückgegeben **"true"**, entweder `consume` oder `release` aufgerufen werden, um zu übernehmen oder den Besitz der Nachricht.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -321,7 +321,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Da der Block nicht verschieben Sie angebotene Nachrichten ist.
+**"true"** , weil der Block nicht verschieben wird angeboten Nachrichten.
 
 ##  <a name="ctor"></a> unbounded_buffer
 
@@ -359,10 +359,10 @@ unbounded_buffer(
 Eine Filterfunktion, die bestimmt, ob angebotene Nachrichten akzeptiert werden sollen.
 
 *_PScheduler*<br/>
-Das `Scheduler`-Objekt, in dem die Weiterleitungsaufgabe für den `unbounded_buffer`-Meldungsblock geplant ist.
+Das `Scheduler` -Objekt, in dem die Weiterleitungsaufgabe für den `unbounded_buffer` -Meldungsblock geplant ist.
 
 *_PScheduleGroup*<br/>
-Das `ScheduleGroup`-Objekt, in dem die Weiterleitungsaufgabe für den `unbounded_buffer`-Meldungsblock geplant ist. Das verwendete `Scheduler` -Objekt wird von der Planungsgruppe impliziert.
+Das `ScheduleGroup` -Objekt, in dem die Weiterleitungsaufgabe für den `unbounded_buffer` -Meldungsblock geplant ist. Das verwendete `Scheduler` -Objekt wird von der Planungsgruppe impliziert.
 
 ### <a name="remarks"></a>Hinweise
 

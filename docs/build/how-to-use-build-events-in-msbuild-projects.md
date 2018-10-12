@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d875836cbfe9506d41a979a63d941d1ee5b467a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fd35ff136c0145e1c76a04d15052d426a7c90dcc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444332"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161267"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Gewusst wie: Verwenden von Buildereignissen in MSBuild-Projekten
 
@@ -29,7 +29,7 @@ Ein Buildereignis ist ein Befehl, den MSBuild zu einem bestimmten Zeitpunkt im B
 
 Jede der drei Build-Ereignissen wird in eine Elementdefinitionsgruppe durch ein Befehlselement dargestellt (`<Command>`), die ausgeführt wird und ein Nachrichtenelement (`<Message>`), angezeigt wird, wenn **MSBuild** führt das Ereignis erstellt. Jedes Element ist optional, und wenn Sie das gleiche Element mehrmals angeben, wird das letzte Vorkommen hat Vorrang vor.
 
-Eine optionale *in Buildvorgang verwenden* Element (`<`*Buildereignis*`UseInBuild>`) kann angegeben werden, in eine Eigenschaftengruppe, um anzugeben, ob das Ereignis erstellt, ausgeführt wird. Der Wert des Inhalts einer *in Buildvorgang verwenden* Element ist entweder `true` oder `false`. Standardmäßig wird ein Buildereignis ausgeführt, es sei denn, der entsprechenden *in Buildvorgang verwenden* Element nastaven NA hodnotu `false`.
+Eine optionale *in Buildvorgang verwenden* Element (`<`*Buildereignis*`UseInBuild>`) kann angegeben werden, in eine Eigenschaftengruppe, um anzugeben, ob das Ereignis erstellt, ausgeführt wird. Der Wert des Inhalts einer *in Buildvorgang verwenden* Element ist entweder **"true"** oder **"false"**. Standardmäßig wird ein Buildereignis ausgeführt, es sei denn, der entsprechenden *in Buildvorgang verwenden* Element nastaven NA hodnotu `false`.
 
 Die folgende Tabelle enthält die XML-Element für jeden Build:
 

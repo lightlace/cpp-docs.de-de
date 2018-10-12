@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82f9cf473a1b38e3a77b43bc5fde30057c7b1a8a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0c2bc732453edb66f70fde88da8fb7230f66cd13
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106540"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162307"
 ---
 # <a name="platformobject-class"></a>Platform::Object-Klasse
 
@@ -86,7 +86,7 @@ Das zu vergleichende Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` , wenn die Objekte gleich sind, andernfalls `false`.
+**"true"** , wenn die Objekte gleich, andernfalls sind **"false"**.
 
 ## <a name="gethashcode"></a>  Object:: GetHashCode-Methode
 
@@ -168,7 +168,7 @@ Das zweite zu vergleichende Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn die beiden Objekte identisch sind, andernfalls `false`.
+**"true"** , wenn die beiden Objekte gleich sind, andernfalls **"false"**.
 
 ## <a name="tostring"></a>  Object:: ToString-Methode (C++ / CX)
 

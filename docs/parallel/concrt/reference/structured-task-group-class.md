@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4aa6df9afddc43980818439ee2c7bbd29ca2f848
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a9e87ebd4523b5211c94955b5bec7905ed848946
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446074"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161683"
 ---
 # <a name="structuredtaskgroup-class"></a>structured_task_group-Klasse
 
@@ -54,7 +54,7 @@ class structured_task_group;
 |Name|Beschreibung|
 |----------|-----------------|
 |[cancel](#cancel)|Macht die Teilstruktur des Arbeit Rooting manipuliert wurde, klicken Sie auf diese Aufgabengruppe abbrechen versucht. Jede Aufgabe, die für die Aufgabengruppe geplant werden transitiv abgebrochen, wenn möglich.|
-|[is_canceling](#is_canceling)|Informiert den Aufrufer, und zwar unabhängig davon, ob die Aufgabengruppe derzeit sich mitten in der ein Abbruch ist. Dies bedeutet nicht unbedingt, die die `cancel` Methode wurde aufgerufen, auf die `structured_task_group` Objekt (auch wenn diese Methode zurückgibt, das z. B. sicherlich qualifiziert ist `true`). Es kann der Fall sein, die die `structured_task_group` Objekt Inline ausführt und eine Aufgabengruppe weiter oben in der Arbeitsstruktur wurde abgebrochen. In Fällen, z. B. diesen, in denen die Laufzeit voraus, die dies Abbruch durchlaufen wird bestimmen kann `structured_task_group` Objekt `true` wird ebenfalls zurückgegeben werden.|
+|[is_canceling](#is_canceling)|Informiert den Aufrufer, und zwar unabhängig davon, ob die Aufgabengruppe derzeit sich mitten in der ein Abbruch ist. Dies bedeutet nicht unbedingt, die die `cancel` Methode wurde aufgerufen, auf die `structured_task_group` Objekt (auch wenn diese Methode zurückgibt, das z. B. sicherlich qualifiziert ist **"true"**). Es kann der Fall sein, die die `structured_task_group` Objekt Inline ausführt und eine Aufgabengruppe weiter oben in der Arbeitsstruktur wurde abgebrochen. In Fällen, z. B. diesen, in denen die Laufzeit voraus, die dies Abbruch durchlaufen wird bestimmen kann `structured_task_group` Objekt **"true"** wird ebenfalls zurückgegeben werden.|
 |[run](#run)|Überladen. Plant eine Aufgabe für die `structured_task_group` Objekt. Der Aufrufer verwaltet die Lebensdauer der `task_handle` Objekt übergeben wurde die `_Task_handle` Parameter. Die Version, die den Parameter akzeptiert `_Placement` bewirkt, dass der Task Blockcontainer ausführen an der Position, die durch diesen Parameter angegeben werden.|
 |[run_and_wait](#run_and_wait)|Überladen. Plant eine Aufgabe Inline im aufrufenden Kontext ausgeführt werden, mit der Hilfe von der `structured_task_group` -Objekt für die vollständige Abbruch-Unterstützung. Wenn eine `task_handle` Objekt wird als Parameter übergeben `run_and_wait`, der Aufrufer ist verantwortlich für die Verwaltung der Lebensdauer der `task_handle` Objekt. Die Funktion dann wartet, bis die gesamte Arbeit der `structured_task_group` Objekt wurde entweder abgeschlossen oder abgebrochen wurde.|
 |[wait](#wait)|Wartet, bis die gesamte Arbeit der `structured_task_group` abgeschlossen oder abgebrochen wird.|
@@ -97,7 +97,7 @@ Weitere Informationen finden Sie unter [Abbruch](../../../parallel/concrt/except
 
 ##  <a name="is_canceling"></a> is_canceling
 
-Informiert den Aufrufer, und zwar unabhängig davon, ob die Aufgabengruppe derzeit sich mitten in der ein Abbruch ist. Dies bedeutet nicht unbedingt, die die `cancel` Methode wurde aufgerufen, auf die `structured_task_group` Objekt (auch wenn diese Methode zurückgibt, das z. B. sicherlich qualifiziert ist `true`). Es kann der Fall sein, die die `structured_task_group` Objekt Inline ausführt und eine Aufgabengruppe weiter oben in der Arbeitsstruktur wurde abgebrochen. In Fällen, z. B. diesen, in denen die Laufzeit voraus, die dies Abbruch durchlaufen wird bestimmen kann `structured_task_group` Objekt `true` wird ebenfalls zurückgegeben werden.
+Informiert den Aufrufer, und zwar unabhängig davon, ob die Aufgabengruppe derzeit sich mitten in der ein Abbruch ist. Dies bedeutet nicht unbedingt, die die `cancel` Methode wurde aufgerufen, auf die `structured_task_group` Objekt (auch wenn diese Methode zurückgibt, das z. B. sicherlich qualifiziert ist **"true"**). Es kann der Fall sein, die die `structured_task_group` Objekt Inline ausführt und eine Aufgabengruppe weiter oben in der Arbeitsstruktur wurde abgebrochen. In Fällen, z. B. diesen, in denen die Laufzeit voraus, die dies Abbruch durchlaufen wird bestimmen kann `structured_task_group` Objekt **"true"** wird ebenfalls zurückgegeben werden.
 
 ```
 bool is_canceling();

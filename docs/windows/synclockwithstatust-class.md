@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7e59631592cd0bf9d147110e1a72d27d4bc781e
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 36cee8d6f2cb41a22574f60c5cf86747228205bb
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789084"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163074"
 ---
 # <a name="synclockwithstatust-class"></a>SyncLockWithStatusT-Klasse
 
@@ -125,7 +125,7 @@ Gibt an, ob die aktuelle `SyncLockWithStatusT` Objekt besitzt eine Ressource, d.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn die `SyncLockWithStatusT` Objekt gesperrt ist; andernfalls `false`.
+**"true"** Wenn die `SyncLockWithStatusT` Objekt gesperrt ist; andernfalls **"false"**.
 
 ## <a name="status"></a>Synclockwithstatust:: Status_
 
@@ -162,7 +162,7 @@ Ein Rvalue-Verweis auf einen anderen `SyncLockWithStatusT` Objekt.
 *sync*<br/>
 Ein Verweis auf einen anderen `SyncLockWithStatusT` Objekt.
 
-*status*<br/>
+*Status*<br/>
 Der Wert des der [Status_](#status) Datenmember der *andere* Parameter oder die *Sync* Parameter.
 
 ### <a name="remarks"></a>Hinweise

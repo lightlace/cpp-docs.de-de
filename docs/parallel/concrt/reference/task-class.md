@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40a98bd546f29cd42629ad991866a85a86852c9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bac539fc2826b5628769126d9802688c01f01c7b
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399300"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163204"
 ---
 # <a name="task-class-concurrency-runtime"></a>Aufgabenklasse (Concurrency Runtime)
 
@@ -74,8 +74,8 @@ Der Ergebnistyp dieser Aufgabe.
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[get](#get)|Überladen. Gibt das von diesem Task erstellte Ergebnis zurück. Wenn sich der Task nicht in einem abschließenden Zustand befindet, wird mit dem `get`-Aufruf gewartet, bis der Task fertig gestellt wurde. Diese Methode gibt bei dem Aufruf eines Tasks mit einem `result_type` von `void` keinen Wert zurück.|
-|[is_apartment_aware](#is_apartment_aware)|Bestimmt, ob der Task eine `IAsyncInfo`-Schnittstelle der Windows Runtime entpackt oder von einem solchen Task abgeleitet wurde.|
+|[get](#get)|Überladen. Gibt das von diesem Task erstellte Ergebnis zurück. Wenn sich der Task nicht in einem abschließenden Zustand befindet, wird mit dem `get`-Aufruf gewartet, bis der Task fertig gestellt wurde. Diese Methode gibt bei dem Aufruf einer Aufgabe mit einem `result_type` von `void` keinen Wert zurück.|
+|[is_apartment_aware](#is_apartment_aware)|Bestimmt, ob die Aufgabe eine `IAsyncInfo`-Schnittstelle der Windows Runtime entpackt oder von einer solchen Aufgabe abgeleitet wurde.|
 |[is_done](#is_done)|Bestimmt, ob die Aufgabe abgeschlossen wurde.|
 |[scheduler](#scheduler)|Gibt den Planer für diese Aufgabe zurück.|
 |[then](#then)|Überladen. Fügt dieser Aufgabe eine Fortsetzungsaufgabe hinzu.|
@@ -85,9 +85,9 @@ Der Ergebnistyp dieser Aufgabe.
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[operator!=](#operator_neq)|Überladen. Bestimmt, ob zwei `task`-Objekte unterschiedliche interne Prozesse darstellen.|
+|[Operator!=](#operator_neq)|Überladen. Bestimmt, ob zwei `task`-Objekte unterschiedliche interne Aufgaben darstellen.|
 |[operator=](#operator_eq)|Überladen. Ersetzt den Inhalt eines `task`-Objekts durch einen anderen.|
-|[operator==](#operator_eq_eq)|Überladen. Bestimmt, ob zwei `task`-Objekte den gleichen internen Task darstellen.|
+|[operator==](#operator_eq_eq)|Überladen. Bestimmt, ob zwei `task`-Objekte die gleiche interne Aufgabe darstellen.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -105,7 +105,7 @@ Weitere Informationen finden Sie unter [Aufgabenparallelität](../../../parallel
 
 ##  <a name="get"></a> Erhalten
 
-Gibt das von dieser Aufgabe erstellte Ergebnis zurück. Wenn sich der Task nicht in einem abschließenden Zustand befindet, wird mit dem `get`-Aufruf gewartet, bis der Task fertig gestellt wurde. Diese Methode gibt bei dem Aufruf eines Tasks mit einem `result_type` von `void` keinen Wert zurück.
+Gibt das von dieser Aufgabe erstellte Ergebnis zurück. Wenn sich der Task nicht in einem abschließenden Zustand befindet, wird mit dem `get`-Aufruf gewartet, bis der Task fertig gestellt wurde. Diese Methode gibt bei dem Aufruf einer Aufgabe mit einem `result_type` von `void` keinen Wert zurück.
 
 ```
 _ReturnType get() const;
@@ -126,7 +126,7 @@ Wenn die Aufgabe abgebrochen wird, einen Aufruf von `get` löst eine [Task_cance
 
 ##  <a name="is_apartment_aware"></a> is_apartment_aware
 
-Bestimmt, ob der Task eine `IAsyncInfo`-Schnittstelle der Windows Runtime entpackt oder von einem solchen Task abgeleitet wurde.
+Bestimmt, ob die Aufgabe eine `IAsyncInfo`-Schnittstelle der Windows Runtime entpackt oder von einer solchen Aufgabe abgeleitet wurde.
 
 ```
 bool is_apartment_aware() const;
@@ -134,7 +134,7 @@ bool is_apartment_aware() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn die Aufgabe eine `IAsyncInfo`-Schnittstelle entpackt oder von einer solchen Aufgabe abgeleitet wird, andernfalls `false`.
+**"true"** , wenn die Aufgabe entpackt ein `IAsyncInfo` -Schnittstelle oder von einer solchen Aufgabe abgeleitet wird **"false"** andernfalls.
 
 ##  <a name="is_done"></a>  Task:: is_done-Methode (Concurrency Runtime)
 
@@ -154,7 +154,7 @@ Die Funktion gibt TRUE zurück, wenn die Aufgabe abgeschlossen oder abgebrochen 
 
 ##  <a name="operator_neq"></a> Operator! =
 
-Bestimmt, ob zwei `task`-Objekte unterschiedliche interne Prozesse darstellen.
+Bestimmt, ob zwei `task`-Objekte unterschiedliche interne Aufgaben darstellen.
 
 ```
 bool operator!= (const task<_ReturnType>& _Rhs) const;
@@ -169,7 +169,7 @@ Die Aufgabe, die verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn die Objekte sich auf unterschiedliche zugrunde liegenden Aufgaben beziehen, und andernfalls `false`.
+**"true"** Wenn die Objekte auf unterschiedliche zugrunde liegenden Aufgaben beziehen und **"false"** andernfalls.
 
 ##  <a name="operator_eq"></a> Operator =
 
@@ -194,7 +194,7 @@ Da sich `task` wie ein intelligenter Zeiger verhält, stellt dieses `task`-Objek
 
 ##  <a name="operator_eq_eq"></a> Operator ==
 
-Bestimmt, ob zwei `task`-Objekte den gleichen internen Task darstellen.
+Bestimmt, ob zwei `task`-Objekte die gleiche interne Aufgabe darstellen.
 
 ```
 bool operator== (const task<_ReturnType>& _Rhs) const;
@@ -209,7 +209,7 @@ Die Aufgabe, die verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn die Objekte auf die gleiche zugrunde liegende Aufgabe verweisen, andernfalls `false`.
+**"true"** , wenn die Objekte auf die gleiche zugrunde liegende Aufgabe verweisen und **"false"** andernfalls.
 
 ##  <a name="scheduler"></a>  Task:: Scheduler-Methode (Concurrency Runtime)
 
@@ -341,7 +341,7 @@ Weitere Informationen zur Verwendung von aufgabenfortsetzungen für asynchrone A
 
 ##  <a name="wait"></a> Warte
 
-Erwartet, dass diese Aufgabe einen Terminalzustand erreicht. Es ist möglich, dass das `wait`-Element den Task inline ausführt, wenn alle Taskabhängigkeiten erfüllt sind und er nicht bereits zur Ausführung durch einen Hintergrundworker aufgehoben wurde.
+Erwartet, dass diese Aufgabe einen Terminalzustand erreicht. Es ist möglich, dass das `wait`-Element die Aufgabe inline ausführt, wenn alle Aufgabenabhängigkeiten erfüllt sind und er nicht bereits zur Ausführung durch einen Hintergrundworker aufgehoben wurde.
 
 ```
 task_status wait() const;
@@ -354,7 +354,7 @@ Ein `task_status`-Wert, der entweder `completed` oder `canceled` ist. Wenn die A
 ### <a name="remarks"></a>Hinweise
 
 > [!IMPORTANT]
->  Rufen Sie in einer app (Universelle Windows Plattform) nicht `wait` im Code, der auf dem STA ausgeführt wird. Andernfalls löst die Laufzeit [invalid_operation](invalid-operation-class.md) daran, dass diese Methode den aktuellen Thread blockiert und dazu führen, die app dass kann reagiert. Allerdings rufen Sie die [Concurrency](#get) Methode, um das Ergebnis der Vorgängeraufgabe in einer aufgabenbasierten Fortsetzung zu erhalten.
+>  Rufen Sie in einer app (Universelle Windows Plattform) nicht `wait` im Code, der auf dem STA ausgeführt wird. Andernfalls löst die Laufzeit [concurrency::invalid_operation](invalid-operation-class.md) aus, da diese Methode den aktuellen Thread blockiert und die App dadurch möglicherweise nicht mehr reagiert. Sie können jedoch die [concurrency::task::get](#get) -Methode aufrufen, um das Ergebnis der Vorgängeraufgabe in einer aufgabenbasierten Fortsetzung zu erhalten.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: be9c1bc8125c30eb2208b389097eac7e1cf38e09
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2534563ba85ec3d2d513c192637d3ae8b3beb971
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374385"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162359"
 ---
 # <a name="autohandleoperator-bool"></a>auto_handle::operator bool
 
@@ -40,11 +40,11 @@ operator bool();
 
 ## <a name="return-value"></a>Rückgabewert
 
-`true` Wenn das umschlossene Objekt gültig ist. `false` andernfalls.
+**"true"** Wenn das umschlossene Objekt gültig ist. **"false"** andernfalls.
 
 ## <a name="remarks"></a>Hinweise
 
-Dieser Operator konvertiert tatsächlich in `_detail_class::_safe_bool` ist sicherer als `bool` , da es in einen ganzzahligen Typ konvertiert werden kann.
+Dieser Operator konvertiert tatsächlich in `_detail_class::_safe_bool` ist sicherer als **"bool"** , da es in einen ganzzahligen Typ konvertiert werden kann.
 
 ## <a name="example"></a>Beispiel
 

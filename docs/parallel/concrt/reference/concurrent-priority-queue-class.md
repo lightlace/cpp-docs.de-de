@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b87ac316c08f93a95f7791297b74cbbb20d5452a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: de97557025929c394039b1a786fe12a7035381e1
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413873"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163152"
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue-Klasse
 
@@ -195,7 +195,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn die Prioritätswarteschlange im Moment leer die Funktion aufgerufen war wurde, `false` andernfalls.
+**"true"** Wenn zum Zeitpunkt die Prioritätswarteschlange leer die Funktion aufgerufen war wurde, **"false"** andernfalls.
 
 ##  <a name="get_allocator"></a> get_allocator
 
@@ -287,7 +287,7 @@ Ein Verweis auf eine Variable, die mit dem höchsten Prioritätselement, aufgef�
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn ein Wert vom Stapel geholt, war, `false` andernfalls.
+**"true"** Wenn ein Wert vom Stapel geholt, war, **"false"** andernfalls.
 
 ## <a name="see-also"></a>Siehe auch
 

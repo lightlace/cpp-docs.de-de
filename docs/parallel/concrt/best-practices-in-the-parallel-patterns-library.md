@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28bedc703a8fa965b5380cb8c7eba840d07f7772
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d5ad7d0210f99b1b1aa5c481ed1b8695c68fb311
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396934"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163386"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Empfohlene Vorgehensweisen in der Parallel Patterns Library
 
@@ -180,7 +180,7 @@ Wenn möglich, führen Sie keine blockierenden Vorgänge vor dem Aufruf der [tas
 
 Wenn eine Aufgabe einen kooperativen Blockierungsvorgang ausführt, kann die Laufzeit andere Aufgaben ausführen, während die erste Aufgabe auf Daten wartet. Die Laufzeit plant die wartende Aufgabe neu, wenn die Blockierung aufgehoben wird. Die Laufzeit plant in der Regel Aufgaben neu, die vor kurzem entsperrt wurden, bevor sie Aufgaben, die vor längerer Zeit entsperrt wurden, neu plant. Aus diesem Grund könnte die Laufzeit unnötige Arbeit während des blockierenden Vorgangs planen, was zu Leistungseinbußen führt. Wenn Sie also einen Blockierungsvorgang ausführen, bevor Sie parallele Arbeitsvorgänge abbrechen, kann der blockierende Vorgang den Aufruf von `cancel` verzögern. Dies führt dazu, dass andere Aufgaben unnötige Arbeit ausführen.
 
-Das folgende Beispiel definiert die `parallel_find_answer`-Funktion, die ein Element des bereitgestellten Arrays sucht, das der angegebenen Prädikatfunktion entspricht. Wenn die Prädikatfunktion `true` zurückgibt, erstellt die parallele Arbeitsfunktion ein `Answer`-Objekt und bricht die gesamte Aufgabe ab.
+Das folgende Beispiel definiert die `parallel_find_answer`-Funktion, die ein Element des bereitgestellten Arrays sucht, das der angegebenen Prädikatfunktion entspricht. Wenn die Prädikatfunktion zurückgegeben **"true"**, erstellt die parallele Arbeitsfunktion ein `Answer` -Objekt und bricht die gesamte Aufgabe ab.
 
 [!code-cpp[concrt-blocking-cancel#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_13.cpp)]
 
@@ -238,7 +238,7 @@ Wir empfehlen die Verwendung der [Concurrency:: combinable](../../parallel/concr
 
 Wenn Sie einer Aufgabengruppe oder einem parallelen Algorithmus einen Lambdaausdruck bereitstellen, gibt die Erfassungsklausel an, ob der Text des Lambdaausdrucks auf Variablen im einschließenden Bereich als Wert oder als Verweis zugreift. Wenn Sie Variablen als Verweis an einen Lambdaausdruck übergeben, müssen Sie sicherstellen, dass die Lebensdauer dieser Variablen bis zum Beenden der Aufgabe erhalten bleibt.
 
-Betrachten Sie das folgende Beispiel, in dem die `object`-Klasse und die `perform_action`-Funktion definiert werden. Die `perform_action`-Funktion erstellt eine `object`-Variable und führt eine Aktion für diese Variable asynchron durch. Da die Aufgabe nicht unbedingt vor der Rückgabe der `perform_action`-Funktion beendet wird, stürzt das Programm ab oder zeigt nicht definiertes Verhalten, wenn die `object`-Variable beim Ausführen der Aufgabe gelöscht wird.
+Betrachten Sie das folgende Beispiel, in dem die `object`-Klasse und die `perform_action`-Funktion definiert werden. Die `perform_action`-Funktion erstellt eine `object`-Variable und führt eine Aktion für diese Variable asynchron durch. Da die Aufgabe nicht unbedingt vor der Rückgabe der `perform_action`-Funktion beendet wird, stürzt das Programm ab oder zeigt nicht definiertes Verhalten, wenn die `object`-Variable beim Ausführen der Aufgabe zerstört wird.
 
 [!code-cpp[concrt-lambda-lifetime#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_20.cpp)]
 

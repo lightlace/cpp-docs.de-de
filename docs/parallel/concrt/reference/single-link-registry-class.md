@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30efbfa9c7c9b4be0c9b92e4ec5300a9c4313cb4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f03e3366caaf6b18ecb8f401fb3209f859113ca0
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448314"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163633"
 ---
 # <a name="singlelinkregistry-class"></a>single_link_registry-Klasse
 
@@ -125,7 +125,7 @@ Ein Zeiger auf einen Block, der für die gesucht werden soll, in der `single_lin
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn der Link gefunden wurde, `false` andernfalls.
+**"true"** Wenn der Link gefunden wurde, **"false"** andernfalls.
 
 ##  <a name="count"></a> Anzahl
 
@@ -154,7 +154,7 @@ Ein Zeiger auf einen Block, wenn entfernt wurde gefunden.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn der Link wurde gefunden und entfernt, `false` andernfalls.
+**"true"** , wenn der Link wurde gefunden und entfernt, **"false"** andernfalls.
 
 ##  <a name="ctor"></a> single_link_registry
 

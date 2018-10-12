@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 186fe4bbeb86780cde586500380a7e2c500da38e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9a5fef363b289ba2062db6f8d903ea832bffd6e5
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443506"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161670"
 ---
 # <a name="ptroperator"></a>ptr::operator!
 
@@ -39,17 +39,17 @@ bool operator!();
 
 ## <a name="return-value"></a>Rückgabewert
 
-`true` Wenn das COM-Objekt im Besitz des Benutzers ungültig ist; `false` andernfalls.
+**"true"** ist das im Besitz des Benutzers COM-Objekt ungültig; **"false"** andernfalls.
 
 ## <a name="remarks"></a>Hinweise
 
-Das COM-Objekt im Besitz des Benutzers ist gültig, wenn er nicht ist `nullptr`.
+Das COM-Objekt im Besitz des Benutzers ist gültig, wenn er nicht ist **"nullptr"**.
 
 ## <a name="example"></a>Beispiel
 
 In diesem Beispiel implementiert eine CLR-Klasse, verwendet eine `com::ptr` , umschließen die privaten Member `IXMLDOMDocument` Objekt.  Die `CreateInstance` Memberfunktion verwendet `operator!` zu bestimmen, ob ein Document-Objekt ist bereits im Besitz und eine neue Instanz nur, erstellt Wenn das Objekt ungültig ist.
 
-```
+```cpp
 // comptr_op_not.cpp
 // compile with: /clr /link msxml2.lib
 #include <msxml2.h>

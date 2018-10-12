@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0bec396efa2d0a4191c67440e4ed3ed5d4bc083
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 1d8a9340abf7ca16fe2f0e6d6660bf14f00bd594
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110791"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161228"
 ---
 # <a name="fundamental-types-ccx"></a>Grundlegende Typen (C++/CX)
 
@@ -26,7 +26,7 @@ Die folgende Tabelle enthält die integrierten booleschen und Zeichentypen sowie
 
 |Namespace|C++ / CX-Name|Definition|C++-Standardname|Wertebereich|
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|
-|Plattform|Boolesch|Ein 8-Bit-boolescher Wert.|bool|`true` (ungleich null) und `false` (null)|
+|Plattform|Boolesch|Ein 8-Bit-boolescher Wert.|bool|**"true"** (ungleich null) und **"false"** (null)|
 |default|char16|Ein nicht numerischer 16-Bit-Wert, der einen Unicode-Codepunkt (UTF-16) darstellt.|wchar_t<br /><br /> - oder - <br /><br /> L'c'|(Angegeben durch den Unicode-Standard)|
 
 ## <a name="numeric-types"></a>Numerische Typen

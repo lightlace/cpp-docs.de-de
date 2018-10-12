@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: df483f08e96f2bd479504028ce4ce17513bb7d41
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 28683d8c69a800cb6f9a365beda26c75b3a69d15
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789020"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161813"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces-Struktur
 
@@ -117,7 +117,7 @@ Ein abgeleiteter Typ.
 Der Basistyp eines abgeleiteten Typs.
 
 *hasImplements*<br/>
-Ein boolescher Wert, auch wenn `true`, bedeutet, dass Sie nicht verwenden eine [MixIn](../windows/mixin-structure.md) Struktur mit einer Klasse, die nicht von abgeleitet ist die [implementiert](../windows/implements-structure.md) abgeschrägten Designs.
+Ein boolescher Wert, auch wenn **"true"**, bedeutet, dass Sie nicht verwenden eine [MixIn](../windows/mixin-structure.md) Struktur mit einer Klasse, die nicht von abgeleitet ist die [implementiert](../windows/implements-structure.md) abgeschrägten Designs.
 
 ## <a name="members"></a>Member
 
@@ -169,7 +169,7 @@ Ein Zeiger auf die letzte Schnittstellen-ID, die erfolgreich umgewandelt wurde.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn alle Umwandlungsvorgänge erfolgreich war; andernfalls `false`.
+**"true"** Wenn alle Umwandlungsvorgänge erfolgreich war; andernfalls **"false"**.
 
 ## <a name="casttounknown"></a>Chaininterfaces:: Casttounknown
 

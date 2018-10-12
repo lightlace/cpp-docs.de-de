@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9eccefff291dc509f846bce951cfe9508834876e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7e64f5857a2b0530fb0346a2635611db03fd9bc8
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103878"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162554"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map-Klasse
 
@@ -173,7 +173,7 @@ Der zum Suchen des Map-Elements verwendete Schlüssel. Der Typ des *Schlüssel* 
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn der Schlüssel gefunden wurde, andernfalls `false`.
+**"true"** ist der Schlüssel gefunden wird; andernfalls **"false"**.
 
 ## <a name="insert"></a>  Map:: Insert-Methode
 
@@ -195,7 +195,7 @@ Der Wertteil des Schlüssel-Wert-Paars. Der Typ des *Wert* ist der Typname *V*.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn der Schlüssel eines vorhandenen Elements in der aktuellen Zuordnung entspricht *Schlüssel* und der Wertteil dieses Elements auf *Wert*. `false` Wenn kein vorhandenes Element in der aktuellen Zuordnung entspricht *Schlüssel* und *Schlüssel* und *Wert* Parametern zu einem Schlüssel-Wert-Paar gemacht und dann zur aktuellen Map hinzugefügt werden.
+**"true"** Wenn der Schlüssel eines vorhandenen Elements in der aktuellen Zuordnung entspricht *Schlüssel* und der Wertteil dieses Elements auf *Wert*. **"false"** kein vorhandenes Element in der aktuellen Zuordnung übereinstimmt *Schlüssel* und *Schlüssel* und *Wert* Parametern zu einem Schlüssel-Wert-Paar gemacht und dann hinzugefügt werden die aktuelle Zuordnung.
 
 ## <a name="lookup"></a>  Map:: Lookup-Methode
 

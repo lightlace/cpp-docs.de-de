@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c4ada69fcd687d63022d0527ddf8da43906c483
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8fe26b202dbe9aabc1ccf98a59ead6c51c498fc1
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412014"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163711"
 ---
 # <a name="itarget-class"></a>ITarget-Klasse
 
@@ -67,7 +67,7 @@ Der Datentyp der Nutzlast in den Nachrichten, die vom Zielblock akzeptiert.
 |----------|-----------------|
 |[propagate](#propagate)|Ruft beim Überschreiben in einer abgeleiteten Klasse übergibt asynchron eine Meldung von einem Quellblock an diesen Zielblock.|
 |[Senden](#send)|Ruft beim Überschreiben in einer abgeleiteten Klasse übergibt eine Nachricht synchron an den Zielblock.|
-|[supports_anonymous_source](#supports_anonymous_source)|Ruft beim Überschreiben in einer abgeleiteten Klasse gibt "true" oder "false", je nachdem, ob die Nachrichtenblock akzeptiert Nachrichten, die angeboten, die von einer Quelle, die nicht verknüpft ist. Wenn die überschriebene Methode zurückgibt `true`, das Ziel kann keine angebotene Nachricht verschieben, wie die Nutzung von eine zurückgestellte Nachricht zu einem späteren Zeitpunkt die Quelle in seiner Sourse Link Registrierung identifiziert werden erforderlich sind.|
+|[supports_anonymous_source](#supports_anonymous_source)|Ruft beim Überschreiben in einer abgeleiteten Klasse gibt "true" oder "false", je nachdem, ob die Nachrichtenblock akzeptiert Nachrichten, die angeboten, die von einer Quelle, die nicht verknüpft ist. Wenn die überschriebene Methode zurückgibt **"true"**, das Ziel kann keine angebotene Nachricht verschieben, wie die Nutzung von eine zurückgestellte Nachricht zu einem späteren Zeitpunkt die Quelle in seiner Sourse Link Registrierung identifiziert werden erforderlich sind.|
 
 ### <a name="protected-methods"></a>Geschützte Methoden
 
@@ -174,7 +174,7 @@ Wenn `send` zurückgegeben wird, die Nachricht entweder bereits akzeptiert, und 
 
 ##  <a name="supports_anonymous_source"></a> supports_anonymous_source
 
-Ruft beim Überschreiben in einer abgeleiteten Klasse gibt "true" oder "false", je nachdem, ob die Nachrichtenblock akzeptiert Nachrichten, die angeboten, die von einer Quelle, die nicht verknüpft ist. Wenn die überschriebene Methode zurückgibt `true`, das Ziel kann keine angebotene Nachricht verschieben, wie die Nutzung von eine zurückgestellte Nachricht zu einem späteren Zeitpunkt die Quelle in seiner Sourse Link Registrierung identifiziert werden erforderlich sind.
+Ruft beim Überschreiben in einer abgeleiteten Klasse gibt "true" oder "false", je nachdem, ob die Nachrichtenblock akzeptiert Nachrichten, die angeboten, die von einer Quelle, die nicht verknüpft ist. Wenn die überschriebene Methode zurückgibt **"true"**, das Ziel kann keine angebotene Nachricht verschieben, wie die Nutzung von eine zurückgestellte Nachricht zu einem späteren Zeitpunkt die Quelle in seiner Sourse Link Registrierung identifiziert werden erforderlich sind.
 
 ```
 virtual bool supports_anonymous_source();
@@ -182,7 +182,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn der Block Nachricht von einer Quelle akzeptieren kann, die nicht verknüpft ist `false` andernfalls.
+**"true"** , wenn der Block Nachricht von einer Quelle akzeptieren kann, die nicht verknüpft ist **"false"** andernfalls.
 
 ##  <a name="unlink_source"></a> unlink_source
 

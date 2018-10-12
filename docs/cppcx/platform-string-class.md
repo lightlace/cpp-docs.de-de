@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3777116bf2a641a4fdc220306680c0150d5ba2d0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2d9c68bde9fdd49e4007b8b6e1d92899d71dde4e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106412"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162541"
 ---
 # <a name="platformstring-class"></a>Platform::String-Klasse
 
@@ -174,7 +174,7 @@ Das zweite Zeichenfolgenobjekt oder `null`.
 
 Ein neues Zeichenfolgen^-Objekt, dessen Wert die Verkettung der Werte von `str1` und `str2` ist.
 
-Wenn `str1` ist `null` und `str2` nicht `str1` zurückgegeben wird. Wenn `str2` ist `null` und `str1` nicht `str2` zurückgegeben wird. Wenn `str1` und `str2` beide `null` sind, wird die leere Zeichenfolge (L "") zurückgegeben.
+Wenn `str1` `null` und `str2` ungleich null ist, wird `str1` zurückgegeben. Wenn `str2` `null` und `str1` ungleich null ist, wird `str2` zurückgegeben. Wenn `str1` und `str2` beide `null` sind, wird die leere Zeichenfolge (L "") zurückgegeben.
 
 ## <a name="data"></a>  String:: Data-Methode
 
@@ -240,7 +240,7 @@ Das zu vergleichende Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn `str` gleich dem aktuellen Objekt ist, andernfalls `false`.
+**"true"** Wenn `str` ist gleich dem aktuellen Objekt ist, andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -272,7 +272,7 @@ bool IsEmpty();
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn das aktuelle String-Objekt `null` oder die leere Zeichenfolge (L "") ist; andernfalls `false`.
+**"true"** Wenn die aktuelle `String` Objekt **null** oder eine leere Zeichenfolge (L"") ist, andernfalls **"false"**.
 
 ## <a name="isfastpass"></a>  String:: isfastpass-Methode
 
@@ -286,7 +286,7 @@ bool IsFastPass();
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn das aktuelle String-Objekt FAST-PASS ist; andernfalls `false`.
+**"true"** Wenn die aktuelle `String` Objekt ist Fast-Pass; andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -294,7 +294,7 @@ Beim Aufruf einer Funktion, bei der ein Objekt mit Verweiszählung ein Parameter
 
 ## <a name="length"></a>  String:: Length-Methode
 
-Ruft die Anzahl von Zeichen im aktuellen Zeichenfolgenobjekt ab.
+Ruft die Anzahl der Zeichen in der aktuellen `String` Objekt.
 
 ### <a name="syntax"></a>Syntax
 
@@ -304,7 +304,7 @@ unsigned int Length();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Anzahl von Zeichen im aktuellen Zeichenfolgenobjekt.
+Die Anzahl der Zeichen in der aktuellen `String` Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -337,7 +337,7 @@ Das zweite `String`-Objekt, dessen Inhalt `str1` angefügt wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn `str1` und `str2` gleich sind, andernfalls `false`.
+**"true"** Wenn *str1* gleich *str2*ist, andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -356,14 +356,14 @@ bool String::operator==( String^ str1, String^ str2);
 ### <a name="parameters"></a>Parameter
 
 *str1*<br/>
-Das erste zu vergleichende Zeichenfolgenobjekt.
+Das erste zu vergleichende `String`-Objekt.
 
 *str2*<br/>
-Das zweite zu vergleichende Zeichenfolgenobjekt.
+Das zweite zu vergleichende `String`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn der Inhalt von `str1` gleich `str2` ist; andernfalls `false`.
+**"true"** Wenn der Inhalt des `str1` gleich `str2`ist, andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -371,7 +371,7 @@ Dieser Operator entspricht [String:: CompareOrdinal](#compareordinal).
 
 ##  <a name="operator-greater-than"></a>  String:: Operator&gt;
 
-Gibt an, ob der Wert eines Zeichenfolgenobjekts größer als der Wert eines zweiten Zeichenfolgenobjekts ist.
+Gibt an, ob der Wert eines `String` -Quellobjekt ist größer als der Wert eines zweiten `String` Objekt.
 
 ### <a name="syntax"></a>Syntax
 
@@ -382,14 +382,14 @@ bool String::operator>( String^ str1, String^ str2);
 ### <a name="parameters"></a>Parameter
 
 *str1*<br/>
-Das erste String-Objekt.
+Das erste `String`-Objekt.
 
 *str2*<br/>
-Das zweite String-Objekt.
+Das zweite `String`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn der Wert von `str1` größer als der Wert von `str2` ist, andernfalls `false`.
+**"true"** Wenn der Wert des `str1` ist größer als der Wert des `str2`ist, andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -397,7 +397,7 @@ Dieser Operator entspricht beim expliziten Aufruf [String:: CompareOrdinal](#com
 
 ## <a name="operator-greater-than-or-equals"></a> String:: Operator&gt;=
 
-Gibt an, ob der Wert eines String-Objekts größer oder gleich dem Wert eines zweiten String-Objekts ist.
+Gibt an, ob der Wert eines `String` Objekt ist größer als oder gleich dem Wert eines zweiten `String` Objekt.
 
 ### <a name="syntax"></a>Syntax
 
@@ -408,18 +408,18 @@ bool String::operator>=( String^ str1, String^ str2);
 ### <a name="parameters"></a>Parameter
 
 *str1*<br/>
-Das erste String-Objekt.
+Das erste `String`-Objekt.
 
 *str2*<br/>
-Das zweite String-Objekt.
+Das zweite `String`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn der Wert von `str1` größer oder gleich dem Wert von `str2` ist, andernfalls `false`.
+**"true"** Wenn der Wert des `str1` ist größer als oder gleich dem Wert des `str2`ist, andernfalls **"false"**.
 
 ## <a name="operator-inequality"></a> String:: Operator! =
 
-Gibt an, ob zwei angegebene Zeichenfolgenobjekte unterschiedliche Werte haben.
+Gibt an, ob zwei angegebene `String` -Objekte verschiedene Werte haben.
 
 ### <a name="syntax"></a>Syntax
 
@@ -430,18 +430,18 @@ bool String::operator!=( String^ str1, String^ str2);
 ### <a name="parameters"></a>Parameter
 
 *str1*<br/>
-Das erste zu vergleichende Zeichenfolgenobjekt.
+Das erste zu vergleichende `String`-Objekt.
 
 *str2*<br/>
-Das zweite zu vergleichende Zeichenfolgenobjekt.
+Das zweite zu vergleichende `String`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn `str1` und `str2` ungleich sind, andernfalls `false`.
+**"true"** Wenn `str1` ist nicht gleich `str2`ist, andernfalls **"false"**.
 
 ## <a name="operator-less-than"></a> String:: Operator&lt;
 
-Gibt an, ob der Wert eines Zeichenfolgenobjekts kleiner als der Wert eines zweiten Zeichenfolgenobjekts ist.
+Gibt an, ob der Wert eines `String` Objekt ist kleiner als der Wert eines zweiten `String` Objekt.
 
 ### <a name="syntax"></a>Syntax
 
@@ -452,18 +452,18 @@ bool String::operator<( String^ str1, String^ str2);
 ### <a name="parameters"></a>Parameter
 
 *str1*<br/>
-Das erste String-Objekt.
+Das erste `String`-Objekt.
 
 *str2*<br/>
-Das zweite String-Objekt.
+Das zweite `String`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn der Wert von `str1` kleiner als der Wert von `str2` ist, andernfalls `false`.
+**"true"** Wenn der Wert des *str1* ist kleiner als der Wert des *str2*ist, andernfalls **"false"**.
 
 ## <a name="ctor"></a> String:: String-Konstruktor
 
-Initialisiert eine neue Instanz der Zeichenfolgenklasse mit einer Kopie der Eingabezeichenfolgendaten.
+Initialisiert eine neue Instanz der dem `String` Klasse mit einer Kopie der eingabezeichenfolgendaten.
 
 ### <a name="syntax"></a>Syntax
 
@@ -492,7 +492,7 @@ String^ s = L"Hello!";
 
 ## <a name="tostring"></a> String:: ToString
 
-Gibt ein neues Zeichenfolgenobjekt zurück, dessen Wert mit der aktuellen Zeichenfolge identisch ist.
+Gibt eine `String` Objekt, dessen Wert der aktuellen Zeichenfolge identisch.
 
 ### <a name="syntax"></a>Syntax
 
@@ -502,7 +502,7 @@ String^ String::ToString();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeichenfolgenobjekt, dessen Wert mit der aktuellen Zeichenfolge identisch ist.
+Ein `String` Objekt, dessen Wert der aktuellen Zeichenfolge identisch.
 
 ## <a name="see-also"></a>Siehe auch
 

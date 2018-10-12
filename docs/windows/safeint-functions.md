@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 504cfe0780cfb0116f59ae67937ea5f0370dc8b2
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 43960e70f1aad29fa4b8fc03517231c7658d155b
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235567"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162580"
 ---
 # <a name="safeint-functions"></a>SafeInt-Funktionen
 
@@ -93,7 +93,7 @@ inline bool SafeAdd (
 *t*<br/>
 [in] Die erste zu addierende Zahl. Dies muss vom Typ "t".
 
-*u*<br/>
+*n*<br/>
 [in] Die zweite zu addierende Zahl. Dies muss u sein.
 
 *Ergebnis*<br/>
@@ -101,7 +101,7 @@ inline bool SafeAdd (
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn kein Fehler auftritt. `false` Wenn ein Fehler auftritt.
+**"true"** Wenn kein Fehler auftritt. **"false"** Wenn ein Fehler auftritt.
 
 ## <a name="safecast"></a>SafeCast
 
@@ -125,7 +125,7 @@ inline bool SafeCast (
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn kein Fehler auftritt. `false` Wenn ein Fehler auftritt.
+**"true"** Wenn kein Fehler auftritt. **"false"** Wenn ein Fehler auftritt.
 
 ## <a name="safedivide"></a>SafeDivide
 
@@ -145,7 +145,7 @@ inline bool SafeDivide (
 *t*<br/>
 [in] Der Divisor. Dies muss vom Typ "t".
 
-*u*<br/>
+*n*<br/>
 [in] Der Dividend. Dies muss u sein.
 
 *Ergebnis*<br/>
@@ -153,7 +153,7 @@ inline bool SafeDivide (
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn kein Fehler auftritt. `false` Wenn ein Fehler auftritt.
+**"true"** Wenn kein Fehler auftritt. **"false"** Wenn ein Fehler auftritt.
 
 ## <a name="safeequals"></a>SafeEquals
 
@@ -172,12 +172,12 @@ inline bool SafeEquals (
 *t*<br/>
 [in] Die erste zu vergleichende Zahl. Dies muss vom Typ "t".
 
-*u*<br/>
+*n*<br/>
 [in] Die zweite zu vergleichende Zahl. Dies muss u sein.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn *t* und *u* gleich sind; andernfalls `false`.
+**"true"** Wenn *t* und *u* gleich sind; andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -200,12 +200,12 @@ inline bool SafeGreaterThan (
 *t*<br/>
 [in] Die erste zu vergleichende Zahl. Dies muss vom Typ `T`.
 
-*u*<br/>
+*n*<br/>
 [in] Die zweite zu vergleichende Zahl. Dies muss vom Typ `U`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn *t* ist größer als *u*andernfalls `false`.
+**"true"** Wenn *t* ist größer als *u*andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -228,12 +228,12 @@ inline bool SafeGreaterThanEquals (
 *t*<br/>
 [in] Die erste zu vergleichende Zahl. Dies muss vom Typ `T`.
 
-*u*<br/>
+*n*<br/>
 [in] Die zweite zu vergleichende Zahl. Dies muss vom Typ `U`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn *t* ist größer als oder gleich *u*andernfalls `false`.
+**"true"** Wenn *t* ist größer als oder gleich *u*andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -256,12 +256,12 @@ inline bool SafeLessThan (
 *t*<br/>
 [in] Die erste Zahl. Dies muss vom Typ `T`.
 
-*u*<br/>
+*n*<br/>
 [in] Die zweite Anzahl. Dies muss vom Typ `U`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn *t* ist kleiner als *u*andernfalls `false`.
+**"true"** Wenn *t* ist kleiner als *u*andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -284,12 +284,12 @@ inline bool SafeLessThanEquals (
 *t*<br/>
 [in] Die erste zu vergleichende Zahl. Dies muss vom Typ `T`.
 
-*u*<br/>
+*n*<br/>
 [in] Die zweite zu vergleichende Zahl. Dies muss vom Typ `U`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn *t* ist kleiner als oder gleich *u*andernfalls `false`.
+**"true"** Wenn *t* ist kleiner als oder gleich *u*andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -313,7 +313,7 @@ inline bool SafeModulus (
 *t*<br/>
 [in] Der Divisor. Dies muss vom Typ `T`.
 
-*u*<br/>
+*n*<br/>
 [in] Der Dividend. Dies muss vom Typ `U`.
 
 *Ergebnis*<br/>
@@ -321,7 +321,7 @@ inline bool SafeModulus (
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn kein Fehler auftritt. `false` Wenn ein Fehler auftritt.
+**"true"** Wenn kein Fehler auftritt. **"false"** Wenn ein Fehler auftritt.
 
 ## <a name="safemultiply"></a>SafeMultiply
 
@@ -341,7 +341,7 @@ inline bool SafeMultiply (
 *t*<br/>
 [in] Die erste zu multiplizierende Zahl. Dies muss vom Typ `T`.
 
-*u*<br/>
+*n*<br/>
 [in] Die zweite zu multiplizierende Zahl. Dies muss vom Typ `U`.
 
 *Ergebnis*<br/>
@@ -368,12 +368,12 @@ inline bool SafeNotEquals (
 *t*<br/>
 [in] Die erste zu vergleichende Zahl. Dies muss vom Typ `T`.
 
-*u*<br/>
+*n*<br/>
 [in] Die zweite zu vergleichende Zahl. Dies muss vom Typ `U`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn *t* und *u* nicht gleich sind; andernfalls `false`.
+**"true"** Wenn *t* und *u* nicht gleich sind; andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -397,7 +397,7 @@ inline bool SafeSubtract (
 *t*<br/>
 [in] Die erste Zahl in der Subtraktion. Dies muss vom Typ `T`.
 
-*u*<br/>
+*n*<br/>
 [in] Die zu subtrahierende Zahl *t*. Dies muss vom Typ `U`.
 
 *Ergebnis*<br/>
@@ -405,4 +405,4 @@ inline bool SafeSubtract (
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn kein Fehler auftritt. `false` Wenn ein Fehler auftritt.
+**"true"** Wenn kein Fehler auftritt. **"false"** Wenn ein Fehler auftritt.

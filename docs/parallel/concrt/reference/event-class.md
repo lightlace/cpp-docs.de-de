@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74e871255e3308450764e8f65cdb6acebe79df38
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ab586243df9b015c95f4a703744bfb02a54d064e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437741"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162190"
 ---
 # <a name="event-class"></a>event-Klasse
 
@@ -167,7 +167,7 @@ Ein Array von Ereignissen, auf die gewartet werden soll. Die Anzahl der Ereignis
 Die Anzahl von Ereignissen innerhalb des im `_PPEvents`-Parameter angegebenen Arrays.
 
 *_FWaitAll*<br/>
-Wenn der Parameter auf den Wert `true` festgelegt wird, gibt dies an, dass innerhalb des Arrays, das im `_PPEvents`-Parameter angegeben wurde, alle Ereignisse ausgelöst werden müssen, um den Wartevorgang zu beenden. Eine Festlegung auf den Wert `false` gibt an, dass jedes ausgelöste Ereignis innerhalb des Arrays, das im `_PPEvents`-Parameter angegeben wurde, für den Wartevorgang ausreichend ist.
+Wenn auf den Wert festgelegt **"true"**, der Parameter gibt an, dass alle Ereignisse innerhalb des Arrays in angegeben die `_PPEvents` Parameter ausgelöst werden muss, um den Wartevorgang zu beenden. Wenn auf den Wert festgelegt **"false"**, wird angegeben, dass jedes ausgelöste Ereignis innerhalb des Arrays in angegeben die `_PPEvents` -Parameter signalisiert den Wartevorgang.
 
 *_Timeout*<br/>
 Gibt die Wartezeit in Millisekunden bis zum Timeout an. Der Wert `COOPERATIVE_TIMEOUT_INFINITE` gibt an, dass kein Timeout besteht.
@@ -181,7 +181,7 @@ Wenn die Anforderungen des Wartevorgangs erfüllt wurden, ist dies der Index inn
 Wenn der Parameter `_FWaitAll` auf den Wert `true` festgelegt wurde, um anzugeben, dass alle Ereignisse signalisiert werden müssen, um den Wartevorgang zu beenden, hat der von der Funktion zurückgegebene Index keine andere besondere Bedeutung außer der Tatsache, dass er nicht den Wert `COOPERATIVE_WAIT_TIMEOUT` darstellt.
 
 > [!IMPORTANT]
->  Rufen Sie in einer app (Universelle Windows Plattform) nicht `wait_for_multiple` im asta thread auf, da dieser Aufruf den aktuellen Thread blockieren kann und dazu führen, die app dass kann reagiert.
+> Rufen Sie in einer app (Universelle Windows Plattform) nicht `wait_for_multiple` im asta thread auf, da dieser Aufruf den aktuellen Thread blockieren kann und dazu führen, die app dass kann reagiert.
 
 ## <a name="see-also"></a>Siehe auch
 
