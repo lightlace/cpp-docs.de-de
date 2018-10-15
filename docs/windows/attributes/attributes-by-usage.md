@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 39dac1bda25a66ecd67feac167e0029931a204e0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 49e298af793655bb3ea3854909a16dd4db03c6a3
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791830"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328180"
 ---
 # <a name="attributes-by-usage"></a>Attribute nach Verwendung
 
 Dieses Thema enthält Attribute gemäß der Sprachelemente von C++ für die sie gelten.
 
-Wenn ein Attribut ein Visual C++-Element vorangestellt, die nicht im Bereich für das Attribut ist ist, wird der Attributblock als Kommentar behandelt.
+Wenn ein Attribut ein Elements, das nicht im Bereich für das Attribut ist vorangeht, wird der Attributblock als Kommentar behandelt.
 
 |Attribut|Beschreibung|
 |---------------|-----------------|
@@ -55,7 +55,7 @@ Die folgenden Attribute gelten für die [-Schnittstelle (oder __interface)](../.
 |Attribut|Beschreibung|
 |---------------|-----------------|
 |[async_uuid](async-uuid.md)|Gibt an, die UUID, die den MIDL-Compiler definiert synchrone und asynchrone Versionen einer COM-Schnittstelle weiterleitet.|
-|[Benutzerdefinierte](custom-cpp.md)|Können Sie eigene Attribute definieren.|
+|[custom](custom-cpp.md)|Können Sie eigene Attribute definieren.|
 |[dispinterface](dispinterface.md)|Fügt eine Schnittstelle in die IDL-Datei als Verteilschnittstelle ein.|
 |[dual](dual.md)|Fügt eine Schnittstelle in der IDL-Datei als eine duale Schnittstelle an.|
 |[export](export.md)|Bewirkt, dass eine Datenstruktur, in der IDL-Datei platziert wird.|

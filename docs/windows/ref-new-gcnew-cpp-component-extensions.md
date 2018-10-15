@@ -1,7 +1,7 @@
 ---
-title: REF neu, Gcnew (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
+title: REF neu, Gcnew (C++ / CLI und C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -20,14 +20,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c31cda7c074b06025051661d27f00d2624721d0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f5a10278957e6a89b52e744f8f0dd78b475f7730
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596157"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328310"
 ---
-# <a name="ref-new-gcnew--c-component-extensions"></a>ref new, gcnew (Komponentenerweiterungen für C++)
+# <a name="ref-new-gcnew--ccli-and-ccx"></a>REF neu, Gcnew (C++ / CLI und C++ / CX)
 
 Die **Ref neue** -aggregatschlüsselwort ordnet eine Instanz eines Typs, der die Garbage Collection, die ein Handle zurückgibt, wenn das Objekt wird nicht zugegriffen werden kann ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) auf das zugeordnete Objekt.
 
@@ -99,4 +99,4 @@ int main()
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET- und UWP](../windows/component-extensions-for-runtime-platforms.md)

@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0b305e928fec58833c4aac3f5625783aa2cb9ef
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 431ca9e88e644bd7a7c38f9ab4a1c3faeab6f9bb
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791990"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328401"
 ---
 # <a name="attributes-alphabetical-reference"></a>Alphabetische Attributreferenz
 
-Die folgenden Attribute sind in Visual C++ verfügbar.
+Die folgenden Attribute sind in Microsoft C++-Compiler verfügbar:
 
 |Attribut|Beschreibung|
 |---------------|-----------------|
@@ -39,10 +39,10 @@ Die folgenden Attribute sind in Visual C++ verfügbar.
 |[call_as](call-as.md)|Aktiviert eine Funktion nicht remotefähige an eine remote-Funktion zugeordnet werden soll.|
 |[case](case-cpp.md)|Verwendung der [Switch_type](switch-type.md) Attribut in einer Union.|
 |[coclass](coclass.md)|Erstellt ein COM-Objekt, die eine COM-Schnittstelle implementieren können.|
-|[COM_INTERFACE_ENTRY](com-interface-entry-cpp.md)|Fügt einen Eintrag für die Schnittstelle eine COM-Zuordnung.|
+|[com_interface_entry](com-interface-entry-cpp.md)|Fügt einen Eintrag für die Schnittstelle eine COM-Zuordnung.|
 |[Steuerelement](control.md)|Gibt an, dass der benutzerdefinierte Typ eines Steuerelements.|
 |[cpp_quote](cpp-quote.md)|Gibt die angegebene Zeichenfolge verwendet werden, ohne die Anführungszeichen in der generierten Headerdatei an.|
-|[Benutzerdefinierte](custom-cpp.md)|Können Sie eigene Attribute definieren.|
+|[custom](custom-cpp.md)|Können Sie eigene Attribute definieren.|
 |[db_accessor](db-accessor.md)|Bindet Spalten in einem Rowset, und bindet sie an der entsprechenden Accessor-Zuordnungen.|
 |[db_column](db-column.md)|Bindet eine angegebene Spalte auf das Rowset an.|
 |[db_command](db-command.md)|Führt einen OLE DB-Befehl.|
@@ -73,7 +73,7 @@ Die folgenden Attribute sind in Visual C++ verfügbar.
 |[idl_quote](idl-quote.md)|Können Sie Attribute verwenden, oder IDL-Konstrukte, die in der aktuellen Version von Visual C++ nicht unterstützt werden.|
 |[iid_is](iid-is.md)|Gibt die IID für die COM-Schnittstelle, die einen Schnittstellenzeiger einen verweist.|
 |[immediatebind](immediatebind.md)|Gibt an, dass die Datenbank über alle Änderungen an einer Eigenschaft eines datengebundenen Objekts sofort benachrichtigt wird.|
-|[Implementiert](implements-cpp.md)|Gibt die Dispatch-Schnittstellen, die erzwungen werden, um die IDL-Co-Klasse angehören.|
+|[implements](implements-cpp.md)|Gibt die Dispatch-Schnittstellen, die erzwungen werden, um die IDL-Co-Klasse angehören.|
 |[implements_category](implements-category.md)|Gibt an, für die Klasse implementierten Komponentenkategorien.|
 |[import](import.md)|Gibt eine andere IDL, Header oder ODL-Datei enthält Definitionen, die Sie von Ihrem wichtigsten IDL-Datei verweisen möchten.|
 |[importidl](importidl.md)|Fügt die angegebenen IDL-Datei in der generierten IDL-Datei an.|
@@ -88,7 +88,7 @@ Die folgenden Attribute sind in Visual C++ verfügbar.
 |[licensed](licensed.md)|Gibt an, dass die Co-Klasse, die auf die es angewendet wird lizenziert, und muss mit instanziiert werden `IClassFactory2`.|
 |[local](local-cpp.md)|Ermöglicht Ihnen die Verwendung den MIDL-Compiler als ein Header-Generator, wenn in der Schnittstelle-Header verwendet. Bei Verwendung in einer einzelnen Funktion kennzeichnet eine lokale Prozedur, die für die keine Stubs generiert werden.|
 |[max_is](max-is.md)|Legt fest, den maximalen Wert für ein gültiges Array-Index.|
-|[Modul](module-cpp.md)|Definiert den Bibliotheksblock in der IDL-Datei.|
+|[module](module-cpp.md)|Definiert den Bibliotheksblock in der IDL-Datei.|
 |[ms_union](ms-union.md)|Steuert die Netzwerk-datenausrichtung Darstellung nonencapsulated Unions.|
 |[no_injected_text](no-injected-text.md)|Verhindert, dass den Compiler Einfügen von Code durch Verwendung des Attributs.|
 |[nonbrowsable](nonbrowsable.md)|Gibt an, dass ein Schnittstellenmember nicht in einem Eigenschaftenbrowser angezeigt werden soll.|
@@ -97,7 +97,7 @@ Die folgenden Attribute sind in Visual C++ verfügbar.
 |[object](object-cpp.md)|Identifiziert eine benutzerdefinierte Schnittstelle an. gleichbedeutend mit benutzerdefinierten Attribut.|
 |[odl](odl.md)|Gibt eine Schnittstelle als Schnittstelle Objekt Description Language (ODL).|
 |[oleautomation](oleautomation.md)|Gibt an, dass eine Schnittstelle mit der Automatisierung kompatibel ist.|
-|[Optionale](optional-cpp.md)|Gibt einen optionalen Parameter für eine Memberfunktion an.|
+|[optional](optional-cpp.md)|Gibt einen optionalen Parameter für eine Memberfunktion an.|
 |[out](out-cpp.md)|Gibt die Zeigerparameter an, die von der aufgerufenen Prozedur an die aufrufende Prozedur zurückgegeben werden (vom Server an den Client).|
 |[pointer_default](pointer-default.md)|Gibt das Standardattribut für die Zeiger für alle Zeiger, mit Ausnahme der obersten Ebene Zeigern, die angezeigt werden in der Parameterliste.|
 |[pragma](pragma.md)|Gibt die angegebene Zeichenfolge verwendet werden, ohne die Anführungszeichen in der generierten IDL-Datei aus.|
@@ -124,7 +124,7 @@ Die folgenden Attribute sind in Visual C++ verfügbar.
 |[switch_is](switch-is.md)|Gibt den Ausdruck oder einen Bezeichner fungiert als die union kombiniert werden sollen, die die union-Member auswählt.|
 |[switch_type](switch-type.md)|Gibt den Typ der Variablen als die union Discriminant verwendet.|
 |[synchronize](synchronize.md)|Synchronisiert den Zugriff auf eine Methode.|
-|[Threading](threading-cpp.md)|Gibt das Threadingmodell für eine COM-Objekt.|
+|[threading](threading-cpp.md)|Gibt das Threadingmodell für eine COM-Objekt.|
 |[transmit_as](transmit-as.md)|Weist den Compiler dargestellt ein, die Client- und serveranwendungen bearbeiten zu können, müssen, mit einem übertragenen Typ zuordnen.|
 |[uidefault](uidefault.md)|Gibt an, dass der Typinformationsmember das Standardelement für die Anzeige in der Benutzeroberfläche.|
 |[unique](unique-cpp.md)|Gibt einen eindeutigen Zeiger.|

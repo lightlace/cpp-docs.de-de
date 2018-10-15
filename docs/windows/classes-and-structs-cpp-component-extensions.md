@@ -1,7 +1,7 @@
 ---
-title: Klassen und Strukturen (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
+title: Verweisklassen- und Referenzstruktur (C++ / CLI und C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60e388e18e6d3607dac1946c3fd9a511e948afd4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f2d7ceea7dd3253b28eab5b5fad28381f115225f
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448375"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328069"
 ---
-# <a name="classes-and-structs--c-component-extensions"></a>Klassen und Strukturen (Komponentenerweiterungen für C++)
+# <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>Verweisklassen- und Referenzstruktur (C++ / CLI und C++ / CX)
 
-Deklariert eine Klasse oder Struktur, deren *Objektlebensdauer* automatisch verwaltet wird. Wenn auf das Objekt nicht mehr zugegriffen werden kann oder den Gültigkeitsbereich verlässt, verwirft Visual C++ automatisch den Speicher, der dem Objekt zugeordnet ist.
+Die **Verweisklasse** oder **Referenzstruktur** Erweiterungen Deklarieren einer Klasse oder Struktur, deren *Objektlebensdauer* automatisch verwaltet wird. Wenn das Objekt nicht mehr zugegriffen werden kann ist, oder den Gültigkeitsbereich verlässt, wird der Arbeitsspeicher freigegeben.
 
 ## <a name="all-runtimes"></a>Alle Laufzeiten
 
@@ -61,7 +61,7 @@ Der Name der Klasse oder Struktur.
 *base_type*<br/>
 (Optional) Ein Basistyp. Jedoch kann ein Werttyp nicht als Basistyp dienen.
 
-Weitere Informationen finden Sie unter der sprachspezifische Beschreibungen für diesen Parameter in der Windows-Runtime und die Common Language Runtimesections.
+Weitere Informationen finden Sie unter der sprachspezifische Beschreibungen für diesen Parameter in den Abschnitten zu Windows-Runtime und die Common Language Runtime.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -129,4 +129,4 @@ Compileroption: `/clr`
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET- und UWP](../windows/component-extensions-for-runtime-platforms.md)

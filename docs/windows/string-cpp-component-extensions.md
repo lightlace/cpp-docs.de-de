@@ -1,7 +1,7 @@
 ---
-title: Zeichenfolge (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
+title: Zeichenfolge (C++ / CLI und C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/08/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,24 +16,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d6b6ce066c84056997ec9b54c9d74e782064df4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b835f1d507c8e577f8b44ca314422dd5b6f2ca46
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408400"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327426"
 ---
-# <a name="string--c-component-extensions"></a>Zeichenfolge (Komponentenerweiterungen für C++)
-
-Der Visual C++-Compiler unterstützt *Zeichenfolgen*, die Objekte, die Darstellung von Text als eine Folge von Zeichen sind. Visual C++ unterstützt Zeichenfolgenvariablen, deren Wert implizit ist, und Literale, deren Wert eine explizite Zeichenfolge in Anführungszeichen ist.
-
-## <a name="all-runtimes"></a>Alle Laufzeiten
+# <a name="string--ccli-and-ccx"></a>Zeichenfolge (C++ / CLI und C++ / CX)
 
 Die Windows-Runtime und die Common Language Runtime stellen Zeichenfolgen als Objekte dar, deren belegter Speicher automatisch verwaltet wird. Das heißt, dass es nicht erforderlich ist, den Arbeitsspeicher für eine Zeichenfolge explizit zu verwerfen, wenn die Zeichenfolgenvariable außerhalb des gültigen Bereichs liegt oder die Anwendung beendet wird. Um anzugeben, dass die Lebensdauer eines Zeichenfolgenobjekts automatisch verwaltet werden soll, deklarieren Sie den String-Datentyp mit der [Handle-to-Object (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) Modifizierer.
 
 ## <a name="windows-runtime"></a>Windows-Runtime
 
-Die Windows-Runtime-Architektur erfordert von Visual C++, den `String`-Datentyp im `Platform`-Namespace zu implementieren. Zur Vereinfachung stellt Visual C++ den `string`-Datentyp, der synonym mit `Platform::String` ist, auch im `default`-Namespace bereit.
+Die Windows-Runtime-Architektur erfordert, dass die `String` -Datentyp in befinden die `Platform` Namespace. Zur Vereinfachung stellt Visual C++ den `string`-Datentyp, der synonym mit `Platform::String` ist, auch im `default`-Namespace bereit.
 
 ### <a name="syntax"></a>Syntax
 
@@ -52,8 +48,6 @@ Compileroption: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-In diesem Thema wird erläutert, wie der Visual C++-Compiler Zeichenfolgenliterale verarbeitet, wenn er mit der `/clr`-Compileroption ausgeführt wird. Um `/clr` zu verwenden, müssen Sie ebenfalls die Common Language Runtime (CLR), C++/CLI-Syntax und verwaltete Objekte verwenden. Weitere Informationen zu `/clr`, finden Sie unter [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md).
-
 Beim Kompilieren mit `/clr` konvertiert der Compiler Zeichenfolgenliterale in Zeichenfolgen des Typs <xref:System.String>. Um die Abwärtskompatibilität mit vorhandenem Code beizubehalten, bestehen dabei die folgenden beiden Ausnahmen:
 
 - Ausnahmebehandlung. Wenn ein Zeichenfolgenliteral ausgelöst wird, fängt der Compiler dieses auch als Zeichenfolgenliteral ab.
@@ -62,11 +56,11 @@ Beim Kompilieren mit `/clr` konvertiert der Compiler Zeichenfolgenliterale in Ze
 
 Der Compiler verfügt auch über integrierte Unterstützung für drei Operatoren, die Sie überschreiben können, um ihr Verhalten anzupassen:
 
-- System::String-^ Operator + (System::String, System::String);
+- System:: String ^ Operator + (System:: String, System:: String);
 
-- System::String ^ operator +( System::Object, System::String);
+- System:: String ^ Operator + (System:: Object, System:: String);
 
-- System::String ^ operator +( System::String, System::Object);
+- System:: String ^ Operator + (System:: String, System:: Object);
 
 Wenn ein <xref:System.String> übergeben wird, wird das Objekt (mit ToString) mit der Zeichenfolge vom Compiler geschachtelt und ggf. verkettet.
 
@@ -91,9 +85,9 @@ Im folgenden Codebeispiel wird das Verketten und Vergleichen von Zeichenfolgen v
 using namespace System;
 
 int main() {
-   String ^ a = gcnew String("abc");
-   String ^ b = "def";   // same as gcnew form
-   Object ^ c = gcnew String("ghi");
+   String^ a = gcnew String("abc");
+   String^ b = "def";   // same as gcnew form
+   Object^ c = gcnew String("ghi");
 
    char d[100] = "abc";
 
@@ -111,12 +105,12 @@ int main() {
    // concatenation of a System::String and string literal
    Console::WriteLine(a + "zzz");
 
-   // you can append to a System::String ^
+   // you can append to a System::String^
    Console::WriteLine(a + 1);
    Console::WriteLine(a + 'a');
    Console::WriteLine(a + 3.1);
 
-   // test System::String ^ for equality
+   // test System::String^ for equality
    a += b;
    Console::WriteLine(a);
    a = b;
@@ -127,12 +121,12 @@ int main() {
    if (a != b)  
       Console::WriteLine("a and b are not equal");
 
-   // System:String ^ and tracking reference
+   // System:String^ and tracking reference
    String^% rstr1 = a;
    Console::WriteLine(rstr1);
 
-   // testing an empty System::String ^
-   String ^ n;
+   // testing an empty System::String^
+   String^ n;
    if (n == nullptr)  
       Console::WriteLine("n is empty");
 }
@@ -179,29 +173,29 @@ using namespace System;
 void Test_Overload(const char * a) {
    Console::WriteLine("const char * a");
 }
-void Test_Overload(String ^ a) {
-   Console::WriteLine("String ^ a");
+void Test_Overload(String^ a) {
+   Console::WriteLine("String^ a");
 }
 
 // overload will be called instead of compiler defined operator
-String ^ operator +(String ^ a, String ^ b) {
-   return ("overloaded +(String ^ a, String ^ b)");
+String^ operator +(String^ a, String^ b) {
+   return ("overloaded +(String^ a, String^ b)");
 }
 
 // overload will be called instead of compiler defined operator
-String ^ operator +(Object ^ a, String ^ b) {
-   return ("overloaded +(Object ^ a, String ^ b)");
+String^ operator +(Object^ a, String^ b) {
+   return ("overloaded +(Object^ a, String^ b)");
 }
 
 // overload will be called instead of compiler defined operator
-String ^ operator +(String ^ a, Object ^ b) {
-   return ("overloaded +(String ^ a, Object ^ b)");
+String^ operator +(String^ a, Object^ b) {
+   return ("overloaded +(String^ a, Object^ b)");
 }
 
 int main() {
-   String ^ a = gcnew String("abc");
-   String ^ b = "def";   // same as gcnew form
-   Object ^ c = gcnew String("ghi");
+   String^ a = gcnew String("abc");
+   String^ b = "def";   // same as gcnew form
+   Object^ c = gcnew String("ghi");
 
    char d[100] = "abc";
 
@@ -215,13 +209,13 @@ int main() {
 ```
 
 ```Output
-overloaded +(String ^ a, String ^ b)
+overloaded +(String^ a, String^ b)
 
-overloaded +(String ^ a, Object ^ b)
+overloaded +(String^ a, Object^ b)
 
-overloaded +(Object ^ a, String ^ b)
+overloaded +(Object^ a, String^ b)
 
-String ^ a
+String^ a
 
 const char * a
 ```
@@ -277,6 +271,6 @@ System.String
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Komponentenerweiterungen für .NET- und UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Zeichenfolgen- und Zeichenliterale](../cpp/string-and-character-literals-cpp.md)<br/>
 [/clr (Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md)

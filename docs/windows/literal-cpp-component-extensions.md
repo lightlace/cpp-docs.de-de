@@ -1,7 +1,7 @@
 ---
-title: Literal (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
+title: Literale (C++ / CLI und C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76a57261b28679c4f05b677dc7b49008535c921b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8168b3cd981bb288df35659ffd3520a7c8597d1e
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596445"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328067"
 ---
-# <a name="literal-c-component-extensions"></a>literal (Komponentenerweiterungen für C++)
+# <a name="literal-ccli-and-ccx"></a>Literale (C++ / CLI und C++ / CX)
 
 Eine Variable (Datenmember) markiert, als **literal** in einer **"/ CLR"** Kompilierung ist das systemeigene Äquivalent der ein **static Const** Variable.
 
@@ -137,4 +137,4 @@ Compileroption: `/clr`
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET- und UWP](../windows/component-extensions-for-runtime-platforms.md)

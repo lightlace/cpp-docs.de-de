@@ -1,7 +1,7 @@
 ---
-title: Boxing (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
+title: Boxing (C++ / CLI und C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92dc2032031fd0f3032db57b9eca8c723367da9e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b11ac2f6b640e42c14522b45fe0c3da89036ae24
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316717"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328011"
 ---
-# <a name="boxing--c-component-extensions"></a>Boxing (Komponentenerweiterungen für C++)
+# <a name="boxing--ccli-and-ccx"></a>Boxing (C++ / CLI und C++ / CX)
 
-Visual C++-Compiler kann Werttypen konvertieren, auf Objekte in ein so genanntes *Boxing*, und Konvertieren von Objekten in Werttypen in einem Vorgang namens *unboxing*.
+Die Konvertierung von Werttypen in Objekte heißt *Boxing*, und die Konvertierung von Objekten in Werttypen heißt *unboxing*.
 
 ## <a name="all-runtimes"></a>Alle Laufzeiten
 
@@ -86,7 +86,7 @@ Weitere Informationen finden Sie unter [Boxing (C++ / CX)](https://msdn.microsof
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-Visual C++-Compiler konvertiert nun Boxing-Werttypen in  <xref:System.Object>. Dies ist möglich durch eine compiler-definierte Konvertierung zur Konvertierung von Werttypen in <xref:System.Object>.
+Die Compiler-Felder von Werttypen zu <xref:System.Object>. Dies ist möglich durch eine compiler-definierte Konvertierung zur Konvertierung von Werttypen in <xref:System.Object>.
 
 Mit Boxing und Unboxing können Werttypen wie Objekte behandelt werden. Werttypen, einschließlich Strukturtypen und integrierten Typen wie int, können in und aus dem Typ <xref:System.Object> konvertiert werden.
 
@@ -200,4 +200,4 @@ in func2(System::ValueType^)
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET- und UWP](../windows/component-extensions-for-runtime-platforms.md)

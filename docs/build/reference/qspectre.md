@@ -1,7 +1,7 @@
 ---
 title: / Qspectre | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/12/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ed4b84ab761653dde4da6adcd14ec8e77334688
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 0baba6503d1d5b4e382347f4f4d9680b11f954ce
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821646"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328518"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -32,7 +32,7 @@ Gibt an, der compilergenerierung von Anweisungen, um bestimmte Spectre-Variante 
 
 ## <a name="remarks"></a>Hinweise
 
-Die **"/ qspectre"** Option ist in Visual Studio 2017 Version 15.5.5 verfügbar und höher, und klicken Sie in Visual Studio 2015 Update 3 über [KB 4338871](https://support.microsoft.com/en-us/help/4338871/visual-studio-2015-update-3-spectre-variant-1-toolset-qspectre). Veranlasst den Compiler zum Einfügen von Anweisungen, um bestimmte verringern [Spectre-Sicherheitsrisiken](https://spectreattack.com/spectre.pdf). Diese Sicherheitsrisiken namens *seitenkanalangriffe mit spekulativer Ausführung*, wirken sich auf viele Betriebssysteme und modernen Prozessoren, einschließlich der Prozessoren von Intel, AMD und ARM.
+Die **"/ qspectre"** Option ist in Visual Studio 2017 Version 15.5.5 verfügbar und höher, und klicken Sie in Visual Studio 2015 Update 3 über [KB 4338871](https://support.microsoft.com/help/4338871/visual-studio-2015-update-3-spectre-variant-1-toolset-qspectre). Veranlasst den Compiler zum Einfügen von Anweisungen, um bestimmte verringern [Spectre-Sicherheitsrisiken](https://spectreattack.com/spectre.pdf). Diese Sicherheitsrisiken namens *seitenkanalangriffe mit spekulativer Ausführung*, wirken sich auf viele Betriebssysteme und modernen Prozessoren, einschließlich der Prozessoren von Intel, AMD und ARM.
 
 Die **"/ qspectre"** Option ist standardmäßig deaktiviert.
 

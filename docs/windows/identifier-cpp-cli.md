@@ -1,7 +1,7 @@
 ---
 title: __identifier (C++ / CLI) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,25 +18,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 572767c2f85b07f201bef93578b14b731aa467e0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 09a8b69402dbe3812bdd49f8944c979300209bff
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415017"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328271"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 
-Ermöglicht die Verwendung von Visual C++-Schlüsselwörter als Bezeichner.
+Ermöglicht die Verwendung von C++-Schlüsselwörter als Bezeichner.
 
 ## <a name="all-platforms"></a>Alle Plattformen
 
 ### <a name="syntax"></a>Syntax
 
 ```cpp
-__identifier(
-Visual_C++_keyword
-)  
+__identifier(C++_keyword)  
 ```
 
 ### <a name="remarks"></a>Hinweise
@@ -53,7 +51,7 @@ Compileroption: `/ZW`
 
 **Beispiel**
 
-Im folgenden Beispiel wird eine Klasse namens **Vorlage** in c# erstellt wurde und als eine DLL-Datei verteilt wird. In der Visual C++-Programm, das verwendet die **Vorlage** -Klasse, die **__identifier** Schlüsselwort verbirgt die Tatsache, **Vorlage** ist ein standard C++-Schlüsselwort.
+Im folgenden Beispiel wird eine Klasse namens **Vorlage** in c# erstellt wurde und als eine DLL-Datei verteilt wird. In C++ / CLI-Programm, das verwendet die **Vorlage** -Klasse, die **__identifier** Schlüsselwort verbirgt die Tatsache, **Vorlage** ist ein standard C++-Schlüsselwort.
 
 ```cs
 // identifier_template.cs
@@ -85,7 +83,7 @@ Compileroption: `/clr`
 
 ### <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird eine Klasse namens **Vorlage** in c# erstellt wurde und als eine DLL-Datei verteilt wird. In der Visual C++-Programm, das verwendet die **Vorlage** -Klasse, die **__identifier** Schlüsselwort verbirgt die Tatsache, **Vorlage** ist ein standard C++-Schlüsselwort.
+Im folgenden Beispiel wird eine Klasse namens **Vorlage** in c# erstellt wurde und als eine DLL-Datei verteilt wird. In C++ / CLI-Programm, das verwendet die **Vorlage** -Klasse, die **__identifier** Schlüsselwort verbirgt die Tatsache, **Vorlage** ist ein standard C++-Schlüsselwort.
 
 ```cs
 // identifier_template.cs
@@ -108,5 +106,5 @@ int main() {
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)<br/>
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET- und UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Komponentenerweiterungen für .NET- und UWP](../windows/component-extensions-for-runtime-platforms.md)

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d745b912406407cd56252ba593601a7794fc841d
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 77664c6e849707e6ec9efafbc816a586d5b4850e
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234704"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328206"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Exemplarische Vorgehensweise: Erstellen einer UWP-app mithilfe von WRL und Media Foundation
 
@@ -34,7 +34,7 @@ In den meisten Fällen können Sie mithilfe C++ / CX verwenden, um die Windows-R
 > [!NOTE]
 > Auch wenn dieses Codebeispiel lang ist, stellt es das erforderliche Minimum dar, um eine nützliche Media Foundation-Transformation zu erstellen. Sie können es als Ausgangspunkt für Ihre eigene benutzerdefinierte Transformation verwenden. In diesem Beispiel basiert auf der [medienerweiterungen](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096), anzuwendende medienerweiterungen verwendet Effekte auf Videos, decodieren, und schemahandler zu erstellen, die Medienstreams generieren.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - Erleben Sie mit der [Windows-Runtime](https://msdn.microsoft.com/library/windows/apps/br211377.aspx).
 
@@ -52,7 +52,7 @@ In den meisten Fällen können Sie mithilfe C++ / CX verwenden, um die Windows-R
 
 - Die [InspectableClass](../windows/inspectableclass-macro.md) -Makro implementiert grundlegende COM-Funktionen wie die verweiszählung und die `QueryInterface` -Methode und legt die Laufzeit Klassennamen und die-Vertrauensstufe.
 
-- Verwenden Sie die Microsoft:: wrl::[Modulklasse](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/b4acf5de-2f4c-4c8b-b5ff-9140d023ecbe) um DLL-Einstiegspunkt-Funktionen zu implementieren, wie z. B. ["dllgetactivationfactory"](https://msdn.microsoft.com/library/br205771.aspx), ["DllCanUnloadNow"](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), und [ DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject).
+- Verwenden Sie die Microsoft:: wrl::[Modulklasse](module-class.md) um DLL-Einstiegspunkt-Funktionen zu implementieren, wie z. B. ["dllgetactivationfactory"](https://msdn.microsoft.com/library/br205771.aspx), ["DllCanUnloadNow"](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), und [ DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject).
 
 - Verknüpfen Sie die Komponenten-DLL mit „runtimeobject.lib“. Geben Sie auch [/WINMD](../cppcx/compiler-and-linker-options-c-cx.md) der Linkerzeile an, um Windows-Metadaten zu generieren.
 

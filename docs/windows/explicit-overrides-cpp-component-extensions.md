@@ -1,7 +1,7 @@
 ---
-title: Explizite Überschreibungen (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
+title: Explizite Überschreibungen (C++ / CLI und C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba6ed66359ee833b51154e47f8f6c26c0de8994c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 689c8420c2526f94f88c8b2ba8433c2310281874
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408946"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328037"
 ---
-# <a name="explicit-overrides--c-component-extensions"></a>Explizite Überschreibungen (Komponentenerweiterungen für C++)
+# <a name="explicit-overrides--ccli-and-ccx"></a>Explizite Überschreibungen (C++ / CLI und C++ / CX)
 
 In diesem Thema wird erläutert, wie ein Member einer Basisklasse oder Schnittstelle explizit zu überschreiben. Benannte Überschreibung (explizite) sollte nur verwendet werden, um eine Methode mit einer abgeleiteten Methode überschreiben, die einen anderen Namen aufweist.
 
@@ -184,4 +184,4 @@ public:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET- und UWP](../windows/component-extensions-for-runtime-platforms.md)

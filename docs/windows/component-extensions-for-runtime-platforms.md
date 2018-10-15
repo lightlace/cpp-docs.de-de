@@ -1,7 +1,7 @@
 ---
-title: Komponentenerweiterungen für Laufzeitplattformen | Microsoft-Dokumentation
+title: Erweiterungen für .NET und UWP-Komponente | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,28 +19,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0619585a0a5b59ffb6b8cfbe22e7930909369b23
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 45f83fbaaa867e2f58e329d8531259fa3751a521
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386748"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328414"
 ---
-# <a name="component-extensions-for-runtime-platforms"></a>Komponentenerweiterungen für Laufzeitplattformen
+# <a name="component-extensions-for-net-and-uwp"></a>Komponentenerweiterungen für .NET- und UWP
 
-Visual C++ bietet Spracherweiterungen zur Unterstützung der Programmierung mit Laufzeitplattformen. Mithilfe von C++ / CX können Sie programmieren, universelle Windows-Plattform-Anwendungen und Komponenten, die in systemeigenen Code kompiliert. Obwohl Sie durch direktes Programmieren mit der Windows-Runtime-COM-Schnittstellen, universelle Windows-Plattform-Anwendungen erstellen können, mithilfe von C++ / CX, Sie können mit Konstruktoren, Ausnahmen und andere moderne C++-programmierausdrücken arbeiten. Um C++-Programmierung in einer verwalteten ausführungsumgebung auf der .NET-Plattform zu aktivieren, können Sie C++ / CLI.
+Der C++-Standard ermöglicht Compileranbieter-standarderweiterungen für die Sprache angeben. Microsoft bietet Erweiterungen, mit denen Sie die systemeigenen C++-Code, Code zu verbinden, die auf .NET Framework oder universelle Windows-Plattform (UWP) ausgeführt wird. Die Erweiterungen für .NET heißen C++ / CLI und erzeugt Code, der in .NET ausgeführt wird, verwaltete ausführungsumgebung, die die Common Language Runtime (CLR) aufgerufen wird. Die UWP-Erweiterungen heißen C++ / CX und erzeugen Sie nativen Code.
+
+> [!NOTE]
+> Für neue Anwendungen empfehlen wir mithilfe C++ / WinRT statt C++ / CX. C++ / WinRT ist eine neue "," standard C ++ 17-sprachprojektion für Windows-Runtime-APIs. Wir weiterhin zur Unterstützung von C++ / CX- und WRL, jedoch dringend empfohlen, neue Anwendungen C++ mithilfe / WinRT. Weitere Informationen finden Sie unter [C++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
 
 ### <a name="two-runtimes-one-set-of-extensions"></a>Zwei Laufzeiten, ein Satz von Erweiterungen
 
-C++ / CX ist eine Teilmenge von C++ / CLI. Für Erweiterungen, die für C++ / CX und C++ / CLI, die Semantik abhängig, ob Sie die common Language Runtime (CLR) oder die Windows-Runtime verwenden möchten. Geben Sie zum Kompilieren Ihre app auf der Windows-Runtime ausgeführt, die `/ZW` -Compileroption. Um sie für die Ausführung auf der CLR zu kompilieren, geben Sie die `/clr`-Compileroption an. Diese Schalter werden automatisch festgelegt, wenn Sie Visual Studio zur Erstellung eines Projekt verwenden.
-
-Weitere Informationen zum Erstellen von apps der universellen Windows-Plattform in C++ finden Sie unter [Roadmap für Windows-Runtime-apps mit C++](https://msdn.microsoft.com/library/windows/apps/hh700360.aspx).
-
 C++ / CLI erweitert den ISO/ANSI C++-Standard und ist definiert unter ECMA-C++ / CLI-Standard. Weitere Informationen finden Sie unter [.NET-Programmierung mit C++ / CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
+
+C++ / CX-Erweiterungen sind eine Teilmenge der C++ / CLI. Obwohl die Erweiterungssyntax in den meisten Fällen identisch ist, der Code, der generiert wird, hängt von, ob Sie angeben der `/ZW` -Compileroption verwenden, um die auf UWP, ausgerichtet oder `/clr` Option aus, um die .NET als Ziel. Diese Schalter werden automatisch festgelegt, wenn Sie Visual Studio zur Erstellung eines Projekt verwenden.
 
 ## <a name="data-type-keywords"></a>Datentyp-Schlüsselworte
 
-Die spracherweiterungen schließen *aggregieren Schlüsselwörter*, welche sind Schlüsselwörter, die aus zwei durch Leerraum getrennte Token bestehen. Die Token haben möglicherweise eine bestimmte Bedeutung, wenn sie einzeln verwendet werden, und eine andere Bedeutung, wenn sie zusammen verwendet werden. Beispielsweise ist das Wort "ref" ein normaler Bezeichner und das Wort "class" ein Schlüsselwort, das eine systemeigene Klasse deklariert. Aber wenn diese Wörter kombiniert werden, um **Verweisklasse**, das resultierende aggregatschlüsselwort einer Entität, die als bekannt ist, eine *-Runtime-Klasse*.
+Die spracherweiterungen schließen *aggregieren Schlüsselwörter*, die aus zwei durch Leerraum getrennte Token bestehen. Die Token haben möglicherweise eine bestimmte Bedeutung, wenn sie einzeln verwendet werden, und eine andere Bedeutung, wenn sie zusammen verwendet werden. Beispielsweise ist das Wort "ref" ein normaler Bezeichner und das Wort "class" ein Schlüsselwort, das eine systemeigene Klasse deklariert. Aber wenn diese Wörter kombiniert werden, um **Verweisklasse**, das resultierende aggregatschlüsselwort einer Entität, die als bekannt ist, eine *-Runtime-Klasse*.
 
 Die Erweiterungen enthalten auch *kontextbezogene* Schlüsselwörter. Ein Schlüsselwort wird abhängig von der Art der Anweisung, in der es enthalten ist, und seiner Platzierung in dieser Anweisung als kontextbezogen behandelt. Beispielsweise kann das Token "property" ein Bezeichner sein oder es kann eine spezielle Art eines öffentlichen Klassenmembers deklarieren.
 
@@ -53,7 +54,7 @@ In der folgenden Tabelle sind Schlüsselwörter in der C++-Spracherweiterung auf
 |**Schnittstellenklasse**<br /><br /> **Interface-Struktur**|Nein|Deklariert eine Schnittstelle.|[Schnittstellenklasse](../windows/interface-class-cpp-component-extensions.md)|
 |**Enumerationsklasse**<br /><br /> **Enum-Struktur**|Nein|Deklariert eine Enumeration.|[Enumerationsklasse](../windows/enum-class-cpp-component-extensions.md)|
 |**Eigenschaft**|Ja|Deklariert eine Eigenschaft.|[Eigenschaft](../windows/property-cpp-component-extensions.md)|
-|**delegate**|Ja|Deklariert einen Delegaten.|[delegate (Komponentenerweiterungen für C++)](../windows/delegate-cpp-component-extensions.md)|
+|**delegate**|Ja|Deklariert einen Delegaten.|[Delegaten (C++ / CLI und C++ / CX)](../windows/delegate-cpp-component-extensions.md)|
 |**event**|Ja|Deklariert ein Ereignis.|[event](../windows/event-cpp-component-extensions.md)|
 
 ## <a name="override-specifiers"></a>Überschreibungsspezifizierer
@@ -87,7 +88,7 @@ Die folgenden Schlüsselwörter wurden den C++-Erweiterungen hinzugefügt.
 |**gcnew**|Nein|Ordnet Typen auf dem Heap der Garbage Collection zu. Verwenden Sie anstelle von **neue** und **löschen**.|[neue Gcnew ref](../windows/ref-new-gcnew-cpp-component-extensions.md)|
 |**neue ref**|Ja|Ordnet einen Windows-Runtime-Typ. Verwenden Sie anstelle von **neue** und **löschen**.|[neue Gcnew ref](../windows/ref-new-gcnew-cpp-component-extensions.md)|
 |**initonly**|Ja|Gibt an, dass ein Member nur in der Deklaration oder in einem statischen Konstruktor initialisiert werden kann.|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
-|**Zeichenfolgenliteral**|Ja|Erstellt eine literale Variable.|[Zeichenfolgenliteral](../windows/literal-cpp-component-extensions.md)|
+|**literal**|Ja|Erstellt eine literale Variable.|[literal](../windows/literal-cpp-component-extensions.md)|
 |**nullptr**|Nein|Gibt an, dass ein Handle oder ein Zeiger nicht auf ein Objekt zeigt.|[nullptr](../windows/nullptr-cpp-component-extensions.md)|
 
 ## <a name="template-constructs"></a>Vorlagenkonstrukte

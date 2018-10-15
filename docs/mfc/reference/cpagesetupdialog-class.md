@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 721dd285760027c35ae93d89ec5bb3fde6e9ba11
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 86dc19600dc8cbb452db585993dec85c3f7b8591
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413446"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328388"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog-Klasse
 
@@ -272,7 +272,7 @@ void GetMargins(
 ### <a name="parameters"></a>Parameter
 
 *lpRectMargins*<br/>
-Zeiger auf eine [RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us) Struktur oder [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt, das (in 1/1000 Zoll oder 1/100 mm) die Druckränder für den aktuell ausgewählten Drucker beschreibt. Übergeben Sie NULL für diesen Parameter fest, wenn Sie nicht dieses Rechteck interessiert sind.
+Zeiger auf eine [RECT](rect-structure.md) Struktur oder [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt, das (in 1/1000 Zoll oder 1/100 mm) die Druckränder für den aktuell ausgewählten Drucker beschreibt. Übergeben Sie NULL für diesen Parameter fest, wenn Sie nicht dieses Rechteck interessiert sind.
 
 *lpRectMinMargins*<br/>
 Zeiger auf eine `RECT` Struktur oder `CRect` Objekt, das (in 1/1000 Zoll oder 1/100 mm) die minimalen Druckränder für den aktuell ausgewählten Drucker beschreibt. Übergeben Sie NULL für diesen Parameter fest, wenn Sie nicht dieses Rechteck interessiert sind.
@@ -351,7 +351,7 @@ Gibt eine Meldung an, den Bereich der Seite derzeit gerade gezeichnet wird. Eine
 - Eine Darstellung der Rückgabeadresse WM_PSD_YAFULLPAGERECT-Bereich. Dieser Bereich wird auf dem Rand des Seitenbereichs Beispiel erweitert.
 
 *lpRect*<br/>
-Zeiger auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) oder [RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us) -Objekt, das die Koordinaten des Zeichenbereichs enthält.
+Zeiger auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) oder [RECT](rect-structure.md) -Objekt, das die Koordinaten des Zeichenbereichs enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 

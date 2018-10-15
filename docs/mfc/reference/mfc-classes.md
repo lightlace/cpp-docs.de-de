@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fb0cfa6d3657c0cce01e91c94cb23bce8886a43
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a276868dfdb14f754cac3938e052e82b7ab22a6f
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403142"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328609"
 ---
 # <a name="mfc-classes"></a>MFC-Klassen
 
@@ -34,7 +34,7 @@ Die Klassen in der folgenden Liste sind in der Microsoft Foundation Class (MFC)-
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[CAccelerateDecelerateTransition-Klasse](../../mfc/reference/cacceleratedeceleratetransition-class1.md)<br/>
+[CAccelerateDecelerateTransition-Klasse](../../mfc/reference/cacceleratedeceleratetransition-class.md)<br/>
 Implementiert einen Übergang mit Beschleunigung/Verlangsamung.
 
 [CAnimateCtrl-Klasse](../../mfc/reference/canimatectrl-class.md)<br/>
@@ -137,7 +137,7 @@ Implementiert eine asynchron übertragene und in einer Arbeitsspeicherdatei zwis
 Stellt die Funktionalität eines Windows-Kontrolllistenfelds bereit.
 
 [CClientDC-Klasse](../../mfc/reference/cclientdc-class.md)<br/>
-Behandelt das Aufrufen der Windows-Funktionen [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) zur Erstellungszeit und [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) zur zerstörungszeit.
+Behandelt das Aufrufen der Windows-Funktionen [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) zur Erstellungszeit und [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) zur Zerstörungszeit
 
 [CCmdTarget-Klasse](../../mfc/reference/ccmdtarget-class.md)<br/>
 Basisklasse für die Meldungszuordnungsarchitektur der Microsoft Foundation Class-Bibliothek.
@@ -863,7 +863,7 @@ Ermöglicht es einem Benutzer, untergeordnete MDI-Fenster in einer MDI-Anwendung
 Stellt ein Rahmenfenster mit halber Höhe dar, das in der Regel um unverankerte Symbolleisten sichtbar ist.
 
 [CMonikerFile-Klasse](../../mfc/reference/cmonikerfile-class.md)<br/>
-Stellt einen Datenstrom ([IStream](/windows/desktop/api/objidl/nn-objidl-istream)) mit dem Namen durch ein [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker).
+Stellt einen Datenstrom ([IStream](/windows/desktop/api/objidl/nn-objidl-istream)) dar, der per [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)benannt ist
 
 [CMonthCalCtrl-Klasse](../../mfc/reference/cmonthcalctrl-class.md)<br/>
 Kapselt die Funktionalität eines Monatskalender-Steuerelements.
@@ -1022,7 +1022,7 @@ Wird für OLE-Server mit direkter Aktivierung, Automatisierungsserver und Linkco
 Wird für einen Sonderfall des OLE-Dialogfelds "Verknüpfungen bearbeiten" verwendet, das eingesetzt werden sollte, wenn in einem Dokument nur vorhandene Links oder eingebettete Objekte aktualisiert werden müssen.
 
 [COleVariant-Klasse](../../mfc/reference/colevariant-class.md)<br/>
-Kapselt die [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) -Datentyp.
+Kapselt den Datentyp [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) .
 
 [CPagerCtrl-Klasse](../../mfc/reference/cpagerctrl-class.md)<br/>
 Die Klasse `CPagerCtrl` kapselt das Windows-Pagersteuerelement, in dem der Benutzer einen Bildlauf durchführen kann, um ein Fenster innerhalb eines anderen Fensters in den sichtbaren Bereich zu verschieben, sofern es größer ist als das umgebende Fenster.
@@ -1109,7 +1109,7 @@ Stellt eine Gruppe von Datensätzen dar, die aus einer Datenquelle ausgewählt w
 Eine Sicht, die Datenbankdatensätze in Steuerelementen anzeigt.
 
 [CRect-Klasse](../../atl-mfc-shared/reference/crect-class.md)<br/>
-Ähnlich wie eine Windows [RECT-Struktur](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us).
+Ähnlich wie eine Windows [RECT-Struktur](rect-structure.md).
 
 [CRectTracker-Klasse](../../mfc/reference/crecttracker-class.md)<br/>
 Ermöglicht, dass ein Element angezeigt, verschoben und in unterschiedlichen Größen dargestellt werden kann.
@@ -1175,7 +1175,7 @@ Kapselt einen Übergang mit sinusförmigem Bereich und angegebenem Schwingungsbe
 Kapselt einen Übergang mit sinusförmiger Geschwindigkeit und einer Amplitude, die von der ursprünglichen Geschwindigkeit der Animationsvariablen bestimmt wird.
 
 [CSize-Klasse](../../atl-mfc-shared/reference/csize-class.md)<br/>
-Ähnlich wie die Windows [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) -Struktur, die eine relative Koordinate oder Position implementiert.
+Ähnelt der Windows-Struktur [SIZE](https://msdn.microsoft.com/library/windows/desktop/dd145106) , bei der eine relative Koordinate oder Position implementiert wird
 
 [CSliderCtrl-Klasse](../../mfc/reference/csliderctrl-class.md)<br/>
 Stellt die Funktionalität des allgemeinen Windows-Schieberegler-Steuerelements bereit.

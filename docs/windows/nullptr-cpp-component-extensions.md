@@ -1,7 +1,7 @@
 ---
-title: Nullptr (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
+title: "\"nullptr\" (C++ / CLI und C++ / CX) | Microsoft-Dokumentation"
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0596276589790ee6fae8e071e50b4d9b55dd8b85
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 46a68e3ab7119dfb2c99578f299b9d38cbc5736d
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439613"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328492"
 ---
-# <a name="nullptr--c-component-extensions"></a>nullptr (Komponentenerweiterungen für C++)
+# <a name="nullptr--ccli-and-ccx"></a>"nullptr" (C++ / CLI und C++ / CX)
 
 Die **"nullptr"** Schlüsselwort stellt einen *null-Zeigerwert*. Verwenden Sie einen null-Zeiger-Wert, um anzugeben, dass ein Objekthandle, innerer Zeiger oder systemeigener Zeiger-Typ nicht auf ein Objekt verweist.
 
@@ -235,5 +235,5 @@ Compileroption: (nicht erforderlich, die von allen Optionen zur codegenerierung,
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Komponentenerweiterungen für .NET- und UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [nullptr](../cpp/nullptr.md)
