@@ -1,7 +1,7 @@
 ---
-title: Platform-, Default- und Cli-Namespaces (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
+title: Platform-, Default- und Cli-Namespaces (C++ / CLI und C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,20 +19,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 726c9e2653f2914c01d4a45a572614438e12bc8f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a70fb5317f42e98ccddb21fe66e328e1cc6f7643
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194648"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328024"
 ---
-# <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Platform-, default- und cli-Namespaces (Komponentenerweiterungen für C++)
+# <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Platform-, Default- und Cli-Namespaces (C++ / CLI und C++ / CX)
 
 Ein Namespace qualifiziert die Namen von Sprachelementen, sodass sie keinen Konflikt mit ansonsten identischen Namen an anderer Stelle im Quellcode verursachen. Z. B. ein Namenskonflikt möglicherweise verhindern, dass den Compiler erkennt [Kontextbezogene Schlüsselwörter](../windows/context-sensitive-keywords-cpp-component-extensions.md). Namespaces werden vom Compiler verwendet, jedoch nicht in der kompilierten Assembly beibehalten.
 
 ## <a name="all-runtimes"></a>Alle Laufzeiten
 
-Beim Erstellen des Projekts stellt Visual C++ einen Standardnamespace für das Projekt bereit. Sie können den Namespace manuell umbenennen, obwohl in Windows-Runtime der Namen der winmd-Datei den Namen des Stammnamespace übereinstimmen muss.
+Visual Studio bietet einen Standardnamespace für das Projekt, wenn Sie das Projekt zu erstellen. Sie können den Namespace manuell umbenennen, obwohl in C++ / CX-der Name der winmd-Datei muss den Namen des Stammnamespace übereinstimmen.
 
 ## <a name="windows-runtime"></a>Windows-Runtime
 
@@ -90,4 +90,4 @@ int main() {
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET- und UWP](../windows/component-extensions-for-runtime-platforms.md)

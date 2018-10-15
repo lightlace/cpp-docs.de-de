@@ -1,7 +1,7 @@
 ---
-title: Attribut-Ziele (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
+title: Attribut-Ziele (C++ / CLI und C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7a4cc42a0913636b0b63057f0f265f3fb8a034c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9dfb469bb9dcea8a2c1e197fa7c305d08d155cf1
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589415"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327779"
 ---
-# <a name="attribute-targets-c-component-extensions"></a>Attributziele (Komponentenerweiterungen für C++)
+# <a name="attribute-targets-ccli-and-ccx"></a>Attribut-Ziele (C++ / CLI und C++ / CX)
 
 Attribut Nutzung Bezeichner können Sie die Attributziele angeben.  Jedes Attribut wird definiert, um für die bestimmte Sprachelemente zu übernehmen. Beispielsweise kann ein Attribut definiert werden, um nur für Klassen und Strukturen zu übernehmen.  Die folgende Liste enthält die möglichen syntaktische Elemente, die auf denen ein benutzerdefiniertes Attribut verwendet werden kann. Kombinationen dieser Werte (Verwendung eines logischen oder) kann verwendet werden.
 

@@ -1,7 +1,7 @@
 ---
-title: Enumerationsklasse (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
+title: Enum-Klasse (C++ / CLI und C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -13,14 +13,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 993f0e190d87b140fba0008872d57f2a34b6a5cb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7b85807b9e9dd0cec63def8ffc4a9aa69056f270
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377265"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328141"
 ---
-# <a name="enum-class--c-component-extensions"></a>enum class (Komponentenerweiterungen für C++)
+# <a name="enum-class--ccli-and-ccx"></a>Enum-Klasse (C++ / CLI und C++ / CX)
 
 Deklariert eine Enumeration im Namespacebereich, die ein benutzerdefinierter Typ ist, der aus einem Satz von benannten Konstanten besteht, die als Enumeratoren bezeichnet werden.
 
@@ -65,7 +65,7 @@ Der Wert jedes Enumerators ist ein konstanter Ausdruck, der entweder implizit vo
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen und Beispiele finden Sie unter [Enumerationen](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx).
+Weitere Informationen und Beispiele finden Sie unter [Enums](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx).
 
 Beachten Sie, dass der Compiler Fehlermeldungen ausgibt, wenn der konstante Ausdruck, der den Wert eines Enumerators definiert, nicht durch den *underlying-type*dargestellt werden kann.  Der Compiler meldet jedoch keinen Fehler für einen Wert, der für den zugrunde liegenden Typ ungeeignet ist. Zum Beispiel:
 
@@ -146,13 +146,13 @@ Verwaltete Enumeratornamen (*Bezeichner*) werden nicht in den Bereich injiziert,
 
 Die Enumeratoren einer Standardenumeration werden stark in den einschließenden Bereich eingefügt.  Das heißt, wenn es ein anderes Symbol mit dem gleichen Namen wie ein Enumerator im einschließenden Bereich gibt, generiert der Compiler einen Fehler.
 
-In Visual C++ 2002 und Visual C++ 2003 wurden Enumeratoren schwach eingefügt (sichtbar im einschließenden Bereich, es sei denn, es gibt einen anderen Bezeichner mit demselben Namen).
+In Visual Studio 2002 und Visual Studio 2003 wurden Enumeratoren schwach eingefügt (sichtbar im einschließenden Bereich es sei denn, gab es einen anderen Bezeichner mit demselben Namen).
 
-Wenn eine standardmäßige C++-Enumeration definiert ist (ohne **Klasse** oder **Struktur**) kompilieren mit `/clr` wird die Enumeration als verwaltete Enumeration kompiliert werden.  Die Enumeration hat weiterhin die Semantik einer nicht verwalteten Enumeration.  Hinweis: Der Compiler fügt ein Attribut ( `Microsoft::VisualC::NativeEnumAttribute`) ein, das der Visual C++-Compiler erkennt. So wird gekennzeichnet, dass der Programmierer möchte, dass die Enumeration eine systemeigene Enumeration ist.  Andere Compiler erkennen einfach die Standardenumeration als verwaltete Enumeration.
+Wenn eine standardmäßige C++-Enumeration definiert ist (ohne **Klasse** oder **Struktur**) kompilieren mit `/clr` wird die Enumeration als verwaltete Enumeration kompiliert werden.  Die Enumeration hat weiterhin die Semantik einer nicht verwalteten Enumeration.  Beachten Sie, dass der Compiler Fügt ein Attribut `Microsoft::VisualC::NativeEnumAttribute` zum Identifizieren der Programmierer die Enumeration eine systemeigene Enumeration.  Andere Compiler erkennen einfach die Standardenumeration als verwaltete Enumeration.
 
 Eine benannte, standardenumeration kompiliert, mit `/clr` werden in der Assembly als verwaltete Enumeration sichtbar und können von einem anderen verwalteten Compiler genutzt werden.   Eine unbenannte Standardenumeration ist jedoch nicht öffentlich aus der Assembly sichtbar.
 
-In Visual C++ 2002 und Visual C++ 2003 würde eine Standardenumeration, die als Typ in einem Funktionsparameter verwendet wird, wie folgt aussehen:
+In Visual Studio 2002 und Visual Studio 2003 eine standardenumeration, die als Typ in einem Funktionsparameter verwendet:
 
 ```cpp
 // mcppv2_enum.cpp
@@ -231,4 +231,4 @@ convert to int: 1
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET- und UWP](../windows/component-extensions-for-runtime-platforms.md)

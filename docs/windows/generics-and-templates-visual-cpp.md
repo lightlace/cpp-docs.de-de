@@ -1,7 +1,7 @@
 ---
-title: Generika und Vorlagen (Visual C++) | Microsoft-Dokumentation
+title: Generika und Vorlagen (C++ / CLI) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f8a58e26b571c119d45cb981c582ebec335eface
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4d63d7620aa4d2cb83b954494172da9db55f6a2e
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591001"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328219"
 ---
-# <a name="generics-and-templates-visual-c"></a>Generika und Vorlagen (Visual C++)
+# <a name="generics-and-templates-ccli"></a>Generika und Vorlagen (C++ / CLI)
 
 Generika und Vorlagen sind Sprachfunktionen, die Unterstützung für parametrisierte Typen ermöglichen. Allerdings unterscheiden sich und haben unterschiedliche Verwendungen. Dieses Thema enthält eine Übersicht über die Unterschiede.
 
@@ -61,7 +61,7 @@ Der grundlegende Unterschied in Generika wirkt sich zum Erstellen von Anwendunge
 
 Das folgende Beispiel zeigt ein einfaches Beispiel der Verwendung von Vorlagen und Generika zusammen. In diesem Beispiel übergibt die Vorlagenklasse als Parameter durch für dem generischen Typ an. Umgekehrt ist dies nicht möglich.
 
-Dieses Idiom kann verwendet werden, wenn Sie auf eine generische API mit Vorlagencode zu erstellen, die lokal in einer Visual C++-Assembly ist, oder wenn Sie ein generischer Typ, um bestimmte Funktionen von Vorlagen nicht Supporte nutzen eine zusätzliche Sicherheitsschicht Parametrisierung hinzufügen möchten d von Generika.
+Dieses Idiom kann verwendet werden, wenn Sie möchten, auf eine generische API mit Vorlagencode zu erstellen, die lokal an einen C++ ist c++ / CLI-Assembly, oder wenn Sie eine zusätzliche Ebene der Parametrisierung in einen generischen Typ hinzufügen müssen, unterstützt Sie nicht bestimmte Features von Vorlagen nutzen b y-Generika.
 
 ### <a name="code"></a>Code
 

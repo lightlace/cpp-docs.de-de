@@ -1,7 +1,7 @@
 ---
-title: Delegat (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
+title: Delegaten (C++ / CLI und C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 13ce7d2a35245716adc70b9e84532ea7d1a4a440
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2281dfb6648f9c4756800a0693f184ccaa7435d7
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432404"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327959"
 ---
-# <a name="delegate--c-component-extensions"></a>delegate (Komponentenerweiterungen für C++)
+# <a name="delegate--ccli-and-ccx"></a>Delegaten (C++ / CLI und C++ / CX)
 
 Deklariert einen Typ, der einen Funktionszeiger darstellt.
 
@@ -131,7 +131,7 @@ Weitere Informationen zu Delegaten finden Sie unter
 
 - [Vorgehensweise: Definieren und Verwenden von Delegaten (C++/CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
 
-- [Generische Delegaten (Visual C++)](../windows/generic-delegates-visual-cpp.md)
+- [Generische Delegaten (C++ / CLI)](../windows/generic-delegates-visual-cpp.md)
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -212,4 +212,4 @@ in static func3 11
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET- und UWP](../windows/component-extensions-for-runtime-platforms.md)

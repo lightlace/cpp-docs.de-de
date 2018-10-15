@@ -21,16 +21,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa840b2fd6e143715c924d0f7ac67e78eb8306a4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3ca548fec9a70a04b0bdb9a5169021fc43f149eb
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417541"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328537"
 ---
 # <a name="csize-class"></a>CSize-Klasse
 
-Ähnlich wie die Windows [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) -Struktur, die eine relative Koordinate oder Position implementiert.
+Ähnelt der Windows-Struktur [SIZE](https://msdn.microsoft.com/library/windows/desktop/dd145106) , bei der eine relative Koordinate oder Position implementiert wird
 
 ## <a name="syntax"></a>Syntax
 
@@ -100,7 +100,7 @@ Legt die `cy` Member für die `CSize`.
 [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur oder `CSize` verwendet, um initialisieren-Objekt `CSize`.
 
 *initPt*  
-[Punkt](../../mfc/reference/point-structure1.md) Struktur oder `CPoint` verwendet, um initialisieren-Objekt `CSize`.
+[Punkt](../../mfc/reference/point-structure.md) Struktur oder `CPoint` verwendet, um initialisieren-Objekt `CSize`.
 
 *dwSize*  
 DWORD, das zum Initialisieren verwendet `CSize`. Ist das niederwertige Wort der `cx` angehört und das höherwertige Wort der `cy` Member.

@@ -1,7 +1,7 @@
 ---
-title: Benutzerdefinierte Attribute (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
+title: Benutzerdefinierte Attribute (C++ / CLI und C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,26 +16,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c2f5568b067c119bfa65744290c39d7ca577072
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 004c4c30c6e7e75f626e1ac87c09cb0a87f1c8cc
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789227"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328440"
 ---
-# <a name="user-defined-attributes--c-component-extensions"></a>Benutzerdefinierte Attribute (Komponentenerweiterungen für C++)
+# <a name="user-defined-attributes--ccli-and-ccx"></a>Benutzerdefinierte Attribute (C++ / CLI und C++ / CX)
 
-Benutzerdefinierte Attribute können Sie die Metadaten der eine Schnittstelle, Klasse oder Struktur, Methode, Parameter oder eines Enumerationswerts zu erweitern.
-
-## <a name="all-runtimes"></a>Alle Laufzeiten
-
-Alle Laufzeiten unterstützen benutzerdefinierte Attribute.
+C++ / CLI und C++ / CX können Sie plattformspezifischen Attribute zu erstellen, die die Metadaten der eine Schnittstelle, Klasse oder Struktur, Methode, Parameter oder eines Enumerationswerts zu erweitern. Diese Attribute unterscheiden sich von der [standard C++-Attribute](../cpp/attributes.md).
 
 ## <a name="windows-runtime"></a>Windows-Runtime
 
-C++ / CX-Attribut nur Eigenschaften unterstützt, aber kein Attribut Konstruktoren oder Methoden.
-
-### <a name="remarks"></a>Hinweise
+Sie können anwenden, C++ / CX-Attribute, Eigenschaften, aber nicht auf Konstruktoren oder Methoden.
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -43,17 +37,11 @@ Compileroption: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-Benutzerdefinierte Attribute können Sie die Metadaten eines verwalteten Elements zu erweitern. Weitere Informationen finden Sie unter [Attribute](/dotnet/standard/attributes/index).
-
-### <a name="remarks"></a>Hinweise
-
 Die Informationen und die in diesem Thema vorgestellten Syntax soll die Informationen im ablösen [Attribut](attributes/attribute.md).
 
 Sie können ein benutzerdefiniertes Attribut definieren, indem Sie einen Typ definieren und vornehmen <xref:System.Attribute> eine Basisklasse für den Typ und optional Anwenden der <xref:System.AttributeUsageAttribute> Attribut.
 
-Z. B. in Microsoft Transaction Server (MTS) 1.0, Verhalten in Bezug auf Transaktionen, Synchronisierung, Lastenausgleich und usw. durch benutzerdefinierte GUIDs, die in der Typbibliothek eingefügt werden, mit dem benutzerdefinierten ODL-Attribut angegeben wurde. Daher kann ein Client ein MTS-Servers seiner Merkmale ermitteln, indem die Typbibliothek. In .NET Framework das Äquivalent der Typbibliothek sind Metadaten und die Entsprechung eines benutzerdefinierten ODL-Attribut ist, benutzerdefinierte Attribute. Darüber hinaus ist das Lesen der Typbibliothek analog zur Verwendung von Reflektion für die Typen an.
-
-Weitere Informationen finden Sie unter
+Weitere Informationen finden Sie unter:
 
 - [Attributziele](attribute-targets-cpp-component-extensions.md)
 
@@ -216,4 +204,4 @@ ref struct B {};
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET- und UWP](component-extensions-for-runtime-platforms.md)

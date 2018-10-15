@@ -1,7 +1,7 @@
 ---
-title: Windows-Laufzeit und verwaltete Vorlagen (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
+title: Windows-Laufzeit und verwaltete Vorlagen (C++ / CLI und C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0a7d08354bcd2b0b0d8cf1db6e4bd58fb9821708
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b83aa54b9f9697fddbefc6da29e7cf99d497cc12
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591448"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328297"
 ---
-# <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows-Laufzeit und verwaltete Vorlagen (Komponentenerweiterungen für C++)
+# <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Windows-Laufzeit und verwaltete Vorlagen (C++ / CLI und C++ / CX)
 
 Vorlagen können Sie einen Prototyp der einer Windows-Runtime oder der common Language Runtime-Typ definieren, und klicken Sie dann mithilfe von verschiedenen Vorlagentypparameter instanziieren Variationen dieses Typs.
 
@@ -50,7 +50,7 @@ Compileroption: `/clr`
 
 ### <a name="examples"></a>Beispiele
 
-Es ist möglich, das Instanziieren eines generischen Typs mit einem verwalteten Typ Template-Parameter, aber eine verwaltete Vorlage mit einem generischen Typparameter für die Vorlage kann nicht instanziiert werden. Dies ist, da es sich bei generische Typen zur Laufzeit aufgelöst werden. Weitere Informationen finden Sie unter [Generika und Vorlagen (Visual C++)](../windows/generics-and-templates-visual-cpp.md).
+Es ist möglich, das Instanziieren eines generischen Typs mit einem verwalteten Typ Template-Parameter, aber eine verwaltete Vorlage mit einem generischen Typparameter für die Vorlage kann nicht instanziiert werden. Dies ist, da es sich bei generische Typen zur Laufzeit aufgelöst werden. Weitere Informationen finden Sie unter [Generika und Vorlagen (C++ / CLI)](../windows/generics-and-templates-visual-cpp.md).
 
 ```cpp
 // managed_templates.cpp
@@ -142,4 +142,4 @@ class A <int> {};
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET- und UWP](../windows/component-extensions-for-runtime-platforms.md)

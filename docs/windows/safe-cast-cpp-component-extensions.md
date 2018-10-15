@@ -1,7 +1,7 @@
 ---
-title: Safe_cast (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
+title: Safe_cast (C++ / CLI und C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,14 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d5a4f92e16c2d758fa5e2b88575b12d5710dd08
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 76d53a1322024f1a56477de4e4b58bcdb88930ad
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404207"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328479"
 ---
-# <a name="safecast-c-component-extensions"></a>safe_cast (Komponentenerweiterungen für C++)
+# <a name="safecast-ccli-and-ccx"></a>Safe_cast (C++ / CLI und C++ / CX)
 
 Die **"safe_cast"** Vorgang gibt den angegebenen Ausdruck als den angegebenen Typ zurück, wenn erfolgreich; andernfalls löst `InvalidCastException`.
 
@@ -37,11 +37,7 @@ Die **"safe_cast"** Vorgang gibt den angegebenen Ausdruck als den angegebenen Ty
 ### <a name="syntax"></a>Syntax
 
 ```cpp
-[default]:: safe_cast<
-type-id
->(
-expression
-)  
+[default]:: safe_cast< type-id >( expression )  
 ```
 
 ## <a name="windows-runtime"></a>Windows-Runtime
@@ -51,11 +47,7 @@ expression
 ### <a name="syntax"></a>Syntax
 
 ```cpp
-[default]:: safe_cast<
-type-id
->(
-expression
-)  
+[default]:: safe_cast< type-id >( expression )
 ```
 
 ### <a name="parameters"></a>Parameter
@@ -115,11 +107,7 @@ Caught expected exception: InvalidCastException
 ### <a name="syntax"></a>Syntax
 
 ```cpp
-[cli]:: safe_cast<
-type-id
->(
-expression
-)  
+[cli]:: safe_cast< type-id >( expression )  
 ```
 
 ### <a name="parameters"></a>Parameter
@@ -132,7 +120,7 @@ Ein Ausdruck, der als ein Handle zu einem Verweis oder Werttyp ausgewertet wird,
 
 ### <a name="remarks"></a>Hinweise
 
-Der Ausdruck `safe_cast<` *Typ-Id*`>(`*Ausdruck* `)` konvertiert den operandenausdruck zu einem Objekt vom Typ-Id-Typ.
+Der Ausdruck `safe_cast<` *Typ-Id*`>(`*Ausdruck* `)` konvertiert den Operanden *Ausdruck* auf ein Objekt des Typs *Typ-Id*.
 
 Der Compiler akzeptiert eine ["static_cast"](../cpp/static-cast-operator.md) in den meisten stellen, die sie akzeptieren ein **"safe_cast"**.  Allerdings **"safe_cast"** überprüfbare MSIL generiert auf jeden Fall Where als eine **"static_cast"** konnte nicht überprüfbare MSIL erzeugen.  Finden Sie unter [reiner und überprüfbarer Code (C++ / CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md) und [Peverify.exe (PEVerify-Tool)](/dotnet/framework/tools/peverify-exe-peverify-tool) für Weitere Informationen über überprüfbaren Code.
 
@@ -188,4 +176,4 @@ Caught expected exception
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET- und UWP](../windows/component-extensions-for-runtime-platforms.md)

@@ -44,16 +44,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0abe16bc12052601f86cb18677b52af9b40ad15
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b135b318a77835d22d7547e78f3b5c4f7ee3daee
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428491"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328583"
 ---
 # <a name="crect-class"></a>CRect-Klasse
 
-Ähnlich wie eine Windows [RECT](../../mfc/reference/rect-structure1.md) Struktur.
+Ähnlich wie eine Windows [RECT](../../mfc/reference/rect-structure.md) Struktur.
 
 ## <a name="syntax"></a>Syntax
 
@@ -102,8 +102,8 @@ class CRect : public tagRECT
 |Name|Beschreibung|
 |----------|-----------------|
 |[CRect::operator-](#operator_-)|Subtrahiert den angegebenen Offsets von `CRect` oder entleert `CRect` und gibt das resultierende `CRect`.|
-|[CRect::operator LPCRECT](#operator_lpcrect)|Konvertiert eine `CRect` auf eine `LPCRECT`.|
-|[CRect::operator LPRECT](#operator_lprect)|Konvertiert eine `CRect` auf eine `LPRECT`.|
+|[CRect::operator LPCRECT](#operator_lpcrect)|Konvertiert ein `CRect`-Element in ein `LPCRECT`-Element.|
+|[CRect::operator LPRECT](#operator_lprect)|Konvertiert ein `CRect`-Element in ein `LPRECT`-Element.|
 |[CRect::operator! =](#operator_neq)|Bestimmt, ob `CRect` entspricht keinem Rechteck.|
 |[CRect::operator &amp;](#operator_amp)|Erstellt die Schnittmenge der `CRect` und ein Rechteck und gibt das resultierende `CRect`.|
 |[CRect::operator &amp;=](#operator_amp_eq)|Legt `CRect` gleich für die Schnittmenge der `CRect` und ein Rechteck.|
@@ -131,7 +131,7 @@ Beim Angeben einer `CRect`, achten Sie ihn erstellen, damit es normalisiert wird
 Seien Sie vorsichtig beim Bearbeiten von einen `CRect` mit der [CDC::DPtoLP](../../mfc/reference/cdc-class.md#dptolp) und [CDC::LPtoDP](../../mfc/reference/cdc-class.md#lptodp) Memberfunktionen. Wenn der Zuordnungsmodus, der einen Anzeigekontext ist, sodass der y-Block negativ ist, wie in `MM_LOENGLISH`, klicken Sie dann `CDC::DPtoLP` transformiert die `CRect` , damit seinen oberen, unteren größer ist. Funktionen wie `Height` und `Size` gibt dann negative Werte für die Höhe des transformierten `CRect`, und das Rechteck wird nicht normalisiert.  
 
 
-Wenn mithilfe von überladenen `CRect` Operatoren, der erste Operand muss ein `CRect`; das zweite kann es sich um eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder ein `CRect` Objekt.
+Wenn mithilfe von überladenen `CRect` Operatoren, der erste Operand muss ein `CRect`; das zweite kann es sich um eine [RECT](../../mfc/reference/rect-structure.md) Struktur oder ein `CRect` Objekt.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -260,7 +260,7 @@ void CopyRect(LPCRECT lpSrcRect) throw();
 ### <a name="parameters"></a>Parameter
 
 *lpSrcRect*  
-Verweist auf die [RECT](../../mfc/reference/rect-structure1.md) Struktur oder `CRect` -Objekt, das kopiert werden soll.
+Verweist auf die [RECT](../../mfc/reference/rect-structure.md) Struktur oder `CRect` -Objekt, das kopiert werden soll.
 
 ### <a name="example"></a>Beispiel
 
@@ -313,7 +313,7 @@ Gibt an, die Rechte Position der `CRect`.
 Gibt an, am Ende `CRect`.
 
 *srcRect*  
-Bezieht sich auf die [RECT](../../mfc/reference/rect-structure1.md) Struktur mit den Koordinaten für `CRect`.
+Bezieht sich auf die [RECT](../../mfc/reference/rect-structure.md) Struktur mit den Koordinaten für `CRect`.
 
 *lpSrcRect*  
 Verweist auf die `RECT` Struktur mit den Koordinaten für `CRect`.
@@ -397,7 +397,7 @@ Gibt die Anzahl der Einheiten, um den oberen und unteren Rand deflate `CRect`.
 Ein [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) oder [CSize](csize-class.md) , angibt, dass die Anzahl der Einheiten, deflate `CRect`. Die `cx` Wert gibt die Anzahl der Einheiten, um den linken und rechten Seite deflate und `cy` Wert gibt die Anzahl der Einheiten, um den oberen und unteren deflate.
 
 *lpRect*  
-Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder `CRect` , der die Anzahl der Einheiten, um jede Seite deflate angibt.
+Verweist auf eine [RECT](../../mfc/reference/rect-structure.md) Struktur oder `CRect` , der die Anzahl der Einheiten, um jede Seite deflate angibt.
 
 *l*  
 Gibt die Anzahl der Einheiten, die auf der linken Seite des deflate `CRect`.
@@ -443,7 +443,7 @@ BOOL EqualRect(LPCRECT lpRect) const throw();
 ### <a name="parameters"></a>Parameter
 
 *lpRect*  
-Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder `CRect` -Objekt, das die Koordinaten der oberen linken und rechten unteren Ecke eines Rechtecks enthält.
+Verweist auf eine [RECT](../../mfc/reference/rect-structure.md) Struktur oder `CRect` -Objekt, das die Koordinaten der oberen linken und rechten unteren Ecke eines Rechtecks enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -528,7 +528,7 @@ Gibt die Anzahl der Einheiten, um den oberen und unteren Rand Vergrößerung `CR
 Ein [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) oder [CSize](csize-class.md) , der angibt, dass der Anzahl der Einheiten, um die Vergrößerung `CRect`. Die `cx` Wert gibt die Anzahl der Einheiten, um den linken und rechten Seite vergrößert werden soll und die `cy` Wert gibt die Anzahl der Einheiten, um den oberen und unteren vergrößert werden soll.
 
 *lpRect*  
-Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder `CRect` , der angibt, dass der Anzahl der Einheiten, um jede Seite vergrößert werden soll.
+Verweist auf eine [RECT](../../mfc/reference/rect-structure.md) Struktur oder `CRect` , der angibt, dass der Anzahl der Einheiten, um jede Seite vergrößert werden soll.
 
 *l*  
 Gibt die Anzahl der Einheiten, um die Vergrößerung der linken Seite des `CRect`.
@@ -569,7 +569,7 @@ BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 ### <a name="parameters"></a>Parameter
 
 *lpRect1*  
-Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder `CRect` Objekt, das einem Quellrechteck enthält.
+Verweist auf eine [RECT](../../mfc/reference/rect-structure.md) Struktur oder `CRect` Objekt, das einem Quellrechteck enthält.
 
 *lpRect2*  
 Verweist auf eine `RECT` Struktur oder `CRect` Objekt, das einem Quellrechteck enthält.
@@ -810,7 +810,7 @@ Gibt die Menge, die zum Verschieben von links oder rechts. Sie müssen nach link
 Gibt an, der Betrag, um nach oben oder unten zu verschieben. Es muss negativen nach oben zu verschieben.
 
 *Zeigen Sie*  
-Enthält eine [Punkt](../../mfc/reference/point-structure1.md) Struktur oder [CPoint](cpoint-class.md) Objekt, das beide Dimensionen, um die verschoben angibt.
+Enthält eine [Punkt](../../mfc/reference/point-structure.md) Struktur oder [CPoint](cpoint-class.md) Objekt, das beide Dimensionen, um die verschoben angibt.
 
 *size*  
 Enthält eine [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur oder [CSize](csize-class.md) Objekt, das beide Dimensionen, um die verschoben angibt.
@@ -873,7 +873,7 @@ void operator=(const RECT& srcRect) throw();
 ### <a name="parameters"></a>Parameter
 
 *srcRect*  
-Bezieht sich auf einem Quellrechteck. Kann eine [RECT](../../mfc/reference/rect-structure1.md) oder `CRect`.
+Bezieht sich auf einem Quellrechteck. Kann eine [RECT](../../mfc/reference/rect-structure.md) oder `CRect`.
 
 ### <a name="example"></a>Beispiel
 
@@ -901,7 +901,7 @@ BOOL operator==(const RECT& rect) const throw();
 ### <a name="parameters"></a>Parameter
 
 *Rect*  
-Bezieht sich auf einem Quellrechteck. Kann eine [RECT](../../mfc/reference/rect-structure1.md) oder `CRect`.
+Bezieht sich auf einem Quellrechteck. Kann eine [RECT](../../mfc/reference/rect-structure.md) oder `CRect`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -947,7 +947,7 @@ BOOL operator!=(const RECT& rect) const throw();
 ### <a name="parameters"></a>Parameter
 
 *Rect*  
-Bezieht sich auf einem Quellrechteck. Kann eine [RECT](../../mfc/reference/rect-structure1.md) oder `CRect`.
+Bezieht sich auf einem Quellrechteck. Kann eine [RECT](../../mfc/reference/rect-structure.md) oder `CRect`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -994,13 +994,13 @@ void operator+=(LPCRECT lpRect) throw();
 ### <a name="parameters"></a>Parameter
 
 *Zeigen Sie*  
-Ein [Punkt](../../mfc/reference/point-structure1.md) Struktur oder [CPoint](cpoint-class.md) Objekt, das die Anzahl der Einheiten, um das Rechteck verschieben angibt.
+Ein [Punkt](../../mfc/reference/point-structure.md) Struktur oder [CPoint](cpoint-class.md) Objekt, das die Anzahl der Einheiten, um das Rechteck verschieben angibt.
 
 *size*  
 Ein [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur oder [CSize](csize-class.md) Objekt, das die Anzahl der Einheiten, um das Rechteck verschieben angibt.
 
 *lpRect*  
-Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder `CRect` -Objekt, das die Anzahl der Einheiten, um jede Seite der Vergrößerung enthält `CRect`.
+Verweist auf eine [RECT](../../mfc/reference/rect-structure.md) Struktur oder `CRect` -Objekt, das die Anzahl der Einheiten, um jede Seite der Vergrößerung enthält `CRect`.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1037,13 +1037,13 @@ void operator-=(LPCRECT lpRect) throw();
 ### <a name="parameters"></a>Parameter
 
 *Zeigen Sie*  
-Ein [Punkt](../../mfc/reference/point-structure1.md) Struktur oder [CPoint](cpoint-class.md) Objekt, das die Anzahl der Einheiten, um das Rechteck verschieben angibt.
+Ein [Punkt](../../mfc/reference/point-structure.md) Struktur oder [CPoint](cpoint-class.md) Objekt, das die Anzahl der Einheiten, um das Rechteck verschieben angibt.
 
 *size*  
 Ein [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur oder [CSize](csize-class.md) Objekt, das die Anzahl der Einheiten, um das Rechteck verschieben angibt.
 
 *lpRect*  
-Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder `CRect` -Objekt, das die Anzahl der Einheiten, um jede Seite der deflate enthält `CRect`.
+Verweist auf eine [RECT](../../mfc/reference/rect-structure.md) Struktur oder `CRect` -Objekt, das die Anzahl der Einheiten, um jede Seite der deflate enthält `CRect`.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1078,7 +1078,7 @@ void operator&=(const RECT& rect) throw();
 ### <a name="parameters"></a>Parameter
 
 *Rect*  
-Enthält eine [RECT](../../mfc/reference/rect-structure1.md) oder `CRect`.
+Enthält eine [RECT](../../mfc/reference/rect-structure.md) oder `CRect`.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1102,7 +1102,7 @@ void operator|=(const RECT& rect) throw();
 ### <a name="parameters"></a>Parameter
 
 *Rect*  
-Enthält eine `CRect` oder [RECT](../../mfc/reference/rect-structure1.md).
+Enthält eine `CRect` oder [RECT](../../mfc/reference/rect-structure.md).
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1141,13 +1141,13 @@ CRect operator+(SIZE size) const throw();
 ### <a name="parameters"></a>Parameter
 
 *Zeigen Sie*  
-Ein [Punkt](../../mfc/reference/point-structure1.md) Struktur oder [CPoint](cpoint-class.md) Objekt, das die Anzahl der Einheiten, verschieben Sie den Rückgabewert angibt.
+Ein [Punkt](../../mfc/reference/point-structure.md) Struktur oder [CPoint](cpoint-class.md) Objekt, das die Anzahl der Einheiten, verschieben Sie den Rückgabewert angibt.
 
 *size*  
 Ein [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur oder [CSize](csize-class.md) Objekt, das die Anzahl der Einheiten, verschieben Sie den Rückgabewert angibt.
 
 *lpRect*  
-Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder `CRect` -Objekt, die Anzahl der Einheiten enthält, um jede Seite des Rückgabewerts vergrößert werden soll.
+Verweist auf eine [RECT](../../mfc/reference/rect-structure.md) Struktur oder `CRect` -Objekt, die Anzahl der Einheiten enthält, um jede Seite des Rückgabewerts vergrößert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1185,13 +1185,13 @@ CRect operator-(LPCRECT lpRect) const throw();
 ### <a name="parameters"></a>Parameter
 
 *Zeigen Sie*  
-Ein [Punkt](../../mfc/reference/point-structure1.md) Struktur oder `CPoint` Objekt, das die Anzahl der Einheiten, verschieben Sie den Rückgabewert angibt.
+Ein [Punkt](../../mfc/reference/point-structure.md) Struktur oder `CPoint` Objekt, das die Anzahl der Einheiten, verschieben Sie den Rückgabewert angibt.
 
 *size*  
 Ein [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur oder `CSize` Objekt, das die Anzahl der Einheiten, verschieben Sie den Rückgabewert angibt.
 
 *lpRect*  
-Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder `CRect` -Objekt, das die Anzahl der Einheiten, um jede Seite des Rückgabewerts deflate enthält.
+Verweist auf eine [RECT](../../mfc/reference/rect-structure.md) Struktur oder `CRect` -Objekt, das die Anzahl der Einheiten, um jede Seite des Rückgabewerts deflate enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1227,7 +1227,7 @@ CRect operator&(const RECT& rect2) const throw();
 ### <a name="parameters"></a>Parameter
 
 *rect2*  
-Enthält eine [RECT](../../mfc/reference/rect-structure1.md) oder `CRect`.
+Enthält eine [RECT](../../mfc/reference/rect-structure.md) oder `CRect`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1265,7 +1265,7 @@ rect2) const throw();
 ### <a name="parameters"></a>Parameter
 
 *rect2*  
-Enthält eine [RECT](../../mfc/reference/rect-structure1.md) oder `CRect`.
+Enthält eine [RECT](../../mfc/reference/rect-structure.md) oder `CRect`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1307,7 +1307,7 @@ BOOL PtInRect(POINT point) const throw();
 ### <a name="parameters"></a>Parameter
 
 *Zeigen Sie*  
-Enthält eine [Punkt](../../mfc/reference/point-structure1.md) Struktur oder [CPoint](cpoint-class.md) Objekt.
+Enthält eine [Punkt](../../mfc/reference/point-structure.md) Struktur oder [CPoint](cpoint-class.md) Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1439,7 +1439,7 @@ BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
 ### <a name="parameters"></a>Parameter
 
 *lpRectSrc1*  
-Verweist auf die [RECT](../../mfc/reference/rect-structure1.md) Struktur oder `CRect` Objekt, von dem ein Rechteck subtrahiert werden soll.
+Verweist auf die [RECT](../../mfc/reference/rect-structure.md) Struktur oder `CRect` Objekt, von dem ein Rechteck subtrahiert werden soll.
 
 *lpRectSrc2*  
 Verweist auf die `RECT` Struktur oder `CRect` -Objekt, das auf das Rechteck subtrahiert werden auf die von der *lpRectSrc1* Parameter.
@@ -1527,7 +1527,7 @@ BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 ### <a name="parameters"></a>Parameter
 
 *lpRect1*  
-Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) oder `CRect` , die einem Quellrechteck enthält.
+Verweist auf eine [RECT](../../mfc/reference/rect-structure.md) oder `CRect` , die einem Quellrechteck enthält.
 
 *lpRect2*  
 Verweist auf eine `RECT` oder `CRect` , die einem Quellrechteck enthält.
@@ -1588,5 +1588,5 @@ int nWid = rect.Width();
 
 [CPoint-Klasse](cpoint-class.md)<br/>
 [CSize-Klasse](csize-class.md)<br/>
-[RECT](../../mfc/reference/rect-structure1.md)
+[RECT](../../mfc/reference/rect-structure.md)
 
