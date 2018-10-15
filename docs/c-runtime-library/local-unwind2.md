@@ -29,36 +29,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bee1decf5b5a3676e6111960282c19e87628c48
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47227d4be0ad1c5145a9064d11b4ea633c7d7fc1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391378"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035785"
 ---
 # <a name="localunwind2"></a>_local_unwind2
-Interne CRT-Funktion. Führt alle Beendigungshandler aus, die in der angegebenen Bereichtabelle aufgelistet sind.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void _local_unwind2(  
-   PEXCEPTION_REGISTRATION xr,  
-   int stop  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- [in] `xr`  
- Ein Registrierungseintrag, der mit einer Bereichtabelle verbunden ist.  
-  
- [in] `stop`  
- Die lexikalische Ebene, die darauf hinweist, wo `_local_unwind2` aufhören sollte.  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Methode wird nur von der Laufzeitumgebung verwendet. Rufen Sie die Methode nicht in Ihrem Code auf.  
-  
- Wenn diese Methode Beendigungshandler ausführt, beginnt sie an der aktuellen lexikalischen Ebene und arbeitet sich die lexikalischen Ebenen hoch, bis sie die Ebene erreicht, die von `stop` angegeben wird. Sie führt keine Beendigungshandler auf der Ebene aus, die von `stop` angegeben ist.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Alphabetische Funktionsreferenz](../c-runtime-library/reference/crt-alphabetical-function-reference.md)
+
+Interne CRT-Funktion. Führt alle Beendigungshandler aus, die in der angegebenen Bereichtabelle aufgelistet sind.
+
+## <a name="syntax"></a>Syntax
+
+```
+void _local_unwind2(
+   PEXCEPTION_REGISTRATION xr,
+   int stop
+);
+```
+
+#### <a name="parameters"></a>Parameter
+
+*xr*<br/>
+[in]: Ein Registrierungseintrag, der mit einer Bereichtabelle verbunden ist.
+
+*stop*<br/>
+[in]: Die lexikalische Ebene, die darauf hinweist, wo `_local_unwind2` aufhören sollte.
+
+## <a name="remarks"></a>Hinweise
+
+Diese Methode wird nur von der Laufzeitumgebung verwendet. Rufen Sie die Methode nicht in Ihrem Code auf.
+
+Wenn diese Methode Beendigungshandler ausführt, beginnt sie an der aktuellen lexikalischen Ebene und arbeitet sich die lexikalischen Ebenen hoch, bis sie die Ebene erreicht, die von `stop` angegeben wird. Sie führt keine Beendigungshandler auf der Ebene aus, die von `stop` angegeben ist.
+
+## <a name="see-also"></a>Siehe auch
+
+[Alphabetische Funktionsreferenz](../c-runtime-library/reference/crt-alphabetical-function-reference.md)

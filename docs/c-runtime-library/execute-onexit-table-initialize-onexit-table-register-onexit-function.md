@@ -28,61 +28,66 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e1f4ebf40bc242d0daf98bbc85c2ea3d1295043
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e9a6ea61883e6ce94bc41f16e7139156c68c8059
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391483"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082091"
 ---
 # <a name="executeonexittable-initializeonexittable-registeronexitfunction"></a>_execute_onexit_table, _initialize_onexit_table, _register_onexit_function
-Verwaltet die Routinen, die zum Zeitpunkt der Beendigung aufgerufen werden sollen.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int _initialize_onexit_table(  
-    _onexit_table_t* table  
-    );  
-  
-int _register_onexit_function(  
-    _onexit_table_t* table,  
-    _onexit_t        function  
-    );  
-  
-int _execute_onexit_table(  
-    _onexit_table_t* table  
-    );  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- [inout] `table`  
- Ein Zeiger auf die onexit-Funktionstabelle.  
-  
- [in] `function`  
- Ein Zeiger auf eine Funktion zum Hinzufügen zur onexit-Funktionstabelle.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Im Erfolgsfall wird 0 zurückgegeben. Andernfalls wird ein negativer Wert zurückgegeben.  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Funktionen sind Details zur Implementierung der Infrastruktur und unterstützen die C-Laufzeit. Sie sollten nicht direkt aus Ihrem Code aufgerufen werden. Die C-Laufzeit verwendet eine *onexit-Funktionstabelle* zum Darstellen einer Sequenz von Funktionen, die durch Aufrufe von `atexit`, `at_quick_exit` und `_onexit` registriert werden. Die Datenstruktur der onexit-Funktionstabelle ist ein undurchsichtiges Implementierungsdetail der C-Laufzeit; die Reihenfolge und Bedeutung der Datenmember ändert sich möglicherweise. Sie sollten nicht durch externen Code überprüft werden.  
-  
- Die Funktion `_initialize_onexit_table` initialiseirt die onexit-Funktionstabelle auf ihren Anfangswert.  Diese Funktion muss aufgerufen werden bevor die onexit-Funktionstabelle an entweder `_register_onexit_function` oder `_execute_onexit_table` weitergegeben wird.  
-  
- Die `_register_onexit_function` Funktion fügt eine Funktion an das Ende der onexit-Funktionstabelle an.  
-  
- Die Funktion `_execute_onexit_table` führt alle Funktionen in der onexit-Funktion-Tabelle aus, löscht die Tabelle, und gibt dann zurück. Nach Aufruf von `_execute_onexit_table` befindet sich die Tabelle in einem ungültigen Zustand. Sie muss durch einen Aufruf von `_initialize_onexit_table` neu initialisiert werden, bevor sie erneut verwendet wird.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_initialize_onexit_table function`, `_register_onexit_function`, `_execute_onexit_table`|C, C++: \<process.h>|  
-  
- Die Funktionen `_initialize_onexit_table`, `_register_onexit_function` und `_execute_onexit_table` sind Microsoft-spezifisch. Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [atexit](../c-runtime-library/reference/atexit.md)   
- [exit, _Exit, _exit](../c-runtime-library/reference/exit-exit-exit.md)   
- [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)
+
+Verwaltet die Routinen, die zum Zeitpunkt der Beendigung aufgerufen werden sollen.
+
+## <a name="syntax"></a>Syntax
+
+```
+int _initialize_onexit_table(
+    _onexit_table_t* table
+    );
+
+int _register_onexit_function(
+    _onexit_table_t* table,
+    _onexit_t        function
+    );
+
+int _execute_onexit_table(
+    _onexit_table_t* table
+    );
+```
+
+#### <a name="parameters"></a>Parameter
+
+*table*<br/>
+[in, out]: Ein Zeiger auf die onexit-Funktionstabelle.
+
+*function*<br/>
+[in]: Ein Zeiger auf eine Funktion zum Hinzufügen zur onexit-Funktionstabelle.
+
+## <a name="return-value"></a>Rückgabewert
+
+Im Erfolgsfall wird 0 zurückgegeben. Andernfalls wird ein negativer Wert zurückgegeben.
+
+## <a name="remarks"></a>Hinweise
+
+Diese Funktionen sind Details zur Implementierung der Infrastruktur und unterstützen die C-Laufzeit. Sie sollten nicht direkt aus Ihrem Code aufgerufen werden. Die C-Laufzeit verwendet eine *onexit-Funktionstabelle* zum Darstellen einer Sequenz von Funktionen, die durch Aufrufe von `atexit`, `at_quick_exit` und `_onexit` registriert werden. Die Datenstruktur der onexit-Funktionstabelle ist ein undurchsichtiges Implementierungsdetail der C-Laufzeit; die Reihenfolge und Bedeutung der Datenmember ändert sich möglicherweise. Sie sollten nicht durch externen Code überprüft werden.
+
+Die Funktion `_initialize_onexit_table` initialiseirt die onexit-Funktionstabelle auf ihren Anfangswert.  Diese Funktion muss aufgerufen werden bevor die onexit-Funktionstabelle an entweder `_register_onexit_function` oder `_execute_onexit_table` weitergegeben wird.
+
+Die `_register_onexit_function` Funktion fügt eine Funktion an das Ende der onexit-Funktionstabelle an.
+
+Die Funktion `_execute_onexit_table` führt alle Funktionen in der onexit-Funktion-Tabelle aus, löscht die Tabelle, und gibt dann zurück. Nach Aufruf von `_execute_onexit_table` befindet sich die Tabelle in einem ungültigen Zustand. Sie muss durch einen Aufruf von `_initialize_onexit_table` neu initialisiert werden, bevor sie erneut verwendet wird.
+
+## <a name="requirements"></a>Anforderungen
+
+|-Routine zurückgegebener Wert|Erforderlicher Header|
+|-------------|---------------------|
+|`_initialize_onexit_table function`, `_register_onexit_function`, `_execute_onexit_table`|C, C++: \<process.h>|
+
+Die Funktionen `_initialize_onexit_table`, `_register_onexit_function` und `_execute_onexit_table` sind Microsoft-spezifisch. Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[atexit](../c-runtime-library/reference/atexit.md)<br/>
+[exit, _Exit, _exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>
+[_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)
