@@ -1,7 +1,7 @@
 ---
 title: Generische Funktionen (C++ / CLI) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b8c51b3468a636335a74b8a4206a6b533d3a200b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0d687dfbee48105001d3be04fd4918b9889e2d04
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398858"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327699"
 ---
 # <a name="generic-functions-ccli"></a>Generische Funktionen (C++/CLI)
 
@@ -91,7 +91,7 @@ Der Text der Methode, die auf die Typ-Parameter-IDs verweisen kann.
 
 Generische Funktionen sind Funktionen, die mit einem generischen Typparameter deklariert. Sie können Methoden in einer Klasse oder Struktur oder eigenständige Funktionen sein. Eine einzelne generische Deklaration deklariert implizit eine Gruppe von Funktionen, die nur in der Ersetzung von einem anderen tatsächlichen Typ für den generischen Typparameter zu unterscheiden.
 
-In Visual C++ können die Klasse oder Struktur Konstruktoren nicht mit generischen Typparametern deklariert werden.
+Ein Klasse oder Struktur-Konstruktor kann nicht mit generischen Typparametern deklariert werden.
 
 Wenn aufgerufen, wird der generische Typparameter durch einen tatsächlichen Typ ersetzt. Der tatsächliche Typ kann explizit in spitzen Klammern, die mithilfe der Syntax ähnlich auf ein Funktionsaufruf Vorlage angegeben werden. Ohne die Type-Parameter aufgerufen wird, versucht der Compiler, den tatsächlichen Typ aus den Parametern, die im Funktionsaufruf angegeben abzuleiten. Wenn das geplante Typargument nicht von den verwendeten Parametern abgeleitet werden kann, meldet der Compiler einen Fehler.
 
@@ -193,5 +193,5 @@ My function returned a string: Hello generic functions!
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Komponentenerweiterungen für .NET- und UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Generika](../windows/generics-cpp-component-extensions.md)
