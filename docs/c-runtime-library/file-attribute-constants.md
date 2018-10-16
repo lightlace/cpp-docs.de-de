@@ -66,7 +66,7 @@ Die Attribute werden durch die folgenden Manifestkonstanten dargestellt:
 |`_A_SUBDIR`| Unterverzeichnis. Wert: 0x10|
 |`_A_SYSTEM`| Systemdatei. Normalerweise mithilfe des DIR-Befehls nicht angezeigt, sofern nicht die Option „/AS“ verwendet wird. Wert: 0x04|
 
-Mit dem OR-Operator (& #124;) können mehrere Konstanten kombiniert werden.
+Mit dem OR-Operator (&#124;) können mehrere Konstanten kombiniert werden.
 
 ## <a name="see-also"></a>Siehe auch
 
