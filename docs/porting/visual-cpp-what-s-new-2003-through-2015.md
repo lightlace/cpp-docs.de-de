@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01ee370b4fd96419ce095fa9a93450b98b241dd2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 51921f8e55b9d4ce4e1875f5216984fe3257ca97
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448570"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084112"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++: Neuerungen von 2003 bis 2015
 
@@ -1360,7 +1360,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
 - **Attributierter ATL-Code veraltet** (Level 1 (`/W1`) standardmäßig EIN)
 
-   Frühere Versionen des Compilers haben attributierten ATL-Code unterstützt. In der nächsten Phase der Aufhebung der Unterstützung von attributiertem ATL-Code, die [in Visual C++ 2008 begann](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx), gilt attributierter ATL-Code nun als veraltet. Der Compiler gibt jetzt die Warnung C4467 aus, um diese Art von veraltetem Code erkennen zu können.
+   Frühere Versionen des Compilers haben attributierten ATL-Code unterstützt. In der nächsten Phase der Aufhebung der Unterstützung von attributiertem ATL-Code, die [in Visual C++ 2008 begann](https://msdn.microsoft.com/library/bb384632), gilt attributierter ATL-Code nun als veraltet. Der Compiler gibt jetzt die Warnung C4467 aus, um diese Art von veraltetem Code erkennen zu können.
 
    ```Output
     warning C4467: Usage of ATL attributes is deprecated
