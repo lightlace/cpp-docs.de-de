@@ -41,7 +41,7 @@ Die Klausel ist eine der folgenden:
 
 **Lastprivate (** *Variablenliste* **)**
 
-**Verringerung der (** *Operator* **:***Variablenliste* **)** 
+**Verringerung der (** *Operator* **:**  *Variablenliste* **)**
 
 **nowait**
 
