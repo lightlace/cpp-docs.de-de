@@ -1,7 +1,7 @@
 ---
-title: 'Vorgehensweise: Verbessern der Leistung mit Generika (Visual C++) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Verbessern der Leistung mit Generika (C++ / CLI) | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f946970f78b432774a5e4c7ba20fd15a00ae654
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ead9491e7b5302cadfa59eb7d98215fb3c41eb09
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318524"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327818"
 ---
-# <a name="how-to-improve-performance-with-generics-visual-c"></a>Gewusst wie: Verbessern der Leistung mit Generika (Visual C++)
+# <a name="how-to-improve-performance-with-generics-ccli"></a>Vorgehensweise: Verbessern der Leistung mit Generika (C++ / CLI)
 
-Mit Generika können Sie wiederverwendbaren Code, die auf einem Typparameter basierenden erstellen. Der tatsächliche Typ des Typparameters wird verzögert, bis von Clientcode aufgerufen wird. Weitere Informationen zu Generika finden Sie unter [Generika](../windows/generics-cpp-component-extensions.md).
+Mit Generika können Sie wiederverwendbaren Code, die auf einem Typparameter basierenden erstellen. Der tatsächliche Typ des Typparameters wird verzögert, bis von Clientcode aufgerufen wird. Weitere Informationen zu Generika finden Sie unter [Generics](../windows/generics-cpp-component-extensions.md).
 
 In diesem Artikel wird erläutert, wie Generika können die Leistung einer Anwendung zu erhöhen, die Auflistungen verwendet.
 
