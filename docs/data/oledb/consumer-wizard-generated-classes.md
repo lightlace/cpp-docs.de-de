@@ -1,7 +1,7 @@
 ---
 title: Vom Consumer-Assistenten generierte Klassen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/15/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -21,22 +21,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a4ffcb231824c120c90eaae1751a016ef63b8211
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a7498f15072f3b9687476ba7f6c291ebf5ff88cd
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106180"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410772"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Vom Consumer-Assistenten generierte Klassen
 
-Wenn Sie den ATL OLE DB-Consumer-Assistenten zum Erstellen eines Consumers verwenden, haben Sie die Wahl, ob Sie OLE DB-Vorlagen oder OLE DB-Attribute verwenden möchten. In beiden Fällen generiert der Assistent eine Befehlsklasse und eine Benutzerdatensatz-Klasse. Die Befehlsklasse enthält Code zum Öffnen der Datenquelle und des Rowsets, die Sie im Assistenten angegeben haben. Die Benutzerdatensatz-Klasse enthält Spaltenzuordnung für die ausgewählte Datenbanktabelle. Der generierte Code unterscheidet sich jedoch in beiden Fällen:  
+Bei Verwendung der **ATL-OLE DB-Consumer-Assistenten** zum Generieren von eines Consumers, die Sie haben die Möglichkeit der Verwendung von OLE DB-Vorlagen oder OLE DB-Attribute. In beiden Fällen generiert der Assistent eine Befehlsklasse und eine Benutzerdatensatz-Klasse. Die Befehlsklasse enthält Code zum Öffnen der Datenquelle und des Rowsets, die Sie im Assistenten angegeben haben. Die Benutzerdatensatz-Klasse enthält Spaltenzuordnung für die ausgewählte Datenbanktabelle. Der generierte Code unterscheidet sich jedoch in beiden Fällen:  
   
-- Wenn Sie einen auf einer Vorlage basierenden Consumer auswählen, erstellt der Assistent eine Befehlsklasse und eine Benutzerdatenbank-Klasse. Die Befehlsklasse weist den Namen auf, den Sie im Assistenten im Feld „Klasse“ eingeben (beispielsweise `CProducts`), und die Benutzerdatensatz-Klasse hat einen Namen der Form „*KlassenName*-Accessor“ (beispielsweise `CProductsAccessor`). Beide Klassen werden in der Headerdatei des Consumers platziert.  
+- Wenn Sie einen auf einer Vorlage basierenden Consumer auswählen, erstellt der Assistent eine Befehlsklasse und eine Benutzerdatenbank-Klasse. Die Command-Klasse hat den Namen, den Sie, in eingeben der **Klasse** Feld im Assistenten (z. B. `CProducts`), und die Benutzerdatensatz-Klasse hat einen Namen im Format "*ClassName*Accessor" (z. b. `CProductsAccessor`). Beide Klassen werden in der Headerdatei des Consumers platziert.  
   
 - Wenn Sie einen auf Consumer mit Attributbeteiligung auswählen, hat die Benutzerdatensatz-Klasse einen Namen der Form „_*KlassenName*-Accessor“ und wird injiziert. Das heißt, Sie können nur die Befehlsklasse im Texteditor sehen; Sie können die Benutzerdatensatz-Klasse nur als injizierten Code sehen. Informationen zum Anzeigen von injiziertem Code finden Sie unter [Debuggen von injiziertem Code](/visualstudio/debugger/how-to-debug-injected-code).  
   
-Die folgenden Beispiele verwenden eine in der Tabelle „Products“ der Northwind-Datenbank erstellte Befehlsklasse, um den vom Assistenten generierten Benutzercode für die Befehlsklasse und die Benutzerdatenbank-Klasse zu veranschaulichen.  
+Die folgenden Beispiele verwenden eine Befehlsklasse erstellt die `Products` Tabelle mit den `Northwind` Datenbank, um den-Assistenten generierten Consumercode für die Klasse des Befehls und die Benutzerdatensatz-Klasse zu veranschaulichen.  
   
 ## <a name="templated-user-record-classes"></a>Auf einer Vorlage basierende Benutzerdatensatz-Klassen  
 
@@ -47,10 +47,10 @@ Wenn Sie mithilfe der OLE DB-Vorlagen (anstelle der OLE DB-Attribute) einen OLE 
 Der erste Teil der Benutzerdatensatz-Klasse enthält die Datenmemberdeklarationen und die Status- und Längedatenmember für jede datengebundene Spalte. Informationen zu diesen Datenmembern finden Sie unter [Feldstatus-Datenmember in vom Assistenten generierten Accessoren](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
   
 > [!NOTE]
->  Wenn Sie die Benutzerdatensatz-klasse ändern oder einen eigenen Consumer erstellen, müssen die Datenvariablen in der Reihenfolge vor den Status- und Längenvariablen liegen.  
+> Wenn Sie die Benutzerdatensatz-klasse ändern oder einen eigenen Consumer erstellen, müssen die Datenvariablen in der Reihenfolge vor den Status- und Längenvariablen liegen.  
   
 > [!NOTE]
->  Der ATL-OLE DB-Consumer-Assistent verwendet die `DB_NUMERIC` Typ zum Binden von numerischen Datentypen. Es früher verwendete `DBTYPE_VARNUMERIC` (das Format wird durch beschrieben die `DB_VARNUMERIC` geben; Siehe "OleDb.h"). Wenn Sie den Assistenten zum Erstellen von Consumern nicht verwenden, wird empfohlen, Sie verwenden `DB_NUMERIC`.  
+> Der ATL-OLE DB-Consumer-Assistent verwendet die `DB_NUMERIC` Typ zum Binden von numerischen Datentypen. Es früher verwendete `DBTYPE_VARNUMERIC` (das Format wird durch beschrieben die `DB_VARNUMERIC` geben; Siehe "OleDb.h"). Wenn Sie den Assistenten zum Erstellen von Consumern nicht verwenden, wird empfohlen, Sie verwenden `DB_NUMERIC`.  
   
 ```cpp  
 // Products.H : Declaration of the CProducts class  
@@ -159,7 +159,7 @@ class CProducts : public CCommand<CAccessor<CProductsAccessor>>
   
 ## <a name="attribute-injected-user-record-classes"></a>Benutzerdatensatz-Klasse mit Attributbeteiligung  
 
-Wenn Sie einen OLE DB-Consumer mithilfe der Datenbankattribute ([db_command](../../windows/db-command.md) oder [db_table](../../windows/db-table.md)) erstellen, injizieren die Attribute eine Benutzerdatensatz-Klasse mit einem Namen der Form "_*ClassName*Accessor." Wenn Sie Ihre Befehlsklasse beispielsweise `COrders`genannt haben, heißt die Benutzerdatensatz-Klasse `_COrdersAccessor`. Zwar wird die Benutzerdatensatz-Klasse in der Klassenansicht angezeigt, über einen Doppelklick darauf wird aber zu der in der Headerdatei festgelegten Befehls- oder Tabellenklasse navigiert. In diesen Fällen können Sie die eigentliche Deklaration der Benutzerdatensatz-Klasse nur durch Anzeigen des durch die Attribute injizierten Codes zu sehen bekommen.  
+Wenn Sie einen OLE DB-Consumer mithilfe der Datenbankattribute ([db_command](../../windows/db-command.md) oder [db_table](../../windows/db-table.md)) erstellen, injizieren die Attribute eine Benutzerdatensatz-Klasse mit einem Namen der Form "_*ClassName*Accessor." Wenn Sie Ihre Befehlsklasse beispielsweise `COrders`genannt haben, heißt die Benutzerdatensatz-Klasse `_COrdersAccessor`. Obwohl die Benutzerdatensatz-Klasse, die in angezeigt wird **Klassenansicht**, Doppelklick auf die Klasse Befehl oder eine Tabelle in der Headerdatei navigiert. In diesen Fällen können Sie die eigentliche Deklaration der Benutzerdatensatz-Klasse nur durch Anzeigen des durch die Attribute injizierten Codes zu sehen bekommen.  
   
 Das Hinzufügen oder Überschreiben von Methoden in Consumern mit Attributbeteiligung führt möglicherweise zu Komplikationen. Beispielsweise können Sie der `_COrdersAccessor` -Deklaration einen `COrders` -Konstruktor hinzufügen, beachten Sie aber, dass dadurch tatsächlich der injizierten `COrdersAccessor` -Klasse ein Konstruktor hinzugefügt wird. Ein derartiger Konstruktor kann die Spalten/Parameter initialisieren, Sie können auf diese Weise aber keinen Kopierkonstruktor erstellen, da er das `COrdersAccessor` -Objekt nicht direkt instanziieren kann. Wenn Sie einen Konstruktor (oder eine andere Methode) direkt für die `COrders` -Klasse benötigen, wird empfohlen, eine neue, aus `COrders` abgeleitete Klasse zu definieren, der Sie die erforderlichen Methoden hinzufügen.  
   

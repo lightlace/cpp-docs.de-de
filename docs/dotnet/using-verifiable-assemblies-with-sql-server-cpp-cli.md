@@ -1,7 +1,7 @@
 ---
 title: Verwenden überprüfbarer Assemblys mit SQLServer (C++ / CLI) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/17/2019
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2bb4adbb960f9d062cc8573c7ca0f7cd5dcd0426
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4fca5d567d19434654b7ccf3cfb2b4d5d3e44d53
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382218"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410706"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Verwenden überprüfbarer Assemblys mit SQL Server (C++/CLI)
 
@@ -32,9 +32,10 @@ SQL Server bietet Erweiterungen in Transact-SQL (T-SQL), damit Sie überprüfbar
 
 - Uneingeschränkten Modus: Ausführen von Code auf eigenes Risiko; Code muss nicht überprüfbar typsicher sein.
 
-- Im abgesicherten Modus: Führen Sie überprüfbar typsicheren Code mit/clr: safe kompiliert.
+- Im abgesicherten Modus: Führen Sie überprüfbar typsicheren Code mit/clr: safe kompiliert. 
 
-Im Abgesicherter Modus erfordert, dass der ausgeführte Assemblys überprüfbar typsicher sein.
+> [!IMPORTANT]
+> Visual Studio 2015 als veraltet markiert und Visual Studio 2017 nicht unterstützt. die **/CLR: pure** und **/CLR: safe** überprüfbare Projekte. Wenn Sie die überprüfbaren Code benötigen, empfehlen wir, dass Sie Ihren Code in c# übersetzen.
 
 Verwenden Sie zum Erstellen und Laden eine überprüfbare Assembly in SQL Server, die Transact-SQL-Befehle erstellen und die DROP ASSEMBLY wie folgt:
 
@@ -88,5 +89,5 @@ sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
 
 ## <a name="see-also"></a>Siehe auch
 
-[Gewusst wie: Migrieren zu/CLR: safe (C++ / CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)<br/>
+
 [Klassen und Strukturen](../cpp/classes-and-structs-cpp.md)

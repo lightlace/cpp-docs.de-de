@@ -1,7 +1,7 @@
 ---
 title: Implementieren eines einfachen Consumers | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ce6f57846a0dcad79eead500286525e94c66a8e6
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: b407af3e6c105bdbb2f8d91aa9d854e6d877592c
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162294"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410693"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementieren eines einfachen Consumers
 
@@ -211,75 +211,6 @@ Die vorherigen Schritten erhalten Sie lesezeichenunterstützung und ein Bookmark
     ```  
   
 Weitere Informationen über Lesezeichen finden Sie unter [mithilfe von Lesezeichen](../../data/oledb/using-bookmarks.md). Beispiele zu Lesezeichen Siehe [Aktualisieren von Rowsets](../../data/oledb/updating-rowsets.md).  
-  
-## <a name="adding-xml-support-to-the-consumer"></a>Hinzufügen von XML-Unterstützung für den Consumer  
-
-Siehe [den Zugriff auf XML-Daten](../../data/oledb/accessing-xml-data.md), es gibt zwei Möglichkeiten zum Abrufen von XML-Daten aus einer Datenquelle: mit [CStreamRowset](../../data/oledb/cstreamrowset-class.md) oder [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md). Dieses Beispiel verwendet `CStreamRowset`, die wesentlich effizienter, jedoch benötigen Sie SQL Server 2000 ausgeführt wird, auf dem Computer, auf der Sie diese beispielanwendung ausführen.  
-  
-### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>So ändern Sie die Befehlsklasse von CStreamRowset erben  
-  
-1. Ändern Sie in der Consumeranwendung, die Sie zuvor erstellt haben, Ihre `CCommand` Deklaration an `CStreamRowset` als Rowset-Klasse wie folgt:  
-  
-    ```cpp  
-    class CProducts : public CCommand<CAccessor<CProductsAccessor>, CStreamRowset >  
-    ```  
-  
-### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>So ändern Sie den Hauptcode zum Abrufen und Ausgeben der XML-Daten  
-  
-1. Ändern Sie in der MyCons.cpp-Datei der Konsolenanwendung, die Sie zuvor erstellt haben, den Hauptcode, sodass er folgendermaßen ein:  
-  
-    ```cpp  
-    ///////////////////////////////////////////////////////////////////////  
-    // MyCons.cpp : Defines the entry point for the console application.  
-    //  
-  
-    #include "stdafx.h"  
-    #include "Products.h"   
-    #include <iostream>  
-    #include <fstream>  
-    using namespace std;  
-  
-    int _tmain(int argc, _TCHAR* argv[])  
-    {  
-       HRESULT hr = CoInitialize(NULL);  
-  
-       // Instantiate rowset  
-       CProducts rs;  
-  
-       // Add variable declarations for the Read method to handle sequential stream data  
-       CHAR buffer[1001];  // Pointer to buffer into which data stream is read  
-       ULONG cbRead;       // Actual number of bytes read from the data stream  
-  
-       hr = rs.OpenAll();  
-  
-       // Open file output.txt for writing in overwrite mode  
-       ofstream outfile( "C:\\output.txt", ios::out );  
-  
-       if (!outfile)      // Test for invalid file  
-          return -1;  
-  
-       // The following loop reads 1000 bytes of the data stream at a time   
-       // until it reaches the end of the data stream  
-       for (;;)  
-       {  
-          // Read sequential stream data into buffer  
-          HRESULT hr = rs.m_spStream->Read(buffer, 1000, &cbRead);  
-          if (FAILED (hr))  
-             break;  
-          // Output buffer to file  
-          buffer[cbRead] = 0;  
-          outfile << buffer;  
-          // Test for end of data stream  
-          if (cbRead < 1000)  
-             break;  
-       }  
-  
-       rs.CloseAll();  
-       CoUninitialize();  
-  
-       return 0;  
-    }  
-    ```  
   
 ## <a name="see-also"></a>Siehe auch  
 

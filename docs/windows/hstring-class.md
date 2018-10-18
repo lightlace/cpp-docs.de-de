@@ -47,16 +47,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2a70b39352f26d76e9199b9da46f679507b148ed
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: a93c36748eb01a1c647a2aa433196c7364f60744
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163115"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410810"
 ---
 # <a name="hstring-class"></a>HString-Klasse
 
-Eine Hilfsklasse für die Verwaltung der Lebensdauer des ein HSTRING mit das RAII-Muster.
+Eine Hilfsklasse für die Verwaltung der Lebensdauer einer [HSTRING](/windows/desktop/WinRT/hstring) das RAII-Muster verwenden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -66,7 +66,7 @@ class HString;
 
 ## <a name="remarks"></a>Hinweise
 
-Die Windows-Runtime ermöglicht den Zugriff auf die Zeichenfolgen durch HSTRING-Handles. Die `HString` Klasse enthält Hilfsfunktionen und Operatoren zur Vereinfachung der Verwendung von HSTRING-Handles. Diese Klasse kann die Lebensdauer der HSTRING verarbeiten, die sie über ein RAII-Muster besitzt.
+Die Windows-Runtime ermöglicht den Zugriff auf die Zeichenfolgen durch [HSTRING](/windows/desktop/WinRT/hstring) behandelt. Die `HString` Klasse enthält Hilfsfunktionen und Operatoren zur Vereinfachung der Verwendung von HSTRING-Handles. Diese Klasse kann die Lebensdauer der HSTRING verarbeiten, die sie über ein RAII-Muster besitzt.
 
 ## <a name="members"></a>Member
 

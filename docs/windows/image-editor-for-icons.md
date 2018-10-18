@@ -1,7 +1,7 @@
 ---
 title: Bildbearbeitung für Symbole | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/17/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -23,16 +23,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe7cad7fccabd7acc8af7ecf1f3711d5b0d636ce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ecd2b3b94f04a246242a33494a124171e95cae7c
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379189"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410667"
 ---
 # <a name="image-editor-for-icons"></a>Bildbearbeitung für Symbole
 
-Die Bildbearbeitung verfügt über zahlreiche Tools zum Erstellen und Bearbeiten von Bildern sowie über Funktionen, die Sie beim Erstellen von Bitmaps für Symbolleisten unterstützen. Zusätzlich zu Bitmaps, Symbolen und Cursorn können Sie Bilder im GIF- oder JPEG-Format bearbeiten. Zu diesem Zweck verwenden Sie die Befehle aus dem Menü **Bild** und die Tools auf der Symbolleiste der **Bildbearbeitung** .
+Wenn Sie auf eine Bilddatei (z. B. ico, BMP, PNG) im Projektmappen-Explorer klicken, öffnet das Bild im Bild-Editor auf die gleiche Weise, die Codedateien im Code-Editor geöffnet. Wenn eine Registerkarte Bild-Editor aktiv ist, sehen Sie Symbolleisten mit vielen Tools zum Erstellen und Bearbeiten von Bildern. Zusätzlich zu Bitmaps, Symbolen und Cursorn können Sie Bilder im GIF- oder JPEG-Format bearbeiten. Zu diesem Zweck verwenden Sie die Befehle aus dem Menü **Bild** und die Tools auf der Symbolleiste der **Bildbearbeitung** .
 
 Von der Bildbearbeitung werden die folgenden Aufgaben unterstützt:
 
