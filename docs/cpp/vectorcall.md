@@ -34,7 +34,7 @@ Die **__vectorcall** -Aufrufkonvention gibt an, dass Argumente für Funktionen, 
 
 |Element|Implementierung|
 |-------------|--------------------|
-|C-Namensergänzungskonvention|Funktionsnamen werden mit zwei "@"-Zeichen als Suffix (\@\@) gefolgt von der Anzahl von Bytes (als Dezimalzahl) in der Parameterliste.|
+|C-Namensergänzungskonvention|Funktionsnamen werden mit zwei "\@"-Zeichen als Suffix (\@\@) gefolgt von der Anzahl von Bytes (als Dezimalzahl) in der Parameterliste.|
 |Konvention zur Umwandlung von Groß- in Kleinbuchstaben und umgekehrt|Groß-/Kleinbuchstaben werden nicht umgewandelt.|
 
 Mithilfe der [/GV](../build/reference/gd-gr-gv-gz-calling-convention.md) -Compileroption werden die einzelnen Funktionen im Modul als Kompilieren **__vectorcall** , wenn die Funktion eine Memberfunktion ist, wird mit einem in Konflikt stehenden aufrufkonventionsattribut deklariert, verwendet eine `vararg` Variable Argumentliste oder hat den Namen `main`.
