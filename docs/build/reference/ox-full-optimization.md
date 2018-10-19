@@ -1,13 +1,14 @@
 ---
 title: -Ox (die meisten Geschwindigkeitsoptimierungen aktivieren) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/25/2017
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ToolOptimization
-- /ox
+- /Ox
+- /Oxs
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e1da84c3a4ec481d3af2880a80f5923bf0c50cc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f3f5a39201283567285b37a0901929022b688104
+ms.sourcegitcommit: 4cbde5d164d681204c4011dc95a921d75292f423
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438079"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49459165"
 ---
 # <a name="ox-enable-most-speed-optimizations"></a>/ Ox (die meisten Geschwindigkeitsoptimierungen aktivieren)
 
@@ -33,7 +34,7 @@ Die **/Ox** -Compileroption ermöglicht es, eine Kombination verschiedener Optim
 
 ## <a name="syntax"></a>Syntax
 
-> /Ox
+> **/Ox**
 
 ## <a name="remarks"></a>Hinweise
 
@@ -59,7 +60,7 @@ Die **/Ox** Compileroption ist identisch mit den folgenden Optionen zusammen:
 
 - [/Od (Deaktivieren (Debuggen))](../../build/reference/od-disable-debug.md)
 
-Können Sie die Verschiebung in Richtung der Geschwindigkeit der Abbrechen der **/Ox** Compileroption, wenn Sie angeben, **/Oxs**, welche kombiniert die **/Ox** Compileroption mit  [ /OS (so klein Code)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md). Die Kombination beider Optionen Codegröße kleinere.
+Können Sie die Verschiebung in Richtung der Geschwindigkeit der Abbrechen der **/Ox** Compileroption, wenn Sie angeben, **/Oxs**, welche kombiniert die **/Ox** Compileroption mit  [ /OS (so klein Code)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md). Die Kombination beider Optionen Codegröße kleinere.  Die **/Oxs** Option ist genau derselbe, als wenn **/Ox** **/OS** Wenn die Optionen in dieser Reihenfolge angezeigt werden.
 
 Um alle verfügbaren auf Dateiebene Optimierungen für Releasebuilds anzuwenden, die Sie angeben, sollten ["/ O2" (Geschwindigkeit maximieren)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) anstelle von **/Ox**, und [/O1 (Größe minimieren)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) stattdessen der **/Oxs**. Für noch mehr Optimierung in Version erstellt wurde, berücksichtigen Sie auch die [/GL (Whole Program Optimization)](../../build/reference/gl-whole-program-optimization.md) Compileroption und [/LTCG (Link-Time Code Generation)](../../build/reference/ltcg-link-time-code-generation.md) -Linkeroption.
 
