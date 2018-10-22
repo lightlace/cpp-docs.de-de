@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f5e32599096b4e0fa451c18b3e05adf01b34ff4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b372959105407074cd2a7295837e2c47ef629da7
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407594"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162164"
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Hinzufügen von Verweisen in Visual C++-Projekten
 
@@ -84,11 +84,11 @@ Die folgenden Eigenschaften stehen für verschiedene Arten von Verweisen zur Ver
 
 - **Lokale Satellitenassemblys kopieren**
 
-   Gibt an, ob die Satellitenassemblys der Assembly, auf die verwiesen wird, während eines Buildvorgangs automatisch an den Zielspeicherort kopiert werden. Wird nur verwendet, wenn **Lokale Kopie** den Wert `true`aufweist.
+   Gibt an, ob die Satellitenassemblys der Assembly, auf die verwiesen wird, während eines Buildvorgangs automatisch an den Zielspeicherort kopiert werden. Wird nur verwendet, wenn **Lokale Kopie** den Wert **true** aufweist.
 
 - **Verweisassemblyausgabe**
 
-   Gibt an, dass die Assembly im Buildvorgang verwendet wird. Wenn `true`, wird die Assembly während des Buildvorgangs in der Befehlszeile des Compilers verwendet.
+   Gibt an, dass die Assembly im Buildvorgang verwendet wird. Wenn **true**, wird die Assembly während des Buildvorgangs in der Befehlszeile des Compilers verwendet.
 
 ### <a name="project-to-project-reference-properties"></a>Interprojektverweiseigenschaften
 
@@ -144,7 +144,7 @@ Die folgenden Eigenschaften gelten für COM- und Assemblyverweise und können ni
 
 - **Starker Name**
 
-   `true`, wenn die Assembly, auf die verwiesen wird, einen starken Namen hat. Eine Assembly mit starkem Namen verfügt über eine eindeutige Versionsangabe.
+   `true` , wenn die Assembly, auf die verwiesen wird, einen starken Namen hat. Eine Assembly mit starkem Namen verfügt über eine eindeutige Versionsangabe.
 
 - **Version**
 

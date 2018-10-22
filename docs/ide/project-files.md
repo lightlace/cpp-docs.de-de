@@ -1,32 +1,30 @@
 ---
-title: Projektdateien | Microsoft-Dokumentation
+title: Beispielprojektdateien | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- .vcproj files
-- Visual C++ projects, project file format
-- VCPROJ (Visual C++ project file) format
-- project files [C++], .vcproj file format
+- .vcxproj files
+- C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
 author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7202dff0bd1a790a4e8727bbac9d375daecb8e7a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 591802e04348ca08bded17504b3fb19fb9aa7213
+ms.sourcegitcommit: 243ee0395ee44654a81ce1232f4581fb54904868
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389017"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072384"
 ---
 # <a name="project-files"></a>Projektdateien
 
-Eine Visual C++-Projektdatei ist eine XML-basierte Datei, die über die Erweiterung „VCXPROJ“ verfügt und Informationen enthält, die zum Erstellen eines Visual C++-Projekts erforderlich sind.
+Eine Visual C++-Projektdatei ist eine XML-basierte Datei, die über die Erweiterung „VCXPROJ“ verfügt und Informationen enthält, die zum Erstellen eines Visual C++-Projekts erforderlich sind. Beachten Sie, dass die Projektdatei verschiedene Projektdateien importiert, die die Erweiterung *.props* oder *.targets* haben. Diese Dateien enthalten zusätzliche Buildinformationen und können selbst auf andere *.props*- oder *.targets*-Dateien verweisen. Die Makros im Dateipfad (z. B. `$(VCTargetsPath)`) hängen von Ihrer Visual Studio-Installation ab. Weitere Informationen zu diesen Makros und *.props*- und *.targets*-Dateien finden Sie unter [Eigenschaftenseite VC++-Verzeichnisse](vcpp-directories-property-page.md), [Arbeiten mit Projekteigenschaften](working-with-project-properties.md#bkmkPropertiesVersusMacros) und [Gängige Makros für Buildbefehle und -eigenschaften](common-macros-for-build-commands-and-properties.md).
 
 ## <a name="example"></a>Beispiel
 
