@@ -19,16 +19,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5f9e0e273df1221801a9b761cd7f45200e0b50c0
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 4a17ff7e6e78b21267b71ba495ba10a98e29cfe7
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895083"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808849"
 ---
 # <a name="output-parameters"></a>Ausgabeparameter
 
-Aufrufen einer gespeicherten Prozedur entspricht einen SQL-Befehl aufrufen. Der Hauptunterschied besteht darin, dass gespeicherte Prozeduren verwenden von Output-Parameter (oder "Outparameters"), und geben Werte zurück.
+Aufrufen einer gespeicherten Prozedur ist ähnlich wie beim Ausführen eines SQL-Befehls. Der Hauptunterschied besteht darin, dass gespeicherte Prozeduren verwenden von Output-Parameter (oder "Outparameters"), und geben Werte zurück.
 
 In der folgenden gespeicherten Prozedur, der ersten "?"ist der Rückgabewert (Phone) und das zweite"?" ist der Eingabeparameter (Name):
 
@@ -47,11 +47,11 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()  
 ```  
 
-Die Anwendung muss die Ausgabe von gespeicherten Prozeduren zurückgegebenen behandeln. Verschiedene OLE DB-Anbieter zurückgeben der Output-Parameter und Rückgabewerte zu unterschiedlichen Zeitpunkten während der ergebnisverarbeitung. Z. B. der Microsoft OLE DB-Anbieter für SQL Server (SQLOLEDB) nicht Ausgabeparameter und Rückgabecodes erst, nachdem der Consumer abgerufen oder die von der gespeicherten Prozedur zurückgegebenen Resultsets abgebrochen hat. Die Ausgabe wird im letzten TDS-Paket vom Server zurückgegeben.
+Die Anwendung muss die Ausgabe von gespeicherten Prozeduren zurückgegebenen behandeln. Verschiedene OLE DB-Anbieter zurückgeben der Output-Parameter und Rückgabewerte zu unterschiedlichen Zeitpunkten während der ergebnisverarbeitung. Der Microsoft OLE DB-Anbieter für SQL Server (SQLOLEDB) nicht, z. B. Ausgabeparameter und Rückgabecodes erst, nachdem der Consumer abgerufen oder die von der gespeicherten Prozedur zurückgegebenen Resultsets abgebrochen hat. Die Ausgabe wird im letzten TDS-Paket vom Server zurückgegeben.
 
 ## <a name="row-count"></a>Zeilenanzahl
 
-Wenn Sie die OLE DB-Consumervorlagen verwenden, um eine gespeicherte Prozedur ausführen, die mit Ausgabeparametern, ist die Anzahl der Zeilen nicht festgelegt werden, bis zum Schließen des Rowsets.
+Wenn Sie die OLE DB-Consumervorlagen verwenden, um eine gespeicherte Prozedur ausführen, die mit Ausgabeparametern, nicht die Anzahl der Zeilen festgelegt, bis Sie das Rowset schließen.
 
 Betrachten Sie beispielsweise eine gespeicherte Prozedur mit einer Zeilengruppe und einem Ausgabeparameter aus:
 
@@ -64,7 +64,7 @@ as
 return 0
 ```  
 
-Die \@_rowcount Ausgabeparameter meldet, wie viele Zeilen aus der Tabelle "Test" tatsächlich zurückgegeben wurden. Diese gespeicherte Prozedur beschränkt jedoch die Anzahl der Zeilen auf maximal 50. Beispielsweise würde es 100 Zeilen im Test, würde die Zeilenanzahl 50 lauten (da dieser Code nur die ersten 50 Zeilen werden abgerufen). Wenn nur 30 Zeilen in der Tabelle vorhanden waren, wäre die Zeilenanzahl 30. Rufen Sie `Close` oder `CloseAll` um den Ausgabeparameter aufzufüllen, bevor Sie diesen Wert abrufen.
+Die \@_rowcount Ausgabeparameter meldet, wie viele Zeilen aus der Tabelle "Test" zurückgegeben wurden. Diese gespeicherte Prozedur wird jedoch die Anzahl der Zeilen auf 50 beschränkt. Beispielsweise würde es 100 Zeilen im Test, würde die Zeilenanzahl 50 lauten (da dieser Code nur die ersten 50 Zeilen werden abgerufen). Wenn nur 30 Zeilen in der Tabelle vorhanden waren, wäre die Zeilenanzahl 30. Achten Sie darauf, dass Sie zum Aufrufen `Close` oder `CloseAll` um den Ausgabeparameter aufzufüllen, bevor Sie diesen Wert abrufen.
 
 ## <a name="see-also"></a>Siehe auch
 

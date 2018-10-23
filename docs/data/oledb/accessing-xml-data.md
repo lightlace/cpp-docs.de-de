@@ -1,7 +1,7 @@
 ---
 title: Zugreifen auf XML-Daten | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cfde3980e58ba86d6923eaac765332a23e40ad7e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d7db1d790ca9caeea6bd9c7853139f59ffa0ab6c
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46062500"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808718"
 ---
 # <a name="accessing-xml-data"></a>Zugreifen auf XML-Daten
 
@@ -34,7 +34,7 @@ Es gibt zwei separate Methoden zum Abrufen von XML-Daten aus einer Datenquelle: 
 |Funktionalität|CStreamRowset|CXMLAccessor|  
 |-------------------|-------------------|------------------|  
 |Menge der übertragenen Daten|Ruft Daten aus allen Spalten und Zeilen auf einmal ab.|Ruft Daten aus allen Spalten jedoch nur eine Zeile zu einem Zeitpunkt. Sie müssen die Zeilen mithilfe von Methoden wie z. B. navigieren `MoveNext`.|  
-|Formatieren der Zeichenfolge|SQL Server, formatiert die XML-Zeichenfolge und sendet sie an den Consumer.|Rowsetdaten im systemeigenen Format (Anforderungen, die der Anbieter senden als Unicode-Zeichenfolgen) abruft und erstellt dann die Zeichenfolge, die die Daten im XML-Format enthält.|  
+|Formatieren der Zeichenfolge|SQL Server, formatiert die XML-Zeichenfolge und sendet sie an den Consumer.|Rowsetdaten im systemeigenen Format (Anforderungen, die der Anbieter senden als Unicode-Zeichenfolgen) abruft und erstellt dann die Zeichenfolge, die mit den Daten im XML-Format.|  
 |Steuern der Formatierung|Sie haben einige Maß an Kontrolle über die Formatierung der XML-Zeichenfolge durch einige SQL Server 2000-spezifische Eigenschaften festlegen.|Sie haben keine Kontrolle über das Format der generierten XML-Zeichenfolge.|  
   
 Während `CStreamRowset` bietet eine weitere allgemeine effiziente Möglichkeit zum Abrufen von Daten im XML-Format wird nur von SQL Server 2000 unterstützt.  
@@ -53,7 +53,7 @@ CCommand<CAccessor<CMyAccessor>, CStreamRowset> myCmd;
 CCommand<CNoAccessor, CStreamRowset> myCmd;  
 ```  
   
-Normalerweise beim Aufruf `CCommand::Open` (angeben, z. B. `CRowset` als die `TRowset` Klasse), er erhält eine `IRowset` Zeiger. `ICommand::Execute` Gibt eine `IRowset` -Zeiger ist, die in gespeichert ist die `m_spRowset` Mitglied der `CRowset` Objekt. Methoden, z. B. `MoveFirst`, `MoveNext`, und `GetData` verwenden Sie diesen Zeiger, um die Daten abzurufen.  
+Normalerweise beim Aufruf `CCommand::Open` (angeben, z. B. `CRowset` als die `TRowset` Klasse), wird ein `IRowset` Zeiger. `ICommand::Execute` Gibt eine `IRowset` -Zeiger ist, die in gespeichert ist die `m_spRowset` Mitglied der `CRowset` Objekt. Methoden, z. B. `MoveFirst`, `MoveNext`, und `GetData` verwenden Sie diesen Zeiger, um die Daten abzurufen.  
   
 Im Gegensatz dazu beim Aufruf `CCommand::Open` (aber angeben `CStreamRowset` als die `TRowset` Klasse), `ICommand::Execute` gibt ein `ISequentialStream` -Zeiger ist, die in gespeichert ist die `m_spStream` Datenmember [CStreamRowset](../../data/oledb/cstreamrowset-class.md). Sie verwenden, klicken Sie dann die `Read` Methode zum Abrufen von Daten im XML-Format (Unicode-Zeichenfolge). Zum Beispiel:  
   
@@ -61,12 +61,12 @@ Im Gegensatz dazu beim Aufruf `CCommand::Open` (aber angeben `CStreamRowset` als
 myCmd.m_spStream->Read()  
 ```  
   
-SQL Server 2000 führt die XML-Formatierung und gibt alle Spalten und Zeilen des Rowsets als eine XML-Zeichenfolge.  
+SQL Server 2000 ist die XML-Formatierung und gibt alle Spalten und Zeilen des Rowsets als eine XML-Zeichenfolge.  
   
 Ein Beispiel mit der `Read` -Methode finden Sie unter "Hinzufügen von XML-Unterstützung zum Consumer" in [Implementieren eines einfachen Consumers](../../data/oledb/implementing-a-simple-consumer.md).  
   
 > [!NOTE]
->  XML-Unterstützung mit `CStreamRowset` funktioniert nur mit SQL Server 2000, und setzt voraus, dass Sie den OLE DB-Anbieter für SQL Server 2000 (installiert mit MDAC) verfügen.  
+> XML-Unterstützung mit `CStreamRowset` funktioniert nur mit SQL Server 2000, und setzt voraus, dass Sie den OLE DB-Anbieter für SQL Server 2000 (installiert mit MDAC) verfügen.  
   
 ## <a name="retrieving-xml-data-using-cxmlaccessor"></a>Abrufen von XML-Daten mit CXMLAccessor  
 

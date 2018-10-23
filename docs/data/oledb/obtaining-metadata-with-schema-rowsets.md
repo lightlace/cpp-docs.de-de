@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8c4e3003beb0e50887f6b765904095c65dd8f1b6
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 3a3d2926b2f9c958d3770737729726bbad7b13e7
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083657"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808913"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Abrufen von Metadaten mit Schemarowsets
 
@@ -31,23 +31,23 @@ Möglicherweise müssen Sie Informationen über Anbieter, Rowsets, Tabellen, Spa
 OLE DB-Vorlagen bieten eine Reihe von Klassen zum Abrufen von Schemainformationen; Diese Klassen erstellen vordefinierte Schemarowsets und sind in aufgeführt [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).  
   
 > [!NOTE]
->  Wenn Sie OLAP verwenden und einige der Rowsets nicht von den Schemarowset-Klassen unterstützt werden (wenn Sie z. B. eine variable Spaltenanzahl haben), sollten Sie versuchen, `CManualAccessor` oder `CDynamicAccessor` zu verwenden. Sie können durch die Spalten scrollen und case-Anweisungen verwenden, um die möglichen Datentypen für jede einzelne Spalte zu behandeln.  
+> Wenn Sie OLAP verwenden und einige der Rowsets nicht von den Schemarowset-Klassen unterstützt werden (wenn Sie z. B. eine variable Spaltenanzahl haben), sollten Sie versuchen, `CManualAccessor` oder `CDynamicAccessor` zu verwenden. Sie können durch die Spalten scrollen und case-Anweisungen verwenden, um die möglichen Datentypen für jede einzelne Spalte zu behandeln.  
   
 ## <a name="catalogschema-model"></a>Das Katalog-/Schemamodell  
 
 ANSI SQL definiert ein Katalog-/Schemamodell für Datenspeicher. OLE DB verwendet dieses Modell. In diesem Modell enthalten Kataloge (Datenbanken) Schemas, und Schemas enthalten Tabellen.  
   
-- **Katalog** ein Katalog ist ein anderer Name für eine Datenbank. Kataloge sind Auflistungen von verwandten Schemas. Verwenden Sie zum Auflisten der Kataloge (Datenbanken), die zu einer bestimmten Datenquelle gehören [CCatalog](../../data/oledb/ccatalogs-ccataloginfo.md). Da viele Datenbanken nur einen Katalog besitzen, werden Metadaten manchmal einfach als Schemainformationen bezeichnet.  
+- **Katalog** ein Katalog ist ein anderer Name für eine Datenbank. Kataloge sind Auflistungen von verwandten Schemas. Verwenden Sie zum Auflisten der Kataloge (Datenbanken), die zu einer bestimmten Datenquelle gehören [CCatalog](../../data/oledb/ccatalogs-ccataloginfo.md). Da viele Datenbanken nur einen Katalog besitzen, werden Metadaten manchmal als Schemainformationen bezeichnet.  
   
 - **Schema** ein Schema ist eine Sammlung von Datenbankobjekten, die Besitzer oder von einem bestimmten Benutzer erstellt wurden. Verwenden Sie zum Auflisten der Schemas im Besitz von eines bestimmten Benutzers [CSchemata](../../data/oledb/cschemata-cschematainfo.md).  
   
-     In Microsoft SQL Server und ODBC 2.x stellt ein Schema ist ein Besitzer (Dbo ist beispielsweise ein typischer Schemaname). SQL Server speichert außerdem Metadaten in einem Satz von Tabellen: eine Tabelle enthält eine Liste aller Tabellen und einer anderen Tabelle enthält eine Liste aller Spalten. In einer Microsoft Access -Datenbank gibt es kein Äquivalent zu einem Schema.  
+     In Microsoft SQL Server und ODBC 2.x stellt ein Schema ist ein Besitzer (Dbo ist beispielsweise ein typischer Schemaname). SQL Server speichert außerdem Metadaten in einem Satz von Tabellen: eine Tabelle enthält eine Liste aller Tabellen und einer anderen Tabelle enthält eine Liste aller Spalten. Es gibt keine Entsprechung zu einem Schema in einer Microsoft Access-Datenbank.  
   
 - **Tabelle** Tabellen sind Auflistungen von Spalten, die in einer bestimmten Reihenfolge angeordnet. Verwenden Sie zum Auflisten der Tabellen in einem bestimmten Katalog (Datenbank) und Informationen zu diesen Tabellen definiert [CTables](../../data/oledb/ctables-ctableinfo.md)).  
   
 ## <a name="restrictions"></a>Beschränkungen  
 
-Wenn Sie eine Abfrage nach Schemainformationen durchführen, können Sie Einschränkungen verwenden, um den gewünschten Informationstyp genauer anzugeben. Sie können sich diese Einschränkungen wie einen Filter oder Qualifizierer in einer Abfrage vorstellen. Beispielsweise ist in der Abfrage:  
+Wenn Sie eine Abfrage nach Schemainformationen durchführen, können Sie Einschränkungen verwenden, um die Art der Informationen anzugeben, an denen Sie interessiert sind. Sie können sich diese Einschränkungen wie einen Filter oder Qualifizierer in einer Abfrage vorstellen. Beispielsweise ist in der Abfrage:  
   
 ```sql  
 SELECT * FROM authors where l_name = 'pivo'  
@@ -67,7 +67,7 @@ Einschränkungen finden Sie unter [Anhang B: Schemarowsets](/previous-versions/w
   
 Also beispielsweise, wenn Sie möchten die Grundlage des Tabellennamens einzuschränken, beachten Sie, dass TABLE_NAME die dritte Einschränkungsspalte ist, und rufen Sie anschließend `Open`, den gewünschten Tabellennamen als dritten Einschränkungsparameter an, angeben, wie im folgenden Beispiel gezeigt.  
   
-#### <a name="to-use-schema-rowsets"></a>So verwenden Sie Schemarowsets  
+### <a name="to-use-schema-rowsets"></a>So verwenden Sie Schemarowsets  
   
 1. Sie müssen die Headerdatei „Atldbsch.h“ einfügen. (Natürlich benötigen Sie auch Atldbcli.h für die Consumerunterstützung.)  
   
@@ -89,7 +89,7 @@ Also beispielsweise, wenn Sie möchten die Grundlage des Tabellennamens einzusch
     }  
     ```  
   
-1. Greifen Sie zum Abrufen der Informationen auf den entsprechenden Datenmember des Schemarowsetobjekts zu (z. B. `ColumnSchemaRowset.m_szColumnName`). Dies entspricht COLUMN_NAME. Der OLE DB-Spalte welchem Datenmember entspricht, finden Sie unter [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md).  
+1. Greifen Sie zum Abrufen der Informationen auf den entsprechenden Datenmember des Schemarowsetobjekts zu (z. B. `ColumnSchemaRowset.m_szColumnName`). Dieses Datenelement entspricht COLUMN_NAME. Der OLE DB-Spalte welchem Datenmember entspricht, finden Sie unter [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md).  
   
 Für den Verweis auf das Schemarowset, TypeDef-Klassen, die in den OLE DB-Vorlagen bereitgestellt (siehe [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)).  
   

@@ -1,7 +1,7 @@
 ---
 title: CStrBufT-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43c460d45e0f1ce41cebd463bc3ba6b7f295d9ca
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82152ea3df6bb21ee1405790acf9d3fb2c9630c5
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411182"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808991"
 ---
 # <a name="cstrbuft-class"></a>CStrBufT-Klasse
 
@@ -43,7 +43,7 @@ class CStrBufT
 
 #### <a name="parameters"></a>Parameter
 
-*TCharType*  
+*TCharType*<br/>
 Der Zeichentyp, der die `CStrBufT` Klasse. Einer der folgenden Werte ist möglich:
 
 - **Char** (für ANSI-Zeichenfolgen)
@@ -121,13 +121,13 @@ explicit CStrBufT(StringType& str) throw(...);
 
 ### <a name="parameters"></a>Parameter
 
-*str*  
+*str*<br/>
 Das String-Objekt, das den Puffer zugeordnet ist. In der Regel wird der Entwickler der voreingestellten Typdefinitionen verwenden `CStrBuf` (TCHAR-Variante), `CStrBufA` (**Char** Variant-Wert) und `CStrBufW` (**"wchar_t"** Variant-Wert).
 
-*nMinLength*  
+*nMinLength*<br/>
 Die minimale Länge des Zeichenpuffers.
 
-*dwFlags*  
+*dwFlags*<br/>
 Bestimmt, ob die Zeichenfolgenlänge automatisch bestimmt wird. Einer der folgenden Werte ist möglich:
 
 - Zeichenfolgenlänge AUTO_LENGTH wird automatisch bestimmt, wann [CSimpleStringT::Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer) aufgerufen wird. Die Zeichenfolge muss Null-terminiert sein. Der Standardwert.
@@ -212,7 +212,7 @@ void SetLength(int nLength);
 
 ### <a name="parameters"></a>Parameter
 
-*nLength*  
+*nLength*<br/>
 Die neue Länge des Zeichenpuffers von String-Objekt.
 
 > [!NOTE]

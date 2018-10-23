@@ -1,7 +1,7 @@
 ---
 title: PROTO | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/30/2018
+ms.date: 10/22/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,21 +16,53 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29f7d49832b23ac9db7555d47dd8d7069ec4de46
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 4fd00263f3b4a7ffcf23ccd0501989c0d40c637d
+ms.sourcegitcommit: f3a5dc788e62bb36e2d9bc3e62e0aa533422408b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684941"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49644062"
 ---
 # <a name="proto"></a>PROTO
 
-Eine Funktion von Prototypen.
+Prototypen, einer Funktion oder Prozedur. Sie können die Funktion aufrufen Prototyp von PROTO-Anweisung mithilfe der [INVOKE](invoke.md) Richtlinie.
 
 ## <a name="syntax"></a>Syntax
 
-> *Bezeichnung* PROTO [[*Abstand*]] [[*Langtype*]] [[, [[*Parameter*]]:*Tag*]]...
+> *Bezeichnung* **PROTO** \[ *Abstand*] \[ *Langtype*] \[ __,__ \[ *Parameter*]__:__*Tag*]...
+
+### <a name="parameters"></a>Parameter
+
+*label*<br/>
+Der Name der Prototyp-Funktion.
+
+*distance*<br/>
+(Optional) In 16-Bit-Memory-Modellen verwendet, um die Standardeinstellung überschreiben, und geben Sie an **NEAR** oder **weit** aufrufen.
+
+*langtype*<br/>
+(Optional) Legt die aufrufende und der Name-Konvention für die Prozeduren und die öffentlichen Symbole fest. Unterstützten Konventionen sind:
+
+- 32-Bit- **Flatfile** Modell: **C**, **STDCALL**
+
+- 16-Bit-Modellen: **C**, **BASIC**, **FORTRAN**, **Pascal-SCHREIBWEISE**, **SYSCALL**, **STDCALL**
+
+*parameter*<br/>
+Der optionale Name für einen Funktionsparameter.
+
+*Tag*<br/>
+Der Typ eines Funktionsparameters.
+
+Die *Parameter* und *Tag* Parameter können mehrfach vorkommen, einmal für jede übergebene Argument.
+
+## <a name="example"></a>Beispiel
+
+Dieses Beispiel zeigt eine **PROTO** Deklaration für eine Funktion namens `addup3` , verwendet eine **NEAR** Aufruf zum Überschreiben des Standardwerts 16-Bit-Modell für die Prozeduraufrufen, und verwendet die **C**Aufrufkonvention für die stack-Parameter und Rückgabewerte. Es akzeptiert zwei Argumente: ein **WORD** und **VARARG**.
+
+```MASM
+addup3 PROTO NEAR C, argcount:WORD, arg1:VARARG
+```
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anweisungen – Referenz](../../assembler/masm/directives-reference.md)<br/>
+[Anweisungen – Referenz](directives-reference.md)<br/>
+[. Referenz-OBJEKTMODELL](dot-model.md)<br/>

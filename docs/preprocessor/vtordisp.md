@@ -1,7 +1,7 @@
 ---
 title: Vtordisp | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -18,63 +18,65 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d0b28c855ab8a6f6da814ee17521a5ad7799993
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: eadd8cb3cd1d59c0ef74f4dc5aede47d18ac54a4
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540425"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809043"
 ---
 # <a name="vtordisp"></a>vtordisp
-**C++-spezifisch**  
-  
-Steuert das Hinzufügen ausgeblendeter vtordisp-Member zur Konstruktor-/Destruktorverschiebung.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-#pragma vtordisp([push,] n)  
-#pragma vtordisp(pop)  
-#pragma vtordisp()  
-#pragma vtordisp([push,] {on | off})  
-```  
-  
-### <a name="parameters"></a>Parameter  
-*push*  
-Legt die aktuelle Vtordisp-Einstellung auf dem internen compilerstapel ab und legt die neue Vtordisp-Einstellung auf *n*.  Wenn *n* nicht angegeben ist, wird die aktuelle Vtordisp-Einstellung wird nicht geändert.  
-  
-*pop*  
-Entfernt den obersten Datensatz aus dem internen Compilerstapel und setzt die vtordisp-Einstellung auf den entfernten Wert zurück.  
-  
-*n*  
-Gibt den neuen Wert für die vtordisp-Einstellung an. Mögliche Werte sind 0, 1 oder 2, entsprechend der `/vd0`, `/vd1`, und `/vd2` Compileroptionen. Weitere Informationen finden Sie unter [/VD (Konstruktionsverschiebungen deaktivieren)](../build/reference/vd-disable-construction-displacements.md).  
-  
-*on*  
-Entspricht `#pragma vtordisp(1)`.  
-  
-*Ausschalten*  
-Entspricht `#pragma vtordisp(0)`.  
-  
-## <a name="remarks"></a>Hinweise  
- 
-Die **Vtordisp** Pragma gilt nur für Code, der virtuelle Basen verwendet. Wenn eine abgeleitete Klasse überschreibt eine virtuelle Funktion, die sie von einer virtuellen Basisklasse erbt, und wenn ein Konstruktor oder Destruktor für die abgeleitete Klasse diese Funktion mithilfe eines Zeigers auf die virtuelle Basisklasse aufruft, kann der Compiler zusätzliche ausgeblendete einführen**Vtordisp** Felder in Klassen mit virtuellen Basen.  
-  
-Die **Vtordisp** Pragma wirkt sich auf das Layout der Klassen, die folgen. Die `/vd0`, `/vd1`, und `/vd2` Optionen geben dasselbe Verhalten für vollständige Module. Durch den Wert 0 oder *aus* unterdrückt die ausgeblendeten **Vtordisp** Member. Deaktivieren Sie **Vtordisp** nur gibt es keine Möglichkeit, die Konstruktoren und Destruktoren der Klasse virtuelle Aufrufen für das Objekt verweist Funktionen der **dies** Zeiger.  
-  
-Angeben von 1 oder *auf*, Standard, ermöglicht die ausgeblendeten **Vtordisp** Mitglieder, wo sie erforderlich sind.  
-  
-Angeben von 2 ermöglicht die ausgeblendeten **Vtordisp** Elemente für alle virtuellen Basen mit virtuellen Funktionen.  `vtordisp(2)` Möglicherweise müssen Sie die richtige Leistung sicherzustellen **Dynamic_cast** auf einem teilweise konstruierten Objekt. Weitere Informationen finden Sie unter [Compilerwarnung (Stufe 1) C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md).  
-  
-`#pragma vtordisp()`, ohne Argumente, setzt die vtordisp-Einstellung auf die ursprüngliche Einstellung zurück.  
-  
-```  
-#pragma vtordisp(push, 2)  
-class GetReal : virtual public VBase { ... };  
-#pragma vtordisp(pop)  
-```  
-  
-**Ende C++-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- 
+
+**C++-spezifisch**
+
+Steuert das Hinzufügen ausgeblendeter vtordisp-Member zur Konstruktor-/Destruktorverschiebung.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+#pragma vtordisp([push,] n)
+#pragma vtordisp(pop)
+#pragma vtordisp()
+#pragma vtordisp([push,] {on | off})
+```
+
+### <a name="parameters"></a>Parameter
+
+*push*<br/>
+Legt die aktuelle Vtordisp-Einstellung auf dem internen compilerstapel ab und legt die neue Vtordisp-Einstellung auf *n*.  Wenn *n* nicht angegeben ist, wird die aktuelle Vtordisp-Einstellung wird nicht geändert.
+
+*pop*<br/>
+Entfernt den obersten Datensatz aus dem internen Compilerstapel und setzt die vtordisp-Einstellung auf den entfernten Wert zurück.
+
+*n*<br/>
+Gibt den neuen Wert für die vtordisp-Einstellung an. Mögliche Werte sind 0, 1 oder 2, entsprechend der `/vd0`, `/vd1`, und `/vd2` Compileroptionen. Weitere Informationen finden Sie unter [/VD (Konstruktionsverschiebungen deaktivieren)](../build/reference/vd-disable-construction-displacements.md).
+
+*on*<br/>
+Entspricht `#pragma vtordisp(1)`.
+
+*Ausschalten*<br/>
+Entspricht `#pragma vtordisp(0)`.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Vtordisp** Pragma gilt nur für Code, der virtuelle Basen verwendet. Wenn eine abgeleitete Klasse überschreibt eine virtuelle Funktion, die sie von einer virtuellen Basisklasse erbt, und wenn ein Konstruktor oder Destruktor für die abgeleitete Klasse diese Funktion mithilfe eines Zeigers auf die virtuelle Basisklasse aufruft, kann der Compiler zusätzliche ausgeblendete einführen**Vtordisp** Felder in Klassen mit virtuellen Basen.
+
+Die **Vtordisp** Pragma wirkt sich auf das Layout der Klassen, die folgen. Die `/vd0`, `/vd1`, und `/vd2` Optionen geben dasselbe Verhalten für vollständige Module. Durch den Wert 0 oder *aus* unterdrückt die ausgeblendeten **Vtordisp** Member. Deaktivieren Sie **Vtordisp** nur gibt es keine Möglichkeit, die Konstruktoren und Destruktoren der Klasse virtuelle Aufrufen für das Objekt verweist Funktionen der **dies** Zeiger.
+
+Angeben von 1 oder *auf*, Standard, ermöglicht die ausgeblendeten **Vtordisp** Mitglieder, wo sie erforderlich sind.
+
+Angeben von 2 ermöglicht die ausgeblendeten **Vtordisp** Elemente für alle virtuellen Basen mit virtuellen Funktionen.  `vtordisp(2)` Möglicherweise müssen Sie die richtige Leistung sicherzustellen **Dynamic_cast** auf einem teilweise konstruierten Objekt. Weitere Informationen finden Sie unter [Compilerwarnung (Stufe 1) C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md).
+
+`#pragma vtordisp()`, ohne Argumente, setzt die vtordisp-Einstellung auf die ursprüngliche Einstellung zurück.
+
+```cpp
+#pragma vtordisp(push, 2)
+class GetReal : virtual public VBase { ... };
+#pragma vtordisp(pop)
+```
+
+**Ende C++-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
 [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e7f97011e66c72c79c3ab6db3b6011e1d4d76ce7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d01674929522326c21eea2ad7d40f33e8ff6fae6
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017172"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807522"
 ---
 # <a name="provider-support-for-bookmarks"></a>Anbieterunterstützung für Lesezeichen
 
@@ -36,7 +36,7 @@ Im Beispiel in diesem Thema wird die `IRowsetLocate` Schnittstelle zu den `CMyPr
   
 - Hinzufügen von lesezeichenunterstützung.  
   
-Die `IRowsetLocate`-Schnittstelle erbt von der `IRowset`-Schnittstelle. Hinzufügen der `IRowsetLocate` Schnittstelle, erben `CMyProviderRowset` aus [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md).  
+Die `IRowsetLocate` -Schnittstelle erbt von der `IRowset` -Schnittstelle. Hinzufügen der `IRowsetLocate` Schnittstelle, erben `CMyProviderRowset` aus [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md).  
   
 Hinzufügen der `IRowsetLocate` Schnittstelle unterscheidet sich geringfügig von den meisten Schnittstellen. Um die VTABLEs auszurichten, OLE DB-machen haben Anbietervorlagen einen Vorlagenparameter, die abgeleitete Schnittstelle zu behandeln. Der folgende Code zeigt die neue Vererbungsliste:  
   
@@ -247,7 +247,7 @@ HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,
 }  
 ```  
   
-Die While Schleife enthält Code zum Aufrufen der `Compare` -Methode in der die `IRowsetLocate` Schnittstelle. Der Code, was man sollte immer übergeben werden, da Sie exakten dieselben Lesezeichen vergleichen. Außerdem ein Lesezeichen in einer temporären Variablen gespeichert werden, damit Sie ihn verwenden können, nachdem die While-Schleife beendet wird, aufgerufen der `MoveToBookmark` -Funktion in die Consumervorlagen. Die `MoveToBookmark` Funktionsaufrufe der `GetRowsAt` -Methode in der `IRowsetLocate`.  
+Die **während** Schleife enthält Code zum Aufrufen der `Compare` -Methode in der die `IRowsetLocate` Schnittstelle. Der Code, was man sollte immer übergeben werden, da Sie exakten dieselben Lesezeichen vergleichen. Darüber hinaus ein Lesezeichen in einer temporären Variablen gespeichert werden, damit Sie ihn nach dem verwenden können die **während** Schleife abgeschlossen ist, rufen Sie die `MoveToBookmark` -Funktion in die Consumervorlagen. Die `MoveToBookmark` Funktionsaufrufe der `GetRowsAt` -Methode in der `IRowsetLocate`.  
   
 Sie müssen auch den Benutzerdatensatz im Consumer zu aktualisieren. Fügen Sie einen Eintrag in der Klasse, behandeln ein Lesezeichen und ein Eintrag in der `COLUMN_MAP`:  
   

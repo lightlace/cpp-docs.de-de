@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5aa7f72cc76f80e2304faf93ca0c6198c505e88a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8805878f880d1c195ddf89abc283719e73ff5182
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101641"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808926"
 ---
 # <a name="using-manual-accessors"></a>Verwenden von manuellen Zugriffsmethoden
 
@@ -36,7 +36,7 @@ Es gibt vier Schritte erforderlich, bei der Verarbeitung eines unbekannten Befeh
   
 - Überprüfen Sie, ob mehrere Rowsets zurückgegeben werden  
   
-Verwenden Sie dazu mit der OLE DB-Consumervorlagen der `CManualAccessor` Klasse, und gehen Sie folgendermaßen vor:  
+Dies ist mit dem OLE DB-Consumervorlagen verwenden Sie die `CManualAccessor` Klasse, und gehen Sie folgendermaßen vor:  
   
 1. Öffnen einer `CCommand` Objekt mit `CManualAccessor` als Vorlagenparameter.  
   
@@ -44,7 +44,7 @@ Verwenden Sie dazu mit der OLE DB-Consumervorlagen der `CManualAccessor` Klasse,
     CCommand<CManualAccessor, CRowset, CMultipleResults> rs;  
     ```  
   
-1. Fragen Sie die Sitzung für die `IDBSchemaRowset` -Schnittstelle und verwenden Sie die Prozedur Parameter-Rowset. Wenn die `IDBSchemaRowset` Schnittstelle ist nicht verfügbar ist, Abfragen für die `ICommandWithParameters` Schnittstelle. Rufen Sie `GetParameterInfo` Informationen. Wenn keine der Schnittstellen verfügbar ist, können Sie davon ausgehen, dass keine Parameter vorhanden sind.  
+1. Fragen Sie die Sitzung für die `IDBSchemaRowset` -Schnittstelle und verwenden Sie die Prozedur Parameter-Rowset. Wenn die `IDBSchemaRowset` Schnittstelle nicht verfügbar ist, Abfragen für die `ICommandWithParameters` Schnittstelle. Rufen Sie `GetParameterInfo` Informationen. Wenn keine der Schnittstellen verfügbar ist, können Sie davon ausgehen, dass keine Parameter vorhanden sind.  
   
 1. Rufen Sie für jeden Parameter `AddParameterEntry` , fügen Sie die Parameter, und legen Sie sie.  
   

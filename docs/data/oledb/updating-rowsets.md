@@ -1,7 +1,7 @@
 ---
 title: Aktualisieren von Rowsets | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/19/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,28 +18,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: be82fb1c1f77ae3204bed54257062f362d286844
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: afe17f30a079e8af24b37b983f8c91d46431966e
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083826"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808859"
 ---
 # <a name="updating-rowsets"></a>Aktualisieren von Rowsets
 
-Eine der grundlegenden Datenbankoperationen stellt das Aktualisieren des Datenspeichers bzw. das Schreiben von Daten in den Datenspeicher dar. In OLE DB ist der Aktualisierungsmechanismus einfach: Die Consumeranwendung legt die Werte gebundener Datenmember fest und schreibt diese Werte dann in das Rowset. Anschließend fordert der Consumer den Anbieter auf, den Datenspeicher zu aktualisieren.  
+Ein basic-Datenbank-Vorgang wird zum Aktualisieren oder Schreiben von Daten in den Datenspeicher. In OLE DB ist der Aktualisierungsmechanismus einfach: Die Consumeranwendung legt die Werte gebundener Datenmember fest und schreibt diese Werte dann in das Rowset. Anschließend fordert der Consumer den Anbieter auf, den Datenspeicher zu aktualisieren.  
   
-Consumer können Rowsetdaten mithilfe folgender Methoden aktualisieren: Festlegen von Spaltenwerten innerhalb einer Zeile, Einfügen einer Zeile und Löschen einer Zeile. Um diese Operationen vornehmen zu können, implementiert die OLE DB-Vorlagenklasse [CRowset](../../data/oledb/crowset-class.md) die [IRowsetChange](/previous-versions/windows/desktop/ms715790) -Schnittstelle und überschreibt die folgenden Schnittstellenmethoden:  
+Kunden können die folgenden Arten von Updates auf Rowsetdaten abschließen: Festlegen von Spaltenwerten in einer Zeile, eine Zeile einfügen und Löschen einer Zeile. Zum Durchführen dieser Vorgänge, die OLE DB-Vorlagenklasse [CRowset](../../data/oledb/crowset-class.md) implementiert die [IRowsetChange](/previous-versions/windows/desktop/ms715790) -Schnittstelle und überschreibt die folgenden Schnittstellenmethoden:  
   
-- [SetData](../../data/oledb/crowset-setdata.md) ändert Spaltenwerte in einer Zeile eines Rowsets. Dies entspricht dem SQL-Befehl UPDATE.  
+- [SetData](../../data/oledb/crowset-setdata.md) ändert Spaltenwerte in einer Zeile eines Rowsets; es ist gleichbedeutend mit der SQL-Befehl UPDATE.  
   
-- [Insert](../../data/oledb/crowset-insert.md) fügt eine Zeile in ein Rowset ein. Dies entspricht dem SQL-Befehl INSERT.  
+- [Fügen Sie](../../data/oledb/crowset-insert.md) Fügt eine Zeile in einem Rowset; es ist gleichbedeutend mit der SQL-Befehl INSERT.  
   
-- [Delete](../../data/oledb/crowset-delete.md) löscht Zeilen aus einem Rowset. Dies entspricht dem SQL-Befehl DELETE.  
+- [Löschen Sie](../../data/oledb/crowset-delete.md) löscht Zeilen aus einem Rowset; es ist gleichbedeutend mit der SQL-DELETE-Befehl.  
   
 ## <a name="supporting-update-operations"></a>Unterstützen von Aktualisierungsoperationen  
 
-Wenn Sie einen Consumer mit dem ATL-OLE DB-Consumer-Assistenten erstellen, können Sie die Aktualisierungsoperationen unterstützen, indem Sie eines oder mehrere der drei Kontrollkästchen **Ändern**, **Einfügen**und **Löschen**aktivieren. Wenn Sie diese Kontrollkästchen aktivieren, ändert der Assistent den Code dahingehend, dass die von Ihnen gewünschten Änderungsarten unterstützt werden. Wenn Sie den Assistenten nicht verwenden, müssen Sie jedoch die folgenden Rowset-Eigenschaften auf `VARIANT_TRUE` festlegen, damit Aktualisierungen unterstützt werden:  
+Wenn Sie einen Consumer mit dem ATL-OLE DB-Consumer-Assistenten erstellen, können Sie die Aktualisierungsoperationen unterstützen, indem Sie eines oder mehrere der drei Kontrollkästchen **Ändern**, **Einfügen**und **Löschen**aktivieren. Wenn Sie diese Optionen auswählen, ändert der Assistent den Code entsprechend um den Typ der Änderungen zu unterstützen, die Sie auswählen. Jedoch wenn Sie den Assistenten nicht verwenden, müssen Sie die folgenden Rowseteigenschaften festgelegt werden, um `VARIANT_TRUE` um Updates zu unterstützen:  
   
 - `DBPROPVAL_UP_CHANGE` können Sie die Datenwerte in einer Zeile ändern.  
   
@@ -56,11 +56,11 @@ ps.AddProperty(DBPROP_IRowsetChange, true)
 ps.AddProperty(DBPROP_UPDATABILITY, DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_INSERT | DBPROPVAL_UP_DELETE)  
 ```  
   
-Die Operationen zum Ändern, Einfügen oder Löschen können fehlschlagen, wenn das Schreiben in eine oder mehrere Spalten nicht möglich ist. Ändern Sie die Cursorzuordnung, um diesen Fehler zu beheben.  
+Ändern, INSERT- oder Delete-Vorgänge fehlschlagen, wenn eine oder mehrere Spalten ist nicht beschreibbar. Ändern Sie die cursorzuordnung, um dieses Problem zu beheben.  
   
 ## <a name="setting-data-in-rows"></a>Festlegen von Daten in Zeilen  
 
-[CRowset::SetData](../../data/oledb/crowset-setdata.md) legt Datenwerte in einer oder mehreren Spalten der aktuellen Zeile fest. Der folgende Code legt die Werte von Datenmembers fest, die an die Spalten "Name" und "Units in Stock" der Tabelle "Products" gebunden sind. Anschließend wird `SetData` aufgerufen, um diese Werte in die hundertste Zeile des Rowsets zu schreiben:  
+[CRowset::SetData](../../data/oledb/crowset-setdata.md) legt Datenwerte in einer oder mehreren Spalten der aktuellen Zeile fest. Der folgende Code legt die Werte der Datenelemente, die an die Spalten "Name" und "Units in Stock" der Tabelle gebunden `Products` und ruft dann `SetData` um diese Werte in der 100. Zeile des Rowsets zu schreiben:  
   
 ```cpp  
 // Instantiate a rowset based on the user record class  
@@ -91,9 +91,9 @@ HRESULT Insert(int nAccessor = 0, bool bGetRow = false)
   
 - **false** (der Standardwert) gibt an, dass die aktuelle Zeile zur nächsten Zeile inkrementiert wird. (In diesem Fall wird auf die eingefügte Zeile verwiesen.)  
   
-- **true** gibt an, dass die Position der aktuellen Zeile unverändert bleibt.  
+- **"true"** gibt an, dass die aktuelle bleiben Zeile ist.  
   
-Der folgende Code legt die Werte der Datenelemente, die an die Spalten der Tabelle Products gebunden und ruft dann `Insert` um eine neue Zeile mit diesen Werten nach der 100. Zeile des Rowsets einzufügen. Es wird empfohlen, alle Spaltenwerte festzulegen, um zu verhindern, dass sich in der neuen Zeile nicht definierte Daten befinden:  
+Der folgende Code legt die Werte der Datenelemente, die an die Spalten der Tabelle gebunden `Products` und ruft dann `Insert` um eine neue Zeile mit diesen Werten nach der 100. Zeile des Rowsets einzufügen. Es wird empfohlen, dass Sie festlegen, dass alle Spaltenwerte nicht definierte Daten in der neuen Zeile zu vermeiden:  
   
 ```cpp  
 // Instantiate a rowset based on the user record class  
@@ -171,17 +171,17 @@ Es sei denn, Sie nichts anderes angeben möchten, Aufrufe an die `SetData`, `Ins
   
 - [CRowset:: UpdateAll](../../data/oledb/crowset-updateall.md) überträgt alle Änderungen, die seit der letzten Abruf auf alle Zeilen oder `Update` für ihn aufrufen.  
   
-Beachten Sie, dass der Begriff "Aktualisieren" für die Aktualisierungsmethoden mit der spezifischen Bedeutung "Änderungen auf Befehl" verwendet wird und nicht mit dem SQL-Befehl UPDATE verwechselt werden darf. (`SetData` entspricht dem SQL-Befehl UPDATE.)  
+Update von updatemethoden verwendet der spezifischen Bedeutung von Änderungen auf Befehl und ist nicht mit der SQL-Befehl UPDATE verwechselt werden (`SetData` ist gleichbedeutend mit der SQL-Befehl UPDATE).  
   
-In bestimmten Situationen sind verzögerte Aktualisierungen sinnvoll. Wenn Sie beispielsweise eine Reihe von Geldtransaktionen vornehmen und eine der Transaktionen abgebrochen wird, können Sie die Änderung rückgängig machen, da die Änderungen erst nach der Ausführung der letzten Änderung übermittelt werden. Der Anbieter kann die Änderungen auch in einem Netzwerkaufruf bündeln. Dies ist eine noch effizientere Methode.  
+Es sind verzögerte Aktualisierungen sinnvoll sein, z. B. in Situationen, z. B. eine Reihe von Banktransaktionen; Wenn eine Transaktion abgebrochen wird, können Sie die Änderung rückgängig zu machen, da Sie nicht die Reihe von Änderungen erst senden, nach der zuletzt ein Commit ausgeführt wird. Der Anbieter kann die Änderungen auch in einem Netzwerkaufruf bündeln. Dies ist eine noch effizientere Methode.  
   
-Um verzögerte Aktualisierungen zu unterstützen, müssen Sie festlegen der `DBPROP_IRowsetChange` Eigenschaft sowie die in "Unterstützen von Aktualisierungsoperationen" beschriebenen Eigenschaften:  
+Um verzögerte Aktualisierungen zu unterstützen, müssen Sie festlegen der `DBPROP_IRowsetChange` Eigenschaft zusammen mit den unter "Unterstützen von Aktualisierungsoperationen" beschriebenen Eigenschaften:  
   
 ```cpp  
 pPropSet->AddProperty(DBPROP_IRowsetUpdate, true);  
 ```  
   
-Beim Aufruf `Update` oder `UpdateAll`, die Methoden Änderungen vom lokalen Cache mit dem Datenspeicher zu übertragen und anschließend wird der lokale Cache bereinigt. Mit "Update" werden lediglich Änderungen für die aktuelle Zeile übertragen. Deshalb ist es wichtig, dass die Anwendung stets "weiß", welche Zeile wann aktualisiert werden soll. Im folgenden Beispiel wird das Aktualisieren von zwei aufeinander folgenden Zeilen demonstriert:  
+Beim Aufruf `Update` oder `UpdateAll`, die Methoden Änderungen vom lokalen Cache mit dem Datenspeicher zu übertragen und anschließend wird der lokale Cache bereinigt. Da Update Änderungen nur für die aktuelle Zeile übertragen, ist es wichtig, welche Zeile wann aktualisiert in der Ihre Anwendung gespeichert werden. Im folgenden Beispiel wird das Aktualisieren von zwei aufeinander folgenden Zeilen demonstriert:  
   
 ```cpp  
 // Instantiate a rowset based on the user record class  
@@ -215,9 +215,9 @@ product.Update();                 // Update row 101 now
   
 Um sicherzustellen, dass vorgenommene Änderungen übertragen werden, rufen Sie `Update` vor dem Verschieben in eine andere Zeile. Erscheint Ihnen dies jedoch als zu aufwendig oder ineffizient, z. B. wenn die Anwendung Hunderte von Zeilen aktualisieren muss, können Sie mithilfe von `UpdateAll` alle Zeilen auf einmal aktualisieren.  
   
-Z. B. wenn die erste `Update` -Aufruf im oben stehenden Code fehlen würde, Zeile 100 unverändert, während Zeile 101 geändert würde. Nach diesem Punkt die Anwendung entweder müssten Aufrufen `UpdateAll` oder Aufruf zu Zeile 100 zurückgehen `Update` für diese Zeile aktualisiert werden.  
+Z. B. wenn die erste `Update` -Aufruf im oben stehenden Code fehlen würde, Zeile 100 verbleiben unverändert, während Zeile 101 geändert würde. Nach diesem Punkt die Anwendung entweder müssten Aufrufen `UpdateAll` oder Aufruf zu Zeile 100 zurückgehen `Update` für diese Zeile aktualisiert werden.  
   
-Schließlich ist einer der Hauptgründe für die Verwendung verzögerter Aktualisierungen die Möglichkeit, sie rückgängig machen zu können. Wenn Sie [CRowset::Undo](../../data/oledb/crowset-undo.md) aufrufen, wird der lokale Änderungscache auf den Status des Datenspeichers vor dem Ausführen der Änderungen zurückgesetzt. Es ist wichtig zu beachten, dass `Undo` erfolgt kein Rollback den Status des lokalen Caches einschrittigen (den Zustand vor der letzten Änderung) zurücksetzt, stattdessen es den lokalen Cache für die Zeile gelöscht. Darüber hinaus `Undo` wirkt sich auf nur die aktuelle Zeile.  
+Schließlich ist einer der Hauptgründe für die Verwendung verzögerter Aktualisierungen die Möglichkeit, sie rückgängig machen zu können. Wenn Sie [CRowset::Undo](../../data/oledb/crowset-undo.md) aufrufen, wird der lokale Änderungscache auf den Status des Datenspeichers vor dem Ausführen der Änderungen zurückgesetzt. Es ist wichtig zu beachten, dass `Undo` nicht genutzt haben, den Status des lokalen Caches einschrittigen (den Zustand vor der letzten Änderung) zurücksetzt, stattdessen es den lokalen Cache für die Zeile gelöscht. Darüber hinaus `Undo` wirkt sich auf nur die aktuelle Zeile.  
   
 ## <a name="see-also"></a>Siehe auch  
 

@@ -1,7 +1,7 @@
 ---
 title: Schleife | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -15,47 +15,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0850a30c0e0e85cd1d90ba5b2399a295a482a3ce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b62763cd900ff90a4daab978edec9fead47422e7
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444670"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809134"
 ---
 # <a name="loop"></a>Loop
-Steuert, wie Schleifencode durch die automatische Parallelisierung berücksichtigt werden soll und/oder schließt eine Schleife von der Berücksichtigung durch die automatische Vektorisierung aus.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-#pragma loop( hint_parallel(n) )  
-```  
-  
-```  
-#pragma loop( no_vector )  
-```  
-  
-```  
-#pragma loop( ivdep )  
-```  
-  
-### <a name="parameters"></a>Parameter  
-*hint_parallel(n)*  
-Weist den Compiler an, die über diese Schleife parallelisiert werden soll *n* Threads, in denen *n* ist ein positives Ganzzahlliteral oder 0 (null). Wenn *n* NULL ist, wird die maximale Anzahl von Threads zur Laufzeit verwendet. Dies ist ein Hinweis für den Compiler, kein Befehl, und es gibt keine Garantie dafür, dass die Schleife parallelisiert wird. Wenn die Schleife Datenabhängigkeiten oder strukturelle Probleme aufweist, z. B. in der Schleife in einen über den Schleifentext hinaus verwendeten Skalar gespeichert wird, dann wird die Schleife nicht parallelisiert.  
-  
-Der Compiler ignoriert diese Option aus, es sei denn, die [/Qpar](../build/reference/qpar-auto-parallelizer.md) -Compilerschalter wird angegeben.  
-  
-*no_vector*  
-Standardmäßig ist die automatische Vektorisierung aktiviert und versucht, alle Schleifen zu vektorisieren, für die dies als nützlich bewertet wird. Geben Sie dieses Pragma an, um die automatische Vektorisierung für die darauf folgende Schleife zu deaktivieren.  
-  
-*ivdep*  
-Weist den Compiler darauf hin, Vektorabhängigkeiten für diese Schleife zu ignorieren. Verwenden Sie diese in Verbindung mit *Hint_parallel*.  
-  
-## <a name="remarks"></a>Hinweise  
- 
-Verwenden der **Schleife** Pragma, platzieren Sie es direkt vor – nicht in – eine Schleifendefinition. Das Pragma gilt für den Gültigkeitsbereich der Schleife, die darauf folgt. Sie können mehrere Pragmas in beliebiger Reihenfolge auf eine Schleife anwenden, aber Sie müssen jedes in einer separaten Pragmaanweisung angeben.  
-  
-## <a name="see-also"></a>Siehe auch  
- 
+
+Steuert, wie Schleifencode durch die automatische Parallelisierung berücksichtigt werden soll und/oder schließt eine Schleife von der Berücksichtigung durch die automatische Vektorisierung aus.
+
+## <a name="syntax"></a>Syntax
+
+```
+#pragma loop( hint_parallel(n) )
+#pragma loop( no_vector )
+#pragma loop( ivdep )
+```
+
+### <a name="parameters"></a>Parameter
+
+*hint_parallel(n)*<br/>
+Weist den Compiler an, die über diese Schleife parallelisiert werden soll *n* Threads, in denen *n* ist ein positives Ganzzahlliteral oder 0 (null). Wenn *n* NULL ist, wird die maximale Anzahl von Threads zur Laufzeit verwendet. Dies ist ein Hinweis für den Compiler, kein Befehl, und es gibt keine Garantie dafür, dass die Schleife parallelisiert wird. Wenn die Schleife Datenabhängigkeiten oder strukturelle Probleme aufweist, z. B. in der Schleife in einen über den Schleifentext hinaus verwendeten Skalar gespeichert wird, dann wird die Schleife nicht parallelisiert.
+
+Der Compiler ignoriert diese Option aus, es sei denn, die [/Qpar](../build/reference/qpar-auto-parallelizer.md) -Compilerschalter wird angegeben.
+
+*no_vector*<br/>
+Standardmäßig ist die automatische Vektorisierung aktiviert und versucht, alle Schleifen zu vektorisieren, für die dies als nützlich bewertet wird. Geben Sie dieses Pragma an, um die automatische Vektorisierung für die darauf folgende Schleife zu deaktivieren.
+
+*ivdep*<br/>
+Weist den Compiler darauf hin, Vektorabhängigkeiten für diese Schleife zu ignorieren. Verwenden Sie diese in Verbindung mit *Hint_parallel*.
+
+## <a name="remarks"></a>Hinweise
+
+Verwenden der **Schleife** Pragma, platzieren Sie es direkt vor – nicht in – eine Schleifendefinition. Das Pragma gilt für den Gültigkeitsbereich der Schleife, die darauf folgt. Sie können mehrere Pragmas in beliebiger Reihenfolge auf eine Schleife anwenden, aber Sie müssen jedes in einer separaten Pragmaanweisung angeben.
+
+## <a name="see-also"></a>Siehe auch
+
 [Automatische Parallelisierung und automatische Vektorisierung](../parallel/auto-parallelization-and-auto-vectorization.md)<br/>
 [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,7 +1,7 @@
 ---
 title: Module-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/17/2018
+ms.date: 10/18/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -53,12 +53,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0fa34cb8fce2854f4b3864629b86122bdfe6b35f
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: 5df7ae90a347d82b303d7db251e533733c8e4a86
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494529"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808629"
 ---
 # <a name="module-class"></a>Module-Klasse
 
@@ -177,22 +177,22 @@ WRL_NOTHROW static Module& Create(
 template<typename T>
 WRL_NOTHROW static Module& Create(
    _In_ T* object,
-   _In_ void (T::* method)()  
+   _In_ void (T::* method)()
 );
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Modultyp.
 
-*Rückruf*  
+*Rückruf*<br/>
 Wird aufgerufen, wenn das letzte Instanzobjekt des Moduls freigegeben wird.
 
-*object*  
+*object*<br/>
 Die *Objekt* und *Methode* Parameter in Kombination verwendet werden. Verweist auf das letzte Instance-Objekt, wenn die letzte Instanzobjekt in das Modul veröffentlicht wird.
 
-*Methode*  
+*Methode*<br/>
 Die *Objekt* und *Methode* Parameter in Kombination verwendet werden. Zeigt auf die Methode des letzten Instance-Objekt, wenn die letzte Instanzobjekt in das Modul veröffentlicht wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -225,13 +225,13 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 
 ### <a name="parameters"></a>Parameter
 
-*pActivatibleClassId*  
+*pActivatibleClassId*<br/>
 Die IID der von einer Runtime-Klasse.
 
-*ppIFactory*  
+*ppIFactory*<br/>
 Die "iactivationfactory" für die angegebene Runtime-Klasse.
 
-*ServerName*  
+*ServerName*<br/>
 Der Name einer Teilmenge von Klassenfactorys im aktuellen Modul. Geben Sie den Servernamen in verwendet die [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) -Makro, oder geben Sie `nullptr` um den Standardnamen für den Server zu erhalten.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -253,16 +253,16 @@ Ruft einen Cache von Klassenfactorys.
 
 ### <a name="parameters"></a>Parameter
 
-*clsid*  
+*clsid*<br/>
 Klassen-ID.
 
-*riid*  
+*riid*<br/>
 Schnittstellen-ID, die Sie anfordern.
 
-*ppv*  
+*ppv*<br/>
 Zeiger auf das zurückgegebene Objekt.
 
-*ServerName*  
+*ServerName*<br/>
 Den Namen des Servers, der entweder angegeben ist die `ActivatableClassWithFactory`, `ActivatableClassWithFactoryEx`, oder `ActivatableClass` Makro; oder `nullptr` um den Standardnamen für den Server zu erhalten.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -344,19 +344,19 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 
 ### <a name="parameters"></a>Parameter
 
-*ServerName*  
+*ServerName*<br/>
 Den vollqualifizierten Namen eines Servers.
 
-*CLSIDs*  
+*CLSIDs*<br/>
 Ein Array von CLSID registrieren.
 
-*Factorys*  
+*Factorys*<br/>
 Ein Array von IUnknown-Schnittstellen, der die Objekte der Klasse, deren Verfügbarkeit veröffentlicht wird.
 
-*Cookies*  
+*Cookies*<br/>
 Wenn der Vorgang abgeschlossen ist, Objekte ein Array von Zeigern auf Werte, die die Klasse zu identifizieren, die registriert wurden. Diese Werte werden später verwendet werden. die Registrierung aufzuheben.
 
-*count*  
+*count*<br/>
 Die Anzahl der CLSID registrieren.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -381,10 +381,10 @@ HRESULT RegisterObjects(
 
 ### <a name="parameters"></a>Parameter
 
-*Modul*  
+*module*<br/>
 Ein Array von COM- oder Windows-Runtime-Objekte.
 
-*ServerName*  
+*ServerName*<br/>
 Der Name des Servers, der die Objekte erstellt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -399,21 +399,21 @@ Registriert ein oder mehrere Windows-Runtime-Objekte an, damit andere Anwendunge
 HRESULT RegisterWinRTObject(const wchar_t* serverName,
    wchar_t** activatableClassIds,
    WINRT_REGISTRATION_COOKIE* cookie,
-   unsigned int count)  
+   unsigned int count)
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*ServerName*  
+*ServerName*<br/>
 Ein Name, der eine Teilmenge der von diesem Vorgang betroffenen Objekte angibt.
 
-*activatableClassIds*  
+*activatableClassIds*<br/>
 Ein Array von aktivierbare CLSIDs registrieren.
 
-*Cookie*  
+*Cookie*<br/>
 Ein Wert, der die Objekte der Klasse identifiziert, die registriert wurden. Dieser Wert wird später verwendet, um die Registrierung aufzuheben.
 
-*count*  
+*count*<br/>
 Die Anzahl von Objekten zu registrieren.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -453,13 +453,13 @@ virtual HRESULT UnregisterCOMObject(
 
 ### <a name="parameters"></a>Parameter
 
-*ServerName*  
+*ServerName*<br/>
 (Nicht verwendeten)
 
-*Cookies*  
+*Cookies*<br/>
 Ein Array von Zeigern auf Werte, die identifizieren, Objekte der Klasse, deren Registrierung aufgehoben werden. Das Array erstellt wurde, indem die [RegisterCOMObject](#registercomobject) Methode.
 
-*count*  
+*count*<br/>
 Die Anzahl der Klassen zum Aufheben der Registrierung.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -478,10 +478,10 @@ HRESULT UnregisterObjects(
 
 ### <a name="parameters"></a>Parameter
 
-*Modul*  
+*module*<br/>
 Zeiger auf ein Modul.
 
-*ServerName*  
+*ServerName*<br/>
 Einen qualifizierten Namen, der eine Teilmenge der von diesem Vorgang betroffenen Objekte angibt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -501,5 +501,5 @@ virtual HRESULT UnregisterWinRTObject(
 
 ### <a name="parameters"></a>Parameter
 
-*Cookie*  
+*Cookie*<br/>
 Ein Zeiger auf ein Wert, der das Klassenobjekt identifiziert, dessen Registrierung aufgehoben werden.
