@@ -1,7 +1,7 @@
 ---
 title: Abrufen von Daten | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/19/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,22 +18,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b7aaff3ccd2756ecfbac1cf745aaac74b76a91f9
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 4f0467d322242bb222e5365b45a57e1aa2fe2943
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48859951"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807470"
 ---
 # <a name="fetching-data"></a>Abrufen von Daten
 
 Nachdem Sie die Datenquelle, Sitzung und Rowset-Objekte öffnen, können Sie Daten abrufen. Je nach Art des Accessors, die Sie verwenden, müssen Sie Spalten binden.
 
-### <a name="to-fetch-data"></a>Zum Abrufen von Daten
+## <a name="to-fetch-data"></a>Zum Abrufen von Daten
 
 1. Öffnen Sie das Rowset mit der entsprechenden **öffnen** Befehl.
 
-1. Bei Verwendung von `CManualAccessor`, binden Sie die Ausgabespalten aus, wenn Sie nicht bereits geschehen. Rufen Sie zum Binden der Spalten, `GetColumnInfo`, und erstellen Sie einen Accessor mit den Bindungen, wie im folgenden Beispiel gezeigt:
+1. Bei Verwendung von `CManualAccessor`, binden Sie die Ausgabespalten aus, wenn Sie dies nicht bereits getan haben. Das folgende Beispiel stammt aus dem [DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer) Beispiel. Rufen Sie zum Binden der Spalten, `GetColumnInfo`, und erstellen Sie einen Accessor mit den Bindungen, wie im folgenden Beispiel gezeigt:
 
     ```cpp
     // From the DBViewer Sample CDBTreeView::OnQueryEdit
@@ -50,7 +50,7 @@ Nachdem Sie die Datenquelle, Sitzung und Rowset-Objekte öffnen, können Sie Dat
     rs.Bind();
     ```
 
-1. Schreiben einer `while` Schleife zum Abrufen der Daten. Rufen Sie in der Schleife `MoveNext` fahren fort, um den Cursor und den Rückgabewert mit S_OK, testen, wie im folgenden Beispiel gezeigt:
+1. Schreiben einer **während** Schleife zum Abrufen der Daten. Rufen Sie in der Schleife `MoveNext` fahren fort, um den Cursor und den Rückgabewert mit S_OK, testen, wie im folgenden Beispiel gezeigt:
 
     ```cpp
     while (rs.MoveNext() == S_OK)
@@ -60,7 +60,7 @@ Nachdem Sie die Datenquelle, Sitzung und Rowset-Objekte öffnen, können Sie Dat
     }
     ```
 
-1. In der `while` Schleife können Sie die Daten gemäß Ihrer Accessortyp abrufen.
+1. In der **während** Schleife können Sie die Daten gemäß Ihrer Accessortyp abrufen.
 
    - Bei Verwendung der [CAccessor](../../data/oledb/caccessor-class.md) -Klasse, müssen Sie einen Benutzerdatensatz, der Datenelemente enthält. Sie können Ihre Daten mit diesen Datenmember zugreifen, wie im folgenden Beispiel gezeigt:
 

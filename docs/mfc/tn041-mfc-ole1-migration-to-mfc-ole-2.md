@@ -1,7 +1,7 @@
 ---
 title: 'TN041: MFC-OLE1-Migration zu MFC-OLE 2 | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 06/28/2018
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75177743b893bdcf48b52b27c25ea4070e000f88
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c2f93ffa79c5f737be032ae9edffa6c3e49c7055
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377057"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809017"
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041: MFC/OLE1-Migration zu MFC/OLE 2
 
@@ -301,7 +301,7 @@ An diesem Punkt ist OCLIENT eine funktionale OLE-Container-Anwendung. Es ist mö
 
 Eines der interessantesten Features von OLE ist die direkte Aktivierung (oder "Visuelle Bearbeitung"). Dieses Feature ermöglicht die Serveranwendung aus, übernehmen Sie Teile des Containers-Benutzeroberfläche eine nahtlose bearbeitende-Schnittstelle für den Benutzer bereitgestellt. Um OCLIENT direkte Aktivierung implementieren zu können, müssen einige besonderen Ressourcen sowie zusätzlicher Code hinzugefügt werden. Diese Ressourcen und den Code werden normalerweise von AppWizard bereitgestellt, in der Tat Großteil des Codes hier direkt aus einer neuen AppWizard-Anwendung mit Unterstützung für "Container" übernommen wurde.
 
-Zunächst einmal ist es erforderlich, fügen eine Menüressource verwendet werden, wenn es ist ein Element, das direkt aktiv ist. Sie können diese zusätzlichen Menüressourcen in Visual C++ erstellen, durch Kopieren der IDR_OCLITYPE-Ressource, und entfernen alle bis auf die Datei und Fenster-Popups. Zwei Trennlinien zwischen der Datei und Fenster-Popups an, dass die Trennung von Gruppen eingefügt (es sollte wie folgt aussehen: Datei &#124; &#124; Fenster). Weitere Informationen zur Bedeutung dieser Trennzeichen und wie der Server und-Container Menüs zusammengeführt werden finden Sie unter "Menüs und Ressourcen: das Zusammenführen von Menüs" in *OLE 2-Klassen*.
+Zunächst einmal ist es erforderlich, fügen eine Menüressource verwendet werden, wenn es ist ein Element, das direkt aktiv ist. Sie können diese zusätzlichen Menüressourcen in Visual C++ erstellen, durch Kopieren der IDR_OCLITYPE-Ressource, und entfernen alle bis auf die Datei und Fenster-Popups. Zwei Trennlinien zwischen der Datei und Fenster-Popups an, dass die Trennung von Gruppen eingefügt (es sollte wie folgt aussehen: Datei &#124; &#124; Fenster). Weitere Informationen zur Bedeutung dieser Trennzeichen und wie der Server und-Container Menüs zusammengeführt werden finden Sie unter [Menüs und Ressourcen: Menüs schachteln](../mfc/menus-and-resources-menu-merging.md).
 
 Nachdem Sie diese Menüs erstellt haben, müssen Sie das Framework, die ihnen bekannten Informationen zu informieren. Dies erfolgt durch Aufrufen von `CDocTemplate::SetContainerInfo` für die Dokumentvorlage, bevor Sie ihn der Dokument-Vorlagenliste in InitInstance hinzufügen. Der neue Code zum Registrieren der Dokumentvorlage sieht folgendermaßen aus:
 
@@ -618,7 +618,7 @@ Es gibt viele weitere Fehler in svritem.cpp, die nicht behandelt wurden. Sie sin
 \hiersvr\svrview.cpp(325) : error C2660: 'CopyToClipboard' : function does not take 2 parameters
 ```
 
-`COleServerItem::CopyToClipboard` unterstützt nicht mehr das Flag "bIncludeNative" ein. Die systemeigenen Daten (die Daten geschrieben, indem das Serverelement Serialize-Funktion) ist immer kopiert, sodass Sie den ersten Parameter zu entfernen. Darüber hinaus `CopyToClipboard` wird eine Ausnahme ausgelöst, wenn ein Fehler tritt auf, anstatt von "false". Ändern Sie den Code für CServerView::OnEditCopy wie folgt:
+`COleServerItem::CopyToClipboard` unterstützt nicht mehr die `bIncludeNative` Flag. Die systemeigenen Daten (die Daten geschrieben, indem das Serverelement Serialize-Funktion) ist immer kopiert, sodass Sie den ersten Parameter zu entfernen. Darüber hinaus `CopyToClipboard` wird eine Ausnahme ausgelöst, wenn ein Fehler tritt auf, anstatt von "false". Ändern Sie den Code für CServerView::OnEditCopy wie folgt:
 
 ```cpp
 void CServerView::OnEditCopy()
@@ -654,7 +654,7 @@ Um diese Server-Anwendung "Visuelle Bearbeitung" (oder direkte Aktivierung) hinz
 
 - Sie müssen das Framework über diese speziellen Ressourcen und Klassen zu informieren.
 
-Die Menüressource ist einfach zu erstellen. Führen Sie Visual C++, kopieren Sie die Menüressource IDR_HIERSVRTYPE in einer Menüressource IDR_HIERSVRTYPE_SRVR_IP aufgerufen. Ändern Sie im Menü aus, sodass nur für die Verwendung der Bearbeiten und die Hilfe im Menü Popups bleiben. Hinzufügen von zwei Trennzeichen zum Menü zwischen der Menüs bearbeiten und Hilfe (es sollte wie folgt aussehen: Bearbeiten &#124; &#124; unterstützen). Weitere Informationen zu der Bedeutung dieser Trennzeichen und wie der Server und-Container Menüs zusammengeführt werden, finden Sie unter "Menüs und Ressourcen: das Zusammenführen von Menüs" in *OLE 2-Klassen*.
+Die Menüressource ist einfach zu erstellen. Führen Sie Visual C++, kopieren Sie die Menüressource IDR_HIERSVRTYPE in einer Menüressource IDR_HIERSVRTYPE_SRVR_IP aufgerufen. Ändern Sie im Menü aus, sodass nur für die Verwendung der Bearbeiten und die Hilfe im Menü Popups bleiben. Hinzufügen von zwei Trennzeichen zum Menü zwischen der Menüs bearbeiten und Hilfe (es sollte wie folgt aussehen: Bearbeiten &#124; &#124; unterstützen). Weitere Informationen zu der Bedeutung dieser Trennzeichen und wie der Server und-Container Menüs zusammengeführt werden, finden Sie unter [Menüs und Ressourcen: Menüs schachteln](../mfc/menus-and-resources-menu-merging.md).
 
 Die Bitmap für die Teilmenge-Symbolleiste kann problemlos erstellt werden, durch Kopieren das entsprechende Element aus einer neuen AppWizard generiert-Anwendung mit der Option "Server" aktiviert. Diese Bitmap kann dann in Visual C++ importiert werden. Achten Sie darauf, dass der Bitmap eine ID von IDR_HIERSVRTYPE_SRVR_IP gewähren.
 
@@ -677,7 +677,7 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
     AfxGetApp()->m_pMainWnd);
 ```
 
-Beachten Sie, dass den Verweis auf *`AfxGetApp()->m_pMainWnd*`. Wenn der Server direkt aktiviert ist, kann ein Hauptfenster und M_pMainWnd festgelegt ist, aber er ist in der Regel nicht sichtbar. Darüber hinaus bezieht sich in diesem Fenster auf die *main* Fenster der Anwendung, die MDI-Rahmenfenster, das angezeigt wird, wenn der Server vollständig ist öffnen oder eigenständig ausgeführt. Es verweist nicht auf das Fenster des aktiven Frames, die beim direkten aktiviert ist ein Frame Fenster abgeleitet `COleIPFrameWnd`. Um das richtige aktive Fenster zu erhalten, selbst wenn die direkte Bearbeitung, diese Version von MFC eine neue Funktion, fügt `AfxGetMainWnd`. Sie sollten im Allgemeinen verwenden Sie diese Funktion anstelle von *`AfxGetApp()->m_pMainWnd*`. Dieser Code muss wie folgt ändern:
+Beachten Sie, dass den Verweis auf `AfxGetApp()->m_pMainWnd`. Wenn der Server direkt aktiviert ist, kann ein Hauptfenster und M_pMainWnd festgelegt ist, aber er ist in der Regel nicht sichtbar. Darüber hinaus bezieht sich in diesem Fenster auf die *main* Fenster der Anwendung, die MDI-Rahmenfenster, das angezeigt wird, wenn der Server vollständig ist öffnen oder eigenständig ausgeführt. Es verweist nicht auf das Fenster des aktiven Frames, die beim direkten aktiviert ist ein Frame Fenster abgeleitet `COleIPFrameWnd`. Um das richtige aktive Fenster zu erhalten, selbst wenn die direkte Bearbeitung, diese Version von MFC eine neue Funktion, fügt `AfxGetMainWnd`. Im Allgemeinen sollten Sie diese Funktion statt des verwenden `AfxGetApp()->m_pMainWnd`. Dieser Code muss wie folgt ändern:
 
 ```cpp
 pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,

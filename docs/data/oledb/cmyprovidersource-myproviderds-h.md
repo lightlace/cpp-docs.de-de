@@ -1,46 +1,49 @@
 ---
 title: CMyProviderSource (MyProviderDS.H) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
 f1_keywords:
 - myproviderds.h
 - cmyprovidersource
+- customds.h
+- ccustomsource
 dev_langs:
 - C++
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderSource class in MyProviderDS.H
+- CCustomSource class in CustomDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d7add0ccd001579c15a3621afc87354a0626c454
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 47a09aa9a368741dfd4c95bb86f22d09bc11e1b8
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024514"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808276"
 ---
-# <a name="cmyprovidersource-myproviderdsh"></a>CMyProviderSource (MyProviderDS.H)
+# <a name="ccustomclasssource-customclassdsh"></a>CCustomClassSource (CustomClassDS.h)
 
 Die-Anbieterklassen verwenden mehrfache Vererbung. Der folgende Code zeigt die Vererbungskette für das neue Datenquellenobjekt:  
   
 ```cpp
 /////////////////////////////////////////////////////////////////////////  
-// CMyProviderSource  
-class ATL_NO_VTABLE CMyProviderSource :   
+// CCustomSource  
+class ATL_NO_VTABLE CCustomSource :   
    public CComObjectRootEx<CComSingleThreadModel>,  
-   public CComCoClass<CMyProviderSource, &CLSID_MyProvider>,  
-   public IDBCreateSessionImpl<CMyProviderSource, CMyProviderSession>,  
-   public IDBInitializeImpl<CMyProviderSource>,  
-   public IDBPropertiesImpl<CMyProviderSource>,  
-   public IPersistImpl<CMyProviderSource>,  
-   public IInternalConnectionImpl<CMyProviderSource>  
+   public CComCoClass<CCustomSource, &CLSID_Custom>,  
+   public IDBCreateSessionImpl<CCustomSource, CCustomSession>,  
+   public IDBInitializeImpl<CCustomSource>,  
+   public IDBPropertiesImpl<CCustomSource>,  
+   public IPersistImpl<CCustomSource>,  
+   public IInternalConnectionImpl<CCustomSource>  
 ```  
   
 Leiten Sie alle COM-Komponenten von `CComObjectRootEx` und `CComCoClass`. `CComObjectRootEx` Stellt die Implementierung für die für die `IUnknown` Schnittstelle. Sie können alle threading-Modell behandeln. `CComCoClass` behandelt alle Fehler Unterstützung erforderlich. Wenn Sie ausführlichere Fehlerinformationen an den Client senden möchten, können Sie einige der Fehler-APIs in `CComCoClass`.  
@@ -51,8 +54,8 @@ Das Datenquellenobjekt erbt auch von mehreren "Impl"-Klassen. Jede Klasse stellt
 
 Jedes Mal, wenn der Client ruft `QueryInterface` für eine Schnittstelle für die Datenquelle, durchläuft sie die folgenden COM-Zuordnung:  
   
-```  
-BEGIN_COM_MAP(CMyProviderSource)  
+```cpp  
+BEGIN_COM_MAP(CCustomSource)  
    COM_INTERFACE_ENTRY(IDBCreateSession)  
    COM_INTERFACE_ENTRY(IDBInitialize)  
    COM_INTERFACE_ENTRY(IDBProperties)  
@@ -67,8 +70,8 @@ Die COM_INTERFACE_ENTRY-Makros sind von ATL und weisen die Implementierung von `
 
 Die eigenschaftenzuordnung gibt alle vom Anbieter angegebenen Eigenschaften an:  
   
-```  
-BEGIN_PROPSET_MAP(CMyProviderSource)  
+```cpp  
+BEGIN_PROPSET_MAP(CCustomSource)  
    BEGIN_PROPERTY_SET(DBPROPSET_DATASOURCEINFO)  
       PROPERTY_INFO_ENTRY(ACTIVESESSIONS)  
       PROPERTY_INFO_ENTRY(ASYNCTXNABORT)  
@@ -131,7 +134,7 @@ BEGIN_PROPSET_MAP(CMyProviderSource)
    BEGIN_PROPERTY_SET(DBPROPSET_DATASOURCE)  
       PROPERTY_INFO_ENTRY(CURRENTCATALOG)  
    END_PROPERTY_SET(DBPROPSET_DATASOURCE)  
-   CHAIN_PROPERTY_SET(CMyProviderSession)  
+   CHAIN_PROPERTY_SET(CCustomSession)  
 END_PROPSET_MAP()  
 ```  
   

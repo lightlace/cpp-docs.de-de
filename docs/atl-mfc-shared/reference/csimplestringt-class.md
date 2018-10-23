@@ -1,7 +1,7 @@
 ---
 title: CSimpleStringT-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7a4abff1faaa8fe93f15fb2d4a7e5ba15d6e434
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1f835558bb4d97f90857d44ef63e4b8f6075d2c0
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434660"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809147"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT-Klasse
 
@@ -66,7 +66,7 @@ class CSimpleStringT
 
 ### <a name="parameters"></a>Parameter
 
-*BaseType*  
+*BaseType*<br/>
 Der Zeichentyp der String-Klasse. Einer der folgenden Werte ist möglich:
 
 - **Char** (für ANSI-Zeichenfolgen).
@@ -151,13 +151,13 @@ void Append(PCXSTR pszSrc);
 ```
 #### <a name="parameters"></a>Parameter
 
-*strSrc*  
+*strSrc*<br/>
 Die `CSimpleStringT` Objekt angefügt werden soll.
 
-*pszSrc*  
+*pszSrc*<br/>
 Ein Zeiger auf eine Zeichenfolge, die mit den Zeichen angefügt werden soll.
 
-*nLength*  
+*nLength*<br/>
 Die Anzahl der anzufügenden Zeichen.
 
 ### <a name="remarks"></a>Hinweise
@@ -187,7 +187,7 @@ void AppendChar(XCHAR ch);
 ```
 #### <a name="parameters"></a>Parameter
 
-*ch*  
+*ch*<br/>
 Das Zeichen angefügt werden soll
 
 ### <a name="remarks"></a>Hinweise
@@ -209,13 +209,13 @@ static void CopyChars(
 
 #### <a name="parameters"></a>Parameter
 
-*pchDest*  
+*pchDest*<br/>
 Ein Zeiger auf eine Zeichenfolge.
 
-*pchSrc*  
+*pchSrc*<br/>
 Ein Zeiger auf eine Zeichenfolge, die mit den Zeichen kopiert werden soll.
 
-*nChars*  
+*nChars*<br/>
 Die Anzahl der *PchSrc* zu kopierenden Zeichen.
 
 ### <a name="remarks"></a>Hinweise
@@ -249,13 +249,13 @@ static void CopyCharsOverlapped(
 
 #### <a name="parameters"></a>Parameter
 
-*pchDest*  
+*pchDest*<br/>
 Ein Zeiger auf eine Zeichenfolge.
 
-*pchSrc*  
+*pchSrc*<br/>
 Ein Zeiger auf eine Zeichenfolge, die mit den Zeichen kopiert werden soll.
 
-*nChars*  
+*nChars*<br/>
 Die Anzahl der *PchSrc* zu kopierenden Zeichen.
 
 ### <a name="remarks"></a>Hinweise
@@ -280,19 +280,19 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
 ```
 #### <a name="parameters"></a>Parameter
 
-*strSrc*  
+*strSrc*<br/>
 Eine vorhandene `CSimpleStringT` Objekt, das in diese kopiert werden `CSimpleStringT` Objekt.
 
-*pchSrc*  
+*pchSrc*<br/>
 Ein Zeiger auf ein Array von Zeichen Länge *nLength*, kein Null-terminiert.
 
-*pszSrc*  
+*pszSrc*<br/>
 Eine mit Null endende Zeichenfolge, die in diese kopiert werden `CSimpleStringT` Objekt.
 
-*nLength*  
+*nLength*<br/>
 Die Anzahl der Zeichen im `pch`.
 
-*pStringMgr*  
+*pStringMgr*<br/>
 Ein Zeiger auf den Speicher-Manager, der die `CSimpleStringT` Objekt. Weitere Informationen zu `IAtlStringMgr` und Speicherverwaltung für `CSimpleStringT`, finden Sie unter [Speicherverwaltung und CStringT](../memory-management-with-cstringt.md).
 
 ### <a name="remarks"></a>Hinweise
@@ -419,7 +419,7 @@ XCHAR GetAt(int iChar) const;
 ```
 #### <a name="parameters"></a>Parameter
 
-*iChar*  
+*iChar*<br/>
 Nullbasierte Index des Zeichens in der `CSimpleStringT` Objekt. Die *iChar* Parameter muss größer als oder gleich 0 und kleiner als der Rückgabewert von [GetLength](#getlength). Andernfalls `GetAt` wird eine Ausnahme generiert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -451,7 +451,7 @@ PXSTR GetBuffer();
 ```
 #### <a name="parameters"></a>Parameter
 
-*nMinBufferLength*  
+*nMinBufferLength*<br/>
 Die minimale Anzahl von Zeichen, die der Zeichenpuffer enthalten kann. Dieser Wert umfasst nicht den verbliebenen Speicherplatz für einen null-Terminator.
 
 Wenn *nMinBufferLength* ist größer als die Länge des aktuellen Puffers `GetBuffer` des aktuellen Puffers löscht, ersetzt diese durch einen Puffer mit der angeforderten Größe und den Verweiszähler des Objekts auf 0 (null) zurückgesetzt. Wenn Sie bereits zuvor aufgerufen haben [LockBuffer](#lockbuffer) diesen Puffer, verlieren Sie die Sperre des Puffers.
@@ -498,7 +498,7 @@ PXSTR GetBufferSetLength(int nLength);
 ```
 #### <a name="parameters"></a>Parameter
 
-*nLength*  
+*nLength*<br/>
 Die genaue Größe der dem `CSimpleStringT` Zeichen-Puffers in Zeichen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -696,7 +696,7 @@ XCHAR operator[](int iChar) const;
 ```
 #### <a name="parameters"></a>Parameter
 
-*iChar*  
+*iChar*<br/>
 Nullbasierte Index eines Zeichens in der Zeichenfolge.
 
 ### <a name="remarks"></a>Hinweise
@@ -727,7 +727,7 @@ XCHAR operator[](int iChar) const;
 
 ### <a name="parameters"></a>Parameter
 
-*iChar*  
+*iChar*<br/>
 Nullbasierte Index eines Zeichens in der Zeichenfolge.
 
 ### <a name="remarks"></a>Hinweise
@@ -755,13 +755,13 @@ CSimpleStringT& operator +=(wchar_t ch);
 ```
 #### <a name="parameters"></a>Parameter
 
-*pszSrc*  
+*pszSrc*<br/>
 Ein Zeiger auf eine Null-terminierte Zeichenfolge.
 
-*strSrc*  
+*strSrc*<br/>
 Ein Zeiger auf eine vorhandene `CSimpleStringT` Objekt.
 
-*ch*  
+*ch*<br/>
 Das Zeichen, das angefügt werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -789,10 +789,10 @@ CSimpleStringT& operator =(const CSimpleStringT& strSrc);
 ```
 #### <a name="parameters"></a>Parameter
 
-*pszSrc*  
+*pszSrc*<br/>
 Ein Zeiger auf eine Null-terminierte Zeichenfolge.
 
-*strSrc*  
+*strSrc*<br/>
 Ein Zeiger auf eine vorhandene `CSimpleStringT` Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -894,7 +894,7 @@ void Preallocate( int nLength);
 ```
 #### <a name="parameters"></a>Parameter
 
-*nLength*  
+*nLength*<br/>
 Die genaue Größe der dem `CSimpleStringT` Zeichen-Puffers in Zeichen.
 
 ### <a name="remarks"></a>Hinweise
@@ -934,7 +934,7 @@ void ReleaseBuffer(int nNewLength = -1);
 ```
 #### <a name="parameters"></a>Parameter
 
-*nNewLength*  
+*nNewLength*<br/>
 Die neue Länge der Zeichenfolge in Zeichen, die einen null-Terminator wird dabei nicht mitgezählt. Der Standardwert-1 legt fest, wenn die Zeichenfolge null-termininiert ist, die `CSimpleStringT` Größe auf die aktuelle Länge der Zeichenfolge.
 
 ### <a name="remarks"></a>Hinweise
@@ -974,7 +974,7 @@ void ReleaseBufferSetLength(int nNewLength);
 ```
 #### <a name="parameters"></a>Parameter
 
-*nNewLength*  
+*nNewLength*<br/>
 Die Länge der Zeichenfolge, die freigegeben wird
 
 ### <a name="remarks"></a>Hinweise
@@ -992,10 +992,10 @@ void SetAt(int iChar, XCHAR ch);
 ```
 #### <a name="parameters"></a>Parameter
 
-*iChar*  
+*iChar*<br/>
 Nullbasierte Index des Zeichens in der `CSimpleStringT` Objekt. Die *iChar* Parameter muss größer als oder gleich 0 und kleiner als der Rückgabewert von [GetLength](#getlength).
 
-*ch*  
+*ch*<br/>
 Das neue Zeichen.
 
 ### <a name="remarks"></a>Hinweise
@@ -1023,7 +1023,7 @@ void SetManager(IAtlStringMgr* pStringMgr);
 ```
 #### <a name="parameters"></a>Parameter
 
-*pStringMgr*  
+*pStringMgr*<br/>
 Ein Zeiger auf den neuen Speichermanager.
 
 ### <a name="remarks"></a>Hinweise
@@ -1051,10 +1051,10 @@ void SetString(PCXSTR pszSrc);
 ```
 #### <a name="parameters"></a>Parameter
 
-*pszSrc*  
+*pszSrc*<br/>
 Ein Zeiger auf eine Null-terminierte Zeichenfolge.
 
-*nLength*  
+*nLength*<br/>
 Die Anzahl der Zeichen im *PszSrc*.
 
 ### <a name="remarks"></a>Hinweise
@@ -1091,7 +1091,7 @@ ATL_NOINLINE static int StringLength(PCXSTR psz) throw();
 ```
 #### <a name="parameters"></a>Parameter
 
-*psz*  
+*psz*<br/>
 Ein Zeiger auf eine Null-terminierte Zeichenfolge.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1121,7 +1121,7 @@ void Truncate(int nNewLength);
 ```
 #### <a name="parameters"></a>Parameter
 
-*nNewLength*  
+*nNewLength*<br/>
 Die neue Länge der Zeichenfolge.
 
 ### <a name="remarks"></a>Hinweise

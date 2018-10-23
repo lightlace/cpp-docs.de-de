@@ -1,7 +1,7 @@
 ---
 title: Das Embedded_idl | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,47 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ad4a58cf02522eb7ca1c00055c73ff921e92b11
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d7337595111b01ceeec53cc97f11ec2f35a081c5
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386118"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808341"
 ---
 # <a name="embeddedidl"></a>embedded_idl
-**C++-spezifisch**  
-  
-Gibt an, dass die Typbibliothek in die TLH-Datei geschrieben wird und der vom Attribut generierte Code beibehalten wird.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-embedded_idl[("param")]  
-```  
-  
-### <a name="parameters"></a>Parameter  
-*param*  
-Kann einer von zwei Werten sein:  
-  
-- emitidl: Typinformationen, die von typelib importiert werden, sind in der IDL-Datei vorhanden, die für das attributierte Projekt generiert wird.  Dies ist die Standardeinstellung, die aktiv ist, wenn Sie keinen Parameter für `embedded_idl` angeben.  
-  
-- no_emitidl: Typinformationen, die von typelib importiert werden, sind nicht in der IDL-Datei vorhanden, die für das attributierte Projekt generiert wird.  
-  
-## <a name="example"></a>Beispiel  
-  
-```cpp  
-// import_embedded_idl.cpp  
-// compile with: /LD  
-#include <windows.h>  
-[module(name="MyLib2")];  
-#import "\school\bin\importlib.tlb" embedded_idl("no_emitidl")  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- 
-**Ende C++-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- 
+
+**C++-spezifisch**
+
+Gibt an, dass die Typbibliothek in die TLH-Datei geschrieben wird und der vom Attribut generierte Code beibehalten wird.
+
+## <a name="syntax"></a>Syntax
+
+```
+embedded_idl[("param")]
+```
+
+### <a name="parameters"></a>Parameter
+
+*param*<br/>
+Kann einer von zwei Werten sein:
+
+- **Emitidl**: Typinformationen, die von Typelib importiert werden in der IDL-Datei für das attributierte Projekt generiert vorhanden sein.  Dies ist die Standardeinstellung, die aktiv ist, wenn Sie keinen Parameter für `embedded_idl` angeben.
+
+- **No_emitidl**: Typinformationen, die von Typelib importiert werden nicht in der IDL-Datei für das attributierte Projekt generiert vorhanden sein.
+
+## <a name="example"></a>Beispiel
+
+```cpp
+// import_embedded_idl.cpp
+// compile with: /LD
+#include <windows.h>
+[module(name="MyLib2")];
+#import "\school\bin\importlib.tlb" embedded_idl("no_emitidl")
+```
+
+## <a name="remarks"></a>Hinweise
+
+**Ende C++-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
 [#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)

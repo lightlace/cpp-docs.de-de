@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b1c48f4699c0add937c2bcdb13d49bce8cb895c4
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: ce3ad819b6e22bfb5c760849e5f3fdf85bd4f7bc
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083960"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809095"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Feldstatus-Datenmember in vom Assistenten generierten Zugriffsmethoden
 
@@ -80,13 +80,13 @@ END_COLUMN_MAP()
 ```  
   
 > [!NOTE]
->  Wenn Sie die Benutzerdatensatz-klasse ändern oder einen eigenen Consumer erstellen, müssen die Datenvariablen in der Reihenfolge vor den Status- und Längenvariablen liegen.  
+> Wenn Sie die Benutzerdatensatz-klasse ändern oder einen eigenen Consumer erstellen, müssen die Datenvariablen in der Reihenfolge vor den Status- und Längenvariablen liegen.  
   
 Sie können die Status-Werte verwenden, zu Debugzwecken. Wenn mit dem ATL-OLE DB-Consumer-Assistenten generierten Code Kompilierungsfehler, z. B. DB_S_ERRORSOCCURRED oder DB_E_ERRORSOCCURRED generiert, sollten Sie zunächst die aktuellen Werte von der Feldstatus-Datenmember überprüfen. Die betreffenden Spalten entsprechen mit Werten ungleich NULL.  
   
 Sie können auch die Status-Werte verwenden, um einen NULL-Wert für ein bestimmtes Feld festzulegen. Auf diese Weise können Sie in Fällen, in denen Sie einen Feldwert als NULL statt 0 (null) zu unterscheiden möchten. Es liegt an Ihnen zu entscheiden, ob NULL ein gültiger Wert oder ein spezieller Wert, und entscheiden, wie Sie Ihre Anwendung behandelt werden soll. OLE DB definiert DBSTATUS_S_ISNULL als die richtige Methode zur Angabe der eines generischen NULL-Werts. Wenn der Consumer Daten liest, und der Wert null ist, wird das Statusfeld auf DBSTATUS_S_ISNULL festgelegt. Wenn der Consumer einen NULL-Wert festgelegt möchte, setzt der Consumer den Statuswert auf DBSTATUS_S_ISNULL vor dem Aufruf des Anbieters an.  
   
-Öffnen Sie "OleDb.h", und suchen Sie nach `DBSTATUSENUM`. Anschließend können Sie vergleichen, der numerische Wert des Status mit dem ungleich null der `DBSTATUSENUM` -Enumerationswerte fest. Der Enumerationsname reicht nicht aus Ihnen mitteilen, was falsch ist, finden Sie unter "Status" im Abschnitt "Binding Data Values" der [OLE DB Programmer's Guide](/previous-versions/windows/desktop/ms713643). Dieses Thema enthält Tabellen mit dem Status-Werte, die beim Abrufen oder Festlegen der Daten verwendet. Informationen zu Längenwerten finden Sie im Thema "Length" im gleichen Abschnitt.  
+Öffnen Sie als Nächstes "OleDb.h", und suchen Sie nach DBSTATUSENUM. Sie können dann der numerische Wert des Status ungleich NULL für Enumerationswerte DBSTATUSENUM übereinstimmen. Der Enumerationsname reicht nicht aus Ihnen mitteilen, was falsch ist, finden Sie unter "Status" im Abschnitt "Binding Data Values" der [OLE DB Programmer's Guide](/previous-versions/windows/desktop/ms713643). Dieses Thema enthält Tabellen mit dem Status-Werte, die beim Abrufen oder Festlegen der Daten verwendet. Informationen zu Längenwerten finden Sie im Thema "Length" im gleichen Abschnitt.  
   
 ## <a name="retrieving-the-length-or-status-of-a-column"></a>Abrufen der Länge oder der Status einer Spalte  
 

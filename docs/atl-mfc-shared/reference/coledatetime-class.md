@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39329f4895060ff950f36c3d10dd5e4020f3b98a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 92761508a5e93c7ef0d0a4099dde587987a50dad
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448427"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809160"
 ---
 # <a name="coledatetime-class"></a>COleDateTime-Klasse
 
@@ -165,7 +165,7 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Datum*  
+*Datum*<br/>
 Das zu vergleichende `COleDateTime`-Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -210,22 +210,22 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*dateSrc*  
+*dateSrc*<br/>
 Eine vorhandene `COleDateTime` Objekt, das in die neue kopiert werden `COleDateTime` Objekt.
 
-*varSrc*  
+*varSrc*<br/>
 Eine vorhandene `VARIANT` Datenstruktur (möglicherweise eine `COleVariant` Objekt) in einen Datum/Uhrzeit-Wert (VT_DATE) konvertiert werden, und kopiert in das neue `COleDateTime` Objekt.
 
-*dtSrc*  
+*dtSrc*<br/>
 Eine Datum/Uhrzeit (`DATE`) Wert, der in die neue kopiert werden `COleDateTime` Objekt.
 
-*timeSrc*  
+*timeSrc*<br/>
 Ein `time_t` oder `__time64_t` Wert in einen Datum/Uhrzeit-Wert konvertiert werden, und kopiert in das neue `COleDateTime` Objekt.
 
-*systimeSrc*  
+*systimeSrc*<br/>
 Ein `SYSTEMTIME` Struktur in einen Datum/Uhrzeit-Wert konvertiert werden, und kopiert in das neue `COleDateTime` Objekt.
 
-*filetimeSrc*  
+*filetimeSrc*<br/>
 Ein `FILETIME` Struktur in einen Datum/Uhrzeit-Wert konvertiert werden, und kopiert in das neue `COleDateTime` Objekt. Beachten Sie, dass `FILETIME` verwendet die koordinierte Weltzeit (UTC), also wenn Sie eine lokale Zeit in der Struktur übergeben, die Ergebnisse nicht korrekt. Finden Sie unter [Dateizeitangaben](/windows/desktop/SysInfo/file-times) im Windows SDK für Weitere Informationen.
 
 *nYear*, *nMonth*, *NChronoplan Midi*, *Nuhrzeitangabe*, *nmin*, *nSec*  
@@ -234,7 +234,7 @@ Geben Sie Werte für Datum und Uhrzeit in die neue kopiert werden `COleDateTime`
 *wDosDate*, *wDosTime*  
 MS-DOS-Datum und Uhrzeit-Werte in einen Datum/Uhrzeit-Wert konvertiert werden, und kopiert in das neue `COleDateTime` Objekt.
 
-*DBTS*  
+*DBTS*<br/>
 Ein Verweis auf eine [DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) Struktur, die die aktuelle lokale Uhrzeit enthält.
 
 ### <a name="remarks"></a>Hinweise
@@ -297,7 +297,7 @@ CString Format(UINT nFormatID) const;
 
 ### <a name="parameters"></a>Parameter
 
-*dwFlags*  
+*dwFlags*<br/>
 Gibt an, um eine der folgenden Gebietsschemas:
 
 - LOCALE_NOUSEROVERRIDE verwenden die Standardeinstellungen des Systems Gebietsschema, anstelle von benutzerdefinierten Einstellungen.
@@ -306,10 +306,10 @@ Gibt an, um eine der folgenden Gebietsschemas:
 
 - VAR_DATEVALUEONLY ignorieren den Time-Teil, bei der Analyse.
 
-*lcid*  
+*lcid*<br/>
 Gibt die Gebietsschema-ID, für die Konvertierung verwendet. Weitere Informationen zu Sprachen-IDs finden Sie unter [Sprachen-IDs](/windows/desktop/Intl/language-identifiers).
 
-*lpszFormat*  
+*lpszFormat*<br/>
 Eine Formatierungszeichenfolge ähnelt der `printf` Formatierungszeichenfolge. Jede Formatieren von Code, der Prozentsatz vorangestellt ( `%`) anmelden, wird mit den entsprechenden ersetzt `COleDateTime` Komponente. Andere Zeichen in der Formatierungszeichenfolge werden auf die zurückgegebene Zeichenfolge unverändert kopiert. Finden Sie unter der Run-Time-Funktion [Strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für Weitere Informationen. Der Wert und die Bedeutung der Formatierungscodes für `Format` sind:
 
 - `%H` In den aktuellen Tag Stunden
@@ -320,7 +320,7 @@ Eine Formatierungszeichenfolge ähnelt der `printf` Formatierungszeichenfolge. J
 
 - `%%` Prozentzeichen
 
-*nFormatID*  
+*nFormatID*<br/>
 Die Ressourcen-ID für die Format-Zeichenfolge.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -356,7 +356,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*DBTS*  
+*DBTS*<br/>
 Ein Verweis auf eine [DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -381,7 +381,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*sysTime*  
+*sysTime*<br/>
 Ein Verweis auf eine [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur zum Empfangen der konvertierte Datums-/Uhrzeitwert aus der `COleDateTime` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -404,7 +404,7 @@ bool GetAsUDATE(UDATE& udate) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Update*  
+*Update*<br/>
 Ein Verweis auf eine `UDATE` Struktur zum Empfangen der konvertierte Datums-/Uhrzeitwert aus der `COleDateTime` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -938,10 +938,10 @@ LCID lcid = LANG_USER_DEFAULT) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*lpszDate*  
+*lpszDate*<br/>
 Ein Zeiger auf die Null-terminierte Zeichenfolge, die analysiert werden soll. Einzelheiten finden Sie unter "Hinweise".
 
-*dwFlags*  
+*dwFlags*<br/>
 Gibt Flags für die Einstellungen für Gebietsschema und die Analyse an. Eine oder mehrere der folgenden Flags:
 
 - LOCALE_NOUSEROVERRIDE verwenden Sie den Standard-gebietsschemaeinstellungen für System, anstelle von benutzerdefinierten Einstellungen.
@@ -950,7 +950,7 @@ Gibt Flags für die Einstellungen für Gebietsschema und die Analyse an. Eine od
 
 - VAR_DATEVALUEONLY ignorieren den Time-Teil, bei der Analyse.
 
-*lcid*  
+*lcid*<br/>
 Gibt die Gebietsschema-ID, für die Konvertierung verwendet.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1151,7 +1151,7 @@ void SetStatus(DateTimeStatus status) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*status*  
+*Status*<br/>
 Der neue Statuswert für diesen `COleDateTime` Objekt.
 
 ### <a name="remarks"></a>Hinweise

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 85efb2a1d699914c6d7ffb1fd079a38be70f0b52
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: c9cb2003b857bb156709e4ba2a3345dfb57bfd3c
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163841"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808939"
 ---
 # <a name="creating-a-simple-consumer"></a>Erstellen eines einfachen Consumers
 
@@ -32,15 +32,15 @@ Verwenden Sie die ATL-Projektassistenten und ATL-OLE DB-Consumer-Assistenten, um
 
    Das Dialogfeld **Neues Projekt** wird angezeigt.
 
-1. In der **Projekttypen** Bereich, klicken Sie auf die **installiert** > **Vorlagen** > **Visual C++** Ordner und Klicken Sie dann auf die **Win32-Konsolenanwendung** Symbol in der **Vorlagen** Bereich. In der **Namen** Geben Sie den Namen des Projekts, z. B. *MyCons*.
+1. In der **Projekttypen** Bereich, klicken Sie auf die **installiert** > **Visual C++** > **Windows Desktop** Ordner und klicken Sie dann auf die **-Assistenten für Windows Desktop** Symbol in der **Vorlagen** Bereich. In der **Namen** Geben Sie den Namen des Projekts, z. B. *MyCons*.
 
 1. Klicken Sie auf **OK**.
 
-   Die Win32-Anwendungsassistenten wird angezeigt.
+   Die **-Projekt für Windows Desktop** -Assistent wird angezeigt.
 
 1. Auf der **Anwendungseinstellungen** Seite **Konsolenanwendung**, und wählen Sie dann **allgemeine Headerdateien für ATL hinzufügen**.
 
-1. Klicken Sie auf **Fertig stellen** den Assistenten zu schließen und das Projekt zu erstellen.
+1. Klicken Sie auf **OK** den Assistenten zu schließen und das Projekt zu erstellen.
 
 Verwenden Sie anschließend die ATL-OLE DB-Consumer-Assistenten zum Hinzufügen eines OLE DB-Consumer-Objekts.
 
@@ -48,9 +48,9 @@ Verwenden Sie anschließend die ATL-OLE DB-Consumer-Assistenten zum Hinzufügen 
 
 1. In **Projektmappen-Explorer**, mit der rechten Maustaste die `MyCons` Projekt.
 
-1. Klicken Sie im Kontextmenü auf **hinzufügen**, und klicken Sie dann auf **Klasse**.
+1. Klicken Sie im Kontextmenü auf **hinzufügen**, und klicken Sie dann auf **neues Element**.
 
-   Die **Klasse hinzufügen** Dialogfeld wird angezeigt.
+   Das Dialogfeld **Neues Element hinzufügen** wird angezeigt.
 
 1. In der **Kategorien** Bereich, klicken Sie auf **installiert** > **Visual C++** > **ATL**, klicken Sie auf die **ATL-OLEDB-Consumer** Symbol in der **Vorlagen** , und klicken Sie dann auf **hinzufügen**.
 

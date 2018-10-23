@@ -1,7 +1,7 @@
 ---
 title: IAtlStringMgr-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad98923c21a28976b54c2251f2da83eb0ec4cf5f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6d637750ab4aa9dc30ca7b297373cb2c752802d8
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408140"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808871"
 ---
 # <a name="iatlstringmgr-class"></a>IAtlStringMgr-Klasse
 
@@ -73,10 +73,10 @@ CStringData* Allocate(int nAllocLength,int nCharSize) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*nAllocLength*  
+*nAllocLength*<br/>
 Die Anzahl der Zeichen im neuen Speicherblock.
 
-*nCharSize*  
+*nCharSize*<br/>
 Die Größe (in Byte) von der Art der Zeichen, die von der Zeichenfolge-Manager verwendet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -124,7 +124,7 @@ void Free(CStringData* pData) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*pData*  
+*pData*<br/>
 Ein Zeiger zum Speicherblock freigegeben werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -151,31 +151,31 @@ Ein Zeiger auf die `CStringData` Objekt verwendet, um eine leere Zeichenfolge da
 Rufen Sie diese Funktion, um eine Darstellung eine leere Zeichenfolge zurück.
 
 > [!NOTE]
->  Beim Implementieren eines benutzerdefinierten zeichenfolgenmanagers muss diese Funktion niemals Fehler verursachen. Sie können sicherstellen, dass dies durch die Einbettung von einer Instanz von `CNilStringData` in der Manager-Zeichenfolgenklasse, und Rückgabe einen Zeiger an diese Instanz.
+> Beim Implementieren eines benutzerdefinierten zeichenfolgenmanagers muss diese Funktion niemals Fehler verursachen. Sie können sicherstellen, dass dies durch die Einbettung von einer Instanz von `CNilStringData` in der Manager-Zeichenfolgenklasse, und Rückgabe einen Zeiger an diese Instanz.
 
 > [!NOTE]
->  Verwendungsbeispiele finden Sie unter [Speicherverwaltung und CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
+> Verwendungsbeispiele finden Sie unter [Speicherverwaltung und CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-##  <a name="reallocate"></a>  IAtlStringMgr::Reallocate
+## <a name="reallocate"></a>  IAtlStringMgr::Reallocate
 
 Ordnet eine zeichenfolgendatenstruktur neu.
 
 ```
-CStringData* Reallocate(  
-CStringData* pData,
-int nAllocLength,
-int nCharSize) throw();
+CStringData* Reallocate(
+    CStringData* pData,
+    int nAllocLength,
+    int nCharSize) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*pData*  
+*pData*<br/>
 Zeiger auf den von diesem Speicher-Manager zuvor belegten Arbeitsspeicher.
 
-*nAllocLength*  
+*nAllocLength*<br/>
 Die Anzahl der Zeichen im neuen Speicherblock.
 
-*nCharSize*  
+*nCharSize*<br/>
 Die Größe (in Byte) von der Art der Zeichen, die von der Zeichenfolge-Manager verwendet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -189,10 +189,9 @@ Mit dieser Funktion wird zum Ändern der Größe des vorhandenen Speicherblocks,
 Rufen Sie [IAtlStringMgr::Free](#free) um den von dieser Methode belegten Arbeitsspeicher freizugeben.
 
 > [!NOTE]
->  Verwendungsbeispiele finden Sie unter [Speicherverwaltung und CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
+> Verwendungsbeispiele finden Sie unter [Speicherverwaltung und CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [Freigegebene ATL-/MFC-Klassen](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

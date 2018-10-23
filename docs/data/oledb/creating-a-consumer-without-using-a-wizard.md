@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7ce6949e582142e208058b4fa59d02008513e29f
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: cd8412ed280c0a256ea8acb7274da5d6238134fc
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410732"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807796"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Erstellen eines Consumers ohne Assistent
 
@@ -67,7 +67,7 @@ Programmgesteuert, führt ein Consumer in der Regel die folgende Sequenz von Vor
     hr = rs.Open();            // (Open also executes the command)  
     ```  
   
-- Optional, Set-Rowset-Eigenschaften mit `CDBPropSet::AddProperty` und übergeben sie als Parameter an `rs.Open`. Ein Beispiel dafür, wie dies funktioniert, finden Sie unter **GetRowsetProperties** in [vom Methoden](../../data/oledb/consumer-wizard-generated-methods.md).  
+- Optional, Set-Rowset-Eigenschaften mit `CDBPropSet::AddProperty` und übergeben sie als Parameter an `rs.Open`. Ein Beispiel dafür, wie dies funktioniert, finden Sie unter `GetRowsetProperties` in [vom Methoden](../../data/oledb/consumer-wizard-generated-methods.md).  
   
 - Sie können jetzt das Rowset verwenden, zum Abrufen/Bearbeiten der Daten.  
   

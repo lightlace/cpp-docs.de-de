@@ -1,7 +1,7 @@
 ---
 title: CStringT-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d6a6afeca0bcf0d08a0a206983d3db33b61a041
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: f2d31d24007da1ec279e9c9762158b549e83d114
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890698"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809121"
 ---
 # <a name="cstringt-class"></a>CStringT-Klasse
 
@@ -115,7 +115,7 @@ public CSimpleStringT<BaseType,
 
 #### <a name="parameters"></a>Parameter
 
-*BaseType*  
+*BaseType*<br/>
 Der Zeichentyp der String-Klasse. Einer der folgenden Werte ist möglich:
 
 - **Char** (für ANSI-Zeichenfolgen).
@@ -124,7 +124,7 @@ Der Zeichentyp der String-Klasse. Einer der folgenden Werte ist möglich:
 
 - TCHAR (nach ANSI- und Unicode-Zeichenfolgen).
 
-*StringTraits*  
+*StringTraits*<br/>
 Bestimmt, ob die Zeichenfolgenklasse benötigt Unterstützung für C-Laufzeit (CRT)-Klassenbibliotheken und, wo die Zeichenfolgenressourcen gespeichert sind. Einer der folgenden Werte ist möglich:
 
 - **StrTraitATL < Wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsCRT < Wchar_t** &#124; `char` &#124; **TCHAR >>**
@@ -343,13 +343,13 @@ void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 
 ### <a name="parameters"></a>Parameter
 
-*pszFormat*  
+*pszFormat*<br/>
 Eine Zeichenfolge Steuerelement formatieren.
 
-*nFormatID*  
+*nFormatID*<br/>
 Der Ressourcenbezeichner für die Zeichenfolge, die die Format-Zeichenfolge enthält.
 
-*Argument*  
+*Argument*<br/>
 Optionale Argumente.
 
 ### <a name="remarks"></a>Hinweise
@@ -370,7 +370,7 @@ int Collate(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*psz*  
+*psz*<br/>
 Die andere Zeichenfolge für den Vergleich verwendet.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -391,7 +391,7 @@ int CollateNoCase(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*psz*  
+*psz*<br/>
 Die andere Zeichenfolge für den Vergleich verwendet.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -416,7 +416,7 @@ int Compare(PCXSTR psz) const;
 
 ### <a name="parameters"></a>Parameter
 
-*psz*  
+*psz*<br/>
 Die andere Zeichenfolge für den Vergleich verwendet.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -445,7 +445,7 @@ int CompareNoCase(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*psz*  
+*psz*<br/>
 Die andere Zeichenfolge für den Vergleich verwendet.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -539,28 +539,28 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 
 ### <a name="parameters"></a>Parameter
 
-*PCH*  
+*PCH*<br/>
 Ein Zeiger auf ein Array von Zeichen Länge *nLength*, enden nicht auf Null.
 
-*nLength*  
+*nLength*<br/>
 Die Anzahl der Zeichen im *Pch*.
 
-*ch*  
+*ch*<br/>
 Ein einzelnes Zeichen.
 
-*pszSrc*  
+*pszSrc*<br/>
 Eine mit Null endende Zeichenfolge, die in diese kopiert werden `CStringT` Objekt.
 
-*pStringMgr*  
+*pStringMgr*<br/>
 Ein Zeiger auf die Speicher-Manager für die `CStringT` Objekt. Weitere Informationen zu `IAtlStringMgr` und Speicherverwaltung für `CStringT`, finden Sie unter [Speicherverwaltung mit CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-*strSrc*  
+*strSrc*<br/>
 Eine vorhandene `CStringT` Objekt, das in diese kopiert werden `CStringT` Objekt. Weitere Informationen zu `CThisString` und `CThisSimpleString`, finden Sie im Abschnitt "Hinweise".
 
-*varSrc*  
+*varSrc*<br/>
 Variant-Objekts, das in diese kopiert werden `CStringT` Objekt.
 
-*BaseType*  
+*BaseType*<br/>
 Der Zeichentyp der String-Klasse. Einer der folgenden Werte ist möglich:
 
 **Char** (für ANSI-Zeichenfolgen).
@@ -569,13 +569,13 @@ Der Zeichentyp der String-Klasse. Einer der folgenden Werte ist möglich:
 
 TCHAR (nach ANSI- und Unicode-Zeichenfolgen).
 
-*bMFCDLL*  
+*bMFCDLL*<br/>
 Boolescher Wert, der angibt, ob das Projekt eine MFC-DLL (TRUE) oder nicht ist (FALSE).
 
-*SystemString*  
+*SystemString*<br/>
 Muss `System::String`, und das Projekt muss mit "/ CLR" kompiliert werden.
 
-*pString*  
+*pString*<br/>
 Ein Handle für ein `CStringT` Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -624,10 +624,10 @@ int Delete(int iIndex, int nCount = 1);
 
 ### <a name="parameters"></a>Parameter
 
-*iIndex*  
+*iIndex*<br/>
 Der nullbasierte Index des ersten Zeichens in der `CStringT` zu löschenden Objekts.
 
-*nCount*  
+*nCount*<br/>
 Die Anzahl der zu entfernenden Zeichen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -660,13 +660,13 @@ int Find(XCHAR ch, int iStart=0) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*pszSub*  
+*pszSub*<br/>
 Eine zu suchende Teilzeichenfolge.
 
-*iStart*  
+*iStart*<br/>
 Der Index des Zeichens in die Zeichenfolge, die mit der Suche zu starten, oder 0, um von vorn zu beginnen.
 
-*ch*  
+*ch*<br/>
 Einem einzelnen Zeichen, die gesucht werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -691,7 +691,7 @@ int FindOneOf(PCXSTR pszCharSet) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*pszCharSet*  
+*pszCharSet*<br/>
 Zeichenfolge mit Zeichen für den Abgleich.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -717,13 +717,13 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 
 ### <a name="parameters"></a>Parameter
 
-*nFormatID*  
+*nFormatID*<br/>
 Der Ressourcenbezeichner für die Zeichenfolge, die die Format-Zeichenfolge enthält.
 
-*pszFormat*  
+*pszFormat*<br/>
 Eine Zeichenfolge Steuerelement formatieren.
 
-*Argument*  
+*Argument*<br/>
 Optionale Argumente.
 
 ### <a name="remarks"></a>Hinweise
@@ -751,13 +751,13 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 
 ### <a name="parameters"></a>Parameter
 
-*nFormatID*  
+*nFormatID*<br/>
 Der Ressourcenbezeichner für die Zeichenfolge, die den Nachrichtentext nicht formatierte enthält.
 
-*pszFormat*  
+*pszFormat*<br/>
 Verweist auf die formatsteuerzeichenfolge. Für einfügungen überprüft wird und entsprechend formatiert. Die Formatzeichenfolge wird-Laufzeitfunktion ähnelt *Printf*-Formatzeichenfolgen formatieren, mit der Ausnahme für die Parameter in beliebiger Reihenfolge eingefügt werden können.
 
-*Argument*  
+*Argument*<br/>
 Optionale Argumente.
 
 ### <a name="remarks"></a>Hinweise
@@ -783,10 +783,10 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 
 ### <a name="parameters"></a>Parameter
 
-*pszFormat*  
+*pszFormat*<br/>
 Verweist auf die formatsteuerzeichenfolge. Für einfügungen überprüft wird und entsprechend formatiert. Die Formatzeichenfolge wird-Laufzeitfunktion ähnelt `printf`-Formatzeichenfolgen formatieren, mit der Ausnahme für die Parameter in beliebiger Reihenfolge eingefügt werden können.
 
-*pArgList*  
+*pArgList*<br/>
 Zeiger auf eine Liste von Argumenten.
 
 ### <a name="remarks"></a>Hinweise
@@ -808,10 +808,10 @@ void FormatV(PCXSTR pszFormat, va_list args);
 
 ### <a name="parameters"></a>Parameter
 
-*pszFormat*  
+*pszFormat*<br/>
 Verweist auf die formatsteuerzeichenfolge. Für einfügungen überprüft wird und entsprechend formatiert. Die Formatzeichenfolge wird-Laufzeitfunktion ähnelt `printf`-Formatzeichenfolgen formatieren, mit der Ausnahme für die Parameter in beliebiger Reihenfolge eingefügt werden können.
 
-*args*  
+*args*<br/>
 Zeiger auf eine Liste von Argumenten.
 
 ### <a name="remarks"></a>Hinweise
@@ -834,7 +834,7 @@ BOOL GetEnvironmentVariable(PCXSTR pszVar);
 
 ### <a name="parameters"></a>Parameter
 
-*pszVar*  
+*pszVar*<br/>
 Zeiger auf eine auf Null endende Zeichenfolge, die die Umgebungsvariable angibt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -860,13 +860,13 @@ int Insert(int iIndex, XCHAR ch);
 
 ### <a name="parameters"></a>Parameter
 
-*iIndex*  
+*iIndex*<br/>
 Der Index des Zeichens, vor denen der Einfügevorgang stattfinden soll.
 
-*psz*  
+*psz*<br/>
 Ein Zeiger auf die einzufügende Teilzeichenfolge.
 
-*ch*  
+*ch*<br/>
 Das Zeichen eingefügt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -891,7 +891,7 @@ CStringT Left(int nCount) const;
 
 ### <a name="parameters"></a>Parameter
 
-*nCount*  
+*nCount*<br/>
 Die Anzahl der aus diesem `CStringT`-Objekt zu extrahierenden Zeichen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -920,13 +920,13 @@ BOOL LoadString(UINT nID);
 
 ### <a name="parameters"></a>Parameter
 
-*hInstance*  
+*hInstance*<br/>
 Ein Handle für die Instanz des Moduls.
 
-*nID*  
+*nID*<br/>
 Eine Windows-Zeichenfolgen-Ressourcen-ID.
 
-*wLanguageID*  
+*wLanguageID*<br/>
 Die Sprache der Zeichenfolgenressource.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1002,10 +1002,10 @@ CStringT Mid(int iFirst) const;
 
 ### <a name="parameters"></a>Parameter
 
-*iFirst*  
+*iFirst*<br/>
 Der nullbasierte Index des ersten Zeichens in dieser `CStringT` -Objekt, das in die extrahierte Teilzeichenfolge enthalten sein soll.
 
-*nCount*  
+*nCount*<br/>
 Die Anzahl der aus diesem `CStringT`-Objekt zu extrahierenden Zeichen. Wenn dieser Parameter nicht angegeben ist, wird der Rest der Zeichenfolge extrahiert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1054,22 +1054,22 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 
 ### <a name="parameters"></a>Parameter
 
-*Kapitel 1*  
+*Kapitel 1*<br/>
 Eine ANSI- oder Unicode-Zeichen mit einer Zeichenfolge verketten.
 
-*Ch2*  
+*Ch2*<br/>
 Eine ANSI- oder Unicode-Zeichen mit einer Zeichenfolge verketten.
 
-*str1*  
+*str1*<br/>
 Ein `CStringT` zum Verketten von mit einer Zeichenfolge oder ein Zeichen.
 
-*str2*  
+*str2*<br/>
 Ein `CStringT` zum Verketten von mit einer Zeichenfolge oder ein Zeichen.
 
-*psz1*  
+*psz1*<br/>
 Ein Zeiger auf einen Null-terminierte Zeichenfolge mit einer Zeichenfolge oder ein Zeichen zu verketten.
 
-*psz2*  
+*psz2*<br/>
 Ein Zeiger auf eine Zeichenfolge, die mit einer Zeichenfolge oder ein Zeichen zu verketten.
 
 ### <a name="remarks"></a>Hinweise
@@ -1108,22 +1108,22 @@ CStringT& operator+=(const VARIANT& var);
 str  
 Ein Verweis auf ein `CThisSimpleString`-Objekt.
 
-*bMFCDLL*  
+*bMFCDLL*<br/>
 Ein boolescher Wert, der angibt, ob das Projekt eine MFC-DLL oder nicht ist.
 
-*BaseType*  
+*BaseType*<br/>
 Der Basistyp Zeichenfolge.
 
-*var*  
+*var*<br/>
 Variant-Objekts, das mit dieser Zeichenfolge verkettet.
 
-*ch*  
+*ch*<br/>
 Eine ANSI- oder Unicode-Zeichen mit einer Zeichenfolge verketten.
 
-*pszSrc*  
+*pszSrc*<br/>
 Ein Zeiger auf die ursprüngliche Zeichenfolge verkettet werden.
 
-*strSrc*  
+*strSrc*<br/>
 Ein `CStringT` dieser Zeichenfolge zu verketten.
 
 ### <a name="remarks"></a>Hinweise
@@ -1155,22 +1155,22 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Kapitel 1*  
+*Kapitel 1*<br/>
 Eine ANSI- oder Unicode-Zeichen für den Vergleich.
 
-*Ch2*  
+*Ch2*<br/>
 Eine ANSI- oder Unicode-Zeichen für den Vergleich.
 
-*str1*  
+*str1*<br/>
 Ein `CStringT` für den Vergleich.
 
-*str2*  
+*str2*<br/>
 Ein `CStringT` für den Vergleich.
 
-*psz1*  
+*psz1*<br/>
 Ein Zeiger auf eine Null-terminierte Zeichenfolge für den Vergleich.
 
-*psz2*  
+*psz2*<br/>
 Ein Zeiger auf eine Null-terminierte Zeichenfolge für den Vergleich.
 
 ### <a name="remarks"></a>Hinweise
@@ -1197,22 +1197,22 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Kapitel 1*  
+*Kapitel 1*<br/>
 Eine ANSI- oder Unicode-Zeichen mit einer Zeichenfolge verketten.
 
-*Ch2*  
+*Ch2*<br/>
 Eine ANSI- oder Unicode-Zeichen mit einer Zeichenfolge verketten.
 
-*str1*  
+*str1*<br/>
 Ein `CStringT` für den Vergleich.
 
-*str2*  
+*str2*<br/>
 Ein `CStringT` für den Vergleich.
 
-*psz1*  
+*psz1*<br/>
 Ein Zeiger auf eine Null-terminierte Zeichenfolge für den Vergleich.
 
-*psz2*  
+*psz2*<br/>
 Ein Zeiger auf eine Null-terminierte Zeichenfolge für den Vergleich.
 
 ### <a name="remarks"></a>Hinweise
@@ -1235,16 +1235,16 @@ friend bool operator<(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*str1*  
+*str1*<br/>
 Ein `CStringT` für den Vergleich.
 
-*str2*  
+*str2*<br/>
 Ein `CStringT` für den Vergleich.
 
-*psz1*  
+*psz1*<br/>
 Ein Zeiger auf eine Null-terminierte Zeichenfolge für den Vergleich.
 
-*psz2*  
+*psz2*<br/>
 Ein Zeiger auf eine Null-terminierte Zeichenfolge für den Vergleich.
 
 ### <a name="remarks"></a>Hinweise
@@ -1273,16 +1273,16 @@ friend bool operator>(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*str1*  
+*str1*<br/>
 Ein `CStringT` für den Vergleich.
 
-*str2*  
+*str2*<br/>
 Ein `CStringT` für den Vergleich.
 
-*psz1*  
+*psz1*<br/>
 Ein Zeiger auf eine Null-terminierte Zeichenfolge für den Vergleich.
 
-*psz2*  
+*psz2*<br/>
 Ein Zeiger auf eine Null-terminierte Zeichenfolge für den Vergleich.
 
 ### <a name="remarks"></a>Hinweise
@@ -1311,16 +1311,16 @@ friend bool operator<=(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*str1*  
+*str1*<br/>
 Ein `CStringT` für den Vergleich.
 
-*str2*  
+*str2*<br/>
 Ein `CStringT` für den Vergleich.
 
-*psz1*  
+*psz1*<br/>
 Ein Zeiger auf eine Null-terminierte Zeichenfolge für den Vergleich.
 
-*psz2*  
+*psz2*<br/>
 Ein Zeiger auf eine Null-terminierte Zeichenfolge für den Vergleich.
 
 ### <a name="remarks"></a>Hinweise
@@ -1349,16 +1349,16 @@ friend bool operator>=(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*str1*  
+*str1*<br/>
 Ein `CStringT` für den Vergleich.
 
-*str2*  
+*str2*<br/>
 Ein `CStringT` für den Vergleich.
 
-*psz1*  
+*psz1*<br/>
 Ein Zeiger auf eine Zeichenfolge für den Vergleich.
 
-*psz2*  
+*psz2*<br/>
 Ein Zeiger auf eine Zeichenfolge für den Vergleich.
 
 ### <a name="remarks"></a>Hinweise
@@ -1385,7 +1385,7 @@ int Remove(XCHAR chRemove);
 
 ### <a name="parameters"></a>Parameter
 
-*chRemove*  
+*chRemove*<br/>
 Das Zeichen aus einer Zeichenfolge entfernt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1411,16 +1411,16 @@ int Replace(XCHAR chOld, XCHAR chNew);
 
 ### <a name="parameters"></a>Parameter
 
-*pszOld*  
+*pszOld*<br/>
 Ein Zeiger auf eine Null-terminierte Zeichenfolge durch ersetzt werden *PszNew*.
 
-*pszNew*  
+*pszNew*<br/>
 Ein Zeiger auf eine auf Null endende Zeichenfolge, die ersetzt *PszOld*.
 
-*chOld*  
+*chOld*<br/>
 Das Zeichen zu ersetzen durch *ChNew*.
 
-*chNew*  
+*chNew*<br/>
 Das Zeichen ersetzen *ChOld*.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1458,7 +1458,7 @@ int ReverseFind(XCHAR ch) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*ch*  
+*ch*<br/>
 Das zu suchende Zeichen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1483,7 +1483,7 @@ CStringT Right(int nCount) const;
 
 ### <a name="parameters"></a>Parameter
 
-*nCount*  
+*nCount*<br/>
 Die Anzahl der aus diesem `CStringT`-Objekt zu extrahierenden Zeichen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1510,7 +1510,7 @@ BSTR SetSysString(BSTR* pbstr) const;
 
 ### <a name="parameters"></a>Parameter
 
-*pbstr*  
+*pbstr*<br/>
 Ein Zeiger auf eine Zeichenfolge.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1537,7 +1537,7 @@ CStringT SpanExcluding(PCXSTR pszCharSet) const;
 
 ### <a name="parameters"></a>Parameter
 
-*pszCharSet*  
+*pszCharSet*<br/>
 Eine Zeichenfolge, die als eine Gruppe von Zeichen interpretiert werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1562,7 +1562,7 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
 
 ### <a name="parameters"></a>Parameter
 
-*pszCharSet*  
+*pszCharSet*<br/>
 Eine Zeichenfolge, die als eine Gruppe von Zeichen interpretiert werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1587,10 +1587,10 @@ CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
 
 ### <a name="parameters"></a>Parameter
 
-*pszTokens*  
+*pszTokens*<br/>
 Eine Zeichenfolge, die token-Trennzeichen enthält. Die Reihenfolge der diese Trennzeichen ist nicht wichtig.
 
-*iStart*  
+*iStart*<br/>
 Der nullbasierte Index, um die Suche zu starten.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1629,10 +1629,10 @@ CStringT& Trim();
 
 ### <a name="parameters"></a>Parameter
 
-*chTarget*  
+*chTarget*<br/>
 Das Ziel zu kürzenden Zeichen.
 
-*pszTargets*  
+*pszTargets*<br/>
 Ein Zeiger auf eine Zeichenfolge mit dem Ziel zu kürzenden Zeichen. Alle führenden und nachgestellten Vorkommen der Zeichen im *PszTarget* abgeschnitten aus der `CStringT` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1674,10 +1674,10 @@ CStringT& TrimLeft();
 
 ### <a name="parameters"></a>Parameter
 
-*chTarget*  
+*chTarget*<br/>
 Das Ziel zu kürzenden Zeichen.
 
-*pszTargets*  
+*pszTargets*<br/>
 Ein Zeiger auf eine Zeichenfolge mit dem Ziel zu kürzenden Zeichen. Alle nachgestellten Vorkommen der Zeichen in *PszTarget* abgeschnitten aus der `CStringT` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1710,10 +1710,10 @@ CStringT& TrimRight();
 
 ### <a name="parameters"></a>Parameter
 
-*chTarget*  
+*chTarget*<br/>
 Das Ziel zu kürzenden Zeichen.
 
-*pszTargets*  
+*pszTargets*<br/>
 Ein Zeiger auf eine Zeichenfolge mit dem Ziel zu kürzenden Zeichen. Alle nachgestellten Vorkommen der Zeichen im *PszTarget* abgeschnitten aus der `CStringT` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert

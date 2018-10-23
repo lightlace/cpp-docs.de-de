@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7d27245e06350a9174699fc20246d5e8997795d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: df0b938186716ab86b8eaeadd69d123ff14e57e0
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434375"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808770"
 ---
 # <a name="application-type-mfc-application-wizard"></a>Anwendungstyp, MFC-Anwendungs-Assistent
 
@@ -58,7 +58,7 @@ Mithilfe dieser Seite des der [MFS-Anwendungsassistenten](../../mfc/reference/mf
 
 - **Ressourcensprache**
 
-   Legt die Sprache für Ihre Ressourcen fest. Die Liste zeigt die verfügbaren Sprachen auf Ihrem System, wie Sie von Visual Studio installiert. Wenn Sie eine andere Sprache als Ihre Systemsprache auswählen möchten, muss der entsprechende Vorlagenordner für die jeweilige Sprache bereits installiert sein. Weitere Informationen zum Installieren von Sprachressourcen, die sich von den Standardwerten, die zur Verfügung, in der **Ressourcensprache** auflisten, finden Sie unter [Assistentenunterstützung für andere Sprachen](../../ide/wizard-support-for-other-languages.md).
+   Legt die Sprache für Ihre Ressourcen fest. Die Liste zeigt die verfügbaren Sprachen auf Ihrem System, wie Sie von Visual Studio installiert. Wenn Sie eine andere Sprache als Ihre Systemsprache auswählen möchten, muss der entsprechende Vorlagenordner für die jeweilige Sprache bereits installiert sein.
 
    Die Sprache, die Sie auswählen, wirkt sich die **lokalisierte Zeichenfolgen** Möglichkeit, die [Zeichenfolgen für Dokumentvorlagen, MFC-Anwendungs-Assistent](../../mfc/reference/document-template-strings-mfc-application-wizard.md) Seite des Assistenten.
 

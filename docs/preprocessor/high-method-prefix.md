@@ -1,7 +1,7 @@
 ---
 title: High_method_prefix | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,35 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 883f573100c31fab8cc0142d371f6a8a14f8783f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1fb69b9fbb7ede0ca458007aec1bee2cf38e286f
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428719"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807717"
 ---
 # <a name="highmethodprefix"></a>high_method_prefix
-**C++-spezifisch**  
-  
-Gibt an, welches Präfix beim Benennen von Eigenschaften und Methoden der oberen Ebene verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-high_method_prefix("Prefix")  
-```  
-  
-### <a name="parameters"></a>Parameter  
-*Prefix*  
-Zu verwendendes Präfix.  
-  
-## <a name="remarks"></a>Hinweise  
- 
-Standardmäßig werden die Eigenschaften und Methoden zur Fehlerbehandlung auf hoher Ebene durch Memberfunktionen verfügbar gemacht, die ohne ein Präfix benannt wurden. Die Namen stammen aus der Typbibliothek.  
-  
-**Ende C++-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- 
+
+**C++-spezifisch**
+
+Gibt an, welches Präfix beim Benennen von Eigenschaften und Methoden der oberen Ebene verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```
+high_method_prefix("Prefix")
+```
+
+### <a name="parameters"></a>Parameter
+
+*Prefix*<br/>
+Zu verwendendes Präfix.
+
+## <a name="remarks"></a>Hinweise
+
+Standardmäßig werden die Eigenschaften und Methoden zur Fehlerbehandlung auf hoher Ebene durch Memberfunktionen verfügbar gemacht, die ohne ein Präfix benannt wurden. Die Namen stammen aus der Typbibliothek.
+
+**Ende C++-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
 [#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)

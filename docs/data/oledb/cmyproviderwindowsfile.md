@@ -1,43 +1,45 @@
 ---
-title: CMyProviderWindowsFile | Microsoft-Dokumentation
+title: CCustomWindowsFile | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
 f1_keywords:
 - cmyproviderwindowsfile
+- ccustomwindowsfile
 dev_langs:
 - C++
 helpviewer_keywords:
 - CMyProviderWindowsFile class
 - OLE DB providers, wizard-generated files
+- CCustomWindowsFile class
 ms.assetid: 0e9e72ac-1e1e-445f-a7ac-690c20031f9d
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6f3badc08da7bd11e65c244c42c91ad37a584ca5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a87f8cc4d6581c253225fa038d0c8972e71fcff1
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087265"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808796"
 ---
-# <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
+# <a name="ccustomwindowsfile"></a>CCustomWindowsFile
 
-Der Assistent erstellt eine Klasse, um eine Zeile mit Daten enthalten. In diesem Fall heißt es `CMyProviderWindowsFile`. Der folgende code für `CMyProviderWindowsFile` Assistenten generiert wird, und listet alle Dateien in einem Verzeichnis mit dem `WIN32_FIND_DATA` Struktur. `CMyProviderWindowsFile` erbt von der `WIN32_FIND_DATA` Struktur:  
+Der Assistent erstellt eine Klasse, um eine Zeile mit Daten enthalten. In diesem Fall heißt es `CCustomWindowsFile`. Der folgende code für `CCustomWindowsFile` Assistenten generiert wird, und listet alle Dateien in einem Verzeichnis mit dem `WIN32_FIND_DATA` Struktur. `CCustomWindowsFile` erbt von der `WIN32_FIND_DATA` Struktur:  
   
 ```cpp
 /////////////////////////////////////////////////////////////////////  
-// MyProviderRS.H  
+// CustomRS.H  
   
-class CMyProviderWindowsFile:   
+class CCustomWindowsFile:   
    public WIN32_FIND_DATA  
 {  
 public:  
-BEGIN_PROVIDER_COLUMN_MAP(CMyProviderWindowsFile)  
+BEGIN_PROVIDER_COLUMN_MAP(CCustomWindowsFile)  
    PROVIDER_COLUMN_ENTRY("FileAttributes", 1, dwFileAttributes)  
    PROVIDER_COLUMN_ENTRY("FileSizeHigh", 2, nFileSizeHigh)  
    PROVIDER_COLUMN_ENTRY("FileSizeLow", 3, nFileSizeLow)  
@@ -47,13 +49,13 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
-`CMyProviderWindowsFile` wird aufgerufen, die [Benutzerdatensatz-Klasse](../../data/oledb/user-record.md) , da es enthält auch eine Zuordnung, die Beschreibung der Spalten im Rowset des Anbieters. Die Anbieter-Spalte-Zuordnung enthält einen Eintrag für jedes Feld in das Rowset mit die-Makros. Die Makros Geben Sie Spaltennamen, ordinal, und auf einen Struktureintrag der Offset. Die Einträge für den Anbieter im obigen Code enthalten, die Offsets in die `WIN32_FIND_DATA` Struktur. Wenn der Consumer ruft `IRowset::GetData`, Daten in einem zusammenhängenden Puffer übertragen werden. Anstatt zu sorgen, dass Sie die Zeigerarithmetik auszuführen, können mit die Zuordnung geben Sie einen Datenmember.  
+`CCustomWindowsFile` wird aufgerufen, die [Benutzerdatensatz-Klasse](../../data/oledb/user-record.md) , da es enthält auch eine Zuordnung, die Beschreibung der Spalten im Rowset des Anbieters. Die Anbieter-Spalte-Zuordnung enthält einen Eintrag für jedes Feld in das Rowset mit die-Makros. Die Makros Geben Sie Spaltennamen, ordinal, und auf einen Struktureintrag der Offset. Die Einträge für den Anbieter im obigen Code enthalten, die Offsets in die `WIN32_FIND_DATA` Struktur. Wenn der Consumer ruft `IRowset::GetData`, Daten in einem zusammenhängenden Puffer übertragen werden. Anstatt zu sorgen, dass Sie die Zeigerarithmetik auszuführen, können mit die Zuordnung geben Sie einen Datenmember.  
   
-Die `CMyProviderRowset` Klasse enthält auch die `Execute` Methode. `Execute` ist tatsächlich, durch die Daten aus der systemeigenen Quelle eingelesen. Der folgende Code zeigt die vom Assistenten generierte `Execute` Methode. Die Funktion verwendet die Win32 `FindFirstFile` und `FindNextFile` APIs zum Abrufen von Informationen zu den Dateien im Verzeichnis, und fügen Sie sie in Instanzen von der `CMyProviderWindowsFile` Klasse.  
+Die `CCustomRowset` Klasse enthält auch die `Execute` Methode. `Execute` ist tatsächlich, durch die Daten aus der systemeigenen Quelle eingelesen. Der folgende Code zeigt die vom Assistenten generierte `Execute` Methode. Die Funktion verwendet die Win32 `FindFirstFile` und `FindNextFile` APIs zum Abrufen von Informationen zu den Dateien im Verzeichnis, und fügen Sie sie in Instanzen von der `CCustomWindowsFile` Klasse.  
   
 ```cpp
 /////////////////////////////////////////////////////////////////////  
-// MyProviderRS.H  
+// CustomRS.H  
   
 HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)  
 {  
@@ -62,7 +64,7 @@ HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
    HANDLE hFile;  
    LPTSTR  szDir = (m_strCommandText == _T("")) ? _T("*.*") :  
        OLE2T(m_strCommandText);  
-   CMyProviderWindowsFile wf;  
+   CCustomWindowsFile wf;  
    hFile = FindFirstFile(szDir, &wf);  
    if (hFile == INVALID_HANDLE_VALUE)  
       return DB_E_ERRORSINCOMMAND;  
