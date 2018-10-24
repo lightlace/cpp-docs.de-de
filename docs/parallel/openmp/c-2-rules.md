@@ -199,13 +199,13 @@ Die Notation wird in Abschnitt 6.1 des C-standard beschrieben. In diesem Anhang 
 &nbsp;&nbsp;&nbsp;&nbsp;*Threadprivate-Direktive*
 
 *Threadprivate-Direktive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**# Pragma Omp Threadprivate (** *Variablenliste***)** *neue-Zeile* 
+&nbsp;&nbsp;&nbsp;&nbsp;**# Pragma Omp Threadprivate (** *Variablenliste*  **)** *neue-Zeile* 
 
 *Data-Klausel*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Private (** *Variablenliste* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Copyprivate (***Variablenliste***)** <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Firstprivate (***Variablenliste***)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Lastprivate (** *Variablenliste***)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Lastprivate (** *Variablenliste*  **)** <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Freigegebene (** *Variablenliste* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Standard (freigegeben)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Standard (keine)**<br/>
