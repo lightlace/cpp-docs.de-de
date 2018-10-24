@@ -1,4 +1,4 @@
-# [.NET-Programmierung mit C++/CLI (Visual C++)](dotnet-programming-with-cpp-cli-visual-cpp.md)
+# [.NET-Programmierung mit C++/CLI](dotnet-programming-with-cpp-cli-visual-cpp.md)
 ## [C++/CLI-Aufgaben](cpp-cli-tasks.md)
 ### [Vorgehensweise: Erstellen von leeren CLR-Projekten](how-to-create-clr-empty-projects.md)
 ### [Vorgehensweise: Erstellen von CLR-Konsolenanwendungen (C++/CLI)](how-to-create-clr-console-applications-cpp-cli.md)
