@@ -41,7 +41,7 @@ Die *Klausel* ist eine der folgenden:
 
 **Copyin (** *Variablenliste* **)**
 
-**Verringerung der (** *Operator* **:***Variablenliste* **)** 
+**Verringerung der(**  *Operator*  **:**  *Variablenliste*  **)**
 
 **num_threads(** *integer-expression* **)**
 
