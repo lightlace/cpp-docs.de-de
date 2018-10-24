@@ -70,11 +70,11 @@ Die äußere unbekannte für [Aggregation](../atl/aggregation.md).
 
 Diese Memberfunktionen rufen `CoCreateInstance` auf, um ein neues COM-Objekt zu erstellen, und fragen dann den Schnittstellentyp dieses intelligenten Zeigers ab. Das Zeigerergebnis wird dann innerhalb dieses `_com_ptr_t`-Objekts gekapselt. `Release` wird aufgerufen, um den Verweiszähler für den zuvor gekapselten Zeiger zu verringern. Diese Routine gibt zurück, das HRESULT, um den Erfolg oder Fehler anzuzeigen.
 
-- **CreateInstance (***Rclsid* **,***DwClsContext***)** erstellt eine neue ausgeführte Instanz eines Objekts, dem ein `CLSID`.
+- **CreateInstance (**  *Rclsid* **,**  *DwClsContext*  **)** erstellt eine neue ausgeführte Instanz eines Objekts, dem ein `CLSID`.
 
-- **CreateInstance (***ClsidString* **,***DwClsContext***)** erstellt eine neue ausgeführte Instanz eines angegebenen Objekts an eine Unicode-Zeichenfolge, die entweder eine `CLSID` (beginnend mit "**{**") oder ein `ProgID`.
+- **CreateInstance (**  *ClsidString* **,**  *DwClsContext* **)** erstellt eine neue ausgeführte Instanz eines angegebenen Objekts an eine Unicode-Zeichenfolge, die entweder eine `CLSID` (beginnend mit "**{**") oder ein `ProgID`.
 
-- **CreateInstance (***ClsidStringA* **,***DwClsContext***)** erstellt eine neue ausgeführte Instanz eines angegebenen Objekts an eine Multibyte-Zeichenfolge, die entweder eine `CLSID` (beginnend mit "**{**") oder ein `ProgID`. Aufrufe [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar), dem wird davon ausgegangen, dass die Zeichenfolge in die ANSI-Codepage anstatt eine OEM-Codepage.
+- **CreateInstance (**  *ClsidStringA* **,**  *DwClsContext*  **)** erstellt eine neue ausgeführte Instanz eines angegebenen Objekts an eine Multibyte-Zeichenfolge, die entweder eine `CLSID` (beginnend mit "**{**") oder ein `ProgID`. Aufrufe [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar), dem wird davon ausgegangen, dass die Zeichenfolge in die ANSI-Codepage anstatt eine OEM-Codepage.
 
 **Ende Microsoft-spezifisch**
 
