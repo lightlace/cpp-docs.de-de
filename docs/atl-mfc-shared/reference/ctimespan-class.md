@@ -1,7 +1,7 @@
 ---
 title: CTimeSpan-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -33,12 +33,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b70e4ca31f4346e8ad0b6dda4e66192e2e53111
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 32e6599fa19c23751beaf3545696a90a2d117248
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397519"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809082"
 ---
 # <a name="ctimespan-class"></a>CTimeSpan-Klasse
 
@@ -79,7 +79,7 @@ class CTimeSpan
 |-|-|
 |[Operator + -](#operator_add_-)|Fügt und subtrahiert `CTimeSpan` Objekte.|
 |[Operator += =](#operator_add_eq_-_eq)|Fügt und subtrahiert einen `CTimeSpan` Objekt auf und aus diesem `CTimeSpan`.|
-|[Operator == < usw.](#ctimespan_comparison_operators)|Vergleicht zwei Werte für relative Zeit.|
+|[Operator == < usw..](#ctimespan_comparison_operators)|Vergleicht zwei Werte für relative Zeit.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -114,7 +114,7 @@ bool operator>=(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*umfassen*  
+*umfassen*<br/>
 Das zu vergleichende Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -133,22 +133,22 @@ Erstellt `CTimeSpan` Objekte auf unterschiedliche Weise.
 CTimeSpan() throw();
 CTimeSpan(__time64_t time) throw();
 
-CTimeSpan(  
-LONG lDays,
-int nHours,
-int nMins,
-int nSecs) throw();
+CTimeSpan(
+    LONG lDays,
+    int nHours,
+    int nMins,
+    int nSecs) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*timeSpanSrc*  
+*timeSpanSrc*<br/>
 Ein `CTimeSpan` -Objekt, das bereits vorhanden ist.
 
-*time*  
+*time*<br/>
 Ein **__time64_t** Time-Werten, die die Anzahl der Sekunden, in dem Zeitraum ist.
 
-*lDays*, *nHours*, *nMins*, *nSecs*  
+*lDays*, *nHours*, *nMins*, *nSecs*<br/>
 Tage, Stunden, Minuten und Sekunden, bzw.
 
 ### <a name="remarks"></a>Hinweise
@@ -163,12 +163,12 @@ Alle diese Konstruktoren erstellen ein neues `CTimeSpan` Objekt, mit dem angegeb
 
 - `CTimeSpan( LONG, int, int, int );` Erstellt eine `CTimeSpan` Objekt von Komponenten mit den einzelnen Komponenten eingeschränkt, die den folgenden Bereichen:
 
-    |Komponente|Bereich|  
-    |---------------|-----------|  
-    |*lDays*|0 bis 25.000 Objekte (ungefähr)|  
-    |*nHours*|0-23|  
-    |*nMins*|0-59|  
-    |*nSecs*|0-59|
+   |Komponente|Bereich|
+   |---------------|-----------|
+   |*lDays*|0 bis 25.000 Objekte (ungefähr)|
+   |*nHours*|0-23|
+   |*nMins*|0-59|
+   |*nSecs*|0-59|
 
 Beachten Sie, dass die Debugversion der Microsoft Foundation Class-Bibliothek bestätigt wird, wenn eine oder mehrere Tage Zeit Komponenten außerhalb des Bereichs. Es ist Ihre Aufgabe, die die Argumente vor dem Aufruf zu überprüfen.
 
@@ -188,7 +188,7 @@ CString Format(UINT nID) const;
 
 ### <a name="parameters"></a>Parameter
 
-*pFormat*, *PszFormat*  
+*pFormat*, *PszFormat*<br/>
 Eine Formatierungszeichenfolge ähnelt der `printf` Formatierungszeichenfolge. Formatierungscodes Prozentsatz vorangestellt (`%`) anmelden, werden mit den entsprechenden ersetzt `CTimeSpan` Komponente. Andere Zeichen in der Formatierungszeichenfolge werden auf die zurückgegebene Zeichenfolge unverändert kopiert. Der Wert und die Bedeutung der Formatierungscodes für `Format` sind nachfolgend aufgeführt:
 
 - **%D** Tage in diesem gesamt `CTimeSpan`
@@ -201,7 +201,7 @@ Eine Formatierungszeichenfolge ähnelt der `printf` Formatierungszeichenfolge. F
 
 - **%%** Prozentzeichen
 
-*nID*  
+*nID*<br/>
 Die ID der Zeichenfolge, die dieses Format identifiziert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -355,7 +355,7 @@ CTimeSpan operator-(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*umfassen*  
+*umfassen*<br/>
 Der Wert, der zum Hinzufügen der `CTimeSpan` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -381,7 +381,7 @@ CTimeSpan& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*umfassen*  
+*umfassen*<br/>
 Der Wert, der zum Hinzufügen der `CTimeSpan` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -409,7 +409,7 @@ CArchive& Serialize64(CArchive& ar);
 
 ### <a name="parameters"></a>Parameter
 
-*ar*  
+*ar*<br/>
 Die `CArchive` -Objekt, das Sie aktualisieren möchten.
 
 ### <a name="return-value"></a>Rückgabewert
