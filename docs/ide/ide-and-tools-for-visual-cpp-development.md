@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 310dc9b8e31f72fbd04c620987d9857932f7a0a1
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 31b9c0c8668ec16d84ad84627eb73a0f406eb21e
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821131"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328375"
 ---
 # <a name="ide-and-compiler-tools-for-visual-c-development"></a>IDE und Compilertools für die Visual C++-Entwicklung
 
@@ -59,7 +59,7 @@ Wenn Ihr Programm über eine Benutzeroberfläche verfügt, können Sie einen Des
 
 ![Designer und Toolbox](media/vs2017-toolbox-designer.png "Toolbox und Designer von Visual Studio 2017")
 
-Weitere Informationen zum Entwerfen einer Benutzeroberfläche für eine UWP-App finden Sie unter [Design and UI (Design und Benutzeroberfläche)](https://developer.microsoft.com/en-us/windows/design).
+Weitere Informationen zum Entwerfen einer Benutzeroberfläche für eine UWP-App finden Sie unter [Design and UI (Design und Benutzeroberfläche)](https://developer.microsoft.com/windows/design).
 
 Weitere Informationen zum Erstellen einer Benutzeroberfläche für eine MFC-Anwendung finden Sie unter [MFC Desktop Applications (MFC-Desktopanwendungen)](../mfc/mfc-desktop-applications.md). Weitere Informationen zu Win32-Windows-Programmen finden Sie unter [Windows Desktop Applications (Windows-Desktopanwendungen)](../windows/windows-desktop-applications-cpp.md).
 

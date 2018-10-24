@@ -26,7 +26,6 @@
 ### [Eigenschaftenseite: XML-Dateien](property-page-xml-files.md)
 ### [VCXPROJ- und PROPS-Dateistruktur](vcxproj-file-structure.md)
 ## [Erstellen von Desktopprojekten mit Anwendungs-Assistenten](creating-desktop-projects-by-using-application-wizards.md)
-### [Assistentenunterstützung für andere Sprachen](wizard-support-for-other-languages.md)
 ### [Erstellen eines Makefile-Projekts](creating-a-makefile-project.md)
 #### [Makefile-Projekt-Assistent](makefile-project-wizard.md)
 ##### [Anwendungseinstellungen, Makefile-Projekt-Assistent](application-settings-makefile-project-wizard.md)
