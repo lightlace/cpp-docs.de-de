@@ -1,7 +1,7 @@
 ---
 title: Erstellen ein Projekt für den Anbieter | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f4d776dbbfbab5e038e14c15a9c281c8edb09153
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 86f85b95b4b45624a778bc183cabadda886d002d
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410875"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990086"
 ---
 # <a name="creating-a-project-for-the-provider"></a>Erstellen eines Projekts für den Anbieter
 
@@ -32,7 +32,10 @@ ms.locfileid: "49410875"
   
      Das Dialogfeld **Neues Projekt** wird angezeigt.  
   
-1. In der **Projekttypen** Bereich, klicken Sie auf die **Visual C++-Projekte** Ordner. In der **Vorlagen** Bereich, klicken Sie auf **ATL-Projekt**.  
+1. In der **Projekttypen** Bereich, klicken Sie auf die **installiert** > **Visual C++** > **MFC/ATL** Ordner. In der **Vorlagen** Bereich, klicken Sie auf **ATL-Projekt**.  
+
+    > [!NOTE]
+    > In früheren Versionen von Visual Studio, suchen Sie den Projekttyp unter **installiert** > **Vorlagen** > **Visual C++**  >  **ATL**.
   
 1. In der **Namen** , geben Sie einen Namen für das Projekt, und klicken Sie dann auf **OK**.  
   

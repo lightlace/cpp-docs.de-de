@@ -1,7 +1,7 @@
 ---
 title: OLE DB-Objektmodell | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c0bd4c8f18addf50dfcee525dea255f75b2fdf75
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d82b6d51e423109c433438731f16878284c2c277
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101477"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990255"
 ---
 # <a name="ole-db-object-model"></a>OLE DB-Objektmodell
 
@@ -35,7 +35,7 @@ Datenquellenobjekte können Sie für die Verbindung mit einer Datenquelle, z. B.
 
 Eine Sitzung verwaltet eine spezielle Interaktion mit der Datenquelle zum Abfragen und Abrufen von Daten. Jede Sitzung ist eine einzelne Transaktion. Eine Transaktion ist eine unteilbare Arbeitseinheit, die von der Lackmustest definiert. Eine Definition von ACID verfügen, finden Sie unter [Transaktionen](#vcconoledbcomponents_transactions).  
   
-Sitzungen führen Sie wichtige Aufgaben wie das Öffnen des Rowsets und die Rückgabe des Datenquellenobjekt, das sie erstellt haben. Sitzungen können auch Metadaten oder Informationen zu der Datenquelle selbst (z. B. Tabelleninformationen) zurückgeben.  
+Sitzungen werden wichtige Aufgaben wie das Öffnen des Rowsets und die Rückgabe des Datenquellenobjekt, das sie erstellt haben. Sitzungen können auch Metadaten oder Informationen zu der Datenquelle selbst (z. B. Tabelleninformationen) zurückgeben.  
   
 Eine Sitzung kann einem oder mehreren Befehlen erstellen.  
   
@@ -47,41 +47,41 @@ Ein Befehl ist lediglich ein Container für einen Textbefehl, der eine Zeichenfo
   
 ## <a name="rowsets"></a>Rowsets  
 
-Rowsets verfügbar machen, Daten im Tabellenformat. Ein Index ist ein Sonderfall eines Rowsets. Sie können die Rowsets aus der Sitzung oder den Befehl erstellen.  
+Rowsets werden Daten im Tabellenformat angezeigt. Ein Index ist ein Sonderfall eines Rowsets. Sie können die Rowsets aus der Sitzung oder den Befehl erstellen.  
   
 ### <a name="schema-rowsets"></a>Schemarowsets  
 
-Schemas enthalten Metadaten (Strukturinformationen) zu einer Datenbank. Schemarowsets sind Rowsets, die Schemainformationen enthalten. Einige OLE DB-Anbieter für DBMS unterstützen Schemarowset-Objekte. Weitere Informationen zu Schemarowsets finden Sie unter [Abrufen von Metadaten mit Schemarowsets](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) und [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).  
+Schemas sind Metadaten (Strukturinformationen) zu einer Datenbank. Schemarowsets sind Rowsets, die Schemainformationen zu haben. Einige OLE DB-Anbieter für DBMS unterstützen Schemarowset-Objekte. Weitere Informationen zu Schemarowsets finden Sie unter [Abrufen von Metadaten mit Schemarowsets](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) und [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).  
   
 ### <a name="view-objects"></a>Objekte anzeigen  
 
-Ein Objekt definiert eine Teilmenge der Zeilen und Spalten aus einem Rowset. Sie enthält keine eigenen Daten. Objekte können nicht auf Daten aus mehreren Rowsets kombinieren.  
+Ein Objekt definiert eine Teilmenge der Zeilen und Spalten aus einem Rowset. Es verfügt über keine eigenen Daten. Objekte können nicht auf Daten aus mehreren Rowsets kombinieren.  
   
 ## <a name="accessors"></a>Zugriffsmethoden  
 
-Nur OLE DB verwendet das Konzept der Accessoren. Ein Accessor wird beschrieben, wie Daten in einem Consumer gespeichert werden. Sie enthält einen Satz von Bindungen (eine spaltenzuordnung bezeichnet) zwischen Rowset-Feldern (Spalten) und Datenelemente, die Sie in der Consumer nicht deklarieren.  
+Nur OLE DB verwendet das Konzept der Accessoren. Ein Accessor wird beschrieben, wie Daten in einem Consumer gespeichert werden. Er besitzt einen Satz von Bindungen (eine spaltenzuordnung bezeichnet), zwischen Rowset-Feldern (Spalten) und Datenelemente, die Sie in der Consumer nicht deklarieren.  
   
 ##  <a name="vcconoledbcomponents_transactions"></a> Transaktionen  
 
 Transaktionsobjekte werden verwendet, wenn durch Commit oder Abbruch von geschachtelten Transaktionen auf als der untersten Ebene. Eine Transaktion ist eine unteilbare Arbeitseinheit, die von der Lackmustest definiert. ACID steht für:  
   
-- Unteilbarkeit: kann nicht in kleinere Arbeitseinheiten unterteilt werden.  
+- Unteilbarkeit, kann nicht in kleinere Arbeitseinheiten unterteilt werden  
   
-- Parallelität: Es kann mehr als eine Transaktion zu einem Zeitpunkt auftreten.  
+- Parallelität kann mehr als eine Transaktion zu einem Zeitpunkt ausgeführt.  
   
-- Isolation: eine Transaktion verfügt über Kenntnisse zu Änderungen, die von einem anderen beschränkt.  
+- Isolation, eine Transaktion verfügt über Kenntnisse über Änderungen, die von einem anderen beschränkt.  
   
-- Dauerhaftigkeit: die Transaktion werden permanente Änderungen.  
+- Dauerhaftigkeit, nimmt die Transaktion permanente Änderungen 
   
 ## <a name="enumerators"></a>Enumeratoren  
 
-Enumeratoren suchen Sie nach verfügbaren Datenquellen und anderen Enumeratoren. Kunden, die nicht für eine bestimmte Datenquelle angepasst werden verwenden Enumeratoren, um für eine Datenquelle zu verwenden, zu suchen.  
+Enumeratoren suchen Sie nach verfügbaren Datenquellen und anderen Enumeratoren. Kunden, die für eine bestimmte Datenquelle angepasst werden nicht verwenden Enumeratoren, um für eine Datenquelle zu verwenden, zu suchen.  
   
 Ein Stammenumerator, der im Lieferumfang von Microsoft Data Access SDK, durchläuft die Registrierung von Datenquellen und anderen Enumeratoren nach. Andere Enumeratoren Durchlaufen der Registrierung oder die Suche in einer anbieterspezifischen Weise.  
   
 ## <a name="errors"></a>Fehler  
 
-Jede Schnittstelle auf jedem OLE DB-Objekt kann Fehler verursachen. Fehler enthalten zusätzliche Informationen zu einem Fehler, einschließlich eine optionale benutzerdefinierte Error-Objekt. Diese Informationen sind in ein HRESULT enthalten.  
+Jede Schnittstelle auf jedem OLE DB-Objekt kann Fehler verursachen. Weitere Informationen zu einem Fehler, einschließlich eine optionale benutzerdefinierte Fehlerobjekt auch Fehler sein. Diese Informationen werden in ein HRESULT gespeichert.  
   
 ## <a name="notifications"></a>Benachrichtigungen  
 

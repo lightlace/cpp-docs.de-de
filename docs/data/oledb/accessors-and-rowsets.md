@@ -1,7 +1,7 @@
 ---
 title: Accessoren und Rowsets | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -28,12 +28,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f8dc681e149d54742e4bf5e7ff44afeebe2292eb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c3247cd3b5844df76b8a115a3f28a76874db2a16
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113096"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990177"
 ---
 # <a name="accessors-and-rowsets"></a>Accessoren und Rowsets
 
@@ -50,7 +50,7 @@ Accessorklassen
   
 - [CAccessor](../../data/oledb/caccessor-class.md) verwenden Sie diesen Accessor, wenn Sie die Struktur der Datenbankquelle zur Entwurfszeit bekannt. `CAccessor` statisch bindet ein Datenbankeintrag, die den Puffer enthält, mit der Datenquelle ein.  
   
-- [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) verwenden Sie diesen Accessor, wenn Sie die Struktur der Datenbank nicht zur Entwurfszeit bekannt ist. `CDynamicAccessor` Aufrufe `IColumnsInfo::GetColumnInfo` auf die Datenbank-Spalteninformationen abgerufen. Es erstellt und verwaltet einen Accessor und den Puffer.  
+- [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) verwenden Sie diesen Accessor, wenn Sie nicht die Struktur der Datenbank zur Entwurfszeit kennen. `CDynamicAccessor` Aufrufe `IColumnsInfo::GetColumnInfo` auf die Datenbank-Spalteninformationen abgerufen. Es erstellt und verwaltet einen Accessor und den Puffer.  
   
 - [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) verwenden Sie diesen Accessor, um unbekannte Befehlstypen zu behandeln. Wenn Sie die Befehle, Vorbereiten `CDynamicParameterAccessor` erhalten Sie Informationen zu den Parametern aus der `ICommandWithParameters` Schnittstelle, wenn der Anbieter unterstützt `ICommandWithParameters`.  
   
@@ -77,7 +77,7 @@ Die folgende Abbildung zeigt die Rowsettypen.
 ![Grafik zu RowsetType](../../data/oledb/media/vcrowsettypes.gif "Vcrowsettypes")  
 Schemarowset-Klassen  
   
-[Schemarowsets](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) werden nicht über die Access-Daten in den Daten zu speichern, sondern auf Informationen über den Datenspeicher, die als Metadaten bezeichnet. Schemarowsets werden in der Regel in Situationen verwendet, in denen die Struktur der Datenbank zum Zeitpunkt der Kompilierung nicht bekannt ist und zur Laufzeit abgerufen werden muss.  
+[Schemarowsets](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) nicht den Zugriff auf Daten in den Daten zu speichern, sondern auf Informationen über den Datenspeicher, die als Metadaten bezeichnet. Schemarowsets werden in der Regel in Situationen verwendet, in denen die Struktur der Datenbank ist nicht zur Kompilierzeit bekannt und muss zur Laufzeit abgerufen werden.  
   
 ## <a name="see-also"></a>Siehe auch  
 
