@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 939937ec79ae3e6d172b48d22368176088064397
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dba47b8464c7fcdd170df1819b65aa448d8f8aeb
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434348"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808420"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>Für Visual C++-Projekte erstellte Dateitypen
 
@@ -82,7 +82,7 @@ In der folgenden Tabelle werden allgemeine Dateien in einem Visual C++-Projekt m
 |.pch|Debug|Vorkompilierte Headerdatei.|
 |.rc, .rc2|Ressource|[Ressourcenskriptdateien](../windows/working-with-resource-files.md) zum Generieren von Ressourcen.|
 |.sbr|Kompilieren|Zwischendatei des Quellbrowsers. Die Eingabedatei für [BSCMAKE](../build/reference/bscmake-options.md).|
-|.sln|Lösung|Die [Projektmappendatei](/visualstudio/ide/solutions-and-projects-in-visual-studio).|
+|.sln|Lösung|Die [Projektmappen](/visualstudio/ide/solutions-and-projects-in-visual-studio) datei.|
 |.suo|Lösung|Die Datei mit den Projektmappenoptionen.|
 |.txt|Ressource|Eine Textdatei, in der Regel die Infodatei.|
 |.vap|Projekt|Eine Visual Studio Analyzer-Projektdatei.|
@@ -105,4 +105,3 @@ Wenn Sie einem Projekt ein Element hinzufügen, fügen Sie das Element zu allen 
 
 [Erstellen und Verwalten von Visual C++-Projekten](../ide/creating-and-managing-visual-cpp-projects.md)<br>
 [Visual C++-Projekttypen](../ide/visual-cpp-project-types.md)<br>
-[Assistentenunterstützung für andere Sprachen](../ide/wizard-support-for-other-languages.md)
