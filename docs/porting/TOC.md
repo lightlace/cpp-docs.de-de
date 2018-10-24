@@ -15,6 +15,7 @@
 ### [Fix your dependencies on library internals (Beheben Ihrer Abhängigkeiten auf bibliotheksinternen Elementen)](fix-your-dependencies-on-library-internals.md)
 ### [Gleitkomma-Migrationsprobleme](floating-point-migration-issues.md)
 ### [Verwenden von nativen Zielversionen in Visual Studio, um alte Projekte zu erstellen](use-native-multi-targeting.md)
+### [In Visual Studio 2019 Preview veraltete Visual C++-Features](features-deprecated-in-visual-studio.md)
 ## [Einführung in Visual C++ für UNIX-Benutzer](introduction-to-visual-cpp-for-unix-users.md)
 ## [Portieren von UNIX auf Win32](porting-from-unix-to-win32.md)
 ## [Portieren auf die universelle Windows-Plattform (C++)](porting-to-the-universal-windows-platform-cpp.md)

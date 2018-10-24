@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d2e2bab9da3d19347577f0b1d1e8ab2ed6bb0dc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d93486d8df8cdb8bc253a0e71037f4e2ddf9e128
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404019"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890478"
 ---
 # <a name="precompiled-header-files"></a>Vorkompilierte Headerdateien
 
@@ -35,7 +35,7 @@ Diese Dateien befinden sich im Verzeichnis *Projektname* . Im Projektmappen-Expl
 
 |Dateiname|Beschreibung |
 |---------------|-----------------|
-|stdafx.h|Eine Includedatei für systemspezifische Standardincludedateien und projektspezifische Includedateien, die häufig verwendet, aber nur selten geändert werden.<br /><br /> Sie sollten für keines der _AFX_NO_XXX-Makros in „stdafx.h“ dessen Definition ändern. Weitere Informationen hierzu finden Sie im Knowledge Base-Artikel „PRB: Probleme beim Definieren von _AFX_NO_XXX“. Sie finden Knowledge Base-Artikel in MSDN Library oder unter [http://support.microsoft.com](http://%20support.microsoft.com/).|
+|stdafx.h|Eine Includedatei für systemspezifische Standardincludedateien und projektspezifische Includedateien, die häufig verwendet, aber nur selten geändert werden.<br /><br /> Sie sollten die _AFX_NO_XXX-Makros in stdafx.h weder definieren noch deren Definition aufheben.|
 |stdafx.cpp|Enthält die Präprozessordirektive `#include "stdafx.h"` und fügt Includedateien für vorkompilierte Typen hinzu. Vorkompilierte Dateien eines beliebigen Typs, einschließlich Headerdateien, sorgen für kürzere Kompilierungszeiten, indem sie die Kompilierung auf die Dateien beschränken, die dies erfordern. Sobald Ihr Projekt erstmalig erstellt wurde, werden Sie feststellen, dass die Buildzeiten nachfolgender Builds aufgrund der vorkompilierten Headerdateien sehr viel kürzer sind.|
 
 ## <a name="see-also"></a>Siehe auch
