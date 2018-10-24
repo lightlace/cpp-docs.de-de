@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc82a45c181d4a2b56670af9cc0d6da055737b8d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 40c74633be8556fc075f10e328521209761f385c
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722318"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890711"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Neuerungen bei Visual C++ in Visual Studio 2017
 
@@ -65,7 +65,7 @@ Weitere Verbesserungen der Diagnose im Compiler. Weitere Informationen finden Si
 
 **Visual Studio 2017 Version 15.5**:
 
-Die Visual C++-Laufzeitleistung wird weiterhin aufgrund besser generierter Codequalität verbessert. Das bedeutet, dass Sie Ihren Code einfach neu kompilieren können, und Ihre App wird schneller ausgeführt. Einige der Compileroptimierungen sind brandneu, z.B. die Vektorisierung von bedingten skalaren Speichern, die Kombination der Aufrufe `sin(x)` und `cos(x)` in einem neuen Aufruf `sincos(x)` und die Beseitigung von redundanten Anweisungen aus dem SSA-Optimierer. Andere Compileroptimierungen sind Verbesserungen an bestehenden Funktionen wie Vektorisierungsheuristiken für bedingte Ausdrücke, bessere Schleifenoptimierungen und float min/max-codegen. Der Linker verfügt über eine neue und schnellere **/OPT:ICF**-Implementierung, die die Linkzeit um bis zu 9 % beschleunigen kann, und es sind weitere Leistungsoptimierungen für „inkrementelles Verknüpfen“ vorhanden. Weitere Informationen finden Sie unter [/OPT (Optimierungen)](https://docs.microsoft.com/en-us/cpp/build/reference/opt-optimizations) und [/INCREMENTAL (inkrementelles Verknüpfen)](https://docs.microsoft.com/en-us/cpp/build/reference/incremental-link-incrementally).
+Die Visual C++-Laufzeitleistung wird weiterhin aufgrund besser generierter Codequalität verbessert. Das bedeutet, dass Sie Ihren Code einfach neu kompilieren können, und Ihre App wird schneller ausgeführt. Einige der Compileroptimierungen sind brandneu, z.B. die Vektorisierung von bedingten skalaren Speichern, die Kombination der Aufrufe `sin(x)` und `cos(x)` in einem neuen Aufruf `sincos(x)` und die Beseitigung von redundanten Anweisungen aus dem SSA-Optimierer. Andere Compileroptimierungen sind Verbesserungen an bestehenden Funktionen wie Vektorisierungsheuristiken für bedingte Ausdrücke, bessere Schleifenoptimierungen und float min/max-codegen. Der Linker verfügt über eine neue und schnellere **/OPT:ICF**-Implementierung, die die Linkzeit um bis zu 9 % beschleunigen kann, und es sind weitere Leistungsoptimierungen für „inkrementelles Verknüpfen“ vorhanden. Weitere Informationen finden Sie unter [/OPT (Optimierungen)](build/reference/opt-optimizations.md) und [/INCREMENTAL (inkrementelles Verknüpfen)](build/reference/incremental-link-incrementally.md).
 
 Visual C++ unterstützt AVX-512 von Intel, einschließlich der Vector Length-Anweisungen, die neue Funktionen in AVX-512 für 128 und 256 Bit breite Register bereitstellen.
 
@@ -398,7 +398,7 @@ Jetzt stehen Ihnen neue Optionen für das Schreiben und Packen von C++-Anwendung
 
 Beim Schreiben von neuem Code können Sie nun C++/WinRT verwenden. Dies ist eine C++-Standardsprachprojektion für Windows-Runtime (WinRT), die nur in Headerdateien implementiert wird. Mit ihr können Sie Windows-Runtime-APIs mit jedem C+-Compiler erstellen und nutzen, der mit Standards kompatibel ist. C++/WinRT wurde dafür konzipiert, C++-Entwicklern erstklassigen Zugriff auf die moderne Windows-API zur Verfügung zu stellen. Weitere Informationen finden Sie im Blogbeitrag [C++/WinRT Available on GitHub](https://moderncpp.com/).
 
-Ab [Build 17025 der Windows SDK Insider Preview](https://blogs.windows.com/buildingapps/2017/11/01/windows-10-sdk-preview-build-17025/#ryPH3zAy6yk2cIRX.97) ist C++/WinRT im Windows SDK enthalten. Weitere Informationen finden Sie unter [C++/WinRT ist jetzt im Windows SDK enthalten](https://blogs.msdn.microsoft.com/vcblog/2017/11/01/cppwinrt-is-now-included-the-windows-sdk/).
+Ab Build 17025 der Windows SDK Insider Preview ist C++/WinRT im Windows SDK enthalten. Weitere Informationen finden Sie unter [C++/WinRT ist jetzt im Windows SDK enthalten](https://blogs.msdn.microsoft.com/vcblog/2017/11/01/cppwinrt-is-now-included-the-windows-sdk/).
 
 ## <a name="clangc2-platform-toolset"></a>Clang/C2-Plattformtoolset
 
@@ -439,7 +439,7 @@ Weitere Informationen finden Sie unter [Boost.Test Unit Testing: Dynamic Library
 
 **Visual Studio 2017-Version 15.7:**
 
-Unterstützung für [CodeLens](https://docs.microsoft.com/en-us/visualstudio/ide/find-code-changes-and-other-history-with-codelens) für C++-Komponententestprojekte hinzugefügt. Weitere Informationen finden Sie unter [Announcing CodeLens for C++ Unit Testing (Ankündigung: CodeLens für C++-Unittests)](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/announcing-codelens-for-c-unit-testing/).
+Unterstützung für [CodeLens](/visualstudio/ide/find-code-changes-and-other-history-with-codelens) für C++-Komponententestprojekte hinzugefügt. Weitere Informationen finden Sie unter [Announcing CodeLens for C++ Unit Testing (Ankündigung: CodeLens für C++-Unittests)](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/announcing-codelens-for-c-unit-testing/).
 
 ## <a name="visual-studio-graphics-diagnostics"></a>Visual Studio-Grafikdiagnose
 

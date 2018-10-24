@@ -58,7 +58,7 @@ Entweder **Klasse** oder **Typename**
 *Einschränkungsklauseln*<br/>
 Eine Liste (nicht durch Trennzeichen getrennt) der **, in denen** Klauseln, die die Einschränkungen für die Typparameter angeben. Hat das Format an:
 
-> **wo** *Type-Parameter-Identifier* **:** *Einschränkungsliste***...** 
+> **wo** *Type-Parameter-Identifier* **:** *Einschränkungsliste*  **...**
 
 *Liste der Einschränkung*<br/>
 *Klasse oder Schnittstelle*[`,` *...* ]

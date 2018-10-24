@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9ba28a426c439454d8b0723f8d2997bbefa5759
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 101d58eeb61335939db507ff6addd0c4fa7917f0
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417227"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861901"
 ---
 # <a name="resource-files-c"></a>Ressourcendateien (C++)
 
@@ -31,7 +31,7 @@ Weitere Informationen finden Sie unter [Working with Resources (Arbeiten mit Res
 
 |Dateiname|Speicherort für das Verzeichnis|Speicherort für den Projektmappen-Explorer|Beschreibung |
 |---------------|------------------------|--------------------------------|-----------------|
-|*Projname*.rc|*Projname*|Quelldateien|Die Ressourcenskriptdatei für das Projekt. Die Ressourcenskriptdatei enthält abhängig von der Art des Projekts und der ausgewählten Unterstützung für das Projekt (z.B. Symbolleisten, Dialogfelder oder HTML) Folgendes:<br /><br /> – Standardmenüdefinition<br />– Beschleuniger und Zeichenfolgentabellen<br />– Standarddialogfeld **Info**<br />– Weitere Dialogfelder<br />– Symboldatei (res\\*Projname*.ico)<br />– Versionsinformationen<br />– Bitmaps<br />– Symbolleiste<br />– HTML-Dateien<br /><br /> Die Ressourcendatei enthält die Datei „Afxres.rc“ für MFC-Standardressourcen.|
+|*Projname*.rc|*Projname*|Quelldateien|Die Ressourcenskriptdatei für das Projekt. Die Ressourcenskriptdatei enthält abhängig von der Art des Projekts und der ausgewählten Unterstützung für das Projekt (z.B. Symbolleisten, Dialogfelder oder HTML) Folgendes:<br /><br />– Standardmenüdefinition<br />– Tastenkombinations- und Zeichenfolgentabellen<br />– Standarddialogfeld **Info**<br />– Weitere Dialogfelder<br />– Symboldatei (res\\*Projname*.ico)<br />– Versionsinformationen<br />– Bitmaps<br />– Symbolleiste<br />– HTML-Dateien<br /><br /> Die Ressourcendatei enthält die Datei „Afxres.rc“ für MFC-Standardressourcen.|
 |Resource.h|*Projname*|Headerdateien|Die Headerdatei für Ressourcen, die Definitionen für die vom Projekt verwendeten Ressourcen enthält.|
 |*Projname*.rc2|*Projname*\res|Quelldateien|Die Skriptdatei, die zusätzliche vom Projekt verwendete Ressourcen enthält. Sie können die RC2-Datei unter der RC-Datei des Projekts einfügen.<br /><br /> Eine RC2-Datei ist nützlich, um Ressourcen einzufügen, die von mehreren verschiedenen Projekten verwendet werden. Anstatt die gleichen Ressourcen mehrmals für verschiedene Projekte zu erstellen, können Sie sie in eine RC2-Datei einfügen und diese dann in die RC-Hauptdatei einfügen.|
 |*Projname*.def|*Projname*|Quelldateien|Die Moduldefinitionsdatei für ein DLL-Projekt. Sie stellt einem Steuerelement den Namen und die Beschreibung des Steuerelements bereit. Außerdem gibt Sie die Größe des Heaps der Runtime an.|

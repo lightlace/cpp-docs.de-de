@@ -144,7 +144,7 @@
 ### [Problembehandlung für Buildanpassungen](troubleshooting-build-customizations.md)
 ### [Formatieren der Ausgabe eines benutzerdefinierten Buildschritts oder eines benutzerdefinierten Buildereignisses](formatting-the-output-of-a-custom-build-step-or-build-event.md)
 ## [Gängige Makros für Buildbefehle und -eigenschaften.](common-macros-for-build-commands-and-properties.md)
-## [Projektdateien](project-files.md)
+## [Beispiel-Projektdatei](project-files.md)
 ## [Exemplarische Vorgehensweise: Kompilieren eines C++-Programms für die CLR in Visual Studio](walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)
 # [Verwenden der Visual Studio-IDE für C++-Desktopentwicklung](using-the-visual-studio-ide-for-cpp-desktop-development.md)
 ## [Exemplarische Vorgehensweise: Arbeiten mit Projekten und Lösungen (C++)](walkthrough-working-with-projects-and-solutions-cpp.md)
