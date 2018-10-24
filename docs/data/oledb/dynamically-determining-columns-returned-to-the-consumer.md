@@ -16,22 +16,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d3b7d20fb82399f3778c751de28858b93f81071a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fffa63c9bbcc556009fb5edff93fd02f302ae3ea
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080882"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990125"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Dynamisches Festlegen der an den Consumer zurückgegebenen Spalten
 
 Die-Makros normalerweise behandelt die `IColumnsInfo::GetColumnsInfo` aufrufen. Allerdings da ein Consumer kann Lesezeichen verwenden, muss der Anbieter Lage Ändern der Spalten, die zurückgegeben werden, je nachdem, ob der Consumer ein Lesezeichen anfordert.  
   
-Behandelt die `IColumnsInfo::GetColumnsInfo` aufrufen, löschen Sie Makro, das eine Funktion definiert `GetColumnInfo`, aus der `CAgentMan` Benutzer in MyProviderRS.h aufzuzeichnen, und Ersetzen Sie sie mit der Definition für Ihre eigenen `GetColumnInfo` Funktion:  
+Behandelt die `IColumnsInfo::GetColumnsInfo` aufrufen, löschen Sie Makro, das eine Funktion definiert `GetColumnInfo`, aus der `CAgentMan` Benutzerdatensatz im *benutzerdefinierte*RS.h und Ersetzen Sie sie mit der Definition für Ihre eigenen `GetColumnInfo` Funktion:  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
-// MyProviderRS.H  
+// CustomRS.H  
 class CAgentMan  
 {  
 public:  
@@ -52,13 +52,13 @@ public:
   
 Implementieren Sie als Nächstes die `GetColumnInfo` -Funktion in MyProviderRS.cpp, wie im folgenden Code gezeigt.  
   
-`GetColumnInfo` überprüft zunächst, ob der OLE DB-Eigenschaft `DBPROP_BOOKMARKS` festgelegt ist. Zum Abrufen der Eigenschaft, `GetColumnInfo` verwendet einen Zeiger (`pRowset`) auf das Rowsetobjekt. Die `pThis` Zeiger darstellt, die Klasse, die das Rowset erstellt wurde, dies ist die Klasse, in die eigenschaftenzuordnung gespeichert ist. `GetColumnInfo` typenumwandlungen der `pThis` Zeiger auf ein `RMyProviderRowset` Zeiger.  
+`GetColumnInfo` überprüft zunächst, ob der OLE DB-Eigenschaft `DBPROP_BOOKMARKS` festgelegt ist. Zum Abrufen der Eigenschaft, `GetColumnInfo` verwendet einen Zeiger (`pRowset`) auf das Rowsetobjekt. Die `pThis` Zeiger darstellt, die Klasse, die das Rowset erstellt wurde, dies ist die Klasse, in die eigenschaftenzuordnung gespeichert ist. `GetColumnInfo` typenumwandlungen der `pThis` Zeiger auf ein `RCustomRowset` Zeiger.  
   
 Zu prüfen, die `DBPROP_BOOKMARKS` Eigenschaft `GetColumnInfo` verwendet die `IRowsetInfo` -Schnittstelle, die Sie durch den Aufruf erhalten können `QueryInterface` auf die `pRowset` Schnittstelle. Als Alternative können Sie eine ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) Methode stattdessen.  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////  
-// MyProviderRS.cpp  
+// CustomRS.cpp  
 ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)  
 {  
    static ATLCOLUMNINFO _rgColumns[5];  
@@ -119,7 +119,7 @@ Dieses Beispiel verwendet ein statisches Array die Spalteninformationen enthalte
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
-// MyProviderRS.h  
+// CustomRS.h  
   
 #define ADD_COLUMN_ENTRY(ulCols, name, ordinal, colSize, type, precision, scale, guid, dataClass, member) \  
    _rgColumns[ulCols].pwszName = (LPOLESTR)name; \  

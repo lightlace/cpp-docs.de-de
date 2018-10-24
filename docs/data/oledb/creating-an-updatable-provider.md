@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cbf1c696a66024ec1d3b3022b1e3a03445e9b6fe
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ee405244d4c23e3cacddb5efe5dfa276a8a21db0
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46043299"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990320"
 ---
 # <a name="creating-an-updatable-provider"></a>Erstellen eines aktualisierbaren Anbieters
 
@@ -33,7 +33,7 @@ In diesem Thema wird davon ausgegangen, dass Sie mit einem praktikable Anbieter 
 Als Nächstes müssen Sie sicherstellen, dass Ihr Anbieter enthält die gesamte Funktionalität zur Unterstützung der Consumer des anfordern kann. Wenn der Consumer den Datenspeicher zu aktualisieren möchte, muss der Anbieter Code enthalten, die Daten im Datenspeicher beibehalten. Beispielsweise können Sie der C-Laufzeitbibliothek oder die MFC-verwenden, um die Vorgänge an der Datenquelle auszuführen. Im Abschnitt "[Schreiben in die Datenquelle](#vchowwritingtothedatasource)" beschreibt, wie Sie mit der Datenquelle zu schreiben, befassen sich mit NULL-und Standardwerten und Spaltenflags festlegen.  
   
 > [!NOTE]
->  [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) ist ein Beispiel eines aktualisierbaren Anbieters. UpdatePV ist identisch, wie MyProv, jedoch mit aktualisierbaren Unterstützung.  
+> [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) ist ein Beispiel eines aktualisierbaren Anbieters. UpdatePV ist identisch, wie MyProv, jedoch mit aktualisierbaren Unterstützung.  
   
 ##  <a name="vchowmakingprovidersupdatable"></a> Machen Anbieter aktualisiert  
 
@@ -47,7 +47,7 @@ Zunächst müssen Sie entscheiden, ob die von erben `IRowsetChangeImpl` oder `IR
   
 Beachten Sie, dass `IRowsetUpdateImpl` leitet sich von `IRowsetChangeImpl`. Daher `IRowsetUpdateImpl` erhalten Sie die Funktion und der Batch-Funktion ändern.  
   
-#### <a name="to-support-updatability-in-your-provider"></a>Zur Unterstützung von aktualisierbarkeit im Anbieter  
+### <a name="to-support-updatability-in-your-provider"></a>Zur Unterstützung von aktualisierbarkeit im Anbieter  
   
 1. In der Rowsetklasse erben `IRowsetChangeImpl` oder `IRowsetUpdateImpl`. Diese Klassen bieten die entsprechende Schnittstellen für das Ändern des Datenspeichers:  
   
@@ -70,7 +70,7 @@ Beachten Sie, dass `IRowsetUpdateImpl` leitet sich von `IRowsetChangeImpl`. Dahe
     ```  
   
     > [!NOTE]
-    >  Entfernen Sie die `IRowsetChangeImpl` Zeile aus der Vererbungskette. Diese Ausnahme von der zuvor erwähnten Direktive muss den Code für enthalten `IRowsetChangeImpl`.  
+    > Entfernen Sie die `IRowsetChangeImpl` Zeile aus der Vererbungskette. Diese Ausnahme von der zuvor erwähnten Direktive muss den Code für enthalten `IRowsetChangeImpl`.  
   
 1. Fügen Sie Folgendes der COM-Zuordnung (`BEGIN_COM_MAP ... END_COM_MAP`):  
   
@@ -109,7 +109,7 @@ Beachten Sie, dass `IRowsetUpdateImpl` leitet sich von `IRowsetChangeImpl`. Dahe
      Sie finden die Werte in diesen anhand Atldb.h für die Eigenschaft-IDs und Werte (wenn die Onlinedokumentation Atldb.h unterscheidet, Atldb.h Vorrang vor der Dokumentation).  
   
     > [!NOTE]
-    >  Viele der `VARIANT_FALSE` und `VARIANT_TRUE` Einstellungen sind erforderlich, durch die OLE DB-Vorlagen, die OLE DB-Spezifikation sagt, können sie Lese-/Schreibzugriff sein, aber die OLE DB-Vorlagen unterstützt nur einen Wert.  
+    > Viele der `VARIANT_FALSE` und `VARIANT_TRUE` Einstellungen sind erforderlich, durch die OLE DB-Vorlagen, die OLE DB-Spezifikation sagt, können sie Lese-/Schreibzugriff sein, aber die OLE DB-Vorlagen unterstützt nur einen Wert.  
   
      **Wenn Sie IRowsetChangeImpl implementieren**  
   
@@ -127,7 +127,7 @@ Beachten Sie, dass `IRowsetUpdateImpl` leitet sich von `IRowsetChangeImpl`. Dahe
   
      Wenn Sie implementieren `IRowsetUpdateImpl`, müssen Sie die folgenden Eigenschaften festlegen für den Anbieter darüber hinaus mit dem Festlegen aller Eigenschaften für `IRowsetChangeImpl` oben aufgeführt:  
   
-    - `DBPROP_IRowsetUpdate`  
+    - `DBPROP_IRowsetUpdate`.  
   
     - `DBPROP_OWNINSERT`: READ_ONLY und auf VARIANT_TRUE festgelegt muss werden.  
   
@@ -139,19 +139,17 @@ Beachten Sie, dass `IRowsetUpdateImpl` leitet sich von `IRowsetChangeImpl`. Dahe
   
     - `DBPROP_REMOVEDELETED`: READ_ONLY und auf VARIANT_TRUE festgelegt muss werden.  
   
-    - `DBPROP_MAXPENDINGROWS`  
+    - `DBPROP_MAXPENDINGROWS`.  
   
         > [!NOTE]
-        >  Wenn Sie Benachrichtigungen unterstützen, müssen Sie auch einige andere Eigenschaften sowie möglicherweise; finden Sie im Abschnitt `IRowsetNotifyCP` für diese Liste.  
+        > Wenn Sie Benachrichtigungen unterstützen, müssen Sie auch einige andere Eigenschaften sowie möglicherweise; finden Sie im Abschnitt `IRowsetNotifyCP` für diese Liste.  
   
 ##  <a name="vchowwritingtothedatasource"></a> Das Schreiben in die Datenquelle  
 
 Um Daten aus der Datenquelle zu lesen, rufen Sie die `Execute` Funktion. Rufen Sie zum Schreiben an die Datenquelle die `FlushData` Funktion. (In einem allgemeinen Sinn, leeren Sie die Möglichkeit, Änderungen zu speichern, die Sie an einer Tabelle oder eines Indexes auf dem Datenträger.)  
 
 ```cpp
-
 FlushData(HROW, HACCESSOR);  
-
 ```
 
 Das Zeilenhandle (HROW) Argumente und das Accessorhandle (HACCESSOR) können Sie angeben, die Region, in Sie schreiben. In der Regel schreiben Sie ein einzelnes Datenfeld zu einem Zeitpunkt.
@@ -192,7 +190,7 @@ Behandeln von NULL-Werte.
 
 ### <a name="handling-default-values"></a>Behandeln von Standardwerten.
 
-Um eine eigene FlushData-Methode zu implementieren, müssen Sie:
+Zur Implementierung einer eigenen `FlushData` -Methode, Sie möchten:
 
 - Wechseln Sie zu Ihrem Rowset-Klasse.
 
@@ -207,7 +205,7 @@ Um eine eigene FlushData-Methode zu implementieren, müssen Sie:
 
 - Eine Implementierung der `FlushData`.
 
-Eine gute Implementierung der FlushData speichert nur die Zeilen und Spalten, die tatsächlich aktualisiert werden. Sie können die HROW und HACCESSOR-Parameter verwenden, um zu bestimmen, die aktuelle Zeile und Spalte für die Optimierung gespeichert werden.
+Eine gute Implementierung `FlushData` speichert nur die Zeilen und Spalten, die tatsächlich aktualisiert werden. Sie können die HROW und HACCESSOR-Parameter verwenden, um zu bestimmen, die aktuelle Zeile und Spalte für die Optimierung gespeichert werden.
 
 In der Regel ist die größte Herausforderung mit Ihren eigenen systemeigenen Datenspeicher arbeiten. Wenn möglich, versuchen Sie es auf:
 
@@ -219,7 +217,7 @@ In der Regel ist die größte Herausforderung mit Ihren eigenen systemeigenen Da
 
 Die beste Vorgehensweise besteht darin aktuelle Werte im Datenspeicher für NULL-und Standardwerten. Es wird empfohlen, wenn Sie diese Daten extrapolieren können. Wenn dies nicht der Fall ist, sollten Sie keine NULL-und Standardwerten zu ermöglichen.
 
-Das folgende Beispiel zeigt wie `FlushData` wird in der im Beispiel UpdatePV RUpdateRowset-Klasse implementiert (siehe Rowset.h im Beispielcode):
+Das folgende Beispiel zeigt wie `FlushData` wird implementiert, der `RUpdateRowset` -Klasse in der `UpdatePV` Beispiel (siehe Rowset.h im Beispielcode):
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////////  
@@ -374,16 +372,15 @@ ATLCOLUMNINFO* CommonGetColInfo(IUnknown* pPropsUnk, ULONG* pcCols, bool bBookma
   
     return _rgColumns;  
 }  
-
 ```
 
 ### <a name="default-values"></a>Standardwerte
 
 Wie bei NULL-Daten, müssen Sie die Verantwortung für den Umgang mit der Änderung der Standardwerte.
 
-Der Standardwert von FlushData und Execute ist S_OK zurückgegeben. Aus diesem Grund, wenn Sie diese Funktion nicht überschreiben, die Änderungen angezeigt werden erfolgreich ausgeführt werden kann (S_OK zurückgegeben), aber sie werden nicht an den Datenspeicher übertragen werden.
+Die Standardeinstellung `FlushData` und `Execute` wird S_OK zurückgegeben. Aus diesem Grund, wenn Sie diese Funktion nicht überschreiben, die Änderungen angezeigt werden erfolgreich ausgeführt werden kann (S_OK zurückgegeben), aber sie werden nicht an den Datenspeicher übertragen werden.
 
-Im Beispiel UpdatePV (in Rowset.h) die `SetDBStatus` Methode Standardwerte wie folgt verarbeitet:
+In der `UpdatePV` Beispiel (in Rowset.h) die `SetDBStatus` Methode Standardwerte wie folgt verarbeitet:
 
 ```cpp
 virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,  
@@ -422,11 +419,11 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 
 ### <a name="column-flags"></a>Spaltenflags
 
-Wenn Sie Standardwerte für Spalten unterstützt, müssen Sie mithilfe von Metadaten im Festlegen der \<Anbieterklasse\>SchemaRowset-Klasse. Legen Sie `m_bColumnHasDefault` = VARIANT_TRUE.
+Wenn Sie Standardwerte für Spalten unterstützt, müssen Sie mithilfe von Metadaten im Festlegen der \<Anbieterklasse\>SchemaRowset-Klasse. Legen Sie `m_bColumnHasDefault = VARIANT_TRUE`.
 
 Sie können auch dafür verantwortlich, die Spaltenflags, die festlegen, mit dem DBCOLUMNFLAGS-Enumerationstyp angegeben werden. Die Spaltenflags werden Spalteneigenschaften beschrieben.
 
-Z. B. in der `CUpdateSessionColSchemaRowset` Klasse UpdatePV (in Session.h), die erste Spalte wird auf diese Weise eingerichtet:
+Z. B. in der `CUpdateSessionColSchemaRowset` -Klasse im `UpdatePV` (in Session.h), die erste Spalte auf diese Weise eingerichtet:
 
 ```cpp
 // Set up column 1  

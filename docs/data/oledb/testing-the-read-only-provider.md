@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aa56a62fa898f7ebe6c171af6f7246106b8e5ac7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4630391d9bce319c35af18767d7133bd34a92362
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46038732"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990203"
 ---
 # <a name="testing-the-read-only-provider"></a>Testen des schreibgeschützten Anbieters
 
@@ -31,13 +31,13 @@ Um einen Anbieter zu testen, benötigen Sie einen Consumer. Es ist hilfreich, we
   
 Das Beispiel in diesem Thema erstellt eine standardanwendung für MFS-Anwendungsassistenten für einen Testconsumer. Die Anwendung zu testen ist ein einfaches Dialogfeld mit OLE DB-Consumer-Vorlagencode hinzugefügt.  
   
-### <a name="to-create-the-test-application"></a>Erstellen Sie die testanwendung  
+## <a name="to-create-the-test-application"></a>Erstellen Sie die testanwendung  
   
 1. Klicken Sie im Menü **Datei** auf **Neu**und dann auf **Projekt**.  
   
-1. Wählen Sie im Bereich „Projekttypen“ den Ordner **Visual C++-Projekte** aus. Wählen Sie im Vorlagenbereich **MFC-Anwendung**.  
+1. In der **Projekttypen** wählen Sie im Bereich der **Visual C++-Projekte** Ordner. In der **Vorlagen** wählen Sie im Bereich **MFC-Anwendung**.  
   
-1. Geben Sie für den Projektnamen, **TestProv**, und klicken Sie dann auf **OK**.  
+1. Geben Sie für den Projektnamen, *TestProv*, und klicken Sie dann auf **OK**.  
   
      Die MFC-Anwendung-Assistent wird angezeigt.  
   
@@ -46,9 +46,9 @@ Das Beispiel in diesem Thema erstellt eine standardanwendung für MFS-Anwendungs
 1. Auf der **erweiterte Features** Seite **Automation**, und klicken Sie dann auf **Fertig stellen**.  
   
 > [!NOTE]
->  Die Anwendung erfordert keine automatisierungsunterstützung aus, wenn Sie hinzufügen, **CoInitialize** in **CTestProvApp::InitInstance**.  
+> Die Anwendung erfordert keine automatisierungsunterstützung aus, wenn Sie hinzufügen, `CoInitialize` in `CTestProvApp::InitInstance`.  
   
-Sie können anzeigen und bearbeiten das Dialogfeld TestProv (IDD_TESTPROV_DIALOG) durch Auswählen in der Ressourcenansicht nutzen zu können. Platzieren Sie zwei Listenfelder, eines für jede Zeichenfolge in das Rowset, das Dialogfeld. Deaktivieren der Sort-Eigenschaft, für beide Listenfeldern durch Drücken von ALT + Eingabe, wenn ein Listenfeld, das ausgewählt ist, auf die **Stile** Registerkarte und das Löschen der **sortieren** Kontrollkästchen. Fügen Sie außerdem eine **ausführen** Schaltfläche im Dialogfeld, um die Datei abzurufen. Das fertige TestProv-Dialogfeld sollte es sich um zwei Listenfelder, die mit der Bezeichnung "String 1" und "String 2", verfügen. Sie hat auch **OK**, **Abbrechen**, und **ausführen** Schaltflächen.  
+Können Sie anzeigen und Bearbeiten der **TestProv** im (IDD_TESTPROV_DIALOG) Wählen sie im Dialogfeld **Ressourcenansicht**. Platzieren Sie zwei Listenfelder, eines für jede Zeichenfolge in das Rowset, das Dialogfeld. Deaktivieren der Sort-Eigenschaft, für beide Felder durch Drücken von Liste **Alt**+**EINGABETASTE** bei ein Listenfeld, das ausgewählt ist, durch Klicken auf die **Stile** Registerkarte und das Löschen der  **Sortierung** Kontrollkästchen. Fügen Sie außerdem eine **ausführen** Schaltfläche im Dialogfeld, um die Datei abzurufen. Die fertige **TestProv** Dialogfeld sollte zwei Listenfelder, die mit der Bezeichnung "String 1" und "String 2", verfügen; es verfügt auch über **OK**, **Abbrechen**, und **ausführen**  Schaltflächen.  
   
 Öffnen Sie die Headerdatei für die Dialogfeldklasse (in diesem Fall TestProvDlg.h). Fügen Sie den folgenden Code, der Headerdatei (außerhalb von jedem Klassendeklarationen):  
   
@@ -73,7 +73,7 @@ END_COLUMN_MAP()
   
 Der Code stellt einen Benutzerdatensatz, der definiert, welche Spalten im Rowset enthalten sein sollen. Wenn der Client ruft `IAccessor::CreateAccessor`, er verwendet diese Einträge aus, um die zu bindenden Spalten anzugeben. Die OLE DB-Consumervorlagen können auch Spalten dynamisch zu binden. Die-Makros handelt es sich um die clientseitige Version der PROVIDER_COLUMN_ENTRY-Makros. Bei den zwei-Makros werden Ordnungszahl Typ, Länge und Datenmember für die beiden Zeichenfolgen.  
   
-Fügen Sie eine Handlerfunktion für die **ausführen** Schaltfläche, indem Sie STRG gedrückt halten, und doppelklicken der **ausführen** Schaltfläche. Platzieren Sie den folgenden Code in der Funktion:  
+Hinzufügen eine Handlerfunktion für die **ausführen** Schaltfläche durch Drücken von **STRG** und durch Doppelklicken auf die **ausführen** Schaltfläche. Platzieren Sie den folgenden Code in der Funktion:  
   
 ```cpp
 ///////////////////////////////////////////////////////////////////////  
@@ -115,9 +115,9 @@ if (table.Open(session, _T("c:\\samples\\myprov\\myData.txt")) != S_OK)
    return;  
 ```  
   
-Die Zeilen zum Öffnen der einzelnen Klassen erstellt jedes COM-Objekt im Anbieter. Um den Anbieter zu suchen, verwenden Sie die ProgID des Anbieters. Sie erhalten die ProgID aus der systemregistrierung oder anhand der in der Datei MyProvider.rgs (Öffnen von Verzeichnis und suchen Sie nach den Schlüssel ProgID des Anbieters).  
+Die Zeilen zum Öffnen der einzelnen Klassen erstellt jedes COM-Objekt im Anbieter. Verwenden Sie zum Suchen des Anbieters die `ProgID` des Anbieters. Sie erhalten die `ProgID` aus der Registrierung des Systems oder anhand der in der Datei MyProvider.rgs (Öffnen Sie das Verzeichnis des Anbieters, und suchen Sie nach der `ProgID` Schlüssel).  
   
-Die Datei "mydata.txt" ist im Beispiel MyProv enthalten. Um eine eigene Datei erstellen, verwenden Sie einen Editor, und geben Sie eine gerade Anzahl von Zeichenfolgen, und Drücken der EINGABETASTE zwischen den einzelnen Zeichenfolgen. Ändern Sie den Pfadnamen aus, wenn Sie die Datei verschieben.  
+Die Datei "mydata.txt" ist im Lieferumfang der `MyProv` Beispiel. Um eine eigene Datei erstellen, verwenden Sie einen Editor, und geben Sie eine gerade Anzahl von Zeichenfolgen, und Drücken der EINGABETASTE zwischen den einzelnen Zeichenfolgen. Ändern Sie den Pfadnamen aus, wenn Sie die Datei verschieben.  
   
 Übergeben Sie die Zeichenfolge "c:\\\samples\\\myprov\\\MyData.txt" in der `table.Open` Zeile. Wenn Sie Sie in Schritt der `Open` Aufruf wird ersichtlich, dass diese Zeichenfolge, um übergeben wird die `SetCommandText` -Methode in der der Anbieter. Beachten Sie, dass die `ICommandText::Execute` Methode verwendet die Zeichenfolge.  
   

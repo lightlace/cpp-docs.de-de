@@ -1,7 +1,7 @@
 ---
 title: OLE DB-Consumer und-Anbieter | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b37a06ec89f0e2e21c4332a480e58c605f0d161f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3a6290c923b5aa4b54a71bda5f0617d1b3acc8db
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46110717"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49989865"
 ---
 # <a name="ole-db-consumers-and-providers"></a>OLE DB-Consumer und -Anbieter
 
@@ -32,9 +32,9 @@ Die OLE DB-Architektur verwendet das Modell von Consumern und Anbietern. Ein Con
   
 Aus technischer Sicht definiert ist, ist ein Consumer System- oder Code (nicht unbedingt eine OLE DB-Komponente), die über OLE DB-Schnittstellen auf Daten zugreift. Die Schnittstellen sind in einem Anbieter implementiert. Daher ist ein Anbieter eine beliebige Softwarekomponente, die implementiert die OLE DB-Schnittstellen zum Zugriff auf Daten zu kapseln und anderen Objekten (d. h. Verbraucher) verfügbar gemacht.  
   
-Im Hinblick auf Rollen Ruft ein Consumer Methoden auf OLE DB-Schnittstellen; OLE DB-Anbieter implementiert die erforderlichen OLE DB-Schnittstellen.  
+Für Rollen Ruft ein Consumer Methoden auf OLE DB-Schnittstellen; OLE DB-Anbieter implementiert die erforderlichen OLE DB-Schnittstellen.  
   
-OLE DB werden Begriffe-Client und Server vermieden, da diese Rollen nicht immer, insbesondere in einer n-schichtige Situation sinnvoll sind. Da ein Consumer eine Komponente in einer Ebene, die eine andere Komponente dient sein kann, wird für den Aufruf eines Clients Komponente verwirrend sein. Darüber hinaus verhält sich ein Anbieter manchmal eher wie ein ODBC-Treiber als bei einem Server.  
+OLE DB werden Begriffe-Client und Server vermieden, da diese Rollen immer, insbesondere in einer n-schichtige Situation nicht sinnvoll sind. Da ein Consumer eine Komponente in einer Ebene, die eine andere Komponente dient sein kann, wird für den Aufruf eines Clients Komponente verwirrend sein. Darüber hinaus verhält sich ein Anbieter manchmal eher wie ein ODBC-Treiber als bei einem Server.  
   
 ## <a name="see-also"></a>Siehe auch  
 
