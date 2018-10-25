@@ -1,7 +1,7 @@
 ---
 title: Bitweise Schiebeoperatoren | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -17,34 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dfb5ffe13d8813eff0e3db4978eb1799bee1a85
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b1abcfa37373702df371b42efbf228fe748bfc45
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020120"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808198"
 ---
 # <a name="bitwise-shift-operators"></a>Bitweise Schiebeoperatoren
 
-Die Schiebeoperatoren verschieben ihren ersten Operanden um die Anzahl von Positionen nach links (`<<`) oder rechts (`>>`), wie es durch den zweiten Operanden angegeben wird.
+Die Schiebeoperatoren verschieben ihren ersten Operanden um die Anzahl von Positionen nach links (**&lt;&lt;**) oder rechts (**>>**), wie es durch den zweiten Operanden angegeben wird.
 
 ## <a name="syntax"></a>Syntax
 
-*shift-expression*: *additive-expression*
-
-*shift-expression* `<<` *additive-expression shift-expression* `>>` *additive-expression*
+*shift-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression* **&lt;&lt;** *additive-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression* **>>** *additive-expression*
 
 Beide Operanden müssen ganzzahlige Werte sein. Diese Operatoren führen die üblichen arithmetischen Konvertierungen aus. Der Typ des Ergebnisses ist der Typ des linken Operanden nach der Konvertierung.
 
 Für links gerichtete Verschiebungen sind die frei werdenden rechten Bits auf 0 festgelegt. Für rechts gerichtete Verschiebungen werden die frei werdenden linken Bits anhand des Typs des ersten Operanden nach der Konvertierung gefüllt. Wenn sie vom Typ `unsigned` sind, werden sie auf 0 festgelegt. Andernfalls werden sie mit Kopien des signierten Bits gefüllt. Für Left Shift-Operatoren ohne Überlauf ist die Anweisung
 
-```
+```C
 expr1 << expr2
 ```
 
 identisch mit der Multiplikation mit 2<sup>expr2</sup>. Für Right Shift-Operatoren ist
 
-```
+```C
 expr1 >> expr2
 ```
 
@@ -54,7 +55,7 @@ Das Ergebnis eines Schiebevorgangs ist nicht definiert, wenn der zweite Operand 
 
 Da Konvertierungen, die von Schiebeoperatoren ausgeführt werden, keine Überlauf- oder Unterlaufbedingungen vorsehen, gehen Informationen möglicherweise verloren, wenn das Ergebnis eines Schiebevorgangs nach der Konvertierung nicht im Typ des ersten Operanden dargestellt werden kann.
 
-```
+```C
 unsigned int x, y, z;
 
 x = 0x00AA;

@@ -1,7 +1,7 @@
 ---
 title: Primäre C-Ausdrücke | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/21/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 276e82a7768520c6a75c87cb49fcb26ce1f01253
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9a9c038cae5f70ef2b92d4e81fc513b6faf74185
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46066465"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809030"
 ---
 # <a name="c-primary-expressions"></a>C-Ausdrücke (primär)
 
@@ -27,17 +27,15 @@ Die Operanden in Ausdrücken werden als „primäre Ausdrücke“ bezeichnet.
 
 ## <a name="syntax"></a>Syntax
 
-*primary-expression*: *Bezeichner*
+*primary-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*constant*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*string-literal*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**(** *expression* **)**<br/>
 
-*constant*
-
-*string-literal*
-
-**(**  *expression*  **)**
-
-*Ausdruck*: *assignment-expression*
-
-*expression*  **,**  *assignment-expression*
+*expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Ausdruck* **,** *assignment-expression*<br/>
 
 ## <a name="see-also"></a>Siehe auch
 
