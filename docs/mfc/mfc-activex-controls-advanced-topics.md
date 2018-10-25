@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18d0a15b2fe1d61e1b7ba14d210b428f282bff4d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e2b0c4b137079d90a1f51cb852f6046c676d32b8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386365"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067929"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC-ActiveX-Steuerelemente: Weiterführende Themen
 
@@ -188,7 +188,7 @@ Sie können die Dialogfeld-Steuerelemente erstellen, die keine Benutzeroberfläc
 
 - Deklarieren Sie eine lokale Variable und die Unterklasse, wie das Dialogfeldelement. Fügen Sie Code, der ähnlich wie die folgende (`CMyCtrl` ist die Wrapperklasse IDC_MYCTRL1 ist die ID des Steuerelements):
 
-     [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]
+   [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]
 
 ## <a name="see-also"></a>Siehe auch
 

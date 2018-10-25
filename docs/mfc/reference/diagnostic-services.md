@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b572af3bdfd444687af98172da9ada0736dac25
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dd420544f341159fa4281c4f837fa222d357e1b1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429512"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068696"
 ---
 # <a name="diagnostic-services"></a>Diagnosedienste
 
@@ -103,7 +103,6 @@ Darüber hinaus unterstützt die C-Laufzeitbibliothek auch eine Reihe von Diagno
 |-|-|
 |[_AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|Unterdrückt die Compiler-Warnungen für die Verwendung von veralteten MFC-Funktionen.|
 
-
 ## <a name="afx_secure_no_warnings"></a> _AFX_SECURE_NO_WARNINGS
 
 Unterdrückt die Compiler-Warnungen für die Verwendung von veralteten MFC-Funktionen.
@@ -113,6 +112,7 @@ Unterdrückt die Compiler-Warnungen für die Verwendung von veralteten MFC-Funkt
 ```
 _AFX_SECURE_NO_WARNINGS
 ```
+
 ### <a name="example"></a>Beispiel
 
 In diesem Codebeispiel würde eine compilerwarnung, wenn _AFX_SECURE_NO_WARNINGS nicht definiert wurden.
@@ -309,6 +309,7 @@ Verwenden Sie, um Daten auf Richtigkeit zu überprüfen.
 ENSURE(  booleanExpression )
 ENSURE_VALID( booleanExpression  )
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *boolescher Ausdruck*<br/>
@@ -370,7 +371,6 @@ static char THIS_FILE[] = __FILE__;
 [Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
 [ASSERT](#assert)<br/>
 [VERIFY](#verify)
-
 
 ##  <a name="trace"></a>  TRACE
 
@@ -450,7 +450,6 @@ Diese Variable wird nur in der Debugversion von MFC definiert. Weitere Informati
 
 **Header:** afx.h
 
-
 ## <a name="afxdump"></a> AfxDump (intern)
 
 Interne Funktion, den MFC verwendet, um den Zustand eines Objekts während des Debuggens zu sichern.
@@ -460,6 +459,7 @@ Interne Funktion, den MFC verwendet, um den Zustand eines Objekts während des D
 ```
 void AfxDump(const CObject* pOb);
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *Geschäftssitz*<br/>
@@ -478,8 +478,6 @@ Programmcode sollte nicht aufrufen `AfxDump`, aber Sie sollten stattdessen aufru
 ### <a name="see-also"></a>Siehe auch
 
 [CObject::Dump](cobject-class.md#dump)
-
-
 
 ##  <a name="afxmemdf"></a>  afxMemDF
 
@@ -598,8 +596,6 @@ Programmcode sollte nicht aufrufen `AfxDump`, aber Sie sollten stattdessen aufru
 
 [CObject::Dump](cobject-class.md#dump)
 
-
-
 ##  <a name="afxdumpstack"></a>  AfxDumpStack
 
 Diese globale Funktion kann verwendet werden, ein Image des aktuellen Stapels generiert wird.
@@ -657,7 +653,7 @@ Jede Zeile in der obigen Ausgabe gibt an, die Adresse der dem letzten Funktionsa
 
 In der folgende Tabelle werden beispielsweise die erste Zeile der obigen Ausgabe beschrieben:
 
-|Ausgabe|Beschreibung|
+|Output|Beschreibung|
 |------------|-----------------|
 |`00427D55:`|Die Rückgabeadresse der dem letzten Funktionsaufruf.|
 |`DUMP2\DEBUG\DUMP2.EXE!`|Der vollständige Name des Moduls, das den Funktionsaufruf enthält.|
@@ -903,7 +899,7 @@ AFXAPI AfxDoForAllClasses(
 *pfn*<br/>
 Verweist auf eine Iteration-Funktion, die für jede Klasse aufgerufen werden. Die Funktionsargumente sind ein Zeiger auf eine `CRuntimeClass` -Objekt und einen void-Zeiger auf zusätzliche Daten, die der Aufrufer der Funktion angibt.
 
-*"pContext"*<br/>
+*pContext*<br/>
 Verweist auf die optionalen Daten, die der Aufrufer der Funktion für die Iteration angeben kann. This-Zeiger kann NULL sein.
 
 ### <a name="remarks"></a>Hinweise
@@ -938,7 +934,7 @@ void AfxDoForAllObjects(
 *pfn*<br/>
 Zeigt auf eine Iteration-Funktion, die für jedes Objekt ausgeführt. Die Funktionsargumente sind ein Zeiger auf eine `CObject` und einen void-Zeiger auf zusätzliche Daten, die der Aufrufer der Funktion angibt.
 
-*"pContext"*<br/>
+*pContext*<br/>
 Verweist auf die optionalen Daten, die der Aufrufer der Funktion für die Iteration angeben kann. This-Zeiger kann NULL sein.
 
 ### <a name="remarks"></a>Hinweise

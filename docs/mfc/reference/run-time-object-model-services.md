@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 163ef22563141b9365bc2c086870877c7ad2bf00
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 5979fcb76dc688bffd9ad8076f123927439e3840
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083592"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064563"
 ---
 # <a name="run-time-object-model-services"></a>Objektmodelldienste zur Laufzeit
 
@@ -39,8 +39,6 @@ Weitere Informationen zu diesen objektmodelldienste zur Laufzeit Dienste sowie d
 
 ### <a name="run-time-object-model-services-macros"></a>Laufzeit-Objektmodell Services-Makros
 
-
-
 |||
 |-|-|
 |[DECLARE_DYNAMIC](#declare_dynamic)|Ermöglicht den Zugriff auf die Laufzeit-Klasseninformationen (muss in der Klassendeklaration verwendet werden).|
@@ -51,19 +49,11 @@ Weitere Informationen zu diesen objektmodelldienste zur Laufzeit Dienste sowie d
 |[IMPLEMENT_SERIAL](#implement_serial)|Ermöglicht die Serialisierung und den Zugriff auf die Laufzeit-Klasseninformationen (muss in der klassenimplementierung verwendet werden).|
 |[RUNTIME_CLASS](#runtime_class)|Gibt die `CRuntimeClass` -Struktur, die von der benannten Klasse entspricht.|
 
-
 OLE erfordert häufig die dynamische Erstellung von Objekten zur Laufzeit. Beispielsweise muss eine OLE-Server-Anwendung OLE-Elemente dynamisch in Reaktion auf eine Anforderung von einem Client erstellen können. Entsprechend muss ein Automatisierungsserver Elemente als Reaktion auf Anforderungen von Benutzeroberflächenautomatisierungs-Clients erstellen können.
 
 Die Microsoft Foundation Class-Bibliothek stellt zwei Makros, die bestimmte an OLE bereit.
 
 ### <a name="dynamic-creation-of-ole-objects"></a>Dynamische Erstellung von OLE-Objekte
-
-
-
-
-
-
-
 
 |||
 |-|-|
@@ -85,6 +75,7 @@ Bestimmt, ob die allgemeine Steuerelemente-Bibliothek die angegebene API impleme
   ```
 AFX_COMCTL32_IF_EXISTS(  proc );
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *proc*<br/>
@@ -112,6 +103,7 @@ Bestimmt, ob die allgemeine Steuerelemente-Bibliothek die angegebene API impleme
 ```
 AFX_COMCTL32_IF_EXISTS2( proc );
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *proc*<br/>
@@ -129,8 +121,6 @@ afxcomctl32.h, afxcomctl32.inl
 
 [Isolierung der MFC-Bibliothek für Standardsteuerelemente](../isolation-of-the-mfc-common-controls-library.md)<br/>
 [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
-
-
 
 ##  <a name="declare_dynamic"></a>  DECLARE_DYNAMIC
 
@@ -197,7 +187,6 @@ Siehe das Beispiel für [IMPLEMENT_DYNCREATE](#implement_dyncreate).
 
 **Header:** afx.h
 
-
 ## <a name="declareolectltype"></a>DECLARE_OLECTLTYPE
 
 Deklariert die `GetUserTypeNameID` und `GetMiscStatus` Memberfunktionen der Steuerelementklasse.
@@ -207,6 +196,7 @@ Deklariert die `GetUserTypeNameID` und `GetMiscStatus` Memberfunktionen der Steu
 ```
 DECLARE_OLECTLTYPE( class_name )
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *CLASS_NAME*<br/>
@@ -224,7 +214,6 @@ Der Name der Steuerelement-Klasse.
 
 [IMPLEMENT_OLECTLTYPE](#implement_olectltype)
 
-
 ## <a name="declareproppageids"></a>DECLARE_PROPPAGEIDS
 
 Deklariert, dass das OLE-Steuerelement, eine Liste der Eigenschaftenseiten bietet, um ihre Eigenschaften anzuzeigen.
@@ -234,6 +223,7 @@ Deklariert, dass das OLE-Steuerelement, eine Liste der Eigenschaftenseiten biete
 ```
 DECLARE_PROPPAGEIDS( class_name )
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *CLASS_NAME*<br/>
@@ -370,6 +360,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
     l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
 
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *CLASS_NAME*<br/>
@@ -408,7 +399,6 @@ Die OLE-Klassen-ID ist für das Objekt einen eindeutigen 128-Bit-Bezeichner. Es 
 [DECLARE_OLECREATE](#declare_olecreate)<br/>
 [CLSID-Schlüssel](/windows/desktop/com/clsid-key-hklm)
 
-
 ## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
 
 Implementiert die `GetUserTypeNameID` und `GetMiscStatus` Memberfunktionen der Steuerelementklasse.
@@ -418,6 +408,7 @@ Implementiert die `GetUserTypeNameID` und `GetMiscStatus` Memberfunktionen der S
 ```
 DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *CLASS_NAME*<br/>

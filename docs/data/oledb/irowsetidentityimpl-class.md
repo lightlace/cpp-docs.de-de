@@ -25,65 +25,65 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b47cbf2b30323cf51881ebaae9f546001a2d61b3
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 9a1b11450dd67e63927aeb20c54643a5980fa672
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081499"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058868"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl-Klasse
 
-Implementiert die OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913) -Schnittstelle, die Tests für die Zeilenidentität.  
-  
+Implementiert die OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913) -Schnittstelle, die Tests für die Zeilenidentität.
+
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-template <class T, class RowClass = CSimpleRow>  
-class ATL_NO_VTABLE IRowsetIdentityImpl   
-   : public IRowsetIdentity  
-```  
-  
-### <a name="parameters"></a>Parameter  
+template <class T, class RowClass = CSimpleRow>
+class ATL_NO_VTABLE IRowsetIdentityImpl
+   : public IRowsetIdentity
+```
+
+### <a name="parameters"></a>Parameter
 
 *T*<br/>
-Eine abgeleitete Klasse `IRowsetIdentityImpl`.  
-  
+Eine abgeleitete Klasse `IRowsetIdentityImpl`.
+
 *RowClass*<br/>
-Die Storage-Einheit für die `HROW`.  
+Die Storage-Einheit für die `HROW`.
 
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Anforderungen
 
-**Header:** „atldb.h“  
-  
-## <a name="members"></a>Member  
-  
-### <a name="methods"></a>Methoden  
-  
-|||  
-|-|-|  
-|[IsSameRow](#issamerow)|Vergleicht zwei Zeilenhandles, um festzustellen, ob sie sich auf derselben Zeile beziehen.|  
-  
+**Header:** „atldb.h“
+
+## <a name="members"></a>Member
+
+### <a name="methods"></a>Methoden
+
+|||
+|-|-|
+|[IsSameRow](#issamerow)|Vergleicht zwei Zeilenhandles, um festzustellen, ob sie sich auf derselben Zeile beziehen.|
+
 ## <a name="issamerow"></a> Irowsetidentityimpl:: Issamerow
 
-Vergleicht zwei Zeilenhandles, um festzustellen, ob sie sich auf derselben Zeile beziehen.  
-  
-### <a name="syntax"></a>Syntax  
-  
+Vergleicht zwei Zeilenhandles, um festzustellen, ob sie sich auf derselben Zeile beziehen.
+
+### <a name="syntax"></a>Syntax
+
 ```cpp
-STDMETHOD(IsSameRow )(HROW hThisRow,  
-   HROW hThatRow);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+STDMETHOD(IsSameRow )(HROW hThisRow,
+   HROW hThatRow);
+```
 
-Finden Sie unter [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629) in die *OLE DB-Programmierreferenz*.  
-  
-### <a name="remarks"></a>Hinweise  
+#### <a name="parameters"></a>Parameter
 
-Um Zeilenhandles zu vergleichen, die diese Methode wandelt die `HROW` Fensterhandles zu `RowClass` Member und ruft `memcmp` für den Zeiger.  
-  
-## <a name="see-also"></a>Siehe auch  
+Finden Sie unter [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629) in die *OLE DB-Programmierreferenz*.
+
+### <a name="remarks"></a>Hinweise
+
+Um Zeilenhandles zu vergleichen, die diese Methode wandelt die `HROW` Fensterhandles zu `RowClass` Member und ruft `memcmp` für den Zeiger.
+
+## <a name="see-also"></a>Siehe auch
 
 [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

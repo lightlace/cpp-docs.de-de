@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d92d196cc38e6033c6f16332e4977f2481c4496
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 98fec6659c2f4e998b946983a0bd2bdea6d0cde1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990333"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083255"
 ---
 # <a name="openmp-directives"></a>OpenMP-Anweisungen
 
@@ -52,19 +52,19 @@ Enthält Links zu Anweisungen, die in der OpenMP-API verwendet.
 
 Visual C++ unterstützt die folgenden OpenMP-Anweisungen:
 
-Direktive                             | Beschreibung
-------------------------------------- | -----------------------------------------------------------------------------------------------------------------
-[atomic](#atomic)                     | Gibt an, dass eine Speicheradresse, die automatisch aktualisiert werden.
-[barrier](#barrier)                   | Synchronisiert alle Threads in einem Team. Alle Threads anhalten die Barriere, bis alle Threads die Barriere ausführen.
-[critical](#critical)                 | Gibt an, dass Code nur in einem Thread zu einem Zeitpunkt ausgeführt wird.
-[flush](#flush-openmp)                | Gibt an, dass alle Threads die gleiche Ansicht der Arbeitsspeicher für alle freigegebenen Objekte.
-[for](#for-openmp)                    | Bewirkt, dass die Arbeit einem `for` Schleife innerhalb eines parallelen Bereichs zwischen Threads aufgeteilt werden.
-[master](#master)                     | Gibt an, dass nur die master-Thread einen Abschnitt des Programms ausgeführt werden soll.
-[Sortiert](#ordered-openmp-directives) | Gibt an, diesen Code unter einem parallelisierten `for` Schleife ausgeführt werden soll, wie eine sequenzielle Schleife.
-[parallel](#parallel)                 | Definiert einen parallelen Bereich, also Code, die von mehreren Threads gleichzeitig ausgeführt werden.
-[Abschnitte](#sections-openmp)          | Identifiziert die Codeabschnitte, die auf allen Threads aufgeteilt werden.
-[single](#single)                     | Sie können angeben, dass ein Abschnitt des Codes in einem einzelnen Thread, der nicht unbedingt die master-Thread ausgeführt werden soll.
-[threadprivate](#threadprivate)       | Gibt an, dass eine Variable einem Thread zugehörig ist.
+|Direktive|Beschreibung|
+|---------|-----------|
+|[atomic](#atomic)|Gibt an, dass eine Speicheradresse, die automatisch aktualisiert werden.|
+|[barrier](#barrier)|Synchronisiert alle Threads in einem Team. Alle Threads anhalten die Barriere, bis alle Threads die Barriere ausführen.|
+|[critical](#critical)|Gibt an, dass Code nur in einem Thread zu einem Zeitpunkt ausgeführt wird.|
+|[flush](#flush-openmp)|Gibt an, dass alle Threads die gleiche Ansicht der Arbeitsspeicher für alle freigegebenen Objekte.|
+|[for](#for-openmp)|Bewirkt, dass die Arbeit einem `for` Schleife innerhalb eines parallelen Bereichs zwischen Threads aufgeteilt werden.|
+|[master](#master)|Gibt an, dass nur die master-Thread einen Abschnitt des Programms ausgeführt werden soll.|
+|[Sortiert](#ordered-openmp-directives)|Gibt an, diesen Code unter einem parallelisierten `for` Schleife ausgeführt werden soll, wie eine sequenzielle Schleife.|
+|[parallel](#parallel)|Definiert einen parallelen Bereich, also Code, die von mehreren Threads gleichzeitig ausgeführt werden.|
+|[Abschnitte](#sections-openmp)|Identifiziert die Codeabschnitte, die auf allen Threads aufgeteilt werden.|
+|[single](#single)|Sie können angeben, dass ein Abschnitt des Codes in einem einzelnen Thread, der nicht unbedingt die master-Thread ausgeführt werden soll.|
+|[threadprivate](#threadprivate)|Gibt an, dass eine Variable einem Thread zugehörig ist.|
 
 ## <a name="atomic"></a>Atomic
 
@@ -306,13 +306,13 @@ Ein `for` Schleife. Nicht definiertem Verhalten führt, wenn Benutzer im code di
 
 Die `for` -Anweisung unterstützt die folgenden OpenMP-Klauseln:
 
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [lastprivate](../../../parallel/openmp/reference/lastprivate.md)
-- [nowait](../../../parallel/openmp/reference/nowait.md)
-- [Sortiert](../../../parallel/openmp/reference/ordered-openmp-directives.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
-- [reduction](../../../parallel/openmp/reference/reduction.md)
-- [schedule](../../../parallel/openmp/reference/schedule.md)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [lastprivate](openmp-clauses.md#lastprivate)
+- [nowait](openmp-clauses.md#nowait)
+- [Sortiert](openmp-clauses.md#ordered-openmp-clauses)
+- [private](openmp-clauses.md#private-openmp)
+- [reduction](openmp-clauses.md#reduction)
+- [schedule](openmp-clauses.md#schedule)
 
 Wenn `parallel` ebenfalls angegeben wird, `clauses` kann jede beliebige Klausel von akzeptiert die `parallel` oder `for` Anweisungen, mit Ausnahme von `nowait`.
 
@@ -535,14 +535,14 @@ Definiert einen parallelen Bereich, also Code, die von mehreren Threads gleichze
 
 Die `parallel` -Anweisung unterstützt die folgenden OpenMP-Klauseln:
 
-- [copyin](../../../parallel/openmp/reference/copyin.md)
-- [default](../../../parallel/openmp/reference/default-openmp.md)
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [if](../../../parallel/openmp/reference/if-openmp.md)
-- [num_threads](../../../parallel/openmp/reference/num-threads.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
-- [reduction](../../../parallel/openmp/reference/reduction.md)
-- [Freigegebene](../../../parallel/openmp/reference/shared-openmp.md)
+- [copyin](openmp-clauses.md#copyin)
+- [default](openmp-clauses.md#default-openmp)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [if](openmp-clauses.md#if-openmp)
+- [num_threads](openmp-clauses.md#num-threads)
+- [private](openmp-clauses.md#private-openmp)
+- [reduction](openmp-clauses.md#reduction)
+- [Freigegebene](openmp-clauses.md#shared-openmp)
 
 `parallel` kann auch verwendet werden, mit der [Abschnitte](#sections-openmp) und [für](#for-openmp) Anweisungen.
 
@@ -603,11 +603,11 @@ Die `sections` Richtlinie kann 0 (null) oder mehrere enthalten `section` Anweisu
 
 Die `sections` -Anweisung unterstützt die folgenden OpenMP-Klauseln:
 
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [lastprivate](../../../parallel/openmp/reference/lastprivate.md)
-- [nowait](../../../parallel/openmp/reference/nowait.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
-- [reduction](../../../parallel/openmp/reference/reduction.md)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [lastprivate](openmp-clauses.md#lastprivate)
+- [nowait](openmp-clauses.md#nowait)
+- [private](openmp-clauses.md#private-openmp)
+- [reduction](openmp-clauses.md#reduction)
 
 Wenn `parallel` ebenfalls angegeben wird, `clauses` kann jede beliebige Klausel von akzeptiert die `parallel` oder `sections` Anweisungen, mit Ausnahme von `nowait`.
 
@@ -656,10 +656,10 @@ Sie können angeben, dass ein Abschnitt des Codes in einem einzelnen Thread, der
 
 Die `single` -Anweisung unterstützt die folgenden OpenMP-Klauseln:
 
-- [copyprivate](../../../parallel/openmp/reference/copyprivate.md)
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [nowait](../../../parallel/openmp/reference/nowait.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
+- [copyprivate](openmp-clauses.md#copyprivate)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [nowait](openmp-clauses.md#nowait)
+- [private](openmp-clauses.md#private-openmp)
 
 Die [master](#master) -Direktive können Sie angeben, dass ein Abschnitt des Codes nur für die master-Thread ausgeführt werden sollen.
 
@@ -745,4 +745,4 @@ Benutzer haben keine Kontrolle, wenn die Threads enthalten sind, die den paralle
 
 ### <a name="example"></a>Beispiel
 
-Ein Beispiel der Verwendung von `threadprivate`, finden Sie unter [private](../../../parallel/openmp/reference/private-openmp.md).
+Ein Beispiel der Verwendung von `threadprivate`, finden Sie unter [private](openmp-clauses.md#private-openmp).

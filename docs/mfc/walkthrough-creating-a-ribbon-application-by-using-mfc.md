@@ -15,18 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d86749cc8481f2472ed2ebe29dd535e05dcb2e2
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 12070bd690cc2b6228ae5f86e69d9d698bd28348
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236022"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056918"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Exemplarische Vorgehensweise: Erstellen einer Menübandanwendung mithilfe von MFC
 
 In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie mit der **MFS-Anwendungsassistenten** zum Erstellen einer Anwendung, die ein Menüband in der Standardeinstellung verfügt. Sie können dann im Menüband erweitern, durch das Hinzufügen einer **benutzerdefinierte** Menübandkategorie ein **Favoriten** Bereich, und das anschließende Hinzufügen einige häufig verwendete Befehle aus, um den Bereich des Menübands.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 In dieser exemplarischen Vorgehensweise wird davon ausgegangen, dass Sie Visual Studio für die Verwendung festgelegt haben **allgemeine Entwicklungseinstellungen**. Wenn Sie andere Einstellungen verwenden, können einige der Elemente der Benutzeroberfläche (UI), die in den folgenden Anweisungen referenziert werden nicht angezeigt.
 
@@ -38,7 +38,7 @@ In dieser exemplarischen Vorgehensweise wird davon ausgegangen, dass Sie Visual 
 
 1. Die folgenden Optionen festlegen, der **MFS-Anwendungsassistenten**:
 
-    1. In der **Anwendungstyp** -Abschnitt unter **visueller Stil und Farben**Option **Office 2007 (blaues Design)**. 
+    1. In der **Anwendungstyp** -Abschnitt unter **visueller Stil und Farben**Option **Office 2007 (blaues Design)**.
 
     1. In der **Verbunddokumente** Abschnitt, stellen Sie sicher, dass **keine** ausgewählt ist.
 
@@ -46,7 +46,7 @@ In dieser exemplarischen Vorgehensweise wird davon ausgegangen, dass Sie Visual 
 
     1. In der **Datenbankunterstützung** Abschnitt, stellen Sie sicher, dass **keine** ausgewählt ist.
 
-    1. In der **Benutzeroberflächenfunktionen** Abschnitt, stellen Sie sicher, dass **Menüband verwenden** ausgewählt ist. 
+    1. In der **Benutzeroberflächenfunktionen** Abschnitt, stellen Sie sicher, dass **Menüband verwenden** ausgewählt ist.
 
     1. In der Standardeinstellung die **MFS-Anwendungsassistenten** fügt Unterstützung für einige andockbare Bereiche hinzu. Da in dieser exemplarischen Vorgehensweise nur das Menüband erläutert wird, können Sie diese Optionen aus der Anwendung entfernen. In der **erweiterte Features** Abschnitt, deaktivieren Sie alle Optionen.
 

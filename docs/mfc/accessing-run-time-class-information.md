@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b92f634e120bf40fe2355a4c09e0e0fb68e9ec2c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 61da17093d56dcfd8b0eeec3ade7955f27bc6b85
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407444"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077713"
 ---
 # <a name="accessing-run-time-class-information"></a>Zugreifen auf Laufzeit-Klasseninformationen
 
@@ -50,7 +50,7 @@ Die `CObject` Memberfunktion `IsKindOf` können verwendet werden, um festzustell
 
 1. Verwendung `RUNTIME_CLASS` mit dem Namen der Klasse, wie hier gezeigt für die Klasse `CObject`:
 
-     [!code-cpp[NVC_MFCCObjectSample#4](../mfc/codesnippet/cpp/accessing-run-time-class-information_1.cpp)]
+   [!code-cpp[NVC_MFCCObjectSample#4](../mfc/codesnippet/cpp/accessing-run-time-class-information_1.cpp)]
 
 Sie müssen nur selten direkt auf das Objekt für die Run-Time-Klasse zugreifen. Eine weitere häufige Verwendung ist das Laufzeitklasse-Objekt, das Übergeben der `IsKindOf` Funktion, wie in der nächsten Prozedur gezeigt. Die `IsKindOf` Funktion testet ein Objekt, um festzustellen, ob sie zu einer bestimmten Klasse gehört.
 
@@ -60,9 +60,9 @@ Sie müssen nur selten direkt auf das Objekt für die Run-Time-Klasse zugreifen.
 
 1. Rufen Sie die `IsKindOf` Member-Funktion für Objekte dieser Klasse mithilfe der `RUNTIME_CLASS` Makro zum Generieren der `CRuntimeClass` -Arguments zu, wie hier gezeigt:
 
-     [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/accessing-run-time-class-information_2.h)]
+   [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/accessing-run-time-class-information_2.h)]
 
-     [!code-cpp[NVC_MFCCObjectSample#5](../mfc/codesnippet/cpp/accessing-run-time-class-information_3.cpp)]
+   [!code-cpp[NVC_MFCCObjectSample#5](../mfc/codesnippet/cpp/accessing-run-time-class-information_3.cpp)]
 
     > [!NOTE]
     >  IsKindOf gibt **"true"** Wenn das Objekt ein Member der angegebenen Klasse oder einer Klasse, die von der angegebenen Klasse abgeleitet ist. `IsKindOf` unterstützt mehrere vererbungs- oder virtuelle Basisklassen nicht zwar mehrfache Vererbung für Ihren abgeleiteten Klassen für die Microsoft Foundation bei Bedarf verwendet werden können.

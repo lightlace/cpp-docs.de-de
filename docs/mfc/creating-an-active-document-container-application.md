@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f01b15a226887216b45ba232437d9d20c4691b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f1b20dd592e180122e119b08ab59babfdaae8d54
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388333"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052804"
 ---
 # <a name="creating-an-active-document-container-application"></a>Erstellen einer Containeranwendung für aktive Dokumente
 
@@ -57,9 +57,9 @@ Die einfachste und am häufigsten empfohlene Möglichkeit zum Erstellen einer co
 
          [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
 
-     `OnPreparePrinting` bietet Unterstützung für den Druck. Dieser Code ersetzt `DoPreparePrinting`, dies ist die Standard-print-Vorbereitung.
+   `OnPreparePrinting` bietet Unterstützung für den Druck. Dieser Code ersetzt `DoPreparePrinting`, dies ist die Standard-print-Vorbereitung.
 
-     Active Document-Container bietet es sich um ein verbessertes Drucken Schema:
+   Active Document-Container bietet es sich um ein verbessertes Drucken Schema:
 
    - Zunächst können Sie das aktive Dokument durch Aufrufen der `IPrint` Schnittstelle, und teilen Sie es selbst zu drucken. Dies unterscheidet sich vom vorherigen OLE-Kapselung, in dem der Container ein Bild des enthaltenen Elements auf den Drucker rendern musste `CDC` Objekt.
 
@@ -67,7 +67,7 @@ Die einfachste und am häufigsten empfohlene Möglichkeit zum Erstellen einer co
 
    - Wenn dies fehlschlägt, stellen Sie Ihr eigenes Rendering des Elements.
 
-     Die statische Memberfunktionen `COleDocObjectItem::OnPrint` und `COleDocObjectItem::OnPreparePrinting`, wie im vorherigen Code, implementiert dieses verbesserte drucken-Schema verarbeiten.
+   Die statische Memberfunktionen `COleDocObjectItem::OnPrint` und `COleDocObjectItem::OnPreparePrinting`, wie im vorherigen Code, implementiert dieses verbesserte drucken-Schema verarbeiten.
 
 11. Fügen Sie eigene Implementierung, und erstellen Sie die Anwendung.
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce81436781a92c8d2c9156e1d1c02513c3816dc4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1599500a775bcd1c76f2e63a1f7b20126a2fb329
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440055"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078205"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC-ActiveX-Steuerelemente: Hinzufügen einer weiteren benutzerdefinierten Eigenschaftenseite
 
@@ -65,7 +65,7 @@ Weitere Informationen zur Verwendung von Eigenschaftenseiten in einem ActiveX-St
 
 1. Klicken Sie im Kontextmenü auf **hinzufügen** , und klicken Sie dann auf **Klasse hinzufügen**.
 
-     Daraufhin wird die [Klasse hinzufügen](../ide/add-class-dialog-box.md) Dialogfeld.
+   Daraufhin wird die [Klasse hinzufügen](../ide/add-class-dialog-box.md) Dialogfeld.
 
 1. Doppelklicken Sie auf die **MFC-Klasse** Vorlage.
 
@@ -95,25 +95,25 @@ Der nächste Schritt umfasst das Erstellen von zwei neuen Zeichenfolgenressource
 
 1. Doppelklicken Sie auf die **Zeichenfolgentabelle** Ordner und doppelklicken Sie dann auf die vorhandene Zeichenfolge Ressource, die Sie eine Zeichenfolge hinzufügen möchten.
 
-     Dadurch wird die Tabelle in einem Fenster geöffnet.
+   Dadurch wird die Tabelle in einem Fenster geöffnet.
 
 1. Wählen Sie die leere Zeile am Ende der Tabelle, und geben Sie den Text oder Beschriftung, der die Zeichenfolge: z. B. "Zusätzliche Eigenschaftenseite."
 
-     Daraufhin wird eine **Zeichenfolgeneigenschaften** Seite zeigt **Beschriftung** und **ID** Felder. Die **Beschriftung** Feld enthält die Zeichenfolge, die Sie eingegeben haben.
+   Daraufhin wird eine **Zeichenfolgeneigenschaften** Seite zeigt **Beschriftung** und **ID** Felder. Die **Beschriftung** Feld enthält die Zeichenfolge, die Sie eingegeben haben.
 
 1. In der **ID** Feld, wählen Sie aus, oder geben Sie eine ID für die Zeichenfolge. Drücken Sie die EINGABETASTE, wenn Sie fertig sind.
 
-     Dieses Beispiel verwendet **IDS_SAMPLE_ADDPAGE als** für den Typ der neuen Seite.
+   Dieses Beispiel verwendet **IDS_SAMPLE_ADDPAGE als** für den Typ der neuen Seite.
 
 1. Wiederholen Sie die Schritte 3 und 4 mit **IDS_SAMPLE_ADDPPG_CAPTION** für die ID und die "Zusätzliche Eigenschaftenseite" für die Beschriftung.
 
 1. In der. CPP-Datei von der neuen Eigenschaft Page-Klasse (in diesem Beispiel `CAddtlPropPage`) ändern Sie die `CAddtlPropPage::CAddtlPropPageFactory::UpdateRegistry` , damit IDS_SAMPLE_ADDPAGE als übergeben wird, indem [AfxOleRegisterPropertyPageClass](../mfc/reference/registering-ole-controls.md#afxoleregisterpropertypageclass), wie im folgenden Beispiel:
 
-     [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]
+   [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]
 
 1. Ändern Sie den Konstruktor der `CAddtlPropPage` , damit IDS_SAMPLE_ADDPPG_CAPTION übergeben wird, um die `COlePropertyPage` Konstruktor wie folgt:
 
-     [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]
+   [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]
 
 Nachdem Sie die notwendigen Änderungen an Ihrer Projekt neu, und verwenden zum Testen der neuen Eigenschaftenseite Testcontainer vorgenommen haben. Informationen zum Zugriff auf den Testcontainer finden Sie unter [Testen von Eigenschaften und Ereignissen mit dem Testcontainer](../mfc/testing-properties-and-events-with-test-container.md) .
 

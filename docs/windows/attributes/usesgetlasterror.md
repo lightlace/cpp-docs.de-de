@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 501f6b1801ace9f6002cca5d3559dfcb01e994f5
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: bb08e2442e34c4d579e568c68d240accdfdbde59
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791307"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074240"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
@@ -53,8 +53,8 @@ Finden Sie unter den [Idl_module](idl-module.md) Beispiel zur Verwendung **Usesg
 |**Erforderliche Attribute**|Keiner|
 |**Ungültige Attribute**|Keiner|
 
-Weitere Informationen zu den attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Siehe auch
 
-[IDL-Attribute](idl-attributes.md)  
+[IDL-Attribute](idl-attributes.md)

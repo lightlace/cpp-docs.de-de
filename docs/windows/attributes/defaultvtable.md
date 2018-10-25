@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b007473de287a58798c42e05e49ee77170ec6e68
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 003123036b8ae0e6bc39660ff7f2d98394dcad83
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790601"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057776"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
@@ -89,4 +89,4 @@ Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net
 ## <a name="see-also"></a>Siehe auch
 
 [IDL-Attribute](idl-attributes.md)<br/>
-[Klassenattribute](class-attributes.md)  
+[Klassenattribute](class-attributes.md)

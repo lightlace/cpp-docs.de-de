@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f3d6042866661659102090380c95e7d04e9bcd6c
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 0e67b839b487f7bb457eeadb0f4d0385b025ebc3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791326"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080597"
 ---
 # <a name="cppquote"></a>cpp_quote
 
@@ -62,9 +62,9 @@ Siehe das Beispiel für [dual](dual.md) verwenden Sie ein Beispiel mit **Cpp_quo
 |**Erforderliche Attribute**|Keiner|
 |**Ungültige Attribute**|Keiner|
 
-Weitere Informationen zu den attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Siehe auch
 
 [IDL-Attribute](idl-attributes.md)<br/>
-[Eigenständige Attribute](stand-alone-attributes.md)  
+[Eigenständige Attribute](stand-alone-attributes.md)

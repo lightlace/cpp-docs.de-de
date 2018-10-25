@@ -18,93 +18,93 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db73d212a11fe096c07a7e14d033c21e6b61311c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b700b1e1b83586635f0628c9b2b6be7377315b27
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705210"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079427"
 ---
 # <a name="constseg"></a>const_seg
-Gibt das Segment, in denen [const](../cpp/const-cpp.md) Variablen werden in der OBJ-Datei gespeichert.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-#pragma const_seg ( [ [ { push | pop}, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
-```  
-  
+Gibt das Segment, in denen [const](../cpp/const-cpp.md) Variablen werden in der OBJ-Datei gespeichert.
+
+## <a name="syntax"></a>Syntax
+
+```
+#pragma const_seg ( [ [ { push | pop}, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )
+```
+
 ### <a name="parameters"></a>Parameter
 
 **push**<br/>
-(Optional) Legt einen Datensatz auf dem internen compilerstapel ab. Ein **Push** kann ein *Bezeichner* und *Segment-Name*.  
-  
+(Optional) Legt einen Datensatz auf dem internen compilerstapel ab. Ein **Push** kann ein *Bezeichner* und *Segment-Name*.
+
 **pop**<br/>
-(Optional) Entfernt einen Datensatz von der obersten Position des internen Compilerstapels.  
-  
+(Optional) Entfernt einen Datensatz von der obersten Position des internen Compilerstapels.
+
 *identifier*<br/>
-(Optional) Bei Verwendung mit **Push**, den Datensatz im internen compilerstapel ein Name zugewiesen. Bei Verwendung mit **pop**, Datensätze vom internen Stapel bis *Bezeichner* wird entfernt; Wenn *Bezeichner* wurde nicht gefunden im internen Stapel, nichts per pop ausgelesen wird.  
-  
-Mithilfe von *Bezeichner* ermöglicht, mehrere Datensätze mit einem einzelnen entfernen **pop** Befehl.  
-  
-"*Segment-Name*"<br/>  
-(Optional) Der Name eines Segments. Bei Verwendung mit **pop**, wird das Element im Stapel geholt und *Segment-Name* wird zum aktiven Segmentnamen.  
-  
+(Optional) Bei Verwendung mit **Push**, den Datensatz im internen compilerstapel ein Name zugewiesen. Bei Verwendung mit **pop**, Datensätze vom internen Stapel bis *Bezeichner* wird entfernt; Wenn *Bezeichner* wurde nicht gefunden im internen Stapel, nichts per pop ausgelesen wird.
+
+Mithilfe von *Bezeichner* ermöglicht, mehrere Datensätze mit einem einzelnen entfernen **pop** Befehl.
+
+"*Segment-Name*"<br/>
+(Optional) Der Name eines Segments. Bei Verwendung mit **pop**, wird das Element im Stapel geholt und *Segment-Name* wird zum aktiven Segmentnamen.
+
 "*Segmentklasse*"<br/>
-(Optional) Für die Kompatibilität mit C++ vor Version 2.0 enthalten. Wird ignoriert.  
-  
+(Optional) Für die Kompatibilität mit C++ vor Version 2.0 enthalten. Wird ignoriert.
+
 ## <a name="remarks"></a>Hinweise
 
-Die Bedeutung der Begriffe *Segment* und *Abschnitt* sind austauschbar, in diesem Thema.  
-  
-OBJ-Dateien können angezeigt werden, mit der [Dumpbin](../build/reference/dumpbin-command-line.md) Anwendung. Das Standardsegment in der OBJ-Datei für `const`-Variablen ist .rdata. Einige `const`-Variablen, z. B. Skalare, sind automatisch im Codestream enthalten. Inlinecode erscheint nicht in .rdata.  
-  
-Das Definieren eines Objekts, das eine dynamische Initialisierung in einem `const_seg` benötigt, führt zu einem nicht definierten Verhalten.  
-  
+Die Bedeutung der Begriffe *Segment* und *Abschnitt* sind austauschbar, in diesem Thema.
+
+OBJ-Dateien können angezeigt werden, mit der [Dumpbin](../build/reference/dumpbin-command-line.md) Anwendung. Das Standardsegment in der OBJ-Datei für `const`-Variablen ist .rdata. Einige `const`-Variablen, z. B. Skalare, sind automatisch im Codestream enthalten. Inlinecode erscheint nicht in .rdata.
+
+Das Definieren eines Objekts, das eine dynamische Initialisierung in einem `const_seg` benötigt, führt zu einem nicht definierten Verhalten.
+
 `#pragma const_seg` ohne Parameter setzt das Segment auf .rdata zurück.
 
-## <a name="example"></a>Beispiel  
-  
-```cpp  
-// pragma_directive_const_seg.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-  
-const int i = 7;               // inlined, not stored in .rdata  
-const char sz1[]= "test1";     // stored in .rdata  
-  
-#pragma const_seg(".my_data1")  
-const char sz2[]= "test2";     // stored in .my_data1  
-  
-#pragma const_seg(push, stack1, ".my_data2")  
-const char sz3[]= "test3";     // stored in .my_data2  
-  
-#pragma const_seg(pop, stack1) // pop stack1 from stack  
-const char sz4[]= "test4";     // stored in .my_data1  
-  
-int main() {  
-    using namespace std;  
-   // const data must be referenced to be put in .obj  
-   cout << sz1 << endl;  
-   cout << sz2 << endl;  
-   cout << sz3 << endl;  
-   cout << sz4 << endl;  
-}  
-```  
-  
-```Output  
-test1  
-test2  
-test3  
-test4  
-```  
-  
-## <a name="comments"></a>Kommentare  
- 
-Finden Sie unter [/SECTION](../build/reference/section-specify-section-attributes.md) eine Liste der Namen sollten Sie beim Erstellen eines Abschnitts nicht verwenden.  
-  
-Sie können auch Abschnitte für initialisierte Daten angeben ([Data_seg](../preprocessor/data-seg.md)), nicht initialisierte Daten ([Bss_seg](../preprocessor/bss-seg.md)), und Funktionen ([Code_seg](../preprocessor/code-seg.md)).  
-  
-## <a name="see-also"></a>Siehe auch  
- 
+## <a name="example"></a>Beispiel
+
+```cpp
+// pragma_directive_const_seg.cpp
+// compile with: /EHsc
+#include <iostream>
+
+const int i = 7;               // inlined, not stored in .rdata
+const char sz1[]= "test1";     // stored in .rdata
+
+#pragma const_seg(".my_data1")
+const char sz2[]= "test2";     // stored in .my_data1
+
+#pragma const_seg(push, stack1, ".my_data2")
+const char sz3[]= "test3";     // stored in .my_data2
+
+#pragma const_seg(pop, stack1) // pop stack1 from stack
+const char sz4[]= "test4";     // stored in .my_data1
+
+int main() {
+    using namespace std;
+   // const data must be referenced to be put in .obj
+   cout << sz1 << endl;
+   cout << sz2 << endl;
+   cout << sz3 << endl;
+   cout << sz4 << endl;
+}
+```
+
+```Output
+test1
+test2
+test3
+test4
+```
+
+## <a name="comments"></a>Kommentare
+
+Finden Sie unter [/SECTION](../build/reference/section-specify-section-attributes.md) eine Liste der Namen sollten Sie beim Erstellen eines Abschnitts nicht verwenden.
+
+Sie können auch Abschnitte für initialisierte Daten angeben ([Data_seg](../preprocessor/data-seg.md)), nicht initialisierte Daten ([Bss_seg](../preprocessor/bss-seg.md)), und Funktionen ([Code_seg](../preprocessor/code-seg.md)).
+
+## <a name="see-also"></a>Siehe auch
+
 [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

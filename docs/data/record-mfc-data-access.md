@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fe348043d991aa04652eae02ba0f2efa393bcf5f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3ac01274773abf04bf6f817b0f70bcd527865a1b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098133"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083476"
 ---
 # <a name="record-mfc-data-access"></a>Datensatz (MFC-Datenzugriff)
 
-Ein Datensatz ist eine Sammlung von Daten über eine einzige Entität, z. B. ein Konto oder ein Kunde, die in einer Tabelle (in einer Zeile der Tabelle) gespeichert ist. Ein Datensatz besteht aus einer Gruppe angrenzender Spalten (auch als Felder bezeichnet), die verschiedene Datentypen enthalten. Eine Gruppe von Datensätzen, ausgewählt aus einer Datenquelle – in der Datenbankterminologie häufig als Resultset bezeichnet – wird in MFC als Recordset bezeichnet. Weitere Informationen finden Sie unter [Recordsets (ODBC)](../data/odbc/recordset-odbc.md).  
-  
-## <a name="see-also"></a>Siehe auch  
+Ein Datensatz ist eine Sammlung von Daten über eine einzige Entität, z. B. ein Konto oder ein Kunde, die in einer Tabelle (in einer Zeile der Tabelle) gespeichert ist. Ein Datensatz besteht aus einer Gruppe angrenzender Spalten (auch als Felder bezeichnet), die verschiedene Datentypen enthalten. Eine Gruppe von Datensätzen, ausgewählt aus einer Datenquelle – in der Datenbankterminologie häufig als Resultset bezeichnet – wird in MFC als Recordset bezeichnet. Weitere Informationen finden Sie unter [Recordsets (ODBC)](../data/odbc/recordset-odbc.md).
+
+## <a name="see-also"></a>Siehe auch
 
 [Datenzugriffsprogrammierung (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

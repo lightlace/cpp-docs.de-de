@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb37637cbfc2ec0af96ed339da6e71cf349797e2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b53175e46cfa858a73b581dfefc78047e96380d6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402875"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058949"
 ---
 # <a name="mapping-messages-to-functions"></a>Zuordnen von Meldungen zu Funktionen
 
@@ -42,7 +42,7 @@ Wenn Sie die Klassenansicht verwenden, erstellen Sie eine neue Klasse, die von e
     > [!NOTE]
     >  Die **Nachrichten** Schaltfläche ist verfügbar, wenn Sie entweder den Klassennamen in der Klassenansicht oder im Quellcodefenster auf auswählen.
 
-     Wenn Ihr Projekt einen Handler für eine Nachricht verfügt, wird der Name des Handlers in der rechten Spalte neben der Meldung angezeigt.
+   Wenn Ihr Projekt einen Handler für eine Nachricht verfügt, wird der Name des Handlers in der rechten Spalte neben der Meldung angezeigt.
 
 1. Wenn die Nachricht kein Handler verfügt, klicken Sie dann auf die Zelle in der rechten Spalte im Fenster Eigenschaften den vorgeschlagenen Namen des Handlers als anzuzeigende \<hinzufügen >*HandlerName*. (Z. B. der WM_TIMER Meldungshandler schlägt \<hinzufügen >`OnTimer`).
 

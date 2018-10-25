@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b12c93375618cacf25e88ecba6919808ac7bd705
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b8c1fb4d82bd1aaeb9f625fea66aa339a0ef4d97
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446855"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082891"
 ---
 # <a name="cprintinfo-structure"></a>CPrintInfo-Struktur
 
@@ -94,7 +94,6 @@ Rufen Sie diese Funktion zum Abrufen der Anzahl der ersten Seite gedruckt werden
 ```
 UINT GetFromPage() const;
 
-
 ```
 
 ### <a name="return-value"></a>Rückgabewert
@@ -111,7 +110,6 @@ Rufen Sie diese Funktion zum Abrufen der Anzahl der letzten Seite des Dokuments.
 
 ```
 UINT GetMaxPage() const;
-
 
 ```
 
@@ -130,7 +128,6 @@ Rufen Sie diese Funktion zum Abrufen der Anzahl der ersten Seite des Dokuments.
 ```
 UINT GetMinPage() const;
 
-
 ```
 
 ### <a name="return-value"></a>Rückgabewert
@@ -148,7 +145,6 @@ Rufen Sie diese Funktion zum Abrufen des Offsets beim Drucken mehrerer DocObject
 ```
 UINT GetOffsetPage() const;
 
-
 ```
 
 ### <a name="return-value"></a>Rückgabewert
@@ -165,7 +161,6 @@ Rufen Sie diese Funktion zum Abrufen der Anzahl der letzten Seite gedruckt werde
 
 ```
 UINT GetToPage() const;
-
 
 ```
 
@@ -345,6 +340,4 @@ Seitenzahlen beginnen normalerweise bei 1. Dieser Wert befindet sich in der `CPr
 [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)<br/>
 [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting)<br/>
 [CView::OnPrint](../../mfc/reference/cview-class.md#onprint)
-
-
 

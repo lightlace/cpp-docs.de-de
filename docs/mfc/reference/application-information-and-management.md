@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9783da47a22260f0edbe5ddf6d8f5021aae31e5c
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 1867f044c143fc0e5fbb06705bf45b8fa729a5cc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083800"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068969"
 ---
 # <a name="application-information-and-management"></a>Anwendungsinformationen und Anwendungsverwaltung
 
@@ -61,8 +61,6 @@ Die Microsoft Foundation Class-Bibliothek bietet die folgenden globalen Funktion
 |[AfxSocketInit](#afxsocketinit)|Wird aufgerufen, einem `CWinApp::InitInstance` überschreiben, um die Windows-Sockets nicht initialisieren.|
 |[AfxUserToolsManager](#afxusertoolsmanager)|Zeiger auf die globale [Vorgesetzten des Benutzers Tools](cusertoolsmanager-class.md).|
 |[AfxWinInit](#afxwininit)|Wird aufgerufen, von dem vom MFC bereitgestellten `WinMain` Funktion als Teil der [CWinApp](../../mfc/reference/cwinapp-class.md) Initialisierung einer GUI-basierte Anwendung, zum Initialisieren von MFC. Muss für konsolenanwendungen direkt aufgerufen werden, die MFC verwenden.|
-
-
 
 ##  <a name="afxbeginthread"></a>  AfxBeginThread
 
@@ -145,6 +143,7 @@ Zeiger auf die globale [Kontext-Menü-Manager](ccontextmenumanager-class.md).
 ```
 CContextMenuManager* afxContextMenuManager;
 ```
+
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxcontextmenumanager.h
@@ -152,7 +151,6 @@ CContextMenuManager* afxContextMenuManager;
 ### <a name="see-also"></a>Siehe auch
 
 [CContextMenuManager-Klasse](ccontextmenumanager-class.md)
-
 
 ##  <a name="afxendthread"></a>  AfxEndThread
 
@@ -190,6 +188,7 @@ Verwendung `AfxFindResourceHandle` Ressourcenkette durchlaufen und einen bestimm
 ```
 HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *Wert*<br/>
@@ -471,6 +470,7 @@ Bestimmt, ob das jeweilige Fenster ein erweitertes Rahmenobjekt ist.
 ```
 BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *Aufnehmen*<br/>
@@ -514,6 +514,7 @@ Bestimmt, ob das angegebene Fenster ein Symbolleistenobjekt.
 ```
 BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *Aufnehmen*<br/>
@@ -536,7 +537,6 @@ Diese Methode gibt `TRUE` Wenn *aufnehmen* leitet sich von `CMFCToolBar`. Diese 
 [CWnd-Klasse](cwnd-class.md)<br/>
 [CMFCToolBar-Klasse](cmfctoolbar-class.md)
 
-
 ## <a name="afxkeyboardmanager"></a> AfxKeyboardManager
 
 Zeiger auf die globale [Tastatur Manager](ckeyboardmanager-class.md).
@@ -546,6 +546,7 @@ Zeiger auf die globale [Tastatur Manager](ckeyboardmanager-class.md).
 ```
 CKeyboardManager* afxKeyboardManager;
 ```
+
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxkeyboardmanager.h
@@ -554,7 +555,6 @@ CKeyboardManager* afxKeyboardManager;
 
 [Makros, globale Funktionen und globale Variablen](mfc-macros-and-globals.md)<br/>
 [CKeyboardManager-Klasse](ckeyboardmanager-class.md)
-
 
 ##  <a name="afxloadlibrary"></a>  "AfxLoadLibrary"
 
@@ -618,6 +618,7 @@ Zeiger auf die globale [Tearoff-Menü-Manager](cmenutearoffmanager-class.md).
 ```
 CMenuTearOffManager* g_pTearOffMenuManager;
 ```
+
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxmenutearoffmanager.h
@@ -635,6 +636,7 @@ Zeiger auf die globale [Maus Manager](cmousemanager-class.md).
 ```
 CMouseManager* afxMouseManager;
 ```
+
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxmousemanager.h
@@ -642,8 +644,6 @@ CMouseManager* afxMouseManager;
 ### <a name="see-also"></a>Siehe auch
 
 [CMouseManager-Klasse](cmousemanager-class.md)
-
-
 
 ##  <a name="afxregisterclass"></a>  AfxRegisterClass
 
@@ -843,7 +843,6 @@ CUserToolsManager* afxUserToolsManager;
 ### <a name="see-also"></a>Siehe auch
 
 [CUserToolsManager-Klasse](cusertoolsmanager-class.md)
-
 
 ##  <a name="afxwininit"></a>  AfxWinInit
 

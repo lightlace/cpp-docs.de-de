@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d5e735a78f35ac799678b077b7933c6134d568e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4833c10772afd7cfd167171821e13a000a611f15
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386185"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083034"
 ---
 # <a name="mfc-macros-and-globals"></a>MFC-Makros, globale Funktionen und globale Variablen
 
@@ -75,7 +75,6 @@ Die MFC-Makros und -Globals bieten Funktionen in den folgenden Kategorien.
 - [Steuerelementstile für die Symbolleiste](toolbar-control-styles.md)
 
 - [CMFCImagePaintArea::IMAGE_EDIT_MODE-Enumeration](cmfcimagepaintarea-image-edit-mode-enumeration.md)
-
 
 ## <a name="database"></a>Datenbank
 
@@ -139,6 +138,4 @@ Im ersten Teil dieses Abschnitts wird kurz auf die einzelnen der oben genannten 
 ## <a name="see-also"></a>Siehe auch
 
 [Übersicht über die Klasse](../../mfc/class-library-overview.md)
-
-
 

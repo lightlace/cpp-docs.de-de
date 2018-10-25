@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e5902019704821d6c34c74480623593b7d7448a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3eb9ab5f08fe1984e52ed16eb26064093fb8e003
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46044248"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052953"
 ---
 # <a name="umenuorid-class"></a>_U_MENUorID-Klasse
 
@@ -57,7 +57,7 @@ class _U_MENUorID
 
 Dieses Argument-Adapterklasse ermöglicht entweder-IDs (jenem) oder im Menü-Handles (HMENUs) an eine Funktion übergeben werden, ohne eine explizite Umwandlung seitens des Aufrufers.
 
-Diese Klasse zum Implementieren der Windows-API-Wrapper dient insbesondere die [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) und [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Funktionen, die beide ein HMENU-Argument, das ein untergeordnetes Fenster möglicherweise akzeptieren Bezeichner (UINT), anstatt ein Menühandle. Beispielsweise sehen Sie diese Klasse verwendet als Parameter an [CWindowImpl:: Create](cwindowimpl-class.md#create).  
+Diese Klasse zum Implementieren der Windows-API-Wrapper dient insbesondere die [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) und [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Funktionen, die beide ein HMENU-Argument, das ein untergeordnetes Fenster möglicherweise akzeptieren Bezeichner (UINT), anstatt ein Menühandle. Beispielsweise sehen Sie diese Klasse verwendet als Parameter an [CWindowImpl:: Create](cwindowimpl-class.md#create).
 
 Die Klasse definiert zwei Konstruktorüberladungen: eine ein UINT-Argument akzeptiert und die andere ein HMENU-Argument akzeptiert. Das Argument "uint" umgewandelt wird nur ein HMENU im Konstruktor und in das Ergebnis gespeichert werden, in der Klasse der einzelnen Datenmember, [M_hMenu](#_u_menuorid__m_hmenu). Das Argument für das HMENU-Konstruktor wird direkt ohne Konvertierung gespeichert.
 

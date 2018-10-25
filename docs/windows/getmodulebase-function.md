@@ -15,38 +15,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4d460b006d2d17df308a62c0433621aac7008f4d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: afa76ad23c509689dd693bb0f3e13dbb7adb4d54
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411409"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075449"
 ---
 # <a name="getmodulebase-function"></a>GetModuleBase-Funktion
 Ruft eine [ModuleBase](../windows/modulebase-class.md) Zeiger, der inkrementiert und dekrementiert den Verweiszähler des ermöglicht eine [RuntimeClass](../windows/runtimeclass-class.md) Objekt.
-  
+
 ## <a name="syntax"></a>Syntax
-  
+
 ```cpp
-inline Details::ModuleBase* GetModuleBase() throw()  
+inline Details::ModuleBase* GetModuleBase() throw()
 ```
-  
+
 ## <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf eine `ModuleBase` Objekt.
-  
+Ein Zeiger auf ein `ModuleBase` -Objekt.
+
 ## <a name="remarks"></a>Hinweise
 
 Diese Funktion wird intern zum Inkrementieren und Dekrementieren verwendet Verweiszähler des Objekts.
-  
+
 Sie können diese Funktion verwenden, zum Steuern der Verweiszähler durch Aufrufen von [modulebase:: Incrementobjectcount](../windows/modulebase-incrementobjectcount-method.md) und [modulebase:: Decrementobjectcount](../windows/modulebase-decrementobjectcount-method.md).
-  
+
 ## <a name="requirements"></a>Anforderungen
 
 **Header:** implements.h
-  
+
 **Namespace:** Microsoft::WRL
-  
+
 ## <a name="see-also"></a>Siehe auch
 
 [Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)

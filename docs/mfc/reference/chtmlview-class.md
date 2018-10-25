@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94b25012f65eb1d86674ae9271dcb4f93ef09617
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d081b09f271bd2f557b0396a2632dc47c9bebdc8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403954"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073570"
 ---
 # <a name="chtmlview-class"></a>CHtmlView-Klasse
 
@@ -244,7 +244,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::GetLocationURL](#getlocationurl)|Ruft die URL der Ressource ab, die aktuell im WebBrowser angezeigt wird.|
 |[CHtmlView::GetMenuBar](#getmenubar)|Ruft einen Wert ab, der bestimmt, ob die Menüleiste angezeigt wird.|
 |[CHtmlView::GetOffline](#getoffline)|Ruft einen Wert ab, der bestimmt, ob das Steuerelement offline ist.|
-|[CHtmlView::GetParentBrowser](#getparentbrowser)|Ruft einen Zeiger auf die `IDispatch` -Schnittstelle ab. Weitere Informationen finden Sie unter [Implementieren der IDispatch-Schnittstelle](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).|
+|[CHtmlView::GetParentBrowser](#getparentbrowser)|Ruft einen Zeiger auf die `IDispatch` -Schnittstelle ab. Weitere Informationen finden Sie unter [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).|
 |[CHtmlView::GetProperty](#getproperty)|Ruft den aktuellen Wert einer Eigenschaft ab, die dem angegebenen Objekt zugeordnet ist.|
 |[CHtmlView::GetReadyState](#getreadystate)|Ruft den Bereitschaftsstatus des Webbrowserobjekts ab.|
 |[CHtmlView::GetRegisterAsBrowser](#getregisterasbrowser)|Gibt an, ob das WebBrowser-Steuerelement als Browser der obersten Ebene für die Zielnamenauflösung registriert ist.|
@@ -269,14 +269,14 @@ class CHtmlView : public CFormView
 |[CHtmlView::OnBeforeNavigate2](#onbeforenavigate2)|Wird aufgerufen, bevor ein Navigationsvorgang im vorhandenen WebBrowser (entweder in einem Fenster- oder in einem Frameset-Element) ausgeführt wird.|
 |[CHtmlView::OnCommandStateChange](#oncommandstatechange)|Wird aufgerufen, um eine Anwendung zu benachrichtigen, dass der aktivierte Zustand eines Webbrowserbefehls geändert wurde.|
 |[CHtmlView::OnDocumentComplete](#ondocumentcomplete)|Wird aufgerufen, um eine Anwendung zu benachrichtigen, dass ein Dokument mit den READYSTATE_COMPLETE-Zustand erreicht hat.|
-|[CHtmlView::OnDocWindowActivate](#ondocwindowactivate)|Wird von der Internet Explorer oder MSHTML-Implementierung von [IOleInPlaceActiveObject:: OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate), die das aktive direkte Objekt benachrichtigt, wenn das Dokumentfenster des Containers aktiviert oder deaktiviert wird.|
+|[CHtmlView::OnDocWindowActivate](#ondocwindowactivate)|Wird von der Implementierung von [IOleInPlaceActiveObject::OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate)von Internet Explorer oder MSHTML aufgerufen, die das aktive direkte Objekt benachrichtigt, wenn das Dokumentfenster des Containers aktiviert oder deaktiviert wird.|
 |[CHtmlView::OnDownloadBegin](#ondownloadbegin)|Wird aufgerufen, um eine Anwendung zu benachrichtigen, dass ein Navigationsvorgang beginnt.|
 |[CHtmlView::OnDownloadComplete](#ondownloadcomplete)|Wird aufgerufen, wenn ein Navigationsvorgang beendet oder angehalten wurde bzw. wenn ein Fehler aufgetreten ist.|
 |[CHtmlView::OnEnableModeless](#onenablemodeless)|Wird aufgerufen, um Dialogfelder ohne Modus zu aktivieren oder deaktivieren, wenn der Container ein modales Dialogfeld erstellt oder entfernt.|
 |[CHtmlView::OnFilterDataObject](#onfilterdataobject)|Wird auf dem Host von Internet Explorer oder MSHTML aufgerufen, um dem Host das Ersetzen des Datenobjekts von Internet Explorer oder MSHTML zu ermöglichen.|
-|[CHtmlView::OnFrameWindowActivate](#onframewindowactivate)|Aufgerufen von [IOleInPlaceActiveObject:: OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) auf um das Objekt zu benachrichtigen, wenn der Container der obersten Ebene des Rahmenfensters aktiviert oder deaktiviert.|
+|[CHtmlView::OnFrameWindowActivate](#onframewindowactivate)|Wird von [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) aufgerufen, um das Objekt zu benachrichtigen, wenn das Rahmenfenster der obersten Ebene des Containers aktiviert oder deaktiviert wird.|
 |[CHtmlView::OnFullScreen](#onfullscreen)|Wird aufgerufen, wenn die FullScreen-Eigenschaft geändert wurde.|
-|[CHtmlView::OnGetDropTarget](#ongetdroptarget)|Von Internet Explorer oder MSHTML aufgerufen wird, wenn sie als Drop-Ziel verwendet wird, ist um dem Host eines alternativen [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget).|
+|[CHtmlView::OnGetDropTarget](#ongetdroptarget)|Wird von Internet Explorer oder MSHTML bei der Verwendung als Ablageziel aufgerufen, um dem Host die Bereitstellung eines alternativen [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)zu ermöglichen.|
 |[CHtmlView::OnGetExternal](#ongetexternal)|Wird von Internet Explorer oder MSHTML aufgerufen, um die `IDispatch` -Schnittstelle des Hosts zu erhalten.|
 |[CHtmlView::OnGetHostInfo](#ongethostinfo)|Ruft die UI-Fähigkeiten des Internet Explorer- oder MSHTML-Hosts ab.|
 |[CHtmlView::OnGetOptionKeyPath](#ongetoptionkeypath)|Gibt den Registrierungsschlüssel zurück, unter dem Internet Explorer oder MSHTML Benutzereinstellungen speichert.|
@@ -288,7 +288,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::OnProgressChange](#onprogresschange)|Wird aufgerufen, um eine Anwendung zu benachrichtigen, dass der Status eines Downloadvorgangs aktualisiert wurde.|
 |[CHtmlView::OnPropertyChange](#onpropertychange)|Wird aufgerufen, um eine Anwendung zu benachrichtigen, dass die [PutProperty](#putproperty) -Methode den Wert einer Eigenschaft geändert hat.|
 |[CHtmlView::OnQuit](#onquit)|Wird aufgerufen, um eine Anwendung zu benachrichtigen, dass die Internet Explorer-Anwendung beendet werden kann. (Betrifft nur Internet Explorer)|
-|[CHtmlView::OnResizeBorder](#onresizeborder)|Wird von der Internet Explorer oder MSHTML-Implementierung von [ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder), die Warnungen, dass des Objekts, das die Größe seines Rahmenbereichs ändern muss.|
+|[CHtmlView::OnResizeBorder](#onresizeborder)|Wird von der Implementierung von [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)in Internet Explorer oder MSHTML aufgerufen, die das Objekt benachrichtigt, dass es die Größe seines Rahmenbereichs ändern muss.|
 |[CHtmlView::OnShowContextMenu](#onshowcontextmenu)|Wird von Internet Explorer oder MSHTML aufgerufen, wenn die Anzeige des Kontextmenüs bevorsteht.|
 |[CHtmlView::OnShowUI](#onshowui)|Wird aufgerufen, wenn die Anzeige von Menüs und Symbolleisten in Internet Explorer oder MSHTML bevorsteht.|
 |[CHtmlView::OnStatusBar](#onstatusbar)|Wird aufgerufen, wenn die StatusBar-Eigenschaft geändert wurde.|
@@ -296,7 +296,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::OnTheaterMode](#ontheatermode)|Wird aufgerufen, wenn die TheaterMode-Eigenschaft geändert wird.|
 |[CHtmlView::OnTitleChange](#ontitlechange)|Wird aufgerufen, um eine Anwendung zu benachrichtigen, wenn der Titel eines Dokuments im WebBrowser-Steuerelement verfügbar ist oder geändert wird.|
 |[CHtmlView::OnToolBar](#ontoolbar)|Wird aufgerufen, wenn sich die ToolBar-Eigenschaft geändert hat.|
-|[CHtmlView::OnTranslateAccelerator](#ontranslateaccelerator)|Wird von Internet Explorer oder MSHTML aufgerufen, wenn [IOleInPlaceActiveObject:: TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) oder [IOleControlSite:: TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) aufgerufen, um Tastenkombinations-menünachrichten aus verarbeiten Warteschlange des Containers.|
+|[CHtmlView::OnTranslateAccelerator](#ontranslateaccelerator)|Wird von Internet Explorer oder MSHTML aufgerufen, wenn [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) oder [IOleControlSite::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) aufgerufen wird, um Tastenkombinations-Menünachrichten aus der Nachrichtenwarteschlange des Containers zu verarbeiten.|
 |[CHtmlView::OnTranslateUrl](#ontranslateurl)|Wird von Internet Explorer oder MSHTML aufgerufen, um dem Host die Möglichkeit zu geben, die zu ladende URL zu ändern.|
 |[CHtmlView::OnUpdateUI](#onupdateui)|Benachrichtigt den Host, dass sich der Befehlsstatus geändert hat.|
 |[CHtmlView::OnVisible](#onvisible)|Wird aufgerufen, wenn das Fenster für das WebBrowser-Steuerelement ein- oder ausgeblendet werden soll.|
@@ -408,7 +408,7 @@ Ein Zeiger auf das übergeordnete Fenster des Steuerelements.
 *nID*<br/>
 Die ID der Sicht. Legen Sie in der Standardeinstellung auf AFX_IDW_PANE_FIRST.
 
-*"pContext"*<br/>
+*pContext*<br/>
 Ein Zeiger auf eine [CCreateContext](../../mfc/reference/ccreatecontext-structure.md). Standardmäßig NULL.
 
 ##  <a name="createcontrolsite"></a>  CHtmlView::CreateControlSite
@@ -531,7 +531,7 @@ LPDISPATCH GetApplication() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die `IDispatch` Schnittstelle das active Document-Objekt. Weitere Informationen finden Sie unter [Implementieren der IDispatch-Schnittstelle](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
+Ein Zeiger auf die `IDispatch` Schnittstelle das active Document-Objekt. Weitere Informationen finden Sie unter [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1083,7 +1083,6 @@ void Navigate2(
     DWORD dwFlags = 0,
     LPCTSTR lpszTargetFrameName = NULL);
 
-
 void Navigate2(
     LPCTSTR lpszURL,
     DWORD dwFlags = 0,
@@ -1091,7 +1090,6 @@ void Navigate2(
     LPCTSTR lpszHeaders = NULL,
     LPVOID lpvPostData = NULL,
     DWORD dwPostDataLen = 0);
-
 
 void Navigate2(
     LPCTSTR lpszURL,
@@ -1298,7 +1296,7 @@ Außer Kraft setzen `OnFilterDataObject` auf reagieren die `FilterDataObject` Be
 
 ##  <a name="onframewindowactivate"></a>  CHtmlView::OnFrameWindowActivate
 
-Aufgerufen von [IOleInPlaceActiveObject:: OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) auf um das Objekt zu benachrichtigen, wenn der Container der obersten Ebene des Rahmenfensters aktiviert oder deaktiviert.
+Wird von [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) aufgerufen, um das Objekt zu benachrichtigen, wenn das Rahmenfenster der obersten Ebene des Containers aktiviert oder deaktiviert wird.
 
 ```
 virtual HRESULT OnFrameWindowActivate(BOOL fActivate);
@@ -1571,7 +1569,7 @@ virtual void OnQuit();
 
 ##  <a name="onresizeborder"></a>  CHtmlView::OnResizeBorder
 
-Wird von der Internet Explorer oder MSHTML-Implementierung von [ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder), die Warnungen, dass des Objekts, das die Größe seines Rahmenbereichs ändern muss.
+Wird von der Implementierung von [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)in Internet Explorer oder MSHTML aufgerufen, die das Objekt benachrichtigt, dass es die Größe seines Rahmenbereichs ändern muss.
 
 ```
 virtual HRESULT OnResizeBorder(
@@ -1742,7 +1740,7 @@ Ungleich NULL, wenn Internet Explorer Symbolleiste angezeigt wird, oder andernfa
 
 ##  <a name="ontranslateaccelerator"></a>  CHtmlView::OnTranslateAccelerator
 
-Wird von Internet Explorer oder MSHTML aufgerufen, wenn [IOleInPlaceActiveObject:: TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) oder [IOleControlSite:: TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) aufgerufen, um Tastenkombinations-menünachrichten aus verarbeiten Warteschlange des Containers.
+Wird von Internet Explorer oder MSHTML aufgerufen, wenn [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) oder [IOleControlSite::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) aufgerufen wird, um Tastenkombinations-Menünachrichten aus der Nachrichtenwarteschlange des Containers zu verarbeiten.
 
 ```
 virtual HRESULT OnTranslateAccelerator(
@@ -1842,21 +1840,17 @@ void PutProperty(
     LPCTSTR lpszProperty,
     const VARIANT& vtValue);
 
-
 void PutProperty(
     LPCTSTR lpszPropertyName,
     double dValue);
-
 
 void PutProperty(
     LPCTSTR lpszPropertyName,
     long lValue);
 
-
 void PutProperty(
     LPCTSTR lpszPropertyName,
     LPCTSTR lpszValue);
-
 
 void PutProperty(
     LPCTSTR lpszPropertyName,

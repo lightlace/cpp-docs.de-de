@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 147b46a3081f842b247ac7a2227bd07bb75d8fe6
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 0ea1c6c3d0e8f0458b54f5794824c4b25c3dcd60
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790625"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059376"
 ---
 # <a name="propputref"></a>propputref
 
@@ -53,11 +53,11 @@ Siehe das Beispiel für [bindbare](bindable.md) für ein Beispiel für die Verwe
 |**Erforderliche Attribute**|Keiner|
 |**Ungültige Attribute**|`propget`, `propput`|
 
-Weitere Informationen zu den attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Siehe auch
 
 [IDL-Attribute](idl-attributes.md)<br/>
 [Methodenattribut](method-attributes.md)<br/>
 [propget](propget.md)<br/>
-[propput](propput.md)  
+[propput](propput.md)

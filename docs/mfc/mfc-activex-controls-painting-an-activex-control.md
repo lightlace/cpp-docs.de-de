@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b14f562bd93bf023d540bf362dd2f9a881c2e441
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b33097c6f6f747d99cf582c1553e25942f1bfcd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436792"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056008"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Darstellen eines ActiveX-Steuerelements
 
@@ -112,11 +112,11 @@ Nachdem Sie die Metadateirendering für das Steuerelement implementiert haben, v
 
 1. In der **neues Steuerelement einfügen** Feld, wählen Sie das Steuerelement aus, und klicken Sie auf **OK**.
 
-     Das Steuerelement wird im Test-Container angezeigt.
+   Das Steuerelement wird im Test-Container angezeigt.
 
 1. Auf der **Steuerelement** Menü klicken Sie auf **Metadatei**.
 
-     Ein separates Fenster wird angezeigt, in dem die Metadatei angezeigt wird. Sie können ändern, dass die Größe des Fensters, um zu sehen, wie der Skalierung des Steuerelements Metadatei auswirkt. Sie können dieses Fenster jederzeit schließen.
+   Ein separates Fenster wird angezeigt, in dem die Metadatei angezeigt wird. Sie können ändern, dass die Größe des Fensters, um zu sehen, wie der Skalierung des Steuerelements Metadatei auswirkt. Sie können dieses Fenster jederzeit schließen.
 
 ## <a name="see-also"></a>Siehe auch
 

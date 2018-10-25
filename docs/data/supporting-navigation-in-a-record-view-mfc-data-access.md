@@ -17,22 +17,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e1cb1b6bb4fa69bb89dd7ddd6b9483b36ea5552a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 49c29a4410db2d4253fbd8afc917cd4298df513c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46078841"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074825"
 ---
 # <a name="supporting-navigation-in-a-record-view--mfc-data-access"></a>Navigationsunterstützung in einer Datensatzansicht (MFC-Datenzugriff)
 
-In diesem Thema wird erläutert, wie zur Unterstützung von Bewegung zwischen Datensätzen in Ihrer [CRecordView](../mfc/reference/crecordview-class.md) -Klasse, einschließlich Informationen über:  
-  
-- [Befehlsbehandlung](../data/command-handlers-for-record-scrolling-mfc-data-access.md) für Scrollen von Datensätzen.  
-  
-- [Benutzeroberflächen-Aktualisierungshandler für den Bildlauf](../data/user-interface-updating-for-record-views-mfc-data-access.md) Befehle.  
-  
-## <a name="see-also"></a>Siehe auch  
+In diesem Thema wird erläutert, wie zur Unterstützung von Bewegung zwischen Datensätzen in Ihrer [CRecordView](../mfc/reference/crecordview-class.md) -Klasse, einschließlich Informationen über:
+
+- [Befehlsbehandlung](../data/command-handlers-for-record-scrolling-mfc-data-access.md) für Scrollen von Datensätzen.
+
+- [Benutzeroberflächen-Aktualisierungshandler für den Bildlauf](../data/user-interface-updating-for-record-views-mfc-data-access.md) Befehle.
+
+## <a name="see-also"></a>Siehe auch
 
 [Datensatzansichten (MFC-Datenzugriff)](../data/record-views-mfc-data-access.md)<br/>
 [Liste der ODBC-Treiber](../data/odbc/odbc-driver-list.md)

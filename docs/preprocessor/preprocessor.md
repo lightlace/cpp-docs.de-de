@@ -14,39 +14,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b693d83872ca1c918c97e47f75c89f788748353c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 74cf3ff56f37375cd8f267e3541b78e2d76a18fa
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375902"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083307"
 ---
 # <a name="preprocessor"></a>Präprozessor
-Der Präprozessor ist ein Textprozessor, der den Text einer Quelldatei im Rahmen der ersten Übersetzungsphase bearbeitet. Der Präprozessor analysiert den Quelltext zwar nicht, teilt ihn jedoch in Token auf, um Makroaufrufe zu finden. Obwohl der Compiler den Präprozessor normalerweise im ersten Durchlauf aufruft, kann der Präprozessor auch separat aufgerufen werden, um Text ohne Kompilierung zu verarbeiten.  
-  
-Das Referenzmaterial zum Präprozessor enthält die folgenden Abschnitte:  
-  
-- [Präprozessoranweisungen](../preprocessor/preprocessor-directives.md)  
-  
-- [Präprozessor-Operatoren](../preprocessor/preprocessor-operators.md)  
-  
-- [Vordefinierte Makros](../preprocessor/predefined-macros.md)  
-  
-- [Pragmas](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
-  
-**Microsoft-spezifisch**  
-  
-Sie erhalten eine Liste des Quellcodes nach der vorverarbeitung mithilfe der [/e](../build/reference/e-preprocess-to-stdout.md) oder [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) -Compileroption. Beide Optionen rufen den Präprozessor auf und geben den daraus resultierenden Text auf dem Standardausgabegerät aus, was in den meisten Fällen die Konsole ist. Der Unterschied zwischen beiden Optionen ist, dass /E `#line`-Direktive enthält und /EP diese Direktive entfernt.  
-  
-**Ende Microsoft-spezifisch**  
-  
-##  <a name="_predir_special_terminology"></a> Besondere Terminologie  
+Der Präprozessor ist ein Textprozessor, der den Text einer Quelldatei im Rahmen der ersten Übersetzungsphase bearbeitet. Der Präprozessor analysiert den Quelltext zwar nicht, teilt ihn jedoch in Token auf, um Makroaufrufe zu finden. Obwohl der Compiler den Präprozessor normalerweise im ersten Durchlauf aufruft, kann der Präprozessor auch separat aufgerufen werden, um Text ohne Kompilierung zu verarbeiten.
 
-In der Präprozessordokumentation bezieht sich der Begriff „Argument“ auf die Entität, die an eine Funktion übergeben wird. In einigen Fällen wird diese durch "tatsächlich" oder "formal" modifiziert, womit der Argumentausdruck, der im Funktionsaufruf angegeben wird, bzw. die Argumentdeklaration, die in der Funktionsdefinition festgelegt wird, beschrieben wird.  
-  
-Der Begriff "Variable" bezeichnet ein einfaches C-Datenobjekt. Der Begriff "Objekt" verweist auf beides, C++-Objekte und Variablen. Es handelt sich um einen inklusiven Begriff.  
-  
-## <a name="see-also"></a>Siehe auch  
- 
+Das Referenzmaterial zum Präprozessor enthält die folgenden Abschnitte:
+
+- [Präprozessoranweisungen](../preprocessor/preprocessor-directives.md)
+
+- [Präprozessor-Operatoren](../preprocessor/preprocessor-operators.md)
+
+- [Vordefinierte Makros](../preprocessor/predefined-macros.md)
+
+- [Pragmas](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+
+**Microsoft-spezifisch**
+
+Sie erhalten eine Liste des Quellcodes nach der vorverarbeitung mithilfe der [/e](../build/reference/e-preprocess-to-stdout.md) oder [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) -Compileroption. Beide Optionen rufen den Präprozessor auf und geben den daraus resultierenden Text auf dem Standardausgabegerät aus, was in den meisten Fällen die Konsole ist. Der Unterschied zwischen beiden Optionen ist, dass /E `#line`-Anweisungen enthält und /EP diese Anweisungen entfernt.
+
+**Ende Microsoft-spezifisch**
+
+##  <a name="_predir_special_terminology"></a> Besondere Terminologie
+
+In der Präprozessordokumentation bezieht sich der Begriff „Argument“ auf die Entität, die an eine Funktion übergeben wird. In einigen Fällen wird diese durch "tatsächlich" oder "formal" modifiziert, womit der Argumentausdruck, der im Funktionsaufruf angegeben wird, bzw. die Argumentdeklaration, die in der Funktionsdefinition festgelegt wird, beschrieben wird.
+
+Der Begriff "Variable" bezeichnet ein einfaches C-Datenobjekt. Der Begriff "Objekt" verweist auf beides, C++-Objekte und Variablen. Es handelt sich um einen inklusiven Begriff.
+
+## <a name="see-also"></a>Siehe auch
+
 [C/C++-Präprozessorreferenz](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
 [Phasen der Übersetzung](../preprocessor/phases-of-translation.md)

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be34fa84a05d329d26d1bc4aaacbed0c2b0a76e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f3093ca60b222512e517400f478fc9d635a6f867
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409193"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073772"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Von MFC verwendete Rückruffunktionen
 
@@ -127,7 +127,6 @@ Der Rückgabewert der Funktion Abort-Handler ist ungleich NULL, wenn der Druckau
 ### <a name="remarks"></a>Hinweise
 
 Der Name muss exportiert werden, wie beschrieben im Abschnitt "Hinweise" des [CDC:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc).
-
 
 ## <a name="see-also"></a>Siehe auch
 

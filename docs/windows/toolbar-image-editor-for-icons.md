@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8dee099912b69d48b0ded4184dc68c14da1899fe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ed6639bdf86a54689834c6eda03a3b6ec4dd171d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391903"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063847"
 ---
 # <a name="toolbar-c-image-editor-for-icons"></a>Symbolleiste (Bildbearbeitung für Symbole C++)
 
@@ -36,8 +36,7 @@ Die **Bildbearbeitung** Symbolleiste enthält Tools für die Zeichnung zeichnen,
 > [!NOTE]
 > Alle Tools zur Verfügung, auf die **Bild-Editor** Symbolleiste stehen auch über die **Image** Menü (unter der **Tools** Befehl).
 
-![Symbolleiste der Bildbearbeitung](../mfc/media/vcimageeditortoolbar.gif "VcImageEditorToolbar")  
-Symbolleiste des Grafik-Editors
+![Symbolleiste der Bildbearbeitung](../mfc/media/vcimageeditortoolbar.gif "VcImageEditorToolbar") Symbolleiste der Bildbearbeitung
 
 Verwenden der **Bildbearbeitung** Symbolleiste und **Option** Auswahl, klicken Sie auf das Tool oder option werden sollen.
 
@@ -46,8 +45,7 @@ Verwenden der **Bildbearbeitung** Symbolleiste und **Option** Auswahl, klicken S
 
 Mit der **Option** Auswahl können Sie die Breite des, Pinselstrich usw. angeben. Das Symbol auf der **Option** Selektor Schaltfläche ändert sich je nachdem welches Tool Sie ausgewählt haben.
 
-![Zeichnen von&#45;Shape-Selektor auf der Symbolleiste der Bildbearbeitung](../mfc/media/vcimageeditortoolbaroptionselector.gif "VcImageEditorToolbarOptionSelector")  
-Optionsauswahl auf der Symbolleiste der Bildbearbeitung
+![Zeichnen von&#45;Shape-Selektor auf der Symbolleiste der Bildbearbeitung](../mfc/media/vcimageeditortoolbaroptionselector.gif "VcImageEditorToolbarOptionSelector") Optionsauswahl auf der Symbolleiste der Bildbearbeitung
 
 Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
 

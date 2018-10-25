@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa96d87c51eb4db8c7d180f741c3543571984ec
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 04ff3603d403c34915bc062ff6c17fd818d8a286
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416486"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072511"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox-Klasse
 
@@ -104,7 +104,6 @@ CMFCToolBarFontComboBox(
     int iWidth = 0,
     BYTE nPitchAndFamily = DEFAULT_PITCH);
 
-
 protected:
 CMFCToolBarFontComboBox(
     CObList* pLstFontsExternal,
@@ -172,7 +171,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf eine `CMFCFontInfo` Objekt. Wenn *iIndex* gibt keinen gültige Element-Index, der Rückgabewert ist NULL.
+Ein Zeiger auf ein `CMFCFontInfo` -Objekt. Wenn *iIndex* gibt keinen gültige Element-Index, der Rückgabewert ist NULL.
 
 ##  <a name="m_nfontheight"></a>  CMFCToolBarFontComboBox::m_nFontHeight
 
@@ -226,6 +225,4 @@ Wenn *bExact* "true", wird diese Methode wählt eine Schriftart, die genau mit d
 [CMFCFontInfo-Klasse](../../mfc/reference/cmfcfontinfo-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [Exemplarische Vorgehensweise: Steuerelemente in eine Symbolleiste einfügen](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

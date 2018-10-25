@@ -16,31 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4eb26790a46f46638e4a4180ee2209efefda201c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6dcf63933a54983fcf98e35acce533670dc74ed4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432216"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070958"
 ---
 # <a name="nodualinterfaces"></a>no_dual_interfaces
-**C++-spezifisch**  
-  
-Ändert die Art, mit der der Compiler Wrapperfunktionen für Methoden der dualen Schnittstelle generiert.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-no_dual_interfaces  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- 
-Normalerweise ruft der Wrapper die Methode über die virtuelle Funktionstabelle für die Schnittstelle auf. Mit **No_dual_interfaces**, ruft der Wrapper stattdessen `IDispatch::Invoke` zum Aufrufen der Methode.  
-  
-**Ende C++-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- 
+**C++-spezifisch**
+
+Ändert die Art, mit der der Compiler Wrapperfunktionen für Methoden der dualen Schnittstelle generiert.
+
+## <a name="syntax"></a>Syntax
+
+```
+no_dual_interfaces
+```
+
+## <a name="remarks"></a>Hinweise
+
+Normalerweise ruft der Wrapper die Methode über die virtuelle Funktionstabelle für die Schnittstelle auf. Mit **No_dual_interfaces**, ruft der Wrapper stattdessen `IDispatch::Invoke` zum Aufrufen der Methode.
+
+**Ende C++-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
 [#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)

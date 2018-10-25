@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 760f8c5527f0dbd4fa0ebc2aed3aed59a9676b82
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c914bab9ab7a4bb15f6fe3d2820d7ff2534c3c6e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399016"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053642"
 ---
 # <a name="cfont-class"></a>CFont-Klasse
 
@@ -372,6 +372,4 @@ Weitere Informationen zur Verwendung von Grafikobjekten finden Sie unter [Grafik
 [MFC-Beispiel HIERSVR](../../visual-cpp-samples.md)<br/>
 [CGdiObject-Klasse](../../mfc/reference/cgdiobject-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
-
-
 

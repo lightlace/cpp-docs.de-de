@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49e298af793655bb3ea3854909a16dd4db03c6a3
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 7dc5519fbef10ca6c369bcffacacb8351dbc0390
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328180"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060428"
 ---
 # <a name="attributes-by-usage"></a>Attribute nach Verwendung
 
@@ -43,7 +43,7 @@ Wenn ein Attribut ein Elements, das nicht im Bereich für das Attribut ist voran
 
 ## <a name="module-attributes"></a>Modulattribute
 Das folgende Attribut kann nur angewendet werden, um die [Modul](module-cpp.md) Attribut.
-  
+
 |Attribut|Beschreibung|
 |---------------|-----------------|
 |[helpstringdll](helpstringdll.md)|Gibt den Namen der DLL zu verwenden, um die Suche nach Dokument (Lokalisierung) ausführen.|
@@ -85,7 +85,6 @@ Sie müssen diese Regeln zum Definieren einer Schnittstelle beachten:
 - Es sind keine überladenen Methoden zulässig.
 
 Wenn Sie nicht angeben der [Uuid](uuid-cpp-attributes.md) Attribut, und verwenden den gleichen Schnittstellennamen in Projekten auf anderes Attribut, wird dieselbe GUID generiert.
-
 
 ## <a name="see-also"></a>Siehe auch
 

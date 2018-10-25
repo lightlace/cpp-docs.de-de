@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b62de2a1e6cba6ecbb29521518f5442ab002ddf3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7907935971fae7d990c651410e5b76982b798075
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381945"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060519"
 ---
 # <a name="servers-implementing-server-documents"></a>Server: Implementieren von Serverdokumenten
 
@@ -36,7 +36,7 @@ Dieser Artikel beschreibt die Schritte, die Sie ausführen müssen, um erfolgrei
 
 1. Implementieren der `OnGetEmbeddedItem` Memberfunktion die Dokumentklasse Server.
 
-     `OnGetEmbeddedItem` wird aufgerufen, wenn der Benutzer eine containeranwendung erstellt oder ein eingebettetes Element bearbeitet. Es sollte ein Element, das gesamte Dokument darstellt, zurück. Dies sollte es sich um ein Objekt von Ihr `COleServerItem`-abgeleitete Klasse.
+   `OnGetEmbeddedItem` wird aufgerufen, wenn der Benutzer eine containeranwendung erstellt oder ein eingebettetes Element bearbeitet. Es sollte ein Element, das gesamte Dokument darstellt, zurück. Dies sollte es sich um ein Objekt von Ihr `COleServerItem`-abgeleitete Klasse.
 
 1. Überschreiben der `Serialize` Memberfunktion versucht, den Inhalt des Dokuments serialisieren. Sie müssen nicht die Liste der Serverelemente serialisiert, es sei denn, Sie sie mithilfe die systemeigenen Daten in Ihrem Dokument darstellen. Weitere Informationen finden Sie unter *Berichtsserverelemente implementieren* in diesem Artikel [Server: Serverelemente](../mfc/servers-server-items.md).
 

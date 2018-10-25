@@ -19,27 +19,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6ad24a7be5c46c8019b22629003306ea99c56fd3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 39c017113d6f3da0041b5e460666af955c27b0fa
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106958"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066148"
 ---
 # <a name="data-source-odbc"></a>Datenquelle (ODBC)
 
-Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.  
-  
-In Datenbankterminologie ausgedrückt setzt sich eine Datenquelle aus einem bestimmten Satz von Daten zusammen, den Informationen, die für den Zugriff auf die Daten notwendig sind, und der Position der Datenquelle, die in Form eines Datenquellennamens beschrieben werden kann. Arbeiten mit Klasse [CDatabase](../../mfc/reference/cdatabase-class.md), muss die Datenquelle, die Sie über Open Database Connectivity (ODBC)-Administrator konfiguriert haben. Beispiele für Datenquellen sind eine Remotedatenbank, die in einem Netzwerk oder eine Microsoft Access-Datei in einem lokalen Verzeichnis auf Microsoft SQL Server ausgeführt wird. Sie können von der Anwendung aus auf jede Datenquelle zugreifen, für die Sie einen ODBC-Treiber besitzen.  
-  
-In der Anwendung können eine oder mehrere Datenquellen gleichzeitig aktiv sein. Dabei wird jede von einem `CDatabase`-Objekt repräsentiert. Es können auch gleichzeitig mehrere Verbindungen zu einer Datenquelle bestehen. Sie können eine Verbindung zu Remote- oder zu lokalen Datenquellen aufbauen, je nachdem, welche Treiber installiert wurden und welche Funktionen diese ODBC-Treiber unterstützen. Weitere Informationen zu Datenquellen und ODBC-Administrators finden Sie unter [ODBC](../../data/odbc/odbc-basics.md) und [ODBC-Administrator](../../data/odbc/odbc-administrator.md).  
-  
-Die folgenden Themen enthalten weitere Informationen zu Datenquellen:  
-  
-- [Datenquelle: Verwalten von Verbindungen (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)  
-  
-- [Datenquelle: Bestimmen des Schemas der Datenquelle (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)  
-  
-## <a name="see-also"></a>Siehe auch  
+Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
+
+In Datenbankterminologie ausgedrückt setzt sich eine Datenquelle aus einem bestimmten Satz von Daten zusammen, den Informationen, die für den Zugriff auf die Daten notwendig sind, und der Position der Datenquelle, die in Form eines Datenquellennamens beschrieben werden kann. Arbeiten mit Klasse [CDatabase](../../mfc/reference/cdatabase-class.md), muss die Datenquelle, die Sie über Open Database Connectivity (ODBC)-Administrator konfiguriert haben. Beispiele für Datenquellen sind eine Remotedatenbank, die in einem Netzwerk oder eine Microsoft Access-Datei in einem lokalen Verzeichnis auf Microsoft SQL Server ausgeführt wird. Sie können von der Anwendung aus auf jede Datenquelle zugreifen, für die Sie einen ODBC-Treiber besitzen.
+
+In der Anwendung können eine oder mehrere Datenquellen gleichzeitig aktiv sein. Dabei wird jede von einem `CDatabase`-Objekt repräsentiert. Es können auch gleichzeitig mehrere Verbindungen zu einer Datenquelle bestehen. Sie können eine Verbindung zu Remote- oder zu lokalen Datenquellen aufbauen, je nachdem, welche Treiber installiert wurden und welche Funktionen diese ODBC-Treiber unterstützen. Weitere Informationen zu Datenquellen und ODBC-Administrators finden Sie unter [ODBC](../../data/odbc/odbc-basics.md) und [ODBC-Administrator](../../data/odbc/odbc-administrator.md).
+
+Die folgenden Themen enthalten weitere Informationen zu Datenquellen:
+
+- [Datenquelle: Verwalten von Verbindungen (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)
+
+- [Datenquelle: Bestimmen des Schemas der Datenquelle (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)
+
+## <a name="see-also"></a>Siehe auch
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

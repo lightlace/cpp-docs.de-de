@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c530a9853aad3e16e5e4094f4d90e30c2643c0d8
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: f89d70ed5b7a84cdbed61784b59b0748abc6432d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890893"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083320"
 ---
 # <a name="clistctrl-class"></a>CListCtrl-Klasse
 
@@ -444,19 +444,19 @@ Listenansicht-Steuerelemente können in vier verschiedene Arten, namens "Views".
 
 - Für Symbolansicht
 
-     Jedes Element wird als ein Symbol in voller Größe (32 x 32 Pixel) mit einer Bezeichnung darunter angezeigt. Der Benutzer kann die Elemente an einem beliebigen Speicherort in der Liste an ziehen.
+   Jedes Element wird als ein Symbol in voller Größe (32 x 32 Pixel) mit einer Bezeichnung darunter angezeigt. Der Benutzer kann die Elemente an einem beliebigen Speicherort in der Liste an ziehen.
 
 - Kleine Symbole angezeigt
 
-     Jedes Element wird als kleines Symbol (16 x 16 Pixel) mit der Bezeichnung rechts davon. Der Benutzer kann die Elemente an einem beliebigen Speicherort in der Liste an ziehen.
+   Jedes Element wird als kleines Symbol (16 x 16 Pixel) mit der Bezeichnung rechts davon. Der Benutzer kann die Elemente an einem beliebigen Speicherort in der Liste an ziehen.
 
 - Listenansicht
 
-     Jedes Element wird als kleines Symbol mit einer Bezeichnung rechts daneben. Elemente werden in Spalten angeordnet und nicht in einem beliebigen Speicherort in der Liste an gezogen werden.
+   Jedes Element wird als kleines Symbol mit einer Bezeichnung rechts daneben. Elemente werden in Spalten angeordnet und nicht in einem beliebigen Speicherort in der Liste an gezogen werden.
 
 - Ansicht "Bericht"
 
-     Jedes Element wird in einer eigenen Zeile, mit zusätzlichen Informationen, die in Spalten nach rechts angeordnet. Die am weitesten links stehende Spalte enthält, das kleine Symbol und die Bezeichnung, und nachfolgende Spalten enthalten die Unterelemente darstellen, wie von der Anwendung angegeben. Eine eingebettete Kopfzeilen-Steuerelement (Klasse [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementiert diese Spalten. Weitere Informationen auf dem Kopfzeilen-Steuerelement und die Spalten in einer Berichtsansicht finden Sie unter [Verwenden von CListCtrl: Hinzufügen von Spalten zum Steuerelement (Berichtsansicht)](../../mfc/adding-columns-to-the-control-report-view.md).
+   Jedes Element wird in einer eigenen Zeile, mit zusätzlichen Informationen, die in Spalten nach rechts angeordnet. Die am weitesten links stehende Spalte enthält, das kleine Symbol und die Bezeichnung, und nachfolgende Spalten enthalten die Unterelemente darstellen, wie von der Anwendung angegeben. Eine eingebettete Kopfzeilen-Steuerelement (Klasse [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementiert diese Spalten. Weitere Informationen auf dem Kopfzeilen-Steuerelement und die Spalten in einer Berichtsansicht finden Sie unter [Verwenden von CListCtrl: Hinzufügen von Spalten zum Steuerelement (Berichtsansicht)](../../mfc/adding-columns-to-the-control-report-view.md).
 
 Das Format der aktuellen Liste-Ansicht des Steuerelements bestimmt die aktuelle Ansicht. Weitere Informationen zu dieser Stile und deren Verwendung, finden Sie unter [Verwenden von CListCtrl: Ändern der Stile von Listensteuerelementen](../../mfc/changing-list-control-styles.md).
 
@@ -466,19 +466,19 @@ Zusätzlich zu die Stile, die Standardliste Klasse `CListCtrl` unterstützt zahl
 
 - Zeigen Sie die Auswahl
 
-     Wenn aktiviert, können automatische Auswahl eines Elements, wenn der Cursor über dem Element für einen bestimmten Zeitraum bleibt.
+   Wenn aktiviert, können automatische Auswahl eines Elements, wenn der Cursor über dem Element für einen bestimmten Zeitraum bleibt.
 
 - Virtuelle Listenansichten
 
-     Wenn aktiviert, können das Steuerelement, um bis zu DWORD-Elemente zu unterstützen. Dies ist möglich, platzieren Sie den Mehraufwand der Verwaltung von Daten in der Anwendung. Mit Ausnahme von der Auswahl von Listenelementen und den Fokus muss alle Informationen über die Elemente von der Anwendung verwaltet werden. Weitere Informationen finden Sie unter [Verwenden von CListCtrl: Virtuelle Listensteuerelemente](../../mfc/virtual-list-controls.md).
+   Wenn aktiviert, können das Steuerelement, um bis zu DWORD-Elemente zu unterstützen. Dies ist möglich, platzieren Sie den Mehraufwand der Verwaltung von Daten in der Anwendung. Mit Ausnahme von der Auswahl von Listenelementen und den Fokus muss alle Informationen über die Elemente von der Anwendung verwaltet werden. Weitere Informationen finden Sie unter [Verwenden von CListCtrl: Virtuelle Listensteuerelemente](../../mfc/virtual-list-controls.md).
 
 - Und zwei-einmalklick - Aktivierung
 
-     Wenn aktiviert, können hot Track (automatisch hervorheben des Elementtextes) und einem oder beiden-Klick-Aktivierung des markierten Elements an.
+   Wenn aktiviert, können hot Track (automatisch hervorheben des Elementtextes) und einem oder beiden-Klick-Aktivierung des markierten Elements an.
 
 - Drag & drop spaltensortierung
 
-     Wenn aktiviert, können die Drag & Drop neuanordnung von Spalten in einem Listenansicht-Steuerelement. Nur in der Ansicht "Bericht" verfügbar.
+   Wenn aktiviert, können die Drag & Drop neuanordnung von Spalten in einem Listenansicht-Steuerelement. Nur in der Ansicht "Bericht" verfügbar.
 
 Weitere Informationen zum Verwenden dieser neue Stile erweitert werden, finden Sie unter [Verwenden von CListCtrl: Ändern der Stile von Listensteuerelementen](../../mfc/changing-list-control-styles.md).
 
@@ -496,19 +496,19 @@ Die Symbole, Bilder der Header-Element und -Anwendung – definiert Zustände f�
 
 - Großes Symbol
 
-     Für die Symbole in voller Größe können Sie in der Symbolansicht verwendet.
+   Für die Symbole in voller Größe können Sie in der Symbolansicht verwendet.
 
 - Kleines Symbol
 
-     In der kleinen Symbols an, die Liste, und die Berichtsansichten verwendet für kleinere Versionen der Symbole für in der Symbolansicht.
+   In der kleinen Symbols an, die Liste, und die Berichtsansichten verwendet für kleinere Versionen der Symbole für in der Symbolansicht.
 
 - Anwendung definierte Zustand
 
-     Enthält die Status-Images, die neben des Symbols an, dass eine Anwendung definierte Zustand angezeigt werden.
+   Enthält die Status-Images, die neben des Symbols an, dass eine Anwendung definierte Zustand angezeigt werden.
 
 - Headerelement
 
-     Verwendet in der Berichtsansicht für kleine Bilder, die in jedem Headerelement-Steuerelement angezeigt werden.
+   Verwendet in der Berichtsansicht für kleine Bilder, die in jedem Headerelement-Steuerelement angezeigt werden.
 
 Standardmäßig Löscht ein Listenansicht-Steuerelement der Bildliste zugewiesen, wenn es zerstört wird; Allerdings kann Entwickler dieses Verhalten anpassen, indem Sie jede Bildliste Wenn es nicht mehr verwendet wird, zerstören, wie von der Anwendung bestimmt. Weitere Informationen finden Sie unter [Verwenden von CListCtrl: Auflisten von Elementen und Bilderlisten](../list-items-and-image-lists.md).
 

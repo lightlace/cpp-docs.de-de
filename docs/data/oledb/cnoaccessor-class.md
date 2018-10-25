@@ -19,58 +19,58 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f383b79c8130501773c56db47c08b9449b259a62
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 97cfefc679391cb54ff40f38285f22f40d068553
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46111432"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063834"
 ---
 # <a name="cnoaccessor-class"></a>CNoAccessor-Klasse
 
-Kann als ein Vorlagenargument verwendet werden (`TAccessor`) für die Vorlagenklassen, z. B. `CCommand` und `CTable`, erfordern ein Argument der Accessor-Klasse.  
-  
+Kann als ein Vorlagenargument verwendet werden (`TAccessor`) für die Vorlagenklassen, z. B. `CCommand` und `CTable`, erfordern ein Argument der Accessor-Klasse.
+
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-class CNoAccessor  
-```  
-  
-## <a name="remarks"></a>Hinweise  
+class CNoAccessor
+```
 
-Verwendung `CNoAccessor` als ein Vorlagenargument, wenn Sie nicht die Klasse zum unterstützen Parameter oder Spalten ausgeben möchten.  
-  
-`CNoAccessor` implementiert die folgenden Stubmethoden, von denen jedes anderen Klassenmethoden Accessor entsprechen:  
-  
-- `BindColumns` -Bindet Spalten Accessoren.  
-  
-- `BindParameters` – Binden die erstellte Parameter an Spalten.  
-  
-- `Bind` -Bindungen erstellt.  
-  
-- `Close` -Schließt die Zugriffsmethode.  
-  
-- `ReleaseAccessors` -Gibt die Accessoren, die von der Klasse erstellt.  
-  
-- `FreeRecordMemory` -Gibt frei, alle Spalten im aktuellen Datensatz, der freigegeben werden müssen.  
-  
-- `GetColumnInfo` -Ruft Informationen aus dem Rowset geöffnet.  
-  
-- `GetNumAccessors` -Ruft die Anzahl der Accessoren, die von der Klasse erstellt.  
-  
-- `IsAutoAccessor` -Gibt "true" zurück, wenn die Daten automatisch für den Accessor während eines Verschiebevorgangs abgerufen werden.  
-  
-- `GetHAccessor` -Ruft Sie Accessorhandles für einen angegebenen Accessor ab.  
-  
-- `GetBuffer` -Ruft Sie den Zeiger auf den Lesezeichen Puffer ab.  
-  
-- `NoBindOnNullRowset` – Verhindert eine Datenbindung für leere Rowsets.  
-  
-## <a name="requirements"></a>Anforderungen  
+## <a name="remarks"></a>Hinweise
 
-**Header:** atldbcli.h  
-  
-## <a name="see-also"></a>Siehe auch  
+Verwendung `CNoAccessor` als ein Vorlagenargument, wenn Sie nicht die Klasse zum unterstützen Parameter oder Spalten ausgeben möchten.
+
+`CNoAccessor` implementiert die folgenden Stubmethoden, von denen jedes anderen Klassenmethoden Accessor entsprechen:
+
+- `BindColumns` -Bindet Spalten Accessoren.
+
+- `BindParameters` – Binden die erstellte Parameter an Spalten.
+
+- `Bind` -Bindungen erstellt.
+
+- `Close` -Schließt die Zugriffsmethode.
+
+- `ReleaseAccessors` -Gibt die Accessoren, die von der Klasse erstellt.
+
+- `FreeRecordMemory` -Gibt frei, alle Spalten im aktuellen Datensatz, der freigegeben werden müssen.
+
+- `GetColumnInfo` -Ruft Informationen aus dem Rowset geöffnet.
+
+- `GetNumAccessors` -Ruft die Anzahl der Accessoren, die von der Klasse erstellt.
+
+- `IsAutoAccessor` -Gibt "true" zurück, wenn die Daten automatisch für den Accessor während eines Verschiebevorgangs abgerufen werden.
+
+- `GetHAccessor` -Ruft Sie Accessorhandles für einen angegebenen Accessor ab.
+
+- `GetBuffer` -Ruft Sie den Zeiger auf den Lesezeichen Puffer ab.
+
+- `NoBindOnNullRowset` – Verhindert eine Datenbindung für leere Rowsets.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** atldbcli.h
+
+## <a name="see-also"></a>Siehe auch
 
 [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)

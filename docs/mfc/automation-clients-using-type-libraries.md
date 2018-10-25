@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 421040024e5dd95fb39bdc78cd54f3f7dc49bf83
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 001dfb29a5ac0f6d93b0715bd2b86ccd60e91259
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377709"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054604"
 ---
 # <a name="automation-clients-using-type-libraries"></a>Automatisierungsclients: Verwenden von Typbibliotheken
 
@@ -54,9 +54,9 @@ Visual C++ verwaltet diese Typbibliothek-Datei automatisch für Sie, wenn Sie Au
     > [!NOTE]
     >  Sie können Schnittstellen aus mehr als eine Typbibliothek auswählen.
 
-     Wählen Sie die Schnittstellen, darauf doppelklicken, oder klicken Sie auf die **hinzufügen** Schaltfläche. Wenn Sie dies tun, Namen für die Dispatchklassen werden in der **generierte Klassen** Feld. Sie können den Klassennamen in Bearbeiten der `Class` Feld.
+   Wählen Sie die Schnittstellen, darauf doppelklicken, oder klicken Sie auf die **hinzufügen** Schaltfläche. Wenn Sie dies tun, Namen für die Dispatchklassen werden in der **generierte Klassen** Feld. Sie können den Klassennamen in Bearbeiten der `Class` Feld.
 
-     Die **Datei** Feld zeigt die Datei, die in der Klasse deklariert werden. (Sie können diesen sowie den Dateinamen bearbeiten). Sie können auch die Schaltfläche zum Durchsuchen verwenden, wählen Sie andere Dateien, wenn Sie lieber die Header- und Implementierungsdateien Informationen, die in vorhandenen Dateien oder in einem anderen Verzeichnis als dem Projektverzeichnis geschrieben haben.
+   Die **Datei** Feld zeigt die Datei, die in der Klasse deklariert werden. (Sie können diesen sowie den Dateinamen bearbeiten). Sie können auch die Schaltfläche zum Durchsuchen verwenden, wählen Sie andere Dateien, wenn Sie lieber die Header- und Implementierungsdateien Informationen, die in vorhandenen Dateien oder in einem anderen Verzeichnis als dem Projektverzeichnis geschrieben haben.
 
     > [!NOTE]
     >  Die Dispatchklassen für die ausgewählten Schnittstellen werden in der hier angegebenen Datei platziert. Wenn Sie die Schnittstellen deklariert werden, in verschiedenen Headern möchten, müssen Sie diesen Assistenten für jeden Header-Datei ausführen, die Sie erstellen möchten.
@@ -66,7 +66,7 @@ Visual C++ verwaltet diese Typbibliothek-Datei automatisch für Sie, wenn Sie Au
 
 1. Klicken Sie auf **Fertig stellen**.
 
-     Der Assistent wird dann den Code für die Dispatchklassen, die mit den angegebenen Klassen- und Dateinamen schreiben.
+   Der Assistent wird dann den Code für die Dispatchklassen, die mit den angegebenen Klassen- und Dateinamen schreiben.
 
 ## <a name="see-also"></a>Siehe auch
 

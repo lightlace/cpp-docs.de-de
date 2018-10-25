@@ -16,20 +16,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b46b5c3b4750957c548becfcc5143f5eed858f71
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 0df8cb1def78e3a7b564f268eb1b3b0a2069fb11
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791261"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062846"
 ---
 # <a name="stand-alone-attributes"></a>Eigenständige Attribute
+
 Ein eigenständiges Attribut kann nicht ausgeführt werden, auf ein C++-Schlüsselwort jedoch eher wie eine einzige Zeile Code. Eigenständige Attribut-Anweisungen erfordern ein Semikolon am Ende der Zeile.
-  
+
+## <a name="stand-alone-attribute-list"></a>Eigenständige Attributliste
+
 |Attribut|Beschreibung|
 |---------------|-----------------|
 |[cpp_quote](cpp-quote.md)|Gibt die angegebene Zeichenfolge verwendet werden, ohne die Anführungszeichen in der generierten Headerdatei an.|
-|[Benutzerdefinierte](custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|
+|[custom](custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|
 |[db_command](db-command.md)|Erstellt einen OLE DB-Befehl.|
 |[emitidl](emitidl.md)|Bestimmt, ob alle nachfolgenden IDL-Attribute verarbeitet und in der generierten IDL-Datei platziert werden.|
 |[idl_module](idl-module.md)|Gibt einen Einstiegspunkt in einer DLL an.|
@@ -40,10 +43,10 @@ Ein eigenständiges Attribut kann nicht ausgeführt werden, auf ein C++-Schlüss
 |[include](include-cpp.md)|Gibt einen oder mehrere Headerdateien, die in der generierten IDL-Datei eingeschlossen werden.|
 |[includelib](includelib-cpp.md)|Bewirkt, dass eine IDL- oder h-Datei, die in der generierten IDL-Datei eingeschlossen werden.|
 |[library_block](library-block.md)|Fügt ein Konstrukt in bibliotheksblock der IDL-Datei an.|
-|[Modul](module-cpp.md)|Definiert den Bibliotheksblock in der IDL-Datei.|
+|[module](module-cpp.md)|Definiert den Bibliotheksblock in der IDL-Datei.|
 |[no_injected_text](no-injected-text.md)|Verhindert, dass den Compiler Einfügen von Code durch Verwendung des Attributs.|
 |[pragma](pragma.md)|Gibt die angegebene Zeichenfolge verwendet werden, ohne die Anführungszeichen in der generierten IDL-Datei aus.|
-  
+
 ## <a name="see-also"></a>Siehe auch
 
 [Attribute nach Verwendung](attributes-by-usage.md)

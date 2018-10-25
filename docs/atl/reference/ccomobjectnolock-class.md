@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76b8b3b329f3282a53eacb4fe27d6cfa79e08b7e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 45bb74921693b4f033fbff578a12c980816a6aea
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46078958"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083385"
 ---
 # <a name="ccomobjectnolock-class"></a>CComObjectNoLock-Klasse
 
@@ -112,7 +112,7 @@ Der Destruktor.
 
 ### <a name="remarks"></a>Hinweise
 
-Gibt Sie frei, alle zugeordneten Ressourcen und ruft [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
+Gibt Sie frei, alle zugeordneten Ressourcen und ruft [FinalRelease](ccomobjectrootex-class.md#finalrelease).
 
 ##  <a name="queryinterface"></a>  CComObjectNoLock::QueryInterface
 

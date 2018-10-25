@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4aa07273e68f0320823d258f324bb8631aef77a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 90c50d3a918f452372aacae5beb36f5425d6a77a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095598"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053616"
 ---
 # <a name="cnonstatelessworker-class"></a>CNonStatelessWorker-Klasse
 
@@ -75,7 +75,7 @@ Der Vorteil dieser Klasse ist, dass es sich um eine bequeme Möglichkeit, änder
 
 ##  <a name="execute"></a>  CNonStatelessWorker::Execute
 
-Implementierung von [WorkerArchetype::Execute](worker-archetype.md#execute).  
+Implementierung von [WorkerArchetype::Execute](worker-archetype.md#execute).
 
 ```
 void Execute(
@@ -86,7 +86,7 @@ void Execute(
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode erstellt eine Instanz der *Worker* -Klasse auf den Stapel und ruft [initialisieren](worker-archetype.md#initialize) für dieses Objekt. Wenn die Initialisierung erfolgreich ist, ruft diese Methode auch [Execute](worker-archetype.md#execute) und [Terminate](worker-archetype.md#terminate) für dasselbe Objekt.  
+Diese Methode erstellt eine Instanz der *Worker* -Klasse auf den Stapel und ruft [initialisieren](worker-archetype.md#initialize) für dieses Objekt. Wenn die Initialisierung erfolgreich ist, ruft diese Methode auch [Execute](worker-archetype.md#execute) und [Terminate](worker-archetype.md#terminate) für dasselbe Objekt.
 
 ##  <a name="initialize"></a>  CNonStatelessWorker::Initialize
 

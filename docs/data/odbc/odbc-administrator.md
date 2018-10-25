@@ -22,46 +22,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c0a0c0cc8817d40b325ceb7a96769dfe971b60c8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5c00527b5378805e0aa81c74c23175edd39bd144
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097808"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052576"
 ---
 # <a name="odbc-administrator"></a>ODBC-Administrator
 
-ODBC-Administrator registriert und konfiguriert die [Datenquellen](../../data/odbc/data-source-odbc.md) für Sie verfügbaren entweder lokal oder in einem Netzwerk. Die Assistenten erstellen mithilfe der vom ODBC-Administrator bereitgestellten Informationen Code in Anwendungen, der Verbindungen zu Datenquellen für den Benutzer aufbaut.  
-  
-Zur Einrichtung einer ODBC-Datenquelle zur Verwendung mit MFC-ODBC-Datenbankklassen oder DAO-Klassen muss die Datenquelle zunächst registriert und konfiguriert werden. Zum Hinzufügen und Entfernen von Datenquellen verwenden Sie den ODBC-Administrator. Je nach ODBC-Treiber können Sie auch neue Datenquellen erstellen.  
-  
-Der ODBC-Administrator wird beim Setup installiert. Wenn Sie ausgewählt haben **benutzerdefinierte** Installation, und wählen Sie keine ODBC-Treiber in der **Datenbankoptionen** (Dialogfeld), müssen Sie Setup erneut aus, um die notwendigen Dateien ausführen.  
-  
-Wählen Sie beim Setup die ODBC-Treiber aus, die Sie installieren möchten. Später können Sie mit Setup für Visual C++ zusätzliche Treiber installieren, die in Visual C++ mitgeliefert werden.  
-  
-Wenn Sie ODBC-Treiber installieren möchten, die nicht in Visual C++ mitgeliefert werden, müssen Sie das Setup ausführen, das mit dem Treiber geliefert wurde.  
-  
-#### <a name="to-install-odbc-drivers-that-ship-with-visual-c"></a>So installieren Sie ODBC-Treiber, die in Visual C++ mitgeliefert werden  
-  
-1. Starten Sie von der Visual C++-CD das Programm Setup.  
-  
-     Das Begrüßungsdialogfeld von Setup wird angezeigt.  
-  
-1. Klicken Sie auf **Weiter** in jedem Dialogfeld bis zu der **Installationsoptionen** Dialogfeld. Wählen Sie **benutzerdefinierte**, und klicken Sie dann auf **Weiter**.  
-  
-1. Deaktivieren Sie alle Kontrollkästchen in der **Setup für Microsoft Visual C++** im Dialogfeld, mit Ausnahme der **Datenbankoptionen** , und klicken Sie dann auf **Details** zum Anzeigen der **Datenbankoptionen** Dialogfeld.  
-  
-1. Deaktivieren der **Microsoft Data Access Objects** aktivieren Sie die Kontrollkästchen der **Microsoft ODBC-Treiber** , und klicken Sie dann auf **Details**.  
-  
-     Die **Microsoft ODBC-Treiber** Dialogfeld wird angezeigt.  
-  
-1. Wählen Sie die Treiber, die Sie installieren möchten, und klicken Sie dann auf **OK** zweimal.  
-  
-1. Klicken Sie auf **Weiter** in den verbleibenden Dialogfeldern, um die Installation zu beginnen. Setup benachrichtigt Sie, wenn die Installation beendet ist.  
-  
-Wenn die Treiber installiert sind, können Sie mit dem ODBC-Administrator die Datenquelle konfigurieren. In der Systemsteuerung finden Sie das ODBC-Symbol.  
-  
-## <a name="see-also"></a>Siehe auch  
+ODBC-Administrator registriert und konfiguriert die [Datenquellen](../../data/odbc/data-source-odbc.md) für Sie verfügbaren entweder lokal oder in einem Netzwerk. Die Assistenten erstellen mithilfe der vom ODBC-Administrator bereitgestellten Informationen Code in Anwendungen, der Verbindungen zu Datenquellen für den Benutzer aufbaut.
+
+Zur Einrichtung einer ODBC-Datenquelle zur Verwendung mit MFC-ODBC-Datenbankklassen oder DAO-Klassen muss die Datenquelle zunächst registriert und konfiguriert werden. Zum Hinzufügen und Entfernen von Datenquellen verwenden Sie den ODBC-Administrator. Je nach ODBC-Treiber können Sie auch neue Datenquellen erstellen.
+
+Der ODBC-Administrator wird beim Setup installiert. Wenn Sie ausgewählt haben **benutzerdefinierte** Installation, und wählen Sie keine ODBC-Treiber in der **Datenbankoptionen** (Dialogfeld), müssen Sie Setup erneut aus, um die notwendigen Dateien ausführen.
+
+Wählen Sie beim Setup die ODBC-Treiber aus, die Sie installieren möchten. Später können Sie mit Setup für Visual C++ zusätzliche Treiber installieren, die in Visual C++ mitgeliefert werden.
+
+Wenn Sie ODBC-Treiber installieren möchten, die nicht in Visual C++ mitgeliefert werden, müssen Sie das Setup ausführen, das mit dem Treiber geliefert wurde.
+
+#### <a name="to-install-odbc-drivers-that-ship-with-visual-c"></a>So installieren Sie ODBC-Treiber, die in Visual C++ mitgeliefert werden
+
+1. Starten Sie von der Visual C++-CD das Programm Setup.
+
+   Das Begrüßungsdialogfeld von Setup wird angezeigt.
+
+1. Klicken Sie auf **Weiter** in jedem Dialogfeld bis zu der **Installationsoptionen** Dialogfeld. Wählen Sie **benutzerdefinierte**, und klicken Sie dann auf **Weiter**.
+
+1. Deaktivieren Sie alle Kontrollkästchen in der **Setup für Microsoft Visual C++** im Dialogfeld, mit Ausnahme der **Datenbankoptionen** , und klicken Sie dann auf **Details** zum Anzeigen der **Datenbankoptionen** Dialogfeld.
+
+1. Deaktivieren der **Microsoft Data Access Objects** aktivieren Sie die Kontrollkästchen der **Microsoft ODBC-Treiber** , und klicken Sie dann auf **Details**.
+
+   Die **Microsoft ODBC-Treiber** Dialogfeld wird angezeigt.
+
+1. Wählen Sie die Treiber, die Sie installieren möchten, und klicken Sie dann auf **OK** zweimal.
+
+1. Klicken Sie auf **Weiter** in den verbleibenden Dialogfeldern, um die Installation zu beginnen. Setup benachrichtigt Sie, wenn die Installation beendet ist.
+
+Wenn die Treiber installiert sind, können Sie mit dem ODBC-Administrator die Datenquelle konfigurieren. In der Systemsteuerung finden Sie das ODBC-Symbol.
+
+## <a name="see-also"></a>Siehe auch
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [Datenquelle (ODBC)](../../data/odbc/data-source-odbc.md)

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0d8ebfc8f1111049368a76a9b153fcf8079a4edd
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 1255eb0fc00d1b134335807a1f20e6761c49ec90
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081857"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064471"
 ---
 # <a name="moving-a-string-from-one-resource-file-to-another-c"></a>Verschieben von Zeichenfolgen aus einer Ressourcendatei mit einem anderen (C++)
 
@@ -53,4 +53,4 @@ Win32
 
 [Zeichenfolgen-Editor](../windows/string-editor.md)<br/>
 [Ressourcendateien](../windows/resource-files-visual-studio.md)<br/>
-[Anpassen von Fensterlayouts](/visualstudio/ide/customizing-window-layouts-in-visual-studio)  
+[Anpassen von Fensterlayouts](/visualstudio/ide/customizing-window-layouts-in-visual-studio)

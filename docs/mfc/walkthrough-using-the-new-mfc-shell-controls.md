@@ -14,18 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47b169371b8551622650687e5d7bd8c06f560725
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 168d7c1740f9b33af1eca539e30514ce76259ceb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236048"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076333"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Exemplarische Vorgehensweise: Verwenden der neuen MFC-Shell-Steuerelemente
 
 In dieser exemplarischen Vorgehensweise erstellen Sie eine Anwendung, die Datei-Explorer ähnelt. Erstellen Sie ein Fenster, die zwei Bereiche aufweist. Im linke Bereich enthält eine [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) Objekt, das Ihrem Desktop in einer hierarchischen Ansicht anzeigt. Im rechte Bereich enthält eine [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) , die Dateien angezeigt, in dem Ordner, der im linken Bereich ausgewählt ist.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 In dieser exemplarischen Vorgehensweise wird davon ausgegangen, dass Sie Visual Studio eingerichtet haben, verwenden **allgemeine Entwicklungseinstellungen**. Wenn Sie eine andere entwicklungseinstellung verwenden, können einige Visual Studio-Fenster, die in dieser exemplarischen Vorgehensweise wir verwenden nicht standardmäßig angezeigt.
 
@@ -35,17 +35,17 @@ In dieser exemplarischen Vorgehensweise wird davon ausgegangen, dass Sie Visual 
 
 1. In der **neues Projekt** Dialogfeld erweitern Sie die **Visual C++** Knoten in der **Projekttypen** Bereich, und wählen Sie **MFC**. Klicken Sie auf die **Vorlagen** wählen Sie im Bereich **MFC-Anwendung**. Geben Sie einen Namen für das Projekt, z. B. `MFCShellControls` , und klicken Sie auf **OK**. Nach dem **MFS-Anwendungsassistenten** angezeigt, und verwenden Sie die folgenden Optionen:
 
-    1. Auf der **Anwendungstyp** Bereich unter **Anwendungstyp**Deaktivieren der **Dokumente im Registerformat** Option. Wählen Sie als Nächstes **einzelnes Dokument** , und wählen Sie **Unterstützung für die Dokument-/Ansicht**. Unter **Style Project**Option **Visual Studio**, und von der **visueller Stil und Farben** Dropdown-Liste den Eintrag **Office 2007 (blaues Design)**. 
+    1. Auf der **Anwendungstyp** Bereich unter **Anwendungstyp**Deaktivieren der **Dokumente im Registerformat** Option. Wählen Sie als Nächstes **einzelnes Dokument** , und wählen Sie **Unterstützung für die Dokument-/Ansicht**. Unter **Style Project**Option **Visual Studio**, und von der **visueller Stil und Farben** Dropdown-Liste den Eintrag **Office 2007 (blaues Design)**.
 
     1. Auf der **Verbunddokumente** wählen Sie im Bereich **keine**.
 
     1. Nehmen Sie keine Änderungen an der **Zeichenfolgen für Dokumentvorlagen** Bereich.
 
-    1. Auf der **Datenbankunterstützung** wählen Sie im Bereich (Visual Studio 2015 und früher), **keine** , da die Anwendung eine Datenbank nicht verwendet. 
+    1. Auf der **Datenbankunterstützung** wählen Sie im Bereich (Visual Studio 2015 und früher), **keine** , da die Anwendung eine Datenbank nicht verwendet.
 
-    1. Auf der **Benutzeroberflächenfunktionen** Bereich Stellen Sie sicher, dass die **verwenden, ein Menü- und Symbolleiste** ausgewählt ist. Lassen Sie alle anderen Optionen unverändert. 
+    1. Auf der **Benutzeroberflächenfunktionen** Bereich Stellen Sie sicher, dass die **verwenden, ein Menü- und Symbolleiste** ausgewählt ist. Lassen Sie alle anderen Optionen unverändert.
 
-    1. Auf der **erweiterte Features** Bereich unter **erweiterte Features**, wählen Sie nur **ActiveX-Steuerelemente** und **Allgemeines Steuerelementmanifest**. Klicken Sie unter **erweiterte Framebereiche**, wählen Sie nur die **Navigationsbereich** Option. Es bewirkt, dass der Assistent erstellen im Bereich auf der linken Seite des Fensters mit einer `CMFCShellTreeCtrl` bereits eingebettet. 
+    1. Auf der **erweiterte Features** Bereich unter **erweiterte Features**, wählen Sie nur **ActiveX-Steuerelemente** und **Allgemeines Steuerelementmanifest**. Klicken Sie unter **erweiterte Framebereiche**, wählen Sie nur die **Navigationsbereich** Option. Es bewirkt, dass der Assistent erstellen im Bereich auf der linken Seite des Fensters mit einer `CMFCShellTreeCtrl` bereits eingebettet.
 
     1. Wird hier keine Änderungen an der **generierte Klassen** Bereich, klicken Sie **Fertig stellen** um das neue MFC-Projekt zu erstellen.
 
@@ -57,7 +57,7 @@ In dieser exemplarischen Vorgehensweise wird davon ausgegangen, dass Sie Visual 
 
 1. In diesem Abschnitt fügen Sie eine Instanz von `CMFCShellListCtrl` an die Ansicht, die der Assistent erstellt hat. Öffnen Sie die ansichtsheaderdatei, indem Sie durch Doppelklicken auf **MFCShellControlsView.h** in die **Projektmappen-Explorer**.
 
-   Suchen Sie die `#pragma once`-Direktive am oberen Rand der Headerdatei. Fügen Sie direkt darunter den folgenden Code hinzu, mit dem die Headerdatei für `CMFCShellListCtrl` eingeschlossen wird:
+   Suchen Sie die `#pragma once`-Anweisung am oberen Rand der Headerdatei. Fügen Sie direkt darunter den folgenden Code hinzu, mit dem die Headerdatei für `CMFCShellListCtrl` eingeschlossen wird:
 
    ```cpp
    #include <afxShellListCtrl.h>

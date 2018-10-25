@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c60cf5d6f61f16aac18524e8b6e75638ec13d27e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9907424a583cc16f170890a739fa7ece8cc93ead
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433334"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075124"
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>Verwenden der Klassen zum Schreiben von Anwendungen für Windows
 
@@ -66,17 +66,17 @@ Andere Teile von Framework enthalten:
 
 - [Speicherverwaltung](../mfc/memory-management.md)
 
-     Abgesehen davon, dass Sie einen Vorteil beim Schreiben von Anwendungen für das Windows-Betriebssystem, erleichtert MFC auch zum Schreiben von Anwendungen, die speziell OLE verlinken und Einbetten von Technologie zu verwenden. Sie können die Anwendung machen eine OLE visual bearbeiten, Container, eine visual bearbeiten OLE-Server oder beides aus, und Sie können Automation hinzufügen, sodass andere Anwendungen können Objekte aus Ihrer Anwendung verwenden oder auch remote steuern.
+   Abgesehen davon, dass Sie einen Vorteil beim Schreiben von Anwendungen für das Windows-Betriebssystem, erleichtert MFC auch zum Schreiben von Anwendungen, die speziell OLE verlinken und Einbetten von Technologie zu verwenden. Sie können die Anwendung machen eine OLE visual bearbeiten, Container, eine visual bearbeiten OLE-Server oder beides aus, und Sie können Automation hinzufügen, sodass andere Anwendungen können Objekte aus Ihrer Anwendung verwenden oder auch remote steuern.
 
 - [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)
 
-     Das OLE-Steuerelement Development Kit (CDK) ist jetzt vollständig in das Framework integriert. Diese Artikelreihe bietet einen Überblick über die Entwicklung von ActiveX-Steuerelementen mit MFC. (ActiveX-Steuerelemente wurden früher als OLE-Steuerelemente bezeichnet.)
+   Das OLE-Steuerelement Development Kit (CDK) ist jetzt vollständig in das Framework integriert. Diese Artikelreihe bietet einen Überblick über die Entwicklung von ActiveX-Steuerelementen mit MFC. (ActiveX-Steuerelemente wurden früher als OLE-Steuerelemente bezeichnet.)
 
 - [Datenbankprogrammierung](../data/data-access-programming-mfc-atl.md)
 
-     MFC bietet zudem zwei Sätze von Datenbankklassen, die schreiben-Datenzugriff zu vereinfachen Anwendungen. Verwenden die ODBC-Datenbankklassen, Sie Verbindungen mit Datenbanken über einen Treiber Open Database Connectivity (ODBC) herstellen, auswählen von Datensätzen aus Tabellen, und anzeigen können Aufzeichnen von Informationen in einem Formular auf dem Bildschirm. Verwenden die Klassen (Data Access Object, DAO), können Sie dann, mit Datenbanken über das Microsoft Jet-Datenbank-Engine oder die externe (nicht-Jet-) Datenquellen, einschließlich der ODBC-Datenquellen arbeiten.
+   MFC bietet zudem zwei Sätze von Datenbankklassen, die schreiben-Datenzugriff zu vereinfachen Anwendungen. Verwenden die ODBC-Datenbankklassen, Sie Verbindungen mit Datenbanken über einen Treiber Open Database Connectivity (ODBC) herstellen, auswählen von Datensätzen aus Tabellen, und anzeigen können Aufzeichnen von Informationen in einem Formular auf dem Bildschirm. Verwenden die Klassen (Data Access Object, DAO), können Sie dann, mit Datenbanken über das Microsoft Jet-Datenbank-Engine oder die externe (nicht-Jet-) Datenquellen, einschließlich der ODBC-Datenquellen arbeiten.
 
-     Darüber hinaus MFC ist vollständig für das Schreiben von Anwendungen, die Unicode verwenden aktiviert und Mehrbyte-Zeichensätzen (MBCS), insbesondere Doppelbyte-Zeichensätze (DBCS).
+   Darüber hinaus MFC ist vollständig für das Schreiben von Anwendungen, die Unicode verwenden aktiviert und Mehrbyte-Zeichensätzen (MBCS), insbesondere Doppelbyte-Zeichensätze (DBCS).
 
 Allgemeine Hinweise zu MFC-Dokumentation, finden Sie unter [allgemeine MFC-Themen](../mfc/general-mfc-topics.md).
 

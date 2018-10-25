@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ebc257d78bf658b722a93e9d7c306c9bcf6e88bd
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 87ab9e42af139f9b156fa2a688558077967dfa8c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791726"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067799"
 ---
 # <a name="idl-attributes"></a>IDL-Attribute
 
@@ -83,7 +83,7 @@ Beachten Sie, dass [Idl_quote](idl-quote.md) können Sie MIDL-Konstrukte, die in
 |[licensed](licensed.md)|Gibt an, dass die Co-Klasse, die auf die es angewendet wird lizenziert, und muss mit instanziiert werden `IClassFactory2`.|
 |[local](local-cpp.md)|Ermöglicht Ihnen die Verwendung den MIDL-Compiler als ein Header-Generator, wenn in der Schnittstelle-Header verwendet. Bei Verwendung in einer einzelnen Funktion kennzeichnet eine lokale Prozedur, die für die keine Stubs generiert werden.|
 |[max_is](max-is.md)|Legt fest, den maximalen Wert für ein gültiges Array-Index.|
-|[Modul](module-cpp.md)|Definiert den Bibliotheksblock in der IDL-Datei.|
+|[module](module-cpp.md)|Definiert den Bibliotheksblock in der IDL-Datei.|
 |[ms_union](ms-union.md)|Steuert die Netzwerk-datenausrichtung Darstellung nonencapsulated Unions.|
 |[no_injected_text](no-injected-text.md)|Verhindert, dass den Compiler Einfügen von Code durch Verwendung des Attributs.|
 |[nonbrowsable](nonbrowsable.md)|Gibt an, dass ein Schnittstellenmember nicht in einem Eigenschaftenbrowser angezeigt werden soll.|
@@ -92,7 +92,7 @@ Beachten Sie, dass [Idl_quote](idl-quote.md) können Sie MIDL-Konstrukte, die in
 |[object](object-cpp.md)|Identifiziert eine benutzerdefinierte Schnittstelle an. gleichbedeutend mit benutzerdefinierten Attribut.|
 |[odl](odl.md)|Gibt eine Schnittstelle als Schnittstelle Objekt Description Language (ODL).|
 |[oleautomation](oleautomation.md)|Gibt an, dass eine Schnittstelle mit der Automatisierung kompatibel ist.|
-|[Optionale](optional-cpp.md)|Gibt einen optionalen Parameter für eine Memberfunktion an.|
+|[optional](optional-cpp.md)|Gibt einen optionalen Parameter für eine Memberfunktion an.|
 |[out](out-cpp.md)|Gibt die Zeigerparameter an, die von der aufgerufenen Prozedur an die aufrufende Prozedur zurückgegeben werden (vom Server an den Client).|
 |[pointer_default](pointer-default.md)|Gibt das Standardattribut für die Zeiger für alle Zeiger, mit Ausnahme der obersten Ebene Zeigern, die angezeigt werden in der Parameterliste.|
 |[pragma](pragma.md)|Gibt die angegebene Zeichenfolge verwendet werden, ohne die Anführungszeichen in der generierten IDL-Datei aus.|
@@ -125,4 +125,4 @@ Beachten Sie, dass [Idl_quote](idl-quote.md) können Sie MIDL-Konstrukte, die in
 
 ## <a name="see-also"></a>Siehe auch
 
-[Attribute nach Gruppen](attributes-by-group.md)  
+[Attribute nach Gruppen](attributes-by-group.md)

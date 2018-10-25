@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77bcb8257fc6907b48330301cf009fa44f00578d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d28d909866808fbffb6165e552bf825bf1241771
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082535"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069814"
 ---
 # <a name="postfix-expressions"></a>Postfixausdrücke
 
@@ -41,7 +41,7 @@ Postfixausdrücke bestehen aus primären Ausdrücken bzw. Ausdrücken, in denen 
 Die folgende Syntax beschreibt mögliche Postfixausdrücke:
 
 ```
-primary-expression 
+primary-expression 
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )
 ```
 
@@ -83,20 +83,20 @@ Wenn eine Funktion aufgerufen wird, werden die folgenden Aufgaben ausgeführt:
     Func( 7 );          // Execute function call
     ```
 
-     Die konzeptionellen Initialisierungen vor dem Aufruf sind:
+   Die konzeptionellen Initialisierungen vor dem Aufruf sind:
 
     ```cpp
     int Temp_i = 7;
     Func( Temp_i );
     ```
 
-     Beachten Sie, dass die Initialisierung ausgeführt wird, als würde die Gleichheitszeichensyntax anstelle der Klammersyntax verwendet werden. Eine Kopie von `i` wird vor dem Übergeben des Werts an die Funktion erstellt. (Weitere Informationen finden Sie unter [Initialisierer](../cpp/initializers.md) und [Konvertierungen](../cpp/user-defined-type-conversions-cpp.md)).
+   Beachten Sie, dass die Initialisierung ausgeführt wird, als würde die Gleichheitszeichensyntax anstelle der Klammersyntax verwendet werden. Eine Kopie von `i` wird vor dem Übergeben des Werts an die Funktion erstellt. (Weitere Informationen finden Sie unter [Initialisierer](../cpp/initializers.md) und [Konvertierungen](../cpp/user-defined-type-conversions-cpp.md)).
 
-     Aus diesem Grund der Funktionsprototyp (Deklaration) für ein Argument des Typs aufgerufen **lange**, und wenn das aufrufende Programm ein tatsächliches Argument des Typs bereitstellt **Int**, das tatsächliche Argument höher gestuft wird mit einer standardkonvertierung in den Typ **lange** (finden Sie unter [Standardkonvertierungen](../cpp/standard-conversions.md)).
+   Aus diesem Grund der Funktionsprototyp (Deklaration) für ein Argument des Typs aufgerufen **lange**, und wenn das aufrufende Programm ein tatsächliches Argument des Typs bereitstellt **Int**, das tatsächliche Argument höher gestuft wird mit einer standardkonvertierung in den Typ **lange** (finden Sie unter [Standardkonvertierungen](../cpp/standard-conversions.md)).
 
-     Es ist ein Fehler, ein tatsächliches Argument anzugeben, für das es keine Standard- oder benutzerdefinierte Konvertierung in den Typ des formalen Arguments gibt.
+   Es ist ein Fehler, ein tatsächliches Argument anzugeben, für das es keine Standard- oder benutzerdefinierte Konvertierung in den Typ des formalen Arguments gibt.
 
-     Für die tatsächlichen Argumente des Klassentyps wird das formale Argument initialisiert, indem der Konstruktor der Klasse aufgerufen wird. (Finden Sie unter [Konstruktoren](../cpp/constructors-cpp.md) für Weitere Informationen zu diesen speziellen Klassenmemberfunktionen.)
+   Für die tatsächlichen Argumente des Klassentyps wird das formale Argument initialisiert, indem der Konstruktor der Klasse aufgerufen wird. (Finden Sie unter [Konstruktoren](../cpp/constructors-cpp.md) für Weitere Informationen zu diesen speziellen Klassenmemberfunktionen.)
 
 - Der Funktionsaufruf wird ausgeführt.
 

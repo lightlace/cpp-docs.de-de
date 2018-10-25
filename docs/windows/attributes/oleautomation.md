@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a3a0ec5a39d6e99e5ceb6ec4ed089373e3057c1e
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ccc83dd6f51c3b7072b17d141f29e93c63688fa1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791201"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059531"
 ---
 # <a name="oleautomation"></a>oleautomation
 
@@ -53,9 +53,9 @@ Finden Sie unter den Beispielen für [Defaultvalue](defaultvalue.md) und [nonext
 |**Erforderliche Attribute**|Keiner|
 |**Ungültige Attribute**|**dispinterface**|
 
-Weitere Informationen zu den attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Siehe auch
 
 [IDL-Attribute](idl-attributes.md)<br/>
-[Schnittstellenattribut](interface-attributes.md)  
+[Schnittstellenattribut](interface-attributes.md)

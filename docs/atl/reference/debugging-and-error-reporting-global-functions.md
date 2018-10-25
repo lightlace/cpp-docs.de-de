@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bef300671894e054ddf9b1ca0ab9dcf3b135370
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f035ac105dee4e668ca8bee0bab18c2a31fd027f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019414"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069151"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>Debuggen und globale Funktionen für die Fehlerberichterstattung
 
@@ -47,11 +47,11 @@ HRESULT AtlHresultFromLastError();
 
 ### <a name="remarks"></a>Hinweise
 
-`AtlHresultFromLastError` Aufrufe `GetLastError` zum letzten Fehler abrufen und der Fehler nach der Konvertierung in ein HRESULT, der mit dem Makro was zu HRESULT_FROM_WIN32 zurückgegeben.  
+`AtlHresultFromLastError` Aufrufe `GetLastError` zum letzten Fehler abrufen und der Fehler nach der Konvertierung in ein HRESULT, der mit dem Makro was zu HRESULT_FROM_WIN32 zurückgegeben.
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** "atlcomcli.h"  
+**Header:** "atlcomcli.h"
 
 ##  <a name="atlhresultfromwin32"></a>  AtlHresultFromWin32
 
@@ -71,11 +71,11 @@ Der Wert des Fehlercodes zu konvertieren.
 Konvertiert einen Win32-Fehlercode in ein HRESULT, das mit dem Makro was zu HRESULT_FROM_WIN32 an.
 
 > [!NOTE]
->  Anstelle von `HRESULT_FROM_WIN32(GetLastError())`, verwenden Sie die Funktion [AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror).  
+>  Anstelle von `HRESULT_FROM_WIN32(GetLastError())`, verwenden Sie die Funktion [AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror).
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** "atlcomcli.h"  
+**Header:** "atlcomcli.h"
 
 ##  <a name="atlreporterror"></a>  AtlReportError
 
@@ -166,7 +166,7 @@ Die Zeichenfolge *LpszDesc* als die textbeschreibung des Fehlers verwendet wird.
 [!code-cpp[NVC_ATL_COM#52](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_1.cpp)]
 
 > [!CAUTION]
->  Verwenden Sie keine `AtlReportError` in C++-catch-Handler. Einige überschreibungen von dieser Funktionen verwenden die ATL-Zeichenfolgen-konvertierungsmakros intern die verwenden, die wiederum die `_alloca` intern funktionieren. Mithilfe von `AtlReportError` in einem C++-Catch Handler kann dazu führen, dass Ausnahmen in C++-Catch-Handler.  
+>  Verwenden Sie keine `AtlReportError` in C++-catch-Handler. Einige überschreibungen von dieser Funktionen verwenden die ATL-Zeichenfolgen-konvertierungsmakros intern die verwenden, die wiederum die `_alloca` intern funktionieren. Mithilfe von `AtlReportError` in einem C++-Catch Handler kann dazu führen, dass Ausnahmen in C++-Catch-Handler.
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -203,11 +203,11 @@ Bei ATL-Projekten ist es möglich, geben Sie Ihre eigene Implementierung dieser 
 
 ### <a name="example"></a>Beispiel
 
-[!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]  
+[!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** atldef.h  
+**Header:** atldef.h
 
 ##  <a name="atlthrowlastwin32"></a>  AtlThrowLastWin32
 
@@ -225,7 +225,7 @@ Wenn _ATL_NO_EXCEPTIONS nicht in einem MFC-Projekt definiert ist, wird diese Fun
 
 Wenn _ATL_NO_EXCEPTIONS nicht in einem ATL-Projekt definiert ist, löst die Funktion eine [CAtlException](../../atl/reference/catlexception-class.md).
 
-Wenn _ATL_NO_EXCEPTIONS definiert ist, wird ein Assertionsfehler ausgelöst, anstatt eine Ausnahme auszulösen.  
+Wenn _ATL_NO_EXCEPTIONS definiert ist, wird ein Assertionsfehler ausgelöst, anstatt eine Ausnahme auszulösen.
 
 ## <a name="requirements"></a>Anforderungen
 

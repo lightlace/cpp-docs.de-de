@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51fff5b7e43b489bdaf2a27b115af26c48e33956
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3bf023dbc52ccac7311a62aba1a290b1a03190dd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46400788"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060558"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Hinzufügen von vordefinierten Ereignissen zu einem ActiveX-Steuerelement
 
@@ -75,8 +75,8 @@ Die `COleControl` Klasse enthält zehn vordefinierte Ereignisse, die in der folg
 |DblClick|**"void" FireDblClick)**|Ähnlich wie auf jedoch ausgelöst, wenn eine **BUTTONDBLCLK** Nachricht empfangen wird.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_DBLCLICK)**|
 |Fehler|**"void" FireError (SCODE**  *Scode*  **, LPCSTR** `lpszDescription` **, "uint"**`nHelpID`**= 0)**|Ausgelöst, wenn Sie in das ActiveX-Steuerelement außerhalb des Bereichs eine Methode aufrufen oder Eigenschaftszugriff ein Fehler auftritt.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_ERROREVENT)**|
 |KeyDown|**"void" FireKeyDown (kurze** `nChar` **, short**  `nShiftState`  **)**|Wird ausgelöst, wenn eine `WM_SYSKEYDOWN` oder `WM_KEYDOWN` Nachricht empfangen wird.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_KEYDOWN)**|
-|KeyPress|**"void" FireKeyPress (kurze** <strong>\*</strong> `pnChar` **)** |Wird ausgelöst, wenn eine `WM_CHAR` Nachricht empfangen wird.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_KEYPRESS)**|
-|KeyUp|**"void" FireKeyUp (kurze** `nChar` **, short**`nShiftState`**)** |Wird ausgelöst, wenn eine `WM_SYSKEYUP` oder `WM_KEYUP` Nachricht empfangen wird.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_KEYUP)**|
+|KeyPress|**"void" FireKeyPress (kurze** <strong>\*</strong> `pnChar` **)**|Wird ausgelöst, wenn eine `WM_CHAR` Nachricht empfangen wird.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_KEYPRESS)**|
+|KeyUp|**"void" FireKeyUp (kurze** `nChar` **, short**`nShiftState`**)**|Wird ausgelöst, wenn eine `WM_SYSKEYUP` oder `WM_KEYUP` Nachricht empfangen wird.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_KEYUP)**|
 |MouseDown|**"void" FireMouseDown (kurze**  `nButton`  **, short**  `nShiftState` **, "float"**  *x*  **, "float"**  *y*  **)**|Wird ausgelöst, wenn alle **BUTTONDOWN** (links, mittleren oder rechten) empfangen wird. Die Mauseingabe wird unmittelbar vor diesem Ereignis ausgelöst wird.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_MOUSEDOWN)**|
 |MouseMove|**"void" FireMouseMove (kurze**  `nButton`  **, short**  `nShiftState` **, "float"**  *x*  **, "float"**  *y*  **)**|Wird ausgelöst, wenn eine WM_MOUSEMOVE-Meldung empfangen wird.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_MOUSEMOVE)**|
 |MouseUp|**"void" FireMouseUp (kurze**  `nButton`  **, short**  `nShiftState`  **, "float"**  *x*  **, "float"**  *y*  **)**|Wird ausgelöst, wenn alle **BUTTONUP** (links, mittleren oder rechten) empfangen wird. Das Erfassen von Mauseingaben wird freigegeben, bevor dieses Ereignis ausgelöst wird.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_MOUSEUP)**|
@@ -94,7 +94,7 @@ Hinzufügen von vordefinierten Ereignissen erfordert weniger Arbeit dar als das 
 
 1. Klicken Sie im Kontextmenü auf **hinzufügen** , und klicken Sie dann auf **Ereignis hinzufügen**.
 
-     Daraufhin den Assistenten zum Hinzufügen eines Ereignisses.
+   Daraufhin den Assistenten zum Hinzufügen eines Ereignisses.
 
 1. In der **Ereignisnamen** Dropdown-Liste `KeyPress`.
 

@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae58ae7cf09257b399fd21d7c34890b829394b98
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a65959ffc149b93c6d9b28667647d8f49cfc1f2d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430591"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063236"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>Fenster "Farben" (Bildbearbeitung für Symbole)
 
@@ -36,8 +36,8 @@ Die **Farben** Fenster besteht aus zwei Teilen:
 
 2. Die **Farbanzeige**, zeigt die Vordergrund- und Hintergrundfarben und Selektoren für die Bildschirm- und invertierte Farbe.
 
-   ![Fenster "Farben"](../windows/media/vccolorswindow.gif "VcColorsWindow")  
-Fenster "Farben"
+   ![Fenster "Farben"](../windows/media/vccolorswindow.gif "VcColorsWindow")<br/>
+   Fenster "Farben"
 
 > [!NOTE]
 > Die **Bildschirm Farbe** und **invertierte Farbe** Tools sind nur verfügbar für Symbole und Cursor.

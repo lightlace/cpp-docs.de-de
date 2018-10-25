@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0111dfc424a99d413a217149b3c5e579a3999f13
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 6cb9202d020aee86a4ebe3892fa8dd84ec4c4577
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791414"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061627"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -31,7 +31,7 @@ Erstellt einen OLE DB-Befehl.
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-[ db_command(command, name, source_name, hresult, bindings, bulk_fetch)  
+[ db_command(command, name, source_name, hresult, bindings, bulk_fetch)
 ]
 ```
 
@@ -74,7 +74,7 @@ Dabei gilt:
 
 Wenn die Befehlszeichenfolge einen oder mehrere Bezeichner, z. B. enthält \[im], \[out], oder \[in/out], **Db_command** eine parameterzuordnung.
 
-Wenn die Befehlszeichenfolge einen oder mehrere Parameter, z. B. enthält \[Db_column] oder \[Bindto], **Db_command** generiert wird, ein Rowset und eine accessorkarte, um diese gebundenen Variablen zu bedienen. Finden Sie unter [Db_accessor](db-accessor.md) für Weitere Informationen.
+Wenn die Befehlszeichenfolge einen oder mehrere Parameter, z. B. enthält \[Db_column] oder \[Bindto], **Db_command** generiert wird, ein Rowset und eine accessorkarte, um diese gebundenen Variablen zu bedienen. Weitere Informationen finden Sie unter [db_accessor](db-accessor.md) .
 
 > [!NOTE]
 > \[*BindType*] Syntax und die *Bindungen* Parameter sind nicht gültig, wenn **Db_command** auf Klassenebene.
@@ -88,7 +88,7 @@ TCHAR m_state[3] = 'CA';
 
 [db_command (command = "SELECT au_fname([bindto]m_au_fname), au_lname([bindto]m_au_lname) " \
    "FROM dbo.authors " \
-   "WHERE state = ?([in]m_state)")  
+   "WHERE state = ?([in]m_state)")
 ]
 ```
 
@@ -96,7 +96,7 @@ TCHAR m_state[3] = 'CA';
 (Optional) Der Name des Handles, die Sie verwenden, um die Arbeit mit dem Rowset. Wenn Sie *name*angeben, generiert **db_command** eine Klasse mit dem angegebenen *Namen*, das verwendet werden kann, um das Rowset zu traversieren oder mehrere Aktionsabfragen auszuführen. Wenn Sie *name*nicht angeben, ist es nicht möglich, mehr als eine Zeile mit Ergebnissen an den Benutzer zurückzugeben.
 
 *source_name*<br/>
-(Optional) Die `CSession` Variable oder eine Instanz einer Klasse, die die `db_source` -Attribut angewendet, auf dem der Befehl ausgeführt wird. Finden Sie unter [Db_source](db-source.md).
+(Optional) Die `CSession` Variable oder eine Instanz einer Klasse, die die `db_source` -Attribut angewendet, auf dem der Befehl ausgeführt wird. Informationen hierzu finden Sie unter [db_source](db-source.md).
 
 **db_command** stellt sicher, dass die Variable für *source_name* gültig ist, um den Gültigkeitsbereich der angegebenen Variablen auf eine Funktion oder als global festzulegen.
 
@@ -113,15 +113,15 @@ Wenn Sie einen Wert für nicht angeben *Bindungen*, **Db_command** analysiert Bi
 *bulk_fetch*<br/>
 (Optional) Ein ganzzahliger Wert, der die Anzahl der abzurufenden Zeilen angibt.
 
-Der Standardwert ist 1, das abgerufen (das Rowset werden vom Typ [CRowset](../../data/oledb/crowset-class.md)).
+Mit dem Standardwert 1 werden die Zeilen einzeln abgerufen (das Rowset ist vom Typ [CRowset](../../data/oledb/crowset-class.md)).
 
-Ein höherer Wert als 1 gibt das Massenabrufen von Zeilen an. Gesammelte verweist auf die Fähigkeit von massenrowsets, mehrere Zeilenhandles abzurufen (das Rowset werden vom Typ [CBulkRowset](../../data/oledb/cbulkrowset-class.md) und ruft `SetRows` mit der angegebenen Anzahl von Zeilen).
+Ein höherer Wert als 1 gibt das Massenabrufen von Zeilen an. Das Massenabrufen von Zeilen bezieht sich auf die Fähigkeit von Massenrowsets, mehrere Zeilenhandles abzurufen (das Rowset ist vom Typ [CBulkRowset](../../data/oledb/cbulkrowset-class.md) und wird `SetRows` mit der angegebenen Anzahl von Zeilen aufrufen).
 
 Wenn *bulk_fetch* kleiner als 1 ist, gibt `SetRows` 0 (Null) zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-**Db_command** erstellt eine [CCommand](../../data/oledb/ccommand-class.md) -Objekt, das von einem OLE DB-Consumer verwendet wird, um einen Befehl auszuführen.
+**db_command** erstellt ein [CCommand](../../data/oledb/ccommand-class.md) -Objekt, das von einem OLE DB-Consumer verwendet wird, um einen Befehl auszuführen.
 
 Sie können **db_command** entweder mit einem Klassen- oder Funktionsbereich verwenden. Der Hauptunterschied liegt im Bereich des `CCommand` -Objekts. Ist der Gültigkeitsbereich auf die Funktion beschränkt, werden Daten wie z.B. Bindungen bei Beendigung der Funktion ebenfalls beendet. Sowohl die Klasse als auch die Funktion Bereich Verwendungen umfassen die Klasse des OLE DB-Consumervorlagen `CCommand<>`, unterscheiden sich die Vorlagenargumente für die Fälle Funktion und der Klasse. Des Funktionsbereichs Bindungen werden versucht, eine `Accessor` , enthält lokale Variablen, erfordert, während die Verwendung der-Klasse ableitet, eine `CAccessor`-abgeleitete Klasse als Argument. Wenn es als Klassenattribut verwendet wird, funktioniert **db_command** zusammen mit **db_column**.
 
@@ -131,7 +131,7 @@ Wenn der Consumer Attributanbieter dieses Attribut auf eine Klasse angewendet wi
 
 ## <a name="example"></a>Beispiel
 
-In diesem Beispiel wird ein Befehl definiert, der die Vor- und Nachnamen aus einer Tabelle auswählt, in der die Statusspalte „CA“ entspricht. **Db_command** erstellt und liest ein Rowset für das Sie vom Assistenten generierte Funktionen wie z. B. Aufrufen [OpenAll und CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), als auch `CRowset` Memberfunktionen wie [MoveNext](../../data/oledb/crowset-movenext.md).
+In diesem Beispiel wird ein Befehl definiert, der die Vor- und Nachnamen aus einer Tabelle auswählt, in der die Statusspalte „CA“ entspricht. **db_command** erstellt und liest ein Rowset, für das Sie sowohl über den Assistenten generierte Funktionen wie [OpenAll und CloseAll](../../data/oledb/consumer-wizard-generated-methods.md)als auch `CRowset` -Memberfunktionen wie [MoveNext](../../data/oledb/crowset-movenext.md)ausführen können.
 
 Beachten Sie, dass Sie für diesen Code eine eigene Verbindungszeichenfolge bereitstellen müssen, die eine Verbindung mit der pubs-Datenbank herstellt. Weitere Informationen dazu in der Entwicklungsumgebung, finden Sie unter [Vorgehensweise: Verbinden mit einer Datenbank und Durchsuchen vorhandener Objekte](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) und [neue Verbindungen hinzufügen](/visualstudio/data-tools/add-new-connections).
 
@@ -253,9 +253,9 @@ int main() {
 |**Erforderliche Attribute**|Keiner|
 |**Ungültige Attribute**|Keiner|
 
-Weitere Informationen zu den attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Siehe auch
 
 [OLE DB-Consumerattribute](ole-db-consumer-attributes.md)<br/>
-[Eigenständige Attribute](stand-alone-attributes.md)  
+[Eigenständige Attribute](stand-alone-attributes.md)

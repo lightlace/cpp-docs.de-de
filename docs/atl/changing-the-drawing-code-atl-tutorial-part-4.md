@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ad8be0655d43fac063a3551f43e667a04caa27b
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: f86574dc1d2b996b66b29d2db6d45afc6b81ff7f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821061"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065225"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>Ändern des Zeichencodes (ATL-Lernprogramm, Teil 4)
 
@@ -121,13 +121,13 @@ Erstellen Sie das Steuerelement neu. Stellen Sie sicher, dass die Datei "PolyCtl
     > Für Fehler im Zusammenhang mit `ATL::CW2AEX`, ersetzen Sie im Script.Cpp, Zeile `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT );` mit `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT.m_psz );`, und die Zeilennummer `TRACE( "Source Text: %s\n", COLE2CT( bstrSourceLineText ) );` mit `TRACE( "Source Text: %s\n", bstrSourceLineText );`.<br/>
     > Für Fehler im Zusammenhang mit `HMONITOR`, öffnen Sie "stdafx.h" in der `TCProps` Projekts, und ersetzen:
     > ```
-    > #ifndef WINVER  
-    > #define WINVER 0x0400   
+    > #ifndef WINVER
+    > #define WINVER 0x0400
     > #endif
     > ```
     > durch
     > ```
-    > #ifndef WINVER  
+    > #ifndef WINVER
     > #define WINVER 0x0500
     > #define _WIN32_WINNT 0x0500
     > #endif

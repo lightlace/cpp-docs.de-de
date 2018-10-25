@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c2e1ffc35315d898010e73113d6148fb27e1bad
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 68b9aa25cef78780b0bb6f97d3cde1e27600481f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408047"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063418"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Exemplarische Vorgehensweise: Erstellen eines Bildverarbeitungsnetzwerks
 
@@ -30,7 +30,7 @@ Das Netzwerk bestimmt, welche Vorgänge in einem Bild auf der Grundlage seiner M
 
 Erstellt ein Netzwerk, das basierend auf dem Datenfluss eine *Pipeline* von Aufgaben. Jede Phase der Pipeline führt gleichzeitig Teil des gesamten Tasks. Eine Analogie hierzu ist eine Fertigungsstraße eines Fahrzeugherstellers. Da jedes Fahrzeug durchläuft die Fertigungsstraße einer Station Fahrgestell montiert, in einem anderen installiert die Engine und So weiter. Aktivieren Sie mehrere Fahrzeuge gleichzeitig montiert werden, bietet die Fertigungsstraße einen besseren Durchsatz als eine einzelmontage eines vollständigen Fahrzeugs zu einem Zeitpunkt.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Lesen Sie die folgenden Dokumente, bevor Sie mit dieser exemplarischen Vorgehensweise beginnen:
 
@@ -98,31 +98,31 @@ Die folgenden Schritte zeigen, wie Sie eine Funktion erstellen, die implementier
 
 1. Erstellen Sie eine Funktion, `ProcessImages`, die den Namen eines Verzeichnisses auf dem Datenträger belegt.
 
-     [!code-cpp[concrt-image-processing-filter#7](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_6.cpp)]
+   [!code-cpp[concrt-image-processing-filter#7](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_6.cpp)]
 
 1. In der `ProcessImages` funktioniert, erstellen Sie eine `countdown_event` Variable. Die `countdown_event` ist weiter unten in dieser exemplarischen Vorgehensweise dargestellt.
 
-     [!code-cpp[concrt-image-processing-filter#8](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_7.cpp)]
+   [!code-cpp[concrt-image-processing-filter#8](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_7.cpp)]
 
 1. Erstellen Sie eine [Std:: Map](../../standard-library/map-class.md) -Objekt, das ordnet eine `Bitmap` Objekt mit dem ursprünglichen Dateinamen.
 
-     [!code-cpp[concrt-image-processing-filter#9](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_8.cpp)]
+   [!code-cpp[concrt-image-processing-filter#9](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_8.cpp)]
 
 1. Fügen Sie den folgenden Code ein, um die Elemente von der Bildverarbeitungsnetzwerks zu definieren.
 
-     [!code-cpp[concrt-image-processing-filter#10](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_9.cpp)]
+   [!code-cpp[concrt-image-processing-filter#10](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_9.cpp)]
 
 1. Fügen Sie den folgenden Code ein, um das Netzwerk zu verbinden.
 
-     [!code-cpp[concrt-image-processing-filter#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_10.cpp)]
+   [!code-cpp[concrt-image-processing-filter#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_10.cpp)]
 
 1. Fügen Sie den folgenden Code zum Senden an den Anfang des Netzwerks des vollständigen Pfads jeder JPEG-Datei im Verzeichnis.
 
-     [!code-cpp[concrt-image-processing-filter#12](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_11.cpp)]
+   [!code-cpp[concrt-image-processing-filter#12](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_11.cpp)]
 
 1. Warten, bis die `countdown_event` Variable, die 0 (null) erreicht.
 
-     [!code-cpp[concrt-image-processing-filter#13](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_12.cpp)]
+   [!code-cpp[concrt-image-processing-filter#13](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_12.cpp)]
 
 In der folgenden Tabelle werden die Member des Netzwerks beschrieben.
 

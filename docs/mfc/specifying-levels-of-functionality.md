@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4b5ed392850fac97e8671774dee0905bf3417eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 765a5293f233cb6df0654416ea2a5463df1095a8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375889"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054422"
 ---
 # <a name="specifying-levels-of-functionality"></a>Festlegen von Funktionalitätsebenen
 
@@ -46,11 +46,11 @@ Eine allgemeine Beschreibung von `CObject` Funktionen finden Sie im Artikel [Abl
 
 1. Verwenden Sie das DECLARE_DYNAMIC-Makro in der Klassendeklaration, wie hier gezeigt:
 
-     [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/specifying-levels-of-functionality_1.h)]
+   [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/specifying-levels-of-functionality_1.h)]
 
 1. Verwenden Sie das IMPLEMENT_DYNAMIC-Makro in der Implementierungsdatei (. CPP) der Klasse. Dieses Makro akzeptiert als Argumente den Namen der Klasse und ihrer Basisklasse wie folgt:
 
-     [!code-cpp[NVC_MFCCObjectSample#3](../mfc/codesnippet/cpp/specifying-levels-of-functionality_2.cpp)]
+   [!code-cpp[NVC_MFCCObjectSample#3](../mfc/codesnippet/cpp/specifying-levels-of-functionality_2.cpp)]
 
 > [!NOTE]
 >  In der Implementierungsdatei IMPLEMENT_DYNAMIC einfach (. CPP) für die Klasse. Das IMPLEMENT_DYNAMIC-Makro nur einmal während einer Kompilierung ausgewertet werden soll, und sollte daher nicht in einer Schnittstellendatei verwendet werden (. H), kann möglicherweise in mehrere Dateien enthalten sein.

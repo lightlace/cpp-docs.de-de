@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b157cfb497c355f44a15c8e42b81bc30753a4a9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 29632784248d624f184550f0c598d05cd26b85cf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441303"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079544"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>CMFCPreviewCtrlImpl-Klasse
 
@@ -149,7 +149,7 @@ Ein Handle für das Hostfenster, die von der Shell for Rich Preview bereitgestel
 *Volksrepublik China*<br/>
 Gibt an, die ursprüngliche Größe und Position des Fensters.
 
-*"pContext"*<br/>
+*pContext*<br/>
 Ein Zeiger auf einen Kontext erstellen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -183,7 +183,6 @@ virtual void DoPaint(
 *pDC*<br/>
 Ein Zeiger auf einen Gerätekontext zum Zeichnen.
 
-
 ## <a name="focus"></a> CMFCPreviewCtrlImpl::Focus
 
 Legt den Eingabefokus auf dieses Steuerelement.
@@ -193,6 +192,7 @@ Legt den Eingabefokus auf dieses Steuerelement.
 ```
 virtual void Focus();
 ```
+
 ## <a name="getdocument"></a> CMFCPreviewCtrlImpl::GetDocument
 
 Gibt ein Dokument mit dieser Vorschau verbunden.
@@ -226,6 +226,7 @@ Die Textfarbe des Vorschaufensters.
 ```
 COLORREF m_clrTextColor;
 ```
+
 ## <a name="m_font"></a> CMFCPreviewCtrlImpl::m_font Schriftart für Text in einem Vorschaufenster angezeigt.
 
 ### <a name="syntax"></a>Syntax
@@ -233,6 +234,7 @@ COLORREF m_clrTextColor;
 ```
 CFont m_font;
 ```
+
 ## <a name="m_pdocument"></a> CMFCPreviewCtrlImpl::m_pDocument
 
 Ein Zeiger auf ein Dokument, dessen Inhalt in das Steuerelement in der Vorschau angezeigt wird.
@@ -252,6 +254,7 @@ Weist diesem Steuerelement neu zeichnet.
 ```
 virtual void Redraw();
 ```
+
 ## <a name="setdocument"></a> CMFCPreviewCtrlImpl::SetDocument
 
 Wird aufgerufen, durch den Vorschauhandler, um eine Beziehung zwischen der Implementierung des Dokuments und dem Vorschausteuerelement zu erstellen.

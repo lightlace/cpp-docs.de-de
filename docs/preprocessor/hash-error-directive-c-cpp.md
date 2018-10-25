@@ -18,32 +18,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2da939fe52e41e122ecd4926e34fb9c4be735ae
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 143733af9003442996d9f649825f45f93643f536
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541403"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078800"
 ---
 # <a name="error-directive-cc"></a>#error-Anweisung (C/C++)
-Die **#error** -Anweisung gibt eine benutzerdefinierte Fehlermeldung zur Kompilierzeit aus und beendet dann die Kompilierung.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-#errortoken-string  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- 
-Die Fehlermeldung, die diese Direktive ausgibt, enthält die *-Token-Zeichenfolge* Parameter. Die *-Token-Zeichenfolge* -Parameter unterliegt nicht der makroerweiterung. Diese Anweisung ist während der Vorverarbeitung am hilfreichsten, denn sie informiert den Entwickler über eine Programminkonsistenz oder einen Verstoß gegen eine Einschränkung. Das folgende Beispiel zeigt die Fehlerverarbeitung während der Vorverarbeitung:  
-  
-```  
-#if !defined(__cplusplus)  
-#error C++ compiler required.  
-#endif  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- 
+Die **#error** -Anweisung gibt eine benutzerdefinierte Fehlermeldung zur Kompilierzeit aus und beendet dann die Kompilierung.
+
+## <a name="syntax"></a>Syntax
+
+```
+#errortoken-string
+```
+
+## <a name="remarks"></a>Hinweise
+
+Die Fehlermeldung, die diese Direktive ausgibt, enthält die *-Token-Zeichenfolge* Parameter. Die *-Token-Zeichenfolge* -Parameter unterliegt nicht der makroerweiterung. Diese Anweisung ist während der Vorverarbeitung am hilfreichsten, denn sie informiert den Entwickler über eine Programminkonsistenz oder einen Verstoß gegen eine Einschränkung. Das folgende Beispiel zeigt die Fehlerverarbeitung während der Vorverarbeitung:
+
+```
+#if !defined(__cplusplus)
+#error C++ compiler required.
+#endif
+```
+
+## <a name="see-also"></a>Siehe auch
+
 [Präprozessordirektiven](../preprocessor/preprocessor-directives.md)

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4adaa1da407d9727db74add14eb517e83a5e610c
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: b22e903b86ba3de8bcd98aa47f1b6756288f2f78
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861550"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070973"
 ---
 # <a name="creating-an-atl-project"></a>Erstellen eines ATL-Projekts
 
@@ -48,4 +48,4 @@ Nachdem das Projekt erstellt wurde, sehen Sie die Dateien im **Projektmappen-Exp
 ## <a name="see-also"></a>Siehe auch
 
 [Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Eigenschaftenseiten](../../ide/property-pages-visual-cpp.md)   
+[Eigenschaftenseiten](../../ide/property-pages-visual-cpp.md)

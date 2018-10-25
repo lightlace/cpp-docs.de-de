@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6e8f448d4b6bee4b301fc567cc8e8e857747a4e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1ec2e3253b4d26bc6773ffc4005100edfbec1bff
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440289"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077529"
 ---
 # <a name="cpen-class"></a>CPen-Klasse
 
@@ -92,12 +92,10 @@ Erstellt ein `CPen`-Objekt.
 ```
 CPen();
 
-
 CPen(
     int nPenStyle,
     int nWidth,
     COLORREF crColor);
-
 
 CPen(
     int nPenStyle,
@@ -132,13 +130,13 @@ Die zweite Version der `CPen` Konstruktor gibt eine Kombination von Typ, Format,
 
 - PS_COSMETIC erstellt einen Stift kosmetischer Natur.
 
-     Die zweite Version der `CPen` Konstruktor fügt die folgenden Pen-Formate für *nPenStyle*:
+   Die zweite Version der `CPen` Konstruktor fügt die folgenden Pen-Formate für *nPenStyle*:
 
 - PS_ALTERNATE erstellt einen Stift, der alle anderen Pixel legt diese fest. (Dieses Format gilt nur für kosmetische Stifte.)
 
 - PS_USERSTYLE erstellt ein Stift, der ein Stil-Array, das vom Benutzer verwendet.
 
-     Das Linienende ist einer der folgenden Werte möglich:
+   Das Linienende ist einer der folgenden Werte möglich:
 
 - Linienenden PS_ENDCAP_ROUND sind runde.
 
@@ -146,7 +144,7 @@ Die zweite Version der `CPen` Konstruktor gibt eine Kombination von Typ, Format,
 
 - Linienenden PS_ENDCAP_FLAT sind flach.
 
-     Der Join kann es sich um eine der folgenden Werte sein:
+   Der Join kann es sich um eine der folgenden Werte sein:
 
 - PS_JOIN_BEVEL verknüpft abgeschrägt werden kann.
 
@@ -192,7 +190,6 @@ BOOL CreatePen(
     int nPenStyle,
     int nWidth,
     COLORREF crColor);
-
 
 BOOL CreatePen(
     int nPenStyle,

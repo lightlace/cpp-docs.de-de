@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f44d362fc30503b062221c358dde6b2c10b9bd3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2bbf1a088151bcd2a6ecc1990c668211c6f70cd9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423753"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065485"
 ---
 |||
 |-|-|
@@ -34,7 +34,6 @@ ms.locfileid: "46423753"
 |[INTERFACE_PART](#interface_part)|Zwischen der BEGIN_INTERFACE_MAP-Makro und das END_INTERFACE_MAP-Makro verwendet, für jede Schnittstelle, die von Ihrem Objekt unterstützt werden.|
 |[MAKE_DELEGATE](#make_delegate)|Fügt einen Ereignishandler an ein verwaltetes Steuerelement an.|
 
-
 ## <a name="begin_delegate_map"></a> BEGIN_DELEGATE_MAP
 
 Beginnt eine Zuordnung von Delegaten.
@@ -44,6 +43,7 @@ Beginnt eine Zuordnung von Delegaten.
 ```
 BEGIN_DELEGATE_MAP(  CLASS );
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *KLASSE*<br/>
@@ -70,6 +70,7 @@ Der Beginn der Definition der interfaced Zuordnung in der Implementierungsdatei 
 ```
 BEGIN_INTERFACE_MAP( theClass, baseClass )
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *theClass*<br/>
@@ -97,6 +98,7 @@ Registriert eine Befehlsquelle Rückrufmethoden.
 ```
 delegate void CommandHandler(  UINT^ cmdID  );
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *cmdID*<br/>
@@ -127,6 +129,7 @@ Registriert Rückrufmethoden bereit, mit einer benutzermeldung Schnittstelle Upd
 ```
 delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *cmdID*<br/>
@@ -172,7 +175,6 @@ Dieses Makro markiert das Ende einer Liste von Einträgen für Delegaten, die ei
 
 [Vorgehensweise: Auffangen von Windows Forms-Ereignissen aus nativen C++-Klassen](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
-
 ##  <a name="end_interface_map"></a>END_INTERFACE_MAP
 
 Beendet die schnittstellenzuordnung in der Implementierungsdatei hinzu.
@@ -196,7 +198,6 @@ Weitere Informationen zu schnittstellenzuordnungen, finden Sie unter [technische
 [Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
 [BEGIN_INTERFACE_MAP](#begin_interface_map)
 
-
 ##  <a name="event_delegate_entry"></a>EVENT_DELEGATE_ENTRY
 
 Erstellt einen Eintrag in der Zuordnung des Delegaten an.
@@ -206,6 +207,7 @@ Erstellt einen Eintrag in der Zuordnung des Delegaten an.
 ```
 EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *MEMBER*<br/>
@@ -242,7 +244,6 @@ END_DELEGATE_MAP()
 [BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
 [END_DELEGATE_MAP](#end_delegate_map)
 
-
 ##  <a name="interface_part"></a>INTERFACE_PART
 
 Zwischen der BEGIN_INTERFACE_MAP-Makro und das END_INTERFACE_MAP-Makro verwendet, für jede Schnittstelle, die von Ihrem Objekt unterstützt werden.
@@ -252,6 +253,7 @@ Zwischen der BEGIN_INTERFACE_MAP-Makro und das END_INTERFACE_MAP-Makro verwendet
 ```
 INTERFACE_PART( theClass, iid, localClass)
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *theClass*<br/>
@@ -271,7 +273,6 @@ Weitere Informationen zu schnittstellenzuordnungen, finden Sie unter [technische
 
 **Header:** afxwin.h
 
-
 ##  <a name="make_delegate"></a>MAKE_DELEGATE
 
 Fügt einen Ereignishandler an ein verwaltetes Steuerelement an.
@@ -281,6 +282,7 @@ Fügt einen Ereignishandler an ein verwaltetes Steuerelement an.
 ```
 MAKE_DELEGATE( DELEGATE,  MEMBER) ;
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *DELEGATEN*<br/>
@@ -316,7 +318,4 @@ void CMyView::OnInitialUpdate()
 [BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
 [END_DELEGATE_MAP](#end_delegate_map)<br/>
 [EVENT_DELEGATE_ENTRY](#event_delegate_entry)
-
-
-
 

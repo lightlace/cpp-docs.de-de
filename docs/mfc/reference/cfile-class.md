@@ -70,12 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a61ad47464bc7cb005cfea41049019cfa0202b08
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a399c63903723fb35bd1b732eb15b561eeac6759
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391370"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070347"
 ---
 # <a name="cfile-class"></a>CFile-Klasse
 
@@ -193,11 +193,9 @@ CFile();
 CFile(CAtlTransactionManager* pTM);
 CFile(HANDLE hFile);
 
-
 CFile(
 LPCTSTR lpszFileName,
 UINT nOpenFlags);
-
 
 CFile(
 LPCTSTR lpszFileName,
@@ -577,7 +575,6 @@ virtual BOOL Open(
     UINT nOpenFlags,
     CFileException* pError = NULL);
 
-
 virtual BOOL Open(
     LPCTSTR lpszFileName,
     UINT nOpenFlags,
@@ -856,7 +853,7 @@ static void PASCAL SetStatus(
 *lpszFileName*<br/>
 Eine Zeichenfolge, die den Pfad zur gewünschten Datei ist. Der Pfad kann relativ oder absolut sein und darf einen Netzwerknamen an.
 
-*status*<br/>
+*Status*<br/>
 Der Puffer, der die neue Statusinformationen enthält. Rufen Sie die `GetStatus` Bibliotheksvorlage Memberfunktion die `CFileStatus` Struktur, deren aktuelle Werte, und ändern Sie dann nach Bedarf. Wenn ein Wert 0 ist, wird der entsprechende Statuselement nicht aktualisiert. Finden Sie unter den [GetStatus](#getstatus) Member-Funktion, eine Beschreibung der `CFileStatus` Struktur.
 
 *pTM*<br/>

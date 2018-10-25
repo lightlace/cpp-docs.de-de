@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee6c0b958fe27c04c116b4f82098f459c1f0f745
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c6fddd337cb9c0bcd78df1bfa563d1f447131078
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070586"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077334"
 ---
 # <a name="this-pointer"></a>this-Zeiger
 
@@ -32,7 +32,7 @@ Die **dies** ist ein Zeiger kann nur innerhalb der nicht statischen Memberfunkti
 ## <a name="syntax"></a>Syntax
 
 ```
-this 
+this 
 this->member-identifier
 ```
 
@@ -181,7 +181,7 @@ int main()
 
 Der Typ des **dies** in einen Member-Funktion wird durch die folgende Syntax, beschrieben, in denen *cv-Qualifier-List* wird vom Deklarator Funktionen Element bestimmt und kann **Const**oder **flüchtige** (oder beides), und *Klassentyp* ist der Name der Klasse:
 
-*[cv-Qualifier-List] Klassentyp* **\* const dies**
+*[cv-Qualifier-List] Klassentyp* **&#42; const dies**
 
 Das heißt, **dies** ist immer ein konstanter Zeiger, sie kann nicht zugewiesen werden.  Die **const** oder **flüchtige** Qualifizierer, die in der memberfunktionsdeklaration verwendet, gelten für die Instanz der Klasse verweist **dies** im Rahmen dieser Funktion.
 

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d050f27688d97cd3ef0352eed00f4dadb1fe6d98
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 96bcaf768ece46c22422fb3d98b85def7c57ed6b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403785"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056593"
 ---
 # <a name="creating-stack-and-queue-collections"></a>Erstellen von Stack- und Warteschlangenauflistungen
 
@@ -40,9 +40,9 @@ Da die Standardliste Auflistung sowohl eine HEAD- und einem Ende verfügt, ist e
 
 1. Eine der vorhandenen Klassen, MFC-Liste eine neue Listenklasse abgeleitet, und fügen Sie weitere Member-Funktionen, um die Funktionalität des Stack-Vorgänge unterstützen hinzu.
 
-     Das folgende Beispiel zeigt, wie Memberfunktionen zur push-Elemente auf dem Stapel, einen Blick auf das oberste Element im Stapel, und das oberste Element aus dem Stapel hinzugefügt wird:
+   Das folgende Beispiel zeigt, wie Memberfunktionen zur push-Elemente auf dem Stapel, einen Blick auf das oberste Element im Stapel, und das oberste Element aus dem Stapel hinzugefügt wird:
 
-     [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
+   [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
 
 Beachten Sie, dass dieser Ansatz das zugrunde liegende macht `CObList` Klasse. Der Benutzer kann alle Aufrufen `CObList` Memberfunktion, ob es für einen Stapel oder nicht sinnvoll.
 
@@ -54,9 +54,9 @@ Da die Standardliste Auflistung sowohl eine HEAD- und einem Ende verfügt, ist e
 
 1. Eine der vordefinierten Listenklassen bereitgestellt, mit der Microsoft Foundation Class-Bibliothek eine neue Listenklasse abgeleitet, und fügen Sie weitere Member-Funktionen zur Unterstützung von der Semantik der Vorgänge für Queue hinzu.
 
-     Das folgende Beispiel zeigt, wie Sie Member-Funktionen, um ein Element am Ende der Warteschlange hinzugefügt und das Abrufen des Elements vom Anfang der Warteschlange anfügen können.
+   Das folgende Beispiel zeigt, wie Sie Member-Funktionen, um ein Element am Ende der Warteschlange hinzugefügt und das Abrufen des Elements vom Anfang der Warteschlange anfügen können.
 
-     [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
+   [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
 
 ## <a name="see-also"></a>Siehe auch
 

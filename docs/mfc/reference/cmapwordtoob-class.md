@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85f63cb37b08e226c310060550733748ebdc08dc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 28cc83481f6b134fe41f24697f0e531797035abf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433349"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069190"
 ---
 # <a name="cmapwordtoob-class"></a>CMapWordToOb-Klasse
 
@@ -125,6 +125,4 @@ Weitere Informationen zu `CMapWordToOb`, finden Sie im Artikel [Sammlungen](../.
 
 [CObject-Klasse](../../mfc/reference/cobject-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
-
-
 

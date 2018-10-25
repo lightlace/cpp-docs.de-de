@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6004c3acd052d1424004017941a5e4aa110c602c
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 1bf8d43d9325ff6900cd1c5cd63629ead434acbc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890335"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055514"
 ---
 # <a name="activex-controls-on-the-internet"></a>ActiveX-Steuerelemente für das Internet
 
@@ -67,7 +67,7 @@ Führen Sie zur Verbesserung der Leistung der Steuerelemente diese Tipps zur Eff
 
 - Herunterladen von Daten in kleine Blöcke.
 
-     Beim Herunterladen von große Datenströme, z. B. Bitmaps oder Videodaten Zugriff auf die Daten asynchron in Zusammenarbeit mit dem Container eines Steuerelements. Ruft die Daten auf inkrementell oder progressive Weise arbeiten gemeinsam mit anderen Steuerelementen, die auch die Daten abgerufen werden können. Code kann auch asynchron heruntergeladen werden.
+   Beim Herunterladen von große Datenströme, z. B. Bitmaps oder Videodaten Zugriff auf die Daten asynchron in Zusammenarbeit mit dem Container eines Steuerelements. Ruft die Daten auf inkrementell oder progressive Weise arbeiten gemeinsam mit anderen Steuerelementen, die auch die Daten abgerufen werden können. Code kann auch asynchron heruntergeladen werden.
 
 - Herunterladen von Code und die Eigenschaften im Hintergrund.
 
@@ -75,15 +75,15 @@ Führen Sie zur Verbesserung der Leistung der Steuerelemente diese Tipps zur Eff
 
 - Berücksichtigen Sie wie persistente Daten gespeichert werden, sowohl Eigenschaften als auch umfangreiche Daten-BLOBs (z. B. ein Bild oder Video Bitmapdaten).
 
-     Steuerelemente mit persistenten Daten, z. B. große Bitmaps oder AVI-Dateien an erfordern sorgfältig auf die Download-Methode. Ein Dokument oder eine Seite kann so bald wie möglich sichtbar, und ermöglicht dem Benutzer, die mit der Seite interagieren, während Steuerelemente die Daten im Hintergrund abgerufen.
+   Steuerelemente mit persistenten Daten, z. B. große Bitmaps oder AVI-Dateien an erfordern sorgfältig auf die Download-Methode. Ein Dokument oder eine Seite kann so bald wie möglich sichtbar, und ermöglicht dem Benutzer, die mit der Seite interagieren, während Steuerelemente die Daten im Hintergrund abgerufen.
 
 - Schreiben Sie effizientere Routinen, mit denen Codegröße und zur Laufzeit nach unten.
 
-     Kleine Schaltfläche und Label-Steuerelemente, mit nur wenigen Bytes des persistenten Daten, eignen sich für die Verwendung in der Internet-Umgebung und die Arbeit auch im Browser.
+   Kleine Schaltfläche und Label-Steuerelemente, mit nur wenigen Bytes des persistenten Daten, eignen sich für die Verwendung in der Internet-Umgebung und die Arbeit auch im Browser.
 
 - Beachten Sie, dass der Status in den Container übermittelt werden.
 
-     Benachrichtigt den Container des Status des asynchronen Downloads, einschließlich der Benutzer für die Interaktion mit einer Seite beginnen kann, und der Download abgeschlossen ist. Der Container kann Fortschritt anzeigen (z. B. der Fortschritt in Prozent) an den Benutzer.
+   Benachrichtigt den Container des Status des asynchronen Downloads, einschließlich der Benutzer für die Interaktion mit einer Seite beginnen kann, und der Download abgeschlossen ist. Der Container kann Fortschritt anzeigen (z. B. der Fortschritt in Prozent) an den Benutzer.
 
 - Beachten Sie, wie die Steuerelemente auf dem Clientcomputer registriert sind.
 
@@ -99,7 +99,7 @@ Wenn Sie ein neues Steuerelement mit dem Assistenten zum Erstellen, können Sie 
 
 1. Auf der **Steuerelementeinstellungen** Seite **lädt Eigenschaften asynchron**. Nach Auswahl dieser Option richtet die Status "bereit"-Eigenschaft und den Status "bereit" geändert-Ereignis für Sie.
 
-     Sie können auch andere Optimierungen auswählen, wie z. B. **Fensterloser Aktivierung**, das in erläutert wird [ActiveX-Steuerelemente: Optimierung](../mfc/mfc-activex-controls-optimization.md).
+   Sie können auch andere Optimierungen auswählen, wie z. B. **Fensterloser Aktivierung**, das in erläutert wird [ActiveX-Steuerelemente: Optimierung](../mfc/mfc-activex-controls-optimization.md).
 
 1. Wählen Sie **Fertig stellen** zum Erstellen des Projekts.
 
@@ -111,15 +111,15 @@ Wenn Sie ein neues Steuerelement mit dem Assistenten zum Erstellen, können Sie 
 
 1. In dieser Klasse außer Kraft setzen `OnDataAvailable`. Diese Funktion wird aufgerufen, wenn die Daten für die Anzeige verfügbar sind. Wenn Daten verfügbar sind, können Sie es beliebig verarbeiten gewählten, z. B. durch progressiv rendern.
 
-     Im folgenden Codeauszug wird ein einfaches Beispiel für schrittweise Anzeige von Daten in einem Bearbeitungssteuerelement. Beachten Sie die Verwendung des Flags **BSCF_FIRSTDATANOTIFICATION** , deaktivieren Sie das Steuerelement zum Bearbeiten.
+   Im folgenden Codeauszug wird ein einfaches Beispiel für schrittweise Anzeige von Daten in einem Bearbeitungssteuerelement. Beachten Sie die Verwendung des Flags **BSCF_FIRSTDATANOTIFICATION** , deaktivieren Sie das Steuerelement zum Bearbeiten.
 
-     [!code-cpp[NVC_MFCActiveXControl#1](../mfc/codesnippet/cpp/activex-controls-on-the-internet_1.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#1](../mfc/codesnippet/cpp/activex-controls-on-the-internet_1.cpp)]
 
-     Beachten Sie, dass Sie AFXCMN. H, um Sie verwenden die `CListCtrl` Klasse.
+   Beachten Sie, dass Sie AFXCMN. H, um Sie verwenden die `CListCtrl` Klasse.
 
 1. Wenn das Steuerelement insgesamt ist Zustandsänderungen (z. B. von laden zu initialisiert oder interaktive Benutzer), Aufruf `COleControl::InternalSetReadyState`. Wenn das Steuerelement nur eine Path-Eigenschaft verfügt, können Sie Code hinzufügen, auf **BSCF_LASTDATANOTIFICATION** um dem Container zu benachrichtigen, dass der Download abgeschlossen ist. Zum Beispiel:
 
-     [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]
 
 1. Überschreiben Sie `OnProgress`. In `OnProgress`, übergeben Sie eine Zahl, die den maximalen Bereich und eine Anzahl zeigt, wie weit in des aktuellen Downloads ist. Sie können diese Zahlen verwenden, um den Status wie z. B. den Prozentsatz der Fertigstellung an den Benutzer anzuzeigen.
 
@@ -135,19 +135,19 @@ Die nächste Prozedur fügt eine Eigenschaft für das Steuerelement gerade abgel
 
 1. Deklarieren Sie eine Membervariable des Ihre `CDataPathProperty`-abgeleiteten Klasse in der ActiveX-Steuerelementklasse.
 
-     [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]
+   [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]
 
 1. Implementieren Sie die `Get/Set`-Methoden. Für `Get`, die Zeichenfolge zurück. Für `Set`, laden Sie die Eigenschaft und der Aufruf `SetModifiedFlag`.
 
-     [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]
 
 1. In [DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange), fügen Sie die folgende Zeile hinzu:
 
-     [!code-cpp[NVC_MFCActiveXControl#5](../mfc/codesnippet/cpp/activex-controls-on-the-internet_5.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#5](../mfc/codesnippet/cpp/activex-controls-on-the-internet_5.cpp)]
 
 1. Außer Kraft setzen [Sie ResetData](../mfc/reference/cdatapathproperty-class.md#resetdata) benachrichtigen Sie die Eigenschaft, die das Steuerelement zurücksetzen, indem Sie diese Zeile:
 
-     [!code-cpp[NVC_MFCActiveXControl#6](../mfc/codesnippet/cpp/activex-controls-on-the-internet_6.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#6](../mfc/codesnippet/cpp/activex-controls-on-the-internet_6.cpp)]
 
 ## <a name="deciding-whether-to-derive-from-cdatapathproperty-or-ccacheddatapathproperty"></a>Entscheiden, ob Sie von CDataPathProperty oder CCachedDataPathProperty abgeleitet werden
 
@@ -200,8 +200,6 @@ Wenn Sie Unterstützung für asynchrone Eigenschaften auf ein vorhandenes Steuer
 [!code-cpp[NVC_MFCActiveXControl#8](../mfc/codesnippet/cpp/activex-controls-on-the-internet_8.cpp)]
 
 Aktualisieren Sie den Status "bereit" während des Downloads des Codes durch den Aufruf [COleControl::InternalSetReadyState](../mfc/reference/colecontrol-class.md#internalsetreadystate). Sie rufen zentral `InternalSetReadyState` stammt aus der `OnProgress` Überschreiben von `CDataPathProperty`-abgeleitete Klasse.
-
-
 
 ## <a name="see-also"></a>Siehe auch
 

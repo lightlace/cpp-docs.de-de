@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8e161ac82a6df238079782768ee44e7bdf359cf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b6aa9fdd5c50119b820ddd73d842dc8a60089e97
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425079"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081978"
 ---
 # <a name="user-defined-tools"></a>Benutzerdefinierte Tools
 
@@ -67,7 +67,4 @@ Wenn Sie einige Tools, die beim Start der Anwendung vordefinieren möchten, müs
 [CUserTool-Klasse](../mfc/reference/cusertool-class.md)<br/>
 [CUserToolsManager-Klasse](../mfc/reference/cusertoolsmanager-class.md)<br/>
 [CWinAppEx-Klasse](../mfc/reference/cwinappex-class.md)
-
-
-
 

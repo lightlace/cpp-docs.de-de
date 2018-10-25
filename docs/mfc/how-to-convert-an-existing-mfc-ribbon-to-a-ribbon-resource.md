@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07ed60edf2b83810616e2ed58a92510d1d973ff0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b31062530bfe6da940cd6458bd5cfa91f3e29ae7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378110"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052550"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>Gewusst wie: Umwandeln eines vorhandenen MFC-Menübands in eine Menübandressource
 
@@ -37,13 +37,13 @@ Benötigen Sie ein vorhandenes MFC-Projekt mit Code, der die MFC-Menübandklasse
 
 ```
 
-     Save and close the file.
+   Speichern und schließen Sie die Datei.
 
 1. Erstellen Sie und führen Sie die MFC-Anwendung, und klicken Sie dann öffnen Sie im Editor RibbonOutput.txt und kopieren Sie den Inhalt.
 
 1. In Visual Studio auf die **Projekt** Menü klicken Sie auf **Ressource hinzufügen**. In der **Ressource hinzufügen** wählen Sie im Dialogfeld **Menüband** , und klicken Sie dann auf **neu**.
 
-     Visual Studio erstellt eine menübandressource und öffnet sie in der Entwurfsansicht. Das Menübandressourcen-ID lautet IDR_RIBBON1 und in angezeigt wird **Ressourcenansicht**. Das Menüband ist in der ribbon1.mfcribbon-ms-XML-Datei definiert.
+   Visual Studio erstellt eine menübandressource und öffnet sie in der Entwurfsansicht. Das Menübandressourcen-ID lautet IDR_RIBBON1 und in angezeigt wird **Ressourcenansicht**. Das Menüband ist in der ribbon1.mfcribbon-ms-XML-Datei definiert.
 
 1. Klicken Sie in Visual Studio öffnen Sie ribbon1.mfcribbon-ms, löschen Sie den Dateiinhalt, und fügen Sie den Inhalt der RibbonOutput.txt, die Sie zuvor kopiert haben. Speichern Sie und schließen Sie ribbon1.mfcribbon ms.
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822d1ac0cc1e6b3e728d43b816e7a0a15eee9958
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c5bcc7cbe6fcd8a61e15e80c43f27703957a1e88
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46063694"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083086"
 ---
 # <a name="command-line-warning-d9025"></a>Befehlszeilenwarnung D9025
 
@@ -35,6 +35,6 @@ Wenn Sie diese Warnung zu erhalten, beim Kompilieren von der Entwicklungsumgebun
 
 - Eine Option kann entweder im Code oder in den projekteinstellungen des Projekts angegeben werden. Bei Betrachtung des Compilers [Eigenschaftenseiten Befehlszeile](../../ide/command-line-property-pages.md) und wenn Sie sehen, dass die in Konflikt stehenden Optionen in der **alle Optionen** Feld, und klicken Sie dann die Optionen in den Eigenschaftenseiten des Projekts, andernfalls die Optionen festgelegt sind im Quellcode werden festgelegt werden.
 
-     Wenn die Optionen in den Eigenschaftenseiten des Projekts festgelegt werden, suchen Sie auf den Compiler-Präprozessor-Eigenschaftenseite (mit den Projektknoten im Projektmappen-Explorer ausgewählt).  Wenn Sie nicht angezeigt, werden die Option festgelegt, die Einstellungen für die Präprozessor Eigenschaftenseiten für jede Quellcodedatei (im Projektmappen-Explorer) stellen Sie sicher, ist es nicht es hinzugefügt.
+   Wenn die Optionen in den Eigenschaftenseiten des Projekts festgelegt werden, suchen Sie auf den Compiler-Präprozessor-Eigenschaftenseite (mit den Projektknoten im Projektmappen-Explorer ausgewählt).  Wenn Sie nicht angezeigt, werden die Option festgelegt, die Einstellungen für die Präprozessor Eigenschaftenseiten für jede Quellcodedatei (im Projektmappen-Explorer) stellen Sie sicher, ist es nicht es hinzugefügt.
 
-     Wenn die Optionen im Code festgelegt sind, konnte es entweder im Code oder in der Windows-Header festgelegt werden.  Sie könnten versuchen, eine vorverarbeitete Datei erstellen ([/p](../../build/reference/p-preprocess-to-a-file.md)), und suchen sie für das Symbol.
+   Wenn die Optionen im Code festgelegt sind, konnte es entweder im Code oder in der Windows-Header festgelegt werden.  Sie könnten versuchen, eine vorverarbeitete Datei erstellen ([/p](../../build/reference/p-preprocess-to-a-file.md)), und suchen sie für das Symbol.

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 84f14cccdd4dd142f2fa6e17e48c37a3fecb94ea
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 6a025b54e3c41f283e1877e0b97c7dbb6e5f32bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791734"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062808"
 ---
 # <a name="nonextensible"></a>nonextensible
 
@@ -70,9 +70,9 @@ __interface IFireTabCtrl
 |**Erforderliche Attribute**|`dual` und `oleautomation`, oder `dispinterface`|
 |**Ungültige Attribute**|Keiner|
 
-Weitere Informationen zu den attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Siehe auch
 
 [IDL-Attribute](idl-attributes.md)<br/>
-[Schnittstellenattribut](interface-attributes.md)  
+[Schnittstellenattribut](interface-attributes.md)

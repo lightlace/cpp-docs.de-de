@@ -19,32 +19,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 67658f6edadd7723789288ab268b97cecdd611d2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6d68daae7bce6ca4c9ffafe7a24c80cff3a5426a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017352"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059856"
 ---
 # <a name="cnomultipleresults-class"></a>CNoMultipleResults-Klasse
 
-Als ein Vorlagenargument verwendet (*TMultiple*) zu [CCommand](../../data/oledb/ccommand-class.md) einen optimierten-Befehl zu erstellen, die ein einzelnes Ergebnis verarbeitet.  
-  
+Als ein Vorlagenargument verwendet (*TMultiple*) zu [CCommand](../../data/oledb/ccommand-class.md) einen optimierten-Befehl zu erstellen, die ein einzelnes Ergebnis verarbeitet.
+
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-class CNoMultipleResults  
-```  
-  
-## <a name="remarks"></a>Hinweise  
+class CNoMultipleResults
+```
 
-Wenn Sie einen Befehl aus, um mehrere Resultsets verarbeiten möchten, verwenden Sie [CMultipleResults](../../data/oledb/cmultipleresults-class.md) stattdessen.  
-  
-## <a name="requirements"></a>Anforderungen  
+## <a name="remarks"></a>Hinweise
 
-**Header:** atldbcli.h  
-  
-## <a name="see-also"></a>Siehe auch  
+Wenn Sie einen Befehl aus, um mehrere Resultsets verarbeiten möchten, verwenden Sie [CMultipleResults](../../data/oledb/cmultipleresults-class.md) stattdessen.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** atldbcli.h
+
+## <a name="see-also"></a>Siehe auch
 
 [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)

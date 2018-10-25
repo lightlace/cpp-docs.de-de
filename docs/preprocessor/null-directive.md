@@ -17,22 +17,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd5b996f4a44ef0a310b2a8d76560f6123929472
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: a7dd2be54f536a8871c3d402db1351f859b14652
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538631"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061897"
 ---
 # <a name="null-directive"></a>NULL-Anweisung
-Die präprozessoranweisung null ist ein einzelnen Nummernzeichen (**#**) nur in einer Zeile. Sie hat keine Auswirkungen.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-#  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- 
+Die präprozessoranweisung null ist ein einzelnen Nummernzeichen (**#**) nur in einer Zeile. Sie hat keine Auswirkungen.
+
+## <a name="syntax"></a>Syntax
+
+```
+#
+```
+
+## <a name="see-also"></a>Siehe auch
+
 [Präprozessordirektiven](../preprocessor/preprocessor-directives.md)

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1d3f8dc2251dbfbcd8155b0edc512a9dc40bacc2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 71e42f7d7a60478ec9344a44e8e86463e5845500
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393398"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061572"
 ---
 # <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>Gewusst wie: Aufrufen von Ereignissen und Methoden des Windows Forms-Steuerelements
 
@@ -39,11 +39,11 @@ In diesem Thema wird vorausgesetzt, Sie haben zuvor [Vorgehensweise: Erstellen d
 
 1. Fügen Sie die folgende Zeile Abschnitt Öffentliche Außerkraftsetzungen der `CMFC02View` -Klassendeklaration in MFC02View.h.
 
-     `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`
+   `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`
 
 1. Fügen Sie eine Außerkraftsetzung für OnInitialupdate hinzu.
 
-     Anzeigen der **Eigenschaften** Fenster (F4). In **Klassenansicht** (STRG + UMSCHALT + C), wählen Sie CMFC02View-Klasse. In der **Eigenschaften** Fenster, wählen Sie das Symbol für Außerkraftsetzungen. Scoll nach unten zu OnInitialUpdate. Klicken Sie auf die Dropdownliste aus, und wählen Sie \<hinzufügen >. In MFC02View.cpp. Stellen Sie sicher, dass der Text der Funktion OnInitialUpdate wie folgt:
+   Anzeigen der **Eigenschaften** Fenster (F4). In **Klassenansicht** (STRG + UMSCHALT + C), wählen Sie CMFC02View-Klasse. In der **Eigenschaften** Fenster, wählen Sie das Symbol für Außerkraftsetzungen. Scoll nach unten zu OnInitialUpdate. Klicken Sie auf die Dropdownliste aus, und wählen Sie \<hinzufügen >. In MFC02View.cpp. Stellen Sie sicher, dass der Text der Funktion OnInitialUpdate wie folgt:
 
     ```
     CWinFormsView::OnInitialUpdate();
@@ -53,11 +53,11 @@ In diesem Thema wird vorausgesetzt, Sie haben zuvor [Vorgehensweise: Erstellen d
 
 1. Erstellen Sie das Projekt, und führen Sie es aus.
 
-     Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**.
+   Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**.
 
-     Auf der **Debuggen** Menü klicken Sie auf **Starten ohne debugging**.
+   Auf der **Debuggen** Menü klicken Sie auf **Starten ohne debugging**.
 
-     Beachten Sie, dass das Textfeld jetzt initialisiert wird.
+   Beachten Sie, dass das Textfeld jetzt initialisiert wird.
 
 ## <a name="see-also"></a>Siehe auch
 

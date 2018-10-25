@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 468b5c5dcadc1715384684062f203ae9179ef044
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 7b63e98e070dc5352d7c1456252722bea958b8bf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791974"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072095"
 ---
 # <a name="viprogid"></a>vi_progid
 
@@ -66,11 +66,11 @@ Finden Sie unter den [Co-Klasse](coclass.md) Beispiel für ein Beispiel für die
 |**Erforderliche Attribute**|Keiner|
 |**Ungültige Attribute**|Keiner|
 
-Weitere Informationen zu den attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Siehe auch
 
 [IDL-Attribute](idl-attributes.md)<br/>
 [typedef-, enum-, union- und struct-Attribute](typedef-enum-union-and-struct-attributes.md)<br/>
 [Klassenattribute](class-attributes.md)<br/>
-[Programm-ID-Schlüssel](/windows/desktop/com/-progid--key)  
+[Programm-ID-Schlüssel](/windows/desktop/com/-progid--key)

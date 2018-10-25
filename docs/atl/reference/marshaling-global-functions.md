@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8426a0113ca245f6c9390a5c95f350398938731
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e0b9a8e72cb3c1334484ed4a4e5c85c8b9a12347
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106232"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055137"
 ---
 # <a name="marshaling-global-functions"></a>Marshalling globale Funktionen
 
@@ -34,7 +34,7 @@ Diese Funktionen bieten Unterstützung für das Marshallen und konvertieren Mars
 |-|-|
 |[AtlFreeMarshalStream](#atlfreemarshalstream)|Gibt die marschalldaten und `IStream` Zeiger.|
 |[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Erstellt ein neues Streamobjekt und marshallt den angegebenen Schnittstellenzeiger auf.|
-|[AtlUnmarshalPtr](#atlunmarshalptr)|Konvertiert die Marshallingdaten des Streams in einen Schnittstellenzeiger auf.|  
+|[AtlUnmarshalPtr](#atlunmarshalptr)|Konvertiert die Marshallingdaten des Streams in einen Schnittstellenzeiger auf.|
 
 ## <a name="requirements"></a>Anforderungen:
 
@@ -42,7 +42,7 @@ Diese Funktionen bieten Unterstützung für das Marshallen und konvertieren Mars
 
 ##  <a name="atlfreemarshalstream"></a>  AtlFreeMarshalStream
 
-Gibt die Marschalldaten im Stream und anschließend den Streamzeiger frei.  
+Gibt die Marschalldaten im Stream und anschließend den Streamzeiger frei.
 
 ```
 HRESULT AtlFreeMarshalStream(IStream* pStream);

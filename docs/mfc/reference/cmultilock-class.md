@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39cde8affc84ed879ad3731cb6c18449c60498f3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 097f6173faad4f99f64c5dac45e2a0d1292a07eb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430851"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076359"
 ---
 # <a name="cmultilock-class"></a>CMultiLock-Klasse
 
@@ -148,19 +148,19 @@ Wenn `Lock` fehlschlägt, wird – 1. Im Erfolgsfall gibt es einen der folgenden
 
 - WAIT_OBJECT_0 und WAIT_OBJECT_0 + (Anzahl der Objekte – 1)
 
-     Wenn *bWaitForAll* ist "true", alle Objekte (verfügbar) signalisiert werden. Wenn *bWaitForAll* ist "false", der Rückgabewert - WAIT_OBJECT_0 ist der Index im Array von Objekten des Objekts, das (verfügbar) signalisiert wird.
+   Wenn *bWaitForAll* ist "true", alle Objekte (verfügbar) signalisiert werden. Wenn *bWaitForAll* ist "false", der Rückgabewert - WAIT_OBJECT_0 ist der Index im Array von Objekten des Objekts, das (verfügbar) signalisiert wird.
 
 - WAIT_OBJECT_0 + (Anzahl von Objekten)
 
-     Ein Ereignis, das im angegebenen *DwWakeMask* finden Sie in der Eingabewarteschlange des Threads.
+   Ein Ereignis, das im angegebenen *DwWakeMask* finden Sie in der Eingabewarteschlange des Threads.
 
 - Zwischen WAIT_ABANDONED_0 und WAIT_ABANDONED_0 + (Anzahl der Objekte – 1)
 
-     Wenn *bWaitForAll* ist "true", alle Objekte signalisiert werden und mindestens eines der Objekte wird ein abgebrochener Mutex-Objekt. Wenn *bWaitForAll* ist "false", der Rückgabewert - WAIT_ABANDONED_0 ist der Index im Array von Objekten des abgebrochenen Mutex-Objekts, das den Wartevorgang erfüllt hat.
+   Wenn *bWaitForAll* ist "true", alle Objekte signalisiert werden und mindestens eines der Objekte wird ein abgebrochener Mutex-Objekt. Wenn *bWaitForAll* ist "false", der Rückgabewert - WAIT_ABANDONED_0 ist der Index im Array von Objekten des abgebrochenen Mutex-Objekts, das den Wartevorgang erfüllt hat.
 
 - WAIT_TIMEOUT
 
-     Das Timeoutintervall, die im angegebenen *DwTimeOut* erfolglos dem Wartevorgang abgelaufen ist.
+   Das Timeoutintervall, die im angegebenen *DwTimeOut* erfolglos dem Wartevorgang abgelaufen ist.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -174,7 +174,6 @@ Gibt das Synchronisierungsobjekt, das im Besitz von `CMultiLock`.
 
 ```
 BOOL Unlock();
-
 
 BOOL Unlock(
     LONG lCount,
@@ -202,6 +201,4 @@ Die erste Form der `Unlock` versucht, das Synchronisierungsobjekt, die von verwa
 ## <a name="see-also"></a>Siehe auch
 
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
-
-
 

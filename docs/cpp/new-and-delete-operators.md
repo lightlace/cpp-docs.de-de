@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b205be3c2417453faa54c9d24ac28216ee0af5cf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 447a03cec8beba331aedc8077a44dc9090fccbc6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46060530"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078523"
 ---
 # <a name="new-and-delete-operators"></a>Operatoren "new" und "delete"
 
@@ -45,7 +45,6 @@ char *pch = new char[BUFFER_SIZE];
 Wenn keine Speicherbytes, die Anforderung ist **new-Operator** gibt einen Zeiger auf ein bestimmtes Objekt (d. h. wiederholte Aufrufe von **new-Operator** liefern also unterschiedliche Zeiger). Es ist nicht genügend Arbeitsspeicher für die zuordnungsanforderung **new-Operator** löst eine Std:: bad_alloc-Ausnahme aus, oder gibt **"nullptr"** bei Links in nicht auslösend **new-Operator** unterstützen.
 
 Sie können eine Routine schreiben, die versucht, den Speicher frei, und wiederholen die Zuordnung. finden Sie unter [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) für Weitere Informationen. Weitere Informationen wiederherstellungsschema finden Sie im Abschnitt behandeln nicht genügend Arbeitsspeicher in diesem Thema.
-
 
 Die beiden Bereiche für **new-Operator** Funktionen werden in der folgenden Tabelle beschrieben.
 

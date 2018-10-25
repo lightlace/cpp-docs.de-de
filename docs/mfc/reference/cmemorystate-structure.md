@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73d04141d67b832f3c42fe74e7b2a35d8751afef
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 09b82a4ee1c10e009d403e0e0071cf90cb65cd86
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378682"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082514"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState-Struktur
 
@@ -150,7 +150,6 @@ Ruft die `Dump` -Funktion für alle Objekte eines Typs von Klasse abgeleitet `CO
 ```
 void DumpAllObjectsSince() const;
 
-
 ```
 
 ### <a name="remarks"></a>Hinweise
@@ -167,7 +166,6 @@ Gibt ein Statistikbericht präzise Speicher, aus einer `CMemoryState` -Objekt, d
 
 ```
 void DumpStatistics() const;
-
 
 ```
 
@@ -212,6 +210,4 @@ Sie können die Anwendung jetzt ausführen, im Debugmodus befinden, um die Ausga
 ## <a name="see-also"></a>Siehe auch
 
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
-
-
 

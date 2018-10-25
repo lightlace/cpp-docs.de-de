@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dced1bd7db0f3eec9d9d070deb8cf990496116ae
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: e0ac5ceda3b979454c5d37e513cbd77a4d3e3e20
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821659"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063353"
 ---
 # <a name="member-access-control-c"></a>Memberzugriffssteuerung (C++)
 
@@ -246,8 +246,7 @@ In den Mehrfachvererbungsgittern, die virtuelle Basisklassen betreffen, kann ein
 
 ![Access-along-Pfade eines vererbungsdiagramms](../cpp/media/vc38v91.gif "vc38V91") Zugriff entlang Pfade eines vererbungsdiagramms
 
-In der Abbildung wird ein Name, der in der Klasse `VBase` deklariert wird, immer durch die Klasse `RightPath` erreicht. Auf den rechten Pfad kann einfacher zugegriffen werden, da `RightPath` `VBase` als öffentliche Basisklasse deklariert, während `LeftPath` `VBase` als privat deklariert.
-
+In der Abbildung wird ein Name, der in der Klasse `VBase` deklariert wird, immer durch die Klasse `RightPath` erreicht. Auf den rechten Pfad kann einfacher zugegriffen werden, da `RightPath``VBase` als öffentliche Basisklasse deklariert, während `LeftPath``VBase` als privat deklariert.
 
 ## <a name="see-also"></a>Siehe auch
 

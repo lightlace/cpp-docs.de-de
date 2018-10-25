@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5071f2c6f00b3cc4aaf09974a01c4601d0078e42
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4908566a80fcad2350023f2306a952b2d97b2e62
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377957"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060675"
 ---
 # <a name="icommandsource-interface"></a>ICommandSource-Schnittstelle
 
@@ -103,6 +103,7 @@ void AddCommandRangeHandler(
     unsigned int cmdIDMax,
     CommandHandler^ cmdHandler);
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *cmdIDMin*<br/>
@@ -124,6 +125,7 @@ void AddCommandRangeUIHandler(
     unsigned int cmdIDMax,
     CommandUIHandler^ cmdUIHandler);
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *cmdIDMin*<br/>
@@ -145,6 +147,7 @@ void AddCommandUIHandler(
     unsigned int cmdID,
     CommandUIHandler^ cmdUIHandler);
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *cmdID*<br/>
@@ -162,6 +165,7 @@ Sendet eine Nachricht ohne zu warten, bis es verarbeitet werden.
 ```
 void PostCommand(unsigned int command);
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *command*<br/>
@@ -170,13 +174,13 @@ Die Befehls-ID der Nachricht, die gepostet werden soll.
 
 Diese Methode sendet asynchron die Nachricht, die vom Befehl angegebene ID zugeordnet. Ruft die CWnd::PostMessage, um die Nachricht in der Nachrichtenwarteschlange des Fensters zu platzieren und gibt dann zurück, ohne zu warten, für das entsprechende Fenster zur Verarbeitung der Nachricht.
 
-
 ## <a name="removecommandhandler"></a> ICommandSource::RemoveCommandHandler
 
 Entfernt einen Befehlshandler von einem Befehl-Quellobjekt.
 ```
 void RemoveCommandHandler(unsigned int cmdID);
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *cmdID*<br/>
@@ -184,7 +188,6 @@ Die Befehls-ID.
 ### <a name="remarks"></a>Hinweise
 
 Diese Methode entfernt den Befehlshandler, der aus das Befehlsquellobjekt CmdID zugeordnet.
-
 
 ## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler
 
@@ -194,6 +197,7 @@ void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *cmdIDMin*<br/>
@@ -212,6 +216,7 @@ void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *cmdIDMin*<br/>
@@ -228,6 +233,7 @@ Entfernt einen Benutzer Schnittstelle Befehlshandler Nachricht von einem Quellob
 ```
 void RemoveCommandUIHandler(unsigned int cmdID);
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *cmdID*<br/>
@@ -242,6 +248,7 @@ Sendet eine Nachricht und wartet darauf, dass sie vor der Rückgabe verarbeitet 
 ```
 void SendCommand(unsigned int command);
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *command*<br/>

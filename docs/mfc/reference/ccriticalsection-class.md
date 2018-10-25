@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e5147faaf0170a10295006f12d7e95f5dfd3e8d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 159d452c3b0a813c52d8486f52d67b9817c3a558
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380697"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069281"
 ---
 # <a name="ccriticalsection-class"></a>CCriticalSection-Klasse
 
@@ -81,7 +81,7 @@ Es gibt zwei Methoden für die Verwendung einer `CCriticalSection` Objekt: eigen
 
 - Eigenständige Methode für eine eigenständige `CCriticalSection` Objekt, das Erstellen der `CCriticalSection` Objekt, wenn er benötigt wird. Nach einer erfolgreichen Rückgabe aus dem Konstruktor, Sperren Sie explizit das Objekt mit einem Aufruf von [Sperre](#lock). Rufen Sie [Unlock](#unlock) Sie abschließend den Zugriff auf den kritischen Abschnitt. Diese Methode, bei der deutlicher an eine Person beim Lesen von Quellcodes, ist anfälliger für Fehler, wie Sie merken müssen, Sperren und entsperren den kritischen Abschnitt vor und nach dem Zugriff.
 
-     Eine weitere bevorzugte Methode ist die Verwendung der [CSingleLock](../../mfc/reference/csinglelock-class.md) Klasse. Es verfügt auch über eine `Lock` und `Unlock` -Methode, aber Sie müssen keine Gedanken um die Ressource entsperren, wenn eine Ausnahme auftritt.
+   Eine weitere bevorzugte Methode ist die Verwendung der [CSingleLock](../../mfc/reference/csinglelock-class.md) Klasse. Es verfügt auch über eine `Lock` und `Unlock` -Methode, aber Sie müssen keine Gedanken um die Ressource entsperren, wenn eine Ausnahme auftritt.
 
 - Embedded-Methode, Sie können auch eine Klasse mit mehreren Threads freigeben, durch das Hinzufügen einer `CCriticalSection`-Typ-Datenmember auf die Klasse und den Datenmember, die bei Bedarf zu sperren.
 

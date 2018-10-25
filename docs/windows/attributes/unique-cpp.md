@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc90c58162993cd8d663581e5b19604fcce4c668
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ca5d2da5dc06b1cdf0e999939fcb110608ff3359
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791264"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062683"
 ---
 # <a name="unique-c"></a>unique (C++)
 
@@ -53,10 +53,10 @@ Finden Sie unter den [Ref](ref-cpp.md) Beispiel für ein Beispiel für die Verwe
 |**Erforderliche Attribute**|Keiner|
 |**Ungültige Attribute**|Keiner|
 
-Weitere Informationen zu den attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Siehe auch
 
 [IDL-Attribute](idl-attributes.md)<br/>
 [typedef-, enum-, union- und struct-Attribute](typedef-enum-union-and-struct-attributes.md)<br/>
-[Parameterattribute](parameter-attributes.md)  
+[Parameterattribute](parameter-attributes.md)

@@ -41,131 +41,131 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1ef9799c65f4932bf314f3c11fd8324e0fb40bf2
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: adb59e553565d9886cf27b55f2cfffb4cd0e7aa9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081735"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060155"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset-Klasse
 
-Kapselt ein Rowset und die zugehörigen Accessoren in einer einzelnen Klasse.  
-  
+Kapselt ein Rowset und die zugehörigen Accessoren in einer einzelnen Klasse.
+
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-template <class TAccessor = CNoAccessor, 
-   template <typename T> class TRowset = CRowset>  
-class CAccessorRowset : public TAccessor, public TRowset<TAccessor>  
-```  
-  
-### <a name="parameters"></a>Parameter  
+template <class TAccessor = CNoAccessor,
+   template <typename T> class TRowset = CRowset>
+class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
+```
+
+### <a name="parameters"></a>Parameter
 
 *TAccessor*<br/>
-Ein Accessor-Klasse.  
-  
+Ein Accessor-Klasse.
+
 *TRowset*<br/>
-Eine Rowset-Klasse.  
+Eine Rowset-Klasse.
 
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Anforderungen
 
-**Header:** atldbcli.h  
-  
-## <a name="members"></a>Member  
-  
-### <a name="methods"></a>Methoden  
-  
-|||  
-|-|-|  
-|[Bind](#bind)|Bindungen erstellt (wird verwendet, wenn `bBind` angegeben ist, als **"false"** in [CCommand:: Open](../../data/oledb/ccommand-open.md)).|  
-|[CAccessorRowset](#caccessorrowset)|Konstruktor.|  
-|[Schließen](#close)|Schließt das Rowset und alle Accessoren.|  
-|[FreeRecordMemory](#freerecordmemory)|Gibt alle Spalten im aktuellen Datensatz, der freigegeben werden müssen frei.|  
-|[GetColumnInfo](#getcolumninfo)|Implementiert [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704).|  
-  
-## <a name="remarks"></a>Hinweise  
+**Header:** atldbcli.h
 
-Klasse `TAccessor` verwaltet die Zugriffsmethode. Klasse *TRowset* verwaltet das Rowset.  
+## <a name="members"></a>Member
+
+### <a name="methods"></a>Methoden
+
+|||
+|-|-|
+|[Bind](#bind)|Bindungen erstellt (wird verwendet, wenn `bBind` angegeben ist, als **"false"** in [CCommand:: Open](../../data/oledb/ccommand-open.md)).|
+|[CAccessorRowset](#caccessorrowset)|Konstruktor.|
+|[Schließen](#close)|Schließt das Rowset und alle Accessoren.|
+|[FreeRecordMemory](#freerecordmemory)|Gibt alle Spalten im aktuellen Datensatz, der freigegeben werden müssen frei.|
+|[GetColumnInfo](#getcolumninfo)|Implementiert [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704).|
+
+## <a name="remarks"></a>Hinweise
+
+Klasse `TAccessor` verwaltet die Zugriffsmethode. Klasse *TRowset* verwaltet das Rowset.
 
 ## <a name="bind"></a> CAccessorRowset:: Bind
 
-Die Bindungen erstellt, wenn Sie angegeben haben `bBind` als **"false"** in [CCommand:: Open](../../data/oledb/ccommand-open.md).  
-  
-### <a name="syntax"></a>Syntax  
-  
-```cpp
-HRESULT Bind();  
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
+Die Bindungen erstellt, wenn Sie angegeben haben `bBind` als **"false"** in [CCommand:: Open](../../data/oledb/ccommand-open.md).
 
-Ein standard-HRESULT.  
+### <a name="syntax"></a>Syntax
+
+```cpp
+HRESULT Bind();
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein standard-HRESULT.
 
 ## <a name="caccessorrowset"></a> CAccessorRowset:: CAccessorRowset
 
-Initialisiert das `CAccessorRowset`-Objekt.  
-  
-### <a name="syntax"></a>Syntax  
-  
+Initialisiert das `CAccessorRowset`-Objekt.
+
+### <a name="syntax"></a>Syntax
+
 ```cpp
-CAccessorRowset();  
-```  
+CAccessorRowset();
+```
 
 ## <a name="close"></a> CAccessorRowset:: Close
 
-Gibt alle aktiven Accessoren und Rowsets frei.  
-  
-### <a name="syntax"></a>Syntax  
-  
-```cpp
-void Close();  
-```  
-  
-### <a name="remarks"></a>Hinweise  
+Gibt alle aktiven Accessoren und Rowsets frei.
 
-Gibt alle zugeordneten Arbeitsspeicher frei.  
+### <a name="syntax"></a>Syntax
+
+```cpp
+void Close();
+```
+
+### <a name="remarks"></a>Hinweise
+
+Gibt alle zugeordneten Arbeitsspeicher frei.
 
 ## <a name="freerecordmemory"></a> CAccessorRowset:: Freerecordmemory
 
-Gibt alle Spalten im aktuellen Datensatz, der freigegeben werden müssen frei.  
-  
-### <a name="syntax"></a>Syntax  
-  
+Gibt alle Spalten im aktuellen Datensatz, der freigegeben werden müssen frei.
+
+### <a name="syntax"></a>Syntax
+
 ```cpp
-void FreeRecordMemory();  
-```  
+void FreeRecordMemory();
+```
 
 ## <a name="getcolumninfo"></a> CAccessorRowset:: GetColumnInfo
 
-Ruft die Spalteninformationen aus dem geöffneten Rowset ab.  
-  
-### <a name="syntax"></a>Syntax  
-  
+Ruft die Spalteninformationen aus dem geöffneten Rowset ab.
+
+### <a name="syntax"></a>Syntax
+
 ```cpp
-HRESULT GetColumnInfo(DBORDINAL* pulColumns, 
-   DBCOLUMNINFO** ppColumnInfo, 
-   LPOLESTR* ppStrings) const; 
-    
-HRESULT GetColumnInfo(DBORDINAL* pColumns, 
-   DBCOLUMNINFO** ppColumnInfo);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+HRESULT GetColumnInfo(DBORDINAL* pulColumns,
+   DBCOLUMNINFO** ppColumnInfo,
+   LPOLESTR* ppStrings) const;
 
-Finden Sie unter [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704) in die *OLE DB-Programmierreferenz*.  
-  
-### <a name="return-value"></a>Rückgabewert  
+HRESULT GetColumnInfo(DBORDINAL* pColumns,
+   DBCOLUMNINFO** ppColumnInfo);
+```
 
-Ein standard-HRESULT.  
-  
-### <a name="remarks"></a>Hinweise  
+#### <a name="parameters"></a>Parameter
 
-Der Benutzer muss den zurückgegebenen Spalteninformationen und Zeichenfolgenpuffer freigeben. Verwenden Sie die zweite Version dieser Methode, bei der Verwendung [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) und die Bindungen außer Kraft setzen müssen.  
-  
-Weitere Informationen finden Sie unter [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704) in die *OLE DB-Programmierreferenz*.  
-  
-## <a name="see-also"></a>Siehe auch  
+Finden Sie unter [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704) in die *OLE DB-Programmierreferenz*.
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein standard-HRESULT.
+
+### <a name="remarks"></a>Hinweise
+
+Der Benutzer muss den zurückgegebenen Spalteninformationen und Zeichenfolgenpuffer freigeben. Verwenden Sie die zweite Version dieser Methode, bei der Verwendung [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) und die Bindungen außer Kraft setzen müssen.
+
+Weitere Informationen finden Sie unter [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704) in die *OLE DB-Programmierreferenz*.
+
+## <a name="see-also"></a>Siehe auch
 
 [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)

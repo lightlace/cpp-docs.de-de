@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48cbc29685660f00665fbbb08be76779272d0fcf
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3daa42008bd385b2d45d05106162c99fb9ca0b12
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235503"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082878"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Exemplarische Vorgehensweise: Aktualisieren der MFC Scribble-Anwendung (Teil 1)
 
@@ -32,7 +32,7 @@ In dieser exemplarischen Vorgehensweise wird beschrieben, wie Sie eine vorhanden
 
 In dieser exemplarischen Vorgehensweise wird das klassische MFC-Beispiel Scribble 1.0 geändert, das Ihnen ermöglicht, mit der Maus Strichzeichnungen zu erstellen. In diesem Teil der exemplarischen Vorgehensweise wird gezeigt, wie das Scribble-Beispiel so geändert wird, dass es eine Menübandleiste anzeigt. [Teil 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md) der menübandleiste Weitere Schaltflächen hinzugefügt.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten 
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Die [1.0 MFC Scribble-Beispiel](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Informationen zum Konvertieren in Visual Studio 2017 finden Sie [Handbuch Portieren: MFC Scribble](../porting/porting-guide-mfc-scribble.md).
 
@@ -146,7 +146,7 @@ In dieser exemplarischen Vorgehensweise werden Ressourcendateien aus dem Beispie
    1. Importieren Sie die Datei "filesmall.bmp", die elf 16 x 16 (16 x 176) enthält Images. Ändern Sie die ID der Bitmap auf `IDB_RIBBON_FILESMALL`.
 
    > [!NOTE]
-   > Da wir nur die ersten acht 16 x 16-Bilder (16 x 128) benötigen, können Sie optional die rechten Breite dieser Bitmap von 176 128 zuschneiden. 
+   > Da wir nur die ersten acht 16 x 16-Bilder (16 x 128) benötigen, können Sie optional die rechten Breite dieser Bitmap von 176 128 zuschneiden.
 
    1. Importieren Sie die "filelarge.bmp", die neun 32 x 32 (32 x 288) enthält Images. Ändern Sie die ID der Bitmap auf `IDB_RIBBON_FILELARGE`.
 
@@ -161,7 +161,7 @@ In dieser exemplarischen Vorgehensweise werden Ressourcendateien aus dem Beispie
    1. Importieren Sie die Bitmap "panelicons.bmp", die acht 16x16-Bilder enthält. In der **Eigenschaften** Fenster die **Bitmap-Editor**, passt die Breite der Bitmap auf 64 (16 x 64). Ändern Sie die ID der Bitmap auf `IDB_PANEL_ICONS`.
 
    > [!NOTE]
-   > Da wir nur die ersten vier 16 x 16-Bilder (16 x 64) benötigen, können Sie optional die rechten Breite dieser Bitmap von 128 auf 64 zuschneiden. 
+   > Da wir nur die ersten vier 16 x 16-Bilder (16 x 64) benötigen, können Sie optional die rechten Breite dieser Bitmap von 128 auf 64 zuschneiden.
 
 ##  <a name="addribbon"></a> Hinzufügen einer Menübandressource zum Projekt
 

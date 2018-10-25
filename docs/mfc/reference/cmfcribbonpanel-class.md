@@ -124,19 +124,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 664894fb99f02168d06cfc5d82b4225defe7fe38
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 46b7f613cdb67fa446c878ceda7dd9eca6eec7e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422221"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082579"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel-Klasse
 
 Implementiert einen Bereich, der eine Anzahl von Menübandelementen enthält. Wenn der Bereich gezeichnet wird, werden darin so viele Elemente wie möglich angezeigt.
 
 Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.
-
 
 ## <a name="syntax"></a>Syntax
 
@@ -540,7 +539,6 @@ Der Name des im Menübandbereich.
 
 ##  <a name="getparentbutton"></a>  CMFCRibbonPanel::GetParentButton
 
-
 ```
 CMFCRibbonBaseElement* GetParentButton() const;
 ```
@@ -562,7 +560,6 @@ CMFCRibbonCategory* GetParentCategory() const;
 Ein Zeiger auf die Menübandkategorie, die in diesem Menübandbereich enthält.
 
 ##  <a name="getparentmenubar"></a>  CMFCRibbonPanel::GetParentMenuBar
-
 
 ```
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
@@ -830,7 +827,6 @@ Die wichtigsten Menübandbereich wird angezeigt, wenn der Benutzer die Schaltfl�
 
 ##  <a name="ismenumode"></a>  CMFCRibbonPanel::IsMenuMode
 
-
 ```
 BOOL IsMenuMode() const;
 ```
@@ -841,14 +837,13 @@ BOOL IsMenuMode() const;
 
 ##  <a name="onkey"></a>  CMFCRibbonPanel::OnKey
 
-
 ```
 virtual BOOL OnKey(UINT nChar);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nChar*
+[in] *nChar*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -929,7 +924,8 @@ CMFCRibbonBaseElement* pElem);
 *nIndex*<br/>
 [in] Gibt an, der nullbasierte Index des zu ersetzenden Elements.
 
-[in] [out] *pElem* ein gültiger Zeiger auf das Element, das das ursprüngliche Element ersetzt.
+*pElem*<br/>
+[in, out] Ein gültiger Zeiger auf das Element, das das ursprüngliche Element ersetzt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -954,7 +950,8 @@ CMFCRibbonBaseElement* pElem);
 *uiCmdID*<br/>
 [in] Gibt an, die Befehls-ID des Elements ersetzt.
 
-[in] [out] *pElem* ein gültiger Zeiger auf das Element, das das ursprüngliche Element ersetzt wird.
+*pElem*<br/>
+[in, out] Ein gültiger Zeiger auf das Element, das das ursprüngliche Element ersetzt wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1007,7 +1004,6 @@ HMENU hMenu,
 BOOL bIsDefautCommand = FALSE,
 BOOL bRightAlign = FALSE);
 
-
 BOOL SetElementMenu(
 UINT uiCmdID,
 UINT uiMenuResID,
@@ -1055,7 +1051,8 @@ CRuntimeClass* pRTC);
 *nIndex*<br/>
 [in] Gibt an, der nullbasierte Index des Menübandelements hinzufügen.
 
-[in] [out] *pRTC* ein Zeiger auf die laufzeitklasseninformationen für das Menübandelement, das zum Menübandbereich hinzugefügt wird.
+*pRTC*<br/>
+[in, out] Ein Zeiger auf die laufzeitklasseninformationen für das Menübandelement, das zum Menübandbereich hinzugefügt wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1080,7 +1077,8 @@ CRuntimeClass* pRTC);
 *uiCmdID*<br/>
 [in] Gibt an, die Befehls-ID des Menübandelements hinzufügen.
 
-[in] [out] *pRTC* ein Zeiger auf die laufzeitklasseninformationen Zusammenhang mit der Multifunktionsleisten-Element, das zum Menübandbereich hinzugefügt wird.
+*pRTC*<br/>
+[in, out] Ein Zeiger auf die laufzeitklasseninformationen Zusammenhang mit der Multifunktionsleisten-Element, das zum Menübandbereich hinzugefügt wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1106,7 +1104,6 @@ CMFCRibbonColorButton* pColorButton =
 (CMFCRibbonColorButton*)pPanel->SetElementRTCByID(
 ID_CHAR_COLOR,
     RUNTIME_CLASS (CMFCRibbonColorButton));
-
 
 // SetElementRTCByID sets runtime class and returns a pointer
 // to the newly created custom button,

@@ -16,26 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a5db612c836e4b902e7cad83017661246f4b649e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c9b255e715a635494e3acc34124871e90ceca8f7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46079387"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055371"
 ---
 # <a name="enabling-and-disabling-services-for-a-provider"></a>Aktivieren und Deaktivieren von Diensten für einen Anbieter
 
-Einzelne OLE DB-Dienste können aktiviert oder deaktiviert wird, wird standardmäßig für alle Anwendungen, die auf einen einzigen Anbieter zugreifen. Dies erfolgt durch hinzufügen einen OLEDB_SERVICES-Registrierungseintrag unter der CLSID des Anbieters, mit einem `DWORD` -Wert, der Dienste zum Aktivieren oder Deaktivieren der angibt, wie in der folgenden Tabelle gezeigt.  
-  
-|Standarddienste, die aktiviert|Schlüsselwortwert|  
-|------------------------------|-------------------|  
-|Alle Dienste (Standard)|0xFFFFFFFF|  
-|Alle außer Pooling und AutoEnlistment|0xFFFFFFFE|  
-|Alle außer den Clientcursor|0xfffffffb|  
-|Alle außer Pooling AutoEnlistment und Clientcursor|0xfffffff0|  
-|Keine Dienste|0x00000000|  
-|Keine Aggregation, alle Dienste deaktiviert|\<Fehlender Schlüssel >|  
-  
-## <a name="see-also"></a>Siehe auch  
+Einzelne OLE DB-Dienste können aktiviert oder deaktiviert wird, wird standardmäßig für alle Anwendungen, die auf einen einzigen Anbieter zugreifen. Dies erfolgt durch hinzufügen einen OLEDB_SERVICES-Registrierungseintrag unter der CLSID des Anbieters, mit einem `DWORD` -Wert, der Dienste zum Aktivieren oder Deaktivieren der angibt, wie in der folgenden Tabelle gezeigt.
+
+|Standarddienste, die aktiviert|Schlüsselwortwert|
+|------------------------------|-------------------|
+|Alle Dienste (Standard)|0xFFFFFFFF|
+|Alle außer Pooling und AutoEnlistment|0xFFFFFFFE|
+|Alle außer den Clientcursor|0xfffffffb|
+|Alle außer Pooling AutoEnlistment und Clientcursor|0xfffffff0|
+|Keine Dienste|0x00000000|
+|Keine Aggregation, alle Dienste deaktiviert|\<Fehlender Schlüssel >|
+
+## <a name="see-also"></a>Siehe auch
 
 [Aktivieren und Deaktivieren von OLE DB-Diensten](../../data/oledb/enabling-and-disabling-ole-db-services.md)

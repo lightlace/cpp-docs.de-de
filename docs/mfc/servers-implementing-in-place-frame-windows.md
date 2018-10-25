@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c63c10feff624abe399952b682303a6e262d35
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e6ef01a7943bbb0c14ec630651757a8665373b85
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425014"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055217"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Server: Implementieren eines In-Place-Frame-Fensters
 
@@ -39,15 +39,15 @@ In diesem Artikel wird erläutert, was Sie tun müssen, um in-Place-Frame-Fenste
 
 1. Deklarieren Sie eine `COleResizeBar` Member in der Frame-Window-Klasse. Dies ist erforderlich, wenn Sie ein direktes Ändern der Größe in Server-Anwendungen zu unterstützen möchten.
 
-     Deklarieren einer `OnCreate` Message-Handler (mit der **Eigenschaften** Fenster), und rufen Sie `Create` für Ihre `COleResizeBar` Member, wenn Sie von Ihnen definiert haben.
+   Deklarieren einer `OnCreate` Message-Handler (mit der **Eigenschaften** Fenster), und rufen Sie `Create` für Ihre `COleResizeBar` Member, wenn Sie von Ihnen definiert haben.
 
 1. Wenn Sie über eine Symbolleiste verfügen, deklarieren Sie eine `CToolBar` Member in der Frame-Window-Klasse.
 
-     Überschreiben der `OnCreateControlBars` Memberfunktion versucht, eine Symbolleiste erstellen, wenn der Server direkt aktiv ist. Zum Beispiel:
+   Überschreiben der `OnCreateControlBars` Memberfunktion versucht, eine Symbolleiste erstellen, wenn der Server direkt aktiv ist. Zum Beispiel:
 
-     [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]
+   [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]
 
-     Finden Sie in den Ausführungen dieses Codes nach Schritt 5.
+   Finden Sie in den Ausführungen dieses Codes nach Schritt 5.
 
 1. Einschließen der Headerdatei für diese Klasse für ein direktes Rahmenfenster in der wichtigsten cpp-Datei.
 

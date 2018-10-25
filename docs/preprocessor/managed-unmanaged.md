@@ -22,81 +22,81 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 908ed745e82b17dd688f062ac7021c6adf3f4851
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 2fdfcf65280f3be639da8f6e49f3d93a498478dd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540194"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070880"
 ---
 # <a name="managed-unmanaged"></a>managed, unmanaged
-Aktivieren Sie die Steuerung auf Funktionsebene für Kompilierfunktionen als verwaltet oder nicht verwaltet.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-#pragma managed  
-#pragma unmanaged  
-#pragma managed([push,] on | off)  
-#pragma managed(pop)  
-```  
-  
-## <a name="remarks"></a>Hinweise  
+Aktivieren Sie die Steuerung auf Funktionsebene für Kompilierfunktionen als verwaltet oder nicht verwaltet.
 
-Die ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md) Compileroption stellt Steuerung auf Modulebene für kompilierfunktionen als verwaltet oder nicht verwaltet.  
-  
-Eine nicht verwaltete Funktion wird für die systemeigene Plattform kompiliert, und die Ausführung dieses Teils des Programms wird von der Common Language Runtime an die systemeigene Plattform übergeben.  
-  
-Funktionen werden standardmäßig als verwaltet kompiliert, wenn `/clr` verwendet wird.  
-  
-Beim Anwenden dieser Pragmas:  
-  
-- Fügen Sie das Pragma hinzu, das einer Funktion vorangeht, sich jedoch nicht innerhalb eines Funktionsrumpfs befindet.  
-  
-- Fügen Sie das Pragma nach `#include`-Anweisungen hinzu. Verwenden Sie diese Pragmas nicht vor `#include`-Anweisungen.  
-  
-Der Compiler ignoriert die **verwaltet** und **nicht verwalteten** Pragmas Wenn `/clr` nicht in der Kompilierung verwendet wird.  
-  
-Wenn eine Vorlagenfunktion instanziiert wird, bestimmt der Pragmazustand zum Zeitpunkt der Definition, ob die Vorlage verwaltet oder nicht verwaltet ist.  
-  
-Weitere Informationen finden Sie unter [Initialization of Mixed Assemblies](../dotnet/initialization-of-mixed-assemblies.md).  
-  
-## <a name="example"></a>Beispiel  
-  
-```cpp  
-// pragma_directives_managed_unmanaged.cpp  
-// compile with: /clr  
-#include <stdio.h>  
-  
-// func1 is managed  
-void func1() {  
-   System::Console::WriteLine("In managed function.");  
-}  
-  
-// #pragma unmanaged  
-// push managed state on to stack and set unmanaged state  
-#pragma managed(push, off)  
-  
-// func2 is unmanaged  
-void func2() {  
-   printf("In unmanaged function.\n");  
-}  
-  
-// #pragma managed  
-#pragma managed(pop)  
-  
-// main is managed  
-int main() {  
-   func1();  
-   func2();  
-}  
-```  
-  
-```Output  
-In managed function.  
-In unmanaged function.  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
+## <a name="syntax"></a>Syntax
+
+```
+#pragma managed
+#pragma unmanaged
+#pragma managed([push,] on | off)
+#pragma managed(pop)
+```
+
+## <a name="remarks"></a>Hinweise
+
+Die ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md) Compileroption stellt Steuerung auf Modulebene für kompilierfunktionen als verwaltet oder nicht verwaltet.
+
+Eine nicht verwaltete Funktion wird für die systemeigene Plattform kompiliert, und die Ausführung dieses Teils des Programms wird von der Common Language Runtime an die systemeigene Plattform übergeben.
+
+Funktionen werden standardmäßig als verwaltet kompiliert, wenn `/clr` verwendet wird.
+
+Beim Anwenden dieser Pragmas:
+
+- Fügen Sie das Pragma hinzu, das einer Funktion vorangeht, sich jedoch nicht innerhalb eines Funktionsrumpfs befindet.
+
+- Fügen Sie das Pragma nach `#include`-Anweisungen hinzu. Verwenden Sie diese Pragmas nicht vor `#include`-Anweisungen.
+
+Der Compiler ignoriert die **verwaltet** und **nicht verwalteten** Pragmas Wenn `/clr` nicht in der Kompilierung verwendet wird.
+
+Wenn eine Vorlagenfunktion instanziiert wird, bestimmt der Pragmazustand zum Zeitpunkt der Definition, ob die Vorlage verwaltet oder nicht verwaltet ist.
+
+Weitere Informationen finden Sie unter [Initialization of Mixed Assemblies](../dotnet/initialization-of-mixed-assemblies.md).
+
+## <a name="example"></a>Beispiel
+
+```cpp
+// pragma_directives_managed_unmanaged.cpp
+// compile with: /clr
+#include <stdio.h>
+
+// func1 is managed
+void func1() {
+   System::Console::WriteLine("In managed function.");
+}
+
+// #pragma unmanaged
+// push managed state on to stack and set unmanaged state
+#pragma managed(push, off)
+
+// func2 is unmanaged
+void func2() {
+   printf("In unmanaged function.\n");
+}
+
+// #pragma managed
+#pragma managed(pop)
+
+// main is managed
+int main() {
+   func1();
+   func2();
+}
+```
+
+```Output
+In managed function.
+In unmanaged function.
+```
+
+## <a name="see-also"></a>Siehe auch
 
 [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

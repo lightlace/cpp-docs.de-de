@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04a533acecd837fd5bad51612ce7b7eced841178
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 19dc08fc29de4affaea987025a2bc8b92bc56460
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46376485"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079856"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC-ActiveX-Steuerelemente: Eigenschaftenseite
 
@@ -86,7 +86,7 @@ Zwecke verwenden, die folgenden Verfahren wird z. B. ein einfaches Steuerelement
 
 1. Öffnen Sie das Dialogfeld IDD_PROPPAGE_SAMPLE.
 
-     Der ActiveX-Steuerelement-Assistent fügt den Namen des Projekts an das Ende der Dialogfeld-ID, in diesem Fall Beispiel.
+   Der ActiveX-Steuerelement-Assistent fügt den Namen des Projekts an das Ende der Dialogfeld-ID, in diesem Fall Beispiel.
 
 1. Ziehen Sie und legen Sie des ausgewählten Steuerelements aus der Toolbox auf das Dialogfeldbereich ab.
 

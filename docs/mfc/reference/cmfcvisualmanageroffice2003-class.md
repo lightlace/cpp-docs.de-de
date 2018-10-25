@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43f180fd62d4e79f64119097401632caca9b44fe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d50731fede9a65e8d354008e1cee0075b43dd163
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399397"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083528"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003-Klasse
 
@@ -803,10 +803,11 @@ virtual BOOL OnDrawBrowseButton(
 
 ### <a name="parameters"></a>Parameter
 
-*pDC*<br/>
-[in] [in] *Rect*
-*pEdit*<br/>
-[in] [in] *Zustand* [in] *ClrText*
+[in] *pDC*<br/>
+[in] *Rect*<br/>
+[in] *pEdit*<br/>
+[in] *Zustand*<br/>
+[in] *ClrText*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1057,8 +1058,9 @@ virtual void OnDrawHeaderCtrlBorder(
 *Rect*<br/>
 [in] Ein Rechteck, das die Grenzen des Headersteuerelements angibt.
 
-*bIsPressed*<br/>
-[in] [in] *bIsHighlighted* ein boolescher Parameter, der angibt, ob das Kopfzeilen-Steuerelement gedrückt wird.
+[in] *bIsPressed*<br/>
+[in] *bIsHighlighted*<br/>
+Ein boolescher Parameter, der angibt, ob das Kopfzeilen-Steuerelement gedrückt wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1717,8 +1719,9 @@ virtual void OnDrawStatusBarProgress(
 *clrBar*<br/>
 [in] Die Ausgangsfarbe, für die Statusanzeige. Der Wert ist entweder den Anfang ein Farbverlauf oder die vollständige Farbe der Statusleiste.
 
-*clrProgressBarDest*<br/>
-[in] [in] *ClrProgressText* [in] *bProgressText*
+[in] *ClrProgressBarDest*<br/>
+[in] *ClrProgressText*<br/>
+[in] *bProgressText*<br/>
 
 ### <a name="remarks"></a>Hinweise
 

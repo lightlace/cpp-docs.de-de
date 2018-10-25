@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 116cd9ee86ca29aac6da489916f78c3884ba8bdd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3a37f79851df043a5473c82b514b7e85f418f1b6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446545"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067916"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Standardroutinen zur Validierung der Dialogfelddaten
 
@@ -47,8 +47,6 @@ Dieses Thema enthält das Standarddialogfeld (DDV) datenvalidierungsroutine für
 |[DDV_MinMaxUInt](#ddv_minmaxuint)|Überprüft, ob ein bestimmtes Steuerelementwert nicht überschreitet einen bestimmten **UINT** Bereich.|
 |[DDV_MinMaxUnsigned](#ddv_minmaxuint)|Überprüft, ob ein bestimmtes Steuerelement-Wert zwischen zwei angegebenen Werten liegt.|
 |[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|Überprüft, ob ein bestimmtes Steuerelementwert nicht überschreitet einen bestimmten **ULONGLONG** Bereich.|
-
-
 
 ##  <a name="ddv_maxchars"></a>  DDV_MaxChars
 
@@ -552,6 +550,7 @@ Rufen Sie `DDV_MinMaxUnsigned` um sicherzustellen, dass der Wert im Steuerelemen
        unsigned minVal,
        unsigned maxVal );
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *pDX*<br/>
@@ -579,6 +578,4 @@ Weitere Informationen zu DDV, finden Sie unter [Dialogdatenaustausch und Validie
 [Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
 [DDX_Slider](#ddx_slider)<br/>
 [DDX_FieldSlider](#ddx_fieldslider)
-
-
 

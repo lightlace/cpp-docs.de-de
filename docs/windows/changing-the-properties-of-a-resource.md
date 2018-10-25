@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c777f2800d16775ccb9a6ba51baa708d861e0d68
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 8e92b52ce3b14b5ee26641186222ddc228877e71
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313350"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057269"
 ---
 # <a name="changing-the-properties-of-a-resource-c"></a>Ändern der Eigenschaften einer Ressource (C++)
 
@@ -29,7 +29,7 @@ ms.locfileid: "44313350"
 
 1. In [Ressourcenansicht](../windows/resource-view-window.md), mit der rechten Maustaste in der Ressource, die Sie verwenden möchten, bearbeiten, und wählen **Eigenschaften** aus dem Kontextmenü.
 
-   > [!NOTE] 
+   > [!NOTE]
    > Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).
 
 2. In der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window), ändern Sie die Eigenschaften der Ressource.

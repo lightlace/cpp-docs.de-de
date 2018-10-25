@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07277e9b98186747415cf1bf6abed3e431e64fff
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b45b1a1f2903dfcdfa4a95adc161766f5bb3328c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403474"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053044"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternativen zur Dokument-/Ansichtarchitektur
 
@@ -56,7 +56,7 @@ Es wird dringend empfohlen, dass MFC-Anwendung des Assistenten zum Erstellen von
 
 - Behandeln Sie das Dokument als eine nicht verwendete Erweiterung, und implementieren Sie Datenverwaltungscode, in der Ansichtsklasse, wie oben. Mehraufwand für das Dokument ist relativ niedrig. Ein einzelnes [CDocument](../mfc/reference/cdocument-class.md) Objekt verursacht ein geringes Maß an Mehraufwand selbst sowie den kleinen Mehraufwand `CDocument`der Basisklassen [CCmdTarget](../mfc/reference/ccmdtarget-class.md) und [CObject](../mfc/reference/cobject-class.md). Beide Klassen sind klein.
 
-     Deklariert `CDocument`:
+   Deklariert `CDocument`:
 
    - Zwei `CString` Objekte.
 
@@ -66,7 +66,7 @@ Es wird dringend empfohlen, dass MFC-Anwendung des Assistenten zum Erstellen von
 
    - Eine `CPtrList` -Objekt, das eine Liste der Ansichten des Dokuments enthält.
 
-     Außerdem erfordert das Dokument die Zeitspanne, um das Document-Objekt, dessen Objekte anzeigen, ein Rahmenfenster und ein Dokumentobjekt für die Vorlage zu erstellen.
+   Außerdem erfordert das Dokument die Zeitspanne, um das Document-Objekt, dessen Objekte anzeigen, ein Rahmenfenster und ein Dokumentobjekt für die Vorlage zu erstellen.
 
 - Behandeln Sie das Dokument und die Ansicht als nicht verwendete Anhänge an. Fügen Sie Ihr die datenverwaltung und den Code zum Zeichnen in der Ansicht, anstatt das Rahmenfenster. Dieser Ansatz ist näher an der Programmiersprache C-Programmiermodell.
 

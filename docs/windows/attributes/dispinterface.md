@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3b02244e0576f99cc0a6940f2ee4a13511cfbe6f
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ea3ece20ac6df0fab00f1e21d27c41ae6e115517
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790582"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065901"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -38,9 +38,9 @@ Fügt eine Schnittstelle in die IDL-Datei als Verteilschnittstelle ein.
 
 Wenn das C++-Attribut **dispinterface** einer Schnittstelle vorangeht, wird die Schnittstelle dadurch in den Bibliotheksblock in der generierten IDL-Datei eingefügt.
 
-Solange Sie keine Basisklasse festlegen, wird eine Verteilschnittstelle von `IDispatch`abgeleitet. Sie müssen angeben, ein [Id](id.md) für die Member einer Verteilschnittstelle.
+Solange Sie keine Basisklasse festlegen, wird eine Verteilschnittstelle von `IDispatch`abgeleitet. Sie müssen eine [ID](id.md) für die Member einer Verteilschnittstelle angeben.
 
-Das Beispiel für die Verwendung [Dispinterface](/windows/desktop/Midl/dispinterface) in der MIDL-Dokumentation:
+Das Beispiel für die Verwendung von [dispinterface](/windows/desktop/Midl/dispinterface) in der MIDL-Dokumentation:
 
 ```cpp
 dispinterface helloPro
@@ -51,7 +51,7 @@ ist nicht gültig für das Attribut **dispinterface** .
 
 ## <a name="example"></a>Beispiel
 
-Siehe das Beispiel für [bindbare](bindable.md) ein Beispiel zur Verwendung für **Dispinterface**.
+Sehen Sie sich das Beispiel für [bindable](bindable.md) für ein Beispiel für die Verwendung von **dispinterface**an.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,6 +72,6 @@ Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net
 [Attribute nach Verwendung](attributes-by-usage.md)<br/>
 [uuid](uuid-cpp-attributes.md)<br/>
 [dual](dual.md)<br/>
-[Benutzerdefinierte](custom-cpp.md)<br/>
+[custom](custom-cpp.md)<br/>
 [object](object-cpp.md)<br/>
-[__interface](../../cpp/interface.md)  
+[__interface](../../cpp/interface.md)

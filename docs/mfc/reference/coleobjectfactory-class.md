@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295749648dd54349c3fa735008ef8c04d51c8e04
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f4c2ad96674058ac57ccdc7cef9537f1cb413b92
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441901"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079700"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory-Klasse
 
@@ -132,7 +132,6 @@ COleObjectFactory(
     BOOL bMultiInstance,
     LPCTSTR lpszProgID);
 
-
 COleObjectFactory(
     REFCLSID clsid,
     CRuntimeClass* pRuntimeClass,
@@ -163,7 +162,7 @@ Enthält eine oder mehrere der folgenden Flags:
 
 - `afxRegFreeThreading` Legt das threading-Modell in der Registrierung ThreadingModel = frei.
 
-     Sie können die beiden Flags kombinieren `afxRegApartmentThreading` und `afxRegFreeThreading` festzulegende ThreadingModel = Both. Finden Sie unter [InprocServer32](/windows/desktop/com/inprocserver32) im Windows SDK für Weitere Informationen zum threading modellregistrierung.
+   Sie können die beiden Flags kombinieren `afxRegApartmentThreading` und `afxRegFreeThreading` festzulegende ThreadingModel = Both. Finden Sie unter [InprocServer32](/windows/desktop/com/inprocserver32) im Windows SDK für Weitere Informationen zum threading modellregistrierung.
 
 *lpszProgID*<br/>
 Zeiger auf eine Zeichenfolge, enthält ein mündliche Programmbezeichner, z. B. "Microsoft Excel."
@@ -349,7 +348,7 @@ Führen Sie die kurze erläuterungen zu den zwei Formen für diese Funktion:
 
 - **UpdateRegistry (** `bRegister` **)** diese Form der Funktion ist überschreibbar. Wenn *bRegistrieren Sie sich* ist "true", diese Funktion registriert, die das Steuerelement-Klasse mit der Registrierung des Systems. Andernfalls, hebt die Registrierung für sie der Klasse.
 
-     Wenn Sie die MFC-ActiveX-Steuerelement verwenden, um Ihr Projekt erstellen, stellt Assistent diese rein virtuelle Funktion überschreibt.
+   Wenn Sie die MFC-ActiveX-Steuerelement verwenden, um Ihr Projekt erstellen, stellt Assistent diese rein virtuelle Funktion überschreibt.
 
 ##  <a name="updateregistryall"></a>  COleObjectFactory:: UpdateRegistryAll
 

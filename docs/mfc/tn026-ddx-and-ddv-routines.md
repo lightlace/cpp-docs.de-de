@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3930f08ae0708b81dde218a88fcda4dc34931390
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f07ab7b4420a5c33be56a9278b60afb6424e9e83
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389734"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063548"
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026: DDX- und DDV-Routinen
 
@@ -224,21 +224,21 @@ Jedes Feld wird durch ein Zeichen ";" getrennt. Die Felder und deren Zweck werde
 
    - *promptN*
 
-     Zeichenfolge, die über das Bearbeiten-Element (mit & Zugriffstaste) zu platzieren.
+      Zeichenfolge, die über das Bearbeiten-Element (mit & Zugriffstaste) zu platzieren.
 
    - *fmtN*
 
-     Formatzeichen für den Typ eines Arg:
+      Formatzeichen für den Typ eines Arg:
 
-     |Zeichen|Typ|
-     |-|-|
-     T | int
-     n | unsigned int
-     D | Long Int, (d. h., long)
-     U | Langes unsingniertes (d. h. "DWORD")
-     f | float
-     F | double
-     s | Zeichenfolge
+      |Zeichen|Typ|
+      |-|-|
+      |T | int|
+      |n | unsigned int|
+      |D | Long Int, (d. h., long)|
+      |U | Langes unsingniertes (d. h. "DWORD")|
+      |f | float|
+      |F | double|
+      |s | Zeichenfolge|
 
 ## <a name="see-also"></a>Siehe auch
 

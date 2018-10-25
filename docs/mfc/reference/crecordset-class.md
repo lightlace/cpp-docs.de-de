@@ -140,12 +140,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e1fb04de4097a2cdf1dd51dc12265bef8d6c0b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c86efacf7211415bfdc2936a736d78e29dc419bf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423129"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076398"
 ---
 # <a name="crecordset-class"></a>CRecordset-Klasse
 
@@ -727,17 +727,14 @@ void GetFieldValue(
     CDBVariant& varValue,
     short nFieldType = DEFAULT_FIELD_TYPE);
 
-
 void GetFieldValue(
     short nIndex,
     CDBVariant& varValue,
     short nFieldType = DEFAULT_FIELD_TYPE);
 
-
 void GetFieldValue(
     short nIndex,
     CStringA& strValue);
-
 
 void GetFieldValue(
     short nIndex,
@@ -822,7 +819,6 @@ Ruft Informationen über die Felder im Recordset.
 void GetODBCFieldInfo(
     LPCTSTR lpszName,
     CODBCFieldInfo& fieldinfo);
-
 
 void GetODBCFieldInfo(
     short nIndex,
@@ -1538,7 +1534,7 @@ Akzeptieren Sie den Standardwert, AFX_DB_USE_DEFAULT_TYPE, oder verwenden Sie ei
 
 - `CRecordset::forwardOnly` Ein schreibgeschütztes Recordset mit Bildlauf ausschließlich vorwärts ausgeführt.
 
-     Für `CRecordset`, der Standardwert ist `CRecordset::snapshot`. Mithilfe des Standardwertmechanismus kann bei Visual C++-Assistenten mit ODBC-`CRecordset` sowie DAO- `CDaoRecordset`, die über unterschiedliche Standardwerte verfügen, interagiert werden.
+   Für `CRecordset`, der Standardwert ist `CRecordset::snapshot`. Mithilfe des Standardwertmechanismus kann bei Visual C++-Assistenten mit ODBC-`CRecordset` sowie DAO- `CDaoRecordset`, die über unterschiedliche Standardwerte verfügen, interagiert werden.
 
 Weitere Informationen über diese Recordsettypen finden Sie im Artikel [Recordsets (ODBC)](../../data/odbc/recordset-odbc.md). Weitere Informationen finden Sie im Artikel "Verwenden von Blocks und bildlauffähigen Cursorn" im Windows SDK.
 
@@ -1613,7 +1609,7 @@ Beim Aufruf `Open`, eine Abfrage, die in der Regel eine SQL **wählen** -Anweisu
 
 Der üblichen Vorgehensweise wird zum Übergeben von NULL, um `Open`; in diesem Fall `Open` Aufrufe [GetDefaultSQL](#getdefaultsql). Wenn Sie eine abgeleitete arbeiten `CRecordset` -Klasse, `GetDefaultSQL` den bzw. die Sie in den Klassen-Assistenten angegeben haben. Sie können stattdessen andere Informationen im `lpszSQL`-Parameter angeben.
 
-Jede Übergabe `Open` erstellt eine endgültige SQL-Zeichenfolge für die Abfrage (die Zeichenfolge möglicherweise die SQL **, in denen** und **ORDER BY** Klauseln angefügt, um die `lpszSQL` Sie übergebene Zeichenfolge) und führt dann die Abfrage. Sie können die erstellte Zeichenfolge überprüfen, durch den Aufruf [GetSQL](#getsql) nach dem Aufruf *`Open`. Weitere Informationen darüber, wie das Recordset eine SQL-Anweisung erstellt und Auswahl von Datensätzen finden Sie im Artikel [Recordset: wie Recordsets auswählen von Datensätzen (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).
+Jede Übergabe `Open` erstellt eine endgültige SQL-Zeichenfolge für die Abfrage (die Zeichenfolge möglicherweise die SQL **, in denen** und **ORDER BY** Klauseln angefügt, um die `lpszSQL` Sie übergebene Zeichenfolge) und führt dann die Abfrage. Sie können die erstellte Zeichenfolge überprüfen, durch den Aufruf [GetSQL](#getsql) nach dem Aufruf `Open`. Weitere Informationen darüber, wie das Recordset eine SQL-Anweisung erstellt und Auswahl von Datensätzen finden Sie im Artikel [Recordset: wie Recordsets auswählen von Datensätzen (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).
 
 Die Felddatenmember der Recordset-Klasse sind an die Spalten der ausgewählten Daten gebunden. Falls Datensätze zurückgegeben werden, wird der erste Datensatz zum aktuellen Datensatz.
 
