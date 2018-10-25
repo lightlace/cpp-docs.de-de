@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 876f3b45cc9f45ab5ff1aaa7e07116482f89afc1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2035e665bd7d8cba502c3516498934f32c2b3dd0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442083"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080844"
 ---
 # <a name="security-implications-of-customization"></a>Sicherheitsauswirkungen der Anpassung
 
@@ -38,7 +38,7 @@ Es wird empfohlen, diese drei verschiedene Arten, um die Sicherheitsrisiken in d
 
 - Store die Daten in einer sicheren Datei statt in der Registrierung.
 
-     Um diese zunächst zwei unterschiedliche Arten zu erreichen, leiten Sie eine Klasse von [CSettingsStore-Klasse](../mfc/reference/csettingsstore-class.md) und überschreiben Sie die Methoden zum Implementieren der Verschlüsselung oder Speicher außerhalb der Registrierung.
+   Um diese zunächst zwei unterschiedliche Arten zu erreichen, leiten Sie eine Klasse von [CSettingsStore-Klasse](../mfc/reference/csettingsstore-class.md) und überschreiben Sie die Methoden zum Implementieren der Verschlüsselung oder Speicher außerhalb der Registrierung.
 
 - Sie können auch Anpassungen in Ihrer Anwendung deaktivieren.
 

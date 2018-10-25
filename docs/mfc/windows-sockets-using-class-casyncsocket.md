@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49e5df8e88124d1d94869618a94525e224d32495
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0aaefc41ca365e2bf4d87583f2e25dfa2a870a90
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424669"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079011"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets: Verwenden der Klasse CAsyncSocket
 
@@ -48,19 +48,19 @@ Dieser Artikel behandelt Folgendes:
 
 1. Erstellen einer [CAsyncSocket](../mfc/reference/casyncsocket-class.md) Objekt, und verwenden Sie das Objekt zum Erstellen der zugrunde liegende **SOCKET** behandeln.
 
-     Ein Socket folgt MFC-Muster der Erstellung in zwei Schritten.
+   Ein Socket folgt MFC-Muster der Erstellung in zwei Schritten.
 
-     Zum Beispiel:
+   Zum Beispiel:
 
-     [!code-cpp[NVC_MFCSimpleSocket#3](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_1.cpp)]
+   [!code-cpp[NVC_MFCSimpleSocket#3](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_1.cpp)]
 
      - oder - 
 
-     [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]
+   [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]
 
-     Der erste Konstruktor, der oben genannten erstellt eine `CAsyncSocket` Objekt im Stapel. Der zweite Konstruktor erstellt ein `CAsyncSocket` auf dem Heap. Die erste [erstellen](../mfc/reference/casyncsocket-class.md#create) Aufruf oben die Standardparameter verwendet, um einen Streamsocket zu erstellen. Die zweite `Create` Aufruf erstellt einen Datagrammsocket mit einem angegebenen Port und Adresse. (Verwenden Sie entweder `Create` Version mit beiden Erstellungsmethoden.)
+   Der erste Konstruktor, der oben genannten erstellt eine `CAsyncSocket` Objekt im Stapel. Der zweite Konstruktor erstellt ein `CAsyncSocket` auf dem Heap. Die erste [erstellen](../mfc/reference/casyncsocket-class.md#create) Aufruf oben die Standardparameter verwendet, um einen Streamsocket zu erstellen. Die zweite `Create` Aufruf erstellt einen Datagrammsocket mit einem angegebenen Port und Adresse. (Verwenden Sie entweder `Create` Version mit beiden Erstellungsmethoden.)
 
-     Die Parameter für `Create` sind:
+   Die Parameter für `Create` sind:
 
    - Eine "Port": eine kurze ganze Zahl.
 
@@ -72,28 +72,28 @@ Dieser Artikel behandelt Folgendes:
 
          This is your Internet Protocol (IP) address on the network. You will probably always rely on the default value for this parameter.
 
-     Die Begriffe "Port" und "Socketadresse" werden in erläutert [Windows Sockets: Ports und Socketadressen](../mfc/windows-sockets-ports-and-socket-addresses.md).
+   Die Begriffe "Port" und "Socketadresse" werden in erläutert [Windows Sockets: Ports und Socketadressen](../mfc/windows-sockets-ports-and-socket-addresses.md).
 
 1. Wenn der Socket ein Client ist, das Socketobjekt mit einem Server verbinden socket mit [CAsyncSocket:: Connect](../mfc/reference/casyncsocket-class.md#connect).
 
      - oder - 
 
-     Wenn der Socket auf einen Server handelt, legen Sie den Socket auf (mit [CAsyncSocket:: Listen](../mfc/reference/casyncsocket-class.md#listen)) für Connect versucht von einem Client. Eingeht, eine verbindungsanforderung, akzeptieren Sie ihn mit [CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept).
+   Wenn der Socket auf einen Server handelt, legen Sie den Socket auf (mit [CAsyncSocket:: Listen](../mfc/reference/casyncsocket-class.md#listen)) für Connect versucht von einem Client. Eingeht, eine verbindungsanforderung, akzeptieren Sie ihn mit [CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept).
 
-     Nach dem Akzeptieren einer Verbindungs können Sie Aufgaben wie das Überprüfen von Kennwörtern ausführen.
+   Nach dem Akzeptieren einer Verbindungs können Sie Aufgaben wie das Überprüfen von Kennwörtern ausführen.
 
     > [!NOTE]
     >  Die `Accept` Member-Funktion akzeptiert einen Verweis auf ein neues, leeres `CSocket` -Objekt als Parameter. Müssen Sie dieses Objekt erstellen, vor dem Aufruf `Accept`. Wenn dieser Socketobjekt den Geltungsbereich verlässt, wird die Verbindung. Rufen Sie keine `Create` für dieses neuen Socketobjekt. Ein Beispiel finden Sie im Artikel [Windows Sockets: Reihenfolge der Vorgänge](../mfc/windows-sockets-sequence-of-operations.md).
 
 1. Tragen Sie die Kommunikation mit anderen Sockets durch Aufrufen der `CAsyncSocket` objektelementfunktionen, die die Windows Sockets-API-Funktionen zu kapseln.
 
-     Finden Sie unter der Windows Sockets-Spezifikation und die Klasse [CAsyncSocket](../mfc/reference/casyncsocket-class.md) in die *MFC-Referenz*.
+   Finden Sie unter der Windows Sockets-Spezifikation und die Klasse [CAsyncSocket](../mfc/reference/casyncsocket-class.md) in die *MFC-Referenz*.
 
 1. Zerstört die `CAsyncSocket` Objekt.
 
-     Wenn Sie das Socketobjekt auf dem Stapel erstellt, wird sein Destruktor aufgerufen, wenn die Funktion mit den Gültigkeitsbereich verlässt. Wenn Sie das Socketobjekt auf dem Heap erstellt haben, die **neue** Operator an, Sie sind verantwortlich für die Verwendung der **löschen** Operator, um das Objekt zu zerstören.
+   Wenn Sie das Socketobjekt auf dem Stapel erstellt, wird sein Destruktor aufgerufen, wenn die Funktion mit den Gültigkeitsbereich verlässt. Wenn Sie das Socketobjekt auf dem Heap erstellt haben, die **neue** Operator an, Sie sind verantwortlich für die Verwendung der **löschen** Operator, um das Objekt zu zerstören.
 
-     Der Destruktor ruft die [schließen](../mfc/reference/casyncsocket-class.md#close) Memberfunktion vor dem Zerstören des Objekts.
+   Der Destruktor ruft die [schließen](../mfc/reference/casyncsocket-class.md#close) Memberfunktion vor dem Zerstören des Objekts.
 
 Ein Beispiel für diese Sequenz im Code (für die tatsächlich eine `CSocket` Objekt), finden Sie unter [Windows Sockets: Reihenfolge der Vorgänge](../mfc/windows-sockets-sequence-of-operations.md).
 

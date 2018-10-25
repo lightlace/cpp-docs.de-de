@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72f8de75607921edda62aec9baec424066431d61
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c134f0d0b0c8ee3009e372de7712a6c0894a51de
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438859"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082904"
 ---
 # <a name="servers-server-items"></a>Server: Serverelemente
 
@@ -43,7 +43,7 @@ Wenn Sie den Assistenten zum verwenden, um "Starter"-Code für Ihre Anwendung zu
 
 1. In der abgeleiteten Klasse außer Kraft setzen der `OnDraw` Member-Funktion.
 
-     Das Framework ruft `OnDraw` das OLE-Element in einer Metadatei zu rendern. Die Container-Anwendung verwendet dieses Metadatei zum Rendern des Elements an. Ansichtsklasse der Anwendung verfügt auch über eine `OnDraw` Member-Funktion, die verwendet wird, zum Rendern des Elements, wenn die Serveranwendung aktiv ist.
+   Das Framework ruft `OnDraw` das OLE-Element in einer Metadatei zu rendern. Die Container-Anwendung verwendet dieses Metadatei zum Rendern des Elements an. Ansichtsklasse der Anwendung verfügt auch über eine `OnDraw` Member-Funktion, die verwendet wird, zum Rendern des Elements, wenn die Serveranwendung aktiv ist.
 
 1. Implementieren Sie eine Überschreibung der `OnGetEmbeddedItem` für die Server-Dokument-Klasse. Weitere Informationen finden Sie im Artikel [Server: Implementieren von Serverdokumenten](../mfc/servers-implementing-server-documents.md) und im MFC-OLE-Beispiel [HIERSVR](../visual-cpp-samples.md).
 

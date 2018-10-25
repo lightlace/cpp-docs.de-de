@@ -18,23 +18,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeb138a8b2598c209005031a3ccd3104fead48dc
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 3c06556d47bf0c471aa7e4fab610971e2b7ad11e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540428"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081468"
 ---
 # <a name="fenvaccess"></a>fenv_access
 Deaktiviert (**auf**) oder aktiviert (**aus**) Optimierungen, welche Gleitkommaausnahme zu kennzeichnen, Tests und Modus ändert.
 
 ## <a name="syntax"></a>Syntax
 
-> **#pragma fenv_access führen (** { **auf** | **aus** } **)**  
+> **#pragma fenv_access führen (** { **auf** | **aus** } **)**
 
 ## <a name="remarks"></a>Hinweise
 
-In der Standardeinstellung **Fenv_access** ist **aus**. Wenn der Compiler, die davon ausgehen kann Ihren Code nicht zugreifen oder die gleitkommaumgebung bearbeiten, und es viele gleitkommacode Optimierungen durchführen. Legen Sie **Fenv_access** zu **auf** an den Compiler darüber zu informieren, dass Ihr Code die Gleitkommaausnahme-Statusflags, Ausnahmen, zu testen oder Steuerelement Modus-Flags festlegen zugreift. Der Compiler deaktiviert diese Optimierungen, damit Ihr Code die gleitkommaumgebung einheitlich zugreifen kann. 
+In der Standardeinstellung **Fenv_access** ist **aus**. Wenn der Compiler, die davon ausgehen kann Ihren Code nicht zugreifen oder die gleitkommaumgebung bearbeiten, und es viele gleitkommacode Optimierungen durchführen. Legen Sie **Fenv_access** zu **auf** an den Compiler darüber zu informieren, dass Ihr Code die Gleitkommaausnahme-Statusflags, Ausnahmen, zu testen oder Steuerelement Modus-Flags festlegen zugreift. Der Compiler deaktiviert diese Optimierungen, damit Ihr Code die gleitkommaumgebung einheitlich zugreifen kann.
 
 Weitere Informationen zum Gleitkommaverhalten finden Sie unter [/fp (Festlegen des Gleitkommaverhaltens)](../build/reference/fp-specify-floating-point-behavior.md).
 

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1781077896465d8a7a1d925262c3fd0696d24380
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9a077cd90055a17f9aff71d67d2cb9a511a1caf0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410558"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078036"
 ---
 # <a name="mfc-library-versions"></a>MFC-Bibliotheksversionen
 
@@ -95,13 +95,13 @@ MFC-Projekte verwenden das Präprozessorsymbol \_UNICODE UTF-16 Breitzeichen-Uni
 
 Statische Bibliotheken für die MFC verwenden Sie die folgenden Benennungskonventionen. Die Namen von Typbibliotheken aufweisen Form.
 
-> *u*AFX*c ** d*. LIB
+> <em>u</em>AFX<em>cd</em>. LIB
 
 in dem die Buchstaben kursiv dargestellten Kleinbuchstaben Platzhalter für Bezeichner, dessen Bedeutung in der folgenden Tabelle angezeigt werden:
 
 |Bezeichner|Werte und Bedeutung|
 |---------------|-------------------------|
-|*u*|(N) ANSI-/MBCS oder Unicode (U); Lassen Sie für die Version ohne MFC-Steuerelemente in Dialogfeldern|
+|*n*|(N) ANSI-/MBCS oder Unicode (U); Lassen Sie für die Version ohne MFC-Steuerelemente in Dialogfeldern|
 |*c*|Version mit der MFC-Steuerelemente in Dialogfeldern (CW) oder ohne (NMCD)|
 |*d*|Debug oder Release: D = Debuggen; kein Bezeichner für Release|
 

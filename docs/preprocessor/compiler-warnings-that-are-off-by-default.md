@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b5a4551387716c81766ae99759f8188410497be
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: c7b48b2382ee22cc5d11c1145dc494aca4e7997f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540429"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083190"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Compiler-Warnungen, die standardmäßig deaktiviert sind
 Der Compiler schließt Warnungen, die in der Standardeinstellung deaktiviert werden, da die meisten Entwickler nicht, um sie anzuzeigen möchten. In einigen Fällen stellen eine Auswahl im dar, sie oder allgemeine Idiome in älterem Code sind, oder profitieren Sie von einer Microsoft-Erweiterung für die Sprache. In anderen Fällen geben sie einen Bereich, in denen Programmierer oft falsche Annahmen zu machen die zu unerwarteten oder nicht definierten Verhalten führen können. Einige Warnungen möglicherweise großen abweichungen in der Bibliothek-Header. Die C-Runtime-Bibliotheken und die C++-Standardbibliotheken sollen keine Warnungen nur auf der Warnebene ausgegeben [/W4](../build/reference/compiler-option-warning-level.md).
@@ -154,12 +154,12 @@ Die folgenden Warnungen sind in Visual Studio 2015 und höher standardmäßig de
 |C5042 (Ebene 3)|"*Funktion*": Funktionsdeklarationen im Blockbereich können nicht "Inline" angegeben werden, in Standard-c++, entfernen Sie 'Inline'-Spezifizierer <sup>15.5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|Compiler fügt die Spectre-Entschärfung für die Auslastung des Arbeitsspeichers, wenn "/ qspectre" Schalter angegeben <sup>15.7</sup>|
 
-<sup>14.1</sup> diese Warnung ist verfügbar in Visual Studio 2015 Update 1.  
-<sup>14.3</sup> diese Warnung ist verfügbar in Visual Studio 2015 Update 3.  
-<sup>15.3</sup> diese Warnung ist verfügbar in Visual Studio 2017 Version 15.3.  
-<sup>15.5</sup> diese Warnung ist verfügbar in Visual Studio 2017 Version 15.5.  
-<sup>15.7</sup> diese Warnung wird in Visual Studio 2017 Version 15.7 ab.  
-<sup>Perm</sup> diese Warnung ist deaktiviert, es sei denn, die [/ PERMISSIVE--](../build/reference/permissive-standards-conformance.md) Compiler-Option festgelegt ist.  
+<sup>14.1</sup> diese Warnung ist verfügbar in Visual Studio 2015 Update 1.<br/>
+<sup>14.3</sup> diese Warnung ist verfügbar in Visual Studio 2015 Update 3.<br/>
+<sup>15.3</sup> diese Warnung ist verfügbar in Visual Studio 2017 Version 15.3.<br/>
+<sup>15.5</sup> diese Warnung ist verfügbar in Visual Studio 2017 Version 15.5.<br/>
+<sup>15.7</sup> diese Warnung wird in Visual Studio 2017 Version 15.7 ab.<br/>
+<sup>Perm</sup> diese Warnung ist deaktiviert, es sei denn, die [/ PERMISSIVE--](../build/reference/permissive-standards-conformance.md) Compiler-Option festgelegt ist.<br/>
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Warnungen deaktivieren, wird standardmäßig in früheren Versionen
 

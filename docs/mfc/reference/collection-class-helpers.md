@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a14a45341645feeb0b85f92379702c9fc40c9d0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 010afb3939afcb392d38cda8dfb1ab1a37100d3b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381720"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083372"
 ---
 # <a name="collection-class-helpers"></a>Hilfsfunktionen für die Auflistungsklasse
 
@@ -152,7 +152,6 @@ Die Anzahl von Elementen, die gesichert werden.
 Die `CArray::Dump`, `CList::Dump`, und `CMap::Dump` Funktionen aufrufen, wenn die Tiefe des Dumps größer als 0 ist.
 
 Bei der Standardimplementierung wird keine Aktion ausgeführt. Wenn die Elemente der Sammlung von abgeleitet werden `CObject`, aufrufen Ihre Überschreibung werden Elemente in der Auflistung, in der Regel durchlaufen. `Dump` für jedes Element in aktivieren.
-
 
 ### <a name="requirements"></a>Anforderungen
 

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 411b8f58b38d2b35c1353d1ff446407026977d66
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6537cdb9e7ff9806bef3bfec85a94e0d50808477
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030143"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078465"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray-Klasse
 
@@ -100,7 +100,7 @@ Der Typ der im Array gespeicherten Daten.
 |----------|-----------------|
 |[CComSafeArray::operator LPSAFEARRAY](#operator_lpsafearray)|Wandelt einen Wert in eine `SAFEARRAY` Zeiger.|
 |[CComSafeArray::operator\[\]](ccomsafearray-class.md#operator_at)|Ruft ein Element aus dem Array ab.|
-|[CComSafeArray::operator =](#operator_eq)|Zuweisungsoperator.|  
+|[CComSafeArray::operator =](#operator_eq)|Zuweisungsoperator.|
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
 
@@ -110,7 +110,7 @@ Der Typ der im Array gespeicherten Daten.
 
 ## <a name="remarks"></a>Hinweise
 
-`CComSafeArray` Stellt einen Wrapper für die [SAFEARRAY Data Type](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) -Klasse, wodurch es problemlos erstellen und Verwalten von ein- und mehrdimensionale Arrays von nahezu jedem der VARIANT-unterstützten Typen.
+`CComSafeArray` stellt einen Wrapper für die [SAFEARRAY Data Type](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) -Klasse bereit, wodurch sich ein- und mehrdimensionale Arrays von nahezu jedem der VARIANT-unterstützten Typen problemlos erstellen und verwalten lassen.
 
 `CComSafeArray` vereinfacht die Übergabe von Arrays zwischen Prozessen und bietet darüber hinaus zusätzliche Sicherheit durch Überprüfen der Arrayindexwerte anhand der oberen und unteren Grenzen.
 
@@ -159,7 +159,7 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
 ### <a name="parameters"></a>Parameter
 
 *psaSrc*<br/>
-Ein Zeiger auf eine `SAFEARRAY` Objekt.
+Ein Zeiger auf ein `SAFEARRAY` -Objekt.
 
 *ulCount*<br/>
 Die Anzahl von Objekten, in dem Array hinzugefügt werden soll.
@@ -311,7 +311,7 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 ### <a name="parameters"></a>Parameter
 
 *pBound*<br/>
-Ein Zeiger auf eine `SAFEARRAYBOUND` Objekt.
+Ein Zeiger auf ein `SAFEARRAYBOUND` -Objekt.
 
 *uDims*<br/>
 Die Anzahl der Dimensionen im Array.
@@ -597,7 +597,7 @@ ATL::CComSafeArray<T>& operator=(const SAFEARRAY* psaSrc);
 Ein Verweis auf ein `CComSafeArray`-Objekt.
 
 *psaSrc*<br/>
-Ein Zeiger auf eine `SAFEARRAY` Objekt.
+Ein Zeiger auf ein `SAFEARRAY` -Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 

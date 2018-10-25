@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5b5bb50c99efc2a7b18fbbbabba394ec5330661
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fc151ae25df4cac2c6b5ed9ac5a523efda28dff2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378201"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082709"
 ---
 # <a name="using-property-sheets-in-your-application"></a>Verwenden von Eigenschaftenseiten in einer Anwendung
 
@@ -34,9 +34,9 @@ Um ein Eigenschaftenblatt in Ihrer Anwendung verwenden möchten, führen Sie die
 
 1. Erstellen einer Dialogfeldvorlagen-Ressource für jede Eigenschaftsseite auf. Bedenken Sie, die der Benutzer möglicherweise von einer Seite zu einem anderen Wechsel werden, damit Layout, jede Seite so konsistent wie möglich.
 
-     Die Dialogfeldvorlagen für alle Seiten müssen nicht die gleiche Größe aufweisen. Das Framework wird die Größe der größten Seite verwendet, um zu bestimmen, wie viel Speicherplatz belegen im Eigenschaftenblatt für die Eigenschaftenseiten.
+   Die Dialogfeldvorlagen für alle Seiten müssen nicht die gleiche Größe aufweisen. Das Framework wird die Größe der größten Seite verwendet, um zu bestimmen, wie viel Speicherplatz belegen im Eigenschaftenblatt für die Eigenschaftenseiten.
 
-     Bei der Erstellung der Dialogfeldvorlagen-Ressource für eine Eigenschaftenseite, müssen Sie die folgenden Stile im Eigenschaftenfenster die Eigenschaften des Dialogfelds angeben:
+   Bei der Erstellung der Dialogfeldvorlagen-Ressource für eine Eigenschaftenseite, müssen Sie die folgenden Stile im Eigenschaftenfenster die Eigenschaften des Dialogfelds angeben:
 
    - Legen Sie die **Beschriftung** Eingabefeld auf der **allgemeine** Seite, um den Text auf der Registerkarte für diese Seite angezeigt werden sollen.
 
@@ -60,9 +60,9 @@ Um ein Eigenschaftenblatt in Ihrer Anwendung verwenden möchten, führen Sie die
 
    - Rufen Sie [CPropertySheet::AddPage](../mfc/reference/cpropertysheet-class.md#addpage) für jede Seite.
 
-     In der Regel das Objekt, erstellt die `CPropertySheet` erstellt außerdem die `CPropertyPage` Objekte in diesem Schritt. Allerdings bei der Implementierung einer `CPropertySheet`-abgeleitete Klasse sein, können Sie einbetten der `CPropertyPage` Objekte in der `CPropertySheet` Objekt, und rufen `AddPage` für jede Seite aus der `CPropertySheet`-abgeleiteten Klassenkonstruktor. `AddPage` Fügt der `CPropertyPage` Objekt auf dem Eigenschaftenblatt der Liste der Seiten, jedoch das Fenster für diese Seite nicht tatsächlich erstellt. Aus diesem Grund ist es nicht erforderlich, warten, bis die Erstellung des Fensters für das Eigenschaft aufrufen `AddPage`; Sie können Aufrufen `AddPage` aus dem Eigenschaftenblatt-Konstruktor.
+   In der Regel das Objekt, erstellt die `CPropertySheet` erstellt außerdem die `CPropertyPage` Objekte in diesem Schritt. Allerdings bei der Implementierung einer `CPropertySheet`-abgeleitete Klasse sein, können Sie einbetten der `CPropertyPage` Objekte in der `CPropertySheet` Objekt, und rufen `AddPage` für jede Seite aus der `CPropertySheet`-abgeleiteten Klassenkonstruktor. `AddPage` Fügt der `CPropertyPage` Objekt auf dem Eigenschaftenblatt der Liste der Seiten, jedoch das Fenster für diese Seite nicht tatsächlich erstellt. Aus diesem Grund ist es nicht erforderlich, warten, bis die Erstellung des Fensters für das Eigenschaft aufrufen `AddPage`; Sie können Aufrufen `AddPage` aus dem Eigenschaftenblatt-Konstruktor.
 
-     Wenn ein Eigenschaftenblatt mehrere Registerkarten, die enthält als in einer einzelnen Zeile des Eigenschaftenblatts, passen, werden standardmäßig die Registerkarten in mehreren Zeilen Stapeln. Rufen Sie zum Deaktivieren von Stapeln [CPropertySheet::EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs) mit den Parameter auf **"false"**. Rufen Sie `EnableStackedTabs` Wenn Sie das Eigenschaftenblatt erstellen.
+   Wenn ein Eigenschaftenblatt mehrere Registerkarten, die enthält als in einer einzelnen Zeile des Eigenschaftenblatts, passen, werden standardmäßig die Registerkarten in mehreren Zeilen Stapeln. Rufen Sie zum Deaktivieren von Stapeln [CPropertySheet::EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs) mit den Parameter auf **"false"**. Rufen Sie `EnableStackedTabs` Wenn Sie das Eigenschaftenblatt erstellen.
 
 1. Rufen Sie [CPropertySheet:: DoModal](../mfc/reference/cpropertysheet-class.md#domodal) oder [erstellen](../mfc/reference/cpropertysheet-class.md#create) um das Eigenschaftenfenster anzuzeigen. Rufen Sie `DoModal` zum Erstellen eines Eigenschaftenblatts als modales Dialogfeld. Rufen Sie **erstellen** Eigenschaftenblatt als ein nicht modales Dialogfeld zu erstellen.
 

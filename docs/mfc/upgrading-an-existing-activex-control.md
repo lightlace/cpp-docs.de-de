@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc5bca0f7ff1b2fdb2650eadbcdca4778d9b53ef
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 0567913eac57c4150f9fe6d051d2fc8e0e31860b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890359"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082927"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Upgrading eines vorhandenen ActiveX-Steuerelements
 
@@ -213,11 +213,11 @@ Um ein lizenziertes Steuerelement in einer HTML-Seite auf einem Computer Lizenzp
 
 1. Fügen Sie der \<Objekt >-Tag für das lizenzierte Steuerelement nach dem Tag-Lizenz-Manager.
 
-     Beispielsweise ist eine HTML-Seite, die das Microsoft-MaskedEdit-Steuerelement zeigt unten dargestellt. Die erste Klasse, die für das License Manager-Steuerelement-ID ist, die zweite Klasse, die für das MaskedEdit-Steuerelement-ID ist. Ändern Sie die Tags auf den relativen Pfad der Datei .lpk zu verweisen, die Sie zuvor erstellt haben, und fügen Sie ein Objekttag, einschließlich die Klassen-ID für das Steuerelement.
+   Beispielsweise ist eine HTML-Seite, die das Microsoft-MaskedEdit-Steuerelement zeigt unten dargestellt. Die erste Klasse, die für das License Manager-Steuerelement-ID ist, die zweite Klasse, die für das MaskedEdit-Steuerelement-ID ist. Ändern Sie die Tags auf den relativen Pfad der Datei .lpk zu verweisen, die Sie zuvor erstellt haben, und fügen Sie ein Objekttag, einschließlich die Klassen-ID für das Steuerelement.
 
 1. Fügen Sie der \<EINBETTEN >-Attribut für die LPK-Datei, wenn das NCompass ActiveX-Plug-in verwenden.
 
-     Wenn das Steuerelement kann, auf anderen angezeigt werden aktiviert aktiv Browser – z. B. das NCompass ActiveX-Plug-in mit Netscape – müssen Sie hinzufügen, die \<EINBETTEN > Syntax wie unten dargestellt.
+   Wenn das Steuerelement kann, auf anderen angezeigt werden aktiviert aktiv Browser – z. B. das NCompass ActiveX-Plug-in mit Netscape – müssen Sie hinzufügen, die \<EINBETTEN > Syntax wie unten dargestellt.
 
 ```
 <OBJECT CLASSID="clsid:5220cb21-c88d-11cf-b347-00aa00a28331">

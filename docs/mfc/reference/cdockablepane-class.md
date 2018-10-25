@@ -1,7 +1,7 @@
 ---
 title: CDockablePane-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed4325cc950cdfa5320f1107df7103cbb2c026b5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 91058da47a97098826939be2248d81ba657f3cbb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417487"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078309"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -337,7 +337,8 @@ virtual CDockablePane* AttachToTabWnd(
 
 ### <a name="parameters"></a>Parameter
 
-[in] [out] *pTabControlBarAttachTo* gibt den Bereich "Ziel", die im aktuelle Bereich an anfügt. Der Bereich "Ziel" muss es sich um einen andockbaren Bereich sein.
+*pTabControlBarAttachTo*<br/>
+[in, out] Gibt den Bereich "Ziel", dem im aktuelle Bereich an anfügt. Der Bereich "Ziel" muss es sich um einen andockbaren Bereich sein.
 
 *dockMethod*<br/>
 [in] Gibt die docking-Methode.
@@ -585,7 +586,6 @@ virtual BOOL Create(
     DWORD dwControlBarStyle = AFX_DEFAULT_DOCKING_PANE_STYLE,
     CCreateContext* pContext = NULL);
 
-
 virtual BOOL Create(
     LPCTSTR lpszWindowName,
     CWnd* pParentWnd,
@@ -602,7 +602,8 @@ virtual BOOL Create(
 *lpszCaption*<br/>
 [in] Gibt den Fensternamen.
 
-[in] [out] *pParentWnd* gibt an, das übergeordnete Fenster.
+*pParentWnd*<br/>
+[in, out] Gibt das übergeordnete Fenster an.
 
 *Rect*<br/>
 [in] Gibt die Größe und Position des Fensters, in Clientkoordinaten des *pParentWnd*.
@@ -622,7 +623,8 @@ virtual BOOL Create(
 *dwControlBarStyle*<br/>
 [in] Gibt zusätzliche Stilattribute.
 
-[in] [out] *"pContext"* den erstellen-Kontext des Fensters angibt.
+*pContext*<br/>
+[in, out] Gibt den Kontext Erstellen des Fensters.
 
 *lpszWindowName*<br/>
 [in] Gibt den Fensternamen.
@@ -705,7 +707,8 @@ virtual BOOL CreateEx(
 *lpszCaption*<br/>
 [in] Gibt den Fensternamen.
 
-[in] [out] *pParentWnd* gibt an, das übergeordnete Fenster.
+*pParentWnd*<br/>
+[in, out] Gibt das übergeordnete Fenster an.
 
 *Rect*<br/>
 [in] Gibt die Größe und Position des Fensters, in Clientkoordinaten des *pParentWnd*.
@@ -725,7 +728,8 @@ virtual BOOL CreateEx(
 *dwControlBarStyle*<br/>
 [in] Gibt an, die zusätzliche Stilattribute.
 
-[in] [out] *"pContext"* den erstellen-Kontext des Fensters angibt.
+*pContext*<br/>
+[in, out] Gibt den Kontext Erstellen des Fensters.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -842,7 +846,8 @@ virtual BOOL DockToWindow(
 
 ### <a name="parameters"></a>Parameter
 
-[in] [out] *pTargetWindow* gibt andockbaren Bereich um diesem Bereich anzudocken.
+*pTargetWindow*<br/>
+[in, out] Gibt an, andockbaren Bereich um diesem Bereich anzudocken.
 
 *dwAlignment*<br/>
 [in] Gibt die Ausrichtung des andockbaren Bereich an. Dabei kann es sich um CBRS_ALIGN_LEFT, CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT, CBRS_ALIGN_BOTTOM oder CBRS_ALIGN_ANY sein. (Die in afxres.h definiert.)
@@ -1339,7 +1344,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *pWndOldParent*
+[in] *pWndOldParent*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1509,7 +1514,8 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 *dwAlignment*<br/>
 [in] Gibt die Ausrichtung des Bereichs automatisch im Hintergrund zu erstellen.
 
-[in] [out] *pCurrAutoHideBar* ein Zeiger auf der Symbolleiste des aktuellen automatisch im Hintergrund. NULL kann sein.
+*pCurrAutoHideBar*<br/>
+[in, out] Ein Zeiger auf der Symbolleiste des aktuellen automatisch im Hintergrund. NULL kann sein.
 
 *bUseTimer*<br/>
 [in] Gibt an, ob Sie den Effekt automatisch im Hintergrund verwenden, wenn der Benutzer den Bereich in den Hintergrundmodus wechselt oder Sie den Bereich unmittelbar ausblenden.
