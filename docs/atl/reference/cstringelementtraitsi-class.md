@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d34277bd3c9b47c5ba9367d19348e43ea263f43b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 29df4bd550a5de232b5ced0510e8dbfc68e59d42
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46089904"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060753"
 ---
 # <a name="cstringelementtraitsi-class"></a>CStringElementTraitsI-Klasse
 
@@ -120,7 +120,7 @@ Die zweite Zeichenfolge Element.
 
 ### <a name="return-value"></a>Rückgabewert
 
-0 (null), wenn die Zeichenfolgen identisch sind, < 0 Wenn *str1* ist kleiner als *str2*, oder > 0, wenn *str1* ist größer als *str2*. Die [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) Methode wird verwendet, um die Vergleiche durchzuführen.  
+0 (null), wenn die Zeichenfolgen identisch sind, < 0 Wenn *str1* ist kleiner als *str2*, oder > 0, wenn *str1* ist größer als *str2*. Die [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) Methode wird verwendet, um die Vergleiche durchzuführen.
 
 ### <a name="remarks"></a>Hinweise
 

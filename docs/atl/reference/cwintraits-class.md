@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb6ee8cd591c4a5b5a4a3701c6974849f9e3238f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 69ea4cf411e0ded0f1c324cea439d5a5a4c0c553
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069391"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062469"
 ---
 # <a name="cwintraits-class"></a>CWinTraits-Klasse
 
@@ -68,15 +68,15 @@ Verwenden Sie diese Vorlage, wenn Sie möchten, um Standardwert Window-Stile anz
 
 ATL bietet drei vordefinierte spezialisierungen dieser Vorlage für häufig verwendeten Kombinationen von Window-Stile:
 
-- `CControlWinTraits`  
+- `CControlWinTraits`
 
    Entwickelt für ein Standardsteuerelement-Fenster. Die folgenden standard-Formate werden verwendet: WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN und WS_CLIPSIBLINGS. Es gibt keine erweiterten Stile.
 
-- `CFrameWinTraits`  
+- `CFrameWinTraits`
 
    Entwickelt für eine standard-Frame-Fensters. Enthalten die standard-Formate verwendet: WS_OVERLAPPEDWINDOW WS_CLIPCHILDREN und WS_CLIPSIBLINGS. Die erweiterten Stile verwendet enthalten: WS_EX_APPWINDOW und WS_EX_WINDOWEDGE.
 
-- `CMDIChildWinTraits`  
+- `CMDIChildWinTraits`
 
    Entwickelt für eine standardmäßige untergeordneten MDI-Fensters. Enthalten die standard-Formate verwendet: WS_OVERLAPPEDWINDOW, WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN und WS_CLIPSIBLINGS. Die erweiterten Stile verwendet enthalten: WS_EX_MDICHILD.
 

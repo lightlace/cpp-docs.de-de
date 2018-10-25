@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f40ac527ba8ad7e65f025910e96a69f546842e30
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cb12135a0fbffdeba55130bced80c2f23c365caa
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447556"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052349"
 ---
 # <a name="coledropsource-class"></a>COleDropSource-Klasse
 
@@ -177,6 +177,4 @@ Da diese Funktion häufig aufgerufen wird, sollten sie so weit wie möglich opti
 [MFC-Beispiel OCLIENT](../../visual-cpp-samples.md)<br/>
 [CCmdTarget-Klasse](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
-
-
 

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 342716f3197713a584e2f0a1d20e4de75ece474b
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 800dd3b626a03ec3b04910f6c4c1bbea3e1ab17d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234313"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053525"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Exemplarische Vorgehensweise: Erstellen eines Standard C++-Programms (C++)
 
@@ -37,7 +37,7 @@ Visual C++ folgt dem 2003 C++-Standard, wobei folgende wichtigen Ausnahmen: zwei
 > [!NOTE]
 > Wenn Kompatibilität mit dem Standard erforderlich ist, verwenden Sie die `/Za`-Compileroption, um Microsoft-Erweiterungen für den Standard zu deaktivieren. Weitere Informationen finden Sie unter [/Za, / Ze (Spracherweiterungen deaktivieren)](../build/reference/za-ze-disable-language-extensions.md).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Zur Durchführung dieser exemplarischen Vorgehensweise benötigen Sie Grundkenntnisse in C++.
 
@@ -45,10 +45,10 @@ Zur Durchführung dieser exemplarischen Vorgehensweise benötigen Sie Grundkennt
 
 1. Erstellen Sie ein Projekt, zeigen Sie dazu **neu** auf die **Datei** Menü, und klicken Sie dann auf **Projekt**.
 
-1. In der **Visual C++** Bereich "Projekttypen", klicken Sie auf **Windows Desktop**, und klicken Sie dann auf **Windows-Konsolenanwendung**. 
+1. In der **Visual C++** Bereich "Projekttypen", klicken Sie auf **Windows Desktop**, und klicken Sie dann auf **Windows-Konsolenanwendung**.
 
    > [!NOTE]
-   > Für Versionen von Visual Studio, die älter als 2017 in der **neues Projekt** Dialogfeld erweitern Sie **installiert** > **Vorlagen**  >  **Visual C++**, und wählen Sie dann **Win32**. Wählen Sie im mittleren Bereich **Win32-Konsolenanwendung**aus. 
+   > Für Versionen von Visual Studio, die älter als 2017 in der **neues Projekt** Dialogfeld erweitern Sie **installiert** > **Vorlagen**  >  **Visual C++**, und wählen Sie dann **Win32**. Wählen Sie im mittleren Bereich **Win32-Konsolenanwendung**aus.
 
    Geben Sie einen Namen für das Projekt ein.
 

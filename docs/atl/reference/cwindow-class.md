@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd4f5ac780b36e51be63aef7ce87884284542cbb
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 999e91f1f437077b90b2c8a0ea9f7ac8a4603080
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861940"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054670"
 ---
 # <a name="cwindow-class"></a>CWindow-Klasse
 
@@ -499,7 +499,7 @@ Finden Sie unter [CheckDlgButton](/windows/desktop/api/winuser/nf-winuser-checkd
 Überprüft das angegebene Optionsfeld.
 
 ```
-BOOL CheckRadioButton(  
+BOOL CheckRadioButton(
     int nIDFirstButton,
     int nIDLastButton,
     int nIDCheckButton) throw();
@@ -667,7 +667,7 @@ Initialisiert die [M_hWnd](#m_hwnd) Member *hWnd*, die in der Standardeinstellun
 Aktualisiert die angegebene mehrere Fensterposition Struktur für das angegebene Fenster an.
 
 ```
-HDWP DeferWindowPos(  
+HDWP DeferWindowPos(
     HDWP hWinPosInfo,
     HWND hWndInsertAfter,
     int x,
@@ -720,7 +720,7 @@ Das HWND zugeordneten der `CWindow` Objekt.
 Füllt ein Listenfeld mit den Namen aller Dateien einen angegebenen Pfad oder Dateinamen an.
 
 ```
-int DlgDirList(  
+int DlgDirList(
     LPTSTR lpPathSpec,
     int nIDListBox,
     int nIDStaticPath,
@@ -736,7 +736,7 @@ Finden Sie unter [DlgDirList](/windows/desktop/api/winuser/nf-winuser-dlgdirlist
 Füllt das Kombinationsfeld mit den Namen aller Dateien einen angegebenen Pfad oder Dateinamen an.
 
 ```
-int DlgDirListComboBox(  
+int DlgDirListComboBox(
     LPTSTR lpPathSpec,
     int nIDComboBox,
     int nIDStaticPath,
@@ -752,7 +752,7 @@ Finden Sie unter [DlgDirListComboBox](/windows/desktop/api/winuser/nf-winuser-dl
 Ruft die aktuelle Auswahl aus einem Listenfeld ab.
 
 ```
-BOOL DlgDirSelect(  
+BOOL DlgDirSelect(
     LPTSTR lpString,
     int nCount,
     int nIDListBox) throw();
@@ -767,7 +767,7 @@ Finden Sie unter [DlgDirSelectEx](/windows/desktop/api/winuser/nf-winuser-dlgdir
 Ruft die aktuelle Auswahl aus einem Kombinationsfeld ab.
 
 ```
-BOOL DlgDirSelectComboBox(  
+BOOL DlgDirSelectComboBox(
     LPTSTR lpString,
     int nCount,
     int nIDComboBox) throw();
@@ -927,7 +927,7 @@ Das Handle zu einem untergeordneten Fenster.
 Rufen Sie diese Funktion, um einen Zeiger auf eine Schnittstelle, der ein ActiveX-Steuerelement, wird von einem zusammengesetzten Steuerelement oder ein Dialogfeld-steuerelementhostings gehostet.
 
 ```
-HRESULT GetDlgControl(  
+HRESULT GetDlgControl(
     int nID,
     REFIID iid,
     void** ppCtrl) throw();
@@ -969,7 +969,7 @@ Finden Sie unter [GetDlgCtrlID](/windows/desktop/api/winuser/nf-winuser-getdlgct
 Ruft einen Zeiger auf eine Schnittstelle für das ATL-Steuerelement-Container gehostet.
 
 ```
-HRESULT GetDlgHost(  
+HRESULT GetDlgHost(
     int nID,
     REFIID iid,
     void** ppHost) throw();
@@ -1011,7 +1011,7 @@ Finden Sie unter [GetDlgItem](/windows/desktop/api/winuser/nf-winuser-getdlgitem
 Übersetzt Text eines Steuerelements in eine ganze Zahl.
 
 ```
-UINT GetDlgItemInt(  
+UINT GetDlgItemInt(
     int nID,
     BOOL* lpTrans = NULL,
     BOOL bSigned = TRUE) const throw();
@@ -1026,12 +1026,12 @@ Finden Sie unter [GetDlgItemInt](/windows/desktop/api/winuser/nf-winuser-getdlgi
 Ruft Text eines Steuerelements ab.
 
 ```
-UINT GetDlgItemText(  
+UINT GetDlgItemText(
     int nID,
     LPTSTR lpStr,
     int nMaxCount) const throw();
 
-BOOL GetDlgItemText(  
+BOOL GetDlgItemText(
     int nID,
     BSTR& bstrText) const throw();
 ```
@@ -1202,7 +1202,7 @@ Finden Sie unter [GetScrollPos](/windows/desktop/api/winuser/nf-winuser-getscrol
 Ruft die Bildlaufleisten-Bereich ab.
 
 ```
-BOOL GetScrollRange(  
+BOOL GetScrollRange(
     int nBar,
     LPINT lpMinPos,
     LPINT lpMaxPos) const throw();
@@ -1543,7 +1543,7 @@ Finden Sie unter [HideCaret](/windows/desktop/api/winuser/nf-winuser-hidecaret) 
 Hebt hervor oder entfernt die Markierung ein Menüelement der obersten Ebene.
 
 ```
-BOOL HiliteMenuItem(  
+BOOL HiliteMenuItem(
     HMENU hMenu,
     UINT uHiliteItem,
     UINT uHilite) throw();
@@ -1785,12 +1785,12 @@ HWND m_hWnd throw() throw();
 Konvertiert einen Satz von Punkten aus Koordinatenbereich des Fensters zum Koordinatenbereich des anderen Fensters.
 
 ```
-int MapWindowPoints(  
+int MapWindowPoints(
     HWND hWndTo,
     LPPOINT lpPoint,
     UINT nCount) const throw();
 
-int MapWindowPoints(  
+int MapWindowPoints(
     HWND hWndTo,
     LPRECT lpRect) const throw();
 ```
@@ -1806,7 +1806,7 @@ Die zweite Version dieser Methode ermöglicht die Koordinaten der Konvertierung 
 Zeigt ein Meldungsfenster an.
 
 ```
-int MessageBox(  
+int MessageBox(
     LPCTSTR lpszText,
     LPCTSTR lpszCaption = NULL,
     UINT nType = MB_OK) throw();
@@ -1825,7 +1825,7 @@ Finden Sie unter [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox
 Ändert das Window-Stile, der die `CWindow` Objekt.
 
 ```
-BOOL ModifyStyle(  
+BOOL ModifyStyle(
     DWORD dwRemove,
     DWORD dwAdd,
     UINT nFlags = 0) throw();
@@ -1871,7 +1871,7 @@ So ändern Sie ein Fenster des Erweiterte Stile, rufen Sie [ModifyStyleEx](#modi
 Ändert die erweiterten Fensterstile von der `CWindow` Objekt.
 
 ```
-BOOL ModifyStyleEx(  
+BOOL ModifyStyleEx(
     DWORD dwRemove,
     DWORD dwAdd,
     UINT nFlags = 0) throw();
@@ -1917,14 +1917,14 @@ Rufen Sie zum Ändern von Windows mithilfe von regulären Window-Stile [ModifySt
 Ändert, Größe und Position des Fensters.
 
 ```
-BOOL MoveWindow(  
+BOOL MoveWindow(
     int x,
     int y,
     int nWidth,
     int nHeight,
     BOOL bRepaint = TRUE) throw();
 
-BOOL MoveWindow(  
+BOOL MoveWindow(
     LPCRECT lpRect,
     BOOL bRepaint = TRUE) throw();
 ```
@@ -1980,7 +1980,7 @@ CWindow& operator= (HWND hWnd) throw();
 Fügt eine Nachricht in der Meldungswarteschlange des Threads, die das Fenster erstellt hat.
 
 ```
-BOOL PostMessage(  
+BOOL PostMessage(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0) throw();
@@ -2077,7 +2077,7 @@ static RECT rcDefault;
 Aktualisiert eine angegebene Rechteck bzw. die Region im Clientbereich.
 
 ```
-BOOL RedrawWindow(  
+BOOL RedrawWindow(
     LPCRECT lpRectUpdate = NULL,
     HRGN hRgnUpdate = NULL,
     UINT flags = RDW_INVALIDATE | RDW_UPDATENOW | RDW_ERASE);
@@ -2114,7 +2114,7 @@ Finden Sie unter [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) 
 Ändert die Größe des Fensters auf die Größe der angegebenen Client-Bereich.
 
 ```
-BOOL ResizeClient(  
+BOOL ResizeClient(
     int nWidth,
     int nHeight,
     BOOL bRedraw = FALSE) throw();
@@ -2151,7 +2151,7 @@ Die zweite Version dieser Methode ermöglicht die Koordinaten der Konvertierung 
 Führt einen Bildlauf durch den angegebenen Client-Bereich.
 
 ```
-BOOL ScrollWindow(  
+BOOL ScrollWindow(
     int xAmount,
     int yAmount,
     LPCRECT lpRect = NULL,
@@ -2167,7 +2167,7 @@ Finden Sie unter [ScrollWindow](/windows/desktop/api/winuser/nf-winuser-scrollwi
 Führt einen Bildlauf durch die angegebene Client-Bereich mit zusätzlichen Funktionen.
 
 ```
-int ScrollWindowEx(  
+int ScrollWindowEx(
     int dx,
     int dy,
     LPCRECT lpRectScroll,
@@ -2186,7 +2186,7 @@ Finden Sie unter [ScrollWindowEx](/windows/desktop/api/winuser/nf-winuser-scroll
 Sendet eine Nachricht an ein Steuerelement an.
 
 ```
-LRESULT SendDlgItemMessage(  
+LRESULT SendDlgItemMessage(
     int nID,
     UINT message,
     WPARAM wParam = 0,
@@ -2202,12 +2202,12 @@ Finden Sie unter [SendDlgItemMessage](/windows/desktop/api/winuser/nf-winuser-se
 Sendet eine Nachricht an das Fenster, und nicht zurückgegeben, bis die Fensterprozedur die Meldung verarbeitet hat.
 
 ```
-LRESULT SendMessage(  
+LRESULT SendMessage(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0) throw();
 
-static LRESULT SendMessage(  
+static LRESULT SendMessage(
     HWND hWnd,
     UINT message,
     WPARAM wParam,
@@ -2227,7 +2227,7 @@ Finden Sie unter [SendMessage](https://msdn.microsoft.com/library/windows/deskto
 Sendet die angegebene Meldung an alle unmittelbar untergeordneten Elemente von der `CWindow` Objekt.
 
 ```
-void SendMessageToDescendants(  
+void SendMessageToDescendants(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0,
@@ -2257,7 +2257,7 @@ Wenn *bDeep* ist "true", die Nachricht ist außerdem an alle anderen untergeordn
 Sendet eine Nachricht an das Fenster an.
 
 ```
-BOOL SendNotifyMessage(  
+BOOL SendNotifyMessage(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0) throw();
@@ -2331,7 +2331,7 @@ Bei erfolgreicher Ausführung der vorherigen Bezeichner des Fensters; andernfall
 Ändert Text eines Steuerelements in eine Zeichenfolgendarstellung für einen ganzzahligen Wert ein.
 
 ```
-BOOL SetDlgItemInt(  
+BOOL SetDlgItemInt(
     int nID,
     UINT nValue,
     BOOL bSigned = TRUE) throw();
@@ -2483,7 +2483,7 @@ Rufen Sie `SetRedraw` Änderungen neu gezeichnet wird, oder um zu verhindern, da
 Legt fest, die Parameter einer Bildlaufleiste.
 
 ```
-int SetScrollInfo(  
+int SetScrollInfo(
     int nBar,
     LPSCROLLINFO lpScrollInfo,
     BOOL bRedraw = TRUE) throw();
@@ -2498,7 +2498,7 @@ Finden Sie unter [SetScrollInfo](/windows/desktop/api/winuser/nf-winuser-setscro
 Ändert die Position des Bildlauffelds.
 
 ```
-int SetScrollPos(  
+int SetScrollPos(
     int nBar,
     int nPos,
     BOOL bRedraw = TRUE) throw();
@@ -2513,7 +2513,7 @@ Finden Sie unter [SetScrollPos](/windows/desktop/api/winuser/nf-winuser-setscrol
 Ändert die Bildlaufleisten-Bereich.
 
 ```
-BOOL SetScrollRange(  
+BOOL SetScrollRange(
     int nBar,
     int nMinPos,
     int nMaxPos,
@@ -2529,7 +2529,7 @@ Finden Sie unter [SetScrollRange](/windows/desktop/api/winuser/nf-winuser-setscr
 Erstellt ein Timerereignis.
 
 ```
-UINT SetTimer(  
+UINT SetTimer(
     UINT nIDEvent,
     UINT nElapse,
     void (CALLBACK* lpfnTimer)(HWND, UINT, UINT, DWORD) = NULL) throw();
@@ -2597,7 +2597,7 @@ Finden Sie unter [SetWindowPlacement](https://msdn.microsoft.com/library/windows
 Legt fest, die Größe, Position und Z-Reihenfolge.
 
 ```
-BOOL SetWindowPos(  
+BOOL SetWindowPos(
     HWND hWndInsertAfter,
     int x,
     int y,
@@ -2605,7 +2605,7 @@ BOOL SetWindowPos(
     int cy,
     UINT nFlags) throw();
 
-BOOL SetWindowPos(  
+BOOL SetWindowPos(
     HWND hWndInsertAfter,
     LPCRECT lpRect,
     UINT nFlags) throw();
@@ -2770,7 +2770,7 @@ Finden Sie unter [ValidateRgn](/windows/desktop/api/winuser/nf-winuser-validater
 Startet Windows-Hilfe.
 
 ```
-BOOL WinHelp(  
+BOOL WinHelp(
     LPCTSTR lpszHelp,
     UINT nCmd = HELP_CONTEXT,
     DWORD dwData = 0) throw();

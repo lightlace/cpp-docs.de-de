@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c695dbee2b92a2a3fbc5de0830f298b81e63ad8d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: fbb7bc07ab3b3942f1a3a6fa20c69327c0bd1a53
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790608"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063756"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -36,11 +36,11 @@ Gibt die Zeigerparameter an, die von der aufgerufenen Prozedur an die aufrufende
 
 ## <a name="remarks"></a>Hinweise
 
-Die **out** C++-Attribut hat die gleiche Funktionalität wie die [out](/windows/desktop/Midl/out-idl) MIDL-Attribut.
+Das C++-Attribut **out** hat die gleiche Funktion wie das MIDL-Attribut [out](/windows/desktop/Midl/out-idl) .
 
 ## <a name="example"></a>Beispiel
 
-Siehe das Beispiel für [bindbare](bindable.md) für ein Beispiel für die Verwendung von **out**.
+Ein Beispiel für die Verwendung von [bindable](bindable.md) finden Sie im Beispiel für **out**.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,11 +53,11 @@ Siehe das Beispiel für [bindbare](bindable.md) für ein Beispiel für die Verwe
 |**Erforderliche Attribute**|Keiner|
 |**Ungültige Attribute**|Keiner|
 
-Weitere Informationen zu den attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Siehe auch
 
 [IDL-Attribute](idl-attributes.md)<br/>
 [Parameterattribute](parameter-attributes.md)<br/>
 [defaultvalue](defaultvalue.md)<br/>
-[ID](id.md)  
+[ID](id.md)

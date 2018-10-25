@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 042fe1a446137546654c8f0cfd5ee9be8072dcee
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2b62de5b8303cfdd0516b143654fb9eb2e767eb2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46091828"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059817"
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl-Klasse
 
@@ -119,7 +119,7 @@ True, wenn das Objekt eine-Snap-in-Erweiterung. andernfalls "false".
 Diese Methode implementiert die Win32-Funktion [IExtendContextMenu::AddMenuItems](https://msdn.microsoft.com/library/aa814841).
 
 ```
-AddMenuItems(  
+AddMenuItems(
     LPCONTEXTMENUCALLBACK piCallback,
     long* pInsertionAllowed,
     DATA_OBJECT_TYPES type);
@@ -181,7 +181,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 Diese Methode implementiert die Win32-Funktion [IExtendPropertySheet::CreatePropertyPages](https://msdn.microsoft.com/library/aa814846).
 
 ```
-CreatePropertyPages(  
+CreatePropertyPages(
     LPPROPERTYSHEETCALLBACK lpProvider,
     long handle,
     IUnknown* pUnk,
@@ -393,7 +393,7 @@ QueryPagesFor(DATA_OBJECT_TYPES type);
 Mit dieser Funktion können Sie ändern, die im Menü Einfügen Flags, die gemäß *pInsertionAllowed*, für das Snap-In-Objekt.
 
 ```
-void SetMenuInsertionFlags(  
+void SetMenuInsertionFlags(
     bool bBeforeInsertion,
     long* pInsertionAllowed);
 ```
@@ -425,7 +425,7 @@ Sie sollten nicht versuchen, zum Festlegen von Bits im *pInsertionAllowed* , wur
 Rufen Sie diese Funktion, um alle Formatvorlagen für Symbolleistenschaltflächen, der das Snap-in-Objekt, vor der Erstellung der Symbolleiste zu ändern.
 
 ```
-void SetToolbarButtonInfo(  
+void SetToolbarButtonInfo(
     UINT id,
     BYTE* fsState,
     BYTE* fsType);
@@ -469,7 +469,7 @@ void SetToolbarButtonInfo(
 Rufen Sie diese Funktion, um ein Menüelement zu ändern, bevor es in das Kontextmenü der Snap-In-Objekt eingefügt wird.
 
 ```
-void UpdateMenuState(  
+void UpdateMenuState(
     UINT id,
     LPTSTR pBuf,
     UINT* flags);

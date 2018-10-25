@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 750e51264f12d1c8961ced4e8b606ea5d040d8c9
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 41a757ccd70fe95ce82f90b1128985986e3722b0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791299"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057815"
 ---
 # <a name="eventsource"></a>event_source
 
@@ -57,14 +57,14 @@ Eine Enumeration von einem der folgenden Werte:
 *optimize*<br/>
 Wenn *Typ* ist `native`, können Sie angeben, `optimize=size`, um anzugeben, dass es 4 Bytes Speicherplatz (minimum) für alle Ereignisse in einer Klasse oder `optimize=speed` (Standard), um anzugeben, dass es 4 * (Anzahl von Ereignissen)-Bytes im Speicher.
 
-*ergänzen Sie*<br/>
-Wenn *Typ* ist `native`, können Sie angeben, `decorate=false`, um anzugeben, dass der erweiterte Name in der zusammengeführten Datei (.mrg) nicht den Klassennamen der einschließenden enthalten soll. [/ FX](../../build/reference/fx-merge-injected-code.md) können Sie MRG-Dateien zu generieren. `decorate=false`, ist die Standardeinstellung und führt zu vollqualifizierten Typnamen in der zusammengeführten Datei.
+*decorate*<br/>
+Wenn *Typ* ist `native`, können Sie angeben, `decorate=false`, um anzugeben, dass der erweiterte Name in der zusammengeführten Datei (.mrg) nicht den Klassennamen der einschließenden enthalten soll. Mit[/Fx](../../build/reference/fx-merge-injected-code.md) können Sie MRG-Dateien generieren. `decorate=false`, ist die Standardeinstellung und führt zu vollqualifizierten Typnamen in der zusammengeführten Datei.
 
 ## <a name="remarks"></a>Hinweise
 
 Das C++-Attribut **event_source** gibt an, dass die Klasse oder Struktur, auf die es angewendet wird, eine Ereignisquelle sein wird.
 
-**Event_source** dient in Verbindung mit der [Event_receiver](event-receiver.md) Attribut und die [__event](../../cpp/event.md) Schlüsselwort. Verwendung `event_receiver` um Ereignisempfänger zu erstellen. Verwendung **__event** für Methoden in die Ereignisquelle, die diese Methoden als Ereignisse anzugeben.
+**event_source** wird in Verbindung mit dem Attribut [event_receiver](event-receiver.md) und dem Schlüsselwort [__event](../../cpp/event.md) verwendet. Verwendung `event_receiver` um Ereignisempfänger zu erstellen. Verwendung **__event** für Methoden in die Ereignisquelle, die diese Methoden als Ereignisse anzugeben.
 
 > [!NOTE]
 > Eine von einer Vorlage gebildete Klasse oder Struktur kann keine Ereignisse enthalten.
@@ -89,4 +89,4 @@ Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net
 [__event](../../cpp/event.md)<br/>
 [__hook](../../cpp/hook.md)<br/>
 [__unhook](../../cpp/unhook.md)<br/>
-[Klassenattribute](class-attributes.md)  
+[Klassenattribute](class-attributes.md)

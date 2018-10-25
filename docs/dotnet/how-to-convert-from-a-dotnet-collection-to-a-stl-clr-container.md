@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ba6d6193c8422e25e174c7a4b73b2b74095cced9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4dd67728773df86f9961fe54c7dd9e4a08ec743d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436506"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060948"
 ---
 # <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>Gewusst wie: Umwandeln einer .Net-Auflistung in einen STL/CLR-Container
 
@@ -31,7 +31,7 @@ In diesem Thema wird gezeigt, wie Auflistungen von .NET in ihre entsprechenden S
 
 1. Um eine ganze Sammlung zu konvertieren, erstellen Sie einen STL/CLR-Container, und übergeben Sie die Auflistung an den Konstruktor.
 
-     Das erste Beispiel veranschaulicht dieses Verfahren.
+   Das erste Beispiel veranschaulicht dieses Verfahren.
 
 -ODER-
 
@@ -39,7 +39,7 @@ In diesem Thema wird gezeigt, wie Auflistungen von .NET in ihre entsprechenden S
 
 1. Kopieren Sie den Inhalt der Auflistung .NET auf den Container ein. Dies kann erfolgen mithilfe einer STL/CLR [Algorithmus](../dotnet/algorithm-stl-clr.md), oder durch Durchlaufen der Auflistung von .NET und eine Kopie jedes Element in der STL/CLR-Container eingefügt.
 
-     Das zweite Beispiel veranschaulicht dieses Verfahren.
+   Das zweite Beispiel veranschaulicht dieses Verfahren.
 
 ## <a name="example"></a>Beispiel
 

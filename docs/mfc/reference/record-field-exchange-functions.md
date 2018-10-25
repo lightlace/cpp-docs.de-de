@@ -55,12 +55,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430d9d297161a05f9158893454f00be2afbe7a47
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8fba2e8d949745f694973f2d7b29c5244ab30db4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408569"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058907"
 ---
 # <a name="record-field-exchange-functions"></a>Funktionen für den Datensatzfeldaustausch
 
@@ -440,7 +440,6 @@ Finden Sie unter [RFX_Text](#rfx_text).
 
 **Header:** afxdb.h
 
-
 ## <a name="rfx_text"></a>  RFX_Text
 
 Übertragungen `CString` Daten zwischen den Felddatenmembern eine `CRecordset` -Objekt und Spalten eines Datensatzes für die Datenquelle von ODBC zu geben, SQL_LONGVARCHAR SQL_CHAR, SQL_VARCHAR, SQL_DECIMAL oder SQL_NUMERIC.
@@ -506,7 +505,6 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxdb.h
-
 
 ## <a name="rfx_binary_bulk"></a>  RFX_Binary_Bulk
 
@@ -873,7 +871,6 @@ Finden Sie unter [RFX_Text_Bulk](#rfx_text_bulk).
 
 **Header:** afxdb.h
 
-
 ## <a name="rfx_text_bulk"></a>  RFX_Text_Bulk
 
 Überträgt Sie mehrere Zeilen mit Daten aus einer Spalte mit einer ODBC-Datenquelle an einen entsprechenden Array in eine `CRecordset`-abgeleitetes Objekt.
@@ -986,7 +983,6 @@ Finden Sie unter [DFX_Text](#dfx_text).
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxdao.h
-
 
 ## <a name="dfx_bool"></a>  DFX_Bool
 
@@ -1249,7 +1245,6 @@ Finden Sie unter [DFX_Text](#dfx_text).
 
 **Header:** afxdao.h
 
-
 ## <a name="dfx_longbinary"></a>  DFX_LongBinary
 
 **Wichtige** es wird empfohlen, die Verwendung von [DFX_Binary](#dfx_binary) anstatt dieser Funktion.
@@ -1342,7 +1337,6 @@ Finden Sie unter [DFX_Text](#dfx_text).
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxdao.h
-
 
 ## <a name="dfx_single"></a>  DFX_Single
 

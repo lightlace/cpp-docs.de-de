@@ -88,12 +88,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4e99227f32418b994ca0e678ae29dc12e716782
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0e0680bb1bed7973071eaabc3535574cb5f470b5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388263"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057633"
 ---
 # <a name="cmfcribbongallery-class"></a>CMFCRibbonGallery-Klasse
 
@@ -189,11 +189,9 @@ void AddGroup(
     UINT uiImagesPaletteResID,
     int cxPaletteImage);
 
-
 void AddGroup(
     LPCTSTR lpszGroupName,
     CMFCToolBarImages& imagesGroup);
-
 
 void AddGroup(
     LPCTSTR lpszGroupName,
@@ -276,7 +274,6 @@ CMFCRibbonGallery (
     int nLargeImageIndex,
     CMFCToolBarImages& imagesPalette);
 
-
 CMFCRibbonGallery (
     UINT nID,
     LPCTSTR lpszText,
@@ -284,7 +281,6 @@ CMFCRibbonGallery (
     int nLargeImageIndex,
     UINT uiImagesPaletteResID=0,
     int cxPaletteImage=0);
-
 
 CMFCRibbonGallery (
     UINT nID,
@@ -371,21 +367,19 @@ Rufen Sie diese Methode zum Aktivieren oder Deaktivieren der Seitenleiste von Of
 
 ##  <a name="getcompactsize"></a>  CMFCRibbonGallery::GetCompactSize
 
-
 ```
 virtual CSize GetCompactSize(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *pDC*
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="getdroppeddown"></a>  CMFCRibbonGallery::GetDroppedDown
-
 
 ```
 virtual CMFCRibbonBaseElement* GetDroppedDown();
@@ -415,7 +409,6 @@ Der Name der Gruppe am angegebenen Index. Übergeben einen ungültigen Index fü
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="getgroupoffset"></a>  CMFCRibbonGallery::GetGroupOffset
-
 
 ```
 virtual int GetGroupOffset() const;
@@ -493,21 +486,19 @@ Die Befehls-ID der aktuell ausgewählten Palette.
 
 ##  <a name="getregularsize"></a>  CMFCRibbonGallery::GetRegularSize
 
-
 ```
 virtual CSize GetRegularSize(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *pDC*
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="getselecteditem"></a>  CMFCRibbonGallery::GetSelectedItem
-
 
 ```
 int GetSelectedItem() const;
@@ -518,7 +509,6 @@ int GetSelectedItem() const;
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="hasmenu"></a>  CMFCRibbonGallery::HasMenu
-
 
 ```
 virtual BOOL HasMenu() const;
@@ -558,7 +548,6 @@ True, wenn die Größenänderung im Menü aktiviert wurde. andernfalls "false".
 
 ##  <a name="ismenuresizevertical"></a>  CMFCRibbonGallery::IsMenuResizeVertical
 
-
 ```
 BOOL IsMenuResizeVertical() const;
 ```
@@ -583,19 +572,17 @@ True, wenn der Stil von Office XP-Seitenleiste auf der linken Seite des Popupmen
 
 ##  <a name="onafterchangerect"></a>  CMFCRibbonGallery::OnAfterChangeRect
 
-
 ```
 virtual void OnAfterChangeRect(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *pDC*
+[in] *pDC*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="ondraw"></a>  CMFCRibbonGallery::OnDraw
-
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -603,7 +590,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *pDC*
+[in] *pDC*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -643,19 +630,17 @@ Sie können diese Methode in einer abgeleiteten Klasse anpassen die Darstellung 
 
 ##  <a name="onenable"></a>  CMFCRibbonGallery::OnEnable
 
-
 ```
 virtual void OnEnable(BOOL bEnable);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *bAktivieren*
+[in] *bAktivieren*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="onrtlchanged"></a>  CMFCRibbonGallery::OnRTLChanged
-
 
 ```
 virtual void OnRTLChanged(BOOL bIsRTL);
@@ -663,7 +648,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *bIsRTL*
+[in] *bIsRTL*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -691,14 +676,13 @@ void RemoveItemToolTips();
 
 ##  <a name="selectitem"></a>  CMFCRibbonGallery::SelectItem
 
-
 ```
 void SelectItem(int nItemIndex);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nItemIndex*
+[in] *nItemIndex*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -806,7 +790,6 @@ Fügt eine Palette an einem Menübandkatalog an.
 
 ```
 void SetPalette(CMFCToolBarImages& imagesPalette);
-
 
 void SetPalette(
     UINT uiImagesPaletteResID,

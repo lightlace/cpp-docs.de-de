@@ -16,33 +16,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f0188f9b7498bc704c43f642fcb7aa1dc72af6a4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f84c7491524e8acccb0c904ed51a97ce66bb2151
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46105465"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056047"
 ---
 # <a name="your-role-in-working-with-a-record-view--mfc-data-access"></a>Aufgaben bei der Arbeit mit Datensatzansichten (MFC-Datenzugriff)
 
-Die folgende Tabelle zeigt, was Sie in der Regel tun müssen, um mit einer Datensatzansicht zu arbeiten, und wie das Framework Sie unterstützt.  
-  
-### <a name="working-with-a-record-view-you-and-the-framework"></a>Arbeiten mit einer Datensatzansicht: Sie und das Framework  
-  
-|Benutzer|Das Framework|  
-|---------|-------------------|  
-|Verwenden Sie zum Entwerfen des Formulars den Visual C++-Dialog-Editor.|Erstellt eine Dialogfeldvorlagen-Ressource mit Steuerelementen.|  
-|Verwenden der [MFS-Anwendungsassistenten](../mfc/reference/database-support-mfc-application-wizard.md) zum Erstellen von abgeleiteten Klassen [CRecordView](../mfc/reference/crecordview-class.md) und [CRecordset](../mfc/reference/crecordset-class.md).|Schreibt die Klassen für Sie.|  
-|Weisen Sie Datensatzansichts-Steuerelemente Recordset-Felddatenmembern zu.|Stellt DDX zwischen den Steuerelementen und den Recordset-Feldern bereit.|  
-||Befehlshandler für das stellt **erste verschieben**, **letzte verschieben**, **nächste verschieben**, und **vorherige verschieben** Befehle in Menüs oder einer Symbolleiste Schaltflächen.|  
-||Aktualisiert Änderungen in der Datenbank.|  
-|[Optional] Schreiben Sie Code, um Listen- oder Kombinationsfelder oder andere Steuerelemente mit Daten aus einem zweiten Recordset zu füllen.||  
-|[Optional] Schreiben Sie Code für spezielle Validierungen.||  
-|[Optional] Schreiben Sie Code zum Hinzufügen oder Löschen von Datensätzen.||  
-  
-Formularbasierte Programmierung ist nur eine Herangehensweise für die Arbeit mit einer Datenbank. Weitere Informationen zu Anwendungen, die über eine andere Benutzeroberfläche oder keine Benutzeroberfläche, finden Sie unter [MFC: Verwenden von Datenbankklassen mit Dokumenten und Ansichten](../data/mfc-using-database-classes-with-documents-and-views.md) und [MFC: Verwenden von Datenbankklassen ohne Dokumente und Ansichten](../data/mfc-using-database-classes-without-documents-and-views.md). Alternative Ansätze zum Anzeigen von Datenbankdatensätzen finden Sie unter Klassen [CListView](../mfc/reference/clistview-class.md) und [CTreeView](../mfc/reference/ctreeview-class.md).  
-  
-## <a name="see-also"></a>Siehe auch  
+Die folgende Tabelle zeigt, was Sie in der Regel tun müssen, um mit einer Datensatzansicht zu arbeiten, und wie das Framework Sie unterstützt.
+
+### <a name="working-with-a-record-view-you-and-the-framework"></a>Arbeiten mit einer Datensatzansicht: Sie und das Framework
+
+|Benutzer|Das Framework|
+|---------|-------------------|
+|Verwenden Sie zum Entwerfen des Formulars den Visual C++-Dialog-Editor.|Erstellt eine Dialogfeldvorlagen-Ressource mit Steuerelementen.|
+|Verwenden der [MFS-Anwendungsassistenten](../mfc/reference/database-support-mfc-application-wizard.md) zum Erstellen von abgeleiteten Klassen [CRecordView](../mfc/reference/crecordview-class.md) und [CRecordset](../mfc/reference/crecordset-class.md).|Schreibt die Klassen für Sie.|
+|Weisen Sie Datensatzansichts-Steuerelemente Recordset-Felddatenmembern zu.|Stellt DDX zwischen den Steuerelementen und den Recordset-Feldern bereit.|
+||Befehlshandler für das stellt **erste verschieben**, **letzte verschieben**, **nächste verschieben**, und **vorherige verschieben** Befehle in Menüs oder einer Symbolleiste Schaltflächen.|
+||Aktualisiert Änderungen in der Datenbank.|
+|[Optional] Schreiben Sie Code, um Listen- oder Kombinationsfelder oder andere Steuerelemente mit Daten aus einem zweiten Recordset zu füllen.||
+|[Optional] Schreiben Sie Code für spezielle Validierungen.||
+|[Optional] Schreiben Sie Code zum Hinzufügen oder Löschen von Datensätzen.||
+
+Formularbasierte Programmierung ist nur eine Herangehensweise für die Arbeit mit einer Datenbank. Weitere Informationen zu Anwendungen, die über eine andere Benutzeroberfläche oder keine Benutzeroberfläche, finden Sie unter [MFC: Verwenden von Datenbankklassen mit Dokumenten und Ansichten](../data/mfc-using-database-classes-with-documents-and-views.md) und [MFC: Verwenden von Datenbankklassen ohne Dokumente und Ansichten](../data/mfc-using-database-classes-without-documents-and-views.md). Alternative Ansätze zum Anzeigen von Datenbankdatensätzen finden Sie unter Klassen [CListView](../mfc/reference/clistview-class.md) und [CTreeView](../mfc/reference/ctreeview-class.md).
+
+## <a name="see-also"></a>Siehe auch
 
 [Datensatzansichten (MFC-Datenzugriff)](../data/record-views-mfc-data-access.md)<br/>
 [Liste der ODBC-Treiber](../data/odbc/odbc-driver-list.md)

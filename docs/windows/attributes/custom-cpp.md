@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a491c120dff7f8f505878d6887498eb5f05fb22
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 7cdfa9011e0021d168c0ad10424a7d326b3c3725
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791430"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062157"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -62,7 +62,7 @@ Die **benutzerdefinierte** Attribut hat die gleiche Funktionalität wie die [ben
 |**Erforderliche Attribute**|**Co-Klasse** (wenn es sich um eine Klasse verwendet wird)|
 |**Ungültige Attribute**|Keiner|
 
-Weitere Informationen zu den attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -72,4 +72,4 @@ Weitere Informationen zu den attributkontexten finden Sie unter [Attributkontext
 [Parameterattribute](parameter-attributes.md)<br/>
 [Methodenattribut](method-attributes.md)<br/>
 [Klassenattribute](class-attributes.md)<br/>
-[Schnittstellenattribut](interface-attributes.md)  
+[Schnittstellenattribut](interface-attributes.md)

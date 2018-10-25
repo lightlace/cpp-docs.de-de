@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee79fca8784ade6509cfc5854eaaa165b68edee0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 95b30d65fe67f2647cb8ca50619f3ab13f167053
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791966"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058998"
 ---
 # <a name="version-c"></a>version (C++)
 
@@ -59,9 +59,9 @@ Finden Sie unter den [bindbare](bindable.md) Beispiel für ein Beispiel für die
 |**Erforderliche Attribute**|**coclass**|
 |**Ungültige Attribute**|Keiner|
 
-Weitere Informationen zu den attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Siehe auch
 
 [Compilerattribute](compiler-attributes.md)<br/>
-[Klassenattribute](class-attributes.md)  
+[Klassenattribute](class-attributes.md)

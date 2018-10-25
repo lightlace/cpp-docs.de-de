@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6613e38a19987abcc9f95288e9d1cb6957b076a2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: add9336165195ba4da0125c606eebd39f3fce298
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427276"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062223"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: Beispiel für Sockets mithilfe der Archive
 
@@ -40,11 +40,11 @@ Zum Senden durchläuft die Beispielfunktion für eine angegebene Anzahl von Male
 
 - Eine "Kopfzeile", der angibt, dass die Art der Daten (in diesem Fall den Wert des der *bValue* Variable und wie viele Kopien gesendet werden).
 
-     Beide Elemente werden in diesem Beispiel nach dem Zufallsprinzip generiert.
+   Beide Elemente werden in diesem Beispiel nach dem Zufallsprinzip generiert.
 
 - Die angegebene Anzahl von Kopien der Daten.
 
-     Die innere **für** sendet eine Schleife *bValue* die angegebene Anzahl von Malen.
+   Die innere **für** sendet eine Schleife *bValue* die angegebene Anzahl von Malen.
 
 - Eine Zeichenfolge mit dem Namen *StrText* , die der Empfänger die Benutzer werden angezeigt.
 

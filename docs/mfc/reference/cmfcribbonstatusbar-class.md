@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59bc8c58c6f11903b483893e99f415ab836ae358
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4303dc9f5f72e4a9500a1d5a6a7c210e7f7bc62f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448050"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063795"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar-Klasse
 
@@ -121,7 +121,7 @@ In der Regel der Hauptbereich der Statusleiste zeigt Benachrichtigungen und erwe
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird veranschaulicht, wie verschiedene Methoden in der `CMFCRibbonStatusBar` Klasse. Das Beispiel zeigt, wie Sie ein neues Menübandelement um Status-Menübands hinzufügen, fügen ein Menübandelement hinzu erweiterten Bereich des Status-Menübands, fügen Sie ein Trennzeichen hinzu, und aktivieren Sie den normalen Modus für die Menüband-Statusleiste.
+Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in der `CMFCRibbonStatusBar` -Klasse. Das Beispiel zeigt, wie Sie ein neues Menübandelement um Status-Menübands hinzufügen, fügen ein Menübandelement hinzu erweiterten Bereich des Status-Menübands, fügen Sie ein Trennzeichen hinzu, und aktivieren Sie den normalen Modus für die Menüband-Statusleiste.
 
 [!code-cpp[NVC_MFC_RibbonApp#15](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_1.cpp)]
 [!code-cpp[NVC_MFC_RibbonApp#16](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_2.cpp)]
@@ -289,8 +289,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*uiCmdID*<br/>
-[in] [in] *"Bool"*
+[in] *UiCmdID*<br/>
+[in] *"Bool"*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -385,7 +385,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Rect*
+[in] *Rect*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -425,7 +425,7 @@ BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
 
 ### <a name="parameters"></a>Parameter
 
-[in] *pElement*
+[in] *pElement*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 

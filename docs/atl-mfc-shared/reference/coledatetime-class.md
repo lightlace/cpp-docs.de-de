@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92761508a5e93c7ef0d0a4099dde587987a50dad
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: b4490eef3427f66456ec79ae2f5429d309a82a54
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809160"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057400"
 ---
 # <a name="coledatetime-class"></a>COleDateTime-Klasse
 
@@ -228,10 +228,10 @@ Ein `SYSTEMTIME` Struktur in einen Datum/Uhrzeit-Wert konvertiert werden, und ko
 *filetimeSrc*<br/>
 Ein `FILETIME` Struktur in einen Datum/Uhrzeit-Wert konvertiert werden, und kopiert in das neue `COleDateTime` Objekt. Beachten Sie, dass `FILETIME` verwendet die koordinierte Weltzeit (UTC), also wenn Sie eine lokale Zeit in der Struktur übergeben, die Ergebnisse nicht korrekt. Finden Sie unter [Dateizeitangaben](/windows/desktop/SysInfo/file-times) im Windows SDK für Weitere Informationen.
 
-*nYear*, *nMonth*, *NChronoplan Midi*, *Nuhrzeitangabe*, *nmin*, *nSec*  
+*nYear*, *nMonth*, *NChronoplan Midi*, *Nuhrzeitangabe*, *nmin*, *nSec*<br/>
 Geben Sie Werte für Datum und Uhrzeit in die neue kopiert werden `COleDateTime` Objekt.
 
-*wDosDate*, *wDosTime*  
+*wDosDate*, *wDosTime*<br/>
 MS-DOS-Datum und Uhrzeit-Werte in einen Datum/Uhrzeit-Wert konvertiert werden, und kopiert in das neue `COleDateTime` Objekt.
 
 *DBTS*<br/>
@@ -333,13 +333,13 @@ Wenn der Status dieser `COleDateTime` Objekt null ist. der zurückgegebene Wert 
 
 Eine kurze Beschreibung der drei Formen für diese Funktion folgt:
 
-`Format`( *DwFlags*, *Lcid*)  
+`Format`( *DwFlags*, *Lcid*)<br/>
 Dieses Formular formatiert den Wert mithilfe der Spezifikationen der Berichtsdefinitionssprache (Gebietsschema-IDs) für Datum und Uhrzeit. Verwenden die Standardparameter, wird das Datum und die Uhrzeit, Drucken des Formulars ausgeführt, wenn der Uhrzeitanteil 0 (Mitternacht ist), in diesem Fall es nur das Datum gibt oder der Datumsteil 0 (30. Dezember 1899 ist) in diesem Fall wird nur zum Zeitpunkt drucken. Wenn der Datum/Uhrzeit-Wert 0 (am 30. Dezember 1899 Mitternacht) ist, wird dieses Formular aus, wobei die Standardparameter Mitternacht ausgegeben.
 
-`Format`( *LpszFormat*)  
+`Format`( *LpszFormat*)<br/>
 Dieses Formular formatiert den Wert mit der Formatzeichenfolge das spezielle Formatierungscodes enthält, die ein Prozentzeichen (%) vorangestellt werden, wie in `printf`. Die Formatierungszeichenfolge wird als Parameter an die Funktion übergeben. Weitere Informationen zu den Formatierungscodes, finden Sie unter [Strftime, Wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) in der Run-Time Library Reference.
 
-`Format`( *nFormatID*)  
+`Format`( *nFormatID*)<br/>
 Dieses Formular formatiert den Wert mit der Formatzeichenfolge das spezielle Formatierungscodes enthält, die ein Prozentzeichen (%) vorangestellt werden, wie in `printf`. Die Formatierungszeichenfolge ist eine Ressource. Die ID der Ressource, diese Zeichenfolge wird als Parameter übergeben. Weitere Informationen zu den Formatierungscodes, finden Sie unter [Strftime, Wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) in die *Run-Time Library Reference*.
 
 ### <a name="example"></a>Beispiel
@@ -701,13 +701,13 @@ Gibt den Status dieses `COleDateTime` Wert. Wenn Sie aufrufen `GetStatus` auf ei
 Der Rückgabewert wird definiert, durch die `DateTimeStatus` Enumerationstyp, der in definiert ist die `COleDateTime` Klasse.
 
 ```
-enum DateTimeStatus  
-{  
-   error = -1,  
-   valid = 0,  
-   invalid = 1,    // Invalid date (out of range, etc.)  
-   null = 2,       // Literally has no value  
-};  
+enum DateTimeStatus
+{
+   error = -1,
+   valid = 0,
+   invalid = 1,    // Invalid date (out of range, etc.)
+   null = 2,       // Literally has no value
+};
 ```
 
 Eine kurze Beschreibung dieser Status-Werte finden Sie in der folgenden Liste:
@@ -930,10 +930,10 @@ Die `DATE` Operator wird bestätigt, wenn die `COleDateTime` Objekts wird festge
 Analysiert eine Zeichenfolge zum Lesen eines Datum/Uhrzeit-Werts.
 
 ```
-bool ParseDateTime(  
-LPCTSTR lpszDate,
-DWORD dwFlags = 0,
-LCID lcid = LANG_USER_DEFAULT) throw();
+bool ParseDateTime(
+    LPCTSTR lpszDate,
+    DWORD dwFlags = 0,
+    LCID lcid = LANG_USER_DEFAULT) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
@@ -991,15 +991,15 @@ Weitere Informationen zu den Grenzen und die Implementierung für `COleDateTime`
 Legt das Datum dieser `COleDateTime` Objekt.
 
 ```
-int SetDate(  
-int nYear,
-int nMonth,
-int nDay) throw();
+int SetDate(
+    int nYear,
+    int nMonth,
+    int nDay) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*nYear*, *nMonth*, *NChronoplan MIDI*  
+*nYear*, *nMonth*, *NChronoplan MIDI*<br/>
 Geben Sie die Datumskomponenten in diese kopiert werden `COleDateTime` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1062,18 +1062,18 @@ Weitere Informationen über die Grenzen für `COleDateTime` Werte finden Sie im 
 Legt das Datum und Uhrzeit dieser `COleDateTime` Objekt.
 
 ```
-int SetDateTime(  
-int nYear,
-int nMonth,
-int nDay,
-int nHour,
-int nMin,
-int nSec) throw();
+int SetDateTime(
+    int nYear,
+    int nMonth,
+    int nDay,
+    int nHour,
+    int nMin,
+    int nSec) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*nYear*, *nMonth*, *NChronoplan Midi*, *Nuhrzeitangabe*, *nmin*, *nSec*  
+*nYear*, *nMonth*, *NChronoplan Midi*, *Nuhrzeitangabe*, *nmin*, *nSec*<br/>
 Angeben der Datums- und Zeitkomponenten in diese kopiert werden `COleDateTime` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1170,15 +1170,15 @@ Siehe das Beispiel für [GetStatus](#getstatus).
 Legt die Uhrzeit dieser `COleDateTime` Objekt.
 
 ```
-int SetTime(  
-int nHour,
-int nMin,
-int nSec) throw();
+int SetTime(
+    int nHour,
+    int nMin,
+    int nSec) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*Nuhrzeitangabe*, *nmin*, *nSec*  
+*Nuhrzeitangabe*, *nmin*, *nSec*<br/>
 Geben Sie die Zeitkomponenten in diese kopiert werden `COleDateTime` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert

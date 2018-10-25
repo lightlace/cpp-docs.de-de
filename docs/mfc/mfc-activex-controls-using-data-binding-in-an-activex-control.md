@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ecd2cea655536ab12751a169793273c27b7d8f7
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 397356f8144e3680f3b2d19824d19c0a3bbaddd1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029566"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062612"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Verwenden der Datenbindung in einem ActiveX-Steuerelement
 
@@ -63,13 +63,13 @@ Es ist möglich, eine datengebundene Eigenschaft, zu erstellen, obwohl es wahrsc
 
 1. Mit der rechten Maustaste in des Schnittstellenknoten für das Steuerelement.
 
-     Dadurch wird das Kontextmenü geöffnet.
+   Dadurch wird das Kontextmenü geöffnet.
 
 1. Klicken Sie im Kontextmenü auf **hinzufügen** , und klicken Sie dann auf **Eigenschaft hinzufügen**.
 
 1. Wählen Sie einen der Einträge aus der **Eigenschaftennamen** Dropdown-Liste. Sie können beispielsweise auswählen **Text**.
 
-     Da **Text** ist eine vordefinierte Eigenschaft, die **bindbare** und **Requestedit** Attribute sind automatisch ausgewählt.
+   Da **Text** ist eine vordefinierte Eigenschaft, die **bindbare** und **Requestedit** Attribute sind automatisch ausgewählt.
 
 1. Wählen Sie die folgenden Kontrollkästchen aus der **IDL-Attribute** Registerkarte: **Displaybind** und **Defaultbind** die Attribute der Eigenschaftsdefinition im des Projekts hinzu. IDL-Datei. Diese Attribute stellen das Steuerelement für den Benutzer sichtbar und der vordefinierten Eigenschaft die bindbare Standardeigenschaft.
 
@@ -96,7 +96,7 @@ Sie können auch erstellen, zusätzlich zu einem datengebundenen get-/Set-Method
 
 1. Mit der rechten Maustaste in des Schnittstellenknoten für das Steuerelement.
 
-     Dadurch wird das Kontextmenü geöffnet.
+   Dadurch wird das Kontextmenü geöffnet.
 
 1. Klicken Sie im Kontextmenü auf **hinzufügen** , und klicken Sie dann auf **Eigenschaft hinzufügen**.
 
@@ -112,33 +112,33 @@ Sie können auch erstellen, zusätzlich zu einem datengebundenen get-/Set-Method
 
 11. Ändern Sie den Hauptteil der `SetMyProp` Funktion so, dass sie den folgenden Code enthält:
 
-     [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]
+   [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]
 
 12. Der Parameter zu übergeben, um die `BoundPropertyChanged` und `BoundPropertyRequestEdit` Functions ist die Dispid der Eigenschaft, das den Parameter an die übergeben werden, für die Eigenschaft in der. IDL-Datei.
 
 13. Ändern der [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) funktionieren, sodass sie den folgenden Code enthält:
 
-     [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
+   [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
 
 14. Ändern der `OnDraw` Funktion so, dass sie den folgenden Code enthält:
 
-     [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]
+   [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]
 
 15. Fügen Sie mit dem öffentlichen Abschnitt der Headerdatei die Headerdatei für eine Klasse die folgenden Definitionen (Konstruktoren) für die Membervariablen hinzu:
 
-     [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]
+   [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]
 
 16. Stellen Sie der folgenden Zeile die letzte Zeile in der `DoPropExchange` Funktion:
 
-     [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]
+   [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]
 
 17. Ändern der `OnResetState` Funktion so, dass sie den folgenden Code enthält:
 
-     [!code-cpp[NVC_MFC_AxData#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]
+   [!code-cpp[NVC_MFC_AxData#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]
 
 18. Ändern der `GetMyProp` Funktion so, dass sie den folgenden Code enthält:
 
-     [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]
+   [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]
 
 Sie können jetzt das Projekt erstellen, das das Steuerelement registriert wird. Beim Einfügen des Steuerelements in einem Dialogfeld der **Datenfeld** und **Datenquelle** werden wurden Eigenschaften hinzugefügt, und Sie können jetzt auswählen, eine Datenquelle und ein Feld in das Steuerelement angezeigt.
 

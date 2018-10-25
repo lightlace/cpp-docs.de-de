@@ -16,31 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a01e6cf423aece9fba74c4b81fa247d57844e107
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 233e302d4035801e7d8871754d8ecfcfee54cf1a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439886"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060910"
 ---
 # <a name="nosmartpointers"></a>no_smart_pointers
-**C++-spezifisch**  
-  
-Unterdrückt die Erstellung von intelligenten Zeigern für alle Schnittstellen in der Typbibliothek.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-no_smart_pointers  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- 
-Wenn Sie `#import` verwenden, rufen Sie standardmäßig die Deklaration eines intelligenten Zeigers für alle Schnittstellen in der Typbibliothek ab. Diese intelligenten Zeiger sind vom Typ [_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md).  
-  
-**Ende C++-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- 
+**C++-spezifisch**
+
+Unterdrückt die Erstellung von intelligenten Zeigern für alle Schnittstellen in der Typbibliothek.
+
+## <a name="syntax"></a>Syntax
+
+```
+no_smart_pointers
+```
+
+## <a name="remarks"></a>Hinweise
+
+Wenn Sie `#import` verwenden, rufen Sie standardmäßig die Deklaration eines intelligenten Zeigers für alle Schnittstellen in der Typbibliothek ab. Diese intelligenten Zeiger sind vom Typ [_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md).
+
+**Ende C++-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
 [#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)

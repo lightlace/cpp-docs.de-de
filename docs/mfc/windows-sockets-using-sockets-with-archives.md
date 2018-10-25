@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 217dcd1d5e999ea640795c656bbf40f7adad3d7d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 295077b474681cabeb1221052ae9e2c9ad5ed79a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398744"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053174"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets: Verwenden von Sockets mit Archiven
 
@@ -49,7 +49,7 @@ Mit einem `CSocket` Objekt umfasst das Erstellen und Zuordnen von mehreren MFC-K
 
 1. Verwenden Sie das Objekt zum Erstellen der zugrunde liegende **SOCKET** behandeln.
 
-     Für eine `CSocket` Client-Objekt, sollten Sie die Standardparameter, normalerweise verwenden [erstellen](../mfc/reference/casyncsocket-class.md#create), es sei denn, Sie über einen Datagrammsocket benötigen. Für eine `CSocket` -Serverobjekt, geben Sie einen Port in der `Create` aufrufen.
+   Für eine `CSocket` Client-Objekt, sollten Sie die Standardparameter, normalerweise verwenden [erstellen](../mfc/reference/casyncsocket-class.md#create), es sei denn, Sie über einen Datagrammsocket benötigen. Für eine `CSocket` -Serverobjekt, geben Sie einen Port in der `Create` aufrufen.
 
     > [!NOTE]
     >  `CArchive` funktioniert nicht mit Datagrammsockets. Wenn Sie verwenden möchten `CSocket` für einen Datagrammsocket müssen Sie die Klasse verwenden, wie Sie mit `CAsyncSocket`, d. h. ohne Archiv. Da Datagramme unzuverlässig sind (nicht garantiert werden, auf das eingehen und wiederholt werden ungeordnet), sie sind nicht kompatibel mit der Serialisierung durch ein Archiv. Sie erwarten, dass ein Serialisierungsvorgang zuverlässig und in Reihenfolge ausführen. Wenn Sie versuchen, `CSocket` mit einem `CArchive` Objekt für ein Datagramm, MFC-Assertion ein Fehler auftritt.
@@ -58,7 +58,7 @@ Mit einem `CSocket` Objekt umfasst das Erstellen und Zuordnen von mehreren MFC-K
 
      - oder - 
 
-     Wenn der Socket auf einem Server ist, rufen Sie [CAsyncSocket:: Listen](../mfc/reference/casyncsocket-class.md#listen) beginnen Lauschen von Verbindungsversuchen von einem Client. Eingeht, eine verbindungsanforderung, akzeptieren Sie sie durch Aufrufen von [CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept).
+   Wenn der Socket auf einem Server ist, rufen Sie [CAsyncSocket:: Listen](../mfc/reference/casyncsocket-class.md#listen) beginnen Lauschen von Verbindungsversuchen von einem Client. Eingeht, eine verbindungsanforderung, akzeptieren Sie sie durch Aufrufen von [CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept).
 
     > [!NOTE]
     >  Die `Accept` Member-Funktion akzeptiert einen Verweis auf ein neues, leeres `CSocket` -Objekt als Parameter. Müssen Sie dieses Objekt erstellen, vor dem Aufruf `Accept`. Wenn dieser Socketobjekt den Geltungsbereich verlässt, wird die Verbindung. Rufen Sie keine `Create` für dieses neuen Socketobjekt.
@@ -67,13 +67,13 @@ Mit einem `CSocket` Objekt umfasst das Erstellen und Zuordnen von mehreren MFC-K
 
 1. Erstellen Sie eine [CArchive](../mfc/reference/carchive-class.md) -Objekt für das Laden (empfangen) oder das Speichern von Daten (senden). Das Archiv zugeordnet ist die `CSocketFile` Objekt.
 
-     Beachten Sie, dass `CArchive` funktioniert nicht mit Datagrammsockets.
+   Beachten Sie, dass `CArchive` funktioniert nicht mit Datagrammsockets.
 
 1. Verwenden der `CArchive` Objekt, das Übergeben von Daten zwischen dem Client und Server-Sockets.
 
-     Beachten Sie, dass eine bestimmte `CArchive` Objekt verschiebt Daten nur in eine Richtung: entweder zum Laden (empfangen) oder für das Speichern von (senden). In einigen Fällen verwenden Sie zwei `CArchive` Objekte: eine für das Senden von Daten, die andere für den Empfang von Bestätigungen.
+   Beachten Sie, dass eine bestimmte `CArchive` Objekt verschiebt Daten nur in eine Richtung: entweder zum Laden (empfangen) oder für das Speichern von (senden). In einigen Fällen verwenden Sie zwei `CArchive` Objekte: eine für das Senden von Daten, die andere für den Empfang von Bestätigungen.
 
-     Nach dem Akzeptieren einer Verbindung und Einrichten des Archivs, können Sie Aufgaben wie das Überprüfen von Kennwörtern ausführen.
+   Nach dem Akzeptieren einer Verbindung und Einrichten des Archivs, können Sie Aufgaben wie das Überprüfen von Kennwörtern ausführen.
 
 1. Zerstören Sie das Archiv, Socketdatei und Socketobjekte.
 

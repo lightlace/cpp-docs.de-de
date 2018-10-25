@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fbc661a870c7adc6e2e5dda5def744fa3e0396
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 23b538904c78fc0f0bc88b7c12de1bc4862a88ab
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417012"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053408"
 ---
 # <a name="mapi-support-in-mfc"></a>MAPI-Unterstützung in MFC
 
@@ -44,11 +44,11 @@ MAPI muss zum Lesen der Datei, um die Anlage zu senden. Wenn die Anwendung öffn
 
 1. Verwenden Sie den Visual C++-Menü-Editor, um ein Menüelement hinzufügen, deren ID ID_FILE_SEND_MAIL lautet.
 
-     Dieses Befehls-ID wird vom Framework in AFXRES bereitgestellt. H. Der Befehl kann keinem Menü hinzugefügt werden, aber es ist in der Regel hinzugefügt der **Datei** Menü.
+   Dieses Befehls-ID wird vom Framework in AFXRES bereitgestellt. H. Der Befehl kann keinem Menü hinzugefügt werden, aber es ist in der Regel hinzugefügt der **Datei** Menü.
 
 1. Fügen Sie Folgendes manuell zur meldungszuordnung des Dokuments:
 
-     [!code-cpp[NVC_MFCDocView#9](../mfc/codesnippet/cpp/mapi-support-in-mfc_1.cpp)]
+   [!code-cpp[NVC_MFCDocView#9](../mfc/codesnippet/cpp/mapi-support-in-mfc_1.cpp)]
 
     > [!NOTE]
     >  Diese meldungszuordnung eignet sich für ein Dokument von einem abgeleiteten `CDocument` oder `COleDocument` – es der richtigen Basisklasse in beiden Fällen übernimmt, obwohl die meldungszuordnung in Ihrer Dokumentklasse abgeleiteten ist.

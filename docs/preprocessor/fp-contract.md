@@ -1,5 +1,5 @@
 ---
-title: Fp_contract | Microsoft Docs
+title: Fp_contract | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/12/2018
 ms.technology:
@@ -18,26 +18,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 514b4708129d625ea7880e4c61be22c4b1ac2db5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 95f23fa132a263970047a480ccde37382b6d03de
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912887"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052163"
 ---
 # <a name="fpcontract"></a>fp_contract
 
-Bestimmt, ob Gleitkommawert-Kontraktion stattfindet. Ein Gleitkommawert-Kontraktion ist eine Anweisung wie z. B. FMA (Fused Multiply-Add), die zwei separate Gleitkommaoperationen in eine einzelne Anweisung kombiniert. Verwendung von diesen Anweisungen kann Gleitkommazahlen mit einfacher Genauigkeit, beeinträchtigen, da es sich bei statt Rundung nach jedem Vorgang, der Prozessor nur einmal nach beide Vorgänge runden kann.
+Bestimmt, ob ein Gleitkommawert-Kontraktion stattfindet. Eine Gleitkommawert-Kontraktion ist eine Anweisung wie z. B. FMA (Fused-Multiply-Add), die zwei separate Vorgänge mit Gleitkommas in eine einzelne Anweisung kombiniert werden. Mithilfe dieser Anweisungen kann Genauigkeit von Gleitkommawerten, beeinträchtigen, da anstelle von Rundung nach jedem Vorgang, der Prozessor nur einmal nach beide Vorgänge möglicherweise rundet.
 
 ## <a name="syntax"></a>Syntax
 
-> **#pragma Fp_contract (** { **auf** | **deaktiviert** } **)**  
+> **#pragma Fp_contract (** { **auf** | **aus** } **)**
 
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Hinweise
 
-Standardmäßig **Fp_contract** ist **auf**. Das weist den Compiler an, verwenden Sie möglichst Gleitkommawert-Kontraktion-Anweisungen. Legen Sie **Fp_contract** auf **deaktiviert** einzelne Gleitkommazahl Anweisungen erhalten bleiben.
+In der Standardeinstellung **Fp_contract** ist **auf**. Dies weist den Compiler an Gleitkommawert-Kontraktion Anweisungen möglichst verwenden. Legen Sie **Fp_contract** zu **aus** um einzelne Gleitkommahardware-Anweisungen zu erhalten.
 
-Weitere Informationen zu Gleitkommaverhalten, finden Sie unter [/fp (Festlegen von Floating-Verhalten)](../build/reference/fp-specify-floating-point-behavior.md).
+Weitere Informationen zum Gleitkommaverhalten finden Sie unter [/fp (Festlegen des Gleitkommaverhaltens)](../build/reference/fp-specify-floating-point-behavior.md).
 
 Andere Gleitkommapragmas umfassen:
 
@@ -47,8 +47,8 @@ Andere Gleitkommapragmas umfassen:
 
 ## <a name="example"></a>Beispiel
 
-Aus diesem Beispiel generierte Code verwendet eine fused multiply-add-Anweisung nicht, auch wenn es auf dem Zielprozessor verfügbar ist. Wenn Sie auskommentieren `#pragma fp_contract (off)`, der generierte Code möglicherweise eine fused multiply-add-Anweisung verwenden, sofern dieser verfügbar ist.  
-  
+Aus diesem Beispiel generierte Code wird eine fused-multiply-add-Anweisung nicht verwendet, auch wenn es auf dem Zielprozessor verfügbar ist. Wenn Sie auskommentieren `#pragma fp_contract (off)`, der generierte Code kann eine fused-multiply-add-Anweisung verwenden, sofern diese verfügbar ist.
+
 ```cpp
 // pragma_directive_fp_contract.cpp
 // on x86 and x64 compile with: /O2 /fp:fast /arch:AVX2

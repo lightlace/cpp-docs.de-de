@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4fca5d567d19434654b7ccf3cfb2b4d5d3e44d53
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 109b0303eaf4c4352d4e9b426642f92e361051a4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410706"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063405"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Verwenden überprüfbarer Assemblys mit SQL Server (C++/CLI)
 
@@ -32,7 +32,7 @@ SQL Server bietet Erweiterungen in Transact-SQL (T-SQL), damit Sie überprüfbar
 
 - Uneingeschränkten Modus: Ausführen von Code auf eigenes Risiko; Code muss nicht überprüfbar typsicher sein.
 
-- Im abgesicherten Modus: Führen Sie überprüfbar typsicheren Code mit/clr: safe kompiliert. 
+- Im abgesicherten Modus: Führen Sie überprüfbar typsicheren Code mit/clr: safe kompiliert.
 
 > [!IMPORTANT]
 > Visual Studio 2015 als veraltet markiert und Visual Studio 2017 nicht unterstützt. die **/CLR: pure** und **/CLR: safe** überprüfbare Projekte. Wenn Sie die überprüfbaren Code benötigen, empfehlen wir, dass Sie Ihren Code in c# übersetzen.
@@ -88,6 +88,5 @@ sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
 ```
 
 ## <a name="see-also"></a>Siehe auch
-
 
 [Klassen und Strukturen](../cpp/classes-and-structs-cpp.md)

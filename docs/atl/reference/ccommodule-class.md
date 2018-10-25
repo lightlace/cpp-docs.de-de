@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 519837379369f08108d3d5b5b300fe0bcb9ac5e7
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 52a2d1387fd476cffa2027ffc136b4759b591e31
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083813"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059193"
 ---
 # <a name="ccommodule-class"></a>CComModule-Klasse
 
@@ -136,7 +136,7 @@ Zusätzlich zu `CComModule`, ATL stellt [CComAutoThreadModule](../../atl/referen
 Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.
 
 ```
-HRESULT GetClassObject(  
+HRESULT GetClassObject(
     REFCLSID rclsid,
     REFIID riid,
     LPVOID* ppv) throw();
@@ -340,7 +340,7 @@ Zeigt auf der objektzuordnung, die von der Modulinstanz verwaltet.
 Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.
 
 ```
-ATL_DEPRECATED HRESULT RegisterClassHelper(  
+ATL_DEPRECATED HRESULT RegisterClassHelper(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID,
@@ -405,7 +405,7 @@ Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modul
 
 ```
 HRESULT RegisterServer(
-    BOOL bRegTypeLib = FALSE,  
+    BOOL bRegTypeLib = FALSE,
     const CLSID* pCLSID = NULL) throw();
 ```
 
@@ -488,7 +488,7 @@ Gibt alle Datenmember frei.
 Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.
 
 ```
-ATL_DEPRECATED HRESULT UnregisterClassHelper(  
+ATL_DEPRECATED HRESULT UnregisterClassHelper(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID);
@@ -549,7 +549,7 @@ Finden Sie unter [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) Inf
 Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.
 
 ```
-ATL_DEPRECATED HRESULT UpdateRegistryClass(  
+ATL_DEPRECATED HRESULT UpdateRegistryClass(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID,
@@ -557,7 +557,7 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
     DWORD dwFlags,
     BOOL bRegister);
 
-ATL_DEPRECATED HRESULT UpdateRegistryClass(  
+ATL_DEPRECATED HRESULT UpdateRegistryClass(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID,
@@ -608,12 +608,12 @@ Durch Angabe der [DECLARE_REGISTRY](registry-macros.md#declare_registry) Makro `
 Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.
 
 ```
-virtual HRESULT UpdateRegistryFromResourceD(  
+virtual HRESULT UpdateRegistryFromResourceD(
     LPCTSTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 
-virtual HRESULT UpdateRegistryFromResourceD(  
+virtual HRESULT UpdateRegistryFromResourceD(
     UINT nResID,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw ();
@@ -658,12 +658,12 @@ Weitere Informationen zu ersetzbare Parameter und Skripts finden Sie im Artikel 
 Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.
 
 ```
-virtual HRESULT UpdateRegistryFromResourceS(  
+virtual HRESULT UpdateRegistryFromResourceS(
     LPCTSTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 
-virtual HRESULT UpdateRegistryFromResourceS(  
+virtual HRESULT UpdateRegistryFromResourceS(
     UINT nResID,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();

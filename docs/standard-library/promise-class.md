@@ -1,7 +1,7 @@
 ---
 title: promise-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::promise [C++], swap
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a56e188e581ea5d9dcafaa222ab4367e0b4b33fe
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2b62f4b4be278fc3cc29e32c323c9a0936598d44
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100299"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058033"
 ---
 # <a name="promise-class"></a>promise-Klasse
 
@@ -139,7 +139,7 @@ Ein `promise`-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor erstellt ein *leeres*`promise`-Objekt.
+Der erste Konstruktor erstellt ein *leere* `promise` Objekt.
 
 Der zweite Konstruktor erstellt ein leeres `promise` -Objekt und verwendet *Al* für speicherbelegung.
 

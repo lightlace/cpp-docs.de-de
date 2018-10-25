@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: edc9d5aa1d7c49de34ee3dbb02d2a55542962a50
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 78d108dfda75147e4147e94544ddddcdfa04481d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791811"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062859"
 ---
 # <a name="registrationscript"></a>registration_script
 
@@ -43,7 +43,7 @@ Der vollständige Pfad zu einer benutzerdefinierten Registrierungsskriptdatei (.
 
 Die **Registration_script** C++-Attribut führt die benutzerdefinierte Registrierungsskript gemäß *Skript*. Wenn dieses Attribut nicht angegeben ist, wird eine standard-RGS-Datei, die (mit Informationen zum Registrieren der Komponente) verwendet. Weitere Informationen zu RGS-Dateien finden Sie unter [der ATL-Registrierungskomponente (Registrar)](../../atl/atl-registry-component-registrar.md).
 
-Dieses Attribut erfordert, dass die [Co-Klasse](coclass.md), [progid](progid.md), oder [Vi_progid](vi-progid.md) (oder ein anderes Attribut, das eines der genannten impliziert) auch angewendet werden mit dem gleichen Element.
+Dieses Attribut erfordert, dass die Attribute [coclass](coclass.md), [progid](progid.md), oder [vi_progid](vi-progid.md) (oder ein anderes Attribut, das eines der genannten impliziert) auch auf demselben Element angewendet werden.
 
 ## <a name="example"></a>Beispiel
 
@@ -79,10 +79,10 @@ class CMyClass:public IFace {};
 |**Erforderliche Attribute**|Eine oder mehrere der folgenden: `coclass`, `progid`, oder `vi_progid`.|
 |**Ungültige Attribute**|Keiner|
 
-Weitere Informationen zu den attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Siehe auch
 
 [COM-Attribute](com-attributes.md)<br/>
 [Klassenattribute](class-attributes.md)<br/>
-[rdx](rdx.md)  
+[rdx](rdx.md)

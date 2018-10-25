@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe08462c95750f483cdec5650fccb1c199505ee1
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 459114678352004293b425ba7cdff39d15d084b1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082396"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057750"
 ---
 # <a name="changing-the-caption-property-of-multiple-string-resources-c"></a>Ändern die Caption-Eigenschaft von mehreren Zeichenfolgenressourcen (C++)
 
@@ -48,4 +48,4 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zeichenfolgen-Editor](../windows/string-editor.md)  
+[Zeichenfolgen-Editor](../windows/string-editor.md)

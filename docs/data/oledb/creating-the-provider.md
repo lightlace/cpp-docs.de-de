@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0dbdf7350eeba1a29392bafc2f099a857e212e37
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 230620a2375ac5aa822e55496d1f26751ee6f7b3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410745"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055345"
 ---
 # <a name="creating-the-provider"></a>Erstellen des Anbieters
 
@@ -32,7 +32,7 @@ ms.locfileid: "49410745"
 
 1. In der **Klasse hinzufügen** Dialogfeld **installiert** > **Visual C++** > **ATL**, wählen Sie die **ATL-OLE DB-Anbieter** Symbol, und klicken Sie dann auf **öffnen**.
 
-1. In der **ATL-OLE DB-Anbieter-Assistenten**, geben Sie einen kurzen Namen für den Anbieter in der **Kurznamen** Feld. In den folgenden Themen verwenden Sie den kurzen Namen "Meinanbieter", aber Sie können einen anderen Namen verwenden. Füllen Sie die anderen Namensfelder gemäß den von Ihnen eingegebene Name.
+1. In der **ATL-OLE DB-Anbieter-Assistenten**, geben Sie einen kurzen Namen für den Anbieter in der **Kurznamen** Feld. In den folgenden Themen verwenden Sie den kurzen Namen *benutzerdefinierte*, aber Sie können einen anderen Namen verwenden. Füllen Sie die anderen Namensfelder gemäß den von Ihnen eingegebene Name.
 
 1. Bearbeiten Sie die anderen Namensfelder, bei Bedarf. Zusätzlich zu den-Objekt und die Dateinamen können Sie die folgenden bearbeiten:
 

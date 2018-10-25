@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b5494cd21f1385bbd9d89a37725998b521e6452
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ae0d531930a2cfbb00be5bc0fb9a043a10e7d9f2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373882"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059063"
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView-Klasse
 
@@ -175,6 +175,4 @@ Wenn Sie hinter dem letzten Datensatz im Recordset verschieben, wird die Datensa
 ## <a name="see-also"></a>Siehe auch
 
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
-
-
 

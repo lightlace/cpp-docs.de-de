@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b443e1758f766b7fa2dd9a0169ab98172423779d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5e589f07d1c9c54c3acd2fa3ff6a0f346077f9b4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439341"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053096"
 ---
 # <a name="setting-the-day-state-of-a-month-calendar-control"></a>Einstellen des Tagesstatus für ein Monatskalender-Steuerelement
 
@@ -51,9 +51,9 @@ Um diese Nachricht richtig behandeln zu können, müssen Sie bestimmen, wie viel
 
 1. Fügen Sie im Text des Handlers den folgenden Code hinzu:
 
-     [!code-cpp[NVC_MFCControlLadenDialog#26](../mfc/codesnippet/cpp/setting-the-day-state-of-a-month-calendar-control_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#26](../mfc/codesnippet/cpp/setting-the-day-state-of-a-month-calendar-control_1.cpp)]
 
-     Im Beispiel wird die *pNMHDR* Zeiger auf den richtigen Typ, dann bestimmt, wie viele Monate Informationen angefordert werden (`pDayState->cDayState`). Für jeden Monat, den aktuellen Bitfeld (`pDayState->prgDayState[i]`) wird mit 0 (null), und klicken Sie dann die erforderliche initialisiert Datumsangaben (in diesem Fall dem 15. jedes Monats) festgelegt sind.
+   Im Beispiel wird die *pNMHDR* Zeiger auf den richtigen Typ, dann bestimmt, wie viele Monate Informationen angefordert werden (`pDayState->cDayState`). Für jeden Monat, den aktuellen Bitfeld (`pDayState->prgDayState[i]`) wird mit 0 (null), und klicken Sie dann die erforderliche initialisiert Datumsangaben (in diesem Fall dem 15. jedes Monats) festgelegt sind.
 
 ## <a name="see-also"></a>Siehe auch
 

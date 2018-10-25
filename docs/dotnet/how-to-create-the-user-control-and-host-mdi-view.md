@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: eeeb02393e96e7afd2deed875465f6797d145b6e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2e61a69661034fb582039c744c3483f461405581
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399813"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056970"
 ---
 # <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Gewusst wie: Erstellen des Benutzersteuerelements und Hosten der MDI-Ansicht
 
@@ -38,23 +38,23 @@ Dieses Verfahren setzt voraus, dass Sie ein Windows Forms-Steuerelementbibliothe
 
 1. Erstellen Sie ein MFC-Anwendungsprojekt.
 
-     Auf der **Datei** , wählen Sie im Menü **neu**, und klicken Sie dann auf **Projekt**. In der **Visual C++** Ordner **MFC-Anwendung**.
+   Auf der **Datei** , wählen Sie im Menü **neu**, und klicken Sie dann auf **Projekt**. In der **Visual C++** Ordner **MFC-Anwendung**.
 
-     In der **Namen** Geben Sie `MFC02` , und ändern Sie die **Lösung** auf **zu Projektmappe hinzufügen**. Klicken Sie auf **OK**.
+   In der **Namen** Geben Sie `MFC02` , und ändern Sie die **Lösung** auf **zu Projektmappe hinzufügen**. Klicken Sie auf **OK**.
 
-     In der **MFS-Anwendungsassistenten**, übernehmen Sie alle Standardeinstellungen, und klicken Sie dann auf **Fertig stellen**. Dies erstellt eine MFC-Anwendung mit einem MDI (Multiple Document Interface).
+   In der **MFS-Anwendungsassistenten**, übernehmen Sie alle Standardeinstellungen, und klicken Sie dann auf **Fertig stellen**. Dies erstellt eine MFC-Anwendung mit einem MDI (Multiple Document Interface).
 
 1. Konfigurieren Sie das Projekt für Common Language Runtime (CLR)-Unterstützung.
 
-     In **Projektmappen-Explorer**, mit der rechten Maustaste die `MFC01` Projektknoten, und wählen Sie **Eigenschaften** aus dem Kontextmenü. Die **Eigenschaftenseiten** Dialogfeld wird angezeigt.
+   In **Projektmappen-Explorer**, mit der rechten Maustaste die `MFC01` Projektknoten, und wählen Sie **Eigenschaften** aus dem Kontextmenü. Die **Eigenschaftenseiten** Dialogfeld wird angezeigt.
 
-     Klicken Sie unter **Konfigurationseigenschaften**Option **allgemeine**. Unter den **Projektstandards** legen **Common Language Runtime-Unterstützung** zu **Common Language Runtime-Unterstützung (/ Clr)**.
+   Klicken Sie unter **Konfigurationseigenschaften**Option **allgemeine**. Unter den **Projektstandards** legen **Common Language Runtime-Unterstützung** zu **Common Language Runtime-Unterstützung (/ Clr)**.
 
-     Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie **C/C++-** , und klicken Sie auf die **allgemeine** Knoten. Legen Sie **Debuginformationsformat** zu **Programmdatenbank (/ Zi)**.
+   Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie **C/C++-** , und klicken Sie auf die **allgemeine** Knoten. Legen Sie **Debuginformationsformat** zu **Programmdatenbank (/ Zi)**.
 
-     Klicken Sie auf die **Codegenerierung** Knoten. Legen Sie **minimale Neuerstellung aktivieren** zu **No (/ GM-)**. Legen Sie auch **vollständige Laufzeitüberprüfungen** zu **Standard**.
+   Klicken Sie auf die **Codegenerierung** Knoten. Legen Sie **minimale Neuerstellung aktivieren** zu **No (/ GM-)**. Legen Sie auch **vollständige Laufzeitüberprüfungen** zu **Standard**.
 
-     Klicken Sie auf **OK** zum Übernehmen der Änderungen.
+   Klicken Sie auf **OK** zum Übernehmen der Änderungen.
 
 1. Fügen Sie in der Datei "stdafx.h" die folgende Zeile hinzu.
 
@@ -64,7 +64,7 @@ Dieses Verfahren setzt voraus, dass Sie ein Windows Forms-Steuerelementbibliothe
 
 1. Fügen Sie dem .NET-Steuerelement einen Verweis hinzu.
 
-     In **Projektmappen-Explorer**, mit der rechten Maustaste die `MFC02` Projektknoten, und wählen Sie **hinzufügen**, **Verweise**. In der **Eigenschaftenseite**, klicken Sie auf **neuen Verweis hinzufügen**, wählen Sie WindowsFormsControlLibrary1 (unter der **Projekte** Registerkarte), und klicken Sie auf **OK** . Dies fügt einen Verweis in Form einer [/FU](../build/reference/fu-name-forced-hash-using-file.md) -Compileroption, damit das Programm kompiliert wird, kopiert es auch "WindowsFormsControlLibrary1.dll" in der `MFC02` Projektverzeichnis, damit das Programm ausgeführt wird.
+   In **Projektmappen-Explorer**, mit der rechten Maustaste die `MFC02` Projektknoten, und wählen Sie **hinzufügen**, **Verweise**. In der **Eigenschaftenseite**, klicken Sie auf **neuen Verweis hinzufügen**, wählen Sie WindowsFormsControlLibrary1 (unter der **Projekte** Registerkarte), und klicken Sie auf **OK** . Dies fügt einen Verweis in Form einer [/FU](../build/reference/fu-name-forced-hash-using-file.md) -Compileroption, damit das Programm kompiliert wird, kopiert es auch "WindowsFormsControlLibrary1.dll" in der `MFC02` Projektverzeichnis, damit das Programm ausgeführt wird.
 
 1. Suchen Sie in stdafx.h folgende Zeile:
 
@@ -72,7 +72,7 @@ Dieses Verfahren setzt voraus, dass Sie ein Windows Forms-Steuerelementbibliothe
     #endif // _AFX_NO_AFXCMN_SUPPORT
     ```
 
-     Fügen Sie davor folgende Zeilen ein:
+   Fügen Sie davor folgende Zeilen ein:
 
     ```
     #include <afxwinforms.h>   // MFC Windows Forms support
@@ -80,7 +80,7 @@ Dieses Verfahren setzt voraus, dass Sie ein Windows Forms-Steuerelementbibliothe
 
 1. Ändern Sie die View-Klasse, sodass es erbt [CWinFormsView](../mfc/reference/cwinformsview-class.md).
 
-     Ersetzen Sie in MFC02View.h [CView](../mfc/reference/cview-class.md) mit [CWinFormsView](../mfc/reference/cwinformsview-class.md) , damit der Code wie folgt aussieht:
+   Ersetzen Sie in MFC02View.h [CView](../mfc/reference/cview-class.md) mit [CWinFormsView](../mfc/reference/cwinformsview-class.md) , damit der Code wie folgt aussieht:
 
     ```
     class CMFC02View : public CWinFormsView
@@ -88,7 +88,7 @@ Dieses Verfahren setzt voraus, dass Sie ein Windows Forms-Steuerelementbibliothe
     };
     ```
 
-     Wenn Sie zusätzliche Ansichten der MDI-Anwendung hinzufügen möchten, müssen Sie zum Aufrufen [CWinApp:: AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate) für jede Ansicht, die Sie erstellen.
+   Wenn Sie zusätzliche Ansichten der MDI-Anwendung hinzufügen möchten, müssen Sie zum Aufrufen [CWinApp:: AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate) für jede Ansicht, die Sie erstellen.
 
 1. Ändern Sie in der Datei MFC02View.cpp im IMPLEMENT_DYNCREATE-Makro und in der Meldungszuordnung CView in CWinFormsView um, und ersetzen Sie den vorhandenen leeren Konstruktor durch den folgenden:
 
@@ -105,11 +105,11 @@ Dieses Verfahren setzt voraus, dass Sie ein Windows Forms-Steuerelementbibliothe
 
 1. Erstellen Sie das Projekt, und führen Sie es aus.
 
-     In **Projektmappen-Explorer**mit der rechten Maustaste auf MFC02, und wählen Sie **als Startprojekt festlegen**.
+   In **Projektmappen-Explorer**mit der rechten Maustaste auf MFC02, und wählen Sie **als Startprojekt festlegen**.
 
-     Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**.
+   Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**.
 
-     Auf der **Debuggen** Menü klicken Sie auf **Starten ohne debugging**.
+   Auf der **Debuggen** Menü klicken Sie auf **Starten ohne debugging**.
 
 ## <a name="see-also"></a>Siehe auch
 

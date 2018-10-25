@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c5d94b7a3949f0f547c9809d75e22eefbe9f5708
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 0f2ee187087917220751155cc43e8619e6dcf763
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789071"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054573"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource-Klasse
 
@@ -96,7 +96,6 @@ Wenn dieser Vorgang abgeschlossen ist, ein Handle, das das Ereignis darstellt. V
 ### <a name="return-value"></a>Rückgabewert
 
 S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.
-
 
 ## <a name="see-also"></a>Siehe auch
 

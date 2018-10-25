@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bb329b60b72aae268252ae3ddbcc2c63d4a18f6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 273893f5164c4e89b3516c43b5414e5487af376e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389684"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063210"
 ---
 # <a name="toolbar-editor-c"></a>Symbolleisten-Editor (C++)
 
@@ -43,8 +43,7 @@ Mit der **Symbolleiste** -Editor können Sie:
 
 Die **Symbolleiste** -Editor-Fenster zeigt zwei Ansichten eines Schaltflächensymbols an, dem die Bild-Editor-Fenster. Die beiden Bereiche sind durch einen Fensterteiler getrennt. Zum Ändern der relativen Größe der Fensterbereiche kann der Fensterteiler seitlich gezogen werden. Der aktive Bereich ist von einem Markierungsrahmen umgeben. Oberhalb der beiden Ansichten des Bilds befindet sich die betreffende Symbolleiste.
 
-![Symbolleisten-Editor](../mfc/media/vctoolbareditor.gif "VcToolbarEditor")  
-Symbolleisten-Editor
+![Symbolleisten-Editor](../mfc/media/vctoolbareditor.gif "VcToolbarEditor") Symbolleisten-Editor
 
 Die **Symbolleiste** -Editor ähnelt dem **Image** -Editor-Funktionen. Menüelemente, grafische Tools und Bitmapraster sind dieselben wie in der **Image** Editor. Steht der Menübefehl im auf der **Image** Menü können Sie zwischen wechseln die **Symbolleiste** Editor und die **Image** Editor. Weitere Informationen zur Verwendung der **Grafiken** Symbolleiste **Farben** Palette, oder **Image** im Menü finden Sie unter [Bild-Editor](../windows/image-editor-for-icons.md).
 

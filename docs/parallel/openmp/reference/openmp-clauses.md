@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d19a2b1859012a56bdaf3c454f8b92758179bed9
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: ea394ca09a086229a8718f4e7e1bfa55115652bc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809069"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056221"
 ---
 # <a name="openmp-clauses"></a>OpenMP-Klauseln
 
@@ -56,21 +56,21 @@ Enthält Links zu den Klauseln, die in der OpenMP-API verwendet.
 
 Visual C++ unterstützt die folgenden OpenMP-Klauseln:
 
-Klausel                             | Beschreibung
----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[copyin](#copyin)                  | Ermöglicht die Threads der master-Thread-Wert, für den Zugriff auf eine [Threadprivate](openmp-directives.md#threadprivate) Variable.
-[copyprivate](#copyprivate)        | Gibt an, dass eine oder mehrere Variablen, die auf allen Threads freigegeben werden soll.
-[default](#default-openmp)         | Gibt das Verhalten ohne bereichseinschränkung Variablen in einem parallelen Bereich an.
-[firstprivate](#firstprivate)      | Gibt an, dass jeder Thread eine eigene Instanz einer Variablen zugewiesen werden soll, und die Variable mit dem Wert der Variablen initialisiert werden soll, da sie vor dem das parallele Konstrukt vorhanden ist.
-[if](#if-openmp)                   | Gibt an, ob eine Schleife parallel oder seriell ausgeführt werden soll.
-[lastprivate](#lastprivate)        | Gibt an, dass der umschließenden Kontext Version der Variablen ist gleich der privaten Version der Thread der letzten Iteration (for-Schleife-Konstrukt) oder der letzte Abschnitt (#pragma Abschnitte) ausgeführt wird.
-[nowait](#nowait)                  | Überschreibt die Grenze, die in einer Anweisung implizit.
-[num_threads](#num-threads)        | Legt die Anzahl der Threads in einem Team Thread fest.
-[Sortiert](#ordered-openmp-clauses) | Erforderlich für eine parallele [für](openmp-directives.md#for-openmp) Anweisung Wenn ein [sortiert](openmp-directives.md#ordered-openmp-directives) -Direktive ist, in der Schleife verwendet werden.
-[private](#private-openmp)         | Gibt an, dass jeder Thread eine eigene Instanz einer Variablen zugewiesen werden soll.
-[reduction](#reduction)            | Gibt an, dass eine oder mehrere Variablen, die für jeden Thread privat sind ein Reduzierungsvorgang am Ende des parallelen Bereichs werden.
-[schedule](#schedule)              | Gilt für die [für](openmp-directives.md#for-openmp) Richtlinie.
-[Freigegebene](#shared-openmp)           | Gibt an, dass eine oder mehrere Variablen, die auf allen Threads freigegeben werden soll.
+|Klausel|Beschreibung|
+|------|-----------|
+|[copyin](#copyin)|Ermöglicht die Threads der master-Thread-Wert, für den Zugriff auf eine [Threadprivate](openmp-directives.md#threadprivate) Variable.|
+|[copyprivate](#copyprivate)|Gibt an, dass eine oder mehrere Variablen, die auf allen Threads freigegeben werden soll.|
+|[default](#default-openmp)|Gibt das Verhalten ohne bereichseinschränkung Variablen in einem parallelen Bereich an.|
+|[firstprivate](#firstprivate)|Gibt an, dass jeder Thread eine eigene Instanz einer Variablen zugewiesen werden soll, und die Variable mit dem Wert der Variablen initialisiert werden soll, da sie vor dem das parallele Konstrukt vorhanden ist.|
+|[if](#if-openmp)|Gibt an, ob eine Schleife parallel oder seriell ausgeführt werden soll.|
+|[lastprivate](#lastprivate)|Gibt an, dass der umschließenden Kontext Version der Variablen ist gleich der privaten Version der Thread der letzten Iteration (for-Schleife-Konstrukt) oder der letzte Abschnitt (#pragma Abschnitte) ausgeführt wird.|
+|[nowait](#nowait)|Überschreibt die Grenze, die in einer Anweisung implizit.|
+|[num_threads](#num-threads)|Legt die Anzahl der Threads in einem Team Thread fest.|
+|[Sortiert](#ordered-openmp-clauses)|Erforderlich für eine parallele [für](openmp-directives.md#for-openmp) Anweisung Wenn ein [sortiert](openmp-directives.md#ordered-openmp-directives) -Direktive ist, in der Schleife verwendet werden.|
+|[private](#private-openmp)|Gibt an, dass jeder Thread eine eigene Instanz einer Variablen zugewiesen werden soll.|
+|[reduction](#reduction)|Gibt an, dass eine oder mehrere Variablen, die für jeden Thread privat sind ein Reduzierungsvorgang am Ende des parallelen Bereichs werden.|
+|[schedule](#schedule)|Gilt für die [für](openmp-directives.md#for-openmp) Richtlinie.|
+|[Freigegebene](#shared-openmp)|Gibt an, dass eine oder mehrere Variablen, die auf allen Threads freigegeben werden soll.|
 
 ## <a name="copyin"></a>copyin
 
@@ -401,7 +401,7 @@ Die Anzahl von threads
 
 ### <a name="remarks"></a>Hinweise
 
-Die `num_threads` -Klausel besitzt die gleiche Funktionalität wie die [Omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) Funktion.
+Die `num_threads` -Klausel besitzt die gleiche Funktionalität wie die [Omp_set_num_threads](openmp-functions.md#omp-set-num-threads) Funktion.
 
 `num_threads` gilt für die folgenden Anweisungen:
 

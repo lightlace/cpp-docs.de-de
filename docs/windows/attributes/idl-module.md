@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 91bed0ebfdacae21f2d606c0b8fa1bb43326816d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 54fcef3c7b2ef86273a570e483f65b34b3b2efc2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792011"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063095"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -56,10 +56,10 @@ Ein benutzerdefinierter Name für den Codeblock, der in der IDL-Datei angezeigt 
 (Optional) Die Hilfe-ID für diese Typbibliothek.
 
 *hidden*<br/>
-(Optional) Ein Parameter, der verhindert, dass die Bibliothek angezeigt wird. Finden Sie unter den [ausgeblendeten](/windows/desktop/Midl/hidden) MIDL-Attribut für Weitere Informationen.
+(Optional) Ein Parameter, der verhindert, dass die Bibliothek angezeigt wird. Weitere Informationen finden Sie unter [hidden](/windows/desktop/Midl/hidden) MIDL-Attribut.
 
 *restricted*<br/>
-(Optional) Mitglieder der Bibliothek können nicht beliebig aufgerufen werden. Finden Sie unter den [eingeschränkten](/windows/desktop/Midl/restricted) MIDL-Attribut für Weitere Informationen.
+(Optional) Mitglieder der Bibliothek können nicht beliebig aufgerufen werden. Weitere Informationen finden Sie unter [restricted](/windows/desktop/Midl/restricted) MIDL-Attribut.
 
 *Funktionsdeklaration*<br/>
 Die Funktion, die Sie definieren.
@@ -104,4 +104,4 @@ Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net
 
 [IDL-Attribute](idl-attributes.md)<br/>
 [Eigenständige Attribute](stand-alone-attributes.md)<br/>
-[entry](entry.md)  
+[entry](entry.md)

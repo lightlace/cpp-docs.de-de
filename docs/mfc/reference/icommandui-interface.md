@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ec76a554068dbec050078a0e0558cecd583410c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cd9ea4397c655f0ebb28d10febe82581d6ad8771
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429205"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055007"
 ---
 # <a name="icommandui-interface"></a>ICommandUI-Schnittstelle
 
@@ -73,6 +73,7 @@ Legt die Benutzeroberflächenelemente für diesen Befehl auf den entsprechenden 
 ```
 property UICheckState Check;
 ```
+
 ## <a name="remarks"></a>Hinweise
 
 Diese Eigenschaft legt die Benutzeroberflächenelemente für diesen Befehl auf den entsprechenden Aktivierungszustand an. Überprüfen Sie auf die folgenden Werte festgelegt:
@@ -86,6 +87,7 @@ Weist den Befehl Routingmechanismus dar, um den Vorgang fortzusetzen, routing vo
 ```
 void ContinueRouting();
 ```
+
 ## <a name="remarks"></a>Hinweise
 
 Dies ist eine erweiterte Memberfunktion, die in Verbindung mit einer ON_COMMAND_EX-Handler verwendet werden soll, die FALSE zurückgibt. Weitere Informationen finden Sie im technischen Hinweis TN006: Meldungszuordnungen.
@@ -96,6 +98,7 @@ Aktiviert oder deaktiviert die Benutzeroberflächenelemente für diesen Befehl.
 ```
 property bool Enabled;
 ```
+
 ## <a name="remarks"></a>Hinweise
 
 Diese Eigenschaft aktiviert oder deaktiviert die Benutzeroberflächenelemente für diesen Befehl. Legen Sie aktiviert auf "true" aktiviert das Element "false", um ihn zu deaktivieren.
@@ -106,6 +109,7 @@ Ruft die ID des Benutzerobjekts für die Schnittstelle durch die ICommandUI-Obje
 ```
 property unsigned int ID;
 ```
+
 ## <a name="remarks"></a>Hinweise
 
 Diese Eigenschaft ruft die ID (ein Handle) das Menüelement, Symbolleisten-Schaltfläche oder anderen Benutzeroberflächen-Objekt, das vom ICommandUI-Objekt dargestellt.
@@ -116,6 +120,7 @@ Ruft den Index des User Interface-Objekts, das vom ICommandUI-Objekt dargestellt
 ```
 property unsigned int Index;
 ```
+
 ## <a name="remarks"></a>Hinweise
 
 Diese Eigenschaft ruft den Index (ein Handle) das Menüelement, Symbolleisten-Schaltfläche oder anderen Benutzeroberflächen-Objekt, das vom ICommandUI-Objekt dargestellt.
@@ -126,6 +131,7 @@ Legt die Benutzeroberflächenelemente für diesen Befehl auf den entsprechenden 
 ```
 property bool Radio;
 ```
+
 ## <a name="remarks"></a>Hinweise
 
 Diese Eigenschaft legt die Benutzeroberflächenelemente für diesen Befehl auf den entsprechenden Aktivierungszustand an. Festlegen der Sender, um "true" aktiviert das Element; andernfalls "false".
@@ -136,6 +142,7 @@ Legt den Text der Benutzeroberflächenelemente für diesen Befehl fest.
 ```
 property String^ Text;
 ```
+
 ## <a name="remarks"></a>Hinweise
 
 Diese Eigenschaft legt den Text der Benutzeroberflächenelemente für diesen Befehl. Legen Sie Text auf ein Text-Zeichenfolge-Handle.

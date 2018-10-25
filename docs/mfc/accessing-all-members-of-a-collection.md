@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 320457928ef8bc1a03d86b3a898bc0b719e116a2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8bcaaf4723e8b6a1ad40fb534b7114f317d76f6b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442876"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060818"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Zugreifen auf alle Elemente einer Auflistung
 
@@ -48,38 +48,38 @@ Die folgenden Verfahren zeigen, wie Sie die drei Haupttypen von Auflistungen, di
 
 1. Verwenden Sie die sequenziellen Indexzahlen mit der `GetAt` -Memberfunktion:
 
-     [!code-cpp[NVC_MFCCollections#12](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_1.cpp)]
+   [!code-cpp[NVC_MFCCollections#12](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_1.cpp)]
 
-     Dieses Beispiel verwendet ein typisiertes Zeigerarray, das enthält Zeiger auf `CPerson` -Objekte enthält. Das Array wird von der Klasse `CObArray`abgeleitet, eine der nicht auf Vorlagen basierenden, vordefinierten Klassen. `GetAt` gibt einen Zeiger auf ein `CPerson` -Objekt zurück. Für typisierte Zeigerauflistungsklassen – Arrays oder Listen – gibt der erste Parameter die Basisklasse an; der zweite Parameter gibt den zu speichernden Typ an.
+   Dieses Beispiel verwendet ein typisiertes Zeigerarray, das enthält Zeiger auf `CPerson` -Objekte enthält. Das Array wird von der Klasse `CObArray`abgeleitet, eine der nicht auf Vorlagen basierenden, vordefinierten Klassen. `GetAt` gibt einen Zeiger auf ein `CPerson` -Objekt zurück. Für typisierte Zeigerauflistungsklassen – Arrays oder Listen – gibt der erste Parameter die Basisklasse an; der zweite Parameter gibt den zu speichernden Typ an.
 
-     Die `CTypedPtrArray` -Klasse überlädt die **[]** Operator, damit Sie Zugriff auf Elemente eines Arrays die übliche tiefgestellte Array-Syntax verwenden können. Eine Alternative zur Anweisung im Hauptteil der **für** obige Schleife ist
+   Die `CTypedPtrArray` -Klasse überlädt die **[]** Operator, damit Sie Zugriff auf Elemente eines Arrays die übliche tiefgestellte Array-Syntax verwenden können. Eine Alternative zur Anweisung im Hauptteil der **für** obige Schleife ist
 
-     [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]
 
-     Dieser Operator ist in den **const** - und nicht-**const** -Versionen vorhanden. Die **const** -Version, die für **const** -Arrays aufgerufen wird, können nur auf der rechten Seite einer Zuweisungsanweisung angezeigt werden.
+   Dieser Operator ist in den **const** - und nicht-**const** -Versionen vorhanden. Die **const** -Version, die für **const** -Arrays aufgerufen wird, können nur auf der rechten Seite einer Zuweisungsanweisung angezeigt werden.
 
 ### <a name="_core_to_iterate_a_list"></a> So durchlaufen Sie eine Liste
 
 1. Verwenden Sie die Memberfunktionen `GetHeadPosition` und `GetNext` zum Navigieren durch die Liste:
 
-     [!code-cpp[NVC_MFCCollections#14](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_3.cpp)]
+   [!code-cpp[NVC_MFCCollections#14](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_3.cpp)]
 
-     Dieses Beispiel verwendet eine typisierte Zeigerliste, um Zeiger auf `CPerson` -Objekte zu enthalten. Die List-Deklaration ähnelt der für das Array in der Prozedur [So durchlaufen Sie ein Array](#_core_to_iterate_an_array) , sie wird jedoch von der Klasse `CObList`abgeleitet. `GetNext` gibt einen Zeiger auf ein `CPerson` -Objekt zurück.
+   Dieses Beispiel verwendet eine typisierte Zeigerliste, um Zeiger auf `CPerson` -Objekte zu enthalten. Die List-Deklaration ähnelt der für das Array in der Prozedur [So durchlaufen Sie ein Array](#_core_to_iterate_an_array) , sie wird jedoch von der Klasse `CObList`abgeleitet. `GetNext` gibt einen Zeiger auf ein `CPerson` -Objekt zurück.
 
 ### <a name="_core_to_iterate_a_map"></a> So durchlaufen Sie eine Zuordnung
 
 1. Verwenden Sie `GetStartPosition` , um an den Anfang der Zuordnung zu wechseln, und `GetNextAssoc` , um den nächsten Schlüssel und Wert wiederholt aus der Zuordnung abzurufen, wie im folgenden Beispiel gezeigt:
 
-     [!code-cpp[NVC_MFCCollections#15](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_4.cpp)]
+   [!code-cpp[NVC_MFCCollections#15](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_4.cpp)]
 
-     Dieses Beispiel verwendet eine einfache Zuordnungsvorlage (statt einer typisierten Zeigerauflistung), die `CString` -Schlüssel nutzt und Zeiger auf `CPerson` -Objekte speichert. Wenn Sie Zugriffsfunktionen wie z. B. `GetNextAssoc`verwenden, bietet die Klasse Zeiger auf `CPerson` -Objekte. Wenn Sie stattdessen eine der nicht auf Vorlagen basierten Zuordnungsauflistungen verwenden, müssen Sie den zurückgegebenen `CObject` -Zeiger in einen Zeiger auf eine `CPerson`umwandeln.
+   Dieses Beispiel verwendet eine einfache Zuordnungsvorlage (statt einer typisierten Zeigerauflistung), die `CString` -Schlüssel nutzt und Zeiger auf `CPerson` -Objekte speichert. Wenn Sie Zugriffsfunktionen wie z. B. `GetNextAssoc`verwenden, bietet die Klasse Zeiger auf `CPerson` -Objekte. Wenn Sie stattdessen eine der nicht auf Vorlagen basierten Zuordnungsauflistungen verwenden, müssen Sie den zurückgegebenen `CObject` -Zeiger in einen Zeiger auf eine `CPerson`umwandeln.
 
     > [!NOTE]
     >  Für nicht auf Vorlagen basierende Zuordnungen erfordert der Compiler einen Verweis auf einen `CObject` -Zeiger im letzten Parameter für `GetNextAssoc`. Bei der Eingabe müssen Sie die Zeiger in diesen Typ umwandeln, wie im nächsten Beispiel gezeigt.
 
-     Die Vorlagenlösung ist einfacher und bietet eine bessere Typsicherheit. Der nicht auf Vorlagen basierende Code ist komplizierter, wie Sie hier sehen können:
+   Die Vorlagenlösung ist einfacher und bietet eine bessere Typsicherheit. Der nicht auf Vorlagen basierende Code ist komplizierter, wie Sie hier sehen können:
 
-     [!code-cpp[NVC_MFCCollections#16](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_5.cpp)]
+   [!code-cpp[NVC_MFCCollections#16](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_5.cpp)]
 
 Weitere Informationen finden Sie unter [Löschen aller Objekte in einer CObject-Sammlung](../mfc/deleting-all-objects-in-a-cobject-collection.md).
 

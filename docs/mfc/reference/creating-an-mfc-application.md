@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c20d3214f8f2f76fedaeebcd439f10e016ccdd9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ec61db21b27ef49f660751605b4788599f7f3485
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410636"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062495"
 ---
 # <a name="creating-an-mfc-application"></a>Erstellen einer MFC-Anwendung
 
@@ -63,5 +63,4 @@ Nachdem das Projekt erstellt wurde, sehen Sie die Dateien im **Projektmappen-Exp
 
 [Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Eigenschaftenseiten](../../ide/property-pages-visual-cpp.md)
-
 

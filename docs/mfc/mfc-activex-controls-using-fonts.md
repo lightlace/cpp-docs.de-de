@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b14adec8d601778e255ae7e4242fc552fc820e64
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8c34b4a842655ebce6fccaa89a1dfc6d4ef49add
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396700"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063483"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC-ActiveX-Steuerelemente: Verwenden von Schriftarten
 
@@ -64,7 +64,7 @@ Siehe [MFC-ActiveX-Steuerelemente: Eigenschaften](../mfc/mfc-activex-controls-pr
 
 1. Klicken Sie im Kontextmenü auf **hinzufügen** , und klicken Sie dann auf **Eigenschaft hinzufügen**.
 
-     Daraufhin wird der Assistent zum Hinzufügen von Eigenschaften.
+   Daraufhin wird der Assistent zum Hinzufügen von Eigenschaften.
 
 1. In der **Eigenschaftennamen** auf **Schriftart**.
 
@@ -90,7 +90,7 @@ Die vordefinierte Caption-Eigenschaft ist ein Beispiel für eine Texteigenschaft
 
 1. Klicken Sie im Kontextmenü auf **hinzufügen** , und klicken Sie dann auf **Eigenschaft hinzufügen**.
 
-     Daraufhin wird der Assistent zum Hinzufügen von Eigenschaften.
+   Daraufhin wird der Assistent zum Hinzufügen von Eigenschaften.
 
 1. In der **Eigenschaftennamen** auf **Beschriftung**.
 
@@ -132,7 +132,7 @@ Um eine benutzerdefinierte Schriftarteigenschaft zu implementieren, verwenden Si
 
 1. Klicken Sie im Kontextmenü auf **hinzufügen** , und klicken Sie dann auf **Eigenschaft hinzufügen**.
 
-     Daraufhin wird der Assistent zum Hinzufügen von Eigenschaften.
+   Daraufhin wird der Assistent zum Hinzufügen von Eigenschaften.
 
 1. In der **Eigenschaftennamen** geben einen Namen für die Eigenschaft. In diesem Beispiel verwenden **HeadingFont**.
 
@@ -168,35 +168,35 @@ In der Implementierungsdatei des Steuerelements (. CPP), gehen Sie folgendermaß
 
 - Initialisieren Sie *M_fontHeading* im Konstruktor Steuerelements.
 
-     [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]
 
 - Deklarieren Sie eine statische FONTDESC-Struktur, die Default-Attribute der Schriftart enthält.
 
-     [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]
 
 - Im Steuerelement `DoPropExchange` Member funktioniert, fügen Sie einen Aufruf an die `PX_Font` Funktion. Dies bietet Initialisierung und Persistenz für die benutzerdefinierte Schriftart-Eigenschaft.
 
-     [!code-cpp[NVC_MFC_AxFont#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_11.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_11.cpp)]
 
 - Schließen Sie die Implementierung des Steuerelements `GetHeadingFont` Member-Funktion.
 
-     [!code-cpp[NVC_MFC_AxFont#12](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_12.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#12](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_12.cpp)]
 
 - Schließen Sie die Implementierung des Steuerelements `SetHeadingFont` Member-Funktion.
 
-     [!code-cpp[NVC_MFC_AxFont#13](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_13.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#13](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_13.cpp)]
 
 - Ändern Sie das Steuerelement `OnDraw` Memberfunktion versucht, eine Variable für die zuvor ausgewählte Schriftart zu definieren.
 
-     [!code-cpp[NVC_MFC_AxFont#14](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_14.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#14](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_14.cpp)]
 
 - Ändern Sie das Steuerelement `OnDraw` Memberfunktion versucht, die benutzerdefinierte Schriftart in den Gerätekontext wählen, durch das Hinzufügen der folgenden Zeile, wenn die Schriftart ist, verwendet werden soll.
 
-     [!code-cpp[NVC_MFC_AxFont#15](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_15.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#15](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_15.cpp)]
 
 - Ändern Sie das Steuerelement `OnDraw` Memberfunktion versucht, wählen Sie die vorherige Schriftart zurück in den Gerätekontext, indem Sie die folgende Zeile hinzufügen, nachdem die Schriftart verwendet wurde.
 
-     [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]
 
 Nachdem die benutzerdefinierte Schriftart-Eigenschaft implementiert wurde, sollte die Standardeigenschaftenseite implementiert werden, können Benutzer steuern können, um aktuelle Schriftart des Steuerelements zu ändern. Um die Eigenschaftenseiten-ID für die Standardeigenschaftenseite hinzuzufügen, fügen Sie die folgende Zeile nach dem BEGIN_PROPPAGEIDS-Makro ein:
 

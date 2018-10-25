@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 189a6bd675ef3dec467fac98584abd7edfb49c19
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3de077e636f0dfdd1ab046a57a81808b3f80357e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433936"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052837"
 ---
 # <a name="cexception-class"></a>CException-Klasse
 
@@ -86,7 +86,7 @@ Wenn eine Ausnahme, von einem der Makros abgefangen wird, die `CException` Objek
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
-[Von CObject](cobject-class.md)
+[CObject](cobject-class.md)
 
 `CException`
 
@@ -242,5 +242,4 @@ else
 [Hierarchiediagramm](../hierarchy-chart.md)<br/>
 [Ausnahmeverarbeitung](exception-processing.md)<br/>
 [Wie erstelle ich meine eigene benutzerdefinierte Ausnahmeklassen](http://go.microsoft.com/fwlink/p/?linkid=128045)
-
 

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea6b687b00310390e3748fb5a8f6db74a19dfd0a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 97735b5509fb841a8b9b3d8212f4a23514f9d28c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373895"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057464"
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>Gewusst wie: Verwalten einer Planerinstanz
 
@@ -34,7 +34,7 @@ In den Beispielen werden Planer erstellt, die die standardmäßigen Planerrichtl
 
 1. Rufen Sie die [CurrentScheduler](reference/currentscheduler-class.md#create) Methode oder der [Scheduler](reference/scheduler-class.md#create) Methode, um eine Planerinstanz zu erstellen.
 
-     Bei Verwendung der `Scheduler::Create` -Methode, rufen die [Concurrency::Scheduler::Attach](reference/scheduler-class.md#attach) Methode, wenn Sie den Planer mit dem aktuellen Kontext zuordnen müssen.
+   Bei Verwendung der `Scheduler::Create` -Methode, rufen die [Concurrency::Scheduler::Attach](reference/scheduler-class.md#attach) Methode, wenn Sie den Planer mit dem aktuellen Kontext zuordnen müssen.
 
 1. Rufen Sie die [CreateEvent](/windows/desktop/api/synchapi/nf-synchapi-createeventa) Funktion, um ein Handle für ein nicht signalisiertes automatisches Zurücksetzen Zurücksetzungobjekt zu erstellen.
 
@@ -44,7 +44,7 @@ In den Beispielen werden Planer erstellt, die die standardmäßigen Planerrichtl
 
 1. Rufen Sie die [CurrentScheduler](reference/currentscheduler-class.md#detach) Methode, um den aktuellen Planer zu trennen und den vorherigen Planer als aktuellen Planer wiederherzustellen.
 
-     Bei Verwendung der `Scheduler::Create` -Methode, rufen die [Concurrency::Scheduler::Release](reference/scheduler-class.md#release) Methode dekrementiert den Verweiszähler des dem `Scheduler` Objekt.
+   Bei Verwendung der `Scheduler::Create` -Methode, rufen die [Concurrency::Scheduler::Release](reference/scheduler-class.md#release) Methode dekrementiert den Verweiszähler des dem `Scheduler` Objekt.
 
 1. Übergeben Sie das Handle für das Ereignis, das die [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) Funktion warten, bis der Planer beendet.
 

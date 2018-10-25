@@ -23,36 +23,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5e5972eab67e19752700ac5f8a027288eb6fc43c
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 918ae8dd0249479cf8a99b1476e0beda5efc72f2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083683"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059804"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: Direktes Aufrufen von ODBC-API-Funktionen
 
-Die Datenbankklassen bieten eine einfachere Schnittstelle zu einem [Datenquelle](../../data/odbc/data-source-odbc.md) als ODBC ist. Daher sind die Klassen nicht alle ODBC-API kapseln. Für alle Funktionen, die außerhalb der Fähigkeiten der Klassen liegt, müssen Sie ODBC API-Funktionen direkt aufrufen. Sie müssen z. B. den ODBC-Katalogfunktionen aufrufen (`::SQLColumns`, `::SQLProcedures`, `::SQLTables`, usw.) direkt.  
-  
-> [!NOTE]
->  Auf ODBC-Datenquellen können Sie über die MFC-ODBC-Klassen zugreifen, wie in diesem Thema beschrieben, oder über die MFC-Datenzugriffsobjekt-Klassen (DAO-Klassen).  
-  
-Zum Aufrufen von einer ODBC-API-Funktion müssen Sie direkt die gleichen Schritte ausführen, die Sie ergreifen würden, wenn Sie die Aufrufe ohne das Framework erzielt wurde. Diese Schritte sind:  
-  
-- Zuordnen von Speicher für Ergebnisse, die Rückgabe des Aufrufs.  
-  
-- Übergeben Sie einen ODBC `HDBC` oder `HSTMT` zu behandeln, abhängig von der Parametersignatur der Funktion. Verwenden der [AFXGetHENV](../../mfc/reference/database-macros-and-globals.md#afxgethenv) Makro, um das ODBC-Handle abzurufen.  
-  
-     Membervariablen `CDatabase::m_hdbc` und `CRecordset::m_hstmt` sind verfügbar, sodass Sie nicht benötigen, reservieren und diese selbst zu initialisieren.  
-  
-- Rufen Sie bei Bedarf zusätzliche ODBC-Funktionen, um vorzubereiten, oder folgen der main-Aufruf.  
-  
-- Wenn Sie fertig sind, heben Sie die Zuordnung "Storage".  
-  
-Weitere Informationen zu diesen Schritten finden Sie unter den [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252) -SDK in der MSDN-Dokumentation.  
-  
-Zusätzlich zu diesen Schritten müssen Sie auch zusätzliche Schritte zum Überprüfen von Rückgabewerten der Funktion, stellen Sie sicher, dass das Programm nicht wartet, für einen asynchronen Aufruf abzuschließen, und so weiter. Sie können diese letzten Schritte vereinfachen, mit der AFX_SQL_ASYNC und AFX_SQL_SYNC-Makros. Weitere Informationen finden Sie unter [Makros und Globals](../../mfc/reference/mfc-macros-and-globals.md) in die *MFC-Referenz*.  
+Die Datenbankklassen bieten eine einfachere Schnittstelle zu einem [Datenquelle](../../data/odbc/data-source-odbc.md) als ODBC ist. Daher sind die Klassen nicht alle ODBC-API kapseln. Für alle Funktionen, die außerhalb der Fähigkeiten der Klassen liegt, müssen Sie ODBC API-Funktionen direkt aufrufen. Sie müssen z. B. den ODBC-Katalogfunktionen aufrufen (`::SQLColumns`, `::SQLProcedures`, `::SQLTables`, usw.) direkt.
 
-## <a name="see-also"></a>Siehe auch  
+> [!NOTE]
+>  Auf ODBC-Datenquellen können Sie über die MFC-ODBC-Klassen zugreifen, wie in diesem Thema beschrieben, oder über die MFC-Datenzugriffsobjekt-Klassen (DAO-Klassen).
+
+Zum Aufrufen von einer ODBC-API-Funktion müssen Sie direkt die gleichen Schritte ausführen, die Sie ergreifen würden, wenn Sie die Aufrufe ohne das Framework erzielt wurde. Diese Schritte sind:
+
+- Zuordnen von Speicher für Ergebnisse, die Rückgabe des Aufrufs.
+
+- Übergeben Sie einen ODBC `HDBC` oder `HSTMT` zu behandeln, abhängig von der Parametersignatur der Funktion. Verwenden der [AFXGetHENV](../../mfc/reference/database-macros-and-globals.md#afxgethenv) Makro, um das ODBC-Handle abzurufen.
+
+   Membervariablen `CDatabase::m_hdbc` und `CRecordset::m_hstmt` sind verfügbar, sodass Sie nicht benötigen, reservieren und diese selbst zu initialisieren.
+
+- Rufen Sie bei Bedarf zusätzliche ODBC-Funktionen, um vorzubereiten, oder folgen der main-Aufruf.
+
+- Wenn Sie fertig sind, heben Sie die Zuordnung "Storage".
+
+Weitere Informationen zu diesen Schritten finden Sie unter den [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252) -SDK in der MSDN-Dokumentation.
+
+Zusätzlich zu diesen Schritten müssen Sie auch zusätzliche Schritte zum Überprüfen von Rückgabewerten der Funktion, stellen Sie sicher, dass das Programm nicht wartet, für einen asynchronen Aufruf abzuschließen, und so weiter. Sie können diese letzten Schritte vereinfachen, mit der AFX_SQL_ASYNC und AFX_SQL_SYNC-Makros. Weitere Informationen finden Sie unter [Makros und Globals](../../mfc/reference/mfc-macros-and-globals.md) in die *MFC-Referenz*.
+
+## <a name="see-also"></a>Siehe auch
 
 [Grundlagen zu ODBC](../../data/odbc/odbc-basics.md)
