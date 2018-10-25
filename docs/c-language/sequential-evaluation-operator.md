@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a285cc87ec4182586663afcb3559101167ae7261
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0cee62bdf19e6ba3196e0336cb29a7c7606775b5
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095572"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808289"
 ---
 # <a name="sequential-evaluation-operator"></a>Operator für sequenzielle Auswertungen
 
@@ -29,9 +29,9 @@ Der Operator für sequenzielle Auswertung wird auch als „Komma-Operator“ bez
 
 ## <a name="syntax"></a>Syntax
 
-*Ausdruck*: *assignment-expression*
-
-*expression*  **,**  *assignment-expression*
+*expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Ausdruck* **,** *assignment-expression*
 
 Der linke Operand des Operators für die sequenzielle Auswertung wird als `void`-Ausdruck ausgewertet. Das Ergebnis der Operation hat den gleichen Wert und Typ wie der rechte Operand. Jeder Operand kann einen beliebigen Typ aufweisen. Der Operator für sequenzielle Auswertung führt keine Typkonvertierungen zwischen seinen Operanden durch, und er erreicht keinen l-Wert. Es gibt einen Sequenzpunkt nach dem ersten Operanden. Dies bedeutet, dass alle Nebeneffekte bei der Auswertung des linken Operanden abgeschlossen werden, bevor die Auswertung des rechten Operanden beginnt. Weitere Informationen finden Sie unter [Sequenzpunkte](../c-language/c-sequence-points.md).
 
