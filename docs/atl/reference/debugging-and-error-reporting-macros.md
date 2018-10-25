@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fc187cea874d16522955dcd46c2ceac34d29098
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c7100199d7e4ee76bf2f096aba9e20c244ae10ab
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136158"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070560"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Debuggen und Fehlerberichterstattungs-Makros
 
@@ -102,7 +102,7 @@ Ausdruck (einschließlich Zeiger), der ungleich NULL oder 0 ergibt.
 
 ### <a name="remarks"></a>Hinweise
 
-In Debugbuilds ATLASSERT wertet *boolescher Ausdruck* und erzeugt einen Debugbericht, wenn das Ergebnis "false" ist.  
+In Debugbuilds ATLASSERT wertet *boolescher Ausdruck* und erzeugt einen Debugbericht, wenn das Ergebnis "false" ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -139,11 +139,11 @@ Der Unterschied zwischen ATLENSURE und ATLASSERT ist ATLENSURE in Releasebuilds 
 
 ### <a name="example"></a>Beispiel
 
-[!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
+[!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** afx.h  
+**Header:** afx.h
 
 ##  <a name="atltracenotimpl"></a>  ATLTRACENOTIMPL
 
@@ -168,7 +168,7 @@ Gibt in Releasebuilds einfach E_NOTIMPL zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** atltrace.h 
+**Header:** atltrace.h
 
 ##  <a name="atltrace"></a>  ATLTRACE
 
@@ -177,7 +177,7 @@ Gibt die Warnungen an, die ein Ausgabegerät, z. B. Debuggerfenster, entsprechen
 ```
 ATLTRACE(exp);
 
-ATLTRACE(  
+ATLTRACE(
     DWORD category,
     UINT  level,
     LPCSTR lpszFormat, ...);

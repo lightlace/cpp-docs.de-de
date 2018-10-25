@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a9289c1b8f28b90dd5a3a4a437d3e2a5870e8468
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 3169c58d192b80400bada8c403f8a769cfb11f55
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791798"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069983"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
 
@@ -54,8 +54,8 @@ Die häufigste Verwendung von der **No_injected_text** C++-Attribut ist, indem d
 |**Erforderliche Attribute**|Keiner|
 |**Ungültige Attribute**|Keiner|
 
-Weitere Informationen zu den attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compilerattribute](compiler-attributes.md)  
+[Compilerattribute](compiler-attributes.md)

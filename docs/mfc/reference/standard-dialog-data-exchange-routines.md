@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e178dfd91382db6c72fbced24ac990c09861a766
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e493f978606f4013da21c292ccf8f520e4e56ea5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433230"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070412"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Standard-Dialogdatenaustauschroutinen
 
@@ -75,7 +75,7 @@ Ein Verweis auf eine Membervariable des Dialogfelds, Formularansicht oder steuer
 
 Wenn `DDX_CBIndex` aufgerufen wird, *Index* auf den Index der aktuellen Auswahl aus dem Kombinationsfeld festgelegt ist. Wenn kein Element ausgewählt ist, *Index* auf 0 festgelegt ist.
 
-Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und Validierung](../../mfc/dialog-data-exchange-and-validation.md).
+Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -validierung](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -110,7 +110,7 @@ Wenn `DDX_CBString` aufgerufen wird, *Wert* auf aktuelle Auswahl aus dem Kombina
 > [!NOTE]
 >  Wenn das Kombinationsfeld ein Dropdown-Listenfeld, das ist, ist der Wert, die ausgetauscht maximal 255 Zeichen enthalten.
 
-Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und Validierung](../../mfc/dialog-data-exchange-and-validation.md).
+Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -validierung](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -145,7 +145,7 @@ Wenn `DDX_CBStringExact` aufgerufen wird, *Wert* auf aktuelle Auswahl aus dem Ko
 > [!NOTE]
 >  Wenn das Kombinationsfeld ein Dropdown-Listenfeld, das ist, ist der Wert, die ausgetauscht maximal 255 Zeichen enthalten.
 
-Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und Validierung](../../mfc/dialog-data-exchange-and-validation.md).
+Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -validierung](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -177,7 +177,7 @@ Ein Verweis auf eine Membervariable des Dialogfelds, Formularansicht oder steuer
 
 Wenn `DDX_Check` aufgerufen wird, *Wert* auf den aktuellen Status des Kontrollkästchen-Steuerelements festgelegt ist. Eine Liste der möglichen Status-Werte, finden Sie unter [BM_GETCHECK](/windows/desktop/Controls/bm-getcheck) im Windows SDK.
 
-Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und Validierung](../../mfc/dialog-data-exchange-and-validation.md).
+Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -validierung](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -209,7 +209,7 @@ Ein Verweis auf eine Membervariable des Dialogfelds, Formularansicht oder steuer
 
 Die *pDX* -Objekt vom Framework bereitgestellt wird bei der `DoDataExchange` -Funktion aufgerufen wird. Aus diesem Grund `DDX_Control` sollte nur aufgerufen werden, in der Überschreibung der `DoDataExchange`.
 
-Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und Validierung](../../mfc/dialog-data-exchange-and-validation.md).
+Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -validierung](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -253,7 +253,7 @@ Wenn `DDX_DateTimeCtrl` aufgerufen wird, *Wert* festgelegt ist, mit dem aktuelle
 
 In der dritten Version, die oben genannten `DDX_DateTimeCtrl` verwaltet die Übertragung von `CString` Daten zwischen einem Datum /-Steuerelement und ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Datenmember des Steuerelementobjekts anzeigen. Die Zeichenfolge wird mit Regeln für das aktuelle Gebietsschema für die Formatierung von Datums- und Uhrzeitangaben formatiert.
 
-Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und Validierung](../../mfc/dialog-data-exchange-and-validation.md).
+Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -validierung](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -268,10 +268,11 @@ Erstellt ein .NET-Steuerelement mit Ressourcen-ID des Steuerelements übereinsti
 ```
 template <typename T>
 void DDX_ManagedControl(
-     CDataExchange* pDX,
-     int nIDC,
-     CWinFormsControl<T>& control );
+   CDataExchange* pDX,
+   int nIDC,
+   CWinFormsControl<T>& control );
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *pDX*<br/>
@@ -297,8 +298,6 @@ Weitere Informationen finden Sie unter [wie: tun DDX-/DDV-Datenbindung mit Windo
 
 [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
 [CDialog::](cdialog-class.md#oninitdialog)
-
-
 
 ##  <a name="ddx_ipaddress"></a>  DDX_IPAddress
 
@@ -335,7 +334,7 @@ Verwenden Sie die Win32 [IPM_GETADDRESS](/windows/desktop/Controls/ipm-getaddres
 
 Wenn `DDX_IPAddress` aufgerufen wird, *Wert* wird entweder aus dem IP-Adresse-Steuerelement, gelesen oder *Wert* richtet sich an das Steuerelement, abhängig von der Richtung des Exchange.
 
-Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und Validierung](../../mfc/dialog-data-exchange-and-validation.md).
+Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -validierung](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -367,7 +366,7 @@ Ein Verweis auf eine Membervariable des Dialogfelds, Formularansicht oder steuer
 
 Wenn `DDX_LBIndex` aufgerufen wird, *Index* auf den Index der aktuellen Auswahl des Listenfelds festgelegt ist. Wenn kein Element ausgewählt ist, *Index* wird auf-1 festgelegt.
 
-Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und Validierung](../../mfc/dialog-data-exchange-and-validation.md).
+Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -validierung](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -404,7 +403,7 @@ Wenn `DDX_LBString` wird aufgerufen, um das Übertragen von Daten aus einem List
 > [!NOTE]
 >  Wenn das Listenfeld ein Dropdown-Listenfeld, das ist, ist der Wert, die ausgetauscht maximal 255 Zeichen enthalten.
 
-Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und Validierung](../../mfc/dialog-data-exchange-and-validation.md).
+Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -validierung](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -441,7 +440,7 @@ Wenn `DDX_CBStringExact` wird aufgerufen, um das Übertragen von Daten aus einem
 > [!NOTE]
 >  Wenn das Listenfeld ein Dropdown-Listenfeld, das ist, ist der Wert, die ausgetauscht maximal 255 Zeichen enthalten.
 
-Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und Validierung](../../mfc/dialog-data-exchange-and-validation.md).
+Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -validierung](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -481,7 +480,7 @@ Ein Verweis auf eine `CTime` oder `COleDateTime` Membervariable des Dialogfelds,
 
 Wenn `DDX_MonthCalCtrl` aufgerufen wird, *Wert* auf den aktuellen Zustand der im Monatskalender-Steuerelement festgelegt ist.
 
-Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und Validierung](../../mfc/dialog-data-exchange-and-validation.md).
+Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -validierung](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -515,7 +514,7 @@ Wenn `DDX_Radio` aufgerufen wird, *Wert* auf den aktuellen Status der Gruppe "Op
 
 Beispielsweise im Fall, in dem das erste Optionsfeld in der Gruppe ist aktiviert (der Schaltfläche mit WS_GROUP-Stil) den Wert des der **Int** Member ist 0 und so weiter.
 
-Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und Validierung](../../mfc/dialog-data-exchange-and-validation.md).
+Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -validierung](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -547,7 +546,7 @@ Ein Verweis auf eine Membervariable des Dialogfelds, Formularansichts- oder Steu
 
 Wenn `DDX_Scroll` aufgerufen wird, *Wert* auf die aktuelle Position des Steuerelements Thumb-Steuerelement festgelegt ist. Weitere Informationen zu den Werten, die die aktuelle Position des Steuerelements Thumb-Steuerelement zugeordnet, finden Sie unter [GetScrollPos](/windows/desktop/api/winuser/nf-winuser-getscrollpos) im Windows SDK.
 
-Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und Validierung](../../mfc/dialog-data-exchange-and-validation.md).
+Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -validierung](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -579,7 +578,7 @@ Ein Verweis auf den Wert ausgetauscht werden sollen. Dieser Parameter enthält, 
 
 Wenn `DDX_Slider` aufgerufen wird, *Wert* festgelegt ist, an der aktuellen Position des Ziehpunkts des Steuerelements, oder der Wert die Position, abhängig von der Richtung der Exchange-empfangen werden.
 
-Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und Validierung](../../mfc/dialog-data-exchange-and-validation.md). Weitere Informationen über Schieberegler-Steuerelemente finden Sie unter [Verwenden von CSliderCtrl](../../mfc/using-csliderctrl.md).
+Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -validierung](../../mfc/dialog-data-exchange-and-validation.md). Weitere Informationen über Schieberegler-Steuerelemente finden Sie unter [Verwenden von CSliderCtrl](../../mfc/using-csliderctrl.md).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -659,7 +658,7 @@ Ein Verweis auf einen Datenmember in das Dialogfeld, Formularansicht oder steuer
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und Validierung](../../mfc/dialog-data-exchange-and-validation.md).
+Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -validierung](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Anforderungen
 

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d024c9468b06291ba93c4e404674925202fabcad
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a1dd43b806852e578c28dc7a647cb367ad6f2780
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406789"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076619"
 ---
 # <a name="servers-implementing-a-server"></a>Server: Implementieren eines Servers
 
@@ -36,7 +36,7 @@ Der Servercode, den der Anwendungs-Assistent bietet fällt in verschiedene Kateg
 
    - Die Menü- und Symbolleistenobjekte Ressourcen verwendet, wenn der Server direkt aktiv ist.
 
-     Weitere Informationen zu diesen Ressourcen finden Sie unter [Menüs und Ressourcen: Servererweiterungen](../mfc/menus-and-resources-server-additions.md).
+   Weitere Informationen zu diesen Ressourcen finden Sie unter [Menüs und Ressourcen: Servererweiterungen](../mfc/menus-and-resources-server-additions.md).
 
 - Definieren eine Elementklasse abgeleitet `COleServerItem`. Weitere Informationen zu Server-Elemente, finden Sie unter [Server: Serverelemente](../mfc/servers-server-items.md).
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9185a71cc77cadb1ad7cdf577654730819147d2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5c158e5b59decd751340f87d5c29c572d6972d8e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113135"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077906"
 ---
 # <a name="com-map-global-functions"></a>Globale COM-Zuordnungs-Funktionen
 
@@ -31,11 +31,11 @@ Diese Funktionen bieten Unterstützung für COM-Zuordnung `IUnknown` Implementie
 |||
 |-|-|
 |[AtlInternalQueryInterface](#atlinternalqueryinterface)|Delegiert an die `IUnknown` eines zusammengesetzten Objekts.|
-|[InlineIsEqualIUnknown](#inlineisequaliunknown)|Generiert von effizientem Code für den Vergleich von Schnittstellen für `IUnknown`.|  
+|[InlineIsEqualIUnknown](#inlineisequaliunknown)|Generiert von effizientem Code für den Vergleich von Schnittstellen für `IUnknown`.|
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** atlbase.h  
+**Header:** atlbase.h
 
 ##  <a name="atlinternalqueryinterface"></a>  AtlInternalQueryInterface
 

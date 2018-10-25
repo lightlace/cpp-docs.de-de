@@ -38,81 +38,81 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3a0b7bb8f430f2e132413fbb8bca2563c4fd7014
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: cded311abd2956317861bac484e3c32a4e14f5cb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083709"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072329"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl-Klasse
 
-Stellt eine Implementierung der [IColumnsInfo](/previous-versions/windows/desktop/ms724541) Schnittstelle.  
-  
+Stellt eine Implementierung der [IColumnsInfo](/previous-versions/windows/desktop/ms724541) Schnittstelle.
+
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-template <class T>  
-class ATL_NO_VTABLE IColumnsInfoImpl :   
-   public IColumnsInfo,    
-   public CDBIDOps  
-```  
-  
-### <a name="parameters"></a>Parameter  
+template <class T>
+class ATL_NO_VTABLE IColumnsInfoImpl :
+   public IColumnsInfo,  
+   public CDBIDOps
+```
+
+### <a name="parameters"></a>Parameter
 
 *T*<br/>
-Abgeleitet von die Klasse `IColumnsInfoImpl`.  
+Abgeleitet von die Klasse `IColumnsInfoImpl`.
 
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Anforderungen
 
-**Header:** „atldb.h“  
-  
-## <a name="members"></a>Member  
-  
-### <a name="methods"></a>Methoden  
-  
-|||  
-|-|-|  
-|[GetColumnInfo](#getcolumninfo)|Gibt die von den meisten Consumern benötigte Spaltenmetadaten zurück.|  
-|[MapColumnIDs](#mapcolumnids)|Gibt ein Array von Ordnungszahlen der Spalten in einem Rowset, das durch die angegebenen Spalten-IDs gekennzeichnet sind.|  
-  
-## <a name="remarks"></a>Hinweise  
+**Header:** „atldb.h“
 
-Eine erforderliche Schnittstelle für Rowsets und Befehle. So ändern Sie das Verhalten Ihres Anbieters `IColumnsInfo` Implementierung müssen Sie die Anbieter-Spalte-Zuordnung zu ändern.  
+## <a name="members"></a>Member
+
+### <a name="methods"></a>Methoden
+
+|||
+|-|-|
+|[GetColumnInfo](#getcolumninfo)|Gibt die von den meisten Consumern benötigte Spaltenmetadaten zurück.|
+|[MapColumnIDs](#mapcolumnids)|Gibt ein Array von Ordnungszahlen der Spalten in einem Rowset, das durch die angegebenen Spalten-IDs gekennzeichnet sind.|
+
+## <a name="remarks"></a>Hinweise
+
+Eine erforderliche Schnittstelle für Rowsets und Befehle. So ändern Sie das Verhalten Ihres Anbieters `IColumnsInfo` Implementierung müssen Sie die Anbieter-Spalte-Zuordnung zu ändern.
 
 ## <a name="getcolumninfo"></a> Icolumnsinfoimpl:: GetColumnInfo
 
-Gibt die von den meisten Consumern benötigte Spaltenmetadaten zurück.  
-  
-### <a name="syntax"></a>Syntax  
-  
-```cpp
-STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,  
-   DBCOLUMNINFO** prgInfo,  
-   OLECHAR** ppStringsBuffer);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+Gibt die von den meisten Consumern benötigte Spaltenmetadaten zurück.
 
-Finden Sie unter [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704) in die *OLE DB-Programmierreferenz*.  
+### <a name="syntax"></a>Syntax
+
+```cpp
+STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
+   DBCOLUMNINFO** prgInfo,
+   OLECHAR** ppStringsBuffer);
+```
+
+#### <a name="parameters"></a>Parameter
+
+Finden Sie unter [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704) in die *OLE DB-Programmierreferenz*.
 
 ## <a name="mapcolumnids"></a> Icolumnsinfoimpl:: Mapcolumnids
 
-Gibt ein Array von Ordnungszahlen der Spalten in einem Rowset, das durch die angegebenen Spalten-IDs gekennzeichnet sind.  
-  
-### <a name="syntax"></a>Syntax  
-  
-```cpp
-STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,  
-   const DBID rgColumnIDs[],  
-   DBORDINAL rgColumns[]);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+Gibt ein Array von Ordnungszahlen der Spalten in einem Rowset, das durch die angegebenen Spalten-IDs gekennzeichnet sind.
 
-Finden Sie unter [IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200) in die *OLE DB-Programmierreferenz*.  
-  
-## <a name="see-also"></a>Siehe auch  
+### <a name="syntax"></a>Syntax
+
+```cpp
+STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
+   const DBID rgColumnIDs[],
+   DBORDINAL rgColumns[]);
+```
+
+#### <a name="parameters"></a>Parameter
+
+Finden Sie unter [IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200) in die *OLE DB-Programmierreferenz*.
+
+## <a name="see-also"></a>Siehe auch
 
 [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc4c205ff7c68fbf778b8d300fbe98e6a3deca1d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a0cde2b5c62d4d4584330fe24000114b33ba957b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413028"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067487"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton-Klasse
 
@@ -146,7 +146,7 @@ Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Einfügen 
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird veranschaulicht, wie verschiedene Methoden in der `CMFCToolBarComboBoxButton` Klasse. Das Beispiel zeigt, wie Sie die Felder bearbeiten und das Kombinationsfeld zu aktivieren, legen die vertikale Position des Kombinationsfeld-Schaltflächen in der Anwendung, die Höhe des Listenfelds festlegen, wenn er, nach unten gelöscht wird, die flache Darstellung der Schaltflächen in der Anwendung festgelegt , und legen Sie den Text im Eingabefeld des Kombinationsfeld-Schaltfläche. Dieser Codeausschnitt ist Teil der [Visual Studio-Demobeispiel](../../visual-cpp-samples.md).
+Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in der `CMFCToolBarComboBoxButton` -Klasse. Das Beispiel zeigt, wie Sie die Felder bearbeiten und das Kombinationsfeld zu aktivieren, legen die vertikale Position des Kombinationsfeld-Schaltflächen in der Anwendung, die Höhe des Listenfelds festlegen, wenn er, nach unten gelöscht wird, die flache Darstellung der Schaltflächen in der Anwendung festgelegt , und legen Sie den Text im Eingabefeld des Kombinationsfeld-Schaltfläche. Dieser Codeausschnitt ist Teil der [Visual Studio-Demobeispiel](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#36](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#37](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_2.cpp)]
@@ -1176,11 +1176,9 @@ static BOOL SelectItemAll(
     UINT uiCmd,
     int iIndex);
 
-
 static BOOL SelectItemAll(
     UINT uiCmd,
     DWORD_PTR dwData);
-
 
 static BOOL SelectItemAll(
     UINT uiCmd,
@@ -1348,6 +1346,4 @@ void SetText(LPCTSTR lpszText);
 [CComboBox-Klasse](../../mfc/reference/ccombobox-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [Exemplarische Vorgehensweise: Steuerelemente in eine Symbolleiste einfügen](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

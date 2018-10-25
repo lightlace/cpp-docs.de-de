@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f24cf6cce5cdf268367f547e8a536dcdae7cc859
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 413485bc7675fbc68f2c224ceefdd0f552538eb9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098952"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076983"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx-Klasse
 
@@ -51,7 +51,7 @@ class CComObjectRootEx : public CComObjectRootBase
 #### <a name="parameters"></a>Parameter
 
 *ThreadModel*<br/>
-Die Klasse, deren Methoden implementieren Sie das gewünschte Threadingmodell. Sie können das Threadingmodell explizit auswählen, durch Festlegen von *ThreadModel* zu [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md), [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), oder [ CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md). Sie können die Thread-Standardmodell des Servers übernehmen, durch Festlegen von *ThreadModel* zu [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) oder [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel).  
+Die Klasse, deren Methoden implementieren Sie das gewünschte Threadingmodell. Sie können das Threadingmodell explizit auswählen, durch Festlegen von *ThreadModel* zu [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md), [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), oder [ CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md). Sie können die Thread-Standardmodell des Servers übernehmen, durch Festlegen von *ThreadModel* zu [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) oder [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel).
 
 ## <a name="members"></a>Member
 
@@ -139,9 +139,9 @@ Es gibt Vorteile zum Ausführen der Initialisierung in `FinalConstruct` statt de
 
 - Sie können nicht über den Mechanismus der virtuellen Funktion aus dem Konstruktor einer Klasse virtuelle Funktionen aufrufen. Eine virtuelle Funktion aus dem Konstruktor einer Klasse aufrufen wird, führt dies zu einem statisch aufgelösten Aufruf an die Funktion an, wie sie zu diesem Zeitpunkt in der Vererbungshierarchie definiert ist. Aufrufen von reinen virtuellen Funktionen führen Linker-Fehler.
 
-     Die Klasse ist nicht die am stärksten abgeleitete Klasse in der Vererbungshierarchie – es beruht auf einer abgeleiteten Klasse, die vom ATL, um einen Teil der Funktionen bereitzustellen. Besteht eine hohe Wahrscheinlichkeit, die der Initialisierung mithilfe der Funktionen von dieser Klasse (Dies gilt natürlich, wenn Objekte der Klasse zum Aggregieren von anderen Objekten müssen) muss, aber der Konstruktor in der Klasse hat keine Möglichkeit, diese Funktionen zugreifen. Der Code zur Konstruktion für die Klasse wird ausgeführt, bevor die am stärksten abgeleitete Klasse vollständig erstellt wird.
+   Die Klasse ist nicht die am stärksten abgeleitete Klasse in der Vererbungshierarchie – es beruht auf einer abgeleiteten Klasse, die vom ATL, um einen Teil der Funktionen bereitzustellen. Besteht eine hohe Wahrscheinlichkeit, die der Initialisierung mithilfe der Funktionen von dieser Klasse (Dies gilt natürlich, wenn Objekte der Klasse zum Aggregieren von anderen Objekten müssen) muss, aber der Konstruktor in der Klasse hat keine Möglichkeit, diese Funktionen zugreifen. Der Code zur Konstruktion für die Klasse wird ausgeführt, bevor die am stärksten abgeleitete Klasse vollständig erstellt wird.
 
-     Allerdings `FinalConstruct` wird aufgerufen, unmittelbar nach dem am meisten abgeleitete Klasse vollständig erstellt wird es Ihnen ermöglichen virtuelle Funktionen aufrufen oder verwenden Sie die verweiszählung Implementierung von ATL
+   Allerdings `FinalConstruct` wird aufgerufen, unmittelbar nach dem am meisten abgeleitete Klasse vollständig erstellt wird es Ihnen ermöglichen virtuelle Funktionen aufrufen oder verwenden Sie die verweiszählung Implementierung von ATL
 
 ### <a name="example"></a>Beispiel
 
@@ -265,7 +265,7 @@ long m_dwRef;
 
 ### <a name="remarks"></a>Hinweise
 
-Mit `m_pOuterUnknown`, Teil einer Union:  
+Mit `m_pOuterUnknown`, Teil einer Union:
 
 ```
 union {

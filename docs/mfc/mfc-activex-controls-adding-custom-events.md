@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c4acd417dacadbe2667f63c70435b97353bafe1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4d5db33dda6abc141c9247c74c16624bef5f0fc8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384415"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076034"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>MFC-ActiveX-Steuerelemente: Hinzufügen von benutzerdefinierten Ereignissen
 
@@ -48,7 +48,7 @@ Das folgende Verfahren fügt ein bestimmtes benutzerdefiniertes Ereignis ClickIn
 
 1. Klicken Sie im Kontextmenü auf **hinzufügen** , und klicken Sie dann auf **Ereignis hinzufügen**.
 
-     Daraufhin den Assistenten zum Hinzufügen eines Ereignisses.
+   Daraufhin den Assistenten zum Hinzufügen eines Ereignisses.
 
 1. In der **Ereignisnamen** , zunächst wählen Sie ein vorhandenes Ereignis, und klicken Sie dann auf die **benutzerdefinierte** Radio Schaltfläche, und geben Sie *ClickIn*.
 
@@ -94,7 +94,7 @@ Nun, da Sie das benutzerdefinierte ClickIn-Ereignis mithilfe des Assistenten zum
 
 1. Klicken Sie im Eigenschaftenfenster auf die **Nachrichten** Schaltfläche.
 
-     Das Fenster "Eigenschaften" zeigt eine Liste der Nachrichten, die von der ActiveX-Steuerelement behandelt werden können. Jede Nachricht, die bereits fett formatiert dargestellte hat es sich um eine Handlerfunktion zugewiesen.
+   Das Fenster "Eigenschaften" zeigt eine Liste der Nachrichten, die von der ActiveX-Steuerelement behandelt werden können. Jede Nachricht, die bereits fett formatiert dargestellte hat es sich um eine Handlerfunktion zugewiesen.
 
 1. Wählen Sie im Eigenschaftenfenster die Nachricht, die Sie behandeln möchten. Wählen Sie in diesem Beispiel WM_LBUTTONDOWN.
 
@@ -131,7 +131,7 @@ Das folgende Verfahren fügt eine benutzerdefinierte auf Ereignis.
 
 1. Klicken Sie im Kontextmenü auf **hinzufügen** , und klicken Sie dann auf **Ereignis hinzufügen**.
 
-     Daraufhin den Assistenten zum Hinzufügen eines Ereignisses.
+   Daraufhin den Assistenten zum Hinzufügen eines Ereignisses.
 
 1. In der **Ereignisnamen** Dropdown-Liste, wählen Sie einen Ereignis-Namen. Wählen Sie für dieses Beispiel **klicken Sie auf**.
 

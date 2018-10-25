@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24b663e1b07d1012c1611714390340df3ce3867f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c17b280d658eb615d314526f4fd241bf57c2eed1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448497"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074734"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager-Klasse
 
@@ -296,7 +296,7 @@ Die folgenden Tipps beziehen sich auf `CDockingManager` Objekte:
 
     - `AFX_DOCK_TYPE::DT_SMART`
 
-     Diese Andocken Modi werden definiert, indem [CDockingManager::m_dockModeGlobal](#m_dockmodeglobal) und festgelegt sind, durch den Aufruf [CDockingManager::SetDockingMode](#setdockingmode).
+   Diese Andocken Modi werden definiert, indem [CDockingManager::m_dockModeGlobal](#m_dockmodeglobal) und festgelegt sind, durch den Aufruf [CDockingManager::SetDockingMode](#setdockingmode).
 
 - Wenn Sie einen Bereich unverankerte, nicht veränderbare Größen erstellen möchten, rufen Sie die [CDockingManager::AddPane](#addpane) Methode. Diese Methode registriert den Bereich beim Dock-Manager, der für das Layout des Bereichs verantwortlich ist.
 

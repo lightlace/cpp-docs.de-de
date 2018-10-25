@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4983d2a56407449873c8b4db73d82fa2ef864058
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 297a54b588cadc3a43e1b08ca89820807edb8ba2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328258"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069840"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl-Klasse
 
@@ -115,12 +115,12 @@ Erstellt ein nicht modales Dialogfeld an.
 
 ```
 HWND Create(
-    HWND hWndParent,  
-    LPARAM dwInitParam = NULL );  
+    HWND hWndParent,
+    LPARAM dwInitParam = NULL );
 
 HWND Create(
-    HWND hWndParent,  
-    RECT&, 
+    HWND hWndParent,
+    RECT&,
     LPARAM dwInitParam = NULL);
 ```
 
@@ -144,7 +144,7 @@ Dieses Dialogfeld wird automatisch angefügt, um die `CDialogImpl` Objekt. Rufen
 
 ##  <a name="destroywindow"></a>  CDialogImpl::DestroyWindow
 
-Zerstört ein nicht modales Dialogfeld an.  
+Zerstört ein nicht modales Dialogfeld an.
 
 ```
 BOOL DestroyWindow();
@@ -160,13 +160,13 @@ Gibt TRUE zurück, wenn das Dialogfeld erfolgreich gelöscht wurde. andernfalls 
 
 ##  <a name="dialogproc"></a>  CDialogImpl::DialogProc
 
-Diese statischen Funktion implementiert die Dialogfeldprozedur.  
+Diese statischen Funktion implementiert die Dialogfeldprozedur.
 
 ```
 static LRESULT CALLBACK DialogProc(
-    HWND hWnd,  
-    UINT uMsg,  
-    WPARAM wParam,  
+    HWND hWnd,
+    UINT uMsg,
+    WPARAM wParam,
     LPARAM lParam);
 ```
 
@@ -199,8 +199,8 @@ Sie können außer Kraft setzen `DialogProc` , geben Sie einen anderen Mechanism
 Erstellt ein modales Dialogfeld an.
 
 ```
-INT_PTR DoModal(  
-    HWND hWndParent = ::GetActiveWindow(),   
+INT_PTR DoModal(
+    HWND hWndParent = ::GetActiveWindow(),
     LPARAM dwInitParam = NULL);
 ```
 
@@ -306,9 +306,9 @@ Wenn die erste Nachricht, zum Verarbeiten von Nachrichten gesendet, um das Dialo
 
 ```
 static LRESULT CALLBACK StartDialogProc(
-    HWND hWnd,  
-    UINT uMsg,  
-    WPARAM wParam,  
+    HWND hWnd,
+    UINT uMsg,
+    WPARAM wParam,
     LPARAM lParam);
 ```
 

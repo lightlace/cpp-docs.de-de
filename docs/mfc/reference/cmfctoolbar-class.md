@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b92acb477e6e15dfe933360dd6456db09d7f52a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d50d751028cc9e162f2a4bd903f35255a5ed3814
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408739"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067812"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar-Klasse
 
@@ -535,7 +535,7 @@ Um eine spezielle Schaltfläche eingefügt werden soll, z. B. ein Kombinationsfe
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird veranschaulicht, wie verschiedene Methoden in der `CMFCToolBar` Klasse. Das Beispiel veranschaulicht die legen Sie den Text der Bezeichnung Fenster der Symbolleiste, legen Sie die Rahmen, Festlegen des Formats für den Bereich, und aktivieren die **Schaltflächen hinzufügen oder entfernen** Schaltfläche, auf der Seite der Symbolleiste angezeigt wird. Dieser Codeausschnitt ist Teil der [IE Demobeispiel](../../visual-cpp-samples.md).
+Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in der `CMFCToolBar` -Klasse. Das Beispiel veranschaulicht die legen Sie den Text der Bezeichnung Fenster der Symbolleiste, legen Sie die Rahmen, Festlegen des Formats für den Bereich, und aktivieren die **Schaltflächen hinzufügen oder entfernen** Schaltfläche, auf der Seite der Symbolleiste angezeigt wird. Dieser Codeausschnitt ist Teil der [IE Demobeispiel](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#8](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_2.cpp)]
@@ -1155,7 +1155,6 @@ void EnableCustomizeButton(
     int iCustomizeCmd,
     const CString& strCustomizeText,
     BOOL bQuickCustomize=TRUE);
-
 
 void EnableCustomizeButton(
     BOOL bEnable,
@@ -2173,7 +2172,6 @@ virtual int InsertButton(
     const CMFCToolBarButton& button,
     INT_PTR iInsertAt=-1);
 
-
 virtual int InsertButton(
     CMFCToolBarButton* pButton,
     int iInsertAt=-1);
@@ -2543,7 +2541,6 @@ Sie müssen dieser Methode normalerweise nicht verwenden. So aktivieren Sie die 
 
 ##  <a name="isresourcechanged"></a>  CMFCToolBar::IsResourceChanged
 
-
 ```
 virtual BOOL IsResourceChanged() const;
 ```
@@ -2553,7 +2550,6 @@ virtual BOOL IsResourceChanged() const;
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="issibling"></a>  CMFCToolBar::IsSibling
-
 
 ```
 BOOL IsSibling();
@@ -2615,12 +2611,11 @@ Ein Wert ungleich 0 (null), wenn die Methode erfolgreich ausgeführt wird, ander
 
 ### <a name="remarks"></a>Hinweise
 
-Die [cmfctoolbar:: Loadtoolbarex](#loadtoolbarex) Methode ruft diese Methode, um die Bilder zu laden, die der Symbolleiste zugeordnet sind. Setzen Sie diese Methode außer Kraft, um die Bildressourcen benutzerdefiniert zu laden.
+Die [CMFCToolBar::LoadToolBarEx](#loadtoolbarex) -Methode ruft diese Methode auf, um die Bilder zu laden, die der Symbolleiste zugeordnet sind. Setzen Sie diese Methode außer Kraft, um die Bildressourcen benutzerdefiniert zu laden.
 
 Rufen Sie die `LoadBitmapEx` -Methode auf, um nach der Erstellung der Symbolleiste weitere Bilder zu laden.
 
 ##  <a name="loadbitmapex"></a>  CMFCToolBar::LoadBitmapEx
-
 
 ```
 virtual BOOL LoadBitmapEx(
@@ -2630,8 +2625,8 @@ virtual BOOL LoadBitmapEx(
 
 ### <a name="parameters"></a>Parameter
 
-*params*<br/>
-[in] [in] *blockiert*
+[in] *Params*<br/>
+[in] *blockiert*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2639,14 +2634,13 @@ virtual BOOL LoadBitmapEx(
 
 ##  <a name="loadlargeiconsstate"></a>  CMFCToolBar::LoadLargeIconsState
 
-
 ```
 static BOOL __stdcall LoadLargeIconsState(LPCTSTR lpszProfileName = NULL);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *LpszProfileName*
+[in] *LpszProfileName*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2804,7 +2798,6 @@ Das Framework verwendet dieses Datenelement an, wenn Sie einen Satz von großen 
 
 ##  <a name="nextmenu"></a>  CMFCToolBar::NextMenu
 
-
 ```
 virtual BOOL NextMenu();
 ```
@@ -2814,7 +2807,6 @@ virtual BOOL NextMenu();
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="onbeforeremovebutton"></a>  CMFCToolBar::OnBeforeRemoveButton
-
 
 ```
 virtual BOOL OnBeforeRemoveButton(
@@ -2853,7 +2845,6 @@ virtual void OnChangeHot(int iHot);
 
 ##  <a name="onchangevisualmanager"></a>  CMFCToolBar::OnChangeVisualManager
 
-
 ```
 virtual void OnChangeVisualManager();
 ```
@@ -2881,7 +2872,6 @@ virtual void OnFillBackground(CDC* pDC);
 
 ##  <a name="onglobalfontschanged"></a>  CMFCToolBar::OnGlobalFontsChanged
 
-
 ```
 virtual void OnGlobalFontsChanged();
 ```
@@ -2904,14 +2894,13 @@ Bei der Standardimplementierung wird keine Aktion ausgeführt. Außer Kraft setz
 
 ##  <a name="onsetaccdata"></a>  CMFCToolBar::OnSetAccData
 
-
 ```
 virtual BOOL OnSetAccData(long lVal);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *lVal*
+[in] *lVal*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2969,7 +2958,6 @@ Das Framework ruft diese Methode auf, wenn die QuickInfo für eine Symbolleisten
 Außer Kraft setzen `OnUserToolTip` zum Anpassen von QuickInfos von Symbolleisten-Schaltflächen. Die Standardimplementierung ruft [CMFCToolBar::OnUserToolTip](#onusertooltip) zum Abrufen des QuickInfo-Texts.
 
 ##  <a name="prevmenu"></a>  CMFCToolBar::PrevMenu
-
 
 ```
 virtual BOOL PrevMenu();
@@ -3132,7 +3120,6 @@ Diese Methode löscht die Image-Sammlungen, die vom initialisiert sind die [CMFC
 
 ##  <a name="resetimages"></a>  CMFCToolBar::ResetImages
 
-
 ```
 virtual void ResetImages();
 ```
@@ -3140,7 +3127,6 @@ virtual void ResetImages();
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="restorefocus"></a>  CMFCToolBar::RestoreFocus
-
 
 ```
 virtual void RestoreFocus();
@@ -3168,14 +3154,13 @@ Das Framework ruft diese Methode aus, wenn der Benutzer wählt die **alle zurüc
 
 ##  <a name="saveparameters"></a>  CMFCToolBar::SaveParameters
 
-
 ```
 static BOOL __stdcall SaveParameters(LPCTSTR lpszProfileName = NULL);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *LpszProfileName*
+[in] *LpszProfileName*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -3431,19 +3416,17 @@ Diese Methode zeichnet die Symbolleiste neu, nachdem er legt die Höhe fest.
 
 ##  <a name="sethelpmode"></a>  CMFCToolBar::SetHelpMode
 
-
 ```
 static void __stdcall SetHelpMode(BOOL bOn = TRUE);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *bOn*
+[in] *bOn*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="sethot"></a>  CMFCToolBar::SetHot
-
 
 ```
 BOOL SetHot(CMFCToolBarButton* pMenuButton);
@@ -3451,7 +3434,7 @@ BOOL SetHot(CMFCToolBarButton* pMenuButton);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *pMenuButton*
+[in] *pMenuButton*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -3495,14 +3478,13 @@ Weitere Informationen zu hot Track-Symbolleisten-Schaltflächen, finden Sie unte
 
 ##  <a name="setignoresettext"></a>  CMFCToolBar::SetIgnoreSetText
 
-
 ```
 void SetIgnoreSetText(BOOL bValue);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *bValue*
+[in] *bValue*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -3557,14 +3539,13 @@ Rufen Sie die [CMFCToolBar::GetLockedImageSize](#getlockedimagesize) Methode zum
 
 ##  <a name="setmaskmode"></a>  CMFCToolBar::SetMaskMode
 
-
 ```
 void SetMaskMode(BOOL bMasked);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *bMasked*
+[in] *bMasked*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -3631,14 +3612,13 @@ Das Framework Ruft die [cmfctoolbar:: Settworowswithsibling](#settworowswithsibl
 
 ##  <a name="setorigbuttons"></a>  CMFCToolBar::SetOrigButtons
 
-
 ```
 void SetOrigButtons(const CObList& lstOrigButtons);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *LstOrigButtons*
+[in] *LstOrigButtons*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -3936,6 +3916,4 @@ AFX_IMPORT_DATA static BOOL m_bDontScaleImages;
 [CMFCPopupMenuBar-Klasse](../../mfc/reference/cmfcpopupmenubar-class.md)<br/>
 [CMFCDropDownToolBar-Klasse](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
 [Exemplarische Vorgehensweise: Steuerelemente in eine Symbolleiste einfügen](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

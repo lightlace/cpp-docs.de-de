@@ -1,7 +1,7 @@
 ---
 title: map-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42cd23fcba03ed0161b7a19923851dd3d574e23b
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 96d0b6abc7ca9f82c3b9c1ce3e84b7fad99ea486
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235684"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066391"
 ---
 # <a name="map-class"></a>map-Klasse
 
@@ -1012,7 +1012,6 @@ Gibt den "past-the-end"-Iterator zurück.
 ```cpp
 const_iterator end() const;
 
-
 iterator end();
 ```
 
@@ -1115,11 +1114,9 @@ Es wird ein Element oder ein Bereich von Elementen in einer Zuordnung von angege
 iterator erase(
     const_iterator Where);
 
-
 iterator erase(
     const_iterator First,
     const_iterator Last);
-
 
 size_type erase(
     const key_type& Key);
@@ -1232,7 +1229,6 @@ Gibt einen Iterator zurück, der auf den Speicherort eines Elements in einer Zuo
 
 ```cpp
 iterator find(const Key& key);
-
 
 const_iterator find(const Key& key) const;
 ```
@@ -1394,19 +1390,16 @@ Fügt ein Element oder einen Elementbereich in eine Zuordnung ein.
 pair<iterator, bool> insert(
     const value_type& Val);
 
-
 // (2) single element, perfect forwarded
 template <class ValTy>
 pair<iterator, bool>
 insert(
     ValTy&& Val);
 
-
 // (3) single element with hint
 iterator insert(
     const_iterator Where,
     const value_type& Val);
-
 
 // (4) single element, perfect forwarded, with hint
 template <class ValTy>
@@ -1414,13 +1407,11 @@ iterator insert(
     const_iterator Where,
     ValTy&& Val);
 
-
 // (5) range
 template <class InputIterator>
 void insert(
     InputIterator First,
     InputIterator Last);
-
 
 // (6) initializer list
 void insert(
@@ -2636,9 +2627,9 @@ Gibt das Vergleichsfunktionsobjekt zurück, das ein map-Element zum Sortieren se
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn zwei Elemente *e*1(*k*1, *d*1) und *e*2(*k*2, `d`2) mit *k*1 und *k*2 als ihre Schlüssel des Typs `key_type` sowie `d`1 und `d`2 als ihre Daten des Typs `mapped_type` in einer Zuordnung *m* Objekte des Typs `value_type` sind, dann sind *m.*`value_comp`(*e*1, *e*2) und *m.*`key_comp`(*k*1, *k*2) gleichwertig. Ein gespeichertes Objekt definiert die Memberfunktion
+Für eine Karte *m*, wenn zwei Elemente *e1*(*k1*, *d1*) und *e2*(*K2*, *d2*) sind Objekte vom Typ `value_type`, wobei *k1* und *k1* sind ihre Schlüssel vom Typ `key_type` und *d1* und *d2* sind ihre Daten vom Typ `mapped_type`, klicken Sie dann `m.value_comp(e1, e2)` entspricht `m.key_comp(k1, k2)`. Ein gespeichertes Objekt definiert die Memberfunktion
 
-**Bool-Operator**( **Value_type &**`left`, **Value_type &**`right`);
+`bool operator( value_type& left, value_type& right);`
 
 die **TRUE** zurückgibt, wenn der Schlüsselwert von `left` vorangestellt ist und nicht dem Schüsselwert von `right` in der Sortierreihenfolge entspricht.
 

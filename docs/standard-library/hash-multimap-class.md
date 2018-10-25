@@ -1,7 +1,7 @@
 ---
 title: hash_multimap-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d34569f1b0f984a521b7d5a79221e089f1a1df0
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3796ba7b243305fbae75e64f44e14964a89a9805
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235762"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075319"
 ---
 # <a name="hashmultimap-class"></a>hash_multimap-Klasse
 
@@ -1497,7 +1497,6 @@ hash_multimap(
     initializer_list<Type> IList,
     const Compare& Comp);
 
-
 hash_multimap(
     initializer_list<Type> IList,
     const Compare& Comp,
@@ -1554,7 +1553,7 @@ Die letzten drei Konstruktoren verwenden ein initializer_list-Element.
 ## <a name="insert"></a> hash_multimap::insert
 
 > [!NOTE]
-> Diese API ist veraltet. Die Alternative ist die [unordered_multimap-Klasse](../standard-library/unordered-multimap-class.md).
+> Diese API ist veraltet. Die Alternative ist [unordered_multimap Class](../standard-library/unordered-multimap-class.md).
 
 Fügt ein Element oder einen Elementbereich in ein hash_multimap-Element ein.
 
@@ -2477,9 +2476,9 @@ Gibt das Vergleichsfunktionsobjekt zurück, das ein hash_multimap-Element zum So
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn zwei Elemente, *e*1 (*k*1 *, d*1) und *e*2 (*k*2 *, d*2), für eine hash_multimap *m* Objekte eines [value_type](#value_type)-Typs sind, bei dem *k*1 und *k*2 deren Schlüssel des [key_type](#key_type)-Typs sind, und `d`1 und `d`2 deren Daten des [mapped_type](#mapped_type)-Typs sind, entspricht *m.*`value_comp`( )( *e*1 *, e*2 ) anschließend *m.*`key_comp`( ) ( *k*1 *, k*2). Ein gespeicherte Objekt definiert die Memberfunktion
+Für ein hash_multimap-Element *m*, wenn zwei Elemente *e1* (*k1*, *d1*) und *e2*(*K2* , *d2*) sind Objekte vom Typ [Value_type](#value_type), wobei *k1* und *K2* sind ihre Schlüssel vom Typ [Key_type](#key_type) und *d1* und *d2* sind ihre Daten vom Typ [Mapped_type](#mapped_type), klicken Sie dann `m.value_comp()(e1, e2)` entspricht `m.key_comp()(k1, k2)` . Ein gespeichertes Objekt definiert die Memberfunktion
 
-**bool operator**( **value_type&** `left`, **value_type&** `right`),
+`bool operator( value_type& left, value_type& right);`
 
 die **TRUE** zurückgibt, wenn der Schlüsselwert von `left` vorangestellt ist und nicht dem Schüsselwert von `right` in der Sortierreihenfolge entspricht.
 

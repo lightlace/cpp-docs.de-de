@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7c797cdb2b0950d0158e8a63294f1e2ea913512
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b238dedf9b4f638baf4ea2c9373e7658c90114cb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436896"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069333"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx-Klasse
 
@@ -253,7 +253,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Wird vom Framework aufgerufen, wenn ein Menü mit abtrennbarer Leiste aktiviert wird.|
 |[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Wird aufgerufen, durch das Framework, um das Menü "Frame" zu aktualisieren. (Überschreibt `CMDIFrameWnd::OnUpdateFrameMenu`.)|
 |[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|Gibt zurück, andockbaren Bereich, der den angegebenen Punkt enthält.|
-|`CMDIFrameWndEx::PreTranslateMessage`|Von Klasse verwendeten [CWinApp](../../mfc/reference/cwinapp-class.md) um fenstermeldungen zu übersetzen, bevor sie um weitergeleitet werden die [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows-Funktionen.  (Überschreibt `CMDIFrameWnd::PreTranslateMessage`.)|
+|`CMDIFrameWndEx::PreTranslateMessage`|Wird von der [CWinApp](../../mfc/reference/cwinapp-class.md) -Klasse verwendet, um Fenstermeldungen zu übersetzen, bevor diese an die Windows-Funktionen [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) gesendet werden.  (Überschreibt `CMDIFrameWnd::PreTranslateMessage`.)|
 |[CMDIFrameWndEx::RecalcLayout](#recalclayout)|Wird aufgerufen, durch das Framework, das Layout des Rahmenfensters neu zu berechnen. (Überschreibt [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|
 |[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Hebt die Registrierung für eines Bereichs, und entfernt sie aus dem Dock-Manager.|
 |[CMDIFrameWndEx::SaveMDIState](#savemdistate)|Speichert das aktuelle Layout der MDI-Gruppen im Registerkartenformat und die Liste der bisher geöffneten Dokumente.|
@@ -832,7 +832,6 @@ void EnableWindowsDialog(
     BOOL bShowAllways=FALSE,
     BOOL bShowHelpButton=FALSE);
 
-
 void EnableWindowsDialog(
     UINT uiMenuId,
     UINT uiMenuTextResId,
@@ -1197,7 +1196,7 @@ virtual BOOL LoadFrame(
 *pParentWnd*<br/>
 [in] Ein Zeiger auf den Rand des übergeordneten.
 
-*"pContext"*<br/>
+*pContext*<br/>
 [in] Ein Zeiger auf eine [CCreateContext-Struktur](../../mfc/reference/ccreatecontext-structure.md). Dieser Parameter kann NULL sein.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2033,7 +2032,7 @@ virtual void WinHelp(
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode überschreibt [CWnd:: WinHelp](../../mfc/reference/cwnd-class.md#winhelp).
+Diese Methode überschreibt [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp).
 
 ## <a name="see-also"></a>Siehe auch
 

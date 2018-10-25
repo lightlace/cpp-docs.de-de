@@ -18,31 +18,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca2582e4c792e0ef60cb11d632c6f4e88891852d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 06e0356453cfcb8ec2753e3c0a6647729ffad90c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726049"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066694"
 ---
 # <a name="section"></a>section
-Erstellt einen Abschnitt in einer OBJ-Datei.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-#pragma section( "section-name" [, attributes] )  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- 
-Die Bedeutung der Begriffe *Segment* und *Abschnitt* sind austauschbar, in diesem Thema.  
-  
-Sobald ein Abschnitt definiert wurde, bleibt er für den Rest der Kompilierung gültig. Sie müssen allerdings verwenden [__declspec(allocate)](../cpp/allocate.md) oder "nothing" im Abschnitt platziert.  
-  
-*Name des Abschnitts* ist ein erforderlicher Parameter, die den Namen des Abschnitts. Der Name darf keinem Standard-Abschnittsnamen ähneln. Finden Sie unter [/SECTION](../build/reference/section-specify-section-attributes.md) eine Liste der Namen sollten Sie beim Erstellen eines Abschnitts nicht verwenden.  
-  
-*Attribute* ist ein optionaler Parameter, bestehend aus ein oder mehrere durch Kommas getrennten Attributen, die Sie dem Abschnitt zuweisen möchten. Mögliche *Attribute* sind:  
+
+Erstellt einen Abschnitt in einer OBJ-Datei.
+
+## <a name="syntax"></a>Syntax
+
+```
+#pragma section( "section-name" [, attributes] )
+```
+
+## <a name="remarks"></a>Hinweise
+
+Die Bedeutung der Begriffe *Segment* und *Abschnitt* sind austauschbar, in diesem Thema.
+
+Sobald ein Abschnitt definiert wurde, bleibt er für den Rest der Kompilierung gültig. Sie müssen allerdings verwenden [__declspec(allocate)](../cpp/allocate.md) oder "nothing" im Abschnitt platziert.
+
+*Name des Abschnitts* ist ein erforderlicher Parameter, die den Namen des Abschnitts. Der Name darf keinem Standard-Abschnittsnamen ähneln. Finden Sie unter [/SECTION](../build/reference/section-specify-section-attributes.md) eine Liste der Namen sollten Sie beim Erstellen eines Abschnitts nicht verwenden.
+
+*Attribute* ist ein optionaler Parameter, bestehend aus ein oder mehrere durch Kommas getrennten Attributen, die Sie dem Abschnitt zuweisen möchten. Mögliche *Attribute* sind:
 
 |Attribut|Beschreibung|
 |-|-|
@@ -54,24 +55,24 @@ Sobald ein Abschnitt definiert wurde, bleibt er für den Rest der Kompilierung g
 |**NoCache**|Markiert den Abschnitt als nicht zwischenspeicherbar; nützlich für Win32-Gerätetreiber.|
 |**discard**|Markiert den Abschnitt als entfernbar; nützlich für Win32-Gerätetreiber.|
 |**remove**|Markiert den Abschnitt als nicht speicherresident; Virtuelle Gerätetreiber (V*x*D) nur.|
-  
-Wenn Sie keine Attribute angeben, enthält der Abschnitt Lese- und Schreibattribute.  
-  
-## <a name="example"></a>Beispiel  
- 
-Im folgenden Beispiel identifiziert die erste Anweisung den Abschnitt und seine Attribute. Die Ganzzahl `j` wird nicht in `mysec` eingefügt, da sie nicht mit `__declspec(allocate)` deklariert wurde. `j` wird in den Datenbereich eingefügt. Die Ganzzahl `i` wird aufgrund ihres `mysec`-Speicherklassenattributs in `__declspec(allocate)` eingefügt.  
-  
-```cpp  
-// pragma_section.cpp  
-#pragma section("mysec",read,write)  
-int j = 0;  
-  
-__declspec(allocate("mysec"))  
-int i = 0;  
-  
-int main(){}  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- 
+
+Wenn Sie keine Attribute angeben, enthält der Abschnitt Lese- und Schreibattribute.
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel identifiziert die erste Anweisung den Abschnitt und seine Attribute. Die Ganzzahl `j` wird nicht in `mysec` eingefügt, da sie nicht mit `__declspec(allocate)` deklariert wurde. `j` wird in den Datenbereich eingefügt. Die Ganzzahl `i` wird aufgrund ihres `mysec`-Speicherklassenattributs in `__declspec(allocate)` eingefügt.
+
+```cpp
+// pragma_section.cpp
+#pragma section("mysec",read,write)
+int j = 0;
+
+__declspec(allocate("mysec"))
+int i = 0;
+
+int main(){}
+```
+
+## <a name="see-also"></a>Siehe auch
+
 [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

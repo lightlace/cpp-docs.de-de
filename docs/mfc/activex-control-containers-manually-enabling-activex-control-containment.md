@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 010e5f58f1d72a33cbab44438f085b52e8fe4be8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f684bbb287213ad0cbe6d490c1bef869f5ffc9db
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387769"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077776"
 ---
 # <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>ActiveX-Steuerelementcontainer: Manuelles Aktivieren von ActiveX-Steuerelementcontainern
 
@@ -37,12 +37,12 @@ Um ActiveX-Steuerelemente zu unterstützen, müssen Sie eine Codezeile erforderl
 
 - Ändern des Hauptdialogfelds `InitInstance` -Funktion (wurde im CONTAINER gefunden. CPP) vom MFC-Anwendungs-Assistenten einem Aufruf an [AfxEnableControlContainer](reference/ole-initialization.md#afxenablecontrolcontainer), wie im folgenden Beispiel:
 
-     [!code-cpp[NVC_MFCOleContainer#34](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_1.cpp)]
+   [!code-cpp[NVC_MFCOleContainer#34](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_1.cpp)]
     [!code-cpp[NVC_MFCOleContainer#35](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_2.cpp)]
 
 - Fügen Sie Folgendes, um Ihres Projekts STDAFX. H-Headerdatei:
 
-     [!code-cpp[NVC_MFCOleContainer#36](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_3.h)]
+   [!code-cpp[NVC_MFCOleContainer#36](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_3.h)]
 
 Erstellen Sie Ihr Projekt, nachdem Sie diese Schritte abgeschlossen haben, neu, indem Sie auf **erstellen** auf die **erstellen** Menü.
 

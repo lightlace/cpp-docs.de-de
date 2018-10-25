@@ -17,112 +17,112 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8ede88e44c957ae34e9bb9c3f451e0f058310346
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: a49294ea864357e111abe4d6bfc6d2cbb1c8a61f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083553"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077633"
 ---
 # <a name="ole-db-provider-templates-reference"></a>Referenz der OLE DB-Anbietervorlagen
 
-Die Klassen und Schnittstellen für OLE DB-Anbieter-Vorlagen können in folgenden Kategorien gruppiert werden. Das Referenzmaterial enthält zudem Informationen zu den [Makros für OLE DB-Anbietervorlagen](../../data/oledb/macros-for-ole-db-provider-templates.md).  
-  
-Die Klassen verwenden die folgende Benennungskonvention verwendet: eine Klasse mit dem Muster namens `IWidgetImpl` würde eine Implementierung der Schnittstelle bereitstellen, `IWidget`.  
-  
-## <a name="session-classes"></a>Sitzungsklassen  
+Die Klassen und Schnittstellen für OLE DB-Anbieter-Vorlagen können in folgenden Kategorien gruppiert werden. Das Referenzmaterial enthält zudem Informationen zu den [Makros für OLE DB-Anbietervorlagen](../../data/oledb/macros-for-ole-db-provider-templates.md).
+
+Die Klassen verwenden die folgende Benennungskonvention verwendet: eine Klasse mit dem Muster namens `IWidgetImpl` würde eine Implementierung der Schnittstelle bereitstellen, `IWidget`.
+
+## <a name="session-classes"></a>Sitzungsklassen
 
 [IDBCreateSessionImpl](../../data/oledb/idbcreatesessionimpl-class.md)<br/>
-Erstellt eine neue Sitzung über das Datenquellenobjekt, und gibt die angeforderte Schnittstelle zurück, auf die neu erstellte Sitzung. Erforderliche Schnittstelle für Datenquellenobjekte.  
-  
-[ISessionPropertiesImpl](../../data/oledb/isessionpropertiesimpl-class.md)<br/>
-Implementiert die Sitzungseigenschaften durch Aufrufen einer statischen Funktion, die durch die Set-eigenschaftenzuordnung definiert. Die Set-eigenschaftenzuordnung sollte in Ihrer Sitzungsklasse angegeben werden. Erforderliche Schnittstelle für Sitzungen.  
-  
-## <a name="rowset-classes"></a>Schemarowset-Klassen  
+Erstellt eine neue Sitzung über das Datenquellenobjekt, und gibt die angeforderte Schnittstelle zurück, auf die neu erstellte Sitzung. Erforderliche Schnittstelle für Datenquellenobjekte.
 
-[CRowsetImpl](../../data/oledb/crowsetimpl-class.md)  
-  
-Stellt eine Standardimplementierung der OLE DB-Rowset ohne mehrfache Vererbung von viele Implementierung-Schnittstellen bereit. Die einzige Methode, die für die Sie bereitstellen müssen, ist der Implementierung `Execute`.  
-  
+[ISessionPropertiesImpl](../../data/oledb/isessionpropertiesimpl-class.md)<br/>
+Implementiert die Sitzungseigenschaften durch Aufrufen einer statischen Funktion, die durch die Set-eigenschaftenzuordnung definiert. Die Set-eigenschaftenzuordnung sollte in Ihrer Sitzungsklasse angegeben werden. Erforderliche Schnittstelle für Sitzungen.
+
+## <a name="rowset-classes"></a>Schemarowset-Klassen
+
+[CRowsetImpl](../../data/oledb/crowsetimpl-class.md)
+
+Stellt eine Standardimplementierung der OLE DB-Rowset ohne mehrfache Vererbung von viele Implementierung-Schnittstellen bereit. Die einzige Methode, die für die Sie bereitstellen müssen, ist der Implementierung `Execute`.
+
 [CSimpleRow](../../data/oledb/csimplerow-class.md)<br/>
-Stellt eine Standardimplementierung für den Zeilenziehpunkt, die in dient der `IRowsetImpl` Klasse. Ein Zeilenhandle ist logisch ein eindeutiges Tag für eine Ergebniszeile. `IRowsetImpl` erstellt ein neues `CSimpleRow` für jede Zeile im angeforderten `IRowsetImpl::GetNextRows`.  
-  
+Stellt eine Standardimplementierung für den Zeilenziehpunkt, die in dient der `IRowsetImpl` Klasse. Ein Zeilenhandle ist logisch ein eindeutiges Tag für eine Ergebniszeile. `IRowsetImpl` erstellt ein neues `CSimpleRow` für jede Zeile im angeforderten `IRowsetImpl::GetNextRows`.
+
 [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)<br/>
-OLE DB verlangt von Anbietern zum Implementieren einer `HACCESSOR`, dies ist ein Tag auf ein Array von `DBBINDING` Strukturen. Bietet `HACCESSOR`s, die Adressen sind die `BindType` Strukturen. Erforderlich für Rowsets und Befehle.  
-  
+OLE DB verlangt von Anbietern zum Implementieren einer `HACCESSOR`, dies ist ein Tag auf ein Array von `DBBINDING` Strukturen. Bietet `HACCESSOR`s, die Adressen sind die `BindType` Strukturen. Erforderlich für Rowsets und Befehle.
+
 [IColumnsInfoImpl](../../data/oledb/icolumnsinfoimpl-class.md)<br/>
-Delegiert an eine statische Funktion, die von der Provider-Spalte-Zuordnung definiert. Erforderliche Schnittstelle für Rowsets und Befehle.  
-  
+Delegiert an eine statische Funktion, die von der Provider-Spalte-Zuordnung definiert. Erforderliche Schnittstelle für Rowsets und Befehle.
+
 [IConvertTypeImpl](../../data/oledb/iconverttypeimpl-class.md)<br/>
-Erhalten Informationen über die Verfügbarkeit von typkonvertierungen für einen Befehl oder in einem Rowset. Erforderlich für Befehle, Rowsets und Indexes-Schemarowsets. Implementiert die `IConvertType` Schnittstelle, indem Sie auf das Konvertierungsobjekt vom OLE DB delegieren.  
-  
+Erhalten Informationen über die Verfügbarkeit von typkonvertierungen für einen Befehl oder in einem Rowset. Erforderlich für Befehle, Rowsets und Indexes-Schemarowsets. Implementiert die `IConvertType` Schnittstelle, indem Sie auf das Konvertierungsobjekt vom OLE DB delegieren.
+
 [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)<br/>
-Implementiert die `IDBSchemaRowset` Schnittstelle und die vorlagenbasierte erstellerfunktion `CreateSchemaRowset`.  
-  
+Implementiert die `IDBSchemaRowset` Schnittstelle und die vorlagenbasierte erstellerfunktion `CreateSchemaRowset`.
+
 [IOpenRowsetImpl](../../data/oledb/iopenrowsetimpl-class.md)<br/>
-Öffnet und gibt ein Rowset, das alle Zeilen aus einer einzelnen Basistabelle oder einem Index enthält. Verbindliche Schnittstelle für ein Sitzungsobjekt.  
-  
+Öffnet und gibt ein Rowset, das alle Zeilen aus einer einzelnen Basistabelle oder einem Index enthält. Verbindliche Schnittstelle für ein Sitzungsobjekt.
+
 [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md)<br/>
-Implementiert die OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790) -Schnittstelle, die ermöglicht, der die Werte der Spalten in vorhandenen Zeilen löschen von Zeilen sowie das Einfügen neuer Zeilen aktualisiert.  
-  
+Implementiert die OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790) -Schnittstelle, die ermöglicht, der die Werte der Spalten in vorhandenen Zeilen löschen von Zeilen sowie das Einfügen neuer Zeilen aktualisiert.
+
 [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)<br/>
-Diese Klasse erbt von [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) und überschreibt [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite). `IRowsetCreatorImpl` führt die gleichen Funktionen wie `IObjectWithSite` kann jedoch auch die OLE DB-Eigenschaften `DBPROPCANSCROLLBACKWARDS` und `DBPROPCANFETCHBACKWARDS`.  
-  
+Diese Klasse erbt von [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) und überschreibt [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite). `IRowsetCreatorImpl` führt die gleichen Funktionen wie `IObjectWithSite` kann jedoch auch die OLE DB-Eigenschaften `DBPROPCANSCROLLBACKWARDS` und `DBPROPCANFETCHBACKWARDS`.
+
 [IRowsetIdentityImpl](../../data/oledb/irowsetidentityimpl-class.md)<br/>
-Implementiert die `IRowsetIdentity` -Schnittstelle, die Ihnen die Möglichkeit, verglichen werden soll, ob zwei Zeilen mit Daten identisch oder nicht sind.  
-  
+Implementiert die `IRowsetIdentity` -Schnittstelle, die Ihnen die Möglichkeit, verglichen werden soll, ob zwei Zeilen mit Daten identisch oder nicht sind.
+
 [IRowsetImpl](../../data/oledb/irowsetimpl-class.md)<br/>
-Stellt eine Implementierung der `IRowset` -Schnittstelle, die die grundlegende Rowset-Schnittstelle ist.  
-  
+Stellt eine Implementierung der `IRowset` -Schnittstelle, die die grundlegende Rowset-Schnittstelle ist.
+
 [IRowsetInfoImpl](../../data/oledb/irowsetinfoimpl-class.md)<br/>
-Implementiert die Rowset-Eigenschaften mithilfe der Eigenschaft-Zuordnung, die definiert, die in Ihrer Klasse des Befehls festgelegt. Erforderliche Schnittstelle für Rowsets.  
-  
+Implementiert die Rowset-Eigenschaften mithilfe der Eigenschaft-Zuordnung, die definiert, die in Ihrer Klasse des Befehls festgelegt. Erforderliche Schnittstelle für Rowsets.
+
 [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)<br/>
-Implementiert die OLE DB [IRowsetLocate](/previous-versions/windows/desktop/ms721190) -Schnittstelle, die beliebige Zeilen aus einem Rowset abruft. Stellen Sie zur Unterstützung von OLE DB-Lesezeichen in einem Rowset, das Rowset, das von dieser Klasse erben.  
-  
+Implementiert die OLE DB [IRowsetLocate](/previous-versions/windows/desktop/ms721190) -Schnittstelle, die beliebige Zeilen aus einem Rowset abruft. Stellen Sie zur Unterstützung von OLE DB-Lesezeichen in einem Rowset, das Rowset, das von dieser Klasse erben.
+
 [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)<br/>
-Broadcast-implementiert Funktionen zum Listener auf dem Verbindungspunkt empfehlen `IID_IRowsetNotify` von Änderungen an den Inhalt des Rowsets. Implementieren von Consumern, die Benachrichtigungen verarbeitet [IRowsetNotify](/previous-versions/windows/desktop/ms712959) und registrieren Sie ihn auf diesen Verbindungspunkt verweist.  
-  
+Broadcast-implementiert Funktionen zum Listener auf dem Verbindungspunkt empfehlen `IID_IRowsetNotify` von Änderungen an den Inhalt des Rowsets. Implementieren von Consumern, die Benachrichtigungen verarbeitet [IRowsetNotify](/previous-versions/windows/desktop/ms712959) und registrieren Sie ihn auf diesen Verbindungspunkt verweist.
+
 [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)<br/>
-Implementiert die OLE DB [IRowsetUpdate](/previous-versions/windows/desktop/ms714401) -Schnittstelle, die Consumer die Übertragung von Änderungen mit Verzögerung ermöglicht [IRowsetChange](/previous-versions/windows/desktop/ms715790) auf die Datenquelle und die Änderungen vor der Übertragung rückgängig zu machen.  
-  
-## <a name="command-classes"></a>Command-Klassen  
+Implementiert die OLE DB [IRowsetUpdate](/previous-versions/windows/desktop/ms714401) -Schnittstelle, die Consumer die Übertragung von Änderungen mit Verzögerung ermöglicht [IRowsetChange](/previous-versions/windows/desktop/ms715790) auf die Datenquelle und die Änderungen vor der Übertragung rückgängig zu machen.
+
+## <a name="command-classes"></a>Command-Klassen
 
 [ICommandImpl](../../data/oledb/icommandimpl-class.md)<br/>
-Stellt eine Implementierung der `ICommand`-Schnittstelle bereit. Diese Schnittstelle ist nicht sichtbar, aber erfolgt durch `ICommandTextImpl`. Eine erforderliche Schnittstelle für das Command-Objekt.  
-  
+Stellt eine Implementierung der `ICommand`-Schnittstelle bereit. Diese Schnittstelle ist nicht sichtbar, aber erfolgt durch `ICommandTextImpl`. Eine erforderliche Schnittstelle für das Command-Objekt.
+
 [ICommandPropertiesImpl](../../data/oledb/icommandpropertiesimpl-class.md)<br/>
-Diese Implementierung von der `ICommandProperties` Schnittstelle erfolgt durch eine statische Funktion, die von definiert die `BEGIN_PROPSET_MAP` Makro. Obligatorisch einschaltbefehle.  
-  
+Diese Implementierung von der `ICommandProperties` Schnittstelle erfolgt durch eine statische Funktion, die von definiert die `BEGIN_PROPSET_MAP` Makro. Obligatorisch einschaltbefehle.
+
 [ICommandTextImpl](../../data/oledb/icommandtextimpl-class.md)<br/>
-Legt fest, speichert und gibt den Befehlstext zurück. Obligatorisch einschaltbefehle.  
-  
+Legt fest, speichert und gibt den Befehlstext zurück. Obligatorisch einschaltbefehle.
+
 [IDBCreateCommandImpl](../../data/oledb/idbcreatecommandimpl-class.md)<br/>
-Erstellt einen neuen Befehl über das Sitzungsobjekt und gibt die angeforderte Schnittstelle zurück, auf die neu erstellte Befehl. Eine optionale Schnittstelle für Session-Objekte.  
-  
-Werden von anderen Klassen `IColumnsInfoImpl` und `IAccessorImpl`, die im obigen Abschnitt zu Schemarowset-Klassen beschrieben.  
-  
-## <a name="data-source-classes"></a>Datenquellenklassen  
+Erstellt einen neuen Befehl über das Sitzungsobjekt und gibt die angeforderte Schnittstelle zurück, auf die neu erstellte Befehl. Eine optionale Schnittstelle für Session-Objekte.
+
+Werden von anderen Klassen `IColumnsInfoImpl` und `IAccessorImpl`, die im obigen Abschnitt zu Schemarowset-Klassen beschrieben.
+
+## <a name="data-source-classes"></a>Datenquellenklassen
 
 [IDBInitializeImpl](../../data/oledb/idbinitializeimpl-class.md)<br/>
-Erstellt und löscht die Verbindung mit der Consumer. Erforderliche Schnittstelle für Datenquellenobjekte und optionale Schnittstelle für Enumeratoren.  
-  
+Erstellt und löscht die Verbindung mit der Consumer. Erforderliche Schnittstelle für Datenquellenobjekte und optionale Schnittstelle für Enumeratoren.
+
 [IDBPropertiesImpl](../../data/oledb/idbpropertiesimpl-class.md)<br/>
-`IDBProperties` ist eine erforderliche Schnittstelle für Datenquellenobjekte und eine optionale Schnittstelle für Enumeratoren. Aber wenn Sie einen Enumerator verfügbar macht `IDBInitialize`, verfügbar machen `IDBProperties` (Eigenschaften für die Datenquelle).  
-  
+`IDBProperties` ist eine erforderliche Schnittstelle für Datenquellenobjekte und eine optionale Schnittstelle für Enumeratoren. Aber wenn Sie einen Enumerator verfügbar macht `IDBInitialize`, verfügbar machen `IDBProperties` (Eigenschaften für die Datenquelle).
+
 [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md)<br/>
-Ruft einen Schnittstellenzeiger auf das Datenquellenobjekt ab. Erforderliche Schnittstelle für die Sitzung.  
-  
-## <a name="other-classes"></a>Andere Klassen  
+Ruft einen Schnittstellenzeiger auf das Datenquellenobjekt ab. Erforderliche Schnittstelle für die Sitzung.
+
+## <a name="other-classes"></a>Andere Klassen
 
 [CUtlProps](../../data/oledb/cutlprops-class.md)<br/>
-Die Eigenschaften für eine Vielzahl von Schnittstellen für OLE DB-Eigenschaft implementiert (z. B. `IDBProperties`, `ISessionProperties`, und `IRowsetInfo`).  
-  
-[IErrorRecordsImpl](../../data/oledb/ierrorrecordsimpl-class.md)  
-  
-Implementiert die OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112) Schnittstelle, Hinzufügen von Einträgen zu und Abrufen von Datensätzen aus einem Datenelement.  
-  
-## <a name="see-also"></a>Siehe auch  
+Die Eigenschaften für eine Vielzahl von Schnittstellen für OLE DB-Eigenschaft implementiert (z. B. `IDBProperties`, `ISessionProperties`, und `IRowsetInfo`).
+
+[IErrorRecordsImpl](../../data/oledb/ierrorrecordsimpl-class.md)
+
+Implementiert die OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112) Schnittstelle, Hinzufügen von Einträgen zu und Abrufen von Datensätzen aus einem Datenelement.
+
+## <a name="see-also"></a>Siehe auch
 
 [Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [OLE DB-Vorlagen](../../data/oledb/ole-db-templates.md)

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f11590a78cb691f4812e7b503350fb72a4bdc95
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9972d603aa563b4432d2935f3d934d4916b7c8b5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390733"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076216"
 ---
 # <a name="using-cstringt"></a>Verwenden von CStringT
 
@@ -35,7 +35,7 @@ So exportieren Sie Ihre eigenen String-Klasse aus einer DLL mithilfe der CString
 
 ## <a name="reference"></a>Referenz
 
-[CStringT-Klasse](../atl-mfc-shared/reference/cstringt-class.md).  
+[CStringT-Klasse](../atl-mfc-shared/reference/cstringt-class.md).<br/>
 Enthält Referenzinformationen zu den freigegebenen `CStringT` Klasse.
 
 ## <a name="see-also"></a>Siehe auch

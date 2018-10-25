@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f9cd2ebdbcf2ad2feb3b66412fbcd5687e85dce
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: b1014d41ea53405ea96ea5a3e19e627d72663f21
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820567"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074942"
 ---
 # <a name="vmxvmptrst"></a>__vmx_vmptrst
 
@@ -33,20 +33,21 @@ Speichert den Zeiger auf die aktuelle VM-Steuerelement-Struktur (VMCS) an der an
 ## <a name="syntax"></a>Syntax
 
 ```
-void __vmx_vmptrst( 
-   unsigned __int64 *VmcsPhysicalAddress 
+void __vmx_vmptrst( 
+   unsigned __int64 *VmcsPhysicalAddress 
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-[in] *`VmcsPhysicalAddress` die Adresse, in der aktuelle VMCS Zeiger gespeichert ist.
+*VmcsPhysicalAddress*<br/>
+[in] Die Adresse, wo der Zeiger für den aktuelle VMCS gespeichert werden.
 
 ## <a name="remarks"></a>Hinweise
 
 Der Zeiger VMCS ist eine physische 64-Bit-Adresse.
 
-Die `__vmx_vmptrst` -Funktion ist gleichbedeutend mit der `VMPTRST` computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Dokumentieren Sie weitere Informationen suchen Sie nach dem Dokument "Intel Virtualization Technical Specification for the IA-32 Intel Architecture," Dokumentnummer C97063-002 auf der [Intel Corporation](https://software.intel.com/articles/intel-sdm) Standort.
+Die `__vmx_vmptrst` -Funktion entspricht der `VMPTRST` -Computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Dokumentieren Sie weitere Informationen suchen Sie nach dem Dokument "Intel Virtualization Technical Specification for the IA-32 Intel Architecture," Dokumentnummer C97063-002 auf der [Intel Corporation](https://software.intel.com/articles/intel-sdm) Standort.
 
 ## <a name="requirements"></a>Anforderungen
 

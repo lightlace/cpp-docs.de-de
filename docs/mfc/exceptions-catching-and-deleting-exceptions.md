@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bd59cc19c80e305a7e57fb711a49f59a024d528
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5ad6ad1c4d1d7d74f60acbd985ee549d708ae28f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434764"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074123"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Ausnahmen: Abfangen und Löschen von Ausnahmen
 
@@ -36,9 +36,9 @@ Ihre **catch** Block eine Ausnahme muss löschen, wenn:
 
 - Die **catch** Block löst eine neue Ausnahme aus.
 
-     Natürlich müssen Sie die Ausnahme nicht löschen, wenn Sie die gleiche Ausnahme erneut auslösen:
+   Natürlich müssen Sie die Ausnahme nicht löschen, wenn Sie die gleiche Ausnahme erneut auslösen:
 
-     [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
+   [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
 
 - Ausführung zurückgegeben wird, innerhalb der **catch** Block.
 
@@ -49,15 +49,15 @@ Ihre **catch** Block eine Ausnahme muss löschen, wenn:
 
 1. Verwenden der **versuchen Sie es** Schlüsselwort zum Einrichten einer **versuchen** Block. Führen Sie alle programmanweisungen, die möglicherweise eine Ausnahme auslösen einer **versuchen** Block.
 
-     Verwenden der **catch** Schlüsselwort zum Einrichten einer **catch** Block. Platzieren Sie Code zur Ausnahmebehandlung in einem **catch** Block. Der Code in die **catch** Block wird nur ausgeführt, wenn der Code innerhalb der **versuchen Sie es** Block eine Ausnahme des Typs im angegebenen die **catch** Anweisung.
+   Verwenden der **catch** Schlüsselwort zum Einrichten einer **catch** Block. Platzieren Sie Code zur Ausnahmebehandlung in einem **catch** Block. Der Code in die **catch** Block wird nur ausgeführt, wenn der Code innerhalb der **versuchen Sie es** Block eine Ausnahme des Typs im angegebenen die **catch** Anweisung.
 
-     Das folgende Gerüst zeigt wie **versuchen** und **catch** Blöcke normalerweise angeordnet sind:
+   Das folgende Gerüst zeigt wie **versuchen** und **catch** Blöcke normalerweise angeordnet sind:
 
-     [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
+   [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
 
-     Wenn eine Ausnahme ausgelöst wird, wird die Steuerung auf das erste **catch** blockieren, deren Exception-Deklaration mit dem Typ der Ausnahme übereinstimmt. Sie können verschiedene Arten von Ausnahmen, die mit sequenziellen selektiv behandeln **catch** blockiert wird, wie im folgenden aufgeführt:
+   Wenn eine Ausnahme ausgelöst wird, wird die Steuerung auf das erste **catch** blockieren, deren Exception-Deklaration mit dem Typ der Ausnahme übereinstimmt. Sie können verschiedene Arten von Ausnahmen, die mit sequenziellen selektiv behandeln **catch** blockiert wird, wie im folgenden aufgeführt:
 
-     [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
+   [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
 
 Weitere Informationen finden Sie unter [Ausnahmen: Umwandeln von MFC-Ausnahmemakros](../mfc/exceptions-converting-from-mfc-exception-macros.md).
 

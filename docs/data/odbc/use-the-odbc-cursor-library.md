@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a3d36720012a7a54109c44d6eac41394323bbe0e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fc144e7b2ab1e97093498fa73930ba100306c23e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107788"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076697"
 ---
 # <a name="use-the-odbc-cursor-library"></a>Verwenden der ODBC-Cursorbibliothek
 
-ODBC verwaltet Scrollen durch Recordsets über die Cursor-Bibliothek. Diese Themen wird erläutert, wie Sie mit der Cursorbibliothek arbeiten.  
-  
-## <a name="in-this-section"></a>In diesem Abschnitt  
-  
-- [Verwenden der ODBC-Cursorbibliothek](../../data/odbc/odbc-the-odbc-cursor-library.md)  
-  
-## <a name="see-also"></a>Siehe auch  
+ODBC verwaltet Scrollen durch Recordsets über die Cursor-Bibliothek. Diese Themen wird erläutert, wie Sie mit der Cursorbibliothek arbeiten.
+
+## <a name="in-this-section"></a>In diesem Abschnitt
+
+- [Verwenden der ODBC-Cursorbibliothek](../../data/odbc/odbc-the-odbc-cursor-library.md)
+
+## <a name="see-also"></a>Siehe auch
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

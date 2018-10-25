@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1ee17fe577f30735ca78661394c432519d0a4050
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f6fa8dcf1488b693b53cde591c548122767f1af7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396999"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075111"
 ---
 # <a name="file-handling-and-io-ccli"></a>Dateibehandlung und E/A (C++/CLI)
 Veranschaulicht verschiedene Dateioperationen mit .NET Framework.
@@ -182,6 +182,7 @@ int main()
    return 0;
 }
 ```
+
 ## <a name="read_text"></a> Lesen einer Textdatei
 
 Im folgenden Codebeispiel wird veranschaulicht, wie eine Textdatei geöffnet und dann zeilenweise mithilfe der <xref:System.IO.StreamReader>-Klasse gelesen wird, die im <xref:System.IO?displayProperty=fullName>-Namespace definiert ist. Mit einer Instanz dieser Klasse wird eine Textdatei geöffnet und anschließend jede Zeile mithilfe der <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName>-Methode abgerufen.

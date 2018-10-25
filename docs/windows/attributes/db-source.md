@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11a58511684a58ebb0b8ec13138bfbdb7afa4729
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: bd8facb38bc4d71445674eb64ad09ab14d0b636a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081902"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065888"
 ---
 # <a name="dbsource"></a>db_source
 
@@ -72,7 +72,7 @@ In diesem Beispiel ruft **Db_source** für eine Klasse zum Erstellen einer Verbi
 
 [
   db_source(L"my_connection_string", name="ds"),
-  db_command(L"select * from Products")  
+  db_command(L"select * from Products")
 ]
 class CMyCommand {};
 ```
@@ -92,4 +92,4 @@ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontext
 
 ## <a name="see-also"></a>Siehe auch
 
-[OLE DB-Consumerattribute](ole-db-consumer-attributes.md)  
+[OLE DB-Consumerattribute](ole-db-consumer-attributes.md)

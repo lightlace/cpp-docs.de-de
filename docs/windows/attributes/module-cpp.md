@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e999928e2080796c013107e3bc862d19426dbf88
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 492e5e5c28b50ea8a7a20d654310ebba26d2f701
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083527"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067500"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -83,7 +83,7 @@ Gibt die Typbibliothek an.
 *restricted*<br/>
 (Optional) Mitglieder der Bibliothek können nicht beliebig aufgerufen werden. Weitere Informationen finden Sie unter [restricted](/windows/desktop/Midl/restricted) MIDL-Attribut.
 
-*Benutzerdefinierte*<br/>
+*custom*<br/>
 (Optional) Ein oder mehrere Attribute; Dies ist vergleichbar mit der [benutzerdefinierte](custom-cpp.md) Attribut. Der erste Parameter für *benutzerdefinierte* ist die GUID des Attributs. Zum Beispiel:
 
 ```
@@ -181,4 +181,4 @@ Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)<br/>
 [helpfile](helpfile.md)<br/>
-[version](version-cpp.md)  
+[version](version-cpp.md)

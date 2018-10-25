@@ -198,12 +198,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd7dfaa0511c7d776afd009ad8ea9c1db3008f09
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c8d337fdf6b861b4a64cba2876de33cc65d89b6b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434287"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070334"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar-Klasse
 
@@ -1495,7 +1495,6 @@ virtual void OnClickButton(
 
 ##  <a name="oneditcontextmenu"></a>  CMFCRibbonBar::OnEditContextMenu
 
-
 ```
 virtual void OnEditContextMenu(
     CMFCRibbonRichEditCtrl* pEdit,
@@ -1504,8 +1503,8 @@ virtual void OnEditContextMenu(
 
 ### <a name="parameters"></a>Parameter
 
-*pEdit*<br/>
-[in] [in] *zeigen*
+[in] *pEdit*<br/>
+[in] *zeigen*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1546,7 +1545,6 @@ S_OK, wenn erfolgreich; andernfalls FALSE oder S_FALSE.
 
 ##  <a name="onshowribboncontextmenu"></a>  CMFCRibbonBar::OnShowRibbonContextMenu
 
-
 ```
 virtual BOOL OnShowRibbonContextMenu(
     CWnd* pWnd,
@@ -1557,17 +1555,16 @@ virtual BOOL OnShowRibbonContextMenu(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
-[in] [in] *x*
-*y*<br/>
-[in] [in] *pHit*
+[in] *aufnehmen*<br/>
+[in] *x*<br/>
+[in] *y*<br/>
+[in] *pHit*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="onshowribbonqatmenu"></a>  CMFCRibbonBar::OnShowRibbonQATMenu
-
 
 ```
 virtual BOOL OnShowRibbonQATMenu(
@@ -1579,10 +1576,10 @@ virtual BOOL OnShowRibbonQATMenu(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
-[in] [in] *x*
-*y*<br/>
-[in] [in] *pHit*
+[in] *aufnehmen*<br/>
+[in] *x*<br/>
+[in] *y*<br/>
+[in] *pHit*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2076,7 +2073,6 @@ virtual BOOL LoadFromResource(
     LPCTSTR lpszResType = RT_RIBBON,
     HINSTANCE hInstance = NULL);
 
-
 virtual BOOL LoadFromResource(
     LPCTSTR lpszXMLResID,
     LPCTSTR lpszResType = RT_RIBBON,
@@ -2170,6 +2166,4 @@ void SetWindows7Look(
 [CMFCRibbonPanel-Klasse](../../mfc/reference/cmfcribbonpanel-class.md)<br/>
 [CMFCRibbonBaseElement-Klasse](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
 [Exemplarische Vorgehensweise: Aktualisieren der MFC Scribble-Anwendung](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
-
-
 

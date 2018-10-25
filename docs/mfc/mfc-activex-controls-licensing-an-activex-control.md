@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 451cf4b404143ce8f9b94481dd27227f487874d0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b66debe5c6401b4eee01bc81acc58b8445e20c21
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381165"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068774"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Lizenzieren eines ActiveX-Steuerelements
 
@@ -84,15 +84,15 @@ Diese Memberfunktionen sind:
 
 - [VerifyUserLicense](../mfc/reference/coleobjectfactory-class.md#verifyuserlicense)
 
-     Stellt sicher, dass das Steuerelement zur Entwurfszeit Nutzung durch Überprüfen des Systems für das Vorhandensein der Lizenzdatei Steuerelement kann. Diese Funktion wird vom Framework aufgerufen, im Rahmen der Verarbeitung `IClassFactory2::GetLicInfo` und `IClassFactory::CreateInstanceLic`.
+   Stellt sicher, dass das Steuerelement zur Entwurfszeit Nutzung durch Überprüfen des Systems für das Vorhandensein der Lizenzdatei Steuerelement kann. Diese Funktion wird vom Framework aufgerufen, im Rahmen der Verarbeitung `IClassFactory2::GetLicInfo` und `IClassFactory::CreateInstanceLic`.
 
 - [GetLicenseKey](../mfc/reference/coleobjectfactory-class.md#getlicensekey)
 
-     Fordert einen eindeutigen Schlüssel aus dem DLL-Steuerelement. Dieser Schlüssel in die Container-Anwendung eingebettet ist, und wird später in Verbindung mit `VerifyLicenseKey`, um eine Instanz des Steuerelements zu erstellen. Diese Funktion wird vom Framework aufgerufen, im Rahmen der Verarbeitung `IClassFactory2::RequestLicKey`.
+   Fordert einen eindeutigen Schlüssel aus dem DLL-Steuerelement. Dieser Schlüssel in die Container-Anwendung eingebettet ist, und wird später in Verbindung mit `VerifyLicenseKey`, um eine Instanz des Steuerelements zu erstellen. Diese Funktion wird vom Framework aufgerufen, im Rahmen der Verarbeitung `IClassFactory2::RequestLicKey`.
 
 - [VerifyLicenseKey](../mfc/reference/coleobjectfactory-class.md#verifylicensekey)
 
-     Überprüft, ob der eingebetteten und eindeutige Schlüssel des Steuerelements identisch sind. Dadurch wird den Container eine Instanz des Steuerelements zur eigenen Verwendung erstellen. Diese Funktion wird vom Framework aufgerufen, im Rahmen der Verarbeitung `IClassFactory2::CreateInstanceLic` und überschrieben werden, um die benutzerdefinierte Überprüfung des Lizenzschlüssels bereitstellen. Die Standardimplementierung führt einen Zeichenfolgenvergleich. Weitere Informationen finden Sie unter [Anpassen der Lizenzierung ein ActiveX-Steuerelement](#_core_customizing_the_licensing_of_an_activex_control)weiter unten in diesem Artikel.
+   Überprüft, ob der eingebetteten und eindeutige Schlüssel des Steuerelements identisch sind. Dadurch wird den Container eine Instanz des Steuerelements zur eigenen Verwendung erstellen. Diese Funktion wird vom Framework aufgerufen, im Rahmen der Verarbeitung `IClassFactory2::CreateInstanceLic` und überschrieben werden, um die benutzerdefinierte Überprüfung des Lizenzschlüssels bereitstellen. Die Standardimplementierung führt einen Zeichenfolgenvergleich. Weitere Informationen finden Sie unter [Anpassen der Lizenzierung ein ActiveX-Steuerelement](#_core_customizing_the_licensing_of_an_activex_control)weiter unten in diesem Artikel.
 
 ###  <a name="_core_header_file_modifications"></a> Header-Dateiänderungen
 

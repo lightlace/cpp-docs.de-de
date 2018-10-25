@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8cba3c15049c176b19f0da197d19017ae2aa699d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 297b457bdf2c70a75b9abdc433c87381fd115037
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791742"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067747"
 ---
 # <a name="readonly-c"></a>readonly (C++)
 
@@ -36,9 +36,9 @@ Verhindert die Zuweisung zu einem Datenelement
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Readonly** C++-Attribut hat die gleiche Funktionalität wie die [Readonly](/windows/desktop/Midl/readonly) MIDL-Attribut.
+Das C++-Attribut **readonly** hat die gleiche Funktion wie das MIDL-Attribut [readonly](/windows/desktop/Midl/readonly) .
 
-Wenn Sie die Änderung eines Methodenparameters verhindern möchten, verwenden Sie die [in](in-cpp.md) Attribut.
+Wenn Sie die Änderung eines Methodenparameters verhindern möchten, verwenden Sie das [in](in-cpp.md) -Attribut.
 
 ## <a name="example"></a>Beispiel
 
@@ -69,9 +69,9 @@ __interface IFireTabCtrl
 |**Erforderliche Attribute**|Keiner|
 |**Ungültige Attribute**|Keiner|
 
-Weitere Informationen zu den attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Siehe auch
 
 [IDL-Attribute](idl-attributes.md)<br/>
-[Datenmemberattribute](data-member-attributes.md)  
+[Datenmemberattribute](data-member-attributes.md)

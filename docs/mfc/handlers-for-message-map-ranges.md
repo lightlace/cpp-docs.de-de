@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca420ce09cae5bf7c11dcfb0ad384e0002bdc4b1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 738d441cf88b41740cb0cff933916489cac683f2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403571"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073096"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Handler für Meldungszuordnungsbereiche
 
@@ -81,7 +81,7 @@ Die Meldungszuordnungseintrags besteht aus den folgenden Elementen:
 
 - Die Parameter in das Makro:
 
-     Die ersten zwei Makros werden drei Parameter:
+   Die ersten zwei Makros werden drei Parameter:
 
    - Die Befehls-ID, die der Bereich beginnt
 
@@ -89,9 +89,9 @@ Die Meldungszuordnungseintrags besteht aus den folgenden Elementen:
 
    - Der Name der Handlerfunktion Nachricht
 
-     Der Bereich der Befehls-IDs muss zusammenhängend sein.
+   Der Bereich der Befehls-IDs muss zusammenhängend sein.
 
-     Das dritte Makro, `ON_CONTROL_RANGE`, einen zusätzlichen Parameter für die erste benötigt: eine Steuerelement-benachrichtigungsmeldung, wie etwa **EN_CHANGE-Ereignis**.
+   Das dritte Makro, `ON_CONTROL_RANGE`, einen zusätzlichen Parameter für die erste benötigt: eine Steuerelement-benachrichtigungsmeldung, wie etwa **EN_CHANGE-Ereignis**.
 
 ##  <a name="_core_declaring_the_handler_function"></a> Deklarieren Sie die Handler-Funktion
 
@@ -113,11 +113,11 @@ Wenn Sie die Meldungszuordnungseintrags schreiben, geben Sie folgende Schritte a
 
 - Zwei Befehls-IDs beginnen und enden einen zusammenhängenden Bereich.
 
-     Nachfolgend finden sie **ID_VIEW_ZOOM25** und **ID_VIEW_ZOOM300**.
+   Nachfolgend finden sie **ID_VIEW_ZOOM25** und **ID_VIEW_ZOOM300**.
 
 - Der Name der Handlerfunktion für die Befehle.
 
-     Hier hat `OnZoom`.
+   Hier hat `OnZoom`.
 
 Die Funktionsdeklaration würde so aussehen:
 
@@ -137,15 +137,15 @@ Beim Schreiben der `ON_CONTROL_RANGE` Makro in der meldungszuordnung, die Sie an
 
 - Einem bestimmten Steuerelement-Benachrichtigung.
 
-     Hier hat **BN_CLICKED**.
+   Hier hat **BN_CLICKED**.
 
 - Die Steuerelement-ID-Werte der zusammenhängenden Bereich von Steuerelementen zugeordnet.
 
-     Hier sind diese **IDC_BUTTON1** und **IDC_BUTTON10**.
+   Hier sind diese **IDC_BUTTON1** und **IDC_BUTTON10**.
 
 - Der Name der Handlerfunktion Nachricht.
 
-     Hier hat `OnButtonClicked`.
+   Hier hat `OnButtonClicked`.
 
 Wenn Sie die Handler-Funktion schreiben, geben Sie die zusätzlichen **UINT** Parameter, wie im folgenden gezeigt:
 

@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 718cc52175ff7d82527fd90486ee401c0e2ba80c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 89ff13a544e9b740dcb5420fb317103af8cf2ab3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375824"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072766"
 ---
 # <a name="cmapstringtostring-class"></a>CMapStringToString-Klasse
 
@@ -239,6 +239,4 @@ Rufen Sie diese Methode für ein kartenelement mit einem Schlüssel zu suchen, d
 [MFC-Beispiel erfassen](../../visual-cpp-samples.md)<br/>
 [CObject-Klasse](../../mfc/reference/cobject-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
-
-
 

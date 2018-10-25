@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d9a50e3dcfb82e245dcac5f57553b34fef584fa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: addbc7c81c8cd38f44b7b1004c0b4e23ca183ecb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412027"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067319"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane-Klasse
 
@@ -179,7 +179,8 @@ virtual BOOL AddTab(
 
 ### <a name="parameters"></a>Parameter
 
-[in] [out] *pNewBar* ein Zeiger auf den Bereich, um Sie hinzuzufügen. This-Zeiger kann ungültig werden, nachdem Sie diese Methode aufrufen. Weitere Informationen finden Sie im Abschnitt "Hinweise".
+*pNewBar*<br/>
+[in, out] Ein Zeiger auf den Bereich, um Sie hinzuzufügen. This-Zeiger kann ungültig werden, nachdem Sie diese Methode aufrufen. Weitere Informationen finden Sie im Abschnitt "Hinweise".
 
 *bVisible*<br/>
 [in] True, um die Registerkarte sichtbar zu machen. andernfalls "false".
@@ -384,7 +385,8 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>Parameter
 
-[in] [out] *pBar* ein Zeiger auf den Bereich, um "float".
+*pBar*<br/>
+[in, out] Ein Zeiger auf den Bereich, um "float".
 
 *nTabID*<br/>
 [in] Gibt an, der nullbasierte Index der Registerkarte "float".
@@ -594,7 +596,8 @@ virtual BOOL RemovePane(CWnd* pBar);
 
 ### <a name="parameters"></a>Parameter
 
-[in] [out] *pBar* ein Zeiger auf den Bereich, um aus dem Fenster im Registerkartenformat zu entfernen.
+*pBar*<br/>
+[in, out] Ein Zeiger auf den Bereich, um aus dem Fenster im Registerkartenformat zu entfernen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -689,7 +692,8 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 *dwAlignment*<br/>
 [in] Gibt die Ausrichtung der automatisch ausblendbaren Bereich, der erstellt werden soll. Eine Liste der möglichen Werte, finden Sie unter [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).
 
-[in] [out] *pCurrAutoHideBar* ein Zeiger auf der Symbolleiste des aktuellen automatisch im Hintergrund. NULL kann sein.
+*pCurrAutoHideBar*<br/>
+[in, out] Ein Zeiger auf der Symbolleiste des aktuellen automatisch im Hintergrund. NULL kann sein.
 
 *bUseTimer*<br/>
 [in] Gibt an, ob den automatisch ausblendbaren Effekt zu verwenden, wenn der Benutzer im Bereich in den Modus "automatisch ausblenden" wechselt, oder sofort Ausblenden des Fensters.

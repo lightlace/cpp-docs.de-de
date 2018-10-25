@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0baba6503d1d5b4e382347f4f4d9680b11f954ce
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 7bef66e8b3c326f205b6399538a811bcc83c9f9d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328518"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070399"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -36,7 +36,7 @@ Die **"/ qspectre"** Option ist in Visual Studio 2017 Version 15.5.5 verfügbar 
 
 Die **"/ qspectre"** Option ist standardmäßig deaktiviert.
 
-In der ersten Version der **"/ qspectre"** Option funktioniert nur in optimiertem Code. In Visual Studio 2017 Version 15.7 und höher die **"/ qspectre"** Option auf allen optimierungsebenen unterstützt wird. 
+In der ersten Version der **"/ qspectre"** Option funktioniert nur in optimiertem Code. In Visual Studio 2017 Version 15.7 und höher die **"/ qspectre"** Option auf allen optimierungsebenen unterstützt wird.
 
 Microsoft Visual C++-Bibliotheken sind auch in Versionen mit Spectre-Entschärfung verfügbar. Die auch mit Spectre-Bibliotheken für Visual Studio 2017 können im Visual Studio-Installer heruntergeladen werden. Sie befinden sich die **Einzelkomponenten** Registerkarte **Compiler, Buildtools und Laufzeiten**, und "Bibliotheken für Spectre" im Namen haben. Sowohl DLL-als auch statische Runtime-Bibliotheken mit der Lösung, die aktiviert sind für einen Teil der Visual C++-Laufzeiten verfügbar: VC++-Startcode, vcruntime140, msvcp140, concrt140 und vcamp140. Die DLLs werden nur für die lokalen Bereitstellung unterstützt. der Inhalt des Visual C++ 2017 Common Language Runtime-Bibliotheken Redistributable wurden nicht geändert. Sie können Bibliotheken mit Spectre-verringert auch installieren, für MFC- und ATL, finden Sie in der **Einzelkomponenten** Registerkarte **SDKs, Bibliotheken und Frameworks**.
 

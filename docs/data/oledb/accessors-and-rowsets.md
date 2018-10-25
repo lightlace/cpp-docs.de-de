@@ -28,57 +28,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c3247cd3b5844df76b8a115a3f28a76874db2a16
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 3632a99e09104cba2916b3da7230dd2769b78b42
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990177"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066743"
 ---
 # <a name="accessors-and-rowsets"></a>Accessoren und Rowsets
 
-OLE DB-Vorlagen zum Festlegen und Abrufen von Daten, verwenden Sie einen Accessor und ein Rowset über die [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) Klasse. Diese Klasse kann mehrere Accessoren verschiedener Typen verarbeiten.  
-  
-## <a name="accessor-types"></a>Zugriffsmethodentypen  
+OLE DB-Vorlagen zum Festlegen und Abrufen von Daten, verwenden Sie einen Accessor und ein Rowset über die [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) Klasse. Diese Klasse kann mehrere Accessoren verschiedener Typen verarbeiten.
 
-Alle Accessoren werden von [CAccessorBase](../../data/oledb/caccessorbase-class.md). `CAccessorBase` Stellt Parameter und spaltenbindung.  
-  
-Die folgende Abbildung zeigt die Accessortypen.  
-  
-![Zugriffsmethodentypen](../../data/oledb/media/vcaccessortypes.gif "Vcaccessortypes")  
-Accessorklassen  
-  
-- [CAccessor](../../data/oledb/caccessor-class.md) verwenden Sie diesen Accessor, wenn Sie die Struktur der Datenbankquelle zur Entwurfszeit bekannt. `CAccessor` statisch bindet ein Datenbankeintrag, die den Puffer enthält, mit der Datenquelle ein.  
-  
-- [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) verwenden Sie diesen Accessor, wenn Sie nicht die Struktur der Datenbank zur Entwurfszeit kennen. `CDynamicAccessor` Aufrufe `IColumnsInfo::GetColumnInfo` auf die Datenbank-Spalteninformationen abgerufen. Es erstellt und verwaltet einen Accessor und den Puffer.  
-  
-- [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) verwenden Sie diesen Accessor, um unbekannte Befehlstypen zu behandeln. Wenn Sie die Befehle, Vorbereiten `CDynamicParameterAccessor` erhalten Sie Informationen zu den Parametern aus der `ICommandWithParameters` Schnittstelle, wenn der Anbieter unterstützt `ICommandWithParameters`.  
-  
-- [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md), [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md), und [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md) diese Klassen verwenden, wenn Sie keine Kenntnis des Schemas der Datenbank verfügen. `CDynamicStringAccessorA` Ruft Daten ab, als ANSI-Zeichenfolgen; `CDynamicStringAccessorW` Ruft Daten als Unicode-Zeichenfolgen ab.  
-  
-- [CManualAccessor](../../data/oledb/cmanualaccessor-class.md) mit dieser Klasse können Sie, dass die Datentypen, die Sie möchten, dass der Anbieter den Typ konvertieren kann. Er behandelt sowohl die Ergebnisspalten als auch die Parameter des Befehls.  
-  
-Die folgende Tabelle enthält die Unterstützung in den OLE DB-Vorlagen-Accessor-Typen.  
-  
-|Accessortyp|Dynamic|Params behandelt|Puffer|Mehrere Zugriffsmethoden|  
-|-------------------|-------------|--------------------|------------|------------------------|  
-|`CAccessor`|Nein|Ja|Benutzer|Ja|  
-|`CDynamicAccessor`|Ja|Nein|OLE DB-Vorlagen|Nein|  
-|`CDynamicParameterAccessor`|Ja|Ja|OLE DB-Vorlagen|Nein|  
-|`CDynamicStringAccessor[A,W]`|Ja|Nein|OLE DB-Vorlagen|Nein|  
-|`CManualAccessor`|Ja|Ja|Benutzer|Ja|  
-  
-## <a name="rowset-types"></a>Rowsettypen  
+## <a name="accessor-types"></a>Zugriffsmethodentypen
 
-OLE DB-Vorlagen unterstützen drei Arten von Rowsets (siehe Abbildung oben): einzelne Rowsets (implementiert [CRowset](../../data/oledb/crowset-class.md)), Massenkopieren von Rowsets (implementiert [CBulkRowset](../../data/oledb/cbulkrowset-class.md)), und die array-Rowsets (implementiert durch [CArrayRowset](../../data/oledb/carrayrowset-class.md)). Einzelne Rowsets abrufen, die eine einzelne Zeile behandelt, wenn `MoveNext` aufgerufen wird. Sammel-Rowsets können mehrere Zeilenhandles abzurufen. Array-Rowsets sind Rowsets, die über die Array-Syntax zugegriffen werden kann.  
-  
-Die folgende Abbildung zeigt die Rowsettypen.  
-  
-![Grafik zu RowsetType](../../data/oledb/media/vcrowsettypes.gif "Vcrowsettypes")  
-Schemarowset-Klassen  
-  
-[Schemarowsets](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) nicht den Zugriff auf Daten in den Daten zu speichern, sondern auf Informationen über den Datenspeicher, die als Metadaten bezeichnet. Schemarowsets werden in der Regel in Situationen verwendet, in denen die Struktur der Datenbank ist nicht zur Kompilierzeit bekannt und muss zur Laufzeit abgerufen werden.  
-  
-## <a name="see-also"></a>Siehe auch  
+Alle Accessoren werden von [CAccessorBase](../../data/oledb/caccessorbase-class.md). `CAccessorBase` Stellt Parameter und spaltenbindung.
+
+Die folgende Abbildung zeigt die Accessortypen.
+
+![Zugriffsmethodentypen](../../data/oledb/media/vcaccessortypes.gif "Vcaccessortypes")<br/>
+Accessorklassen
+
+- [CAccessor](../../data/oledb/caccessor-class.md) verwenden Sie diesen Accessor, wenn Sie die Struktur der Datenbankquelle zur Entwurfszeit bekannt. `CAccessor` statisch bindet ein Datenbankeintrag, die den Puffer enthält, mit der Datenquelle ein.
+
+- [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) verwenden Sie diesen Accessor, wenn Sie nicht die Struktur der Datenbank zur Entwurfszeit kennen. `CDynamicAccessor` Aufrufe `IColumnsInfo::GetColumnInfo` auf die Datenbank-Spalteninformationen abgerufen. Es erstellt und verwaltet einen Accessor und den Puffer.
+
+- [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) verwenden Sie diesen Accessor, um unbekannte Befehlstypen zu behandeln. Wenn Sie die Befehle, Vorbereiten `CDynamicParameterAccessor` erhalten Sie Informationen zu den Parametern aus der `ICommandWithParameters` Schnittstelle, wenn der Anbieter unterstützt `ICommandWithParameters`.
+
+- [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md), [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md), und [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md) diese Klassen verwenden, wenn Sie keine Kenntnis des Schemas der Datenbank verfügen. `CDynamicStringAccessorA` Ruft Daten ab, als ANSI-Zeichenfolgen; `CDynamicStringAccessorW` Ruft Daten als Unicode-Zeichenfolgen ab.
+
+- [CManualAccessor](../../data/oledb/cmanualaccessor-class.md) mit dieser Klasse können Sie, dass die Datentypen, die Sie möchten, dass der Anbieter den Typ konvertieren kann. Er behandelt sowohl die Ergebnisspalten als auch die Parameter des Befehls.
+
+Die folgende Tabelle enthält die Unterstützung in den OLE DB-Vorlagen-Accessor-Typen.
+
+|Accessortyp|Dynamic|Params behandelt|Puffer|Mehrere Zugriffsmethoden|
+|-------------------|-------------|--------------------|------------|------------------------|
+|`CAccessor`|Nein|Ja|Benutzer|Ja|
+|`CDynamicAccessor`|Ja|Nein|OLE DB-Vorlagen|Nein|
+|`CDynamicParameterAccessor`|Ja|Ja|OLE DB-Vorlagen|Nein|
+|`CDynamicStringAccessor[A,W]`|Ja|Nein|OLE DB-Vorlagen|Nein|
+|`CManualAccessor`|Ja|Ja|Benutzer|Ja|
+
+## <a name="rowset-types"></a>Rowsettypen
+
+OLE DB-Vorlagen unterstützen drei Arten von Rowsets (siehe Abbildung oben): einzelne Rowsets (implementiert [CRowset](../../data/oledb/crowset-class.md)), Massenkopieren von Rowsets (implementiert [CBulkRowset](../../data/oledb/cbulkrowset-class.md)), und die array-Rowsets (implementiert durch [CArrayRowset](../../data/oledb/carrayrowset-class.md)). Einzelne Rowsets abrufen, die eine einzelne Zeile behandelt, wenn `MoveNext` aufgerufen wird. Sammel-Rowsets können mehrere Zeilenhandles abzurufen. Array-Rowsets sind Rowsets, die über die Array-Syntax zugegriffen werden kann.
+
+Die folgende Abbildung zeigt die Rowsettypen.
+
+![Grafik zu RowsetType](../../data/oledb/media/vcrowsettypes.gif "Vcrowsettypes")<br/>
+Schemarowset-Klassen
+
+[Schemarowsets](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) nicht den Zugriff auf Daten in den Daten zu speichern, sondern auf Informationen über den Datenspeicher, die als Metadaten bezeichnet. Schemarowsets werden in der Regel in Situationen verwendet, in denen die Struktur der Datenbank ist nicht zur Kompilierzeit bekannt und muss zur Laufzeit abgerufen werden.
+
+## <a name="see-also"></a>Siehe auch
 
 [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)

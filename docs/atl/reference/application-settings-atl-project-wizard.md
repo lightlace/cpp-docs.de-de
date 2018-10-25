@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cff60e5316202842b2ee22c5c6ba10813839b5d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 127e5187f2e6511279633ffe9b5e26b24014f6b2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46035850"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070646"
 ---
 # <a name="application-settings-atl-project-wizard"></a>Anwendungseinstellungen, ATL-Projekt-Assistent
 
@@ -31,15 +31,15 @@ Verwenden der **Anwendungseinstellungen** Seite des Assistenten die ATL-Projekt 
 
 Wählen Sie aus einer von drei Server:
 
-- **Dynamic Link Library (DLL)**  
+- **Dynamic Link Library (DLL)**
 
    Wählen Sie zum Erstellen von in-Process-Server.
 
-- **Ausführbare Datei (EXE)**  
+- **Ausführbare Datei (EXE)**
 
    Wählen Sie einen lokalen Out-of-Process-Server erstellen. Diese Option lässt keine Unterstützung für MFC oder COM+ 1.0 zu. Es lässt sich nicht für das Zusammenführen von Proxy/Stub-Code.
 
-- **Dienst (EXE)**  
+- **Dienst (EXE)**
 
    Wählen Sie zum Erstellen einer Windows-Anwendung, die im Hintergrund ausgeführt wird, wenn Windows gestartet wird. Diese Option lässt sich nicht auf die Unterstützung für MFC oder COM+ 1.0 oder das Zusammenführen von Proxy/Stub-Code nicht zulässig.
 
@@ -48,15 +48,15 @@ Wählen Sie aus einer von drei Server:
 > [!NOTE]
 > Alle zusätzlichen Optionen sind für die nur für DLL-Projekten verfügbar.
 
-- **Zulassen Sie Zusammenführen von Proxy-/ Stubcode**  
+- **Zulassen Sie Zusammenführen von Proxy-/ Stubcode**
 
    Wählen Sie die **Zusammenführen von Proxy-/ Stubcode zulassen** Kontrollkästchen Speicherschemamappings beim Marshallen von Schnittstellen erforderlich ist. Diese Option setzt den MIDL-generierten Proxy und Stub-Code in der gleichen ausführbare Datei als dem Server.
 
-- **MFC-Unterstützung**  
+- **MFC-Unterstützung**
 
    Wählen Sie an, dass das Objekt die MFC-Unterstützung enthält. Diese Option wird das Projekt mit der MFC-Bibliotheken verknüpft, damit Sie auf alle Klassen und Funktionen, die darin enthaltenen zugreifen können.
 
-- **COM+ 1.0-Unterstützung**  
+- **COM+ 1.0-Unterstützung**
 
    Wählen Sie diese Option ändern Sie das Projekt erstellen Einstellungen zur Unterstützung von COM+ 1.0-Komponenten. Zusätzlich zu den standardmäßigen Bibliotheken fügt der Assistent für die COM+ 1.0 Komponenten-spezifischen Bibliothek comsvcs.lib hinzu:
 

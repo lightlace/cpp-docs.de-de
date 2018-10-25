@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f3304106662d290a208545061bf9f71b7f30c10
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 16a61578b7512c1d9ce9d7ca217b29a3ea670657
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820944"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068488"
 ---
 # <a name="vmxvmptrld"></a>__vmx_vmptrld
 
@@ -33,28 +33,32 @@ Lädt den Zeiger auf die aktuellen VM-Steuerelement-Struktur (VMCS) aus der ange
 ## <a name="syntax"></a>Syntax
 
 ```
-int __vmx_vmptrld( 
-   unsigned __int64 *VmcsPhysicalAddress 
+int __vmx_vmptrld( 
+   unsigned __int64 *VmcsPhysicalAddress 
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-[in] *`VmcsPhysicalAddress` die Adresse, in der VMCS Zeiger gespeichert ist.
+*VmcsPhysicalAddress*<br/>
+[in] Die Adresse, wo der Zeiger VMCS gespeichert werden.
 
 ## <a name="return-value"></a>Rückgabewert
 
-0, die der Vorgang erfolgreich war.
+0<br/>
+Der Vorgang wurde erfolgreich ausgeführt.
 
-1 Vorgangsfehler mit erweitertem Status zur Verfügung, in der `VM-instruction error field` von der aktuellen VMCS.
+1<br/>
+Bei dem Vorgang ist ein Fehler mit erweitertem Status aufgetreten, der im `VM-instruction error field` der aktuellen VMCS verfügbar ist.
 
-2 Fehler ohne verfügbaren Status.
+2<br/>
+Bei dem Vorgang ist ein Fehler ohne verfügbaren Status aufgetreten.
 
 ## <a name="remarks"></a>Hinweise
 
 Der Zeiger VMCS ist eine physische 64-Bit-Adresse.
 
-Die `__vmx_vmptrld` -Funktion ist gleichbedeutend mit der `VMPTRLD` computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Dokumentieren Sie weitere Informationen suchen Sie nach dem Dokument "Intel Virtualization Technical Specification for the IA-32 Intel Architecture," Dokumentnummer C97063-002 auf der [Intel Corporation](https://software.intel.com/articles/intel-sdm) Standort.
+Die `__vmx_vmptrld` -Funktion entspricht der `VMPTRLD` -Computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Dokumentieren Sie weitere Informationen suchen Sie nach dem Dokument "Intel Virtualization Technical Specification for the IA-32 Intel Architecture," Dokumentnummer C97063-002 auf der [Intel Corporation](https://software.intel.com/articles/intel-sdm) Standort.
 
 ## <a name="requirements"></a>Anforderungen
 
