@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a250862f5514f290043bf596ba19bf0834e71e
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 4040f5a05f8c9bccfbf1c8b48a40188f684d48ad
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49161657"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060012"
 ---
 # <a name="try-finally-statement"></a>try-finally-Anweisung
 
@@ -44,7 +44,7 @@ ms.locfileid: "49161657"
 Die folgende Syntax beschreibt die **Try-finally-** Anweisung:
 
 ```cpp
-__try {
+__try {
    // guarded code
 }
 __finally {
@@ -73,7 +73,7 @@ Erreicht eine **__try** -Anweisung durch einfache sequenzielle Ausführung (fort
 
 1. Wenn der Beendigungshandler abgeschlossen ist, die Ausführung wird fortgesetzt, nachdem die **__finally** Anweisung. Unabhängig davon, wie der abgesicherte Abschnitt endet (z. B. über eine **"GoTo"** aus dem abgesicherten Text oder ein **zurückgeben** Anweisung), wird der Beendigungshandler ausgeführt *vor* der ablaufsteuerung wird aus dem abgesicherten Abschnitt verschoben.
 
-     Ein **__finally** Anweisung blockiert nicht die Suche nach einer entsprechenden Ausnahmehandler übergeben.
+   Ein **__finally** Anweisung blockiert nicht die Suche nach einer entsprechenden Ausnahmehandler übergeben.
 
 Im Falle eine Ausnahme der **__try** blockieren, muss das Betriebssystem einen Handler finden, für die Ausnahme oder die Anwendung schlägt fehl. Wenn ein Handler für alle gefunden wird, **__finally** -blocke ausgeführt werden, und die Ausführung im Handler fortgesetzt wird.
 

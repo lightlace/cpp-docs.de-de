@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98cf8a0532c3b1f2044ba0338d3f2f2bf8e73813
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0070103724385dcb598c20cd15bc29f341628bce
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390983"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079440"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC-ActiveX-Steuerelemente: Hinzufügen von benutzerdefinierten Eigenschaften
 
@@ -36,19 +36,19 @@ Benutzerdefinierte Eigenschaften sind in vier Arten von Implementierung: Member-
 
 - Implementierung des Schnittstellenmembers Variable
 
-     Diese Implementierung stellt der Zustand der Eigenschaft als eine Membervariable in der Steuerelementklasse dar. Verwenden Sie die Membervariablen Implementierung, wenn es nicht wichtig zu wissen, wenn der Eigenschaftswert geändert wird. Die drei Typen erstellt diese Implementierung Mindestmaß an Code für die Unterstützung für die Eigenschaft an. Ist das Makro für Dispatch den Eintrag für die Implementierung des Schnittstellenmembers Variable [DISP_PROPERTY](../mfc/reference/dispatch-maps.md#disp_property).
+   Diese Implementierung stellt der Zustand der Eigenschaft als eine Membervariable in der Steuerelementklasse dar. Verwenden Sie die Membervariablen Implementierung, wenn es nicht wichtig zu wissen, wenn der Eigenschaftswert geändert wird. Die drei Typen erstellt diese Implementierung Mindestmaß an Code für die Unterstützung für die Eigenschaft an. Ist das Makro für Dispatch den Eintrag für die Implementierung des Schnittstellenmembers Variable [DISP_PROPERTY](../mfc/reference/dispatch-maps.md#disp_property).
 
 - Membervariablen Notification-Implementierung
 
-     Diese Implementierung besteht aus einer Membervariablen gespeichert und eine Benachrichtigungsfunktion, die durch den Assistenten zum Hinzufügen einer Eigenschaft erstellt. Die Benachrichtigungsfunktion wird automatisch durch das Framework nach der Änderung der Eigenschaft-Wert aufgerufen werden. Verwenden Sie die Membervariablen durch Implementierung der Benachrichtigung, wenn Sie müssen benachrichtigt werden, nachdem sich ein Eigenschaftswert geändert hat. Diese Implementierung ist mehr Zeit erforderlich, da es sich um einen Funktionsaufruf erfordert. Das Makro für Dispatch den Eintrag für diese Implementierung wird [DISP_PROPERTY_NOTIFY](../mfc/reference/dispatch-maps.md#disp_property_notify).
+   Diese Implementierung besteht aus einer Membervariablen gespeichert und eine Benachrichtigungsfunktion, die durch den Assistenten zum Hinzufügen einer Eigenschaft erstellt. Die Benachrichtigungsfunktion wird automatisch durch das Framework nach der Änderung der Eigenschaft-Wert aufgerufen werden. Verwenden Sie die Membervariablen durch Implementierung der Benachrichtigung, wenn Sie müssen benachrichtigt werden, nachdem sich ein Eigenschaftswert geändert hat. Diese Implementierung ist mehr Zeit erforderlich, da es sich um einen Funktionsaufruf erfordert. Das Makro für Dispatch den Eintrag für diese Implementierung wird [DISP_PROPERTY_NOTIFY](../mfc/reference/dispatch-maps.md#disp_property_notify).
 
 - Get/Set-Methoden-Implementierung
 
-     Diese Implementierung besteht aus einem Paar von Memberfunktionen in der Control-Klasse. Die Get/Set-Methoden Implementierung ruft automatisch die Get-Member-Funktion, wenn der Benutzer des Steuerelements auf den aktuellen Wert der Eigenschaft anfordert und die Set-Member-Funktion, wenn der Benutzer des Steuerelements fordert, dass die Eigenschaft geändert werden. Verwenden Sie diese Implementierung, wenn zum Berechnen des Wert einer Eigenschaft während der Laufzeit einen Benutzer des Steuerelements vor dem Ändern der tatsächlichen-Eigenschaft übergebenen Wert überprüfen, oder einen Lese- oder Schreibzugriff nur - Eigenschaftentyp implementieren. Das Makro für Dispatch den Eintrag für diese Implementierung wird [DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex). Im folgenden Abschnitt [mithilfe des Assistenten zum Hinzufügen von Eigenschaften zum Hinzufügen einer benutzerdefinierten Eigenschaft](#_core_using_classwizard_to_add_a_custom_property), verwendet die benutzerdefinierte CircleOffset-Eigenschaft dieser Implementierung veranschaulicht.
+   Diese Implementierung besteht aus einem Paar von Memberfunktionen in der Control-Klasse. Die Get/Set-Methoden Implementierung ruft automatisch die Get-Member-Funktion, wenn der Benutzer des Steuerelements auf den aktuellen Wert der Eigenschaft anfordert und die Set-Member-Funktion, wenn der Benutzer des Steuerelements fordert, dass die Eigenschaft geändert werden. Verwenden Sie diese Implementierung, wenn zum Berechnen des Wert einer Eigenschaft während der Laufzeit einen Benutzer des Steuerelements vor dem Ändern der tatsächlichen-Eigenschaft übergebenen Wert überprüfen, oder einen Lese- oder Schreibzugriff nur - Eigenschaftentyp implementieren. Das Makro für Dispatch den Eintrag für diese Implementierung wird [DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex). Im folgenden Abschnitt [mithilfe des Assistenten zum Hinzufügen von Eigenschaften zum Hinzufügen einer benutzerdefinierten Eigenschaft](#_core_using_classwizard_to_add_a_custom_property), verwendet die benutzerdefinierte CircleOffset-Eigenschaft dieser Implementierung veranschaulicht.
 
 - Parametrisierte Implementierung
 
-     Parametrisierte Implementierung wird von der Assistent zum Hinzufügen von Eigenschaften unterstützt. Eine parametrisierte Eigenschaft (manchmal als "eine Array-Eigenschaft" bezeichnet) kann verwendet werden, um einen Satz von Werten über eine einzelne Eigenschaft Ihres Steuerelements zugreifen. Das Makro für Dispatch den Eintrag für diese Implementierung ist DISP_PROPERTY_PARAM. Weitere Informationen zur Implementierung dieses Typs finden Sie unter [Implementieren einer parametrisierten Eigenschaft](../mfc/mfc-activex-controls-advanced-topics.md) in diesem Artikel ActiveX-Steuerelemente: Weiterführende Themen.
+   Parametrisierte Implementierung wird von der Assistent zum Hinzufügen von Eigenschaften unterstützt. Eine parametrisierte Eigenschaft (manchmal als "eine Array-Eigenschaft" bezeichnet) kann verwendet werden, um einen Satz von Werten über eine einzelne Eigenschaft Ihres Steuerelements zugreifen. Das Makro für Dispatch den Eintrag für diese Implementierung ist DISP_PROPERTY_PARAM. Weitere Informationen zur Implementierung dieses Typs finden Sie unter [Implementieren einer parametrisierten Eigenschaft](../mfc/mfc-activex-controls-advanced-topics.md) in diesem Artikel ActiveX-Steuerelemente: Weiterführende Themen.
 
 ##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> Mithilfe der Eigenschaft Assistenten zum Hinzufügen zum Hinzufügen einer benutzerdefinierten Eigenschaft
 
@@ -66,7 +66,7 @@ Dieses Verfahren kann auch verwendet werden, um weitere benutzerdefinierten Eige
 
 1. Klicken Sie im Kontextmenü auf **hinzufügen** , und klicken Sie dann auf **Eigenschaft hinzufügen**.
 
-     Daraufhin wird die [Assistent zum Hinzufügen von Eigenschaften](../ide/names-add-property-wizard.md).
+   Daraufhin wird die [Assistent zum Hinzufügen von Eigenschaften](../ide/names-add-property-wizard.md).
 
 1. In der **Eigenschaftennamen** geben *CircleOffset*.
 

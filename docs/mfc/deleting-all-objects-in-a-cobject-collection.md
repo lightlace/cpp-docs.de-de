@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3374b2a292fc6463cb4fd85d0cd56fe9c3556443
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 986bc24c57f8692bfdd98194b9e58c9cee6817f6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448245"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067188"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>Löschen aller Objekte in einer CObject-Sammlung
 
@@ -68,9 +68,9 @@ Beachten Sie, dass des Unterschied zwischen dem Löschen eines Elements-Objekts,
 
 1. Rufen Sie die `RemoveAll` Funktion, um alle Elemente aus dem Array entfernt werden, nachdem sie gelöscht wurden.
 
-     Der Code zum Löschen aller Elemente eines Arrays ist wie folgt aus:
+   Der Code zum Löschen aller Elemente eines Arrays ist wie folgt aus:
 
-     [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]
 
 Wie Sie mit dem obigen Liste-Beispiel, das Sie aufrufen können `RemoveAll` So entfernen Sie alle Elemente in einem Array oder `RemoveAt` um ein einzelnes Element zu entfernen.
 
@@ -82,9 +82,9 @@ Wie Sie mit dem obigen Liste-Beispiel, das Sie aufrufen können `RemoveAll` So e
 
 1. Rufen Sie die `RemoveAll` Funktion, um alle Elemente aus der Zuordnung entfernen, nachdem sie gelöscht wurden.
 
-     Der Code zum Löschen aller Elemente einer `CMap` Auflistung lautet wie folgt. Jedes Element in der Zuordnung ist eine Zeichenfolge als Schlüssel und ein `CPerson` Objekt (abgeleitet von `CObject`) als Wert.
+   Der Code zum Löschen aller Elemente einer `CMap` Auflistung lautet wie folgt. Jedes Element in der Zuordnung ist eine Zeichenfolge als Schlüssel und ein `CPerson` Objekt (abgeleitet von `CObject`) als Wert.
 
-     [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]
+   [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]
 
 Rufen Sie `RemoveAll` So entfernen Sie alle Elemente in einer Karte oder `RemoveKey` um ein einzelnes Element mit dem angegebenen Schlüssel zu entfernen.
 

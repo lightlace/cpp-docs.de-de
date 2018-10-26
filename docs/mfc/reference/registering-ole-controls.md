@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9008ba16d52987e4d7f14b5692cdf349951f83a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 27e0589e7ba0b2428f4cfea1d2561ef5e666641e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407711"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054162"
 ---
 # <a name="registering-ole-controls"></a>Registrieren des OLE-Steuerelements
 
@@ -86,7 +86,7 @@ Enthält eine oder mehrere der folgenden Flags:
 
 - `afxRegFreeThreading` Legt das threading-Modell in der Registrierung ThreadingModel = frei.
 
-     Sie können die beiden Flags kombinieren `afxRegApartmentThreading` und `afxRegFreeThreading` festzulegende ThreadingModel = Both. Finden Sie unter [InprocServer32](/windows/desktop/com/inprocserver32) im Windows SDK für Weitere Informationen zum threading modellregistrierung.
+   Sie können die beiden Flags kombinieren `afxRegApartmentThreading` und `afxRegFreeThreading` festzulegende ThreadingModel = Both. Finden Sie unter [InprocServer32](/windows/desktop/com/inprocserver32) im Windows SDK für Weitere Informationen zum threading modellregistrierung.
 
 > [!NOTE]
 >  In MFC-Versionen vor MFC 4.2 die **Int** *nRegFlags* Parameter wurde ein Parameter "bool" *bInsertable*, die zulässige bzw. nicht Sie das Steuerelement, aus dem Einfügevorgang eingefügt werden soll Dialogfeld "Objekt".

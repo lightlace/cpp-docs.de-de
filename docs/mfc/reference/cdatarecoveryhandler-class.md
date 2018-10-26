@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7eedad2e1efb72d85da893764fbd1201b9ac4b3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1e038cc779f2a007d680eb8b2577881a55b81d4c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417279"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076671"
 ---
 # <a name="cdatarecoveryhandler-class"></a>CDataRecoveryHandler-Klasse
 
@@ -234,7 +234,6 @@ CDataRecoveryHandler(
 ### <a name="remarks"></a>Hinweise
 
 MFC-Framework erstellt automatisch eine `CDataRecoveryHandler` Objekt für Ihre Anwendung bei der Verwendung der **neues Projekt** Assistenten. Es sei denn, Sie der Wiederherstellungsverhalten für Daten oder den Neustart-Manager anpassen, erstellen Sie keine `CDataRecoveryHandler` Objekt.
-
 
 ##  <a name="createdocumentinfo"></a>  CDataRecoveryHandler::CreateDocumentInfo
 

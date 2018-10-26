@@ -76,12 +76,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a6379112de9b31de55b86cc4bc4e06a94863ac6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 509c2eb386e235e8ba7c6d2bc016ff92f6499263
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406816"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077542"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar-Klasse
 
@@ -158,7 +158,7 @@ Rufen Sie zum Aktivieren der Modus "Balken" [CMFCCaptionBar::Create](#create) un
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird veranschaulicht, wie verschiedene Methoden in der `CMFCCaptionBar` Klasse. Das Beispiel zeigt, wie Sie die Beschriftung-Steuerelement zu erstellen, legen Sie einen 3D-Rahmen der Titelleiste, legen Sie die Entfernung zwischen dem Rand der Beschriftung Leiste Elemente und dem Rand des Steuerelements Beschriftung in Pixel, legen Sie die Schaltfläche für die Titelleiste , legen Sie die QuickInfo für die Schaltfläche, legen Sie die textbezeichnung für die Titelleiste, legen Sie das Bitmap-Bild für die Titelleiste und legen Sie die QuickInfo für das Bild in der Titelleiste. Dieser Codeausschnitt ist Teil der [MS Office 2007-Demo-Beispiel](../../visual-cpp-samples.md).
+Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in der `CMFCCaptionBar` -Klasse. Das Beispiel zeigt, wie Sie die Beschriftung-Steuerelement zu erstellen, legen Sie einen 3D-Rahmen der Titelleiste, legen Sie die Entfernung zwischen dem Rand der Beschriftung Leiste Elemente und dem Rand des Steuerelements Beschriftung in Pixel, legen Sie die Schaltfläche für die Titelleiste , legen Sie die QuickInfo für die Schaltfläche, legen Sie die textbezeichnung für die Titelleiste, legen Sie das Bitmap-Bild für die Titelleiste und legen Sie die QuickInfo für das Bild in der Titelleiste. Dieser Codeausschnitt ist Teil der [MS Office 2007-Demo-Beispiel](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#1](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_1.h)]
 [!code-cpp[NVC_MFC_MSOffice2007Demo#2](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_2.cpp)]
@@ -525,7 +525,6 @@ void SetBitmap(
     COLORREF clrTransparent,
     BOOL bStretch=FALSE,
     BarElementAlignment bmpAlignment=ALIGN_RIGHT);
-
 
 void SetBitmap(
     UINT uiBmpResID,

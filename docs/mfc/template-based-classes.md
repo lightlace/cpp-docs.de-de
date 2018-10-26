@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 680ff7d339f592cf112a91fc303a6367fbc4805b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b972d4552a8e41ca0dcea4ef57d48ef161ea35b9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408752"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069229"
 ---
 # <a name="template-based-classes"></a>Vorlagenbasierte Klassen
 
@@ -47,11 +47,11 @@ MFC verfügt über vordefinierte zwei Kategorien von vorlagenbasierte Auflistung
 
 - [Einfache Zuordnungsklassen für Arrays, Liste und](#_core_using_simple_array.2c_.list.2c_.and_map_templates)
 
-     `CArray`, `CList`, `CMap`
+   `CArray`, `CList`, `CMap`
 
 - [Arrays, Listen und Zuordnungen von typisierter Zeiger](#_core_using_typed.2d.pointer_collection_templates)
 
-     `CTypedPtrArray`, `CTypedPtrList`, `CTypedPtrMap`
+   `CTypedPtrArray`, `CTypedPtrList`, `CTypedPtrMap`
 
 Einfache Auflistung werden alle von abgeleiteten Klassen Klasse `CObject`, sodass sie die Serialisierung, die dynamische Erstellung und andere Eigenschaften des erben `CObject`. Der typisierte zeigerauflistungsklassen müssen Sie die Klasse an, Sie abgeleitet, die einer der vordefinierten von MFC, wie z. B. Zeiger nicht auf Vorlagen basierende Sammlungen sein muss `CPtrList` oder `CPtrArray`. Die neue Sammlung-Klasse erbt die angegebene Klasse aus, und der neuen Klasse-Memberfunktionen verwenden gekapselten Aufrufe an die Member der Basisklasse, um die typsicherheit zu erzwingen.
 

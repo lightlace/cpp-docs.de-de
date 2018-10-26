@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e760bab6fb3ad420fc6fe0f5c8a2ea6addc652ac
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 597825c89b19c15872c831c675981e68345aa947
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019417"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068218"
 ---
 # <a name="iobjectsafetyimpl-class"></a>IObjectSafetyImpl-Klasse
 
@@ -94,7 +94,7 @@ Beachten Sie, dass die Verwendung der [IMPLEMENTED_CATEGORY](category-macros.md#
 Ruft ab, die vom Objekt unterstützten Safety-Optionen sowie die Safety-Optionen, die derzeit für das Objekt festgelegt.
 
 ```
-HRESULT GetInterfaceSafetyOptions(  
+HRESULT GetInterfaceSafetyOptions(
     REFIID riid,
     DWORD* pdwSupportedOptions,
     DWORD* pdwEnabledOptions);
@@ -122,7 +122,7 @@ DWORD m_dwCurrentSafety;
 Stellt das Objekt sicher für die Initialisierung oder die Skripterstellung durch Festlegen der [M_dwCurrentSafety](#m_dwcurrentsafety) Member auf den entsprechenden Wert.
 
 ```
-HRESULT SetInterfaceSafetyOptions(  
+HRESULT SetInterfaceSafetyOptions(
     REFIID riid,
     DWORD dwOptionsSetMask,
     DWORD dwEnabledOptions);

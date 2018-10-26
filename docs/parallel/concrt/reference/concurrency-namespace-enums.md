@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69b11a78d1be76895b9687d1423df74c51fe3d39
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 49ae12184189996561717874833d6cdf3f30e159
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416694"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078843"
 ---
 # <a name="concurrency-namespace-enums"></a>Concurrency-Namespace-Enumerationen
 
@@ -44,6 +44,7 @@ Die gültigen Zustände für einen `agent`.
 ```
 enum agent_status;
 ```
+
 ### <a name="values"></a>Werte
 
 |Name|Beschreibung|
@@ -94,6 +95,7 @@ Die Typen von Ereignissen, die mit der von der Concurrency Runtime angebotenen A
 ```
 enum ConcRT_EventType;
 ```
+
 ### <a name="values"></a>Werte
 
 |Name|Beschreibung|
@@ -119,6 +121,7 @@ Ablaufverfolgungskennzeichen für die Ereignistypen
 ```
 enum Concrt_TraceFlags;
 ```
+
 ### <a name="values"></a>Werte
 
 |Name|Beschreibung|
@@ -142,6 +145,7 @@ Der Typ eines kritischen Bereichs, in dem sich ein Kontext befindet.
 ```
 enum CriticalRegionType;
 ```
+
 ### <a name="values"></a>Werte
 
 |Name|Beschreibung|
@@ -161,6 +165,7 @@ Wird von der `DynamicProgressFeedback`-Richtlinie verwendet, um zu beschreiben, 
 ```
 enum DynamicProgressFeedbackType;
 ```
+
 ### <a name="values"></a>Werte
 
 |Name|Beschreibung|
@@ -174,6 +179,7 @@ Der Typ eines `join`-Meldungsblocks.
 ```
 enum join_type;
 ```
+
 ### <a name="values"></a>Werte
 
 |Name|Beschreibung|
@@ -192,6 +198,7 @@ Die gültigen Antworten für das Angebot eines `message`-Objekts für einen Bloc
 ```
 enum message_status;
 ```
+
 ### <a name="values"></a>Werte
 
 |Name|Beschreibung|
@@ -212,6 +219,7 @@ Richtlinienschlüssel, die Aspekte des Planerverhaltens beschreiben. Jedes Richt
 ```
 enum PolicyElementKey;
 ```
+
 ### <a name="values"></a>Werte
 
 |Name|Beschreibung|
@@ -258,6 +266,7 @@ Wird von der `SchedulingProtocol`-Richtlinie verwendet, um zu beschreiben, welch
 ```
 enum SchedulingProtocolType;
 ```
+
 ### <a name="values"></a>Werte
 
 |Name|Beschreibung|
@@ -276,6 +285,7 @@ Wird verwendet, um den Zustand zu bezeichnen, in dem sich ein Threadproxy befind
 ```
 enum SwitchingProxyState;
 ```
+
 ### <a name="values"></a>Werte
 
 |Name|Beschreibung|
@@ -297,6 +307,7 @@ Beschreibt den Ausführungsstatus eines `task_group`-Objekts oder eines `structu
 ```
 enum task_group_status;
 ```
+
 ### <a name="values"></a>Werte
 
 |Name|Beschreibung|
@@ -316,6 +327,7 @@ Wird von der `WinRTInitialization`-Richtlinie verwendet, um zu beschreiben, ob u
 ```
 enum WinRTInitializationType;
 ```
+
 ### <a name="values"></a>Werte
 
 |Name|Beschreibung|

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26e59888a26b5f71b697e398e81b16012dd35e3a
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: c9844c610a1b5bffab8f5fba67daff90a52412e4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539796"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065173"
 ---
 # <a name="includealias"></a>include_alias
 
@@ -31,12 +31,12 @@ Gibt an, dass *Short_filename* als Alias für verwendet werden soll *Long_filena
 
 ## <a name="syntax"></a>Syntax
 
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>Pragma-Include_alias ("*Long_filename*","*Short_filename*")  
+> #<a name="pragma-includealiaslongfilename-shortfilename"></a>Pragma-Include_alias ("*Long_filename*","*Short_filename*")
 > #<a name="pragma-includealiaslongfilename-shortfilename"></a>Pragma-Include_alias (*Long_filename*, *Short_filename*)
 
 ## <a name="remarks"></a>Hinweise
 
-Einige Dateisysteme unterstützen längere Headerdateinamen als das 8.3-FAT-Dateisystem. Der Compiler kann die längeren Namen nicht einfach bis 8.3 abschneiden, da die ersten acht Zeichen der längeren Headerdateinamen möglicherweise nicht eindeutig sind. Jedes Mal, wenn der Compiler erkennt die *Long_filename* Zeichenfolge ist, ersetzt er *Short_filename*, und sucht nach der Headerdatei *Short_filename* stattdessen. Dieses Pragma muss vor den entsprechenden `#include`-Direktiven eingefügt werden. Zum Beispiel:
+Einige Dateisysteme unterstützen längere Headerdateinamen als das 8.3-FAT-Dateisystem. Der Compiler kann die längeren Namen nicht einfach bis 8.3 abschneiden, da die ersten acht Zeichen der längeren Headerdateinamen möglicherweise nicht eindeutig sind. Jedes Mal, wenn der Compiler erkennt die *Long_filename* Zeichenfolge ist, ersetzt er *Short_filename*, und sucht nach der Headerdatei *Short_filename* stattdessen. Dieses Pragma muss vor den entsprechenden `#include`-Anweisungen eingefügt werden. Zum Beispiel:
 
 ```cpp
 // First eight characters of these two files not unique.
@@ -59,7 +59,7 @@ Der Alias, nach dem gesucht wird, muss genau der Spezifikation entsprechen. Dies
 ```
 
 kein Aliasing (Ersetzung) ausgeführt, da die Headerdateizeichenfolgen nicht genau übereinstimmen. Darüber hinaus die Headerdateinamen, die als Argumente für die `/Yu` und `/Yc` Compileroptionen, oder die `hdrstop` Pragma werden nicht ersetzt. Wenn beispielsweise die Quelldatei die folgenden Anweisungen enthält,
-  
+
 ```cpp
 #include <AppleSystemHeaderStop.h>
 ```
@@ -111,7 +111,7 @@ Beachten Sie außerdem, dass Transitivität nicht unterstützt wird. Im Falle de
 #include "one.h"
 ```
 
-Der Compiler sucht die Datei TWO.H. statt THREE.H.  
+Der Compiler sucht die Datei TWO.H. statt THREE.H.
 
 ## <a name="see-also"></a>Siehe auch
 

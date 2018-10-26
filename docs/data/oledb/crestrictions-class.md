@@ -24,88 +24,88 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2e850b5ebad231b07ce7d6c7dca79126a9b2ba15
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: a4ea0536a8af87927521f88d888e19aa145f2c04
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082357"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072069"
 ---
 # <a name="crestrictions-class"></a>CRestrictions-Klasse
 
-Eine generische Klasse, die Sie Einschränkungen für Schemarowsets angeben kann.  
-  
+Eine generische Klasse, die Sie Einschränkungen für Schemarowsets angeben kann.
+
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-template <class T, short nRestrictions, const GUID* pguid>  
-class CRestrictions : 
-   public CSchemaRowset <T, nRestrictions>  
-```  
-  
-### <a name="parameters"></a>Parameter  
+template <class T, short nRestrictions, const GUID* pguid>
+class CRestrictions :
+   public CSchemaRowset <T, nRestrictions>
+```
+
+### <a name="parameters"></a>Parameter
 
 *T*<br/>
-Die Klasse, die für den Accessor verwendet wird.  
-  
+Die Klasse, die für den Accessor verwendet wird.
+
 *nRestrictions*<br/>
-Die Anzahl der Einschränkungsspalten für das Schemarowset.  
-  
+Die Anzahl der Einschränkungsspalten für das Schemarowset.
+
 *pguid*<br/>
-Ein Zeiger auf die GUID für das Schema.  
+Ein Zeiger auf die GUID für das Schema.
 
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Anforderungen
 
-**Header:** atldbsch.h 
-  
-## <a name="members"></a>Member  
-  
-### <a name="methods"></a>Methoden  
-  
-|||  
-|-|-|  
-|[Öffnen](#open)|Gibt ein Resultset, die gemäß den vom Benutzer anzugebende Einschränkungen zurück.|   
+**Header:** atldbsch.h
+
+## <a name="members"></a>Member
+
+### <a name="methods"></a>Methoden
+
+|||
+|-|-|
+|[Öffnen](#open)|Gibt ein Resultset, die gemäß den vom Benutzer anzugebende Einschränkungen zurück.|
 
 ## <a name="open"></a> CRestrictions:: Open
 
-Gibt ein Resultset, die gemäß den vom Benutzer anzugebende Einschränkungen zurück.  
-  
-### <a name="syntax"></a>Syntax  
-  
+Gibt ein Resultset, die gemäß den vom Benutzer anzugebende Einschränkungen zurück.
+
+### <a name="syntax"></a>Syntax
+
 ```cpp
-HRESULT Open(const CSession& session,  
-   LPCTSTR lpszParam 1 = NULL,  
-   LPCTSTR lpszParam 2 = NULL,  
-   LPCTSTR lpszParam 3 = NULL,  
-   LPCTSTR lpszParam 4 = NULL,  
-   LPCTSTR lpszParam 5 = NULL,  
-   LPCTSTR lpszParam 6 = NULL,  
-   LPCTSTR lpszParam 7 = NULL,  
-   bool bBind = true);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+HRESULT Open(const CSession& session,
+   LPCTSTR lpszParam 1 = NULL,
+   LPCTSTR lpszParam 2 = NULL,
+   LPCTSTR lpszParam 3 = NULL,
+   LPCTSTR lpszParam 4 = NULL,
+   LPCTSTR lpszParam 5 = NULL,
+   LPCTSTR lpszParam 6 = NULL,
+   LPCTSTR lpszParam 7 = NULL,
+   bool bBind = true);
+```
+
+#### <a name="parameters"></a>Parameter
 
 *Sitzung*<br/>
-[in] Gibt ein vorhandenes Session-Objekt, das für die Verbindung mit der Datenquelle verwendet.  
-  
+[in] Gibt ein vorhandenes Session-Objekt, das für die Verbindung mit der Datenquelle verwendet.
+
 *lpszParam*<br/>
-[in] Gibt die Einschränkungen für das Schemarowset.  
-  
+[in] Gibt die Einschränkungen für das Schemarowset.
+
 *bBind*<br/>
-[in] Gibt an, ob die spaltenzuordnung automatisch zu binden. Der Standardwert ist **"true"**, der bewirkt, dass der spaltenzuordnung automatisch gebunden werden soll. Festlegen von *bBind* zu **"false"** wird verhindert, dass die automatische Bindung der Spalte-Zuordnung aus, damit Sie manuell binden können. (Manuelle Bindung ist von besonderem Interesse für OLAP-Benutzer.)  
-  
-### <a name="return-value"></a>Rückgabewert  
+[in] Gibt an, ob die spaltenzuordnung automatisch zu binden. Der Standardwert ist **"true"**, der bewirkt, dass der spaltenzuordnung automatisch gebunden werden soll. Festlegen von *bBind* zu **"false"** wird verhindert, dass die automatische Bindung der Spalte-Zuordnung aus, damit Sie manuell binden können. (Manuelle Bindung ist von besonderem Interesse für OLAP-Benutzer.)
 
-Einer der standardmäßigen HRESULT-Werte.  
-  
-### <a name="remarks"></a>Hinweise  
+### <a name="return-value"></a>Rückgabewert
 
-Sie können maximal sieben Einschränkungen für ein Schemarowset angeben.  
-  
-Finden Sie unter [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) für Informationen zu den definierten Einschränkungen für jedes Schemarowset.  
-  
-## <a name="see-also"></a>Siehe auch  
+Einer der standardmäßigen HRESULT-Werte.
+
+### <a name="remarks"></a>Hinweise
+
+Sie können maximal sieben Einschränkungen für ein Schemarowset angeben.
+
+Finden Sie unter [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) für Informationen zu den definierten Einschränkungen für jedes Schemarowset.
+
+## <a name="see-also"></a>Siehe auch
 
 [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

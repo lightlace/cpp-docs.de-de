@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ccb638669712222cac2dee522bf729766a4bc93
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e76dc8ca4a61839b893b4328bdb9d606424def91
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402264"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062231"
 ---
 # <a name="cview-class"></a>CView-Klasse
 
@@ -196,7 +196,7 @@ BOOL DoPreparePrinting(CPrintInfo* pInfo);
 ### <a name="parameters"></a>Parameter
 
 *"pInfo"*<br/>
-Verweist auf eine [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) Struktur, die den aktuellen Druckauftrag beschreibt.
+Verweist auf eine [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) -Struktur, die den aktuellen Druckauftrag beschreibt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -319,13 +319,13 @@ virtual void OnBeginPrinting(
 Verweist auf den Druckergerätekontext.
 
 *"pInfo"*<br/>
-Verweist auf eine [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) Struktur, die den aktuellen Druckauftrag beschreibt.
+Verweist auf eine [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) -Struktur, die den aktuellen Druckauftrag beschreibt.
 
 ### <a name="remarks"></a>Hinweise
 
-Bei der Standardimplementierung dieser Funktion wird keine Aktion ausgeführt. Überschreiben Sie diese Funktion, um alle speziell für den Druck benötigten GDI-Ressourcen, z. B. Stifte oder Schriftarten, zuzuordnen. Wählen Sie die GDI-Objekte im Gerätekontext aus der [OnPrint](#onprint) Memberfunktion für jede Seite, die sie verwendet. Wenn Sie das gleiche Ansichtsobjekt verwenden, um den Bildschirm anzuzeigen und zu drucken, verwenden Sie separate Variablen für die für jeden Bildschirm erforderlichen GDI-Ressourcen. Dadurch können Sie den Bildschirm während des Druckens aktualisieren.
+Bei der Standardimplementierung dieser Funktion wird keine Aktion ausgeführt. Überschreiben Sie diese Funktion, um alle speziell für den Druck benötigten GDI-Ressourcen, z. B. Stifte oder Schriftarten, zuzuordnen. Wählen Sie die GDI-Objekte für den Gerätekontext aus der [OnPrint](#onprint) -Memberfunktion für jede Seite auf, von der sie verwendet werden. Wenn Sie das gleiche Ansichtsobjekt verwenden, um den Bildschirm anzuzeigen und zu drucken, verwenden Sie separate Variablen für die für jeden Bildschirm erforderlichen GDI-Ressourcen. Dadurch können Sie den Bildschirm während des Druckens aktualisieren.
 
-Mit dieser Funktion können Sie auch Initialisierungen durchführen, die von Eigenschaften des Druckergerätekontextes abhängig sind. Beispielsweise kann die Anzahl der Seiten, die zum Drucken des Dokuments benötigt werden, von den Einstellungen abhängig sein, die der Benutzer im Dialogfeld „Drucken“ (z. B. Seitenlänge) angibt. In einem solchen Fall können Sie die Länge des Dokuments im angeben können nicht die [OnPreparePrinting](#onprepareprinting) Member-Funktion, in dem Sie würde dies normal tun; Sie müssen warten, bis der Druckergerätekontext basierend auf den Einstellungen des Dialogfelds erstellt wurde. [OnBeginPrinting](#onbeginprinting) ist die erste überschreibbare Funktion, die Sie erhalten Zugriff auf die [CDC](../../mfc/reference/cdc-class.md) Objekt, das den Druckergerätekontext darstellt, daher können Sie die Länge des Dokuments mithilfe dieser Funktion festlegen. Wenn die Länge des Dokuments nicht zu diesem Zeitpunkt angegeben wird, wird in der Seitenansicht keine Bildlaufleiste angezeigt.
+Mit dieser Funktion können Sie auch Initialisierungen durchführen, die von Eigenschaften des Druckergerätekontextes abhängig sind. Beispielsweise kann die Anzahl der Seiten, die zum Drucken des Dokuments benötigt werden, von den Einstellungen abhängig sein, die der Benutzer im Dialogfeld „Drucken“ (z. B. Seitenlänge) angibt. In einem solchen Fall können Sie die Länge des Dokuments nicht wie normalerweise in der [OnPreparePrinting](#onprepareprinting) -Memberfunktion angeben; Sie müssen warten, bis der Druckergerätekontext basierend auf den Einstellungen des Dialogfelds erstellt wurde. [OnBeginPrinting](#onbeginprinting) ist die erste überschreibbare Funktion, die Ihnen sofortigen Zugriff auf das [CDC](../../mfc/reference/cdc-class.md) -Objekt gibt, das den Druckergerätekontext darstellt, daher können Sie die Länge des Dokuments mithilfe dieser Funktion festlegen. Wenn die Länge des Dokuments nicht zu diesem Zeitpunkt angegeben wird, wird in der Seitenansicht keine Bildlaufleiste angezeigt.
 
 ##  <a name="ondragenter"></a>  CView::OnDragEnter
 
@@ -602,7 +602,7 @@ virtual void OnEndPrinting(
 Verweist auf den Druckergerätekontext.
 
 *"pInfo"*<br/>
-Verweist auf eine [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) Struktur, die den aktuellen Druckauftrag beschreibt.
+Verweist auf eine [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) -Struktur, die den aktuellen Druckauftrag beschreibt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -626,7 +626,7 @@ virtual void OnEndPrintPreview(
 Verweist auf den Druckergerätekontext.
 
 *"pInfo"*<br/>
-Verweist auf eine [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) Struktur, die den aktuellen Druckauftrag beschreibt.
+Verweist auf eine [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) -Struktur, die den aktuellen Druckauftrag beschreibt.
 
 *Zeigen Sie*<br/>
 Legt den Punkt auf der Seite, die zuletzt im Vorschaumodus angezeigt wurde.
@@ -701,7 +701,7 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 ### <a name="parameters"></a>Parameter
 
 *"pInfo"*<br/>
-Verweist auf eine [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) Struktur, die den aktuellen Druckauftrag beschreibt.
+Verweist auf eine [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) -Struktur, die den aktuellen Druckauftrag beschreibt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -757,7 +757,7 @@ Das Framework ruft diese Funktion für jede Seite gedruckt wird, sofort nach dem
 
 - Machen Sie das gedruckte Bild unterscheiden sich von der Bildschirmanzeige (d.h., wenn Ihre Anwendung nicht WYSIWYG ist). Anstelle der Übergabe des Druckers-Gerätekontext zu `OnDraw`, verwenden Sie den Gerätekontext zum Rendern eines Abbilds mithilfe von Attributen, die nicht auf dem Bildschirm angezeigt.
 
-     Bei Bedarf von GDI-Ressourcen für den Druck, die Sie nicht für die Bildschirmanzeige verwenden, wählen Sie sie in den Gerätekontext vor dem Zeichnen, und heben sie deren Auswahl anschließend. Diese GDI-Ressourcen zugewiesen werden soll, im [OnBeginPrinting](#onbeginprinting) und veröffentlichte in [OnEndPrinting](#onendprinting).
+   Bei Bedarf von GDI-Ressourcen für den Druck, die Sie nicht für die Bildschirmanzeige verwenden, wählen Sie sie in den Gerätekontext vor dem Zeichnen, und heben sie deren Auswahl anschließend. Diese GDI-Ressourcen zugewiesen werden soll, im [OnBeginPrinting](#onbeginprinting) und veröffentlichte in [OnEndPrinting](#onendprinting).
 
 - So implementieren Sie Kopf- oder Fußzeilen Sie können weiterhin verwenden `OnDraw` möchten Sie das Rendering durch Einschränken des Bereichs, der auf dem sie drucken kann.
 

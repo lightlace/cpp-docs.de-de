@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 254dffebc258867088f738b10a11bf48d31bd0a4
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 97cf6ccad0a3b30c0abfa0076ea9c6a30b205d67
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990062"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065199"
 ---
 # <a name="openmp-data-types"></a>OpenMP-Datentypen
 
@@ -33,10 +33,10 @@ Enthält Links zu den Datentypen, die in der OpenMP-API verwendet.
 
 Die Visual C++-Implementierung von der OpenMP-standard umfasst die folgenden Datentypen.
 
-Datentyp                           | Beschreibung
------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[omp_lock_t](#omp-lock-t)           | Ein Typ, der den Status einer Sperre, gibt an, ob die Sperre verfügbar ist oder wenn ein Thread eine Sperre besitzt enthält.
-[omp_nest_lock_t](#omp-nest-lock-t) | Ein Typ, der eines der folgenden Angaben zu einer Sperre enthält:, ob die Sperre verfügbar ist, und die Identität des Threads, die Sperre und die Schachtelung Anzahl besitzt.
+|Datentyp|Beschreibung|
+|---------|-----------|
+|[omp_lock_t](#omp-lock-t)|Ein Typ, der den Status einer Sperre, gibt an, ob die Sperre verfügbar ist oder wenn ein Thread eine Sperre besitzt enthält.|
+|[omp_nest_lock_t](#omp-nest-lock-t)|Ein Typ, der eines der folgenden Angaben zu einer Sperre enthält:, ob die Sperre verfügbar ist, und die Identität des Threads, die Sperre und die Schachtelung Anzahl besitzt.|
 
 ## <a name="omp-lock-t"></a>omp_lock_t
 
@@ -44,17 +44,17 @@ Ein Typ, der den Status einer Sperre, gibt an, ob die Sperre verfügbar ist oder
 
 Die folgenden Funktionen verwenden `omp_lock_t`:
 
-- [omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md)
-- [omp_destroy_lock](../../../parallel/openmp/reference/omp-destroy-lock.md)
-- [omp_set_lock](../../../parallel/openmp/reference/omp-set-lock.md)
-- [omp_unset_lock](../../../parallel/openmp/reference/omp-unset-lock.md)
-- [omp_test_lock](../../../parallel/openmp/reference/omp-test-lock.md)
+- [omp_init_lock](openmp-functions.md#omp-init-lock)
+- [omp_destroy_lock](openmp-functions.md#omp-destroy-lock)
+- [omp_set_lock](openmp-functions.md#omp-set-lock)
+- [omp_unset_lock](openmp-functions.md#omp-unset-lock)
+- [omp_test_lock](openmp-functions.md#omp-test-lock)
 
 Weitere Informationen finden Sie unter [3.2 Lock-Funktionen](../../../parallel/openmp/3-2-lock-functions.md).
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [Omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md) ein Beispiel der Verwendung von `omp_lock_t`.
+Finden Sie unter [Omp_init_lock](openmp-functions.md#omp-init-lock) ein Beispiel der Verwendung von `omp_lock_t`.
 
 ## <a name="omp-nest-lock-t"></a>aufgerufen
 
@@ -62,14 +62,14 @@ Ein Typ, der die folgenden Angaben zu einer Sperre enthält:, ob die Sperre verf
 
 Die folgenden Funktionen verwenden `omp_nest_lock_t`:
 
-- [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)
-- [omp_destroy_nest_lock](../../../parallel/openmp/reference/omp-destroy-nest-lock.md)
-- [omp_set_nest_lock](../../../parallel/openmp/reference/omp-set-nest-lock.md)
-- [omp_unset_nest_lock](../../../parallel/openmp/reference/omp-unset-nest-lock.md)
-- [omp_test_nest_lock](../../../parallel/openmp/reference/omp-test-nest-lock.md)
+- [omp_init_nest_lock](openmp-functions.md#omp-init-nest-lock)
+- [omp_destroy_nest_lock](openmp-functions.md#omp-destroy-nest-lock)
+- [omp_set_nest_lock](openmp-functions.md#omp-set-nest-lock)
+- [omp_unset_nest_lock](openmp-functions.md#omp-unset-nest-lock)
+- [omp_test_nest_lock](openmp-functions.md#omp-test-nest-lock)
 
 Weitere Informationen finden Sie unter [3.2 Lock-Funktionen](../../../parallel/openmp/3-2-lock-functions.md).
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [Omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md) ein Beispiel der Verwendung von `omp_nest_lock_t`.
+Finden Sie unter [Omp_init_nest_lock](openmp-functions.md#omp-init-nest-lock) ein Beispiel der Verwendung von `omp_nest_lock_t`.

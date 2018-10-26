@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b025e29c93cffe9c600646a2475f7e3230fd03
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a654f820d3c1dcdaa49ed8b3b3203d2c271b6880
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039542"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055480"
 ---
 # <a name="connection-point-macros"></a>Verbindungspunkt-Makros
 
@@ -33,7 +33,7 @@ Diese Makros definieren Punkt verbindungszuordnungen und Einträge.
 |[BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map)|Markiert den Beginn der Zuordnungseintrags Punkt-Verbindung.|
 |[CONNECTION_POINT_ENTRY](#connection_point_entry)|Gibt ein Verbindungspunkte in der Zuordnung.|
 |[CONNECTION_POINT_ENTRY_P](#connection_point_entry)| (Visual Studio 2017) Ähnlich wie CONNECTION_POINT_ENTRY hat jedoch einen Zeiger auf die Iid.|
-|[END_CONNECTION_POINT_MAP](#end_connection_point_map)|Markiert das Ende der Zuordnungseintrags Punkt-Verbindung.|  
+|[END_CONNECTION_POINT_MAP](#end_connection_point_map)|Markiert das Ende der Zuordnungseintrags Punkt-Verbindung.|
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,7 +74,7 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
 ### <a name="parameters"></a>Parameter
 
 *IID*<br/>
-[in] Die GUID der Schnittstelle, die zur Verbindung Punkt Karte hinzugefügt wird. 
+[in] Die GUID der Schnittstelle, die zur Verbindung Punkt Karte hinzugefügt wird.
 
 *piid*<br/>
 [in] Zeiger auf die GUID der Schnittstelle Adde wird.

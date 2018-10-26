@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8d3db1d8c19b68adb8cec53984e0dfe5a189651
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7ff5c3f28a47eb4e1810f046a242f6170c537bf2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389864"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054931"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>Verwenden von Standardsteuerelementen in einem Dialogfeld
 
@@ -42,7 +42,7 @@ Die Windows-Standardsteuerelemente in verwendet werden können [Dialogfelder](..
 
 1. In [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) legen Sie die anfänglichen Bedingung für das allgemeine Steuerelement für die Dialogfeldklasse. Verwenden Sie die Membervariable, die im vorherigen Schritt erstellt haben, die Memberfunktionen Anfangswert und andere Einstellungen festlegen. Finden Sie unter den folgenden Beschreibungen der Steuerelemente für Details zu den Einstellungen ein.
 
-     Sie können auch [Dialogdatenaustausch](../mfc/dialog-data-exchange-and-validation.md) (DDX), um Steuerelemente in einem Dialogfeld zu initialisieren.
+   Sie können auch [Dialogdatenaustausch](../mfc/dialog-data-exchange-and-validation.md) (DDX), um Steuerelemente in einem Dialogfeld zu initialisieren.
 
 1. Können Sie die Membervariable im Handler für Steuerelemente im Dialogfeld um das Steuerelement zu bearbeiten. Die folgenden Beschreibungen der Steuerelemente für Details auf Methoden angezeigt.
 

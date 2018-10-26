@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6ef86f54442031b4383e6a0b8cc6f57e4e53d58
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a26bd11c2a37e3644333a95ed03d9182f7b32b87
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418423"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066109"
 ---
 # <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Ausnahmen: Ausnahmen in eigenen Funktionen auslösen
 
@@ -33,19 +33,19 @@ Wenn eine Ausnahme ausgelöst wird, die Ausführung der aktuellen Funktion beend
 
 1. Verwenden Sie eine der MFC-Hilfsfunktionen, z. B. `AfxThrowMemoryException`. Diese Funktionen lösen einen vorab festgelegten Exception-Objekt des entsprechenden Typs.
 
-     Im folgenden Beispiel wird eine Funktion versucht, zwei Speicherblöcke zuzuordnen, und löst eine Ausnahme aus, wenn entweder Zuordnung fehlschlägt:
+   Im folgenden Beispiel wird eine Funktion versucht, zwei Speicherblöcke zuzuordnen, und löst eine Ausnahme aus, wenn entweder Zuordnung fehlschlägt:
 
-     [!code-cpp[NVC_MFCExceptions#17](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_1.cpp)]
+   [!code-cpp[NVC_MFCExceptions#17](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_1.cpp)]
 
-     Wenn die erste Zuordnung fehlschlägt, können Sie einfach die Arbeitsspeicher-Ausnahme auslösen. Wenn die erste Zuordnung erfolgreich ist, aber das zweite Argument ein Fehler auftritt, müssen Sie die Zuordnung ist den ersten Block freigeben, vor dem Auslösen der Ausnahme. Wenn beide belegungen erfolgreich sind, können Sie normalerweise fortgesetzt und die Blöcke frei, wenn die Funktion beendet wird.
+   Wenn die erste Zuordnung fehlschlägt, können Sie einfach die Arbeitsspeicher-Ausnahme auslösen. Wenn die erste Zuordnung erfolgreich ist, aber das zweite Argument ein Fehler auftritt, müssen Sie die Zuordnung ist den ersten Block freigeben, vor dem Auslösen der Ausnahme. Wenn beide belegungen erfolgreich sind, können Sie normalerweise fortgesetzt und die Blöcke frei, wenn die Funktion beendet wird.
 
      - ODER
 
 1. Verwenden Sie eine benutzerdefinierte Ausnahme, um eine Problem-Bedingung anzugeben. Sie können ein Element eines beliebigen Typs, sogar eine ganze Klasse als Ausnahme auslösen.
 
-     Im folgenden Beispiel wird versucht, einen Sound wiederzugeben, über ein Waveformgerät und löst eine Ausnahme aus, wenn ein Fehler auftritt.
+   Im folgenden Beispiel wird versucht, einen Sound wiederzugeben, über ein Waveformgerät und löst eine Ausnahme aus, wenn ein Fehler auftritt.
 
-     [!code-cpp[NVC_MFCExceptions#18](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_2.cpp)]
+   [!code-cpp[NVC_MFCExceptions#18](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_2.cpp)]
 
 > [!NOTE]
 >  MFC Standardbehandlung von Ausnahmen gilt nur für Verweise auf `CException` Objekte (und Objekte des `CException`-abgeleiteten Klassen). Im obigen Beispiel wird MFCs-Ausnahmemechanismus umgangen werden.

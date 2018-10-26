@@ -17,20 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6857bf80aaaad36b4dcfc4fbf1330eccd03f971a
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: a9710fd4c770f17afb8902b80241179aa20344c1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250353"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060728"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>ATL-OLE DB-Anbieter-Assistent
 
 Dieser Assistent erstellt die Klassen, die einen OLE DB-Anbieter zu erstellen.
 
 > [!WARNING]
-> Dieser Code-Assistenten ist veraltet und wird in einer zukünftigen Version von Visual Studio entfernt, in Visual Studio 2017 Version 15.9. Dieser Assistent ist nur selten verwendet. Allgemeine Unterstützung für ATL und MFC wird durch das Entfernen dieses Assistenten nicht beeinträchtigt. Wenn Sie uns Ihr Feedback zu dieser Einstellung freigeben möchten, füllen Sie bitte [diese Umfrage](https://www.surveymonkey.com/r/QDWKKCN). Ihr Feedback ist uns wichtig.
-
+> Ab Version 15.9 von Visual Studio 2017 ist dieser Codeassistent veraltet. Er wird in einer zukünftigen Version von Visual Studio entfernt. Dieser Assistent wird nur selten verwendet. Die Entfernung dieses Assistenten wirkt sich nicht auf die allgemeine Unterstützung für Active Template Library (ATL) und Microsoft Foundation Classes (MFC) aus. In [dieser Umfrage](https://www.surveymonkey.com/r/QDWKKCN) können Sie Ihr Feedback zu dieser Veraltung mitteilen. Ihr Feedback ist uns wichtig.
 
 ## <a name="remarks"></a>Hinweise
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d198368dd3ed1be9110f08712de646156c98bb63
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 19e2e7120a73ed7e386b46f32d105376f3fac9b2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406775"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069242"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Exemplarische Vorgehensweise: Debuggen einer C++ AMP-Anwendung
 
@@ -40,7 +40,7 @@ Dieses Thema veranschaulicht, wie Sie eine Anwendung zu debuggen, die C++ Accele
 
 - Alle Threads von einer Kachel zu einer bestimmten Stelle im Code wird ausgeführt.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Bevor Sie in dieser exemplarischen Vorgehensweise beginnen:
 
@@ -247,27 +247,27 @@ In diesem Abschnitt wird gezeigt, wie zum Debuggen von GPU-Code, der enthaltene 
 
 1. Zum Öffnen der **GPU-Threads** wählen Sie in der Menüleiste **Debuggen** > **Windows** > **GPU-Threads**.
 
-     Sie können überprüfen, dass den Status die GPU-in Threads der **GPU-Threads** Fenster, das angezeigt wird.
+   Sie können überprüfen, dass den Status die GPU-in Threads der **GPU-Threads** Fenster, das angezeigt wird.
 
 2. Andocken der **GPU-Threads** Fenster am unteren Rand der Visual Studio. Wählen Sie die **Threadwechsel erweitern** Schaltfläche, um den Inhalt der Textfelder Kachel- und threadwerte anzuzeigen. Die **GPU-Threads** Fenster zeigt die Gesamtzahl der aktiven und blockierten GPU-Threads, wie in der folgenden Abbildung dargestellt.
 
      ![GPU-Threadfenster mit 4 aktiven Threads](../../parallel/amp/media/campc.png "Campc") GPU-Threadfenster
 
-     313 Kacheln, die für diese Berechnung zugeordnet sind. Jede Kachel enthält 32 Threads. Da lokale GPU-debugging auf einem Softwareemulator auftritt, gibt es vier aktive GPU-Threads. Die vier Threads Gleichzeitiges Ausführen von Anweisungen, und klicken Sie dann fahren Sie zusammen mit der nächsten Anweisung.
+   313 Kacheln, die für diese Berechnung zugeordnet sind. Jede Kachel enthält 32 Threads. Da lokale GPU-debugging auf einem Softwareemulator auftritt, gibt es vier aktive GPU-Threads. Die vier Threads Gleichzeitiges Ausführen von Anweisungen, und klicken Sie dann fahren Sie zusammen mit der nächsten Anweisung.
 
-     In der **GPU-Threads** Fenster gibt es vier GPU-Threads aktiv sind und 28 GPU-Threads blockiert werden, auf die [tile_barrier:: wait](reference/tile-barrier-class.md#wait) -Anweisung zu Zeile 21 definiert (`t_idx.barrier.wait();`). Alle 32 GPU-Threads gehören, auf die erste Kachel `tile[0]`. Ein Pfeil zeigt auf die Zeile, die den aktuellen Thread enthält. Verwenden Sie eine der folgenden Methoden, um in einem anderen Thread zu wechseln:
+   In der **GPU-Threads** Fenster gibt es vier GPU-Threads aktiv sind und 28 GPU-Threads blockiert werden, auf die [tile_barrier:: wait](reference/tile-barrier-class.md#wait) -Anweisung zu Zeile 21 definiert (`t_idx.barrier.wait();`). Alle 32 GPU-Threads gehören, auf die erste Kachel `tile[0]`. Ein Pfeil zeigt auf die Zeile, die den aktuellen Thread enthält. Verwenden Sie eine der folgenden Methoden, um in einem anderen Thread zu wechseln:
 
     - In der Zeile für den Thread zu wechseln, in der **GPU-Threads** Fenster öffnen Sie das Kontextmenü, und wählen Sie **zu Thread wechseln**. Wenn die Zeile mehr als einem Thread darstellt, wechseln Sie auf den ersten Thread gemäß den threadkoordinaten.
 
     - Geben Sie die Kachel- und threadwerte Werte des Threads in die entsprechenden Textfelder ein, und wählen Sie dann die **Switch Thread** Schaltfläche.
 
-     Die **Aufrufliste** Fenster zeigt die Aufrufliste des aktuellen GPU-Threads.
+   Die **Aufrufliste** Fenster zeigt die Aufrufliste des aktuellen GPU-Threads.
 
 ### <a name="to-use-the-parallel-stacks-window"></a>Verwenden Sie das Fenster "Parallele Stapel"
 
 1. Zum Öffnen der **parallele Stapel** wählen Sie in der Menüleiste **Debuggen** > **Windows** > **parallele Stapel**.
 
-     Sie können die **parallele Stapel** Fenster aus, um die Stapelrahmen von mehreren GPU-Threads gleichzeitig zu überprüfen.
+   Sie können die **parallele Stapel** Fenster aus, um die Stapelrahmen von mehreren GPU-Threads gleichzeitig zu überprüfen.
 
 2. Andocken der **parallele Stapel** Fenster am unteren Rand der Visual Studio.
 
@@ -275,19 +275,19 @@ In diesem Abschnitt wird gezeigt, wie zum Debuggen von GPU-Code, der enthaltene 
 
      ![Fenster "Parallele Stapel" mit 4 aktiven Threads](../../parallel/amp/media/campd.png "Campd") Fenster "Parallele Stapel"
 
-     32 Threads hat sich von `_kernel_stub` der Lambda-Anweisung in der `parallel_for_each` Funktionsaufruf und wählen Sie dann die `sum_kernel_tiled` -Funktion, in dem die parallele Reduzierung auftritt. 28 aus 32 Threads haben fortgeschritten, um die [tile_barrier:: wait](reference/tile-barrier-class.md#wait) Anweisung und bleiben in Zeile 22, blockiert, während die anderen 4 Threads in aktiv bleiben die `sum_kernel_tiled` Funktion in Zeile 30.
+   32 Threads hat sich von `_kernel_stub` der Lambda-Anweisung in der `parallel_for_each` Funktionsaufruf und wählen Sie dann die `sum_kernel_tiled` -Funktion, in dem die parallele Reduzierung auftritt. 28 aus 32 Threads haben fortgeschritten, um die [tile_barrier:: wait](reference/tile-barrier-class.md#wait) Anweisung und bleiben in Zeile 22, blockiert, während die anderen 4 Threads in aktiv bleiben die `sum_kernel_tiled` Funktion in Zeile 30.
 
-     Sie können die Eigenschaften eines GPU-Threads, die in verfügbaren Überprüfen der **GPU-Threads** Fenster in der umfassenden DataTip von der **parallele Stapel** Fenster. Zu diesem Zweck führen Sie den Mauszeiger auf den Stapelrahmen der **Sum_kernel_tiled**. Die folgende Abbildung zeigt den DataTip an.
+   Sie können die Eigenschaften eines GPU-Threads, die in verfügbaren Überprüfen der **GPU-Threads** Fenster in der umfassenden DataTip von der **parallele Stapel** Fenster. Zu diesem Zweck führen Sie den Mauszeiger auf den Stapelrahmen der **Sum_kernel_tiled**. Die folgende Abbildung zeigt den DataTip an.
 
      ![DataTip für Fenster "Parallele Stapel"](../../parallel/amp/media/campe.png "Campe") GPU-Thread DataTip
 
-     Weitere Informationen zu den **parallele Stapel** Fenster finden Sie unter [verwenden das Fenster "Parallele Stapel"](/visualstudio/debugger/using-the-parallel-stacks-window).
+   Weitere Informationen zu den **parallele Stapel** Fenster finden Sie unter [verwenden das Fenster "Parallele Stapel"](/visualstudio/debugger/using-the-parallel-stacks-window).
 
 ### <a name="to-use-the-parallel-watch-window"></a>Verwenden des parallelen Überwachungsfensters
 
 1. Zum Öffnen der **parallele Überwachung** wählen Sie in der Menüleiste **Debuggen** > **Windows** > **parallele Überwachung**  >  **Parallele Überwachung 1**.
 
-     Sie können die **parallele Überwachung** Fenster aus, um die Werte eines Ausdrucks über mehrere Threads hinweg zu untersuchen.
+   Sie können die **parallele Überwachung** Fenster aus, um die Werte eines Ausdrucks über mehrere Threads hinweg zu untersuchen.
 
 2. Andocken der **parallele Überwachung 1** Fenster am unteren Rand der Visual Studio. Es gibt 32 Zeilen in der Tabelle die **parallele Überwachung** Fenster. Jeder entspricht ein GPU-Thread, der in beiden GPU-Threadfenster angezeigt wurde, und die **parallele Stapel** Fenster. Jetzt können Sie Ausdrücke eingeben, deren Werte, die Sie über alle 32 GPU-Threads überprüfen möchten.
 
@@ -297,17 +297,17 @@ In diesem Abschnitt wird gezeigt, wie zum Debuggen von GPU-Code, der enthaltene 
 
 5. Wählen Sie die **Überwachung hinzufügen** erneut die Kopfzeile der Spalte, Typ `localA[localIdx[0]]`, und wählen Sie dann die **EINGABETASTE** Schlüssel.
 
-     Sie können durch einen angegebenen Ausdruck durch Auswählen der entsprechenden Spaltenüberschrift sortieren.
+   Sie können durch einen angegebenen Ausdruck durch Auswählen der entsprechenden Spaltenüberschrift sortieren.
 
-     Wählen Sie die **LocalA [LocalIdx [0]]** Spaltenheader, um die Spalte zu sortieren. Die folgende Abbildung zeigt die Ergebnisse der Sortierung nach **LocalA [LocalIdx [0]]**.
+   Wählen Sie die **LocalA [LocalIdx [0]]** Spaltenheader, um die Spalte zu sortieren. Die folgende Abbildung zeigt die Ergebnisse der Sortierung nach **LocalA [LocalIdx [0]]**.
 
      ![Fenster für parallele Überwachung mit sortierten Ergebnissen](../../parallel/amp/media/campf.png "Campf") Sortierergebnisse
 
-     Sie können den Inhalt exportieren der **parallele Überwachung** Fenster in Excel durch Auswahl der **Excel** Schaltfläche auswählen und dann **in Excel öffnen**. Wenn Sie Excel auf Ihrem Entwicklungscomputer installiert haben, wird ein Excel-Arbeitsblatt mit dem Inhalt geöffnet.
+   Sie können den Inhalt exportieren der **parallele Überwachung** Fenster in Excel durch Auswahl der **Excel** Schaltfläche auswählen und dann **in Excel öffnen**. Wenn Sie Excel auf Ihrem Entwicklungscomputer installiert haben, wird ein Excel-Arbeitsblatt mit dem Inhalt geöffnet.
 
 6. In der oberen rechten Ecke des der **parallele Überwachung** Fenster besteht ein Filtersteuerelement, das Sie verwenden können, um den Inhalt mithilfe von booleschen Ausdrücken zu filtern. Geben Sie `localA[localIdx[0]] > 20000` in das Filtertextfeld für das Steuerelement ein, und wählen Sie dann die **EINGABETASTE** Schlüssel.
 
-     Das Fenster enthält jetzt nur die Threads auf dem die `localA[localIdx[0]]` Wert ist höher als 20.000. Der Inhalt ist weiterhin sortiert nach der `localA[localIdx[0]]` Spalte, die die Sortierung Aktion ist Sie bereits ausgeführt.
+   Das Fenster enthält jetzt nur die Threads auf dem die `localA[localIdx[0]]` Wert ist höher als 20.000. Der Inhalt ist weiterhin sortiert nach der `localA[localIdx[0]]` Spalte, die die Sortierung Aktion ist Sie bereits ausgeführt.
 
 ## <a name="flagging-gpu-threads"></a>GPU-Threads kennzeichnen
 
@@ -321,20 +321,20 @@ Sie können bestimmte GPU-Threads kennzeichnen, durch kennzeichnen sie in der **
 
 3. Wählen Sie das Flaggensymbol auf der linken Seite der Zeile, die die vier Threads enthält, die jetzt aktiv sind.
 
-     Die folgende Abbildung zeigt die vier aktive gekennzeichneten Threads in der **GPU-Threads** Fenster.
+   Die folgende Abbildung zeigt die vier aktive gekennzeichneten Threads in der **GPU-Threads** Fenster.
 
      ![GPU-Threadfenster mit gekennzeichneten Threads](../../parallel/amp/media/campg.png "Campg") aktive Threads im GPU-Threadfenster
 
-     Die **parallele Überwachung** Fenster und der DataTip, der die **parallele Stapel** beide Fenster anzuzeigen, die gekennzeichneten Threads.
+   Die **parallele Überwachung** Fenster und der DataTip, der die **parallele Stapel** beide Fenster anzuzeigen, die gekennzeichneten Threads.
 
 4. Wenn Sie auf die vier Threads zu konzentrieren, die Sie gekennzeichnet werden sollen, können Sie anzeigen, in der **GPU-Threads**, **parallele Überwachung**, und **parallele Stapel** Windows, nur die gekennzeichneten Threads.
 
-     Wählen Sie die **nur gekennzeichnete Threads anzeigen** Schaltfläche auf einem Fenster oder auf die **Debugspeicherort** Symbolleiste. Die folgende Abbildung zeigt die **nur gekennzeichnete Threads anzeigen** Schaltfläche der **Debugspeicherort** Symbolleiste.
+   Wählen Sie die **nur gekennzeichnete Threads anzeigen** Schaltfläche auf einem Fenster oder auf die **Debugspeicherort** Symbolleiste. Die folgende Abbildung zeigt die **nur gekennzeichnete Threads anzeigen** Schaltfläche der **Debugspeicherort** Symbolleiste.
 
      ![Mit dem Symbol "nur gekennzeichnete Elemente anzeigen" Symbolleiste "Debugspeicherort"](../../parallel/amp/media/camph.png "Camph")
 **nur gekennzeichnete Threads anzeigen** Schaltfläche
 
-     Jetzt die **GPU-Threads**, **parallele Überwachung**, und **parallele Stapel** Fenstern werden nur die gekennzeichneten Threads angezeigt.
+   Jetzt die **GPU-Threads**, **parallele Überwachung**, und **parallele Stapel** Fenstern werden nur die gekennzeichneten Threads angezeigt.
 
 ## <a name="freezing-and-thawing-gpu-threads"></a>Sperren und Entsperren der GPU-Threads
 
@@ -348,11 +348,11 @@ Können Sie Einfrieren (anhalten) und reaktivieren (Fortsetzen) GPU-Threads aus 
 
 3. Öffnen Sie das Kontextmenü für die aktive Zeile, und wählen Sie dann **fixieren**.
 
-     Die folgende Abbildung, der die **GPU-Threads** zeigt an, dass alle vier Threads eingefroren werden.
+   Die folgende Abbildung, der die **GPU-Threads** zeigt an, dass alle vier Threads eingefroren werden.
 
      ![GPU-Threadfenster mit fixierten Threads](../../parallel/amp/media/campk.png "Campk") Threads fixiert die **GPU-Threads** Fenster
 
-     Auf ähnliche Weise die **parallele Überwachung** zeigt an, dass alle vier Threads eingefroren werden.
+   Auf ähnliche Weise die **parallele Überwachung** zeigt an, dass alle vier Threads eingefroren werden.
 
 4. Wählen Sie auf der Menüleiste **Debuggen** > **Weiter** die nächsten vier GPU-Threads nach der Barriere in Zeile 22 fortgesetzt und der Breakpoint in Zeile 30 erreichen können. Die **GPU-Threads** zeigt an, dass die vier zuvor fixierte Threads bleiben fixierte und im aktiven Zustand.
 
@@ -364,7 +364,7 @@ Können Sie Einfrieren (anhalten) und reaktivieren (Fortsetzen) GPU-Threads aus 
 
 1. Auf der rechten Maustaste auf einen der Threads in der **GPU-Threads** Fenster wählen **Group By**, **Adresse**.
 
-     Die Threads in der **GPU-Threads** Fenster nach Adresse angeordneten sind. Die Adresse entspricht den Anweisungen im Disassemblyfenster, die auf dem sich jede Gruppe von Threads befindet. 24 Threads befinden sich in Zeile 22, in denen die [tile_barrier:: Wait-Methode](reference/tile-barrier-class.md#wait) ausgeführt wird. 12-Threads werden bei der Anweisung für die Grenze in der Zeile 32. Vier dieser Threads werden gekennzeichnet. Acht Threads sind am Haltepunkt in Zeile 30. Vier dieser Threads sind eingefroren. Die folgende Abbildung zeigt die gruppierten Threads in der **GPU-Threads** Fenster.
+   Die Threads in der **GPU-Threads** Fenster nach Adresse angeordneten sind. Die Adresse entspricht den Anweisungen im Disassemblyfenster, die auf dem sich jede Gruppe von Threads befindet. 24 Threads befinden sich in Zeile 22, in denen die [tile_barrier:: Wait-Methode](reference/tile-barrier-class.md#wait) ausgeführt wird. 12-Threads werden bei der Anweisung für die Grenze in der Zeile 32. Vier dieser Threads werden gekennzeichnet. Acht Threads sind am Haltepunkt in Zeile 30. Vier dieser Threads sind eingefroren. Die folgende Abbildung zeigt die gruppierten Threads in der **GPU-Threads** Fenster.
 
      ![GPU-Threadfenster mit Threads nach Adresse angeordneten](../../parallel/amp/media/campl.png "Campl") gruppiert Threads in der **GPU-Threads** Fenster
 
@@ -382,7 +382,7 @@ Ausführen alle Threads in einer bestimmten Kachel auf die Zeile mit den Cursor 
 
 3. Klicken Sie auf der rechten Maustaste auf die **Code-Editor**, wählen Sie **aktuelle Kachel bis zum Cursor ausführen**.
 
-     24 Threads, die zuvor die Barriere in Zeile 21 blockiert wurden, haben in Zeile 32 Replikaten. Dies wird gezeigt, der **GPU-Threads** Fenster.
+   24 Threads, die zuvor die Barriere in Zeile 21 blockiert wurden, haben in Zeile 32 Replikaten. Dies wird gezeigt, der **GPU-Threads** Fenster.
 
 ## <a name="see-also"></a>Siehe auch
 

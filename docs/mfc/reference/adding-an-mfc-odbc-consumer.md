@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02323f1af8ee36d53cdd29d48989a96e61f72c60
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 15b073d361fe8dbffb7c92718f5d7522534fc7e1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406795"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052347"
 ---
 # <a name="adding-an-mfc-odbc-consumer"></a>Hinzufügen eines MFC-ODBC-Consumers
 
@@ -31,7 +31,7 @@ Ein MFC-ODBC-Consumer besteht aus einer ODBC-Recordset-Klasse und datenbindungen
 
 1. Doppelklicken Sie in Visual C++-Ordner, auf die **MFC-ODBC-Consumers** Symbol oder wählen Sie ihn, und klicken Sie auf **öffnen**.
 
-     Der MFC-ODBC-Consumer-Assistent wird geöffnet.
+   Der MFC-ODBC-Consumer-Assistent wird geöffnet.
 
 1. Definieren Sie Einstellungen wie in beschrieben [MFC-ODBC-Consumer-Assistenten](../../mfc/reference/mfc-odbc-consumer-wizard.md).
 

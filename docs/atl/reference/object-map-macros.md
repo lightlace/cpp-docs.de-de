@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b85d157cd6124bb0ef6e6167a415c018e14b046
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cfda40e857cc05a907ce4dcdc2352d52cb9cf0b5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040439"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075930"
 ---
 # <a name="object-map-macros"></a>Objektzuordnungs-Makros
 
@@ -31,7 +31,7 @@ Diese Makros definieren die Objekt-Zuordnungen und Einträge.
 |-|-|
 |[DECLARE_OBJECT_DESCRIPTION](#declare_object_description)|Ermöglicht Ihnen die Angabe ein Klassenobjekt Beschreibung, die in der objektzuordnung eingegeben wird.|
 |[OBJECT_ENTRY_AUTO](#object_entry_auto)|Ein ATL-Objekt in der objektzuordnung gelangt, wird die Registrierung und erstellt eine Instanz des Objekts.|
-|[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](#object_entry_non_createable_ex_auto)|Ermöglicht es Ihnen, anzugeben, dass das Objekt registriert und initialisiert werden sollte, jedoch nicht extern über `CoCreateInstance` erstellbar sein sollte.|  
+|[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](#object_entry_non_createable_ex_auto)|Ermöglicht es Ihnen, anzugeben, dass das Objekt registriert und initialisiert werden sollte, jedoch nicht extern über `CoCreateInstance` erstellbar sein sollte.|
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,7 +54,7 @@ DECLARE_OBJECT_DESCRIPTION( x )
 
 ATL gibt diese Beschreibung in der objektzuordnung über die [OBJECT_ENTRY_AUTO](#object_entry_auto) Makro.
 
-DECLARE_OBJECT_DESCRIPTION implementiert eine `GetObjectDescription` -Funktion, die Sie verwenden können, überschreiben die [CComCoClass::GetObjectDescription](ccomcoclass-class.md#getobjectdescription) Methode.  
+DECLARE_OBJECT_DESCRIPTION implementiert eine `GetObjectDescription` -Funktion, die Sie verwenden können, überschreiben die [CComCoClass::GetObjectDescription](ccomcoclass-class.md#getobjectdescription) Methode.
 
 Die `GetObjectDescription` Funktion wird aufgerufen, indem `IComponentRegistrar::GetComponents`. `IComponentRegistrar` ist eine Automatisierungsschnittstelle, mit dem Sie an-und Abmelden einzelne Komponenten in einer DLL. Wenn Sie ein Objekt für die Registrierung der Komponente mit dem ATL-Projekt-Assistenten erstellen, wird der Assistent automatisch implementieren die `IComponentRegistrar` Schnittstelle. `IComponentRegistrar` von Microsoft Transaction Server ist in der Regel verwendet werden.
 
@@ -84,7 +84,7 @@ OBJECT_ENTRY_AUTO( clsid, class )
 
 Objekt-Eintragsmakros befinden sich im globalen Gültigkeitsbereich des Projekts, um Unterstützung für die Registrierung, Initialisierung und Erstellung einer neuen Klasse bereitzustellen.
 
-OBJECT_ENTRY_AUTO eingibt, der Funktionszeiger der Klasse des projektverbindungserstellers und Klassenfactory Klasse des projektverbindungserstellers `CreateInstance` Funktionen für dieses Objekt in die Zuordnung der automatisch generierten ATL-Objekt. Wenn [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver) wird aufgerufen, die Registrierung des Systems für jedes Objekt in der objektzuordnung aktualisiert.  
+OBJECT_ENTRY_AUTO eingibt, der Funktionszeiger der Klasse des projektverbindungserstellers und Klassenfactory Klasse des projektverbindungserstellers `CreateInstance` Funktionen für dieses Objekt in die Zuordnung der automatisch generierten ATL-Objekt. Wenn [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver) wird aufgerufen, die Registrierung des Systems für jedes Objekt in der objektzuordnung aktualisiert.
 
 In der folgenden Tabelle wird beschrieben, wie der objektzuordnung hinzugefügten Informationen von der Klasse, die als zweiter Parameter angegeben wird, um dieses Makro abgerufen wird.
 
@@ -94,7 +94,7 @@ In der folgenden Tabelle wird beschrieben, wie der objektzuordnung hinzugefügte
 |Klasse von Factory-Erstellung|[Klassenfactory-Makros](../../atl/reference/aggregation-and-class-factory-macros.md)|
 |Instanzerstellung|[Aggregationsmakros](../../atl/reference/aggregation-and-class-factory-macros.md)|
 |Kategorie-komponentenregistrierung|[Kategorie-Makros](../../atl/reference/category-macros.md)|
-|Auf Klassenebene Initialisierung und Bereinigung|[ObjectMain](ccomobjectrootex-class.md#objectmain)|  
+|Auf Klassenebene Initialisierung und Bereinigung|[ObjectMain](ccomobjectrootex-class.md#objectmain)|
 
 ##  <a name="object_entry_non_createable_ex_auto"></a>  OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO
 

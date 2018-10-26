@@ -15,18 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68c4b389bdd8f1121a59bce1a0ca8942f077e062
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 41ae491a851d2e9a21a57ce35a54590323060881
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377156"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070593"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Exemplarische Vorgehensweise: Erstellen einer agentbasierten Anwendung
 
 In diesem Thema wird die Erstellung einer einfachen agentbasierten Anwendung beschrieben. In dieser exemplarischen Vorgehensweise können Sie einen Agent erstellen, der Daten asynchron aus einer Textdatei ausliest. Die Anwendung berechnet die Prüfsumme des Inhalts dieser Datei mithilfe des Adler-32-Prüfsummenalgorithmus.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Zum Durchführen dieser exemplarischen Vorgehensweise sollten Sie die folgenden Themen lesen:
 
@@ -64,7 +64,7 @@ In diesem Abschnitt wird die Erstellung einer Visual C++-Konsolenanwendung besch
 
 [!code-cpp[concrt-basic-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_1.h)]
 
-     The header file agents.h contains the functionality of the [concurrency::agent](../../parallel/concrt/reference/agent-class.md) class.
+   Die Headerdatei agents.h enthält die Funktionalität der [Concurrency:: Agent](../../parallel/concrt/reference/agent-class.md) Klasse.
 
 1. Überprüfen Sie, ob die Anwendung erfolgreich erstellt wurde, indem Sie sie erstellen und ausführen. Erstellen Sie die Anwendung, auf die **erstellen** im Menü klicken Sie auf **Projektmappe**. Wenn die Anwendung erfolgreich erstellt wurde, führen Sie die Anwendung, indem Sie auf **Debuggen starten** auf die **Debuggen** Menü.
 
@@ -90,19 +90,19 @@ In diesem Abschnitt wird die Erstellung der `file_reader`-Klasse beschrieben. Di
 
 [!code-cpp[concrt-basic-agent#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_4.h)]
 
-     The `_file_name` member is the file name that the agent reads from. The `_target` member is a [concurrency::ITarget](../../parallel/concrt/reference/itarget-class.md) object that the agent writes the contents of the file to. The `_error` member holds any error that occurs during the life of the agent.
+   Der `_file_name`-Member ist der Name der Datei, die vom Agent ausgelesen wird. Die `_target` Member ist ein [Concurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md) Objekt, das der Agent den Inhalt der Datei, schreibt. Der `_error`-Member speichert alle Fehler, die während der Lebensdauer des Agents auftreten.
 
 1. Fügen Sie dem `file_reader`-Abschnitt der  `public`-Klasse den folgenden Code für die `file_reader`-Konstruktoren hinzu.
 
 [!code-cpp[concrt-basic-agent#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_5.h)]
 
-     Each constructor overload sets the `file_reader` data members. The second and third constructor overload enables your application to use a specific scheduler with your agent. The first overload uses the default scheduler with your agent.
+   Mit jeder Konstruktorüberladung werden die `file_reader`-Datenmember festgelegt. Mit der zweiten und dritten Konstruktorüberladung wird es der Anwendung ermöglicht, mit dem Agent einen bestimmten Planer zu verwenden. Bei der ersten Überladung wird der Standardplaner mit dem Agent verwendet.
 
 1. Fügen Sie dem public-Abschnitt der `get_error`-Klasse die `file_reader`-Methode hinzu.
 
 [!code-cpp[concrt-basic-agent#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_6.h)]
 
-     The `get_error` method retrieves any error that occurs during the life of the agent.
+   Die `get_error`-Methode ruft alle Fehler ab, die während der Lebensdauer des Agents auftreten.
 
 1. Implementieren der [Concurrency::agent::run](reference/agent-class.md#run) -Methode in der die `protected` -Abschnitt der Klasse.
 
@@ -128,7 +128,7 @@ In diesem Abschnitt wird beschrieben, wie mithilfe der `file_reader`-Klasse der 
 
 [!code-cpp[concrt-basic-agent#8](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_9.cpp)]
 
-1. Fügen Sie in der Datei BasicAgent.cpp die folgenden `using`-Direktiven hinzu.
+1. Fügen Sie in der Datei BasicAgent.cpp die folgenden `using`-Anweisungen hinzu.
 
 [!code-cpp[concrt-basic-agent#9](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_10.cpp)]
 
@@ -140,7 +140,7 @@ In diesem Abschnitt wird beschrieben, wie mithilfe der `file_reader`-Klasse der 
 
 [!code-cpp[concrt-basic-agent#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_12.cpp)]
 
-     This `call` object also sets the `event` object when it receives the empty string to signal the end of processing.
+   Dieses `call`-Objekt legt darüber hinaus auch das `event`-Objekt fest, wenn es die leere Zeichenfolge empfängt, um das Ende der Verarbeitung zu signalisieren.
 
 1. Erstellen Sie ein `file_reader`-Objekt, das aus der Datei test.txt ausliest und den Inhalt dieser Datei in das `call`-Objekt schreibt.
 

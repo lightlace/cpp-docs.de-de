@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2241080fda6aa58dc5e70f57c83afec69a57203
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 57e685ea9ac4b1efc76f7657421d825b83f4a9b7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757337"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078621"
 ---
 # <a name="implementing-the-event-handling-interface"></a>Implementieren der Ereignisbehandlungsschnittstelle
 
@@ -37,7 +37,7 @@ Die am häufigsten verwendeten Methoden zum Implementieren einer Schnittstelle, 
 
 - Ableiten von [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) für Dispatchschnittstellen nicht beschrieben, in einer Typbibliothek oder wenn Effizienz steigern, indem Sie die Typinformationen zur Laufzeit nicht geladen werden sollen.
 
-Wenn Sie eine benutzerdefinierte oder duale Schnittstelle implementieren, sollten Sie die Ereignisquelle empfehlen, durch den Aufruf [AtlAdvise](reference/connection-point-global-functions.md#atladvise) oder [CComPtrBase:: Advise](../atl/reference/ccomptrbase-class.md#advise). Sie benötigen, um zu verfolgen das Cookie, das vom Aufruf zurückgegebene selbst. Rufen Sie [AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise) um die Verbindung trennen.  
+Wenn Sie eine benutzerdefinierte oder duale Schnittstelle implementieren, sollten Sie die Ereignisquelle empfehlen, durch den Aufruf [AtlAdvise](reference/connection-point-global-functions.md#atladvise) oder [CComPtrBase:: Advise](../atl/reference/ccomptrbase-class.md#advise). Sie benötigen, um zu verfolgen das Cookie, das vom Aufruf zurückgegebene selbst. Rufen Sie [AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise) um die Verbindung trennen.
 
 Wenn Sie eine Dispinterface mit implementieren `IDispEventImpl` oder `IDispEventSimpleImpl`, informiert Sie die Ereignisquelle durch den Aufruf [IDispEventSimpleImpl:: DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise). Rufen Sie [IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise) um die Verbindung trennen.
 
@@ -48,4 +48,3 @@ Die `IDispEventImpl` und `IDispEventSimpleImpl` Klassen verwaltet das Cookie fü
 ## <a name="see-also"></a>Siehe auch
 
 [Ereignisbehandlung](../atl/event-handling-and-atl.md)
-

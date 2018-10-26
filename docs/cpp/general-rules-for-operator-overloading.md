@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c3064da609c8a81a6e264c7f46d37d4cd5681d1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3a6eb1b97acfe2fa41511433de3990da8923de7d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107142"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059544"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Allgemeine Regeln für die Überladung von Operatoren
 
@@ -48,7 +48,7 @@ Die folgenden Regeln schränken die Art und Weise ein, wie überladene Operatore
     }
     ```
 
-     Das vorhergehende Codebeispiel deklariert den Less Than-Operator als Memberfunktion. Allerdings werden die Additionsoperatoren als globale Funktionen deklariert, die Friend-Zugriff haben. Beachten Sie, dass mehr als eine Implementierung für einen angegebenen Operator bereitgestellt werden kann. Im Fall des vorhergehenden Additionsoperators werden die beiden Implementierungen bereitgestellt, um Kommutativität zu ermöglichen. Es ist ebenso wahrscheinlich, dass Operatoren, die hinzufügen eine `Point` auf eine `Point`, **Int** auf eine `Point`, und so weiter, implementiert werden könnte.
+   Das vorhergehende Codebeispiel deklariert den Less Than-Operator als Memberfunktion. Allerdings werden die Additionsoperatoren als globale Funktionen deklariert, die Friend-Zugriff haben. Beachten Sie, dass mehr als eine Implementierung für einen angegebenen Operator bereitgestellt werden kann. Im Fall des vorhergehenden Additionsoperators werden die beiden Implementierungen bereitgestellt, um Kommutativität zu ermöglichen. Es ist ebenso wahrscheinlich, dass Operatoren, die hinzufügen eine `Point` auf eine `Point`, **Int** auf eine `Point`, und so weiter, implementiert werden könnte.
 
 - Operatoren unterliegen der Priorität, Gruppierung und Anzahl von Operanden, die durch ihre typische Verwendung mit integrierten Typen vorgegeben werden. Daher besteht keine Möglichkeit, das Konzept "Hinzufügen von 2 und 3 zu einem Objekt vom Typ `Point`," erwartet 2 hinzugefügt werden die *x* Koordinate und 3, hinzugefügt werden die *y* zu koordinieren.
 

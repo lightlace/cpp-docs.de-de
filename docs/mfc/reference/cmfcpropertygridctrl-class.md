@@ -160,12 +160,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47af9bf4a42f02ce16cc6f43e0689bfa2c5003b2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3516614809ffda8e0659379ebfc8566ea7aee942
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411687"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075982"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl-Klasse
 
@@ -247,7 +247,7 @@ class CMFCPropertyGridCtrl : public CWnd
 |[CMFCPropertyGridCtrl::IsShowDragContext](#isshowdragcontext)|Gibt an, ob das Framework zeichnet die Spalten Name und Wert der aktuellen Eigenschaftenraster-Steuerelement aus, wenn ein Benutzer die Größe der Spalten ändert.|
 |[CMFCPropertyGridCtrl::IsVSDotNetLook](#isvsdotnetlook)|Gibt an, ob die Darstellung des Eigenschaftenraster-Steuerelement in das Format ist, die von Visual Studio .NET verwendet wird.|
 |[CMFCPropertyGridCtrl::MarkModifiedProperties](#markmodifiedproperties)|Gibt an, wie geänderte Eigenschaften angezeigt.|
-|`CMFCPropertyGridCtrl::PreTranslateMessage`|Von Klasse verwendeten [CWinApp](../../mfc/reference/cwinapp-class.md) um fenstermeldungen zu übersetzen, bevor sie um weitergeleitet werden die [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows-Funktionen. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|`CMFCPropertyGridCtrl::PreTranslateMessage`|Wird von der [CWinApp](../../mfc/reference/cwinapp-class.md) -Klasse verwendet, um Fenstermeldungen zu übersetzen, bevor diese an die Windows-Funktionen [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) gesendet werden. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
 |[CMFCPropertyGridCtrl::RemoveAll](#removeall)|Entfernt alle Property-Objekte über ein Eigenschaftenraster-Steuerelement.|
 |[CMFCPropertyGridCtrl::ResetOriginalValues](#resetoriginalvalues)|Stellt den ursprünglichen Wert aller Eigenschaften.|
 |[CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode)|Legt fest oder setzt alphabetischen Modus.|
@@ -331,7 +331,6 @@ Im folgenden Beispiel wird veranschaulicht, wie ein Eigenschaftenobjekt der Grid
 
 ##  <a name="accselect"></a>  CMFCPropertyGridCtrl::accSelect
 
-
 ```
 virtual HRESULT accSelect(
     long flagsSelect,
@@ -340,8 +339,8 @@ virtual HRESULT accSelect(
 
 ### <a name="parameters"></a>Parameter
 
-*flagsSelect*<br/>
-[in] [in] *VarChild*
+[in] *FlagsSelect*<br/>
+[in] *VarChild*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -391,14 +390,13 @@ Diese Methode berechnet, wie Sie die gesamte Eigenschaftenraster-Steuerelement u
 
 ##  <a name="alwaysshowusertooltip"></a>  CMFCPropertyGridCtrl::AlwaysShowUserToolTip
 
-
 ```
 void AlwaysShowUserToolTip(BOOL bShow = TRUE);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *bShow*
+[in] *bShow*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -527,7 +525,6 @@ True, wenn diese Methode erfolgreich ist. andernfalls "false".
 Verwenden Sie diese Methode, um eine Eigenschaft, und alle zugehörigen untergeordneten Elemente, aus dem Eigenschaftenraster-Steuerelement zu löschen.
 
 ##  <a name="drawcontrolbarcolors"></a>  CMFCPropertyGridCtrl::DrawControlBarColors
-
 
 ```
 BOOL DrawControlBarColors() const;
@@ -682,14 +679,13 @@ Verwenden der [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl
 
 ##  <a name="get_accchildcount"></a>  CMFCPropertyGridCtrl::get_accChildCount
 
-
 ```
 virtual HRESULT get_accChildCount(long* pcountChildren);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *PcountChildren*
+[in] *PcountChildren*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -697,21 +693,19 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
 
 ##  <a name="get_accfocus"></a>  CMFCPropertyGridCtrl::get_accFocus
 
-
 ```
 virtual HRESULT get_accFocus(VARIANT* pvarChild);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *PvarChild*
+[in] *PvarChild*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="get_acchelp"></a>  CMFCPropertyGridCtrl::get_accHelp
-
 
 ```
 virtual HRESULT get_accHelp(
@@ -721,15 +715,14 @@ virtual HRESULT get_accHelp(
 
 ### <a name="parameters"></a>Parameter
 
-*varChild*<br/>
-[in] [in] *PszHelp*
+[in] *VarChild*<br/>
+[in] *PszHelp*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="get_acchelptopic"></a>  CMFCPropertyGridCtrl::get_accHelpTopic
-
 
 ```
 virtual HRESULT get_accHelpTopic(
@@ -740,15 +733,15 @@ virtual HRESULT get_accHelpTopic(
 
 ### <a name="parameters"></a>Parameter
 
-*pszHelpFile*<br/>
-[in] [in] *VarChild* [in] *PidTopic*
+[in] *PszHelpFile*<br/>
+[in] *VarChild*<br/>
+[in] *PidTopic*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="get_acckeyboardshortcut"></a>  CMFCPropertyGridCtrl::get_accKeyboardShortcut
-
 
 ```
 virtual HRESULT get_accKeyboardShortcut(
@@ -758,8 +751,8 @@ virtual HRESULT get_accKeyboardShortcut(
 
 ### <a name="parameters"></a>Parameter
 
-*varChild*<br/>
-[in] [in] *PszKeyboardShortcut*
+[in] *VarChild*<br/>
+[in] *PszKeyboardShortcut*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -767,14 +760,13 @@ virtual HRESULT get_accKeyboardShortcut(
 
 ##  <a name="get_accselection"></a>  CMFCPropertyGridCtrl::get_accSelection
 
-
 ```
 virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *PvarChildren*
+[in] *PvarChildren*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1136,7 +1128,6 @@ Wenn das Eigenschaftenraster-Steuerelement in der alphabetischen Modus ist, werd
 Verwenden der [CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode) zu aktivieren oder Deaktivieren von alphabetischen Modus.
 
 ##  <a name="isalwaysshowusertooltip"></a>  CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip
-
 
 ```
 BOOL IsAlwaysShowUserToolTip() const;

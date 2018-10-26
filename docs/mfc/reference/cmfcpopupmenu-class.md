@@ -1,7 +1,7 @@
 ---
 title: CMFCPopupMenu-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067f9dc580a901974a5e980eabb28c04076f3fa9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 689a3d8e2ce7b63b5f5e507343084848cf6c52f4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374541"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081744"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu-Klasse
 
@@ -312,7 +312,6 @@ Im folgende Beispiel veranschaulicht ein Popupmenü-Objekt zu konfigurieren. Im 
 
 ##  <a name="activatepopupmenu"></a>  CMFCPopupMenu::ActivatePopupMenu
 
-
 ```
 static BOOL __stdcall ActivatePopupMenu(
     CFrameWnd* pTopFrame,
@@ -321,8 +320,8 @@ static BOOL __stdcall ActivatePopupMenu(
 
 ### <a name="parameters"></a>Parameter
 
-*pTopFrame*<br/>
-[in] [in] *pPopupMenu*
+[in] *pTopFrame*<br/>
+[in] *pPopupMenu*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -342,7 +341,6 @@ static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
 [in] True, wenn Sie im Popupmenü leere Einträge angezeigt werden kann. "False" andernfalls.
 
 ##  <a name="areallcommandsshown"></a>  CMFCPopupMenu::AreAllCommandsShown
-
 
 ```
 BOOL AreAllCommandsShown() const;
@@ -387,14 +385,13 @@ Ein Parameter MENUAREA_TYPE kann es sich um eine der folgenden Werte aufweisen.
 
 ##  <a name="closemenu"></a>  CMFCPopupMenu::CloseMenu
 
-
 ```
 void CloseMenu(BOOL bSetFocusToBar = FALSE);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *bSetFocusToBar*
+[in] *bSetFocusToBar*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -470,7 +467,6 @@ Im folgenden Beispiel wird veranschaulicht, wie die `Create` Methode der `CMFCPo
 
 ##  <a name="createtearoffbar"></a>  CMFCPopupMenu::CreateTearOffBar
 
-
 ```
 virtual CPane* CreateTearOffBar(
     CFrameWnd* pWndMain,
@@ -480,15 +476,15 @@ virtual CPane* CreateTearOffBar(
 
 ### <a name="parameters"></a>Parameter
 
-*pWndMain*<br/>
-[in] [in] *UiID* [in] *Wert*
+[in] *pWndMain*<br/>
+[in] *UiID*<br/>
+[in] *Wert*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="defaultmouseclickonclose"></a>  CMFCPopupMenu::DefaultMouseClickOnClose
-
 
 ```
 virtual BOOL DefaultMouseClickOnClose() const;
@@ -541,19 +537,17 @@ Wenn Sie Sound aktivieren, um das Framework Ruft die [PlaySound](/windows/deskto
 
 ##  <a name="enableresize"></a>  CMFCPopupMenu::EnableResize
 
-
 ```
 void EnableResize(CSize sizeMinResize);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *SizeMinResize*
+[in] *SizeMinResize*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="enablescrolling"></a>  CMFCPopupMenu::EnableScrolling
-
 
 ```
 void EnableScrolling(BOOL = TRUE);
@@ -561,12 +555,11 @@ void EnableScrolling(BOOL = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *"Bool"*
+[in] *"Bool"*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="enablevertresize"></a>  CMFCPopupMenu::EnableVertResize
-
 
 ```
 void EnableVertResize(int nMinResize);
@@ -574,12 +567,11 @@ void EnableVertResize(int nMinResize);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nMinResize*
+[in] *nMinResize*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="findsubitembycommand"></a>  CMFCPopupMenu::FindSubItemByCommand
-
 
 ```
 CMFCToolBarMenuButton* FindSubItemByCommand(UINT uiCmd) const;
@@ -587,7 +579,7 @@ CMFCToolBarMenuButton* FindSubItemByCommand(UINT uiCmd) const;
 
 ### <a name="parameters"></a>Parameter
 
-[in] *UiCmd*
+[in] *UiCmd*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -657,7 +649,6 @@ Die folgende Tabelle enthält die möglichen Animationstypen.
 
 ##  <a name="getdropdirection"></a>  CMFCPopupMenu::GetDropDirection
 
-
 ```
 DROP_DIRECTION GetDropDirection() const;
 ```
@@ -683,7 +674,6 @@ True, wenn der Eingabefokus auf der Menüleiste zurückgegeben wird, wenn ein Po
 Standardmäßig gibt die Anwendung nicht den Fokus auf der Menüleiste zurück. Verwenden Sie zum Ändern dieser Einstellung [CMFCPopupMenu::SetForceMenuFocus](#setforcemenufocus).
 
 ##  <a name="getforceshadow"></a>  CMFCPopupMenu::GetForceShadow
-
 
 ```
 static BOOL __stdcall GetForceShadow();
@@ -768,14 +758,13 @@ Bei Verwendung die Methode [CMFCPopupMenu::Create](#create) um ein Popup-Menü z
 
 ##  <a name="getparentarea"></a>  CMFCPopupMenu::GetParentArea
 
-
 ```
 virtual CWnd* GetParentArea(CRect& rectParentBtn);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *RectParentBtn*
+[in] *RectParentBtn*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -817,7 +806,6 @@ Ein Popup-Menü ein übergeordnetes Element besitzt `CMFCPopupMenu` -Objekt nur,
 
 ##  <a name="getparentribbonelement"></a>  CMFCPopupMenu::GetParentRibbonElement
 
-
 ```
 CMFCRibbonBaseElement* GetParentRibbonElement() const;
 ```
@@ -843,7 +831,6 @@ Ein Zeiger auf der übergeordneten Symbolleiste. NULL, wenn Sie im Popupmenü ke
 Wenn die `CMFCPopupMenu` wird ein Kontextmenü, und keinen übergeordneten Symbolleiste hat.
 
 ##  <a name="getquickcustomizetype"></a>  CMFCPopupMenu::GetQuickCustomizeType
-
 
 ```
 QUICK_CUSTOMIZE_TYPE GetQuickCustomizeType() const;
@@ -871,7 +858,6 @@ Durch die Befehle im Menü in einem Popupmenü dargestellt die [CMFCToolBarMenuB
 
 ##  <a name="hasbeenresized"></a>  CMFCPopupMenu::HasBeenResized
 
-
 ```
 BOOL HasBeenResized() const;
 ```
@@ -897,7 +883,6 @@ True, wenn Sie im Popupmenü die selten verwendeten Befehle ausblenden kann. and
 Diese Methode gibt, dass nur, ob ein Popupmenü ausblenden kann nur selten Befehle verwendet, nicht verwendet werden, wenn die Konfiguration aktiviert ist. Ein Popup-Menü kann selten verwendete Befehle ausblenden, wenn er verfügt über eine übergeordnete-Schaltfläche und das übergeordnete Fenster ergibt sich aus der [CMFCMenuBar-Klasse](../../mfc/reference/cmfcmenubar-class.md). Verwendung [CMFCMenuBar::SetRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#setrecentlyusedmenus) zum Aktivieren dieser Funktion und [CMFCMenuBar::IsRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#isrecentlyusedmenus) zu bestimmen, ob dieses Feature derzeit aktiviert ist. Sie müssen beide Methoden für das übergeordnete Fenster aufrufen.
 
 ##  <a name="incommand"></a>  CMFCPopupMenu::InCommand
-
 
 ```
 virtual BOOL InCommand();
@@ -958,7 +943,6 @@ Diese Methode schlägt fehl, wenn *iInsertAt* ist ein ungültiger Wert.
 
 ##  <a name="isalwaysclose"></a>  CMFCPopupMenu::IsAlwaysClose
 
-
 ```
 virtual BOOL IsAlwaysClose() const;
 ```
@@ -968,7 +952,6 @@ virtual BOOL IsAlwaysClose() const;
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="isalwaysshowemptytoolsentry"></a>  CMFCPopupMenu::IsAlwaysShowEmptyToolsEntry
-
 
 ```
 static BOOL __stdcall IsAlwaysShowEmptyToolsEntry();
@@ -998,7 +981,6 @@ Die Anwendung muss diese Methode beim Aufrufen [CMDIFrameWndEx::OnShowCustomizeP
 
 ##  <a name="isescclose"></a>  CMFCPopupMenu::IsEscClose
 
-
 ```
 BOOL IsEscClose();
 ```
@@ -1025,7 +1007,6 @@ Standardmäßig ist ein Popup-Menü im Leerlaufmodus, wenn die Anzeige Animation
 
 ##  <a name="ismenusound"></a>  CMFCPopupMenu::IsMenuSound
 
-
 ```
 static UINT __stdcall IsMenuSound();
 ```
@@ -1051,7 +1032,6 @@ True, wenn die zugeordnete Speisekarte-Schaltfläche im QuickCustomize-Modus. an
 In QuickCustomize wählt Modus der Benutzer eine Schaltfläche auf einer Symbolleiste die Schaltfläche direkt angepasst.
 
 ##  <a name="isresizeble"></a>  CMFCPopupMenu::IsResizeble
-
 
 ```
 BOOL IsResizeble() const;
@@ -1080,7 +1060,6 @@ Sie können [CMFCPopupMenu::SetRightAlign](#setrightalign) die Menü-Ausrichtung
 Ausrichtung von handelt es sich nicht um eine globale Einstellung, und es kann zwischen Popupmenüs variieren.
 
 ##  <a name="isscrollable"></a>  CMFCPopupMenu::IsScrollable
-
 
 ```
 BOOL IsScrollable() const;
@@ -1120,19 +1099,17 @@ True, wenn ein Popup-Menü angezeigt wird. andernfalls "false".
 
 ##  <a name="moveto"></a>  CMFCPopupMenu::MoveTo
 
-
 ```
 void MoveTo(const CPoint& pt);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *pt*
+[in] *pt*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="onchangehot"></a>  CMFCPopupMenu::OnChangeHot
-
 
 ```
 virtual void OnChangeHot(int nHot);
@@ -1140,12 +1117,11 @@ virtual void OnChangeHot(int nHot);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nHot*
+[in] *nHot*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="onchooseitem"></a>  CMFCPopupMenu::OnChooseItem
-
 
 ```
 virtual void OnChooseItem(UINT uidCmdID);
@@ -1153,12 +1129,11 @@ virtual void OnChooseItem(UINT uidCmdID);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *UidCmdID*
+[in] *UidCmdID*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="oncmdmsg"></a>  CMFCPopupMenu::OnCmdMsg
-
 
 ```
 virtual BOOL OnCmdMsg(
@@ -1170,10 +1145,10 @@ virtual BOOL OnCmdMsg(
 
 ### <a name="parameters"></a>Parameter
 
-*nID*<br/>
-[in] [in] *nCode*
-*pExtra*<br/>
-[in] [in] *pHandlerInfo*
+[in] *nID*<br/>
+[in] *nCode*<br/>
+[in] *pExtra*<br/>
+[in] *pHandlerInfo*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1181,14 +1156,13 @@ virtual BOOL OnCmdMsg(
 
 ##  <a name="postcommand"></a>  CMFCPopupMenu::PostCommand
 
-
 ```
 BOOL PostCommand(UINT uiCommandID);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *UiCommandID*
+[in] *UiCommandID*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1196,14 +1170,13 @@ BOOL PostCommand(UINT uiCommandID);
 
 ##  <a name="pretranslatemessage"></a>  CMFCPopupMenu::PreTranslateMessage
 
-
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *pMsg*
+[in] *pMsg*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1211,14 +1184,13 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ##  <a name="recalclayout"></a>  CMFCPopupMenu::RecalcLayout
 
-
 ```
 virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *bNotify*
+[in] *bNotify*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1252,7 +1224,6 @@ True, wenn die Methode erfolgreich ist. andernfalls "false".
 Diese Methode ordnet automatisch die Trennzeichen, die durch das Entfernen eines Elements betroffen sind. Weitere Informationen, wie das Framework Trennzeichen sortiert werden, finden Sie unter [CMFCToolBar::RemoveButton](../../mfc/reference/cmfctoolbar-class.md#removebutton).
 
 ##  <a name="savestate"></a>  CMFCPopupMenu::SaveState
-
 
 ```
 virtual void SaveState();
@@ -1298,14 +1269,13 @@ Finden Sie unter [CMFCPopupMenu::GetAnimationType](#getanimationtype) eine Liste
 
 ##  <a name="setautodestroy"></a>  CMFCPopupMenu::SetAutoDestroy
 
-
 ```
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *bAutoDestroy*
+[in] *bAutoDestroy*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1379,19 +1349,17 @@ Wenn Sie einen Menübefehl zugeordnete Text nicht in die maximale Breite passen,
 
 ##  <a name="setmessagewnd"></a>  CMFCPopupMenu::SetMessageWnd
 
-
 ```
 void SetMessageWnd(CWnd* pMsgWnd);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *pMsgWnd*
+[in] *pMsgWnd*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="setparentribbonelement"></a>  CMFCPopupMenu::SetParentRibbonElement
-
 
 ```
 void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
@@ -1399,12 +1367,11 @@ void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *pElem*
+[in] *pElem*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="setquickcustomizetype"></a>  CMFCPopupMenu::SetQuickCustomizeType
-
 
 ```
 void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
@@ -1412,12 +1379,11 @@ void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Typ*
+[in] *Typ*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="setquickmode"></a>  CMFCPopupMenu::SetQuickMode
-
 
 ```
 void SetQuickMode();
@@ -1472,7 +1438,6 @@ void ShowAllCommands();
 Dies ist keine globale Einstellung und wirkt sich auf dem aktuellen Popupmenü.
 
 ##  <a name="triggerresize"></a>  CMFCPopupMenu::TriggerResize
-
 
 ```
 void TriggerResize();

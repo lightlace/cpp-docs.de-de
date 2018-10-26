@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c71bfa1eb9acb270195549eec950fb4fdf6c31b3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f41bdf8d2487d81e7c8dc9887807b05afb32acbd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438950"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060044"
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>Exemplarische Vorgehensweise: Erstellen eines Datenfluss-Agent
 
@@ -30,7 +30,7 @@ In diesem Dokument wird das Erstellen von agentbasierten Anwendungen auf Basis e
 
 Asynchrone Agents unterstützen sowohl das Ablaufsteuerungs- als auch das Datenflussprogrammiermodell. Das Ablaufsteuerungsmodell eignet sich in vielen Fällen, jedoch ist in anderen Fällen das Datenflussmodell angemessen, z. B. wenn ein Agent Daten empfängt und eine Aktion ausführt, die auf der Nutzlast dieser Daten basiert.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Lesen Sie die folgenden Dokumente, bevor Sie mit dieser exemplarischen Vorgehensweise beginnen:
 
@@ -78,7 +78,7 @@ Der Datenfluss-Agent erstellt ein Netzwerk von Nachrichtenpuffern, die jeweils e
 
 [!code-cpp[concrt-dataflow-agent#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_3.cpp)]
 
-     The `countdown_event` class is shown later in this topic.
+   Die `countdown_event`-Klasse wird weiter unten in diesem Thema dargestellt.
 
 1. Erstellen Sie die Nachrichtenpufferobjekte, die am Datenflussnetzwerk beteiligt sind.
 

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa04fdee2b63f9d91d2bdd7dfd62100b3e32a2c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ae8b15431edbdd24a7afd6c7e25be6b9eadb4107
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393320"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081390"
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>Aktualisieren des Textes in der Statusleiste
 
@@ -40,17 +40,17 @@ Nehmen wir beispielsweise an, die einen Bereich hat `ID_INDICATOR_PAGE` als die 
 
 1. Definieren Sie im Bereich der Befehls-ID.
 
-     Auf der **Ansicht** Menü klicken Sie auf **Ressourcenansicht**. Mit der rechten Maustaste der Projektressource ein, und klicken Sie auf **Ressourcensymbole**. Klicken Sie in das Dialogfeld "Ressourcensymbole" `New`. Geben Sie einen Namen der Befehls-ID: z.B. `ID_INDICATOR_PAGE`. Geben Sie einen Wert für die ID, oder übernehmen Sie den Wert, der im Dialogfeld "Ressourcensymbole" empfohlen. Beispielsweise `ID_INDICATOR_PAGE`, übernehmen Sie den Standardwert. Schließen Sie das Dialogfeld "Ressourcensymbole".
+   Auf der **Ansicht** Menü klicken Sie auf **Ressourcenansicht**. Mit der rechten Maustaste der Projektressource ein, und klicken Sie auf **Ressourcensymbole**. Klicken Sie in das Dialogfeld "Ressourcensymbole" `New`. Geben Sie einen Namen der Befehls-ID: z.B. `ID_INDICATOR_PAGE`. Geben Sie einen Wert für die ID, oder übernehmen Sie den Wert, der im Dialogfeld "Ressourcensymbole" empfohlen. Beispielsweise `ID_INDICATOR_PAGE`, übernehmen Sie den Standardwert. Schließen Sie das Dialogfeld "Ressourcensymbole".
 
 1. Definieren Sie eine Standardzeichenfolge, die im Bereich angezeigt.
 
-     Ressourcenansicht öffnen, und doppelklicken Sie auf **Zeichenfolgentabelle** im Fenster, in der Ressourcentypen, die für Ihre Anwendung aufgeführt. Mit der **Zeichenfolgentabelle** Editor geöffnet ist, wählen Sie **neue Zeichenfolge** aus der **einfügen** Menü. Wählen Sie im Fenster Eigenschaften die Befehls-ID des Bereichs (z. B. `ID_INDICATOR_PAGE`), und geben Sie einen Standardwert, wie z. B. "Page". Die Zeichenfolgen-Editor zu schließen. (Sie benötigen eine Standardzeichenfolge aus, um einen Compilerfehler zu vermeiden.)
+   Ressourcenansicht öffnen, und doppelklicken Sie auf **Zeichenfolgentabelle** im Fenster, in der Ressourcentypen, die für Ihre Anwendung aufgeführt. Mit der **Zeichenfolgentabelle** Editor geöffnet ist, wählen Sie **neue Zeichenfolge** aus der **einfügen** Menü. Wählen Sie im Fenster Eigenschaften die Befehls-ID des Bereichs (z. B. `ID_INDICATOR_PAGE`), und geben Sie einen Standardwert, wie z. B. "Page". Die Zeichenfolgen-Editor zu schließen. (Sie benötigen eine Standardzeichenfolge aus, um einen Compilerfehler zu vermeiden.)
 
 1. Fügen Sie den Bereich, um die *Indikatoren* Array.
 
-     In der Datei MAINFRM. CPP, suchen Sie die *Indikatoren* Array. Dieses Array enthält Befehls-IDs für alle Indikatoren für die Statusleiste, in der Reihenfolge von links nach rechts. Geben Sie an der entsprechenden Stelle im Array, Befehls-ID des Bereichs, wie hier gezeigt für `ID_INDICATOR_PAGE`:
+   In der Datei MAINFRM. CPP, suchen Sie die *Indikatoren* Array. Dieses Array enthält Befehls-IDs für alle Indikatoren für die Statusleiste, in der Reihenfolge von links nach rechts. Geben Sie an der entsprechenden Stelle im Array, Befehls-ID des Bereichs, wie hier gezeigt für `ID_INDICATOR_PAGE`:
 
-     [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]
+   [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]
 
 Die empfohlene Methode zum Anzeigen von Text in einem Bereich wird zum Aufrufen der `SetText` Memberfunktion der Klasse `CCmdUI` in einer Update-Handler-Funktion für den Bereich. Angenommen, Sie möchten eine ganzzahlige Variable einrichten *M_nPage* , enthält die aktuelle Seitenzahl und die Verwendung `SetText` auf eine Zeichenfolgenversion der diese Zahl im Bereich des Texts fest.
 
@@ -63,19 +63,19 @@ Das folgende Verfahren zeigt, wie eine Update-Handler-Funktion, die zum Anzeigen
 
 1. Fügen Sie ein Update-Befehlshandler für den Befehl hinzu.
 
-     Fügen Sie einen Prototyp für den Handler, manuell hinzu, wie hier gezeigt für `ID_INDICATOR_PAGE` (in MAINFRM. H):
+   Fügen Sie einen Prototyp für den Handler, manuell hinzu, wie hier gezeigt für `ID_INDICATOR_PAGE` (in MAINFRM. H):
 
-     [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_2.h)]
+   [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_2.h)]
 
 1. In den entsprechenden. CPP hinzufügen. der Handler die Definition wie folgt für `ID_INDICATOR_PAGE` (in MAINFRM. CPP):
 
-     [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_3.cpp)]
+   [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_3.cpp)]
 
-     Die letzten drei Zeilen von diesem Handler werden der Code, der den Text wird angezeigt.
+   Die letzten drei Zeilen von diesem Handler werden der Code, der den Text wird angezeigt.
 
 1. Fügen Sie in der entsprechenden meldungszuordnung, die ON_UPDATE_COMMAND_UI-Makro wie folgt für `ID_INDICATOR_PAGE` (in MAINFRM. CPP):
 
-     [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]
+   [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]
 
 Nachdem Sie den Wert des definiert die *M_nPage* Membervariable (Klasse `CMainFrame`), dieses Verfahren führt dazu, dass die Nummer der Seite im Bereich während der Verarbeitung von im Leerlauf auf die gleiche Weise angezeigt werden, dass die Anwendung andere Indikatoren aktualisiert. Wenn *M_nPage* Änderungen, die anzeigeänderungen, während der nächsten Leerlaufschleife.
 

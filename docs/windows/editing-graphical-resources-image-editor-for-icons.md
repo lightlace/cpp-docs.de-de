@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 184e011e82f2bb367a9c573176bbea1f7ccc5f47
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b7ff12ccf3868aac6189c749cc96c31046939c34
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418020"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072927"
 ---
 # <a name="editing-graphical-resources-c-image-editor-for-icons"></a>Bearbeiten von Grafischen Ressourcen (C++-Bildbearbeitung für Symbole)
 
@@ -77,4 +77,4 @@ Keiner
 ## <a name="see-also"></a>Siehe auch
 
 [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
-[Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)  
+[Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a488a3d46d60762f73406ea6f604761804277aa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ce4caa9b8a8575264563d69f47dbba1dcedb69e5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429772"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054110"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Mehrere Dokumenttypen, Ansichten und Rahmenfenster
 
@@ -62,15 +62,15 @@ MFC unterstützt drei allgemeine Benutzeroberflächen, die mehrere Ansichten des
 
 - Ansichtsobjekte der gleichen Klasse, jeweils in separaten MDI-Dokumentrahmenfenstern (Multiple-Document Interface, Schnittstelle für mehrere Dokumente).
 
-     Möglicherweise müssen Sie ein zweites Rahmenfenster in einem Dokument unterstützen. Ein Benutzer kann den Befehl „Neues Fenster“ verwenden, um einen zweiten Rahmen mit einer Ansicht des gleichen Dokuments zu öffnen, und dann verschiedene Teile dieses Dokuments gleichzeitig in den beiden Rahmen anzeigen. Das Framework unterstützt den Befehl „Neues Fenster“ im Menü „Fenster“ für MDI-Anwendungen, indem das ursprüngliche Rahmenfenster und die Ansicht, das bzw. die mit dem Dokument verknüpft ist, dupliziert werden.
+   Möglicherweise müssen Sie ein zweites Rahmenfenster in einem Dokument unterstützen. Ein Benutzer kann den Befehl „Neues Fenster“ verwenden, um einen zweiten Rahmen mit einer Ansicht des gleichen Dokuments zu öffnen, und dann verschiedene Teile dieses Dokuments gleichzeitig in den beiden Rahmen anzeigen. Das Framework unterstützt den Befehl „Neues Fenster“ im Menü „Fenster“ für MDI-Anwendungen, indem das ursprüngliche Rahmenfenster und die Ansicht, das bzw. die mit dem Dokument verknüpft ist, dupliziert werden.
 
 - Ansichtsobjekte der gleichen Klasse im gleichen Dokumentrahmenfenster.
 
-     Splitterfenster teilen den Ansichtsbereich eines einzelnen Dokumentfensters in mehrere separate Ansichten des Dokuments auf. Das Framework erstellt mehrere Ansichtsobjekte aus der gleichen Ansichtsklasse. Weitere Informationen finden Sie unter [Splitterfenster](#_core_splitter_windows).
+   Splitterfenster teilen den Ansichtsbereich eines einzelnen Dokumentfensters in mehrere separate Ansichten des Dokuments auf. Das Framework erstellt mehrere Ansichtsobjekte aus der gleichen Ansichtsklasse. Weitere Informationen finden Sie unter [Splitterfenster](#_core_splitter_windows).
 
 - Ansichtsobjekte verschiedener Klassen in einem einzelnen Rahmenfenster.
 
-     In diesem Modell, einer Variation des Splitterfensters, nutzen mehrere Ansichten ein einzelnes Rahmenfenster. Diese Ansichten werden aus verschiedenen Klassen erstellt, von denen jede eine andere Möglichkeit zur Anzeige des gleichen Dokuments bietet. Eine Ansicht kann beispielsweise ein Textverarbeitungsdokument im Normalmodus anzeigen, während die andere Ansicht das Dokument im Gliederungsmodus zeigt. Mit einem Splittersteuerelement kann ein Benutzer die relativen Größen der Ansichten anpassen.
+   In diesem Modell, einer Variation des Splitterfensters, nutzen mehrere Ansichten ein einzelnes Rahmenfenster. Diese Ansichten werden aus verschiedenen Klassen erstellt, von denen jede eine andere Möglichkeit zur Anzeige des gleichen Dokuments bietet. Eine Ansicht kann beispielsweise ein Textverarbeitungsdokument im Normalmodus anzeigen, während die andere Ansicht das Dokument im Gliederungsmodus zeigt. Mit einem Splittersteuerelement kann ein Benutzer die relativen Größen der Ansichten anpassen.
 
 Die folgende Abbildung für die Dokumente „a“, „b“ und „c“ zeigt die drei Benutzeroberflächenmodelle in der oben genannten Reihenfolge.
 

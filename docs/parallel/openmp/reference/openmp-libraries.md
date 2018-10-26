@@ -1,7 +1,7 @@
 ---
 title: OpenMP-Bibliotheken | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-parallel
 ms.topic: reference
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9a4ccfefeaeb9446731027db44b849233bfefd6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7620b0ea710a5474fbbbf614691ceeb1e5cc945e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391214"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062001"
 ---
 # <a name="openmp-libraries"></a>OpenMP-Bibliotheken
 
@@ -38,4 +38,4 @@ Die OpenMP-DLLs befinden sich in der Visual C++ redistributable-Verzeichnis und 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Referenz zur Bibliothek](../../../parallel/openmp/reference/openmp-library-reference.md)
+[Referenz zur Bibliothek](openmp-library-reference.md)

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5161e23d17283ba1495baf6fcb201943f8b6ae12
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2af0148c386bc3b1ea8db60fdf84d080c38af857
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422414"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080688"
 ---
 # <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>Gewusst wie: Hinzufügen von Befehlsrouting zum Windows Forms-Steuerelement
 
@@ -51,7 +51,7 @@ In diesem Thema wird vorausgesetzt, Sie haben zuvor [Vorgehensweise: Erstellen d
     partial class UserControl1
     ```
 
-     in:
+   in:
 
     ```
     partial class UserControl1 : System.Windows.Forms.UserControl, ICommandTarget
@@ -84,19 +84,19 @@ In diesem Thema wird vorausgesetzt, Sie haben zuvor [Vorgehensweise: Erstellen d
 
 1. Fügen Sie eine Menüoption hinzu, die `singleMenuHandler` aufruft.
 
-     Wechseln Sie zu **Ressourcenansicht** (STRG + UMSCHALT + E), erweitern Sie die **Menü** Ordner, und doppelklicken Sie dann auf **IDR_MFC02TYPE**. Der Menü-Editor wird angezeigt.
+   Wechseln Sie zu **Ressourcenansicht** (STRG + UMSCHALT + E), erweitern Sie die **Menü** Ordner, und doppelklicken Sie dann auf **IDR_MFC02TYPE**. Der Menü-Editor wird angezeigt.
 
-     Fügen Sie eine Menüoption im am unteren Rand der **Ansicht** Menü. Beachten Sie, dass die ID der Menüoption im der **Eigenschaften** Fenster. Speichern Sie die Datei.
+   Fügen Sie eine Menüoption im am unteren Rand der **Ansicht** Menü. Beachten Sie, dass die ID der Menüoption im der **Eigenschaften** Fenster. Speichern Sie die Datei.
 
-     In **Projektmappen-Explorer**, Resource.h-Datei zu öffnen, kopieren Sie den ID-Wert für die Menüoption "-", die Sie gerade hinzugefügt haben, und fügen Sie diesen Wert als der erste Parameter für die `m_CmdSrc.AddCommandHandler` rufen Sie in der C#-Projekts `Initialize` (als Ersatz für Methode`32771` bei Bedarf).
+   In **Projektmappen-Explorer**, Resource.h-Datei zu öffnen, kopieren Sie den ID-Wert für die Menüoption "-", die Sie gerade hinzugefügt haben, und fügen Sie diesen Wert als der erste Parameter für die `m_CmdSrc.AddCommandHandler` rufen Sie in der C#-Projekts `Initialize` (als Ersatz für Methode`32771` bei Bedarf).
 
 9. Erstellen Sie das Projekt, und führen Sie es aus.
 
-     Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**.
+   Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**.
 
-     Auf der **Debuggen** Menü klicken Sie auf **Starten ohne debugging**.
+   Auf der **Debuggen** Menü klicken Sie auf **Starten ohne debugging**.
 
-     Wählen Sie die hinzugefügte Menüoption aus. Beachten Sie, dass die Methode in der DLL aufgerufen wird.
+   Wählen Sie die hinzugefügte Menüoption aus. Beachten Sie, dass die Methode in der DLL aufgerufen wird.
 
 ## <a name="see-also"></a>Siehe auch
 

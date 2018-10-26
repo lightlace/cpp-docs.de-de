@@ -16,18 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31ac9d8ab0200d8dd56bbca3c82eb0ebec32388b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 210ef0d41cd0653718908b10ad64cd6004886c64
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46015969"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077750"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP, ATL-Assistent für Active Server Page-Komponenten
 
 Verwenden Sie auf dieser Seite des ATL-Assistenten für Active Server Page-Komponente, um die optionale Einstellungen angeben, für die Behandlung von Informationen und Zustände, die im Zusammenhang mit der ASP-Komponente.
 
-- **Optionale Methoden**  
+- **Optionale Methoden**
 
    Fügt den optionalen ASP-Methoden **OnStartPage** und **OnEndPage**, auf das Objekt. Diese Option muss ausgewählt werden, damit alle Active Server Pages-Objekte festgelegt werden kann. Es ist standardmäßig ausgewählt.
 
@@ -35,7 +35,7 @@ Verwenden Sie auf dieser Seite des ATL-Assistenten für Active Server Page-Kompo
 
    [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx) wird zum ersten Mal das Skript versucht, Zugriff auf das Objekt aufgerufen. **OnEndPage** wird aufgerufen, wenn das Objekt wurde das Skript zu verarbeiten.
 
-- **Systeminterne-Objekt**  
+- **Systeminterne-Objekt**
 
    Sie müssen auswählen, die **OnStartPage/OnEndPage** Option aus, um alle ASP-Objekte festgelegt.
 

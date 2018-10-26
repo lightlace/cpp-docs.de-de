@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5ad67a806bae53234661c19d3f405a526ce5f87
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f266efa2fb6de580bc1af04bdee6f80e2244fa23
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440770"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070048"
 ---
 # <a name="tiledindex-class"></a>tiled_index-Klasse
 
@@ -249,6 +249,7 @@ Speichert die Länge der zweitwichtigsten Dimension.
 ```
 static const int tile_dim1 = _Dim1;
 ```
+
 ## <a name="tiled_index__tile_dim2"></a>  tile_dim2
 
 Speichert die Länge der unwichtigsten Dimension.
@@ -258,6 +259,7 @@ Speichert die Länge der unwichtigsten Dimension.
 ```
 static const int tile_dim2 = _Dim2;
 ```
+
 ## <a name="tiled_index__tile_origin"></a>  tile_origin
 
 Speichert ein [Index](index-class.md) -Objekt von Rang 1, 2 oder 3, die die globale darstellt Koordinaten des Ursprungs der aktuellen Kachel in eine [Tiled_extent](tiled-extent-class.md) Objekt.
@@ -267,6 +269,7 @@ Speichert ein [Index](index-class.md) -Objekt von Rang 1, 2 oder 3, die die glob
 ```
 const index<rank> tile_origin
 ```
+
 ## <a name="tile_extent"></a>  tile_extent
   Ruft eine [Block](extent-class.md) -Objekt, das die Werte der hat die `tiled_index` Vorlagenargumente `tiled_index` Vorlagenargumente `_Dim0`, `_Dim1`, und `_Dim2`.
 

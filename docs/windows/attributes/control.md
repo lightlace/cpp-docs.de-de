@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64c123784af81a534a6d6ff2a0fb3d2108ff6021
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: df3a3b17af4ccb55fffccdbe87c1ac8c39eba603
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790587"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057493"
 ---
 # <a name="control"></a>Steuerelement
 
@@ -66,10 +66,10 @@ class CTest : public ICustom {};
 |**Erforderliche Attribute**|Keiner|
 |**Ungültige Attribute**|Keiner|
 
-Weitere Informationen zu den attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Siehe auch
 
 [IDL-Attribute](idl-attributes.md)<br/>
 [Klassenattribute](class-attributes.md)<br/>
-[typedef-, enum-, union- und struct-Attribute](typedef-enum-union-and-struct-attributes.md)  
+[typedef-, enum-, union- und struct-Attribute](typedef-enum-union-and-struct-attributes.md)

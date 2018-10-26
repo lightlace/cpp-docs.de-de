@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b271ed2c2af94e37edcbabb6611cda967f9587c7
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 18d9d2c1b3c633ba3399e93d34317c2360d45215
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081870"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059843"
 ---
 # <a name="thread-local-storage-tls"></a>Threadlokaler Speicher (TLS)
 
@@ -100,7 +100,7 @@ Die folgenden Richtlinien müssen bei der Deklaration von statisch gebundenen th
     int *p = &tls_i;       //This will generate an error in C.
     ```
 
-     Diese Einschränkung gilt nicht für C++. Da C++ die dynamische Initialisierung aller Objekte gestattet, kann ein Objekt mit einem Ausdruck initialisiert werden, der die Adresse einer lokalen Threadvariablen verwendet. Die Vorgehensweise ist hierbei identisch mit der Konstruktion eines lokalen Threadobjekts. Durch den zuvor aufgeführten Code wird z. B. kein Fehler generiert, wenn er als C++-Quelldatei kompiliert wird. Beachten Sie, dass die Adresse einer lokalen Threadvariablen nur solange gültig ist, solange der Thread vorhanden ist, aus dem die jeweilige Adresse stammt.
+   Diese Einschränkung gilt nicht für C++. Da C++ die dynamische Initialisierung aller Objekte gestattet, kann ein Objekt mit einem Ausdruck initialisiert werden, der die Adresse einer lokalen Threadvariablen verwendet. Die Vorgehensweise ist hierbei identisch mit der Konstruktion eines lokalen Threadobjekts. Durch den zuvor aufgeführten Code wird z. B. kein Fehler generiert, wenn er als C++-Quelldatei kompiliert wird. Beachten Sie, dass die Adresse einer lokalen Threadvariablen nur solange gültig ist, solange der Thread vorhanden ist, aus dem die jeweilige Adresse stammt.
 
 - In Standard-C ist die Initialisierung eines Objekts oder einer Variablen mit einem Ausdruck zulässig, der einen Verweis auf sich selbst enthält. Dies gilt jedoch nur für Objekte, die keinen static-Extent aufweisen. Obwohl in C++ diese Art der dynamischen Initialisierung von Objekten mit einem Ausdruck, der einen Verweis auf sich selbst enthält, normalerweise zulässig ist, ist dies für lokale Threadobjekte nicht zutreffend. Zum Beispiel:
 
@@ -110,9 +110,9 @@ Die folgenden Richtlinien müssen bei der Deklaration von statisch gebundenen th
     __declspec( thread )int tls_i = sizeof( tls_i )       // Legal in C and C++
     ```
 
-     Beachten Sie, dass ein `sizeof`-Ausdruck, der das Objekt enthält, das derzeit initialisiert wird, keinen Verweis auf sich selbst darstellt und sowohl in C als auch in C++ gültig ist.
+   Beachten Sie, dass ein `sizeof`-Ausdruck, der das Objekt enthält, das derzeit initialisiert wird, keinen Verweis auf sich selbst darstellt und sowohl in C als auch in C++ gültig ist.
 
-     In C++ ist diese Art der dynamischen Initialisierung von Threaddaten aufgrund möglicher zukünftiger Verbesserungen der threadlokalen Speicherfunktion nicht zulässig.
+   In C++ ist diese Art der dynamischen Initialisierung von Threaddaten aufgrund möglicher zukünftiger Verbesserungen der threadlokalen Speicherfunktion nicht zulässig.
 
 - Unter Windows-Betriebssystemen vor Windows Vista `__declspec`(Thread) weist einige Einschränkungen. Wenn durch eine DLL beliebige Daten oder Objekte als `__declspec` (Thread) deklariert werden, kann beim dynamischen Ladevorgang eine allgemeine Schutzverletzung auftreten. Nach dem Laden der DLL mit [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya), es Systemausfall verursacht, wenn der Code verweist auf die `__declspec`(Thread)-Daten. Da der globale Variablenspeicher für einen Thread zur Laufzeit reserviert wird, basiert die Größe dieses Speichers auf der Berechnung der Anforderungen der jeweiligen Anwendung sowie der Anforderungen aller DLLs, die statisch gebunden sind. Bei der Verwendung von `LoadLibrary` können Sie diesen Speicher nicht für die threadlokalen Variablen erweitern, die mit `__declspec` (Thread) deklariert wurden. Verwenden Sie die TLS-APIs, wie z. B. [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc), in der DLL TLS zuweisen, wenn die DLL geladen werden kann, mit `LoadLibrary`.
 

@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c19b000c1d7ee5cb1f8480f0e9f384b42937dc9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 167d3af6d353ec48edde4288db26b9e407c62bd5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414484"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078959"
 ---
 # <a name="exception-handling-in-mfc"></a>Ausnahmebehandlung in MFC
 
@@ -81,15 +81,15 @@ Drei Kategorien von Ergebnissen können auftreten, wenn eine Funktion, die währ
 
 - Normale Ausführung
 
-     Die Funktion kann normalerweise ausgeführt und zurückgegeben. Einige Funktionen geben einen Ergebniscode zurück, an den Aufrufer, der das Ergebnis der Funktion angibt. Die möglichen Ergebniscodes sind ausschließlich für die Funktion definiert und den Bereich von möglichen Ergebnissen der Funktion darstellen. Der resultierende Code kann darauf hinweisen, Erfolg oder Fehler oder eine bestimmte Art von Fehler, die innerhalb des normalen Bereichs von Erwartungen kann auch angeben. Beispielsweise kann eine Datei-Status-Funktion einen Code zurückgeben, der angibt, dass die Datei nicht vorhanden ist. Beachten Sie, dass der Begriff 'Fehlercode' nicht verwendet wird, da ein Ergebniscode eines von vielen erwarteten Ergebnissen darstellt.
+   Die Funktion kann normalerweise ausgeführt und zurückgegeben. Einige Funktionen geben einen Ergebniscode zurück, an den Aufrufer, der das Ergebnis der Funktion angibt. Die möglichen Ergebniscodes sind ausschließlich für die Funktion definiert und den Bereich von möglichen Ergebnissen der Funktion darstellen. Der resultierende Code kann darauf hinweisen, Erfolg oder Fehler oder eine bestimmte Art von Fehler, die innerhalb des normalen Bereichs von Erwartungen kann auch angeben. Beispielsweise kann eine Datei-Status-Funktion einen Code zurückgeben, der angibt, dass die Datei nicht vorhanden ist. Beachten Sie, dass der Begriff 'Fehlercode' nicht verwendet wird, da ein Ergebniscode eines von vielen erwarteten Ergebnissen darstellt.
 
 - Fehlerhafte Ausführung
 
-     Der Aufrufer einige Fehler bei der Übergabe von Argumenten an die Funktion macht, oder ruft die Funktion in einem ungeeigneten Kontext. Diese Situation tritt ein Fehler, und es sollte eine Assertion während der Programmentwicklung erkannt werden. (Weitere Informationen zu Assertionen, finden Sie unter [C/C++-Assertionen](/visualstudio/debugger/c-cpp-assertions).)
+   Der Aufrufer einige Fehler bei der Übergabe von Argumenten an die Funktion macht, oder ruft die Funktion in einem ungeeigneten Kontext. Diese Situation tritt ein Fehler, und es sollte eine Assertion während der Programmentwicklung erkannt werden. (Weitere Informationen zu Assertionen, finden Sie unter [C/C++-Assertionen](/visualstudio/debugger/c-cpp-assertions).)
 
 - Nicht normale Ausführung
 
-     Nicht normale Ausführung umfasst Situationen, in denen Bedingungen außerhalb der Steuerung des Programms, wie z. B. nicht genügend Arbeitsspeicher oder e/a-Fehler das Ergebnis der Funktion beeinflussen, sind. Ungewöhnliche Situationen sollten durch Abfangen und Auslösen von Ausnahmen behandelt werden.
+   Nicht normale Ausführung umfasst Situationen, in denen Bedingungen außerhalb der Steuerung des Programms, wie z. B. nicht genügend Arbeitsspeicher oder e/a-Fehler das Ergebnis der Funktion beeinflussen, sind. Ungewöhnliche Situationen sollten durch Abfangen und Auslösen von Ausnahmen behandelt werden.
 
 Verwenden von Ausnahmen ist besonders geeignet für die nicht ordnungsgemäße Ausführung.
 

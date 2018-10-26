@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a2567182f0e2622a72ceb9b98988c4d122a3561
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 765cb6ccf24415c174761c57268dc79e1fc6845b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860562"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062560"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>CString-Vorgänge bei Zeichenfolgen im C-Format
 
@@ -54,9 +54,9 @@ Ein [CString](../atl-mfc-shared/using-cstring.md) -Objekt enthält Zeichenfolgen
 
 Verwenden einer `CString` -Objekt als Zeichenfolge im C-Format, das Objekt, das LPCTSTR umgewandelt. Im folgenden Beispiel gibt `CString` einen Zeiger auf eine schreibgeschützte auf NULL abschließende Zeichenfolge im C-Format zurück. Die `strcpy`-Funktion fügt eine Kopie der Zeichenfolge im C-Format in der Variablen `myString` ein.
 
-```
-CString aCString = "A string";  
-char myString[256];  
+```cpp
+CString aCString = "A string";
+char myString[256];
 strcpy(myString, (LPCTSTR)aCString);
 ```
 

@@ -1,7 +1,7 @@
 ---
 title: Verwenden mehrerer Zugriffsmethoden für ein Rowset | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 43fa36e0f5b79a6901c1294345f54386340c43ef
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: fb0eeb3a0a3c347c115cb05c2a35d221e6a94fe4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808458"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071042"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Verwenden mehrerer Zugriffsmethoden für ein Rowset
 
@@ -37,7 +37,7 @@ Es gibt drei grundlegende Szenarien, in denen Sie mehrere Accessoren für Ereign
 
 - **Leistung:** In diesem Szenario müssen einer oder mehreren Spalten eine große Menge von Daten, z. B. Grafiken, Audio- oder video-Dateien. Jedes Mal, wenn Sie auf eine Zeile verschieben, möchten Sie wahrscheinlich nicht die Spalte mit der Datei große Datenmengen abrufen, da dadurch die Leistung Ihrer Anwendung also verlangsamen würde.
 
-   Sie können separate Accessoren einrichten, in der die erste Accessor enthält alle Spalten mit Ausnahme des mit großen Datenmengen, und er ruft Daten aus diesen Spalten automatisch; der erste-Accessor ist der Autoaccessor. Der zweite Accessor ruft nur die Spalte, die umfangreiche Daten enthält, aber es nicht abrufen von Daten aus dieser Spalte automatisch. Sie können die anderen Methoden aktualisieren oder Abrufen umfangreicher Datenmengen bei Bedarf verwenden.
+   Sie können separate Accessoren einrichten, in der die erste Accessor enthält alle Spalten mit Ausnahme des mit großen Datenmengen, und er ruft Daten aus diesen Spalten automatisch; der erste-Accessor ist der Autoaccessor. Der zweite Accessor ruft nur die Spalte, die große Datenmengen enthalten, aber es nicht abrufen von Daten aus dieser Spalte automatisch. Sie können die anderen Methoden aktualisieren oder Abrufen umfangreicher Datenmengen bei Bedarf verwenden.
 
    - Accessor 0 ist eine automatische Accessor verfügbar. alle Spalten mit Ausnahme des mit umfangreichen Daten abgerufen.
 
@@ -45,7 +45,7 @@ Es gibt drei grundlegende Szenarien, in denen Sie mehrere Accessoren für Ereign
 
    Verwenden Sie das automatische-Argument, um anzugeben, ob der Accessor ein Autoaccessor ist.
 
-- **Mehrere Spalten von einer ISequentialStream-Schnittstelle.** In diesem Szenario verfügen Sie über mehr als eine Spalte mit `ISequentialStream` Daten. Jeder Accessor kann jedoch nur einmal `ISequentialStream` -Datenstrom. Um dieses Problem zu beheben, legen Sie mehrere Accessoren jeweils eine `ISequentialStream` Zeiger.
+- **Mehrere Spalten von einer ISequentialStream-Schnittstelle.** In diesem Szenario haben Sie mehr als eine Spalte enthalten `ISequentialStream` Daten. Jeder Accessor kann jedoch nur einmal `ISequentialStream` -Datenstrom. Um dieses Problem zu beheben, legen Sie mehrere Accessoren jeweils eine `ISequentialStream` Zeiger.
 
 Normalerweise erstellen Sie Accessoren mit der [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) und [END_ACCESSOR](../../data/oledb/end-accessor.md) Makros. Sie können auch die [Db_accessor](../../windows/db-accessor.md) Attribut. (Accessoren werden ausführlich in [Benutzerdatensätze](../../data/oledb/user-records.md).) Die Makros oder das Attribut angeben, ob eine Zugriffsmethode eine automatische oder eine nicht automatische-Accessor ist:
 

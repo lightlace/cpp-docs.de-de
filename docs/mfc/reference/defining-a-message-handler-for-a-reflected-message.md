@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26345a95559000815ed7d2e2cc336892d619969b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 104f9e0be67a350a1725dfbcd2bf234a8bc79553
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413743"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052563"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>Definieren eines Meldungshandlers für eine reflektierte Meldung
 
@@ -53,7 +53,7 @@ Zum Erstellen einer [ActiveX-Steuerelement](../../mfc/activex-controls-on-the-in
 
 1. Klicken Sie auf den vorgeschlagenen Namen zu akzeptieren. Der Handler wird dem Projekt hinzugefügt.
 
-     Handler für Namen, die Sie hinzugefügt haben, werden in der rechten Spalte des Fensters reflektierter Meldungen angezeigt.
+   Handler für Namen, die Sie hinzugefügt haben, werden in der rechten Spalte des Fensters reflektierter Meldungen angezeigt.
 
 9. Zum Bearbeiten oder Löschen eines meldungshandlers, wiederholen Sie die Schritte 4 bis 7. Klicken Sie auf die Zelle mit dem Namen des Handlers bearbeiten oder löschen, und klicken Sie auf die entsprechende Aufgabe.
 

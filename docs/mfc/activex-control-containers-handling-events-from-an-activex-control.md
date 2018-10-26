@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7bd8c505c857082732e56ff2b4bf1a5bed76647
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 913bc04533668e6576a84641937992504f49390a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420308"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080077"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX-Steuerelementcontainer: Behandeln von Ereignissen eines ActiveX-Steuerelements
 
@@ -34,7 +34,6 @@ In diesem Artikel wird erläutert, mithilfe des Eigenschaftenfensters-Ereignisha
 
 >[!IMPORTANT]
 > ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
-
 
 > [!NOTE]
 >  Diesem Artikel wird ein Dialogfeld-basierte ActiveX-Steuerelementcontainer-Projekt namens "Container" und ein eingebettetes Steuerelement mit dem Namen Circ als Beispiele in den Prozeduren und den Code.
@@ -70,7 +69,7 @@ Weitere Informationen zum Ereignissenke Makros, finden Sie unter [Ereignissenken
 
 1. Wählen Sie im Fenster Eigenschaften die Steuerelement-ID des eingebetteten ActiveX-Steuerelements. In diesem Beispiel verwenden `IDC_CIRCCTRL1`.
 
-     Das Fenster "Eigenschaften" zeigt eine Liste der Ereignisse, die durch das eingebettete ActiveX-Steuerelement ausgelöst werden kann. Eine Memberfunktion leiten, die bereits fett formatiert dargestellte hat Handlerfunktionen zugewiesen ist.
+   Das Fenster "Eigenschaften" zeigt eine Liste der Ereignisse, die durch das eingebettete ActiveX-Steuerelement ausgelöst werden kann. Eine Memberfunktion leiten, die bereits fett formatiert dargestellte hat Handlerfunktionen zugewiesen ist.
 
 1. Wählen Sie das Ereignis, das die Dialogfeldklasse, behandeln soll. Wählen Sie für dieses Beispiel **klicken Sie auf**.
 

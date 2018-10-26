@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b94172d57bc21e7f747a5d0986ef28dbfb80e481
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 33c79dc8c83f40d0b553a2c44cf22fa107f5ef34
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428641"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065589"
 ---
 # <a name="mfc-activex-controls"></a>MFC-ActiveX-Steuerelemente
 
@@ -109,19 +109,19 @@ Standardmäßig werden die ActiveX-Steuerelementklassen und-Werkzeuge in den fol
 
 - **\Common7\Tools**
 
-     Enthält die Testcontainerdateien (TstCon32.exe und entsprechende Hilfedateien).
+   Enthält die Testcontainerdateien (TstCon32.exe und entsprechende Hilfedateien).
 
 - **\Vc7\atlmfc\include**
 
-     Enthält die Includedateien, die für die Entwicklung von ActiveX-Steuerelementen mit MFC erforderlich sind.
+   Enthält die Includedateien, die für die Entwicklung von ActiveX-Steuerelementen mit MFC erforderlich sind.
 
 - **\Vc7\atlmfc\src\mfc**
 
-     Enthält den Quellcode für bestimmte ActiveX-Steuerelementklassen in MFC.
+   Enthält den Quellcode für bestimmte ActiveX-Steuerelementklassen in MFC.
 
 - **\Vc7\atlmfc\lib**
 
-     Enthält die Bibliotheken, die für die Entwicklung von ActiveX-Steuerelementen mit MFC erforderlich sind.
+   Enthält die Bibliotheken, die für die Entwicklung von ActiveX-Steuerelementen mit MFC erforderlich sind.
 
 Dazu gehören auch Beispiele für MFC-ActiveX-Steuerelemente. Weitere Informationen zu diesen Beispielen, finden Sie unter [Beispiele für Steuerelemente: MFC-basierte ActiveX-Steuerelemente](../visual-cpp-samples.md)
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 08bd8791a49c0dd6bc7514c2638dbcb0e818e4cf
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 7f30ab333a2f50c845b8cf66179da05863fa67d7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791902"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073005"
 ---
 # <a name="bindable"></a>bindable
 
@@ -55,7 +55,7 @@ Der folgende Code zeigt, wie Sie verwenden können **bindbare** für eine Eigens
 // compile with: /LD
 #include <windows.h>
 [
-   uuid("479B29E3-9A2C-11D0-B696-00A0C903487A"), dispinterface, helpstring("property demo Interface")  
+   uuid("479B29E3-9A2C-11D0-B696-00A0C903487A"), dispinterface, helpstring("property demo Interface")
 ]
 __interface IPropDemo : IDispatch {
 
@@ -80,7 +80,7 @@ __interface IPropDemo : IDispatch {
 |**Erforderliche Attribute**|Keiner|
 |**Ungültige Attribute**|Keiner|
 
-Weitere Informationen zu den attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -89,4 +89,4 @@ Weitere Informationen zu den attributkontexten finden Sie unter [Attributkontext
 [defaultbind](defaultbind.md)<br/>
 [displaybind](displaybind.md)<br/>
 [immediatebind](immediatebind.md)<br/>
-[requestedit](requestedit.md)  
+[requestedit](requestedit.md)
