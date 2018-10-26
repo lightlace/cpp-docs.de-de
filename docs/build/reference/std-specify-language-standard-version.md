@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80c501c74d0e36d7a1c564e107101782468708c3
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 32bbcd47c4ce22882941b6fa9c02373bab32eeb1
+ms.sourcegitcommit: 938d118d02543c822a5f58c84d6119d23339e43c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709071"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50135993"
 ---
 # <a name="std-specify-language-standard-version"></a>/ Std (Standardversion Sprache festlegen)
 
@@ -31,7 +31,7 @@ Enable unterstützt C++-Sprachfeatures, aus der angegebenen Version des C++-Spra
 
 ## <a name="remarks"></a>Hinweise
 
-Die **/Std** Option ist in Visual Studio 2017 und höher verfügbar ist. Es wird verwendet, um versionsspezifische ISO C++ programming Language-Standardfunktionen aktiviert, während der Kompilierung des Codes zu steuern. Diese Option können Sie zum Deaktivieren der Unterstützung für bestimmte neuen Sprach- und bibliotheksunterstützung-Funktionen, die einen Umbruch von vorhandenen Code, der eine bestimmte Version der Sprache entspricht standard. In der Standardeinstellung **/Std: c ++ 14** angegeben wird, wodurch die Sprache und die Features der Standardbibliothek finden Sie in höheren Versionen der Programmiersprache C++ standard deaktiviert. Verwendung **/Std: c ++ 17** C ++ 17-Standard-spezifischen Funktionen und das Verhalten zu aktivieren. Um die neueste unterstützte Compiler und die Features der Standardbibliothek explizit zu aktivieren, verwenden **/Std: c ++ neueste**.
+Die **/Std** Option ist in Visual Studio 2017 und höher verfügbar. Es wird verwendet, um versionsspezifische ISO C++ programming Language-Standardfunktionen aktiviert, während der Kompilierung des Codes zu steuern. Diese Option können Sie zum Deaktivieren der Unterstützung für bestimmte neuen Sprach- und bibliotheksunterstützung-Funktionen, die einen Umbruch von vorhandenen Code, der eine bestimmte Version der Sprache entspricht standard. In der Standardeinstellung **/Std: c ++ 14** angegeben wird, wodurch die Sprache und die Features der Standardbibliothek finden Sie in höheren Versionen der Programmiersprache C++ standard deaktiviert. Verwendung **/Std: c ++ 17** C ++ 17-Standard-spezifischen Funktionen und das Verhalten zu aktivieren. Um die neueste unterstützte Compiler und die Features der Standardbibliothek explizit zu aktivieren, verwenden **/Std: c ++ neueste**.
 
 Der Standardwert **/Std: c ++ 14** Option aktiviert die C ++ 14-Funktionen von Visual C++-Compiler implementiert. Diese Option deaktiviert, Compiler und Standardbibliothek-Unterstützung für Funktionen, die geändert werden oder neuer in neueren Versionen der Sprache standard, mit Ausnahme von einigen C ++ 17-Features bereits in früheren Versionen von Visual C++-Compiler implementiert. Um zu vermeiden, wichtige Änderungen für Benutzer, die bereits die Abhängigkeiten zu den Features zur Verfügung, ab dem Visual Studio 2015 Update 2 erstellt haben, diese Funktionen bleiben aktiviert, wenn die **/Std: c ++ 14** angegeben wird:
 
