@@ -66,7 +66,7 @@
 ###### [Einlesen von Zeichenfolgen in den OLE DB-Anbieter](reading-strings-into-the-ole-db-provider.md)
 ###### [Speichern von Zeichenfolgen im OLE DB-Anbieter](storing-strings-in-the-ole-db-provider.md)
 ##### [Erweitern des einfachen schreibgeschützten Anbieters](enhancing-the-simple-read-only-provider.md)
-###### [Ändern der Vererbung von "RMyProviderRowset"](modifying-the-inheritance-of-rmyproviderrowset.md)
+###### [Ändern der Vererbung von RCustomRowset](modifying-the-inheritance-of-rmyproviderrowset.md)
 ###### [Dynamisches Festlegen der an den Consumer zurückgegebenen Spalten](dynamically-determining-columns-returned-to-the-consumer.md)
 ##### [Testen des schreibgeschützten Anbieters](testing-the-read-only-provider.md)
 #### [Erstellen eines aktualisierbaren Anbieters](creating-an-updatable-provider.md)
