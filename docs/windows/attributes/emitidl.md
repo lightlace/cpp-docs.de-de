@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e11e1ce061fcf2e9ce21155dcbeb93b45b66238
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 520b9bf8d6a71593acd95ebaac98a72036fcabf2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791739"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070022"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -49,7 +49,8 @@ Einen der folgenden Werte möglich: `true`, `false`, `forced`, `restricted`, `pu
 
 - `push` ermöglicht Ihnen das Speichern Sie die aktuelle **Emitidl** Einstellungen, die ein internes **Emitidl** -Stapel und `pop` ermöglicht Ihnen das Festlegen **Emitidl** an einen beliebigen Wert am Anfang der internen **Emitidl** Stapel.
 
-`defaultimports=`*boolesche* \(optional)  
+`defaultimports=`*boolesche* \(optional)
+
 - Wenn *booleschen* ist **"true"**, docobj.idl in der generierten IDL-Datei importiert wird. Auch wenn es sich bei eine IDL-Datei mit dem gleichen Namen wie ein h, die Sie `#include` in Ihrer Quelle Code finden Sie im gleichen Verzeichnis wie der h-Datei, und klicken Sie dann die generierten IDL-Datei enthält eine Import-Anweisung für diese IDL-Datei.
 
 - Wenn *booleschen* ist **"false"**, docobj.idl nicht in der generierten IDL-Datei importiert. Sie müssen explizit importieren IDL-Dateien mit [importieren](import.md).
@@ -78,4 +79,4 @@ Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net
 ## <a name="see-also"></a>Siehe auch
 
 [Compilerattribute](compiler-attributes.md)<br/>
-[Eigenständige Attribute](stand-alone-attributes.md)  
+[Eigenständige Attribute](stand-alone-attributes.md)

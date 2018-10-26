@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec1e6215cd085ed948e4b0554bca12a678563d6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 84ed9bfb8b0c8b5ab30af07d8f0448109161df51
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434010"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077763"
 ---
 # <a name="iview-interface"></a>IView-Schnittstelle
 
@@ -57,7 +57,6 @@ interface class IView
 
 Weitere Informationen zur Verwendung von Windows Forms finden Sie unter [verwenden ein Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-
 ## <a name="requirements"></a>Anforderungen
 
 Header: afxwinforms.h (definiert in der Assembly atlmfc\lib\mfcmifc80.dll)
@@ -68,6 +67,7 @@ Wird von MFC aufgerufen, wenn eine Ansicht aktiviert oder deaktiviert ist.
 ```
 void OnActivateView(bool activate);
 ```
+
 ## <a name="parameters"></a>Parameter
 
 *Aktivieren*<br/>
@@ -86,6 +86,7 @@ Von MFC aufgerufen, nachdem das Dokument von der Ansicht geändert wurde.
 ```
 void OnUpdate();
 ```
+
 ## <a name="remarks"></a>Hinweise
 
 Diese Funktion kann es sich um die Ansicht seine Anzeige Änderungen entsprechend aktualisiert.

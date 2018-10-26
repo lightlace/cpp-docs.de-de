@@ -16,33 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f217c0dad3bf74ab930cf1f66392fe22d9df832
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 789c9179b2ba48f5c3796f709931728bc756aaaa
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446548"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075033"
 ---
 # <a name="rawinterfacesonly"></a>raw_interfaces_only
-**C++-spezifisch**  
-  
-Unterdrückt die Generierung von Fehlerbehandlungs Wrapperfunktionen und [Eigenschaft](../cpp/property-cpp.md) Deklarationen, die diese Wrapperfunktionen verwenden.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-raw_interfaces_only  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- 
-Die **Raw_interfaces_only** -Attribut bewirkt auch, dass das Standardpräfix verwendet wird, benennen Sie die Funktionen ohne Eigenschaft entfernt werden soll. Normalerweise ist das Präfix ist **Raw_**. Wenn dieses Attribut festgelegt wird, stammen die Funktionsnamen direkt aus der Typbibliothek.  
-  
-Dieses Attribut ermöglicht, dass Sie nur die Inhalte auf niedriger Ebene aus der Typbibliothek verfügbar machen.  
-  
-**Ende C++-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- 
+**C++-spezifisch**
+
+Unterdrückt die Generierung von Fehlerbehandlungs Wrapperfunktionen und [Eigenschaft](../cpp/property-cpp.md) Deklarationen, die diese Wrapperfunktionen verwenden.
+
+## <a name="syntax"></a>Syntax
+
+```
+raw_interfaces_only
+```
+
+## <a name="remarks"></a>Hinweise
+
+Die **Raw_interfaces_only** -Attribut bewirkt auch, dass das Standardpräfix verwendet wird, benennen Sie die Funktionen ohne Eigenschaft entfernt werden soll. Normalerweise ist das Präfix ist **Raw_**. Wenn dieses Attribut festgelegt wird, stammen die Funktionsnamen direkt aus der Typbibliothek.
+
+Dieses Attribut ermöglicht, dass Sie nur die Inhalte auf niedriger Ebene aus der Typbibliothek verfügbar machen.
+
+**Ende C++-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
 [#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)

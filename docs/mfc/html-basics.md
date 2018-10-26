@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b25f957615d738d0608f911736bb42f8e3731dd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dbe2c743f04e8fc8dc67947b9bd9d5560dd35182
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391618"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052693"
 ---
 # <a name="html-basics"></a>Grundlagen zu HTML
 
@@ -47,9 +47,9 @@ Die folgenden Schritte verwenden HTML-Tags, um eine einfache Webseite zu erstell
 
 1. Wechseln Sie in Ihren Browser, und klicken Sie in der **Datei** Menü wählen **öffnen**, oder Typ *file://C:/webpages/first.htm* im Bearbeitungsfeld "URL" des Browsers. Sehen Sie eine leere Seite mit der Beschriftung des Fensters "Top HTML-Tags".
 
-     Beachten Sie, dass die Tags werden zusammengefasst und in spitze Klammern eingeschlossen werden. Tags sind nicht in der Groß-/Kleinschreibung beachtet, aber die Großschreibung wird häufig verwendet, um die Tags optisch hervorzuheben.
+   Beachten Sie, dass die Tags werden zusammengefasst und in spitze Klammern eingeschlossen werden. Tags sind nicht in der Groß-/Kleinschreibung beachtet, aber die Großschreibung wird häufig verwendet, um die Tags optisch hervorzuheben.
 
-     Das Tag \<HTML > beginnt, das Dokument, und das Tag  \< /HTML > beendet sie. Beenden-Tags (nicht immer erforderlich) sind identisch mit dem Tag ab, aber Sie haben einen Schrägstrich (/) vor das Tag. Es sollte kein Leerzeichen zwischen der Spitze Klammer (<) und dem Beginn der Ihr Tag vorhanden sein.
+   Das Tag \<HTML > beginnt, das Dokument, und das Tag  \< /HTML > beendet sie. Beenden-Tags (nicht immer erforderlich) sind identisch mit dem Tag ab, aber Sie haben einen Schrägstrich (/) vor das Tag. Es sollte kein Leerzeichen zwischen der Spitze Klammer (<) und dem Beginn der Ihr Tag vorhanden sein.
 
 1. Wechseln Sie zurück in den Editor, und klicken Sie nach der  \< /HEAD > Geben Sie diese Zeile:
 
@@ -64,9 +64,9 @@ Die folgenden Schritte verwenden HTML-Tags, um eine einfache Webseite zu erstell
 
 1. Wechseln Sie zurück zu Ihrem Browser, und aktualisieren Sie die Seite.
 
-     Die Wörter werden in den Clientbereich des Browserfensters angezeigt. Beachten Sie, dass Ihre Carriage return, Wagenrücklauf ignoriert wird. Wenn Sie ein Zeilenumbruch eingefügt haben möchten, müssen Sie enthalten eine `<BR>` Tag nach der ersten Zeile.
+   Die Wörter werden in den Clientbereich des Browserfensters angezeigt. Beachten Sie, dass Ihre Carriage return, Wagenrücklauf ignoriert wird. Wenn Sie ein Zeilenumbruch eingefügt haben möchten, müssen Sie enthalten eine `<BR>` Tag nach der ersten Zeile.
 
-     Für alle Schritte, die folgen, fügen Sie den Text an einer beliebigen Stelle zwischen \<Text > und  \< /BODY > den Text des Dokuments hinzu.
+   Für alle Schritte, die folgen, fügen Sie den Text an einer beliebigen Stelle zwischen \<Text > und  \< /BODY > den Text des Dokuments hinzu.
 
 9. Hinzufügen eines Headers:
 

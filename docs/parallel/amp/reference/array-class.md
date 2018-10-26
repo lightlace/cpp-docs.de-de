@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e0d0fde53cc7ffb885e8435fc82cbb899a3bc89
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9023f042cd2c39966adb6a5fb4c71b5e24c3e9d1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389539"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068046"
 ---
 # <a name="array-class"></a>array-Klasse
 
@@ -85,7 +85,7 @@ Der Rang des Arrays.
 |Name|Beschreibung|
 |----------|-----------------|
 |[operator std::vector&lt;value_type&gt;](#operator_vec)|Verwendet `copy(*this, vector)` implizit konvertieren das Array in eine std::[Vektor](../../../standard-library/vector-class.md) Objekt.|
-|[operator()](#operator_call)|Gibt den Elementwert zurück, der von den Parametern angegeben wird.|
+|[Operator()](#operator_call)|Gibt den Elementwert zurück, der von den Parametern angegeben wird.|
 |[operator[]](#operator_at)|Gibt das Element am angegebenen Index zurück.|
 |[operator=](#operator_eq)|Kopiert den Inhalt des angegebenen `array`-Objekts in dieses Objekt.|
 
@@ -671,6 +671,7 @@ Speichert den Rang des der `array`.
 ```
 static const int rank = _Rank;
 ```
+
 ## <a name="reinterpret_as"></a> reinterpret_as
 
 Interpretiert das Array durch ein eindimensionales array_view-Objekt, die optional einen anderen Werttyp als das Quellarray haben kann.

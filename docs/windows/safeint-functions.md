@@ -1,7 +1,7 @@
 ---
 title: SafeInt-Funktionen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/28/2018
+ms.date: 10/22/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 43960e70f1aad29fa4b8fc03517231c7658d155b
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 515bf6793a2b1546bc79998283104b704de7f1ca
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162580"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057284"
 ---
 # <a name="safeint-functions"></a>SafeInt-Funktionen
 
@@ -55,6 +55,9 @@ Die SafeInt-Bibliothek stellt mehrere Funktionen, die Sie verwenden können, ohn
 Diese Funktionen können Sie vergleichen oder die mathematische Operationen für zwei verschiedene Arten von Parametern ausführen, ohne sie zuerst auf den gleichen Typ konvertieren zu müssen.
 
 Jede dieser Funktionen hat zwei Vorlagentypen: `T` und `U`. Jeder dieser Typen kann ein boolescher Wert, Zeichen oder ganzzahliger Typ sein. Ganzzahltypen mit oder ohne Vorzeichen werden können und beliebiger Größe von 8 Bits bis 64 Bits.
+
+> [!NOTE]
+> Die neueste Version dieser Bibliothek befindet sich unter [ https://github.com/dcleblanc/SafeInt ](https://github.com/dcleblanc/SafeInt).
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49ea94258c163c241243934f41d55d896d0d1fa2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 74660dc2baeff683d35fac8d4b9dda06bdbec22d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46372456"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061312"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>Verwenden der CArchive &lt; &lt; und &gt; &gt; Operatoren
 
@@ -33,13 +33,13 @@ ms.locfileid: "46372456"
 
 1. Das folgende Beispiel zeigt, wie ein Objekt in eine Datei per Archiv gespeichert wird:
 
-     [!code-cpp[NVC_MFCSerialization#7](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_1.cpp)]
+   [!code-cpp[NVC_MFCSerialization#7](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_1.cpp)]
 
 #### <a name="to-load-an-object-from-a-value-previously-stored-in-a-file"></a>Laden Sie ein Objekt aus einem Wert, der zuvor in einer Datei gespeichert.
 
 1. Das folgende Beispiel zeigt, wie Sie ein Objekt aus einem Wert, der zuvor in einer Datei gespeicherten zu laden:
 
-     [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]
 
 In der Regel speichern und Laden Sie Daten in und aus einer Datei mithilfe eines Archivs in die `Serialize` Funktionen `CObject`-abgeleiteten Klassen, die Sie mit dem Makro DECLARE_SERIALIZE deklarieren deklariert haben müssen. Ein Verweis auf eine `CArchive` Objekt übergeben wird, um Ihre `Serialize` Funktion. Rufen Sie die `IsLoading` Funktion der `CArchive` Objekt, um zu bestimmen, ob die `Serialize` Funktion aufgerufen wurde, um Daten aus der Datei zu laden oder Speichern von Daten in die Datei.
 

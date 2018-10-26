@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d0db4d53d64def1c1f55929aa9d7514142955cf
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 00390f5a5872c183fdea385158dfa5020362a06f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821121"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055060"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Hinzufügen einer Eigenschaftenseite (ATL-Lernprogramm, Teil 6)
 
@@ -45,7 +45,7 @@ Um eine Eigenschaftenseite zu Ihrem Steuerelement hinzuzufügen, verwenden Sie d
 
 1. Klicken Sie auf **Zeichenfolgen** zum Öffnen der **Zeichenfolgen** Seite, und geben Sie **& Polygon** als die **Titel**.
 
-     Die **Titel** Seite ist die Eigenschaft die Zeichenfolge, die auf der Registerkarte für diese Seite wird angezeigt. Die **Dokumentzeichenfolge** finden Sie eine Beschreibung, die ein eigenschaftenrahmens verwendet, in einen Status oder eine QuickInfo zu platzieren. Beachten Sie, dass der Standardeigenschaft Frame dieser Zeichenfolge derzeit nicht verwendet, sodass Sie es mit den Standardinhalt lassen können. Generieren Sie keine **Hilfedatei** im Moment so löschen Sie den Eintrag in dieses Textfeld.
+   Die **Titel** Seite ist die Eigenschaft die Zeichenfolge, die auf der Registerkarte für diese Seite wird angezeigt. Die **Dokumentzeichenfolge** finden Sie eine Beschreibung, die ein eigenschaftenrahmens verwendet, in einen Status oder eine QuickInfo zu platzieren. Beachten Sie, dass der Standardeigenschaft Frame dieser Zeichenfolge derzeit nicht verwendet, sodass Sie es mit den Standardinhalt lassen können. Generieren Sie keine **Hilfedatei** im Moment so löschen Sie den Eintrag in dieses Textfeld.
 
 1. Klicken Sie auf **Fertig stellen**, und die Eigenschaft-Page-Objekt erstellt werden.
 

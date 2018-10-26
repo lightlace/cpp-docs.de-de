@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c8e2fc86d15472bd4ab63e472df99bb69393b386
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ca9d1ea34aa8a2793f895a3c89f94994743570e5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46060303"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082676"
 ---
 # <a name="data-access-in-visual-c"></a>Datenzugriff in Visual C++
 
@@ -52,13 +52,13 @@ Verbinden Sie Azure SQL-Datenbank von C- oder C++-Anwendungen.
 [Azure Storage](/azure/storage/storage-introduction) ist eine Cloudspeicherlösung für moderne Anwendungen, die auf Stabilität, Verfügbarkeit und Skalierbarkeit für die Bedürfnisse ihrer Kunden beruhen. Stellen Sie eine Verbindung zu Azure Storage von C++ mithilfe der Azure Storage-Clientbibliothek für C++ her.
 
 [ODBC-Treiber 13.1 für SQLServer – Windows freigegeben](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/08/01/announcing-the-odbc-driver-13-1-for-sql-server)<br/>
-Der aktuelle ODBC-Treiber bietet zuverlässigen Datenzugriff auf die Microsoft SQL Server 2016 Microsoft Azure SQL-Datenbank für Anwendungen auf C/C++-Basis. Bietet Unterstützung für einschließlich immer verschlüsselt, Azure Active Directory und Always On-Verfügbarkeitsgruppen. Auch für MacOS und Linux verfügbar.     
- 
+Der aktuelle ODBC-Treiber bietet zuverlässigen Datenzugriff auf die Microsoft SQL Server 2016 Microsoft Azure SQL-Datenbank für Anwendungen auf C/C++-Basis. Bietet Unterstützung für einschließlich immer verschlüsselt, Azure Active Directory und Always On-Verfügbarkeitsgruppen. Auch für MacOS und Linux verfügbar.
+
 [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client-programming)<br/>
 SQL Server Native Client ist eine eigenständige Data Access Application-Programmierschnittstelle (API), die für OLE DB und ODBC verwendet wird, die SQL Server 2005 über SQL Server 2014 unterstützt. Neue Anwendungen sollten den ODBC-Treiber 13.1 für SQL Server verwenden.
 
 [Microsoft Azure C und C++ Developer Center](https://azure.microsoft.com/develop/cpp/)<br/>
-Azure vereinfacht die C++-Anwendungsentwicklung mit mehr Flexibilität, Skalierbarkeit und Zuverlässigkeit mithilfe von Tools, die Sie lieben werden.    
+Azure vereinfacht die C++-Anwendungsentwicklung mit mehr Flexibilität, Skalierbarkeit und Zuverlässigkeit mithilfe von Tools, die Sie lieben werden.
 
 [Gewusst wie: Verwenden von Blob-Speichers mit C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
 Azure Blob Storage ist ein Dienst, der unstrukturierte Daten in der Cloud als Objekte/Blobs speichert. Blob Storage kann beliebige Typen von Text oder Binärdaten speichern, z.B. Dokumente, Mediendateien oder Installationsprogramme für Anwendungen. Blob Storage wird auch als Objektspeicher bezeichnet.

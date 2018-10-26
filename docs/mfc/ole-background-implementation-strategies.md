@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e91ade065c61bbec974653b0fbf6fdfe0ac44a7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ae49db47905f38c4b614609a7a4b73c4597292e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46372174"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075906"
 ---
 # <a name="ole-background-implementation-strategies"></a>OLE-Hintergrund: Implementierungsstrategien
 
@@ -29,19 +29,19 @@ Je nach Anwendung gibt es vier mögliche Implementierungsstrategien für das OLE
 
 - Sie schreiben eine neue Anwendung.
 
-     Diese Situation erfordert in der Regel den geringsten arbeiten. Sie führen Sie den Assistenten der MFC-Anwendung, und wählen Sie erweiterte Funktionen oder Unterstützung für Verbunddokumente eine Skelette-Anwendung erstellen. Informationen zu diesen Optionen und was sie tun, finden Sie im Artikel [erstellen eine MFC-EXE-Programm](../mfc/reference/mfc-application-wizard.md).
+   Diese Situation erfordert in der Regel den geringsten arbeiten. Sie führen Sie den Assistenten der MFC-Anwendung, und wählen Sie erweiterte Funktionen oder Unterstützung für Verbunddokumente eine Skelette-Anwendung erstellen. Informationen zu diesen Optionen und was sie tun, finden Sie im Artikel [erstellen eine MFC-EXE-Programm](../mfc/reference/mfc-application-wizard.md).
 
 - Sie haben es sich um ein Programm geschrieben, mit der Microsoft Foundation Class-Bibliothek Version 2.0 oder höher, die keine OLE unterstützt.
 
-     Erstellen einer neuen Anwendung mit der MFC-Anwendungs-Assistenten wie bereits erwähnt, und klicken Sie dann kopieren und fügen Sie den Code aus der neuen Anwendung in Ihre vorhandene Anwendung. Dies funktioniert für Server, Containern oder automatisierten Anwendungen. Finden Sie unter MFC [SCRIBBLE](../visual-cpp-samples.md) ein Beispiel für diese Strategie.
+   Erstellen einer neuen Anwendung mit der MFC-Anwendungs-Assistenten wie bereits erwähnt, und klicken Sie dann kopieren und fügen Sie den Code aus der neuen Anwendung in Ihre vorhandene Anwendung. Dies funktioniert für Server, Containern oder automatisierten Anwendungen. Finden Sie unter MFC [SCRIBBLE](../visual-cpp-samples.md) ein Beispiel für diese Strategie.
 
 - Sie haben es sich um eine Microsoft Foundation Class Library-Programm, das OLE-Version 1.0-Unterstützung implementiert.
 
-     Finden Sie unter [MFC technischer Hinweis 41](../mfc/tn041-mfc-ole1-migration-to-mfc-ole-2.md) für diese Konvertierungsstrategie.
+   Finden Sie unter [MFC technischer Hinweis 41](../mfc/tn041-mfc-ole1-migration-to-mfc-ole-2.md) für diese Konvertierungsstrategie.
 
 - Sie haben eine Anwendung, die nicht mithilfe der Microsoft Foundation Classes geschrieben wurde und möglicherweise oder möglicherweise keine Unterstützung von OLE implementiert haben.
 
-     Diese Situation erfordert die meisten Aufgaben. Ein Ansatz besteht darin eine neue Anwendung erstellen, wie in der ersten Strategie, und kopieren Sie dann aus, und fügen den vorhandenen Code, auf. Wenn Ihr vorhandene Code in C# geschrieben ist, dann müssen Sie möglicherweise ändern, damit er als C++-Code kompiliert werden kann. Wenn Ihre C-Code über die Windows-API aufruft, müssen Sie nicht ändern, um die Microsoft Foundation Classes zu verwenden. Dieser Ansatz wahrscheinlich erfordert einige neustrukturierungen des Programms zur Unterstützung der Dokument-/Ansichtarchitektur verwendet, die für die Versionen 2.0 und höheren Versionen der Microsoft Foundation Classes. Weitere Informationen zu dieser Architektur, finden Sie unter [technischen Hinweis 25](../mfc/tn025-document-view-and-frame-creation.md).
+   Diese Situation erfordert die meisten Aufgaben. Ein Ansatz besteht darin eine neue Anwendung erstellen, wie in der ersten Strategie, und kopieren Sie dann aus, und fügen den vorhandenen Code, auf. Wenn Ihr vorhandene Code in C# geschrieben ist, dann müssen Sie möglicherweise ändern, damit er als C++-Code kompiliert werden kann. Wenn Ihre C-Code über die Windows-API aufruft, müssen Sie nicht ändern, um die Microsoft Foundation Classes zu verwenden. Dieser Ansatz wahrscheinlich erfordert einige neustrukturierungen des Programms zur Unterstützung der Dokument-/Ansichtarchitektur verwendet, die für die Versionen 2.0 und höheren Versionen der Microsoft Foundation Classes. Weitere Informationen zu dieser Architektur, finden Sie unter [technischen Hinweis 25](../mfc/tn025-document-view-and-frame-creation.md).
 
 Nachdem Sie eine Strategie entschieden haben, sollten Sie entweder Lesen der [Container](../mfc/containers.md) oder [Server](../mfc/servers.md) Artikel (je nach Art der Anwendung, die Sie schreiben), oder Überprüfen Sie die Beispielprogramme oder beides. Die MFC-OLE-Beispiele [OCLIENT](../visual-cpp-samples.md) und [HIERSVR](../visual-cpp-samples.md) zeigen, wie Sie die verschiedenen Aspekte der Container und Server, implementieren. An verschiedenen Punkten in diesen Artikeln werden Sie bestimmte Funktionen in diesen Beispielen als Beispiele für die vorgestellten bezeichnet.
 

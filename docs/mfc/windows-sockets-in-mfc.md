@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff86123f395e9647ef848ad017fe3cb69b69dd71
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a460870887f3a012bf02ee6518ba70c65881c804
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427679"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081416"
 ---
 # <a name="windows-sockets-in-mfc"></a>Windows-Sockets in MFC
 
@@ -42,11 +42,11 @@ Die zwei MFC Windows Sockets-Programmiermodelle nutzen, werden durch die folgend
 
 - `CAsyncSocket`
 
-     Diese Klasse kapselt die Windows Sockets-API. [CAsyncSocket](../mfc/reference/casyncsocket-class.md) ist für Programmierer, die netzwerkprogrammierung wissen und die Flexibilität des direkten Programmieren auf Sockets-API auch möchten jedoch die Vorteile von Rückruffunktionen für Benachrichtigungen über Netzwerkereignisse. Als Packen-Sockets in objektorientierten Formular für die Verwendung in C++ ist der einzige zusätzliche Abstraktion, die diese Klasse stellt bestimmte Socket-bezogene Windows-Nachrichten in Rückrufen konvertiert. Weitere Informationen finden Sie unter [Windows Sockets: Socketbenachrichtigungen](../mfc/windows-sockets-socket-notifications.md).
+   Diese Klasse kapselt die Windows Sockets-API. [CAsyncSocket](../mfc/reference/casyncsocket-class.md) ist für Programmierer, die netzwerkprogrammierung wissen und die Flexibilität des direkten Programmieren auf Sockets-API auch möchten jedoch die Vorteile von Rückruffunktionen für Benachrichtigungen über Netzwerkereignisse. Als Packen-Sockets in objektorientierten Formular für die Verwendung in C++ ist der einzige zusätzliche Abstraktion, die diese Klasse stellt bestimmte Socket-bezogene Windows-Nachrichten in Rückrufen konvertiert. Weitere Informationen finden Sie unter [Windows Sockets: Socketbenachrichtigungen](../mfc/windows-sockets-socket-notifications.md).
 
 - `CSocket`
 
-     Diese Klasse, aus abgeleiteten `CAsyncSocket`, liefert einen höheren Abstraktionsgrad für die Arbeit mit Sockets über ein MFC [CArchive](../mfc/reference/carchive-class.md) Objekt. Verwenden einen Socket mit einem Archiv erheblich ähnelt der MFC Serialisierung Dateiprotokoll. Dies erleichtert es zu verwenden als die `CAsyncSocket` Modell. [CSocket](../mfc/reference/csocket-class.md) erbt viele Memberfunktionen aus `CAsyncSocket` , die Windows Sockets-APIs kapseln, müssen einige dieser Funktionen verwenden, und Verstehen von Socketprogrammierung. Aber `CSocket` verwaltet viele Aspekte der Kommunikation, die Sie mit der raw-API oder Klasse selbst durchzuführen hätten `CAsyncSocket`. Der wichtigste `CSocket` bietet blockiert (mit der Verarbeitung im Hintergrund von Windows-Nachrichten), ist wichtig, damit die synchronen Vorgang `CArchive`.
+   Diese Klasse, aus abgeleiteten `CAsyncSocket`, liefert einen höheren Abstraktionsgrad für die Arbeit mit Sockets über ein MFC [CArchive](../mfc/reference/carchive-class.md) Objekt. Verwenden einen Socket mit einem Archiv erheblich ähnelt der MFC Serialisierung Dateiprotokoll. Dies erleichtert es zu verwenden als die `CAsyncSocket` Modell. [CSocket](../mfc/reference/csocket-class.md) erbt viele Memberfunktionen aus `CAsyncSocket` , die Windows Sockets-APIs kapseln, müssen einige dieser Funktionen verwenden, und Verstehen von Socketprogrammierung. Aber `CSocket` verwaltet viele Aspekte der Kommunikation, die Sie mit der raw-API oder Klasse selbst durchzuführen hätten `CAsyncSocket`. Der wichtigste `CSocket` bietet blockiert (mit der Verarbeitung im Hintergrund von Windows-Nachrichten), ist wichtig, damit die synchronen Vorgang `CArchive`.
 
 Erstellen und Verwenden von `CSocket` und `CAsyncSocket` Objekte finden Sie im [Windows Sockets: Verwenden von Sockets mit Archiven](../mfc/windows-sockets-using-sockets-with-archives.md) und [Windows Sockets: CAsyncSocket-Klasse unter Verwendung](../mfc/windows-sockets-using-class-casyncsocket.md).
 

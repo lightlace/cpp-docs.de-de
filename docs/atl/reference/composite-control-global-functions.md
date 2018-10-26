@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee59f5e86cddeec47da47c648b0cf12789cc85a
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 8c8493650ef2c86a89c1a3060deb5ee6269a38a7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084099"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068644"
 ---
 # <a name="composite-control-global-functions"></a>Globale Funktionen zusammengesetzter Steuerelemente
 
@@ -56,11 +56,11 @@ Diese Funktionen bieten Unterstützung für das Erstellen von Dialogfeldern, und
 |[AtlSetChildSite](#atlsetchildsite)|Initialisiert die `IUnknown` des untergeordneten Standorts.|
 |[AtlAxWinInit](#atlaxwininit)|Initialisiert den Hostcode AxWin-Objekte.|
 |[AtlAxWinTerm](#atlaxwinterm)|Hebt die Initialisierung des Codes zum Hosten für AxWin-Objekte.|
-|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|Gibt Informationen über die standardquellschnittstelle eines Objekts zurück.|  
+|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|Gibt Informationen über die standardquellschnittstelle eines Objekts zurück.|
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** atlhost.h  
+**Header:** atlhost.h
 
 ##  <a name="atlaxdialogbox"></a>  AtlAxCreateDialog
 
@@ -101,7 +101,7 @@ Einer der standardmäßigen HRESULT-Werte.
 Mit `AtlAxDialogBox` mit einer Dialogfeldvorlage, der ein ActiveX-Steuerelement enthält, geben Sie eine gültige CLSID "," APPID "oder" URL-Zeichenfolge als die *Text* Feld der **Steuerelement** Abschnitt der Dialogfeldressource, zusammen mit " AtlAxWin80 "als die *Klassenname* Feld im gleichen Abschnitt. Im folgenden wird veranschaulicht, was eine gültige **Steuerelement** Abschnitt könnte folgendermaßen aussehen:
 
 ```
-CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,  
+CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
@@ -261,7 +261,7 @@ Ein lizenziertes ActiveX-Steuerelement erstellen zu können, finden Sie unter [A
 
 ##  <a name="atlaxcreatecontrollic"></a>  AtlAxCreateControlLic
 
-Erstellt ein lizenziertes ActiveX-Steuerelement, initialisiert es und hostet es im angegebenen Fenster.  
+Erstellt ein lizenziertes ActiveX-Steuerelement, initialisiert es und hostet es im angegebenen Fenster.
 
 ```
 ATLAPI AtlAxCreateControlLic(
@@ -484,7 +484,7 @@ Ungleich NULL, wenn die Initialisierung des Steuerelements Hostcode erfolgreich 
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Funktion muss aufgerufen werden, bevor Sie mit dem ATL-Steuerelement, das hosting-API. Nach einem Aufruf dieser Funktion die **"AtlAxWin"** Window-Klasse kann verwendet werden, in Aufrufen von [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) oder [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)gemäß der Beschreibung in das Windows SDK.  
+Diese Funktion muss aufgerufen werden, bevor Sie mit dem ATL-Steuerelement, das hosting-API. Nach einem Aufruf dieser Funktion die **"AtlAxWin"** Window-Klasse kann verwendet werden, in Aufrufen von [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) oder [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)gemäß der Beschreibung in das Windows SDK.
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinInit
 

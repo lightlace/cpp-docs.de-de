@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b20b5ea002ac16feb99707610fbe4556bf3254f7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b06302d330ec8677a3de9b3ccaebf0b7b237b0e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375993"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053890"
 ---
 # <a name="application-control"></a>Anwendungssteuerelement
 
@@ -41,7 +41,6 @@ OLE erfordert erhebliche Kontrolle über die Anwendungen und ihre Objekte. Die O
 |[AfxOleUnlockControl](#afxoleunlockcontrol)| Entsperrt die Klassenfactory des angegebenen Steuerelements. |
 |[AfxOleRegisterServerClass](#afxoleregisterserverclass)|Einen Server registriert in der systemregistrierung OLE.|
 |[AfxOleSetEditMenu](#afxoleseteditmenu)|Implementiert die Benutzeroberfläche für die *Typename* Objekt-Befehl.|
-
 
 ##  <a name="afxolecanexitapp"></a>  AfxOleCanExitApp
 
@@ -192,6 +191,7 @@ Die Klassenfactory des angegebenen Steuerelements sperrt, sodass dynamisch erste
 BOOL AFXAPI AfxOleLockControl(  REFCLSID clsid  );
 BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *clsid*<br/>
@@ -357,6 +357,7 @@ Entsperrt die Klassenfactory des angegebenen Steuerelements.
 BOOL AFXAPI AfxOleUnlockControl( REFCLSID clsid );
 BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *clsid*<br/>

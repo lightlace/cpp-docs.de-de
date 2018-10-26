@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9019b8f2314cfefa5b952994e7fa7c3e9d8d459e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8236ed06a5863e2208c77294e4ddb7352b0f83f7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442772"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052992"
 ---
 # <a name="form-views-mfc"></a>Formularansichten (MFC)
 
@@ -40,7 +40,7 @@ Wenn Sie ein neues Formular in Ihre Anwendung einfügen, führt Visual C++ Folge
 
 - Erstellt eine Dialogfeldressource mit der entsprechenden Stile (oder Sie können eine vorhandenen Dialog-Ressource, die noch nicht zu einer Klasse wurde).
 
-     Wenn Sie eine vorhandenen Dialog-Ressource auswählen, müssen Sie diese Stile festgelegt werden, mithilfe der Seite "Eigenschaften" für das Dialogfeld. Formate für ein Dialogfeld müssen Folgendes enthalten:
+   Wenn Sie eine vorhandenen Dialog-Ressource auswählen, müssen Sie diese Stile festgelegt werden, mithilfe der Seite "Eigenschaften" für das Dialogfeld. Formate für ein Dialogfeld müssen Folgendes enthalten:
 
      **WS_CHILD**= On
 
@@ -54,17 +54,17 @@ Für Anwendungen, die basierend auf der Dokument-/Ansichtarchitektur die **Formu
 
 - Erstellt eine `CDocument`-basierten Klasse
 
-     Anstatt eine neue Klasse erstellt haben, können Sie alle vorhandenen `CDocument`-basierten Klasse im Projekt.
+   Anstatt eine neue Klasse erstellt haben, können Sie alle vorhandenen `CDocument`-basierten Klasse im Projekt.
 
 - Generiert eine Dokumentvorlage (abgeleitet `CDocument`) mit der Zeichenfolge, Menüs und Symbol für Ressourcen.
 
-     Sie können auch auf der Basis der Vorlage für eine neue Klasse erstellen.
+   Sie können auch auf der Basis der Vorlage für eine neue Klasse erstellen.
 
 - Fügt einen Aufruf von `AddDocumentTemplate` in Ihrer Anwendungsverzeichnis `InitInstance` Code.
 
-     Fügt dieser Code für jedes neue Formular erstellen, die Liste der verfügbaren Formulare des Formulars hinzugefügt, wenn der Benutzer auswählt Visual C++ die **neu** Befehl. Dieser Code umfasst verknüpfte Ressourcen-ID des Formulars und die Namen der der zugeordnete Dokument anzeigen und Frameklassen, aus denen die neue Form-Objekt besteht.
+   Fügt dieser Code für jedes neue Formular erstellen, die Liste der verfügbaren Formulare des Formulars hinzugefügt, wenn der Benutzer auswählt Visual C++ die **neu** Befehl. Dieser Code umfasst verknüpfte Ressourcen-ID des Formulars und die Namen der der zugeordnete Dokument anzeigen und Frameklassen, aus denen die neue Form-Objekt besteht.
 
-     Dokumentvorlagen dienen als Verbindung zwischen Dokumenten, Rahmenfenstern und Ansichten. Für ein einzelnes Dokument können Sie viele Vorlagen erstellen.
+   Dokumentvorlagen dienen als Verbindung zwischen Dokumenten, Rahmenfenstern und Ansichten. Für ein einzelnes Dokument können Sie viele Vorlagen erstellen.
 
 Weitere Informationen finden Sie unter:
 

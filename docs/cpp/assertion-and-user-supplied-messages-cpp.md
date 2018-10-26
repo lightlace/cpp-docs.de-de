@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88873c9ebde2ce03163e62a59f3dd6fffdd36849
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fdbf1ba3c4cfda4163076386def70c700c156aa7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090281"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057873"
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>Assertion und benutzerdefinierte Meldungen (C++)
 
@@ -36,7 +36,7 @@ Die Lebensdauer der Anwendung besteht aus einer Vorverarbeitungs-, einer Kompili
 
 - Die ["static_assert"](../cpp/static-assert.md) Deklaration gültig ist, zum Zeitpunkt der Kompilierung. Sie testet eine Softwareassertion, die durch einen vom Benutzer angegebenen ganzzahligen Ausdruck dargestellt wird, der in einen booleschen Wert konvertiert werden kann. Wenn der Ausdruck 0 (false) ergibt, gibt der Compiler die vom Benutzer angegebene Meldung aus, und die Kompilierung wird mit einem Fehler beendet.
 
-     Die `static_assert`-Deklaration ist zum Debuggen von Vorlagen besonders nützlich, da Vorlagenargumente in den benutzerdefinierten Ausdruck eingeschlossen werden können.
+   Die `static_assert`-Deklaration ist zum Debuggen von Vorlagen besonders nützlich, da Vorlagenargumente in den benutzerdefinierten Ausdruck eingeschlossen werden können.
 
 - Die [assert-Makro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) Makro zur Laufzeit gültig ist. Es wertet einen vom Benutzer angegebenen Ausdruck aus, und wenn das Ergebnis null (0) ist, gibt das System eine Diagnosemeldung aus und schließt die Anwendung. Viele andere Makros, wie z. B.[_ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) und _ASSERTE-, ähneln diesem Makro aber unterschiedliche systemdefinierte oder benutzerdefinierte diagnosemeldungen ausgeben.
 

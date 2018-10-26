@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28e22df4eba5a12806221beea1966d1c1cdeae46
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: af14755b9be9413feb3a519d09200577c9260c5a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46052907"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053708"
 ---
 # <a name="atl-control-containment-faq"></a>Fragen und Antworten zur ATL-Steuerelementkapselung
 
@@ -37,7 +37,7 @@ Der ATL-steuerelementhostings Code erfordern nicht Ihnen die Verwendung von ATL-
 |[CAxWindow2T](../atl/reference/caxwindow2t-class.md)|Umschließt ein **"AtlAxWinLic80"** Fenster Methoden für das Erstellen des Fensters, erstellen ein Steuerelement und/oder ein lizenziertes Steuerelement anfügen, um das Fenster und Abrufen von Schnittstellenzeigern auf das Hostobjekt bereitstellt.|
 |[CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md)|Fungiert als Basisklasse für ActiveX-Steuerelementklassen basierend auf einer Ressource. Solche Steuerelemente können andere ActiveX-Steuerelemente enthalten.|
 |[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)|Fungiert als Basisklasse für Klassen basierend auf einer Ressource. Diese Dialogfelder können ActiveX-Steuerelemente enthalten.|
-|[CWindow](../atl/reference/cwindow-class.md)|Stellt eine Methode, [GetDlgControl](../atl/reference/cwindow-class.md#getdlgcontrol), einen Schnittstellenzeiger zurückgegeben, für ein Steuerelement anhand der ID des Hostfensters. Darüber hinaus die Windows-API-Wrapper von verfügbar gemachten `CWindow` in der Regel fensterverwaltung erleichtern.|  
+|[CWindow](../atl/reference/cwindow-class.md)|Stellt eine Methode, [GetDlgControl](../atl/reference/cwindow-class.md#getdlgcontrol), einen Schnittstellenzeiger zurückgegeben, für ein Steuerelement anhand der ID des Hostfensters. Darüber hinaus die Windows-API-Wrapper von verfügbar gemachten `CWindow` in der Regel fensterverwaltung erleichtern.|
 
 ## <a name="what-is-the-atl-control-hosting-api"></a>Was ist die ATL-Steuerelement-Hosting-API?
 
@@ -62,11 +62,11 @@ Die `HWND` Parameter in der ersten drei Funktionen müssen ein vorhandenes Fenst
 Rufen Sie die ersten sieben Funktionen [AtlAxWinInit](reference/composite-control-global-functions.md#atlaxwininit) implizit.
 
 > [!NOTE]
->  Die Steuerelement-hosting-API bildet die Grundlage für ATLs-Unterstützung für ActiveX-Steuerelementcontainern. Es besteht jedoch in der Regel kaum Bedarf, diese Funktionen direkt aufzurufen, wenn Sie nutzen, oder ATLs-Wrapperklassen nutzen. Weitere Informationen finden Sie unter [der ATL-Klassen vereinfachen ActiveX-Steuerelementcontainern](which-atl-classes-facilitate-activex-control-containment-q.md).  
+>  Die Steuerelement-hosting-API bildet die Grundlage für ATLs-Unterstützung für ActiveX-Steuerelementcontainern. Es besteht jedoch in der Regel kaum Bedarf, diese Funktionen direkt aufzurufen, wenn Sie nutzen, oder ATLs-Wrapperklassen nutzen. Weitere Informationen finden Sie unter [der ATL-Klassen vereinfachen ActiveX-Steuerelementcontainern](which-atl-classes-facilitate-activex-control-containment-q.md).
 
 ## <a name="what-is-atlaxwin100"></a>Was ist AtlAxWin100?
 
-`AtlAxWin100` ist der Name einer Fenster-Klasse, die ATLs-steuerelementhostings Funktionalität bietet. Wenn Sie eine Instanz dieser Klasse erstellen, verwendet die Fensterprozedur automatisch die Steuerelement-hosting-API erstellen ein Objekt mit dem Fenster verknüpft ist, und laden, mit dem Steuerelement, das Sie als Titel des Fensters angeben. 
+`AtlAxWin100` ist der Name einer Fenster-Klasse, die ATLs-steuerelementhostings Funktionalität bietet. Wenn Sie eine Instanz dieser Klasse erstellen, verwendet die Fensterprozedur automatisch die Steuerelement-hosting-API erstellen ein Objekt mit dem Fenster verknüpft ist, und laden, mit dem Steuerelement, das Sie als Titel des Fensters angeben.
 
 ## <a name="when-do-i-need-to-call-atlaxwininit"></a>Wann muss ich AtlAxWinInit aufrufen?
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 719ff1a87f3f1afc19cf38736c0059c46a8a9bdc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ce6a8b2ef9ac807e48cff42186453666cebda5ee
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46110873"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055983"
 ---
 # <a name="linker-tools-error-lnk1106"></a>Linkertoolfehler LNK1106
 
@@ -33,16 +33,16 @@ Das Tool konnte nicht lesen oder Schreiben in `location` in eine Datei mit zugew
 
 1. Der Datenträger ist voll.
 
-     Geben Sie Speicherplatz frei, und erneut auf den link.
+   Geben Sie Speicherplatz frei, und erneut auf den link.
 
 1. Versucht, über ein Netzwerk zu verknüpfen.
 
-     Manche Netzwerke unterstützen nicht vollständig die Speicherabbilddateien, die vom Linker verwendet werden. Versuchen Sie, eine Verknüpfung auf dem lokalen Datenträger.
+   Manche Netzwerke unterstützen nicht vollständig die Speicherabbilddateien, die vom Linker verwendet werden. Versuchen Sie, eine Verknüpfung auf dem lokalen Datenträger.
 
 1. Ungültige Block auf dem Datenträger.
 
-     Obwohl das Betriebssystem und Datenträgerhardware solcher Fehler erkannt haben sollen, empfiehlt es sich zum Ausführen von Programmen datenträgerüberprüfung.
+   Obwohl das Betriebssystem und Datenträgerhardware solcher Fehler erkannt haben sollen, empfiehlt es sich zum Ausführen von Programmen datenträgerüberprüfung.
 
 1. Kein weiterer Heapspeicher verfügbar.
 
-     Finden Sie unter [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) für Weitere Informationen.
+   Finden Sie unter [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) für Weitere Informationen.

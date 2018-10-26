@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5fb7f205ccdf78e1ef64e2ba2c132e3c2b6b6000
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 2ca39b160aacdf72bb6d6131b757755f87ac22a6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791942"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075075"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -44,13 +44,13 @@ Die Standardschnittstelle, die für Skriptumgebungen verfügbar gemacht wird, di
 Wenn keine Standardschnittstelle angegeben wird, wird das erste Vorkommen einer Nicht-Quellschnittstelle als Standard verwendet.
 
 *Interface2*<br/>
-(Optional) Die Standard-Quellschnittstelle. Sie müssen auch angeben, diese Schnittstelle die [Quelle](source-cpp.md) Attribut.
+(Optional) Die Standard-Quellschnittstelle. Sie müssen diese Schnittstelle auch beim [source](source-cpp.md) -Attribut angeben.
 
 Wenn keine Standard-Quellschnittstelle angegeben ist, wird die erste Quellschnittstelle als Standard verwendet.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Standard** C++-Attribut hat die gleiche Funktionalität wie die [Standard](/windows/desktop/Midl/default) MIDL-Attribut. Die **Standard** Attribut wird auch verwendet, mit der [Fall](case-cpp.md) Attribut.
+Das C++-Attribut **default** hat die gleiche Funktion wie das MIDL-Attribut [default](/windows/desktop/Midl/default) . Das **default** -Attribut wird auch mit dem [case](case-cpp.md) -Attribut verwendet.
 
 ## <a name="example"></a>Beispiel
 
@@ -77,7 +77,7 @@ __interface ICustomDispatch : public IDispatch {
    HRESULT Dispatch([in] long l, [out, retval] long *pLong);
 };
 
-[   coclass, default(ICustomDispatch), source(IDual), uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")  
+[   coclass, default(ICustomDispatch), source(IDual), uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")
 ]
 class CClass : public ICustom, public IDual, public ICustomDispatch {
    HRESULT Custom(long l, long *pLong) { return(S_OK); }
@@ -102,7 +102,7 @@ int main() {
 }
 ```
 
-Die [Quelle](source-cpp.md) -Attribut weist außerdem ein Beispiel zur Verwendung **Standard**.
+Das [source](source-cpp.md) -Attribut weist außerdem ein Beispiel zum Verwenden von **default**auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -121,4 +121,4 @@ Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net
 
 [IDL-Attribute](idl-attributes.md)<br/>
 [Klassenattribute](class-attributes.md)<br/>
-[coclass](coclass.md)  
+[coclass](coclass.md)

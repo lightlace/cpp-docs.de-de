@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4abd2bf866a97e13324af22032cce9ebcaba4da
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f74c0fdcdb8d6dfe1aced33a1c7087ecde6c89ff
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408517"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080922"
 ---
 # <a name="opening-files"></a>Öffnen von Dateien
 
@@ -41,15 +41,15 @@ In MFC ist die gängigste Methode zum Öffnen einer Datei ein zweistufiger Proze
 
 1. Erstellen Sie das Objekt "Datei", ohne einen Pfad oder die Berechtigung-Flags.
 
-     Sie erstellen ein Objekt "Datei" in der Regel durch Deklarieren einer [CFile](../mfc/reference/cfile-class.md) Variablen im Stapelrahmen.
+   Sie erstellen ein Objekt "Datei" in der Regel durch Deklarieren einer [CFile](../mfc/reference/cfile-class.md) Variablen im Stapelrahmen.
 
 1. Rufen Sie die [öffnen](../mfc/reference/cfile-class.md#open) Member-Funktion für das File-Objekt, einen Pfad und der Berechtigung Flags angeben.
 
-     Der Rückgabewert für `Open` werden ungleich NULL, wenn die Datei erfolgreich geöffnet wurde, oder 0, wenn die angegebene Datei konnte nicht geöffnet werden. Die `Open` Member-Funktion wird wie folgt:
+   Der Rückgabewert für `Open` werden ungleich NULL, wenn die Datei erfolgreich geöffnet wurde, oder 0, wenn die angegebene Datei konnte nicht geöffnet werden. Die `Open` Member-Funktion wird wie folgt:
 
-     `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`
+   `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`
 
-     Die open-Flags festlegen, welche Berechtigungen ein, z. B. schreibgeschützt, Sie möchten, für die Datei. Die möglichen Flagwerte sind definiert als aufgezählte Konstanten in der `CFile` Klasse, damit sie mit gekennzeichnet sind "`CFile::`" wie in `CFile::modeRead`. Verwenden der `CFile::modeCreate` auszugeben, wenn Sie die Datei erstellen möchten.
+   Die open-Flags festlegen, welche Berechtigungen ein, z. B. schreibgeschützt, Sie möchten, für die Datei. Die möglichen Flagwerte sind definiert als aufgezählte Konstanten in der `CFile` Klasse, damit sie mit gekennzeichnet sind "`CFile::`" wie in `CFile::modeRead`. Verwenden der `CFile::modeCreate` auszugeben, wenn Sie die Datei erstellen möchten.
 
 Das folgende Beispiel zeigt, wie Sie eine neue Datei mit Lese-/Schreibberechtigung (ersetzen Sie alle vorherige Datei mit dem gleichen Pfad) zu erstellen:
 

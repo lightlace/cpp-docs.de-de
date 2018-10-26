@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9351e363bfa0ca654837436a01bb36b4f2b51eb2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5099251f46d3446368c04a39d624fde8128ab2e4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378396"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076307"
 ---
 # <a name="cbasepane-class"></a>CBasePane-Klasse
 
@@ -292,7 +292,7 @@ class CBasePane : public CWnd
 |[Cbasepane:: Onsetaccdata](#onsetaccdata)|`CBasePane` Diese Methode wird nicht verwendet werden.|
 |`CBasePane::OnUpdateCmdUI`|Wird intern verwendet.|
 |[CBasePane::PaneFromPoint](#panefrompoint)|Gibt den Bereich, der den angegebenen Punkt enthält.|
-|`CBasePane::PreTranslateMessage`|Von Klasse verwendeten [CWinApp](../../mfc/reference/cwinapp-class.md) um fenstermeldungen zu übersetzen, bevor sie um weitergeleitet werden die [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows-Funktionen. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|`CBasePane::PreTranslateMessage`|Wird von der [CWinApp](../../mfc/reference/cwinapp-class.md) -Klasse verwendet, um Fenstermeldungen zu übersetzen, bevor diese an die Windows-Funktionen [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) gesendet werden. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
 |[CBasePane::RecalcLayout](#recalclayout)|`CBasePane` Diese Methode wird nicht verwendet werden.|
 |[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|Hebt die Registrierung für eines Bereichs, und entfernt sie aus der Liste im Dock-Manager.|
 |[CBasePane::SaveState](#savestate)|Speichert den Zustand des Bereichs in der Registrierung.|
@@ -332,7 +332,7 @@ Die folgende Anpassungstipps beziehen sich auf die `CBasePane Class` und alle Kl
 
     - AFX_CBRS_CLOSE können im Bereich (ausgeblendet) geschlossen werden.
 
-     Hierbei handelt es sich um Flags an, denen Sie mit einer bitweisen OR-Operation kombinieren können.
+   Hierbei handelt es sich um Flags an, denen Sie mit einer bitweisen OR-Operation kombinieren können.
 
 `CBasePane` implementiert die folgenden virtuellen booleschen Methoden entsprechend der folgenden Flags: [cbasepane:: Canbeclosed](#canbeclosed), [CBasePane::CanAutoHide](#canautohide), [CBasePane::CanFloat](#canfloat). Sie können diese in abgeleiteten Klassen zum Anpassen ihres Verhaltens überschreiben.
 
@@ -352,7 +352,7 @@ Die folgende Anpassungstipps beziehen sich auf die `CBasePane Class` und alle Kl
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird veranschaulicht, wie verschiedene Methoden in der `CBasePane` Klasse. Das Beispiel veranschaulicht das Abrufen von einem Bereich von der `CFrameWndEx` -Klasse und zum Festlegen der Andockmodus, die im Bereich Ausrichtung und den Stil. Der Code stammt aus dem [WordPad-Beispiels](../../visual-cpp-samples.md).
+Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in der `CBasePane` -Klasse. Das Beispiel veranschaulicht das Abrufen von einem Bereich von der `CFrameWndEx` -Klasse und zum Festlegen der Andockmodus, die im Bereich Ausrichtung und den Stil. Der Code stammt aus dem [WordPad-Beispiels](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#2](../../mfc/reference/codesnippet/cpp/cbasepane-class_1.cpp)]
 
@@ -721,7 +721,7 @@ virtual BOOL CreateEx(
 *dwControlBarStyle*<br/>
 [in] Formatflags für Bereiche.
 
-*"pContext"*<br/>
+*pContext*<br/>
 [in] Ein Zeiger auf `CcreateContext`
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1643,7 +1643,8 @@ virtual void OnMovePaneDivider(CPaneDivider*);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *CPaneDivider\**  nicht verwendet.
+*CPaneDivider\**<br/>
+[in] Nicht verwendet.
 
 ##  <a name="onpanecontextmenu"></a>  CBasePane::OnPaneContextMenu
 

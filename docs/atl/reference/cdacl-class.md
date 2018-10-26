@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f96fe03288495eb109795e31c6dfd2bd3928d47c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f3d0b817fc080ff81e11e1789387f50cb3e871e5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036137"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076008"
 ---
 # <a name="cdacl-class"></a>CDacl-Klasse
 
@@ -93,12 +93,12 @@ Eine Einführung in das Zugriffssteuerungsmodell in Windows, finden Sie unter [Z
 Fügt einen zulässigen ACE (Access Control Entry) die `CDacl` Objekt.
 
 ```
-bool AddAllowedAce(  
+bool AddAllowedAce(
     const CSid& rSid,
     ACCESS_MASK AccessMask,
     BYTE AceFlags = 0) throw(...);
 
-bool AddAllowedAce(  
+bool AddAllowedAce(
     const CSid& rSid,
     ACCESS_MASK AccessMask,
     BYTE AceFlags,
@@ -138,7 +138,7 @@ Finden Sie unter [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) e
 Einen verweigerten ACE (Access Control Entry) hinzufügt der `CDacl` Objekt.
 
 ```
-bool AddDeniedAce(  
+bool AddDeniedAce(
     const CSid& rSid,
     ACCESS_MASK AccessMask,
     BYTE AceFlags = 0) throw(...);

@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dd1b5df8749f22873a52782b6f528760c3823a1
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 8a0eeb4b7da53b5722733ba0b0116cf03dab4a29
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788760"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053437"
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper-Klasse
 
@@ -74,7 +74,7 @@ Name                                       | Beschreibung
 Ruft der HRESULT-Wert, der von der letzten erzeugten `RoInitializeWrapper` Konstruktor.
 
 ```cpp
-operator HRESULT()  
+operator HRESULT()
 ```
 
 ## <a name="roinitializewrapper"></a>Roinitializewrapper:: Roinitializewrapper
@@ -82,7 +82,7 @@ operator HRESULT()
 Initialisiert eine neue Instanz der `RoInitializeWrapper`-Klasse.
 
 ```cpp
-RoInitializeWrapper(   RO_INIT_TYPE flags)  
+RoInitializeWrapper(RO_INIT_TYPE flags)
 ```
 
 ### <a name="parameters"></a>Parameter
@@ -99,7 +99,7 @@ Die `RoInitializeWrapper` Klasse ruft `Windows::Foundation::Initialize(flags)`.
 Hebt die Initialisierung der Windows-Runtime.
 
 ```cpp
-~RoInitializeWrapper()  
+~RoInitializeWrapper()
 ```
 
 ### <a name="remarks"></a>Hinweise

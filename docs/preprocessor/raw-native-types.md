@@ -16,31 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067b109757f14e1b76c292bbae5a2ea7d688eae2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d4739b8664da21a86caa91398a7956eac77e22f3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393623"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072888"
 ---
 # <a name="rawnativetypes"></a>raw_native_types
-**C++-spezifisch**  
-  
-Deaktiviert die Verwendung COM-Unterstützungsklassen in den Wrapperfunktionen auf hoher Ebene und erzwingt stattdessen die Verwendung von Datentypen auf niedriger Ebene.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-raw_native_types  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- 
-Standardmäßig verwenden die Fehlerbehandlungsmethoden auf hoher Ebene die COM-Unterstützungsklassen [_bstr_t](../cpp/bstr-t-class.md) und [_variant_t](../cpp/variant-t-class.md) anstelle von der `BSTR` und `VARIANT` -Datentypen und unformatierten COM-Schnittstellenzeigern. Diese Klassen kapseln die Details der Zuordnung und Freigabe des Arbeitsspeichers für diese Datentypen und vereinfachen die Typumwandlungs- und Konvertierungsoperationen erheblich.  
-  
-**Ende C++-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- 
+**C++-spezifisch**
+
+Deaktiviert die Verwendung COM-Unterstützungsklassen in den Wrapperfunktionen auf hoher Ebene und erzwingt stattdessen die Verwendung von Datentypen auf niedriger Ebene.
+
+## <a name="syntax"></a>Syntax
+
+```
+raw_native_types
+```
+
+## <a name="remarks"></a>Hinweise
+
+Standardmäßig verwenden die Fehlerbehandlungsmethoden auf hoher Ebene die COM-Unterstützungsklassen [_bstr_t](../cpp/bstr-t-class.md) und [_variant_t](../cpp/variant-t-class.md) anstelle von der `BSTR` und `VARIANT` -Datentypen und unformatierten COM-Schnittstellenzeigern. Diese Klassen kapseln die Details der Zuordnung und Freigabe des Arbeitsspeichers für diese Datentypen und vereinfachen die Typumwandlungs- und Konvertierungsoperationen erheblich.
+
+**Ende C++-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
 [#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)

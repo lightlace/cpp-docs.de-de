@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95faae4de2e9fa756a4f69f231839e19019e08fd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ee8a4bb3f80d9776aec4fd7a6af0d1523c60064d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436805"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066083"
 ---
 # <a name="icommandtarget-interface"></a>ICommandTarget-Schnittstelle
 
@@ -78,6 +78,4 @@ Diese Methode das Zielobjekt für den Befehl initialisiert und verknüpft es mit
 
 [Vorgehensweise: Hinzufügen von Befehlsrouting zum Windows Forms-Steuerelement](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
 [ICommandSource-Schnittstelle](../../mfc/reference/icommandsource-interface.md)
-
-
 

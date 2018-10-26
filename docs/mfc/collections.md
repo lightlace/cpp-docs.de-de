@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b6f2fdeb02fbc5e57bbba58f685d21133841279
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 72bae0d985c81478321109c3c02c07e6b1386028
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412859"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069905"
 ---
 # <a name="collections"></a>Auflistungen
 
@@ -53,15 +53,15 @@ Jede der drei bereitgestellten Auflistungsformen wird kurz weiter unten in diese
 
 - Liste
 
-     Die List-Klasse bietet es sich um eine geordnete, nicht indizierte Liste von Elementen, die als eine doppelt verknüpfte Liste implementiert. Eine Liste verfügt über eine "Head" und ein "Tail" und hinzufügen oder Entfernen von Elementen in der Head oder Tail, einfügen oder Löschen von Elementen in der Mitte ist sehr schnell.
+   Die List-Klasse bietet es sich um eine geordnete, nicht indizierte Liste von Elementen, die als eine doppelt verknüpfte Liste implementiert. Eine Liste verfügt über eine "Head" und ein "Tail" und hinzufügen oder Entfernen von Elementen in der Head oder Tail, einfügen oder Löschen von Elementen in der Mitte ist sehr schnell.
 
 - Array
 
-     Die Array-Klasse stellt eine dynamisch angepasst, bestellt und Integer indizierte Array von Objekten bereit.
+   Die Array-Klasse stellt eine dynamisch angepasst, bestellt und Integer indizierte Array von Objekten bereit.
 
 - Karte (auch bekannt als Wörterbuch)
 
-     Eine Zuordnung ist eine Auflistung, die ein Wertobjekt ein-Objekt zuordnet.
+   Eine Zuordnung ist eine Auflistung, die ein Wertobjekt ein-Objekt zuordnet.
 
 ##  <a name="_core_the_template_based_collection_classes"></a> Die vorlagenbasierte Auflistungsklassen
 

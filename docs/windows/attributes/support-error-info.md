@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0c6bb07071efa162b5b33ae5f1dfe72ac7ea02e8
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: b0d86b31823ec31461f953c7cfc16a5774f215fd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791271"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067162"
 ---
 # <a name="supporterrorinfo"></a>support_error_info
 
@@ -43,7 +43,7 @@ Der Bezeichner der Schnittstelle implementieren `IErrorInfo`.
 
 Das **support_error_info** C++-Attribut implementiert die Unterstützung für die Zurückgabe ausführlicher, kontextbezogener Fehler am Zielobjekt an den Client. Für das Objekt, das Fehler, die Methoden unterstützt die `IErrorInfo` Schnittstelle muss von dem Objekt implementiert werden. Weitere Informationen finden Sie unter [Unterstützung IDispatch und IErrorInfo](../../atl/supporting-idispatch-and-ierrorinfo.md).
 
-Dieses Attribut fügt dem [ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md) Klasse als Basisklasse zum Zielobjekt. Dies führt zu einer standardmäßigen Implementierung von `ISupportErrorInfo` und kann verwendet werden, wenn eine einzelne Schnittstelle Fehler bei einem Objekt generiert.
+Dieses Attribut fügt dem Zielobjekt die [ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md) -Klasse als Basisklasse hinzu. Dies führt zu einer standardmäßigen Implementierung von `ISupportErrorInfo` und kann verwendet werden, wenn eine einzelne Schnittstelle Fehler bei einem Objekt generiert.
 
 ## <a name="example"></a>Beispiel
 
@@ -80,9 +80,9 @@ class CMyClass
 |**Erforderliche Attribute**|Keiner|
 |**Ungültige Attribute**|Keiner|
 
-Weitere Informationen zu den attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Siehe auch
 
 [COM-Attribute](com-attributes.md)<br/>
-[Klassenattribute](class-attributes.md)  
+[Klassenattribute](class-attributes.md)

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bc788e646b0e8f788dd8db97d5bc43c3240441f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c7a7b0f8c61226260497baced9575c911b425512
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402485"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078777"
 ---
 # <a name="cruntimeclass-structure"></a>CRuntimeClass-Struktur
 
@@ -134,7 +134,6 @@ Mit dieser Funktion können Sie bestimmen, ob die Klasse angegeben, die aufrufen
 ```
 BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 
-
 ```
 
 ### <a name="parameters"></a>Parameter
@@ -236,6 +235,4 @@ Weitere Informationen zum Schema Zahlen, finden Sie unter den [IMPLEMENT_SERIAL]
 [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)<br/>
 [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate)<br/>
 [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)
-
-
 

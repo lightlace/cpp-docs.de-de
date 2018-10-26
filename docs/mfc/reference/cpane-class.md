@@ -143,12 +143,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 629e10d06a59b926604fad3b3a6e191fefcb71e7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1a32625001ae86f4d6dffa7eeb953c538822d207
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384503"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080220"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -500,7 +500,8 @@ virtual BOOL Create(
 *Rect*<br/>
 [in] Gibt an, die ursprüngliche Größe und Position der der *pParentWnd* Fenster, in Clientkoordinaten.
 
-[in] [out] *pParentWnd* gibt an, das übergeordnete Fenster dieses Bereichs.
+*pParentWnd*<br/>
+[in, out] Gibt das übergeordnete Fenster dieses Bereichs an.
 
 *nID*<br/>
 [in] Gibt die ID des Bereichs.
@@ -508,7 +509,8 @@ virtual BOOL Create(
 *dwControlBarStyle*<br/>
 [in] Gibt das Format für den Bereich. Weitere Informationen finden Sie unter [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
-[in] [out] *"pContext"* den erstellen-Kontext des Bereichs angibt.
+*pContext*<br/>
+[in, out] Gibt den Kontext Erstellen des Bereichs.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -573,7 +575,8 @@ virtual BOOL CreateEx(
 *Rect*<br/>
 [in] Gibt an, die ursprüngliche Größe und Position der der *pParentWnd* Fenster, in Clientkoordinaten.
 
-[in] [out] *pParentWnd* gibt an, das übergeordnete Fenster dieses Bereichs.
+*pParentWnd*<br/>
+[in, out] Gibt das übergeordnete Fenster dieses Bereichs an.
 
 *nID*<br/>
 [in] Gibt die ID des Bereichs.
@@ -581,7 +584,8 @@ virtual BOOL CreateEx(
 *dwControlBarStyle*<br/>
 [in] Gibt das Format für den Bereich. Weitere Informationen finden Sie unter [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
-[in] [out] *"pContext"* den erstellen-Kontext für den Bereich angibt.
+*pContext*<br/>
+[in, out] Gibt den Kontext erstellen, für den Bereich.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -623,7 +627,8 @@ virtual BOOL DockPane(
 
 ### <a name="parameters"></a>Parameter
 
-[in] [out] *pDockBar* gibt an, die Basis Bereich aus, um diesen Bereich zum Andocken.
+*pDockBar*<br/>
+[in, out] Gibt an, die Basis Bereich aus, um diesen Bereich zum Andocken.
 
 *lpRect*<br/>
 [in] Gibt das Rechteck im Basis-Bereich, in denen dieser Bereich befindet sich angedockt werden.
@@ -1161,7 +1166,8 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>Parameter
 
-[in] [out] *pWndOldParent* im Bereich des vorherigen übergeordneten Fenster.
+*pWndOldParent*<br/>
+[in, out] Im Bereich des vorherigen übergeordneten Fenster.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1213,7 +1219,8 @@ virtual void OnBeforeChangeParent(
 
 ### <a name="parameters"></a>Parameter
 
-[in] [out] *pWndNewParent* gibt an, das neue übergeordnete Fenster.
+*pWndNewParent*<br/>
+[in, out] Gibt an, das neue übergeordnete Fenster.
 
 *bDelay*<br/>
 [in] True, um die globale docking-Layout-Anpassung zu verzögern. andernfalls "false".
@@ -1237,7 +1244,8 @@ virtual BOOL OnBeforeDock(
 
 ### <a name="parameters"></a>Parameter
 
-[in] [out] *PpDockBar* gibt den Bereich, der diesen Bereich zum Andocken wird.
+*ppDockBar*<br/>
+[in, out] Gibt an, dem Bereich, dem diesen Bereich zum Andocken wird.
 
 *lpRect*<br/>
 [in] Gibt das Rechteck andocken.
@@ -1518,7 +1526,8 @@ void SetMiniFrameRTC(CRuntimeClass* pClass);
 
 ### <a name="parameters"></a>Parameter
 
-[in] [out] *pClass* gibt an, die laufzeitklasseninformationen für das Minirahmenfenster.
+*pClass*<br/>
+[in, out] Gibt die Laufzeit-Klasseninformationen für das Minirahmenfenster an.
 
 ### <a name="remarks"></a>Hinweise
 

@@ -162,12 +162,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc76e89cf8ca44b3254b21585bf00ff6243d818c
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: ccd409a99ccbcf80dc117d7c034d4b8a66b551ef
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890828"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060467"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl-Klasse
 
@@ -927,7 +927,7 @@ DWORD GetParaFormat(PARAFORMAT& pf) const;  DWORD GetParaFormat(PARAFORMAT2& pf)
 
 ### <a name="parameters"></a>Parameter
 
-*PF*<br/>
+*pf*<br/>
 In der ersten Version, ein Zeiger auf eine [ABSATZFORMAT](/windows/desktop/api/richedit/ns-richedit-_paraformat) Struktur, die die Attribute der aktuellen Auswahl des absatzformatierung enthalten soll.
 
 In der zweiten Version, ein Zeiger auf eine [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) -Struktur, die eine Erweiterung des Rich Edit 2.0 ist auf die `PARAFORMAT` Struktur, die Formatierungsattribute Standardzeichen.
@@ -1782,7 +1782,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 
 ### <a name="parameters"></a>Parameter
 
-*PF*<br/>
+*pf*<br/>
 In der ersten Version, ein Zeiger auf eine [ABSATZFORMAT](/windows/desktop/api/richedit/ns-richedit-_paraformat) Struktur, die den neuen Standard enthält Absatz Formatierungsattribute.
 
 In der zweiten Version, ein Zeiger auf eine [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) -Struktur, die eine Erweiterung des Rich Edit 2.0 ist auf die `PARAFORMAT` Struktur, die Formatierungsattribute Standardzeichen.
@@ -1956,7 +1956,6 @@ Legt die Ziel-Gerät und die Standardlinienstärke für die WYSIWYG-(Was ist das
 BOOL SetTargetDevice(
     HDC hDC,
     long lLineWidth);
-
 
 BOOL SetTargetDevice(
     CDC& dc,

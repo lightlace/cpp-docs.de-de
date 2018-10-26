@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe6941e8809c0d735013b56d340f27302890b149
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 66188f1879c42eaf9429675a2f235130e263211f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791251"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072524"
 ---
 # <a name="c-attributes-for-com-and-net"></a>C++-Attribute für COM und .NET
 
@@ -90,21 +90,21 @@ Darüber hinaus gibt der Visual C++-Linker alle IDL-Attribut-Informationen in ei
 ## <a name="contexts"></a> Attributkontexte
 
 C++-Attribute können mithilfe von vier grundlegende Felder beschrieben werden: das Ziel, die sie auf angewendet werden können (**gilt für**), wenn sie wiederholbar oder nicht sind (**wiederholbare**), wird die Vorhandenseins anderer Attribute (erforderlich **Erforderliche Attribute**), und die Inkompatibilitäten mit anderen Attributen (**ungültige Attribute**). Diese Felder sind in einer zugehörigen Tabelle im Referenzthema für jedes Attribut des aufgeführt. Jedes dieser Felder wird unten beschrieben.
-  
+
 ### <a name="applies-to"></a>Gilt für
 
 Dieses Feld beschreibt die verschiedenen C++-Sprachelemente, die sind rechtliche Ziele für das angegebene Attribut. Z. B. wenn ein Attribut "Class" in gibt der **gilt für** Feld Dies gibt an, dass das Attribut nur auf eine rechtliche C++-Klasse angewendet werden kann. Wenn das Attribut auf eine Memberfunktion einer Klasse angewendet wird, führt ein Syntaxfehler.
-  
+
 Weitere Informationen finden Sie unter [Attribute nach Verwendung](attributes-by-usage.md).
-  
+
 ### <a name="repeatable"></a>Wiederholbar
 
 Dieses Feld gibt an, ob das Attribut mehrmals an dasselbe Ziel angewendet werden kann. Die meisten Attribute sind nicht wiederholbar.
-  
+
 ### <a name="required-attributes"></a>Erforderliche Attribute
 
 Dieses Feld Listet weitere Attribute, die sich für das angegebene Attribut ordnungsgemäß funktioniert (die an dasselbe Ziel angewendet werden) vorhanden. Es ist ungewöhnlich, dass ein Attribut aus, die Einträge für dieses Feld vorhanden sind.
-  
+
 ### <a name="invalid-attributes"></a>Ungültige Attribute
 
 Dieses Feld Listet weitere Attribute, die mit dem angegebenen Attribut nicht kompatibel sind. Es ist ungewöhnlich, dass ein Attribut aus, die Einträge für dieses Feld vorhanden sind.

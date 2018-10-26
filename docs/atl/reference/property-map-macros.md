@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 594b02d777d87decfc218064678dbecdf8ecf0c9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: caa298ebbb96b04145bf2beb52f93838708ae50b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106349"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50088901"
 ---
 # <a name="property-map-macros"></a>Eigenschaftenzuordnungs-Makros
 
@@ -39,7 +39,7 @@ Diese Makros definieren eigenschaftenzuordnungen und Einträge.
 |[PROP_ENTRY_TYPE](#prop_entry_type)|Gibt eine Beschreibung, Eigenschaft DISPID und Eigenschaft Eigenschaftenseite CLSID in die eigenschaftenzuordnung an.|
 |["PROP_ENTRY_TYPE_EX"](#prop_entry_type_ex)|Gibt die Beschreibung einer Eigenschaft, DISPID, CLSID-Eigenschaftenseite-Eigenschaft und `IDispatch` IID in die eigenschaftenzuordnung.|
 |[PROP_PAGE](#prop_page)|Gibt die CLSID auf einer Eigenschaftenseite in der eigenschaftenzuordnung an.|
-|[END_PROP_MAP](#end_prop_map)|Markiert das Ende der Zuordnung der ATL-Eigenschaft.|  
+|[END_PROP_MAP](#end_prop_map)|Markiert das Ende der Zuordnung der ATL-Eigenschaft.|
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,7 +83,7 @@ PROP_DATA_ENTRY( szDesc, member, vt)
 *szDesc*<br/>
 [in] Beschreibung der Eigenschaft.
 
-*Member*<br/>
+*member*<br/>
 [in] Der Datenmember, die das Ausmaß enthält; z. B. `m_sizeExtent`.
 
 *vt*<br/>

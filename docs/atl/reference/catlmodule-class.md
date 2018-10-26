@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88c8ee576af3c50317b86b7016ac198fefdcbaa9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3211f87e2c692c587ee2df82497fc56662e4974d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093440"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077282"
 ---
 # <a name="catlmodule-class"></a>CAtlModule-Klasse
 
@@ -262,7 +262,7 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 
-HRESULT WINAPI UpdateRegistryFromResourceD(  
+HRESULT WINAPI UpdateRegistryFromResourceD(
     LPCTSTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
@@ -299,7 +299,7 @@ Diese Methode ruft [CAtlModule::UpdateRegistryFromResourceDHelper](#updateregist
 Diese Methode wird aufgerufen, indem `UpdateRegistryFromResourceD` um das Registrierungsupdate durchzuführen.
 
 ```
-inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(  
+inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
     LPCOLESTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
@@ -329,12 +329,12 @@ Diese Methode stellt die Implementierung des [CAtlModule::UpdateRegistryFromReso
 Führt das Skript in einer angegebenen Ressource für das Registrieren oder Aufheben der Registrierung eines Objekts enthalten sind. Diese Methode an, die statisch mit der ATL-Registrierungskomponente verknüpft.
 
 ```
-HRESULT WINAPI UpdateRegistryFromResourceS(  
+HRESULT WINAPI UpdateRegistryFromResourceS(
     UINT nResID,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 
-HRESULT WINAPI UpdateRegistryFromResourceS(  
+HRESULT WINAPI UpdateRegistryFromResourceS(
     LPCTSTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
@@ -367,4 +367,4 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 [_ATL_MODULE](atl-typedefs.md#_atl_module)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)<br/>
 [Modulklassen](../../atl/atl-module-classes.md)<br/>
-[Registrierungskomponente (Registrar)](../../atl/atl-registry-component-registrar.md)  
+[Registrierungskomponente (Registrar)](../../atl/atl-registry-component-registrar.md)

@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8c6079cd0371afa1b9a3ed32ba2cf67e1691d665
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 09cfc38626cab785eb7fa1c34178aa28aa23dac6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382803"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069933"
 ---
 # <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>Gewusst wie: Kompilieren von MFC-Code und ATL-Code mit /clr
 
@@ -40,7 +40,7 @@ In diesem Thema wird erläutert, wie vorhandene MFC- und ATL-Programme, die die 
 
 1. In der **Projekteigenschaften** Dialogfeld erweitern Sie den Knoten neben **Konfigurationseigenschaften** , und wählen Sie **allgemeine**. Klicken Sie im rechten Bereich unter **Projektstandards**legen **Common Language Runtime-Unterstützung** zu **Common Language Runtime-Unterstützung (/ Clr)**.
 
-     Stellen Sie sicher, die im gleichen Bereich **Verwendung von MFC** nastaven NA hodnotu **MFC in einer gemeinsam genutzten DLL verwenden**.
+   Stellen Sie sicher, die im gleichen Bereich **Verwendung von MFC** nastaven NA hodnotu **MFC in einer gemeinsam genutzten DLL verwenden**.
 
 1. Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie den Knoten neben **C/C++-** , und wählen Sie **allgemeine**. Stellen Sie sicher, dass **Debuginformationsformat** nastaven NA hodnotu **Programmdatenbank "/ Zi"** (nicht **"/ Zi"**).
 
@@ -60,7 +60,7 @@ In diesem Thema wird erläutert, wie vorhandene MFC- und ATL-Programme, die die 
 
 1. Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie den Knoten neben **C/C++-** , und wählen Sie **vorkompilierte Header**. Legen Sie **vorkompilierten Header erstellen/verwenden** zu **vorkompilierte Header nicht verwenden**.
 
-     Als Alternative in **Projektmappen-Explorer**mit der rechten Maustaste auf "stdafx.cpp", und klicken Sie dann auf **Eigenschaften**. Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie den Knoten neben **C/C++-** , und wählen Sie **allgemeine**. Legen Sie **mit Unterstützung für die Common Language Runtime kompilieren** zu **keine Common Language Runtime-Unterstützung**.
+   Als Alternative in **Projektmappen-Explorer**mit der rechten Maustaste auf "stdafx.cpp", und klicken Sie dann auf **Eigenschaften**. Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie den Knoten neben **C/C++-** , und wählen Sie **allgemeine**. Legen Sie **mit Unterstützung für die Common Language Runtime kompilieren** zu **keine Common Language Runtime-Unterstützung**.
 
 1. Für die Datei mit DllMain und ruft, in **Projektmappen-Explorer**mit der rechten Maustaste auf die Datei, und klicken Sie dann auf **Eigenschaften**. Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie den Knoten neben **C/C++-** , und wählen Sie **allgemeine**. Klicken Sie im rechten Bereich unter **Projektstandards**legen **mit Unterstützung für die Common Language Runtime kompilieren** zu **keine Common Language Runtime-Unterstützung**.
 
@@ -84,7 +84,7 @@ In diesem Thema wird erläutert, wie vorhandene MFC- und ATL-Programme, die die 
 
 1. Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie den Knoten neben **C/C++-** , und wählen Sie **vorkompilierte Header**. Legen Sie **vorkompilierten Header erstellen/verwenden** zu **vorkompilierte Header nicht verwenden**.
 
-     Als Alternative in **Projektmappen-Explorer**mit der rechten Maustaste auf "stdafx.cpp", und klicken Sie dann auf **Eigenschaften**. Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie den Knoten neben **C/C++-** , und wählen Sie **allgemeine**. Legen Sie **mit Unterstützung für die Common Language Runtime kompilieren** zu **keine Common Language Runtime-Unterstützung**.
+   Als Alternative in **Projektmappen-Explorer**mit der rechten Maustaste auf "stdafx.cpp", und klicken Sie dann auf **Eigenschaften**. Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie den Knoten neben **C/C++-** , und wählen Sie **allgemeine**. Legen Sie **mit Unterstützung für die Common Language Runtime kompilieren** zu **keine Common Language Runtime-Unterstützung**.
 
 1. Für die Datei mit DllMain und ruft, in **Projektmappen-Explorer**mit der rechten Maustaste auf die Datei, und klicken Sie dann auf **Eigenschaften**. Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie den Knoten neben **C/C++-** , und wählen Sie **allgemeine**. Klicken Sie im rechten Bereich unter **Projektstandards**legen **mit Unterstützung für die Common Language Runtime kompilieren** zu **keine Common Language Runtime-Unterstützung**.
 

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46fa8b115dd01a9ee11442a0701cd719cc6d389e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 28c93e5d1331d7195b894fe88c3fe5fc11e7c31d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394360"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074071"
 ---
 # <a name="containers-implementing-a-container"></a>Container: Implementieren eines Containers
 
@@ -62,15 +62,15 @@ Möglicherweise möchten Sie auch einige der folgenden Funktionen in Ihrer Anwen
 
 - Direkte Aktivierung, wenn Sie ein eingebettetes Element zu bearbeiten.
 
-     Weitere Informationen finden Sie unter [Aktivierung](../mfc/activation-cpp.md).
+   Weitere Informationen finden Sie unter [Aktivierung](../mfc/activation-cpp.md).
 
 - Erstellung von OLE Elemente per Drag & Drop eine Auswahl aus einer Serveranwendung.
 
-     Weitere Informationen finden Sie unter [Drag & Drop (OLE)](../mfc/drag-and-drop-ole.md).
+   Weitere Informationen finden Sie unter [Drag & Drop (OLE)](../mfc/drag-and-drop-ole.md).
 
 - Enthält Links zu eingebetteten Objekten oder Kombination aus Container/Server-Anwendungen.
 
-     Weitere Informationen finden Sie unter [Container: Erweiterte Funktionen](../mfc/containers-advanced-features.md).
+   Weitere Informationen finden Sie unter [Container: Erweiterte Funktionen](../mfc/containers-advanced-features.md).
 
 ## <a name="see-also"></a>Siehe auch
 

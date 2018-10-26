@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12976bcf796466f959807f7ac2fb52257889454b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5a1c972be0b4e14d881812195856465dbc7c9e70
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46025541"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075787"
 ---
 # <a name="connection-point-global-functions"></a>Verbindungspunkt für globale Funktionen
 
@@ -36,7 +36,7 @@ Diese Funktionen bieten Unterstützung für Verbindungspunkte und Maps-Senke.
 |-|-|
 |[AtlAdvise](#atladvise)|Erstellt eine Verbindung zwischen dem Verbindungspunkt eines Objekts und der Senke eines Clients.|
 |[AtlUnadvise](#atlunadvise)|Beendet die Verbindung mit `AtlAdvise`.|
-|[AtlAdviseSinkMap](#atladvisesinkmap)|Weist oder hebt Anweisungen für Einträge in eine Senke-Event-Zuordnung.|  
+|[AtlAdviseSinkMap](#atladvisesinkmap)|Weist oder hebt Anweisungen für Einträge in eine Senke-Event-Zuordnung.|
 
 ## <a name="requirements"></a>Anforderungen
 

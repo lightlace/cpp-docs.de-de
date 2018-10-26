@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03d6512933d114cf1c3b06fa3fdc9eaa03c70934
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 07910693b3236e3a90d7ad420392552d90abd747
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791814"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052147"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -43,7 +43,7 @@ Eine Zeichenfolge, die den Namen einer Datenbanktabelle (z. B. "Produkte") angeb
 (Optional) Der Name des Handles, die Sie verwenden, um die Arbeit mit der Tabelle. Sie müssen diesen Parameter angeben, wenn mehr als eine Zeile mit Ergebnissen zurückgegeben werden soll. **Db_table** generiert eine Variable mit dem angegebenen *Namen* , die verwendet werden kann, um das Rowset zu traversieren oder mehrere Aktionsabfragen auszuführen.
 
 *source_name*<br/>
-(Optional) Die `CSession` Variable oder eine Instanz einer Klasse, die die `db_source` -Attribut angewendet, auf dem der Befehl ausgeführt wird. Finden Sie unter [Db_source](db-source.md).
+(Optional) Die `CSession` Variable oder eine Instanz einer Klasse, die die `db_source` -Attribut angewendet, auf dem der Befehl ausgeführt wird. Informationen hierzu finden Sie unter [db_source](db-source.md).
 
 *HRESULT*<br/>
 (Optional) Identifiziert die Variable, die das HRESULT des diesem Datenbankbefehl erhält. Wenn die Variable nicht existiert, wird sie automatisch durch das Attribut eingefügt.
@@ -84,8 +84,8 @@ Ein Beispiel für dieses Attribut in einer Anwendung verwendet, finden Sie in de
 |**Erforderliche Attribute**|Keiner|
 |**Ungültige Attribute**|Keiner|
 
-Weitere Informationen zu den attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Siehe auch
 
-[OLE DB-Consumerattribute](ole-db-consumer-attributes.md)  
+[OLE DB-Consumerattribute](ole-db-consumer-attributes.md)

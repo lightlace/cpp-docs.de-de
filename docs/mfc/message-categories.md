@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b1b8da6f6c1b94432d9cd4c91d88f6d844fbb27
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4184ca20188ccbc3eff0818e807911635292b668
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433048"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081377"
 ---
 # <a name="message-categories"></a>Meldungskategorien
 
@@ -33,17 +33,17 @@ Welche Arten von Nachrichten Sie Handler schreiben, für die es gibt drei Hauptk
 
 1. Windows-Meldungen
 
-     Dazu gehören in erster Linie die Nachrichten, die seit der **WM_** außer WM_COMMAND-Präfix. Windows-Nachrichten werden von Windows und Ansichten behandelt. Diese Meldungen verfügen häufig über Parameter, die bestimmen, wie zur Verarbeitung der Nachricht verwendet werden.
+   Dazu gehören in erster Linie die Nachrichten, die seit der **WM_** außer WM_COMMAND-Präfix. Windows-Nachrichten werden von Windows und Ansichten behandelt. Diese Meldungen verfügen häufig über Parameter, die bestimmen, wie zur Verarbeitung der Nachricht verwendet werden.
 
 1. Steuerelementbenachrichtigungen
 
-     Dies schließt WM_COMMAND-benachrichtigungsmeldungen aus den Steuerelementen und anderen untergeordneten Fenster an ihre übergeordnete Fenster. Z. B. sendet ein Bearbeitungssteuerelement dem übergeordnete Element eine WM_COMMAND-Meldung, die den Code der EN_CHANGE-Ereignis-Steuerelement-Benachrichtigung, wenn der Benutzer eine Aktion ausgeführt hat, die Text im Bearbeitungssteuerelement geändert haben kann. -Handler des Fensters für die Nachricht antwortet auf die Benachrichtigung in einer geeigneten Weise, wie z. B. das Abrufen des Texts im Steuerelement.
+   Dies schließt WM_COMMAND-benachrichtigungsmeldungen aus den Steuerelementen und anderen untergeordneten Fenster an ihre übergeordnete Fenster. Z. B. sendet ein Bearbeitungssteuerelement dem übergeordnete Element eine WM_COMMAND-Meldung, die den Code der EN_CHANGE-Ereignis-Steuerelement-Benachrichtigung, wenn der Benutzer eine Aktion ausgeführt hat, die Text im Bearbeitungssteuerelement geändert haben kann. -Handler des Fensters für die Nachricht antwortet auf die Benachrichtigung in einer geeigneten Weise, wie z. B. das Abrufen des Texts im Steuerelement.
 
-     Das Framework leitet wie andere Steuerelemente-benachrichtigungsmeldungen **WM_** Nachrichten. Einzige Ausnahme ist jedoch die BN_CLICKED steuerelementebenachrichtigung Nachricht, die durch Schaltflächen gesendet werden, wenn der Benutzer darauf klickt. Diese Meldung dient speziell als Befehlsnachricht behandelt und wie andere Befehle geleitet.
+   Das Framework leitet wie andere Steuerelemente-benachrichtigungsmeldungen **WM_** Nachrichten. Einzige Ausnahme ist jedoch die BN_CLICKED steuerelementebenachrichtigung Nachricht, die durch Schaltflächen gesendet werden, wenn der Benutzer darauf klickt. Diese Meldung dient speziell als Befehlsnachricht behandelt und wie andere Befehle geleitet.
 
 1. Command-Meldungen
 
-     Dies schließt WM_COMMAND-Benachrichtigungen von Benutzeroberflächenobjekten: Menüs, Symbolleisten-Schaltflächen und Zugriffstasten. Das Framework verarbeitet die Befehle anders als andere Nachrichten und können durch weitere Arten von Objekten behandelt werden, wie unter [Befehlsziele](../mfc/command-targets.md).
+   Dies schließt WM_COMMAND-Benachrichtigungen von Benutzeroberflächenobjekten: Menüs, Symbolleisten-Schaltflächen und Zugriffstasten. Das Framework verarbeitet die Befehle anders als andere Nachrichten und können durch weitere Arten von Objekten behandelt werden, wie unter [Befehlsziele](../mfc/command-targets.md).
 
 ##  <a name="_core_windows_messages_and_control.2d.notification_messages"></a> Windows-Nachrichten und Steuerelemente-Benachrichtigungsmeldungen
 
