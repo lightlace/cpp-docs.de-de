@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5a091a4301a107fb820f63c357c4e7f43c35948
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ca1bae4e2ca45424fd7f9cff48d8ece1039d73f6
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721291"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136171"
 ---
 # <a name="linker-options"></a>Linkeroptionen
 
@@ -60,7 +60,7 @@ Einige Linkeroptionen können Sie auch mit dem [comment](../../preprocessor/comm
 |[/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md)|Legt den Typ (IJW, rein oder sicher) eines CLR-Images fest.|
 |[/CLRSUPPORTLASTERROR](../../build/reference/clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)|Behält den letzten Fehlercode von Funktionen bei, die vom P/Invoke-Mechanismus aufgerufen werden.|
 |[/CLRTHREADATTRIBUTE](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md)|Gibt das Threadingattribut an, das auf den Einstiegspunkt des CLR-Programms angewendet wird.|
-|[/CLRUNMANAGEDCODECHECK](../../build/reference/clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute.md)|Gibt an, ob der Linker das SuppressUnmanagedCodeSecurity-Attribute auf vom Linker generierte PInvoke-Stub, die von verwaltetem Code aus systemeigene DLLs Aufrufen, anwendet.|
+|[/CLRUNMANAGEDCODECHECK](../../build/reference/clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute.md)|Gibt an, ob der Linker das SuppressUnmanagedCodeSecurity-Attribute auf vom Linker generierte PInvoke-Stub, die von verwaltetem Code aus systemeigene DLLs Aufrufen, anwendet.|
 |[/DEBUG](../../build/reference/debug-generate-debug-info.md)|Erstellt Debuginformationen.|
 |[/DEBUGTYPE](../../build/reference/debugtype-debug-info-options.md)|Gibt an, welche Daten in Debuginformationen eingeschlossen werden sollen.|
 |[/DEF](../../build/reference/def-specify-module-definition-file.md)|Übergibt eine Moduldefinitionsdatei (DEF-Datei) an den Linker.|
