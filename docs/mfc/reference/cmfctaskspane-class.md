@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28a548c50345601dda85d79ec4c40f1632ab316f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a1dcf14a23331ef783a25d75ed167703dcd4ffd7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421395"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065668"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane-Klasse
 
@@ -396,7 +396,6 @@ int AddGroup(
     BOOL bSpecial = FALSE,
     HICON hIcon = NULL);
 
-
 int AddGroup(
     LPCTSTR lpszGroupName,
     BOOL bBottomLocation = FALSE,
@@ -506,14 +505,13 @@ Der nullbasierte Index der neuen Seite.
 
 ##  <a name="addseparator"></a>  CMFCTasksPane::AddSeparator
 
-
 ```
 int AddSeparator(int nGroup);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Ngruppe*
+[in] *Ngruppe*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -601,10 +599,8 @@ CMFCTasksPane();
 
 ##  <a name="collapseallgroups"></a>  CMFCTasksPane::CollapseAllGroups
 
-
 ```
 void CollapseAllGroups(BOOL bCollapse = TRUE);
-
 
 void CollapseAllGroups(
     int nPageIdx,
@@ -613,8 +609,8 @@ void CollapseAllGroups(
 
 ### <a name="parameters"></a>Parameter
 
-*bCollapse*<br/>
-[in] [in] *nPageIdx*
+[in] *bCollapse*<br/>
+[in] *nPageIdx*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -626,7 +622,6 @@ Reduziert oder erweitert eine Gruppe.
 BOOL CollapseGroup(
     CMFCTasksPaneTaskGroup* pGroup,
     BOOL bCollapse = TRUE);
-
 
 BOOL CollapseGroup(
     int nGroup,
@@ -654,14 +649,13 @@ Eine reduzierte Gruppe wird nur die gruppenbeschriftung angezeigt. die Liste der
 
 ##  <a name="createdefaultminiframe"></a>  CMFCTasksPane::CreateDefaultMiniframe
 
-
 ```
 virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *RectInitial*
+[in] *RectInitial*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -774,14 +768,13 @@ Standardmäßig zeigt das Framework keine die Navigationssymbolleiste. Wenn die 
 
 ##  <a name="enableoffsetcustomcontrols"></a>  CMFCTasksPane::EnableOffsetCustomControls
 
-
 ```
 void EnableOffsetCustomControls(BOOL bEnable);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *bAktivieren*
+[in] *bAktivieren*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -952,14 +945,13 @@ Der Standardabstand zwischen einem Aufgabenbereich und dem Rand des Clientbereic
 
 ##  <a name="getnextpages"></a>  CMFCTasksPane::GetNextPages
 
-
 ```
 void GetNextPages(CStringList& lstNextPages) const;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *LstNextPages*
+[in] *LstNextPages*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -999,19 +991,17 @@ Die Anzahl der Seiten in den Aufgabenbereich.
 
 ##  <a name="getpreviouspages"></a>  CMFCTasksPane::GetPreviousPages
 
-
 ```
 void GetPreviousPages(CStringList& lstPrevPages) const;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *LstPrevPages*
+[in] *LstPrevPages*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="getscrollbarctrl"></a>  CMFCTasksPane::GetScrollBarCtrl
-
 
 ```
 virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
@@ -1019,7 +1009,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 
 ### <a name="parameters"></a>Parameter
 
-[in] *nBar*
+[in] *nBar*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1145,7 +1135,6 @@ Die standardmäßige horizontale Offset von Aufgaben ist 12 Pixel.
 
 ##  <a name="gettasksiconhorzoffset"></a>  CMFCTasksPane::GetTasksIconHorzOffset
 
-
 ```
 int GetTasksIconHorzOffset() const;
 ```
@@ -1155,7 +1144,6 @@ int GetTasksIconHorzOffset() const;
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="gettasksiconvertoffset"></a>  CMFCTasksPane::GetTasksIconVertOffset
-
 
 ```
 int GetTasksIconVertOffset() const;
@@ -1182,7 +1170,6 @@ Der vertikale Rand zwischen einem Aufgabenbereich und den Rändern des Clientber
 Die vertikale Rand ist der Abstand zwischen einem Aufgabenbereich und den Rändern des Clientbereichs. Der Standardwert des vertikalen Rands ist 12 Pixel.
 
 ##  <a name="isaccessibilitycompatible"></a>  CMFCTasksPane::IsAccessibilityCompatible
-
 
 ```
 virtual BOOL IsAccessibilityCompatible();
@@ -1242,7 +1229,6 @@ Die Schaltfläche "Weiterleiten" ermöglicht die Vorwärtsnavigation im Verlauf 
 
 ##  <a name="isgroupcollapseenabled"></a>  CMFCTasksPane::IsGroupCollapseEnabled
 
-
 ```
 BOOL IsGroupCollapseEnabled() const;
 ```
@@ -1276,7 +1262,6 @@ BOOL IsNavigationToolbarEnabled() const;
 True, wenn die Navigationssymbolleiste aktiviert ist. andernfalls "false".
 
 ##  <a name="istoolbox"></a>  CMFCTasksPane::IsToolBox
-
 
 ```
 virtual BOOL IsToolBox() const;
@@ -1312,7 +1297,6 @@ True, wenn die aufgabenzeichenfolge umschlossen wird. andernfalls "false".
 
 ##  <a name="loadstate"></a>  CMFCTasksPane::LoadState
 
-
 ```
 virtual BOOL LoadState(
     LPCTSTR lpszProfileName = NULL,
@@ -1322,8 +1306,9 @@ virtual BOOL LoadState(
 
 ### <a name="parameters"></a>Parameter
 
-*lpszProfileName*<br/>
-[in] [in] *nIndex* [in] *UiID*
+[in] *LpszProfileName*<br/>
+[in] *nIndex*<br/>
+[in] *UiID*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1342,7 +1327,6 @@ virtual void OnActivateTasksPanePage();
 Überschreiben Sie diese Methode in einer abgeleiteten Klasse, die die Darstellung der Aufgabenbereichsseite anpassen.
 
 ##  <a name="oncancel"></a>  CMFCTasksPane::OnCancel
-
 
 ```
 virtual void OnCancel();
@@ -1383,7 +1367,6 @@ Das Framework ruft diese Methode aus, klickt ein Benutzer eine Aufgabe. Wird sta
 Überschreiben Sie diese Methode in einer abgeleiteten Klasse, benutzerdefinierten Code auszuführen, wenn eine Aufgabe geklickt wird.
 
 ##  <a name="onok"></a>  CMFCTasksPane::OnOK
-
 
 ```
 virtual void OnOK();
@@ -1435,7 +1418,6 @@ Standardmäßig zeigt das Framework die Standardseite für die Aufgabengruppe.
 
 ##  <a name="onpressotherbutton"></a>  CMFCTasksPane::OnPressOtherButton
 
-
 ```
 virtual void OnPressOtherButton(
     CMFCCaptionMenuButton* pbtn,
@@ -1444,13 +1426,12 @@ virtual void OnPressOtherButton(
 
 ### <a name="parameters"></a>Parameter
 
-*pbtn*<br/>
-[in] [in] *pWndOwner*
+[in] *Pbtn*<br/>
+[in] *pWndOwner*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="onsetaccdata"></a>  CMFCTasksPane::OnSetAccData
-
 
 ```
 virtual BOOL OnSetAccData(long lVal);
@@ -1458,14 +1439,13 @@ virtual BOOL OnSetAccData(long lVal);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *lVal*
+[in] *lVal*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="onupdatecmdui"></a>  CMFCTasksPane::OnUpdateCmdUI
-
 
 ```
 virtual void OnUpdateCmdUI(
@@ -1475,13 +1455,12 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="parameters"></a>Parameter
 
-*pTarget*<br/>
-[in] [in] *bDisableIfNoHndler*
+[in] *pTarget*<br/>
+[in] *bDisableIfNoHndler*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="pretranslatemessage"></a>  CMFCTasksPane::PreTranslateMessage
-
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1489,7 +1468,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *pMsg*
+[in] *pMsg*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1497,14 +1476,13 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ##  <a name="recalclayout"></a>  CMFCTasksPane::RecalcLayout
 
-
 ```
 void RecalcLayout(BOOL bRedraw = TRUE);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *bRedraw*
+[in] *bRedraw*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1606,7 +1584,6 @@ True, wenn die Funktion erfolgreich ist. FALSE, wenn *Ngruppe* oder *nTask* ist 
 
 ##  <a name="savestate"></a>  CMFCTasksPane::SaveState
 
-
 ```
 virtual BOOL SaveState(
     LPCTSTR lpszProfileName = NULL,
@@ -1616,8 +1593,9 @@ virtual BOOL SaveState(
 
 ### <a name="parameters"></a>Parameter
 
-*lpszProfileName*<br/>
-[in] [in] *nIndex* [in] *UiID*
+[in] *LpszProfileName*<br/>
+[in] *nIndex*<br/>
+[in] *UiID*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1625,14 +1603,13 @@ virtual BOOL SaveState(
 
 ##  <a name="serialize"></a>  CMFCTasksPane::Serialize
 
-
 ```
 virtual void Serialize(CArchive& ar);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Ar*
+[in] *Ar*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1905,19 +1882,17 @@ Der horizontale Offset der Standardwert ist 12 Pixel.
 
 ##  <a name="settasksiconhorzoffset"></a>  CMFCTasksPane::SetTasksIconHorzOffset
 
-
 ```
 void SetTasksIconHorzOffset(int n = -1);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *n*
+[in] *n*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
 ##  <a name="settasksiconvertoffset"></a>  CMFCTasksPane::SetTasksIconVertOffset
-
 
 ```
 void SetTasksIconVertOffset(int n = -1);
@@ -1925,7 +1900,7 @@ void SetTasksIconVertOffset(int n = -1);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *n*
+[in] *n*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1988,7 +1963,6 @@ BOOL SetWindowHeight(
     HWND hwndTask,
     int nWndHeight);
 
-
 BOOL SetWindowHeight(
     HWND hwndTask,
     int nWndHeight);
@@ -2015,14 +1989,13 @@ Rufen Sie [CMFCTasksPane::AddWindow](#addwindow) Aufgaben mit Window-Steuereleme
 
 ##  <a name="showcommandmessagestring"></a>  CMFCTasksPane::ShowCommandMessageString
 
-
 ```
 virtual void ShowCommandMessageString(UINT uiCmdId);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-[in] *UiCmdId*
+[in] *UiCmdId*<br/>
 
 ### <a name="remarks"></a>Hinweise
 

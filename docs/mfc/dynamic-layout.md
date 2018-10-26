@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08fc6f6a5b93851468d412e34b3ee0a85ab534e5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5e2fb7b2468946be29553f54fcedde98e43881d7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413249"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068826"
 ---
 # <a name="dynamic-layout"></a>Dynamisches Layout
 
@@ -65,7 +65,7 @@ Das vorherige Verfahren eignet sich für das Angeben der Einstellungen für das 
 
 1. Suchen oder erstellen Sie eine Position im Implementierungscode der Dialogfeldklasse, an dem Sie das dynamische Layout für den Dialog angeben möchten. Sie können z. B. eine Methode wie `AdjustLayout` im Dialogfeld hinzufügen und von Positionen aus aufrufen, an denen das Layout geändert werden muss. Sie können dies zuerst vom Konstruktor aus oder nach dem Vornehmen von Änderungen am Dialog aufrufen.
 
-2. Rufen Sie für den Dialog [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), eine Methode der `CWnd` Klasse. `GetDynamicLayout` Gibt einen Zeiger auf eine `CMFCDynamicLayout` Objekt.
+2. Rufen Sie für den Dialog [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), eine Methode der `CWnd` Klasse. `GetDynamicLayout` gibt einen Zeiger auf ein `CMFCDynamicLayout` -Objekt zurück.
 
     ```cpp
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
@@ -119,7 +119,7 @@ Das vorherige Verfahren eignet sich für das Angeben der Einstellungen für das 
     dynamicLayout->LoadResource("IDD_DIALOG1");
     ```
 
-     Die benannte Ressource muss einen Dialog, der Layoutinformationen in Form von enthält verweisen eine **AFX_DIALOG_LAYOUT** Eintrag in der Ressourcendatei, wie im folgenden Beispiel gezeigt:
+   Die benannte Ressource muss einen Dialog, der Layoutinformationen in Form von enthält verweisen eine **AFX_DIALOG_LAYOUT** Eintrag in der Ressourcendatei, wie im folgenden Beispiel gezeigt:
 
     ```RC
     /////////////////////////////////////////////////////////////////////////////
