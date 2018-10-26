@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 608b4560f11e35d9aefb2c848a27c99c8dc6f4ec
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 3d942e2c5bca7d86e66cb579de1cbe946cb9f5f6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821347"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081494"
 ---
 # <a name="function-overloading"></a>Funktionsüberladung
 
@@ -126,7 +126,6 @@ Der vorhergehende Code zeigt das Überladen der `print`-Funktion im Dateigültig
 Das Standardargument wird nicht als Teil des Funktionstyps betrachtet. Daher erfolgt keine Verwendung beim Auswählen überladener Funktionen. Zwei Funktionen, die sich nur bei den Standardargumenten unterscheiden, werden als mehrfache Definitionen und nicht als überladene Funktionen betrachtet.
 
 Standardargumente können nicht für überladene Operatoren angegeben werden.
-
 
 ## <a name="argument-matching"></a>Argumentübereinstimmung
 
@@ -471,7 +470,7 @@ Sie können überladen **new-Operator** ausschließlich auf Grundlage der Rückg
     void Print( PSTR szToPrint );
     ```
 
-     Die vorhergehenden zwei Funktionen verfügen über identische Argumentlisten. `PSTR` ist ein Synonym für den Typ `char *`. Im Memberbereich generiert dieser Code einen Fehler.
+   Die vorhergehenden zwei Funktionen verfügen über identische Argumentlisten. `PSTR` ist ein Synonym für den Typ `char *`. Im Memberbereich generiert dieser Code einen Fehler.
 
 - Aufgelistete Typen sind verschiedene Typen und können verwendet werden, um zwischen überladenen Funktionen zu unterscheiden.
 
@@ -482,7 +481,7 @@ Sie können überladen **new-Operator** ausschließlich auf Grundlage der Rückg
     void Print( char szToPrint[] );
     ```
 
-     Für mehrdimensionale Arrays gelten die zweite und alle nachfolgenden Dimensionen als Teil des Typs. Deshalb werden sie beim Unterscheiden zwischen überladenen Funktionen verwendet:
+   Für mehrdimensionale Arrays gelten die zweite und alle nachfolgenden Dimensionen als Teil des Typs. Deshalb werden sie beim Unterscheiden zwischen überladenen Funktionen verwendet:
 
     ```cpp
     void Print( char szToPrint[] );

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03fc15cc2d2a73c0e8a1a016a2a477a5c65cdc15
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 7cd03babd97033495ecfa84817938103cde05a73
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890556"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081705"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC-ActiveX-Steuerelemente: Erstellen einer Fenstersteuerelement-Unterklasse
 
@@ -94,12 +94,12 @@ Zum Hinzufügen ein meldungshandlers für eine reflektierte Meldung manuell wie 
 
 - In der Steuerelementklasse. H-Datei, eine Handlerfunktion deklarieren. Die Funktion müssen Rückgabetyp **LRESULT** und zwei Parameter, mit Typen **WPARAM** und **LPARAM**bzw. Zum Beispiel:
 
-     [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
+   [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
     [!code-cpp[NVC_MFC_AxSub#6](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_6.h)]
 
 - In der Steuerelementklasse. CPP-Datei, fügen Sie einen ON_MESSAGE-Eintrag, um die meldungszuordnung. Die Parameter dieses Eintrags sollte es sich um die Nachrichten-ID und der Name der Handlerfunktion sein. Zum Beispiel:
 
-     [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
+   [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
 
 - Auch in der. CPP-Datei, implementieren die `OnOcmCommand` Member-Funktion zum Verarbeiten der Nachricht wiedergegeben. Die *wParam* und *lParam* Parameter sind identisch mit denen der ursprünglichen Fensternachricht im.
 
