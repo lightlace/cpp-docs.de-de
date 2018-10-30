@@ -20,19 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccf2da630c72962ee3e74badc250de5cce5f14e2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 09a4cdccf92df9681a85a03369ad0ba1792a6b25
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407152"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204729"
 ---
 # <a name="mfc-activex-control-wizard"></a>MFC-ActiveX-Steuerelement-Assistent
 
 Ein ActiveX-Steuerelement ist ein spezieller Typ einer [Automatisierungsserver](../../mfc/automation-servers.md); es ist eine wiederverwendbare Komponente. Die Anwendung hosten des ActiveX-Steuerelements ist die [Automatisierungsclient](../../mfc/automation-clients.md) des Steuerelements. Wenn Ihr Ziel ist eine wieder verwendbare Komponente erstellen, verwenden Sie diesen Assistenten, um das Steuerelement zu erstellen. Finden Sie unter [MFC-ActiveX-Steuerelemente](../../mfc/mfc-activex-controls.md) für Weitere Informationen.
 
 >[!IMPORTANT]
-> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](../activex-controls.md).
+> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen zu moderne Technologien, die ActiveX-ablösen, finden Sie unter [ActiveX-Steuerelemente](../activex-controls.md).
 
 Alternativ können Sie erstellen, ein Automation Server MFC-Anwendung mit der [MFS-Anwendungsassistenten](../../mfc/reference/mfc-application-wizard.md).
 

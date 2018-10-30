@@ -25,19 +25,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3be523feaacb403076f2c066943ca55ace958dce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cf2568561e3e79eaf7c2f56b0b571f5c9e74f268
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401836"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204521"
 ---
 # <a name="mfc-activex-controls-serializing"></a>MFC-ActiveX-Steuerelemente: Serialisierung
 
 In diesem Artikel wird erläutert, wie ein ActiveX-Steuerelement serialisiert wird. Serialisierung wird die Variable gelesen oder auf ein persistentes Speichermedium, z. B. eine Datenträgerdatei geschrieben. Die Microsoft Foundation Class (MFC)-Bibliothek bietet integrierte Unterstützung für die Serialisierung in Klasse `CObject`. `COleControl` Diese Unterstützung für ActiveX-Steuerelemente durch die Verwendung einer Eigenschaft Austauschmechanismus erweitert wird.
 
 >[!IMPORTANT]
-> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
+> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen zu moderne Technologien, die ActiveX-ablösen, finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
 
 Serialisierung für ActiveX-Steuerelementen wird durch Überschreiben implementiert [COleControl:: DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange). Dieser Funktion aufgerufen, die beim Laden und Speichern des Steuerelementobjekts, speichert alle Eigenschaften, die mit einer Membervariablen oder einer Membervariablen änderungsbenachrichtigung implementiert.
 

@@ -21,19 +21,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b66debe5c6401b4eee01bc81acc58b8445e20c21
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: d7f9c3eeda36c6894103c96f1031f6770daf0c71
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50068774"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204716"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Lizenzieren eines ActiveX-Steuerelements
 
 Lizenzierung unterstützen können ein optionales Feature von ActiveX-Steuerelemente, Sie steuern, wer kann verwenden oder verteilen das Steuerelement. (Weitere Informationen zu ermitteln, finden Sie unter Lizenzierungsprobleme im [Upgrading eines vorhandenen ActiveX-Steuerelements](../mfc/upgrading-an-existing-activex-control.md).)
 
 >[!IMPORTANT]
-> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
+> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen zu moderne Technologien, die ActiveX-ablösen, finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
 
 In diesem Artikel werden die folgenden Themen behandelt:
 

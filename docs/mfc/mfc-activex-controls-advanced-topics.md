@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b0c4b137079d90a1f51cb852f6046c676d32b8
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: defc160b2b45185031160e0ba3dd553f8896e372
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50067929"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204690"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC-ActiveX-Steuerelemente: Weiterführende Themen
 
@@ -44,7 +44,7 @@ Dieser Artikel behandelt die erweiterte Themen im Zusammenhang mit der Entwicklu
 - [Zugriff auf Dialogfeld-Steuerelemente, die zur Laufzeit nicht sichtbar sind](#_core_accessing_dialog_controls_that_are_invisible_at_run_time)
 
 >[!IMPORTANT]
-> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
+> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen zu moderne Technologien, die ActiveX-ablösen, finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
 
 ##  <a name="_core_using_database_classes_in_activex_controls"></a> Verwenden von Datenbankklassen in ActiveX-Steuerelementen
 

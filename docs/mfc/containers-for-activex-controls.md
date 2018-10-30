@@ -14,19 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69bfb29bdcc03f0373b5c5ab4916108b0705fc83
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b14359fa6bb602240f4cba173c41660c6863f939
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434426"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204327"
 ---
 # <a name="containers-for-activex-controls"></a>Container für ActiveX-Steuerelemente
 
 Sie können ActiveX-Steuerelemente in Visual C++ entwickelt werden, in anderen Anwendungen, verwenden, solange sie ActiveX-Steuerelementcontainern unterstützen. Der Microsoft-Anwendungen, beginnend mit den Versionen aufgeführt, unterstützen ActiveX-Steuerelementcontainern.
 
 >[!IMPORTANT]
-> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
+> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen zu moderne Technologien, die ActiveX-ablösen, finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
 
 > [!NOTE]
 >  In der folgende Liste ist keine vollständige Liste der Anwendungen, die ActiveX-Steuerelemente zu unterstützen, aber den Satz, der in den Tests am häufigsten verwendeten darstellt:

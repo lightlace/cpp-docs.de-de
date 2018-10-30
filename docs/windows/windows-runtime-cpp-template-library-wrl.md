@@ -13,19 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cefa28145e1a53aa4db0bd713a9835c0a35b4151
-ms.sourcegitcommit: 7838764e09819822a105accf5d773b2e37ffa0ae
+ms.openlocfilehash: 541a9d5064e9bdf9c4ddb9b410ab4dc0277626b0
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47429747"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204612"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows Runtime C++ Template Library (WRL)
 
 Die C++-Vorlagenbibliothek für Windows-Runtime(WRL) ist eine Vorlagenbibliothek, die eine niederschwelligen Zugang zur Erstellung und Verwendung von Windows-Runtime-Komponenten bietet.
 
 > [!NOTE]
-> WRL ist jetzt ersetzt, von C++ / WinRT, ein C ++ 17-standardsprachprojektion für Windows-Runtime-APIs. C++ / WinRT finden Sie in das Windows 10 SDK Version 1803 gerechnet. C++ / WinRT ist nur in Headerdateien implementiert und bietet Ihnen mit erstklassigen Zugriff auf die moderne Windows-API.
+> WRL das jetzt abgelöst von C++ / WinRT, ein C ++ 17-standardsprachprojektion für Windows-Runtime-APIs. C++ / WinRT finden Sie in das Windows 10 SDK Version 1803 gerechnet. C++ / WinRT ist nur in Headerdateien implementiert und bietet Ihnen mit erstklassigen Zugriff auf die moderne Windows-API.
 
 > Mit C++ / WinRT, können Sie sowohl nutzen und Erstellen von Windows-Runtime-APIs mit einem beliebigen standardkonformen C ++ 17-Compiler. C++ / WinRT in der Regel eine bessere Leistung und erzeugt kleinere Binärdateien als jede andere Sprachoption für die Windows-Runtime. Wir weiterhin zur Unterstützung von C++ / CX- und WRL, jedoch dringend empfohlen, neue Anwendungen C++ mithilfe / WinRT. Weitere Informationen finden Sie unter [C++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
 
@@ -69,7 +69,7 @@ Erfahren Sie, wie Sie eine UWP-app zu erstellen, verwendet [Microsoft Media Foun
 Zeigt, wie die Windows Runtime C++ Template Library verwenden, um eine grundlegende COM-Komponente und eine einfache Möglichkeit zur Registrierung und Nutzung der COM-Komponente aus einer desktop-app zu erstellen.
 
 [Vorgehensweise: Direktes Instanziieren von WRL-Komponenten](../windows/how-to-instantiate-wrl-components-directly.md)<br/>
-Erfahren Sie, wie Sie mit der [Microsoft::WRL::Make](../windows/make-function.md) und [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) Funktionen, um eine Komponente aus dem Modul instanziieren, das sie definiert.
+Erfahren Sie, wie Sie mit den Funktionen [Microsoft::WRL::Make](../windows/make-function.md) und [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) eine Komponente aus dem Modul instanziieren, das sie definiert.
 
 [Vorgehensweise: Verwenden von winmdidl.exe und midlrt.exe zum Erstellen von .h-Dateien aus Windows-Metadaten](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)<br/>
 Zeigt, wie benutzerdefinierte Komponenten für Windows-Runtime von WRL durch Erstellen einer IDL-Datei von den WINMD-Metadaten verarbeitet werden.
@@ -119,23 +119,23 @@ Windows Runtime C++ Template Library enthält Typen, die einige grundlegende Kon
 
 ### <a name="comptr"></a>ComPtr
 
-[ComPtr](../windows/comptr-class.md) ist eine *intelligenten Zeiger* Typ, der die Schnittstelle darstellt, die vom Vorlagenparameter angegeben wird. Mit `ComPtr` deklarieren Sie eine Variable, die auf die Member eines Objekts zugreifen kann, das von der Schnittstelle abgeleitet wird. `ComPtr` verwaltet automatisch einen Verweiszähler für den zugrunde liegenden Schnittstellenzeiger und gibt die Schnittstelle frei, wenn der Verweiszähler auf null geht.
+[ComPtr](../windows/comptr-class.md) ist ein Typ des *intelligenten Zeigermechanismus* , der die Schnittstelle darstellt, die vom Vorlagenparameter angegeben wird. Mit `ComPtr` deklarieren Sie eine Variable, die auf die Member eines Objekts zugreifen kann, das von der Schnittstelle abgeleitet wird. `ComPtr` verwaltet automatisch einen Verweiszähler für den zugrunde liegenden Schnittstellenzeiger und gibt die Schnittstelle frei, wenn der Verweiszähler auf null geht.
 
 ### <a name="runtimeclass"></a>RuntimeClass
 
-[RuntimeClass](../windows/runtimeclass-class.md) stellt eine instanziierte Klasse, die einen Satz angegebener Schnittstellen erbt. Ein `RuntimeClass` Objekt kann eine Kombination von Unterstützung für eine oder mehrere Windows-Runtime-COM-Schnittstellen oder einen schwachen Verweis auf eine Komponente bereitstellen.
+[RuntimeClass](../windows/runtimeclass-class.md) stellt eine instanziierte Klasse dar, die einen Satz angegebener Schnittstellen erbt. Ein `RuntimeClass` Objekt kann eine Kombination von Unterstützung für eine oder mehrere Windows-Runtime-COM-Schnittstellen oder einen schwachen Verweis auf eine Komponente bereitstellen.
 
 ### <a name="module"></a>Modul
 
-[Modul](../windows/module-class.md) stellt eine Auflistung von zugehörigen Objekten dar. Ein `Module` -Objekt verwaltet Klassenfactorys, die Objekte erstellen, und die Registrierung, die anderen Anwendungen die Verwendung eines Objekts ermöglicht.
+[Module](../windows/module-class.md) stellt eine Auflistung von zugehörigen Objekten dar. Ein `Module` -Objekt verwaltet Klassenfactorys, die Objekte erstellen, und die Registrierung, die anderen Anwendungen die Verwendung eines Objekts ermöglicht.
 
 ### <a name="callback"></a>Rückruf
 
-Die [Rückruf](../windows/callback-function-windows-runtime-cpp-template-library.md) Funktion erstellt ein Objekt, dessen Memberfunktion ein Ereignishandler (eine Rückrufmethode). Mit der `Callback` -Funktion schreiben Sie asynchrone Operationen.
+Die [Rückruf](../windows/callback-function-windows-runtime-cpp-template-library.md) -Funktion erstellt ein Objekt, dessen Memberfunktion ein Ereignishandler ist (eine Rückrufmethode). Mit der `Callback` -Funktion schreiben Sie asynchrone Operationen.
 
 ### <a name="eventsource"></a>EventSource
 
-[EventSource](../windows/eventsource-class.md) dient zum Verwalten von *Delegieren* -Ereignishandler. Verwenden von Windows Runtime C++ Template Library, implementieren Sie einen Delegaten, und verwenden `EventSource` hinzufügen, entfernen und Aufrufen von Delegaten.
+Mit[EventSource](../windows/eventsource-class.md) verwalten Sie *Delegat* -Ereignishandler. Verwenden von Windows Runtime C++ Template Library, implementieren Sie einen Delegaten, und verwenden `EventSource` hinzufügen, entfernen und Aufrufen von Delegaten.
 
 ### <a name="asyncbase"></a>AsyncBase
 
@@ -147,7 +147,7 @@ Die [Rückruf](../windows/callback-function-windows-runtime-cpp-template-library
 
 ### <a name="weakref"></a>WeakRef
 
-[WeakRef](../windows/weakref-class.md) ist ein intelligente-Zeiger-Typ, der darstellt eine *schwachen Verweis*, die auf ein Objekt verweist, die möglicherweise nicht zugegriffen werden kann. Ein `WeakRef` -Objekt kann verwendet werden, indem nur die Windows-Runtime und nicht von klassischem com geschieht.
+[WeakRef](../windows/weakref-class.md) ist ein Typ des intelligenten Zeigermechanismus, der einen *schwachen Verweis*auf ein Objekt darstellt, das möglicherweise zugänglich ist. Ein `WeakRef` -Objekt kann verwendet werden, indem nur die Windows-Runtime und nicht von klassischem com geschieht.
 
 Ein `WeakRef` -Objekt stellt in der Regel ein Objekt dar, dessen Vorhandensein von einem externen Thread oder einer externen Anwendung gesteuert wird. Beispielsweise kann ein `WeakRef` -Objekt auf ein Dateiobjekt verweisen. Wenn die Datei geöffnet ist, so ist `WeakRef` gültig, und die referenzierte Datei ist zugänglich. Wenn die Datei hingegen geschlossen ist, so ist `WeakRef` ungültig, und die Datei ist nicht zugänglich.
 
@@ -156,6 +156,6 @@ Ein `WeakRef` -Objekt stellt in der Regel ein Objekt dar, dessen Vorhandensein v
 |||
 |-|-|
 |[Schlüssel-APIs nach Kategorie](../windows/key-wrl-apis-by-category.md)|Hebt die primären Windows Runtime C++ Template Library-Typen, Funktionen und Makros.|
-|[Referenz](../windows/wrl-reference.md)|Enthält Referenzinformationen für die Windows Runtime C++ Template Library.|
+|[Verweis](../windows/wrl-reference.md)|Enthält Referenzinformationen für die Windows Runtime C++ Template Library.|
 |[Kurzreferenz (Windows-Runtime und Visual C++)](../cppcx/quick-reference-c-cx.md)|Beschreibt C++ / CX-Features, die die Windows-Runtime unterstützen.|
 |[Verwenden von Windows-Runtime-Komponenten in Visual C++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|Zeigt, wie C++ / CX verwenden, um das Erstellen einer grundlegenden Komponente für Windows-Runtime.|

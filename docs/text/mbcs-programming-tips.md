@@ -19,16 +19,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac4ed378640942dbe33490d618cec7289125b0c8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a88fffbfc42dd6e7386ec43e55f2013f2548b6f5
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418787"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204469"
 ---
 # <a name="mbcs-programming-tips"></a>Tipps für die MBCS-Programmierung
 
-Verwenden Sie bei Neuentwicklungen für alle Zeichenfolgen, die die Endbenutzer möglicherweise sehen können, die Unicode-Zeichencodierung. MBCS ist eine Legacytechnologie, die durch Unicode ersetzt wurde. Dieser Abschnitt enthält Tipps für Entwickler, die vorhandene Programme verwalten müssen, die MBCS verwenden und für die eine Konvertierung in Unicode nicht sinnvoll ist. Die Hinweise beziehen sich sowohl auf MFC-Anwendungen als auch auf Anwendungen, die ohne MFC geschrieben werden. Folgende Themen werden behandelt:
+Verwenden Sie bei Neuentwicklungen für alle Zeichenfolgen, die die Endbenutzer möglicherweise sehen können, die Unicode-Zeichencodierung. MBCS ist eine veraltete Technologie, die durch Unicode ersetzt wurde. Dieser Abschnitt enthält Tipps für Entwickler, die vorhandene Programme verwalten müssen, die MBCS verwenden und für die eine Konvertierung in Unicode nicht sinnvoll ist. Die Hinweise beziehen sich sowohl auf MFC-Anwendungen als auch auf Anwendungen, die ohne MFC geschrieben werden. Folgende Themen werden behandelt:
 
 - [Allgemeine Ratschläge für die MBCS-Programmierung](../text/general-mbcs-programming-advice.md)
 

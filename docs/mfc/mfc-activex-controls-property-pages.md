@@ -20,19 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19dc08fc29de4affaea987025a2bc8b92bc56460
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 053a6dcf009fa65bbba9c864803db78866037196
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50079856"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204417"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC-ActiveX-Steuerelemente: Eigenschaftenseite
 
 Eigenschaftenseiten können die Benutzer eine ActiveX-Steuerelements anzeigen und Ändern der Eigenschaften von ActiveX-Steuerelements. Diese Eigenschaften erfolgt durch den Aufruf ein Dialogfeld der Eigenschaftenseiten für eine oder mehrere enthält, die eine benutzerdefinierte grafische Schnittstelle zum Anzeigen und bearbeiten die Eigenschaften des Steuerelements bereitstellen.
 
 >[!IMPORTANT]
-> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
+> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen zu moderne Technologien, die ActiveX-ablösen, finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
 
 Eigenschaftenseiten von ActiveX-Steuerelement werden auf zwei Arten angezeigt:
 

@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 734707256bb97e25452c45829fd99a1e0fb06fd0
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: d75f84a8cb5ca2cb5a867cc640410c7de978d4fc
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50060311"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204664"
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>MFC-ActiveX-Steuerelemente: Weitergabe von ActiveX-Steuerelementen
 
@@ -53,7 +53,7 @@ In diesem Artikel werden mehrere Probleme beim Verteilen von ActiveX-Steuereleme
 - [Registrieren von Steuerelementen](#_core_registering_controls)
 
 >[!IMPORTANT]
-> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
+> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen zu moderne Technologien, die ActiveX-ablösen, finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
 
 ##  <a name="_core_ansi_or_unicode_control_versions"></a> ANSI oder Unicode-Versionen
 

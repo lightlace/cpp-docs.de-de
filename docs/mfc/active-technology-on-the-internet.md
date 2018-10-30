@@ -14,19 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db0c93070fe8373cdd4494419ce1b71bf4068b14
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 30aef153dc99c0cbdc4de537496e42ab2bb0459f
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395117"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204508"
 ---
 # <a name="active-technology-on-the-internet"></a>Active Technology für das Internet
 
 Active Technology ist eine offene Plattform, mit dem Entwickler, die interessante, dynamische Inhalte und Anwendungen im globalen Internet oder ein Netzwerk des Unternehmens interne, bekannt als Intranet erstellen kann. Die wichtigen Technologien von Microsoft bereitgestellt werden, für die Internet-Programmierung werden nachfolgend beschrieben.
 
 >[!IMPORTANT]
-> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
+> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen zu moderne Technologien, die ActiveX-ablösen, finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
 
 ## <a name="activex-controls"></a>ActiveX-Steuerelemente
 

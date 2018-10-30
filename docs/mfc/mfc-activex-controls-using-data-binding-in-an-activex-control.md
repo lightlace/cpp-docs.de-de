@@ -24,19 +24,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 397356f8144e3680f3b2d19824d19c0a3bbaddd1
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 5a02330d938e1952d3e6b547d49ddb551bf594a5
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50062612"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204586"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Verwenden der Datenbindung in einem ActiveX-Steuerelement
 
 Einer der leistungsfähigere Verwendungszwecke von ActiveX-Steuerelementen ist die Datenbindung, wodurch eine Eigenschaft des Steuerelements an ein bestimmtes Feld in einer Datenbank gebunden werden soll. Wenn ein Benutzer Daten in dieser gebundenen Eigenschaft ändert, benachrichtigt das Steuerelement an die Datenbank und fordert an, dass der Datensatz das Feld aktualisiert werden. Anschließend benachrichtigt die Datenbank, die Kontrolle über den Erfolg oder Misserfolg der Anforderung.
 
 >[!IMPORTANT]
-> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
+> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen zu moderne Technologien, die ActiveX-ablösen, finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
 
 Dieser Artikel behandelt die Steuerelement-Seite Ihrer Aufgabe. Implementieren die Daten binden von Interaktionen mit der Datenbank ist die Verantwortung für den Steuerelementcontainer. Wie Sie die Interaktionen mit der Datenbank in Ihrem Container verwalten, ist über den Rahmen dieser Dokumentation hinaus. Wie Sie das Steuerelement für die Datenbindung vorbereiten, werden im Rest dieses Artikels erläutert.
 

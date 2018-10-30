@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b33097c6f6f747d99cf582c1553e25942f1bfcd
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 4e5b0f1b38e73523a476c83e19ab9bf812fdc2fa
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50056008"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204534"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Darstellen eines ActiveX-Steuerelements
 
 In diesem Artikel wird beschrieben, die ActiveX-Steuerelement gezeichnet werden und wie Sie ändern können, Paint-Code, um den Prozess zu optimieren. (Finden Sie unter [optimieren Steuerelements zeichnen](../mfc/optimizing-control-drawing.md) für Techniken zum Zeichnen zu optimieren, indem Sie einzeln Steuerelemente ohne zuvor ausgewählten GDI-Objekte wiederherstellen. Nachdem alle Steuerelemente gezeichnet wurden, kann die Container automatisch die ursprünglichen Objekte wiederhergestellt werden.)
 
 >[!IMPORTANT]
-> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
+> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen zu moderne Technologien, die ActiveX-ablösen, finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
 
 Beispiele in diesem Artikel werden von einem Steuerelement, das von der MFC-ActiveX-Steuerelement-Assistenten mit Standardeinstellungen erstellt. Weitere Informationen zum Erstellen von Anwendungen Skelett-Steuerelements mit MFC-ActiveX-Steuerelement-Assistenten finden Sie im Artikel [MFC-ActiveX-Steuerelement-Assistent](../mfc/reference/mfc-activex-control-wizard.md).
 
