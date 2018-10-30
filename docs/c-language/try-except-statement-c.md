@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f367bd5d9e61d44c24a876bf1d69ad24406d0630
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 957b76b6b39586016e9ed7b921b7bfa51a1fdf34
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036214"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075137"
 ---
 # <a name="try-except-statement-c"></a>try-except-Anweisung (C)
 
@@ -49,11 +49,11 @@ Die Verbundanweisung nach der `__try`-Klausel ist der abgesicherte Abschnitt. Di
 
 1. Wenn während der Ausführung des geschützten Abschnitts oder in einer Routine, die der geschützte Abschnitt aufruft, eine Ausnahme auftritt, wird der `__except`-Ausdruck ausgewertet, und der Rückgabewert bestimmt, wie die Ausnahme verarbeitet wird. Es gibt drei Werte:
 
-     `EXCEPTION_CONTINUE_SEARCH` Ausnahme wurde nicht erkannt. Fahren Sie fort, im Stapel nach einem Handler zu suchen, zuerst nach enthaltenen **try-except**-Anweisungen, dann nach Handlern mit der nächst höheren Priorität.
+   `EXCEPTION_CONTINUE_SEARCH` Ausnahme wurde nicht erkannt. Fahren Sie fort, im Stapel nach einem Handler zu suchen, zuerst nach enthaltenen **try-except**-Anweisungen, dann nach Handlern mit der nächst höheren Priorität.
 
-     `EXCEPTION_CONTINUE_EXECUTION` Ausnahme wird erkannt, wird jedoch geschlossen. Fortsetzen der Ausführung an der Stelle, an der die Ausnahme aufgetreten ist.
+   `EXCEPTION_CONTINUE_EXECUTION` Ausnahme wird erkannt, wird jedoch geschlossen. Fortsetzen der Ausführung an der Stelle, an der die Ausnahme aufgetreten ist.
 
-     `EXCEPTION_EXECUTE_HANDLER` Ausnahme wurde erkannt. Übertragen Sie die Steuerung an den Ausnahmehandler, indem Sie die `__except`-Verbundanweisung ausführen und anschließend die Ausführung an dem Punkt fortsetzen, an dem die Ausnahme aufgetreten ist.
+   `EXCEPTION_EXECUTE_HANDLER` Ausnahme wurde erkannt. Übertragen Sie die Steuerung an den Ausnahmehandler, indem Sie die `__except`-Verbundanweisung ausführen und anschließend die Ausführung an dem Punkt fortsetzen, an dem die Ausnahme aufgetreten ist.
 
 Da der `__except`-Ausdruck als C-Ausdruck ausgewertet wird, wird er auf einen Einzelwert beschränkt, den Operator des bedingten Ausdrucks oder den Komma-Operator. Wenn eine erweiterte Verarbeitung erforderlich ist, kann der Ausdruck eine Routine aufrufen, die einen der drei Werte zurückgibt, die oben aufgelistet sind.
 

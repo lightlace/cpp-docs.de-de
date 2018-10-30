@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 279598c320131b163b936091560de45255c18a4d
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: e2ca0f4aa5f3965adc97e4cdaef09e01646e8809
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235008"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062118"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Melden eines Problems mit dem Visual C++-Toolset oder der -Dokumentation
 
@@ -381,7 +381,7 @@ Verwenden Sie bei Problemen mit dem C++-Compiler, dem Linker und anderen Tools u
 
 Standardmäßig sind **alle Informationen in Berichten sowie alle Kommentare und Antworten öffentlich sichtbar**. Dies ist in der Regel ein Vorteil, da die gesamte Community Einblicke in die Probleme, Lösungen und Problemumgehungen anderer Benutzer hat. Wenn Sie Ihre Daten oder Ihre Identität jedoch aus Gründen des Datenschutzes oder des geistigen Eigentums nicht veröffentlichen möchten, gibt es Optionen, die Sie nutzen können.
 
-Wenn Sie Ihre Identität nicht offenlegen möchten, [erstellen Sie ein neues Microsoft-Konto](https://signup.live.com/), das keine personenbezogenen Informationen enthält. Verwenden Sie dieses Konto, um Ihren Bericht zu erstellen. 
+Wenn Sie Ihre Identität nicht offenlegen möchten, [erstellen Sie ein neues Microsoft-Konto](https://signup.live.com/), das keine personenbezogenen Informationen enthält. Verwenden Sie dieses Konto, um Ihren Bericht zu erstellen.
 
 **Fügen Sie keine Informationen, die privat bleiben sollen, in den Titel oder den Inhalt des ursprünglichen Berichts ein, denn dieser ist öffentlich.** Stattdessen sollten Sie Details privat in einem separaten Kommentar versenden. Wenn Sie sicherstellen möchten, dass für Ihren Bericht die richtige Zielgruppe festgelegt ist, sollten Sie **cppcompiler** in die Themenliste des Problemberichts einfügen. Sobald der Problembericht erstellt ist, können Sie festlegen, wer Ihre Antworten und Anlagen anzeigen kann.
 

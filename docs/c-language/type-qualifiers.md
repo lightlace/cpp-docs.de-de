@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ecac60a1b9cbd2758090e52d917c7a65259d62d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4dc0fd45887975c9b50cee141b0c6e8faca33513
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094389"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083242"
 ---
 # <a name="type-qualifiers"></a>Typqualifizierer
 
@@ -69,7 +69,7 @@ Diese Liste beschreibt die Verwendung von **const** und `volatile`.
 
 - Der Compiler nimmt an, dass im Programm zu jedem Zeitpunkt der Zugriff auf eine `volatile`-Variable erfolgen kann, und zwar durch einen unbekannten Prozess, der den Wert verwendet oder ändert. Daher muss – unabhängig von den in der Befehlszeile angegebenen Optimierungen – der Code für jede Zuordnung oder für jeden Verweis auf eine `volatile`-Variable generiert werden, auch wenn er keine Auswirkung hat.
 
-     Bei alleiniger Verwendung von `volatile` wird `int` angenommen. Der Typspezifizierer `volatile` kann verwendet werden, um zuverlässigen Zugriff auf spezielle Speicheradressen zu ermöglichen. Verwenden Sie `volatile` mit Datenobjekten, bei denen der Zugriff oder eine Änderung durch Signalhandler, durch gleichzeitig ausgeführte Programme oder durch spezielle Hardware (wie z. B. im Speicher abgebildete E/A-Steuerungsregister) erfolgen kann. Sie können eine Variable für ihre Verwendungszeit als `volatile` deklarieren oder einen einzelnen Verweis in `volatile` umwandeln.
+   Bei alleiniger Verwendung von `volatile` wird `int` angenommen. Der Typspezifizierer `volatile` kann verwendet werden, um zuverlässigen Zugriff auf spezielle Speicheradressen zu ermöglichen. Verwenden Sie `volatile` mit Datenobjekten, bei denen der Zugriff oder eine Änderung durch Signalhandler, durch gleichzeitig ausgeführte Programme oder durch spezielle Hardware (wie z. B. im Speicher abgebildete E/A-Steuerungsregister) erfolgen kann. Sie können eine Variable für ihre Verwendungszeit als `volatile` deklarieren oder einen einzelnen Verweis in `volatile` umwandeln.
 
 - Ein Element kann sowohl **const** als auch `volatile` sein. Dann ist eine Änderung des Elements durch das eigene Programm nicht zulässig, eine Änderung durch einen asynchronen Prozess ist jedoch möglich.
 

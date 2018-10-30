@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a0864c87b33937fe18c3e4c3083e63bde23ac06
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7562f6e5a8915f33b3f2c8bd23ce310e641984c6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092235"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057041"
 ---
 # <a name="crt-library-features"></a>CRT-Bibliotheksfunktionen
 
@@ -123,7 +123,6 @@ Eine Vielzahl dieser Probleme kann vermieden werden, wenn Sie stattdessen ABI-Te
 Einige dieser Probleme können auch vermieden werden, wenn alle Images in Ihrem Prozess die gleiche dynamisch geladene CRT-Version verwenden. Um sicherzustellen, dass alle Komponenten dieselbe DLL-Version der CRT verwenden, erstellen sie diese mithilfe der **/MD**-Option, und verwenden Sie die gleichen Compilertoolset- und Eigenschaftseinstellungen.
 
 Beim Übergeben bestimmter CRT-Ressourcen (z.B. Dateihandles, Gebietsschemas und Umgebungsvariablen) über DLL-Grenzen hinweg muss sorgfältig vorgegangen werden, selbst wenn das Programm dieselbe CRT-Version verwendet. Weitere Informationen zu diesen Problemen und den jeweiligen Lösungsmöglichkeiten finden Sie unter [Potenzielle Fehler bei der Übergabe von CRT-Objekten über DLL-Grenzen](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
-
 
 ## <a name="see-also"></a>Siehe auch
 

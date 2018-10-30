@@ -14,12 +14,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed44479f6e6d1569a9b27a059e837cbbb924b803
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 70af45a860ff854faf244cf51ad7462262f183fe
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821424"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072693"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Ein C++-Paket-Manager für Windows, Linux und macOS
 
@@ -37,11 +37,11 @@ Bei der Erstellung eines vcpkg-Klons mit privaten Bibliotheken in der Ports-Samm
 
 [1] *Hinweis: für einige proprietäre Bibliotheken stehen Quellen nicht zur Verfügung. Vcpkg lädt in diesem Fall kompatible, vorab erstellte Binärdateien herunter.*
 
-## <a name="installation"></a>Installation 
+## <a name="installation"></a>Installation
 
 Klonen Sie das vcpkg-Repository von GitHub: https://github.com/Microsoft/vcpkg. Sie können es in jeden beliebigen Ordner herunterladen.
 
-Führen Sie den Bootstrapper im Stammverzeichnis aus: 
+Führen Sie den Bootstrapper im Stammverzeichnis aus:
 
 - **bootstrap-vcpkg.bat** (Windows)
 - **./bootstrap-vcpkg.sh** (Linux, macOS)
@@ -76,7 +76,7 @@ taglib      1.11.1-2   TagLib Audio Meta-Data Library
 
 Nachdem Sie den Namen einer Bibliothek mithilfe von **vcpkg search** erhalten, verwenden Sie **vcpkg install** zum Herunterladen der Bibliothek, und kompilieren Sie diese. Vcpkg verwendet die Portdatei der Bibliothek im Ports-Verzeichnis. Wenn kein Tripel angegeben wird, installiert und kompiliert vcpkg für das Standard-Tripel der Zielplattform: Windows (x86), linux.cmake (x64) oder osx.cmake (x64).
 
-Bei Linux-Bibliotheken muss gcc für vcpkg auf dem lokalen Computer installiert sein. Unter macOS verwendet vcpkg Clang. 
+Bei Linux-Bibliotheken muss gcc für vcpkg auf dem lokalen Computer installiert sein. Unter macOS verwendet vcpkg Clang.
 
 Wenn die Portdatei Abhängigkeiten angibt, lädt vcpkg diese ebenso herunter und installiert sie. Nach dem Herunterladen erstellt vcpkg die Bibliothek und verwendet dabei das Buildsystem, das die Bibliothek verwendet. CMake- und (unter Windows) MSBuild-Projekte werden bevorzugt, jedoch wird MAKE zusammen mit jedem anderen Buildsystem unterstützt. Wenn vcpkg das angegebene Buildsystem auf dem lokalen Computer nicht finden kann, lädt es dieses herunter und installiert es.
 
@@ -91,7 +91,7 @@ Additional packages (*) will be installed to complete this operation.
 
 ```
 
-Verwenden Sie bei CMAKE-Projekten CMAKE_TOOLCHAIN_FILE, um Bibliotheken mit `find_package()` zur Verfügung zu stellen. Zum Beispiel:  
+Verwenden Sie bei CMAKE-Projekten CMAKE_TOOLCHAIN_FILE, um Bibliotheken mit `find_package()` zur Verfügung zu stellen. Zum Beispiel:
 
 ```cmd
 cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)
@@ -132,14 +132,13 @@ Wenn Sie eine spezifische Version einer Bibliothek verwenden müssen, die sich v
 1. Führen Sie **vcpkg install \<library>** aus.
 1. Verwenden Sie **vcpkg integrate project**, um ein NuGet-Paket zu erstellen, das pro Projekt auf diese Bibliothek verweist.
 
-## <a name="integrate-with-visual-studio-code-linuxmacos"></a>Integration mit Visual Studio Code (Linux/macOS) 
+## <a name="integrate-with-visual-studio-code-linuxmacos"></a>Integration mit Visual Studio Code (Linux/macOS)
 
 Führen Sie **vcpkg integrate install** aus, um Visual Studio Code unter Linux/macOS mit dem Speicherort der vcpkg-Eintragung zu konfigurieren und IntelliSense für Quelldateien zu aktivieren.
 
 ## <a name="target-linux-from-windows-via-wsl"></a>Erstellen von Dateien für Linux unter Windows mit WSL
 
 Mithilfe des Windows-Subsystems für Linux (WSL) können Sie Linux-Binärdateien auf einem Windows-Computer erstellen. Folgen Sie einfach der Anleitung zum [Einrichten von WSL unter Windows 10](/windows/wsl/install-win10), und konfigurieren Sie es mit der [Visual Studio-Erweiterung für Linux](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/). Sie können die erstellten Bibliotheken für Windows und Linux im selben Ordner ablegen und über Windows und WSL darauf zugreifen.
-
 
 ## <a name="export_binaries_per_project"></a> Exportieren von kompilierten Binärdateien und Headern
 

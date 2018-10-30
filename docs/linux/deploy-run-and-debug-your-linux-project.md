@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: d2ffd41fe224e492eb4b27a355f6df864e0dd066
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 964da719da8d6f48131fc60f7e7fdfb247637fbf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410823"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069946"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Bereitstellen, Ausführen und Debuggen eines Linux-Projekts
 
@@ -41,7 +41,7 @@ Es gibt mehrere Möglichkeiten für den Umgang mit dem Linux-Projekt sowie zum D
 
     - Im **gdb**-Modus unterstützt der Visual Studio-Debugger GDB auf dem Remotesystem. Dies ist besser kompatibel, falls die lokale Version von GDB nicht mit der auf dem Zielcomputer installierten Version kompatibel ist. |
 
-    > [!NOTE] 
+    > [!NOTE]
     > Wenn Sie im gdbserver-Debugmodus keine Haltepunkte treffen können, versuchen Sie es im gdb-Modus. GDB muss zunächst auf dem Remoteziel [installiert](../linux/download-install-and-setup-the-linux-development-workload.md) werden.
 
 2. Wählen Sie das Remoteziel mit der Standardsymbolleiste **Debuggen** in Visual Studio aus.
@@ -64,7 +64,7 @@ Es gibt mehrere Möglichkeiten für den Umgang mit dem Linux-Projekt sowie zum D
 
     Wenn keine Fehler vorliegen, wird die App gestartet, und der Debugger unterbricht die Ausführung am Haltepunkt.
 
-    ![Treffen eines Haltepunkts](media/hit_breakpoint.png)  
+    ![Treffen eines Haltepunkts](media/hit_breakpoint.png)
 
     Jetzt können Sie mit der Anwendung in ihrem aktuellen Zustand interagieren, Variablen anzeigen und Code schrittweise durchlaufen, indem Sie Befehlstasten wie **F10** oder **F11** drücken.
 
@@ -79,7 +79,7 @@ Es gibt mehrere Möglichkeiten für den Umgang mit dem Linux-Projekt sowie zum D
 ## <a name="configure-other-debugging-options"></a>Konfigurieren anderer Debugoptionen
 
 * Befehlszeilenargumente können mit dem Element **Programmargumente** auf der Eigenschaftenseite **Debugging** des Projekts an die ausführbare Datei übergeben werden.
-  
+
   ![Programmargumente](media/settings_programarguments.png)
 
 * Bestimmte Debuggeroptionen können mit dem Eintrag **Weitere Debuggerbefehle** an GDB übergeben werden.  Beispiel: SIGILL-Signale (unzulässige Anweisung) sollen ignoriert werden.  Hierzu können Sie den **handle**-Befehl verwenden.  Fügen Sie wie oben dargestellt Folgendes zum Eintrag **Weitere Debuggerbefehle** hinzu:

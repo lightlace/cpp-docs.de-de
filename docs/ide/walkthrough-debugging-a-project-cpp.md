@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04bec9c0de7734ae2c78dd3e9c124eac3d0a55d8
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: bd8d0cebc34b8f0d59f54e720d6a37a52ab2d9e9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234314"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069320"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>Exemplarische Vorgehensweise: Debuggen eines Projekts (C++)
 
@@ -45,11 +45,11 @@ In dieser exemplarischen Vorgehensweise bearbeiten Sie das Programm, um das beim
 
 1. Um den Wert von `totalParticipants` beim Beenden eines Kartenspiels zu verringern, fügen Sie zwischen der öffnenden und der schließenden Klammer des `Cardgame::~Cardgame`-Destruktors folgenden Code hinzu.
 
-     [!code-cpp[NVC_Walkthrough_Debugging_A_Project#110](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_1.cpp)]
+   [!code-cpp[NVC_Walkthrough_Debugging_A_Project#110](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_1.cpp)]
 
 1. Die Datei „Cardgame.cpp“ sieht nach der Änderung ungefähr wie der folgende Code aus:
 
-     [!code-cpp[NVC_Walkthrough_Debugging_A_Project#111](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_2.cpp)]
+   [!code-cpp[NVC_Walkthrough_Debugging_A_Project#111](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_2.cpp)]
 
 1. Wählen Sie auf der Menüleiste **Erstellen** > **Projektmappe erstellen** aus.
 
