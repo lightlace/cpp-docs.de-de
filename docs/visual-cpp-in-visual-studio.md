@@ -14,20 +14,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae68abc0768c0a06526af6439a8a881684ecdb15
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 8cb811ccd3291caa9b3da095310c74416fbd5799
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821281"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067942"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ in Visual Studio
 
-> [!NOTE]  
-> Die Entwicklerdokumentation gilt für Visual Studio 2015 und 2017. 
+> [!NOTE]
+> Die Entwicklerdokumentation gilt für Visual Studio 2015 und 2017.
 
-> Wenn Sie zum Ausführen eines Programms ein verteilbares Visual C++-Paket suchen, wechseln Sie zum [Microsoft Download Center](http://www.microsoft.com/download/), und geben Sie **Visual C++** in das Suchfeld ein.  
-  
+> Wenn Sie zum Ausführen eines Programms ein verteilbares Visual C++-Paket suchen, wechseln Sie zum [Microsoft Download Center](http://www.microsoft.com/download/), und geben Sie **Visual C++** in das Suchfeld ein.
+
 
 Microsoft Visual C++, üblicherweise mit Visual C++ oder MSVC abgekürzt, ist der Name für Entwicklungstools und Bibliotheken für C++, C und Assemblysprachen, die als Teil von Visual Studio unter Windows verfügbar sind. Mit diesen Tools und Bibliotheken können Sie Apps für die Universelle Windows Plattform (UWP), Windows-Desktop- und Serveranwendungen und plattformübergreifende Bibliotheken und Apps erstellen, die unter Windows, Linux, Android und iOS ausgeführt werden, sowie Apps und Bibliotheken verwalten, die .NET Framework verwenden. Sie können Visual C++ verwenden, um einfache Konsolen-Apps bis hin zu anspruchsvollen und komplexen Apps für Windows-Desktop zu schreiben, z.B. von Gerätetreibern und Betriebssystemkomponenten bis hin zu plattformübergreifenden Spielen für mobile Geräte, und von den kleinsten IoT-Geräten bis hin zu Hochleistungscomputing auf mehreren Servern in der Azure-Cloud.
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 133214cceebf5d43610207e446698341d7803b71
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 56614dc0829834e77cfdf10d8d88ed44492237e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235541"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070139"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Exemplarische Vorgehensweise: Testen eines Projekts (C++)
 
@@ -41,7 +41,7 @@ In dieser exemplarischen Vorgehensweise überwachen Sie während der Programmaus
 
 1. Wählen Sie diese Codezeile aus:
 
-     `Cardgame.solitaire(1);`
+   `Cardgame.solitaire(1);`
 
 1. Klicken Sie zum Festlegen eines Haltepunkts für diese Zeile in der Menüleiste auf **Debuggen** > **Haltepunkt ein/aus**, oder drücken Sie **F9**. Ein roter Kreis wird auf der linken Seite der Zeile angezeigt. Er gibt an, dass ein Haltepunkt festgelegt wurde. Zum Entfernen eines Haltepunkts können Sie den Menübefehl oder die **F9**-TASTE erneut auswählen.
 

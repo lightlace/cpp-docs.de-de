@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50db1a8370a43b8b0c43c7c228c7b3acf9dd2c8a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 04a4c2005dc0a7e0e052002198bebb7c78267843
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082877"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059950"
 ---
 # <a name="scanf-type-field-characters"></a>scanf-Typenfeldzeichen
 
@@ -54,7 +54,6 @@ Das `type` -Zeichen ist das einzige Formatpflichtfeld und erscheint nach allen o
 |`n`|Kein Eingabe aus dem Stream oder Puffer gelesen.|Zeiger auf `int`, in dem die Anzahl der aus dem Stream oder Puffer erfolgreich gelesenen Zeichen bis zu diesem Zeitpunkt im aktuellen Aufruf von `scanf` -Funktionen oder `wscanf` -Funktionen gespeichert ist.|Nein.|
 |`s`|Zeichenfolge bis zum ersten Leerzeichen (Leerzeichen, Tabstopps oder Zeilenumbruch) Um Zeichenfolgen zu lesen, die nicht durch Leerzeichen getrennt sind, verwenden Sie eckige Klammern (`[ ]`), wie dies in [scanf Width Specification](../c-runtime-library/scanf-width-specification.md).|Steht bei Verwendung mit `scanf` -Funktionen für ein Einzelbyte-Zeichenarray und bei Verwendung mit `wscanf` -Funktionen für ein Breitzeichenarray. In jedem Fall muss das Zeichenarray groß genug für das Eingabefeld und einen automatisch angefügten abschließenden NULL-Wert sein.|Erforderlich. Größe einschließlich Platz für einen Nullterminator.|
 |`S`|Umgekehrte Größenzeichenfolge bis zum ersten Leerzeichen (Leerzeichen, Tabstopps oder Zeilenumbruch) Um Zeichenfolgen zu lesen, die nicht durch Leerzeichen getrennt sind, verwenden Sie eckige Klammern (`[ ]`), wie in [scanf-Breitenangabe](../c-runtime-library/scanf-width-specification.md) erörtert.|Steht bei Verwendung mit `scanf`-Funktionen für ein Einzelbyte-Zeichenarray und bei Verwendung mit `wscanf`-Funktionen für ein Breitzeichenarray. In jedem Fall muss das Zeichenarray groß genug für das Eingabefeld und einen automatisch angefügten abschließenden NULL-Wert sein.|Erforderlich. Größe einschließlich Platz für einen Nullterminator.|
-
 
 Die Größenargumente müssen ggf. in der Parameterliste unmittelbar nach dem Argument übergeben werden, für das sie gelten. Beispielsweise folgender Code:
 

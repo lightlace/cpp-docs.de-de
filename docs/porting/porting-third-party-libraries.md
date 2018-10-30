@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e1edc9e4a6172b3ac55e7a8bc9b21cdc571774d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 24056346520897988fe92587ab45aa7cbc754199
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578279"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074994"
 ---
 # <a name="porting-third-party-libraries"></a>Portieren von Drittanbieterbibliotheken
 
-Wenn Sie ein Projekt auf die aktuelle Version von Visual C++ aktualisieren, müssen Sie auch alle Bibliotheken aktualisieren, die das Projekt verwendet, damit Bibliothek und Projekt mit der gleichen Version und dem gleichen Typ des Compilers erstellt werden. (Weitere Informationen finden Sie in der [Übersicht über potenzielle Probleme beim Upgrade](overview-of-potential-upgrade-issues-visual-cpp.md).) 
+Wenn Sie ein Projekt auf die aktuelle Version von Visual C++ aktualisieren, müssen Sie auch alle Bibliotheken aktualisieren, die das Projekt verwendet, damit Bibliothek und Projekt mit der gleichen Version und dem gleichen Typ des Compilers erstellt werden. (Weitere Informationen finden Sie in der [Übersicht über potenzielle Probleme beim Upgrade](overview-of-potential-upgrade-issues-visual-cpp.md).)
 
 ## <a name="introducing-vcpkg"></a>Einführung in vcpkg
 
@@ -35,7 +35,7 @@ In der Vergangenheit war das Auffinden und Aktualisieren von Drittanbieterbiblio
 Wenn Ihre Bibliothek nicht im **vcpkg**-Katalog vorhanden ist, können Sie ein Problem im [GitHub-Repository](https://github.com/Microsoft/vcpkg/issues) melden, in dem es der Community und dem Visual C++-Team angezeigt wird, um möglicherweise die Portierungsdatei für diese Bibliothek zu erstellen.
 
 Für die geschützten (nicht Open-Source-) Bibliotheken von Drittanbietern empfehlen wir, den Bibliotheksanbieter zu kontaktieren. Wir möchten jedoch gerne von allen geschützten Bibliotheken wissen, die Sie nutzen und Sie blockieren. Informieren Sie uns unter vcupgrade@microsoft.com, von welchen Sie abhängig sind.
-  
-## <a name="see-also"></a>Siehe auch  
+
+## <a name="see-also"></a>Siehe auch
 
 [Visual C++-Handbuch: Portieren und Aktualisieren](visual-cpp-porting-and-upgrading-guide.md)

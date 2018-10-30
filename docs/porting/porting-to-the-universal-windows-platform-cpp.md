@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01efc61d08204598cbce6d875bfe2c2293d8e711
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 16fe66e6ba8ea3f6e4f88f434b58c61d46ce1edb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404266"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080649"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Portieren auf die universelle Windows-Plattform (C++)
 
@@ -74,7 +74,7 @@ Wenn Sie eine Windows 8.1 Store-App haben, können Sie sie mithilfe dieses Verfa
     #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
     ```
 
-     Diese Anweisungen gelten jeweils für UWP-Apps, Windows Phone Store-Apps, beide oder keines von beiden (nur klassische Win32-Desktop-Apps). Diese Makros sind nur in Windows SDK 8.1 und höher verfügbar. Wenn Code mit früheren Versionen des Windows SDK oder für andere Plattformen als Windows kompiliert werden muss, sollten Sie daher auch den Fall berücksichtigen, dass sie nicht definiert sind.
+   Diese Anweisungen gelten jeweils für UWP-Apps, Windows Phone Store-Apps, beide oder keines von beiden (nur klassische Win32-Desktop-Apps). Diese Makros sind nur in Windows SDK 8.1 und höher verfügbar. Wenn Code mit früheren Versionen des Windows SDK oder für andere Plattformen als Windows kompiliert werden muss, sollten Sie daher auch den Fall berücksichtigen, dass sie nicht definiert sind.
 
 11. Führen Sie die App in einem Emulator oder auf einem physischen Gerät, dessen Gerätetyp von Ihrer App unterstützt wird. Um einen Emulator auszuführen, müssen Sie Visual Studio auf einem physischen Computer ausführen, nicht auf einem virtuellen Computer.
 
@@ -119,4 +119,4 @@ Wenn Sie ein neues UWP-Projekt mithilfe von Visual Studio erstellt haben, sollte
 ## <a name="see-also"></a>Siehe auch
 
 [Visual C++: Portierungsanleitung](../porting/porting-to-the-universal-windows-platform-cpp.md)<br/>
-[Entwickeln von Apps für die universelle Windows-Plattform (UWP)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)  
+[Entwickeln von Apps für die universelle Windows-Plattform (UWP)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)
