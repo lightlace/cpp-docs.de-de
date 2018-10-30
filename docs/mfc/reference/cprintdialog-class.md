@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f69c315f78c5ce1a587f48a873c9c2517f81537b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 61e2ea655c25b15982f3434437bc3bdc3eaf310f
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441434"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204651"
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog-Klasse
 
@@ -108,7 +108,7 @@ Drucken Standarddialogfelder bieten eine einfache Möglichkeit zum Drucken und D
 > [!NOTE]
 >  Die `CPrintDialogEx` Klasse kapselt die Dienste, die von der Windows-druckeigenschaftenblatt bereitgestellt. Weitere Informationen finden Sie unter den [CPrintDialogEx](../../mfc/reference/cprintdialogex-class.md) Übersicht.
 
-`CPrintDialog`Funktionalität wird von der ersetzt [CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md), die Sie für beide das Setup und Seite drucken ein Standarddialogfeld bereitstellen soll.
+`CPrintDialog`die Funktionalität wird von der abgelöst [CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md), die Sie für beide das Setup und Seite drucken ein Standarddialogfeld bereitstellen soll.
 
 Sie können das Framework, behandeln zahlreiche Aspekte des Druckvorgangs für Ihre Anwendung verwenden. In diesem Fall zeigt das Framework automatisch die Windows-Standarddialogfeld zum Drucken. Sie können auch das Framework-Handle, das für Ihre Anwendung drucken haben jedoch außer Kraft setzen das Standarddialogfeld Drucken mit aktiviertem Kontrollkästchen für Ihre eigenen Dialogfeld "Drucken". Weitere Informationen zur Verwendung von Framework Druckaufgaben behandelt, finden Sie im Artikel [Drucken](../../mfc/printing.md).
 
