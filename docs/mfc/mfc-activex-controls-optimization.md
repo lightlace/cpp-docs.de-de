@@ -24,19 +24,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4864e0be8ef49541cc59474bdb24c2ef25840007
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a583b0b70473698963841a3bd9c84c79472eb529
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441199"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204443"
 ---
 # <a name="mfc-activex-controls-optimization"></a>MFC-ActiveX-Steuerelemente: Optimierung
 
 Dieser Artikel beschreibt die Techniken, die Sie verwenden können, um der ActiveX-Steuerelemente für eine bessere Leistung zu optimieren.
 
 >[!IMPORTANT]
-> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
+> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen zu moderne Technologien, die ActiveX-ablösen, finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
 
 Die Themen [Aktivieren Deaktivieren der Option "aktiviert wenn sichtbar"](../mfc/turning-off-the-activate-when-visible-option.md) und [Bereitstellen der Interaktion während der Inaktivität](../mfc/providing-mouse-interaction-while-inactive.md) besprechen Sie Steuerelemente, die ein Fenster, bis Sie es aktivieren nicht erstellen. Das Thema [bereitstellen Fensterloser Aktivierung](../mfc/providing-windowless-activation.md) wird erläutert, Steuerelemente, die nie ein Fenster erstellen, selbst wenn sie aktiviert werden.
 

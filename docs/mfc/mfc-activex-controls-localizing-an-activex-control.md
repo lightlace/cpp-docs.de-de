@@ -20,19 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a970c7fd75eec2ea028f74220cbdb046e5d23bd
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: fb31eb15a61f1d4cbee7ba7402de508a84124461
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50053278"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204703"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Lokalisieren eines ActiveX-Steuerelements
 
 Dieser Artikel beschreibt Verfahren zum Lokalisieren von ActiveX-Steuerelement-Schnittstellen.
 
 >[!IMPORTANT]
-> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
+> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen zu moderne Technologien, die ActiveX-ablösen, finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
 
 Wenn Sie ein ActiveX-Steuerelement einen internationalen Markt anpassen möchten, empfiehlt es sich um das Steuerelement zu lokalisieren. Windows unterstützt viele Sprachen zusätzlich zu den Englisch, darunter Deutsch, Französisch und Schwedisch. Dies kann Probleme für das Steuerelement darstellen, wenn die Schnittstelle nur auf Englisch ist.
 

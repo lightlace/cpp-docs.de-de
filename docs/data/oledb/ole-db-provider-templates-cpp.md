@@ -1,7 +1,7 @@
 ---
 title: OLE DB-Anbietervorlagen (C++) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0eef554fd6b7fbd16ff7c34434d08d917b5dcea9
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 4d4d93f656279cf5e5c548ef09bf809364c9d90e
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50080064"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216408"
 ---
 # <a name="ole-db-provider-templates-c"></a>OLE DB-Anbietervorlagen (C++)
 
@@ -39,25 +39,25 @@ Anbieter können einfach oder komplex sein. Der Anbieter kann eine minimale Meng
 
 Jeder Anbieter implementiert einen standardmäßigen Satz von COM-Objekte zur Verarbeitung von Anforderungen vom Client mit einer standardmäßigen Bedeutung, alle OLE DB-Consumer Daten von einem Anbieter, unabhängig von der Sprache (z. B. C++ und grundlegende) zugreifen kann.
 
-Jedes COM-Objekt enthält mehrere Schnittstellen, von denen einige erforderlich und von denen einige optional sind. Implementieren Sie die obligatorischen Schnittstellen, gewährleistet der Anbieter ein Mindestmaß an Funktionen (so genannte Kompatibilität), die einem beliebigen Client verwenden kann. Ein Anbieter kann es sich um optionale Schnittstellen um zusätzliche Funktionen bereitzustellen implementieren. [Der OLE DB-Anbieter Vorlage-Architektur](../../data/oledb/ole-db-provider-template-architecture.md) werden diese Schnittstellen im Detail beschrieben. Rufen Sie der Client sollten immer `QueryInterface` zu bestimmen, ob ein Anbieter eine bestimmte Schnittstelle unterstützt.
+Jedes COM-Objekt enthält mehrere Schnittstellen, von denen einige erforderlich und von denen einige optional sind. Implementieren Sie die obligatorischen Schnittstellen, gewährleistet der Anbieter ein Mindestmaß an Funktionen (so genannte Kompatibilität), die einem beliebigen Client verwenden kann. Ein Anbieter kann es sich um optionale Schnittstellen um zusätzliche Funktionen bereitzustellen implementieren. Die [Anbieterarchitektur von OLE DB](../../data/oledb/ole-db-provider-template-architecture.md) werden diese Schnittstellen im Detail beschrieben. Rufen Sie der Client sollten immer `QueryInterface` zu bestimmen, ob ein Anbieter eine bestimmte Schnittstelle unterstützt.
 
 ## <a name="ole-db-specification-level-support"></a>Unterstützung von OLE DB-Spezifikation auf
 
-Der OLE DB-Anbietervorlagen unterstützt die Spezifikation der OLE DB-Version 2.7. Verwenden den OLE DB-Anbietervorlagen, können Sie einen kompatiblen Ebene 0-Anbieter implementieren. Das Anbieter-Beispiel, verwendet z. B. die Vorlagen, ein Servers Befehlsservers Befehl zu implementieren, das die DOS-Befehl DIR im Dateisystem Abfragen ausgeführt wird. Das Anbieter-Beispiel gibt die Verzeichnisinformationen zurück, in einem Rowset, die der OLE DB-Standardmechanismus für die Rückgabe von Tabellendaten ist.
+Der OLE DB-Anbietervorlagen unterstützt die Spezifikation der OLE DB-Version 2.7. Verwenden den OLE DB-Anbietervorlagen, können Sie einen kompatiblen Ebene 0-Anbieter implementieren. Die `Provider` Beispiel verwendet beispielsweise die Vorlagen ein Servers Befehlsservers Befehl zu implementieren, die die DOS-Befehl DIR im Dateisystem Abfragen ausgeführt wird. Die `Provider` Beispiel gibt die Verzeichnisinformationen zurück, in einem Rowset, der standard OLE DB-Mechanismus zum Zurückgeben von tabellarischen Daten handelt.
 
-Die einfachste Art des von der OLE DB-Vorlagen unterstützten Anbieter ist ein nur-Lese Anbieter keine Befehle. Anbieter mit den Befehlen werden ebenfalls unterstützt, wie das Hinzufügen von Lesezeichen und Lese-/Schreibzugriff ist. Sie können einen Lese-/Schreibzugriff-Anbieter implementieren, durch das Schreiben von zusätzlichem Code. Dynamische Rowsets und Transaktionen werden von der aktuellen Version nicht unterstützt, aber Sie können diese hinzufügen, wenn Sie möchten.
+Die einfachste Art des von der OLE DB-Vorlagen unterstützten Anbieter ist ein nur-Lese Anbieter keine Befehle. Anbieter mit den Befehlen werden ebenfalls unterstützt, wie das Hinzufügen von Lesezeichen und Lese-/Schreibzugriff sind. Sie können einen Lese-/Schreibzugriff-Anbieter implementieren, durch das Schreiben von zusätzlichem Code. Dynamische Rowsets und Transaktionen werden von der aktuellen Version nicht unterstützt, aber Sie können diese hinzufügen, wenn Sie möchten.
 
 ## <a name="when-do-you-need-to-create-an-ole-db-provider"></a>Wenn müssen Sie einen OLE DB-Anbieter zu erstellen?
 
-Sie ist nicht immer erforderlich, einen eigenen Anbieter erstellen; Microsoft bietet verschiedene vorgefertigte "," standard-Anbieter in der **Datenlinkeigenschaften** Dialogfeld in Visual C++. Der Hauptgrund für einen OLE DB-Anbieter erstellen, ist der Universal Data Access-Strategie nutzen. Einige der Vorteile dieser Vorgehensweise sind also:
+Sie müssen nicht immer Ihren eigenen Anbieter erstellen. Microsoft bietet verschiedene vorgefertigte "," standard-Anbieter in der **Datenlinkeigenschaften** Dialogfeld in Visual C++. Der Hauptgrund für einen OLE DB-Anbieter erstellen, ist der Universal Data Access-Strategie nutzen. Einige der Vorteile dieser Vorgehensweise sind also:
 
 - Der Datenzugriff mithilfe einer beliebigen Sprache wie C++, Basic und Visual Basic Scripting Edition. Sie können verschiedene Programmierer in Ihrer Organisation Zugriff auf die gleichen Daten auf die gleiche Weise, unabhängig davon, welche Sprache sie verwenden.
 
-- Verfügbarmachen der Daten zu anderen Datenquellen wie SQL Server, Excel und Access. Dies kann sehr nützlich, wenn Sie zum Übertragen von Daten zwischen unterschiedlichen Formaten sein.
+- Öffnen Sie Ihre Daten an andere Datenquellen wie SQL Server, Excel und Access. Dies kann nützlich sein, wenn Sie Daten zwischen unterschiedlichen Formaten übertragen möchten.
 
-- Er in Operationen, Cross-Datenquelle (heterogenen). Dies kann ein sehr wirksamer Weg von Datawarehousing sein. Mithilfe von OLE DB-Anbieter können Sie Daten im systemeigenen Format beibehalten und weiterhin können sie in einem einfachen Vorgang darauf zugreifen.
+- Er in Operationen, Cross-Datenquelle (heterogenen). Dies kann eine effektive Möglichkeit des Datawarehousing sein. Mithilfe von OLE DB-Anbieter können Sie Daten im systemeigenen Format beibehalten und weiterhin können sie in einem einfachen Vorgang darauf zugreifen.
 
-- Hinzufügen von zusätzlichen Funktionen auf Ihre Daten, z. B. die Verarbeitung von Abfragen.
+- Hinzufügen zusätzlicher Funktionen, um Ihre Daten, z. B. die abfrageverarbeitung.
 
 - Erhöhen der Leistung beim Zugriff auf Daten, indem Sie steuern, wie es bearbeitet wird.
 
@@ -81,5 +81,5 @@ Weitere Informationen finden Sie unter:
 ## <a name="see-also"></a>Siehe auch
 
 [Datenzugriff](../data-access-in-cpp.md)<br/>
-[OLE DB-SDK-Dokumentation](/previous-versions/windows/desktop/ms722784)
-[OLE DB-Programmierreferenz](/previous-versions/windows/desktop/ms713643)
+[OLE DB-SDK-Dokumentation](/previous-versions/windows/desktop/ms722784)<br/>
+[OLE DB-Programmierreferenz](/previous-versions/windows/desktop/ms713643)<br/>

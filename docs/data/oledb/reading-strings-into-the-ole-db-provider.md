@@ -15,22 +15,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a2a580c5ae3d80349b74e6ce7606763c32201805
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: b1730c839ab2eb87511a241c28409646a999cfd6
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50063327"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216252"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Einlesen von Zeichenfolgen in den OLE DB-Anbieter
 
 Die `RCustomRowset::Execute` Funktion eine Datei öffnet und liest Zeichenfolgen. Der Consumer übergibt den Dateinamen an dem Anbieter an, durch den Aufruf [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757). Der Anbieter erhält den Dateinamen und speichert sie in der Membervariablen `m_szCommandText`. `Execute` liest den Dateinamen aus `m_szCommandText`. Wenn der Dateiname ungültig ist, oder die Datei nicht verfügbar ist ist, `Execute` gibt einen Fehler zurück. Sie geöffnet wird, andernfalls die Datei, und Aufrufe `fgets` die Zeichenfolgen ab. Für jede von Zeichenfolgen es liest, legen Sie `Execute` erstellt eine Instanz des Benutzerdatensatzes (`CAgentMan`) und setzt es in ein Array.
 
-Wenn die Datei kann nicht geöffnet werden, `Execute` DB_E_NOTABLE zurückgeben. Wenn sie stattdessen E_FAIL zurückgibt, wird der Anbieter funktioniert nicht mit vielen Consumern und der OLE DB wird nicht übergeben [Konformitätstests](../../data/oledb/testing-your-provider.md).
+Wenn die Datei kann nicht geöffnet werden, `Execute` DB_E_NOTABLE zurückgeben. Wenn sie stattdessen E_FAIL zurückgibt, wird der Anbieter funktioniert nicht mit vielen Consumern und übergeben Sie den OLE DB wird nicht [Konformitätstests](../../data/oledb/testing-your-provider.md).
 
 ## <a name="example"></a>Beispiel
-
-Die bearbeitete `Execute` Funktion sieht wie folgt aus:
 
 ```cpp
 /////////////////////////////////////////////////////////////////////////
@@ -106,4 +104,4 @@ public:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Implementieren des einfachen schreibgeschützten Anbieters](../../data/oledb/implementing-the-simple-read-only-provider.md)
+[Implementieren des einfachen schreibgeschützten Anbieters](../../data/oledb/implementing-the-simple-read-only-provider.md)<br/>

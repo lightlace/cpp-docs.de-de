@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 652f09146ba0bb193efbf889995f6de5f53a9492
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 0973bb21771796f40a0464e2376101ee35a0d1a3
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50074474"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204547"
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>MFC-ActiveX-Steuerelemente: Hinzufügen von benutzerdefinierten Methoden
 
 Benutzerdefinierte Methoden unterscheiden sich von vordefinierten Methoden, da sie nicht bereits durch implementiert sind `COleControl`. Sie müssen die Implementierung für jede benutzerdefinierte Methode angeben, die Sie zu Ihrem Steuerelement hinzuzufügen.
 
 >[!IMPORTANT]
-> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
+> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen zu moderne Technologien, die ActiveX-ablösen, finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
 
 Ein ActiveX-Steuerelement-Benutzer kann eine benutzerdefinierte Methode zu einem beliebigen Zeitpunkt für das Steuerelement spezifische Aktionen aufrufen. Die Dispatch-Eintrag für die Zuordnung für benutzerdefinierte Methoden ist das DISP_FUNCTION.
 

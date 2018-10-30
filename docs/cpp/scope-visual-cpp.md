@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb9d21eee8e561e2caa8a7c4088774435d3ce273
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0e3d6501e969b103146aa53311069e5fdd4d048e
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080440"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204560"
 ---
 # <a name="scope-c"></a>Gültigkeitsbereich (C++)
 
@@ -41,7 +41,7 @@ Es gibt sechs Arten von Gültigkeitsbereichen:
 
 - **Lokalen Gültigkeitsbereich** ein Namen, die innerhalb einer Funktion oder einem Lambda-Ausdrucks die Parameternamen, einschließlich deklariert haben lokale Gültigkeit. Sie werden häufig als "lokal" bezeichnet. Sie sind nur von dem Zeitpunkt der Deklaration bis zum Ende der Funktion oder einem Lambda-Text angezeigt. Lokaler Bereich ist eine Art von Blockbereich, der später in diesem Artikel erläutert wird.
 
-- **Klassengültigkeitsbereich** Namen von Klassenmembern haben einen Klassengültigkeitsbereich, die in der gesamten Definition der Klasse, unabhängig von dem Zeitpunkt der Deklaration erweitert. Klasse Memberzugriff ist daran gesteuert durch die **öffentliche**, **private**, und **geschützt** Schlüsselwörter. Öffentlicher oder geschützter Member zugegriffen werden kann, nur mithilfe der memberauswahloperatoren (**.** oder **->**) oder Pointer-to-Member-Operatoren (**.** <strong>\*</strong> oder **->** <strong>\*</strong>).
+- **Klassengültigkeitsbereich** Namen von Klassenmembern haben einen Klassengültigkeitsbereich, die in der gesamten Definition der Klasse, unabhängig von dem Zeitpunkt der Deklaration erweitert. Memberzugriff Klasse wird weiter gesteuert, indem die **öffentliche**, **private**, und **geschützt** Schlüsselwörter. Öffentlicher oder geschützter Member zugegriffen werden kann, nur mithilfe der memberauswahloperatoren (**.** oder **->**) oder Pointer-to-Member-Operatoren (**.** <strong>\*</strong> oder **->** <strong>\*</strong>).
 
 - **-Anweisungsbereichs** Namen deklariert wird, eine **für**, **Wenn**, **während**, oder **wechseln** Anweisung sind sichtbar, bis zum Ende der Anweisungsblock.
 

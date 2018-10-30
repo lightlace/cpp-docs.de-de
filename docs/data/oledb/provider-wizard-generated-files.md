@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a9bc7c85dccdfe095412450d5020fc8a6b42d516
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 40422ac7894523a28a2135b7f5005eb1f11d36c8
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50076970"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216369"
 ---
 # <a name="provider-wizard-generated-files"></a>Vom Anbieter-Assistenten generierte Dateien
 
-Der ATL-OLE DB-Anbieter-Assistent generiert die folgenden Dateien. In den folgenden Themen verwenden Sie den kurzen Namen *benutzerdefinierte*, aber die exakten Dateinamen hängt die Wahl, die Sie vorgenommen haben, wenn Sie den Anbieter zu erstellen.
+Die **ATL-OLE DB-Anbieter-Assistenten** generiert die folgenden Dateien. In den folgenden Themen verwenden Sie den kurzen Namen *benutzerdefinierte*, aber die exakten Dateinamen hängt die Wahl, die Sie vorgenommen haben, wenn Sie den Anbieter zu erstellen.
 
 |Dateiname|Beschreibung|
 |---------------|-----------------|
@@ -32,8 +32,8 @@ Der ATL-OLE DB-Anbieter-Assistent generiert die folgenden Dateien. In den folgen
 |*Benutzerdefinierte*DS.h|Implementiert das Datenquellenobjekt. Diese Headerdatei enthält die eigenschaftenzuordnung für die Eigenschaften der Datenquelle.|
 |*Benutzerdefinierte*RS.h|Implementiert die Befehls- und Rowsetobjekte-Objekte. Diese Headerdatei enthält die eigenschaftenzuordnung Rowset- und Eigenschaften.|
 |*Benutzerdefinierte*Sess.h|Implementiert das Session-Objekt. Diese Headerdatei enthält die eigenschaftenzuordnung für die Eigenschaften der leistungssitzung aus.|
-|*Benutzerdefinierte*RGS|Enthält die registrierten Objekte, die vom OLE DB-Anbieter-Assistenten generiert.|
+|*Benutzerdefinierte*RGS|Enthält die registrierten Objekte generiert, indem die **OLE DB-Anbieterassistent**.|
 
 ## <a name="see-also"></a>Siehe auch
 
-[Erstellen eines OLE DB-Anbieters](../../data/oledb/creating-an-ole-db-provider.md)
+[Erstellen eines OLE DB-Anbieters](../../data/oledb/creating-an-ole-db-provider.md)<br/>

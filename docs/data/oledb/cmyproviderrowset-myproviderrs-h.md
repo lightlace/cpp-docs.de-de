@@ -22,22 +22,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4808f9165fa6f139b0d3b576620e9db80eb360d3
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 211c83ec63611c493f03e48b58619caca373ce65
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50076996"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216356"
 ---
 # <a name="ccustomrowset-customrsh"></a>CCustomRowset (CustomRS.H)
 
-Der Assistent generiert einen Eintrag für die Rowset-Objekt. In diesem Fall wird der Name `CCustomRowset` zugewiesen Die `CCustomRowset` Klasse erbt von einer OLE DB-Anbieter-Klasse namens `CRowsetImpl`, die alle erforderlichen Schnittstellen für Rowset-Objekt implementiert. Der folgende Code zeigt die Vererbungskette für `CRowsetImpl`:
+Der Assistent generiert einen Eintrag für die Rowset-Objekt. In diesem Fall heißt es `CCustomRowset`. Die `CCustomRowset` Klasse erbt von einer OLE DB-Anbieter-Klasse namens `CRowsetImpl`, die alle erforderlichen Schnittstellen für Rowset-Objekt implementiert. Der folgende Code zeigt die Vererbungskette für `CRowsetImpl`:
 
 ```cpp
-template <class T, class Storage, class CreatorClass,
+template <class T, class Storage, class CreatorClass, 
    class ArrayType = CAtlArray<Storage>>
 class CMyRowsetImpl:
-   public CRowsetImpl<T, Storage, CreatorClass, ArrayType,
+   public CRowsetImpl<T, Storage, CreatorClass, ArrayType, 
       CSimpleRow, IRowsetLocateImpl< T >>
 ```
 
@@ -51,4 +51,4 @@ Die *RowsetInterface* Parameter können Sie auch die `IRowsetLocate` oder `IRows
 
 ## <a name="see-also"></a>Siehe auch
 
-[Vom Anbieter-Assistenten generierte Dateien](../../data/oledb/provider-wizard-generated-files.md)
+[Vom Anbieter-Assistenten generierte Dateien](../../data/oledb/provider-wizard-generated-files.md)<br/>

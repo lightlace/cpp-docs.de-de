@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f684bbb287213ad0cbe6d490c1bef869f5ffc9db
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 9fc9b97e47b64f9f4d60bf45afe9628b11c657c8
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50077776"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204677"
 ---
 # <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>ActiveX-Steuerelementcontainer: Manuelles Aktivieren von ActiveX-Steuerelementcontainern
 
 Wenn Sie ActiveX-Steuerelemente unterstützen, wenn Sie den Assistenten zum MFC-Anwendungen verwendet, um generiert Ihre Anwendung nicht aktiviert haben, müssen Sie diese Unterstützung manuell hinzufügen. Dieser Artikel beschreibt den Prozess zum manuellen Hinzufügen von ActiveX-Steuerelementcontainern zu einer vorhandenen OLE-Container-Anwendung. Wenn Sie im Voraus wissen, dass Sie in der OLE-Container ActiveX-Steuerelemente unterstützen möchten, finden Sie im Artikel [Erstellen eines MFC-ActiveX-Steuerelementcontainers](../mfc/reference/creating-an-mfc-activex-control-container.md).
 
 >[!IMPORTANT]
-> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
+> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen zu moderne Technologien, die ActiveX-ablösen, finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
 
 > [!NOTE]
 >  Diesem Artikel wird ein Dialogfeld-basierte ActiveX-Steuerelementcontainer-Projekt namens "Container" und ein eingebettetes Steuerelement mit dem Namen Circ als Beispiele in den Prozeduren und den Code.

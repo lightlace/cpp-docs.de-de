@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e103e43f23746f8274ad00da4d043e3446dfc706
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 7967b63a14c296d7f0d73bb403aa5b74a6c3689b
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50053027"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204302"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>MFC-ActiveX-Steuerelemente: Hinzufügen von vordefinierten Methoden
 
 Eine vordefinierte Methode unterscheidet sich von einer benutzerdefinierten Methode, da er bereits von der Klasse implementiert wird [COleControl](../mfc/reference/colecontrol-class.md). Z. B. `COleControl` enthält eine vordefinierte Memberfunktion, die die Refresh-Methode für das Steuerelement unterstützt. Die Dispatch-Eintrag für die Zuordnung für diese Methode ist DISP_STOCKFUNC_REFRESH.
 
 >[!IMPORTANT]
-> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
+> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen zu moderne Technologien, die ActiveX-ablösen, finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
 
 `COleControl` unterstützt zwei vordefinierte Methoden: DoClick und aktualisieren. Aktualisierung wird aufgerufen, durch Benutzer des Steuerelements, um die Darstellung des Steuerelements sofort zu aktualisieren. DoClick wird aufgerufen, um das Auslösen des Steuerelements auf Ereignis.
 

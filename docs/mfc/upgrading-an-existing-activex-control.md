@@ -22,19 +22,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0567913eac57c4150f9fe6d051d2fc8e0e31860b
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 48fee88dc991ff58bfb9178e370134ad3cdb11d8
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50082927"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204625"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Upgrading eines vorhandenen ActiveX-Steuerelements
 
 Vorhandene ActiveX-Steuerelemente (früher OLE-Steuerelemente) kann über das Internet ohne Änderung verwendet werden. Allerdings sollten Sie so ändern Sie die Steuerelemente, um die Leistung zu verbessern.
 
 > [!IMPORTANT]
-> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen über moderne Technologien, die ActiveX Ersetzen eines finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
+> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen zu moderne Technologien, die ActiveX-ablösen, finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
 
 Wenn Sie das Steuerelement auf einer Webseite verwenden, gibt es weitere Überlegungen. Die OCX-Datei und alle zugehörigen Dateien müssen auf dem Zielcomputer oder über das Internet heruntergeladen werden. Dadurch wird die Codegröße als auch herunterladen, die Zeit eines wichtigen Aspekt. Downloads können in einer signierten CAB-Datei verpackt werden. Sie können das Steuerelement als sicher für Skripting und als sicher für die Initialisierung kennzeichnen.
 
