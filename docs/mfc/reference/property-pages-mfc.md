@@ -1,28 +1,18 @@
 ---
-title: Eigenschaftenseiten (MFC) | Microsoft-Dokumentation
-ms.custom: ''
+title: Eigenschaftenseiten (MFC)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
-dev_langs:
-- C++
 helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d6d72a6dbe8480e37751b760961f466db02c0c0d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4f8e56ed4be6bf4c7a5283894493ee46c4ed2ff4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403076"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620908"
 ---
 # <a name="property-pages-mfc"></a>Eigenschaftenseiten (MFC)
 
@@ -77,7 +67,7 @@ Zeiger auf eine `CDataExchange` Objekt. Das Framework stellt dieses Objekt berei
 *ID*<br/>
 Die Ressourcen-ID des Kombinationsfeld-Feld der Eigenschaft des Steuerelements anhand des zugeordneten Steuerelements *PszPropName*.
 
-*Member*<br/>
+*member*<br/>
 Die Membervariable, die das Eigenschaftensteuerelement-Seite anhand des zugeordneten *Id* und durch die angegebene Eigenschaft *PszPropName*.
 
 *pszPropName*<br/>
@@ -111,7 +101,7 @@ Zeiger auf eine `CDataExchange` Objekt. Das Framework stellt dieses Objekt berei
 *ID*<br/>
 Die Ressourcen-ID des Kombinationsfeld-Feld der Eigenschaft des Steuerelements anhand des zugeordneten Steuerelements *PszPropName*.
 
-*Member*<br/>
+*member*<br/>
 Die Membervariable, die das Eigenschaftensteuerelement-Seite anhand des zugeordneten *Id* und durch die angegebene Eigenschaft *PszPropName*.
 
 *pszPropName*<br/>
@@ -145,7 +135,7 @@ Zeiger auf eine `CDataExchange` Objekt. Das Framework stellt dieses Objekt berei
 *ID*<br/>
 Die Ressourcen-ID des Kombinationsfeld-Feld der Eigenschaft des Steuerelements anhand des zugeordneten Steuerelements *PszPropName*.
 
-*Member*<br/>
+*member*<br/>
 Die Membervariable, die das Eigenschaftensteuerelement-Seite anhand des zugeordneten *Id* und durch die angegebene Eigenschaft *PszPropName*.
 
 *pszPropName*<br/>
@@ -179,7 +169,7 @@ Zeiger auf eine `CDataExchange` Objekt. Das Framework stellt dieses Objekt berei
 *ID*<br/>
 Die Ressourcen-ID des Kontrollkästchen-Steuerelements verknüpft ist, mit der Eigenschaft des Steuerelements gemäß *PszPropName*.
 
-*Member*<br/>
+*member*<br/>
 Die Membervariable, die das Eigenschaftensteuerelement-Seite anhand des zugeordneten *Id* und durch die angegebene Eigenschaft *PszPropName*.
 
 *pszPropName*<br/>
@@ -213,7 +203,7 @@ Zeiger auf eine `CDataExchange` Objekt. Das Framework stellt dieses Objekt berei
 *ID*<br/>
 Die Liste die Ressourcen-ID-Feld der Eigenschaft des Steuerelements anhand des zugeordneten Steuerelements *PszPropName*.
 
-*Member*<br/>
+*member*<br/>
 Die Membervariable, die das Eigenschaftensteuerelement-Seite anhand des zugeordneten *Id* und durch die angegebene Eigenschaft *PszPropName*.
 
 *pszPropName*<br/>
@@ -247,7 +237,7 @@ Zeiger auf eine `CDataExchange` Objekt. Das Framework stellt dieses Objekt berei
 *ID*<br/>
 Die Liste die Ressourcen-ID-Feld der Eigenschaft des Steuerelements anhand des zugeordneten Steuerelements *PszPropName*.
 
-*Member*<br/>
+*member*<br/>
 Die Membervariable, die das Eigenschaftensteuerelement-Seite anhand des zugeordneten *Id* und durch die angegebene Eigenschaft *PszPropName*.
 
 *pszPropName*<br/>
@@ -281,7 +271,7 @@ Zeiger auf eine `CDataExchange` Objekt. Das Framework stellt dieses Objekt berei
 *ID*<br/>
 Die Liste die Ressourcen-ID-Feld der Eigenschaft des Steuerelements anhand des zugeordneten Steuerelements *PszPropName*.
 
-*Member*<br/>
+*member*<br/>
 Die Membervariable, die das Eigenschaftensteuerelement-Seite anhand des zugeordneten *Id* und durch die angegebene Eigenschaft *PszPropName*.
 
 *pszPropName*<br/>
@@ -338,7 +328,7 @@ Zeiger auf eine `CDataExchange` Objekt. Das Framework stellt dieses Objekt berei
 *ID*<br/>
 Die Ressourcen-ID des Optionsfelds Schaltflächen-Steuerelement, die der Eigenschaft des Steuerelements anhand des zugeordneten *PszPropName*.
 
-*Member*<br/>
+*member*<br/>
 Die Membervariable, die das Eigenschaftensteuerelement-Seite anhand des zugeordneten *Id* und durch die angegebene Eigenschaft *PszPropName*.
 
 *pszPropName*<br/>
@@ -414,7 +404,7 @@ Zeiger auf eine `CDataExchange` Objekt. Das Framework stellt dieses Objekt berei
 *ID*<br/>
 Die Ressourcen-ID des Steuerelements mit der Eigenschaft des Steuerelements anhand des verknüpften *PszPropName*.
 
-*Member*<br/>
+*member*<br/>
 Die Membervariable, die das Eigenschaftensteuerelement-Seite anhand des zugeordneten *Id* und durch die angegebene Eigenschaft *PszPropName*.
 
 *pszPropName*<br/>

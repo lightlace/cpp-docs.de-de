@@ -1,35 +1,25 @@
 ---
-title: Hinzufügen von Klassen aus Typelib-Assistent | Microsoft-Dokumentation
-ms.custom: ''
+title: Assistent zum Hinzufügen von Klassen aus der Typbibliothek
 ms.date: 10/03/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.typelib
-dev_langs:
-- C++
 helpviewer_keywords:
 - Add Class from TypeLib Wizard [MFC]
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a54948fd98b5a5445aa1fdfafcf0fcd015bbf08
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: c0423ac06aa46b65c1fb0ffb3935d4bb54821ee9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250379"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50654336"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Assistent zum Hinzufügen von Klassen aus der Typbibliothek
 
 Verwenden Sie diesen Assistenten, eine MFC-Klasse aus einer verfügbaren Typbibliothek hinzufügen. Der Assistent erstellt eine Klasse für jede Schnittstelle, die Sie über die ausgewählte Bibliothek hinzufügen.
 
 > [!WARNING]
-> Dieser Code-Assistenten ist veraltet und wird in einer zukünftigen Version von Visual Studio entfernt, in Visual Studio 2017 Version 15.9. Dieser Assistent ist nur selten verwendet. Allgemeine Unterstützung für ATL und MFC wird durch das Entfernen dieses Assistenten nicht beeinträchtigt. Wenn Sie uns Ihr Feedback zu dieser Einstellung freigeben möchten, füllen Sie bitte [diese Umfrage](https://www.surveymonkey.com/r/QDWKKCN). Ihr Feedback ist uns wichtig.
+> Ab Version 15.9 von Visual Studio 2017 ist dieser Codeassistent veraltet. Er wird in einer zukünftigen Version von Visual Studio entfernt. Dieser Assistent wird nur selten verwendet. Die Entfernung dieses Assistenten wirkt sich nicht auf die allgemeine Unterstützung für Active Template Library (ATL) und Microsoft Foundation Classes (MFC) aus. In [dieser Umfrage](https://www.surveymonkey.com/r/QDWKKCN) können Sie Ihr Feedback zu dieser Veraltung mitteilen. Ihr Feedback ist uns wichtig.
 
 - **Klasse einfügen von**
 
@@ -69,7 +59,7 @@ Verwenden Sie diesen Assistenten, eine MFC-Klasse aus einer verfügbaren Typbibl
 
 - **Klasse**
 
-   Gibt den Namen der Klasse an, die im Feld **Generierte Klassen** ausgewählt ist. Dieses wird vom Assistenten hinzugefügt, wenn Sie auf **Fertig stellen** klicken. Sie können den Namen im Bearbeiten der **Klasse** Feld.
+   Gibt den Namen der Klasse an, die im Feld **Generierte Klassen** ausgewählt ist. Dieses wird vom Assistenten hinzugefügt, wenn Sie auf **Fertig stellen** klicken. Sie können den Namen im Feld **Klasse** bearbeiten.
 
 - **Datei**
 

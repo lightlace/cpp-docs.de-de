@@ -1,10 +1,6 @@
 ---
-title: _fwrite_nolock | Microsoft-Dokumentation
-ms.custom: ''
+title: _fwrite_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fwrite_nolock
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - _fwrite_nolock
 - fwrite_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - fwrite_nolock function
 - streams, writing data to
 - _fwrite_nolock function
 ms.assetid: 2b4ec6ce-742e-4615-8407-44a0a18ec1d7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e22f2c281b076e64419686b9f7c058e284cc5532
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c899e34e19547b30a42135f3f818f220f1bc5b7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397921"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626053"
 ---
 # <a name="fwritenolock"></a>_fwrite_nolock
 
@@ -76,7 +66,7 @@ Identisch mit [fwrite](fwrite.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion ist eine nicht sperrende Version von **Fwrite**. Sie ist identisch mit **Fwrite** mit dem Unterschied, dass sie nicht vor Störungen durch andere Threads geschützt ist. Sie ist möglicherweise schneller, da sie nicht den Mehraufwand zum Sperren anderer Threads mit sich bringt. Verwenden Sie diese Funktion nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen bereits der aufrufende Bereich die Threadisolation handhabt.
+Diese Funktion ist eine nicht sperrende Version von **Fwrite**. Es ist identisch mit **Fwrite** mit dem Unterschied, dass sie nicht vor Störungen durch andere Threads geschützt ist. Sie ist möglicherweise schneller, da sie nicht den Mehraufwand zum Sperren anderer Threads mit sich bringt. Verwenden Sie diese Funktion nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen bereits der aufrufende Bereich die Threadisolation handhabt.
 
 ## <a name="requirements"></a>Anforderungen
 
