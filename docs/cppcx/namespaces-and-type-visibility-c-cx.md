@@ -1,20 +1,13 @@
 ---
-title: Namespaces und Typsichtbarkeit (C++ / CX) | Microsoft-Dokumentation
-ms.custom: ''
+title: Namespaces und Typsichtbarkeit (C++/CX)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 42457da3c85a73292b836c6da58b17f0341df1be
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e9efc207fe0ed49fecf30366d265019e7a3ee009
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102771"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440520"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Namespaces und Typsichtbarkeit (C++/CX)
 
@@ -41,13 +34,13 @@ Verwenden Sie die folgenden Zugriffsmodifizierer, um die Sichtbarkeit der Metada
 |private|Die Standardeinstellung für die Barrierefreiheit. Dieselbe Bedeutung wie in Standard-C++.|Nein|
 |protected|Dieselbe Bedeutung wie in Standard-C++, sowohl innerhalb der Anwendung oder Komponente als auch in den Metadaten.|Ja|
 |public|Dieselbe Bedeutung wie in Standard-C++.|Ja|
-|`public protected` – oder – `protected public`|Geschützte Barrierefreiheit in den Metadaten, öffentlich innerhalb der App oder Komponente.|Ja|
+|`public protected` - oder - `protected public`|Geschützte Barrierefreiheit in den Metadaten, öffentlich innerhalb der App oder Komponente.|Ja|
 |`protected private` oder `private protected`|In den Metadaten nicht sichtbar. Geschützte Barrierefreiheit innerhalb der App oder Komponente.||
 |`internal` oder `private public`|Der Member ist innerhalb der Anwendung oder Komponente öffentlich, aber nicht in den Metadaten sichtbar.|Nein|
 
 ## <a name="windows-runtime-namespaces"></a>Windows-Runtime-namespaces
 
-Die Windows-API besteht aus Typen, die in der Windows deklariert werden::\* Namespaces. Diese Namespaces werden für Windows reserviert, und es können ihnen keine Typen hinzugefügt werden. Im **Objektkatalog**können Sie diese Namespaces in der Datei Windows.winmd anzeigen. Dokumentation zu diesen Namespaces finden Sie [Windows-API](https://msdn.microsoft.com/library/windows/apps/br211377).
+Die Windows-API besteht aus Typen, die in der Windows deklariert werden::\* Namespaces. Diese Namespaces werden für Windows reserviert, und es können ihnen keine Typen hinzugefügt werden. Im **Objektkatalog**können Sie diese Namespaces in der Datei Windows.winmd anzeigen. Eine Dokumentation zu diesen Namespaces finden Sie unter [Windows-API](https://msdn.microsoft.com/library/windows/apps/br211377).
 
 ## <a name="ccx-namespaces"></a>C++/CX-Namespaces
 

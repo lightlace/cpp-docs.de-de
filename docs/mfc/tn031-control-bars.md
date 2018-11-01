@@ -1,14 +1,8 @@
 ---
-title: 'TN031: Schiebeleisten | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'TN031: Schiebeleisten-Steuerelemente'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.controls.bars
-dev_langs:
-- C++
 helpviewer_keywords:
 - control bars [MFC], styles
 - CStatusBar class [MFC], Tech Note 31 usage
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 412dd9e0a4e81ee6152197634205401cbe71df2e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9029b8c0fb6aa20de62dbdf21aedeae6d8a15994
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390616"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463306"
 ---
 # <a name="tn031-control-bars"></a>TN031: Schiebeleisten-Steuerelemente
 
@@ -74,7 +64,7 @@ Die `CControlBar` -Klasse bietet die Standardimplementierung für:
 
 - Unterstützung der Implementierung abgeleiteter Klassen.
 
-C++-Steuerleistenobjekte werden in der Regel als Mitglieder einer `CFrameWnd` -abgeleiteten Klasse eingebettet und bereinigt, wenn übergeordneter `HWND` und übergeordnetes Objekt zerstört werden. Wenn Sie ein Steuerleistenobjekt auf dem Heap belegen müssen, legen Sie einfach die *M_bAutoDestruct* Member **"true"** damit die Steuerleiste "**löschen**" bei der `HWND` zerstört wird.
+C++-Steuerleistenobjekte werden in der Regel als Mitglieder einer `CFrameWnd` -abgeleiteten Klasse eingebettet und bereinigt, wenn übergeordneter `HWND` und übergeordnetes Objekt zerstört werden. Wenn Sie ein Steuerleistenobjekt auf dem Heap belegen müssen, legen Sie für den Member *m_bAutoDestruct* einfach **TRUE** fest, damit die Steuerleiste „**dieses löscht**“, wenn der `HWND` zerstört wird.
 
 > [!NOTE]
 >  Wenn Sie Ihre eigenen erstellen `CControlBar`-Klasse abgeleitet, anstatt mit einer der MFC Klassen, z. B. abgeleitet `CStatusBar`, `CToolBar`, oder `CDialogBar`, Sie müssen Festlegen der *M_dwStyle* -Datenmember. Dies kann erfolgen in der Überschreibung der `Create`:

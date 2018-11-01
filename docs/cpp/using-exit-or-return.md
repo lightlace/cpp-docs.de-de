@@ -1,28 +1,18 @@
 ---
-title: Beenden oder zurückgeben mit | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwenden von "exit" oder "return"
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - Exit
-dev_langs:
-- C++
 helpviewer_keywords:
 - exit function
 - return keyword [C++], using for program termination
 ms.assetid: b5136c5c-2505-4229-8691-2a1d6a98760b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4ce62f17008bf4a1ba805db40583e6c63b69a302
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d60084c0d07d3eeb3f49a1fea53de04d150a701b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059979"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50442740"
 ---
 # <a name="using-exit-or-return"></a>Verwenden von "exit" oder "return"
 
@@ -68,7 +58,7 @@ int main() {
 
 Im vorherigen Beispiel werden die statischen Objekte `sd1` und `sd2` vor der Eingabe in `main` erstellt und initialisiert. Nachdem das Programm beendet mit der **zurückgeben** -Anweisung, die erste `sd2` zerstört wird und dann `sd1`. Der Destruktor für die Klasse `ShowData` schließt die Dateien, die diesen statischen Objekten zugeordnet sind.
 
-Eine andere Möglichkeit zum Schreiben des Codes besteht darin, die `ShowData`-Objekte mit dem Blockbereich zu deklarieren, sodass sie gelöscht werden, wenn sie den Gültigkeitsbereich verlassen:
+Eine andere Möglichkeit zum Schreiben des Codes besteht darin, die `ShowData`-Objekte mit dem Blockbereich zu deklarieren, sodass sie zerstört werden, wenn sie den Gültigkeitsbereich verlassen:
 
 ```cpp
 int main() {

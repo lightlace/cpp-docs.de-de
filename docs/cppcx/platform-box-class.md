@@ -1,24 +1,16 @@
 ---
-title: 'Platform:: Box-Klasse | Microsoft-Dokumentation'
-ms.custom: ''
+title: Platform::Box-Klasse
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Box
-dev_langs:
-- C++
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 133c8ebabe3e67526086661ab459bb6e96c4e727
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 387fa03caebed599d51292dd1b6d18ad4afd921c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106508"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429068"
 ---
 # <a name="platformbox-class"></a>Platform::Box-Klasse
 
@@ -38,7 +30,7 @@ ref class Box abstract;
 **Namespace:** Platform
 |Member|Beschreibung|
 |------------|-----------------|
-|[Box](#ctor)|Erstellt eine `Box` , die einen Wert vom angegebenen Typ kapseln kann.|
+|[Box](#ctor)|Erstellt eine `Box`, die einen Wert vom angegebenen Typ kapseln kann.|
 |[Operator Box&lt;const T&gt;^](#box-const-t)|Ermöglicht Boxingkonvertierungen von einer `const`-Wertklasse `T` oder `enum`-Klasse `T` in `Box<T>`.|
 |[Operator Box&lt;const volatile T&gt;^](#box-const-volatile-t)|Ermöglicht Boxingkonvertierungen von einer `const volatile`-Wertklasse `T` oder einem `enum`-Typ `T` in `Box<T>`. |
 |[Operator Box&lt;T&gt;^](#box-t)|Ermöglicht Boxingkonvertierungen von einer `T`-Wertklasse in `Box<T>`.|
@@ -56,7 +48,7 @@ Box(T valueArg);
 ### <a name="parameters"></a>Parameter
 
 *valueArg*<br/>
-Der Typ des Werts geschachtelt werden, z. B. `int`, `bool`, `float64`, `DateTime`.
+Der Typ des Werts, für den eine Boxingkonvertierung ausgeführt werden soll – beispielsweise `int`, `bool`, `float64`, `DateTime`.
 
 ## <a name="box-const-t"></a> Box:: Box&lt;const T&gt;^-Operator
 

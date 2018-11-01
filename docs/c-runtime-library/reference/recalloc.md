@@ -1,10 +1,6 @@
 ---
-title: _recalloc | Microsoft-Dokumentation
-ms.custom: ''
+title: _recalloc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _recalloc
 apilocation:
@@ -23,26 +19,20 @@ apitype: DLLExport
 f1_keywords:
 - _recalloc
 - recalloc
-dev_langs:
-- C++
 helpviewer_keywords:
 - _recalloc function
 - recalloc function
 ms.assetid: 1db8305a-3f03-418c-8844-bf9149f63046
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7c4ae06fbd3d10f1014fe1c879b482f30302a4f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3bcc238dcb950a8e30af16efc557e99d933efe92
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409302"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50436516"
 ---
 # <a name="recalloc"></a>_recalloc
 
-Eine Kombination von **Realloc** und **Calloc**. Ordnet ein Array im Speicher neu zu und initialisiert seine Elemente auf 0.
+Eine Kombination von **Realloc** und **"calloc"**. Ordnet ein Array im Speicher neu zu und initialisiert seine Elemente auf 0.
 
 ## <a name="syntax"></a>Syntax
 
@@ -69,21 +59,21 @@ Länge jedes Elements in Bytes.
 
 **_recalloc** gibt eine **"void"** Zeiger auf den neu belegten (und möglicherweise verschobenen) Speicherblock.
 
-Wenn es nicht genügend Arbeitsspeicher verfügbar ist, um den Block auf die vorgegebene Größe auszudehnen, die ursprüngliche Blockgröße ist unverändert, und **NULL** zurückgegeben wird.
+Wenn es nicht genügend Arbeitsspeicher verfügbar ist, um den Block auf die vorgegebene Größe auszudehnen, der ursprüngliche Block unverändert, und **NULL** zurückgegeben wird.
 
-Wenn die angeforderte Größe 0 (null), wird der Block verweist *Memblock* freigegeben wird; der Rückgabewert ist **NULL**, und *Memblock* bleibt bei einem freigegebenen Block verweist.
+Wenn die angeforderte Größe 0 (null), wird der Block verweist *Memblock* wird, freigegeben; der Rückgabewert ist **NULL**, und *Memblock* bleibt verweist auf den freigegebenen Block.
 
-Der Rückgabewert zeigt auf einen Speicherplatz, der für die Speicherung eines beliebigen Objekttyps geeignet ist. Um einen Zeiger auf einem Typ außer **"void"**, verwenden Sie eine Typumwandlung für den Rückgabewert.
+Der Rückgabewert zeigt auf einen Speicherplatz, der für die Speicherung eines beliebigen Objekttyps geeignet ist. Um einen Zeiger auf einem Typ als **"void"**, verwenden Sie eine Typumwandlung für den Rückgabewert.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_recalloc** Funktion ändert die Größe eines belegten Blocks. Die *Memblock* Argument verweist auf den Anfang des Speicherblocks. Wenn *Memblock* ist **NULL**, **_recalloc** verhält sich genauso wie [Calloc](calloc.md) und ordnet einen neuen Block *Anzahl*  *  *Größe* Bytes. Jedes Element wird auf 0 initialisiert. Wenn *Memblock* nicht **NULL**, es muss ein Zeiger von einem vorherigen Aufruf zurückgegebene **Calloc**, ["malloc"](malloc.md), oder [Realloc ](realloc.md).
+Die **_recalloc** -Funktion ändert die Größe eines belegten Speicherblocks. Die *Memblock* -Argument zeigt auf den Anfang des Speicherblocks. Wenn *Memblock* ist **NULL**, **_recalloc** verhält sich genauso wie ["calloc"](calloc.md) und weist einen neuen Block an *Anzahl*  *  *Größe* Bytes. Jedes Element wird auf 0 initialisiert. Wenn *Memblock* nicht **NULL**, wird ein Zeiger von einem vorherigen Aufruf zurückgegebene **"calloc"**, [Malloc](malloc.md), oder [Realloc ](realloc.md).
 
-Da in einem neuen Speicherort des neuen Blocks sein kann, der zurückgegebene Zeiger durch **_recalloc** ist nicht unbedingt der Zeiger übergeben der *Memblock* Argument.
+Da der neue Block an einem neuen Speicherort sein kann, wird der Zeiger von zurückgegebenen **_recalloc** nicht notwendigerweise übergebenen Zeiger über die *Memblock* Argument.
 
-**_recalloc** legt **Errno** auf **ENOMEM** , wenn die speicherbelegung fehlschlägt oder wenn die Größe des Arbeitsspeichers größer ist als **_HEAP_MAXREQ**. Informationen hierzu und über andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**_recalloc** legt **Errno** zu **ENOMEM** , wenn die speicherbelegung fehlschlägt oder gegebenenfalls die Größe des Arbeitsspeichers übersteigt **_HEAP_MAXREQ**. Informationen hierzu und über andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**Recalloc** Aufrufe **Realloc** um die c++ [_set_new_mode](set-new-mode.md) -Funktion zum Festlegen der neue handlermodus. Der neue handlermodus gibt an, ob bei einem Fehler **Realloc** ist, rufen Sie die neue Handlerroutine Isolationstransaktionen gemäß [_set_new_handler](set-new-handler.md). Standardmäßig **Realloc** auf bei einem speicherbelegungsfehler nicht die neue Handlerroutine aufgerufen. Sie können dieses Standardverhalten überschreiben, damit bei **_recalloc** Arbeitsspeicher nicht belegen kann **Realloc** die neue Handlerroutine genauso aufruft wie der **neue** Operator übernimmt, wenn dieser aus demselben Grund fehlschlägt. Um den Standardwert zu überschreiben, rufen Sie
+**Recalloc** Aufrufe **Realloc** um die C++ [_set_new_mode](set-new-mode.md) Funktion, um den neuen handlermodus festzulegen. Der neue handlermodus gibt an, ob bei einem Fehler **Realloc** besteht darin, rufen Sie die neue Handlerroutine mit [_set_new_handler](set-new-handler.md). In der Standardeinstellung **Realloc** Ruft die neue Handlerroutine nicht bei einem Fehler, um Speicher zu belegen. Sie können dieses Standardverhalten überschreiben, damit, wenn **_recalloc** ein Fehler auftritt, bei der speicherbelegung **Realloc** die neue Handlerroutine aufruft, in der gleichen Weise wie die **neue** Operator führt, wenn dieser aus demselben Grund fehlschlägt. Um den Standardwert zu überschreiben, rufen Sie
 
 ```C
 _set_new_mode(1);
@@ -93,11 +83,11 @@ rechtzeitig im Programm auf, oder stellen Sie eine Verknüpfung mit NEWMODE.OBJ 
 
 Wenn die Anwendung mit einer Debugversion der C-Laufzeitbibliotheken verknüpft ist **_recalloc** löst in [_recalloc_dbg](recalloc-dbg.md). Weitere Informationen dazu, wie der Heap während des Debugprozesses verwaltet wird, finden Sie unter [CRT-Debugheap](/visualstudio/debugger/crt-debug-heap-details).
 
-**_recalloc** RuntimeCompatibility `__declspec(noalias)` und `__declspec(restrict)`, was bedeutet, dass die Funktion wird sichergestellt, dass keine globalen Variablen zu ändern, und dass der zurückgegebene Zeiger nicht als Alias ist. Weitere Informationen finden Sie unter [noalias](../../cpp/noalias.md) und [restrict](../../cpp/restrict.md).
+**_recalloc** RuntimeCompatibility `__declspec(noalias)` und `__declspec(restrict)`, was bedeutet, dass die Funktion nicht, so ändern Sie globale Variablen definitiv, und dass der zurückgegebene Zeiger keinen Alias hat. Weitere Informationen finden Sie unter [noalias](../../cpp/noalias.md) und [restrict](../../cpp/restrict.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_recalloc**|\<stdlib.h> und \<malloc.h>|
 
