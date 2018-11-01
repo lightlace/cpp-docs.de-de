@@ -1,28 +1,18 @@
 ---
-title: TOOLTIPTEXT-Struktur | Microsoft-Dokumentation
-ms.custom: ''
+title: TOOLTIPTEXT-Struktur
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - TOOLTIPTEXT
-dev_langs:
-- C++
 helpviewer_keywords:
 - TOOLTIPTEXT structure [MFC]
 - tool tips [MFC], notifications
 ms.assetid: 547591bf-80f5-400e-a2a7-0708cfffbb5d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eeee8c7b0b3cd4977688b627cb27f73e39c7ea89
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d184b1d507579309051cd6c70ea6525463c44881
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437091"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676511"
 ---
 # <a name="tooltiptext-structure"></a>TOOLTIPTEXT-Struktur
 
@@ -40,7 +30,7 @@ typedef struct {
 } TOOLTIPTEXT, FAR *LPTOOLTIPTEXT;
 ```
 
-*HDR*<br/>
+*hdr*<br/>
 Identifiziert das Tool, das Text benötigt. Das einzige Mitglied dieser Struktur, die Sie möglicherweise ist das Steuerelement die Befehls-ID Befehls-ID des Steuerelements befinden sich in der *IdFrom* Mitglied der **NMHDR** Struktur, die mit der Syntax zugegriffen `hdr.idFrom`. Finden Sie unter [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) eine Erläuterung der Mitglieder der **NMHDR** Struktur.
 
 *lpszText*<br/>

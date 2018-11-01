@@ -1,36 +1,27 @@
 ---
-title: Compilerfehler Fehler C3615 | Microsoft Docs
+title: Compilerfehler C3615
 ms.date: 10/24/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3615
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3615
 ms.assetid: 5ce96ba9-3d31-49f3-9aa8-24e5cdf6dcfc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ce1ab43f8e15535614cedf43dba42fef882bf87a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e966295b5ab63350828ddb73d6791a9e30bb5c59
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253393"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50652217"
 ---
-# <a name="compiler-error-c3615"></a>Compilerfehler Fehler C3615
+# <a name="compiler-error-c3615"></a>Compilerfehler C3615
 
-> Constexpr-Funktion "*Funktion*" kann nicht in einem konstanten Ausdruck führen
+> Constexpr-Funktion "*Funktion*' kann nicht in einem konstanten Ausdruck ergeben
 
-Die Funktion *Funktion* konnte nicht ausgewertet werden, als `constexpr` zum Zeitpunkt der Kompilierung. Werden `constexpr`, eine Funktion aufrufen kann nur andere `constexpr` Funktionen.
+Die Funktion *Funktion* konnte nicht ausgewertet werden, als `constexpr` zum Zeitpunkt der Kompilierung. Sollen `constexpr`, eine Funktion aufrufen kann nur andere `constexpr` Funktionen.
 
 ## <a name="example"></a>Beispiel
 
-Visual Studio-2017 ordnungsgemäß löst einen Fehler aus, wenn der linke Operand einen bedingten Auswertung Vorgang ungültig ist eine `constexpr` Kontext. Der folgende Code kompiliert wird, in Visual Studio 2015, aber nicht im Visual Studio-2017.
+Visual Studio 2017 löst ordnungsgemäß einen Fehler, wenn der linke Operand eines bedingten auswertungsvorgangs in ungültig ist eine `constexpr` Kontext. Der folgende Code kompiliert in Visual Studio 2015, aber nicht in Visual Studio 2017.
 
 ```cpp
 // C3615.cpp
@@ -48,4 +39,4 @@ constexpr bool f(const myarray<1> &arr)
 }
 ```
 
-Um dieses Problem zu beheben, deklarieren Sie entweder die `array::size()` Funktion wie `constexpr` oder Entfernen der `constexpr` aus `f`.
+Um dieses Problem zu beheben, deklarieren die `array::size()` fungieren als `constexpr` oder entfernen Sie die `constexpr` aus `f`.

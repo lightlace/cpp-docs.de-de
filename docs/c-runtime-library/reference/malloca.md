@@ -1,10 +1,6 @@
 ---
-title: _malloca | Microsoft-Dokumentation
-ms.custom: ''
+title: _malloca
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _malloca
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - malloca
 - _malloca
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory allocation, stack
 - malloca function
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3c6f6b731bce5667ca992e7181518bf0a9eb2b87
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c8ce8bdf8ab40cae45ecec9c4b182bdf3d6bc82
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403286"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563981"
 ---
 # <a name="malloca"></a>_malloca
 
@@ -59,32 +49,32 @@ Bytes, die vom Stapel zugeordnet werden.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **_malloca** routinemäßige gibt eine **"void"** Zeiger auf den zugeordneten Speicherplatz an, die garantiert für die Speicherung eines beliebigen Objekttyps geeignet ist. Wenn *Größe* ist 0, **_malloca** weist ein Element mit der Länge Null und gibt einen gültigen Zeiger auf dieses Element zurück.
+Die **_malloca** -Routine gibt einen **"void"** Zeiger auf den zugewiesenen Speicherplatz, der für die Speicherung eines beliebigen Objekttyps geeignet. Wenn *Größe* ist 0 (null) **_malloca** weist ein Element der Länge 0 (null) und gibt einen gültigen Zeiger auf dieses Element zurück.
 
 Eine Stapelüberlaufausnahme wird generiert, wenn der Speicherplatz nicht zugeordnet werden kann. Die Stapelüberlaufausnahme ist keine C++-Ausnahme, sondern eine strukturierte Ausnahme. Sie müssen anstelle der C++-Ausnahmebehandlung die [Strukturierte Ausnahmebehandlung](../../cpp/structured-exception-handling-c-cpp.md) (Structured Exception Handling, SEH) verwenden.
 
 ## <a name="remarks"></a>Hinweise
 
-**_malloca** ordnet *Größe* Bytes aus der Programmstapel oder dem Heap, wenn die Anforderung eine bestimmte Größe in Bytes, die durch überschreitet **_ALLOCA_S_THRESHOLD**. Der Unterschied zwischen **_malloca** und **_alloca** handelt, **_alloca** weist immer auf dem Stapel, unabhängig von der Größe. Im Gegensatz zu **_alloca**, die nicht erfordern oder einen Aufruf von zulassen **freien** , die so zugeordneten, Arbeitsspeicher freizugeben **_malloca** erfordert die Verwendung eines [_freea](freea.md)um Arbeitsspeicher freizugeben. Im Debugmodus befindet **_malloca** immer aus dem Heap reserviert Speicher.
+**_malloca** ordnet *Größe* Bytes aus dem Programmstapel oder dem Heap, wenn die Anforderung eine bestimmte Größe in Bytes, die vom überschreitet **_ALLOCA_S_THRESHOLD**. Der Unterschied zwischen **_malloca** und **_alloca** ist, die **_alloca** immer auf dem Stapel, unabhängig von der Größe zuordnet. Im Gegensatz zu **_alloca**, die nicht erfordern oder einen Aufruf von zulassen **kostenlose** um den zugeordneten, Arbeitsspeicher freizugeben **_malloca** erfordert die Verwendung von [_freea](freea.md)um Arbeitsspeicher freizugeben. Im Debugmodus befindet **_malloca** weist immer Speicher vom Heap.
 
-Es gibt Einschränkungen expliziten Aufruf **_malloca** in einem Ausnahmehandler (EH). EH-Routinen, die auf x86-Klasse-Prozessoren ausgeführt werden, arbeiten in ihrem eigenen Speicherrahmen: Sie führen Ihre Tasks im Speicherplatz aus, der nicht auf der aktuellen Position des Stapelzeigers der einschließenden Funktion basiert. Die am häufigsten verwendeten Implementierungen umfassen die strukturierte Windows NT-Ausnahmebehandlung (SEH) und C++-Catch-Klauselausdrücke. Aus diesem Grund expliziten Aufruf von **_malloca** in einem der folgenden Szenarien führt bei der Rückgabe an die aufrufende Routine der EH-Programmfehler:
+Es gibt Einschränkungen beim expliziten Aufruf **_malloca** in einem Ausnahmehandler (EH). EH-Routinen, die auf x86-Klasse-Prozessoren ausgeführt werden, arbeiten in ihrem eigenen Speicherrahmen: Sie führen Ihre Tasks im Speicherplatz aus, der nicht auf der aktuellen Position des Stapelzeigers der einschließenden Funktion basiert. Die am häufigsten verwendeten Implementierungen umfassen die strukturierte Windows NT-Ausnahmebehandlung (SEH) und C++-Catch-Klauselausdrücke. Aus diesem Grund explizit aufrufen **_malloca** in einem der folgenden Szenarien Ergebnisse in einem Programmfehler während an die aufrufende EH-Routine zurückgegeben:
 
 - Windows NT-SEH-Ausnahme-Filterausdruck: **__except** (`_malloca ()` )
 
-- Windows NT-SEH endgültigen Ausnahmehandler: **__finally** {`_malloca ()` }
+- Endgültige Ausnahmehandler von Windows NT-SEH: **__finally** {`_malloca ()` }
 
 - C++-EH-Catch-Klauselausdruck
 
-Allerdings **_malloca** können direkt aufgerufen werden innerhalb einer EH-Routine oder von einer Anwendung bereitgestellten Rückruf, der aufgerufen wird durch einen der zuvor aufgeführten EH-Szenarien.
+Allerdings **_malloca** können direkt aufgerufen werden innerhalb einer EH-Routine oder von einer Anwendung bereitgestellten Rückruf, der aufgerufen wird, ruft einer der zuvor aufgeführten EH-Szenarios.
 
 > [!IMPORTANT]
-> Unter Windows XP: Wenn **_malloca** wird aufgerufen, in einem Try/Catch-Block, rufen Sie [_resetstkoflw](resetstkoflw.md) im Catch-Block.
+> In Windows XP Wenn **_malloca** wird aufgerufen, Sie müssen in einem Try/Catch-Block Aufrufen [_resetstkoflw](resetstkoflw.md) im Catch-Block.
 
-Zusätzlich zu den oben genannten Einschränkungen bei Verwendung der [/CLR (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md) Option **_malloca** kann nicht verwendet werden, **__except** blockiert. Weitere Informationen finden Sie unter [/clr Restrictions](../../build/reference/clr-restrictions.md).
+Zusätzlich zu den oben genannten Einschränkungen kann bei Verwendung der [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) Option **_malloca** kann nicht verwendet werden, **__except** Blöcke. Weitere Informationen finden Sie unter [/clr Restrictions](../../build/reference/clr-restrictions.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_malloca**|\<malloc.h>|
 

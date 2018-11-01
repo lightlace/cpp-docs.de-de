@@ -1,27 +1,17 @@
 ---
-title: Linkertoolfehler Lnk1313 | Microsoft Docs
-ms.custom: ''
+title: Linkertoolfehler LNK1313
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK1313
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK1313
 ms.assetid: 5df0b72e-bb3f-428c-8d84-6084238f9827
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d6a896c8ba012c69755c5292475b2d155ad92066
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 380df2bff305acc47e423d69ea702d77c4eafdfd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705087"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50604229"
 ---
 # <a name="linker-tools-error-lnk1313"></a>Linkertoolfehler LNK1313
 
@@ -29,9 +19,9 @@ ms.locfileid: "34705087"
 
 ## <a name="remarks"></a>Hinweise
 
-Die aktuelle Version von Visual C++ unterstützt nicht das Verknüpfen von systemeigenen oder gemischten verwalteten/systemeigenen .obj-Dateien mit OBJ-Dateien kompiliert mit **/CLR: pure**.
+Die aktuelle Version von Visual C++ unterstützt nicht das Verknüpfen von systemeigenen oder gemischten verwalteten/systemeigenen .obj-Dateien mit .objdateien mit kompiliert **/CLR: pure**.
 
-Die **/CLR: pure** -Compileroption in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt wird.
+Die **/CLR: pure** Compileroption ist in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt.
 
 ## <a name="example"></a>Beispiel
 

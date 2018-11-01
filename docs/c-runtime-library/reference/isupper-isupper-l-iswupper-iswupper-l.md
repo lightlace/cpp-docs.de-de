@@ -1,10 +1,6 @@
 ---
-title: isupper, _isupper_l, iswupper, _iswupper_l | Microsoft-Dokumentation
-ms.custom: ''
+title: isupper, _isupper_l, iswupper, _iswupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - isupper
 - iswupper
@@ -27,8 +23,6 @@ f1_keywords:
 - isupper
 - _istupper
 - iswupper
-dev_langs:
-- C++
 helpviewer_keywords:
 - istupper function
 - iswupper function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _iswupper_l function
 - isupper function
 ms.assetid: da2bcc9f-241c-48c0-9a0e-ad273827e16a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1d58fc8e10fbc533787fe0e7b99194e282bb906f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 498644fc2de8a687e2b9b63a88591385055db6c8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402100"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588434"
 ---
 # <a name="isupper-isupperl-iswupper-iswupperl"></a>isupper, _isupper_l, iswupper, _iswupper_l
 
@@ -83,11 +73,11 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Routinen gibt ungleich NULL, wenn *c* eine bestimmte Darstellung eines Großbuchstabens ist. **IsUpper** gibt einen Wert ungleich NULL zurück, wenn *c* ein Großbuchstabe (A bis Z) ist. **Iswupper** gibt einen Wert ungleich NULL zurück, wenn *c* ein Breitzeichen, das einem Großbuchstaben entspricht, oder wenn *c* ist ein von der Implementierung definierten breitzeichensatz für den **Iswcntrl**, **Iswdigit**, **Iswpunct**, oder **Iswspace** ungleich NULL ist. Jede dieser Routinen gibt 0 zurück, wenn *c* die testbedingung nicht erfüllt.
+Jede dieser Routinen gibt ungleich NULL, wenn *c* eine bestimmte Darstellung eines Großbuchstabens ist. **IsUpper** gibt einen Wert ungleich NULL zurück, wenn *c* ein Großbuchstabe (A - Z) ist. **Iswupper** gibt einen Wert ungleich NULL zurück, wenn *c* ein Breitzeichen ist, das einem Großbuchstaben entspricht, oder wenn *c* ist ein von der Implementierung definierten der Breitzeichen, für den **Iswcntrl**, **Iswdigit**, **Iswpunct**, oder **Iswspace** ungleich NULL ist. Jede dieser Routinen gibt 0 zurück, wenn *c* die testbedingung nicht erfüllt.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix verwenden das das übergebene Gebietsschema anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die Versionen dieser Funktionen, die **_l** -Suffix verwenden das das übergebene Gebietsschema anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängige Verhalten. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Das Verhalten des **Isupper** und **_isupper_l** ist undefiniert, wenn *c* nicht EOF ist oder im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und *c* ist keine dieser Werte, lösen die Funktionen eine Assertion.
+Das Verhalten der **Isupper** und **_isupper_l** ist undefiniert, wenn *c* nicht EOF-Markierung ist oder im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und *c* ist keine dieser Werte, lösen die Funktionen eine Assertion.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -98,7 +88,7 @@ Das Verhalten des **Isupper** und **_isupper_l** ist undefiniert, wenn *c* nicht
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**isupper**|\<ctype.h>|
 |**_isupper_l**|\<ctype.h>|

@@ -1,10 +1,6 @@
 ---
-title: _cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cwprintf_s_l
 - _cprintf_s_l
@@ -33,8 +29,6 @@ f1_keywords:
 - cprintf_s
 - _cwprintf_s
 - tcprintf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcprintf_s_l function
 - _cprintf_s_l function
@@ -49,16 +43,12 @@ helpviewer_keywords:
 - cprintf_s_l function
 - cwprintf_s_l function
 ms.assetid: c28504fe-0d20-4f06-8f97-ee33225922ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a2d8a2f5f80b00eef47d09a8d505f31a42a0fab2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3652587c9622c2eb9fe316782d1b1c7c9644dc8f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401343"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50606518"
 ---
 # <a name="cprintfs-cprintfsl-cwprintfs-cwprintfsl"></a>_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l
 
@@ -107,16 +97,16 @@ Die Anzahl der zu gedruckten Zeichen.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktionen formatieren und drucken Sie eine Reihe von Zeichen und Werte direkt in der Konsole mit der **_putch** Funktion (**_putwch** für **_cwprintf_s**) in die Ausgabe Zeichen. Jede *Argument* (sofern vorhanden) konvertiert und ausgegeben wird, entsprechend der jeweiligen Formatangabe in *Format*. Das Format hat dieselbe form und Funktion wie die *Format* -Parameter für die [Printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) Funktion. Im Gegensatz zu den **Fprintf_s**, **Printf_s**, und **Sprintf_s** -Funktionen übersetzen weder **_cprintf_s** noch **_cwprintf_s** übersetzt Zeilenvorschubzeichen in Carriage Return-Zeilenvorschub (CR-LF) Kombinationen bei der Ausgabe.
+Diese Funktionen formatieren und drucken Sie eine Reihe von Zeichen und Werten, die direkt an die Konsole, mit der **_putch** Funktion (**_putwch** für **_cwprintf_s**) Ausgabe Zeichen. Jede *Argument* (sofern vorhanden) konvertiert und ausgegeben wird, entsprechend der jeweiligen Formatangabe in *Format*. Das Format hat dieselbe form und Funktion wie der *Format* -Parameter für die [Printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) Funktion. Im Gegensatz zu den **Fprintf_s**, **Printf_s**, und **Sprintf_s** funktioniert, weder **_cprintf_s** noch **_cwprintf_s** übersetzt Zeilenvorschubzeichen in Carriage Return-Zeilenvorschub (CR-LF) Kombinationen bei der Ausgabe.
 
-Ein wichtiger Unterschied ist, die **_cwprintf_s** zeigt bei der Verwendung in Windows NT Unicode-Zeichen. Im Gegensatz zu **_cprintf_s**, **_cwprintf_s** verwendet das aktuelle Gebietsschema für die Konsole
+Ein wichtiger Unterschied ist, die **_cwprintf_s** bei der Verwendung in Windows NT Unicode-Zeichen anzeigt. Im Gegensatz zu **_cprintf_s**, **_cwprintf_s** verwendet das aktuelle Gebietsschema für die Konsole
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschemaparameter anstelle des aktuellen Gebietsschemas übergeben.
+Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den Locale-Parameter übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas verwenden.
 
 > [!IMPORTANT]
 > Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist.
 
-Wie Sie die nicht sicheren Versionen (finden Sie unter [_cprintf _cprintf_l, _cwprintf _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)), diese Funktionen überprüfen ihre Parameter und den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md), wenn *Format* ist ein null-Zeiger. Diese Funktionen unterscheiden sich von den nicht sicheren Versionen darin, dass auch die Formatzeichenfolge selbst überprüft wird. Gibt es unbekannte oder ungültige Formatbezeichner, rufen diese Funktionen den Handler für ungültige Parameter auf. In allen Fällen, wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktionen – 1 zurück und legen Sie **Errno** auf **EINVAL**.
+Wie bei den nicht sicheren Versionen (finden Sie unter [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)), diese Funktionen überprüfen ihre Parameter und der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md), wenn *Format* ist ein null-Zeiger. Diese Funktionen unterscheiden sich von den nicht sicheren Versionen darin, dass auch die Formatzeichenfolge selbst überprüft wird. Gibt es unbekannte oder ungültige Formatbezeichner, rufen diese Funktionen den Handler für ungültige Parameter auf. In allen Fällen, wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -127,7 +117,7 @@ Wie Sie die nicht sicheren Versionen (finden Sie unter [_cprintf _cprintf_l, _cw
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_cprintf_s**, **_cprintf_s_l**|\<conio.h>|
 |**_cwprintf_s**, **_cwprintf_s_l**|\<conio.h>|

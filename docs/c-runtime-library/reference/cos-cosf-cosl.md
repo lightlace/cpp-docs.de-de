@@ -1,10 +1,6 @@
 ---
-title: COs, Cosf, Cosl | Microsoft Docs
-ms.custom: ''
+title: COs, Cosf, cosl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cos
 - cosf
@@ -26,8 +22,6 @@ f1_keywords:
 - cos
 - cosf
 - cosl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cosines
 - cosl function
@@ -37,20 +31,16 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a49f8489d084b1f67bc46432970114350c56f09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b050fd98a35028b121def8b665fce62ad58ec437
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395447"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519894"
 ---
 # <a name="cos-cosf-cosl"></a>COs, Cosf, cosl
 
-Berechnet den Kosinus an.
+Berechnet den Kosinus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -72,11 +62,11 @@ Winkel im Bogenmaß.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Kosinus von *x*. Wenn *x* ist größer als oder gleich 263 oder kleiner als oder gleich-263 einer im Ergebnis kommt.
+Der Kosinus von *x*. Wenn *x* ist größer als oder gleich 263 oder kleiner als oder gleich-263, tritt ein Genauigkeitsverlust in das Ergebnis.
 
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
 |-----------|-------------------|-----------------------|
-|± QNAN, SUCH-|Keine|**_DOMAIN**|
+|± QNAN, SUCHEN|Keine|**_DOMAIN**|
 |± INF|**UNGÜLTIG**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Hinweise
@@ -85,7 +75,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **cos** v
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher C-Header|Erforderlicher C++-Header|
+|-Routine zurückgegebener Wert|Erforderlicher C-Header|Erforderlicher C++-Header|
 |-------------|---------------------|-|
 |**COs**, **Cosh**, **Cosf**|\<math.h>|\<cmath> oder \<math.h>|
 

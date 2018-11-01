@@ -1,10 +1,6 @@
 ---
-title: _RTC_SetErrorType | Microsoft-Dokumentation
-ms.custom: ''
+title: _RTC_SetErrorType
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _RTC_SetErrorType
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - RTC_SetErrorType
 - _RTC_SetErrorType
-dev_langs:
-- C++
 helpviewer_keywords:
 - run-time errors
 - RTC_SetErrorType function
 - _RTC_SetErrorType function
 ms.assetid: f5f99be7-d357-4b11-b8f5-ddd3428f2b06
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83395727b37ea3901e2e3c28d7adb6663f043d12
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 022079bd199477c8bca92e853ed66879c96428db
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406614"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50635671"
 ---
 # <a name="rtcseterrortype"></a>_RTC_SetErrorType
 
@@ -59,7 +49,7 @@ int _RTC_SetErrorType(
 Eine Zahl zwischen null und eins und kleiner als der von [_RTC_NumErrors](rtc-numerrors.md) zurückgegebene Wert.
 
 *ErrType*<br/>
-Ein Wert, der dieser *errnum*zugewiesen werden soll. Sie können beispielsweise **_CRT_ERROR**verwenden. Bei Verwendung von **_CrtDbgReport** als Fehlerhandler verwenden, *ErrType* kann nur eine der in definierten Symbole [_CrtSetReportMode](crtsetreportmode.md). Wenn Sie Ihren eigenen Fehlerhandler ([_RTC_SetErrorFunc](rtc-seterrorfunc.md)) verwenden, können Sie so viele *ErrType*s definieren, wie es *errnum*s gibt.
+Ein Wert, der dieser *errnum*zugewiesen werden soll. Sie können beispielsweise **_CRT_ERROR**verwenden. Bei Verwendung von **_CrtDbgReport** als Fehlerhandler verwenden, *ErrType* kann nur eine der in definierten Symbole [_CrtSetReportMode](crtsetreportmode.md). Wenn Sie einen eigenen Fehlerhandler ([_RTC_SetErrorFunc](rtc-seterrorfunc.md)) verwenden, können Sie so viele *ErrType*s definieren, wie es *errnum*s gibt.
 
 Ein *ErrType* von _RTC_ERRTYPE_IGNORE hat für eine besondere Bedeutung **_CrtSetReportMode**; der Fehler wird ignoriert.
 
@@ -75,7 +65,7 @@ Bevor Sie diese Funktion aufrufen können, müssen Sie zuerst eine der Initialis
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_RTC_SetErrorType**|\<rtcapi.h>|
 
