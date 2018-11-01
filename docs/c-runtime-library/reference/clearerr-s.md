@@ -1,10 +1,6 @@
 ---
-title: clearerr_s | Microsoft-Dokumentation
-ms.custom: ''
+title: clearerr_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - clearerr_s
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - clearerr_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - error indicator for streams
 - resetting stream error indicator
 - clearerr_s function
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 34feccd2d4d6de53ed9c5a446bf6c7d065dd4e62
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 140d984c470bd505f347aa43065b033339ed38a1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450865"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665022"
 ---
 # <a name="clearerrs"></a>clearerr_s
 
@@ -63,13 +53,13 @@ NULL, wenn erfolgreich; **EINVAL** Wenn *Stream* ist **NULL**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Clearerr_s** Funktion setzt den Fehlerindikator und Dateiende-Indikator für *Stream*. Fehlerindikatoren werden nicht automatisch gelöscht; nach des Fehlerindikators für einen angegebenen Stream festlegen weiterhin Vorgänge für diesen Datenstrom zurückgeben ein fehlerhaften Werts bis **Clearerr_s**, **Clearerr**, [Fseek](fseek-fseeki64.md), **Fsetpos**, oder [zurückspulen](rewind.md) aufgerufen wird.
+Die **Clearerr_s** Funktion setzt den Fehlerindikator und den Dateiende-Indikator für *Stream*. Fehlerindikatoren werden nicht automatisch gelöscht; Sobald der Fehlerindikator für einen bestimmten Stream festgelegt wurde, Operationen in diesem Stream weiterhin einen Fehlerwert bis zurück **Clearerr_s**, **Clearerr**, [Fseek](fseek-fseeki64.md), **Fsetpos**, oder [rewind](rewind.md) aufgerufen wird.
 
-Wenn *Stream* ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** auf **EINVAL** und gibt **EINVAL**.
+Wenn *Stream* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** zu **EINVAL** und gibt **EINVAL**.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**clearerr_s**|\<stdio.h>|
 

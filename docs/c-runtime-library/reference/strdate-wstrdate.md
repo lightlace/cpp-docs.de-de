@@ -1,10 +1,6 @@
 ---
-title: _strdate, _wstrdate | Microsoft-Dokumentation
-ms.custom: ''
+title: _strdate, _wstrdate
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdate
 - _wstrdate
@@ -27,8 +23,6 @@ f1_keywords:
 - _wstrdate
 - _strdate
 - strdate
-dev_langs:
-- C++
 helpviewer_keywords:
 - strdate function
 - dates, copying
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8924ac1ad29408dd1d69a68c6f31d9194831fbc2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4dc2ea7f25e644c9bf7a4ddca4a625991f37d912
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411356"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639610"
 ---
 # <a name="strdate-wstrdate"></a>_strdate, _wstrdate
 
@@ -86,11 +76,11 @@ Jede dieser Funktionen gibt einen Zeiger auf die resultierende Zeichenfolge *Dat
 
 Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md). Es wird empfohlen, nach Möglichkeit die sichereren Funktionen zu verwenden.
 
-Die **_strdate** Funktion kopiert das aktuelle Systemdatum in den Puffer verweist *Datestr*, im Format **mm**/**Dd** / **Yy**, wobei **mm** sich um zwei Ziffern, die den Monat darstellt **Dd** sich um zwei Ziffern, die den Tag darstellt und **JJ**  ist die letzten zwei Ziffern des Jahres. Z. B. die Zeichenfolge **12/05/99** 5. Dezember 1999 darstellt. Der Puffer muss mindestens 9 Bytes lang sein.
+Die **_strdate** Funktion kopiert das aktuelle Datum in den Puffer, der auf *Datestr*, im Format **mm**/**TT** / **Yy**, wobei **mm** zwei Ziffern für den Monat **TT** zwei Ziffern für den Tag und **JJ**  ist die letzten zwei Ziffern des Jahres. Z. B. die Zeichenfolge **12/05/99** 5. Dezember 1999 darstellt. Der Puffer muss mindestens 9 Bytes lang sein.
 
-Wenn *Datestr* ist ein **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen – 1 zurück und legen Sie **Errno** auf **EINVAL**.
+Wenn *Datestr* ist eine **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**.
 
-**_wstrdate** ist eine Breitzeichen-Version von **_strdate**; der Wert Argument- und Rückgabetypen der **_wstrdate** sind Zeichenfolgen mit Breitzeichen. Anderenfalls verhalten sich diese Funktionen identisch.
+**_wstrdate** ist eine Breitzeichen-Version von **_strdate**; der Wert Argument- und Rückgabetypen der **_wstrdate** sind Breitzeichen Zeichenfolgen. Anderenfalls verhalten sich diese Funktionen identisch.
 
 In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -102,7 +92,7 @@ In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sich
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_strdate**|\<time.h>|
 |**_wstrdate**|\<time.h> oder \<wchar.h>|

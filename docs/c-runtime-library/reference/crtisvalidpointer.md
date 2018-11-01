@@ -1,10 +1,6 @@
 ---
-title: _CrtIsValidPointer | Microsoft-Dokumentation
-ms.custom: ''
+title: _CrtIsValidPointer
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtIsValidPointer
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtlsValidPointer
 - _CrtIsValidPointer
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtIsValidPointer function
 - _CrtIsValidPointer function
 ms.assetid: 91c35590-ea5e-450f-a15d-ad8d62ade1fa
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1bb78f8dee494fd213df6db16e2800cb9090bdf3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 64197d460cdb7dd26d22196c08151be09df48573
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397267"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429246"
 ---
 # <a name="crtisvalidpointer"></a>_CrtIsValidPointer
 
@@ -70,7 +60,7 @@ Für den Speicherbereich zu bestimmende Lese/Schreib-Barrierefreiheit.
 
 ## <a name="remarks"></a>Hinweise
 
-Beginnend mit der CRT-Bibliothek in Visual Studio 2010 die *Größe* und *Zugriff* Parameter werden ignoriert, und **_CrtIsValidPointer** stellt sicher, dass nur die angegebenen *Adresse* ist ungleich null. Da sich dieser Test leicht manuell ausführen lässt, wird nicht empfohlen, diese Funktion zu verwenden. In Versionen vor Visual Studio 2010, die Funktion stellt sicher, dass der Speicherbereich, wobei am *Adresse* und die Erweiterung für *Größe* Bytes für die angegebenen barrierefreiheitsvorgänge gültig ist. Wenn *Zugriff* ist auf "true" festgelegt, wird der Speicherbereich zum Lesen und Schreiben von überprüft. Wenn *Zugriff* "false", wird der Speicherbereich nur für Lesevorgänge überprüft wird. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von **_CrtIsValidPointer** während der vorverarbeitung entfernt.
+Beginnend mit der CRT-Bibliothek in Visual Studio 2010 die *Größe* und *Zugriff* Parameter werden ignoriert, und **_CrtIsValidPointer** nur überprüft, ob der angegebene *Adresse* nicht null ist. Da sich dieser Test leicht manuell ausführen lässt, wird nicht empfohlen, diese Funktion zu verwenden. In Versionen bis Visual Studio 2010 wird die Funktion überprüft, ob der Speicherbereich, beginnend bei *Adresse* und für die Erweiterung von *Größe* Bytes für die angegebenen barrierefreiheitsvorgänge gültig ist. Wenn *Zugriff* ist auf "true" festgelegt, wird der Speicherbereich für Lese- und Schreibvorgänge überprüft. Wenn *Zugriff* ist "false", der Speicherbereich nur für Lesevorgänge überprüft wird. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von **_CrtIsValidPointer** werden während der vorverarbeitung entfernt.
 
 Da diese Funktion TRUE oder FALSE zurückgibt, kann sie an eine der [_ASSERT](assert-asserte-assert-expr-macros.md)-Makros übergeben werden, um einen einfachen Debug-Fehlerbehandlungsmechanismus zu erstellen. Im folgenden Beispiel wird eine Assertionsmeldung ausgelöst, wenn der Speicherbereich für Lese- und Schreibvorgänge ungültig ist:
 
@@ -82,7 +72,7 @@ Weitere Informationen dazu, wie **_CrtIsValidPointer** kann mit anderen Debugfun
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_CrtIsValidPointer**|\<crtdbg.h>|
 

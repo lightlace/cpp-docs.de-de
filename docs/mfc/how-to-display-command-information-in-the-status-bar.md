@@ -1,28 +1,18 @@
 ---
-title: 'Vorgehensweise: Anzeigen von Befehlsinformationen in der Statusleiste | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Gewusst wie: Anzeigen von Befehlsinformationen in der Statusleiste'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - prompts [MFC]
 - displaying command status [MFC]
 - status bars [MFC], message area
 - status bars [MFC], displaying command information
 ms.assetid: de895cbe-61ee-46bf-9787-76b247527d6d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 089e0fd8f1853a4e219309c0df7659f90e4f4b3d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6da45edf611d70920340d8f9a9c2fd8de5cc0307
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405748"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50654102"
 ---
 # <a name="how-to-display-command-information-in-the-status-bar"></a>Gewusst wie: Anzeigen von Befehlsinformationen in der Statusleiste
 

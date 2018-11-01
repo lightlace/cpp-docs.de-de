@@ -1,11 +1,6 @@
 ---
-title: csqrt, csqrtf, csqrtl | Microsoft-Dokumentation
-ms.custom: ''
+title: csqrt, csqrtf, csqrtl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - csqrt
 - csqrtf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/csqrt
 - complex/csqrtf
 - complex/csqrtl
-dev_langs:
-- C++
 helpviewer_keywords:
 - csqrt function
 - csqrtf function
 - csqrtl function
 ms.assetid: b65f086b-0f55-4622-a7a3-4e79d9c9c05c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 143bb55180b3394f8ac32b36f7641503dd346b76
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00fe12d4f9c136278e56ceaf3fa62443092d0ec4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396309"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50449880"
 ---
 # <a name="csqrt-csqrtf-csqrtl"></a>csqrt, csqrtf, csqrtl
 
@@ -83,7 +72,7 @@ Die Quadratwurzel von *z*. Das Ergebnis ist in der rechten Hälftenebene.
 
 |Eingabe|SEH-Ausnahme|**_matherr** Ausnahme|
 |-----------|-------------------|--------------------------|
-|± QNAN, SUCH-|Keine|_DOMAIN|
+|± QNAN, SUCHEN|Keine|_DOMAIN|
 |- ∞|Keine|_DOMAIN|
 
 ## <a name="remarks"></a>Hinweise
@@ -92,7 +81,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Csqrt**
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|C-Header|C++-Header|
+|-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
 |**Csqrt**, **Csqrtf**, **Csqrtl**|\<complex.h>|\<ccomplex>|
 

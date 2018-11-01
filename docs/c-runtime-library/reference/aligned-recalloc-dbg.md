@@ -1,10 +1,6 @@
 ---
-title: _aligned_realloc_dbg | Microsoft-Dokumentation
-ms.custom: ''
+title: _aligned_recalloc_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _aligned_recalloc_dbg
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _aligned_recalloc_dbg
 - aligned_recalloc_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - aligned_recalloc_dbg function
 - _aligned_recalloc_dbg function
 ms.assetid: 55c3c27e-561c-4d6b-9bf9-1e34cc556e4b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a73142a832f98caa673c014bad0a909749af3cd9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85af821aaa873b6e71341823d47085996f697235
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399838"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664697"
 ---
 # <a name="alignedrecallocdbg"></a>_aligned_recalloc_dbg
 
@@ -74,29 +64,29 @@ Der Ausrichtungswert, der eine ganzzahlige Potenz von 2 sein muss.
 Zeiger auf den Namen der Quelldatei, die Belegung angefordert oder **NULL**.
 
 *linenumber*<br/>
-Zeilennummer in der Quelldatei, in die Belegung angefordert wurde, oder **NULL**.
+Zeilennummer in der Quelldatei, in denen Belegung angefordert wurde, oder **NULL**.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_aligned_recalloc_dbg** gibt einen void-Zeiger auf den neu belegten (und möglicherweise verschobenen) Speicherblock zurück. Der Rückgabewert ist **NULL** Wenn die Größe 0 (null beträgt) und das pufferargument nicht **NULL**, oder es ist nicht genügend Arbeitsspeicher verfügbar, um den Block auf die vorgegebene Größe auszudehnen. Im ersten Fall wird der ursprüngliche Block freigegeben. Im zweiten Fall wird der ursprüngliche Block nicht geändert. Der Rückgabewert zeigt auf einen Speicherplatz, der für die Speicherung eines beliebigen Objekttyps geeignet ist. Um einen Zeiger auf einen anderen Typ als den leeren zurückzugeben, verwenden Sie eine Typumwandlung für den Rückgabewert.
+**_aligned_realloc_dbg** gibt einen void-Zeiger auf den neu belegten (und möglicherweise verschobenen) Speicherblock zurück. Der Rückgabewert ist **NULL** Wenn die Größe 0 (null beträgt) und das pufferargument nicht **NULL**, oder wenn nicht genügend Arbeitsspeicher verfügbar, um den Block auf die vorgegebene Größe auszudehnen. Im ersten Fall wird der ursprüngliche Block freigegeben. Im zweiten Fall wird der ursprüngliche Block nicht geändert. Der Rückgabewert zeigt auf einen Speicherplatz, der für die Speicherung eines beliebigen Objekttyps geeignet ist. Um einen Zeiger auf einen anderen Typ als den leeren zurückzugeben, verwenden Sie eine Typumwandlung für den Rückgabewert.
 
 Es ist ein Fehler, wenn ein Speicher neu belegt und die Ausrichtung eines Blocks geändert wird.
 
 ## <a name="remarks"></a>Hinweise
 
-**_aligned_recalloc_dbg** ist eine Debugversion der [_aligned_recalloc](aligned-recalloc.md) Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, bei jedem Aufruf **_aligned_recalloc_dbg** wird zu einem Aufruf von reduziert **_aligned_recalloc**. Beide **_aligned_recalloc** und **_aligned_recalloc_dbg** weisen einen Speicherblock im Basisheap, jedoch **_aligned_recalloc_dbg** hat mehrere Debuggen Funktionen: Puffer auf beiden Seiten des benutzerteils des Blocks zum Prüfen auf Speicherverluste, einen blocktypparameter zum Nachverfolgen von bestimmten belegungstypen und *Filename*/*Linenumber* Informationen zum Ermitteln des Ursprungs von belegungsanforderungen.
+**_aligned_realloc_dbg** ist eine Debugversion von der [_aligned_recalloc](aligned-recalloc.md) Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, jeden Aufruf von **_aligned_recalloc_dbg** wird nach einer Verkleinerung auf einen Aufruf von **_aligned_recalloc**. Beide **_aligned_recalloc** und **_aligned_recalloc_dbg** belegen einen Speicherblock im Basisheap, neu, aber **_aligned_recalloc_dbg** unterstützt mehrere Debuggen Funktionen: Puffer auf beiden Seiten des benutzerteils des Blocks zum Prüfen auf Speicherverluste, einen blocktypparameter zum Nachverfolgen bestimmter belegungstypen und *Filename*/*Linenumber* Informationen zum Ermitteln des Ursprungs von belegungsanforderungen.
 
-**_aligned_recalloc_dbg** ordnet den angegebenen Speicherblock mit etwas mehr Speicherplatz als die angeforderte Größe (*Anzahl* * *Größe*) größer oder kleiner sein als die Größe des ursprünglich belegten Speicherblocks. Der zusätzliche Speicherplatz wird vom Debugheapmanager verwendet, um die Debugspeicherblöck zu verknüpfen und Debugheaderinformationen und Überschreibungspuffer für die Anwendung bereitzustellen. Durch die Neubelegung wird der ursprüngliche Speicherblock möglicherweise an einen anderen Speicherort im Heap verschoben und auch die Größe des Speicherblocks geändert. Der Benutzerteil des Blocks wird mit dem Wert 0xCD gefüllt, und die Überschreibungspuffer werden mit 0xFD gefüllt.
+**_aligned_realloc_dbg** zuordnet den angegebenen Speicherblock mit etwas mehr Speicherplatz als die angeforderte Größe (*Anzahl* * *Größe*) kann der größer oder kleiner sein als die Größe des ursprünglich zugeordneten Speicherblocks. Der zusätzliche Speicherplatz wird vom Debugheapmanager verwendet, um die Debugspeicherblöck zu verknüpfen und Debugheaderinformationen und Überschreibungspuffer für die Anwendung bereitzustellen. Durch die Neubelegung wird der ursprüngliche Speicherblock möglicherweise an einen anderen Speicherort im Heap verschoben und auch die Größe des Speicherblocks geändert. Der Benutzerteil des Blocks wird mit dem Wert 0xCD gefüllt, und die Überschreibungspuffer werden mit 0xFD gefüllt.
 
-**_aligned_recalloc_dbg** legt **Errno** auf **ENOMEM** Wenn eine speicherbelegung fehlschlägt. **EINVAL** wird zurückgegeben, wenn der Speicherplatz (einschließlich der bereits erwähnten Mehraufwands) übersteigt die **_HEAP_MAXREQ**. Informationen hierzu und über andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**_aligned_realloc_dbg** legt **Errno** zu **ENOMEM** , wenn eine speicherbelegung fehlschlägt. **EINVAL** wird zurückgegeben, wenn der Umfang des erforderlichen Arbeitsspeichers (einschließlich der bereits erwähnten Mehraufwands) überschreitet **_HEAP_MAXREQ**. Informationen hierzu und über andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Darüber hinaus **_aligned_recalloc_dbg** überprüft die eigenen Parameter. Wenn *Ausrichtung* ist keine Potenz von 2, ruft diese Funktion den Handler für ungültige Parameter wie beschrieben in [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Diese Funktion gibt zurück, wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **NULL** und legt **Errno** auf **EINVAL**.
+Darüber hinaus **_aligned_recalloc_dbg** überprüft die eigenen Parameter. Wenn *Ausrichtung* ist es sich nicht um eine Potenz von 2 ist, ruft diese Funktion den Handler für ungültige Parameter wie beschrieben in [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Diese Funktion gibt zurück, wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **NULL** und **Errno** zu **EINVAL**.
 
 Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Informationen zu den Belegungsblocktypen und ihrer Verwendung finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details). Weitere Informationen zu den Unterschieden zwischen dem Aufruf einer Standardheapfunktion und ihrer Debugversion in einem Debugbuild einer Anwendung finden Sie unter [Debugversionen von Heapbelegungsfunktionen](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_aligned_recalloc_dbg**|\<crtdbg.h>|
 

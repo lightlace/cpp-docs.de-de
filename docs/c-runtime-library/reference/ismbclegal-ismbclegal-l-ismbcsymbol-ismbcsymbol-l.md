@@ -1,10 +1,6 @@
 ---
-title: _ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbclegal_l
 - _ismbclegal
@@ -32,8 +28,6 @@ f1_keywords:
 - ismbclegal_l
 - ismbcsymbol
 - ismbclegal
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbcsymbol function
 - ismbclegal_l function
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - _ismbcsymbol_l function
 - istlegal_l function
 ms.assetid: 31bf1ea5-b56f-4e28-b21e-b49a2cf93ffc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8d2bd03eb230d85a1f93038d50566b8ccae468a5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 07855ec970b2bf307238982987912f1e91505e96
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402594"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454573"
 ---
 # <a name="ismbclegal-ismbclegall-ismbcsymbol-ismbcsymboll"></a>_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
 
@@ -95,18 +85,18 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Routinen gibt einen Wert ungleich 0 zurück, wenn das Zeichen die Testbedingung erfüllt, bzw. 0, wenn es sie nicht erfüllt. Wenn *c*< = 255, und es wird ein entsprechendes **_ismbb** Routine (z. B. **_ismbcalnum** entspricht **_ismbbalnum**), die Ergebnis ist der Rückgabewert der entsprechenden **_ismbb** Routine.
+Jede dieser Routinen gibt einen Wert ungleich 0 zurück, wenn das Zeichen die Testbedingung erfüllt, bzw. 0, wenn es sie nicht erfüllt. Wenn *c*< = 255 und gibt es eine entsprechende **_ismbb** Routine (z. B. **_ismbcalnum** entspricht **_ismbbalnum**), wird die Ergebnis ist der Rückgabewert der entsprechenden **_ismbb** Routine.
 
 ## <a name="remarks"></a>Hinweise
 
 Jede dieser Funktionen testet ein angegebenes Mehrbytezeichen auf eine angegebene Bedingung.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, außer dass sie das Gebietsschema für den übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie das Gebietsschema für den übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-|Routine|Testbedingung|Beispiel für Codepage 932|
+|-Routine zurückgegebener Wert|Testbedingung|Beispiel für Codepage 932|
 |-------------|--------------------|---------------------------|
-|**_ismbclegal**|Gültiges Multibyte|Gibt einen Wert ungleich NULL und nur, wenn das erste Byte des *c* befindet Bereich 0 x 81-0x9F oder 0xE0 - 0xFC liegt, während das zweite Byte im Bereich 0 x 40-0x7E oder 0 x 80 – FC liegt.|
-|**_ismbcsymbol**|Multibytesymbol|Gibt einen Wert ungleich NULL und nur, wenn 0x8141 < =*c*< = 0x81AC.|
+|**_ismbclegal**|Gültiges Multibyte|Gibt einen Wert ungleich NULL und nur, wenn das erste Byte der *c* unterliegt Bereich 0 x 81-0x9F oder 0xE0 - 0xFC liegt, während das zweite Byte im Bereich 0 x 40-0x7E oder 0 x 80 – FC liegt.|
+|**_ismbcsymbol**|Multibytesymbol|Gibt einen Wert ungleich NULL, und nur bei 0 x 8141 < =*c*< = 0x81ac ist.|
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -117,7 +107,7 @@ Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, a
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_ismbclegal**, **_ismbclegal_l**|\<mbstring.h>|
 |**_ismbcsymbol**, **_ismbcsymbol_l**|\<mbstring.h>|

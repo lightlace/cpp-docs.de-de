@@ -1,25 +1,15 @@
 ---
-title: path-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: path-Klasse
 ms.date: 09/27/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - filesystem/std::experimental::filesystem::path
-dev_langs:
-- C++
 ms.assetid: 8a1227ca-aeb2-4e0e-84aa-86e34e4f4fe8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7674f07c92f8a0c9d8a9070f3f99e00dfde39140
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 486245df3433f552c289786a0b20deb33c8fb6c0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235463"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618217"
 ---
 # <a name="path-class"></a>path-Klasse
 
@@ -61,7 +51,7 @@ class path;
 |[empty](#empty)|Gibt `mypath.empty()`zurück.|
 |[end](#end)|Gibt einen Sequenzende Iterator vom Typ `iterator`.|
 |[Erweiterung](#extension)|Gibt das Suffix des `filename()`.|
-|[filename](#filename)|Gibt die Stammverzeichniskomponente von myname zurück, insbesondere `empty() path() : *--end()`. Die Komponente kann leer sein.|
+|[filename](#filename)|Gibt die Stammverzeichniskomponente von „myname“ zurück, insbesondere `empty() path() : *--end()`. Die Komponente kann leer sein.|
 |[generic_string](#generic_string)|Gibt `this->string<Elem, Traits, Alloc>(al)` zurück, wobei jeder umgekehrte Schrägstrich in einen Schrägstrich konvertiert wird (unter Windows).|
 |[generic_u16string](#generic_u16string)|Gibt `u16string()` zurück, wobei jeder umgekehrte Schrägstrich in einen Schrägstrich konvertiert wird (unter Windows).|
 |[generic_u32string](#generic_u32string)|Gibt `u32string()` zurück, wobei jeder umgekehrte Schrägstrich in einen Schrägstrich konvertiert wird (unter Windows).|
@@ -268,7 +258,7 @@ Andernfalls beginnt das Suffix mit dem rechten Punkt (und umfasst diesen).
 
 ## <a name="filename"></a> Path:: FileName
 
-Gibt die Stammverzeichniskomponente von myname zurück, insbesondere `empty() path() : *--end()`. Die Komponente kann leer sein.
+Gibt die Stammverzeichniskomponente von „myname“ zurück, insbesondere `empty() path() : *--end()`. Die Komponente kann leer sein.
 
 ```cpp
 path filename() const;

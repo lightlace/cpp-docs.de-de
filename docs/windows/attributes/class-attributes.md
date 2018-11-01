@@ -1,26 +1,15 @@
 ---
-title: Attribute (C++-COM-)-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: Klassenattribute (C++-COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - attributes [C++/CLI], class attributes
 ms.assetid: fad04ea1-d8ff-46d4-bb42-2b4500a6ab60
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a727bcf53a11e98ffd7e037037452c6bbdc4fe8a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: bdc689107eb973b9701e3f1fbe37a10aa6ae8d85
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791331"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50448866"
 ---
 # <a name="class-attributes"></a>Klassenattribute
 
@@ -33,9 +22,9 @@ Die folgenden Attribute gelten für die [Klasse](../../cpp/class-cpp.md) C++-Sch
 |[appobject](appobject.md)|Identifiziert die Co-Klasse als ein Anwendungsobjekt, das eine vollständige .exe-Anwendung zugeordnet ist, und gibt an, dass die Funktionen und Eigenschaften der Co-Klasse in diese Typbibliothek global verfügbar sind.|
 |[case](case-cpp.md)|Verwendung der [Switch_type](switch-type.md) Attribut in einer Union.|
 |[coclass](coclass.md)|Erstellt ein ActiveX-Steuerelement.|
-|[COM_INTERFACE_ENTRY](com-interface-entry-cpp.md)|Fügt einen Eintrag für die Schnittstelle eine COM-Zuordnung.|
+|[com_interface_entry](com-interface-entry-cpp.md)|Fügt einen Eintrag für die Schnittstelle eine COM-Zuordnung.|
 |[Steuerelement](control.md)|Gibt an, dass der benutzerdefinierte Typ eines Steuerelements.|
-|[Benutzerdefinierte](custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|
+|[custom](custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|
 |[db_command](db-command.md)|Erstellt einen OLE DB-Befehl.|
 |[db_param](db-param.md)|Ordnet die angegebenen Member-Variable mit einem Eingabe- oder ausgabeadapter-Parameter und Variablen begrenzt.|
 |[db_source](db-source.md)|Erstellt eine Verbindung mit einer Datenquelle.|
@@ -49,16 +38,16 @@ Die folgenden Attribute gelten für die [Klasse](../../cpp/class-cpp.md) C++-Sch
 |[helpstringcontext](helpstringcontext.md)|Gibt die ID des Hilfethemas in eine .hlp oder CHM-Datei an.|
 |[helpstring](helpstring.md)|Gibt eine Zeichenfolge an, die zum Beschreiben des Elements verwendet wird, auf das sie angewendet wird.|
 |[hidden](hidden.md)|Gibt an, dass das Element vorhanden ist, aber nicht in einem benutzerorientierten Browser angezeigt werden soll.|
-|[Implementiert](implements-cpp.md)|Gibt die Dispatch-Schnittstellen, die erzwungen werden, um die IDL-Co-Klasse angehören.|
+|[implements](implements-cpp.md)|Gibt die Dispatch-Schnittstellen, die erzwungen werden, um die IDL-Co-Klasse angehören.|
 |[implements_category](implements-category.md)|Gibt an, für die Klasse implementierten Komponentenkategorien.|
-|[Modul](module-cpp.md)|Definiert den Bibliotheksblock in der IDL-Datei.|
+|[module](module-cpp.md)|Definiert den Bibliotheksblock in der IDL-Datei.|
 |[noncreatable](noncreatable.md)|Definiert ein Objekt, das allein nicht instanziiert werden kann.|
 |[progid](progid.md)|Definiert die ProgID für ein Steuerelement an.|
 |[registration_script](registration-script.md)|Führt die angegebene Registrierungsskript aus.|
 |[requestedit](requestedit.md)|Gibt an, dass die Eigenschaft unterstützt die `OnRequestEdit` Benachrichtigung.|
 |[source](source-cpp.md)|Gibt den Schnittstellen des Steuerelements nach Verbindungspunkten für eine Klasse an. Auf eine Eigenschaft oder Methode die `source` Attribut gibt an, dass das Element ein Objekt zurückgibt oder `VARIANT` , die eine Quelle von Ereignissen.|
 |[support_error_info](support-error-info.md)|Unterstützt die Windows-Fehlerberichterstattung für das Zielobjekt.|
-|[Threading](threading-cpp.md)|Gibt das Threadingmodell für ein Steuerelement an.|
+|[threading](threading-cpp.md)|Gibt das Threadingmodell für ein Steuerelement an.|
 |[uuid](uuid-cpp-attributes.md)|Gibt die eindeutige ID für eine Klasse oder Schnittstelle an.|
 |[version](version-cpp.md)|Identifiziert eine bestimmte Version mehrere Versionen einer Klasse.|
 |[vi_progid](vi-progid.md)|Gibt eine Art versionsunabhängige Programm-ID an.|

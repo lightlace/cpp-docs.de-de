@@ -1,41 +1,31 @@
 ---
-title: Compilerfehler C3768 | Microsoft Docs
-ms.custom: ''
+title: Compilerfehler C3768
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3768
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3768
 ms.assetid: 091f0d53-1dff-43fd-813d-5c43c85b6ab0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5e6b7a2d1617591609f75b2b07f1a94983ee22f4
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: e9c385fd178dc967e72f5e0ca7fab27b28ad962f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34704957"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676732"
 ---
 # <a name="compiler-error-c3768"></a>Compilerfehler C3768
 
-> die Adresse einer virtuellen Vararg-Funktion in reinen verwalteten Code nicht akzeptiert werden.
+> die Adresse einer virtuellen Vararg-Funktion in reinem verwaltetem Code kann nicht übernommen werden.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **/CLR: pure** -Compileroption in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt wird.
+Die **/CLR: pure** Compileroption ist in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt.
 
-Beim Kompilieren mit **/CLR: pure**, können Sie nicht die Adresse einer virtuellen erhalten `vararg` Funktion.
+Beim Kompilieren mit **/CLR: pure**, Sie können die Adresse einer virtuellen nicht übernehmen `vararg` Funktion.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird C3768 generiert:
+Im folgende Beispiel wird die C3768 generiert:
 
 ```cpp
 // C3768.cpp

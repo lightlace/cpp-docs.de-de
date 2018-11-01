@@ -1,12 +1,6 @@
 ---
-title: ATL-Steuerelementkapselung – häufig gestellte Fragen | Microsoft-Dokumentation
-ms.custom: ''
+title: Fragen und Antworten zur ATL-Steuerelementkapselung
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - hosting controls using ATL
 - ActiveX control containers [C++], ATL control hosting
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [C++], hosting
 - controls [ATL]
 ms.assetid: d4bdfbe0-82ca-4f2f-bb95-cb89bdcc9b53
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: af14755b9be9413feb3a519d09200577c9260c5a
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: ef175ff83fd641852b27fea8408f1bb7de69f839
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50053708"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630810"
 ---
 # <a name="atl-control-containment-faq"></a>Fragen und Antworten zur ATL-Steuerelementkapselung
 

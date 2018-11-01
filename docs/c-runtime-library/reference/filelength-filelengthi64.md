@@ -1,10 +1,6 @@
 ---
-title: _filelength, _filelengthi64 | Microsoft-Dokumentation
-ms.custom: ''
+title: _filelength, _filelengthi64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _filelengthi64
 - _filelength
@@ -25,8 +21,6 @@ f1_keywords:
 - _filelength
 - _filelengthi64
 - filelengthi64
-dev_langs:
-- C++
 helpviewer_keywords:
 - filelengthi64 function
 - lengths, file
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - files [C++], length
 - _filelengthi64 function
 ms.assetid: 3ab83d5a-543c-4079-b9d9-0abfc7da0275
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 33943eb81658b065116d30592f25ef004d4bfc1b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5434a6ea2155b75f1c034202477a67db36da8b3d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399331"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430485"
 ---
 # <a name="filelength-filelengthi64"></a>_filelength, _filelengthi64
 
@@ -68,7 +58,7 @@ Richten sich an den Dateideskriptor
 
 ## <a name="return-value"></a>Rückgabewert
 
-Beide **_filelength** und **_filelengthi64** Zurückgeben der Dateilänge in Bytes, die Zieldatei zugeordnet *fd*. Wenn *fd* ist ein ungültiger Dateideskriptor angezeigt, wie in beschrieben, ruft diese Funktion den Handler für ungültige Parameter [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben beide Funktionen geben einen Fehler an, und legen Sie-1 L zurück **Errno** auf **EBADF**.
+Beide **_filelength** und **_filelengthi64** Dateilänge in Bytes, der die zugeordneten Zieldatei zurück *fd*. Wenn *fd* ist ein ungültiger Dateideskriptor ist, ruft diese Funktion den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben beide Funktionen geben einen Fehler an, und legen Sie-1 L zurück **Errno** zu **EBADF**.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,10 +1,6 @@
 ---
-title: _fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32 | Microsoft-Dokumentation
-ms.custom: ''
+title: _fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fstat32
 - _fstat64
@@ -38,8 +34,6 @@ f1_keywords:
 - _fstat
 - fstat32
 - _fstat64i32
-dev_langs:
-- C++
 helpviewer_keywords:
 - _fstat64 function
 - fstati64 function
@@ -55,16 +49,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 65d77bfdd7922387568ca8257e66f6e19dde1a35
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2cec64e408b326dccc7b950656d0aa699c084f83
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404967"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677785"
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 
@@ -109,32 +99,32 @@ Zeiger auf die Struktur zum Speichern der Ergebnisse
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 zurück, wenn die Dateistatusinformationen abgerufen werden Ein Rückgabewert von – 1 zeigt einen Fehler. Wenn der Dateideskriptor ungültig ist oder *Puffer* ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EBADF**, bei der ein ungültiger Dateideskriptor oder zu **EINVAL**, wenn *Puffer* ist **NULL**.
+Gibt 0 zurück, wenn die Dateistatusinformationen abgerufen werden Ein Rückgabewert 1 gibt einen Fehler. Wenn der Dateideskriptor ungültig ist oder *Puffer* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EBADF**, bei einem ungültigen Dateideskriptor oder zu **EINVAL**, wenn *Puffer* ist **NULL**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_fstat** Funktion ruft Informationen über die geöffnete Datei zugeordneten *fd* und speichert ihn in der Struktur verweist *Puffer*. Die **_stat** Struktur, die in sys\stat definiert, enthält die folgenden Felder.
+Die **_fstat** Funktion ruft Informationen über die geöffnete Datei zugeordneten *fd* und speichert sie in der Struktur verweist *Puffer*. Die **_stat** in sys\stat definierte Struktur enthält die folgenden Felder.
 
 |Feld|Bedeutung|
 |-|-|
 **st_atime**|Zeitpunkt des letzten Zugriffs auf die Datei
 **st_ctime**|Zeitpunkt der Erstellung der Datei.
 **st_dev**|Wenn ein Gerät *fd*, andernfalls 0.
-**st_mode**|Bitmaske für Dateimodusinformationen. Die **_S_IFCHR** Bit ist gesetzt, wenn *fd* verweist auf ein Gerät. Die **_S_IFREG** Bit ist gesetzt, wenn *fd* bezieht sich auf eine normale Datei. Die Bits für den Lese-/Schreibzugriff werden gemäß dem Dateiberechtigungsmodus festgelegt. **_S_IFCHR** und andere Konstanten in sys\stat definiert sind.
+**st_mode**|Bitmaske für Dateimodusinformationen. Die **_S_IFCHR** Bit ist gesetzt, wenn *fd* bezieht sich auf einem Gerät. Die **_S_IFREG** Bit ist gesetzt, wenn *fd* bezieht sich auf eine normale Datei. Die Bits für den Lese-/Schreibzugriff werden gemäß dem Dateiberechtigungsmodus festgelegt. **_S_IFCHR** und andere Konstanten sind in sys\stat definiert.
 **st_mtime**|Uhrzeit der letzten Änderung der Datei
 **st_nlink**|Bei Nicht-NTFS-Dateisystemen immer „1“.
 **st_rdev**|Wenn ein Gerät *fd*, andernfalls 0.
 **st_size**|Die Länge der Datei in Bytes.
 
-Wenn *fd* bezieht sich auf einem Gerät die **St_atime**, **St_ctime**, **St_mtime**, und **St_size** Felder sind nicht sinnvoll.
+Wenn *fd* bezieht sich auf einem Gerät der **St_atime**, **St_ctime**, **St_mtime**, und **St_size** Felder sind nicht aussagekräftig.
 
 Da Stat.h den Typ [_dev_t](../../c-runtime-library/standard-types.md) verwendet, der in Types.h definiert ist, müssen Sie Types.h vor Stat.h in Ihrem Code einschließen.
 
-**_fstat64**, verwendet der **__stat64** -Struktur, ermöglicht die dateierstellung Datumsangaben oben bis 23:59:59, 31. Dezember 3000, UTC; ausgedrückt werden, während die anderen Funktionen nur Datumsangaben bis 23:59:59 am 18. Januar darstellen 2038, UTC. Der 1. Januar 1970 (Mitternacht) ist der älteste mögliche Datumsbereich für all diese Funktionen.
+**_fstat64**, verwendet der **__stat64** Struktur, die Datumsangaben der dateierstellung bis 23:59:59, 31. Dezember 3000 UTC; ausgedrückt werden können, während die anderen Funktionen nur Datumsangaben bis 23:59:59 am 18. Januar darstellen 2038, UTC. Der 1. Januar 1970 (Mitternacht) ist der älteste mögliche Datumsbereich für all diese Funktionen.
 
 Varianten dieser Funktionen unterstützen 32-Bit- oder 64-Bit-Zeittypen und 32-Bit- oder 64-Bit-Dateilängen. Das erste numerische Suffix (**32** oder **64**) gibt die Größe der Zeit verwendet; das zweite Suffix ist entweder **i32** oder **i64**, der angibt, ob die Dateigröße als ganze 32-Bit oder 64-Bit-Zahl dargestellt wird.
 
-**_fstat** entspricht **_fstat64i32**, und **Struktur** **_stat** enthält einen 64-Bit-Uhrzeitwert. Dies ist "true", wenn **_USE_32BIT_TIME_T** definiert ist, wird in diesem Fall wird das alte Verhalten wirksam; **_fstat** verwendet eine 32-Bit-Zeit und **Struktur** **_stat** enthält einen 32-Bit-Uhrzeitwert. Dasselbe gilt für **_fstati64**.
+**_fstat** entspricht **_fstat64i32**, und **Struktur** **_stat** enthält einen 64-Bit-Uhrzeitwert. Dies gilt, es sei denn, **_USE_32BIT_TIME_T** definiert ist, wird in diesem Fall ist das alte Verhalten wirksam. **_fstat** verwendet einen 32-Bit-Uhrzeitwert, und **Struktur** **_stat** enthält einen 32-Bit-Uhrzeitwert. Das gleiche gilt für **_fstati64**.
 
 ### <a name="time-type-and-file-length-type-variations-of-stat"></a>_stat-Variationen des Uhrzeittyps und Dateilängentyps
 

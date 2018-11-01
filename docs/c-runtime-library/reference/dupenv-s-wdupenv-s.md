@@ -1,10 +1,6 @@
 ---
-title: _dupenv_s, _wdupenv_s | Microsoft-Dokumentation
-ms.custom: ''
+title: _dupenv_s, _wdupenv_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _dupenv_s
 - _wdupenv_s
@@ -28,8 +24,6 @@ f1_keywords:
 - dupenv_s
 - _tdupenv_s
 - _wdupenv_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _dupenv_s function
 - _tdupenv_s function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5a918b866b0b43fb0e6b31e2deb5d9861dabe9a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bc8af3282b57c9fa411aac97f5fa4d414bc3305b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402113"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646498"
 ---
 # <a name="dupenvs-wdupenvs"></a>_dupenv_s, _wdupenv_s
 
@@ -87,26 +77,26 @@ Umgebungsvariablenname.
 
 Null bei Erfolg, ein Fehlercode, wenn ein Fehler auftritt.
 
-Diese Funktionen überprüfen ihre Parameter; Wenn *Puffer* oder *Varname* ist **NULL**, den Handler für ungültige Parameter aufgerufen wird, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen die Funktionen **Errno** auf **EINVAL** inventurüberprüfung **EINVAL**.
+Diese Funktionen überprüfen ihre Parameter; Wenn *Puffer* oder *Varname* ist **NULL**, wird der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzen die Funktionen **Errno** zu **EINVAL** und zurückgeben **EINVAL**.
 
-Wenn diese Funktionen nicht genügend Arbeitsspeicher zuordnen können, legen sie *Puffer* auf **NULL** und *NumberOfElements* auf 0, und der Rückgabewert **ENOMEM**.
+Wenn diese Funktionen können nicht genügend Arbeitsspeicher zuordnen, die sie festgelegt *Puffer* zu **NULL** und *NumberOfElements* 0, und Rückgabe **ENOMEM**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_dupenv_s** -Funktion sucht die Liste von Umgebungsvariablen für *Varname*. Wenn die Variable gefunden wird, **_dupenv_s** einen Puffer und der Wert der Variablen in den Puffer kopiert. Adresse und die Länge des Puffers werden in zurückgegeben *Puffer* und *NumberOfElements*. Durch das Zuweisen des Puffers selbst **_dupenv_s** bietet eine besser geeignete Alternative zu [Getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
+Die **_dupenv_s** -Funktion sucht die Liste von Umgebungsvariablen für *Varname*. Wenn die Variable gefunden wird, **_dupenv_s** weist einen Puffer und kopiert den Wert der Variablen in den Puffer. Adresse und die Länge des Puffers in zurückgegeben werden *Puffer* und *NumberOfElements*. Durch die selbstzuweisung des Puffers, **_dupenv_s** bietet eine zweckmäßigere Alternative zu [Getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
 
 > [!NOTE]
 > Das aufrufende Programm ist dafür zuständig, den Arbeitsspeicher durch Aufruf von [free](free.md) zu leeren.
 
-Wenn die Variable nicht, klicken Sie dann gefunden wird *Puffer* festgelegt ist, um **NULL**, *NumberOfElements* auf 0 (null) festgelegt ist und der Rückgabewert ist 0, da diese Situation ist kein Fehler Bedingung.
+Wenn die Variable nicht, klicken Sie dann gefunden wird *Puffer* nastaven NA hodnotu **NULL**, *NumberOfElements* auf 0 (null) festgelegt ist und der Rückgabewert ist 0, da diese Situation kein Fehler betrachtet wird Bedingung.
 
 Wenn Sie nicht die Größe des Puffers interessiert sind können Sie übergeben **NULL** für *NumberOfElements*.
 
-**_dupenv_s** ist nicht in der Groß-/Kleinschreibung beachtet, in der Windows-Betriebssystem. **_dupenv_s** verwendet die Kopie der Umgebung verweist die globale Variable **_environ** auf die Umgebung zuzugreifen. Siehe die Hinweise in [Getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) eine Erläuterung der **_environ**.
+**_dupenv_s** ist nicht in der Groß-/Kleinschreibung beachtet, im Windows-Betriebssystem. **_dupenv_s** verwendet die Kopie der Umgebung auf die globale Variable zeigt **_environ** auf die Umgebung zuzugreifen. Finden Sie unter den Hinweisen in [Getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) eine Erläuterung der **_environ**.
 
-Der Wert in *Puffer* ist eine Kopie des Werts für die Umgebungsvariable; diese zu ändern, hat keine Auswirkung auf die Umgebung. Verwenden Sie die Funktion [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md), um den Wert einer Umgebungsvariablen zu ändern.
+Der Wert in *Puffer* ist eine Kopie der der Wert der Umgebungsvariablen; Änderung hat keine Auswirkungen auf die Umgebung. Verwenden Sie die Funktion [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md), um den Wert einer Umgebungsvariablen zu ändern.
 
-**_wdupenv_s** ist eine Breitzeichen-Version von **_dupenv_s**; die Argumente der **_wdupenv_s** sind Zeichenfolgen mit Breitzeichen. Die **_wenviron** (globale Variable) ist eine Breitzeichen-Version von **_environ**. Siehe die Hinweise in [Getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) für Weitere Informationen über die **_wenviron**.
+**_wdupenv_s** ist eine Breitzeichen-Version von **_dupenv_s**; die Argumente des **_wdupenv_s** sind Breitzeichen Zeichenfolgen. Die **_wenviron** globale Variable ist eine Breitzeichen-Version von **_environ**. Finden Sie unter den Hinweisen in [Getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) Weitere Informationen zu **_wenviron**.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -116,7 +106,7 @@ Der Wert in *Puffer* ist eine Kopie des Werts für die Umgebungsvariable; diese 
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_dupenv_s**|\<stdlib.h>|
 |**_wdupenv_s**|\<stdlib.h> oder \<wchar.h>|

@@ -1,10 +1,6 @@
 ---
-title: strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l | Microsoft-Dokumentation
-ms.custom: ''
+title: strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsncpy_s_l
 - wcsncpy_s
@@ -33,8 +29,6 @@ f1_keywords:
 - _strncpy_s_l
 - wcsncpy_s
 - _tcsncpy_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wcsncpy_s_l function
 - _mbsnbcpy_s function
@@ -51,23 +45,19 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: add1f3ec75a3746d30e256ef32034b3d604f223a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8a6fc997ed874ba976e96f87df377e6fafd84a6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418210"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430068"
 ---
 # <a name="strncpys-strncpysl-wcsncpys-wcsncpysl-mbsncpys-mbsncpysl"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 
 Kopiert Zeichen aus einer Zeichenfolge in eine andere.  Diese Versionen von [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md) enthalten Sicherheitsverbesserungen, wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
 > [!IMPORTANT]
-> **_mbsncpy_s** und **_mbsncpy_s_l** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncpy_s** und **_mbsncpy_s_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -171,22 +161,22 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-NULL Wenn erfolgreich, **STRUNCATE** bei abgeschnittenen Daten, andernfalls einen Fehlercode.
+NULL, wenn erfolgreich, **STRUNCATE** bei abgeschnittenen Daten, andernfalls einen Fehlercode.
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
 |*strDest*|*numberOfElements*|*strSource*|Rückgabewert|Inhalt der *StrDest*|
 |---------------|------------------------|-----------------|------------------|---------------------------|
-|**NULL**|alle|alle|**EINVAL**|nicht geändert|
-|alle|alle|**NULL**|**EINVAL**|*StrDest*[0] auf 0 festgelegt|
-|alle|0|alle|**EINVAL**|nicht geändert|
-|nicht **NULL**|zu klein|alle|**ERANGE**|*StrDest*[0] auf 0 festgelegt|
+|**NULL**|any|any|**EINVAL**|nicht geändert|
+|any|any|**NULL**|**EINVAL**|*StrDest*[0] auf 0 festgelegt ist|
+|any|0|any|**EINVAL**|nicht geändert|
+|Nicht **NULL**|zu klein|any|**ERANGE**|*StrDest*[0] auf 0 festgelegt ist|
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktionen versuchen, kopieren Sie die erste *D* Zeichen des *StrSource* auf *StrDest*, wobei *D* weniger als *Anzahl*  und die Länge des *StrSource*. Wenn diese *D* Zeichen passt in *StrDest* (erhält, dessen Größe als *NumberOfElements*) und noch Platz für ein null-Abschlusszeichen, und klicken Sie dann diese Zeichen kopiert werden und ein abschließendes Nullzeichen angefügt ist. andernfalls *StrDest*[0] festgelegt ist, das Null-Zeichen und den ungültigen Parameter Handler aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
+Diese Funktionen versuchen, kopieren Sie die erste *D* Zeichen *StrSource* zu *StrDest*, wobei *D* ist kleiner als *Anzahl*  und die Länge der *StrSource*. Wenn diese *D* Zeichen in passt *StrDest* (dessen Größe als angegeben wird *NumberOfElements*) und noch Platz für einen null-Terminator, und klicken Sie dann diese Zeichen kopiert werden und ein abschließendes Nullzeichen angefügt wird; andernfalls *StrDest*[0] festgelegt ist, das Null-Zeichen und den ungültigen Parameter Handler aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
 
-Zu der oberen Aufführung gibt es eine Ausnahme. Wenn *Anzahl* ist **_TRUNCATE**, wird so viel von *StrSource* als wird entsprechend in *StrDest* kopiert, wobei noch Platz für bleibt die Beenden von Null das immer angefügt wird.
+Zu der oberen Aufführung gibt es eine Ausnahme. Wenn *Anzahl* ist **_TRUNCATE**, wird so viel von *StrSource* passt in *StrDest* kopiert, wobei noch Platz für die Null beendet, das immer angefügt wird.
 
 Ein auf ein Objekt angewendeter
 
@@ -195,7 +185,7 @@ char dst[5];
 strncpy_s(dst, 5, "a long string", 5);
 ```
 
-bedeutet, die wir Navigationssystem **Strncpy_s** So kopieren Sie fünf Zeichen in einen Puffer fünf Bytes langen; somit gäbe es keinen Platz für das Nullabschlusszeichen daher **Strncpy_s** weist der Zeichenfolge und ruft den ungültigen Handler für den Parameter.
+bedeutet, die wir stellen **Strncpy_s** kopieren fünf Zeichen in einen Puffer fünf Bytes langen; Dies wird allerdings kein Platz mehr für den null-Terminator, daher **Strncpy_s** weist der Zeichenfolge und ruft die ungültigen Handler für Parameter.
 
 Wenn ein abschneideverhalten erforderlich ist, verwenden Sie **_TRUNCATE** oder (*Größe* - 1):
 
@@ -204,15 +194,15 @@ strncpy_s(dst, 5, "a long string", _TRUNCATE);
 strncpy_s(dst, 5, "a long string", 4);
 ```
 
-Beachten Sie, dass im Gegensatz zu **Strncpy**, wenn *Anzahl* ist größer als die Länge des *StrSource*, die Zielzeichenfolge mit Nullzeichen bis zur Länge nichtaufgefülltwird*Anzahl*.
+Beachten Sie, dass im Gegensatz zu **Strncpy**, wenn *Anzahl* ist größer als die Länge des *StrSource*, die Zielzeichenfolge mit Nullzeichen bis zur Länge nichtaufgefüllt*Anzahl*.
 
-Das Verhalten des **Strncpy_s** ist undefiniert, wenn die Quell- und Zielzeichenfolgen überlappen.
+Das Verhalten der **Strncpy_s** ist undefiniert, wenn die Quell- und Zielzeichenfolgen überlappen.
 
-Wenn *StrDest* oder *StrSource* ist **NULL**, oder *NumberOfElements* gleich 0 ist, wird der Handler für ungültige Parameter aufgerufen. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion **EINVAL** und legt **Errno** auf **EINVAL**.
+Wenn *StrDest* oder *StrSource* ist **NULL**, oder *NumberOfElements* gleich 0 ist, wird der Handler für ungültige Parameter aufgerufen. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion **EINVAL** und **Errno** zu **EINVAL**.
 
-**Wcsncpy_s** und **_mbsncpy_s** sind Breitzeichen- und multibytezeichenversionen von **Strncpy_s**. Die Argumente und der Rückgabewert von **Wcsncpy_s** und **Mbsncpy_s** unterscheiden sich entsprechend. Diese sechs Funktionen verhalten sich andernfalls identisch.
+**Wcsncpy_s** und **_mbsncpy_s** sind Breitzeichen- und multibytezeichenversionen von Versionen von **Strncpy_s**. Die Argumente und der Rückgabewert von **Wcsncpy_s** und **Mbsncpy_s** unterscheiden sich entsprechend. Diese sechs Funktionen verhalten sich andernfalls identisch.
 
-Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -222,15 +212,15 @@ Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf
 
 |TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsncpy_s**|**strncpy_s**|**_mbsnbcpy_s**|**wcsncpy_s**|
+|**_tcsncpy_s, korrigiert wird**|**strncpy_s**|**_mbsnbcpy_s**|**wcsncpy_s**|
 |**_tcsncpy_s_l**|**_strncpy_s_l**|**_mbsnbcpy_s_l**|**_wcsncpy_s_l**|
 
 > [!NOTE]
-> **_strncpy_s_l**, **_wcsncpy_s_l** und **_mbsncpy_s_l** haben keine gebietsschemaabhängigkeit und sind nur aus Gründen **_tcsncpy_s_l** und sollten nicht verwendet werden direkt aufgerufen.
+> **_strncpy_s_l**, **_wcsncpy_s_l** und **_mbsncpy_s_l** haben keine gebietsschemaabhängigkeit und stehen nur für **_tcsncpy_s_l** und sind nicht als direkt aufgerufen.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**Strncpy_s**, **_strncpy_s_l**|\<string.h>|
 |**Wcsncpy_s**, **_wcsncpy_s_l**|\<string.h> oder \<wchar.h>|

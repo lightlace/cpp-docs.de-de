@@ -1,12 +1,6 @@
 ---
-title: Aufgabenparallelität (Concurrency Runtime) | Microsoft-Dokumentation
-ms.custom: ''
+title: Aufgabenparallelität (Concurrency Runtime)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - structured task groups [Concurrency Runtime]
 - structured tasks [Concurrency Runtime]
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - task parallelism
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7ec6e99b3e4f1e86d9f0ee42ca92a93a57b1a1fb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 43af08f3be75bff7621cd2f57b9d50b658420f26
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378084"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630424"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Aufgabenparallelität (Concurrency Runtime)
 
@@ -190,7 +180,7 @@ In diesem Beispiel können Sie auch `task<vector<int>>` angeben, um eine aufgabe
 
 Wenn eine Aufgabe in einem Satz von Aufgaben abgebrochen wird oder eine Ausnahme auslöst, wird `when_all` sofort abgeschlossen und wartet nicht, bis die übrigen Aufgaben beendet sind. Wenn eine Ausnahme ausgelöst wird, löst die Laufzeit die Ausnahme erneut aus, wenn Sie `task::get` oder `task::wait` für das Task-Objekt aufrufen, das von `when_all` zurückgegeben wird. Wenn von mehr als einer Aufgabe eine Ausnahme ausgelöst wird, wird von der Laufzeit eine ausgewählt. Daher müssen Sie sicherstellen, dass Sie alle Ausnahmen nach Abschluss aller Aufgaben berücksichtigen. Eine nicht behandelte Ausnahme einer Aufgabe führt dazu, dass die App beendet wird.
 
-Es steht eine Hilfsfunktion zur Verfügung, mit der Sie sicherstellen können, dass Ihr Programm alle Ausnahmen berücksichtigt. Die Funktion `observe_all_exceptions` löst für jede Aufgabe im bereitgestellten Bereich jede aufgetretene Ausnahme aus, damit diese erneut ausgelöst wird, und "schluckt" diese anschließend.
+Es steht eine Hilfsfunktion zur Verfügung, mit der Sie sicherstellen können, dass Ihr Programm alle Ausnahmen berücksichtigt. Die Funktion `observe_all_exceptions` löst für jede Aufgabe im bereitgestellten Bereich jede aufgetretene Ausnahme aus, damit diese erneut ausgelöst wird, und „schluckt“ diese anschließend.
 
 [!code-cpp[concrt-eh-when_all#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_10.cpp)]
 
@@ -270,7 +260,7 @@ Die PPL Unterscheidet zwischen Aufgabengruppen zu diesen beiden Kategorien: *uns
 
 >  Die PPL definiert auch die [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) -Algorithmus, der verwendet die `structured_task_group` Klasse, um eine Reihe von Aufgaben parallel ausgeführt. Da der `parallel_invoke`-Algorithmus eine kompaktere Syntax aufweist, wird empfohlen, diesen, sofern möglich, anstelle der `structured_task_group`-Klasse zu verwenden. Das Thema [parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md) beschreibt `parallel_invoke` ausführlicher.
 
-Verwenden Sie `parallel_invoke`, um mehrere unabhängige Aufgaben gleichzeitig auszuführen und sofort darauf zu warten, dass alle Aufgaben abgeschlossen sind. Diese Technik wird häufig als bezeichnet *Zweig- und Joinknoten* Parallelität. Verwenden Sie `task_group`, um mehrere unabhängige Aufgaben gleichzeitig auszuführen und später darauf zu warten, dass allle Aufgaben abgeschlossen sind. Beispielsweise können Sie einem `task_group`-Objekt Aufgaben hinzufügen und in einer anderen Funktion oder einem anderen Thread darauf warten, dass die Aufgaben beendet werden.
+Verwenden Sie `parallel_invoke`, um mehrere unabhängige Aufgaben gleichzeitig auszuführen und sofort darauf zu warten, dass alle Aufgaben abgeschlossen sind. Diese Technik wird häufig als bezeichnet *Zweig- und Joinknoten* Parallelität. Verwenden Sie `task_group`, um mehrere unabhängige Aufgaben gleichzeitig auszuführen und später darauf zu warten, dass alle Aufgaben abgeschlossen sind. Beispielsweise können Sie einem `task_group`-Objekt Aufgaben hinzufügen und in einer anderen Funktion oder einem anderen Thread darauf warten, dass die Aufgaben beendet werden.
 
 Aufgabengruppen unterstützen das Konzept eines Abbruchs. Mit einem Abbruch können Sie für alle aktiven Aufgaben angeben, dass der gesamte Vorgang abgebrochen werden soll. Durch den Abbruch wird außerdem verhindert, dass Aufgaben gestartet werden, die noch nicht gestartet wurden. Weitere Informationen über Abbrüche finden Sie unter [Abbruch in der PPL](cancellation-in-the-ppl.md).
 

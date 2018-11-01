@@ -1,10 +1,6 @@
 ---
-title: fprintf, _fprintf_l, fwprintf, _fwprintf_l | Microsoft-Dokumentation
-ms.custom: ''
+title: fprintf, _fprintf_l, fwprintf, _fwprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fwprintf
 - fprintf
@@ -26,8 +22,6 @@ f1_keywords:
 - fprintf
 - fwprintf
 - _ftprintf
-dev_langs:
-- C++
 helpviewer_keywords:
 - _fwprintf_l function
 - fprintf function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - print formatted data to streams
 - fwprintf_l function
 ms.assetid: 34a87e1c-6e4d-4d48-a611-58314dd4dc4b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c7578a8a8c2bef7fe68e9a08ae987ac7c1609cb5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d84ef50e6fd522e393bb87664fb1eb47f3d32bb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403881"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637296"
 ---
 # <a name="fprintf-fprintfl-fwprintf-fwprintfl"></a>fprintf, _fprintf_l, fwprintf, _fwprintf_l
 
@@ -99,17 +89,17 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Fprintf** gibt die Anzahl der geschriebenen Bytes zurück. **Fwprintf** gibt die Anzahl der geschriebenen Zeichen zurück. Jede dieser Funktionen gibt stattdessen einen negativen Wert zurück, wenn ein Ausgabefehler auftritt. Wenn *Stream* oder *Format* ist **NULL**, rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben die Funktionen – 1 zurück und legen Sie **Errno** auf **EINVAL**. Die Formatzeichenfolge wird nicht auf gültige Formatierungszeichen überprüft, wie es bei **Fprintf_s** oder **Fwprintf_s**.
+**Fprintf** gibt die Anzahl der geschriebenen Bytes zurück. **Fwprintf** gibt die Anzahl der geschriebenen Breitzeichen zurück. Jede dieser Funktionen gibt stattdessen einen negativen Wert zurück, wenn ein Ausgabefehler auftritt. Wenn *Stream* oder *Format* ist **NULL**, rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**. Die Formatzeichenfolge wird nicht auf gültige Formatierungszeichen überprüft, wie es bei **Fprintf_s** oder **Fwprintf_s**.
 
 Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-**Fprintf** formatiert und druckt eine Reihe von Zeichen und Werten für die Ausgabe *Stream*. Jede Funktion *Argument* (sofern vorhanden) konvertiert und ausgegeben wird, entsprechend der jeweiligen Formatangabe in *Format*. Für **Fprintf**, *Format* -Argument verfügt über dieselbe Syntax und zur Anwendung, die in **Printf**.
+**Fprintf** formatiert und gibt eine Reihe von Zeichen und Werten für die Ausgabe *Stream*. Jede Funktion *Argument* (sofern vorhanden) konvertiert und ausgegeben wird, entsprechend der jeweiligen Formatangabe in *Format*. Für **Fprintf**, *Format* Argument verfügt über die gleiche Syntax und Verwendung in **Printf**.
 
-**Fwprintf** ist eine Breitzeichen-Version von **Fprintf**in **Fwprintf**, *Format* ist eine Breitzeichen-Zeichenfolge. Diese Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Fprintf** unterstützt derzeit keine Ausgabe in einen Unicode-Stream.
+**Fwprintf** ist eine Breitzeichen-Version von **Fprintf**in **Fwprintf**, *Format* ist eine Breitzeichen-Zeichenfolge. Diese Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Fprintf** unterstützt derzeit keine Ausgabe in eine UNICODE-Stream.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschemaparameter, der übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas.
+Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
 
 > [!IMPORTANT]
 > Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist.

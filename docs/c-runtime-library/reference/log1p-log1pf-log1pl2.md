@@ -1,11 +1,6 @@
 ---
-title: log1p, log1pf, log1pl2 | Microsoft-Dokumentation
-ms.custom: ''
+title: log1p, log1pf, log1pl2
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - log1p
 - log1pf
@@ -35,16 +30,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 650fb8f7567b4f2f3b0b9032397c2b54a99013dd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7984367aa4244a927bb9dabc5533a807d74ac1a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402747"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524994"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
 
@@ -82,7 +73,7 @@ Das Gleitkommaargument.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Im Erfolgsfall gibt den natürlichen (Basis -*e*) der Anmeldung (*x* + 1).
+Wenn erfolgreich, wird der natürliche (Basis*e*) melden Sie sich von (*x* + 1).
 
 Andernfalls wird möglicherweise einer der folgenden Werte zurückgeben:
 
@@ -95,17 +86,17 @@ Andernfalls wird möglicherweise einer der folgenden Werte zurückgeben:
 |< -1|nan|INVALID|EDOM|
 |-inf|nan|INVALID|EDOM|
 |±SNaN|Identisch mit der Eingabe|INVALID||
-|±QNaN unbestimmtes|Identisch mit der Eingabe|||
+|±QNaN, unbestimmte|Identisch mit der Eingabe|||
 
-Die **Errno** Wert wird auf ERANGE festlegen, wenn *x* =-1. Die **Errno** Wert wird festgelegt, um **EDOM** Wenn *x* <-1 zurück.
+Die **Errno** Wert wird auf ERANGE festgelegt, wenn *x* =-1. Die **Errno** Wert wird festgelegt, um **EDOM** Wenn *x* < -1.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **log1p** Funktionen können genauer sein als mit `log(x + 1)` Wenn *x* nahe 0 ist.
+Die **log1p** Funktionen sind möglicherweise genauer als `log(x + 1)` beim *x* nahe 0 ist.
 
 Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **log1p** verwenden und zurückgeben **"float"** und **lange** **doppelte** Typen. In einem C-Programm **log1p** immer Double und gibt eine **doppelte**.
 
-Wenn *x* eine natürliche Zahl ist, wird diese Funktion gibt den Logarithmus der Fakultät (*x* - 1).
+Wenn *x* eine natürliche Zahl ist, wird diese Funktion gibt den Logarithmus der Fakultät von (*x* - 1).
 
 ## <a name="requirements"></a>Anforderungen
 

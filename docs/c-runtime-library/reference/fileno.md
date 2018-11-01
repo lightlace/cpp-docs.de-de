@@ -1,10 +1,6 @@
 ---
-title: _fileno | Microsoft-Dokumentation
-ms.custom: ''
+title: _fileno
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fileno
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _fileno
-dev_langs:
-- C++
 helpviewer_keywords:
 - file handles [C++], getting from streams
 - fileno function
 - _fileno function
 - streams, getting file handles
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9bc03bcd92eb8040b7eefadd0c109e4e887f7304
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 682ab4b01a663bd9a6314138aa692b1c05b7437a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398864"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646607"
 ---
 # <a name="fileno"></a>_fileno
 
@@ -60,16 +50,16 @@ Zeiger auf die **FILE**-Struktur.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_fileno** gibt den Dateideskriptor zurück. Es gibt keine Fehlerrückgabe. Das Ergebnis ist undefiniert, wenn *Stream* gibt keine geöffneten Datei. Wenn der Stream ist **NULL**, **_fileno** wird den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt diese Funktion gibt-1 zurück und setzt **Errno** auf **EINVAL**.
+**_fileno** gibt den Dateideskriptor zurück. Es gibt keine Fehlerrückgabe. Das Ergebnis ist undefiniert, wenn *Stream* gibt keine geöffneten Datei. Wenn der Stream **NULL**, **_fileno** wird der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, diese Funktion gibt-1 zurück und legt **Errno** zu **EINVAL**.
 
 Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 > [!NOTE]
-> Wenn **"stdout"** oder **"stderr"** ist nicht verknüpft mit einen Ausgabestream (z. B. in einer Windows-Anwendung ohne ein Konsolenfenster), ist der zurückgegebenen Dateideskriptor-2. In früheren Versionen lautete der zurückgegebene Dateideskriptor -1. Diese Änderung ermöglicht es Anwendungen, diese Bedingung von einem Fehler unterscheiden.
+> Wenn **"stdout"** oder **"stderr"** ist nicht verbunden mit einem Ausgabestream (z. B. in einer Windows-Anwendung ohne ein Konsolenfenster), ist der zurückgegebene Dateideskriptor-2. In früheren Versionen lautete der zurückgegebene Dateideskriptor -1. Diese Änderung ermöglicht es Anwendungen, diese Bedingung von einem Fehler unterscheiden.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_fileno** Routine gibt zurück, den aktuell zugeordneten Dateideskriptor *Stream*. Diese Routine wird sowohl als Funktion und als Makro implementiert. Weitere Informationen zum Auswählen einer Implementierung finden Sie unter [Empfehlungen für die Wahl zwischen Funktionen und Macros](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).
+Die **_fileno** -Routine gibt den Dateideskriptor zurück aktuell zugeordnete *Stream*. Diese Routine wird sowohl als Funktion und als Makro implementiert. Weitere Informationen zum Auswählen einer Implementierung finden Sie unter [Empfehlungen für die Wahl zwischen Funktionen und Macros](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).
 
 ## <a name="requirements"></a>Anforderungen
 

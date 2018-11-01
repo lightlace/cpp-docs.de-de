@@ -1,10 +1,6 @@
 ---
-title: _snscanf, _snscanf_l, _snwscanf, _snwscanf_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _snscanf, _snscanf_l, _snwscanf, _snwscanf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _snwscanf
 - _snscanf_l
@@ -35,8 +31,6 @@ f1_keywords:
 - sntscanf
 - snwscanf
 - snwscanf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - snscanf_l function
 - snwscanf function
@@ -54,16 +48,12 @@ helpviewer_keywords:
 - strings [C++], reading
 - _snscanf function
 ms.assetid: da1ac890-f905-4cd7-954b-3c90957b5551
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d5d99cc7465f88c92588983d5356a004da466de4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ba80bec70bbb96c383d0bbe73ed52f30fb90b7ef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408343"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626888"
 ---
 # <a name="snscanf-snscanfl-snwscanf-snwscanfl"></a>_snscanf, _snscanf_l, _snwscanf, _snwscanf_l
 
@@ -106,30 +96,30 @@ int __cdecl _snwscanf_l(
 Zu untersuchende Eingabezeichenfolge
 
 *length*<br/>
-Anzahl der Zeichen in untersuchen *input*.
+Anzahl der zu untersuchenden Zeichen in *Eingabe*.
 
 *format*<br/>
 Mindestens ein Formatbezeichner
 
 *...*<br/>
-Optionale Variablen, die verwendet werden soll, zum Speichern der Werte aus der Eingabezeichenfolge, die von den Formatbezeichner in extrahiert werden *Format*.
+Optional Variablen, die verwendet werden, um die extrahiert aus der Eingabezeichenfolge durch die Formatbezeichner im Werte speichern *Format*.
 
 *locale*<br/>
 Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die beiden Funktionen geben die Anzahl der Felder zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Der Rückgabewert ist **EOF** für einen Fehler oder das Ende der Zeichenfolge vor der ersten Konvertierung erreicht wird. Weitere Informationen finden Sie unter [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
+Die beiden Funktionen geben die Anzahl der Felder zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Der Rückgabewert ist **EOF** für einen Fehler oder am Ende der Zeichenfolge vor der ersten Konvertierung erreicht wird. Weitere Informationen finden Sie unter [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
 
-Wenn *input* oder *Format* ist ein **NULL** -Zeiger ist, oder wenn *Länge* ist kleiner als oder gleich 0 (null), die Handler für ungültige Parameter aufgerufen, als in der beschriebenen [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EOF** und **Errno** auf **EINVAL**.
+Wenn *Eingabe* oder *Format* ist eine **NULL** -Zeiger ist, oder wenn *Länge* ist kleiner als oder gleich 0 (null), wird der Handler für ungültige Parameter aufgerufen, als beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EOF** und **Errno** zu **EINVAL**.
 
 Weitere Informationen über diese und andere Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion ist z. B. **Sscanf** außer dass sie die Möglichkeit zum Angeben einer festen Anzahl von Zeichen aus der Eingabezeichenfolge untersuchen bereitstellt. Weitere Informationen finden Sie unter [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
+Diese Funktion ist wie **Sscanf** mit dem Unterschied, dass es sich um die Möglichkeit, geben Sie eine feste Anzahl von Zeichen aus der Eingabezeichenfolge untersuchen bereitstellt. Weitere Informationen finden Sie unter [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschemaparameter, der übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas.
+Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -140,7 +130,7 @@ Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, v
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_snscanf**, **_snscanf_l**|\<stdio.h>|
 |**_snwscanf**, **_snwscanf_l**|\<stdio.h> oder \<wchar.h>|

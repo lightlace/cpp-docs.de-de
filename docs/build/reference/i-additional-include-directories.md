@@ -1,5 +1,5 @@
 ---
-title: /I (Zusätzliche Includeverzeichnisse)
+title: / I (Zusätzliche Includeverzeichnisse)
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.AdditionalIncludeDirectories
@@ -14,24 +14,22 @@ helpviewer_keywords:
 - set include directories
 - include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-ms.openlocfilehash: b922a4472246bb13bfed4022f2f85061c5d1217b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0dc1769924880d8cb1b5dc173dd614e87584cac9
+ms.sourcegitcommit: 45835842604602a011813d0cd70abc5df91b89ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563864"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50750391"
 ---
-# <a name="i-additional-include-directories"></a>/I (Zusätzliche Includeverzeichnisse)
+# <a name="i-additional-include-directories"></a>/ I (Zusätzliche Includeverzeichnisse)
 
 Fügt ein Verzeichnis zur Liste der Verzeichnisse, die nach Includedateien durchsucht.
 
 ## <a name="syntax"></a>Syntax
 
-```
-/I[ ]directory
-```
+> **/ I**[]*Verzeichnis*
 
-## <a name="arguments"></a>Argumente
+### <a name="arguments"></a>Argumente
 
 *Verzeichnis*<br/>
 Das Verzeichnis in der Liste der Verzeichnisse hinzugefügt werden, die nach Includedateien durchsucht werden.
@@ -40,13 +38,13 @@ Das Verzeichnis in der Liste der Verzeichnisse hinzugefügt werden, die nach Inc
 
 Um mehr als ein Verzeichnis hinzuzufügen, verwenden Sie diese Option mehr als einmal. Verzeichnisse werden durchsucht, nur bis zum angegebenen Includedatei gefunden wird.
 
-Sie können diese Option verwenden, mit der Standardincludepfade ignorieren ([/x (ignorieren Sie Include-Standardpfad)](../../build/reference/x-ignore-standard-include-paths.md)) Option.
+Können Sie diese Option mit dem ([/x (ignorieren Sie Include-Standardpfad)](../../build/reference/x-ignore-standard-include-paths.md)) Option.
 
-Der Compiler sucht für Verzeichnisse in der folgenden Reihenfolge:
+Der Compiler sucht Verzeichnisse, in der folgenden Reihenfolge:
 
-1. Verzeichnisse, die die Quelldatei enthält.
+1. Wenn angegeben, mit einem [#include-Direktive](../../preprocessor/hash-include-directive-c-cpp.md) in doppelte Anführungszeichen Form sucht zuerst lokale Verzeichnisse. Die Suche beginnt im selben Verzeichnis wie die Datei mit den **#include** Anweisung. Wenn dies fehlschlägt, um die Datei nicht finden, durchsucht es in die Verzeichnissen der aktuell geöffneten Includedateien in umgekehrter Reihenfolge, in dem sie geöffnet wurden. Die Suche beginnt im Verzeichnis der übergeordneten Includedatei und wird nach oben durch die Verzeichnisse aller Includedateien der zweiten übergeordneten Ebene fortgesetzt.
 
-1. Verzeichnisse, die mit angegebenen die **/i** Option in der Reihenfolge, in der CL aufruft.
+1. Wenn angegeben, mit einem **#include** -Direktive in spitzen Klammern Formular aus, oder wenn die Suche im lokalen Verzeichnis fehlgeschlagen ist, sucht er angegebene Verzeichnissen mithilfe der **/i** Option in der Reihenfolge, in der CL aufruft in der Befehlszeile.
 
 1. Im angegebenen Verzeichnisse der **INCLUDE** -Umgebungsvariablen angegeben.
 
@@ -54,9 +52,7 @@ Der Compiler sucht für Verzeichnisse in der folgenden Reihenfolge:
 
 1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
 
-1. Klicken Sie auf den Ordner **C/C++** .
-
-1. Klicken Sie auf die **allgemeine** Eigenschaftenseite.
+1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **allgemeine** Eigenschaftenseite.
 
 1. Ändern der **Additional Include Directories** Eigenschaft.
 
@@ -66,7 +62,7 @@ Der Compiler sucht für Verzeichnisse in der folgenden Reihenfolge:
 
 ## <a name="example"></a>Beispiel
 
-Der folgende Befehl sucht die Includedateien, die von MAIN.c angefordert wird, in der folgenden Reihenfolge: zuerst in das Verzeichnis, die dann in das Verzeichnis \include"-Unterverzeichnis aus, und klicken Sie dann in das Verzeichnis \MY\INCLUDE MAIN.c, enthält, und schließlich in den Verzeichnissen zugewiesen, die einzuschließende Umgebungsvariable.
+Der folgende Befehl sucht die Includedateien, die von MAIN.c angefordert wird, in der folgenden Reihenfolge: zuerst, wenn es sich bei mit doppelten Anführungszeichen angegeben, lokale Dateien werden durchsucht. Als Nächstes Suche wird fortgesetzt, im Verzeichnis \include"-Unterverzeichnis aus, und klicken Sie dann in das Verzeichnis \MY\INCLUDE und zugewiesen schließlich in den Verzeichnissen INCLUDE-Umgebungsvariable.
 
 ```
 CL /I \INCLUDE /I\MY\INCLUDE MAIN.C

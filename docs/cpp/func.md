@@ -1,29 +1,19 @@
 ---
-title: __Func__ | Microsoft Docs
-ms.custom: ''
+title: __func__
 ms.date: 10/19/2017
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - __func__
-dev_langs:
-- C++
 ms.assetid: a5299b8d-f0ee-4af2-91dd-8fb165e68798
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d78a249fe5b111c17c29895edcdc3fa5ba2f27a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eecd3efea6239c92a8bc81c0ed13a9563e5b87d2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413593"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438583"
 ---
 # <a name="func"></a>__func__
 
-**(C ++ 11)**  Der vordefinierte Bezeichner &#95; &#95;Func&#95; &#95; ist implizit als eine Zeichenfolge, die den unqualifizierten und nicht erweiterten Namen der einschließenden Funktion enthält definiert. &#95;&#95;Func&#95; &#95; wird vom C++-Standard vorgegeben und ist keine Microsoft-Erweiterung.
+**(C ++ 11)**  Der vordefinierte Bezeichner &#95; &#95;Func&#95; &#95; ist implizit als eine Zeichenfolge, die den unqualifizierten und nicht erweiterten Namen der einschließenden Funktion enthält definiert. &#95;&#95;Func&#95; &#95; wird vom C++-Standard vorgegeben und keine Microsoft-Erweiterung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,7 +23,7 @@ __func__
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt eine Null-terminierte const Char ein Array von Zeichen, das den Namen der Funktion enthält.
+Gibt eine Null-terminierte const Char-Array von Zeichen, das den Namen der Funktion enthält.
 
 ## <a name="example"></a>Beispiel
 

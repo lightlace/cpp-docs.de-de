@@ -1,10 +1,6 @@
 ---
-title: memmove_s, wmemmove_s | Microsoft-Dokumente
-ms.custom: ''
+title: memmove_s, wmemmove_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wmemmove_s
 - memmove_s
@@ -24,22 +20,16 @@ apitype: DLLExport
 f1_keywords:
 - wmemmove_s
 - memmove_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 39fde456dd2e45d38bdd1b6ba8d9d7eb9811dd05
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b60174c3a06e60301a3e9123434220227f4f426
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403894"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561186"
 ---
 # <a name="memmoves-wmemmoves"></a>memmove_s, wmemmove_s
 
@@ -74,7 +64,7 @@ Größe des Zielpuffers.
 Quellobjekt.
 
 *count*<br/>
-Anzahl der Bytes (**Memmove_s**) oder Zeichen (**Wmemmove_s**) zu kopieren.
+Anzahl von Bytes (**Memmove_s**) oder Zeichen (**Wmemmove_s**) zu kopieren.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -84,19 +74,19 @@ Null, wenn erfolgreich; ein Fehlercode, wenn ein Fehler auftritt
 
 |*dest*|*numberOfElements*|*src*|Rückgabewert|Inhalt der *Dest*|
 |------------|------------------------|-----------|------------------|------------------------|
-|**NULL**|alle|alle|**EINVAL**|nicht geändert|
-|alle|alle|**NULL**|**EINVAL**|nicht geändert|
-|alle|< *Anzahl*|alle|**ERANGE**|nicht geändert|
+|**NULL**|any|any|**EINVAL**|nicht geändert|
+|any|any|**NULL**|**EINVAL**|nicht geändert|
+|any|< *Anzahl*|any|**ERANGE**|nicht geändert|
 
 ## <a name="remarks"></a>Hinweise
 
-Kopien *Anzahl* Bytes von Zeichen aus *Src* auf *Dest*. Wenn einige Bereiche des Quellbereichs und Ziel überlappen, **Memmove_s** wird sichergestellt, dass die ursprüngliche Quellbytes in den überlappenden Bereich kopiert werden, bevor überschrieben wird.
+Kopien *Anzahl* -Bytes von Zeichen von *Src* zu *Dest*. Wenn einige Bereiche des Quell- und Ziel überlappen, **Memmove_s** wird sichergestellt, dass die ursprünglichen Quellbytes im überlappenden Bereich kopiert werden, bevor es Sie überschreibt.
 
-Wenn *Dest* oder, wenn *Src* ein null-Zeiger ist oder wenn die Zielzeichenfolge zu klein ist, rufen diese Funktionen einen Handler für ungültige Parameter an, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EINVAL** und **Errno** auf **EINVAL**.
+Wenn *Dest* oder, wenn *Src* ein null-Zeiger ist oder wenn die Zielzeichenfolge zu klein ist, rufen diese Funktionen einen Handler für ungültige Parameter an, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EINVAL** und **Errno** zu **EINVAL**.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**memmove_s**|\<string.h>|
 |**wmemmove_s**|\<wchar.h>|
@@ -132,7 +122,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 Before: 0123456789
