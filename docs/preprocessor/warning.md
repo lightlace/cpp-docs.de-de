@@ -1,31 +1,21 @@
 ---
-title: Warnung | Microsoft-Dokumentation
-ms.custom: ''
+title: warning
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - warning_CPP
 - vc-pragma.warning
-dev_langs:
-- C++
 helpviewer_keywords:
 - pragmas, warning
 - push pragma warning
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 90cb11a6e6ab0c088c0b2425856d61556e76564c
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 53f79061ded358c9cb895fd7e8e245c46ed99fd5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234631"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631721"
 ---
 # <a name="warning-pragma"></a>warning-Pragma
 Aktiviert die selektive Änderung des Verhaltens der Compilerwarnmeldungen.
@@ -46,7 +36,7 @@ Die folgenden Parameter für Warnungsbezeichner stehen zur Verfügung.
 |warning-specifier|Bedeutung|
 |------------------------|-------------|
 |*1, 2, 3, 4*|Wenden Sie die angegebene Ebene auf die angegebenen Warnung(en) an. Dadurch aktiviert sich auch eine angegebene Warnung, die standardmäßig deaktiviert ist.|
-|*default*|Setzen Sie das Warnverhalten auf den Standardwert zurück. Dadurch aktiviert sich auch eine angegebene Warnung, die standardmäßig deaktiviert ist. Die Warnung wird auf der standardmäßigen dokumentierten Ebene generiert.<br /><br /> Weitere Informationen finden Sie unter [Compiler Warnings, die Are Off standardmäßig](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
+|*default*|Setzen Sie das Warnverhalten auf den Standardwert zurück. Dadurch aktiviert sich auch eine angegebene Warnung, die standardmäßig deaktiviert ist. Die Warnung wird auf der standardmäßigen dokumentierten Ebene generiert.<br /><br /> Weitere Informationen finden Sie unter [Compiler Warnings That Are Off by Default](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
 |*disable*|Geben Sie die angegebene(n) Warnung(en) nicht aus.|
 |*Fehler*|Melden Sie die angegebenen Warnungen als Fehler.|
 |*once*|Zeigen Sie die angegebene(n) Meldung(en) nur einmal an.|

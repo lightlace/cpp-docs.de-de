@@ -1,29 +1,18 @@
 ---
-title: Im Dialogfeld für Texttool (C++) (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
-ms.custom: ''
+title: Im Dialogfeld für Texttool (C++) (Bildbearbeitung für Symbole)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.texttool
-dev_langs:
-- C++
 helpviewer_keywords:
 - text, adding to an image
 - Text Tool dialog box [C++]
 ms.assetid: a6036ef4-1871-40db-8239-6ddbe8f422f5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: e55ad361c9252cfc4989926f90a9fedfd523c7d9
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: de12ea4053e1d9013aa2f7ea7337f1f1eefbcabc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313445"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50553646"
 ---
 # <a name="text-tool-dialog-box-c-image-editor-for-icons"></a>Im Dialogfeld für Texttool (C++) (Bildbearbeitung für Symbole)
 

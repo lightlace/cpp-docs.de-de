@@ -1,27 +1,17 @@
 ---
-title: '&lt;regex&gt; | Microsoft-Dokumentation'
-ms.custom: ''
+title: '&lt;regex&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <regex>
-dev_langs:
-- C++
 helpviewer_keywords:
 - regex header
 ms.assetid: 5dd4ef74-6063-4dbc-b692-1960bb736f0b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7ff0fffeffd10f382f4d0d4fe6361c2eddac55e3
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0a4728008130119ed9a01334efb2fea2a4ac0639
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963130"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50627343"
 ---
 # <a name="ltregexgt"></a>&lt;regex&gt;
 
@@ -97,7 +87,7 @@ Um die Details der Grammatik regulärer Ausdrücke zu ändern, schreiben Sie ein
 |Operator|Beschreibung|
 |-|-|
 |[operator==](../standard-library/regex-operators.md#op_eq_eq)|Vergleich von verschiedenen Objekten: gleich.|
-|[operator!=](../standard-library/regex-operators.md#op_neq)|Vergleich von verschiedenen Objekten: ungleich.|
+|[Operator!=](../standard-library/regex-operators.md#op_neq)|Vergleich von verschiedenen Objekten: ungleich.|
 |[operator<](../standard-library/regex-operators.md#op_lt)|Vergleich von verschiedenen Objekten: kleiner als.|
 |[operator\<=](../standard-library/regex-operators.md#op_gt_eq)|Vergleich von verschiedenen Objekten: kleiner als oder gleich.|
 |[operator>](../standard-library/regex-operators.md#op_gt)|Vergleich von verschiedenen Objekten: größer als.|

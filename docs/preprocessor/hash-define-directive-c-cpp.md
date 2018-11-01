@@ -1,14 +1,8 @@
 ---
-title: '##define-Anweisung (C/C++) | Microsoft-Dokumentation'
-ms.custom: ''
+title: '##define-Direktive (C/C++)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - '#define'
-dev_langs:
-- C++
 helpviewer_keywords:
 - define directive (#define), syntax
 - preprocessor, directives
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - '#define directive, syntax'
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8e24c7e020f0008a78d4595577c656003bad359c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: dec555de64a3ebd166bdff5558957f09e1c2755e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765680"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50653751"
 ---
 # <a name="define-directive-cc"></a>#define-Anweisung (C/C++)
 
@@ -66,7 +56,7 @@ Die folgenden Beispiele von Makros mit Argumenten veranschaulichen das zweite Fo
 
 Argumente mit Nebeneffekten können dazu führen, dass Makros unerwartete Ergebnisse erzeugen. Ein angegebener formaler Parameter möglicherweise mehr als einmal in *-Token-Zeichenfolge*. Wenn der formale Parameter durch einen Ausdruck mit Nebeneffekten ersetzt wird, dann wird der Ausdruck samt seinen Nebeneffekten evtl. mehrmals ausgewertet. (Finden Sie unter den Beispielen unter [Tokeneinfügenden Operator (##)](../preprocessor/token-pasting-operator-hash-hash.md).)
 
-Die `#undef`-Direktive führt dazu, dass die Präprozessordefinition eines Bezeichners übergangen wird. Finden Sie unter [#undef-Direktive](../preprocessor/hash-undef-directive-c-cpp.md) für Weitere Informationen.
+Die `#undef`-Anweisung führt dazu, dass die Präprozessordefinition eines Bezeichners übergangen wird. Finden Sie unter [#undef-Direktive](../preprocessor/hash-undef-directive-c-cpp.md) für Weitere Informationen.
 
 Bei der Namen des definierten Makros in *-Token-Zeichenfolge* (auch als Ergebnis einer anderen makroerweiterung), wird er nicht erweitert.
 

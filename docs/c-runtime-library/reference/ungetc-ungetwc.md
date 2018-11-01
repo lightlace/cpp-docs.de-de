@@ -1,10 +1,6 @@
 ---
-title: ungetc, ungetwc | Microsoft-Dokumentation
-ms.custom: ''
+title: ungetc, ungetwc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - ungetwc
 - ungetc
@@ -25,8 +21,6 @@ f1_keywords:
 - _ungettc
 - ungetwc
 - ungetc
-dev_langs:
-- C++
 helpviewer_keywords:
 - ungetwc function
 - ungettc function
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - _ungettc function
 - ungetc function
 ms.assetid: e0754f3a-b4c6-408f-90c7-e6387b830d84
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6618e3e92d605d9e706331b44b352b41d29d6a61
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 95d2160ba4d008ab67f443d4e9dda7180d62b590
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414581"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50633583"
 ---
 # <a name="ungetc-ungetwc"></a>ungetc, ungetwc
 
@@ -72,19 +62,19 @@ Zeiger auf die **FILE**-Struktur.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn erfolgreich, jede dieser Funktionen der Zeichenargument zurückgibt *c*. Wenn *c* nicht zurückgeschoben werden oder wenn kein Zeichen gelesen wurde, wird der Eingabestream unverändert und **Ungetc** gibt ** EOF`; **ungetwc` gibt **WEOF**. Wenn *Stream* ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **EOF** oder **WEOF** zurückgegeben und **Errno** festgelegt ist, um **EINVAL**.
+Wenn erfolgreich, jede dieser Funktionen das Zeichenargument zurückgibt *c*. Wenn *c* nicht zurückgeschoben werden oder wenn kein Zeichen gelesen wurde, der Eingabestream unverändert und **Ungetc** gibt ** EOF`; **ungetwc` gibt **WEOF**. Wenn *Stream* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **EOF** oder **WEOF** zurückgegeben und **Errno** nastaven NA hodnotu **EINVAL**.
 
 Weitere Informationen über diese und andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr (_doserrno, errno, _sys_errlist und _sys_nerr)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Ungetc** -Funktion schiebt das Zeichen *c* wieder *Stream* und löscht den Dateiende-Indikator. Der Stream muss zum Lesen geöffnet sein. Eine nachfolgende Lesevorgang auf *Stream* beginnt mit *c*. Versuch, mithilfe von Push übertragen **EOF** auf den Stream unter Verwendung **Ungetc** wird ignoriert.
+Die **Ungetc** -Funktion schiebt das Zeichen *c* wieder *Stream* und löscht den Dateiende-Indikator. Der Stream muss zum Lesen geöffnet sein. Ein späterer Lesevorgang auf *Stream* beginnt mit *c*. Versuch, mithilfe von Push übertragen **EOF** auf der Stream mit **Ungetc** wird ignoriert.
 
-Zeichen in den Stream unter platziert **Ungetc** kann gelöscht werden, wenn **Fflush**, [Fseek](fseek-fseeki64.md), **Fsetpos**, oder [zurückspulen](rewind.md) wird aufgerufen, bevor das Zeichen aus dem Stream gelesen wird. Der Dateipositionszeiger erhält den Wert, den er auch schon hatte, bevor die Zeichen zurückgeschoben wurden. Der dem Stream entsprechende externe Speicher ist unverändert. Bei einem erfolgreichen **Ungetc** -Aufruf für einen Textstream der dateipositionszeiger nicht angegeben wird, bis alle zurückgeschobenen Zeichen gelesen oder verworfen werden. Auf jedem erfolgreichen **Ungetc** -Aufruf für einen binären Datenstrom, der dateipositionszeiger verringert ist; wenn sein Wert vor einem Aufruf 0 ist, ist der Wert nicht definiert nach dem Aufruf.
+Zeichen eingefügt werden, auf den Stream unter **Ungetc** kann gelöscht werden, wenn **Fflush**, [Fseek](fseek-fseeki64.md), **Fsetpos**, oder [rewind](rewind.md) wird aufgerufen, bevor das Zeichen aus dem Stream gelesen wird. Der Dateipositionszeiger erhält den Wert, den er auch schon hatte, bevor die Zeichen zurückgeschoben wurden. Der dem Stream entsprechende externe Speicher ist unverändert. Bei einem erfolgreichen **Ungetc** Aufruf für einen Textstream, der dateipositionszeiger nicht angegeben ist, bis alle zurückgeschobenen Zeichen gelesen oder verworfen werden. Auf jedem erfolgreichen **Ungetc** Aufrufen von einem binären Stream, der dateipositionszeiger verringert wird, wenn sein Wert vor einem Aufruf 0 ist, ist der Wert nicht definiert nach dem Aufruf.
 
-Ergebnisse sind unvorhersehbar, wenn **Ungetc** zweimal ohne einen Lesevorgang oder zwischen den beiden aufrufen dateipositionierungsvorgang aufgerufen wird. Nach einem Aufruf von **Fscanf**, einen Aufruf von **Ungetc** fehlschlagen, solange kein anderer Lesevorgang (wie z. B. **Getc**) ausgeführt wurde. Grund hierfür ist, **Fscanf** sich selbst aufruft **Ungetc**.
+Ergebnisse sind unvorhersehbar, wenn **Ungetc** zweimal ohne einen Lese- oder zwischen den beiden aufrufen dateipositionierungsvorgang aufgerufen wird. Nach einem Aufruf von **Fscanf**, einen Aufruf von **Ungetc** fehlschlagen, solange kein anderer Lesevorgang (wie z. B. **Getc**) ausgeführt wurde. Grund hierfür ist, **Fscanf** sich selbst aufruft **Ungetc**.
 
-**Ungetwc** ist eine Breitzeichen-Version von **Ungetc**. Allerdings auf jedem erfolgreichen **Ungetwc** -Aufruf für einen Text- oder Binärformat Binärstream bleibt von der dateipositionszeiger nicht angegeben wird, bis alle zurückgeschobenen Zeichen gelesen oder verworfen wurden.
+**Ungetwc** ist eine Breitzeichen-Version von **Ungetc**. Allerdings auf jedem erfolgreichen **Ungetwc** -Aufrufs an einen Text- oder Binärdaten-Datenstrom, der Wert des der dateipositionszeiger ist nicht angegeben, bis alle zurückgeschobenen Zeichen gelesen oder verworfen wurden.
 
 Diese Funktionen sind während der Ausführung threadsicher und sperrabhängige Daten. Eine nicht sperrende Version finden Sie unter [_ungetc_nolock, _ungetwc_nolock](ungetc-nolock-ungetwc-nolock.md).
 
@@ -96,12 +86,12 @@ Diese Funktionen sind während der Ausführung threadsicher und sperrabhängige 
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**ungetc**|\<stdio.h>|
 |**ungetwc**|\<stdio.h> oder \<wchar.h>|
 
-Die Konsole wird in apps der universellen Windows-Plattform (UWP) nicht unterstützt. Standardstream Handles, die mit der Konsole verknüpften sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in uwp-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die Konsole wird in apps für universelle Windows-Plattform (UWP) nicht unterstützt. Standardstreamhandles, die mit der Konsole verknüpft sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in UWP-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 

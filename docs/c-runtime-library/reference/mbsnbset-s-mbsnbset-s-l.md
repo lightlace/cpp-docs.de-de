@@ -1,10 +1,6 @@
 ---
-title: _mbsnbset_s, _mbsnbset_s_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _mbsnbset_s, _mbsnbset_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbset_s_l
 - _mbsnbset_s
@@ -26,8 +22,6 @@ f1_keywords:
 - _mbsnbset_s_l
 - _mbsnbset_s
 - mbsnbset_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcsnset_s function
 - mbsnbset_s function
@@ -38,20 +32,16 @@ helpviewer_keywords:
 - _tcsnset_s function
 - tcsnset_s_l function
 ms.assetid: 811f92c9-cc31-4bbd-8017-2d1bfc6fb96f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 07cbdc979ddd7ba240d9dcaf623d408b8c2681e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5d021f147ba407f5b0b7316afc7cfd79fe300997
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404733"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580973"
 ---
 # <a name="mbsnbsets-mbsnbsetsl"></a>_mbsnbset_s, _mbsnbset_s_l
 
-Legt das erste **n** Bytes einer Multibyte Zeichenfolge auf ein bestimmtes Zeichen. Diese Versionen von [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md) enthalten Sicherheitserweiterungen wie unter [Sicherheitserweiterungen im CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
+Legt die ersten **n** Bytes einer Multibyte-Zeichenfolge auf ein angegebenes Zeichen. Diese Versionen von [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md) enthalten Sicherheitserweiterungen wie unter [Sicherheitserweiterungen im CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
 > [!IMPORTANT]
 > Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -110,13 +100,13 @@ Null, wenn erfolgreich, andernfalls ein Fehlercode.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mbsnbset_s** und **_mbsnbset_s_l** Funktionen legen höchstens die ersten *Anzahl* Bytes *str* auf *c*. Wenn *Anzahl* ist größer als die Länge des *str*, die Länge des *str* anstelle von *Anzahl*. Wenn *c* ein Multibytezeichen und kann nicht festgelegt werden, vollständig auf das letzte Byte, die von angegeben wird *Anzahl*, wird das letzte Byte mit einem Leerzeichen aufgefüllt. **_mbsnbset_s** und **_mbsnbset_s_l** platzieren keine terminierende null am Ende der *str*.
+Die **_mbsnbset_s** und **_mbsnbset_s_l** Funktionen legen höchstens die ersten *Anzahl* Bytes *str* zu *c*. Wenn *Anzahl* ist größer als die Länge des *str*, die Länge des *str* anstelle *Anzahl*. Wenn *c* ein Multibytezeichen und kann nicht festgelegt werden, vollständig auf das letzte Byte, die angegebenen *Anzahl*, das letzte Byte mit einem Leerzeichen aufgefüllt ist. **_mbsnbset_s** und **_mbsnbset_s_l** platzieren kein abschließendes null am Ende der *str*.
 
-**_mbsnbset_s** und **_mbsnbset_s_l** ähneln **_mbsnset**, außer dass sie festgelegt *Anzahl* Bytes anstatt *Anzahl* Zeichen des *c*.
+**_mbsnbset_s** und **_mbsnbset_s_l** ähneln **_mbsnset**, außer dass sie festgelegt *Anzahl* Bytes statt *Anzahl* Zeichen des *c*.
 
-Wenn *str* ist **NULL** oder *Anzahl* NULL ist, generiert diese Funktion eine Ausnahme für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und die Funktion gibt **NULL**. Auch wenn *c* ist kein gültiges Multibytezeichen **Errno** festgelegt ist, um **EINVAL** und ein Leerzeichen wird stattdessen verwendet.
+Wenn *str* ist **NULL** oder *Anzahl* NULL ist, diese Funktion generiert eine Ausnahme für ungültige Parameter, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und die Funktion gibt **NULL**. Auch wenn *c* ist kein gültiges Multibytezeichen, **Errno** nastaven NA hodnotu **EINVAL** und ein Leerzeichen wird stattdessen verwendet.
 
-Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale, _wsetlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die **_mbsnbset_s** Version dieser Funktion verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die **_mbsnbset_s_l** -Version ist beinahe identisch, außer dass er stattdessen den Locale-Parameter verwendet, die übergeben wird. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert wird von der Einstellung beeinflusst die **LC_CTYPE** -kategorieeinstellung des Gebietsschemas, siehe [Setlocale, _wsetlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die **_mbsnbset_s** Version dieser Funktion verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die **_mbsnbset_s_l** -Version ist beinahe identisch, jedoch stattdessen den Gebietsschemaparameter verwendet, der übergeben. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 Die Verwendung dieser Funktionen in C++ wird durch Vorlagenüberladungen vereinfacht. Überladungen können automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -131,7 +121,7 @@ Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_mbsnbset_s**|\<mbstring.h>|
 |**_mbsnbset_s_l**|\<mbstring.h>|
@@ -155,7 +145,7 @@ int main( void )
 }
 ```
 
-## <a name="output"></a>Ausgabe
+## <a name="output"></a>Output
 
 ```Output
 Before: This is a test

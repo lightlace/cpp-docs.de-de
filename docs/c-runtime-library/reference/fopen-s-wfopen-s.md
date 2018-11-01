@@ -1,10 +1,6 @@
 ---
-title: fopen_s, _wfopen_s | Microsoft-Dokumentation
-ms.custom: ''
+title: fopen_s, _wfopen_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wfopen_s
 - fopen_s
@@ -25,8 +21,6 @@ f1_keywords:
 - fopen_s
 - _tfopen_s
 - _wfopen_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wfopen_s function
 - opening files, for file I/O
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - files [C++], opening
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bef5587188cebe4ed7e91cbd95eb46cca7f05044
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b5ac5203f2246a7ede31bcbc9a34c4632772a14c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405626"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636110"
 ---
 # <a name="fopens-wfopens"></a>fopen_s, _wfopen_s
 
@@ -71,7 +61,7 @@ errno_t _wfopen_s(
 
 ### <a name="parameters"></a>Parameter
 
-*pFile*<br/>
+*pFile-Datei*<br/>
 Ein Zeiger auf den Dateizeiger, der den Zeiger auf die geöffnete Datei erhält.
 
 *filename*<br/>
@@ -86,38 +76,38 @@ Null, wenn erfolgreich, ein Fehlercode, wenn ein Fehler auftritt. Weitere Inform
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
-|*pFile*|*filename*|*mode*|Rückgabewert|Inhalt der *pFile*|
+|*pFile-Datei*|*filename*|*mode*|Rückgabewert|Inhalt der *pFile*|
 |-------------|----------------|------------|------------------|------------------------|
-|**NULL**|alle|alle|**EINVAL**|unverändert|
-|alle|**NULL**|alle|**EINVAL**|unverändert|
-|alle|alle|**NULL**|**EINVAL**|unverändert|
+|**NULL**|any|any|**EINVAL**|unverändert|
+|any|**NULL**|any|**EINVAL**|unverändert|
+|any|any|**NULL**|**EINVAL**|unverändert|
 
 ## <a name="remarks"></a>Hinweise
 
-Dateien, die von geöffnet sind **Fopen_s** und **_wfopen_s** können nicht freigegeben. Wenn Sie erfordern, dass eine Datei freigegeben werden soll, verwenden Sie [_fsopen, _wfsopen](fsopen-wfsopen.md) mit der entsprechenden freigabemoduskonstanten – z. B. **_SH_DENYNO** für Lese-/Schreibfreigabe.
+Dateien, die durch das geöffnet werden **Fopen_s** und **_wfopen_s** können nicht freigegeben. Wenn eine Datei freigegeben werden soll, verwenden Sie [_fsopen, _wfsopen](fsopen-wfsopen.md) mit der entsprechenden freigabemoduskonstanten – z. B. **_SH_DENYNO** für Lese-/Schreibfreigabe.
 
-Die **Fopen_s** -Funktion öffnet die Datei, die durch angegebenen *Filename*. **_wfopen_s** ist eine Breitzeichen-Version von **Fopen_s**; die Argumente für **_wfopen_s** sind Zeichenfolgen mit Breitzeichen. **_wfopen_s** und **Fopen_s** Verhalten sich andernfalls identisch.
+Die **Fopen_s** -Funktion öffnet die Datei, die angegebenen *Filename*. **_wfopen_s** ist eine Breitzeichen-Version von **Fopen_s**; die Argumente für **_wfopen_s** sind Breitzeichen Zeichenfolgen. **_wfopen_s** und **Fopen_s** Verhalten sich andernfalls identisch.
 
-**Fopen_s** akzeptiert Pfade, die zum Zeitpunkt der Ausführung im Dateisystem gültig sind UNC-Pfade und Pfade mit zugeordneten Netzwerklaufwerken akzeptiert werden, indem **Fopen_s** solange das System, das den Code ausführt, Zugriff auf die Freigabe hat oder das zugeordnete Netzlaufwerk zum Zeitpunkt der Ausführung. Bei der Erstellung von Pfaden für **Fopen_s**, machen Sie keine Annahmen über die Verfügbarkeit von Laufwerken, Pfaden oder Netzwerkfreigaben in der ausführungsumgebung. Als Verzeichnistrennzeichen in einem Pfad können Sie entweder den Schrägstrich (/) oder den umgekehrten Schrägstrich (\\) verwenden.
+**Fopen_s** akzeptiert Pfade, die im Dateisystem, zum Zeitpunkt der Ausführung; gültig sind UNC-Pfade und Pfade mit zugeordneten Netzwerklaufwerken akzeptiert werden, indem **Fopen_s** , solange das System, das der Code ausgeführt wird, Zugriff auf die Freigabe hat oder Netzlaufwerk zum Zeitpunkt der Ausführung zugeordnete. Beim Erstellen von Pfaden für **Fopen_s**, machen Sie keine Annahmen über die Verfügbarkeit von Laufwerken, Pfaden oder Netzwerkfreigaben in der ausführungsumgebung. Als Verzeichnistrennzeichen in einem Pfad können Sie entweder den Schrägstrich (/) oder den umgekehrten Schrägstrich (\\) verwenden.
 
-Diese Funktionen überprüfen ihre Parameter. Wenn *pFile*, *Filename*, oder *Modus* ist ein null-Zeiger, generieren diese Funktionen eine Ausnahme für ungültige Parameter aus, wie in beschrieben [Parametervalidierung ](../../c-runtime-library/parameter-validation.md).
+Diese Funktionen überprüfen ihre Parameter. Wenn *pFile*, *Filename*, oder *Modus* ist ein null-Zeiger wie in beschrieben, generieren diese Funktionen eine Ausnahme für ungültige Parameter, wegen [Parametervalidierung ](../../c-runtime-library/parameter-validation.md).
 
-Überprüfen Sie stets den Rückgabewert, um festzustellen, ob die Funktion erfolgreich war, bevor Sie mit der Datei andere Vorgänge ausführen. Wenn ein Fehler auftritt, wird der Fehlercode zurückgegeben und die globale Variable **Errno** festgelegt ist. Weitere Informationen finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Überprüfen Sie stets den Rückgabewert, um festzustellen, ob die Funktion erfolgreich war, bevor Sie mit der Datei andere Vorgänge ausführen. Der Fehlercode wird zurückgegeben, wenn ein Fehler auftritt, und die globale Variable **Errno** festgelegt ist. Weitere Informationen finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="unicode-support"></a>Unterstützung für Unicode
 
-**Fopen_s** unterstützt Unicode-Dateistreams. Um eine neue oder vorhandene Unicode-Datei zu öffnen, geben eine *ccs-* Flag, das angibt, das die gewünschte Codierung zu **Fopen_s**:
+**Fopen_s** unterstützt Unicode-Dateistreams. Um eine neue oder vorhandene Unicode-Datei zu öffnen, geben eine *ccs* Flag, das angibt, das die gewünschte Codierung zu **Fopen_s**:
 
-**Fopen_s (& fp ', "newfile.txt", "ccs-RW-Medien, =**_Codierung_**");**
+**Fopen_s (& fp ', "newfile.txt", "RW-Medien, ccs =**_Codierung_**");**
 
 Zulässige Werte von *Codierung* sind **UNICODE**, **UTF-8**, und **UTF-16LE**. Wenn es kein Wert angegeben wird, für die *Codierung*, **Fopen_s** ANSI-Codierung verwendet.
 
-Wenn die Datei bereits vorhanden ist und zum Lesen oder Anhängen geöffnet ist, bestimmt die Bytereihenfolge-Marke (BOM), sofern in der Datei vorhanden, die Codierung. Die BOM-Codierung hat Vorrang vor der Codierung, die von angegeben wird die *ccs-* Flag. Die *ccs-* -Codierung wird nur verwendet werden, wenn keine BOM vorhanden ist oder wenn die Datei eine neue Datei ist.
+Wenn die Datei bereits vorhanden ist und zum Lesen oder Anhängen geöffnet ist, bestimmt die Bytereihenfolge-Marke (BOM), sofern in der Datei vorhanden, die Codierung. Die BOM-Codierung hat Vorrang vor der Codierung, die angegeben wird die *ccs* Flag. Die *ccs* -Codierung wird nur verwendet werden, wenn keine BOM vorhanden ist oder wenn die Datei eine neue Datei ist.
 
 > [!NOTE]
-> BOM-Erkennung gilt nur für Dateien, die im Unicode-Modus geöffnet werden. Das heißt durch Übergeben der *ccs-* Flag.
+> BOM-Erkennung gilt nur für Dateien, die im Unicode-Modus geöffnet werden; Das heißt durch Übergeben der *ccs* Flag.
 
-Die folgende Tabelle fasst die Modi zusammen, für die verschiedenen *ccs-* Flags, die sich auf **Fopen_s** und für die Bytereihenfolge-Marken in der Datei.
+Die folgende Tabelle fasst die Modi zusammen, für verschiedene *ccs* Flags, die auf erhalten **Fopen_s** und für die Bytereihenfolge-Marken in der Datei.
 
 ### <a name="encodings-used-based-on-ccs-flag-and-bom"></a>Verwendete Codierungen auf Grundlage von ccs-Flag und BOM
 
@@ -129,7 +119,7 @@ Die folgende Tabelle fasst die Modi zusammen, für die verschiedenen *ccs-* Flag
 
 In Dateien, die zum Schreiben im Unicode-Modus geöffnet werden, wird automatisch eine BOM geschrieben.
 
-Wenn *Modus* ist **"a, ccs =**_Codierung_**"**, **Fopen_s** versucht zuerst, öffnen Sie die Datei mit Lese- und Schreibzugriff. Ist der Vorgang erfolgreich, liest die Funktion die BOM, um die Codierung für die Datei zu bestimmen. Schlägt der Vorgang fehl, verwendet die Funktion die Standardcodierung für die Datei. In beiden Fällen **Fopen_s** erneut öffnet dann die Datei mit Schreibschutz. (Dies gilt für **eine** Modus nur Not **a +**.)
+Wenn *Modus* ist **"a, ccs =**_Codierung_**"**, **Fopen_s** versucht zuerst, die Datei mit Lese-öffnen und Schreibzugriff gewähren. Ist der Vorgang erfolgreich, liest die Funktion die BOM, um die Codierung für die Datei zu bestimmen. Schlägt der Vorgang fehl, verwendet die Funktion die Standardcodierung für die Datei. In beiden Fällen **Fopen_s** erneut öffnet, wird die Datei mit Schreibschutz. (Dies gilt für **eine** Modus nur nicht **a +**.)
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -137,42 +127,42 @@ Wenn *Modus* ist **"a, ccs =**_Codierung_**"**, **Fopen_s** versucht zuerst, öf
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tfopen_s**|**fopen_s**|**fopen_s**|**_wfopen_s**|
 
-Die Zeichenfolge *Modus* gibt die Art des Zugriffs, der für die Datei angefordert wird, wie folgt an.
+Die Zeichenfolge *Modus* gibt die Art des Zugriffs, die wie folgt für die Datei angefordert wird.
 
 |*mode*|Zugriff|
 |-|-|
-**"r"**|Öffnet zum Lesen. Wenn die Datei nicht vorhanden oder kann nicht gefunden werden, die **Fopen_s** -Aufruf fehl.
+**"r"**|Öffnet zum Lesen. Wenn die Datei nicht vorhanden ist oder wurde nicht gefunden, die **Fopen_s** -Aufruf fehl.
 **"w"**|Öffnet eine leere Datei zum Schreiben. Wenn die angegebene Datei vorhanden ist, wird ihr Inhalt zerstört.
 **„a“**|Wird vor dem Schreiben neuer Daten in die Datei zum Schreiben am Ende der Datei (Anfügen) geöffnet, ohne die EOF-Markierung (end-of-file, Dateiende) zu entfernen. Erstellt die Datei, wenn sie nicht vorhanden ist.
 **„r+“**|Öffnet sowohl zum Lesen als auch zum Schreiben. Die Datei muss vorhanden sein.
 **„w+“**|Öffnet eine leere Datei zum Lesen und Schreiben. Wenn die Datei vorhanden ist, wird ihr Inhalt zerstört.
 **„a+“**|Öffnet sich zum Lesen und Anfügen. Der Anfügevorgang umfasst das Entfernen der EOF-Markierung, bevor neue Daten in die Datei geschrieben werden. Die EOF-Markierung wird nach Abschluss des Schreibvorgangs nicht wiederhergestellt. Erstellt die Datei, wenn sie nicht vorhanden ist.
 
-Wenn eine Datei geöffnet wird, mithilfe der **"a"** oder **"a +"** Zugriffstyp, am Ende der Datei erfolgen alle Schreibvorgänge. Der Dateizeiger kann mit [Fseek](fseek-fseeki64.md) oder [zurückspulen](rewind.md), er wird jedoch immer verschoben zurück an das Ende der Datei, bevor ein Schreibvorgang durchgeführt wird, damit vorhandene Daten nicht überschrieben werden können.
+Wenn eine Datei geöffnet wird, mithilfe der **"a"** oder **"a +"** Zugriffstyp am Ende der Datei erfolgen alle Schreibvorgänge. Der Dateizeiger kann mit [Fseek](fseek-fseeki64.md) oder [rewind](rewind.md), er wird jedoch immer verschoben zurück an das Ende der Datei, bevor ein Schreibvorgang durchgeführt wird, damit vorhandene Daten überschrieben werden können.
 
-Die **"a"** Modus wird nicht die EOF-Markierung entfernt, bevor Daten an die Datei angefügt. Nach dem Anfügen werden durch den MS-DOS-Befehl TYPE nur Daten bis zur ursprünglichen EOF-Markierung angezeigt, aber keine Daten, die an die Datei angefügt wurden. Die **"a +"** Modus wird die EOF-Markierung entfernt, bevor Daten an die Datei angefügt. Nach dem Anhängen werden mit dem Befehl MS-DOS TYPE alle Daten in der Datei angezeigt. Die **"a +"** Modus ist erforderlich, damit das Anfügen an eine streamdatei, die mit STRG + Z EOF-Markierung beendet wird.
+Die **"a"** Modus wird nicht die EOF-Markierung entfernt, bevor die Daten an die Datei angefügt. Nach dem Anfügen werden durch den MS-DOS-Befehl TYPE nur Daten bis zur ursprünglichen EOF-Markierung angezeigt, aber keine Daten, die an die Datei angefügt wurden. Die **"a +"** Modus wird die EOF-Markierung entfernt, bevor Daten an die Datei angefügt. Nach dem Anhängen werden mit dem Befehl MS-DOS TYPE alle Daten in der Datei angezeigt. Die **"a +"** Modus ist erforderlich, zum Anfügen an eine streamdatei, die mithilfe der STRG + Z EOF-Markierung beendet wird.
 
-Wenn die **"R +"**, **"w +"**, oder **"a +"** Zugriff angegeben wird, sind sowohl Lese-als auch Schreibvorgänge zulässig. (Die Datei ist dann für ein "Update" geöffnet.) Wenn Sie jedoch vom Lesevorgang in den Schreibvorgang wechseln, muss die Eingabeoperation eine EOF-Markierung antreffen. Wenn keine EOF-Markierung vorhanden ist, müssen Sie einen zwischenzeitlichen Aufruf einer dateipositionierenden Funktion verwenden. Die dateipositionierenden Funktionen sind **Fsetpos**, [Fseek](fseek-fseeki64.md), und [zurückspulen](rewind.md). Wenn Sie vom Schreibvorgang in den Lesevorgang wechseln, müssen Sie einen zwischenzeitlichen Aufruf von verwenden **Fflush** oder einer dateipositionierenden Funktion.
+Wenn die **"R +"**, **"w +"**, oder **"a +"** angegeben wird, sind Lese- und Schreibvorgänge zulässig. (Die Datei ist dann für ein "Update" geöffnet.) Wenn Sie jedoch vom Lesevorgang in den Schreibvorgang wechseln, muss die Eingabeoperation eine EOF-Markierung antreffen. Wenn keine EOF-Markierung vorhanden ist, müssen Sie einen zwischenzeitlichen Aufruf einer dateipositionierenden Funktion verwenden. Die dateipositionierenden Funktionen sind **Fsetpos**, [Fseek](fseek-fseeki64.md), und [rewind](rewind.md). Wenn Sie vom Schreibvorgang in den Lesevorgang wechseln, müssen Sie einen zwischenzeitlichen Aufruf von verwenden **Fflush** oder einer dateipositionierenden Funktion.
 
-Zusätzlich zu den oben angegebenen Werten können die folgenden Zeichen enthalten sein *Modus* um den Übersetzungsmodus für Zeilenumbruchzeichen anzugeben:
+Zusätzlich zu den obigen Werten können können in die folgenden Zeichen enthalten sein *Modus* um den Übersetzungsmodus für Zeilenumbruchzeichen anzugeben:
 
-|*Modus* Modifizierer|Übersetzungsmodus|
+|*Modus* Modifizierer|Commit-Modus|
 |-|-|
 **t**|Öffnen im Textmodus (übersetzt).
 **b**|Öffnen im binären (unübersetzten) Modus; Übersetzungen von Wagenrücklauf- und Zeilenvorschubzeichen werden unterdrückt.
 
-Im Textmodus (übersetzt) wird STRG + Z als EOF-Zeichen bei Eingabe interpretiert. In den Dateien geöffnet zum Lesen/Schreiben mit **"a +"**, **Fopen_s** STRG + Z am Ende der Datei gesucht und entfernt, sofern möglich die Markierung. Dies geschieht, da mit [Fseek](fseek-fseeki64.md) und **Ftell** zum Navigieren innerhalb einer Datei, die mit STRG + Z endet verursachen [Fseek](fseek-fseeki64.md) gegen Ende der Datei nicht ordnungsgemäß verhält.
+Im (übersetzten) Textmodus wird STRG + Z als EOF Zeichen bei Eingabe interpretiert. In den Dateien geöffnet zum Lesen/Schreiben mit **"a +"**, **Fopen_s** STRG + Z am Ende der Datei überprüft und entfernt, wenn möglich die Markierung. Dies geschieht, da mit [Fseek](fseek-fseeki64.md) und **Ftell** zum Navigieren innerhalb einer Datei, die mit STRG + Z, endet kann dazu führen, dass [Fseek](fseek-fseeki64.md) am Ende der Datei nicht ordnungsgemäß verhält.
 
-Darüber hinaus wird im Textmodus Carriage Return-Zeilenvorschub-Kombinationen in einzelne Zeilenvorschübe bei Eingabe übersetzt, und Zeilenvorschubzeichen in Carriage Return-Zeilenvorschub-Kombinationen bei der Ausgabe übersetzt werden. Wenn eine Stream-E/A-Funktion von Unicode im Textmodus (Standard) funktioniert, wird angenommen, dass es sich bei Quell- oder Zielstream um eine Sequenz von Multibytezeichen handelt. Daher konvertieren die Unicode streameingabefunktionen Multibytezeichen in Breitzeichen (wie bei einem Aufruf der **Mbtowc** Funktion). Aus demselben Grund konvertieren die Unicode-streamausgabefunktionen Breitzeichen in Multibytezeichen (wie bei einem Aufruf der **Wctomb** Funktion).
+Darüber hinaus wird im Textmodus Carriage Return-Zeilenvorschub-Kombinationen in einzelne Zeilenvorschübe bei Eingabe übersetzt, und Zeilenvorschubzeichen in Carriage Return-Zeilenvorschub-Kombinationen, bei der Ausgabe übersetzt werden. Wenn eine Stream-E/A-Funktion von Unicode im Textmodus (Standard) funktioniert, wird angenommen, dass es sich bei Quell- oder Zielstream um eine Sequenz von Multibytezeichen handelt. Daher konvertieren die Unicode-Streameingabefunktionen Multibytezeichen in Breitzeichen (wie bei einem Aufruf der **mbtowc**-Funktion). Aus demselben Grund konvertieren die Unicode-Streamausgabefunktionen Breitzeichen in Multibytezeichen (wie bei einem Aufruf der **wctomb**-Funktion).
 
-Wenn **t** oder **b** nicht Situation, in der *Modus*, wird der standardübersetzungsmodus durch die globale Variable definiert [_fmode](../../c-runtime-library/fmode.md). Wenn **t** oder **b** vorangestellt wird das Argument, die Funktion fehl und gibt **NULL**.
+Wenn **t** oder **b** nicht erhält, *Modus*, wird der standardübersetzungsmodus durch die globale Variable definiert [_fmode](../../c-runtime-library/fmode.md). Wenn **t** oder **b** ist das Argument, die Funktion schlägt fehl und gibt mit dem Präfix **NULL**.
 
 Weitere Informationen zur Anwendung von Text- und Binärmodi in Unicode- und Multibyte-Stream-E/A finden Sie unter [Text- und Binärmodusdatei-E/A](../../c-runtime-library/text-and-binary-mode-file-i-o.md) und [Unicodestream-E/A im Text- und Binärmodus](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
 
 |*Modus* Modifizierer|Verhalten|
 |-|-|
-**c**|Aktivieren Sie das commitflag für den zugeordneten *Filename* , damit der Inhalt des Dateipuffers direkt auf Datenträger geschrieben werden wenn entweder **Fflush** oder **_flushall** aufgerufen wird.
-**n**|Setzen Sie das commitflag für den zugeordneten zurück *Filename* auf "No-Commit". Dies ist die Standardeinstellung. Dabei wird auch das globale Commitflag überschrieben, wenn Sie das Programm mit COMMODE.OBJ verknüpfen. Der Standardwert des globalen Commitflags lautet "no-commit", es sei denn, Sie verknüpfen das Programm explizit mit COMMODE.OBJ (siehe [Link Options](../../c-runtime-library/link-options.md)).
+**c**|Aktivieren Sie das commitflag für den zugeordneten *Filename* , damit der Inhalt des Dateipuffers direkt, wenn entweder auf den Datenträger geschrieben werden **Fflush** oder **_flushall** aufgerufen wird.
+**n**|Zurücksetzen der Commit-Flag für das zugeordnete *Filename* auf "No-Commit". Dies ist die Standardeinstellung. Dabei wird auch das globale Commitflag überschrieben, wenn Sie das Programm mit COMMODE.OBJ verknüpfen. Der Standardwert des globalen Commitflags lautet "no-commit", es sei denn, Sie verknüpfen das Programm explizit mit COMMODE.OBJ (siehe [Link Options](../../c-runtime-library/link-options.md)).
 **N**|Gibt an, dass die Datei nicht von untergeordneten Prozessen geerbt wird.
 **S**|Gibt an, dass das Zwischenspeichern für den sequenziellen Zugriff vom Datenträger optimiert, aber nicht darauf beschränkt ist.
 **R**|Gibt an, dass das Zwischenspeichern für den zufälligen Zugriff vom Datenträger optimiert, aber nicht darauf beschränkt ist.
@@ -180,16 +170,16 @@ Weitere Informationen zur Anwendung von Text- und Binärmodi in Unicode- und Mul
 **D**|Gibt an, dass eine Datei temporär ist. Sie wird gelöscht, wenn der letzte Dateizeiger geschlossen wird.
 **CCS =**_Codierung_|Gibt den codierten Zeichensatz verwenden (eines **UTF-8**, **UTF-16LE**, oder **UNICODE**) für diese Datei. Machen Sie keine Angabe, wenn Sie ANSI-Codierung wünschen.
 
-Gültige Zeichen für die *Modus* Zeichenfolge im **Fopen_s** und [_fdopen](fdopen-wfdopen.md) entsprechen *Oflag* in verwendeten Argumente [_ Öffnen Sie](open-wopen.md) und [_sopen](sopen-wsopen.md)wie folgt.
+Gültige Zeichen für die *Modus* in verwendete Zeichenfolge **Fopen_s** und [_fdopen](fdopen-wfdopen.md) entsprechen *Oflag* verwendeten Argumenten [_ Öffnen Sie](open-wopen.md) und [_sopen](sopen-wsopen.md)wie folgt.
 
-|Zeichen in *Modus* Zeichenfolge|Entsprechende *Oflag* Wert für die _öffnen/_sopen|
+|Zeichen in *Modus* Zeichenfolge|Entsprechende *Oflag* Wert für _open/_sopen|
 |-------------------------------|----------------------------------------------------|
 |**a**|**_O_WRONLY** &#124; **_O_APPEND** (in der Regel **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_APPEND **)|
 |**a +**|**_O_RDWR** &#124; **_O_APPEND** (in der Regel **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
 |**r**|**_O_RDONLY**|
 |**R +**|**_O_RDWR**|
 |**W**|**_O_WRONLY** (in der Regel **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_TRUNC **)|
-|**+ w**|**_O_RDWR** (in der Regel **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
+|**w +**|**_O_RDWR** (in der Regel **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
 |**b**|**_O_BINARY**|
 |**t**|**_O_TEXT**|
 |**c**|Keiner|
@@ -199,10 +189,10 @@ Gültige Zeichen für die *Modus* Zeichenfolge im **Fopen_s** und [_fdopen](fdop
 |**T**|**_O_SHORTLIVED**|
 |**D**|**_O_TEMPORARY**|
 |**CCS = UNICODE**|**_O_WTEXT**|
-|**CCS = UTF-8**|**_O_UTF8**|
-|**CCS-UTF-16LE =**|**_O_UTF16**|
+|**CCS = UTF-8**|**"_O_UTF8"**|
+|**CCS = UTF-16LE**|**"_O_UTF16"**|
 
-Bei Verwendung von **Rb** Modus, Ihr Code Portieren müssen und davon ausgehen, einen Großteil der Datei lesen müssen keine und/oder die Leistung des Netzwerks ist, im Speicher abgebildete Win32-Dateien möglicherweise auch eine Option.
+Bei Verwendung von **Rb** Modus müssen nicht den Code und erwarten einen Großteil der Datei zu lesen bzw. nicht besonders wichtig Leistung des Netzwerks sind, im Speicher abgebildete Win32-Dateien möglicherweise auch eine Option.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -217,7 +207,7 @@ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../
 
 Alle Versionen [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).
 
-Die **c**, **n**, und **t** *Modus* Optionen sind Microsoft-Erweiterungen für **Fopen_s** und [_fdopen](fdopen-wfdopen.md) und sollte nicht wo ANSI-Portabilität gewünscht wird verwendet werden.
+Die **c**, **n**, und **t** *Modus* Optionen sind Microsoft-Erweiterungen für **Fopen_s** und [_fdopen](fdopen-wfdopen.md) und sollte nicht, wo ANSI-Portabilität gewünscht ist verwendet werden.
 
 ## <a name="example"></a>Beispiel
 

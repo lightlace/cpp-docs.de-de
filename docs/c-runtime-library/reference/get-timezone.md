@@ -1,10 +1,6 @@
 ---
-title: _get_timezone | Microsoft-Dokumentation
-ms.custom: ''
+title: _get_timezone
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_timezone
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - _get_timezone
 - get_timezone
-dev_langs:
-- C++
 helpviewer_keywords:
 - time zones
 - get_timezone function
 - _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 111cbff00d1f6119fbd806cc5fc3d14c28a7d7c1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26cf8114ab766bdb394d2db9ad5842622a447bd1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398275"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613914"
 ---
 # <a name="gettimezone"></a>_get_timezone
 
@@ -60,17 +50,17 @@ Der Unterschied in Sekunden zwischen UTC und Ortszeit.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg NULL oder ein **Errno** Wert, wenn ein Fehler auftritt.
+Bei Erfolg NULL oder eine **Errno** -Wert, wenn ein Fehler auftritt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_get_timezone** Funktion ruft den Unterschied in Sekunden zwischen UTC und Ortszeit als ganze Zahl ab. Der Standardwert beträgt 28.800 Sekunden für Pacific Standard Time (acht Stunden nach UTC).
+Die **_get_timezone** Funktion ruft den Unterschied in Sekunden zwischen UTC und Ortszeit als Ganzzahl ab. Der Standardwert beträgt 28.800 Sekunden für Pacific Standard Time (acht Stunden nach UTC).
 
-Wenn *Sekunden* ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** auf **EINVAL** und gibt **EINVAL**.
+Wenn *Sekunden* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** zu **EINVAL** und gibt **EINVAL**.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_get_timezone**|\<time.h>|
 

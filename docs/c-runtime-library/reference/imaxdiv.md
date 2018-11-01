@@ -1,10 +1,6 @@
 ---
-title: imaxdiv | Microsoft-Dokumentation
-ms.custom: ''
+title: imaxdiv
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - imaxdiv
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - imaxdiv
-dev_langs:
-- C++
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: db2a57e9b91672d39fbce5eaee061043604a0998
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 23067b2028fc11193fae707e25165fb0ce754515
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399695"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434457"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
@@ -61,15 +51,15 @@ Der Nenner.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Imaxdiv** mit Argumenten des Typs aufgerufen [Intmax_t](../../c-runtime-library/standard-types.md) gibt eine Struktur des Typs [Imaxdiv_t](../../c-runtime-library/standard-types.md) herausgeberzeichenfolge den Quotienten und den Rest enthält.
+**Imaxdiv** mit Argumenten des Typs aufgerufen [Intmax_t](../../c-runtime-library/standard-types.md) gibt eine Struktur des Typs [Imaxdiv_t](../../c-runtime-library/standard-types.md) , die besteht aus den Quotienten und den Rest.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Imaxdiv** -Funktion teilt *Anzahl* von *Denom* und berechnet dadurch den Quotienten und den Rest enthält. Die **Imaxdiv_t** Struktur enthält den Quotienten **Intmax_t** **Quot**, und der Rest **Intmax_t** **Rem**. Das Zeichen des Quotienten entspricht dem Zeichen des mathematischen Quotienten. Der absolute Wert ist die größte ganze Zahl, die kleiner ist als der absolute Wert des mathematischen Quotienten. Wenn der Nenner 0 ist, wird das Programm mit einer Fehlermeldung beendet.
+Die **Imaxdiv** -Funktion teilt *Anzahl* von *Denom* und berechnet dadurch den Quotienten und den Rest. Die **Imaxdiv_t** Struktur enthält den Quotienten **Intmax_t** **Quot**, und den Rest **Intmax_t** **Rem**. Das Zeichen des Quotienten entspricht dem Zeichen des mathematischen Quotienten. Der absolute Wert ist die größte ganze Zahl, die kleiner ist als der absolute Wert des mathematischen Quotienten. Wenn der Nenner 0 ist, wird das Programm mit einer Fehlermeldung beendet.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**imaxdiv**|\<inttypes.h>|
 

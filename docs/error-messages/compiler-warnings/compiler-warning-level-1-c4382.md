@@ -1,45 +1,35 @@
 ---
-title: Compilerwarnung (Stufe 1) C4382 | Microsoft Docs
-ms.custom: ''
+title: Compilerwarnung (Stufe 1) C4382
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4382
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4382
 ms.assetid: 34be9ad3-bae6-411a-8f80-0c8fd0d2c092
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 29afe066fb86d0dd99216a63c057046ec76de55b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: cca2f8cc13cc8317bac3736e142ef58e126ed994
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704320"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629215"
 ---
 # <a name="compiler-warning-level-1-c4382"></a>Compilerwarnung (Stufe 1) C4382
 
-> Auslösen von "*Typ*": ein Typ mit __clrcall-Destruktor oder Kopierkonstruktor nur in "/ CLR" abgefangen werden kann: pure-Modul
+> Auslösen von "*Typ*": ein Typ mit __clrcall-Destruktor oder Kopierkonstruktor kann nur in "/ CLR" abgefangen werden: pure-Modul
 
 ## <a name="remarks"></a>Hinweise
 
-Die **/CLR: pure** -Compileroption in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt wird.
+Die **/CLR: pure** Compileroption ist in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt.
 
-Beim Kompilieren mit **"/ CLR"** (nicht **/CLR: pure**), Ausnahmebehandlung erwartet die Memberfunktionen in einem systemeigenen Typ sein [__cdecl](../../cpp/cdecl.md) und nicht [__clrcall](../../cpp/clrcall.md). Systemeigene Typen mit Memberfunktionen verwenden `__clrcall` Aufrufkonvention kann nicht aufgefangen werden, in einem Modul kompiliert mit **"/ CLR"**.
+Bei der Kompilierung mit **"/ CLR"** (nicht **/CLR: pure**), Ausnahmebehandlung erwartet, dass die Member-Funktionen in einem systemeigenen Typ sein [__cdecl](../../cpp/cdecl.md) und nicht [__clrcall](../../cpp/clrcall.md). Systemeigene Typen mit Memberfunktionen verwenden `__clrcall` Aufrufkonvention kann nicht abgefangen werden, in einem Modul mit kompiliert **"/ CLR"**.
 
-Wenn in einem Modul kompiliert werden, mit der Ausnahme abgefangen wird **/CLR: pure**, können Sie diese Warnung ignorieren.
+Wenn in einem Modul kompiliert, die mit die Ausnahme abgefangen wird **/CLR: pure**, können Sie diese Warnung ignorieren.
 
 Weitere Informationen finden Sie unter [/clr (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird C4382 generiert.
+Im folgende Beispiel wird die C4382 generiert.
 
 ```cpp
 // C4382.cpp

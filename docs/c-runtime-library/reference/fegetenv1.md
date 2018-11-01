@@ -1,11 +1,6 @@
 ---
-title: Fegetenv | Microsoft Docs
-ms.custom: ''
+title: fegetenv
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fetegenv
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - fegetenv
 - fenv/fegetenv
-dev_langs:
-- C++
 helpviewer_keywords:
 - fetegenv function
 ms.assetid: 68962421-6978-4b27-8e4c-ad1577830cf6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fc8b5d189838c2788bc6200f9072c9511e61d42f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d3985e4dd2b3944bcdddb79605887def7ba15473
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396169"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668090"
 ---
 # <a name="fegetenv"></a>fegetenv
 
@@ -55,15 +44,15 @@ int fegetenv(
 ### <a name="parameters"></a>Parameter
 
 *penv*<br/>
-Zeiger auf eine **Fenv_t** Objekt, das die aktuelle gleitkommaumgebung Werte enthalten.
+Zeiger auf ein **Fenv_t** Objekt, das die Werte der aktuellen gleitkommaumgebung enthalten.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0, wenn die Gleitkomma-Umgebung erfolgreich in gespeicherten *Penv*. Andernfalls wird ein Wert ungleich null zurückgegeben.
+Gibt 0, wenn die gleitkommaumgebung erfolgreich in gespeicherten *Penv*. Andernfalls wird ein Wert ungleich null zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Fegetenv** Funktion speichert den aktuelle Gleitkomma-Umgebung in das Objekt verweist, zu *Penv*. Die Gleitkommaumgebung ist ein Satz von Statusflags und Steuermodi, die Gleitkommaberechnungen beeinflussen. Darunter fallen auch das Rundungsverhalten und die Statusflags für Gleitkommaausnahmen.  Wenn *Penv* verweist nicht auf eine gültige **Fenv_t** -Objekt nachfolgenden Verhalten ist nicht definiert.
+Die **Fegetenv** Funktion speichert die aktuelle gleitkommaumgebung in das Objekt verweist *Penv*. Die Gleitkommaumgebung ist ein Satz von Statusflags und Steuermodi, die Gleitkommaberechnungen beeinflussen. Darunter fallen auch das Rundungsverhalten und die Statusflags für Gleitkommaausnahmen.  Wenn *Penv* verweist nicht auf ein gültiges **Fenv_t** -Objekt resultierende Verhalten nicht definiert ist.
 
 Um diese Funktion zu verwenden, müssen Sie vor dem Aufruf Gleitkommaoptimierungen deaktivieren, die den Zugriff mithilfe der `#pragma fenv_access(on)`-Direktive verhindern könnten. Weitere Informationen finden Sie unter [fenv_access](../../preprocessor/fenv-access.md).
 

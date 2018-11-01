@@ -1,31 +1,21 @@
 ---
-title: Binäre Ausgabedateien | Microsoft-Dokumentation
-ms.custom: ''
+title: Binäre Ausgabedateien
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - I/O [C++], binary output files
 - files [C++], binary output files
 - binary data, binary output files
 ms.assetid: 180954af-8cd6-444b-9a76-2f630a3389d8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cdb101620b1a61f3a29057ee408cf9e89d38f9e8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 99445275a8f92622f451e8a88082dc2b28fb60b6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842351"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50615643"
 ---
 # <a name="binary-output-files"></a>Binäre Ausgabedateien
 
-Streams wurden ursprünglich für Text entwickelt, deswegen ist die Standardmethode für die Ausgabe „text“. Im Textmodus erweitert das neue Zeilenumbruchzeichen (hexadezimal 10) auf einen Zeilenumbruch (nur 16-Bit) aus. Die Erweiterung kann Probleme verursachen, wie hier gezeigt wird:
+Streams wurden ursprünglich für Text entwickelt, deswegen ist die Standardmethode für die Ausgabe „text“. Im Textmodus wird Sie das Zeilenumbruchzeichen (hexadezimal 10) auf einen Zeilenumbruch an (nur 16-Bit) erweitert. Die Erweiterung kann Probleme verursachen, wie hier gezeigt wird:
 
 ```cpp
 // binary_output_files.cpp

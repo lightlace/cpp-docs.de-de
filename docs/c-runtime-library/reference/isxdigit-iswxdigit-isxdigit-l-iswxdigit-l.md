@@ -1,10 +1,6 @@
 ---
-title: isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l | Microsoft-Dokumentation
-ms.custom: ''
+title: isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _iswxdigit_l
 - iswxdigit
@@ -27,8 +23,6 @@ f1_keywords:
 - iswxdigit
 - isxdigit
 - _istxdigit
-dev_langs:
-- C++
 helpviewer_keywords:
 - isxdigit function
 - istxdigit function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - hexadecimal characters
 - iswxdigit function
 ms.assetid: c8bc5146-0b58-4e3f-bee3-f2318dd0f829
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 92908e6d4c39f990da6fba5008c7ffe8af40ccc9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c7f70fedb19cca746ffb1e276c69b5fc98388b5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403331"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659705"
 ---
 # <a name="isxdigit-iswxdigit-isxdigitl-iswxdigitl"></a>isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
 
@@ -84,13 +74,13 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Routinen gibt ungleich NULL, wenn *c* eine bestimmte Darstellung einer Hexadezimalziffer ist. **Isxdigit** gibt einen Wert ungleich NULL zurück, wenn *c* eine Hexadezimalziffer (A - F, a - f oder 0 - 9). **Iswxdigit** gibt einen Wert ungleich NULL zurück, wenn *c* ein Breitzeichen, das einem hexadezimalziffernzeichen entspricht. Jede dieser Routinen gibt 0 zurück, wenn *c* die testbedingung nicht erfüllt.
+Jede dieser Routinen gibt ungleich NULL, wenn *c* eine bestimmte Darstellung einer Hexadezimalziffer ist. **Isxdigit** gibt einen Wert ungleich NULL zurück, wenn *c* eine Hexadezimalziffer (A - F, a - f oder 0 - 9). **Iswxdigit** gibt einen Wert ungleich NULL zurück, wenn *c* ein Breitzeichen ist, das einem hexadezimalziffernzeichen entspricht. Jede dieser Routinen gibt 0 zurück, wenn *c* die testbedingung nicht erfüllt.
 
-Für das Gebietsschema "C" die **Iswxdigit** hexadezimale Unicode-Zeichen mit voller Breite-Funktion nicht unterstützt.
+Für das Gebietsschema "C" der **Iswxdigit** hexadezimale Unicode-Zeichen mit voller Breite-Funktion nicht unterstützt.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix verwenden das das übergebene Gebietsschema anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die Versionen dieser Funktionen, die **_l** -Suffix verwenden das das übergebene Gebietsschema anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängige Verhalten. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Das Verhalten des **Isxdigit** und **_isxdigit_l** ist undefiniert, wenn *c* nicht EOF ist oder im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und *c* ist keine dieser Werte, lösen die Funktionen eine Assertion.
+Das Verhalten der **Isxdigit** und **_isxdigit_l** ist undefiniert, wenn *c* nicht EOF-Markierung ist oder im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und *c* ist keine dieser Werte, lösen die Funktionen eine Assertion.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -100,7 +90,7 @@ Das Verhalten des **Isxdigit** und **_isxdigit_l** ist undefiniert, wenn *c* nic
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**isxdigit**|\<ctype.h>|
 |**iswxdigit**|\<ctype.h> oder \<wchar.h>|

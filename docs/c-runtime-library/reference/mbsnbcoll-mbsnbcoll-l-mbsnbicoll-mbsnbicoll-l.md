@@ -1,10 +1,6 @@
 ---
-title: _mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbicoll_l
 - _mbsnbcoll_l
@@ -32,8 +28,6 @@ f1_keywords:
 - _ftcsnicoll
 - _ftcsncoll
 - mbsnbcoll_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbsnbcoll_l function
 - mbsnbcoll_l function
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - tcsncoll function
 - tcsnicoll function
 ms.assetid: d139ed63-ccba-4458-baa2-61cbcef03e94
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 19e17552a674d4931134eb9d7b436a0f858843d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c18faa3c93969a683b3ee3ef58dd02e1c1ae61f4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405392"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665197"
 ---
 # <a name="mbsnbcoll-mbsnbcolll-mbsnbicoll-mbsnbicolll"></a>_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l
 
@@ -95,7 +85,7 @@ int _mbsnbicoll_l(
 
 ### <a name="parameters"></a>Parameter
 
-*String1*, *Zeichenfolge2*<br/>
+*Zeichenfolge1*, *Zeichenfolge2*<br/>
 Zu vergleichende Zeichenfolgen.
 
 *count*<br/>
@@ -110,21 +100,21 @@ Der Rückgabewert gibt an, die Beziehung der Teilzeichenfolgen von *string1* und
 
 |Rückgabewert|Beschreibung|
 |------------------|-----------------|
-|< 0|*String1* Teilzeichenfolge höchstens *Zeichenfolge2* Teilzeichenfolge.|
-|0|*String1* Teilzeichenfolge, die identisch mit *Zeichenfolge2* Teilzeichenfolge.|
-|> 0|*String1* Teilzeichenfolge, die größer als *Zeichenfolge2* Teilzeichenfolge.|
+|< 0|*Zeichenfolge1* Teilzeichenfolge höchstens *Zeichenfolge2* Teilzeichenfolge.|
+|0|*Zeichenfolge1* identisch *Zeichenfolge2* Teilzeichenfolge.|
+|> 0|*Zeichenfolge1* größer als *Zeichenfolge2* Teilzeichenfolge.|
 
-Wenn *string1* oder *Zeichenfolge2* ist **NULL** oder *Anzahl* ist größer als **INT_MAX**, die ungültig parameterhandler aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **_NLSCMPERROR** und **Errno** auf **EINVAL**. Mit **_NLSCMPERROR**, fügen Sie entweder String.h oder Mbstring.h.
+Wenn *string1* oder *Zeichenfolge2* ist **NULL** oder *Anzahl* ist größer als **INT_MAX**, die ungültig parameterhandler wird aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **_NLSCMPERROR** und **Errno** zu **EINVAL**. Verwendung von **_NLSCMPERROR**, fügen Sie String.h oder MBSTRING.h ein.
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Funktionen sortiert höchstens die ersten *Anzahl* Bytes im *string1* und *Zeichenfolge2* und gibt einen Wert, der angibt, der Beziehung zwischen den resultierenden der Teilzeichenfolgen *string1* und *Zeichenfolge2*. Wenn das letzte Byte der Teilzeichenfolge von *string1* oder *Zeichenfolge2* ist ein führendes Byte ist, es ist nicht Teil des Vergleichs; diese Funktionen vergleichen nur vollständige Zeichen der Teilzeichenfolgen. **_mbsnbicoll** ist eine Groß-/Kleinschreibung Version von **_mbsnbcoll**. Wie [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) und [_mbsnbicmp](mbsnbicmp-mbsnbicmp-l.md), **_mbsnbcoll** und **_mbsnbicoll** sortieren Sie die beiden Multibyte-Zeichenfolgen gemäß der lexikografische Reihenfolge gemäß der Multibyte [Codepage](../../c-runtime-library/code-pages.md) aktuell in Verwendung.
+Jede dieser Funktionen sortiert höchstens die ersten *Anzahl* Bytes *string1* und *Zeichenfolge2* und gibt einen Wert, der angibt, der die Beziehung zwischen der resultierenden der Teilzeichenfolgen *string1* und *Zeichenfolge2*. Wenn das letzte Byte der Teilzeichenfolge von *string1* oder *Zeichenfolge2* ein führendes Byte, es ist nicht im Vergleich enthalten; diese Funktionen vergleichen nur vollständige Zeichen der Teilzeichenfolgen. **_mbsnbicoll** ist eine Groß-/Kleinschreibung Version **_mbsnbcoll**. Wie [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) und [_mbsnbicmp](mbsnbicmp-mbsnbicmp-l.md), **_mbsnbcoll** und **_mbsnbicoll** sortieren Sie die beiden Multibyte-Zeichenfolgen gemäß der lexikografische Reihenfolge gemäß der Mehrbyte [Codepage](../../c-runtime-library/code-pages.md) aktuell.
 
-Bei manchen Codepages und entsprechenden Zeichensätzen kann die Reihenfolge der Zeichen im Zeichensatz möglicherweise von der lexikografischen Reihenfolge abweichen. Im "C "-Gebietsschema ist dies nicht der Fall: Die Reihenfolge der Zeichen im ASCII-Zeichensatz entspricht der lexikografischen Reihenfolge der Zeichen. In bestimmten europäischen Codepages beispielsweise steht im Zeichensatz das Zeichen "a" (Wert 0x61) vor dem Zeichen "ä" (Wert 0xE4), das Zeichen "ä" steht lexikografisch gesehen jedoch vor dem Zeichen "a". Verwenden, um einen lexikografischen Vergleich von Zeichenfolgen nach Bytes in einem solchen durchführen, **_mbsnbcoll** statt **_mbsnbcmp**; verwenden, um überprüfen lediglich zeichenfolgengleichheit **_mbsnbcmp**.
+Bei manchen Codepages und entsprechenden Zeichensätzen kann die Reihenfolge der Zeichen im Zeichensatz möglicherweise von der lexikografischen Reihenfolge abweichen. Im "C "-Gebietsschema ist dies nicht der Fall: Die Reihenfolge der Zeichen im ASCII-Zeichensatz entspricht der lexikografischen Reihenfolge der Zeichen. In bestimmten europäischen Codepages beispielsweise steht im Zeichensatz das Zeichen "a" (Wert 0x61) vor dem Zeichen "ä" (Wert 0xE4), das Zeichen "ä" steht lexikografisch gesehen jedoch vor dem Zeichen "a". Um einen lexikografischen Vergleich von Zeichenfolgen nach Bytes in einem solchen auszuführen, verwenden **_mbsnbcoll** statt **_mbsnbcmp**; verwenden Sie zum Überprüfen, die nur die zeichenfolgengleichheit **_mbsnbcmp**.
 
-Da die **Coll** Funktionen collate Zeichenfolgen lexikografisch für Vergleiche, wohingegen die **Cmp** Funktionen einfach zeichenfolgengleichheit testen, die **Coll** Funktionen sind wesentlich langsamer als die entsprechenden **Cmp** Versionen. Aus diesem Grund die **Coll** sollten Funktionen verwendet werden, nur, wenn es in der aktuellen Codepage ein Unterschied zwischen der Reihenfolge des Zeichensatzes und der lexikografischen Reihenfolge gibt, und dieser Unterschied für den Zeichenfolgenvergleich relevant ist.
+Da die **Coll** Funktionen Zeichenfolgen für Vergleiche, lexikografisch sortieren, während die **Cmp** Funktionen einfach Gleichheit Zeichenfolge, die **Coll** Funktionen sind sehr viel langsamer als die entsprechenden **Cmp** Versionen. Aus diesem Grund die **Coll** Funktionen sollten verwendet werden, nur, wenn es in der aktuellen Codepage ein Unterschied zwischen der Reihenfolge des Zeichensatzes und der lexikografischen Reihenfolge gibt, und dieser Unterschied für den Zeichenfolgenvergleich relevant ist.
 
-Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -137,7 +127,7 @@ Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kateg
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_mbsnbcoll**|\<mbstring.h>|
 |**_mbsnbcoll_l**|\<mbstring.h>|

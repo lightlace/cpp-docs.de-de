@@ -1,32 +1,22 @@
 ---
-title: Übersicht über die C++-Standardbibliothek| Microsoft-Dokumentation
-ms.custom: ''
+title: Übersicht über die C++-Standardbibliothek
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - headers, C++ library
 - C++ Standard Library
 - libraries, Standard C++
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2795ab431930627160b0275866b573aff36bb97b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57abafbcbd899d3eca7369205afba4ca262ad2c4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845319"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50444992"
 ---
 # <a name="c-standard-library-overview"></a>Übersicht über die C++-Standardbibliothek
 
-Alle C++-Bibliotheken werden in Standardheadern deklariert oder definiert. Diese Implementierung beinhaltet zwei zusätzliche Header \<Hash_map > und \<Hash_set >, vom C++-Standard nicht erforderlich sind. Eine vollständige Liste der Header, die diese Implementierung unterstützt, finden Sie unter [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md).
+Alle C++-Bibliotheken werden in Standardheadern deklariert oder definiert. Diese Implementierung beinhaltet zwei zusätzliche Header, \<Hash_map > und \<Hash_set >, nicht vom C++-Standard erforderlich sind. Eine vollständige Liste der Header, die diese Implementierung unterstützt, finden Sie unter [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md).
 
 Eine freistehende Implementierung der C++-Bibliothek enthält nur eine Teilmenge dieser Header:
 

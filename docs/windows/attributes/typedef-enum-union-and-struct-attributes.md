@@ -1,27 +1,16 @@
 ---
-title: TypeDef, Enum, Union- und Struct-Attribute (C++-COM-) | Microsoft-Dokumentation
-ms.custom: ''
+title: TypeDef, Enum, Union- und Struct-Attribute (C++-COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - union attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 89e1511df2aeabe7cbd63549a1dca6e53944fbe2
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 289935c3651535b5f935624dc33246fbe83a4ceb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791427"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631061"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>typedef-, enum-, union- und struct-Attribute
 
@@ -32,7 +21,7 @@ Die folgenden Attribute gelten für die [Typedef](../../cpp/aliases-and-typedefs
 |Attribut|Beschreibung|
 |---------------|-----------------|
 |[case](case-cpp.md)|Verwendung der [Switch_type](switch-type.md) -Attribut in einer **Union**.|
-|[Benutzerdefinierte](custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|
+|[custom](custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|
 |[export](export.md)|Bewirkt, dass eine Datenstruktur, in der IDL-Datei platziert wird.|
 |[first_is](first-is.md)|Gibt den Index des ersten Arrayelements übertragen werden.|
 |[helpcontext](helpcontext.md)|Gibt eine Kontext-ID, mit dem die Benutzerinformationen zu diesem Element in der Hilfedatei.|
@@ -51,7 +40,7 @@ Die folgenden Attribute gelten für die [Typedef](../../cpp/aliases-and-typedefs
 
 |Attribut|Beschreibung|
 |---------------|-----------------|
-|[Benutzerdefinierte](custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|
+|[custom](custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|
 |[export](export.md)|Bewirkt, dass eine Datenstruktur, in der IDL-Datei platziert wird.|
 |[uuid](uuid-cpp-attributes.md)|Gibt die eindeutige ID für eine Klasse oder Schnittstelle an.|
 |[v1_enum](v1-enum.md)|Wird angewiesen, der angegebene enumerierten Typ als eine 32-Bit-Entität und nicht als der Standardwert 16-Bit-übertragen werden.|
@@ -60,7 +49,7 @@ Die folgenden Attribute gelten für die [Typedef](../../cpp/aliases-and-typedefs
 
 |Attribut|Beschreibung|
 |---------------|-----------------|
-|[Benutzerdefinierte](custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|
+|[custom](custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|
 |[export](export.md)|Bewirkt, dass eine Datenstruktur, in der IDL-Datei platziert wird.|
 |[first_is](first-is.md)|Gibt den Index des ersten Arrayelements übertragen werden.|
 |[last_is](last-is.md)|Gibt den Index des letzten Elements Array übertragen werden.|
@@ -85,9 +74,9 @@ Die folgenden Attribute gelten für die [Typedef](../../cpp/aliases-and-typedefs
 |[Aggregate](aggregates.md)|Gibt an, dass ein Steuerelement die Zielklasse aggregiert.|
 |[appobject](appobject.md)|Identifiziert die Co-Klasse als ein Anwendungsobjekt, das eine vollständige .exe-Anwendung zugeordnet ist, und gibt an, dass die Funktionen und Eigenschaften der Co-Klasse in diese Typbibliothek global verfügbar sind.|
 |[coclass](coclass.md)|Erstellt ein ActiveX-Steuerelement.|
-|[COM_INTERFACE_ENTRY](com-interface-entry-cpp.md)|Fügt einen Eintrag für die Schnittstelle eine COM-Zuordnung.|
+|[com_interface_entry](com-interface-entry-cpp.md)|Fügt einen Eintrag für die Schnittstelle eine COM-Zuordnung.|
 |[Steuerelement](control.md)|Gibt an, dass der benutzerdefinierte Typ eines Steuerelements.|
-|[Benutzerdefinierte](custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|
+|[custom](custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|
 |[db_column](db-column.md)|Bindet eine angegebene Spalte auf das Rowset an.|
 |[db_command](db-command.md)|Erstellt einen OLE DB-Befehl.|
 |[db_param](db-param.md)|Ordnet die angegebenen Member-Variable mit einem Eingabe- oder ausgabeadapter-Parameter und Variablen begrenzt.|
@@ -107,7 +96,7 @@ Die folgenden Attribute gelten für die [Typedef](../../cpp/aliases-and-typedefs
 |[requires_category](requires-category.md)|Gibt die erforderliche Komponentenkategorien der Zielklasse.|
 |[size_is](size-is.md)|Gibt an, die Größe des Arbeitsspeichers für Größe Zeiger zugewiesen, die Größe der Zeiger auf Zeiger, die Größe und Einzel- oder mehrdimensionale Arrays.|
 |[source](source-cpp.md)|Gibt an für eine Klasse das COM-Objekt-Schnittstellen für Verbindungspunkte aus. Auf eine Eigenschaft oder Methode gibt Sie an, dass das Element zurückgibt, ein Objekt oder eine Variante, die eine Ereignisquelle ist.|
-|[Threading](threading-cpp.md)|Gibt das Threadingmodell für eine COM-Objekt.|
+|[threading](threading-cpp.md)|Gibt das Threadingmodell für eine COM-Objekt.|
 |[unique](unique-cpp.md)|Gibt einen eindeutigen Zeiger.|
 |[uuid](uuid-cpp-attributes.md)|Gibt die eindeutige ID für eine Klasse oder Schnittstelle an.|
 |[version](version-cpp.md)|Identifiziert eine bestimmte Version mehrere Versionen einer Klasse.|

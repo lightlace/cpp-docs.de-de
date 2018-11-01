@@ -1,10 +1,6 @@
 ---
-title: _ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock | Microsoft-Dokumentation
-ms.custom: ''
+title: _ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ungetch_nolock
 - _ungetwch_nolock
@@ -34,8 +30,6 @@ f1_keywords:
 - _ungettch_nolock
 - _ungettch
 - _ungetwch_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ungetch function
 - ungetwch function
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c9c6f09c3bd6ce679662d9ea77f8a7b360521b9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7407d26606bd5242c430961faa4f60090b83f036
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411295"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430302"
 ---
 # <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
@@ -92,11 +82,11 @@ Zu verschiebendes Zeichen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Beide Funktionen geben das Zeichen *c* bei Erfolg. Wenn ein Fehler vorliegt **_ungetch** gibt einen Wert von **EOF** und **_ungetwch** gibt **WEOF**.
+Beide Funktionen geben das Zeichen zurück *c* bei erfolgreicher Ausführung. Wenn ein Fehler auftritt, **_ungetch** Rückgabewert **EOF** und **_ungetwch** gibt **WEOF**.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktionen mithilfe von Push übertragen das Zeichen *c* zurück an die Konsole, verursacht *c* auf das nächste Zeichen gelesen werden **_getch** oder **_getche** (oder **_getwch** oder **_getwche**). **_ungetch** und **_ungetwch** fehl, wenn sie vor dem nächsten Lesevorgang mehrmals aufgerufen werden. Die *c* Argument möglicherweise nicht **EOF** (oder **WEOF**).
+Diese Funktionen schieben das Zeichen *c* zurück an die Konsole, verursacht *c* sich das nächste Zeichen lesen, indem **_getch** oder **_getche** (oder **_getwch** oder **_getwche**). **_ungetch** und **_ungetwch** fehl, wenn sie vor dem nächsten Lesevorgang mehrmals aufgerufen werden. Die *c* Argument möglicherweise nicht **EOF** (oder **WEOF**).
 
 Die Versionen mit dem Suffix **_nolock** sind identisch, allerdings sind sie nicht vor Störungen durch andere Threads geschützt. Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.
 
@@ -109,7 +99,7 @@ Die Versionen mit dem Suffix **_nolock** sind identisch, allerdings sind sie nic
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_ungetch**, **_ungetch_nolock**|\<conio.h>|
 |**_ungetwch**, **_ungetwch_nolock**|\<conio.h> oder \<wchar.h>|
