@@ -1,10 +1,6 @@
 ---
-title: _strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsspnp
 - _wcsspnp
@@ -34,8 +30,6 @@ f1_keywords:
 - _wcsspnp
 - _strspnp
 - mbsspnp
-dev_langs:
-- C++
 helpviewer_keywords:
 - _strspnp function
 - _wcsspnp function
@@ -48,23 +42,19 @@ helpviewer_keywords:
 - _tcsspnp function
 - tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 80f257d7aef9678258644758e083817cbbfbe134
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 272375948c8c650b226bfb71073c6c65c5b8acef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415295"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50635291"
 ---
 # <a name="strspnp-wcsspnp-mbsspnp-mbsspnpl"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 
 Gibt einen Zeiger auf das erste Zeichen in einer bestimmten Zeichenfolge zurück, das nicht in einer anderen angegebenen Zeichenfolge ist.
 
 > [!IMPORTANT]
-> **_mbsspnp** und **_mbsspnp_l** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsspnp** und **_mbsspnp_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -102,13 +92,13 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_strspnp**, **_wcsspnp**, und **_mbsspnp** geben einen Zeiger auf das erste Zeichen in *str* , die gehört nicht zu den Satz von Zeichen in *Charset*. Jede dieser Funktionen gibt **NULL** Wenn *str* vollständig besteht aus Zeichen aus *Charset*. Für diese Routinen ist kein Rückgabewert zur Anzeige eines Fehlers reserviert.
+**_strspnp**, **_wcsspnp**, und **_mbsspnp** geben einen Zeiger auf das erste Zeichen in *str* , die gehört nicht zu den Satz von Zeichen in *Charset*. Jede dieser Funktionen gibt **NULL** Wenn *str* besteht vollständig aus Zeichen von *Charset*. Für diese Routinen ist kein Rückgabewert zur Anzeige eines Fehlers reserviert.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mbsspnp** Funktion gibt einen Zeiger auf die multibyte-Zeichen, das das erste Zeichen in *str* , die gehört nicht zu den Satz von Zeichen in *Charset*. **_mbsspnp** erkennt Multibyte-Zeichenfolgen gemäß der [multibyte-Codepage](../../c-runtime-library/code-pages.md) aktuell in Verwendung. Die Suche umfasst keine abschließenden Nullzeichen.
+Die **_mbsspnp** Funktion gibt einen Zeiger auf das Multibytezeichen, das das erste Zeichen in *str* gehört, die nicht zu den Satz von Zeichen in *Charset*. **_mbsspnp** erkennt multibytezeichensequenzen gemäß der [multibyte-Codepage](../../c-runtime-library/code-pages.md) aktuell. Die Suche umfasst keine abschließenden Nullzeichen.
 
-Wenn entweder *str* oder *Charset* ist ein null-Zeiger, ruft diese Funktion den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktion **NULL** und legt **Errno** auf **EINVAL**.
+Wenn entweder *str* oder *Charset* ist ein null-Zeiger ruft diese Funktion den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktion **NULL** und **Errno** zu **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -116,13 +106,13 @@ Wenn entweder *str* oder *Charset* ist ein null-Zeiger, ruft diese Funktion den 
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsspnp**|**_strspnp**|**_mbsspnp**|**_wcsspnp**|
 
-**_strspnp** und **_wcsspnp** sind Single-Byte-Zeichen und Breitzeichenversionen von **_mbsspnp**. **_strspnp** und **_wcsspnp** Verhalten sich genauso wie **_mbsspnp** ; sie werden nur für diese Zuordnung bereitgestellt und sollte nicht für andere Zwecke verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Zuordnungen für generischen Text](../../c-runtime-library/using-generic-text-mappings.md) und [Textzuordnungen für generischen Text](../../c-runtime-library/generic-text-mappings.md).
+**_strspnp** und **_wcsspnp** sind nur Einzelbytezeichen verwendet und Breitzeichenversionen von **_mbsspnp**. **_strspnp** und **_wcsspnp** Verhalten sich genauso wie **_mbsspnp** ; andernfalls sie werden nur für diese Zuordnung bereitgestellt und sollte keinem anderen Grund verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Zuordnungen für generischen Text](../../c-runtime-library/using-generic-text-mappings.md) und [Textzuordnungen für generischen Text](../../c-runtime-library/generic-text-mappings.md).
 
-**_mbsspnp_l** ist nahezu identisch, die stattdessen übergebenen Gebietsschemaparameter verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+**_mbsspnp_l** ist identisch, außer dass er den stattdessen den übergebenen Gebietsschemaparameter verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_mbsspnp**|\<mbstring.h>|
 |**_strspnp**|\<tchar.h>|
@@ -146,7 +136,7 @@ int main( void ) {
 }
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 abbage
