@@ -1,10 +1,6 @@
 ---
-title: _pclose | Microsoft-Dokumentation
-ms.custom: ''
+title: _pclose
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _pclose
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - _pclose
 - pclose
-dev_langs:
-- C++
 helpviewer_keywords:
 - _pclose function
 - pclose function
 - pipes, closing
 ms.assetid: e2e31a9e-ba3a-4124-bcbb-c4040110b3d3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 01e58c23bc91e8819abb3cd24f1ed01ee161ff8f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb0f54ec27992cd0e62b11d8fec5bd54c3daea4b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401775"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507717"
 ---
 # <a name="pclose"></a>_pclose
 
@@ -63,7 +53,7 @@ Rückgabewert aus dem vorherigen Aufruf von **_popen**.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Beendigungsstatus des beendenden Befehlsprozessors oder-1 zurück, wenn ein Fehler auftritt. Das Format des Rückgabewerts ist identisch mit dem für **_cwait**, außer dass die niederwertigen und höherwertigen Bytes vertauscht sind. Wenn der Stream ist **NULL**, **_pclose** legt **Errno** auf **EINVAL** und gibt-1 zurück.
+Gibt den Beendigungsstatus des beendenden Befehlsprozessors oder -1 zurück, wenn ein Fehler auftritt. Das Format des Rückgabewerts ist derselbe wie für **_cwait**, außer dass die niederwertigen und höherwertigen Bytes vertauscht sind. Wenn der Stream **NULL**, **_pclose** legt **Errno** zu **EINVAL** und gibt-1 zurück.
 
 Weitere Informationen über diese und andere Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -73,7 +63,7 @@ Die **_pclose** -Funktion sucht die Prozess-ID des Befehlsprozessors (Cmd.exe), 
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_pclose**|\<stdio.h>|
 

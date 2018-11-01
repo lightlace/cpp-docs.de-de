@@ -1,10 +1,6 @@
 ---
-title: _searchenv_s, _wsearchenv_s | Microsoft-Dokumentation
-ms.custom: ''
+title: _searchenv_s, _wsearchenv_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wsearchenv_s
 - _searchenv_s
@@ -26,8 +22,6 @@ f1_keywords:
 - _wsearchenv_s
 - wsearchenv_s
 - searchenv_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - tsearchenv_s function
 - files [C++], finding
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b14dee908cdf1cc0d564047035a72f501df130b4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40c2d0c42a3d61f84db78015388eba19742af06e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410914"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505676"
 ---
 # <a name="searchenvs-wsearchenvs"></a>_searchenv_s, _wsearchenv_s
 
@@ -97,37 +87,37 @@ Der Name der zu suchenden Datei.
 *Variablenname*<br/>
 Zu durchsuchende Umgebung.
 
-*Pfadnamen*<br/>
+*Pfadname*<br/>
 Puffer zum Speichern des vollständigen Pfades.
 
 *numberOfElements*<br/>
-Größe der *Pathname* Puffer.
+Größe der *Pfadnamen* Puffer.
 
 ## <a name="return-value"></a>Rückgabewert
 
 Null, wenn erfolgreich, ein Fehlercode, wenn ein Fehler auftritt.
 
-Wenn *Filename* ist eine leere Zeichenfolge ist der Rückgabewert **ENOENT**.
+Wenn *Filename* ist eine leere Zeichenfolge und der Rückgabewert ist **ENOENT**.
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
-|*filename*|*Variablenname*|*Pfadnamen*|*numberOfElements*|Rückgabewert|Inhalt der *Pfadnamen*|
+|*filename*|*Variablenname*|*Pfadname*|*numberOfElements*|Rückgabewert|Inhalt der *Pfadname*|
 |----------------|---------------|----------------|------------------------|------------------|----------------------------|
-|alle|alle|**NULL**|alle|**EINVAL**|n/v|
-|**NULL**|alle|alle|alle|**EINVAL**|nicht geändert|
-|alle|alle|alle|<= 0|**EINVAL**|nicht geändert|
+|any|any|**NULL**|any|**EINVAL**|n/v|
+|**NULL**|any|any|any|**EINVAL**|nicht geändert|
+|any|any|any|<= 0|**EINVAL**|nicht geändert|
 
-Wenn eine dieser Fehlerbedingungen auftritt, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** auf **EINVAL** inventurüberprüfung **EINVAL**.
+Wenn eine dieser Fehlerbedingungen auftritt, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EINVAL** und zurückgeben **EINVAL**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_searchenv_s** -Routine sucht nach der Zieldatei, in der angegebenen Domäne. Die *Varname* Variable kann jede beliebige Umgebungsvariable oder benutzerdefinierte Variable, der angibt, wie z. B. eine Liste von Verzeichnispfaden, **Pfad**, **LIB**, und **EINSCHLIEßEN** . Da **_searchenv_s** wird Groß-/Kleinschreibung beachtet, *Varname* sollte die Groß-/Kleinschreibung der Umgebungsvariablen übereinstimmen. Wenn *Varname* entspricht nicht der Name einer Umgebungsvariablen in der Umgebung des Prozesses definiert, gibt die Funktion 0 (null) und die *Pathname* Variable bleibt unverändert.
+Die **_searchenv_s** -Routine sucht für die Zieldatei in der angegebenen Domäne. Die *Varname* Variable kann sein, jede beliebige Umgebungsvariable oder benutzerdefinierte Variable aus, der angibt, wie z. B. eine Liste der Verzeichnispfade, **Pfad**, **LIB**, und **EINSCHLIEßEN** . Da **_searchenv_s** wird Groß-/Kleinschreibung beachtet, *Varname* sollte die Groß-/Kleinschreibung der Umgebungsvariablen. Wenn *Varname* entspricht nicht der Namen einer Umgebungsvariablen in einen Prozess die Umgebung definiert, die Funktion gibt 0 (null) und die *Pfadnamen* Variable bleibt unverändert.
 
-Die Routine sucht zuerst im aktuellen Arbeitsverzeichnis nach der Datei. Wenn die Datei dort nicht gefunden wird, werden als Nächstes die in der Umgebungsvariablen angegebenen Verzeichnisse durchsucht. Wenn die Zieldatei in einem dieser Verzeichnisse ist, wird der neu erstellte Pfad in kopiert *Pathname*. Wenn die *Filename* Datei wurde nicht gefunden, *Pathname* enthält eine leere Null endende Zeichenfolge.
+Die Routine sucht zuerst im aktuellen Arbeitsverzeichnis nach der Datei. Wenn die Datei dort nicht gefunden wird, werden als Nächstes die in der Umgebungsvariablen angegebenen Verzeichnisse durchsucht. Wenn die Zieldatei in einem dieser Verzeichnisse ist, wird in der neu erstellte Pfad kopiert *Pfadnamen*. Wenn die *Filename* Datei wurde nicht gefunden, *Pfadnamen* enthält eine leere Null-terminierte Zeichenfolge.
 
-Die *Pathname* Puffer muss mindestens **_MAX_PATH** Zeichen lang sein, um die volle Länge des erstellten Pfadnamens zu unterstützen. Andernfalls **_searchenv_s** möglicherweise einem Überlauf der *Pathname* Puffer unerwarteten Verhalten führt.
+Die *Pfadnamen* Puffer muss mindestens **_MAX_PATH** Zeichen lang sein, um die volle Länge des erstellten Pfadnamens aufzunehmen. Andernfalls **_searchenv_s** möglicherweise Überlauf der *Pfadnamen* Puffer unerwarteten Verhalten führt.
 
-**_wsearchenv_s** ist eine Breitzeichen-Version von **_searchenv_s**; die Argumente für **_wsearchenv_s** sind Zeichenfolgen mit Breitzeichen. **_wsearchenv_s** und **_searchenv_s** Verhalten sich andernfalls identisch.
+**_wsearchenv_s** ist eine Breitzeichen-Version von **_searchenv_s**; die Argumente für **_wsearchenv_s** sind Breitzeichen Zeichenfolgen. **_wsearchenv_s** und **_searchenv_s** Verhalten sich andernfalls identisch.
 
 In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -139,7 +129,7 @@ In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinf
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_searchenv_s**|\<stdlib.h>|
 |**_wsearchenv_s**|\<stdlib.h> oder \<wchar.h>|
