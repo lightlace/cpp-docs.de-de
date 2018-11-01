@@ -1,10 +1,6 @@
 ---
-title: _msize | Microsoft-Dokumentation
-ms.custom: ''
+title: _msize
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _msize
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - msize
 - _msize
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory blocks
 - msize function
 - _msize function
 ms.assetid: 02b1f89e-d0d7-4f12-938a-9eeba48a0f88
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b9e27751072891bcabc0b068cb5ca57b571d35d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0321e42face817a0a9f12d780f72c86c67ba308d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402152"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477271"
 ---
 # <a name="msize"></a>_msize
 
@@ -60,19 +50,19 @@ Zeiger zum Speicherblock.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_msize** gibt die Größe (in Bytes) als ganze Zahl ohne Vorzeichen zurück.
+**_msize** gibt die Größe (in Byte) als ganze Zahl ohne Vorzeichen zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_msize** Funktion gibt die Größe in Bytes, die durch einen Aufruf von belegten Speicherblocks zurück **Calloc**, **"malloc"**, oder **Realloc**.
+Die **_msize** Funktion gibt die Größe in Bytes, die durch einen Aufruf von belegten Speicherblocks zurück **"calloc"**, **Malloc**, oder **Realloc**.
 
 Wenn die Anwendung mit einer Debugversion der C-Laufzeitbibliotheken verknüpft ist **_msize** löst in [_msize_dbg](msize-dbg.md). Weitere Informationen dazu, wie der Heap während des Debugprozesses verwaltet wird, finden Sie unter [CRT-Debugheap](/visualstudio/debugger/crt-debug-heap-details).
 
-Diese Funktion überprüft seine Parameter. Wenn *Memblock* ist ein null-Zeiger **_msize** wird einen Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn der Fehler behandelt wird, setzt der Funktion **Errno** auf **EINVAL** und gibt-1 zurück.
+Diese Funktion überprüft seine Parameter. Wenn *Memblock* ist ein null-Zeiger **_msize** ruft der Handler für ungültige Parameter, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Die Funktion legt fest, wenn der Fehler behandelt wird, **Errno** zu **EINVAL** und gibt-1 zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_msize**|\<malloc.h>|
 

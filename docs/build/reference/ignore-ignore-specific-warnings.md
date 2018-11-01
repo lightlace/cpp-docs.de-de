@@ -1,27 +1,17 @@
 ---
-title: -IGNORE (bestimmte Warnungen ignorieren) | Microsoft-Dokumentation
-ms.custom: ''
+title: /IGNORE (Bestimmte Warnungen ignorieren)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /OVERWRITE
-dev_langs:
-- C++
 helpviewer_keywords:
 - /IGNORE linker option
 ms.assetid: 37e77387-8838-4697-898f-d376ac641124
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aee498951c01c332dffe720dbd6e3b77c8121aa5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4826ecae1f16cd3834cb6d47850fc686b3682614
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705860"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50479690"
 ---
 # <a name="ignore-ignore-specific-warnings"></a>/IGNORE (Bestimmte Warnungen ignorieren)
 
@@ -58,7 +48,7 @@ Der Linker lässt einige Warnungen nicht ignoriert. Diese Tabelle listet die War
 |LNK4209|Debuginformationen beschädigt; Kompilieren Sie Modul erneut; Objekt wird verknüpft, als ob keine Debuginformationen vorhanden wären|
 |[LNK4224](../../error-messages/tool-errors/linker-tools-warning-lnk4224.md)|`option` ist nicht mehr unterstützt. ignoriert|
 |LNK4228|'`option`' ungültig für eine DLL; ignoriert|
-|[LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md)|Ungültige Direktive /`directive` gefunden; ignoriert|
+|[LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md)|Ungültige Anweisung /`directive` gefunden; ignoriert|
 
 Im Allgemeinen repräsentieren Linkerwarnungen, die nicht ignoriert werden können, Buildfehler, Befehlszeilenfehler oder Fehler bei der Konfiguration, die Sie beheben müssen.
 

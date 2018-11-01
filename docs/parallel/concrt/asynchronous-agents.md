@@ -1,26 +1,16 @@
 ---
-title: Asynchrone Agents | Microsoft-Dokumentation
-ms.custom: ''
+title: Asynchrone Agents
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - asynchronous agents
 - agents [Concurrency Runtime]
 ms.assetid: 6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e226a43358c8279b51a4f02849737c25554ccc5b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 949074981d77702fd23ee3ff70f219c013fa6543
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377343"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50467599"
 ---
 # <a name="asynchronous-agents"></a>Asynchrone Agents
 
@@ -58,7 +48,7 @@ Die folgende Tabelle zeigt einige der wichtigen Methoden, die zu gehören die `a
 |[run](reference/agent-class.md#run)|Führt die Aufgabe, die von ausgeführt wird, die die `agent` Objekt.|
 |[Fertig](reference/agent-class.md#done)|Verschiebt einen Agent für die die `agent_done` Zustand.|
 |[cancel](../../parallel/concrt/cancellation-in-the-ppl.md#cancel)|Wenn der Agent nicht gestartet wurde, wird diese Methode bricht die Ausführung des Agents ab und legt es auf die `agent_canceled` Zustand.|
-|[status](reference/agent-class.md#status)|Ruft den aktuellen Zustand der `agent` Objekt.|
+|[Status](reference/agent-class.md#status)|Ruft den aktuellen Zustand der `agent` Objekt.|
 |[wait](reference/agent-class.md#wait)|Wartet darauf, dass die `agent` Objekt eingeben der `agent_done` oder `agent_canceled` Zustand.|
 |[wait_for_all](reference/agent-class.md#wait_for_all)|Wartet, bis alle bereitgestellten `agent` Objekte zur Eingabe der `agent_done` oder `agent_canceled` Zustand.|
 |[wait_for_one](reference/agent-class.md#wait_for_one)|Wartet darauf, dass mindestens eines der bereitgestellten `agent` Objekte zur Eingabe der `agent_done` oder `agent_canceled` Zustand.|
