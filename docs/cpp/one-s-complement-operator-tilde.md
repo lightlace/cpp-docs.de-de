@@ -1,14 +1,8 @@
 ---
-title: 'Eine&#39;s Komplementoperator: ~ | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Eine&#39;s Komplementoperator: ~'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - "~"
-dev_langs:
-- C++
 helpviewer_keywords:
 - tilde (~) one's complement operator
 - one's complement operator
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - compl operator
 - ~ operator [C++], syntax
 ms.assetid: 4bf81967-34f7-4b4b-aade-fd03d5da0174
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 42cfc8dd3f94b5b85616297908a73c9a791b730a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d8fb8ca56932669ff85646f2aa0c10691122013b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46111445"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50469777"
 ---
 # <a name="one39s-complement-operator-"></a>Eine&#39;s Komplementoperator: ~
 
@@ -37,7 +27,7 @@ ms.locfileid: "46111445"
 
 ## <a name="remarks"></a>Hinweise
 
-Der Einerkomplementoperator (`~`), der manchmal als "bitweiser Komplementoperator" bezeichnet wird, ergibt eine bitweise Einerkomplement seines Operanden. Das bedeutet, dass jedes Bit, das 1 im Operanden ist, 0 im Ergebnis ist. Umgekehrt ist jedes Bit, das 0 im Operanden ist, im Ergebnis 1. Der Operand für den Einerkomplementoperator muss ein ganzzahliger Typ sein.
+Der Einerkomplementoperator (`~`), der manchmal als „bitweiser Komplementoperator“ bezeichnet wird, ergibt eine bitweise Einerkomplement seines Operanden. Das bedeutet, dass jedes Bit, das 1 im Operanden ist, 0 im Ergebnis ist. Umgekehrt ist jedes Bit, das 0 im Operanden ist, im Ergebnis 1. Der Operand für den Einerkomplementoperator muss ein ganzzahliger Typ sein.
 
 ## <a name="operator-keyword-for-"></a>Operator-Schlüsselwort für ~
 
