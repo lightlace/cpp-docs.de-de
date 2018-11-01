@@ -1,10 +1,6 @@
 ---
-title: CMFCRibbonBaseElement-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: CMFCRibbonBaseElement-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonBaseElement
 - AFXBASERIBBONELEMENT/CMFCRibbonBaseElement
@@ -121,8 +117,6 @@ f1_keywords:
 - AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::UpdateTooltipInfo
 - AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnProcessKey
 - AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnSetFocus
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], AddToKeyList
 - CMFCRibbonBaseElement [MFC], AddToListBox
@@ -238,16 +232,12 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3ac668ab85b9a76a5cc0101d0a373fa310128801
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dee5d8c57bfff99e1b558f09c8df53c73e844f3c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403226"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514360"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement-Klasse
 
@@ -404,7 +394,7 @@ Je nach Größe zeigt ein Menübandelement, entweder ein Image Groß oder klein.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird veranschaulicht, wie verschiedene Methoden in der `CMFCRibbonBaseElement` Klasse. Das Beispiel zeigt, wie zum Abrufen einer `CMFCRibbonBaseElement` -Objekt aus einer `CMFCRibbonStatusBar` Klasse, legen Sie die Beschreibung für das Menübandelement, legen Sie den Text, ein Keytip festgelegt, und legen Sie den QuickInfo-Text für das Menübandelement. Dieser Codeausschnitt ist Teil des [Draw Client-Beispiels](../../visual-cpp-samples.md).
+Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in der `CMFCRibbonBaseElement` -Klasse. Das Beispiel zeigt, wie zum Abrufen einer `CMFCRibbonBaseElement` -Objekt aus einer `CMFCRibbonStatusBar` Klasse, legen Sie die Beschreibung für das Menübandelement, legen Sie den Text, ein Keytip festgelegt, und legen Sie den QuickInfo-Text für das Menübandelement. Dieser Codeausschnitt ist Teil des [Draw Client-Beispiels](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_1.cpp)]
 [!code-cpp[NVC_MFC_DrawClient#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_2.cpp)]

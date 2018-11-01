@@ -1,10 +1,6 @@
 ---
-title: tan, Tanf, Tanl | Microsoft Docs
-ms.custom: ''
+title: tan, Tanf, tanl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tan
 - tanf
@@ -27,8 +23,6 @@ f1_keywords:
 - tanf
 - _tanl
 - tanl
-dev_langs:
-- C++
 helpviewer_keywords:
 - tanl function
 - _tanl function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d6c0108e6d72e35a253e31df6ec96cbff19113c0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 79a374142a914e8c2c7cf5c094d443b16e4bce88
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409627"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50564021"
 ---
 # <a name="tan-tanf-tanl"></a>tan, Tanf, tanl
 
@@ -73,7 +63,7 @@ Winkel im Bogenmaß.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **tan** Funktionen geben den Tangens des *x*. Wenn *x* ist größer als oder gleich 263 oder kleiner als oder gleich-263 einer im Ergebnis kommt.
+Die **tan** Funktionen geben den Tangens des *x*. Wenn *x* ist größer als oder gleich 263 oder kleiner als oder gleich-263, tritt ein Genauigkeitsverlust in das Ergebnis.
 
 |Eingabe|SEH-Ausnahme|**Matherr** Ausnahme|
 |-----------|-------------------|-------------------------|
@@ -86,7 +76,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **tan** v
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header (C)|Erforderlicher Header (C++)|
+|-Routine zurückgegebener Wert|Erforderlicher Header (C)|Erforderlicher Header (C++)|
 |-------------|---------------------|-|
 |**tan**, **Tanf**, **Tanl**|\<math.h>|\<cmath> oder \<math.h>|
 

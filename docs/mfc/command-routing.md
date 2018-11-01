@@ -1,12 +1,6 @@
 ---
-title: Befehlsrouting | Microsoft-Dokumentation
-ms.custom: ''
+title: Befehlsrouting
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, command routing
 - command handling [MFC], routing commands
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 543b9e34c881285c295fb7ab7ee2107e36c99a9c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: add047984f5a32e505e8a739922daa137b5e671d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418319"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541699"
 ---
 # <a name="command-routing"></a>Befehlsrouting
 
@@ -45,11 +35,11 @@ Wie aufwändig dieser Weiterleitungsmechanismus verglichen ist, um die Funktions
 
 |Wenn ein Objekt dieses Typs einen Befehl empfängt. sein. sein.|Es gibt sich selbst und anderen Befehlszielobjekten in der folgenden Reihenfolge eine Chance, den Befehl zu verarbeiten:|
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-|MDI-Rahmenfenster (`CMDIFrameWnd`)|1.  aktiv `CMDIChildWnd`<br />2.  Dieses Rahmenfenster<br />3.  Anwendung (`CWinApp` Objekt)|
-|Dokumentrahmenfenster (`CFrameWnd`, `CMDIChildWnd`)|1.  Aktive Ansicht<br />2.  Dieses Rahmenfenster<br />3.  Anwendung (`CWinApp` Objekt)|
+|MDI-Rahmenfenster (`CMDIFrameWnd`)|1.  Aktiver `CMDIChildWnd`<br />2.  Dieses Rahmenfenster<br />3.  Anwendung (`CWinApp`-Objekt)|
+|Dokumentrahmenfenster (`CFrameWnd`, `CMDIChildWnd`)|1.  Aktive Ansicht<br />2.  Dieses Rahmenfenster<br />3.  Anwendung (`CWinApp`-Objekt)|
 |Ansicht|1.  Diese Ansicht<br />2.  Der Ansicht angefügtes Dokument|
 |Dokument|1.  Dieses Dokument<br />2.  Dem Dokument angefügte Dokumentvorlage|
-|Dialogfeld|1.  Dieses Dialogfeld<br />2.  Fenster, das das Dialogfeld besitzt<br />3.  Anwendung (`CWinApp` Objekt)|
+|Dialogfeld|1.  Dieses Dialogfeld<br />2.  Fenster, das das Dialogfeld besitzt<br />3.  Anwendung (`CWinApp`-Objekt)|
 
 Wo nummerierte Einträge in der zweiten Spalte der vorstehenden Tabelle andere Objekte erwähnen, z. B. ein Dokument, finden Sie das entsprechende Element in der ersten Spalte. Wenn Sie z. B. in der zweiten Spalte lesen, dass die Sicht einen Befehl an sein Dokument weiterleitet, können Sie in der ersten Spalte im Eintrag „Dokument“ dem Routing weiter folgen.
 

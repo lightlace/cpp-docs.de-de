@@ -1,10 +1,6 @@
 ---
-title: ostreambuf_iterator-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: ostreambuf_iterator Class
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - streambuf/std::ostreambuf_iterator
 - iterator/std::ostreambuf_iterator::char_type
@@ -12,8 +8,6 @@ f1_keywords:
 - iterator/std::ostreambuf_iterator::streambuf_type
 - iterator/std::ostreambuf_iterator::traits_type
 - iterator/std::ostreambuf_iterator::failed
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::ostreambuf_iterator [C++]
 - std::ostreambuf_iterator [C++], char_type
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - std::ostreambuf_iterator [C++], traits_type
 - std::ostreambuf_iterator [C++], failed
 ms.assetid: dad1e624-2f45-4e94-8887-a885e95f9071
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cec1f3fe6a3a1955b18dacd695d5a459b5550c05
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 5114a658cfde965556f4663d2ba92c9ba4d1eaeb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318693"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543372"
 ---
 # <a name="ostreambufiterator-class"></a>ostreambuf_iterator Class
 
@@ -359,7 +349,7 @@ Das zur Initialiserung des Ausgabestreampufferzeigers verwendete Streamausgabeob
 
 Der erste Konstruktor initialisiert den Zeiger auf den ausgabestreampuffer mit *Strbuf*.
 
-Der zweite Konstruktor initialisiert den Zeiger auf den Ausgabestreampuffer mit `Ostr`. `rdbuf` Der gespeicherte Zeiger darf kein NULL-Zeiger sein.
+Der zweite Konstruktor initialisiert den Zeiger auf den Ausgabestreampuffer mit `Ostr`. `rdbuf`. Der gespeicherte Zeiger darf kein NULL-Zeiger sein.
 
 ### <a name="example"></a>Beispiel
 

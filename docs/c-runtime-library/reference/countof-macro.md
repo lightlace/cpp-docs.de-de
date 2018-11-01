@@ -1,10 +1,6 @@
 ---
-title: _countof-Makro | Microsoft-Dokumentation
-ms.custom: ''
+title: _countof-Makro
 ms.date: 03/22/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,22 +16,16 @@ apitype: DLLExport
 f1_keywords:
 - _countof
 - countof
-dev_langs:
-- C++
 helpviewer_keywords:
 - countof macro
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f30df64b045e2af6181d343a4eafb962d22eaa05
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 60b4350d6cf14a545de67de0bdaee70ee2099006
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394742"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536135"
 ---
 # <a name="countof-macro"></a>_countof-Makro
 
@@ -54,13 +44,13 @@ Der Name eines Arrays.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Anzahl der Elemente im Array, ausgedrückt als eine **Size_t**.
+Die Anzahl der Elemente im Array fest, ausgedrückt als eine **"size_t"**.
 
 ## <a name="remarks"></a>Hinweise
 
-**_countof** wird als ein Präprozessormakro funktionsähnliche implementiert. Die C++-Version verfügt über zusätzliche Vorlage-Maschinen, die zur Kompilierzeit zu erkennen, wenn ein Zeiger anstelle eines Arrays statisch deklarierte übergeben wird.
+**_countof** wird als ein Präprozessormakro funktionsähnliches implementiert. Die C++-Version verfügt über zusätzliche Vorlagen Mechanismen zum Zeitpunkt der Kompilierung zu erkennen, wenn ein Zeiger anstelle eines Arrays statisch deklarierte übergeben wird.
 
-Sicherstellen, dass *Array* ist tatsächlich ein Array, kein Zeiger. In C **_countof** fehlerhafte Ergebnisse erzeugt, wenn *Array* ist ein Zeiger. In C++ **_countof** schlägt fehl, wenn die Kompilierung *Array* ist ein Zeiger.  Ein Array als Parameter an eine Funktion übergeben *unumgänglich in einen Zeiger*, was bedeutet, dass innerhalb der Funktion Verwendung nicht möglich **_countof** um den Umfang des Arrays ermitteln.
+Sicherstellen, dass *Array* ist tatsächlich ein Array, kein Zeiger. In C **_countof** fehlerhafte Ergebnisse erzeugt, wenn *Array* ist ein Zeiger. In C++ **_countof** kann nicht kompiliert werden Wenn *Array* ist ein Zeiger.  Ein Array als Parameter an eine Funktion übergeben *unumgänglich in einen Zeiger*, was bedeutet, dass in der Funktion wird keine **_countof** um das Ausmaß des Arrays zu ermitteln.
 
 ## <a name="requirements"></a>Anforderungen
 
