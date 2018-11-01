@@ -1,10 +1,6 @@
 ---
-title: round, roundf, roundl | Microsoft-Dokumentation
-ms.custom: ''
+title: round, roundf, roundl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - round
 - roundl
@@ -26,23 +22,17 @@ f1_keywords:
 - roundf
 - roundl
 - round
-dev_langs:
-- C++
 helpviewer_keywords:
 - roundl function
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83c157793b80ec851f2c6159a5454f7101d2baed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 126c6bace2b79123094a7f8bcc8f3d3378391d96
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407238"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591771"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
@@ -75,11 +65,11 @@ Der zu rundende Gleitkommawert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **runden** Funktionen geben einen Gleitkommawert, der die nächste ganze Zahl zu darstellt zurück *x*. Halbe Werte werden kaufmännisch gerundet, unabhängig von der Einstellung des Gleitkomma-Rundungsmodus. Es gibt keine Fehlerrückgabe.
+Die **runden** Funktionen geben einen Gleitkommawert, der die nächste ganze Zahl, um darstellt zurück *x*. Halbe Werte werden kaufmännisch gerundet, unabhängig von der Einstellung des Gleitkomma-Rundungsmodus. Es gibt keine Fehlerrückgabe.
 
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|Keine|**_DOMAIN**|
+|± **QNAN**, **SUCHEN**|Keine|**_DOMAIN**|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -87,7 +77,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **runden*
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**runden**, **Roundf**, **Roundl**|\<math.h>|
 
