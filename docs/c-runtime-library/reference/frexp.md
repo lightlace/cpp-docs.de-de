@@ -1,10 +1,6 @@
 ---
-title: Frexp, Frexpf, Frexpl | Microsoft Docs
-ms.custom: ''
+title: Frexp, Frexpf, frexpl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - frexp
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - frexp
 - _frexpl
-dev_langs:
-- C++
 helpviewer_keywords:
 - _frexpl function
 - mantissas, floating-point variables
@@ -33,16 +27,12 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c3bf79e954274b1cedb104ed637ad14b8e1c6431
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c9e259f730d2d63d07032735be930f6f0fdb17e5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400088"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563838"
 ---
 # <a name="frexp-frexpf-frexpl"></a>Frexp, Frexpf, frexpl
 
@@ -83,13 +73,13 @@ Zeiger auf gespeicherten Integer-Exponenten
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Frexp** gibt die Mantisse. Wenn *x* gleich 0 ist, die Funktion gibt 0 für die Mantisse und dem Exponenten zurück. Wenn *Expptr* ist **NULL**, den Handler für ungültige Parameter aufgerufen wird, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** auf **EINVAL** und gibt 0 zurück.
+**Frexp** gibt die Mantisse zurück. Wenn *x* gleich 0 ist, gibt die Funktion 0 für die Mantisse und den Exponenten zurück. Wenn *Expptr* ist **NULL**, wird der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** zu **EINVAL** und gibt 0 zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Frexp** -Funktion gliedert den Gleitkommawert (*x*) in einer Mantisse (*m*) und einen Exponenten (*n*), sodass der Absolute Wert des *m* ist größer als oder gleich 0,5 und kleiner als 1,0 und *x* = *m* * 2<sup>*n*</sup>. Die ganzzahlexponent *n* an der Speicherstelle gespeichert *Expptr*.
+Die **Frexp** -Funktion gliedert den Gleitkommawert (*x*) in einer Mantisse (*m*) und einem Exponenten (*n*), sodass der Absolute Wert des *m* ist größer als oder gleich 0,5 und kleiner als 1,0 und *x* = *m* * 2<sup>*n*</sup>. Der Integer-Exponent *n* befindet sich in den Speicherort verweist *Expptr*.
 
-C++ das Überladen zulässt, sodass Sie Überladungen von aufrufen können **Frexp**. In einem C-Programm **Frexp** immer ein **doppelte** und ein **Int** Zeiger und gibt eine **doppelte**.
+Da C++ das Überladen zulässt, können Sie Überladungen von aufrufen können **Frexp**. In einem C-Programm **Frexp** immer eine **doppelte** und **Int** Zeiger und gibt eine **doppelte**.
 
 ## <a name="requirements"></a>Anforderungen
 

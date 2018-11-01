@@ -1,26 +1,16 @@
 ---
 title: ATL-Klassen und Strukturen | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 05/03/2018
-ms.technology:
-- cpp-atl
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - classes [C++], ATL
 - ATL, classes
 ms.assetid: 7da42e2d-ac84-4506-92bd-502a86d68bdc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 94d69debb4bde61fc76917c70d95bcc6314c7208
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 937edb799729005619325cda15f5a720264e9bfc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46044534"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512540"
 ---
 # <a name="atl-classes-and-structs"></a>ATL-Klassen und Strukturen
 
@@ -71,7 +61,7 @@ Die Active Template Library (ATL) umfasst die folgenden Klassen und Strukturen. 
 |[CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md)|Diese Klasse implementiert ein Dialogfeld (gebunden oder ungebunden), die ActiveX-Steuerelemente hostet.|atlwin.h vorhanden|
 |[CAxWindow](../../atl/reference/caxwindow-class.md)|Diese Klasse stellt Methoden zum Bearbeiten eines Fensters, das Hosten eines ActiveX-Steuerelements.|atlwin.h vorhanden|
 |[CAxWindow2T](../../atl/reference/caxwindow2t-class.md)|Diese Klasse stellt Methoden zum Bearbeiten eines Fensters, das ein ActiveX-Steuerelement hostet und auch Unterstützung für das Hosten von lizenzierter ActiveX-Steuerelementen.|atlwin.h vorhanden|
-|[CBindStatusCallback](../../atl/reference/cbindstatuscallback-class.md)|Diese Klasse implementiert die `IBindStatusCallback`-Schnittstelle.|atlctl.h|
+|[CBindStatusCallback](../../atl/reference/cbindstatuscallback-class.md)|Diese Klasse implementiert die `IBindStatusCallback` -Schnittstelle.|atlctl.h|
 |[CComAggObject](../../atl/reference/ccomaggobject-class.md)|Diese Klasse implementiert [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) für ein zusammengesetztes Objekt.|Atlcom.h|
 |[CComAllocator](../../atl/reference/ccomallocator-class.md)|Diese Klasse stellt Methoden zum Verwalten von Speicher mithilfe von COM-Arbeitsspeicher-Routinen.|Atlbase.h|
 |[CComApartment](../../atl/reference/ccomapartment-class.md)|Diese Klasse bietet Unterstützung für die Verwaltung von einem Apartment in einem Thread Pooling-EXE-Modul.|Atlbase.h|

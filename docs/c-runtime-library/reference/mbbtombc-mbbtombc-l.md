@@ -1,10 +1,6 @@
 ---
-title: _mbbtombc, _mbbtombc_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _mbbtombc, _mbbtombc_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbbtombc_l
 - _mbbtombc
@@ -26,24 +22,18 @@ f1_keywords:
 - _mbbtombc
 - mbbtombc_l
 - mbbtombc
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbbtombc_l function
 - mbbtombc function
 - _mbbtombc_l function
 - _mbbtombc function
 ms.assetid: 78593389-b0fc-43b6-8c1f-2a6bf702d64e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 98053437d2e189c26b46b53ec34ef67740d62bce
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63b5dd33399201cd6ead7dbd1f710c8bebe53c69
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401788"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50547991"
 ---
 # <a name="mbbtombc-mbbtombcl"></a>_mbbtombc, _mbbtombc_l
 
@@ -74,19 +64,19 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn **_mbbtombc** erfolgreich konvertiert *c*, wird ein Multibytezeichen zurückgegeben; andernfalls wird zurückgegeben *c*.
+Wenn **_mbbtombc** erfolgreich konvertiert *c*, wird ein Multibytezeichen zurückgegeben; andernfalls wird *c*.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mbbtombc** Funktion konvertiert ein angegebenes Einzelbyte-Multibytezeichen in ein entsprechendes Doppelbyte-Multibytezeichen. Zeichen muss innerhalb des Bereichs 0 x 20 – 0x7E oder 0xA1 - 0xDF konvertiert werden.
+Die **_mbbtombc** Funktion konvertiert ein angegebenes Einzelbyte-Multibytezeichen in ein entsprechendes Doppelbyte-Multibytezeichen. Zeichen muss innerhalb des Bereichs 0 x 20 – 0x7E oder 0xA1 – 0xDF, konvertiert werden soll.
 
-Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale, _wsetlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktion sind identisch, außer dass **_mbbtombc** verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängiges Verhalten und **_mbbtombc_l** verwendet stattdessen den Gebietsschemaparameter, der übergeben wird. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert wird von der Einstellung beeinflusst die **LC_CTYPE** -kategorieeinstellung des Gebietsschemas, siehe [Setlocale, _wsetlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktion sind nahezu identisch, außer dass **_mbbtombc** verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängiges Verhalten und **_mbbtombc_l** stattdessen verwendet den Locale-Parameter, die übergeben wird. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 In früheren Versionen **_mbbtombc** hieß **Hantozen**. Verwenden Sie bei neuem Code **_mbbtombc**.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_mbbtombc**|\<mbstring.h>|
 |**_mbbtombc_l**|\<mbstring.h>|
