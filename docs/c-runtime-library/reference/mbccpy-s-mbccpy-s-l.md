@@ -1,10 +1,6 @@
 ---
-title: _mbccpy_s, _mbccpy_s_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _mbccpy_s, _mbccpy_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbccpy_s
 - _mbccpy_s_l
@@ -26,8 +22,6 @@ f1_keywords:
 - mbccpy_s_l
 - mbccpy_s
 - _mbccpy_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - tccpy_s_l function
 - _tccpy_s function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a3a52314209b62c818623e315757dcd358ec491
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f9a7554630bd3b46196358c01c21b99978c53e53
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404027"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50575046"
 ---
 # <a name="mbccpys-mbccpysl"></a>_mbccpy_s, _mbccpy_s_l
 
@@ -96,7 +86,7 @@ Kopierziel.
 Größe des Zielpuffers.
 
 *pCopied*<br/>
-Wird mit der Anzahl kopierter Bytes gefüllt (bei Erfolg 1 oder 2). Übergeben Sie **NULL** Wenn Sie über die Anzahl nicht relevant ist.
+Wird mit der Anzahl kopierter Bytes gefüllt (bei Erfolg 1 oder 2). Übergeben Sie **NULL** , wenn die Anzahl nicht relevant ist.
 
 *src*<br/>
 Zu kopierendes Multibytezeichen.
@@ -106,15 +96,15 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Null, wenn erfolgreich, ein Fehlercode, wenn ein Fehler auftritt. Wenn *Src* oder *Dest* ist **NULL**, oder wenn mehr als **BuffSizeinBytes** Bytes kopiert werden, um *Dest*, wird der Handler für ungültige Parameter aufgerufen wird, wie in beschrieben, [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, der Funktionen zurück **EINVAL** und **Errno** festgelegt ist, um **EINVAL**.
+Null, wenn erfolgreich, ein Fehlercode, wenn ein Fehler auftritt. Wenn *Src* oder *Dest* ist **NULL**, oder wenn mehr als **BuffSizeinBytes** Bytes kopiert werden *Dest*, wird der Handler für ungültige Parameter aufgerufen wird, wie in beschrieben, [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktionen geben **EINVAL** und **Errno** nastaven NA hodnotu **EINVAL**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mbccpy_s** -Funktion kopiert ein Multibytezeichen von *Src* auf *Dest*. Wenn *Src* verweist nicht auf das führende Byte eines multibytezeichens von einen impliziten Aufruf bestimmt [_ismbblead](ismbblead-ismbblead-l.md), dann wird das einzelne Byte, *Src* zeigt, kopiert. Wenn *Src* verweist auf ein führendes Byte ist, aber das nächste Byte 0 und somit ungültig ist, dann 0 in kopiert *Dest*, **Errno** festgelegt ist, um **EILSEQ**, und die Funktion gibt **EILSEQ**.
+Die **_mbccpy_s** Funktion kopiert ein Multibytezeichen von *Src* zu *Dest*. Wenn *Src* verweist nicht auf das führende Byte eines multibytezeichens laut eines impliziten Aufrufs von [_ismbblead](ismbblead-ismbblead-l.md), dann wird das einzelne Byte, *Src* zeigt, kopiert. Wenn *Src* verweist auf ein führendes Byte ist, aber das nächste Byte 0 und somit ungültig ist, dann 0 ist kopiert *Dest*, **Errno** nastaven NA hodnotu **EILSEQ**, und die Funktion gibt **EILSEQ**.
 
-**_mbccpy_s** fügt keinen null-Abschlusszeichen, aber wenn *Src* verweist auf ein Null-Zeichen, wird diese Null in kopiert *Dest* (Dies ist nur eine reguläre einzelbytekopie).
+**_mbccpy_s** fügt keinen null-Abschlusszeichen, aber wenn *Src* verweist auf ein Null-Zeichen, und klicken Sie dann, dass Null in kopiert wird *Dest* (Dies ist nur eine reguläre einzelbytekopie).
 
-Der Wert in *pCopied* mit der Anzahl kopierter Bytes gefüllt wird. Mögliche Werte sind 1 und 2, wenn der Vorgang erfolgreich ist. Wenn **NULL** übergeben wird, wird dieser Parameter ignoriert.
+Der Wert in *pCopied* wird mit der Anzahl kopierter Bytes gefüllt. Mögliche Werte sind 1 und 2, wenn der Vorgang erfolgreich ist. Wenn **NULL** übergeben wird, kann dieser Parameter wird ignoriert.
 
 |*src*|kopiert *Dest*|*pCopied*|Rückgabewert|
 |-----------|----------------------|---------------|------------------|
@@ -123,9 +113,9 @@ Der Wert in *pCopied* mit der Anzahl kopierter Bytes gefüllt wird. Mögliche We
 |führendes Byte gefolgt von Nicht-0|führendes Byte gefolgt von Nicht-0|2|0|
 |führendes Byte gefolgt von 0|0|1|**EILSEQ**|
 
-Beachten Sie, dass die zweite Zeile nur ein Sonderfall der ersten ist. Beachten Sie außerdem, die die Tabelle annimmt *BuffSizeInBytes* >= *pCopied*.
+Beachten Sie, dass die zweite Zeile nur ein Sonderfall der ersten ist. Beachten Sie auch die Tabelle setzt *BuffSizeInBytes* >= *pCopied*.
 
-**_mbccpy_s** verwendet das aktuelle Gebietsschema für jedes vom Gebietsschema abhängiges Verhalten. **_mbccpy_s_l** ist identisch mit **_mbccpy_s** mit dem Unterschied, dass **_mbccpy_s_l** verwendet das Gebietsschema für jedes gebietsschemaabhängige Verhalten übergeben.
+**_mbccpy_s** verwendet das aktuelle Gebietsschema für jedes vom Gebietsschema abhängige Verhalten. **_mbccpy_s_l** ist identisch mit **_mbccpy_s** mit dem Unterschied, dass **_mbccpy_s_l** verwendet das Gebietsschema für jedes gebietsschemaabhängige Verhalten übergeben wurde.
 
 Die Verwendung dieser Funktionen in C++ wird durch Überladungen (als Vorlagen vorhanden) vereinfacht. Überladungen können automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Secure Template Overloads (Sichere Vorlagenüberladungen)](../../c-runtime-library/secure-template-overloads.md).
 
@@ -137,7 +127,7 @@ Die Verwendung dieser Funktionen in C++ wird durch Überladungen (als Vorlagen v
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_mbccpy_s**|\<mbstring.h>|
 |**_mbccpy_s_l**|\<mbstring.h>|

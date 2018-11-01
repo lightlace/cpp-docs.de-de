@@ -1,10 +1,6 @@
 ---
-title: ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64 | Microsoft-Dokumentation
-ms.custom: ''
+title: ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ctime64
 - _wctime32
@@ -34,8 +30,6 @@ f1_keywords:
 - _tctime64
 - _ctime64
 - ctime
-dev_langs:
-- C++
 helpviewer_keywords:
 - tctime64 function
 - _ctime32 function
@@ -56,16 +50,12 @@ helpviewer_keywords:
 - wctime function
 - time, converting
 ms.assetid: 2423de37-a35c-4f0a-a378-3116bc120a9d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 30caa77fee7e15f91ff7c3f089f18fd51a34aa0b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d1858a36c68a2ca5cedf70a1d74d5f250cbac8df
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404908"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580819"
 ---
 # <a name="ctime-ctime32-ctime64-wctime-wctime32-wctime64"></a>ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
 
@@ -85,7 +75,7 @@ wchar_t *_wctime64( const __time64_t *sourceTime );
 ### <a name="parameters"></a>Parameter
 
 *sourceTime*<br/>
-Ein Zeiger auf die gespeicherte Zeit zum Konvertieren.
+Zeiger auf die gespeicherte Zeit konvertiert.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -93,15 +83,15 @@ Ein Zeiger auf das Zeichenfolgenergebnis **NULL** wird zurückgegeben, wenn:
 
 - *SourceTime* stellt ein Datum vor Mitternacht, 1. Januar 1970 UTC.
 
-- Bei Verwendung von **_ctime32** oder **_wctime32** und *SourceTime* stellt ein Datum nach 23:59:59 am 18. Januar 2038 UTC.
+- Bei Verwendung von **_ctime32** oder **_wctime32** und *SourceTime* stellt ein Datum nach 23:59:59 am 18. Januar 2038, UTC dar.
 
-- Bei Verwendung von **_ctime64** oder **_wctime64** und *SourceTime* stellt ein Datum nach 23:59:59 am 31. Dezember 3000 UTC.
+- Bei Verwendung von **_ctime64** oder **_wctime64** und *SourceTime* stellt ein Datum nach 23:59:59, 31. Dezember 3000 UTC dar.
 
-**CTime** ist eine Inlinefunktion, die ergibt **_ctime64** und **Time_t** entspricht **__time64_t**. Wenn Sie den Compiler, interpretieren erzwingen müssen **Time_t** als das alte 32-Bit **Time_t**, können Sie definieren **_USE_32BIT_TIME_T**. Dadurch wird **Ctime** ausgewertet **_ctime32**. Dies ist nicht zu empfehlen, weil bei Ihrer Anwendung nach dem 18. Januar 2038 ein Fehler auftreten kann. Die Verwendung dieses Makros ist auf 64-Bit-Plattformen nicht zulässig.
+**CTime** ist eine Inlinefunktion, die ergibt **_ctime64** und **Time_t** entspricht **__time64_t**. Wenn Sie erzwingen, dass den Compiler interpretiert müssen **Time_t** als das alte 32-Bit **Time_t**, können Sie definieren **_USE_32BIT_TIME_T**. Dadurch wird **Ctime** ergibt **_ctime32**. Dies ist nicht zu empfehlen, weil bei Ihrer Anwendung nach dem 18. Januar 2038 ein Fehler auftreten kann. Die Verwendung dieses Makros ist auf 64-Bit-Plattformen nicht zulässig.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Ctime** -Funktion konvertiert einen Zeitwert gespeichert als eine [Time_t](../../c-runtime-library/standard-types.md) Wert in eine Zeichenfolge. Die *SourceTime* Wert wird in der Regel von einem Aufruf abgerufen [Zeit](time-time32-time64.md), welche gibt die Anzahl der Sekunden seit Mitternacht vergangenen (00: 00:00), 1. Januar 1970, koordinierte Weltzeit (UTC). Der Rückgabewert der Zeichenfolge enthält genau 26 Zeichen und sieht so aus:
+Die **Ctime** -Funktion konvertiert einen Zeitwert, gespeichert als eine [Time_t](../../c-runtime-library/standard-types.md) Wert in eine Zeichenfolge. Die *SourceTime* Wert wird in der Regel von einem Aufruf abgerufen [Zeit](time-time32-time64.md), gibt die Anzahl der Sekunden seit Mitternacht vergangenen (00: 00:00), 1. Januar 1970, koordinierte Weltzeit (UTC). Der Rückgabewert der Zeichenfolge enthält genau 26 Zeichen und sieht so aus:
 
 ```Output
 Wed Jan 02 02:03:55 1980\n\0
@@ -109,13 +99,13 @@ Wed Jan 02 02:03:55 1980\n\0
 
 Eine 24-Stunden-Uhr wird verwendet. Alle Felder haben eine feste Breite. Das Zeichen für neue Zeile ('\n') und das Nullzeichen ('\0') nehmen die letzten beiden Stellen der Zeichenfolge ein.
 
-Die konvertierte Zeichenfolge wird auch gemäß den lokalen Zeitzoneneinstellungen angepasst. Finden Sie unter der [Zeit](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md), und [Localtime](localtime-localtime32-localtime64.md) Funktionen Informationen zum Konfigurieren der lokalen Zeit und die [_tzset](tzset.md) für Funktion Details zum Definieren der Zeitzone-Umgebung und globale Variablen.
+Die konvertierte Zeichenfolge wird auch gemäß den lokalen Zeitzoneneinstellungen angepasst. Finden Sie unter den [Zeit](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md), und [Localtime](localtime-localtime32-localtime64.md) Funktionen für die Informationen zum Konfigurieren der lokalen Zeit und die [_tzset](tzset.md) für Funktion Details zur Definition der zeitzonenumgebung und globalen Variablen.
 
-Ein Aufruf von **Ctime** ändert die einzelnen statistisch zugeordnete Puffers, in dem die **Gmtime** und **Localtime** Funktionen. Bei jedem Aufruf dieser Routinen wird das Ergebnis des vorherigen Aufrufs zerstört. **CTime** teilt einen statischen Puffer mit den **Asctime** Funktion. Daher einen Aufruf von **Ctime** zerstört die Ergebnisse des vorherigen Aufrufs zum **Asctime**, **Localtime**, oder **Gmtime**.
+Ein Aufruf von **Ctime** ändert die einzelnen statisch zugewiesenen Puffer ein, die die **Gmtime** und **Localtime** Funktionen. Bei jedem Aufruf dieser Routinen wird das Ergebnis des vorherigen Aufrufs zerstört. **CTime** teilt einen statischen Puffer mit der **Asctime** Funktion. Daher einen Aufruf von **Ctime** zerstört das Ergebnis des vorherigen Aufrufs um **Asctime**, **Localtime**, oder **Gmtime**.
 
-**_wctime** und **_wctime64** sind die Breitzeichen-Version des **Ctime** und **_ctime64**; die Rückgabe eines Zeigers in Breitzeichen-Zeichenfolge. Andernfalls **_ctime64**, **_wctime**, und **_wctime64** Verhalten sich genauso wie **Ctime**.
+**_wctime** und **_wctime64** stellen die Breitzeichen-Version des **Ctime** und **_ctime64**; einen Zeiger auf die Breitzeichen-Zeichenfolge zurückgibt. Andernfalls **_ctime64**, **_wctime**, und **_wctime64** Verhalten sich genauso wie **Ctime**.
 
-Diese Funktionen überprüfen ihre Parameter. Wenn *SourceTime* ein null-Zeiger ist oder wenn die *SourceTime* Wert negativ ist, rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, der Funktionen zurück **NULL** und **Errno** auf **EINVAL**.
+Diese Funktionen überprüfen ihre Parameter. Wenn *SourceTime* ein null-Zeiger ist oder wenn die *SourceTime* Wert negativ ist, rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktionen geben **NULL** und **Errno** zu **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -127,7 +117,7 @@ Diese Funktionen überprüfen ihre Parameter. Wenn *SourceTime* ein null-Zeiger 
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**ctime**|\<time.h>|
 |**_ctime32**|\<time.h>|

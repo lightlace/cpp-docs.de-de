@@ -1,12 +1,6 @@
 ---
-title: Verwaltete Typen (C++ / CLI) | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwaltete Typen (C++/CLI)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - data types [C++], managed
 - managed data types [C++]
@@ -23,17 +17,12 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: ae7abc7d8683d282be4c2e1cd24d8f51bd28be86
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fe3b5e3a887e4a440c3570750c569ec6c71ea611
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437781"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595959"
 ---
 # <a name="managed-types-ccli"></a>Verwaltete Typen (C++/CLI)
 
@@ -123,7 +112,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 S.i = 5
@@ -238,10 +227,7 @@ int main() {
 
 ## <a name="see-also"></a>Siehe auch
 
-[.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
-
-[Interoperabilität mit anderen .NET-Sprachen (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)
-
-[Verwaltete Typen (C++/CLI)](../dotnet/managed-types-cpp-cli.md)
-
+[.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
+[Interoperabilität mit anderen .NET-Sprachen (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)<br/>
+[Verwaltete Typen (C++/CLI)](../dotnet/managed-types-cpp-cli.md)<br/>
 [#using-Direktive](../preprocessor/hash-using-directive-cpp.md)

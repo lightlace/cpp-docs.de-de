@@ -1,10 +1,6 @@
 ---
-title: _stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsicoll_l
 - _stricoll_l
@@ -37,8 +33,6 @@ f1_keywords:
 - _tcsicoll
 - mbsicoll
 - stricoll_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - code pages, using for string comparisons
 - _ftcsicoll function
@@ -57,23 +51,19 @@ helpviewer_keywords:
 - strings [C++], comparing by code page
 - ftcsicoll function
 ms.assetid: 8ec93016-5a49-49d2-930f-721566661d82
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f90f6a25c6ecf6796ba3d4d94b6d2f5722eabf9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bd2406751fd2855afd02743c98938e530398e7d1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416371"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579668"
 ---
 # <a name="stricoll-wcsicoll-mbsicoll-stricolll-wcsicolll-mbsicolll"></a>_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 
 Vergleicht Zeichenfolgen mithilfe gebietsschemaspezifischen Informationen.
 
 > [!IMPORTANT]
-> **_mbsicoll** und **_mbsicoll_l** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsicoll** und **_mbsicoll_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -109,7 +99,7 @@ int _mbsicoll_l(
 
 ### <a name="parameters"></a>Parameter
 
-*String1*, *Zeichenfolge2*<br/>
+*Zeichenfolge1*, *Zeichenfolge2*<br/>
 Zu vergleichende mit NULL endende Zeichenfolgen.
 
 *locale*<br/>
@@ -117,24 +107,24 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt einen Wert, der angibt, der Beziehung der *string1* auf *Zeichenfolge2*wie folgt.
+Jede dieser Funktionen gibt einen Wert, der angibt, der Beziehung zwischen *string1* zu *Zeichenfolge2*wie folgt.
 
 |Rückgabewert|Verhältnis von string1 zu string2|
 |------------------|----------------------------------------|
-|< 0|*String1* kleiner als *Zeichenfolge2*|
-|0|*String1* identisch mit *Zeichenfolge2*|
-|> 0|*String1* größer als *Zeichenfolge2*|
+|< 0|*Zeichenfolge1* kleiner als *Zeichenfolge2*|
+|0|*Zeichenfolge1* identisch mit *Zeichenfolge2*|
+|> 0|*Zeichenfolge1* größer als *Zeichenfolge2*|
 |**_NLSCMPERROR**|Es ist ein Fehler aufgetreten.|
 
-Jede dieser Funktionen gibt **_NLSCMPERROR**. Mit **_NLSCMPERROR**, entweder \<string.h > oder \<mbstring.h >. **_wcsicoll** kann fehlschlagen, wenn *string1* oder *Zeichenfolge2* Codes mit Breitzeichen außerhalb der Domäne der Sortierreihenfolge enthält. Wenn ein Fehler auftritt, **_wcsicoll** möglicherweise festgelegt **Errno** auf **EINVAL**. Überprüfen Sie bei einem Fehler bei einem Aufruf von **_wcsicoll**legen **Errno** auf 0 und überprüfen Sie dann **Errno** nach dem Aufruf **_wcsicoll**.
+Jede dieser Funktionen gibt **_NLSCMPERROR**. Verwendung von **_NLSCMPERROR**, entweder \<string.h > oder \<mbstring.h >. **_wcsicoll** kann fehlschlagen, wenn *string1* oder *Zeichenfolge2* breitzeichencodes außerhalb der Domäne der Sortierreihenfolge enthält. Wenn ein Fehler auftritt, **_wcsicoll** kann festgelegt **Errno** zu **EINVAL**. Zu prüfen, ein Fehler bei einem Aufruf von **_wcsicoll**legen **Errno** auf 0, und klicken Sie dann überprüfen **Errno** nach dem Aufruf **_wcsicoll**.
 
 ## <a name="remarks"></a>Hinweise
 
 Jede dieser Funktionen vergleicht Groß-/Kleinschreibung *string1* und *Zeichenfolge2* entsprechend der derzeit verwendeten Codepage. Diese Funktionen sollten nur verwendet werden, wenn es in der aktuellen Codepage einen Unterschied zwischen der Reihenfolge des Zeichensatzes und der lexikografischen Reihenfolge gibt, und dieser Unterschied für den Zeichenfolgenvergleich relevant ist.
 
-**_stricmp** unterscheidet sich von **_stricoll** , da die **_stricmp** Vergleich betroffen **LC_CTYPE**, während die **_stricoll** Vergleich erfolgt gemäß der **LC_CTYPE** und **LC_COLLATE** Kategorien des Gebietsschemas. Weitere Informationen zu den **LC_COLLATE** Kategorie finden Sie unter [Setlocale](setlocale-wsetlocale.md) und [Gebietsschemakategorien](../../c-runtime-library/locale-categories.md). Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebietsschema; die Versionen mit dem **_l** -Suffix sind beinahe identisch, außer dass verwenden allerdings das übergebene Gebietsschema. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+**_stricmp** unterscheidet sich von **_stricoll** darin, dass die **_stricmp** hat Auswirkungen auf Vergleich von **LC_CTYPE**, während die **_stricoll** -Vergleich den **LC_CTYPE** und **LC_COLLATE** Kategorien des Gebietsschemas. Weitere Informationen zu den **LC_COLLATE** Kategorie finden Sie unter [Setlocale](setlocale-wsetlocale.md) und [Gebietsschemakategorien](../../c-runtime-library/locale-categories.md). Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebietsschema; die Versionen mit dem **_l** -Suffix sind beinahe identisch, außer dass sie das übergebene Gebietsschema verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Mit allen diesen Funktionen werden ihre Parameter überprüft. Wenn entweder *string1* oder *Zeichenfolge2* sind **NULL** Zeigern, die Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **_NLSCMPERROR** und **Errno** auf **EINVAL**.
+Mit allen diesen Funktionen werden ihre Parameter überprüft. Wenn entweder *string1* oder *Zeichenfolge2* sind **NULL** Zeigern, die Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **_NLSCMPERROR** und **Errno** zu **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -144,7 +134,7 @@ Mit allen diesen Funktionen werden ihre Parameter überprüft. Wenn entweder *st
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_stricoll**, **_stricoll_l**|\<string.h>|
 |**_wcsicoll**, **_wcsicoll_l**|\<wchar.h>, \<string.h>|

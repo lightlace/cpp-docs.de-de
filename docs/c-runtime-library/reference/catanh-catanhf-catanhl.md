@@ -1,11 +1,6 @@
 ---
-title: catanh, catanhf, catanhl | Microsoft-Dokumentation
-ms.custom: ''
+title: catanh, catanhf, catanhl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - catanh
 - catanhf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/catanh
 - complex/catanhf
 - complex/catanhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - catanh function
 - catanhf function
 - catanhl function
 ms.assetid: 1b6021cb-647a-41b4-9d7f-919cc8b57b86
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cd74d00e7f5be5e7631bc33fb9b7ea13eb32a407
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c71d4e44de72b54fd334fc2464ca221f36855a3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393949"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646360"
 ---
 # <a name="catanh-catanhf-catanhl"></a>catanh, catanhf, catanhl
 
-Ruft den umgekehrten hyperbolischen Tangens einer komplexen Zahl, mit Branch Schnitte außerhalb des Intervalls [-1; + 1] auf der tatsächlichen Achse ab.
+Ruft den umgekehrten hyperbolischen Tangens einer komplexen Zahl mit achsenabschnitten außerhalb des Intervalls [-1; + 1] auf der reellen Achse ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -79,7 +68,7 @@ Eine komplexe Zahl, die einen Winkel als Bogenmaß darstellt
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der umgekehrte hyperbolische Tangens von *z*, im Bogenmaß. Das Ergebnis ist unbounded real Achse, und klicken Sie im Intervall [-Iπ/2; + Iπ/2] der imaginäre Achse. Domänenfehler treten, wenn *z* liegt außerhalb des Intervalls [-1, + 1]. Tritt ein pol-Fehler auf, wenn *z* nicht-1 oder + 1.
+Der umgekehrte hyperbolische Tangens von *z*, im Bogenmaß zurück. Das Ergebnis ist unbegrenzt, auf der reellen Achse, und klicken Sie im Intervall [-Iπ/2; + Iπ/2] auf der imaginären Achse. Domänenfehler werden auftreten, wenn *z* liegt außerhalb des Intervalls [-1, + 1]. Es wird ein polstellenfehler auftreten, wenn *z* -1 oder + 1.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -87,7 +76,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Catanh*
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|C-Header|C++-Header|
+|-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
 |**Catanh**, **Catanhf**, **Catanhl**|\<complex.h>|\<ccomplex>|
 

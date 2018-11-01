@@ -1,10 +1,6 @@
 ---
-title: strcpy_s, wcscpy_s, _mbscpy_s | Microsoft-Dokumentation
-ms.custom: ''
+title: strcpy_s, wcscpy_s, _mbscpy_s
 ms.date: 03/22/2086
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcscpy_s
 - _mbscpy_s
@@ -28,8 +24,6 @@ f1_keywords:
 - _mbscpy_s
 - _tcscpy_s
 - wcscpy_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - strcpy_s function
 - _tcscpy_s function
@@ -39,23 +33,19 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ee648776d4c8b7df1089edf34d30b5c7e59a63c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d7deeb2d3286ca20518527df26c4765197f8a087
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416611"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616605"
 ---
 # <a name="strcpys-wcscpys-mbscpys"></a>strcpy_s, wcscpy_s, _mbscpy_s
 
 Kopiert eine Zeichenfolge. Diese Versionen von [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md) enthalten Sicherheitsverbesserungen, wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
 > [!IMPORTANT]
-> **_mbscpy_s** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscpy_s** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -102,7 +92,7 @@ errno_t _mbscpy_s(
 Speicherort des Zielzeichenfolgenpuffers.
 
 *dest_size*<br/>
-Größe des zielzeichenfolgenpuffers in **Char** Einheiten für schmale und Multi-Byte-Funktionen und **Wchar_t** Einheiten für große Funktionen. Dieser Wert muss größer als 0 (null) und nicht größer als **RSIZE_MAX**.
+Größe des zielzeichenfolgenpuffers in **Char** Einheiten für schmale und Multi-Byte-Funktionen und **"wchar_t"** Einheiten für große Funktionen. Dieser Wert muss größer als 0 (null) und nicht größer sein **RSIZE_MAX**.
 
 *src*<br/>
 Auf NULL endender Quellzeichenfolgepuffer.
@@ -115,23 +105,23 @@ Null (0), wenn erfolgreich; andernfalls ein Fehler.
 
 |*dest*|*dest_size*|*src*|Rückgabewert|Inhalt der *Dest*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**NULL**|alle|alle|**EINVAL**|nicht geändert|
-|alle|alle|**NULL**|**EINVAL**|*Dest*[0] auf 0 festgelegt|
-|alle|0 oder zu klein|alle|**ERANGE**|*Dest*[0] auf 0 festgelegt|
+|**NULL**|any|any|**EINVAL**|nicht geändert|
+|any|any|**NULL**|**EINVAL**|*Dest*[0] auf 0 festgelegt ist|
+|any|0 oder zu klein|any|**ERANGE**|*Dest*[0] auf 0 festgelegt ist|
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Strcpy_s** Funktion übernimmt den Inhalt in die Adresse des *Src*, einschließlich des abschließenden Null-Zeichens zu dem Speicherort, der von angegeben wird *Dest*. Die Zielzeichenfolge muss groß genug sein, um die Quellzeichenfolge und ihr beendendes NULL-Zeichen zu enthalten. Das Verhalten des **Strcpy_s** ist undefiniert, wenn die Quell- und Zielzeichenfolgen überlappen.
+Die **Strcpy_s** Funktion übernimmt den Inhalt in die Adresse des *Src*, einschließlich des abschließenden Zeichens Null mit der angegebenen *Dest*. Die Zielzeichenfolge muss groß genug sein, um die Quellzeichenfolge und ihr beendendes NULL-Zeichen zu enthalten. Das Verhalten der **Strcpy_s** ist undefiniert, wenn die Quell- und Zielzeichenfolgen überlappen.
 
-**Wcscpy_s** ist die Breitzeichen-Version des **Strcpy_s**, und **_mbscpy_s** ist die Multibyte-Zeichenfolgen-Version. Die Argumente der **Wcscpy_s** sind Breitzeichen-Zeichenfolgen, die von **_mbscpy_s** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
+**Wcscpy_s** ist die Breitzeichen-Version von **Strcpy_s**, und **_mbscpy_s** ist die Multibyte-Zeichenfolgen-Version. Die Argumente des **Wcscpy_s** sind Breitzeichen-Zeichenfolgen, die von **_mbscpy_s** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
 
-Wenn *Dest* oder *Src* ein null-Zeiger ist oder wenn das Ziel Größe Zeichenfolge *Dest_size* zu klein ist, wird der Handler für ungültige Parameter aufgerufen, wie beschrieben in [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EINVAL** und **Errno** auf **EINVAL** Wenn *Dest* oder  *Src* ein null-Zeiger ist, und sie zurückgeben **ERANGE** und **Errno** auf **ERANGE** Wenn die Zielzeichenfolge zu klein ist.
+Wenn *Dest* oder *Src* ein null-Zeiger ist oder wenn das Ziel Größe Zeichenfolge *Dest_size* zu klein ist, wird der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EINVAL** und **Errno** zu **EINVAL** beim *Dest* oder  *Src* ein null-Zeiger ist, und geben sie zurück **ERANGE** und **Errno** zu **ERANGE** Wenn die Zielzeichenfolge zu klein ist.
 
 Nach erfolgreicher Ausführung endet die Zielzeichenfolge immer auf NULL.
 
 In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen, wodurch kein Größenargument mehr angegeben werden muss, und sie können automatisch die älteren, weniger sicheren Funktionen durch ihre neueren, sichereren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-Die Bibliothek Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFE". Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Die Bibliothek Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFE" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -141,7 +131,7 @@ Die Bibliothek Debugversionen dieser Funktionen füllen zunächst den Puffer mit
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**strcpy_s**|\<string.h>|
 |**wcscpy_s**|\<string.h> oder \<wchar.h>|
@@ -151,7 +141,7 @@ Diese Funktionen sind Microsoft-spezifisch. Weitere Informationen zur Kompatibil
 
 ## <a name="example"></a>Beispiel
 
-Im Gegensatz zu Quality Produktionscode ruft in diesem Beispiel die sichere Zeichenfolge-Funktionen, ohne auf Fehler überprüft:
+Im Gegensatz zu Code mit Produktionsqualität ruft dieses Beispiel die sichere Zeichenfolge-Funktionen, ohne eine Überprüfung auf Fehler:
 
 ```C
 // crt_strcpy_s.c
@@ -181,7 +171,7 @@ int main(void)
 String = Hello world from strcpy_s and strcat_s!
 ```
 
-Beim Erstellen von C++-Code möglicherweise die Vorlagenversionen einfacher zu verwenden.
+Wenn Sie C++-Code zu erstellen, möglicherweise die Vorlagenversionen einfacher zu verwenden.
 
 ```cpp
 // crt_wcscpy_s.cpp

@@ -1,10 +1,6 @@
 ---
-title: _read | Microsoft-Dokumentation
-ms.custom: ''
+title: _read
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _read
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _read
-dev_langs:
-- C++
 helpviewer_keywords:
 - data [CRT]
 - _read function
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2c67ce8ac0e754bf3003b23c56cd1d3f428be903
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c43cbbc2681433bda02038ae73a827fad904835
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405808"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658442"
 ---
 # <a name="read"></a>_read
 
@@ -70,23 +60,23 @@ Die maximale Anzahl von Bytes.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_microsoft** gibt die Anzahl der Bytes, die gelesen, die kann geringer sein als *Anzahl* Wenn weniger als *Anzahl* Bytes, die in der Datei nach links oder wenn die Datei im Textmodus geöffnet wurde, in diesem Fall jedes Wagenrücklauf Zeilenvorschub Paar '\r\n' wird durch ein einzelnes Zeilenvorschubzeichen "\n" ersetzt. Nur das einzelne Zeilenvorschubzeichen wird im Rückgabewert gezählt. Der Ersatz hat keine Auswirkung auf den Rückgabezeiger.
+**_read** gibt die Anzahl der gelesenen Bytes an, der möglicherweise kleiner als *Anzahl* Wenn weniger als *Anzahl* Bytes in der Datei übrig, oder wenn die Datei im Textmodus geöffnet wurde, in diesem Fall wird jede Wagenrücklauf Return-Zeilenvorschub-Paar "\r\n" wird durch ein einzelnes Zeilenvorschubzeichen '\n' ersetzt. Nur das einzelne Zeilenvorschubzeichen wird im Rückgabewert gezählt. Der Ersatz hat keine Auswirkung auf den Rückgabezeiger.
 
-Wenn die Funktion versucht, am Ende der Datei zu lesen, wird 0 zurückgegeben. Wenn *fd* ist nicht gültig sind, die Datei ist nicht zum Lesen geöffnet, oder die Datei ist gesperrt, die Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktion-1 zurück und legt **Errno** auf **EBADF**.
+Wenn die Funktion versucht, am Ende der Datei zu lesen, wird 0 zurückgegeben. Wenn *fd* ist nicht gültig ist, die Datei ist nicht zum Lesen geöffnet, oder die Datei ist gesperrt, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktion gibt-1 zurück und legt **Errno** zu **EBADF**.
 
-Wenn *buffer* **NULL** ist, wird der ungültige Parameterhandler aufgerufen. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion-1 zurück und **Errno** festgelegt ist, um **EINVAL**.
+Wenn *buffer* **NULL** ist, wird der ungültige Parameterhandler aufgerufen. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, gibt die Funktion-1 zurück und **Errno** nastaven NA hodnotu **EINVAL**.
 
-Weitere Informationen zu diesem und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Weitere Informationen zu diesem und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_microsoft** Funktion liest ein Maximum von *Anzahl* Bytes in *Puffer* aus der Datei zugeordneten *fd*. Der Lesevorgang beginnt an der aktuellen Position des Dateizeigers für die betreffende Datei. Nach dem Lesevorgang zeigt der Dateizeiger auf das nächste ungelesene Zeichen.
+Die **_read** -Funktion liest maximal *Anzahl* Bytes in *Puffer* aus der Datei zugeordneten *fd*. Der Lesevorgang beginnt an der aktuellen Position des Dateizeigers für die betreffende Datei. Nach dem Lesevorgang zeigt der Dateizeiger auf das nächste ungelesene Zeichen.
 
-Wenn die Datei im Textmodus geöffnet wurde, der Lesevorgang beendet, wenn **_microsoft** findet ein Zeichen STRG + Z als EOF-Indikator behandelt wird. Verwenden Sie [_lseek](lseek-lseeki64.md), um den Dateiende-Indikator zu löschen.
+Wenn die Datei im Textmodus geöffnet wurde, der Lesevorgang beendet, wenn **_read** findet ein STRG + Z-Zeichen, das als Dateiende-Indikator behandelt wird. Verwenden Sie [_lseek](lseek-lseeki64.md), um den Dateiende-Indikator zu löschen.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_read**|\<io.h>|
 
@@ -143,7 +133,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 Read 19 bytes from file

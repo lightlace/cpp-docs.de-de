@@ -1,10 +1,6 @@
 ---
-title: _ismbbgraph, _ismbbgraph_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _ismbbgraph, _ismbbgraph_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbgraph_l
 - _ismbbgraph
@@ -26,24 +22,18 @@ f1_keywords:
 - _ismbbgraph_l
 - ismbbgraph
 - ismbbgraph_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbbgraph_l function
 - ismbbgraph_l function
 - _ismbbgraph function
 - ismbbgraph function
 ms.assetid: b60db718-134f-4796-acc1-592d0b9efbb7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6336beee17759ac01667d7c2aac65be419d9e170
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d5b5dace39e674744148a1ddf0c692692fb889f8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399250"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662874"
 ---
 # <a name="ismbbgraph-ismbbgraphl"></a>_ismbbgraph, _ismbbgraph_l
 
@@ -75,11 +65,11 @@ Gibt einen Wert ungleich 0 (null) zurück, wenn diese Bedingung zutrifft. Der Au
 
 `isctype(c, ( _PUNCT | _UPPER | _LOWER | _DIGIT )) || _ismbbkprint(c)`
 
-ist ungleich NULL für *c*, oder 0, wenn er nicht ist. **_ismbbgraph** verwendet das aktuelle Gebietsschema für jedes vom Gebietsschema abhängiges Verhalten. **_ismbbgraph_l** ist nahezu identisch, das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+ist ungleich NULL für *c*, oder 0, wenn er nicht ist. **_ismbbgraph** verwendet das aktuelle Gebietsschema für jedes vom Gebietsschema abhängige Verhalten. **_ismbbgraph_l** ist identisch, außer dass sie das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_ismbbgraph**|\<mbctype.h>|
 |**_ismbbgraph_l**|\<mbctype.h>|
