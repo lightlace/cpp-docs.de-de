@@ -1,10 +1,6 @@
 ---
-title: _lsearch_s | Microsoft-Dokumentation
-ms.custom: ''
+title: _lsearch_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lsearch_s
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _lsearch_s
 - lsearch_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - linear searching
 - values, searching for
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - _lsearch_s function
 - lsearch_s function
 ms.assetid: d2db0635-be7a-4799-8660-255f14450882
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12315350b62673abb0a838f9d30830354c58da73
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f57a96622419e3f72fc2df5b260cbbbdd59666ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404197"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677005"
 ---
 # <a name="lsearchs"></a>_lsearch_s
 
@@ -84,30 +74,30 @@ Ein Zeiger auf ein Objekt, auf das in der Vergleichsfunktion zugegriffen werden 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn *Schlüssel* gefunden wird, **_lsearch_s** gibt einen Zeiger auf das Element des Arrays bei *Basis* entspricht *Schlüssel*. Wenn *Schlüssel* wurde nicht gefunden, **_lsearch_s** gibt einen Zeiger auf das neu hinzugefügte Element am Ende des Arrays.
+Wenn *Schlüssel* gefunden wird, **_lsearch_s** gibt einen Zeiger auf das Element des Arrays, an *Basis* entspricht *Schlüssel*. Wenn *Schlüssel* nicht gefunden wird, **_lsearch_s** gibt einen Zeiger auf das neu hinzugefügte Element am Ende des Arrays zurück.
 
-Wenn ungültige Parameter an die Funktion übergeben werden, ruft sie den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parametervalidierung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, klicken Sie dann **Errno** festgelegt ist, um **EINVAL** und die Funktion gibt **NULL**. Weitere Informationen finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Wenn ungültige Parameter an die Funktion übergeben werden, ruft sie den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parametervalidierung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um fortzufahren, klicken Sie dann **Errno** nastaven NA hodnotu **EINVAL** und die Funktion gibt **NULL**. Weitere Informationen finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
 |*key*|*base*|*compare*|*Anzahl*|*size*|**errno**|
 |-----------|------------|---------------|-----------|------------|-------------|
-|**NULL**|alle|alle|alle|alle|**EINVAL**|
-|alle|**NULL**|alle|!= 0|alle|**EINVAL**|
-|alle|alle|alle|alle|Null|**EINVAL**|
-|alle|alle|**NULL**|ein|alle|**EINVAL**|
+|**NULL**|any|any|any|any|**EINVAL**|
+|any|**NULL**|any|!= 0|any|**EINVAL**|
+|any|any|any|any|Null|**EINVAL**|
+|any|any|**NULL**|ein|any|**EINVAL**|
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_lsearch_s** Funktion führt eine lineare Suche für den Wert *Schlüssel* in ein Array von *Anzahl* Elementen, von denen jedes *Breite* Bytes. Im Gegensatz zu **Bsearch_s**, **_lsearch_s** erfordert nicht das Array, das sortiert werden. Wenn *Schlüssel* nicht gefunden wird, klicken Sie dann **_lsearch_s** fügt es am Ende des Arrays und Schritten *Anzahl*.
+Die **_lsearch_s** Funktion führt eine lineare Suche für den Wert *Schlüssel* in ein Array von *Anzahl* Elementen, die jeweils von *Breite* Bytes. Im Gegensatz zu **Bsearch_s**, **_lsearch_s** erfordert keine Arrays, das sortiert werden. Wenn *Schlüssel* nicht gefunden wird, klicken Sie dann **_lsearch_s** fügt es am Ende des Arrays und Schritten *Anzahl*.
 
-Die *vergleichen* Funktion ist ein Zeiger auf eine vom Benutzer bereitgestellte Routine, die zwei Arrayelemente vergleicht und einen Wert, der Angabe ihrer Beziehung zurückgibt. Die *vergleichen* Funktion nimmt auch den Zeiger auf den Kontext als erstes Argument. **_lsearch_s** Aufrufe *vergleichen* ein- oder mehrmals während der Suche, die Übergabe von Zeigern auf zwei Arrayelemente bei jedem Aufruf. *Vergleichen Sie* vergleichen Sie die Elemente und dann zurückgeben muss ungleich Null (d. h., die Elemente sind unterschiedlich) oder 0 (d. h., die Elemente sind identisch).
+Die *vergleichen* Funktion ist ein Zeiger auf eine benutzerdefinierte Routine, die zwei Elemente des Arrays vergleicht und gibt einen Wert, der ihre Beziehung angibt. Die *vergleichen* Funktion übernimmt auch den Zeiger auf den Kontext als erstes Argument. **_lsearch_s** Aufrufe *vergleichen* eine oder mehrere Male während der Suche, die Übergabe von Zeigern auf zwei Arrayelemente bei jedem Aufruf. *Vergleichen Sie* die Elemente vergleichen und dann zurückgeben muss ungleich Null (d.h. die Elemente unterscheiden sich) oder 0 (d.h. die Elemente sind identisch).
 
-Die *Kontext* Zeiger kann nützlich sein, wenn die durchsuchte Datenstruktur Teil eines Objekts ist und die *vergleichen* Funktion benötigt, um auf Member des Objekts zuzugreifen. Code wird beispielsweise der *vergleichen* Funktion kann den void-Zeiger umgewandelt, in das entsprechende Objekt und auf Member des Objekts. Das Hinzufügen der *Kontext* Zeiger macht **_lsearch_s** sicherer, da weiterer Kontext verwendet werden kann, um Reentranz-Fehlern, die mit der Verwendung von statischer Variablen Daten zur Verfügung stellen zu vermeiden der *vergleichen* Funktion.
+Die *Kontext* Zeiger ist nützlich, wenn die durchsuchte Datenstruktur Teil eines Objekts ist und die *vergleichen* Funktion, die auf Member des Objekts zugreifen muss. Code wird beispielsweise der *vergleichen* Funktion kann den void-Zeiger umgewandelt, in das entsprechende Objekt und auf Member des Objekts. Das Hinzufügen der *Kontext* -Zeigers macht **_lsearch_s** sicherer, da weiterer Kontext verwendet werden kann, um Wiedereintreten mit der Verwendung statischer Variablen zur Daten zur Verfügung stellen zu vermeiden. die *vergleichen* Funktion.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_lsearch_s**|\<search.h>|
 

@@ -1,27 +1,16 @@
 ---
-title: Compilerattribute (C++-COM-) | Microsoft-Dokumentation
-ms.custom: ''
+title: Compilerattribute (C++-COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - cl.exe compiler, attributes
 - attributes [C++/CLI], compiler
 ms.assetid: 53cd9bee-1521-48ec-b171-80feac2096cc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 9f0483676fd0dd60d893f8931511083d369539dd
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 8fef953a520572b42e69a48ea391282c7b70ba44
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791191"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667362"
 ---
 # <a name="compiler-attributes"></a>Compilerattribute
 
@@ -33,7 +22,7 @@ Compilerattribute bieten eine Vielzahl von Funktionen.
 |[event_receiver](event-receiver.md)|Erstellt einen Ereignisempfänger an.|
 |[event_source](event-source.md)|Erstellt eine Ereignisquelle.|
 |[export](export.md)|Bewirkt, dass eine Datenstruktur, in der IDL-Datei platziert wird.|
-|[Implementiert](implements-cpp.md)|Gibt die Dispatch-Schnittstellen, die erzwungen werden, um die IDL-Co-Klasse angehören.|
+|[implements](implements-cpp.md)|Gibt die Dispatch-Schnittstellen, die erzwungen werden, um die IDL-Co-Klasse angehören.|
 |[importidl](importidl.md)|Fügt die angegebenen IDL-Datei in der generierten IDL-Datei an.|
 |[importlib](importlib.md)|Stellt Typen, die bereits in einer anderen Typbibliothek kompiliert wurden, der erstellten Typbibliothek zur Verfügung.|
 |[includelib](includelib-cpp.md)|Bewirkt, dass eine IDL- oder h-Datei, die in der generierten IDL-Datei eingeschlossen werden.|

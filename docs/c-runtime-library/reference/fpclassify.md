@@ -1,8 +1,6 @@
 ---
-title: fpclassify | Microsoft-Dokumentation
-ms.custom: ''
+title: fpclassify
 ms.date: 04/05/2018
-ms.topic: reference
 apiname:
 - fpclassify
 apilocation:
@@ -24,16 +22,12 @@ helpviewer_keywords:
 - fpclassify macro
 - fpclassify function
 ms.assetid: bf549499-7ff9-4a58-8692-f2d1cb6bab81
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da55cb87804d178d5a305ed466aa498de4bc1ee5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 626e356cf61415e4f8212a8a12d90a72fe4576bf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398431"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613875"
 ---
 # <a name="fpclassify"></a>fpclassify
 
@@ -67,7 +61,7 @@ Der zu testende Gleitkommawert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Fpclassify** gibt einen ganzzahligen Wert, der die gleitkommaklasse des Arguments angibt *x*. Diese Tabelle zeigt die möglichen Rückgabewerte **Fpclassify**in definierte \<math.h >.
+**Fpclassify** gibt einen ganzzahligen Wert, der die gleitkommaklasse des Arguments angibt *x*. Diese Tabelle zeigt die möglichen Rückgabewerte **Fpclassify**, definiert in \<math.h >.
 
 |Wert|Beschreibung|
 |-----------|-----------------|
@@ -79,7 +73,7 @@ Der zu testende Gleitkommawert.
 
 ## <a name="remarks"></a>Hinweise
 
-In C **Fpclassify** ist ein Makro; in C++ **Fpclassify** ist eine Funktion überladen mithilfe von Argumenttypen **"float"**, **doppelte**, oder **lange** **doppelte**. In beiden Fällen hängt der zurückgegebene Wert vom tatsächlichen Typ des Argumentausdrucks ab, und nicht von einer Zwischendarstellung. Z. B. ein normaler **doppelte** oder **lange** **doppelte** Wert kann unendlich, denormal werden bzw. 0 (null) Wert bei der Konvertierung in einen **"float"**.
+In C **Fpclassify** ist ein Makro; in C++ **Fpclassify** ist eine Funktion überladen, mithilfe der Argumenttypen **"float"**, **doppelte**, oder **lange** **doppelte**. In beiden Fällen hängt der zurückgegebene Wert vom tatsächlichen Typ des Argumentausdrucks ab, und nicht von einer Zwischendarstellung. Z. B. ein normaler **doppelte** oder **lange** **doppelte** Wert wird unendlich, denormal oder NULL-Wert, bei der Konvertierung in kann ein **"float"**.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -87,7 +81,7 @@ In C **Fpclassify** ist ein Makro; in C++ **Fpclassify** ist eine Funktion über
 |---------------------|---------------------------|-------------------------------|
 |**fpclassify**|\<math.h>|\<math.h> oder \<cmath>|
 
-Die **Fpclassify** Makro und **Fpclassify** Funktionen die ISO C99 und C ++ 11-Spezifikationen entsprechen. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die **Fpclassify** Makro und **Fpclassify** Funktionen entsprechen den ISO C99 und C ++ 11-Spezifikationen. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Siehe auch
 

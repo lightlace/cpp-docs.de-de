@@ -1,10 +1,6 @@
 ---
-title: remove, _wremove | Microsoft-Dokumentation
-ms.custom: ''
+title: remove, _wremove
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wremove
 - remove
@@ -25,8 +21,6 @@ f1_keywords:
 - remove
 - _wremove
 - _tremove
-dev_langs:
-- C++
 helpviewer_keywords:
 - tremove function
 - _wremove function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 36cdc09107a66067b358cb2fd72ec9bd1b2b30a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d5636912ea36fd1b1412a556d516ac3e8184e0b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406432"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613968"
 ---
 # <a name="remove-wremove"></a>remove, _wremove
 
@@ -69,13 +59,13 @@ Pfad der zu löschenden Datei.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt 0 zurück, wenn die Datei erfolgreich gelöscht wird. Hingegen gibt-1 zurück und legt sie fest **Errno** entweder **EACCES** um anzugeben, dass der Pfad eine schreibgeschützte Datei gibt oder die Datei geöffnet ist, oder auf **ENOENT** gibt an, dass die Dateiname oder Pfad nicht gefunden wurde oder, dass der Pfad ein Verzeichnis angegeben.
+Jede dieser Funktionen gibt 0 zurück, wenn die Datei erfolgreich gelöscht wird. Andernfalls wird-1 zurückgegeben und legt **Errno** entweder auf **EACCES** , um anzugeben, dass der Pfad Gibt an, eine schreibgeschützte Datei oder die Datei geöffnet ist, oder **ENOENT** an, dass die Dateiname oder Pfad wurde nicht gefunden oder, dass der Pfad ein Verzeichnis angibt.
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **remove**-Funktion löscht die von *path* angegebene Datei. **_wremove** ist eine Breitzeichen-Version von **ent_fernen**; das *Pfad* Argument **_wremove** ist eine Breitzeichen-Zeichenfolge. **_wremove** und **ent_fernen** Verhalten sich andernfalls identisch. Alle Handles zu einer Datei müssen geschlossen werden, bevor sie gelöscht werden kann.
+Die **remove**-Funktion löscht die von *path* angegebene Datei. **_wremove** ist eine Breitzeichen-Version von **entfe_rnen**; die *Pfad* Argument **_wremove** ist eine Breitzeichen-Zeichenfolge. **_wremove** und **entfe_rnen** Verhalten sich andernfalls identisch. Alle Handles zu einer Datei müssen geschlossen werden, bevor sie gelöscht werden kann.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -85,7 +75,7 @@ Die **remove**-Funktion löscht die von *path* angegebene Datei. **_wremove** is
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**remove**|\<stdio.h> oder \<io.h>|
 |**_wremove**|\<stdio.h> oder \<wchar.h>|

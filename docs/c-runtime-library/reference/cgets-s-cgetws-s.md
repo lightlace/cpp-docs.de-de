@@ -1,10 +1,6 @@
 ---
-title: _cgets_s, _cgetws_s | Microsoft-Dokumentation
-ms.custom: ''
+title: _cgets_s, _cgetws_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cgetws_s
 - _cgets_s
@@ -26,8 +22,6 @@ f1_keywords:
 - cgets_s
 - cgetws_s
 - _cgetws_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], getting from console
 - console, getting strings from
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 48b00f9eee699b7e556c2fcc3f88abd8d783a261
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8341b775df3b9cbaececdfaa1f17e075d7c7416c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396796"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588538"
 ---
 # <a name="cgetss-cgetwss"></a>_cgets_s, _cgetws_s
 
@@ -98,15 +88,15 @@ Der Rückgabewert ist im Erfolgsfall „0“, andernfalls wird ein Fehlercode au
 
 |*buffer*|*numberOfElements*|*pSizeRead*|Zurück|Inhalt der *Puffer*|
 |--------------|------------------------|-----------------|------------|--------------------------|
-|**NULL**|alle|alle|**EINVAL**|n/v|
-|nicht **NULL**|Null|alle|**EINVAL**|nicht geändert|
-|nicht **NULL**|alle|**NULL**|**EINVAL**|Zeichenfolge mit der Länge 0|
+|**NULL**|any|any|**EINVAL**|n/v|
+|Nicht **NULL**|Null|any|**EINVAL**|nicht geändert|
+|Nicht **NULL**|any|**NULL**|**EINVAL**|Zeichenfolge mit der Länge 0|
 
 ## <a name="remarks"></a>Hinweise
 
-**_cgets_s** und **_cgetws_s** lesen eine Zeichenfolge aus der Konsole, und kopieren Sie die Zeichenfolge (mit einem null-Terminator) in *Puffer*. **_cgetws_s** die Breitzeichen-Version der Funktion ist, als die Zeichengröße, das Verhalten dieser zwei Funktionen identisch ist. Die maximale Größe der zu lesenden Zeichenfolge wird als übergeben der *NumberOfElements* Parameter. Diese Größe sollte ein zusätzliches Zeichen für das abschließende Nullzeichen enthalten. Die tatsächliche Anzahl der gelesenen Zeichen befindet sich im *pSizeRead*.
+**_cgets_s** und **_cgetws_s** lesen eine Zeichenfolge aus der Konsole, und kopieren Sie die Zeichenfolge (mit einem null-Terminator) in *Puffer*. **_cgetws_s** ist die breitzeichenversion der Funktion; andere als die Zeichengröße, das Verhalten dieser zwei Funktionen identisch ist. Die maximale Größe der zu lesenden Zeichenfolge wird als übergeben die *NumberOfElements* Parameter. Diese Größe sollte ein zusätzliches Zeichen für das abschließende Nullzeichen enthalten. Die tatsächliche Anzahl der gelesenen Zeichen befindet sich im *pSizeRead*.
 
-Wenn während des Vorgangs oder im Zuge der Validierung der Parameter ein Fehler auftritt, wird der Handler für ungültige Parameter aufgerufen, wie dies unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben wird. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und **EINVAL** wird zurückgegeben.
+Wenn während des Vorgangs oder im Zuge der Validierung der Parameter ein Fehler auftritt, wird der Handler für ungültige Parameter aufgerufen, wie dies unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben wird. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und **EINVAL** zurückgegeben wird.
 
 In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht. Die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein „size“-Argument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -118,7 +108,7 @@ In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinf
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_cgets_s**|\<conio.h>|
 |**_cgetws_s**|\<conio.h> oder \<wchar.h>|

@@ -1,27 +1,16 @@
 ---
-title: Attribute (C++-COM-) | Microsoft-Dokumentation
-ms.custom: ''
+title: Attribute (C++-COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - method attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: b2313352-480d-488b-8c35-6242ffd3a549
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8f5f9af9e302b9346b2bd42acdf1e268a59113f7
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 96a3eab3e6d2761019a9f0855ff7cbb978445f68
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791371"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667921"
 ---
 # <a name="method-attributes"></a>Methodenattribut
 
@@ -31,7 +20,7 @@ Die folgenden Attribute gelten für die Methoden in einer Klasse, Co-Klasse oder
 |---------------|-----------------|
 |[bindable](bindable.md)|Gibt an, dass die Eigenschaft die Datenbindung unterstützt.|
 |[call_as](call-as.md)|Aktiviert eine Funktion nicht remotefähige an eine remote-Funktion zugeordnet werden soll.|
-|[Benutzerdefinierte](custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|
+|[custom](custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|
 |[db_column](db-column.md)|Bindet eine angegebene Spalte auf das Rowset an.|
 |[db_command](db-command.md)|Erstellt einen OLE DB-Befehl.|
 |[db_param](db-param.md)|Ordnet die angegebenen Member-Variable mit einem Eingabe- oder ausgabeadapter-Parameter und Variablen begrenzt.|

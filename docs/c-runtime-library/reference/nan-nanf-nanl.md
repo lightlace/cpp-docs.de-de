@@ -1,10 +1,6 @@
 ---
-title: nan, nanf, nanl | Microsoft-Dokumentation
-ms.custom: ''
+title: nan, nanf, nanl
 ms.date: 94/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - nanf
 - nan
@@ -26,23 +22,17 @@ f1_keywords:
 - nan
 - nanl
 - nanf
-dev_langs:
-- C++
 helpviewer_keywords:
 - nan function
 - nanf function
 - nanl function
 ms.assetid: 790e9158-80ab-43e0-8f5a-096198553fd9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 204d59d88c97d9b0fa161fda6f64f31267c73fd5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22b0e14094a0b6f0f3571c4d7551552210177a22
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401450"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50610261"
 ---
 # <a name="nan-nanf-nanl"></a>nan, nanf, nanl
 
@@ -63,17 +53,17 @@ Ein Zeichenfolgenwert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **"NaN"** Funktionen geben einen stillen NaN-Wert zurück.
+Die **Nan** Funktionen geben einen stillen NaN-Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **"NaN"** Funktionen geben einen Gleitkommawert, der entspricht einem stillen (nicht signalisierenden) NaN zurück. Die *input* Wert wird ignoriert. Informationen dazu, wie ein NaN-Wert für die Ausgabe dargestellt wird, finden Sie unter [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+Die **Nan** Funktionen geben einen Gleitkommawert, der entspricht, der einem stillen (nicht signalisierenden) NaN zurück. Die *Eingabe* Wert wird ignoriert. Informationen dazu, wie ein NaN-Wert für die Ausgabe dargestellt wird, finden Sie unter [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="requirements"></a>Anforderungen
 
 |Funktion|C-Header|C++-Header|
 |--------------|--------------|------------------|
-|**"NaN"**, **Nanf**, **Nanl**|\<math.h>|\<cmath> oder \<math.h>|
+|**NaN**, **Nanf**, **Nanl**|\<math.h>|\<cmath> oder \<math.h>|
 
 ## <a name="see-also"></a>Siehe auch
 
