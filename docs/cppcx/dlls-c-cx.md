@@ -1,20 +1,13 @@
 ---
-title: DLLs (C++ / CX) | Microsoft-Dokumentation
-ms.custom: ''
+title: DLLs (C++/CX)
 ms.date: 02/06/2018
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: 5b8bcc57-64dd-4c54-9f24-26a25bd5dddd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1ac06336e5ba80406157285ebe660080aff6e319
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1a72ecc5eb46abfbc7b9a52a168510ce0873ee04
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763632"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445707"
 ---
 # <a name="dlls-ccx"></a>DLLs (C++/CX)
 
@@ -24,7 +17,7 @@ Sie können Visual Studio verwenden, erstellen Sie entweder eine standardmäßig
 
 In fast allen Fällen Wenn Sie erstellen möchten eine DLL für in einer UWP-app verwenden, als Windows-Runtime-Komponente mithilfe der Projektvorlage mit diesem Namen erstellen. Sie können ein Windows-Runtime-Komponentenprojekt für DLLs erstellen, die öffentliche oder private Windows-Runtime-Typen aufweisen. Eine Windows-Runtime-Komponente kann von apps zugegriffen werden, die in einer beliebigen Windows-Runtime-kompatiblen Sprache geschrieben werden. In der Standardeinstellung Projekt die compilereinstellungen für eine Komponente für Windows-Runtime verwendet die **/Zw** wechseln. Eine WinMD-Datei muss denselben Namen wie der Stammnamespace haben. Zum Beispiel kann eine Klasse namens A.B.C.MyClass nur instanziiert werden, wenn sie in einer Metadatendatei definiert ist, die A.winmd oder A.B.winmd oder A.B.C.winmd heißt. Der Name der DLL muss nicht mit dem Namen der WINMD-Datei übereinstimmen.
 
-Weitere Informationen finden Sie unter [Erstellen von Windows-Runtime-Komponenten in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+Weitere Informationen finden Sie unter [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 ### <a name="to-reference-a-third-party-windows-runtime-component-binary-in-your-project"></a>Auf eine Drittanbieter-Windows-Runtime-Komponente binäre in Ihrem Projekt verweisen.
 

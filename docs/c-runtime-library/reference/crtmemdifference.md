@@ -1,10 +1,6 @@
 ---
-title: _CrtMemDifference | Microsoft-Dokumentation
-ms.custom: ''
+title: _CrtMemDifference
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtMemDifference
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _CrtMemDifference
 - CrtMemDifference
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtMemDifference function
 - _CrtMemDifference function
 ms.assetid: 0f327278-b551-482f-958b-76941f796ba4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 66bb770c2f24c0312277d23c14beef09e2265f88
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f2c6306bf604737d0ace142674b21845a08e2dee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398047"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429652"
 ---
 # <a name="crtmemdifference"></a>_CrtMemDifference
 
@@ -56,7 +46,7 @@ int _CrtMemDifference(
 ### <a name="parameters"></a>Parameter
 
 *stateDiff*<br/>
-Zeiger auf eine **_CrtMemState** -Struktur, die zum Speichern der Unterschiede zwischen den beiden (zurückgegebenen) Speicherzuständen verwendet wird.
+Zeiger auf eine **_CrtMemState** -Struktur, die verwendet wird, um die Unterschiede zwischen den beiden Speicherzuständen (Rückgabewert) zu speichern.
 
 *oldState*<br/>
 Zeiger auf einen früheren Speicherzustand (**_CrtMemState** Struktur).
@@ -66,23 +56,23 @@ Zeiger auf einen späteren Speicherzustand (**_CrtMemState** Struktur).
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Speicherzustände unterscheiden sich deutlich, **_CrtMemDifference** gibt "true" zurück. Andernfalls gibt die Funktion FALSE zurück.
+Wenn die Speicherzustände unterscheiden sich grundlegend, **_CrtMemDifference** gibt TRUE zurück. Andernfalls gibt die Funktion FALSE zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_CrtMemDifference** -Funktion vergleicht *OldState* und *NewState* und speichert die vorhandenen Unterschiede in *StateDiff*, dann können die von der Anwendung verwendet werden, um Speicherverluste und andere Speicherprobleme zu erkennen. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von **_CrtMemDifference** während der vorverarbeitung entfernt.
+Die **_CrtMemDifference** -Funktion vergleicht *OldState* und *NewState* und speichert die vorhandenen Unterschiede in *StateDiff*, dann können die von der Anwendung verwendet werden, um Speicherverluste und andere Speicherprobleme zu erkennen. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von **_CrtMemDifference** werden während der vorverarbeitung entfernt.
 
-*NewState* und *OldState* muss jeweils ein gültiger Zeiger auf eine **_CrtMemState** Struktur, die in "CRTDBG.h", die von gefüllt wurde definiert [_CrtMemCheckpoint](crtmemcheckpoint.md)vor dem Aufruf **_CrtMemDifference**. *StateDiff* muss ein Zeiger auf eine zuvor zugeordnete Instanz von der **_CrtMemState** Struktur. Wenn *StateDiff*, *NewState*, oder *OldState* ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [ Überprüfen der Parameter](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, [Errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) festgelegt ist, um **EINVAL** und die Funktion gibt "false" zurück.
+*NewState* und *OldState* muss jeweils ein gültiger Zeiger auf eine **_CrtMemState** in "CRTDBG.h" definiert, die von gefüllt wurde definierte Struktur [_CrtMemCheckpoint](crtmemcheckpoint.md)vor dem Aufruf **_CrtMemDifference**. *StateDiff* muss ein Zeiger auf eine zuvor zugeordnete Instanz von der **_CrtMemState** Struktur. Wenn *StateDiff*, *NewState*, oder *OldState* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [ Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, [Errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) nastaven NA hodnotu **EINVAL** und die Funktion gibt "false" zurück.
 
-**_CrtMemDifference** vergleicht die **_CrtMemState** -Feldwerte der Blöcke in *OldState* , die unter *NewState* und speichert das Ergebnis in *StateDiff*. Wenn sich die Anzahl der zugeordneten Blocktypen oder die Gesamtzahl der zugeordneten Blöcke für jeden Typ in den beiden Speicherzuständen unterscheidet, werden die Zustände als deutlich unterschiedlich bezeichnet. Der Unterschied zwischen der größten Menge, die jemals gleichzeitig zugeordnet wurde für die beiden Zustände und den Unterschied zwischen den gesamten speicherbelegungen für die beiden Zustände werden auch in gespeichert *StateDiff*.
+**_CrtMemDifference** vergleicht die **_CrtMemState** -Feldwerte der Blöcke in *OldState* , die denen in *NewState* und speichert das Ergebnis in *StateDiff*. Wenn sich die Anzahl der zugeordneten Blocktypen oder die Gesamtzahl der zugeordneten Blöcke für jeden Typ in den beiden Speicherzuständen unterscheidet, werden die Zustände als deutlich unterschiedlich bezeichnet. Der Unterschied zwischen der größten Menge, die jemals gleichzeitig zugeordnet wurde für die beiden Zustände und den Unterschied zwischen den gesamten speicherbelegungen für die beiden Zustände als auch gespeichert *StateDiff*.
 
-Standardmäßig sind interne C-laufzeitblöcke (**_CRT_BLOCK**) sind nicht in den speicherzustandsvorgängen enthalten. Die [_CrtSetDbgFlag](crtsetdbgflag.md) -Funktion kann verwendet werden, zum Aktivieren der **_CRTDBG_CHECK_CRT_DF** -Bit von **_crtDbgFlag** Erkennung von Speicherverlusten und andere Speicherzustands diese Blöcke einschließt DDL-Vorgänge. Freigegebene Speicherblöcke (**_FREE_BLOCK**) führen nicht dazu, dass **_CrtMemDifference** "Wahr" zurückgegeben.
+Standardmäßig sind interne C-laufzeitblöcke (**_CRT_BLOCK**) nicht in speicherzustandsvorgänge enthalten sind. Die [_CrtSetDbgFlag](crtsetdbgflag.md) Funktion kann verwendet werden, zum Aktivieren der **_CRTDBG_CHECK_CRT_DF** -Bit von **_crtDbgFlag** Erkennung von Speicherverlusten und anderen Speicherzustand diesen Blöcken einschließt Vorgänge. Freigegebene Speicherblöcke (**_FREE_BLOCK**) verursachen kein **_CrtMemDifference** auf "true" zurückgeben.
 
-Weitere Informationen über heapzustandsfunktionen und die **_CrtMemState** -Struktur, finden Sie unter [den Heapzustand](/visualstudio/debugger/crt-debug-heap-details). Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Weitere Informationen über heapzustandsfunktionen und die **_CrtMemState** Struktur, siehe [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|Optionaler Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|
 |-------------|---------------------|---------------------|
 |**_CrtMemDifference**|\<crtdbg.h>|\<errno.h>|
 
