@@ -1,27 +1,17 @@
 ---
-title: Makros (C/C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Makros (C/C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor
 - preprocessor, macros
 - Visual C++, preprocessor macros
 ms.assetid: a7bfc5d4-2537-4fe0-bef0-70cec0b43388
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cf97e61e68cd02891c738db5de8820924957fc56
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: eb576fae7a2a895b88aa958c61b3170e58fbb070
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50065472"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656299"
 ---
 # <a name="macros-cc"></a>Makros (C/C++)
 Vorverarbeitung erweitert Makros in allen Zeilen, die keine Präprozessordirektiven sind (Zeilen, die keine **#** als erstes Zeichen ohne Leerzeichen) und in Teilen einiger Direktiven, die nicht als Teil des übersprungen werden ein für die bedingte Kompilierung. "Direktiven für die bedingte Kompilierung" ermöglichen es Ihnen, die Kompilierung von Teilen einer Quelldatei zu unterdrücken, indem sie einen konstanten Ausdruck oder einen Bezeichner testen, um zu bestimmen, welche Textblöcke an den Compiler übergeben werden und welche Textblöcke während des Präprozessorlaufs aus der Quelldatei entfernt werden .

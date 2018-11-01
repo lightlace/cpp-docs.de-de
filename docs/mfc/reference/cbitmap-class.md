@@ -1,10 +1,6 @@
 ---
-title: CBitmap-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: CBitmap-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CBitmap
 - AFXWIN/CBitmap
@@ -22,8 +18,6 @@ f1_keywords:
 - AFXWIN/CBitmap::LoadOEMBitmap
 - AFXWIN/CBitmap::SetBitmapBits
 - AFXWIN/CBitmap::SetBitmapDimension
-dev_langs:
-- C++
 helpviewer_keywords:
 - CBitmap [MFC], CBitmap
 - CBitmap [MFC], CreateBitmap
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 322b13ee62e61a836d6b0c66ab619a11348adeae
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 295f61ed120e957bc0d5ec1746e7d3bdfbb6d001
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375640"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624600"
 ---
 # <a name="cbitmap-class"></a>CBitmap-Klasse
 
@@ -161,11 +151,11 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 Für eine Farbbitmap muss entweder die *nPlanes* oder *nBitcount* Parameter sollte auf 1 festgelegt werden. Wenn beide Parameter auf 1 festgelegt sind, erstellt `CreateBitmap` eine monochrome Bitmap.
 
-Obwohl eine Bitmap kann nicht direkt für ein Anzeigegerät ausgewählt werden, es kann ausgewählt werden als aktuelle Bitmap für einen "Speichergerätekontext" mithilfe von [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) und auf einen beliebigen kompatiblen Gerätekontext kopiert werden, mithilfe der [CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) Funktion.
+Obwohl eine Bitmap nicht direkt für ein Anzeigegerät ausgewählt werden kann, kann sie als aktuelle Bitmap für einen „Speichergerätekontext“ mithilfe von [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) ausgewählt und mithilfe der [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) -Funktion auf einen beliebigen kompatiblen Gerätekontext kopiert werden.
 
 Wenn Sie mit dem `CBitmap` -Objekt fertig sind, das von der `CreateBitmap` -Funktion erstellt wurde, wählen Sie zunächst die Bitmap im Gerätekontext aus, und löschen Sie dann das `CBitmap` -Objekt.
 
-Weitere Informationen finden Sie unter der Beschreibung des der `bmBits` -Feld in der `BITMAP` Struktur. Die [BITMAP](../../mfc/reference/bitmap-structure.md) Struktur wird beschrieben, unter dem [CBitmap:: Createbitmapindirect](#createbitmapindirect) Member-Funktion.
+Weitere Informationen finden Sie unter der Beschreibung des der `bmBits` -Feld in der `BITMAP` Struktur. Die [BITMAP](../../mfc/reference/bitmap-structure.md) -Struktur wird unter der [CBitmap::CreateBitmapIndirect](#createbitmapindirect) -Memberfunktion beschrieben.
 
 ##  <a name="createbitmapindirect"></a>  CBitmap:: Createbitmapindirect
 
