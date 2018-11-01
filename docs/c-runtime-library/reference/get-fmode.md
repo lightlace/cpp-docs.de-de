@@ -1,10 +1,6 @@
 ---
-title: _get_fmode | Microsoft-Dokumentation
-ms.custom: ''
+title: _get_fmode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_fmode
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - get_fmode
 - _get_fmode
-dev_langs:
-- C++
 helpviewer_keywords:
 - _get_fmode function
 - file translation [C++], default mode
 - get_fmode function
 ms.assetid: 22ea70e2-b9b5-422d-b514-64f4beaea45c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a28909e5e848712305fb28e8ac4d46180f8948cf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f326069c1c190b0fa1c1bbd5ee4ead7346481a38
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398301"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658028"
 ---
 # <a name="getfmode"></a>_get_fmode
 
@@ -48,27 +38,27 @@ Ruft den Standarddateiübersetzungsmodus für Datei E/A-Vorgänge auf.
 ## <a name="syntax"></a>Syntax
 
 ```C
-errno_t _get_fmode( 
-   int * pmode 
+errno_t _get_fmode( 
+   int * pmode 
 );
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *pmode*<br/>
-Ein Zeiger auf eine ganze Zahl mit der aktuellen Standardmodus gefüllt werden soll: **_O_TEXT** oder **_O_BINARY**.
+Ein Zeiger auf eine ganze Zahl mit dem aktuellen Standardmodus gefüllt werden soll: **_O_TEXT** oder **_O_BINARY**.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn der Vorgang erfolgreich war. Wenn ein Fehler auftritt, erscheint ein Fehlercode. Wenn *Pmode* ist **NULL**, den Handler für ungültige Parameter aufgerufen wird, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und die Funktion gibt **EINVAL**.
+Gibt 0 (null) zurück, wenn der Vorgang erfolgreich war. Wenn ein Fehler auftritt, erscheint ein Fehlercode. Wenn *Pmode* ist **NULL**, wird der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und die Funktion gibt **EINVAL**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Funktion legt die globale Variable [_fmode](../../c-runtime-library/fmode.md) fest. Diese Variable gibt den Standard-dateiübersetzungsmodus für beide auf niedriger Ebene und Datei-e/a-Vorgänge, wie z. B. streamen **_open**, **_pipe**, **Fopen**, und [ Freopen](freopen-wfreopen.md).
+Die Funktion legt die globale Variable [_fmode](../../c-runtime-library/fmode.md) fest. Diese Variable gibt den Standard-dateiübersetzungsmodus für beide auf niedriger Ebene und Streamen von e/a-Vorgänge, z. B. **_open**, **_pipe**, **Fopen**, und [ Freopen](freopen-wfreopen.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|Optionaler Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|
 |-------------|---------------------|---------------------|
 |**_get_fmode**|\<stdlib.h>|\<fcntl.h>|
 

@@ -1,10 +1,6 @@
 ---
-title: memcmp, wmemcmp | Microsoft-Dokumentation
-ms.custom: ''
+title: memcmp, wmemcmp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - memcmp
 - wmemcmp
@@ -24,22 +20,16 @@ apitype: DLLExport
 f1_keywords:
 - memcmp
 - wmemcmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1e40264c3ee7e48a545c88d7d48891126117ecc8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9504635a2a96c4579afc7a8d9caf1844504c05b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404388"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50610465"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp, wmemcmp
 
@@ -75,7 +65,7 @@ Anzahl der zu vergleichenden Zeichen. (Vergleicht Bytes für **Memcmp**, Breitze
 
 Der Rückgabewert gibt die Beziehung zwischen den Puffern an.
 
-|Rückgabewert|Beziehung der ersten *Anzahl* -Zeichen von buf1 und buf2|
+|Rückgabewert|Beziehung der ersten *Anzahl* Zeichen von buf1 und buf2|
 |------------------|---------------------------------------------------------------|
 |< 0|*buffer1* kleiner als *buffer2*|
 |0|*buffer1* identisch mit *buffer2*|
@@ -83,11 +73,11 @@ Der Rückgabewert gibt die Beziehung zwischen den Puffern an.
 
 ## <a name="remarks"></a>Hinweise
 
-Vergleicht die ersten *Anzahl* Zeichen des *buffer1* und *buffer2* und gibt einen Wert, der ihre Beziehung angibt. Das Zeichen eines Rückgabewerts ungleich Null ist das Zeichen des Unterschieds zwischen dem ersten unterschiedlichen Wertpaar in den Puffern. Die Werte werden als interpretiert **ohne Vorzeichen** **Char** für **Memcmp**, und als **Wchar_t** für **Wmemcmp**.
+Vergleicht die ersten *Anzahl* Zeichen *buffer1* und *buffer2* und gibt einen Wert, der ihre Beziehung angibt. Das Zeichen eines Rückgabewerts ungleich Null ist das Zeichen des Unterschieds zwischen dem ersten unterschiedlichen Wertpaar in den Puffern. Die Werte werden als interpretiert **ohne Vorzeichen** **Char** für **Memcmp**, und als **"wchar_t"** für **Wmemcmp**.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**memcmp**|\<memory.h> oder \<string.h>|
 |**wmemcmp**|\<wchar.h>|
