@@ -1,12 +1,6 @@
 ---
-title: Erstellen von Popupmenüs (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Erstellen von Popupmenüs (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - context menus [C++], Menu Editor
 - pop-up menus [C++], creating
@@ -15,23 +9,18 @@ helpviewer_keywords:
 - shortcut menus [C++], creating
 - pop-up menus [C++], displaying
 ms.assetid: dff4dddf-2e8d-4c34-b755-90baae426b58
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6c66f7074269e99b35785299800665be48cebef9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 243a2489918f74243ce3b2268ec44c4fe4c1b566
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415719"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506781"
 ---
 # <a name="creating-pop-up-menus-c"></a>Erstellen von Popupmenüs (C++)
 
 [Popupmenüs](../mfc/menus-mfc.md) enthalten häufig verwendete Befehle. Sie können kontextbezogen für die Position des Zeigers sein. Für das Verwenden von Popupmenüs in Ihrer Anwendung muss das Menü selbst erstellt und anschließend mit dem Anwendungscode verbunden werden.
 
-Nachdem Sie die Menüressource erstellt haben, muss Ihr Anwendungscode die Menüressource laden und verwenden [TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu) auf das Menü angezeigt wird. Sobald der Benutzer durch Klicken neben das Menü das Popupmenü ausblendet oder auf einen Befehl geklickt hat, wird die Funktion zurückgegeben. Wenn der Benutzer einen Befehl auswählt, wird dessen Befehlsmeldung an das Fenster gesendet, dessen Handle übergeben wurde.
+Nachdem Sie die Menüressource erstellt haben, muss der Anwendungscode die Menüressource laden und [TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu) verwenden, damit das Menü angezeigt wird. Sobald der Benutzer durch Klicken neben das Menü das Popupmenü ausblendet oder auf einen Befehl geklickt hat, wird die Funktion zurückgegeben. Wenn der Benutzer einen Befehl auswählt, wird dessen Befehlsmeldung an das Fenster gesendet, dessen Handle übergeben wurde.
 
 ### <a name="to-create-a-pop-up-menu"></a>Erstellen eines Popupmenüs
 
