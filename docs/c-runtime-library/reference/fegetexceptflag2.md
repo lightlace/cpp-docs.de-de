@@ -1,11 +1,6 @@
 ---
-title: Fegetexceptflag | Microsoft Docs
-ms.custom: ''
+title: fegetexceptflag
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fegetexceptflag
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - fegetexceptflag
 - fenv/fegetexceptflag
-dev_langs:
-- C++
 helpviewer_keywords:
 - fegetexceptflag function
 ms.assetid: 2d28f0ca-70c9-4cff-be8b-3d876eacde71
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: baccf3f32381568472bd4d0d5f37d434ca789fc8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8dc82f6ee054dc3d0f86055cb63da1fc63c79a8b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399539"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605477"
 ---
 # <a name="fegetexceptflag"></a>fegetexceptflag
 
@@ -57,10 +46,10 @@ int fegetexceptflag(
 ### <a name="parameters"></a>Parameter
 
 *pstatus*<br/>
-Ein Zeiger auf eine **Fexcept_t** Objekt, das die aktuellen Werte von angegebenen Ausnahme-Flags enthalten *excepts*.
+Ein Zeiger auf eine **Fexcept_t** Objekt, das die aktuellen Werte der Ausnahme-Flags gemäß enthalten *Ausnahme*.
 
-*excepts*<br/>
-Die Flags Gleitkommaausnahme zum Speichern in *Pstatus*.
+*Ausnahme*<br/>
+Der Gleitkommaausnahme-Flags zum Speichern in *Pstatus*.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -68,7 +57,7 @@ Bei Erfolg wird 0 zurückgegeben. Andernfalls wird ein Wert ungleich null zurüc
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Fegetexceptflag** Funktion speichert den aktuellen Status der Gleitkommaausnahme Status-Markierungen gemäß *excepts* in der **Fexcept_t** Objekt verweist *Pstatus*.  *Pstatus* muss einem gültigen zeigen **Fexcept_t** Objekt oder nachfolgenden Verhalten ist nicht definiert. Die **Fegetexceptflag** -Funktion unterstützt diese Ausnahmemakros in definierten \<fenv.h >:
+Die **Fegetexceptflag** Funktion speichert den aktuellen Zustand der die Gleitkommaausnahme-Statusflags gemäß *Ausnahme* in die **Fexcept_t** Objekt verweist *Pstatus*.  *Pstatus* muss auf einen gültigen zeigen **Fexcept_t** Objekt daraus resultierende Verhalten nicht definiert ist. Die **Fegetexceptflag** -Funktion unterstützt diese definierten Ausnahmemakros \<fenv.h >:
 
 |Ausnahmemakro|Beschreibung|
 |---------------------|-----------------|
@@ -79,7 +68,7 @@ Die **Fegetexceptflag** Funktion speichert den aktuellen Status der Gleitkommaau
 |FE_UNDERFLOW|Das Ergebnis einer früheren Gleitkommaoperation war zu klein, um ganz genau dargestellt zu werden; ein nicht normaler Wert wurde erstellt.|
 |FE_ALLEXCEPT|Bitweiser OR-Operator oder alle unterstützten Gleitkommaausnahmen|
 
-Die *excepts* Argument NULL ist, werden möglicherweise einem der unterstützten Gleitkommaausnahme Makros oder bitweisen oder zwei oder mehr der Makros. Der Effekt von jedem anderen Argumentwert ist nicht definiert.
+Die *Ausnahme* Argument kann NULL sein, eines der unterstützten Gleitkommaausnahme-Makros oder das bitweise OR von mindestens zwei der Makros. Der Effekt von jedem anderen Argumentwert ist nicht definiert.
 
 Um diese Funktion zu verwenden, müssen Sie vor dem Aufruf Gleitkommaoptimierungen deaktivieren, die den Zugriff mithilfe der `#pragma fenv_access(on)`-Direktive verhindern könnten. Weitere Informationen finden Sie unter [fenv_access](../../preprocessor/fenv-access.md).
 

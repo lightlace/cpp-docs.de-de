@@ -1,10 +1,6 @@
 ---
-title: _ismbbalnum, _ismbbalnum_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _ismbbalnum, _ismbbalnum_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbalnum
 - _ismbbalnum_l
@@ -26,24 +22,18 @@ f1_keywords:
 - ismbbalnum
 - _ismbbalnum_l
 - ismbbalnum_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbbalnum_l function
 - ismbbalnum function
 - ismbbalnum_l function
 - _ismbbalnum function
 ms.assetid: 8025de50-a871-49fd-9ae6-f437b47aa987
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3ace530d1190de5df5eaac92d412b86f2b2cc3d4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b5f54754907c09a34b0f4c3bae3e5c27336ca36
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398707"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554842"
 ---
 # <a name="ismbbalnum-ismbbalnuml"></a>_ismbbalnum, _ismbbalnum_l
 
@@ -76,11 +66,11 @@ Zu verwendendes Gebietsschema.
 
 ist ungleich NULL für *c*, oder 0, wenn er nicht ist.
 
-Die Version dieser Funktion mit dem **_l** -Suffix ist beinahe identisch, außer dass er das Gebietsschema für den übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten verwendet.
+Die Version dieser Funktion mit dem **_l** -Suffix ist beinahe identisch, außer dass er das Gebietsschema für den übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängige Verhalten verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_ismbbalnum**|\<mbctype.h>|
 |**_ismbbalnum_l**|\<mbctype.h>|

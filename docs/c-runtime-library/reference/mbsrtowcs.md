@@ -1,10 +1,6 @@
 ---
-title: mbsrtowcs | Microsoft-Dokumentation
-ms.custom: ''
+title: mbsrtowcs
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - mbsrtowcs
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - mbsrtowcs
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbsrtowcs function
 ms.assetid: f3a29de8-e36e-425b-a7fa-a258e6d7909d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ccb5bda16238888905678ffb3b6de01b93555ad0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2bc0c8c9e2d871b6d1748c42dc02c627244dbf69
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405431"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597144"
 ---
 # <a name="mbsrtowcs"></a>mbsrtowcs
 
@@ -69,38 +59,38 @@ Adresse zum Speichern der resultierenden konvertierten Zeichenfolge mit Breitzei
 Indirekter Zeiger auf den Speicherort der zu konvertierenden Zeichenfolge mit Multibytezeichen.
 
 *count*<br/>
-Die maximale Anzahl von Zeichen (nicht Bytes) zu konvertieren und in speichern *Wcstr*.
+Die maximale Anzahl von Zeichen (nicht Bytes), konvertieren und speichern *Wcstr*.
 
 *mbstate*<br/>
-Ein Zeiger auf ein **Mbstate_t** konvertierungszustandsobjekt. Wenn dieser Wert ein NULL-Zeiger ist, wird ein statisches internes Konvertierungszustandsobjekt verwendet. Da das interne **Mbstate_t** -Objekt nicht threadsicher, es wird empfohlen, dass Sie immer eigene übergeben *Mbstate* Parameter.
+Ein Zeiger auf ein **Mbstate_t** konvertierungszustandsobjekt. Wenn dieser Wert ein NULL-Zeiger ist, wird ein statisches internes Konvertierungszustandsobjekt verwendet. Da das interne **Mbstate_t** Objekt nicht threadsicher, es wird empfohlen, dass Sie immer Ihren eigenen übergeben *Mbstate* Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Anzahl der Zeichen zurück, die erfolgreich konvertiert wurden, nicht einschließlich des abschließenden Zeichens NULL, sofern vorhanden. Gibt ((size_t)(-1) bei ein Fehler aufgetreten ist, und legt **Errno** auf eilseq fest.
+Gibt die Anzahl der Zeichen zurück, die erfolgreich konvertiert wurden, nicht einschließlich des abschließenden Zeichens NULL, sofern vorhanden. Gibt ((size_t)(-1) bei ein Fehler ist aufgetreten, und legt **Errno** auf eilseq fest.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Mbsrtowcs** -Funktion konvertiert eine Zeichenfolge mit Multibytezeichen indirekt verweist *Mbstr*, im verweist Puffer gespeicherte Breitzeichen *Wcstr*, über mithilfe den in enthaltenen konvertierungszustand *Mbstate*. Die Konvertierung wird fortgesetzt, für jedes Zeichen bis entweder ein abschließendes null multibyte-Zeichen gefunden wird, eine multibyte-Sequenz, die nicht in ein gültiges Zeichen im aktuellen Gebietsschema entsprechen festgestellt wird, oder bis *Anzahl* Zeichen wurden konvertiert. Wenn **Mbsrtowcs** das Multibytezeichen Null-Zeichen ('\0') erkennt, entweder vor oder bei *Anzahl* auftritt, konvertiert es in ein abschließendes Nullzeichen von 16-Bit- und nicht länger auf.
+Die **Mbsrtowcs** -Funktion konvertiert eine Zeichenfolge mit Multibytezeichen, die indirekt verweist *Mbstr*, in Breitzeichen, die in den Puffer, die auf gespeicherten *Wcstr*, Mithilfe des in enthaltenen Konvertierungsstatus *Mbstate*. Die Konvertierung wird fortgesetzt, für jedes Zeichen bis entweder ein abschließendes Multibytezeichen null gefunden wird, eine multibyte-Sequenz, die keine gültigen Zeichen im aktuellen Gebietsschema entspricht festgestellt wird, oder bis *Anzahl* Zeichen wurden konvertiert. Wenn **Mbsrtowcs** die multibyte-Nullzeichen ('\0') erkennt, entweder vor oder bei *Anzahl* auftritt, konvertiert es in ein abschließendes Nullzeichen von 16-Bit- und beendet wird.
 
-Daher die Breitzeichen-Zeichenfolge bei *Wcstr* ist Null-terminierte nur, wenn **Mbsrtowcs** ein Multibytezeichen Null findet, bei der Konvertierung. Wenn die Sequenzen auf verweist *Mbstr* und *Wcstr* überlappen, ist das Verhalten des **Mbsrtowcs** ist nicht definiert. **Mbsrtowcs** wird von der LC_TYPE-Kategorie des aktuellen Gebietsschemas beeinflusst.
+Daher die Breitzeichen-Zeichenfolge an *Wcstr* ist Null-terminierte nur, wenn **Mbsrtowcs** während der Konvertierung ein Multibytezeichen Null findet. Wenn die Sequenzen, zeigt *Mbstr* und *Wcstr* überlappen, ist das Verhalten der **Mbsrtowcs** ist nicht definiert. **Mbsrtowcs** wird von der LC_TYPE-Kategorie des aktuellen Gebietsschemas beeinflusst.
 
-Die **Mbsrtowcs** -Funktion unterscheidet sich von [Mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md) durch die neustartmöglichkeit. Der konvertierungszustand wird gespeichert, *Mbstate* für nachfolgende Aufrufe der gleichen oder anderer erneut startbarer Funktionen. Wenn sowohl Funktionen, die neu gestartet werden können, als auch Funktionen, die nicht neu gestartet werden könnnen, verwendet werden, sind die Ergebnisse undefiniert.  Eine Anwendung sollte verwenden, z. B. **Mbsrlen** anstelle von **Mbslen**, wenn ein nachfolgender Aufruf von **Mbsrtowcs** anstelle von **Mbstowcs**.
+Die **Mbsrtowcs** Funktion unterscheidet sich von [Mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md) durch die neustartmöglichkeit. Der konvertierungszustand befindet sich in *Mbstate* für nachfolgende Aufrufe der gleichen oder anderer erneut startbaren Funktionen. Wenn sowohl Funktionen, die neu gestartet werden können, als auch Funktionen, die nicht neu gestartet werden könnnen, verwendet werden, sind die Ergebnisse undefiniert.  Z. B. eine Anwendung verwendet soll **Mbsrlen** anstelle von **Mbslen**, wenn ein nachfolgender Aufruf von **Mbsrtowcs** anstelle **Mbstowcs**.
 
-Wenn *Wcstr* ist kein Nullzeiger ist, das Zeigerobjekt verweist *Mbstr* ist einen null-Zeiger zugewiesen, wenn die Konvertierung beendet, da ein abschließendes Nullzeichen erreicht wurde. Andernfalls wird es ggf. der Adresse unmittelbar nach dem letzten konvertierten Multibytezeichen zugewiesen. Auf diese Weise kann ein nachfolgender Funktionsaufruf die Konvertierung an der Stelle neu starten, an der der Aufruf beendet wurde.
+Wenn *Wcstr* ist kein null-Zeiger, das Zeigerobjekt verweist *Mbstr* wird einen null-Zeiger zugewiesen, wenn die Konvertierung beendet, da ein abschließendes Nullzeichen erreicht wurde. Andernfalls wird es ggf. der Adresse unmittelbar nach dem letzten konvertierten Multibytezeichen zugewiesen. Auf diese Weise kann ein nachfolgender Funktionsaufruf die Konvertierung an der Stelle neu starten, an der der Aufruf beendet wurde.
 
-Wenn die *Wcstr* Argument ist ein null-Zeiger der *Anzahl* Argument wird ignoriert und **Mbsrtowcs** gibt die erforderliche Größe in Breitzeichen für die Zielzeichenfolge zurück. Wenn *Mbstate* ist ein null-Zeiger verwendet die Funktion ein nicht threadsicheres statisches internes **Mbstate_t** konvertierungszustandsobjekt. Wenn die Zeichensequenz *Mbstr* verfügt nicht über eine entsprechende Multibyte zeichendarstellung, wird-1 zurückgegeben und die **Errno** festgelegt ist, um **EILSEQ**.
+Wenn die *Wcstr* Argument ist ein null-Zeiger der *Anzahl* Argument wird ignoriert, und **Mbsrtowcs** gibt die erforderliche Größe in Breitzeichen, für die Zielzeichenfolge zurück. Wenn *Mbstate* ist ein null-Zeiger, der die Funktion verwendet eine nicht threadsichere statische interne **Mbstate_t** konvertierungszustandsobjekt. Wenn die Zeichensequenz *Mbstr* verfügt nicht über eine entsprechende Multibyte zeichendarstellung verfügt, wird-1 zurückgegeben und die **Errno** nastaven NA hodnotu **EILSEQ**.
 
-Wenn *Mbstr* null-Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** auf **EINVAL** und gibt-1 zurück.
+Wenn *Mbstr* ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** zu **EINVAL** und gibt-1 zurück.
 
 In C++ hat diese Funktion eine Vorlagenüberladung, mit der die neuere, sichere Entsprechung dieser Funktion aufgerufen wird. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Ausnahmen
 
-Die **Mbsrtowcs** -Funktion ist multithreadsicher ist, solange keine Funktion im aktuellen Thread ruft **Setlocale** solange diese Funktion ausgeführt wird und die *Mbstate* Argument ist ein null-Zeiger.
+Die **Mbsrtowcs** -Funktion ist multithreadsicher, solange keine Funktion im aktuellen Thread ruft **Setlocale** solange diese Funktion ausgeführt wird und die *Mbstate* Argument ist kein null-Zeiger.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**mbsrtowcs**|\<wchar.h>|
 
