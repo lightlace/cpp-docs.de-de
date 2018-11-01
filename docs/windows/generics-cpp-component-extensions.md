@@ -1,29 +1,19 @@
 ---
-title: Generika (C++ / CLI und C++ / CX) | Microsoft-Dokumentation
-ms.custom: ''
+title: Generika (C++ / CLI und C++ / CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - generic_cpp
 - generic
-dev_langs:
-- C++
 helpviewer_keywords:
 - generics [C++]
 ms.assetid: c7ccc316-a411-4c00-b2e2-f0c0eadc6cfd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8bb0c6bc3459ff0b86200502b1a31ee341078280
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 5c00d8ece7d08adbb6e60cccd75cbe84487a9ecd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327674"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477609"
 ---
 # <a name="generics--ccli-and-ccx"></a>Generika (C++ / CLI und C++ / CX)
 
@@ -36,10 +26,10 @@ Generika sind parametrisierte Typen und Methoden. Finden Sie in diesem Abschnitt
 [Übersicht über Generika in C++ / CLI](../windows/overview-of-generics-in-visual-cpp.md)<br/>
 Informationen zu Generika sind, die Motivation für die Sprachfunktion, Definitionen von Begriffen verwendet, um generische Typen und Informationen zur Verwendung von Verweistypen und Werttypen als Typparameter für generische Typen beschreiben.
 
-[Generische Schnittstellen (C++ / CLI)](../windows/generic-interfaces-visual-cpp.md)<br/>
+[Generische Schnittstellen (C++/CLI)](../windows/generic-interfaces-visual-cpp.md)<br/>
 Informationen zum Definieren und Verwenden von generischen Schnittstellen.
 
-[Generische Delegaten (C++ / CLI)](../windows/generic-delegates-visual-cpp.md)<br/>
+[Generische Delegaten (C++/CLI)](../windows/generic-delegates-visual-cpp.md)<br/>
 Informationen zum Definieren und Verwenden von generischen Delegaten.
 
 [Einschränkungen für generische Typparameter (C++/CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)<br/>
@@ -48,7 +38,7 @@ Informationen zur Verwendung von Einschränkungen in generischen Typen.
 [Verwenden von Generika (C++/CLI)](../windows/consuming-generics-cpp-cli.md)<br/>
 Informationen zum Verwenden von Generika in .NET Assemblys, möglicherweise in anderen Sprachen, in C++ erstellte definiert c++ / CLI.
 
-[Generika und Vorlagen (C++ / CLI)](../windows/generics-and-templates-visual-cpp.md)<br/>
+[Generika und Vorlagen (C++/CLI)](../windows/generics-and-templates-visual-cpp.md)<br/>
 Ein Vergleich von Generika und Vorlagen, die jeder verwenden und wie sie sinnvoll kombiniert werden soll.
 
 ### <a name="supported-by-the-common-language-runtime"></a>Von der Common Language Runtime unterstützt werden
@@ -66,4 +56,4 @@ Mithilfe der [für jedes im](../dotnet/for-each-in.md) -Schlüsselwort in einer 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für .NET- und UWP](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET und UWP](../windows/component-extensions-for-runtime-platforms.md)
