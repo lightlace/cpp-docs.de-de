@@ -1,10 +1,6 @@
 ---
-title: _mbctombb, _mbctombb_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _mbctombb, _mbctombb_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbctombb_l
 - _mbctombb
@@ -26,24 +22,18 @@ f1_keywords:
 - _mbctombb
 - mbctombb_l
 - mbctombb
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbctombb function
 - mbctombb_l function
 - mbctombb function
 - _mbctombb_l function
 ms.assetid: d90970b8-71ff-4586-b6a2-f9ceb811f776
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: adb233b489b5f4c190a4015805b07ab36770a283
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7395d94a6ec18f989d4a7153425b7af406a0bf45
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402903"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519833"
 ---
 # <a name="mbctombb-mbctombbl"></a>_mbctombb, _mbctombb_l
 
@@ -74,19 +64,19 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Im Erfolgsfall **_mbctombb** und **_mbctombb_l** gibt die Einzelbyte-Zeichen, das entspricht *c*; Anderfalls wird *c* .
+Im Erfolgsfall **_mbctombb** und **_mbctombb_l** gibt das Einzelbyte-Zeichen zurück, die entspricht *c*; andernfalls *c* .
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mbctombb** und **_mbctombb_l** Funktionen konvertieren ein angegebenes Multibytezeichen in ein entsprechendes Einzelbyte-Multibytezeichen. Zeichen müssen Einzelbyte-Zeichen innerhalb des Bereichs 0 x 20 – 0x7E oder 0xA1 - 0xDF zu konvertierenden entsprechen.
+Die **_mbctombb** und **_mbctombb_l** Funktionen konvertieren ein angegebenes Multibytezeichen in ein entsprechendes Einzelbyte-Multibytezeichen. Zeichen müssen ein-Byte-Zeichen innerhalb des Bereichs 0 x 20 – 0x7E oder 0xA1 – 0xDF konvertiert werden entsprechen.
 
-Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Version dieser Funktion ohne die **_l** -Suffix verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Version mit der **_l** -Suffix ist beinahe identisch, verwendet jedoch den Ihnen übergebenen Gebietsschemaparameter in stattdessen. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Version dieser Funktion ohne die **_l** -Suffix verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Version mit der **_l** -Suffix ist beinahe identisch, außer dass es den übergebenen Gebietsschemaparameter verwenden in stattdessen. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 In früheren Versionen **_mbctombb** hieß **Zentohan**. Verwendung **_mbctombb** stattdessen.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_mbctombb**|\<mbstring.h>|
 |**_mbctombb_l**|\<mbstring.h>|

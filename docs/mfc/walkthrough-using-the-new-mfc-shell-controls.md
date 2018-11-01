@@ -1,25 +1,15 @@
 ---
-title: 'Exemplarische Vorgehensweise: Verwenden die neue MFC-Bibliothek Shell-Steuerelemente | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Exemplarische Vorgehensweise: Verwenden der neuen MFC-Shell-Steuerelemente'
 ms.date: 09/20/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 168d7c1740f9b33af1eca539e30514ce76259ceb
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 4ff585123fb30a4fc31460c95f8960f5cfd7b7bc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50076333"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507563"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Exemplarische Vorgehensweise: Verwenden der neuen MFC-Shell-Steuerelemente
 

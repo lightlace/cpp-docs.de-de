@@ -1,27 +1,19 @@
 ---
-title: 'Vorgehensweise: Erstellen und Verwenden von CComPtr- und CComQIPtr-Instanzen | Microsoft-Dokumentation'
+title: 'Gewusst wie: Erstellen und Verwenden von CComPtr- und CComQIPtr-Instanzen'
 ms.custom: how-to
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
 ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 052f915f2626e7b9eeef6a762c52943083b955b8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8065e0b8782c1c28d83aa6fc9690150793fe51ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46072146"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518702"
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Gewusst wie: Erstellen und Verwenden von CComPtr- und CComQIPtr-Instanzen
 
-In der klassischen Windows-Programmierung werden Bibliotheken häufig als COM-Objekte (oder genauer gesagt, als COM-Server) implementiert. Viele Windows-Betriebssystemkomponenten werden als COM-Server implementiert, und viele Mitwirkende bieten Bibliotheken in dieser Form. Weitere Informationen zu den Grundlagen von COM, finden Sie unter [Component Object Model (COM)](/windows/desktop/com/component-object-model--com--portal).
+In der klassischen Windows-Programmierung werden Bibliotheken häufig als COM-Objekte (oder genauer gesagt, als COM-Server) implementiert. Viele Windows-Betriebssystemkomponenten werden als COM-Server implementiert, und viele Mitwirkende bieten Bibliotheken in dieser Form. Informationen zu den COM-Grundlagen finden Sie unter [Component Object Model (COM)](/windows/desktop/com/component-object-model--com--portal).
 
 Speichern Sie beim Instanziieren eines Component Object Model-Objekts (COM) den Schnittstellenzeiger in einem intelligenten COM-Zeiger, der die Zählung von Verweisen mit Aufrufen von `AddRef` und `Release` im Destruktor durchführt. Wenn Sie die Active Template Library (ATL) oder die Microsoft Foundation Class-Bibliothek (MFC-Bibliothek) verwenden, verwenden Sie den intelligenten `CComPtr` -Zeiger. Wenn Sie ATL bzw. MFC nicht verwenden, verwenden Sie `_com_ptr_t`. Da es kein COM-Äquivalent zu `std::unique_ptr`gibt, verwenden Sie diese intelligenten Zeiger sowohl für Szenarien mit einzelnen als auch mehreren Besitzern. Sowohl `CComPtr` als auch `ComQIPtr` unterstützt Verschiebungsvorgänge mit rvalue-Verweisen.
 
