@@ -1,27 +1,17 @@
 ---
-title: __mulh | Microsoft-Dokumentation
-ms.custom: ''
+title: __mulh
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __mulh
-dev_langs:
-- C++
 helpviewer_keywords:
 - __mulh intrinsic
 ms.assetid: cd2ab093-9ef6-404d-ac34-0bee033882f3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f9393026814e8f3f7dd90704cd08ea96dfb9a35a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e42cc5bf3313b37bdd97287b4d53bce794b3379b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407321"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50549382"
 ---
 # <a name="mulh"></a>__mulh
 
@@ -32,9 +22,9 @@ Gibt die oberen 64 Bits des Produkts von zwei 64-Bit-Ganzzahlen mit Vorzeichen z
 ## <a name="syntax"></a>Syntax
 
 ```
-__int64 __mulh( 
-   __int64 a, 
-   __int64 b 
+__int64 __mulh( 
+   __int64 a, 
+   __int64 b 
 );
 ```
 
