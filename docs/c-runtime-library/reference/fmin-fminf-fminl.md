@@ -1,11 +1,6 @@
 ---
-title: Fmin, Fminf, Fminl | Microsoft Docs
-ms.custom: ''
+title: fmin, fminf, fminl
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fmin
 - fminf
@@ -35,16 +30,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: abf16c4cc21d1dc396f0b81aadc8d495c6bdd4b9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f73853e18bd5d7f699cd2c3109fe5fb830859bf1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398944"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464362"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin, fminf, fminl
 
@@ -89,15 +80,15 @@ Der zweite zu vergleichende Wert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei erfolgreicher Ausführung gibt die kleinere von *x* oder *y*.
+Wenn erfolgreich, wird die kleinere von *x* oder *y*.
 
 |Eingabe|Ergebnis|
 |-----------|------------|
-|*X* ist "NaN"|*y*|
-|*y* ist "NaN"|*w*|
-|*X* und *y* sind "NaN"|NaN|
+|*X* ist NaN|*y*|
+|*y* ist NaN|*w*|
+|*X* und *y* sind NaN|NaN|
 
-Die Funktion führt nicht dazu, dass [_matherr](matherr.md) um aufgerufen werden, dazu führen, dass alle Gleitkommaausnahmen, oder ändern Sie den Wert der **Errno**.
+Die Funktion löst keine [_matherr](matherr.md) Gleitkommaausnahmen um aufgerufen werden soll, oder ändern Sie den Wert der **Errno**.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -105,7 +96,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Fmin** 
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**Fmin**, **Fminf**, **Fminl**|C: \<math.h><br />C++: \<math.h> oder \<cmath>|
 

@@ -1,10 +1,6 @@
 ---
-title: _scprintf_p, _scprintf_p_l, _scwprintf_p, _scwprintf_p_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _scprintf_p, _scprintf_p_l, _scwprintf_p, _scwprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _scwprintf_p
 - _scprintf_p_l
@@ -33,8 +29,6 @@ f1_keywords:
 - scwprintf_p_l
 - _scprintf_p
 - _scwprintf_p
-dev_langs:
-- C++
 helpviewer_keywords:
 - sctprintf_p_l function
 - _scwprintf_p_l function
@@ -49,16 +43,12 @@ helpviewer_keywords:
 - scwprintf_p_l function
 - _sctprintf_p_l function
 ms.assetid: 8390d1e1-2826-47a4-851f-6635a88087cc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2120eaaee5acfa3628650b5df1f03448ee282a91
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 818dc5c24cca178fa03d08d1f609c23abbc7a013
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407183"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50443068"
 ---
 # <a name="scprintfp-scprintfpl-scwprintfp-scwprintfpl"></a>_scprintf_p, _scprintf_p_l, _scwprintf_p, _scwprintf_p_l
 
@@ -102,17 +92,17 @@ Das zu verwendende Gebietsschema.
 
 Gibt die Anzahl der Zeichen zurück, die erzeugt wird, wenn die Zeichenfolge gedruckt oder mithilfe der angegebenen Formatierungscodes an eine Datei oder einen Puffer gesendet wird. Der Rückgabewert umfasst nicht das abschließende NULL-Zeichen. **_scwprintf_p** führt dieselbe Funktion für Breitzeichen.
 
-Der Unterschied zwischen **_scprintf_p** und **_scprintf** handelt, **_scprintf_p** positionelle Parameter unterstützt, wodurch ermöglicht das Angeben der Reihenfolge, in denen die Argumente werden in der Formatzeichenfolge verwendet werden. Weitere Informationen finden Sie unter [printf-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md).
+Der Unterschied zwischen **_scprintf_p** und **_scprintf** ist, die **_scprintf_p** positionelle Parameter unterstützt, wodurch angeben der Reihenfolge, in denen die Argumente werden in der Formatzeichenfolge verwendet werden. Weitere Informationen finden Sie unter [printf-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md).
 
-Wenn *Format* ist ein **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen – 1 zurück und legen Sie **Errno** auf **EINVAL**.
+Wenn *Format* ist eine **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**.
 
 Weitere Informationen über diese und andere Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Jede *Argument* (sofern vorhanden) wird entsprechend der jeweiligen Formatangabe in konvertiert *Format*. Das Format besteht aus normalen Zeichen und hat die gleiche form und Funktion wie die *Format* Argument für [Printf](printf-printf-l-wprintf-wprintf-l.md).
+Jede *Argument* (sofern vorhanden) wird entsprechend der jeweiligen Formatangabe in konvertiert *Format*. Das Format besteht aus normalen Zeichen und hat die gleiche form und Funktion wie der *Format* Argument für [Printf](printf-printf-l-wprintf-wprintf-l.md).
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschemaparameter, der übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas.
+Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
 
 > [!IMPORTANT]
 > Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist.
@@ -126,7 +116,7 @@ Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, v
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_scprintf_p**, **_scprintf_p_l**|\<stdio.h>|
 |**_scwprintf_p**, **_scwprintf_p_l**|\<stdio.h> oder \<wchar.h>|

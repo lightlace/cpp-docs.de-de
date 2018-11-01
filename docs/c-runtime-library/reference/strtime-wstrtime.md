@@ -1,10 +1,6 @@
 ---
-title: _strtime, _wstrtime | Microsoft-Dokumentation
-ms.custom: ''
+title: _strtime, _wstrtime
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wstrtime
 - _strtime
@@ -27,8 +23,6 @@ f1_keywords:
 - wstrtime
 - strtime
 - _tstrtime
-dev_langs:
-- C++
 helpviewer_keywords:
 - strtime function
 - _strtime function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3b0ca776394b47f5209fbf034cbb10461c220634
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 9d874321418854a703886eb80ee23ac1cba57fa4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450783"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431120"
 ---
 # <a name="strtime-wstrtime"></a>_strtime, _wstrtime
 
@@ -84,9 +74,9 @@ Gibt einen Zeiger auf die resultierende Zeichenfolge *Timestr*.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_strtime** Funktion kopiert die aktuelle lokale Zeit in den Puffer verweist *Timestr*. Die Zeit wird als formatiert **hh: mm:** , in denen **"hh"** sich um zwei Ziffern, die für die Stunde im 24-Stunden-Notation **mm** sich um zwei Ziffern, die die Minuten der Stunde und darstellt.**ss** sich um zwei Ziffern, die Sekunden darstellt. Z. B. die Zeichenfolge **18:23:44** 23 Minuten und 44 Sekunden nach 6 Uhr darstellt Der Puffer muss mindestens 9 Bytes lang sein.
+Die **_strtime** Funktion kopiert die aktuelle lokale Zeit in den Puffer, der auf *Timestr*. Die Zeit wird als formatiert **hh: mm:** , in denen **Hh** zwei Ziffern für die Stunde im 24-Stunden-Notation **mm** zwei Ziffern für die Minuten nach der Stunde und **ss** zwei Ziffern für Sekunden. Z. B. die Zeichenfolge **18:23:44** stellt 23 Minuten und 44 Sekunden nach 6 Uhr Der Puffer muss mindestens 9 Bytes lang sein.
 
-**_wstrtime** ist eine Breitzeichen-Version von **_strtime**; der Wert Argument- und Rückgabetypen der **_wstrtime** sind Zeichenfolgen mit Breitzeichen. Anderenfalls verhalten sich diese Funktionen identisch. Wenn *Timestr* ist ein **NULL** Zeiger oder, wenn *Timestr* ist falsch, der ungültig formatiert parameterhandler aufgerufen, wie in beschrieben [Parameter Überprüfung](../../c-runtime-library/parameter-validation.md). Wenn die Ausnahme zulässig ist, um den Vorgang fortzusetzen, geben diese Funktionen zurück eine **NULL** und legen Sie **Errno** auf **EINVAL** Wenn *Timestr* wurde eine **NULL** oder **Errno** auf **ERANGE** Wenn *Timestr* ist falsch formatiert.
+**_wstrtime** ist eine Breitzeichen-Version von **_strtime**; der Wert Argument- und Rückgabetypen der **_wstrtime** sind Breitzeichen Zeichenfolgen. Anderenfalls verhalten sich diese Funktionen identisch. Wenn *Timestr* ist eine **NULL** Zeiger oder wenn *Timestr* falsch formatiert ist, die ungültige parameterhandler wird aufgerufen, wie in beschrieben [Parameter Überprüfung](../../c-runtime-library/parameter-validation.md). Wenn die Ausnahme zulässig ist, um den Vorgang fortzusetzen, geben diese Funktionen zurück eine **NULL** und **Errno** zu **EINVAL** Wenn *Timestr* wurde eine **NULL** oder **Errno** zu **ERANGE** Wenn *Timestr* ist falsch formatiert.
 
 In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -98,7 +88,7 @@ In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sich
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_strtime**|\<time.h>|
 |**_wstrtime**|\<time.h> oder \<wchar.h>|

@@ -1,16 +1,10 @@
 ---
-title: BSCMAKE-Optionen | Microsoft-Dokumentation
-ms.custom: ''
+title: BSCMAKE-Optionen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCBscMakeTool.OutputFile
 - VC.Project.VCBscMakeTool.SuppressStartupBanner
 - VC.Project.VCBscMakeTool.PreserveSBR
-dev_langs:
-- C++
 helpviewer_keywords:
 - /v BSCMAKE option
 - Iu BSCMAKE option
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c00e6abd28d2e21c73d1eca83f2effb8782d8aa4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 669f1fc3ef151ee76ab6b057798f33f5b3cc1287
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700868"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464908"
 ---
 # <a name="bscmake-options"></a>BSCMAKE-Optionen
 
@@ -72,7 +62,7 @@ Ermöglicht das Senden von Informationen in Bezug auf interne Fehler in bscmake.
 
 Weitere Informationen zu **/errorreport**, finden Sie unter [/errorreport (interne Compilerfehler Bericht)](../../build/reference/errorreport-report-internal-compiler-errors.md).
 
-**/ HELP**<br/>
+**/HELP**<br/>
 Zeigt eine Zusammenfassung der Befehlszeilensyntax von BSCMAKE an.
 
 **IU**<br/>
@@ -81,7 +71,7 @@ Schließt Symbole ein, auf die nicht verwiesen wird. Standardmäßig zeichnet BS
 **/ n**<br/>
 Erzwingt ein nicht inkrementelles Erstellen. Verwendung **/n** um eine vollständige Erstellung der Browserinformationsdatei zu erzwingen, und zwar unabhängig davon, ob eine BSC-Datei vorhanden ist, und um zu verhindern, dass SBR-Dateien abgeschnitten wird. Finden Sie unter [wie eine BSC-Datei mit BSCMAKE](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md).
 
-**/ NOLOGO**<br/>
+**/NOLOGO**<br/>
 Unterdrückt die Copyrightmeldung von BSCMAKE.
 
 **/ o** *Dateiname*<br/>
