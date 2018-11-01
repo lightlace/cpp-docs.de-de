@@ -1,10 +1,6 @@
 ---
-title: _fputchar, _fputwchar | Microsoft-Dokumentation
-ms.custom: ''
+title: _fputchar, _fputwchar
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fputchar
 - _fputwchar
@@ -28,8 +24,6 @@ f1_keywords:
 - _fputtchar
 - fputchar
 - _fputchar
-dev_langs:
-- C++
 helpviewer_keywords:
 - fputchar function
 - standard output, writing to
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3fd5a1d60c61fdde5864f3447b5f721f409bc3a4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 57ec2350fa1d0b681c6eed0c4cfc4ec4660977e8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399591"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477973"
 ---
 # <a name="fputchar-fputwchar"></a>_fputchar, _fputwchar
 
@@ -72,13 +62,13 @@ Zu schreibende Zeichen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt das geschriebene Zeichen zurück. Für **_fputchar**, ein Rückgabewert von **EOF** zeigt einen Fehler an. Für **_fputwchar**, ein Rückgabewert von **WEOF** zeigt einen Fehler an. Wenn c **NULL**, generieren diese Funktionen eine Ausnahme für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben sie zurück **EOF** (oder **WEOF**), und legen **Errno** auf **EINVAL**.
+Jede dieser Funktionen gibt das geschriebene Zeichen zurück. Für **_fputchar**, einen Rückgabewert von **EOF** gibt einen Fehler an. Für **_fputwchar**, einen Rückgabewert von **WEOF** gibt einen Fehler an. Wenn c **NULL**, wie in beschrieben, generieren diese Funktionen eine Ausnahme für ungültige Parameter, wegen [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben sie zurück **EOF** (oder **WEOF**) und legen Sie **Errno** zu **EINVAL**.
 
 Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Beide Funktionen schreibt das einzelne Zeichen *c* auf **"stdout"** und verschieben den Indikator entsprechend. **_fputchar** entspricht `fputc( stdout )`. Dies entspricht auch **Putchar**, jedoch nur als Funktion anstelle einer Funktion und Makro implementiert. Im Gegensatz zu **Fputc** und **Putchar**, diese Funktionen sind nicht mit dem ANSI-Standard kompatibel.
+Beide dieser Funktionen schreibt das einzelne Zeichen *c* zu **"stdout"** und verschieben den Indikator entsprechend. **_fputchar** entspricht `fputc( stdout )`. Dies entspricht auch **Putchar**, jedoch nur als Funktion anstelle einer Funktion und Makro implementiert. Im Gegensatz zu **Fputc** und **Putchar**, diese Funktionen sind nicht mit dem ANSI-Standard kompatibel.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -93,7 +83,7 @@ Beide Funktionen schreibt das einzelne Zeichen *c* auf **"stdout"** und verschie
 |**_fputchar**|\<stdio.h>|
 |**_fputwchar**|\<stdio.h> oder \<wchar.h>|
 
-Die Konsole wird in apps der universellen Windows-Plattform (UWP) nicht unterstützt. Standardstream Handles, die mit der Konsole verknüpften sind –**Stdin**, **"stdout"**, und **"stderr"**– umgeleitet werden müssen, damit C-Laufzeitfunktionen in uwp-apps verwendet werden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die Konsole wird in apps für universelle Windows-Plattform (UWP) nicht unterstützt. Die mit der Konsole verknüpften standardstreamhandles,**Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in UWP-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 

@@ -1,10 +1,6 @@
 ---
-title: _utime, _utime32, _utime64, _wutime, _wutime32, _wutime64 | Microsoft-Dokumentation
-ms.custom: ''
+title: _utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _utime64
 - _utime
@@ -40,8 +36,6 @@ f1_keywords:
 - _utime32
 - _tutime64
 - _wutime32
-dev_langs:
-- C++
 helpviewer_keywords:
 - tutime function
 - utime32 function
@@ -64,16 +58,12 @@ helpviewer_keywords:
 - tutime64 function
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cd8737d6391ea1effd50e967008520b2d77707e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1e9633784ad78a2b46701e6600ad1ddb6b3318e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417710"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471091"
 ---
 # <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 
@@ -113,12 +103,12 @@ int _wutime64(
 *filename*<br/>
 Zeiger auf eine Zeichenfolge, die den Pfad oder Dateiname enthält.
 
-*wie oft*<br/>
+*Wie oft*<br/>
 Zeiger auf die gespeicherten Zeitwerte.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt „0“ zurück, wenn die Dateiänderungszeit geändert wurde. Ein Rückgabewert von – 1 zeigt einen Fehler. Wird ein ungültiger Parameter übergeben, wird der Handler für ungültige Parameter aufgerufen, wie unter [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen – 1 zurück und **Errno** auf einen der folgenden Werte festgelegt:
+Jede dieser Funktionen gibt „0“ zurück, wenn die Dateiänderungszeit geändert wurde. Ein Rückgabewert 1 gibt einen Fehler. Wird ein ungültiger Parameter übergeben, wird der Handler für ungültige Parameter aufgerufen, wie unter [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen-1 zurück und **Errno** auf einen der folgenden Werte festgelegt:
 
 |errno-Wert|Bedingung|
 |-|-|
@@ -129,24 +119,24 @@ Jede dieser Funktionen gibt „0“ zurück, wenn die Dateiänderungszeit geänd
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr (_doserrno, errno, _sys_errlist und _sys_nerr)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Wenn das Datum der Änderung nach dem 1. Januar 1970, Mitternacht, und vor dem Enddatum für die Verwendung der Funktion liegt, kann das Datum für eine Datei geändert werden. **_utime** und **_wutime** das Enddatum 23:59:59 am 31. Dezember 3000 UTC ist einen 64-Bit-Uhrzeitwert einsetzen. Wenn **_USE_32BIT_TIME_T** definiert wird um das alte Verhalten zu erzwingen, wird das Enddatum 23:59:59 am 18. Januar 2038 UTC. **_utime32** oder **_wutime32** verwenden eine 32-Bit-Uhrzeittyp, unabhängig davon, ob **_USE_32BIT_TIME_T** definiert ist, und immer das frühere Enddatum. **_utime64** oder **_wutime64** immer den 64-Bit-Uhrzeittyp verwenden, damit diese Funktionen immer höhere Enddatum unterstützen.
+Wenn das Datum der Änderung nach dem 1. Januar 1970, Mitternacht, und vor dem Enddatum für die Verwendung der Funktion liegt, kann das Datum für eine Datei geändert werden. **_utime** und **_wutime** verwenden einen 64-Bit-Uhrzeitwert, damit das Enddatum 23:59:59, 31. Dezember 3000 UTC ist. Wenn **_USE_32BIT_TIME_T** definiert wird um das alte Verhalten zu erzwingen, ist das Enddatum 23:59:59 am 18. Januar 2038, UTC. **_utime32** oder **_wutime32** verwenden einen 32-Bit-Zeittyp, unabhängig davon, ob **_USE_32BIT_TIME_T** definiert ist, und immer das frühere Enddatum. **_utime64** oder **_wutime64** immer den 64-Bit-Uhrzeittyp verwenden, damit diese Funktionen immer das spätere Enddatum unterstützt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_utime** Funktion legt die Änderungszeit für die angegebene Datei *Filename **.* Damit die Zeit geändert werden kann, benötigt der Prozess Schreibzugriff für die Datei. In der Windows-Betriebssystem können Sie ändern die Uhrzeit des Zugriffs und der Zeitpunkt der Änderung in der **_utimbuf** Struktur. Wenn *Zeiten* ist ein **NULL** -Zeiger ist, wird der Zeitpunkt der Änderung auf die aktuelle lokale Zeit festgelegt. Andernfalls *Zeiten* muss auf eine Struktur des Typs zeigen **_utimbuf**, die in SYS\UTIME definiert. H.
+Die **_utime** Funktion legt das Änderungsdatum für die angegebene Datei *Filename **.* Damit die Zeit geändert werden kann, benötigt der Prozess Schreibzugriff für die Datei. Sie können im Windows-Betriebssystem, ändern, Zugriffszeit und Änderungszeit in der **_utimbuf** Struktur. Wenn *Zeiten* ist eine **NULL** -Zeiger ist, wird die Änderungszeit auf die aktuelle lokale Zeit festgelegt. Andernfalls *Zeiten* muss auf eine Struktur vom Typ zeigen **_utimbuf**, definiert in SYS\UTIME. H.
 
-Die **_utimbuf** -Struktur speichert die Datei und Zeiten von verwendeten **_utime** Datumsangaben Änderung von Dateien zu ändern. Die Struktur enthält die folgenden Felder, die sowohl vom Typ sind **Time_t**:
+Die **_utimbuf** -Struktur speichert die Datei und Zeiten von verwendeten **_utime** so ändern Sie die Datei-Änderungsdatum. Die Struktur enthält die folgenden Felder, die beide vom Typ **Time_t**:
 
 |Feld||
 |-|-|
 **actime**|Uhrzeit des Dateizugriffs
 **modtime**|Uhrzeit der Dateiänderung
 
-Bestimmte Versionen von der **_utimbuf** Struktur (**_utimebuf32** und **__utimbuf64**) mit der 32-Bit und 64-Bit-Versionen von Time-Typ definiert werden. Diese werden in den 32-Bit- und 64-Bit-spezifischen Versionen dieser Funktion verwendet. **_utimbuf** selbst standardmäßig verwendet eine 64-Bit-Uhrzeittyp, es sei denn, **_USE_32BIT_TIME_T** definiert ist.
+Bestimmte Versionen von der **_utimbuf** Struktur (**_utimebuf32** und **__utimbuf64**) werden mit der 32-Bit und 64-Bit-Versionen des Zeittyps definiert. Diese werden in den 32-Bit- und 64-Bit-spezifischen Versionen dieser Funktion verwendet. **_utimbuf** selbst verwendet standardmäßig einen 64-Bit-Zeittyp, sofern **_USE_32BIT_TIME_T** definiert ist.
 
-**_utime** ist identisch mit **_futime** mit dem Unterschied, dass die *Filename* Argument **_utime** ist ein Dateiname oder ein Pfad zu einer Datei, statt einen Dateideskriptor, der ein Öffnen Sie die Datei.
+**_utime** ist identisch mit **_futime** mit dem Unterschied, dass die *Filename* Argument **_utime** ist ein Dateiname oder ein Pfad zu einer Datei, anstatt einen Dateideskriptor, der ein Öffnen Sie die Datei.
 
-**_wutime** ist eine Breitzeichen-Version von **_utime**; das *Filename* Argument **_wutime** ist eine Breitzeichen-Zeichenfolge. Anderenfalls verhalten sich diese Funktionen identisch.
+**_wutime** ist eine Breitzeichen-Version von **_utime**; die *Filename* Argument **_wutime** ist eine Breitzeichen-Zeichenfolge. Anderenfalls verhalten sich diese Funktionen identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -158,7 +148,7 @@ Bestimmte Versionen von der **_utimbuf** Struktur (**_utimebuf32** und **__utimb
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderliche Header|Optionale Header|
+|-Routine zurückgegebener Wert|Erforderliche Header|Optionale Header|
 |-------------|----------------------|----------------------|
 |**_utime**, **_utime32**, **_utime64**|\<sys/utime.h>|\<errno.h>|
 |**_utime64**|\<sys/utime.h>|\<errno.h>|
@@ -168,7 +158,7 @@ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../
 
 ## <a name="example"></a>Beispiel
 
-Dieses Programm verwendet **_utime** die Änderung von Dateien Zeit bis zum aktuellen Zeitpunkt festgelegt.
+Dieses Programm verwendet **_utime** die dateiänderungszeit auf die aktuelle Uhrzeit festgelegt.
 
 ```C
 // crt_utime.c

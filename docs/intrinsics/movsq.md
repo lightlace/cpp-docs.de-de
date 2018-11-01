@@ -1,29 +1,19 @@
 ---
-title: __movsq | Microsoft-Dokumentation
-ms.custom: ''
+title: __movsq
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __movsq
-dev_langs:
-- C++
 helpviewer_keywords:
 - __movsq intrinsic
 - rep movsq instruction
 - movsq instruction
 ms.assetid: be116a6e-2176-4ca4-93b1-9ccf3e7e7835
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9386a35d7cfab67d0a981bd75d889f27e0ef4631
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d614bd33cde01c0097e02a0899b05fc55d4b064c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443828"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50461749"
 ---
 # <a name="movsq"></a>__movsq
 
@@ -34,10 +24,10 @@ Generiert eine Zeichenfolge mit einem wiederholten verschieben (`rep movsq`) Anw
 ## <a name="syntax"></a>Syntax
 
 ```
-void __movsq( 
-   unsigned char* Dest, 
-   unsigned char* Source, 
-   size_t Count 
+void __movsq( 
+   unsigned char* Dest, 
+   unsigned char* Source, 
+   size_t Count 
 );
 ```
 
@@ -46,7 +36,7 @@ void __movsq(
 *dest*<br/>
 [out] Das Ziel des Vorgangs.
 
-*Source*<br/>
+*Quelle*<br/>
 [in] Die Quelle des Vorgangs.
 
 *Anzahl*<br/>

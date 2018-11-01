@@ -1,10 +1,6 @@
 ---
-title: _ismbbkalnum, _ismbbkalnum_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _ismbbkalnum, _ismbbkalnum_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbkalnum
 - _ismbbkalnum_l
@@ -26,24 +22,18 @@ f1_keywords:
 - ismbbkalnum
 - ismbbkalnum_l
 - _ismbbkalnum_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbbkalnum_l function
 - ismbbkalnum_l function
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 62aa208085b3a295ef51f4aa5ecafd7e68bb4710
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4eca5738068dab7393f70edf619629b179637e73
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399295"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481054"
 ---
 # <a name="ismbbkalnum-ismbbkalnuml"></a>_ismbbkalnum, _ismbbkalnum_l
 
@@ -71,11 +61,11 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_ismbbkalnum** gibt einen Wert ungleich NULL zurück, wenn die ganze Zahl *c* ein nicht-ASCII-Textsymbol handelt, Satzzeichen, oder 0 ist, ist er nicht. **_ismbbkalnum** verwendet das aktuelle Gebietsschema für gebietsschemaabhängige Zeicheninformationen. **_ismbbkalnum_l** ist identisch mit **_ismbbkalnum** mit dem Unterschied, dass es das Gebietsschema als Parameter verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+**_ismbbkalnum** gibt einen Wert ungleich NULL zurück, wenn die ganze Zahl *c* ein nicht-ASCII-Textsymbol Satzzeichen oder 0 ist, ist dies nicht. **_ismbbkalnum** verwendet das aktuelle Gebietsschema für gebietsschemaabhängige Zeicheninformationen. **_ismbbkalnum_l** ist identisch mit **_ismbbkalnum** mit dem Unterschied, dass es das Gebietsschema als Parameter verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_ismbbkalnum**|\<mbctype.h>|
 |**_ismbbkalnum_l**|\<mbctype.h>|

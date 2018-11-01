@@ -1,10 +1,6 @@
 ---
-title: offsetof-Makro | Microsoft-Dokumentation
-ms.custom: ''
+title: offsetof-Makro
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,22 +15,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - offsetof
-dev_langs:
-- C++
 helpviewer_keywords:
 - structure members, offset
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 308aac2493751cfe2147187ed9848347124a90d6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a0f367dbe6fa2681a7d413304f32b5699b8f7cee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401463"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50458319"
 ---
 # <a name="offsetof-macro"></a>offsetof-Makro
 
@@ -59,18 +49,18 @@ Der Name des Elements in der übergeordneten Datenstruktur, für das der Offset 
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Offsetof** gibt den Offset in Bytes des angegebenen Elements vom Anfang seiner übergeordneten Datenstruktur zurück. Ist für Bitfelder nicht definiert.
+**Offsetof** gibt den Offset in Bytes, des angegebenen Elements vom Anfang seiner übergeordneten Datenstruktur zurück. Ist für Bitfelder nicht definiert.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Offsetof** Makro gibt den Offset in Bytes des *MemberName* vom Anfang der Struktur, die durch *StructName* als ein Wert vom Typ **Size_ t**. Sie können angeben, dass Typen, mit der **Struktur** Schlüsselwort.
+Die **"offsetof"** Makro gibt den Offset in Bytes der *MemberName* vom Anfang der Struktur von *StructName* als ein Wert vom Typ **Size_ t**. Sie können angeben, dass Typen mit den **Struktur** Schlüsselwort.
 
 > [!NOTE]
 > **Offsetof** ist keine Funktion und kann nicht mit einem C-Prototyp beschrieben werden.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**offsetof**|\<stddef.h>|
 
