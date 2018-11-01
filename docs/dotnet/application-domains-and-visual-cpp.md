@@ -1,12 +1,6 @@
 ---
-title: Anwendungsdomänen und Visual C++ | Microsoft Docs
-ms.custom: ''
+title: Anwendungsdomänen und Visual C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - interop [C++], application domains
 - application domains [C++], C++
@@ -14,21 +8,16 @@ helpviewer_keywords:
 - interoperability [C++], application domains
 - mixed assemblies [C++], application domains
 ms.assetid: 75a08efc-9b02-40ba-99b7-dcbd71010bbf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: b935b9a5d1561fa1c8b961ee48b92f59b98e2bd2
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 2296654e6935bc40f301226b184cf34f77cb126d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704333"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539268"
 ---
 # <a name="application-domains-and-visual-c"></a>Anwendungsdomänen und Visual C++
 
-Wenn Sie haben eine `__clrcall` virtuelle Funktion, werden die Vtable pro Anwendungsdomäne (Appdomain). Wenn Sie ein Objekt in einer Appdomain erstellen, können Sie nur die virtuelle Funktion von innerhalb dieser Appdomain aufrufen. Im gemischten Modus (**"/ CLR"**) Sie haben prozessspezifisch-v-Tabellen auf, wenn Ihr Typ keine enthält `__clrcall` virtuelle Funktionen. Die **/CLR: pure** und **/CLR: safe** Compileroptionen in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt werden.
+Wenn Sie haben eine `__clrcall` virtuelle Funktion, werden die Vtable pro Anwendungsdomäne (Appdomain). Wenn Sie ein Objekt in einer Appdomain erstellen, können Sie nur die virtuelle Funktion von in die Anwendungsdomäne aufrufen. Im gemischten Modus (**"/ CLR"**) pro Prozess Vtables wird angezeigt, wenn es sich bei Ihrem Typ enthält keine `__clrcall` virtuelle Funktionen. Die **/CLR: pure** und **/CLR: safe** Compileroptionen in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt werden.
 
 Weitere Informationen finden Sie unter:
 

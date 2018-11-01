@@ -1,10 +1,6 @@
 ---
-title: _ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbcalpha
 - _ismbcalnum
@@ -36,8 +32,6 @@ f1_keywords:
 - _ismbcalnum_l
 - _ismbcalnum
 - ismbcdigit_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbcalpha function
 - _ismbcalnum function
@@ -52,16 +46,12 @@ helpviewer_keywords:
 - ismbcalnum_l function
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a90fe131ff216bd9f758f3312d366e0ec29d79ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a2f928d826b70b788220130f69c53cc351b4910
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404268"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532222"
 ---
 # <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 
@@ -112,23 +102,23 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Routinen gibt einen Wert ungleich 0 zurück, wenn das Zeichen die Testbedingung erfüllt, bzw. 0, wenn es sie nicht erfüllt. Wenn *c*< = 255, und es wird ein entsprechendes **_ismbb** Routine (z. B. **_ismbcalnum** entspricht **_ismbbalnum**), die Ergebnis ist der Rückgabewert der entsprechenden **_ismbb** Routine.
+Jede dieser Routinen gibt einen Wert ungleich 0 zurück, wenn das Zeichen die Testbedingung erfüllt, bzw. 0, wenn es sie nicht erfüllt. Wenn *c*< = 255 und gibt es eine entsprechende **_ismbb** Routine (z. B. **_ismbcalnum** entspricht **_ismbbalnum**), wird die Ergebnis ist der Rückgabewert der entsprechenden **_ismbb** Routine.
 
 ## <a name="remarks"></a>Hinweise
 
 Jede dieser Routinen testet ein angegebenes Multibytezeichen auf eine angegebene Bedingung.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, außer dass sie das Gebietsschema für den übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie das Gebietsschema für den übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-|Routine|Testbedingung|Beispiel für Codepage 932|
+|-Routine zurückgegebener Wert|Testbedingung|Beispiel für Codepage 932|
 |-------------|--------------------|---------------------------|
-|**_ismbcalnum**, **_ismbcalnum_l**|Alphanumerisches Zeichen|Gibt einen Wert ungleich NULL und nur, wenn *c* ist eine Single-Byte-Darstellung von einem ASCII-Buchstaben: Siehe Beispiele für **_ismbcdigit** und **_ismbcalpha**.|
-|**_ismbcalpha**, **_ismbcalpha_l**|Alphabetisch|Gibt einen Wert ungleich NULL und nur, wenn *c* ist eine Single-Byte-Darstellung von einem ASCII-Buchstaben: 0 x 41 nach < =*c*< = 0x5A oder 0 x 61 < =*c*< = 0x7A; oder ein Katakana-Buchstabe: 0xA6 < =*c*< = 0xDF.|
-|**_ismbcdigit**, **_ismbcdigit**|Ziffer|Gibt einen Wert ungleich NULL und nur, wenn *c* ist eine Single-Byte-Darstellung einer ASCII-Ziffern: 0 x 30 < =*c*< = 0 x 39.|
+|**_ismbcalnum**, **_ismbcalnum_l**|Alphanumerisches Zeichen|Gibt einen Wert ungleich NULL und nur, wenn *c* eine einzelbytedarstellung eines englischen ASCII-Buchstabens ist: Siehe Beispiele für **_ismbcdigit** und **_ismbcalpha**.|
+|**_ismbcalpha**, **_ismbcalpha_l**|Alphabetisch|Gibt einen Wert ungleich NULL und nur, wenn *c* eine einzelbytedarstellung eines englischen ASCII-Buchstabens ist: 0 x 41 < =*c*< = 0x5A oder 0 x 61 < =*c*< = 0x7A; oder ein Katakana-Buchstabe: 0xA6 < =*c*< = 0xDF.|
+|**_ismbcdigit**, **_ismbcdigit**|Ziffer|Gibt einen Wert ungleich NULL und nur, wenn *c* eine einzelbytedarstellung einer ASCII-Ziffer ist: 0 x 30 < =*c*< = 0 x 39.|
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_ismbcalnum**, **_ismbcalnum_l**|\<mbstring.h>|
 |**_ismbcalpha**, **_ismbcalpha_l**|\<mbstring.h>|
