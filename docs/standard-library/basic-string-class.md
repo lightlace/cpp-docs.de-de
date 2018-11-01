@@ -1,10 +1,6 @@
 ---
-title: basic_string-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: basic_string-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xstring/std::basic_string
 - xstring/std::basic_string::allocator_type
@@ -62,8 +58,6 @@ f1_keywords:
 - xstring/std::basic_string::size
 - xstring/std::basic_string::substr
 - xstring/std::basic_string::swap
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::basic_string [C++]
 - std::basic_string [C++], allocator_type
@@ -122,16 +116,12 @@ helpviewer_keywords:
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e6c22d91bafc45699371dd40d317b66cf3d1ca11
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ab93f8b225e27c0cf4d294d176c566bd6f2b5d02
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706614"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518573"
 ---
 # <a name="basicstring-class"></a>basic_string-Klasse
 
@@ -606,7 +596,6 @@ Stellt mit einem angegebenen Index in einer Zeichenfolge einen Verweis auf das Z
 ```cpp
 const_reference at(size_type _Off) const;
 
-
 reference at(size_type _Off);
 ```
 
@@ -675,7 +664,6 @@ Gibt einen Verweis auf das letzte Element der Zeichenfolge zurück.
 ```cpp
 const_reference back() const;
 
-
 reference back();
 ```
 
@@ -739,12 +727,12 @@ basic_string(
 
 template <class InputIterator>
 basic_string(
-InputIterator first,
+    InputIterator first,
     InputIterator last);
 
 template <class InputIterator>
 basic_string(
-InputIterator first,
+    InputIterator first,
     InputIterator last,
     const allocator_type& _Al);
 
@@ -848,7 +836,6 @@ Gibt ein Iterator zurück, der das erste Element in der Zeichenfolge adressiert.
 
 ```cpp
 const_iterator begin() const;
-
 
 iterator begin();
 ```
@@ -1140,12 +1127,10 @@ Führt einen Vergleich unter Berücksichtigung der Groß-/Kleinschreibung mit ei
 int compare(
     const basic_string<CharType, Traits, Allocator>& str) const;
 
-
 int compare(
     size_type _Pos1,
     size_type _Num1,
     const basic_string<CharType, Traits, Allocator>& str) const;
-
 
 int compare(
     size_type _Pos1,
@@ -1154,16 +1139,13 @@ int compare(
     size_type _Off,
     size_type count) const;
 
-
 int compare(
     const value_type* ptr) const;
-
 
 int compare(
     size_type _Pos1,
     size_type _Num1,
     const value_type* ptr) const;
-
 
 int compare(
     size_type _Pos1,
@@ -1843,7 +1825,6 @@ Gibt einen Iterator zurück, der den Speicherort adressiert, der dem letzten Ele
 ```cpp
 const_iterator end() const;
 
-
 iterator end();
 ```
 
@@ -2022,17 +2003,14 @@ size_type find(
     value_type _Ch,
     size_type _Off = 0) const;
 
-
 size_type find(
     const value_type* ptr,
     size_type _Off = 0) const;
-
 
 size_type find(
     const value_type* ptr,
     size_type _Off,
     size_type count) const;
-
 
 size_type find(
     const basic_string<CharType, Traits, Allocator>& str,
@@ -2200,17 +2178,14 @@ size_type find_first_not_of(
     value_type _Ch,
     size_type _Off = 0) const;
 
-
 size_type find_first_not_of(
     const value_type* ptr,
     size_type _Off = 0) const;
-
 
 size_type find_first_not_of(
     const value_type* ptr,
     size_type _Off,
     size_type count) const;
-
 
 size_type find_first_not_of(
     const basic_string<CharType, Traits, Allocator>& str,
@@ -2391,17 +2366,14 @@ size_type find_first_of(
     value_type _Ch,
     size_type _Off = 0) const;
 
-
 size_type find_first_of(
     const value_type* ptr,
     size_type _Off = 0) const;
-
 
 size_type find_first_of(
     const value_type* ptr,
     size_type _Off,
     size_type count) const;
-
 
 size_type find_first_of(
     const basic_string<CharType, Traits, Allocator>& str,
@@ -2581,17 +2553,14 @@ size_type find_last_not_of(
     value_type _Ch,
     size_type _Off = npos) const;
 
-
 size_type find_last_not_of(
     const value_type* ptr,
     size_type _Off = npos) const;
-
 
 size_type find_last_not_of(
     const value_type* ptr,
     size_type _Off,
     size_type count) const;
-
 
 size_type find_last_not_of(
     const basic_string<CharType, Traits, Allocator>& str,
@@ -2773,17 +2742,14 @@ size_type find_last_of(
     value_type _Ch,
     size_type _Off = npos) const;
 
-
 size_type find_last_of(
     const value_type* ptr,
     size_type _Off = npos) const;
-
 
 size_type find_last_of(
     const value_type* ptr,
     size_type _Off,
     size_type count) const;
-
 
 size_type find_last_of(
     const basic_string<CharType, Traits, Allocator>& str,
@@ -2947,7 +2913,6 @@ Gibt einen Verweis auf das erste Element in einer Zeichenfolge zurück.
 
 ```cpp
 const_reference front() const;
-
 
 reference front();
 ```
@@ -3559,7 +3524,7 @@ Das erste Element der Zeichenfolge hat einen Index von 0, und die folgenden Elem
 
 Der zurückgegebene Verweis wird möglicherweise durch Neuzuordnungen oder Änderungen für nicht **konstante**  Zeichenfolgen ungültig.
 
-Beim Kompilieren mit [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) mit Einstellung auf 1 oder 2 tritt ein Laufzeitfehler auf, wenn Sie versuchen, auf ein Element außerhalb der Grenzen der Zeichenfolge zuzugreifen. Weitere Informationen finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md).
+Beim Kompilieren mit [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) mit Einstellung auf 1 oder 2 tritt ein Laufzeitfehler auf, wenn Sie versuchen, auf ein Element außerhalb der Grenzen der Zeichenfolge zuzugreifen. Weitere Informationen finden Sie unter [Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -3711,7 +3676,6 @@ Gibt einen Iterator an das erste Element in einer umgekehrten Zeichenfolge zurü
 ```cpp
 const_reverse_iterator rbegin() const;
 
-
 reverse_iterator rbegin();
 ```
 
@@ -3807,7 +3771,6 @@ Gibt einen Iterator zurück, der den Speicherort adressiert, der dem letzten Ele
 
 ```cpp
 const_reverse_iterator rend() const;
-
 
 reverse_iterator rend();
 ```
@@ -4402,17 +4365,14 @@ size_type rfind(
     value_type _Ch,
     size_type _Off = npos) const;
 
-
 size_type rfind(
     const value_type* ptr,
     size_type _Off = npos) const;
-
 
 size_type rfind(
     const value_type* ptr,
     size_type _Off,
     size_type count) const;
-
 
 size_type rfind(
     const basic_string<CharType, Traits, Allocator>& str,

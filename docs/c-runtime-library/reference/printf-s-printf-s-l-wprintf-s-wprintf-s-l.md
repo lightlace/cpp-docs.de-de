@@ -1,10 +1,6 @@
 ---
-title: printf_s, _printf_s_l, wprintf_s, _wprintf_s_l | Microsoft-Dokumentation
-ms.custom: ''
+title: printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _printf_s_l
 - wprintf_s
@@ -25,8 +21,6 @@ apitype: DLLExport
 f1_keywords:
 - wprintf_s
 - printf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wprintf_s function
 - tprintf_s function
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - tprintf_s_l function
 - _wprintf_s_l function
 ms.assetid: 044ebb2e-5cc1-445d-bb4c-f084b405615b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ffe17ed1fc562b61d306294e970a070b03186e7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a140d63f18244ec453e97b727a2f93ca56547fe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405262"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560237"
 ---
 # <a name="printfs-printfsl-wprintfs-wprintfsl"></a>printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
 
@@ -97,17 +87,17 @@ Gibt die Anzahl gedruckter Zeichen oder einen negativen Wert zurück, wenn ein F
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Printf_s** -Funktion formatiert und druckt eine Reihe von Zeichen und Werten für den Standardausgabestream **"stdout"**. Wenn Argumente der *Format* Zeichenfolge, die *Format* Zeichenfolge muss Spezifikationen enthalten, die das Ausgabeformat für die Argumente bestimmen.
+Die **Printf_s** -Funktion formatiert und gibt eine Reihe von Zeichen und Werten in den Standardausgabestream **"stdout"**. Wenn Argumente der *Format* Zeichenfolge, die *Format* Zeichenfolge muss Spezifikationen enthalten, die das Ausgabeformat für die Argumente bestimmen.
 
-Der Hauptunterschied zwischen **Printf_s** und **Printf** handelt, **Printf_s** die Formatzeichenfolge auf gültige Formatierungszeichen überprüft wird, wohingegen **Printf**  überprüft nur, wenn die Formatzeichenfolge ein null-Zeiger ist. Wenn bei einer der beiden Überprüfungen ein Fehler auftritt, wird der ungültige Parameterhandler gerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md)beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion-1 zurück und legt **Errno** auf **EINVAL**.
+Der Hauptunterschied zwischen **Printf_s** und **Printf** ist, die **Printf_s** die Formatzeichenfolge auf gültige Formatierungszeichen überprüft, während **Printf**  überprüft nur, wenn die Zeichenfolge ein null-Zeiger ist. Wenn bei einer der beiden Überprüfungen ein Fehler auftritt, wird der ungültige Parameterhandler gerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md)beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktion gibt-1 zurück und legt **Errno** zu **EINVAL**.
 
-Informationen zu **Errno** und andere Fehlercodes finden Sie unter [_doserrno, Errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Informationen zum **Errno** und Fehlercodes finden Sie unter [_doserrno, Errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**Printf_s** und **Fprintf_s** Verhalten sich identisch, außer dass **Printf_s** schreibt die Ausgabe an **"stdout"** anstelle eines Ziels vom Typ **Datei**. Weitere Informationen finden Sie unter [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).
+**Printf_s** und **Fprintf_s** Verhalten sich identisch, außer dass **Printf_s** schreibt die Ausgabe zu **"stdout"** anstelle eines Ziels vom Typ **Datei**. Weitere Informationen finden Sie unter [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).
 
-**Wprintf_s** ist eine Breitzeichen-Version von **Printf_s**; *Format* ist eine Breitzeichen-Zeichenfolge. **Wprintf_s** und **Printf_s** Verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Printf_s** derzeit die Ausgabe in eine Unicode-Stream unterstützt keine.
+**Wprintf_s** ist eine Breitzeichen-Version von **Printf_s**; *Format* ist eine Breitzeichen-Zeichenfolge. **Wprintf_s** und **Printf_s** Verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Printf_s** unterstützt derzeit keine Ausgabe in eine UNICODE-Stream.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschemaparameter, der übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas.
+Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -116,7 +106,7 @@ Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, v
 |**_tprintf_s**|**printf_s**|**printf_s**|**wprintf_s**|
 |**_tprintf_s_l**|**_printf_s_l**|**_printf_s_l**|**_wprintf_s_l**|
 
-Die *Format* Argument besteht aus normalen Zeichen, Escapesequenzen und (wenn Argumente folgen *Format*) Formatangaben. Die normalen Zeichen und die Escapesequenzen werden in kopiert **"stdout"** in Reihenfolge ihrer Darstellung. Beispiel: Die Zeile
+Die *Format* Argument besteht aus normalen Zeichen, Escapesequenzen und (wenn Argumente folgen *Format*) Formatspezifikationen. Normale Zeichen und Escapesequenzen werden in kopiert **"stdout"** in der Reihenfolge ihrer Darstellung. Beispiel: Die Zeile
 
 ```C
 printf_s("Line one\n\t\tLine two\n");
@@ -129,19 +119,19 @@ Line one
         Line two
 ```
 
-[Formatangaben](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) beginnen immer mit einem Prozentzeichen (**%**) und werden von links nach rechts gelesen. Wenn **Printf_s** die erste Formatspezifikation (falls vorhanden) trifft er konvertiert den Wert des ersten Arguments *Format* und gibt ihn entsprechend. Mit der zweiten Formatspezifikation wird das zweite Argument konvertiert und ausgegeben, usw. Wenn es mehrere Argumente als Formatspezifikationen gibt, werden die zusätzlichen Argumente ignoriert. Die Ergebnisse sind nicht definiert, wenn nicht genügend Argumente für alle Formatspezifikationen vorhanden sind.
+[Formatspezifikationen](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) beginnen immer mit einem Prozentzeichen (**%**) und werden von links nach rechts gelesen. Wenn **Printf_s** erkennt die erste Formatspezifikation, (sofern vorhanden), konvertiert Sie den Wert des ersten Arguments *Format* und gibt ihn entsprechend. Mit der zweiten Formatspezifikation wird das zweite Argument konvertiert und ausgegeben, usw. Wenn es mehrere Argumente als Formatspezifikationen gibt, werden die zusätzlichen Argumente ignoriert. Die Ergebnisse sind nicht definiert, wenn nicht genügend Argumente für alle Formatspezifikationen vorhanden sind.
 
 > [!IMPORTANT]
 > Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**Printf_s**, **_printf_s_l**|\<stdio.h>|
 |**Wprintf_s**, **_wprintf_s_l**|\<stdio.h> oder \<wchar.h>|
 
-Die Konsole wird in apps der universellen Windows-Plattform (UWP) nicht unterstützt. Standardstream Handles, die mit der Konsole verknüpften sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in uwp-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die Konsole wird in apps für universelle Windows-Plattform (UWP) nicht unterstützt. Standardstreamhandles, die mit der Konsole verknüpft sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in UWP-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 

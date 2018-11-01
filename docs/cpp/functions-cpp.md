@@ -1,12 +1,6 @@
 ---
-title: Funktionen (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Funktionen (C++)
 ms.date: 01/25/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - defaults, arguments
 - function definitions
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aacbb7709daf6952f00276663e20131e967a554d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 777bffab922bc7122444110a32874f9b77171b0a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46022356"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626147"
 ---
 # <a name="functions-c"></a>Funktionen (C++)
 
@@ -101,7 +91,7 @@ Optionale Bestandteile einer Funktionsdeklaration sind:
 
     ```
 
-     Weitere Informationen finden Sie unter [Programm und Verknüpfung](../cpp/program-and-linkage-cpp.md).
+   Weitere Informationen finden Sie unter [Programm und Verknüpfung](../cpp/program-and-linkage-cpp.md).
 
 1. **Inline**, weist den Compiler für jeden Aufruf an die Funktion mit der eigentliche Funktionscode zu ersetzen. Durch den Inlinevorgang kann die Leistung in Szenarien verbessert werden, in denen eine Funktion schnell ausgeführt und wiederholt in einem leistungskritischen Codeabschnitt aufgerufen wird.
 
@@ -112,7 +102,7 @@ Optionale Bestandteile einer Funktionsdeklaration sind:
     }
     ```
 
-     Weitere Informationen finden Sie unter [Inlinefunktionen](../cpp/inline-functions-cpp.md).
+   Weitere Informationen finden Sie unter [Inlinefunktionen](../cpp/inline-functions-cpp.md).
 
 1. Ein `noexcept` Ausdruck, der angibt, ob die Funktion eine Ausnahme auslösen kann. Im folgenden Beispiel ist die Funktion löst keine Ausnahme ab, wenn die `is_pod` Ausdruck wird zu **"true"**.
 
@@ -123,7 +113,7 @@ Optionale Bestandteile einer Funktionsdeklaration sind:
     T copy_object(T& obj) noexcept(std::is_pod<T>) {...}
     ```
 
-     Weitere Informationen finden Sie unter ["noexcept"](../cpp/noexcept-cpp.md).
+   Weitere Informationen finden Sie unter ["noexcept"](../cpp/noexcept-cpp.md).
 
 1. (Nur Memberfunktionen) Die cv-Qualifizierer, die angeben, ob die Funktion ist **const** oder **flüchtige**.
 
@@ -263,7 +253,6 @@ auto Add(const Lhs& lhs, const Rhs& rhs) -> decltype(lhs + rhs)
 ```
 
 Wenn **automatisch** dient in Verbindung mit einem nachstehenden Rückgabetyp, fungiert es als Platzhalter für beliebige der Decltype-Ausdruck generiert und ist keine eigene typableitung.
-
 
 ## <a name="function-local-variables"></a>Lokale Funktionsvariablen
 

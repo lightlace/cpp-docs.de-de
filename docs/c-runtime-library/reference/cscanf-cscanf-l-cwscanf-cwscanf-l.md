@@ -1,10 +1,6 @@
 ---
-title: _cscanf, _cscanf_l, _cwscanf, _cwscanf_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cscanf_l
 - _cscanf
@@ -34,8 +30,6 @@ f1_keywords:
 - _cwscanf_l
 - cscanf_l
 - _tcscanf
-dev_langs:
-- C++
 helpviewer_keywords:
 - _cwscanf function
 - data [C++], reading from the console
@@ -51,16 +45,12 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 851de3810008532efa6683dd29d415560146f274
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 8cb121166ab0103565260538521824d8999425e2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451901"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468938"
 ---
 # <a name="cscanf-cscanfl-cwscanf-cwscanfl"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
@@ -105,15 +95,15 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Anzahl der Felder, die erfolgreich konvertiert und zugewiesen wurden. Der Rückgabewert enthält keine nicht zugewiesenen gelesenen Felder. Der Rückgabewert ist **EOF** versucht wurde, am Ende der Datei gelesen. Dies kann vorkommen, wenn Tastatureingaben auf der Befehlszeilenebene des Betriebssystems umgeleitet wurden. Ein Rückgabewert von 0 bedeutet, dass keine Felder zugewiesen wurden.
+Die Anzahl der Felder, die erfolgreich konvertiert und zugewiesen wurden. Der Rückgabewert enthält keine nicht zugewiesenen gelesenen Felder. Der Rückgabewert ist **EOF** versucht wurde, am Ende der Datei zu lesen. Dies kann vorkommen, wenn Tastatureingaben auf der Befehlszeilenebene des Betriebssystems umgeleitet wurden. Ein Rückgabewert von 0 bedeutet, dass keine Felder zugewiesen wurden.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_cscanf** -Funktion liest Daten direkt in der Konsole in die Speicherorte, die vom *Argument*. Die Funktion [_getche](getch-getwch.md) wird verwendet, um Zeichen zu lesen. Jeder Optionaler Parameter muss ein Zeiger auf eine Variable mit einem Typ, der einem Typspezifizierer in entspricht *Format*. Das Format steuert die Interpretation der Eingabefelder und hat die gleiche form und Funktion wie die *Format* -Parameter für die [Scanf](scanf-scanf-l-wscanf-wscanf-l.md) Funktion. Während **_cscanf** normalerweise das Eingabezeichen, es gibt keine war der letzte Aufruf **_ungetch**.
+Die **_cscanf** -Funktion liest Daten direkt in der Konsole in die Speicherorte, die vom *Argument*. Die Funktion [_getche](getch-getwch.md) wird verwendet, um Zeichen zu lesen. Jeder Optionaler Parameter muss ein Zeiger auf eine Variable mit einem Typ, der einem Typspezifizierer in entspricht *Format*. Das Format steuert die Interpretation der Eingabefelder und hat die gleiche form und Funktion wie der *Format* -Parameter für die [Scanf](scanf-scanf-l-wscanf-wscanf-l.md) Funktion. Während **_cscanf** normalerweise das Eingabezeichen, es geschieht nicht, wenn der letzte Aufruf war **_ungetch**.
 
-Diese Funktion überprüft ihre Parameter. Wenn das Format **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und die Funktion gibt **EOF**.
+Diese Funktion überprüft ihre Parameter. Wenn das Format **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und die Funktion gibt **EOF**.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschemaparameter, der übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas.
+Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -124,7 +114,7 @@ Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, v
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_cscanf**, **_cscanf_l**|\<conio.h>|
 |**_cwscanf**, **_cwscanf_l**|\<conio.h> oder \<wchar.h>|

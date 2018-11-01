@@ -31,57 +31,62 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1f212bdbf8ee617a1cfb6647627bc0c881b49be
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce067dc000a681dfd1bfa9d3376131f86f5a73e1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390046"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086849"
 ---
 # <a name="heapadd"></a>_heapadd
-Fügt dem Heap Arbeitsspeicher hinzu.  
-  
+
+Fügt dem Heap Arbeitsspeicher hinzu.
+
 > [!IMPORTANT]
->  Diese Funktion ist veraltet. Von Visual Studio 2015 an ist sie nicht in der CRT verfügbar.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int _heapadd(   
-   void *memblock,  
-   size_t size   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `memblock`  
- Zeiger auf den Heapspeicher.  
-  
- `size`  
- Größe des hinzuzufügenden Speichers in Byte.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Bei Erfolg gibt `_heapadd` „0“ (null) zurück; andernfalls gibt die Funktion „-1“ zurück und legt `errno` auf `ENOSYS` fest.  
-  
- Weitere Informationen zu diesem und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Hinweise  
- Von Visual C++, Version 4.0, an, wurde die zugrundeliegende Heapstruktur in die C-Laufzeitbibliotheken verschoben, um die neuen Debugfunktionen zu unterstützen. Das hat zur Folge, dass `_heapadd` auf Plattformen, die auf der Win32-API basieren, nicht mehr unterstützt wird.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|  
-|-------------|---------------------|---------------------|  
-|`_heapadd`|\<malloc.h>|\<errno.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Speicherbelegung](../c-runtime-library/memory-allocation.md)   
- [free](../c-runtime-library/reference/free.md)   
- [_heapchk](../c-runtime-library/reference/heapchk.md)   
- [_heapmin](../c-runtime-library/reference/heapmin.md)   
- [_heapset](../c-runtime-library/heapset.md)   
- [_heapwalk](../c-runtime-library/reference/heapwalk.md)   
- [malloc](../c-runtime-library/reference/malloc.md)   
- [realloc](../c-runtime-library/reference/realloc.md)
+>  Diese Funktion ist veraltet. Von Visual Studio 2015 an ist sie nicht in der CRT verfügbar.
+
+## <a name="syntax"></a>Syntax
+
+```
+int _heapadd(
+   void *memblock,
+   size_t size
+);
+```
+
+#### <a name="parameters"></a>Parameter
+
+*memblock*<br/>
+Zeiger auf den Heapspeicher.
+
+*size*<br/>
+Größe des hinzuzufügenden Speichers in Byte.
+
+## <a name="return-value"></a>Rückgabewert
+
+Bei Erfolg gibt `_heapadd` „0“ (null) zurück; andernfalls gibt die Funktion „-1“ zurück und legt `errno` auf `ENOSYS` fest.
+
+Weitere Informationen zu diesem und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Hinweise
+
+Von Visual C++, Version 4.0, an, wurde die zugrundeliegende Heapstruktur in die C-Laufzeitbibliotheken verschoben, um die neuen Debugfunktionen zu unterstützen. Das hat zur Folge, dass `_heapadd` auf Plattformen, die auf der Win32-API basieren, nicht mehr unterstützt wird.
+
+## <a name="requirements"></a>Anforderungen
+
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|
+|-------------|---------------------|---------------------|
+|`_heapadd`|\<malloc.h>|\<errno.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../c-runtime-library/compatibility.md) in der Einführung.
+
+## <a name="see-also"></a>Siehe auch
+
+[Speicherreservierung](../c-runtime-library/memory-allocation.md)<br/>
+[free](../c-runtime-library/reference/free.md)<br/>
+[_heapchk](../c-runtime-library/reference/heapchk.md)<br/>
+[_heapmin](../c-runtime-library/reference/heapmin.md)<br/>
+[_heapset](../c-runtime-library/heapset.md)<br/>
+[_heapwalk](../c-runtime-library/reference/heapwalk.md)<br/>
+[malloc](../c-runtime-library/reference/malloc.md)<br/>
+[realloc](../c-runtime-library/reference/realloc.md)

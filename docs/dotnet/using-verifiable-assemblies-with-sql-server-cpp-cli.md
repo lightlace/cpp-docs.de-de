@@ -1,26 +1,15 @@
 ---
-title: Verwenden überprüfbarer Assemblys mit SQLServer (C++ / CLI) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
+title: Verwenden überprüfbarer Assemblys mit SQL Server (C++/CLI)
+ms.date: 10/17/2019
 helpviewer_keywords:
 - verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: bbd42d3d51921ccab01dfdcaed9ad988e22ae9a8
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 419b3de739de22597fffc7a607e2bf73561e3000
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894706"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50472657"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Verwenden überprüfbarer Assemblys mit SQL Server (C++/CLI)
 
@@ -34,7 +23,8 @@ SQL Server bietet Erweiterungen in Transact-SQL (T-SQL), damit Sie überprüfbar
 
 - Im abgesicherten Modus: Führen Sie überprüfbar typsicheren Code mit/clr: safe kompiliert.
 
-Im Abgesicherter Modus erfordert, dass der ausgeführte Assemblys überprüfbar typsicher sein.
+> [!IMPORTANT]
+> Visual Studio 2015 als veraltet markiert und Visual Studio 2017 nicht unterstützt. die **/CLR: pure** und **/CLR: safe** überprüfbare Projekte. Wenn Sie die überprüfbaren Code benötigen, empfehlen wir, dass Sie Ihren Code in c# übersetzen.
 
 Verwenden Sie zum Erstellen und Laden eine überprüfbare Assembly in SQL Server, die Transact-SQL-Befehle erstellen und die DROP ASSEMBLY wie folgt:
 
@@ -42,19 +32,20 @@ Verwenden Sie zum Erstellen und Laden eine überprüfbare Assembly in SQL Server
 CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH
   PERMISSION_SET <permissions>
 DROP ASSEMBLY <assemblyName>
-```  
+```
 
 Die PERMISSION_SET-Befehl gibt den Sicherheitskontext und kann die Werte nicht eingeschränkt, SAFE oder erweiterte aufweisen.
 
 Darüber hinaus können Sie den Befehl CREATE FUNCTION, zum Binden an Methodennamen in einer Klasse:
 
 ```sql
-CREATE FUNCTION <FunctionName>(<FunctionParams>)  
+CREATE FUNCTION <FunctionName>(<FunctionParams>)
 RETURNS returnType
 [EXTERNAL NAME <AssemblyName>:<ClassName>::<StaticMethodName>]
-```  
+```
 
 ## <a name="example"></a>Beispiel
+
 Die folgende SQL-Skript (z. B. benannte "MyScript.sql"), lädt eine Assembly in SQL Server und stellt eine Methode einer Klasse zur Verfügung:
 
 ```sql
@@ -69,23 +60,22 @@ with permission_set safe
 -- Create function on assembly with no external access
 drop function GetQuoteNoEA
 go
-create function GetQuoteNoEA(@sym nvarchar(10))  
+create function GetQuoteNoEA(@sym nvarchar(10))
 returns real
 external name stockNoEA:StockQuotes::GetQuote
 go
 
 -- To call the function
-select dbo.GetQuoteNoEA('MSFT')  
+select dbo.GetQuoteNoEA('MSFT')
 go
-```  
+```
 
 SQL-Skripts können in SQL Query Analyzer oder in der Befehlszeile mit dem Hilfsprogramm sqlcmd.exe interaktiv ausgeführt werden. Die folgende Befehlszeile eine Verbindung mit "myserver", wird die Standarddatenbank verwendet, verwendet eine vertrauenswürdige Verbindung, MyScript.sql Eingaben und Ausgaben MyResult.txt.
 
 ```cmd
 sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
-```  
+```
 
 ## <a name="see-also"></a>Siehe auch
 
-[Gewusst wie: Migrieren zu/CLR: safe (C++ / CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)   
 [Klassen und Strukturen](../cpp/classes-and-structs-cpp.md)

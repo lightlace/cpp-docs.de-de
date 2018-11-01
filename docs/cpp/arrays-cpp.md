@@ -1,59 +1,46 @@
 ---
-title: Arrays (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Arrays (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - declaring arrays [C++], about declaring arrays
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e7c88c1d0f4096017b8ffc48a92143a63d229c5e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 746a6b5a2122a7ccdd207d278d285af3e448d7ab
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017910"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50550669"
 ---
 # <a name="arrays-c"></a>Arrays (C++)
 
 Ein Array ist eine Auflistung von gleichen Objekten. Der einfachste Fall eines Arrays ist ein Vektor, der mit der folgenden Sequenz deklariert werden kann:
 
-```
-decl-specifier identifier [ constant-expression ]
-decl-specifier identifier []
-decl-specifier identifer [][ constant-expression] . . .
-decl-specifier identifier [ constant-expression ]
-[ constant-expression ] . . .
-```
+> *Decl-Specifiers* *Bezeichner* **\[** *Konstantenausdruck* **]**<br/>
+> *Decl-Specifiers* *Bezeichner*  **\[]**<br/>
+> *Decl-Specifiers* *Bezeichner* **\[]\[** *Konstantenausdruck* **]** . sein. sein.<br/>
+> *Decl-Specifiers* *Bezeichner* **\[** *Konstantenausdruck* **]** **\[** *Konstantenausdruck* **]** . sein. sein.
 
 1. Der Deklarationsbezeichner:
 
-- Ein optionaler Speicherklassenbezeichner.
+   - Ein optionaler Speicherklassenbezeichner.
 
-- Optionale **const** und/oder **flüchtige** Spezifizierer.
+   - Optionale **const** und/oder **flüchtige** Spezifizierer.
 
-- Der Typname der Elemente des Arrays.
+   - Der Typname der Elemente des Arrays.
 
-2. Der Deklarator:
+1. Der Deklarator:
 
-- Der Bezeichner.
+   - Der Bezeichner.
 
-- Ein Konstantenausdruck des ganzzahligen Typs, eingeschlossen in Klammern **[]**. Wenn mehrere Dimensionen mit zusätzlichen Klammern deklariert wurden, kann der Konstantenausdruck im ersten Satz von Klammern weggelassen werden.
+   - Ein Konstantenausdruck des ganzzahligen Typs, eingeschlossen in Klammern  **\[]**. Wenn mehrere Dimensionen mit zusätzlichen Klammern deklariert wurden, kann der Konstantenausdruck im ersten Satz von Klammern weggelassen werden.
 
-- Optionale zusätzliche Klammern, die Konstantenausdrücke einschließen.
+   - Optionale zusätzliche Klammern, die Konstantenausdrücke einschließen.
 
-3. Ein optionaler Initialisierer.  Finden Sie unter [Initialisierer](../cpp/initializers.md).
+1. Ein optionaler Initialisierer. Weitere Informationen finden Sie unter [Initialisierer](../cpp/initializers.md).
 
-Die Anzahl von Elementen im Array wird durch den Konstantenausdruck angegeben. Das erste Element im Array ist 0. das-Element, und das letzte Element ist das (*n*-1) Element, in denen *n* ist die Anzahl der Elemente, die das Array enthalten kann. Die *Konstantenausdruck* muss ein ganzzahliger Typ sein und muss größer als 0 sein. Ein Array der Größe 0 (null) ist zulässig, nur, wenn das Array das letzte Feld ist ein **Struktur** oder **Union** und wenn die Microsoft-Erweiterungen (/ Ze) aktiviert sind.
+Die Anzahl der Elemente im Array erhält von der *Konstantenausdruck*. Das erste Element im Array ist 0. das-Element, und das letzte Element ist das (*n*-1) Element, in denen *n* ist die Anzahl der Elemente, die das Array enthalten kann. Die *Konstantenausdruck* muss ein ganzzahliger Typ sein und muss größer als 0 sein. Ein Array der Größe 0 (null) ist zulässig, nur, wenn das Array das letzte Feld ist ein **Struktur** oder **Union** und wenn die Microsoft-Erweiterungen (/ Ze) aktiviert sind.
 
 Die folgenden Beispiele zeigen, wie ein Array zur Laufzeit definiert wird:
 

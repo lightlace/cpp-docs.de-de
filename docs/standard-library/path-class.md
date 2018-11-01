@@ -1,7 +1,7 @@
 ---
 title: path-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/10/2018
+ms.date: 09/27/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd8fa524d0c41d437575a61ff4e4456fd9933404
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7674f07c92f8a0c9d8a9070f3f99e00dfde39140
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725308"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235463"
 ---
 # <a name="path-class"></a>path-Klasse
 
-Die **Pfad** Klasse speichert ein Objekt des Typs `string_type`namens `myname` hier zum Zweck der Darstellung, die für die Verwendung als Pfadname geeignet ist. `string_type` ist ein Synonym für `basic_string<value_type>`, wobei `value_type` ist ein Synonym für **Char** unter Windows oder **"wchar_t"** unter Posix.
+Die **Pfad** Klasse speichert ein Objekt des Typs `string_type`namens `myname` hier zum Zweck der Darstellung, die für die Verwendung als Pfadname geeignet ist. `string_type` ist ein Synonym für `basic_string<value_type>`, wobei `value_type` ist ein Synonym für **"wchar_t"** auf Windows oder **Char** auf POSIX.
 
 Weitere Informationen und Codebeispiele finden Sie unter [Datei Dateisystemnavigation (C++)](../standard-library/file-system-navigation.md).
 

@@ -1,30 +1,22 @@
 ---
-title: 'Platform:: Collections-Namespace | Microsoft-Dokumentation'
-ms.custom: ''
+title: Platform::Collections-Namespace
 ms.date: 01/18/2018
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections
-dev_langs:
-- C++
 helpviewer_keywords:
 - Platform::Collections Namespace
 ms.assetid: b5042864-5f22-40b7-b7a5-c0691f65cc47
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a8c6191f8cbcf79973a5af55d222dd6f17fc47e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 025c25d6c01ab9a28c68574cc2a13e09dbf28388
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106069"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480365"
 ---
 # <a name="platformcollections-namespace"></a>Platform::Collections-Namespace
 
-Platform:: Collections-Namespace enthält die `Map`, `MapView`, `Vector`, und `VectorView` Klassen. Diese Klassen sind konkrete Implementierungen der entsprechenden Schnittstellen, die definiert sind die [Collections](/uwp/api/Windows.Foundation.Collections) Namespace. Die konkreten Auflistungstypen können nicht über die ABI hinweg portiert werden (z. B. beim Aufruf eines Javascript- oder C#-Programms in eine C++-Komponente). Sie sind allerdings implizit in ihre entsprechenden Schnittstellentypen konvertierbar. Z. B. Wenn Sie eine öffentliche Methode, die eine Auflistung füllt und zurückgibt implementieren, verwenden Sie dann [Vector](../cppcx/platform-collections-vector-class.md) die Auflistung intern zu implementieren und verwenden [Collections: : IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) als Rückgabetyp. Weitere Informationen finden Sie unter [Sammlungen](../cppcx/collections-c-cx.md) und [Erstellen von Windows-Runtime-Komponenten in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+Platform:: Collections-Namespace enthält die `Map`, `MapView`, `Vector`, und `VectorView` Klassen. Diese Klassen sind konkrete Implementierungen der entsprechenden Schnittstellen, die im Namespace [Windows::Foundation::Collections](/uwp/api/Windows.Foundation.Collections) definiert sind. Die konkreten Auflistungstypen können nicht über die ABI hinweg portiert werden (z. B. beim Aufruf eines Javascript- oder C#-Programms in eine C++-Komponente). Sie sind allerdings implizit in ihre entsprechenden Schnittstellentypen konvertierbar. Wenn Sie z. B. eine öffentliche Methode implementieren, die eine Auflistung füllt und zurückgibt, verwenden Sie [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) , um die Auflistung intern zu implementieren. Verwenden Sie [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) als Rückgabetyp. Weitere Informationen finden Sie unter [Sammlungen](../cppcx/collections-c-cx.md) und [Erstellen von Windows-Runtime-Komponenten in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 Sie können Platform::Collections::Vector aus [std::vector](../standard-library/vector-class.md) und [Platform::Collections::Map](../cppcx/platform-collections-map-class.md) aus [std::map](../standard-library/map-class.md)erstellen.
 

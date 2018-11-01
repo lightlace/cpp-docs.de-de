@@ -1,10 +1,6 @@
 ---
-title: _putw| Microsoft-Dokumentation
-ms.custom: ''
+title: _putw
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _putw
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - _putw
 - putw
-dev_langs:
-- C++
 helpviewer_keywords:
 - integers, writing to streams
 - putw function
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c5e33bc207fe83795c31f6c8b61d931985760e3a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3fd18c2a8869d6b09703547f50ee6e096bd72395
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404011"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602682"
 ---
 # <a name="putw"></a>_putw
 
@@ -65,17 +55,17 @@ Zeiger auf die **FILE**-Struktur.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den geschriebenen Wert zurück. Ein Rückgabewert von **EOF** möglicherweise einen Fehler anzugeben. Da **EOF** ist auch ein legitime Ganzzahlwert verwenden **Ferror** um Fehler zu überprüfen. Wenn *Stream* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** auf **EINVAL** und gibt **EOF**.
+Gibt den geschriebenen Wert zurück. Der Rückgabewert **EOF** könnte einen Fehler anzeigen. Da **EOF** ist auch ein legitimer Ganzzahlwert verwenden **Ferror** auf Fehler zu überprüfen. Wenn *Stream* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** zu **EINVAL** und gibt **EOF**.
 
 Weitere Informationen über diese und andere Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_putw** Funktion schreibt einen binären Wert vom Typ **Int** an der aktuellen Position des *Stream.* **_putw** wirkt sich nicht auf die Ausrichtung der Elemente in den Stream, noch wird spezielle Ausrichtung angenommen. **_putw** ist in erster Linie für die Kompatibilität mit früheren Bibliotheken. Portabilitätsprobleme auftreten mit **_putw** da die Größe des ein **Int** und die Reihenfolge der Bytes in eine **Int** über Systeme hinweg unterscheiden.
+Die **_putw** -Funktion schreibt einen binären Wert vom Typ **Int** an der aktuellen Position des *Stream.* **_putw** wirkt sich nicht auf die Ausrichtung der Elemente in den Stream und geht auch speziellen Ausrichtungen. **_putw** ist in erster Linie für die Kompatibilität mit früheren Bibliotheken. Portabilitätsprobleme können mit auftreten **_putw** da die Größe des ein **Int** und die Anordnung der Bytes in einer **Int** über Systeme hinweg unterschiedlich sind.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_putw**|\<stdio.h>|
 
@@ -117,7 +107,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 Wrote ten words

@@ -1,25 +1,15 @@
 ---
-title: Exportieren von Zeichenfolgenklassen mit CStringT | Microsoft-Dokumentation
-ms.custom: ''
+title: Exportieren von Zeichenfolgenklassen mit CStringT
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - CStringT class, exporting strings
 ms.assetid: bdfc441e-8d2a-461c-9885-46178066c09f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e7a4e033ac940d414cb3ece11dfd927b8c2658f7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8c46ae040e64b999c570e99f3bd18cc7d5bc36a1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762560"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432447"
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>Exportieren von Zeichenfolgenklassen mit CStringT
 
@@ -29,7 +19,7 @@ In der Vergangenheit MFC-Entwickler abgeleitet haben `CString` eigene Zeichenfol
 
 - Mit dem neuen `CStringT` Vorlagenklasse, die Sie anpassen können `CString` -Verhaltens mithilfe der Vorlagenparameter, mit denen Zeichenmerkmale, ähnlich wie die Vorlagen in der C++-Standardbibliothek angegeben.
 
-- Wenn Sie eigene String-Klasse aus einer DLL exportieren `CStringT`, der Compiler automatisch exportiert die `CString` Basisklasse. Da `CString` selbst eine Vorlagenklasse, ist es instanziiert werden vom Compiler bei verwendet, es sei denn, die dem Compiler bekannt ist, die `CString` aus einer DLL importiert wird. Wenn Sie Projekte von Visual C++ 6.0 auf Visual c++.NET migriert haben, Sie haben eventuell bereits Symbol Linkerfehler für ein mehrfach definiertes `CString` aufgrund der Konflikte zwischen der `CString` aus einer DLL und die lokal instanziierte Version importiert. Der richtige Weg zu diesem Zweck wird unten beschrieben. Weitere Informationen zu diesem Problem finden Sie unter im Knowledge Base-Artikel "Verknüpfen von Fehlern beim Importieren von CString abgeleitete Klassen" (Q309801) am [ http://support.microsoft.com/default.aspx ](http://support.microsoft.com/default.aspx).
+- Wenn Sie eigene String-Klasse aus einer DLL exportieren `CStringT`, der Compiler automatisch exportiert die `CString` Basisklasse. Da `CString` selbst eine Vorlagenklasse, ist es instanziiert werden vom Compiler bei verwendet, es sei denn, die dem Compiler bekannt ist, die `CString` aus einer DLL importiert wird. Wenn Sie Projekte von Visual C++ 6.0 auf Visual c++.NET migriert haben, Sie haben eventuell bereits Symbol Linkerfehler für ein mehrfach definiertes `CString` aufgrund der Konflikte zwischen der `CString` aus einer DLL und die lokal instanziierte Version importiert. Der richtige Weg zu diesem Zweck wird unten beschrieben.
 
 Das folgende Szenario führt dazu, dass der Linker symbolfehler für mehrfach definiertes Klassen erstellt. Angenommen, Sie exportieren eine `CString`-abgeleitete Klasse (`CMyString`) aus einer MFC-Erweiterungs-DLL:
 
@@ -65,6 +55,6 @@ Es gibt mehrere Einschränkungen zu beachten:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Verwenden von CStringT](../atl-mfc-shared/using-cstringt.md)   
+[Verwenden von CStringT](../atl-mfc-shared/using-cstringt.md)<br/>
 [Verwenden von CString](../atl-mfc-shared/using-cstring.md)
 

@@ -1,12 +1,6 @@
 ---
-title: Vermeiden von Ausnahmen, die von erstellte COM-Objekte mit Clr-| Microsoft Docs
-ms.custom: ''
+title: Vermeiden mit / Clr erstellte COM-Objekte ausgelöste Ausnahmen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - interop [C++], CLR shutdown exceptions
 - /clr compiler option [C++], CLR shutdown exceptions
@@ -15,22 +9,19 @@ helpviewer_keywords:
 - interoperability [C++], CLR shutdown exceptions
 - CLR shutdown exceptions [C++]
 ms.assetid: 41249d83-4b51-4e46-866f-27f475f2498c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 0efd2af7eb4bf8a70bff983d627f802f1976c6ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23af1d8b48a6579b8cc20261691c1f090dc858a2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103511"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50633440"
 ---
 # <a name="avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr"></a>Vermeiden von Ausnahmen beim Herunterfahren der CLR, wenn mit /clr erstellte COM-Objekte verwendet werden
-Sobald die common Language Runtime (CLR) heruntergefahren Modus wechselt, systemeigene Funktionen Zugriff auf CLR-Dienste eingeschränkt. Beim Versuch, rufen Sie Release auf ein COM-Objekt mit kompiliert **"/ CLR"**, geht die CLR in systemeigenen Code und wechselt anschließend zurück in verwaltetem Code Verarbeiten von der IUnknown:: Release-Aufruf (die in verwaltetem Code definiert ist). Die CLR wird verhindert, dass den Aufruf an verwalteten Code, da es sich im Modus für das Herunterfahren befindet.  
-  
- Um dies zu beheben, stellen Sie sicher, dass Destruktoren von Version Methoden aufgerufen nur systemeigenen Code enthalten.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Gemischte (native und verwaltete) Assemblys](../dotnet/mixed-native-and-managed-assemblies.md)
+
+Sobald die common Language Runtime (CLR) heruntergefahren-Modus wechselt, haben systemeigene Funktionen den eingeschränkten Zugriff auf CLR-Dienste. Beim Versuch, rufen Sie die Version auf ein COM-Objekt mit kompiliert **"/ CLR"**, geht die CLR in systemeigenen Code, und klicken Sie dann wechselt zurück in verwaltetem Code, den Aufruf von IUnknown:: Release-service (die in verwaltetem Code definiert ist). Da sie für das Herunterfahren betrieben wird verhindert, dass die CLR den Aufruf in verwaltetem Code.
+
+Um dies zu beheben, stellen Sie sicher, dass Destruktoren aufgerufen von Release-Methoden nur systemeigenen Code enthalten.
+
+## <a name="see-also"></a>Siehe auch
+
+[Gemischte (native und verwaltete) Assemblys](../dotnet/mixed-native-and-managed-assemblies.md)

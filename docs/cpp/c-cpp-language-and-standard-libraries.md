@@ -1,23 +1,13 @@
 ---
-title: C/C++-Sprache und Standardbibliotheken | Microsoft-Dokumentation
-ms.custom: ''
+title: C/C++-Sprache und Standardbibliotheken
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: c26a6682-961a-43ef-ad33-2adc612f69ac
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 541dd02905f00cdd56042aca4df703a2d047f57f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c071db1dcc6363e29f5dd7ca895330d738e021cf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056624"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614421"
 ---
 # <a name="cc-language-and-standard-libraries"></a>C/C++-Sprache und Standardbibliotheken
 
@@ -34,5 +24,5 @@ Dieser Abschnitt der Dokumentation umfasst Richtlinien und Referenzmaterial für
 |[C-Laufzeitbibliotheksreferenz](../c-runtime-library/c-run-time-library-reference.md)|Referenzmaterial für die Microsoft-Implementierung der C-Laufzeit (CRT).|
 |[SafeInt-Bibliothek](../windows/safeint-library.md)|Referenzmaterial für eine Bibliothek mit Funktionen, die ganze Zahlen ohne das Risiko des Überlaufs behandeln.|
 |[Visual C++](../visual-cpp-in-visual-studio.md)|Beschreibt die wichtigsten Features von Visual C++ in Visual Studio und verlinkt zum Rest der Visual C++-Dokumentation.|
-|[IDE und Entwicklungstools](../ide/ide-and-tools-for-visual-cpp-development.md)|Links zu anderen Artikeln, die Informationen darüber enthalten, wie Visual Studio und die zugehörigen Tools verwendet werden, um C++-Apps zu entwickeln, zu erstellen und bereitzustellen.|
+|[IDE und Entwicklungstools.](../ide/ide-and-tools-for-visual-cpp-development.md)|Links zu anderen Artikeln, die Informationen darüber enthalten, wie Visual Studio und die zugehörigen Tools verwendet werden, um C++-Apps zu entwickeln, zu erstellen und bereitzustellen.|
 |[Neuerungen bei Visual C++](../what-s-new-for-visual-cpp-in-visual-studio.md)|Beschreibt die neuen Funktionen und Verbesserungen in diesem Release.|

@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0a63bf8980ea9022a1cd06bc890512db8ba85a5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f9c7c09bccda07358384ca6b0be8d3ea824bc99e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383942"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055142"
 ---
 # <a name="registers-availability-of-registers"></a>Register: Verfügbarkeit von Registern
-**ANSI 3.5.1** Das Ausmaß, in dem Objekte mit dem Speicherklassenspezifizierer „register“ tatsächlich in Registern eingefügt werden können  
-  
- Der Compiler berücksichtigt keine Benutzeranforderungen als Registervariablen. Stattdessen trifft der die Auswahl bei der Optimierung selbst.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Implementation-Defined Behavior (Durch die Implementierung definiertes Verhalten)](../c-language/implementation-defined-behavior.md)
+
+**ANSI 3.5.1** Das Ausmaß, in dem Objekte mit dem Speicherklassenspezifizierer „register“ tatsächlich in Registern eingefügt werden können
+
+Der Compiler berücksichtigt keine Benutzeranforderungen als Registervariablen. Stattdessen trifft der die Auswahl bei der Optimierung selbst.
+
+## <a name="see-also"></a>Siehe auch
+
+[Implementation-Defined Behavior (Durch die Implementierung definiertes Verhalten)](../c-language/implementation-defined-behavior.md)

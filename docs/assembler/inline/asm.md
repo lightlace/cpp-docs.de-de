@@ -1,29 +1,20 @@
 ---
-title: __asm | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: conceptual
+title: __asm
+ms.date: 10/09/2018
 f1_keywords:
 - __asm
+- _asm
 - __asm_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - __asm keyword [C++], vs. asm blocks
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bfe0cac0a35c821f3275ec323181f04c1ab982c4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 6b94bf73e66550d0245ef1f55c17d6676e3b4356
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693002"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591282"
 ---
 # <a name="asm"></a>__asm
 
@@ -59,6 +50,8 @@ __asm int 3
 führte nicht zu einem systemeigenen Code generiert werden, bei der Kompilierung mit **"/ CLR"**; der Compiler übersetzte die Anweisung in einer CLR-unterbrechungsanweisung.
 
 `__asm int 3` führt jetzt zur Generierung von systemeigenem Code für die Funktion. Wenn Sie möchten eine Funktion, die einen Haltepunkt im Code verursachen und zu verwenden, wenn Sie möchten, dass diese Funktion in MSIL kompiliert [__debugbreak](../../intrinsics/debugbreak.md).
+
+Für die Kompatibilität mit früheren Versionen **_asm** ist ein Synonym für **__asm** , wenn Compileroption [/Za \(spracherweiterungen deaktivieren)](../../build/reference/za-ze-disable-language-extensions.md) angegeben ist.
 
 ## <a name="example"></a>Beispiel
 

@@ -1,25 +1,15 @@
 ---
-title: Constexpr-Lambdaausdrücke in C++ | Microsoft-Dokumentation
-ms.custom: ''
+title: Constexpr-Lambdaausdrücke in C++
 ms.date: 07/19/2017
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - lambda expressions [C++], constexpr
 ms.assetid: b56346cd-fbff-475f-aeaa-ed2010c6d6f7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c6a48067ebc145c907a81212a9acca55c3f4665
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 937fae7da0f20e81ac5450d597af7a822219d654
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46066595"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506599"
 ---
 # <a name="constexpr-lambda-expressions-in-c"></a>Constexpr-Lambdaausdrücke in C++
 
@@ -38,7 +28,9 @@ ms.locfileid: "46066595"
         return [n] { return n + 1; }();
     }
 ```
+
 Ein Lambda-Ausdruck ist implizit **"constexpr"** Wenn das Ergebnis die Anforderungen erfüllt, eine **"constexpr"** Funktion:
+
 ```cpp
     auto answer = [](int n)
     {
@@ -47,6 +39,7 @@ Ein Lambda-Ausdruck ist implizit **"constexpr"** Wenn das Ergebnis die Anforderu
 
     constexpr int response = answer(10);
 ```
+
 Wenn ein Lambda-Ausdruck implizit oder explizit ist **"constexpr"**, und Sie diese in einen Funktionszeiger konvertieren, die sich ergebende Funktion ist auch **"constexpr"**:
 
 ```cpp

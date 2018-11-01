@@ -1,38 +1,28 @@
 ---
-title: 'Exemplarische Vorgehensweise: Erstellen eine herkömmlichen Windows-Desktop-Anwendung (C++) | Microsoft-Dokumentation'
+title: 'Exemplarische Vorgehensweise: Erstellen einer herkömmlichen Windows-Desktop-Anwendung (C++)'
 ms.custom: get-started-article
-ms.date: 06/12/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
+ms.date: 09/18/2018
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 34342fbca00a127d1fdee13d29626bc2a3dfe53f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: fc2080470e3292a459325679a6c5dc00c01d6b35
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679204"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528377"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Exemplarische Vorgehensweise: Erstellen einer herkömmlichen Windows-Desktop-Anwendung (C++)
 
 In dieser exemplarischen Vorgehensweise veranschaulicht erstellen Sie eine herkömmliche Windows-desktop-Anwendung in Visual Studio. Die beispielanwendung, die Sie erstellen mithilfe der Windows-API "Hello, Windows Desktop!" anzuzeigen. in einem Fenster anzeigt. Sie können den Code verwenden, den Sie in dieser exemplarischen Vorgehensweise als Muster entwickeln, um andere Windows-Desktopanwendungen zu erstellen.
 
-Die Windows-API (auch bekannt als die Win32-API, Windows-Desktop-API und klassischen Windows-API) ist ein C-Sprachen-basierte Framework zum Erstellen von Windows-Anwendungen. Es wurde seit den 1980er und zum Erstellen von Windows-Anwendungen bereits seit Jahrzehnten verwendet wurde. Weitere erweiterte und einfacher-to-Program-Frameworks wurden erstellt, über diese API, wie MFC, ATL und der .NET Framework-Versionen. Sogar die meisten modernen Code für UWP und Store-apps, die in C++ geschriebene c++ / WinRT verwendet diese API unter. Weitere Informationen über die Windows-API finden Sie unter [Windows-API-Index](/windows/desktop/apiindex/windows-api-list). Es gibt viele Möglichkeiten zum Erstellen von Windows-Anwendungen, aber dies war die erste.
+Die Windows-API (auch bekannt als die Win32-API, Windows-Desktop-API und klassischen Windows-API) ist ein C#-Sprache basierenden Framework zum Erstellen von Windows-Anwendungen. Es wurde seit den 1980er und zum Erstellen von Windows-Anwendungen bereits seit Jahrzehnten verwendet wurde. Weitere erweiterte und einfacher-to-Program-Frameworks wurden erstellt, auf der Windows-API, wie MFC, ATL und der .NET Framework-Versionen. Sogar die meisten modernen Code für UWP und Store-apps, die in C++ geschriebene c++ / WinRT verwendet die Windows-API unter. Weitere Informationen über die Windows-API finden Sie unter [Windows-API-Index](/windows/desktop/apiindex/windows-api-list). Es gibt viele Möglichkeiten zum Erstellen von Windows-Anwendungen, aber die oben beschriebenen Prozess war der erste.
 
 > [!IMPORTANT]
 > Aus Gründen der Übersichtlichkeit werden einige codeanweisungen im Text weggelassen. Die [erstellen Sie den Code](#build-the-code) Abschnitt am Ende dieses Dokuments wird der vollständige Code gezeigt.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - Ein Computer, der Microsoft Windows 7 oder höher ausgeführt wird. Wir empfehlen die Windows 10, für die bestmögliche entwicklungserfahrung.
 
@@ -120,7 +110,7 @@ Als Nächstes erfahren Sie, wie Sie den Code für eine Windows-desktop-Anwendung
    Weitere Informationen zu den Parametern und Rückgabewerten dieser Funktion finden Sie unter [WinMain-Einstiegspunkt](https://msdn.microsoft.com/library/windows/desktop/ms633559).
 
    > [!NOTE]
-   > Was alle diese zusätzlichen Wörter sind, z. B. `CALLBACK`, oder `HINSTANCE`, oder `_In_`? Die herkömmliche Windows-API verwendet die Typdefinitionen und Präprozessormakros umfassend zu abstrahieren Details der Typen und plattformspezifischen code zu, z. B. Aufrufkonventionen, **__declspec** Deklarationen und compilerpragmen. In Visual Studio können Sie IntelliSense [Quick Info](/visualstudio/ide/using-intellisense#quick-info) Funktion, um festzustellen, welche dieser Typdefinitionen und Makros definiert. Zeigen Sie die Maus auf das Wort von Interesse sind, oder wählen Sie ihn aus, und drücken Sie STRG + K, STRG-I für ein kleines Popupfenster, das die Definition enthält. Weitere Informationen finden Sie unter [Verwenden von IntelliSense](/visualstudio/ide/using-intellisense). Parameter und Rückgabetypen verwenden häufig *SAL-Anmerkungen* können Sie Catch Programmierfehler. Weitere Informationen finden Sie unter [Verwenden von SAL-Anmerkungen zum Reduzieren von C/C++-Codefehlern](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+   > Was alle diese zusätzlichen Wörter sind, z. B. `CALLBACK`, oder `HINSTANCE`, oder `_In_`? Die herkömmliche Windows-API verwendet die Typdefinitionen und Präprozessormakros umfassend zu abstrahieren Details der Typen und plattformspezifischen code zu, z. B. Aufrufkonventionen, **__declspec** Deklarationen und compilerpragmen. In Visual Studio können Sie IntelliSense [Quick Info](/visualstudio/ide/using-intellisense#quick-info) Funktion, um festzustellen, welche dieser Typdefinitionen und Makros definiert. Zeigen Sie die Maus auf das Wort von Interesse sind, oder wählen Sie ihn aus, und drücken Sie **STRG**+**K**, **STRG**+**ich** für eine kleines Popupfenster, das die Definition enthält. Weitere Informationen finden Sie unter [Verwenden von IntelliSense](/visualstudio/ide/using-intellisense). Parameter und Rückgabetypen verwenden häufig *SAL-Anmerkungen* können Sie Catch Programmierfehler. Weitere Informationen finden Sie unter [Verwenden von SAL-Anmerkungen zum Reduzieren von C/C++-Codefehlern](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
 
 1. Windows-desktop-Programme erfordern &lt;windows.h >. &lt;TCHAR.h > definiert die `TCHAR` Makro, das letzten Endes löst, **"wchar_t"** Wenn das UNICODE-Symbol in Ihrem Projekt definiert ist, andernfalls löst **Char**.  Wenn Sie immer mit Unicode-aktiviert erstellen, ist Sie nicht, benötigen Sie TCHAR und können nur **"wchar_t"** direkt.
 
@@ -140,13 +130,13 @@ Als Nächstes erfahren Sie, wie Sie den Code für eine Windows-desktop-Anwendung
    );
    ```
 
-   In dieser Funktion, die Sie schreiben Code zum Behandeln von *Nachrichten* , die die Anwendung empfängt von Windows beim *Ereignisse* auftreten. Beispielsweise wenn ein Benutzer die Schaltfläche "OK" in Ihrer Anwendung auswählt, sendet Windows eine Nachricht an Sie und können Sie Code in schreiben Ihre `WndProc` Funktion, die ausführt, beliebige Aufgaben geeignet ist. Dies wird als bezeichnet *behandeln* ein Ereignis. Sie behandeln, nur die Ereignisse, die für Ihre Anwendung relevant sind.
+   In dieser Funktion, die Sie schreiben Code zum Behandeln von *Nachrichten* , die die Anwendung empfängt von Windows beim *Ereignisse* auftreten. Beispielsweise wenn ein Benutzer die Schaltfläche "OK" in Ihrer Anwendung auswählt, sendet Windows eine Nachricht an Sie und können Sie Code in schreiben Ihre `WndProc` Funktion, die ausführt, beliebige Aufgaben geeignet ist. Es heißt *behandeln* ein Ereignis. Sie behandeln, nur die Ereignisse, die für Ihre Anwendung relevant sind.
 
    Weitere Informationen finden Sie unter [Window Procedures](https://msdn.microsoft.com/library/windows/desktop/ms632593).
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>So fügen Sie der WinMain-Funktion Funktionen hinzu
 
-1. In der `WinMain` -Funktion, füllen Sie eine Struktur des Typs [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577). Diese Struktur enthält Informationen über das Fenster, z. B. das Anwendungssymbol, die Hintergrundfarbe des Fensters, den Namen in der Titelleiste und sehr wichtig, dass einen Funktionszeiger auf der Fensterprozedur anzeigen. Das folgende Beispiel zeigt eine typische `WNDCLASSEX` -Struktur.
+1. In der `WinMain` -Funktion, füllen Sie eine Struktur des Typs [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577). Die Struktur enthält Informationen über das Fenster, z. B. das Anwendungssymbol, die Hintergrundfarbe des Fensters, den Namen in der Titelleiste und vor allem einen Funktionszeiger, der Fensterprozedur anzeigen. Das folgende Beispiel zeigt eine typische `WNDCLASSEX` -Struktur.
 
    ```cpp
    WNDCLASSEX wcex;
@@ -165,9 +155,9 @@ Als Nächstes erfahren Sie, wie Sie den Code für eine Windows-desktop-Anwendung
    wcex.hIconSm        = LoadIcon(wcex.hInstance, IDI_APPLICATION);
    ```
 
-   Weitere Informationen über die Felder dieser Struktur finden Sie unter [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577).
+   Weitere Informationen zu den Feldern der oben genannten-Struktur, finden Sie unter [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577).
 
-1. Sie müssen sich registrieren der `WNDCLASSEX` mit Windows, damit das Fenster "und" Gewusst wie: Senden von Nachrichten an sie, dass die It kennt. Verwenden der [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587) Funktion, und übergeben Sie die Fensterklassenstruktur als Argument. Die `_T` Makro wird verwendet, da wir verwenden die `TCHAR` Typ.
+1. Registrieren der `WNDCLASSEX` mit Windows, damit das Fenster "und" Gewusst wie: Senden von Nachrichten an sie, dass die It kennt. Verwenden Sie die [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587) -Funktion, und übergeben Sie die Fensterklassenstruktur als Argument. Die `_T` Makro wird verwendet, da wir verwenden die `TCHAR` Typ.
 
    ```cpp
    if (!RegisterClassEx(&wcex))
@@ -181,7 +171,7 @@ Als Nächstes erfahren Sie, wie Sie den Code für eine Windows-desktop-Anwendung
    }
    ```
 
-1. Sie können nun ein Fenster erstellen. Verwenden der [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Funktion.
+1. Sie können nun ein Fenster erstellen. Verwenden Sie die [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) -Funktion.
 
    ```cpp
    static TCHAR szWindowClass[] = _T("DesktopApp");
@@ -221,7 +211,7 @@ Als Nächstes erfahren Sie, wie Sie den Code für eine Windows-desktop-Anwendung
 
    Diese Funktion gibt ein `HWND`, dies ist ein Handle für ein Fenster. Ein Handle ist etwas wie ein Zeiger, die Windows verwendet, um zu verfolgen geöffneten Fenster. Weitere Informationen finden Sie unter [Windows-Datentypen](/windows/desktop/WinProg/windows-data-types).
 
-1. An diesem Punkt das Fenster erstellt wurde, aber wir müssen noch mitteilen von Windows, um es sichtbar zu machen. Das ist die Funktionsweise dieses Codes:
+1. An diesem Punkt wird das Fenster erstellt wurde, aber wir müssen noch mitteilen von Windows, um es sichtbar zu machen. Das ist die Funktionsweise dieses Codes:
 
    ```cpp
    // The parameters to ShowWindow explained:
@@ -232,7 +222,7 @@ Als Nächstes erfahren Sie, wie Sie den Code für eine Windows-desktop-Anwendung
    UpdateWindow(hWnd);
    ```
 
-   Das angezeigte Fenster verfügt nicht viel Inhalt aus, da Sie noch nicht implementiert haben die `WndProc` Funktion. Das heißt, ist die Anwendung nicht noch die Nachrichten behandeln, die Windows jetzt an ihn sendet.
+   Das angezeigte Fenster nicht viel Inhalt aufweisen, da Sie noch nicht implementiert haben die `WndProc` Funktion. Das heißt, ist nicht die Anwendung noch die verarbeiten Nachrichten, die Windows jetzt an ihn sendet.
 
 1. Um die Nachrichten zu verarbeiten, fügen wir zunächst eine Meldungsschleife zum Lauschen auf Nachrichten, die Windows sendet hinzu. Wenn die Anwendung eine Nachricht empfängt, diese Schleife verteilt, damit Ihre `WndProc` Funktion behandelt werden. Die Nachrichtenschleife ähnelt dem folgenden Code.
 
@@ -247,7 +237,7 @@ Als Nächstes erfahren Sie, wie Sie den Code für eine Windows-desktop-Anwendung
    return (int) msg.wParam;
    ```
 
-   Weitere Informationen über die Strukturen und Funktionen in der Nachrichtenschleife finden Sie unter [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958), ["GetMessage"](https://msdn.microsoft.com/library/windows/desktop/ms644936), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage), und [DispatchMessage ](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
+   Weitere Informationen über die in der Nachrichtenschleife verwendeten Strukturen und Funktionen finden Sie unter [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958), [GetMessage](https://msdn.microsoft.com/library/windows/desktop/ms644936), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
 
    An diesem Punkt sollte die `WinMain` -Funktion in etwa dem folgenden Code entsprechen.
 
@@ -340,9 +330,9 @@ Als Nächstes erfahren Sie, wie Sie den Code für eine Windows-desktop-Anwendung
 
 1. Damit die `WndProc` -Funktion die Nachrichten behandeln kann, die von der Anwendung empfangen werden, implementieren Sie eine switch-Anweisung.
 
-   Eine wichtige Meldung verarbeiten wird die [WM_PAINT](/windows/desktop/gdi/wm-paint) Nachricht. Die Anwendung empfängt diese Nachricht, wenn ein Teil des angezeigten Fenster aktualisiert werden muss. Dieses Ereignis kann auftreten, wenn ein Benutzer ein Fenster vor das Fenster verschiebt, dann verschiebt ihn wieder entfernt. Ihre Anwendung klar nicht auftreten, wenn Ereignisse wie folgt. nur Windows bekannt ist, damit Sie mit benachrichtigt `WM_PAINT`. Wenn das Fenster erstmals angezeigt wird, müssen alle Daten aktualisiert werden.
+   Eine wichtige Meldung verarbeiten wird die [WM_PAINT](/windows/desktop/gdi/wm-paint) Nachricht. Die Anwendung empfängt die `WM_PAINT` Nachricht als Teil der angezeigten Fenster aktualisiert werden muss. Das Ereignis kann auftreten, wenn ein Benutzer ein Fenster vor das Fenster verschiebt, dann verschiebt Sie es noch mal weg, und Ihre Anwendung weiß nicht, wenn diese Ereignisse auftreten. Nur Windows bekannt ist, damit Sie mit benachrichtigt `WM_PAINT`. Wenn das Fenster erstmals angezeigt wird, müssen alle Daten aktualisiert werden.
 
-   Behandelt ein `WM_PAINT` Nachricht, der erste Aufruf ["BeginPaint"](/windows/desktop/api/winuser/nf-winuser-beginpaint), behandeln Sie anschließend die gesamte Logik, um das Layout von Text, Schaltflächen und anderen Steuerelementen im Fenster, und rufen dann ["EndPaint"](/windows/desktop/api/winuser/nf-winuser-endpaint). Ist für diese Anwendung die Logik zwischen dem Anfangs- und dem Beendigungsanruf zur Anzeige der Zeichenfolge "Hello, Windows Desktop!" im Fenster. In den folgenden Code, beachten Sie, dass die [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta) Funktion wird verwendet, um die Anzeige der Zeichenfolge.
+   Rufen Sie zur Behandlung einer `WM_PAINT` -Nachricht zuerst [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint)auf, behandeln Sie anschließend die gesamte Logik, um das Layout von Text, Schaltflächen und anderen Steuerelementen im Fenster zu behandeln, und rufen Sie anschließend [EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint)auf. Ist für die Anwendung die Logik zwischen dem Anfangs- und dem Beendigungsanruf zur Anzeige der Zeichenfolge "Hello, Windows Desktop!" im Fenster. Im folgenden Code wird die [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta) -Funktion zur Anzeige der Zeichenfolge verwendet.
 
    ```cpp
    PAINTSTRUCT ps;
@@ -367,7 +357,7 @@ Als Nächstes erfahren Sie, wie Sie den Code für eine Windows-desktop-Anwendung
    }
    ```
 
-   `HDC` In diesem Code ist ein Handle für einen Gerätekontext, eine Datenstruktur, die Windows verwendet, um Ihre Anwendung für die Kommunikation mit dem grafiksubsystem zu ermöglichen. Die `BeginPaint` und `EndPaint` Funktionen stellen Sie sicher, dass Ihre Anwendung verhält sich wie ein "guter Bürger", und den Gerätekontext nicht länger verwenden als notwendig zu. Dadurch wird sichergestellt, dass das Graphics-Subsystem für die Verwendung durch andere Anwendungen verfügbar ist.
+   `HDC` im Code ist ein Handle für einen Gerätekontext, eine Datenstruktur, die Windows verwendet, um Ihre Anwendung für die Kommunikation mit dem grafiksubsystem zu ermöglichen. Die `BeginPaint` und `EndPaint` Funktionen die Anwendung verhalten sich wie ein "guter Bürger", und verwenden Sie den Gerätekontext nicht länger als notwendig zu. Die Funktionen Hilfe stellen die grafiksubsystem ist für die Verwendung durch andere Anwendungen verfügbar.
 
 1. Eine Anwendung behandelt normalerweise viele andere Meldungen, z. B. [WM_CREATE](/windows/desktop/winmsg/wm-create) , wenn ein Fenster erstellt wird, und [WM_DESTROY](/windows/desktop/winmsg/wm-destroy) Wenn das Fenster geschlossen wird. Der folgende Code zeigt eine grundlegende, jedoch vollständige `WndProc` -Funktion.
 

@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Ansichten | Microsoft Docs
+title: Verwenden von Ansichten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,41 +23,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4094f41f00266b229c755232f534e9c35d29fe7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcf4af038617cce8326a3e63ba9b4ea66c277f66
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384061"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442096"
 ---
 # <a name="using-views"></a>Verwenden von Ansichten
-Die Ansicht Aufgaben sind Dokumentdaten für den Benutzer grafisch anzuzeigen und zu akzeptieren und Interpretieren der Benutzereingaben als Vorgänge für das Dokument. Die Vorgänge in Ihrer Ansichtsklasse geschrieben werden:  
-  
--   Schreiben Sie Ihre Ansichtsklasse [OnDraw](../mfc/reference/cview-class.md#ondraw) Memberfunktion, die die Daten des Dokuments rendert.  
-  
--   Verbinden Sie die entsprechenden Windows-Meldungen und Benutzeroberflächen-Objekten, z. B. Menüelemente mit Meldungshandler Memberfunktionen in der Ansichtsklasse.  
-  
--   Implementieren Sie diese Ereignishandler, um Benutzereingaben zu interpretieren.  
-  
- Darüber hinaus möglicherweise andere überschreiben `CView` Memberfunktionen in der Sicht der abgeleiteten Klasse. Sie möchten insbesondere außer Kraft setzen [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) für die spezielle Initialisierung für die Ansicht und [OnUpdate](../mfc/reference/cview-class.md#onupdate) Vorgehensweise jegliche spezielle Verarbeitung erforderlich, kurz bevor die Sicht, die sich selbst neu zeichnet. Bei mehrseitigen Dokumenten Außerdem müssen Sie überschreiben [OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting) um das Dialogfeld "Drucken" mit der Anzahl der zu druckenden Seiten sowie weitere Informationen zu initialisieren. Weitere Informationen zum Überschreiben `CView` Memberfunktionen, finden Sie unter Klasse [CView](../mfc/reference/cview-class.md) in der *MFC-Referenz*.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
-  
--   [In MFC verfügbare Abgeleitete Ansichtsklassen](../mfc/derived-view-classes-available-in-mfc.md)  
-  
--   [Zeichnen in einer Ansicht](../mfc/drawing-in-a-view.md)  
-  
--   [Interpretieren von Benutzereingaben über eine Sicht](../mfc/interpreting-user-input-through-a-view.md)  
-  
--   [Die Rolle der Ansicht beim Drucken](../mfc/role-of-the-view-in-printing.md)  
-  
--   [Bildlauf und Skalierung für Ansichten](../mfc/scrolling-and-scaling-views.md)  
-  
--   [Initialisieren und Bereinigen von Dokumenten und Ansichten](../mfc/initializing-and-cleaning-up-documents-and-views.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Dokument-/Ansichtsarchitektur](../mfc/document-view-architecture.md)   
- [CFormView-Klasse](../mfc/reference/cformview-class.md)   
- [Datensatzansichten (MFC-Datenzugriff)](../data/record-views-mfc-data-access.md)   
- [Umgehen des Serialisierungsmechanismus](../mfc/bypassing-the-serialization-mechanism.md)
+
+Zuständigkeiten von der Ansicht sind die Daten des Dokuments für den Benutzer grafisch und zu akzeptieren und Interpretieren der Benutzereingaben als Vorgänge für das Dokument. Die Aufgaben beim Schreiben Ihrer Ansichtsklasse sind:
+
+- Schreiben Sie Ihre Ansichtsklasse [OnDraw](../mfc/reference/cview-class.md#ondraw) Memberfunktion, die die Daten eines Dokuments gerendert wird.
+
+- Verbinden Sie die entsprechenden Windows-Nachrichten und Benutzeroberflächen-Objekten, z. B. Menüelemente Meldungshandler-Memberfunktionen in der Ansichtsklasse.
+
+- Implementieren Sie diese Ereignishandler zum Interpretieren der Benutzereingaben.
+
+Darüber hinaus müssen möglicherweise andere überschreiben `CView` Member-Funktionen in Ihrer abgeleiteten Ansichtsklasse. Insbesondere möchten Sie außer Kraft setzen [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) spezielle Initialisierung für die Sicht ausführen und [OnUpdate](../mfc/reference/cview-class.md#onupdate) Sie spezielle Verarbeitung erforderlich sind, nur um die Ansicht sich selbst neu zeichnet. Bei mehrseitigen Dokumenten auch müssen Sie überschreiben [OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting) um das Dialogfeld "Drucken", mit der Anzahl der zu druckenden Seiten und andere Informationen zu initialisieren. Weitere Informationen zum Überschreiben `CView` Member-Funktionen, finden Sie unter Klasse [CView](../mfc/reference/cview-class.md) in die *MFC-Referenz*.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
+
+- [In MFC verfügbare Abgeleitete Ansichtsklassen](../mfc/derived-view-classes-available-in-mfc.md)
+
+- [Zeichnen in einer Ansicht](../mfc/drawing-in-a-view.md)
+
+- [Interpretieren von Benutzereingaben über eine Sicht](../mfc/interpreting-user-input-through-a-view.md)
+
+- [Die Rolle der Ansicht beim Drucken](../mfc/role-of-the-view-in-printing.md)
+
+- [Bildlauf und Skalierung für Ansichten](../mfc/scrolling-and-scaling-views.md)
+
+- [Initialisieren und Bereinigen von Dokumenten und Ansichten](../mfc/initializing-and-cleaning-up-documents-and-views.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Dokument-/Ansichtsarchitektur](../mfc/document-view-architecture.md)<br/>
+[CFormView-Klasse](../mfc/reference/cformview-class.md)<br/>
+[Datensatzansichten (MFC-Datenzugriff)](../data/record-views-mfc-data-access.md)<br/>
+[Umgehen des Serialisierungsmechanismus](../mfc/bypassing-the-serialization-mechanism.md)
 

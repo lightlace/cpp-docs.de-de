@@ -1,9 +1,6 @@
 ---
-title: EventSource-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: EventSource-Klasse
 ms.date: 09/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::EventSource
@@ -15,8 +12,6 @@ f1_keywords:
 - event/Microsoft::WRL::EventSource::Remove
 - event/Microsoft::WRL::EventSource::targets_
 - event/Microsoft::WRL::EventSource::targetsPointerLock_
-dev_langs:
-- C++
 helpviewer_keywords:
 - Microsoft::WRL::EventSource class
 - Microsoft::WRL::EventSource::Add method
@@ -28,17 +23,12 @@ helpviewer_keywords:
 - Microsoft::WRL::EventSource::targets_ data member
 - Microsoft::WRL::EventSource::targetsPointerLock_ data member
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 08347b4ccfa44d8645acc2bd5e96775bab4e7740
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: e9070fe756410e3e1bb1e5840eb3f06e29c2f46b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601495"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561277"
 ---
 # <a name="eventsource-class"></a>EventSource-Klasse
 
@@ -53,7 +43,7 @@ class EventSource;
 
 ### <a name="parameters"></a>Parameter
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 Die Schnittstelle, ein Delegat, der einen Ereignishandler darstellt.
 
 ## <a name="members"></a>Member
@@ -104,10 +94,10 @@ HRESULT Add(
 
 ### <a name="parameters"></a>Parameter
 
-*delegateInterface*  
+*delegateInterface*<br/>
 Die Schnittstelle an ein Delegatobjekt, das einen Ereignishandler darstellt.
 
-*token*  
+*token*<br/>
 Wenn dieser Vorgang abgeschlossen ist, ein Handle, das das Ereignis darstellt. Verwenden Sie dieses Token als Parameter an die ["Remove()""](#remove) Methode, um den Ereignishandler zu verwerfen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -302,64 +292,64 @@ void InvokeAll(
 
 ### <a name="parameters"></a>Parameter
 
-*T0*  
+*T0*<br/>
 Der Typ des Arguments nullten Event Handler.
 
-*T1*  
+*T1*<br/>
 Der Typ, der das erste Argument der Ereignis-Handler.
 
-*T2*  
+*T2*<br/>
 Der Typ des zweiten Arguments der Ereignis-Handler.
 
-*T3*  
+*T3*<br/>
 Der Typ des dritten Arguments der Ereignis-Handler.
 
-*T4*  
+*T4*<br/>
 Der Typ des vierten Arguments der Ereignis-Handler.
 
-*T5*  
+*T5*<br/>
 Der Typ des fünften Arguments der Ereignis-Handler.
 
-*T6*  
+*T6*<br/>
 Der Typ des sechsten Arguments der Ereignis-Handler.
 
-*T7*  
+*T7*<br/>
 Der Typ des siebten Arguments der Ereignis-Handler.
 
-*T8*  
+*T8*<br/>
 Der Typ des Arguments achte Event Handler.
 
-*T9*  
+*T9*<br/>
 Der Typ des neunten Arguments der Ereignis-Handler.
 
-*arg0*  
+*arg0*<br/>
 Das Argument der nullten Ereignis-Handler.
 
-*arg1*  
+*arg1*<br/>
 Das erste Argument der Ereignis-Handler.
 
-*Arg2*  
+*Arg2*<br/>
 Das zweite Argument der Ereignis-Handler.
 
-*Arg3*  
+*Arg3*<br/>
 Das dritte Argument der Ereignis-Handler.
 
-*Arg4*  
+*Arg4*<br/>
 Das vierte Argument der Ereignis-Handler.
 
-*Arg5*  
+*Arg5*<br/>
 Das fünfte Argument der Ereignis-Handler.
 
-*Arg6*  
+*Arg6*<br/>
 Das sechste Handler Ereignisargument.
 
-*Arg7*  
+*Arg7*<br/>
 Das siebte Handler Ereignisargument.
 
-*Arg8*  
+*Arg8*<br/>
 Das achte Handler Ereignisargument.
 
-*Arg9*  
+*Arg9*<br/>
 Das neunte Handler Ereignisargument.
 
 ## <a name="remove"></a>EventSource:: Remove
@@ -374,7 +364,7 @@ HRESULT Remove(
 
 ### <a name="parameters"></a>Parameter
 
-*token*  
+*token*<br/>
 Ein Handle, das einen Ereignishandler darstellt. Dieses Token zurückgegeben wurde, wenn der Ereignishandler, indem registriert wurde die [Add()](#add) Methode.
 
 ### <a name="return-value"></a>Rückgabewert

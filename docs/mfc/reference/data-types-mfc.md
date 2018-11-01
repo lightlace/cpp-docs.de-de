@@ -1,15 +1,9 @@
 ---
-title: Datentypen (MFC) | Microsoft-Dokumentation
-ms.custom: ''
+title: Datentypen (MFC)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - LPCRECT
 - POSITION
-dev_langs:
-- C++
 helpviewer_keywords:
 - LPCRECT data type [MFC]
 - WPARAM data type [MFC]
@@ -30,28 +24,26 @@ helpviewer_keywords:
 - LPARAM data type [MFC]
 - LPCSTR [MFC]
 ms.assetid: 8954848b-2c01-4a4f-abf5-ee55f6a05eeb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 07745d1488b22645200d7af155d2af9b2ea73838
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 56da8a25261a54e952a529e93063fbe853cbf16d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199868"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50608086"
 ---
 # <a name="data-types-mfc"></a>Datentypen (MFC)
-Dieses Thema enthält die Datentypen, die am häufigsten in der Microsoft Foundation Class-Bibliothek. Die meisten Datentypen sind dieselben wie in der Platform Software Development Kit (SDK), während andere für MFC eindeutig sind.  
-  
- Informationen zu den Datentypen, die in den Windows-SDK und die MFC verwendet, finden Sie unter [Windows-Datentypen](/windows/desktop/WinProg/windows-data-types).  
-  
- Die folgenden: Datentypen, die nur für die Microsoft Foundation Class-Bibliothek  
-  
--   Positionieren Sie einen Wert verwendet, um die Position eines Elements in einer Sammlung anzugeben. von MFC-Auflistungsklassen verwendet.  
-  
--   Eine 32-Bit-Zeiger auf eine Konstante, die (nicht veränderbar) LPCRECT `RECT` Struktur.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../../mfc/class-library-overview.md)   
- [Makros und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)
+
+Dieses Thema enthält die Datentypen, die am häufigsten in der Microsoft Foundation Class-Bibliothek. Die meisten Datentypen sind dieselben wie in der Platform Software Development Kit (SDK), während andere für MFC eindeutig sind.
+
+Informationen zu den Datentypen, die in den Windows-SDK und die MFC verwendet, finden Sie unter [Windows-Datentypen](/windows/desktop/WinProg/windows-data-types).
+
+Die folgenden: Datentypen, die nur für die Microsoft Foundation Class-Bibliothek
+
+- Positionieren Sie einen Wert verwendet, um die Position eines Elements in einer Sammlung anzugeben. von MFC-Auflistungsklassen verwendet.
+
+- Eine 32-Bit-Zeiger auf eine Konstante, die (nicht veränderbar) LPCRECT `RECT` Struktur.
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../../mfc/class-library-overview.md)<br/>
+[Makros und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)

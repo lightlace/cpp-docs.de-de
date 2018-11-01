@@ -1,7 +1,7 @@
 ---
-title: New (neuer Slot in Vtable) (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
+title: New (neuer Slot in Vtable) (C++ / CLI und C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ac6b6401870e29ec10b17ff2c06fb970328af82
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 48351903b7827f4ad9e6d63824658e4f44e047e0
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612684"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327738"
 ---
-# <a name="new-new-slot-in-vtable--c-component-extensions"></a>new (neuer Slot in vtable) (Komponentenerweiterungen für C++)
+# <a name="new-new-slot-in-vtable--ccli-and-ccx"></a>New (neuer Slot in Vtable) (C++ / CLI und C++ / CX)
 
 Die **neue** -Schlüsselwort Gibt an, dass ein virtueller Member einen neuen Platz im Vtable erhält.
 
@@ -115,5 +115,6 @@ E::f() called
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)  
+[Komponentenerweiterungen für .NET- und UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
+
 [Überschreibungsspezifizierer](../windows/override-specifiers-cpp-component-extensions.md)

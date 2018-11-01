@@ -16,44 +16,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c9aac181edb12df8904a2bc6d891d59c0067ecc
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c4f0367e19589093b31fcd64d5312e7b47e8a043
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339318"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080272"
 ---
 # <a name="abc-structure"></a>ABC-Struktur
-Die `ABC` Struktur enthält die Breite eines Zeichens in eine TrueType-Schriftart.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-typedef struct _ABC { /* abc */  
-    int abcA;  
-    UINT abcB;  
-    int abcC;  
-} ABC;  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- *abcA*  
- Gibt den Abstand ein des Zeichens. Der Abstand ein ist der Abstand und die aktuelle Position vor dem Zeichnen des Symbols Zeichen hinzuzufügen.  
-  
- *abcB*  
- Gibt den Abstand B des Zeichens. Der Abstand B ist die Breite des gezeichneten Bereich des Symbols für das Zeichen an.  
-  
- *abcC*  
- Gibt den Abstand C des Zeichens. Der C-Abstand wird der Abstand der aktuellen Position Leerraum auf der rechten Seite des Symbols für das Zeichen zu hinzu.  
-  
-## <a name="remarks"></a>Hinweise  
- Die gesamte Breite eines Zeichens ist die Summe der Leerzeichen A, B und C. A- oder der C-Space kann an Underhangs oder Überhängen negativ sein.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** wingdi.h  
-  
-## <a name="see-also"></a>Siehe auch  
- [Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDC::GetCharABCWidths](../../mfc/reference/cdc-class.md#getcharabcwidths)
 
+Die `ABC` Struktur enthält die Breite eines Zeichens in eine TrueType-Schriftart.
+
+## <a name="syntax"></a>Syntax
+
+```
+typedef struct _ABC { /* abc */
+    int abcA;
+    UINT abcB;
+    int abcC;
+} ABC;
+```
+
+#### <a name="parameters"></a>Parameter
+
+*abcA*<br/>
+Gibt den Abstand ein des Zeichens. Der Abstand ein ist der Abstand und die aktuelle Position vor dem Zeichnen des Symbols Zeichen hinzuzufügen.
+
+*abcB*<br/>
+Gibt den Abstand B des Zeichens. Der Abstand B ist die Breite des gezeichneten Bereich des Symbols für das Zeichen an.
+
+*abcC*<br/>
+Gibt den Abstand C des Zeichens. Der C-Abstand wird der Abstand der aktuellen Position Leerraum auf der rechten Seite des Symbols für das Zeichen zu hinzu.
+
+## <a name="remarks"></a>Hinweise
+
+Die gesamte Breite eines Zeichens ist die Summe der Leerzeichen A, B und C. A- oder der C-Space kann an Underhangs oder Überhängen negativ sein.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** wingdi.h
+
+## <a name="see-also"></a>Siehe auch
+
+[Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[CDC::GetCharABCWidths](../../mfc/reference/cdc-class.md#getcharabcwidths)
 

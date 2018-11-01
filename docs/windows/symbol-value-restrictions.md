@@ -1,29 +1,18 @@
 ---
-title: Symbolwerten | Microsoft-Dokumentation
-ms.custom: ''
+title: Beschränkungen bei Symbolwerten
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.restrictions.value
-dev_langs:
-- C++
 helpviewer_keywords:
 - symbols [C++], value restrictions
 - restrictions, symbol values
 ms.assetid: 32467ec3-690b-4cd0-a4d0-7d189a3296cb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6b174e46df7822ddf5ffbc747d0a7eb3cd71245e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 0f0a02c7eb2bbb205f41aaeec209c45d629f0b20
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315404"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677668"
 ---
 # <a name="symbol-value-restrictions"></a>Beschränkungen bei Symbolwerten
 
@@ -68,6 +57,6 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Ändern des numerischen Werts eines Symbols](../windows/changing-a-symbol-s-numeric-value.md)  
-[Beschränkungen bei Symbolnamen](../windows/symbol-name-restrictions.md)  
+[Ändern des numerischen Werts eines Symbols](../windows/changing-a-symbol-s-numeric-value.md)<br/>
+[Beschränkungen bei Symbolnamen](../windows/symbol-name-restrictions.md)<br/>
 [Vordefinierte Symbol-IDs](../windows/predefined-symbol-ids.md)

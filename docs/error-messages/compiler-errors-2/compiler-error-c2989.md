@@ -1,27 +1,17 @@
 ---
-title: Compilerfehler C2989 | Microsoft-Dokumentation
-ms.custom: ''
+title: Compilerfehler C2989
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2989
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2989
 ms.assetid: 936303d8-eb3b-4746-82ec-2f18020a6f64
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: df67a24fa9bae63bbaf1bba344aa7f684ec91123
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e5f03d644ab6c25b7eb0da0dc1684c7de5c2e6a8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46081909"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50517896"
 ---
 # <a name="compiler-error-c2989"></a>Compilerfehler C2989
 
@@ -29,11 +19,9 @@ ms.locfileid: "46081909"
 
 Die generische oder Vorlagenklasse definiert eine Klasse ohne Vorlagen oder nicht generisch. Überprüfen Sie die Headerdateien für Konflikte.
 
-Wenn Sie partielle Klasse vorlagenspezialisierungen verwenden, finden Sie unter "Knowledge Base-Artikel Q240866".
-
 Im folgende Beispiel wird die C2989 generiert:
 
-```
+```cpp
 // C2989.cpp
 // compile with: /c
 class C{};
@@ -45,7 +33,7 @@ class C2{};
 
 C2989 kann auch auftreten, wenn Generika verwendet werden:
 
-```
+```cpp
 // C2989b.cpp
 // compile with: /clr /c
 ref class GC1;

@@ -1,27 +1,19 @@
 ---
-title: "\"__restrict\" | Microsoft-Dokumentation"
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
+title: __restrict
+ms.date: 10/10/2018
 f1_keywords:
 - __restrict_cpp
-dev_langs:
-- C++
+- __restrict
+- _restrict
 helpviewer_keywords:
 - __restrict keyword [C++]
 ms.assetid: 2d151b4d-f930-49df-bd16-d8757ec7fa83
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d9754f8b0b218fc4d627eb0e27504e8521bf776
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 76cdf9424e6eab33a3a92b3f98d9c2b0b04ff667
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46076436"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454547"
 ---
 # <a name="restrict"></a>__restrict
 
@@ -34,6 +26,8 @@ Wie die **__declspec ( [einschränken](../cpp/restrict.md) )** Modifizierer, die
 - Wenn **"__restrict"** wird verwendet, der Compiler nicht weiter die kein-Alias-Eigenschaft einer Variablen. Also wenn Sie Zuweisen einer **"__restrict"** Variablen nicht **"__restrict"** Variablen, der Compiler wird immer noch, dass der nicht-__restrict-Variable, um ein Alias erforderlich. Dies unterscheidet sich vom Verhalten der **einschränken** -Schlüsselwort aus der Spezifikation C99.
 
 Wenn Sie das Verhalten einer vollständigen Funktion beeinflussen, ist es im Allgemeinen besser, `__declspec ( restrict )` anstatt das Schlüsselwort zu verwenden.
+
+Für die Kompatibilität mit früheren Versionen **_restrict** ist ein Synonym für **"__restrict"** , wenn Compileroption [/Za \(spracherweiterungen deaktivieren)](../build/reference/za-ze-disable-language-extensions.md) ist angegeben.
 
 In Visual Studio 2015 und höher **"__restrict"** für C++-Verweise verwendet werden können.
 

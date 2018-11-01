@@ -1,10 +1,6 @@
 ---
-title: COleDateTime-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: COleDateTime-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleDateTime
 - ATLCOMTIME/ATL::COleDateTime
@@ -30,8 +26,6 @@ f1_keywords:
 - ATLCOMTIME/ATL::COleDateTime::SetTime
 - ATLCOMTIME/ATL::COleDateTime::m_dt
 - ATLCOMTIME/ATL::COleDateTime::m_status
-dev_langs:
-- C++
 helpviewer_keywords:
 - shared classes, COleDateTime
 - time-only values
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6c2cb19908b177ea1e07e0178023e868b96a4560
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2f63535210110e699daedd39a0b5a5ac25fc53c5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754777"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505897"
 ---
 # <a name="coledatetime-class"></a>COleDateTime-Klasse
 
@@ -165,7 +155,7 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Datum*  
+*Datum*<br/>
 Das zu vergleichende `COleDateTime`-Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -210,31 +200,31 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*dateSrc*  
+*dateSrc*<br/>
 Eine vorhandene `COleDateTime` Objekt, das in die neue kopiert werden `COleDateTime` Objekt.
 
-*varSrc*  
+*varSrc*<br/>
 Eine vorhandene `VARIANT` Datenstruktur (möglicherweise eine `COleVariant` Objekt) in einen Datum/Uhrzeit-Wert (VT_DATE) konvertiert werden, und kopiert in das neue `COleDateTime` Objekt.
 
-*dtSrc*  
+*dtSrc*<br/>
 Eine Datum/Uhrzeit (`DATE`) Wert, der in die neue kopiert werden `COleDateTime` Objekt.
 
-*timeSrc*  
+*timeSrc*<br/>
 Ein `time_t` oder `__time64_t` Wert in einen Datum/Uhrzeit-Wert konvertiert werden, und kopiert in das neue `COleDateTime` Objekt.
 
-*systimeSrc*  
+*systimeSrc*<br/>
 Ein `SYSTEMTIME` Struktur in einen Datum/Uhrzeit-Wert konvertiert werden, und kopiert in das neue `COleDateTime` Objekt.
 
-*filetimeSrc*  
+*filetimeSrc*<br/>
 Ein `FILETIME` Struktur in einen Datum/Uhrzeit-Wert konvertiert werden, und kopiert in das neue `COleDateTime` Objekt. Beachten Sie, dass `FILETIME` verwendet die koordinierte Weltzeit (UTC), also wenn Sie eine lokale Zeit in der Struktur übergeben, die Ergebnisse nicht korrekt. Finden Sie unter [Dateizeitangaben](/windows/desktop/SysInfo/file-times) im Windows SDK für Weitere Informationen.
 
-*nYear*, *nMonth*, *NChronoplan Midi*, *Nuhrzeitangabe*, *nmin*, *nSec*  
+*nYear*, *nMonth*, *NChronoplan Midi*, *Nuhrzeitangabe*, *nmin*, *nSec*<br/>
 Geben Sie Werte für Datum und Uhrzeit in die neue kopiert werden `COleDateTime` Objekt.
 
-*wDosDate*, *wDosTime*  
+*wDosDate*, *wDosTime*<br/>
 MS-DOS-Datum und Uhrzeit-Werte in einen Datum/Uhrzeit-Wert konvertiert werden, und kopiert in das neue `COleDateTime` Objekt.
 
-*DBTS*  
+*DBTS*<br/>
 Ein Verweis auf eine [DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) Struktur, die die aktuelle lokale Uhrzeit enthält.
 
 ### <a name="remarks"></a>Hinweise
@@ -297,7 +287,7 @@ CString Format(UINT nFormatID) const;
 
 ### <a name="parameters"></a>Parameter
 
-*dwFlags*  
+*dwFlags*<br/>
 Gibt an, um eine der folgenden Gebietsschemas:
 
 - LOCALE_NOUSEROVERRIDE verwenden die Standardeinstellungen des Systems Gebietsschema, anstelle von benutzerdefinierten Einstellungen.
@@ -306,10 +296,10 @@ Gibt an, um eine der folgenden Gebietsschemas:
 
 - VAR_DATEVALUEONLY ignorieren den Time-Teil, bei der Analyse.
 
-*lcid*  
+*lcid*<br/>
 Gibt die Gebietsschema-ID, für die Konvertierung verwendet. Weitere Informationen zu Sprachen-IDs finden Sie unter [Sprachen-IDs](/windows/desktop/Intl/language-identifiers).
 
-*lpszFormat*  
+*lpszFormat*<br/>
 Eine Formatierungszeichenfolge ähnelt der `printf` Formatierungszeichenfolge. Jede Formatieren von Code, der Prozentsatz vorangestellt ( `%`) anmelden, wird mit den entsprechenden ersetzt `COleDateTime` Komponente. Andere Zeichen in der Formatierungszeichenfolge werden auf die zurückgegebene Zeichenfolge unverändert kopiert. Finden Sie unter der Run-Time-Funktion [Strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für Weitere Informationen. Der Wert und die Bedeutung der Formatierungscodes für `Format` sind:
 
 - `%H` In den aktuellen Tag Stunden
@@ -320,7 +310,7 @@ Eine Formatierungszeichenfolge ähnelt der `printf` Formatierungszeichenfolge. J
 
 - `%%` Prozentzeichen
 
-*nFormatID*  
+*nFormatID*<br/>
 Die Ressourcen-ID für die Format-Zeichenfolge.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -333,13 +323,13 @@ Wenn der Status dieser `COleDateTime` Objekt null ist. der zurückgegebene Wert 
 
 Eine kurze Beschreibung der drei Formen für diese Funktion folgt:
 
-`Format`( *DwFlags*, *Lcid*)  
+`Format`( *DwFlags*, *Lcid*)<br/>
 Dieses Formular formatiert den Wert mithilfe der Spezifikationen der Berichtsdefinitionssprache (Gebietsschema-IDs) für Datum und Uhrzeit. Verwenden die Standardparameter, wird das Datum und die Uhrzeit, Drucken des Formulars ausgeführt, wenn der Uhrzeitanteil 0 (Mitternacht ist), in diesem Fall es nur das Datum gibt oder der Datumsteil 0 (30. Dezember 1899 ist) in diesem Fall wird nur zum Zeitpunkt drucken. Wenn der Datum/Uhrzeit-Wert 0 (am 30. Dezember 1899 Mitternacht) ist, wird dieses Formular aus, wobei die Standardparameter Mitternacht ausgegeben.
 
-`Format`( *LpszFormat*)  
+`Format`( *LpszFormat*)<br/>
 Dieses Formular formatiert den Wert mit der Formatzeichenfolge das spezielle Formatierungscodes enthält, die ein Prozentzeichen (%) vorangestellt werden, wie in `printf`. Die Formatierungszeichenfolge wird als Parameter an die Funktion übergeben. Weitere Informationen zu den Formatierungscodes, finden Sie unter [Strftime, Wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) in der Run-Time Library Reference.
 
-`Format`( *nFormatID*)  
+`Format`( *nFormatID*)<br/>
 Dieses Formular formatiert den Wert mit der Formatzeichenfolge das spezielle Formatierungscodes enthält, die ein Prozentzeichen (%) vorangestellt werden, wie in `printf`. Die Formatierungszeichenfolge ist eine Ressource. Die ID der Ressource, diese Zeichenfolge wird als Parameter übergeben. Weitere Informationen zu den Formatierungscodes, finden Sie unter [Strftime, Wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) in die *Run-Time Library Reference*.
 
 ### <a name="example"></a>Beispiel
@@ -356,7 +346,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*DBTS*  
+*DBTS*<br/>
 Ein Verweis auf eine [DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -381,7 +371,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*sysTime*  
+*sysTime*<br/>
 Ein Verweis auf eine [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur zum Empfangen der konvertierte Datums-/Uhrzeitwert aus der `COleDateTime` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -404,7 +394,7 @@ bool GetAsUDATE(UDATE& udate) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Update*  
+*Update*<br/>
 Ein Verweis auf eine `UDATE` Struktur zum Empfangen der konvertierte Datums-/Uhrzeitwert aus der `COleDateTime` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -701,13 +691,13 @@ Gibt den Status dieses `COleDateTime` Wert. Wenn Sie aufrufen `GetStatus` auf ei
 Der Rückgabewert wird definiert, durch die `DateTimeStatus` Enumerationstyp, der in definiert ist die `COleDateTime` Klasse.
 
 ```
-enum DateTimeStatus  
-{  
-   error = -1,  
-   valid = 0,  
-   invalid = 1,    // Invalid date (out of range, etc.)  
-   null = 2,       // Literally has no value  
-};  
+enum DateTimeStatus
+{
+   error = -1,
+   valid = 0,
+   invalid = 1,    // Invalid date (out of range, etc.)
+   null = 2,       // Literally has no value
+};
 ```
 
 Eine kurze Beschreibung dieser Status-Werte finden Sie in der folgenden Liste:
@@ -930,18 +920,18 @@ Die `DATE` Operator wird bestätigt, wenn die `COleDateTime` Objekts wird festge
 Analysiert eine Zeichenfolge zum Lesen eines Datum/Uhrzeit-Werts.
 
 ```
-bool ParseDateTime(  
-LPCTSTR lpszDate,
-DWORD dwFlags = 0,
-LCID lcid = LANG_USER_DEFAULT) throw();
+bool ParseDateTime(
+    LPCTSTR lpszDate,
+    DWORD dwFlags = 0,
+    LCID lcid = LANG_USER_DEFAULT) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*lpszDate*  
+*lpszDate*<br/>
 Ein Zeiger auf die Null-terminierte Zeichenfolge, die analysiert werden soll. Einzelheiten finden Sie unter "Hinweise".
 
-*dwFlags*  
+*dwFlags*<br/>
 Gibt Flags für die Einstellungen für Gebietsschema und die Analyse an. Eine oder mehrere der folgenden Flags:
 
 - LOCALE_NOUSEROVERRIDE verwenden Sie den Standard-gebietsschemaeinstellungen für System, anstelle von benutzerdefinierten Einstellungen.
@@ -950,7 +940,7 @@ Gibt Flags für die Einstellungen für Gebietsschema und die Analyse an. Eine od
 
 - VAR_DATEVALUEONLY ignorieren den Time-Teil, bei der Analyse.
 
-*lcid*  
+*lcid*<br/>
 Gibt die Gebietsschema-ID, für die Konvertierung verwendet.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -991,15 +981,15 @@ Weitere Informationen zu den Grenzen und die Implementierung für `COleDateTime`
 Legt das Datum dieser `COleDateTime` Objekt.
 
 ```
-int SetDate(  
-int nYear,
-int nMonth,
-int nDay) throw();
+int SetDate(
+    int nYear,
+    int nMonth,
+    int nDay) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*nYear*, *nMonth*, *NChronoplan MIDI*  
+*nYear*, *nMonth*, *NChronoplan MIDI*<br/>
 Geben Sie die Datumskomponenten in diese kopiert werden `COleDateTime` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1062,18 +1052,18 @@ Weitere Informationen über die Grenzen für `COleDateTime` Werte finden Sie im 
 Legt das Datum und Uhrzeit dieser `COleDateTime` Objekt.
 
 ```
-int SetDateTime(  
-int nYear,
-int nMonth,
-int nDay,
-int nHour,
-int nMin,
-int nSec) throw();
+int SetDateTime(
+    int nYear,
+    int nMonth,
+    int nDay,
+    int nHour,
+    int nMin,
+    int nSec) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*nYear*, *nMonth*, *NChronoplan Midi*, *Nuhrzeitangabe*, *nmin*, *nSec*  
+*nYear*, *nMonth*, *NChronoplan Midi*, *Nuhrzeitangabe*, *nmin*, *nSec*<br/>
 Angeben der Datums- und Zeitkomponenten in diese kopiert werden `COleDateTime` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1151,7 +1141,7 @@ void SetStatus(DateTimeStatus status) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*status*  
+*Status*<br/>
 Der neue Statuswert für diesen `COleDateTime` Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -1170,15 +1160,15 @@ Siehe das Beispiel für [GetStatus](#getstatus).
 Legt die Uhrzeit dieser `COleDateTime` Objekt.
 
 ```
-int SetTime(  
-int nHour,
-int nMin,
-int nSec) throw();
+int SetTime(
+    int nHour,
+    int nMin,
+    int nSec) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*Nuhrzeitangabe*, *nmin*, *nSec*  
+*Nuhrzeitangabe*, *nmin*, *nSec*<br/>
 Geben Sie die Zeitkomponenten in diese kopiert werden `COleDateTime` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1236,9 +1226,9 @@ Siehe das Beispiel für [SetDate](#setdate).
 
 ## <a name="see-also"></a>Siehe auch
 
-[COleVariant-Klasse](../../mfc/reference/colevariant-class.md)   
-[CTime-Klasse](../../atl-mfc-shared/reference/ctime-class.md)   
-[CTimeSpan-Klasse](../../atl-mfc-shared/reference/ctimespan-class.md)   
-[Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
+[COleVariant-Klasse](../../mfc/reference/colevariant-class.md)<br/>
+[CTime-Klasse](../../atl-mfc-shared/reference/ctime-class.md)<br/>
+[CTimeSpan-Klasse](../../atl-mfc-shared/reference/ctimespan-class.md)<br/>
+[Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [Freigegebene ATL-/MFC-Klassen](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

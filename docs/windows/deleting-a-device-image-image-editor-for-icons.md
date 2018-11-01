@@ -1,12 +1,6 @@
 ---
-title: Löschen eines Gerätebilds (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
-ms.custom: ''
+title: Löschen eines Gerätebilds (Bildbearbeitung für Symbole)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - cursors [C++], deleting
 - display devices [C++], deleting device image
@@ -15,17 +9,12 @@ helpviewer_keywords:
 - cursors [C++], undoing changes
 - icons, undoing changes
 ms.assetid: aab1031c-da95-49cf-aabc-46e127b11399
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 376c68c4b00f6b57282d03f14b8702f5c7e8a8bc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 6eb84ed0a6f2c323deb833ee92723c0620db0b26
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315294"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50598977"
 ---
 # <a name="deleting-a-device-image-image-editor-for-icons"></a>Löschen eines Gerätebilds (Bildbearbeitung für Symbole)
 
@@ -44,6 +33,6 @@ Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
-[Symbole und Cursor: Bildressourcen für Anzeigegeräte](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
-[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Symbole und Cursor: Bildressourcen für Anzeigegeräte](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)<br/>
+[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Symbole und Cursor: Bildressourcen für Anzeigegeräte](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

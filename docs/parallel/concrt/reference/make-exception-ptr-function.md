@@ -1,47 +1,41 @@
 ---
-title: Make_exception_ptr-Funktion | Microsoft-Dokumentation
-ms.custom: ''
+title: make_exception_ptr-Funktion
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - ppltasks/std::make_exception_ptr
-dev_langs:
-- C++
 ms.assetid: 8d81cf7a-818e-4b27-8d49-440ec3088609
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b3f483d266b8150dfd4aaa5299ffec280d447157
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fbba07969d8f2a5e60c35eac5806a1acc1d59185
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46037618"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50488256"
 ---
 # <a name="makeexceptionptr-function"></a>make_exception_ptr-Funktion
-## <a name="syntax"></a>Syntax  
-  
+
+## <a name="syntax"></a>Syntax
+
 ```
 template<class _E>
 exception_ptr make_exception_ptr(_E _Except);
-```  
-  
-#### <a name="parameters"></a>Parameter  
+```
+
+#### <a name="parameters"></a>Parameter
+
 *_E*<br/>
 Ausnahmetyp.
 
 *_Except*<br/>
 Wert für die Ausnahme.
-  
-## <a name="return-value"></a>Rückgabewert  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** ppltasks.h  
-  
- **Namespace:** std  
-  
-## <a name="see-also"></a>Siehe auch  
- [std-Namespace](std-namespace.md)
+
+## <a name="return-value"></a>Rückgabewert
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** ppltasks.h
+
+**Namespace:** std
+
+## <a name="see-also"></a>Siehe auch
+
+[std-Namespace](std-namespace.md)

@@ -1,10 +1,6 @@
 ---
-title: _CrtSetReportHook2 _CrtSetReportHookW2 | Microsoft-Dokumentation
-ms.custom: ''
+title: _CrtSetReportHook2, _CrtSetReportHookW2
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetReportHook2
 - _CrtSetReportHookW2
@@ -25,24 +21,18 @@ f1_keywords:
 - CrtSetReportHook2
 - _CrtSetReportHookW2
 - _CrtSetReportHook2
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtSetReportHook2 function
 - _CrtSetReportHook2 function
 - _CrtSetReportHookW2 function
 - CrtSetReportHookW2 function
 ms.assetid: 12e5f68d-c8a7-4b1a-9a75-72ba4a8592d0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 17dc0fc97a46e6ce0b5bda68ec8adc6ef37c4218
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1e850d3e83ed7b7c77873400deac073084708b78
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402259"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50446773"
 ---
 # <a name="crtsetreporthook2-crtsetreporthookw2"></a>_CrtSetReportHook2, _CrtSetReportHookW2
 
@@ -64,22 +54,22 @@ int _CrtSetReportHookW2(
 ### <a name="parameters"></a>Parameter
 
 *mode*<br/>
-Die zu ergreifende Maßnahme: **_CRT_RPTHOOK_INSTALL** oder **_CRT_RPTHOOK_REMOVE**.
+Die auszuführende Aktion: **_CRT_RPTHOOK_INSTALL** oder **_CRT_RPTHOOK_REMOVE**.
 
 *pfnNewHook*<br/>
-Hookfunktion zum Installieren oder entfernen in der schmalen Zeichen oder Breitzeichen-Version dieser Funktion.
+Melden Sie Hook installieren oder entfernen in der schmalen Zeichen oder Breitzeichen-Version dieser Funktion.
 
 ## <a name="return-value"></a>Rückgabewert
 
-1, wenn ein Fehler aufgetreten ist, mit **EINVAL** oder **ENOMEM** festgelegt; andernfalls gibt den Verweiszähler des *PfnNewHook* nach dem Aufruf.
+1, wenn ein Fehler aufgetreten ist, mit **EINVAL** oder **ENOMEM** festgelegt; andernfalls wird den Verweiszähler zurückgegeben *PfnNewHook* nach dem Aufruf.
 
 ## <a name="remarks"></a>Hinweise
 
-**_CrtSetReportHook2** und **_CrtSetReportHookW2** ermöglichen es Ihnen, verknüpfen oder lösen eine Funktion, wohingegen [_CrtSetReportHook](crtsetreporthook.md) nur können Sie eine Funktion zu verknüpfen.
+**_CrtSetReportHook2** und **_CrtSetReportHookW2** können einbinden oder lösen einer Funktion, wohingegen [_CrtSetReportHook](crtsetreporthook.md) nur können Sie eine Funktion zu verknüpfen.
 
-**_CrtSetReportHook2** oder **_CrtSetReportHookW2** sollte verwendet werden, anstelle von **_CrtSetReportHook** Hook vor dem Aufruf in einer DLL ausgeführt wird und wenn mehrere DLLs geladen werden können und ihre eigenen festlegen Hookfunktionen. In einem solchen Fall können DLLs in einer anderen Reihenfolge entladen werden als der, in der sie geladen wurden, und die Hookfunktion kann weiterhin auf eine entladene DLL zeigen. Alle Debugausgabe stürzt der Prozess, falls die Hookfunktionen hinzugefügt wurden, mit **_CrtSetReportHook**.
+**_CrtSetReportHook2** oder **_CrtSetReportHookW2** sollte verwendet werden, anstelle von **_CrtSetReportHook** bei der Hook-Aufruf in einer DLL erfolgt und wenn mehrere DLLs geladen werden und eigene festlegen Hookfunktionen. In einem solchen Fall können DLLs in einer anderen Reihenfolge entladen werden als der, in der sie geladen wurden, und die Hookfunktion kann weiterhin auf eine entladene DLL zeigen. Jegliche Debugausgabe stürzt der Prozess, falls die Hookfunktionen mit hinzugefügten **_CrtSetReportHook**.
 
-Alle Hookfunktionen mit hinzugefügt **_CrtSetReportHook** werden aufgerufen, wenn es keine Funktionen hinzugefügt gibt, mit Hook **_CrtSetReportHook2** oder **_CrtSetReportHookW2** oder wenn alle verknüpfen Funktionen mit **_CrtSetReportHook2** und **_CrtSetReportHookW2** zurückgeben **"false"**.
+Alle mit hinzugefügten Hookfunktionen **_CrtSetReportHook** werden aufgerufen, wenn keine Funktionen hinzugefügt Hookfunktionen, mit **_CrtSetReportHook2** oder **_CrtSetReportHookW2** oder wenn alle verknüpfen Funktionen mit hinzugefügten **_CrtSetReportHook2** und **_CrtSetReportHookW2** zurückgeben **"false"**.
 
 Die Breitzeichenversion dieser Funktion ist verfügbar. Die Hookfunktionen für Berichte nehmen eine Zeichenfolge entgegen, deren Typ (breite oder schmale Zeichen) der Version der verwendeten Funktion entsprechen muss. Verwenden Sie den folgenden Prototyp einer Hookfunktion für Berichte in der Breitzeichenversion dieser Funktion:
 
@@ -93,14 +83,14 @@ Verwenden Sie den folgenden Prototyp der Hookfunktion für Berichte in der Schma
 int YourReportHook( int reportType, char *message, int *returnValue );
 ```
 
-Diese Funktionen überprüfen ihre Parameter. Wenn *Modus* oder **PfnNewNook** ist ungültig, rufen diese Funktionen den Handler für ungültige Parameter wie beschrieben in [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** auf **EINVAL** und geben-1 zurück.
+Diese Funktionen überprüfen ihre Parameter. Wenn *Modus* oder **PfnNewNook** ist ungültig ist, rufen diese Funktionen den Handler für ungültige Parameter wie beschrieben in [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EINVAL** und geben-1 zurück.
 
 > [!NOTE]
-> Wenn Ihre Anwendung mit lieg **"/ CLR"** und die Berichtsfunktion nach dem Beenden der Anwendung "main" aufgerufen, die CLR löst eine Ausnahme aus, wenn die Berichterstellungsfunktion eine CRT-Funktion aufruft.
+> Wenn Ihre Anwendung kompiliert wird, mit **"/ CLR"** und die Berichtsfunktion wird aufgerufen, nachdem die Anwendung beendet wurde main, die CLR wird eine Ausnahme ausgelöst, wenn die Berichtsfunktion eine CRT-Funktion aufruft.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|Optionaler Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|
 |-------------|---------------------|---------------------|
 |**_CrtSetReportHook2**|\<crtdbg.h>|\<errno.h>|
 |**_CrtSetReportHookW2**|\<crtdbg.h>|\<errno.h>|
@@ -245,7 +235,7 @@ int   main(int argc, char* argv[])
 }
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 _CrtSetReportHook2(_CRT_RPTHOOK_INSTALL, TestHook1) returned 0

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 869cc0404b19dd9cd6cd49dda9702445f420965e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b168bf95e44a41973d92230f559246b03f275601
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016974"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073083"
 ---
 # <a name="exception-handling-in-visual-c"></a>Ausnahmebehandlung in Visual C++
 
@@ -31,15 +31,15 @@ Visual C++ unterstützt drei Arten der Ausnahmebehandlung:
 
 - [C++-Ausnahmebehandlung](../cpp/cpp-exception-handling.md)
 
-     Für die meisten C++-Programme sollten Sie die C++-Ausnahmebehandlung verwenden, die typsicher ist und gewährleistet, dass Objektdestruktoren während der Stapelentladung aufgerufen werden.
+   Für die meisten C++-Programme sollten Sie die C++-Ausnahmebehandlung verwenden, die typsicher ist und gewährleistet, dass Objektdestruktoren während der Stapelentladung aufgerufen werden.
 
 - [Strukturierte Ausnahmebehandlung](../cpp/structured-exception-handling-c-cpp.md)
 
-     Windows bietet einen eigenen Ausnahmemechanismus mit dem Namen SEH. Er wird für die C++- oder MFC-Programmierung nicht empfohlen. Verwenden Sie SEH nur in MFC - fremden C-Programmen.
+   Windows bietet einen eigenen Ausnahmemechanismus mit dem Namen SEH. Er wird für die C++- oder MFC-Programmierung nicht empfohlen. Verwenden Sie SEH nur in MFC - fremden C-Programmen.
 
 - [MFC-Ausnahmen](../mfc/exception-handling-in-mfc.md)
 
-     Seit Version 3.0 verwendet MFC C++-Ausnahmen, unterstützt jedoch weiterhin die älteren Ausnahmebehandlungsmakros, deren Form der von C++-Ausnahmen ähnelt. Obwohl diese Makros nicht für neue Programmierungen empfohlen werden, werden sie weiterhin zu Zwecken der Abwärtskompatibilität unterstützt. In Programmen, die bereits die Makros verwenden, können Sie C++-Ausnahmen ebenfalls problemlos verwenden. Während der Vorverarbeitung führen die Makros mithilfe der Schlüsselwörter für die Ausnahmebehandlung eine Auswertung durch, die in der Visual C++-Implementierung der Programmiersprache C++ ab Visual C++-Version 2.0 definiert sind. Sie können vorhandene Ausnahmemakros beibehalten, während Sie beginnen, C++-Ausnahmen zu verwenden.
+   Seit Version 3.0 verwendet MFC C++-Ausnahmen, unterstützt jedoch weiterhin die älteren Ausnahmebehandlungsmakros, deren Form der von C++-Ausnahmen ähnelt. Obwohl diese Makros nicht für neue Programmierungen empfohlen werden, werden sie weiterhin zu Zwecken der Abwärtskompatibilität unterstützt. In Programmen, die bereits die Makros verwenden, können Sie C++-Ausnahmen ebenfalls problemlos verwenden. Während der Vorverarbeitung führen die Makros mithilfe der Schlüsselwörter für die Ausnahmebehandlung eine Auswertung durch, die in der Visual C++-Implementierung der Programmiersprache C++ ab Visual C++-Version 2.0 definiert sind. Sie können vorhandene Ausnahmemakros beibehalten, während Sie beginnen, C++-Ausnahmen zu verwenden.
 
 Verwenden Sie die [/EH](../build/reference/eh-exception-handling-model.md) -Compileroption verwenden, um den Typ der Ausnahmebehandlung für die Verwendung in einem Projekt angeben C++-Ausnahmebehandlung ist die Standardeinstellung. Kombinieren Sie die Fehlerbehandlungsmechanismen nicht miteinander. Verwenden Sie beispielsweise C++-Ausnahmen nicht zusammen mit strukturierter Ausnahmebehandlung. Mit der C++-Ausnahmebehandlung können Sie besser portierbaren Code schreiben und Ausnahmen jeglichen Typs behandeln. Weitere Informationen zu den Nachteilen der strukturierten Ausnahmebehandlung finden Sie unter [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Ratschläge zum Mischen von MFC-Makros und C++-Ausnahmen, finden Sie unter [Ausnahmen: Verwenden von MFC-Makros und C++-Ausnahmen](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
 

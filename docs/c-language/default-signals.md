@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a9465a51646dae16ae2a487a77206c712fef681
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4ff2612538cd6953672d9f91dcb603b4676be100
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204449"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098926"
 ---
 # <a name="default-signals"></a>Standardsignale
-**ANSI 4.7.1.1** Wenn die Entsprechung von **signal (**<em>sig</em>**, SIG_DFL)** nicht vor dem Aufruf eines Signalhandlers ausgeführt wird, die Blockierung des Signals, das ausgeführt wird  
-  
- Signale werden auf ihren Standardstatus festgelegt, wenn die Ausführung eines Programms beginnt.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Bibliotheksfunktionen](../c-language/library-functions.md)
+
+**ANSI 4.7.1.1** Wenn die Entsprechung von `signal(sig, SIG_DFL)` nicht vor dem Aufruf eines Signalhandlers ausgeführt wird, die Blockierung des Signals, das ausgeführt wird
+
+Signale werden auf ihren Standardstatus festgelegt, wenn die Ausführung eines Programms beginnt.
+
+## <a name="see-also"></a>Siehe auch
+
+[Bibliotheksfunktionen](../c-language/library-functions.md)

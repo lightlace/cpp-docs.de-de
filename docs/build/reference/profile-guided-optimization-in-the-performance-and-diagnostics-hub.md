@@ -1,23 +1,13 @@
 ---
-title: Profilgesteuerte Optimierung im Leistungs- und Diagnosehub | Microsoft-Dokumentation
-ms.custom: ''
+title: Profilgesteuerte Optimierung im Leistungs- und Diagnosehub
 ms.date: 03/14/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: dc3a1914-dbb6-4401-bc63-10665a8c8943
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 275d65cdf4f0f5986ff80e65898732dadbd5f61f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 57e0c32b401f2c1c3216a120bc86efa649ee0104
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691094"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580855"
 ---
 # <a name="profile-guided-optimization-in-the-visual-studio-2013-performance-and-diagnostics-hub"></a>Profilgesteuerte Optimierung im Visual Studio 2013-Leistung und Diagnose-Hub
 
@@ -25,7 +15,7 @@ Wenn Sie Visual Studio 2013 verwenden, vereinfacht die profilgesteuerte Optimier
 
 Mit der profilgesteuerten Optimierung (PGO) können Sie Builds systemeigener x86- und x64-Apps erstellen, die für die Interaktion mit den Benutzern optimiert sind. Profilgesteuerte Optimierung ist ein mehrstufiger Prozess: Sie erstellen eine app-Builds, die für die profilerstellung instrumentiert ist, und führen Sie "Training". Das heißt, führen Sie die instrumentierte app mit gängigen benutzerinteraktionsszenarien. Sie speichern die aufgezeichneten Profilerstellungsdaten und erstellen dann die App erneut unter Verwendung der Ergebnisse, um die Optimierung des gesamten Programms zu steuern. Sie können diese Schritte zwar auch einzeln in Visual Studio oder in der Befehlszeile ausführen, das Plug-In für die profilgesteuerte Optimierung zentralisiert und vereinfacht jedoch den Prozess. Das Plug-In für die profilgesteuerte Optimierung legt alle erforderlichen Optionen fest und führt Sie durch jeden Schritt. Es zeigt Ihnen die Analyse und verwendet anschließend die Ergebnisse, um den Build zu konfigurieren und so jede Funktion im Hinblick auf Größe oder Geschwindigkeit zu optimieren. Das Plug-In für die profilgesteuerte Optimierung macht es auch einfacher, Ihre App-Aus- und Weiterbildung erneut auszuführen und die Build-Optimierungsdaten bei Änderung des Code zu aktualisieren.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Sie müssen [-Plug-In für die profilgesteuerte Optimierung herunterladen](https://marketplace.visualstudio.com/items?itemName=ProfileGuidedOptimizationTeam.ProfileGuidedOptimizationforVisualC) und in Visual Studio installieren, bevor Sie es im Leistungs- und Diagnosehub verwenden können.
 

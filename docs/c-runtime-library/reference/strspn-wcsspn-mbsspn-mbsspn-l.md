@@ -1,10 +1,6 @@
 ---
-title: strspn, wcsspn, _mbsspn, _mbsspn_l | Microsoft-Dokumentation
-ms.custom: ''
+title: strspn, wcsspn, _mbsspn, _mbsspn_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsspn_l
 - wcsspn
@@ -30,8 +26,6 @@ f1_keywords:
 - _mbsspn
 - _tcsspn
 - strspn
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcsspn function
 - strings [C++], searching
@@ -46,23 +40,19 @@ helpviewer_keywords:
 - mbsspn_l function
 - _tcsspn function
 ms.assetid: d077284a-809f-4068-959e-c6d6262677eb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8b7d826b72a006e0a8b011d89dfc96aa8aea4690
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69463e23d0cddf4441716aacb11928f589ab2078
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415160"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477313"
 ---
 # <a name="strspn-wcsspn-mbsspn-mbsspnl"></a>strspn, wcsspn, _mbsspn, _mbsspn_l
 
 Gibt den Index des ersten Zeichens in einer Zeichenfolge zurück, die keinem Zeichensatz angehört.
 
 > [!IMPORTANT]
-> **_mbsspn** und **_mbsspn_l** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsspn** und **_mbsspn_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -99,15 +89,15 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen ganzzahligen Wert, die die Länge der Teilzeichenfolge in *str* , die vollständig aus Zeichen aus *StrCharSet*. Wenn *str* beginnt mit einem Zeichen, die nicht in *StrCharSet*, gibt die Funktion 0 zurück.
+Gibt einen ganzzahligen Wert, die die Länge der Teilzeichenfolge in *str* , die vollständig aus Zeichen in besteht aus *StrCharSet*. Wenn *str* beginnt mit einem Zeichen, die nicht in *StrCharSet*, gibt die Funktion 0 zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Strspn** Funktion gibt den Index des ersten Zeichens in *str* , die gehört nicht zu den Satz von Zeichen in *StrCharSet*. Die Suche umfasst keine abschließenden Nullzeichen.
+Die **Strspn** Funktion gibt den Index des ersten Zeichens in *str* gehört, die nicht zu den Satz von Zeichen in *StrCharSet*. Die Suche umfasst keine abschließenden Nullzeichen.
 
-**Wcsspn** und **_mbsspn** sind Breitzeichen- und multibytezeichenversionen von **Strspn**. Die Argumente der **Wcsspn** sind Breitzeichen-Zeichenfolgen, die von **_mbsspn** sind Multibyte Zeichenfolgen. **_mbsspn** überprüft die eigenen Parameter. Wenn *str* oder *StrCharSet* ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **_mbspn** legt **Errno** auf **EINVAL** und gibt 0 zurück. **Strspn** und **Wcsspn** überprüfen ihre Parameter nicht. Diese drei Funktionen verhalten sich andernfalls identisch.
+**Wcsspn** und **_mbsspn** sind Breitzeichen- und multibytezeichenversionen von Versionen von **Strspn**. Die Argumente des **Wcsspn** sind Breitzeichen-Zeichenfolgen, die von **_mbsspn** sind Multibyte Zeichenfolgen. **_mbsspn** überprüft die eigenen Parameter. Wenn *str* oder *StrCharSet* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **_mbspn** legt **Errno** zu **EINVAL** und gibt 0 zurück. **Strspn** und **Wcsspn** überprüfen ihre Parameter nicht. Diese drei Funktionen verhalten sich andernfalls identisch.
 
-Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -118,7 +108,7 @@ Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kateg
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**strspn**|\<string.h>|
 |**wcsspn**|\<string.h> oder \<wchar.h>|

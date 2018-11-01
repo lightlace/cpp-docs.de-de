@@ -1,10 +1,6 @@
 ---
-title: _strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr | Microsoft-Dokumentation
-ms.custom: ''
+title: _strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsupr_l
 - _mbsupr
@@ -37,8 +33,6 @@ f1_keywords:
 - _strupr
 - mbsupr_l
 - _wcsupr
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcsupr_l function
 - mbsupr function
@@ -66,23 +60,19 @@ helpviewer_keywords:
 - _tcsupr function
 - strings [C++], converting case
 ms.assetid: caac8f16-c233-41b6-91ce-575ec7061b77
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6d34f0bd4e24fa70f37bb2191293cbc2a3e7ad9c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c3d155ebfdc40c5dd479cffed0b892dd73f80138
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415383"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50603644"
 ---
 # <a name="strupr-struprl-mbsupr-mbsuprl-wcsuprl-wcsupr"></a>_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
 
 Konvertiert eine Zeichenfolge in Großbuchstaben. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md).
 
 > [!IMPORTANT]
-> **_mbsupr** und **_mbsupr_l** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsupr** und **_mbsupr_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -151,11 +141,11 @@ Gibt einen Zeiger zur geänderten Zeichenfolge zurück. Da die Änderung an der 
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_strupr** -Funktion konvertiert an der jeweiligen Stelle jeden Kleinbuchstaben in *str* in Großbuchstaben konvertiert wurden. Die Konvertierung richtet sich nach der **LC_CTYPE** -kategorieneinstellung des Gebietsschemas. Andere Zeichen sind nicht betroffen. Weitere Informationen zu **LC_CTYPE**, finden Sie unter [Setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebietsschema; die Versionen mit dem **_l** -Suffix sind beinahe identisch, außer dass verwenden allerdings das übergebene Gebietsschema. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die **_strupr** -Funktion konvertiert an der Stelle, jedem Kleinbuchstaben in *str* in Großbuchstaben. Die Konvertierung richtet sich nach der **LC_CTYPE** -kategorieeinstellung des Gebietsschemas. Andere Zeichen sind nicht betroffen. Weitere Informationen zu **LC_CTYPE**, finden Sie unter [Setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebietsschema; die Versionen mit dem **_l** -Suffix sind beinahe identisch, außer dass sie das übergebene Gebietsschema verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-**_wcsupr** und **_mbsupr** sind Breitzeichen- und multibytezeichenversionen von **_strupr**. Die Argument- und Rückgabetypen Wert **_wcsupr** sind Breitzeichen-Zeichenfolgen, die von **_mbsupr** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
+**_wcsupr** und **_mbsupr** sind Breitzeichen- und multibytezeichenversionen von Versionen von **_strupr**. Der Wert Argument- und Rückgabetypen der **_wcsupr** sind Breitzeichen-Zeichenfolgen, die von **_mbsupr** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
 
-Wenn *str* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, diese Funktionen die ursprüngliche Zeichenfolge zurück und legen **Errno** auf **EINVAL**.
+Wenn *str* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, diese Funktionen zurück, die ursprüngliche Zeichenfolge und legen **Errno** zu **EINVAL**.
 
 In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -168,7 +158,7 @@ In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sich
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_strupr**, **_strupr_l**|\<string.h>|
 |**_wcsupr**, **_wcsupr_l**|\<string.h> oder \<wchar.h>|

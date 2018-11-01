@@ -1,28 +1,18 @@
 ---
-title: AgileEventSource-Klasse | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/22/2018
-ms.technology:
-- cpp-windows
+title: AgileEventSource-Klasse
+ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::AgileEventSource
 - event/Microsoft::WRL::InvokeModeOptions
-dev_langs:
-- C++
 helpviewer_keywords:
 - AgileEventSource class
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8efebf67d87decef1fb6e53f2efa42acc9ac487c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8e99c5930fa4df5be686a9c738586ecbb21e2855
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46068519"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50526564"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource-Klasse
 
@@ -31,9 +21,13 @@ Stellt ein Ereignis, das von einem agile-Komponente ausgelöst wird, wird eine K
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-template<typename TDelegateInterface, typename TEventSourceOptions = Microsoft::WRL::InvokeModeOptions<FireAll>>
-class AgileEventSource
-    : public Microsoft::WRL::EventSource<TDelegateInterface, TEventSourceOptions>;
+template<
+    typename TDelegateInterface,
+    typename TEventSourceOptions = Microsoft::WRL::InvokeModeOptions<FireAll>
+>
+class AgileEventSource :
+    public Microsoft::WRL::EventSource<
+        TDelegateInterface, TEventSourceOptions>;
 ```
 
 ## <a name="parameters"></a>Parameter
@@ -83,16 +77,15 @@ HRESULT Add(
 
 ### <a name="parameters"></a>Parameter
 
-*delegateInterface*  
+*delegateInterface*<br/>
 Die Schnittstelle an ein Delegatobjekt, das einen Ereignishandler darstellt.
 
-*token*  
+*token*<br/>
 Wenn dieser Vorgang abgeschlossen ist, ein Handle, das das Ereignis darstellt. Verwenden Sie dieses Token als Parameter an die `Remove()` Methode, um den Ereignishandler zu verwerfen.
 
 ### <a name="return-value"></a>Rückgabewert
 
 S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.
-
 
 ## <a name="see-also"></a>Siehe auch
 

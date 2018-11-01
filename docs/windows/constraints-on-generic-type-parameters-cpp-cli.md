@@ -1,29 +1,19 @@
 ---
-title: Einschränkungen für generische Typparameter (C++ / CLI) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Einschränkungen für generische Typparameter (C++/CLI)
+ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
 - where
-dev_langs:
-- C++
 helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 7abdc8f2deee962dc6ee5bcfa9857efb6f0bd847
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c0ad5a22adec0d93019e9ea5c81cc8329d1607f8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593903"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533704"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Einschränkungen für generische Typparameter (C++/CLI)
 
@@ -39,10 +29,10 @@ where type-parameter: constraint list
 
 ### <a name="parameters"></a>Parameter
 
-*Type-parameter*  
+*Type-parameter*<br/>
 Einer der Typparameter eingeschränkt werden.
 
-*Einschränkungsliste*  
+*Einschränkungsliste*<br/>
 *Einschränkungsliste* ist eine durch Trennzeichen getrennte Liste der Einschränkung-Spezifikationen. Die Liste zählen Schnittstellen, die durch den Typparameter implementiert werden.
 
 Die Liste kann auch eine Klasse enthalten. Für das Typargument eine basisklasseneinschränkung erfüllen muss es derselben Klasse wie die Einschränkung oder von der Einschränkung abgeleitet werden.
@@ -142,7 +132,7 @@ public:
    bool isSenior(ItemType item) {
       // Because of the constraint,
       // the Age method can be called on ItemType.
-      if (item->Age() >= 65)  
+      if (item->Age() >= 65)
          return true;
       else
          return false;
@@ -168,12 +158,12 @@ int main() {
    Adult^ parent = gcnew Adult();
    Senior^ grandfather = gcnew Senior();
 
-   if (ageGuess->isSenior<Adult^>(parent))  
+   if (ageGuess->isSenior<Adult^>(parent))
       Console::WriteLine("\"parent\" is a senior");
    else
       Console::WriteLine("\"parent\" is not a senior");
 
-   if (ageGuess->isSenior<Senior^>(grandfather))  
+   if (ageGuess->isSenior<Senior^>(grandfather))
       Console::WriteLine("\"grandfather\" is a senior");
    else
       Console::WriteLine("\"grandfather\" is not a senior");

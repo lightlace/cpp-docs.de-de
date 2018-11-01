@@ -1,10 +1,6 @@
 ---
-title: atoll, _atoll_l, _wtoll, _wtoll_l | Microsoft-Dokumentation
-ms.custom: ''
+title: atoll, _atoll_l, _wtoll, _wtoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wtoll
 - _atoll_l
@@ -31,24 +27,18 @@ f1_keywords:
 - _tstoll
 - _wtoll_l
 - atoll
-dev_langs:
-- C++
 helpviewer_keywords:
 - atoll function
 - _wtoll_l function
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 15a0753a487d969d3f75e1e41b6509ea40b9b19f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a857e0f04ff875a740a8a5d1401484cdaf9d3c75
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396114"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613976"
 ---
 # <a name="atoll-atolll-wtoll-wtolll"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 
@@ -83,11 +73,11 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede Funktion gibt die **lange** **lange** Wert, der erstellt wird, indem die Eingabezeichen als Zahl interpretiert. Der Rückgabewert für **Atoll** ist 0, wenn die Eingabe in einen Wert dieses Typs konvertiert werden kann.
+Jede Funktion gibt die **lange** **lange** -Wert, der erstellt wird, indem die Eingabezeichen als Zahl interpretiert. Der Rückgabewert für **Atoll** ist 0, wenn die Eingabe auf einen Wert dieses Typs umgewandelt werden kann.
 
-Bei einem Überlauf mit großen positiven ganzzahligen Werten **Atoll** gibt **LLONG_MAX**, und für einen Überlauf mit großen negativen ganzzahligen Werten gibt es **LLONG_MIN**.
+Bei einem Überlauf mit großen positiven ganzzahligen Werten **Atoll** gibt **LLONG_MAX**, und für den Überlauf mit großen negativen ganzzahligen Werten gibt **LLONG_MIN**.
 
-In allen Fällen außerhalb des gültigen Bereichs **Errno** festgelegt ist, um **ERANGE**. Wenn der übergebene Parameter ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** auf **EINVAL** und geben 0 zurück.
+In allen Fällen außerhalb des gültigen Bereichs **Errno** nastaven NA hodnotu **ERANGE**. Wenn der Parameter, die übergeben werden **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EINVAL** und gibt 0 zurück.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -95,15 +85,15 @@ Diese Funktionen konvertieren eine Zeichenfolge in eine **lange** **lange** Inte
 
 Die Eingabezeichenfolge ist eine Sequenz von Zeichen, die als numerischer Wert des angegebenen Typs interpretiert werden. Die Funktion beendet das Lesen der Eingabezeichenfolge am ersten Zeichen, das nicht als Teil einer Zahl erkannt wird. Dieses Zeichen kann das NULL-Zeichen ('\0' or L'\0') sein, das die Zeichenfolge beendet.
 
-Die *str* Argument **Atoll** weist folgende Form:
+Die *str* Argument **Atoll** hat folgendes Format:
 
-> [*Leerzeichen*] [*Anmeldung*] [*Ziffern*]
+> [*Leerzeichen*] [*anmelden*] [*Ziffern*]
 
-Ein *Leerzeichen* besteht aus Leerzeichen oder Tabulatorzeichen, die ignoriert werden. *Anmeldung* ist entweder Pluszeichen (+) oder Minuszeichen (-) und *Ziffern* sind eine oder mehrere Ziffern.
+Ein *Leerzeichen* besteht aus Leerzeichen oder Tabulatorzeichen, die ignoriert werden; *anmelden* ist entweder Pluszeichen (+) oder Minuszeichen (-) und *Ziffern* sind eine oder mehrere Ziffern.
 
 **_wtoll** ist identisch mit **Atoll** außer dass es sich um eine Zeichenfolge mit Breitzeichen als Parameter verwendet.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind identisch mit den Versionen, die keinen, anstelle des aktuellen Gebietsschemas, verwenden jedoch den Gebietsschemaparameter, der übergeben wird. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die Versionen dieser Funktionen, die **_l** -Suffix sind identisch mit den Versionen, die keinen, außer dass sie verwenden den Gebietsschemaparameter, der übergeben wird, anstelle des aktuellen Gebietsschemas. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -122,7 +112,7 @@ Die Versionen dieser Funktionen mit dem **_l** -Suffix sind identisch mit den Ve
 
 ## <a name="example"></a>Beispiel
 
-Dieses Programm zeigt, wie die **Atoll** Funktionen zum Konvertieren von Zahlen als Zeichenfolgen in numerische Werte gespeichert.
+Dieses Programm zeigt, wie Sie mit der **Atoll** Funktionen zum Konvertieren von Zahlen als Zeichenfolgen in numerische Werte gespeichert.
 
 ```C
 // crt_atoll.c

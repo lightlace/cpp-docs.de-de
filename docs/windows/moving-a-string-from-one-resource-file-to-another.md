@@ -1,29 +1,18 @@
 ---
-title: Verschieben von Zeichenfolgen aus einer Ressourcendatei mit einem anderen (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Verschieben von Zeichenfolgen aus einer Ressourcendatei mit einem anderen (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], moving between files
 - resource script files [C++], moving strings
 - string editing, moving strings between resources
 - String editor [C++], moving strings between files
 ms.assetid: 94f8ee81-9b4c-4788-ba95-68c58db38029
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c99b5640d2ea855ade7f3f39ba233b3e5ff2ef04
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: e89a0d44dc824c72710f8a047a18771ba8da492b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318862"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50649812"
 ---
 # <a name="moving-a-string-from-one-resource-file-to-another-c"></a>Verschieben von Zeichenfolgen aus einer Ressourcendatei mit einem anderen (C++)
 
@@ -43,7 +32,7 @@ ms.locfileid: "44318862"
    > [!NOTE]
    > Wenn die **ID** oder **Wert** der verschobenen Zeichenfolge Konflikte mit vorhandenen **ID** oder **Wert** in der Zieldatei, entweder die **ID** oder **Wert** der verschobenen Zeichenfolge ändert. Wenn eine Zeichenfolge mit dem gleichen vorhanden ist **ID**, **ID** der verschobenen Zeichenfolge ändert. Wenn eine Zeichenfolge mit dem gleichen vorhanden ist **Wert**, **Wert** der verschobenen Zeichenfolge ändert.
 
-Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten (diejenigen, die die common Language Runtime), finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3\(v=vs.100\)).
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten (diejenigen, die die common Language Runtime), finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,6 +40,6 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zeichenfolgen-Editor](../windows/string-editor.md)  
-[Ressourcendateien](../windows/resource-files-visual-studio.md)  
-[Anpassen von Fensterlayouts](/visualstudio/ide/customizing-window-layouts-in-visual-studio)  
+[Zeichenfolgen-Editor](../windows/string-editor.md)<br/>
+[Ressourcendateien](../windows/resource-files-visual-studio.md)<br/>
+[Anpassen von Fensterlayouts](/visualstudio/ide/customizing-window-layouts-in-visual-studio)

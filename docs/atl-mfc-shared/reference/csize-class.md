@@ -1,41 +1,31 @@
 ---
-title: CSize-Klasse | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
+title: CSize-Klasse
+ms.date: 10/18/2018
 f1_keywords:
 - CSize
 - ATLTYPES/ATL::CSize
 - ATLTYPES/ATL::CSize::CSize
-dev_langs:
-- C++
 helpviewer_keywords:
 - SIZE
 - dimensions, MFC
 - dimensions
 - CSize class
 ms.assetid: fb2cf85a-0bc1-46f8-892b-309c108b52ae
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 71a96e54c3182db3fa57798f962ae5565aeca812
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a0245862fe90c108b8ffc038b723a8b5bb62a665
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752264"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431910"
 ---
 # <a name="csize-class"></a>CSize-Klasse
 
-Ähnlich wie die Windows [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) -Struktur, die eine relative Koordinate oder Position implementiert.
+Ähnelt der Windows-Struktur [SIZE](https://msdn.microsoft.com/library/windows/desktop/dd145106) , bei der eine relative Koordinate oder Position implementiert wird
 
 ## <a name="syntax"></a>Syntax
 
 ```
-class CSize : public tagSIZE 
+class CSize : public tagSIZE
 ```
 
 ## <a name="members"></a>Member
@@ -64,7 +54,7 @@ Diese Klasse ist abgeleitet von der `SIZE` Struktur. Dies bedeutet, Sie können 
 Die `cx` und `cy` Mitglied `SIZE` (und `CSize`) sind öffentlich. Darüber hinaus `CSize` implementiert Memberfunktionen zum Bearbeiten der `SIZE` Struktur.
 
 > [!NOTE]
->  Weitere Informationen zu freigegebenen hilfsprogrammklassen (z. B. `CSize`), finden Sie unter [gemeinsam genutzten Klassen](../../atl-mfc-shared/atl-mfc-shared-classes.md).
+> Weitere Informationen zu freigegebenen hilfsprogrammklassen (z. B. `CSize`), finden Sie unter [gemeinsam genutzten Klassen](../../atl-mfc-shared/atl-mfc-shared-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -85,24 +75,24 @@ CSize() throw();
 CSize( int initCX, int initCY) throw();
 CSize( SIZE initSize) throw();
 CSize( POINT initPt) throw();
-CSize( DWORD dwSize) throw(); 
+CSize( DWORD dwSize) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*initCX*  
+*initCX*<br/>
 Legt die `cx` Member für die `CSize`.
 
-*initCY*  
+*initCY*<br/>
 Legt die `cy` Member für die `CSize`.
 
-*initSize*  
+*initSize*<br/>
 [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur oder `CSize` verwendet, um initialisieren-Objekt `CSize`.
 
-*initPt*  
-[Punkt](../../mfc/reference/point-structure1.md) Struktur oder `CPoint` verwendet, um initialisieren-Objekt `CSize`.
+*initPt*<br/>
+[Punkt](../../mfc/reference/point-structure.md) Struktur oder `CPoint` verwendet, um initialisieren-Objekt `CSize`.
 
-*dwSize*  
+*dwSize*<br/>
 DWORD, das zum Initialisieren verwendet `CSize`. Ist das niederwertige Wort der `cx` angehört und das höherwertige Wort der `cy` Member.
 
 ### <a name="remarks"></a>Hinweise
@@ -117,8 +107,8 @@ Wenn keine Argumente angegeben werden, `cx` und `cy` auf 0 (null) initialisiert 
 
 Prüft auf Gleichheit zwischen zwei Größen.
 
-``` 
-BOOL operator==(SIZE size) const throw(); 
+```
+BOOL operator==(SIZE size) const throw();
 ```
 
 ### <a name="remarks"></a>Hinweise
@@ -133,8 +123,8 @@ Gibt, die ungleich NULL, wenn die Größen gleich sind, Otherwize 0 zurückgegeb
 
 Prüft auf Ungleichheit zwischen zwei Größen.
 
-``` 
-BOOL operator!=(SIZE size) const throw(); 
+```
+BOOL operator!=(SIZE size) const throw();
 ```
 
 ### <a name="remarks"></a>Hinweise
@@ -149,8 +139,8 @@ Ungleich NULL, wenn die Größen nicht gleich sind. gibt andernfalls 0.
 
 Fügt eine Größe dieser `CSize`.
 
-``` 
-void operator+=(SIZE size) throw(); 
+```
+void operator+=(SIZE size) throw();
 ```
 
 ### <a name="example"></a>Beispiel
@@ -161,8 +151,8 @@ void operator+=(SIZE size) throw();
 
 Eine Größe von dieser subtrahiert `CSize`.
 
-``` 
-void operator-=(SIZE size) throw(); 
+```
+void operator-=(SIZE size) throw();
 ```
 
 ### <a name="example"></a>Beispiel
@@ -173,10 +163,10 @@ void operator-=(SIZE size) throw();
 
 Diese Operatoren fügen `CSize` Wert, der den Wert des Parameters.
 
-``` 
+```
 CSize operator+(SIZE size) const throw();
 CPoint operator+(POINT point) const throw();
-CRect operator+(const RECT* lpRect) const throw(); 
+CRect operator+(const RECT* lpRect) const throw();
 ```
 
 ### <a name="remarks"></a>Hinweise
@@ -197,11 +187,11 @@ Finden Sie unter den folgenden Beschreibungen der einzelnen Operatoren:
 
 Die ersten drei dieser Operatoren subtrahieren dieser `CSize` Wert, der den Wert des Parameters.
 
-``` 
+```
 CSize operator-(SIZE size) const throw();
 CPoint operator-(POINT point) const throw();
 CRect operator-(const RECT* lpRect) const throw();
-CSize operator-() const throw(); 
+CSize operator-() const throw();
 ```
 
 ### <a name="remarks"></a>Hinweise
@@ -222,8 +212,8 @@ Der vierte Operator, der unäres minus, ändert das Vorzeichen der `CSize` Wert.
 
 ## <a name="see-also"></a>Siehe auch
 
-[MDI MFC-Beispiel](../../visual-cpp-samples.md)   
-[Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
-[CRect-Klasse](../../atl-mfc-shared/reference/crect-class.md)   
+[MDI MFC-Beispiel](../../visual-cpp-samples.md)<br/>
+[Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
+[CRect-Klasse](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CPoint-Klasse](../../atl-mfc-shared/reference/cpoint-class.md)
 

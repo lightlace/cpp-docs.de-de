@@ -1,26 +1,15 @@
 ---
-title: Hinzufügen, bearbeiten oder Löschen von Steuerelementen | Microsoft-Dokumentation
-ms.custom: ''
+title: Hinzufügen, Bearbeiten oder Löschen von Steuerelementen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Dialog Editor [C++], creating controls
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ce32186083e156525ccc1f75a6d93d58c7f9294e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ff222ce6d91810931f3102810730ab6eeb5b3687
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316067"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569160"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>Hinzufügen, Bearbeiten oder Löschen von Steuerelementen
 
@@ -50,6 +39,6 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Steuerelemente in Dialogfeldern](controls-in-dialog-boxes.md)  
-[Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](adding-event-handlers-for-dialog-box-controls.md)  
+[Steuerelemente in Dialogfeldern](controls-in-dialog-boxes.md)<br/>
+[Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](adding-event-handlers-for-dialog-box-controls.md)<br/>
 [Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)

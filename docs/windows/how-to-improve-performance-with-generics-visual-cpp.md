@@ -1,33 +1,23 @@
 ---
-title: 'Vorgehensweise: Verbessern der Leistung mit Generika (Visual C++) | Microsoft-Dokumentation'
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: 'Vorgehensweise: Verbessern der Leistung mit Generika (C++ / CLI)'
+ms.date: 10/12/2018
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - performance, C++
 - C++, performance
 - C++, generics
 - generics [C++], performance
 ms.assetid: f14a175b-301f-46cc-86e4-c82d35f9aa3e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 9f946970f78b432774a5e4c7ba20fd15a00ae654
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 61d858542505b0e37b03e13cca803df10ffbdddc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318524"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50527958"
 ---
-# <a name="how-to-improve-performance-with-generics-visual-c"></a>Gewusst wie: Verbessern der Leistung mit Generika (Visual C++)
+# <a name="how-to-improve-performance-with-generics-ccli"></a>Vorgehensweise: Verbessern der Leistung mit Generika (C++ / CLI)
 
-Mit Generika können Sie wiederverwendbaren Code, die auf einem Typparameter basierenden erstellen. Der tatsächliche Typ des Typparameters wird verzögert, bis von Clientcode aufgerufen wird. Weitere Informationen zu Generika finden Sie unter [Generika](../windows/generics-cpp-component-extensions.md).
+Mit Generika können Sie wiederverwendbaren Code, die auf einem Typparameter basierenden erstellen. Der tatsächliche Typ des Typparameters wird verzögert, bis von Clientcode aufgerufen wird. Weitere Informationen zu Generika finden Sie unter [Generics](../windows/generics-cpp-component-extensions.md).
 
 In diesem Artikel wird erläutert, wie Generika können die Leistung einer Anwendung zu erhöhen, die Auflistungen verwendet.
 
@@ -48,7 +38,7 @@ Im folgenden Codebeispiel wird veranschaulicht, die zwei größere Nachteile von
 using namespace System;
 using namespace System::Collections;
 
-int main()  
+int main()
 {
     // This Stack can contain any type.
     Stack ^s = gcnew Stack();
@@ -64,14 +54,14 @@ int main()
     // Pop the items off the Stack.
     // The item is returned as an Object, so a cast is
     // necessary to convert it to its proper type.
-    while (s->Count> 0)  
+    while (s->Count> 0)
     {
         Object ^o = s->Pop();
-        if (o->GetType() == Type::GetType("System.String"))  
+        if (o->GetType() == Type::GetType("System.String"))
         {
             Console::WriteLine("Popped a String: {0}", (String ^)o);
         }
-        else if (o->GetType() == Type::GetType("System.Int32"))  
+        else if (o->GetType() == Type::GetType("System.Int32"))
         {
             Console::WriteLine("Popped an int: {0}", (int)o);
         }
@@ -103,7 +93,7 @@ Vergleichen Sie das Beispiel oben in diesem Beispiel, das einen generischen verw
 using namespace System;
 using namespace System::Collections::Generic;
 
-int main()  
+int main()
 {
     // This Stack can only contain integers.
     Stack<int> ^s = gcnew Stack<int>();

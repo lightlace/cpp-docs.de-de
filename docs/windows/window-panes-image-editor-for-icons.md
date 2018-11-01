@@ -1,30 +1,19 @@
 ---
-title: Fensterbereiche (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
-ms.custom: ''
+title: Fensterbereiche (Bildbearbeitung für Symbole)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 - vc.editors.icon
-dev_langs:
-- C++
 helpviewer_keywords:
 - graphics editor [C++]
 - Image editor [C++], panes
 ms.assetid: d66ea5b3-e2e2-4fc4-aa99-f50022cc690e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 02cc8fed4056199787c3108d287945bb8a0ae7dd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f29766095048e4e06d16d37f2792ab18282eadf0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594105"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50474333"
 ---
 # <a name="window-panes-image-editor-for-icons"></a>Fensterbereiche (Bildbearbeitung für Symbole)
 
@@ -46,5 +35,5 @@ Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)

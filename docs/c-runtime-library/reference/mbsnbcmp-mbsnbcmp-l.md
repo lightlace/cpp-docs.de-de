@@ -1,10 +1,6 @@
 ---
-title: _mbsnbcmp, _mbsnbcmp_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _mbsnbcmp, _mbsnbcmp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbcmp
 - _mbsnbcmp_l
@@ -27,8 +23,6 @@ f1_keywords:
 - _mbsnbcmp_l
 - mbsnbcmp_l
 - _mbsnbcmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbsnbcmp_l function
 - mbsnbcmp function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - _tcsncmp function
 - _mbsnbcmp function
 ms.assetid: dbc99e50-cf85-4e57-a13f-067591f18ac8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a21d19a3de6a047366497283f2e8515aca37794
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4b21fde122f9804633ac037efaf1f343b5cb9440
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404635"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620002"
 ---
 # <a name="mbsnbcmp-mbsnbcmpl"></a>_mbsnbcmp, _mbsnbcmp_l
 
@@ -73,7 +63,7 @@ int _mbsnbcmp_l(
 
 ### <a name="parameters"></a>Parameter
 
-*String1*, *Zeichenfolge2*<br/>
+*Zeichenfolge1*, *Zeichenfolge2*<br/>
 Die zu vergleichende Zeichenfolgen.
 
 *count*<br/>
@@ -88,21 +78,21 @@ Der Rückgabewert gibt an, die ordinale Beziehung der Teilzeichenfolgen von *str
 
 |Rückgabewert|Beschreibung|
 |------------------|-----------------|
-|< 0|*String1* Teilzeichenfolge ist kleiner als *Zeichenfolge2* Teilzeichenfolge.|
-|0|*String1* Teilzeichenfolge ist identisch mit *Zeichenfolge2* Teilzeichenfolge.|
-|> 0|*String1* Teilzeichenfolge ist größer als *Zeichenfolge2* Teilzeichenfolge.|
+|< 0|*Zeichenfolge1* Teilzeichenfolge ist kleiner als *Zeichenfolge2* Teilzeichenfolge.|
+|0|*Zeichenfolge1* Teilzeichenfolge ist identisch mit *Zeichenfolge2* Teilzeichenfolge.|
+|> 0|*Zeichenfolge1* Teilzeichenfolge ist größer als *Zeichenfolge2* Teilzeichenfolge.|
 
-Bei einem parametervalidierungsfehler **_mbsnbcmp** und **_mbsnbcmp_l** zurückgeben **_NLSCMPERROR**, definiert \<string.h > und \< MBSTRING.h >.
+Bei einem parametervalidierungsfehler **_mbsnbcmp** und **_mbsnbcmp_l** zurückgeben **_NLSCMPERROR**, definiert in \<string.h > und \< MBSTRING.h >.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mbsnbcmp** -Funktionen vergleichen höchstens die ersten *Anzahl* Bytes im *string1* und *Zeichenfolge2* und Zurückgeben eines Werts, der angibt der Beziehung zwischen den untergeordneten Zeichenfolgen. **_mbsnbcmp** ist eine Groß-/Kleinschreibung Version von **_mbsnbicmp**. Im Gegensatz zu **_mbsnbcoll**, **_mbsnbcmp** wird nicht durch die Sortierung des Gebietsschemas beeinflusst. **_mbsnbcmp** erkennt Multibyte-Zeichenfolgen gemäß der aktuellen Multibyte- [Codepage](../../c-runtime-library/code-pages.md).
+Die **_mbsnbcmp** -Funktionen vergleichen höchstens die ersten *Anzahl* Bytes *string1* und *Zeichenfolge2* und ein Rückgabewert, der angibt der Beziehung zwischen den untergeordneten Zeichenfolgen. **_mbsnbcmp** ist eine Groß-/Kleinschreibung Version **_mbsnbicmp**. Im Gegensatz zu **_mbsnbcoll**, **_mbsnbcmp** wird nicht durch die Sortierung des Gebietsschemas beeinflusst. **_mbsnbcmp** erkennt multibytezeichensequenzen gemäß der aktuellen Multibyte- [Codepage](../../c-runtime-library/code-pages.md).
 
-**_mbsnbcmp** ähnelt **_mbsncmp**, außer dass **_mbsncmp** vergleicht Zeichenfolgen nach Zeichen und nicht von Bytes.
+**_mbsnbcmp** ähnelt **_mbsncmp**, außer dass **_mbsncmp** Zeichenfolgen nach Zeichen und nicht nach Bytes verglichen.
 
-Der Ausgabewert wird von beeinflusst die **LC_CTYPE** Kategorie des Gebietsschemas, der die führenden Bytes angibt und nachstehenden Bytes von Multibytezeichen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die **_mbsnbcmp** Funktion verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängiges Verhalten. Die **_mbsnbcmp_l** -Funktion ist identisch, außer dass mithilfe der *Gebietsschema* Parameter stattdessen. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert wird von beeinflusst die **LC_CTYPE** Kategorie des Gebietsschemas, die angibt, die führenden Bytes und nachstehenden Bytes von Multibytezeichen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die **_mbsnbcmp** Funktion verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten. Die **_mbsnbcmp_l** -Funktion ist identisch, außer dass mithilfe der *Gebietsschema* Parameter stattdessen. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Wenn entweder *string1* oder *Zeichenfolge2* ist ein null-Zeiger, rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, der Funktionen zurück **_NLSCMPERROR** und **Errno** festgelegt ist, um **EINVAL**.
+Wenn entweder *string1* oder *Zeichenfolge2* ist ein null-Zeiger rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktionen geben **_NLSCMPERROR** und **Errno** nastaven NA hodnotu **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -113,7 +103,7 @@ Wenn entweder *string1* oder *Zeichenfolge2* ist ein null-Zeiger, rufen diese Fu
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_mbsnbcmp**|\<mbstring.h>|
 |**_mbsnbcmp_l**|\<mbstring.h>|
@@ -157,7 +147,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 Compare strings:

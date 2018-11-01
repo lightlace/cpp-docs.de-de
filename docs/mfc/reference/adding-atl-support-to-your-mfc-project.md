@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen von ATL-Unterstützung zu einem MFC-Projekt | Microsoft Docs
+title: Hinzufügen von ATL-Unterstützung zu einem MFC-Projekt | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,42 +17,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2d7794d5c3777a208fef6371009771fc5b43c97
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc0d21202478a02980dbc94dc866b769c3c71a9b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347067"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429733"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>Hinzufügen von ATL-Unterstützung zu einem MFC-Projekt
-Wenn Sie bereits eine MFC-basierte Anwendung erstellt haben, können Sie Unterstützung für die Active Template Library (ATL) einfach hinzufügen durch Ausführen der hinzufügen ATL-Unterstützung auf MFC-Projekt-Assistent.  
-  
+
+Wenn Sie bereits eine MFC-basierte Anwendung erstellt haben, können dann Sie Unterstützung für die Active Template Library (ATL) einfach durch Hinzufügen ausgeführt wird, MFC-Projekt-Assistent die hinzufügen ATL-Unterstützung.
+
 > [!NOTE]
->  ATL und MFC werden in den Express-Editionen von Visual Studio in der Regel nicht unterstützt.  
-  
+>  ATL und MFC sind in den Express-Editionen von Visual Studio in der Regel nicht unterstützt.
+
 > [!NOTE]
->  Diese Unterstützung gilt nur für einfache COM-Objekte, die zu einer MFC-Anwendung oder DLL-Projekt hinzugefügt. Sie können andere COM_Objekte (einschließlich der ActiveX-Steuerelemente) hinzufügen, MFC-Projekten, aber die Objekte funktioniert möglicherweise nicht wie erwartet.  
-  
-### <a name="to-add-atl-support-to-your-mfc-project"></a>Hinzufügen von ATL-Unterstützung zu einem MFC-Projekt  
-  
-1.  Im Projektmappen-Explorer mit der rechten Maustaste des Projekts, das Sie ATL-Unterstützung hinzufügen möchten.  
-  
-2.  Klicken Sie im Kontextmenü auf **hinzufügen**, und klicken Sie dann auf **Klasse hinzufügen**.  
-  
-3.  Wählen Sie die **ATL-Unterstützung zu MFC-Projekt hinzufügen** Symbol.  
-  
+>  Diese Unterstützung gilt nur für einfache COM-Objekte, die einer MFC-Anwendung oder einem DLL-Projekt hinzugefügt werden. Sie können MFC-Projekte andere COM-Objekte (einschließlich ActiveX-Steuerelemente) hinzufügen, aber die Objekte funktioniert möglicherweise nicht wie erwartet.
+
+### <a name="to-add-atl-support-to-your-mfc-project"></a>ATL-Unterstützung zu einem MFC-Projekt hinzufügen
+
+1. Klicken Sie im Projektmappen-Explorer das Projekt, zu dem Sie die ATL-Unterstützung hinzufügen möchten.
+
+1. Klicken Sie im Kontextmenü auf **hinzufügen**, und klicken Sie dann auf **Klasse hinzufügen**.
+
+1. Wählen Sie die **ATL-Unterstützung zu MFC-Projekt hinzufügen** Symbol.
+
     > [!NOTE]
-    >  Dieses Symbol befindet sich im Ordner "ATL" in der **Kategorien** Bereich.  
-  
-4.  Wenn Sie dazu aufgefordert werden, klicken Sie auf **Ja** ATL-Unterstützung hinzuzufügen.  
-  
- Weitere Informationen dazu, wie Code mit einem MFC-Projekt hinzufügen von ATL-Unterstützung geändert wird, finden Sie unter [Details zur ATL-Unterstützung hinzugefügt der ATL-Assistent](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Hinzufügen einer Klasse](../../ide/adding-a-class-visual-cpp.md)   
- [Hinzufügen neuer Funktionen mit Code-Assistenten](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Hinzufügen einer Memberfunktion](../../ide/adding-a-member-function-visual-cpp.md)   
- [Hinzufügen einer Membervariablen](../../ide/adding-a-member-variable-visual-cpp.md)   
- [Überschreiben einer virtuellen Funktion](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [MFC-Meldungshandler](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [Navigieren in der Klassenstruktur](../../ide/navigating-the-class-structure-visual-cpp.md)
+    >  Dieses Symbol befindet sich im Ordner "ATL" in der **Kategorien** Bereich.
+
+1. Wenn Sie dazu aufgefordert werden, klicken Sie auf **Ja** ATL-Unterstützung hinzufügen.
+
+Weitere Informationen dazu, wie durch Hinzufügen von ATL-Unterstützung Codes für das MFC-Projekt geändert wird, finden Sie unter [Details zur ATL-Unterstützung hinzugefügt wird der ATL-Assistent](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Hinzufügen einer Klasse](../../ide/adding-a-class-visual-cpp.md)<br/>
+[Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Hinzufügen einer Memberfunktion](../../ide/adding-a-member-function-visual-cpp.md)<br/>
+[Adding a Member Variable (Hinzufügen einer Membervariablen)](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[Überschreiben einer virtuellen Funktion](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[MFC Message Handler (MFC-Meldungshandler)](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
+[Navigating the Class Structure (Navigieren in der Klassenstruktur)](../../ide/navigating-the-class-structure-visual-cpp.md)

@@ -1,10 +1,6 @@
 ---
-title: COleVariant-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: COleVariant-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleVariant
 - AFXDISP/COleVariant
@@ -15,8 +11,6 @@ f1_keywords:
 - AFXDISP/COleVariant::Detach
 - AFXDISP/COleVariant::GetByteArrayFromVariantArray
 - AFXDISP/COleVariant::SetString
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleVariant [MFC], COleVariant
 - COleVariant [MFC], Attach
@@ -26,19 +20,16 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 825e534f7cf75f693293931b20e8b982e4bbc6a8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 528b46f1b370f8679b86e3d734712f936a153b9c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220254"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624993"
 ---
 # <a name="colevariant-class"></a>COleVariant-Klasse
-Kapselt die [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) -Datentyp.
+
+Kapselt den Datentyp [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) .
 
 ## <a name="syntax"></a>Syntax
 

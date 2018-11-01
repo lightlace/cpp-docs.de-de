@@ -13,19 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c758226935151bd11faec12aed459aeb2606ca9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 541a9d5064e9bdf9c4ddb9b410ab4dc0277626b0
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684823"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204612"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows Runtime C++ Template Library (WRL)
 
 Die C++-Vorlagenbibliothek für Windows-Runtime(WRL) ist eine Vorlagenbibliothek, die eine niederschwelligen Zugang zur Erstellung und Verwendung von Windows-Runtime-Komponenten bietet.
 
 > [!NOTE]
-> WRL ist jetzt ersetzt, von C++ / WinRT, ein C ++ 17-standardsprachprojektion für Windows-Runtime-APIs. C++ / WinRT finden Sie in das Windows 10 SDK Version 1803 gerechnet. C++ / WinRT ist nur in Headerdateien implementiert und bietet Ihnen mit erstklassigen Zugriff auf die moderne Windows-API.
+> WRL das jetzt abgelöst von C++ / WinRT, ein C ++ 17-standardsprachprojektion für Windows-Runtime-APIs. C++ / WinRT finden Sie in das Windows 10 SDK Version 1803 gerechnet. C++ / WinRT ist nur in Headerdateien implementiert und bietet Ihnen mit erstklassigen Zugriff auf die moderne Windows-API.
 
 > Mit C++ / WinRT, können Sie sowohl nutzen und Erstellen von Windows-Runtime-APIs mit einem beliebigen standardkonformen C ++ 17-Compiler. C++ / WinRT in der Regel eine bessere Leistung und erzeugt kleinere Binärdateien als jede andere Sprachoption für die Windows-Runtime. Wir weiterhin zur Unterstützung von C++ / CX- und WRL, jedoch dringend empfohlen, neue Anwendungen C++ mithilfe / WinRT. Weitere Informationen finden Sie unter [C++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
 
@@ -50,43 +50,43 @@ Die Windows Runtime C++ Template Library und C++ / CX bieten unterschiedliche Vo
 
 Hier sind einige Ressourcen, mit die Sie mit der Windows Runtime C++ Template Library sofort loslegen können.
 
-[Die Windows-Runtime-Bibliothek (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)  
+[Die Windows-Runtime-Bibliothek (WRL)](https://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
 Erfahren Sie in diesem Channel 9-Video mehr darüber, wie die Windows Runtime C++ Template Library hilft, dass Sie die apps der universellen Windows-Plattform (UWP) und Informationen zum Erstellen und nutzen die Windows-Runtime-Komponenten schreiben.
 
-[Vorgehensweise: Aktivieren und Verwenden einer Windows-Runtime-Komponente](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)  
+[Vorgehensweise: Aktivieren und Verwenden einer Windows-Runtime-Komponente](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
 Zeigt, wie Sie mit der Windows-Runtime zu initialisieren und zu aktivieren und verwenden eine Windows-Runtime-Komponente der Windows Runtime C++ Template Library.
 
-[Vorgehensweise: Abschließen asynchroner Vorgänge](../windows/how-to-complete-asynchronous-operations-using-wrl.md)  
+[Vorgehensweise: Abschließen asynchroner Vorgänge](../windows/how-to-complete-asynchronous-operations-using-wrl.md)<br/>
 Zeigt, wie Sie mit der Windows Runtime C++ Template Library asynchrone Vorgänge starten und Arbeiten ausführen, wenn die Vorgänge abgeschlossen.
 
-[Vorgehensweise: Behandeln von Ereignissen](../windows/how-to-handle-events-using-wrl.md)  
+[Vorgehensweise: Behandeln von Ereignissen](../windows/how-to-handle-events-using-wrl.md)<br/>
 Zeigt, wie Sie mit der Windows Runtime C++ Template Library abonnieren und Behandeln der Ereignisse von einem Windows-Runtime-Objekt.
 
-[Exemplarische Vorgehensweise: Erstellen einer UWP-App mithilfe von WRL und Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
+[Exemplarische Vorgehensweise: Erstellen einer UWP-App mithilfe von WRL und Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)<br/>
 Erfahren Sie, wie Sie eine UWP-app zu erstellen, verwendet [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
 
-[Vorgehensweise: Erstellen einer klassischen COM-Komponente](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
+[Vorgehensweise: Erstellen einer klassischen COM-Komponente](../windows/how-to-create-a-classic-com-component-using-wrl.md)<br/>
 Zeigt, wie die Windows Runtime C++ Template Library verwenden, um eine grundlegende COM-Komponente und eine einfache Möglichkeit zur Registrierung und Nutzung der COM-Komponente aus einer desktop-app zu erstellen.
 
-[Vorgehensweise: Direktes Instanziieren von WRL-Komponenten](../windows/how-to-instantiate-wrl-components-directly.md)  
-Erfahren Sie, wie Sie mit der [Microsoft::WRL::Make](../windows/make-function.md) und [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) Funktionen, um eine Komponente aus dem Modul instanziieren, das sie definiert.
+[Vorgehensweise: Direktes Instanziieren von WRL-Komponenten](../windows/how-to-instantiate-wrl-components-directly.md)<br/>
+Erfahren Sie, wie Sie mit den Funktionen [Microsoft::WRL::Make](../windows/make-function.md) und [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) eine Komponente aus dem Modul instanziieren, das sie definiert.
 
-[Vorgehensweise: Verwenden von winmdidl.exe und midlrt.exe zum Erstellen von .h-Dateien aus Windows-Metadaten](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)  
+[Vorgehensweise: Verwenden von winmdidl.exe und midlrt.exe zum Erstellen von .h-Dateien aus Windows-Metadaten](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)<br/>
 Zeigt, wie benutzerdefinierte Komponenten für Windows-Runtime von WRL durch Erstellen einer IDL-Datei von den WINMD-Metadaten verarbeitet werden.
 
-[Exemplarische Vorgehensweise: Verbinden von Verwendungsaufgaben und XML-HTTP-Anforderungen](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
+[Exemplarische Vorgehensweise: Verbinden von Verwendungsaufgaben und XML-HTTP-Anforderungen](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
 Zeigt, wie die [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) und [IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) Schnittstellen zusammen mit Aufgaben für HTTP-GET und POST-Anforderungen an einen Webdienst in einer UWP-app zu senden.
 
-[Beispiel des Reise-Optimierer von Bing Maps](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)  
+[Beispiel des Reise-Optimierer von Bing Maps](https://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
 Verwendet die `HttpRequest` -Klasse, die in definierten [Exemplarische Vorgehensweise: Verbinden von Verwendungsaufgaben und XML-HTTP-Anforderungen](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) im Rahmen einer vollständigen UWP-app.
 
-[Beispiel zum Erstellen einer Windows Runtime DLL-Komponente mit C++](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)  
+[Beispiel zum Erstellen einer Windows Runtime DLL-Komponente mit C++](https://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
 Zeigt, wie die Windows Runtime C++ Template Library eine prozessinterne DLL-Komponente zu erstellen und nutzen es in C++ / CX, JavaScript und c#.
 
-[DirectX marble Maze-Beispiel](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)  
+[DirectX marble Maze-Beispiel](https://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
 Veranschaulicht, wie die Windows Runtime C++ Template Library verwenden, um die Lebensdauer von COM-Komponenten wie DirectX und Media Foundation im Rahmen eines vollständigen 3D-Spiels verwalten.
 
-[Senden von toastbenachrichtigungen aus desktop-apps-Beispiel](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)  
+[Senden von toastbenachrichtigungen aus desktop-apps-Beispiel](https://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
 Veranschaulicht, wie Sie die Windows Runtime C++ Template Library mit toastbenachrichtigungen aus einer desktop-app verwenden.
 
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Windows Runtime C++ Template Library, die im Vergleich mit ATL
@@ -119,23 +119,23 @@ Windows Runtime C++ Template Library enthält Typen, die einige grundlegende Kon
 
 ### <a name="comptr"></a>ComPtr
 
-[ComPtr](../windows/comptr-class.md) ist eine *intelligenten Zeiger* Typ, der die Schnittstelle darstellt, die vom Vorlagenparameter angegeben wird. Mit `ComPtr` deklarieren Sie eine Variable, die auf die Member eines Objekts zugreifen kann, das von der Schnittstelle abgeleitet wird. `ComPtr` verwaltet automatisch einen Verweiszähler für den zugrunde liegenden Schnittstellenzeiger und gibt die Schnittstelle frei, wenn der Verweiszähler auf null geht.
+[ComPtr](../windows/comptr-class.md) ist ein Typ des *intelligenten Zeigermechanismus* , der die Schnittstelle darstellt, die vom Vorlagenparameter angegeben wird. Mit `ComPtr` deklarieren Sie eine Variable, die auf die Member eines Objekts zugreifen kann, das von der Schnittstelle abgeleitet wird. `ComPtr` verwaltet automatisch einen Verweiszähler für den zugrunde liegenden Schnittstellenzeiger und gibt die Schnittstelle frei, wenn der Verweiszähler auf null geht.
 
 ### <a name="runtimeclass"></a>RuntimeClass
 
-[RuntimeClass](../windows/runtimeclass-class.md) stellt eine instanziierte Klasse, die einen Satz angegebener Schnittstellen erbt. Ein `RuntimeClass` Objekt kann eine Kombination von Unterstützung für eine oder mehrere Windows-Runtime-COM-Schnittstellen oder einen schwachen Verweis auf eine Komponente bereitstellen.
+[RuntimeClass](../windows/runtimeclass-class.md) stellt eine instanziierte Klasse dar, die einen Satz angegebener Schnittstellen erbt. Ein `RuntimeClass` Objekt kann eine Kombination von Unterstützung für eine oder mehrere Windows-Runtime-COM-Schnittstellen oder einen schwachen Verweis auf eine Komponente bereitstellen.
 
 ### <a name="module"></a>Modul
 
-[Modul](../windows/module-class.md) stellt eine Auflistung von zugehörigen Objekten dar. Ein `Module` -Objekt verwaltet Klassenfactorys, die Objekte erstellen, und die Registrierung, die anderen Anwendungen die Verwendung eines Objekts ermöglicht.
+[Module](../windows/module-class.md) stellt eine Auflistung von zugehörigen Objekten dar. Ein `Module` -Objekt verwaltet Klassenfactorys, die Objekte erstellen, und die Registrierung, die anderen Anwendungen die Verwendung eines Objekts ermöglicht.
 
 ### <a name="callback"></a>Rückruf
 
-Die [Rückruf](../windows/callback-function-windows-runtime-cpp-template-library.md) Funktion erstellt ein Objekt, dessen Memberfunktion ein Ereignishandler (eine Rückrufmethode). Mit der `Callback` -Funktion schreiben Sie asynchrone Operationen.
+Die [Rückruf](../windows/callback-function-windows-runtime-cpp-template-library.md) -Funktion erstellt ein Objekt, dessen Memberfunktion ein Ereignishandler ist (eine Rückrufmethode). Mit der `Callback` -Funktion schreiben Sie asynchrone Operationen.
 
 ### <a name="eventsource"></a>EventSource
 
-[EventSource](../windows/eventsource-class.md) dient zum Verwalten von *Delegieren* -Ereignishandler. Verwenden von Windows Runtime C++ Template Library, implementieren Sie einen Delegaten, und verwenden `EventSource` hinzufügen, entfernen und Aufrufen von Delegaten.
+Mit[EventSource](../windows/eventsource-class.md) verwalten Sie *Delegat* -Ereignishandler. Verwenden von Windows Runtime C++ Template Library, implementieren Sie einen Delegaten, und verwenden `EventSource` hinzufügen, entfernen und Aufrufen von Delegaten.
 
 ### <a name="asyncbase"></a>AsyncBase
 
@@ -147,7 +147,7 @@ Die [Rückruf](../windows/callback-function-windows-runtime-cpp-template-library
 
 ### <a name="weakref"></a>WeakRef
 
-[WeakRef](../windows/weakref-class.md) ist ein intelligente-Zeiger-Typ, der darstellt eine *schwachen Verweis*, die auf ein Objekt verweist, die möglicherweise nicht zugegriffen werden kann. Ein `WeakRef` -Objekt kann verwendet werden, indem nur die Windows-Runtime und nicht von klassischem com geschieht.
+[WeakRef](../windows/weakref-class.md) ist ein Typ des intelligenten Zeigermechanismus, der einen *schwachen Verweis*auf ein Objekt darstellt, das möglicherweise zugänglich ist. Ein `WeakRef` -Objekt kann verwendet werden, indem nur die Windows-Runtime und nicht von klassischem com geschieht.
 
 Ein `WeakRef` -Objekt stellt in der Regel ein Objekt dar, dessen Vorhandensein von einem externen Thread oder einer externen Anwendung gesteuert wird. Beispielsweise kann ein `WeakRef` -Objekt auf ein Dateiobjekt verweisen. Wenn die Datei geöffnet ist, so ist `WeakRef` gültig, und die referenzierte Datei ist zugänglich. Wenn die Datei hingegen geschlossen ist, so ist `WeakRef` ungültig, und die Datei ist nicht zugänglich.
 
@@ -156,6 +156,6 @@ Ein `WeakRef` -Objekt stellt in der Regel ein Objekt dar, dessen Vorhandensein v
 |||
 |-|-|
 |[Schlüssel-APIs nach Kategorie](../windows/key-wrl-apis-by-category.md)|Hebt die primären Windows Runtime C++ Template Library-Typen, Funktionen und Makros.|
-|[Referenz](../windows/wrl-reference.md)|Enthält Referenzinformationen für die Windows Runtime C++ Template Library.|
+|[Verweis](../windows/wrl-reference.md)|Enthält Referenzinformationen für die Windows Runtime C++ Template Library.|
 |[Kurzreferenz (Windows-Runtime und Visual C++)](../cppcx/quick-reference-c-cx.md)|Beschreibt C++ / CX-Features, die die Windows-Runtime unterstützen.|
 |[Verwenden von Windows-Runtime-Komponenten in Visual C++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|Zeigt, wie C++ / CX verwenden, um das Erstellen einer grundlegenden Komponente für Windows-Runtime.|

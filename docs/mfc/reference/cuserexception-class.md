@@ -1,5 +1,5 @@
 ---
-title: CUserException Klasse | Microsoft Docs
+title: CUserException-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,45 +21,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1701f6894ba3b44205526c59bad7ef635c1bbbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71d2be1c00e518597a5d5121d7a53544bd29067f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369472"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419658"
 ---
 # <a name="cuserexception-class"></a>CUserException-Klasse
-Wird ausgelöst, um einen Endbenutzervorgang zu beenden.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-class CUserException : public CSimpleException  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Verwenden Sie `CUserException` Wenn Throw/Catch-Ausnahmemechanismus für anwendungsspezifische Ausnahmen verwendet werden sollen. "User" in der Klassenname kann interpretiert werden, wie"Meine Benutzer etwas herausragende, dass ich behandeln müssen."  
-  
- Ein `CUserException` wird in der Regel nach dem Aufrufen der globalen Funktion ausgelöst `AfxMessageBox` um Benutzer zu benachrichtigen, die ein Vorgang fehlgeschlagen ist. Wenn Sie einen Ausnahmehandler schreiben, behandeln Sie die Ausnahme, speziell, da der Benutzer bereits in der Regel den Fehler benachrichtigt wurde. Das Framework löst diese Ausnahme in einigen Fällen. Auslösen einer `CUserException` selbst, der Benutzer gewarnt werden, und rufen Sie dann auf die globale Funktion `AfxThrowUserException`.  
-  
- Im folgenden Beispiel wird eine Funktion, die mit Vorgängen, die fehlschlagen, warnt den Benutzer, und löst eine `CUserException`. Die aufrufende Funktion fängt die Ausnahme ab und verarbeitet sie speziell:  
-  
- [!code-cpp[NVC_MFCExceptions#24](../../mfc/codesnippet/cpp/cuserexception-class_1.cpp)]  
-  
- Weitere Informationen zur Verwendung von `CUserException`, finden Sie im Artikel [Ausnahmebehandlung (MFC)](../../mfc/exception-handling-in-mfc.md).  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CException](../../mfc/reference/cexception-class.md)  
-  
- [CSimpleException](../../mfc/reference/csimpleexception-class.md)  
-  
- `CUserException`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** afxwin.h  
-  
-## <a name="see-also"></a>Siehe auch  
- [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
- [CException-Klasse](../../mfc/reference/cexception-class.md)
+
+Wird ausgelöst, um einen Endbenutzervorgang zu beenden.
+
+## <a name="syntax"></a>Syntax
+
+```
+class CUserException : public CSimpleException
+```
+
+## <a name="remarks"></a>Hinweise
+
+Verwenden Sie `CUserException` Wenn Sie den Throw/Catch-Ausnahmemechanismus für Ausnahmen, die anwendungsspezifische verwenden möchten. "User" in den Namen der Klasse kann interpretiert werden, wie"Meine Benutzer etwas außergewöhnliche, behandelt werden muss."
+
+Ein `CUserException` wird in der Regel ausgelöst werden, nach dem Aufrufen der globalen Funktion `AfxMessageBox` zur Benachrichtigung des Benutzers, der ein Vorgang fehlgeschlagen ist. Wenn Sie einen Ausnahmehandler schreiben, behandeln Sie die Ausnahme, besonders, da der Benutzer bereits in der Regel für den Fehler benachrichtigt wurde. Das Framework löst diese Ausnahme in einigen Fällen. Auslösen einer `CUserException` selbst den Benutzer zu warnen, und rufen Sie dann auf die globale Funktion `AfxThrowUserException`.
+
+Im folgenden Beispiel wird eine Funktion, die Vorgänge, die ggf. zu einem Fehler enthält, benachrichtigt den Benutzer, und löst eine `CUserException`. Die aufrufende Funktion fängt die Ausnahme ab und speziell behandelt:
+
+[!code-cpp[NVC_MFCExceptions#24](../../mfc/codesnippet/cpp/cuserexception-class_1.cpp)]
+
+Weitere Informationen zur Verwendung von `CUserException`, finden Sie im Artikel [Ausnahmebehandlung (MFC)](../../mfc/exception-handling-in-mfc.md).
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CException](../../mfc/reference/cexception-class.md)
+
+[CSimpleException](../../mfc/reference/csimpleexception-class.md)
+
+`CUserException`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** afxwin.h
+
+## <a name="see-also"></a>Siehe auch
+
+[Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
+[CException-Klasse](../../mfc/reference/cexception-class.md)

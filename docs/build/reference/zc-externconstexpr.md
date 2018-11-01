@@ -1,28 +1,18 @@
 ---
-title: '/ Zc: externconstexpr (externe Constexpr Variablen aktivieren) | Microsoft-Dokumentation'
-ms.custom: ''
+title: '/ Zc: externconstexpr (externe Constexpr Variablen aktivieren)'
 ms.date: 02/28/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /Zc:externConstexpr
-dev_langs:
-- C++
 helpviewer_keywords:
 - -Zc:externConstexpr compiler option (C++)
 - extern constexpr variables (C++)
 ms.assetid: 4da5e33a-2e4d-4ed2-8616-bd8f43265c27
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 34aea466a3e673c3eebb3b415d544d9299fed615
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a9efa2fa191cbdda99e057ac9329d79bc598743c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713140"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50510694"
 ---
 # <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>/ Zc: externconstexpr (externe Constexpr Variablen aktivieren)
 
@@ -48,5 +38,5 @@ Wenn eine Headerdatei eine deklarierte Variable enthält `extern constexpr`, mü
 
 ## <a name="see-also"></a>Siehe auch
 
-[/ Zc (Übereinstimmung)](../../build/reference/zc-conformance.md)
-[auto-Schlüsselwort](../../cpp/auto-keyword.md)
+[/Zc (Übereinstimmung)](../../build/reference/zc-conformance.md)<br/>
+[Auto-Schlüsselwort](../../cpp/auto-keyword.md)

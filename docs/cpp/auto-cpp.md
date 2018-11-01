@@ -1,28 +1,18 @@
 ---
-title: automatisch (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: automatisch (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 f1_keywords:
 - auto_CPP
 - auto
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e832dfa694e5d2977e6b6a4d659d373f726c0cd6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f396d95d08a435ac3d85e214226921ce468a2259
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059035"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50447449"
 ---
 # <a name="auto-c"></a>automatisch (C++)
 
@@ -79,22 +69,22 @@ Sie können **automatisch**zusammen mit der **"decltype"** Typspezifizierer verw
 Beachten Sie, dass die Verwendung **automatisch** Löscht Verweise, const-Qualifizierer und flüchtige Qualifizierer. Betrachten Sie das folgende Beispiel:
 
 ```cpp
-// cl.exe /analyze /EHsc /W4
-#include <iostream>
+// cl.exe /analyze /EHsc /W4
+#include <iostream>
 
-using namespace std;
+using namespace std;
 
-int main( )
+int main( )
 {
-    int count = 10;
-    int& countRef = count;
-    auto myAuto = countRef;
+    int count = 10;
+    int& countRef = count;
+    auto myAuto = countRef;
 
-    countRef = 11;
-    cout << count << " ";
+    countRef = 11;
+    cout << count << " ";
 
-    myAuto = 12;
-    cout << count << endl;
+    myAuto = 12;
+    cout << count << endl;
 }
 
 ```
@@ -103,7 +93,7 @@ Im vorherigen Beispiel ist der MyAuto eine ganze Zahl, ein Int-Verweis, damit di
 
 ## <a name="type-deduction-with-braced-initializers-c14"></a>Typableitung mit in Klammern gesetzte Initialisierern (C ++ 14)
 
-Der folgende Code Exmample veranschaulicht, wie eine automatische Variable, die mit geschweiften Klammern initialisiert werden soll. Beachten Sie den Unterschied zwischen B und C sowie zwischen A und E.
+Im folgenden Codebeispiel wird veranschaulicht, wie Sie eine automatische Variable, die mit geschweiften Klammern initialisiert werden. Beachten Sie den Unterschied zwischen B und C sowie zwischen A und E.
 
 ```cpp
 #include <initializer_list>

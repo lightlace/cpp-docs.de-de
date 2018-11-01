@@ -12,63 +12,64 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c906a9a9b781f742f525688b77d5f58da16bb10
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: f92e0b0c881ec1f8d54adce4a12f58ad514ed8f5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208132"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437481"
 ---
 # <a name="264-atomic-construct"></a>2.6.4 atomic-Konstrukt
-Die `atomic` Richtlinie stellt sicher, dass eine bestimmte Speicheradresse atomar aktualisiert wird, anstatt eine Offenlegung für die Möglichkeit, mehrere gleichzeitige Threads zu schreiben. Die Syntax der `atomic` Richtlinie lautet wie folgt:  
-  
-```  
-#pragma omp atomic new-lineexpression-stmt  
-```  
-  
- Die Ausdrucksanweisung muss es sich um einen der folgenden Formate aufweisen:  
-  
- *X binop*= *Expr*  
-  
- x++  
-  
- ++x  
-  
- x--  
-  
- --x  
-  
- In den vorherigen Ausdrücken:  
-  
--   *X* ist ein l-Wert-Ausdruck mit skalaren Typ.  
-  
--   *Expr* ist ein Ausdruck mit skalaren Typ und keinen Verweis auf das Objekt vom angegebenen *x*.  
-  
--   `binop` ist kein überladenen Operators und ist einer der +, \*, -, /, &, ^, &#124;, <\<, oder >>.  
-  
- Obwohl es Implementierung definiert ist, gibt an, ob eine Implementierung ersetzt alle `atomic` Direktiven mit **kritische** Direktiven, die die gleiche eindeutige *Name*, `atomic` Richtlinie ermöglicht bessere Optimierung. Häufig Hardware-Anweisungen stehen zur Verfügung, das unteilbare Update mit den geringsten Aufwand ausführen kann.  
-  
- Nur das Laden und den Speicher für das Objekt vom angegebenen *x* atomar sind; die Auswertung von *Expr* ist nicht unteilbar. Um Racebedingungen zu vermeiden, alle Updates des Speicherorts parallel geschützt werden sollte, mit der `atomic` Direktive, mit Ausnahme derjenigen, die bekannt ist, dass Racebedingungen kostenlos zur Verfügung gestellt.  
-  
- Einschränkungen für die `atomic` Richtlinie lauten wie folgt:  
-  
--   Alle atomic Verweise auf den Speicherort X in der gesamten Anwendung muss einen kompatiblen Typ sein.  
-  
-## <a name="examples"></a>Beispiele:  
-  
-```  
-extern float a[], *p = a, b;  
-/* Protect against races among multiple updates. */  
-#pragma omp atomic  
-a[index[i]] += b;  
-/* Protect against races with updates through a. */  
-#pragma omp atomic  
-p[i] -= 1.0f;  
-  
-extern union {int n; float x;} u;  
-/* ERROR - References through incompatible types. */  
-#pragma omp atomic  
-u.n++;  
-#pragma omp atomic  
-u.x -= 1.0f;  
+
+Die `atomic` Richtlinie stellt sicher, dass eine bestimmte Speicheradresse atomar aktualisiert wird, anstatt eine Offenlegung für die Möglichkeit, mehrere gleichzeitige Threads zu schreiben. Die Syntax der `atomic` Richtlinie lautet wie folgt:
+
+```
+#pragma omp atomic new-lineexpression-stmt
+```
+
+Die Ausdrucksanweisung muss es sich um einen der folgenden Formate aufweisen:
+
+*X binop*= *Expr*
+
+x++
+
+++x
+
+x--
+
+--x
+
+In den vorherigen Ausdrücken:
+
+- *X* ist ein l-Wert-Ausdruck mit skalaren Typ.
+
+- *Expr* ist ein Ausdruck mit skalaren Typ und keinen Verweis auf das Objekt vom angegebenen *x*.
+
+- `binop` ist kein überladenen Operators und ist einer der +, \*, -, /, &, ^, &#124;, <\<, oder >>.
+
+Obwohl es Implementierung definiert ist, gibt an, ob eine Implementierung ersetzt alle `atomic` Direktiven mit **kritische** Direktiven, die die gleiche eindeutige *Name*, `atomic` Richtlinie ermöglicht bessere Optimierung. Häufig Hardware-Anweisungen stehen zur Verfügung, das unteilbare Update mit den geringsten Aufwand ausführen kann.
+
+Nur das Laden und den Speicher für das Objekt vom angegebenen *x* atomar sind; die Auswertung von *Expr* ist nicht unteilbar. Um Racebedingungen zu vermeiden, alle Updates des Speicherorts parallel geschützt werden sollte, mit der `atomic` Direktive, mit Ausnahme derjenigen, die bekannt ist, dass Racebedingungen kostenlos zur Verfügung gestellt.
+
+Einschränkungen für die `atomic` Richtlinie lauten wie folgt:
+
+- Alle atomic Verweise auf den Speicherort X in der gesamten Anwendung muss einen kompatiblen Typ sein.
+
+## <a name="examples"></a>Beispiele:
+
+```
+extern float a[], *p = a, b;
+/* Protect against races among multiple updates. */
+#pragma omp atomic
+a[index[i]] += b;
+/* Protect against races with updates through a. */
+#pragma omp atomic
+p[i] -= 1.0f;
+
+extern union {int n; float x;} u;
+/* ERROR - References through incompatible types. */
+#pragma omp atomic
+u.n++;
+#pragma omp atomic
+u.x -= 1.0f;
 ```

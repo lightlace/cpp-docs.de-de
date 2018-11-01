@@ -1,12 +1,6 @@
 ---
-title: Ändern des Layoutrasters | Microsoft-Dokumentation
-ms.custom: ''
+title: Ändern des Layoutrasters
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - controls [C++], layout grid
 - snap to layout grid
@@ -14,17 +8,12 @@ helpviewer_keywords:
 - layout grid in Dialog Editor
 - grids, changing size
 ms.assetid: ec31f595-7542-485b-806f-efbaeccc1b3d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 615138b44ab9fdbbf94d4130428ba708697c2aee
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f77c26efdca61e8225ff1761ef1d3ff815e80173
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601847"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438882"
 ---
 # <a name="modifying-the-layout-grid"></a>Ändern des Layoutrasters
 
@@ -52,5 +41,5 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Modi des Dialog-Editors (Führungslinien und Raster)](../windows/dialog-editor-states-guides-and-grids.md)  
+[Modi des Dialog-Editors (Führungslinien und Raster)](../windows/dialog-editor-states-guides-and-grids.md)<br/>
 [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)

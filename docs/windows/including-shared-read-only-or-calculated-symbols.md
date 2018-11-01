@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 63da1f6ffb684cd2971808f4a56167e19f7bd347
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 8a2bb3a95f2b9e5506ee761906a7df213f97b927
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313402"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061793"
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>Einfügen gemeinsam genutzter (schreibgeschützter) oder berechneter Symbole
 
@@ -40,7 +40,7 @@ Sie können zudem einbezogene Symboldateien verwenden, wenn Sie über vorhandene
 
 ```cpp
 #define   IDC_CONTROL1 2100
-#define   IDC_CONTROL2 (IDC_CONTROL1+1)  
+#define   IDC_CONTROL2 (IDC_CONTROL1+1)
 ```
 
 Die Umgebung interpretiert diese berechneten Symbole ordnungsgemäß, sofern Folgendes gegeben ist:
@@ -82,7 +82,7 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Beschränkungen bei Symbolnamen](../windows/symbol-name-restrictions.md)  
-[Beschränkungen bei Symbolwerten](../windows/symbol-value-restrictions.md)  
-[Vordefinierte Symbol-IDs](../windows/predefined-symbol-ids.md)  
+[Beschränkungen bei Symbolnamen](../windows/symbol-name-restrictions.md)<br/>
+[Beschränkungen bei Symbolwerten](../windows/symbol-value-restrictions.md)<br/>
+[Vordefinierte Symbol-IDs](../windows/predefined-symbol-ids.md)<br/>
 [Symbole: Ressourcenbezeichner](../windows/symbols-resource-identifiers.md)

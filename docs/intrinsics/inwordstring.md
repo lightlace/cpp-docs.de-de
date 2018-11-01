@@ -18,50 +18,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7075a20fa552a169505b445f592448f77bcdc9d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 969d57d01915ecfcf20c29b08d71c438206c45b8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711112"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440525"
 ---
 # <a name="inwordstring"></a>__inwordstring
-**Microsoft-spezifisch**  
-  
- Liest Daten aus den angegebenen Port mit der `rep insw` Anweisung.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void __inwordstring(  
-   unsigned short Port,  
-   unsigned short* Buffer,  
-   unsigned long Count  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+
+**Microsoft-spezifisch**
+
+Liest Daten aus den angegebenen Port mit der `rep insw` Anweisung.
+
+## <a name="syntax"></a>Syntax
+
+```
+void __inwordstring(
+   unsigned short Port,
+   unsigned short* Buffer,
+   unsigned long Count
+);
+```
+
+#### <a name="parameters"></a>Parameter
+
 *Port*<br/>
-[in] Der Port, der gelesen werden.  
-  
+[in] Der Port, der gelesen werden.
+
 *Buffer*<br/>
-[out] Die vom Port gelesenen Daten werden hier geschrieben.  
-  
+[out] Die vom Port gelesenen Daten werden hier geschrieben.
+
 *Anzahl*<br/>
-[in] Die Anzahl von Wörtern, der zu lesenden Daten.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Systemintern|Architektur|  
-|---------------|------------------|  
-|`__inwordstring`|x86, x64|  
-  
- **Headerdatei** \<intrin.h >  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Routine ist nur als systeminterne Funktion verfügbar.  
-  
-**Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[in] Die Anzahl von Wörtern, der zu lesenden Daten.
+
+## <a name="requirements"></a>Anforderungen
+
+|Systemintern|Architektur|
+|---------------|------------------|
+|`__inwordstring`|x86, x64|
+
+**Headerdatei** \<intrin.h >
+
+## <a name="remarks"></a>Hinweise
+
+Diese Routine ist nur als systeminterne Funktion verfügbar.
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

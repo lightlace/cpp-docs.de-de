@@ -1,30 +1,20 @@
 ---
-title: -Fi (Ausgabedateiname vorverarbeiten) | Microsoft-Dokumentation
-ms.custom: ''
+title: /Fi (Ausgabedateiname vorverarbeiten)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /Fi
-dev_langs:
-- C++
 helpviewer_keywords:
 - Fi compiler option (C++)
 - -Fi compiler option (C++)
 - /Fi compiler option (C++)
 - preprocessing output files, file name
 ms.assetid: 6d0ba983-a8b7-41ec-84f5-b4688ef8efee
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dfe9e54dbafbcbd27763060dc9d81b21bac2503d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d4de722ad33a9c9e5e7c37176bbe5d7031b68a39
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709391"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50450179"
 ---
 # <a name="fi-preprocess-output-file-name"></a>/Fi (Ausgabedateiname vorverarbeiten)
 
@@ -59,5 +49,5 @@ CL /P /FiMYPROCESS.I PROGRAM.CPP
 ## <a name="see-also"></a>Siehe auch
 
 [Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[/ P (vorverarbeitung in eine Datei)](../../build/reference/p-preprocess-to-a-file.md)
+[/P (In einer Datei vorverarbeiten)](../../build/reference/p-preprocess-to-a-file.md)<br/>
 [Festlegen des Pfadnamens](../../build/reference/specifying-the-pathname.md)

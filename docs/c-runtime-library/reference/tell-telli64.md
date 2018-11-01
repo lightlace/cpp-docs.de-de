@@ -1,10 +1,6 @@
 ---
-title: _tell, _telli64 | Microsoft-Dokumentation
-ms.custom: ''
+title: _tell, _telli64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _telli64
 - _tell
@@ -26,8 +22,6 @@ f1_keywords:
 - telli64
 - _telli64
 - _tell
-dev_langs:
-- C++
 helpviewer_keywords:
 - tell function
 - file pointers [C++], getting
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c47958fdb3723c16f8f2dce03ace54c75ce6176
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 628f37d3b8a39a75fb2329a1b2805426f15e821f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409985"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660147"
 ---
 # <a name="tell-telli64"></a>_tell, _telli64
 
@@ -71,17 +61,17 @@ Dateideskriptoren, die auf eine geöffnete Datei verweisen.
 
 Aktuelle Position des Dateizeigers Auf Geräten, die Suchvorgänge nicht unterstützen, ist der Rückgabewert nicht definiert.
 
-Ein Rückgabewert von-1 L gibt einen Fehler an. Wenn *behandeln* ist ein ungültiger Dateideskriptor Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** auf **EBADF** und -1 L zurückgeben.
+Der Rückgabewert-1 L gibt einen Fehler an. Wenn *behandeln* ist ein ungültiger Dateideskriptor, der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EBADF** und -1 L zurück.
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_tell** Funktion ruft die aktuelle Position des Dateizeigers (falls vorhanden) zugeordneten der *behandeln* Argument. Die Position wird als Anzahl von Bytes ab dem Anfang der Datei angegeben. Für die **_telli64** -Funktion, dieser Wert wird als 64-Bit-Ganzzahl angegeben.
+Die **_tell** Funktion ruft die aktuelle Position des Dateizeigers (sofern vorhanden) zugeordneten ab die *behandeln* Argument. Die Position wird als Anzahl von Bytes ab dem Anfang der Datei angegeben. Für die **_telli64** -Funktion, dieser Wert wird als eine 64-Bit-Ganzzahl angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_tell**, **_telli64**|\<io.h>|
 
@@ -127,7 +117,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 Current file position is: 20

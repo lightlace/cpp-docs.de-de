@@ -1,26 +1,16 @@
 ---
-title: 'Wert Kategorien: Lvalues und Rvalues (Visual C++) | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Wert Kategorien: Lvalues und Rvalues (Visual C++)'
 ms.date: 04/06/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 45558f9546b996d824d8cf9e8782b7323dcb91fb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 261453d5640c122f23491304b71e53e27c06eb7a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46114500"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546353"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Lvalues und Rvalues (Visual C++)
 
@@ -30,7 +20,7 @@ C ++ 17-standard definiert Ausdruck Wert Kategorien wie folgt aus:
 
 - Ein *Glvalue* ist ein Ausdruck, dessen Auswertung die Identität eines Objekts, die Bit-Feld oder die Funktion bestimmt.
 - Ein *Prvalue* ist ein Ausdruck, dessen Auswertung Initialisiert ein Objekt oder ein Bit-Feld oder den Wert des Operanden der Bediener wird berechnet, wie vom Kontext angegeben, in dem sie erscheint.
-- Ein *Xvalue* einen Glvalue, die kennzeichnet ein Objekt oder ein Bitfeld, dessen Ressourcen wiederverwendet werden können, (in der Regel, da es am Ende ihrer Lebensdauer ist) ist. [Beispiel: bestimmte Arten von Ausdrücken, die im Zusammenhang mit Rvalue-Referenzen (8.3.2) ergibt "XValues", z. B. einen Aufruf einer Funktion, deren Rückgabetyp ein Rvalue-Verweis ist, oder eine Umwandlung in einen Rvalue-Verweistyp. ]
+- Ein *Xvalue* einen Glvalue, die kennzeichnet ein Objekt oder ein Bitfeld, dessen Ressourcen wiederverwendet werden können, (in der Regel, da es am Ende ihrer Lebensdauer ist) ist. [Beispiel: bestimmte Arten von Ausdrücken, die im Zusammenhang mit Rvalue-Referenzen (8.3.2) ergibt "XValues", z. B. einen Aufruf einer Funktion, deren Rückgabetyp ein Rvalue-Verweis ist, oder eine Umwandlung in einen Rvalue-Verweistyp. ]
 - Ein *Lvalue* einen Glvalue, die keine Xvalue ist.
 - Ein *Rvalue* ist ein Prvalue oder ein Xvalue.
 
@@ -52,24 +42,24 @@ Das folgende Beispiel zeigt mehrere korrekte und falsche Verwendungen von lvalue
 // lvalues_and_rvalues2.cpp
 int main()
 {
-int i, j, *p;
+    int i, j, *p;
 
-// Correct usage: the variable i is an lvalue and the literal 7 is a prvalue.
-i = 7;
+    // Correct usage: the variable i is an lvalue and the literal 7 is a prvalue.
+    i = 7;
 
-// Incorrect usage: The left operand must be an lvalue (C2106).`j * 4` is a prvalue.
-7 = i; // C2106
-j * 4 = 7; // C2106
+    // Incorrect usage: The left operand must be an lvalue (C2106).`j * 4` is a prvalue.
+    7 = i; // C2106
+    j * 4 = 7; // C2106
 
-// Correct usage: the dereferenced pointer is an lvalue.
-*p = i;
+    // Correct usage: the dereferenced pointer is an lvalue.
+    *p = i;
 
-const int ci = 7;
-// Incorrect usage: the variable is a non-modifiable lvalue (C3892).
-ci = 9; // C3892
+    const int ci = 7;
+    // Incorrect usage: the variable is a non-modifiable lvalue (C3892).
+    ci = 9; // C3892
 
-// Correct usage: the conditional operator returns an lvalue.
-((i < 3) ? i : j) = 7;
+    // Correct usage: the conditional operator returns an lvalue.
+    ((i < 3) ? i : j) = 7;
 }
 ```
 

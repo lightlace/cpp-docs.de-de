@@ -1,12 +1,7 @@
 ---
-title: Generische Klassen (C++ / CLI) | Microsoft-Dokumentation
-ms.custom: ''
+title: Generische Klassen (C++/CLI)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - classes [C++], generic
 - generic classes [C++], about generic classes
@@ -14,17 +9,12 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 09390e25ffe06ce6702aef68d73c352e063a48ef
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 74a16feb38f79b7e588324eb8d3fa72f88440a4c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716780"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591765"
 ---
 # <a name="generic-classes-ccli"></a>Generische Klassen (C++/CLI)
 
@@ -47,38 +37,38 @@ class-body
 
 In der obigen Syntax werden die folgenden Begriffe verwendet:
 
-*Attribute*  
+*Attribute*<br/>
 (Optional) Zusätzliche deklarative Informationen. Weitere Informationen zu Attributen und Attributklassen finden Sie unter "Attribute".
 
-*Klassenschlüssel*  
+*Klassenschlüssel*<br/>
 Entweder **Klasse** oder **Typename**
 
 *Type-Parameter-Bezeichner*, durch Trennzeichen getrennte Liste von Bezeichnern, die Sie den Namen der Typparameter angeben.
 
-*Einschränkungsklauseln*  
+*Einschränkungsklauseln*<br/>
 Eine Liste (nicht durch Trennzeichen getrennt) der **, in denen** Klauseln, die die Einschränkungen für die Typparameter angeben. Hat das Format an:
 
-> **wo** *Type-Parameter-Identifier* **:** *Einschränkungsliste***...** 
+> **wo** *Type-Parameter-Identifier* **:** *Einschränkungsliste*  **...**
 
-*Liste der Einschränkung*  
+*Liste der Einschränkung*<br/>
 *Klasse oder Schnittstelle*[`,` *...* ]
 
-*Zugriffsmodifizierer*  
+*Zugriffsmodifizierer*<br/>
 Der Zugriffsmodifizierer für die generische Klasse. Für die Windows-Runtime ist der einzige zulässige Modifizierer **private**. Für die common Language Runtime, zulässige Modifizierer sind **private** und **öffentliche**.
 
-*identifier*  
+*identifier*<br/>
 Der Name der generischen Klasse, jeder gültige C++-Bezeichner.
 
-*Modifizierer*  
+*Modifizierer*<br/>
 (Optional) Zulässige Modifizierer sind **versiegelten** und **abstrakte**.
 
-*Base-list*  
+*Base-list*<br/>
 Eine Liste mit der eine Basisklasse und alle implementierten Schnittstellen, die alle durch Kommas getrennt.
 
-*Text der Klasse*  
+*Text der Klasse*<br/>
 Der Text der Klasse, die Felder, Memberfunktionen usw. enthält.
 
-*Deklaratoren*  
+*Deklaratoren*<br/>
 Deklarationen von Variablen dieses Typs. Zum Beispiel: `^` *Bezeichner*[`,` ...]
 
 Sie können generische Klassen, wie diese deklarieren (Beachten Sie, dass das Schlüsselwort **Klasse** kann verwendet werden, anstelle von **Typename**). In diesem Beispiel `ItemType`, `KeyType` und `ValueType` sind die unbekannte Typen, die zum Zeitpunkt angegeben werden, in denen der Typ. `HashTable<int, int>` ist ein konstruierter Typ des generischen Typs `HashTable<KeyType, ValueType>`. Eine Reihe verschiedener konstruierten Typen kann aus einer einzelnen generischen Typs erstellt werden. Konstruierte Typen, die von generischen Klassen erstellt werden wie jede andere Ref-Klasse behandelt.
@@ -346,7 +336,7 @@ int main() {
 
 ```Output
 Name: Jeff Smith
-Amount: $123.00**  
+Amount: $123.00**
 ```
 
 ## <a name="generic-methods-in-generic-classes"></a>Generische Methoden in generische Klassen

@@ -1,25 +1,15 @@
 ---
-title: -WINMDFILE (Winmd-Datei angeben) | Microsoft-Dokumentation
-ms.custom: ''
+title: /WINMDFILE (winmd-Datei angeben)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateWindowsMetadataFile
-dev_langs:
-- C++
 ms.assetid: 062b41b3-14d6-432c-a361-fdb66e918931
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bdea558f1c9a56e68a8e2e61703b92ea569a0629
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 74958e51925b9ed6d1382efe76fe587eed73f4e7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709890"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656053"
 ---
 # <a name="winmdfile-specify-winmd-file"></a>/WINMDFILE (winmd-Datei angeben)
 
@@ -45,6 +35,6 @@ Verwenden Sie den Wert, der im angegebenen `filename` zum Überschreiben des Sta
 
 ## <a name="see-also"></a>Siehe auch
 
-[/ WINMD (Windows-Metadaten generieren)](../../build/reference/winmd-generate-windows-metadata.md)
+[/WINMD (Windows-Metadaten generieren)](../../build/reference/winmd-generate-windows-metadata.md)<br/>
 [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
 [Linkeroptionen](../../build/reference/linker-options.md)

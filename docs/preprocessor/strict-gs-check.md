@@ -17,64 +17,65 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a5e9ce2480612cdc84982cd1474e003d9151557
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 31d78a4d249852b730d80054b62a06699f50356b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538636"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067272"
 ---
 # <a name="strictgscheck"></a>strict_gs_check
-Dieses Pragma bietet eine verbesserte Sicherheitsüberprüfung.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-#pragma strict_gs_check([push,] on )   
-#pragma strict_gs_check([push,] off )   
-#pragma strict_gs_check(pop)  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- 
-Weist den Compiler an, einen zufällig ausgewählten Cookie im Funktionsstapel einzufügen, um verschiedene Kategorien eines stapelbasierten Pufferüberlaufs zu erkennen. In der Standardeinstellung die `/GS` -Compileroption (Puffer-Sicherheitsüberprüfung) ist ein Cookie für alle Funktionen nicht eingefügt werden. Weitere Informationen finden Sie unter [/GS (Puffer-Sicherheitsüberprüfung)](../build/reference/gs-buffer-security-check.md).  
-  
-Muss der Kompilierung mit `/GS` (Puffer-Sicherheitsüberprüfung) aktivieren **Strict_gs_check**.  
-  
-Verwenden Sie dieses Pragma in Codemodulen, die potenziell schädlichen Daten ausgesetzt sind. Dieses Pragma ist sehr aggressiv und wird auf Funktionen angewendet, die einen solchen Schutz möglicherweise nicht benötigen. Es wird jedoch optimiert, um die Auswirkung auf die Leistung der resultierenden Anwendung zu minimieren.  
-  
-Auch wenn Sie das Pragma verwenden, sollten Sie sich bemühen, sicheren Code zu schreiben. Das heißt, stellen Sie sicher, dass Ihr Code keine Pufferüberläufe hat. **Strict_gs_check** schützen Sie Ihre Anwendung vor Pufferüberläufen, die in Ihrem Code bleiben kann.  
-  
-## <a name="example"></a>Beispiel  
- 
-Im folgenden Code tritt ein Pufferüberlauf auf, wenn wir ein Array in ein lokales Array kopieren. Beim Kompilieren dieses Codes mit `/GS`, kein Cookie wird im Stapel eingefügt, da der Arraydatentyp ein Zeiger ist. Hinzufügen der **Strict_gs_check** Pragma wird das stapelcookie in den funktionsstapel erzwungen.  
-  
-```cpp  
-// pragma_strict_gs_check.cpp  
-// compile with: /c  
-  
-#pragma strict_gs_check(on)  
-  
-void ** ReverseArray(void **pData,  
-                     size_t cData)  
-{  
-    // *** This buffer is subject to being overrun!! ***  
-    void *pReversed[20];  
-  
-    // Reverse the array into a temporary buffer  
-    for (size_t j = 0, i = cData; i ; --i, ++j)  
-        // *** Possible buffer overrun!! ***  
-            pReversed[j] = pData[i];   
-  
-    // Copy temporary buffer back into input/output buffer  
-    for (size_t i = 0; i < cData ; ++i)   
-        pData[i] = pReversed[i];  
-  
-    return pData;  
-}  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- 
-[Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+
+Dieses Pragma bietet eine verbesserte Sicherheitsüberprüfung.
+
+## <a name="syntax"></a>Syntax
+
+```
+#pragma strict_gs_check([push,] on )
+#pragma strict_gs_check([push,] off )
+#pragma strict_gs_check(pop)
+```
+
+## <a name="remarks"></a>Hinweise
+
+Weist den Compiler an, einen zufällig ausgewählten Cookie im Funktionsstapel einzufügen, um verschiedene Kategorien eines stapelbasierten Pufferüberlaufs zu erkennen. In der Standardeinstellung die `/GS` -Compileroption (Puffer-Sicherheitsüberprüfung) ist ein Cookie für alle Funktionen nicht eingefügt werden. Weitere Informationen finden Sie unter [/GS (Puffer-Sicherheitsüberprüfung)](../build/reference/gs-buffer-security-check.md).
+
+Muss der Kompilierung mit `/GS` (Puffer-Sicherheitsüberprüfung) aktivieren **Strict_gs_check**.
+
+Verwenden Sie dieses Pragma in Codemodulen, die potenziell schädlichen Daten ausgesetzt sind. Dieses Pragma ist sehr aggressiv und wird auf Funktionen angewendet, die einen solchen Schutz möglicherweise nicht benötigen. Es wird jedoch optimiert, um die Auswirkung auf die Leistung der resultierenden Anwendung zu minimieren.
+
+Auch wenn Sie das Pragma verwenden, sollten Sie sich bemühen, sicheren Code zu schreiben. Das heißt, stellen Sie sicher, dass Ihr Code keine Pufferüberläufe hat. **Strict_gs_check** schützen Sie Ihre Anwendung vor Pufferüberläufen, die in Ihrem Code bleiben kann.
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Code tritt ein Pufferüberlauf auf, wenn wir ein Array in ein lokales Array kopieren. Beim Kompilieren dieses Codes mit `/GS`, kein Cookie wird im Stapel eingefügt, da der Arraydatentyp ein Zeiger ist. Hinzufügen der **Strict_gs_check** Pragma wird das stapelcookie in den funktionsstapel erzwungen.
+
+```cpp
+// pragma_strict_gs_check.cpp
+// compile with: /c
+
+#pragma strict_gs_check(on)
+
+void ** ReverseArray(void **pData,
+                     size_t cData)
+{
+    // *** This buffer is subject to being overrun!! ***
+    void *pReversed[20];
+
+    // Reverse the array into a temporary buffer
+    for (size_t j = 0, i = cData; i ; --i, ++j)
+        // *** Possible buffer overrun!! ***
+            pReversed[j] = pData[i];
+
+    // Copy temporary buffer back into input/output buffer
+    for (size_t i = 0; i < cData ; ++i)
+        pData[i] = pReversed[i];
+
+    return pData;
+}
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
 [/GS (Puffersicherheitsüberprüfung)](../build/reference/gs-buffer-security-check.md)

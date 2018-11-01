@@ -1,10 +1,6 @@
 ---
-title: CHwndRenderTarget-Klasse | Microsoft Docs
-ms.custom: ''
+title: CHwndRenderTarget-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CHwndRenderTarget
 - AFXRENDERTARGET/CHwndRenderTarget
@@ -18,8 +14,6 @@ f1_keywords:
 - AFXRENDERTARGET/CHwndRenderTarget::ReCreate
 - AFXRENDERTARGET/CHwndRenderTarget::Resize
 - AFXRENDERTARGET/CHwndRenderTarget::m_pHwndRenderTarget
-dev_langs:
-- C++
 helpviewer_keywords:
 - CHwndRenderTarget [MFC], CHwndRenderTarget
 - CHwndRenderTarget [MFC], Attach
@@ -32,189 +26,213 @@ helpviewer_keywords:
 - CHwndRenderTarget [MFC], Resize
 - CHwndRenderTarget [MFC], m_pHwndRenderTarget
 ms.assetid: aa65b69f-7202-46ea-af81-ef325da0b840
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0e0962d4a0c97db27f7d5ae31ec58eb26f20a7f7
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 439ff0152ec69575f21faa332d8fac4bbe779a16
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038392"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551865"
 ---
 # <a name="chwndrendertarget-class"></a>CHwndRenderTarget-Klasse
-Ein Wrapper für ID2D1HwndRenderTarget.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-class CHwndRenderTarget : public CRenderTarget;  
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[CHwndRenderTarget::CHwndRenderTarget](#chwndrendertarget)|Erstellt ein CHwndRenderTarget-Objekt aus der HWND.|  
-  
-### <a name="public-methods"></a>Öffentliche Methoden  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[CHwndRenderTarget::Attach](#attach)|Hängt die vorhandene Ziel-Schnittstelle, um das Objekt zu rendern|  
-|[CHwndRenderTarget::CheckWindowState](#checkwindowstate)|Gibt an, ob diese Renderziel zugeordnete HWND okkludierte ist.|  
-|[CHwndRenderTarget::Create](#create)|Erstellt ein Fenster zugeordneten Renderziel|  
-|[CHwndRenderTarget::Detach](#detach)|Trennt die Render-Ziel-Schnittstelle aus dem Objekt|  
-|[CHwndRenderTarget::GetHwnd](#gethwnd)|Gibt das zugeordnete HWND-Renderziel.|  
-|[CHwndRenderTarget::GetHwndRenderTarget](#gethwndrendertarget)|Gibt ID2D1HwndRenderTarget-Schnittstelle.|  
-|[CHwndRenderTarget::ReCreate](#recreate)|Ein Renderziel Fenster zugeordneten erstellt neu|  
-|[CHwndRenderTarget::Resize](#resize)|Ändert die Größe des Renderziels auf die angegebene Pixelgröße|  
-  
-### <a name="public-operators"></a>Öffentliche Operatoren  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[CHwndRenderTarget::operator ID2D1HwndRenderTarget *](#operator_id2d1hwndrendertarget_star)|Gibt ID2D1HwndRenderTarget-Schnittstelle.|  
-  
-### <a name="protected-data-members"></a>Geschützte Datenmember  
-  
-|name|Beschreibung|  
-|----------|-----------------|  
-|[CHwndRenderTarget::m_pHwndRenderTarget](#m_phwndrendertarget)|Ein Zeiger auf ein ID2D1HwndRenderTarget-Objekt.|  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CRenderTarget](../../mfc/reference/crendertarget-class.md)  
-  
- [CHwndRenderTarget](../../mfc/reference/chwndrendertarget-class.md)  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** afxrendertarget.h  
-  
-##  <a name="attach"></a>  CHwndRenderTarget::Attach  
- Hängt die vorhandene Ziel-Schnittstelle, um das Objekt zu rendern  
-  
-```  
+
+Ein Wrapper für ID2D1HwndRenderTarget.
+
+## <a name="syntax"></a>Syntax
+
+```
+class CHwndRenderTarget : public CRenderTarget;
+```
+
+## <a name="members"></a>Member
+
+### <a name="public-constructors"></a>Öffentliche Konstruktoren
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[CHwndRenderTarget::CHwndRenderTarget](#chwndrendertarget)|Erstellt ein Objekt CHwndRenderTarget von HWND.|
+
+### <a name="public-methods"></a>Öffentliche Methoden
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[CHwndRenderTarget::Attach](#attach)|Hängt die vorhandene Ziel-Schnittstelle für das Objekt zu rendern|
+|[CHwndRenderTarget::CheckWindowState](#checkwindowstate)|Gibt an, ob es sich bei okkludierte das HWND, das Renderziel zugeordnet ist.|
+|[CHwndRenderTarget::Create](#create)|Erstellt ein Renderziel mit dem Fenster verknüpft ist|
+|[CHwndRenderTarget::Detach](#detach)|Trennt die Render-Ziel-Schnittstelle des Objekts|
+|[CHwndRenderTarget::GetHwnd](#gethwnd)|Gibt das zugeordnete HWND-Renderziel.|
+|[CHwndRenderTarget::GetHwndRenderTarget](#gethwndrendertarget)|Gibt die ID2D1HwndRenderTarget-Schnittstelle.|
+|[CHwndRenderTarget::ReCreate](#recreate)|Ein Renderziel, die dem Fenster zugeordneten erstellt erneut|
+|[CHwndRenderTarget::Resize](#resize)|Ändert die Größe des Renderziels in die angegebene Pixelgröße|
+
+### <a name="public-operators"></a>Öffentliche Operatoren
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[CHwndRenderTarget::operator ID2D1HwndRenderTarget *](#operator_id2d1hwndrendertarget_star)|Gibt die ID2D1HwndRenderTarget-Schnittstelle.|
+
+### <a name="protected-data-members"></a>Geschützte Datenmember
+
+|name|Beschreibung|
+|----------|-----------------|
+|[CHwndRenderTarget::m_pHwndRenderTarget](#m_phwndrendertarget)|Ein Zeiger auf ein ID2D1HwndRenderTarget-Objekt.|
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CRenderTarget](../../mfc/reference/crendertarget-class.md)
+
+[CHwndRenderTarget](../../mfc/reference/chwndrendertarget-class.md)
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** afxrendertarget.h
+
+##  <a name="attach"></a>  CHwndRenderTarget::Attach
+
+Hängt die vorhandene Ziel-Schnittstelle für das Objekt zu rendern
+
+```
 void Attach(ID2D1HwndRenderTarget* pTarget);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *pTarget*  
- Vorhandene Render-Ziel-Schnittstelle. NULL darf nicht sein  
-  
-##  <a name="checkwindowstate"></a>  CHwndRenderTarget::CheckWindowState  
- Gibt an, ob diese Renderziel zugeordnete HWND okkludierte ist.  
-  
-```  
-D2D1_WINDOW_STATE CheckWindowState() const;  
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein Wert, der angibt, ob das zugeordnete HWND-Renderziel okkludiert wird.  
-  
-##  <a name="chwndrendertarget"></a>  CHwndRenderTarget::CHwndRenderTarget  
- Erstellt ein CHwndRenderTarget-Objekt aus der HWND.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parameter
+
+*pTarget*<br/>
+Vorhandene Render-Ziel-Schnittstelle. NULL darf nicht sein
+
+##  <a name="checkwindowstate"></a>  CHwndRenderTarget::CheckWindowState
+
+Gibt an, ob es sich bei okkludierte das HWND, das Renderziel zugeordnet ist.
+
+```
+D2D1_WINDOW_STATE CheckWindowState() const;
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein Wert, der angibt, ob das zugeordnete HWND-Renderziel okkludiert wird.
+
+##  <a name="chwndrendertarget"></a>  CHwndRenderTarget::CHwndRenderTarget
+
+Erstellt ein Objekt CHwndRenderTarget von HWND.
+
+```
 CHwndRenderTarget(HWND hwnd = NULL);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *HWND*  
- Das zugeordnete HWND-Renderziel  
-  
-##  <a name="create"></a>  CHwndRenderTarget::Create  
- Erstellt ein Fenster zugeordneten Renderziel  
-  
-```  
+```
+
+### <a name="parameters"></a>Parameter
+
+*HWND*<br/>
+Das HWND zugeordneten Renderziel
+
+##  <a name="create"></a>  CHwndRenderTarget::Create
+
+Erstellt ein Renderziel mit dem Fenster verknüpft ist
+
+```
 BOOL Create(HWND hWnd);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *hWnd*  
- Das zugeordnete HWND-Renderziel  
-  
-### <a name="return-value"></a>Rückgabewert  
- Wenn die Methode erfolgreich ist, wird "Wahr" zurückgegeben. Andernfalls wird "false" zurückgegeben  
-  
-##  <a name="detach"></a>  CHwndRenderTarget::Detach  
- Trennt die Render-Ziel-Schnittstelle aus dem Objekt  
-  
-```  
+```
+
+### <a name="parameters"></a>Parameter
+
+*hWnd*<br/>
+Das HWND zugeordneten Renderziel
+
+### <a name="return-value"></a>Rückgabewert
+
+Wenn die Methode erfolgreich ist, wird "true" zurückgegeben. Andernfalls wird "false" zurückgegeben
+
+##  <a name="detach"></a>  CHwndRenderTarget::Detach
+
+Trennt die Render-Ziel-Schnittstelle des Objekts
+
+```
 ID2D1HwndRenderTarget* Detach();
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Zeiger auf getrennten Rendern Ziel-Schnittstelle.  
-  
-##  <a name="gethwnd"></a>  CHwndRenderTarget::GetHwnd  
- Gibt das zugeordnete HWND-Renderziel.  
-  
-```  
-HWND GetHwnd() const;  
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Das zugeordnete HWND-Renderziel.  
-  
-##  <a name="gethwndrendertarget"></a>  CHwndRenderTarget::GetHwndRenderTarget  
- Gibt ID2D1HwndRenderTarget-Schnittstelle.  
-  
-```  
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Zeiger auf getrennten rendern, Ziel-Schnittstelle.
+
+##  <a name="gethwnd"></a>  CHwndRenderTarget::GetHwnd
+
+Gibt das zugeordnete HWND-Renderziel.
+
+```
+HWND GetHwnd() const;
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Das HWND zugeordneten Renderziel.
+
+##  <a name="gethwndrendertarget"></a>  CHwndRenderTarget::GetHwndRenderTarget
+
+Gibt die ID2D1HwndRenderTarget-Schnittstelle.
+
+```
 ID2D1HwndRenderTarget* GetHwndRenderTarget();
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf eine ID2D1HwndRenderTarget-Schnittstelle oder NULL, wenn das Objekt noch nicht initialisiert ist.  
-  
-##  <a name="m_phwndrendertarget"></a>  CHwndRenderTarget::m_pHwndRenderTarget  
- Ein Zeiger auf ein ID2D1HwndRenderTarget-Objekt.  
-  
-```  
-ID2D1HwndRenderTarget* m_pHwndRenderTarget;  
-```  
-  
-##  <a name="operator_id2d1hwndrendertarget_star"></a>  CHwndRenderTarget::operator ID2D1HwndRenderTarget *  
- Gibt ID2D1HwndRenderTarget-Schnittstelle.  
-  
-```  
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Zeiger auf eine ID2D1HwndRenderTarget-Schnittstelle oder NULL, wenn das Objekt noch nicht initialisiert ist.
+
+##  <a name="m_phwndrendertarget"></a>  CHwndRenderTarget::m_pHwndRenderTarget
+
+Ein Zeiger auf ein ID2D1HwndRenderTarget-Objekt.
+
+```
+ID2D1HwndRenderTarget* m_pHwndRenderTarget;
+```
+
+##  <a name="operator_id2d1hwndrendertarget_star"></a>  CHwndRenderTarget::operator ID2D1HwndRenderTarget *
+
+Gibt die ID2D1HwndRenderTarget-Schnittstelle.
+
+```
 operator ID2D1HwndRenderTarget*();
-```   
-  
-### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf eine ID2D1HwndRenderTarget-Schnittstelle oder NULL, wenn das Objekt noch nicht initialisiert ist.  
-  
-##  <a name="recreate"></a>  CHwndRenderTarget::ReCreate  
- Ein Renderziel Fenster zugeordneten erstellt neu  
-  
-```  
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Zeiger auf eine ID2D1HwndRenderTarget-Schnittstelle oder NULL, wenn das Objekt noch nicht initialisiert ist.
+
+##  <a name="recreate"></a>  CHwndRenderTarget::ReCreate
+
+Ein Renderziel, die dem Fenster zugeordneten erstellt erneut
+
+```
 BOOL ReCreate(HWND hWnd);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *hWnd*  
- Das zugeordnete HWND-Renderziel  
-  
-### <a name="return-value"></a>Rückgabewert  
- Wenn die Methode erfolgreich ist, wird "Wahr" zurückgegeben. Andernfalls wird "false" zurückgegeben.  
-  
-##  <a name="resize"></a>  CHwndRenderTarget::Resize  
- Ändert die Größe des Renderziels auf die angegebene Pixelgröße  
-  
-```  
+```
+
+### <a name="parameters"></a>Parameter
+
+*hWnd*<br/>
+Das HWND zugeordneten Renderziel
+
+### <a name="return-value"></a>Rückgabewert
+
+Wenn die Methode erfolgreich ist, wird "true" zurückgegeben. Andernfalls wird FALSE zurückgegeben.
+
+##  <a name="resize"></a>  CHwndRenderTarget::Resize
+
+Ändert die Größe des Renderziels in die angegebene Pixelgröße
+
+```
 BOOL Resize(const CD2DSizeU& size);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *size*  
- Die neue Größe des Renderziels in Pixeln  
-  
-### <a name="return-value"></a>Rückgabewert  
- Wenn die Methode erfolgreich ist, wird "Wahr" zurückgegeben. Andernfalls wird "false" zurückgegeben.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klassen](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="parameters"></a>Parameter
+
+*size*<br/>
+Die neue Größe des Renderziels in Pixeln
+
+### <a name="return-value"></a>Rückgabewert
+
+Wenn die Methode erfolgreich ist, wird "true" zurückgegeben. Andernfalls wird FALSE zurückgegeben.
+
+## <a name="see-also"></a>Siehe auch
+
+[Klassen](../../mfc/reference/mfc-classes.md)

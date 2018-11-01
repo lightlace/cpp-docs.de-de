@@ -1,30 +1,22 @@
 ---
-title: 'Platform:: GUID-Wertklasse | Microsoft-Dokumentation'
-ms.custom: ''
+title: Platform::Guid-Wertklasse
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Guid
-dev_langs:
-- C++
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e115cf74eaac194c9e5b7154898cc23e10b220eb
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0a339de3aec14b6bd1dc461f53c1a7417db738ea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100430"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50482926"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid-Wertklasse
 
-Stellt eine [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) Geben Sie die Windows-Runtime-Typsystem.
+Stellt einen [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931) -Typ im Windows Runtime-Typsystem dar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +37,7 @@ GUID enthält die Methoden Equals(), GetHashCode() und ToString(), die von der [
 
 ### <a name="remarks"></a>Hinweise
 
-Ein Beispiel für eine neue Platform:: GUID mithilfe der Windows-Funktion [CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid), finden Sie unter [WinRT-Komponente: wie generiert eine GUID?](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)
+Ein Beispiel für das Generieren einer neuen Platform::Guid mithilfe der Windows-Funktion [CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid)finden Sie unter [WinRT-Komponente: Wie generiert man eine GUID?](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -157,7 +149,7 @@ True, wenn die zwei Guids nicht gleich sind.
 
 ## <a name="operator-call"></a> GUID::Operator()-Operator
 
-Konvertiert implizit eine [GUID-Struktur](https://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)GUID in eine Platform:: GUID.
+Konvertiert implizit eine [GUID-Struktur](https://msdn.microsoft.com/library/windows/desktop/aa373931)GUID in eine Platform:: GUID.
 
 ### <a name="syntax"></a>Syntax
 

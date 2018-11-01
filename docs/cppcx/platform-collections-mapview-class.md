@@ -1,8 +1,6 @@
 ---
-title: Platform::Collections::MapView-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: Platform::Collections::MapView-Klasse
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::MapView::MapView
@@ -11,21 +9,15 @@ f1_keywords:
 - COLLECTION/Platform::Collections::MapView::Lookup
 - COLLECTION/Platform::Collections::MapView::Size
 - COLLECTION/Platform::Collections::MapView::Split
-dev_langs:
-- C++
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e222ba48121702c2388e64cea5e81da627f324a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: cd1865320d56d71481cdaf7055f796bfab26eeab
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110856"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496377"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView-Klasse
 
@@ -117,11 +109,11 @@ bool HasKey(K key);
 ### <a name="parameters"></a>Parameter
 
 *key*<br/>
-Der zum Suchen des MapView-Elements verwendete Schlüssel. Der Typ des `key` ist der Typname *K*.
+Der zum Suchen des MapView-Elements verwendete Schlüssel. Der Typ des *Schlüssel* ist der Typname *K*.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn der Schlüssel gefunden wurde, andernfalls `false`.
+**"true"** ist der Schlüssel gefunden wird; andernfalls **"false"**.
 
 ##  <a name="lookup"></a> Mapview:: Lookup-Methode
 

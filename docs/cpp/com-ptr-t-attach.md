@@ -49,7 +49,7 @@ Wenn "true", dann ist `AddRef` aufgerufen wird. Wenn es auf "FALSE" ist die `_co
 
 - **Anfügen (***pInterface***)** `AddRef` wird nicht aufgerufen. Der Besitz der Schnittstelle wird an dieses `_com_ptr_t`-Objekt übergeben. `Release` wird aufgerufen, um den Verweiszähler für den zuvor gekapselten Zeiger zu verringern.
 
-- **Anfügen (***pInterface* **,***fAddRef***)** Wenn *fAddRef* ist "true", `AddRef`aufgerufen, um den Verweiszähler für den gekapselten Schnittstellenzeiger zu inkrementieren. Wenn *fAddRef* ist "false", dies `_com_ptr_t` Objekt übernimmt den Besitz des unformatierten Schnittstellenzeigers, ohne `AddRef`. `Release` wird aufgerufen, um den Verweiszähler für den zuvor gekapselten Zeiger zu verringern.
+- **Anfügen (**  *pInterface*  **,**  *fAddRef*  **)** Wenn *fAddRef* ist "true", `AddRef`aufgerufen, um den Verweiszähler für den gekapselten Schnittstellenzeiger zu inkrementieren. Wenn *fAddRef* ist "false", dies `_com_ptr_t` Objekt übernimmt den Besitz des unformatierten Schnittstellenzeigers, ohne `AddRef`. `Release` wird aufgerufen, um den Verweiszähler für den zuvor gekapselten Zeiger zu verringern.
 
 **Ende Microsoft-spezifisch**
 

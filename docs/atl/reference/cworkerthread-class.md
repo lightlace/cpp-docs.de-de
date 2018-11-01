@@ -1,10 +1,6 @@
 ---
-title: CWorkerThread-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: CWorkerThread-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CWorkerThread
 - ATLUTIL/ATL::CWorkerThread
@@ -16,28 +12,22 @@ f1_keywords:
 - ATLUTIL/ATL::CWorkerThread::Initialize
 - ATLUTIL/ATL::CWorkerThread::RemoveHandle
 - ATLUTIL/ATL::CWorkerThread::Shutdown
-dev_langs:
-- C++
 helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e2c3e0eb625c492cb9f0e9a1234d33149ac201a1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9469770dc0538b968cfaafa2de45f28bd864193c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040231"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532001"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread-Klasse
 
 Diese Klasse einen Arbeitsthread erstellt oder verwendet eine vorhandene, wartet auf eine oder mehrere Kernel-Objekt-Handles und führt eine angegebene Client-Funktion aus, wenn einem der Handles signalisiert wird.
 
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.
+> Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +36,7 @@ template <class ThreadTraits = DefaultThreadTraits>
 class CWorkerThread
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
 *ThreadTraits*<br/>
 Die Klasse, die die Thread-erstellen-Funktion, wie z. B. Bereitstellung [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) oder [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md).
@@ -84,19 +74,19 @@ Die Klasse, die die Thread-erstellen-Funktion, wie z. B. Bereitstellung [CRTThre
 
 1. Erstellen Sie eine Instanz dieser Klasse.
 
-2. Rufen Sie [CWorkerThread::Initialize](#initialize).
+1. Rufen Sie [CWorkerThread::Initialize](#initialize).
 
-3. Rufen Sie [CWorkerThread::AddHandle](#addhandle) mit dem Handle des Kernel-Objekt und einen Zeiger auf eine Implementierung der [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).
+1. Rufen Sie [CWorkerThread::AddHandle](#addhandle) mit dem Handle des Kernel-Objekt und einen Zeiger auf eine Implementierung der [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).
 
-     - ODER
+   \- oder –
 
-     Rufen Sie [CWorkerThread::AddTimer](#addtimer) mit einem Zeiger auf eine Implementierung der [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).
+   Rufen Sie [CWorkerThread::AddTimer](#addtimer) mit einem Zeiger auf eine Implementierung der [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).
 
-4. Implementieren [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) um Maßnahmen zu ergreifen, wenn das Handle oder Timers signalisiert wird.
+1. Implementieren [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) um Maßnahmen zu ergreifen, wenn das Handle oder Timers signalisiert wird.
 
-5. Rufen Sie zum Entfernen eines Objekts aus der Liste der wartbare Objekte repräsentieren [CWorkerThread::RemoveHandle](#removehandle).
+1. Rufen Sie zum Entfernen eines Objekts aus der Liste der wartbare Objekte repräsentieren [CWorkerThread::RemoveHandle](#removehandle).
 
-6. Um den Thread zu beenden, rufen Sie [CWorkerThread::Shutdown](#shutdown).
+1. Um den Thread zu beenden, rufen Sie [CWorkerThread::Shutdown](#shutdown).
 
 ## <a name="requirements"></a>Anforderungen
 

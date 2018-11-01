@@ -1,29 +1,18 @@
 ---
-title: -Überprüfen-Charset (überprüfen nach kompatiblen Zeichen) | Microsoft-Dokumentation
-ms.custom: ''
+title: / Validate-CharSet (überprüfen nach kompatiblen Zeichen)
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 f1_keywords:
 - /validate-charset
 - validate-charset
-dev_langs:
-- C++
 helpviewer_keywords:
 - /validate-charset compiler option
 ms.assetid: 50360fd0-4d32-4a4f-95d0-53d38c12ad4c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 63adaad4fe074225ef32d99edd2a1402acf5e045
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 243d225f5acde0c6099050539687726ea082c898
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709123"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590488"
 ---
 # <a name="validate-charset-validate-for-compatible-characters"></a>/ Validate-CharSet (überprüfen nach kompatiblen Zeichen)
 
@@ -57,6 +46,6 @@ Visual Studio verwendet UTF-8-zeichencodierung während der Konvertierung zwisch
 
 [Compileroptionen](../../build/reference/compiler-options.md)<br/>
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
-[/ Execution-CharSet (Ausführungszeichensatz festlegen)](../../build/reference/execution-charset-set-execution-character-set.md)
-[/Source-CharSet (Quellzeichensatz festlegen)](../../build/reference/source-charset-set-source-character-set.md)
-[/utf-8 (Quelle festlegen und ausführbare Datei legt in UTF-8-Zeichen)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
+[/ Execution-CharSet (Ausführungszeichensatz festlegen)](../../build/reference/execution-charset-set-execution-character-set.md)<br/>
+[/source-charset (Quellzeichensatz festlegen)](../../build/reference/source-charset-set-source-character-set.md)<br/>
+[/utf-8 (Quelle und ausführbare Zeichensätze auf UTF-8 festlegen)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

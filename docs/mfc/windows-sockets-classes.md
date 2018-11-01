@@ -1,41 +1,33 @@
 ---
-title: Windows Sockets-Klassen | Microsoft Docs
-ms.custom: ''
+title: Windows Sockets-Klassen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.classes.net
-dev_langs:
-- C++
 helpviewer_keywords:
 - sockets classes [MFC]
 - Windows Sockets [MFC], classes
 ms.assetid: 58b9ab8d-9e44-4db3-8265-e04e713d2e9a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4e370c8a5f9cb2fb42c3199dbc0d56b69d93dc35
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18537c0de09185c8cd219e3d17ef8bb297e1d711
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382127"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50433604"
 ---
 # <a name="windows-sockets-classes"></a>Windows Sockets-Klassen
-Windows Sockets geben eine Netzwerk-protokollunabhängige-Methode für die Kommunikation zwischen zwei Computern. Diese Sockets können synchrone werden (das Programm wartet, bis die Kommunikation erfolgt) oder asynchron (das Programm weiterhin ausgeführt, während die Kommunikation passiert).  
-  
- [CAsyncSocket](../mfc/reference/casyncsocket-class.md)  
- Kapselt die Windows-Sockets-API in einem einfachen Wrapper.  
-  
- [CSocket](../mfc/reference/csocket-class.md)  
- Höheren Abstraktionsgrad abgeleitet `CAsyncSocket`. Es erfolgt synchron.  
-  
- [CSocketFile](../mfc/reference/csocketfile-class.md)  
- Bietet eine `CFile` Schnittstelle, um einen Windows Socket.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../mfc/class-library-overview.md)
+
+Windows Sockets bieten eine Möglichkeit des Netzwerk-Protokoll-unabhängigen für die Kommunikation zwischen zwei Computern. Diese Sockets können synchron sein (das Programm wartet, bis die Kommunikation erfolgt) oder asynchron (das Programm weiterhin ausgeführt, während die Kommunikation vor sich geht).
+
+[CAsyncSocket](../mfc/reference/casyncsocket-class.md)<br/>
+Kapselt die Windows Sockets-API in einen einfachen Wrapper.
+
+[CSocket](../mfc/reference/csocket-class.md)<br/>
+Abgeleitet von höheren Abstraktionsgrad `CAsyncSocket`. Es wird synchron ausgeführt.
+
+[CSocketFile](../mfc/reference/csocketfile-class.md)<br/>
+Stellt eine `CFile` Schnittstelle, um einen Windows Socket.
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../mfc/class-library-overview.md)
 

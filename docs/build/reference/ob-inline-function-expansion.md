@@ -1,16 +1,10 @@
 ---
-title: -Ob (Inlinefunktionserweiterung) | Microsoft-Dokumentation
-ms.custom: ''
+title: /Ob (Inlinefunktionserweiterung)
 ms.date: 09/25/2017
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.InlineFunctionExpansion
 - VC.Project.VCCLCompilerTool.InlineFunctionExpansion
 - /ob
-dev_langs:
-- C++
 helpviewer_keywords:
 - inline functions, function expansion compiler option [C++]
 - -Ob1 compiler option [C++]
@@ -30,16 +24,12 @@ helpviewer_keywords:
 - Ob0 compiler option [C++]
 - inline expansion, compiler option
 ms.assetid: f134e6df-e939-4980-a01d-47425dbc562a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6755025ff07d79b7e6086fc8c8a59a3bdebdb777
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a53069c44e72d0d873ccb0b600c48480527d111f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725256"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50582663"
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob (Inlinefunktionserweiterung)
 
@@ -87,6 +77,6 @@ Sie können die `#pragma` [Auto_inline](../../preprocessor/auto-inline.md) Direk
 
 ## <a name="see-also"></a>Siehe auch
 
-[/ O-Optionen (Code optimieren)](../../build/reference/o-options-optimize-code.md)
+[/O-Optionen (Code optimieren)](../../build/reference/o-options-optimize-code.md)<br/>
 [Compileroptionen](../../build/reference/compiler-options.md)<br/>
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

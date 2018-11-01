@@ -1,29 +1,18 @@
 ---
-title: Konvertieren von Projekten im gemischten Modus in reine Intermediate Language | Microsoft-Dokumentation
-ms.custom: ''
+title: Konvertieren von Projekten im gemischten Modus in reine Intermediate Language
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - intermediate language, mixed-mode applications
 - mixed-mode applications
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 263a90710d2103c4ea97e6c56da67d676ba7366b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 46a12e6204113b00c209696bbdfd1093232d7521
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222079"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50559674"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Konvertieren von Projekten im gemischten Modus in reine intermediate language
 
@@ -84,26 +73,26 @@ Bei Verwendung eine frühere Version von Visual C++-Compiler-Toolsets, die unter
 
 3. Entfernen Sie alle nicht verwaltete Typen an:
 
-   Ersetzen Sie sofern angebracht, die nicht verwaltete Typen mit Verweisen auf Strukturen aus der [System](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx) Namespace. Allgemeine verwaltete Typen sind in der folgenden Tabelle aufgeführt:
+   Ersetzen Sie sofern angebracht, die nicht verwaltete Typen mit Verweisen auf Strukturen aus der [System](/dotnet/api/system) Namespace. Allgemeine verwaltete Typen sind in der folgenden Tabelle aufgeführt:
 
    |Struktur|Beschreibung|
    |---------------|-----------------|
-   |[Boolean](https://msdn.microsoft.com/library/system.boolean\(v=vs.140\).aspx)|Stellt einen booleschen Wert dar.|
-   |[Byte](https://msdn.microsoft.com/library/system.byte\(v=vs.140\).aspx)|Stellt eine ganze 8-Bit-Zahl ohne Vorzeichen dar.|
-   |[Char](https://msdn.microsoft.com/library/system.char\(v=vs.140\).aspx)|Stellt ein Unicode-Zeichen dar.|
-   |[DateTime](https://msdn.microsoft.com/library/system.datetime.datetime.aspx)|Stellt einen Zeitpunkt dar, der normalerweise durch Datum und Uhrzeit dargestellt wird.|
-   |[Decimal](https://msdn.microsoft.com/library/system.decimal\(v=vs.140\).aspx)|Stellt eine Dezimalzahl dar.|
-   |[Double](https://msdn.microsoft.com/library/system.double\(v=vs.140\).aspx)|Stellt eine Gleitkommazahl mit doppelter Genauigkeit dar.|
-   |[Guid](https://msdn.microsoft.com/library/system.guid\(v=vs.140\).aspx)|Stellt eine GUID dar (Globally Unique Identifier, globaler eindeutiger Bezeichner).|
-   |[Int16](https://msdn.microsoft.com/library/system.int16\(v=vs.140\).aspx)|Stellt eine 16-Bit-Ganzzahl mit Vorzeichen dar.|
-   |[Int32](https://msdn.microsoft.com/library/system.int32\(v=vs.140\).aspx)|Stellt eine 32-Bit-Ganzzahl mit Vorzeichen dar.|
-   |[Int64](https://msdn.microsoft.com/library/system.int64\(v=vs.140\).aspx)|Stellt eine 64-Bit-Ganzzahl mit Vorzeichen dar.|
-   |[IntPtr](https://msdn.microsoft.com/library/system.intptr\(v=vs.140\).aspx)|Ein plattformabhängiger Typ zur Darstellung von Zeigern und Handles.|
-   |[SByte](https://msdn.microsoft.com/library/system.byte.aspx)|Stellt eine ganze 8-Bit-Zahl mit Vorzeichen dar.|
-   |[Single](https://msdn.microsoft.com/library/system.single.aspx)|Stellt eine Gleitkommazahl mit einfacher Genauigkeit dar.|
-   |[TimeSpan](https://msdn.microsoft.com/library/system.timespan\(v=vs.140\).aspx)|Stellt ein Zeitintervall dar.|
-   |[UInt16](https://msdn.microsoft.com/library/system.uint16\(v=vs.140\).aspx)|Stellt eine vorzeichenlose 16-Bit-Ganzzahl dar.|
-   |[UInt32](https://msdn.microsoft.com/library/system.uint32\(v=vs.140\).aspx)|Stellt eine vorzeichenlose 32-Bit-Ganzzahl dar.|
-   |[UInt64](https://msdn.microsoft.com/library/system.uint64\(v=vs.140\).aspx)|Stellt eine vorzeichenlose 64-Bit-Ganzzahl dar.|
-   |[UIntPtr](https://msdn.microsoft.com/library/system.uintptr\(v=vs.140\).aspx)|Ein plattformabhängiger Typ zur Darstellung von Zeigern und Handles.|
-   |["Void"](https://msdn.microsoft.com/library/system.void\(v=vs.140\).aspx)|Zeigt eine Methode, die keinen Wert zurückgibt. Das heißt, hat die Methode der void-Rückgabetyp.|
+   |[Boolean](/dotnet/api/system.boolean)|Stellt einen booleschen Wert dar.|
+   |[Byte](/dotnet/api/system.byte)|Stellt eine ganze 8-Bit-Zahl ohne Vorzeichen dar.|
+   |[Char](/dotnet/api/system.char)|Stellt ein Unicode-Zeichen dar.|
+   |[DateTime](/dotnet/api/system.datetime.datetime.aspx)|Stellt einen Zeitpunkt dar, der normalerweise durch Datum und Uhrzeit dargestellt wird.|
+   |[Decimal](/dotnet/api/system.decimal)|Stellt eine Dezimalzahl dar.|
+   |[Double](/dotnet/api/system.double)|Stellt eine Gleitkommazahl mit doppelter Genauigkeit dar.|
+   |[Guid](/dotnet/api/system.guid)|Stellt eine GUID dar (Globally Unique Identifier, globaler eindeutiger Bezeichner).|
+   |[Int16](/dotnet/api/system.int16)|Stellt eine 16-Bit-Ganzzahl mit Vorzeichen dar.|
+   |[Int32](/dotnet/api/system.int32)|Stellt eine 32-Bit-Ganzzahl mit Vorzeichen dar.|
+   |[Int64](/dotnet/api/system.int64)|Stellt eine 64-Bit-Ganzzahl mit Vorzeichen dar.|
+   |[IntPtr](/dotnet/api/system.intptr)|Ein plattformabhängiger Typ zur Darstellung von Zeigern und Handles.|
+   |[SByte](/dotnet/api/system.byte.aspx)|Stellt eine ganze 8-Bit-Zahl mit Vorzeichen dar.|
+   |[Single](/dotnet/api/system.single.aspx)|Stellt eine Gleitkommazahl mit einfacher Genauigkeit dar.|
+   |[TimeSpan](/dotnet/api/system.timespan)|Stellt ein Zeitintervall dar.|
+   |[UInt16](/dotnet/api/system.uint16)|Stellt eine vorzeichenlose 16-Bit-Ganzzahl dar.|
+   |[UInt32](/dotnet/api/system.uint32)|Stellt eine vorzeichenlose 32-Bit-Ganzzahl dar.|
+   |[UInt64](/dotnet/api/system.uint64)|Stellt eine vorzeichenlose 64-Bit-Ganzzahl dar.|
+   |[UIntPtr](/dotnet/api/system.uintptr)|Ein plattformabhängiger Typ zur Darstellung von Zeigern und Handles.|
+   |["Void"](/dotnet/api/system.void)|Zeigt eine Methode, die keinen Wert zurückgibt. Das heißt, hat die Methode der void-Rückgabetyp.|

@@ -1,5 +1,5 @@
 ---
-title: 'Ausnahmen: Ausnahmen in Konstruktoren | Microsoft Docs'
+title: 'Ausnahmen: Ausnahmen in Konstruktoren | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8336700cc0137efe3bc106871ebd76b8de7a99af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3cab21255698c19046cfca185a0d8d7e7c530112
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342630"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421933"
 ---
 # <a name="exceptions-exceptions-in-constructors"></a>Ausnahmen: Ausnahmen in Konstruktoren
-Beim Auslösen einer Ausnahme in einem Konstruktor, beliebige Objekte und die speicherbelegungen vorgenommenen vor dem Auslösen der Ausnahme, wie in beschrieben Bereinigen [Ausnahmen: Auslösen von Ausnahmen aus Ihrer eigenen Funktionen](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md).  
-  
- Beim Auslösen einer Ausnahme in einem Konstruktor wurde der Speicher für das Objekt selbst bereits von der Zeit zugeordnet, wenn der Konstruktor aufgerufen wird. Deshalb wird der Compiler automatisch Aufheben der Zuordnung des Arbeitsspeichers, die vom Objekt belegt wird, nachdem die Ausnahme ausgelöst wird.  
-  
- Weitere Informationen finden Sie unter [Ausnahmen: Freigeben von Objekten in Ausnahmen](../mfc/exceptions-freeing-objects-in-exceptions.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Ausnahmebehandlung](../mfc/exception-handling-in-mfc.md)
+
+Beim Auslösen von Ausnahmen in einem Konstruktor, beliebige Objekte und speicherreservierungen von Ihnen vorgenommenen vor dem Auslösen der Ausnahme, wie unter Bereinigen [Ausnahmen: Auslösen von Ausnahmen aus Ihrer eigenen Funktionen](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md).
+
+Beim Auslösen von Ausnahmen in einem Konstruktor, wurde der Speicher für das Objekt selbst bereits mit der Zeit zugeordnet, die der Konstruktor aufgerufen wird. Daher wird der Compiler automatisch freigeben des Speicherplatzes durch das Objekt belegt wird, nachdem die Ausnahme ausgelöst wird.
+
+Weitere Informationen finden Sie unter [Ausnahmen: Freigeben von Objekten in Ausnahmen](../mfc/exceptions-freeing-objects-in-exceptions.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Ausnahmebehandlung](../mfc/exception-handling-in-mfc.md)
 

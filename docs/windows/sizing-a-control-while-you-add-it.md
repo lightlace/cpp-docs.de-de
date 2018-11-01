@@ -1,27 +1,16 @@
 ---
-title: Ändern der Steuerelementgröße beim Hinzufügen | Microsoft-Dokumentation
-ms.custom: ''
+title: Ändern der Steuerelementgröße beim Hinzufügen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - dialog box controls [C++], size
 - controls [C++], sizing
 ms.assetid: 06b1dd2b-0ba1-4e1f-adc3-cb73679f765e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: da998c748a3471f053c922e0a80c33d1526b2055
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 205dd196d427e06abc36e4684533b8b1b66dc742
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313142"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607583"
 ---
 # <a name="sizing-a-control-while-you-add-it"></a>Ändern der Steuerelementgröße beim Hinzufügen
 
@@ -49,6 +38,6 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)  
-[Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](../windows/adding-event-handlers-for-dialog-box-controls.md)  
+[Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)<br/>
+[Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
 [Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)

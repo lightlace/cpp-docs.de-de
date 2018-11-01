@@ -1,12 +1,6 @@
 ---
-title: Erstellen transparenter oder invertierter Bereiche in Gerätebildern (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
-ms.custom: ''
+title: Erstellen transparenter oder invertierter Bereiche in Gerätebildern (Bildbearbeitung für Symbole)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - cursors [C++], screen regions
 - inverse colors [C++], device images
@@ -25,17 +19,12 @@ helpviewer_keywords:
 - device projects [C++], transparent images
 - icons [C++], screen regions
 ms.assetid: a994954b-b039-4391-a535-58d1fa10fc3b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ab57df8151d02064b244212f28fe21628f0f3bb8
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 3c4f5aa0b63259fbe42c353525e52319db1b0667
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314845"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626641"
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>Erstellen transparenter oder invertierter Bereiche in Gerätebildern (Bildbearbeitung für Symbole)
 
@@ -71,5 +60,5 @@ Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Symbole und Cursor: Bildressourcen für Anzeigegeräte](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

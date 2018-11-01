@@ -1,10 +1,6 @@
 ---
-title: islower, iswlower, _islower_l, _iswlower_l | Microsoft-Dokumentation
-ms.custom: ''
+title: islower, iswlower, _islower_l, _iswlower_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswlower
 - _islower_l
@@ -33,8 +29,6 @@ f1_keywords:
 - _islower _l
 - _islower_l
 - iswlower
-dev_langs:
-- C++
 helpviewer_keywords:
 - _islower _l function
 - _ismbclower_l function
@@ -47,16 +41,12 @@ helpviewer_keywords:
 - iswlower function
 - _islower_l function
 ms.assetid: fcc3b70a-2b47-45fd-944d-e5c1942e6457
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 14fb6eae9e06e973413c21607f2ca2881f33aa38
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14510d38f5bb4890f98c39b49ca17adc2be3ff41
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401830"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594128"
 ---
 # <a name="islower-iswlower-islowerl-iswlowerl"></a>islower, iswlower, _islower_l, _iswlower_l
 
@@ -91,11 +81,11 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Routinen gibt ungleich NULL, wenn *c* ist eine bestimmte Darstellung eines Zeichens in Kleinbuchstaben. **IsLower** gibt einen Wert ungleich NULL zurück, wenn *c* ein Kleinbuchstabe (a bis Z). **Iswlower** gibt einen Wert ungleich NULL zurück, wenn *c* ein Breitzeichen, das einem Kleinbuchstaben entspricht, oder wenn *c* ist ein von der Implementierung definierten breitzeichensatz für den **Iswcntrl**, **Iswdigit**, **Iswpunct**, oder **Iswspace** ungleich NULL ist. Jede dieser Routinen gibt 0 zurück, wenn *c* die testbedingung nicht erfüllt.
+Jede dieser Routinen gibt ungleich NULL, wenn *c* ist eine bestimmte Darstellung eines Zeichens in Kleinbuchstaben. **IsLower** gibt einen Wert ungleich NULL zurück, wenn *c* ein Kleinbuchstabe (a - Z). **Iswlower** gibt einen Wert ungleich NULL zurück, wenn *c* ein Breitzeichen ist, das einem Kleinbuchstaben entspricht, oder wenn *c* ist ein von der Implementierung definierten der Breitzeichen, für den **Iswcntrl**, **Iswdigit**, **Iswpunct**, oder **Iswspace** ungleich NULL ist. Jede dieser Routinen gibt 0 zurück, wenn *c* die testbedingung nicht erfüllt.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix verwenden das das übergebene Gebietsschema anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die Versionen dieser Funktionen, die **_l** -Suffix verwenden das das übergebene Gebietsschema anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängige Verhalten. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Das Verhalten des **Islower** und **_islower_l** ist undefiniert, wenn *c* nicht EOF ist oder im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und *c* ist keine dieser Werte, lösen die Funktionen eine Assertion.
+Das Verhalten der **Islower** und **_islower_l** ist undefiniert, wenn *c* nicht EOF-Markierung ist oder im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und *c* ist keine dieser Werte, lösen die Funktionen eine Assertion.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -106,7 +96,7 @@ Das Verhalten des **Islower** und **_islower_l** ist undefiniert, wenn *c* nicht
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**islower**|\<ctype.h>|
 |**iswlower**|\<ctype.h> oder \<wchar.h>|

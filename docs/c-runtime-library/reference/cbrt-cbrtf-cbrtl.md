@@ -1,10 +1,6 @@
 ---
-title: cbrt, cbrtf, cbrtl | Microsoft-Dokumentation
-ms.custom: ''
+title: cbrt, cbrtf, cbrtl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cbrt
 - cbrtf
@@ -26,23 +22,17 @@ f1_keywords:
 - cbrtl
 - cbrt
 - cbrtf
-dev_langs:
-- C++
 helpviewer_keywords:
 - cbrtl function
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 29dee00f35c2b4d75e838e5abe2ee24de9753013
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c395a063cfa07cdfb7e841f19bc64fb1c57ca796
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393614"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505533"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt, cbrtf, cbrtl
 
@@ -75,7 +65,7 @@ Gleitkommawert
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **Cbrt** Funktionen zurück, die Kubikwurzel von *x*.
+Die **Cbrt** Funktionen zurück die Kubikwurzel von *x*.
 
 |Eingabe|SEH-Ausnahme|**_matherr** Ausnahme|
 |-----------|-------------------|--------------------------|
@@ -83,7 +73,7 @@ Die **Cbrt** Funktionen zurück, die Kubikwurzel von *x*.
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Cbrt** nehmen **"float"** oder **lange** **doppelte** Typen. In einem C-Programm **Cbrt** immer Double und gibt **doppelte**.
+Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Cbrt** , Take **"float"** oder **lange** **doppelte** Typen. In einem C-Programm **Cbrt** immer Double und gibt **doppelte**.
 
 ## <a name="requirements"></a>Anforderungen
 

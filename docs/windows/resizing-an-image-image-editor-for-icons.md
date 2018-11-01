@@ -1,31 +1,20 @@
 ---
-title: Größenänderungen bei Bildern (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
-ms.custom: ''
+title: Größenänderungen bei Bildern (Bildbearbeitung für Symbole)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.editing
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], resizing images
 - graphics [C++], resizing
 - images [C++], resizing
 - resizing images
 ms.assetid: d83a02c4-4dfe-4586-a0df-51a50c2ba71d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0da05d9599767f52fa6e65cabb4614be191699e0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 721a8f1de511c105df5d72bbe60685d210ad5a94
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610788"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50576097"
 ---
 # <a name="resizing-an-image-image-editor-for-icons"></a>Größenänderungen bei Bildern (Bildbearbeitung für Symbole)
 
@@ -37,7 +26,7 @@ Wenn die Auswahl auf das gesamte Bild, enthält die **Image** Editor entweder ve
 
 Es gibt zwei Mechanismen zum Ändern der Bildgröße: Ziehpunkte und [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window). Sie können den Ziehpunkt zum Ändern der Größe des gesamten oder einen Teil eines Images ziehen. Ziehpunkte, die Sie ziehen können, sind gefüllt. Sie können keine Handles ziehen, die leer sind. Sie können die **Eigenschaften** Fenster zum Ändern der Größe des gesamtes image nur nicht für eine ausgewählte Komponente.
 
-![Ziehpunkte in einer Bitmap](../mfc/media/vcimageeditorsizinghandles.gif "VcImageEditorSizingHandles")  
+![Ziehpunkte in einer Bitmap](../mfc/media/vcimageeditorsizinghandles.gif "VcImageEditorSizingHandles")<br/>
 Ziehpunkte
 
 > [!NOTE]
@@ -59,6 +48,6 @@ Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)  
-[Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)

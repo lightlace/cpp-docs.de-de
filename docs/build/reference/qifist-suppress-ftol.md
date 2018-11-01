@@ -1,29 +1,19 @@
 ---
-title: -QIfist (_ftol unterdrücken) | Microsoft-Dokumentation
-ms.custom: ''
+title: /QIfist (_ftol unterdrücken)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /qifist
-dev_langs:
-- C++
 helpviewer_keywords:
 - QIfist compiler option [C++]
 - -QIfist compiler option [C++]
 - /QIfist compiler option [C++]
 ms.assetid: 1afd32a5-f658-4b66-85f4-e0ce4cb955bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1d7c4bacec9da22e8c8ba9fd6330637a1fb25893
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e01ee0b7af68127f3a78b4cfda1d110f6187fa74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714739"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528111"
 ---
 # <a name="qifist-suppress-ftol"></a>/QIfist (_ftol unterdrücken)
 
@@ -75,6 +65,6 @@ Die **/QIfist** Option ist ab Visual Studio 2005 veraltet. Für den Compiler wur
 
 ## <a name="see-also"></a>Siehe auch
 
-[/ Q-Optionen (Operationen auf niedriger Ebene)](../../build/reference/q-options-low-level-operations.md)
+[/Q-Optionen (Vorgänge auf niedriger Ebene)](../../build/reference/q-options-low-level-operations.md)<br/>
 [Compileroptionen](../../build/reference/compiler-options.md)<br/>
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

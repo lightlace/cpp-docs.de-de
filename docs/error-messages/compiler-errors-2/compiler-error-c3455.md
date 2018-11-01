@@ -1,33 +1,23 @@
 ---
-title: Compilerfehler C3455 | Microsoft-Dokumentation
-ms.custom: ''
+title: Compilerfehler C3455
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3455
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3455
 ms.assetid: 218e5cfe-5391-4eeb-81c2-85c47e3a6cd2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5d26a8f3e404eaa19a102be4cb3f11350c4fe674
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4451ddbd8d5a7125112ef8e1c58e8843095bffd4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46089358"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614395"
 ---
 # <a name="compiler-error-c3455"></a>Compilerfehler C3455
 
 'attribut': Keiner der Attributkonstruktoren stimmte mit den Argumenten überein.
 
-Ein ungültiger Wert wurde verwendet, um ein Attribut zu deklarieren.  Weitere Informationen finden Sie unter [attribute](../../windows/attribute.md) .
+Ein ungültiger Wert wurde verwendet, um ein Attribut zu deklarieren.  Weitere Informationen finden Sie unter [attribute](../../windows/attributes/attribute.md) .
 
 ## <a name="example"></a>Beispiel
 

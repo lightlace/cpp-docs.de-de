@@ -16,57 +16,63 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c166f51e8d512dd0c5ef8d98bf1e6cf991664f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 10e848321f105f60643f579c12772f6a40edebeb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714206"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383518"
 ---
 # <a name="shiftright128"></a>__shiftright128
-**Microsoft-spezifisch**  
-  
- Verschiebt eine 128-Bit-Menge, dargestellt als zwei 64-Bit-Mengen `LowPart` und `HighPart`, um eine angegebene Anzahl von Bits, die durch `Shift` definiert wird, nach rechts und gibt die unteren 64 Bits des Ergebnisses zurück.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-unsigned __int64 __shiftright128(   
-   unsigned __int64 LowPart,   
-   unsigned __int64 HighPart,   
-   unsigned char Shift   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+
+**Microsoft-spezifisch**
+
+Verschiebt eine 128-Bit-Menge, dargestellt als zwei 64-Bit-Mengen `LowPart` und `HighPart`, um eine angegebene Anzahl von Bits, die durch `Shift` definiert wird, nach rechts und gibt die unteren 64 Bits des Ergebnisses zurück.
+
+## <a name="syntax"></a>Syntax
+
+```
+unsigned __int64 __shiftright128( 
+   unsigned __int64 LowPart, 
+   unsigned __int64 HighPart, 
+   unsigned char Shift 
+);
+```
+
+#### <a name="parameters"></a>Parameter
+
 *LowPart*<br/>
-[in] Die unteren 64 Bits der zu verschiebenden 128-Bit-Menge.  
-  
+[in] Die unteren 64 Bits der zu verschiebenden 128-Bit-Menge.
+
 *HighPart*<br/>
-[in] Die oberen 64 Bits der zu verschiebenden 128-Bit-Menge.  
-  
+[in] Die oberen 64 Bits der zu verschiebenden 128-Bit-Menge.
+
 *UMSCHALTTASTE*<br/>
-[in] Die Anzahl der zu verschiebenden Bits.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Die unteren 64 Bits des Ergebnisses.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Systemintern|Architektur|  
-|---------------|------------------|  
-|`__shiftright128`|x64|  
-  
- **Headerdatei** \<intrin.h >  
-  
-## <a name="remarks"></a>Hinweise  
- Der `Shift`-Wert ist immer modulo 64. So verschiebt z. B. beim Aufrufen von `__shiftright128(0, 1, 64)` die Funktion die `0`-Bits des oberen Teils nach rechts und gibt einen unteren Teil von `0` und nicht von `1` zurück, wie man annehmen könnte.  
-  
-## <a name="example"></a>Beispiel  
- Ein Beispiel finden Sie unter [__shiftleft128](../intrinsics/shiftleft128.md).  
-  
-**Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [__shiftleft128](../intrinsics/shiftleft128.md)   
- [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[in] Die Anzahl der zu verschiebenden Bits.
+
+## <a name="return-value"></a>Rückgabewert
+
+Die unteren 64 Bits des Ergebnisses.
+
+## <a name="requirements"></a>Anforderungen
+
+|Systemintern|Architektur|
+|---------------|------------------|
+|`__shiftright128`|x64|
+
+**Headerdatei** \<intrin.h >
+
+## <a name="remarks"></a>Hinweise
+
+Der `Shift`-Wert ist immer modulo 64. So verschiebt z. B. beim Aufrufen von `__shiftright128(0, 1, 64)` die Funktion die `0`-Bits des oberen Teils nach rechts und gibt einen unteren Teil von `0` und nicht von `1` zurück, wie man annehmen könnte.
+
+## <a name="example"></a>Beispiel
+
+Ein Beispiel finden Sie unter [__shiftleft128](../intrinsics/shiftleft128.md).
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[__shiftleft128](../intrinsics/shiftleft128.md)<br/>
+[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

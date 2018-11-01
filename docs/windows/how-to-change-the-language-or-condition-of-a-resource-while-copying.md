@@ -1,28 +1,17 @@
 ---
-title: 'Vorgehensweise: Ändern von Sprache oder Bedingung einer Ressource während des Kopiervorgangs (C++) | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Vorgehensweise: Ändern von Sprache oder Bedingung einer Ressource während des Kopiervorgangs (C++)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.resvw.resource.changing
-dev_langs:
-- C++
 helpviewer_keywords:
 - Language property [C++]
 ms.assetid: 8f622ab0-bac2-468f-ae70-78911afc4759
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 26ec8987b22444c98bb7a88c791c4f941737ceae
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 42d8fb36dcbd243b0a99f2dbc597bdf352f47266
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313311"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642519"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying-c"></a>Vorgehensweise: Ändern von Sprache oder Bedingung einer Ressource während des Kopiervorgangs (C++)
 
@@ -35,7 +24,7 @@ Beim Kopieren in eine Ressource können Sie ihre Sprachen- und/oder Bedingungsei
 Sprache und Bedingung einer Ressource werden im Arbeitsbereichsfenster nach dem Ressourcennamen in Klammern angezeigt. In diesem Beispiel verwendet die Ressource mit dem Namen „IDD_AboutBox“ Finnisch als Sprache und „XX33“ als Bedingung.
 
 ```cpp
-IDD_AboutBox (Finnish - XX33)  
+IDD_AboutBox (Finnish - XX33)
 ```
 
 ### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>So kopieren Sie eine vorhandene Ressource und ändern die Sprache oder Bedingung
@@ -56,6 +45,6 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Vorgehensweise: Kopieren von Ressourcen](../windows/how-to-copy-resources.md)  
-[Ressourcendateien](../windows/resource-files-visual-studio.md)  
+[Vorgehensweise: Kopieren von Ressourcen](../windows/how-to-copy-resources.md)<br/>
+[Ressourcendateien](../windows/resource-files-visual-studio.md)<br/>
 [Ressourcen-Editor](../windows/resource-editors.md)

@@ -1,12 +1,6 @@
 ---
-title: Symbolleisten-QuickInfo | Microsoft Docs
-ms.custom: ''
+title: QuickInfos für die Symbolleiste
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - tool tips [MFC], activating
 - CBRS_TOOLTIPS constant [MFC]
@@ -19,63 +13,63 @@ helpviewer_keywords:
 - status bars [MFC], tool tips
 - flyby status bar updates
 ms.assetid: d1696305-b604-4fad-9f09-638878371412
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 90f325df3825b3546616ce145d4477322a1b4eed
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: b7dbae03b23c26c96aa0db740b749ba728a353d6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956293"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50475607"
 ---
 # <a name="toolbar-tool-tips"></a>QuickInfos für die Symbolleiste
-QuickInfos sind die kleine Popupfenster, die kurze Beschreibungen der Zweck einer Symbolleisten-Schaltfläche darstellen, wenn die Maus über eine Schaltfläche für eine bestimmte Zeitspanne zu positionieren. Wenn Sie eine Anwendung mit dem Assistenten zum Erstellen, die eine Symbolleiste aufweist, wird für Sie Tipp Toolsupport bereitgestellt. Dieser Artikel beschreibt beide den Tipp Toolsupport erstellt, indem der Anwendungs-Assistent und wie Ihre Anwendung Tipp Toolsupport hinzugefügt.  
-  
- Dieser Artikel behandelt Folgendes:  
-  
--   [Aktivieren von QuickInfos](#_core_activating_tool_tips)  
-  
--   [Statusleistenupdates](#_core_fly_by_status_bar_updates)  
-  
-##  <a name="_core_activating_tool_tips"></a> Aktivieren von QuickInfos  
- Um QuickInfos in Ihrer Anwendung zu aktivieren, müssen Sie zwei Schritte ausführen:  
-  
--   Fügen Sie den CBRS_TOOLTIPS-Stil auf die anderen Formate (z. B. WS_CHILD, WS_VISIBLE und andere **CBRS_** Stile) als übergeben der *DwStyle* Parameter an die [Symbolleistenformate](../mfc/reference/ctoolbar-class.md#create) Funktion oder im [SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle).  
-  
--   Wie im folgenden Verfahren beschrieben wird, fügen Sie die Symbolleiste QuickInfo-Text, getrennt durch ein neue Zeilenvorschubzeichen ("\n"), um eine Zeichenfolgenressource mit der Eingabeaufforderung für die Befehle der Hilfesymbolleiste. Eine Zeichenfolgenressource teilt die ID der Symbolleisten-Schaltfläche.  
-  
-#### <a name="to-add-the-tool-tip-text"></a>So fügen Sie den QuickInfo-Text hinzu  
-  
-1.  Während Sie die Symbolleiste im Symbolleisten-Editor bearbeiten, öffnen Sie die **Eigenschaften von Symbolleisten-Schaltfläche** Fenster für die angegebene Schaltfläche.  
-  
-2.  In der **Prompt** Feld, geben Sie den Text in der QuickInfo für die Schaltfläche angezeigt werden sollen.  
-  
+
+QuickInfos sind kleine Popupfenster, für die kurze Beschreibung des Zwecks für eine Symbolleisten-Schaltfläche werden angezeigt, wenn Sie die Maus über eine Schaltfläche für eine bestimmte Zeitspanne positionieren. Wenn Sie eine Anwendung mit der Anwendungs-Assistenten, die eine Symbolleiste hat erstellen, ist Tip-toolunterstützung für Sie bereitgestellt. Dieser Artikel beschreibt beide den Tipp toolunterstützung erstellt, indem der Anwendungs-Assistent und das Hinzufügen von Tip-toolunterstützung für Ihre Anwendung.
+
+Dieser Artikel behandelt Folgendes:
+
+- [Aktivieren von QuickInfos](#_core_activating_tool_tips)
+
+- [Statusleistenupdates](#_core_fly_by_status_bar_updates)
+
+##  <a name="_core_activating_tool_tips"></a> Aktivieren von QuickInfos
+
+Um QuickInfos in Ihrer Anwendung zu aktivieren, müssen Sie zwei Dinge tun:
+
+- Die anderen Formate den CBRS_TOOLTIPS-Stil hinzugefügt (z. B. WS_CHILD, WS_VISIBLE und andere **CBRS_** Stile) übergeben, als die *DwStyle* Parameter, um die [Symbolleistenformate](../mfc/reference/ctoolbar-class.md#create) Funktion oder im [SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle).
+
+- Wie im folgenden Verfahren beschrieben, fügen Sie die Symbolleiste QuickInfo-Text, getrennt durch ein Zeilenumbruchzeichen ('\n'), auf die Zeichenfolgenressource, die die Eingabeaufforderung für die Befehle der Hilfesymbolleiste enthält. Die Zeichenfolgenressource gibt die ID des der Symbolleisten-Schaltfläche.
+
+#### <a name="to-add-the-tool-tip-text"></a>Um den QuickInfo-Text hinzuzufügen.
+
+1. Öffnen Sie auf die Symbolleiste in der Symbolleisten-Editor bearbeiten werden, die **Eigenschaften von Symbolleisten-Schaltfläche** Fenster für eine bestimmte Schaltfläche.
+
+1. In der **Eingabeaufforderung** geben den Text in der QuickInfo für die Schaltfläche angezeigt werden sollen.
+
 > [!NOTE]
->  Festlegen des Texts, wie eine Schaltflächeneigenschaft in der Symbolleisten-Editor das vorherige Verfahren Sie mussten ersetzt um öffnen Sie und bearbeiten Sie eine Zeichenfolgenressource.  
-  
- Falls eine Steuerleiste mit QuickInfos aktiviert untergeordnete Steuerelemente, die darauf platziert aufweist, wird die Steuerleiste eine QuickInfo für jedes untergeordnete Steuerelement in der Steuerleiste angezeigt, solange sie die folgenden Kriterien erfüllt:  
-  
--   Die ID des Steuerelements ist nicht - 1.  
-  
--   Der Zeichenfolgentabelle Eintrag mit derselben ID wie das untergeordnete Steuerelement in der Ressourcendatei verfügt über ein Tool QuickInfo-Zeichenfolge.  
-  
-##  <a name="_core_fly_by_status_bar_updates"></a> Statusleiste Flyby Updates  
- Eine Funktion, die im Zusammenhang mit QuickInfos ist "Flyby" Statusleiste aktualisieren. Standardmäßig beschreibt die Nachricht auf der Statusleiste nur eine bestimmte Symbolleisten-Schaltfläche, wenn die Schaltfläche aktiviert ist. Durch CBRS_FLYBY in der Liste der Stile übergeben einschließlich `CToolBar::Create`, dass diese Nachrichten aktualisiert, wenn der Mauszeiger über der Symbolleiste bewegt wird, ohne tatsächlich aktiviert die Schaltfläche.  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
-  
--   [Implementieren der MFC-Symbolleiste (Übersicht die Übersichtsinformationen auf der Symbolleiste)](../mfc/mfc-toolbar-implementation.md)  
-  
--   [Andockbare und unverankerte Symbolleisten](../mfc/docking-and-floating-toolbars.md)  
-  
--   Die [CToolBar](../mfc/reference/ctoolbar-class.md) und [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) Klassen  
-  
--   [Arbeiten mit dem Toolbar-Steuerelement](../mfc/working-with-the-toolbar-control.md)  
-  
--   [Verwenden der bisherigen Symbolleisten](../mfc/using-your-old-toolbars.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Implementieren der MFC-Symbolleiste](../mfc/mfc-toolbar-implementation.md)
+>  Festlegen des Texts, wie eine Eigenschaft für eine Symbolleisten-Editor die vorherige Prozedur ersetzt, in der Sie mussten zu öffnen Sie und bearbeiten Sie die Zeichenfolgenressource.
+
+Verfügt eine Steuerleiste mit QuickInfos aktiviert untergeordnete Steuerelemente darauf platziert, wird die Steuerleiste eine QuickInfo für jedes untergeordnete Steuerelement auf der Steuerleiste angezeigt werden soll, solange sie die folgenden Kriterien erfüllt:
+
+- Die ID des Steuerelements ist nicht - 1.
+
+- Der Zeichenfolgentabelle Eintrag mit derselben ID wie das untergeordnete Steuerelement in der Ressourcendatei hat es sich um eine Zeichenfolge der Tool-Tipps.
+
+##  <a name="_core_fly_by_status_bar_updates"></a> Statusleiste Flyby-Updates
+
+Eine Funktion, die im Zusammenhang mit QuickInfos ist "Flyby" Statusleiste aktualisiert. Standardmäßig wird die Nachricht in der Statusleiste nur eine bestimmten Symbolleisten-Schaltfläche beschrieben, wenn die Schaltfläche aktiviert wird. Dazu CBRS_FLYBY in der Liste der Stile, die an `CToolBar::Create`, Sie haben diese aktualisiert, wenn der Mauszeiger über der Symbolleiste bewegt werden, ohne Aktivierung tatsächlich auf die Schaltfläche mit den Nachrichten.
+
+### <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
+
+- [Implementieren der MFC-Symbolleiste (Übersicht die Übersichtsinformationen auf der Symbolleiste)](../mfc/mfc-toolbar-implementation.md)
+
+- [Andockbare und unverankerte Symbolleisten](../mfc/docking-and-floating-toolbars.md)
+
+- Die [CToolBar](../mfc/reference/ctoolbar-class.md) und [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) Klassen
+
+- [Arbeiten mit dem Symbolleisten-Steuerelement](../mfc/working-with-the-toolbar-control.md)
+
+- [Verwenden der bisherigen Symbolleisten](../mfc/using-your-old-toolbars.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Implementieren der MFC-Symbolleiste](../mfc/mfc-toolbar-implementation.md)
 

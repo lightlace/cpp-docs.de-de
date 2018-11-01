@@ -1,28 +1,18 @@
 ---
-title: '&lt;complex&gt; | Microsoft-Dokumentation'
-ms.custom: ''
+title: '&lt;complex&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <complex>
 - std::<complex>
-dev_langs:
-- C++
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 84f94e4e7a3486f036af47f0444d85d0f2fe4446
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: afcdb1246d9c02f83dbc8708326d10e802ad2779
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726699"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525865"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -105,7 +95,7 @@ Sofern nicht anders angegeben, Funktionen, die mehrere Werte zurückgeben könne
 
 |Operator|Beschreibung|
 |-|-|
-|[operator!=](../standard-library/complex-operators.md#op_neq)|Testet zwei komplexe Zahlen auf Ungleichheit, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.|
+|[Operator!=](../standard-library/complex-operators.md#op_neq)|Testet zwei komplexe Zahlen auf Ungleichheit, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.|
 |[operator*](../standard-library/complex-operators.md#op_star)|Multipliziert zwei komplexe Zahlen, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.|
 |[operator+](../standard-library/complex-operators.md#op_add)|Addiert zwei komplexe Zahlen, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.|
 |[operator-](../standard-library/complex-operators.md#operator-)|Subtrahiert zwei komplexe Zahlen, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.|

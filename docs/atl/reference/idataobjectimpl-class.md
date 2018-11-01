@@ -1,10 +1,6 @@
 ---
-title: IDataObjectImpl-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: IDataObjectImpl-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - IDataObjectImpl
 - ATLCTL/ATL::IDataObjectImpl
@@ -18,24 +14,18 @@ f1_keywords:
 - ATLCTL/ATL::IDataObjectImpl::GetDataHere
 - ATLCTL/ATL::IDataObjectImpl::QueryGetData
 - ATLCTL/ATL::IDataObjectImpl::SetData
-dev_langs:
-- C++
 helpviewer_keywords:
 - data transfer [C++]
 - data transfer [C++], Uniform Data Transfer
 - IDataObjectImpl class
 - IDataObject, ATL implementation
 ms.assetid: b680f0f7-7795-40a1-a0f6-f48768201c89
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7444cfe152d964318ea9786f4e4f7718e11d71cb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b7ae6488357239b4936b57764b798c625253998f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069806"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50485292"
 ---
 # <a name="idataobjectimpl-class"></a>IDataObjectImpl-Klasse
 
@@ -146,7 +136,7 @@ Finden Sie unter [IDataObject::EnumDAdvise](/windows/desktop/api/objidl/nf-objid
 Erstellt einen Enumerator zum Durchlaufen der `FORMATETC` Strukturen, die vom Datenobjekt unterstützt.
 
 ```
-HRESULT EnumFormatEtc(  
+HRESULT EnumFormatEtc(
     DWORD dwDirection,
     IEnumFORMATETC** ppenumFormatEtc);
 ```

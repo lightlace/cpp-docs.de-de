@@ -1,10 +1,6 @@
 ---
-title: CComModule-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: CComModule-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComModule
 - ATLBASE/ATL::CComModule
@@ -31,22 +27,16 @@ f1_keywords:
 - ATLBASE/ATL::CComModule::m_hInstResource
 - ATLBASE/ATL::CComModule::m_hInstTypeLib
 - ATLBASE/ATL::CComModule::m_pObjMap
-dev_langs:
-- C++
 helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: faf3080c6363ef0227b71e550ff658b1790d37b9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 73d25f15aaeed15e3972c48e682c70f0b8c505c8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090697"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50589448"
 ---
 # <a name="ccommodule-class"></a>CComModule-Klasse
 
@@ -136,7 +126,7 @@ Zusätzlich zu `CComModule`, ATL stellt [CComAutoThreadModule](../../atl/referen
 Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.
 
 ```
-HRESULT GetClassObject(  
+HRESULT GetClassObject(
     REFCLSID rclsid,
     REFIID riid,
     LPVOID* ppv) throw();
@@ -340,7 +330,7 @@ Zeigt auf der objektzuordnung, die von der Modulinstanz verwaltet.
 Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.
 
 ```
-ATL_DEPRECATED HRESULT RegisterClassHelper(  
+ATL_DEPRECATED HRESULT RegisterClassHelper(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID,
@@ -386,7 +376,7 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 ### <a name="parameters"></a>Parameter
 
 *dwClsContext*<br/>
-[in] Gibt den Kontext, in dem das Klassenobjekt ist, ausgeführt werden. Mögliche Werte sind CLSCTX_INPROC_SERVER CLSCTX_INPROC_HANDLER oder CLSCTX_LOCAL_SERVER. Eine Beschreibung dieser Werte finden Sie in [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) im Windows SDK.
+[in] Gibt den Kontext, in dem das Klassenobjekt ist, ausgeführt werden. Mögliche Werte sind CLSCTX_INPROC_SERVER CLSCTX_INPROC_HANDLER oder CLSCTX_LOCAL_SERVER. Eine Beschreibung dieser Werte finden Sie in [CLSCTX](/windows/desktop/api/wtypesbase/ne-wtypesbase-tagclsctx) im Windows SDK.
 
 *dwFlags*<br/>
 [in] Bestimmt die Art der Verbindung mit dem Klassenobjekt. Mögliche Werte sind REGCLS_SINGLEUSE REGCLS_MULTIPLEUSE oder REGCLS_MULTI_SEPARATE. Eine Beschreibung dieser Werte finden Sie in [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) im Windows SDK.
@@ -405,7 +395,7 @@ Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modul
 
 ```
 HRESULT RegisterServer(
-    BOOL bRegTypeLib = FALSE,  
+    BOOL bRegTypeLib = FALSE,
     const CLSID* pCLSID = NULL) throw();
 ```
 
@@ -488,7 +478,7 @@ Gibt alle Datenmember frei.
 Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.
 
 ```
-ATL_DEPRECATED HRESULT UnregisterClassHelper(  
+ATL_DEPRECATED HRESULT UnregisterClassHelper(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID);
@@ -549,7 +539,7 @@ Finden Sie unter [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) Inf
 Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.
 
 ```
-ATL_DEPRECATED HRESULT UpdateRegistryClass(  
+ATL_DEPRECATED HRESULT UpdateRegistryClass(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID,
@@ -557,7 +547,7 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
     DWORD dwFlags,
     BOOL bRegister);
 
-ATL_DEPRECATED HRESULT UpdateRegistryClass(  
+ATL_DEPRECATED HRESULT UpdateRegistryClass(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID,
@@ -608,12 +598,12 @@ Durch Angabe der [DECLARE_REGISTRY](registry-macros.md#declare_registry) Makro `
 Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.
 
 ```
-virtual HRESULT UpdateRegistryFromResourceD(  
+virtual HRESULT UpdateRegistryFromResourceD(
     LPCTSTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 
-virtual HRESULT UpdateRegistryFromResourceD(  
+virtual HRESULT UpdateRegistryFromResourceD(
     UINT nResID,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw ();
@@ -658,12 +648,12 @@ Weitere Informationen zu ersetzbare Parameter und Skripts finden Sie im Artikel 
 Zum Zeitpunkt der ATL 7.0 `CComModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.
 
 ```
-virtual HRESULT UpdateRegistryFromResourceS(  
+virtual HRESULT UpdateRegistryFromResourceS(
     LPCTSTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 
-virtual HRESULT UpdateRegistryFromResourceS(  
+virtual HRESULT UpdateRegistryFromResourceS(
     UINT nResID,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();

@@ -1,12 +1,6 @@
 ---
-title: Festlegen der Breite einer horizontalen Bildlaufleiste | Microsoft-Dokumentation
-ms.custom: ''
+title: Festlegen der Breite einer horizontalen Bildlaufleiste
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - list controls [C++], scroll bar width
 - CListBox::SetHorizontalExtent
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - CListBox class, scroll bar width
 - scroll bars [C++], width
 ms.assetid: 51dad141-aa0b-46a3-a82c-46b80d603d94
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 671da02bd1b836cd482c057c09ab31d27b42843f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 393571b79d27485e840d150549208c899e8ed1d2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314656"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50625952"
 ---
 # <a name="setting-the-width-of-a-horizontal-scroll-bar"></a>Festlegen der Breite einer horizontalen Bildlaufleiste
 
@@ -46,5 +35,5 @@ MFC
 
 ## <a name="see-also"></a>Siehe auch
 
-[Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)  
+[Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)<br/>
 [Steuerelemente](../mfc/controls-mfc.md)

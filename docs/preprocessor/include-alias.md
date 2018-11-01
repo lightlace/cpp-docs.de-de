@@ -1,29 +1,19 @@
 ---
-title: Include_alias | Microsoft-Dokumentation
-ms.custom: ''
+title: include_alias
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - vc-pragma.include_alias
 - include_alias_CPP
-dev_langs:
-- C++
 helpviewer_keywords:
 - pragmas, include_alias
 - include_alias pragma
 ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 26e59888a26b5f71b697e398e81b16012dd35e3a
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 616672d713a9f0ac6eab4be8bce9b178d2510723
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539796"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50573166"
 ---
 # <a name="includealias"></a>include_alias
 
@@ -31,12 +21,12 @@ Gibt an, dass *Short_filename* als Alias für verwendet werden soll *Long_filena
 
 ## <a name="syntax"></a>Syntax
 
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>Pragma-Include_alias ("*Long_filename*","*Short_filename*")  
+> #<a name="pragma-includealiaslongfilename-shortfilename"></a>Pragma-Include_alias ("*Long_filename*","*Short_filename*")
 > #<a name="pragma-includealiaslongfilename-shortfilename"></a>Pragma-Include_alias (*Long_filename*, *Short_filename*)
 
 ## <a name="remarks"></a>Hinweise
 
-Einige Dateisysteme unterstützen längere Headerdateinamen als das 8.3-FAT-Dateisystem. Der Compiler kann die längeren Namen nicht einfach bis 8.3 abschneiden, da die ersten acht Zeichen der längeren Headerdateinamen möglicherweise nicht eindeutig sind. Jedes Mal, wenn der Compiler erkennt die *Long_filename* Zeichenfolge ist, ersetzt er *Short_filename*, und sucht nach der Headerdatei *Short_filename* stattdessen. Dieses Pragma muss vor den entsprechenden `#include`-Direktiven eingefügt werden. Zum Beispiel:
+Einige Dateisysteme unterstützen längere Headerdateinamen als das 8.3-FAT-Dateisystem. Der Compiler kann die längeren Namen nicht einfach bis 8.3 abschneiden, da die ersten acht Zeichen der längeren Headerdateinamen möglicherweise nicht eindeutig sind. Jedes Mal, wenn der Compiler erkennt die *Long_filename* Zeichenfolge ist, ersetzt er *Short_filename*, und sucht nach der Headerdatei *Short_filename* stattdessen. Dieses Pragma muss vor den entsprechenden `#include`-Anweisungen eingefügt werden. Zum Beispiel:
 
 ```cpp
 // First eight characters of these two files not unique.
@@ -59,7 +49,7 @@ Der Alias, nach dem gesucht wird, muss genau der Spezifikation entsprechen. Dies
 ```
 
 kein Aliasing (Ersetzung) ausgeführt, da die Headerdateizeichenfolgen nicht genau übereinstimmen. Darüber hinaus die Headerdateinamen, die als Argumente für die `/Yu` und `/Yc` Compileroptionen, oder die `hdrstop` Pragma werden nicht ersetzt. Wenn beispielsweise die Quelldatei die folgenden Anweisungen enthält,
-  
+
 ```cpp
 #include <AppleSystemHeaderStop.h>
 ```
@@ -111,7 +101,7 @@ Beachten Sie außerdem, dass Transitivität nicht unterstützt wird. Im Falle de
 #include "one.h"
 ```
 
-Der Compiler sucht die Datei TWO.H. statt THREE.H.  
+Der Compiler sucht die Datei TWO.H. statt THREE.H.
 
 ## <a name="see-also"></a>Siehe auch
 

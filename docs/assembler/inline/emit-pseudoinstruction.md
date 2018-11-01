@@ -1,28 +1,18 @@
 ---
-title: _emit-pseudoanweisung | Microsoft-Dokumentation
-ms.custom: ''
+title: _emit Pseudoinstruction
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: conceptual
 f1_keywords:
 - _emit
-dev_langs:
-- C++
 helpviewer_keywords:
 - byte defining (inline assembly)
 - _emit pseudoinstruction
 ms.assetid: 004c48f3-364c-4e82-9a51-e326f9cc7b2b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c8c11165e8b6632488d29e5fe79aa945332c25e9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f2a7c9c4dab97bc1aba3147b5d75f6abbdac951f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43689361"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50540867"
 ---
 # <a name="emit-pseudoinstruction"></a>_emit Pseudoinstruction
 
@@ -38,8 +28,8 @@ Das folgende Fragment platziert die Bytes 0x4A, 0 x 43 und 0x4B in den Code ein:
 .
 .
 __asm {
-     randasm
-     }
+    randasm
+    }
 ```
 
 > [!CAUTION]

@@ -1,31 +1,19 @@
 ---
-title: Desktopanwendungen (Visual C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Desktopanwendungen (Visual C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 9d4f44e3587e9b274bbe89e2fa4f91accadb08ab
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 78f50948e96ede8c15e0ac89a591197722dd5b1a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688258"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50584027"
 ---
 # <a name="desktop-applications-visual-c"></a>Desktopanwendungen (Visual C++)
 
 Ein *Desktopanwendung* in C++ ist eine native Anwendung, die den vollständigen Satz von Windows-APIs und entweder ausgeführt wird, die in einem Fenster oder in der Systemkonsole zugreifen können. Desktopanwendung in C++ können unter Windows XP bis Windows 10 ausführen können (Obwohl Windows XP wird nicht mehr offiziell unterstützt, und es gibt viele Windows-APIs, die seit damals eingeführt wurden).
 
-Eine Desktopanwendung unterscheidet sich von einer app (Universelle Windows Plattform), die auf PCs unter Windows 10 und auch auf XBox, Windows Phone, Surface Hub und anderen Geräten ausgeführt werden können. Weitere Informationen zu desktop-Visual-Studio. UWP-Anwendungen finden Sie unter [wählen Sie Ihre Technologie](https://msdn.microsoft.com/library/windows/desktop/dn614993\(v=vs.85\).aspx).
-
+Eine Desktopanwendung unterscheidet sich von einer app (Universelle Windows Plattform), die auf PCs unter Windows 10 und auch auf XBox, Windows Phone, Surface Hub und anderen Geräten ausgeführt werden können. Weitere Informationen zu desktop-Visual-Studio. UWP-Anwendungen finden Sie unter [wählen Sie Ihre Technologie](https://msdn.microsoft.com/library/windows/desktop/dn614993).
 
 ### <a name="desktop-bridge"></a>Desktop-Brücke
 
@@ -35,7 +23,7 @@ In Visual Studio 2017 Version 15.4 und höher können Sie ein Windows-Anwendungs
 
 ### <a name="terminology"></a>Terminologie
 
-- Ein *Win32* Anwendung ist eine Windows-Desktopanwendung in C++, die können Verwenden von systemeigenen [C-APIs für Windows und/oder COM-APIs](https://msdn.microsoft.com/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT- und APIs der .NET-Standardbibliothek und 3. Bibliotheken von Drittanbietern. Eine Win32-Anwendung in einem Fenster verlangt vom Entwickler explizit mit Windows-Nachrichten innerhalb einer Prozedur-Funktion von Windows zu arbeiten. Trotz des Namens kann eine Win32-Anwendung als eine (x86) 32-Bit oder 64-Bit-(x64) binäre kompiliert werden. In der Visual Studio-IDE sind die Begriffe X86 und die Win32-Synonym.
+- Ein *Win32* Anwendung ist eine Windows-Desktopanwendung in C++, die können Verwenden von systemeigenen [C-APIs für Windows und/oder COM-APIs](https://msdn.microsoft.com/library/windows/desktop/ff818516) CRT- und APIs der .NET-Standardbibliothek und 3. Bibliotheken von Drittanbietern. Eine Win32-Anwendung in einem Fenster verlangt vom Entwickler explizit mit Windows-Nachrichten innerhalb einer Prozedur-Funktion von Windows zu arbeiten. Trotz des Namens kann eine Win32-Anwendung als eine (x86) 32-Bit oder 64-Bit-(x64) binäre kompiliert werden. In der Visual Studio-IDE sind die Begriffe X86 und die Win32-Synonym.
 
 - Die [Component Object Model (COM)](/windows/desktop/com/the-component-object-model) ist eine Spezifikation, die in verschiedenen Sprachen für die Kommunikation mit anderen geschriebene Programme ermöglicht. Viele Windows-Komponenten werden als COM-Objekte implementiert, und führen Sie die standard-COM-Regeln für die objekterstellung, Schnittstelle, die Zerstörung von Ermittlung und -Objekt.  COM-Objekte aus der C++-desktop-Anwendungen ist relativ unkompliziert, aber Ihre eigenen COM-Objekt zu schreiben ist komplexer. Die [Active Template Library (ATL)](../atl/atl-com-desktop-components.md) enthält Makros und Hilfsfunktionen, die COM-Entwicklung zu vereinfachen.
 

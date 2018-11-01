@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 952de0ca136d29eb0b170856410b18a1d65120c1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0dc85bad774260f3db589d4f2649e0c39de2a530
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612887"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067201"
 ---
 # <a name="comparestringordinal-method"></a>CompareStringOrdinal-Methode
 
@@ -31,15 +31,15 @@ Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet
 ```cpp
 inline INT32 CompareStringOrdinal(
    HSTRING lhs,
-   HSTRING rhs)  
+   HSTRING rhs)
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*LHS*  
+*LHS*<br/>
 Das erste HSTRING, verglichen werden soll.
 
-*RS*  
+*RS*<br/>
 Das zweite HSTRING, verglichen werden soll.
 
 ## <a name="return-value"></a>Rückgabewert

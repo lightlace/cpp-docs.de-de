@@ -1,23 +1,13 @@
 ---
-title: Cloud-Apps und Web-Programmierung in Visual C++ | Microsoft-Dokumentation
-ms.custom: ''
+title: Cloud- und Webprogrammierung in Visual C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-azure
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bcdbc8012edbe17ce9fcc8298da68f45acad4b8b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 310b6631167b36ee842c1f52c0c853746f7c3644
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683364"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486748"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Cloud- und Webprogrammierung in Visual C++
 
@@ -27,7 +17,7 @@ In C++ haben Sie mehrere Optionen, um eine Verbindung mit dem Web und der Cloud 
 
 - [Microsoft Azure Mobile Services](http://www.windowsazure.com/develop/mobile/)
 
-   Stellt systemeigene APIs, die Sie in apps für universelle Windows-Plattform (UWP) oder Windows-desktop-apps verwenden können, für die Verbindung zu Windows Azure Mobile Services bereit. Obwohl die meisten Beispiele auf der Website in C# geschrieben sind, können Sie auch C++ verwenden. Weitere Informationen finden Sie unter [Schnellstart: Hinzufügen eines mobilen Diensts mit C++](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx).
+   Stellt systemeigene APIs, die Sie in apps für universelle Windows-Plattform (UWP) oder Windows-desktop-apps verwenden können, für die Verbindung zu Windows Azure Mobile Services bereit. Obwohl die meisten Beispiele auf der Website in C# geschrieben sind, können Sie auch C++ verwenden. Weitere Informationen finden Sie im Schnellstart zum [Hinzufügen eines mobilen Diensts mit C++](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx).
 
 - [Microsoft Azure Storage-Clientbibliothek für C++](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/)
 
@@ -52,11 +42,11 @@ In C++ haben Sie mehrere Optionen, um eine Verbindung mit dem Web und der Cloud 
   - Knüpfen Sie Kontakte Websockets für Remotedienste
   - Ein vollständig asynchrones Aufgaben-API, die basierend auf der PPL, einschließlich einer integrierten threadpool
 
-   Unterstützt die Windows-Desktop (7 +), Windows Server (2012 und höher), universelle Windows-Plattform, Linux, OSX, Android und iOS. 
+   Unterstützt die Windows-Desktop (7 +), Windows Server (2012 und höher), universelle Windows-Plattform, Linux, OSX, Android und iOS.
 
-- [Windows::Web::http::HttpClient](https://msdn.microsoft.com/library/windows/apps/windows.web.http.httpclient.aspx)
+- [Windows::Web::Http::HttpClient](https://msdn.microsoft.com/library/windows/apps/windows.web.http.httpclient.aspx)
 
-   Eine Windows-Runtime-HTTP-Clientklasse, die in der .NET Framework-Klasse des gleichen Namens im System.Web-Namespace modelliert ist. `HttpClient` unterstützt vollständig den asynchronen Upload und Download über HTTP und Pipelinefilter, die das Einfügen von benutzerdefinierten HTTP-Handlern in die Pipeline ermöglichen. Das Windows SDK umfasst Beispielfilter für gemessene Netzwerke, OAuth-Authentifizierung und mehr. Für apps, die nur die universelle Windows-Plattform abzielen, empfehlen wir die Verwendung der `Windows::Web:HttpClient` Klasse. 
+   Eine Windows-Runtime-HTTP-Clientklasse, die in der .NET Framework-Klasse des gleichen Namens im System.Web-Namespace modelliert ist. `HttpClient` unterstützt vollständig den asynchronen Upload und Download über HTTP und Pipelinefilter, die das Einfügen von benutzerdefinierten HTTP-Handlern in die Pipeline ermöglichen. Das Windows SDK umfasst Beispielfilter für gemessene Netzwerke, OAuth-Authentifizierung und mehr. Für apps, die nur die universelle Windows-Plattform abzielen, empfehlen wir die Verwendung der `Windows::Web:HttpClient` Klasse.
 
 - [IXMLHTTPRequest2-Schnittstelle](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)
 

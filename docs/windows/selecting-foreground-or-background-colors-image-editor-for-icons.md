@@ -1,29 +1,18 @@
 ---
-title: Auswählen von Vordergrund- oder Hintergrundfarben (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
-ms.custom: ''
+title: Auswählen von Vordergrund- oder Hintergrundfarben (Bildbearbeitung für Symbole)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.color
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], colors
 - colors [C++], Image editor
 ms.assetid: 95b3673e-1f1f-40fe-9afd-da914a6d005f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: adaf5f28bd115602c51d20e34d593ce42644c5d4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0189b493af0b62f98704b1816050ddbf238e9aa9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613628"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619465"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>Auswählen von Vordergrund- oder Hintergrundfarben (Bildbearbeitung für Symbole)
 
@@ -45,5 +34,5 @@ Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Arbeiten mit Farben](../windows/working-with-color-image-editor-for-icons.md)

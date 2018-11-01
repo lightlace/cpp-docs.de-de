@@ -1,27 +1,17 @@
 ---
-title: Compilerwarnung (Stufe 3) C4996 | Microsoft-Dokumentation
-ms.custom: ''
+title: Compilerwarnung (Stufe 3) C4996
 ms.date: 11/17/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4996
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d618ace9d922daabecf908c76a319e89a9fdedcc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cbb93bdba5853ed47bc3326d47bbb3c65ad7ce41
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094181"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50472175"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Compilerwarnung (Stufe 3) C4996
 
@@ -82,7 +72,6 @@ Microsoft hat einige POSIX-Funktionen in der CRT mit C99 und C ++ 03 festgelegte
 Um dieses Problem zu beheben, empfehlen wir normalerweise, dass Sie Ihren Code, um stattdessen die empfohlene Funktionsnamen ändern. Allerdings sind die Namen die aktualisierten Microsoft-spezifisch. Wenn Sie den Namen der vorhandenen Funktionen aus Gründen der Portabilität verwenden müssen, können Sie diese Warnungen deaktivieren. POSIX-Funktionen stehen immer noch in der Bibliothek unter deren ursprünglichen Namen.
 
 Um die veraltungswarnungen für diese Funktionen zu deaktivieren, definieren Sie das Präprozessor-Makro  **\_CRT\_NONSTDC\_keine\_WARNUNGEN**. Sie können dieses Makro in der Befehlszeile durch Einschließen der Option definieren `/D_CRT_NONSTDC_NO_WARNINGS`.
-
 
 ### <a name="unsafe-crt-library-functions"></a>Unsichere Funktionen der CRT-Bibliothek
 

@@ -1,28 +1,17 @@
 ---
-title: Ändern der Eigenschaften einer Zeichenfolgenressource (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Ändern der Eigenschaften einer Zeichenfolgenressource (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - resource identifiers, string properties
 - string tables [C++], changing strings
 - strings [C++], properties
 ms.assetid: 0a220434-f444-4405-9a64-d28d6b965687
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b1fdf47a6995a29641cf18018199f8d7b88a622c
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: efa5f690b18c223c60a68071b335a881633845d5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318355"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50450985"
 ---
 # <a name="changing-the-properties-of-a-string-resource-c"></a>Ändern der Eigenschaften einer Zeichenfolgenressource (C++)
 
@@ -44,7 +33,7 @@ ms.locfileid: "44318355"
         > [!NOTE]
         >  Sie können auch die Eigenschaften einer Zeichenfolge im Bearbeiten der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window).
 
-Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten (diejenigen, die die common Language Runtime), finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3\(v=vs.100\)).
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten (diejenigen, die die common Language Runtime), finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,4 +41,4 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zeichenfolgen-Editor](../windows/string-editor.md)  
+[Zeichenfolgen-Editor](../windows/string-editor.md)

@@ -1,11 +1,6 @@
 ---
-title: cacos, cacosf, cacosl | Microsoft-Dokumentation
-ms.custom: ''
+title: cacos, cacosf, cacosl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cacos
 - cacosf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/cacos
 - complex/cacosf
 - complex/cacosl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cacos function
 - cacosf function
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a6734080e8aff91d9276ef59203e2a3911ee9e7f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 18757ecd30f399ca3d1fdb77e8bff8213a265e74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394456"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543194"
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos, cacosf, cacosl
 
-Ruft den Arkuskosinus einer komplexen Zahl, mit Branch Schnitte außerhalb des Intervalls [-1, + 1] auf der tatsächlichen Achse ab.
+Ruft den Arkuskosinus einer komplexen Zahl mit achsenabschnitten außerhalb des Intervalls [-1, + 1] auf der reellen Achse ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -72,7 +61,7 @@ Eine komplexe Zahl, die einen Winkel als Bogenmaß darstellt
 
 ## <a name="return-value"></a>Rückgabewert
 
-Den Arkuskosinus des *z*, im Bogenmaß. Das Ergebnis ist unbounded imaginären Achse, und klicken Sie in der im Intervall [0,-π] auf der Achse real. Domänenfehler treten, wenn *z* liegt außerhalb des Intervalls [-1, + 1].
+Der Arkuskosinus der *z*, im Bogenmaß zurück. Das Ergebnis ist unbegrenzt, auf der imaginären Achse, und klicken Sie in der im Intervall [0, π] auf der reellen Achse. Domänenfehler werden auftreten, wenn *z* liegt außerhalb des Intervalls [-1, + 1].
 
 ## <a name="remarks"></a>Hinweise
 
@@ -80,7 +69,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Cacos**
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|C-Header|C++-Header|
+|-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
 |**Cacos**, **Cacosf**, **Cacosl**|\<complex.h>|\<ccomplex>|
 

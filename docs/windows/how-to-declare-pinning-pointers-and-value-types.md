@@ -1,27 +1,17 @@
 ---
-title: 'Vorgehensweise: Deklarieren von festen Zeigern und Werttypen | Microsoft-Dokumentation'
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: 'Gewusst wie: Deklarieren von festen Zeigern und Werttypen'
+ms.date: 10/12/2018
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - value types, declaring
 - pinning pointers
 ms.assetid: 57c5ec8a-f85a-48c4-ba8b-a81268bcede0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 88c7b9d0b9ed8a39bae09e2ec1691de90549fc11
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ed7835e3ab6ccda724ccb6c0d7cf5dab8dd4d342
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607148"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660862"
 ---
 # <a name="how-to-declare-pinning-pointers-and-value-types"></a>Gewusst wie: Deklarieren von festen Zeigern und Werttypen
 

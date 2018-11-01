@@ -14,25 +14,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 924e273e7d49778c3b20c065415883488456b4a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8dfdf894cca16c7c8a6a82ca5f5910aa31cd4bed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385018"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090502"
 ---
 # <a name="pragmas"></a>Pragmas
-**ANSI 3.8.6** Das Verhalten bei jeder erkannten #pragma-Direktive.  
-  
- Die folgenden [C-Pragmas](../c-language/c-pragmas.md) werden für den Microsoft C-Compiler definiert:  
-  
-|||||  
-|-|-|-|-|  
-|**alloc_text**|**data_seg**|**include_alias**|`setlocale`|  
-|**auto_inline**|**function**|**intrinsic**|**warning**|  
-|**check_stack**|**hdrstop**|**message**||  
-|**code_seg**|**inline_depth**|**optimize**||  
-|**comment**|**inline_recursion**|`pack`||  
-  
-## <a name="see-also"></a>Siehe auch  
- [Präprozessoranweisungen](../c-language/preprocessing-directives.md)
+
+**ANSI 3.8.6** Das Verhalten bei jeder erkannten #pragma-Direktive.
+
+Die folgenden [C-Pragmas](../c-language/c-pragmas.md) werden für den Microsoft C-Compiler definiert:
+
+|||||
+|-|-|-|-|
+|**alloc_text**|**data_seg**|**include_alias**|`setlocale`|
+|**auto_inline**|**function**|**intrinsic**|**warning**|
+|**check_stack**|**hdrstop**|**message**||
+|**code_seg**|**inline_depth**|**optimize**||
+|**comment**|**inline_recursion**|`pack`||
+
+## <a name="see-also"></a>Siehe auch
+
+[Präprozessoranweisungen](../c-language/preprocessing-directives.md)

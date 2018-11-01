@@ -1,27 +1,17 @@
 ---
-title: ANGENOMMEN | Microsoft-Dokumentation
-ms.custom: ''
+title: ASSUME
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: reference
 f1_keywords:
 - ASSUME
-dev_langs:
-- C++
 helpviewer_keywords:
 - ASSUME directive
 ms.assetid: cd162070-aee9-4c65-babc-005c6cc73d7c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8a0e43548292d2ffecbebdaead6aa12d6dacc352
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 97a57cc8a1acccf70572ff963e496aa79fa3ab43
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693807"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500567"
 ---
 # <a name="assume"></a>ASSUME
 
@@ -33,7 +23,6 @@ Fehler beim Überprüfen auf Registerwerte wird aktiviert.
 > ASSUME *Dataregister*:*Typ* [[, *Dataregister*:*Typ*]]...<br/>
 > ASSUME *registrieren*: Fehler [[, *registrieren*: Fehler]]...<br/>
 > ASSUME [[*registrieren*:]] "NOTHING" [[, *registrieren*: "NOTHING"]]...
-
 
 ## <a name="remarks"></a>Hinweise
 

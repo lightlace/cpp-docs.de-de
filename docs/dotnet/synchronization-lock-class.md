@@ -1,32 +1,25 @@
 ---
-title: Synchronisierung (Lock-Klasse) | Microsoft Docs
-ms.custom: ''
+title: Synchronisierung (lock-Klasse)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - lock class
 ms.assetid: 5d468122-875d-4e81-b5ba-c9486a873335
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: a16fa84f250175b188ffd492fed40477d76c9d00
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2174d1381d054b6586efd5ae82e77d38770e6af7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166685"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523967"
 ---
 # <a name="synchronization-lock-class"></a>Synchronisierung (lock-Klasse)
-Bietet einen Mechanismus zum Automatisieren der Sperre, die Zugriff auf ein Objekt synchronisiert.  
-  
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [lock](../dotnet/lock.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [C++-Standardbibliothek](../dotnet/cpp-support-library.md)
+
+Bietet einen Mechanismus zum Automatisieren von durch eine Sperre, die Zugriff auf ein Objekt synchronisiert wird.
+
+## <a name="in-this-section"></a>In diesem Abschnitt
+
+[lock](../dotnet/lock.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[C++-Standardbibliothek](../dotnet/cpp-support-library.md)

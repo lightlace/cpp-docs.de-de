@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c819d024b9b89d28c0e87b86382bf1c1f23258a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b097e1d3c7d26c51283d4f63bb2bae14059f21cc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118491"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069776"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Bewegungskonstruktoren und Bewegungszuweisungsoperatoren (C++)
 
@@ -151,14 +151,14 @@ Die folgenden Prozeduren beschreiben, wie ein Bewegungskonstruktor und ein Beweg
 
 1. Geben Sie in der Bedingungsanweisung alle Ressourcen (z. B. Arbeitsspeicher) aus dem Objekt, dem sie zugewiesen sind, frei.
 
-     Im folgenden Beispiel wird der `_data`-Member vom zugewiesenen Objekt freigegeben.
+   Im folgenden Beispiel wird der `_data`-Member vom zugewiesenen Objekt freigegeben.
 
     ```cpp
     // Free the existing resource.
     delete[] _data;
     ```
 
-     Führen Sie die Schritte 2 und 3 der ersten Prozedur aus, um die Datenmember aus dem Quellobjekt auf das zu erstellende Objekt zu übergeben:
+   Führen Sie die Schritte 2 und 3 der ersten Prozedur aus, um die Datenmember aus dem Quellobjekt auf das zu erstellende Objekt zu übergeben:
 
     ```cpp
     // Copy the data pointer and its length from the

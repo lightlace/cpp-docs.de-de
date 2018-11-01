@@ -29,44 +29,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04d06bd7728347770bd17c48abc9898f2a2467a4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22416f4036d79f9e9b7c95f1cf9098e450533f39
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408366"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054271"
 ---
 # <a name="setjmp3"></a>_setjmp3
-Interne CRT-Funktion. Eine neue Implementierung der Funktion `setjmp`.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int _setjmp3(  
-   OUT jmp_buf env,  
-   int count,  
-   (optional parameters)  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- [out] `env`  
- Adresse des Puffers zur Speicherung von Statusinformationen.  
-  
- [in] `count`  
- Die Anzahl zusätzlicher `DWORD`s von Informationen, die in der `optional parameters` gespeichert werden.  
-  
- [in] `optional parameters`  
- Zusätzliche vom systeminternen Objekt `setjmp` nach unten geschobene Daten. Das erste `DWORD` ist ein Funktionszeiger, der verwendet wird, um zusätzliche Daten aufzurufen und zu einem nichtflüchtigen Speicherstatus zurückzukehren. Das zweite `DWORD` ist die wiederherzustellende Versuchsebene. Alle weiteren Daten werden im generischen Datenarray im `jmp_buf` gespeichert.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Gibt immer 0 zurück.  
-  
-## <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Funktion nicht in einem C++-Programm. Es handelt sich um eine intrinsische Funktion, die C++ nicht unterstützt. Weitere Informationen zum Verwenden von `setjmp` finden Sie unter [Verwenden von „setjmp/longjmp“](../cpp/using-setjmp-longjmp.md).  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-## <a name="see-also"></a>Siehe auch  
- [Alphabetical Function Reference (Alphabetische Funktionsreferenz)](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [setjmp](../c-runtime-library/reference/setjmp.md)
+
+Interne CRT-Funktion. Eine neue Implementierung der Funktion `setjmp`.
+
+## <a name="syntax"></a>Syntax
+
+```
+int _setjmp3(
+   OUT jmp_buf env,
+   int count,
+   (optional parameters)
+);
+```
+
+#### <a name="parameters"></a>Parameter
+
+*env*<br/>
+[out]: Adresse des Puffers zum Speichern von Statusinformationen.
+
+*count*<br/>
+[in]: Die Anzahl zusätzlicher `DWORD`s von Informationen, die in den `optional parameters` gespeichert werden.
+
+*optional parameters*<br/>
+[in]: Zusätzliche vom systeminternen Objekt `setjmp` gepushte Daten. Das erste `DWORD` ist ein Funktionszeiger, der verwendet wird, um zusätzliche Daten aufzurufen und zu einem nichtflüchtigen Speicherstatus zurückzukehren. Das zweite `DWORD` ist die wiederherzustellende Versuchsebene. Alle weiteren Daten werden im generischen Datenarray im `jmp_buf` gespeichert.
+
+## <a name="return-value"></a>Rückgabewert
+
+Gibt immer 0 zurück.
+
+## <a name="remarks"></a>Hinweise
+
+Verwenden Sie diese Funktion nicht in einem C++-Programm. Es handelt sich um eine intrinsische Funktion, die C++ nicht unterstützt. Weitere Informationen zum Verwenden von `setjmp` finden Sie unter [Verwenden von „setjmp/longjmp“](../cpp/using-setjmp-longjmp.md).
+
+## <a name="requirements"></a>Anforderungen
+
+## <a name="see-also"></a>Siehe auch
+
+[Alphabetische Funktionsreferenz](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[setjmp](../c-runtime-library/reference/setjmp.md)

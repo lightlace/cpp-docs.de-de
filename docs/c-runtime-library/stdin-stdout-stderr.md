@@ -1,7 +1,7 @@
 ---
 title: stdin, stdout, stderr | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/23/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: conceptual
@@ -23,20 +23,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a36d5fd60a19222e6f802e5a14037fb01ff865f5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 707811a9c05135cb46520dd72895d677cdc0a6e4
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071977"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808705"
 ---
 # <a name="stdin-stdout-stderr"></a>stdin, stdout, stderr
 
 ## <a name="syntax"></a>Syntax
 
 ```
-
-      FILE *stdin; 
+FILE *stdin; 
 FILE *stdout; 
 FILE *stderr; 
 #include <stdio.h>
@@ -53,12 +52,12 @@ Die folgenden Datenstromzeiger sind für den Zugriff auf die Standarddatenström
 |Zeiger|Stream|
 |-------------|------------|
 |`stdin`|Standardeingabe|
-|**stdout**|Standardausgabe|
+|`stdout`|Standardausgabe|
 |`stderr`|Standardfehler|
 
-Diese Zeiger können als Argumente für Funktionen verwendet werden. Einige Funktionen wie **getchar** und `putchar` verwenden `stdin` und **stdout** automatisch.
+Diese Zeiger können als Argumente für Funktionen verwendet werden. Einige Funktionen wie [getchar](../c-runtime-library/reference/getchar-getwchar.md) und [putchar](../c-runtime-library/reference/putchar-putwchar.md) verwenden `stdin` und `stdout` automatisch.
 
-Diese Zeiger sind Konstanten, und es können ihnen keine neuen Werte zugewiesen werden. Die `freopen`-Funktion kann verwendet werden, um Datenströme auf Dateien auf Datenträgern oder andere Geräte umzuleiten. Das Betriebssystem ermöglicht Ihnen, die Standardein- und -ausgabe eines Programms auf Befehlsebene umzuleiten.
+Diese Zeiger sind Konstanten, und es können ihnen keine neuen Werte zugewiesen werden. Die [freopen](../c-runtime-library/reference/freopen-wfreopen.md)-Funktion kann verwendet werden, um Datenströme auf Dateien auf Datenträgern oder andere Geräte umzuleiten. Das Betriebssystem ermöglicht Ihnen, die Standardein- und -ausgabe eines Programms auf Befehlsebene umzuleiten.
 
 ## <a name="see-also"></a>Siehe auch
 

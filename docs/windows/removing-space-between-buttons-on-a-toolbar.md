@@ -1,27 +1,16 @@
 ---
-title: Entfernen eines Abstands zwischen den Schaltflächen einer Symbolleiste (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Entfernen eines Abstands zwischen den Schaltflächen einer Symbolleiste (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Toolbar editor [C++], spacing toolbar buttons
 - toolbar buttons [C++], space between buttons
 ms.assetid: 3bbbacec-cd42-4c35-9ea5-de62daa4041d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 2f1324fdef8e63f202536f46c4b164905a9130cd
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: fe463af7c23802ba375e2138ed913870503c8403
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44312681"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543019"
 ---
 # <a name="removing-space-between-buttons-on-a-toolbar-c"></a>Entfernen eines Abstands zwischen den Schaltflächen einer Symbolleiste (C++)
 
@@ -41,5 +30,5 @@ MFC oder ATL
 
 ## <a name="see-also"></a>Siehe auch
 
-[Erstellen, Verschieben und Bearbeiten von Schaltflächen der Symbolleiste](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[Erstellen, Verschieben und Bearbeiten von Schaltflächen der Symbolleiste](../windows/creating-moving-and-editing-toolbar-buttons.md)<br/>
 [Symbolleisten-Editor](../windows/toolbar-editor.md)

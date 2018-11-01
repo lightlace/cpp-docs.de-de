@@ -1,10 +1,6 @@
 ---
-title: Globale Funktionen zusammengesetzter Steuerelemente | Microsoft-Dokumentation
-ms.custom: ''
+title: Globale Funktionen zusammengesetzter Steuerelemente
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlhost/ATL::AtlAxDialogBox
 - atlhost/ATL::AtlAxCreateDialog
@@ -19,21 +15,15 @@ f1_keywords:
 - atlhost/ATL::AtlAxWinInit
 - atlhost/ATL::AtlAxWinTerm
 - atlhost/ATL::AtlGetObjectSourceInterface
-dev_langs:
-- C++
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 54e4ab00a0d0df90601d06d9e2ffa100d82d4c03
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d86978c6bf8aba87828cdda91c3e849a2f755a90
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46037358"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525267"
 ---
 # <a name="composite-control-global-functions"></a>Globale Funktionen zusammengesetzter Steuerelemente
 
@@ -56,11 +46,11 @@ Diese Funktionen bieten Unterstützung für das Erstellen von Dialogfeldern, und
 |[AtlSetChildSite](#atlsetchildsite)|Initialisiert die `IUnknown` des untergeordneten Standorts.|
 |[AtlAxWinInit](#atlaxwininit)|Initialisiert den Hostcode AxWin-Objekte.|
 |[AtlAxWinTerm](#atlaxwinterm)|Hebt die Initialisierung des Codes zum Hosten für AxWin-Objekte.|
-|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|Gibt Informationen über die standardquellschnittstelle eines Objekts zurück.|  
+|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|Gibt Informationen über die standardquellschnittstelle eines Objekts zurück.|
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** atlhost.h  
+**Header:** atlhost.h
 
 ##  <a name="atlaxdialogbox"></a>  AtlAxCreateDialog
 
@@ -81,7 +71,7 @@ ATLAPI_(int) AtlAxDialogBox(
 [in] Identifiziert eine Instanz des Moduls, deren ausführbare Datei der Dialogfeldvorlage enthält.
 
 *lpTemplateName*<br/>
-[in] Identifiziert die Dialogfeldvorlage. Dieser Parameter ist entweder der Zeiger auf eine Null-terminierte Zeichenfolge, die gibt den Namen der Dialogfeldvorlage oder ein ganzzahliger Wert, der angibt, den Ressourcenbezeichner, der die Dialogfeldvorlage. Wenn der Parameter einen Ressourcenbezeichner angegeben ist, dessen höherwertiges Wort muss 0 (null) sein, und seine niederwertige Wort muss den Bezeichner enthalten. Sie können die [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) Makro zum Erstellen dieses Werts.
+[in] Identifiziert die Dialogfeldvorlage. Dieser Parameter ist entweder der Zeiger auf eine Null-terminierte Zeichenfolge, die gibt den Namen der Dialogfeldvorlage oder ein ganzzahliger Wert, der angibt, den Ressourcenbezeichner, der die Dialogfeldvorlage. Wenn der Parameter einen Ressourcenbezeichner angegeben ist, dessen höherwertiges Wort muss 0 (null) sein, und seine niederwertige Wort muss den Bezeichner enthalten. Sie können die [MAKEINTRESOURCE](/windows/desktop/api/winuser/nf-winuser-makeintresourcea) Makro zum Erstellen dieses Werts.
 
 *hWndParent*<br/>
 [in] Gibt das Fenster, das Dialogfeld besitzt.
@@ -101,7 +91,7 @@ Einer der standardmäßigen HRESULT-Werte.
 Mit `AtlAxDialogBox` mit einer Dialogfeldvorlage, der ein ActiveX-Steuerelement enthält, geben Sie eine gültige CLSID "," APPID "oder" URL-Zeichenfolge als die *Text* Feld der **Steuerelement** Abschnitt der Dialogfeldressource, zusammen mit " AtlAxWin80 "als die *Klassenname* Feld im gleichen Abschnitt. Im folgenden wird veranschaulicht, was eine gültige **Steuerelement** Abschnitt könnte folgendermaßen aussehen:
 
 ```
-CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,  
+CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
@@ -128,7 +118,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 [in] Identifiziert eine Instanz des Moduls, deren ausführbare Datei der Dialogfeldvorlage enthält.
 
 *lpTemplateName*<br/>
-[in] Identifiziert die Dialogfeldvorlage. Dieser Parameter ist entweder der Zeiger auf eine Null-terminierte Zeichenfolge, die gibt den Namen der Dialogfeldvorlage oder ein ganzzahliger Wert, der angibt, den Ressourcenbezeichner, der die Dialogfeldvorlage. Wenn der Parameter einen Ressourcenbezeichner angegeben ist, dessen höherwertiges Wort muss 0 (null) sein, und seine niederwertige Wort muss den Bezeichner enthalten. Sie können die [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) Makro zum Erstellen dieses Werts.
+[in] Identifiziert die Dialogfeldvorlage. Dieser Parameter ist entweder der Zeiger auf eine Null-terminierte Zeichenfolge, die gibt den Namen der Dialogfeldvorlage oder ein ganzzahliger Wert, der angibt, den Ressourcenbezeichner, der die Dialogfeldvorlage. Wenn der Parameter einen Ressourcenbezeichner angegeben ist, dessen höherwertiges Wort muss 0 (null) sein, und seine niederwertige Wort muss den Bezeichner enthalten. Sie können die [MAKEINTRESOURCE](/windows/desktop/api/winuser/nf-winuser-makeintresourcea) Makro zum Erstellen dieses Werts.
 
 *hWndParent*<br/>
 [in] Gibt das Fenster, das Dialogfeld besitzt.
@@ -261,7 +251,7 @@ Ein lizenziertes ActiveX-Steuerelement erstellen zu können, finden Sie unter [A
 
 ##  <a name="atlaxcreatecontrollic"></a>  AtlAxCreateControlLic
 
-Erstellt ein lizenziertes ActiveX-Steuerelement, initialisiert es und hostet es im angegebenen Fenster.  
+Erstellt ein lizenziertes ActiveX-Steuerelement, initialisiert es und hostet es im angegebenen Fenster.
 
 ```
 ATLAPI AtlAxCreateControlLic(
@@ -484,7 +474,7 @@ Ungleich NULL, wenn die Initialisierung des Steuerelements Hostcode erfolgreich 
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Funktion muss aufgerufen werden, bevor Sie mit dem ATL-Steuerelement, das hosting-API. Nach einem Aufruf dieser Funktion die **"AtlAxWin"** Window-Klasse kann verwendet werden, in Aufrufen von [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) oder [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)gemäß der Beschreibung in das Windows SDK.  
+Diese Funktion muss aufgerufen werden, bevor Sie mit dem ATL-Steuerelement, das hosting-API. Nach einem Aufruf dieser Funktion die **"AtlAxWin"** Window-Klasse kann verwendet werden, in Aufrufen von [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) oder [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)gemäß der Beschreibung in das Windows SDK.
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinInit
 

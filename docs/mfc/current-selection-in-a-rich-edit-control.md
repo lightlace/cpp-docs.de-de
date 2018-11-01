@@ -17,25 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b115f576100ec89b2de4d3b2e63fe74b96337c7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c5870c7c3352a53d85bdd15020a1e7f535ef6efc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209830"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403668"
 ---
 # <a name="current-selection-in-a-rich-edit-control"></a>Die aktuelle Auswahl in einem RichEdit-Steuerelement
-Der Benutzer Text in einem rich-Edit-Steuerelement auswählen kann ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) mithilfe der Maus oder der Tastatur. Die aktuelle Auswahl ist der Bereich der markierten Zeichen oder die Position der Einfügemarke, wenn keine Zeichen ausgewählt werden. Eine Anwendung kann erfahren Sie mehr über die aktuelle Auswahl, die aktuelle Auswahl festlegen, bestimmen den Änderungen der aktuellen Auswahl, und anzeigen oder Ausblenden der Auswahl beim markieren.  
-  
- Verwenden Sie zum Bestimmen der aktuellen Auswahl in einem rich-Edit-Steuerelement die [Memberfunktion GetSel](../mfc/reference/cricheditctrl-class.md#getsel) Member-Funktion. Verwenden Sie zum Festlegen der aktuellen Auswahl der [Memberfunktion SetSel](../mfc/reference/cricheditctrl-class.md#setsel) Member-Funktion. Die [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) Struktur mit diesen Funktionen verwendet, um einen Bereich von Zeichen anzugeben. Um Informationen über den Inhalt der aktuellen Auswahl abzurufen, können Sie die [Memberfunktion GetSelectionType](../mfc/reference/cricheditctrl-class.md#getselectiontype) Member-Funktion.  
-  
- Standardmäßig wird ein rich-Edit-Steuerelement zeigt und blendet Sie aus der Markierung der erhält und den Fokus verliert. Sie können ein- oder die Markierung der jederzeit ausblenden, indem die [HideSelection](../mfc/reference/cricheditctrl-class.md#hideselection) Member-Funktion. Beispielsweise kann eine Anwendung eine Meldungssuche (Dialogfeld), um nach Text in einem rich-Edit-Steuerelement suchen bereitstellen. Die Anwendung möglicherweise übereinstimmenden Text auswählen, ohne das Dialogfeld zu schließen, er muss in diesem Fall verwenden `HideSelection` markieren.  
-  
- Rufen Sie den markierten Text in einem rich-Edit-Steuerelement mit dem [Memberfunktion GetSelText](../mfc/reference/cricheditctrl-class.md#getseltext) Member-Funktion. Der Text wird in das angegebene Zeichenarray kopiert. Sie müssen sicherstellen, dass das Array groß genug für den markierten Text und ein abschließendes Null-Zeichen ist.  
-  
- Sie können nach einer Zeichenfolge in einem rich-Edit-Steuerelement suchen, mit der [FindText](../mfc/reference/cricheditctrl-class.md#findtext) Memberfunktion die [FINDTEXTEX](/windows/desktop/api/richedit/ns-richedit-_findtextexa) Struktur, die diese Funktion gibt an, der Bereich des Texts zu suchen und die zu suchende Zeichenfolge. Sie können diese Optionen auch angeben, als gibt an, ob der Suche die Groß-/Kleinschreibung beachtet werden.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+
+Der Benutzer Text in einem rich-Edit-Steuerelement auswählen kann ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) mithilfe der Maus oder der Tastatur. Die aktuelle Auswahl ist der Bereich der markierten Zeichen oder die Position der Einfügemarke, wenn keine Zeichen ausgewählt werden. Eine Anwendung kann erfahren Sie mehr über die aktuelle Auswahl, die aktuelle Auswahl festlegen, bestimmen den Änderungen der aktuellen Auswahl, und anzeigen oder Ausblenden der Auswahl beim markieren.
+
+Verwenden Sie zum Bestimmen der aktuellen Auswahl in einem rich-Edit-Steuerelement die [Memberfunktion GetSel](../mfc/reference/cricheditctrl-class.md#getsel) Member-Funktion. Verwenden Sie zum Festlegen der aktuellen Auswahl der [Memberfunktion SetSel](../mfc/reference/cricheditctrl-class.md#setsel) Member-Funktion. Die [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) Struktur mit diesen Funktionen verwendet, um einen Bereich von Zeichen anzugeben. Um Informationen über den Inhalt der aktuellen Auswahl abzurufen, können Sie die [Memberfunktion GetSelectionType](../mfc/reference/cricheditctrl-class.md#getselectiontype) Member-Funktion.
+
+Standardmäßig wird ein rich-Edit-Steuerelement zeigt und blendet Sie aus der Markierung der erhält und den Fokus verliert. Sie können ein- oder die Markierung der jederzeit ausblenden, indem die [HideSelection](../mfc/reference/cricheditctrl-class.md#hideselection) Member-Funktion. Beispielsweise kann eine Anwendung eine Meldungssuche (Dialogfeld), um nach Text in einem rich-Edit-Steuerelement suchen bereitstellen. Die Anwendung möglicherweise übereinstimmenden Text auswählen, ohne das Dialogfeld zu schließen, er muss in diesem Fall verwenden `HideSelection` markieren.
+
+Rufen Sie den markierten Text in einem rich-Edit-Steuerelement mit dem [Memberfunktion GetSelText](../mfc/reference/cricheditctrl-class.md#getseltext) Member-Funktion. Der Text wird in das angegebene Zeichenarray kopiert. Sie müssen sicherstellen, dass das Array groß genug für den markierten Text und ein abschließendes Null-Zeichen ist.
+
+Sie können nach einer Zeichenfolge in einem rich-Edit-Steuerelement suchen, mit der [FindText](../mfc/reference/cricheditctrl-class.md#findtext) Memberfunktion die [FINDTEXTEX](/windows/desktop/api/richedit/ns-richedit-_findtextexa) Struktur, die diese Funktion gibt an, der Bereich des Texts zu suchen und die zu suchende Zeichenfolge. Sie können diese Optionen auch angeben, als gibt an, ob der Suche die Groß-/Kleinschreibung beachtet werden.
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden von CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
+[Steuerelemente](../mfc/controls-mfc.md)
 

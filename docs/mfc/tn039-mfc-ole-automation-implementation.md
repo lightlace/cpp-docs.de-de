@@ -1,5 +1,5 @@
 ---
-title: 'TN039: MFC-OLE-Automatisierungsimplementierung | Microsoft Docs'
+title: 'TN039: MFC-OLE-Automatisierungsimplementierung | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dcc179b1481c4f1f6b6a0773bba792eefffae25
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 59eca912aab816f75ce8d585036f8f900c4f7bd3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122120"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399874"
 ---
 # <a name="tn039-mfcole-automation-implementation"></a>TN039: MFC/OLE-Automatisierungsimplementierung
 
@@ -34,23 +34,23 @@ ms.locfileid: "37122120"
 
 ## <a name="overview-of-ole-idispatch-interface"></a>Übersicht über die OLE-IDispatch-Schnittstelle
 
-Die `IDispatch` Schnittstelle dient dazu, mit dem Anwendungen verfügbar zu machen, Methoden und Eigenschaften, die andere Anwendungen, z. B. Visual BASIC oder andere Sprachen können z. B. von Features der Anwendung verwenden. Der wichtigste Teil dieser Schnittstelle ist die `IDispatch::Invoke` Funktion. MFC verwendet "Dispatchzuordnungen" implementiert `IDispatch::Invoke`. Die Dispatchzuordnung enthält die MFC-Implementierung-Informationen zum Layout oder "Form" Ihre `CCmdTarget`-Klassen abgeleitet, sodass es direkt bearbeiten die Eigenschaften des Objekts kann, oder rufen Sie Member Funktionen innerhalb des Objekts nicht erfüllen `IDispatch::Invoke` Anforderungen.
+Die `IDispatch` Schnittstelle ist die Möglichkeit, die mit dem Anwendungen verfügbar zu machen, Methoden und Eigenschaften, die andere Anwendungen wie z. B. Visual BASIC oder andere Sprachen können z. B. von Features der Anwendung verwenden. Der wichtigste Teil dieser Schnittstelle ist die `IDispatch::Invoke` Funktion. MFC verwendet "Dispatchzuordnungen" implementieren `IDispatch::Invoke`. Die Dispatchzuordnung erläutert, die MFC-Implementierung des Layouts oder "Form" Ihre `CCmdTarget`-Klassen abgeleitet, sodass es direkt bearbeiten die Eigenschaften des Objekts kann, oder rufen Sie die Memberfunktionen in das Objekt zu erfüllen `IDispatch::Invoke` Anforderungen.
 
-Meistens, ermöglichen ClassWizard und MFC die meisten Details der OLE-Automatisierung aus der Anwendungsprogrammierer ausblenden. Der Programmierer konzentriert sich auf die eigentlichen Funktionen in der Anwendung verfügbar gemacht und verfügt nicht über die Aufgaben, die zugrunde liegenden Gedanken.
+Zum größten Teil, ermöglichen ClassWizard und MFC die meisten Details der OLE-Automatisierung aus den Anwendungsprogrammierer ausblenden. Der Programmierer konzentriert sich auf die eigentliche Funktionalität, in der Anwendung verfügbar zu machen und verfügt nicht über die zugrunde liegende Infrastruktur kümmern.
 
-Es gibt Fälle, allerdings es erforderlich ist, um zu verstehen, was MFC im Hintergrund ausführt. Dieser Hinweis geht es um wie das Framework weist **DISPID**s auf Member-Funktionen und Eigenschaften. Kenntnisse des-Algorithmus MFC zum Zuweisen von verwendet **DISPID**s ist nur erforderlich, wenn Sie für Ihre Anwendung Objekte die IDs, z. B. beim Erstellen einer "Typbibliothek" kennen müssen.
+Es gibt Fälle, allerdings es erforderlich ist, um zu verstehen, was hinter den Kulissen MFC macht. In diesem Hinweis geht es um das Framework wie weist **DISPID**s, um der Member-Funktionen und Eigenschaften. Kenntnisse des-Algorithmus MFC zum Zuweisen von verwendet **DISPID**s ist nur erforderlich, wenn Sie wissen müssen, die IDs, z. B. bei der Erstellung einer "Typbibliothek" für Ihre Anwendung Objekte.
 
 ## <a name="mfc-dispid-assignment"></a>MFC DISPID Zuweisung
 
-Obwohl die Endbenutzer Automatisierung (ein Visual Basic-Benutzer, z. B.), sieht die tatsächlichen Namen des aktiviert der Automatisierungs, Eigenschaften und Methoden in ihren Code (z. B. Objekt ShowWindow), die Implementierung der `IDispatch::Invoke` empfängt nicht die tatsächlichen Namen. Aus Gründen der Optimierung, die er empfängt eine **DISPID**, dies ist eine 32-Bit "magische Cookie", die beschreibt, die Methode oder Eigenschaft, die erfolgen muss. Diese **DISPID** Werte zurückgegeben werden, aus der `IDispatch` Implementierung durch eine andere Methode, mit dem Namen `IDispatch::GetIDsOfNames`. Eine Automatisierungsclientanwendung angerufen `GetIDsOfNames` nach für jeden Member oder die Eigenschaft soll den Zugriff und das Zwischenspeichern für spätere Aufrufe an `IDispatch::Invoke`. Auf diese Weise die aufwändige Zeichenfolgensuche erfolgt nur einmal pro Objekt verwenden, anstatt einmal pro `IDispatch::Invoke` aufrufen.
+Obwohl die Endbenutzer der Automatisierung (Benutzer von Visual Basic, z. B.), sieht die tatsächlichen Namen der aktiviert der Automatisierungs, Eigenschaften und Methoden in ihrem Code (z. B. obj. ShowWindow), die Implementierung der `IDispatch::Invoke` empfängt nicht die tatsächlichen Namen. Aus Gründen der Optimierung, die er empfängt eine **DISPID**, das ist eine 32-Bit-"Magic Cookie", die beschreibt, die Methode oder Eigenschaft, die auf die zugegriffen werden. Diese **DISPID** werden Werte zurückgegeben, aus der `IDispatch` Implementierung durch eine andere Methode namens `IDispatch::GetIDsOfNames`. Ruft eine Automatisierungsclientanwendung `GetIDsOfNames` nach für jeden Member oder die Eigenschaft zugreifen darf, und für spätere Aufrufe zwischenspeichern soll `IDispatch::Invoke`. Auf diese Weise die teure Zeichenfolgensuche erfolgt nur einmal pro Objekt verwenden, anstatt einmal pro `IDispatch::Invoke` aufrufen.
 
-MFC bestimmt die **DISPID**s für jede Methode und Eigenschaft basierend auf zwei Dinge:
+MFC bestimmt die **DISPID**für jede Methode und Eigenschaft basierend auf zwei Dinge:
 
-- Der Abstand vom oberen Rand der Dispatchzuordnung (1, relativ)
+- Der Abstand zwischen dem oberen Rand der Dispatchzuordnung (1, relativ)
 
-- Der Abstand der Dispatchzuordnung aus der am stärksten abgeleitete Klasse (relative 0)
+- Der Abstand der Dispatchzuordnung in der abgeleitetsten Klasse (relative 0)
 
-Die **DISPID** ist in zwei Teile unterteilt. Die **LOWORD** von der **DISPID** enthält die erste Komponente, die den Abstand vom oberen Rand der Dispatchzuordnung. Die **HIWORD** den Abstand zwischen den am stärksten abgeleitete Klasse enthält. Zum Beispiel:
+Die **DISPID** ist in zwei Teile unterteilt. Die **LOWORD** von der **DISPID** enthält die erste Komponente, die den Abstand zwischen dem oberen Rand der Dispatchzuordnung. Die **HIWORD** enthält die Entfernung von der am stärksten abgeleitete Klasse. Zum Beispiel:
 
 ```cpp
 class CDispPoint : public CCmdTarget
@@ -81,18 +81,18 @@ BEGIN_DISPATCH_MAP(CDisp3DPoint, CDispPoint)
 END_DISPATCH_MAP()
 ```
 
-Wie Sie sehen können, sind zwei Klassen, die OLE-Automatisierungsschnittstellen verfügbar machen. Einer dieser Klassen, die von der anderen abgeleitet ist und daher nutzt die Basisklasse-Funktionen, einschließlich des Teils der OLE-Automatisierung ("X" und "y" die Eigenschaften in diesem Fall).
+Wie Sie sehen können, gibt es zwei Klassen, die beide Schnittstellen für OLE-Automatisierung verfügbar zu machen. Einer dieser Klassen, die von der anderen abgeleitet ist und daher nutzt die Funktionen von der Basisklasse, einschließlich des Teils der OLE-Automatisierung ("X" und "y" Eigenschaften in diesem Fall).
 
-MFC generiert **DISPID**s-CDispPoint wie folgt:
+MFC generiert **DISPID**s für die-Klasse CDispPoint wie folgt:
 
 ```cpp
 property X    (DISPID)0x00000001
 property Y    (DISPID)0x00000002
 ```
 
-Da die Eigenschaften nicht in einer Basisklasse sind die **HIWORD** von der **DISPID** ist immer 0 (null) (die Entfernung von der am stärksten abgeleitete Klasse für CDispPoint ist 0 (null)).
+Da die Eigenschaften nicht in einer Basisklasse, sind die **HIWORD** von der **DISPID** ist immer 0 (null) (die Entfernung von der am stärksten abgeleitete Klasse für CDispPoint ist 0 (null)).
 
-MFC generiert **DISPID**s-CDisp3DPoint wie folgt:
+MFC generiert **DISPID**s für die-Klasse CDisp3DPoint wie folgt:
 
 ```cpp
 property Z    (DISPID)0x00000001
@@ -100,16 +100,16 @@ property X    (DISPID)0x00010001
 property Y    (DISPID)0x00010002
 ```
 
-Die Z-Eigenschaft erhält eine **DISPID** mit einer NULL **HIWORD** , da sie in der Klasse definiert ist, die die Eigenschaften, CDisp3DPoint verfügbar macht, ist. Da die X- und Y-Eigenschaften in einer Basisklasse definiert sind die **HIWORD** von der **DISPID** beträgt 1, da die Klasse, die in der diese Eigenschaften definiert werden in einem Abstand von eine Ableitung der am stärksten abgeleitete Klasse ist.
+Die Z-Eigenschaft erhält eine **DISPID** mit einer NULL **HIWORD** , da sie in der Klasse definiert ist, die die Eigenschaften, CDisp3DPoint verfügbar gemacht wird. Da die X- und Y-Eigenschaften in einer Basisklasse definiert sind die **HIWORD** von der **DISPID** 1 ist, da die Klasse, die in der folgenden Eigenschaften definiert sind in einem Abstand von einer Ableitung die am stärksten abgeleitete Klasse ist.
 
 > [!NOTE]
-> Die **LOWORD** immer richtet sich nach der Position in der Zuordnung selbst, wenn vorhanden Einträge in der Zuordnung mit expliziten sind **DISPID** (finden Sie Informationen im folgenden Abschnitt auf der **_ID** Versionen der `DISP_PROPERTY` und `DISP_FUNCTION` Makros).
+> Die **LOWORD** wird immer durch die Position in der Zuordnung bestimmt auch, wenn Einträge in der Zuordnung mit expliziten vorhanden sind **DISPID** (Informationen finden Sie weiter Abschnitt auf den **_ID** Versionen der `DISP_PROPERTY` und `DISP_FUNCTION` Makros).
 
-## <a name="advanced-mfc-dispatch-map-features"></a>Erweiterte MFC-Dispatch-Kartenfunktionen
+## <a name="advanced-mfc-dispatch-map-features"></a>Erweiterte MFC-Dispatch-Map-Features
 
-Es gibt diverse weitere Funktionen, die von ClassWizard nicht unterstützt in dieser Version von Visual C++. Klassen-Assistent unterstützt `DISP_FUNCTION`, `DISP_PROPERTY`, und `DISP_PROPERTY_EX` die eine Methode, die Variable Elementeigenschaft und die Elementeigenschaft Funktion Get/Set bzw. definieren. Diese Funktionen sind in der Regel alle, die benötigt wird, um die meisten Automatisierungsserver zu erstellen.
+Es gibt zahlreiche weitere Funktionen, die Klassen-Assistenten nicht unterstützt. mit dieser Version von Visual C++. Klassen-Assistent unterstützt `DISP_FUNCTION`, `DISP_PROPERTY`, und `DISP_PROPERTY_EX` die eine Methode, Variable Elementeigenschaft und get-/Set-Funktionseigenschaft bzw. definieren. Diese Funktionen sind in der Regel alles, die was benötigt wird, um die meisten Automatisierungsserver zu erstellen.
 
-Die folgenden zusätzlichen Makros können verwendet werden, wenn die Klassen-Assistent unterstützt Makros nicht angemessen sind: `DISP_PROPERTY_NOTIFY`, und `DISP_PROPERTY_PARAM`.
+Die folgenden zusätzlichen Makros können verwendet werden, wenn die Makros, die Klassen-Assistent unterstützt nicht angemessen sind: `DISP_PROPERTY_NOTIFY`, und `DISP_PROPERTY_PARAM`.
 
 ## <a name="disppropertynotify--macro-description"></a>DISP_PROPERTY_NOTIFY – Makrobeschreibung
 
@@ -124,24 +124,24 @@ DISP_PROPERTY_NOTIFY(
 
 ### <a name="parameters"></a>Parameter
 
-*theClass*  
- Der Name der Klasse.
+*theClass*<br/>
+Der Name der Klasse.
 
-*pszName*  
- Externer Name der Eigenschaft.
+*pszName*<br/>
+Externer Name der Eigenschaft.
 
-*memberName*  
- Name der Membervariable, in der die Eigenschaft gespeichert ist.
+*MemberName*<br/>
+Der Name der Membervariablen, die in der die Eigenschaft gespeichert wird.
 
-*pfnAfterSet*  
- Name der Memberfunktion aufgerufen wird, wenn die Eigenschaft geändert wird.
+*pfnAfterSet*<br/>
+Name des Member-Funktion aufrufen, wenn die Eigenschaft geändert wird.
 
-*vtPropType*  
- Ein Wert, der den Typ der Eigenschaft.
+*vtPropType*<br/>
+Ein Wert, der den Typ der Eigenschaft angibt.
 
 ### <a name="remarks"></a>Hinweise
 
-Dieses Makro entspricht weitgehend DISP_PROPERTY, außer dass sie ein zusätzliches Argument akzeptiert. Das zusätzliche Argument *PfnAfterSet,* sollte eine Memberfunktion, die keinen Wert zurückgibt und nimmt keine Parameter, "" void "OnPropertyNotify()" sein. Aufgerufen wird **nach** die Membervariable geändert wurde.
+Dieses Makro entspricht weitgehend DISP_PROPERTY, außer dass es sich um ein zusätzliches Argument akzeptiert. Das zusätzliche Argument *PfnAfterSet,* muss eine Memberfunktion, die keinen Wert zurückgibt und nimmt keine Parameter, "" void "OnPropertyNotify()". Wird aufgerufen **nach** die Membervariable geändert wurde.
 
 ## <a name="disppropertyparam--macro-description"></a>DISP_PROPERTY_PARAM – Makrobeschreibung
 
@@ -157,33 +157,33 @@ DISP_PROPERTY_PARAM(
 
 ### <a name="parameters"></a>Parameter
 
-*theClass*  
- Der Name der Klasse.
+*theClass*<br/>
+Der Name der Klasse.
 
-*pszName*  
- Externer Name der Eigenschaft.
+*pszName*<br/>
+Externer Name der Eigenschaft.
 
-*memberGet*  
- Name der Elementfunktion, die zum Abrufen der Eigenschaft verwendet.
+*memberGet*<br/>
+Der Name der Memberfunktion verwendet, um die Eigenschaft abzurufen.
 
-*Elementgruppe*  
- Name der Elementfunktion verwendet, um die Eigenschaft festzulegen.
+*"MemberSet"*<br/>
+Der Name der Memberfunktion verwendet, um die Eigenschaft festzulegen.
 
-*vtPropType*  
- Ein Wert, der den Typ der Eigenschaft.
+*vtPropType*<br/>
+Ein Wert, der den Typ der Eigenschaft angibt.
 
-*vtsParams*  
- Eine Zeichenfolge mit Leerzeichen getrennt VTS_ für jeden Parameter.
+*vtsParams*<br/>
+Eine Zeichenfolge mit Leerzeichen getrennte VTS_ für jeden Parameter.
 
 ### <a name="remarks"></a>Hinweise
 
-Wie das DISP_PROPERTY_EX-Makro definiert dieses Makro viel eine Eigenschaft, die mit separaten Get- und Set-Memberfunktionen zugegriffen. Dieses Makro können jedoch eine Parameterliste für die Eigenschaft an. Dies ist hilfreich bei der Implementierung von Eigenschaften, die indiziert oder parametrisiert werden auf andere Weise. Die Parameter werden immer zuerst platziert gefolgt von den neuen Wert für die Eigenschaft. Zum Beispiel:
+Wie die DISP_PROPERTY_EX-Makro definiert dieses Makro viel eine Eigenschaft, die mit separaten Get- und Set-Member-Funktionen zugegriffen. Dieses Makro, Ihnen jedoch zu eine Parameterliste für die Eigenschaft angeben. Dies ist nützlich für die Eigenschaften, die indiziert oder parametrisiert werden auf andere Weise implementieren. Die Parameter werden immer zuerst platziert gefolgt von den neuen Wert für die Eigenschaft. Zum Beispiel:
 
 ```cpp
 DISP_PROPERTY_PARAM(CMyObject, "item", GetItem, SetItem, VT_DISPATCH, VTS_I2 VTS_I2)
 ```
 
-wird zum Abrufen und Festlegen von Memberfunktionen entsprechen:
+würde entsprechen, zum Abrufen und Festlegen der Member-Funktionen:
 
 ```cpp
 LPDISPATCH CMyObject::GetItem(short row, short col)
@@ -232,33 +232,33 @@ DISP_PROPERTY_PARAM_ID(
 
 ### <a name="parameters"></a>Parameter
 
-*theClass*  
+*theClass*<br/>
 Der Name der Klasse.
 
-*pszName*  
+*pszName*<br/>
 Externer Name der Eigenschaft.
 
-*DISPID*  
+*DISPID*<br/>
 Die festen DISPID für die Eigenschaft oder Methode.
 
-*pfnGet*  
-Name der Elementfunktion, die zum Abrufen der Eigenschaft verwendet.
+*pfnGet*<br/>
+Der Name der Memberfunktion verwendet, um die Eigenschaft abzurufen.
 
-*pfnSet*  
-Name der Elementfunktion verwendet, um die Eigenschaft festzulegen.
+*pfnSet*<br/>
+Der Name der Memberfunktion verwendet, um die Eigenschaft festzulegen.
 
-*memberName*  
-Der Name der Membervariable der Eigenschaft zuordnen
+*MemberName*<br/>
+Der Name der Membervariable der Eigenschaft zugeordnet.
 
-*vtPropType*  
-Ein Wert, der den Typ der Eigenschaft.
+*vtPropType*<br/>
+Ein Wert, der den Typ der Eigenschaft angibt.
 
-*vtsParams*  
-Eine Zeichenfolge mit Leerzeichen getrennt VTS_ für jeden Parameter.
+*vtsParams*<br/>
+Eine Zeichenfolge mit Leerzeichen getrennte VTS_ für jeden Parameter.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Makros ermöglichen Ihnen die Angabe einer **DISPID** anstatt MFC automatisch eine zuweisen. Diese erweiterten Makros außer dieser ID an den Makronamen angefügt wird, die denselben Namen haben (z. B. **DISP_PROPERTY_ID**) und die ID wird bestimmt durch den Parameter angegebene direkt nach der *PszName* Parameter. Finden Sie unter AFXDISP. Für Weitere Informationen zu diesen Makros H. Die **_ID** Einträge müssen am Ende der Dispatchzuordnung platziert werden. Sie wirken sich auf die automatische **DISPID** Generation auf die gleiche Weise wie einen nicht-**_ID** Version des Makros würde (die **DISPID**s werden anhand der Position). Zum Beispiel:
+Diese Makros können Sie eine **DISPID** eines anstatt MFC automatisch zuweisen. Diese erweiterten Makros die gleichen Namen verfügen, außer dass es sich bei dieser ID auf den Makronamen angefügt wird (z. B. **DISP_PROPERTY_ID**), und die ID wird bestimmt durch den Parameter angegebene direkt nach der *PszName* Parameter. Finden Sie unter AFXDISP. Für Weitere Informationen zu diesen Makros H. Die **_ID** Einträge am Ende der Dispatchzuordnung platziert werden müssen. Sie wirkt sich auf die automatische **DISPID** Generation in die gleiche Weise wie einen nicht-**_ID** Version des Makros würde (der **DISPID**s werden anhand der Position bestimmt). Zum Beispiel:
 
 ```cpp
 BEGIN_DISPATCH_MAP(CDisp3DPoint, CCmdTarget)
@@ -268,7 +268,7 @@ BEGIN_DISPATCH_MAP(CDisp3DPoint, CCmdTarget)
 END_DISPATCH_MAP()
 ```
 
-MFC DISPIDs für Klasse CDisp3DPoint folgendermaßen generiert:
+MFC DISPIDs für CDisp3DPoint-Klasse wie folgt generiert:
 
 ```cpp
 property X    (DISPID)0x00020003
@@ -276,11 +276,11 @@ property Y    (DISPID)0x00000002
 property Z    (DISPID)0x00000001
 ```
 
-Festlegen einer festen **DISPID** eignet sich Abwärtskompatibilität auf eine bereits vorhandene Dispatchschnittstelle oder um bestimmte vom System definierte Methoden oder Eigenschaften zu implementieren (angegeben in der Regel durch eine Negative  **DISPID**, wie z. B. die **DISPID_NEWENUM** Auflistung).
+Angeben einer festen **DISPID** ist nützlich, um Abwärtskompatibilität zu einer bereits vorhandenen Verteilschnittstelle oder bestimmte System definierten Methoden oder Eigenschaften zu implementieren (angegeben in der Regel um einen negativen Wert  **DISPID**, z. B. die **DISPID_NEWENUM** Auflistung).
 
 ## <a name="retrieving-the-idispatch-interface-for-a-coleclientitem"></a>Abrufen der IDispatch-Schnittstelle für eine COleClientItem
 
-Viele Server unterstützt die Automatisierung in ihrer Document-Objekte zusammen mit der OLE-Server-Funktionen. Um den Zugriff auf diese Automatisierungsschnittstelle zugreifen zu können, es ist notwendig, direkt den Zugriff der `COleClientItem::m_lpObject` Membervariablen gespeichert. Der folgende Code Ruft die `IDispatch` -Schnittstelle für ein Objekt abgeleitet `COleClientItem`. Sie können den folgenden Code in der Anwendung einschließen, wenn Sie diese Funktion erforderlichen finden:
+Viele Server unterstützt die Automatisierung in ihrer Dokumentobjekte, zusammen mit der OLE-Server-Funktionalität. Um den Zugriff auf dieses Automation-Schnittstelle ist es erforderlich, direkt den Zugriff der `COleClientItem::m_lpObject` Membervariablen gespeichert. Der folgende Code Ruft die `IDispatch` -Schnittstelle für ein Objekt abgeleitet `COleClientItem`. Sie können den folgenden Code in der Anwendung einschließen, wenn Sie diese Funktion erforderlichen finden:
 
 ```cpp
 LPDISPATCH CMyClientItem::GetIDispatch()
@@ -319,9 +319,9 @@ LPDISPATCH CMyClientItem::GetIDispatch()
 }
 ```
 
-Die Dispatchschnittstelle zurückgegeben werden, von dieser Funktion kann dann direkt verwendet oder angefügt eine `COleDispatchDriver` für Typsicherer Zugriff. Wenn Sie es direkt verwenden, stellen Sie sicher, dass Sie aufrufen seine `Release` Member Wenn über den Zeiger (die `COleDispatchDriver` Destruktor wird dies standardmäßig).
+Die Dispatchschnittstelle zurückgegeben wird, über diese Funktion kann dann direkt verwendet oder angefügt eine `COleDispatchDriver` für Typsicherer Zugriff. Wenn Sie es direkt verwenden, stellen Sie sicher, dass Sie Aufrufen der `Release` Member beim über mit dem Mauszeiger (die `COleDispatchDriver` Destruktor ist dies standardmäßig).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)  
-[Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)  
+[Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)<br/>
+[Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)

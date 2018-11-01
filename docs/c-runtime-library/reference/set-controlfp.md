@@ -1,10 +1,6 @@
 ---
-title: _set_controlfp | Microsoft-Dokumentation
-ms.custom: ''
+title: _set_controlfp
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_controlfp
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - set_controlfp
 - _set_controlfp
-dev_langs:
-- C++
 helpviewer_keywords:
 - set_controlfp function
 - floating-point functions, setting control word
 - _set_controlfp function
 ms.assetid: e0689d50-f68a-4028-a9c1-fb23eedee4ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a2647e9719c2aa3fe303393fcc1da55de0385581
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1187502f09849d7ca4d8e595c237cfa511d00c6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406419"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499015"
 ---
 # <a name="setcontrolfp"></a>_set_controlfp
 
@@ -68,13 +58,13 @@ Keine.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_set_controlfp** Funktion ist vergleichbar mit **_control87**, aber es wird nur das gleitkommasteuerwort auf *NewControl*. Die Bits in den Werten geben den Zustand des Gleitkommasteuerelements an. Über den Gleitkommawert-Steuerstatus kann das Programm die Modi für Genauigkeit, Rundung und Unendlichkeit im Paket für Gleitkommaoperationen ändern. Sie können auch zu maskieren bzw. die Maskierung aufzuheben Gleitkommaausnahmen mit **_set_controlfp**. Weitere Informationen finden Sie unter [_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md).
+Die **_set_controlfp** Funktion ist vergleichbar mit **_control87**, setzt aber nur das gleitkommasteuerwort auf *NewControl*. Die Bits in den Werten geben den Zustand des Gleitkommasteuerelements an. Über den Gleitkommawert-Steuerstatus kann das Programm die Modi für Genauigkeit, Rundung und Unendlichkeit im Paket für Gleitkommaoperationen ändern. Sie können auch maskieren oder Aufheben der Maskierung mithilfe von Gleitkommaausnahmen **_set_controlfp**. Weitere Informationen finden Sie unter [_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md).
 
-Diese Funktion ist veraltet, beim Kompilieren mit [/CLR (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md) , da die common Language Runtime nur die standardmäßige Genauigkeit von Gleitkommawerten unterstützt.
+Diese Funktion ist veraltet, beim Kompilieren mit [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) da die common Language Runtime nur die Genauigkeit der standardgleitkommawerte unterstützt.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|Kompatibilität|
+|-Routine zurückgegebener Wert|Erforderlicher Header|Kompatibilität|
 |-------------|---------------------|-------------------|
 |**_set_controlfp**|\<float.h>|Nur x86-Prozessor|
 

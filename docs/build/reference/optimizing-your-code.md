@@ -1,12 +1,6 @@
 ---
-title: Optimieren des Codes | Microsoft-Dokumentation
-ms.custom: ''
+title: Codeoptimierung
 ms.date: 12/28/2017
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - performance, optimizing code
 - optimization
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - optimization, C++ code
 - code, optimizing
 - performance, compiler
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 180586f55ea57100286c3c598ac62eb83107d7c9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d490bd704c53a160ee36dea0fd24a52211bfdc37
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714375"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525514"
 ---
 # <a name="optimizing-your-code"></a>Optimieren des Codes
 
@@ -33,11 +23,14 @@ Durch Optimieren der eine ausführbare Datei, können Sie ein Gleichgewicht zwis
 
 In den folgenden Themen werden einige der Optimierungen in der C/C++-Sprache beschrieben.
 
-[Optimierung mit Pragmas und Schlüsselwörter](../../build/reference/optimization-pragmas-and-keywords.md) eine Liste der Schlüsselwörter und Pragmas, dass Sie in Ihrem Code verwenden können, um die Leistung zu verbessern.
+[Pragmas und Schlüsselwörter für die Optimierung](../../build/reference/optimization-pragmas-and-keywords.md)<br/>
+Eine Liste der Schlüsselwörter und Pragmas, dass Sie in Ihrem Code verwenden können, um die Leistung zu verbessern.
 
-[Compileroptionen nach Kategorien](../../build/reference/compiler-options-listed-by-category.md) eine Liste der **/o** Compileroptionen, die speziell Ausführung Geschwindigkeit oder Code Größe beeinflussen.
+[Compileroptionen nach Kategorien sortiert](../../build/reference/compiler-options-listed-by-category.md)<br/>
+Eine Liste der **/o** Compileroptionen, die speziell Ausführung Geschwindigkeit oder Code Größe beeinflussen.
 
-[Rvalue-Verweisdeklarator: & &](../../cpp/rvalue-reference-declarator-amp-amp.md) Rvalue-Verweise unterstützen die Implementierung der *move-Semantik*. Wenn die Verschiebung, die Semantik verwendet wird, um Vorlagenbibliotheken, die Leistung von Anwendungen zu implementieren, verwenden diese Vorlagen, erheblich verbessern kann.
+[Rvalue-Verweisdeklarator: &&](../../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
+Rvalue-Verweise unterstützen die Implementierung der *move-Semantik*. Wenn die Verschiebung, die Semantik verwendet wird, um Vorlagenbibliotheken, die Leistung von Anwendungen zu implementieren, verwenden diese Vorlagen, erheblich verbessern kann.
 
 ### <a name="the-optimize-pragma"></a>Das optimierungspragma
 
@@ -59,9 +52,11 @@ Paradoxerweise kann ein Programm für Geschwindigkeit optimieren Code langsamer 
 
 Die folgenden Themen werden bewährte Programmierverfahren erläutert.
 
-[Tipps zum Verbessern von zeitkritischem Code](../../build/reference/tips-for-improving-time-critical-code.md) besser verstehen und anwenden, kann eine bessere Leistung erzielt. In diesem Thema schlägt vor, Programmiertechniken, mit denen Sie sicherstellen, dass die zeitkritischen Teile Ihres Codes eine zufriedenstellende Leistung erbringen können.
+[Tipps zum Verbessern von zeitkritischem Code](../../build/reference/tips-for-improving-time-critical-code.md)<br/>
+Bessere Codierung Techniken kann eine bessere Leistung erzielt werden. In diesem Thema schlägt vor, Programmiertechniken, mit denen Sie sicherstellen, dass die zeitkritischen Teile Ihres Codes eine zufriedenstellende Leistung erbringen können.
 
-[Bewährte Vorgehensweisen für die Optimierung](../../build/reference/optimization-best-practices.md) enthält allgemeine Richtlinien zur optimalen Anwendungsleistung zu optimieren.
+[Empfohlene Vorgehensweisen für die Optimierung](../../build/reference/optimization-best-practices.md)<br/>
+Enthält allgemeine Richtlinien zur optimalen Anwendungsleistung zu optimieren.
 
 ## <a name="debugging-optimized-code"></a>Debuggen von optimiertem code
 

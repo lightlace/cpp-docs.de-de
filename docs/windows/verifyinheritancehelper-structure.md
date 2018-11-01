@@ -1,28 +1,30 @@
 ---
 title: VerifyInheritanceHelper-Struktur | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::VerifyInheritanceHelper
+- implements/Microsoft::WRL::Details::VerifyInheritanceHelper::Verify
 dev_langs:
 - C++
 helpviewer_keywords:
-- VerifyInheritanceHelper structure
+- Microsoft::WRL::Details::VerifyInheritanceHelper structure
+- Microsoft::WRL::Details::VerifyInheritanceHelper::Verify method
 ms.assetid: 8a48a702-0f71-4807-935b-8311f0a7a8b6
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a7b101091cefcdca65518c2a62bd274f7af4607
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2a011b0583d8221ec49d16236add978ac647acc3
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610254"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788928"
 ---
 # <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper-Struktur
 
@@ -31,23 +33,19 @@ Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-template <
-   typename I,
-   typename Base
->
+template <typename I, typename Base>
 struct VerifyInheritanceHelper;
-template <
-   typename I
->
+
+template <typename I>
 struct VerifyInheritanceHelper<I, Nil>;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*I*  
+*I*<br/>
 Ein Typ.
 
-*Basis*  
+*Basis*<br/>
 Einen anderen Typ.
 
 ## <a name="remarks"></a>Hinweise
@@ -58,9 +56,9 @@ Testet, ob eine Schnittstelle, die von einer anderen Schnittstelle abgeleitet wi
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
-|----------|-----------------|
-|[VerifyInheritanceHelper::Verify-Methode](../windows/verifyinheritancehelper-verify-method.md)|Testet die beiden Schnittstellen, die durch die aktuellen Vorlagenparameter angegeben, und bestimmt, ob eine Schnittstelle von der anderen abgeleitet ist.|
+Name                                       | Beschreibung
+------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------
+[Verifyinheritancehelper:: Verify](#verify) | Testet die beiden Schnittstellen, die durch die aktuellen Vorlagenparameter angegeben, und bestimmt, ob eine Schnittstelle von der anderen abgeleitet ist.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -72,6 +70,16 @@ Testet, ob eine Schnittstelle, die von einer anderen Schnittstelle abgeleitet wi
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>Siehe auch
+## <a name="verify"></a>Verifyinheritancehelper:: Verify
 
-[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+```cpp
+static void Verify();
+```
+
+### <a name="remarks"></a>Hinweise
+
+Testet die beiden Schnittstellen, die durch die aktuellen Vorlagenparameter angegeben, und bestimmt, ob eine Schnittstelle von der anderen abgeleitet ist.
+
+Ein Fehler wird ausgegeben, wenn eine Schnittstelle nicht von der anderen abgeleitet ist.

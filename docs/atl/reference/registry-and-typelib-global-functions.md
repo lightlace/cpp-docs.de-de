@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0e4eba9940546e72f11c220dc03a6538750ae85
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: af2780c8b7fb332cd739416e5051a57a8bc7f765
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028336"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073531"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Registrierung und TypeLib globale Funktionen
 
@@ -60,7 +60,7 @@ Diese Funktionen steuern, welche Knoten in der Registrierung, die die Anwendung 
 |||
 |-|-|
 |[AtlGetPerUserRegistration](#atlgetperuserregistration)|Ruft ab, ob die Anwendung Zugriff auf die Registrierung, leitet der **HKEY_CURRENT_USER** ( **HKCU**) Knoten.|
-|[AtlSetPerUserRegistration](#atlsetperuserregistration)|Legt fest, ob die Anwendung Zugriff auf die Registrierung, leitet der **HKEY_CURRENT_USER** ( **HKCU**) Knoten.|  
+|[AtlSetPerUserRegistration](#atlsetperuserregistration)|Legt fest, ob die Anwendung Zugriff auf die Registrierung, leitet der **HKEY_CURRENT_USER** ( **HKCU**) Knoten.|
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -93,7 +93,7 @@ Die Umleitung ist nicht global. Nur die MFC und ATL-Frameworks sind von diesem r
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** atlbase.h  
+**Header:** atlbase.h
 
 ## <a name="afxregcreatekey"></a> AfxRegCreateKey
 
@@ -121,11 +121,11 @@ Zeiger auf eine `CAtlTransactionManager` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert ERROR_SUCCESS. Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich Null zeigt in Winerror.h definiert.  
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert ERROR_SUCCESS. Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich Null zeigt in Winerror.h definiert.
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** „afxpriv.h“  
+**Header:** „afxpriv.h“
 
 ## <a name="afxregdeletekey"></a> AfxRegDeleteKey
 
@@ -154,7 +154,7 @@ Wenn die Funktion erfolgreich ist, ist der Rückgabewert ERROR_SUCCESS. Wenn die
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** „afxpriv.h“  
+**Header:** „afxpriv.h“
 
 ## <a name="afxregisterpreviewhandler"></a>
 
@@ -179,7 +179,7 @@ Gibt an, die Dateierweiterung mit dieser Handler registriert.
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxdisp.h   
+**Header:** afxdisp.h
 
 ##  <a name="atlregistertypelib"></a>  AtlRegisterTypeLib
 
@@ -239,11 +239,11 @@ Wenn die Funktion erfolgreich ist, ist der Rückgabewert ERROR_SUCCESS. Wenn die
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** „afxpriv.h“  
+**Header:** „afxpriv.h“
 
 ## <a name="afxregopenkeyex"></a>  AfxRegOpenKeyEx
 
-Öffnet den angegebenen Registrierungsschlüssel. 
+Öffnet den angegebenen Registrierungsschlüssel.
 
 ### <a name="syntax"></a>Syntax
 
@@ -277,7 +277,7 @@ Wenn die Funktion erfolgreich ist, ist der Rückgabewert ERROR_SUCCESS. Wenn die
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** „afxpriv.h“  
+**Header:** „afxpriv.h“
 
 ## <a name="afxunregisterpreviewhandler"></a> AfxUnregisterPreviewHandler
 
@@ -296,7 +296,7 @@ Gibt die CLSID des Handlers zum aufgehoben werden.
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxdisp.h  
+**Header:** afxdisp.h
 
 ## <a name="atlsetperuserregistration"></a> AtlSetPerUserRegistration
 
@@ -321,11 +321,11 @@ S_OK, wenn die Methode erfolgreich ist, andernfalls der HRESULT-Fehler code, wen
 
 Registrierungsumleitung wird standardmäßig nicht aktiviert. Wenn Sie diese Option aktivieren, wird der Zugriff auf die Registrierung zu umgeleitet **HKEY_CURRENT_USER\Software\Classes**.
 
-Die Umleitung ist nicht global. Nur die MFC und ATL-Frameworks sind von diesem registrierungsumleitung betroffen.  
+Die Umleitung ist nicht global. Nur die MFC und ATL-Frameworks sind von diesem registrierungsumleitung betroffen.
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** atlbase.h  
+**Header:** atlbase.h
 
 ##  <a name="atlunregistertypelib"></a>  AtlUnRegisterTypeLib
 
@@ -335,7 +335,7 @@ Diese Funktion wird aufgerufen, um die Registrierung einer Typbibliothek aufzuhe
 
 ```
 ATLAPI AtlUnRegisterTypeLib(
-    HINSTANCE hInstTypeLib, 
+    HINSTANCE hInstTypeLib,
     LPCOLESTR lpszIndex);
 ```
 
@@ -353,7 +353,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Hilfsfunktion wird verwendet, indem [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) und [AtlComModuleUnregisterServer](#atlcommoduleunregisterserver).  
+Diese Hilfsfunktion wird verwendet, indem [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) und [AtlComModuleUnregisterServer](#atlcommoduleunregisterserver).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -405,7 +405,7 @@ Diese Funktion war in Visual Studio 2013 veraltet und wird in Visual Studio 2015
 
 ##  <a name="registrydataexchange"></a>  RegistryDataExchange
 
-Mit dieser Funktion können Sie Lese- und Schreibvorgänge in der Systemregistrierung vornehmen.  
+Mit dieser Funktion können Sie Lese- und Schreibvorgänge in der Systemregistrierung vornehmen.
 
 ### <a name="syntax"></a>Syntax
 

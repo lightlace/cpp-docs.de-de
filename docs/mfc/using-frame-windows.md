@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Rahmenfenstern | Microsoft Docs
+title: Mit Frame Windows | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 636762ae7e1b1d1a5dd109bb71b98c81b51fe50b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3cb895c50d7265c0fd1478ba421f2da860d49a19
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381916"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400444"
 ---
 # <a name="using-frame-windows"></a>Verwenden von Rahmenfenstern
-Das MFC-Framework erstellt Dokument Rahmenfenster – sowie die Ansichten und die Dokumente – als Teil seiner Implementierung von neue und Befehlen im Menü Datei öffnen. Da der Großteil der Arbeit Rahmenfenster Frameworks, Rolle dabei spielen, Sie nur eine kleine erstellen, verwenden und diesen Fenstern zu zerstören. Sie können jedoch explizit eine eigene Rahmenfenster und untergeordnete Fenster für besondere Zwecke erstellen.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
-  
--   [Erstellen von Dokument Rahmenfenster](../mfc/creating-document-frame-windows.md)  
-  
--   [Wann müssen CWnd-Objekte initialisiert werden?](../mfc/when-to-initialize-cwnd-objects.md)  
-  
--   [Zerstören von Rahmenfenstern](../mfc/destroying-frame-windows.md)  
-  
--   [Verwalten von untergeordneten MDI-Fenster](../mfc/managing-mdi-child-windows.md)  
-  
--   [Verwalten der aktuellen Ansicht](../mfc/managing-the-current-view.md)  
-  
--   [Verwalten von Menüs, Steuerleisten und Zugriffstasten](../mfc/managing-menus-control-bars-and-accelerators.md)  
-  
--   [Ziehen und Ablegen von Dateien in einem Rahmenfenster](../mfc/dragging-and-dropping-files-in-a-frame-window.md)  
-  
--   [Reagieren auf dynamischen Datenaustausch (DDE)](../mfc/responding-to-dynamic-data-exchange-dde.md)  
-  
--   [Anderer Fensteraktionen](../mfc/orchestrating-other-window-actions.md)  
-  
--   [Verwalten von kontextbezogene Hilfe](../mfc/orchestrating-other-window-actions.md)  
-  
--   [Das Rahmenfenster-Rolle in drucken und Druckvorschau](../mfc/orchestrating-other-window-actions.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Rahmenfenster](../mfc/frame-windows.md)
+
+MFC-Framework erstellt den Dokument-Frame-Fensters, und ihre Ansichten und die Dokumente – als Teil seiner Implementierung von der Befehle neu und öffnen Sie im Menü Datei. Da das Framework die meiste Arbeit Rahmenfenster für Sie übernimmt, spielen Sie nur eine kleine Rolle erstellen, verwenden und diese Windows zerstören. Sie können jedoch explizit Ihre eigenen Rahmenfenster und untergeordnete Fenster für besondere Zwecke erstellen.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
+
+- [Erstellen eines Dokuments Rahmenfenster](../mfc/creating-document-frame-windows.md)
+
+- [Wann müssen CWnd-Objekte initialisiert werden?](../mfc/when-to-initialize-cwnd-objects.md)
+
+- [Zerstören von Rahmenfenstern](../mfc/destroying-frame-windows.md)
+
+- [Verwalten von untergeordneten MDI-Fenster](../mfc/managing-mdi-child-windows.md)
+
+- [Verwalten der aktuellen Ansicht](../mfc/managing-the-current-view.md)
+
+- [Verwalten von Menüs, Steuerleisten und Zugriffstasten](../mfc/managing-menus-control-bars-and-accelerators.md)
+
+- [Ziehen und Ablegen von Dateien in einem Rahmenfenster](../mfc/dragging-and-dropping-files-in-a-frame-window.md)
+
+- [Reagieren auf dynamischen Datenaustausch (DDE)](../mfc/responding-to-dynamic-data-exchange-dde.md)
+
+- [Orchestrieren anderer Fensteraktionen](../mfc/orchestrating-other-window-actions.md)
+
+- [Verwalten von kontextbezogener Hilfe](../mfc/orchestrating-other-window-actions.md)
+
+- [Das Rahmenfenster-Rolle in drucken und Druckvorschau](../mfc/orchestrating-other-window-actions.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Rahmenfenster](../mfc/frame-windows.md)
 

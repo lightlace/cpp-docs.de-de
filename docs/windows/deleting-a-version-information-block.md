@@ -1,30 +1,19 @@
 ---
-title: Löschen eines Versionsinfoblockes (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Löschen eines Versionsinfoblockes (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.version
-dev_langs:
-- C++
 helpviewer_keywords:
 - blocks, deleting
 - version information, deleting blocks
 - resources [C++], deleting version information
 ms.assetid: 4e1641eb-d5b2-4183-b273-bc5b51af1537
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b3d7a3b64a612000eb25f2f72cd289caf7692f7b
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: e0bdc719e3ca3a3ffa4493f1d7c578a91733a7f3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315001"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648304"
 ---
 # <a name="deleting-a-version-information-block-c"></a>Löschen eines Versionsinfoblockes (C++)
 
@@ -47,5 +36,5 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Versionsinfo-Editor](../windows/version-information-editor.md)  
+[Versionsinfo-Editor](../windows/version-information-editor.md)<br/>
 [Versionsinformationen (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)

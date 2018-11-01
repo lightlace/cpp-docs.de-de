@@ -1,38 +1,27 @@
 ---
-title: Bildbearbeitung für Symbole | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
+title: Bildbearbeitung für Symbole
+ms.date: 10/17/2018
 f1_keywords:
 - vc.editors.cursor.F1
 - vc.editors.icon.F1
 - vc.editors.cursor
 - vc.editors.bitmap.F1
-dev_langs:
-- C++
 helpviewer_keywords:
 - editors, images
 - resource editors [C++], graphics
 - Image editor [C++]
 - resource editors [C++], Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8d160a042263f783b88c7ff2d9dfd03c46759079
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 4f27b4582da340d401c3ecf10b502453d80b6e7d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318810"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561511"
 ---
 # <a name="image-editor-for-icons"></a>Bildbearbeitung für Symbole
 
-Die Bildbearbeitung verfügt über zahlreiche Tools zum Erstellen und Bearbeiten von Bildern sowie über Funktionen, die Sie beim Erstellen von Bitmaps für Symbolleisten unterstützen. Zusätzlich zu Bitmaps, Symbolen und Cursorn können Sie Bilder im GIF- oder JPEG-Format bearbeiten. Zu diesem Zweck verwenden Sie die Befehle aus dem Menü **Bild** und die Tools auf der Symbolleiste der **Bildbearbeitung** .
+Wenn Sie auf eine Bilddatei (z. B. ico, BMP, PNG) im Projektmappen-Explorer klicken, öffnet das Bild im Bild-Editor auf die gleiche Weise, die Codedateien im Code-Editor geöffnet. Wenn eine Registerkarte Bild-Editor aktiv ist, sehen Sie Symbolleisten mit vielen Tools zum Erstellen und Bearbeiten von Bildern. Zusätzlich zu Bitmaps, Symbolen und Cursorn können Sie Bilder im GIF- oder JPEG-Format bearbeiten. Zu diesem Zweck verwenden Sie die Befehle aus dem Menü **Bild** und die Tools auf der Symbolleiste der **Bildbearbeitung** .
 
 Von der Bildbearbeitung werden die folgenden Aufgaben unterstützt:
 
@@ -67,5 +56,5 @@ Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
-[Ressourcen-Editor](../windows/resource-editors.md)  
+[Ressourcen-Editor](../windows/resource-editors.md)<br/>
 [Symbole](https://msdn.microsoft.com/library/windows/desktop/ms646973.aspx)

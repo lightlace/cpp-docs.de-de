@@ -1,5 +1,5 @@
 ---
-title: COleControlModule Klasse | Microsoft Docs
+title: COleControlModule-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,44 +19,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 597639145385f4aabcba0e83fef855f7a0779f9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83c7e9bc265870e6099c231f8e15ec5e37902c55
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369738"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069294"
 ---
 # <a name="colecontrolmodule-class"></a>COleControlModule-Klasse
-Die Basisklasse, von der ein OLE-Steuerelementmodul-Objekt abgeleitet wird.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-class COleControlModule : public CWinApp  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Klasse bietet Memberfunktionen zum Initialisieren des Steuerelement-Moduls. Jedes Modul der OLE-Steuerelement, die Microsoft Foundation Classes verwendet darf nur ein Objekt abgeleitet wurde. `COleControlModule`. Dieses Objekt wird erstellt, wenn andere globale C++-Objekte erstellt werden. Deklarieren Sie die abgeleiteten `COleControlModule` Objekt auf globaler Ebene.  
-  
- Weitere Informationen zur Verwendung der `COleControlModule` Klasse, finden Sie unter der [CWinApp](../../mfc/reference/cwinapp-class.md) Klasse und die Artikel [ActiveX-Steuerelemente](../../mfc/mfc-activex-controls.md).  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
-  
- [CWinThread](../../mfc/reference/cwinthread-class.md)  
-  
- [CWinApp](../../mfc/reference/cwinapp-class.md)  
-  
- `COleControlModule`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** afxctl.h  
-  
-## <a name="see-also"></a>Siehe auch  
- [MFC-Beispiel TESTHELP](../../visual-cpp-samples.md)   
- [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
 
+Die Basisklasse, von der ein OLE-Steuerelementmodul-Objekt abgeleitet wird.
 
+## <a name="syntax"></a>Syntax
+
+```
+class COleControlModule : public CWinApp
+```
+
+## <a name="remarks"></a>Hinweise
+
+Diese Klasse bietet Memberfunktionen zum Initialisieren von Ihrem Moduls an. Jedes Modul der OLE-Steuerelement, die Microsoft Foundation Classes verwendet darf nur ein Objekt abgeleitet `COleControlModule`. Dieses Objekt wird erstellt, wenn es sich bei anderen globalen C++-Objekte erstellt werden. Deklarieren Ihrer abgeleiteten `COleControlModule` Objekt auf globaler Ebene.
+
+Weitere Informationen zur Verwendung der `COleControlModule` Klasse, finden Sie unter der [CWinApp](../../mfc/reference/cwinapp-class.md) -Klasse und den Artikel [ActiveX-Steuerelemente](../../mfc/mfc-activex-controls.md).
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+
+[CWinThread](../../mfc/reference/cwinthread-class.md)
+
+[CWinApp](../../mfc/reference/cwinapp-class.md)
+
+`COleControlModule`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** afxctl.h
+
+## <a name="see-also"></a>Siehe auch
+
+[MFC-Beispiel TESTHELP](../../visual-cpp-samples.md)<br/>
+[Hierarchiediagramm](../../mfc/hierarchy-chart.md)
 

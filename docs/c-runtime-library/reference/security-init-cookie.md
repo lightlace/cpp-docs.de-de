@@ -1,10 +1,6 @@
 ---
-title: __security_init_cookie | Microsoft-Dokumentation
-ms.custom: ''
+title: __security_init_cookie
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __security_init_cookie
 apilocation:
@@ -22,24 +18,18 @@ apitype: DLLExport
 f1_keywords:
 - security_init_cookie
 - __security_init_cookie
-dev_langs:
-- C++
 helpviewer_keywords:
 - security cookie [C++]
 - __security_init_cookie function
 - security_init_cookie function
 - global security cookie
 ms.assetid: 32119905-0897-4a1c-84ca-bffd16c9b2af
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 84edc9fb461a6f0721abb648a88e1d81a4a19d07
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: c7b25e05b4574a7b397cd07d55000a5e53db58f6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678956"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50573614"
 ---
 # <a name="securityinitcookie"></a>__security_init_cookie
 
@@ -73,4 +63,4 @@ Beispiele finden Sie unter [C-Laufzeitfehler R6035](../../error-messages/tool-er
 
 ## <a name="see-also"></a>Siehe auch
 
-[Microsoft Security Response Center](https://www.microsoft.com/en-us/msrc?rtc=1)
+[Microsoft Security Response Center](https://www.microsoft.com/msrc?rtc=1)

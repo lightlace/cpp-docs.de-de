@@ -8,17 +8,17 @@ ms.technology:
 ms.tgt_pltfrm: Linux
 ms.topic: conceptual
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-author: corob-msft
-ms.author: corob
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 9b3977c46e05ab0b175dad3658d1dcc390d33354
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 387550fa7d3e745038d0be8ee66574d4496132a0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207665"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061287"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>Herstellen einer Verbindung mit Ihrem Linux-Remotecomputer
 
@@ -29,7 +29,7 @@ Beim Erstellen eines C++-Linux-Projekts in Visual Studio wird Linux-Code auf Ihr
    ![Verbindungs-Manager](media/settings_connectionmanager.png)
 
    In beiden Fällen wird das Fenster **Connect to Remote System** (Mit Remotesystem verbinden) angezeigt.
-   
+
    ![Connect to Remote System (Mit Remotesystem verbinden)](media/connect.png)
 
 1. Geben Sie die folgenden Informationen ein:
@@ -41,7 +41,7 @@ Beim Erstellen eines C++-Linux-Projekts in Visual Studio wird Linux-Code auf Ihr
    | **Benutzername**           | Zu authentifizierender Benutzer
    | **Authentifizierungstyp** | Sowohl das Kennwort als auch der private Schlüssel wird unterstützt.
    | **Kennwort**            | Kennwort für den eingegebenen Benutzernamen
-   | **Datei für den privaten Schlüssel**    | Für die SSH-Verbindung erstellter privater Schlüssel
+   | **Datei für den privaten Schlüssel**    | Für die SSH-Verbindung erstellte private Schlüsseldatei
    | **Passphrase**          | Passphrase mit dem zuvor ausgewählten privaten Schlüssel
 
 1. Klicken Sie auf die Schaltfläche **Verbinden**, um eine Verbindung mit dem Remotecomputer herzustellen.  Wenn die Verbindung fehlschlägt, werden die Textfelder, die geändert werden, rot umrandet.

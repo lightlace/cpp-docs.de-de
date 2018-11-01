@@ -1,7 +1,7 @@
 ---
 title: InterfaceListHelper-Struktur | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b2336562abb82ae89bd2f6864d0678023a3ccf69
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b8d8b44f6b3732c19977e6839e96d4ab5013a112
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600527"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788408"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper-Struktur
 
@@ -32,55 +32,53 @@ Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet
 
 ```cpp
 template <
-   typename T0,
-   typename T1 = Nil,
-   typename T2 = Nil,
-   typename T3 = Nil,
-   typename T4 = Nil,
-   typename T5 = Nil,
-   typename T6 = Nil,
-   typename T7 = Nil,
-   typename T8 = Nil,
-   typename T9 = Nil
+    typename T0,
+    typename T1 = Nil,
+    typename T2 = Nil,
+    typename T3 = Nil,
+    typename T4 = Nil,
+    typename T5 = Nil,
+    typename T6 = Nil,
+    typename T7 = Nil,
+    typename T8 = Nil,
+    typename T9 = Nil
 >
 struct InterfaceListHelper;
 
-template <
-   typename T0
->
+template <typename T0>
 struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*T0*  
+*T0*<br/>
 Template-Parameter 0 (null) ist erforderlich.
 
-*T1*  
+*T1*<br/>
 Template-Parameter 1, die standardmäßig nicht angegeben wird.
 
-*T2*  
+*T2*<br/>
 Vorlagenparameter 2, die standardmäßig nicht angegeben wird. Der dritte Vorlagenparameter.
 
-*T3*  
+*T3*<br/>
 Template-Parameter 3, die standardmäßig nicht angegeben wird.
 
-*T4*  
+*T4*<br/>
 Vorlagenparameter 4, die standardmäßig nicht angegeben wird.
 
-*T5*  
+*T5*<br/>
 Template-Parameter 5, die standardmäßig nicht angegeben wird.
 
-*T6*  
+*T6*<br/>
 Vorlagenparameter 6, die standardmäßig nicht angegeben wird.
 
-*T7*  
+*T7*<br/>
 Vorlagenparameter 7, die standardmäßig nicht angegeben wird.
 
-*T8*  
+*T8*<br/>
 Vorlagenparameter 8, die standardmäßig nicht angegeben wird.
 
-*T9*  
+*T9*<br/>
 Vorlagenparameter 9, die standardmäßig nicht angegeben wird.
 
 ## <a name="remarks"></a>Hinweise

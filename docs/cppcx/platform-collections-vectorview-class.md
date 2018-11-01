@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3c516881115dd96337f950d83de2d30c57161b
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9cfad80ac1f16d200f29504be1d4fb818e6e6afd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102511"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163893"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView-Klasse
 
@@ -140,7 +140,7 @@ virtual unsigned int GetMany(
 Der nullbasierte Index des Anfangs der Elemente, die abgerufen werden sollen.
 
 *dest*<br/>
-Wenn dieser Vorgang abgeschlossen ist, ein Array von Elementen, die bei das angegebene Element beginnen `startIndex` und beim letzten Element in der VectorView.
+Wenn die Operation abgeschlossen wird, ein Array von Elementen, die bei dem Element beginnen, das durch `startIndex` angegeben ist, und beim letzten Element im Vektor enden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -168,11 +168,11 @@ Das Element, das gesucht werden soll.
 *index*<br/>
 Der nullbasierte Index des Elements, wenn der Parameter `value` gefunden wurde, andernfalls 0.
 
-Der `index`-Parameter ist 0, wenn das Element entweder das erste Element der VectorView ist oder wenn das Element nicht gefunden wurde. Wenn der Rückgabewert `true` ist, wurde das Element gefunden und es ist das erste Element; andernfalls wurde das Element nicht gefunden.
+Die *Index* -Parameter ist 0, wenn entweder das Element, das erste Element ist die `VectorView` oder das Element wurde nicht gefunden. Wenn der Rückgabewert ist **"true"**, das Element gefunden wurde, und es ist das erste Element; andernfalls das Element wurde nicht gefunden.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` wenn das angegebene Element gefunden wurde, andernfalls `false`.
+**"true"** ist das angegebene Element gefunden wird; andernfalls **"false"**.
 
 ## <a name="size"></a>  Vectorview:: size-Methode
 

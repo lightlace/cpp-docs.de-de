@@ -1,14 +1,8 @@
 ---
-title: Erstellen eines Gerätebilds (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
-ms.custom: ''
+title: Erstellen eines Gerätebilds (Bildbearbeitung für Symbole)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.icon
-dev_langs:
-- C++
 helpviewer_keywords:
 - cursors [C++], creating
 - icons [C++], creating
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - images [C++], creating for display devices
 - icons [C++], inserting
 ms.assetid: 5a536928-32df-4ace-beb1-1521ce3b871f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 753971a7b010c8e3af1c36c56833a123c182a708
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 322205e22edf2624784ddb8f294bcf5e73af06f7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318121"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50447754"
 ---
 # <a name="creating-a-device-image-image-editor-for-icons"></a>Erstellen eines Gerätebilds (Bildbearbeitung für Symbole)
 
@@ -53,6 +42,6 @@ Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
-[Symbole und Cursor: Bildressourcen für Anzeigegeräte](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
-[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Symbole und Cursor: Bildressourcen für Anzeigegeräte](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)<br/>
+[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Symbole und Cursor: Bildressourcen für Anzeigegeräte](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

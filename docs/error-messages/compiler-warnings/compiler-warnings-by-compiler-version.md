@@ -1,7 +1,7 @@
 ---
 title: Compilerwarnungen nach Compilerversion | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 10/24/2018
 ms.technology:
 - devlang-cpp
 ms.topic: error-reference
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6645bb81a1fd4a2b42eb7419a0d008b9ac7692ad
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1c4d815ba1036a03042992d2715e49bbd8f74a28
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44319083"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990385"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Compilerwarnungen nach Compilerversion
 
@@ -45,10 +45,19 @@ Diese Versionen des Compilers eingeführt wurden, neue Warnungen:
 | Visual C++ 2017, Version 15.5 | 19.12.25830.0 |
 | Visual C++ 2017, Version 15.6 | 19.13.26128.0 |
 | Visual C++ 2017, Version 15.7 | 19.14.26428.0 |
+| Visual C++ 2017, Version 15.8 | 19.15.26726.0 |
 
 Sie können nur die Nummer der Hauptversion, die Nummern für Haupt- und Nebenversionsnummern oder Hauptversion, Nebenversion, angeben und Buildnummern, um mit der __/WV__ Option. Der Compiler meldet alle Warnungen, die Versionen übereinstimmen, die mit der angegebenen Zahl beginnen und unterdrückt alle Warnungen für Versionen, die größer als die angegebene Anzahl. Z. B. __/Wv:17__ meldet alle Warnungen, eingeführt in oder vor einer beliebigen Version von Visual Studio 2012 und unterdrückt alle Warnungen, die von einem beliebigen-Compiler von Visual Studio 2013 (Version 18) oder höher eingeführt. Unterdrückt eingeführte Warnungen in Visual Studio 2015 update 2 und höher können Sie __/Wv:19.00.23506__. Verwendung __/Wv:19.11__ melden, alle Warnungen in einer beliebigen Version von Visual Studio vor Visual Studio 2017 Version 15.5 eingeführt, aber unterdrückt Warnungen, die in Visual Studio 2017 Version 15.5 und höher eingeführt wurden.
 
 Den folgenden Abschnitten werden der Warnungen eingeführt, die von jeder Version von Visual C++, die Sie mithilfe von unterdrücken, können die __/WV__ -Compileroption. Die __/WV__ Option keine Unterdrückung von Warnungen, die nicht aufgelistet werden, die die angegebenen Versionen des Compilers sind älter als.
+
+## <a name="warnings-introduced-in-visual-c-2017-version-158-compiler-version-1915267260"></a>Warnungen, die in Visual C++ 2017, Version 15.8 (Compilerversion 19.15.26726.0) eingeführt wurden
+
+Diese Warnungen und alle Warnungen in höheren Versionen werden mit der Compileroption unterdrückt __/Wv:19.14__.
+
+|||
+|-|-|
+C5046|"*Funktion*": Symbol, die im Zusammenhang mit Datentyp mit interner Verknüpfung nicht definiert|
 
 ## <a name="warnings-introduced-in-visual-c-2017-version-157-compiler-version-1914264280"></a>Warnungen, die in Visual C++ 2017 Version 15.7 (Compilerversion 19.14.26428.0) eingeführt wurden
 

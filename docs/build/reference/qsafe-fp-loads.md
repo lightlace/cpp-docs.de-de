@@ -1,22 +1,12 @@
 ---
-title: / Qsafe_fp_loads | Microsoft-Dokumentation
-ms.custom: ''
+title: /Qsafe_fp_loads
 ms.date: 01/24/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0af28b391390f28be4e111b55c909dcae66ca2f8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e1ef4237fe3af39e76777609a06f90bd585ca422
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713660"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50504425"
 ---
 # <a name="qsafefploads"></a>/Qsafe_fp_loads
 
@@ -50,6 +40,6 @@ Diese Option wird überschrieben, indem [/fp: mit Ausnahme von](../../build/refe
 
 ## <a name="see-also"></a>Siehe auch
 
-[/ Q-Optionen (Operationen auf niedriger Ebene)](../../build/reference/q-options-low-level-operations.md)
+[/Q-Optionen (Vorgänge auf niedriger Ebene)](../../build/reference/q-options-low-level-operations.md)<br/>
 [Compileroptionen](../../build/reference/compiler-options.md)<br/>
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

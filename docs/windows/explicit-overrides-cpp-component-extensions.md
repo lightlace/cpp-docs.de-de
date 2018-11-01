@@ -1,28 +1,18 @@
 ---
-title: Explizite Überschreibungen (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Explizite Überschreibungen (C++ / CLI und C++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 3ce2f65fd740fd2bf133d65b25cbb52838c53dd2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 54f3d50b3a47890e6f3dd68c41832fa3d1e13e59
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601211"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459825"
 ---
-# <a name="explicit-overrides--c-component-extensions"></a>Explizite Überschreibungen (Komponentenerweiterungen für C++)
+# <a name="explicit-overrides--ccli-and-ccx"></a>Explizite Überschreibungen (C++ / CLI und C++ / CX)
 
 In diesem Thema wird erläutert, wie ein Member einer Basisklasse oder Schnittstelle explizit zu überschreiben. Benannte Überschreibung (explizite) sollte nur verwendet werden, um eine Methode mit einer abgeleiteten Methode überschreiben, die einen anderen Namen aufweist.
 
@@ -37,16 +27,16 @@ overriding-function-declarator = function { overriding-function-definition }
 
 ### <a name="parameters"></a>Parameter
 
-*Überschreiben der funktionsdeklarator*  
+*Überschreiben der funktionsdeklarator*<br/>
 Typ, Name und Argument Rückgabeliste der überschreibenden Funktion.  Beachten Sie, dass die überschreibende Funktion nicht unbedingt den gleichen Namen wie die überschriebene Funktion haben.
 
-*Typ*  
+*Typ*<br/>
 Der Basistyp, der eine Funktion, die außer Kraft setzen enthält.
 
-*function*  
+*function*<br/>
 Eine durch Trennzeichen getrennte Liste für eine oder mehrere Funktionsnamen zu überschreiben.
 
-*Überschreiben der Funktionsdefinition*  
+*Überschreiben der Funktionsdefinition*<br/>
 Die Funktion Text-Anweisungen, die die überschreibende Funktion zu definieren.
 
 ### <a name="remarks"></a>Hinweise
@@ -184,4 +174,4 @@ public:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET und UWP](../windows/component-extensions-for-runtime-platforms.md)

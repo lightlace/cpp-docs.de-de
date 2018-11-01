@@ -1,28 +1,17 @@
 ---
-title: Neue &lt;Gerät&gt; Bildeigenschaften (Dialogfeld) (C++) (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
-ms.custom: ''
+title: Neue &lt;Gerät&gt; Bildeigenschaften (Dialogfeld) (C++) (Bildbearbeitung für Symbole)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.newimagetype
-dev_langs:
-- C++
 helpviewer_keywords:
 - New <Device> Image Type dialog box [C++]
 ms.assetid: 9c1344f5-dea0-42cd-9042-b13032f72be2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c375a10d1c8dadca643ac428422eb388c16cdae6
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 3e1505013edd211a3d838bdfcc957877d767bb18
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313935"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50583858"
 ---
 # <a name="new-ltdevicegt-image-type-dialog-box-c-image-editor-for-icons"></a>Neue &lt;Gerät&gt; Bildeigenschaften (Dialogfeld) (C++) (Bildbearbeitung für Symbole)
 
@@ -54,6 +43,6 @@ Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
-[Symbole und Cursor: Bildressourcen für Anzeigegeräte](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
-[Menü "Bild"](../windows/image-menu-image-editor-for-icons.md)  
+[Symbole und Cursor: Bildressourcen für Anzeigegeräte](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)<br/>
+[Menü "Bild"](../windows/image-menu-image-editor-for-icons.md)<br/>
 [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)

@@ -1,7 +1,7 @@
 ---
 title: CMake-Projekte in Visual C++ | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/28/2018
+ms.date: 09/26/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -16,20 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0e7852ad3fbd88b815aea8266bafc2879494d8a
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 76877a0559fd954661fb3e38131796e89c41679f
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900666"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235099"
 ---
 # <a name="cmake-projects-in-visual-c"></a>CMake-Projekte in Visual C++
 
 In diesem Artikel wird davon ausgegangen, dass Sie mit dem plattformübergreifenden Open Source-Tool „CMake“ vertraut sind, das zum Definieren von Buildprozessen verwendet wird, die auf mehreren Plattformen ausgeführt werden.
 
-In Visual Studio 2015 können Visual Studio-Benutzer einen [CMake-Generator](https://cmake.org/cmake/help/v3.9/manual/cmake-generators.7.html) verwenden, um MSBuild-Projektdateien zu generieren, die anschließend von der IDE für IntelliSense sowie für das Durchsuchen und die Kompilierung verwendet werden. 
+In Visual Studio 2015 können Visual Studio-Benutzer einen [CMake-Generator](https://cmake.org/cmake/help/v3.9/manual/cmake-generators.7.html) verwenden, um MSBuild-Projektdateien zu generieren, die anschließend von der IDE für IntelliSense sowie für das Durchsuchen und die Kompilierung verwendet werden.
 
-Ab Visual Studio 2017 verwendet die Komponente **Visual C++-Tools für CMake** das Feature **Ordner öffnen**, um zu ermöglichen, dass die IDE CMake-Projektdateien (z.B. „CMakeLists.txt“) direkt für IntelliSense und das Durchsuchen nutzt. Wenn Sie einen Visual Studio-Generator verwenden, wird eine temporäre Projektdatei generiert und an „msbuild.exe“ übergeben. Diese wird jedoch nie für IntelliSense oder das Durchsuchen geladen. 
+Ab Visual Studio 2017 verwendet die Komponente **Visual C++-Tools für CMake** das Feature **Ordner öffnen**, um zu ermöglichen, dass die IDE CMake-Projektdateien (z.B. „CMakeLists.txt“) direkt für IntelliSense und das Durchsuchen nutzt. Wenn Sie einen Visual Studio-Generator verwenden, wird eine temporäre Projektdatei generiert und an „msbuild.exe“ übergeben. Diese wird jedoch nie für IntelliSense oder das Durchsuchen geladen.
 
 **Visual Studio 2017, Version 15.3:** Es wird Unterstützung für Ninja- und Visual Studio-Generatoren bereitgestellt.
 
@@ -44,7 +44,7 @@ Ab Visual Studio 2017 verwendet die Komponente **Visual C++-Tools für CMake** d
 **Visual C++-Tools für CMake** wird standardmäßig als Teil der Workload **Desktopentwicklung mit C++** installiert.
 
 ![CMake-Komponente in der Workload „Desktopentwicklung mit C++“](media/cmake-install.png)
- 
+
 ## <a name="ide-integration"></a>IDE-Integration
 
 Wenn Sie auf **Datei > Öffnen > Ordner** klicken, um einen Ordner zu öffnen, der eine CMakeLists.txt-Datei enthält, geschieht Folgendes:
@@ -53,10 +53,10 @@ Wenn Sie auf **Datei > Öffnen > Ordner** klicken, um einen Ordner zu öffnen, d
 - Der **Projektmappen-Explorer** zeigt die Ordnerstruktur und die Dateien an.
 - Visual Studio führt „CMake.exe“ aus und generiert den CMake-Cache für die *Standardkonfiguration* (x86 Debug). Die CMake-Befehlszeile wird im **Ausgabefenster** zusammen mit zusätzlichen Ausgaben von CMake angezeigt.  **Visual Studio 2017, Version 15.7 und höher:** Die automatische Cachegenerierung kann im Dialogfeld **Extras > Optionen > CMake > Allgemein** deaktiviert werden.
 - Im Hintergrund beginnt Visual Studio damit, die Quelldateien zu indizieren, um IntelliSense, das Durchsuchen von Informationen, das Refactoring und vieles mehr zu ermöglichen. Während Sie arbeiten, überwacht Visual Studio die Änderungen im Editor und auf dem Datenträger, damit der Index mit den Quellen synchron ist.
- 
+
 Sie können Ordner öffnen, die eine beliebige Anzahl von CMake-Projekten enthalten. Visual Studio erkennt und konfiguriert alle CMakeLists.txt-Stammdateien in Ihrem Arbeitsbereich. CMake-Vorgänge (Konfigurieren, Erstellen, Debuggen) sowie C++ IntelliSense und das Durchsuchen sind für alle CMake-Projekte in Ihrem Arbeitsbereich verfügbar.
 
-![CMake-Projekte mit mehreren Stammdateien](media/cmake-multiple-roots.png)  
+![CMake-Projekte mit mehreren Stammdateien](media/cmake-multiple-roots.png)
 
 **Visual Studio 2017, Version 15.7 und höher:** Sie können die Projekte auch logisch strukturiert nach Zielen anzeigen. Wählen Sie in der Dropdownliste der Symbolleiste des **Projektmappen-Explorers** die Option **Zielansicht** aus:
 
@@ -64,8 +64,7 @@ Sie können Ordner öffnen, die eine beliebige Anzahl von CMake-Projekten enthal
 
 ## <a name="import-an-existing-cache"></a>Importieren eines vorhandenen Caches
 
-Wenn Sie eine vorhandene CMakeLists.txt-Datei importieren, extrahiert Visual Studio benutzerdefinierte Variablen automatisch und erstellt eine vorab aufgefüllte CMakeSettings.json-Datei, die auf diesen basiert. Der ursprüngliche Cache wird nicht geändert und kann weiterhin über die Befehlszeile oder über das Tool bzw. die IDE verwendet werden, mit dem bzw. der er generiert wurde. Die neue CMakeSettings.json-Datei wird bei der CMakeLists.txt-Stammdatei des Projekts platziert. Visual Studio generiert einen neuen Cache, der auf der Einstellungsdatei basiert.  
-
+Wenn Sie eine vorhandene Datei „CMakeLists.txt“ importieren, extrahiert Visual Studio benutzerdefinierte Variablen automatisch und erstellt eine vorab mit Daten aufgefüllte Datei [CMakeSettings.json](#cmake_settings), die auf diesen basiert. Der ursprüngliche Cache wird nicht geändert und kann weiterhin über die Befehlszeile oder über das Tool bzw. die IDE verwendet werden, mit dem bzw. der er generiert wurde. Die neue CMakeSettings.json-Datei wird bei der CMakeLists.txt-Stammdatei des Projekts platziert. Visual Studio generiert einen neuen Cache, der auf der Einstellungsdatei basiert.
 
 **Visual Studio 2017, Version 15.7 und höher:** Die automatische Cachegenerierung kann im Dialogfeld **Extras > Optionen > CMake > Allgemein** außer Kraft gesetzt werden.
 
@@ -75,16 +74,15 @@ Nicht der gesamte Inhalt des Caches wird importiert.  Eigenschaften wie der Gene
 
 1. Klicken Sie im Hauptmenü auf **Datei > Öffnen > CMake**:
 
-   ![Öffnen von CMake](media/cmake-file-open.png "Datei > Öffnen > CMake") 
+   ![Öffnen von CMake](media/cmake-file-open.png "Datei > Öffnen > CMake")
 
-   Dadurch wird der Assistent **CMake-Projekt aus Cache importieren** gestartet. 
-   
+   Dadurch wird der Assistent **CMake-Projekt aus Cache importieren** gestartet.
+
 2. Navigieren Sie zur CMakeCache.txt-Datei, die Sie importieren möchten, und klicken Sie dann auf **OK**. Der Assistent **CMake-Projekt aus Cache importieren** wird angezeigt:
 
-   ![Importieren eines CMake-Caches](media/cmake-import-wizard.png "Öffnen des Assistenten zum Importieren von CMake-Caches") 
+   ![Importieren eines CMake-Caches](media/cmake-import-wizard.png "Öffnen des Assistenten zum Importieren von CMake-Caches")
 
    Wenn der Assistent abgeschlossen ist, wird die neue Datei „CMakeCache.txt“ im **Projektmappen-Explorer** neben der Stammdatei „CMakeLists.txt“ in Ihrem Projekt geöffnet.
-
 
 ## <a name="building-cmake-projects"></a>Erstellen von CMake-Projekten
 
@@ -94,7 +92,7 @@ Folgende Optionen stehen Ihnen zum Erstellen eines CMake-Projekts zur Verfügung
 1. Klicken Sie mit der rechten Maustaste auf CMakeLists.txt, und wählen Sie im Kontextmenü **Erstellen** aus. Wenn mehrere Ziele in Ihrer Ordnerstruktur vorhanden sind, können Sie auswählen, den Build für alle oder nur für ein bestimmtes Ziel durchzuführen.
 1. Alternativ können Sie im Hauptmenü auf **Erstellen > Projektmappe erstellen** klicken bzw. **F7** oder **STRG+UMSCHALT+B** drücken. Stellen Sie sicher, dass ein CMake-Ziel bereits in der Dropdownliste **Startelement** auf der Symbolleiste **Allgemein** ausgewählt ist.
 
-![CMake-Menübefehl „Erstellen“](media/cmake-build-menu.png "CMake build menu command") 
+![CMake-Menübefehl „Erstellen“](media/cmake-build-menu.png "CMake build menu command")
 
 Wenn ein Visual Studio-Generator als aktive Konfiguration ausgewählt ist, wird „MSBuild.exe“ über `-m -v:minimal`-Argumente aufgerufen. In der CMakeSettings.json-Datei können Sie zusätzliche Befehlszeilenargumente angeben, die über die `buildCommandArgs`-Eigenschaft an das Buildsystem übergeben werden sollen, um den Build anzupassen:
 
@@ -103,14 +101,14 @@ Wenn ein Visual Studio-Generator als aktive Konfiguration ausgewählt ist, wird 
 ```
 
 Erwartungsgemäß werden die Buildergebnisse im **Ausgabefenster** und in der **Fehlerliste** angezeigt.
- 
+
 ![CMake-Buildfehler](media/cmake-build-errors.png "CMake build errors")
 
 In einem Ordner mit mehreren Buildzielen können Sie das Element **Erstellen** im Menü **CMake** oder das Kontextmenü **CMakeLists.txt** auswählen, um das CMake-Ziel für den Build anzugeben. Wenn Sie **STRG+UMSCHALT+B** in einem CMake-Projekt drücken, wird das derzeit aktive Dokument erstellt.
 
 ## <a name="debug-the-project"></a>Debuggen des Projekts
 
-Wenn Sie ein CMake-Projekt debuggen möchten, wählen Sie die gewünschte Konfiguration aus, und drücken Sie **F5**. Klicken Sie alternativ auf die Schaltfläche **Ausführen** auf der Symbolleiste. Wenn die Schaltfläche **Ausführen** „Startelement auswählen“ anzeigt, klicken Sie auf den Dropdownpfeil, und wählen Sie das Ziel aus, das ausgeführt werden soll. (In einem CMake-Projekt ist die Option „Aktuelles Dokument“ nur für CPP-Dateien gültig.) 
+Wenn Sie ein CMake-Projekt debuggen möchten, wählen Sie die gewünschte Konfiguration aus, und drücken Sie **F5**. Klicken Sie alternativ auf die Schaltfläche **Ausführen** auf der Symbolleiste. Wenn die Schaltfläche **Ausführen** „Startelement auswählen“ anzeigt, klicken Sie auf den Dropdownpfeil, und wählen Sie das Ziel aus, das ausgeführt werden soll. (In einem CMake-Projekt ist die Option „Aktuelles Dokument“ nur für CPP-Dateien gültig.)
 
 ![CMake-Schaltfläche „Ausführen“](media/cmake-run-button.png "Cmake run button")
 
@@ -122,7 +120,6 @@ Alle ausführbaren CMake-Ziele werden in der Dropdownliste **Startelement** auf 
 
 ![CMake-Dropdownliste „Startelement“](media/cmake-startup-item-dropdown.png "CMake startup item dropdown")
 
-
 Sie können eine Debugsitzung ebenfalls über die CMake-Menüs starten.
 
 Wenn Sie die Debugeinstellungen für ein beliebiges ausführbares CMake-Ziel in Ihrem Projekt anpassen möchten, klicken Sie mit der rechten Maustaste auf die entsprechende CMakeLists.txt-Datei, und wählen Sie **Debug- und Starteinstellungen** aus. Wenn Sie im Untermenü ein CMake-Ziel auswählen, wird eine Datei namens „launch.vs.json“ erstellt. Die Datei wird vorab mit Informationen zum ausgewählten CMake-Ziel aufgefüllt, und Sie können zusätzliche Parameter wie Programmargumente oder den Debuggertyp angeben. Wenn Sie in einer CMakeSettings.json-Datei auf einen Schlüssel verweisen möchten, stellen Sie diesem „CMake.“ in launch.vs.json voran. In folgendem Beispiel wird eine einfache launch.vs.json-Datei dargestellt, die den Wert des Schlüssels „remoteCopySources“ aus der Datei „CMakeSettings.json“ für die derzeit ausgewählte Konfiguration abruft:
@@ -132,7 +129,7 @@ Wenn Sie die Debugeinstellungen für ein beliebiges ausführbares CMake-Ziel in 
   "version": "0.2.1",
   "defaults": {},
   "configurations": [
-   {
+    {
       "type": "default",
       "project": "CMakeLists.txt",
       "projectTarget": "CMakeHelloWorld.exe (Debug\\CMakeHelloWorld.exe)",
@@ -147,14 +144,13 @@ Sobald Sie die Datei „launch.vs.json“ speichern, wird ein Eintrag mit dem ne
 
 **Visual Studio 2017, Version 15.4:** „launch.vs.json“ unterstützt Variablen, die in „CMakeSettings.json“ (siehe unten) deklariert werden und auf die aktuell ausgewählte Konfiguration angewendet werden können. Sie verfügt ebenfalls über einen Schlüssel namens „currentDir“, der das aktuelle Verzeichnis der gestarteten App festlegt:
 
-
 ```json
 {
-"type": "default",
-"project": "CMakeLists.txt",
-"projectTarget": "CMakeHelloWorld1.exe (C:\\Users\\satyan\\CMakeBuilds\\Test\\Debug\\CMakeHelloWorld1.exe)",
-"name": "CMakeHelloWorld1.exe (C:\\Users\\satyan\\CMakeBuilds\\Test\\Debug\\CMakeHelloWorld1.exe)",
-"currentDir": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}"
+  "type": "default",
+  "project": "CMakeLists.txt",
+  "projectTarget": "CMakeHelloWorld1.exe (C:\\Users\\satyan\\CMakeBuilds\\Test\\Debug\\CMakeHelloWorld1.exe)",
+  "name": "CMakeHelloWorld1.exe (C:\\Users\\satyan\\CMakeBuilds\\Test\\Debug\\CMakeHelloWorld1.exe)",
+  "currentDir": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}"
 }
 ```
 
@@ -170,14 +166,13 @@ Wenn Sie eine CMakeLists.txt-Datei bearbeiten möchten, klicken Sie im **Projekt
 
    ![Bearbeiten der Datei „CMakeLists.txt“](media/cmake-cmakelists.png "CMakeLists.txt file editing")
 
-
 Sobald Sie die Datei speichern, wird der Konfigurationsschritt automatisch erneut ausgeführt. Dieser zeigt Informationen im **Ausgabefenster** an. Fehler und Warnungen werden in der **Fehlerliste** oder im **Ausgabefenster** angezeigt. Doppelklicken Sie auf einen Fehler in der **Fehlerliste**, um zur problematischen Zeile in CMakeLists.txt zu navigieren.
 
    ![Fehler in der Datei „CMakeLists.txt“](media/cmake-cmakelists-error.png "CMakeLists.txt file errors")
 
 ## <a name="cmake_settings"></a> CMake-Einstellungen und benutzerdefinierte Konfigurationen
 
-Standardmäßig stellt Visual Studio sechs CMake-Standardkonfigurationen ("x86-Debug", "x86-Release", "x64-Debug", "x64-Release", "Linux-Debug" and "Linux-Release") bereit. Diese Konfigurationen definieren, wie „CMake.exe“ aufgerufen wird, um den CMake-Cache für ein bestimmtes Projekt zu erstellen. Wenn Sie diese Konfigurationen ändern oder eine neue benutzerdefinierte Konfiguration erstellen möchten, klicken Sie auf **CMake > CMake-Einstellungen ändern**, und wählen Sie die CMakeLists.txt-Datei aus, für die die Einstellungen gelten. Der Befehl **CMake-Einstellungen** ändern ist ebenfalls über das Kontextmenü der Datei im **Projektmappen-Explorer** verfügbar. Dieser Befehl erstellt eine CMakeSettings.json-Datei im Projektordner. Diese Datei wird verwendet, um die CMake-Cachedatei erneut zu erstellen, z.B. nach einem **Bereinigungsvorgang**. 
+Standardmäßig stellt Visual Studio sechs CMake-Standardkonfigurationen ("x86-Debug", "x86-Release", "x64-Debug", "x64-Release", "Linux-Debug" and "Linux-Release") bereit. Diese Konfigurationen definieren, wie „CMake.exe“ aufgerufen wird, um den CMake-Cache für ein bestimmtes Projekt zu erstellen. Wenn Sie diese Konfigurationen ändern oder eine neue benutzerdefinierte Konfiguration erstellen möchten, klicken Sie auf **CMake > CMake-Einstellungen ändern**, und wählen Sie die CMakeLists.txt-Datei aus, für die die Einstellungen gelten. Der Befehl **CMake-Einstellungen** ändern ist ebenfalls über das Kontextmenü der Datei im **Projektmappen-Explorer** verfügbar. Dieser Befehl erstellt eine CMakeSettings.json-Datei im Projektordner. Diese Datei wird verwendet, um die CMake-Cachedatei erneut zu erstellen, z.B. nach einem **Bereinigungsvorgang**.
 
    ![CMake-Hauptmenübefehl für das Ändern von Einstellungen](media/cmake-change-settings.png)
 
@@ -203,6 +198,7 @@ Im Folgenden wird eine Beispielkonfiguration veranschaulicht, die Sie als Ausgan
 ```
 
 1. **name:** der Name, der in der Dropdownliste für die C++-Konfiguration angezeigt wird Dieser Eigenschaftswert kann ebenfalls als Makro (`${name}`) verwendet werden, um andere Eigenschaftswerte anzugeben. Ein Beispiel finden Sie in der **buildRoot**-Definition in „CMakeSettings.json“.
+
 1. **generator:** führt eine Zuordnung für die Option **-G** durch und gibt den Generator an, der verwendet werden soll Diese Eigenschaft kann ebenfalls als Makro (`${generator}`) verwendet werden, um andere Eigenschaftswerte anzugeben. Visual Studio unterstützt derzeit folgende CMake-Generatoren:
 
     - "Ninja"
@@ -218,11 +214,29 @@ Da Ninja für schnelle Buildgeschwindigkeiten statt für Flexibilität und Funkt
 Öffnen Sie „CMakeSettings.json“ über das Hauptmenü, indem Sie auf **CMake > CMake-Einstellungen ändern** klicken, um einen Visual Studio-Generator anzugeben. Löschen Sie „Ninja“, und geben Sie „V“ ein. Dadurch wird IntelliSense aktiviert, und Sie können den gewünschten Generator auswählen.
 
 1. **buildRoot:** führt eine Zuordnung für die Option **-DCMAKE_BINARY_DIR** und gibt an, wo der CMake-Cache erstellt wird Wenn der Ordner noch nicht vorhanden ist, wird dieser erstellt.
-1. **variables:** enthält ein Name/Wert-Paar von CMake-Variablen, die als **-D**_Name_**=**_Wert_ an CMake übergeben werden Wenn die Buildanweisungen Ihres CMake-Projekts das direkte Hinzufügen aller Variablen zur CMake-Cachedatei festlegen, wird empfohlen, diese stattdessen hier hinzuzufügen.
+
+1. **variables:** enthält ein Name/Wert-Paar von CMake-Variablen, die als **-D**_Name_**=**_Wert_ an CMake übergeben werden Wenn die Buildanweisungen Ihres CMake-Projekts das direkte Hinzufügen aller Variablen zur CMake-Cachedatei festlegen, wird empfohlen, diese stattdessen hier hinzuzufügen. Im folgenden Beispiel wird gezeigt, wie Sie die Name-Wert-Paare im Code angeben können:
+
+```json
+"variables": [
+    {
+      "name": "CMAKE_CXX_COMPILER",
+      "value": "C:/Program Files (x86)/Microsoft Visual Studio/157/Enterprise/VC/Tools/MSVC/14.14.26428/bin/HostX86/x86/cl.exe"
+    },
+    {
+      "name": "CMAKE_C_COMPILER",
+      "value": "C:/Program Files (x86)/Microsoft Visual Studio/157/Enterprise/VC/Tools/MSVC/14.14.26428/bin/HostX86/x86/cl.exe"
+    }
+  ]
+```
+
 1. **cmakeCommandArgs:** gibt alle zusätzlichen Optionen an, die an „CMake.exe“ übergeben werden sollen
-1. **configurationType:** definiert den Typ der Buildkonfiguration für den ausgewählten Generator Derzeit werden die Werte "Debug", "MinSizeRel", "Release" und "RelWithDebInfo" unterstützt.
-1. **ctestCommandArgs:** gibt zusätzliche Optionen an, die beim Ausführen von Tests an CTest übergeben werden sollen.
-1. **ctestCommandArgs:** gibt zusätzliche Optionen an, die an das zugrunde liegende Buildsystem übergeben werden sollen. Beispielsweise wird beim Übergeben von „-v“ mithilfe des Ninja-Generators erzwungen, dass Ninja Befehlszeilen ausgibt.
+
+2. **configurationType:** definiert den Typ der Buildkonfiguration für den ausgewählten Generator Derzeit werden die Werte "Debug", "MinSizeRel", "Release" und "RelWithDebInfo" unterstützt.
+
+3. **ctestCommandArgs:** gibt zusätzliche Optionen an, die beim Ausführen von Tests an CTest übergeben werden sollen.
+
+4. **ctestCommandArgs:** gibt zusätzliche Optionen an, die an das zugrunde liegende Buildsystem übergeben werden sollen. Beispielsweise wird beim Übergeben von „-v“ mithilfe des Ninja-Generators erzwungen, dass Ninja Befehlszeilen ausgibt.
 
 ### <a name="environment-variables"></a>Umgebungsvariablen
 
@@ -255,13 +269,14 @@ usage: ninja [options] [targets...]
 |   -j N     | Ausführen von N gleichzeitigen Aufträgen (Standard: 14, abgeleitet von den verfügbaren CPUs)|
 |   -k N     | Fortsetzen, bis N Aufträge fehlschlagen (Standard: 1)|
 |   -l N     | Kein Starten von neuen Aufträgen, wenn die durchschnittliche Auslastung größer als N ist|
-|   -n      | Testausführung (Befehle werden nicht ausgeführt, verhalten sich jedoch, als wären sie erfolgreich)|
+|   -n       | Testausführung (Befehle werden nicht ausgeführt, verhalten sich jedoch, als wären sie erfolgreich)|
 |   -v       | Anzeigen aller Befehlszeilen während des Builds|
 |   -d MODE  | Aktivieren des Debuggens (verwenden Sie „-d list“, um Modi aufzulisten)|
-|   -t TOOL  | Ausführen eines Zusatztools (verwenden Sie „-t list“, um zusätzliche Tools aufzulisten). Beendet Optionen auf oberster Ebene; weitere Flags werden an das Tool übergeben.| 
+|   -t TOOL  | Ausführen eines Zusatztools (verwenden Sie „-t list“, um zusätzliche Tools aufzulisten). Beendet Optionen auf oberster Ebene; weitere Flags werden an das Tool übergeben.|
 |   -w FLAG  | Anpassen von Warnungen (verwenden Sie „-w list“, um Warnungen aufzulisten)|
 
 ### <a name="inherited-environments-visual-studio-2017-version-155"></a>Geerbte Umgebungen (Visual Studio 2017 Version 15.5)
+
 „CMakeSettings.json“ unterstützt nun geerbte Umgebungen. Durch dieses Feature können Sie Standardumgebungen vererben und benutzerdefinierte Umgebungsvariablen erstellen, die bei der Ausführung an „CMake.exe“ übergeben werden.
 
 ```json
@@ -284,6 +299,7 @@ Folgende Tabelle führt die Standardwerte und die zugehörigen Befehlszeilen auf
 |msvc_arm64_x64|Kompiliert mithilfe von 64-Bit-Tools für ARM64|
 
 ### <a name="custom-environment-variables"></a>Benutzerdefinierte Umgebungsvariablen
+
 In „CMakeSettings.json“ können Sie benutzerdefinierte Umgebungsvariablen global oder pro Konfiguration in der Eigenschaft **environments** definieren. In folgendem Beispiel wird eine globale Variable (**BuildDir**) definiert, die in den Konfigurationen „x86-Debug“ und „x64-Debug“ geerbt wird. Jede Konfiguration verwendet die Variable, um den Wert für die Eigenschaft **buildRoot** der Konfiguration anzugeben. Beachten Sie ebenfalls, wie jede Konfiguration die Eigenschaft **inheritEnvironments** verwendet, um eine Variable anzugeben, die nur für diese Konfiguration gilt.
 
 ```json
@@ -349,7 +365,7 @@ Im nächsten Beispiel definiert die Konfiguration „x86-Debug“ ihren eigenen 
 
       "generator": "Ninja",
       "configurationType": "Debug",
-      "inheritEnvironments": [ "msvc_x64" ], 
+      "inheritEnvironments": [ "msvc_x64" ],
       // Since this configuration doesn’t modify BuildDir, it inherits
       // from the one defined globally.
       "buildRoot": "${env.BuildDir}\\${name}"
@@ -373,10 +389,13 @@ Wenn Sie Build- und Debugsitzungen auf eine Teilmenge der Projekte im Arbeitsber
 Wenn Sie weitere Informationen zum Status des CMake-Caches benötigen, um ein Problem zu diagnostizieren, öffnen Sie das Hauptmenü **CMake** oder das Kontextmenü **CMakeLists.txt** im **Projektmappen-Explorer**, um einen der folgenden Befehle auszuführen:
 
 - **Cache anzeigen** öffnet die Datei „CMakeCache.txt“ aus dem Stammordner des Builds im Editor. (Alle Änderungen, die Sie hier an „CMakeCache.txt“ vornehmen, werden verworfen, wenn Sie den Cache bereinigen. Weitere Informationen dazu, wie die Änderungen nach dem Löschen des Caches beibehalten werden, finden Sie in diesem Artikel unter [CMake-Einstellungen und benutzerdefinierte Konfigurationen](#cmake_settings).)
-- **Cacheordner öffnen** öffnet ein Explorer-Fenster zum Stammordner des Builds.  
+
+- **Cacheordner öffnen** öffnet ein Explorer-Fenster zum Stammordner des Builds.
+
 - **Cache bereinigen** löscht den Stammordner des Builds, sodass der nächste CMake-Konfigurationsschritt mit einem leeren Cache beginnt.
+
 - **Cache generieren** erzwingt die Ausführung des Schritts „Generieren“, auch wenn Visual Studio die Umgebung für aktuell hält.
- 
+
 **Visual Studio 2017, Version 15.7 und höher:** Die automatische Cachegenerierung kann im Dialogfeld **Extras > Optionen > CMake > Allgemein** deaktiviert werden.
 
 ## <a name="single-file-compilation"></a>Kompilierung einzelner Dateien
@@ -384,3 +403,11 @@ Wenn Sie weitere Informationen zum Status des CMake-Caches benötigen, um ein Pr
 **Visual Studio 2017, Version 15.7 und höher:** Klicken Sie zum Erstellen einer einzelnen Datei in einem CMake-Projekt mit der rechten Maustaste auf die Datei im **Projektmappen-Explorer**, und klicken Sie auf **Kompilieren**. Sie können die derzeit im Editor geöffnete Datei auch über das CMake-Hauptmenü erstellen:
 
 ![Kompilierung einzelner Dateien in CMake](media/cmake-single-file-compile.png)
+
+## <a name="run-cmake-from-the-command-line"></a>Ausführen von CMake über die Befehlszeile
+Wenn Sie CMake über den Visual Studio-Installer installiert haben, können Sie CMake über die Befehlszeile ausführen, indem Sie die folgenden Schritte ausführen:
+
+1. Führen Sie die entsprechende Datei „vsdevcmd.bat“ (x86/x64) aus. Weitere Informationen finden Sie unter [Erstellen über die Befehlszeile](../build/building-on-the-command-line.md).
+1. Wechseln Sie zu Ihrem Ausgabeordner.
+1. Führen Sie CMake zum Erstellen/Konfigurieren Ihrer App aus.
+

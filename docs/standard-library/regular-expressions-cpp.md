@@ -1,27 +1,17 @@
 ---
-title: Reguläre Ausdrücke (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Reguläre Ausdrücke (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, regular expressions
 - regular expressions, Visual C++
 - regular expressions
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 86c64ff0eda298ba330f3f1e1ff6d953fd859234
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: dafbe7c7ba10db2b0f34fdc6065c1475d63be284
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209021"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50443462"
 ---
 # <a name="regular-expressions-c"></a>Reguläre Ausdrücke (C++)
 
@@ -58,17 +48,17 @@ Bei einem Element kann es sich um Folgendes handeln:
 
 - Ein *Klammerausdruck* im Format "[`expr`]", das einem Zeichen oder einem Sortierreihenfolgenelement in der Zielsequenz entspricht, die ebenfalls in dem durch den Ausdruck `expr` definierten Satz enthalten ist, oder im Format "[^`expr`]", das einem Zeichen oder einem Sortierreihenfolgenelement in der Zielsequenz entspricht, die nicht in dem durch den Ausdruck `expr` definierten Satz enthalten ist.
 
-     Der Ausdruck `expr` kann jede Kombination der folgenden Elemente enthalten:
+   Der Ausdruck `expr` kann jede Kombination der folgenden Elemente enthalten:
 
-    -   Ein einzelnes Zeichen. Fügt das Zeichen dem Satz hinzu, der durch `expr` definiert wird.
+   - Ein einzelnes Zeichen. Fügt das Zeichen dem Satz hinzu, der durch `expr` definiert wird.
 
-    -   Ein *Zeichenbereich* im Format "`ch1`-`ch2`". Fügt die Zeichen, die durch Werte im geschlossenen Bereich [`ch1`, `ch2`] dargestellt werden, dem Satz hinzu, der durch `expr` festgelegt ist.
+   - Ein *Zeichenbereich* im Format "`ch1`-`ch2`". Fügt die Zeichen, die durch Werte im geschlossenen Bereich [`ch1`, `ch2`] dargestellt werden, dem Satz hinzu, der durch `expr` festgelegt ist.
 
-    -   Eine *Zeichenklasse* im Format "[:`name`:]". Fügt die Zeichen in der benannten Klasse dem Satz hinzu, der durch `expr` definiert wird.
+   - Eine *Zeichenklasse* im Format "[:`name`:]". Fügt die Zeichen in der benannten Klasse dem Satz hinzu, der durch `expr` definiert wird.
 
-    -   Eine *Äkquivalenzklasse* im Format "[=`elt`=]". Fügt Sortierungselemente, die mit `elt` äquivalent sind, dem Satz hinzu, der durch `expr` definiert wird.
+   - Eine *Äkquivalenzklasse* im Format "[=`elt`=]". Fügt Sortierungselemente, die mit `elt` äquivalent sind, dem Satz hinzu, der durch `expr` definiert wird.
 
-    -   Ein *Sortierungssymbol* im Format "[.`elt`.]". Fügt das Sortierreihenfolgenelement `elt` dem Satz hinzu, der durch `expr` definiert wird.
+   - Ein *Sortierungssymbol* im Format "[.`elt`.]". Fügt das Sortierreihenfolgenelement `elt` dem Satz hinzu, der durch `expr` definiert wird.
 
 - Ein *Anker*. Der Anker "^" entspricht dem Anfang der Zielsequenz, während der Anker "$ " mit dem Ende der Zielsequenz übereinstimmt.
 
@@ -403,11 +393,11 @@ Ein normales Zeichen ist ein beliebiges gültiges Zeichen, das in der aktuellen 
 
 In `ECMAScript` haben die folgenden Zeichen eine besondere Bedeutung:
 
-- ^  $  \  .  \*  +  ?  (  )  [  ]  {  }  &#124;
+- ^  $  \  .  \*  +  ?  (  )  \[  ]  {  }&#124;
 
 In `basic` und `grep` haben die folgenden Zeichen eine besondere Bedeutung:
 
-- sein.   [   \
+- sein.   \[   \
 
 In `basic` und `grep` verfügen die folgenden Zeichen außerdem über eine besondere Bedeutung, wenn sie in einem bestimmten Kontext verwendet werden:
 
@@ -419,7 +409,7 @@ In `basic` und `grep` verfügen die folgenden Zeichen außerdem über eine beson
 
 In `extended`, `egrep` und `awk` haben die folgenden Zeichen eine besondere Bedeutung:
 
-- sein.   [   \   (   \*   +   ?   {   &#124;
+- sein.   \[   \   (   \*   +   ?   {   &#124;
 
 In `extended`, `egrep` und `awk` verfügen die folgenden Zeichen außerdem über eine besondere Bedeutung, wenn sie in einem bestimmten Kontext verwendet werden:
 

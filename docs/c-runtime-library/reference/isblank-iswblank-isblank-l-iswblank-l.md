@@ -1,10 +1,6 @@
 ---
-title: isblank, iswblank, _isblank_l, _iswblank_l | Microsoft-Dokumentation
-ms.custom: ''
+title: isblank, iswblank, _isblank_l, _iswblank_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - isblank
 - _isblank_l
@@ -30,19 +26,13 @@ f1_keywords:
 - _istblank
 - _isblank_l
 - iswblank
-dev_langs:
-- C++
 ms.assetid: 33ce96c0-f387-411a-8283-c3d2a69e56bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d2787be85aa4e12bf22d1be14f90568891b83824
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb088c4056e2277e188d7f98a57dd36216d013ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403312"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497317"
 ---
 # <a name="isblank-iswblank-isblankl-iswblankl"></a>isblank, iswblank, _isblank_l, _iswblank_l
 
@@ -77,11 +67,11 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Routinen gibt ungleich NULL, wenn *c* eine bestimmte Darstellung eines Leerzeichens oder horizontaler Tabulator oder zu einem gebietsschemaspezifischen Satz von Zeichen, die zum Trennen von Wörtern in einer Zeile des Texts verwendet werden. **Isblank** gibt einen Wert ungleich NULL zurück, wenn *c* ist ein Leerzeichen (0 x 20) oder horizontales Tabstoppzeichen (0 x 09). Das Ergebnis der testbedingung für die **Isblank** Funktionen hängt die **LC_CTYPE** Kategorie des Gebietsschemas für Weitere Informationen finden Sie unter [Setlocale, _wsetlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen, die nicht die **_l** -Suffix verwenden das aktuelle Gebietsschema für jedes vom Gebietsschema abhängige Verhalten; die Versionen, auf denen die **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschema, das übergebene. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Jede dieser Routinen gibt ungleich NULL, wenn *c* eine bestimmte Darstellung eines Leerzeichens oder horizontales Tabstoppzeichen oder zu einem Gebietsschema-spezifische Satz von Zeichen, die zum Trennen von Wörtern in einer Textzeile verwendet werden. **Isblank** gibt einen Wert ungleich NULL zurück, wenn *c* ist ein Leerzeichen (0 x 20) oder horizontales Tabstoppzeichen (0 x 09). Das Ergebnis der testbedingung für die **Isblank** Funktionen hängt von der **LC_CTYPE** Kategorie des Gebietsschemas für Weitere Informationen finden Sie unter [Setlocale, _wsetlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen, denen keine das **_l** -Suffix verwenden das aktuelle Gebietsschema für jedes vom Gebietsschema abhängige Verhalten; die Versionen, auf denen die **_l** -Suffix sind beinahe identisch, außer dass sie verwenden die Gebietsschema, das stattdessen den übergebenen. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-**Iswblank** gibt einen Wert ungleich NULL zurück, wenn *c* ist eine Breitzeichen, das einem standardleerzeichen entspricht oder horizontales Tabstoppzeichen.
+**Iswblank** gibt einen Wert ungleich NULL zurück, wenn *c* ist ein Breitzeichen ist, das einem standardleerzeichen entspricht, oder horizontales Tabstoppzeichen.
 
-Das Verhalten des **Isblank** und **_isblank_l** ist undefiniert, wenn *c* nicht EOF ist oder im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und *c* ist keine dieser Werte, lösen die Funktionen eine Assertion.
+Das Verhalten der **Isblank** und **_isblank_l** ist undefiniert, wenn *c* nicht EOF-Markierung ist oder im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und *c* ist keine dieser Werte, lösen die Funktionen eine Assertion.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -92,7 +82,7 @@ Das Verhalten des **Isblank** und **_isblank_l** ist undefiniert, wenn *c* nicht
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**isblank**|\<ctype.h>|
 |**iswblank**|\<ctype.h> oder \<wchar.h>|

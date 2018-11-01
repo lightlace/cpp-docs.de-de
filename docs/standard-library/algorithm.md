@@ -1,29 +1,19 @@
 ---
-title: '&lt;algorithm&gt; | Microsoft-Dokumentation'
-ms.custom: ''
+title: '&lt;algorithm&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <algorithm>
-dev_langs:
-- C++
 helpviewer_keywords:
 - algorithm header [C++]
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9de7d5606d2bb178dd786d22bb0e5ab890fd16ff
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 042523cddf640e7cf6fd7f9a1dac9f3adbc360b6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964235"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484070"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
@@ -92,7 +82,7 @@ Die numerischen C++-Standardbibliotheksalgorithmen, die für die numerische Vera
 |[max](../standard-library/algorithm-functions.md#max)|Vergleicht zwei Objekte und gibt das größere der beiden zurück, wobei das Sortierkriterium möglicherweise von einem binären Prädikat angegeben wird.|
 |[max_element](../standard-library/algorithm-functions.md#max_element)|Sucht das erste Vorkommen des größten Elements in einem angegebenen Bereich, in dem das Sortierkriterium möglicherweise von einem binären Prädikat angegeben wird.|
 |[merge](../standard-library/algorithm-functions.md#merge)|Kombiniert alle Elemente von zwei sortierten Quellbereichen in einen einzelnen sortierten Zielbereich, wobei das Sortierkriterium durch ein binäres Prädikat angegeben werden kann.|
-|[min](../standard-library/algorithm-functions.md#min)|Vergleicht zwei Objekte und gibt das kleinere der beiden zurück, wobei das Sortierkriterium möglicherweise von einem binären Prädikat angegeben wird.|
+|[Min.](../standard-library/algorithm-functions.md#min)|Vergleicht zwei Objekte und gibt das kleinere der beiden zurück, wobei das Sortierkriterium möglicherweise von einem binären Prädikat angegeben wird.|
 |[min_element](../standard-library/algorithm-functions.md#min_element)|Sucht das erste Vorkommen des kleinsten Elements in einem angegebenen Bereich, in dem das Sortierkriterium von einem binären Prädikat angegeben werden kann.|
 |[minmax](../standard-library/algorithm-functions.md#minmax)|Vergleicht zwei Eingabeparameter und gibt diese als Paar, in der Reihenfolge "kleiner zu größer", zurück.|
 |[minmax_element](../standard-library/algorithm-functions.md#minmax_element)|Führt die Aufgaben aus, die von [min_element](../standard-library/algorithm-functions.md#min_element) und [max_element](../standard-library/algorithm-functions.md#max_element) in einem Aufruf erlegt werden.|

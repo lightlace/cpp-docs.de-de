@@ -1,28 +1,18 @@
 ---
-title: Datum und Uhrzeit | Microsoft-Dokumentation
-ms.custom: ''
+title: Datum und Uhrzeit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - time, MFC programming
 - time
 - MFC, date and time
 - dates, MFC
 ms.assetid: ecf56dc5-d418-4603-ad3e-af7e205a6403
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9753578de006ed46719d94d5861035ab77dbca6c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: dcb5ef9f21987e11608cfa29e77b24e96153e6b3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752251"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459448"
 ---
 # <a name="date-and-time"></a>Datum und Uhrzeit
 
@@ -44,6 +34,6 @@ MFC unterstützt mehrere verschiedene Möglichkeiten zum Arbeiten mit Datums- un
 
 ## <a name="see-also"></a>Siehe auch
 
-[Konzepte](../mfc/mfc-concepts.md)   
+[Konzepte](../mfc/mfc-concepts.md)<br/>
 [Allgemeine MFC-Themen](../mfc/general-mfc-topics.md)
 

@@ -1,10 +1,6 @@
 ---
-title: Kategorie-Makros | Microsoft-Dokumentation
-ms.custom: ''
+title: Kategorie-Makros
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlGetHexValue
 - atlbase/ATL::AtlGetVersion
@@ -28,19 +24,13 @@ f1_keywords:
 - atlenc/ATL::UUDecodeGetRequiredLength
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
-dev_langs:
-- C++
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cc13285549543eeab07bed6372f8f7d529f90a32
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0be22a8f7152d7933d4d0ab970fae834200c6d8a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46078698"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609728"
 ---
 # <a name="category-macros"></a>Kategorie-Makros
 
@@ -51,11 +41,11 @@ Diese Makros definieren Zuordnungen der Kategorie.
 |[BEGIN_CATEGORY_MAP](#begin_category_map)|Markiert den Beginn der Zuordnung Kategorie.|
 |[END_CATEGORY_MAP](#end_category_map)|Markiert das Ende der Zuordnung Kategorie.|
 |[IMPLEMENTED_CATEGORY](#implemented_category)|Gibt an, Kategorien, die vom COM-Objekt implementiert werden.|
-|[REQUIRED_CATEGORY](#required_category)|Gibt an, Kategorien, die von den Container von COM-Objekts erforderlich sind.|  
+|[REQUIRED_CATEGORY](#required_category)|Gibt an, Kategorien, die von den Container von COM-Objekts erforderlich sind.|
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** atlcom.h  
+**Header:** atlcom.h
 
 ##  <a name="begin_category_map"></a>  BEGIN_CATEGORY_MAP
 

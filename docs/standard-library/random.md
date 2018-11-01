@@ -1,27 +1,17 @@
 ---
-title: '&lt;random&gt; | Microsoft-Dokumentation'
-ms.custom: ''
+title: '&lt;random&gt;'
 ms.date: 08/24/2017
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <random>
-dev_langs:
-- C++
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 453c2eb186175b275defdc87dcfcdc79ff5f258a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5b246be02c860ede6691db1c4d21af7e6b4da26a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956504"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511851"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -43,8 +33,7 @@ Diese Links führen zu den Hauptabschnitten dieses Artikels:
 
 - [Kategorisierte Auflistung](#listing)
 
-- 
-  [Engines und Verteilungen](#engdist)
+- [Engines und Verteilungen](#engdist)
 
 - [Hinweise](#comments)
 
@@ -56,8 +45,7 @@ Hier sind einige Tipps zu bedenken, wenn mit \<random >:
 
 - Eine einzelne Instanziierung eines URNG oder einer Verteilung kann nicht gleichzeitig sicher aufgerufen werden, da die Ausführung eines URNG oder einer Verteilung ein Änderungsvorgang ist. Weitere Informationen finden Sie unter [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md).
 
-- 
-  [Voreingestellte Typdefinitionen](#typedefs) einiger Engines sind verfügbar. Dies ist der bevorzugte Weg zur Erstellung eines URNG, wenn eine Engine verwendet wird.
+- [Voreingestellte Typdefinitionen](#typedefs) einiger Engines sind verfügbar. Dies ist der bevorzugte Weg zur Erstellung eines URNG, wenn eine Engine verwendet wird.
 
 - Die hilfreichste Paarung für die meisten Anwendungen ist die `mt19937`-Engine mit `uniform_int_distribution`, wie später in diesem Artikel im [Codebeispiel](#code) gezeigt.
 
@@ -242,41 +230,77 @@ Den folgenden Abschnitten werden die uniform random Number-Generators (URNGs) zu
 
 Zur Instanzierung von Engines und Engine-Adaptern. Weitere Informationen erhalten Sie im Abschnitt [Engines und Verteilungen](#engdist).
 
-- 
-   `default_random_engine` Die Standard-Engine.
-`typedef mt19937 default_random_engine;`
+- `default_random_engine` Die Standard-Engine.
 
-- 
-   `knuth_b` Knuth-Engine.
-`typedef shuffle_order_engine<minstd_rand0, 256> knuth_b;`
+    ```cpp
+    typedef mt19937 default_random_engine;
+    ```
+
+- `knuth_b` Knuth-Engine.
+
+    ```cpp
+    typedef shuffle_order_engine<minstd_rand0, 256> knuth_b;
+    ```
 
 - `minstd_rand0` Minimal Standard Engine 1988 (Lewis, Goodman und Miller 1969).
- `typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;`
+
+    ```cpp
+    typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;
+    ```
 
 - `minstd_rand` Aktualisierter Minimal Standard Engine `minstd_rand0` (Park, Miller und Stockmeyer 1993).
- `typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;`
 
-- 
-   `mt19937` 32-Bit-Mersenne-Twister-Engine (Matsumoto und Nishimura, 1998).
-`typedef mersenne_twister_engine<unsigned int, 32, 624, 397,      31, 0x9908b0df,      11, 0xffffffff,      7, 0x9d2c5680,      15, 0xefc60000,      18, 1812433253> mt19937;`
+    ```cpp
+    typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;
+    ```
 
-- 
-   `mt19937_64` 64-Bit-Mersenne-Twister-Engine (Matsumoto und Nishimura, 2000).
-`typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,      31, 0xb5026f5aa96619e9ULL,      29, 0x5555555555555555ULL,      17, 0x71d67fffeda60000ULL,      37, 0xfff7eee000000000ULL,      43, 6364136223846793005ULL> mt19937_64;`
+- `mt19937` 32-Bit-Mersenne-Twister-Engine (Matsumoto und Nishimura, 1998).
 
-- 
-   `ranlux24` 24-Bit-RANLUX-Engine (Martin Lüscher und Fred James, 1994).
-`typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;`
+    ```cpp
+    typedef mersenne_twister_engine<
+        unsigned int, 32, 624, 397,
+        31, 0x9908b0df,
+        11, 0xffffffff,
+        7, 0x9d2c5680,
+        15, 0xefc60000,
+        18, 1812433253> mt19937;
+    ```
+
+- `mt19937_64` 64-Bit-Mersenne-Twister-Engine (Matsumoto und Nishimura, 2000).
+
+    ```cpp
+    typedef mersenne_twister_engine<
+        unsigned long long, 64, 312, 156,
+        31, 0xb5026f5aa96619e9ULL,
+        29, 0x5555555555555555ULL,
+        17, 0x71d67fffeda60000ULL,
+        37, 0xfff7eee000000000ULL,
+        43, 6364136223846793005ULL> mt19937_64;
+    ```
+
+- `ranlux24` 24-Bit-RANLUX-Engine (Martin Lüscher und Fred James, 1994).
+
+    ```cpp
+    typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;
+    ```
 
 - `ranlux24_base` wird als Grundlage für `ranlux24` verwendet.
- `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`
 
-- 
-   `ranlux48` 48-Bit-RANLUX-Engine (Martin Lüscher und Fred James, 1994).
-`typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;`
+    ```cpp
+    typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;
+    ```
+
+- `ranlux48` 48-Bit-RANLUX-Engine (Martin Lüscher und Fred James, 1994).
+
+    ```cpp
+    typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;
+    ```
 
 - `ranlux48_base` wird als Grundlage für `ranlux48` verwendet.
- `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`
+
+    ```cpp
+    typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;
+    ```
 
 ####  <a name="eng"></a> Modulvorlagen
 
@@ -391,8 +415,7 @@ Finden Sie in den folgenden Abschnitten Informationen zu jedem dieser in definie
 
 ### <a name="engines"></a>Engines
 
-
-  [Engine-Vorlagen](#eng) und [Engine-Adaptervorlagen](#engadapt) sind Vorlagen, mit deren Parametern der erstellte Generator angepasst wird.
+[Engine-Vorlagen](#eng) und [Engine-Adaptervorlagen](#engadapt) sind Vorlagen, mit deren Parametern der erstellte Generator angepasst wird.
 
 Eine *Engine* ist eine Klasse oder Vorlagenklasse, deren Instanzen (Generatoren) als Quelle von Zufallszahlen fungieren, die gleichmäßig zwischen einem Mindest- und einen Höchstwert verteilt werden. Ein *Engine-Adapter* gibt eine Sequenz von Werten aus, die verschiedene Zufallscharaktereigenschaften haben, indem er von einer anderen Zufallswerte-Engine produzierte Werte übernimmt und einen bestimmtem Algorithmus für diese Werte anwendet.
 
@@ -416,8 +439,7 @@ Jede Engine und jeder Engine-Adapter haben die folgenden Member:
 
 - `void discard(unsigned long long count)` ruft `operator()` effektiv mit der Häufigkeit `count` auf und bewertet jeden Wert.
 
-
-  **Engine-Adapter** unterstützen zusätzlich diese Member (`Engine` ist der erste Vorlagenparameter eines Engine-Adapters, der den Typ der Basis-Engine bezeichnet):
+**Engine-Adapter** unterstützen zusätzlich diese Member (`Engine` ist der erste Vorlagenparameter eines Engine-Adapters, der den Typ der Basis-Engine bezeichnet):
 
 - Ein Standardkonstruktor zur Initialisierung des Generators genau wie durch den Standardkonstruktor der Basis-Engine.
 
@@ -425,11 +447,9 @@ Jede Engine und jeder Engine-Adapter haben die folgenden Member:
 
 - Ein expliziter Konstruktor mit dem Argument `Engine&& eng`. Dieser dient zur Unterstützung einer Verschiebungskonstruktion mithilfe der Basis-Engine.
 
-- 
-  `void seed()`, der den Generator mit dem Standardstartwert der Basis-Engine initialisiert.
+- `void seed()`, der den Generator mit dem Standardstartwert der Basis-Engine initialisiert.
 
-- 
-  `const Engine& base()`-Eigenschaftsfunktion, die die Basis-Engine zurückgibt, die zur Konstruktion des Generators verwendet wurde.
+- `const Engine& base()`-Eigenschaftsfunktion, die die Basis-Engine zurückgibt, die zur Konstruktion des Generators verwendet wurde.
 
 Jede Engine besitzt einen *Zustand*, mit dem die Sequenz der Werte bestimmt wird, die durch nachfolgende Aufrufe von `operator()` generiert werden. Die Zustände von zwei Generatoren, die von Engines desselben Typs instanziert wurden, können mithilfe von `operator==` und `operator!=` verglichen werden. Wenn die beiden Zustände als gleich verglichen werden, generieren Sie dieselbe Sequenz von Werten. Der Zustand eines Objekts kann als Sequenz von 32-Bit-Werten ohne Vorzeichen zu einem Stream gespeichert werden, indem die `operator<<` des Generators verwendet werden. Der Zustand wird durch das Speichern nicht geändert. Ein gespeicherter Zustand kann mithilfe von `operator>>` in den Generator eingelesen werden, der von einer Engine desselben Typs instanziert wurde.
 
@@ -455,8 +475,7 @@ Die [Zufallszahlenverteilung](#distributions) ist eine Klasse oder eine Vorlagen
 
 - `result_type max()` gibt den vom `operator()` der Verteilung zurückgegebenen Höchstwert zurück. Wenn `result_type` ein Integraltyp (Ganzzahlwerttyp) ist, ist `max()` der Höchstwert, der tatsächlich zurückgegeben werden kann (inklusiv). Wenn `result_type` ein Gleitkommatyp (Echtwerttyp) ist, ist `max()` der kleinste Wert, der größer als alle Werte ist, die zurückgegeben werden können (nicht-inklusiv).
 
-- 
-  `void reset()` verwirft alle zwischengespeicherten Werte, damit das Ergebnis des folgenden Aufrufs von `operator()` nicht von Werten abhängig ist, die vor dem Aufruf aus der Engine bezogen wurden.
+- `void reset()` verwirft alle zwischengespeicherten Werte, damit das Ergebnis des folgenden Aufrufs von `operator()` nicht von Werten abhängig ist, die vor dem Aufruf aus der Engine bezogen wurden.
 
 Eine Parameterstruktur ist ein Objekt, in dem alle für eine Verteilung erforderlichen Parameter gespeichert werden. Sie enthält folgende Informationen:
 

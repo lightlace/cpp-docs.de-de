@@ -1,12 +1,6 @@
 ---
-title: Zeiger auf Member | Microsoft-Dokumentation
-ms.custom: ''
+title: Zeiger auf Member
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - declarations, pointers
 - class members [C++], pointers to
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 509181abc0d9b3e2f2c2d4c76275e635ba3a4477
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ac8a1b43b3bf8bde8f910e72b601bf7d94e0d19d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46076072"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480287"
 ---
 # <a name="pointers-to-members"></a>Zeiger auf Member
 
@@ -56,7 +46,7 @@ Deklarationen von Zeigern auf Member sind Sonderfälle von Zeigerdeklarationen. 
   - Der qualifizierte Name der Klasse.
   - Der Operator `::`.
   - Der Name eines nicht statischen Members der Klasse des entsprechenden Typs.
-  -  Wie immer sind mehrere Deklaratoren (sowie alle zugeordneten Initialisierer) in einer einzelnen Deklaration zulässig.
+  - Wie immer sind mehrere Deklaratoren (sowie alle zugeordneten Initialisierer) in einer einzelnen Deklaration zulässig.
 
 Ein Zeiger auf einen Member einer Klasse unterscheidet sich von einem normalen Zeiger, da er Typinformationen für den Membertyp und die Klasse besitzt, zu der der Member gehört. Ein normaler Zeiger identifiziert nur ein einzelnes Objekt im Arbeitsspeicher (hat nur die Adresse dieses Objekts). Ein Zeiger auf einen Member einer Klasse identifiziert den Member in jeder Instanz der Klasse. Im folgenden Beispiel werden die Klasse `Window` und mehrere Zeiger auf Memberdaten deklariert.
 

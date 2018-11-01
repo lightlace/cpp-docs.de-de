@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3448f915ae7b738c839ceaa4fb7adeb00492d9f4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 48261d545737215ff44b1b56bb3b2d48839b6eb4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46112862"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067058"
 ---
 # <a name="default-arguments"></a>Standardargumente
 
@@ -112,7 +112,7 @@ Beachten Sie diese Punkte, wenn Standardargumente verwendet werden:
     }
     ```
 
-     Das Problem des Codes besteht darin, dass die Funktionsdeklaration in der Definition das Standardargument für `prec` neu definiert.
+   Das Problem des Codes besteht darin, dass die Funktionsdeklaration in der Definition das Standardargument für `prec` neu definiert.
 
 - Zusätzliche Standardargumente können durch neuere Deklarationen hinzugefügt werden.
 

@@ -1,7 +1,7 @@
 ---
-title: sealed (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
+title: sealed (C++ / CLI und C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,19 +18,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9693e16695d7a8c755515b4dd5163e2688a1d29
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ee0ea65267320a4730c543cec978c2675ef1cc57
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611288"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071952"
 ---
-# <a name="sealed--c-component-extensions"></a>sealed (Komponentenerweiterungen für C++)
+# <a name="sealed--ccli-and-ccx"></a>sealed (C++ / CLI und C++ / CX)
 
 **versiegelte** ist ein kontextbezogenes Schlüsselwort für Verweisklassen, der angibt, dass ein virtueller Member nicht überschrieben werden kann, oder ein Typ kann nicht als Basistyp verwendet werden.
 
 > [!NOTE]
-> Der ISO C ++ 11-Standardsprache hat die [endgültige](../cpp/final-specifier.md) -Schlüsselwort, das in Visual Studio unterstützt wird. Verwendung **endgültige** für Standardklassen und **versiegelten** für Verweisklassen.
+> Der ISO C ++ 11-Standardsprache eingeführt, die [endgültige](../cpp/final-specifier.md) Schlüsselwort. Verwendung **endgültige** für Standardklassen und **versiegelten** für Verweisklassen.
 
 ## <a name="all-runtimes"></a>Alle Laufzeiten
 
@@ -43,17 +43,17 @@ virtual return-type identifier() sealed {...};
 
 ### <a name="parameters"></a>Parameter
 
-*identifier*  
+*identifier*<br/>
 Der Name der Funktion oder Klasse.
 
-*Rückgabetyp*  
+*Rückgabetyp*<br/>
 Der Typ, der von einer Funktion zurückgegeben wird.
 
 ## <a name="remarks"></a>Hinweise
 
 Im ersten Syntaxbeispiel wird eine Klasse versiegelt. Im zweiten Beispiel wird eine virtuelle Funktion versiegelt.
 
-Die **versiegelten** Schlüsselwort ist gültig für systemeigene Ziele sowie für die Windows-Runtime und die common Language Runtime (CLR). Weitere Informationen finden Sie unter [Überschreibungsspezifizierer und Native Kompilierungen](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
+Verwenden der **versiegelten** -Schlüsselwort für Verweisklassen und deren virtuellen Memberfunktionen. Weitere Informationen finden Sie unter [Überschreibungsspezifizierer und Native Kompilierungen](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
 Sie können zur Kompilierzeit erkennen, ob ein Typ, mithilfe versiegelt ist der `__is_sealed(type)` Typeigenschaft. Weitere Informationen finden Sie unter [Compilerunterstützung für Typmerkmale](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).
 
@@ -104,11 +104,11 @@ public:
       System::Console::WriteLine("Y::f override of I1::f");
    }
 
-   /*  
+   /*
    // the following override generates a compiler error
    virtual void g() override {
       System::Console::WriteLine("Y::g override of I1::g");
-   } 
+   }
    */
 };
 
@@ -150,4 +150,4 @@ public:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET und UWP](../windows/component-extensions-for-runtime-platforms.md)

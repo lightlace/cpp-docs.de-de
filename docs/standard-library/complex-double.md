@@ -1,27 +1,17 @@
 ---
-title: complex&lt;double&gt; | Microsoft-Dokumentation
-ms.custom: ''
+title: complex&lt;double&gt;
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - complex/std::complex<double>
-dev_langs:
-- C++
 helpviewer_keywords:
 - complex<double> function
 ms.assetid: 0d0b9d2a-9b9b-410b-82a0-86b6df127e47
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6008d97b0fab437a9ba2e6b8e0af8d3bc111532a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7cb516363df7267c2870d2188a14208f54f7ffe9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218956"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50628877"
 ---
 # <a name="complexltdoublegt"></a>complex&lt;double&gt;
 
@@ -81,14 +71,14 @@ int main( )
    // The first constructor specifies real & imaginary parts
    complex <double> c1 ( 4.0 , 5.0 );
    cout << "Specifying initial real & imaginary parts,\n"
-        << " as type double gives c1 = " << c1 << endl;
+        << "as type double gives c1 = " << c1 << endl;
 
    // The second constructor initializes values of the real &
    // imaginary parts using those of complex number of type float
    complex <float> c2float ( 4.0 , 5.0 );
    complex <double> c2double ( c2float );
    cout << "Implicit conversion from type float to type double,"
-        << "\n gives c2double = " << c2double << endl;
+        << endl << "gives c2double = " << c2double << endl;
 
    // The third constructor initializes values of the real &
    // imaginary parts using those of a complex number
@@ -96,27 +86,27 @@ int main( )
    complex <long double> c3longdouble ( 4.0 , 5.0 );
    complex <double> c3double ( c3longdouble );
    cout << "Explicit conversion from type float to type double,"
-        << "\n gives c3longdouble = " << c3longdouble << endl;
+        << endl << "gives c3longdouble = " << c3longdouble << endl;
 
    // The modulus and argument of a complex number can be recovered
    double absc3 = abs ( c3longdouble );
    double argc3 = arg ( c3longdouble );
    cout << "The modulus of c3 is recovered from c3 using: abs ( c3 ) = "
         << absc3 << endl;
-   cout << "Argument of c3 is recovered from c3 using:\n arg ( c3 ) = "
-        << argc3 << " radians, which is " << argc3 * 180 / pi
-        << " degrees." << endl;
+   cout << "Argument of c3 is recovered from c3 using:" << endl
+        << "arg ( c3 ) = " << argc3 << " radians, which is "
+        << argc3 * 180 / pi << " degrees." << endl;
 }
 /* Output:
 Specifying initial real & imaginary parts,
- as type double gives c1 = (4,5)
+as type double gives c1 = (4,5)
 Implicit conversion from type float to type double,
- gives c2double = (4,5)
+gives c2double = (4,5)
 Explicit conversion from type float to type double,
- gives c3longdouble = (4,5)
+gives c3longdouble = (4,5)
 The modulus of c3 is recovered from c3 using: abs ( c3 ) = 6.40312
 Argument of c3 is recovered from c3 using:
- arg ( c3 ) = 0.896055 radians, which is 51.3402 degrees.
+arg ( c3 ) = 0.896055 radians, which is 51.3402 degrees.
 */
 ```
 

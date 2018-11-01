@@ -1,11 +1,6 @@
 ---
-title: _Cmulcr, _FCmulcr, _LCmulcr | Microsoft Docs
-ms.custom: ''
+title: _Cmulcr, _FCmulcr, _LCmulcr
 ms.date: 03/30/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - _Cmulcr
 - _FCmulcr
@@ -30,22 +25,16 @@ f1_keywords:
 - complex/_Cmulcr
 - complex/_FCmulcr
 - complex/_LCmulcr
-dev_langs:
-- C++
 helpviewer_keywords:
 - _Cmulcr function
 - _FCmulcr function
 - _LCmulcr function
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bbd42e4c543d4bc42afa023d62b328a143c90374
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce45b1b1081faba18d8532d3a55d1be877cf84e3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395024"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507483"
 ---
 # <a name="cmulcr-fcmulcr-lcmulcr"></a>_Cmulcr, _FCmulcr, _LCmulcr
 
@@ -62,26 +51,26 @@ _Lcomplex _LCmulcr( _Lcomplex x, long double y );
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
-Einer der zu multiplizierende komplexe Operanden.
+Einer der Operanden zu multiplizierende komplexeren.
 
 *y*<br/>
-Der zu multiplizierende Gleitkomma-Operanden.
+Der Gleitkomma-Operand multipliziert werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein **_Dcomplex**, **_Fcomplex**, oder **_Lcomplex** -Struktur, die das komplexe Produkt der komplexen Zahl darstellt *x* und Anzahl Flaoting Punkt *y*.
+Ein **_Dcomplex**, **_Fcomplex**, oder **_Lcomplex** -Struktur, die das komplexe Produkt der komplexen Zahl darstellt *x* und Flaoting-Gleitkommazahl *y*.
 
 ## <a name="remarks"></a>Hinweise
 
-Da die integrierten arithmetischen Operatoren nicht auf die Microsoft-Implementierung der komplexen Typen funktionieren, die **_Cmulcr**, **_FCmulcr**, und **_LCmulcr** Funktionen Vereinfachen Sie die Multiplikation mit komplexen Typen von Gleitkomma-Datentypen.
+Da die integrierten arithmetischen Operatoren nicht auf die Microsoft-Implementierung der komplexen Typen funktionieren, die **_Cmulcr**, **_FCmulcr**, und **_LCmulcr** Funktionen Vereinfachen Sie die Multiplikation von komplexen Typen von Gleitkomma-Datentypen.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|C-Header|C++-Header|
+|-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
 |**_Cmulcr**, **_FCmulcr**, **_LCmulcr**|\<complex.h>|\<complex.h>|
 
-Diese Funktionen sind Microsoft-spezifisch. Die Typen **_Dcomplex**, **_Fcomplex**, und **_Lcomplex** sind Microsoft-spezifische Entsprechungen zu den nicht implementierten C99 systemeigenen Typen **doppelte _Complex** , **float _Complex**, und **long double _Complex**zugeordnet. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Diese Funktionen sind Microsoft-spezifisch. Die Typen **_Dcomplex**, **_Fcomplex**, und **_Lcomplex** sind Microsoft-spezifische-Entsprechungen für den nicht implementierten C99 systemeigenen Typen **double _Complex** , **float _Complex**, und **long double _Complex**bzw. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Siehe auch
 

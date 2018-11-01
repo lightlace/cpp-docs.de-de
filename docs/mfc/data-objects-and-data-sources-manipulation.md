@@ -1,12 +1,6 @@
 ---
-title: 'Datenobjekte und Datenquellen: Bearbeitung | Microsoft Docs'
-ms.custom: ''
+title: 'Datenobjekte und Datenquellen: Bearbeitung'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - data objects [MFC], manipulating
 - data sources [MFC], data operations
@@ -18,85 +12,87 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f276e85be33f3042b19ab7dc6158a4e9f856fb2e
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: ee5cb320cb07a656675bd6735d6761cb69573d0f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929860"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636149"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Datenobjekte und Datenquellen: Bearbeitung
-Nach einem Datenobjekt oder die Datenquelle erstellt wurde, können Sie diverse häufig verwendeter Vorgänge auf die Daten, z. B. das Einfügen und Entfernen von Daten, die beim Aufzählen der Formate, denen die Daten in enthalten ist, und vieles mehr. Dieser Artikel beschreibt die Techniken zum Durchführen der am häufigsten verwendeten Vorgänge erforderlich sind. Folgende Themen werden behandelt:  
-  
--   [Einfügen von Daten in einer Datenquelle](#_core_inserting_data_into_a_data_source)  
-  
--   [Bestimmen die in einem Datenobjekt verfügbaren Formate](#_core_determining_the_formats_available_in_a_data_object)  
-  
--   [Abrufen von Daten aus einem Datenobjekt](#_core_retrieving_data_from_a_data_object)  
-  
-##  <a name="_core_inserting_data_into_a_data_source"></a> Einfügen von Daten in einer Datenquelle  
- Wie die Daten in einer Datenquelle eingefügt werden, hängt gibt an, ob die Daten sofort bereitgestellt werden, oder bei Bedarf, und klicken Sie in das Medium wird bereitgestellt. Mögliche Werte sind wie folgt.  
-  
-### <a name="supplying-data-immediately-immediate-rendering"></a>Bereitstellen der Daten sofort (unmittelbares Rendern)  
-  
--   Rufen Sie `COleDataSource::CacheGlobalData` wiederholt für jede Zwischenablageformat, in dem Sie Daten angegeben werden. Übergeben Sie das Format der Zwischenablage zu verwendende ein Handle für den Speicher, der Daten enthält und optional eine **FORMATETC** Struktur, die die Daten beschreibt.  
-  
-     - oder -   
-  
--   Wenn Sie direkt mit arbeiten möchten **STGMEDIUM** Strukturen aus, und rufen Sie `COleDataSource::CacheData` anstelle von `COleDataSource::CacheGlobalData` in der oben genannten Option.  
-  
-### <a name="supplying-data-on-demand-delayed-rendering"></a>Bereitstellen der Daten bei Bedarf (verzögertes Rendering)  
- Dies ist ein-Thema für fortgeschrittene.  
-  
--   Rufen Sie `COleDataSource::DelayRenderData` wiederholt für jede Zwischenablageformat, in dem Sie Daten angegeben werden. Übergeben Sie das Format der Zwischenablage verwendet werden und optional eine **FORMATETC** Struktur, die die Daten beschreibt. Wenn die Daten angefordert werden, ruft das Framework `COleDataSource::OnRenderData`, die Sie überschreiben müssen.  
-  
-     - oder -   
-  
--   Bei Verwendung einer `CFile` die Daten zu verwendendes Objekt aufrufen `COleDataSource::DelayRenderFileData` anstelle von `COleDataSource::DelayRenderData` in der vorherigen Option. Wenn die Daten angefordert werden, ruft das Framework `COleDataSource::OnRenderFileData`, die Sie überschreiben müssen.  
-  
-##  <a name="_core_determining_the_formats_available_in_a_data_object"></a> Bestimmen die in einem Datenobjekt verfügbaren Formate  
- Bevor eine Anwendung den Benutzer aus, um Daten in sie einzufügen zulässt, muss sie wissen, ob es Formate in der Zwischenablage, die er verarbeiten kann. Zu diesem Zweck sollten Ihre Anwendung die folgenden Schritte ausführen:  
-  
-1.  Erstellen einer `COleDataObject` Objekt und ein **FORMATETC** Struktur.  
-  
-2.  Rufen Sie des Datenobjekts `AttachClipboard` Memberfunktion versucht, ordnen Sie das Datenobjekt mit den Daten in die Zwischenablage.  
-  
-3.  Führen Sie einen der folgenden Schritte aus:  
-  
-    -   Rufen Sie des Datenobjekts `IsDataAvailable` Memberfunktion, wenn es nur eine oder zwei, die Sie Formate benötigen. Dadurch sparen Sie Zeit, in Fällen, in denen die Daten in der Zwischenablage deutlich mehr Formaten als die Anwendung unterstützt.  
-  
-         - oder -   
-  
-    -   Rufen Sie des Datenobjekts `BeginEnumFormats` Memberfunktion anfangen, der in der Zwischenablage verfügbaren Formate. Rufen Sie anschließend `GetNextFormat` bis Zwischenablage gibt ein Format auf die Anwendung unterstützt, oder es sind keine weitere Formate.  
-  
- Bei Verwendung von **ON_UPDATE_COMMAND_UI**, Sie können jetzt das Einfügen und möglicherweise Inhalte einfügen Elemente im Menü Bearbeiten. Rufen Sie hierzu entweder `CMenu::EnableMenuItem` oder `CCmdUI::Enable`. Weitere Informationen zu welchem Container Anwendungen sollten mit Menüelementen wann sehen und [Menüs und Ressourcen: Containererweiterungen](../mfc/menus-and-resources-container-additions.md).  
-  
-##  <a name="_core_retrieving_data_from_a_data_object"></a> Abrufen von Daten aus einem Datenobjekt  
- Nachdem Sie ein Datenformat entschieden haben, übrig bleibt zum Abrufen der Daten aus dem Datenobjekt. Zu diesem Zweck der Benutzer entscheidet, die Daten eingefügt werden soll, und die Anwendung aufruft, die entsprechende Funktion. Die Daten in einem der folgenden Medien zur Verfügung:  
-  
-|Mittel|Funktion aufgerufen werden soll|  
-|------------|----------------------|  
-|Globaler Speicher (`HGLOBAL`)|`COleDataObject::GetGlobalData`|  
-|Datei (`CFile`)|`COleDataObject::GetFileData`|  
-|**STGMEDIUM** Struktur (`IStorage`)|`COleDataObject::GetData`|  
-  
- Das Medium wird in der Regel zusammen mit seinem Zwischenablageformat angegeben werden. Z. B. eine **CF_EMBEDDEDSTRUCT** Objekt befindet sich immer in einer `IStorage` Medium, das erfordert eine **STGMEDIUM** Struktur. Verwenden Sie deshalb `GetData` , da es nur eine dieser Funktionen ist, akzeptieren, kann, ein **STGMEDIUM** Struktur.  
-  
- Für Situationen, in denen das Format der Zwischenablage in eine `IStream` oder `HGLOBAL` Mittel, das Framework bieten eine `CFile` Zeiger, der die Daten verweisen. Die Anwendung kann dann verwenden, Datei, die gelesen, um die Daten im Wesentlichen die gleiche Weise abzurufen, wie sie Daten aus einer Datei importieren kann. Dies ist im Wesentlichen die Client-Side-Schnittstelle, um die `OnRenderData` und `OnRenderFileData` Routinen in der Datenquelle.  
-  
- Der Benutzer kann sich nun in das Dokument von Daten für alle anderen Daten in das gleiche Format wie.  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
-  
--   [Drag & drop](../mfc/drag-and-drop-ole.md)  
-  
--   [Zwischenablage](../mfc/clipboard.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Datenobjekte und Datenquellen (OLE)](../mfc/data-objects-and-data-sources-ole.md)   
- [COleDataObject-Klasse](../mfc/reference/coledataobject-class.md)   
- [COleDataSource-Klasse](../mfc/reference/coledatasource-class.md)
+
+Nach einer Datenquelle oder ein Datenobjekt, das erstellt wurde, können Sie eine Reihe allgemeiner Vorgänge für die Daten, z. B. einfügen und Entfernen von Daten, das Aufzählen von Formaten, ab die Daten in und vieles mehr ausführen. Dieser Artikel beschreibt die Techniken, die zum Abschließen der am häufigsten verwendeten Vorgänge erforderlich sind. Folgende Themen werden behandelt:
+
+- [Einfügen von Daten in einer Datenquelle](#_core_inserting_data_into_a_data_source)
+
+- [Bestimmen die Formate, die in einem Datenobjekt verfügbar](#_core_determining_the_formats_available_in_a_data_object)
+
+- [Abrufen von Daten von einem Datenobjekt](#_core_retrieving_data_from_a_data_object)
+
+##  <a name="_core_inserting_data_into_a_data_source"></a> Einfügen von Daten in einer Datenquelle
+
+Hängt wie die Daten in einer Datenquelle eingefügt werden, ob die Daten sofort bereitgestellt werden, oder bei Bedarf, und klicken Sie in der mittleren ist er bereitgestellt. Mögliche Werte sind wie folgt aus.
+
+### <a name="supplying-data-immediately-immediate-rendering"></a>Sofortiges Bereitstellen der Daten (unmittelbares Rendern)
+
+- Rufen Sie `COleDataSource::CacheGlobalData` wiederholt für jede Zwischenablageformat, in dem Sie Daten angegeben werden. Übergeben Sie das Format der Zwischenablage verwendet werden, ein Handle für den Arbeitsspeicher mit den Daten und optional eine **FORMATETC** Struktur, die die Daten beschreibt.
+
+     - oder - 
+
+- Wenn Sie direkt mit arbeiten möchten **STGMEDIUM** Strukturen die, Sie aufrufen `COleDataSource::CacheData` anstelle von `COleDataSource::CacheGlobalData` in der oben genannten Option.
+
+### <a name="supplying-data-on-demand-delayed-rendering"></a>Bereitstellen von Daten bei Bedarf (verzögertes Rendering)
+
+Dies ist ein Thema für fortgeschrittene.
+
+- Rufen Sie `COleDataSource::DelayRenderData` wiederholt für jede Zwischenablageformat, in dem Sie Daten angegeben werden. Übergeben Sie das Format der Zwischenablage verwendet werden und optional eine **FORMATETC** Struktur, die die Daten beschreibt. Wenn die Daten angefordert werden, ruft das Framework `COleDataSource::OnRenderData`, die Sie überschreiben müssen.
+
+     - oder - 
+
+- Bei Verwendung einer `CFile` die Daten zu verwendendes Objekt aufrufen `COleDataSource::DelayRenderFileData` anstelle von `COleDataSource::DelayRenderData` in der vorherigen Option. Wenn die Daten angefordert werden, ruft das Framework `COleDataSource::OnRenderFileData`, die Sie überschreiben müssen.
+
+##  <a name="_core_determining_the_formats_available_in_a_data_object"></a> Bestimmen die Formate, die in einem Datenobjekt verfügbar
+
+Bevor eine Anwendung auf der Benutzer Daten in diese einfügen kann, muss sie wissen, ob Formate vorliegen, in der Zwischenablage an, die er verarbeiten kann. Zu diesem Zweck sollte die Anwendung folgendermaßen vor:
+
+1. Erstellen Sie eine `COleDataObject` Objekt und ein **FORMATETC** Struktur.
+
+1. Rufen Sie des Datenobjekts `AttachClipboard` Memberfunktion, die Daten in der Zwischenablage das Datenobjekt zugeordnet werden soll.
+
+1. Führen Sie einen der folgenden Schritte aus:
+
+   - Rufen Sie des Datenobjekts `IsDataAvailable` Memberfunktion, wenn es nur eine oder zwei, die Sie Formate benötigen. Dadurch sparen Sie Zeit, in Fällen, in denen die Daten in die Zwischenablage deutlich mehr Formaten als Ihrer Anwendung unterstützt.
+
+         -or-
+
+   - Rufen Sie des Datenobjekts `BeginEnumFormats` Memberfunktion versucht, mit dem Aufzählen von die Formate, die in der Zwischenablage verfügbar sind. Rufen Sie anschließend `GetNextFormat` bis zurückgegeben von die Zwischenablage ein Format Ihrer Anwendung unterstützt, oder es sind keine weitere Formate.
+
+Bei Verwendung von **ON_UPDATE_COMMAND_UI**, Sie können jetzt das Einfügen und möglicherweise Inhalte einfügen Elemente auf das Menü "Bearbeiten" aktivieren. Zu diesem Zweck rufen Sie entweder `CMenu::EnableMenuItem` oder `CCmdUI::Enable`. Weitere Informationen über welche Container Anwendungen sollten mit Menüelementen und, [Menüs und Ressourcen: Containererweiterungen](../mfc/menus-and-resources-container-additions.md).
+
+##  <a name="_core_retrieving_data_from_a_data_object"></a> Abrufen von Daten von einem Datenobjekt
+
+Wenn Sie auf ein Format entschieden haben, übrig bleibt zum Abrufen der Daten aus dem Datenobjekt. Zu diesem Zweck der Benutzer entscheidet, wo die Daten abgelegt werden sollen, und die Anwendung ruft die entsprechende Funktion. Die Daten werden in einem der folgenden Medien zur Verfügung:
+
+|Mittel|Funktion aufrufen|
+|------------|----------------------|
+|Globaler Speicher (`HGLOBAL`)|`COleDataObject::GetGlobalData`|
+|Datei (`CFile`)|`COleDataObject::GetFileData`|
+|**STGMEDIUM** Struktur (`IStorage`)|`COleDataObject::GetData`|
+
+Das Medium wird normalerweise zusammen mit der das Format der Zwischenablage angegeben werden. Z. B. eine **CF_EMBEDDEDSTRUCT** Objekt befindet sich immer im eine `IStorage` Medium, das erfordert eine **STGMEDIUM** Struktur. Verwenden Sie daher `GetData` , da es die einzige dieser Funktionen ist, den annehmen kann ein **STGMEDIUM** Struktur.
+
+Für Situationen, in dem das Format der Zwischenablage in eine `IStream` oder `HGLOBAL` Medium das Framework bieten eine `CFile` Zeiger, der die Daten verweisen. Die Anwendung können Sie dann die Datei gelesen, um die Daten im Wesentlichen die gleiche Weise abzurufen, wie sie Daten aus einer Datei importieren kann. Im Wesentlichen ist dies die Client-Side-Schnittstelle, um die `OnRenderData` und `OnRenderFileData` Routinen in der Datenquelle.
+
+Der Benutzer kann jetzt Einfügen von Daten in das Dokument nur für alle anderen Daten in das gleiche Format wie an.
+
+### <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
+
+- [Drag & drop](../mfc/drag-and-drop-ole.md)
+
+- [Zwischenablage](../mfc/clipboard.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Datenobjekte und Datenquellen (OLE)](../mfc/data-objects-and-data-sources-ole.md)<br/>
+[COleDataObject-Klasse](../mfc/reference/coledataobject-class.md)<br/>
+[COleDataSource-Klasse](../mfc/reference/coledatasource-class.md)

@@ -1,30 +1,19 @@
 ---
-title: Ändern eines Symbols&#39;Zahlenwert s | Microsoft-Dokumentation
-ms.custom: ''
+title: Ändern eines Symbols&#39;s numerischer Wert
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.changing.value
-dev_langs:
-- C++
 helpviewer_keywords:
 - numeric values
 - symbols [C++], numeric values
 - numeric values, changing symbols
 ms.assetid: 468e903b-9c07-4251-ae09-3b6cb754cc2b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: eef16275bcd563a258347f8853a3c705594df99d
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9013ce886b1e596a858321b32249d885d03015ed
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318671"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629839"
 ---
 # <a name="changing-a-symbol39s-numeric-value"></a>Ändern eines Symbols&#39;s numerischer Wert
 
@@ -53,5 +42,5 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Beschränkungen bei Symbolwerten](../windows/symbol-value-restrictions.md)  
+[Beschränkungen bei Symbolwerten](../windows/symbol-value-restrictions.md)<br/>
 [Vordefinierte Symbol-IDs](../windows/predefined-symbol-ids.md)

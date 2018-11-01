@@ -1,17 +1,11 @@
 ---
-title: Erstellen einer Importbibliothek und einer Exportdatei | Microsoft-Dokumentation
-ms.custom: ''
+title: Erstellen einer Importbibliothek und einer Exportdatei
 ms.date: 09/05/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.ModuleDefinitionFile
 - VC.Project.VCLibrarianTool.ExportNamedFunctions
 - VC.Project.VCLibrarianTool.GenerateDebug
 - VC.Project.VCLibrarianTool.ForceSymbolReferences
-dev_langs:
-- C++
 helpviewer_keywords:
 - OUT library manager option
 - INCLUDE library manager option
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - .lib files
 - EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c6a980a96198db80f0956895292d37f123d0351c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e5e7a60bf4607be55525b587df4942875126b50e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723306"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50556675"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Erstellen einer Importbibliothek und einer Exportdatei
 
@@ -52,9 +42,9 @@ Wenn/DEF angegeben wird, erstellt LIB die Ausgabedateien von Exportspezifikation
 
 1. Ein **__declspec(dllexport)** Definition eines der *Objektdateien* oder *Bibliotheken*
 
-2. Eine Spezifikation von/Export:*Namen* in der LIB-Befehlszeile
+1. Eine Spezifikation von/Export:*Namen* in der LIB-Befehlszeile
 
-3. Eine Definition in einem **EXPORTE** -Anweisung in einem *Definitionsdatei (deffile)*
+1. Eine Definition in einem **EXPORTE** -Anweisung in einem *Definitionsdatei (deffile)*
 
 Dies sind die gleichen Methoden, die Sie zum Festlegen von Exporten, beim Verknüpfen von einem ausführenden Programm verwenden. Ein Programm kann mehr als eine Methode verwenden. Sie können Teile der LIB-Befehl angeben (z. B. mehrere *Objektdateien* oder/Export-Spezifikationen) können Sie in einer Befehlsdatei in der LIB-Befehl, wie Sie in einem Linkbefehl.
 

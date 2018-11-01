@@ -20,59 +20,63 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 107ac80f84d949a96132a4fc05c90ad7a7e20fbc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d470974a6f50f7040a46a3f64f9fd431e2796545
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103371"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161371"
 ---
 # <a name="autogcrootoperator"></a>auto_gcroot::operator!
-Operator für die Verwendung von `auto_gcroot` in einem bedingten Ausdruck.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-bool operator!() const;  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- `true` Wenn das umschlossene Objekt ungültig ist. `false` andernfalls.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// msl_auto_gcroot_operator_not.cpp  
-// compile with: /clr  
-#include <msclr\auto_gcroot.h>  
-  
-using namespace System;  
-using namespace msclr;  
-  
-int main() {  
-   auto_gcroot<String^> s;  
-   if ( s ) Console::WriteLine( "s is valid" );  
-   if ( !s ) Console::WriteLine( "s is invalid" );  
-   s = "something";  
-   if ( s ) Console::WriteLine( "now s is valid" );  
-   if ( !s ) Console::WriteLine( "now s is invalid" );  
-   s.reset();  
-   if ( s ) Console::WriteLine( "now s is valid" );  
-   if ( !s ) Console::WriteLine( "now s is invalid" );  
-}  
-```  
-  
-```Output  
-s is invalid  
-now s is valid  
-now s is invalid  
-```  
-  
-## <a name="requirements"></a>Anforderungen  
- **Headerdatei** \<msclr\auto_gcroot.h >  
-  
- **Namespace** Msclr  
-  
-## <a name="see-also"></a>Siehe auch  
- [Auto_gcroot-Elemente](../dotnet/auto-gcroot-members.md)   
- [auto_gcroot::operator bool](../dotnet/auto-gcroot-operator-bool.md)
+
+Operator für die Verwendung von `auto_gcroot` in einem bedingten Ausdruck.
+
+## <a name="syntax"></a>Syntax
+
+```
+bool operator!() const;
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+**"true"** ist das umschlossene Objekt ungültig; **"false"** andernfalls.
+
+## <a name="example"></a>Beispiel
+
+```cpp
+// msl_auto_gcroot_operator_not.cpp
+// compile with: /clr
+#include <msclr\auto_gcroot.h>
+
+using namespace System;
+using namespace msclr;
+
+int main() {
+   auto_gcroot<String^> s;
+   if ( s ) Console::WriteLine( "s is valid" );
+   if ( !s ) Console::WriteLine( "s is invalid" );
+   s = "something";
+   if ( s ) Console::WriteLine( "now s is valid" );
+   if ( !s ) Console::WriteLine( "now s is invalid" );
+   s.reset();
+   if ( s ) Console::WriteLine( "now s is valid" );
+   if ( !s ) Console::WriteLine( "now s is invalid" );
+}
+```
+
+```Output
+s is invalid
+now s is valid
+now s is invalid
+```
+
+## <a name="requirements"></a>Anforderungen
+
+**Headerdatei** \<msclr\auto_gcroot.h >
+
+**Namespace** Msclr
+
+## <a name="see-also"></a>Siehe auch
+
+[auto_gcroot-Members](../dotnet/auto-gcroot-members.md)<br/>
+[auto_gcroot::operator bool](../dotnet/auto-gcroot-operator-bool.md)

@@ -30,34 +30,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 478f942b489aa2350319b90da4c05c61925101f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e232364c7c9403bdaafd41466a9999faa4e45953
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407921"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234280"
 ---
 # <a name="unlock"></a>_unlock
-Gibt eine Multi-Thread-Sperre frei.  
-  
+
+Gibt eine Multi-Thread-Sperre frei.
+
 > [!IMPORTANT]
->  Diese Funktion ist veraltet. Von Visual Studio 2015 an ist sie nicht in der CRT verfügbar.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-void __cdecl _unlock(  
-   int locknum  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- [in] `locknum`  
- Der Bezeichner der freizugebenden Sperre.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Quelle:** mlock.c  
-  
-## <a name="see-also"></a>Siehe auch  
- [Alphabetical Function Reference (Alphabetische Funktionsreferenz)](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [_lock](../c-runtime-library/lock.md)
+>  Diese Funktion ist veraltet. Von Visual Studio 2015 an ist sie nicht in der CRT verfügbar.
+
+## <a name="syntax"></a>Syntax
+
+```
+void __cdecl _unlock(
+   int locknum
+);
+```
+
+#### <a name="parameters"></a>Parameter
+
+*locknum*<br/>
+[in]: Der Bezeichner der freizugebenden Sperre.
+
+## <a name="requirements"></a>Anforderungen
+
+**Quelle:** mlock.c
+
+## <a name="see-also"></a>Siehe auch
+
+[Alphabetische Funktionsreferenz](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[_lock](../c-runtime-library/lock.md)

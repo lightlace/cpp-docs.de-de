@@ -1,7 +1,7 @@
 ---
 title: 'Exemplarische Vorgehensweise: Arbeiten mit Projekten und Projektmappen (C++) | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 12/13/2017
+ms.date: 09/14/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f62b2317669949473c8b0e68ad4410a3d9b03806
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 56b5e41872ebe4b3cdc4800d7818cceb05f03dd1
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33339134"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235151"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>Exemplarische Vorgehensweise: Arbeiten mit Projekten und Lösungen (C++)
 
 In diesem Abschnitt lesen Sie, wie Sie ein C++-Projekt in Visual Studio erstellen, Code hinzufügen und dann das Projekt erstellen und ausführen. Bei dem Projekt in dieser exemplarischen Vorgehensweise handelt es sich um ein Programm, das nachverfolgt, wie viele Spieler verschiedene Kartenspiele spielen.
 
-In Visual Studio wird die Arbeit in Projekten und Projektmappen organisiert. Eine Projektmappe kann mehr als ein Projekt enthalten, z. B. eine DLL und eine ausführbare Datei, die auf diese DLL verweist. Weitere Informationen finden Sie unter [Projektmappen und Projekte](/visualstudio/ide/solutions-and-projects-in-visual-studio).
+In Visual Studio wird die Arbeit in Projekten und Projektmappen organisiert. Eine Projektmappe kann mehrere Projekte aufweisen, z.B. eine DLL und eine ausführbare Datei, die auf diese DLL verweist. Weitere Informationen finden Sie unter [Projektmappen und Projekte](/visualstudio/ide/solutions-and-projects-in-visual-studio).
 
 ## <a name="before-you-start"></a>Vor der Installation
 
@@ -42,13 +42,16 @@ Um ein Projekt zu erstellen, wählen Sie zunächst eine Projekttypvorlage. Für 
 
 ### <a name="to-create-a-project"></a>So erstellen Sie ein Projekt
 
-1. Klicken Sie in der Menüleiste auf **Datei > Neu > Projekt**.
+1. Klicken Sie in der Menüleiste auf **Datei** > **Neu** > **Projekt**.
 
 1. Erweitern Sie **Installiert** im linken Bereich des Dialogfeld **Neues Projekt**, und wählen Sie **Visual C++** aus, wenn dies nicht bereits geöffnet ist.
 
 1. Wählen Sie aus der Liste der installierten Vorlagen im mittleren Bereich **Windows-Konsolenanwendung** aus.
 
-1. Geben Sie im Feld **Name** einen Namen für das Projekt ein. Geben Sie für dieses Beispiel **Game** ein.
+   > [!NOTE]
+   > In früheren Versionen von Visual Studio heißt die installierte Vorlage **Win32-Konsolenanwendung**.
+
+1. Geben Sie im Feld **Name** einen Namen für das Projekt ein. Geben Sie für dieses Beispiel *Game* ein.
 
    Sie können den Standardspeicherort in der Dropdownliste **Speicherort** akzeptieren, einen anderen Speicherort eingeben oder über die Schaltfläche **Durchsuchen** das Verzeichnis auswählen, in dem Sie das Projekt speichern möchten.
 
@@ -66,9 +69,9 @@ In diesem Teil der exemplarischen Vorgehensweise wird gezeigt, wie dem Projekt e
 
 ### <a name="to-add-a-class-to-a-project"></a>So fügen Sie einem Projekt eine Klasse hinzu
 
-1. Wenn das Fenster **Projektmappen-Explorer** nicht in Visual Studio angezeigt wird, klicken Sie in der Menüleiste auf **Ansicht > Projektmappen-Explorer**.
+1. Wenn das Fenster **Projektmappen-Explorer** nicht in Visual Studio angezeigt wird, klicken Sie in der Menüleiste auf **Ansicht** > **Projektmappen-Explorer**.
 
-1. Wählen Sie im **Projektmappen-Explorer** das Projekt **Game** aus. Klicken Sie in der Menüleiste auf **Projekt > Klasse hinzufügen**.
+1. Wählen Sie im **Projektmappen-Explorer** das Projekt **Game** aus. Klicken Sie in der Menüleiste auf **Projekt** > **Klasse hinzufügen**.
 
 1. Geben Sie im Dialogfeld **Klasse hinzufügen** *Cardgame* in das Feld **Klassenname** ein. Ändern Sie die Standarddateinamen und - einstellungen nicht. Klicken Sie auf die Schaltfläche **OK** .
 
@@ -84,21 +87,19 @@ In diesem Teil der exemplarischen Vorgehensweise wird gezeigt, wie dem Projekt e
       static int totalParticipants;
       ```
 
-   - Ändern Sie den Standardkonstruktor, der von Visual Studio generiert wurde. Suchen Sie nach dem `public:`-Zugriffsspezifizierer die Zeile, die wie folgt aussieht:
+   - Ändern Sie den Standardkonstruktor, der von Visual Studio generiert wurde. Suchen Sie nach dem `public:`-Zugriffsspezifizierer nach der Zeile, die folgendermaßen aussieht:
 
       `Cardgame();`
 
-      Ändern Sie diesen Konstruktor so, dass ein Parameter des Typs `int` namens *players* vorhanden ist.
+      Ändern Sie den Konstruktor so, dass er einen Parameter des Typs `int` namens *players* annimmt.
 
-      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]-->
-      `Cardgame(int players);`
+      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]--> `Cardgame(int players);`
 
    - Fügen Sie nach dem Standarddestruktor eine Inline-Deklaration für eine `static int`-Memberfunktion namens *GetParticipants* hinzu, die keine Parameter übernimmt und den Wert `totalParticipants` zurückgibt.
 
-      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]-->
-      `static int GetParticipants() { return totalParticipants; }`
+      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]--> `static int GetParticipants() { return totalParticipants; }`
 
-   Die Datei "Cardgame.h" sieht nach der Änderung ungefähr folgendermaßen aus:
+   Die Datei „Cardgame.h“ sieht nach der Änderung ungefähr wie der folgende Code aus:
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#103](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_4.h)]-->
    ```cpp
@@ -109,12 +110,12 @@ In diesem Teil der exemplarischen Vorgehensweise wird gezeigt, wie dem Projekt e
        static int totalParticipants;
    public:
        Cardgame(int players);
-       ~Cardgame(void);
+       ~Cardgame();
        static int GetParticipants() { return totalParticipants; }
    };
    ```
 
-   Die Zeile `#pragma once` teilt dem Compiler mit, die Headerdatei nur einmal aufzunehmen. Weitere Informationen finden Sie unter [once](../preprocessor/once.md). Informationen zu weiteren C++-Schlüsselwörtern in dieser Headerdatei finden Sie unter [class](../cpp/class-cpp.md), [int](../cpp/fundamental-types-cpp.md), [static](../cpp/storage-classes-cpp.md) und [public](../cpp/public-cpp.md).
+   Die Zeile `#pragma once` teilt dem Compiler mit, die Headerdatei nur einmal aufzunehmen. Weitere Informationen finden Sie unter [once](../preprocessor/once.md). Informationen zu weiteren C++-Schlüsselwörtern in der oben gezeigten Headerdatei finden Sie unter [class](../cpp/class-cpp.md), [int](../cpp/fundamental-types-cpp.md), [static](../cpp/storage-classes-cpp.md) und [public](../cpp/public-cpp.md).
 
 1. Klicken Sie oben im Bearbeitungsbereich auf die Registerkarte **Cardgame.cpp**, um die Datei zum Bearbeiten zu öffnen.
 
@@ -122,7 +123,7 @@ In diesem Teil der exemplarischen Vorgehensweise wird gezeigt, wie dem Projekt e
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#111](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_5.cpp)]-->
    ```cpp
-   #include "stdafx.h"
+   #include "pch.h"
    #include "Cardgame.h"
    #include <iostream>
 
@@ -144,7 +145,7 @@ In diesem Teil der exemplarischen Vorgehensweise wird gezeigt, wie dem Projekt e
    ```
 
    > [!NOTE]
-   > Sie können bei der Codeeingabe die automatische Vervollständigung verwenden. Wenn Sie diesen Code beispielsweise über die Tastatur eingeben, können Sie *pl* oder *tot* eingeben und STRG+LEERTASTE drücken. Die automatische Vervollständigung gibt `players` oder `totalParticipants` für Sie ein.
+   > Sie können bei der Codeeingabe die automatische Vervollständigung verwenden. Wenn Sie diesen Code beispielsweise über die Tastatur eingeben, können Sie *pl* oder *tot* eingeben und **STRG**+**LEERTASTE** drücken. Die automatische Vervollständigung gibt `players` oder `totalParticipants` für Sie ein.
 
 ## <a name="add-test-code-to-your-main-function"></a>Hinzufügen von Testcode zur main-Funktion
 
@@ -152,14 +153,14 @@ Fügen Sie Code zu Ihrer App hinzu, der die neuen Funktionen testet.
 
 ### <a name="to-add-test-code-to-the-project"></a>Hinzufügen von Testcode zum Projekt
 
-1. Ersetzen Sie im Editor-Fenster „Game.cpp“ den vorhandenen Code durch folgenden:
+1. Ersetzen Sie im Editor-Fenster **Game.cpp** den vorhandenen Code durch Folgendes:
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#120](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_6.cpp)]-->
    ```cpp
    // Game.cpp : Defines the entry point for the console application.
    //
 
-   #include "stdafx.h"
+   #include "pch.h"
    #include "Cardgame.h"
    #include <iostream>
 
@@ -179,7 +180,7 @@ Fügen Sie Code zu Ihrer App hinzu, der die neuen Funktionen testet.
        return 0;
    }
    ```
-Dieser Code fügt eine Testfunktion (`PlayGames`) zum Quellcode hinzu und ruft diese in `main` auf. 
+Der Code fügt eine Testfunktion (`PlayGames`) zum Quellcode hinzu und ruft diese in `main` auf.
 
 ## <a name="build-and-run-your-app-project"></a>Erstellen und Ausführen Ihres App-Projekts
 
@@ -187,17 +188,17 @@ Erstellen Sie nun das Projekt, und führen Sie die App aus.
 
 ### <a name="to-build-and-run-the-project"></a>So erstellen Sie das Projekt und führen es aus
 
-1. Klicken Sie in der Menüleiste auf **Erstellen > Projektmappe erstellen**.
+1. Wählen Sie auf der Menüleiste **Erstellen** > **Projektmappe erstellen** aus.
 
    Die Ausgabe eines Builds wird im **Ausgabefenster** angezeigt. Wenn der Build erfolgreich erstellt wurde, sollte die Ausgabe in etwa wie folgt aussehen:
 
    ```Output
    1>------ Build started: Project: Game, Configuration: Debug Win32 ------
-   1>  stdafx.cpp
-   1>  Game.cpp
-   1>  Cardgame.cpp
-   1>  Generating Code...
-   1>  Game.vcxproj -> C:\Users\username\Source\Repos\Game\Debug\Game.exe
+   1>pch.cpp
+   1>Cardgame.cpp
+   1>Game.cpp
+   1>Generating Code...
+   1>Game.vcxproj -> C:\Users\<username>\source\repos\Game\Debug\Game.exe
    ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
    ```
 
@@ -205,7 +206,7 @@ Erstellen Sie nun das Projekt, und führen Sie die App aus.
 
    Wenn die Erstellung nicht erfolgreich war, vergleichen Sie Ihren Code mit dem Code, der in den Schritten weiter oben gezeigt wurde.
 
-1. Klicken Sie zum Ausführen des Projekts auf der Menüleiste auf **Debuggen > Starten ohne Debugging**. Ein Konsolenfenster sollte angezeigt werden, und die Ausgabe sollte Folgendem ähneln:
+1. Klicken Sie zum Ausführen des Projekts auf der Menüleiste auf **Debuggen** > **Starten ohne Debuggen**. Es sollte ein Konsolenfenster angezeigt werden, und die Ausgabe sollte dem folgenden Beispiel ähneln:
 
    ```Output
    4 players have started a new game.  There are now 4 players in total.
@@ -219,10 +220,10 @@ Glückwunsch, Sie haben erfolgreich ein App-Projekt und eine Projektmappe erstel
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-**Zurück:** [Verwenden der Visual Studio-IDE für C++-Desktopentwicklung](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)  
-**Weiter:** [Exemplarische Vorgehensweise: Erstellen eines Projekts (C++)](../ide/walkthrough-building-a-project-cpp.md)
+**Zurück:** [Verwenden der Visual Studio-IDE für C++-Desktopentwicklung](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)<br/>
+**Weiter:** [Exemplarische Vorgehensweise: Erstellen eines Projekts (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>Siehe auch
 
-[C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)  
-[Erstellen von C/C++-Programmen](../build/building-c-cpp-programs.md)
+[C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)<br/>
+[Erstellen von C/C++-Programmen](../build/building-c-cpp-programs.md)<br/>

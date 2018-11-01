@@ -1,10 +1,6 @@
 ---
-title: rename, _wrename | Microsoft-Dokumentation
-ms.custom: ''
+title: rename, _wrename
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - rename
 - _wrename
@@ -25,8 +21,6 @@ f1_keywords:
 - _wrename
 - _trename
 - Rename
-dev_langs:
-- C++
 helpviewer_keywords:
 - trename function
 - directories [C++], renaming
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f02829b394649b86dfda9baad7c5792853fce746
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70793dee54460b6372bfbe815115aa9211670c6f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407472"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463985"
 ---
 # <a name="rename-wrename"></a>rename, _wrename
 
@@ -92,7 +82,7 @@ Weitere mögliche Rückgabewerte finden Sie unter [_doserrno, _errno, syserrlist
 
 Die **rename**-Funktion benennt die Datei oder das Verzeichnis, die von *oldname* angegeben wurden, auf den von *newname* gegebenen Namen. Der alte Name muss der Pfad einer vorhandenen Datei oder eines vorhandenen Verzeichnisses sein. Der neue Name darf nicht der Name einer vorhandenen Datei oder eines vorhandenen Verzeichnisses sein. Sie können **rename** nutzen, um eine Datei von einem Verzeichnis oder Gerät zu einem anderen zu verschieben, indem Sie einen anderen Pfad im *newname*-Argument angeben. Allerdings können Sie **rename** nicht verwenden, um ein Verzeichnis zu verschieben. Verzeichnisse können umbenannt, aber nicht verschoben werden.
 
-**_wrename** ist eine Breitzeichen-Version von **_rename**; die Argumente für **_wrename** sind Zeichenfolgen mit Breitzeichen. **_wrename** und **_rename** Verhalten sich andernfalls identisch.
+**_wrename** ist eine Breitzeichen-Version von **_rename**; die Argumente für **_wrename** sind Breitzeichen Zeichenfolgen. **_wrename** und **_rename** Verhalten sich andernfalls identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -102,7 +92,7 @@ Die **rename**-Funktion benennt die Datei oder das Verzeichnis, die von *oldname
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**rename**|\<io.h> oder \<stdio.h>|
 |**_wrename**|\<stdio.h> oder \<wchar.h>|
@@ -139,7 +129,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 File 'CRT_RENAMER.OBJ' renamed to 'CRT_RENAMER.JBO'

@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19da0c8e29a27734b23a01a1b2d3ffaa64a7fe05
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3dc4da4235b57e9abd8e5f32b8f3e696bd1ce2de
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713792"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397181"
 ---
 # <a name="d-preprocessor-definitions"></a>/D (Präprozessordefinitionen)
 
@@ -109,6 +109,6 @@ TEST defined 1
 
 [Compileroptionen](../../build/reference/compiler-options.md)<br/>
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
-[/ U, / u (Symboldefinitionen aufheben)](../../build/reference/u-u-undefine-symbols.md)
-[#undef-Direktive (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)
-[#define-Anweisung (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)
+[/U, /u (Symboldefinitionen aufheben)](../../build/reference/u-u-undefine-symbols.md)<br/>
+[#undef-Direktive (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br/>
+[#define-Direktive (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)

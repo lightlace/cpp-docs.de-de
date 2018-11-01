@@ -1,14 +1,8 @@
 ---
-title: -Fm (Name der Zuordnungsdatei) | Microsoft-Dokumentation
-ms.custom: ''
+title: /Fm (Name der Zuordnungsdatei)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /fm
-dev_langs:
-- C++
 helpviewer_keywords:
 - -Fm compiler option [C++]
 - mapfiles [C++], creating linker
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - Fm compiler option [C++]
 - /Fm compiler option [C++]
 ms.assetid: 8154448a-93a7-4546-8e4c-5c44d0aff45d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3e69a273d523a78adc2b71652e5f13fb9141d3b1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 49a3d20aee54b06bae2670be139d748fd2aaca6d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699902"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50469851"
 ---
 # <a name="fm-name-mapfile"></a>/Fm (Name der Zuordnungsdatei)
 
@@ -63,7 +53,7 @@ Globale Symbole in einer Zuordnungsdatei haben in der Regel eine oder mehrere f√
 
 ## <a name="see-also"></a>Siehe auch
 
-[Ausgabedatei (/ F) Optionen](../../build/reference/output-file-f-options.md)
+[Ausgabedatei (/F) Optionen](../../build/reference/output-file-f-options.md)<br/>
 [Compileroptionen](../../build/reference/compiler-options.md)<br/>
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
 [Festlegen des Pfadnamens](../../build/reference/specifying-the-pathname.md)

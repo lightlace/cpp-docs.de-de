@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9580068474eba77bcf50067efefb98b5949d464f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 4ca24c555373b1ae9c09bb8c35daaffe61768813
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109888"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062989"
 ---
 # <a name="basicistringstream-class"></a>basic_istringstream-Klasse
 
@@ -171,7 +171,6 @@ Legt den Text in einem Zeichenfolgenpuffer fest, ohne die Schreibposition zu än
 
 ```cpp
 basic_string<Elem, Tr, Alloc> str() const;
-
 
 void str(
     const basic_string<Elem, Tr, Alloc>& _Newstr);

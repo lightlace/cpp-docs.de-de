@@ -1,10 +1,6 @@
 ---
-title: Eigenschaftenzuordnungs-Makros | Microsoft-Dokumentation
-ms.custom: ''
+title: Eigenschaftenzuordnungs-Makros
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_PROP_MAP
 - atlcom/ATL::PROP_DATA_ENTRY
@@ -12,21 +8,15 @@ f1_keywords:
 - atlcom/ATL::PROP_ENTRY_TYPE_EX
 - atlcom/ATL::PROP_PAGE
 - atlcom/ATL::END_PROP_MAP
-dev_langs:
-- C++
 helpviewer_keywords:
 - property maps
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 594b02d777d87decfc218064678dbecdf8ecf0c9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7422c38bd21a458dccafa6d34fd4d6522f96132a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106349"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513817"
 ---
 # <a name="property-map-macros"></a>Eigenschaftenzuordnungs-Makros
 
@@ -39,7 +29,7 @@ Diese Makros definieren eigenschaftenzuordnungen und Einträge.
 |[PROP_ENTRY_TYPE](#prop_entry_type)|Gibt eine Beschreibung, Eigenschaft DISPID und Eigenschaft Eigenschaftenseite CLSID in die eigenschaftenzuordnung an.|
 |["PROP_ENTRY_TYPE_EX"](#prop_entry_type_ex)|Gibt die Beschreibung einer Eigenschaft, DISPID, CLSID-Eigenschaftenseite-Eigenschaft und `IDispatch` IID in die eigenschaftenzuordnung.|
 |[PROP_PAGE](#prop_page)|Gibt die CLSID auf einer Eigenschaftenseite in der eigenschaftenzuordnung an.|
-|[END_PROP_MAP](#end_prop_map)|Markiert das Ende der Zuordnung der ATL-Eigenschaft.|  
+|[END_PROP_MAP](#end_prop_map)|Markiert das Ende der Zuordnung der ATL-Eigenschaft.|
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,7 +73,7 @@ PROP_DATA_ENTRY( szDesc, member, vt)
 *szDesc*<br/>
 [in] Beschreibung der Eigenschaft.
 
-*Member*<br/>
+*member*<br/>
 [in] Der Datenmember, die das Ausmaß enthält; z. B. `m_sizeExtent`.
 
 *vt*<br/>

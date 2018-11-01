@@ -1,10 +1,6 @@
 ---
-title: / FA, / FA (Listendatei) | Microsoft-Dokumentation
-ms.custom: ''
+title: /FA, /Fa (Listendatei)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.AssemblerListingLocation
 - VC.Project.VCCLCompilerTool.ConfigureASMListing
@@ -13,8 +9,6 @@ f1_keywords:
 - /fa
 - VC.Project.VCCLCompilerTool.AssemblerOutput
 - VC.Project.VCCLCompilerTool.UseUnicodeForAssemblerListing
-dev_langs:
-- C++
 helpviewer_keywords:
 - FA compiler option [C++]
 - /FA compiler option [C++]
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - listing file type
 - assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 03b2f4e746632cc91b652ca76587ddad18afd165
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6bb5e18c5a174c9e48b253031daad195e6132375
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717963"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507301"
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (Listendatei)
 
@@ -87,9 +77,9 @@ Eine Listendatei mit dem Namen *filename.extension* befindet sich in der angegeb
 
 1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
 
-2. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **Ausgabedateien** Eigenschaftenseite.
+1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **Ausgabedateien** Eigenschaftenseite.
 
-3. Ändern der **Assemblyausgabe** -Eigenschaft zum Festlegen der **/FAc** und **/FAS** Optionen für die Assembler-, Computer und Quellcode. Ändern der **verwenden Unicode für Assembler auflisten** -Eigenschaft zum Festlegen der **/FAu** Option für die ANSI-Codepage oder UTF-8-Ausgabe. Ändern der **ASM-Listenspeicherort** Festlegen der **/FA** Option für die Auflistung von Dateinamen und Speicherort.
+1. Ändern der **Assemblyausgabe** -Eigenschaft zum Festlegen der **/FAc** und **/FAS** Optionen für die Assembler-, Computer und Quellcode. Ändern der **verwenden Unicode für Assembler auflisten** -Eigenschaft zum Festlegen der **/FAu** Option für die ANSI-Codepage oder UTF-8-Ausgabe. Ändern der **ASM-Listenspeicherort** Festlegen der **/FA** Option für die Auflistung von Dateinamen und Speicherort.
 
 Das Festlegen sowohl **Assemblyausgabe** und **verwenden Unicode für Assembler auflisten** Eigenschaften können dazu führen, dass [Command-Line-Warnung D9025](../../error-messages/tool-errors/command-line-warning-d9025.md). Verwenden Sie diese Optionen in der IDE zu kombinieren, die **zusätzliche Optionen** Feld der **über die Befehlszeile** Eigenschaftenseite stattdessen.
 
@@ -107,7 +97,7 @@ CL /FAcs HELLO.CPP
 
 ## <a name="see-also"></a>Siehe auch
 
-[Ausgabedatei (/ F) Optionen](../../build/reference/output-file-f-options.md)
+[Ausgabedatei (/F) Optionen](../../build/reference/output-file-f-options.md)<br/>
 [Compileroptionen](../../build/reference/compiler-options.md)<br/>
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
 [Festlegen des Pfadnamens](../../build/reference/specifying-the-pathname.md)

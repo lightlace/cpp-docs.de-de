@@ -1,5 +1,5 @@
 ---
-title: 'WM_-Meldungshandler: F - K | Microsoft Docs'
+title: 'WM_-Meldungshandler: F - K | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -39,37 +39,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b2c293e7e26f2fd58cc9cc767c1772247be1fc5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d33b91cf68055c47afb25ca1b2f68b245c2aed3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381224"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414562"
 ---
 # <a name="wm-message-handlers-f---k"></a>WM_-Meldungshandler: F - K
-Die folgenden Zuordnungseinträge auf der linken Seite entsprechen auf der rechten Seite der Funktionsprototypen:  
-  
-|Eintrag für die Zuordnung|Funktionsprototyp|  
-|---------------|------------------------|  
-|ON_WM_FONTCHANGE()|Afx_msg "void" [OnFontChange](../../mfc/reference/cwnd-class.md#onfontchange)(;)|  
-|ON_WM_GETDLGCODE()|Afx_msg "uint" [OnGetDlgCode](../../mfc/reference/cwnd-class.md#ongetdlgcode)(;)|  
-|ON_WM_GETMINMAXINFO()|Afx_msg "void" [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)(LPPOINT);|  
-|ON_WM_HELPINFO()|Afx_msg BOOL [OnHelpInfo](../../mfc/reference/cwnd-class.md#onhelpinfo)(HELPINFO *);|  
-|ON_WM_HOTKEY()|Afx_msg "void" [OnHotKey](../../mfc/reference/cwnd-class.md#onhotkey)("uint", "uint", "uint");|  
-|ON_WM_HSCROLL()|Afx_msg "void" [OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)("uint", "uint", CWnd *);|  
-|ON_WM_HSCROLLCLIPBOARD()|Afx_msg "void" [OnHScrollClipboard](../../mfc/reference/cwnd-class.md#onhscrollclipboard)(CWnd *, "uint", "uint");|  
-|ON_WM_ICONERASEBKGND()|Afx_msg "void" [OnIconEraseBkgnd](../../mfc/reference/cwnd-class.md#oniconerasebkgnd)(CDC *);|  
-|ON_WM_INITMENU()|Afx_msg "void" [OnInitMenu](../../mfc/reference/cwnd-class.md#oninitmenu)(CMenu *);|  
-|ON_WM_INITMENUPOPUP()|Afx_msg "void" [OnInitMenuPopup](../../mfc/reference/cwnd-class.md#oninitmenupopup)(CMenu *, "uint", BOOL);|  
-|ON_WM_INPUT()|Afx_msg "void" [OnRawInput](../../mfc/reference/cwnd-class.md#onrawinput)("uint", HRAWINPUT);|  
-|ON_WM_INPUT_DEVICE_CHANGE()|Afx_msg "void" [OnInputDeviceChange](../../mfc/reference/cwnd-class.md#oninputdevicechange)(kurz ohne Vorzeichen);|  
-|ON_WM_INPUTLANGCHANGE()|Afx_msg "void" [OnInputLangChange](../../mfc/reference/cwnd-class.md#oninputlangchange)(BYTE, "uint");|  
-|ON_WM_INPUTLANGCHANGEREQUEST()|Afx_msg "void" [OnInputLangChangeRequest](../../mfc/reference/cwnd-class.md#oninputlangchangerequest)("uint", HKL);|  
-|ON_WM_KEYDOWN()|Afx_msg "void" [OnKeyDown](../../mfc/reference/cwnd-class.md#onkeydown)("uint", "uint", "uint");|  
-|ON_WM_KEYUP()|Afx_msg "void" [OnKeyUp](../../mfc/reference/cwnd-class.md#onkeyup)("uint", "uint", "uint");|  
-|ON_WM_KILLFOCUS()|Afx_msg "void" [OnKillFocus](../../mfc/reference/cwnd-class.md#onkillfocus)(CWnd *);|  
-  
-## <a name="see-also"></a>Siehe auch  
- [Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md)   
- [Handler für WM_-Meldungen](../../mfc/reference/handlers-for-wm-messages.md)
+
+Die folgenden Einträge der Karte auf der linken Seite entsprechen die Funktionsprototypen auf der rechten Seite:
+
+|Zuordnungseintrag|Funktionsprototyp|
+|---------------|------------------------|
+|ON_WM_FONTCHANGE()|die "void" Afx_msg [OnFontChange](../../mfc/reference/cwnd-class.md#onfontchange)();|
+|ON_WM_GETDLGCODE()|Afx_msg UINT [OnGetDlgCode](../../mfc/reference/cwnd-class.md#ongetdlgcode)();|
+|ON_WM_GETMINMAXINFO()|die "void" Afx_msg [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)(LPPOINT);|
+|ON_WM_HELPINFO()|Afx_msg "bool" [OnHelpInfo](../../mfc/reference/cwnd-class.md#onhelpinfo)(HELPINFO *);|
+|ON_WM_HOTKEY()|die "void" Afx_msg [OnHotKey](../../mfc/reference/cwnd-class.md#onhotkey)("uint", "uint", "uint");|
+|ON_WM_HSCROLL()|die "void" Afx_msg [OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)("uint", "uint", CWnd *);|
+|ON_WM_HSCROLLCLIPBOARD()|die "void" Afx_msg [OnHScrollClipboard](../../mfc/reference/cwnd-class.md#onhscrollclipboard)(CWnd *, "uint", "uint");|
+|ON_WM_ICONERASEBKGND()|die "void" Afx_msg [OnIconEraseBkgnd](../../mfc/reference/cwnd-class.md#oniconerasebkgnd)(CDC *);|
+|ON_WM_INITMENU()|die "void" Afx_msg [OnInitMenu](../../mfc/reference/cwnd-class.md#oninitmenu)(CMenu *);|
+|ON_WM_INITMENUPOPUP()|die "void" Afx_msg [OnInitMenuPopup](../../mfc/reference/cwnd-class.md#oninitmenupopup)(CMenu *, "uint", "bool");|
+|ON_WM_INPUT()|die "void" Afx_msg [OnRawInput](../../mfc/reference/cwnd-class.md#onrawinput)(UINT, HRAWINPUT);|
+|ON_WM_INPUT_DEVICE_CHANGE()|die "void" Afx_msg [OnInputDeviceChange](../../mfc/reference/cwnd-class.md#oninputdevicechange)(kurz ohne Vorzeichen);|
+|ON_WM_INPUTLANGCHANGE()|die "void" Afx_msg [OnInputLangChange](../../mfc/reference/cwnd-class.md#oninputlangchange)(BYTE, "uint");|
+|ON_WM_INPUTLANGCHANGEREQUEST()|die "void" Afx_msg [OnInputLangChangeRequest](../../mfc/reference/cwnd-class.md#oninputlangchangerequest)(UINT, HKL);|
+|ON_WM_KEYDOWN()|die "void" Afx_msg [OnKeyDown](../../mfc/reference/cwnd-class.md#onkeydown)("uint", "uint", "uint");|
+|ON_WM_KEYUP()|die "void" Afx_msg [OnKeyUp](../../mfc/reference/cwnd-class.md#onkeyup)("uint", "uint", "uint");|
+|ON_WM_KILLFOCUS()|die "void" Afx_msg [OnKillFocus](../../mfc/reference/cwnd-class.md#onkillfocus)(CWnd *);|
+
+## <a name="see-also"></a>Siehe auch
+
+[Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md)<br/>
+[Handler für WM_-Meldungen](../../mfc/reference/handlers-for-wm-messages.md)
 

@@ -1,68 +1,60 @@
 ---
-title: Ausnahmeklassen | Microsoft Docs
-ms.custom: ''
+title: Ausnahmeklassen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.classes.exception
-dev_langs:
-- C++
 helpviewer_keywords:
 - exception classes [MFC]
 - exception handling [MFC], exception classes
 - MFC, exceptions
 ms.assetid: 1a2caf12-b3e9-4189-86d2-bf7a595bf025
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ce4085d0f5f2dcc73d126d04b7560ef8360ffd9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fad88fa36c64bd9d8ca28135c09a3f0ce8fe3c0c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344895"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441937"
 ---
 # <a name="exception-classes"></a>Ausnahmeklassen
-Die Klassenbibliothek bietet einen Mechanismus zur Ausnahmebehandlung basierend auf der Klasse `CException`. Das Anwendungsframework verwendet Ausnahmen im Code. Sie können auch in Ihre verwenden. Weitere Informationen finden Sie im Artikel [Ausnahmen](../mfc/exception-handling-in-mfc.md). Sie können eigene Ausnahmetypen aus ableiten `CException`.  
-  
- MFC enthält eine Ausnahmeklasse, die von der Sie eine eigene Ausnahme abgeleitet werden können sowie Ausnahmeklassen für alle Ausnahmen, die es unterstützt.  
-  
- [CException](../mfc/reference/cexception-class.md)  
- Die Basisklasse für Ausnahmen.  
-  
- [CArchiveException](../mfc/reference/carchiveexception-class.md)  
- Eine Ausnahme Archiv.  
-  
- [CDaoException](../mfc/reference/cdaoexception-class.md)  
- Eine Ausnahme aufgrund eines Fehlers im eine Datenbankoperation DAO.  
-  
- [CDBException](../mfc/reference/cdbexception-class.md)  
- Eine Ausnahme, die nach einem Fehler bei der Verarbeitung der ODBC-Datenbank.  
-  
- [CFileException](../mfc/reference/cfileexception-class.md)  
- Eine Datei-orientierte-Ausnahme.  
-  
- [CMemoryException](../mfc/reference/cmemoryexception-class.md)  
- Eine Out-of-Memory-Ausnahme.  
-  
- [CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md)  
- Eine Ausnahme, die aus der Verwendung einer nicht unterstützten Funktion.  
-  
- [COleException](../mfc/reference/coleexception-class.md)  
- Eine Ausnahme, die resultierenden nach einem Fehler bei der OLE-Verarbeitung. Diese Klasse wird von Container und Server.  
-  
- [COleDispatchException](../mfc/reference/coledispatchexception-class.md)  
- Eine Ausnahme aufgrund eines Fehlers während der Automatisierung. Automation-Ausnahmen werden von Automatisierungsserver ausgelöst und abgefangen von-Clients.  
-  
- [CResourceException](../mfc/reference/cresourceexception-class.md)  
- Eine Ausnahme aufgrund eines Fehlers beim Laden einer Windows-Ressource.  
-  
- [CUserException](../mfc/reference/cuserexception-class.md)  
- Eine Ausnahme verwendet, um einen Benutzer initiierten Vorgang zu beenden. In der Regel hat der Benutzer des Problems benachrichtigt wurde, bevor diese Ausnahme ausgelöst wird.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../mfc/class-library-overview.md)
+
+Die Class-Bibliothek bietet ein Verfahren zur Ausnahmebehandlung basierend auf Klasse `CException`. Das Anwendungsframework verwendet Ausnahmen im Code. Sie können auch in Ihrer verwenden. Weitere Informationen finden Sie im Artikel [Ausnahmen](../mfc/exception-handling-in-mfc.md). Sie können Ihre eigenen Ausnahmetypen aus ableiten `CException`.
+
+MFC enthält eine Ausnahmeklasse, die von der Sie Ihre eigene Ausnahme abgeleitet werden können sowie Ausnahmeklassen für alle Ausnahmen, die es unterstützt.
+
+[CException](../mfc/reference/cexception-class.md)<br/>
+Die Basisklasse für Ausnahmen.
+
+[CArchiveException](../mfc/reference/carchiveexception-class.md)<br/>
+Ausnahme "Archiv".
+
+[CDaoException](../mfc/reference/cdaoexception-class.md)<br/>
+Eine Ausnahme, die nach einem Fehler in einem DAO-Datenbank-Vorgang.
+
+[CDBException](../mfc/reference/cdbexception-class.md)<br/>
+Eine Ausnahme, die sich aus einem Fehler bei der Verarbeitung der ODBC-Datenbank ergeben.
+
+[CFileException](../mfc/reference/cfileexception-class.md)<br/>
+Eine Ausnahme dateiorientierte.
+
+[CMemoryException](../mfc/reference/cmemoryexception-class.md)<br/>
+Eine Out-of-Memory-Ausnahme.
+
+[CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md)<br/>
+Eine Ausnahme, die durch eine nicht unterstützte Funktion verwenden.
+
+[COleException](../mfc/reference/coleexception-class.md)<br/>
+Eine Ausnahme, die nach einem Fehler bei der Verarbeitung von OLE. Diese Klasse wird von sowohl Container und Server verwendet.
+
+[COleDispatchException](../mfc/reference/coledispatchexception-class.md)<br/>
+Eine Ausnahme aufgrund eines Fehlers bei der Automatisierung. Automation-Ausnahmen werden vom Automatisierungsserver ausgelöst und abgefangen, die von Benutzeroberflächenautomatisierungs-Clients.
+
+[CResourceException](../mfc/reference/cresourceexception-class.md)<br/>
+Eine Ausnahme, die nach einem Fehler, eine Windows-Ressource zu laden.
+
+[CUserException](../mfc/reference/cuserexception-class.md)<br/>
+Eine Ausnahme verwendet, um einen vom Benutzer initiierte Vorgang zu beenden. Der Benutzer hat in der Regel des Problems benachrichtigt wurde, bevor diese Ausnahme ausgelöst wird.
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../mfc/class-library-overview.md)
 

@@ -1,31 +1,21 @@
 ---
-title: Literal (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Literale (C++ / CLI und C++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
 - literal
 - literal_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 76a57261b28679c4f05b677dc7b49008535c921b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d58df1bb6a6ec1e53ee434cf60a8caf3d557eeb2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596445"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50521036"
 ---
-# <a name="literal-c-component-extensions"></a>literal (Komponentenerweiterungen für C++)
+# <a name="literal-ccli-and-ccx"></a>Literale (C++ / CLI und C++ / CX)
 
 Eine Variable (Datenmember) markiert, als **literal** in einer **"/ CLR"** Kompilierung ist das systemeigene Äquivalent der ein **static Const** Variable.
 
@@ -91,11 +81,11 @@ public ref struct A {
 Beachten Sie den Unterschied in den Metadaten für `sc` und `lit`: die `modopt` Richtlinie gilt für `sc`, d. h. sie kann von anderen Compilern ignoriert werden.
 
 ```
-.field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)  
+.field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)
 ```
 
 ```
-.field public static literal int32 lit = int32(0x0000000A)  
+.field public static literal int32 lit = int32(0x0000000A)
 ```
 
 ## <a name="example"></a>Beispiel
@@ -137,4 +127,4 @@ Compileroption: `/clr`
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET und UWP](../windows/component-extensions-for-runtime-platforms.md)

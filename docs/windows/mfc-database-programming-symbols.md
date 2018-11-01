@@ -1,32 +1,22 @@
 ---
-title: Symbole für MFC-Datenbankprogrammierung | Microsoft-Dokumentation
-ms.custom: ''
+title: Symbole für die MFC-Datenbankprogrammierung
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC database programming symbols
 - symbols [C++], MFC
 - databases [C++], MFC programming model
 ms.assetid: 3f676a2c-cf07-415e-a336-680abdc42a5e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 50696d8f6ee0aa1c61374c0758905a5bb7063ab5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2be9838ebcffc01b0e558dbcf21370585b9b9422
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606936"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50501262"
 ---
 # <a name="mfc-database-programming-symbols"></a>Symbole für die MFC-Datenbankprogrammierung
+
 Die Symbole in dieser Tabelle werden nur in einem MFC-Projekt angezeigt, wenn datenbankunterstützung hinzugefügt wurde. Die MFC-Verbindung mit SQL-Server und datenbankprogrammierung unterstützt.
-  
+
 |||
 |-|-|
 |AFX_IDP_SQL_API_CONFORMANCE|AFX_IDP_SQL_BOOKMARKS_ NOT_ENABLED|
@@ -43,10 +33,12 @@ Die Symbole in dieser Tabelle werden nur in einem MFC-Projekt angezeigt, wenn da
 |AFX_IDP_SQL_ROW_FETCH|AFX_IDP_SQL_ROW_UPDATE_ NOT_SUPPORTED|
 |AFX_IDP_SQL_SNAPSHOT_ NOT_SUPPORTED|AFX_IDP_SQL_SQL_CONFORMANCE|
 |AFX_IDP_SQL_SQL_NO_TOTAL|AFX_IDP_SQL_UPDATE_DELETE_FAILED|
-  
+
 ## <a name="requirements"></a>Anforderungen
- MFC
-  
+
+MFC
+
 ## <a name="see-also"></a>Siehe auch
- [Vordefinierte MFC-Symbole](../windows/mfc-predefined-symbols.md)  
- [Symbole: Ressourcenbezeichner](../windows/symbols-resource-identifiers.md)
+
+[Vordefinierte MFC-Symbole](../windows/mfc-predefined-symbols.md)<br/>
+[Symbole: Ressourcenbezeichner](../windows/symbols-resource-identifiers.md)

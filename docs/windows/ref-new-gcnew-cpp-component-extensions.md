@@ -1,33 +1,23 @@
 ---
-title: REF neu, Gcnew (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: REF neu, Gcnew (C++ / CLI und C++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
 - gcnew
 - ref new
 - gcnew_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - ref new keyword (C++)
 - gcnew keyword [C++]
 ms.assetid: 388a62da-c2df-4a94-a9a2-205b53e577da
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 1c31cda7c074b06025051661d27f00d2624721d0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dd78bcb7283cb08f4971192274686710fe22181f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596157"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50641767"
 ---
-# <a name="ref-new-gcnew--c-component-extensions"></a>ref new, gcnew (Komponentenerweiterungen für C++)
+# <a name="ref-new-gcnew--ccli-and-ccx"></a>REF neu, Gcnew (C++ / CLI und C++ / CX)
 
 Die **Ref neue** -aggregatschlüsselwort ordnet eine Instanz eines Typs, der die Garbage Collection, die ein Handle zurückgibt, wenn das Objekt wird nicht zugegriffen werden kann ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) auf das zugeordnete Objekt.
 
@@ -84,7 +74,7 @@ value class Boxed {
     public:
         int i;
 };
-int main()  
+int main()
 {
     Boxed^ y = gcnew Boxed;
     y->i = 32;
@@ -99,4 +89,4 @@ int main()
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET und UWP](../windows/component-extensions-for-runtime-platforms.md)

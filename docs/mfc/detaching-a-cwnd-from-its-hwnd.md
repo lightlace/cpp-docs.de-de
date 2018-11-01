@@ -1,5 +1,5 @@
 ---
-title: Trennen eines CWnd von seinem HWND | Microsoft Docs
+title: Trennen eines CWnd von seinem HWND | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,24 +20,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a776b4ff4799750c89a322379a063030db748eec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c69703d8c528d82a696fc94be76ac4a569628b4e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342678"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392645"
 ---
 # <a name="detaching-a-cwnd-from-its-hwnd"></a>Trennen eines CWnd von seinem HWND
-Wenn Sie den Objekt - umgehen müssen`HWND` Beziehung MFC bietet eine andere `CWnd` Memberfunktion [trennen](../mfc/reference/cwnd-class.md#detach), dem das Windows-Fenster die C++-Fensterobjekt trennt. Dadurch wird verhindert, dass den Destruktor zerstören das Windows-Fenster aus, wenn das Objekt zerstört wird.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
-  
--   [Erstellen von Fenstern](../mfc/creating-windows.md)  
-  
--   [Fensterzerstörungssequenz](../mfc/window-destruction-sequence.md)  
-  
--   [Reservieren und Freigeben von Arbeitsspeicher (Fenster)](../mfc/allocating-and-deallocating-window-memory.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Fensterobjekte](../mfc/window-objects.md)
+
+Wenn Sie die Objekt - umgehen müssen`HWND` Beziehung MFC bietet eine andere `CWnd` Member-Funktion [trennen](../mfc/reference/cwnd-class.md#detach), die das Windows-Fenster das C++-Fensterobjekt trennt. Dadurch wird verhindert, dass den Destruktor zerstören das Windows-Fenster aus, wenn das Objekt zerstört wird.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
+
+- [Erstellen von Fenstern](../mfc/creating-windows.md)
+
+- [Fensterzerstörungssequenz](../mfc/window-destruction-sequence.md)
+
+- [Zuordnen und Freigeben von Arbeitsspeicher (Fenster)](../mfc/allocating-and-deallocating-window-memory.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Fensterobjekte](../mfc/window-objects.md)
 

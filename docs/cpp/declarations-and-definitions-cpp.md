@@ -1,23 +1,13 @@
 ---
-title: Deklarationen und Definitionen (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Deklarationen und Definitionen (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: 678f1424-e12f-45e0-a957-8169e5fef6cb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9f2155fef0f9287273b3c45e9318665acfdae527
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1e76f636a6efd652ac629ad2f97f0b09f6171f9c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070638"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432111"
 ---
 # <a name="declarations-and-definitions-c"></a>Deklarationen und Definitionen (C++)
 
@@ -35,7 +25,7 @@ Eine Deklaration führt mindestens einen Namen in ein Programm ein. Deklaratione
 
 1. Sie ist von einem statischen Datenmember innerhalb einer Klassendeklaration.
 
-     Da statische Klassendatenmember diskrete Variablen sind, die für alle Objekte der Klasse freigegeben werden, müssen sie definiert werden und außerhalb der Klassendeklaration initialisiert werden. (Weitere Informationen über Klassen und Klassenmembern finden Sie unter [Klassen](../cpp/classes-and-structs-cpp.md).)
+   Da statische Klassendatenmember diskrete Variablen sind, die für alle Objekte der Klasse freigegeben werden, müssen sie definiert werden und außerhalb der Klassendeklaration initialisiert werden. (Weitere Informationen über Klassen und Klassenmembern finden Sie unter [Klassen](../cpp/classes-and-structs-cpp.md).)
 
 1. Sie ist eine Klassennamendeklaration ohne nachfolgende Definition, wie `class T;`.
 

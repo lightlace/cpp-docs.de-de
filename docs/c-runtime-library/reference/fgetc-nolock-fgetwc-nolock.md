@@ -1,10 +1,6 @@
 ---
-title: _fgetc_nolock, _fgetwc_nolock | Microsoft-Dokumentation
-ms.custom: ''
+title: _fgetc_nolock, _fgetwc_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fgetc_nolock
 - _fgetwc_nolock
@@ -28,8 +24,6 @@ f1_keywords:
 - _fgetc_nolock
 - _fgettc_nolock
 - fgetc_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - fgetc_nolock function
 - fgetwc_nolock function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - reading characters from streams
 - _fgettc_nolock function
 ms.assetid: fb8e7c5b-4503-493a-879e-6a1db75aa114
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aed066ec8d0aecb916bae357697d6fd707e88e02
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 568a96caf481fbaf3e80cf60958dc826db49dd86
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398288"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601720"
 ---
 # <a name="fgetcnolock-fgetwcnolock"></a>_fgetc_nolock, _fgetwc_nolock
 
@@ -138,7 +128,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 Line one.

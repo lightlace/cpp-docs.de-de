@@ -1,27 +1,17 @@
 ---
-title: ctype_base-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: ctype_base-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - locale/std::ctype_base
-dev_langs:
-- C++
 helpviewer_keywords:
 - ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3def685a8cd108666b3e1b8be9314fc7585a9837
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 83ef35f9fac438cfa217decf222abd365ff84269
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844893"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531130"
 ---
 # <a name="ctypebase-class"></a>ctype_base-Klasse
 
@@ -79,7 +69,7 @@ Definiert eine Enumerationsmaske. Jede Enumerationskonstante kennzeichnet eine a
 
 - **graph** ([isgraph](../standard-library/locale-functions.md#isgraph)-Funktion)
 
-Eine Kombination von Klassifikationen kann durch Verknüpfen dieser Konstanten mit OR beschrieben werden. Insbesondere ist immer, die "true" **"alnum"** == ( **Alpha** &#124; **Ziffer** \) und **Graph** \= \= \( **"alnum"** &#124; **Interpunktion**).
+Eine Kombination von Klassifikationen kann durch Verknüpfen dieser Konstanten mit OR beschrieben werden. Es ist immer, die "true" **Alnum** == ( **Alpha** &#124; **Ziffer** \) und **Graph** \= \= \( **Alnum** &#124; **Punct**).
 
 ## <a name="requirements"></a>Anforderungen
 

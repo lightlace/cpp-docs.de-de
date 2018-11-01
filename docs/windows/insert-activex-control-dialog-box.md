@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16777dc2354787057e3cfe6afb329268272a16e2
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9a157649f374dfd1fabbecd6ce60523f4208733b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317367"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396726"
 ---
 # <a name="insert-activex-control-dialog-box-c"></a>Fügen Sie ActiveX-Steuerelement (Dialogfeld) (C++ ein)
 
@@ -47,6 +47,6 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Registerkarte „Dialog-Editor“, „Toolbox“](../windows/dialog-editor-tab-toolbox.md)  
-[Ressourcendateien](../windows/resource-files-visual-studio.md)  
+[Registerkarte „Dialog-Editor“, „Toolbox“](../windows/dialog-editor-tab-toolbox.md)<br/>
+[Ressourcendateien](../windows/resource-files-visual-studio.md)<br/>
 [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)

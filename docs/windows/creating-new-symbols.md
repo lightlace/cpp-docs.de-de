@@ -1,29 +1,18 @@
 ---
-title: Erstellen neuer Symbole | Microsoft-Dokumentation
-ms.custom: ''
+title: Erstellen neuer Symbole
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.creating
-dev_langs:
-- C++
 helpviewer_keywords:
 - New Symbol dialog box [C++]
 - symbols [C++], creating
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 91d27752af42b861c0374e9d8881db9e121fd5fd
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9305f5bf409d5c0d4da227d2aadd3f16dc85945c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315326"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50600110"
 ---
 # <a name="creating-new-symbols"></a>Erstellen neuer Symbole
 
@@ -53,5 +42,5 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anzeigen von Ressourcensymbolen](../windows/viewing-resource-symbols.md)  
+[Anzeigen von Ressourcensymbolen](../windows/viewing-resource-symbols.md)<br/>
 [Vordefinierte Symbol-IDs](../windows/predefined-symbol-ids.md)

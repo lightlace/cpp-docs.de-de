@@ -1,7 +1,7 @@
 ---
 title: RemoveReference-Struktur | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d73c9f99eec3fd3ec01d4ae5d41418c67cb472f9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d4c07a8f948895db098008f5efb90353912a13dd
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597464"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789058"
 ---
 # <a name="removereference-structure"></a>RemoveReference-Struktur
 
@@ -33,15 +33,17 @@ Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet
 ```cpp
 template<class T>
 struct RemoveReference;
+
 template<class T>
 struct RemoveReference<T&>;
+
 template<class T>
 struct RemoveReference<T&&>;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Eine Klasse.
 
 ## <a name="remarks"></a>Hinweise

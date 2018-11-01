@@ -1,12 +1,6 @@
 ---
-title: Bearbeiten von Bestandteilen eines Bilds (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
-ms.custom: ''
+title: Bearbeiten von Bestandteilen eines Bilds (Bildbearbeitung für Symbole)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], editing images
 - Clipboard [C++], pasting
@@ -18,17 +12,12 @@ helpviewer_keywords:
 - images [C++], pasting into
 - graphics [C++], editing
 ms.assetid: ff4f5fef-71a4-4fd8-825e-049399fed391
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0380fd6fc9b37c4d7458453398cfbd2ce6699234
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: db9d8dedf2e7db628ac27b5ebbae5563a89a20de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607832"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614241"
 ---
 # <a name="editing-parts-of-an-image-image-editor-for-icons"></a>Bearbeiten von Bestandteilen eines Bilds (Bildbearbeitung für Symbole)
 
@@ -85,6 +74,6 @@ Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)  
-[Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)

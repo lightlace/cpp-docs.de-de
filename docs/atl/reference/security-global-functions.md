@@ -1,10 +1,6 @@
 ---
-title: Globale Sicherheitsfunktionen | Microsoft-Dokumentation
-ms.custom: ''
+title: Globale Sicherheitsfunktionen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlsecurity/ATL::AtlGetDacl
 - atlsecurity/ATL::AtlSetDacl
@@ -15,23 +11,17 @@ f1_keywords:
 - atlsecurity/ATL::AtlGetSacl
 - atlsecurity/ATL::AtlSetSacl
 - atlsecurity/ATL::AtlGetSecurityDescriptor
-dev_langs:
-- C++
 helpviewer_keywords:
 - SIDs [C++], modifying SID objects
 - ACL object global functions
 - security IDs [C++]
 ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a2cdeef97b92550731b06dcb4a1d425d77f5920a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 95074860c5fc5bef02852600b51751e9a028465a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075155"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50555232"
 ---
 # <a name="security-global-functions"></a>Globale Sicherheitsfunktionen
 
@@ -50,11 +40,11 @@ Diese Funktionen bieten Unterstützung für die SID und ACL-Objekte ändern.
 |[AtlSetOwnerSid](#atlsetownersid)|Mit dieser Funktion wird die Sicherheits-ID (SID) des Besitzers eines Objekts festgelegt.|
 |[AtlGetSacl](#atlgetsacl)|Mit dieser Funktion werden die Informationen zur Systemzugriffssteuerungsliste (SACL, System Access Control List) eines bestimmten Objekts abgerufen.|
 |[AtlSetSacl](#atlsetsacl)|Mit dieser Funktion werden die Informationen zur Systemzugriffssteuerungsliste (SACL, System Access Control List) eines bestimmten Objekts festgelegt.|
-|[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|Mit dieser Funktion wird die Sicherheitsbeschreibung eines angegebenen Objekts abgerufen.|  
+|[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|Mit dieser Funktion wird die Sicherheitsbeschreibung eines angegebenen Objekts abgerufen.|
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** atlsecurity.h 
+**Header:** atlsecurity.h
 
 ##  <a name="atlgetdacl"></a>  AtlGetDacl
 
@@ -127,7 +117,7 @@ Gibt bei Erfolg true zurück, bei einem Fehler false.
 In Debugbuilds wird ein Assertionsfehler auftreten, wenn *hObject* ist ungültig, oder wenn *DwInheritanceFlowControl* ist keiner der drei zulässigen Werte.
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** atlsecurity.h 
+**Header:** atlsecurity.h
 
 ##  <a name="atlgetgroupsid"></a>  AtlGetGroupSid
 
@@ -156,11 +146,11 @@ Zeiger auf eine `CSid` Objekt, das die neue Sicherheitsinformationen enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg true zurück, bei einem Fehler false.  
+Gibt bei Erfolg true zurück, bei einem Fehler false.
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** atlsecurity.h 
+**Header:** atlsecurity.h
 
 ##  <a name="atlsetgroupsid"></a>  AtlSetGroupSid
 
@@ -189,11 +179,11 @@ Die `CSid` -Objekt, das die neue Sicherheitsinformationen enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg true zurück, bei einem Fehler false.  
+Gibt bei Erfolg true zurück, bei einem Fehler false.
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** atlsecurity.h 
+**Header:** atlsecurity.h
 
 ##  <a name="atlgetownersid"></a>  AtlGetOwnerSid
 
@@ -222,11 +212,11 @@ Zeiger auf eine `CSid` Objekt, das die neue Sicherheitsinformationen enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg true zurück, bei einem Fehler false.  
+Gibt bei Erfolg true zurück, bei einem Fehler false.
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** atlsecurity.h 
+**Header:** atlsecurity.h
 
 ##  <a name="atlsetownersid"></a>  AtlSetOwnerSid
 
@@ -255,11 +245,11 @@ Die `CSid` -Objekt, das die neue Sicherheitsinformationen enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg true zurück, bei einem Fehler false.  
+Gibt bei Erfolg true zurück, bei einem Fehler false.
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** atlsecurity.h 
+**Header:** atlsecurity.h
 
 ##  <a name="atlgetsacl"></a>  AtlGetSacl
 
@@ -296,11 +286,11 @@ Gibt bei Erfolg true zurück, bei einem Fehler false.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn `AtlGetSacl` oft aufgerufen werden soll, auf viele verschiedene Objekte, sie werden sehr viel effizienter, die SE_SECURITY_NAME-Berechtigung zu aktivieren, einmal vor dem Aufrufen der Funktion, wobei *bRequestNeededPrivileges* auf "false" festgelegt.  
+Wenn `AtlGetSacl` oft aufgerufen werden soll, auf viele verschiedene Objekte, sie werden sehr viel effizienter, die SE_SECURITY_NAME-Berechtigung zu aktivieren, einmal vor dem Aufrufen der Funktion, wobei *bRequestNeededPrivileges* auf "false" festgelegt.
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** atlsecurity.h 
+**Header:** atlsecurity.h
 
 ##  <a name="atlsetsacl"></a>  AtlSetSacl
 
@@ -343,11 +333,11 @@ Gibt bei Erfolg true zurück, bei einem Fehler false.
 
 In Debugbuilds wird ein Assertionsfehler auftreten, wenn *hObject* ist ungültig, oder wenn *DwInheritanceFlowControl* ist keiner der drei zulässigen Werte.
 
-Wenn `AtlSetSacl` oft aufgerufen werden soll, auf viele verschiedene Objekte, sie werden sehr viel effizienter, die SE_SECURITY_NAME-Berechtigung zu aktivieren, einmal vor dem Aufrufen der Funktion, wobei *bRequestNeededPrivileges* auf "false" festgelegt.  
+Wenn `AtlSetSacl` oft aufgerufen werden soll, auf viele verschiedene Objekte, sie werden sehr viel effizienter, die SE_SECURITY_NAME-Berechtigung zu aktivieren, einmal vor dem Aufrufen der Funktion, wobei *bRequestNeededPrivileges* auf "false" festgelegt.
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** atlsecurity.h 
+**Header:** atlsecurity.h
 
 ##  <a name="atlgetsecuritydescriptor"></a>  AtlGetSecurityDescriptor
 
@@ -390,7 +380,7 @@ Gibt bei Erfolg true zurück, bei einem Fehler false.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn `AtlGetSecurityDescriptor` oft aufgerufen werden soll, auf viele verschiedene Objekte, sie werden sehr viel effizienter, die SE_SECURITY_NAME-Berechtigung zu aktivieren, einmal vor dem Aufrufen der Funktion, wobei *bRequestNeededPrivileges* auf "false" festgelegt.  
+Wenn `AtlGetSecurityDescriptor` oft aufgerufen werden soll, auf viele verschiedene Objekte, sie werden sehr viel effizienter, die SE_SECURITY_NAME-Berechtigung zu aktivieren, einmal vor dem Aufrufen der Funktion, wobei *bRequestNeededPrivileges* auf "false" festgelegt.
 
 ### <a name="requirements"></a>Anforderungen
 

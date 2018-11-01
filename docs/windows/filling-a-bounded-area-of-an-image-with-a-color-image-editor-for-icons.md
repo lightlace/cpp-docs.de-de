@@ -1,29 +1,18 @@
 ---
-title: Füllen von begrenzten Bereichen eines Bilds mit einer Farbe (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
-ms.custom: ''
+title: Füllen von begrenzten Bereichen eines Bilds mit einer Farbe (Bildbearbeitung für Symbole)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - colors [C++], image
 - images [C++], colors
 - Image editor [C++], colors
 - Fill tool
 ms.assetid: e647ef83-421b-4818-855d-249b4c4cb5f2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 47b8837cafaab2501e201a747fd9463e1e00639e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 678d3275a41628b5ada28068a760ef60cc258776
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42580968"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451713"
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>Füllen von begrenzten Bereichen eines Bilds mit einer Farbe (Bildbearbeitung für Symbole)
 
@@ -50,5 +39,5 @@ Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Arbeiten mit Farben](../windows/working-with-color-image-editor-for-icons.md)

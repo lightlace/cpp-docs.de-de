@@ -1,10 +1,6 @@
 ---
-title: unordered_map-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: unordered_map-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - unordered_map/std::unordered_map
 - unordered_map/std::unordered_map::allocator_type
@@ -52,8 +48,6 @@ f1_keywords:
 - unordered_map/std::unordered_map::swap
 - unordered_map/std::unordered_map::unordered_map
 - unordered_map/std::unordered_map::hash_function
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::unordered_map
 - std::unordered_map::allocator_type
@@ -144,16 +138,12 @@ helpviewer_keywords:
 - std::unordered_map::size
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9082e4a8269e692bf9e1d9b8a27f61291b2707a9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9106d8e2eaba1cc16b645f79418d0ff02766b04d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726231"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592191"
 ---
 # <a name="unorderedmap-class"></a>unordered_map-Klasse
 
@@ -1468,29 +1458,24 @@ Fügt ein Element oder einen Bereich von Elementen in ein unordered_map-Element 
 // (1) single element
 pair<iterator, bool> insert(    const value_type& Val);
 
-
 // (2) single element, perfect forwarded
 template <class ValTy>
 pair<iterator, bool>
 insert(    ValTy&& Val);
 
-
 // (3) single element with hint
 iterator insert(    const_iterator Where,
     const value_type& Val);
-
 
 // (4) single element, perfect forwarded, with hint
 template <class ValTy>
 iterator insert(    const_iterator Where,
     ValTy&& Val);
 
-
 // (5) range
 template <class InputIterator>
 void insert(InputIterator First,
     InputIterator Last);
-
 
 // (6) initializer list
 void insert(initializer_list<value_type>
@@ -2002,7 +1987,6 @@ Ruft die maximale Anzahl von Elementen pro Bucket ab oder legt sie fest.
 
 ```cpp
 float max_load_factor() const;
-
 
 void max_load_factor(float factor);
 ```
@@ -2665,7 +2649,7 @@ unordered_map(
 
 template <class InIt>
 unordered_map(
-InputIterator First,
+    InputIterator First,
     InputIterator Last,
     size_type Bucket_count = N0,
     const Hash& Hash = Hash(),

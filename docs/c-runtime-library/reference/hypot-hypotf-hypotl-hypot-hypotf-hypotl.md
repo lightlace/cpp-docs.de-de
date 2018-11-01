@@ -1,10 +1,6 @@
 ---
-title: hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl | Microsoft-Dokumentation
-ms.custom: ''
+title: hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _hypotf
 - hypot
@@ -32,8 +28,6 @@ f1_keywords:
 - hypot
 - _hypot
 - _hypotf
-dev_langs:
-- C++
 helpviewer_keywords:
 - hypotenuse calculation
 - hypot function
@@ -43,16 +37,12 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3a8488b160c10eb29f0448127c44d3514f8debf3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea25ea87a0ec23a0e98dbdc7bb92ce691fc2fa0f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400202"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50439532"
 ---
 # <a name="hypot-hypotf-hypotl-hypot-hypotf-hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 
@@ -94,19 +84,19 @@ Gleitkommawerte.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Im Erfolgsfall **Hypot** gibt die Länge der Hypotenuse; bei Überlauf **Hypot** gibt INF (Unendlichkeit) und die **Errno** Variable wird festgelegt, um **ERANGE** . Sie können **_matherr** Fehlerbehandlung zu ändern.
+Im Erfolgsfall **Hypot** gibt die Länge der Hypotenuse; bei Überlauf **Hypot** gibt INF (Unendlichkeit) zurück, und die **Errno** auf festgelegt ist **ERANGE** . Sie können **_matherr** Fehlerbehandlung zu ändern.
 
 Weitere Informationen zu diesen Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Hypot** Funktionen berechnen, die Länge der Hypotenuse eines rechtwinkligen Dreiecks, wird die Länge der beiden Seiten *x* und *y* (also die Quadratwurzel von *x*<sup>2</sup> + *y*<sup>2</sup>).
+Die **Hypot** -Funktionen berechnen die Länge der Hypotenuse eines rechtwinkligen Dreiecks, wird die Länge der beiden Seiten *x* und *y* (das heißt, die Quadratwurzel von *x*<sup>2</sup> + *y*<sup>2</sup>).
 
 Die Versionen der Funktionen mit führenden Unterstrichen unterstützen die Kompatibilität mit früheren Standards. Ihr Verhalten ist mit den Versionen identisch, die keine führende Unterstriche haben. Es empfiehlt sich, die Versionen ohne führende Unterstriche für neuen Code zu verwenden.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**Hypot**, **Hypotf**, **Hypotl**, **_hypot**, **_hypotf**, **_hypotl**|\<math.h>|
 

@@ -1,14 +1,8 @@
 ---
-title: Erstellen eines Symbols oder anderen Bilds (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
-ms.custom: ''
+title: Erstellen eines Symbols oder anderen Bilds (Bildbearbeitung für Symbole)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
-dev_langs:
-- C++
 helpviewer_keywords:
 - bitmaps [C++]
 - images [C++], creating
@@ -17,17 +11,12 @@ helpviewer_keywords:
 - graphics [C++], creating
 - Image editor [C++], creating images
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 82479dab780fce677eeee84c4ccde880fe19d2bc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 45a119114c26513788b2cdc134e4258e42cf896d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314910"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50503284"
 ---
 # <a name="creating-an-icon-or-other-image-image-editor-for-icons"></a>Erstellen eines Symbols oder anderen Bilds (Bildbearbeitung für Symbole)
 
@@ -67,8 +56,8 @@ Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
-[Symbole und Cursor: Bildressourcen für Anzeigegeräte](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
-[Konvertieren von Bitmaps in Symbolleisten](../windows/converting-bitmaps-to-toolbars.md)  
-[Erstellen neuer Symbolleisten](../windows/creating-new-toolbars.md)  
-[Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Symbole und Cursor: Bildressourcen für Anzeigegeräte](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)<br/>
+[Konvertieren von Bitmaps in Symbolleisten](../windows/converting-bitmaps-to-toolbars.md)<br/>
+[Erstellen neuer Symbolleisten](../windows/creating-new-toolbars.md)<br/>
+[Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)

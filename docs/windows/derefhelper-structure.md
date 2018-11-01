@@ -1,7 +1,7 @@
 ---
 title: DerefHelper-Struktur | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 326974e935608c9b41866e61e72b7a85fc8cb0b2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2d9339256d4dfda717d52b11da965b3600a53cd1
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598530"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788356"
 ---
 # <a name="derefhelper-structure"></a>DerefHelper-Struktur
 
@@ -31,20 +31,16 @@ Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-template <
-   typename T
->
+template <typename T>
 struct DerefHelper;
 
-template <
-   typename T
->
+template <typename T>
 struct DerefHelper<T*>;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Ein Vorlagenparameter.
 
 ## <a name="remarks"></a>Hinweise

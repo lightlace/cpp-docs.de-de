@@ -1,9 +1,6 @@
 ---
-title: FtmBase-Klasse | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 09/12/2018
-ms.technology:
-- cpp-windows
+title: FtmBase-Klasse
+ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
 - ftm/Microsoft::WRL::FtmBase
@@ -16,8 +13,6 @@ f1_keywords:
 - ftm/Microsoft::WRL::FtmBase::marshaller_
 - ftm/Microsoft::WRL::FtmBase::ReleaseMarshalData
 - ftm/Microsoft::WRL::FtmBase::UnmarshalInterface
-dev_langs:
-- C++
 helpviewer_keywords:
 - Microsoft::WRL::FtmBase class
 - Microsoft::WRL::FtmBase::CreateGlobalInterfaceTable method
@@ -30,17 +25,12 @@ helpviewer_keywords:
 - Microsoft::WRL::FtmBase::ReleaseMarshalData method
 - Microsoft::WRL::FtmBase::UnmarshalInterface method
 ms.assetid: 275f3b71-2975-4f92-89e7-d351e96496df
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 687fd4f4bd77043bd0b74c7bcc39fb6a496b60be
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: fb7f103d8ea647f554d9bbf26c2e218d34f6b1ff
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601456"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431849"
 ---
 # <a name="ftmbase-class"></a>FtmBase-Klasse
 
@@ -49,9 +39,11 @@ Stellt ein Freethread-Marshaller-Objekt dar.
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-class FtmBase : public Microsoft::WRL::Implements<
-   Microsoft::WRL::RuntimeClassFlags<WinRtClassicComMix>,
-   Microsoft::WRL::CloakedIid<IMarshal> >;
+class FtmBase :
+    public Microsoft::WRL::Implements<
+        Microsoft::WRL::RuntimeClassFlags<WinRtClassicComMix>,
+        Microsoft::WRL::CloakedIid<IMarshal>
+    >;
 ```
 
 ## <a name="remarks"></a>Hinweise
@@ -106,7 +98,7 @@ static HRESULT CreateGlobalInterfaceTable(
 
 ### <a name="parameters"></a>Parameter
 
-*Git*  
+*Git*<br/>
 Wenn dieser Vorgang abgeschlossen ist, einen Zeiger auf eine globale Schnittstellentabelle.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -129,7 +121,7 @@ STDMETHODIMP DisconnectObject(
 
 ### <a name="parameters"></a>Parameter
 
-*dwReserved*  
+*dwReserved*<br/>
 Für die zukünftige Verwendung reserviert. Muss 0 (null) sein.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -161,26 +153,26 @@ STDMETHODIMP GetMarshalSizeMax(
 
 ### <a name="parameters"></a>Parameter
 
-*riid*  
+*riid*<br/>
 Verweis auf den Bezeichner der Schnittstelle, die gemarshallt werden soll.
 
-*PV*  
+*PV*<br/>
 Der Schnittstellenzeiger, gemarshallt werden soll; NULL kann sein.
 
-*dwDestContext*  
+*dwDestContext*<br/>
 Zielkontext, in dem die angegebene Schnittstelle zum Marshalling rückgängig gemacht werden wird.
 
 Geben Sie einen oder mehrere MSHCTX-Enumerationswerte.
 
 Rückgängigmachen des Marshallens kann derzeit, die entweder in ein anderes Apartment des aktuellen Prozesses (MSHCTX_INPROC) oder in einem anderen Prozess auf dem gleichen Computer wie der aktuelle Prozess (MSHCTX_LOCAL) auftreten.
 
-*pvDestContext*  
+*pvDestContext*<br/>
 Für die zukünftige Verwendung reserviert. NULL muss sein.
 
-*mshlflags*  
+*mshlflags*<br/>
 Flag, das angibt, ob die Daten gemarshallt werden zurück an den Clientprozess übertragen werden – der Normalfall – oder in einer globalen Tabelle, in dem sie, indem mehrere Clients abgerufen werden geschrieben. Geben Sie einen oder mehrere MSHLFLAGS-Enumerationswerte.
 
-*pSize*  
+*pSize*<br/>
 Wenn dieser Vorgang abgeschlossen ist, Zeiger auf die obere Grenze für die Menge der Daten in den Marshalling Stream geschrieben werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -204,23 +196,23 @@ STDMETHODIMP GetUnmarshalClass(
 
 ### <a name="parameters"></a>Parameter
 
-*riid*  
+*riid*<br/>
 Verweis auf den Bezeichner der Schnittstelle, die gemarshallt werden soll.
 
-*PV*  
+*PV*<br/>
 Zeiger auf die Schnittstelle, die gemarshallt werden; Wenn der Aufrufer nicht über einen Zeiger auf die gewünschte Schnittstelle verfügt, kann NULL sein.
 
-*dwDestContext*  
+*dwDestContext*<br/>
 Zielkontext, in dem die angegebene Schnittstelle zum Marshalling rückgängig gemacht werden wird.
 
 Geben Sie einen oder mehrere MSHCTX-Enumerationswerte.
 
 Rückgängigmachen des Marshallens kann entweder in ein anderes Apartment des aktuellen Prozesses (MSHCTX_INPROC) oder in einem anderen Prozess auf dem gleichen Computer wie der aktuelle Prozess (MSHCTX_LOCAL) auftreten.
 
-*pvDestContext*  
+*pvDestContext*<br/>
 Für die zukünftige Verwendung reserviert. NULL muss sein.
 
-*mshlflags*  
+*mshlflags*<br/>
 Wenn dieser Vorgang abgeschlossen ist, Zeiger auf die CLSID zum Erstellen eines Proxys im Clientprozess verwendet werden.
 
 *pCid*
@@ -246,26 +238,26 @@ STDMETHODIMP MarshalInterface(
 
 ### <a name="parameters"></a>Parameter
 
-*pStm*  
+*pStm*<br/>
 Zeiger auf den Stream, der während des Marshalling verwendet werden.
 
-*riid*  
+*riid*<br/>
 Verweis auf den Bezeichner der Schnittstelle, die gemarshallt werden soll. Diese Schnittstelle muss von abgeleitet werden die `IUnknown` Schnittstelle.
 
-*PV*  
+*PV*<br/>
 Zeiger auf den Schnittstellenzeiger auf das zu marshallende; Wenn der Aufrufer nicht über einen Zeiger auf die gewünschte Schnittstelle verfügt, kann NULL sein.
 
-*dwDestContext*  
+*dwDestContext*<br/>
 Zielkontext, in dem die angegebene Schnittstelle zum Marshalling rückgängig gemacht werden wird.
 
 Geben Sie einen oder mehrere MSHCTX-Enumerationswerte.
 
 Rückgängigmachen des Marshallens kann in ein anderes Apartment des aktuellen Prozesses (MSHCTX_INPROC) oder in einem anderen Prozess auf dem gleichen Computer wie der aktuelle Prozess (MSHCTX_LOCAL) auftreten.
 
-*pvDestContext*  
+*pvDestContext*<br/>
 Für die zukünftige Verwendung reserviert. Muss 0 (null) sein.
 
-*mshlflags*  
+*mshlflags*<br/>
 Gibt an, ob die Daten gemarshallt werden zurück an den Prozess der übertragen werden – der Normalfall – oder in einer globalen Tabelle, in dem sie, indem mehrere Clients abgerufen werden geschrieben.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -298,7 +290,7 @@ STDMETHODIMP ReleaseMarshalData(
 
 ### <a name="parameters"></a>Parameter
 
-*pStm*  
+*pStm*<br/>
 Zeiger auf ein Stream, der enthält das Datenpaket zerstört werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -319,13 +311,13 @@ STDMETHODIMP UnmarshalInterface(
 
 ### <a name="parameters"></a>Parameter
 
-*pStm*  
+*pStm*<br/>
 Zeiger auf der Stream, aus dem der Schnittstellenzeiger auf das Marshalling rückgängig gemacht werden.
 
-*riid*  
+*riid*<br/>
 Verweis auf den Bezeichner der Schnittstelle an Marshalling rückgängig gemacht werden.
 
-*ppv*  
+*ppv*<br/>
 Wenn dieser Vorgang abgeschlossen ist, die Adresse einer Zeigervariablen, die die im angeforderten Schnittstellenzeiger empfängt *Riid*. Wenn dieser Vorgang erfolgreich ist, ist **Ppv* enthält den angeforderten Schnittstellenzeiger, der die Schnittstelle für das Marshalling rückgängig gemacht werden.
 
 ### <a name="return-value"></a>Rückgabewert

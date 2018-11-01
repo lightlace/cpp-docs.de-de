@@ -1,25 +1,15 @@
 ---
-title: ATL-Registrierung und in Analysestrukturen | Microsoft-Dokumentation
-ms.custom: ''
+title: ATL-Registrierung und in Analysestrukturen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - parse trees
 ms.assetid: 668ce2dd-a1c3-4ca0-8135-b25267cb6a85
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 08c92d86cbbfd38ed4ae852ce52e3b70735812e9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 11625ebda2e84d4a738a2d54e849e3406a5c4f70
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028089"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50510876"
 ---
 # <a name="understanding-parse-trees"></a>Einführung in Analysestrukturen
 
@@ -32,10 +22,10 @@ Sie können eine oder mehrere in analysestrukturen in Ihrem Skript Registrierung
 Dabei gilt:
 
 ```
-<root key> ::= HKEY_CLASSES_ROOT | HKEY_CURRENT_USER |  
-    HKEY_LOCAL_MACHINE | HKEY_USERS |  
-    HKEY_PERFORMANCE_DATA | HKEY_DYN_DATA |  
-    HKEY_CURRENT_CONFIG | HKCR | HKCU |  
+<root key> ::= HKEY_CLASSES_ROOT | HKEY_CURRENT_USER |
+    HKEY_LOCAL_MACHINE | HKEY_USERS |
+    HKEY_PERFORMANCE_DATA | HKEY_DYN_DATA |
+    HKEY_CURRENT_CONFIG | HKCR | HKCU |
     HKLM | HKU | HKPD | HKDD | HKCC
 <registry expression> ::= <Add Key> | <Delete Key>
 <Add Key> ::= [ForceRemove | NoRemove | val]<Key Name> [<Key Value>][{<Add Key>}]
@@ -54,13 +44,13 @@ Eine Analysestruktur kann mehrere Schlüssel und Unterschlüssel zum Hinzufügen
 
 ```
 HKEY_CLASSES_ROOT
-{  
-    'MyVeryOwnKey'  
-    {  
-        'HasASubKey'  
-        {  
-            'PrettyCool'  
-        }  
+{
+    'MyVeryOwnKey'
+    {
+        'HasASubKey'
+        {
+            'PrettyCool'
+        }
     }
 }
 ```

@@ -1,41 +1,31 @@
 ---
-title: Compilerfehler C3861 | Microsoft Docs
-ms.custom: ''
+title: Compilerfehler C3861
 ms.date: 03/23/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3861
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3861
 ms.assetid: 0a1eee30-b3db-41b1-b1e5-35949c3924d7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6dbfbb11184928331b94b7addc747ffb7e44d6d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ebfd3b0129e25cf543cac803a3b33fb074f3d70
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270263"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530805"
 ---
 # <a name="compiler-error-c3861"></a>Compilerfehler C3861
 
-> "*Bezeichner*': Bezeichner wurde nicht gefunden.
+> "*Bezeichner*": Bezeichner wurde nicht gefunden.
 
 Der Compiler konnte einen Verweis sogar mit der Suche „argument-dependent“ zu einem Bezeichner nicht auflösen.
 
 ## <a name="remarks"></a>Hinweise
 
-Um diesen Fehler zu beheben, vergleichen Sie die Verwendung von *Bezeichner* auf die identifziererdeklaration hinsichtlich Groß-/Kleinschreibung und Rechtschreibung. Überprüfen Sie, ob [Bereich Auflösung Operatoren](../../cpp/scope-resolution-operator.md) und Namespace [using-Direktiven](../../cpp/namespaces-cpp.md#using_directives) ordnungsgemäß verwendet werden. Wenn die Bezeichner in einer Headerdatei deklariert ist, stellen Sie sicher, dass der Header einbezogen werden, bevor der Bezeichner referenziert wird. Wenn der Bezeichner extern sichtbar sein sollen, stellen Sie sicher, dass in jeder Quelldatei deklariert wird, die verwendet werden. Überprüfen Sie auch, dass der Bezeichner Deklaration oder Definition nicht ausgeschlossen wird [bedingten Kompilierungsdirektiven](../../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).
+Um diesen Fehler zu beheben, vergleichen Sie die Verwendung von *Bezeichner* auf die identifziererdeklaration hinsichtlich Groß-/Kleinschreibung und Rechtschreibung. Überprüfen Sie, ob [Bereich Auflösung Operatoren](../../cpp/scope-resolution-operator.md) und Namespace [using-Direktiven](../../cpp/namespaces-cpp.md#using_directives) ordnungsgemäß verwendet werden. Wenn der Bezeichner in einer Headerdatei deklariert ist, stellen Sie sicher, dass der Header einbezogen werden, bevor der Bezeichner referenziert wird. Wenn der Bezeichner als extern sichtbar sein soll, stellen Sie sicher, dass sie in jeder Quelldatei deklariert ist, der verwendet wird. Überprüfen Sie auch, dass der Bezeichner-Deklaration oder Definition nicht ausgeschlossen ist [Bedingte Kompilierungsdirektiven](../../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).
 
-Änderungen an veraltete Funktionen aus der C-Laufzeitbibliothek in Visual Studio 2015 zu entfernen, können dazu führen, dass C3861 aus. Um diesen Fehler zu beheben, entfernen Sie Verweise auf diese Funktionen oder Ersetzen Sie sie durch ihre sicheren alternativen, sofern vorhanden. Weitere Informationen finden Sie unter [veraltete Versionen](../../c-runtime-library/obsolete-functions.md).
+Änderungen an veraltete Funktionen aus der C-Laufzeitbibliothek in Visual Studio 2015 zu entfernen, können C3861 führen. Um diesen Fehler zu beheben, entfernen Sie Verweise auf diese Funktionen, oder Ersetzen Sie sie durch ihre sichere Alternativen, sofern vorhanden. Weitere Informationen finden Sie unter [veraltete Funktionen](../../c-runtime-library/obsolete-functions.md).
 
-Wenn es sich bei Fehler C3861 aus älteren Versionen des Compilers nach Projektmigration angezeigt wird, müssen Sie möglicherweise Probleme im Zusammenhang mit unterstützten Versionen von Windows. Visual C++ unterstützt nicht mehr die Zielversionen Windows 95, Windows 98, Windows ME, Windows NT oder Windows 2000. Wenn das **WINVER** - oder **_WIN32_WINNT** -Makro einer dieser Versionen von Windows zugewiesen ist, müssen Sie die Makros ändern. Weitere Informationen finden Sie unter [Ändern von WINVER und _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
+Wenn der Fehler C3861 aus älteren Versionen des Compilers nach der Projektmigration angezeigt wird, Sie möglicherweise Probleme im Zusammenhang mit unterstützten Windows-Versionen. Visual C++ unterstützt nicht mehr die Zielversionen Windows 95, Windows 98, Windows ME, Windows NT oder Windows 2000. Wenn das **WINVER** - oder **_WIN32_WINNT** -Makro einer dieser Versionen von Windows zugewiesen ist, müssen Sie die Makros ändern. Weitere Informationen finden Sie unter [Ändern von WINVER und _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
 
 ## <a name="examples"></a>Beispiele
 
@@ -54,7 +44,7 @@ int main() {
 
 ### <a name="identifier-not-in-scope"></a>Der Bezeichner nicht im Bereich
 
-Im folgende Beispiel wird C3861 generiert, da ein Bezeichner nur in den Dateibereich seiner Definition sichtbar, ist es sei denn, sie in anderen Quelldateien deklariert ist, die sie verwenden.
+Im folgende Beispiel wird C3861 generiert: ein Bezeichner ist nur im Dateibereich seiner Definition, sichtbar, es sei denn, sie in anderen Quelldateien deklariert ist, die sie verwenden.
 
 ```cpp
 // C3861_a1.cpp
@@ -96,7 +86,7 @@ int main() {
 
 ### <a name="obsolete-function-called"></a>Veraltete Funktion wird aufgerufen
 
-Veraltete Versionen wurden aus der CRT-Bibliothek entfernt.
+Veraltete Funktionen wurden aus der CRT-Bibliothek entfernt.
 
 ```cpp
 // C3861_c.cpp
@@ -111,7 +101,7 @@ int main() {
 
 ### <a name="adl-and-friend-functions"></a>ADL und Friend-Funktionen
 
-Im folgende Beispiel wird C3767 generiert, da der Compiler nicht Argumentabhängige Suche für `FriendFunc`:
+Das folgende Beispiel generiert C3767, da der Compiler nicht das Argumentabhängige Lookup für verwendet `FriendFunc`:
 
 ```cpp
 namespace N {
@@ -129,7 +119,7 @@ int main() {
 }
 ```
 
-Um den Fehler zu beheben, die Friend-Funktion im Klassenbereich deklarieren und im Namespacebereich definieren:
+Um den Fehler zu beheben, deklarieren Sie die "Friend" in den Gültigkeitsbereich der Klasse, und im Namespacebereich definieren:
 
 ```cpp
 class MyClass {

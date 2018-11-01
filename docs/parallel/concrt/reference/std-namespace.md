@@ -1,48 +1,37 @@
 ---
-title: Std Namespace | Microsoft Docs
-ms.custom: ''
+title: std-Namespace
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - ppltasks/std
-dev_langs:
-- C++
 ms.assetid: b3a41cfa-0b64-485d-9e79-23407dca07ba
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 910b2d73d04f44282ed0106092844307aed3ba67
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5bfec287aac1dbfc8b068b61414f0bfcf8edc28d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695706"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566477"
 ---
 # <a name="std-namespace"></a>std-Namespace
-## <a name="syntax"></a>Syntax  
-  
+
+## <a name="syntax"></a>Syntax
+
 ```
 namespace std;
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="functions"></a>Funktionen  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[make_exception_ptr-Funktion](make-exception-ptr-function.md)||  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** ppltasks.h  
-  
-## <a name="see-also"></a>Siehe auch  
- [Referenz](reference-concurrency-runtime.md)
+```
 
+## <a name="members"></a>Member
 
+### <a name="functions"></a>Funktionen
 
+|Name|Beschreibung|
+|----------|-----------------|
+|[make_exception_ptr-Funktion](make-exception-ptr-function.md)||
 
+## <a name="requirements"></a>Anforderungen
+
+**Header:** ppltasks.h
+
+## <a name="see-also"></a>Siehe auch
+
+[Verweis](reference-concurrency-runtime.md)
 

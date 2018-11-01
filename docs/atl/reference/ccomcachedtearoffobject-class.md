@@ -1,10 +1,6 @@
 ---
-title: CComCachedTearOffObject-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: CComCachedTearOffObject-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComCachedTearOffObject
 - ATLCOM/ATL::CComCachedTearOffObject
@@ -15,22 +11,16 @@ f1_keywords:
 - ATLCOM/ATL::CComCachedTearOffObject::QueryInterface
 - ATLCOM/ATL::CComCachedTearOffObject::Release
 - ATLCOM/ATL::CComCachedTearOffObject::m_contained
-dev_langs:
-- C++
 helpviewer_keywords:
 - cache, ATL cached tear-off objects
 - CComCachedTearOffObject class
 ms.assetid: ae19507d-a1de-4dbc-a988-da9f75a50c95
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 40dddf2bb1619bd896ecf50008f80fca968ef8c9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 009bc1e20693a9e45490c58ea29ff9d28b6aa6ea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075708"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50582726"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject-Klasse
 
@@ -199,7 +189,7 @@ Ein standard HRESULT-Wert.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn die angeforderte Schnittstelle wird `IUnknown`, gibt einen Zeiger auf die `CComCachedTearOffObject`des eigenen `IUnknown` und inkrementiert den Verweiszähler. Andernfalls, Abfragen für die Schnittstelle abtrennbare-Klasse unter Verwendung der [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) Methode geerbt von `CComObjectRootEx`.  
+Wenn die angeforderte Schnittstelle wird `IUnknown`, gibt einen Zeiger auf die `CComCachedTearOffObject`des eigenen `IUnknown` und inkrementiert den Verweiszähler. Andernfalls, Abfragen für die Schnittstelle abtrennbare-Klasse unter Verwendung der [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) Methode geerbt von `CComObjectRootEx`.
 
 ##  <a name="release"></a>  CComCachedTearOffObject::Release
 

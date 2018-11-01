@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b57e2c4e6631683afdabec983f155941b8cd2da
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 659b76a640a0dfaee75179f135fee9d1eeb5ba02
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107461"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058335"
 ---
 # <a name="storage-classes-c"></a>Speicherklassen (C++)
 
@@ -35,7 +35,6 @@ Ein *Speicherklasse* im Kontext von C++-Variablendeklarationen ist ein Typbezeic
 1. Die [änderbare](../cpp/mutable-data-members-cpp.md) Schlüsselwort als Speicherklassenspezifizierer angesehen werden kann. Es ist jedoch nur in der Memberliste einer Klassendefinition verfügbar.
 
 1. **Visual C++ 2010 und höher:** der **automatisch** Schlüsselwort ist nicht mehr eine C++-Speicherklassenspezifizierer, und die **registrieren** Schlüsselwort ist veraltet. **Visual Studio 2017 Version 15.7 und höher:** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): die **registrieren** Schlüsselwort aus der Programmiersprache C++ entfernt.
-
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
@@ -220,13 +219,13 @@ Punkte zu beachten die `thread_local` Bezeichner:
 
 - Dynamisch initialisierte Thread-lokalen Variablen in DLLs können für alle aufrufenden Threads nicht ordnungsgemäß initialisiert werden. Weitere Informationen finden Sie unter [Thread](thread.md).
 
--  Die `thread_local` Bezeichner kann mit kombiniert werden **statische** oder **"extern"**.
+- Die `thread_local` Bezeichner kann mit kombiniert werden **statische** oder **"extern"**.
 
--  Sie können anwenden `thread_local` nur auf Datendeklarationen und-Definitionen; `thread_local` kann nicht für Funktionsdeklarationen oder-Definitionen verwendet werden.
+- Sie können anwenden `thread_local` nur auf Datendeklarationen und-Definitionen; `thread_local` kann nicht für Funktionsdeklarationen oder-Definitionen verwendet werden.
 
--  Sie können `thread_local` nur für Datenelemente mit statischer Speicherdauer angeben. Hierzu zählen globale Datenobjekte (sowohl **statische** und **"extern"**), lokale statische Objekte sowie statische Datenmember von Klassen. Jede lokale Variable deklariert `thread_local` ist implizit statisch, wenn keine anderen Speicherklasse angegeben wird; das heißt, im Blockbereich `thread_local` entspricht `thread_local static`.
+- Sie können `thread_local` nur für Datenelemente mit statischer Speicherdauer angeben. Hierzu zählen globale Datenobjekte (sowohl **statische** und **"extern"**), lokale statische Objekte sowie statische Datenmember von Klassen. Jede lokale Variable deklariert `thread_local` ist implizit statisch, wenn keine anderen Speicherklasse angegeben wird; das heißt, im Blockbereich `thread_local` entspricht `thread_local static`.
 
--  Sie müssen das `thread_local` für die Deklaration und Definition eines lokalen Threadobjekts angeben, egal ob die Deklaration und Definition in der gleichen Datei oder in separaten Dateien auftreten.
+- Sie müssen das `thread_local` für die Deklaration und Definition eines threadlokalen Objekts angeben, egal ob die Deklaration und Definition in der gleichen Datei oder in separaten Dateien auftreten.
 
 Auf Windows `thread_local` ist funktionell gleichwertig mit [__declspec(thread)](../cpp/thread.md) mit dem Unterschied, dass **__declspec(thread)** kann auf eine Typdefinition angewendet werden und in C-Code gültig ist. Verwenden Sie nach Möglichkeit `thread_local`, da dies ein Teil des C++-Standards ist und daher besser zu potieren ist.
 
@@ -315,11 +314,11 @@ In diesem Beispiel wird veranschaulicht, wie und wann die Objekte `I1`, `I2`, un
 
 Es gibt einige Punkte zu beachten über das Programm:
 
-- Erstens werden `I1` und `I2` automatisch beschädigt, wenn die Ablaufsteuerung den Block beendet, in dem sie definiert sind.
+- Erstens werden `I1` und `I2` automatisch zerstört, wenn die Ablaufsteuerung den Block beendet, in dem sie definiert sind.
 
 - Zweitens ist es in C++ nicht notwendig, Objekte oder Variablen am Anfang eines Blocks zu deklarieren. Außerdem werden diese Objekte nur initialisiert, wenn die Ablaufsteuerung deren Definitionen erreicht. (`I2` und `I3` sind Beispiele solcher Definitionen.) Die Ausgabe zeigt eindeutig, wann sie initialisiert werden.
 
-- Des Weiteren behalten statische lokale Variablen wie `I3` ihre Werte für die Dauer des Programms bei, werden jedoch beschädigt, sobald das Programm beendet wird.
+- Des Weiteren behalten statische lokale Variablen wie `I3` ihre Werte für die Dauer des Programms bei, werden jedoch zerstört, sobald das Programm beendet wird.
 
 ## <a name="see-also"></a>Siehe auch
 

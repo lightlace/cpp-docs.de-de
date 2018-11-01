@@ -1,10 +1,6 @@
 ---
-title: vscanf_s, vwscanf_s | Microsoft-Dokumentation
-ms.custom: ''
+title: vscanf_s, vwscanf_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - vscanf_s
 - vwscanf_s
@@ -24,19 +20,13 @@ f1_keywords:
 - _vtscanf_s
 - vscanf_s
 - vwscanf_s
-dev_langs:
-- C++
 ms.assetid: 23a1c383-5b01-4887-93ce-534a1e38ed93
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c32d1e50f554c32917f9fa0450abba15463386ab
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 90100a5fbc03371a11f437acc12562d9ccf957f9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415646"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519469"
 ---
 # <a name="vscanfs-vwscanfs"></a>vscanf_s, vwscanf_s
 
@@ -65,22 +55,22 @@ Variablenargumentenliste.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Anzahl von Feldern zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Der Rückgabewert ist **EOF** für Fehler, oder wenn die EOF-Zeichen oder das Ende der Zeichenfolge Zeichen, beim ersten Versuch erreicht ist, ein Zeichen zu lesen. Wenn *Format* ist ein **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Vscanf_s** und **Vwscanf_s** zurückgeben **EOF** und **Errno** auf **EINVAL**.
+Gibt die Anzahl von Feldern zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Der Rückgabewert ist **EOF** ein Fehler, oder wenn das EOF Zeichen oder das Ende der Zeichenfolge Zeichen, beim ersten Versuch erreicht ist, ein Zeichen zu lesen. Wenn *Format* ist eine **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Vscanf_s** und **Vwscanf_s** zurückgeben **EOF** und **Errno** zu **EINVAL**.
 
 Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr (errno, _doserrno, _sys_errlist und _sys_nerr)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Vscanf_s** -Funktion liest Daten aus dem Standardeingabestream **Stdin** und schreibt die Daten in die Speicherorte, die sich durch die *Arglist* Argumentliste. Jedes Argument in der Liste muss ein Zeiger auf eine Variable eines Typs, der einem Typspezifizierer in entspricht *Format*. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
+Die **Vscanf_s** -Funktion liest Daten aus dem Standardeingabestream **Stdin** und schreibt die Daten in die Speicherorte, die von erhalten die *Arglist* Argumentliste. Jedes Argument in der Liste muss ein Zeiger auf eine Variable eines Typs, der einem Typspezifizierer in entspricht *Format*. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
 
-**Vwscanf_s** ist eine Breitzeichen-Version von **Vscanf_s**; das *Format* Argument **Vwscanf_s** ist eine Breitzeichen-Zeichenfolge. **Vwscanf_s** und **Vscanf_s** Verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Vscanf_s** Eingabe aus einem Unicode-Stream nicht unterstützt.
+**Vwscanf_s** ist eine Breitzeichen-Version von **Vscanf_s**; die *Format* Argument **Vwscanf_s** ist eine Breitzeichen-Zeichenfolge. **Vwscanf_s** und **Vscanf_s** Verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Vscanf_s** unterstützt keine Eingabe aus einem unicodestream.
 
-Im Gegensatz zu **Vscanf** und **Vwscanf**, **Vscanf_s** und **Vwscanf_s** erfordern die Puffergröße für alle vom Typ Eingabeparameter angegeben werden. **c**, **C**, **s**, **S**, oder einen Zeichenfolgentyp Steuerelement Mengen, die in Klammern stehen **[]**. Die Puffergröße in Zeichen wird als zusätzlicher Parameter direkt nach dem Zeiger auf den Puffer oder die Variable übergeben. Die Größe des Puffers in Zeichen für eine **Wchar_t** Zeichenfolge ist nicht identisch mit der Größe in Bytes.
+Im Gegensatz zu **Vscanf** und **Vwscanf**, **Vscanf_s** und **Vwscanf_s** benötigen Sie die Größe des Puffers angegeben werden, für alle des Typs Eingabeparameter **c**, **C**, **s**, **S**, oder, die in eingeschlossen sind **[]**. Die Puffergröße in Zeichen wird als zusätzlicher Parameter direkt nach dem Zeiger auf den Puffer oder die Variable übergeben. Die Größe des Puffers in Zeichen für eine **"wchar_t"** Zeichenfolge ist nicht identisch mit der Größe in Byte.
 
 Die Puffergröße enthält das abschließende NULL-Zeichen. Sie können ein Feld für die Breitenangabe verwenden, um sicherzustellen, dass das eingelesene Token in den Puffer passt. Wenn kein Feld für die Breiteangabe verwendet wird und das eingelesen Token zu groß für den Puffer ist, wird nichts in diesen Puffer geschrieben.
 
 > [!NOTE]
-> Die *Größe* Parameter ist vom Typ **ohne Vorzeichen**, nicht **Size_t**.
+> Die *Größe* Parameter ist vom Typ **ohne Vorzeichen**, nicht **"size_t"**.
 
 Weitere Informationen finden Sie unter [scanf Width Specification (scanf-Breitenangabe)](../../c-runtime-library/scanf-width-specification.md).
 
@@ -94,12 +84,12 @@ Weitere Informationen finden Sie unter [Format Specification Fields: scanf and w
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**vscanf_s**|\<stdio.h>|
 |**wscanf_s**|\<stdio.h> oder \<wchar.h>|
 
-Die Konsole wird in apps der universellen Windows-Plattform (UWP) nicht unterstützt. Standardstream Handles, die mit der Konsole verknüpften sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in uwp-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die Konsole wird in apps für universelle Windows-Plattform (UWP) nicht unterstützt. Standardstreamhandles, die mit der Konsole verknüpft sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in UWP-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 

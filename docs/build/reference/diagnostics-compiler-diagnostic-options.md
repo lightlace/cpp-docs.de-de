@@ -1,30 +1,20 @@
 ---
-title: -Diagnose (Diagnose-Compileroptionen) | Microsoft-Dokumentation
-ms.custom: ''
+title: / Diagnostics (Diagnose-Compileroptionen)
 ms.date: 11/11/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /diagnostics
 - VC.Project.VCCLCompilerTool.DiagnosticsFormat
-dev_langs:
-- C++
 helpviewer_keywords:
 - /diagnostics compiler diagnostic options [C++]
 - -diagnostics compiler diagnostic options [C++]
 - diagnostics compiler diagnostic options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 97b5e3ef2e5c14ae93d4fcc3b016f4dbc955edbd
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d9b485f749f4d4d9fce4e07d9bcd6d6de564fb58
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709162"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531794"
 ---
 # <a name="diagnostics-compiler-diagnostic-options"></a>/ Diagnostics (Diagnose-Compileroptionen)
 
@@ -56,9 +46,9 @@ Die **/Diagnostics** Option ist ab Visual Studio 2017 verfügbar.
 
 1. Öffnen des Projekts **Eigenschaftenseiten** Dialogfeld.
 
-2. Unter **Konfigurationseigenschaften**, erweitern Sie die **C/C++-** Ordner, und wählen Sie die **allgemeine** Eigenschaftenseite.
+1. Unter **Konfigurationseigenschaften**, erweitern Sie die **C/C++-** Ordner, und wählen Sie die **allgemeine** Eigenschaftenseite.
 
-3. Verwenden Sie das Dropdown-Steuerelement in der **Diagnoseformat** Feld Wählen Sie eine Diagnose Anzeigeoption. Wählen Sie **OK** oder **übernehmen** zum Speichern der Änderungen.
+1. Verwenden Sie das Dropdown-Steuerelement in der **Diagnoseformat** Feld Wählen Sie eine Diagnose Anzeigeoption. Wählen Sie **OK** oder **übernehmen** zum Speichern der Änderungen.
 
 ## <a name="see-also"></a>Siehe auch
 

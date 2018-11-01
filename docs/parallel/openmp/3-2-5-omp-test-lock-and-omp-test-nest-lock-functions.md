@@ -1,35 +1,26 @@
 ---
-title: 3.2.5 Omp_test_lock and Omp_test_nest_lock-Funktionen | Microsoft Docs
-ms.custom: ''
+title: 3.2.5 omp_test_lock and omp_test_nest_lock-Funktionen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 36818945-c22c-4c24-b754-4e73eba6f3f8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5023f0b089d76e92be886f4917905f57dda7a018
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: e8e03699f807f23f139075560592d8846467f2c5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686226"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512749"
 ---
 # <a name="325-omptestlock-and-omptestnestlock-functions"></a>3.2.5 omp_test_lock and omp_test_nest_lock-Funktionen
-Diese Funktionen versuchen, eine Sperre festzulegen, blockieren aber nicht die Ausführung des Threads. Es wird folgendes Format verwendet:  
-  
-```  
-#include <omp.h>  
-int omp_test_lock(omp_lock_t *lock);  
-int omp_test_nest_lock(omp_nest_lock_t *lock);  
-```  
-  
- Das Argument muss auf ein initialisiertes Sperren der Variable verweisen. Diese Funktionen versuchen, eine Sperre auf die gleiche Weise wie `omp_set_lock` und `omp_set_nest_lock`, außer dass sie nicht die Ausführung des Threads blockiert werden.  
-  
- Für eine einfache Sperre der `omp_test_lock` Funktion gibt einen Wert ungleich NULL zurück, wenn die Sperre wurde erfolgreich festgelegt ist; andernfalls wird 0 (null) zurückgegeben.  
-  
- Für eine omp_nest_lock_t Sperre der `omp_test_nest_lock` Funktion gibt die Anzahl die neue schachteln zurück, wenn die Sperre wurde erfolgreich festgelegt ist; andernfalls wird 0 (null) zurückgegeben.
+
+Diese Funktionen versuchen, eine Sperre festzulegen, blockieren aber nicht die Ausführung des Threads. Es wird folgendes Format verwendet:
+
+```
+#include <omp.h>
+int omp_test_lock(omp_lock_t *lock);
+int omp_test_nest_lock(omp_nest_lock_t *lock);
+```
+
+Das Argument muss auf ein initialisiertes Sperren der Variable verweisen. Diese Funktionen versuchen, eine Sperre auf die gleiche Weise wie festgelegt `omp_set_lock` und `omp_set_nest_lock`, außer dass sie nicht die Ausführung des Threads blockiert werden.
+
+Für eine einfache Sperre die `omp_test_lock` Funktion gibt einen Wert ungleich NULL zurück, wenn die Sperre erfolgreich festgelegt wurde; andernfalls wird 0 (null) zurückgegeben.
+
+Für eine omp_nest_lock_t-Sperre die `omp_test_nest_lock` Funktion gibt die Anzahl die neue schachteln zurück, wenn die Sperre erfolgreich festgelegt wurde; andernfalls wird 0 (null) zurückgegeben.

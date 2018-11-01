@@ -1,10 +1,6 @@
 ---
-title: isgraph, iswgraph, _isgraph_l, _iswgraph_l | Microsoft-Dokumentation
-ms.custom: ''
+title: isgraph, iswgraph, _isgraph_l, _iswgraph_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - isgraph
 - iswgraph
@@ -31,8 +27,6 @@ f1_keywords:
 - _istgraph_l
 - _istgraph
 - iswgraph
-dev_langs:
-- C++
 helpviewer_keywords:
 - isgraph function
 - _istgraph_l function
@@ -43,16 +37,12 @@ helpviewer_keywords:
 - _istgraph function
 - _ismbcgraph_l function
 ms.assetid: 531a5f34-4302-4d0a-8a4f-b7ea150ad941
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3b60e022471bdfa7cbbddb6b5263f757438572a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: af3fae11536a869c0c3e3ebae285ebbaca5ea907
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401271"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664801"
 ---
 # <a name="isgraph-iswgraph-isgraphl-iswgraphl"></a>isgraph, iswgraph, _isgraph_l, _iswgraph_l
 
@@ -84,11 +74,11 @@ Zu testende ganze Zahl.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Routinen gibt ungleich NULL, wenn *c* eine bestimmte Darstellung eines druckbaren Zeichens ein Leerzeichen ist. **Isgraph** gibt einen Wert ungleich NULL zurück, wenn *c* ein anderes druckbares Zeichen als ein Leerzeichen. **Iswgraph** gibt einen Wert ungleich NULL zurück, wenn *c* ein anderes druckbares Breitzeichen als ein Leerzeichen ist. Jede dieser Routinen gibt 0 zurück, wenn *c* die testbedingung nicht erfüllt.
+Jede dieser Routinen gibt ungleich NULL, wenn *c* eine bestimmte Darstellung eines druckbaren Zeichens ein Leerzeichen ist. **Isgraph** gibt einen Wert ungleich NULL zurück, wenn *c* ein druckbares Zeichen als ein Leerzeichen ist. **Iswgraph** gibt einen Wert ungleich NULL zurück, wenn *c* ein anderes druckbares Breitzeichen als ein Leerzeichen ist. Jede dieser Routinen gibt 0 zurück, wenn *c* die testbedingung nicht erfüllt.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix verwenden das das übergebene Gebietsschema anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die Versionen dieser Funktionen, die **_l** -Suffix verwenden das das übergebene Gebietsschema anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängige Verhalten. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Das Verhalten des **Isgraph** und **_isgraph_l** ist undefiniert, wenn *c* nicht EOF ist oder im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und *c* ist keine dieser Werte, lösen die Funktionen eine Assertion.
+Das Verhalten der **Isgraph** und **_isgraph_l** ist undefiniert, wenn *c* nicht EOF-Markierung ist oder im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und *c* ist keine dieser Werte, lösen die Funktionen eine Assertion.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -99,7 +89,7 @@ Das Verhalten des **Isgraph** und **_isgraph_l** ist undefiniert, wenn *c* nicht
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**isgraph**|\<ctype.h>|
 |**iswgraph**|\<ctype.h> oder \<wchar.h>|

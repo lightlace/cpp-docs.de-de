@@ -1,27 +1,17 @@
 ---
-title: Linkertoolfehler Lnk2005 | Microsoft-Dokumentation
-ms.custom: ''
+title: Linkertoolfehler LNK2005
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK2005
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK2005
 ms.assetid: d9587adc-68be-425c-8a30-15dbc86717a4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a800fb8065fd3c613a2bc05975c15decb0145891
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8b4f75b90254c702ecb2afb65108278a59df69ed
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028310"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667284"
 ---
 # <a name="linker-tools-error-lnk2005"></a>Linkertoolfehler LNK2005
 
@@ -121,14 +111,3 @@ Hier sind einige häufige Ursachen für diesen Fehler.
     ```
 
    Um dieses Problem zu beheben, fügen [Multiple](../../build/reference/force-force-file-output.md) zu den Optionen des Linkers über die Befehlszeile, und stellen Sie sicher, dass uuid.lib die zuerst referenzierte Bibliothek ist.
-
-## <a name="additional-information"></a>Zusätzliche Informationen
-
-Wenn Sie eine ältere Version des Toolsets verwenden, finden Sie in diesen Knowledge Base-Artikeln Weitere Informationen zu spezifischen Ursachen für diesen Fehler:
-
-- [Ein LNK2005-Fehler tritt auf, wenn die CRT-Bibliothek und MFC-Bibliotheken, in der falschen Reihenfolge in Visual C++ verknüpft sind](https://support.microsoft.com/kb/148652)
-
-- [FIX: Global überladener Delete-Operator verursacht LNK2005](https://support.microsoft.com/kb/140440)
-
-- [Sie erhalten LNK2005-Fehler beim Kompilieren eines ATL-ausführbare Dateien (.exe)-Projekts in Visual C++](https://support.microsoft.com/kb/184235).
-

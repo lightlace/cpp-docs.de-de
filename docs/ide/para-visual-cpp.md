@@ -18,31 +18,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ebf50e4672ee2a3398f6c484c42f8e36f231169
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c36388e34b2f1e3cdc4d5664c014463c727e8369
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325116"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385091"
 ---
 # <a name="ltparagt-visual-c"></a>&lt;para&gt; (Visual C++)
-Das Tag \<para> ist für die Verwendung innerhalb eines Tags wie [\<summary>](../ide/summary-visual-cpp.md), [\<remarks>](../ide/remarks-visual-cpp.md) oder [\<returns>](../ide/returns-visual-cpp.md) gedacht und ermöglicht es Ihnen, den Text zu strukturieren.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-<para>content</para>  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `content`  
- Der Text des Absatzes  
-  
-## <a name="remarks"></a>Hinweise  
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
-  
-## <a name="example"></a>Beispiel  
- Unter [\<summary>](../ide/summary-visual-cpp.md) finden Sie ein Beispiel für die Verwendung von \<para>.  
-  
-## <a name="see-also"></a>Siehe auch  
- [XML-Dokumentation](../ide/xml-documentation-visual-cpp.md)
+
+Das Tag \<para> ist für die Verwendung innerhalb eines Tags wie [\<summary>](../ide/summary-visual-cpp.md), [\<remarks>](../ide/remarks-visual-cpp.md) oder [\<returns>](../ide/returns-visual-cpp.md) gedacht und ermöglicht es Ihnen, den Text zu strukturieren.
+
+## <a name="syntax"></a>Syntax
+
+```
+<para>content</para>
+```
+
+#### <a name="parameters"></a>Parameter
+
+*content*<br/>
+Der Text des Absatzes
+
+## <a name="remarks"></a>Hinweise
+
+Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.
+
+## <a name="example"></a>Beispiel
+
+Unter [\<summary>](../ide/summary-visual-cpp.md) finden Sie ein Beispiel für die Verwendung von \<para>.
+
+## <a name="see-also"></a>Siehe auch
+
+[XML-Dokumentation](../ide/xml-documentation-visual-cpp.md)

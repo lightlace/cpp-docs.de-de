@@ -1,29 +1,18 @@
 ---
-title: Konvertieren von Bildern in einem Format zu einem anderen (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
-ms.custom: ''
+title: Konvertieren von Bildern in andere Formate (Bildbearbeitung für Symbole)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - images [C++], stand-alone editing
 - Image editor [C++], converting image formats
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 0409c2bd-3bd8-4d72-9c71-c683b6cf51be
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6ef3a2ce99309781ecbfd0c406fe8e0f6f7e0613
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b459e3c7d5bfd29b2d130933ea2f23c4ecd6616b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592117"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50498331"
 ---
 # <a name="converting-an-image-from-one-format-to-another-image-editor-for-icons"></a>Konvertieren von Bildern in andere Formate (Bildbearbeitung für Symbole)
 
@@ -47,5 +36,5 @@ Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
-[Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)

@@ -1,7 +1,7 @@
 ---
 title: Rowsetobjekt-Schnittstellen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -19,46 +19,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 87b8b6893c8fdd04374919ceff1d28a61bc315e5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dc9ec134321b2acf9994ad7dfb43c5b14bf0e75f
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024663"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216447"
 ---
 # <a name="rowset-object-interfaces"></a>Rowsetobjekt-Schnittstellen
 
-Die folgende Tabelle zeigt die erforderlichen und optionalen Schnittstellen, die durch OLE DB für ein Rowset-Objekt definiert.  
-  
-|Interface|Erforderlich?|Vom OLE DB-Vorlagen implementiert?|  
-|---------------|---------------|--------------------------------------|  
-|[IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\))|Erforderlich|Ja|  
-|[IColumnsInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\))|Erforderlich|Ja|  
-|[IConvertType](/previous-versions/windows/desktop/ms715926\(v=vs.85\))|Erforderlich|Ja|  
-|[IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\))|Erforderlich|Ja|  
-|[IRowsetInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\))|Erforderlich|Ja|  
-|[IChapteredRowset](/previous-versions/windows/desktop/ms718180\(v=vs.85\))|Optional|Nein|  
-|[IColumnsInfo2](/previous-versions/windows/desktop/ms712953\(v=vs.85\))|Optional|Nein|  
-|[IColumnsRowset](/previous-versions/windows/desktop/ms722657\(v=vs.85\))|Optional|Nein|  
-|[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Optional|Ja (per ATL)|  
-|[IDBAsynchStatus](/previous-versions/windows/desktop/ms709832\(v=vs.85\))|Optional|Nein|  
-|[IGetRow](/previous-versions/windows/desktop/ms718047\(v=vs.85\))|Optional|Nein|  
-|[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))|Optional|Ja|  
-|[IRowsetChapterMember](/previous-versions/windows/desktop/ms725430\(v=vs.85\))|Optional|Nein|  
-|[IRowsetCurrentIndex](/previous-versions/windows/desktop/ms709700\(v=vs.85\))|Optional|Nein|  
-|[IRowsetFind](/previous-versions/windows/desktop/ms724221\(v=vs.85\))|Optional|Nein|  
-|[IRowsetIdentity](/previous-versions/windows/desktop/ms715913\(v=vs.85\))|Optional (jedoch erforderlich, für den Anbieter der Ebene 0)|Ja|  
-|[IRowsetIndex](/previous-versions/windows/desktop/ms719604\(v=vs.85\))|Optional|Nein|  
-|[IRowsetLocate](/previous-versions/windows/desktop/ms721190\(v=vs.85\))|Optional|Ja|  
-|[IRowsetRefresh](/previous-versions/windows/desktop/ms714892\(v=vs.85\))|Optional|Nein|  
-|[IRowsetScroll](/previous-versions/windows/desktop/ms712984\(v=vs.85\))|Optional|Nein|  
-|[IRowsetUpdate](/previous-versions/windows/desktop/ms714401\(v=vs.85\))|Optional|Ja|  
-|[IRowsetView](/previous-versions/windows/desktop/ms709755\(v=vs.85\))|Optional|Nein|  
-|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816\(v=vs.85\))|Optional|Ja|  
-|[IRowsetBookmark](/previous-versions/windows/desktop/ms714246\(v=vs.85\))|Optional|Nein|  
-  
-Vom Assistenten generierte Rowset-Objekt implementiert `IAccessor`, `IRowset`, und `IRowsetInfo` durch Vererbung. Die `IAccessorImpl` bindet beide Ausgabespalten. Die `IRowset` Schnittstelle kümmert sich um Abrufvorgänge Zeilen und Daten. Die `IRowsetInfo` Schnittstelle behandelt die Rowseteigenschaften.  
-  
-## <a name="see-also"></a>Siehe auch  
+Die folgende Tabelle zeigt die erforderlichen und optionalen Schnittstellen, die durch OLE DB für ein Rowset-Objekt definiert.
 
-[Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)
+|Interface|Erforderlich?|Vom OLE DB-Vorlagen implementiert?|
+|---------------|---------------|--------------------------------------|
+|[IAccessor](/previous-versions/windows/desktop/ms719672)|Erforderlich|Ja|
+|[IColumnsInfo](/previous-versions/windows/desktop/ms724541)|Erforderlich|Ja|
+|[IConvertType](/previous-versions/windows/desktop/ms715926)|Erforderlich|Ja|
+|[IRowset](/previous-versions/windows/desktop/ms720986)|Erforderlich|Ja|
+|[IRowsetInfo](/previous-versions/windows/desktop/ms724541)|Erforderlich|Ja|
+|[IChapteredRowset](/previous-versions/windows/desktop/ms718180)|Optional|Nein|
+|[IColumnsInfo2](/previous-versions/windows/desktop/ms712953)|Optional|Nein|
+|[IColumnsRowset](/previous-versions/windows/desktop/ms722657)|Optional|Nein|
+|[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Optional|Ja (per ATL)|
+|[IDBAsynchStatus](/previous-versions/windows/desktop/ms709832)|Optional|Nein|
+|[IGetRow](/previous-versions/windows/desktop/ms718047)|Optional|Nein|
+|[IRowsetChange](/previous-versions/windows/desktop/ms715790)|Optional|Ja|
+|[IRowsetChapterMember](/previous-versions/windows/desktop/ms725430)|Optional|Nein|
+|[IRowsetCurrentIndex](/previous-versions/windows/desktop/ms709700)|Optional|Nein|
+|[IRowsetFind](/previous-versions/windows/desktop/ms724221)|Optional|Nein|
+|[IRowsetIdentity](/previous-versions/windows/desktop/ms715913)|Optional (jedoch erforderlich, für den Anbieter der Ebene 0)|Ja|
+|[IRowsetIndex](/previous-versions/windows/desktop/ms719604)|Optional|Nein|
+|[IRowsetLocate](/previous-versions/windows/desktop/ms721190)|Optional|Ja|
+|[IRowsetRefresh](/previous-versions/windows/desktop/ms714892)|Optional|Nein|
+|[IRowsetScroll](/previous-versions/windows/desktop/ms712984)|Optional|Nein|
+|[IRowsetUpdate](/previous-versions/windows/desktop/ms714401)|Optional|Ja|
+|[IRowsetView](/previous-versions/windows/desktop/ms709755)|Optional|Nein|
+|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816)|Optional|Ja|
+|[IRowsetBookmark](/previous-versions/windows/desktop/ms714246)|Optional|Nein|
+
+Vom Assistenten generierte Rowset-Objekt implementiert `IAccessor`, `IRowset`, und `IRowsetInfo` durch Vererbung. Die `IAccessorImpl` bindet beide Ausgabespalten. Die `IRowset` Schnittstelle kümmert sich um Abrufvorgänge Zeilen und Daten. Die `IRowsetInfo` Schnittstelle behandelt die Rowseteigenschaften.
+
+## <a name="see-also"></a>Siehe auch
+
+[Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

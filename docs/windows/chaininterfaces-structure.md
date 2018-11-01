@@ -1,28 +1,38 @@
 ---
 title: ChainInterfaces-Struktur | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::ChainInterfaces
+- implements/Microsoft::WRL::ChainInterfaces::CanCastTo
+- implements/Microsoft::WRL::ChainInterfaces::CastToUnknown
+- implements/Microsoft::WRL::ChainInterfaces::FillArrayWithIid
+- implements/Microsoft::WRL::ChainInterfaces::IidCount
+- implements/Microsoft::WRL::ChainInterfaces::Verify
 dev_langs:
 - C++
 helpviewer_keywords:
-- ChainInterfaces structure
+- Microsoft::WRL::ChainInterfaces structure
+- Microsoft::WRL::ChainInterfaces::CanCastTo method
+- Microsoft::WRL::ChainInterfaces::CastToUnknown method
+- Microsoft::WRL::ChainInterfaces::FillArrayWithIid method
+- Microsoft::WRL::ChainInterfaces::IidCount constant
+- Microsoft::WRL::ChainInterfaces::Verify method
 ms.assetid: d7415b59-5468-4bef-a3fd-8d82b12f0e9c
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0fc65d2aeab01de022e23d0645682800a7d555d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 28683d8c69a800cb6f9a365beda26c75b3a69d15
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602364"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161813"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces-Struktur
 
@@ -32,92 +42,99 @@ Gibt Überprüfungs- und Initialisierungsfunktionen an, die auf einen Satz von S
 
 ```cpp
 template <
-   typename I0,
-   typename I1,
-   typename I2 = Details::Nil,
-   typename I3 = Details::Nil,
-   typename I4 = Details::Nil,
-   typename I5 = Details::Nil,
-   typename I6 = Details::Nil,
-   typename I7 = Details::Nil,
-   typename I8 = Details::Nil,
-   typename I9 = Details::Nil
+    typename I0,
+    typename I1,
+    typename I2 = Details::Nil,
+    typename I3 = Details::Nil,
+    typename I4 = Details::Nil,
+    typename I5 = Details::Nil,
+    typename I6 = Details::Nil,
+    typename I7 = Details::Nil,
+    typename I8 = Details::Nil,
+    typename I9 = Details::Nil
 >
 struct ChainInterfaces : I0;
+
 template <
-   typename DerivedType,
-   typename BaseType,
-   bool hasImplements,
-   typename I1,
-   typename I2,
-   typename I3,
-   typename I4,
-   typename I5,
-   typename I6,
-   typename I7,
-   typename I8,
-   typename I9
+    typename DerivedType,
+    typename BaseType,
+    bool hasImplements,
+    typename I1,
+    typename I2,
+    typename I3,
+    typename I4,
+    typename I5,
+    typename I6,
+    typename I7,
+    typename I8,
+    typename I9
 >
-struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, I4, I5, I6, I7, I8, I9>;
+struct ChainInterfaces<
+    MixIn<
+        DerivedType,
+        BaseType,
+        hasImplements
+    >, I1, I2, I3, I4, I5, I6, I7, I8, I9
+>;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*I0*  
+*I0*<br/>
 (Erforderlich) Schnittstellen-ID 0.
 
-*I1*  
+*I1*<br/>
 (Erforderlich) Schnittstellen-ID 1.
 
-*I2*  
+*I2*<br/>
 (Optional) Schnittstellen-ID 2.
 
-*I3*  
+*I3*<br/>
 (Optional) Schnittstellen-ID 3.
 
-*I4*  
+*I4*<br/>
 (Optional) Schnittstellen-ID 4.
 
-*I5*  
+*I5*<br/>
 (Optional) Schnittstellen-ID 5.
 
-*I6*  
+*I6*<br/>
 (Optional) Schnittstellen-ID 6.
 
-*I7*  
+*I7*<br/>
 (Optional) Schnittstellen-ID 7.
 
-*I8*  
+*I8*<br/>
 (Optional) Schnittstellen-ID 8.
 
-*I9*  
+*I9*<br/>
 (Optional) Schnittstellen-ID-9.
 
-*DerivedType*  
+*DerivedType*<br/>
 Ein abgeleiteter Typ.
 
-*BaseType*  
+*BaseType*<br/>
 Der Basistyp eines abgeleiteten Typs.
 
-*hasImplements*  
+*hasImplements*<br/>
 Ein boolescher Wert, auch wenn **"true"**, bedeutet, dass Sie nicht verwenden eine [MixIn](../windows/mixin-structure.md) Struktur mit einer Klasse, die nicht von abgeleitet ist die [implementiert](../windows/implements-structure.md) abgeschrägten Designs.
 
 ## <a name="members"></a>Member
 
 ### <a name="protected-methods"></a>Geschützte Methoden
 
-|Name|Beschreibung|
-|----------|-----------------|
-|[ChainInterfaces::CanCastTo-Methode](../windows/chaininterfaces-cancastto-method.md)|Gibt an, ob die angegebene Schnittstellen-ID in jede der von definiert spezialisierungen umgewandelt werden kann die **ChainInterface** Vorlagenparameter.|
-|[ChainInterfaces::CastToUnknown-Methode](../windows/chaininterfaces-casttounknown-method.md)|Wandelt den Schnittstellenzeiger, der den vom definierten Typ der *I0* Template-Parameter auf einen Zeiger auf `IUnknown`.|
-|[ChainInterfaces::FillArrayWithIid-Methode](../windows/chaininterfaces-fillarraywithiid-method.md)|Speichert die Schnittstellen-ID, durch definiert die *I0* Template-Parameter in einer angegebenen Position in einem angegebenen Array von Schnittstellen-IDs.|
-|[ChainInterfaces::Verify-Methode](../windows/chaininterfaces-verify-method.md)|Stellt sicher, dass jede Schnittstelle Vorlagenparameter definiert *I0* über *I9* erbt `IUnknown` und/oder `IInspectable`, und dass *I0* erbt von *I1* über *I9*.|
+Name                                                   | Beschreibung
+------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[Chaininterfaces:: Cancastto](#cancastto)               | Gibt an, ob die angegebene Schnittstellen-ID in jede der von definiert spezialisierungen umgewandelt werden kann die `ChainInterface` Vorlagenparameter.
+[Chaininterfaces:: Casttounknown](#casttounknown)       | Wandelt den Schnittstellenzeiger, der den vom definierten Typ der *I0* Template-Parameter auf einen Zeiger auf `IUnknown`.
+[Chaininterfaces:: Fillarraywithiid](#fillarraywithiid) | Speichert die Schnittstellen-ID, durch definiert die *I0* Template-Parameter in einer angegebenen Position in einem angegebenen Array von Schnittstellen-IDs.
+[Chaininterfaces:: Verify](#verify)                     | Stellt sicher, dass jede Schnittstelle Vorlagenparameter definiert *I0* über *I9* erbt `IUnknown` und/oder `IInspectable`, und dass *I0* erbt von *I1* über *I9*.
 
 ### <a name="protected-constants"></a>Geschützte Konstanten
 
-|name|Beschreibung|
-|----------|-----------------|
-|[ChainInterfaces::IidCount-Konstante](../windows/chaininterfaces-iidcount-constant.md)|Die Gesamtanzahl der Schnittstellen-IDs enthalten, die in den Schnittstellen, die vom Vorlagenparameter angegeben *I0* über *I9*.|
+name                                   | Beschreibung
+-------------------------------------- | -----------------------------------------------------------------------------------------------------------------
+[Chaininterfaces:: Iidcount](#iidcount) | Die Gesamtanzahl der Schnittstellen-IDs enthalten, die in den Schnittstellen, die vom Vorlagenparameter angegeben *I0* über *I9*.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -131,6 +148,86 @@ Ein boolescher Wert, auch wenn **"true"**, bedeutet, dass Sie nicht verwenden ei
 
 **Namespace:** Microsoft::WRL
 
-## <a name="see-also"></a>Siehe auch
+## <a name="cancastto"></a>Chaininterfaces:: Cancastto
 
-[Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)
+Gibt an, ob die angegebene Schnittstellen-ID in jede der durch die nicht dem Standard-Vorlagenparameter definiert spezialisierungen umgewandelt werden kann.
+
+```cpp
+__forceinline bool CanCastTo(
+   REFIID riid,
+   _Deref_out_ void **ppv
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*riid*<br/>
+Eine Schnittstellen-ID.
+
+*ppv*<br/>
+Ein Zeiger auf die letzte Schnittstellen-ID, die erfolgreich umgewandelt wurde.
+
+### <a name="return-value"></a>Rückgabewert
+
+**"true"** Wenn alle Umwandlungsvorgänge erfolgreich war; andernfalls **"false"**.
+
+## <a name="casttounknown"></a>Chaininterfaces:: Casttounknown
+
+Wandelt den Schnittstellenzeiger, der den vom definierten Typ der *I0* Template-Parameter auf einen Zeiger auf `IUnknown`.
+
+```cpp
+__forceinline IUnknown* CastToUnknown();
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein Zeiger auf `IUnknown`.
+
+## <a name="fillarraywithiid"></a>Chaininterfaces:: Fillarraywithiid
+
+Speichert die Schnittstellen-ID, durch definiert die *I0* Template-Parameter in einer angegebenen Position in einem angegebenen Array von Schnittstellen-IDs.
+
+```cpp
+__forceinline static void FillArrayWithIid(
+   _Inout_ unsigned long &index,
+   _In_ IID* iids
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*index*<br/>
+Zeiger auf einen Indexwert in der *Iids* Array.
+
+*IIDs*<br/>
+Ein Array von Schnittstellen-IDs.
+
+## <a name="iidcount"></a>Chaininterfaces:: Iidcount
+
+Die Gesamtanzahl der Schnittstellen-IDs enthalten, die in den Schnittstellen, die vom Vorlagenparameter angegeben *I0* über *I9*.
+
+```cpp
+static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + Details::InterfaceTraits<I1>::IidCount + Details::InterfaceTraits<I2>::IidCount + Details::InterfaceTraits<I3>::IidCount + Details::InterfaceTraits<I4>::IidCount + Details::InterfaceTraits<I5>::IidCount + Details::InterfaceTraits<I6>::IidCount + Details::InterfaceTraits<I7>::IidCount + Details::InterfaceTraits<I8>::IidCount + Details::InterfaceTraits<I9>::IidCount;
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Die Gesamtanzahl der Schnittstellen-IDs.
+
+### <a name="remarks"></a>Hinweise
+
+Vorlagenparameter *I0* und *I1* sind erforderlich, und die Parameter *I2* über *I9* sind optional. Die Anzahl der IID jeder Schnittstelle ist in der Regel 1.
+
+## <a name="verify"></a>Chaininterfaces:: Verify
+
+Stellt sicher, dass jede Schnittstelle Vorlagenparameter definiert *I0* über *I9* erbt `IUnknown` und/oder `IInspectable`, und dass *I0* erbt von *I1* über *I9*.
+
+```cpp
+WRL_NOTHROW __forceinline static void Verify();
+```
+
+### <a name="remarks"></a>Hinweise
+
+Wenn der Überprüfungsvorgang fehlschlägt, eine `static_assert` gibt eine Fehlermeldung, die den Fehler beschreibt.
+
+Vorlagenparameter *I0* und *I1* sind erforderlich, und die Parameter *I2* über *I9* sind optional.

@@ -1,28 +1,20 @@
 ---
-title: 'Platform:: MTAThreadAttribute-Klasse | Microsoft-Dokumentation'
-ms.custom: ''
+title: Platform::MTAThreadAttribute-Klasse
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::MTAThreadAttribute::Equals
 - VCCORLIB/Platform::MTAThreadAttribute::GetHashCode
 - VCCORLIB/Platform::MTAThreadAttribute::ToString
-dev_langs:
-- C++
 helpviewer_keywords:
 - Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cc6405337814671d6789c8364e2f458c84d2487a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 07a20457df1bb9124b965cfae27d30e9f31d7531
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109705"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528075"
 ---
 # <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute-Klasse
 
@@ -89,7 +81,7 @@ Das zu vergleichende Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn die Objekte gleich sind, andernfalls `false`.
+**"true"** , wenn die Objekte gleich; andernfalls sind, **"false"**.
 
 ## <a name="gethashcode"></a> MTAThreadAttribute::GetHashCode
 

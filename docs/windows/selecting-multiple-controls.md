@@ -1,29 +1,18 @@
 ---
-title: Markieren mehrerer Steuerelemente | Microsoft-Dokumentation
-ms.custom: ''
+title: Markieren mehrerer Steuerelemente
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Dialog Editor [C++], selecting controls
 - dialog box controls [C++], selecting in editor
 - controls [C++], selecting
 - controls [C++], removing from groups
 ms.assetid: efbdbade-0a3a-4328-b36e-a6376c06e8de
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6789a378b163da9e3cefbabb506f84a3cb9a5d7f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: f8d095e83749b18cbc80ebb0464cd8e80d5510e0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317776"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491653"
 ---
 # <a name="selecting-multiple-controls"></a>Markieren mehrerer Steuerelemente
 
@@ -58,5 +47,5 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Auswählen von Steuerelementen](../windows/selecting-controls.md)  
+[Auswählen von Steuerelementen](../windows/selecting-controls.md)<br/>
 [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)

@@ -1,28 +1,22 @@
 ---
-title: FactoryCache-Struktur | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: FactoryCache-Struktur
+ms.date: 09/21/2018
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Details::FactoryCache
-dev_langs:
-- C++
+- module/Microsoft::WRL::Details::FactoryCache::cookie
+- module/Microsoft::WRL::Details::FactoryCache::factory
 helpviewer_keywords:
-- FactoryCache structure
+- Microsoft::WRL::Details::FactoryCache structure
+- Microsoft::WRL::Details::FactoryCache::cookie data member
+- Microsoft::WRL::Details::FactoryCache::factory data member
 ms.assetid: 624544e6-0989-47f6-a3e9-edb60e1ee6d4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: df2335a49d2d5daf862db7cea7eb413c01164bee
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7196363567dffa43844bbbd1de76934a317302d1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609027"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50545846"
 ---
 # <a name="factorycache-structure"></a>FactoryCache-Struktur
 
@@ -42,10 +36,10 @@ Enthält den Speicherort, der eine Klassenfactory und ein Wert, der einen regist
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
 
-|Name|Beschreibung|
-|----------|-----------------|
-|[FactoryCache::cookie-Datenmember](../windows/factorycache-cookie-data-member.md)|Enthält einen Wert an, der ein registriertes Windows-Runtime oder COM-Klasse-Objekt identifiziert, und wird später beim Aufheben der Registrierung des Objekts verwendet.|
-|[FactoryCache::factory-Datenmember](../windows/factorycache-factory-data-member.md)|Verweist auf eine Windows-Runtime oder COM-Klassenfactory.|
+Name                              | Beschreibung
+--------------------------------- | ------------------------------------------------------------------------------------------------------------------------------
+[Factorycache:: Cookie](#cookie)   | Enthält einen Wert an, der ein registriertes Windows-Runtime oder COM-Klasse-Objekt identifiziert, und wird später beim Aufheben der Registrierung des Objekts verwendet.
+[Factorycache:: Factory](#factory) | Verweist auf eine Windows-Runtime oder COM-Klassenfactory.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -57,6 +51,29 @@ Enthält den Speicherort, der eine Klassenfactory und ein Wert, der einen regist
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>Siehe auch
+## <a name="cookie"></a>Factorycache:: Cookie
 
-[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+Unterstützt die Windows Runtime C++ Template Library-Infrastruktur, und nicht direkt aus Ihrem Code verwendet werden soll.
+
+```cpp
+union {
+   WINRT_REGISTRATION_COOKIE winrt;
+   DWORD com;
+} cookie;
+```
+
+### <a name="remarks"></a>Hinweise
+
+Enthält einen Wert an, der ein registriertes Windows-Runtime oder COM-Klasse-Objekt identifiziert, und wird später beim Aufheben der Registrierung des Objekts verwendet.
+
+## <a name="factory"></a>Factorycache:: Factory
+
+Unterstützt die Windows Runtime C++ Template Library-Infrastruktur, und nicht direkt aus Ihrem Code verwendet werden soll.
+
+```cpp
+IUnknown* factory;
+```
+
+### <a name="remarks"></a>Hinweise
+
+Verweist auf eine Windows-Runtime oder COM-Klassenfactory.

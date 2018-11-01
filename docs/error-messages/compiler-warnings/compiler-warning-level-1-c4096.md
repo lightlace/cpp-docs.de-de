@@ -1,27 +1,17 @@
 ---
-title: Compilerwarnung (Stufe 1) C4096 | Microsoft-Dokumentation
-ms.custom: ''
+title: Compilerwarnung (Stufe 1) C4096
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4096
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4096
 ms.assetid: abf3cca2-2f21-45d8-b025-6b513b00681e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ef2aaf3f37e9699547c3a85c55a2f72d4baab7a6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 287465e9a3f5681f459f0823a4409b0906309a55
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46047693"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50436549"
 ---
 # <a name="compiler-warning-level-1-c4096"></a>Compilerwarnung (Stufe 1) C4096
 
@@ -29,7 +19,7 @@ ms.locfileid: "46047693"
 
 Eine Schnittstellendefinition, die Sie als COM-Schnittstelle für verfügen möglicherweise nicht als COM-Schnittstelle definiert wurde und daher nicht ausgegeben, um die IDL-Datei.
 
-Finden Sie unter [Schnittstellenattribute](../../windows/interface-attributes.md) für eine Liste der Attribute, die angeben, eine Schnittstelle ist eine COM-Schnittstelle.
+Finden Sie unter [Schnittstellenattribute](../../windows/attributes/interface-attributes.md) für eine Liste der Attribute, die angeben, eine Schnittstelle ist eine COM-Schnittstelle.
 
 Im folgende Beispiel wird die C4096 generiert:
 

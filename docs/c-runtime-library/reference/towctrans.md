@@ -1,10 +1,6 @@
 ---
-title: towctrans | Microsoft-Dokumentation
-ms.custom: ''
+title: towctrans
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - towctrans
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - towctrans
-dev_langs:
-- C++
 helpviewer_keywords:
 - towctrans function
 ms.assetid: 1ed1e70d-7b31-490f-a7d9-42564b5924ca
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b9d70570339868feb62ee906a707cf16ca03d556
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b814c65d2f5d0bb18b19d97a539d79dd6df8a1c6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407628"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561407"
 ---
 # <a name="towctrans"></a>towctrans
 
@@ -61,15 +51,15 @@ Ein Bezeichner, der den Rückgabewert von [wctrans](wctrans.md) enthält.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Das Zeichen *c*nach **Towctrans** verwendet die transformationsregel in *Kategorie*.
+Das Zeichen *c*nach **Towctrans** die transformationsregel in *Kategorie*.
 
 ## <a name="remarks"></a>Hinweise
 
-Der Wert der *Kategorie* muss von einem früheren erfolgreichen Aufruf von zurückgegeben worden sein [Wctrans](wctrans.md).
+Der Wert des *Kategorie* muss von einer zuvor erfolgreichen Aufruf zurückgegeben wurden [Wctrans](wctrans.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**towctrans**|\<wctype.h>|
 

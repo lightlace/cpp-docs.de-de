@@ -1,10 +1,6 @@
 ---
-title: CStrBufT-Klasse | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
+title: CStrBufT-Klasse
+ms.date: 10/18/2018
 f1_keywords:
 - CStrBufT
 - ATLSIMPSTR/ATL::CStrBufT
@@ -12,23 +8,17 @@ f1_keywords:
 - ATLSIMPSTR/ATL::CStrBufT::SetLength
 - ATLSIMPSTR/ATL::CStrBufT::AUTO_LENGTH
 - ATLSIMPSTR/ATL::CStrBufT::SET_LENGTH
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], custom memory management
 - CStrBufT class
 - shared classes, CStrBufT
 ms.assetid: 6b50fa8f-87e8-4ed4-a229-157ce128710f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fcf0675b81d684fdf8b78e865bf754d45ef4888c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e33bea159d2915b86fc77381f69dc2a745af68f5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752683"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492820"
 ---
 # <a name="cstrbuft-class"></a>CStrBufT-Klasse
 
@@ -43,7 +33,7 @@ class CStrBufT
 
 #### <a name="parameters"></a>Parameter
 
-*TCharType*  
+*TCharType*<br/>
 Der Zeichentyp, der die `CStrBufT` Klasse. Einer der folgenden Werte ist möglich:
 
 - **Char** (für ANSI-Zeichenfolgen)
@@ -121,13 +111,13 @@ explicit CStrBufT(StringType& str) throw(...);
 
 ### <a name="parameters"></a>Parameter
 
-*str*  
+*str*<br/>
 Das String-Objekt, das den Puffer zugeordnet ist. In der Regel wird der Entwickler der voreingestellten Typdefinitionen verwenden `CStrBuf` (TCHAR-Variante), `CStrBufA` (**Char** Variant-Wert) und `CStrBufW` (**"wchar_t"** Variant-Wert).
 
-*nMinLength*  
+*nMinLength*<br/>
 Die minimale Länge des Zeichenpuffers.
 
-*dwFlags*  
+*dwFlags*<br/>
 Bestimmt, ob die Zeichenfolgenlänge automatisch bestimmt wird. Einer der folgenden Werte ist möglich:
 
 - Zeichenfolgenlänge AUTO_LENGTH wird automatisch bestimmt, wann [CSimpleStringT::Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer) aufgerufen wird. Die Zeichenfolge muss Null-terminiert sein. Der Standardwert.
@@ -212,7 +202,7 @@ void SetLength(int nLength);
 
 ### <a name="parameters"></a>Parameter
 
-*nLength*  
+*nLength*<br/>
 Die neue Länge des Zeichenpuffers von String-Objekt.
 
 > [!NOTE]
@@ -236,6 +226,6 @@ typedef CSimpleStringT<TCharType> StringType;
 
 ## <a name="see-also"></a>Siehe auch
 
-[Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
+[Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [Freigegebene ATL-/MFC-Klassen](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

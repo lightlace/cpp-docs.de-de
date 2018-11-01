@@ -1,10 +1,6 @@
 ---
-title: CAtlMap-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: CAtlMap-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CAtlMap
 - ATLCOLL/ATL::CAtlMap
@@ -38,21 +34,15 @@ f1_keywords:
 - ATLCOLL/ATL::CAtlMap::SetAt
 - ATLCOLL/ATL::CAtlMap::SetOptimalLoad
 - ATLCOLL/ATL::CAtlMap::SetValueAt
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 564ff010756a2afa9210fc71dd47fce2b72dcbca
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 83ac810538bf189d026c0cb9b2a76ded49fdd86c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075721"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499676"
 ---
 # <a name="catlmap-class"></a>CAtlMap-Klasse
 
@@ -62,8 +52,8 @@ Diese Klasse stellt Methoden zum Erstellen und Verwalten von einem Map-Objekt.
 
 ```
 template <typename K,
-          typename V, 
-          class KTraits = CElementTraits<K>, 
+          typename V,
+          class KTraits = CElementTraits<K>,
           class VTraits = CElementTraits<V>>
 class CAtlMap
 ```
@@ -97,7 +87,7 @@ Der Code zum Kopieren oder verschieben Elemente mit dem Wert verwendet.
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CAtlMap::CPair-Klasse](#cpair_class)|Eine Klasse, die die Schlüssel-Wert-Elemente enthält.|  
+|[CAtlMap::CPair-Klasse](#cpair_class)|Eine Klasse, die die Schlüssel-Wert-Elemente enthält.|
 
 ### <a name="cpair-data-members"></a>CPair-Datenmember
 
@@ -145,7 +135,7 @@ Der Code zum Kopieren oder verschieben Elemente mit dem Wert verwendet.
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CAtlMap::operator\[\]](catlmap-class.md#operator_at)|Ersetzt oder fügt ein neues Element auf der `CAtlMap`.|  
+|[CAtlMap::operator\[\]](catlmap-class.md#operator_at)|Ersetzt oder fügt ein neues Element auf der `CAtlMap`.|
 
 ## <a name="remarks"></a>Hinweise
 

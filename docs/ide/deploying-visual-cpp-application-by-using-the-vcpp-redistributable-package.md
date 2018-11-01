@@ -1,7 +1,7 @@
 ---
 title: Bereitstellen einer App mithilfe von Visual C++ Redistributable Package | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 569c5c8adcb57ae92f111929efca544c76412a4b
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 9759811554fd0998a919c9939a0441c63c26a3f8
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895278"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494347"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>Exemplarische Vorgehensweise: Bereitstellen einer Visual C++-Anwendung mithilfe von Visual C++ Redistributable Package
 
@@ -35,66 +35,66 @@ Sie benötigen folgende Komponenten, um diese exemplarische Vorgehensweise abzus
 
 ### <a name="to-use-the-visual-c-redistributable-package-to-deploy-an-application"></a>Verwenden des Visual C++ Redistributable Package zum Bereitstellen einer Anwendung
 
-1. Erstellen Sie eine MFC-Anwendung, indem Sie folgende drei Schritte unter [Exemplarische Vorgehensweise: Bereitstellen einer Visual C++-Anwendung mithilfe eines Setupprojekts](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md) befolgen.
+1.  Erstellen Sie eine MFC-Anwendung, indem Sie die folgenden Schritte unter [Exemplarische Vorgehensweise: Bereitstellen einer Visual C++-Anwendung mithilfe eines Setup-Projekts](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md) befolgen.
 
-2. Erstellen Sie eine Datei, nennen Sie diese „setup.bat“, und fügen Sie dieser folgende Befehle hinzu. Ändern Sie `MyMFCApplication` in den Namen Ihres Projekts.
+1. Erstellen Sie eine Datei, nennen Sie diese „setup.bat“, und fügen Sie dieser folgende Befehle hinzu. Ändern Sie `MyMFCApplication` in den Namen Ihres Projekts.
 
     ```cmd
     @echo off
     vcredist_x86.exe
     mkdir "C:\Program Files\MyMFCApplication"
     copy MyMFCApplication.exe "C:\Program Files\MyMFCApplication"
-    ```  
+    ```
 
-3. Erstellen Sie eine selbstextrahierende Setupdatei:
+1. Erstellen Sie eine selbstextrahierende Setupdatei:
 
    1. Führen Sie „iexpress.exe“ über eine Eingabeaufforderung oder über das Fenster **Ausführen** aus.
 
-   2. Wählen Sie **Create new Self Extraction Directive file** (Neue selbstextrahierende Anweisungsdatei erstellen) aus, und klicken Sie dann auf die Schaltfläche **Weiter**.
+   1. Wählen Sie **Create new Self Extraction Directive file** (Neue selbstextrahierende Anweisungsdatei erstellen) aus, und klicken Sie dann auf die Schaltfläche **Weiter**.
 
-   3. Wählen Sie **Extract files and run an installation command** (Dateien extrahieren und Installationsbefehl ausführen) aus, und klicken Sie dann auf **Weiter**.
+   1. Wählen Sie **Extract files and run an installation command** (Dateien extrahieren und Installationsbefehl ausführen) aus, und klicken Sie dann auf **Weiter**.
 
-   4. Geben Sie im Textfeld den Namen Ihrer MFC-Anwendung ein, und klicken Sie dann auf **Weiter**.
+   1. Geben Sie im Textfeld den Namen Ihrer MFC-Anwendung ein, und klicken Sie dann auf **Weiter**.
 
-   5. Wählen Sie auf der Seite **Confirmation prompt** (Bestätigungsaufforderung) die Option **Keine Eingabeaufforderung** aus, und klicken Sie auf **Weiter**.
+   1. Wählen Sie auf der Seite **Confirmation prompt** (Bestätigungsaufforderung) die Option **Keine Eingabeaufforderung** aus, und klicken Sie auf **Weiter**.
 
-   6. Wählen Sie auf der Seite **Lizenzbedingungen** die Option **Do not display a license** (Keine Lizenz anzeigen) aus, und klicken Sie dann auf **Weiter**.
+   1. Wählen Sie auf der Seite **Lizenzbedingungen** die Option **Do not display a license** (Keine Lizenz anzeigen) aus, und klicken Sie dann auf **Weiter**.
 
-   7. Fügen Sie auf der Seite **Packaged files** (Gepackte Dateien) folgende Dateien hinzu, und klicken Sie auf **Weiter**.
+   1. Fügen Sie auf der Seite **Packaged files** (Gepackte Dateien) folgende Dateien hinzu, und klicken Sie auf **Weiter**.
 
       - Ihre MFC-Anwendungen (EXE-Datei)
 
-      - vcredist_x86.exe Diese Datei befindet sich unter \Program Files\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages\vcredist_x86\\.
+      - vcredist_x86.exe Diese Datei befindet sich im Verzeichnis „\Programme (x86)\Microsoft Visual Studio \<version>\SDK\Bootstrapper\Packages\.“. Sie können diese Datei auch von [Microsoft](https://www.microsoft.com/download/confirmation.aspx?id=5555) herunterladen.
 
       - Die Datei „setup.bat“, die Sie zuvor erstellt haben.
 
-   8. Geben Sie auf der Seite **Install Program to Launch** (Zu startendes Programm installieren) im Textfeld **Install Program** (Programm installieren) folgende Befehlszeile ein, und klicken Sie dann auf **Weiter**.
+   1. Geben Sie auf der Seite **Install Program to Launch** (Zu startendes Programm installieren) im Textfeld **Install Program** (Programm installieren) folgende Befehlszeile ein, und klicken Sie dann auf **Weiter**.
 
-      **cmd.exe /c "setup.bat"**  
+      **cmd.exe /c "setup.bat"**
 
-   9. Wählen Sie auf der Seite **Fenster anzeigen** die Option **Standard** aus, und klicken Sie dann auf **Weiter**.
+   1. Wählen Sie auf der Seite **Fenster anzeigen** die Option **Standard** aus, und klicken Sie dann auf **Weiter**.
 
-   10. Wählen Sie auf der Seite **Finished message** (Abschlussmeldung) die Option **Keine Meldung** aus, und klicken Sie dann auf **Weiter**.
+   1. Wählen Sie auf der Seite **Finished message** (Abschlussmeldung) die Option **Keine Meldung** aus, und klicken Sie dann auf **Weiter**.
 
-   11. Geben Sie auf der Seite **Package Name and Options** (Paketname und -optionen) einen Namen für die selbstextrahierende Setupdatei ein, wählen Sie die Option **Store files using Long File Name inside Package** (Dateien mit langem Dateinamen in Paketen speichern) aus, und klicken Sie dann auf **Weiter**. Der Dateiname muss auf „Setup.exe“ enden, z.B. „MyMFCApplicationSetup.exe“.
+   1. Geben Sie auf der Seite **Package Name and Options** (Paketname und -optionen) einen Namen für die selbstextrahierende Setupdatei ein, wählen Sie die Option **Store files using Long File Name inside Package** (Dateien mit langem Dateinamen in Paketen speichern) aus, und klicken Sie dann auf **Weiter**. Der Dateiname muss auf „Setup.exe“ enden, z.B. *MyMFCApplicationSetup.exe*.
 
-   12. Wählen Sie auf der Seite **Configure restart** (Neustart konfigurieren) die Option **No restart** (Kein Neustart) aus, und klicken Sie dann auf **Weiter**.
+   1. Wählen Sie auf der Seite **Configure restart** (Neustart konfigurieren) die Option **No restart** (Kein Neustart) aus, und klicken Sie dann auf **Weiter**.
 
-   13. Wählen Sie auf der Seite **Save Self Extraction Directive** (Selbstextrahierende Anweisung speichern) die Option **Save Self Extraction Directive (SED) file** (SED-Datei speichern) aus, und klicken Sie dann auf **Weiter**.
+   1. Wählen Sie auf der Seite **Save Self Extraction Directive** (Selbstextrahierende Anweisung speichern) die Option **Save Self Extraction Directive (SED) file** (SED-Datei speichern) aus, und klicken Sie dann auf **Weiter**.
 
-   14. Klicken Sie auf der Seite **Paket erstellen** auf **Weiter**.
+   1. Klicken Sie auf der Seite **Paket erstellen** auf **Weiter**. Klicken Sie auf **Fertig stellen**.
 
-4. Testen Sie die selbstextrahierende Setupdatei auf einem anderen Computer, auf dem keine Visual C++-Bibliothek vorhanden sind:
+1. Testen Sie die selbstextrahierende Setupdatei auf einem anderen Computer, auf dem keine Visual C++-Bibliothek vorhanden sind:
 
-   1. Laden Sie auf dem anderen Computer eine Kopie der Setupdatei herunter, und installieren Sie diese, indem Sie sie ausführen und die bereitgestellten Schritte befolgen.
+   1. Laden Sie auf dem anderen Computer eine Kopie der Setupdatei herunter, und installieren Sie diese, indem Sie sie ausführen und die bereitgestellten Schritte befolgen. Abhängig von den ausgewählten Optionen erfordert die Installation möglicherweise den Befehl **Als Administrator ausführen**.
 
-   2. Führen Sie die MFC-Anwendung aus.
+   1. Führen Sie die MFC-Anwendung aus.
 
       Die selbstextrahierende Setupdatei installiert die MFC-Anwendung, die sich in dem Ordner befindet, den Sie in Schritt 2 angegeben haben. Die Anwendung wird erfolgreich ausgeführt, da der Installer für Visual C++ Redistributable Package in der selbstextrahierenden Setupdatei enthalten ist.
 
       > [!IMPORTANT]
-      > Der Installer überprüft den Registrierungsschlüssel \HKLM\SOFTWARE\Microsoft\VisualStudio\11.0\VC\Runtimes\\[Plattform], um zu bestimmen, welche Version der Runtime installiert ist. Wenn die derzeit installierte Version neuer als die Version ist, die der Installer zu installieren versucht, gibt der Installer einen Erfolg zurück, ohne die ältere Version zu installieren und erstellt einen zusätzlichen Eintrag auf der Seite des installierten Programms in der Systemsteuerung.
+      > Der Installer überprüft den Registrierungsschlüssel „\HKLM\SOFTWARE\Microsoft\VisualStudio\\\<version>\VC\Runtimes\\<platform>, um zu bestimmen, welche Version der Runtime installiert ist. Wenn die derzeit installierte Version neuer als die Version ist, die der Installer zu installieren versucht, gibt der Installer einen Erfolg zurück, ohne die ältere Version zu installieren und erstellt einen zusätzlichen Eintrag auf der Seite des installierten Programms in der Systemsteuerung.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Bereitstellungsbeispiele](../ide/deployment-examples.md)
+[Bereitstellungsbeispiele](deployment-examples.md)<br/>

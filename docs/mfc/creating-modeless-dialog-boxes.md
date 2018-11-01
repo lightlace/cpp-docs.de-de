@@ -1,5 +1,5 @@
 ---
-title: Nicht modale Dialogfelder erstellen | Microsoft Docs
+title: Erstellen von nicht modalen Dialogfeldern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2055312c7418b14c9b274649db8faa297554257e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77b80f66f2956e71b90e4d939a0fb74aef28edb1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340992"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407035"
 ---
 # <a name="creating-modeless-dialog-boxes"></a>Erstellen von nicht modalen Dialogfeldern
-Für ein nicht modales Dialogfeld müssen Sie Ihren eigenen öffentlichen Konstruktor in eigener Dialogfeldklassen bereitstellen. Um ein nicht modales Dialogfeld erstellen, die public-Konstruktor aufrufen und dann des Dialogfeldobjekts [erstellen](../mfc/reference/cdialog-class.md#create) Memberfunktion versucht, die Ressource zu laden. Sie können Aufrufen **erstellen** während oder nach dem Konstruktoraufruf. Wenn die Ressource die Eigenschaft hat **WS_VISIBLE**, das Dialogfeld wird sofort angezeigt. Wenn nicht, die Sie aufrufen müssen dessen [ShowWindow](../mfc/reference/cwnd-class.md#showwindow) Memberfunktion.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)
+
+Für ein nicht modales Dialogfeld müssen Sie Ihre eigenen öffentlichen Konstruktor in der Dialogfeldklasse angeben. Klicken Sie zum Erstellen eines nicht modalen Dialogfelds rufen Sie Ihre öffentlichen Konstruktor, und rufen Sie dann des Dialogfeldobjekts [erstellen](../mfc/reference/cdialog-class.md#create) Member-Funktion, um die Ressource zu laden. Rufen Sie **erstellen** während oder nach dem Konstruktoraufruf. Wenn die Ressource, die Eigenschaft hat **WS_VISIBLE**, sofort auf das Dialogfeld wird angezeigt. Wenn nicht, die Sie aufrufen müssen die [ShowWindow](../mfc/reference/cwnd-class.md#showwindow) Member-Funktion.
+
+## <a name="see-also"></a>Siehe auch
+
+[Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)
 

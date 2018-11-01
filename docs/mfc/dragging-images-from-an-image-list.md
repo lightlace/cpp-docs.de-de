@@ -17,29 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9679fe46712220cd38cfb43c57b2f3c81deafde4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: fb872cba298d6d18ab5287a285b22d2f568fa04b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213678"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382374"
 ---
 # <a name="dragging-images-from-an-image-list"></a>Herausziehen von Bildern aus einer Bildliste
-[CImageList](../mfc/reference/cimagelist-class.md) enthält Funktionen für das ein Bild auf dem Bildschirm ziehen. Die Funktionen zum Ziehen verschieben Sie ein Bild reibungslos, Farbe und ohne Blinken des Cursors. Maskierte und Aufheben der Maskierung Images können gezogen werden.  
-  
- Die [BeginDrag](../mfc/reference/cimagelist-class.md#begindrag) Memberfunktion beginnt einen Drag-Vorgang. Die Parameter enthalten den Index des Bildes ziehen und den Speicherort des Hotspots im Abbild. Der Hotspot ist ein einzelnes Pixel, das die Funktionen zum Ziehen als genaue Bildschirmposition des Bilds zu erkennen. In der Regel festgelegt eine Anwendung den Hotspot so, dass es mit den Hotspot des Mauszeigers übereinstimmt. Die [Memberfunktion DragMove](../mfc/reference/cimagelist-class.md#dragmove) Member-Funktion wird das Bild an einem neuen Speicherort verschoben.  
-  
- Die ["DragEnter"](../mfc/reference/cimagelist-class.md#dragenter) Memberfunktion legt die ursprüngliche Position des Bilds ziehen Sie in einem Fenster und zeichnet das Bild an der Position. Die Parameter enthalten einen Zeiger auf das Fenster in der das Abbild und einen Punkt, der angibt, die Koordinaten der die ursprüngliche Position innerhalb des Fensters gezeichnet werden soll. Die Koordinaten sind relativ zur oberen linken Fensterecke, nicht den Clientbereich. Dasselbe gilt für alle das Ziehen von Image-Funktionen, die Koordinaten als Parameter akzeptieren. Dies bedeutet, dass Sie die Breite des Fensterelemente, z. B. die Rahmen, Titelleiste und Menüleiste kompensieren müssen, wenn Sie die Koordinaten angeben. Bei Angabe einer **NULL** Fensterhandle beim Aufrufen von `DragEnter`, die Funktionen zum Ziehen, das Bild im Zusammenhang mit dem Desktopfenster Gerätekontext zeichnen und die Koordinaten sind relativ zu der oberen linken Ecke des Bildschirms.  
-  
- `DragEnter` Sperrt alle anderen Updates des angegebenen Fensters während des Ziehvorgangs an. Wenn Sie alle Zeichnungen während eines Ziehvorgangs, z. B. markieren das Ziel eines Drag & Drop-Vorgangs müssen, können Sie das gezogene Bild vorübergehend ausblenden, mit der ["DragLeave"](../mfc/reference/cimagelist-class.md#dragleave) Member-Funktion. Sie können auch die [DragShowNoLock](../mfc/reference/cimagelist-class.md#dragshownolock) Member-Funktion.  
-  
- Rufen Sie [EndDrag](../mfc/reference/cimagelist-class.md#enddrag) Sie anschließend das Bild zu ziehen.  
-  
- Die [SetDragCursorImage](../mfc/reference/cimagelist-class.md#setdragcursorimage) Member-Funktion erstellt ein neues Drag-Image durch die Kombination der angegebenen Bilds (in der Regel eine Maus Cursorbild) mit dem aktuellen Drag-Image. Da die Funktionen zum Ziehen das neue Image während eines Ziehvorgangs verwenden, befolgen Sie die Windows [ShowCursor](/windows/desktop/api/winuser/nf-winuser-showcursor) Funktion, um den tatsächlichen Cursor nach dem Aufruf ausblenden `SetDragCursorImage`. Andernfalls kann das System angezeigt, damit zwei Mauscursor für die Dauer des Ziehvorgangs.  
-  
- Wenn eine Anwendung ruft `BeginDrag`, das System erstellt eine temporäre, interne Bildliste und kopiert das angegebene Bild in der internen Liste ziehen. Sie können einen Zeiger auf die Bildliste für die temporäre ziehen Sie abrufen, indem Sie mit der [Memberfunktion GetDragImage](../mfc/reference/cimagelist-class.md#getdragimage) Member-Funktion. Die Funktion ruft auch die aktuelle Position der Drag & und den Offset des Bilds ziehen Sie relativ zur Ziehposition.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von CImageList](../mfc/using-cimagelist.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+
+[CImageList](../mfc/reference/cimagelist-class.md) enthält Funktionen für das ein Bild auf dem Bildschirm ziehen. Die Funktionen zum Ziehen verschieben Sie ein Bild reibungslos, Farbe und ohne Blinken des Cursors. Maskierte und Aufheben der Maskierung Images können gezogen werden.
+
+Die [BeginDrag](../mfc/reference/cimagelist-class.md#begindrag) Memberfunktion beginnt einen Drag-Vorgang. Die Parameter enthalten den Index des Bildes ziehen und den Speicherort des Hotspots im Abbild. Der Hotspot ist ein einzelnes Pixel, das die Funktionen zum Ziehen als genaue Bildschirmposition des Bilds zu erkennen. In der Regel festgelegt eine Anwendung den Hotspot so, dass es mit den Hotspot des Mauszeigers übereinstimmt. Die [Memberfunktion DragMove](../mfc/reference/cimagelist-class.md#dragmove) Member-Funktion wird das Bild an einem neuen Speicherort verschoben.
+
+Die ["DragEnter"](../mfc/reference/cimagelist-class.md#dragenter) Memberfunktion legt die ursprüngliche Position des Bilds ziehen Sie in einem Fenster und zeichnet das Bild an der Position. Die Parameter enthalten einen Zeiger auf das Fenster in der das Abbild und einen Punkt, der angibt, die Koordinaten der die ursprüngliche Position innerhalb des Fensters gezeichnet werden soll. Die Koordinaten sind relativ zur oberen linken Fensterecke, nicht den Clientbereich. Dasselbe gilt für alle das Ziehen von Image-Funktionen, die Koordinaten als Parameter akzeptieren. Dies bedeutet, dass Sie die Breite des Fensterelemente, z. B. die Rahmen, Titelleiste und Menüleiste kompensieren müssen, wenn Sie die Koordinaten angeben. Bei Angabe einer **NULL** Fensterhandle beim Aufrufen von `DragEnter`, die Funktionen zum Ziehen, das Bild im Zusammenhang mit dem Desktopfenster Gerätekontext zeichnen und die Koordinaten sind relativ zu der oberen linken Ecke des Bildschirms.
+
+`DragEnter` Sperrt alle anderen Updates des angegebenen Fensters während des Ziehvorgangs an. Wenn Sie alle Zeichnungen während eines Ziehvorgangs, z. B. markieren das Ziel eines Drag & Drop-Vorgangs müssen, können Sie das gezogene Bild vorübergehend ausblenden, mit der ["DragLeave"](../mfc/reference/cimagelist-class.md#dragleave) Member-Funktion. Sie können auch die [DragShowNoLock](../mfc/reference/cimagelist-class.md#dragshownolock) Member-Funktion.
+
+Rufen Sie [EndDrag](../mfc/reference/cimagelist-class.md#enddrag) Sie anschließend das Bild zu ziehen.
+
+Die [SetDragCursorImage](../mfc/reference/cimagelist-class.md#setdragcursorimage) Member-Funktion erstellt ein neues Drag-Image durch die Kombination der angegebenen Bilds (in der Regel eine Maus Cursorbild) mit dem aktuellen Drag-Image. Da die Funktionen zum Ziehen das neue Image während eines Ziehvorgangs verwenden, befolgen Sie die Windows [ShowCursor](/windows/desktop/api/winuser/nf-winuser-showcursor) Funktion, um den tatsächlichen Cursor nach dem Aufruf ausblenden `SetDragCursorImage`. Andernfalls kann das System angezeigt, damit zwei Mauscursor für die Dauer des Ziehvorgangs.
+
+Wenn eine Anwendung ruft `BeginDrag`, das System erstellt eine temporäre, interne Bildliste und kopiert das angegebene Bild in der internen Liste ziehen. Sie können einen Zeiger auf die Bildliste für die temporäre ziehen Sie abrufen, indem Sie mit der [Memberfunktion GetDragImage](../mfc/reference/cimagelist-class.md#getdragimage) Member-Funktion. Die Funktion ruft auch die aktuelle Position der Drag & und den Offset des Bilds ziehen Sie relativ zur Ziehposition.
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden von CImageList](../mfc/using-cimagelist.md)<br/>
+[Steuerelemente](../mfc/controls-mfc.md)
 

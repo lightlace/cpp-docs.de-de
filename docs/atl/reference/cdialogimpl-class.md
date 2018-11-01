@@ -1,10 +1,6 @@
 ---
-title: CDialogImpl-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: CDialogImpl-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CDialogImpl
 - ATLWIN/ATL::CDialogImpl
@@ -17,22 +13,16 @@ f1_keywords:
 - ATLWIN/ATL::OnFinalMessage
 - ATLWIN/ATL::DialogProc
 - ATLWIN/ATL::StartDialogProc
-dev_langs:
-- C++
 helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ba47b7f78e372f05a851d2180590bbc68a8c61ca
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3ac8037e032112e269332d2bbf9c2065ade84ded
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46068434"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50572095"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl-Klasse
 
@@ -115,12 +105,12 @@ Erstellt ein nicht modales Dialogfeld an.
 
 ```
 HWND Create(
-    HWND hWndParent,  
-    LPARAM dwInitParam = NULL );  
+    HWND hWndParent,
+    LPARAM dwInitParam = NULL );
 
 HWND Create(
-    HWND hWndParent,  
-    RECT&, 
+    HWND hWndParent,
+    RECT&,
     LPARAM dwInitParam = NULL);
 ```
 
@@ -144,7 +134,7 @@ Dieses Dialogfeld wird automatisch angefügt, um die `CDialogImpl` Objekt. Rufen
 
 ##  <a name="destroywindow"></a>  CDialogImpl::DestroyWindow
 
-Zerstört ein nicht modales Dialogfeld an.  
+Zerstört ein nicht modales Dialogfeld an.
 
 ```
 BOOL DestroyWindow();
@@ -160,13 +150,13 @@ Gibt TRUE zurück, wenn das Dialogfeld erfolgreich gelöscht wurde. andernfalls 
 
 ##  <a name="dialogproc"></a>  CDialogImpl::DialogProc
 
-Diese statischen Funktion implementiert die Dialogfeldprozedur.  
+Diese statischen Funktion implementiert die Dialogfeldprozedur.
 
 ```
 static LRESULT CALLBACK DialogProc(
-    HWND hWnd,  
-    UINT uMsg,  
-    WPARAM wParam,  
+    HWND hWnd,
+    UINT uMsg,
+    WPARAM wParam,
     LPARAM lParam);
 ```
 
@@ -199,8 +189,8 @@ Sie können außer Kraft setzen `DialogProc` , geben Sie einen anderen Mechanism
 Erstellt ein modales Dialogfeld an.
 
 ```
-INT_PTR DoModal(  
-    HWND hWndParent = ::GetActiveWindow(),   
+INT_PTR DoModal(
+    HWND hWndParent = ::GetActiveWindow(),
     LPARAM dwInitParam = NULL);
 ```
 
@@ -273,7 +263,7 @@ BOOL MapDialogRect(LPRECT lpRect);
 ### <a name="parameters"></a>Parameter
 
 *lpRect*<br/>
-Verweist auf eine `CRect` Objekt oder [RECT](../../mfc/reference/rect-structure1.md) -Struktur, die die Clientkoordinaten des Updates zu erhalten, die dem Aktualisierungsbereich umschließt.
+Verweist auf eine `CRect` Objekt oder [RECT](../../mfc/reference/rect-structure.md) -Struktur, die die Clientkoordinaten des Updates zu erhalten, die dem Aktualisierungsbereich umschließt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -306,9 +296,9 @@ Wenn die erste Nachricht, zum Verarbeiten von Nachrichten gesendet, um das Dialo
 
 ```
 static LRESULT CALLBACK StartDialogProc(
-    HWND hWnd,  
-    UINT uMsg,  
-    WPARAM wParam,  
+    HWND hWnd,
+    UINT uMsg,
+    WPARAM wParam,
     LPARAM lParam);
 ```
 

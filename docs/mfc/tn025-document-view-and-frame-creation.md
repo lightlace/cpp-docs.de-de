@@ -1,5 +1,5 @@
 ---
-title: 'TN025: Dokument-, Ansicht- und Frame-Erstellung | Microsoft Docs'
+title: 'TN025: Dokument-, anzeigen und Frame-Erstellung | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,62 +17,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97db14dcb8c0b8b5b71823cf39d6bf36f0d19f25
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 75530d8133806357dba7a30862095ea08bd022b9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956693"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422011"
 ---
 # <a name="tn025-document-view-and-frame-creation"></a>TN025: Dokument-, Ansicht- und Frame-Erstellung
+
 > [!NOTE]
->  Der folgende technische Hinweis wurde seit dem ersten Erscheinen in der Onlinedokumentation nicht aktualisiert. Daher können einige Verfahren und Themen veraltet oder falsch sein. Um aktuelle Informationen zu erhalten, wird empfohlen, das gewünschte Thema im Index der Onlinedokumentation zu suchen.  
-  
- Dieser Hinweis beschreibt die Erstellung und zum Eigentum Probleme für WinApps, DocTemplates, Dokumente, Bilder und Ansichten.  
-  
-## <a name="winapp"></a>WinApp  
- Es ist eine `CWinApp` Objekt im System.  
-  
- Wird statisch erstellt und initialisiert, indem interne Implementierung des Frameworks `WinMain`. Leiten Sie von `CWinApp` nützlich, nichts zu tun (Ausnahme: MFC-Erweiterungs-DLLs sollten keine `CWinApp` Instanz – Initialisierung erfolgt in `DllMain` stattdessen).  
-  
- Die `CWinApp` Objekt besitzt eine Liste von Dokumentvorlagen (eine `CPtrList`). Es ist mindestens ein Dokumentvorlage pro Anwendung. DocTemplates sind in der Regel aus der Ressourcendatei (d. h. ein Array von Zeichenfolgen) geladen, `CWinApp::InitInstance`.  
-  
-```  
+>  Der folgende technische Hinweis wurde seit dem ersten Erscheinen in der Onlinedokumentation nicht aktualisiert. Daher können einige Verfahren und Themen veraltet oder falsch sein. Um aktuelle Informationen zu erhalten, wird empfohlen, das gewünschte Thema im Index der Onlinedokumentation zu suchen.
+
+Dieser Hinweis beschreibt die Erstellung und des Besitzes Probleme für WinApps, DocTemplates, Dokumente, Bilder und Ansichten.
+
+## <a name="winapp"></a>WinApp
+
+Es gibt ein `CWinApp` Objekt im System.
+
+Wird statisch erstellt und initialisiert, indem interne Implementierung des Frameworks `WinMain`. Durch Ableiten von `CWinApp` um nichts nützliches tun (Ausnahme: MFC-Erweiterungs-DLLs sollten keine `CWinApp` Instanz – Initialisierung erfolgt in `DllMain` stattdessen).
+
+Die `CWinApp` Objekt besitzt eine Liste von Dokumentvorlagen (eine `CPtrList`). Es gibt eine oder mehrere Dokumentvorlage pro Anwendung. DocTemplates werden in der Regel aus der Ressourcendatei (d. h. ein Zeichenfolgenarray) geladen, im `CWinApp::InitInstance`.
+
+```
 pTemplate = new CDocTemplate(IDR_MYDOCUMENT, ...);
 
 AddDocTemplate(pTemplate);
-```  
-  
- Die `CWinApp` Objekt besitzt alle Rahmenfenster in der Anwendung. Das Hauptrahmenfenster für die Anwendung gespeichert werden sollen, im `CWinApp::m_pMainWnd`; legen Sie in der Regel *M_pMainWnd* in die `InitInstance` Implementierung, wenn Sie nicht AppWizard, die Sie erledigen können, haben. Für Einzeldokumentoberfläche (SDI) Dies ist eine `CFrameWnd` , die als das Hauptanwendungsfenster Frame als auch der einzige Dokumentrahmenfenster dient. Bei mehrfachen Dokumentschnittstelle (MDI) ist dies ein MDI-Frame (Klasse `CMDIFrameWnd`), die als das Frame Hauptanwendungsfenster, die das untergeordnete Element enthält dient `CFrameWnd`s. Jedes untergeordnete Fenster ist von der Klasse `CMDIChildWnd` (abgeleitet von `CFrameWnd`) und dient als eine der möglicherweise viele Dokumentrahmenfenster.  
-  
-## <a name="doctemplates"></a>DocTemplates  
- Die `CDocTemplate` ist der Ersteller und Dokumente. Ist im Besitz der Dokumente, die sie erstellt. Wenn Ihre Anwendung den unten beschriebenen ressourcenbasierte-Ansatz verwendet, müssen sie nicht ableiten `CDocTemplate`.  
-  
- Damit eine SDI-Anwendung, die Klasse `CSingleDocTemplate` der nachverfolgt einem geöffneten Dokument. Für eine MDI-Anwendung, die Klasse `CMultiDocTemplate` hält eine Liste (eine `CPtrList`) aller aktuell geöffneten Dokumente, die anhand dieser Vorlage erstellt. `CDocTemplate::AddDocument` und `CDocTemplate::RemoveDocument` stellen Mitglieds der virtuellen Funktionen für das Hinzufügen oder entfernen ein Dokument aus der Vorlage zur Verfügung. `CDocTemplate` ist ein "Friend" `CDocument` , damit wir den geschützten festgelegt, können `CDocument::m_pDocTemplate` rückzeiger auf die zurück auf die Doc-Vorlage verweisen, die das Dokument erstellt hat.  
-  
- `CWinApp` Die Standardeinstellung behandelt `OnFileOpen` -Implementierung, die wiederum die Doc-Vorlagen abfragt. Die Implementierung enthält bereits geöffneten Dokumenten gesucht, und entscheiden, welches format Sie für neue Dokumente in zu öffnen.  
-  
- `CDocTemplate` verwaltet die UI-Bindung für Dokumente und Bilder.  
-  
- `CDocTemplate` verfolgt die Anzahl der unbenannten Dokumente an.  
-  
-## <a name="cdocument"></a>CDocument  
- Ein `CDocument` ist im Besitz einer `CDocTemplate`.  
-  
- Dokumente haben eine Liste der derzeit Ansichten öffnen (abgeleitet `CView`) anzeigen, die das Dokument (eine `CPtrList`).  
-  
- Dokumente werden nicht erstellen/Löschen der Sichten, aber sie sind miteinander verbunden, nachdem sie erstellt werden. Wenn ein Dokument geschlossen wird (d. h. durch Datei/schließen), werden alle angefügten Ansichten geschlossen. Wenn die letzte Ansicht für ein Dokument geschlossen wird (d. h., Fenster/schließen) wird das Dokument geschlossen werden.  
-  
- Die `CDocument::AddView`, `RemoveView` Schnittstelle wird verwendet, um die Ansicht verwalten. `CDocument` ist ein "Friend" `CView` , damit wir festgelegt, können die `CView::m_pDocument` rückzeiger.  
-  
-## <a name="cframewnd"></a>CFrameWnd  
- Ein `CFrameWnd` (auch bekannt als Frame) spielt die gleiche Funktion wie in MFC 1.0, aber nun die `CFrameWnd` -Klasse kann in vielen Fällen verwendet werden, ohne das Ableiten einer neuen Klasse. Die abgeleiteten Klassen `CMDIFrameWnd` und `CMDIChildWnd` sind ebenfalls verbessert werden, so viele Standardbefehle bereits implementiert werden.  
-  
- Die `CFrameWnd` ist verantwortlich für das Erstellen von Windows im Clientbereich des Frames. Normalerweise ist ein Hauptfenster, füllen das den Clientbereich des Frames.  
-  
- Für ein MDI-Rahmenfenster ist der Clientbereich mit dem Steuerelement MDICLIENT gefüllt wiederum das übergeordnete Element der alle untergeordneten MDI-Rahmenfenster ist. Für eine SDI-Rahmenfensters oder eine untergeordnete MDI-Rahmenfenster wird in der Regel der Clientbereich mit gefüllt eine `CView`-Fensterobjekt abgeleitet. Im Fall von `CSplitterWnd`, das den Clientbereich der Ansicht mit gefüllt ist die `CSplitterWnd` Window-Objekt, und die `CView`-abgeleiteten Fensterobjekten (eine pro Teilbereichs) werden als untergeordnete Fenster erstellt die `CSplitterWnd`.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Technische Hinweise – nach Anzahl](../mfc/technical-notes-by-number.md)   
- [Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)
+```
+
+Die `CWinApp` Objekt besitzt alle Rahmenfenster der Anwendung. Das Hauptrahmenfenster für die Anwendung gespeichert werden sollen, im `CWinApp::m_pMainWnd`; in der Regel legen Sie *M_pMainWnd* in die `InitInstance` Implementierung, wenn Sie AppWizard übernehmen das für Sie nicht können, haben. Für Einzeldokumentoberfläche (SDI) Dies ist eine `CFrameWnd` , die als das Rahmenfenster der Hauptthread der Anwendung als auch der einzige Dokumentrahmenfenster dient. Bei mehrfachen Dokumentschnittstelle (MDI) ist dies ein MDI-Frame (Klasse `CMDIFrameWnd`), die als das Hauptfenster der Anwendungsrahmenfenster, das das untergeordnete Element enthält dient `CFrameWnd`s. Jedes untergeordnete Fenster gehört der Klasse `CMDIChildWnd` (abgeleitet von `CFrameWnd`) und dient als eine der vielen Dokumentrahmenfenster.
+
+## <a name="doctemplates"></a>DocTemplates
+
+Die `CDocTemplate` der Ersteller und-Manager von Dokumenten. Er besitzt die Dokumenten, die erstellt wird. Wenn Ihre Anwendung den unten beschriebenen ressourcenbasierte-Ansatz verwendet, es müssen nicht für die Ableitung `CDocTemplate`.
+
+Für eine SDI-Anwendung, die Klasse `CSingleDocTemplate` verfolgt des einem geöffneten Dokument. Für eine MDI-Anwendung, die Klasse `CMultiDocTemplate` behält eine Liste (ein `CPtrList`) aller geöffneten Dokumente aus dieser Vorlage erstellt wurde. `CDocTemplate::AddDocument` und `CDocTemplate::RemoveDocument` stellen die virtuellen Funktionen zum Hinzufügen oder entfernen ein Dokument aus der Vorlage. `CDocTemplate` ist ein Freund von `CDocument` daher können wir die geschützte festlegen `CDocument::m_pDocTemplate` Gegenzeiger auf wieder in die Doc-Vorlage zu verweisen, die das Dokument erstellt.
+
+`CWinApp` Standardmäßig behandelt `OnFileOpen` -Implementierung, die wiederum alle Doc Vorlagen abfragt. Die Implementierung umfasst bereits geöffneten Dokumenten suchen und zu entscheiden, welches format, um neue Dokumente in zu öffnen.
+
+`CDocTemplate` verwaltet die UI-Bindung für Dokumente und Bilder.
+
+`CDocTemplate` zählt die Anzahl der unbenannten Dokumente.
+
+## <a name="cdocument"></a>CDocument
+
+Ein `CDocument` ist im Besitz einer `CDocTemplate`.
+
+Dokumente enthält eine Liste der derzeit Ansichten öffnen (abgeleitet `CView`) anzeigen, die das Dokument (einem `CPtrList`).
+
+Dokumente werden nicht erstellt/zerstört die Ansichten, aber sie sind miteinander angefügt, nachdem sie erstellt wurden. Wenn ein Dokument geschlossen ist (d. h. bis Datei/schließen), alle angefügten Ansichten werden geschlossen. Wenn die letzte Ansicht für ein Dokument geschlossen wird (d. h., Fenster/schließen), wird das Dokument geschlossen werden.
+
+Die `CDocument::AddView`, `RemoveView` Schnittstelle wird verwendet, um die Sicht verwalten. `CDocument` ist ein Freund von `CView` daher legen wir fest, kann die `CView::m_pDocument` Gegenzeiger.
+
+## <a name="cframewnd"></a>CFrameWnd
+
+Ein `CFrameWnd` (auch bekannt als ein Frame) übernimmt die gleiche Rolle wie MFC 1.0, aber jetzt die `CFrameWnd` Klasse soll in vielen Fällen verwendet werden, ohne eine neue Klasse ableiten. Die abgeleiteten Klassen `CMDIFrameWnd` und `CMDIChildWnd` auch verbessert, damit viele Standardbefehle bereits implementiert werden.
+
+Die `CFrameWnd` dient zum Erstellen von Fenstern im Clientbereich des Frames. Es ist normalerweise ein Hauptfenster der Clientbereich des Frames.
+
+Für eine MDI-Rahmenfenster wird der Clientbereich mit dem MDICLIENT-Steuerelement gefüllt wiederum das übergeordnete Element der alle untergeordneten MDI-Rahmenfenster ist. Für eine SDI-Rahmenfensters oder eines untergeordneten MDI-Frame-Fensters, das den Clientbereich in der Regel mit gefüllt ist eine `CView`-Window-Objekt abgeleitet. Im Fall von `CSplitterWnd`, der Clientbereich der Ansicht wird gefüllt, mit der `CSplitterWnd` Window-Objekt, und die `CView`-abgeleiteten Fensterobjekten (einer pro Teilbereich) werden als untergeordnete Fenster eines erstellt die `CSplitterWnd`.
+
+## <a name="see-also"></a>Siehe auch
+
+[Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)<br/>
+[Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)
 

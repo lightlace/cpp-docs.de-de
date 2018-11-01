@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c97ca07e06da3663dfd0a06a125f361b4e4dc591
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 45c1c105fafcadab74107b008f437d49f420e66e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758029"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061091"
 ---
 # <a name="using-cstring"></a>Verwenden von CString
 
@@ -43,52 +43,52 @@ Um mehr Funktionen hinzuzufügen als `CString`, `CStringA` oder `CStringW` derze
 
 Der folgende Code zeigt, wie Sie einen `CString` erstellen und als Standardausgabe drucken können:
 
-```cpp  
+```cpp
 #include <atlstr.h>
 
-int main() {  
-    CString aCString = CString(_T("A string"));  
-    _tprintf(_T("%s"), (LPCTSTR) aCString);  
-}  
+int main() {
+    CString aCString = CString(_T("A string"));
+    _tprintf(_T("%s"), (LPCTSTR) aCString);
+}
 ```
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Grundlegende CString-Operationen](../atl-mfc-shared/basic-cstring-operations.md)  
+[Grundlegende CString-Operationen](../atl-mfc-shared/basic-cstring-operations.md)<br/>
 Beschreibt grundlegende `CString`-Vorgänge, darunter das Erstellen von Objekten aus C-Literal-Zeichenfolgen, das Zugreifen auf einzelne Zeichen in einem `CString`, das Verketten von zwei Objekten und das Vergleichen von `CString`-Objekten.
 
-[Zeichenfolgendatenverwaltung](../atl-mfc-shared/string-data-management.md)  
+[Zeichenfolgendatenverwaltung](../atl-mfc-shared/string-data-management.md)<br/>
 Erläutert die Nutzung von Unicode und MBCS mit `CString`.
 
-[CString-Semantik](../atl-mfc-shared/cstring-semantics.md)  
+[CString-Semantik](../atl-mfc-shared/cstring-semantics.md)<br/>
 Erläutert, wie `CString`-Objekte verwendet werden.
 
-[CString-Operationen bei Zeichenfolgen im C-Format](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)  
+[CString-Operationen bei Zeichenfolgen im C-Format](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
 Beschreibt die Manipulation der Inhalte eines `CString`-Objekts wie eine mit Null abschließende Zeichenfolge im C-Format.
 
-[Zuweisen und Freigeben von Arbeitsspeicher für einen BSTR](../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)  
+[Zuweisen und Freigeben von Arbeitsspeicher für einen BSTR](../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)<br/>
 Erläutert die Verwendung von Arbeitsspeicher für einen BSTR und COM-Objekte.
 
-[CString-Ausnahmebereinigung](../atl-mfc-shared/cstring-exception-cleanup.md)  
+[CString-Ausnahmebereinigung](../atl-mfc-shared/cstring-exception-cleanup.md)<br/>
 Erklärt, dass eine explizite Bereinigung in MFC 3.0 und höher nicht mehr notwendig ist.
 
-[CString-Argumentübergabe](../atl-mfc-shared/cstring-argument-passing.md)  
+[CString-Argumentübergabe](../atl-mfc-shared/cstring-argument-passing.md)<br/>
 Erläutert, wie Sie CString-Objekte an Funktionen übergeben und wie Sie `CString`-Objekte aus Funktionen zurückgeben können.
 
-[Unterstützung für Unicode- und Multibyte-Zeichensätze (MBCS)](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)  
+[Unterstützung für Unicode- und Multibyte-Zeichensätze (MBCS)](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)<br/>
 Beschreibt, wie MFC für Unicode- und MBCS-Unterstützung aktiviert wird.
 
 ## <a name="reference"></a>Referenz
 
-[CStringT](../atl-mfc-shared/reference/cstringt-class.md)  
+[CStringT](../atl-mfc-shared/reference/cstringt-class.md)<br/>
 Bietet Referenzinformationen zur `CStringT`-Klasse.
 
-[CSimpleStringT-Klasse](../atl-mfc-shared/reference/csimplestringt-class.md)  
+[CSimpleStringT-Klasse](../atl-mfc-shared/reference/csimplestringt-class.md)<br/>
 Bietet Referenzinformationen zur `CSimpleStringT`-Klasse.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
-[Zeichenfolgen (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
+[Zeichenfolgen (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 Enthält Links zu Themen, in denen verschiedene Methoden zum Verwalten von Zeichenfolgendaten beschrieben werden.
 
 [Zeichenfolgen (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)

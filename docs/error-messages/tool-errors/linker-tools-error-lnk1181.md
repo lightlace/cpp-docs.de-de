@@ -1,27 +1,17 @@
 ---
-title: Linkertoolfehler Lnk1181 | Microsoft-Dokumentation
-ms.custom: ''
+title: Linkertoolfehler LNK1181
 ms.date: 08/22/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK1181
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK1181
 ms.assetid: 984b0db6-e331-4284-b2a7-a212fe96c486
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2eaa6ce8a1ca566fd3d585b5c457e1fb2829b0b0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 834220e6325e332a07c3865b5ff66e1bbc1b8c69
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016740"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50657979"
 ---
 # <a name="linker-tools-error-lnk1181"></a>Linkertoolfehler LNK1181
 
@@ -42,8 +32,6 @@ Weitere Informationen finden Sie unter [LIB-Dateien als Linkereingabe](../../bui
 Eine weitere mögliche Ursache für LNK1181 ist, dass ein langer Dateiname mit eingebetteten Leerzeichen nicht in Anführungszeichen eingeschlossen wurde.  In diesem Fall der Linker erkennt nur einen Dateinamen bis zum ersten Leerzeichen, und dann annehmen eine Dateierweiterung aus. obj.  Die Lösung für dieses Problem besteht darin, schließen Sie den langen Dateinamen (Name, Pfad und Dateiname) in Anführungszeichen ein.
 
 Beim Kompilieren mit der [/p (Vorverarbeitung in eine Datei)](../../build/reference/p-preprocess-to-a-file.md) Option kann in LNK1181 führen, da diese Option die Erstellung von OBJ-Dateien unterdrückt.
-
-
 
 ## <a name="see-also"></a>Siehe auch
 

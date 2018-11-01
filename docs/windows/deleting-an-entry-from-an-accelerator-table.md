@@ -1,27 +1,16 @@
 ---
-title: Löschen eines Eintrags aus einer Zugriffstastentabelle (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Löschen eines Eintrags aus einer Zugriffstastentabelle (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - accelerator tables [C++], deleting entries
 - keyboard shortcuts [C++], deleting entry from accelerator table
 ms.assetid: cc9cd499-dc04-4fe6-9393-a3e471e115a6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 747e0db32a73a277ef26e18e787e3e5a31f69578
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 0ea67937be34509d41a3f37d8221354965d39cef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315118"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50448853"
 ---
 # <a name="deleting-an-entry-from-an-accelerator-table-c"></a>Löschen eines Eintrags aus einer Zugriffstastentabelle (C++)
 
@@ -48,5 +37,5 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Bearbeiten von Zugriffstastentabellen](../windows/editing-accelerator-tables.md)  
+[Bearbeiten von Zugriffstastentabellen](../windows/editing-accelerator-tables.md)<br/>
 [Zugriffstasten-Editor](../windows/accelerator-editor.md)

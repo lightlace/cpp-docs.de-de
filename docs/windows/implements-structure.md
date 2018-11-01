@@ -1,7 +1,7 @@
 ---
 title: Struktur implementiert | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/11/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18616b1010dfe6a23861c512b1113c30fe5251ce
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: cc993dc1ebe0c5f1ab11409fcecee9b6cdefdaae
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535352"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788773"
 ---
 # <a name="implements-structure"></a>Implements-Struktur
 
@@ -40,66 +40,83 @@ Implementiert `QueryInterface` und `GetIid` für die angegebene Schnittstelle.
 
 ```cpp
 template <
-   typename I0,
-   typename I1 = Details::Nil,
-   typename I2 = Details::Nil,
-   typename I3 = Details::Nil,
-   typename I4 = Details::Nil,
-   typename I5 = Details::Nil,
-   typename I6 = Details::Nil,
-   typename I7 = Details::Nil,
-   typename I8 = Details::Nil,
-   typename I9 = Details::Nil
+    typename I0,
+    typename I1 = Details::Nil,
+    typename I2 = Details::Nil,
+    typename I3 = Details::Nil,
+    typename I4 = Details::Nil,
+    typename I5 = Details::Nil,
+    typename I6 = Details::Nil,
+    typename I7 = Details::Nil,
+    typename I8 = Details::Nil,
+    typename I9 = Details::Nil
 >
-struct __declspec(novtable) Implements : Details::ImplementsHelper<RuntimeClassFlags<WinRt>, typename Details::InterfaceListHelper<I0, I1, I2, I3, I4, I5, I6, I7, I8, I9>::TypeT>, Details::ImplementsBase;
+struct __declspec(novtable) Implements :
+    Details::ImplementsHelper<
+        RuntimeClassFlags<WinRt>,
+        typename Details::InterfaceListHelper<
+            I0, I1, I2, I3, I4, I5, I6, I7, I8, I9
+        >::TypeT
+    >,
+    Details::ImplementsBase;
+
 template <
-   int flags,
-   typename I0,
-   typename I1,
-   typename I2,
-   typename I3,
-   typename I4,
-   typename I5,
-   typename I6,
-   typename I7,
-   typename I8
+    int flags,
+    typename I0,
+    typename I1,
+    typename I2,
+    typename I3,
+    typename I4,
+    typename I5,
+    typename I6,
+    typename I7,
+    typename I8
 >
-struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3, I4, I5, I6, I7, I8> : Details::ImplementsHelper<RuntimeClassFlags<flags>, typename Details::InterfaceListHelper<I0, I1, I2, I3, I4, I5, I6, I7, I8>::TypeT>, Details::ImplementsBase;
+struct __declspec(novtable) Implements<
+        RuntimeClassFlags<flags>,
+        I0, I1, I2, I3, I4, I5, I6, I7, I8> :
+    Details::ImplementsHelper<
+        RuntimeClassFlags<flags>,
+        typename Details::InterfaceListHelper<
+            I0, I1, I2, I3, I4, I5, I6, I7, I8
+        >::TypeT
+    >,
+    Details::ImplementsBase;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*I0*  
+*I0*<br/>
 Die nullte Schnittstellen-ID. (Erforderlich)
 
-*I1*  
+*I1*<br/>
 Die erste Schnittstellen-ID. (Optional)
 
-*I2*  
+*I2*<br/>
 Die zweite Schnittstellen-ID. (Optional)
 
-*I3*  
+*I3*<br/>
 Die dritte Schnittstellen-ID. (Optional)
 
-*I4*  
+*I4*<br/>
 Die vierte Schnittstellen-ID. (Optional)
 
-*I5*  
+*I5*<br/>
 Die fünfte Schnittstellen-ID. (Optional)
 
-*I6*  
+*I6*<br/>
 Die sechste Schnittstellen-ID. (Optional)
 
-*I7*  
+*I7*<br/>
 Die siebte Schnittstellen-ID. (Optional)
 
-*I8*  
+*I8*<br/>
 Die achte Schnittstellen-ID. (Optional)
 
-*I9*  
+*I9*<br/>
 Die neunte Schnittstellen-ID. (Optional)
 
-*flags*  
+*flags*<br/>
 Von konfigurationsflags für die Klasse. Eine oder mehrere [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) Enumerationen, die im angegebenen ein [RuntimeClassFlags](../windows/runtimeclassflags-structure.md) Struktur.
 
 ## <a name="remarks"></a>Hinweise
@@ -163,10 +180,10 @@ __forceinline HRESULT CanCastTo(
 
 ### <a name="parameters"></a>Parameter
 
-*riid*  
+*riid*<br/>
 Ein Verweis auf eine Schnittstellen-ID.
 
-*ppv*  
+*ppv*<br/>
 Wenn erfolgreich, ein Zeiger auf die Schnittstelle durch angegeben *Riid*.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -206,10 +223,10 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>Parameter
 
-*index*  
+*index*<br/>
 Ein nullbasierter Index, der das Startelement "Array" für diesen Vorgang angibt. Klicken Sie nach Abschluss dieses Vorgangs *Index* um 1 erhöht.
 
-*IIDs*  
+*IIDs*<br/>
 Ein Array vom Typ IID.
 
 ### <a name="remarks"></a>Hinweise

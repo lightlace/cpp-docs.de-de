@@ -1,31 +1,21 @@
 ---
-title: 'Exemplarische Vorgehensweise: Verwenden von MSBuild zum Erstellen eines Visual C++-Projekts | Microsoft-Dokumentation'
-ms.custom: ''
-ms.date: 06/25/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
+title: 'Exemplarische Vorgehensweise: Verwenden von MSBuild zum Erstellen eines Visual C++-Projekts'
+ms.date: 09/24/2018
 f1_keywords:
 - msbuild.cpp.walkthrough.createproject
-dev_langs:
-- C++
 helpviewer_keywords:
 - 'msbuild (c++), walkthrough: create a project'
 ms.assetid: 52350d1c-c373-4868-923c-5e8be6f67adb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a8bb957f0ab1dd2ea7d05151257aee0e15561e8a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c5ccacb5e68c4f950d4ffa731fbc83decc4f10fc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609698"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677213"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>Exemplarische Vorgehensweise: Verwenden von MSBuild zum Erstellen eines Visual C++-Projekts
 
-Diese exemplarische Vorgehensweise veranschaulicht die Verwendung von MSBuild zum Erstellen eines Visual C++-Projekts an einer Eingabeaufforderung. Erfahren Sie, wie die C++-Quelldateien und eine XML-basierte Projektdatei für eine Visual C++-Konsolenanwendung zu erstellen. Nach der Erstellung des Projekts erfahren Sie, wie der Buildprozess angepasst wird.
+Diese exemplarische Vorgehensweise veranschaulicht die Verwendung von MSBuild zum Erstellen eines Visual C++-Projekts an einer Eingabeaufforderung. Sie erfahren, wie die C++-Quelldateien und eine XML-basierte Projektdatei für eine Visual C++-Konsolenanwendung erstellen können. Nach dem Erstellen des Projekts erfahren Sie, wie Sie den Buildprozess anpassen.
 
 In dieser exemplarischen Vorgehensweise werden die folgenden Aufgaben veranschaulicht:
 
@@ -37,7 +27,7 @@ In dieser exemplarischen Vorgehensweise werden die folgenden Aufgaben veranschau
 
 - Verwenden von MSBuild zum Anpassen des Projekts.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Für diese exemplarische Vorgehensweise wird Folgendes benötigt:
 
@@ -53,13 +43,13 @@ Für diese exemplarische Vorgehensweise wird Folgendes benötigt:
 
 ## <a name="creating-the-c-source-files"></a>Erstellen der C++-Quelldateien
 
-In dieser exemplarischen Vorgehensweise erstellen Sie ein Projekt, das eine Quell- und eine Headerdatei besitzt. Die Quelldatei "main.cpp" enthält die Hauptfunktion für die Konsolenanwendung. Die Headerdatei "main.h" enthält Code zum Einschließen der iostream-Headerdatei. Sie können diese C++-Dateien mit Visual Studio oder einem Text-Editor wie Visual Studio Code erstellen.
+In dieser exemplarischen Vorgehensweise erstellen Sie ein Projekt aus, die eine Quelldatei und eine Headerdatei aufweist. Die Quelldatei "main.cpp" enthält die Hauptfunktion für die Konsolenanwendung. Die Headerdatei "main.h" enthält Code zum Einschließen der iostream-Headerdatei. Sie können diese C++-Dateien mit Visual Studio oder einem Text-Editor wie Visual Studio Code erstellen.
 
 ### <a name="to-create-the-c-source-files-for-your-project"></a>So erstellen Sie die C++-Quelldateien für das Projekt
 
 1. Erstellen Sie ein Verzeichnis für das Projekt.
 
-2. Erstellen Sie eine Datei mit dem Namen "main.cpp", und fügen Sie der Datei den folgenden Code hinzu:
+1. Erstellen Sie eine Datei mit dem Namen "main.cpp", und fügen Sie der Datei den folgenden Code hinzu:
 
     ```cpp
     // main.cpp : the application source code.
@@ -72,7 +62,7 @@ In dieser exemplarischen Vorgehensweise erstellen Sie ein Projekt, das eine Quel
     }
     ```
 
-3. Erstellen Sie eine Datei mit dem Namen "main.h", und fügen Sie der Datei den folgenden Code hinzu:
+1. Erstellen Sie eine Datei mit dem Namen "main.h", und fügen Sie der Datei den folgenden Code hinzu:
 
     ```cpp
     // main.h: the application header code.
@@ -81,24 +71,24 @@ In dieser exemplarischen Vorgehensweise erstellen Sie ein Projekt, das eine Quel
 
 ## <a name="creating-the-xml-msbuild-project-file"></a>Erstellen der XML-MSBuild-Projektdatei
 
-Eine MSBuild-Projektdatei ist eine XML-Datei, die ein Projektstammelement enthält (\<Projekt >). Im folgenden Beispielprojekt die \<Projekt >-Element enthält sieben untergeordnete Elemente:
+Eine MSBuild-Projektdatei ist eine XML-Datei, die ein Projektstammelement enthält (`<Project>`). Im folgenden Beispielprojekt die `<Project>` Element enthält sieben untergeordnete Elemente:
 
-- Drei Elementgruppentags (\<ItemGroup >), die Projektkonfiguration und Plattform, Quelldateiname und Headerdateiname angeben.
+- Drei Elementgruppentags (`<ItemGroup>`), die Projektkonfiguration und Plattform, Quelldateiname und Headerdateiname angeben.
 
-- Drei importtags (\<Importieren >), die den Speicherort der Microsoft Visual C++-Einstellungen angeben.
+- Drei importtags (`<Import>`), die den Speicherort der Microsoft Visual C++-Einstellungen angeben.
 
-- Ein eigenschaftsgruppentag (\<PropertyGroup >), das projekteinstellungen angibt.
+- Ein eigenschaftsgruppentag (`<PropertyGroup>`), das projekteinstellungen angibt.
 
 ### <a name="to-create-the-msbuild-project-file"></a>So erstellen Sie die MSBuild-Projektdatei
 
-1. Mithilfe eines Texteditors um eine Projektdatei zu erstellen, mit dem Namen `myproject.vcxproj`, und fügen Sie dann den folgenden Stamm \<Projekt > Element. Fügen Sie die Elemente in den folgenden Verfahrensschritten zwischen den Stamm \<Projekt > Tags:
+1. Mithilfe eines Texteditors um eine Projektdatei zu erstellen, mit dem Namen `myproject.vcxproj`, und fügen Sie dann den folgenden Stamm `<Project>` Element. Fügen Sie die Elemente in den folgenden Verfahrensschritten zwischen den Stamm `<Project>` Tags:
 
     ```xml
     <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     </Project>
     ```
 
-2. Fügen Sie die folgenden beiden \<ProjectConfiguration > untergeordnete Elemente in einem \<ItemGroup >-Element. Das untergeordnete Element gibt Debug- und Releasekonfigurationen für ein 32-Bit-Windows-Betriebssystem an:
+1. Fügen Sie die folgenden beiden `<ProjectConfiguration>` untergeordnete Elemente in einem `<ItemGroup>` Element. Das untergeordnete Element gibt Debug- und Releasekonfigurationen für ein 32-Bit-Windows-Betriebssystem an:
 
     ```xml
     <ItemGroup>
@@ -113,13 +103,13 @@ Eine MSBuild-Projektdatei ist eine XML-Datei, die ein Projektstammelement enthä
     </ItemGroup>
     ```
 
-3. Fügen Sie die folgenden \<Import / >-Element, das den Pfad der standardmäßigen C++-Einstellungen für dieses Projekt angibt:
+1. Fügen Sie die folgenden `<Import>` -Element, das den Pfad der standardmäßigen C++-Einstellungen für dieses Projekt angibt:
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
     ```
 
-4. Fügen Sie das folgende Eigenschaftengruppenelement (\<PropertyGroup >), das zwei Projekteigenschaften angibt:
+1. Fügen Sie das folgende Eigenschaftengruppenelement (`<PropertyGroup>`), das zwei Projekteigenschaften angibt:
 
     ```xml
     <PropertyGroup>
@@ -128,13 +118,13 @@ Eine MSBuild-Projektdatei ist eine XML-Datei, die ein Projektstammelement enthä
     </PropertyGroup>
     ```
 
-5. Fügen Sie die folgenden \<Import / >-Element, das den Pfad der aktuellen C++-Einstellungen für dieses Projekt angibt:
+1. Fügen Sie die folgenden `<Import>` -Element, das den Pfad der aktuellen C++-Einstellungen für dieses Projekt angibt:
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
     ```
 
-6. Fügen Sie die folgenden \<ClCompile > untergeordnete Element in einer \<ItemGroup >-Element. Das untergeordnete Element gibt den Namen der zu kompilierenden C/C++-Quelldatei an:
+1. Fügen Sie die folgenden `<ClCompile>` untergeordneten Elements in einer `<ItemGroup>` Element. Das untergeordnete Element gibt den Namen der zu kompilierenden C/C++-Quelldatei an:
 
     ```xml
     <ItemGroup>
@@ -143,9 +133,9 @@ Eine MSBuild-Projektdatei ist eine XML-Datei, die ein Projektstammelement enthä
     ```
 
    > [!NOTE]
-   > \<ClCompile > ist eine *Buildziel* und in der **VCTargets** Verzeichnis.
+   > `<ClCompile>` ist eine *Buildziel* und in der **VCTargets** Verzeichnis.
 
-7. Fügen Sie die folgenden \<ClInclude > untergeordnete Element in einer \<ItemGroup >-Element. Das untergeordnete Element gibt den Namen der Headerdatei für die C/C++-Quelldatei an:
+1. Fügen Sie die folgenden `<ClInclude>` untergeordneten Elements in einer `<ItemGroup>` Element. Das untergeordnete Element gibt den Namen der Headerdatei für die C/C++-Quelldatei an:
 
     ```xml
     <ItemGroup>
@@ -153,7 +143,7 @@ Eine MSBuild-Projektdatei ist eine XML-Datei, die ein Projektstammelement enthä
     </ItemGroup>
     ```
 
-8. Fügen Sie die folgenden \<Import >-Element, das den Pfad der Datei angibt, die das Ziel für dieses Projekt definiert:
+1. Fügen Sie die folgenden `<Import>` Element, das den Pfad der Datei angibt, die das Ziel für dieses Projekt definiert:
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Targets" />
@@ -197,7 +187,7 @@ Geben Sie an der Eingabeaufforderung den folgenden Befehl ein, um die Konsolenan
 
 `msbuild myproject.vcxproj /p:configuration=debug`
 
-MSBuild erstellt ein Verzeichnis für Ausgabedateien, und klicken Sie dann kompiliert und verknüpft das Projekt, um das Programm Myproject.exe zu generieren. Nachdem der Buildprozess beendet wurde, verwenden Sie den folgenden Befehl, um die Anwendung auszuführen:
+MSBuild erstellt ein Verzeichnis für Ausgabedateien, und klicken Sie dann kompiliert und verknüpft das Projekt, um das Programm Myproject.exe zu generieren. Nach dem der Buildprozess beendet wurde, verwenden Sie des folgenden Befehls zum Ausführen der Anwendung aus dem Ordner "Debug" ein:
 
 `myproject`
 
@@ -219,7 +209,7 @@ MSBuild können Sie zum Ausführen von vordefinierten Buildzielen, Anwenden von 
 
 ### <a name="using-msbuild-with-build-targets"></a>Verwenden von MSBuild mit Buildzielen
 
-Ein *Buildziel* ist ein benannter Satz von vordefinierten oder benutzerdefinierten Befehlen, die während des Builds ausgeführt werden kann. Verwenden Sie die Zielbefehlszeilenoption (**/t /**) um ein Buildziel anzugeben. Im Fall von der `myproject` -Beispielprojekts werden die vordefinierten **Bereinigen** Ziel löscht alle Dateien im Ordner "Debug" und eine neue Protokolldatei erstellt.
+Ein *Buildziel* ist ein benannter Satz von vordefinierten oder benutzerdefinierten Befehlen, die während des Builds ausgeführt werden kann. Verwenden Sie die Zielbefehlszeilenoption (`/t`), um ein Buildziel anzugeben. Für die `myproject` -Beispielprojekts werden die vordefinierten **Bereinigen** Ziel löscht alle Dateien im Ordner "Debug" und eine neue Protokolldatei erstellt.
 
 Geben Sie an der Eingabeaufforderung den folgenden Befehl ein, um `myproject` zu bereinigen.
 
@@ -227,7 +217,7 @@ Geben Sie an der Eingabeaufforderung den folgenden Befehl ein, um `myproject` zu
 
 ### <a name="using-msbuild-with-build-properties"></a>Verwenden von MSBuild mit Buildeigenschaften
 
-Die Eigenschaften-Befehlszeilenoption (**/p**) können Sie eine Eigenschaft in der Projektbuilddatei zu überschreiben. Im `myproject`- Beispielprojekt wird die Release- oder Debugbuildkonfiguration durch die `Configuration`-Eigenschaft angegeben. Das Betriebssystem, das für die Ausführung der erstellten Anwendung vorgesehen ist, wird durch die `Platform`-Eigenschaft angegeben.
+Die Eigenschaften-Befehlszeilenoption (`/p`) ermöglicht es Ihnen, eine Eigenschaft in der Projektbuilddatei zu überschreiben. Im `myproject`- Beispielprojekt wird die Release- oder Debugbuildkonfiguration durch die `Configuration`-Eigenschaft angegeben. Das Betriebssystem, das für die Ausführung der erstellten Anwendung vorgesehen ist, wird durch die `Platform`-Eigenschaft angegeben.
 
 Geben Sie an der Eingabeaufforderung den folgenden Befehl ein, um einen Debugbuild der `myproject`-Anwendung zu erstellen, die für die Ausführung unter Windows (32 Bit) vorgesehen ist.
 
@@ -245,7 +235,7 @@ Geben Sie an der Eingabeaufforderung den folgenden Befehl ein, um einen Releaseb
 
 ### <a name="using-msbuild-with-the-64-bit-compiler-and-tools"></a>Verwenden von MSBuild mit dem 64-Bit-Compiler und Tools
 
-Wenn Sie Visual C++ für 64-Bit-Windows werden standardmäßig installiert haben, werden die 64-Bit-X64 systemeigene und cross-Tools installiert. Sie können konfigurieren, dass MSBuild für die 64-Bit-Compiler und Tools zu verwenden, um die Erstellung Ihrer Anwendung durch Festlegen der `PreferredToolArchitecture` Eigenschaft. Diese Eigenschaft beeinflusst nicht die Projektkonfigurations- oder Plattformeigenschaften. Standardmäßig wird die 32-Bit-Version des Tools verwendet. Zum Angeben der 64-Bit-Version des Compilers und der Tools fügen Sie das folgende Eigenschaftengruppenelement der Projektdatei "MyProject.vcxproj" nach der `Microsoft.Cpp.default.props` \<Import / >-Element:
+Wenn Sie Visual C++ für 64-Bit-Windows werden standardmäßig installiert haben, werden die 64-Bit-X64 systemeigene und cross-Tools installiert. Sie können konfigurieren, dass MSBuild für die 64-Bit-Compiler und Tools zu verwenden, um die Erstellung Ihrer Anwendung durch Festlegen der `PreferredToolArchitecture` Eigenschaft. Diese Eigenschaft wirkt sich nicht auf die Projekteigenschaften Benutzerkonfigurations- oder Plattformprobleme aus. Standardmäßig wird die 32-Bit-Version des Tools verwendet. Zum Angeben der 64-Bit-Version des Compilers und der Tools fügen Sie das folgende Eigenschaftengruppenelement der Projektdatei "MyProject.vcxproj" nach der `Microsoft.Cpp.default.props` \<Import / >-Element:
 
 ```xml
 <PropertyGroup>
@@ -259,7 +249,7 @@ Geben Sie an der Eingabeaufforderung den folgenden Befehl ein, um die 64-Bit-Too
 
 ### <a name="using-msbuild-with-a-different-toolset"></a>Verwenden von MSBuild mit einem anderen toolset
 
-Wenn Sie die Toolsets- und -Bibliotheken für andere Versionen von Visual C++ installiert haben, kann MSBuild Anwendungen, die für die aktuelle Visual C++ Version oder anderen installierten Versionen erstellen. Z. B. bei Installation von Visual Studio 2012, um anzugeben, das Visual C++ 11.0 Toolset für Windows XP, fügen Sie das folgende Eigenschaftengruppenelement der Projektdatei "MyProject.vcxproj" nach der Microsoft.Cpp.props `<Import />` Element:
+Wenn Sie die Toolsets- und -Bibliotheken für andere Versionen von Visual C++ installiert haben, kann MSBuild Anwendungen, die für die aktuelle Visual C++ Version oder anderen installierten Versionen erstellen. Beispielsweise wenn Sie Visual Studio 2012, um anzugeben, das Visual C++ 11.0-Toolset für Windows XP installiert haben hinzufügen das folgende Eigenschaftengruppenelement der Projektdatei "MyProject.vcxproj" nach der `Microsoft.Cpp.props` \<Import / >-Element:
 
 ```xml
 <PropertyGroup>
@@ -267,11 +257,9 @@ Wenn Sie die Toolsets- und -Bibliotheken für andere Versionen von Visual C++ in
 </PropertyGroup>
 ```
 
-Geben Sie einen der folgenden Befehle, um Ihr Projekt mit Visual C++ 11.0 Windows XP-Toolset neu zu erstellen:
+Um Ihr Projekt mit Visual C++ 11.0 Windows XP-Toolset neu zu erstellen, geben Sie die folgenden Befehle aus:
 
 `msbuild myproject.vcxproj /p:PlatformToolset=v110_xp /t:rebuild`
-
-`msbuild myproject.vcxproj /t:rebuild`
 
 ### <a name="adding-msbuild-customizations"></a>Hinzufügen von MSBuild-Anpassungen
 

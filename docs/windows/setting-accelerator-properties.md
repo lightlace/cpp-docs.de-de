@@ -1,12 +1,6 @@
 ---
-title: Festlegen von Eigenschaften für Zugriffstasten (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Festlegen von Eigenschaften für Zugriffstasten (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - accelerator properties
 - properties [C++], accelerator properties
@@ -14,17 +8,12 @@ helpviewer_keywords:
 - Key property
 - Modifier property
 ms.assetid: 0fce9156-3025-4e18-b034-e219a4c65812
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: eb08a9dce4c90c9efddd10683bc4b7c2ac0b08b9
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 47ebd54fdaff099e3a8ce828581a66b0ec871915
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314416"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647017"
 ---
 # <a name="setting-accelerator-properties"></a>Festlegen von Eigenschaften für Zugriffstasten
 
@@ -47,6 +36,6 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Vordefinierte Zugriffstasten](../windows/predefined-accelerator-keys.md)  
-[Ressourcen-Editor](../windows/resource-editors.md)  
+[Vordefinierte Zugriffstasten](../windows/predefined-accelerator-keys.md)<br/>
+[Ressourcen-Editor](../windows/resource-editors.md)<br/>
 [Zugriffstasten-Editor](../windows/accelerator-editor.md)

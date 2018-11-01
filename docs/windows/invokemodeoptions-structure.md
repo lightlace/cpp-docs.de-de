@@ -1,32 +1,22 @@
 ---
-title: InvokeModeOptions Struktur | Microsoft Docs
-ms.custom: ''
+title: InvokeModeOptions-Struktur
 ms.date: 03/22/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::InvokeModeOptions
-dev_langs:
-- C++
 helpviewer_keywords:
 - InvokeModeOptions structure
 - InvokeMode enum
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 5b1eb0e7f6cf49a7c6ac12a4810ae1622e263e2f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 315f1f0c49c4222bf525bbaf25c9ad0de8b9c7d1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882836"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511696"
 ---
 # <a name="invokemodeoptions-structure"></a>InvokeModeOptions-Struktur
 
-Gibt an, ob alle Ereignisse in der Warteschlange Delegaten ausgelöst werden, oder beenden ausgelöst wird, nachdem ein Fehler ausgelöst wird. Die zulässigen Werte werden angegeben, der `InvokeMode` Enum.
+Gibt an, ob alle Ereignisse in der Warteschlange Delegaten ausgelöst werden, oder beim Beenden ausgelöst wird, nachdem ein Fehler ausgelöst wird. Die zulässigen Werte werden angegeben, der `InvokeMode` Enum.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,5 +41,5 @@ struct InvokeModeOptions
 
 ## <a name="see-also"></a>Siehe auch
 
-[Microsoft:: wrl-Namespace](../windows/microsoft-wrl-namespace.md)
-[Microsoft::WRL::AgileEventSource-Klasse](../windows/agileeventsource-class.md)
+[Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)<br/>
+[Microsoft::wrl::AgileEventSource-Klasse](../windows/agileeventsource-class.md)

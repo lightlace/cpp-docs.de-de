@@ -1,28 +1,17 @@
 ---
-title: -Utf-8 (Quelle festlegen und ausführbare Datei legt in UTF-8-Zeichen) | Microsoft-Dokumentation
-ms.custom: ''
+title: /UTF-8 (Quelle festlegen und ausführbare Zeichensätze auf UTF-8)
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 f1_keywords:
 - /utf-8
-dev_langs:
-- C++
 helpviewer_keywords:
 - /utf-8 compiler option
 ms.assetid: f0e1f3cb-6cae-46eb-9483-04ed13d9b504
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d1193af2891a2cd3150fdb1cee9dd6957a1fe271
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: cb71e1846348adf4cf8a8eb385e6c5f7ac2bac74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704066"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636526"
 ---
 # <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/UTF-8 (Quelle festlegen und ausführbare Zeichensätze auf UTF-8)
 
@@ -54,6 +43,6 @@ Standardmäßig erkennt Visual Studio eine Bytereihenfolge-Marke, um festzustell
 
 [Compileroptionen](../../build/reference/compiler-options.md)<br/>
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
-[/ Execution-CharSet (Ausführungszeichensatz festlegen)](../../build/reference/execution-charset-set-execution-character-set.md)
-[/Source-CharSet (Quellzeichensatz festlegen)](../../build/reference/source-charset-set-source-character-set.md)
- [ /Validate-CharSet (überprüfen nach kompatiblen Zeichen)](../../build/reference/validate-charset-validate-for-compatible-characters.md)
+[/ Execution-CharSet (Ausführungszeichensatz festlegen)](../../build/reference/execution-charset-set-execution-character-set.md)<br/>
+[/source-charset (Quellzeichensatz festlegen)](../../build/reference/source-charset-set-source-character-set.md)<br/>
+[/validate-charset (Auf kompatible Zeichen überprüfen)](../../build/reference/validate-charset-validate-for-compatible-characters.md)

@@ -1,10 +1,6 @@
 ---
-title: -MD, -MT, -LD (Laufzeitbibliothek verwenden) | Microsoft-Dokumentation
-ms.custom: ''
+title: / MD, -MT, -LD (Laufzeitbibliothek verwenden)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /ld
 - /mt
@@ -12,8 +8,6 @@ f1_keywords:
 - VC.Project.VCCLCompilerTool.RuntimeLibrary
 - /md
 - /ml
-dev_langs:
-- C++
 helpviewer_keywords:
 - /MT compiler option [C++]
 - -MD compiler option [C++]
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - LIBCMTD.lib
 - -MT compiler option [C++]
 ms.assetid: cf7ed652-dc3a-49b3-aab9-ad60e5395579
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ee8e59fbc88e63343d4da75a4cbf95d4f83bf815
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5c7f71e51e0741c534761b22a66ac77a6df8f870
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701362"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50661083"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD, /MT, /LD (Laufzeitbibliothek verwenden)
 
@@ -80,8 +70,6 @@ Weitere Informationen zu C-Laufzeitbibliotheken und welche Bibliotheken verwende
 Alle an einen bestimmten Aufruf des Linkers übergebenen Module müssen mit derselben Compileroption für die Laufzeitbibliothek kompiliert wurde (**/MD**, **"/ MT"**, **/ld**).
 
 Weitere Informationen zur Verwendung der Debugversionen der Laufzeitbibliotheken finden Sie unter [C Run-Time Library Reference](../../c-runtime-library/c-run-time-library-reference.md).
-
-Auch im Knowledge Base-Artikel Q140584 wird beschrieben, wie die passende C-Laufzeitbibliothek auszuwählen ist.
 
 Weitere Informationen über DLLs finden Sie unter [-DLLs in Visual C++](../../build/dlls-in-visual-cpp.md).
 

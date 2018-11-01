@@ -1,14 +1,8 @@
 ---
-title: Debuggen von Unterstützungsklassen | Microsoft Docs
-ms.custom: ''
+title: Debugunterstützungsklassen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.classes.debug
-dev_langs:
-- C++
 helpviewer_keywords:
 - debugging memory leaks, MFC
 - memory allocation, debugging dynamic
@@ -18,26 +12,24 @@ helpviewer_keywords:
 - debugging [MFC], memory leaks
 - memory leaks, MFC debug classes
 ms.assetid: d79e084a-8326-4251-8700-4efac07c511e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 942302a07a55adf7d7a1a89ac2b518e3dcaefe2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6cabd2fb35a60f1b6b53d47d19e95fa65d92c620
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342604"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50521345"
 ---
 # <a name="debugging-support-classes"></a>Debugunterstützungsklassen
-MFC bietet die folgenden Klassen, um dynamische Speicherbelegungsprobleme Debuggen zu erleichtern.  
-  
- [CDumpContext](../mfc/reference/cdumpcontext-class.md)  
- Stellt ein Ziel für Dumps für bereit.  
-  
- [CMemoryState](../mfc/reference/cmemorystate-structure.md)  
- -Struktur, die Momentaufnahmen Speicherverwendung bereitstellt. Auch verwendet zum Vergleichen von früheren und späteren Speichermomentaufnahmen.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../mfc/class-library-overview.md)
+
+MFC enthält die folgenden Klassen, damit Sie die dynamische Speicherreservierungsproblemen Debuggen können.
+
+[CDumpContext](../mfc/reference/cdumpcontext-class.md)<br/>
+Stellt ein Ziel für Diagnosedaten Speicherabbilder.
+
+[CMemoryState](../mfc/reference/cmemorystate-structure.md)<br/>
+-Struktur, die Momentaufnahmen der speicherauslastung bereitstellt. Auch verwendet, um älterer und neuerer Arbeitsspeicher-Momentaufnahmen zu vergleichen.
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../mfc/class-library-overview.md)
 

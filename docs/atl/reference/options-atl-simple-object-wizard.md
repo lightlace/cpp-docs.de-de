@@ -1,27 +1,17 @@
 ---
-title: Optionen, ATL-Assistent für einfache Objekte | Microsoft-Dokumentation
-ms.custom: ''
+title: Optionen, ATL-Assistent für einfache Objekte
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.simple.options
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL Simple Object Wizard, options
 ms.assetid: 125fe179-942d-4181-8b82-33e92e1fd779
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d337d31150b6da1a1556589d63fd60d63842efce
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: efd79c877fcf71ae33b1539e41d3d13379b834de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098783"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650503"
 ---
 # <a name="options-atl-simple-object-wizard"></a>Optionen, ATL-Assistent für einfache Objekte
 
@@ -60,7 +50,7 @@ Weitere Informationen zu ATL-Projekte und ATL-COM-Klassen finden Sie unter [ATL 
    |Option|Beschreibung|
    |------------|-----------------|
    |**Dual**|Gibt an, dass das Objekt eine duale Schnittstelle unterstützt (die Vtable besitzt, benutzerdefinierte Funktionen sowie die späte Bindung `IDispatch` Methoden). Ermöglicht es COM-Clients und [Automatisierungscontroller](../../mfc/automation-clients.md) auf das Objekt zuzugreifen. Der Standardwert.|
-   |**Benutzerdefiniert**|Gibt an, dass das Objekt eine benutzerdefinierte Schnittstelle unterstützt (die Vtable hat benutzerdefinierte Funktionen). Eine benutzerdefinierte Schnittstelle kann vor allem über Prozessgrenzen hinweg schneller als das duale Schnittstelle sein.<br /><br /> -   **Automatisierungskompatibel** Automatisierungscontroller ermöglicht Zugriff auf ein Objekt, das die benutzerdefinierte Schnittstelle unterstützt.|
+   |**Benutzerdefiniert**|Gibt an, dass das Objekt eine benutzerdefinierte Schnittstelle unterstützt (die Vtable hat benutzerdefinierte Funktionen). Eine benutzerdefinierte Schnittstelle kann vor allem über Prozessgrenzen hinweg schneller als das duale Schnittstelle sein.<br /><br /> - **Automatisierungskompatibel** Automatisierungscontroller ermöglicht Zugriff auf ein Objekt, das die benutzerdefinierte Schnittstelle unterstützt.|
 
 - **Unterstützung**
 

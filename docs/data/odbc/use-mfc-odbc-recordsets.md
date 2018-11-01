@@ -16,77 +16,77 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 47694923067b40582530601e36808dc1083f1705
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 36683927d9bde9f36fdeab0746533af9143b0999
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46053556"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072108"
 ---
 # <a name="use-mfc-odbc-recordsets"></a>Verwenden von MFC-ODBC-Recordsets
 
-In diesen Themen wird erläutert, wie mit ODBC-Recordsets und MFC arbeiten.  
-  
-## <a name="in-this-section"></a>In diesem Abschnitt  
-  
-### <a name="general-recordset-tasks"></a>Allgemeine Recordset-Aufgaben  
-  
-- [Wählen Sie eine ODBC-Recordsets](../../data/odbc/recordset-odbc.md)  
-  
-- [Erneutes Abfragen eines Recordsets](../../data/odbc/recordset-requerying-a-recordset-odbc.md)  
-  
-- [Deklarieren Sie eine Recordsetklasse für eine Tabelle](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)  
-  
-- [Deklarieren Sie eine Recordsetklasse für eine vordefinierte Abfrage](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)  
-  
-### <a name="recordset-design-and-implementation"></a>Recordset-Entwurf und Implementierung  
-  
-- [Erfahren Sie mehr über die Datensatzfeldaustausch (RFX)](../../data/odbc/record-field-exchange-rfx.md)  
-  
-- [Exchange-Daten zwischen einer Datenbank und einem Recordset-Objekt](../../data/odbc/record-field-exchange-using-rfx.md)  
-  
-- [Anpassen des Assistenten erzeugten](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)  
-  
-- [Verwenden Sie die Datensatzfeldaustausch (RFX)-Funktionen](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)  
-  
-### <a name="recordset-performance-and-convenience"></a>Recordset-Leistung und Benutzerfreundlichkeit  
-  
-- [Hinzufügen von Datensätzen mit einem recordset](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)  
-  
-- [Filtern von Daten in einem recordset](../../data/odbc/recordset-filtering-records-odbc.md)  
-  
-### <a name="recordset-operations"></a>Recordset-Operationen  
-  
-- [Hinzufügen von Datensätzen mit einem recordset](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)  
-  
-- [Erneutes Abfragen eines Recordsets](../../data/odbc/recordset-requerying-a-recordset-odbc.md)  
-  
-- [Filtern von Daten in einem recordset](../../data/odbc/recordset-filtering-records-odbc.md)  
-  
-- [Sortieren von Datensätzen in einem recordset](../../data/odbc/recordset-sorting-records-odbc.md)  
-  
-- [Parametrisieren eines Recordsets](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)  
-  
-- [Übergeben von Parameterwerten zu einem Recordset zur Laufzeit](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)  
-  
-- [Führen Sie eine Verknüpfung mit einem recordset](../../data/odbc/recordset-performing-a-join-odbc.md)  
-  
-- [Sperren von Datensätzen in einem recordset](../../data/odbc/recordset-locking-records-odbc.md)  
-  
-- [Arbeiten Sie mit großen Datenelementen in einem recordset](../../data/odbc/recordset-working-with-large-data-items-odbc.md)  
-  
-- [Abrufen von Summen und anderen Aggregatergebnissen in einem recordset](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)  
-  
-### <a name="recordset-selection-and-sql"></a>Auswahl des Recordsets und SQL  
-  
-- [Auswählen von Datensätzen aus einer ODBC-Datenquelle](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)  
-  
-- [Anpassen der SQL-Anweisung für ein recordset](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)  
-  
-### <a name="dynamic-binding-of-recordsets"></a>Dynamisches Binden von Recordsets  
-  
-- [Binden Sie die Datenspalten in einem Recordset dynamisch zur Laufzeit](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)  
-  
-## <a name="see-also"></a>Siehe auch  
+In diesen Themen wird erläutert, wie mit ODBC-Recordsets und MFC arbeiten.
+
+## <a name="in-this-section"></a>In diesem Abschnitt
+
+### <a name="general-recordset-tasks"></a>Allgemeine Recordset-Aufgaben
+
+- [Wählen Sie eine ODBC-Recordsets](../../data/odbc/recordset-odbc.md)
+
+- [Erneutes Abfragen eines Recordsets](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+
+- [Deklarieren Sie eine Recordsetklasse für eine Tabelle](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
+
+- [Deklarieren Sie eine Recordsetklasse für eine vordefinierte Abfrage](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
+
+### <a name="recordset-design-and-implementation"></a>Recordset-Entwurf und Implementierung
+
+- [Erfahren Sie mehr über die Datensatzfeldaustausch (RFX)](../../data/odbc/record-field-exchange-rfx.md)
+
+- [Exchange-Daten zwischen einer Datenbank und einem Recordset-Objekt](../../data/odbc/record-field-exchange-using-rfx.md)
+
+- [Anpassen des Assistenten erzeugten](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)
+
+- [Verwenden Sie die Datensatzfeldaustausch (RFX)-Funktionen](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
+
+### <a name="recordset-performance-and-convenience"></a>Recordset-Leistung und Benutzerfreundlichkeit
+
+- [Hinzufügen von Datensätzen mit einem recordset](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)
+
+- [Filtern von Daten in einem recordset](../../data/odbc/recordset-filtering-records-odbc.md)
+
+### <a name="recordset-operations"></a>Recordset-Operationen
+
+- [Hinzufügen von Datensätzen mit einem recordset](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)
+
+- [Erneutes Abfragen eines Recordsets](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+
+- [Filtern von Daten in einem recordset](../../data/odbc/recordset-filtering-records-odbc.md)
+
+- [Sortieren von Datensätzen in einem recordset](../../data/odbc/recordset-sorting-records-odbc.md)
+
+- [Parametrisieren eines Recordsets](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
+
+- [Übergeben von Parameterwerten zu einem Recordset zur Laufzeit](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
+
+- [Führen Sie eine Verknüpfung mit einem recordset](../../data/odbc/recordset-performing-a-join-odbc.md)
+
+- [Sperren von Datensätzen in einem recordset](../../data/odbc/recordset-locking-records-odbc.md)
+
+- [Arbeiten Sie mit großen Datenelementen in einem recordset](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
+
+- [Abrufen von Summen und anderen Aggregatergebnissen in einem recordset](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
+
+### <a name="recordset-selection-and-sql"></a>Auswahl des Recordsets und SQL
+
+- [Auswählen von Datensätzen aus einer ODBC-Datenquelle](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+
+- [Anpassen der SQL-Anweisung für ein recordset](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
+
+### <a name="dynamic-binding-of-recordsets"></a>Dynamisches Binden von Recordsets
+
+- [Binden Sie die Datenspalten in einem Recordset dynamisch zur Laufzeit](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
+
+## <a name="see-also"></a>Siehe auch
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

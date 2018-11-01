@@ -1,12 +1,6 @@
 ---
-title: 'Datum und Uhrzeit: Automatisierungsunterstützung | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Datum und Uhrzeit: Automatisierungsunterstützung'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - adding dates
 - calculating dates and times
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - calculations, date and time
 - time [Visual Studio], Automation support
 ms.assetid: 6eee94c4-943d-4ffc-bf7c-bdda89337ab0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 38933847065544f97d60dfc109436f059a025f7a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5aeefe2594fcb71e8b399e017fc10f8c1c5650a6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763853"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552684"
 ---
 # <a name="date-and-time-automation-support"></a>Datum und Uhrzeit: Automatisierungsunterstützung
 
@@ -57,11 +47,8 @@ Die zweite Methode erstellt zwei `COleDateTime` Objekte `oletime1` und `oletime2
 
 Die CRT wird ordnungsgemäß einen Unterschied in der nächsten 23 Stunden berechnet. `COleDateTimeSpan` berechnet einen Unterschied von 24 Stunden.
 
-Beachten Sie, dass eine problemumgehung in der Nähe des des Beispiels verwendet wird, zum Anzeigen des Datums, die ordnungsgemäß mit `COleDateTime::Format`. Finden Sie unter im Knowledge Base-Artikel "BUG: Format("%D") fehlschlägt `COleDateTime` und `COleDateTimeSpan`" (Q167338).
-
 [!code-cpp[NVC_ATLMFC_Utilities#176](../atl-mfc-shared/codesnippet/cpp/date-and-time-automation-support_1.cpp)]
 
 ## <a name="see-also"></a>Siehe auch
 
 [Datum und Uhrzeit](../atl-mfc-shared/date-and-time.md)
-

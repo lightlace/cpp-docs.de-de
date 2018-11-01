@@ -1,12 +1,6 @@
 ---
-title: Assistenten und die Ressourcen-Editoren | Microsoft Docs
-ms.custom: ''
+title: Assistenten und der Ressourcen-Editor
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - application wizards [MFC], and MFC
 - MFC, resource editors
@@ -18,43 +12,44 @@ helpviewer_keywords:
 - MFC, wizards
 - Class View tool, managing Windows messages
 ms.assetid: f5dd4d13-9dc1-4a49-b6bf-5b3cb45fa8ba
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: db1b807856baf4cab3cdef57092cd29fdff3a19d
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: fe55336d38393787988eac3a6f57394f3923260e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951139"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50472747"
 ---
 # <a name="wizards-and-the-resource-editors"></a>Assistenten und der Ressourcen-Editor
-Visual C++ enthält mehrere Assistenten für die Verwendung in MFC-Programmierung, zusammen mit vielen integrierten Ressourcen-Editoren. Für ActiveX-Programmierung, Steuerelemente der [ActiveX-Steuerelement-Assistent](../mfc/reference/mfc-activex-control-wizard.md) dient dem Zweck, ähnlich der MFC-Anwendung-Assistenten. Während Sie die MFC-Anwendungen ohne die meisten dieser Tools schreiben können, wird die Tools erheblich vereinfachen und beschleunigen Ihre Arbeit.  
-  
-##  <a name="_core_use_appwizard_to_create_an_mfc_application"></a> Verwenden Sie die MFC-Anwendung-Assistent zum Erstellen einer Mfc_anwendung  
- Verwenden der [MFC-Anwendung-Assistent](../mfc/reference/mfc-application-wizard.md) ein MFC-Projekt in Visual C++ erstellen, die OLE umfassen und die Unterstützung der Datenbank. Dateien im Projekt enthalten, die Anwendung, Dokument anzeigen und Rahmenfensterklassen; Standardressourcen, einschließlich Menüs und eine optionale Symbolleiste; andere erforderliche Windows-Dateien; und optionale .rtf-Dateien enthält, standardmäßige Windows-Hilfethemen, die Sie ändern können und ergänzen, die Hilfedatei des Programms erstellen.  
-  
-##  <a name="_core_use_classwizard_to_manage_classes_and_windows_messages"></a> Verwenden Sie zum Verwalten von Klassen und Windows-Meldungen Klassenansicht  
- Klasse Ansicht hilft Handlerfunktionen für die Windows-Meldungen und Befehle erstellen, erstellen und Verwalten von Klassen, Klassenmember Variablen erstellen, Erstellen von Automation-Methoden und Eigenschaften, Datenbankklassen und vieles mehr erstellen.  
-  
+
+Visual C++ enthält mehrere Assistenten für die Verwendung in MFC-Programmierung, zusammen mit vielen integrierten Ressourcen-Editoren. Für ActiveX-Programmieren Steuerelemente, die [ActiveX-Steuerelement-Assistent](../mfc/reference/mfc-activex-control-wizard.md) dient einem Zweck ähnlich der MFC-Anwendung-Assistenten. Während Sie die MFC-Anwendungen, ohne die meisten dieser Tools schreiben können, werden von den Tools erheblich vereinfachen und beschleunigen Ihre Arbeit.
+
+##  <a name="_core_use_appwizard_to_create_an_mfc_application"></a> Verwenden Sie den Assistenten zum MFC-Anwendungen zum Erstellen einer Mfc_anwendung
+
+Verwenden der [MFS-Anwendungsassistenten](../mfc/reference/mfc-application-wizard.md) ein MFC-Projekt in Visual C++ zu erstellen, die OLE enthalten und datenbankunterstützung können. Dateien im Projekt enthalten, Ihre Anwendung, Dokument, Ansicht und Rahmenfensterklassen; Standard-Ressourcen, einschließlich Menüs und eine optionale Symbolleiste; andere erforderliche Dateien für Windows; und optionale RTF-Dateien enthält, die standardmäßige Windows-Hilfethemen, die Sie ändern können, und ergänzen Hilfedatei des Programms zu erstellen.
+
+##  <a name="_core_use_classwizard_to_manage_classes_and_windows_messages"></a> Mithilfe der Klassenansicht zum Verwalten von Klassen und Windows-Meldungen
+
+Klasse Ansicht können Sie Handlerfunktionen für Windows-Meldungen und Befehle erstellen, erstellen und Verwalten von Klassen, Klassenmember Variablen erstellen, Erstellen von Automation-Methoden und Eigenschaften, die Datenbankklassen und vieles mehr zu erstellen.
+
 > [!NOTE]
->  Klassenansicht können Sie virtuelle Funktionen in den MFC-Klassen überschreiben. Wählen Sie die Klasse und die virtuelle Funktion, die außer Kraft setzen. Die restliche Prozess ähnelt Meldungsbehandlung, wie in den folgenden Abschnitten beschrieben.  
-  
- Anwendungen, die unter Windows ausgeführt werden [Nachricht driven](../mfc/message-handling-and-mapping.md). Dazu führen, dass Windows zum Senden von Nachrichten auf dem Windows im Programm Benutzeraktionen und andere Ereignisse, die in der ausgeführten Anwendung auftreten. Z. B. wenn der Benutzer die Maus in einem Fenster klickt, sendet Windows eine WM_LBUTTONDOWN-Meldung, wenn die linke Maustaste gedrückt wird und eine Nachricht WM_LBUTTONUP, wenn die Maustaste losgelassen wird. Wenn der Benutzer über die Menüleiste Befehle auswählt, sendet Windows auch WM_COMMAND-Meldungen.  
-  
- In der MFC-Framework können verschiedene Objekte, z. B. Dokumente, Ansichten, Rahmenfenster, Dokumentvorlagen und das Anwendungsobjekt "Nachrichten verarbeiten". Ein solches Objekt "Handlerfunktion" als eines seiner Member stellt Funktionen bereit, und das Framework wird die eingehende Nachricht der Handler zugeordnet.  
-  
- Ein großer Teil der Ihre Aufgabe als Programmierer ist welche Nachrichten zuordnen, welche Objekte auswählen und implementieren Sie dann diese Zuordnung. Zu diesem Zweck verwenden Sie Klassenansicht und im Eigenschaftenfenster angezeigt.  
-  
- Eigenschaftenfenster erstellt leere Meldungshandler-Memberfunktionen, und der Quellcode-Editors verwendet, um den Text des ereignishandlers zu implementieren. Sie können auch erstellen oder bearbeiten (einschließlich Ihrer Wahl, nicht von MFC-Klassen abgeleitete Klassen) Klassen und ihre Member mit Klassenansicht. Weitere Informationen zur Verwendung der Klassenansicht und Assistenten, mit denen Code zu einem Projekt hinzufügen, finden Sie unter [Hinzufügen neuer Funktionen mit Code-Assistenten](../ide/adding-functionality-with-code-wizards-cpp.md).  
-  
-##  <a name="_core_use_the_resource_editors_to_create_and_edit_resources"></a> Verwenden Sie die Ressourcen-Editoren zum Erstellen und Bearbeiten von Ressourcen  
- Verwenden Sie die Visual C++ [Ressourcen-Editoren](../windows/resource-editors.md) erstellen und Bearbeiten von Menüs, Dialogfeldern, benutzerdefinierte Steuerelemente, Zugriffstasten, Bitmaps, Symbole, Cursor, Zeichenfolgen und Versionsressourcen. Ab Visual C++, Version 4.0 wird als ein Symbolleisten-Editor Erstellen von Symbolleisten wesentlich einfacher.  
-  
- Um Sie noch mehr zu erleichtern, bietet die Microsoft Foundation Class-Bibliothek eine Datei mit allgemeinen. RES, die "ClipArt" Ressourcen enthält, die Sie von COMMON kopieren können. RES und Einfügen in eine eigene Ressourcendatei. ALLGEMEINE. RES enthält Symbolleisten-Schaltflächen, allgemeine Cursor, Symbole und mehr. Sie können verwenden, ändern und verteilen diese Ressourcen in Ihrer Anwendung. Weitere Informationen zu allgemeinen. RES, finden Sie unter der [Clipart-Beispiel](../visual-cpp-samples.md).  
-  
- MFC-Anwendung-Assistenten, die Visual C++-Assistenten Ressourcen-Editoren und MFC-Framework viel Arbeit für Sie erledigen, und stellen Ihren Code leichter verwalten. Der Großteil der anwendungsspezifischen Code befindet sich in Ihrem Dokument und Ansicht-Klassen.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden der Klassen zum Schreiben von Anwendungen für Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)
+>  Klassenansicht hilft Ihnen auch die virtuelle Funktionen in die MFC-Klassen außer Kraft setzen möchten. Wählen Sie die Klasse und die zu überschreibende virtuelle Funktion. Die restlichen Prozess ähnelt der Behandlung von Nachrichten, wie in den folgenden Abschnitten beschrieben.
+
+Anwendungen, die unter Windows ausgeführt wird, sind [Message driven](../mfc/message-handling-and-mapping.md). Führen Windows zum Senden von Nachrichten an die Fenster in das Programm, Benutzeraktionen und andere Ereignisse, die in das aktive Programm auftreten. Z. B. wenn der Benutzer den Mauszeiger über einem Fenster klickt, sendet Windows eine WM_LBUTTONDOWN-Meldung, wenn die linke Maustaste gedrückt wird und eine Nachricht ein WM_LBUTTONUP, wenn die Maustaste losgelassen wird. Windows sendet auch WM_COMMAND-Meldungen auf, wenn der Benutzer Befehle in der Menüleiste auswählt.
+
+In MFC-Framework können verschiedene Objekte, z. B. Dokumente, Ansichten, Rahmenfenster, Dokumentvorlagen und des Anwendungsobjekts, "Nachrichten behandeln". Ein solches Objekt eine "Handlerfunktion" als eines seiner Member stellt Funktionen bereit, und das Framework wird die eingehende Nachricht der Handler zugeordnet.
+
+Ein großer Teil der Ihre Aufgabe als Programmierer ist die Auswahl der Nachrichten, auf welche Objekte zuzuordnen und implementieren Sie dann auf die Zuordnung. Zu diesem Zweck verwenden Sie Klassenansicht und im Eigenschaftenfenster angezeigt.
+
+Das Fenster "Eigenschaften" erstellt ein leeres Meldungshandler-Memberfunktionen, und Sie den Quellcode-Editor verwenden, um den Text des ereignishandlers zu implementieren. Sie können auch erstellen oder Bearbeiten von Klassen (einschließlich Ihrer eigenen, nicht von MFC-Klassen abgeleitete Klassen) und deren Member in der Klassenansicht. Weitere Informationen zur Verwendung der Klassenansicht und Assistenten, mit denen einer Projekt Code hinzu, finden Sie unter [Hinzufügen neuer Funktionen mit Code-Assistenten](../ide/adding-functionality-with-code-wizards-cpp.md).
+
+##  <a name="_core_use_the_resource_editors_to_create_and_edit_resources"></a> Verwenden Sie die Ressourcen-Editoren zum Erstellen und Bearbeiten von Ressourcen
+
+Verwenden Sie die Visual C++ [Ressourcen-Editoren](../windows/resource-editors.md) erstellen und Bearbeiten von Menüs, Dialogfeldern, benutzerdefinierte Steuerelemente, Zugriffstasten, Bitmaps, Symbole, Cursor, Zeichenfolgen und Versionsressourcen. Ab Visual C++, Version 4.0 vereinfacht ein Symbolleisten-Editor Erstellen von Symbolleisten.
+
+Damit Sie noch mehr, bietet die Microsoft Foundation Class-Library eine Datei mit dem allgemeinen. RES, die "ClipArt-Ressourcen enthält, die Sie häufiger kopieren können. RES, und fügen Sie in Ihren eigenen Ressourcendatei. ALLGEMEINE. RES enthält Schaltflächen der Symbolleiste, allgemeine Cursor, Symbole und vieles mehr. Sie können verwenden, ändern und verteilen diese Ressourcen in Ihrer Anwendung. Weitere Informationen zu allgemeinen. RES, finden Sie unter den [Clipart-Beispiel](../visual-cpp-samples.md).
+
+Den Assistenten zum MFC-Anwendungen, die Visual C++-Assistenten, Ressourcen-Editoren und MFC-Framework viel Arbeit für Sie erledigt, und vereinfachen der Verwaltung von Ihrem Codes viel einfacher. Der größte Teil Ihrer Anwendung-spezifischen Code befindet sich in Ihrem Dokument und Anzeigen von Klassen.
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden der Klassen zum Schreiben von Anwendungen für Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)

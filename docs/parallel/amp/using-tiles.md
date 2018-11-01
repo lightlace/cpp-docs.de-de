@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Kacheln | Microsoft Docs
+title: Verwenden von Kacheln | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -12,16 +12,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c02b5d558ccf2c1353e96dd1990b6d4178457aa
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: df2f449cce01dc2d0903ff802ffb94914b68bceb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121948"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386263"
 ---
 # <a name="using-tiles"></a>Verwenden von Kacheln
 
-Sie können Kacheln verwenden, um die Beschleunigung der App zu maximieren. Kacheln unterteilt Threads in gleiche rechteckige Teilmengen bzw. *Kacheln*. Wenn Sie eine geeignete Flächengröße und Kachelalgorithmus verwenden, können Sie noch mehr Beschleunigung aus dem C++ AMPcode abrufen. Die grundlegenden Komponenten des Kachelns sind:
+Sie können Kacheln verwenden, um die Beschleunigung der App zu maximieren. Kacheln unterteilt die Threads in gleiche rechteckige Teilmengen bzw. *Kacheln*. Wenn Sie eine geeignete Flächengröße und Kachelalgorithmus verwenden, können Sie noch mehr Beschleunigung aus dem C++ AMPcode abrufen. Die grundlegenden Komponenten des Kachelns sind:
 
 - `tile_static`-Variablen. Der wichtigste Vorteil des Kachelns liegt in der Leistungssteigerung durch den `tile_static`-Zugriff. Zugriff auf Daten im `tile_static`-Arbeitsspeicher kann erheblich schneller sein als ein Zugriff auf Daten im globalen Namensbereich (`array`-Objekte oder `array_view`-Objekte). Eine Instanz einer `tile_static`-Variable wird für jeden Tile erstellt, und alle Threads in den Tile haben Zugriff auf die Variable. In einem typischen Kachelalgorithmus werden Daten einmalig vom globalen Speicher in den `tile_static`-Speicher kopiert und darauf dann mehrfach vom `tile_static`-Speicher zugegriffen.
 
@@ -37,7 +37,7 @@ Um die Vorteile des Kachelns zu nutzen, muss Ihr Algorithmus die zu verarbeitend
 
 Das folgende Diagramm stellt eine 8 x 9-Datenmatrix dar, die in einer 2 x 3-Kachelgruppe angeordnet wird.
 
-![8&#45;von&#45;9-Matrix unterteilt in 2&#45;von&#45;3 Kacheln](../../parallel/amp/media/usingtilesmatrix.png "Usingtilesmatrix")
+![8&#45;von&#45;9-Matrix aufgeteilt in 2&#45;von&#45;3 Kacheln](../../parallel/amp/media/usingtilesmatrix.png "Usingtilesmatrix")
 
 Im folgenden Beispiel werden globale, unterteilte und lokale Indizes dieser gekachelten Matrix. Zum Erstellen eines `array_view`-Objekts werden Elemente des `Description`-Typs verwendet. Die `Description` enthält die globalen, unterteilten und lokalen Indizes des Elements in der Matrix. Der Code im Aufruf von `parallel_for_each` legt die Werte von globalen, unterteilten und lokalen Indizes für jedes Element fest. Die Ausgabe zeigt die Werte in den `Description`-Strukturen an.
 
@@ -73,11 +73,11 @@ void SetConsoleColor(int color) {
 // A helper function for formatting the output.
 void SetConsoleSize(int height, int width) {
     COORD coord;
-    
+
     coord.X = width;
     coord.Y = height;
     SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), coord);
-    
+
     SMALL_RECT* rect = new SMALL_RECT();
     rect->Left = 0;
     rect->Top = 0;
@@ -299,15 +299,15 @@ Es gibt zwei Arten von Speicherzugriffen, die synchronisiert werden müssen: glo
 
 - `tile_static`
 
-Ein *Arbeitsspeicher-Fence* wird sichergestellt, dass der Arbeitsspeicher Speicherzugriffe für andere Threads in der threadkachel verfügbar sind, und das die Speicherzugriffe der programmreihenfolge entsprechend ausgeführt werden. Um dies sicherzustellen, ordnen Compiler und Prozessoren die Lese- und Schreibzugriffe fenceübergreifend nicht neu. In C++ AMP wird ein Arbeitsspeicher-Fence durch einen Aufruf eine dieser Methoden erstellt:
+Ein *Arbeitsspeicher-Fence* wird sichergestellt, dass der Speicher Zugriffe für andere Threads in der threadkachel verfügbar sind und das die programmreihenfolge entsprechend ausgeführt werden. Um dies sicherzustellen, ordnen Compiler und Prozessoren die Lese- und Schreibzugriffe fenceübergreifend nicht neu. In C++ AMP wird ein Arbeitsspeicher-Fence durch einen Aufruf eine dieser Methoden erstellt:
 
-- [tile_barrier:: Wait-Methode](reference/tile-barrier-class.md#wait): erstellt eine Umgrenzung um sowohl globale und `tile_static` Arbeitsspeicher.
+- [tile_barrier:: Wait-Methode](reference/tile-barrier-class.md#wait): erstellt einen Fence um globalen und `tile_static` Arbeitsspeicher.
 
-- [tile_barrier:: wait_with_all_memory_fence-Methode](reference/tile-barrier-class.md#wait_with_all_memory_fence): erstellt eine Umgrenzung um sowohl globale und `tile_static` Arbeitsspeicher.
+- [tile_barrier:: wait_with_all_memory_fence-Methode](reference/tile-barrier-class.md#wait_with_all_memory_fence): erstellt einen Fence um globalen und `tile_static` Arbeitsspeicher.
 
-- [tile_barrier:: wait_with_global_memory_fence-Methode](reference/tile-barrier-class.md#wait_with_global_memory_fence): erstellt eine Umgrenzung um ausschließlich globalen Arbeitsspeicher.
+- [tile_barrier:: wait_with_global_memory_fence-Methode](reference/tile-barrier-class.md#wait_with_global_memory_fence): erstellt einen Fence ausschließlich um globalen Arbeitsspeicher.
 
-- [tile_barrier:: wait_with_tile_static_memory_fence-Methode](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): erstellt eine Umgrenzung um nur `tile_static` Arbeitsspeicher.
+- [tile_barrier:: wait_with_tile_static_memory_fence-Methode](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): erstellt einen Fence ausschließlich um `tile_static` Arbeitsspeicher.
 
 Das Aufrufen eines bestimmten von Ihnen benötigten Fence kann die Leistung Ihrer App verbessern. Der Grenztyp hat Auswirkungen auf die neue Anordnung von Anweisungen durch Compiler und Hardware. Wenn Sie beispielsweise einen globalen Arbeitsspeicher-Fence verwenden, gilt er nur für globale Speicherzugriffe und daher werden Compiler und Hardware möglicherweise Lese- und Schreibvorgänge in `tile_static`-Variablen auf beiden Seiten des Fence neu anordnen.
 
@@ -341,5 +341,5 @@ parallel_for_each(matrix.extent.tile<SAMPLESIZE, SAMPLESIZE>(),
 
 ## <a name="see-also"></a>Siehe auch
 
-[C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)  
-[tile_static-Schlüsselwort](../../cpp/tile-static-keyword.md)  
+[C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
+[tile_static-Schlüsselwort](../../cpp/tile-static-keyword.md)

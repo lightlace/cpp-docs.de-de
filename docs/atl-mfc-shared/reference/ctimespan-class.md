@@ -1,10 +1,6 @@
 ---
-title: CTimeSpan-Klasse | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
+title: CTimeSpan-Klasse
+ms.date: 10/18/2018
 f1_keywords:
 - CTimeSpan
 - ATLTIME/ATL::CTimeSpan
@@ -19,8 +15,6 @@ f1_keywords:
 - ATLTIME/ATL::CTimeSpan::GetTotalMinutes
 - ATLTIME/ATL::CTimeSpan::GetTotalSeconds
 - ATLTIME/ATL::CTimeSpan::Serialize64
-dev_langs:
-- C++
 helpviewer_keywords:
 - elapsed time, CTimeSpan object
 - timespan
@@ -29,16 +23,12 @@ helpviewer_keywords:
 - shared classes, CTimeSpan
 - time, elapsed
 ms.assetid: ee1e42f6-1839-477a-8435-fb26ad475140
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c06da499ed463404cc917fef7c8aebd52695061e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 6ab22b9a093a1aa9c8ae0249c036ea2bf89065f6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109731"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50641871"
 ---
 # <a name="ctimespan-class"></a>CTimeSpan-Klasse
 
@@ -114,7 +104,7 @@ bool operator>=(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*umfassen*  
+*umfassen*<br/>
 Das zu vergleichende Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -133,22 +123,22 @@ Erstellt `CTimeSpan` Objekte auf unterschiedliche Weise.
 CTimeSpan() throw();
 CTimeSpan(__time64_t time) throw();
 
-CTimeSpan(  
-LONG lDays,
-int nHours,
-int nMins,
-int nSecs) throw();
+CTimeSpan(
+    LONG lDays,
+    int nHours,
+    int nMins,
+    int nSecs) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*timeSpanSrc*  
+*timeSpanSrc*<br/>
 Ein `CTimeSpan` -Objekt, das bereits vorhanden ist.
 
-*time*  
+*time*<br/>
 Ein **__time64_t** Time-Werten, die die Anzahl der Sekunden, in dem Zeitraum ist.
 
-*lDays*, *nHours*, *nMins*, *nSecs*  
+*lDays*, *nHours*, *nMins*, *nSecs*<br/>
 Tage, Stunden, Minuten und Sekunden, bzw.
 
 ### <a name="remarks"></a>Hinweise
@@ -163,12 +153,12 @@ Alle diese Konstruktoren erstellen ein neues `CTimeSpan` Objekt, mit dem angegeb
 
 - `CTimeSpan( LONG, int, int, int );` Erstellt eine `CTimeSpan` Objekt von Komponenten mit den einzelnen Komponenten eingeschränkt, die den folgenden Bereichen:
 
-    |Komponente|Bereich|  
-    |---------------|-----------|  
-    |*lDays*|0 bis 25.000 Objekte (ungefähr)|  
-    |*nHours*|0-23|  
-    |*nMins*|0-59|  
-    |*nSecs*|0-59|
+   |Komponente|Bereich|
+   |---------------|-----------|
+   |*lDays*|0 bis 25.000 Objekte (ungefähr)|
+   |*nHours*|0-23|
+   |*nMins*|0-59|
+   |*nSecs*|0-59|
 
 Beachten Sie, dass die Debugversion der Microsoft Foundation Class-Bibliothek bestätigt wird, wenn eine oder mehrere Tage Zeit Komponenten außerhalb des Bereichs. Es ist Ihre Aufgabe, die die Argumente vor dem Aufruf zu überprüfen.
 
@@ -188,7 +178,7 @@ CString Format(UINT nID) const;
 
 ### <a name="parameters"></a>Parameter
 
-*pFormat*, *PszFormat*  
+*pFormat*, *PszFormat*<br/>
 Eine Formatierungszeichenfolge ähnelt der `printf` Formatierungszeichenfolge. Formatierungscodes Prozentsatz vorangestellt (`%`) anmelden, werden mit den entsprechenden ersetzt `CTimeSpan` Komponente. Andere Zeichen in der Formatierungszeichenfolge werden auf die zurückgegebene Zeichenfolge unverändert kopiert. Der Wert und die Bedeutung der Formatierungscodes für `Format` sind nachfolgend aufgeführt:
 
 - **%D** Tage in diesem gesamt `CTimeSpan`
@@ -201,7 +191,7 @@ Eine Formatierungszeichenfolge ähnelt der `printf` Formatierungszeichenfolge. F
 
 - **%%** Prozentzeichen
 
-*nID*  
+*nID*<br/>
 Die ID der Zeichenfolge, die dieses Format identifiziert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -355,7 +345,7 @@ CTimeSpan operator-(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*umfassen*  
+*umfassen*<br/>
 Der Wert, der zum Hinzufügen der `CTimeSpan` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -381,7 +371,7 @@ CTimeSpan& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*umfassen*  
+*umfassen*<br/>
 Der Wert, der zum Hinzufügen der `CTimeSpan` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -409,7 +399,7 @@ CArchive& Serialize64(CArchive& ar);
 
 ### <a name="parameters"></a>Parameter
 
-*ar*  
+*ar*<br/>
 Die `CArchive` -Objekt, das Sie aktualisieren möchten.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -418,12 +408,12 @@ Die aktualisierte `CArchive` Objekt.
 
 ## <a name="see-also"></a>Siehe auch
 
-[asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
-[_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
-[gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
-[localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
-[strftime, wcsftime, _strftime_l, _wcsftime_l](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)   
-[time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)   
-[Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
+[asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)<br/>
+[_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)<br/>
+[gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)<br/>
+[localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)<br/>
+[strftime, wcsftime, _strftime_l, _wcsftime_l](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)<br/>
+[time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)<br/>
+[Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [Freigegebene ATL-/MFC-Klassen](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

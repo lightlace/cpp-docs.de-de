@@ -32,99 +32,104 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d61b17bb597028bec55edb148897929f178392d7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d9d41ae92a829452edebe390723997a67b5cd812
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412331"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112069"
 ---
 # <a name="setoutputformat"></a>_set_output_format
-Passt die von den Funktionen für formatierte E/A verwendeten Ausgabeformate an.  
-  
+
+Passt die von den Funktionen für formatierte E/A verwendeten Ausgabeformate an.
+
 > [!IMPORTANT]
->  Diese Funktion ist veraltet. Von Visual Studio 2015 an ist sie nicht in der CRT verfügbar.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-unsigned int _set_output_format(  
-   unsigned int format  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- [in] `format`  
- Ein Wert, der das zu verwendende Format darstellt.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Das vorherige Ausgabeformat.  
-  
-## <a name="remarks"></a>Hinweise  
- `_set_output_format` wird verwendet, um die Ausgabe von formatierten E/A-Funktionen, wie z.B. [printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md), zu konfigurieren. Zurzeit ist die einzige Formatierungskonvention, die von dieser Funktion geändert werden kann, die Anzahl der Stellen, die in Exponenten in der Ausgabe von Gleitkommazahlen angezeigt werden.  
-  
- Standardmäßig erfolgt die Ausgabe von Gleitkommazahlen durch Funktionen wie `printf_s`, `wprintf_s`und ähnliche Funktionen in der Standard-C-Bibliothek von Visual C++ mit drei Stellen für den Exponenten, selbst wenn keine drei Stellen für die Darstellung des Werts des Exponenten erforderlich sind. Nullen werden verwendet, um den Wert auf drei Stellen aufzufüllen. `_set_output_format` ermöglicht Ihnen, dieses Verhalten zu ändern, sodass nur zwei Stellen im Exponenten geduckt werden, es sei denn, die Größe des Exponenten macht eine dritte Stelle erforderlich.  
-  
- Um zweistellige Exponenten zu aktivieren, rufen Sie diese Funktion mit dem Parameter `_TWO_DIGIT_EXPONENT`auf, wie im Beispiel gezeigt. Um die zweistelligen Exponenten zu deaktivieren, rufen Sie diese Funktion mit dem Argument „0“ auf.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|-Routine zurückgegebener Wert|Erforderlicher Header|  
-|-------------|---------------------|  
-|`_set_output_format`|\<stdio.h>|  
-  
- Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="example"></a>Beispiel  
-  
-```C  
-// crt_set_output_format.c  
-#include <stdio.h>  
-  
-void printvalues(double x, double y)  
-{  
-   printf_s("%11.4e %11.4e\n", x, y);  
-   printf_s("%11.4E %11.4E\n", x, y);  
-   printf_s("%11.4g %11.4g\n", x, y);  
-   printf_s("%11.4G %11.4G\n", x, y);  
-}  
-  
-int main()  
-{  
-   double x = 1.211E-5;  
-   double y = 2.3056E-112;  
-   unsigned int old_exponent_format;  
-  
-   // Use the default format  
-   printvalues(x, y);  
-  
-   // Enable two-digit exponent format  
-   old_exponent_format = _set_output_format(_TWO_DIGIT_EXPONENT);  
-  
-   printvalues(x, y);  
-  
-   // Disable two-digit exponent format  
-   _set_output_format( old_exponent_format );  
-  
-   printvalues(x, y);  
-}  
-```  
-  
-```Output  
-1.2110e-005 2.3056e-112  
-1.2110E-005 2.3056E-112  
- 1.211e-005  2.306e-112  
- 1.211E-005  2.306E-112  
- 1.2110e-05 2.3056e-112  
- 1.2110E-05 2.3056E-112  
-  1.211e-05  2.306e-112  
-  1.211E-05  2.306E-112  
-1.2110e-005 2.3056e-112  
-1.2110E-005 2.3056E-112  
- 1.211e-005  2.306e-112  
- 1.211E-005  2.306E-112  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)   
- [_get_output_format](../c-runtime-library/get-output-format.md)
+>  Diese Funktion ist veraltet. Von Visual Studio 2015 an ist sie nicht in der CRT verfügbar.
+
+## <a name="syntax"></a>Syntax
+
+```
+unsigned int _set_output_format(
+   unsigned int format
+);
+```
+
+#### <a name="parameters"></a>Parameter
+
+*format*<br/>
+[in]: Ein Wert, der das zu verwendende Format darstellt.
+
+## <a name="return-value"></a>Rückgabewert
+
+Das vorherige Ausgabeformat.
+
+## <a name="remarks"></a>Hinweise
+
+`_set_output_format` wird verwendet, um die Ausgabe von formatierten E/A-Funktionen, wie z.B. [printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md), zu konfigurieren. Zurzeit ist die einzige Formatierungskonvention, die von dieser Funktion geändert werden kann, die Anzahl der Stellen, die in Exponenten in der Ausgabe von Gleitkommazahlen angezeigt werden.
+
+Standardmäßig erfolgt die Ausgabe von Gleitkommazahlen durch Funktionen wie `printf_s`, `wprintf_s`und ähnliche Funktionen in der Standard-C-Bibliothek von Visual C++ mit drei Stellen für den Exponenten, selbst wenn keine drei Stellen für die Darstellung des Werts des Exponenten erforderlich sind. Nullen werden verwendet, um den Wert auf drei Stellen aufzufüllen. `_set_output_format` ermöglicht Ihnen, dieses Verhalten zu ändern, sodass nur zwei Stellen im Exponenten geduckt werden, es sei denn, die Größe des Exponenten macht eine dritte Stelle erforderlich.
+
+Um zweistellige Exponenten zu aktivieren, rufen Sie diese Funktion mit dem Parameter `_TWO_DIGIT_EXPONENT`auf, wie im Beispiel gezeigt. Um die zweistelligen Exponenten zu deaktivieren, rufen Sie diese Funktion mit dem Argument „0“ auf.
+
+## <a name="requirements"></a>Anforderungen
+
+|-Routine zurückgegebener Wert|Erforderlicher Header|
+|-------------|---------------------|
+|`_set_output_format`|\<stdio.h>|
+
+Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../c-runtime-library/compatibility.md) in der Einführung.
+
+## <a name="example"></a>Beispiel
+
+```C
+// crt_set_output_format.c
+#include <stdio.h>
+
+void printvalues(double x, double y)
+{
+   printf_s("%11.4e %11.4e\n", x, y);
+   printf_s("%11.4E %11.4E\n", x, y);
+   printf_s("%11.4g %11.4g\n", x, y);
+   printf_s("%11.4G %11.4G\n", x, y);
+}
+
+int main()
+{
+   double x = 1.211E-5;
+   double y = 2.3056E-112;
+   unsigned int old_exponent_format;
+
+   // Use the default format
+   printvalues(x, y);
+
+   // Enable two-digit exponent format
+   old_exponent_format = _set_output_format(_TWO_DIGIT_EXPONENT);
+
+   printvalues(x, y);
+
+   // Disable two-digit exponent format
+   _set_output_format( old_exponent_format );
+
+   printvalues(x, y);
+}
+```
+
+```Output
+1.2110e-005 2.3056e-112
+1.2110E-005 2.3056E-112
+1.211e-005  2.306e-112
+1.211E-005  2.306E-112
+1.2110e-05 2.3056e-112
+1.2110E-05 2.3056E-112
+  1.211e-05  2.306e-112
+  1.211E-05  2.306E-112
+1.2110e-005 2.3056e-112
+1.2110E-005 2.3056E-112
+1.211e-005  2.306e-112
+1.211E-005  2.306E-112
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>
+[_get_output_format](../c-runtime-library/get-output-format.md)

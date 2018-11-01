@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cec232bb4e4f2f6ac1ab9af703b368eec0ba5dd
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: eec1620d9ae84e5c0b957b7426ad388c70626813
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33331518"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379215"
 ---
 # <a name="linker-property-pages"></a>Linker-Eigenschaftenseiten
 
@@ -65,5 +65,5 @@ Informationen dazu, wie Sie auf die Linker-Eigenschaftenseite **Allgemein** zugr
 
 ## <a name="see-also"></a>Siehe auch
 
-[VC++-Projekteinstellungen, Projekte und Projektmappen, Dialogfeld „Optionen“](/visualstudio/ide/reference/vcpp-project-settings-projects-and-solutions-options-dialog-box)  
-[Eigenschaftenseiten](../ide/property-pages-visual-cpp.md)  
+[VC++-Projekteinstellungen, Projekte und Projektmappen, Dialogfeld „Optionen“](/visualstudio/ide/reference/vcpp-project-settings-projects-and-solutions-options-dialog-box)<br>
+[Eigenschaftenseiten](../ide/property-pages-visual-cpp.md)

@@ -1,12 +1,6 @@
 ---
-title: Registerkarte "Dialog-Editor", Toolbox (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Registerkarte "Dialog-Editor", Toolbox (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Toolbox [C++], Dialog Editor tab
 - controls [C++], types
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - Dialog Editor [C++], creating controls
 - controls [C++], adding to dialog boxes
 ms.assetid: 253885c2-dcb9-4d8e-ac9b-805ea31cbf5e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 2fa16a2cf15d5004ff80dda3188d79ffcba72ec1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ee5ee95f22c9cbcbde1d6c8b9ba1646f979697a6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316210"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50515231"
 ---
 # <a name="dialog-editor-tab-toolbox-c"></a>Registerkarte "Dialog-Editor", Toolbox (C++)
 
@@ -100,10 +89,10 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Steuerelemente](../mfc/controls-mfc.md)  
-[Steuerelementklassen](../mfc/control-classes.md)  
-[Dialogfeldklassen](../mfc/dialog-box-classes.md)  
-[Stile des Schiebeleisten-Steuerelements](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)  
-[Beispiele für RichEdit-Steuerelemente](../mfc/rich-edit-control-examples.md)  
-[Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](../windows/adding-event-handlers-for-dialog-box-controls.md)  
+[Steuerelemente](../mfc/controls-mfc.md)<br/>
+[Steuerelementklassen](../mfc/control-classes.md)<br/>
+[Dialogfeldklassen](../mfc/dialog-box-classes.md)<br/>
+[Stile des Schiebeleisten-Steuerelements](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)<br/>
+[Beispiele für RichEdit-Steuerelemente](../mfc/rich-edit-control-examples.md)<br/>
+[Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
 [Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)

@@ -1,7 +1,7 @@
 ---
 title: Interior_ptr (C++ / CLI) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2745ed1a17311f92fda6fc61743fed65882b952
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d47539c9d7d8e51a061aba35e6b2f3b8f7049951
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601107"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328050"
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
 
@@ -54,16 +54,16 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 
 ### <a name="parameters"></a>Parameter
 
-*cv_qualifier*  
+*cv_qualifier*<br/>
 **const** oder **flüchtige** Qualifizierer.
 
-*Typ*  
+*Typ*<br/>
 Der Typ des *Initialisierer*.
 
-*var*  
+*var*<br/>
 Der Name des der **Interior_ptr** Variable.
 
-*initializer*  
+*initializer*<br/>
 Ein Member eines Verweistyps, Element eines verwalteten Arrays oder jedes andere Objekt, das Sie in einen systemeigenen Zeiger zuweisen können.
 
 ### <a name="remarks"></a>Hinweise
@@ -134,4 +134,4 @@ int main() {
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET- und UWP](../windows/component-extensions-for-runtime-platforms.md)

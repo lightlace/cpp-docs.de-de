@@ -1,10 +1,6 @@
 ---
-title: _unlink, _wunlink | Microsoft-Dokumentation
-ms.custom: ''
+title: _unlink, _wunlink
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _unlink
 - _wunlink
@@ -26,8 +22,6 @@ f1_keywords:
 - _unlink
 - wunlink
 - _wunlink
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], deleting
 - _wunlink function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ace694452467d6d559f8820216be71ecd85b54e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7565679c58af83d64fd59419e8e841ee48133edf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411008"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544196"
 ---
 # <a name="unlink-wunlink"></a>_unlink, _wunlink
 
@@ -71,13 +61,13 @@ Name der zu entfernenden Datei.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt bei Erfolg 0 zurück. Anderenfalls gibt die Funktion-1 zurück und legt **Errno** auf **EACCES**, was bedeutet, dass den Pfad Gibt eine schreibgeschützte Datei an oder **ENOENT**, also die Datei oder der Pfad wurde nicht gefunden oder der Pfad hat ein Verzeichnis angegeben.
+Jede dieser Funktionen gibt bei Erfolg 0 zurück. Anderenfalls gibt die Funktion-1 zurück und legt **Errno** zu **EACCES**, was bedeutet, dass den Pfad eine schreibgeschützte Datei angibt oder **ENOENT**, d.h. Datei oder Pfad wurde nicht gefunden oder der Pfad ein Verzeichnis angegeben.
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_unlink** Funktion löscht die angegebene Datei *Filename*. **_wunlink** ist eine Breitzeichen-Version von **_unlink**; das *Filename* Argument **_wunlink** ist eine Breitzeichen-Zeichenfolge. Anderenfalls verhalten sich diese Funktionen identisch.
+Die **_unlink** Funktion löscht die angegebene Datei *Filename*. **_wunlink** ist eine Breitzeichen-Version von **_unlink**; die *Filename* Argument **_wunlink** ist eine Breitzeichen-Zeichenfolge. Anderenfalls verhalten sich diese Funktionen identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -87,7 +77,7 @@ Die **_unlink** Funktion löscht die angegebene Datei *Filename*. **_wunlink** i
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_unlink**|\<io.h> und \<stdio.h>|
 |**_wunlink**|\<io.h> oder \<wchar.h>|

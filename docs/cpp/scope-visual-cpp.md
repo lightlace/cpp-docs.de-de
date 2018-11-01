@@ -1,12 +1,6 @@
 ---
-title: Bereich (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Gültigkeitsbereich (C++)
 ms.date: 04/08/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - classes [C++], scope
 - scope [C++]
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eb9d21eee8e561e2caa8a7c4088774435d3ce273
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f44b75be7b2b1459e3ee9d0472f9a5ef6dac9025
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080440"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506612"
 ---
 # <a name="scope-c"></a>Gültigkeitsbereich (C++)
 
@@ -41,7 +31,7 @@ Es gibt sechs Arten von Gültigkeitsbereichen:
 
 - **Lokalen Gültigkeitsbereich** ein Namen, die innerhalb einer Funktion oder einem Lambda-Ausdrucks die Parameternamen, einschließlich deklariert haben lokale Gültigkeit. Sie werden häufig als "lokal" bezeichnet. Sie sind nur von dem Zeitpunkt der Deklaration bis zum Ende der Funktion oder einem Lambda-Text angezeigt. Lokaler Bereich ist eine Art von Blockbereich, der später in diesem Artikel erläutert wird.
 
-- **Klassengültigkeitsbereich** Namen von Klassenmembern haben einen Klassengültigkeitsbereich, die in der gesamten Definition der Klasse, unabhängig von dem Zeitpunkt der Deklaration erweitert. Klasse Memberzugriff ist daran gesteuert durch die **öffentliche**, **private**, und **geschützt** Schlüsselwörter. Öffentlicher oder geschützter Member zugegriffen werden kann, nur mithilfe der memberauswahloperatoren (**.** oder **->**) oder Pointer-to-Member-Operatoren (**.** <strong>\*</strong> oder **->** <strong>\*</strong>).
+- **Klassengültigkeitsbereich** Namen von Klassenmembern haben einen Klassengültigkeitsbereich, die in der gesamten Definition der Klasse, unabhängig von dem Zeitpunkt der Deklaration erweitert. Memberzugriff Klasse wird weiter gesteuert, indem die **öffentliche**, **private**, und **geschützt** Schlüsselwörter. Öffentlicher oder geschützter Member zugegriffen werden kann, nur mithilfe der memberauswahloperatoren (**.** oder **->**) oder Pointer-to-Member-Operatoren (**.** <strong>\*</strong> oder **->** <strong>\*</strong>).
 
 - **-Anweisungsbereichs** Namen deklariert wird, eine **für**, **Wenn**, **während**, oder **wechseln** Anweisung sind sichtbar, bis zum Ende der Anweisungsblock.
 

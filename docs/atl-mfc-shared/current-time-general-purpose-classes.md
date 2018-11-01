@@ -1,12 +1,6 @@
 ---
-title: 'Aktuelle Zeit: Allgemeine Klassen | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Aktuelle Zeit: Allgemeine Klassen'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - time, setting current
 - current time, CTime object
@@ -14,22 +8,18 @@ helpviewer_keywords:
 - initializing objects, with the current time
 - time, getting current
 ms.assetid: c39e6775-6a92-4b27-95a7-5c86ed371d8a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fff4c581b91ed789b501d3866eb9b3b259a662b3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e883a47243feb7ad1555748ffdda9b8ae9594644
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755462"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539255"
 ---
 # <a name="current-time-general-purpose-classes"></a>Aktuelle Zeit: Allgemeine Klassen
 
 Das folgende Verfahren zeigt, wie Sie erstellen eine `CTime` Objekt, und initialisieren Sie es mit der aktuellen Zeit.
 
-#### <a name="to-get-the-current-time"></a>Um die aktuelle Uhrzeit abzurufen.
+### <a name="to-get-the-current-time"></a>Um die aktuelle Uhrzeit abzurufen.
 
 1. Zuordnen einer `CTime` Objekt wie folgt:
 
@@ -38,7 +28,7 @@ Das folgende Verfahren zeigt, wie Sie erstellen eine `CTime` Objekt, und initial
    > [!NOTE]
    > Nicht initialisierte `CTime` Objekte werden nicht in eine gültige Zeit initialisiert.
 
-2. Rufen Sie die `CTime::GetCurrentTime` Funktion, um die aktuelle Uhrzeit vom Betriebssystem abzurufen. Diese Funktion gibt eine `CTime` -Objekt, das verwendet werden kann, zum Festlegen des Werts der `CTime`wie folgt:
+1. Rufen Sie die `CTime::GetCurrentTime` Funktion, um die aktuelle Uhrzeit vom Betriebssystem abzurufen. Diese Funktion gibt eine `CTime` -Objekt, das verwendet werden kann, zum Festlegen des Werts der `CTime`wie folgt:
 
    [!code-cpp[NVC_ATLMFC_Utilities#172](../atl-mfc-shared/codesnippet/cpp/current-time-general-purpose-classes_2.cpp)]
 

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Kompilieren von MFC und ATL-Code mithilfe von Clr-| Microsoft Docs'
+title: 'Vorgehensweise: Kompilieren von MFC- und ATL-Code mit / Clr | Microsoft-Dokumentation'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -23,69 +23,71 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b7412d69230bcb6375a042d6cf8e8f27a3d9eac9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09cfc38626cab785eb7fa1c34178aa28aa23dac6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33136066"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069933"
 ---
 # <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>Gewusst wie: Kompilieren von MFC-Code und ATL-Code mit /clr
-In diesem Thema wird erläutert, wie vorhandene MFC- und ATL-Programme, die Common Language Runtime kompiliert wird.  
-  
-### <a name="to-compile-an-mfc-executable-or-regular-mfc-dll-by-using-clr"></a>Eine MFC-ausführbare Datei oder eine reguläre MFC-DLL kompilieren mit/CLR  
-  
-1.  Mit der rechten Maustaste des Projekts im **Projektmappen-Explorer** , und klicken Sie dann auf **Eigenschaften**.  
-  
-2.  In der **Projekteigenschaften** Dialogfeld erweitern Sie den Knoten neben **Konfigurationseigenschaften** , und wählen Sie **allgemeine**. Im rechten Bereich unter **Projektstandards**legen **Common Language Runtime-Unterstützung** auf **Common Language Runtime-Unterstützung (/ Clr)**.  
-  
-     Stellen Sie sicher, die im gleichen Bereich **Verwendung von MFC** festgelegt ist, um **MFC in einer gemeinsam genutzten DLL verwenden**.  
-  
-3.  Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie den Knoten neben **C/C++-** , und wählen Sie **allgemeine**. Stellen Sie sicher, dass **Debuginformationsformat** festgelegt ist, um **Programmdatenbank/Zi** (nicht **/Zi**).  
-  
-4.  Wählen Sie die **Codegenerierung** Knoten. Legen Sie **minimale Neuerstellung aktivieren** auf **Nein (/ GM-)**. Legen Sie auch **vollständige Laufzeitüberprüfungen** auf **Standard**.  
-  
-5.  Klicken Sie unter **Konfigurationseigenschaften**Option **C/C++-** und dann **Codegenerierung**. Stellen Sie sicher, dass **-Laufzeitbibliothek** wird **Multithreaded-Debug-DLL (/ MDd)** oder **Multithreaded-DLL (/ MD)**.  
-  
-6.  Fügen Sie in "stdafx.h" die folgende Zeile ein.  
-  
-    ```  
-    #using <System.Windows.Forms.dll>  
-    ```  
-  
-### <a name="to-compile-an-mfc-extension-dll-by-using-clr"></a>Eine MFC-Erweiterungs-DLL kompilieren mit/CLR  
-  
-1.  Führen Sie die Schritte in "Zum Kompilieren einer MFC-ausführbare Datei oder eine reguläre MFC-DLL mit" / CLR "" ein.  
-  
-2.  Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie den Knoten neben **C/C++-** , und wählen Sie **vorkompilierte Header**. Legen Sie **vorkompilierten Header erstellen/verwenden** auf **vorkompilierte Header nicht verwenden**.  
-  
-     Als Alternative können in **Projektmappen-Explorer**mit der rechten Maustaste auf "stdafx.cpp", und klicken Sie dann auf **Eigenschaften**. Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie den Knoten neben **C/C++-** , und wählen Sie **allgemeine**. Legen Sie **kompilieren Sie mit der Common Language Runtime-Unterstützung** auf **keine Common Language Runtime-Unterstützung**.  
-  
-3.  Für die Datei, die DllMain und enthält er aufgerufen wird, im **Projektmappen-Explorer**mit der rechten Maustaste auf die Datei, und klicken Sie dann auf **Eigenschaften**. Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie den Knoten neben **C/C++-** , und wählen Sie **allgemeine**. Im rechten Bereich unter **Projektstandards**legen **kompilieren Sie mit der Common Language Runtime-Unterstützung** auf **keine Common Language Runtime-Unterstützung**.  
-  
-### <a name="to-compile-an-atl-executable-by-using-clr"></a>Eine ausführbare ATL-Datei kompilieren mit/CLR  
-  
-1.  In **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt, und klicken Sie dann auf **Eigenschaften**.  
-  
-2.  In der **Projekteigenschaften** Dialogfeld erweitern Sie den Knoten neben **Konfigurationseigenschaften** , und wählen Sie **allgemeine**. Im rechten Bereich unter **Projektstandards**legen **Common Language Runtime-Unterstützung** auf **Common Language Runtime-Unterstützung (/ Clr)**.  
-  
-3.  Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie den Knoten neben **C/C++-** , und wählen Sie **allgemeine**. Stellen Sie sicher, dass **Debuginformationsformat** festgelegt ist, um **Programmdatenbank/Zi** (nicht **/Zi**).  
-  
-4.  Wählen Sie die **Codegenerierung** Knoten. Legen Sie **minimale Neuerstellung aktivieren** auf **Nein (/ GM-)**. Legen Sie auch **vollständige Laufzeitüberprüfungen** auf **Standard**.  
-  
-5.  Klicken Sie unter **Konfigurationseigenschaften**Option **C/C++-** und dann **Codegenerierung**. Stellen Sie sicher, dass **-Laufzeitbibliothek** wird **Multithreaded-Debug-DLL (/ MDd)** oder **Multithreaded-DLL (/ MD)**.  
-  
-6.  Jede MIDL-generierten Dateien (C-Dateien) mit der rechten Maustaste der Datei im **Projektmappen-Explorer** , und klicken Sie dann auf **Eigenschaften**. Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie den Knoten neben **C/C++-** , und wählen Sie **allgemeine**. Legen Sie **kompilieren Sie mit der Common Language Runtime-Unterstützung** auf **keine Common Language Runtime-Unterstützung**.  
-  
-### <a name="to-compile-an-atl-dll-by-using-clr"></a>Um eine ATL-DLL kompilieren mit/CLR  
-  
-1.  Führen Sie die Schritte im Abschnitt "So kompilieren Sie eine ausführbare ATL mithilfe von/CLR" aus.  
-  
-2.  Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie den Knoten neben **C/C++-** , und wählen Sie **vorkompilierte Header**. Legen Sie **vorkompilierten Header erstellen/verwenden** auf **vorkompilierte Header nicht verwenden**.  
-  
-     Als Alternative können in **Projektmappen-Explorer**mit der rechten Maustaste auf "stdafx.cpp", und klicken Sie dann auf **Eigenschaften**. Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie den Knoten neben **C/C++-** , und wählen Sie **allgemeine**. Legen Sie **kompilieren Sie mit der Common Language Runtime-Unterstützung** auf **keine Common Language Runtime-Unterstützung**.  
-  
-3.  Für die Datei, die DllMain und enthält er aufgerufen wird, im **Projektmappen-Explorer**mit der rechten Maustaste auf die Datei, und klicken Sie dann auf **Eigenschaften**. Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie den Knoten neben **C/C++-** , und wählen Sie **allgemeine**. Im rechten Bereich unter **Projektstandards**legen **kompilieren Sie mit der Common Language Runtime-Unterstützung** auf **keine Common Language Runtime-Unterstützung**.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Gemischte (native und verwaltete) Assemblys](../dotnet/mixed-native-and-managed-assemblies.md)
+
+In diesem Thema wird erläutert, wie vorhandene MFC- und ATL-Programme, die die Common Language Runtime kompiliert wird.
+
+### <a name="to-compile-an-mfc-executable-or-regular-mfc-dll-by-using-clr"></a>Eine MFC-ausführbare Datei oder eine reguläre MFC-DLL kompilieren mit/CLR
+
+1. Mit der rechten Maustaste in des Projekts im **Projektmappen-Explorer** , und klicken Sie dann auf **Eigenschaften**.
+
+1. In der **Projekteigenschaften** Dialogfeld erweitern Sie den Knoten neben **Konfigurationseigenschaften** , und wählen Sie **allgemeine**. Klicken Sie im rechten Bereich unter **Projektstandards**legen **Common Language Runtime-Unterstützung** zu **Common Language Runtime-Unterstützung (/ Clr)**.
+
+   Stellen Sie sicher, die im gleichen Bereich **Verwendung von MFC** nastaven NA hodnotu **MFC in einer gemeinsam genutzten DLL verwenden**.
+
+1. Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie den Knoten neben **C/C++-** , und wählen Sie **allgemeine**. Stellen Sie sicher, dass **Debuginformationsformat** nastaven NA hodnotu **Programmdatenbank "/ Zi"** (nicht **"/ Zi"**).
+
+1. Wählen Sie die **Codegenerierung** Knoten. Legen Sie **minimale Neuerstellung aktivieren** zu **No (/ GM-)**. Legen Sie auch **vollständige Laufzeitüberprüfungen** zu **Standard**.
+
+1. Klicken Sie unter **Konfigurationseigenschaften**Option **C/C++-** und dann **Codegenerierung**. Stellen Sie sicher, dass **Laufzeitbibliothek** wird **Multithreaded-Debug-DLL (/ MDd)** oder **Multithreaded-DLL (/ MD)**.
+
+1. Fügen Sie in "stdafx.h" die folgende Zeile hinzu.
+
+    ```
+    #using <System.Windows.Forms.dll>
+    ```
+
+### <a name="to-compile-an-mfc-extension-dll-by-using-clr"></a>Eine MFC-Erweiterungs-DLL kompilieren mit/CLR
+
+1. Führen Sie die Schritte in "Zum Kompilieren einer MFC-ausführbare Datei oder eine reguläre MFC-DLL mithilfe von" / CLR "verwenden" aus.
+
+1. Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie den Knoten neben **C/C++-** , und wählen Sie **vorkompilierte Header**. Legen Sie **vorkompilierten Header erstellen/verwenden** zu **vorkompilierte Header nicht verwenden**.
+
+   Als Alternative in **Projektmappen-Explorer**mit der rechten Maustaste auf "stdafx.cpp", und klicken Sie dann auf **Eigenschaften**. Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie den Knoten neben **C/C++-** , und wählen Sie **allgemeine**. Legen Sie **mit Unterstützung für die Common Language Runtime kompilieren** zu **keine Common Language Runtime-Unterstützung**.
+
+1. Für die Datei mit DllMain und ruft, in **Projektmappen-Explorer**mit der rechten Maustaste auf die Datei, und klicken Sie dann auf **Eigenschaften**. Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie den Knoten neben **C/C++-** , und wählen Sie **allgemeine**. Klicken Sie im rechten Bereich unter **Projektstandards**legen **mit Unterstützung für die Common Language Runtime kompilieren** zu **keine Common Language Runtime-Unterstützung**.
+
+### <a name="to-compile-an-atl-executable-by-using-clr"></a>Um eine ausführbare ATL-Datei kompilieren mit/CLR
+
+1. In **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt, und klicken Sie dann auf **Eigenschaften**.
+
+1. In der **Projekteigenschaften** Dialogfeld erweitern Sie den Knoten neben **Konfigurationseigenschaften** , und wählen Sie **allgemeine**. Klicken Sie im rechten Bereich unter **Projektstandards**legen **Common Language Runtime-Unterstützung** zu **Common Language Runtime-Unterstützung (/ Clr)**.
+
+1. Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie den Knoten neben **C/C++-** , und wählen Sie **allgemeine**. Stellen Sie sicher, dass **Debuginformationsformat** nastaven NA hodnotu **Programmdatenbank "/ Zi"** (nicht **"/ Zi"**).
+
+1. Wählen Sie die **Codegenerierung** Knoten. Legen Sie **minimale Neuerstellung aktivieren** zu **No (/ GM-)**. Legen Sie auch **vollständige Laufzeitüberprüfungen** zu **Standard**.
+
+1. Klicken Sie unter **Konfigurationseigenschaften**Option **C/C++-** und dann **Codegenerierung**. Stellen Sie sicher, dass **Laufzeitbibliothek** wird **Multithreaded-Debug-DLL (/ MDd)** oder **Multithreaded-DLL (/ MD)**.
+
+1. Jeder MIDL-generierten-Datei (C#-Dateien), mit der rechten Maustaste der Datei im **Projektmappen-Explorer** , und klicken Sie dann auf **Eigenschaften**. Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie den Knoten neben **C/C++-** , und wählen Sie **allgemeine**. Legen Sie **mit Unterstützung für die Common Language Runtime kompilieren** zu **keine Common Language Runtime-Unterstützung**.
+
+### <a name="to-compile-an-atl-dll-by-using-clr"></a>Um ein ATL-DLL kompilieren mit/CLR
+
+1. Führen Sie die Schritte im Abschnitt "So kompilieren Sie eine ausführbare ATL, mithilfe von/CLR" aus.
+
+1. Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie den Knoten neben **C/C++-** , und wählen Sie **vorkompilierte Header**. Legen Sie **vorkompilierten Header erstellen/verwenden** zu **vorkompilierte Header nicht verwenden**.
+
+   Als Alternative in **Projektmappen-Explorer**mit der rechten Maustaste auf "stdafx.cpp", und klicken Sie dann auf **Eigenschaften**. Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie den Knoten neben **C/C++-** , und wählen Sie **allgemeine**. Legen Sie **mit Unterstützung für die Common Language Runtime kompilieren** zu **keine Common Language Runtime-Unterstützung**.
+
+1. Für die Datei mit DllMain und ruft, in **Projektmappen-Explorer**mit der rechten Maustaste auf die Datei, und klicken Sie dann auf **Eigenschaften**. Klicken Sie unter **Konfigurationseigenschaften**, erweitern Sie den Knoten neben **C/C++-** , und wählen Sie **allgemeine**. Klicken Sie im rechten Bereich unter **Projektstandards**legen **mit Unterstützung für die Common Language Runtime kompilieren** zu **keine Common Language Runtime-Unterstützung**.
+
+## <a name="see-also"></a>Siehe auch
+
+[Gemischte (native und verwaltete) Assemblys](../dotnet/mixed-native-and-managed-assemblies.md)

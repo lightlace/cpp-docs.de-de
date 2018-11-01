@@ -1,26 +1,16 @@
 ---
-title: 'Operator&lt; -Operator (Microsoft:: wrl) | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Operator&lt; -Operator (Microsoft:: wrl)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::operator<
-dev_langs:
-- C++
 ms.assetid: bfae0e1c-1648-482b-99c2-3217d62aba46
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 5d24968f4c076605a698e1af02c8e3fa3f556610
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2c45f4b2c905fe925cdb52520180d83a4c156b53
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589711"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645062"
 ---
 # <a name="operatorlt-operator-microsoftwrl"></a>Operator&lt; -Operator (Microsoft:: wrl)
 
@@ -37,10 +27,10 @@ bool operator<(const Details::ComPtrRef<ComPtr<T>>& a, const Details::ComPtrRef<
 
 ### <a name="parameters"></a>Parameter
 
-*a*  
+*a*<br/>
 Das linke Objekt.
 
-*b*  
+*b*<br/>
 Das rechte Objekt.
 
 ## <a name="return-value"></a>Rückgabewert

@@ -1,30 +1,20 @@
 ---
-title: -Zo (optimiertes Debuggen verbessern) | Microsoft-Dokumentation
-ms.custom: ''
+title: /Zo (erweitertes optimiertes Debugging)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - -Zo
 - /Zo
-dev_langs:
-- C++
 helpviewer_keywords:
 - Zo compiler option [C++]
 - /Zo compiler option [C++]
 - -Zo compiler option [C++]
 ms.assetid: eea8d89a-7fe0-4fe1-86b2-7689bbebbd7f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8e93d8debbab26dc61b4c27de713b94d7bc6c417
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7524a8a8c509470030a1850c3995e5997b61caca
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711947"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497499"
 ---
 # <a name="zo-enhance-optimized-debugging"></a>/Zo (erweitertes optimiertes Debugging)
 
@@ -58,6 +48,6 @@ Die **/zo** Befehlszeilenoption ab, die in Visual Studio 2013 Update 3 verfügba
 
 ## <a name="see-also"></a>Siehe auch
 
-[/ O-Optionen (Code optimieren)](../../build/reference/o-options-optimize-code.md)
-[/Z7, / Zi, / Zi (Debuginformationsformat)](../../build/reference/z7-zi-zi-debug-information-format.md)
-[bearbeiten und fortfahren](/visualstudio/debugger/edit-and-continue)
+[/O-Optionen (Code optimieren)](../../build/reference/o-options-optimize-code.md)<br/>
+[/Z7, /Zi, /ZI (Debuginformationsformat)](../../build/reference/z7-zi-zi-debug-information-format.md)<br/>
+[Bearbeiten und Fortfahren](/visualstudio/debugger/edit-and-continue)

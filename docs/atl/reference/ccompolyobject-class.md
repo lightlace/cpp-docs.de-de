@@ -1,10 +1,6 @@
 ---
-title: CComPolyObject-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: CComPolyObject-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComPolyObject
 - ATLCOM/ATL::CComPolyObject
@@ -16,23 +12,17 @@ f1_keywords:
 - ATLCOM/ATL::CComPolyObject::QueryInterface
 - ATLCOM/ATL::CComPolyObject::Release
 - ATLCOM/ATL::CComPolyObject::m_contained
-dev_langs:
-- C++
 helpviewer_keywords:
 - aggregate objects [C++], in ATL
 - aggregation [C++], ATL objects
 - CComPolyObject class
 ms.assetid: eaf67c18-e855-48ca-9b15-f1df3106121b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6fcf62e142c99fad15bec667534bc60b4d19e43d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9f84c022ac1dee34b6dca2931abb349eefb7d690
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46045054"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495887"
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject-Klasse
 
@@ -153,8 +143,8 @@ Alle zugeordnete Ressourcen freigegeben, Aufrufe [FinalRelease](#finalrelease), 
 Können Sie zum Erstellen eines neuen **CComPolyObject <** `contained` **>** Objekt ohne den Aufwand für [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).
 
 ```
-static HRESULT WINAPI CreateInstance(  
-    LPUNKNOWN pUnkOuter, 
+static HRESULT WINAPI CreateInstance(
+    LPUNKNOWN pUnkOuter,
     CComPolyObject<contained>** pp);
 ```
 

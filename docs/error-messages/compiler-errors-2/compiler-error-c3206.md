@@ -1,27 +1,17 @@
 ---
-title: Compilerfehler C3206 | Microsoft-Dokumentation
-ms.custom: ''
+title: Compilerfehler C3206
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3206
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3206
 ms.assetid: d62995b5-e349-4418-bbe8-8a5e776ca7b0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9aa7775f0da26846851677aa267b91438ce84dbf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 665244cbfc87f32274f9eaf9afacfb1caad50659
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117958"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640049"
 ---
 # <a name="compiler-error-c3206"></a>Compilerfehler C3206
 
@@ -93,7 +83,6 @@ int main() {
    gf<GS<int> >();
 }
 ```
-
 
 Eine Klassenvorlage ist nicht als template-Typargument zulässig. Im folgende Beispiel löst C3206 aus:
 

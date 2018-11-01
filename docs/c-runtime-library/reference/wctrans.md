@@ -1,10 +1,6 @@
 ---
-title: wctrans | Microsoft-Dokumentation
-ms.custom: ''
+title: wctrans
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wctrans
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wctrans
-dev_langs:
-- C++
 helpviewer_keywords:
 - character codes, wctrans
 - characters, codes
 - characters, converting
 - wctrans function
 ms.assetid: 215404bf-6d60-489c-9ae9-880e6b586162
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 613c3c64885f10029a8b013504d84ffa8f35d664
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c7aace7a93160d2e9a4c1523d49bcaf6ae4dc20
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410488"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656689"
 ---
 # <a name="wctrans"></a>wctrans
 
@@ -60,7 +50,7 @@ Eine Zeichenfolge, die eine der gültigen Transformationen angibt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die **LC_CTYPE** Kategorie des aktuellen Gebietsschemas definiert eine Zuordnung, deren Name mit der Eigenschaftszeichenfolge für die keine *Eigenschaft*, gibt die Funktion 0 (null) zurück. Andernfalls wird ein Wert ungleich 0 zurückgegeben, der für die Verwendung als das zweite Argument für einen nachfolgenden Aufruf von [towctrans](towctrans.md) geeignet ist.
+Wenn die **LC_CTYPE** -Kategorie des aktuellen Gebietsschemas definiert eine Zuordnung, deren Name der Eigenschaftszeichenfolge entspricht, nicht *Eigenschaft*, gibt die Funktion 0 (null) zurück. Andernfalls wird ein Wert ungleich 0 zurückgegeben, der für die Verwendung als das zweite Argument für einen nachfolgenden Aufruf von [towctrans](towctrans.md) geeignet ist.
 
 ## <a name="remarks"></a>Hinweise
 

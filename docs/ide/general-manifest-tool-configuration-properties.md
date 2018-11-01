@@ -19,33 +19,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef1eb1c0c1ee8c9fb2814bc7cd808ea2e524b8a4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: bf3fe573ff2a71c2a53e946655300219f190b4c8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200332"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447712"
 ---
 # <a name="general-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Allgemein, Manifesttool, Konfigurationseigenschaften, Dialogfeld „&lt;Projektname&gt;-Eigenschaftenseiten“
-Verwenden Sie dieses Dialogfeld, um allgemeine Optionen für die Datei [Mt.exe](https://msdn.microsoft.com/library/aa375649) anzugeben.  
-  
- Öffnen Sie die Eigenschaftenseiten für Ihr Projekt oder Ihr Eigenschaftenblatt, um auf das Dialogfeld „Eigenschaftenseite“ zuzugreifen. Erweitern Sie den Knoten **Manifesttool** unter **Konfigurationseigenschaften**, und klicken Sie dann auf **Allgemein**.  
-  
-## <a name="uielement-list"></a>UIElement-Liste  
- **Startbanner unterdrücken**  
- **Ja (/nologo)** gibt an, dass standardmäßige Copyrightinformationen von Microsoft beim Starten des Manifesttools ausgeblendet werden. Verwenden Sie diese Option, um unerwünschte Ausgabe in Protokolldateien zu unterdrücken, wenn Sie die „mt.exe“ als Teil eines Buildprozesses oder in einer Buildumgebung ausführen.  
-  
- **Ausführliche Ausgabe**  
- **Ja (/verbose)** gibt an, dass zusätzliche Buildinformationen während der Manifestgenerierung angezeigt werden.  
-  
- **Assemblyidentität**  
- Verwendet die Option „/identity“, um eine Identitätszeichenfolge anzugeben, die aus den Attributen für das [\<assemblyIdentity>-Element](/visualstudio/deployment/assemblyidentity-element-clickonce-application) besteht. Eine Identitätszeichenfolge beginnt mit dem Wert für das `name`-Attribut gefolgt von *Attribut* = *Wert*-Paaren. Die Attribute in einer Identitätszeichenfolge werden durch Kommas getrennt.  
-  
- Im Folgenden finden Sie eine Beispielidentitätszeichenfolge:  
-  
- `Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`  
-  
-## <a name="see-also"></a>Siehe auch  
- [ClickOnce Application Manifest (ClickOnce-Anwendungsmanifest)](/visualstudio/deployment/clickonce-application-manifest)   
- [Manifesttooleigenschaftenseiten](../ide/manifest-tool-property-pages.md)   
- [Arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md)   
+
+Verwenden Sie dieses Dialogfeld, um allgemeine Optionen für die Datei [Mt.exe](https://msdn.microsoft.com/library/aa375649) anzugeben.
+
+Öffnen Sie die Eigenschaftenseiten für Ihr Projekt oder Ihr Eigenschaftenblatt, um auf das Dialogfeld „Eigenschaftenseite“ zuzugreifen. Erweitern Sie den Knoten **Manifesttool** unter **Konfigurationseigenschaften**, und klicken Sie dann auf **Allgemein**.
+
+## <a name="uielement-list"></a>UIElement-Liste
+
+- **Startbanner unterdrücken**
+
+   **Ja (/nologo)** gibt an, dass standardmäßige Copyrightinformationen von Microsoft beim Starten des Manifesttools ausgeblendet werden. Verwenden Sie diese Option, um unerwünschte Ausgabe in Protokolldateien zu unterdrücken, wenn Sie die „mt.exe“ als Teil eines Buildprozesses oder in einer Buildumgebung ausführen.
+
+- **Ausführliche Ausgabe**
+
+   **Ja (/verbose)** gibt an, dass zusätzliche Buildinformationen während der Manifestgenerierung angezeigt werden.
+
+- **Assemblyidentität**
+
+   Verwendet die Option „/identity“, um eine Identitätszeichenfolge anzugeben, die aus den Attributen für das [\<assemblyIdentity>-Element](/visualstudio/deployment/assemblyidentity-element-clickonce-application) besteht. Eine Identitätszeichenfolge beginnt mit dem Wert für das `name`-Attribut gefolgt von *Attribut* = *Wert*-Paaren. Die Attribute in einer Identitätszeichenfolge werden durch Kommas getrennt.
+
+   Im Folgenden finden Sie eine Beispielidentitätszeichenfolge:
+
+   `Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
+
+## <a name="see-also"></a>Siehe auch
+
+[ClickOnce-Anwendungsmanifest](/visualstudio/deployment/clickonce-application-manifest)<br>
+[Manifesttool-Eigenschaftenseiten](../ide/manifest-tool-property-pages.md)<br>
+[Arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md)

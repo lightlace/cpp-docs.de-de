@@ -1,10 +1,6 @@
 ---
-title: IDispEventImpl-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: IDispEventImpl-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - IDispEventImpl
 - ATLCOM/ATL::IDispEventImpl
@@ -14,21 +10,15 @@ f1_keywords:
 - ATLCOM/ATL::IDispEventImpl::GetTypeInfo
 - ATLCOM/ATL::IDispEventImpl::GetTypeInfoCount
 - ATLCOM/ATL::IDispEventImpl::GetUserDefinedType
-dev_langs:
-- C++
 helpviewer_keywords:
 - IDispEventImpl class
 ms.assetid: a64b5288-35cb-4638-aad6-2d15b1c7cf7b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 815a276cb07a91da73acb68a32cceef4b2138325
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a07cf577ec6be2c6d2d895a85f49f44318596ded
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093839"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497459"
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl-Klasse
 
@@ -44,7 +34,7 @@ template <UINT nID, class T,
     const IID* pdiid = &IID_NULL,
     const GUID* plibid = &GUID_NULL,
     WORD wMajor = 0,
-    WORD wMinor = 0, 
+    WORD wMinor = 0,
     class tihclass = CcomTypeInfoHolder>
 class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 ```
@@ -102,7 +92,7 @@ Die Klasse, die zum Verwalten von Informationen für den *T*. Der Standardwert i
 
 `IDispEventImpl` funktioniert in Verbindung mit der Ereignis-Sink-Zuordnung in der Klasse zum Weiterleiten von Ereignissen an die entsprechenden Handler-Funktion. Diese Klasse verwenden zu können:
 
-Hinzufügen einer [SINK_ENTRY](composite-control-macros.md#sink_entry) oder [SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex) Makro, um die Zuordnung des Ereignis-Senke für jedes Ereignis auf jedes Objekt, das Sie behandeln möchten. Bei Verwendung `IDispEventImpl` einer Basisklasse eines zusammengesetzten Steuerelements können Sie aufrufen [AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap) herstellen und trennen die Verbindung mit der der Ereignisquelle aus, für alle Einträge in dieser Zuordnung Senke. Rufen Sie in anderen Fällen, oder für größere Kontrolle, [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) zum Herstellen der Verbindung zwischen dem Quellobjekt und die Basisklasse. Rufen Sie [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise) um die Verbindung trennen.  
+Hinzufügen einer [SINK_ENTRY](composite-control-macros.md#sink_entry) oder [SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex) Makro, um die Zuordnung des Ereignis-Senke für jedes Ereignis auf jedes Objekt, das Sie behandeln möchten. Bei Verwendung `IDispEventImpl` einer Basisklasse eines zusammengesetzten Steuerelements können Sie aufrufen [AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap) herstellen und trennen die Verbindung mit der der Ereignisquelle aus, für alle Einträge in dieser Zuordnung Senke. Rufen Sie in anderen Fällen, oder für größere Kontrolle, [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) zum Herstellen der Verbindung zwischen dem Quellobjekt und die Basisklasse. Rufen Sie [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise) um die Verbindung trennen.
 
 Durch Ableiten von `IDispEventImpl` (verwenden einen eindeutigen Wert für *nID*) für jedes Objekt, das für die Ereignisse behandelt werden sollen. Sie können die Basisklasse wiederverwenden, indem Sie für ein Quellobjekt, klicken Sie dann für eine andere Quellobjekt berät abmelden, aber die maximale Anzahl von-Objekte, die von einem einzigen Objekt gleichzeitig verarbeitet werden kann, wird durch die Anzahl der beschränkt `IDispEventImpl` Basisklassen.
 

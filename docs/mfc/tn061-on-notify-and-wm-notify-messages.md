@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d2f1259227fa8d27778dbf0e40b13f5460b7041
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2395cb7b1f3d719fd64494ee9b9c7c64ba222bac
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218784"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381828"
 ---
 # <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061: ON_NOTIFY- und WM_NOTIFY-Meldungen
 
@@ -104,14 +104,14 @@ ON_NOTIFY(wNotifyCode, id, memberFxn)
 
 mit folgenden Parametern:
 
-*wNotifyCode schalten*  
- Der Code der benachrichtigungsmeldung, wie z. B. LVN_KEYDOWN behandelt werden.
+*wNotifyCode schalten*<br/>
+Der Code der benachrichtigungsmeldung, wie z. B. LVN_KEYDOWN behandelt werden.
 
-*ID*  
- Der untergeordnete Bezeichner des Steuerelements für die die Benachrichtigung gesendet wird.
+*ID*<br/>
+Der untergeordnete Bezeichner des Steuerelements für die die Benachrichtigung gesendet wird.
 
-*memberFxn*  
- Die Memberfunktion aufgerufen werden, wenn diese Benachrichtigung gesendet wird.
+*memberFxn*<br/>
+Die Memberfunktion aufgerufen werden, wenn diese Benachrichtigung gesendet wird.
 
 Ihre Memberfunktion muss mit dem folgenden Prototyp deklariert werden:
 
@@ -121,11 +121,11 @@ afx_msg void memberFxn(NMHDR* pNotifyStruct, LRESULT* result);
 
 mit folgenden Parametern:
 
-*pNotifyStruct*  
- Ein Zeiger auf die Benachrichtigungsstruktur, wie im vorherigen Abschnitt beschrieben.
+*pNotifyStruct*<br/>
+Ein Zeiger auf die Benachrichtigungsstruktur, wie im vorherigen Abschnitt beschrieben.
 
-*Ergebnis*  
- Ein Zeiger auf den Ergebniscode müssen Sie festlegen, bevor Sie zurückkehren.
+*Ergebnis*<br/>
+Ein Zeiger auf den Ergebniscode müssen Sie festlegen, bevor Sie zurückkehren.
 
 ## <a name="example"></a>Beispiel
 
@@ -141,7 +141,7 @@ Im obigen Beispiel ist die Funktion, die von den Klassen-Assistent bereitgestell
 void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
 {
     LV_KEYDOWN* pLVKeyDow = (LV_KEYDOWN*)pNMHDR;
-    
+
     // TODO: Add your control notification handler
     //       code here
 
@@ -167,17 +167,17 @@ ON_NOTIFY_RANGE(wNotifyCode, id, idLast, memberFxn)
 
 mit folgenden Parametern:
 
-*wNotifyCode schalten*  
- Der Code der benachrichtigungsmeldung, wie z. B. LVN_KEYDOWN behandelt werden.
+*wNotifyCode schalten*<br/>
+Der Code der benachrichtigungsmeldung, wie z. B. LVN_KEYDOWN behandelt werden.
 
-*ID*  
- Der erste Bezeichner im zusammenhängenden Bereich von Bezeichnern.
+*ID*<br/>
+Der erste Bezeichner im zusammenhängenden Bereich von Bezeichnern.
 
-*idLast*  
- Der letzte Bezeichner im zusammenhängenden Bereich von Bezeichnern.
+*idLast*<br/>
+Der letzte Bezeichner im zusammenhängenden Bereich von Bezeichnern.
 
-*memberFxn*  
- Die Memberfunktion aufgerufen werden, wenn diese Benachrichtigung gesendet wird.
+*memberFxn*<br/>
+Die Memberfunktion aufgerufen werden, wenn diese Benachrichtigung gesendet wird.
 
 Ihre Memberfunktion muss mit dem folgenden Prototyp deklariert werden:
 
@@ -187,14 +187,14 @@ afx_msg void memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
 
 mit folgenden Parametern:
 
-*ID*  
- Der untergeordnete Bezeichner des Steuerelements, das die Benachrichtigung gesendet werden soll.
+*ID*<br/>
+Der untergeordnete Bezeichner des Steuerelements, das die Benachrichtigung gesendet werden soll.
 
-*pNotifyStruct*  
- Ein Zeiger auf die Benachrichtigungsstruktur, wie oben beschrieben.
+*pNotifyStruct*<br/>
+Ein Zeiger auf die Benachrichtigungsstruktur, wie oben beschrieben.
 
-*Ergebnis*  
- Ein Zeiger auf den Ergebniscode müssen Sie festlegen, bevor Sie zurückkehren.
+*Ergebnis*<br/>
+Ein Zeiger auf den Ergebniscode müssen Sie festlegen, bevor Sie zurückkehren.
 
 ##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX, ON_NOTIFY_EX_RANGE
 
@@ -221,5 +221,5 @@ Die Funktion zurückgeben muss **"true"** , wenn die Nachricht vollständig vera
 
 ## <a name="see-also"></a>Siehe auch
 
-[Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)  
-[Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)  
+[Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)<br/>
+[Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)

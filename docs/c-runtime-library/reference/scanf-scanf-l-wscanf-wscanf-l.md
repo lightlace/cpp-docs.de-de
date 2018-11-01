@@ -1,10 +1,6 @@
 ---
-title: scanf, _scanf_l, wscanf, _wscanf_l | Microsoft-Dokumentation
-ms.custom: ''
+title: scanf, _scanf_l, wscanf, _wscanf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wscanf_l
 - scanf
@@ -29,8 +25,6 @@ f1_keywords:
 - _wscanf_l
 - scanf
 - _tscanf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tscanf_l function
 - _tscanf_l function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - wscanf_l function
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 32d414685237e8d55e1c8acd5df74ea6922e222b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 48aa0bb3348a3336de9ee0eb9f9ec0d3e1a2b3cb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410693"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544767"
 ---
 # <a name="scanf-scanfl-wscanf-wscanfl"></a>scanf, _scanf_l, wscanf, _wscanf_l
 
@@ -99,20 +89,20 @@ Das zu verwendende Gebietsschema.
 
 Gibt die Anzahl von Feldern zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden.
 
-Wenn *Format* ist ein **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EOF** und **Errno** auf **EINVAL**.
+Wenn *Format* ist eine **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EOF** und **Errno** zu **EINVAL**.
 
 Weitere Informationen über diese und andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr (_doserrno, errno, _sys_errlist und _sys_nerr)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Scanf** -Funktion liest Daten aus dem Standardeingabestream **Stdin** und schreibt die Daten in den Speicherort vom *Argument*. Jede *Argument* muss ein Zeiger auf eine Variable eines Typs, der einem Typspezifizierer in entspricht *Format*. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
+Die **Scanf** -Funktion liest Daten aus dem Standardeingabestream **Stdin** und schreibt die Daten in den Speicherort von *Argument*. Jede *Argument* muss ein Zeiger auf eine Variable eines Typs, der einem Typspezifizierer in entspricht *Format*. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
 
 > [!IMPORTANT]
-> Beim Lesen einer Zeichenfolge mit **Scanf**, geben Sie immer eine Breite für die **%s** Format (z. B. **"% 32s"** anstelle von **"%s"**) ist, andernfalls falsch formatierte Eingabe verursachen leicht einen Pufferüberlauf. Ziehen Sie alternativ die Verwendung von [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) oder [fgets](fgets-fgetws.md) in Betracht.
+> Beim Lesen einer Zeichenfolge mit **Scanf**, geben Sie immer eine Breite für die **%s** Format (z. B. **"% 32 Sekunden"** anstelle von **"%s"**) ist, andernfalls falsch formatierte Eingabe kann leicht einen Pufferüberlauf verursachen. Ziehen Sie alternativ die Verwendung von [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) oder [fgets](fgets-fgetws.md) in Betracht.
 
-**Wscanf** ist eine Breitzeichen-Version von **Scanf**; das *Format* Argument **Wscanf** ist eine Breitzeichen-Zeichenfolge. **Wscanf** und **Scanf** Verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Scanf** unterstützt derzeit nicht die Eingabe aus einem Unicode-Stream.
+**Wscanf** ist eine Breitzeichen-Version von **Scanf**; die *Format* Argument **Wscanf** ist eine Breitzeichen-Zeichenfolge. **Wscanf** und **Scanf** Verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Scanf** unterstützt derzeit keine Eingabe aus einem unicodestream.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschemaparameter, der übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas.
+Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -125,12 +115,12 @@ Weitere Informationen finden Sie unter [Formatangabefelder: scanf- und wscanf-Fu
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**Scanf**, **_scanf_l**|\<stdio.h>|
 |**Wscanf**, **_wscanf_l**|\<stdio.h> oder \<wchar.h>|
 
-Die Konsole wird in apps der universellen Windows-Plattform (UWP) nicht unterstützt. Standardstream Handles, die mit der Konsole verknüpften sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in uwp-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die Konsole wird in apps für universelle Windows-Plattform (UWP) nicht unterstützt. Standardstreamhandles, die mit der Konsole verknüpft sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in UWP-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 

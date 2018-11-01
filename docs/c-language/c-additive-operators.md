@@ -1,7 +1,7 @@
 ---
 title: C-Operatoren (additiv) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,30 +18,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df491508f7898fe3c97bc02a83e5259baa9c89f8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 339904e3fe75c712254f3a7802fc76a0e283c8e5
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382863"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808354"
 ---
 # <a name="c-additive-operators"></a>C-Operatoren (additiv)
-Die additiven Operatoren führen Additionen (**+**) und Subtraktionen (**-**) aus.  
-  
-## <a name="syntax"></a>Syntax  
- *additive-expression*:  
- *multiplicative-expression*  
-  
- *additive-expression*  **+**  *multiplicative-expression*  
-  
- *additive-expression*  **-**  *multiplicative-expression*  
-  
+
+Die additiven Operatoren führen Additionen (**+**) und Subtraktionen (**-**) aus.
+
+## <a name="syntax"></a>Syntax
+
+*additive-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression* **+** *multiplicative-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression* **-** *multiplicative-expression*
+
 > [!NOTE]
->  Obwohl die Syntax für *additive-expression* auch *multiplicative-expression* enthält, heißt das nicht, dass Ausdrücke erforderlich sind, die Multiplikation verwenden. In der [Zusammenfassung der C-Sprachsyntax](../c-language/c-language-syntax-summary.md) finden Sie weitere Informationen über die Syntax für *multiplicative-expression*, *cast-expression* und *unary-expression*.  
-  
- Die Operanden können Ganzzahl- oder Gleitkommawerte sein. Einige Additionsvorgänge können auch auf Zeigerwerten ausgeführt werden, wie in der Erläuterung für die einzelnen Operatoren dargelegt wird.  
-  
- Additive Operatoren führen die üblichen arithmetischen Konvertierungen in Operanden vom Typ "integral" oder "floating" aus. Der Ergebnistyp ist der Typ der Operanden nach der Konvertierung. Da Konvertierungen, die von den Addition-Operatoren ausgeführt werden, keine Überlauf- oder Unterlaufbedingungen vorsehen, gehen Informationen möglicherweise verloren, wenn das Ergebnis eines Additionsvorgangs nach der Konvertierung nicht im Typ der Operanden dargestellt werden kann.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Additive Operatoren: + und -](../cpp/additive-operators-plus-and.md)
+> Obwohl die Syntax für *additive-expression* auch *multiplicative-expression* enthält, heißt das nicht, dass Ausdrücke erforderlich sind, die Multiplikation verwenden. In der [Zusammenfassung der C-Sprachsyntax](../c-language/c-language-syntax-summary.md) finden Sie weitere Informationen über die Syntax für *multiplicative-expression*, *cast-expression* und *unary-expression*.
+
+Die Operanden können Ganzzahl- oder Gleitkommawerte sein. Einige Additionsvorgänge können auch auf Zeigerwerten ausgeführt werden, wie in der Erläuterung für die einzelnen Operatoren dargelegt wird.
+
+Additive Operatoren führen die üblichen arithmetischen Konvertierungen in Operanden vom Typ "integral" oder "floating" aus. Der Ergebnistyp ist der Typ der Operanden nach der Konvertierung. Da Konvertierungen, die von den Addition-Operatoren ausgeführt werden, keine Überlauf- oder Unterlaufbedingungen vorsehen, gehen Informationen möglicherweise verloren, wenn das Ergebnis eines Additionsvorgangs nach der Konvertierung nicht im Typ der Operanden dargestellt werden kann.
+
+## <a name="see-also"></a>Siehe auch
+
+[Additive Operatoren: + und -](../cpp/additive-operators-plus-and.md)

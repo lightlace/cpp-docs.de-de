@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c9e22bafdbc1be365667a7f69801743108ad4f23
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 52245054e0112f66a78ffb76043715eb88423c5d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602598"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063626"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator==-Operator (Microsoft::WRL)
 
@@ -35,7 +35,7 @@ WRL_NOTHROW bool operator==(
 );
 WRL_NOTHROW bool operator==(
    const ComPtr<T>& a,
-   decltype(__nullptr)  
+   decltype(__nullptr)
 );
 WRL_NOTHROW bool operator==(
    decltype(__nullptr),
@@ -47,7 +47,7 @@ WRL_NOTHROW bool operator==(
 );
 WRL_NOTHROW bool operator==(
    const Details::ComPtrRef<ComPtr<T>>& a,
-   decltype(__nullptr)  
+   decltype(__nullptr)
 );
 WRL_NOTHROW bool operator==(
    decltype(__nullptr),
@@ -65,10 +65,10 @@ WRL_NOTHROW bool operator==(
 
 ### <a name="parameters"></a>Parameter
 
-*a*  
+*a*<br/>
 Das linke Objekt.
 
-*b*  
+*b*<br/>
 Das rechte Objekt.
 
 ## <a name="return-value"></a>Rückgabewert

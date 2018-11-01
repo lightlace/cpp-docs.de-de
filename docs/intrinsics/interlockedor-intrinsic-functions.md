@@ -66,172 +66,177 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33ce6996d4435709edcc9d733b9500490dcfe34c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0d056eea0e1c23cb5527bf2affc8074893164cee
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709877"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439236"
 ---
 # <a name="interlockedor-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedOr“
-**Microsoft-spezifisch**  
-  
- Führen Sie eine atomarische bitweise OR-Operation für eine Variable durch, die von mehreren Threads genutzt wird.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-long _InterlockedOr(  
-   long volatile * Value,  
-   long Mask  
-);  
-long _InterlockedOr_acq(  
-   long volatile * Value,  
-   long Mask  
-);  
-long _InterlockedOr_HLEAcquire(  
-   long volatile * Value,  
-   long Mask  
-);  
-long _InterlockedOr_HLERelease(  
-   long volatile * Value,  
-   long Mask  
-);  
-long _InterlockedOr_nf(  
-   long volatile * Value,  
-   long Mask  
-);  
-long _InterlockedOr_np(  
-   long volatile * Value,  
-   long Mask  
-);  
-long _InterlockedOr_rel(  
-   long volatile * Value,  
-   long Mask  
-);  
-char _InterlockedOr8(  
-   char volatile * Value,  
-   long Mask  
-);  
-char _InterlockedOr8_acq(  
-   char volatile * Value,  
-   char Mask  
-);  
-char _InterlockedOr8_nf(  
-   char volatile * Value,  
-   char Mask  
-);  
-char _InterlockedOr8_np(  
-   char volatile * Value,  
-   char Mask  
-);  
-char _InterlockedOr8_rel(  
-   char volatile * Value,  
-   char Mask  
-);  
-short _InterlockedOr16(  
-   short volatile * Value,  
-   short Mask  
-);  
-short _InterlockedOr16_acq(  
-   short volatile * Value,  
-   short Mask  
-);  
-short _InterlockedOr16_nf(  
-   short volatile * Value,  
-   short Mask  
-);  
-short _InterlockedOr16_np(  
-   short volatile * Value,  
-   short Mask  
-);  
-short _InterlockedOr16_rel(  
-   short volatile * Value,  
-   short Mask  
-);  
-__int64 _InterlockedOr64(  
-   __int64 volatile * Value,  
-   __int64 Mask  
-);  
-__int64 _InterlockedOr64_acq(  
-   __int64 volatile * Value,  
-   __int64 Mask  
-);   
-__int64 _InterlockedOr64_HLEAcquire(  
-   __int64 volatile * Value,  
-   __int64 Mask  
-);  
-__int64 _InterlockedOr64_HLERelease(  
-   __int64 volatile * Value,  
-   __int64 Mask  
-);   
-__int64 _InterlockedOr64_nf(  
-   __int64 volatile * Value,  
-   __int64 Mask  
-);  
-__int64 _InterlockedOr64_np(  
-   __int64 volatile * Value,  
-   __int64 Mask  
-);  
-__int64 _InterlockedOr64_rel(  
-   __int64 volatile * Value,  
-   __int64 Mask  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+
+**Microsoft-spezifisch**
+
+Führen Sie eine atomarische bitweise OR-Operation für eine Variable durch, die von mehreren Threads genutzt wird.
+
+## <a name="syntax"></a>Syntax
+
+```
+long _InterlockedOr(
+   long volatile * Value,
+   long Mask
+);
+long _InterlockedOr_acq(
+   long volatile * Value,
+   long Mask
+);
+long _InterlockedOr_HLEAcquire(
+   long volatile * Value,
+   long Mask
+);
+long _InterlockedOr_HLERelease(
+   long volatile * Value,
+   long Mask
+);
+long _InterlockedOr_nf(
+   long volatile * Value,
+   long Mask
+);
+long _InterlockedOr_np(
+   long volatile * Value,
+   long Mask
+);
+long _InterlockedOr_rel(
+   long volatile * Value,
+   long Mask
+);
+char _InterlockedOr8(
+   char volatile * Value,
+   long Mask
+);
+char _InterlockedOr8_acq(
+   char volatile * Value,
+   char Mask
+);
+char _InterlockedOr8_nf(
+   char volatile * Value,
+   char Mask
+);
+char _InterlockedOr8_np(
+   char volatile * Value,
+   char Mask
+);
+char _InterlockedOr8_rel(
+   char volatile * Value,
+   char Mask
+);
+short _InterlockedOr16(
+   short volatile * Value,
+   short Mask
+);
+short _InterlockedOr16_acq(
+   short volatile * Value,
+   short Mask
+);
+short _InterlockedOr16_nf(
+   short volatile * Value,
+   short Mask
+);
+short _InterlockedOr16_np(
+   short volatile * Value,
+   short Mask
+);
+short _InterlockedOr16_rel(
+   short volatile * Value,
+   short Mask
+);
+__int64 _InterlockedOr64(
+   __int64 volatile * Value,
+   __int64 Mask
+);
+__int64 _InterlockedOr64_acq(
+   __int64 volatile * Value,
+   __int64 Mask
+);
+__int64 _InterlockedOr64_HLEAcquire(
+   __int64 volatile * Value,
+   __int64 Mask
+);
+__int64 _InterlockedOr64_HLERelease(
+   __int64 volatile * Value,
+   __int64 Mask
+);
+__int64 _InterlockedOr64_nf(
+   __int64 volatile * Value,
+   __int64 Mask
+);
+__int64 _InterlockedOr64_np(
+   __int64 volatile * Value,
+   __int64 Mask
+);
+__int64 _InterlockedOr64_rel(
+   __int64 volatile * Value,
+   __int64 Mask
+);
+```
+
+#### <a name="parameters"></a>Parameter
+
 *Wert*<br/>
-[in, out] Ein Zeiger auf den ersten Operanden, durch das Ergebnis ersetzt wird.  
-  
+[in, out] Ein Zeiger auf den ersten Operanden, durch das Ergebnis ersetzt wird.
+
 *Maske*<br/>
-[in] Der zweite Operand.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Der ursprüngliche Wert, auf den der erste Parameter zeigt.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Systemintern|Architektur|Header|  
-|---------------|------------------|------------|  
-|`_InterlockedOr`, `_InterlockedOr8`, `_InterlockedOr16`, `_InterlockedOr64`|X86, ARM, x64|\<intrin.h>|  
-|`_InterlockedOr_acq`, `_InterlockedOr_nf`, `_InterlockedOr_rel`, `_InterlockedOr8_acq`, `_InterlockedOr8_nf`, `_InterlockedOr8_rel`, `_InterlockedOr16_acq`, `_InterlockedOr16_nf`, `_InterlockedOr16_rel`, `_InterlockedOr64_acq`, `_InterlockedOr64_nf`, `_InterlockedOr64_rel`|ARM|\<intrin.h>|  
-|`_InterlockedOr_np`, `_InterlockedOr8_np`, `_InterlockedOr16_np`, `_InterlockedOr64_np`|x64|\<intrin.h>|  
-|`_InterlockedOr_HLEAcquire`, `_InterlockedOr_HLERelease`, `_InterlockedOr64_HLEAcquire`, `_InterlockedOr64_HLERelease`|x86, x64|\<immintrin.h>|  
-  
-## <a name="remarks"></a>Hinweise  
- Die Nummer im Namen jeder einzelnen Funktion gibt die Bitgröße der Argumente an.  
-  
- Verwenden Sie auf ARM-Plattformen die systeminternen Funktionen mit den Suffixen `_acq` und `_rel`, wenn Sie Semantiken abrufen und freigeben müssen, beispielsweise am Anfang und Ende eines kritischen Abschnitts. Die systeminternen ARM-Funktionen mit dem Suffix `_nf` („no fence“) dienen nicht als Arbeitsspeicherbarriere.  
-  
- Die systeminternen Funktionen mit dem Suffix `_np` („no prefetch“) verhindern, dass ein möglicher Vorabrufvorgang vom Compiler eingefügt wird.  
-  
- Auf Intel-Plattformen, die Hardware Lock Elision (HLE)-Anweisungen unterstützen, enthalten die systeminternen Funktionen mit den Suffixen `_HLEAcquire` und `_HLERelease` einen Hinweis für den Prozessor, wie die Leistung durch den Wegfall der Schreibsperre in der Hardware beschleunigt werden kann. Wenn diese systeminternen Funktionen auf Plattformen aufgerufen werden, die HLE nicht unterstützen, wird der Hinweis ignoriert.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// _InterlockedOr.cpp  
-#include <stdio.h>  
-#include <intrin.h>  
-  
-#pragma intrinsic(_InterlockedOr)  
-  
-int main()  
-{  
-        long data1 = 0xFF00FF00;  
-        long data2 = 0x00FFFF00;  
-        long retval;  
-        retval = _InterlockedOr(&data1, data2);  
-        printf_s("0x%x 0x%x 0x%x", data1, data2, retval);   
-}  
-```  
-  
-```Output  
-0xffffff00 0xffff00 0xff00ff00  
-```  
-  
-**Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)   
- [Konflikt mit dem x86-Compiler](../build/conflicts-with-the-x86-compiler.md)
+[in] Der zweite Operand.
+
+## <a name="return-value"></a>Rückgabewert
+
+Der ursprüngliche Wert, auf den der erste Parameter zeigt.
+
+## <a name="requirements"></a>Anforderungen
+
+|Systemintern|Architektur|Header|
+|---------------|------------------|------------|
+|`_InterlockedOr`, `_InterlockedOr8`, `_InterlockedOr16`, `_InterlockedOr64`|X86, ARM, x64|\<intrin.h>|
+|`_InterlockedOr_acq`, `_InterlockedOr_nf`, `_InterlockedOr_rel`, `_InterlockedOr8_acq`, `_InterlockedOr8_nf`, `_InterlockedOr8_rel`, `_InterlockedOr16_acq`, `_InterlockedOr16_nf`, `_InterlockedOr16_rel`, `_InterlockedOr64_acq`, `_InterlockedOr64_nf`, `_InterlockedOr64_rel`|ARM|\<intrin.h>|
+|`_InterlockedOr_np`, `_InterlockedOr8_np`, `_InterlockedOr16_np`, `_InterlockedOr64_np`|x64|\<intrin.h>|
+|`_InterlockedOr_HLEAcquire`, `_InterlockedOr_HLERelease`, `_InterlockedOr64_HLEAcquire`, `_InterlockedOr64_HLERelease`|x86, x64|\<immintrin.h>|
+
+## <a name="remarks"></a>Hinweise
+
+Die Nummer im Namen jeder einzelnen Funktion gibt die Bitgröße der Argumente an.
+
+Verwenden Sie auf ARM-Plattformen die systeminternen Funktionen mit den Suffixen `_acq` und `_rel`, wenn Sie Semantiken abrufen und freigeben müssen, beispielsweise am Anfang und Ende eines kritischen Abschnitts. Die systeminternen ARM-Funktionen mit dem Suffix `_nf` („no fence“) dienen nicht als Arbeitsspeicherbarriere.
+
+Die systeminternen Funktionen mit dem Suffix `_np` („no prefetch“) verhindern, dass ein möglicher Vorabrufvorgang vom Compiler eingefügt wird.
+
+Auf Intel-Plattformen, die Hardware Lock Elision (HLE)-Anweisungen unterstützen, enthalten die systeminternen Funktionen mit den Suffixen `_HLEAcquire` und `_HLERelease` einen Hinweis für den Prozessor, wie die Leistung durch den Wegfall der Schreibsperre in der Hardware beschleunigt werden kann. Wenn diese systeminternen Funktionen auf Plattformen aufgerufen werden, die HLE nicht unterstützen, wird der Hinweis ignoriert.
+
+## <a name="example"></a>Beispiel
+
+```
+// _InterlockedOr.cpp
+#include <stdio.h>
+#include <intrin.h>
+
+#pragma intrinsic(_InterlockedOr)
+
+int main()
+{
+        long data1 = 0xFF00FF00;
+        long data2 = 0x00FFFF00;
+        long retval;
+        retval = _InterlockedOr(&data1, data2);
+        printf_s("0x%x 0x%x 0x%x", data1, data2, retval);
+}
+```
+
+```Output
+0xffffff00 0xffff00 0xff00ff00
+```
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
+[Konflikt mit dem x86-Compiler](../build/conflicts-with-the-x86-compiler.md)

@@ -1,7 +1,7 @@
 ---
 title: WeakRef-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f9b121b75e31fdd79313e36b9e1e19c1cf3200e
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: f40e0509f5e532ea85930052a6bda35d89e47ae1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691535"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071023"
 ---
 # <a name="weakref-class"></a>WeakRef-Klasse
 
@@ -43,7 +43,7 @@ Stellt einen *schwachen Verweis* dar, der nur durch die Windows-Runtime und nich
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-class WeakRef : public ComPtr<IWeakReference>
+class WeakRef : public ComPtr<IWeakReference>;
 ```
 
 ## <a name="members"></a>Member
@@ -75,7 +75,7 @@ Ein `WeakRef` -Objekt verwaltet einen *starken Verweis*, der mit einem Objekt zu
 
 Ein `WeakRef` Objekt wird normalerweise verwendet, um ein Objekt darstellt, dessen Vorhandensein durch einen externen Thread oder Anwendung gesteuert wird. Erstellen Sie z. B. eine `WeakRef` Objekt aus einem Verweis auf ein Dateiobjekt. Solange die Datei geöffnet ist, ist der starke Verweis gültig. Wenn die Datei aber geschlossen wird, wird der starke Verweis ungültig.
 
-Beachten Sie, dass es eine verhaltensänderung bei den [als](#as), [AsIID](#asiid) und [CopyTo](#copyto) Methoden in das Windows 10 SDK. Zuvor, nach dem Aufrufen einer dieser Methoden, Sie können überprüfen, die `WeakRef` für `nullptr` zu bestimmen, ob ein starker Verweis erfolgreich, wie im folgenden Code abgerufen wurde:
+Beachten Sie, dass es eine Verhaltensänderung bei den Methoden [As](#as), [AsIID](#asiid) und [CopyTo](#copyto) im Windows 10 SDK gibt. Zuvor, nach dem Aufrufen einer dieser Methoden, Sie können überprüfen, die `WeakRef` für `nullptr` zu bestimmen, ob ein starker Verweis erfolgreich, wie im folgenden Code abgerufen wurde:
 
 ```cpp
 WeakRef wr;
@@ -88,7 +88,7 @@ HRESULT hr = wr.As(&strongRef);
 
 // This check won't work with the Windows 10 SDK version of the library.
 // Check the input pointer instead.
-if(wr == nullptr)  
+if(wr == nullptr)
 {
     wprintf(L"Couldn’t get strong ref!");
 }
@@ -97,7 +97,7 @@ if(wr == nullptr)
 Dieser Code funktioniert bei Verwendung des Windows 10 SDKs (oder höher) nicht. Überprüfen Sie stattdessen den Zeiger, der übergeben wurde für `nullptr`.
 
 ```cpp
-if (strongRef == nullptr)  
+if (strongRef == nullptr)
 {
     wprintf(L"Couldn't get strong ref!");
 }
@@ -141,10 +141,10 @@ HRESULT As(
 
 ### <a name="parameters"></a>Parameter
 
-*U*  
+*U*<br/>
 Eine Schnittstellen-ID.
 
-*ptr*  
+*ptr*<br/>
 Wenn dieser Vorgang abgeschlossen ist, ein Objekt, das Parameter repräsentiert *U*.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -176,10 +176,10 @@ HRESULT AsIID(
 
 ### <a name="parameters"></a>Parameter
 
-*riid*  
+*riid*<br/>
 Eine Schnittstellen-ID.
 
-*ptr*  
+*ptr*<br/>
 Wenn dieser Vorgang abgeschlossen ist, ein Objekt, das Parameter repräsentiert *Riid*.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -220,13 +220,13 @@ HRESULT CopyTo(
 
 ### <a name="parameters"></a>Parameter
 
-*U*  
+*U*<br/>
 Zeiger ein `IInspectable` Schnittstelle. Ein Fehler wird ausgegeben, wenn *U* stammt nicht aus `IInspectable`.
 
-*riid*  
+*riid*<br/>
 Eine Schnittstellen-ID. Ein Fehler wird ausgegeben, wenn *Riid* stammt nicht aus `IWeakReference`.
 
-*ptr*  
+*ptr*<br/>
 Ein doppelt indirekter Zeiger auf `IInspectable` oder `IWeakReference`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -244,7 +244,7 @@ Ab Windows 10-SDKS können dieser Methode ist nicht festgelegt die `WeakRef` -In
 Gibt eine `ComPtrRef` -Objekt, das der aktuelle darstellt `WeakRef` Objekt.
 
 ```cpp
-Details::ComPtrRef<WeakRef> operator&() throw()  
+Details::ComPtrRef<WeakRef> operator&() throw()
 ```
 
 ### <a name="return-value"></a>Rückgabewert
@@ -262,7 +262,7 @@ Initialisiert eine neue Instanz der `WeakRef`-Klasse.
 ```cpp
 WeakRef();
 WeakRef(
-   decltype(__nullptr)  
+   decltype(__nullptr)
 );
 
 WeakRef(
@@ -284,7 +284,7 @@ WeakRef(
 
 ### <a name="parameters"></a>Parameter
 
-*ptr*  
+*ptr*<br/>
 Ein Zeiger, Verweis oder Rvalue-Verweis auf ein vorhandenes Objekt, das das aktuelle initialisiert `WeakRef` Objekt.
 
 ### <a name="remarks"></a>Hinweise

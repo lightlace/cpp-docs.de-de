@@ -1,5 +1,5 @@
 ---
-title: CMFCToolBarInfo Klasse | Microsoft Docs
+title: CMFCToolBarInfo-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,103 +32,116 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de968fe53348b4cfa3f46e999da37cdca6f88c90
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7825983fbc70dafbbcc96221b8a38c3ae4e939c5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369361"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435440"
 ---
 # <a name="cmfctoolbarinfo-class"></a>CMFCToolBarInfo-Klasse
-Enthält die Ressourcen-IDs von Symbolleistenbildern in unterschiedlichen Zuständen. `CMFCToolBarInfo` ist eine Hilfsklasse, die verwendet wird, als Parameter für die [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) Methode.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-class CMFCToolBarInfo  
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="data-members"></a>Datenmember  
-  
-|name|Beschreibung|  
-|----------|-----------------|  
-|[CMFCToolBarInfo::m_uiColdResID](#m_uicoldresid)|Ressourcen-ID der Symbolleistenbitmap für die, die regulären (kalt) Symbolleistenbilder enthält.|  
-|[CMFCToolBarInfo::m_uiDisabledResID](#m_uidisabledresid)|Ressourcen-ID der Symbolleistenbitmap für die, die deaktivierten Symbolleistenbilder enthält.|  
-|[CMFCToolBarInfo::m_uiHotResID](#m_uihotresid)|Ressourcen-ID der Symbolleistenbitmap für die, die ausgewählte (aktiven) Symbolleistenbilder enthält.|  
-|[CMFCToolBarInfo::m_uiLargeColdResID](#m_uilargecoldresid)|Ressourcen-ID der Symbolleistenbitmap für die, die umfangreiche, regulären Symbolleistenbilder enthält.|  
-|[CMFCToolBarInfo::m_uiLargeDisabledResID](#m_uilargedisabledresid)|Ressourcen-ID der Symbolleistenbitmap für die, die große enthält deaktiviert Symbolleistenbilder.|  
-|[CMFCToolBarInfo::m_uiLargeHotResID](#m_uilargehotresid)|Ressourcen-ID der Symbolleistenbitmap für die, die umfangreiche, ausgewählte Symbolleistenbilder enthält.|  
-|[CMFCToolBarInfo::m_uiMenuDisabledResID](#m_uimenudisabledresid)|Ressourcen-ID der Symbolleistenbitmap für die, die deaktivierten Menübilder enthält.|  
-|[CMFCToolBarInfo::m_uiMenuResID](#m_uimenuresid)|Ressourcen-ID der Symbolleistenbitmap für die, die Sie im Menübilder enthält.|  
-  
-## <a name="remarks"></a>Hinweise  
- Eine Bitmap für die vollständige Symbolleiste besteht aus kleinen Symbolleistenbilder (Schaltflächen) eine feste Größe. Jeder Ressourcen-ID, die in gespeichert ist ein `CMFCToolBarInfo` Objekt ist eine Bitmap, die ein breites Spektrum von symbolleistenbildern in einen einzelnen Status (z. B., ausgewählte deaktiviert, Groß oder Menübilder) enthält.  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [CMFCToolBarInfo](../../mfc/reference/cmfctoolbarinfo-class.md)  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** afxtoolbar.h  
-  
-##  <a name="m_uicoldresid"></a>  CMFCToolBarInfo::m_uiColdResID  
- Gibt eine Ressourcen-ID für die normale Schaltflächenbilder einer Symbolleiste an.  
-  
-```  
-UINT m_uiColdResID;  
-```  
-  
-##  <a name="m_uidisabledresid"></a>  CMFCToolBarInfo::m_uiDisabledResID  
- Gibt eine Ressourcen-ID für die Schaltfläche nicht verfügbar-Images von einer Symbolleiste an.  
-  
-```  
-UINT m_uiDisabledResID;  
-```  
-  
-##  <a name="m_uihotresid"></a>  CMFCToolBarInfo::m_uiHotResID  
- Gibt eine Ressourcen-ID für alle markierten Schaltfläche Images von einer Symbolleiste an.  
-  
-```  
-UINT m_uiHotResID  
-```  
-  
-##  <a name="m_uilargecoldresid"></a>  CMFCToolBarInfo::m_uiLargeColdResID  
- Gibt eine Ressourcen-ID für die großen normale Schaltflächenbilder einer Symbolleiste an.  
-  
-```  
-UINT m_uiLargeColdResID  
-```  
-  
-##  <a name="m_uilargedisabledresid"></a>  CMFCToolBarInfo::m_uiLargeDisabledResID  
- Gibt eine Ressourcen-ID für die großen deaktivierte Schaltflächenbilder einer Symbolleiste an.  
-  
-```  
-UINT m_uiLargeDisabledResID;  
-```  
-  
-##  <a name="m_uilargehotresid"></a>  CMFCToolBarInfo::m_uiLargeHotResID  
- Gibt eine Ressourcen-ID für alle großen hervorgehobenen Bilder einer Symbolleiste an.  
-  
-```  
-UINT m_uiLargeHotResID;  
-```  
-  
-##  <a name="m_uimenudisabledresid"></a>  CMFCToolBarInfo::m_uiMenuDisabledResID  
- Gibt eine Ressourcen-ID für die Bilder Befehl nicht verfügbar, einer Symbolleiste an.  
-  
-```  
-UINT m_uiMenuDisabledResID;  
-```  
-  
-##  <a name="m_uimenuresid"></a>  CMFCToolBarInfo::m_uiMenuResID  
- Gibt eine Ressourcen-ID für alle regulären menüelementbilder einer Symbolleiste an.  
-  
-```  
-UINT m_uiMenuResID;  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
- [Klassen](../../mfc/reference/mfc-classes.md)   
- [CMFCToolBar-Klasse](../../mfc/reference/cmfctoolbar-class.md)
+
+Enthält die Ressourcen-IDs von Symbolleistenbildern in unterschiedlichen Zuständen. `CMFCToolBarInfo` ist eine Hilfsklasse, die als Parameter verwendet, wird die [cmfctoolbar:: Loadtoolbarex](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) Methode.
+
+## <a name="syntax"></a>Syntax
+
+```
+class CMFCToolBarInfo
+```
+
+## <a name="members"></a>Member
+
+### <a name="data-members"></a>Datenmember
+
+|name|Beschreibung|
+|----------|-----------------|
+|[CMFCToolBarInfo::m_uiColdResID](#m_uicoldresid)|Ressourcen-ID der Symbolleistenbitmap für die, die reguläre (kalte) Symbolleistenbilder enthält.|
+|[CMFCToolBarInfo::m_uiDisabledResID](#m_uidisabledresid)|Ressourcen-ID der Symbolleistenbitmap für die, die deaktivierten Symbolleistenbilder enthält.|
+|[CMFCToolBarInfo::m_uiHotResID](#m_uihotresid)|Ressourcen-ID der Symbolleistenbitmap für die, die ausgewählte (hot) Symbolleistenbilder enthält.|
+|[CMFCToolBarInfo::m_uiLargeColdResID](#m_uilargecoldresid)|Ressourcen-ID der Symbolleistenbitmap für die, die große, reguläre Symbolleistenbilder enthält.|
+|[CMFCToolBarInfo::m_uiLargeDisabledResID](#m_uilargedisabledresid)|Ressourcen-ID der Symbolleistenbitmap für die, die große enthält deaktiviert Symbolleistenbilder.|
+|[CMFCToolBarInfo::m_uiLargeHotResID](#m_uilargehotresid)|Ressourcen-ID der Symbolleistenbitmap für die, die große, ausgewählten Symbolleistenbilder enthält.|
+|[CMFCToolBarInfo::m_uiMenuDisabledResID](#m_uimenudisabledresid)|Ressourcen-ID der Symbolleistenbitmap für die, die deaktivierten Menübilder enthält.|
+|[CMFCToolBarInfo::m_uiMenuResID](#m_uimenuresid)|Ressourcen-ID der Symbolleistenbitmap für die, die im Menübilder enthält.|
+
+## <a name="remarks"></a>Hinweise
+
+Eine Bitmap für die vollständige Symbolleiste bestehen aus kleinen Symbolleistenbilder (Schaltflächen) eine feste Größe. Jede Ressource-ID, die in gespeichert ist eine `CMFCToolBarInfo` Objekt ist eine Bitmap, die einen vollständigen Satz von symbolleistenbildern in einem Zustand (z. B., ausgewählt "," deaktiviert "," Groß "oder" Menübilder ") enthält.
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+[CMFCToolBarInfo](../../mfc/reference/cmfctoolbarinfo-class.md)
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** afxtoolbar.h
+
+##  <a name="m_uicoldresid"></a>  CMFCToolBarInfo::m_uiColdResID
+
+Gibt eine Ressourcen-ID für alle Bilder, die normale Schaltfläche einer Symbolleiste an.
+
+```
+UINT m_uiColdResID;
+```
+
+##  <a name="m_uidisabledresid"></a>  CMFCToolBarInfo::m_uiDisabledResID
+
+Gibt eine Ressourcen-ID für die Schaltfläche nicht verfügbar ist-Images von einer Symbolleiste an.
+
+```
+UINT m_uiDisabledResID;
+```
+
+##  <a name="m_uihotresid"></a>  CMFCToolBarInfo::m_uiHotResID
+
+Gibt eine Ressourcen-ID für alle Bilder der hervorgehobenen Schaltfläche einer Symbolleiste an.
+
+```
+UINT m_uiHotResID
+```
+
+##  <a name="m_uilargecoldresid"></a>  CMFCToolBarInfo::m_uiLargeColdResID
+
+Gibt eine Ressourcen-ID für alle Bilder, die große normale Schaltfläche einer Symbolleiste an.
+
+```
+UINT m_uiLargeColdResID
+```
+
+##  <a name="m_uilargedisabledresid"></a>  CMFCToolBarInfo::m_uiLargeDisabledResID
+
+Gibt eine Ressourcen-ID für alle Bilder, die große deaktivierte Schaltfläche einer Symbolleiste an.
+
+```
+UINT m_uiLargeDisabledResID;
+```
+
+##  <a name="m_uilargehotresid"></a>  CMFCToolBarInfo::m_uiLargeHotResID
+
+Gibt eine Ressourcen-ID für alle großen hervorgehobenen Bilder von einer Symbolleiste an.
+
+```
+UINT m_uiLargeHotResID;
+```
+
+##  <a name="m_uimenudisabledresid"></a>  CMFCToolBarInfo::m_uiMenuDisabledResID
+
+Gibt eine Ressourcen-ID für die Bilder Befehl nicht verfügbar ist, einer Symbolleiste an.
+
+```
+UINT m_uiMenuDisabledResID;
+```
+
+##  <a name="m_uimenuresid"></a>  CMFCToolBarInfo::m_uiMenuResID
+
+Gibt eine Ressourcen-ID für alle regulären menüelementbilder einer Symbolleiste an.
+
+```
+UINT m_uiMenuResID;
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
+[Klassen](../../mfc/reference/mfc-classes.md)<br/>
+[CMFCToolBar-Klasse](../../mfc/reference/cmfctoolbar-class.md)

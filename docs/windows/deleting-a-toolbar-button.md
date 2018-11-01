@@ -1,27 +1,16 @@
 ---
-title: Löschen einer Symbolleisten-Schaltfläche (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Löschen einer Symbolleisten-Schaltfläche (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - toolbar buttons [C++], deleting
 - Toolbar editor [C++], deleting buttons
 ms.assetid: 0888cb9b-6804-4717-93d0-3437bbc6241c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ce8b3bd682c7d4a0b019bf339e1fb543553bfc03
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 5f11ba9d4f20e2daefae9e217138e069d908ac88
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318053"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50603228"
 ---
 # <a name="deleting-a-toolbar-button-c"></a>Löschen einer Symbolleisten-Schaltfläche (C++)
 
@@ -37,5 +26,5 @@ MFC oder ATL
 
 ## <a name="see-also"></a>Siehe auch
 
-[Erstellen, Verschieben und Bearbeiten von Schaltflächen der Symbolleiste](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[Erstellen, Verschieben und Bearbeiten von Schaltflächen der Symbolleiste](../windows/creating-moving-and-editing-toolbar-buttons.md)<br/>
 [Symbolleisten-Editor](../windows/toolbar-editor.md)

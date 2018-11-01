@@ -1,10 +1,6 @@
 ---
-title: _fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fwprintf_p
 - _fprintf_p_l
@@ -29,8 +25,6 @@ f1_keywords:
 - _fwprintf_p
 - fprintf_p
 - ftprintf_p
-dev_langs:
-- C++
 helpviewer_keywords:
 - fprintf_p_l function
 - fprintf_p function
@@ -47,16 +41,12 @@ helpviewer_keywords:
 - ftprintf_p_l function
 - fwprintf_p_l function
 ms.assetid: 46b082e1-45ba-4383-9ee4-97015aa50bc6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ef748590f412afc10b5046691c982ed1d5ccabb8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: db9e9a746193c7bf35913d6792d87aa9ba85fa79
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404427"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462776"
 ---
 # <a name="fprintfp-fprintfpl-fwprintfp-fwprintfpl"></a>_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l
 
@@ -105,20 +95,20 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_fprintf_p** und **_fwprintf_p** geben die Anzahl der geschriebenen Zeichen zurück oder einen negativen Wert zurück, wenn ein Ausgabefehler auftritt.
+**_fprintf_p** und **_fwprintf_p** geben die Anzahl der geschriebenen Zeichen zurück, oder einen negativen Wert zurück, wenn ein Ausgabefehler auftritt.
 
 ## <a name="remarks"></a>Hinweise
 
-**_fprintf_p** formatiert und druckt eine Reihe von Zeichen und Werten für die Ausgabe *Stream*. Jede Funktion *Argument* (sofern vorhanden) konvertiert und ausgegeben wird, entsprechend der jeweiligen Formatangabe in *Format*. Für **_fprintf_p**, *Format* -Argument verfügt über dieselbe Syntax und zur Anwendung, die in **_printf_p**. Diese Funktionen unterstützen Positionsparameter, d.h., dass die von der Formatzeichenfolge verwendete Parameterreihenfolge geändert werden kann. Weitere Informationen zu Positionsparametern finden Sie unter [printf_p-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md).
+**_fprintf_p** formatiert und gibt eine Reihe von Zeichen und Werten für die Ausgabe *Stream*. Jede Funktion *Argument* (sofern vorhanden) konvertiert und ausgegeben wird, entsprechend der jeweiligen Formatangabe in *Format*. Für **_fprintf_p**, *Format* Argument verfügt über die gleiche Syntax und Verwendung in **_printf_p**. Diese Funktionen unterstützen Positionsparameter, d.h., dass die von der Formatzeichenfolge verwendete Parameterreihenfolge geändert werden kann. Weitere Informationen zu Positionsparametern finden Sie unter [printf_p-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**_fwprintf_p** ist eine Breitzeichen-Version von **_fprintf_p**in **_fwprintf_p**, *Format* ist eine Breitzeichen-Zeichenfolge. Diese Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **_fprintf_p** derzeit die Ausgabe in eine Unicode-Stream unterstützt keine.
+**_fwprintf_p** ist eine Breitzeichen-Version von **_fprintf_p**in **_fwprintf_p**, *Format* ist eine Breitzeichen-Zeichenfolge. Diese Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **_fprintf_p** unterstützt derzeit keine Ausgabe in eine UNICODE-Stream.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschemaparameter anstelle des aktuellen Gebietsschemas übergeben.
+Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den Locale-Parameter übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas verwenden.
 
 > [!IMPORTANT]
 > Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist.
 
-Wie Sie die nicht sicheren Versionen (finden Sie unter [Fprintf, _fprintf_l, Fwprintf _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)), diese Funktionen überprüfen ihre Parameter und den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md), wenn entweder *Stream* oder *Format* ein null-Zeiger ist oder wenn es unbekannte oder ungültige Formatbezeichner. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben die Funktionen – 1 zurück und legen Sie **Errno** auf **EINVAL**.
+Wie bei den nicht sicheren Versionen (finden Sie unter [Fprintf, _fprintf_l, Fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)), diese Funktionen überprüfen ihre Parameter und der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md), wenn entweder *Stream* oder *Format* ein null-Zeiger ist oder wenn alle unbekannte oder ungültige Formatbezeichner vorhanden sind. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

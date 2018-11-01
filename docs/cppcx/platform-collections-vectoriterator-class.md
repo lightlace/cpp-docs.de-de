@@ -1,26 +1,18 @@
 ---
-title: Platform::Collections::VectorIterator-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: Platform::Collections::VectorIterator-Klasse
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorIterator::VectorIterator
-dev_langs:
-- C++
 helpviewer_keywords:
 - VectorIterator Class
 ms.assetid: d531cb42-27e0-48a6-bf5e-c265891a18ff
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 20da45d6161f76043c3d06f027192726c3520f44
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 8e776e0f5d479ee8633efa647ac41e6b1b5f9c0e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102550"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595597"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections::VectorIterator-Klasse
 
@@ -124,7 +116,7 @@ Die erste Syntax dekrementiert und gibt dann den aktuellen VectorIterator zurüc
 
 Die erste VectorIterator-Syntax prädekrementiert den aktuellen VectorIterator.
 
-Die zweite Syntax postdekrementiert den aktuellen VectorIterator. Die `int` Typ in der zweiten Syntax gibt eine nach-dekrementierungsoperation, keinen tatsächlichen ganzzahligen Operanden an.
+Die zweite Syntax postdekrementiert den aktuellen VectorIterator. Der Typ `int` in der zweiten Syntax gibt eine Nach-Dekrementierungsoperation an, keinen tatsächlichen ganzzahligen Operanden.
 
 ## <a name="operator-dereference"></a>  Vectoriterator::\* Operator
 
@@ -157,7 +149,7 @@ Ein weiterer VectorIterator.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn der aktuelle VectorIterator gleich dem `other` ist, andernfalls `false`.
+**"true"** ist der aktuelle VectorIterator gleich *andere*ist, andernfalls **"false"**.
 
 ## <a name="operator-greater-than"></a>  Vectoriterator::&gt; Operator
 
@@ -176,7 +168,7 @@ Ein weiterer VectorIterator.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn der aktuelle VectorIterator größer als `other`ist, andernfalls `false`.
+**"true"** ist der aktuelle VectorIterator größer als *andere*ist, andernfalls **"false"**.
 
 ## <a name="operator-greater-than-or-equals"></a>  Vectoriterator::&gt;Operator =-Operator
 
@@ -195,7 +187,7 @@ Ein weiterer VectorIterator.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn der aktuelle VectorIterator größer oder gleich `other` ist, andernfalls `false`.
+**"true"** ist der aktuelle VectorIterator größer als oder gleich *andere*ist, andernfalls **"false"**.
 
 ## <a name="operator-increment"></a>  Vectoriterator:: Operator++-Operator
 
@@ -235,7 +227,7 @@ Ein weiterer VectorIterator.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn der aktuelle VectorIterator ungleich ist `other`ist, andernfalls `false`.
+**"true"** , wenn der aktuelle VectorIterator ungleich ist *andere*ist, andernfalls **"false"**.
 
 ## <a name="operator-less-than"></a>  Vectoriterator::&lt; Operator
 
@@ -254,7 +246,7 @@ Ein weiterer VectorIterator.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn der aktuelle VectorIterator kleiner als `other` ist, andernfalls `false`.
+**"true"** , wenn der aktuelle vectoriterator kleiner als *andere*ist, andernfalls **"false"**.
 
 ## <a name="operator-less-than-or-equals"></a>  Vectoriterator::&lt;Operator =-Operator
 
@@ -273,7 +265,7 @@ Ein weiterer VectorIterator.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn der aktuelle VectorIterator kleiner als oder gleich `other`ist, andernfalls `false`.
+**"true"** , wenn der aktuelle VectorIterator kleiner als oder gleich ist *andere*ist, andernfalls **"false"**.
 
 ## <a name="operator-minus"></a>  Vectoriterator:: Operator-
 
@@ -298,7 +290,7 @@ Ein weiterer VectorIterator.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die erste Operatorsyntax gibt ein VectorIterator-Objekt, das `n` Elemente kleiner ist als der aktuelle VectorIterator. Die zweite Operatorsyntax gibt die Anzahl der Elemente zwischen dem aktuellen und dem `other` VectorIterator.
+Die erste Operatorsyntax gibt ein VectorIterator-Objekt zurück, das `n` Elemente kleiner ist, als der aktuelle VectorIterator. Die zweite Operatorsyntax gibt die Anzahl von Elementen zwischen dem aktuellen und dem `other` VectorIterator zurück.
 
 ## <a name="operator-plus-assign"></a>  Vectoriterator:: Operator +=-Operator
 
@@ -319,7 +311,7 @@ Eine ganzzahlige Verschiebung.
 
 Der aktualisierte VectorIterator.
 
-## <a name="operator-plus"></a>  ectorIterator::operator +-Operator
+## <a name="operator-plus"></a>  Vectoriterator:: +-Operator
 
 Gibt einen VectorIterator zurück, der auf das Element an der angegebenen Verschiebung von dem angegebenen VectorIterator verweist.
 

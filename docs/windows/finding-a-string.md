@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1e331401a3a2a789b13bc21b76c9b1cbfcb30e33
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 23855fc0605992c7348fd4a8dd901abb4d629949
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318499"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057724"
 ---
 # <a name="finding-a-string-resource-c"></a>Suchen eine Zeichenfolgenressource (C++)
 
@@ -47,7 +47,7 @@ Sie können eine oder mehrere Zeichenfolgen in der Zeichenfolgentabelle suchen u
    > [!TIP]
    > Verwenden Sie zum Verwenden von regulärer Ausdrücken beim Durchsuchen von Dateien die **in Dateien suchen** Befehl. Geben Sie einen regulären Ausdruck einem Muster entsprechen, oder klicken Sie auf die Schaltfläche rechts neben der **Suchen nach** Feld, um eine Liste von regulären Suchausdrücken anzuzeigen. Wenn Sie einen Ausdruck aus dieser Liste auswählen, wird dieser als Suchtext im der **Suchen nach** Feld. Wenn Sie reguläre Ausdrücke verwenden, werden Sie sicher, dass die **verwenden: reguläre Ausdrücke** das Kontrollkästchen aktiviert ist.
 
-Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten (diejenigen, die die common Language Runtime), finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3\(v=vs.100\)).
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten (diejenigen, die die common Language Runtime), finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,4 +55,4 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zeichenfolgen-Editor](../windows/string-editor.md)  
+[Zeichenfolgen-Editor](../windows/string-editor.md)

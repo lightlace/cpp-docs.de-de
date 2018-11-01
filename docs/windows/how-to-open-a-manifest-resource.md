@@ -1,27 +1,16 @@
 ---
-title: 'Vorgehensweise: Öffnen einer Manifestressource (C++) | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Vorgehensweise: Öffnen einer Manifestressource (C++)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - manifest resources [C++]
 - resources [C++], opening
 ms.assetid: bd6f9c47-2a1e-417d-9d2a-c1ad7d3b9635
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 7bb55c18bf577e8ef7bbf1f9504af1df0e1ebe7f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 0e9f92a44636d91af14b139fc5f23a100b3f1e78
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315521"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666387"
 ---
 # <a name="how-to-open-a-manifest-resource"></a>Gewusst wie: Öffnen einer Manifestressource
 
@@ -49,6 +38,6 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Manifestressourcen](../windows/manifest-resources.md)  
-[Steuerelemente](../mfc/controls-mfc.md)  
+[Manifestressourcen](../windows/manifest-resources.md)<br/>
+[Steuerelemente](../mfc/controls-mfc.md)<br/>
 [Arbeiten mit Ressourcendateien](../windows/working-with-resource-files.md)

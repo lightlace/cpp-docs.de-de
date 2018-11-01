@@ -1,12 +1,6 @@
 ---
-title: Unterstützung für Unicode | Microsoft-Dokumentation
-ms.custom: ''
+title: Unterstützung für Unicode
 ms.date: 1/09/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - globalization [C++], character sets
 - portable data types [MFC]
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - character sets [C++], Unicode
 - localization [C++], character sets
 - Unicode [C++], installing support
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6b4f83d4d991b55ec7151db22a9b21424914bd04
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fea49bff2a4563b8617e19636e27afbae1c55811
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590194"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50501685"
 ---
 # <a name="support-for-unicode"></a>Unterstützung für Unicode
 
@@ -67,5 +57,6 @@ Klasse `CString` verwendet `_TCHAR` als Basis und stellt Konstruktoren und Opera
 - [Erfahren Sie mehr über die Zuordnungen für generischen Text für die Byte-breiter Portabilität](../text/generic-text-mappings-in-tchar-h.md)
 
 ## <a name="see-also"></a>Siehe auch
- [Text und Zeichenfolgen](../text/text-and-strings-in-visual-cpp.md)  
- [Unterstützung für die Verwendung von wmain](../text/support-for-using-wmain.md)  
+
+[Text und Zeichenfolgen](../text/text-and-strings-in-visual-cpp.md)<br/>
+[Unterstützung für die Verwendung von wmain](../text/support-for-using-wmain.md)

@@ -1,20 +1,13 @@
 ---
-title: Grundlegende Typen (C++ / CX) | Microsoft-Dokumentation
-ms.custom: ''
+title: Grundlegende Typen (C++/CX)
 ms.date: 01/22/2017
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a0bec396efa2d0a4191c67440e4ed3ed5d4bc083
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: a6c068d58f0d7c173bff34726873b7a0f4f1d74c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110791"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529128"
 ---
 # <a name="fundamental-types-ccx"></a>Grundlegende Typen (C++/CX)
 
@@ -26,7 +19,7 @@ Die folgende Tabelle enthält die integrierten booleschen und Zeichentypen sowie
 
 |Namespace|C++ / CX-Name|Definition|C++-Standardname|Wertebereich|
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|
-|Plattform|Boolesch|Ein 8-Bit-boolescher Wert.|bool|`true` (ungleich null) und `false` (null)|
+|Plattform|Boolesch|Ein 8-Bit-boolescher Wert.|bool|**"true"** (ungleich null) und **"false"** (null)|
 |default|char16|Ein nicht numerischer 16-Bit-Wert, der einen Unicode-Codepunkt (UTF-16) darstellt.|wchar_t<br /><br /> - oder - <br /><br /> L'c'|(Angegeben durch den Unicode-Standard)|
 
 ## <a name="numeric-types"></a>Numerische Typen

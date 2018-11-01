@@ -1,23 +1,13 @@
 ---
-title: -GUARD (Schutzprüfungen aktivieren) | Microsoft-Dokumentation
-ms.custom: ''
+title: /GUARD (Schutzprüfungen aktivieren)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 72758e23-70ac-4616-94d7-d767477406d1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d775e9c42ceb8a564e2cc7992cb95ac9717a966d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 730e26477f4684ca6339a25a945ae04ff5a823c4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707680"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565905"
 ---
 # <a name="guard-enable-guard-checks"></a>/GUARD (Schutzprüfungen aktivieren)
 
@@ -47,6 +37,6 @@ Die /GUARD:CF-Option muss dem Compiler und dem Linker angegeben werden, um CFG-f
 
 ## <a name="see-also"></a>Siehe auch
 
-[ablaufsteuerungsschutz (aktivieren)](../../build/reference/guard-enable-control-flow-guard.md)
+[/guard (Ablaufsteuerungsschutz aktivieren)](../../build/reference/guard-enable-control-flow-guard.md)<br/>
 [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
 [Linkeroptionen](../../build/reference/linker-options.md)

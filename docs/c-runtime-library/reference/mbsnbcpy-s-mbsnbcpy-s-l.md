@@ -1,10 +1,6 @@
 ---
-title: _mbsnbcpy_s, _mbsnbcpy_s_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _mbsnbcpy_s, _mbsnbcpy_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbcpy_s_l
 - _mbsnbcpy_s
@@ -26,8 +22,6 @@ f1_keywords:
 - _mbsnbcpy_s
 - mbsnbcpy_s
 - _mbsnbcpy_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbsnbcpy_s function
 - tcsncpy_s function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - _mbsnbcpy_s_l function
 - _tcsncpy_s function
 ms.assetid: dfff64ab-fe6f-49c4-99ba-75014e2b0cd6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a9475609d304b6a3e49c2f71073c4d06c0380160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00f1fe7a6deb104a4f226e42858764f5649c52ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404116"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493495"
 ---
 # <a name="mbsnbcpys-mbsnbcpysl"></a>_mbsnbcpy_s, _mbsnbcpy_s_l
 
@@ -106,16 +96,16 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-NULL, wenn erfolgreich; **EINVAL** Wenn ein ungültiger Parameter übergeben wurde.
+NULL, wenn erfolgreich; **EINVAL** , wenn ein ungültiger Parameter übergeben wurde.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mbsnbcpy_s** -Funktion kopiert *Anzahl* Bytes vom *StrSource* auf *StrDest*. Wenn *Anzahl* überschreitet die Größe des *StrDest*muss entweder der Eingabezeichenfolgen ist ein null-Zeiger oder *SizeInBytes* oder *Anzahl* ist 0, die Funktion wird der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, gibt die Funktion **EINVAL**. Wenn die Quell- und Zielzeichenfolgen überlappen, ist das Verhalten des **_mbsnbcpy_s** ist nicht definiert.
+Die **_mbsnbcpy_s** -Funktion kopiert *Anzahl* Bytes vom *StrSource* zu *StrDest*. Wenn *Anzahl* überschreitet die Größe des *StrDest*, entweder die Eingabezeichenfolgen ein null-Zeiger ist oder *SizeInBytes* oder *Anzahl* ist 0 (null) der Funktion Ruft den Handler für ungültige Parameter, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, gibt die Funktion **EINVAL**. Wenn die Quell- und Zielzeichenfolgen überlappen, ist das Verhalten der **_mbsnbcpy_s** ist nicht definiert.
 
-Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 > [!NOTE]
-> Im Gegensatz zu den nicht sichere Version dieser Funktion **_mbsnbcpy_s** führen Sie einen null-Abstand und immer null nicht die Zeichenfolge beendet.
+> Im Gegensatz zu dieser Funktion, die nicht sichere Version **_mbsnbcpy_s** nicht Abstände null sind und immer null endet die Zeichenfolge.
 
 In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -125,12 +115,12 @@ Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf
 
 |Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tcsncpy_s**|**_strncpy_s**|**_mbsnbcpy_s**|**_wcsncpy_s**|
+|**_tcsncpy_s, korrigiert wird**|**_strncpy_s**|**_mbsnbcpy_s**|**_wcsncpy_s**|
 |**_tcsncpy_s_l**|**_strncpy_s_l**|**_mbsnbcpy_s_l**|**_wcsncpy_s_l**|
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_mbsnbcpy_s**|\<mbstring.h>|
 |**_mbsnbcpy_s_l**|\<mbstring.h>|

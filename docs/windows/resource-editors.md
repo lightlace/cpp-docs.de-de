@@ -1,33 +1,22 @@
 ---
-title: Ressourcen-Editoren (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Ressourcen-Editoren (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vs.editors.resource
 - vc.resvw.resource.editors
 - vs.resvw.resource.editors
-dev_langs:
-- C++
 helpviewer_keywords:
 - editors [C++], resource
 - editors [C++]
 - resource editors
 - Windows [C++], application resource editing
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a4dab1ce421582d865895fcec0d55685bdbf30db
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ae35dbe98304fbf2f80dfe5cba8747d47cbba4d6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315222"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50622403"
 ---
 # <a name="resource-editors"></a>Ressourcen-Editor
 
@@ -57,7 +46,7 @@ Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
-[Arbeiten mit Ressourcendateien](../windows/working-with-resource-files.md)  
-[Ressourcendateien](../windows/resource-files-visual-studio.md)  
-[Symbole: Ressourcenbezeichner](../windows/symbols-resource-identifiers.md)  
+[Arbeiten mit Ressourcendateien](../windows/working-with-resource-files.md)<br/>
+[Ressourcendateien](../windows/resource-files-visual-studio.md)<br/>
+[Symbole: Ressourcenbezeichner](../windows/symbols-resource-identifiers.md)<br/>
 [Menüs und weitere Ressourcen](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

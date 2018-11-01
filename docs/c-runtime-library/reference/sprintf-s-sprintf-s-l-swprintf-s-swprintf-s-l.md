@@ -1,10 +1,6 @@
 ---
-title: sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l | Microsoft-Dokumentation
-ms.custom: ''
+title: sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _swprintf_s_l
 - _sprintf_s_l
@@ -31,8 +27,6 @@ f1_keywords:
 - stdio/_swprintf_s_l
 - _sprintf_s_l
 - _swprintf_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - stprintf_s function
 - stprintf_s_l function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - _sprintf_s_l function
 - formatted text [C++]
 ms.assetid: 424f0a29-22ef-40e8-b565-969f5f57782f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0200740df3b41e356bcf83f0756b8a5267b38166
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51469ccec348545ff780d14d5f433099def3eb69
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417790"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511942"
 ---
 # <a name="sprintfs-sprintfsl-swprintfs-swprintfsl"></a>sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
 
@@ -125,23 +115,23 @@ Weitere Informationen finden Sie unter [Formatangaben](../../c-runtime-library/f
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Anzahl geschriebener Zeichen oder -1, wenn ein Fehler aufgetreten. Wenn *Puffer* oder *Format* ist ein null-Zeiger **Sprintf_s** und **Swprintf_s** -1 zurück und stellen **Errno**auf **EINVAL**.
+Die Anzahl der geschriebenen Zeichen oder -1, wenn ein Fehler aufgetreten. Wenn *Puffer* oder *Format* ist ein null-Zeiger **Sprintf_s** und **Swprintf_s** geben-1 zurück und legen Sie **Errno**zu **EINVAL**.
 
-**Sprintf_s** gibt die Anzahl der Bytes, die in gespeicherten *Puffer*, das abschließende Null-Zeichen wird dabei nicht mitgezählt. **Swprintf_s** gibt die Anzahl der Breitzeichen, die in gespeicherten *Puffer*, das abschließende null-Breitzeichen wird dabei nicht mitgezählt.
+**Sprintf_s** gibt die Anzahl der Bytes in einem *Puffer*, das abschließende Null-Zeichen wird dabei nicht mitgezählt. **Swprintf_s** gibt die Anzahl der gespeicherten Breitzeichen *Puffer*, das beendende null-Breitzeichen wird dabei nicht mitgezählt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Sprintf_s** -Funktion formatiert und speichert eine Folge von Zeichen und Werte in *Puffer*. Jede *Argument* (sofern vorhanden) konvertiert und ausgegeben wird, entsprechend der jeweiligen Formatangabe in *Format*. Das Format besteht aus normalen Zeichen und hat die gleiche form und Funktion wie die *Format* Argument für [Printf](printf-printf-l-wprintf-wprintf-l.md). Ein NULL-Zeichen wird nach dem letzten geschriebenen Zeichen angefügt. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
+Die **Sprintf_s** -Funktion formatiert und speichert eine Reihe von Zeichen und Werten in *Puffer*. Jede *Argument* (sofern vorhanden) konvertiert und ausgegeben wird, entsprechend der jeweiligen Formatangabe in *Format*. Das Format besteht aus normalen Zeichen und hat die gleiche form und Funktion wie der *Format* Argument für [Printf](printf-printf-l-wprintf-wprintf-l.md). Ein NULL-Zeichen wird nach dem letzten geschriebenen Zeichen angefügt. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
 
-Ein Hauptunterschied zwischen **Sprintf_s** und [Sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) handelt, **Sprintf_s** die Formatzeichenfolge auf gültige Formatierungszeichen überprüft wird, wohingegen [ Sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) überprüft nur, wenn die Formatzeichenfolge oder beim Puffer **NULL** Zeiger. Wenn bei einer der beiden Überprüfungen ein Fehler auftritt, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation](../../c-runtime-library/parameter-validation.md)beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion-1 zurück und legt **Errno** auf **EINVAL**.
+Ein Hauptunterschied zwischen **Sprintf_s** und [Sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) ist, die **Sprintf_s** die Formatzeichenfolge auf gültige Formatierungszeichen überprüft, während [ Sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) überprüft nur, wenn die Formatzeichenfolge oder beim Puffer **NULL** Zeiger. Wenn bei einer der beiden Überprüfungen ein Fehler auftritt, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation](../../c-runtime-library/parameter-validation.md)beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktion gibt-1 zurück und legt **Errno** zu **EINVAL**.
 
-Der andere Hauptunterschied zwischen **Sprintf_s** und [Sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) handelt, **Sprintf_s** akzeptiert einen Length-Parameter, die die Größe des Ausgabepuffers in den Zeichen angibt. Wenn der Puffer ist zu klein für den formatierten Text einschließlich abschließendem Null, und klicken Sie dann die Puffer auf eine leere Zeichenfolge festgelegt ist, platziert eine Null-Zeichen in *Puffer*[0], und der Handler für ungültige Parameter aufgerufen. Im Gegensatz zu **_snprintf**, **Sprintf_s** wird sichergestellt, dass der Puffer mit Null endet werden, wenn die Puffergröße 0 (null) ist.
+Der wichtigste Unterschied zwischen **Sprintf_s** und [Sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) ist, die **Sprintf_s** nimmt einen Längenparameter an, um die Größe des Ausgabepuffers in Zeichen. Wenn der Puffer zu klein für den formatierten Text einschließlich abschließende Null ist, und klicken Sie dann der Puffer auf eine leere Zeichenfolge festgelegt ist, indem ein Null-Zeichen in *Puffer*[0], und der Handler für ungültige Parameter aufgerufen wird. Im Gegensatz zu **_snprintf**, **Sprintf_s** wird sichergestellt, dass der Puffer mit Null endet werden, wenn die Puffergröße 0 (null) ist.
 
-**Swprintf_s** ist eine Breitzeichen-Version von **Sprintf_s**; die Zeigerargumente zu **Swprintf_s** sind Zeichenfolgen mit Breitzeichen. Erkennung von Codierungsfehlern in **Swprintf_s** unterscheidet sich möglicherweise von der in **Sprintf_s**. Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschemaparameter, der übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas.
+**Swprintf_s** ist eine Breitzeichen-Version von **Sprintf_s**; die Zeigerargumente zu **Swprintf_s** sind Breitzeichen Zeichenfolgen. Erkennung von Codierungsfehlern in **Swprintf_s** möglicherweise nicht auf die in **Sprintf_s**. Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
 
 In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht. Die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-Es gibt Versionen von **Sprintf_s** , bieten zusätzliche Kontrolle darüber, was geschieht, wenn der Puffer zu klein ist. Weitere Informationen finden Sie unter [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
+Es gibt Versionen **Sprintf_s** bieten zusätzliche Kontrolle darüber, was geschieht, wenn der Puffer zu klein ist. Weitere Informationen finden Sie unter [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -152,7 +142,7 @@ Es gibt Versionen von **Sprintf_s** , bieten zusätzliche Kontrolle darüber, wa
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**Sprintf_s**, **_sprintf_s_l**|C: \<stdio.h><br /><br /> C++: \<cstdio> oder \<stdio.h>|
 |**Swprintf_s**, **_swprintf_s_l**|C: \<stdio.h> oder \<wchar.h><br /><br /> C++: \<cstdio>, \<cwchar>, \<stdio.h> oder \<wchar.h>|

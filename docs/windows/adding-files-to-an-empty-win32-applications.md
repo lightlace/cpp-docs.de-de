@@ -1,29 +1,18 @@
 ---
-title: Hinzufügen von Dateien zu leeren Win32-Anwendungen | Microsoft-Dokumentation
-ms.custom: ''
+title: Hinzufügen von Dateien zu leeren Win32-Anwendungen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - empty projects [C++], adding files
 - projects [C++], adding items
 - blank projects
 - files [C++], adding to projects
 ms.assetid: 070098e8-0396-49fe-a697-3daa2f1be6de
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 2801ddf7169bfd8d9ede93ada28cd4716057661c
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: d5347a0693619e5db44b1087fc249c68b9227fb2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315742"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50568651"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>Hinzufügen von Dateien zu leeren Win32-Anwendungen
 
@@ -44,4 +33,4 @@ Hinzufügen von Dateien, die weder Quell-, Header oder Ressourcendateien, die Ih
 
 ## <a name="see-also"></a>Siehe auch
 
-[Erstellen einer leeren Windows-Desktopanwendung](../windows/creating-an-empty-windows-desktop-application.md)  
+[Erstellen einer leeren Windows-Desktopanwendung](../windows/creating-an-empty-windows-desktop-application.md)

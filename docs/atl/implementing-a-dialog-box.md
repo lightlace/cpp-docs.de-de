@@ -1,28 +1,18 @@
 ---
-title: Implementieren eines Dialogfelds | Microsoft-Dokumentation
-ms.custom: ''
+title: Implementieren eines Dialogfelds
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CSimpleDialog class, implementing dialog boxes in ATL
 - dialog boxes, ATL
 - CAxDialogImpl class, implementing dialog boxes in ATL
 - ATL, dialog boxes
 ms.assetid: 478525f2-aa6a-435a-b162-68fc8aa98a8e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b656af864f8a0dd7c5a69866976b4c1e624b87b9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 680ca7a162d8fbedc793ff097663d942843887d6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764292"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645418"
 ---
 # <a name="implementing-a-dialog-box"></a>Implementieren eines Dialogfelds
 
@@ -30,7 +20,7 @@ Es gibt zwei Möglichkeiten, ein Dialogfeld, das dem ATL-Projekt hinzuzufügen: 
 
 ## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>Hinzufügen eines Dialogfelds mit der ATL-Dialogfeld-Assistent
 
-In der [Dialogfeld Klasse hinzufügen](../ide/add-class-dialog-box.md), wählen Sie das Objekt ATL-Dialogfeld, um ein Dialogfeld, das einem ATL-Projekt hinzu. Geben Sie die ATL-Dialogfeld-Assistent nach Bedarf, und klicken Sie auf **Fertig stellen**. Der Assistent fügt eine Klasse, die von abgeleiteten [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) zu Ihrem Projekt. Öffnen Sie die Ressourcenansicht aus der **Ansicht** , suchen Sie das Dialogfeld, und doppelklicken Sie darauf, um sie im Ressourcen-Editor zu öffnen.
+In der [Dialogfeld Klasse hinzufügen](../ide/add-class-dialog-box.md), wählen Sie das Objekt ATL-Dialogfeld, um ein Dialogfeld, das einem ATL-Projekt hinzu. Geben Sie die ATL-Dialogfeld-Assistent nach Bedarf, und klicken Sie auf **Fertig stellen**. Der Assistent fügt eine Klasse, die von abgeleiteten [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) zu Ihrem Projekt. Öffnen Sie **Ressourcenansicht** aus der **Ansicht** , suchen Sie das Dialogfeld, und doppelklicken Sie darauf, um sie im Ressourcen-Editor zu öffnen.
 
 > [!NOTE]
 >  Wenn das Dialogfeld von abgeleitet ist `CAxDialogImpl`, können sie beide ActiveX hosten und Windows-Steuerelemente. Wenn Sie in Ihre Dialogfeldklasse nicht den Aufwand für das ActiveX-Steuerelemente unterstützen möchten, verwenden Sie [CSimpleDialog](../atl/reference/csimpledialog-class.md) oder [CDialogImpl](../atl/reference/cdialogimpl-class.md) stattdessen.

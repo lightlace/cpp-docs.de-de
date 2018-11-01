@@ -1,28 +1,30 @@
 ---
 title: IsBaseOfStrict-Struktur | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::IsBaseOfStrict
+- internal/Microsoft::WRL::Details::IsBaseOfStrict::value
 dev_langs:
 - C++
 helpviewer_keywords:
-- IsBaseOfStrict structure
+- Microsoft::WRL::Details::IsBaseOfStrict structure
+- Microsoft::WRL::Details::IsBaseOfStrict::value constant
 ms.assetid: 6fed7366-c8d4-4991-b4fb-43ed93f8e1bf
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e20748f1929a00084b0fb7bf16342e48e16a82b2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 90ceaf20a5d601fc2904b7ce8610b4a3906e30ac
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610124"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161202"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict-Struktur
 
@@ -31,24 +33,19 @@ Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-template <
-   typename Base,
-   typename Derived
->
-
+template <typename Base, typename Derived>
 struct IsBaseOfStrict;
-template <
-   typename Base
->
+
+template <typename Base>
 struct IsBaseOfStrict<Base, Base>;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*Basis*  
+*Basis*<br/>
 Der Basistyp.
 
-*Abgeleitete*  
+*Abgeleitete*<br/>
 Der abgeleitete Typ.
 
 ## <a name="remarks"></a>Hinweise
@@ -61,9 +58,9 @@ Die erste Vorlage testet, ob ein Typ von einem Basistyp abgeleitet ist, die erge
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
-|name|Beschreibung|
-|----------|-----------------|
-|[IsBaseOfStrict::value-Konstante](../windows/isbaseofstrict-value-constant.md)|Gibt an, ob ein Typ die Basis eines anderen ist.|
+name                            | Beschreibung
+------------------------------- | --------------------------------------------------
+[Isbaseofstrict:: value](#value) | Gibt an, ob ein Typ die Basis eines anderen ist.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -75,6 +72,16 @@ Die erste Vorlage testet, ob ein Typ von einem Basistyp abgeleitet ist, die erge
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>Siehe auch
+## <a name="value"></a>Isbaseofstrict:: value
 
-[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+```cpp
+static const bool value = __is_base_of(Base, Derived);
+```
+
+### <a name="remarks"></a>Hinweise
+
+Gibt an, ob ein Typ die Basis eines anderen ist.
+
+`value` ist **"true"** Wenn Typ `Base` ist eine Basisklasse des Typs `Derived`, ansonsten ist der **"false"**.

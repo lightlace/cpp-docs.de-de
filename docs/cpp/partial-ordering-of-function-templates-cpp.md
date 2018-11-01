@@ -1,25 +1,15 @@
 ---
-title: Partielle Reihenfolge von Funktionsvorlagen (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Partielle Reihenfolge von Funktionsvorlagen (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - partial ordering of function templates
 ms.assetid: 0c17347d-0e80-47ad-b5ac-046462d9dc73
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e5b550cd0b76aa0a2e061536ae6bb0ea61063909
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 10b920e4d5f999c3a2c9649ceabb0369813cc401
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087746"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438856"
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>Partielle Reihenfolge von Funktionsvorlagen (C++)
 
@@ -31,23 +21,23 @@ Verwenden Sie folgenden Prozess, um zu ermitteln, ob ein Funktionsvorlagenkandid
 
 1. Berücksichtigen Sie zwei Funktionsvorlagen, T1 und T2.
 
-2. Ersetzen Sie die Parameter in T1 durch einen hypothetischen eindeutigen Typ X.
+1. Ersetzen Sie die Parameter in T1 durch einen hypothetischen eindeutigen Typ X.
 
-3. Überprüfen Sie mit der Parameterliste in T1, ob T2 eine gültige Vorlage für diese Parameterliste ist. Ignorieren Sie alle impliziten Konvertierungen.
+1. Überprüfen Sie mit der Parameterliste in T1, ob T2 eine gültige Vorlage für diese Parameterliste ist. Ignorieren Sie alle impliziten Konvertierungen.
 
-4. Wiederholen Sie den gleichen Prozess umgekehrt mit T1 und T2.
+1. Wiederholen Sie den gleichen Prozess umgekehrt mit T1 und T2.
 
-5. Wenn eine Vorlage eine gültige Vorlagenargumentliste für die andere Vorlage ist, das Gegenteil aber nicht zutrifft, wird die Vorlage als weniger spezialisiert angesehen als die andere Vorlage. Wenn beide Vorlagen, die mit den vorherigen Schritt Formular gültige Argumente füreinander wird, klicken Sie dann diese werden als einheitlich spezialisiert behandelt werden, und ein Mehrdeutiger Aufruf führt versuchen, bei deren Verwendung.
+1. Wenn eine Vorlage eine gültige Vorlagenargumentliste für die andere Vorlage ist, das Gegenteil aber nicht zutrifft, wird die Vorlage als weniger spezialisiert angesehen als die andere Vorlage. Wenn beide Vorlagen, die mit den vorherigen Schritt Formular gültige Argumente füreinander wird, klicken Sie dann diese werden als einheitlich spezialisiert behandelt werden, und ein Mehrdeutiger Aufruf führt versuchen, bei deren Verwendung.
 
-6. Mithilfe dieser Regeln können Sie:
+1. Mithilfe dieser Regeln können Sie:
 
-     1. Eine Vorlagenspezialisierung für einen bestimmten Typ ist spezialisierter als eine, die ein generisches Typargument verwendet.
+   1. Eine Vorlagenspezialisierung für einen bestimmten Typ ist spezialisierter als eine, die ein generisches Typargument verwendet.
 
-     2. Eine Vorlage aus, nur dass __T\*__  ist spezialisierter als eine dauert nur __T__, da es sich bei einem hypothetischen geben __X\*__  ist ein gültiges Argument für eine __T__ Template-Argument, aber __X__ ist kein gültiges Argument für eine __T\*__  Template-Argument.
+   1. Eine Vorlage aus, nur dass __T\*__  ist spezialisierter als eine dauert nur __T__, da es sich bei einem hypothetischen geben __X\*__  ist ein gültiges Argument für eine __T__ Template-Argument, aber __X__ ist kein gültiges Argument für eine __T\*__  Template-Argument.
 
-     3. __const T__ ist spezialisierter als __T__, da __const X__ ist ein gültiges Argument für eine __T__ Template-Argument, aber __X__ ist kein gültiges Argument für eine __const T__ Template-Argument.
+   1. __const T__ ist spezialisierter als __T__, da __const X__ ist ein gültiges Argument für eine __T__ Template-Argument, aber __X__ ist kein gültiges Argument für eine __const T__ Template-Argument.
 
-     4. __const T\*__  ist spezialisierter als __T\*__, da __const X\*__  ist ein gültiges Argument für eine __T\*__  Template-Argument, aber __X\*__  ist kein gültiges Argument für eine __const T\*__  Template-Argument.
+   1. __const T\*__  ist spezialisierter als __T\*__, da __const X\*__  ist ein gültiges Argument für eine __T\*__  Template-Argument, aber __X\*__  ist kein gültiges Argument für eine __const T\*__  Template-Argument.
 
 ## <a name="example"></a>Beispiel
 
@@ -84,7 +74,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 Less specialized function called

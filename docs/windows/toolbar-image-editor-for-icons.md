@@ -1,15 +1,9 @@
 ---
-title: Symbolleiste (Bildbearbeitung für Symbole C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Symbolleiste (Bildbearbeitung für Symbole C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 - vc.editors.icon
-dev_langs:
-- C++
 helpviewer_keywords:
 - Graphics toolbar
 - Image editor [C++], toolbar
@@ -17,17 +11,12 @@ helpviewer_keywords:
 - Properties window
 - Option selector, Image editor
 ms.assetid: a0af4209-6273-4106-a7c1-0edecc9b5755
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 9a454d067881a15f6d125430c304f4b5af71b5d1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: f4995ead65dd6f794093643e53d8d8fb15e62adb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314403"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50521098"
 ---
 # <a name="toolbar-c-image-editor-for-icons"></a>Symbolleiste (Bildbearbeitung für Symbole C++)
 
@@ -36,8 +25,7 @@ Die **Bildbearbeitung** Symbolleiste enthält Tools für die Zeichnung zeichnen,
 > [!NOTE]
 > Alle Tools zur Verfügung, auf die **Bild-Editor** Symbolleiste stehen auch über die **Image** Menü (unter der **Tools** Befehl).
 
-![Symbolleiste der Bildbearbeitung](../mfc/media/vcimageeditortoolbar.gif "VcImageEditorToolbar")  
-Symbolleiste des Grafik-Editors
+![Symbolleiste der Bildbearbeitung](../mfc/media/vcimageeditortoolbar.gif "VcImageEditorToolbar") Symbolleiste der Bildbearbeitung
 
 Verwenden der **Bildbearbeitung** Symbolleiste und **Option** Auswahl, klicken Sie auf das Tool oder option werden sollen.
 
@@ -46,8 +34,7 @@ Verwenden der **Bildbearbeitung** Symbolleiste und **Option** Auswahl, klicken S
 
 Mit der **Option** Auswahl können Sie die Breite des, Pinselstrich usw. angeben. Das Symbol auf der **Option** Selektor Schaltfläche ändert sich je nachdem welches Tool Sie ausgewählt haben.
 
-![Zeichnen von&#45;Shape-Selektor auf der Symbolleiste der Bildbearbeitung](../mfc/media/vcimageeditortoolbaroptionselector.gif "VcImageEditorToolbarOptionSelector")  
-Optionsauswahl auf der Symbolleiste der Bildbearbeitung
+![Zeichnen von&#45;Shape-Selektor auf der Symbolleiste der Bildbearbeitung](../mfc/media/vcimageeditortoolbaroptionselector.gif "VcImageEditorToolbarOptionSelector") Optionsauswahl auf der Symbolleiste der Bildbearbeitung
 
 Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
 
@@ -57,6 +44,6 @@ Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anzeigen oder Ausblenden der Symbolleiste](displaying-or-hiding-the-toolbar-image-editor-for-icons.md)  
-[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Anzeigen oder Ausblenden der Symbolleiste](displaying-or-hiding-the-toolbar-image-editor-for-icons.md)<br/>
+[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)

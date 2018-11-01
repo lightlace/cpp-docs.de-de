@@ -1,12 +1,6 @@
 ---
-title: Festlegen von Funktionalitätsebenen | Microsoft Docs
-ms.custom: ''
+title: Festlegen von Funktionalitätsebenen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CObject class [MFC], adding functionality to derived classes
 - runtime [MFC], class information
@@ -16,73 +10,71 @@ helpviewer_keywords:
 - run-time class [MFC], information support
 - levels [MFC]
 ms.assetid: 562669ba-c858-4f66-b5f1-b3beeea4f486
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 425cbf2f9c769dbbb6cd054b9af6b7f6f5fc9d52
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 3fb9b18712b24046e05f05834caaac2819fb73dc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954464"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494652"
 ---
 # <a name="specifying-levels-of-functionality"></a>Festlegen von Funktionalitätsebenen
-In diesem Artikel wird beschrieben, wie die folgenden Grade an Funktionalität zum Hinzufügen Ihrer [CObject](../mfc/reference/cobject-class.md)-Klasse abgeleitet:  
-  
--   [Laufzeit Klasseninformationen](#_core_to_add_run.2d.time_class_information)  
-  
--   [Unterstützung für dynamische Erstellung](#_core_to_add_dynamic_creation_support)  
-  
--   [Unterstützung von Serialisierung](#_core_to_add_serialization_support)  
-  
- Eine allgemeine Beschreibung des `CObject` Funktionen finden Sie im Artikel [Ableiten einer Klasse von CObject](../mfc/deriving-a-class-from-cobject.md).  
-  
--   [Laufzeit Klasseninformationen](#_core_to_add_run.2d.time_class_information)  
-#### <a name="_core_to_add_run.2d.time_class_information"></a> Laufzeit Klasseninformationen hinzufügen  
-  
-1.  Leiten Sie eine Klasse von `CObject`gemäß der Beschreibung in der [Ableiten einer Klasse von CObject](../mfc/deriving-a-class-from-cobject.md) Artikel.  
-  
-2.  Verwenden Sie das DECLARE_DYNAMIC-Makro in der Klassendeklaration, wie hier gezeigt:  
-  
-     [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/specifying-levels-of-functionality_1.h)]  
-  
-3.  Verwenden Sie das IMPLEMENT_DYNAMIC-Makro in der Implementierungsdatei (. CPP) der Klasse. Dieses Makro akzeptiert als Argumente den Namen der Klasse und ihre Basisklasse wie folgt:  
-  
-     [!code-cpp[NVC_MFCCObjectSample#3](../mfc/codesnippet/cpp/specifying-levels-of-functionality_2.cpp)]  
-  
+
+In diesem Artikel wird beschrieben, wie Sie die folgenden Ebenen der Funktionalität zum Hinzufügen Ihrer [CObject](../mfc/reference/cobject-class.md)-Klasse:
+
+- [Laufzeit Klasseninformationen](#_core_to_add_run.2d.time_class_information)
+
+- [Unterstützung für dynamische Erstellung](#_core_to_add_dynamic_creation_support)
+
+- [Unterstützung von Serialisierung](#_core_to_add_serialization_support)
+
+Eine allgemeine Beschreibung von `CObject` Funktionen finden Sie im Artikel [Ableiten einer Klasse von CObject](../mfc/deriving-a-class-from-cobject.md).
+
+- [Laufzeit Klasseninformationen](#_core_to_add_run.2d.time_class_information)
+#### <a name="_core_to_add_run.2d.time_class_information"></a> Hinzufügen von Laufzeit Klasseninformationen
+
+1. Leiten Sie eine Klasse von `CObject`gemäß der Beschreibung in der [Ableiten einer Klasse von CObject](../mfc/deriving-a-class-from-cobject.md) Artikel.
+
+1. Verwenden Sie das DECLARE_DYNAMIC-Makro in der Klassendeklaration, wie hier gezeigt:
+
+   [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/specifying-levels-of-functionality_1.h)]
+
+1. Verwenden Sie das IMPLEMENT_DYNAMIC-Makro in der Implementierungsdatei (. CPP) der Klasse. Dieses Makro akzeptiert als Argumente den Namen der Klasse und ihrer Basisklasse wie folgt:
+
+   [!code-cpp[NVC_MFCCObjectSample#3](../mfc/codesnippet/cpp/specifying-levels-of-functionality_2.cpp)]
+
 > [!NOTE]
->  Fügen Sie IMPLEMENT_DYNAMIC immer in der Implementierungsdatei (. CPP) für die Klasse. IMPLEMENT_DYNAMIC-Makro nur einmal während der Kompilierung ausgewertet werden und sollte daher nicht in einer Schnittstellendatei verwendet werden (. H), konnte möglicherweise in mehr als eine Datei enthalten sein.  
-  
-#### <a name="_core_to_add_dynamic_creation_support"></a> So fügen Sie Unterstützung für dynamische Erstellung hinzu  
-  
-1.  Leiten Sie eine Klasse von `CObject`.  
-  
-2.  Verwenden Sie das DECLARE_DYNCREATE-Makro in der Klassendeklaration.  
-  
-3.  Definieren Sie einen Konstruktor ohne Argumente (Standardkonstruktor).  
-  
-4.  Verwenden Sie das IMPLEMENT_DYNCREATE-Makro in der Implementierungsdatei der Klasse.  
-  
-#### <a name="_core_to_add_serialization_support"></a> Zum Hinzufügen der Serialisierungsunterstützung  
-  
-1.  Leiten Sie eine Klasse von `CObject`.  
-  
-2.  Überschreiben Sie die `Serialize` Memberfunktion.  
-  
+>  In der Implementierungsdatei IMPLEMENT_DYNAMIC einfach (. CPP) für die Klasse. Das IMPLEMENT_DYNAMIC-Makro nur einmal während einer Kompilierung ausgewertet werden soll, und sollte daher nicht in einer Schnittstellendatei verwendet werden (. H), kann möglicherweise in mehrere Dateien enthalten sein.
+
+#### <a name="_core_to_add_dynamic_creation_support"></a> Hinzufügen von Unterstützung für dynamische Erstellung
+
+1. Leiten Sie eine Klasse von `CObject`.
+
+1. Verwenden Sie das DECLARE_DYNCREATE-Makro in der Klassendeklaration.
+
+1. Definieren Sie einen Konstruktor ohne Argumente (eine Standardkonstruktor).
+
+1. Verwenden Sie das IMPLEMENT_DYNCREATE-Makro in der Implementierungsdatei der Klasse.
+
+#### <a name="_core_to_add_serialization_support"></a> Die Serialisierungsunterstützung hinzufügen
+
+1. Leiten Sie eine Klasse von `CObject`.
+
+1. Überschreiben der `Serialize` Member-Funktion.
+
     > [!NOTE]
-    >  Beim Aufrufen `Serialize` direkt, d. h., Sie sollten keine serialisiert das Objekt über einen polymorphen Zeiger, überspringen Sie die Schritte 3 bis 5.  
-  
-3.  Verwenden Sie in der Klassendeklaration DECLARE_SERIAL-Makro.  
-  
-4.  Definieren Sie einen Konstruktor ohne Argumente (Standardkonstruktor).  
-  
-5.  Verwenden Sie das IMPLEMENT_SERIAL-Makro in der Implementierungsdatei der Klasse.  
-  
+    >  Wenn Sie aufrufen `Serialize` direkt, d. h. Sie nicht möchten das Objekt über einen Zeiger polymorph zu serialisieren, überspringen Sie die Schritte 3 bis 5.
+
+1. Verwenden Sie das DECLARE_SERIAL-Makro in der Klassendeklaration.
+
+1. Definieren Sie einen Konstruktor ohne Argumente (eine Standardkonstruktor).
+
+1. Verwenden Sie das IMPLEMENT_SERIAL-Makro in der Implementierungsdatei der Klasse.
+
 > [!NOTE]
->  Ein "polymorpher Zeiger" verweist auf ein Objekt einer Klasse (rufen sie ein) oder auf ein Objekt einer beliebigen Klasse abgeleitet wurde. ein (z. B. B). Um einen polymorphen Zeiger zu serialisieren, muss das Framework die Laufzeitklasse des Objekts bestimmen, es (B) serialisiert, da es ein Objekt einer Klasse, die von einer Basisklasse (A) abgeleitet werden kann.  
-  
- Weitere Informationen zum Aktivieren der Serialisierung, wenn Sie eine Klasse von ableiten `CObject`, finden Sie in den Artikeln [Dateien in MFC](../mfc/files-in-mfc.md) und [Serialisierung](../mfc/serialization-in-mfc.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Ableiten einer Klasse von CObject](../mfc/deriving-a-class-from-cobject.md)
+>  "Polymorpher Zeiger" verweist auf ein Objekt einer Klasse (rufen Sie ihn ein) oder auf ein Objekt einer Klasse ein (z. B. B) abgeleitet. Um über einen Zeiger polymorph zu serialisieren, muss das Framework die Run-Time-Klasse des Objekts festlegen, es (B) serialisiert, da es ein Objekt einer Klasse, die von einer Basisklasse (A) abgeleitet werden kann.
+
+Weitere Informationen zum Aktivieren der Serialisierung, wenn Sie eine Klasse von ableiten `CObject`, finden Sie in den Artikeln [Dateien in MFC](../mfc/files-in-mfc.md) und [Serialisierung](../mfc/serialization-in-mfc.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Ableiten einer Klasse von CObject](../mfc/deriving-a-class-from-cobject.md)

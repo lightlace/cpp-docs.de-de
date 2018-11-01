@@ -1,7 +1,7 @@
 ---
-title: Delegat (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
+title: Delegaten (C++ / CLI und C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 46b09b5cbe74849c3dc08e8faee3ee4ca645a55b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fd0f63aebaa6dd742e1ce701e42cf8238fb6033f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602933"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068091"
 ---
-# <a name="delegate--c-component-extensions"></a>delegate (Komponentenerweiterungen für C++)
+# <a name="delegate--ccli-and-ccx"></a>Delegaten (C++ / CLI und C++ / CX)
 
 Deklariert einen Typ, der einen Funktionszeiger darstellt.
 
@@ -52,21 +52,21 @@ return-type
 delegate-type-identifier
 (
 [ parameters ]
-)  
+)
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*Zugriff*  
+*Zugriff*<br/>
 (optional) Der Zugriff auf den Delegaten, der sein kann **öffentliche** (Standard) oder **private**. Der Funktionsprototyp kann auch qualifiziert werden, mit der **const** oder **flüchtige** Schlüsselwörter.
 
-*Rückgabetyp*  
+*Rückgabetyp*<br/>
 Der Rückgabetyp von den Funktionsprototyp.
 
-*Delegate-Type-identifier*  
+*Delegate-Type-identifier*<br/>
 Der Name des der deklarierten Delegattyp.
 
-*Parameter*  
+*Parameter*<br/>
 (Optional) Die Typen und Bezeichner, der den Funktionsprototyp.
 
 ### <a name="remarks"></a>Hinweise
@@ -91,10 +91,10 @@ function_declaration
 
 ### <a name="parameters"></a>Parameter
 
-*Zugriff*  
+*Zugriff*<br/>
 (optional) Der Zugriff auf den Delegaten außerhalb der Assembly kann öffentlich oder privat sein.  Der Standardwert ist privat.  Innerhalb einer Klasse kann ein Delegat aller Zugriffsebenen verfügen.
 
-*function_declaration*  
+*function_declaration*<br/>
 Die Signatur der Funktion, die an den Delegaten gebunden werden kann. Der Rückgabetyp eines Delegaten kann es sich um einen verwalteten Typ sein. Aus Gründen der Interoperabilität empfiehlt es sich, dass der Rückgabetyp eines Delegaten ein CLS-Typ sein.
 
 Definieren Sie einen ungebundenen Delegaten, der erste Parameter im *Function_declaration* muss der Typ des der **dies** Zeiger für das Objekt.
@@ -131,7 +131,7 @@ Weitere Informationen zu Delegaten finden Sie unter
 
 - [Vorgehensweise: Definieren und Verwenden von Delegaten (C++/CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
 
-- [Generische Delegaten (Visual C++)](../windows/generic-delegates-visual-cpp.md)
+- [Generische Delegaten (C++/CLI)](../windows/generic-delegates-visual-cpp.md)
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -171,14 +171,14 @@ int main () {
    MyDel^ DelInst;
 
    // test if delegate is initialized
-   if (DelInst)  
+   if (DelInst)
       DelInst(7);
 
    // assigning to delegate
    DelInst = gcnew MyDel(a, &A::func1);
 
    // invoke delegate
-   if (DelInst)  
+   if (DelInst)
       DelInst(8);
 
    // add a function
@@ -212,4 +212,4 @@ in static func3 11
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET und UWP](../windows/component-extensions-for-runtime-platforms.md)

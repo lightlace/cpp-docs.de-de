@@ -1,7 +1,7 @@
 ---
 title: RemoveIUnknown-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11751bf4e6f43e18fddb71a5ba2fd331a6d36977
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c13f84916bf4733d906a1bd50411a85c6a5ed1e0
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599370"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788954"
 ---
 # <a name="removeiunknown-class"></a>RemoveIUnknown-Klasse
 
@@ -29,20 +29,16 @@ Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-template <
-   typename T
->
+template <typename T>
 struct RemoveIUnknown;
 
-template <
-   typename T
->
+template <typename T>
 class RemoveIUnknown : public T;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Eine Klasse.
 
 ## <a name="remarks"></a>Hinweise

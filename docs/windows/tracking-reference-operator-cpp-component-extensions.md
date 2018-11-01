@@ -1,31 +1,21 @@
 ---
-title: Nachverfolgungsverweisoperator (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Nachverfolgungsverweisoperator (C++ / CLI und C++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
 - '%'
-dev_langs:
-- C++
 helpviewer_keywords:
 - tracking references
 - '% tracking reference [C++]'
 ms.assetid: 142a7269-ab69-4b54-a6d7-833bef06228f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: da01a2dd7e871bb555b2b5711a59dbb5e65424a8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c6fef4562545b03e212d0e4e58742a1209a6ab81
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604075"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50437962"
 ---
-# <a name="tracking-reference-operator-c-component-extensions"></a>Nachverfolgungsverweisoperator (Komponentenerweiterungen für C++)
+# <a name="tracking-reference-operator-ccli-and-ccx"></a>Nachverfolgungsverweisoperator (C++ / CLI und C++ / CX)
 
 Ein *Nachverfolgungsverweis* (`%`) verhält sich wie ein normaler C++-Verweis (`&`) mit dem Unterschied, dass wenn ein Objekt zu einem Nachverfolgungsverweis zugewiesen wird, wird die verweiszählung des Objekts erhöht.
 
@@ -61,13 +51,13 @@ Im folgenden Beispiel wird das Übergeben einer ^-Funktion gezeigt, die ein % au
 ref class Foo sealed {};
 
     // internal or private
-    void UseFooHelper(Foo% f)  
+    void UseFooHelper(Foo% f)
     {
         auto x = %f;
     }
 
     // public method on ABI boundary
-    void UseFoo(Foo^ f)  
+    void UseFoo(Foo^ f)
     {
         if (f != nullptr) { UseFooHelper(*f); }
     }

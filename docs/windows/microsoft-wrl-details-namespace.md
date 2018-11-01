@@ -1,24 +1,14 @@
 ---
-title: Microsoft::wrl::Details-Namespace | Microsoft-Dokumentation
-ms.custom: ''
+title: Microsoft::WRL::Details-Namespace
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: d71fe149-d804-4c6f-961d-43fe21ef8630
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 095d355ae26faf447b54a99437c843322efe5cb9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3f8f6849ec20956d10147a0e6ecb2fd023874807
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611747"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50644378"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details-Namespace
 
@@ -43,7 +33,7 @@ namespace Microsoft::WRL::Details;
 |[MakeAllocator-Klasse](../windows/makeallocator-class.md)|Belegt Speicher für eine aktivierbare Klasse, mit oder ohne Unterstützung von schwachen Verweis.|
 |[ModuleBase-Klasse](../windows/modulebase-class.md)|Stellt die Basisklasse der [Modul](../windows/module-class.md) Klassen.|
 |[RemoveIUnknown-Klasse](../windows/removeiunknown-class.md)|Ist einen Typ, der entspricht einer `IUnknown`-Basis-Typ, weist jedoch nicht virtuell `QueryInterface`, `AddRef`, und `Release` Methoden.|
-|[WeakReference-Klasse](../windows/weakreference-class1.md)|Stellt eine *schwachen Verweis* , die verwendet werden kann, mit der Windows-Runtime oder ein klassisches COM verwenden. Ein schwacher Verweis repräsentiert ein Objekt, auf das möglicherweise zugegriffen werden kann.|
+|[WeakReference-Klasse](../windows/weakreference-class.md)|Stellt eine *schwachen Verweis* , die verwendet werden kann, mit der Windows-Runtime oder ein klassisches COM verwenden. Ein schwacher Verweis repräsentiert ein Objekt, auf das möglicherweise zugegriffen werden kann.|
 
 ### <a name="structures"></a>Strukturen
 
@@ -84,7 +74,7 @@ namespace Microsoft::WRL::Details;
 |[ActivationFactoryCallback-Funktion](../windows/activationfactorycallback-function.md)|Ruft die aktivierungsfactory für die Aktivierung der angegebenen ID.|
 |[Move-Funktion](../windows/move-function.md)|Verschiebt das angegebene Argument von einem Speicherort.|
 |[RaiseException-Funktion](../windows/raiseexception-function.md)|Löst eine Ausnahme aus, in dem aufrufenden Thread aus.|
-|[Swap-Funktion (C++-Vorlagenbibliothek der Windows-Runtime)](../windows/swap-function-windows-runtime-cpp-template-library.md)|Tauscht die Werte der beiden angegebenen Argumente.|
+|[Swap-Funktion (WRL)](../windows/swap-function-wrl.md)|Tauscht die Werte der beiden angegebenen Argumente.|
 |[TerminateMap-Funktion](../windows/terminatemap-function.md)|Klassenfactorys im angegebenen Modul wird heruntergefahren.|
 
 ## <a name="requirements"></a>Anforderungen
@@ -95,5 +85,5 @@ namespace Microsoft::WRL::Details;
 
 ## <a name="see-also"></a>Siehe auch
 
-[Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)  
+[Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)<br/>
 [Microsoft::WRL::Wrappers-Namespace](../windows/microsoft-wrl-wrappers-namespace.md)

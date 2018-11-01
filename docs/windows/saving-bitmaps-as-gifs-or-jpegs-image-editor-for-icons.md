@@ -1,14 +1,8 @@
 ---
-title: Speichern von Bitmaps als GIFs oder JPEGs (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
-ms.custom: ''
+title: Speichern von Bitmaps als GIFs oder JPEGs (Bildbearbeitung für Symbole)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.editing
-dev_langs:
-- C++
 helpviewer_keywords:
 - .gif files [C++], saving bitmaps as
 - jpg files [C++], saving bitmaps as
@@ -21,17 +15,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 115df69f-10fb-4e6f-906b-853c1e4a54af
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ab9f8e6056c0f97d36d0c0eb4853fbb7eed80dc0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 99b083236f935bc02acef46d6620256416df93a0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313038"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592828"
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>Speichern von Bitmaps als GIFs oder JPEGs (Bildbearbeitung für Symbole)
 
@@ -63,5 +52,5 @@ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie
 
 ## <a name="see-also"></a>Siehe auch
 
-[Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)

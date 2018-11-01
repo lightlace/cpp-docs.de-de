@@ -1,7 +1,7 @@
 ---
 title: ATL-OLE DB-Anbieter-Assistent | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -17,16 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15104e0252ad6994b6220b433c7324085199440c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a9710fd4c770f17afb8902b80241179aa20344c1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717209"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060728"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>ATL-OLE DB-Anbieter-Assistent
 
 Dieser Assistent erstellt die Klassen, die einen OLE DB-Anbieter zu erstellen.
+
+> [!WARNING]
+> Ab Version 15.9 von Visual Studio 2017 ist dieser Codeassistent veraltet. Er wird in einer zukünftigen Version von Visual Studio entfernt. Dieser Assistent wird nur selten verwendet. Die Entfernung dieses Assistenten wirkt sich nicht auf die allgemeine Unterstützung für Active Template Library (ATL) und Microsoft Foundation Classes (MFC) aus. In [dieser Umfrage](https://www.surveymonkey.com/r/QDWKKCN) können Sie Ihr Feedback zu dieser Veraltung mitteilen. Ihr Feedback ist uns wichtig.
 
 ## <a name="remarks"></a>Hinweise
 

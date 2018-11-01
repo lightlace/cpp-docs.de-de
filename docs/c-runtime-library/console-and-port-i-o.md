@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e4d46582266234b4208a768fc7b2045af824349
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 18e0750a2c0b8747da432efd9fc465b83e01a490
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391417"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018274"
 ---
 # <a name="console-and-port-io"></a>Konsole und Port-E/A
 
@@ -55,4 +55,4 @@ Diese Routinen lesen und schreiben Daten in Ihre Konsole oder an den angegebenen
 ## <a name="see-also"></a>Siehe auch
 
 [Eingabe und Ausgabe](../c-runtime-library/input-and-output.md)<br/>
- [Universelle C-Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Universelle C-Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>

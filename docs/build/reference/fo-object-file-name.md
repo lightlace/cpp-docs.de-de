@@ -1,32 +1,22 @@
 ---
-title: -Fo (Name der Objektdatei) | Microsoft-Dokumentation
-ms.custom: ''
+title: /Fo (Name der Objektdatei)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /Fo
 - VC.Project.VCCLCompilerTool.ObjectFile
 - VC.Project.VCCLWCECompilerTool.ObjectFile
-dev_langs:
-- C++
 helpviewer_keywords:
 - Fo compiler option [C++]
 - object files, naming
 - /Fo compiler option [C++]
 - -Fo compiler option [C++]
 ms.assetid: 0e6d593e-4e7f-4990-9e6e-92e1dcbcf6e6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d9ab671cbae276796ce89ec12cecbc16334e234e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 19e84cbb1be53c8e1a7ae32b6ea2fc3ceeb2edae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724245"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640335"
 ---
 # <a name="fo-object-file-name"></a>/Fo (Name der Objektdatei)
 
@@ -66,7 +56,7 @@ CL /FoB:\OBJECT\ THIS.C
 
 ## <a name="see-also"></a>Siehe auch
 
-[Ausgabedatei (/ F) Optionen](../../build/reference/output-file-f-options.md)
+[Ausgabedatei (/F) Optionen](../../build/reference/output-file-f-options.md)<br/>
 [Compileroptionen](../../build/reference/compiler-options.md)<br/>
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
 [Festlegen des Pfadnamens](../../build/reference/specifying-the-pathname.md)

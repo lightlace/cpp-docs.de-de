@@ -1,7 +1,7 @@
 ---
 title: Typweiterleitung (C++ / CLI) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,28 +15,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d10c025c22523e6329f051fcfbe76988337992a2
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 7fe70de2503134bf76f5e1c7099773737cc153f8
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318147"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328336"
 ---
 # <a name="type-forwarding-ccli"></a>Typweiterleitung (C++/CLI)
 
 *Typweiterleitung* können Sie einen Typ aus einer Assembly (Assembly A) in einer anderen Assembly (Assembly B), zu verschieben, so, dass es nicht erforderlich ist, Clients, die Assembly a zu verwenden, neu kompilieren
 
-## <a name="all-platforms"></a>Alle Plattformen
-
-Dieses Feature wird in alle Laufzeiten nicht unterstützt.
-
 ## <a name="windows-runtime"></a>Windows-Runtime
 
 Dieses Feature wird in der Windows-Runtime nicht unterstützt.
-
-### <a name="requirements"></a>Anforderungen
-
-Compileroption: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
@@ -44,17 +36,17 @@ Im folgenden Codebeispiel wird veranschaulicht, wie die typweiterleitung wird.
 
 ### <a name="syntax"></a>Syntax
 
-```
+```cpp
 #using "new.dll"
 [assembly:TypeForwardedTo(type::typeid)];
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*new*  
+*new*<br/>
 Die Assembly, in der Sie die Typdefinition verschieben.
 
-*Typ*  
+*Typ*<br/>
 Der Typ, dessen Definition, die Sie in eine andere Assembly verschieben.
 
 ### <a name="remarks"></a>Hinweise
@@ -97,7 +89,7 @@ Wenn eine Quellcodedatei, die verwendet wird, zum Erstellen einer Assembly A.dll
 
 3. Löschen der `MyClass` Typdefinition aus dem Quellcode verwendet, um A.dll erstellen, und Ersetzen Sie ihn durch Folgendes:
 
-    ```
+    ```cpp
     #using "B.dll"
     [assembly:TypeForwardedTo(MyClass::typeid)];
     ```

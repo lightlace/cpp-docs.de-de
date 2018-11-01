@@ -1,9 +1,6 @@
 ---
-title: 'Microsoft:: wrl-Namespace | Microsoft-Dokumentation'
-ms.custom: ''
+title: Microsoft::WRL-Namespace
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL
@@ -14,22 +11,15 @@ f1_keywords:
 - ftm/Microsoft::WRL
 - client/Microsoft::WRL
 - corewrappers/Microsoft::WRL
-dev_langs:
-- C++
 helpviewer_keywords:
 - WRL namespace
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 5ffea6dede3bc6bcc7c28b2326299362e78ed2b9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a615e77c96901f2cdf211b9646b2b7b0512b99de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599300"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487450"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL-Namespace
 
@@ -89,7 +79,7 @@ namespace Microsoft::WRL;
 |Name|Beschreibung|
 |----------|-----------------|
 |[AsWeak-Funktion](../windows/asweak-function.md)|Ruft einen schwachen Verweis zur angegebenen Instanz ab.|
-|[Callback-Funktion](../windows/callback-function-windows-runtime-cpp-template-library.md)|Erstellt ein Objekt, dessen Memberfunktion eine Rückrufmethode ist.|
+|[Rückruffunktion (WRL)](../windows/callback-function-wrl.md)|Erstellt ein Objekt, dessen Memberfunktion eine Rückrufmethode ist.|
 |[CreateActivationFactory-Funktion](../windows/createactivationfactory-function.md)|Erstellt eine Instanzen der angegebenen Klasse erstellende Factory, die durch die Windows-Runtime aktiviert werden kann.|
 |[CreateClassFactory-Funktion](../windows/createclassfactory-function.md)|Erstellt eine Factory, die Instanzen der angegebenen Klasse erstellt.|
 |[Make-Funktion](../windows/make-function.md)|Initialisiert die angegebene Windows-Runtime-Klasse.|

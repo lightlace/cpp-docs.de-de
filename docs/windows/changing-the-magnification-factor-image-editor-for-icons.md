@@ -1,26 +1,15 @@
 ---
-title: Ändern des Vergrößerungsfaktors (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
-ms.custom: ''
+title: Ändern des Vergrößerungsfaktors (Bildbearbeitung für Symbole)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], magnification
 ms.assetid: d1b0c9e0-fe54-4b2a-b75e-ffa0fa7c8cd9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 561c5c46d0486718cbe05af1507459c26babea8b
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 5a94b66b210f6c5fbf3e54e553267043f7bddcf3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315274"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636786"
 ---
 # <a name="changing-the-magnification-factor-image-editor-for-icons"></a>Ändern des Vergrößerungsfaktors (Bildbearbeitung für Symbole)
 
@@ -43,5 +32,5 @@ Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Fensterbereiche](../windows/window-panes-image-editor-for-icons.md)

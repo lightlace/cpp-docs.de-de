@@ -1,33 +1,23 @@
 ---
-title: initializer_list-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: initializer_list-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - initializer_list/std::initializer_list::initializer_list
 - initializer_list/std::initializer_list::begin
 - initializer_list/std::initializer_list::end
 - initializer_list/std::initializer_list::size
-dev_langs:
-- C++
 ms.assetid: 1f2c0ff4-5636-4f79-b008-e75426e3d2ab
-author: corob-msft
-ms.author: corob
 helpviewer_keywords:
 - std::initializer_list::initializer_list
 - std::initializer_list::begin
 - std::initializer_list::end
 - std::initializer_list::size
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 11014748dcbfa105d111e9e2a8d83fc57d0cb405
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: de925f73ac206113aafb8661a8d5b347503150c5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954053"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466910"
 ---
 # <a name="initializerlist-class"></a>initializer_list-Klasse
 
@@ -45,7 +35,6 @@ class initializer_list
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*Type*|Der in `initializer_list` zu speichernde Elementdatentyp.|
-
 
 ## <a name="remarks"></a>Hinweise
 

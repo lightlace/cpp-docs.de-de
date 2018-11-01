@@ -1,29 +1,19 @@
 ---
-title: Makros zusammengesetzter Steuerelemente | Microsoft-Dokumentation
-ms.custom: ''
+title: Makros zusammengesetzter Steuerelemente
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_SINK_MAP
 - atlcom/ATL::END_SINK_MAP
 - atlcom/ATL::SINK_ENTRY
-dev_langs:
-- C++
 helpviewer_keywords:
 - composite controls, macros
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 352f3e5ebd9606cc355ea9af65739c3e17894298
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 10965fed5aac2eb037cf9894998688e3e7c2bffa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136295"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50498976"
 ---
 # <a name="composite-control-macros"></a>Makros zusammengesetzter Steuerelemente
 
@@ -41,7 +31,7 @@ Diese Makros definieren ereignissenkenzuordnungen und Einträge.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** atlcom.h  
+**Header:** atlcom.h
 
 ##  <a name="begin_sink_map"></a>  BEGIN_SINK_MAP
 
@@ -122,7 +112,7 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 [in] Bezeichnet das Steuerelement.
 
 *IID*<br/>
-[in] Identifiziert die Dispatchschnittstelle.  
+[in] Identifiziert die Dispatchschnittstelle.
 
 *piid*<br/>
 [in] Zeiger auf die Dispatchschnittstelle.
@@ -156,7 +146,7 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 [in] Ganzzahl ohne Vorzeichen, die Ereignisquelle identifizieren. Dieser Wert muss übereinstimmen der *nID* Template-Parameter verwendet, die in den zugehörigen [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) Basisklasse.
 
 *IID*<br/>
-[in] Die IID, die die Dispatchschnittstelle identifiziert.  
+[in] Die IID, die die Dispatchschnittstelle identifiziert.
 
 *piid*<br/>
 [in] Zeiger auf die IID, die die Dispatchschnittstelle identifiziert.

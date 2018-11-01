@@ -1,12 +1,6 @@
 ---
-title: Ändern der Aktivierreihenfolge von Steuerelementen | Microsoft-Dokumentation
-ms.custom: ''
+title: Ändern der Aktivierreihenfolge von Steuerelementen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - controls [C++], tab order
 - focus, tab order
@@ -15,17 +9,12 @@ helpviewer_keywords:
 - controls [C++], focus
 - dialog box controls [C++], tab order
 ms.assetid: e2cee764-4367-42d7-9563-65a68f76f5ff
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 330fe056a4b06e006d69e630cc933b4402eeb0c0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: aaff855434ccd8f14b0bbd2394ae2902cf9390b2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316600"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429327"
 ---
 # <a name="changing-the-tab-order-of-controls"></a>Ändern der Aktivierreihenfolge von Steuerelementen
 
@@ -84,6 +73,6 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anordnung von Steuerelementen in Dialogfeldern](../windows/arrangement-of-controls-on-dialog-boxes.md)  
-[Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)  
+[Anordnung von Steuerelementen in Dialogfeldern](../windows/arrangement-of-controls-on-dialog-boxes.md)<br/>
+[Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)<br/>
 [Steuerelemente](../mfc/controls-mfc.md)

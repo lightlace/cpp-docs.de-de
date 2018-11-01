@@ -1,11 +1,6 @@
 ---
-title: ilogb, ilogbf, ilogbl2 | Microsoft-Dokumentation
-ms.custom: ''
+title: Ilogb, Ilogbf, ilogbl2
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - ilogb
 - ilogbf
@@ -35,16 +30,12 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1436874e1ab35cc72dc40390adf5597529d3bf57
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63e04246d29fde50c745a5f353829bd337a814ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398178"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551982"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 
@@ -82,14 +73,14 @@ Der angegebene Wert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg zurück der Exponent zur Basis-2 *x* als eine signierte **Int** Wert.
+Im Erfolgsfall zurückgegeben den Exponenten zur Basis 2 von *x* als signiertes **Int** Wert.
 
 Andernfalls gibt er die folgenden, in \<math.h> definierten Werte zurück:
 
 |Eingabe|Ergebnis|
 |-----------|------------|
 |±0|FP_ILOGB0|
-|±INF ±nan unbestimmtes|FP_ILOGBNAN|
+|±INF, ±nan, unbestimmte|FP_ILOGBNAN|
 
 Fehler werden gemäß den Angaben in [_matherr](matherr.md) gemeldet.
 
@@ -97,11 +88,11 @@ Fehler werden gemäß den Angaben in [_matherr](matherr.md) gemeldet.
 
 Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Ilogb** verwenden und zurückgeben **"float"** und **lange** **doppelte** Typen. In einem C-Programm **Ilogb** immer Double und gibt eine **doppelte**.
 
-Das Aufrufen dieser Funktion ist ähnlich wie beim Aufrufen der entsprechenden **Logb** -Funktion, und klicken Sie dann den Rückgabewert in die Umwandlung **Int**.
+Das Aufrufen dieser Funktion ist ähnlich wie das Aufrufen der entsprechenden **Logb** -Funktion und die anschließende Umwandlung des Rückgabewerts zu **Int**.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|C-Header|C++-Header|
+|-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
 |**Ilogb**, **Ilogbf**, **Ilogbl**|\<math.h>|\<cmath>|
 

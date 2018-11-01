@@ -1,31 +1,21 @@
 ---
-title: Eigenschaft (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Eigenschaft (C++ / CLI und C++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
 - property_cpp
 - property
-dev_langs:
-- C++
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6db0aa5801a8eca896282b65e4d9f156e9b38318
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: df456ffb906eb6e0c68f3670692f292a8c20c407
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212811"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50526580"
 ---
-# <a name="property--c-component-extensions"></a>property (Komponentenerweiterungen für C++)
+# <a name="property--ccli-and-ccx"></a>Eigenschaft (C++ / CLI und C++ / CX)
 
 Deklariert eine *Eigenschaft*, dies ist eine Memberfunktion, die verhält sich wie ein Datenmember oder Arrayelement erfolgt.
 
@@ -33,15 +23,15 @@ Deklariert eine *Eigenschaft*, dies ist eine Memberfunktion, die verhält sich w
 
 Sie können einen der folgenden Typen von Eigenschaften deklarieren.
 
-*einfache Eigenschaft*  
+*einfache Eigenschaft*<br/>
 Erstellt standardmäßig eine *set-Accessor* , die den Wert der Eigenschaft weist einen *get-Accessor* , abruft, den Wert der Eigenschaft, und ein vom Compiler generierte private Datenmember, die den Wert der Eigenschaft enthält.
 
-*Property-block*  
+*Property-block*<br/>
 Verwenden Sie diesen Typ zum Erstellen von benutzerdefinierten Get- und/oder Set-Zugriffsmethoden. Für die Eigenschaft gilt Lese-/Schreibzugriff, wenn get- und set-Accessoren definiert sind, sie ist schreibgeschützt, wenn nur der get-Accessor definiert ist, und lesegeschützt, wenn nur der set-Accessor definiert ist.
 
 Sie müssen ein Datenmember explizit so deklarieren, dass es den Eigenschaftswert enthält.
 
-*indizierte Eigenschaft*  
+*indizierte Eigenschaft*<br/>
 Ein Property-Block, mit dem Sie einen Eigenschaftswert abrufen und festlegen können, der durch einen oder mehrere Indizes angegeben wird.
 
 Sie können eine indizierte Eigenschaft, die entweder einen Namen für die benutzerdefinierte Eigenschaft erstellen oder ein *Standard* Eigenschaftenname. Der Name der Standardindexeigenschaft ist der Name der Klasse, in der die Eigenschaft definiert ist. Um eine Standardeigenschaft zu deklarieren, geben Sie die **Standard** Schlüsselwort anstelle eines Eigenschaftsnamens an.
@@ -53,17 +43,17 @@ Sie müssen ein Datenmember explizit so deklarieren, dass es den Eigenschaftswer
 ```cpp
 property type property_name;
 
-property type property_name { 
-   access-modifier type get() inheritance-modifier {property_body}; 
+property type property_name {
+   access-modifier type get() inheritance-modifier {property_body};
    access-modifier void set(type value) inheritance-modifier {property_body};
-} 
+}
 
-property type property_name[index_list] { 
-   access-modifier type get(index_list) inheritance-modifier {property_body}; 
+property type property_name[index_list] {
+   access-modifier type get(index_list) inheritance-modifier {property_body};
    access-modifier void set(index_list, value) inheritance-modifier {property_body};
-} 
+}
 
-property type default[index_list] { 
+property type default[index_list] {
    access-modifier type get(index_list) inheritance-modifier {property_body};
    access-modifier void set(index_list, value) inheritance-modifier {property_body};
 }
@@ -71,27 +61,27 @@ property type default[index_list] {
 
 ### <a name="parameters"></a>Parameter
 
-*Typ*  
+*Typ*<br/>
 Der Datentyp des Eigenschaftwerts und somit die Eigenschaft selbst.
 
-*property_name*  
+*property_name*<br/>
 Den Namen der Eigenschaft.
 
-*Zugriffsmodifizierer*  
+*Zugriffsmodifizierer*<br/>
 Ein Zugangsqualifizierer. Gültige Qualifizierer sind **statische** und **virtuellen**.
 
 Get oder Set-Zugriffsmethoden müssen nicht den gleichen der **virtuellen** Qualifizierer, aber sie müssen auf einigen der **statische** Qualifizierer.
 
-*Vererbungsmodifizierer*  
+*Vererbungsmodifizierer*<br/>
 Ein Vererbungqualifizierer. Gültige Qualifizierer sind **abstrakte** und **versiegelten**.
 
-*index_list*  
+*index_list*<br/>
 Eine durch Kommata getrennte Liste von einem oder mehreren Indizes. Jeder Index besteht aus einem Indextyp und einem optionalen Bezeichner, der im Methodentext der Eigenschaft verwendet werden kann.
 
-*Wert*  
+*Wert*<br/>
 Der der Eigenschaft in einem set-Vorgang zuzuweisende Wert, oder der in einem get-Vorgang abzurufende Wert.
 
-*property_body*  
+*property_body*<br/>
 Der Methodentext der Eigenschaft der Set- oder Get-Zugriffsmethode. Die *Property_body* können die *Index_list* auf den zugrundeliegenden eigenschaftendatenmember zugreifen oder als Parameter in eine benutzerdefinierte Verarbeitung.
 
 ## <a name="windows-runtime"></a>Windows-Runtime
@@ -123,16 +113,16 @@ modifier property type default[index];
 
 ### <a name="parameters"></a>Parameter
 
-*Modifizierer*  
+*Modifizierer*<br/>
 Ein Modifizierer, der entweder für eine Eigenschaftendeklaration oder eine Get-/Set-Zugriffsmethode verwendet werden kann. Mögliche Werte sind **statische** und **virtuellen**.
 
-*Typ*  
+*Typ*<br/>
 Der Typ des Werts, der durch die Eigenschaft dargestellt wird.
 
-*property_name*  
+*property_name*<br/>
 Parameter für die Raise-Methode; muss der Signatur des Delegaten entsprechen.
 
-*index_list*  
+*index_list*<br/>
 Eine durch Kommata getrennte Liste von einem oder mehreren Indizes, die in eckigen Klammern (der Indexoperator, ([])) angegeben werden. Geben Sie für jeden Index einen Typ und optional einen Bezeichner an, der im Methodentext der Eigenschaft verwendet werden kann.
 
 ### <a name="remarks"></a>Hinweise
@@ -172,7 +162,6 @@ Wenn ein Eigenschaftendatenmember deklariert wird, fügt der Compiler ein Datenm
 Für die Accessormethoden sind unterschiedliche Zugriffsmöglichkeiten in einem Property-Block zulässig.  D. h., dass die Set-Methode öffentlich und die Get-Methode privat sein kann.  Es ist jedoch ein Fehler, wenn die Zugriffsmethode weniger restriktiven Zugriff hat als in der Deklaration der Eigenschaft selbst vermerkt ist.
 
 **Eigenschaft** ist ein kontextbezogenes Schlüsselwort.  Weitere Informationen finden Sie unter [Kontextbezogene Schlüsselwörter](../windows/context-sensitive-keywords-cpp-component-extensions.md).
-
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -226,4 +215,4 @@ test
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET und UWP](../windows/component-extensions-for-runtime-platforms.md)

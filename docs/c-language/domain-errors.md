@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c4af90ddd3f8a166f63c8866dfcfc82bc8d02ed
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b0ad11ca9acb99395e62f215b7bd1fef77d60f49
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751103"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016090"
 ---
 # <a name="domain-errors"></a>Domänenfehler
-**ANSI 4.5.1** Die Werte, die von den mathematischen Funktionen bei Domänenfehlern zurückgegeben werden  
-  
-Die ERRNO.H-Datei definiert die Domänenfehlerkonstante `EDOM` als 33.  Weitere Informationen über den Rückgabewert erhalten Sie im Hilfethema für die bestimmte Funktion, die den Fehler ausgelöst hat.  
-  
-## <a name="see-also"></a>Siehe auch  
+
+**ANSI 4.5.1** Die Werte, die von den mathematischen Funktionen bei Domänenfehlern zurückgegeben werden
+
+Die ERRNO.H-Datei definiert die Domänenfehlerkonstante `EDOM` als 33.  Weitere Informationen über den Rückgabewert erhalten Sie im Hilfethema für die bestimmte Funktion, die den Fehler ausgelöst hat.
+
+## <a name="see-also"></a>Siehe auch
+
 [Bibliotheksfunktionen](../c-language/library-functions.md)

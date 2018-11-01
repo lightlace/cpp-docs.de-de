@@ -1,19 +1,15 @@
 ---
-title: Try-finally-Anweisung | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
+title: try-finally-Anweisung
+ms.date: 10/09/2018
 f1_keywords:
 - __try
+- _try
 - __leave_cpp
 - __leave
 - __finally_cpp
 - __try_cpp
 - __finally
-dev_langs:
-- C++
+- _finally
 helpviewer_keywords:
 - __try keyword [C++]
 - __finally keyword [C++]
@@ -24,16 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: df3519cac370ac7595e0789eeab43c6488120fc8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6b0c0f018d5d66ea62b29b971e5390751a69e3c4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024241"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631802"
 ---
 # <a name="try-finally-statement"></a>try-finally-Anweisung
 
@@ -42,7 +34,7 @@ ms.locfileid: "46024241"
 Die folgende Syntax beschreibt die **Try-finally-** Anweisung:
 
 ```cpp
-__try {
+__try {
    // guarded code
 }
 __finally {
@@ -71,7 +63,7 @@ Erreicht eine **__try** -Anweisung durch einfache sequenzielle Ausführung (fort
 
 1. Wenn der Beendigungshandler abgeschlossen ist, die Ausführung wird fortgesetzt, nachdem die **__finally** Anweisung. Unabhängig davon, wie der abgesicherte Abschnitt endet (z. B. über eine **"GoTo"** aus dem abgesicherten Text oder ein **zurückgeben** Anweisung), wird der Beendigungshandler ausgeführt *vor* der ablaufsteuerung wird aus dem abgesicherten Abschnitt verschoben.
 
-     Ein **__finally** Anweisung blockiert nicht die Suche nach einer entsprechenden Ausnahmehandler übergeben.
+   Ein **__finally** Anweisung blockiert nicht die Suche nach einer entsprechenden Ausnahmehandler übergeben.
 
 Im Falle eine Ausnahme der **__try** blockieren, muss das Betriebssystem einen Handler finden, für die Ausnahme oder die Anwendung schlägt fehl. Wenn ein Handler für alle gefunden wird, **__finally** -blocke ausgeführt werden, und die Ausführung im Handler fortgesetzt wird.
 
@@ -81,6 +73,8 @@ Nehmen Sie z. B. an, eine Reihe von Funktionsaufrufen verbindet Funktion A mit F
 
 > [!NOTE]
 >  Das Verhalten des Try-finally-unterscheidet sich von einigen anderen Sprachen, die die Verwendung von unterstützen **schließlich**, wie z. B. c#.  Ein einzelnes **__try** möglicherweise, jedoch nicht beide von **__finally** und **__except**.  Wenn beide zusammen verwendet werden sollen, muss eine äußere try-except-Anweisung die innere try-finally-Anweisung einschließen.  Es gelten andere Regeln für die Angabe, wann ein einzelner Block ausgeführt wird.
+
+Für die Kompatibilität mit früheren Versionen **_finally**, **__identifier**, und **_leave** sind Synonyme für **__try**, **__ zum Schluss**, und **__leave-** , wenn Compileroption [/Za \(spracherweiterungen deaktivieren)](../build/reference/za-ze-disable-language-extensions.md) angegeben ist.
 
 ## <a name="the-leave-keyword"></a>Das __leave-Schlüsselwort
 

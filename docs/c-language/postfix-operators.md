@@ -15,33 +15,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14a23da2e8ed41954bd6faa2803d6e6c7dfb37a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3d8d3a762cb3eed3b0182185561c33b073b571b1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384384"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036058"
 ---
 # <a name="postfix-operators"></a>Postfix-Operatoren
-Die Postfix-Operatoren weisen den höchsten Rang (die festeste Bindung) in der Ausdrucksauswertung auf.  
-  
-## <a name="syntax"></a>Syntax  
- *postfix-expression*:  
- *primary-expression*  
-  
- *postfix-expression*  **[**  *expression*  **]**  
-  
- *postfix-expression* **(** *argument-expression-list* -Opt **)**  
-  
- *postfix-expression*  **.**  *identifier*  
-  
- *postfix-expression*  **->**  *identifier*  
-  
- *postfix-expression* **++**  
-  
- *postfix-expression* **--**  
-  
- Operatoren in dieser Rangfolgenebene sind die Arrayfeldindizes, Funktionsaufrufe, die Struktur- und Union-Member sowie Postfix-Operatoren für Inkrement und Dekrement.  
-  
-## <a name="see-also"></a>Siehe auch  
- [C-Operatoren](../c-language/c-operators.md)
+
+Die Postfix-Operatoren weisen den höchsten Rang (die festeste Bindung) in der Ausdrucksauswertung auf.
+
+## <a name="syntax"></a>Syntax
+
+*postfix-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*primary-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **[**  *expression*  **]**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **(**  *argument-expression-list*<sub>opt</sub> **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **.**  *identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **->**  *identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **++**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **--**
+
+Operatoren in dieser Rangfolgenebene sind die Arrayfeldindizes, Funktionsaufrufe, die Struktur- und Union-Member sowie Postfix-Operatoren für Inkrement und Dekrement.
+
+## <a name="see-also"></a>Siehe auch
+
+[C-Operatoren](../c-language/c-operators.md)

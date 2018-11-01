@@ -1,10 +1,6 @@
 ---
-title: _msize_dbg | Microsoft-Dokumentation
-ms.custom: ''
+title: _msize_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _msize_dbg
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - _msize_dbg
 - msize_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory blocks
 - _msize_dbg function
 - msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 80d3f3a7b2b0086df6cba9654dc4365697520776
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 3b6d08d44162d8263ca88147fe86166924d7d162
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451757"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629124"
 ---
 # <a name="msizedbg"></a>_msize_dbg
 
@@ -55,7 +45,7 @@ size_t _msize_dbg(
 
 ### <a name="parameters"></a>Parameter
 
-*Benutzerdaten*<br/>
+*userData*<br/>
 Zeiger zu dem Speicherblock, für den die Größen bestimmt werden soll.
 
 *blockType*<br/>
@@ -63,19 +53,19 @@ Typ des angegebenen Speicherblocks: **_CLIENT_BLOCK** oder **_NORMAL_BLOCK**.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei erfolgreichem Abschluss **_msize_dbg** gibt die Größe (in Bytes) des angegebenen Speicherblocks; Anderfalls wird **NULL**.
+Bei erfolgreichem Abschluss **_msize_dbg** gibt die Größe (in Bytes) des angegebenen Speicherblocks; andernfalls **NULL**.
 
 ## <a name="remarks"></a>Hinweise
 
-**_msize_dbg** ist eine Debugversion der _[Msize](msize.md) Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, bei jedem Aufruf **_msize_dbg** wird zu einem Aufruf von reduziert **_msize**. Beide **_msize** und **_msize_dbg** berechnen Sie die Größe eines Speicherblocks im Basisheap, jedoch **_msize_dbg** fügt zwei Debugfunktionen hinzu: Es schließt die Puffer auf beiden Seiten des Benutzers ermöglicht Teil des Speicherblocks in der zurückgegebenen Größe und größenberechnungen für bestimmte Blocktypen.
+**_msize_dbg** ist eine Debugversion der _[Msize](msize.md) Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, jeden Aufruf von **_msize_dbg** wird nach einer Verkleinerung auf einen Aufruf von **_msize**. Beide **_msize** und **_msize_dbg** berechnen Sie die Größe eines Speicherblocks im Basisheap, jedoch **_msize_dbg** fügt zwei Debugfunktionen: Es schließt die Puffer auf beiden Seiten der Benutzer ermöglicht Teil des Speicherblocks in der zurückgegebenen Größe und größenberechnungen für bestimmte Blocktypen.
 
 Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Informationen zu den Belegungsblocktypen und ihrer Verwendung finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details). Informationen zu den Unterschieden zwischen dem Aufruf einer Standardheapfunktion und der Debugversion in einem Debugbuild finden Sie unter [Debugversionen von Heapreservierungsfunktionen](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
-Diese Funktion überprüft seine Parameter. Wenn *Memblock* ist ein null-Zeiger **_msize** wird einen Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn der Fehler behandelt wird, setzt der Funktion **Errno** auf **EINVAL** und gibt-1 zurück.
+Diese Funktion überprüft seine Parameter. Wenn *Memblock* ist ein null-Zeiger **_msize** ruft der Handler für ungültige Parameter, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Die Funktion legt fest, wenn der Fehler behandelt wird, **Errno** zu **EINVAL** und gibt-1 zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_msize_dbg**|\<crtdbg.h>|
 
@@ -137,7 +127,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 Size of block after _malloc_dbg of 40 longs: 160

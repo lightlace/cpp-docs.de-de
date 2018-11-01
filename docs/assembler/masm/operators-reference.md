@@ -1,26 +1,16 @@
 ---
-title: MASM-Operatoren – Referenz | Microsoft-Dokumentation
-ms.custom: ''
+title: MASM-Operatoren – Referenz
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), operators reference
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e4708af3c0fa272a1ca803f549ce8953caccaa27
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: cb97c5dcb640b8d8592d842afd7dbb8cf9d0852c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688175"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430458"
 ---
 # <a name="masm-operators-reference"></a>MASM-Operatoren – Referenz
 
@@ -36,7 +26,7 @@ ms.locfileid: "43688175"
 
 ||||
 |-|-|-|
-|[! (logisches Not für Common Language Runtime)](operator-logical-not-masm-run-time.md)|[! = (ungleich-Laufzeit)](operator-not-equal-masm.md)|[&#124;&#124;(Common Language Runtime logische oder)](operator-logical-or.md)|
+|[\! (logisches Not für Common Language Runtime)](operator-logical-not-masm-run-time.md)|[\!= (ungleich-Laufzeit)](operator-not-equal-masm.md)|[&#124;&#124;(Common Language Runtime logische oder)](operator-logical-or.md)|
 |[& & (logisches Runtime und)](operator-logical-and-masm-run-time.md)|[< (Common Language Runtime kleiner als)](operator-less-than-masm-run-time.md)|[\<= (Runtime kleiner als oder gleich)](operator-less-or-equal-masm-run-time.md)|
 |[== (gleich-Laufzeit)](operator-equal-masm-run-time.md)|[> (größer als-Laufzeit)](operator-greater-than-masm-run-time.md)|[> = (Runtime größer oder gleich)](operator-greater-or-equal-masm-run-time.md)|
 |[& (Common Language Runtime bitweises und)](operator-bitwise-and.md)|||
@@ -54,7 +44,7 @@ ms.locfileid: "43688175"
 
 ||||
 |-|-|-|
-|[! (Zeichenliteral)](operator-logical-not-masm.md)|[% (Hana als Text)](operator-percent.md)||
+|[\! (Zeichenliteral)](operator-logical-not-masm.md)|[% (Hana als Text)](operator-percent.md)||
 |[;; (als Kommentar behandelt)](operator-semicolons.md)|[&lt; &gt; (ein Literal identisch behandelt)](operator-literal.md)|[& & (Parameterwert ersetzen)](operator-logical-and-masm.md)|
 
 ## <a name="miscellaneous"></a>Verschiedenes

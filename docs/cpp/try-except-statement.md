@@ -1,7 +1,7 @@
 ---
 title: Versuchen Sie es – except-Anweisung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -11,6 +11,7 @@ f1_keywords:
 - EXCEPTION_CONTINUE_SEARCH
 - _exception_info
 - __except
+- _except
 - EXCEPTION_CONTINUE_EXECUTION
 - _exception_code
 - __except_cpp
@@ -35,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 107b759345e221ad8100f11d97b79c5bd9fd2b65
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: af4d14eb3fad691a5ff10665a83879ae4319a3d9
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031436"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162034"
 ---
 # <a name="try-except-statement"></a>try-except-Anweisung
 
@@ -50,7 +51,14 @@ Die **versuchen Sie es – mit Ausnahme von** -Anweisung ist eine Microsoft-Erwe
 
 ## <a name="syntax"></a>Syntax
 
-> **__try** {/ / überwachten Code} **__except** ( *Ausdruck* ) {/ / Code im Ausnahmehandler}
+> **__try** <br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;überwachten code<br/>
+> }<br/>
+> **__except** ( *Ausdruck* )<br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;Code im Ausnahmehandler<br/>
+> }<br/>
 
 ## <a name="remarks"></a>Hinweise
 
@@ -67,15 +75,15 @@ Die verbundanweisung nach der **__try** -Klausel ist der Text bzw. der geschütz
 
 1. Der geschützte Bereich wird ausgeführt.
 
-2. Wenn während der Ausführung des abgesicherten Abschnitts keine Ausnahme auftritt, die Ausführung wird fortgesetzt, bei der Anweisung nach der **__except** Klausel.
+1. Wenn während der Ausführung des abgesicherten Abschnitts keine Ausnahme auftritt, die Ausführung wird fortgesetzt, bei der Anweisung nach der **__except** Klausel.
 
-3. Wenn eine Ausnahme tritt auf, während der Ausführung des abgesicherten Abschnitts oder in einer Routine der geschützte Abschnitt aufruft, die **__except** *Ausdruck* (bezeichnet das *Filter* Ausdruck) wird ausgewertet, und der Wert bestimmt, wie die Ausnahme behandelt wird. Es gibt drei Werte:
+1. Wenn eine Ausnahme tritt auf, während der Ausführung des abgesicherten Abschnitts oder in einer Routine der geschützte Abschnitt aufruft, die **__except** *Ausdruck* (bezeichnet das *Filter* Ausdruck) wird ausgewertet, und der Wert bestimmt, wie die Ausnahme behandelt wird. Es gibt drei mögliche Werte:
 
-   EXCEPTION_CONTINUE_EXECUTION (– 1)-Ausnahme wurde verworfen. Fortsetzen der Ausführung an der Stelle, an der die Ausnahme aufgetreten ist.
+   - EXCEPTION_CONTINUE_EXECUTION (– 1)-Ausnahme wurde verworfen. Fortsetzen der Ausführung an der Stelle, an der die Ausnahme aufgetreten ist.
 
-   EXCEPTION_CONTINUE_SEARCH (0)-Ausnahme wurde nicht erkannt. Fahren Sie fort, im Stapel nach einem Handler zu suchen, zuerst nach enthaltenen **try-except**-Anweisungen, dann nach Handlern mit der nächst höheren Priorität.
+   - EXCEPTION_CONTINUE_SEARCH (0)-Ausnahme wurde nicht erkannt. Fahren Sie fort, im Stapel nach einem Handler zu suchen, zuerst nach enthaltenen **try-except**-Anweisungen, dann nach Handlern mit der nächst höheren Priorität.
 
-   Exception_execute_handler (1)-Ausnahme wurde erkannt. Übertragen Sie die Steuerung an den Ausnahmehandler durch Ausführen der **__except** verbundanweisung aus, und klicken Sie dann fortsetzen der Ausführung nach der **__except** Block.
+   - Exception_execute_handler (1)-Ausnahme wurde erkannt. Übertragen Sie die Steuerung an den Ausnahmehandler durch Ausführen der **__except** verbundanweisung aus, und klicken Sie dann fortsetzen der Ausführung nach der **__except** Block.
 
 Da die **__except** -Ausdruck als C-Ausdruck ausgewertet wird, wird er auf einen einzelnen Wert, der bedingten Ausdrucksoperator oder Komma-Operators beschränkt. Wenn eine erweiterte Verarbeitung erforderlich ist, kann der Ausdruck eine Routine aufrufen, die einen der drei Werte zurückgibt, die oben aufgelistet sind.
 
@@ -83,9 +91,9 @@ Jede Anwendung kann einen eigenen Ausnahmehandler haben.
 
 Es ist nicht zulässig, springen Sie in einem **__try** -Anweisung, aber aus einer solchen gültig. Der Ausnahmehandler wird nicht aufgerufen, wenn ein Prozess, während der Ausführung beendet wird eine **Testen – mit Ausnahme von** Anweisung.
 
-Weitere Informationen finden Sie im Knowledge Base-Artikel Q315937: Gewusst wie: Blockierstapelüberlauf in einer Visual C++-Anwendung.
+Für die Kompatibilität mit früheren Versionen **_finally**, **_except**, und **_leave** sind Synonyme für **__try**, **__except** , und **__leave-** , wenn Compileroption [/Za \(spracherweiterungen deaktivieren)](../build/reference/za-ze-disable-language-extensions.md) angegeben ist.
 
-## <a name="the-leave-keyword"></a>Das __leave-Schlüsselwort
+### <a name="the-leave-keyword"></a>Das __leave-Schlüsselwort
 
 Die **__leave-** Schlüsselwort ist nur innerhalb der geschützte Bereich der gültigen eine **versuchen-außer** -Anweisung und deren Auswirkung besteht darin, am Ende des abgesicherten Abschnitts wechseln. Die Ausführung wird mit der ersten Anweisung nach dem Ausnahmehandler fortgesetzt.
 
@@ -170,7 +178,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 hello

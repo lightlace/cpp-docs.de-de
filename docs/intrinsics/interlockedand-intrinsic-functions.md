@@ -1,10 +1,6 @@
 ---
-title: Funktionen "_InterlockedAnd" | Microsoft-Dokumentation
-ms.custom: ''
+title: Intrinsische Funktionen „_InterlockedAnd“
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _InterlockedAnd_rel
 - _InterlockedAnd_cpp
@@ -32,8 +28,6 @@ f1_keywords:
 - _InterlockedAnd64_rel
 - _InterlockedAnd_nf
 - _InterlockedAnd8_rel
-dev_langs:
-- C++
 helpviewer_keywords:
 - _InterlockedAnd64_np intrinsic
 - _InterlockedAnd intrinsic
@@ -62,177 +56,178 @@ helpviewer_keywords:
 - _InterlockedAnd8 intrinsic
 - _InterlockedAnd_HLEAcquire intrinsic
 ms.assetid: ad271dc3-42cd-47d0-9f65-30d5cfeb66fc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 26ae6034e9a54a6cf198b39c81d688f10616d1d0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b789679366a364197936db338d468862323749a6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707862"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50559730"
 ---
 # <a name="interlockedand-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedAnd“
-**Microsoft-spezifisch**  
-  
- Zum Ausführen einer atomarischen bitweisen AND-Operation für eine Variable, die von mehreren Threads genutzt wird.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-long _InterlockedAnd(  
-   long volatile * value,  
-   long mask  
-);  
-long _InterlockedAnd_acq(  
-   long volatile * value,  
-   long mask  
-);  
-long _InterlockedAnd_HLEAcquire(  
-   long volatile * value,  
-   long mask  
-);  
-long _InterlockedAnd_HLERelease(  
-   long volatile * value,  
-   long mask  
-);  
-long _InterlockedAnd_nf(  
-   long volatile * value,  
-   long mask  
-);  
-long _InterlockedAnd_np(  
-   long volatile * value,  
-   long mask  
-);  
-long _InterlockedAnd_rel(  
-   long volatile * value,  
-   long mask  
-);  
-char _InterlockedAnd8(  
-   char volatile * value,  
-   char mask  
-);  
-char _InterlockedAnd8_acq(  
-   char volatile * value,  
-   char mask  
-);  
-char _InterlockedAnd8_nf(  
-   char volatile * value,  
-   char mask  
-);  
-char _InterlockedAnd8_np(  
-   char volatile * value,  
-   char mask  
-);  
-char _InterlockedAnd8_rel(  
-   char volatile * value,  
-   char mask  
-);  
-short _InterlockedAnd16(  
-   short volatile * value,  
-   short mask  
-);  
-short _InterlockedAnd16_acq(  
-   short volatile * value,  
-   short mask  
-);  
-short _InterlockedAnd16_nf(  
-   short volatile * value,  
-   short mask  
-);  
-short _InterlockedAnd16_np(  
-   short volatile * value,  
-   short mask  
-);  
-short _InterlockedAnd16_rel(  
-   short volatile * value,  
-   short mask  
-);  
-__int64 _InterlockedAnd64(  
-   __int64 volatile* value,  
-   __int64 mask  
-);  
-__int64 _InterlockedAnd64_acq(  
-   __int64 volatile* value,  
-   __int64 mask  
-);   
-__int64 _InterlockedAnd64_HLEAcquire(  
-   __int64 volatile* value,  
-   __int64 mask  
-);  
-__int64 _InterlockedAnd64_HLERelease(  
-   __int64 volatile* value,  
-   __int64 mask  
-);  
-__int64 _InterlockedAnd64_nf(  
-   __int64 volatile* value,  
-   __int64 mask  
-);  
-__int64 _InterlockedAnd64_np(  
-   __int64 volatile* value,  
-   __int64 mask  
-);  
-__int64 _InterlockedAnd64_rel(  
-   __int64 volatile* value,  
-   __int64 mask  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+
+**Microsoft-spezifisch**
+
+Zum Ausführen einer atomarischen bitweisen AND-Operation für eine Variable, die von mehreren Threads genutzt wird.
+
+## <a name="syntax"></a>Syntax
+
+```
+long _InterlockedAnd(
+   long volatile * value,
+   long mask
+);
+long _InterlockedAnd_acq(
+   long volatile * value,
+   long mask
+);
+long _InterlockedAnd_HLEAcquire(
+   long volatile * value,
+   long mask
+);
+long _InterlockedAnd_HLERelease(
+   long volatile * value,
+   long mask
+);
+long _InterlockedAnd_nf(
+   long volatile * value,
+   long mask
+);
+long _InterlockedAnd_np(
+   long volatile * value,
+   long mask
+);
+long _InterlockedAnd_rel(
+   long volatile * value,
+   long mask
+);
+char _InterlockedAnd8(
+   char volatile * value,
+   char mask
+);
+char _InterlockedAnd8_acq(
+   char volatile * value,
+   char mask
+);
+char _InterlockedAnd8_nf(
+   char volatile * value,
+   char mask
+);
+char _InterlockedAnd8_np(
+   char volatile * value,
+   char mask
+);
+char _InterlockedAnd8_rel(
+   char volatile * value,
+   char mask
+);
+short _InterlockedAnd16(
+   short volatile * value,
+   short mask
+);
+short _InterlockedAnd16_acq(
+   short volatile * value,
+   short mask
+);
+short _InterlockedAnd16_nf(
+   short volatile * value,
+   short mask
+);
+short _InterlockedAnd16_np(
+   short volatile * value,
+   short mask
+);
+short _InterlockedAnd16_rel(
+   short volatile * value,
+   short mask
+);
+__int64 _InterlockedAnd64(
+   __int64 volatile* value,
+   __int64 mask
+);
+__int64 _InterlockedAnd64_acq(
+   __int64 volatile* value,
+   __int64 mask
+);
+__int64 _InterlockedAnd64_HLEAcquire(
+   __int64 volatile* value,
+   __int64 mask
+);
+__int64 _InterlockedAnd64_HLERelease(
+   __int64 volatile* value,
+   __int64 mask
+);
+__int64 _InterlockedAnd64_nf(
+   __int64 volatile* value,
+   __int64 mask
+);
+__int64 _InterlockedAnd64_np(
+   __int64 volatile* value,
+   __int64 mask
+);
+__int64 _InterlockedAnd64_rel(
+   __int64 volatile* value,
+   __int64 mask
+);
+```
+
+#### <a name="parameters"></a>Parameter
+
 *Wert*<br/>
-[in, out] Ein Zeiger auf den ersten Operanden, durch das Ergebnis ersetzt wird.  
-  
+[in, out] Ein Zeiger auf den ersten Operanden, durch das Ergebnis ersetzt wird.
+
 *Maske*<br/>
-[in] Der zweite Operand.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Der ursprüngliche Wert des ersten Operanden.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Systemintern|Architektur|Header|  
-|---------------|------------------|------------|  
-|`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`, `_InterlockedAnd64`|X86, ARM, x64|\<intrin.h>|  
-|`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM|\<intrin.h>|  
-|`_InterlockedAnd_np`, `_InterlockedAnd8_np`, `_InterlockedAnd16_np`, `_InterlockedAnd64_np`|x64|\<intrin.h>|  
-|`_InterlockedAnd_HLEAcquire`, `_InterlockedAnd_HLERelease`, `_InterlockedAnd64_HLEAcquire`, `_InterlockedAnd64_HLERelease`|x86, x64|\<immintrin.h>|  
-  
-## <a name="remarks"></a>Hinweise  
- Die Nummer im Namen jeder einzelnen Funktion gibt die Bitgröße der Argumente an.  
-  
- Verwenden Sie auf ARM-Plattformen die systeminternen Funktionen mit den Suffixen `_acq` und `_rel` für Semantiken zum Abrufen bzw. Freigeben, z. B. am Beginn und am Ende eines kritischen Abschnitts. Die systeminternen Funktionen mit einer `_nf`-Suffix ("no fence") fungieren nicht als Speicherbarriere.  
-  
- Die systeminternen Funktionen mit dem Suffix `_np` („no prefetch“) verhindern, dass ein möglicher Vorabrufvorgang vom Compiler eingefügt wird.  
-  
- Auf Intel-Plattformen, die Hardware Lock Elision (HLE)-Anweisungen unterstützen, enthalten die systeminternen Funktionen mit den Suffixen `_HLEAcquire` und `_HLERelease` einen Hinweis für den Prozessor, wie die Leistung durch den Wegfall der Schreibsperre in der Hardware beschleunigt werden kann. Wenn diese systeminternen Funktionen auf Plattformen aufgerufen werden, die HLE nicht unterstützen, wird der Hinweis ignoriert.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// InterlockedAnd.cpp  
-// Compile with: /Oi  
-#include <stdio.h>  
-#include <intrin.h>  
-  
-#pragma intrinsic(_InterlockedAnd)  
-  
-int main()  
-{  
-        long data1 = 0xFF00FF00;  
-        long data2 = 0x00FFFF00;  
-        long retval;  
-        retval = _InterlockedAnd(&data1, data2);  
-        printf_s("0x%x 0x%x 0x%x", data1, data2, retval);   
-}  
-```  
-  
-```Output  
-0xff00 0xffff00 0xff00ff00  
-```  
-  
-**Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)   
- [Konflikt mit dem x86-Compiler](../build/conflicts-with-the-x86-compiler.md)
+[in] Der zweite Operand.
+
+## <a name="return-value"></a>Rückgabewert
+
+Der ursprüngliche Wert des ersten Operanden.
+
+## <a name="requirements"></a>Anforderungen
+
+|Systemintern|Architektur|Header|
+|---------------|------------------|------------|
+|`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`, `_InterlockedAnd64`|X86, ARM, x64|\<intrin.h>|
+|`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM|\<intrin.h>|
+|`_InterlockedAnd_np`, `_InterlockedAnd8_np`, `_InterlockedAnd16_np`, `_InterlockedAnd64_np`|x64|\<intrin.h>|
+|`_InterlockedAnd_HLEAcquire`, `_InterlockedAnd_HLERelease`, `_InterlockedAnd64_HLEAcquire`, `_InterlockedAnd64_HLERelease`|x86, x64|\<immintrin.h>|
+
+## <a name="remarks"></a>Hinweise
+
+Die Nummer im Namen jeder einzelnen Funktion gibt die Bitgröße der Argumente an.
+
+Verwenden Sie auf ARM-Plattformen die systeminternen Funktionen mit den Suffixen `_acq` und `_rel` für Semantiken zum Abrufen bzw. Freigeben, z. B. am Beginn und am Ende eines kritischen Abschnitts. Die systeminternen Funktionen mit einer `_nf`-Suffix ("no fence") fungieren nicht als Speicherbarriere.
+
+Die systeminternen Funktionen mit dem Suffix `_np` („no prefetch“) verhindern, dass ein möglicher Vorabrufvorgang vom Compiler eingefügt wird.
+
+Auf Intel-Plattformen, die Hardware Lock Elision (HLE)-Anweisungen unterstützen, enthalten die systeminternen Funktionen mit den Suffixen `_HLEAcquire` und `_HLERelease` einen Hinweis für den Prozessor, wie die Leistung durch den Wegfall der Schreibsperre in der Hardware beschleunigt werden kann. Wenn diese systeminternen Funktionen auf Plattformen aufgerufen werden, die HLE nicht unterstützen, wird der Hinweis ignoriert.
+
+## <a name="example"></a>Beispiel
+
+```
+// InterlockedAnd.cpp
+// Compile with: /Oi
+#include <stdio.h>
+#include <intrin.h>
+
+#pragma intrinsic(_InterlockedAnd)
+
+int main()
+{
+        long data1 = 0xFF00FF00;
+        long data2 = 0x00FFFF00;
+        long retval;
+        retval = _InterlockedAnd(&data1, data2);
+        printf_s("0x%x 0x%x 0x%x", data1, data2, retval);
+}
+```
+
+```Output
+0xff00 0xffff00 0xff00ff00
+```
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
+[Konflikt mit dem x86-Compiler](../build/conflicts-with-the-x86-compiler.md)

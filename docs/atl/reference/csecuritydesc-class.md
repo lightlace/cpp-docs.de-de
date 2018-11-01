@@ -1,10 +1,6 @@
 ---
-title: CSecurityDesc-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: CSecurityDesc-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CSecurityDesc
 - ATLSECURITY/ATL::CSecurityDesc
@@ -35,21 +31,15 @@ f1_keywords:
 - ATLSECURITY/ATL::CSecurityDesc::SetOwner
 - ATLSECURITY/ATL::CSecurityDesc::SetSacl
 - ATLSECURITY/ATL::CSecurityDesc::ToString
-dev_langs:
-- C++
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 591465ed9c16485498174a710d2d37ff68425058
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d06ec86b4a049daba945c347f4b424b5987010f9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116866"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605803"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc-Klasse
 
@@ -556,14 +546,14 @@ Legt die Steuerungsbits einer Sicherheitsbeschreibung fest.
 
 ```
 bool SetControl(
-    SECURITY_DESCRIPTOR_CONTROL ControlBitsOfInterest, 
+    SECURITY_DESCRIPTOR_CONTROL ControlBitsOfInterest,
     SECURITY_DESCRIPTOR_CONTROL ControlBitsToSet) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *ControlBitsOfInterest*<br/>
-Eine SECURITY_DESCRIPTOR_CONTROL-Maske, die die festzulegenden Steuerungsbits angibt. Eine Liste der Flags, die festgelegt werden können, finden Sie unter [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).
+Eine SECURITY_DESCRIPTOR_CONTROL-Maske, die die festzulegenden Steuerungsbits angibt. Eine Liste der Flags, die festgelegt werden können, finden Sie unter [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582).
 
 *ControlBitsToSet*<br/>
 Eine SECURITY_DESCRIPTOR_CONTROL-Maske, die die neuen Werte für die Steuerbits gemäß gibt an die *ControlBitsOfInterest* Maske. Dieser Parameter kann eine Kombination der Flags für aufgeführt sein der *ControlBitsOfInterest* Parameter.
@@ -574,18 +564,18 @@ Gibt bei Erfolg true zurück, bei einem Fehler false.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode ruft [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).
+Diese Methode ruft [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582).
 
 ##  <a name="setdacl"></a>  CSecurityDesc:: SetDacl
 
 Legt die Informationen in eine DACL (discretionary Access Control List) fest. Wenn eine DACL bereits in der Sicherheitsbeschreibung vorhanden ist, wird es ersetzt.
 
 ```
-inline void SetDacl(  
+inline void SetDacl(
     bool bPresent = true,
     bool bDefaulted = false) throw(...);
 
-inline void SetDacl(  
+inline void SetDacl(
     const CDacl& Dacl,
     bool bDefaulted = false) throw(...);
 ```

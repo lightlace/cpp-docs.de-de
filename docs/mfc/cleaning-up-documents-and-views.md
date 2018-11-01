@@ -1,5 +1,5 @@
 ---
-title: Bereinigen von Dokumenten und Ansichten | Microsoft Docs
+title: Bereinigen von Dokumenten und Ansichten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dfe54c13db6f44bc70289380ae5f50d99c3722b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f4325b0de10861fc76ee9ab816376f40ba0ba587
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341325"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437416"
 ---
 # <a name="cleaning-up-documents-and-views"></a>Bereinigen von Dokumenten und Ansichten
-Wenn ein Dokument geschlossen wird, ruft das Framework zuerst die [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) Memberfunktion. Wenn Sie im Verlauf des Vorgangs für das Dokument, Arbeitsspeicher, der auf dem Heap zugeordnet `DeleteContents` ist der beste Ort, um ihn freizugeben.  
-  
+
+Wenn ein Dokument geschlossen wird, ruft das Framework zuerst seine [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) Member-Funktion. Wenn Sie im Verlauf des Vorgangs des Dokuments, auf dem Heap Arbeitsspeicher zugeordnet `DeleteContents` ist der beste Ort für die Zuordnung aufheben.
+
 > [!NOTE]
->  Sie sollten nicht in das Dokument Destruktor Dokumentdaten freigeben. Bei einer SDI-Anwendung könnte das Dokumentobjekt wiederverwendet werden.  
-  
- Sie können eine Ansicht Destruktor, um Arbeitsspeicher freizugeben, die Sie auf dem Heap reserviert überschreiben.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Initialisieren und Bereinigen von Dokumenten und Ansichten](../mfc/initializing-and-cleaning-up-documents-and-views.md)
+>  Sie sollten nicht die Dokumentendaten in der Destruktor des Dokuments Zuordnung aufheben. Im Fall einer SDI-Anwendung kann das Document-Objekt wiederverwendet werden.
+
+Sie können eine Ansicht des-Destruktor, um den Arbeitsspeicher freigeben, die, den Sie auf dem Heap reserviert, überschreiben.
+
+## <a name="see-also"></a>Siehe auch
+
+[Initialisieren und Bereinigen von Dokumenten und Ansichten](../mfc/initializing-and-cleaning-up-documents-and-views.md)
 

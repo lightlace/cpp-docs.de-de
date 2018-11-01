@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 172ead8aa67f042512a73b8c0d1ecdaa0723c5d1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1e74ed975cce0ac3a87716d9f7ad00da2d75d509
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676544"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820675"
 ---
 # <a name="visual-c-help-and-community"></a>Hilfe und Community für Visual C++
 
@@ -34,7 +34,7 @@ So erhalten Sie Informationen über das Schreiben von C++-Code und die Verwendun
 |Titel|Beschreibung |
 |-----------|-----------------|
 |[Visual C++](visual-cpp-in-visual-studio.md)|Enthält Verweise auf und Dokumentation zu Visual C++. Teil der MSDN Library.|
-|[Windows Developer Center](https://developer.microsoft.com/en-us/windows/)|Enthält Informationen zur Verwendung von C++ und anderen Sprachen zum Entwickeln von Apps für Windows 8. Teil des Windows Developer Centers. Der C++-Inhalt befindet sich unter dem Knoten Dokumente > Sprachverzeichnis.|
+|[Windows Developer Center](https://developer.microsoft.com/windows/)|Enthält Informationen zur Verwendung von C++ und anderen Sprachen zum Entwickeln von Apps für Windows 8. Teil des Windows Developer Centers. Der C++-Inhalt befindet sich unter dem Knoten Dokumente > Sprachverzeichnis.|
 
 ### <a name="online-and-offline-documentation"></a>Online- und Offlinedokumentation
 

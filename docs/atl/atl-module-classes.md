@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e885ef1db8f282bbdca2e8c39c3d1221d791d1a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7e067b1d72b80950b4ed33fbae8cac7333ac0438
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46067635"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083073"
 ---
 # <a name="atl-module-classes"></a>ATL-Modulklassen
 
@@ -55,15 +55,15 @@ Die Funktionalität von `CComModule` in mehrere neue Klassen verteilt wurde, den
 
 - Stellen Sie die Funktionalität in `CComModule` präzise.
 
-     Unterstützung für COM, Windowing, Debuggen von Schnittstellen und anwendungsspezifischen Features für (DLL oder EXE-Datei) ist jetzt in separaten Klassen.
+   Unterstützung für COM, Windowing, Debuggen von Schnittstellen und anwendungsspezifischen Features für (DLL oder EXE-Datei) ist jetzt in separaten Klassen.
 
 - Deklarieren Sie globale Instanz für jedes dieser Module automatisch.
 
-     Eine globale Instanz das erforderliche Modul-Klassen, die in das Projekt verknüpft ist.
+   Eine globale Instanz das erforderliche Modul-Klassen, die in das Projekt verknüpft ist.
 
 - Entfernen Sie die Notwendigkeit, Init "und" Begriff Methoden aufrufen.
 
-     Init "und" Begriff Methoden wurden in den Konstruktoren und Destruktoren für Modulklassen verschoben; Es ist nicht mehr Init "und" Begriff aufrufen müssen.
+   Init "und" Begriff Methoden wurden in den Konstruktoren und Destruktoren für Modulklassen verschoben; Es ist nicht mehr Init "und" Begriff aufrufen müssen.
 
 ## <a name="see-also"></a>Siehe auch
 

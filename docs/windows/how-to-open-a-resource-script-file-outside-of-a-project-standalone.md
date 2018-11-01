@@ -1,31 +1,20 @@
 ---
-title: 'Vorgehensweise: Öffnen eine Ressourcenskriptdatei außerhalb eines C++-Projekts (eigenständig) | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Vorgehensweise: Öffnen eine Ressourcenskriptdatei außerhalb eines C++-Projekts (eigenständig)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.resource
-dev_langs:
-- C++
 helpviewer_keywords:
 - resources [C++], viewing
 - rc files [C++], viewing resources
 - .rc files [C++], viewing resources
 - resource script files [C++], viewing resources
 ms.assetid: bc350c60-178d-4c5d-9a7e-6576b0c936e4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6972d76127bccf839c7778e9050e11ec10b6ac2f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 43b245c1d19e7468a9433473eb49dc970316eba5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315248"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529076"
 ---
 # <a name="how-to-open-a-resource-script-file-outside-of-a-c-project-standalone"></a>Vorgehensweise: Öffnen eine Ressourcenskriptdatei außerhalb eines C++-Projekts (eigenständig)
 
@@ -74,5 +63,5 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Ressourcendateien](../windows/resource-files-visual-studio.md)  
+[Ressourcendateien](../windows/resource-files-visual-studio.md)<br/>
 [Ressourcen-Editor](../windows/resource-editors.md)

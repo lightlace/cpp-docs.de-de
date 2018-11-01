@@ -1,5 +1,5 @@
 ---
-title: Reihenfolge der Operationen zur Erstellung Datenbankanwendungen | Microsoft Docs
+title: Reihenfolge der Operationen zur Erstellung Datenbankanwendungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbe18e9733388cc6e43f6ca3de520596c713b783
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 483a36f62a147d9b71a489c2f611fc45c1b7fa54
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381328"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860731"
 ---
 # <a name="sequence-of-operations-for-creating-database-applications"></a>Reihenfolge der Operationen zur Erstellung Datenbankanwendungen
-Die folgende Tabelle zeigt Ihre Rolle und das Framework zum Schreiben von datenbankanwendungen.  
-  
+
+Die folgende Tabelle zeigt Ihre Rolle und des Frameworks zum Schreiben von datenbankanwendungen.
+
 > [!NOTE]
->  Die Visual C++-Umgebung und den Assistenten unterstützt nicht DAO (obwohl die DAO-Klassen enthalten sind, und Sie weiterhin verwenden können,). Microsoft empfiehlt die Verwendung von ODBC für neue MFC-Projekte. Sie sollten nur DAO verwenden, in die Verwaltung bereits vorhandener Anwendungen.  
-  
-### <a name="creating-database-applications"></a>Erstellen von Datenbankanwendungen  
-  
-|Aufgabe|Sie tun|Das Framework ermöglicht|  
-|----------|------------|------------------------|  
-|Entscheiden Sie, ob die MFC ODBC- oder DAO-Klassen verwenden.|Verwenden von ODBC für neue MFC-Projekte. Verwenden Sie DAO nur für vorhandene Anwendungen zu verwalten. Allgemeine Informationen finden Sie im Artikel [Datenprogrammierung Zugriff](../data/data-access-programming-mfc-atl.md).|Das Framework stellt Klassen, die Zugriff auf die Datenbank zu unterstützen.|  
-|Erstellen Sie Ihre skelettanwendung mit Datenbankoptionen an.|Führen Sie den MFC-Anwendung-Assistenten. Wählen Sie Optionen auf der Seite Datenbank-Unterstützung. Wenn Sie eine Option, die eine Datensatzansicht erstellt auswählen, auch Folgendes angeben:<br /><br /> -Daten Quelle und die Tabelle oder die Namen<br />-Fragen Sie oder die Namen ab.|Die MFC-Anwendung-Assistent erstellt Dateien, und gibt an, dass die erforderlichen enthält. Abhängig von den Optionen, die Sie angeben, zählen die Dateien eine Recordset-Klasse.|  
-|Entwerfen Sie Ihre Datenbank bilden oder Formulare.|Verwenden Sie den Visual C++-Dialog-Editor, um Steuerelemente auf die Ressourcen der Dialogfeldvorlage für Datensatzansichts-Klassen platzieren.|Die MFC-Anwendungs-Assistent erstellt eine leeres Dialogfeldvorlagen-Ressource für Sie ausgefüllt.|  
-|Erstellen Sie nach Bedarf zusätzliche Benutzerdatensatz und Recordset-Klasse.|Verwenden Sie Klassenansicht, um die Klassen und das Dialogfeld-Editor, um die Sichten entwerfen, erstellen.|Klassenansicht erstellt zusätzliche Dateien für die neuen Klassen.|  
-|Erstellen Sie Recordset-Objekte nach Bedarf in Ihrem Code. Verwenden Sie jedes Recordset, um Datensätze bearbeiten...|Die Recordsets basieren auf den von abgeleiteten Klassen [CRecordset](../mfc/reference/crecordset-class.md) mit den Assistenten.|Verwendung von ODBC-Datensatzfeldaustausch (RFX) zum Austauschen von Daten zwischen der Datenbank und das Recordset-Felddatenmember. Bei Verwendung eine Datensatzansicht tauscht Dialogdatenaustausch (DDX) Daten zwischen das Recordset und den Steuerelementen der Datensatzansicht angezeigt.|  
-|.. oder erstellen Sie eine explizite [CDatabase](../mfc/reference/cdatabase-class.md) in Ihrem Code für jede Datenbank, die Sie öffnen möchten.|Recordset-Objekte als Grundlage für die Datenbankobjekte.|Das Datenbankobjekt stellt eine Schnittstelle mit der Datenquelle.|  
-|Binden von Datenspalten dynamisch an das Recordset.|Fügen Sie in ODBC Code zur abgeleiteten Recordsetklasse zum Verwalten von der Bindungsnamens. Finden Sie im Artikel [Recordset: Dynamisches Binden von Spalten (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).||  
-  
-## <a name="see-also"></a>Siehe auch  
- [Erstellen im Framework](../mfc/building-on-the-framework.md)   
- [Reihenfolge der Operationen zur Erstellung von MFC-Anwendungen](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
- [Reihenfolge der Operationen zur Erstellung von OLE-Anwendungen](../mfc/sequence-of-operations-for-creating-ole-applications.md)   
- [Operationssequenz zur Erstellung von ActiveX-Steuerelementen](../mfc/sequence-of-operations-for-creating-activex-controls.md)
+>  Die Visual C++-Umgebung und den Assistenten unterstützen DAO keine (obwohl die DAO-Klassen enthalten sind, und Sie können diese weiterhin verwenden). Microsoft empfiehlt die Verwendung von ODBC für neue MFC-Projekte. Sie sollten nur DAO Verwaltung bereits vorhandener Anwendungen verwenden.
+
+### <a name="creating-database-applications"></a>Erstellen von Datenbankanwendungen
+
+|Aufgabe|Sie tun|Das Framework ermöglicht|
+|----------|------------|------------------------|
+|Entscheiden Sie, ob die MFC-ODBC oder DAO-Klassen verwenden.|Verwenden von ODBC für neue MFC-Projekte. Verwenden Sie DAO, nur für vorhandene Anwendungen zu verwalten. Weitere Informationen finden Sie im Artikel [Datenzugriffsprogrammierung](../data/data-access-programming-mfc-atl.md).|Das Framework stellt Klassen, die Zugriff auf die Datenbank zu unterstützen.|
+|Erstellen Sie Ihre skelettanwendung mit Database-Optionen.|Führen Sie den Assistenten zum MFC-Anwendungen. Wählen Sie Optionen auf der Seite Datenbank-Unterstützung. Wenn Sie eine Option, die eine Datensatzansicht erstellt auswählen, auch Folgendes angeben:<br /><br />-Data Source "und" Tabelle oder die Namen<br />-Fragen Sie oder die Namen ab.|Der MFC-Anwendung-Assistent erstellt Dateien, und gibt an, dass die erforderlichen enthält. Abhängig von den Optionen, die Sie angeben, können die Dateien eine Recordset-Klasse enthalten.|
+|Entwerfen Sie Ihr mindestens ein Datenbankformular.|Verwenden Sie den Visual C++-Dialog-Editor, um Steuerelemente auf die Ressourcen der Dialogfeldvorlage für Ihre Datensatzansichts-Klassen zu platzieren.|Die MFC-Anwendungs-Assistent erstellt eine leere Dialogfeldvorlagen-Ressource für Sie ausgefüllt.|
+|Erstellen Sie nach Bedarf zusätzliche aufzeichnen und Recordset-Klassen.|Verwenden Sie Klassenansicht, um die Klassen und das Dialogfeld-Editor, um die Sichten entwerfen, erstellen.|Klassenansicht erstellt zusätzliche Dateien für die neuen Klassen.|
+|Erstellen Sie Recordset-Objekte nach Bedarf in Ihrem Code. Verwenden Sie jedes Recordsets Datensätze bearbeiten...|Die Recordsets basieren auf die von abgeleiteten Klassen [CRecordset](../mfc/reference/crecordset-class.md) mit den Assistenten.|ODBC verwendet die Datensatzfeldaustausch (RFX) zum Austauschen von Daten zwischen der Datenbank und des Recordset-Felddatenmembern. Bei Verwendung eine Datensatzansicht Datenaustausch Dialogdatenaustausch (DDX) zwischen dem Recordset und die Steuerelemente der Datensatzansicht angezeigt.|
+|... oder erstellen Sie eine explizite [CDatabase](../mfc/reference/cdatabase-class.md) in Ihrem Code für jede Datenbank, die Sie öffnen möchten.|Basieren Sie Ihre Recordset-Objekte, für die Datenbankobjekte.|Das Database-Objekt stellt eine Schnittstelle mit der Datenquelle bereit.|
+|Binden von Datenspalten dynamisch an das Recordset.|Fügen Sie Code hinzu abgeleiteten Recordset-Klasse die Bindung zu verwalten, in ODBC. Finden Sie im Artikel [Recordset: Dynamisches Binden von Spalten (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).||
+
+## <a name="see-also"></a>Siehe auch
+
+[Erstellen im Framework](../mfc/building-on-the-framework.md)<br/>
+[Reihenfolge der Operationen zur Erstellung von MFC-Anwendungen](../mfc/sequence-of-operations-for-building-mfc-applications.md)<br/>
+[Reihenfolge der Operationen zur Erstellung von OLE-Anwendungen](../mfc/sequence-of-operations-for-creating-ole-applications.md)<br/>
+[Operationssequenz zur Erstellung von ActiveX-Steuerelementen](../mfc/sequence-of-operations-for-creating-activex-controls.md)

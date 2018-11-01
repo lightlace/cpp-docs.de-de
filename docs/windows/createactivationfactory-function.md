@@ -1,28 +1,18 @@
 ---
-title: CreateActivationFactory-Funktion | Microsoft-Dokumentation
-ms.custom: ''
+title: CreateActivationFactory-Funktion
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Details::CreateActivationFactory
-dev_langs:
-- C++
 helpviewer_keywords:
 - CreateActivationFactory function
 ms.assetid: a1a53e04-6757-4faf-a4c8-ecf06e43b959
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: dd43102eb3a3b4e7bb14e65e0c710b814fc10cff
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dc8bfebffcb8970876e38e8424cab5e780a13341
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593831"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532417"
 ---
 # <a name="createactivationfactory-function"></a>CreateActivationFactory-Funktion
 
@@ -40,16 +30,16 @@ template<typename Factory>
 
 ### <a name="parameters"></a>Parameter
 
-*flags*  
+*flags*<br/>
 Eine Kombination aus einem oder mehreren [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) -Enumerationswerte fest.
 
-*entry*  
+*entry*<br/>
 Zeiger auf eine [CreatorMap](../windows/creatormap-structure.md) mit Initialisierungs- und Registrierung Informationen zum Parameter *Riid*.
 
-*riid*  
+*riid*<br/>
 Verweis auf eine Schnittstellen-ID.
 
-*ppFactory*  
+*ppFactory*<br/>
 Wenn dieser Vorgang erfolgreich, einen Zeiger auf eine aktivierungsfactory ausgeführt wird.
 
 ## <a name="return-value"></a>Rückgabewert

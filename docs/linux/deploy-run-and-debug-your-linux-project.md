@@ -2,23 +2,23 @@
 title: Bereitstellen, Ausführen und Debuggen Ihres C++-Projekts unter Linux in Visual Studio | Microsoft-Dokumentation
 description: Informationen zum Kompilieren, Ausführen und Debuggen von Code auf dem Remoteziel in einem C++-Projekt unter Linux in Visual Studio.
 ms.custom: ''
-ms.date: 07/20/2018
+ms.date: 09/12/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
 ms.topic: conceptual
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-author: corob-msft
-ms.author: corob
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 57f8aea7d3ff3ddfd28beff6647dc16885d972e3
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 964da719da8d6f48131fc60f7e7fdfb247637fbf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207678"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069946"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Bereitstellen, Ausführen und Debuggen eines Linux-Projekts
 
@@ -41,7 +41,7 @@ Es gibt mehrere Möglichkeiten für den Umgang mit dem Linux-Projekt sowie zum D
 
     - Im **gdb**-Modus unterstützt der Visual Studio-Debugger GDB auf dem Remotesystem. Dies ist besser kompatibel, falls die lokale Version von GDB nicht mit der auf dem Zielcomputer installierten Version kompatibel ist. |
 
-    > [!NOTE] 
+    > [!NOTE]
     > Wenn Sie im gdbserver-Debugmodus keine Haltepunkte treffen können, versuchen Sie es im gdb-Modus. GDB muss zunächst auf dem Remoteziel [installiert](../linux/download-install-and-setup-the-linux-development-workload.md) werden.
 
 2. Wählen Sie das Remoteziel mit der Standardsymbolleiste **Debuggen** in Visual Studio aus.
@@ -64,7 +64,7 @@ Es gibt mehrere Möglichkeiten für den Umgang mit dem Linux-Projekt sowie zum D
 
     Wenn keine Fehler vorliegen, wird die App gestartet, und der Debugger unterbricht die Ausführung am Haltepunkt.
 
-    ![Treffen eines Haltepunkts](media/hit_breakpoint.png)  
+    ![Treffen eines Haltepunkts](media/hit_breakpoint.png)
 
     Jetzt können Sie mit der Anwendung in ihrem aktuellen Zustand interagieren, Variablen anzeigen und Code schrittweise durchlaufen, indem Sie Befehlstasten wie **F10** oder **F11** drücken.
 
@@ -79,7 +79,7 @@ Es gibt mehrere Möglichkeiten für den Umgang mit dem Linux-Projekt sowie zum D
 ## <a name="configure-other-debugging-options"></a>Konfigurieren anderer Debugoptionen
 
 * Befehlszeilenargumente können mit dem Element **Programmargumente** auf der Eigenschaftenseite **Debugging** des Projekts an die ausführbare Datei übergeben werden.
-  
+
   ![Programmargumente](media/settings_programarguments.png)
 
 * Bestimmte Debuggeroptionen können mit dem Eintrag **Weitere Debuggerbefehle** an GDB übergeben werden.  Beispiel: SIGILL-Signale (unzulässige Anweisung) sollen ignoriert werden.  Hierzu können Sie den **handle**-Befehl verwenden.  Fügen Sie wie oben dargestellt Folgendes zum Eintrag **Weitere Debuggerbefehle** hinzu:

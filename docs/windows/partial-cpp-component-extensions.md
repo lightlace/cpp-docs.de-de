@@ -1,7 +1,7 @@
 ---
-title: Partial (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
+title: teilweise (C++ / CLI und C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92fd30b0b420080d33f9938bec4891ac80ac660d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8694c2fcad85bf3330ed9a5236bd53fa80ee8891
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597077"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083268"
 ---
-# <a name="partial--c-component-extensions"></a>Partial (Komponentenerweiterungen für C++)
+# <a name="partial--ccli-and-ccx"></a>teilweise (C++ / CLI und C++ / CX)
 
 Die **teilweise** mit dem Schlüsselwort können Sie verschiedene Teile der gleichen Verweisklasse unabhängig voneinander und in anderen Dateien erstellt werden.
 
@@ -41,22 +41,22 @@ Für einen Ref-Klasse, die beiden partielle Definitionen, verfügt die **teilwei
 
 ```cpp
 partial class-key identifier {
-   /* The first part of the partial class definition. 
+   /* The first part of the partial class definition.
       This is typically auto-generated */
 }
 // ...
 class-key identifier {
-   /* The subsequent part(s) of the class definition. The same 
+   /* The subsequent part(s) of the class definition. The same
       identifier is specified, but the "partial" keyword is omitted. */
 }
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*Klassenschlüssel*  
+*Klassenschlüssel*<br/>
 Ein Schlüsselwort, das deklariert eine Klasse oder Struktur, die von der Windows-Runtime unterstützt wird. Entweder **Verweisklasse**, **Wertklasse**, **Referenzstruktur**, oder **wertstruktur**.
 
-*identifier*  
+*identifier*<br/>
 Der Name des definierten Typs.
 
 ### <a name="remarks"></a>Hinweise

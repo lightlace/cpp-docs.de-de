@@ -1,12 +1,6 @@
 ---
-title: --Konstruktoren Kommentar | Microsoft Docs
-ms.custom: ''
+title: --Konstruktorenkommentar
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - constructors comment
 - declarations, constructors
@@ -17,26 +11,24 @@ helpviewer_keywords:
 - constructors [MFC], declaring
 - instance constructors, code comments
 ms.assetid: f400774e-ba85-49ed-85b7-70ef2f7dcb2b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f58c8410de51a4692dd0e7f018d40eaa28c0dae8
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: ee36ad991f2a19211b494010d6ff0a5338b80557
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929581"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480703"
 ---
 # <a name="-constructors-comment"></a>// Constructors-Kommentar
-Die `// Constructors` Teil einer MFC-Klassendeklaration deklariert, Konstruktoren (in dem Sinne C++) sowie Initialisierungsfunktionen erforderlich, um das Objekt tatsächlich verwenden. Beispielsweise `CWnd::Create` wird im Abschnitt Konstruktoren, da vor der Verwendung der `CWnd` Objekt ist, wird er erstellt werden muss"vollständig" durch den ersten Aufruf des C++-Konstruktors und dem anschließenden Aufrufen der `Create` Funktion. In der Regel sind diese Member öffentlich.  
-  
- Beispielsweise `CStdioFile` verfügt über drei Konstruktoren, von denen, in der Liste unter angezeigt wird [ein Beispiel für die Kommentare](../mfc/an-example-of-the-comments.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden der MFC-Quelldateien](../mfc/using-the-mfc-source-files.md)   
- [/ / Implementierungskommentar](../mfc/decrement-implementation-comment.md)   
- [Attributekommentar](../mfc/decrement-attributes-comment.md)   
- [Vorgänge-Kommentar](../mfc/decrement-operations-comment.md)   
- [Overridables-Kommentar](../mfc/decrement-overridables-comment.md)
+
+Die `// Constructors` Teil einer MFC-Klassendeklaration deklariert, Konstruktoren (in der C++-Sinne) als auch für Initialisierungsfunktionen erforderlich, um das Objekt wirklich verwenden. Z. B. `CWnd::Create` wird im Abschnitt Konstruktoren, da Sie vor der Verwendung der `CWnd` Objekt, es muss "vollständig konstruiert werden" von der C++-Konstruktor zuerst aufgerufen und dem anschließenden Aufrufen der `Create` Funktion. In der Regel sind diese Member öffentlich.
+
+Z. B. Klasse `CStdioFile` hat drei Konstruktoren, von denen, in der Auflistung unter angezeigt wird [ein Beispiel für die Kommentare](../mfc/an-example-of-the-comments.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden der MFC-Quelldateien](../mfc/using-the-mfc-source-files.md)<br/>
+[/ / Implementierungskommentar](../mfc/decrement-implementation-comment.md)<br/>
+[Attributekommentar](../mfc/decrement-attributes-comment.md)<br/>
+[Vorgänge-Kommentar](../mfc/decrement-operations-comment.md)<br/>
+[/ / Overridables-Kommentar](../mfc/decrement-overridables-comment.md)
 

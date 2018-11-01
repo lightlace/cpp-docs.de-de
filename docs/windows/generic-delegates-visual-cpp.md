@@ -1,5 +1,5 @@
 ---
-title: Generische Delegaten (Visual C++) | Microsoft-Dokumentation
+title: Generische Delegaten (C++ / CLI) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a9613dbc28b3e1f263133c15ae88d20294962e9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1177b3c09649affc781a8c247a109f8efd8088d2
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702532"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328284"
 ---
-# <a name="generic-delegates-visual-c"></a>Generische Delegaten (Visual C++)
+# <a name="generic-delegates-ccli"></a>Generische Delegaten (C++ / CLI)
 
-Sie können generische Typparameter mit Delegaten verwenden. Weitere Informationen zu Delegaten finden Sie unter [Delegate (Komponentenerweiterungen)](../windows/delegate-cpp-component-extensions.md).
+Sie können generische Typparameter mit Delegaten verwenden. Weitere Informationen zu Delegaten finden Sie unter [delegieren (C++ / CLI und C++ / CX)](../windows/delegate-cpp-component-extensions.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,25 +39,25 @@ generic < [class | typename] type-parameter-identifiers>
 
 ### <a name="parameters"></a>Parameter
 
-*Attribute*  
+*Attribute*<br/>
 (Optional) Zusätzliche deklarative Informationen. Weitere Informationen zu Attributen und Attributklassen finden Sie unter "Attribute".
 
-*type-parameter-identifier(s)*  
+*type-parameter-identifier(s)*<br/>
 Durch Trennzeichen getrennte Liste der Bezeichner für die Typparameter an.
 
-*Type-Parameter-Einschränkungen-Klauseln*  
+*Type-Parameter-Einschränkungen-Klauseln*<br/>
 Nimmt die Form, die im angegebenen [Einschränkungen für generische Typparameter (C++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)
 
-*Zugriffsmodifizierer*  
+*Zugriffsmodifizierer*<br/>
 (Optional) Zugriffsmodifizierer (z. B. **öffentliche**, **private**).
 
-*result-type*  
+*result-type*<br/>
 Der Rückgabetyp des Delegaten.
 
-*identifier*  
+*identifier*<br/>
 Der Name des Delegaten.
 
-*Formal-parameters*  
+*Formal-parameters*<br/>
 (Optional) Die Parameterliste des Delegaten.
 
 ## <a name="example"></a>Beispiel

@@ -23,72 +23,72 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c6d8a07ded3da02c21c4ee8c528474efc6e52b6c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 727d50025ce7fc4808444ac7ad73d828c6f0c545
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021563"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053512"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl-Klasse
 
-Stellt eine Implementierung der [IDBCreateCommand](/previous-versions/windows/desktop/ms711625\(v=vs.85\)) Schnittstelle.  
-  
+Stellt eine Implementierung der [IDBCreateCommand](/previous-versions/windows/desktop/ms711625) Schnittstelle.
+
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-template <class T, class CommandClass >  
-class ATL_NO_VTABLE IDBCreateCommandImpl   
-   : public IDBCreateCommand  
-```  
-  
-### <a name="parameters"></a>Parameter  
+template <class T, class CommandClass >
+class ATL_NO_VTABLE IDBCreateCommandImpl
+   : public IDBCreateCommand
+```
+
+### <a name="parameters"></a>Parameter
 
 *T*<br/>
-Das Sitzungsobjekt abgeleitet `IDBCreateCommandImpl`.  
-  
+Das Sitzungsobjekt abgeleitet `IDBCreateCommandImpl`.
+
 *CommandClass*<br/>
-Command-Klasse.  
+Command-Klasse.
 
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Anforderungen
 
-**Header:** „atldb.h“  
-  
-## <a name="members"></a>Member  
-  
-### <a name="interface-methods"></a>Schnittstellenmethoden  
-  
-|||  
-|-|-|  
-|[CreateCommand](#createcommand)|Erstellt einen neuen Befehl.|  
-  
-## <a name="remarks"></a>Hinweise  
+**Header:** „atldb.h“
 
-Eine optionale Schnittstelle für das Sitzungsobjekt, um einen neuen Befehl zu erhalten.  
+## <a name="members"></a>Member
+
+### <a name="interface-methods"></a>Schnittstellenmethoden
+
+|||
+|-|-|
+|[CreateCommand](#createcommand)|Erstellt einen neuen Befehl.|
+
+## <a name="remarks"></a>Hinweise
+
+Eine optionale Schnittstelle für das Sitzungsobjekt, um einen neuen Befehl zu erhalten.
 
 ## <a name="createcommand"></a> Idbcreatecommandimpl:: CreateCommand
 
-Erstellt einen neuen Befehl ein, und gibt die angeforderte Schnittstelle zurück.  
-  
-### <a name="syntax"></a>Syntax  
-  
-```cpp
-STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,   
-   REFIID riid,   
-   IUnknown ** ppvCommand);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+Erstellt einen neuen Befehl ein, und gibt die angeforderte Schnittstelle zurück.
 
-Finden Sie unter [IDBCreateCommand:: CreateCommand](/previous-versions/windows/desktop/ms709772\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
-  
-Einige Parameter entsprechen den *OLE DB-Programmierreferenz* Parameter mit unterschiedlichen Namen, die in beschriebenen `IDBCreateCommand::CreateCommand`:  
-  
-|OLE DB-Vorlagenparameter|*OLE DB-Programmierreferenz* Parameter|  
-|--------------------------------|------------------------------------------------|  
-|*ppvCommand*|*ppCommand*|  
-  
-## <a name="see-also"></a>Siehe auch  
+### <a name="syntax"></a>Syntax
+
+```cpp
+STDMETHOD(CreateCommand)(IUnknown * pUnkOuter, 
+   REFIID riid, 
+   IUnknown ** ppvCommand);
+```
+
+#### <a name="parameters"></a>Parameter
+
+Finden Sie unter [IDBCreateCommand:: CreateCommand](/previous-versions/windows/desktop/ms709772) in die *OLE DB-Programmierreferenz*.
+
+Einige Parameter entsprechen den *OLE DB-Programmierreferenz* Parameter mit unterschiedlichen Namen, die in beschriebenen `IDBCreateCommand::CreateCommand`:
+
+|OLE DB-Vorlagenparameter|*OLE DB-Programmierreferenz* Parameter|
+|--------------------------------|------------------------------------------------|
+|*ppvCommand*|*ppCommand*|
+
+## <a name="see-also"></a>Siehe auch
 
 [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

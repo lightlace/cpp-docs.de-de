@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 257ca11dcc44b22d6ddbb5043315d29a70377148
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: be030539a7b2d0585ea895f1428de822d3300d53
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313948"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052966"
 ---
 # <a name="how-to-specify-include-directories-for-resources-c"></a>Vorgehensweise: angeben Includeverzeichnissen für Ressourcen (C++)
 
@@ -32,7 +32,7 @@ ms.locfileid: "44313948"
 
 2. In der **Eigenschaftenseiten** Dialogfeld klicken Sie auf die **Ressourcen** Knoten im linken Bereich, geben Sie dann die zusätzlichen "include"-Verzeichnissen in die **Zusätzliche Includeverzeichnisse** Diese Eigenschaft.
 
-Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in .NET Framework-Entwicklerhandbuch. 
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in .NET Framework-Entwicklerhandbuch.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -40,8 +40,8 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Dialogfeld „Ressourcenincludes“](../windows/resource-includes-dialog-box.md)  
-[TN035: Verwenden mehrerer Ressourcendateien und Headerdateien mit Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)  
-[Symbole: Ressourcenbezeichner](../windows/symbols-resource-identifiers.md)  
-[Ressourcendateien](../windows/resource-files-visual-studio.md)  
+[Dialogfeld „Ressourcenincludes“](../windows/resource-includes-dialog-box.md)<br/>
+[TN035: Verwenden mehrerer Ressourcendateien und Headerdateien mit Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)<br/>
+[Symbole: Ressourcenbezeichner](../windows/symbols-resource-identifiers.md)<br/>
+[Ressourcendateien](../windows/resource-files-visual-studio.md)<br/>
 [Ressourcen-Editor](../windows/resource-editors.md)

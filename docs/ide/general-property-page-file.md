@@ -15,26 +15,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 523ac16a647116f4d18da7e516adb4f0e6bb7fc4
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 46446b03b557aa3c685ff4ab4f1658cd6972124e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33324034"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388601"
 ---
 # <a name="general-property-page-file"></a>Eigenschaftenseite "Allgemein" (Datei)
 
 Wenn eine Datei im **Projektmappen-Explorer** ausgewählt wird, werden die folgenden Eigenschaften auf der Eigenschaftenseite **Allgemein** unter dem Knoten **Konfigurationseigenschaften** angezeigt:
 
-**Aus dem Build ausschließen**  
-Gibt an, ob die Datei im Build für die aktuelle Konfiguration enthalten sein soll.
+- **Aus dem Build ausschließen**
 
-Informationen zum programmgesteuerten Zugriff auf diese Eigenschaft finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>.
+   Gibt an, ob die Datei im Build für die aktuelle Konfiguration enthalten sein soll.
 
-**Tool**  
-Das Tool, das zum Erstellen dieser Datei verwendet wird. Weitere Informationen finden Sie unter [Specifying Custom Build Tools (Angeben von benutzerdefinierten Buildtools)](../ide/specifying-custom-build-tools.md).
+   Informationen zum programmgesteuerten Zugriff auf diese Eigenschaft finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>.
 
-Informationen zum programmgesteuerten Zugriff auf diese Eigenschaft finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>.
+- **Tool**
+
+   Das Tool, das zum Erstellen dieser Datei verwendet wird. Weitere Informationen finden Sie unter [Specifying Custom Build Tools (Angeben von benutzerdefinierten Buildtools)](../ide/specifying-custom-build-tools.md).
+
+   Informationen zum programmgesteuerten Zugriff auf diese Eigenschaft finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>.
 
 Informationen über das Zugreifen auf die Eigenschaftenseite **Allgemein** im Knoten **Konfigurationseigenschaften** finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../ide/working-with-project-properties.md).
 
@@ -42,4 +44,4 @@ Informationen zu Projekten unter anderen Betriebssystemen als Windows finden Sie
 
 ## <a name="see-also"></a>Siehe auch
 
-[Eigenschaftenseiten](../ide/property-pages-visual-cpp.md)  
+[Eigenschaftenseiten](../ide/property-pages-visual-cpp.md)

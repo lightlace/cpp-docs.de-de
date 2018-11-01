@@ -1,28 +1,20 @@
 ---
-title: BoolStruct-Struktur | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: BoolStruct-Struktur
+ms.date: 09/21/2018
 ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::BoolStruct
-dev_langs:
-- C++
+- internal/Microsoft::WRL::Details::BoolStruct::Member
 helpviewer_keywords:
-- BoolStruct structure
+- Microsoft::WRL::Details::BoolStruct structure
+- Microsoft::WRL::Details::BoolStruct::Member data member
 ms.assetid: 666eae78-e81d-4fb7-a9e4-1ba617d6d4cd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c4981c7f82fe2c544bf907ac59d6e9ca22105cbd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d79ea93bf95040efe79e3e3c57ceb3397fd257de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592536"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643403"
 ---
 # <a name="boolstruct-structure"></a>BoolStruct-Struktur
 
@@ -36,15 +28,15 @@ struct BoolStruct;
 
 ## <a name="remarks"></a>Hinweise
 
-Die **BoolStruct** Struktur definiert, ob eine `ComPtr` die Objektlebensdauer einer Schnittstelle verwaltet. **BoolStruct** werden intern von der [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) Operator.
+Die `BoolStruct` Struktur definiert, ob eine `ComPtr` die Objektlebensdauer einer Schnittstelle verwaltet. `BoolStruct` wird intern von verwendet die [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) Operator.
 
 ## <a name="members"></a>Member
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
 
-|Name|Beschreibung|
-|----------|-----------------|
-|[BoolStruct::Member-Datenmember](../windows/boolstruct-member-data-member.md)|Gibt an, dass eine [ComPtr](../windows/comptr-class.md) ist, oder ist nicht der Fall, die Objektlebensdauer einer Schnittstelle verwalten.|
+Name                          | Beschreibung
+----------------------------- | ------------------------------------------------------------------------------------------------------------------
+[Boolstruct::](#member) | Gibt an, dass eine [ComPtr](../windows/comptr-class.md) ist, oder ist nicht der Fall, die Objektlebensdauer einer Schnittstelle verwalten.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -56,7 +48,14 @@ Die **BoolStruct** Struktur definiert, ob eine `ComPtr` die Objektlebensdauer ei
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>Siehe auch
+## <a name="member"></a>Boolstruct::
 
-[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)  
-[ComPtr::operator Microsoft::WRL::Details::BoolType-Operator](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+```cpp
+int Member;
+```
+
+### <a name="remarks"></a>Hinweise
+
+Gibt an, dass eine [ComPtr](../windows/comptr-class.md) ist, oder ist nicht der Fall, die Objektlebensdauer einer Schnittstelle verwalten.

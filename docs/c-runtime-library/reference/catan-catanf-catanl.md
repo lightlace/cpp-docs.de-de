@@ -1,11 +1,6 @@
 ---
-title: catan, catanf, catanl | Microsoft-Dokumentation
-ms.custom: ''
+title: catan, catanf, catanl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - catan
 - catanf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/catan
 - complex/catanf
 - complex/catanl
-dev_langs:
-- C++
 helpviewer_keywords:
 - catan function
 - catanf function
 - catanl function
 ms.assetid: 8415ed9c-7909-4d08-b532-4630bafdc7e8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a66781ad1b9962a8d6a1792ad0b77abf853f2559
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 99acdccca1b83be2fa667b5e5ef6e5181dc1ba81
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393936"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50455223"
 ---
 # <a name="catan-catanf-catanl"></a>catan, catanf, catanl
 
-Ruft den Arkustangens einer komplexen Zahl mit Branch Schnitte außerhalb des Intervalls [-1; + 1] auf der Achse imaginären ab.
+Ruft den Arkustangens einer komplexen Zahl mit achsenabschnitten außerhalb des Intervalls [-1; + 1] auf der imaginären Achse ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -72,7 +61,7 @@ Eine komplexe Zahl, die einen Winkel als Bogenmaß darstellt
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Arkustangens von *z*, im Bogenmaß. Das Ergebnis ist unbounded imaginären Achse, und klicken Sie im Intervall [-π/2; + π/2] der echte Achse.
+Der Arkustangens des *z*, im Bogenmaß zurück. Das Ergebnis ist unbegrenzt, auf der imaginären Achse, und klicken Sie im Intervall [-π/2; + π/2] auf der reellen Achse.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -80,7 +69,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Catan**
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|C-Header|C++-Header|
+|-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
 |**Catan**, **Catanf**, **Catanl**|\<complex.h>|\<ccomplex>|
 

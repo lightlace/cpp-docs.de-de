@@ -1,28 +1,18 @@
 ---
-title: Attribut-Ziele (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Attribut-Ziele (C++ / CLI und C++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: d7a4cc42a0913636b0b63057f0f265f3fb8a034c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8d191b284350be13111f07c4bd9d4f06ce67eb2b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589415"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50467703"
 ---
-# <a name="attribute-targets-c-component-extensions"></a>Attributziele (Komponentenerweiterungen für C++)
+# <a name="attribute-targets-ccli-and-ccx"></a>Attribut-Ziele (C++ / CLI und C++ / CX)
 
 Attribut Nutzung Bezeichner können Sie die Attributziele angeben.  Jedes Attribut wird definiert, um für die bestimmte Sprachelemente zu übernehmen. Beispielsweise kann ein Attribut definiert werden, um nur für Klassen und Strukturen zu übernehmen.  Die folgende Liste enthält die möglichen syntaktische Elemente, die auf denen ein benutzerdefiniertes Attribut verwendet werden kann. Kombinationen dieser Werte (Verwendung eines logischen oder) kann verwendet werden.
 
@@ -230,8 +220,8 @@ Attribut Nutzung Bezeichner sind in den folgenden Situationen erforderlich:
 - So geben Sie an, dass ein Attribut für einen Eigenschaftenaccessor nicht die Eigenschaft gilt:
 
     ```cpp
-    [method:MyAttr(123)] property int Property()  
-    [property:MyAttr(123)] property int Property()  
+    [method:MyAttr(123)] property int Property()
+    [property:MyAttr(123)] property int Property()
     [MyAttr(123)] property int get_MyPropy() // default: property
     ```
 

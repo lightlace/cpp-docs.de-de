@@ -1,10 +1,6 @@
 ---
-title: Tanh, Tanhf, Tanhl | Microsoft Docs
-ms.custom: ''
+title: Tanh, Tanhf, tanhl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tanh
 - tanhf
@@ -27,8 +23,6 @@ f1_keywords:
 - tanhf
 - tanhl
 - _tanhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - tanhl function
 - _tanhl function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 438c587099edafedbb2cc3feb4b3a285aa155a0d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b9c7269d3c945301106098fc944383bbc364e5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408519"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432386"
 ---
 # <a name="tanh-tanhf-tanhl"></a>Tanh, Tanhf, tanhl
 
@@ -83,7 +73,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Tanh** 
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header (C)|Erforderlicher Header (C)|
+|-Routine zurückgegebener Wert|Erforderlicher Header (C)|Erforderlicher Header (C)|
 |-------------|---------------------|-|
 |**Tanh**, **Tanhf**, **Tanhl**|\<math.h>|\<cmath> oder \<math.h>|
 

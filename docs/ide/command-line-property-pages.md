@@ -16,20 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 580c11d19a1d2ea5510390296a80589cce988f12
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 54a9f68c1cd750cd3d0e5c638d1ab101a8588a61
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327810"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416889"
 ---
 # <a name="command-line-property-pages"></a>Befehlszeilen-Eigenschaftenseiten
-Die meisten Ordner mit Eigenschaftenseiten enthalten die **Befehlszeileneigenschaftenseite**. Diese Seite stellt dar, welche Eigenschaften im Ordner festgelegt wurden. Die **Befehlszeilen**-Eigenschaftenseite enthält außerdem das Feld **Zusätzliche Optionen**, in dem Sie Eigenschaften angeben können, die für das Tool gültig sind, für die jedoch keine Eigenschaft im Ordner vorhanden ist.  
-  
- Jeder Befehl, den Sie in das Bearbeitungsfeld eingeben, wird an das Tool für den Ordner übergeben. Für die Eingabe wird keine Verifizierungen oder Überprüfungen vorgenommen. Abhängigkeiten werden ebenfalls nicht überprüft.  
-  
- Informationen über das Zugreifen auf die **Befehlszeileneigenschaftenseiten** finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../ide/working-with-project-properties.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Eigenschaftenseiten](../ide/property-pages-visual-cpp.md)   
- [.LIB-Dateien als Linkereingabe](../build/reference/dot-lib-files-as-linker-input.md)
+
+Die meisten Ordner mit Eigenschaftenseiten enthalten die **Befehlszeileneigenschaftenseite**. Diese Seite stellt dar, welche Eigenschaften im Ordner festgelegt wurden. Die **Befehlszeilen**-Eigenschaftenseite enthält außerdem das Feld **Zusätzliche Optionen**, in dem Sie Eigenschaften angeben können, die für das Tool gültig sind, für die jedoch keine Eigenschaft im Ordner vorhanden ist.
+
+Jeder Befehl, den Sie in das Bearbeitungsfeld eingeben, wird an das Tool für den Ordner übergeben. Für die Eingabe wird keine Verifizierungen oder Überprüfungen vorgenommen. Abhängigkeiten werden ebenfalls nicht überprüft.
+
+Informationen über das Zugreifen auf die **Befehlszeileneigenschaftenseiten** finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../ide/working-with-project-properties.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Eigenschaftenseiten](../ide/property-pages-visual-cpp.md)<br>
+[.LIB-Dateien als Linkereingabe](../build/reference/dot-lib-files-as-linker-input.md)

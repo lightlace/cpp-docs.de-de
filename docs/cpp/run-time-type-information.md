@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1244c05b7af94d69394c412a3c67864d6e75c337
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9f9ce0094bce1f8e7590cef0cbe3bfe85f35158d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050878"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056060"
 ---
 # <a name="run-time-type-information"></a>Laufzeit-Typinformationen
 
@@ -35,15 +35,15 @@ Es gibt drei primäre Sprachelemente von C++ zur Ausführung von Laufzeittypinfo
 
 - Die [Dynamic_cast](../cpp/dynamic-cast-operator.md) Operator.
 
-     Wird zur Konvertierung von polymorphen Typen verwendet.
+   Wird zur Konvertierung von polymorphen Typen verwendet.
 
 - Die [Typeid](../cpp/typeid-operator.md) Operator.
 
-     Wird zum Kennzeichnen des genauen Typ eines Objekts verwendet.
+   Wird zum Kennzeichnen des genauen Typ eines Objekts verwendet.
 
 - Die [Type_info](../cpp/type-info-class.md) Klasse.
 
-     Verwendet, um die Typinformationen, die zurückgegeben werden, von aufzunehmen der **Typeid** Operator.
+   Verwendet, um die Typinformationen, die zurückgegeben werden, von aufzunehmen der **Typeid** Operator.
 
 ## <a name="see-also"></a>Siehe auch
 

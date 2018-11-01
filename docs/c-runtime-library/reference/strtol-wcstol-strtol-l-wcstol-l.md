@@ -1,10 +1,6 @@
 ---
-title: strtol, wcstol, _strtol_l, _wcstol_l | Microsoft-Dokumentation
-ms.custom: ''
+title: strtol, wcstol, _strtol_l, _wcstol_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strtol
 - wcstol
@@ -30,8 +26,6 @@ f1_keywords:
 - wcstol
 - _strtol_l
 - _tcstol_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcstol function
 - wcstol_l function
@@ -43,16 +37,12 @@ helpviewer_keywords:
 - _strtol_l function
 - strtol function
 ms.assetid: 1787c96a-f283-4a83-9325-33cfc1c7e240
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 70f854e9bb78932f5d9fc102c835476e6b52d68b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5aa69a44a2ce8bde0ee16b02ecd9923f247c7e65
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416326"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617463"
 ---
 # <a name="strtol-wcstol-strtoll-wcstoll"></a>strtol, wcstol, _strtol_l, _wcstol_l
 
@@ -101,15 +91,15 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Strtol** gibt den Wert in der Zeichenfolge dargestellt zurück *StrSource*, außer wenn die Darstellung würde einen Überlauf verursachen, in denen gibt Fall **LONG_MAX** oder **LONG_ MIN**. **Strtol** gibt 0 zurück, wenn keine Konvertierung ausgeführt werden kann. **Wcstol** gibt Werte analog zu **Strtol**. Für beide Funktionen **Errno** festgelegt ist, um **ERANGE** Wenn Überlauf oder Unterlauf auftritt.
+**Strtol** gibt den Wert in der Zeichenfolge dargestellt zurück *StrSource*, außer dass die Darstellung würde einen Überlauf verursachen, in dem gibt Fall **LONG_MAX** oder **LONG_ Min.**. **Strtol** gibt 0 zurück, wenn keine Konvertierung ausgeführt werden kann. **Wcstol** gibt Werte analog zu **Strtol**. Für beide Funktionen **Errno** nastaven NA hodnotu **ERANGE** Wenn Überlauf oder Unterlauf auftritt.
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Strtol** -Funktion konvertiert *StrSource* zu einem **lang**. **Strtol** stoppt das Lesen der Zeichenfolge *StrSource* am ersten Zeichen, das nicht als Teil einer Zahl erkannt. Dies ist möglicherweise das abschließende Nullzeichen oder möglicherweise das erste numerische Zeichen größer als oder gleich *Basis*.
+Die **Strtol** -Funktion konvertiert *StrSource* zu einem **lange**. **Strtol** stoppt das Lesen der Zeichenfolge *StrSource* mit dem ersten Zeichen, die nicht als Teil einer Zahl erkannt. Dies ist möglicherweise das abschließende Nullzeichen, oder es ist das erste numerische Zeichen größer als oder gleich *Basis*.
 
-**Wcstol** ist eine Breitzeichen-Version von **Strtol**; die *StrSource* -Argument ist eine Breitzeichen-Zeichenfolge. Anderenfalls verhalten sich diese Funktionen identisch.
+**Wcstol** ist eine Breitzeichen-Version von **Strtol**, dessen *StrSource* Argument ist eine Breitzeichen-Zeichenfolge. Anderenfalls verhalten sich diese Funktionen identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -118,19 +108,19 @@ Die **Strtol** -Funktion konvertiert *StrSource* zu einem **lang**. **Strtol** s
 |**_tcstol**|**strtol**|**strtol**|**wcstol**|
 |**_tcstol_l**|**_strtol_l**|**_strtol_l**|**_wcstol_l**|
 
-Des aktuellen Gebietsschemas **LC_NUMERIC** -kategorieneinstellung bestimmt erkennen des Basiszeichens in *StrSource **;* Weitere Informationen finden Sie unter [Setlocale](setlocale-wsetlocale.md). Die Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebietsschema. **_strtol_l** und **_wcstol_l** sind identisch mit den entsprechenden Funktionen ohne das **_l** suffix verwenden allerdings das übergebene Gebietsschema. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Des aktuellen Gebietsschemas **LC_NUMERIC** bestimmt das Erkennen des Basiszeichens in *StrSource **;* Weitere Informationen finden Sie unter [Setlocale](setlocale-wsetlocale.md). Die Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebietsschema. **_strtol_l** und **_wcstol_l** sind identisch mit den entsprechenden Funktionen ohne das **_l** suffix mit dem Unterschied, dass sie das übergebene Gebietsschema verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Wenn *Endptr* nicht **NULL**, ein Zeiger auf das Zeichen, die Überprüfung beendet, wird gespeichert, an der Speicherstelle *Endptr*. Wenn keine Konvertierung ausgeführt werden kann (keine gültigen Ziffern gefunden oder ungültige Basis angegeben wurde), den Wert der *StrSource* an der Speicherstelle gespeichert *Endptr*.
+Wenn *Endptr* nicht **NULL**, ein Zeiger auf das Zeichen, die Überprüfung beendet, wird gespeichert, an der Position zeigt *Endptr*. Wenn keine Konvertierung ausgeführt werden kann (keine gültigen Ziffern gefunden oder ungültige Basis angegeben) den Wert der *StrSource* befindet sich in den Speicherort verweist *Endptr*.
 
-**Strtol** erwartet *StrSource* , zeigen Sie auf eine Zeichenfolge der folgenden Form:
+**Strtol** erwartet *StrSource* auf eine Zeichenfolge der folgenden Form zeigt:
 
 > [*Leerzeichen*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*Ziffern* &#124; *Buchstaben*]  
 
-Ein *Leerzeichen* besteht möglicherweise aus Leerzeichen und Tabulatorzeichen, die ignoriert werden. *Ziffern* sind mindestens eine Dezimalstelle; *Buchstaben* sind eine oder mehrere der Buchstaben "a" bis "Z" (oder "A" bis "Z").  Das erste Zeichen, das dieser Form nicht entspricht, beendet die Überprüfung. Wenn *Basis* ist zwischen 2 und 36 liegt, wird dieser Wert als Basis der Zahl verwendet wird. Wenn *Basis* ist 0, die ersten Zeichen der Zeichenfolge verweist *StrSource* werden zur Bestimmung der Basis verwendet. Wenn das erste Zeichen "0" und das zweite Zeichen nicht "x" oder "X" ist, wird die Zeichenfolge als ganze Oktalzahl interpretiert. Wenn das erste Zeichen "0" und das zweite Zeichen nicht "x" oder "X" ist, wird die Zeichenfolge als hexadezimale ganze Zahl interpretiert. Wenn das erste Zeichen "1" bis "9 " ist, wird die Zeichenfolge als ganze Dezimalzahl interpretiert. Den Buchstaben „a“ bis „z“ (bzw. „A“ bis „Z“) werden die Werten 10 bis 35 zugewiesen. Es sind nur Buchstaben zulässig, deren zugewiesene Werte kleiner als *base* sind. Das erste Zeichen außerhalb des Bereichs der Basis beendet die Überprüfung. Z. B. wenn *Basis* ist 0 und das erste überprüfte Zeichen "0", eine ganze Oktalzahl angenommen und ein "8" oder "9"-Zeichen beendet die Überprüfung.
+Ein *Leerzeichen* besteht möglicherweise aus Leerzeichen und Tabulatorzeichen, die ignoriert werden; *Ziffern* sind eine oder mehrere Dezimalstellen sind; *Buchstaben* können eine oder mehrere der Buchstaben "a" bis "Z" (oder "A" bis "Z").  Das erste Zeichen, das dieser Form nicht entspricht, beendet die Überprüfung. Wenn *Basis* zwischen 2 und 36 liegt, ist er als der Basis der Zahl verwendet wird. Wenn *Basis* ist 0, die ersten Zeichen der Zeichenfolge verweist *StrSource* werden verwendet, um die Basis festzulegen. Wenn das erste Zeichen "0" und das zweite Zeichen nicht "x" oder "X" ist, wird die Zeichenfolge als ganze Oktalzahl interpretiert. Wenn das erste Zeichen "0" und das zweite Zeichen nicht "x" oder "X" ist, wird die Zeichenfolge als hexadezimale ganze Zahl interpretiert. Wenn das erste Zeichen "1" bis "9 " ist, wird die Zeichenfolge als ganze Dezimalzahl interpretiert. Den Buchstaben „a“ bis „z“ (bzw. „A“ bis „Z“) werden die Werten 10 bis 35 zugewiesen. Es sind nur Buchstaben zulässig, deren zugewiesene Werte kleiner als *base* sind. Das erste Zeichen außerhalb des Bereichs der Basis beendet die Überprüfung. Z. B. wenn *Basis* ist 0 und das erste überprüfte Zeichen "0", eine ganze Oktalzahl angenommen und ein "8" oder "9"-Zeichen beendet die Überprüfung.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**strtol**|\<stdlib.h>|
 |**wcstol**|\<stdlib.h> oder \<wchar.h>|

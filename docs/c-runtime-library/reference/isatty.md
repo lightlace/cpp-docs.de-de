@@ -1,10 +1,6 @@
 ---
-title: _isatty | Microsoft-Dokumentation
-ms.custom: ''
+title: _isatty
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isatty
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _isatty
-dev_langs:
-- C++
 helpviewer_keywords:
 - isatty function
 - character device checking
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d4be35fce0a790751683a4bf8a0cceaf938fea82
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ef0df5f859779c081df47ef4bfe938ec2601d524
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402458"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50545586"
 ---
 # <a name="isatty"></a>_isatty
 
@@ -62,13 +52,13 @@ Dateideskriptor, der auf das zu testende Gerät verweist.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_isatty** -Funktion bestimmt, ob *fd* einem Zeichengerät (Terminal, Konsole, Drucker oder serieller Anschluss) zugeordnet ist.
+Die **_isatty** Funktion bestimmt, ob *fd* einem Zeichengerät (ein Terminal, Konsole, Drucker oder seriellen Anschluss) zugeordnet ist.
 
-Diese Funktion überprüft der *fd* Parameter. Wenn *fd* ein ungültigen Dateizeiger, wird der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktion 0 zurück und stellt **Errno** auf **EBADF**.
+Diese Funktion überprüft den *fd* Parameter. Wenn *fd* ein ungültiger Dateizeiger ist, wird der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktion gibt 0 zurück und legt **Errno** zu **EBADF**.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_isatty**|\<io.h>|
 

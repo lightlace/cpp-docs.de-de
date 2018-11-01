@@ -1,10 +1,6 @@
 ---
-title: sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l | Microsoft-Dokumentation
-ms.custom: ''
+title: sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __swprintf_l
 - sprintf
@@ -33,8 +29,6 @@ f1_keywords:
 - sprintf
 - _stprintf
 - stprintf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _swprintf_l function
 - _stprintf function
@@ -51,20 +45,16 @@ helpviewer_keywords:
 - sprintf_l function
 - formatted text [C++]
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 02538d8c74de4f48cb4a3d6285e10c3c4e03c322
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d24ea0c83d934afe81368a9fe734c2a39d08c3d0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415935"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451496"
 ---
 # <a name="sprintf-sprintfl-swprintf-swprintfl-swprintfl"></a>sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 
-Schreiben Sie formatierte Daten in eine Zeichenfolge. Sicherere Versionen einiger dieser Funktionen sind verfügbar; siehe [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md). Dies sicheren Versionen **Swprintf** und **_swprintf_l** akzeptieren einen *Anzahl* Parameter.
+Schreiben Sie formatierte Daten in eine Zeichenfolge. Sicherere Versionen einiger dieser Funktionen sind verfügbar; siehe [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md). Die sicheren Versionen **Swprintf** und **_swprintf_l** akzeptieren keine *Anzahl* Parameter.
 
 ## <a name="syntax"></a>Syntax
 
@@ -136,20 +126,20 @@ Weitere Informationen finden Sie unter [Formatangaben](../../c-runtime-library/f
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Anzahl geschriebener Zeichen oder -1, wenn ein Fehler aufgetreten. Wenn *Puffer* oder *Format* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen – 1 zurück und legen Sie **Errno** auf **EINVAL**.
+Die Anzahl der geschriebenen Zeichen oder -1, wenn ein Fehler aufgetreten. Wenn *Puffer* oder *Format* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**.
 
-**Sprintf** gibt die Anzahl der Bytes, die in gespeicherten *Puffer*, das abschließende Null-Zeichen wird dabei nicht mitgezählt. **Swprintf** gibt die Anzahl der Breitzeichen, die in gespeicherten *Puffer*, das abschließende null-Breitzeichen wird dabei nicht mitgezählt.
+**Sprintf** gibt die Anzahl der Bytes in einem *Puffer*, das abschließende Null-Zeichen wird dabei nicht mitgezählt. **Swprintf** gibt die Anzahl der gespeicherten Breitzeichen *Puffer*, das beendende null-Breitzeichen wird dabei nicht mitgezählt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Sprintf** -Funktion formatiert und speichert eine Folge von Zeichen und Werte in *Puffer*. Jede *Argument* (sofern vorhanden) konvertiert und ausgegeben wird, entsprechend der jeweiligen Formatangabe in *Format*. Das Format besteht aus normalen Zeichen und hat die gleiche form und Funktion wie die *Format* Argument für [Printf](printf-printf-l-wprintf-wprintf-l.md). Ein NULL-Zeichen wird nach dem letzten geschriebenen Zeichen angefügt. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
+Die **Sprintf** -Funktion formatiert und speichert eine Reihe von Zeichen und Werten in *Puffer*. Jede *Argument* (sofern vorhanden) konvertiert und ausgegeben wird, entsprechend der jeweiligen Formatangabe in *Format*. Das Format besteht aus normalen Zeichen und hat die gleiche form und Funktion wie der *Format* Argument für [Printf](printf-printf-l-wprintf-wprintf-l.md). Ein NULL-Zeichen wird nach dem letzten geschriebenen Zeichen angefügt. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
 
 > [!IMPORTANT]
-> Mit **Sprintf**, besteht keine Möglichkeit, die Anzahl der geschriebenen Zeichen, d. h. beschränkt, das im verwendenden code **Sprintf** Pufferüberläufe anfällig ist. Erwägen Sie die related-Funktion [_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md), gibt eine maximale Anzahl von Zeichen an *Puffer*, oder verwenden Sie [_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md) um zu bestimmen, wie groß ein Puffer ist erforderlich. Darüber hinaus sicher, dass *Format* ist keine benutzerdefinierte Zeichenfolge.
+> Mithilfe von **Sprintf**, es gibt keine Möglichkeit, um die Anzahl von Zeichen geschrieben, d. h. zu beschränken, die mithilfe von code **Sprintf** für Pufferüberläufe anfällig ist. Die related-Funktion in Betracht [_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md), der angibt, dass einer maximale Anzahl von Zeichen an *Puffer*, oder verwenden Sie [_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md) um zu bestimmen, wie groß ein Puffer ist erforderlich. Stellen Sie außerdem sicher, dass *Format* ist keine benutzerdefinierte Zeichenfolge.
 
-**Swprintf** ist eine Breitzeichen-Version von **Sprintf**; die Zeigerargumente zu **Swprintf** sind Zeichenfolgen mit Breitzeichen. Erkennung von Codierungsfehlern in **Swprintf** unterscheidet sich möglicherweise von der in **Sprintf**. **Swprintf** und **Fwprintf** Verhalten sich identisch, außer dass **Swprintf** schreibt die Ausgabe in eine Zeichenfolge anstatt an ein Ziel vom Typ **Datei**, und **Swprintf** erfordert die *Anzahl* Parameter, um die maximale Anzahl der zu schreibenden Zeichen anzugeben. Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschemaparameter, der übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas.
+**Swprintf** ist eine Breitzeichen-Version von **Sprintf**; die Zeigerargumente zu **Swprintf** sind Breitzeichen Zeichenfolgen. Erkennung von Codierungsfehlern in **Swprintf** möglicherweise nicht auf die in **Sprintf**. **Swprintf** und **Fwprintf** Verhalten sich identisch, außer dass **Swprintf** schreibt die Ausgabe in eine Zeichenfolge anstatt an ein Ziel vom Typ **Datei**, und **Swprintf** erfordert die *Anzahl* Parameter, um die maximale Anzahl zu schreibender Zeichen anzugeben. Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
 
-**Swprintf** entspricht dem ISO-C-Standard erfordert den zweiten Parameter *Anzahl*, des Typs **Size_t**. Um das alte, nicht dem Standard entsprechende Verhalten zu erzwingen, definieren **_CRT_NON_CONFORMING_SWPRINTFS**. In einer zukünftigen Version wird das alte Verhalten möglicherweise entfernt. Daher sollte Code so geändert werden, dass das neue konforme Verhalten verwendet wird.
+**Swprintf** entspricht dem ISO C-Standard, die den zweiten Parameter erfordert, *Anzahl*, des Typs **"size_t"**. Um das alte, nicht dem Standard entsprechende Verhalten zu erzwingen, definieren **_CRT_NON_CONFORMING_SWPRINTFS**. In einer zukünftigen Version wird das alte Verhalten möglicherweise entfernt. Daher sollte Code so geändert werden, dass das neue konforme Verhalten verwendet wird.
 
 In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -162,7 +152,7 @@ In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sich
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**Sprintf**, **_sprintf_l**|\<stdio.h>|
 |**Swprintf**, **_swprintf_l**|\<stdio.h> oder \<wchar.h>|

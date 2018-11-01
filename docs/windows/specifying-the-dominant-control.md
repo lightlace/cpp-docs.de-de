@@ -1,28 +1,17 @@
 ---
-title: Festlegen des bestimmenden Steuerelements | Microsoft-Dokumentation
-ms.custom: ''
+title: Festlegen des bestimmenden Steuerelements
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - dominant controls
 - Dialog Editor [C++], dominant control
 - controls [C++], dominant
 ms.assetid: 42b523a7-192a-417b-9512-d4af795e002f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a4721cec6ebc11cf2107afe0048da90164c0f47f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 84a426418a11d622a0f29e047d75e72beb96b339
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315560"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50559028"
 ---
 # <a name="specifying-the-dominant-control"></a>Festlegen des bestimmenden Steuerelements
 
@@ -48,6 +37,6 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Markieren mehrerer Steuerelemente](../windows/selecting-multiple-controls.md)  
-[Auswählen von Steuerelementen](../windows/selecting-controls.md)  
+[Markieren mehrerer Steuerelemente](../windows/selecting-multiple-controls.md)<br/>
+[Auswählen von Steuerelementen](../windows/selecting-controls.md)<br/>
 [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)

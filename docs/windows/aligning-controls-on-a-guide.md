@@ -1,12 +1,6 @@
 ---
-title: Ausrichten von Steuerelementen an einer Führungslinie | Microsoft-Dokumentation
-ms.custom: ''
+title: Ausrichten von Steuerelementen an einer Führungslinie
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - DLUs (dialog units)
 - controls [C++], aligning
@@ -20,17 +14,12 @@ helpviewer_keywords:
 - tick mark interval in Dialog editor
 - controls [C++], snap to guides/grid
 ms.assetid: 17db84ba-5288-4478-be57-afa748aa6447
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 2790d9fc3bd4e0af6c86bdbd71be236d8980ab4a
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 182cae288f4882611ec3d535357b93bf6d6ea9c7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314988"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491090"
 ---
 # <a name="aligning-controls-on-a-guide"></a>Ausrichten von Steuerelementen an einer Führungslinie
 
@@ -62,5 +51,5 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Modi des Dialog-Editors (Führungslinien und Raster)](../windows/dialog-editor-states-guides-and-grids.md)  
+[Modi des Dialog-Editors (Führungslinien und Raster)](../windows/dialog-editor-states-guides-and-grids.md)<br/>
 [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)

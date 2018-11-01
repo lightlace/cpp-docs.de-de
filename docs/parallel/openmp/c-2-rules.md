@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb83b35a03608e272e9af67159b61e5dbf4e1ec6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c5845a9125bb32254fc0c03b03e9b6076a086d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755020"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404773"
 ---
 # <a name="c2-rules"></a>C.2 Regeln
+
 Die Notation wird in Abschnitt 6.1 des C-standard beschrieben. In diesem Anhang Grammatik zeigt die Erweiterungen die Basissprache-Grammatik für die OpenMP-C- und C++-Anweisungen.
 
 **/\* in C++ (ISO/IEC 14882:1998) \*/**
@@ -100,7 +101,7 @@ Die Notation wird in Abschnitt 6.1 des C-standard beschrieben. In diesem Anhang 
 &nbsp;&nbsp;&nbsp;&nbsp;**Zeitplan (** *Plantyp* **,** *Ausdruck* **)**
 
 *Plantyp*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Statische**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**static**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Dynamische**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**geführtes**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Common Language Runtime**
@@ -194,17 +195,17 @@ Die Notation wird in Abschnitt 6.1 des C-standard beschrieben. In diesem Anhang 
 
 **/\* Standard-Deklarationen \*/**
 
-*Deklaration*:<br/>
+*declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Threadprivate-Direktive*
 
 *Threadprivate-Direktive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**# Pragma Omp Threadprivate (** *Variablenliste***)** *neue-Zeile* 
+&nbsp;&nbsp;&nbsp;&nbsp;**# Pragma Omp Threadprivate (** *Variablenliste*  **)** *neue-Zeile* 
 
 *Data-Klausel*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Private (** *Variablenliste* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Copyprivate (***Variablenliste***)** <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Firstprivate (***Variablenliste***)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Lastprivate (** *Variablenliste***)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Lastprivate (** *Variablenliste*  **)** <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Freigegebene (** *Variablenliste* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Standard (freigegeben)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Standard (keine)**<br/>
@@ -217,7 +218,7 @@ Die Notation wird in Abschnitt 6.1 des C-standard beschrieben. In diesem Anhang 
 **/\* in C \*/**
 
 *Variablenliste*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Bezeichner*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Variablenliste* **,** *Bezeichner*
 
 **/\* in C++ \*/**

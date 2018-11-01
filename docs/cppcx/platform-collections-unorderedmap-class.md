@@ -1,22 +1,16 @@
 ---
-title: Platform::Collections::UnorderedMap-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: Platform::Collections::UnorderedMap-Klasse
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2050be008f89ff2d125842d5919407dc292eed40
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: d3e6069f4bf7b0c23d5db5844821524ee80589da
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105834"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648330"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap-Klasse
 
@@ -58,7 +52,7 @@ Zulässige Typen sind:
 
 - Öffentliche Enumerationsklasse
 
-**UnorderedMap** ist im Grunde genommen ein Wrapper für [Std:: unordered_map](../standard-library/unordered-map-class.md) Storage von Windows-Runtime-Typen unterstützt. Es ist die eine konkrete Implementierung der [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) und [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) Windows-Runtime-Schnittstellen mit Typen, die über öffentliche übergeben werden. Wenn Sie versuchen, einen `Platform::Collections::UnorderedMap`-Typ in einem öffentlichen Rückgabewert oder Parameter zu verwenden, wird der Compilerfehler C3986 ausgelöst. Sie können den Fehler beheben, ändern Sie den Typ des Parameters oder des Rückgabewerts Werts, der [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
+**UnorderedMap** ist im Grunde genommen ein Wrapper für [Std:: unordered_map](../standard-library/unordered-map-class.md) Storage von Windows-Runtime-Typen unterstützt. Es ist die eine konkrete Implementierung der [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) und [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) Windows-Runtime-Schnittstellen mit Typen, die über öffentliche übergeben werden. Wenn Sie versuchen, einen `Platform::Collections::UnorderedMap` -Typ in einem öffentlichen Rückgabewert oder Parameter zu verwenden, wird der Compilerfehler C3986 ausgelöst. Sie können den Fehler beheben, indem Sie den Typ des Parameters oder des Rückgabewerts auf [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)ändern.
 
 Weitere Informationen finden Sie unter [Sammlungen](../cppcx/collections-c-cx.md).
 
@@ -163,7 +157,7 @@ Der zum Suchen des UnorderedMap-Elements verwendete Schlüssel. Der Typ des *Sch
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn der Schlüssel gefunden wurde, andernfalls `false`.
+**"true"** ist der Schlüssel gefunden wird; andernfalls **"false"**.
 
 ## <a name="insert"></a>  UnorderedMap::Insert Method
 
@@ -188,7 +182,7 @@ Der Wertteil des Schlüssel-Wert-Paars. Der Typ des *Wert* ist der Typname *V*.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn der Schlüssel eines vorhandenen Elements in der aktuellen Zuordnung entspricht *Schlüssel* und der Wertteil dieses Elements auf *Wert*. `false` Wenn kein vorhandenes Element in der aktuellen Zuordnung entspricht *Schlüssel* und *Schlüssel* und *Wert* Parameter zu einem Schlüssel-Wert-Paar gemacht und anschließend die aktuelle UnorderedMap hinzugefügt werden.
+**"true"** Wenn der Schlüssel eines vorhandenen Elements in der aktuellen Zuordnung entspricht *Schlüssel* und der Wertteil dieses Elements auf *Wert*. **"false"** kein vorhandenes Element in der aktuellen Zuordnung übereinstimmt *Schlüssel* und *Schlüssel* und *Wert* Parametern zu einem Schlüssel-Wert-Paar gemacht und dann hinzugefügt werden die aktuellen unorderedmap zurück.
 
 ## <a name="lookup"></a>  Unorderedmap:: Lookup-Methode
 

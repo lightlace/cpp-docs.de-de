@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc115fbc77ac68c774b85bb86fd0cf9eac1fa51b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 585fd757c18c3a7c09645b64656e6ef77cde6dca
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716637"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861382"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Übersicht über die ARM64-ABI-Konventionen
 
@@ -131,9 +131,9 @@ Diese Phase wird genau einmal ausgeführt werden, bevor beginnt die Verarbeitung
 
 1. Die nächste allgemeinen registrieren Anzahl (NGRN) wird auf 0 (null) festgelegt.
 
-2. Die nächste SIMD und die Floating-Point registrieren Anzahl (NSRN) ist auf 0 (null) festgelegt.
+1. Die nächste SIMD und die Floating-Point registrieren Anzahl (NSRN) ist auf 0 (null) festgelegt.
 
-3. Die Argumentadresse des nächste gestapelte (NSAA) wird mit dem aktuellen Stack-Pointer Wert (SP) festgelegt.
+1. Die Argumentadresse des nächste gestapelte (NSAA) wird mit dem aktuellen Stack-Pointer Wert (SP) festgelegt.
 
 ### <a name="stage-b--pre-padding-and-extension-of-arguments"></a>Stufe B – vorab-Padding und Erweiterung von Argumenten
 
@@ -141,11 +141,11 @@ Für jedes Argument in der Liste wird die erste übereinstimmende Regel aus der 
 
 1. Wenn der Argumenttyp ein zusammengesetzter Typ ist, dessen Größe nicht statisch vom Aufrufer und dem aufgerufenen bestimmt werden kann, ist das Argument in den Arbeitsspeicher kopiert, und das Argument durch einen Zeiger auf die Kopie ersetzt wird. (Es sind keine solche Typen in C/C++-, aber in anderen Sprachen oder in spracherweiterungen vorhanden).
 
-2. Das Argument wird verwendet, wenn der Argumenttyp ist ein zu HFA oder einer HVA-unverändert.
+1. Das Argument wird verwendet, wenn der Argumenttyp ist ein zu HFA oder einer HVA-unverändert.
 
-3. Wenn der Argumenttyp ein zusammengesetzter Typ, die größer als 16 Bytes ist ist, wird das Argument auf vom Aufrufer zugeordneten Speicher kopiert, und das Argument durch einen Zeiger auf die Kopie ersetzt wird.
+1. Wenn der Argumenttyp ein zusammengesetzter Typ, die größer als 16 Bytes ist ist, wird das Argument auf vom Aufrufer zugeordneten Speicher kopiert, und das Argument durch einen Zeiger auf die Kopie ersetzt wird.
 
-4. Wenn der Argumenttyp ein zusammengesetzter Typ ist wird die Größe des Arguments auf das nächste Vielfache von 8 Bytes aufgerundet.
+1. Wenn der Argumenttyp ein zusammengesetzter Typ ist wird die Größe des Arguments auf das nächste Vielfache von 8 Bytes aufgerundet.
 
 ### <a name="stage-c--assignment-of-arguments-to-registers-and-stack"></a>Stufe C – Zuweisung von Argumenten zu Registern und zum stack
 
@@ -153,33 +153,33 @@ Für jedes Argument in der Liste werden wiederum die folgenden Regeln angewendet
 
 1. Das Argument ist ein halb-Single, Double oder Quad Gleitkommazahlen mit doppelter Genauigkeit oder kurzen Vektortyp und die NSRN, weniger als 8, und klicken Sie dann das Argument, die am niedrigstwertigen Bits von Register-V [NSRN] zugewiesen ist. Die NSRN wird um eins erhöht. Das Argument wurde nun zugeordnet.
 
-2. Wenn das Argument ein zu HFA oder einer HVA-ist, und es ausreichend verfügbaren SIMD und Gleitkommaregister (NSRN + Anzahl der Elemente im ≤ 8 gibt), wird das Argument zu SIMD Floating-Point registriert (mit einem registrieren pro Element der zu HFA oder HVA) zugeordnet. Die NSRN wird um die Anzahl der verwendeten Register inkrementiert. Das Argument wurde nun zugeordnet.
+1. Wenn das Argument ein zu HFA oder einer HVA-ist, und es ausreichend verfügbaren SIMD und Gleitkommaregister (NSRN + Anzahl der Elemente im ≤ 8 gibt), wird das Argument zu SIMD Floating-Point registriert (mit einem registrieren pro Element der zu HFA oder HVA) zugeordnet. Die NSRN wird um die Anzahl der verwendeten Register inkrementiert. Das Argument wurde nun zugeordnet.
 
-3. Wenn das Argument ein zu HFA oder einer HVA-ist die NSRN auf 8 festgelegt ist, und die Größe des Arguments wird auf das nächste Vielfache von 8 Bytes aufgerundet.
+1. Wenn das Argument ein zu HFA oder einer HVA-ist die NSRN auf 8 festgelegt ist, und die Größe des Arguments wird auf das nächste Vielfache von 8 Bytes aufgerundet.
 
-4. Wenn das Argument ein zu HFA, ein HVA, ist ein Vektor Quad mit einfacher Genauigkeit, Gleitkomma oder kurz einen Typ die NSAA gerundet wird bis zu den größeren von 8 oder die natürliche Ausrichtung, der den Typ des Arguments.
+1. Wenn das Argument ein zu HFA, ein HVA, ist ein Vektor Quad mit einfacher Genauigkeit, Gleitkomma oder kurz einen Typ die NSAA gerundet wird bis zu den größeren von 8 oder die natürliche Ausrichtung, der den Typ des Arguments.
 
-5. Wenn das Argument ein Gleitkomma-halb - oder mit einfacher Genauigkeit ist, wird die Größe des Arguments auf 8 Bytes festgelegt. Der Effekt wird als hätte das Argument in der unwichtigsten Bits von einem 64-Bit-Register und die verbleibenden Bits, die mit nicht angegebenen Werten gefüllt kopiert.
+1. Wenn das Argument ein Gleitkomma-halb - oder mit einfacher Genauigkeit ist, wird die Größe des Arguments auf 8 Bytes festgelegt. Der Effekt wird als hätte das Argument in der unwichtigsten Bits von einem 64-Bit-Register und die verbleibenden Bits, die mit nicht angegebenen Werten gefüllt kopiert.
 
-6. Wenn das Argument ein zu HFA ist, wird einer HVA-, halb-, Einzel-, Double-Wert - oder Quad Gleitkommazahlen mit doppelter Genauigkeit oder kurzen Vektortyp, und das Argument an der angepassten NSAA in den Speicher kopiert. Die NSAA wird um die Größe des Arguments inkrementiert. Das Argument wurde nun zugeordnet.
+1. Wenn das Argument ein zu HFA ist, wird einer HVA-, halb-, Einzel-, Double-Wert - oder Quad Gleitkommazahlen mit doppelter Genauigkeit oder kurzen Vektortyp, und das Argument an der angepassten NSAA in den Speicher kopiert. Die NSAA wird um die Größe des Arguments inkrementiert. Das Argument wurde nun zugeordnet.
 
-7. Wenn das Argument einen Ganzzahl- oder Zeigertyp ist, ist die Größe des Arguments kleiner als oder gleich 8 Bytes und die NGRN kleiner als 8 ist das Argument in der unwichtigsten Bits x [NGRN] kopiert wird. Die NGRN wird um eins erhöht. Das Argument wurde nun zugeordnet.
+1. Wenn das Argument einen Ganzzahl- oder Zeigertyp ist, ist die Größe des Arguments kleiner als oder gleich 8 Bytes und die NGRN kleiner als 8 ist das Argument in der unwichtigsten Bits x [NGRN] kopiert wird. Die NGRN wird um eins erhöht. Das Argument wurde nun zugeordnet.
 
-8. Wenn das Argument eine Ausrichtung an 16 verfügt wird das NGRN klicken Sie dann auf die nächste gerade Zahl aufgerundet.
+1. Wenn das Argument eine Ausrichtung an 16 verfügt wird das NGRN klicken Sie dann auf die nächste gerade Zahl aufgerundet.
 
-9. Wenn das Argument ein Integraltyp ist, der Größe des Arguments gleich 16 ist und dem NGRN weniger als 7 ist, ist das Argument x kopiert [NGRN]- und x [NGRN + 1]. X [NGRN] muss das untere bereits als Double-Wert-Wort für die Arbeitsspeicher-Darstellung des Arguments enthält. Die NGRN wird durch zwei erhöht. Das Argument wurde nun zugeordnet.
+1. Wenn das Argument ein Integraltyp ist, der Größe des Arguments gleich 16 ist und dem NGRN weniger als 7 ist, ist das Argument x kopiert [NGRN]- und x [NGRN + 1]. X [NGRN] muss das untere bereits als Double-Wert-Wort für die Arbeitsspeicher-Darstellung des Arguments enthält. Die NGRN wird durch zwei erhöht. Das Argument wurde nun zugeordnet.
 
-10. Wenn das Argument ein zusammengesetzter Typ ist und die Größe in Doppelworte des Arguments nicht mehr als 8 minus NGRN, wird das Argument wird in aufeinander folgenden Allzweckregistern, kopiert x [NGRN] ab. Das Argument übergeben wird, als wären sie in die Register von einer Double Word-ausgerichtete Adresse mit der entsprechenden Reihenfolge von LDR-Anweisungen Laden von aufeinander folgenden Register aus dem Arbeitsspeicher geladen wurden (der Inhalt der alle nicht genutzten Bereichen der Register sind nicht angegeben von diesem Standard). Die NGRN wird um die Anzahl der verwendeten Register inkrementiert. Das Argument wurde nun zugeordnet.
+1. Wenn das Argument ein zusammengesetzter Typ ist und die Größe in Doppelworte des Arguments nicht mehr als 8 minus NGRN, wird das Argument wird in aufeinander folgenden Allzweckregistern, kopiert x [NGRN] ab. Das Argument übergeben wird, als wären sie in die Register von einer Double Word-ausgerichtete Adresse mit der entsprechenden Reihenfolge von LDR-Anweisungen Laden von aufeinander folgenden Register aus dem Arbeitsspeicher geladen wurden (der Inhalt der alle nicht genutzten Bereichen der Register sind nicht angegeben von diesem Standard). Die NGRN wird um die Anzahl der verwendeten Register inkrementiert. Das Argument wurde nun zugeordnet.
 
-11. Die NGRN ist auf 8 festgelegt.
+1. Die NGRN ist auf 8 festgelegt.
 
-12. Die NSAA wird aufgerundet auf die größere von 8 oder die natürliche Ausrichtung, der den Typ des Arguments...
+1. Die NSAA wird aufgerundet auf die größere von 8 oder die natürliche Ausrichtung, der den Typ des Arguments...
 
-13. Wenn das Argument ein zusammengesetzter Typ ist, wird das Argument in den Speicher an der angepassten NSAA kopiert. Die NSAA wird um die Größe des Arguments inkrementiert. Das Argument wurde nun zugeordnet.
+1. Wenn das Argument ein zusammengesetzter Typ ist, wird das Argument in den Speicher an der angepassten NSAA kopiert. Die NSAA wird um die Größe des Arguments inkrementiert. Das Argument wurde nun zugeordnet.
 
-14. Die Größe des Arguments ist kleiner als 8 Bytes wird die Größe des Arguments auf 8 Bytes festgelegt. Der Effekt ist, als ob das Argument in der unwichtigsten Bits von einem 64-Bit-Register und die verbleibenden Bits, die mit nicht angegebenen Werten gefüllt kopiert wurde.
+1. Die Größe des Arguments ist kleiner als 8 Bytes wird die Größe des Arguments auf 8 Bytes festgelegt. Der Effekt ist, als ob das Argument in der unwichtigsten Bits von einem 64-Bit-Register und die verbleibenden Bits, die mit nicht angegebenen Werten gefüllt kopiert wurde.
 
-15. Das Argument wird an der angepassten NSAA in den Speicher kopiert. Die NSAA wird um die Größe des Arguments inkrementiert. Das Argument wurde nun zugeordnet.
+1. Das Argument wird an der angepassten NSAA in den Speicher kopiert. Die NSAA wird um die Größe des Arguments inkrementiert. Das Argument wurde nun zugeordnet.
 
 ### <a name="addendum-variadic-functions"></a>Nachtrag: Variadic-Funktionen
 
@@ -187,7 +187,7 @@ Funktionen, die eine Variable Anzahl von Argumenten akzeptieren werden anders al
 
 1. Alle kombinierenden Zeichen ersetzt wurden, werden ähnlich behandelt; keine besondere Behandlung HFAs oder HVAs.
 
-2. SIMD "und" Floating-Point registriert werden nicht verwendet.
+1. SIMD "und" Floating-Point registriert werden nicht verwendet.
 
 Effektiv entspricht dies folgende Regeln C.12–C.15 zuweisen Argumente in einer imaginären Stack, in denen die ersten 64 Bytes des Stapels werden in den X0-X7 geladen, und alle übrigen Argumente für den Stapel normalerweise platziert werden.
 

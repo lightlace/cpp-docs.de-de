@@ -1,28 +1,18 @@
 ---
-title: 'TN071: MFC-IOleCommandTarget-Implementierung | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'TN071: MFC-IOleCommandTarget-Implementierung'
 ms.date: 06/28/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - IOleCommandTarget
-dev_langs:
-- C++
 helpviewer_keywords:
 - TN071 [MFC]
 - IOleCommandTarget interface [MFC]
 ms.assetid: 3eef571e-6357-444d-adbb-6f734a0c3161
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1d8e029b1ffc4e17e55f2cb69405bb272b92e94e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: dca1183a17fe8f3022f517d1ad0c3932ea272417
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221393"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50522225"
 ---
 # <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071: MFC-IOleCommandTarget-Implementierung
 
@@ -59,11 +49,11 @@ Dieses Makro wird in der Klassendeklaration (in der Regel in der Headerdatei) de
 BEGIN_OLECMD_MAP(theClass, baseClass)
 ```
 
-*theClass*  
- Der Name der Klasse, die die Zuordnung der Befehl enthält.
+*theClass*<br/>
+Der Name der Klasse, die die Zuordnung der Befehl enthält.
 
-*Basisklasse*  
- Der Name der Basisklasse der Klasse, die die Zuordnung der Befehl enthält.
+*Basisklasse*<br/>
+Der Name der Basisklasse der Klasse, die die Zuordnung der Befehl enthält.
 
 Dieses Makro markiert den Anfang der Befehl-Zuordnung. Verwenden Sie dieses Makro in der Implementierungsdatei für die Klasse, die die Zuordnung der Befehl enthält.
 
@@ -77,14 +67,14 @@ Dieses Makro markiert das Ende der Zuordnung Befehl. Verwenden Sie dieses Makro 
 ON_OLECMD(pguid, olecmdid, id)
 ```
 
-*pguid*  
- Zeiger auf die GUID der Befehlsgruppe für den OLE-Befehl. Dieser Parameter ist **NULL** für die Standardgruppe der OLE-Befehl.
+*pguid*<br/>
+Zeiger auf die GUID der Befehlsgruppe für den OLE-Befehl. Dieser Parameter ist **NULL** für die Standardgruppe der OLE-Befehl.
 
-*olecmdid*  
- OLE-Befehls-ID des Befehls, der aufgerufen werden.
+*olecmdid*<br/>
+OLE-Befehls-ID des Befehls, der aufgerufen werden.
 
-*ID*  
- ID des WM_COMMAND-Meldung gesendet werden, um die Anwendung, die die Befehl-Zuordnung enthält, wenn dieser OLE-Befehl aufgerufen wird.
+*ID*<br/>
+ID des WM_COMMAND-Meldung gesendet werden, um die Anwendung, die die Befehl-Zuordnung enthält, wenn dieser OLE-Befehl aufgerufen wird.
 
 Verwenden Sie das ON_OLECMD-Makro in der Zuordnung der Befehl zum Hinzufügen von Einträgen für die OLE-Befehle, die Sie behandeln möchten. Wenn die OLE-Befehle empfangen werden, werden sie auf die angegebene WM_COMMAND-Meldung konvertiert und durch Verwenden der MFC-Befehlsrouting Architektur der Anwendung-meldungszuordnung weitergeleitet.
 
@@ -158,5 +148,5 @@ void CContainerCntrItem::DoOleCmd()
 
 ## <a name="see-also"></a>Siehe auch
 
-[Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)  
-[Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)  
+[Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)<br/>
+[Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)

@@ -1,34 +1,25 @@
 ---
-title: Angeben der sequenziellen Reihenfolge A.10 | Microsoft Docs
-ms.custom: ''
+title: A.10   Angeben der sequenziellen Reihenfolge
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 5c65a9b1-0fc5-4cad-a5a9-9ce10b25d25c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 48e512a669025403b76b76b49c5bb496b5eacd23
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4e3a146e1bca988f46cf7a7ee504644f96dab67e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690077"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50575252"
 ---
 # <a name="a10---specifying-sequential-ordering"></a>A.10   Angeben der sequenziellen Reihenfolge
-Abschnitte sortiert ([Abschnitt 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) auf der Seite "22") eignen sich für weitere Anordnung der Ausgabe von Arbeit, die parallel ausgeführt wird. Das folgende Programm druckt die Indizes in sequenzieller Reihenfolge aus:  
-  
-```  
-#pragma omp for ordered schedule(dynamic)  
-    for (i=lb; i<ub; i+=st)  
-        work(i);  
-void work(int k)  
-{  
-    #pragma omp ordered  
-        printf_s(" %d", k);  
-}  
+
+Sortiert die Abschnitte ([Abschnitt 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) auf Seite "22") eignen sich für weitere Anordnung der Ausgabe von Arbeit, die parallel durchgeführt werden. Das folgende Programm druckt die Indizes in sequenzieller Reihenfolge aus:
+
+```
+#pragma omp for ordered schedule(dynamic)
+    for (i=lb; i<ub; i+=st)
+        work(i);
+void work(int k)
+{
+    #pragma omp ordered
+        printf_s(" %d", k);
+}
 ```

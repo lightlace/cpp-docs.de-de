@@ -1,7 +1,7 @@
 ---
 title: Raw_property_prefixes | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,41 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 423a66b698f4e421ff29e6ac3dfddd11fa11c58f
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 1170440428a5c92e383152826827989d602e69fb
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541585"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808738"
 ---
 # <a name="rawpropertyprefixes"></a>raw_property_prefixes
-**C++-spezifisch**  
-  
-Gibt alternative Präfixe für drei Eigenschaftenmethoden an.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-raw_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")  
-```  
-  
-### <a name="parameters"></a>Parameter  
-*GetPrefix*  
-Präfix für zu verwendende der `propget` Methoden.  
-  
-*PutPrefix*  
-Präfix für zu verwendende der `propput` Methoden.  
-  
-*PutRefPrefix*  
-Präfix für zu verwendende der `propputref` Methoden.  
-  
-## <a name="remarks"></a>Hinweise  
- 
-In der Standardeinstellung auf niedriger Ebene `propget`, `propput`, und `propputref` Methoden von Namen mit Präfixen von Memberfunktionen verfügbar gemacht werden **Get_**, **Put_**, und **Putref_** bzw. Diese Präfixe sind kompatibel mit den Namen, die in den Headerdateien verwendet werden, die von MIDL generiert werden.  
-  
-**Ende C++-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- 
-[#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)   
+
+**C++-spezifisch**
+
+Gibt alternative Präfixe für drei Eigenschaftenmethoden an.
+
+## <a name="syntax"></a>Syntax
+
+```
+raw_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")
+```
+
+### <a name="parameters"></a>Parameter
+
+*GetPrefix*<br/>
+Präfix für zu verwendende der `propget` Methoden.
+
+*PutPrefix*<br/>
+Präfix für zu verwendende der `propput` Methoden.
+
+*PutRefPrefix*<br/>
+Präfix für zu verwendende der `propputref` Methoden.
+
+## <a name="remarks"></a>Hinweise
+
+In der Standardeinstellung auf niedriger Ebene `propget`, `propput`, und `propputref` Methoden von Namen mit Präfixen von Memberfunktionen verfügbar gemacht werden **Get_**, **Put_**, und **Putref_** bzw. Diese Präfixe sind kompatibel mit den Namen, die in den Headerdateien verwendet werden, die von MIDL generiert werden.
+
+**Ende C++-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)

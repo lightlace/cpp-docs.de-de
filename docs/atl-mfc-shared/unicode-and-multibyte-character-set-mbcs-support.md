@@ -1,12 +1,6 @@
 ---
-title: Legen Sie Unicode- und Multibyte-Zeichensätze (MBCS)-Unterstützung | Microsoft-Dokumentation
-ms.custom: ''
+title: Unterstützung für Unicode- und Multibyte-Zeichensätze (MBCS)
 ms.date: 1/09/2017
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC [C++], character set support
 - MBCS [C++], strings and MFC support
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - Unicode [C++], string objects
 - strings [C++], Unicode
 - strings [C++], character set support
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 74f1f0f88828b5d6355c692aa8eaeecd5869bf57
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8a7f79f9a75c2be4ee855d89b47b6b8e59a67d15
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202933"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596650"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Unterstützung für Unicode- und Multibyte-Zeichensätze (MBCS)
 
@@ -105,5 +95,5 @@ Auf ähnliche Weise `CString` Methoden mit generischen datentypzuordnungen imple
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zeichenfolgen (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
-[Zeichenfolgenbearbeitung](../c-runtime-library/string-manipulation-crt.md)  
+[Zeichenfolgen (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
+[Zeichenfolgenbearbeitung](../c-runtime-library/string-manipulation-crt.md)

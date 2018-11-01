@@ -1,32 +1,29 @@
 ---
-title: SafeIntException-Klasse | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: SafeIntException-Klasse
+ms.date: 10/22/2018
 ms.topic: reference
 f1_keywords:
 - SafeIntException Class
-dev_langs:
-- C++
+- SafeIntException
+- SafeIntException.SafeIntException
+- SafeIntException::SafeIntException
 helpviewer_keywords:
 - SafeIntException class
+- SafeIntException, constructor
 ms.assetid: 88bef958-1f48-4d55-ad4f-d1f9581a293a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: e5996d4e86275dd154e4c6931a55416885929abf
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 80a1573c2f43b1f4b31731083974f87ba389fac2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603660"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566659"
 ---
 # <a name="safeintexception-class"></a>SafeIntException-Klasse
 
-Die `SafeInt` -Klasse **SafeIntException** , warum ein mathematischer Vorgang nicht abgeschlossen werden kann.
+Die `SafeInt` -Klasse `SafeIntException` , warum ein mathematischer Vorgang nicht abgeschlossen werden kann.
+
+> [!NOTE]
+> Die neueste Version dieser Bibliothek befindet sich unter [ https://github.com/dcleblanc/SafeInt ](https://github.com/dcleblanc/SafeInt).
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,16 +35,17 @@ class SafeIntException;
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-[SafeIntException::SafeIntException](../windows/safeintexception-safeintexception.md)  
-Erstellt eine **SafeIntException** Objekt.
+Name                                                    | Beschreibung
+------------------------------------------------------- | ------------------------------------
+[SafeIntException::SafeIntException](#safeintexception) | Erstellt ein `SafeIntException`-Objekt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die [SafeInt-Klasse](../windows/safeint-class.md) ist die einzige Klasse, die verwendet die **SafeIntException** Klasse.
+Die [SafeInt-Klasse](../windows/safeint-class.md) ist die einzige Klasse, die verwendet die `SafeIntException` Klasse.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
-[SafeIntException-Klasse](../windows/safeintexception-class.md)
+`SafeIntException`
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,7 +53,27 @@ Die [SafeInt-Klasse](../windows/safeint-class.md) ist die einzige Klasse, die ve
 
 **Namespace:** MSL:: Utilities
 
-## <a name="see-also"></a>Siehe auch
+## <a name="safeintexception"></a>SafeIntException:: SafeIntException
 
-[SafeInt-Bibliothek](../windows/safeint-library.md)  
-[SafeInt-Klasse](../windows/safeint-class.md)
+Erstellt ein `SafeIntException`-Objekt.
+
+```cpp
+SafeIntException();
+
+SafeIntException(
+   SafeIntError code
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*Code*<br/>
+[in] Ein Aufzählungsdaten-Wert, der den Fehler beschreibt, der aufgetreten sind.
+
+### <a name="remarks"></a>Hinweise
+
+Die möglichen Werte für *Code* werden in der Datei Safeint.h definiert. Der Einfachheit halber sind die möglichen Werte auch hier aufgeführt.
+
+- `SafeIntNoError`
+- `SafeIntArithmeticOverflow`
+- `SafeIntDivideByZero`

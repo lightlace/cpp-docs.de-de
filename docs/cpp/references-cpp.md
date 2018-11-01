@@ -1,12 +1,6 @@
 ---
-title: Verweise (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Verweise (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - objects [C++], referencing
 - references [C++]
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - references, declaring
 - referencing objects, declarator syntax
 ms.assetid: 68156f7f-97a0-4b66-b26d-b25ade5e3bd8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a9bd01cf5c153fcd31bae1a73fead87fe480cdd2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: aafc582299402eabab2736ac7d07b6c4c397413c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030421"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616451"
 ---
 # <a name="references-c"></a>Verweise (C++)
 
@@ -32,41 +22,35 @@ Ein Verweis, z. B. ein Zeiger ist, speichert die Adresse eines Objekts, das sich
 
 Verweise können mit der folgenden Syntax deklariert werden:
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers 
-[ms-modifier] declarator [= expression];
-```
+> \[*Speicherklassenspezifizierer*] \[ *cv-Qualifizierer*] *-Typspezifizierer* \[ *ms-Modifizierer*]  *Deklarator* \[ **=** *Ausdruck*]**;**
 
 Jeder gültige Deklarator, der einen Verweis angibt, kann verwendet werden. Sofern der Verweis kein Verweis auf den Funktions- oder Arraytyp ist, gilt die folgende vereinfachte Syntax:
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers [& or &&] 
-[cv-qualifiers] identifier [= expression];
-```
+> \[*Speicherklassenspezifizierer*] \[ *cv-Qualifizierer*] *-Typspezifizierer* \[ **&** oder **&&**] \[ *cv-Qualifizierer*] *Bezeichner* \[ **=** *Ausdruck*]**;**
 
 Verweise werden unter Verwendung dieser Reihenfolge deklariert:
 
 1. Die Deklarationsspezifizierer:
 
-- Ein optionaler Speicherklassenbezeichner.
+   - Ein optionaler Speicherklassenbezeichner.
 
-- Optionale **const** und/oder **flüchtige** Qualifizierer.
+   - Optionale **const** und/oder **flüchtige** Qualifizierer.
 
-- Der Typspezifizierer: der Name eines Typs
+   - Der Typspezifizierer: der Name eines Typs
 
-- 2. Der Deklarator:
+1. Der Deklarator:
 
-- Ein optionaler Microsoft-spezifischer Modifizierer. Weitere Informationen finden Sie unter [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md).
+   - Ein optionaler Microsoft-spezifischer Modifizierer. Weitere Informationen finden Sie unter [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md).
 
-- Der &-Operator oder & &-Operator.
+   - Die **&** Operator oder **&&** Operator.
 
-- Optionale **const** und/oder **flüchtige** Qualifizierer.
+   - Optionale **const** und/oder **flüchtige** Qualifizierer.
 
-- Der Bezeichner.
+   - Der Bezeichner.
 
-3. Ein optionaler Initialisierer.
+1. Ein optionaler Initialisierer.
 
-Die komplexeren deklaratorformen für Zeiger auf Arrays und Funktionen auch für Verweise auf Arrays und Funktionen gelten finden Sie unter [Zeiger](../cpp/pointers-cpp.md).
+Die komplexeren deklaratorformen für Zeiger auf Arrays und Funktionen gelten auch für Verweise auf Arrays und Funktionen verwendet werden. Weitere Informationen finden Sie unter [Zeiger](../cpp/pointers-cpp.md).
 
 Mehrere Deklaratoren und Initialisierer erscheinen möglicherweise in einer durch Trennzeichen getrennten Liste, die einem einzelnen Deklarationsspezifizierer folgt. Zum Beispiel:
 
@@ -83,7 +67,7 @@ int &ref, *ptr, k;
 
 Ein Verweis enthält die Adresse eines Objekts, verhält sich aber syntaktisch wie ein Objekt.
 
-Beachten Sie im folgenden Programm, dass der Name des Objekts `Today` und der Verweis auf das Objekt `TodayRef` in Programmen identisch verwendet werden kann:
+Beachten Sie im folgenden Programm, dass der Name des Objekts `s` und der Verweis auf das Objekt `SRef` in Programmen identisch verwendet werden kann:
 
 ## <a name="example"></a>Beispiel
 
@@ -120,4 +104,3 @@ int main() {
 [Verweistyp-Funktionsargumente](../cpp/reference-type-function-arguments.md)<br/>
 [Verweistyp-Funktionsrückgaben](../cpp/reference-type-function-returns.md)<br/>
 [Verweise auf Zeiger](../cpp/references-to-pointers.md)
-

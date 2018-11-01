@@ -1,10 +1,6 @@
 ---
-title: _ismbbkpunct, _ismbbkpunct_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _ismbbkpunct, _ismbbkpunct_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbkpunct_l
 - _ismbbkpunct
@@ -26,24 +22,18 @@ f1_keywords:
 - _ismbbkpunct_l
 - ismbbkpunct
 - _ismbbkpunct
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbbkpunct_l function
 - ismbbkpunct_l function
 - ismbbkpunct function
 - _ismbbkpunct function
 ms.assetid: a04c59cd-5ca7-4296-bec0-2b0d7f04edd0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e020957b418a2c6a61cda9a5c8c197fb149146d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 24a82bdf0dde2beb0978226208c151689e06ed72
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400150"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491103"
 ---
 # <a name="ismbbkpunct-ismbbkpunctl"></a>_ismbbkpunct, _ismbbkpunct_l
 
@@ -71,11 +61,11 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_ismbbkpunct** gibt einen Wert ungleich NULL zurück, wenn die ganze Zahl *c* ein nicht-ASCII-interpunktionssymbol ist, oder 0 ist, ist er nicht. Beispielsweise nur in Codepage 932 **_ismbbkpunct** Tests Katakana-Interpunktion. **_ismbbkpunct** verwendet das aktuelle Gebietsschema alle gebietsschemaabhängige zeicheneinstellungen. **_ismbbkpunct_l** ist nahezu identisch, verwendet jedoch den Gebietsschemaparameter, der übergeben wird. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+**_ismbbkpunct** gibt einen Wert ungleich NULL zurück, wenn die ganze Zahl *c* ist ein nicht-ASCII-interpunktionssymbol ist, oder 0, wenn er nicht ist. Beispielsweise testet **_ismbbkpunct** nur in Codepage 932 auf Katakana-Interpunktion. **_ismbbkpunct** verwendet das aktuelle Gebietsschema alle gebietsschemaabhängige zeicheneinstellungen. **_ismbbkpunct_l** ist identisch, außer dass er das Gebietsschema verwendet, die übergeben wird. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_ismbbkpunct**|\<mbctype.h>|
 |**_ismbbkpunct_l**|\<mbctype.h>|

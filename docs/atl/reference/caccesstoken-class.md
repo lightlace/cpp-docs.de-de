@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3157db05d183ab9ada2ad53443ca5b20bcfbcba
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 881c86a75d9015117be4b51a8b7457bed4988fd3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136321"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078543"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken-Klasse
 
@@ -185,7 +185,7 @@ Rufen Sie diese Methode, um zu bestimmen, ob eine angegebene SID, in aktiviert i
 
 ```
 bool CheckTokenMembership(
-    const CSid& rSid, 
+    const CSid& rSid,
     bool* pbIsMember) const throw(...);
 ```
 
@@ -216,7 +216,7 @@ Rufen Sie diese Methode, um ein Zugriffstoken für den Identitätswechsel zu ers
 
 ```
 bool CreateImpersonationToken(
-    CAccessToken* pImp, 
+    CAccessToken* pImp,
     SECURITY_IMPERSONATION_LEVEL sil = SecurityImpersonation) const throw(...);
 ```
 
@@ -671,7 +671,7 @@ Gibt "true" bei Erfolg bei "false".
 
 ### <a name="remarks"></a>Hinweise
 
-Ruft die [OpenProcessToken](https://msdn.microsoft.com/library/aa379295\(vs.85\).aspx) Win32-Funktion.
+Ruft die [OpenProcessToken](https://msdn.microsoft.com/library/aa379295) Win32-Funktion.
 
 ##  <a name="getprofile"></a>  CAccessToken::GetProfile
 
@@ -1086,7 +1086,7 @@ Rufen Sie diese Methode, um zu bestimmen, ob eine angegebene Gruppe von Berechti
 ```
 bool PrivilegeCheck(
     PPRIVILEGE_SET RequiredPrivileges,
-     bool* pbResult) const throw();
+    bool* pbResult) const throw();
 ```
 
 ### <a name="parameters"></a>Parameter

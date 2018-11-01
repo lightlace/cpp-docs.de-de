@@ -1,7 +1,7 @@
 ---
 title: Abstand und Ausrichtung von Strukturmembern | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 959d6296c563958a0c8bdd1ecca660680941755f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a1b301372a9998197c46c1e44c91c9d3456cea8e
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46074850"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808211"
 ---
 # <a name="padding-and-alignment-of-structure-members"></a>Abstand und Ausrichtung von Strukturmembern
 
@@ -29,7 +29,7 @@ Strukturmember werden nacheinander in der Reihenfolge gespeichert, in der sie de
 
 Jedes Datenobjekt verfügt über ein alignment-requirement. Das alignment-requirement für alle Daten (außer Strukturen, Unions und Arrays) ist entweder die Größe des Objekts oder die aktuelle Komprimierungsgröße (diese wird entweder mit "/Zp" oder dem `pack`-Pragma angegeben, je nachdem, was kleiner ist). Bei Strukturen, Unions und Arrays ist das alignment-requirement die größte Ausrichtungsanforderung ihrer Member. Jedem Objekt wird ein offset zugeordnet, sodass Folgendes gilt:
 
-*offset*  `%` *alignment-requirement* `==` 0
+*offset* **%** *alignment-requirement* **== 0**
 
 Benachbarte Bitfelder sind in derselben 1-, 2- oder 4-Byte-Speicherbelegungseinheit gepackt, wenn die Ganzzahltypen die gleiche Größe aufweisen und das folgende Bitfeld in die aktuelle Speicherbelegungseinheit passt, ohne die Grenze zu überschreiten, die durch die allgemeinen Ausrichtungsanforderungen der Bitfelder auferlegt werden.
 

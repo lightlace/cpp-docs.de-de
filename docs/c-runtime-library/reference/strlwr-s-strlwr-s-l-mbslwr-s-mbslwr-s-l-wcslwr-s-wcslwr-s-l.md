@@ -1,10 +1,6 @@
 ---
-title: _strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strlwr_s_l
 - _mbslwr_s_l
@@ -41,8 +37,6 @@ f1_keywords:
 - _mbslwr_s_l
 - wcslwr_s
 - _mbslwr_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tcslwr_s function
 - wcslwr_s function
@@ -66,23 +60,19 @@ helpviewer_keywords:
 - tcslwr_s_l function
 - strings [C++], converting case
 ms.assetid: 4883d31b-bdac-4049-83a1-91dfdeceee79
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 61f3db37a61a30909e8deadee96c3bfbe2c46bb5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b7eb9d81b1269018cd41c80c1f9c15aa92a4f85a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415338"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497258"
 ---
 # <a name="strlwrs-strlwrsl-mbslwrs-mbslwrsl-wcslwrs-wcslwrsl"></a>_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
 
 Konvertiert eine Zeichenfolge unter Verwendung des aktuellen Gebietsschemas oder des übergebenen Gebietsschemaobjekts in Kleinbuchstaben. Diese Versionen von [_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md) enthalten Sicherheitsverbesserungen, wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
 > [!IMPORTANT]
-> **_mbslwr_s** und **_mbslwr_s_l** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbslwr_s** und **_mbslwr_s_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -158,13 +148,13 @@ Das zu verwendende Gebietsschema.
 
 Bei Erfolg Null, ein Fehlercode ungleich 0 (null), wenn ein Fehler auftritt.
 
-Diese Funktionen überprüfen ihre Parameter. Wenn *str* ist keine gültige Null-terminierte Zeichenfolge, die Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, der Funktionen zurück **EINVAL** und **Errno** auf **EINVAL**. Wenn *NumberOfElements* ist kleiner als die Länge der Zeichenfolge, die Funktionen geben auch **EINVAL** und **Errno** auf **EINVAL**.
+Diese Funktionen überprüfen ihre Parameter. Wenn *str* ist keine gültige Null-terminierte Zeichenfolge, die Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktionen geben **EINVAL** und **Errno** zu **EINVAL**. Wenn *NumberOfElements* ist kleiner als die Länge der Zeichenfolge, die Funktionen geben auch **EINVAL** und **Errno** zu **EINVAL**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_strlwr_s** -Funktion konvertiert an der jeweiligen Stelle jeden Großbuchstaben in *str* in Kleinbuchstaben. **_mbslwr_s** ist eine multibytezeichenversion von **_strlwr_s**. **_wcslwr_s** ist eine Breitzeichen-Version von **_strlwr_s**.
+Die **_strlwr_s** -Funktion konvertiert an der Stelle jeden Großbuchstaben in *str* in Kleinbuchstaben. **_mbslwr_s** ist eine Multibyte-Zeichensatz-Version von **_strlwr_s**. **_wcslwr_s** ist eine Breitzeichen-Version von **_strlwr_s**.
 
-Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -179,7 +169,7 @@ Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_strlwr_s**, **_strlwr_s_l**|\<string.h>|
 |**_mbslwr_s**, **_mbslwr_s_l**|\<mbstring.h>|

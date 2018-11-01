@@ -1,30 +1,20 @@
 ---
-title: GetActivationFactory-Funktion | Microsoft-Dokumentation
-ms.custom: ''
+title: GetActivationFactory-Funktion
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Details::GetActivationFactory
 - client/ABI::Windows::Foundation::GetActivationFactory
 - client/Windows::Foundation::GetActivationFactory
-dev_langs:
-- C++
 helpviewer_keywords:
 - GetActivationFactory function
 ms.assetid: 5736d285-6beb-42aa-8788-e261c0010afe
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 99c5d961f3e25e17506e25148260b6966152af44
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a2581fce3c15c96317bf68de0ed918b19edd8b38
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596121"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481707"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory-Funktion
 
@@ -42,13 +32,13 @@ inline HRESULT GetActivationFactory(
 
 ### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Ein Vorlagenparameter, der angibt, welche die aktivierungsfactory.
 
-*activatableClassId*  
+*activatableClassId*<br/>
 Der Name der Klasse, die die Aktivierungs-Factory erstellt werden kann.
 
-*Factory*  
+*Factory*<br/>
 Wenn dieser Vorgang abgeschlossen ist, einen Verweis auf die aktivierungsfactory für den Typ *T*.
 
 ## <a name="return-value"></a>Rückgabewert

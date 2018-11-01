@@ -1,28 +1,18 @@
 ---
-title: Service Map-Makros | Microsoft-Dokumentation
-ms.custom: ''
+title: Servicezuordnungs-Makros
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_SERVICE_MAP
 - atlcom/ATL::END_SERVICE_MAP
 - atlcom/ATL::SERVICE_ENTRY
 - atlcom/ATL::SERVICE_ENTRY_CHAIN
-dev_langs:
-- C++
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dc7b0ca9388de82d49927a7fe76694212b94246b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 14e543946be50c39020d46ab00e702a4f2b7a815
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46053712"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618178"
 ---
 # <a name="service-map-macros"></a>Servicezuordnungs-Makros
 
@@ -33,7 +23,7 @@ Diese Makros definieren dienstzuordnungen und Einträge.
 |[BEGIN_SERVICE_MAP](#begin_service_map)|Kennzeichnet den Anfang ein ATL-dienstzuordnung.|
 |[END_SERVICE_MAP](#end_service_map)|Markiert das Ende der ein ATL-dienstzuordnung.|
 |[SERVICE_ENTRY](#service_entry)|Gibt an, dass das Objekt eine bestimmten Dienst-ID unterstützt.|
-|[SERVICE_ENTRY_CHAIN](#service_entry_chain)|Weist [IServiceProviderImpl:: QueryService](#queryservice) , eine Verkettung mit dem angegebenen Objekt.|  
+|[SERVICE_ENTRY_CHAIN](#service_entry_chain)|Weist [IServiceProviderImpl:: QueryService](#queryservice) , eine Verkettung mit dem angegebenen Objekt.|
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -115,7 +105,7 @@ Siehe das Beispiel für [BEGIN_SERVICE_MAP](#begin_service_map).
 Erstellt oder auf den angegebenen Dienst zugreift, und gibt einen Schnittstellenzeiger zurück, auf die angegebene Schnittstelle für den Dienst.
 
 ```
-STDMETHOD(QueryService)( 
+STDMETHOD(QueryService)(
     REFGUID guidService,
     REFIID riid,
     void** ppvObject);

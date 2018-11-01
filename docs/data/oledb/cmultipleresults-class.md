@@ -1,50 +1,39 @@
 ---
-title: CMultipleResults-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: CMultipleResults-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: reference
 f1_keywords:
 - ATL.CMultipleResults
 - ATL::CMultipleResults
 - CMultipleResults
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMultipleResults class
 ms.assetid: 6ce5bbb9-b551-483c-988a-e6aee9135a19
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: f3dc76e7d3557f777bb8d521de968671defdde8d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0fb25d4106c04622a6bf5fd782432fc75b92c236
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071561"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50535023"
 ---
 # <a name="cmultipleresults-class"></a>CMultipleResults-Klasse
 
-Wenn Sie einen Befehl aus, um mehrere Resultsets verarbeiten möchten, verwenden Sie `CMultipleResults` für die `CCommand` Vorlagenargument *TMultiple*.  
-  
+Wenn Sie einen Befehl aus, um mehrere Resultsets verarbeiten möchten, verwenden Sie `CMultipleResults` für die `CCommand` Vorlagenargument *TMultiple*.
+
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-class CMultipleResults  
-```  
-  
-## <a name="remarks"></a>Hinweise  
+class CMultipleResults
+```
 
-Behandeln von mehreren Resultsets festlegt, [CCommand](../../data/oledb/ccommand-class.md) muss von dieser Klasse erben.  
-  
-## <a name="requirements"></a>Anforderungen  
+## <a name="remarks"></a>Hinweise
 
-**Header:** Atldbcli  
-  
-## <a name="see-also"></a>Siehe auch  
+Behandeln von mehreren Resultsets festlegt, [CCommand](../../data/oledb/ccommand-class.md) muss von dieser Klasse erben.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** Atldbcli
+
+## <a name="see-also"></a>Siehe auch
 
 [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -1,10 +1,6 @@
 ---
-title: samplerklasse | Microsoft Docs
-ms.custom: ''
+title: Samplerklasse
 ms.date: 06/28/2018
-ms.technology:
-- cpp-amp
-ms.topic: reference
 f1_keywords:
 - sampler
 - AMP_GRAPHICS/sampler
@@ -15,19 +11,13 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::sampler::graphics::address_mode
 - AMP_GRAPHICS/concurrency::sampler::graphics::border_color
 - AMP_GRAPHICS/concurrency::sampler::graphics::filter_mode
-dev_langs:
-- C++
 ms.assetid: 9a6a9807-497d-402d-b092-8c4d86275b80
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7261a28f5dea4a8de4af3c169f9b67537e5f3088
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 1a66e4d025a7592b78839dbe5f25f9103da41224
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121850"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50535954"
 ---
 # <a name="sampler-class"></a>Samplerklasse
 
@@ -89,14 +79,12 @@ sampler() restrict(cpu);    // [1] default constructor
 sampler(                    // [2] constructor
     filter_mode _Filter_mode) restrict(cpu);
 
-
 sampler(                    // [3] constructor
     address_mode _Address_mode,
     float_4 _Border_color = float_4(0.0f,
     0.0f,
     0.0f,
     0.0f)) restrict(cpu);
-
 
 sampler(                    // [4] constructor
     filter_mode _Filter_mode,
@@ -106,11 +94,9 @@ sampler(                    // [4] constructor
     0.0f,
     0.0f)) restrict(cpu);
 
-
 sampler(                    // [5] copy constructor
     const sampler& _Other) restrict(amp,
     cpu);
-
 
 sampler(                    // [6] move constructor
     sampler&& _Other) restrict(amp,
@@ -119,21 +105,19 @@ sampler(                    // [6] move constructor
 
 ### <a name="parameters"></a>Parameter
 
-*_Filter_mode*  
- Der im Sampling verwendete Filtermodus.
+*_Filter_mode*<br/>
+Der im Sampling verwendete Filtermodus.
 
-*_Address_mode*  
- Die im Sampling für alle Dimensionen zu verwendenden Adressierung.
+*_Address_mode*<br/>
+Die im Sampling für alle Dimensionen zu verwendenden Adressierung.
 
-*_Border_color*  
- Die zu verwendenden Rahmenfarbe, wenn der Adressmodus address_border lautet. Der Standardwert ist `float_4(0.0f, 0.0f, 0.0f, 0.0f)`.
+*_Border_color*<br/>
+Die zu verwendenden Rahmenfarbe, wenn der Adressmodus address_border lautet. Der Standardwert ist `float_4(0.0f, 0.0f, 0.0f, 0.0f)`.
 
-*_Other*  
-[5]-Kopierkonstruktor  
-Das `sampler`-Objekt, in das die neue `sampler`-Instanz kopiert werden soll.
+*_Sonstige*<br/>
+[5]-Kopierkonstruktor der `sampler` zu kopierende in das neue Objekt `sampler` Instanz.
 
-[6]-bewegungskonstruktor  
-Das `sampler`-Objekt, das in die neue `sampler`-Instanz verschoben werden soll.
+[6]-Bewegungskonstruktor die `sampler` Objekt, das Verschieben in das neue `sampler` Instanz.
 
 ##  <a name="address_mode"></a> address_mode
 
@@ -203,18 +187,16 @@ Weist den Wert eines anderen Samplerobjekts einem vorhandenen Sampler zu.
 sampler& operator= (    // [1] copy assignment operator
     const sampler& _Other) restrict(amp, cpu);
 
-sampler& operator= (    // [2] move assignment operator 
+sampler& operator= (    // [2] move assignment operator
     sampler&& _Other) restrict(amp, cpu);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*_Other*  
-[1]-Kopierzuweisungsoperator  
-Das `sampler`-Objekt, das in dieses `sampler`-Objekt kopiert werden soll.
+*_Sonstige*<br/>
+[1]-Kopierzuweisungsoperator der `sampler` Objekt, das in diese kopiert `sampler`.
 
-[2]-Bewegungszuweisungsoperator  
-Das `sampler`-Objekt, das in dieses `sampler`-Objekt verschoben werden soll.
+[2] Move-Zuweisungsoperator der `sampler` Objekt zum Umwandeln dieses `sampler`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -222,4 +204,4 @@ Ein Verweis auf diese Samplerinstanz.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Concurrency::graphics Namespace](concurrency-graphics-namespace.md)  
+[Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

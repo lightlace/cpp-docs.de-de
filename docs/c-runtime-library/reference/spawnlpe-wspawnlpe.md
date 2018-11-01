@@ -1,10 +1,6 @@
 ---
-title: _spawnlpe, _wspawnlpe | Microsoft-Dokumentation
-ms.custom: ''
+title: _spawnlpe, _wspawnlpe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _spawnlpe
 - _wspawnlpe
@@ -26,8 +22,6 @@ f1_keywords:
 - _wspawnlpe
 - _spawnlpe
 - wspawnlpe
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wspawnlpe function
 - wspawnlpe function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: e171ebfa-70e7-4c44-8331-2a291fc17bd6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: be8e86ddb6405c39f877bd9065a931b66238c2b6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 079841800befcb7196c6428eb58a943410b13987
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413302"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525124"
 ---
 # <a name="spawnlpe-wspawnlpe"></a>_spawnlpe, _wspawnlpe
 
@@ -87,14 +77,14 @@ Ausführungsmodus für den aufrufenden Prozess.
 Pfad der auszuführenden Datei.
 
 *arg0*, *arg1*,... *Argn*<br/>
-Liste von Zeigern zu Argumenten. Die *arg0* -Argument ist normalerweise ein Zeiger auf *Cmdname*. Die Argumente *arg1* über *Argn* sind Zeiger auf die Zeichenfolgen, die die neue Argumentliste bilden. Folgende *Argn*, es muss ein **NULL** Zeiger auf das Ende der Argumentliste zu markieren.
+Liste von Zeigern zu Argumenten. Die *arg0* -Argument ist normalerweise ein Zeiger auf *Cmdname*. Die Argumente *arg1* über *Argn* sind Zeiger auf die Zeichenfolgen, die die neue Argumentliste bilden. Folgende *Argn*, ist eine **NULL** Zeiger auf das Ende der Argumentliste zu markieren.
 
 *envp*<br/>
 Array von Zeigern zu Umgebungseinstellungen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert eines synchronen **_spawnlpe** oder **_wspawnlpe** (**_P_WAIT** angegeben für *Modus*) ist der Beendigungsstatus des neuen Prozess. Der Rückgabewert eines asynchronen **_spawnlpe** oder **_wspawnlpe** (**_P_NOWAIT** oder **_P_NOWAITO** angegeben für  *Modus*) ist das Prozesshandle. Der Beendigungsstatus ist 0, wenn der Prozess ordnungsgemäß beendet wurde. Sie können den Beendigungsstatus auf einen Wert ungleich Null festlegen, wenn der gestartete Prozess speziell einem Argument ungleich verwendet wird, rufen Sie die **beenden** Routine. Wenn der neue Prozess nicht explizit einen positiven Beendigungsstatus eingestellt hat, weist ein positiver Beendigungsstatus auf eine abnormale Beendigung aufgrund eines Abbruchs oder einer Unterbrechung hin. Ein Rückgabewert "-1" gibt einen Fehler (der neue Prozess wird nicht gestartet) an. In diesem Fall **Errno** auf einen der folgenden Werte festgelegt.
+Der Rückgabewert eines synchronen **_spawnlpe** oder **_wspawnlpe** (**_P_WAIT** für *Modus*) ist der Beendigungsstatus des neuen der Prozess. Der Rückgabewert eines asynchronen **_spawnlpe** oder **_wspawnlpe** (**_P_NOWAIT** oder **_P_NOWAITO** für  *Modus*) ist das Prozesshandle. Der Beendigungsstatus ist 0, wenn der Prozess ordnungsgemäß beendet wurde. Sie können den Beendigungsstatus auf einen Wert ungleich Null festlegen, wenn der gestartete Prozess speziell einem Argument ungleich, zum Aufrufen verwendet der **beenden** Routine. Wenn der neue Prozess nicht explizit einen positiven Beendigungsstatus eingestellt hat, weist ein positiver Beendigungsstatus auf eine abnormale Beendigung aufgrund eines Abbruchs oder einer Unterbrechung hin. Der Rückgabewert-1 gibt an, ein Fehler (der neue Prozess wird nicht gestartet). In diesem Fall **Errno** auf einen der folgenden Werte festgelegt ist.
 
 |||
 |-|-|
@@ -108,13 +98,13 @@ Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [err
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Funktionen erstellt einen neuen Prozess und führt diesen aus, übergibt jedes Befehlszeilenargument als separaten Parameter und übergibt außerdem ein Array von Zeigern auf die Umgebungseinstellungen. Verwenden Sie diese Funktionen die **Pfad** -Umgebungsvariable zum Ermitteln der auszuführenden Datei.
+Jede dieser Funktionen erstellt einen neuen Prozess und führt diesen aus, übergibt jedes Befehlszeilenargument als separaten Parameter und übergibt außerdem ein Array von Zeigern auf die Umgebungseinstellungen. Diese Funktionen verwenden die **Pfad** -Umgebungsvariable zum Ermitteln der auszuführenden Datei.
 
-Diese Funktionen überprüfen ihre Parameter. Wenn entweder *Cmdname* oder *arg0* ist eine leere Zeichenfolge oder ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** auf **EINVAL**, und geben-1 zurück. Es wird kein neuer Prozess erzeugt.
+Diese Funktionen überprüfen ihre Parameter. Wenn entweder *Cmdname* oder *arg0* ist eine leere Zeichenfolge oder ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EINVAL**, und geben-1 zurück. Es wird kein neuer Prozess erzeugt.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_spawnlpe**|\<process.h>|
 |**_wspawnlpe**|\<stdio.h> oder \<wchar.h>|

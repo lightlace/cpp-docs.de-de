@@ -1,10 +1,6 @@
 ---
-title: getenv_s, _wgetenv_s | Microsoft-Dokumentation
-ms.custom: ''
+title: getenv_s, _wgetenv_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - getenv_s
 - _wgetenv_s
@@ -25,8 +21,6 @@ f1_keywords:
 - getenv_s
 - _tgetenv_s
 - _wgetenv_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tgetenv_s function
 - wgetenv_s function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - environment variables
 - tgetenv_s function
 ms.assetid: c3ae1ffe-d4cd-4bae-bcb1-3afa754c613a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 144c8d1d05d40f17e37f337902bbd2ee2cf15458
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eac3c036e2f4f271c7bc2d77c8ae82bec28d3617
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405166"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546517"
 ---
 # <a name="getenvs-wgetenvs"></a>getenv_s, _wgetenv_s
 
@@ -104,31 +94,31 @@ Null, wenn erfolgreich, andernfalls ein Fehlercode, wenn ein Fehler auftritt.
 
 |*pReturnValue*|*buffer*|*numberOfElements*|*Variablenname*|Rückgabewert|
 |--------------------|--------------|------------------------|---------------|------------------|
-|**NULL**|alle|alle|alle|**EINVAL**|
-|alle|**NULL**|>0|alle|**EINVAL**|
-|alle|alle|alle|**NULL**|**EINVAL**|
+|**NULL**|any|any|any|**EINVAL**|
+|any|**NULL**|>0|any|**EINVAL**|
+|any|any|any|**NULL**|**EINVAL**|
 
-Bei diesen Fehlerbedingungen wird ein Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen die Funktionen **Errno** auf **EINVAL** inventurüberprüfung **EINVAL**.
+Bei diesen Fehlerbedingungen wird ein Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzen die Funktionen **Errno** zu **EINVAL** und zurückgeben **EINVAL**.
 
-Auch wenn der Puffer zu klein ist, geben diese Funktionen zurück **ERANGE**. Sie rufen keinen Handler für ungültige Parameter auf. Schreiben sie die erforderliche Puffergröße in *pReturnValue*, und ermöglichen es dadurch Programmen, die Funktion erneut mit einem größeren Puffer aufzurufen.
+Auch wenn der Puffer zu klein ist, diese Funktionen geben **ERANGE**. Sie rufen keinen Handler für ungültige Parameter auf. Sie geben die erforderliche Puffergröße in *pReturnValue*, und ermöglichen es dadurch Programmen, die Funktion erneut mit einem größeren Puffer aufzurufen.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Getenv_s** -Funktion sucht die Liste von Umgebungsvariablen für *Varname*. **Getenv_s** ist nicht in der Groß-/Kleinschreibung beachtet, in der Windows-Betriebssystem. **Getenv_s** und [_putenv_s](putenv-s-wputenv-s.md) verwenden die Kopie der Umgebung, auf das durch die globale Variable **_environ** auf die Umgebung zuzugreifen. **Getenv_s** arbeitet nur auf den Datenstrukturen, die zur Laufzeit-Bibliothek zugegriffen werden kann und nicht auf die Umgebung "Segment", die vom Betriebssystem für den Prozess erstellt wird. Aus diesem Grund Programme, von denen die *Envp* Argument [main](../../cpp/main-program-startup.md) oder ["wmain"](../../cpp/main-program-startup.md) möglicherweise ungültige Informationen abzurufen.
+Die **Getenv_s** -Funktion sucht die Liste von Umgebungsvariablen für *Varname*. **Getenv_s** ist nicht in der Groß-/Kleinschreibung beachtet, im Windows-Betriebssystem. **Getenv_s** und [_putenv_s](putenv-s-wputenv-s.md) verwenden die Kopie der Umgebung, auf das durch die globale Variable **_environ** auf die Umgebung zuzugreifen. **Getenv_s** arbeitet nur auf den Datenstrukturen, die zur Laufzeit-Bibliothek zugegriffen werden kann und nicht auf die Umgebung "Segment", die vom Betriebssystem für den Prozess erstellt wird. Aus diesem Grund Programme, von denen die *Envp* Argument [main](../../cpp/main-program-startup.md) oder [Wmain](../../cpp/main-program-startup.md) möglicherweise ungültige Informationen abzurufen.
 
-**_wgetenv_s** ist eine Breitzeichen-Version von **Getenv_s**; der Wert Argument- und Rückgabetypen der **_wgetenv_s** sind Zeichenfolgen mit Breitzeichen. Die **_wenviron** (globale Variable) ist eine Breitzeichen-Version von **_environ**.
+**_wgetenv_s** ist eine Breitzeichen-Version von **Getenv_s**; der Wert Argument- und Rückgabetypen der **_wgetenv_s** sind Breitzeichen Zeichenfolgen. Die **_wenviron** globale Variable ist eine Breitzeichen-Version von **_environ**.
 
-In einem MBCS-Programm (z. B. in einem SBCS-ASCII-Programm) **_wenviron** beträgt anfänglich **NULL** , da die Umgebung aus Multibyte-Zeichenfolgen besteht. Klicken Sie dann auf den ersten Aufruf von [_wputenv](putenv-wputenv.md), oder beim ersten Aufruf von **_wgetenv_s**, wenn bereits eine (MBCS)-Umgebung vorhanden ist, wird eine entsprechende Breitzeichen-Umgebung wird erstellt und dann verweist **_wenviron**.
+In einem MBCS-Programm (z. B. in einem SBCS-ASCII-Programm) **_wenviron** ist Anfangs **NULL** , da die Umgebung aus Multibyte-Zeichenfolgen besteht. Klicken Sie auf dem ersten Aufruf von [_wputenv](putenv-wputenv.md), oder klicken Sie auf dem ersten Aufruf von **_wgetenv_s**, wenn bereits eine (MBCS)-Umgebung vorhanden ist, wird eine entsprechende Zeichenfolge mit Breitzeichen-Umgebung wird erstellt und anschließend verweist **_wenviron**.
 
-In einem Unicodeprogramm (**_wmain**) Programm **_environ** beträgt anfänglich **NULL** , da die Umgebung der Breitzeichen-Zeichenfolgen besteht. Klicken Sie dann auf den ersten Aufruf von [_putenv](putenv-wputenv.md), oder beim ersten Aufruf von **Getenv_s** Wenn bereits eine (Unicode)-Umgebung vorhanden ist, wird eine entsprechende MBCS-Umgebung wird erstellt und zeigt dann durch **_ Environ**.
+In einem Unicodeprogramm (**_wmain**) Programm **_environ** ist Anfangs **NULL** , da die Umgebung aus Zeichenfolgen mit Breitzeichen besteht. Klicken Sie auf dem ersten Aufruf von [_putenv](putenv-wputenv.md), oder klicken Sie auf dem ersten Aufruf von **Getenv_s** Wenn bereits eine (Unicode)-Umgebung vorhanden ist, wird eine entsprechende MBCS-Umgebung wird erstellt und zeigt dann durch **_ Environ-**.
 
-Wenn in einem Programm zwei Kopien der Umgebung (MBCS und Unicode) gleichzeitig vorhanden sind, muss das Laufzeitsystem beide Kopien verwalten, wodurch sich die Ausführungszeit verlangsamt. Wenn Sie z. B. Aufrufen **_putenv**, einen Aufruf von **_wputenv** wird ebenfalls automatisch ausgeführt werden, damit die beiden Umgebungszeichenfolgen übereinstimmen.
+Wenn in einem Programm zwei Kopien der Umgebung (MBCS und Unicode) gleichzeitig vorhanden sind, muss das Laufzeitsystem beide Kopien verwalten, wodurch sich die Ausführungszeit verlangsamt. Wenn Sie z. B. Aufrufen **_putenv**, einen Aufruf von **_wputenv** wird auch automatisch ausgeführt werden, damit die beiden Umgebungszeichenfolgen übereinstimmen.
 
 > [!CAUTION]
 > In seltenen Fällen, wenn das Laufzeitsystem sowohl eine Unicodeversion als auch eine Multibyteversion der Umgebung verwaltet, stimmen diese zwei Versionen möglicherweise nicht exakt überein. Dies liegt daran, dass die Zuordnung von einer eindeutigen Unicodezeichenfolge zu einer Multibyte-Zeichenfolge nicht unbedingt eindeutig ist, obwohl sich jede eindeutige Multibyte-Zeichenfolge einer eindeutigen Unicodezeichenfolge zuordnen lässt. Weitere Informationen finden Sie unter [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).
 
 > [!NOTE]
-> Die **_putenv_s** und **_getenv_s** -Funktionsfamilie sind nicht threadsicher. **_getenv_s** gibt möglicherweise einen Zeichenfolgenzeiger beim zurück **_putenv_s** die Zeichenfolge ändert und zufällig generierten Fehlern bewirken. Stellen Sie sicher, dass Aufrufe dieser Funktionen synchronisiert sind.
+> Die **_putenv_s** und **_getenv_s** Funktionsreihe sind nicht threadsicher. **_getenv_s** gibt möglicherweise einen Zeichenfolgenzeiger beim zurück **_putenv_s** die Zeichenfolge ändert und zufällig generierte Fehler bewirken. Stellen Sie sicher, dass Aufrufe dieser Funktionen synchronisiert sind.
 
 Die Verwendung dieser Funktionen in C++ wird durch Vorlagenüberladungen vereinfacht. Überladungen können automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).
 
@@ -138,11 +128,11 @@ Die Verwendung dieser Funktionen in C++ wird durch Vorlagenüberladungen vereinf
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tgetenv_s**|**getenv_s**|**getenv_s**|**_wgetenv_s**|
 
-Um zu überprüfen oder ändern Sie den Wert, der die **TZ** Umgebung, verwenden **Getenv_s**, **_putenv**, und **_tzset**nach Bedarf. Weitere Informationen zu **TZ**, finden Sie unter [_tzset](tzset.md) und [_daylight, _dstbias, _timezone, und _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
+Um zu überprüfen oder ändern Sie den Wert, der die **TZ** Umgebung, verwenden **Getenv_s**, **_putenv**, und **_tzset**nach Bedarf. Weitere Informationen zu **TZ**, finden Sie unter [_tzset](tzset.md) und [_daylight, _dstbias, _timezone und _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**getenv_s**|\<stdlib.h>|
 |**_wgetenv_s**|\<stdlib.h> oder \<wchar.h>|

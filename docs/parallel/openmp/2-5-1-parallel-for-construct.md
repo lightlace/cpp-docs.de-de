@@ -1,5 +1,5 @@
 ---
-title: 2.5.1 parallel for-Konstrukt | Microsoft Docs
+title: 2.5.1 parallel for-Konstrukt | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,26 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef2732c4f8713466d282346ea240bd3c41886ce0
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cfff3b0c17dd098b5d802af61a7ca1f81cb02845
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687152"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373960"
 ---
 # <a name="251-parallel-for-construct"></a>2.5.1 parallel for-Konstrukt
-Die **für parallele** Richtlinie ist eine Kurzform für eine **parallele** Bereich, nur einen einzigen enthält **für** Richtlinie. Die Syntax der **für parallele** Richtlinie lautet wie folgt:  
-  
-```  
-#pragma omp parallel for [clause[[,] clause] ...] new-linefor-loop  
-```  
-  
- Diese Direktive ermöglicht die Klauseln der der **parallele** Richtlinie und die **für** Richtlinie, mit Ausnahme der `nowait` -Klausel, identische Bedeutung und Einschränkungen. Die Semantik ist identisch mit der Angabe von explizit eine **parallele** Richtlinie unmittelbar gefolgt von einer **für** Richtlinie.  
-  
-## <a name="cross-references"></a>Referenzen:  
-  
--   **Parallele** -Direktive finden Sie unter [Abschnitt 2.3](../../parallel/openmp/2-3-parallel-construct.md) auf Seite "8".  
-  
--   **für** -Direktive finden Sie unter [Abschnitt 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) auf Seite "11".  
-  
--   Daten-Attribut-Klauseln finden Sie unter [2.7.2 Datenfreigabe Attribut Klauseln](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) auf Seite "25".
+
+Die **für parallele** Richtlinie ist eine Abkürzung für eine **parallele** Bereich, nur eine einzige enthält **für** Richtlinie. Die Syntax der **für parallele** Richtlinie lautet wie folgt:
+
+```
+#pragma omp parallel for [clause[[,] clause] ...] new-linefor-loop
+```
+
+Mit dieser Direktive können alle Klauseln der der **parallele** Richtlinie und die **für** , außer die Richtlinie der `nowait` -Klausel, wobei identische Bedeutung und den gleichen Einschränkungen. Die Semantik ist identisch mit explizit angeben, ein **parallele** unmittelbar nach der Richtlinie eine **für** Richtlinie.
+
+## <a name="cross-references"></a>Datenbankübergreifende Verweise:
+
+- **Parallele** -Anweisung finden Sie unter [Abschnitt 2.3](../../parallel/openmp/2-3-parallel-construct.md) auf 8.
+
+- **für** -Anweisung finden Sie unter [Abschnitt 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) auf Seite "11".
+
+- Daten-Attribut-Klauseln, finden Sie unter [2.7.2 Datenfreigabe-Attribut Klauseln](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) auf Seite 25.

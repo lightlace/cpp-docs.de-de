@@ -1,10 +1,6 @@
 ---
-title: _CrtGetAllocHook | Microsoft-Dokumentation
-ms.custom: ''
+title: _CrtGetAllocHook
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtGetAllocHook
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtGetAllocHook
 - _CrtGetAllocHook
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtGetAllocHook function
 - CrtGetAllocHook function
 ms.assetid: 036acf7c-547a-4b3f-a636-80451070d7ed
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fb811353d0ac252411cc5bfc8beb408b6e707089
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b49c4cfc820a925187d0ea4d1562965295bea817
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394521"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514958"
 ---
 # <a name="crtgetallochook"></a>_CrtGetAllocHook
 
@@ -55,13 +45,13 @@ Gibt die momentan definierten Reservierungshookfunktion zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-**_CrtGetAllocHook** Ruft die aktuelle clientdefinierte anwendungshookfunktion für den speicherbelegungsprozess der C-Laufzeit-Bibliothek ab.
+**_CrtGetAllocHook** Ruft die aktuelle clientdefinierte anwendungshookfunktion für den C-Laufzeit den speicherbelegungsprozess.
 
 Weitere Informationen zur Verwendung anderer hookfähiger Laufzeitfunktionen und zum Schreiben eigener clientdefinierter Hookfunktionen finden Sie unter [Debug Hook Function Writing (Schreiben von Hookfunktionen zum Debuggen)](/visualstudio/debugger/debug-hook-function-writing).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_CrtGetAllocHook**|\<crtdbg.h>|
 

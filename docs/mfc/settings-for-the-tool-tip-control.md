@@ -1,5 +1,5 @@
 ---
-title: Einstellungen für das QuickInfo-Steuerelement | Microsoft Docs
+title: Einstellungen für das QuickInfo-Steuerelement | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39de60d17dae5a6d7b2965350162117d049c29c8
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6d0adfd1c7a7ae1e1f36fa8dd53610d19ad8e7b2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951113"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379553"
 ---
 # <a name="settings-for-the-tool-tip-control"></a>Einstellungen für das QuickInfo-Steuerelement
-Sie können das QuickInfo-Steuerelement ([CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)) entweder als aktiv oder als inaktiv festlegen. Wenn Sie es als aktiv festlegen, wird das QuickInfo-Steuerelement angezeigt, wenn Sie den Cursor auf einem Tool platzieren. Wenn Sie es als inaktiv festlegen, wird das QuickInfo-Steuerelement auch dann nicht angezeigt, wenn sich der Cursor auf einem Tool befindet. Rufen Sie [Activate](../mfc/reference/ctooltipctrl-class.md#activate) auf, um ein QuickInfo-Steuerelement zu aktivieren oder deaktivieren.  
-  
- Sie können festlegen, dass eine aktive QuickInfo, die QuickInfo angezeigt, wenn der Cursor auf einem Tool befindet, und zwar unabhängig davon, ob Besitzerfenster des QuickInfo-Steuerelements aktiv oder inaktiv ist, wird mithilfe des TTS_ALWAYSTIP-Stils. Wenn Sie dieses Formatvorlage nicht verwenden, wird das QuickInfo-Steuerelement angezeigt, wenn das besitzende Fenster des Steuerelements aktiv ist, aber nicht, wenn es nicht aktiv ist.  
-  
- Die meisten Anwendungen enthalten Symbolleisten mit Tools, die Menübefehlen entsprechen. Für solche Tools ist es sinnvoll, wenn im QuickInfo-Steuerelement der gleiche Text wie im entsprechenden Menüelement angezeigt wird. Das System entfernt automatisch das kaufmännische und-Zeichen (&) Accelerator Zeichen aus allen Zeichenfolgen, ein QuickInfo-Steuerelement, das an, wenn das Steuerelement das TTS_NOPREFIX-Format hat.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+
+Sie können das QuickInfo-Steuerelement ([CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)) entweder als aktiv oder als inaktiv festlegen. Wenn Sie es als aktiv festlegen, wird das QuickInfo-Steuerelement angezeigt, wenn Sie den Cursor auf einem Tool platzieren. Wenn Sie es als inaktiv festlegen, wird das QuickInfo-Steuerelement auch dann nicht angezeigt, wenn sich der Cursor auf einem Tool befindet. Rufen Sie [Activate](../mfc/reference/ctooltipctrl-class.md#activate) auf, um ein QuickInfo-Steuerelement zu aktivieren oder deaktivieren.
+
+Sie können festlegen, um die QuickInfo angezeigt wird, wenn der Cursor auf einem Tool befindet, und zwar unabhängig davon, ob Besitzerfensters für das QuickInfo-Steuerelements mithilfe des Stils TTS_ALWAYSTIP aktiv oder inaktiv ist, wird eine aktive QuickInfo. Wenn Sie dieses Formatvorlage nicht verwenden, wird das QuickInfo-Steuerelement angezeigt, wenn das besitzende Fenster des Steuerelements aktiv ist, aber nicht, wenn es nicht aktiv ist.
+
+Die meisten Anwendungen enthalten Symbolleisten mit Tools, die Menübefehlen entsprechen. Für solche Tools ist es sinnvoll, wenn im QuickInfo-Steuerelement der gleiche Text wie im entsprechenden Menüelement angezeigt wird. Das System entfernt automatisch das kaufmännische und-Zeichen (&) Accelerator Zeichen aus allen Zeichenfolgen, die an ein QuickInfo-Steuerelement, es sei denn, das Steuerelement den TTS_NOPREFIX-Stil.
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden von CToolTipCtrl](../mfc/using-ctooltipctrl.md)<br/>
+[Steuerelemente](../mfc/controls-mfc.md)
 

@@ -1,25 +1,15 @@
 ---
-title: Containerklasse::rend | Microsoft-Dokumentation
-ms.custom: ''
+title: Container-Klasse::rend
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - rend method
 ms.assetid: 80f3dd04-dd2c-4b52-b0ed-d567ec5d186c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0cf4e963d4afcdfdf3c4ba18347e06489392e5db
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ecd784a5db7949301b23895d65ec70804fb75951
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844197"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591996"
 ---
 # <a name="container-classrend"></a>Container-Klasse::rend
 
@@ -33,7 +23,6 @@ Die Memberfunktion gibt einen Reverse-Iterator zurück, der auf das erste Elemen
 ```
 
     const_reverse_iterator rend() const;
-
 
 reverse_iterator rend();
 ```

@@ -1,10 +1,6 @@
 ---
-title: _RPT-, _RPTF-, _RPTW- und _RPTFW-Makros | Microsoft-Dokumentation
-ms.custom: ''
+title: _RPT-, _RPTF-, _RPTW- und _RPTFW-Makros
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -37,8 +33,6 @@ f1_keywords:
 - _RPTF3
 - RPT2
 - _RPTF1
-dev_langs:
-- C++
 helpviewer_keywords:
 - debugging [CRT], using macros
 - _RPTW3 macro
@@ -92,16 +86,12 @@ helpviewer_keywords:
 - RPTFW1 macro
 - RPTW1 macro
 ms.assetid: a5bf8b30-57f7-4971-8030-e773b7a1ae13
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 69347ab698661346b8d598dda1bb007d071a21f8
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 61748cca2cdfcc2d72b6943bfeedd9597009e20b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104146"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440093"
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT-, _RPTF-, _RPTW- und _RPTFW-Makros
 
@@ -155,7 +145,7 @@ Die **_RPTW** und **_RPTFW** -Makros sind Breitzeichenversionen dieser Makros. S
 
 Die **_RPT** -Makros rufen die [_CrtDbgReport](crtdbgreport-crtdbgreportw.md) Funktion, um einen Debugbericht mit einer benutzermeldung zu generieren. Die **_RPTW** -Makros rufen die **_CrtDbgReportW** Funktion, die den gleichen Berichts mit Breitzeichen zu generieren. Die **_RPTF** und **_RPTFW** -Makros erstellen einen Debugbericht mit der Quelle-Datei und Zeilennummer, in denen das Berichtsmakro, zusätzlich zur benutzermeldung aufgerufen wurde. Die benutzermeldung wird erstellt, indem Sie ersetzen die **Arg**[*n*]-Argumente in der *Format* string "," über die gleichen Regeln die [Printf](printf-printf-l-wprintf-wprintf-l.md)Funktion.
 
-**_CrtDbgReport** oder **_CrtDbgReportW** generiert den Debugbericht und bestimmt seine Ziele basierend auf den aktuellen berichtsmodi und der Datei definiert für *ReportType*. Die Funktionen [_CrtSetReportMode](crtsetreportmode.md) und [_CrtSetReportFile](crtsetreportfile.md) werden verwendet, um die Ziele für jeden Berichtstyp zu definieren.
+**_CrtDbgReport** oder **_CrtDbgReportW** generiert den Debugbericht und bestimmt seine Ziele basierend auf den aktuellen berichtsmodi und der Datei definiert für *ReportType*. Die Funktionen [_CrtSetReportMode](crtsetreportmode.md) und [_CrtSetReportFile](crtsetreportfile.md) werden verwendet, um das Ziel für jeden Berichtstyp zu definieren.
 
 Wenn ein **_RPT** -Makro aufgerufen wird und weder **_CrtSetReportMode** noch **_CrtSetReportFile** war aufgerufen wird, werden Fehlermeldungen wie folgt angezeigt.
 

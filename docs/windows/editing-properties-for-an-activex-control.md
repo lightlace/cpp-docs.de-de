@@ -1,27 +1,16 @@
 ---
-title: Bearbeiten von Eigenschaften für ein ActiveX-Steuerelement | Microsoft-Dokumentation
-ms.custom: ''
+title: Bearbeiten von Eigenschaften für ein ActiveX-Steuerelement
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - controls [C++], editing properties
 - ActiveX controls [C++], properties
 ms.assetid: e5880c62-36c7-4701-bc99-97a82974c22a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6c1db7390be47d2f9530708b2a4cd59dd1c22cc7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7ca73149e552942916e6b29f672067e37e39d9b9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610393"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580206"
 ---
 # <a name="editing-properties-for-an-activex-control"></a>Bearbeiten von Eigenschaften für ein ActiveX-Steuerelement
 
@@ -48,7 +37,7 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anzeigen und Hinzufügen von ActiveX-Steuerelementen zu einem Dialogfeld](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)  
-[Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)  
-[MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)  
+[Anzeigen und Hinzufügen von ActiveX-Steuerelementen zu einem Dialogfeld](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)<br/>
+[Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)<br/>
+[MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)<br/>
 [ActiveX-Steuerelementcontainer](../mfc/activex-control-containers.md)

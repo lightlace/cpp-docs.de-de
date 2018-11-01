@@ -1,42 +1,32 @@
 ---
-title: / POGOSAFEMODE (PGO im abgesicherten Threadmodus ausgeführt) | Microsoft Docs
-ms.custom: ''
+title: / POGOSAFEMODE (PGO im abgesicherten Threadmodus ausgeführt)
 ms.date: 03/14/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 f1_keywords:
 - POGOSAFEMODE
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 81392c67b47a0fa90c057ee4295667a054e34498
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f210884d693ef0d778943580b9c5a7b2ec2ea336
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377332"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544429"
 ---
 # <a name="pogosafemode-run-pgo-in-thread-safe-mode"></a>/ POGOSAFEMODE (PGO im abgesicherten Threadmodus ausgeführt)
 
-**Die /POGOSAFEMODE-Option ist veraltet ab Visual Studio 2015**. Verwenden der [/genprofile: genaue](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) und **/GENPROFILE:NOEXACT** Optionen stattdessen. Die **/POGOSAFEMODE** (Linkeroption) gibt an, dass das instrumentierte Build erstellt wird, um die Thread-sichere nutzen für Datenerfassung der Benutzerprofile während der profilgesteuerten Optimierung (PGO) trainieren ausgeführt wird.
+**Die /POGOSAFEMODE-Option ist ab Visual Studio 2015 veraltet**. Verwenden der [/genprofile: genaue](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) und **/GENPROFILE:NOEXACT** stattdessen "Optionen". Die **/POGOSAFEMODE** (Linkeroption) gibt an, dass das instrumentierte Build erstellt wird, um threadsicheren Modus für die Datenerfassung Profil während der profilgesteuerten Optimierung (PGO) trainingsläufe zu verwenden.
 
 ## <a name="syntax"></a>Syntax
 
-> **/ POGOSAFEMODE**
+> **/POGOSAFEMODE**
 
 ## <a name="remarks"></a>Hinweise
 
-Profilgesteuerte Optimierung (PGO) besitzt zwei mögliche Modi während der Profilerstellungsphase: *schnellen Modus* und *im abgesicherten Modus*. Profilerstellung im schnellen Modus stattfindet, wird eine Inkrement-Anweisung verwendet, werden Datenindikatoren erhöhen. Die Schrittweite-Anweisung ist schneller, aber es ist nicht threadsicher. Wenn die profilerstellung im abgesicherten Modus stattfindet, verwendet es die interlocked-Inkrement-Anweisung werden Datenindikatoren erhöhen. Diese Anweisung hat die gleiche Funktion wie das Inkrement-Anweisung und ist threadsicher, dabei jedoch langsamer.
+Profilgesteuerte Optimierung (PGO) besitzt zwei mögliche Modi während der Profilerstellungsphase: *schnellen Modus* und *im abgesicherten Modus*. Bei der profilerstellung im schnellen Modus stattfindet, verwendet eine Anweisung Inkrement Datenindikatoren erhöhen. Die Schrittweite-Anweisung ist schneller, aber es ist nicht threadsicher. Wenn die profilerstellung im abgesicherten Modus stattfindet, wird die interlocked-Inkrement-Anweisung werden Datenindikatoren zu erhöhen. Diese Anweisung hat die gleiche Funktion wie die Inkrement-Anweisung und ist threadsicher, aber er langsamer als ist.
 
-Die **/POGOSAFEMODE** Option legt den instrumentierten Build im abgesicherten Modus verwenden. Diese Option kann nur verwendet werden, wenn die veralteten [/LTCG: PGINSTRUMENT](ltcg-link-time-code-generation.md) angegeben wird, während der Linkerphase der PGO-Instrumentation.
+Die **/POGOSAFEMODE** Option wird das instrumentierte Build im abgesicherten Modus zu verwenden. Diese Option ist nur möglich verwendet werden, wenn die als veraltet markierten [/LTCG: PGINSTRUMENT](ltcg-link-time-code-generation.md) angegeben wird, während der Linkerphase der PGO-Instrumentation.
 
 Standardmäßig wird PGO-Profilerstellung im schnellen Modus ausgeführt. **/ POGOSAFEMODE** ist nur erforderlich, wenn Sie den abgesicherten Modus verwenden möchten.
 
-Um PGO-profilerstellung im abgesicherten Modus auszuführen, müssen Sie entweder verwenden **/genprofile: genaue** (bevorzugt) fest, oder verwenden Sie die Umgebungsvariable [PogoSafeMode](environment-variables-for-profile-guided-optimizations.md) oder den Linkerschalter **/POGOSAFEMODE**, je nachdem, auf dem System. Wenn Sie die Profilerstellung auf einem x64-Computer ausführen, müssen Sie den Linkerschalter verwenden. Wenn Sie die profilerstellung auf x X86 durchführen-Computer können Sie den Linkerschalter verwenden oder die Umgebungsvariable auf einen beliebigen Wert definieren, bevor die PGO-Instrumentation-Prozess zu starten.
+Um PGO-profilerstellung im abgesicherten Modus auszuführen, müssen Sie verwenden entweder **/genprofile: genaue** (bevorzugt), oder verwenden Sie die Umgebungsvariable [PogoSafeMode](environment-variables-for-profile-guided-optimizations.md) oder den Linkerschalter **/POGOSAFEMODE**, je nachdem, auf dem System. Wenn Sie die Profilerstellung auf einem x64-Computer ausführen, müssen Sie den Linkerschalter verwenden. Wenn Sie während der profilerstellung auf x X86 ausführen-Computer können Sie den Linkerschalter verwenden oder die Umgebungsvariable auf einen beliebigen Wert definieren, bevor Sie beginnen, dass der Prozess der PGO-Instrumentation.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
@@ -44,11 +34,11 @@ Um PGO-profilerstellung im abgesicherten Modus auszuführen, müssen Sie entwede
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **Optimierung** Eigenschaftenseite.
 
-1. In der **Link-Time Code Generation** -Eigenschaft, wählen Sie **Profile Guided Optimization - Instrumentieren (/ LTCG: PGINSTRUMENT)**.
+1. In der **Link-Zeitcodegenerierung** Eigenschaft wählen **Profilgesteuerte Optimierung - Instrumentieren (/ LTCG: PGINSTRUMENT)**.
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **Befehlszeile** Eigenschaftenseite.
 
-1. Geben Sie die **/POGOSAFEMODE** option in der **Zusatzoptionen** Feld. Wählen Sie **OK** zum Speichern der Änderungen.
+1. Geben Sie die **/POGOSAFEMODE** option in der **zusätzliche Optionen** Feld. Wählen Sie **OK** zum Speichern der Änderungen.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest
 

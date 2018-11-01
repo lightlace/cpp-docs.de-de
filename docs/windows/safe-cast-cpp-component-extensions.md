@@ -1,32 +1,22 @@
 ---
-title: Safe_cast (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Safe_cast (C++ / CLI und C++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
 - safe_cast
 - safe_cast_cpp
 - stdcli::language::safe_cast
-dev_langs:
-- C++
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 85a27fceabcac9c5fa3b36fae4990da7dcd65deb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a65b39cbd658787324c1951fd1a53e4257f33a4a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222925"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50443744"
 ---
-# <a name="safecast-c-component-extensions"></a>safe_cast (Komponentenerweiterungen für C++)
+# <a name="safecast-ccli-and-ccx"></a>Safe_cast (C++ / CLI und C++ / CX)
 
 Die **"safe_cast"** Vorgang gibt den angegebenen Ausdruck als den angegebenen Typ zurück, wenn erfolgreich; andernfalls löst `InvalidCastException`.
 
@@ -37,11 +27,7 @@ Die **"safe_cast"** Vorgang gibt den angegebenen Ausdruck als den angegebenen Ty
 ### <a name="syntax"></a>Syntax
 
 ```cpp
-[default]:: safe_cast<
-type-id
->(
-expression
-)  
+[default]:: safe_cast< type-id >( expression )
 ```
 
 ## <a name="windows-runtime"></a>Windows-Runtime
@@ -51,19 +37,15 @@ expression
 ### <a name="syntax"></a>Syntax
 
 ```cpp
-[default]:: safe_cast<
-type-id
->(
-expression
-)  
+[default]:: safe_cast< type-id >( expression )
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*Typ-id*  
+*Typ-id*<br/>
 Der zu konvertierende Typ *Ausdruck* auf. Ein Handle zu einem Verweis- oder Werttyp, ein Werttyp oder ein Nachverfolgungsverweis auf einen Verweis- oder Werttyp.
 
-*Ausdruck*  
+*Ausdruck*<br/>
 Ein Ausdruck, der als ein Handle zu einem Verweis oder Werttyp ausgewertet wird, ein Werttyp oder ein Nachverfolgungsverweis auf einen Verweis- oder Werttyp.
 
 ### <a name="remarks"></a>Hinweise
@@ -115,24 +97,20 @@ Caught expected exception: InvalidCastException
 ### <a name="syntax"></a>Syntax
 
 ```cpp
-[cli]:: safe_cast<
-type-id
->(
-expression
-)  
+[cli]:: safe_cast< type-id >( expression )
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*Typ-id*  
+*Typ-id*<br/>
 Ein Handle zu einem Verweis- oder Werttyp, ein Werttyp oder ein Nachverfolgungsverweis auf einen Verweis- oder Werttyp.
 
-*Ausdruck*  
+*Ausdruck*<br/>
 Ein Ausdruck, der als ein Handle zu einem Verweis oder Werttyp ausgewertet wird, ein Werttyp oder ein Nachverfolgungsverweis auf einen Verweis- oder Werttyp.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Ausdruck `safe_cast<` *Typ-Id*`>(`*Ausdruck* `)` konvertiert den operandenausdruck zu einem Objekt vom Typ-Id-Typ.
+Der Ausdruck `safe_cast<` *Typ-Id*`>(`*Ausdruck* `)` konvertiert den Operanden *Ausdruck* auf ein Objekt des Typs *Typ-Id*.
 
 Der Compiler akzeptiert eine ["static_cast"](../cpp/static-cast-operator.md) in den meisten stellen, die sie akzeptieren ein **"safe_cast"**.  Allerdings **"safe_cast"** überprüfbare MSIL generiert auf jeden Fall Where als eine **"static_cast"** konnte nicht überprüfbare MSIL erzeugen.  Finden Sie unter [reiner und überprüfbarer Code (C++ / CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md) und [Peverify.exe (PEVerify-Tool)](/dotnet/framework/tools/peverify-exe-peverify-tool) für Weitere Informationen über überprüfbaren Code.
 
@@ -148,7 +126,7 @@ Weitere Informationen zu **"safe_cast"**, finden Sie unter:
 
 - [C-stilartige Umwandlungen mit/CLR (C++ / CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)
 
-- [Vorgehensweise: Verwenden von safe_cast in C++/CLI](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)  
+- [Vorgehensweise: Verwenden von safe_cast in C++/CLI](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -188,4 +166,4 @@ Caught expected exception
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET und UWP](../windows/component-extensions-for-runtime-platforms.md)

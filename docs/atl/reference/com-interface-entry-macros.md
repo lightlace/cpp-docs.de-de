@@ -28,16 +28,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa3f3356cf3fdddeeb4245986549fa1bd2e12ae7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 16aa17ef58e8e4a7f0b8970cb229b6c914f291fe
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085224"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080116"
 ---
-# <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY-Makros  
+# <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY-Makros
 
-Diese Makros Geben Sie die Schnittstellen eines Objekts in die COM-Zuordnung, damit darauf zugreifen können `QueryInterface`. Die Reihenfolge der Einträge in der COM-Zuordnung ist die Order-Schnittstellen für eine übereinstimmende IID während überprüft `QueryInterface`.  
+Diese Makros Geben Sie die Schnittstellen eines Objekts in die COM-Zuordnung, damit darauf zugreifen können `QueryInterface`. Die Reihenfolge der Einträge in der COM-Zuordnung ist die Order-Schnittstellen für eine übereinstimmende IID während überprüft `QueryInterface`.
 
 |||
 |-|-|
@@ -55,7 +55,7 @@ Diese Makros Geben Sie die Schnittstellen eines Objekts in die COM-Zuordnung, da
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|Verarbeitet die COM-Zuordnung der Basisklasse an, wenn die Verarbeitung dieser Eintrag in der COM-Zuordnung erreicht.|
 |[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)|Ein allgemeiner Mechanismus für die Einbindung in die ATL `QueryInterface` Logik.|
 |[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|Identisch mit [COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func), außer dass die Ergebnisse von Abfragen für alle IID in einem Aufruf von *Func*.|
-|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|Wird E_NOINTERFACE zurückgegeben, und wird beendet, COM-Zuordnung verarbeitet, wenn für die angegebene Schnittstelle abgefragt wird.|  
+|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|Wird E_NOINTERFACE zurückgegeben, und wird beendet, COM-Zuordnung verarbeitet, wenn für die angegebene Schnittstelle abgefragt wird.|
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,6 +70,7 @@ Gibt ein in die schnittstellenzuordnung für die COM-Schnittstellen.
 ```
 COM_INTERFACE_ENTRY( x )
 ```
+
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
@@ -88,6 +89,7 @@ BEGIN_COM_MAP(CThisExample)
    COM_INTERFACE_ENTRY(ISupportErrorInfo)
 END_COM_MAP()
 ```
+
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** atlcom.h
@@ -406,4 +408,3 @@ Sie können dieses Makro verwenden, um zu verhindern, dass eine Schnittstelle, d
 
 Die Schnittstelle, die IID durch Anfügen erstellt *x* zu `IID_`. Z. B. wenn *x* ist `IPersistStorage`, werden die IID `IID_IPersistStorage`.
 
-  

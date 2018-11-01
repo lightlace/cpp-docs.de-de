@@ -1,35 +1,25 @@
 ---
-title: Arrays (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Arrays (C++ / CLI und C++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
 - cli::array
 - details::array
 - lang::array
-dev_langs:
-- C++
 helpviewer_keywords:
 - array keyword [C++]
 - arrays [C++], multidimensional
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: dbfcedd2bc17e21b94de46c63edd95bf58f576a7
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1421434b1271d3c9caa11258647dd6ae357a2c0e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714446"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50632062"
 ---
-# <a name="arrays-c-component-extensions"></a>Arrays (Komponentenerweiterungen für C++)
+# <a name="arrays-ccli-and-ccx"></a>Arrays (C++ / CLI und C++ / CX)
 
 Die `Platform::Array<T>` Typ in C++ / CX oder **Array** -Schlüsselwort in C++ / CLI, deklariert ein Array aus dem angegebenen Parametertyp und der ursprüngliche Wert.
 
@@ -55,26 +45,26 @@ Arrays sind Mitglieder der `Platform` Namespace. Arrays können nur eindimension
 Im ersten Beispiel der Syntax wird die **Ref neue** -aggregatschlüsselwort ein Array zuweisen. Im zweite Beispiel wird ein lokales Array deklariert.
 
 ```cpp
-[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier =
     ref new[Platform::]Array<initialization-type> [{initialization-list [,...]}]
 
-[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier =
     {initialization-list [,...]}
 ```
 
 *Qualifizierer*<br/>
 (Optional) Eine oder mehrere der folgenden Speicherklassenspezifizierer: [änderbare](../cpp/mutable-data-members-cpp.md), [flüchtige](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), ["extern"](../cpp/using-extern-to-specify-linkage.md), [statische](../cpp/static-members-cpp.md).
 
-*Array-Typ*  
+*Array-Typ*<br/>
 Der Typ der Arrayvariablen. Gültige Typen sind Windows-Runtime-Klassen und grundlegenden Typen, Verweisklassen und Strukturen, Wertklassen und Strukturen und nativen Zeigern (`type*`).
 
 *rank*<br/>
 (Optional) Die Anzahl der Dimensionen des Arrays. 1 muss sein.
 
-*identifier*  
+*identifier*<br/>
 Der Name der Arrayvariablen.
 
-*Initialisierung-Typ*  
+*Initialisierung-Typ*<br/>
 Der Typ der Werte, die das Array initialisiert werden. In der Regel *Arraytyp* und *Initialisierung vom Typ* denselben Typ aufweisen. Die Typen kann jedoch anders, wenn es eine Konvertierung von erfolgt *Initialisierung vom Typ* zu *Arraytyp*– z. B. wenn *Initialisierung vom Typ* abgeleitetist*Arraytyp*.
 
 *Initialisierungsliste*<br/>
@@ -111,29 +101,29 @@ int main() {
 Im ersten Beispiel der Syntax wird die **Gcnew** Schlüsselwort, um ein Array zuweisen. Im zweite Beispiel wird ein lokales Array deklariert.
 
 ```cpp
-[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier =
     gcnew [cli::]array<initialization-type[,rank]>(rank-size-list[,...]) [{initialization-list [,...]}]
 
-[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier =
     {initialization-list [,...]}
 ```
 
 *Qualifizierer*<br/>
 (Optional) Eine oder mehrere der folgenden Speicherklassenspezifizierer: [änderbare](../cpp/mutable-data-members-cpp.md), [flüchtige](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), ["extern"](../cpp/using-extern-to-specify-linkage.md), [statische](../cpp/static-members-cpp.md).
 
-*Array-Typ*  
+*Array-Typ*<br/>
 Der Typ der Arrayvariablen. Gültige Typen sind Windows-Runtime-Klassen und grundlegenden Typen, Verweisklassen und Strukturen, Wertklassen und Strukturen, systemeigene Zeiger (`type*`), und Typen für native POD (plain old Data).
 
 *rank*<br/>
 (Optional) Die Anzahl der Dimensionen des Arrays. Der Standardwert ist 1. Der Höchstwert beträgt 32. Jede Dimension des Arrays ist selbst ein Array.
 
-*identifier*  
+*identifier*<br/>
 Der Name der Arrayvariablen.
 
-*Initialisierung-Typ*  
+*Initialisierung-Typ*<br/>
 Der Typ der Werte, die das Array initialisiert werden. In der Regel *Arraytyp* und *Initialisierung vom Typ* denselben Typ aufweisen. Die Typen kann jedoch anders, wenn es eine Konvertierung von erfolgt *Initialisierung vom Typ* zu *Arraytyp*– z. B. wenn *Initialisierung vom Typ* abgeleitetist*Arraytyp*.
 
-*Liste der Rank-Größe*  
+*Liste der Rank-Größe*<br/>
 Eine durch Trennzeichen getrennte Liste der Größe der einzelnen Dimensionen im Array. Auch wenn die *Initialisierungsliste* -Parameter angegeben wird, kann der Compiler die Größe der einzelnen Dimensionen folgern und *Rang-Größe-List* kann ausgelassen werden.
 
 *Initialisierungsliste*<br/>
@@ -180,4 +170,4 @@ int main() {
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET und UWP](../windows/component-extensions-for-runtime-platforms.md)

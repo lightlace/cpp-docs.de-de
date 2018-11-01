@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a81b358a89f3ed16747d27bc6401c01ad194680
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6eafdf3a140dd8a5976cf2fe8554b3b076111b74
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113720"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060506"
 ---
 # <a name="code-pages"></a>Codepages
 
@@ -43,7 +43,7 @@ Die Microsoft-Laufzeitbibliothek verwendet die folgenden Typen von Codepages:
     setlocale ( LC_ALL, "" );
     ```
 
-     legt auch das Gebietsschema auf die Standard-ANSI-Codepage des Systems fest.
+   legt auch das Gebietsschema auf die Standard-ANSI-Codepage des Systems fest.
 
 - Gebietsschema-Codepage. Das Verhalten einiger Laufzeitroutinen ist abhängig von der aktuellen Einstellung des Gebietsschemas, das die Gebietsschema-Codepage enthält. (Weitere Informationen finden Sie unter [Locale-Dependent Routines (Vom Gebietsschema abhängige Routinen)](../c-runtime-library/locale.md).) In der Standardeinstellung verwenden alle vom Gebietsschema abhängigen Routinen in der Microsoft-Laufzeitbibliothek die Codepage, die dem Gebietsschema „C“ entspricht. Zur Laufzeit können Sie die verwendete Gebietsschema-Codepage ändern oder abfragen, indem Sie [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) aufrufen.
 

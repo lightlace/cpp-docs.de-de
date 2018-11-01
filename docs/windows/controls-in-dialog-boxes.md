@@ -1,28 +1,17 @@
 ---
 title: Steuerelemente in Dialogfeldern (C++) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - controls [C++], dialog boxes
 - dialog box controls [C++], about dialog box controls
 - dialog box controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: d8128859f2b136fb945376eeea8afa0d1ef8e6e1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 3f559a82d7c73dd8050f23e0b3af34f0bcb410c8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317107"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50644881"
 ---
 # <a name="controls-in-dialog-box-ces"></a>Steuert, es im Dialogfeld (C++)
 
@@ -64,6 +53,6 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](../windows/adding-event-handlers-for-dialog-box-controls.md)  
-[Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)  
+[Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
+[Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)<br/>
 [Dialog-Editor](../windows/dialog-editor.md)

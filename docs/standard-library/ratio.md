@@ -1,10 +1,6 @@
 ---
-title: '&lt;ratio&gt; | Microsoft-Dokumentation'
-ms.custom: ''
+title: '&lt;ratio&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - ratio/std::mega
 - ratio/std::peta
@@ -34,19 +30,13 @@ f1_keywords:
 - ratio/std::exa
 - ratio/std::deci
 - ratio/std::deca
-dev_langs:
-- C++
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1a5ffa7666f9b976312bf1c3115d93204bdd8f8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4279aa75bf4e9b8a0c7a86f102f70164bbb620e0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853751"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609003"
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
 
@@ -62,7 +52,7 @@ Schließen Sie den Standardheader \<ratio> zum Definieren von Konstanten und Vor
 
 ```cpp
 template<std::intmax_t Numerator, std::intmax_t Denominator = 1>
-   struct ratio // holds the ratio of Numerator to Denominator
+struct ratio // holds the ratio of Numerator to Denominator
 {
    static constexpr std::intmax_t num;
    static constexpr std::intmax_t den;
@@ -70,7 +60,7 @@ template<std::intmax_t Numerator, std::intmax_t Denominator = 1>
 }
 ```
 
-Die Vorlage `ratio` definiert die statischen Konstanten `num` und `den` so, dass `num`  /  `den` == Zähler / Nenner und `num` und `den` keine allgemeinen Faktoren haben. `num` / `den` ist der Wert, der von der Vorlagenklasse dargestellt wird. Aus diesem Grund `type` kennzeichnet die Instanziierung `ratio<num, den>`.
+Die Vorlage `ratio` definiert die statische Konstanten `num` und `den` so, dass `num`  /  `den` Zähler == / Nenner und `num` und `den` keine gemeinsamen Faktoren haben. `num` / `den` ist der Wert, der von der Vorlagenklasse dargestellt wird. Aus diesem Grund `type` kennzeichnet die Instanziierung `ratio<num, den>`.
 
 ### <a name="specializations"></a>Spezialisierungen
 
@@ -95,7 +85,7 @@ Jede Spezialisierung nimmt zwei Vorlagenparameter, die auch `ratio`-Spezialisier
 
 ### <a name="typedefs"></a>Typedefs
 
-Der Einfachheit halber wird der Header Verhältnis für die standardmäßige SI Präfixe definiert:
+Der Einfachheit halber definiert der Header Verhältnis für die standard-SI-Präfixe:
 
 ```cpp
 typedef ratio<1, 1000000000000000000> atto;

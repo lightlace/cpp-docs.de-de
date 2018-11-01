@@ -1,10 +1,6 @@
 ---
-title: Registrierungsmakros | Microsoft-Dokumentation
-ms.custom: ''
+title: Registrierungsmakros
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlcom/ATL::_ATL_STATIC_REGISTRY
 - atlcom/ATL::DECLARE_LIBID
@@ -13,21 +9,15 @@ f1_keywords:
 - atlcom/ATL::DECLARE_REGISTRY_APPID_RESOURCEID
 - atlcom/ATL::DECLARE_REGISTRY_RESOURCE
 - atlcom/ATL::DECLARE_REGISTRY_RESOURCEID
-dev_langs:
-- C++
 helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 17040448771e4ca3c0f999e72a9c08f0e1fa28aa
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: bced900cd7bac666daf415d91a4540828c769025
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058496"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660381"
 ---
 # <a name="registry-macros"></a>Registrierungsmakros
 
@@ -41,7 +31,7 @@ Diese Makros definieren nützlich Typarten-Bibliothek und der Registrierung.
 |[DECLARE_REGISTRY](#declare_registry)|Eintritt, oder das Hauptobjekt Eintrag in der Registrierung entfernt.|
 |[DECLARE_REGISTRY_APPID_RESOURCEID](#declare_registry_appid_resourceid)|Gibt an, die Informationen, die erforderlich sind, für die automatische Registrierung der *Appid*.|
 |[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)|Die benannte Ressource findet, und führt das Registrierungsskript "darin.|
-|[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|Sucht nach der Ressource durch eine ID-Nummer identifiziert und führt das Registrierungsskript "darin.|  
+|[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|Sucht nach der Ressource durch eine ID-Nummer identifiziert und führt das Registrierungsskript "darin.|
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,10 +86,10 @@ Gibt die standardmäßige klassenregistrierung in der Registrierung des Systems 
 
 ```
 DECLARE_REGISTRY(
-    class, 
-    pid, 
-    vpid, 
-    nid, 
+    class,
+    pid,
+    vpid,
+    nid,
     flags )
 ```
 
@@ -132,7 +122,7 @@ Gibt an, die Informationen, die erforderlich sind, für die automatische Registr
 
 ```
 DECLARE_REGISTRY_APPID_RESOURCEID(
-    resid, 
+    resid,
     appid )
 ```
 
@@ -173,7 +163,7 @@ Sie können mit der ATL-Registrierungskomponente (Registrar) für den Zugriff au
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-Wenn Sie ATL Ersatzwerte zur Laufzeit ersetzen möchten, geben Sie das Makro DECLARE_REGISTRY_RESOURCE oder DECLARE_REGISTRY_RESOURCEID nicht. Erstellen Sie stattdessen ein Array von `_ATL_REGMAP_ENTRIES` Strukturen, von denen jeder Eintrag einen Variable Platzhalter enthält mit dem Wert ersetzt den Platzhalter zur Laufzeit zugeordnet. Rufen Sie anschließend [CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) oder [CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), das Array übergeben. Dadurch werden alle die Ersatzwerte in der `_ATL_REGMAP_ENTRIES` Strukturen, um die Registrierungsstelle Ersatz-Zuordnung.  
+Wenn Sie ATL Ersatzwerte zur Laufzeit ersetzen möchten, geben Sie das Makro DECLARE_REGISTRY_RESOURCE oder DECLARE_REGISTRY_RESOURCEID nicht. Erstellen Sie stattdessen ein Array von `_ATL_REGMAP_ENTRIES` Strukturen, von denen jeder Eintrag einen Variable Platzhalter enthält mit dem Wert ersetzt den Platzhalter zur Laufzeit zugeordnet. Rufen Sie anschließend [CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) oder [CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), das Array übergeben. Dadurch werden alle die Ersatzwerte in der `_ATL_REGMAP_ENTRIES` Strukturen, um die Registrierungsstelle Ersatz-Zuordnung.
 
 Weitere Informationen zu ersetzbare Parameter und Skripts finden Sie im Artikel [der ATL-Registrierungskomponente (Registrar)](../../atl/atl-registry-component-registrar.md).
 
@@ -198,7 +188,7 @@ Sie können mit der ATL-Registrierungskomponente (Registrar) für den Zugriff au
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-Wenn Sie ATL Ersatzwerte zur Laufzeit ersetzen möchten, geben Sie das Makro DECLARE_REGISTRY_RESOURCE oder DECLARE_REGISTRY_RESOURCEID nicht. Erstellen Sie stattdessen ein Array von `_ATL_REGMAP_ENTRIES` Strukturen, von denen jeder Eintrag einen Variable Platzhalter enthält mit dem Wert ersetzt den Platzhalter zur Laufzeit zugeordnet. Rufen Sie anschließend [CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) oder [CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), das Array übergeben. Dadurch werden alle die Ersatzwerte in der `_ATL_REGMAP_ENTRIES` Strukturen, um die Registrierungsstelle Ersatz-Zuordnung.  
+Wenn Sie ATL Ersatzwerte zur Laufzeit ersetzen möchten, geben Sie das Makro DECLARE_REGISTRY_RESOURCE oder DECLARE_REGISTRY_RESOURCEID nicht. Erstellen Sie stattdessen ein Array von `_ATL_REGMAP_ENTRIES` Strukturen, von denen jeder Eintrag einen Variable Platzhalter enthält mit dem Wert ersetzt den Platzhalter zur Laufzeit zugeordnet. Rufen Sie anschließend [CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) oder [CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), das Array übergeben. Dadurch werden alle die Ersatzwerte in der `_ATL_REGMAP_ENTRIES` Strukturen, um die Registrierungsstelle Ersatz-Zuordnung.
 
 Weitere Informationen zu ersetzbare Parameter und Skripts finden Sie im Artikel [der ATL-Registrierungskomponente (Registrar)](../../atl/atl-registry-component-registrar.md).
 

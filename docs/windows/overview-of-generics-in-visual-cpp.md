@@ -1,12 +1,7 @@
 ---
-title: Übersicht über Generika in Visual C++ | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Übersicht über Generika in C++ / CLI
+ms.date: 10/12/2018
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - generics [C++], about generics
 - default initializers [C++]
@@ -17,25 +12,20 @@ helpviewer_keywords:
 - open constructed types [C++]
 - constructed types, closed [C++]
 ms.assetid: 21f10637-0fce-4916-b925-6c86a126d3aa
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 2c1a6e9b9734fbb836d9e061b15534e23b95b29c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1105025ebebdfcbce723505747f6677674c04334
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590937"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50655168"
 ---
-# <a name="overview-of-generics-in-visual-c"></a>Übersicht über Generika in Visual C++
+# <a name="overview-of-generics-in-ccli"></a>Übersicht über Generika in C++ / CLI
 
 Generika sind parametrisierte Typen, die von der common Language Runtime unterstützt werden. Ein parametrisierter Typ ist ein Typ, der mit einem unbekannten Typ-Parameter definiert ist, die angegeben wird, wenn die generische verwendet wird.
 
 ## <a name="why-generics"></a>Warum Generika?
 
-C++ unterstützt, und beide Vorlagen und Generika unterstützt parametrisierte Typen um typisierte Auflistungsklassen zu erstellen. Allerdings bieten Vorlagen während der Kompilierung Parametrisierung. Sie können nicht auf eine Assembly, die eine Vorlagendefinition enthalten verweisen und erstellen neue spezialisierungen der Vorlage. Nach der Kompilierung, sieht eine spezialisierte Vorlage einer anderen Klasse oder Methode. Im Gegensatz dazu werden als ein parametrisierter Typ, die bekanntermaßen von der Laufzeit einem parametrisierten Typ Generika in MSIL ausgegeben; Quellcode, der eine Assembly mit einem generischen Typ verweist, kann spezialisierungen des generischen Typs erstellen. Weitere Informationen zum Vergleich der Visual C++-Vorlagen und Generika, finden Sie unter [Generika und Vorlagen (Visual C++)](../windows/generics-and-templates-visual-cpp.md).
+C++ unterstützt, und beide Vorlagen und Generika unterstützt parametrisierte Typen um typisierte Auflistungsklassen zu erstellen. Allerdings bieten Vorlagen während der Kompilierung Parametrisierung. Sie können nicht auf eine Assembly, die eine Vorlagendefinition enthalten verweisen und erstellen neue spezialisierungen der Vorlage. Nach der Kompilierung, sieht eine spezialisierte Vorlage einer anderen Klasse oder Methode. Im Gegensatz dazu werden als ein parametrisierter Typ, die bekanntermaßen von der Laufzeit einem parametrisierten Typ Generika in MSIL ausgegeben; Quellcode, der eine Assembly mit einem generischen Typ verweist, kann spezialisierungen des generischen Typs erstellen. Weitere Informationen zu den Vergleich der standardmäßigen C++-Vorlagen und Generika, finden Sie unter [Generika und Vorlagen (C++ / CLI)](../windows/generics-and-templates-visual-cpp.md).
 
 ## <a name="generic-functions-and-types"></a>Generische Funktionen und Typen
 

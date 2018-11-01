@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e12c8eeb162d93a41c2bad85fda3570f3ffc1127
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a4003868609d8ffd1ea3b29074bdd24c25442ad8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220215"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054448"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>C++-Konformitätsverbesserungen in Visual Studio 2017, Versionen 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157) und [15.8](#update_158)
 
@@ -227,9 +227,9 @@ Im folgenden Beispiel ist das konforme Verhalten von C++14 dargestellt:
 struct Derived;
 
 struct Base {
-    friend struct Derived;
+    friend struct Derived;
 private:
-    Base() {}
+    Base() {}
 };
 
 struct Derived : Base {};
@@ -247,9 +247,9 @@ Das folgende Beispiel zeigt das Verhalten von C++17 im Modus **/std:c++17** in V
 struct Derived;
 
 struct Base {
-    friend struct Derived;
+    friend struct Derived;
 private:
-    Base() {}
+    Base() {}
 };
 
 struct Derived : Base {
@@ -1263,7 +1263,8 @@ extern "C" __declspec(noinline) HRESULT __stdcall
 Diese neue Warnung C4768 wird für einige Windows SDK-Header ausgegeben, die mit Visual Studio 2017 15.3 oder älter ausgeliefert wurden (Beispiel: Version 10.0.15063.0, auch bekannt als RS2 SDK). Spätere Versionen von Windows SDK-Headern (speziell ShlObj.h und ShlObj_core.h) wurden jedoch so korrigiert, dass sie diese Warnung nicht ausgeben. Wenn Sie sehen, dass diese Warnung von Windows SDK-Headern ausgegeben wird, können Sie diese Aktionen ausführen:
 
 1. Wechseln Sie zum neuesten Windows SDK, das mit Visual Studio 2017 Version 15.5 ausgeliefert wurde.
-2. Deaktivieren Sie die Warnung um den #include-Teil der Windows SDK-Headeranweisung:
+
+1. Deaktivieren Sie die Warnung um den #include-Teil der Windows SDK-Headeranweisung:
 
 ```cpp
    #pragma warning (push)
@@ -1374,7 +1375,7 @@ Statische constexpr-Datenmember sind nun implizit inline. Ihre Deklaration inner
 
 ```cpp
 struct X {
-    static constexpr int size = 3;
+    static constexpr int size = 3;
 };
 const int X::size; // C5041
 ```
@@ -1587,7 +1588,7 @@ Um den Fehler zu beheben, ändern Sie den B()-Ausdruck zu „B\<T>()“.
 
 ### <a name="constexpr-aggregate-initialization"></a>constexpr-Aggregatinitialisierung
 
-In den Vorgängerversionen des C++-Compilers wurde die constexpr-Aggregatinitialisierung falsch verarbeitet. So wurde ungültiger Code akzeptiert, bei dem „aggregate-init-list“ zu viele Elemente enthielt und eine fehlerhafte Codegenerierung für diesen erstellte. Ein Beispiel für einen solchen Code wird im Folgenden gezeigt: 
+In den Vorgängerversionen des C++-Compilers wurde die constexpr-Aggregatinitialisierung falsch verarbeitet. So wurde ungültiger Code akzeptiert, bei dem „aggregate-init-list“ zu viele Elemente enthielt und eine fehlerhafte Codegenerierung für diesen erstellte. Ein Beispiel für einen solchen Code wird im Folgenden gezeigt:
 
 ```cpp
 #include <array>
@@ -1689,15 +1690,14 @@ struct S : Base<T> {
 
 Standardmäßig ist es in C++ nicht zulässig, dem Namespace `std` Vorwärtsdeklarationen oder -definitionen hinzuzufügen. Das Hinzufügen von Deklarationen oder Definitionen in den Namespace `std` oder einen Namespace im Namespace „std“ resultiert nun in nicht definiertem Verhalten.
 
-Der Ort, an dem einige STL-Typen definiert werden, soll zu einem zukünftigen Zeitpunkt verschoben werden. Wenn dies geschieht, wird vorhandener Code, der dem Namespace `std` Vorwärtsdeklarationen hinzufügt ungültig. Eine neue Warnung (C4643) hilft beim Identifizieren solcher Probleme mit der Quelle. Die Warnung ist standardmäßig deaktiviert, im Modus **/default** ist sie aktiviert. Dies wirkt sich auf die Programme aus, die mit **/Wall** oder **/WX** kompiliert werden. 
+Der Ort, an dem einige STL-Typen definiert werden, soll zu einem zukünftigen Zeitpunkt verschoben werden. Wenn dies geschieht, wird vorhandener Code, der dem Namespace `std` Vorwärtsdeklarationen hinzufügt ungültig. Eine neue Warnung (C4643) hilft beim Identifizieren solcher Probleme mit der Quelle. Die Warnung ist standardmäßig deaktiviert, im Modus **/default** ist sie aktiviert. Dies wirkt sich auf die Programme aus, die mit **/Wall** oder **/WX** kompiliert werden.
 
-Der folgende Code löst nun die Fehlermeldung C4643: *Forward declaring 'vector' in namespace std is not permitted by the C++ Standard* (Die Weiterleitung mit Deklaration von „Vektor“ im Namespace „std“ ist gemäß C++-Standard nicht zulässig) aus. 
-
+Der folgende Code löst nun die Fehlermeldung C4643: *Forward declaring 'vector' in namespace std is not permitted by the C++ Standard* (Die Weiterleitung mit Deklaration von „Vektor“ im Namespace „std“ ist gemäß C++-Standard nicht zulässig) aus.
 
 ```cpp
-namespace std { 
-    template<typename T> class vector; 
-} 
+namespace std {
+    template<typename T> class vector;
+}
 ```
 
 Verwenden Sie anstelle einer Vorwärtsdeklaration eine **include**-Anweisung, um den Fehler zu beheben:
@@ -1713,106 +1713,106 @@ Der C++-Standard schlägt vor, dass ein Compiler eine Diagnose ausgeben soll, we
 Ohne diese Fehlermeldung wird das folgende Programm kompiliert, jedoch wird eine Endlosschleife erstellt:
 
 ```cpp
-class X { 
-public: 
-    X(int, int); 
+class X {
+public:
+    X(int, int);
     X(int v) : X(v){}
-}; 
+};
 ```
 
 Delegieren Sie an einen anderen Konstruktor, um die Endlosschleife zu vermeiden:
 
 ```cpp
-class X { 
-public: 
+class X {
+public:
 
-    X(int, int); 
-    X(int v) : X(v, 0) {} 
-}; 
+    X(int, int);
+    X(int v) : X(v, 0) {}
+};
 ```
 
 ### <a name="offsetof-with-constant-expressions"></a>offsetof mit konstanten Ausdrücken
 
-[offsetof](c-runtime-library/reference/offsetof-macro.md) wurde bisher mithilfe eines Makros implementiert, das [reinterpret_cast](cpp/reinterpret-cast-operator.md) erfordert. Dies ist in Kontexten nicht zulässig, die einen konstanten Ausdruck erfordern, jedoch war es bisher im Microsoft C++-Compiler gültig. Das offsetof-Makro, das im Rahmen von STL enthalten ist, verwendet eine intrinsische Compiler-Funktion (**__builtin_offsetof**), jedoch haben viele Personen den Makro-Trick verwendet, um **offsetof** selbst zu definieren.  
+[offsetof](c-runtime-library/reference/offsetof-macro.md) wurde bisher mithilfe eines Makros implementiert, das [reinterpret_cast](cpp/reinterpret-cast-operator.md) erfordert. Dies ist in Kontexten nicht zulässig, die einen konstanten Ausdruck erfordern, jedoch war es bisher im Microsoft C++-Compiler gültig. Das offsetof-Makro, das im Rahmen von STL enthalten ist, verwendet eine intrinsische Compiler-Funktion (**__builtin_offsetof**), jedoch haben viele Personen den Makro-Trick verwendet, um **offsetof** selbst zu definieren.
 
 In Visual Studio 2017 Version 15.8 beschränkt der Compiler die Bereiche, in denen „reinterpret_casts“ im Standardmodus auftreten kann, damit der Code einfacher dem Standardverhalten von C++ entspricht. Im Modus [/permissive-](build/reference/permissive-standards-conformance.md) sind die Einschränkungen sogar strenger. Das Verwenden des Ergebnisses von offsetof an Orten, die konstante Ausdrücke erfordern, kann in Code resultieren, der die Warnung C4644 *usage of the macro-based offsetof pattern in constant expressions is non-standard; use offsetof defined in the C++ standard library instead* (Die Verwendung des makrobasierten offsetof-Musters in konstanten Ausdrücken ist kein Standardvorgehen. Verwenden Sie stattdessen das in der C++-Standardbibliothek definierte offsetof-Muster.) oder die Warnung C2975 *invalid template argument, expected compile-time constant expression* (Ungültiges Vorlagenargument, konstanter Kompilierzeitausdruck erwartet) auslöst.
 
-Der folgende Code löst in den Modi **/default** und **/std:c++17** die Warnung C4644 und im Modus **/permissive-** die Warnung C2975 aus: 
+Der folgende Code löst in den Modi **/default** und **/std:c++17** die Warnung C4644 und im Modus **/permissive-** die Warnung C2975 aus:
 
 ```cpp
-struct Data { 
-    int x; 
-}; 
+struct Data {
+    int x;
+};
 
-// Common pattern of user-defined offsetof 
-#define MY_OFFSET(T, m) (unsigned long long)(&(((T*)nullptr)->m)) 
+// Common pattern of user-defined offsetof
+#define MY_OFFSET(T, m) (unsigned long long)(&(((T*)nullptr)->m))
 
-int main() 
+int main()
 
-{ 
-    switch (0) { 
-    case MY_OFFSET(Data, x): return 0; 
-    default: return 1; 
-    } 
-} 
+{
+    switch (0) {
+    case MY_OFFSET(Data, x): return 0;
+    default: return 1;
+    }
+}
 ```
 
 Verwenden Sie **offsetof** wie über \<cstddef>: definiert, um den Fehler zu beheben.
 
 ```cpp
-#include <cstddef>  
+#include <cstddef>
 
-struct Data { 
-    int x; 
-};  
+struct Data {
+    int x;
+};
 
-int main() 
-{ 
-    switch (0) { 
-    case offsetof(Data, x): return 0; 
-    default: return 1; 
-    } 
-} 
+int main()
+{
+    switch (0) {
+    case offsetof(Data, x): return 0;
+    default: return 1;
+    }
+}
 ```
-
 
 ### <a name="cv-qualifiers-on-base-classes-subject-to-pack-expansion"></a>CV-Qualifizierer auf Basisklassen, die einer Paketerweiterung unterliegen
 
-Vorherige Versionen des Microsoft C++-Compilers haben nicht erkannt, dass Basisklassen über CV-Qualifizierer verfügen, wenn sie ebenfalls Paketerweiterungen unterliegen. 
+Vorherige Versionen des Microsoft C++-Compilers haben nicht erkannt, dass Basisklassen über CV-Qualifizierer verfügen, wenn sie ebenfalls Paketerweiterungen unterliegen.
 
-In Visual Studio 2017 Version 15.8 löst der folgende Code im Modus **/permissive-** die Warnung C3770 *'const S': is not a valid base class* („const S“: ist keine gültige Basisklasse) aus: 
+In Visual Studio 2017 Version 15.8 löst der folgende Code im Modus **/permissive-** die Warnung C3770 *'const S': is not a valid base class* („const S“: ist keine gültige Basisklasse) aus:
 
 ```cpp
-template<typename... T> 
-class X : public T... { };  
+template<typename... T>
+class X : public T... { };
 
-class S { };  
+class S { };
 
-int main() 
-{ 
-    X<const S> x; 
-} 
+int main()
+{
+    X<const S> x;
+}
 ```
+
 ### <a name="template-keyword-and-nested-name-specifiers"></a>template-Schlüsselwort und geschachtelte Namensspezifizierer
 
-Im Modus **/permissive-** erfordert der Compiler nun das Schlüsselwort `template`, der einem Vorlagennamen vorangestellt wird, wenn dieser hinter einem abhängigen geschachtelten Namensspezifizierer steht. 
+Im Modus **/permissive-** erfordert der Compiler nun das Schlüsselwort `template`, der einem Vorlagennamen vorangestellt wird, wenn dieser hinter einem abhängigen geschachtelten Namensspezifizierer steht.
 
 Der folgende Code löst im Modus **/permissive-** nun die Fehlermeldung C7510: *'foo': use of dependent template name must be prefixed with 'template'. note: see reference to class template instantiation 'X<T>' being compiled* („foo“: Bei Verwendung eines abhängigen Vorlagennamens muss das Präfix „template“ vorangestellt werden. Hinweis: Siehe Verweis auf die kompilierte Klassenvorlageninstanziierung „X“) aus:
 
 ```cpp
 template<typename T> struct Base
 {
-    template<class U> void foo() {} 
-}; 
+    template<class U> void foo() {}
+};
 
-template<typename T> 
-struct X : Base<T> 
-{ 
-    void foo() 
-    { 
-        Base<T>::foo<int>(); 
-    } 
-}; 
+template<typename T>
+struct X : Base<T>
+{
+    void foo()
+    {
+        Base<T>::foo<int>();
+    }
+};
 ```
 
 Fügen Sie der Anweisung `Base<T>::foo<int>();` das Schlüsselwort `template` wie im folgenden Beispiel gezeigt hinzu, um den Fehler zu beheben:
@@ -1822,16 +1822,16 @@ template<typename T> struct Base
 {
     template<class U> void foo() {}
 };
- 
-template<typename T> 
-struct X : Base<T> 
-{ 
-    void foo() 
-    { 
+
+template<typename T>
+struct X : Base<T>
+{
+    void foo()
+    {
         // Add template keyword here:
-        Base<T>::template foo<int>(); 
-    } 
-}; 
+        Base<T>::template foo<int>();
+    }
+};
 ```
 
 ## <a name="see-also"></a>Siehe auch

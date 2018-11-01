@@ -1,28 +1,17 @@
 ---
-title: Zentrieren von Steuerelementen in einem Dialogfeld (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Zentrieren von Steuerelementen in einem Dialogfeld (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - controls [C++], aligning
 - dialog box controls [C++], placement
 - Center in Dialog command
 ms.assetid: 501fed94-af47-4845-9faa-a6642d7eb786
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: f21517d9a8151c853586b2fc4a0beb1821b114e9
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 30bb8b7275294dd8edaf6a994bc4e59ea6c313b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317003"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537515"
 ---
 # <a name="centering-controls-in-a-dialog-box-c"></a>Zentrieren von Steuerelementen in einem Dialogfeld (C++)
 
@@ -44,6 +33,6 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anordnung von Steuerelementen in Dialogfeldern](../windows/arrangement-of-controls-on-dialog-boxes.md)  
-[Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)  
+[Anordnung von Steuerelementen in Dialogfeldern](../windows/arrangement-of-controls-on-dialog-boxes.md)<br/>
+[Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)<br/>
 [Steuerelemente](../mfc/controls-mfc.md)

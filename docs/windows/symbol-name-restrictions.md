@@ -1,30 +1,19 @@
 ---
-title: Beschränkungen bei Symbolnamen | Microsoft-Dokumentation
-ms.custom: ''
+title: Beschränkungen bei Symbolnamen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.restrictions.name
-dev_langs:
-- C++
 helpviewer_keywords:
 - symbol names
 - symbols [C++], names
 - restrictions, symbol names
 ms.assetid: 4ae7f695-ca86-4f4b-989a-fe6f89650ff7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 67527717319c4b571ff4b72b83d718c0ac149586
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 7b6d8804dc7f3c9768dc9e86fde0e708f67c43fe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313324"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624853"
 ---
 # <a name="symbol-name-restrictions"></a>Beschränkungen bei Symbolnamen
 
@@ -60,6 +49,6 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Ändern eines Symbols oder Symbolnamens (ID)](../windows/changing-a-symbol-or-symbol-name-id.md)  
-[Beschränkungen bei Symbolwerten](../windows/symbol-value-restrictions.md)  
+[Ändern eines Symbols oder Symbolnamens (ID)](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
+[Beschränkungen bei Symbolwerten](../windows/symbol-value-restrictions.md)<br/>
 [Vordefinierte Symbol-IDs](../windows/predefined-symbol-ids.md)

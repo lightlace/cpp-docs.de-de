@@ -1,10 +1,6 @@
 ---
-title: IAtlStringMgr-Klasse | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
+title: IAtlStringMgr-Klasse
+ms.date: 10/18/2018
 f1_keywords:
 - IAtlStringMgr
 - ATLSIMPSTR/ATL::IAtlStringMgr
@@ -13,23 +9,17 @@ f1_keywords:
 - ATLSIMPSTR/ATL::Free
 - ATLSIMPSTR/ATL::GetNilString
 - ATLSIMPSTR/ATL::Reallocate
-dev_langs:
-- C++
 helpviewer_keywords:
 - shared classes, IAtlStringMgr
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9586c0f15dc098688020acae0fb96c0e363ad285
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: de0bd720d1806c7950fa9aecc2db6e72aeb1fb4c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756375"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493934"
 ---
 # <a name="iatlstringmgr-class"></a>IAtlStringMgr-Klasse
 
@@ -73,10 +63,10 @@ CStringData* Allocate(int nAllocLength,int nCharSize) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*nAllocLength*  
+*nAllocLength*<br/>
 Die Anzahl der Zeichen im neuen Speicherblock.
 
-*nCharSize*  
+*nCharSize*<br/>
 Die Größe (in Byte) von der Art der Zeichen, die von der Zeichenfolge-Manager verwendet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -124,7 +114,7 @@ void Free(CStringData* pData) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*pData*  
+*pData*<br/>
 Ein Zeiger zum Speicherblock freigegeben werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -151,31 +141,31 @@ Ein Zeiger auf die `CStringData` Objekt verwendet, um eine leere Zeichenfolge da
 Rufen Sie diese Funktion, um eine Darstellung eine leere Zeichenfolge zurück.
 
 > [!NOTE]
->  Beim Implementieren eines benutzerdefinierten zeichenfolgenmanagers muss diese Funktion niemals Fehler verursachen. Sie können sicherstellen, dass dies durch die Einbettung von einer Instanz von `CNilStringData` in der Manager-Zeichenfolgenklasse, und Rückgabe einen Zeiger an diese Instanz.
+> Beim Implementieren eines benutzerdefinierten zeichenfolgenmanagers muss diese Funktion niemals Fehler verursachen. Sie können sicherstellen, dass dies durch die Einbettung von einer Instanz von `CNilStringData` in der Manager-Zeichenfolgenklasse, und Rückgabe einen Zeiger an diese Instanz.
 
 > [!NOTE]
->  Verwendungsbeispiele finden Sie unter [Speicherverwaltung und CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
+> Verwendungsbeispiele finden Sie unter [Speicherverwaltung und CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-##  <a name="reallocate"></a>  IAtlStringMgr::Reallocate
+## <a name="reallocate"></a>  IAtlStringMgr::Reallocate
 
 Ordnet eine zeichenfolgendatenstruktur neu.
 
 ```
-CStringData* Reallocate(  
-CStringData* pData,
-int nAllocLength,
-int nCharSize) throw();
+CStringData* Reallocate(
+    CStringData* pData,
+    int nAllocLength,
+    int nCharSize) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*pData*  
+*pData*<br/>
 Zeiger auf den von diesem Speicher-Manager zuvor belegten Arbeitsspeicher.
 
-*nAllocLength*  
+*nAllocLength*<br/>
 Die Anzahl der Zeichen im neuen Speicherblock.
 
-*nCharSize*  
+*nCharSize*<br/>
 Die Größe (in Byte) von der Art der Zeichen, die von der Zeichenfolge-Manager verwendet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -189,10 +179,9 @@ Mit dieser Funktion wird zum Ändern der Größe des vorhandenen Speicherblocks,
 Rufen Sie [IAtlStringMgr::Free](#free) um den von dieser Methode belegten Arbeitsspeicher freizugeben.
 
 > [!NOTE]
->  Verwendungsbeispiele finden Sie unter [Speicherverwaltung und CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
+> Verwendungsbeispiele finden Sie unter [Speicherverwaltung und CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
+[Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [Freigegebene ATL-/MFC-Klassen](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

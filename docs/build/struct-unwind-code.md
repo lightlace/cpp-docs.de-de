@@ -1,23 +1,13 @@
 ---
-title: Struktur UNWIND_CODE | Microsoft-Dokumentation
-ms.custom: ''
+title: struct UNWIND_CODE
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 104955d8-7e33-4c5a-b0c6-3254648f0af3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1da6f078741c598099e71da9164f54b56da3f355
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1ba3cc76c521e158ba448ac2e4e1beda9b3da35a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726647"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643234"
 ---
 # <a name="struct-unwindcode"></a>struct UNWIND_CODE
 
@@ -112,17 +102,17 @@ Diese entladungscode wird immer in ein dummy-Prolog angezeigt, die nie ausgefüh
 
 1. POP-RIP-Absenderadresse vom Anfang des Stapels in *Temp*
 
-2. SS mithilfe von Push übertragen
+1. SS mithilfe von Push übertragen
 
-3. Alte RSP mithilfe von Push übertragen
+1. Alte RSP mithilfe von Push übertragen
 
-4. Der EFLAGS
+1. Der EFLAGS
 
-5. CS mithilfe von Push übertragen
+1. CS mithilfe von Push übertragen
 
-6. Mithilfe von Push übertragen *Temp*
+1. Mithilfe von Push übertragen *Temp*
 
-7. Übertragen von Fehlercode (falls Op Info 1 ist)
+1. Übertragen von Fehlercode (falls Op Info 1 ist)
 
 Die simulierten `UWOP_PUSH_MACHFRAME` Vorgang dekrementiert RSP um 40 (Op Info ist 0) oder 48 (Op Info ist 1).
 

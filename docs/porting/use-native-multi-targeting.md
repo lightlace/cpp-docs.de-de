@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb9d7b950e4c38ea53db6e459edfa1a179eb971d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 3c66fe63d97f623011b3dade46266a4a9d8d83b1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578359"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064420"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Verwenden von nativen Zielversionen in Visual Studio, um alte Projekte zu erstellen
 
@@ -52,11 +52,11 @@ Wenn Sie Ihre Projekte upgraden möchten, müssen Sie diese Eigenschaft entferne
 
 Wenn Sie kein Upgrade durchführen möchten, führt Visual Studio keine Änderungen an Ihrer Projektmappe oder den Projektdateien durch. Wenn Sie das Projekt erstellen, werden die generierten Binärdateien vollständig kompatibel mit jenen, die Sie mit der älteren Version von Visual Studio erstellt haben. Der Grund dafür ist, da Visual Studio den gleiche C++-Compiler verwendet und die gleichen Bibliotheken verknüpft, mit der Ihre ältere IDE ausgestattet war. Darum weist das Dialogfeld für das Upgrade Sie auch darauf hin, die ältere Visual Studio-Version zu behalten, wenn Sie auf **Abbrechen** klicken.
 
-## <a name="instructions-for-visual-studio-2008"></a>Anweisungen für Visual Studio 2008  
-  
+## <a name="instructions-for-visual-studio-2008"></a>Anweisungen für Visual Studio 2008
+
 Visual Studio 2008 verfügte über ein eigenes dediziertes Buildsystem für C++ mit dem Namen **VCBuild**. Ab Visual Studio 2010 wurden Visual C++-Projekte so verändert, dass sie fortan **MSBuild** verwendeten. Dies bedeutet, dass Sie ein Update durchführen müssen, damit Sie Ihre Visual Studio 2008-Projekte in der neuesten Visual Studio-Version erstellen können. Ihr aktualisiertes Projekt erstellt noch immer Binärdateien, die mit den Binärdateien, die mithilfe der IDE von Visual Studio 2008 erstellt wurden, voll kompatibel sind.
 
-Zunächst müssen Sie zusätzlich zur aktuellen Visual Studio-Version Visual Studio 2010 auf demselben Computer erstellen, auf dem sich Visual Studio 2008 befindet. Nur Visual Studio 2010 installiert die **MSBuild**-Skripts, die für Visual Studio 2008-Projekte erforderlich sind. 
+Zunächst müssen Sie zusätzlich zur aktuellen Visual Studio-Version Visual Studio 2010 auf demselben Computer erstellen, auf dem sich Visual Studio 2008 befindet. Nur Visual Studio 2010 installiert die **MSBuild**-Skripts, die für Visual Studio 2008-Projekte erforderlich sind.
 
 Als Nächstes müssen Sie Ihre Visual Studio 2008-Projektmappen und -Projekte auf die aktuelle Version von Visual Studio aktualisieren. Es wird empfohlen, eine Sicherung Ihrer Projekt- und Projektmappendateien zu erstellen, bevor Sie das Upgrade durchführen. Damit der Upgradeprozess beginnen kann, öffnen Sie die Projektmappe in der aktuellen Version von Visual Studio. Wenn Sie die Aufforderung zur Aktualisierung erhalten, überprüfen Sie die dargestellte Information, und wählen Sie dann **OK** aus, um mit dem Upgrade zu beginnen. Wenn Sie mehr als ein Projekt in der Projektmappe haben, müssen Sie den Assistenten zum Erstellen neuer VCXPROJ-Projektdateien parallel mit den vorhandenen VCPROJ-Dateien aktualisieren. Solange Sie noch über eine Kopie der ursprünglichen SLN-Datei verfügen, hat das Upgrade keinen anderen Einfluss auf Ihre vorhandenen Visual Studio 2008-Projekte.
 
@@ -70,19 +70,11 @@ Nach dieser Änderung wird der Visual Studio 2008-Compiler und die -Bibliotheken
 
 Sie besitzen womöglich ein älteres Visual C++-Projekt, dass Sie nicht upgraden können oder wollen. Sie verfügen jedoch nicht über die Plattformtoolsetversion, die mit Ihrem Projekt übereinstimmt. Um das Toolset zu erhalten, können Sie in diesem Fall die kostenlose Visual Studio Community- oder Express-Edition der von Ihnen benötigten Version installieren. Jede Version von Visual Studio ab Visual Studio 2008 kann den Compiler, die Tools und Bibliotheken installieren, die auf diese Version der aktuellen Visual Studio-Version ausgerichtet sein muss. Durchsuchen Sie das Microsoft Download Center, um eine bestimmte Visual Studio-Version zu finden und herunterzuladen. Stellen Sie sicher, dass Sie die C++-Installationsoptionen während des Setups auswählen. Führen Sie nach dem Abschluss des Setups diese Visual Studio-Version aus, um Updates zu installieren. Prüfen Sie auch auf mögliche Windows Update-Änderungen, die erforderlich sein könnten. Dieser Updateüberprüfungsprozess muss möglicherweise mehrmals wiederholt werden, damit Sie jedes Update erhalten.
 
-Nachfolgend finden Sie einige der Visual Studio-Downloads, die Sie benötigen könnten:
-
-  - [Microsoft Visual Studio Community 2015](https://www.microsoft.com/download/details.aspx?id=48146)  
-  - [Microsoft Visual Studio Express 2013 für Windows Desktop mit Update 5](https://www.microsoft.com/download/details.aspx?id=48131)  
-  - [Microsoft Visual Studio Express 2012 für Windows Desktop](https://www.microsoft.com/download/details.aspx?id=34673)  
-  - [Visual Studio 2012 Update 5](https://www.microsoft.com/download/details.aspx?id=34673)  
-  - [Microsoft Visual C++ 2010 Express U (Webinstaller)](https://download.microsoft.com/download/1/D/9/1D9A6C0E-FC89-43EE-9658-B9F0E3A76983/vc_web.exe)  
-  - [Microsoft Visual Studio 2010 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=23691)  
-  - [Microsoft Visual C++ 2008 Express mit SP1 (Webinstaller)](https://go.microsoft.com/?linkid=7729279)  
+Die derzeit verfügbaren Downloads, finden Sie unter [Herunterladen älterer Visual Studio-Software](https://visualstudio.microsoft.com/vs/older-downloads/).
 
 Wenn diese Produkte installiert sind, wird die Eigenschaftendropdownliste **Plattformtoolset** im Dialogfeld **Eigenschaftenseiten** automatisch aktualisiert, um die verfügbaren Toolsets anzuzeigen. Sie können jetzt die neueste Version von Visual Studio verwenden, um Projekte für diese älteren Versionen des Toolsets zu erstellen, ohne sie zu konvertieren oder zu aktualisieren.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Aktualisieren von Projekten von früheren Versionen von Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
-[Verbesserungen bei der Übereinstimmung mit C++-Standards in Visual C++ 2017](../cpp-conformance-improvements-2017.md)  
+[Aktualisieren von Projekten von früheren Versionen von Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Verbesserungen bei der Übereinstimmung mit C++-Standards in Visual C++ 2017](../cpp-conformance-improvements-2017.md)

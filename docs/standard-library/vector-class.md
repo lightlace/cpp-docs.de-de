@@ -1,10 +1,6 @@
 ---
-title: vector-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: vector-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - vector/std::vector::allocator_type
 - vector/std::vector::const_iterator
@@ -47,8 +43,6 @@ f1_keywords:
 - vector/std::vector::shrink_to_fit
 - vector/std::vector::size
 - vector/std::vector::swap
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::vector [C++], allocator_type
 - std::vector [C++], const_iterator
@@ -92,16 +86,12 @@ helpviewer_keywords:
 - std::vector [C++], size
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2fdb8fea78d62202dd460f5dd219f2686bd99c6b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 501f6547378b5461fe314410f54a6cc7d64c1221
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710230"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50583364"
 ---
 # <a name="vector-class"></a>vector-Klasse
 
@@ -370,7 +360,7 @@ Das letzte Element des Vektors. Wenn der Vektor leer ist, ist der Rückgabewert 
 
 Wenn `back` dem Rückgabewert von `const_reference` zugewiesen wird, kann das Vektorobjekt nicht geändert werden. Wenn `back` dem Rückgabewert von `reference` zugewiesen wird, kann das Vektorobjekt geändert werden.
 
-Wenn [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) beim Kompilieren als 1 oder 2 definiert ist, tritt beim Zugriff auf ein Element in einem leeren Vektor ein Laufzeitfehler auf.  Weitere Informationen finden Sie unter [Überprüfte Iteratoren](../standard-library/checked-iterators.md) .
+Wenn [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) beim Kompilieren als 1 oder 2 definiert ist, tritt beim Zugriff auf ein Element in einem leeren Vektor ein Laufzeitfehler auf.  Weitere Informationen finden Sie unter [Checked Iterators](../standard-library/checked-iterators.md) .
 
 ### <a name="example"></a>Beispiel
 
@@ -402,7 +392,6 @@ Gibt einen Iterator mit wahlfreiem Zugriff für das erste Element im Vektor zur�
 
 ```cpp
 const_iterator begin() const;
-
 
 iterator begin();
 ```
@@ -443,7 +432,7 @@ int main()
 
     cout << "The vector c1 now contains elements:";
     c1_Iter = c1.begin();
- *c1_Iter = 20;
+    *c1_Iter = 20;
     for (; c1_Iter != c1.end(); c1_Iter++)
     {
         cout << " " << *c1_Iter;
@@ -789,7 +778,6 @@ Gibt einen Zeiger auf das erste Element im Vektor zurück.
 ```cpp
 const_pointer data() const;
 
-
 pointer data();
 ```
 
@@ -825,7 +813,7 @@ int main()
 
     cout << "The vector c1 now contains elements:";
     c1 ptr = c1.data();
- *c1 ptr = 20;
+    *c1 ptr = 20;
     for (size_t n = c1.size(); 0 < n; --n, c1 ptr++)
     {
         cout << " " << *c1 ptr;
@@ -1165,7 +1153,7 @@ Ein Verweis auf das erste Element im Vektorobjekt. Wenn der Vektor leer ist, ist
 
 Wenn `front` dem Rückgabewert von `const_reference` zugewiesen wird, kann das Vektorobjekt nicht geändert werden. Wenn der Rückgabewert von `front` einem **reference** zugewiesen wird, kann das Vektorobjekt geändert werden.
 
-Wenn [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) beim Kompilieren als 1 oder 2 definiert ist, tritt beim Zugriff auf ein Element in einem leeren Vektor ein Laufzeitfehler auf.  Weitere Informationen finden Sie unter [Überprüfte Iteratoren](../standard-library/checked-iterators.md) .
+Wenn [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) beim Kompilieren als 1 oder 2 definiert ist, tritt beim Zugriff auf ein Element in einem leeren Vektor ein Laufzeitfehler auf.  Weitere Informationen finden Sie unter [Checked Iterators](../standard-library/checked-iterators.md) .
 
 ### <a name="example"></a>Beispiel
 
@@ -1410,7 +1398,7 @@ Wenn die angegebene Position größer oder gleich der Größe des Containers ist
 
 Wenn `operator[]` dem Rückgabewert von `const_reference` zugewiesen wird, kann das Vektorobjekt nicht geändert werden. Wenn der Rückgabewert von `operator[]` einem Verweis zugewiesen wird, kann das Vektorobjekt geändert werden.
 
-Wenn [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) beim Kompilieren als 1 oder 2 definiert ist, tritt beim Zugriff auf ein Element außerhalb des Vektorobjekts ein Laufzeitfehler auf.  Weitere Informationen finden Sie unter [Überprüfte Iteratoren](../standard-library/checked-iterators.md) .
+Wenn [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) beim Kompilieren als 1 oder 2 definiert ist, tritt beim Zugriff auf ein Element außerhalb des Vektorobjekts ein Laufzeitfehler auf.  Weitere Informationen finden Sie unter [Checked Iterators](../standard-library/checked-iterators.md) .
 
 ### <a name="example"></a>Beispiel
 
@@ -1516,17 +1504,17 @@ Ein **pointer**-Typ kann zum Ändern des Werts eines Elements verwendet werden.
 
 int main( )
 {
-   using namespace std;
-   vector<int> v;
-   v.push_back( 11 );
-   v.push_back( 22 );
+    using namespace std;
+    vector<int> v;
+    v.push_back( 11 );
+    v.push_back( 22 );
 
-   vector<int>::pointer ptr = &v[0];
-   cout << *ptr << endl;
-   ptr++;
-   cout << *ptr << endl;
- *ptr = 44;
-   cout << *ptr << endl;
+    vector<int>::pointer ptr = &v[0];
+    cout << *ptr << endl;
+    ptr++;
+    cout << *ptr << endl;
+    *ptr = 44;
+    cout << *ptr << endl;
 }
 ```
 
@@ -1554,7 +1542,6 @@ Fügt ein Element am Ende des Vektors hinzu.
 
 ```cpp
 void push_back(const T& Val);
-
 
 void push_back(T&& Val);
 ```

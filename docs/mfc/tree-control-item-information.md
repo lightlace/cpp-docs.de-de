@@ -1,5 +1,5 @@
 ---
-title: Informationen über die Elemente Struktur | Microsoft Docs
+title: Struktur Informationen über die Elemente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,23 +15,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 724e9d7c4e0ee7db80f024c30e363612cb40fed1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a61d6dbf2084288d6015e8fc2c08bfc2283d4ba4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385364"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391019"
 ---
 # <a name="tree-control-item-information"></a>Informationen über die Elemente im Struktursteuerelement
-Struktursteuerelemente ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) eine Reihe von Memberfunktionen, die Informationen zu den Elementen im Steuerelement abzurufen. Die [GetItem](../mfc/reference/ctreectrl-class.md#getitem) Memberfunktion ruft einiger oder aller Daten, die einem Element zugeordnet. Diese Daten können es sich um den Text des Elements, Status, Bilder, Anzahl der untergeordneten Elemente und einem anwendungsdefinierten 32-Bit-Datenwert enthalten. Es gibt auch eine [SetItem](../mfc/reference/ctreectrl-class.md#setitem) -Funktion, die einige oder alle Daten, die einem Element zugeordneten festlegen kann.  
-  
- Die [GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate), [GetItemText](../mfc/reference/ctreectrl-class.md#getitemtext), [GetItemData](../mfc/reference/ctreectrl-class.md#getitemdata), und [GetItemImage](../mfc/reference/ctreectrl-class.md#getitemimage) Memberfunktionen rufen einzelne Attribute von einem Element. Jede dieser Funktionen verfügt über eine entsprechende Set-Funktion für die Attribute eines Elements festlegen.  
-  
- Die [GetNextItem](../mfc/reference/ctreectrl-class.md#getnextitem) Memberfunktion Ruft das Element der Struktur-Steuerelement, das die angegebene Beziehung zum aktuellen Element trägt. Diese Funktion kann ein Element übergeordneten, das nächste oder vorherige sichtbare Element der ersten untergeordneten Elements und usw. abrufen. Es gibt auch Memberfunktionen zum Traversieren der Struktur verwendet werden: [GetRootItem](../mfc/reference/ctreectrl-class.md#getrootitem), [GetFirstVisibleItem](../mfc/reference/ctreectrl-class.md#getfirstvisibleitem), [GetNextVisibleItem](../mfc/reference/ctreectrl-class.md#getnextvisibleitem), [GetPrevVisibleItem](../mfc/reference/ctreectrl-class.md#getprevvisibleitem), [GetChildItem](../mfc/reference/ctreectrl-class.md#getchilditem), [GetNextSiblingItem](../mfc/reference/ctreectrl-class.md#getnextsiblingitem), [GetPrevSiblingItem](../mfc/reference/ctreectrl-class.md#getprevsiblingitem), [GetParentItem](../mfc/reference/ctreectrl-class.md#getparentitem), [GetSelectedItem](../mfc/reference/ctreectrl-class.md#getselecteditem), und [GetDropHilightItem](../mfc/reference/ctreectrl-class.md#getdrophilightitem).  
-  
- Die [Memberfunktion GetItemRect](../mfc/reference/ctreectrl-class.md#getitemrect) Memberfunktion Ruft das umschließende Rechteck für ein Strukturelement-Steuerelement ab. Die [GetCount](../mfc/reference/ctreectrl-class.md#getcount) und [GetVisibleCount](../mfc/reference/ctreectrl-class.md#getvisiblecount) Memberfunktionen abzurufen, die Anzahl der Elemente in einem Strukturansicht-Steuerelement und Anzahl der Elemente, die aktuell sichtbaren des Strukturansicht-Steuerelements im Fenster bzw. sind. Sie können sicherstellen, dass ein bestimmtes Element sichtbar, durch Aufrufen ist der [EnsureVisible](../mfc/reference/ctreectrl-class.md#ensurevisible) Memberfunktion.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+
+Struktursteuerelemente ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) eine Reihe von Memberfunktionen, die Informationen über die Elemente im Steuerelement abzurufen. Die [GetItem](../mfc/reference/ctreectrl-class.md#getitem) Memberfunktion Ruft ab, einige oder alle Daten, die einem Element zugeordnet. Diese Daten können es sich um den Text des Elements, Status, Bilder, die Anzahl der untergeordneten Elemente und einen anwendungsdefinierten 32-Bit-Daten-Wert enthalten. Es gibt auch eine [SetItem](../mfc/reference/ctreectrl-class.md#setitem) -Funktion, die einige oder alle Daten, die einem Element zugeordneten festlegen kann.
+
+Die [GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate), [GetItemText](../mfc/reference/ctreectrl-class.md#getitemtext), [GetItemData](../mfc/reference/ctreectrl-class.md#getitemdata), und [GetItemImage](../mfc/reference/ctreectrl-class.md#getitemimage) Memberfunktionen Abrufen einzelner Attribute von einem Element. Jede dieser Funktionen verfügt über eine entsprechende Set-Funktion für die Attribute eines Elements festlegen.
+
+Die [GetNextItem](../mfc/reference/ctreectrl-class.md#getnextitem) Memberfunktion Ruft das Element der Struktur-Steuerelement, das die angegebene Beziehung zum aktuellen Element trägt. Diese Funktion kann ein Element des übergeordneten, das nächste oder vorherige sichtbare Element, das erste untergeordnete Element und usw. abgerufen werden. Es gibt auch Memberfunktionen zum Durchlaufen der Struktur: [GetRootItem](../mfc/reference/ctreectrl-class.md#getrootitem), [GetFirstVisibleItem](../mfc/reference/ctreectrl-class.md#getfirstvisibleitem), [GetNextVisibleItem](../mfc/reference/ctreectrl-class.md#getnextvisibleitem), [GetPrevVisibleItem](../mfc/reference/ctreectrl-class.md#getprevvisibleitem), [GetChildItem](../mfc/reference/ctreectrl-class.md#getchilditem), [GetNextSiblingItem](../mfc/reference/ctreectrl-class.md#getnextsiblingitem), [GetPrevSiblingItem](../mfc/reference/ctreectrl-class.md#getprevsiblingitem), [GetParentItem](../mfc/reference/ctreectrl-class.md#getparentitem), [GetSelectedItem](../mfc/reference/ctreectrl-class.md#getselecteditem), und [GetDropHilightItem](../mfc/reference/ctreectrl-class.md#getdrophilightitem).
+
+Die [Memberfunktion GetItemRect](../mfc/reference/ctreectrl-class.md#getitemrect) Memberfunktion Ruft das umschließende Rechteck für ein Strukturelement-Steuerelement. Die [GetCount](../mfc/reference/ctreectrl-class.md#getcount) und [GetVisibleCount](../mfc/reference/ctreectrl-class.md#getvisiblecount) Memberfunktionen abzurufen, die Anzahl der Elemente in einem Strukturansicht-Steuerelement und eine Anzahl von Elementen, die derzeit sichtbar in der Strukturansicht im Fenster bzw. sind. Sie können sicherstellen, dass ein bestimmtes Element sichtbar, durch den Aufruf ist der [EnsureVisible](../mfc/reference/ctreectrl-class.md#ensurevisible) Member-Funktion.
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden von CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
+[Steuerelemente](../mfc/controls-mfc.md)
 

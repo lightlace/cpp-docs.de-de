@@ -1,14 +1,8 @@
 ---
-title: 'Tn038 Implementieren von: MFC-OLE-IUnknown | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Tn038 Implementieren von: MFC-OLE-IUnknown'
 ms.date: 06/28/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
-dev_langs:
-- C++
 helpviewer_keywords:
 - aggregation macros [MFC]
 - COM interfaces, base interface
@@ -24,16 +18,12 @@ helpviewer_keywords:
 - END_INTERFACE_PART macro [MFC]
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: df624c04b1fd5a80b6e54928adb8f3ca7424920a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0722ce294e6a088446b8ba681810cf3f7885f122
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215175"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50571430"
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038: Implementieren von MFC/OLE-IUnknown
 
@@ -399,7 +389,6 @@ class CAggrExample : public CCmdTarget
 public:
     CAggrExample();
 
-
 protected:
     LPUNKNOWN m_lpAggrInner;
     virtual BOOL OnCreateAggregates();
@@ -414,7 +403,7 @@ CAggrExample::CAggrExample()
 }
 
 BOOL CAggrExample::OnCreateAggregates()
-{ 
+{
     // wire up aggregate with correct controlling unknown
     m_lpAggrInner = CoCreateInstance(CLSID_Example,
         GetControllingUnknown(), CLSCTX_INPROC_SERVER,
@@ -471,10 +460,10 @@ DWORD ExternalQueryInterface(
 
 #### <a name="parameters"></a>Parameter
 
-*lpIID*  
+*lpIID*<br/>
 Ein ferner Zeiger auf eine IID (das erste Argument für QueryInterface)
 
-*ppvObj*  
+*ppvObj*<br/>
 Ein Zeiger auf ein IUnknown*-Objekt (das zweite Argument für QueryInterface)
 
 #### <a name="remarks"></a>Hinweise
@@ -520,10 +509,10 @@ END_INTERFACE_PART(localClass)
 
 #### <a name="parameters"></a>Parameter
 
-*localClass*  
+*localClass*<br/>
 Der Name der Klasse, die die Schnittstelle implementiert
 
-*iface*  
+*iface*<br/>
 Der Name der Schnittstelle, die diese Klasse implementiert
 
 #### <a name="remarks"></a>Hinweise
@@ -560,10 +549,10 @@ END_INTERFACE_MAP
 
 #### <a name="parameters"></a>Parameter
 
-*theClass*  
+*theClass*<br/>
 Die Klasse, in der die Schnittstellenzuordnung definiert werden soll
 
-*Basisklasse*  
+*Basisklasse*<br/>
 Die Klasse, von der *TheClass* abgeleitet.
 
 #### <a name="remarks"></a>Hinweise
@@ -578,13 +567,13 @@ INTERFACE_PART(theClass, iid, localClass)
 
 #### <a name="parameters"></a>Parameter
 
-*theClass*  
+*theClass*<br/>
 Der Name der Klasse, die die Schnittstellenzuordnung enthält.
 
-*IID*  
+*IID*<br/>
 Die `IID`, die der eingebetteten Klasse zugeordnet werden soll.
 
-*localClass*  
+*localClass*<br/>
 Der Name der lokalen Klasse (ohne das "X").
 
 #### <a name="remarks"></a>Hinweise
@@ -626,10 +615,10 @@ INTERFACE_AGGREGATE(theClass, theAggr)
 
 #### <a name="parameters"></a>Parameter
 
-*theClass*  
+*theClass*<br/>
 Der Name der Klasse, die die Schnittstellenzuordnung enthält,
 
-*theAggr*  
+*theAggr*<br/>
 Der Name der Membervariable, die aggregiert werden soll.
 
 #### <a name="remarks"></a>Hinweise
@@ -638,5 +627,5 @@ Dieses Makro wird verwendet, um dem Framework mitzuteilen, dass die Klasse ein A
 
 ## <a name="see-also"></a>Siehe auch
 
-[Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)  
-[Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)  
+[Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)<br/>
+[Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)

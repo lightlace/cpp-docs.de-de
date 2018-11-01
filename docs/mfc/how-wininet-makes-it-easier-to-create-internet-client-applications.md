@@ -1,60 +1,52 @@
 ---
-title: Wie WinInet das Erstellen von Internetclientanwendungen erleichtert | Microsoft Docs
-ms.custom: ''
+title: Vereinfachtes Erstellen von Internetclientanwendungen mit WinInet
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Windows Sockets [MFC], vs. WinInet
 - WinInet classes [MFC], vs. WinSock
 - WinInet classes [MFC], Internet client applications
 ms.assetid: dc0f9f47-3184-4e7a-8074-2c63e0359885
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 09a7427374de085de9bd2872c8b1368a6b961b35
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2bca338aa2a1b18e8c9ab41a887678767cf6c8c6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344255"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636857"
 ---
 # <a name="how-wininet-makes-it-easier-to-create-internet-client-applications"></a>Vereinfachtes Erstellen von Internetclientanwendungen mit WinInet
-Die Win32-Interneterweiterungen oder WinInet, bieten Zugriff auf allgemeine Internetprotokolle, einschließlich Gopher, FTP und HTTP. Mit WinInet können Sie Internetclientanwendungen auf einer höheren Ebene der Programmierung, ohne dass für den Umgang mit WinSock, TCP/IP oder den Details zu bestimmten Internetprotokolle schreiben. WinInet bietet einen konsistenten Satz von Funktionen für alle drei Protokolle, eine vertraute Oberfläche für die Win32-API. Diese Konsistenz werden Änderungen am Code vornehmen, wenn die zugrunde liegenden Protokoll (beispielsweise von FTP auf HTTP) ändert benötigten minimiert.  
-  
- Visual C++ bietet zwei Möglichkeiten für die Verwendung von WinInet. Können Sie die Win32-Internet-Funktionen direkt aufrufen (siehe die OLE-Dokumentation im Windows SDK für Weitere Informationen) oder WinInet durch Verwenden der [MFC-WinInet-Klassen](../mfc/mfc-classes-for-creating-internet-client-applications.md).  
-  
- **Sie können WinInet zu verwenden:**  
-  
--   HTML-Seiten herunterladen.  
-  
-     HTTP ist ein Protokoll zum Übertragen von HTML-Seiten von einem Server an einem Clientbrowser verwendet.  
-  
--   FTP-Anforderungen zum Hochladen oder Herunterladen von Dateien oder Abrufen von Verzeichnislisten gesendet werden.  
-  
-     Eine typische-Anforderung ist eine anonyme Anmeldung zum Herunterladen einer Datei.  
-  
--   Verwenden des Gopher-Menüsystem für den Zugriff auf Ressourcen im Internet.  
-  
-     Menüelemente können mehrere Typen, z. B. anderen Menüs, eine indizierte Datenbank, die Sie durchsuchen können, eine Newsgroup oder eine Datei sein.  
-  
- Für alle drei Protokolle eine Verbindung herstellen, stellen Sie Anforderungen an den Server und schließen Sie die Verbindung.  
-  
- **Die MFC-WinInet-Klassen erleichtern:**  
-  
--   Lesen Sie die Informationen über HTTP, FTP und Gopher-Server genauso einfach wie das Lesen von Dateien von einer Festplatte.  
-  
--   Verwenden Sie HTTP, FTP und Gopher Protokolle ohne Programmierung direkt WinSock oder TCP/IP.  
-  
-     Entwickler, die die Win32-Internet-Funktionen verwenden, müssen nicht mit TCP/IP "oder" Windows-Sockets vertraut sein. Sie können weiterhin Programmieren auf Socketebene, WinSock und TCP/IP-Protokolle direkt, verwenden jedoch es ist auch einfacher, die MFC-WinInet-Klassen, um den Zugriff auf HTTP, FTP und Gopherprotokolle über das Internet zu verwenden. Für viele allgemeine Vorgänge müssen Entwickler nicht die Details eines bestimmten Protokolls kennen, die sie verwenden.  
-  
- Viele Vorgänge, die von Ihrem Computer als Client auf anderen Computern im Internet ausgeführt werden können, können eine lange dauern. Die Geschwindigkeit von diesen Vorgängen wird in der Regel durch die Geschwindigkeit Ihrer Netzwerkverbindung beschränkt, aber sie können auch von anderem Netzwerkdatenverkehr und die Komplexität des Vorgangs beeinflusst werden. Herstellen einer Verbindung mit einem FTP-Remoteserver erfordert z. B. an, dass Ihre Computer uns zunächst nach dem Namen des Server her, um seine Adresse zu suchen. Die Anwendung wird dann versucht, für die Verbindung mit dem Server an dieser Adresse. Sobald die Verbindung geöffnet ist, werden Ihre Computer und dem Remoteserver initiiert eine Konversation mit dem File Transfer Protocol, bevor Sie die Verbindung tatsächlich zum Abrufen von Dateien verwenden können.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Win32-Interneterweiterungen (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
- [Vereinfachtes Erstellen von Internetclientanwendungen mit MFC](../mfc/how-mfc-makes-it-easier-to-create-internet-client-applications.md)
+
+Die Win32-Interneterweiterungen oder WinInet, bieten Zugriff auf allgemeine Internetprotokolle, einschließlich Gopher, FTP und HTTP. Mit WinInet können Sie Internet-Clientanwendungen auf einer höheren Ebene der Programmierung, für den Umgang mit WinSock, TCP/IP oder die Details von bestimmten Internetprotokollen ohne schreiben. WinInet bietet einen konsistenten Satz von Funktionen für alle drei Protokolle, die eine vertraute Oberfläche für die Win32-API. Diese Konsistenz wird minimiert, Änderungen am Code vornehmen, wenn das zugrunde liegende Protokoll geändert wird (z. B. von FTP auf HTTP) benötigen.
+
+Visual C++ bietet zwei Möglichkeiten, WinInet verwenden. Können Sie die Win32-Internet-Funktionen direkt aufrufen (siehe die OLE-Dokumentation im Windows SDK für Weitere Informationen) oder WinInet durch Verwenden der [MFC-WinInet-Klassen](../mfc/mfc-classes-for-creating-internet-client-applications.md).
+
+**Sie können die WinInet zu verwenden:**
+
+- Laden Sie die HTML-Seiten.
+
+   HTTP ist ein Protokoll zum Übertragen von HTML-Seiten von einem Server an einem Clientbrowser verwendet.
+
+- Senden Sie die FTP-Anforderungen zum Hochladen oder Herunterladen von Dateien oder Verzeichnislisten zu erhalten.
+
+   Eine typische Anforderung ist eine anonyme Anmeldung zum Herunterladen einer Datei.
+
+- Verwenden des Gopher-Menü-System für den Zugriff auf Ressourcen im Internet.
+
+   Menüelemente können es sich um verschiedene Typen, einschließlich der anderen Menüs, eine indizierte Datenbank, die Sie durchsuchen können, eine Newsgroup oder eine Datei.
+
+Für alle drei Protokolle Sie eine Verbindung herstellen, Anforderungen an den Server, und schließen Sie die Verbindung.
+
+**Die MFC-WinInet-Klassen vereinfachen:**
+
+- Lesen Sie die Informationen über HTTP, FTP und Gopher-Server so einfach wie das Lesen von Dateien von einer Festplatte.
+
+- Verwenden Sie HTTP, FTP und Gopher Protokolle ohne direkten Programmieren auf WinSock oder TCP/IP.
+
+   Entwickler, die die Win32-Internet-Funktionen verwenden, müssen nicht mit TCP/IP "oder" Windows-Sockets vertraut sein. Können Sie weiterhin Programmieren auf Socketebene, WinSock und TCP/IP-Protokolle direkt verwenden, aber es ist sogar noch einfacher mit den MFC-WinInet-Klassen, die Zugriff auf HTTP, FTP und Gopherprotokolle über das Internet. Für viele häufige Vorgänge müssen Entwickler nicht wissen, die Details der das bestimmte Protokoll, die sie verwenden.
+
+Viele Vorgänge, die von Ihrem Computer als Client auf anderen Computern im Internet ausgeführt werden können sehr lange dauern. Die Geschwindigkeit von diesen Vorgängen wird in der Regel durch die Geschwindigkeit Ihrer Netzwerkverbindung beschränkt, aber sie können auch von Datenverkehr im Netzwerk und der Komplexität des Vorgangs beeinflusst werden. Herstellen einer Verbindung mit einem FTP-Remoteserver erfordert z. B. an, dass es sich bei Ihrem Computer zunächst den Namen des Servers zum Suchen der Adresse nachschlagen. Ihre Anwendung versucht, auf dem Server an dieser Adresse eine Verbindung herstellen. Nachdem die Verbindung geöffnet ist, initiiert Ihren Computer und RAS-Server eine Unterhaltung mit File Transfer Protocol, bevor Sie die Verbindung tatsächlich verwenden können, um Dateien abzurufen.
+
+## <a name="see-also"></a>Siehe auch
+
+[Win32-Interneterweiterungen (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
+[Vereinfachtes Erstellen von Internetclientanwendungen mit MFC](../mfc/how-mfc-makes-it-easier-to-create-internet-client-applications.md)
 

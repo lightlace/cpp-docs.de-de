@@ -1,10 +1,6 @@
 ---
-title: strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l | Microsoft-Dokumentation
-ms.custom: ''
+title: strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wcstok_s_l
 - _mbstok_s_l
@@ -35,8 +31,6 @@ f1_keywords:
 - wcstok_s
 - _mbstok_s
 - _strtok_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _strtok_s_l function
 - _mbstok_s_l function
@@ -53,23 +47,19 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 467184acd7ef78ee52f1605d23f2d3b80e6adb83
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: a8b87e0b2d4ecf9dc6fb1b52f512406a6df0622c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451965"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50517454"
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
 Sucht das nächste Token in einer Zeichenfolge unter Verwendung des aktuellen Gebietsschemas oder eines Gebietsschemas, das übergeben wird. Diese Versionen von [strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l](strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md) enthalten Sicherheitsverbesserungen, wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
 > [!IMPORTANT]
-> **_mbstok_s** und **_mbstok_s_l** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbstok_s** und **_mbstok_s_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -123,40 +113,40 @@ Eine Zeichenfolge mit dem mindestens ein Token gefunden.
 Der Satz von Trennzeichen, die zu verwendenden Zeichen.
 
 *context*<br/>
-Verwendet, um Positionsinformationen zwischen Aufrufen an die Funktion zu speichern.
+Verwendet, um Positionsinformationen zwischen Aufrufen der Funktion zu speichern.
 
 *locale*<br/>
 Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf das nächste Token in gefunden *str*. Gibt **NULL** Wenn keine weiteren Token gefunden werden. Jeder Aufruf ändert *str* durch das Ersetzen von Trennzeichen, das nach dem zurückgegebenen Token auftritt, ein Null-Zeichen.
+Gibt einen Zeiger auf das nächste Token finden Sie im *str*. Gibt **NULL** Wenn keine weiteren Token gefunden wurden. Jeder Aufruf ändert *str* durch Ersetzen von Trennzeichen, das nach dem zurückgegebenen Token auftritt, ein Null-Zeichen.
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
 |*str*|*Trennzeichen*|*context*|Rückgabewert|**errno**|
 |----------------|------------------|---------------|------------------|-------------|
-|**NULL**|alle|Zeiger auf einen NULL-Zeiger|**NULL**|**EINVAL**|
-|alle|**NULL**|alle|**NULL**|**EINVAL**|
-|alle|alle|**NULL**|**NULL**|**EINVAL**|
+|**NULL**|any|Zeiger auf einen NULL-Zeiger|**NULL**|**EINVAL**|
+|any|**NULL**|any|**NULL**|**EINVAL**|
+|any|any|**NULL**|**NULL**|**EINVAL**|
 
-Wenn *str* ist **NULL** jedoch *Kontext* ist ein Zeiger auf einen gültigen Kontextzeiger kein Fehler vorliegt.
+Wenn *str* ist **NULL** aber *Kontext* ist ein Zeiger auf einen gültigen Kontextzeiger, kein Fehler vorliegt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Strtok_s** Funktionsreihe sucht das nächste Token in *str*. Der Satz von Zeichen im *Trennzeichen* gibt mögliche Trennzeichen des Tokens in gefunden werden *str* für den aktuellen Aufruf. **Wcstok_s** und **_mbstok_s** sind Breitzeichen- und multibytezeichenversionen von **Strtok_s**. Die Argumente und Rückgabewerte von **Wcstok_s** und **_wcstok_s_l** sind Breitzeichen-Zeichenfolgen, die von **_mbstok_s** und **_mbstok_s_l**sind Multibyte Zeichenfolgen. Anderenfalls verhalten sich diese Funktionen identisch.
+Die **Strtok_s** Funktionsreihe sucht das nächste Token in *str*. Der Satz von Zeichen im *Trennzeichen* gibt mögliche Trennzeichen des Tokens in zu suchenden *str* für den aktuellen Aufruf. **Wcstok_s** und **_mbstok_s** sind Breitzeichen- und multibytezeichenversionen von Versionen von **Strtok_s**. Die Argumente und Rückgabewerte von **Wcstok_s** und **_wcstok_s_l** sind Breitzeichen-Zeichenfolgen, die von **_mbstok_s** und **_mbstok_s_l**sind Multibyte Zeichenfolgen. Anderenfalls verhalten sich diese Funktionen identisch.
 
-Diese Funktion überprüft ihre Parameter. Wenn ein Fehlerzustand gemäß der Fehlerzustandstabelle auftritt, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** auf **EINVAL** inventurüberprüfung **NULL**.
+Diese Funktion überprüft ihre Parameter. Wenn ein Fehlerzustand gemäß der Fehlerzustandstabelle auftritt, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EINVAL** und zurückgeben **NULL**.
 
-Beim ersten Aufruf von **Strtok_s** die Funktion vorangestellte Trennzeichen überspringt und gibt einen Zeiger auf das erste Token in *str*, beendet das Token mit einem Null-Zeichen. Weitere Token können der Rest des geholt werden *str* durch eine Reihe von Aufrufen an **Strtok_s**. Jeder Aufruf von **Strtok_s** ändert *str* durch ein Null-Zeichen nach dem zurückgegebenen Token einfügt. Die *Kontext* -Zeiger erfasst, aus welcher Zeichenfolge gelesen wird und, in dem in der Zeichenfolge das nächste Token gelesen werden. Lesen Sie das nächste Token von *str*, Aufrufen **Strtok_s** mit einer **NULL** Wert für die *str* Argument, und übergeben Sie den gleichen  *Kontext* Parameter. Die **NULL** *str* Argument bewirkt, dass **Strtok_s** , suchen Sie nach dem nächsten Token im geänderten *str*. Die *Trennzeichen* Argument kann jeden beliebigen Wert annehmen zwischen zwei aufrufen zur nächsten, damit der Satz von Trennzeichen variieren kann.
+Beim ersten Aufruf von **Strtok_s** die Funktion vorangestellte Trennzeichen überspringt und gibt einen Zeiger auf das erste Token in *str*, beendet das Token mit einem Null-Zeichen. Weitere Token können in den restlichen geholt werden *str* durch eine Reihe von Aufrufen an **Strtok_s**. Jeder Aufruf von **Strtok_s** ändert *str* durch ein Null-Zeichen nach dem zurückgegebenen Token einfügt. Die *Kontext* -Zeiger erfasst, aus welcher Zeichenfolge gelesen wird und wo in der Zeichenfolge das nächste Token gelesen werden. Lesen Sie das nächste Token von *str*, rufen Sie **Strtok_s** mit eine **NULL** Wert für die *str* -Argument, und übergeben Sie den gleichen  *Kontext* Parameter. Die **NULL** *str* Argument bewirkt, dass **Strtok_s** , suchen Sie nach dem nächsten Token im geänderten *str*. Die *Trennzeichen* -Argument kann einen beliebigen Wert aus einem Aufruf an den nächsten annehmen, so, dass der Satz von Trennzeichen variieren kann.
 
-Da die *Kontext* Parameter hat Vorrang vor der im verwendeten statischen Puffer **Strtok** und **_strtok_l**, es ist möglich, zwei Zeichenfolgen im gleichen Thread gleichzeitig analysiert werden.
+Da die *Kontext* Parameter hat Vorrang vor den statischen Puffer verwendet **Strtok** und **_strtok_l**, es ist möglich, zwei Zeichenfolgen im gleichen Thread gleichzeitig analysiert.
 
-Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebietsschema des Threads für dieses vom Gebietsschema abhängiges Verhalten. Die Versionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch stattdessen den *Gebietsschema* Parameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Threadgebietsschema für dieses vom Gebietsschema abhängige Verhalten. Die Versionen mit dem **_l** -Suffix sind beinahe identisch, verwenden sie stattdessen die *Gebietsschema* Parameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**strtok_s**|\<string.h>|
 |**_strtok_s_l**|\<string.h>|

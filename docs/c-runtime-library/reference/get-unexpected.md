@@ -1,10 +1,6 @@
 ---
-title: _get_unexpected | Microsoft-Dokumentation
-ms.custom: ''
+title: _get_unexpected
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_unexpected
 apilocation:
@@ -23,27 +19,21 @@ f1_keywords:
 - __get_unexpected
 - _get_unexpected
 - get_unexpected
-dev_langs:
-- C++
 helpviewer_keywords:
 - __get_unexpected function
 - get_unexpected function
 - _get_unexpected function
 ms.assetid: a5f7a7a0-18e0-485e-953d-db291068a1e8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5e6f768d6f384e5b3b39e8d2884a7a7cb0362915
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 225158ecab60a5997ebedbad107eb43d82189234
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451653"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519404"
 ---
 # <a name="getunexpected"></a>_get_unexpected
 
-Gibt den beenden-Routine aufgerufen werden, indem Sie **unerwarteter**.
+Gibt die beendigungsroutine, die aufgerufen werden, indem **unerwartete**.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,7 +47,7 @@ Gibt einen Zeiger auf die Funktion zurück, die durch [set_unexpected](set-unexp
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_get_unexpected**|\<eh.h>|
 

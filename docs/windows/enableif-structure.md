@@ -1,28 +1,18 @@
 ---
-title: EnableIf-Struktur | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: EnableIf-Struktur
+ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::EnableIf
-dev_langs:
-- C++
 helpviewer_keywords:
 - EnableIf structure
 ms.assetid: 7825b283-e6b2-4f39-a4b9-c03bcd431b8e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0e71c43ca9222b350c07dae5f299f4a6f469bf84
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e42ebfefe37342f29a00547beb258a405b3c1668
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42578556"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487282"
 ---
 # <a name="enableif-structure"></a>EnableIf-Struktur
 
@@ -31,24 +21,19 @@ Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-template <
-   bool b,
-   typename T = void
->
-
+template <bool b, typename T = void>
 struct EnableIf;
-template <
-   typename T
->
+
+template <typename T>
 struct EnableIf<true, T>;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Ein Typ.
 
-*b*  
+*b*<br/>
 Ein boolescher Ausdruck.
 
 ## <a name="remarks"></a>Hinweise

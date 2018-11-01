@@ -1,28 +1,17 @@
 ---
-title: Hinzufügen eines Steuerelements zu einem Dialogfeld (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Hinzufügen eines Steuerelements zu einem Dialogfeld (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog.dialog
-dev_langs:
-- C++
 helpviewer_keywords:
 - dialog boxes [C++], adding controls to
 ms.assetid: b2a26d19-093f-49ca-93da-fef00dfbb381
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: e60c64777ea4b5726721a267bcdd700cd71b4214
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2d6698cbf9228b3ab9344c166d4477cf3b251b8c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317900"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50436256"
 ---
 # <a name="adding-a-control-to-a-dialog-box-c"></a>Hinzufügen eines Steuerelements zu einem Dialogfeld (C++)
 
@@ -52,6 +41,6 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)  
-[Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](../windows/adding-event-handlers-for-dialog-box-controls.md)  
+[Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)<br/>
+[Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
 [Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)

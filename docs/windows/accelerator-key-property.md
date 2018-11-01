@@ -1,26 +1,15 @@
 ---
-title: Accelerator-Schlüsseleigenschaft (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Accelerator-Schlüsseleigenschaft (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Key property
 ms.assetid: d1570cd9-b414-4cd6-96bd-47c38281eaca
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 9fecfd06e26d9c49c3442e5b8011f6183a96cec0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 0649917900610b8a45c59de05c031ca36d6fcc91
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314637"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529176"
 ---
 # <a name="accelerator-key-property-c"></a>Accelerator-Schlüsseleigenschaft (C++)
 
@@ -54,6 +43,6 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Eigenschaften für Zugriffstasten](../windows/setting-accelerator-properties.md)  
-[Änderungen innerhalb einer Zugriffstastentabelle](../windows/editing-in-an-accelerator-table.md)  
+[Festlegen von Eigenschaften für Zugriffstasten](../windows/setting-accelerator-properties.md)<br/>
+[Änderungen innerhalb einer Zugriffstastentabelle](../windows/editing-in-an-accelerator-table.md)<br/>
 [Zugriffstasten-Editor](../windows/accelerator-editor.md)

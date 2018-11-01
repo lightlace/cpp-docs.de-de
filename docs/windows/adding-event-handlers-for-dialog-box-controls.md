@@ -1,29 +1,18 @@
 ---
-title: Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente (C++)
 ms.date: 06/28/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Dialog Editor [C++], adding event handlers to controls
 - controls [C++], event handlers
 - dialog box controls [C++], events
 - event handlers, for dialog box controls
 ms.assetid: f9c70f24-ea6f-44df-82eb-78a2deaee769
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 5caec6d9d77d743fa1a8455819b813364bde27d0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: e6539b7e0f8ab4d0b1b60ecfbd80685473534316
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317055"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487177"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls-c"></a>Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente (C++)
 
@@ -76,11 +65,11 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Standardereignisse für Steuerelemente](../windows/default-control-events.md)  
-[Definieren von Membervariablen für Dialogfeld-Steuerelemente](../windows/defining-member-variables-for-dialog-controls.md)  
-[Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)  
-[Hinzufügen einer Klasse](../ide/adding-a-class-visual-cpp.md)  
-[Hinzufügen einer Memberfunktion](../ide/adding-a-member-function-visual-cpp.md)  
-[Adding a Member Variable (Hinzufügen einer Membervariablen)](../ide/adding-a-member-variable-visual-cpp.md)  
-[Überschreiben einer virtuellen Funktion](../ide/overriding-a-virtual-function-visual-cpp.md)  
-[MFC Message Handler (MFC-Meldungshandler)](../mfc/reference/adding-an-mfc-message-handler.md)  
+[Standardereignisse für Steuerelemente](../windows/default-control-events.md)<br/>
+[Definieren von Membervariablen für Dialogfeld-Steuerelemente](../windows/defining-member-variables-for-dialog-controls.md)<br/>
+[Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)<br/>
+[Hinzufügen einer Klasse](../ide/adding-a-class-visual-cpp.md)<br/>
+[Hinzufügen einer Memberfunktion](../ide/adding-a-member-function-visual-cpp.md)<br/>
+[Adding a Member Variable (Hinzufügen einer Membervariablen)](../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[Überschreiben einer virtuellen Funktion](../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[MFC Message Handler (MFC-Meldungshandler)](../mfc/reference/adding-an-mfc-message-handler.md)

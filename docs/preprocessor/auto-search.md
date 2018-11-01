@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cea1e1fa31c21a399dace0a58983f97cc87988c
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 7ef8fbd52aada21295f1eb88dd98216e83366af7
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540431"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235632"
 ---
 # <a name="autosearch"></a>auto_search
-**C++-spezifisch**  
-  
-Gibt an, dass beim Verweis auf eine Typbibliothek mit `#import` selbst auf eine andere Typbibliothek verweist, und der Compiler ist möglich, eine implizite `#import` für die andere Typbibliothek.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-auto_search  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- **Ende C++-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch 
 
-[#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)   
+**C++-spezifisch**
+
+Gibt an, dass beim Verweis auf eine Typbibliothek mit `#import` selbst auf eine andere Typbibliothek verweist, und der Compiler ist möglich, eine implizite `#import` für die andere Typbibliothek.
+
+## <a name="syntax"></a>Syntax
+
+```
+auto_search
+```
+
+## <a name="remarks"></a>Hinweise
+
+**Ende C++-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)

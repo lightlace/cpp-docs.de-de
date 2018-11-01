@@ -1,29 +1,19 @@
 ---
-title: ATL-OLE DB-Consumer-Assistent | Microsoft-Dokumentation
-ms.custom: ''
+title: ATL-OLE DB-Consumer-Assistent
 ms.date: 08/31/2018
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.consumer.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB consumers
 - connection strings [C++], OLE DB consumers
 - ATL OLE DB Consumer Wizard
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1fcaffc3eba3711accdfa13d311f5284e564b703
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 835b3e6246741c3859f51e017686531f450db194
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020432"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499566"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL-OLE DB-Consumer-Assistent
 
@@ -36,7 +26,7 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
 
 - **Datenquelle**
 
-   Die **Datenquelle** Schaltfläche können Sie die angegebene Datenquelle, die mit dem angegebenen OLE DB-Anbieter einrichten. Wenn Sie auf diese Schaltfläche, klicken Sie auf die **Datenlinkeigenschaften** Dialogfeld wird angezeigt. Weitere Informationen zum Erstellen von Verbindungszeichenfolgen und die **Datenlinkeigenschaften** im Dialogfeld finden Sie unter [Data Link-API – Übersicht](/previous-versions/windows/desktop/ms718102\(v=vs.85\)) in der Windows SDK-Dokumentation.
+   Die **Datenquelle** Schaltfläche können Sie die angegebene Datenquelle, die mit dem angegebenen OLE DB-Anbieter einrichten. Wenn Sie auf diese Schaltfläche, klicken Sie auf die **Datenlinkeigenschaften** Dialogfeld wird angezeigt. Weitere Informationen zum Erstellen von Verbindungszeichenfolgen und die **Datenlinkeigenschaften** im Dialogfeld finden Sie unter [Data Link-API – Übersicht](/previous-versions/windows/desktop/ms718102) in der Windows SDK-Dokumentation.
 
    Die folgende zusätzliche Informationen beschreibt die Registerkarten in der **Datenlinkeigenschaften** Dialogfeld.
 
@@ -52,7 +42,7 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
 
       1. **Wählen Sie aus, oder geben Sie einen Servernamen:** klicken Sie auf das Dropdown-Listenfeld-Menü, um alle registrierten Daten-Server im Netzwerk angezeigt, und wählen Sie eine.
 
-      2. **Geben Sie Informationen zum Anmelden an den Server:** Geben Sie einen Benutzernamen und Kennwort, mit dem Datenserver anzumelden.
+      1. **Geben Sie Informationen zum Anmelden an den Server:** Geben Sie einen Benutzernamen und Kennwort, mit dem Datenserver anzumelden.
 
          > [!NOTE]
          > Es gibt ein Sicherheitsproblem mit der Funktion "Speichern des Kennworts zulassen" des Dialogfelds Eigenschaften für Datenlinks. Es gibt zwei Optionsfelder, in "Geben Sie Informationen zum Anmelden an den Server":
@@ -63,7 +53,7 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
          > Bei Auswahl von **bestimmten Benutzernamen und bestimmtes Kennwort**, Sie haben die Möglichkeit, speichern Sie das Kennwort (mit der Sie das Kontrollkästchen für "Speichern des Kennworts zulassen"); diese Option ist jedoch nicht sicher. Es wird empfohlen, die Sie auswählen, **Windows NT integrated Security verwenden**; diese Option ist sicherer, da das Kennwort verschlüsselt.
          > Es kann jedoch Situationen, in denen gewünschten "Speichern von Kennwort zulassen". Z. B. Wenn Sie eine Bibliothek mit einer privaten datenbanklösung freigeben, sollten Sie nicht greifen direkt auf die Datenbank jedoch stattdessen eine Anwendung der mittleren Ebene verwenden, überprüfen den Benutzer (über den Authentifizierungsschema, das Sie auswählen), und klicken Sie dann die Art der Daten zu beschränken für den Benutzer verfügbar.
 
-      3. **Wählen Sie die Datenbank auf dem Server:** klicken Sie auf das Dropdown-Listenfeld-Menü, um alle registrierten Datenbanken auf dem Datenserver angezeigt, und wählen Sie eine.
+      1. **Wählen Sie die Datenbank auf dem Server:** klicken Sie auf das Dropdown-Listenfeld-Menü, um alle registrierten Datenbanken auf dem Datenserver angezeigt, und wählen Sie eine.
 
          \- oder –
 
@@ -80,13 +70,13 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
          **Verwenden Sie die Verbindungszeichenfolge:** Geben Sie eine Verbindungszeichenfolge, die Sie bereits erworben haben, oder klicken Sie auf die **erstellen** Schaltfläche der **Auswählen einer Datenquelle** Dialogfeld wird angezeigt. Vybrat zdroj DAT-Datei oder der Computer, und klicken Sie auf **OK**.
 
          > [!NOTE]
-         > Sie können eine Verbindungszeichenfolge abrufen, indem Sie in Server-Explorer die Eigenschaften einer vorhandenen Verbindung anzeigen, oder Sie können eine Verbindung erstellen, durch Doppelklicken auf **Verbindung hinzufügen** im Server-Explorer.
+         > Sie erhalten eine Verbindungszeichenfolge durch Anzeigen der Eigenschaften einer vorhandenen Verbindung in **Server-Explorer**, oder Sie können eine Verbindung erstellen, durch Doppelklicken auf **Verbindung hinzufügen** in **Server Explorer**.
 
-      2. **Geben Sie Informationen zum Anmelden an den Server:** Geben Sie einen Benutzernamen und Kennwort, mit dem Datenserver anzumelden.
+      1. **Geben Sie Informationen zum Anmelden an den Server:** Geben Sie einen Benutzernamen und Kennwort, mit dem Datenserver anzumelden.
 
-      3. Geben Sie den ersten Katalog verwenden.
+      1. Geben Sie den ersten Katalog verwenden.
 
-      4. Klicken Sie auf **Verbindung testen**; Wenn der Test erfolgreich ist, klicken Sie auf **OK**. Wenn dies nicht der Fall ist, überprüfen Sie Ihre Anmeldeinformationen, versuchen Sie es einer anderen Datenbank oder einen anderen Datenserver.
+      1. Klicken Sie auf **Verbindung testen**; Wenn der Test erfolgreich ist, klicken Sie auf **OK**. Wenn dies nicht der Fall ist, überprüfen Sie Ihre Anmeldeinformationen, versuchen Sie es einer anderen Datenbank oder einen anderen Datenserver.
 
    - **Erweiterte** Registerkarte
 
@@ -177,7 +167,7 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
 
 - **Unterstützung**
 
-   Wählen Sie die Kontrollkästchen, um die Art der Updates, die im Consumer unterstützt werden (der Standardwert ist "None") anzugeben. Folgendes wird festgelegt, [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892\(v=vs.85\)) und die entsprechenden Einträge für [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676\(v=vs.85\)) -Zuordnung in der Eigenschaft festgelegt.
+   Wählen Sie die Kontrollkästchen, um die Art der Updates, die im Consumer unterstützt werden (der Standardwert ist "None") anzugeben. Folgendes wird festgelegt, [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892) und die entsprechenden Einträge für [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676) -Zuordnung in der Eigenschaft festgelegt.
 
    - **Änderung**
 
@@ -195,4 +185,4 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
 
 [ATL-OLE DB-Consumers](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
 [Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Verbindungszeichenfolgen und Datenverknüpfungen (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))
+[Verbindungszeichenfolgen und Datenverknüpfungen (OLE DB)](/previous-versions/windows/desktop/ms718376)

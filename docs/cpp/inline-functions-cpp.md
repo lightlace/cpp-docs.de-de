@@ -1,7 +1,7 @@
 ---
 title: Inlinefunktionen (C++) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -9,6 +9,10 @@ f1_keywords:
 - __forceinline_cpp
 - __inline_cpp
 - inline_cpp
+- __inline
+- _inline
+- __forceinline
+- _forceinline
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31738407b788f69998681442f15a8f1c104477a3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 21f3d74a7b640e203a8a5882710849c98ba5b40f
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017820"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163587"
 ---
 # <a name="inline-functions-c"></a>Inlinefunktionen [C++]
 
@@ -84,7 +88,7 @@ Die Verwendung von Inlinefunktionen kann das Programm schneller machen, da so de
 
 Der Compiler behandelt die Inlineerweiterungsoptionen und -Schlüsselwörter als Vorschläge. Es gibt keine Garantie, dass Funktionen inline gestellt werden. Sie können den Compiler auf eine bestimmte Funktion, nicht zwingen, trotz der **"__forceinline"** Schlüsselwort. Beim Kompilieren mit **"/ CLR"**, der Compiler wird nicht Inline eine Funktion, wenn Sicherheitsattribute auf die Funktion angewendet.
 
-Die **Inline** Schlüsselwort ist nur in C++ verfügbar. Die **"__inline"** und **"__forceinline"** Schlüsselwörter sind in C und C++ verfügbar. Für die Kompatibilität mit früheren Versionen **_inline** ist ein Synonym für **"__inline"**.
+Die **Inline** Schlüsselwort ist nur in C++ verfügbar. Die **"__inline"** und **"__forceinline"** Schlüsselwörter sind in C und C++ verfügbar. Für die Kompatibilität mit früheren Versionen **_inline** und **_forceinline** sind Synonyme für **"__inline"**, und **"__forceinline"** , wenn Compileroption [/Za \(spracherweiterungen deaktivieren)](../build/reference/za-ze-disable-language-extensions.md) angegeben ist.
 
 Die **Inline** -Schlüsselwort weist den Compiler an, dass die Inlineerweiterung bevorzugt wird. Jedoch kann der Compiler eine separate Instanz der Funktion erstellen (instanziieren) und Standardaufrufbindungen erstellen, anstatt den Code inline einzufügen. Zwei Fälle, in denen dies auftreten kann, sind:
 

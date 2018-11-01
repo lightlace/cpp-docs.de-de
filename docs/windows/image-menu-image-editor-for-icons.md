@@ -1,28 +1,17 @@
 ---
-title: Abbildung der Menü (C++-Bildbearbeitung für Symbole) | Microsoft-Dokumentation
-ms.custom: ''
+title: Menü "Bild" (C++-Bildbearbeitung für Symbole)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image menu
 ms.assetid: ac2b4d53-1919-4fd1-a0af-d3c085c45af2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ca37981352ddcef639b3e8ed5bbd00a14f56f126
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e015e7d3e814ce4563abc3cc75d7799eb65bd86a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700712"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596585"
 ---
 # <a name="image-menu-c-image-editor-for-icons"></a>Menü "Bild" (C++-Bildbearbeitung für Symbole)
 
@@ -102,5 +91,5 @@ Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)

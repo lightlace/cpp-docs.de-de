@@ -17,84 +17,89 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb253ab776565339aeaeade26d6d355b4f6a742b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fd0c5e0bab6142ec52fc0c8e8a1a292b46cc2460
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699999"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375548"
 ---
 # <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
-**Microsoft-spezifisch**  
-  
- Generiert die X64 erweiterte Version der Konvertieren von 64-Bit-Ganzzahl, mit einfacher Genauigkeit Floating-Point-Skalarwert (`cvtsi2ss`) Anweisung.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-__m128 _mm_cvtsi64x_ss(   
-   __m128 a,   
-   __int64 b   
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+
+**Microsoft-spezifisch**
+
+Generiert die X64 erweiterte Version der Konvertieren von 64-Bit-Ganzzahl, mit einfacher Genauigkeit Floating-Point-Skalarwert (`cvtsi2ss`) Anweisung.
+
+## <a name="syntax"></a>Syntax
+
+```
+__m128 _mm_cvtsi64x_ss( 
+   __m128 a, 
+   __int64 b 
+);
+```
+
+#### <a name="parameters"></a>Parameter
+
 *a*<br/>
-[in] Ein `__m128` Struktur, die vier Werte für Gleitkommazahlen mit einfacher Genauigkeit enthält.  
-  
+[in] Ein `__m128` Struktur, die vier Werte für Gleitkommazahlen mit einfacher Genauigkeit enthält.
+
 *b*<br/>
-[in] Eine 64-Bit-Ganzzahl in einen Gleitkommawert konvertiert werden soll.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Ein `__m128` -Struktur, deren erste Gleitkommawert das Ergebnis der Konvertierung ist. Die anderen drei Werte beim Übertragungsvorgang kopiert werden gegenüber `a`.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Systemintern|Architektur|  
-|---------------|------------------|  
-|`_mm_cvtsi64x_ss`|x64|  
-  
- **Headerdatei** \<intrin.h >  
-  
-## <a name="remarks"></a>Hinweise  
- Die `__m128` Werttypstruktur ein XMM-Register, sodass dieser systeminternen Funktion als Wert kann `b` registrieren im Systemspeicher in einer XMM verschoben werden soll.  
-  
- Diese Routine ist nur als systeminterne Funktion verfügbar.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// _mm_cvtsi64x_ss.cpp  
-// processor: x64  
-  
-#include <intrin.h>  
-#include <stdio.h>  
-  
-#pragma intrinsic(_mm_cvtsi64x_ss)  
-  
-int main()  
-{  
-    __m128 a;  
-    __int64 b = 54;  
-  
-    a.m128_f32[0] = 0;  
-    a.m128_f32[1] = 0;  
-    a.m128_f32[2] = 0;  
-    a.m128_f32[3] = 0;  
-    a = _mm_cvtsi64x_ss(a, b);  
-  
-    printf_s( "%lf %lf %lf %lf\n",  
-              a.m128_f32[0], a.m128_f32[1],   
-              a.m128_f32[2], a.m128_f32[3] );  
-}  
-```  
-  
-```Output  
-54.000000 0.000000 0.000000 0.000000  
-```  
-  
-**Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [__m128](../cpp/m128.md)   
- [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[in] Eine 64-Bit-Ganzzahl in einen Gleitkommawert konvertiert werden soll.
+
+## <a name="return-value"></a>Rückgabewert
+
+Ein `__m128` -Struktur, deren erste Gleitkommawert das Ergebnis der Konvertierung ist. Die anderen drei Werte beim Übertragungsvorgang kopiert werden gegenüber `a`.
+
+## <a name="requirements"></a>Anforderungen
+
+|Systemintern|Architektur|
+|---------------|------------------|
+|`_mm_cvtsi64x_ss`|x64|
+
+**Headerdatei** \<intrin.h >
+
+## <a name="remarks"></a>Hinweise
+
+Die `__m128` Werttypstruktur ein XMM-Register, sodass dieser systeminternen Funktion als Wert kann `b` registrieren im Systemspeicher in einer XMM verschoben werden soll.
+
+Diese Routine ist nur als systeminterne Funktion verfügbar.
+
+## <a name="example"></a>Beispiel
+
+```
+// _mm_cvtsi64x_ss.cpp
+// processor: x64
+
+#include <intrin.h>
+#include <stdio.h>
+
+#pragma intrinsic(_mm_cvtsi64x_ss)
+
+int main()
+{
+    __m128 a;
+    __int64 b = 54;
+
+    a.m128_f32[0] = 0;
+    a.m128_f32[1] = 0;
+    a.m128_f32[2] = 0;
+    a.m128_f32[3] = 0;
+    a = _mm_cvtsi64x_ss(a, b);
+
+    printf_s( "%lf %lf %lf %lf\n",
+              a.m128_f32[0], a.m128_f32[1],
+              a.m128_f32[2], a.m128_f32[3] );
+}
+```
+
+```Output
+54.000000 0.000000 0.000000 0.000000
+```
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[__m128](../cpp/m128.md)<br/>
+[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

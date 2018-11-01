@@ -1,15 +1,9 @@
 ---
-title: Erstellen von C/C++-Programmen | Microsoft-Dokumentation
-ms.custom: ''
+title: Erstellen von C/C++-Programmen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
 f1_keywords:
 - vcbuilding
 - buildingaprogramVC
-dev_langs:
-- C++
 helpviewer_keywords:
 - builds [C++]
 - Visual C++ projects, building
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - builds [C++], options
 - Visual C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2792b49d7d3d3f107e39931ff62e6c4137c9c5ca
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 79f799fc643d931555bc8c2c56fa9ba5f51b63a6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723267"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50558339"
 ---
 # <a name="building-cc-programs"></a>Erstellen von C/C++-Programmen
 
@@ -34,20 +24,28 @@ Sie können Projekte in Visual C++ entweder in Visual Studio oder der Befehlszei
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Erstellen von C++-Projekten in Visual Studio](../ide/building-cpp-projects-in-visual-studio.md) wird erläutert, wie Visual Studio-IDE zu verwenden, um das C/C++-Projekt zu erstellen.
+[Erstellen von C++-Projekten in Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)<br/>
+Erläutert den Einsatz der Visual Studio-IDE für die Entwicklung von C-/C++-Projekten.
 
-[Erstellen von C/C++-Code in der Befehlszeile](../build/building-on-the-command-line.md) wird erläutert, wie der C/C++-Befehlszeilen-Compiler und Buildtools verwenden, die in Visual Studio enthalten sind.
+[Erstellen von C/C++-Code in der Befehlszeile](../build/building-on-the-command-line.md)<br/>
+Erläutert der Einsatz des C-/C++-Befehlszeilecompilers sowie der Buildtools. die in Visual Studio enthalten sind.
 
-[Erstellen isolierter C/C++-Anwendungen und Side-by-Side Assemblys](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md) beschreibt das Bereitstellungsmodell für Windows Desktop-Anwendungen, basierend auf dem Konzept der isolierten Anwendungen und Side-by-Side Assemblys.
+[Erstellen von isolierten Anwendungen und parallelen Assemblys (C/C++)](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)<br/>
+Beschreibt das Bereitstellungsmodell für Windows Desktop-Anwendungen auf Grundlage der Idee isolierter Anwendungen und paralleler Assemblys.
 
-[Referenz zur C/C++-erstellen](../build/reference/c-cpp-building-reference.md) bietet links zu Referenzartikeln über das Programm erstellen, die in C++, Compiler- und Linkeroptionen und verschiedenen Buildtools.
+[Referenz zur C/C++-Erstellung](../build/reference/c-cpp-building-reference.md)<br/>
+Bietet Links zu Referenzartikeln für das Erstellen von Programmen in C++, zu Compiler- und Linkeroptionen und verschiedenen Buildtools.
 
-[Konfigurieren von Visual C++ für 64-Bit-X64 Ziele](../build/configuring-programs-for-64-bit-visual-cpp.md) beschreibt, wie sowohl Visual Studio als auch die Befehlszeile aus, um die 64-Bit-Toolsets zu verwenden, konfigurieren und wie Sie die 64-Bit-Architekturen abzielen, und erläutert häufige Migrationsprobleme, wenn Code auf 64-Bit-bewegt wird Architekturen.
+[Konfigurieren von Visual C++ für 64-Bit-x64-Ziele](../build/configuring-programs-for-64-bit-visual-cpp.md)<br/>
+Beschreibt, wie sowohl Visual Studio als auch die Befehlszeile für die Verwendung des 64-Bit-Toolsets und die Ausrichtung auf 64-Bit-Architekturen verwendet wird und erläutert häufige Migrationsprobleme, wenn Code in eine 64-Bit-Architektur bewegt wird.
 
-[Konfigurieren von Visual C++ für ARM-Prozessoren](../build/configuring-programs-for-arm-processors-visual-cpp.md) beschreibt die ARM-Prozessoren verwendeten Konventionen und erläutert häufige Migrationsprobleme, wenn Code auf ARM-Architekturen verschoben wird.
+[Konfigurieren von Visual C++ für ARM-Prozessoren](../build/configuring-programs-for-arm-processors-visual-cpp.md)<br/>
+Beschreibt die in ARM-Prozessoren verwendeten Konventionen und erläutert häufige Migrationsprobleme, wenn Code an eine ARM-Architektur verschoben wird.
 
-[Konfigurieren von Programmen für Windows XP](../build/configuring-programs-for-windows-xp.md) wird beschrieben, wie das Plattformtoolset auf Ziel Windows XP-Entwicklung festgelegt.
+[Konfigurieren von Programmen für Windows XP](../build/configuring-programs-for-windows-xp.md)<br/>
+Beschreibt, wie das Plattformtoolset für die Windows XP-Entwicklung eingerichtet wird.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
-[Kompilieren und generieren](/visualstudio/ide/compiling-and-building-in-visual-studio) beschreibt die Visual Studio erstellen, System- und Tools.
+[Kompilieren und Erstellen](/visualstudio/ide/compiling-and-building-in-visual-studio)<br/>
+Beschreibt das Visual Studio-Buildsystem und die entsprechenden Tools.

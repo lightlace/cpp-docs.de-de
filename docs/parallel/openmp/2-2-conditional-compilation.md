@@ -1,31 +1,22 @@
 ---
-title: 2.2 bedingte Kompilierung | Microsoft Docs
-ms.custom: ''
+title: 2.2 Bedingte Kompilierung
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 8f9c914d-736c-48cf-899d-c8029dbe1e32
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b3d8c7073548c015d9982b721387176a0ca658c2
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 9dc107ee9e5328df205d4b6f826f71c23abfb3ba
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685904"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658548"
 ---
 # <a name="22-conditional-compilation"></a>2.2 Bedingte Kompilierung
-Die _**OPENMP** Makroname wird durch OpenMP-kompatible Implementierung definiert, als der dezimalen Konstante *Yyyymm*, der Jahr und Monat der genehmigten Spezifikation ist. Dieses Makro muss das Subjekt einer **#define** oder ein **#undef** -präprozessanweisung.  
-  
-```  
-#ifdef _OPENMP  
-iam = omp_get_thread_num() + index;  
-#endif  
-```  
-  
- Wenn Lieferanten Erweiterungen mit OpenMP definieren, können sie zusätzliche vordefinierte Makros angeben.
+
+Die _**OPENMP** Makroname wird durch OpenMP konforme Implementierungen als dezimale Konstante definiert *Yyyymm*, die das Jahr und Monat der genehmigten Spezifikation sein. Dieses Makro muss nicht das Subjekt einer **#define** oder **#undef** -präprozessanweisung.
+
+```
+#ifdef _OPENMP
+iam = omp_get_thread_num() + index;
+#endif
+```
+
+Wenn der Anbieter Erweiterungen mit OpenMP definieren, können sie weitere vordefinierte Makros angeben.

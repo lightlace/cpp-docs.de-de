@@ -1,27 +1,17 @@
 ---
-title: __interface | Microsoft-Dokumentation
-ms.custom: ''
+title: __interface
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - __interface_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ee7be30e0ad97af8d3b7422840dc979a6af3ab09
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 33a3d45f65ab5adf798a2b0f6b11191e6f6a0213
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46055779"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50573541"
 ---
 # <a name="interface"></a>__interface
 
@@ -157,4 +147,4 @@ bstr_data = Testing
 ## <a name="see-also"></a>Siehe auch
 
 [Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
-[Schnittstellenattribut](../windows/interface-attributes.md)
+[Schnittstellenattribut](../windows/attributes/interface-attributes.md)

@@ -1,10 +1,6 @@
 ---
-title: IViewObjectExImpl-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: IViewObjectExImpl-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - IViewObjectExImpl
 - ATLCTL/ATL::IViewObjectExImpl
@@ -20,24 +16,18 @@ f1_keywords:
 - ATLCTL/ATL::IViewObjectExImpl::QueryHitRect
 - ATLCTL/ATL::IViewObjectExImpl::SetAdvise
 - ATLCTL/ATL::IViewObjectExImpl::Unfreeze
-dev_langs:
-- C++
 helpviewer_keywords:
 - ActiveX controls [C++], drawing
 - IViewObjectEx ATL implementation
 - advise sinks
 - IViewObjectExImpl class
 ms.assetid: ad6de760-1ee5-4883-b033-ae57beffc369
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8a7364f86ad08f882660f49556853826bb7186f6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0333f7e0e0d5b91665978082f112df6d16105dd1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46108429"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50538514"
 ---
 # <a name="iviewobjecteximpl-class"></a>IViewObjectExImpl-Klasse
 
@@ -50,7 +40,7 @@ Diese Klasse implementiert `IUnknown` und stellt standardimplementierungen der [
 
 ```
 template<class T>
-class ATL_NO_VTABLE IViewObjectExImpl 
+class ATL_NO_VTABLE IViewObjectExImpl
    : public IViewObjectEx
 ```
 
@@ -283,7 +273,7 @@ STDMETHOD(SetAdvise)(
 
 ### <a name="remarks"></a>Hinweise
 
-Der Zeiger auf die [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink) -Schnittstelle der Advise-Senke befindet sich in der Steuerelement-Klassendatenmember [CComControlBase::m_spAdviseSink](ccomcontrolbase-class.md#m_spadvisesink).  
+Der Zeiger auf die [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink) -Schnittstelle der Advise-Senke befindet sich in der Steuerelement-Klassendatenmember [CComControlBase::m_spAdviseSink](ccomcontrolbase-class.md#m_spadvisesink).
 
 Finden Sie unter [IViewObject::SetAdvise](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-setadvise) in das Windows SDK.
 

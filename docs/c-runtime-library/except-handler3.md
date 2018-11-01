@@ -29,45 +29,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e8253db3ce5a1ec60001bb32b241bfebe000502
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b1b93cf52ee7690aa86f4a80acae2731197ec9d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389406"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115371"
 ---
 # <a name="excepthandler3"></a>_except_handler3
-Interne CRT-Funktion. Wird von einem Framework verwendet, um den passenden Ausnahmehandler zur Verarbeitung der aktuellen Ausnahme zu suchen.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-int _except_handler3(  
-   PEXCEPTION_RECORD exception_record,  
-   PEXCEPTION_REGISTRATION registration,  
-   PCONTEXT context,  
-   PEXCEPTION_REGISTRATION dispatcher  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- [in] `exception_record`  
- Informationen über die spezifische Ausnahme.  
-  
- [in] `registration`  
- Die Aufzeichnung, die anzeigt, welche Bereichstabelle für die Suche nach dem Ausnahmehandler verwendet werden soll.  
-  
- [in] `context`  
- Reserviert.  
-  
- [in] `dispatcher`  
- Reserviert.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Gibt `DISPOSITION_DISMISS` zurück, wenn eine Ausnahme verworfen wird. Gibt `DISPOSITION_CONTINUE_SEARCH` zurück, wenn die Ausnahme eine Ebene höher an die kapselnden Ausnahmehandler übergeben wird.  
-  
-## <a name="remarks"></a>Hinweise  
- Wenn diese Methode einen passenden Ausnahmehandler findet, übergibt sie die Ausnahme an diesen Handler. In dieser Situation wird diese Methode nicht an den Code zurückgegeben, der sie aufgerufen hat, und der Rückgabewert ist irrelevant.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Alphabetische Funktionsreferenz](../c-runtime-library/reference/crt-alphabetical-function-reference.md)
+
+Interne CRT-Funktion. Wird von einem Framework verwendet, um den passenden Ausnahmehandler zur Verarbeitung der aktuellen Ausnahme zu suchen.
+
+## <a name="syntax"></a>Syntax
+
+```
+int _except_handler3(
+   PEXCEPTION_RECORD exception_record,
+   PEXCEPTION_REGISTRATION registration,
+   PCONTEXT context,
+   PEXCEPTION_REGISTRATION dispatcher
+);
+```
+
+#### <a name="parameters"></a>Parameter
+
+*exception_record*<br/>
+[in]: Informationen über die spezifische Ausnahme.
+
+*registration*<br/>
+[in]: Der Datensatz, der angibt, welche Bereichstabelle für die Suche nach dem Ausnahmehandler verwendet werden soll.
+
+*context*<br/>
+[in]: Reserviert
+
+*dispatcher*<br/>
+[in]: Reserviert
+
+## <a name="return-value"></a>Rückgabewert
+
+Gibt `DISPOSITION_DISMISS` zurück, wenn eine Ausnahme verworfen wird. Gibt `DISPOSITION_CONTINUE_SEARCH` zurück, wenn die Ausnahme eine Ebene höher an die kapselnden Ausnahmehandler übergeben wird.
+
+## <a name="remarks"></a>Hinweise
+
+Wenn diese Methode einen passenden Ausnahmehandler findet, übergibt sie die Ausnahme an diesen Handler. In dieser Situation wird diese Methode nicht an den Code zurückgegeben, der sie aufgerufen hat, und der Rückgabewert ist irrelevant.
+
+## <a name="see-also"></a>Siehe auch
+
+[Alphabetische Funktionsreferenz](../c-runtime-library/reference/crt-alphabetical-function-reference.md)

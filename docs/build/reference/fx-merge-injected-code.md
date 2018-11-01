@@ -1,16 +1,10 @@
 ---
-title: -Fx (eingefügten Code zusammenführen) | Microsoft-Dokumentation
-ms.custom: ''
+title: /Fx (Eingefügten Code zusammenführen)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.ExpandAttributedSource
 - /Fx
 - VC.Project.VCCLCompilerTool.ExpandAttributedSource
-dev_langs:
-- C++
 helpviewer_keywords:
 - Fx compiler option [C++]
 - -Fx compiler option [C++]
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - merging injected code
 - /Fx compiler option [C++]
 ms.assetid: 14f0e301-3bab-45a3-bbdf-e7ce66f20560
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0bd95ea00a63f28f04874f873cf0a4e991fac0fc
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3a8bb0a6607542b325cdfeb0909bcea4a01fa0f3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710520"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646315"
 ---
 # <a name="fx-merge-injected-code"></a>/Fx (Eingefügten Code zusammenführen)
 
@@ -86,6 +76,6 @@ Wenn Ihr Programm eine Headerdatei umfasst, die injizierten Code verwendet, erst
 
 ## <a name="see-also"></a>Siehe auch
 
-[Ausgabedatei (/ F) Optionen](../../build/reference/output-file-f-options.md)
+[Ausgabedatei (/F) Optionen](../../build/reference/output-file-f-options.md)<br/>
 [Compileroptionen](../../build/reference/compiler-options.md)<br/>
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

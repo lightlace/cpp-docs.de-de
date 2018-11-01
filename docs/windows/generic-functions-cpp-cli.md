@@ -1,12 +1,7 @@
 ---
-title: Generische Funktionen (C++ / CLI) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Generische Funktionen (C++/CLI)
+ms.date: 10/12/2018
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - functions [C++], generic
 - generic methods
@@ -14,17 +9,12 @@ helpviewer_keywords:
 - methods [C++], generic
 - generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: bc930fdc142dc7b044b4dbd60cfd459b7ce52aea
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 74e8cfe2b5b49a672b276400be75031626fd61c2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709142"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432405"
 ---
 # <a name="generic-functions-ccli"></a>Generische Funktionen (C++/CLI)
 
@@ -57,41 +47,41 @@ Eine generische Funktion ist eine Funktion, die mit den beiden Typparametern dek
 return-type identifier<type-parameter identifier(s)>
 [type-parameter-constraints clauses]
 
-([formal-parameters])  
+([formal-parameters])
 {function-body}
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*Attribute*  
+*Attribute*<br/>
 (Optional) Zusätzliche deklarative Informationen. Weitere Informationen zu Attributen und Attributklassen finden Sie unter "Attribute".
 
-*Modifizierer*  
+*Modifizierer*<br/>
 (Optional) Ein Modifizierer für die Funktion, wie z. B. statische.  **virtuelle** ist nicht zulässig, da virtuelle Methoden nicht generisch sein können.
 
-*Rückgabetyp*  
+*Rückgabetyp*<br/>
 Der Typ, der von der Methode zurückgegeben wird. Wenn der Rückgabetyp "void" ist, muss keinen Wert zurückgibt.
 
-*identifier*  
+*identifier*<br/>
 Der Funktionsname.
 
-*Typparameter Bezeichner*  
+*Typparameter Bezeichner*<br/>
 Liste der durch Trennzeichen getrennte IDs.
 
-*Formal-parameters*  
+*Formal-parameters*<br/>
 (Optional) Parameterliste.
 
-*Type-Parameter-Einschränkungen-Klauseln*  
+*Type-Parameter-Einschränkungen-Klauseln*<br/>
 Dies gibt die Einschränkungen für die Typen, die als Typargumente verwendet werden können, und nimmt die Form, die im angegebenen [Einschränkungen für generische Typparameter (C++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).
 
-*Funktionsrumpf*  
+*Funktionsrumpf*<br/>
 Der Text der Methode, die auf die Typ-Parameter-IDs verweisen kann.
 
 ### <a name="remarks"></a>Hinweise
 
 Generische Funktionen sind Funktionen, die mit einem generischen Typparameter deklariert. Sie können Methoden in einer Klasse oder Struktur oder eigenständige Funktionen sein. Eine einzelne generische Deklaration deklariert implizit eine Gruppe von Funktionen, die nur in der Ersetzung von einem anderen tatsächlichen Typ für den generischen Typparameter zu unterscheiden.
 
-In Visual C++ können die Klasse oder Struktur Konstruktoren nicht mit generischen Typparametern deklariert werden.
+Ein Klasse oder Struktur-Konstruktor kann nicht mit generischen Typparametern deklariert werden.
 
 Wenn aufgerufen, wird der generische Typparameter durch einen tatsächlichen Typ ersetzt. Der tatsächliche Typ kann explizit in spitzen Klammern, die mithilfe der Syntax ähnlich auf ein Funktionsaufruf Vorlage angegeben werden. Ohne die Type-Parameter aufgerufen wird, versucht der Compiler, den tatsächlichen Typ aus den Parametern, die im Funktionsaufruf angegeben abzuleiten. Wenn das geplante Typargument nicht von den verwendeten Parametern abgeleitet werden kann, meldet der Compiler einen Fehler.
 
@@ -193,5 +183,5 @@ My function returned a string: Hello generic functions!
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)  
+[Komponentenerweiterungen für .NET und UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Generika](../windows/generics-cpp-component-extensions.md)

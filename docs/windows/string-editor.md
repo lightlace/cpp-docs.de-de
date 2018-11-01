@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 94f4aaeae3acb225c2fdc457af135e3534f8d381
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9026d016f54bc4aff37be9c6e318837ad1855d1a
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313259"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081523"
 ---
 # <a name="string-editor-c"></a>Zeichenfolgen-Editor (C++)
 
@@ -55,7 +55,7 @@ Mithilfe des Zeichenfolgen-Editors können Sie diese Aktionen ausführen:
    > [!NOTE]
    > Windows erlaubt die Erstellung leerer Zeichenfolgentabellen nicht. Wenn Sie eine Zeichenfolgentabelle ohne Einträge erstellen, wird sie beim Speichern der Ressourcendatei automatisch gelöscht.
 
-Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten (diejenigen, die die common Language Runtime), finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3\(v=vs.100\)).
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten (diejenigen, die die common Language Runtime), finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,7 +63,7 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Ressourcen-Editor](../windows/resource-editors.md)  
-[Zeichenfolgen](https://msdn.microsoft.com/library/windows/desktop/ms646979.aspx)  
+[Ressourcen-Editor](../windows/resource-editors.md)<br/>
+[Zeichenfolgen](https://msdn.microsoft.com/library/windows/desktop/ms646979.aspx)<br/>
 [Informationen über Zeichenfolgen](/windows/desktop/menurc/about-strings)
 

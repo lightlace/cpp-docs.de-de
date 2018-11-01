@@ -20,60 +20,65 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 38cefb80b1c4c6969cba976c30383c1499a4968d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7579c7493cd05d3cf2a0a119e601dd63ed5faf91
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46048889"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162242"
 ---
 # <a name="lockoperator"></a>lock::operator==
-Equality-Operator.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-template<class T> bool operator==(  
-   T t  
-);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+
+Equality-Operator.
+
+## <a name="syntax"></a>Syntax
+
+```
+template<class T> bool operator==(
+   T t
+);
+```
+
+#### <a name="parameters"></a>Parameter
+
 *t*<br/>
-Das Objekt auf Gleichheit verglichen werden soll.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Gibt `true` Wenn `t` entspricht das Sperrobjekt und `false` andernfalls.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// msl_lock_op_eq.cpp  
-// compile with: /clr  
-#include <msclr/lock.h>  
-  
-using namespace System;  
-using namespace System::Threading;  
-using namespace msclr;  
-  
-int main () {  
-   Object^ o1 = gcnew Object;  
-   lock l1(o1);  
-   if (l1 == o1) {  
-      Console::WriteLine("Equal!");  
-   }  
-}  
-```  
-  
-```Output  
-Equal!  
-```  
-  
-## <a name="requirements"></a>Anforderungen  
- **Headerdatei** \<msclr\lock.h >  
-  
- **Namespace** Msclr  
-  
-## <a name="see-also"></a>Siehe auch  
- [Lock-Members](../dotnet/lock-members.md)   
- [lock::operator!=](../dotnet/lock-operator-inequality.md)
+Das Objekt auf Gleichheit verglichen werden soll.
+
+## <a name="return-value"></a>Rückgabewert
+
+Gibt **"true"** Wenn `t` entspricht das Sperrobjekt und **"false"** andernfalls.
+
+## <a name="example"></a>Beispiel
+
+```cpp
+// msl_lock_op_eq.cpp
+// compile with: /clr
+#include <msclr/lock.h>
+
+using namespace System;
+using namespace System::Threading;
+using namespace msclr;
+
+int main () {
+   Object^ o1 = gcnew Object;
+   lock l1(o1);
+   if (l1 == o1) {
+      Console::WriteLine("Equal!");
+   }
+}
+```
+
+```Output
+Equal!
+```
+
+## <a name="requirements"></a>Anforderungen
+
+**Headerdatei** \<msclr\lock.h >
+
+**Namespace** Msclr
+
+## <a name="see-also"></a>Siehe auch
+
+[lock-Members](../dotnet/lock-members.md)<br/>
+[lock::operator!=](../dotnet/lock-operator-inequality.md)

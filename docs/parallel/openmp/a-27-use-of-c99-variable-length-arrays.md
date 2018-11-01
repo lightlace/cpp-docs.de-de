@@ -1,36 +1,27 @@
 ---
-title: A.27 Verwendung von Arrays mit variabler Länge C99 | Microsoft Docs
-ms.custom: ''
+title: A.27   Verwenden von C99-Arrays variabler Länge
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 8e542701-39f9-4f28-ab3a-840e8e669723
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 96391aa7403a54160cb6ab83b9b28c1527a3e353
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7b2ee74dcd5adedd02e7a9b311c5d3f67203d892
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690090"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50655298"
 ---
 # <a name="a27---use-of-c99-variable-length-arrays"></a>A.27   Verwenden von C99-Arrays variabler Länge
-Im folgenden Beispiel wird veranschaulicht, wie C99 variabler Länge Arrays (VLAs) in einem `firstprivate` Richtlinie ([Abschnitt 2.7.2.2](../../parallel/openmp/2-7-2-2-firstprivate.md) auf Seite 26).  
-  
+
+Im folgende Beispiel wird veranschaulicht, wie mit variabler Länge Arrays C99 (VLAs) in einem `firstprivate` Richtlinie ([Abschnitt 2.7.2.2](../../parallel/openmp/2-7-2-2-firstprivate.md) auf Seite 26).
+
 > [!NOTE]
->  Arrays mit variabler Länge werden derzeit nicht in Visual C++ unterstützt.  
-  
-```  
-void f(int m, int C[m][m])  
-{  
-    double v1[m];  
-    ...  
-    #pragma omp parallel firstprivate(C, v1)  
-    ...  
-}  
+>  Arrays mit variabler Länge werden nicht gerade in Visual C++ unterstützt.
+
+```
+void f(int m, int C[m][m])
+{
+    double v1[m];
+    ...
+    #pragma omp parallel firstprivate(C, v1)
+    ...
+}
 ```

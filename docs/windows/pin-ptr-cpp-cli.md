@@ -1,31 +1,21 @@
 ---
-title: Pin_ptr (C++ / CLI) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: pin_ptr (C++/CLI)
+ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
 - pin_ptr_cpp
 - stdcli::language::pin_ptr
 - pin_ptr
-dev_langs:
-- C++
 helpviewer_keywords:
 - pinning pointers
 - pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: af0cfe6f3a94aa1bc2afc4e4857864f81099567e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1e1d7959825284cc9c239147d33e54cc56352fa2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591730"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587277"
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
 
@@ -51,16 +41,16 @@ Ein *festen Zeiger* ein innerer Zeiger, der verhindert, das Objekt dass verweist
 
 ### <a name="parameters"></a>Parameter
 
-*cv_qualifier*  
+*cv_qualifier*<br/>
 **const** oder **flüchtige** Qualifizierer. Standardmäßig ist ein fester Zeiger **flüchtige**. Es ist redundant, jedoch nicht um einen Fehler, deklarieren einen festen Zeiger **flüchtige**.
 
-*Typ*  
+*Typ*<br/>
 Der Typ des *Initialisierer*.
 
-*var*  
+*var*<br/>
 Der Name des der **Pin_ptr** Variable.
 
-*initializer*  
+*initializer*<br/>
 Ein Member eines Verweistyps, Element eines verwalteten Arrays oder jedes andere Objekt, das Sie in einen systemeigenen Zeiger zuweisen können.
 
 ### <a name="remarks"></a>Hinweise
@@ -118,7 +108,7 @@ using namespace System;
 #pragma unmanaged
 // native function that initializes an array
 void native_function(int* p) {
-   for(int i = 0 ; i < 10 ; i++)  
+   for(int i = 0 ; i < 10 ; i++)
     p[i] = i;
 }
 #pragma managed
@@ -140,7 +130,7 @@ public:
 
    int sum() {
       int total = 0;
-      for (int i = 0 ; i < SIZE ; i++)  
+      for (int i = 0 ; i < SIZE ; i++)
          total += arr[i];
       return total;
    }

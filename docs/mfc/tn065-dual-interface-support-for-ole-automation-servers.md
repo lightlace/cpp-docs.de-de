@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ef599c99cc46c2014ee2d72c538b55e59122848
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c079201b92b6eaf3ef372bf04ab4785598c3b2bf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209685"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053967"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065: Unterstützung für duale Schnittstellen für OLE-Automatisierungsserver
 
@@ -328,7 +328,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
     hr = MAKE_HRESULT(SEVERITY_ERROR, FACILITY_ITF, (e->m_wCode + 0x200));
     ```
 
-     Dies erstellt eine `HRESULT` speziell für die Schnittstelle, die die Ausnahme verursacht hat. Der Fehlercode versetzt wird, von 0 x 200, um Konflikte mit den systemdefinierten zu vermeiden `HRESULT`s für die standard-OLE-Schnittstellen.
+   Dies erstellt eine `HRESULT` speziell für die Schnittstelle, die die Ausnahme verursacht hat. Der Fehlercode versetzt wird, von 0 x 200, um Konflikte mit den systemdefinierten zu vermeiden `HRESULT`s für die standard-OLE-Schnittstellen.
 
 - [CMemoryException](../mfc/reference/cmemoryexception-class.md) – In diesem Fall `E_OUTOFMEMORY` zurückgegeben wird.
 
@@ -377,5 +377,5 @@ STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::InterfaceSupportsErrorInfo(
 
 ## <a name="see-also"></a>Siehe auch
 
-[Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)  
-[Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)  
+[Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)<br/>
+[Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)

@@ -1,30 +1,20 @@
 ---
-title: RuntimeClassFlags-Struktur | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 09/07/2018
-ms.technology:
-- cpp-windows
+title: RuntimeClassFlags-Struktur
+ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::RuntimeClassFlags
 - implements/Microsoft::WRL::RuntimeClassFlags::value
-dev_langs:
-- C++
 helpviewer_keywords:
 - Microsoft::WRL::RuntimeClassFlags structure
 - Microsoft::WRL::RuntimeClassFlags::value constant
 ms.assetid: 7098d605-bd14-4d51-82f4-3def8296a938
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6c3cb141576598aa39c718316048900622c4df41
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 74ae72dc87d45abba04d15303ed2ec92b18f8c28
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691457"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668532"
 ---
 # <a name="runtimeclassflags-structure"></a>RuntimeClassFlags-Struktur
 
@@ -33,15 +23,13 @@ Enthält den Typ für eine Instanz von einem [RuntimeClass](../windows/runtimecl
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-template <
-   unsigned int flags
->
+template <unsigned int flags>
 struct RuntimeClassFlags;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*flags*  
+*flags*<br/>
 Ein [RuntimeClassType-Enumeration](../windows/runtimeclasstype-enumeration.md) Wert.
 
 ## <a name="members"></a>Member
@@ -65,7 +53,7 @@ Ein [RuntimeClassType-Enumeration](../windows/runtimeclasstype-enumeration.md) W
 ## <a name="value-constant"></a>Runtimeclassflags:: value-Konstante
 
 Ein Feld mit einem [RuntimeClassType-Enumeration](../windows/runtimeclasstype-enumeration.md) Wert.
-  
+
 ```cpp
 static const unsigned int value = flags;
 ```

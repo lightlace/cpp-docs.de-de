@@ -1,10 +1,6 @@
 ---
-title: _lfind_s | Microsoft-Dokumentation
-ms.custom: ''
+title: _lfind_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lfind_s
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - lfind_s
 - _lfind_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - linear searching
 - keys, finding in arrays
@@ -33,16 +27,12 @@ helpviewer_keywords:
 - searching, linear
 - _lfind_s function
 ms.assetid: f1d9581d-5c9d-4222-a31c-a6dfafefa40d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 963b657a009f7376a17706b4ac1e5fb4e8b69237
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 08c04d9d1ca69998d54304c96468298013907179
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404817"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648439"
 ---
 # <a name="lfinds"></a>_lfind_s
 
@@ -83,28 +73,28 @@ Ein Zeiger auf ein Objekt, auf das in der Vergleichsfunktion zugegriffen werden 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn der Schlüssel gefunden wird, **_lfind_s** gibt einen Zeiger auf das Element des Arrays bei *Basis* entspricht *Schlüssel*. Wenn der Schlüssel nicht gefunden wird, **_lfind_s** gibt **NULL**.
+Wenn der Schlüssel gefunden wird, **_lfind_s** gibt einen Zeiger auf das Element des Arrays, an *Basis* entspricht *Schlüssel*. Wenn der Schlüssel nicht gefunden wird, **_lfind_s** gibt **NULL**.
 
-Wenn ungültige Parameter an die Funktion übergeben werden, ruft sie den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parametervalidierung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und die Funktion gibt **NULL**.
+Wenn ungültige Parameter an die Funktion übergeben werden, ruft sie den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parametervalidierung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und die Funktion gibt **NULL**.
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
 |Key|Basis|compare|num|size|errno|
 |---------|----------|-------------|---------|----------|-----------|
-|**NULL**|alle|alle|alle|alle|**EINVAL**|
-|alle|**NULL**|alle|!= 0|alle|**EINVAL**|
-|alle|alle|alle|alle|Null|**EINVAL**|
-|alle|alle|**NULL**|ein|alle|**EINVAL**|
+|**NULL**|any|any|any|any|**EINVAL**|
+|any|**NULL**|any|!= 0|any|**EINVAL**|
+|any|any|any|any|Null|**EINVAL**|
+|any|any|**NULL**|ein|any|**EINVAL**|
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_lfind_s** Funktion führt eine lineare Suche für den Wert *Schlüssel* in ein Array von *Anzahl* Elementen, von denen jedes *Breite* Bytes. Im Gegensatz zu **Bsearch_s**, **_lfind_s** erfordert nicht das Array, das sortiert werden. Die *Basis* Argument ist ein Zeiger auf die Basis des zu durchsuchenden Arrays. Die *vergleichen* Argument ist ein Zeiger auf eine vom Benutzer bereitgestellte Routine, die zwei Arrayelemente vergleicht und dann einen Wert, der Angabe ihrer Beziehung zurückgibt. **_lfind_s** Aufrufe der *vergleichen* routinemäßige ein- oder mehrmals während der Suche, und übergeben der *Kontext* Zeiger und Verweise auf zwei Arrayelemente bei jedem Aufruf. Die *vergleichen* Routine muss und vergleichen Sie die Elemente dann zurückgeben ungleich Null (d. h., dass die Elemente unterschiedlich sind) oder 0 (d. h., die Elemente sind identisch).
+Die **_lfind_s** Funktion führt eine lineare Suche für den Wert *Schlüssel* in ein Array von *Anzahl* Elementen, die jeweils von *Breite* Bytes. Im Gegensatz zu **Bsearch_s**, **_lfind_s** erfordert keine Arrays, das sortiert werden. Die *Basis* Argument ist ein Zeiger auf die Basis des Arrays, das gesucht werden soll. Die *vergleichen* Argument ist ein Zeiger auf eine benutzerdefinierte Routine, die zwei Elemente des Arrays vergleicht und dann gibt einen Wert, der ihre Beziehung angibt. **_lfind_s** Aufrufe der *vergleichen* -Routine einmal oder mehrere Male während der Suche, und übergeben die *Kontext* Zeiger und Verweise auf zwei Arrayelemente bei jedem Aufruf. Die *vergleichen* Routine muss die Elemente vergleichen und Zurückgeben von ungleich Null (d. h., dass die Elemente unterscheiden) oder 0 (d.h. die Elemente sind identisch).
 
-**_lfind_s** ähnelt **_lfind** Ausnahme des hinzugefügten der *Kontext* Zeiger auf den Argumenten der Vergleichsfunktion und der Parameterliste der Funktion. Die *Kontext* Zeiger kann nützlich sein, wenn die durchsuchte Datenstruktur Teil eines Objekts ist und die *vergleichen* Funktion benötigt, um auf Member des Objekts zuzugreifen. Die *vergleichen* Funktion kann den void-Zeiger umgewandelt, in das entsprechende Objekt und auf Member des Objekts. Das Hinzufügen der *Kontext* -Parameters macht **_lfind_s** sicherer, da weiterer Kontext verwendet werden kann, um Reentranz-Fehlern, die mit der Verwendung von statischer Variablen Daten zur Verfügung stellen zu vermeiden der *vergleichen* Funktion.
+**_lfind_s** ähnelt **_lfind** mit Ausnahme der Hinzufügung von der *Kontext* Zeiger auf den Argumenten der Vergleichsfunktion und der Parameterliste der Funktion. Die *Kontext* Zeiger ist nützlich, wenn die durchsuchte Datenstruktur Teil eines Objekts ist und die *vergleichen* Funktion, die auf Member des Objekts zugreifen muss. Die *vergleichen* Funktion kann den void-Zeiger umgewandelt, in das entsprechende Objekt und auf Member des Objekts. Das Hinzufügen der *Kontext* -Parameters macht **_lfind_s** sicherer, da weiterer Kontext verwendet werden kann, um Wiedereintreten mit der Verwendung statischer Variablen zur Daten zur Verfügung stellen zu vermeiden. die *vergleichen* Funktion.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_lfind_s**|\<search.h>|
 

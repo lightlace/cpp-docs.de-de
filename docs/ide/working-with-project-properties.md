@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9961eaa6529773e8d21d9c953242d1656a6a443
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4420bdac9e788f80142546d8b09781a8aa3ce06d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211662"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821386"
 ---
 # <a name="working-with-project-properties"></a>Arbeiten mit Projekteigenschaften
 
@@ -141,11 +141,11 @@ Ein benutzerdefiniertes Makro wird in einem Eigenschaftenblatt gespeichert. Wenn
 
 ##### <a name="to-create-a-user-defined-macro"></a>So erstellen Sie ein benutzerdefiniertes Makro
 
-1.  Öffnen Sie im Fenster **Eigenschaften-Manager** (klicken Sie auf der Menüleiste auf **Ansicht** > **Eigenschaften-Manager**) das Kontextmenü für ein Eigenschaftenblatt (der Name endet auf „.user“), und wählen Sie „Eigenschaften“ aus. Das Dialogfeld **Eigenschaftenseiten** für dieses Eigenschaftenblatt wird geöffnet.
+1. Öffnen Sie im Fenster **Eigenschaften-Manager** (klicken Sie auf der Menüleiste auf **Ansicht** > **Eigenschaften-Manager**) das Kontextmenü für ein Eigenschaftenblatt (der Name endet auf „.user“), und wählen Sie „Eigenschaften“ aus. Das Dialogfeld **Eigenschaftenseiten** für dieses Eigenschaftenblatt wird geöffnet.
 
-2.  Klicken Sie im linken Bereich des Dialogfelds auf **Benutzermakros**. Klicken Sie im rechten Bereich auf die Schaltfläche **Makro hinzufügen**, um das Dialogfeld **Benutzermakro hinzufügen** zu öffnen.
+1. Klicken Sie im linken Bereich des Dialogfelds auf **Benutzermakros**. Klicken Sie im rechten Bereich auf die Schaltfläche **Makro hinzufügen**, um das Dialogfeld **Benutzermakro hinzufügen** zu öffnen.
 
-3.  Geben Sie im Dialogfeld einen Namen und einen Wert für das Makro an. Optional können Sie das Kontrollkästchen **Makro als Umgebungsvariable in Buildumgebung festlegen** aktivieren.
+1. Geben Sie im Dialogfeld einen Namen und einen Wert für das Makro an. Optional können Sie das Kontrollkästchen **Makro als Umgebungsvariable in Buildumgebung festlegen** aktivieren.
 
 ## <a name="property-editor"></a>Eigenschaften-Editor
 
@@ -250,7 +250,7 @@ Erweitern Sie im linken Bereich des Dialogfelds **Eigenschaftenseiten** die **Ko
 
 ## <a name="modifying-properties-and-targets-without-changing-the-project-file"></a>Ändern von Eigenschaften und Zielen ohne Änderungen an der Projektdatei
 
-Sie können Projekteigenschaften und -ziele über die MSBuild-Eingabeaufforderung überschreiben, ohne die Projektdatei zu ändern. Dies ist nützlich, wenn Sie einige Eigenschaften vorübergehend oder gelegentlich anwenden möchten. MSBuild-Kenntnisse sind hierbei von Vorteil. Weitere Informationen finden Sie unter [MSBuild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild).
+Sie können Projekteigenschaften und -ziele über die MSBuild-Eingabeaufforderung überschreiben, ohne die Projektdatei zu ändern. Dies ist nützlich, wenn Sie einige Eigenschaften vorübergehend oder gelegentlich anwenden möchten. MSBuild-Kenntnisse sind hierbei von Vorteil. Weitere Informationen finden Sie unter [MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild).
 
 > [!IMPORTANT]
 > Sie können den XML-Editor in Visual Studio oder einen beliebigen Text-Editor verwenden, um die PROPS- oder TARGETS-Datei zu erstellen. Verwenden Sie in diesem Szenario nicht den **Eigenschaften-Manager**, da dieser die Eigenschaften zur Projektdatei hinzufügt.

@@ -1,27 +1,17 @@
 ---
-title: Compilerfehler C3389 | Microsoft Docs
-ms.custom: ''
+title: Compilerfehler C3389
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3389
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3389
 ms.assetid: eaaffe17-23f2-413c-b1ad-f7220cfa1334
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b540f87458c75ddf7d57626b6251248652b96213
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 6a9568f3c3be88438eae1f28e12dc780301ead0b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704304"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50584300"
 ---
 # <a name="compiler-error-c3389"></a>Compilerfehler C3389
 
@@ -31,11 +21,11 @@ ms.locfileid: "34704304"
 
 Die **/CLR: pure** und **/CLR: safe** Compileroptionen in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt werden.
 
-Ein [__declspec](../../cpp/declspec.md) Modifizierer impliziert einen prozessspezifischen Zustand.  [/ CLR: pure](../../build/reference/clr-common-language-runtime-compilation.md) impliziert einen pro [Appdomain](../../cpp/appdomain.md) Zustand.  Daher Deklarieren einer Variablen mit der `keyword` **__declspec** Modifizierer und die Kompilierung mit **/CLR: pure** ist nicht zulässig.
+Ein [__declspec](../../cpp/declspec.md) Modifizierer impliziert einen prozessspezifischen Zustand.  [/ CLR: pure](../../build/reference/clr-common-language-runtime-compilation.md) impliziert eine pro [Appdomain](../../cpp/appdomain.md) Zustand.  Also Deklarieren einer Variablen mit der `keyword` **__declspec** -Modifizierer und die Kompilierung mit **/CLR: pure** ist nicht zulässig.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird C3389 generiert:
+Im folgende Beispiel wird die C3389 generiert:
 
 ```cpp
 // C3389.cpp

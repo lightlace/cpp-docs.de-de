@@ -1,29 +1,19 @@
 ---
-title: -ALLOWISOLATION | Microsoft-Dokumentation
-ms.custom: ''
+title: /ALLOWISOLATION
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /ALLOWISOLATION
-dev_langs:
-- C++
 helpviewer_keywords:
 - -ALLOWISOLATION editbin option
 - /ALLOWISOLATION editbin option
 - ALLOWISOLATION editbin option
 ms.assetid: 91430344-f64f-491a-a5a5-7ea3b21cbe68
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12ee07a0ea6dbe2c3bea21aaa6b394b4c3e6f156
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ab07e3ac3f8c154ffa62a25ab8bad967b255e2e5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704085"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50604971"
 ---
 # <a name="allowisolation"></a>/ALLOWISOLATION
 
@@ -49,5 +39,5 @@ Wenn die Isolation für eine ausführbare Datei deaktiviert ist, führt das Wind
 ## <a name="see-also"></a>Siehe auch
 
 [EDITBIN-Optionen](../../build/reference/editbin-options.md)<br/>
-[/ ALLOWISOLATION (Manifestsuche)](../../build/reference/allowisolation-manifest-lookup.md)
-[Manifestdateien Verweis](/windows/desktop/SbsCs/manifest-files-reference)
+[/ALLOWISOLATION (Manifestsuche)](../../build/reference/allowisolation-manifest-lookup.md)<br/>
+[Manifestdateienreferenz](/windows/desktop/SbsCs/manifest-files-reference)

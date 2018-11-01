@@ -1,28 +1,24 @@
 ---
-title: InvokeHelper-Struktur | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: InvokeHelper-Struktur
+ms.date: 10/18/2018
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Details::InvokeHelper
-dev_langs:
-- C++
+- event/Microsoft::WRL::Details::InvokeHelper::callback_
+- event/Microsoft::WRL::Details::InvokeHelper::Invoke
+- event/Microsoft::WRL::Details::InvokeHelper::InvokeHelper
 helpviewer_keywords:
-- InvokeHelper structure
+- Microsoft::WRL::Details::InvokeHelper structure
+- Microsoft::WRL::Details::callback_ data member
+- Microsoft::WRL::Details::Invoke method
+- Microsoft::WRL::Details::InvokeHelper, constructor
 ms.assetid: 555ad2bc-4dd6-4e65-a2e2-1242c395f0e5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0586b5073e8d97c882f33bb118d62b0c1bb04c07
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3fcba210d4018d22487d234b437acfee3634cec6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611550"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487047"
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper-Struktur
 
@@ -31,72 +27,90 @@ Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-template<
-   typename TDelegateInterface,
-   typename TCallback,
-   unsigned int argCount
->
+template<typename TDelegateInterface, typename TCallback, unsigned int argCount>
 struct InvokeHelper;
-template<
-   typename TDelegateInterface,
-   typename TCallback
->
-struct InvokeHelper<TDelegateInterface, TCallback, 0> : public Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>;
-template<
-   typename TDelegateInterface,
-   typename TCallback
->
-struct InvokeHelper<TDelegateInterface, TCallback, 1> : public Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>;
-template<
-   typename TDelegateInterface,
-   typename TCallback
->
-struct InvokeHelper<TDelegateInterface, TCallback, 2> : public Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>;
-template<
-   typename TDelegateInterface,
-   typename TCallback
->
-struct InvokeHelper<TDelegateInterface, TCallback, 3> : public Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>;
-template<
-   typename TDelegateInterface,
-   typename TCallback
->
-struct InvokeHelper<TDelegateInterface, TCallback, 4> : Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>;
-template<
-   typename TDelegateInterface,
-   typename TCallback
->
-struct InvokeHelper<TDelegateInterface, TCallback, 5> : Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>;
-template<
-   typename TDelegateInterface,
-   typename TCallback
->
-struct InvokeHelper<TDelegateInterface, TCallback, 6> : Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>;
-template<
-   typename TDelegateInterface,
-   typename TCallback
->
-struct InvokeHelper<TDelegateInterface, TCallback, 7> : Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>;
-template<
-   typename TDelegateInterface,
-   typename TCallback
->
-struct InvokeHelper<TDelegateInterface, TCallback, 8> : Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>;
-template<
-   typename TDelegateInterface,
-   typename TCallback
->
-struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>;
+
+template<typename TDelegateInterface, typename TCallback>
+struct InvokeHelper<TDelegateInterface, TCallback, 0> :
+    public Microsoft::WRL::RuntimeClass<
+        RuntimeClassFlags<Delegate>,
+        TDelegateInterface
+    >;
+
+template<typename TDelegateInterface, typename TCallback>
+struct InvokeHelper<TDelegateInterface, TCallback, 1> :
+    public Microsoft::WRL::RuntimeClass<
+        RuntimeClassFlags<Delegate>,
+        TDelegateInterface
+    >;
+
+template<typename TDelegateInterface, typename TCallback>
+struct InvokeHelper<TDelegateInterface, TCallback, 2> :
+    public Microsoft::WRL::RuntimeClass<
+        RuntimeClassFlags<Delegate>,
+        TDelegateInterface
+    >;
+
+template<typename TDelegateInterface, typename TCallback>
+struct InvokeHelper<TDelegateInterface, TCallback, 3> :
+    public Microsoft::WRL::RuntimeClass<
+        RuntimeClassFlags<Delegate>,
+        TDelegateInterface
+    >;
+
+template<typename TDelegateInterface, typename TCallback>
+struct InvokeHelper<TDelegateInterface, TCallback, 4> :
+    Microsoft::WRL::RuntimeClass<
+        RuntimeClassFlags<Delegate>,
+        TDelegateInterface
+    >;
+
+template<typename TDelegateInterface, typename TCallback>
+struct InvokeHelper<TDelegateInterface, TCallback, 5> :
+    Microsoft::WRL::RuntimeClass<
+        RuntimeClassFlags<Delegate>,
+        TDelegateInterface
+    >;
+
+template<typename TDelegateInterface, typename TCallback>
+struct InvokeHelper<TDelegateInterface, TCallback, 6> :
+    Microsoft::WRL::RuntimeClass<
+        RuntimeClassFlags<Delegate>,
+        TDelegateInterface
+    >;
+
+template<typename TDelegateInterface, typename TCallback>
+struct InvokeHelper<TDelegateInterface, TCallback, 7> :
+    Microsoft::WRL::RuntimeClass<
+        RuntimeClassFlags<Delegate>,
+        TDelegateInterface
+    >;
+
+template<typename TDelegateInterface, typename TCallback>
+struct InvokeHelper<TDelegateInterface, TCallback, 8> :
+    Microsoft::WRL::RuntimeClass<
+        RuntimeClassFlags<Delegate>,
+        TDelegateInterface
+    >;
+
+template<typename TDelegateInterface, typename TCallback>
+struct InvokeHelper<TDelegateInterface, TCallback, 9> :
+    Microsoft::WRL::RuntimeClass<
+        RuntimeClassFlags<Delegate>,
+        TDelegateInterface
+    >;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*TDelegateInterface*  
-*TCallback*  
+*TDelegateInterface*<br/>
+Der Typ des Delegaten-Schnittstelle.
+
+*TCallback*<br/>
 Der Typ des Ereignishandlerfunktion.
 
-*argCount*  
-Die Anzahl von Argumenten in eine **InvokeHelper** Spezialisierung.
+*argCount*<br/>
+Die Anzahl von Argumenten in eine `InvokeHelper` Spezialisierung.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -106,27 +120,27 @@ Stellt eine Implementierung der `Invoke()` -Methode basierend auf der angegebene
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
-|----------|-----------------|
-|`Traits`|Ein Synonym für die Klasse, die den Typ jedes Arguments der Ereignis-Handler definiert.|
+Name     | Beschreibung
+-------- | -----------------------------------------------------------------------------
+`Traits` | Ein Synonym für die Klasse, die den Typ jedes Arguments der Ereignis-Handler definiert.
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
-|----------|-----------------|
-|[InvokeHelper::InvokeHelper-Konstruktor](../windows/invokehelper-invokehelper-constructor.md)|Initialisiert eine neue Instanz der dem **InvokeHelper** Klasse.|
+Name                                        | Beschreibung
+------------------------------------------- | -------------------------------------------------------
+[InvokeHelper:: InvokeHelper](#invokehelper) | Initialisiert eine neue Instanz der `InvokeHelper`-Klasse.
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
-|----------|-----------------|
-|[InvokeHelper::Invoke-Methode](../windows/invokehelper-invoke-method.md)|Ruft den Ereignishandler, dessen Signatur mit die angegebene Anzahl von Argumenten enthält.|
+Name                            | Beschreibung
+------------------------------- | -----------------------------------------------------------------------------------
+[InvokeHelper:: Invoke](#invoke) | Ruft den Ereignishandler, dessen Signatur mit die angegebene Anzahl von Argumenten enthält.
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
 
-|Name|Beschreibung|
-|----------|-----------------|
-|[InvokeHelper::callback_-Datenmember](../windows/invokehelper-callback-data-member.md)|Stellt den Ereignishandler aufgerufen wird, wenn ein Ereignis auftritt.|
+Name                                 | Beschreibung
+------------------------------------ | ----------------------------------------------------------
+[InvokeHelper:: Callback_](#callback) | Stellt den Ereignishandler aufgerufen wird, wenn ein Ereignis auftritt.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -138,6 +152,111 @@ Stellt eine Implementierung der `Invoke()` -Methode basierend auf der angegebene
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>Siehe auch
+## <a name="callback"></a>InvokeHelper:: Callback_
 
-[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+```cpp
+TCallback callback_;
+```
+
+### <a name="remarks"></a>Hinweise
+
+Stellt den Ereignishandler aufgerufen wird, wenn ein Ereignis auftritt.
+
+Die `TCallback` Template-Parameter gibt den Typ des ereignishandlers.
+
+## <a name="invoke"></a>InvokeHelper:: Invoke
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+```cpp
+STDMETHOD(
+   Invoke
+)();
+STDMETHOD(
+   Invoke
+)(typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+```
+
+### <a name="parameters"></a>Parameter
+
+*arg1*<br/>
+Das Argument 1.
+
+*Arg2*<br/>
+Argument 2.
+
+*Arg3*<br/>
+Argument 3.
+
+*Arg4*<br/>
+4-Argument.
+
+*Arg5*<br/>
+5-Argument.
+
+*Arg6*<br/>
+6-Argument.
+
+*Arg7*<br/>
+7-Argument.
+
+*Arg8*<br/>
+8-Argument.
+
+*Arg9*<br/>
+9-Argument.
+
+### <a name="return-value"></a>Rückgabewert
+
+S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler beschreibt.
+
+### <a name="remarks"></a>Hinweise
+
+Ruft den Ereignishandler, dessen Signatur mit die angegebene Anzahl von Argumenten enthält.
+
+## <a name="invokehelper"></a>InvokeHelper:: InvokeHelper
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+```cpp
+explicit InvokeHelper(
+   TCallback callback
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*Rückruf*<br/>
+Ein Ereignishandler.
+
+### <a name="remarks"></a>Hinweise
+
+Initialisiert eine neue Instanz der `InvokeHelper`-Klasse.
+
+Die `TCallback` Template-Parameter gibt den Typ des ereignishandlers.

@@ -1,5 +1,5 @@
 ---
-title: 'WM_-Meldungshandler: D - E | Microsoft Docs'
+title: 'WM_-Meldungshandler: D - E | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -41,39 +41,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 804bd7d9e0180dd3bf970339b382d0c8807e9b50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2465a58ec0b3d889eef2acacca09dcfc3a656191
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380320"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389013"
 ---
 # <a name="wm-message-handlers-d---e"></a>WM_-Meldungshandler: D - E
-Die folgenden Zuordnungseinträge auf der linken Seite entsprechen auf der rechten Seite der Funktionsprototypen:  
-  
-|Eintrag für die Zuordnung|Funktionsprototyp|  
-|---------------|------------------------|  
-|ON_WM_DEADCHAR()|Afx_msg "void" [OnDeadChar](../../mfc/reference/cwnd-class.md#ondeadchar)("uint", "uint", "uint");|  
-|ON_WM_DELETEITEM()|Afx_msg "void" [OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem)(LPDELETEITEMSTRUCT);|  
-|ON_WM_DESTROY()|Afx_msg "void" [OnDestroy](../../mfc/reference/cwnd-class.md#ondestroy)(;)|  
-|ON_WM_DESTROYCLIPBOARD()|Afx_msg "void" [OnDestroyClipboard](../../mfc/reference/cwnd-class.md#ondestroyclipboard)(;)|  
-|ON_WM_DEVICECHANGE()|Afx_msg "void" [OnDeviceChange](../../mfc/reference/cwnd-class.md#ondevicechange)("uint", DWORD);|  
-|ON_WM_DEVMODECHANGE()|Afx_msg "void" [OnDevModeChange](../../mfc/reference/cwnd-class.md#ondevmodechange)(LPSTR);|  
-|ON_WM_DRAWCLIPBOARD()|Afx_msg "void" [OnDrawClipboard](../../mfc/reference/cwnd-class.md#ondrawclipboard)(;)|  
-|ON_WM_DRAWITEM()|Afx_msg "void" [OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem)(LPDRAWITEMSTRUCT);|  
-|ON_WM_DROPFILES()|Afx_msg "void" [OnDropFiles](../../mfc/reference/cwnd-class.md#ondropfiles)(HDROP);|  
-|ON_WM_DWMCOLORIZATIONCOLORCHANGED()|Afx_msg "void" [OnColorizationColorChanged](../../mfc/reference/cwnd-class.md#oncolorizationcolorchanged)(DWORD, BOOL);|  
-|ON_WM_DWMCOMPOSITIONCHANGED()|Afx_msg "void" [OnCompositionChanged](../../mfc/reference/cwnd-class.md#oncompositionchanged)(;)|  
-|ON_WM_DWMNCRENDERINGCHANGED()|Afx_msg "void" [OnNcRenderingChanged](../../mfc/reference/cwnd-class.md#onncrenderingchanged)(BOOL);|  
-|ON_WM_DWMWINDOWMAXIMIZEDCHANGE()|Afx_msg "void" [OnWindowMaximizedChanged](../../mfc/reference/cwnd-class.md#onwindowmaximizedchanged)(BOOL);|  
-|ON_WM_ENABLE()|Afx_msg "void" [OnEnable](../../mfc/reference/cwnd-class.md#onenable)(BOOL);|  
-|ON_WM_ENDSESSION()|Afx_msg "void" [OnEndSession](../../mfc/reference/cwnd-class.md#onendsession)(BOOL);|  
-|ON_WM_ENTERIDLE()|Afx_msg "void" [OnEnterIdle](../../mfc/reference/cwnd-class.md#onenteridle)("uint", CWnd *);|  
-|ON_WM_ENTERSIZEMOVE()|Afx_msg "void" [OnEnterSizeMove](../../mfc/reference/cwnd-class.md#onentersizemove)(;)|  
-|ON_WM_ERASEBKGND()|Afx_msg BOOL [OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd)(CDC *);|  
-|ON_WM_EXITSIZEMOVE()|Afx_msg "void" [OnExitSizeMove](../../mfc/reference/cwnd-class.md#onexitsizemove)(;)|  
-  
-## <a name="see-also"></a>Siehe auch  
- [Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md)   
- [Handler für WM_-Meldungen](../../mfc/reference/handlers-for-wm-messages.md)
+
+Die folgenden Einträge der Karte auf der linken Seite entsprechen die Funktionsprototypen auf der rechten Seite:
+
+|Zuordnungseintrag|Funktionsprototyp|
+|---------------|------------------------|
+|ON_WM_DEADCHAR()|die "void" Afx_msg [OnDeadChar](../../mfc/reference/cwnd-class.md#ondeadchar)("uint", "uint", "uint");|
+|ON_WM_DELETEITEM()|die "void" Afx_msg [OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem)(LPDELETEITEMSTRUCT);|
+|ON_WM_DESTROY()|die "void" Afx_msg [OnDestroy](../../mfc/reference/cwnd-class.md#ondestroy)();|
+|ON_WM_DESTROYCLIPBOARD()|die "void" Afx_msg [OnDestroyClipboard](../../mfc/reference/cwnd-class.md#ondestroyclipboard)();|
+|ON_WM_DEVICECHANGE()|die "void" Afx_msg [OnDeviceChange](../../mfc/reference/cwnd-class.md#ondevicechange)(UINT, DWORD;)|
+|ON_WM_DEVMODECHANGE()|die "void" Afx_msg [OnDevModeChange](../../mfc/reference/cwnd-class.md#ondevmodechange)(LPSTR);|
+|ON_WM_DRAWCLIPBOARD()|die "void" Afx_msg [OnDrawClipboard](../../mfc/reference/cwnd-class.md#ondrawclipboard)();|
+|ON_WM_DRAWITEM()|die "void" Afx_msg [OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem)(LPDRAWITEMSTRUCT);|
+|ON_WM_DROPFILES()|die "void" Afx_msg [OnDropFiles](../../mfc/reference/cwnd-class.md#ondropfiles)(HDROP);|
+|ON_WM_DWMCOLORIZATIONCOLORCHANGED()|die "void" Afx_msg [OnColorizationColorChanged](../../mfc/reference/cwnd-class.md#oncolorizationcolorchanged)(DWORD-, "bool");|
+|ON_WM_DWMCOMPOSITIONCHANGED()|die "void" Afx_msg [OnCompositionChanged](../../mfc/reference/cwnd-class.md#oncompositionchanged)();|
+|ON_WM_DWMNCRENDERINGCHANGED()|die "void" Afx_msg [OnNcRenderingChanged](../../mfc/reference/cwnd-class.md#onncrenderingchanged)(BOOL);|
+|ON_WM_DWMWINDOWMAXIMIZEDCHANGE()|die "void" Afx_msg [OnWindowMaximizedChanged](../../mfc/reference/cwnd-class.md#onwindowmaximizedchanged)(BOOL);|
+|ON_WM_ENABLE()|die "void" Afx_msg [OnEnable](../../mfc/reference/cwnd-class.md#onenable)(BOOL);|
+|ON_WM_ENDSESSION()|die "void" Afx_msg [OnEndSession](../../mfc/reference/cwnd-class.md#onendsession)(BOOL);|
+|ON_WM_ENTERIDLE()|die "void" Afx_msg [OnEnterIdle](../../mfc/reference/cwnd-class.md#onenteridle)(UINT, CWnd *);|
+|ON_WM_ENTERSIZEMOVE()|die "void" Afx_msg [OnEnterSizeMove](../../mfc/reference/cwnd-class.md#onentersizemove)();|
+|ON_WM_ERASEBKGND()|Afx_msg "bool" [OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd)(CDC *);|
+|ON_WM_EXITSIZEMOVE()|die "void" Afx_msg [OnExitSizeMove](../../mfc/reference/cwnd-class.md#onexitsizemove)();|
+
+## <a name="see-also"></a>Siehe auch
+
+[Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md)<br/>
+[Handler für WM_-Meldungen](../../mfc/reference/handlers-for-wm-messages.md)
 

@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce5d24321f007139401c46e07d19e006d4e1dcd3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 994095042dc473fda315b6d842d9ec9355ff3671
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215452"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055397"
 ---
 # <a name="tn062-message-reflection-for-windows-controls"></a>TN062: Meldungsreflektion für Windows-Steuerelemente
 
@@ -126,7 +126,7 @@ In diesem einfache Beispiel erstellt ein wiederverwendbares Steuerelement namens
 
 1. Erstellen Sie ein neues Dialogfeld, in einer vorhandenen Anwendung. Weitere Informationen finden Sie unter den [Dialog-Editor](../windows/dialog-editor.md) Thema.
 
-     Sie benötigen eine Anwendung, in dem das wiederverwendbare Steuerelement zu entwickeln. Wenn Sie eine vorhandene Anwendung verwendet haben, erstellen Sie eine Dialogfeldern basierende Anwendung mithilfe von AppWizard.
+   Sie benötigen eine Anwendung, in dem das wiederverwendbare Steuerelement zu entwickeln. Wenn Sie eine vorhandene Anwendung verwendet haben, erstellen Sie eine Dialogfeldern basierende Anwendung mithilfe von AppWizard.
 
 2. Verwenden Sie die Klassen-Assistent mit Ihrem Projekt in Visual C++ geladen wird, erstellen Sie eine neue Klasse namens `CYellowEdit` basierend auf `CEdit`.
 
@@ -145,7 +145,7 @@ In diesem einfache Beispiel erstellt ein wiederverwendbares Steuerelement namens
 
 5. Mithilfe der Klassen-Assistent, Hinzufügen eines ereignishandlers für die reflektierte WM_CTLCOLOR-Meldung zu Ihrer `CYellowEdit` Klasse. Beachten Sie, dass das Gleichheitszeichen vor der Nachrichtenname, in der Liste der Nachrichten, die Sie behandeln können, gibt an, dass die Meldung reflektiert wird. Finden Sie im [Definieren eines Meldungshandlers für eine Nachricht wiedergegeben](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).
 
-     Klassen-Assistent fügt die folgende meldungszuordnung Makro und Skeleton-Funktion für Sie hinzu:
+   Klassen-Assistent fügt die folgende meldungszuordnung Makro und Skeleton-Funktion für Sie hinzu:
 
     ```cpp
     ON_WM_CTLCOLOR_REFLECT()
@@ -174,5 +174,5 @@ In diesem einfache Beispiel erstellt ein wiederverwendbares Steuerelement namens
 
 ## <a name="see-also"></a>Siehe auch
 
-[Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)  
-[Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)  
+[Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)<br/>
+[Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)

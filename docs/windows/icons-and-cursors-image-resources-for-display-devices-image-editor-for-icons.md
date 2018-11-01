@@ -1,14 +1,8 @@
 ---
-title: 'Symbole und Cursor: Bildressourcen für Anzeigegeräte (Bildbearbeitung für Symbole C++) | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Symbole und Cursor: Bildressourcen für Anzeigegeräte (Bildbearbeitung für Symbole C++)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.icon
-dev_langs:
-- C++
 helpviewer_keywords:
 - cursors [C++], creating
 - image resources [C++], display devices
@@ -21,17 +15,12 @@ helpviewer_keywords:
 - cursors [C++], hot spots
 - icons [C++], types
 ms.assetid: 8f0809a8-0cf0-4da9-b23d-51f28bf15f5b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 03c3b64cfbf93260c1195fa028d05bb8085c9b09
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 5d5e252dd7841d923a6de42f06518838f4314563
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313584"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50586653"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-c-image-editor-for-icons"></a>Symbole und Cursor: Bildressourcen für Anzeigegeräte (Bildbearbeitung für Symbole C++)
 
@@ -84,6 +73,6 @@ Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
-[Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)  
-[Symbole](https://msdn.microsoft.com/library/windows/desktop/ms646973)  
+[Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)<br/>
+[Symbole](https://msdn.microsoft.com/library/windows/desktop/ms646973)<br/>
 [Cursor](https://msdn.microsoft.com/library/windows/desktop/ms646970)

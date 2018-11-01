@@ -1,27 +1,17 @@
 ---
-title: Ereigniszuordnungen | Microsoft-Dokumentation
-ms.custom: ''
+title: Ereigniszuordnungen
 ms.date: 06/20/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
-dev_langs:
-- C++
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 21b9efe8fc1ce5cb7ab90edd30b38253d44dabc0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 512170d7eaa891b3616ca1ea56c29a8bb5cccda9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106807"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492235"
 ---
 # <a name="event-maps"></a>Ereigniszuordnungen
 
@@ -89,10 +79,10 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 ### <a name="parameters"></a>Parameter
 
-*theClass*  
+*theClass*<br/>
 Gibt an, dass der Name der Steuerelement-Klasse, dessen Ereignis eine Zuordnung, ist.
 
-*Basisklasse*  
+*Basisklasse*<br/>
 Gibt den Namen der Basisklasse der *TheClass*.
 
 ### <a name="remarks"></a>Hinweise
@@ -127,13 +117,13 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 
 ### <a name="parameters"></a>Parameter
 
-*pszName*  
+*pszName*<br/>
 Der Name des Ereignisses.
 
-*pfnFire*  
+*pfnFire*<br/>
 Der Name der das Auslösen der Funktion des Ereignisses.
 
-*vtsParams*  
+*vtsParams*<br/>
 Eine durch Leerzeichen getrennte Liste von einer oder mehrerer Konstanten, die Parameterliste der Funktion angeben.
 
 ### <a name="remarks"></a>Hinweise
@@ -197,16 +187,16 @@ EVENT_CUSTOM_ID(
 
 ### <a name="parameters"></a>Parameter
 
-*pszName*  
+*pszName*<br/>
 Der Name des Ereignisses.
 
-*DISPID*  
+*DISPID*<br/>
 Die Dispatch-ID, der vom Steuerelement verwendet wird, wenn das Ereignis ausgelöst wird.
 
-*pfnFire*  
+*pfnFire*<br/>
 Der Name der das Auslösen der Funktion des Ereignisses.
 
-*vtsParams*  
+*vtsParams*<br/>
 Eine Variable Liste von Parametern an den Steuerelementcontainer übergeben, wenn das Ereignis ausgelöst wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -268,10 +258,10 @@ ON_STDOLEVERB(iVerb, memberFxn)
 
 ### <a name="parameters"></a>Parameter
 
-*iVerb*  
+*iVerb*<br/>
 Der standard Verbindex für das Verb, das überschrieben wird.
 
-*memberFxn*  
+*memberFxn*<br/>
 Die Funktion, die vom Framework aufgerufen, wenn das Verb aufgerufen wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -279,7 +269,6 @@ Die Funktion, die vom Framework aufgerufen, wenn das Verb aufgerufen wird.
 Der standard Verbindex weist das Format `OLEIVERB_`, gefolgt von einer Aktion. OLEIVERB_SHOW OLEIVERB_HIDE und OLEIVERB_UIACTIVATE sind einige Beispiele für die standard-Verben.
 
 Finden Sie unter [ON_OLEVERB](#on_oleverb) eine Beschreibung der Funktionsprototyp als verwendet werden soll die *MemberFxn* Parameter.
-
 
 ### <a name="requirements"></a>Anforderungen
 

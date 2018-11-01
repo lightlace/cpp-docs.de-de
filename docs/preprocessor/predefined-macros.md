@@ -152,12 +152,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c2419925896112eb235bcdfe77d9916373f0091
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: a95141aa97d7272970adaaa69f3f63de2a622780
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541225"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235645"
 ---
 # <a name="predefined-macros"></a>Vordefinierte Makros
 
@@ -435,7 +435,7 @@ Microsoft Visual C++ unterstützt diesen zusätzlichen vordefinierten Makros.
 
 - **&#95;WINRT&#95;DLL** definiert als 1, wenn als C++ und die beiden kompiliert [/ZW (Windows-Runtime-Kompilierung)](../build/reference/zw-windows-runtime-compilation.md) und [/ld oder "/ LDD"](../build/reference/md-mt-ld-use-run-time-library.md) Compileroptionen festgelegt sind. Anderenfalls ist nicht definiert.
 
- Verwendet, um zu bestimmen, die ATL oder MFC-Bibliotheksversion Präprozessormakros werden vom Compiler nicht vordefiniert. Diese Makros sind in die Header für die Bibliothek definiert, damit sie in präprozessoranweisungen nicht definiert werden, bevor die erforderlichen Header enthalten ist.
+Verwendet, um zu bestimmen, die ATL oder MFC-Bibliotheksversion Präprozessormakros werden vom Compiler nicht vordefiniert. Diese Makros sind in die Header für die Bibliothek definiert, damit sie in präprozessoranweisungen nicht definiert werden, bevor die erforderlichen Header enthalten ist.
 
 - **&#95;ATL&#95;VER** in definierten \<atldef.h > als ein Integer-literal, die die Versionsnummer des ATL-codiert.
 
@@ -443,6 +443,6 @@ Microsoft Visual C++ unterstützt diesen zusätzlichen vordefinierten Makros.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Makros (C/C++)](../preprocessor/macros-c-cpp.md)   
-[Präprozessor-Operatoren](../preprocessor/preprocessor-operators.md)   
+[Makros (C/C++)](../preprocessor/macros-c-cpp.md)<br/>
+[Präprozessoroperatoren](../preprocessor/preprocessor-operators.md)<br/>
 [Präprozessordirektiven](../preprocessor/preprocessor-directives.md)

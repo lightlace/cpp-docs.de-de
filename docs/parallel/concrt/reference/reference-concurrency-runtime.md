@@ -1,10 +1,6 @@
 ---
-title: Referenz (Concurrency Runtime) | Microsoft-Dokumentation
-ms.custom: ''
+title: Referenz (Concurrency Runtime)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - concurrent_vector/Concurrency::details::_Concurrent_vector_base_v4::_My_segment
 - agents/Concurrency::details::_Dynamic_array::_Swap
@@ -451,26 +447,21 @@ f1_keywords:
 - concrt/Concurrency::details::_Timer::_Stop
 - concrt/Concurrency::details::_TaskCollectionBase::_M_pParent
 - agents/Concurrency::_Network_link_iterator::operator->
-dev_langs:
-- C++
 helpviewer_keywords:
 - DWORD typedef
 - HANDLE typedef
 - LPSECURITY_ATTRIBUTES typedef
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d06bac8aef674472b817817fde4191f1d655365e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fa1156aa6406f1c34712e845612147a42b753184
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723228"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663332"
 ---
 # <a name="reference-concurrency-runtime"></a>Referenz (Concurrency Runtime)
+
 Dieser Abschnitt enthält Referenzinformationen für die Concurrency Runtime.
 
 > [!Note]
@@ -478,7 +469,8 @@ Dieser Abschnitt enthält Referenzinformationen für die Concurrency Runtime.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Concurrency-Namespace](concurrency-namespace.md) Concurrency-Namespace stellt Klassen bereit, und Funktionen, mit denen Sie Zugriff auf die Concurrency Runtime, ein Framework zur parallelen Programmierung für C++. Weitere Informationen finden Sie unter [Concurrency Runtime](../concurrency-runtime.md).
+[Concurrency-Namespace](concurrency-namespace.md)<br/>
+Concurrency-Namespace stellt Klassen bereit, und Funktionen, mit denen Sie Zugriff auf die Concurrency Runtime, ein Framework zur parallelen Programmierung für C++. Weitere Informationen finden Sie unter [Concurrency Runtime](../concurrency-runtime.md).
 
 [Std-namespace](std-namespace.md)
 

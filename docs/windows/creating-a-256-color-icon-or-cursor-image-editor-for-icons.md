@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 930a73f478b02d5aa7a16f262f98131dccba9f76
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: dcd9edb155afa9138778f1d464a5e59a20dd7ffd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315926"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070030"
 ---
 # <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>Erstellen eines Symbols oder Cursors mit 256 Farben (Bildbearbeitung für Symbole)
 
@@ -34,7 +34,7 @@ Mithilfe der **Image** -Editor, Symbolen und Cursorn können mit einem 256-Farbe
 
 1. In [Ressourcenansicht](../windows/resource-view-window.md)mit der rechten Maustaste auf die RC-Datei, und wählen Sie **Ressource einfügen** aus dem Kontextmenü. (Wenn Sie bereits über eine vorhandene imageressource in der RC-Datei, z. B. einen Cursor, haben Sie können einfach mit der rechten Maustaste die **Cursor** Ordner, und wählen **Cursor einfügen** aus dem Kontextmenü.)
 
-   > [!NOTE] 
+   > [!NOTE]
    > Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).
 
 2. In der [Ressource einfügen (Dialogfeld)](../windows/add-resource-dialog-box.md)Option **Symbol** oder **Cursor** , und klicken Sie auf **neu**.
@@ -51,6 +51,6 @@ Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
-[Verwenden der 256-Farben-Palette](../windows/using-the-256-color-palette-image-editor-for-icons.md)  
-[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Verwenden der 256-Farben-Palette](../windows/using-the-256-color-palette-image-editor-for-icons.md)<br/>
+[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Symbole und Cursor: Bildressourcen für Anzeigegeräte](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

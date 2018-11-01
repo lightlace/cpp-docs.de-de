@@ -1,10 +1,6 @@
 ---
-title: _mbclen, mblen, _mblen_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _mbclen, mblen, _mblen_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbclen
 - mblen
@@ -31,8 +27,6 @@ f1_keywords:
 - _ftclen
 - _tclen
 - mbclen
-dev_langs:
-- C++
 helpviewer_keywords:
 - tclen function
 - _mblen_l function
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 932695b9d3474f892460e222fd1d9cc2b34c0dd6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dddf7d3a1705460d2c8d42cc1b36230d7bdaf942
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403208"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434385"
 ---
 # <a name="mbclen-mblen-mblenl"></a>_mbclen, mblen, _mblen_l
 
@@ -93,15 +83,15 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_mbclen** gibt 1 oder 2, je nachdem, ob das Multibytezeichen *c* 1 oder 2 Bytes lang ist. Es gibt keine Fehlerrückgabe für **_mbclen**. Wenn *Mbstr* nicht **NULL**, **Mblen** gibt die Länge in Byte des multibytezeichens zurück. Wenn *Mbstr* ist **NULL** oder das Objekt zeigt auf das Nullzeichen Breitzeichen **Mblen** gibt 0 zurück. Wenn das Objekt, *Mbstr* verweist auf bilden kein gültiges Multibytezeichen innerhalb der ersten *Anzahl* Zeichen, d. h. **Mblen** gibt-1 zurück.
+**_mbclen** gibt 1 oder 2, je nachdem, ob das Multibytezeichen *c* 1 oder 2 Bytes lang ist. Es gibt keine Fehlerrückgabe für **_mbclen**. Wenn *Mbstr* nicht **NULL**, **Mblen** gibt die Länge in Byte des multibytezeichens zurück. Wenn *Mbstr* ist **NULL** oder das Objekt zeigt auf das Breitzeichen Null-Zeichen, **Mblen** gibt 0 zurück. Wenn das Objekt, *Mbstr* verweist auf ein gültiges Multibytezeichen innerhalb der ersten nicht bildet *Anzahl* Zeichen **Mblen** gibt-1 zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mbclen** Funktion gibt die Länge in Byte des multibytezeichens *c*. Wenn *c* verweist nicht auf das führende Byte eines multibytezeichens von einen impliziten Aufruf bestimmt **_ismbblead**, das Ergebnis des **_mbclen** kann nicht berechnet werden.
+Die **_mbclen** Funktion gibt die Länge in Byte des multibytezeichens zurück *c*. Wenn *c* verweist nicht auf das führende Byte eines multibytezeichens laut eines impliziten Aufrufs von **_ismbblead**, das Ergebnis des **_mbclen** ist unvorhersehbar.
 
-**Mblen** gibt die Länge in Bytes der *Mbstr* Wenn sie ein gültiges Multibytezeichen ist und bestimmt die Gültigkeit von Multibytezeichen Codepage zugeordnet. **Mblen** untersucht *Anzahl* oder weniger Bytes, die in enthaltenen *Mbstr*, aber nicht länger als **MB_CUR_MAX** Bytes.
+**Mblen** gibt die Länge in Bytes zurück *Mbstr* , wenn sie ein gültiges Multibytezeichen ist und die Gültigkeit der Multibytezeichen der Codepage zugeordnet bestimmt. **Mblen** untersucht *Anzahl* oder weniger Bytes, die in enthaltenen *Mbstr*, aber nicht länger als **MB_CUR_MAX** Bytes.
 
-Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -111,7 +101,7 @@ Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kateg
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_mbclen**|\<mbstring.h>|
 |**mblen**|\<stdlib.h>|

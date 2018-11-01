@@ -1,31 +1,21 @@
 ---
-title: Abstract (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: abstract (C++ / CLI und C++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
 - abstract
 - abstract_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - abstract keyword [C++]
 ms.assetid: cbae3408-0378-4ac8-b70d-c016b381a6d5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 463848ea5f01bf232850d548c9f4255c07409254
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d2cb8e6d1d60d4469e325a4380701beda49a4355
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610998"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645678"
 ---
-# <a name="abstract--c-component-extensions"></a>abstract (Komponentenerweiterungen für C++)
+# <a name="abstract--ccli-and-ccx"></a>abstract (C++ / CLI und C++ / CX)
 
 Die **abstrakte** -Schlüsselwort deklariert entweder:
 
@@ -37,12 +27,9 @@ Die **abstrakte** -Schlüsselwort deklariert entweder:
 
 ### <a name="syntax"></a>Syntax
 
-```cpp
-      class-declaration
-      class-identifier
-      abstract {}
-virtualreturn-typemember-function-identifier() abstract ;
-```
+*Klassendeklaration* *-Klassenbezeichner* **abstrakte {}**
+
+**virtuelle** *Rückgabetyp* *Member-Funktion-Identifier* **abstrakt)**
 
 ### <a name="remarks"></a>Hinweise
 
@@ -115,4 +102,4 @@ public:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET und UWP](../windows/component-extensions-for-runtime-platforms.md)

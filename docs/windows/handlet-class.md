@@ -1,28 +1,48 @@
 ---
 title: HandleT-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleT
+- corewrappers/Microsoft::WRL::Wrappers::HandleT::Attach
+- corewrappers/Microsoft::WRL::Wrappers::HandleT::Close
+- corewrappers/Microsoft::WRL::Wrappers::HandleT::Detach
+- corewrappers/Microsoft::WRL::Wrappers::HandleT::Get
+- corewrappers/Microsoft::WRL::Wrappers::HandleT::handle_
+- corewrappers/Microsoft::WRL::Wrappers::HandleT::HandleT
+- corewrappers/Microsoft::WRL::Wrappers::HandleT::InternalClose
+- corewrappers/Microsoft::WRL::Wrappers::HandleT::IsValid
+- corewrappers/Microsoft::WRL::Wrappers::HandleT::operator=
+- corewrappers/Microsoft::WRL::Wrappers::HandleT::~HandleT
 dev_langs:
 - C++
 helpviewer_keywords:
-- HandleT class
+- Microsoft::WRL::Wrappers::HandleT class
+- Microsoft::WRL::Wrappers::HandleT::Attach method
+- Microsoft::WRL::Wrappers::HandleT::Close method
+- Microsoft::WRL::Wrappers::HandleT::Detach method
+- Microsoft::WRL::Wrappers::HandleT::Get method
+- Microsoft::WRL::Wrappers::HandleT::handle_ data member
+- Microsoft::WRL::Wrappers::HandleT::HandleT, constructor
+- Microsoft::WRL::Wrappers::HandleT::InternalClose method
+- Microsoft::WRL::Wrappers::HandleT::IsValid method
+- Microsoft::WRL::Wrappers::HandleT::operator= operator
+- Microsoft::WRL::Wrappers::HandleT::~HandleT, destructor
 ms.assetid: 3822b32a-a426-4d94-a54d-919d4df60ee2
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6da9451d6f009bad6163efec23bb6f920a56df49
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d0f7364ac86aebd0f5a9a1c0f7ec2343b9e162d0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590529"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081667"
 ---
 # <a name="handlet-class"></a>HandleT-Klasse
 
@@ -31,59 +51,57 @@ Stellt ein Handle für ein Objekt dar.
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-template <
-   typename HandleTraits
->
+template <typename HandleTraits>
 class HandleT;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*HandleTraits*  
+*HandleTraits*<br/>
 Eine Instanz von der [HandleTraits](../windows/handletraits-structure.md) abgeschrägten Designs, die allgemeinen Eigenschaften eines Handles definiert.
 
 ## <a name="members"></a>Member
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
-|----------|-----------------|
-|`Traits`|Ein Synonym für `HandleTraits`.|
+Name     | Beschreibung
+-------- | -----------------------------
+`Traits` | Ein Synonym für `HandleTraits`.
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|Name|Beschreibung|
-|----------|-----------------|
-|[HandleT::HandleT-Konstruktor](../windows/handlet-handlet-constructor.md)|Initialisiert eine neue Instanz der dem **HandleT** Klasse.|
-|[HandleT::~HandleT-Destruktor](../windows/handlet-tilde-handlet-destructor.md)|Hebt die Initialisierung einer Instanz von der **HandleT** Klasse.|
+Name                                | Beschreibung
+----------------------------------- | --------------------------------------------------
+[Handlet:: Handlet](#handlet)        | Initialisiert eine neue Instanz der `HandleT`-Klasse.
+[HandleT:: ~ HandleT](#tilde-handlet) | Hebt die Initialisierung einer Instanz von der `HandleT` Klasse.
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
-|----------|-----------------|
-|[HandleT::Attach-Methode](../windows/handlet-attach-method.md)|Ordnet das angegebene Handle der aktuellen **HandleT** Objekt.|
-|[HandleT::Close-Methode](../windows/handlet-close-method.md)|Schließt das aktuelle **HandleT** Objekt.|
-|[HandleT::Detach-Methode](../windows/handlet-detach-method.md)|Hebt die Zuordnung der aktuellen **HandleT** Objekt aus der zugrunde liegende Handle.|
-|[HandleT::Get-Methode](../windows/handlet-get-method.md)|Ruft den Wert, der das zugrunde liegende Handle.|
-|[HandleT::IsValid-Methode](../windows/handlet-isvalid-method.md)|Gibt an, ob die aktuelle **HandleT** Objekt stellt ein Handle.|
+Name                         | Beschreibung
+---------------------------- | ----------------------------------------------------------------------
+[Handlet:: Attach](#attach)   | Ordnet das angegebene Handle der aktuellen `HandleT` Objekt.
+[Handlet:: Close](#close)     | Schließt das aktuelle `HandleT` Objekt.
+[Handlet:: Detach](#detach)   | Hebt die Zuordnung der aktuellen `HandleT` Objekt aus der zugrunde liegende Handle.
+[Handlet:: Get](#get)         | Ruft den Wert, der das zugrunde liegende Handle.
+[Handlet:: IsValid](#isvalid) | Gibt an, ob die aktuelle `HandleT` Objekt stellt ein Handle.
 
 ### <a name="protected-methods"></a>Geschützte Methoden
 
-|Name|Beschreibung|
-|----------|-----------------|
-|[HandleT::InternalClose-Methode](../windows/handlet-internalclose-method.md)|Schließt das aktuelle **HandleT** Objekt.|
+Name                                     | Beschreibung
+---------------------------------------- | ------------------------------------
+[Handlet:: Internalclose](#internalclose) | Schließt das aktuelle `HandleT` Objekt.
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
-|Name|Beschreibung|
-|----------|-----------------|
-|[HandleT::operator=-Operator](../windows/handlet-operator-assign-operator.md)|Verschiebt den Wert des angegebenen **HandleT** -Objekt mit dem aktuellen **HandleT** Objekt.|
+Name                                   | Beschreibung
+-------------------------------------- | ----------------------------------------------------------------------------------
+[Handlet:: =](#operator-assign) | Verschiebt den Wert des angegebenen `HandleT` -Objekt mit dem aktuellen `HandleT` Objekt.
 
 ### <a name="protected-data-members"></a>Geschützte Datenmember
 
-|name|Beschreibung|
-|----------|-----------------|
-|[HandleT::handle_ Data-Member](../windows/handlet-handle-data-member.md)|Enthält das Handle, das entspricht dem **HandleT** Objekt.|
+name                        | Beschreibung
+--------------------------- | ----------------------------------------------------------------
+[Handlet:: Handle_](#handle) | Enthält das Handle, das entspricht dem `HandleT` Objekt.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -95,6 +113,150 @@ Eine Instanz von der [HandleTraits](../windows/handletraits-structure.md) abgesc
 
 **Namespace:** Microsoft::WRL::Wrappers
 
-## <a name="see-also"></a>Siehe auch
+## <a name="tilde-handlet"></a>HandleT:: ~ HandleT
 
-[Microsoft::WRL::Wrappers-Namespace](../windows/microsoft-wrl-wrappers-namespace.md)
+Hebt die Initialisierung einer Instanz von der `HandleT` Klasse.
+
+```cpp
+~HandleT();
+```
+
+## <a name="attach"></a>Handlet:: Attach
+
+Ordnet das angegebene Handle der aktuellen `HandleT` Objekt.
+
+```cpp
+void Attach(
+   typename HandleTraits::Type h
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*h*<br/>
+Ein Handle.
+
+## <a name="close"></a>Handlet:: Close
+
+Schließt das aktuelle `HandleT` Objekt.
+
+```cpp
+void Close();
+```
+
+### <a name="remarks"></a>Hinweise
+
+Das Handle, das das aktuelle zugrunde liegende `HandleT` wird geschlossen, und die `HandleT` auf einen ungültigen Zustand festgelegt ist.
+
+Wenn das Handle nicht ordnungsgemäß geschlossen wird, wird eine Ausnahme im aufrufenden Thread ausgelöst.
+
+## <a name="detach"></a>Handlet:: Detach
+
+Hebt die Zuordnung der aktuellen `HandleT` Objekt aus der zugrunde liegende Handle.
+
+```cpp
+typename HandleTraits::Type Detach();
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Das zugrunde liegende Handle.
+
+### <a name="remarks"></a>Hinweise
+
+Wenn dieser Vorgang abgeschlossen ist, die aktuelle `HandleT` auf einen ungültigen Zustand festgelegt ist.
+
+## <a name="get"></a>Handlet:: Get
+
+Ruft den Wert, der das zugrunde liegende Handle.
+
+```cpp
+typename HandleTraits::Type Get() const;
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein Handle.
+
+## <a name="handle"></a>Handlet:: Handle_
+
+Enthält das Handle, das entspricht dem `HandleT` Objekt.
+
+```cpp
+typename HandleTraits::Type handle_;
+```
+
+## <a name="handlet"></a>Handlet:: Handlet
+
+Initialisiert eine neue Instanz der `HandleT`-Klasse.
+
+```cpp
+explicit HandleT(
+   typename HandleTraits::Type h =
+      HandleTraits::GetInvalidValue()
+);
+
+HandleT(
+   _Inout_ HandleT&& h
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*h*<br/>
+Ein Handle.
+
+### <a name="remarks"></a>Hinweise
+
+Der erste Konstruktor initialisiert ein `HandleT` -Objekt, das kein gültiges Handle für ein Objekt ist. Der zweite Konstruktor erstellt ein neues `HandleT` -Sitzungsobjekts Parameter *h*.
+
+## <a name="internalclose"></a>Handlet:: Internalclose
+
+Schließt das aktuelle `HandleT` Objekt.
+
+```cpp
+virtual bool InternalClose();
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+**"true"** Wenn die aktuelle `HandleT` geschlossen wird, erfolgreich ist; andernfalls **"false"**.
+
+### <a name="remarks"></a>Hinweise
+
+`InternalClose()` ist `protected`.
+
+## <a name="isvalid"></a>Handlet:: IsValid
+
+Gibt an, ob die aktuelle `HandleT` Objekt stellt ein Handle.
+
+```cpp
+bool IsValid() const;
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+**"true"** Wenn die `HandleT` stellt ein Handle ist, andernfalls **"false"**.
+
+## <a name="operator-assign"></a>Handlet:: =
+
+Verschiebt den Wert des angegebenen `HandleT` -Objekt mit dem aktuellen `HandleT` Objekt.
+
+```cpp
+HandleT& operator=(
+   _Inout_ HandleT&& h
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*h*<br/>
+Ein Rvalue-Verweis auf ein Handle.
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein Verweis auf das aktuelle `HandleT` Objekt.
+
+### <a name="remarks"></a>Hinweise
+
+Dieser Vorgang erklärt die `HandleT` vom Parameter angegebenen Objekts *h*.

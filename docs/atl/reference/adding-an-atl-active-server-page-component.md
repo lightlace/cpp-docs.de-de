@@ -1,28 +1,18 @@
 ---
-title: Hinzufügen einer ATL Active Server Page-Komponente | Microsoft-Dokumentation
-ms.custom: ''
+title: Hinzufügen einer ATL Active Server Page-Komponente
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - ASP components, adding
 - ASP components
 - ATL, ASP components
 - ATL ASP components
 ms.assetid: 7be2204c-6e58-4099-8892-001b848c8987
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a326b72ac5594d7ef5f0b9ad26f9bdf4e8472bd4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7cbe52d4f6bcc82d17880d6eaa6a38f76809952d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46112992"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630593"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Hinzufügen einer ATL Active Server Page-Komponente
 
@@ -36,13 +26,13 @@ Active Server Pages-Komponenten sind Bestandteil der Internet Information Servic
 
 - Sie können die ASP-Funktionen für die Fehlerbehandlung für Ihre Web-basierten Anwendungen verwenden.
 
-### <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Hinzufügen eine ATL Active Server Pages-Komponente zu Ihrem Projekt
+## <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Hinzufügen eine ATL Active Server Pages-Komponente zu Ihrem Projekt
 
 1. In **Projektmappen-Explorer** mit der rechten Maustaste in des Namens des Projekts, dem Sie die ATL Active Server Pages-Komponente hinzufügen möchten.
 
-2. Klicken Sie im Kontextmenü auf die Option **Hinzufügen**, und klicken Sie danach auf **Klasse hinzufügen**.
+1. Klicken Sie im Kontextmenü auf die Option **Hinzufügen**, und klicken Sie danach auf **Klasse hinzufügen**.
 
-3. In der [Klasse hinzufügen](../../ide/add-class-dialog-box.md) im Dialogfeld im Bereich "Vorlagen", klicken Sie auf **ATL Active Server Page-Komponente**, und klicken Sie dann auf **öffnen** zum Anzeigen der [ATL Active Server Page-Komponenten-Assistent](../../atl/reference/atl-active-server-page-component-wizard.md).
+1. In der [Klasse hinzufügen](../../ide/add-class-dialog-box.md) Dialogfeld die **Vorlagen** Bereich klicken Sie auf **ATL Active Server Page-Komponente**, und klicken Sie dann auf **öffnen** zum Anzeigen der [ATL Active Server Page-Komponenten-Assistent](../../atl/reference/atl-active-server-page-component-wizard.md).
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -52,4 +42,3 @@ Active Server Pages-Komponenten sind Bestandteil der Internet Information Servic
 [Hinzufügen einer Methode](../../ide/adding-a-method-visual-cpp.md)<br/>
 [MFC-Klasse](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Hinzufügen einer generischen C++-Klasse](../../ide/adding-a-generic-cpp-class.md)
-

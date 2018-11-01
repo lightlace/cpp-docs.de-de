@@ -1,40 +1,32 @@
 ---
-title: Schieberegler-Steuerelemente mit | Microsoft Docs
-ms.custom: ''
+title: Verwenden von Schieberegler-Steuerelementen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CSliderCtrl class [MFC], using
 - slider controls
 - slider controls [MFC], using
 ms.assetid: 2b1a8ac8-2b17-41e1-aa24-83c1fd737049
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9180d792f38652b22f430e497ef0e42dc54f6d73
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7bb5bda4a7b85ea8bb852649b20f10f0c4693188
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382179"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533561"
 ---
 # <a name="using-slider-controls"></a>Verwenden von Schieberegler-Steuerelementen
-Typische Verwendung des Schieberegler-Steuerelements entspricht dem folgenden Muster:  
-  
--   Das Steuerelement wird erstellt. Wenn das Steuerelement in einer Dialogfeldvorlage angegeben wird, erfolgt die Erstellung automatisch, wenn das Dialogfeld erstellt wird. (Sie müssen eine [CSliderCtrl](../mfc/reference/csliderctrl-class.md) Member in der Dialogfeldklasse, die das Schieberegler-Steuerelement entspricht.) Alternativ können Sie die [erstellen](../mfc/reference/csliderctrl-class.md#create) Memberfunktion beim Erstellen des Steuerelements als untergeordnetes Fenster von einem beliebigen Fenster.  
-  
--   Rufen Sie die verschiedenen Satz Memberfunktionen können Sie Werte für das Steuerelement festlegen. Änderungen, die Sie vornehmen können, gehören das Festlegen der minimalen und maximalen Positionen für den Schieberegler, Teilstriche gezeichnet, einen Auswahlbereich festlegen, und Neupositionieren des Schiebereglers. Für Steuerelemente in einem Dialogfeld, ist ein guter Zeitpunkt, zu diesem Zweck im Dialogfeld [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) Funktion.  
-  
--   Wie der Benutzer mit dem Steuerelement interagiert, sendet er verschiedene benachrichtigungsmeldungen. Sie können das Schiebereglerwert aus dem Steuerelement extrahieren, durch Aufrufen der [GetPos](../mfc/reference/csliderctrl-class.md#getpos) Memberfunktion.  
-  
--   Wenn Sie mit dem Steuerelement fertig sind, müssen Sie sicherstellen, dass es ordnungsgemäß zerstört wird. Wenn das Schieberegler-Steuerelement in einem Dialogfeld ist es und `CSliderCtrl` Objekt wird automatisch zerstört werden. Wenn nicht der Fall, Sie sicherstellen, dass sowohl im Steuerelement müssen und dem `CSliderCtrl` Objekt ordnungsgemäß zerstört werden.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von CSliderCtrl](../mfc/using-csliderctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+
+Typische Verwendung des Schieberegler-Steuerelements basiert auf dem folgenden Muster:
+
+- Das Steuerelement wird erstellt. Wenn das Steuerelement in einer Dialogfeldvorlage angegeben wird, erfolgt die Erstellung automatisch, wenn das Dialogfeld erstellt wird. (Sollten Ihnen eine [CSliderCtrl](../mfc/reference/csliderctrl-class.md) Member in der Dialogfeldklasse, die das Schieberegler-Steuerelement entspricht.) Alternativ können Sie die [erstellen](../mfc/reference/csliderctrl-class.md#create) Member-Funktion, um das Steuerelement als untergeordnetes Fenster von einem beliebigen Fenster zu erstellen.
+
+- Rufen Sie die verschiedenen Satz Memberfunktionen, um Werte für das Steuerelement festzulegen. Änderungen, die Sie vornehmen können, enthalten die minimalen und maximalen Positionen für den Schieberegler festlegen, Teilstriche zu zeichnen, einen Auswahlbereich festlegen und Neupositionieren von den Schieberegler. Für Steuerelemente in einem Dialogfeld, ist ein guter Zeitpunkt, zu diesem Zweck die im Dialogfeld [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) Funktion.
+
+- Während der Benutzer mit dem Steuerelement interagiert, sendet er die verschiedenen Benachrichtigungen. Sie können den Wert des Schiebereglers aus dem Steuerelement extrahieren, durch den Aufruf der [GetPos](../mfc/reference/csliderctrl-class.md#getpos) Member-Funktion.
+
+- Wenn Sie mit dem Steuerelement fertig sind, müssen Sie sicherstellen, dass es ordnungsgemäß zerstört wird. Das Schieberegler-Steuerelement in einem Dialogfeld, ist es und die `CSliderCtrl` Objekt wird automatisch zerstört. Wenn nicht der Fall, Sie sicherstellen, dass sowohl das Steuerelement müssen und die `CSliderCtrl` Objekt ordnungsgemäß zerstört werden.
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden von CSliderCtrl](../mfc/using-csliderctrl.md)<br/>
+[Steuerelemente](../mfc/controls-mfc.md)
 

@@ -18,63 +18,67 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7888f00b1b95a18e839ab61fc8ff28a2646f9875
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: d10bf2392d7e469f8f9a8a113b96e0cf2be88a50
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541432"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434530"
 ---
 # <a name="rdtsc"></a>__rdtsc
-**Microsoft-spezifisch**  
-  
- Generiert die `rdtsc` -Anweisung, die den Prozessor Zeitstempel zurückgegeben. Der Zeitstempel für den Prozessor zeichnet die Anzahl der Uhrzyklen seit dem letzten Rücksetzen.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-unsigned __int64 __rdtsc();  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Eine 64-Bit-Ganzzahl ohne Vorzeichen, die eine Taktanzahl darstellt.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-|Systemintern|Architektur|  
-|---------------|------------------|  
-|`__rdtsc`|x86, x64|  
-  
- **Headerdatei** \<intrin.h >  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Routine ist nur als systeminterne Funktion verfügbar.  
-  
- Die Interpretation des TSC-Werts in dieser Generation von Hardware unterscheidet sich von dem in früheren Versionen von X64. Finden Sie die Hardware-Handbücher für Weitere Informationen.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// rdtsc.cpp  
-// processor: x86, x64  
-#include <stdio.h>  
-#include <intrin.h>  
-  
-#pragma intrinsic(__rdtsc)  
-  
-int main()  
-{  
-    unsigned __int64 i;  
-    i = __rdtsc();  
-    printf_s("%I64d ticks\n", i);  
-}  
-```  
-  
-```Output  
-3363423610155519 ticks  
-```  
-  
-**Ende Microsoft-spezifisch**  
-  
-## <a name="see-also"></a>Siehe auch  
- [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+
+**Microsoft-spezifisch**
+
+Generiert die `rdtsc` -Anweisung, die den Prozessor Zeitstempel zurückgegeben. Der Zeitstempel für den Prozessor zeichnet die Anzahl der Uhrzyklen seit dem letzten Rücksetzen.
+
+## <a name="syntax"></a>Syntax
+
+```
+unsigned __int64 __rdtsc();
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Eine 64-Bit-Ganzzahl ohne Vorzeichen, die eine Taktanzahl darstellt.
+
+## <a name="requirements"></a>Anforderungen
+
+|Systemintern|Architektur|
+|---------------|------------------|
+|`__rdtsc`|x86, x64|
+
+**Headerdatei** \<intrin.h >
+
+## <a name="remarks"></a>Hinweise
+
+Diese Routine ist nur als systeminterne Funktion verfügbar.
+
+Die Interpretation des TSC-Werts in dieser Generation von Hardware unterscheidet sich von dem in früheren Versionen von X64. Finden Sie die Hardware-Handbücher für Weitere Informationen.
+
+## <a name="example"></a>Beispiel
+
+```
+// rdtsc.cpp
+// processor: x86, x64
+#include <stdio.h>
+#include <intrin.h>
+
+#pragma intrinsic(__rdtsc)
+
+int main()
+{
+    unsigned __int64 i;
+    i = __rdtsc();
+    printf_s("%I64d ticks\n", i);
+}
+```
+
+```Output
+3363423610155519 ticks
+```
+
+**Ende Microsoft-spezifisch**
+
+## <a name="see-also"></a>Siehe auch
+
+[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

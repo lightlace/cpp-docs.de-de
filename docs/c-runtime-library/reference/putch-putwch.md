@@ -1,10 +1,6 @@
 ---
-title: _putch _putwch | Microsoft-Dokumentation
-ms.custom: ''
+title: _putch, _putwch
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _putwch
 - _putch
@@ -25,8 +21,6 @@ f1_keywords:
 - _putch
 - putwch
 - _putwch
-dev_langs:
-- C++
 helpviewer_keywords:
 - _putch function
 - characters, writing
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a0a6e50a4cd6794e28cc59bb2b080c57c0993986
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9abd27a926e641e72595360ed3951fad9e888676
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401804"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434761"
 ---
 # <a name="putch-putwch"></a>_putch, _putwch
 
@@ -60,7 +50,7 @@ int _putch(
 int c
 );
 wint_t _putwch(
-   wchar_t c
+   wchar_t c
 );
 ```
 
@@ -75,7 +65,7 @@ Gibt bei Erfolg *c* zurück. Wenn **_putch** fehlschlägt, wird **EOF**; Wenn **
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktionen schreiben das Zeichen *c* direkt, ohne Pufferung in der Konsole. In Windows NT schreibt **_putwch** Unicodezeichen unter Verwendung der aktuellen Konsolengebietsschemaeinstellung.
+Diese Funktionen schreiben das Zeichen *c* direkt, ohne Pufferung, an die Konsole. In Windows NT schreibt **_putwch** Unicodezeichen unter Verwendung der aktuellen Konsolengebietsschemaeinstellung.
 
 Die Versionen mit dem Suffix **_nolock** sind identisch, allerdings sind sie nicht vor Störungen durch andere Threads geschützt. Weitere Informationen finden Sie unter **_putch_nolock**, **_putwch_nolock**.
 
@@ -87,7 +77,7 @@ Die Versionen mit dem Suffix **_nolock** sind identisch, allerdings sind sie nic
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_putch**|\<conio.h>|
 |**_putwch**|\<conio.h>|

@@ -1,10 +1,6 @@
 ---
-title: _clear87, _clearfp | Microsoft-Dokumentation
-ms.custom: ''
+title: _clear87, _clearfp
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _clearfp
 - _clear87
@@ -26,8 +22,6 @@ f1_keywords:
 - _clearfp
 - _clear87
 - clear87
-dev_langs:
-- C++
 helpviewer_keywords:
 - clearing floating point status word
 - clearfp function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - _clearfp function
 - clear87 function
 ms.assetid: 72d24a70-7688-4793-ae09-c96d33fcca52
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 195bd9f78ed9edfa47ec9ebbd2babbee676e5644
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4148f85d82a4210033686455c73046081832e3c4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395616"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477258"
 ---
 # <a name="clear87-clearfp"></a>_clear87, _clearfp
 
@@ -63,15 +53,15 @@ Die Bits im zurückgegebenen Wert den gleitkommastatus vor dem Aufruf von **_cle
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_clear87** Funktion löscht die ausnahmeflags in das gleitkommastatuswort, legt den busy-Bit auf 0 fest und gibt das statuswort zurück. Das Gleitkommastatuswort ist eine Kombination aus dem 8087/80287-Statuswort und anderen Bedingungen, die von dem Handler für 8087/80287-Ausnahmen erkannt werden, z. B. ein Gleitkomma-Stapelüberlauf und -Stapelunterlauf.
+Die **_clear87** Funktion löscht die ausnahmeflags im das gleitkommastatuswort, legt den busy-Bit auf 0 fest und gibt das statuswort zurück. Das Gleitkommastatuswort ist eine Kombination aus dem 8087/80287-Statuswort und anderen Bedingungen, die von dem Handler für 8087/80287-Ausnahmen erkannt werden, z. B. ein Gleitkomma-Stapelüberlauf und -Stapelunterlauf.
 
-**_clearfp** ist eine plattformunabhängige, portable Version von den **_clear87** Routine. Sie ist identisch mit **_clear87** auf Intel (x86)-Plattformen und wird auch von der X64 und ARM-Plattformen unterstützt. Um sicherzustellen, dass Ihr gleitkommacode für X64 und ARM portabel ist, verwenden Sie **_clearfp**. Wenn Ihre nur X86 Zielobjekte Plattformen, verwenden Sie entweder **_clear87** oder **_clearfp**.
+**_clearfp** ist eine plattformunabhängige, portable Version der **_clear87** Routine. Es ist identisch mit **_clear87** auf Intel (x86)-Plattformen und wird auch von der X64 und ARM-Plattformen unterstützt. Um sicherzustellen, dass Ihr gleitkommacode für X64 und ARM portabel ist, verwenden **_clearfp**. Wenn Sie nur X86 Anzielen-Plattformen können Sie mithilfe einer **_clear87** oder **_clearfp**.
 
-Diese Funktionen sind veraltet, beim Kompilieren mit [/CLR (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md) , da die common Language Runtime nur die standardmäßige Genauigkeit von Gleitkommawerten unterstützt.
+Diese Funktionen sind veraltet, beim Kompilieren mit [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) da die common Language Runtime nur die Genauigkeit der standardgleitkommawerte unterstützt.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_clear87**|\<float.h>|
 |**_clearfp**|\<float.h>|

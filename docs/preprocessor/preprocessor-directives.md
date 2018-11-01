@@ -1,26 +1,16 @@
 ---
-title: Präprozessoranweisungen | Microsoft-Dokumentation
-ms.custom: ''
+title: Präprozessoranweisungen
 ms.date: 06/28/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - directives, preprocessor
 - preprocessor, directives
 ms.assetid: e0fc4564-b6cf-4a36-bf51-6ccd7abd0a94
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e218002171b7ad2d141be227ab277851487f0f5
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 9481e977f2afb3de27a74278893a217fde48044b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678799"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50608025"
 ---
 # <a name="preprocessor-directives"></a>Präprozessoranweisungen
 
@@ -43,6 +33,6 @@ Präprozessoranweisungen können an beliebiger Stelle in einer Quelldatei auftre
 
 ## <a name="see-also"></a>Siehe auch
 
-[Präprozessoroperatoren](../preprocessor/preprocessor-operators.md)  
-[Vordefinierte Makros](../preprocessor/predefined-macros.md)  
-[C/C++-Präprozessorreferenz](../preprocessor/c-cpp-preprocessor-reference.md)  
+[Präprozessoroperatoren](../preprocessor/preprocessor-operators.md)<br/>
+[Vordefinierte Makros](../preprocessor/predefined-macros.md)<br/>
+[C/C++-Präprozessorreferenz](../preprocessor/c-cpp-preprocessor-reference.md)

@@ -1,27 +1,17 @@
 ---
-title: Optionen, ATL-Steuerelement-Assistent | Microsoft-Dokumentation
-ms.custom: ''
+title: Optionen, ATL-Steuerelement-Assistent
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.control.options
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 25116b0750016fdbb4ffd792d0b16efb6c6c1793
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 932661227daa216934c061a8b6807b05ca8270ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711939"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50443757"
 ---
 # <a name="options-atl-control-wizard"></a>Optionen, ATL-Steuerelement-Assistent
 
@@ -49,11 +39,11 @@ Die Art des Steuerelements, das Sie erstellen möchten.
 
    - Ein HTML-Testseite, die das zusammengesetzte Steuerelement enthält.
 
-     Dieses Steuerelement legt standardmäßig [CComControlBase](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) auf "true", um anzugeben, dass dies ein Steuerelement mit Fenster ist. Eine Zuordnung für die Senke implementiert. Weitere Informationen finden Sie unter [-Unterstützung für DHTML-Steuerelement](../../atl/atl-support-for-dhtml-controls.md).
+   Dieses Steuerelement legt standardmäßig [CComControlBase](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) auf "true", um anzugeben, dass dies ein Steuerelement mit Fenster ist. Eine Zuordnung für die Senke implementiert. Weitere Informationen finden Sie unter [-Unterstützung für DHTML-Steuerelement](../../atl/atl-support-for-dhtml-controls.md).
 
 - **DHTML-Steuerelements**: Gibt an, ein ATL-DHTML-Steuerelement der Benutzeroberfläche mithilfe von HTML. DHTML-UI-Klasse enthält eine COM-Zuordnung. Dieses Steuerelement legt standardmäßig [CComControlBase](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) auf "true", um anzugeben, dass dies ein Steuerelement mit Fenster ist.
 
-     Weitere Informationen finden Sie unter [Identifizieren von Elementen des DHTML-Steuerelementprojekts](../../atl/identifying-the-elements-of-the-dhtml-control-project.md).
+   Weitere Informationen finden Sie unter [Identifizieren von Elementen des DHTML-Steuerelementprojekts](../../atl/identifying-the-elements-of-the-dhtml-control-project.md).
 
 ### <a name="minimal-control"></a>Nur minimale Kontrolle
 

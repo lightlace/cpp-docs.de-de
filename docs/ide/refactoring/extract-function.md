@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fc4d48c972bca9352f326085574e4cf4df83aea
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 8ca75ca3b69fb175bea160d7f2a35d36416ea2f5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33333156"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441368"
 ---
 # <a name="extract-function"></a>Extract-Funktion
 **Zweck:** Umwandeln eines Codefragments in dessen eigene Funktion.
 
-**Anwendung:** Wenn Sie über ein Fragment von vorhandenem Code in einer Funktion verfügen, das von einer anderen Funktion aufgerufen werden muss.  
+**Anwendung:** Wenn Sie über ein Fragment von vorhandenem Code in einer Funktion verfügen, das von einer anderen Funktion aufgerufen werden muss.
 
 **Vorteile**: Sie könnten diesen Code kopieren und einfügen, dies würde jedoch zu einer Duplizierung führen.  Eine bessere Lösung besteht darin, dieses Fragment in eine eigene Funktion umzugestalten, die von anderen Funktion beliebig aufgerufen werden kann.
 
@@ -39,7 +39,7 @@ ms.locfileid: "33333156"
      * Klicken Sie mit der rechten Maustaste auf den Code, und klicken Sie auf das Menü **Schnellaktionen und Refactorings**. Klicken Sie dann im Kontextmenü auf **Funktion extrahieren (experimentell)**.
      * Klicken Sie auf das ![Glühbirnensymbol](images/bulb.png), das am linken Rand angezeigt wird, und klicken Sie im Kontextmenü auf **Funktion extrahieren (experimentell)**.
 
-1. Geben Sie im Fenster **Funktion/Methode extrahieren (experimentell)** den neuen Funktionsnamen ein, wählen Sie aus, wo der Code platziert werden soll, und klicken Sie auf **OK**.  
+1. Geben Sie im Fenster **Funktion/Methode extrahieren (experimentell)** den neuen Funktionsnamen ein, wählen Sie aus, wo der Code platziert werden soll, und klicken Sie auf **OK**.
 
    ![Funktion „Funktion extrahieren“](images/extractfunction_dialog.png)
 

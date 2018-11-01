@@ -1,102 +1,98 @@
 ---
-title: COleDialog-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: COleDialog-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleDialog
 - AFXODLGS/COleDialog
 - AFXODLGS/COleDialog::GetLastError
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleDialog [MFC], GetLastError
 ms.assetid: b1ed0aca-3914-4b00-af34-4a4fb491aec7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a41aa479fd87c76dbf167d728ad2dbb830f6a24b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: c798c1ad81395465e7aa5405ab786ddfb67b71d7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853620"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494704"
 ---
 # <a name="coledialog-class"></a>COleDialog-Klasse
-Stellt die Funktionalität allgemeiner Dialogfelder für OLE bereit.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-class COleDialog : public CCommonDialog  
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-methods"></a>Öffentliche Methoden  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[COleDialog::GetLastError](#getlasterror)|Ruft den vom Dialogfeld zurückgegebenen Fehlercode ab.|  
-  
-## <a name="remarks"></a>Hinweise  
- Die Microsoft Foundation Class Library stellt mehrere Klassen, die von `COleDialog`:  
-  
-- [COleInsertDialog](../../mfc/reference/coleinsertdialog-class.md)  
-  
-- [COleConvertDialog](../../mfc/reference/coleconvertdialog-class.md)  
-  
-- [COleChangeIconDialog](../../mfc/reference/colechangeicondialog-class.md)  
-  
-- [COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)  
-  
-- [COleBusyDialog](../../mfc/reference/colebusydialog-class.md)  
-  
-- [COleUpdateDialog](../../mfc/reference/coleupdatedialog-class.md)  
-  
-- [COlePasteSpecialDialog](../../mfc/reference/colepastespecialdialog-class.md)  
-  
-- [COlePropertiesDialog](../../mfc/reference/colepropertiesdialog-class.md)  
-  
-- [COleChangeSourceDialog](../../mfc/reference/colechangesourcedialog-class.md)  
-  
- Weitere Informationen zu OLE-spezifische Dialogfelder, finden Sie im Artikel [Dialogfelder in OLE](../../mfc/dialog-boxes-in-ole.md).  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
-  
- [CWnd](../../mfc/reference/cwnd-class.md)  
-  
- [CDialog](../../mfc/reference/cdialog-class.md)  
-  
- [CCommonDialog](../../mfc/reference/ccommondialog-class.md)  
-  
- `COleDialog`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** afxodlgs.h  
-  
-##  <a name="getlasterror"></a>  COleDialog::GetLastError  
- Rufen Sie die `GetLastError` Memberfunktion versucht, zusätzlichen Fehlerinformationen abgerufen werden beim `DoModal` IDABORT zurückgibt.  
-  
-```  
-UINT GetLastError() const;  
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
- Der vom zurückgegebenen Fehlercodes `GetLastError` richten sich nach der bestimmten Dialogfeld angezeigt.  
-  
-### <a name="remarks"></a>Hinweise  
- Finden Sie unter den `DoModal` Member-Funktion in den abgeleiteten Klassen Informationen zu bestimmten Fehlermeldungen.  
-  
-## <a name="see-also"></a>Siehe auch  
- [CCommonDialog-Klasse](../../mfc/reference/ccommondialog-class.md)   
- [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
 
+Stellt die Funktionalität allgemeiner Dialogfelder für OLE bereit.
 
+## <a name="syntax"></a>Syntax
+
+```
+class COleDialog : public CCommonDialog
+```
+
+## <a name="members"></a>Member
+
+### <a name="public-methods"></a>Öffentliche Methoden
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[COleDialog::GetLastError](#getlasterror)|Ruft den vom Dialogfeld zurückgegebenen Fehlercode ab.|
+
+## <a name="remarks"></a>Hinweise
+
+Die Microsoft Foundation Class Library stellt mehrere Klassen, die von `COleDialog`:
+
+- [COleInsertDialog](../../mfc/reference/coleinsertdialog-class.md)
+
+- [COleConvertDialog](../../mfc/reference/coleconvertdialog-class.md)
+
+- [COleChangeIconDialog](../../mfc/reference/colechangeicondialog-class.md)
+
+- [COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)
+
+- [COleBusyDialog](../../mfc/reference/colebusydialog-class.md)
+
+- [COleUpdateDialog](../../mfc/reference/coleupdatedialog-class.md)
+
+- [COlePasteSpecialDialog](../../mfc/reference/colepastespecialdialog-class.md)
+
+- [COlePropertiesDialog](../../mfc/reference/colepropertiesdialog-class.md)
+
+- [COleChangeSourceDialog](../../mfc/reference/colechangesourcedialog-class.md)
+
+Weitere Informationen zu OLE-spezifische Dialogfelder, finden Sie im Artikel [Dialogfelder in OLE](../../mfc/dialog-boxes-in-ole.md).
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+
+[CWnd](../../mfc/reference/cwnd-class.md)
+
+[CDialog](../../mfc/reference/cdialog-class.md)
+
+[CCommonDialog](../../mfc/reference/ccommondialog-class.md)
+
+`COleDialog`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** afxodlgs.h
+
+##  <a name="getlasterror"></a>  COleDialog::GetLastError
+
+Rufen Sie die `GetLastError` Memberfunktion versucht, zusätzlichen Fehlerinformationen abgerufen werden beim `DoModal` IDABORT zurückgibt.
+
+```
+UINT GetLastError() const;
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Der vom zurückgegebenen Fehlercodes `GetLastError` richten sich nach der bestimmten Dialogfeld angezeigt.
+
+### <a name="remarks"></a>Hinweise
+
+Finden Sie unter den `DoModal` Member-Funktion in den abgeleiteten Klassen Informationen zu bestimmten Fehlermeldungen.
+
+## <a name="see-also"></a>Siehe auch
+
+[CCommonDialog-Klasse](../../mfc/reference/ccommondialog-class.md)<br/>
+[Hierarchiediagramm](../../mfc/hierarchy-chart.md)
 

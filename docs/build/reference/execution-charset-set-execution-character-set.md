@@ -1,30 +1,19 @@
 ---
-title: -Execution-Charset (Ausführungszeichensatz festlegen) | Microsoft-Dokumentation
-ms.custom: ''
+title: / Execution-CharSet (Ausführungszeichensatz festlegen)
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 f1_keywords:
 - execution-charset
 - /execution-charset
-dev_langs:
-- C++
 helpviewer_keywords:
 - /execution-charset compiler option
 - -execution-charset compiler option
 ms.assetid: 0e02f487-2236-45bc-95f3-5760933a8f96
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3cd7acf018930c013f477cf4c3a8b3260a8d53ec
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3535b60d7aad50f7efc5d1f32726560431ac86a3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714620"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663969"
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/ Execution-CharSet (Ausführungszeichensatz festlegen)
 
@@ -38,10 +27,10 @@ Können Sie die ausführungszeichensatzes für die ausführbare Datei angeben.
 
 ## <a name="arguments"></a>Argumente
 
-**IANA_name**<br/>
+*IANA_name*<br/>
 Der IANA-definierten Zeichensatzname.
 
-**CPID**<br/>
+*CPID*<br/>
 Der Codepagebezeichner.
 
 ## <a name="remarks"></a>Hinweise
@@ -66,6 +55,6 @@ Wenn Sie sowohl die Quell- und ausführungszeichensatz in UTF-8 festlegen möcht
 
 [Compileroptionen](../../build/reference/compiler-options.md)<br/>
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
-[/ Source-CharSet (Quellzeichensatz festlegen)](../../build/reference/source-charset-set-source-character-set.md)
-[/utf-8 (Quelle festlegen und ausführbare Datei legt in UTF-8-Zeichen)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
- [ /Validate-CharSet (überprüfen nach kompatiblen Zeichen)](../../build/reference/validate-charset-validate-for-compatible-characters.md)
+[/source-charset (Quellzeichensatz festlegen)](../../build/reference/source-charset-set-source-character-set.md)<br/>
+[/utf-8 (Quelle und ausführbare Zeichensätze auf UTF-8 festlegen)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)<br/>
+[/validate-charset (Auf kompatible Zeichen überprüfen)](../../build/reference/validate-charset-validate-for-compatible-characters.md)

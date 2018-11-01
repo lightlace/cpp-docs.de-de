@@ -1,10 +1,6 @@
 ---
-title: _fullpath, _wfullpath | Microsoft-Dokumentation
-ms.custom: ''
+title: _fullpath, _wfullpath
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fullpath
 - _wfullpath
@@ -26,8 +22,6 @@ f1_keywords:
 - fullpath
 - _wfullpath
 - _fullpath
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wfullpath function
 - relative file paths
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b472987b0cac41c57e5fd22b2eedecef522613b4
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: aeacaf581b7f33ee893754c192ae547376ce73ea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451679"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50550396"
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath, _wfullpath
 
@@ -74,16 +64,16 @@ Zeiger auf einen Puffer, der den absoluten oder vollständigen Pfadnamen enthäl
 *relPath*<br/>
 Relativer Pfadname.
 
-*maxLength*<br/>
-Maximale Länge des Puffers des absoluten Pfadnamens (*AbsPath*). Diese Länge in Byte für wird **_fullpath** jedoch in Breitzeichen (**Wchar_t**) für **_wfullpath**.
+*MaxLength*<br/>
+Maximale Länge des Puffers Namen absoluten Pfad (*AbsPath*). Diese Länge ist, in Bytes für **_fullpath** jedoch in Breitzeichen (**"wchar_t"**) für **_wfullpath**.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt einen Zeiger auf einen Puffer, enthält des absolute Pfadname (*AbsPath*). Wenn ein Fehler vorliegt (z. B., wenn der Wert übergeben *RelPath* enthält einen Laufwerkbuchstaben an, die ist ungültig oder kann nicht gefunden werden, oder wenn die Länge der erstellte absolute Pfadname (*AbsPath*) ist größer als *MaxLength*), gibt die Funktion **NULL**.
+Jede dieser Funktionen gibt einen Zeiger auf einen Puffer mit den absoluten Pfadnamen zurück (*AbsPath*). Wenn ein Fehler auftritt (z. B., wenn der Wert übergeben *RelPath* enthält einen Laufwerkbuchstaben an, die ist ungültig oder wurde nicht gefunden, oder wenn die Länge der erstellte absolute Pfadname (*AbsPath*) ist größer als *MaxLength*), die Funktion gibt **NULL**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_fullpath** Funktion erweitert den relativen Pfadnamen in *RelPath* an ihre voll qualifizierten oder absolute Pfad und speichert diese Namen in *AbsPath*. Wenn *AbsPath* ist **NULL**, **"malloc"** wird verwendet, um einen Puffer von ausreichend lang ist, um den Pfadnamen halten zuzuordnen. Der Aufrufer muss diesen Puffer freigeben. Dieser relative Pfadname gibt vom aktuellen Speicherort einen Pfad zu einem anderen Speicherort an (z.B. das aktuelle Arbeitsverzeichnis: "."). Ein absoluter Pfadname ist die Erweiterung eines relativen Pfadnamens, der den gesamten Pfad ausdrückt, der dafür erforderlich ist, um die gewünschte Position aus dem Stammverzeichnis des Dateisystems zu erreichen. Im Gegensatz zu **_makepath**, **_fullpath** können verwendet werden, um den absoluten Pfadnamen für relative Pfade zu erhalten (*RelPath*), enthalten ". /"oder".. / "im Namen.
+Die **_fullpath** Funktion erweitert den relativen Pfadnamen in *RelPath* zum vollqualifizierten oder absoluten Pfad und speichert diesen Namen in *AbsPath*. Wenn *AbsPath* ist **NULL**, **Malloc** wird verwendet, um einen Puffer von ausreichender Größe der Pfadname enthält zuordnen. Der Aufrufer muss diesen Puffer freigeben. Dieser relative Pfadname gibt vom aktuellen Speicherort einen Pfad zu einem anderen Speicherort an (z.B. das aktuelle Arbeitsverzeichnis: "."). Ein absoluter Pfadname ist die Erweiterung eines relativen Pfadnamens, der den gesamten Pfad ausdrückt, der dafür erforderlich ist, um die gewünschte Position aus dem Stammverzeichnis des Dateisystems zu erreichen. Im Gegensatz zu **_makepath**, **_fullpath** kann verwendet werden, um den absoluten Pfadnamen für relative Pfade zu erhalten (*RelPath*), enthalten ". /"oder".. / "im Namen.
 
 Um beispielsweise C-Laufzeitroutinen verwenden zu können, muss die Anwendung die Headerdateien enthalten, die die Deklarationen für die Routinen enthalten. Jede Headerdatei enthält Anweisungen, die relativ auf den Speicherort der Datei verweisen (aus dem Arbeitsverzeichnis der Anwendung):
 
@@ -95,11 +85,11 @@ Wenn der absolute Pfad (der tatsächliche Dateisystem-Speicherort) der Datei z.B
 
 `\\machine\shareName\msvcSrc\crt\headerFiles\stdlib.h`
 
-**_fullpath** automatisch behandelt Multibyte-Zeichenfolgenargumente nach Bedarf, erkennen Multibyte-Zeichensequenzen entsprechend der multibyte-Codepage aktuell in Verwendung. **_wfullpath** ist eine Breitzeichen-Version von **_fullpath**; die Zeichenfolgenargumente auf **_wfullpath** sind Zeichenfolgen mit Breitzeichen. **_wfullpath** und **_fullpath** Verhalten sich identisch, außer dass **_wfullpath** verarbeitet keine Multibyte-Zeichenfolgen.
+**_fullpath** behandelt automatisch Multibyte-Zeichenfolge nach Bedarf erkennt multibytezeichensequenzen gemäß dem multibyte-Codepage aktuell. **_wfullpath** ist eine Breitzeichen-Version von **_fullpath**; die Zeichenfolgenargumente für **_wfullpath** sind Breitzeichen Zeichenfolgen. **_wfullpath** und **_fullpath** Verhalten sich identisch, außer dass **_wfullpath** verarbeitet keine Multibyte-Zeichenfolgen.
 
-Wenn **_DEBUG** und **_CRTDBG_MAP_ALLOC** sind beide definiert, Aufrufe von **_fullpath** und **_wfullpath** werden durch Aufrufe von ersetzt **_fullpath_dbg** und **_wfullpath_dbg** zum Debuggen von speicherbelegungen zuzulassen. Weitere Informationen finden Sie unter [_fullpath_dbg, _wfullpath_dbg](fullpath-dbg-wfullpath-dbg.md).
+Wenn **_DEBUG** und **_CRTDBG_MAP_ALLOC** werden beide definiert, Aufrufe von **_fullpath** und **_wfullpath** werden durch Aufrufe von ersetzt **_fullpath_dbg** und **_wfullpath_dbg** zum Debuggen von speicherbelegungen zuzulassen. Weitere Informationen finden Sie unter [_fullpath_dbg, _wfullpath_dbg](fullpath-dbg-wfullpath-dbg.md).
 
-Ruft diese Funktion den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md), wenn *Maxlen* kleiner oder gleich 0 ist. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** auf **EINVAL** und gibt **NULL**.
+Ruft diese Funktion den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md), wenn *Maxlen* ist kleiner als oder gleich 0. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** zu **EINVAL** und gibt **NULL**.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -107,7 +97,7 @@ Ruft diese Funktion den Handler für ungültige Parameter aus, wie in beschriebe
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tfullpath**|**_fullpath**|**_fullpath**|**_wfullpath**|
 
-Wenn die *AbsPath* Puffer ist **NULL**, **_fullpath** Aufrufe ["malloc"](malloc.md) keinen Puffer zuweisen und ignoriert die *MaxLength*  Argument. Es liegt in der Verantwortung des Aufrufers, die Zuordnung für diesen Puffer richtig wieder aufzuheben (mithilfe von [free](free.md)). Wenn die *RelPath* Argument gibt an, ein Laufwerk, das aktuelle Verzeichnis des fehlenden Laufwerks mit dem Pfad kombiniert wird.
+Wenn die *AbsPath* Puffer **NULL**, **_fullpath** Aufrufe [Malloc](malloc.md) keinen Puffer zuweisen und ignoriert die *MaxLength*  Argument. Es liegt in der Verantwortung des Aufrufers, die Zuordnung für diesen Puffer richtig wieder aufzuheben (mithilfe von [free](free.md)). Wenn die *RelPath* Argument gibt an, ein Laufwerk, das aktuelle Verzeichnis dieses Laufwerks mit dem Pfad kombiniert wird.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,31 +1,20 @@
 ---
-title: Erstellen einer neuen Symbolleistenschaltfläche (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Erstellen einer neuen Symbolleistenschaltfläche (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.toolbar
-dev_langs:
-- C++
 helpviewer_keywords:
 - Toolbar editor [C++], creating buttons
 - toolbar buttons [C++], button image
 - toolbar buttons [C++], creating
 - toolbar buttons (in Toolbar editor)
 ms.assetid: 46c120fe-4f2a-4887-a08f-bd1fea04b3f4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0f1ed792407160c1d025dabb3b8cc01a2ebc7330
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1fe3e960ea9d2cec36e1c0d1ee9edb30bcc354d4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314325"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512501"
 ---
 # <a name="creating-a-new-toolbar-button-c"></a>Erstellen einer neuen Symbolleistenschaltfläche (C++)
 
@@ -71,6 +60,6 @@ MFC oder ATL
 
 ## <a name="see-also"></a>Siehe auch
 
-[Eigenschaften von Symbolleisten-Schaltflächen](../windows/toolbar-button-properties.md)  
-[Erstellen, Verschieben und Bearbeiten von Schaltflächen der Symbolleiste](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[Eigenschaften von Symbolleisten-Schaltflächen](../windows/toolbar-button-properties.md)<br/>
+[Erstellen, Verschieben und Bearbeiten von Schaltflächen der Symbolleiste](../windows/creating-moving-and-editing-toolbar-buttons.md)<br/>
 [Symbolleisten-Editor](../windows/toolbar-editor.md)

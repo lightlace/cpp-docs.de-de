@@ -1,34 +1,24 @@
 ---
-title: -U,-u (Symboldefinitionen aufheben) | Microsoft-Dokumentation
-ms.custom: ''
+title: /U, /u (Symboldefinitionen aufheben)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.UndefinePreprocessorDefinitions
 - VC.Project.VCCLWCECompilerTool.UndefinePreprocessorDefinitions
 - VC.Project.VCCLCompilerTool.UndefineAllPreprocessorDefinitions
 - /u
 - VC.Project.VCCLWCECompilerTool.UndefineAllPreprocessorDefinitions
-dev_langs:
-- C++
 helpviewer_keywords:
 - -U compiler option [C++]
 - Undefine Symbols compiler option
 - /U compiler option [C++]
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 34030a8ef91e5a25bdb1a13981925c5ddf1f05df
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1ccda218a2bccc261653016ad6a47d419ddacfd9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721551"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624444"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (Symboldefinitionen aufheben)
 
@@ -83,7 +73,7 @@ Standardmäßig definiert der Compiler die folgenden Microsoft-spezifische Symbo
 
 [Compileroptionen](../../build/reference/compiler-options.md)<br/>
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
-[/ J (standardmäßig "der Typ ist unsigned Char")](../../build/reference/j-default-char-type-is-unsigned.md)
-[/GR (Laufzeit-Typinformationen aktivieren)](../../build/reference/gr-enable-run-time-type-information.md)
-[/EH (Ausnahmebehandlungsmodell)](../../build/reference/eh-exception-handling-model.md) 
- [/MD, / MT, / ld (Laufzeitbibliothek verwenden)](../../build/reference/md-mt-ld-use-run-time-library.md)
+[/J (Standardzeichentyp ist „unsigned“)](../../build/reference/j-default-char-type-is-unsigned.md)<br/>
+[/GR (Laufzeittypinfo aktivieren)](../../build/reference/gr-enable-run-time-type-information.md)<br/>
+[/EH (Ausnahmebehandlungsmodell)](../../build/reference/eh-exception-handling-model.md)<br/>
+[/MD, /MT, /LD (Laufzeitbibliothek verwenden)](../../build/reference/md-mt-ld-use-run-time-library.md)

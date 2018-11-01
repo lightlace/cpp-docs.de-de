@@ -1,30 +1,20 @@
 ---
-title: neue "und" delete | Microsoft-Dokumentation
-ms.custom: ''
+title: Operatoren "new" und "delete"
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - delete_cpp
 - new
-dev_langs:
-- C++
 helpviewer_keywords:
 - new keyword [C++], dynamic allocation of objects
 - nothrownew.obj
 - delete keyword [C++], syntax
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b205be3c2417453faa54c9d24ac28216ee0af5cf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1ac6282ecbf45f22e7dd66b94f8bccdbc4e505ce
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46060530"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441300"
 ---
 # <a name="new-and-delete-operators"></a>Operatoren "new" und "delete"
 
@@ -45,7 +35,6 @@ char *pch = new char[BUFFER_SIZE];
 Wenn keine Speicherbytes, die Anforderung ist **new-Operator** gibt einen Zeiger auf ein bestimmtes Objekt (d. h. wiederholte Aufrufe von **new-Operator** liefern also unterschiedliche Zeiger). Es ist nicht genügend Arbeitsspeicher für die zuordnungsanforderung **new-Operator** löst eine Std:: bad_alloc-Ausnahme aus, oder gibt **"nullptr"** bei Links in nicht auslösend **new-Operator** unterstützen.
 
 Sie können eine Routine schreiben, die versucht, den Speicher frei, und wiederholen die Zuordnung. finden Sie unter [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) für Weitere Informationen. Weitere Informationen wiederherstellungsschema finden Sie im Abschnitt behandeln nicht genügend Arbeitsspeicher in diesem Thema.
-
 
 Die beiden Bereiche für **new-Operator** Funktionen werden in der folgenden Tabelle beschrieben.
 

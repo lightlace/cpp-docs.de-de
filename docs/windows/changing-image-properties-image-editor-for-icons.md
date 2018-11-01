@@ -1,28 +1,17 @@
 ---
-title: Ändern von Bildeigenschaften (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
-ms.custom: ''
+title: Ändern von Bildeigenschaften (Bildbearbeitung für Symbole)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - images [C++], properties
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: f6172bf1-08c4-4dfd-b542-dd8749e83fe6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 286e71b427bd39df6c493c7727b66ef27b72c766
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: dae1570ab447a3801e0835ede4502a0626283656
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314338"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459944"
 ---
 # <a name="changing-image-properties-image-editor-for-icons"></a>Ändern von Bildeigenschaften (Bildbearbeitung für Symbole)
 
@@ -52,6 +41,6 @@ Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)  
-[Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)

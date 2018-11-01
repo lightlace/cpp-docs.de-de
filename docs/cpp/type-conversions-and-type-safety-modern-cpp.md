@@ -1,23 +1,14 @@
 ---
-title: Typumwandlungen und Typsicherheit (Modern C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Typumwandlungen und Typsicherheit (Modern C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
 ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bb3f2ca2cfe094f4ea9da11786af6f90db7d2217
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ae3b2d89c06d0e7b17b648907fa3d7734b51205c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136154"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471343"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Typumwandlungen und Typsicherheit (Modern C++)
 
@@ -70,7 +61,7 @@ Ein ganzzahliger Typ mit Vorzeichen und seine Entsprechung ohne Vorzeichen haben
 
 ```cpp
 using namespace std;
-unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>
+unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>
 short num2 = num;
 cout << "unsigned val = " << num << " signed val = " << num2 << endl;
 // Prints: unsigned val = 65535 signed val = -1
@@ -126,7 +117,7 @@ Der Umwandlungsoperator im C-Format ist mit dem Aufrufoperator () identisch und 
     Derived* d2 = static_cast<Derived*>(b);
     ```
 
-     Weitere Informationen finden Sie unter ["static_cast"](../cpp/static-cast-operator.md).
+   Weitere Informationen finden Sie unter ["static_cast"](../cpp/static-cast-operator.md).
 
 - **Dynamic_cast**, für die sichere, zur Laufzeit geprüfte Umwandlungen von Zeiger-auf eine Basisklasse in Zeiger auf eine abgeleitete. Ein **Dynamic_cast** ist sicherer als ein **"static_cast"** Typumwandlungen, aber die Runtime Kontrollkästchen verursacht zusätzlichen Aufwand.
 
@@ -151,7 +142,7 @@ Der Umwandlungsoperator im C-Format ist mit dem Aufrufoperator () identisch und 
     //Output: d3 is null;
     ```
 
-     Weitere Informationen finden Sie unter [Dynamic_cast](../cpp/dynamic-cast-operator.md).
+   Weitere Informationen finden Sie unter [Dynamic_cast](../cpp/dynamic-cast-operator.md).
 
 - **const_cast-Operator**für entfernt Umwandeln der **const**- Ness einer Variablen oder Konvertieren einer nicht--**const** Variable **const**. Umwandeln **const**-Ness mithilfe dieses Operators ist nur als fehleranfällig wie eine C-Format umgewandelt werden, außer dass mit **Const Cast** Sie weniger wahrscheinlich, dass Sie die Umwandlung versehentlich ausgeführt werden. Manchmal müssen Sie das Umwandeln der **const**-Ness einer Variablen, z. B. zum Übergeben einer **const** -Variablen an eine Funktion, die nicht akzeptiert**const** Parameter. Das folgende Beispiel zeigt die dazu erforderliche Vorgehensweise.
 
@@ -164,14 +155,14 @@ Der Umwandlungsoperator im C-Format ist mit dem Aufrufoperator () identisch und 
     }
     ```
 
-     Weitere Informationen finden Sie unter ["const_cast"](../cpp/const-cast-operator.md).
+   Weitere Informationen finden Sie unter ["const_cast"](../cpp/const-cast-operator.md).
 
 - **"reinterpret_cast"** für Umwandlungen zwischen unzusammenhängenden Typen wie **Zeiger** zu **Int**.
 
     > [!NOTE]
     >  Dieser Umwandlungsoperator wird so oft verwendet wie die übrigen Operatoren, und er ist u. U. nicht auf andere Compiler übertragbar.
 
-     Im folgende Beispiel wird veranschaulicht, wie **"reinterpret_cast"** unterscheidet sich von **"static_cast"**.
+   Im folgende Beispiel wird veranschaulicht, wie **"reinterpret_cast"** unterscheidet sich von **"static_cast"**.
 
     ```cpp
     const char* str = "hello";
@@ -183,7 +174,7 @@ Der Umwandlungsoperator im C-Format ist mit dem Aufrufoperator () identisch und 
                                        // However, it is not 64-bit safe.
     ```
 
-     Weitere Informationen finden Sie unter [Reinterpret_cast-Operator](../cpp/reinterpret-cast-operator.md).
+   Weitere Informationen finden Sie unter [Reinterpret_cast-Operator](../cpp/reinterpret-cast-operator.md).
 
 ## <a name="see-also"></a>Siehe auch
 

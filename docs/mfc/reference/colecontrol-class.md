@@ -344,14 +344,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3c5f68d35c4cf77073de3f8d2e6090f62a6dae2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9414384c791abe0fca05f9e0919012736c1a9167
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050098"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083593"
 ---
 # <a name="colecontrol-class"></a>COleControl-Klasse
+
 Eine leistungsstarke Basisklasse zum Entwickeln von OLE-Steuerelementen.
 
 ## <a name="syntax"></a>Syntax
@@ -956,7 +957,7 @@ virtual void DoPropExchange(CPropExchange* pPX);
 ### <a name="parameters"></a>Parameter
 
 *pPX*<br/>
-Ein Zeiger auf eine `CPropExchange` Objekt. Das Framework stellt dieses Objekt aus, um den Kontext der Exchange-Eigenschaft, darunter seine Richtung einzurichten.
+Ein Zeiger auf ein `CPropExchange` -Objekt. Das Framework stellt dieses Objekt aus, um den Kontext der Exchange-Eigenschaft, darunter seine Richtung einzurichten.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1092,7 +1093,7 @@ BOOL ExchangeVersion(
 ### <a name="parameters"></a>Parameter
 
 *pPX*<br/>
-Ein Zeiger auf eine `CPropExchange` Objekt. Das Framework stellt dieses Objekt aus, um den Kontext der Exchange-Eigenschaft, darunter seine Richtung einzurichten.
+Ein Zeiger auf ein `CPropExchange` -Objekt. Das Framework stellt dieses Objekt aus, um den Kontext der Exchange-Eigenschaft, darunter seine Richtung einzurichten.
 
 *dwVersionDefault*<br/>
 Die aktuelle Versionsnummer des Steuerelements.
@@ -1440,15 +1441,13 @@ void FireReadyStateChange();
 
 Status "bereit" die folgenden Werte sind möglich:
 
-READYSTATE_UNINITIALIZED Standard-Initialisierungszustand
-
-READYSTATE_LOADING Steuerelement lädt seine Eigenschaften derzeit
-
-READYSTATE_LOADED Steuerelement wurde initialisiert.
-
-READYSTATE_INTERACTIVE Steuerelement genügend Daten für die interaktive werden jedoch nicht alle asynchrone Daten werden noch geladen.
-
-READYSTATE_COMPLETE-Steuerelement hat alle darin enthaltenen Daten
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|Standard-Initialisierungszustand|
+|READYSTATE_LOADING|Steuerelement lädt seine Eigenschaften derzeit|
+|READYSTATE_LOADED|Steuerelement wurde initialisiert.|
+|READYSTATE_INTERACTIVE|Das Steuerelement genügend Daten für die interaktive werden jedoch nicht alle asynchrone Daten werden noch geladen.|
+|READYSTATE_COMPLETE|Steuerelement verfügt über alle darin enthaltenen Daten|
 
 Verwendung [GetReadyState abrufbar](#getreadystate) um aktuelle Bereitschaft des Steuerelements zu bestimmen.
 
@@ -1466,11 +1465,11 @@ virtual DWORD GetActivationPolicy();
 
 Eine Kombination von Flags aus der POINTERINACTIVE-Enumeration. Mögliche Flags sind:
 
-POINTERINACTIVE_ACTIVATEONENTRY das Objekt sollte direkt aktiviert werden, wenn der Mauszeiger während eines Verschiebevorgangs Maus bewegt.
-
-POINTERINACTIVE_DEACTIVATEONLEAVE, die das Objekt deaktiviert werden soll, wenn der Mauszeiger das Objekt während der Maus verlässt Verschiebevorgang.
-
-POINTERINACTIVE_ACTIVATEONDRAG das Objekt sollte direkt aktiviert, wenn der Mauszeiger während eines Ziehvorgangs darüber gezogen wird, und drop-Vorgangs.
+|||
+|-|-|
+|POINTERINACTIVE_ACTIVATEONENTRY|Das Objekt sollte direkt aktiviert werden, wenn der Mauszeiger während eines Verschiebevorgangs Maus bewegt.|
+|POINTERINACTIVE_DEACTIVATEONLEAVE|Das Objekt sollte deaktiviert werden, wenn der Mauszeiger das Objekt während eines Verschiebevorgangs Maus verlässt.|
+|POINTERINACTIVE_ACTIVATEONDRAG|Das Objekt sollte direkt aktiviert, wenn der Mauszeiger während eines Ziehvorgangs darüber gezogen wird, und drop-Vorgangs.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1915,15 +1914,13 @@ long GetReadyState();
 
 Der Bereitschaftsstatus des Steuerelements, einer der folgenden Werte:
 
-READYSTATE_UNINITIALIZED Standard-Initialisierungszustand
-
-READYSTATE_LOADING Steuerelement lädt seine Eigenschaften derzeit
-
-READYSTATE_LOADED Steuerelement wurde initialisiert.
-
-READYSTATE_INTERACTIVE Steuerelement genügend Daten für die interaktive werden jedoch nicht alle asynchrone Daten werden noch geladen.
-
-READYSTATE_COMPLETE-Steuerelement hat alle darin enthaltenen Daten
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|Standard-Initialisierungszustand|
+|READYSTATE_LOADING|Steuerelement lädt seine Eigenschaften derzeit|
+|READYSTATE_LOADED|Steuerelement wurde initialisiert.|
+|READYSTATE_INTERACTIVE|Das Steuerelement genügend Daten für die interaktive werden jedoch nicht alle asynchrone Daten werden noch geladen.|
+|READYSTATE_COMPLETE|Steuerelement verfügt über alle darin enthaltenen Daten|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2065,15 +2062,13 @@ void InternalSetReadyState(long lNewReadyState);
 *lNewReadyState*<br/>
 Dem Bereitschaftsstatus für das Steuerelement, einer der folgenden Werte festgelegt:
 
-READYSTATE_UNINITIALIZED Standard-Initialisierungszustand
-
-READYSTATE_LOADING Steuerelement lädt seine Eigenschaften derzeit
-
-READYSTATE_LOADED Steuerelement wurde initialisiert.
-
-READYSTATE_INTERACTIVE Steuerelement genügend Daten für die interaktive werden jedoch nicht alle asynchrone Daten werden noch geladen.
-
-READYSTATE_COMPLETE-Steuerelement hat alle darin enthaltenen Daten
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|Standard-Initialisierungszustand|
+|READYSTATE_LOADING|Steuerelement lädt seine Eigenschaften derzeit|
+|READYSTATE_LOADED|Steuerelement wurde initialisiert.|
+|READYSTATE_INTERACTIVE|Das Steuerelement genügend Daten für die interaktive werden jedoch nicht alle asynchrone Daten werden noch geladen.|
+|READYSTATE_COMPLETE|Steuerelement verfügt über alle darin enthaltenen Daten|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2163,7 +2158,7 @@ Ungleich NULL, wenn das Steuerelement initialisiert wurde; andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Framework Implementierung von `IDispatch::Invoke` Aufrufe `IsInvokeAllowed` bestimmen, ob eine bestimmte Funktion (identifizierte `dispid`) aufgerufen werden kann. Das Standardverhalten für OLE-Steuerelements ist zum Zulassen von Automatisierungsmethoden, die aufgerufen werden, nur dann, wenn das Steuerelement initialisiert wurde. allerdings `IsInvokeAllowed` ist eine virtuelle Funktion, und kann überschrieben werden, bei Bedarf (z. B., wenn das Steuerelement als Automatisierungsserver verwendet wird). Weitere Informationen finden Sie im Knowledge Base-Artikel Q166472, "So wird's gemacht: verwenden ein OLE-Steuerelements als Automatisierungsserver." Knowledge Base-Artikeln finden Sie unter [ http://support.microsoft.com ](http://support.microsoft.com/).
+Die Framework Implementierung von `IDispatch::Invoke` Aufrufe `IsInvokeAllowed` bestimmen, ob eine bestimmte Funktion (identifizierte `dispid`) aufgerufen werden kann. Das Standardverhalten für OLE-Steuerelements ist zum Zulassen von Automatisierungsmethoden, die aufgerufen werden, nur dann, wenn das Steuerelement initialisiert wurde. allerdings `IsInvokeAllowed` ist eine virtuelle Funktion, und kann überschrieben werden, bei Bedarf (z. B., wenn das Steuerelement als Automatisierungsserver verwendet wird).
 
 ##  <a name="ismodified"></a>  COleControl::IsModified
 
@@ -2848,13 +2843,12 @@ virtual DWORD OnGetViewStatus();
 
 Einer der Werte der Enumeration VIEWSTATUS bei erfolgreicher Ausführung; andernfalls 0. Mögliche Werte sind eine beliebige Kombination der folgenden:
 
-VIEWSTATUS_OPAQUE-Objekt ist nicht vollständig transparent. Wenn dieses Bit nicht festgelegt ist, enthält das Objekt die transparenten Teile. Dieses Bit gilt nur für den Content-bezogenen Aspekte und nicht für DVASPECT_ICON oder DVASPECT_DOCPRINT.
-
-VIEWSTATUS_SOLIDBKGND Objekt verfügt über eine Volltonfarbe für den Hintergrund (mit in einer Volltonfarbe, nicht in einem Pinselmuster). Dieses Bit ist sinnvoll, nur, wenn VIEWSTATUS_OPAQUE festgelegt und nur für den Content-bezogenen Aspekte und nicht auf DVASPECT_ICON oder DVASPECT_DOCPRINT gilt.
-
-VIEWSTATUS_DVASPECTOPAQUE Objekt unterstützt DVASPECT_OPAQUE. Alle IViewObjectEx-Methoden, die eine Zeichenaspekt akzeptieren, wie ein Parameter mit diesem Aspekt aufgerufen werden kann.
-
-VIEWSTATUS_DVASPECTTRANSPARENT Objekt unterstützt DVASPECT_TRANSPARENT. Alle `IViewObjectEx` Methoden, die eine Zeichenaspekt akzeptieren, wie ein Parameter mit diesem Aspekt aufgerufen werden kann.
+|||
+|-|-|
+|VIEWSTATUS_OPAQUE|Objekt ist nicht vollständig transparent. Wenn dieses Bit nicht festgelegt ist, enthält das Objekt die transparenten Teile. Dieses Bit gilt nur für den Content-bezogenen Aspekte und nicht für DVASPECT_ICON oder DVASPECT_DOCPRINT.|
+|VIEWSTATUS_SOLIDBKGND|Objekt verfügt über eine Volltonfarbe für den Hintergrund (mit in einer Volltonfarbe, nicht in einem Pinselmuster). Dieses Bit ist sinnvoll, nur, wenn VIEWSTATUS_OPAQUE festgelegt und nur für den Content-bezogenen Aspekte und nicht auf DVASPECT_ICON oder DVASPECT_DOCPRINT gilt.|
+|VIEWSTATUS_DVASPECTOPAQUE|Objekt unterstützt DVASPECT_OPAQUE. Alle IViewObjectEx-Methoden, die eine Zeichenaspekt akzeptieren, wie ein Parameter mit diesem Aspekt aufgerufen werden kann.|
+|VIEWSTATUS_DVASPECTTRANSPARENT|Objekt unterstützt DVASPECT_TRANSPARENT. Alle `IViewObjectEx` Methoden, die eine Zeichenaspekt akzeptieren, wie ein Parameter mit diesem Aspekt aufgerufen werden kann.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -4092,7 +4086,6 @@ void ThrowError(
     SCODE sc,
     UINT nDescriptionID,
     UINT nHelpID = -1);
-
 
 void ThrowError(
     SCODE sc,

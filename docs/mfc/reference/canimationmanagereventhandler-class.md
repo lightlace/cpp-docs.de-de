@@ -1,10 +1,6 @@
 ---
-title: CAnimationManagerEventHandler-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: CAnimationManagerEventHandler-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CAnimationManagerEventHandler
 - AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler
@@ -12,126 +8,134 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::CreateInstance
 - AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::OnManagerStatusChanged
 - AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::SetAnimationController
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAnimationManagerEventHandler [MFC], CAnimationManagerEventHandler
 - CAnimationManagerEventHandler [MFC], CreateInstance
 - CAnimationManagerEventHandler [MFC], OnManagerStatusChanged
 - CAnimationManagerEventHandler [MFC], SetAnimationController
 ms.assetid: 6089ec07-e661-4805-b227-823b4652aade
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bfc64617002db0536dc3d62e70082c27b260802f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 497b6e0f5bdeb817eccb0bb42f66763a97da2af0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538888"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445733"
 ---
 # <a name="canimationmanagereventhandler-class"></a>CAnimationManagerEventHandler-Klasse
-Implementiert einen Rückruf, der von der Animations-API aufgerufen wird, wenn der Status eines Animations-Managers geändert wird.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase<CAnimationManagerEventHandler>;  
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[CAnimationManagerEventHandler::CAnimationManagerEventHandler](#canimationmanagereventhandler)|Erstellt ein `CAnimationManagerEventHandler`-Objekt.|  
-  
-### <a name="public-methods"></a>Öffentliche Methoden  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[CAnimationManagerEventHandler::CreateInstance](#createinstance)|Erstellt eine Instanz des `CAnimationManagerEventHandler` Objekt.|  
-|[CAnimationManagerEventHandler::OnManagerStatusChanged](#onmanagerstatuschanged)|Aufgerufen, wenn der Status der Animations-Manager geändert wurde. (Überschreibt `CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged`.)|  
-|[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|Speichert einen Zeiger auf den Animationscontroller zum Weiterleiten von Ereignissen.|  
-  
-## <a name="remarks"></a>Hinweise  
- Dieser Ereignishandler wird erstellt und an IUIAnimationManager::SetManagerEventHandler Methode übergeben, wenn Sie CAnimationController::EnableAnimationManagerEvent aufrufen.  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `CUIAnimationCallbackBase`  
-  
- `CUIAnimationManagerEventHandlerBase`  
-  
- `CAnimationManagerEventHandler`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** afxanimationcontroller.h  
-  
-##  <a name="canimationmanagereventhandler"></a>  CAnimationManagerEventHandler::CAnimationManagerEventHandler  
- Visual Studio 2010 SP1 wird benötigt.  
-  
- Erstellt ein CAnimationManagerEventHandler-Objekt.  
-  
-```  
+
+Implementiert einen Rückruf, der von der Animations-API aufgerufen wird, wenn der Status eines Animations-Managers geändert wird.
+
+## <a name="syntax"></a>Syntax
+
+```
+class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase<CAnimationManagerEventHandler>;
+```
+
+## <a name="members"></a>Member
+
+### <a name="public-constructors"></a>Öffentliche Konstruktoren
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[CAnimationManagerEventHandler::CAnimationManagerEventHandler](#canimationmanagereventhandler)|Erstellt ein `CAnimationManagerEventHandler`-Objekt.|
+
+### <a name="public-methods"></a>Öffentliche Methoden
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[CAnimationManagerEventHandler::CreateInstance](#createinstance)|Erstellt eine Instanz des `CAnimationManagerEventHandler` Objekt.|
+|[CAnimationManagerEventHandler::OnManagerStatusChanged](#onmanagerstatuschanged)|Aufgerufen, wenn der Status der Animations-Manager geändert wurde. (Überschreibt `CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged`.)|
+|[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|Speichert einen Zeiger auf den Animationscontroller zum Weiterleiten von Ereignissen.|
+
+## <a name="remarks"></a>Hinweise
+
+Dieser Ereignishandler wird erstellt und an IUIAnimationManager::SetManagerEventHandler Methode übergeben, wenn Sie CAnimationController::EnableAnimationManagerEvent aufrufen.
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`CUIAnimationCallbackBase`
+
+`CUIAnimationManagerEventHandlerBase`
+
+`CAnimationManagerEventHandler`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** afxanimationcontroller.h
+
+##  <a name="canimationmanagereventhandler"></a>  CAnimationManagerEventHandler::CAnimationManagerEventHandler
+
+Visual Studio 2010 SP1 wird benötigt.
+
+Erstellt ein CAnimationManagerEventHandler-Objekt.
+
+```
 CAnimationManagerEventHandler();
-```  
-  
-##  <a name="createinstance"></a>  CAnimationManagerEventHandler::CreateInstance  
- Visual Studio 2010 SP1 wird benötigt.  
-  
- Erstellt eine Instanz eines CAnimationManagerEventHandler-Objekts.  
-  
-```  
+```
+
+##  <a name="createinstance"></a>  CAnimationManagerEventHandler::CreateInstance
+
+Visual Studio 2010 SP1 wird benötigt.
+
+Erstellt eine Instanz eines CAnimationManagerEventHandler-Objekts.
+
+```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
-    CAnimationController* pAnimationController,  
+    CAnimationController* pAnimationController,
     IUIAnimationManagerEventHandler** ppManagerEventHandler);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *pAnimationController*  
- Ein Zeiger auf den Animationscontroller, der Ereignisse empfängt.  
-  
- *ppManagerEventHandler*  
- Die Ausgabe. Wenn die Methode erfolgreich, es ist enthält einen Zeiger für COM-Objekt, das statusaktualisierungen an eine Animations-Manager behandelt.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Wenn die Methode erfolgreich ist, wird S_OK zurückgegeben. Andernfalls wird einen HRESULT-Fehlercode zurückgegeben.  
-  
-##  <a name="onmanagerstatuschanged"></a>  CAnimationManagerEventHandler::OnManagerStatusChanged  
- Visual Studio 2010 SP1 wird benötigt.  
-  
- Aufgerufen, wenn der Status der Animations-Manager geändert wurde.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parameter
+
+*pAnimationController*<br/>
+Ein Zeiger auf den Animationscontroller, der Ereignisse empfängt.
+
+*ppManagerEventHandler*<br/>
+Die Ausgabe. Wenn die Methode erfolgreich, es ist enthält einen Zeiger für COM-Objekt, das statusaktualisierungen an eine Animations-Manager behandelt.
+
+### <a name="return-value"></a>Rückgabewert
+
+Wenn die Methode erfolgreich ist, wird S_OK zurückgegeben. Andernfalls wird einen HRESULT-Fehlercode zurückgegeben.
+
+##  <a name="onmanagerstatuschanged"></a>  CAnimationManagerEventHandler::OnManagerStatusChanged
+
+Visual Studio 2010 SP1 wird benötigt.
+
+Aufgerufen, wenn der Status der Animations-Manager geändert wurde.
+
+```
 IFACEMETHOD(OnManagerStatusChanged)(
   UI_ANIMATION_MANAGER_STATUS newStatus,
   UI_ANIMATION_MANAGER_STATUS previousStatus);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *newStatus*  
- Neuer Status.  
-  
- *previousStatus*  
- Vorherigen Status.  
-  
-### <a name="return-value"></a>Rückgabewert  
- Immer die aktuelle Implementierung gibt S_OK zurück.  
-  
-##  <a name="setanimationcontroller"></a>  CAnimationManagerEventHandler::SetAnimationController  
- Visual Studio 2010 SP1 wird benötigt.  
-  
- Speichert einen Zeiger auf den Animationscontroller zum Weiterleiten von Ereignissen.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parameter
+
+*newStatus*<br/>
+Neuer Status.
+
+*previousStatus*<br/>
+Vorherigen Status.
+
+### <a name="return-value"></a>Rückgabewert
+
+Immer die aktuelle Implementierung gibt S_OK zurück.
+
+##  <a name="setanimationcontroller"></a>  CAnimationManagerEventHandler::SetAnimationController
+
+Visual Studio 2010 SP1 wird benötigt.
+
+Speichert einen Zeiger auf den Animationscontroller zum Weiterleiten von Ereignissen.
+
+```
 void SetAnimationController(CAnimationController* pAnimationController);
-```  
-  
-### <a name="parameters"></a>Parameter  
- *pAnimationController*  
- Ein Zeiger auf den Animationscontroller, der Ereignisse empfängt.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klassen](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="parameters"></a>Parameter
+
+*pAnimationController*<br/>
+Ein Zeiger auf den Animationscontroller, der Ereignisse empfängt.
+
+## <a name="see-also"></a>Siehe auch
+
+[Klassen](../../mfc/reference/mfc-classes.md)

@@ -1,10 +1,6 @@
 ---
-title: '&lt;shared_mutex&gt; | Microsoft-Dokumentation'
-ms.custom: ''
+title: '&lt;shared_mutex&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <shared_mutex>
 - shared_mutex/std::swap
@@ -48,19 +44,13 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_for
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
-dev_langs:
-- C++
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 98ceeff060436701efb60aeb59987ae087c191b1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d54e054310b6077adb88c55b8923b6c13ce1c5ea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960280"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50467326"
 ---
 # <a name="ltsharedmutex"></a>&lt;shared_mutex>
 
@@ -244,5 +234,5 @@ Tauscht den Inhalt von zwei `shared_lock`-Objekten aus. Identisch mit `x.swap(y)
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)
-[&lt;Mutex >](../standard-library/mutex.md)
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
+[&lt;mutex>](../standard-library/mutex.md)

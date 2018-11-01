@@ -25,65 +25,65 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9ecc830937e36e213177205549ee4dd4e989e0ed
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7467a658ca8739ba933f266f58e756b8f7a3ba02
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118699"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055449"
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl-Klasse
 
-Stellt eine Implementierung der [IGetDataSource](/previous-versions/windows/desktop/ms709721\(v=vs.85\)) Objekt.  
-  
+Stellt eine Implementierung der [IGetDataSource](/previous-versions/windows/desktop/ms709721) Objekt.
+
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-template <class T>  
-class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource  
-```  
-  
-### <a name="parameters"></a>Parameter  
+template <class T>
+class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource
+```
+
+### <a name="parameters"></a>Parameter
 
 *T*<br/>
-Abgeleitet von die Klasse `IGetDataSourceImpl`.  
+Abgeleitet von die Klasse `IGetDataSourceImpl`.
 
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Anforderungen
 
-**Header:** „atldb.h“  
-  
-## <a name="members"></a>Member  
-  
-### <a name="interface-methods"></a>Schnittstellenmethoden  
-  
-|||  
-|-|-|  
-|[GetDataSource](#getdatasource)|Gibt einen Schnittstellenzeiger auf das Datenquellenobjekt, das die Sitzung erstellt haben.|  
-  
-## <a name="remarks"></a>Hinweise  
+**Header:** „atldb.h“
 
-Dies ist eine erforderliche Schnittstelle für die Sitzung erhalten Sie einen Schnittstellenzeiger auf das Datenquellenobjekt.  
+## <a name="members"></a>Member
+
+### <a name="interface-methods"></a>Schnittstellenmethoden
+
+|||
+|-|-|
+|[GetDataSource](#getdatasource)|Gibt einen Schnittstellenzeiger auf das Datenquellenobjekt, das die Sitzung erstellt haben.|
+
+## <a name="remarks"></a>Hinweise
+
+Dies ist eine erforderliche Schnittstelle für die Sitzung erhalten Sie einen Schnittstellenzeiger auf das Datenquellenobjekt.
 
 ## <a name="getdatasource"></a> Igetdatasourceimpl:: GetDatasource
 
-Gibt einen Schnittstellenzeiger auf das Datenquellenobjekt, das die Sitzung erstellt haben.  
-  
-### <a name="syntax"></a>Syntax  
-  
+Gibt einen Schnittstellenzeiger auf das Datenquellenobjekt, das die Sitzung erstellt haben.
+
+### <a name="syntax"></a>Syntax
+
 ```cpp
-STDMETHOD(GetDataSource)(REFIID riid,   
-   IUnknown ** ppDataSource);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+STDMETHOD(GetDataSource)(REFIID riid, 
+   IUnknown ** ppDataSource);
+```
 
-Finden Sie unter [IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
-  
-### <a name="remarks"></a>Hinweise  
+#### <a name="parameters"></a>Parameter
 
-Nützlich, wenn Sie auf Eigenschaften in das neue Datenquellenobjekt zugreifen müssen.  
-  
-## <a name="see-also"></a>Siehe auch  
+Finden Sie unter [IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443) in die *OLE DB-Programmierreferenz*.
+
+### <a name="remarks"></a>Hinweise
+
+Nützlich, wenn Sie auf Eigenschaften in das neue Datenquellenobjekt zugreifen müssen.
+
+## <a name="see-also"></a>Siehe auch
 
 [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

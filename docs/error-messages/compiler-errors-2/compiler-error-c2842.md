@@ -1,34 +1,23 @@
 ---
-title: Compilerfehler C2842 | Microsoft-Dokumentation
-ms.custom: ''
+title: Compilerfehler C2842
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2842
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2842
 ms.assetid: 8674f08d-9f50-46ad-9229-abc6b74fa0e5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 20967ab4cd047f62a5cf692c91fec90148b4f470
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2ec39768a88da049c6a31ca2a9de226e25479c99
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118816"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50571469"
 ---
 # <a name="compiler-error-c2842"></a>Compilerfehler C2842
 
 „Klasse“: Ein verwalteter oder WinRT-Typ kann keinen eigenen „operator new“- oder „operator delete“-Operator definieren.
 
 Sie können definieren, Ihre eigenen ** new-Operator oder **Delete-Operator** speicherbelegung auf dem systemeigenen Heap zu verwalten. Verweisklassen können diese Operatoren jedoch nicht definieren, da sie nur dem verwalteten Heap zugewiesen sind.
-
 
 Weitere Informationen finden Sie unter [User-Defined Operators (C++ / CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
 

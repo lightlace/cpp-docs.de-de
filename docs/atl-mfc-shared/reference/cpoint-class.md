@@ -1,32 +1,22 @@
 ---
-title: CPoint-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: CPoint-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CPoint
 - ATLTYPES/ATL::CPoint
 - ATLTYPES/ATL::CPoint::CPoint
 - ATLTYPES/ATL::CPoint::Offset
-dev_langs:
-- C++
 helpviewer_keywords:
 - LPPOINT structure
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bc0506d5b4f264a2bdbecf30a7732c93c927bf18
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5df8dbe03a59f899f2157eff842218e91e8f40dc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767981"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500619"
 ---
 # <a name="cpoint-class"></a>CPoint-Klasse
 
@@ -35,7 +25,7 @@ ms.locfileid: "43767981"
 ## <a name="syntax"></a>Syntax
 
 ```
-class CPoint : public tagPOINT 
+class CPoint : public tagPOINT
 ```
 
 ## <a name="members"></a>Member
@@ -65,7 +55,7 @@ class CPoint : public tagPOINT
 
 ## <a name="remarks"></a>Hinweise
 
-Es enthält auch Member-Funktionen zum Bearbeiten von `CPoint` und [Punkt](../../mfc/reference/point-structure1.md) Strukturen.
+Es enthält auch Member-Funktionen zum Bearbeiten von `CPoint` und [Punkt](../../mfc/reference/point-structure.md) Strukturen.
 
 Ein `CPoint` Objekt kann es sich immer verwendet eine `POINT` Struktur verwendet wird. Die Operatoren dieser Klasse, die Interaktion mit einem "Size" akzeptiert beide [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekte oder [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) strukturiert werden, da die beiden austauschbar sind.
 
@@ -99,19 +89,19 @@ CPoint(LPARAM dwPoint) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*initX*  
+*initX*<br/>
 Gibt den Wert des `x`-Members von `CPoint` an.
 
-*initY*  
+*initY*<br/>
 Gibt den Wert des `y`-Members von `CPoint` an.
 
-*initPt*  
-[Punkt](../../mfc/reference/point-structure1.md) Struktur oder `CPoint` , die angibt, dass die Werte zum Initialisieren verwendet `CPoint`.
+*initPt*<br/>
+[Punkt](../../mfc/reference/point-structure.md) Struktur oder `CPoint` , die angibt, dass die Werte zum Initialisieren verwendet `CPoint`.
 
-*initSize*  
+*initSize*<br/>
 [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur oder [CSize](../../atl-mfc-shared/reference/csize-class.md) , die angibt, dass die Werte zum Initialisieren verwendet `CPoint`.
 
-*dwPoint*  
+*dwPoint*<br/>
 Legt die `x` Member das niederwertige Wort *DwPoint* und `y` Member das höherwertige Word des *DwPoint*.
 
 ### <a name="remarks"></a>Hinweise
@@ -120,25 +110,25 @@ Wenn keine Argumente angegeben werden, werden die `x`- und `y`-Member auf 0 fest
 
 ### <a name="example"></a>Beispiel
 
-```cpp   
-CPoint   ptTopLeft(0, 0); 
+```cpp
+CPoint   ptTopLeft(0, 0);
 // works from a POINT, too
 
-POINT   ptHere;  
-ptHere.x = 35;  
+POINT   ptHere;
+ptHere.x = 35;
 ptHere.y = 95;
 
 CPoint   ptMFCHere(ptHere);
 
-// works from a SIZE 
-SIZE   sHowBig;  
-sHowBig.cx = 300;  
+// works from a SIZE
+SIZE   sHowBig;
+sHowBig.cx = 300;
 sHowBig.cy = 10;
 
-CPoint ptMFCBig(sHowBig); 
+CPoint ptMFCBig(sHowBig);
 // or from a DWORD
 
-DWORD   dwSize;  
+DWORD   dwSize;
 dwSize = MAKELONG(35, 95);
 
 CPoint ptFromDouble(dwSize);
@@ -157,16 +147,16 @@ void Offset(SIZE size) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*xOffset*  
+*xOffset*<br/>
 Gibt an, der Betrag, um die `x` Mitglied der `CPoint`.
 
-*yOffset*  
+*yOffset*<br/>
 Gibt an, der Betrag, um die `y` Mitglied der `CPoint`.
 
-*Zeigen Sie*  
-Gibt an, wie ( [Punkt](../../mfc/reference/point-structure1.md) oder `CPoint`) für den offset der `CPoint`.
+*Zeigen Sie*<br/>
+Gibt an, wie ( [Punkt](../../mfc/reference/point-structure.md) oder `CPoint`) für den offset der `CPoint`.
 
-*size*  
+*size*<br/>
 Gibt an, wie ( [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) oder [CSize](../../atl-mfc-shared/reference/csize-class.md)) für den offset der `CPoint`.
 
 ### <a name="example"></a>Beispiel
@@ -183,8 +173,8 @@ BOOL operator==(POINT point) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*  
-Enthält eine [Punkt](../../mfc/reference/point-structure1.md) Struktur oder `CPoint` Objekt.
+*Zeigen Sie*<br/>
+Enthält eine [Punkt](../../mfc/reference/point-structure.md) Struktur oder `CPoint` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -204,8 +194,8 @@ BOOL operator!=(POINT point) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*  
-Enthält eine [Punkt](../../mfc/reference/point-structure1.md) Struktur oder `CPoint` Objekt.
+*Zeigen Sie*<br/>
+Enthält eine [Punkt](../../mfc/reference/point-structure.md) Struktur oder `CPoint` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -220,17 +210,17 @@ Ungleich NULL, wenn die Punkte ungleich sind; andernfalls 0.
 Die erste Überladung fügt eine Größe, auf die `CPoint`.
 
 ```
-void operator+=(SIZE size) throw(); 
+void operator+=(SIZE size) throw();
 void operator+=(POINT point) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*size*  
+*size*<br/>
 Enthält eine [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur oder [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt.
 
-*Zeigen Sie*  
-Enthält eine [Punkt](../../mfc/reference/point-structure1.md) Struktur oder [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt.
+*Zeigen Sie*<br/>
+Enthält eine [Punkt](../../mfc/reference/point-structure.md) Struktur oder [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -249,17 +239,17 @@ Z. B. Hinzufügen von `CPoint(5, -7)` auf eine Variable enthält `CPoint(30, 40)
 Die erste Überladung subtrahiert eine Größe aus der `CPoint`.
 
 ```
-void operator-=(SIZE size) throw(); 
+void operator-=(SIZE size) throw();
 void operator-=(POINT point) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*size*  
+*size*<br/>
 Enthält eine [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur oder [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt.
 
-*Zeigen Sie*  
-Enthält eine [Punkt](../../mfc/reference/point-structure1.md) Struktur oder [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt.
+*Zeigen Sie*<br/>
+Enthält eine [Punkt](../../mfc/reference/point-structure.md) Struktur oder [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -285,14 +275,14 @@ CRect operator+(const RECT* lpRect) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*size*  
+*size*<br/>
 Enthält eine [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur oder [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt.
 
-*Zeigen Sie*  
-Enthält eine [Punkt](../../mfc/reference/point-structure1.md) Struktur oder [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt.
+*Zeigen Sie*<br/>
+Enthält eine [Punkt](../../mfc/reference/point-structure.md) Struktur oder [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt.
 
-*lpRect*  
-Enthält einen Zeiger auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt.
+*lpRect*<br/>
+Enthält einen Zeiger auf eine [RECT](../../mfc/reference/rect-structure.md) Struktur oder [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -321,14 +311,14 @@ CPoint operator-() const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*  
-Ein [Punkt](../../mfc/reference/point-structure1.md) Struktur oder [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt.
+*Zeigen Sie*<br/>
+Ein [Punkt](../../mfc/reference/point-structure.md) Struktur oder [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt.
 
-*size*  
+*size*<br/>
 Ein [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur oder [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt.
 
-*lpRect*  
-Ein Zeiger auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt.
+*lpRect*<br/>
+Ein Zeiger auf eine [RECT](../../mfc/reference/rect-structure.md) Struktur oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -352,9 +342,9 @@ Verwenden Sie den unäroperator, um einen Punkt zu negieren. Verwenden Sie beisp
 
 ## <a name="see-also"></a>Siehe auch
 
-[MDI MFC-Beispiel](../../visual-cpp-samples.md)   
-[Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
-[POINT-Struktur](../../mfc/reference/point-structure1.md)   
-[CRect-Klasse](../../atl-mfc-shared/reference/crect-class.md)   
+[MDI MFC-Beispiel](../../visual-cpp-samples.md)<br/>
+[Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
+[POINT-Struktur](../../mfc/reference/point-structure.md)<br/>
+[CRect-Klasse](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CSize-Klasse](../../atl-mfc-shared/reference/csize-class.md)
 

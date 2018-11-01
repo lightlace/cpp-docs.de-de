@@ -1,14 +1,8 @@
 ---
-title: -H (Länge externer Namen beschränken) | Microsoft-Dokumentation
-ms.custom: ''
+title: /H (Länge externer Namen beschränken)
 ms.date: 09/05/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /h
-dev_langs:
-- C++
 helpviewer_keywords:
 - public name length
 - /H compiler option [C++]
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - external names
 - -H compiler option [C++]
 ms.assetid: de701dd3-ed04-4c88-8195-960d2520ec2e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 61a931ac5f9793f800157ed02ffcb7ff5071f4df
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 194f8d2c87eb6aa307f417ff022e7975edf2ccc9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724398"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50489829"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (Länge externer Namen beschränken)
 
@@ -86,9 +76,9 @@ Die **/h** Option ist seit Visual Studio 2005 als veraltet markiert; die maximal
 
 1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
 
-2. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **Befehlszeile** Eigenschaftenseite.
+1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **Befehlszeile** Eigenschaftenseite.
 
-3. Geben Sie die Compileroption in der **zusätzliche Optionen** Feld.
+1. Geben Sie die Compileroption in der **zusätzliche Optionen** Feld.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
 

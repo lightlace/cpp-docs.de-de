@@ -1,10 +1,6 @@
 ---
-title: asinh, asinhf, asinhl | Microsoft-Dokumentation
-ms.custom: ''
+title: asinh, asinhf, asinhl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - asinh
 - asinhf
@@ -26,23 +22,17 @@ f1_keywords:
 - asinhf
 - asinhl
 - asinh
-dev_langs:
-- C++
 helpviewer_keywords:
 - asinh function
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1387e44b885d0f1ed58113b87d26ba5928768c18
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f6100268b77178487b7a7aa1cc3f10ac3ea7e9dc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393289"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662955"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -68,7 +58,7 @@ Gleitkommawert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **Asinh** Funktionen geben den umgekehrten hyperbolischen Sinus (hyperbolischen Arkussinus) von *x*. Diese Funktion ist über der Gleitkommadomäne gültig. Wenn *x* ist ein stilles NaN, undefiniert oder unendlich ist, wird der gleiche Wert zurückgegeben.
+Die **Asinh** Funktionen geben den umgekehrten hyperbolischen Sinus (hyperbolischen Arkussinus) *x*. Diese Funktion ist über der Gleitkommadomäne gültig. Wenn *x* wird eine stille NaN, undefiniert oder unendlich ist, wird der gleiche Wert zurückgegeben.
 
 |Eingabe|SEH-Ausnahme|**_matherr** Ausnahme|
 |-----------|-------------------|--------------------------|

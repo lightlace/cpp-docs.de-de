@@ -1,28 +1,18 @@
 ---
-title: RaiseException-Funktion | Microsoft-Dokumentation
-ms.custom: ''
+title: RaiseException-Funktion
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::RaiseException
-dev_langs:
-- C++
 helpviewer_keywords:
 - RaiseException function
 ms.assetid: f9c74f6d-112a-4d2e-900f-622f795d5dbf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 49024e903237160cc26a9c095cf9f313b43ccb6f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: af0b35e1014f79c7907711b95200c241d31b6117
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600764"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594752"
 ---
 # <a name="raiseexception-function"></a>RaiseException-Funktion
 
@@ -38,10 +28,10 @@ inline void __declspec(noreturn)   RaiseException(
 
 ### <a name="parameters"></a>Parameter
 
-*HR*  
+*HR*<br/>
 Der Ausnahmecode, der die Ausnahme ausgelöst wird; d. h. das HRESULT des einen fehlgeschlagenen Vorgang.
 
-*dwExceptionFlags*  
+*dwExceptionFlags*<br/>
 Ein Flag, der angibt, ein vernachlässigbare Ausnahme (der Flagwert ist 0 (null)), oder eine noncontinuable Ausnahme (Flag-Wert ungleich NULL ist). Standardmäßig ist die Ausnahme nicht fortsetzbare.
 
 ## <a name="remarks"></a>Hinweise

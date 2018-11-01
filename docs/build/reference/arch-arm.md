@@ -1,23 +1,13 @@
 ---
-title: -Arch (ARM) | Microsoft-Dokumentation
-ms.custom: ''
+title: /arch (ARM)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 4f1406ff-f174-487c-a126-8ab06cf447c1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 17f0f0735981c0a851bcab62ca1ad39c97af3965
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bf12abd140a56b1b914156083ecbbd3e61e7285a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700676"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495566"
 ---
 # <a name="arch-arm"></a>/arch (ARM)
 
@@ -59,6 +49,6 @@ Bei Verwendung von ["/ CLR"](../../build/reference/clr-common-language-runtime-c
 
 ## <a name="see-also"></a>Siehe auch
 
-[/ arch (minimale CPU-Architektur)](../../build/reference/arch-minimum-cpu-architecture.md)
+[/arch (Mindestanforderungen an die CPU-Architektur)](../../build/reference/arch-minimum-cpu-architecture.md)<br/>
 [Compileroptionen](../../build/reference/compiler-options.md)<br/>
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

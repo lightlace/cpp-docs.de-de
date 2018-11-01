@@ -1,5 +1,5 @@
 ---
-title: Für Bearbeitungssteuerelemente | Microsoft Docs
+title: Bearbeitungssteuerelemente-Handler | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -31,27 +31,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 450cb2252cc7331b5a9d9f0f60c3d23b5d08bc22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e4828eb2241346a0cee4a1d1a732426e28aeb61
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374450"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395322"
 ---
 # <a name="edit-control-handlers"></a>Handler für Bearbeitungssteuerelemente
-Die folgenden Zuordnungseinträge entsprechen der Funktionsprototyp.  
-  
-|Eintrag für die Zuordnung|Funktionsprototyp|  
-|---------------|------------------------|  
-|ON_EN_CHANGE ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn ();|  
-|ON_EN_ERRSPACE ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn ();|  
-|ON_EN_HSCROLL ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn ();|  
-|ON_EN_KILLFOCUS ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn ();|  
-|ON_EN_MAXTEXT ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn ();|  
-|ON_EN_SETFOCUS ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn ();|  
-|ON_EN_UPDATE ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn ();|  
-|ON_EN_VSCROLL ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn ();|  
-  
-## <a name="see-also"></a>Siehe auch  
- [Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md)
+
+Die folgenden Zuordnungseinträge entsprechen der Funktionsprototyp.
+
+|Zuordnungseintrag|Funktionsprototyp|
+|---------------|------------------------|
+|ON_EN_CHANGE ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
+|ON_EN_ERRSPACE ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
+|ON_EN_HSCROLL ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
+|ON_EN_KILLFOCUS ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
+|ON_EN_MAXTEXT ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
+|ON_EN_SETFOCUS ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
+|ON_EN_UPDATE ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
+|ON_EN_VSCROLL ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
+
+## <a name="see-also"></a>Siehe auch
+
+[Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md)
 

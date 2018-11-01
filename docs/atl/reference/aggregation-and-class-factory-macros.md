@@ -1,10 +1,6 @@
 ---
-title: Aggregation und Klassenfactory-Makros | Microsoft-Dokumentation
-ms.custom: ''
+title: Aggregation und Klassenfactory-Makros
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlcom/ATL::DECLARE_AGGREGATABLE
 - atlcom/ATL::DECLARE_CLASSFACTORY
@@ -17,22 +13,16 @@ f1_keywords:
 - atlcom/ATL::DECLARE_POLY_AGGREGATABLE
 - atlcom/ATL::DECLARE_PROTECT_FINAL_CONSTRUCT
 - atlcom/ATL::DECLARE_VIEW_STATUS
-dev_langs:
-- C++
 helpviewer_keywords:
 - class factories, ATL macros
 - aggregation [C++], ATL macros
 ms.assetid: d99d379a-0eec-481f-8daa-252dac18f163
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9a9cc4a142a0aefc4937df493fa87552464b4294
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c0e3b6903e382ad56be9500792bec895a7641f00
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46043416"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497185"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Aggregation und Klassenfactory-Makros
 
@@ -51,7 +41,7 @@ Diese Makros bieten Möglichkeiten zum Steuern der Aggregation und Klassenfactor
 |[DECLARE_ONLY_AGGREGATABLE](#declare_only_aggregatable)|Deklariert, dass das Objekt aggregiert werden muss.|
 |[DECLARE_POLY_AGGREGATABLE](#declare_poly_aggregatable)|Überprüft den Wert der äußeren unbekannten und das Objekt deklariert, aggregiert oder nicht aggregierbar, je nach Bedarf.|
 |[DECLARE_PROTECT_FINAL_CONSTRUCT](#declare_protect_final_construct)|Schützt das äußere Objekt vor dem Löschen, während der Erstellung eines inneren Objekts.|
-|[DECLARE_VIEW_STATUS](#declare_view_status)|Gibt die VIEWSTATUS Flags in den Container.|  
+|[DECLARE_VIEW_STATUS](#declare_view_status)|Gibt die VIEWSTATUS Flags in den Container.|
 
 ## <a name="requirements"></a>Anforderungen
 

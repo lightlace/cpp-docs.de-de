@@ -1,28 +1,18 @@
 ---
-title: AsWeak-Funktion | Microsoft-Dokumentation
-ms.custom: ''
+title: AsWeak-Funktion
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::AsWeak
-dev_langs:
-- C++
 helpviewer_keywords:
 - AsWeak function
 ms.assetid: a6f10cfc-c1d6-4761-adb9-1a119cc99913
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: dea10165e920c6b0bbd3856fc04e9ec9661e60c4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0c3250b18422f64e71d8e8d7dac8dc5ab204145b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42571333"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616735"
 ---
 # <a name="asweak-function"></a>AsWeak-Funktion
 
@@ -40,13 +30,13 @@ HRESULT AsWeak(
 
 ### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Ein Zeiger auf den Typ des Parameters *p*.
 
-*p*  
+*p*<br/>
 Eine Instanz eines Typs.
 
-*pWeak*  
+*pWeak*<br/>
 Wenn dieser Vorgang abgeschlossen ist, einen Zeiger auf einen schwachen Verweis auf Parameter *p*.
 
 ## <a name="return-value"></a>Rückgabewert

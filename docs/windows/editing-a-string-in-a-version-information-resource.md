@@ -1,29 +1,18 @@
 ---
-title: Bearbeiten einer Zeichenfolge in einer Versionsinformationsressource (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Bearbeiten einer Zeichenfolge in einer Versionsinformationsressource (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.version
-dev_langs:
-- C++
 helpviewer_keywords:
 - version information resources [C++]
 - resources [C++], editing version information
 ms.assetid: d3a7d4e4-7d31-47c2-902c-f50b8404ba4f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c5cc7da4629ba00bbb1c48d764b836897c0b3748
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 75d41444d685b067b57aa78aee944ee005da5d3b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316977"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476426"
 ---
 # <a name="editing-a-string-in-a-version-information-resource-c"></a>Bearbeiten einer Zeichenfolge in einer Versionsinformationsressource (C++)
 
@@ -31,7 +20,7 @@ ms.locfileid: "44316977"
 
 1. Klicken Sie ein Mal auf das Element, um es auszuwählen, und dann noch ein Mal, um mit der Bearbeitung zu beginnen. Nehmen Sie die Änderungen direkt in die **Versionsinformationen** Tabelle oder in der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window). Die vorgenommenen Änderungen werden an beiden Orten berücksichtigt.
 
-   > [!NOTE] 
+   > [!NOTE]
    > Beim Bearbeiten der `FILEFLAGS` -Schlüssel in der **Versionsinformationen** -Editor, Sie werden bemerken Sie nicht Festlegen der **Debuggen**, **Private Build**, oder **spezielle Erstellen Sie** Eigenschaften (in der **Eigenschaften** Fenster) für RC-Dateien:
 
    - Die **Versionsinformationen** legt die **Debuggen** Eigenschaft mit einer `#ifdef` im Ressourcenskript, basierend auf den `_DEBUG` build-Flag.
@@ -48,5 +37,5 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Versionsinfo-Editor](../windows/version-information-editor.md)  
+[Versionsinfo-Editor](../windows/version-information-editor.md)<br/>
 [Versionsinformationen (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)

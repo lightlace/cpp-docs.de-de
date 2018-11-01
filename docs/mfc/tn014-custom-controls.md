@@ -1,28 +1,18 @@
 ---
-title: 'TN014: Benutzerdefinierte Steuerelemente | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'TN014: Benutzerdefinierte Steuerelemente'
 ms.date: 06/28/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.controls
-dev_langs:
-- C++
 helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f3838fc2888567fa700eebd127bc7990175bdbc8
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e773d270c302ef71a6f6527061ba13c870fa4500
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693587"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50557819"
 ---
 # <a name="tn014-custom-controls"></a>TN014: Benutzerdefinierte Steuerelemente
 
@@ -144,5 +134,5 @@ Finden Sie unter den [CTRLTEST](../visual-cpp-samples.md) Beispiel für mehrere 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)  
-[Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)  
+[Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)<br/>
+[Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)

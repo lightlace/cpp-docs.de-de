@@ -1,27 +1,16 @@
 ---
-title: Ausblenden von Steuerelementen, die gleiche Breite, Höhe oder Größe | Microsoft-Dokumentation
-ms.custom: ''
+title: Festlegen der gleichen Breite, Höhe oder Größe für Steuerelemente
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Make Same Size command
 - controls [C++], sizing
 ms.assetid: 94b50613-67e2-497b-a2b6-6d98dccfd345
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 5077d2dcd426182495cc7a414aca7ca411d1fa60
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1c0b51e7f870c60e3186242005cfa985d91aa870
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605375"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619842"
 ---
 # <a name="making-controls-the-same-width-height-or-size"></a>Festlegen der gleichen Breite, Höhe oder Größe für Steuerelemente
 
@@ -49,5 +38,5 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)  
+[Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)<br/>
 [Steuerelemente](../mfc/controls-mfc.md)

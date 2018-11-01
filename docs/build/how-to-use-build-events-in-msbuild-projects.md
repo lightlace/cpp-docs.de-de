@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bc75cc0e58f86e8de87e3fb29c8ea02e624a73a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fd35ff136c0145e1c76a04d15052d426a7c90dcc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700699"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161267"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Gewusst wie: Verwenden von Buildereignissen in MSBuild-Projekten
 
@@ -29,7 +29,7 @@ Ein Buildereignis ist ein Befehl, den MSBuild zu einem bestimmten Zeitpunkt im B
 
 Jede der drei Build-Ereignissen wird in eine Elementdefinitionsgruppe durch ein Befehlselement dargestellt (`<Command>`), die ausgeführt wird und ein Nachrichtenelement (`<Message>`), angezeigt wird, wenn **MSBuild** führt das Ereignis erstellt. Jedes Element ist optional, und wenn Sie das gleiche Element mehrmals angeben, wird das letzte Vorkommen hat Vorrang vor.
 
-Eine optionale *in Buildvorgang verwenden* Element (`<`*Buildereignis*`UseInBuild>`) kann angegeben werden, in eine Eigenschaftengruppe, um anzugeben, ob das Ereignis erstellt, ausgeführt wird. Der Wert des Inhalts einer *in Buildvorgang verwenden* Element ist entweder `true` oder `false`. Standardmäßig wird ein Buildereignis ausgeführt, es sei denn, der entsprechenden *in Buildvorgang verwenden* Element nastaven NA hodnotu `false`.
+Eine optionale *in Buildvorgang verwenden* Element (`<`*Buildereignis*`UseInBuild>`) kann angegeben werden, in eine Eigenschaftengruppe, um anzugeben, ob das Ereignis erstellt, ausgeführt wird. Der Wert des Inhalts einer *in Buildvorgang verwenden* Element ist entweder **"true"** oder **"false"**. Standardmäßig wird ein Buildereignis ausgeführt, es sei denn, der entsprechenden *in Buildvorgang verwenden* Element nastaven NA hodnotu `false`.
 
 Die folgende Tabelle enthält die XML-Element für jeden Build:
 
@@ -82,5 +82,5 @@ Im folgende Beispiel hinzugefügt werden kann, innerhalb des Project-Elements de
 
 ## <a name="see-also"></a>Siehe auch
 
-[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)
+[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)<br/>
 [Exemplarische Vorgehensweise: Verwenden von MSBuild zum Erstellen eines Visual C++-Projekts](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

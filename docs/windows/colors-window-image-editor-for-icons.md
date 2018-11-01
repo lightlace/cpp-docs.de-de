@@ -1,14 +1,8 @@
 ---
-title: Farben (Bildbearbeitung für Symbole)-Fenster | Microsoft-Dokumentation
-ms.custom: ''
+title: Fenster "Farben" (Bildbearbeitung für Symbole)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.colorswindow
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], Colors Palette
 - Colors Palette, Image editor
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - colors [C++]
 - Color Indicator
 ms.assetid: 1d9b6c16-bf1d-4488-a19b-5d6fe601846a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b7e4976065d32a2f88550e5f89fc464da2dbc00e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: aeed186ce38ffc9e2012f6e6b5a4c1af3efc9553
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316704"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647344"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>Fenster "Farben" (Bildbearbeitung für Symbole)
 
@@ -36,8 +25,8 @@ Die **Farben** Fenster besteht aus zwei Teilen:
 
 2. Die **Farbanzeige**, zeigt die Vordergrund- und Hintergrundfarben und Selektoren für die Bildschirm- und invertierte Farbe.
 
-   ![Fenster "Farben"](../windows/media/vccolorswindow.gif "VcColorsWindow")  
-Fenster "Farben"
+   ![Fenster "Farben"](../windows/media/vccolorswindow.gif "VcColorsWindow")<br/>
+   Fenster "Farben"
 
 > [!NOTE]
 > Die **Bildschirm Farbe** und **invertierte Farbe** Tools sind nur verfügbar für Symbole und Cursor.
@@ -50,8 +39,8 @@ Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anzeigen oder Ausblenden der Fenster "Farben"](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)  
-[Erstellen transparenter oder invertierter Bereiche in Gerätebildern](../windows/creating-transparent-or-inverse-regions-in-device-images.md)  
-[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)  
-[Dialogfeld Benutzerdefinierte Farben](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)  
+[Anzeigen oder Ausblenden der Fenster "Farben"](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)<br/>
+[Erstellen transparenter oder invertierter Bereiche in Gerätebildern](../windows/creating-transparent-or-inverse-regions-in-device-images.md)<br/>
+[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[Dialogfeld Benutzerdefinierte Farben](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)<br/>
 [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)

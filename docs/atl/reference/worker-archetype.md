@@ -1,25 +1,15 @@
 ---
-title: Worker-Archetype | Microsoft-Dokumentation
-ms.custom: ''
+title: Worker-Archetype
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 80bd9984afa3ce1fc6cda4e0b48cfa59e7e84b56
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: bbfe75ad996841cd4ea78adab56c7cf91ac55f3c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118452"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565554"
 ---
 # <a name="worker-archetype"></a>Worker-Archetype
 
@@ -70,8 +60,8 @@ Wird aufgerufen, um eine Arbeitsaufgabe zu verarbeiten.
 
 ```
 void Execute(
-    RequestType request,  
-    void* pvWorkerParam,  
+    RequestType request,
+    void* pvWorkerParam,
     OVERLAPPED* pOverlapped);
 ```
 

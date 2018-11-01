@@ -1,28 +1,18 @@
 ---
-title: _variant_t::_variant_t | Microsoft-Dokumentation
-ms.custom: ''
+title: _variant_t::_variant_t
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - _variant_t::_variant_t
-dev_langs:
-- C++
 helpviewer_keywords:
 - _variant_t class [C++], constructor
 - _variant_t method [C++]
 ms.assetid: a50e5b33-d4c6-4a26-8e7e-a0a25fd9895b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2c3b1bb7d345d87e4f592dc82971f1efe86dd9a2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b3575226199c15c4a9796fb439f65efb5a539225
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46079582"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544104"
 ---
 # <a name="varianttvariantt"></a>_variant_t::_variant_t
 
@@ -210,15 +200,15 @@ Ein **__int64 ohne Vorzeichen** Wert in die neue kopiert werden `_variant_t` Obj
 
 - **_variant_t ()** erstellt ein leeres `_variant_t` Objekt `VT_EMPTY`.
 
-- **_variant_t (VARIANT &***VarSrc***)** erstellt eine `_variant_t` Objekt aus einer Kopie der `VARIANT` Objekt.     Der Varianttyp wird beibehalten.
+- **_variant_t (VARIANT &**  *VarSrc*  **)** erstellt eine `_variant_t` Objekt aus einer Kopie der `VARIANT` Objekt.     Der Varianttyp wird beibehalten.
 
-- **_variant_t (VARIANT**<strong>\*</strong>*pVarSrc***)** erstellt eine `_variant_t` Objekt aus einer Kopie der `VARIANT` Objekt.     Der Varianttyp wird beibehalten.
+- **_variant_t (VARIANT**<strong>\*</strong>*pVarSrc*  **)** erstellt eine `_variant_t` Objekt aus einer Kopie der `VARIANT` Objekt.     Der Varianttyp wird beibehalten.
 
 - **_variant_t (_variant_t &***Var_t_Src***)** erstellt eine `_variant_t` Objekt von einem anderen `_variant_t` Objekt.     Der Varianttyp wird beibehalten.
 
-- **_variant_t (VARIANT &***VarSrc* **, "bool"**`fCopy`**)** erstellt eine `_variant_t` -Objekt aus einem vorhandenen `VARIANT` -Objekt.       Wenn *fCopy* ist **"false"**, **VARIANT** Objekt ist auf das neue Objekt angefügt, ohne dass eine Kopie.
+- **_variant_t (VARIANT &**  *VarSrc* **, "bool"**`fCopy`**)** erstellt eine `_variant_t` -Objekt aus einem vorhandenen `VARIANT` -Objekt.       Wenn *fCopy* ist **"false"**, **VARIANT** Objekt ist auf das neue Objekt angefügt, ohne dass eine Kopie.
 
-- **_variant_t (short***sSrc* **, VARTYPE**`vtSrc`**= VT_I2)** erstellt eine `_variant_t` Objekt des Typs, die von einem VT_I2oderVT_BOOL**kurze** Integer-Wert.       Alle anderen `VARTYPE` führt zu einem Fehler E_INVALIDARG zurückgegeben.
+- **_variant_t (short**  *sSrc* **, VARTYPE**  `vtSrc`  **= VT_I2)** erstellt eine `_variant_t` Objekt des Typs, die von einem VT_I2oderVT_BOOL**kurze** Integer-Wert. Alle anderen `VARTYPE` führt zu einem Fehler E_INVALIDARG zurückgegeben.
 
 - **_variant_t (long** `lSrc` **, VARTYPE**`vtSrc`**= VT_I4)** erstellt eine `_variant_t` Objekt des Typs VT_I4, VT_BOOL oder VT_ERROR aus einer **lange**  Integer-Wert.       Alle anderen `VARTYPE` führt zu einem Fehler E_INVALIDARG zurückgegeben.
 
@@ -230,13 +220,13 @@ Ein **__int64 ohne Vorzeichen** Wert in die neue kopiert werden `_variant_t` Obj
 
 - **_variant_t (_bstr_t &**`bstrSrc`**)** erstellt eine `_variant_t` Objekt vom Typ VT_BSTR aus einem `_bstr_t` Objekt.     Ein neues `BSTR` wird zugeordnet.
 
-- **_variant_t (Wchar_t** <strong>\*</strong> *WstrSrc***)** erstellt eine `_variant_t` Objekt vom Typ "VT_BSTR" von Unicode-Zeichenfolge.   Ein neues `BSTR` wird zugeordnet.
+- **_variant_t (Wchar_t** <strong>\*</strong> *WstrSrc*  **)** erstellt eine `_variant_t` Objekt vom Typ "VT_BSTR" von Unicode-Zeichenfolge.   Ein neues `BSTR` wird zugeordnet.
 
-- **_variant_t (Char**<strong>\*</strong>`strSrc`**)** erstellt eine `_variant_t` Objekt vom Typ VT_BSTR aus einer Zeichenfolge.     Ein neues `BSTR` wird zugeordnet.
+- **_variant_t (Char**<strong>\*</strong>  `strSrc`  **)** erstellt eine `_variant_t` Objekt vom Typ VT_BSTR aus einer Zeichenfolge. Ein neues `BSTR` wird zugeordnet.
 
 - **_variant_t (Bool**`bSrc`**)** erstellt eine `_variant_t` Objekt des Typs VT_BOOL aus einer **"bool"** Wert.    
 
-- **_variant_t (IUnknown** <strong>\*</strong> `pIUknownSrc` **, "bool"**`fAddRef`**= True)** erstellt eine `_variant_t` Objekt des Typs VT_UNKNOWN aus einem COM-Schnittstellenzeiger.       Wenn `fAddRef` ist **"true"**, klicken Sie dann `AddRef` für den bereitgestellten Schnittstellenzeiger auf den Aufruf von entsprechend aufgerufen wird `Release` erfolgt, die bei der `_variant_t` -Objekt zerstört wird. Es liegt bei Ihnen Aufrufen `Release` auf den bereitgestellten Schnittstellenzeiger auf. Wenn `fAddRef` ist **"false"**, übernimmt dieser Konstruktor den Besitz des angegebenen Schnittstellenzeigers, rufen Sie keine `Release` auf den bereitgestellten Schnittstellenzeiger auf.
+- **_variant_t (IUnknown**<strong>\*</strong>  `pIUknownSrc` **, "bool"**  `fAddRef`**= True)** erstellt eine `_variant_t` Objekt des Typs VT_UNKNOWN aus einem COM-Schnittstellenzeiger. Wenn `fAddRef` ist **"true"**, klicken Sie dann `AddRef` für den bereitgestellten Schnittstellenzeiger auf den Aufruf von entsprechend aufgerufen wird `Release` erfolgt, die bei der `_variant_t` -Objekt zerstört wird. Es liegt bei Ihnen Aufrufen `Release` auf den bereitgestellten Schnittstellenzeiger auf. Wenn `fAddRef` ist **"false"**, übernimmt dieser Konstruktor den Besitz des angegebenen Schnittstellenzeigers, rufen Sie keine `Release` auf den bereitgestellten Schnittstellenzeiger auf.
 
 - **_variant_t (IDispatch** <strong>\*</strong> `pDispSrc` **, "bool"**`fAddRef`**= True)** erstellt eine `_variant_t` Objekt Geben Sie "VT_DISPATCH" aus einem COM-Schnittstellenzeiger.       Wenn `fAddRef` ist **"true"**, klicken Sie dann `AddRef` für den bereitgestellten Schnittstellenzeiger auf den Aufruf von entsprechend aufgerufen wird `Release` erfolgt, die bei der `_variant_t` -Objekt zerstört wird. Es liegt bei Ihnen Aufrufen `Release` auf den bereitgestellten Schnittstellenzeiger auf. Wenn `fAddRef` ist **"false"**, übernimmt dieser Konstruktor den Besitz des angegebenen Schnittstellenzeigers, rufen Sie keine `Release` auf den bereitgestellten Schnittstellenzeiger auf.
 

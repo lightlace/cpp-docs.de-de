@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3cb07824ad5212f4174a6f19e3efa4549432455
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 95a336319861ef44f65f0573389f09c3e9a45573
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894448"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425846"
 ---
 # <a name="ltincludegt-visual-c"></a>&lt;include&gt; (Visual C++)
 
@@ -31,22 +31,22 @@ Mit dem \<include>-Tag können Sie auf Kommentare in einer anderen Datei verweis
 
 ## <a name="syntax"></a>Syntax
 
-```  
+```
 <include file='filename' path='tagpath' />
-```  
+```
 
 #### <a name="parameters"></a>Parameter
 
-`filename`  
+*filename*<br/>
 Der Name der Datei, die die Dokumentation enthält. Der Dateiname kann mit einem Pfad qualifiziert werden.  Setzen Sie den Namen in einfache oder doppelte Anführungszeichen.  Der Compiler gibt eine Warnung aus, wenn er `filename` nicht findet.
 
-`tagpath`  
+*tagpath*<br/>
 Ein gültiger XPath-Ausdruck, mit dem der gewünschte in der Datei enthaltene Knotensatz ausgewählt wird.
 
-`name`  
+*name*<br/>
 Der Namensbezeichner in dem Tag, das sich vor den Kommentaren befindet. `name` besitzt eine `id`.
 
-`id`  
+*ID*<br/>
 Die ID für das Tag, das sich vor den Kommentaren befindet.  Setzen Sie den Namen in einfache oder doppelte Anführungszeichen.
 
 ## <a name="remarks"></a>Hinweise
@@ -75,7 +75,7 @@ public ref class Test2 {
    void Test() {
    }
 };
-```  
+```
 
 Die zweite Datei, xml_include_tag.doc, enthält die folgenden Dokumentationskommentare:
 
@@ -95,7 +95,7 @@ The summary for this other type.
 </MyMembers>
 
 </MyDocs>
-```  
+```
 
 ## <a name="program-output"></a>Programmausgabe
 

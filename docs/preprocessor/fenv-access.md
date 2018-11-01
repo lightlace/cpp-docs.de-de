@@ -1,40 +1,30 @@
 ---
-title: Fenv_access | Microsoft-Dokumentation
-ms.custom: ''
+title: fenv_access
 ms.date: 03/12/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - vc-pragma.fenv_access
 - fenv_access_CPP
-dev_langs:
-- C++
 helpviewer_keywords:
 - pragmas, fenv_access
 - fenv_access pragma
 ms.assetid: 2ccea292-0ae4-42ce-9c67-cc189299857b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eeb138a8b2598c209005031a3ccd3104fead48dc
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 507e78dd9f9571cc9ce44d7fd91e78b1c955ba73
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540428"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664034"
 ---
 # <a name="fenvaccess"></a>fenv_access
 Deaktiviert (**auf**) oder aktiviert (**aus**) Optimierungen, welche Gleitkommaausnahme zu kennzeichnen, Tests und Modus ändert.
 
 ## <a name="syntax"></a>Syntax
 
-> **#pragma fenv_access führen (** { **auf** | **aus** } **)**  
+> **#pragma fenv_access führen (** { **auf** | **aus** } **)**
 
 ## <a name="remarks"></a>Hinweise
 
-In der Standardeinstellung **Fenv_access** ist **aus**. Wenn der Compiler, die davon ausgehen kann Ihren Code nicht zugreifen oder die gleitkommaumgebung bearbeiten, und es viele gleitkommacode Optimierungen durchführen. Legen Sie **Fenv_access** zu **auf** an den Compiler darüber zu informieren, dass Ihr Code die Gleitkommaausnahme-Statusflags, Ausnahmen, zu testen oder Steuerelement Modus-Flags festlegen zugreift. Der Compiler deaktiviert diese Optimierungen, damit Ihr Code die gleitkommaumgebung einheitlich zugreifen kann. 
+In der Standardeinstellung **Fenv_access** ist **aus**. Wenn der Compiler, die davon ausgehen kann Ihren Code nicht zugreifen oder die gleitkommaumgebung bearbeiten, und es viele gleitkommacode Optimierungen durchführen. Legen Sie **Fenv_access** zu **auf** an den Compiler darüber zu informieren, dass Ihr Code die Gleitkommaausnahme-Statusflags, Ausnahmen, zu testen oder Steuerelement Modus-Flags festlegen zugreift. Der Compiler deaktiviert diese Optimierungen, damit Ihr Code die gleitkommaumgebung einheitlich zugreifen kann.
 
 Weitere Informationen zum Gleitkommaverhalten finden Sie unter [/fp (Festlegen des Gleitkommaverhaltens)](../build/reference/fp-specify-floating-point-behavior.md).
 

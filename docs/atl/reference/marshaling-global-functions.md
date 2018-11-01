@@ -1,27 +1,17 @@
 ---
-title: Globale Funktionen Marshalling | Microsoft-Dokumentation
-ms.custom: ''
+title: Marshalling globale Funktionen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlFreeMarshalStream
 - atlbase/ATL::AtlMarshalPtrInProc
 - atlbase/ATL::AtlUnmarshalPtr
-dev_langs:
-- C++
 ms.assetid: 877100b5-6ad9-44c5-a2e0-09414f1720d0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c8426a0113ca245f6c9390a5c95f350398938731
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dadaf119f8f1d0aefb4f5b4b740747a2794d271e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106232"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554412"
 ---
 # <a name="marshaling-global-functions"></a>Marshalling globale Funktionen
 
@@ -34,7 +24,7 @@ Diese Funktionen bieten Unterstützung für das Marshallen und konvertieren Mars
 |-|-|
 |[AtlFreeMarshalStream](#atlfreemarshalstream)|Gibt die marschalldaten und `IStream` Zeiger.|
 |[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Erstellt ein neues Streamobjekt und marshallt den angegebenen Schnittstellenzeiger auf.|
-|[AtlUnmarshalPtr](#atlunmarshalptr)|Konvertiert die Marshallingdaten des Streams in einen Schnittstellenzeiger auf.|  
+|[AtlUnmarshalPtr](#atlunmarshalptr)|Konvertiert die Marshallingdaten des Streams in einen Schnittstellenzeiger auf.|
 
 ## <a name="requirements"></a>Anforderungen:
 
@@ -42,7 +32,7 @@ Diese Funktionen bieten Unterstützung für das Marshallen und konvertieren Mars
 
 ##  <a name="atlfreemarshalstream"></a>  AtlFreeMarshalStream
 
-Gibt die Marschalldaten im Stream und anschließend den Streamzeiger frei.  
+Gibt die Marschalldaten im Stream und anschließend den Streamzeiger frei.
 
 ```
 HRESULT AtlFreeMarshalStream(IStream* pStream);

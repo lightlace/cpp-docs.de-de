@@ -1,30 +1,21 @@
 ---
-title: Schlüssel-WRL-APIs nach Kategorie | Microsoft-Dokumentation
-ms.custom: ''
+title: Schlüssel-WRL-APIs nach Kategorie
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 7367bacf-6b7c-4ecd-a0ce-a662db46fc66
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b6d6bd580faf8c242ca5ac5e9b4b29ded9a7750a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 529d561aa3ec486a7fa2b69e5ca8aa241b0879fe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612209"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50638060"
 ---
 # <a name="key-wrl-apis-by-category"></a>Schlüssel-WRL-APIs nach Kategorie
+
 Die folgenden Tabellen enthalten die primären Windows Runtime C++ Template Library-Klassen, Strukturen, Funktionen und Makros. Konstrukte im Hilfsprogramm-Namespaces und Klassen werden ausgelassen. Diese Listen erweitern die API-Dokumentation, die vom Namespace angeordnet ist.
-  
-### <a name="classes"></a>Klassen
-  
+
+## <a name="classes"></a>Klassen
+
 |Titel|Beschreibung|
 |-----------|-----------------|
 |[ActivationFactory-Klasse](../windows/activationfactory-class.md)|Ermöglicht, dass eine oder mehrere Klassen durch die Windows-Runtime aktiviert werden.|
@@ -46,18 +37,18 @@ Die folgenden Tabellen enthalten die primären Windows Runtime C++ Template Libr
 |[SimpleActivationFactory-Klasse](../windows/simpleactivationfactory-class.md)|Stellt einen grundlegenden Mechanismus für das Erstellen einer Windows-Runtime oder einer klassischen COM-Basisklasse bereit.|
 |[SimpleClassFactory-Klasse](../windows/simpleclassfactory-class.md)|Stellt einen grundlegenden Mechanismus zum Erstellen einer Basisklasse bereit.|
 |[WeakRef-Klasse](../windows/weakref-class.md)|Stellt einen *schwachen Verweis* dar, der nur durch die Windows-Runtime und nicht durch die klassische COM verwendet werden kann. Ein schwacher Verweis repräsentiert ein Objekt, auf das möglicherweise zugegriffen werden kann.|
-  
-### <a name="structures"></a>Strukturen
-  
+
+## <a name="structures"></a>Strukturen
+
 |Titel|Beschreibung|
 |-----------|-----------------|
 |[ChainInterfaces-Struktur](../windows/chaininterfaces-structure.md)|Gibt Überprüfungs- und Initialisierungsfunktionen an, die auf einen Satz von Schnittstellen-IDs angewendet werden können.|
 |[CloakedIid-Struktur](../windows/cloakediid-structure.md)|Gibt an, um die `RuntimeClass`, `Implements` und `ChainInterfaces` Vorlagen, dass die angegebene Schnittstelle nicht zugegriffen werden kann, in der IID-Liste ist.|
 |[Implements-Struktur](../windows/implements-structure.md)|Implementiert `QueryInterface` und `GetIid` für die angegebene Schnittstelle.|
 |[MixIn-Struktur](../windows/mixin-structure.md)|Stellt sicher, dass eine Runtime-Klasse aus Windows-Runtime-Schnittstellen (sofern vorhanden) und dann aus klassischen COM-Schnittstellen abgeleitet wird.|
-  
-### <a name="functions"></a>Funktionen
-  
+
+## <a name="functions"></a>Funktionen
+
 |Titel|Beschreibung|
 |-----------|-----------------|
 |[ActivateInstance-Funktion](../windows/activateinstance-function.md)|Registriert, und ruft eine Instanz eines angegebenen Typs, der definiert, die in einer angegebenen Klasse-ID ab|
@@ -67,13 +58,14 @@ Die folgenden Tabellen enthalten die primären Windows Runtime C++ Template Libr
 |[CreateClassFactory-Funktion](../windows/createclassfactory-function.md)|Erstellt eine Factory, die Instanzen der angegebenen Klasse erstellt.|
 |[GetActivationFactory-Funktion](../windows/getactivationfactory-function.md)|Ruft eine aktivierungsfactory für den durch die Template-Parameter angegebenen Typ ab.|
 |[Make-Funktion](../windows/make-function.md)|Initialisiert die angegebene Windows-Runtime-Klasse.|
-  
-### <a name="macros"></a>Makros
-  
+
+## <a name="macros"></a>Makros
+
 |Titel|Beschreibung|
 |-----------|-----------------|
 |[ActivatableClass-Makros](../windows/activatableclass-macros.md)|Füllt einen internen Cache, der eine Factory enthält, die eine Instanz der angegebenen Klasse erstellen können.|
 |[InspectableClass-Makro](../windows/inspectableclass-macro.md)|Legt den Ablaufklassennamen und die Vertrauensebene fest.|
-  
+
 ## <a name="see-also"></a>Siehe auch
- [C++-Vorlagenbibliothek für Windows-Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)
+
+[C++-Vorlagenbibliothek für Windows-Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

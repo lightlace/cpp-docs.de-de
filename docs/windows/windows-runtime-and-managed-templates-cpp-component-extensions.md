@@ -1,28 +1,18 @@
 ---
-title: Windows-Laufzeit und verwaltete Vorlagen (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Windows-Laufzeit und verwaltete Vorlagen (C++ / CLI und C++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - templates, with CLR types
 ms.assetid: cf59d16b-5514-448b-9a95-e0b4fcb616a6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0a7d08354bcd2b0b0d8cf1db6e4bd58fb9821708
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: cbd66f3ddf41602f7ed9a73f3a334bb86f1f3705
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591448"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471473"
 ---
-# <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows-Laufzeit und verwaltete Vorlagen (Komponentenerweiterungen für C++)
+# <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Windows-Laufzeit und verwaltete Vorlagen (C++ / CLI und C++ / CX)
 
 Vorlagen können Sie einen Prototyp der einer Windows-Runtime oder der common Language Runtime-Typ definieren, und klicken Sie dann mithilfe von verschiedenen Vorlagentypparameter instanziieren Variationen dieses Typs.
 
@@ -50,7 +40,7 @@ Compileroption: `/clr`
 
 ### <a name="examples"></a>Beispiele
 
-Es ist möglich, das Instanziieren eines generischen Typs mit einem verwalteten Typ Template-Parameter, aber eine verwaltete Vorlage mit einem generischen Typparameter für die Vorlage kann nicht instanziiert werden. Dies ist, da es sich bei generische Typen zur Laufzeit aufgelöst werden. Weitere Informationen finden Sie unter [Generika und Vorlagen (Visual C++)](../windows/generics-and-templates-visual-cpp.md).
+Es ist möglich, das Instanziieren eines generischen Typs mit einem verwalteten Typ Template-Parameter, aber eine verwaltete Vorlage mit einem generischen Typparameter für die Vorlage kann nicht instanziiert werden. Dies ist, da es sich bei generische Typen zur Laufzeit aufgelöst werden. Weitere Informationen finden Sie unter [Generika und Vorlagen (C++ / CLI)](../windows/generics-and-templates-visual-cpp.md).
 
 ```cpp
 // managed_templates.cpp
@@ -142,4 +132,4 @@ class A <int> {};
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET und UWP](../windows/component-extensions-for-runtime-platforms.md)

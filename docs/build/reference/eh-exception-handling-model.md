@@ -1,16 +1,10 @@
 ---
-title: -EH (Ausnahmebehandlungsmodell) | Microsoft-Dokumentation
-ms.custom: ''
+title: /EH (Ausnahmebehandlungsmodell)
 ms.date: 08/14/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.ExceptionHandling
 - /eh
 - VC.Project.VCCLCompilerTool.ExceptionHandling
-dev_langs:
-- C++
 helpviewer_keywords:
 - exception handling, compiler model
 - cl.exe compiler, exception handling
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e946406a708f26685d6f1b7307476b6253c5362e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f118f55ddaa4a2dbc8a4a3ad1e596ec461a2b078
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713292"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50615058"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (Ausnahmebehandlungsmodell)
 
@@ -120,5 +110,5 @@ Das Attribut für nicht auslösend bedingt jedoch keine Garantie, dass von einer
 [Compileroptionen](../../build/reference/compiler-options.md)<br/>
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
 [Fehler- und Ausnahmebehandlung](../../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Ausnahmespezifikationen (Throw)](../../cpp/exception-specifications-throw-cpp.md)
-[Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)
+[Ausnahmespezifikationen (throw)](../../cpp/exception-specifications-throw-cpp.md)<br/>
+[Strukturierte Ausnahmebehandlung (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)

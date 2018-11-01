@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b6a05604cfa7ce3571d2bb7d5b421d0568ea84a0
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1ebae72e141bb7a84e1a5f7eb99567657a244d69
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690280"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075293"
 ---
 # <a name="creating-a-console-application"></a>Erstellen einer Konsolenanwendung
 
@@ -43,6 +43,6 @@ Die einfachste Möglichkeit zum Erstellen einer Win32-Konsolenanwendung ist die 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Konsolenprojekte](/visualstudio/debugger/debugging-preparation-console-projects)  
-[Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../ide/adding-functionality-with-code-wizards-cpp.md)  
-[Eigenschaftenseiten](../ide/property-pages-visual-cpp.md)  
+[Konsolenprojekte](/visualstudio/debugger/debugging-preparation-console-projects)<br/>
+[Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Eigenschaftenseiten](../ide/property-pages-visual-cpp.md)

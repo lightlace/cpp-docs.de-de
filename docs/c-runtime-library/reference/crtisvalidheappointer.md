@@ -1,10 +1,6 @@
 ---
-title: _CrtIsValidHeapPointer | Microsoft-Dokumentation
-ms.custom: ''
+title: _CrtIsValidHeapPointer
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtIsValidHeapPointer
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtlsValidHeapPointer
 - _CrtIsValidHeapPointer
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtIsValidHeapPointer function
 - CrtIsValidHeapPointer function
 ms.assetid: caf597ce-1b05-4764-9f37-0197a982bec5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1bc4be3f464cb48647985a96550a8b9ea13ce5ef
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cdfb02c622cddc4c86a99f614e469abc527d8845
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396692"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662006"
 ---
 # <a name="crtisvalidheappointer"></a>_CrtIsValidHeapPointer
 
@@ -53,16 +43,16 @@ int _CrtIsValidHeapPointer(
 
 ### <a name="parameters"></a>Parameter
 
-*Benutzerdaten*<br/>
+*userData*<br/>
 Zeiger auf den Anfang eines belegten Speicherblocks.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_CrtIsValidHeapPointer** gibt TRUE zurück, wenn der angegebene Zeiger im Heap, die von allen Instanzen der CRT-Bibliothek freigegeben ist. In CRT-Versionen vor Visual Studio 2010 wird TRUE wiedergegeben, wenn sich der angegebene Zeiger im lokalen Heap befindet. Andernfalls gibt die Funktion FALSE zurück.
+**_CrtIsValidHeapPointer** gibt TRUE zurück, wenn der angegebene Zeiger im Heap, die von allen Instanzen der CRT-Bibliothek gemeinsam verwendet wird. In CRT-Versionen vor Visual Studio 2010 wird TRUE wiedergegeben, wenn sich der angegebene Zeiger im lokalen Heap befindet. Andernfalls gibt die Funktion FALSE zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Wir empfehlen nicht, diese Funktion zu verwenden. Ab der Visual Studio 2010-CRT-Bibliothek nutzen alle CRT-Bibliotheken gemeinsam einen OS-Heap, den *Prozessheap*. Die **_CrtIsValidHeapPointer** -Funktion meldet, ob der Zeiger in einem CRT-Heap, aber nicht zugewiesen wurde, das von CRT-Bibliothek des Aufrufers zugewiesen wurde. Betrachten Sie beispielsweise einen Block, der mit der Visual Studio 2010-Version der CRT-Bibliothek zugeordnet wurde. Wenn die **_CrtIsValidHeapPointer** von der Visual Studio 2012-Version der CRT-Bibliothek exportierte Funktion den Zeiger testet, wird "Wahr" zurückgegeben. Dies ist kein nützlicher Test mehr. In Versionen der CRT-Bibliothek vor Visual Studio 2010 wird die Funktion verwendet, um sicherzustellen, dass sich eine bestimmte Speicheradresse im lokalen Heap befindet. Der lokale Heap verweist auf den Heap, der von einer bestimmten Instanz der C-Laufzeitbibliothek erstellt und verwaltet wird. Wenn eine Dynamic Link Library (DLL) einen statischen Link zur Laufzeitbibliothek enthält, hat sie ihre eigene Instanz des Laufzeitheaps und daher ihren eigenen Heap, unabhängig vom lokalen Heap der Anwendung. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von **_CrtIsValidHeapPointer** während der vorverarbeitung entfernt.
+Wir empfehlen nicht, diese Funktion zu verwenden. Ab der Visual Studio 2010-CRT-Bibliothek nutzen alle CRT-Bibliotheken gemeinsam einen OS-Heap, den *Prozessheap*. Die **_CrtIsValidHeapPointer** -Funktion meldet, ob der Zeiger in einem CRT-Heap, aber nicht zugewiesen wurde, die von der CRT-Bibliothek des Aufrufers zugeordnet wurde. Betrachten Sie beispielsweise einen Block, der mit der Visual Studio 2010-Version der CRT-Bibliothek zugeordnet wurde. Wenn die **_CrtIsValidHeapPointer** von der Visual Studio 2012-Version der CRT-Bibliothek exportierte Funktion den Zeiger testet, wird TRUE zurückgegeben. Dies ist kein nützlicher Test mehr. In Versionen der CRT-Bibliothek vor Visual Studio 2010 wird die Funktion verwendet, um sicherzustellen, dass sich eine bestimmte Speicheradresse im lokalen Heap befindet. Der lokale Heap verweist auf den Heap, der von einer bestimmten Instanz der C-Laufzeitbibliothek erstellt und verwaltet wird. Wenn eine Dynamic Link Library (DLL) einen statischen Link zur Laufzeitbibliothek enthält, hat sie ihre eigene Instanz des Laufzeitheaps und daher ihren eigenen Heap, unabhängig vom lokalen Heap der Anwendung. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von **_CrtIsValidHeapPointer** werden während der vorverarbeitung entfernt.
 
 Da diese Funktion TRUE oder FALSE zurückgibt, kann sie an eine der [_ASSERT](assert-asserte-assert-expr-macros.md)-Makros übergeben werden, um einen einfachen Debug-Fehlerbehandlungsmechanismus zu erstellen. Im folgenden Beispiel wird ein Assertionsfehler ausgelöst, wenn sich die angegebene Adresse nicht im lokalen Heap befindet:
 
@@ -74,7 +64,7 @@ Weitere Informationen dazu, wie **_CrtIsValidHeapPointer** kann mit anderen Debu
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_CrtIsValidHeapPointer**|\<crtdbg.h>|
 

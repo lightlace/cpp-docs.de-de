@@ -1,30 +1,20 @@
 ---
-title: Boxing (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Boxing (C++ / CLI und C++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - boxing, C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 92dc2032031fd0f3032db57b9eca8c723367da9e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2308265b223304f30c8715d12d14e89bcb7344de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316717"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50475426"
 ---
-# <a name="boxing--c-component-extensions"></a>Boxing (Komponentenerweiterungen für C++)
+# <a name="boxing--ccli-and-ccx"></a>Boxing (C++ / CLI und C++ / CX)
 
-Visual C++-Compiler kann Werttypen konvertieren, auf Objekte in ein so genanntes *Boxing*, und Konvertieren von Objekten in Werttypen in einem Vorgang namens *unboxing*.
+Die Konvertierung von Werttypen in Objekte heißt *Boxing*, und die Konvertierung von Objekten in Werttypen heißt *unboxing*.
 
 ## <a name="all-runtimes"></a>Alle Laufzeiten
 
@@ -51,7 +41,7 @@ Im folgenden Beispiel wird ein `DateTime`-Wert mittels Boxing und Unboxing konve
 Um das Beispiel zu testen, erstellen eine `BlankApplication` Projekt, ersetzen Sie die `BlankPage::OnNavigatedTo()` -Methode, und geben Sie dann Haltepunkte auf der schließenden geschweiften Klammer und die Zuweisung zur Variable `str1`. Überprüfen Sie im Beispiel wird die schließende Klammer erreicht, `str1`.
 
 ```cpp
-void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)  
+void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 {
     using namespace Windows::Globalization::DateTimeFormatting;
 
@@ -86,7 +76,7 @@ Weitere Informationen finden Sie unter [Boxing (C++ / CX)](https://msdn.microsof
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-Visual C++-Compiler konvertiert nun Boxing-Werttypen in  <xref:System.Object>. Dies ist möglich durch eine compiler-definierte Konvertierung zur Konvertierung von Werttypen in <xref:System.Object>.
+Die Compiler-Felder von Werttypen zu <xref:System.Object>. Dies ist möglich durch eine compiler-definierte Konvertierung zur Konvertierung von Werttypen in <xref:System.Object>.
 
 Mit Boxing und Unboxing können Werttypen wie Objekte behandelt werden. Werttypen, einschließlich Strukturtypen und integrierten Typen wie int, können in und aus dem Typ <xref:System.Object> konvertiert werden.
 
@@ -174,7 +164,7 @@ int main() {
                 // Will call void func1(System::Object^);
 
    func2(v2);   // OK: Calls "static V2::operator System::Object^(V2 v2)"
-   func2((V2^)v2);   // Using explicit boxing: calls func2(System::ValueType^)  
+   func2((V2^)v2);   // Using explicit boxing: calls func2(System::ValueType^)
 }
 ```
 
@@ -195,9 +185,9 @@ in func1(V2^)
 
 in func2(System::ValueType^)
 
-in func2(System::ValueType^)  
+in func2(System::ValueType^)
 ```
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET und UWP](../windows/component-extensions-for-runtime-platforms.md)

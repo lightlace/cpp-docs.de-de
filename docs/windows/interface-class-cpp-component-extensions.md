@@ -1,7 +1,7 @@
 ---
-title: Schnittstellenklasse (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
+title: Schnittstellenklasse (C++ / CLI und C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 775fbe39edc9478b1fce3afb39ee2bf1f6d5ed36
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ecc99a5c97f96290932a7d758a959501532c07be
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714310"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328323"
 ---
-# <a name="interface-class--c-component-extensions"></a>interface class (Komponentenerweiterungen für C++)
+# <a name="interface-class--ccli-and-ccx"></a>Schnittstellenklasse (C++ / CLI und C++ / CX)
 
 Deklariert eine Schnittstelle.  Weitere Informationen zu systemeigenen Schnittstellen, finden Sie unter [__interface](../cpp/interface.md).
 
@@ -36,21 +36,21 @@ Deklariert eine Schnittstelle.  Weitere Informationen zu systemeigenen Schnittst
 ```cpp
 interface_access
 interface class
- name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};
+name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*interface_access*  
+*interface_access*<br/>
 Der Zugriff auf eine Schnittstelle außerhalb der Assembly.  Mögliche Werte sind **öffentliche** und **private**.  **private** ist die Standardeinstellung. Sind keine verschachtelte Schnittstellen ein *Interface_access* Spezifizierer.
 
-*name*  
+*name*<br/>
 Der Name der Schnittstelle.
 
-*inherit_access*  
+*inherit_access*<br/>
 Der Zugriff auf *Base_interface*.  Die einzige Eingabehilfen für zulässig ist eine Basisschnittstelle **öffentliche** (Standard).
 
-*base_interface*  
+*base_interface*<br/>
 (Optional) Eine Basisschnittstelle für die Schnittstelle *Namen*.
 
 ### <a name="remarks"></a>Hinweise
@@ -67,7 +67,7 @@ Weitere Informationen finden Sie unter:
 
 - [Statischen Schnittstellenkonstruktors](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)
 
-- [Generische Schnittstellen (Visual C++)](../windows/generic-interfaces-visual-cpp.md)
+- [Generische Schnittstellen (C++ / CLI)](../windows/generic-interfaces-visual-cpp.md)
 
 Weitere Informationen zu anderen CLR-Typen finden Sie unter [Klassen und Strukturen](../windows/classes-and-structs-cpp-component-extensions.md).
 
@@ -230,4 +230,4 @@ ref struct R : I, J {
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET- und UWP](../windows/component-extensions-for-runtime-platforms.md)

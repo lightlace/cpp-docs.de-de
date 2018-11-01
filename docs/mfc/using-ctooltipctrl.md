@@ -1,5 +1,5 @@
 ---
-title: Verwenden von CToolTipCtrl | Microsoft Docs
+title: Verwenden von CToolTipCtrl | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b08f2dfcff0c4df17def326e3a047507bb2a3c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 85a32ab9dd944a412dd5dc3a01295047d5ae6ceb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385625"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430409"
 ---
 # <a name="using-ctooltipctrl"></a>Verwenden von CToolTipCtrl
-Die [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) -Klasse kapselt die Funktionalität eines ein QuickInfo-Steuerelement, ein kleines Popupfenster, in dem eine einzelne Textzeile, beschreibt den Zweck eines Tools in einer Anwendung angezeigt. Eine QuickInfo wird in den meisten Fällen, erscheint nur, wenn der Benutzer fügt den Cursor auf einem Tool und bleibt es zumeist Zweitens ausgeblendet. Die QuickInfo wird angezeigt, in der Nähe des Cursors und verschwindet, wenn der Benutzer eine Maustaste klickt oder den Cursor aus dem Tool verschiebt.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
-  
--   [Methoden zum Erstellen von QuickInfos](../mfc/methods-of-creating-tool-tips.md)  
-  
--   [Einstellungen für das QuickInfo-Steuerelement](../mfc/settings-for-the-tool-tip-control.md)  
-  
--   [Verwenden von CToolTipCtrl zum Erstellen und Bearbeiten eines CToolTipCtrl-Objekts](../mfc/using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object.md)  
-  
--   [Bearbeiten des QuickInfo-Steuerelements](../mfc/manipulating-the-tool-tip-control.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+
+Die [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) Klasse kapselt die Funktionalität ein QuickInfo-Steuerelement, ein kleines Popupfenster, in dem eine einzelne Textzeile, beschreibt den Zweck eines Tools in einer Anwendung angezeigt. Eine QuickInfo wird ausgeblendet, in den meisten Fällen, angezeigt werden, nur, wenn der Benutzer platziert den Cursor auf einem Tool und bewirkt, dass sie es für ca. eine halbe Sekunde. Die QuickInfo wird angezeigt, in der Nähe des Cursors und verschwindet, wenn der Benutzer eine Maustaste klickt oder den Cursor auf das Tool verschiebt.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
+
+- [Methoden zum Erstellen von QuickInfos](../mfc/methods-of-creating-tool-tips.md)
+
+- [Einstellungen für das QuickInfo-Steuerelement](../mfc/settings-for-the-tool-tip-control.md)
+
+- [Verwenden von CToolTipCtrl zum Erstellen und Bearbeiten eines CToolTipCtrl-Objekts](../mfc/using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object.md)
+
+- [Bearbeiten des QuickInfo-Steuerelements](../mfc/manipulating-the-tool-tip-control.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Verwenden von CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
+[Steuerelemente](../mfc/controls-mfc.md)
 

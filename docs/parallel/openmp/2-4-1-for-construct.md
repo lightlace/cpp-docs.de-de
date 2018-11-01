@@ -1,23 +1,13 @@
 ---
-title: 2.4.1 for-Konstrukt | Microsoft-Dokumentation
-ms.custom: ''
+title: 2.4.1 for-Konstrukt
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 27d2cbce-786b-4819-91d3-d55b2cc57a5e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ac142c628f3c2bef0bc29a2ffd50df8a9efda400
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: adf2d5d0580f3b65f90ab68ca21885be12abf678
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216536"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496511"
 ---
 # <a name="241-for-construct"></a>2.4.1 for-Konstrukt
 
@@ -115,28 +105,28 @@ Ist eine implizite Barriere am Ende einer **für** erstellen, es sei denn, eine 
 
 Einschränkungen für die **für** Richtlinie lauten wie folgt:
 
--   Die **für** Schleife muss einem strukturierten Block sein, und darüber hinaus die Ausführung nicht durch abgeschlossen sein muss eine **Break** Anweisung.
+- Die **für** Schleife muss einem strukturierten Block sein, und darüber hinaus die Ausführung nicht durch abgeschlossen sein muss eine **Break** Anweisung.
 
--   Die Werte der Schleife steuern Ausdrücke die **für** Schleife zugeordneten eine **für** Richtlinie muss für alle Threads im Team, das identisch sein.
+- Die Werte der Schleife steuern Ausdrücke die **für** Schleife zugeordneten eine **für** Richtlinie muss für alle Threads im Team, das identisch sein.
 
--   Die **für** Schleife-Iterationsvariable muss einen Ganzzahltyp mit Vorzeichen aufweisen.
+- Die **für** Schleife-Iterationsvariable muss einen Ganzzahltyp mit Vorzeichen aufweisen.
 
--   Nur eine einzige **Zeitplan** Klausel darf sich auf eine **für** Richtlinie.
+- Nur eine einzige **Zeitplan** Klausel darf sich auf eine **für** Richtlinie.
 
--   Nur eine einzige **sortiert** Klausel darf sich auf eine **für** Richtlinie.
+- Nur eine einzige **sortiert** Klausel darf sich auf eine **für** Richtlinie.
 
--   Nur eine einzige **Nowait** Klausel darf sich auf eine **für** Richtlinie.
+- Nur eine einzige **Nowait** Klausel darf sich auf eine **für** Richtlinie.
 
--   Es ist nicht angegeben, If oder wie oft jede Seite in Auswirkungen nach sich ziehen die *Chunk_size*, *lb*, *b*, oder *Incr* Ausdrücke treten.
+- Es ist nicht angegeben, If oder wie oft jede Seite in Auswirkungen nach sich ziehen die *Chunk_size*, *lb*, *b*, oder *Incr* Ausdrücke treten.
 
--   Der Wert des der *Chunk_size* Ausdruck muss für alle Threads im Team, das identisch sein.
+- Der Wert des der *Chunk_size* Ausdruck muss für alle Threads im Team, das identisch sein.
 
 ## <a name="cross-references"></a>Datenbankübergreifende Verweise:
 
--   **private**, **Firstprivate**, **Lastprivate**, und **Verringerung** Klauseln finden Sie unter [Abschnitt 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) auf Seite 25.
+- **private**, **Firstprivate**, **Lastprivate**, und **Verringerung** Klauseln finden Sie unter [Abschnitt 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) auf Seite 25.
 
--   **OMP_SCHEDULE** Umgebung Variablen, finden Sie unter [Abschnitt 4.1](../../parallel/openmp/4-1-omp-schedule.md) auf 48.
+- **OMP_SCHEDULE** Umgebung Variablen, finden Sie unter [Abschnitt 4.1](../../parallel/openmp/4-1-omp-schedule.md) auf 48.
 
--   **geordnete** erstellen, finden Sie unter [Abschnitt 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) auf Seite 22.
+- **geordnete** erstellen, finden Sie unter [Abschnitt 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) auf Seite 22.
 
--   [Anhang D](../../parallel/openmp/d-using-the-schedule-clause.md), Seite 93, erhalten Sie weitere Informationen zum Verwenden der Schedule-Klausel.
+- [Anhang D](../../parallel/openmp/d-using-the-schedule-clause.md), Seite 93, erhalten Sie weitere Informationen zum Verwenden der Schedule-Klausel.

@@ -1,29 +1,18 @@
 ---
-title: Verschieben oder Kopieren eines Eintrags in einer Zugriffstastentabelle in eine andere Ressourcenskriptdatei (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Verschieben oder Kopieren eines Eintrags in einer Zugriffstastentabelle in eine andere Ressourcenskriptdatei (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - accelerator tables [C++], copying entries
 - rc files [C++], moving an accelerator table entry
 - .rc files [C++], moving accelerator table entries
 - accelerator tables [C++], moving entries
 ms.assetid: 7b4dc149-c972-4ab2-8477-76c52b6feb5b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: fcdb47348ff5e3c9e75df64608d246fc2e911ca7
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 75e6e6819ff1f014624378a8cc2e7710d7f5dc6c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315209"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481860"
 ---
 # <a name="moving-or-copying-an-accelerator-table-entry-to-another-resource-script-file-c"></a>Verschieben oder Kopieren eines Eintrags in einer Zugriffstastentabelle in eine andere Ressourcenskriptdatei (C++)
 
@@ -51,5 +40,5 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Bearbeiten von Zugriffstastentabellen](../windows/editing-accelerator-tables.md)  
+[Bearbeiten von Zugriffstastentabellen](../windows/editing-accelerator-tables.md)<br/>
 [Zugriffstasten-Editor](../windows/accelerator-editor.md)

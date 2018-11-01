@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 359c9d3f72ffa87abf49c6e3ca90743ad0fc80a3
-ms.sourcegitcommit: 9be4b66efa45dc132cef06eb3b258c2252ea23a9
+ms.openlocfilehash: e2ca0f4aa5f3965adc97e4cdaef09e01646e8809
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42583894"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062118"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Melden eines Problems mit dem Visual C++-Toolset oder der -Dokumentation
 
@@ -370,20 +370,18 @@ Wenn Sie ein Problem melden möchten, suchen Sie zunächst in der Developer Comm
 
 ### <a name="use-the-visual-studio-developer-community-pages"></a>Verwenden Sie die Seiten der Visual Studio Developer Community
 
-Die Seiten der Visual Studio Developer Community bietet eine weitere einfache Möglichkeit zum Melden von Problemen und zum Finden von Lösungen für Visual Studio, den C++-Compiler, für Tools und für Bibliotheken. Auf der Seite [Visual Studio Questions (Fragen zu Visual Studio)](https://developercommunity.visualstudio.com/spaces/8/index.html) können Sie Probleme mit der IDE oder der Installation melden. Verwenden Sie bei Problemen mit dem C++-Compiler, dem Linker und anderen Tools und Bibliotheken die Seite [C++ Questions (C++-Fragen)](https://developercommunity.visualstudio.com/spaces/62/index.html).
+Die Seiten der Visual Studio Developer Community bietet eine weitere einfache Möglichkeit zum Melden von Problemen und zum Finden von Lösungen für Visual Studio und den C++-Compiler, für Tools und für Bibliotheken. Es gibt spezifische Developer Community-Seiten für [Visual Studio](https://developercommunity.visualstudio.com/spaces/8/index.html), [Visual Studio für Mac](https://developercommunity.visualstudio.com/spaces/41/index.html), [.NET](https://developercommunity.visualstudio.com/spaces/61/index.html), [C++](https://developercommunity.visualstudio.com/spaces/62/index.html), [ Azure DevOps](https://developercommunity.visualstudio.com/spaces/21/index.html) und [TFS](https://developercommunity.visualstudio.com/spaces/22/index.html). Unter diesen Registerkarte finden Sie oben auf jeder Seite ein Suchfeld, über das Sie Beiträge oder Themen finden können, die Ihrem Problem ähneln. Möglicherweise sind eine Lösung oder andere nützliche Informationen bezüglich Ihres Problem bereits vorhanden. Wenn jemand zuvor das gleiche Problem gemeldet hat, stimmen Sie für dieses Thema ab, kommentieren Sie es, und erstellen Sie keinen neuen Problembericht. Sie werden möglicherweise dazu aufgefordert, sich bei Ihrem Visual Studio-Konto anzumelden und der Developer Community-App Zugriff auf Ihr Profil zu gewähren, wenn Sie kommentieren, abstimmen oder ein neues Problem melden möchten.
 
-Im Developer Community-Banner oben auf jeder Seite finden Sie ein Suchfeld, über das Sie Beiträge oder Themen finden können, die Ihrem Problem ähneln. Möglicherweise sind eine Lösung oder andere nützliche Informationen bezüglich Ihres Problem bereits in einem anderen Thema vorhanden. Wenn jemand zuvor das gleiche Problem gemeldet hat, stimmen Sie für dieses Thema ab, kommentieren Sie es, und erstellen Sie keinen neuen Problembericht.
-
-Wenn Ihr Problem noch nicht aufgekommen ist, klicken Sie auf die Schaltfläche **Report problem** (Problem melden) neben dem Suchfeld auf der Developer Community-Seite. Sie werden möglicherweise dazu aufgefordert, sich bei Ihrem Visual Studio-Konto anzumelden und der Developer Community-App Zugriff auf Ihr Profil zu gewähren. Wenn Sie sich angemeldet haben, werden Sie direkt zu einer Seite weitergeleitet, auf der Sie Ihr Problem melden können. Sie können Ihren Reproduktionscode und die Befehlszeile sowie Screenshots, Links zu ähnlichen Diskussionen oder andere Informationen hinzufügen, die relevant und nützlich für dieses Thema sind.
+Verwenden Sie bei Problemen mit dem C++-Compiler, dem Linker und anderen Tools und Bibliotheken die [C++](https://developercommunity.visualstudio.com/spaces/62/index.html)-Seite. Wenn Sie nach Ihrem Problem suchen und es noch nicht gemeldet wurde, wählen Sie die Schaltfläche **Problem melden** neben dem Suchfeld oben auf der Seite aus. Sie können Ihren Reproduktionscode und die Befehlszeile sowie Screenshots, Links zu ähnlichen Diskussionen oder andere Informationen hinzufügen, die relevant und nützlich für dieses Thema sind.
 
 > [!TIP]
-> Für andere Arten von Problemen, die ggf. in Visual Studio auftreten und nicht in Beziehung zum Toolset stehen (z.B. Probleme mit der Benutzeroberfläche, gestörte IDE-Funktionen oder allgemeine Abstürze), kann das **Tool „Problem melden“** aufgrund seiner Funktionen für Screenshots und zum Aufzeichnen von Aktionen auf der Benutzeroberfläche, die zum aufgetretenen Problem geführt haben, eine gute Wahl sein. Diese Probleme können Sie auch in der [Developer Community](https://developercommunity.visualstudio.com/) melden.
+> Für andere Arten von Problemen, die möglicherweise in Visual Studio auftreten, die jedoch nicht mit dem C++-Toolset zusammenhängen (z.B. Benutzeroberflächenprobleme, defekte IDE-Funktionalität oder allgemeine Abstürze), verwenden Sie das Tool **Problem melden** in der IDE. Dies ist die beste Wahl, da es über Screenshotfunktionen verfügt und Benutzeroberflächenaktionen aufzeichnen kann, die zu dem aufgetretenen Problem geführt haben. Diese Art von Problemen kann auch auf der [Developer Community](https://developercommunity.visualstudio.com/)-Website nachgeschlagen werden. Weitere Informationen finden Sie unter [Melden eines Problems mit Visual Studio](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017).
 
 ### <a name="reports-and-privacy"></a>Berichte und Datenschutz
 
 Standardmäßig sind **alle Informationen in Berichten sowie alle Kommentare und Antworten öffentlich sichtbar**. Dies ist in der Regel ein Vorteil, da die gesamte Community Einblicke in die Probleme, Lösungen und Problemumgehungen anderer Benutzer hat. Wenn Sie Ihre Daten oder Ihre Identität jedoch aus Gründen des Datenschutzes oder des geistigen Eigentums nicht veröffentlichen möchten, gibt es Optionen, die Sie nutzen können.
 
-Wenn Sie Ihre Identität nicht offenlegen möchten, [erstellen Sie ein neues Microsoft-Konto](https://signup.live.com/), das keine personenbezogenen Informationen enthält. Verwenden Sie dieses Konto, um Ihren Bericht zu erstellen. 
+Wenn Sie Ihre Identität nicht offenlegen möchten, [erstellen Sie ein neues Microsoft-Konto](https://signup.live.com/), das keine personenbezogenen Informationen enthält. Verwenden Sie dieses Konto, um Ihren Bericht zu erstellen.
 
 **Fügen Sie keine Informationen, die privat bleiben sollen, in den Titel oder den Inhalt des ursprünglichen Berichts ein, denn dieser ist öffentlich.** Stattdessen sollten Sie Details privat in einem separaten Kommentar versenden. Wenn Sie sicherstellen möchten, dass für Ihren Bericht die richtige Zielgruppe festgelegt ist, sollten Sie **cppcompiler** in die Themenliste des Problemberichts einfügen. Sobald der Problembericht erstellt ist, können Sie festlegen, wer Ihre Antworten und Anlagen anzeigen kann.
 

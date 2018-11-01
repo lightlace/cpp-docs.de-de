@@ -1,8 +1,6 @@
 ---
-title: '&lt;list&gt;-Operatoren | Microsoft-Dokumentation'
-ms.custom: ''
+title: '&lt;list&gt;-Operatoren'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - list/std::operator!=
 - list/std::operator&gt;
@@ -10,8 +8,6 @@ f1_keywords:
 - list/std::operator&lt;
 - list/std::operator&lt;=
 - list/std::operator==
-dev_langs:
-- C++
 ms.assetid: 8103d8f2-c30f-49ad-ac50-b3ba6a907ebe
 helpviewer_keywords:
 - std::operator!= (list)
@@ -20,18 +16,18 @@ helpviewer_keywords:
 - std::operator&lt; (list)
 - std::operator&lt;= (list)
 - std::operator== (list)
-ms.openlocfilehash: e61fe4895026881d4d4db63b9617018fbe12d889
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 919c24217866a57d0401c8cd6fea8f5cef02906b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317211"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537540"
 ---
 # <a name="ltlistgt-operators"></a>&lt;list&gt;-Operatoren
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
+|[Operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
 
 ## <a name="op_neq"></a> operator!=

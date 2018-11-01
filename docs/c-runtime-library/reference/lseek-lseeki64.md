@@ -1,10 +1,6 @@
 ---
-title: _lseek, _lseeki64 | Microsoft-Dokumentation
-ms.custom: ''
+title: _lseek, _lseeki64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lseeki64
 - _lseek
@@ -25,8 +21,6 @@ f1_keywords:
 - _lseeki64
 - _lseek
 - lseeki64
-dev_langs:
-- C++
 helpviewer_keywords:
 - lseek function
 - _lseek function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eb47214ac2de3c3e217bf41387ba206b94caf906
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 19a312bcc3cdeea82bcebce6da95e26ef88992b0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403377"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541686"
 ---
 # <a name="lseek-lseeki64"></a>_lseek, _lseeki64
 
@@ -78,13 +68,13 @@ Ursprüngliche Position.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_lseek** gibt den Offset in Bytes, der die neue Position vom Anfang der Datei. **_lseeki64** gibt den Offset in eine 64-Bit-Ganzzahl. Die Funktion gibt – 1 L zur Anzeige ein Fehlers an. Wenn ein ungültiger Parameter übergeben wird, z.B. ein fehlerhafter Dateideskriptor, oder der Wert für *origin* oder die von *offset* festgelegte Position vor dem Anfang der Datei ungültig ist, wird der Handler für ungültige Parameter aufgerufen, so wie unter [Parameter Validation (Parametervalidierung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** auf **EBADF** und -1 L zurückgeben. Auf Geräten, die über keine Suchfunktion verfügen (z.B. Terminals oder Drucker), ist der Rückgabewert undefiniert.
+**_lseek** gibt den Offset in Bytes, der die neue Position vom Anfang der Datei zurück. **_lseeki64** gibt den Offset in eine 64-Bit-Ganzzahl. Die Funktion gibt – 1 L, um einen Fehler anzugeben. Wenn ein ungültiger Parameter übergeben wird, z.B. ein fehlerhafter Dateideskriptor, oder der Wert für *origin* oder die von *offset* festgelegte Position vor dem Anfang der Datei ungültig ist, wird der Handler für ungültige Parameter aufgerufen, so wie unter [Parameter Validation (Parametervalidierung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EBADF** und -1 L zurück. Auf Geräten, die über keine Suchfunktion verfügen (z.B. Terminals oder Drucker), ist der Rückgabewert undefiniert.
 
 Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_lseek** -Funktion verschiebt den zugeordneten Dateizeiger *fd* an einem neuen Speicherort, der *Offset* Bytes vom *Ursprung*. Der nächste Vorgang für die Datei tritt am neuen Speicherort auf. Das Argument *origin* muss Teil der folgenden Konstante sein, die allesamt in „Stdio.h“ definiert sind.
+Die **_lseek** -Funktion verschiebt den Dateizeiger, der mit *fd* an einem neuen Speicherort, der *Offset* Bytes vom *Ursprung*. Der nächste Vorgang für die Datei tritt am neuen Speicherort auf. Das Argument *origin* muss Teil der folgenden Konstante sein, die allesamt in „Stdio.h“ definiert sind.
 
 |*Ursprung* Wert||
 |-|-|
@@ -92,11 +82,11 @@ Die **_lseek** -Funktion verschiebt den zugeordneten Dateizeiger *fd* an einem n
 **SEEK_CUR**|Aktuelle Position des Dateizeigers
 **SEEK_END**|Ende der Datei
 
-Sie können **_lseek** den Zeiger an einer beliebigen Stelle in einer Datei oder hinter dem Ende der Datei positioniert.
+Sie können **_lseek** um den Zeiger an einer beliebigen Stelle in einer Datei oder hinter dem Ende der Datei neu zu positionieren.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_lseek**|\<io.h>|
 |**_lseeki64**|\<io.h>|
@@ -169,7 +159,7 @@ Line four.
 Line five.
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 Position for beginning of file seek = 0

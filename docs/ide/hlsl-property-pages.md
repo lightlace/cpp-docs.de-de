@@ -14,31 +14,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86bbd23f1c9fcfcc0a19d7a2c1b66f3500d84361
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 81d101df6c533d7111a8735809bd56535ad98e17
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33323130"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427224"
 ---
 # <a name="hlsl-property-pages"></a>Eigenschaftenseiten "HLSL"
-Sie können den HLSL-Compiler-Eigenschaftenseiten („fxc.exe“) verwenden, um zu konfigurieren, wie die einzelnen HLSL-Shaderdateien erstellt werden. Die Eigenschaften werden in drei Kategorien unterteilt:  
-  
--   [Eigenschaftenseiten "HLSL": Allgemein](../ide/hlsl-property-pages-general.md)  
-  
-     Stellt Eigenschaften zum Angeben der am häufigsten verwendeten Optionen für den HLSL-Compiler bereit.  
-  
--   [Eigenschaftenseiten "HLSL": Erweitert](../ide/hlsl-property-pages-advanced.md)  
-  
-     Stellt Eigenschaften zum Angeben von zusätzlichen Optionen für den HLSL-Compiler bereit.  
-  
--   [Eigenschaftenseiten "HLSL": Ausgabedateien](../ide/hlsl-property-pages-output-files.md)  
-  
-     Stellt Eigenschaften bereit, mit denen Sie Angeben können, wie Dateien vom HLSL-Compiler ausgegeben werden.  
-  
- Sie können Befehlszeilenargumente für den HLSL-Compiler angeben, indem Sie die Eigenschaft **Zusätzliche Optionen** der **Befehlszeilen**-Eigenschaftenseite verwenden. Dazu zählen Argumente, die nicht mithilfe anderer Eigenschaften der HLSL-Eigenschaftenseiten konfiguriert werden können. Informationen über den HLSL-Compiler finden Sie unter [Effect-Compiler Tool](http://go.microsoft.com/fwlink/p/?LinkID=258285&clcid=0x409).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Eigenschaftenseiten](../ide/property-pages-visual-cpp.md)   
- [Befehlszeileneigenschaftenseiten](../ide/command-line-property-pages.md)   
- [Compiling Shaders (Kompilieren von Shaders)](http://go.microsoft.com/fwlink/p/?LinkID=258284&clcid=0x409)
+
+Sie können den HLSL-Compiler-Eigenschaftenseiten („fxc.exe“) verwenden, um zu konfigurieren, wie die einzelnen HLSL-Shaderdateien erstellt werden. Die Eigenschaften werden in drei Kategorien unterteilt:
+
+- [Eigenschaftenseiten "HLSL": Allgemein](../ide/hlsl-property-pages-general.md)
+
+   Stellt Eigenschaften zum Angeben der am häufigsten verwendeten Optionen für den HLSL-Compiler bereit.
+
+- [Eigenschaftenseiten "HLSL": Erweitert](../ide/hlsl-property-pages-advanced.md)
+
+   Stellt Eigenschaften zum Angeben von zusätzlichen Optionen für den HLSL-Compiler bereit.
+
+- [Eigenschaftenseiten "HLSL": Ausgabedateien](../ide/hlsl-property-pages-output-files.md)
+
+   Stellt Eigenschaften bereit, mit denen Sie Angeben können, wie Dateien vom HLSL-Compiler ausgegeben werden.
+
+Sie können Befehlszeilenargumente für den HLSL-Compiler angeben, indem Sie die Eigenschaft **Zusätzliche Optionen** der **Befehlszeilen**-Eigenschaftenseite verwenden. Dazu zählen Argumente, die nicht mithilfe anderer Eigenschaften der HLSL-Eigenschaftenseiten konfiguriert werden können. Informationen über den HLSL-Compiler finden Sie unter [Effect-Compiler Tool](http://go.microsoft.com/fwlink/p/?LinkID=258285&clcid=0x409).
+
+## <a name="see-also"></a>Siehe auch
+
+[Eigenschaftenseiten](../ide/property-pages-visual-cpp.md)<br>
+[Eigenschaftenseiten "Befehlszeile"](../ide/command-line-property-pages.md)<br>
+[Compiling Shaders (Kompilieren von Shaders)](http://go.microsoft.com/fwlink/p/?LinkID=258284&clcid=0x409)

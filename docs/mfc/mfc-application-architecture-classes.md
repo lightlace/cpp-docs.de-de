@@ -1,5 +1,5 @@
 ---
-title: MFC-Anwendungsarchitekturklassen | Microsoft Docs
+title: MFC-Anwendungsarchitekturklassen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,34 +19,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1174a994f345f4b7733e82603b5a49ed8977651
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 32a842d69e227633f8fbd2291a47296d384a75c6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351429"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438625"
 ---
 # <a name="mfc-application-architecture-classes"></a>Klassen der MFC-Anwendungsarchitektur
-Klassen in dieser Kategorie beitragen, die Architektur der Framework-Anwendung. Sie geben die Funktionen, die meisten Anwendungen. Füllen Sie das Framework anwendungsspezifische Funktionen hinzufügen. In der Regel führen Sie dies durch den Architektur-Klassen neue Klassen ableiten und dann neue Elemente hinzufügen oder vorhandene Memberfunktionen überschreiben.  
-  
- [Anwendungsassistenten](../mfc/reference/mfc-application-wizard.md) generieren Sie mehrere Typen von Anwendungen, von denen alle Anwendungsframeworks auf unterschiedliche Weise verwenden. Stellen SDI (Einzeldokumentoberfläche) und MDI (MDI)-Anwendungen optimal nutzen eines Teils des Frameworks Dokument-/Ansichtarchitektur aufgerufen. Andere Typen von Anwendungen, z. B. auf Dialogfeldern basierende Anwendungen, formularbasierte Anwendungen und DLLs, verwenden Sie nur einige der Funktionen der Dokument-/Ansichtarchitektur-Architektur.  
-  
- Dokument-/ansichtsanwendungen enthalten eine oder mehrere Sätze von Dokumente, Ansichten und Rahmenfenster. Eine Dokumentvorlagenobjekt ordnet die Klassen für jeden Satz von Dokument/Ansicht/Frame.  
-  
- Obwohl Sie keine Dokument-/Ansichtarchitektur in der MFC-Anwendung verwenden, stehen eine Reihe von Vorteilen zu tun. Die MFC-OLE-Container und Server Unterstützung basiert auf Dokument-/Ansichtarchitektur wie ist die Unterstützung für Drucken und Druckvorschau.  
-  
- Alle MFC-Anwendungen verfügen über mindestens zwei Objekte: ein Anwendungsobjekt abgeleitet [CWinApp](../mfc/reference/cwinapp-class.md), und im Hauptfenster-Objekt (häufig indirekt) abgeleitet irgendeine [CWnd](../mfc/reference/cwnd-class.md). (In den meisten Fällen wird im Hauptfenster von abgeleitet [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), oder [CDialog](../mfc/reference/cdialog-class.md), wobei alle abgeleitet sind `CWnd`.)  
-  
- Anwendungen, die Dokument-/Ansichtarchitektur verwenden werden zusätzliche Objekte enthalten. Principal-Objekte sind:  
-  
--   Ein Anwendungsobjekt abgeleitet Klasse [CWinApp](../mfc/reference/cwinapp-class.md), wie bereits zuvor erwähnt.  
-  
--   Eine oder mehrere-Klasse Dokumentobjekte von Klasse abgeleitet [CDocument](../mfc/reference/cdocument-class.md). -Klasse Dokumentobjekte sind verantwortlich für die interne Darstellung der Daten in der Ansicht bearbeitet. Sie können eine Datendatei zugeordnet werden.  
-  
--   Eine oder mehrere Objekte, die von Klasse abgeleitet [CView](../mfc/reference/cview-class.md). Jede Ansicht ist ein Fenster, das an ein Dokument angefügt und einem Rahmenfenster zugeordnet ist. Ansichten anzeigen und bearbeiten die Daten in ein Dokument-Klassenobjekt.  
-  
- Dokument-/ansichtsanwendungen enthalten auch Rahmenfenster (abgeleitet [CFrameWnd](../mfc/reference/cframewnd-class.md)) und Dokumentvorlagen (abgeleitet [CDocTemplate](../mfc/reference/cdoctemplate-class.md)).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../mfc/class-library-overview.md)
+
+Klassen, die in dieser Kategorie unterstützen Sie bei der Architektur einer frameworkanwendung. Sie geben die Funktionen, die in den meisten Anwendungen. Füllen Sie das Framework-Anwendung-spezifische Funktionen hinzufügen. In der Regel tun Sie durch Ableiten von neuen Klassen aus dem Architektur-Klassen, und klicken Sie dann auf neue Elemente hinzufügen oder Überschreiben von vorhandenen Memberfunktionen.
+
+[Anwendungs-Assistenten](../mfc/reference/mfc-application-wizard.md) generiert verschiedene Arten von Anwendungen, die das Framework auf unterschiedliche Weise verwenden. (Einzelnes Dokument-Schnittstelle)-SDI und MDI (mehrerer dokumentoberflächen)-Anwendungen nutzen einen Teil des Frameworks, die Dokument-/Ansichtarchitektur aufgerufen. Andere Arten von Anwendungen, z. B. auf Dialogfeldern basierende Anwendungen, formularbasierte Anwendungen und DLLs, verwenden Sie nur einige der Features der Dokument-/Ansicht-Architektur.
+
+Dokument-/ansichtsanwendungen enthalten eine oder mehrere Dokumente, Ansichten und Rahmenfenster. Eine Dokumentvorlagenobjekt ordnet die Klassen für jeden Satz von Dokument/Ansicht/Frame.
+
+Obwohl Sie nicht in der MFC-Anwendung Dokument-/Ansichtarchitektur verwendet, gibt es eine Reihe von Vorteilen zu tun. Die MFC-OLE-Container und Server Unterstützung basiert auf Dokument-/Ansichtarchitektur wie ist die Unterstützung für das Drucken und Druckvorschau.
+
+Alle MFC-Anwendungen verfügen über mindestens zwei Objekte: ein Anwendungsobjekt abgeleitet [CWinApp](../mfc/reference/cwinapp-class.md), und eine Art von main Window-Objekt (häufig indirekt) abgeleitet [CWnd](../mfc/reference/cwnd-class.md). (In den meisten Fällen wird im Hauptfenster von abgeleitet [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), oder [CDialog](../mfc/reference/cdialog-class.md), die davon abgeleitet sind `CWnd`.)
+
+Anwendungen, die Dokument-/Ansichtarchitektur verwenden werden zusätzliche Objekte enthalten. Die principal-Objekte sind:
+
+- Ein Anwendungsobjekt abgeleitet wird, aus der Klasse [CWinApp](../mfc/reference/cwinapp-class.md), wie bereits erwähnt.
+
+- Ein oder mehrere Objekte der Dokument-Klasse, die von der Klasse abgeleitet [CDocument](../mfc/reference/cdocument-class.md). Dokument-Klassenobjekten sind verantwortlich für die interne Darstellung der Daten in der Ansicht bearbeitet. Sie können eine Datendatei zugeordnet werden.
+
+- Eine oder mehrere Objekte, die von der Klasse abgeleitet [CView](../mfc/reference/cview-class.md). Jede Sicht ist ein Fenster, das an ein Dokument angefügt und ein Rahmenfenster zugeordnet ist. Ansichten anzeigen und bearbeiten die Daten in ein Dokument-Klassenobjekt.
+
+Dokument-/ansichtsanwendungen enthalten auch die Frame-Fensters (abgeleitet [CFrameWnd](../mfc/reference/cframewnd-class.md)) und Dokumentieren von Vorlagen (abgeleitet von [CDocTemplate](../mfc/reference/cdoctemplate-class.md)).
+
+## <a name="see-also"></a>Siehe auch
+
+[Übersicht über die Klasse](../mfc/class-library-overview.md)
 

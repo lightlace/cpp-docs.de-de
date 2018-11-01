@@ -1,12 +1,6 @@
 ---
-title: Internetsicherheit (C++) | Microsoft Docs
-ms.custom: ''
+title: Internetsicherheit (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - code signing [MFC], Internet security
 - sandboxing [MFC]
@@ -19,26 +13,23 @@ helpviewer_keywords:
 - Internet applications [MFC], security
 - Web application security [MFC], Internet security approaches
 ms.assetid: bf0da697-81bc-41f0-83fa-d7f82ed83df8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f4454eceae2cc5f2e6b46510fe95889c664a568a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e7892793a82f2b030a99465a712e33e1b9ef4673
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348849"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486098"
 ---
 # <a name="internet-security-c"></a>Internetsicherheit (C++)
-Code-Sicherheit ist ein ernstes Problem für Entwickler und für Benutzer von Internet-Anwendungen. Es sind Risiken: bösartigem Code, Code, der manipulierten und Code von unbekannten Sites oder Autoren.  
-  
- Es gibt zwei grundlegende Ansätze für die Sicherheit bei der Entwicklung für das Internet. Die erste heißt "Sandkasten". Bei dieser Vorgehensweise wird eine Anwendung auf einen bestimmten Satz von APIs beschränkt und gefährlich sind z. B. Datei-e/a, in denen ein Programm Daten auf dem Computer eines Benutzers zerstören konnte, ausgeschlossen. Die zweite wird mithilfe von digitalen Signaturen implementiert. Dieser Ansatz wird als "Verpackung" für das Internet bezeichnet. Code wird überprüft, und mithilfe von privaten und öffentlichen Schlüsseln signiert. Bevor der Code ausgeführt wird, wird ihrer digitale Signatur überprüft, um sicherzustellen, dass der Code aus einer bekannten authentifizierte Quelle stammt und der Code nicht geändert wurden, seit sie signiert wurde.  
-  
- Im ersten Fall vertrauen Sie, dass die Anwendung wird keine Schaden und Sie den Ursprung der Anwendung vertrauen. Im zweiten Fall sind digitale Signaturen verwendet, damit die Echtheit überprüft wird. Digitale Signatur ist ein dem Branchenstandard verwendet, um zu ermitteln, und geben Sie Details über den Herausgeber des Codes. Die Technologie basiert auf Standards, z. B. RSA und x. 509. Browser zulassen in der Regel Benutzer wählen, ob sie herunterladen und Ausführen von Code Unbekannter Herkunft möchten.  
-  
-  
-## <a name="see-also"></a>Siehe auch  
- [MFC-Internetprogrammierungsaufgaben](../mfc/mfc-internet-programming-tasks.md)   
- [Grundlagen der MFC-Internetprogrammierung](../mfc/mfc-internet-programming-basics.md)
+
+Code-Sicherheit ist ein großes Problem für Entwickler und für Benutzer von Internet-Anwendungen. Risiken bestehen: bösartiger Code, Code, die manipuliert wurden und Code von unbekannten Standorten oder Autoren.
+
+Es gibt zwei grundlegende Ansätze zur Sicherheit bei der Entwicklung für das Internet. Der erste heißt "Sandboxing". Bei diesem Ansatz ist eine Anwendung auf einen bestimmten Satz von APIs beschränkt, und potenziell gefährlich sind z. B. Datei-e/a, in denen ein Programm Daten auf dem Computer eines Benutzers zerstören könnten, ausgeschlossen. Die zweite wird mithilfe von digitalen Signaturen implementiert. Dieser Ansatz ist für das Internet als "Shrinkwrap" bezeichnet. Code wird überprüft und mithilfe von privaten und öffentlichen Schlüsseln signiert. Bevor der Code ausgeführt wird, wird die digitale Signatur überprüft, stellen Sie sicher, dass der Code von einer bekannten, authentifizierten Quelle und der Code nicht geändert wurden, seit es signiert wurde.
+
+Im ersten Fall verlassen Sie sich, dass die Anwendung wird nicht Schaden, und Sie den Ursprung der Anwendung vertrauen. Im zweiten Fall sind digitale Signaturen verwendet, um die Echtheit. Digitale Signatur ist ein Industriestandard zum Identifizieren, und geben Sie Details über den Herausgeber des Codes verwendet. Diese Technologien basieren auf Standards wie RSA und x. 509. Browser können in der Regel Benutzer wählen, wenn sie möchten zum Herunterladen und Ausführen von Code mit Unbekannter Herkunft.
+
+## <a name="see-also"></a>Siehe auch
+
+[MFC-Internetprogrammierungsaufgaben](../mfc/mfc-internet-programming-tasks.md)<br/>
+[Grundlagen der MFC-Internetprogrammierung](../mfc/mfc-internet-programming-basics.md)
 

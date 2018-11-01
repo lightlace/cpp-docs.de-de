@@ -1,10 +1,6 @@
 ---
-title: atol, _atol_l, _wtol, _wtol_l | Microsoft-Dokumentation
-ms.custom: ''
+title: atol, _atol_l, _wtol, _wtol_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - atol
 - _wtol_l
@@ -31,8 +27,6 @@ f1_keywords:
 - _wtol
 - _ttol
 - _wtol_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tstol function
 - atol function
@@ -49,16 +43,12 @@ helpviewer_keywords:
 - wtol function
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: deb23d856fc0ec5aecfdb726256394d5135a18d4
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 486b6dc3bdfbbaf4b7becadde76768a0bb1c7c00
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450705"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537188"
 ---
 # <a name="atol-atoll-wtol-wtoll"></a>atol, _atol_l, _wtol, _wtol_l
 
@@ -93,25 +83,25 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede Funktion gibt die **lange** Wert erzeugt, indem die Eingabezeichen als Zahl interpretiert. Der Rückgabewert ist 0L für **Atol** , wenn die Eingabe in einen Wert dieses Typs konvertiert werden kann.
+Jede Funktion gibt die **lange** Wert erzeugt, indem die Eingabezeichen als Zahl interpretiert. Der Rückgabewert ist 0L für **Atol** , wenn die Eingabe auf einen Wert dieses Typs umgewandelt werden kann.
 
-Bei einem Überlauf mit großen positiven ganzzahligen Werten **Atol** gibt **LONG_MAX**; bei einem Überlauf mit großen negativen ganzzahligen Werten **LONG_MIN** ist zurückgegeben. In allen Fällen außerhalb des gültigen Bereichs **Errno** festgelegt ist, um **ERANGE**. Wenn der übergebene Parameter ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** auf **EINVAL** und geben 0 zurück.
+Im Fall eines Überlaufs mit großen positiven ganzzahligen Werten **Atol** gibt **LONG_MAX**; im Fall eines Überlaufs mit großen negativen ganzzahligen Werten **LONG_MIN** ist zurückgegeben. In allen Fällen außerhalb des gültigen Bereichs **Errno** nastaven NA hodnotu **ERANGE**. Wenn der übergebene Parameter ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EINVAL** und gibt 0 zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktionen konvertieren eine Zeichenfolge in einen long Integer-Wert (**Atol**).
+Diese Funktionen konvertieren eine Zeichenfolge in ein langer ganzzahliger Wert (**Atol**).
 
 Die Eingabezeichenfolge ist eine Sequenz von Zeichen, die als numerischer Wert des angegebenen Typs interpretiert werden. Die Funktion beendet das Lesen der Eingabezeichenfolge am ersten Zeichen, das nicht als Teil einer Zahl erkannt wird. Möglicherweise ist dies das Zeichen NULL ('\0' oder L'\0'), das am Ende der Zeichenfolge steht.
 
-Die *str* Argument **Atol** weist folgende Form:
+Die *str* Argument **Atol** hat folgendes Format:
 
-> [*Leerzeichen*] [*Anmeldung*] [*Ziffern*]]
+> [*Leerzeichen*] [*anmelden*] [*Ziffern*]]
 
-Ein *Leerzeichen* besteht aus Leerzeichen oder Tabulatorzeichen, die ignoriert werden. *Anmeldung* ist entweder Pluszeichen (+) oder Minuszeichen (-) und *Ziffern* sind eine oder mehrere Ziffern.
+Ein *Leerzeichen* besteht aus Leerzeichen oder Tabulatorzeichen, die ignoriert werden; *anmelden* ist entweder Pluszeichen (+) oder Minuszeichen (-) und *Ziffern* sind eine oder mehrere Ziffern.
 
-**_wtol** ist identisch mit **Atol** außer dass es sich um eine Breitzeichen-Zeichenfolge verwendet.
+**_wtol** ist identisch mit **Atol** außer dass es sich um eine Zeichenfolge mit Breitzeichen verwendet.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschemaparameter anstelle des aktuellen Gebietsschemas übergeben. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den Locale-Parameter übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -129,7 +119,7 @@ Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, v
 
 ## <a name="example"></a>Beispiel
 
-Dieses Programm zeigt, wie als Zeichenfolgen gespeicherte Zahlen in numerische Werte mit konvertiert werden können die **Atol** Funktion.
+Dieses Programm zeigt, wie als Zeichenfolgen gespeicherte Zahlen in numerische Werte konvertiert werden können die **Atol** Funktion.
 
 ```C
 // crt_atol.c

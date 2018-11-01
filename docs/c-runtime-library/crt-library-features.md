@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5785d06a09c823140362fa4afc6a8b12954e5ac3
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: 7562f6e5a8915f33b3f2c8bd23ce310e641984c6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42578447"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057041"
 ---
 # <a name="crt-library-features"></a>CRT-Bibliotheksfunktionen
 
@@ -65,7 +65,8 @@ In der folgenden Tabelle sind die Bibliotheken aufgelistet, die die vcruntime-Bi
 |vcruntime.lib|vcruntime\<Version>.dll|DLL-Importbibliothek für die vcruntime.|**/MD**|_MT, _DLL|
 |vcruntimed.lib|vcruntime\<Version>d.dll|DLL-Importbibliothek für die Debug-vcruntime. Nicht neu verteilbar.|**/MDd**|_DEBUG, _MT, _DLL|
 
-Beim UCRT-Refactoring wurden die Concurrency Runtime-Funktionen in „concrt140.dll“ verschoben, was ein Bestandteil von C++ Redistributable Package ist. Diese DLL ist für parallele C++-Container und -Algorithmen wie `concurrency::parallel_for` erforderlich. Darüber hinaus ist diese DLL unter Windows XP für die C++-Standardbibliothek zur Unterstützung von Synchronisierungsprimitiven erforderlich, da Windows XP über keine Bedingungsvariablen verfügt.
+> [!NOTE]
+> Beim UCRT-Refactoring wurden die Concurrency Runtime-Funktionen in die Datei „concrt140.dll“ verschoben, die dem C++ Redistributable Package hinzugefügt wurde. Diese DLL ist für parallele C++-Container und -Algorithmen wie `concurrency::parallel_for` erforderlich. Darüber hinaus ist diese DLL unter Windows XP für die C++-Standardbibliothek zur Unterstützung von Synchronisierungsprimitiven erforderlich, da Windows XP über keine Bedingungsvariablen verfügt.
 
 Der Code, von dem die CRT initialisiert wird, befindet sich in einer von mehreren Bibliotheken, je nachdem, ob die CRT-Bibliothek statisch oder dynamisch gebunden wird oder als systemeigener, verwalteter oder gemischter Code vorliegt. Dieser Code verwaltet den CRT-Start, die interne threadbezogene Dateninitialisierung und die Beendigung. Der Code ist speziell entsprechend der Version des verwendeten Compilers. Diese Bibliothek wird immer statisch gebunden, auch wenn eine dynamisch gebundene UCRT verwendet wird.
 
@@ -122,7 +123,6 @@ Eine Vielzahl dieser Probleme kann vermieden werden, wenn Sie stattdessen ABI-Te
 Einige dieser Probleme können auch vermieden werden, wenn alle Images in Ihrem Prozess die gleiche dynamisch geladene CRT-Version verwenden. Um sicherzustellen, dass alle Komponenten dieselbe DLL-Version der CRT verwenden, erstellen sie diese mithilfe der **/MD**-Option, und verwenden Sie die gleichen Compilertoolset- und Eigenschaftseinstellungen.
 
 Beim Übergeben bestimmter CRT-Ressourcen (z.B. Dateihandles, Gebietsschemas und Umgebungsvariablen) über DLL-Grenzen hinweg muss sorgfältig vorgegangen werden, selbst wenn das Programm dieselbe CRT-Version verwendet. Weitere Informationen zu diesen Problemen und den jeweiligen Lösungsmöglichkeiten finden Sie unter [Potenzielle Fehler bei der Übergabe von CRT-Objekten über DLL-Grenzen](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
-
 
 ## <a name="see-also"></a>Siehe auch
 

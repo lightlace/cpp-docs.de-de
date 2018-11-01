@@ -1,31 +1,20 @@
 ---
-title: Symbolleisten-Editor (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Symbolleisten-Editor (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.toolbar.F1
-dev_langs:
-- C++
 helpviewer_keywords:
 - resource editors [C++], Toolbar editor
 - editors, toolbars
 - toolbars [C++], editing
 - Toolbar editor
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c51c8a5dc321d61b6167fb6a1e5b71d52145d81d
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 7efff3d4d784de6ee3130c3481f3674351cc7463
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316951"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486055"
 ---
 # <a name="toolbar-editor-c"></a>Symbolleisten-Editor (C++)
 
@@ -43,8 +32,7 @@ Mit der **Symbolleiste** -Editor können Sie:
 
 Die **Symbolleiste** -Editor-Fenster zeigt zwei Ansichten eines Schaltflächensymbols an, dem die Bild-Editor-Fenster. Die beiden Bereiche sind durch einen Fensterteiler getrennt. Zum Ändern der relativen Größe der Fensterbereiche kann der Fensterteiler seitlich gezogen werden. Der aktive Bereich ist von einem Markierungsrahmen umgeben. Oberhalb der beiden Ansichten des Bilds befindet sich die betreffende Symbolleiste.
 
-![Symbolleisten-Editor](../mfc/media/vctoolbareditor.gif "VcToolbarEditor")  
-Symbolleisten-Editor
+![Symbolleisten-Editor](../mfc/media/vctoolbareditor.gif "VcToolbarEditor") Symbolleisten-Editor
 
 Die **Symbolleiste** -Editor ähnelt dem **Image** -Editor-Funktionen. Menüelemente, grafische Tools und Bitmapraster sind dieselben wie in der **Image** Editor. Steht der Menübefehl im auf der **Image** Menü können Sie zwischen wechseln die **Symbolleiste** Editor und die **Image** Editor. Weitere Informationen zur Verwendung der **Grafiken** Symbolleiste **Farben** Palette, oder **Image** im Menü finden Sie unter [Bild-Editor](../windows/image-editor-for-icons.md).
 
@@ -56,5 +44,5 @@ MFC oder ATL
 
 ## <a name="see-also"></a>Siehe auch
 
-[Ressourcen-Editor](../windows/resource-editors.md)  
+[Ressourcen-Editor](../windows/resource-editors.md)<br/>
 [Menüs und weitere Ressourcen](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

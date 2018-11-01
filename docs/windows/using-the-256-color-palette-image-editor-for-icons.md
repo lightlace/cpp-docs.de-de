@@ -1,12 +1,6 @@
 ---
-title: Verwenden der 256-Farben-Palette (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwenden der 256-Farben-Palette (Bildbearbeitung für Symbole)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - 256-color palette
 - colors [C++], icons and cursors
@@ -15,17 +9,12 @@ helpviewer_keywords:
 - palettes, 256-color
 - icons, color
 ms.assetid: 1506ed00-669b-4a21-b1a4-39b6a84a78bb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 2eeadca20a722cc0e7e63d903f470cb3aced6d32
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: f41ca69e7c13dfb722085648cefa11bfe43af819
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313676"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519261"
 ---
 # <a name="using-the-256-color-palette-image-editor-for-icons"></a>Verwenden der 256-Farben-Palette (Bildbearbeitung für Symbole)
 
@@ -50,6 +39,6 @@ Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)  
-[Erstellen eines Symbols oder Cursors mit 256 Farben](creating-a-256-color-icon-or-cursor-image-editor-for-icons.md)  
+[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[Erstellen eines Symbols oder Cursors mit 256 Farben](creating-a-256-color-icon-or-cursor-image-editor-for-icons.md)<br/>
 [Symbole und Cursor: Bildressourcen für Anzeigegeräte](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

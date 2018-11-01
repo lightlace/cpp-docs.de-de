@@ -1,33 +1,23 @@
 ---
-title: -DELAY (Laden von Importeinstellungen verzögern) | Microsoft-Dokumentation
-ms.custom: ''
+title: /DELAY (Laden von Importeinstellungen verzögern)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /delay
 - VC.Project.VCLinkerTool.DelayNoBind
 - VC.Project.VCLinkerTool.SupportUnloadOfDelayLoadedDLL
 - VC.Project.VCLinkerTool.DelayUnload
-dev_langs:
-- C++
 helpviewer_keywords:
 - delayed loading of DLLs, /DELAY option
 - DELAY linker option
 - /DELAY linker option
 - -DELAY linker option
 ms.assetid: 9334b332-cc58-4dae-b10f-a4c75972d50c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9ce585f9dc8439a02a2883229e8d9ec006c29c24
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: edf15d17f0ae6f3bd04b6ed97095594eaebbf675
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717690"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565983"
 ---
 # <a name="delay-delay-load-import-settings"></a>/DELAY (Laden von Importeinstellungen verzögern)
 
@@ -46,7 +36,7 @@ Die/Delay-Option steuert [das verzögerte Laden von](../../build/reference/linke
 
 - Der NOBIND-Qualifizierer weist den Linker an, keine bindungsfähige IAT in das endgültige Image einzuschließen. Das Standardverhalten ist, die bindungsfähige IAT für verzögert geladene DLLs zu erstellen. Das daraus resultierende Image kann nicht statisch gebunden werden. (Images mit bindungsfähigen IATs können vor der Ausführung statisch gebunden werden.) Finden Sie unter [/BIND](../../build/reference/bind.md).
 
-   Wenn die DLL gebunden ist, versucht die Hilfsfunktion, die die gebundene Informationen zu verwenden, statt [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) auf jedem der referenzierten Importe. Wenn entweder der Zeitstempel oder die bevorzugte Adresse nicht mit denen der geladenen DLL übereinstimmt, geht die Hilfsfunktion davon aus, dass die gebundene IAT veraltet ist, und fährt fort, als würde die gebundene IAT nicht existieren.
+   Wenn die DLL gebunden ist, versucht die Hilfsfunktion, die die gebundene Informationen zu verwenden, statt [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) auf jedem der referenzierten Importe. Wenn entweder der Zeitstempel oder die bevorzugte Adresse nicht mit denen der geladenen DLL übereinstimmt, geht die Hilfsfunktion davon aus, dass die gebundene IAT veraltet ist, und fährt fort, als würde die gebundene IAT nicht existieren.
 
    NOBIND führt dazu, dass Ihr Programmimage größer ist, kann aber die Ladezeit der DLL beschleunigen. Wenn Sie nicht beabsichtigen, die DLL zu binden, verhindert NOBIND, dass die gebundene IAT erstellt wird.
 

@@ -1,8 +1,6 @@
 ---
-title: Vector-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: Platform::Collections::Vector-Klasse
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
@@ -20,21 +18,15 @@ f1_keywords:
 - COLLECTION/Platform::Collections::Vector::SetAt
 - COLLECTION/Platform::Collections::Vector::Size
 - COLLECTION/Platform::Collections::Vector::VectorChanged
-dev_langs:
-- C++
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 36fe82bc5d17cd3c4951b008af28ba89b171c78f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: fb03f7a00dfabe9d082ca761552af99e552d3190
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103931"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499868"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector-Klasse
 
@@ -71,7 +63,7 @@ Zulässige Typen sind:
 
 Die **Vektor** Klasse ist die konkrete C++-Implementierung, der die [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) Schnittstelle.
 
-Wenn Sie versuchen, eine **Vektor** Typ in einem öffentlichen Rückgabewert oder Parameter, der Compilerfehler C3986 ausgelöst. Sie können den Fehler zu beheben, indem Sie den Parameter ändern oder zum Typ des Rückgabewerts [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Weitere Informationen finden Sie unter [Auflistungen (C++/CX)](../cppcx/collections-c-cx.md).
+Wenn Sie versuchen, eine **Vektor** Typ in einem öffentlichen Rückgabewert oder Parameter, der Compilerfehler C3986 ausgelöst. Sie können den Fehler beheben, indem Sie den Typ des Parameters oder des Rückgabewerts in [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_)ändern. Weitere Informationen finden Sie unter [Auflistungen (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Member
 
@@ -240,11 +232,11 @@ Das Element, das gesucht werden soll.
 *index*<br/>
 Der nullbasierte Index des Elements Wenn Parameter *Wert* gefunden wird; andernfalls 0.
 
-Die *Index* Parameter 0 ist, wenn das Element das erste Element des Vektors ist oder das Element wurde nicht gefunden. Wenn der Rückgabewert `true` ist, wurde das Element gefunden und es ist das erste Element; andernfalls wurde das Element nicht gefunden.
+Die *Index* Parameter 0 ist, wenn das Element das erste Element des Vektors ist oder das Element wurde nicht gefunden. Wenn der Rückgabewert ist **"true"**, das Element gefunden wurde, und es ist das erste Element; andernfalls das Element wurde nicht gefunden.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` wenn das angegebene Element gefunden wurde, andernfalls `false`.
+**"true"** ist das angegebene Element gefunden wird; andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 

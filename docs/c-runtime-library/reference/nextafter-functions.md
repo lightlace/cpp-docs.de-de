@@ -1,10 +1,6 @@
 ---
-title: nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl | Microsoft-Dokumentation
-ms.custom: ''
+title: nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - nextafterf
 - _nextafterf
@@ -42,8 +38,6 @@ f1_keywords:
 - math/nexttoward
 - math/nexttowardf
 - math/nexttowardl
-dev_langs:
-- C++
 helpviewer_keywords:
 - _nextafter function
 - nextafter function
@@ -54,16 +48,12 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9c68d039ff1318ea082d409078a55c8d337a48de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0e0a60dc9f7c068d8c18c10f3c6b819b9e06d3b7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403715"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50444857"
 ---
 # <a name="nextafter-nextafterf-nextafterl-nextafter-nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 
@@ -102,19 +92,19 @@ Der Gleitkommawert, der den Zielpunkt markiert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den nächsten darstellbaren Gleitkomma-Wert des Rückgabetyps nach *x* in Richtung der *y*. Wenn *x* und *y* gleich sind, gibt die Funktion *y*, umgewandelt in den Rückgabetyp mit keine Ausnahme ausgelöst. Wenn *x* stimmt nicht mit *y*, und das Ergebnis ist eine Denormal oder 0 (null), die **FE_UNDERFLOW** und **FE_INEXACT** Gleitkommaausnahme Zustände festgelegt sind, und das richtige Ergebnis zurückgegeben wird. Wenn entweder *x* oder *y* eine NAN ist, dann ist der Rückgabewert eine Eingabe NANs. Wenn *x* ist endlich, und das Ergebnis unendlich oder nicht im Typ darstellbar ist, eine ordnungsgemäß signierten unendlich oder "NaN" zurückgegeben, die **FE_OVERFLOW** und **FE_INEXACT** Gleitkommaausnahmen Status festgelegt sind, und **Errno** festgelegt ist, um **ERANGE**.
+Gibt den nächsten darstellbaren Gleitkommawert des Rückgabetyps nach *x* in Richtung der *y*. Wenn *x* und *y* gleich sind, die Funktion gibt *y*, konvertiert in den Rückgabetyp, ohne eine Ausnahme ausgelöst. Wenn *x* ist nicht gleich *y*, und das Ergebnis eine subnormale oder 0 (null), die **FE_UNDERFLOW** und **FE_INEXACT** Gleitkomma-Ausnahmezustände festgelegt sind, und das richtige Ergebnis zurückgegeben wird. Wenn entweder *x* oder *y* ist ein NaN-Wert, dann ist der Rückgabewert eines Eingabe-NaN. Wenn *x* ist begrenzt und das Ergebnis unendlich oder nicht im Typ darstellbar ist, eine ordnungsgemäß signierten Unendlichkeit oder NAN zurückgegeben, die **FE_OVERFLOW** und **FE_INEXACT** Gleitkomma-Ausnahmezustände festgelegt sind, und **Errno** nastaven NA hodnotu **ERANGE**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Nextafter** und **Nexttoward** Familien Funktion sind gleichwertig, mit Ausnahme der Parametertyp der *y*. Wenn *x* und *y* gleich sind, ist der zurückgegebene Wert *y* zu diesem Rückgabetyp konvertiert.
+Die **Nextafter** und **Nexttoward** -funktionsfamilien sind mit Ausnahme der Parametertyp des entsprechenden *y*. Wenn *x* und *y* gleich sind, ist der zurückgegebene Wert *y* in den Rückgabetyp konvertiert.
 
-Da C++ das Überladen zulässt, wenn Sie aufnehmen \<Cmath > können Sie Überladungen von Aufrufen **Nextafter** und **Nexttoward** zurückgegebene **"float"** und **lange** **doppelte** Typen. In einem C-Programm **Nextafter** und **Nexttoward** stets **doppelte**.
+Da C++ das Überladen zulässt, wenn Sie einschließen \<Cmath > können Sie Überladungen von Aufrufen **Nextafter** und **Nexttoward** zurückgegebene **"float"** und **lange** **doppelte** Typen. In einem C-Programm **Nextafter** und **Nexttoward** jederzeit **doppelte**.
 
-Die **_nextafter** und **_nextafterf** Funktionen sind Microsoft-spezifisch. Die **_nextafterf** Funktion ist nur verfügbar, wenn für X64 kompilieren.
+Die **_nextafter** und **_nextafterf** Funktionen sind Microsoft-spezifisch. Die **_nextafterf** Funktion ist nur verfügbar, beim Kompilieren für X64.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header (C)|Erforderlicher Header (C++)|
+|-Routine zurückgegebener Wert|Erforderlicher Header (C)|Erforderlicher Header (C++)|
 |-------------|---------------------------|-------------------------------|
 |**Nextafter**, **Nextafterf**, **Nextafterl**, **_nextafterf**, **Nexttoward**, **Nexttowardf** , **Nexttowardl**|\<math.h>|\<math.h> oder \<cmath>|
 |**_nextafter**|\<float.h>|\<float.h> oder \<cfloat>|

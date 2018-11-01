@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c64db5a041845bbd068bab1a72ad461740170b8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fde79b2f96c815144b9cbdef1dcc7623e5a0eb60
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040478"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065212"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT-Klasse
 
@@ -118,7 +118,7 @@ Bei Verwendung der **Hinzufügen des Steuerelements basierend auf** option in de
 |Erstellen von Steuerelementen|[ATL-Lernprogramm](../../atl/active-template-library-atl-tutorial.md)|
 |Verwenden von Fenstern in ATL|[ATL-Fensterklassen](../../atl/atl-window-classes.md)|
 |ATL-Projekt-Assistent|[Erstellen eines ATL-Projekts](../../atl/reference/creating-an-atl-project.md)|
-|Windows|[Windows](https://msdn.microsoft.com/library/windows/desktop/ms632595) und weiteren Themen im Windows SDK|
+|Windows|[Windows](/windows/desktop/winmsg/windows) und weiteren Themen im Windows SDK|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -176,7 +176,7 @@ Wenn Sie eine Unterklasse von einem vorhandenen Fenster über [SubclassWindow](#
 Aufrufe [RegisterWndSuperclass](#registerwndsuperclass) eine Fensterklasse registrieren, die auf einer vorhandenen Klasse basiert, verwendet jedoch [CContainedWindowT::WindowProc](#windowproc).
 
 ```
-HWND Create(  
+HWND Create(
     HWND hWndParent,
     _U_RECT rect,
     LPCTSTR szWindowName = NULL,
@@ -441,7 +441,7 @@ Verwenden Sie diese Methode nur, wenn Sie möchten, um die ursprüngliche Fenste
 Diese statische Methode implementiert die Fensterprozedur.
 
 ```
-static LRESULT CALLBACK WindowProc(  
+static LRESULT CALLBACK WindowProc(
     HWND hWnd,
     UINT uMsg,
     WPARAM wParam,

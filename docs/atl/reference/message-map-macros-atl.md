@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce6099b904c088399dcb43635a1b254567e8320
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fbfd58491981cdba1b3aa3002736f49a7c09038c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024910"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054475"
 ---
 # <a name="message-map-macros-atl"></a>Meldungszuordnungsmakros (ATL)
 
@@ -93,11 +93,11 @@ Diese Makros definieren nachrichtenzuordnungen und Einträge.
 |[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|Ordnet eine reflektierte WM_NOTIFY-Meldung an eine Handlerfunktion, die basierend auf den Benachrichtigungscode und die Steuerelement-ID an.|
 |[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|Ordnet eine reflektierte WM_NOTIFY-Meldung an eine Handlerfunktion, die auf Grundlage des Steuerelement-ID an.|
 |[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|Ordnet eine reflektierte WM_NOTIFY-Meldung an eine Handlerfunktion, die basierend auf den Benachrichtigungscode und einen zusammenhängenden Bereich von Steuerelement-IDs an.|
-|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Ordnet eine reflektierte WM_NOTIFY-Meldung an eine Handlerfunktion, die basierend auf einen zusammenhängenden Bereich von Steuerelement-IDs an.|  
+|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Ordnet eine reflektierte WM_NOTIFY-Meldung an eine Handlerfunktion, die basierend auf einen zusammenhängenden Bereich von Steuerelement-IDs an.|
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** atlwin.h vorhanden  
+**Header:** atlwin.h vorhanden
 
 ##  <a name="alt_msg_map"></a>  ALT_MSG_MAP
 
@@ -136,7 +136,7 @@ Das nächste Beispiel zeigt zwei alternativen meldungszuordnungen. Die Standard-
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** atlwin.h vorhanden   
+**Header:** atlwin.h vorhanden
 
 ##  <a name="begin_msg_map"></a>  BEGIN_MSG_MAP
 
@@ -153,7 +153,7 @@ BEGIN_MSG_MAP(theClass)
 
 ### <a name="remarks"></a>Hinweise
 
-[CWindowImpl:: WindowProc](cwindowimpl-class.md#windowproc) verwendet die Standard-meldungszuordnung zum Verarbeiten von Nachrichten an das Fenster gesendet. Die meldungszuordnung leitet Nachrichten an die entsprechenden Handler-Funktion oder an einer anderen Nachricht zuordnen.  
+[CWindowImpl:: WindowProc](cwindowimpl-class.md#windowproc) verwendet die Standard-meldungszuordnung zum Verarbeiten von Nachrichten an das Fenster gesendet. Die meldungszuordnung leitet Nachrichten an die entsprechenden Handler-Funktion oder an einer anderen Nachricht zuordnen.
 
 Die folgenden Makros, die eine Nachricht an eine Handlerfunktion zugeordnet. Diese Funktion muss definiert werden, *TheClass*.
 
@@ -328,7 +328,7 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 
 ### <a name="remarks"></a>Hinweise
 
-CHAIN_MSG_MAP_DYNAMIC leitet Nachrichten zur Laufzeit, um die Standard-meldungszuordnung in einem anderen Objekt. Das Objekt und seine meldungszuordnung, zugeordnet sind *DynaChainID*, das Sie durch definieren [CDynamicChain:: SetChainEntry](cdynamicchain-class.md#setchainentry). Leiten Sie müssen Ihre Klasse von `CDynamicChain` um CHAIN_MSG_MAP_DYNAMIC verwenden. Ein Beispiel finden Sie unter den [CDynamicChain](../../atl/reference/cdynamicchain-class.md) Übersicht.  
+CHAIN_MSG_MAP_DYNAMIC leitet Nachrichten zur Laufzeit, um die Standard-meldungszuordnung in einem anderen Objekt. Das Objekt und seine meldungszuordnung, zugeordnet sind *DynaChainID*, das Sie durch definieren [CDynamicChain:: SetChainEntry](cdynamicchain-class.md#setchainentry). Leiten Sie müssen Ihre Klasse von `CDynamicChain` um CHAIN_MSG_MAP_DYNAMIC verwenden. Ein Beispiel finden Sie unter den [CDynamicChain](../../atl/reference/cdynamicchain-class.md) Übersicht.
 
 > [!NOTE]
 >  Beginnen Sie immer eine meldungszuordnung mit [BEGIN_MSG_MAP](#begin_msg_map). Sie können dann die nachfolgenden alternativen meldungszuordnungen mit ALT_MSG_MAP deklarieren. Die [END_MSG_MAP](#end_msg_map) Makro markiert das Ende der nachrichtenzuordnung. Jede nachrichtenzuordnung muss genau eine Instanz des BEGIN_MSG_MAP und END_MSG_MAP haben.
@@ -823,7 +823,7 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 [in] Der Benachrichtigungscode.
 
 *func*<br/>
-[in] Der Name der Meldungshandler-Funktion.  
+[in] Der Name der Meldungshandler-Funktion.
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -846,11 +846,11 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 [in] Der Benachrichtigungscode.
 
 *func*<br/>
-[in] Der Name der Meldungshandler-Funktion.  
+[in] Der Name der Meldungshandler-Funktion.
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** atlwin.h vorhanden  
+**Header:** atlwin.h vorhanden
 
 ##  <a name="reflected_command_id_handler"></a>  REFLECTED_COMMAND_ID_HANDLER
 
@@ -866,11 +866,11 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 [in] Der Bezeichner der dem Menüelement-Steuerelement oder Accelerator.
 
 *func*<br/>
-[in] Der Name der Meldungshandler-Funktion.  
+[in] Der Name der Meldungshandler-Funktion.
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** atlwin.h vorhanden  
+**Header:** atlwin.h vorhanden
 
 ##  <a name="reflected_command_range_code_handler"></a>  REFLECTED_COMMAND_RANGE_CODE_HANDLER
 
@@ -892,11 +892,11 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 [in] Der Benachrichtigungscode.
 
 *func*<br/>
-[in] Der Name der Meldungshandler-Funktion.  
+[in] Der Name der Meldungshandler-Funktion.
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** atlwin.h vorhanden  
+**Header:** atlwin.h vorhanden
 
 ##  <a name="reflected_command_range_handler"></a>  REFLECTED_COMMAND_RANGE_HANDLER
 
@@ -915,11 +915,11 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 [in] Markiert das Ende einer zusammenhängenden Bereich von Steuerelement-IDs.
 
 *func*<br/>
-[in] Der Name der Meldungshandler-Funktion.  
+[in] Der Name der Meldungshandler-Funktion.
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** atlwin.h vorhanden  
+**Header:** atlwin.h vorhanden
 
 ##  <a name="reflected_notify_code_handler"></a>  REFLECTED_NOTIFY_CODE_HANDLER
 
@@ -935,11 +935,11 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 [in] Der Benachrichtigungscode.
 
 *func*<br/>
-[in] Der Name der Meldungshandler-Funktion.  
+[in] Der Name der Meldungshandler-Funktion.
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** atlwin.h vorhanden  
+**Header:** atlwin.h vorhanden
 
 ##  <a name="reflected_notify_handler"></a>  REFLECTED_NOTIFY_HANDLER
 
@@ -958,11 +958,11 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 [in] Der Benachrichtigungscode.
 
 *func*<br/>
-[in] Der Name der Meldungshandler-Funktion.  
+[in] Der Name der Meldungshandler-Funktion.
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** atlwin.h vorhanden  
+**Header:** atlwin.h vorhanden
 
 ##  <a name="reflected_notify_id_handler"></a>  REFLECTED_NOTIFY_ID_HANDLER
 
@@ -978,11 +978,11 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 [in] Der Bezeichner der dem Menüelement-Steuerelement oder Accelerator.
 
 *func*<br/>
-[in] Der Name der Meldungshandler-Funktion.  
+[in] Der Name der Meldungshandler-Funktion.
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** atlwin.h vorhanden  
+**Header:** atlwin.h vorhanden
 
 ##  <a name="reflected_notify_range_code_handler"></a>  REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 

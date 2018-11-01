@@ -1,7 +1,7 @@
 ---
-title: Typeid (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
+title: Typeid (C++ / CLI und C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 63a2c8f57f7031f63f6e5b0d4d20c2c69b5f4934
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1196956208d490674d4705a8d1e61ea3381d94a2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592337"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065186"
 ---
-# <a name="typeid--c-component-extensions"></a>typeid (Komponentenerweiterungen für C++)
+# <a name="typeid--ccli-and-ccx"></a>Typeid (C++ / CLI und C++ / CX)
 
 Ruft einen Wert ab, der den Typ eines Objekts angibt.
 
-> [!WARNING]
+> [!NOTE]
 > Dieses Thema behandelt die C++-Komponentenerweiterungsversion von "typeid". Für die ISO C++-Version dieses Schlüsselworts finden Sie unter [Typeid-Operator](../cpp/typeid-operator.md).
 
 ## <a name="all-runtimes"></a>Alle Laufzeiten
@@ -39,7 +39,7 @@ T::typeid
 
 ### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Ein Typname.
 
 ## <a name="windows-runtime"></a>Windows-Runtime
@@ -52,7 +52,7 @@ Platform::Type^ type = T::typeid;
 
 ### <a name="parameters"></a>Parameter
 
-*T*  
+*T*<br/>
 Ein Typname.
 
 ### <a name="remarks"></a>Hinweise
@@ -73,7 +73,7 @@ type::typeid
 
 ### <a name="parameters"></a>Parameter
 
-*Typ*  
+*Typ*<br/>
 Der Name eines Typs (abstrakter Deklarator), die für die Sie möchten die `System::Type` Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -110,7 +110,7 @@ int main() {
    Type ^ pType = pG->GetType();
    Type ^ pType2 = G::typeid;
 
-   if (pType == pType2)  
+   if (pType == pType2)
       Console::WriteLine("typeid and GetType returned the same System::Type");
    Console::WriteLine(G::typeid);
 
@@ -123,7 +123,7 @@ int main() {
 typeid and GetType returned the same System::Type
 G
 
-System.Single*  
+System.Single*
 ```
 
 Das folgende Beispiel zeigt, dass eine Variable des Typs System::Type verwendet werden kann, um die Attribute für einen Typ abzurufen.  Außerdem wird veranschaulicht, dass Sie für einige Typen eine Typdefinition erstellen müssen, um `typeid` zu verwenden.
@@ -169,13 +169,13 @@ int main() {
    Console::WriteLine(MyType->IsClass);
 
    array<Object^>^ MyArray = MyType -> GetCustomAttributes(true);
-   for (int i = 0 ; i < MyArray->Length ; i++ )  
+   for (int i = 0 ; i < MyArray->Length ; i++ )
       Console::WriteLine(MyArray[i]);
 
-   if (int::typeid != pointer_to_int::typeid)  
+   if (int::typeid != pointer_to_int::typeid)
       Console::WriteLine("int::typeid != pointer_to_int::typeid, as expected");
 
-   if (int::typeid == handle_to_int::typeid)  
+   if (int::typeid == handle_to_int::typeid)
       Console::WriteLine("int::typeid == handle_to_int::typeid, as expected");
 }
 ```
@@ -200,4 +200,4 @@ int::typeid == handle_to_int::typeid, as expected
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET und UWP](../windows/component-extensions-for-runtime-platforms.md)

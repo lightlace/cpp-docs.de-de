@@ -1,7 +1,7 @@
 ---
 title: Durchlaufen eines einfachen Rowsets | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/19/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -19,60 +19,72 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9a127b5cd611177c28e6e434b04060edf3bdcb55
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 358e7d4833587d459e813af442c4657cfa86a0ec
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028635"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082131"
 ---
 # <a name="traversing-a-simple-rowset"></a>Durchlaufen eines einfachen Rowsets
 
-Das folgende Beispiel zeigt eine schnelle und einfache Zugriff auf die Datenbank, die Befehle nicht beinhaltet. Der folgende Consumercode, in einem ATL-Projekt ruft Datensätze aus einer Tabelle namens *Künstler* in einer Microsoft Access-Datenbank mithilfe von Microsoft OLE DB-Anbieter für ODBC. Der Code erstellt eine [CTable](../../data/oledb/ctable-class.md) Table-Objekt mit einem Accessor, auf der Grundlage von der Benutzerdatensatz-Klasse `CArtists`. Öffnet eine Verbindung, wird eine Sitzung für die Verbindung geöffnet und die Tabelle in der Sitzung wird geöffnet.  
-  
-```cpp  
-#include <atldbcli.h>  
-  
-CDataSource connection;  
-CSession session;  
-CTable<CAccessor<CArtists>> artists;  
-  
-// Open the connection, session, and table, specifying authentication   
-// using Windows NT integrated security. Hard-coding a password is a major  
-// security weakness.  
-connection.Open(CLSID_MSDASQL, "NWind", NULL, NULL, DBPROP_AUTH_INTEGRATED);  
+Das folgende Beispiel zeigt, Zugriff auf die schnelle und einfache Datenbank, die Befehle enthalten, nicht. Der folgende Consumercode, in einem ATL-Projekt ruft Datensätze aus einer Tabelle namens *Künstler* in einer Microsoft Access-Datenbank mithilfe von Microsoft OLE DB-Anbieter für ODBC. Der Code erstellt eine [CTable](../../data/oledb/ctable-class.md) Table-Objekt mit einem Accessor, auf der Grundlage von der Benutzerdatensatz-Klasse `CArtists`. Öffnet eine Verbindung, wird eine Sitzung für die Verbindung geöffnet und die Tabelle in der Sitzung wird geöffnet.
 
-session.Open(connection);  
+```cpp
+#include <atldbcli.h>
+#include <iostream>
 
-artists.Open(session, "Artists");  
-  
-// Get data from the rowset  
-while (artists.MoveNext() == S_OK)  
-{  
-   cout << artists.m_szFirstName;  
-   cout << artists.m_szLastName;  
-}  
-```  
-  
-Benutzerdatensatz `CArtists`, sieht wie folgt aus:  
-  
-```cpp  
-class CArtists  
-{  
-public:  
-// Data Elements  
-   CHAR m_szFirstName[20];  
-   CHAR m_szLastName[30];  
-   short m_nAge;  
-  
-// Column binding map  
-BEGIN_COLUMN_MAP(CArtists)  
-   COLUMN_ENTRY(1, m_szFirstName)  
-   COLUMN_ENTRY(2, m_szLastName)  
-   COLUMN_ENTRY(3, m_nAge)  
-END_COLUMN_MAP()  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
+using namespace std;
+
+int main()
+{
+    CDataSource connection;
+    CSession session;
+    CTable<CAccessor<CArtists>> artists;
+
+    LPCSTR clsid; // Initialize CLSID_MSDASQL here
+    LPCTSTR pName = L"NWind";
+
+    // Open the connection, session, and table, specifying authentication
+    // using Windows NT integrated security. Hard-coding a password is a major
+    // security weakness.
+    connection.Open(clsid, pName, NULL, NULL, DBPROP_AUTH_INTEGRATED);
+
+    session.Open(connection);
+
+    artists.Open(session, "Artists");
+
+    // Get data from the rowset
+    while (artists.MoveNext() == S_OK)
+    {
+       cout << artists.m_szFirstName;
+       cout << artists.m_szLastName;
+    }
+
+    return 0;
+}
+```
+
+Benutzerdatensatz `CArtists`, sieht wie im folgenden Beispiel:
+
+```cpp
+class CArtists
+{
+public:
+// Data Elements
+   CHAR m_szFirstName[20];
+   CHAR m_szLastName[30];
+   short m_nAge;
+
+// Column binding map
+BEGIN_COLUMN_MAP(CArtists)
+   COLUMN_ENTRY(1, m_szFirstName)
+   COLUMN_ENTRY(2, m_szLastName)
+   COLUMN_ENTRY(3, m_nAge)
+END_COLUMN_MAP()
+};
+```
+
+## <a name="see-also"></a>Siehe auch
 
 [Arbeiten mit OLE DB-Consumervorlagen](../../data/oledb/working-with-ole-db-consumer-templates.md)

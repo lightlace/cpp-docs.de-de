@@ -1,35 +1,27 @@
 ---
-title: Wie das Framework Meldungszuordnungen durchsucht | Microsoft Docs
-ms.custom: ''
+title: Wie das Framework Meldungszuordnungen durchsucht
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - message maps [MFC], searching
 ms.assetid: fd1df878-5601-45d7-bd1f-b8f8e65b9a17
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1fc80573b110c3eacc790082b837a87815283f55
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b211c2991a529d2d6dd7020c6e62d633b83b8f4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345780"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50446435"
 ---
 # <a name="how-the-framework-searches-message-maps"></a>Wie das Framework Meldungszuordnungen durchsucht
-Das Framework durchsucht die Message-Zuordnungstabelle für Übereinstimmungen mit eingehenden Nachrichten. Sobald Sie eine Meldungszuordnungseintrags für jede Nachricht, dass eine Klasse zum Behandeln und die entsprechenden Handler schreiben sollen schreiben, ruft das Framework automatisch die Handler an. In den folgenden Themen wird erläutert, meldungszuordnung suchen:  
-  
--   [Wo sich meldungszuordnungen befinden](../mfc/where-to-find-message-maps.md)  
-  
--   [Abgeleitete meldungszuordnungen](../mfc/derived-message-maps.md)  
-  
--   [Zuordnen von Bereichen von Nachrichten, die Befehls-IDs oder Steuerelement-IDs an einen handler](../mfc/handlers-for-message-map-ranges.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Meldungsbehandlung und Zuordnung](../mfc/message-handling-and-mapping.md)
+
+Das Framework durchsucht die meldungszuordnung Tabelle nach Übereinstimmungen mit eingehenden Nachrichten. Sobald Sie eine Meldungszuordnungseintrags für jede Nachricht, dass eine Klasse behandeln und die entsprechenden Handler schreiben soll schreiben, ruft das Framework automatisch die Handler an. Die folgenden Themen erläutern die meldungszuordnung Suche:
+
+- [Wo sich meldungszuordnungen befinden](../mfc/where-to-find-message-maps.md)
+
+- [Abgeleitete meldungszuordnungen](../mfc/derived-message-maps.md)
+
+- [Bereiche von Nachrichten, Befehls-IDs oder Steuerelement-IDs zuordnen auf einen handler](../mfc/handlers-for-message-map-ranges.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Meldungsbehandlung und Zuordnung](../mfc/message-handling-and-mapping.md)
 

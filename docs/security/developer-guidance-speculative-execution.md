@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0800812e39d4d5240b87b24961585610814cd367
-ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
+ms.openlocfilehash: 2ba89aadc8e1c617ed8e101a226560b80cb9e431
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44384955"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821399"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>C++-Entwickler-Leitfaden für spekulative Ausführung dienstseitige Kanäle
 
@@ -31,7 +31,7 @@ Dieser Artikel enthält Anleitungen für Entwickler zur Unterstützung beim Iden
 
 Die Anleitung in diesem Artikel bezieht sich auf die Klassen von Sicherheitsrisiken durch dargestellt:
 
-1. CVE-2017-5753, auch bekannt als Spectre-Variante 1. Dieses Sicherheitsrisiko Hardwareklasse bezieht sich auf dienstseitige Kanäle, die aufgrund der spekulativen Ausführung auftreten können, die als Ergebnis eine bedingte Verzweigung Misprediction auftritt, haben. Visual C++-Compiler in Visual Studio 2017 (ab Version 15.5.5) bietet Unterstützung für die `/Qspectre` eine Lösung während der Kompilierung für eine begrenzte Anzahl von potenziell anfällige Codierungsmuster bietet-Schalter im Zusammenhang mit der CVE-2017-5753. Die `/Qspectre` Switch steht auch in Visual Studio 2015 Update 3 über [KB 4338871](https://support.microsoft.com/help/4338871). Die Dokumentation für die ["/ qspectre"](https://docs.microsoft.com/cpp/build/reference/qspectre) Flag enthält weitere Informationen zu dessen Auswirkungen und Nutzung. 
+1. CVE-2017-5753, auch bekannt als Spectre-Variante 1. Dieses Sicherheitsrisiko Hardwareklasse bezieht sich auf dienstseitige Kanäle, die aufgrund der spekulativen Ausführung auftreten können, die als Ergebnis eine bedingte Verzweigung Misprediction auftritt, haben. Visual C++-Compiler in Visual Studio 2017 (ab Version 15.5.5) bietet Unterstützung für die `/Qspectre` eine Lösung während der Kompilierung für eine begrenzte Anzahl von potenziell anfällige Codierungsmuster bietet-Schalter im Zusammenhang mit der CVE-2017-5753. Die `/Qspectre` Switch steht auch in Visual Studio 2015 Update 3 über [KB 4338871](https://support.microsoft.com/help/4338871). Die Dokumentation für die ["/ qspectre"](https://docs.microsoft.com/cpp/build/reference/qspectre) Flag enthält weitere Informationen zu dessen Auswirkungen und Nutzung.
 
 2. CVE-2018-3639, auch bekannt als [spekulative Store umgehen (SSB)](https://aka.ms/sescsrdssb). Dieses Sicherheitsrisiko Hardwareklasse bezieht sich auf dienstseitige Kanäle, die aufgrund der spekulativen Ausführung eines Auslastungstests vor einem abhängigen Speicher als Ergebnis eine Arbeitsspeicher-Access-Misprediction auftreten können.
 
@@ -55,9 +55,9 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 }
 ```
 
-In diesem Beispiel `ReadByte` ist ein Puffer, eine Puffergröße sowie einen Index in diesen Puffer angegeben. Der Indexparameter, laut `untrusted_index`, angegeben wird, mit einem kleiner privilegierten Kontext, z. B. ein Nichtadministrator-Prozess. Wenn `untrusted_index` ist kleiner als `buffer_size`, und klicken Sie dann das Zeichen an diesem Index aus der gelesen wird `buffer` und zum Index in ein freigegebener Speicherbereich verweist `shared_buffer`. 
+In diesem Beispiel `ReadByte` ist ein Puffer, eine Puffergröße sowie einen Index in diesen Puffer angegeben. Der Indexparameter, laut `untrusted_index`, angegeben wird, mit einem kleiner privilegierten Kontext, z. B. ein Nichtadministrator-Prozess. Wenn `untrusted_index` ist kleiner als `buffer_size`, und klicken Sie dann das Zeichen an diesem Index aus der gelesen wird `buffer` und zum Index in ein freigegebener Speicherbereich verweist `shared_buffer`.
 
-Aus Sicht der Architektur, diese Codesequenz ist absolut sicher, da sichergestellt ist, die `untrusted_index` immer kleiner als `buffer_size`. Bei der spekulativen Ausführung, es ist jedoch möglich, dass die CPU wird die bedingten Verzweigung falschvorh, und führen Sie den Text zurück, wenn die Anweisung, auch wenn `untrusted_index` ist größer als oder gleich `buffer_size`. Daher kann die CPU einen Byte außerhalb der Grenzen des spekulativer lesen `buffer` (die möglicherweise einen geheimen Schlüssel) und klicken Sie dann, Byte-Wert verwenden können, um die Adresse einer nachfolgenden Last durch berechnen `shared_buffer`. 
+Aus Sicht der Architektur, diese Codesequenz ist absolut sicher, da sichergestellt ist, die `untrusted_index` immer kleiner als `buffer_size`. Bei der spekulativen Ausführung, es ist jedoch möglich, dass die CPU wird die bedingten Verzweigung falschvorh, und führen Sie den Text zurück, wenn die Anweisung, auch wenn `untrusted_index` ist größer als oder gleich `buffer_size`. Daher kann die CPU einen Byte außerhalb der Grenzen des spekulativer lesen `buffer` (die möglicherweise einen geheimen Schlüssel) und klicken Sie dann, Byte-Wert verwenden können, um die Adresse einer nachfolgenden Last durch berechnen `shared_buffer`.
 
 Während die CPU dieses Misprediction schließlich erkannt werden, möglicherweise residual Nebeneffekte bleiben in der CPU-Cache, der Informationen zu den Bytewert anzuzeigen, die außerhalb des gültigen Bereichs von gelesen wurde `buffer`. Diese Nebenwirkungen kann erkannt werden, indem ein kleiner privilegierten Kontext, die auf dem System ausgeführt wird, wie schnell Überprüfung jeder Cache Zeile, in `shared_buffer` zugegriffen wird. Sind die Schritte, die ausgeführt werden können, um dies zu erreichen:
 
@@ -73,14 +73,14 @@ Die oben genannten Schritte geben Sie ein Beispiel der Verwendung von Technik le
 
 ## <a name="what-software-scenarios-can-be-impacted"></a>Welche Szenarien für die Software können betroffen sein?
 
-Entwicklung von sicherer Software, die mit einem Prozess wie die [Security Development Lifecycle](https://www.microsoft.com/en-us/sdl/) (SDL) in der Regel muss die Vertrauensgrenzen zu identifizieren, die in der Anwendung vorhanden sind. An Orten, in denen eine Anwendung mit Daten von einem weniger vertrauenswürdigen Kontext, wie z. B. ein anderer Prozess auf dem System oder einen Benutzer ohne Administratorrechte-Modus-Prozess bei einem Kernelmodus-Gerätetreiber interagieren kann, ist eine Vertrauensgrenze vorhanden. Die neue Klasse von Sicherheitsrisiken, die im Zusammenhang mit spekulativer Ausführung dienstseitige Kanäle ist relevant für viele die Vertrauensgrenzen in Software Security Modelle, die Isolieren von Code und Daten auf einem Gerät. 
+Entwicklung von sicherer Software, die mit einem Prozess wie die [Security Development Lifecycle](https://www.microsoft.com/sdl/) (SDL) in der Regel muss die Vertrauensgrenzen zu identifizieren, die in der Anwendung vorhanden sind. An Orten, in denen eine Anwendung mit Daten von einem weniger vertrauenswürdigen Kontext, wie z. B. ein anderer Prozess auf dem System oder einen Benutzer ohne Administratorrechte-Modus-Prozess bei einem Kernelmodus-Gerätetreiber interagieren kann, ist eine Vertrauensgrenze vorhanden. Die neue Klasse von Sicherheitsrisiken, die im Zusammenhang mit spekulativer Ausführung dienstseitige Kanäle ist relevant für viele die Vertrauensgrenzen in Software Security Modelle, die Isolieren von Code und Daten auf einem Gerät.
 
 Die folgende Tabelle enthält eine Zusammenfassung der Software Sicherheitsmodelle, in denen Entwickler kümmern diese Sicherheitsrisiken, die auftreten müssen unter Umständen:
 
 |Vertrauensgrenze|Beschreibung|
 |----------------|----------------|
-|Virtual Machine-Grenze|Anwendungen, die Isolierung von Workloads in separate virtuelle Computer, die nicht vertrauenswürdige Daten von einem anderen virtuellen Computer erhalten möglicherweise gefährdet.| 
-|Kernelgrenze|Ein im Kernelmodus-Gerätetreiber, der nicht vertrauenswürdige Daten von einem Benutzer ohne Administratorrechte-Modus-Prozess empfängt möglicherweise gefährdet.| 
+|Virtual Machine-Grenze|Anwendungen, die Isolierung von Workloads in separate virtuelle Computer, die nicht vertrauenswürdige Daten von einem anderen virtuellen Computer erhalten möglicherweise gefährdet.|
+|Kernelgrenze|Ein im Kernelmodus-Gerätetreiber, der nicht vertrauenswürdige Daten von einem Benutzer ohne Administratorrechte-Modus-Prozess empfängt möglicherweise gefährdet.|
 |Prozessgrenze|Eine Anwendung, die nicht vertrauenswürdige Daten von einem anderen Prozess ausgeführt wird, auf dem lokalen System, empfängt, wie z. B. über eine (Remoteprozeduraufruf), freigegebenen Speicher oder andere prozessübergreifende Kommunikation (IPC) Mechanismen gefährdet sein können.|
 |Enclave-Grenze|Eine Anwendung, die in eine sichere Enclave (z. B. Intel SGX) ausgeführt wird, die nicht vertrauenswürdige Daten von außerhalb der Enclave empfängt möglicherweise gefährdet.|
 |Sprachgrenze|Eine Anwendung, die interpretiert oder Just-in-Time (JIT) kompiliert und nicht vertrauenswürdigen Code in der führt eine höherrangige Sprache möglicherweise gefährdet.|
@@ -133,7 +133,7 @@ unsigned char ReadBytes(unsigned char *buffer, unsigned int buffer_size) {
 
 ### <a name="array-out-of-bounds-load-feeding-an-indirect-branch"></a>Array außerhalb des gültigen Bereichs zu laden, fügen eine indirekte branch
 
-Dieses Codierungsmuster umfasst den Fall, in denen eine bedingte Verzweigung Misprediction kann führen zu, einer außerhalb des gültigen Bereichs der Zugriff auf ein Array von Funktionszeigern, die dann führt zu einer indirekten Verzweigung an das Ziel zu, die beheben, außerhalb des gültigen Bereichs gelesen wurde. Der folgende Codeausschnitt enthält ein Beispiel, die dies veranschaulicht. 
+Dieses Codierungsmuster umfasst den Fall, in denen eine bedingte Verzweigung Misprediction kann führen zu, einer außerhalb des gültigen Bereichs der Zugriff auf ein Array von Funktionszeigern, die dann führt zu einer indirekten Verzweigung an das Ziel zu, die beheben, außerhalb des gültigen Bereichs gelesen wurde. Der folgende Codeausschnitt enthält ein Beispiel, die dies veranschaulicht.
 
 In diesem Beispiel wird ein nicht vertrauenswürdiger Nachrichten-ID bereitgestellt, um DispatchMessage über die `untrusted_message_id` Parameter. Wenn `untrusted_message_id` ist kleiner als `MAX_MESSAGE_ID`, wird es in ein Array von Funktionszeigern, indizieren und branch verwendet das entsprechende Branch-Ziel. Dieser Code architektonisch sicher ist, aber wenn die CPU die bedingten Verzweigung falsch vorhergesagte zugeordnet werden, kann dies dazu führen `DispatchTable` von indizierten `untrusted_message_id` Wenn der Wert ist, größer als oder gleich `MAX_MESSAGE_ID`, werden daher führende zu einer außerhalb des gültigen Bereichs zuzugreifen. Dies kann spekulative Ausführung aus der einer Zieladresse Branch führen, die über die Grenzen des Arrays abgeleitet ist, was zur Offenlegung von Informationen je nach Code führen konnte, die spekulativer ausgeführt wird.
 
@@ -188,7 +188,7 @@ Anzumerken ist, dass in beiden Beispielen spekulative Änderung der Stapel zugeo
 
 ## <a name="speculative-type-confusion"></a>Spekulative Typ Verwirrung
 
-Diese Kategorie behandelt Codemuster, die zu einer spekulativen Typ zu Verwirrung führen können. Dies tritt auf, wenn Speicher mit einem falschen Typ auf einem nicht-Architektur Pfad während der spekulativen Ausführung zugegriffen wird. Sowohl der bedingte Verzweigung Misprediction als auch der spekulativen Store umgehen können potenziell ein spekulative Typ Verwirrung stiften. 
+Diese Kategorie behandelt Codemuster, die zu einer spekulativen Typ zu Verwirrung führen können. Dies tritt auf, wenn Speicher mit einem falschen Typ auf einem nicht-Architektur Pfad während der spekulativen Ausführung zugegriffen wird. Sowohl der bedingte Verzweigung Misprediction als auch der spekulativen Store umgehen können potenziell ein spekulative Typ Verwirrung stiften.
 
 Zur Umgehung der spekulativen Store kann dies in Szenarien auftreten, in denen ein Compiler eine Stapelspeicherort für Variablen mehrerer Typen verwendet. Grund hierfür ist der architektonische Speicher für eine Variable vom Typ `A` möglicherweise umgangen werden, sodass die Last des Typs `A` spekulativer ausgeführt werden, bevor der Variablen zugewiesen wird. Wenn die zuvor gespeicherte Variable eines anderen Typs ist, können Sie dies die Bedingungen für eine Verwechslung spekulative Typ erstellen.
 
@@ -341,7 +341,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>Spekulationsbarriere über Compiler-Time-instrumentation
 
-Visual C++-Compiler in Visual Studio 2017 (ab Version 15.5.5) bietet Unterstützung für die `/Qspectre` fügt automatisch eine spekulationsbarriere für einen begrenzten Satz von potenziell anfällige Codierungsmuster-Schalter im Zusammenhang mit der CVE-2017-5753. Die Dokumentation für die ["/ qspectre"](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) Flag enthält weitere Informationen zu dessen Auswirkungen und Nutzung. Es ist wichtig zu beachten, dass dieses Flag nicht alle der potenziell anfällige Codierungsmuster deckt und als solche Entwickler nicht darauf als eine umfassende Lösung für diese Klasse von Sicherheitsrisiken basieren sollten.
+Visual C++-Compiler in Visual Studio 2017 (ab Version 15.5.5) bietet Unterstützung für die `/Qspectre` fügt automatisch eine spekulationsbarriere für einen begrenzten Satz von potenziell anfällige Codierungsmuster-Schalter im Zusammenhang mit der CVE-2017-5753. Die Dokumentation für die ["/ qspectre"](https://docs.microsoft.com/cpp/build/reference/qspectre) Flag enthält weitere Informationen zu dessen Auswirkungen und Nutzung. Es ist wichtig zu beachten, dass dieses Flag nicht alle der potenziell anfällige Codierungsmuster deckt und als solche Entwickler nicht darauf als eine umfassende Lösung für diese Klasse von Sicherheitsrisiken basieren sollten.
 
 ### <a name="masking-array-indices"></a>Maskieren von Arrayindizes
 
@@ -368,6 +368,5 @@ Ein weiteres Verfahren, das zum Verringern von Sicherheitsrisiken in spekulative
 
 ## <a name="see-also"></a>Siehe auch
 
-[Anleitungen zum Verringern von Sicherheitsrisiken in seitenkanalangriffe mit spekulativer Ausführung](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)
-
+[Anleitungen zum Verringern von Sicherheitsrisiken in seitenkanalangriffe mit spekulativer Ausführung](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)<br/>
 [Beheben von Sicherheitsrisiken durch spekulative Ausführung Seite Kanal hardware](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)

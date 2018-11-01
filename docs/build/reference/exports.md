@@ -1,27 +1,17 @@
 ---
-title: EXPORTE | Microsoft-Dokumentation
-ms.custom: ''
+title: EXPORTS
 ms.date: 09/07/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - EXPORTS
-dev_langs:
-- C++
 helpviewer_keywords:
 - EXPORTS .def file statement
 ms.assetid: dbcd7579-b855-44c4-bd27-931e157657f7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 62b49c20248ca4825bcf2c95b6c7adc956a39025
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b12548bafa9a0c580c5976cd7c4c54d8726e5ace
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714522"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435674"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -67,7 +57,7 @@ Um die vom Compiler erzeugten, ergänzten Namen zu suchen, verwenden die [DUMPBI
 
 Sie können \@ *ordinal* um anzugeben, dass eine Zahl und nicht der Funktionsname wird in der Exporttabelle der. Viele Windows-DLLs exportieren Ordinalzahlen, um Legacycode zu unterstützen. Es war üblich, Ordinalzahlen in 16-Bit-Windows-Code zu verwenden, weil das dazu beitragen kann, die Größe einer DLL zu minimieren. Es wird nicht empfohlen, Funktionen anhand der Ordinalzahl zu exportieren, es sei denn, die Clients Ihrer DLL benötigen sie zur Legacyunterstützung. Da die .LIB-Datei die Zuordnung zwischen der Ordinalzahl und der Funktion enthält, können Sie den Funktionsnamen verwenden, wie Sie es normalerweise in Projekten tun würden, die die DLL verwenden.
 
-Mithilfe des optionalen **NONAME** -Schlüsselwort, Sie können nur anhand der Ordinalzahl exportieren und die Größe der Exporttabelle in der resultierenden DLL reduzieren. Allerdings sollten Sie verwenden [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) in der DLL, müssen Sie die Ordinalzahl kennen, da der Name nicht gültig ist.
+Mithilfe des optionalen **NONAME** -Schlüsselwort, Sie können nur anhand der Ordinalzahl exportieren und die Größe der Exporttabelle in der resultierenden DLL reduzieren. Allerdings sollten Sie verwenden [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) in der DLL, müssen Sie die Ordinalzahl kennen, da der Name nicht gültig ist.
 
 Das optionale Schlüsselwort **PRIVATE** wird verhindert, dass *Eintragsname* aus, die in der von LINK generierte Importbibliothek eingeschlossen wird. Es wirkt sich nicht auf den Export des ebenfalls von LINK generierten Image aus.
 
@@ -82,11 +72,11 @@ Es gibt vier Möglichkeiten für das Exportieren einer Definition, aufgelistet i
 
 1. Die [__declspec(dllexport)](../../cpp/dllexport-dllimport.md) Schlüsselwort im Quellcode
 
-2. Eine `EXPORTS`-Anweisung in einer .DEF-Datei
+1. Eine `EXPORTS`-Anweisung in einer .DEF-Datei
 
-3. Ein [/EXPORT](../../build/reference/export-exports-a-function.md) Spezifikation in einem LINK-Befehl
+1. Ein [/EXPORT](../../build/reference/export-exports-a-function.md) Spezifikation in einem LINK-Befehl
 
-4. Ein [Kommentar](../../preprocessor/comment-c-cpp.md) -Anweisung im Quellcode, der das Formular `#pragma comment(linker, "/export: definition ")`. Das folgende Beispiel zeigt eine #pragma Comment-Anweisung vor der Deklaration einer Funktion, in denen `PlainFuncName` ist von der nicht ergänzte Namen, und `_PlainFuncName@4` ist der ergänzte Name der Funktion:
+1. Ein [Kommentar](../../preprocessor/comment-c-cpp.md) -Anweisung im Quellcode, der das Formular `#pragma comment(linker, "/export: definition ")`. Das folgende Beispiel zeigt eine #pragma Comment-Anweisung vor der Deklaration einer Funktion, in denen `PlainFuncName` ist von der nicht ergänzte Namen, und `_PlainFuncName@4` ist der ergänzte Name der Funktion:
 
     ```cpp
     #pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")

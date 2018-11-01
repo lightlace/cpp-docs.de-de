@@ -1,10 +1,6 @@
 ---
-title: set-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: set-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - set/std::set
 - set/std::set::allocator_type
@@ -47,8 +43,6 @@ f1_keywords:
 - set/std::set::swap
 - set/std::set::upper_bound
 - set/std::set::value_comp
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::set [C++]
 - std::set [C++], allocator_type
@@ -92,16 +86,12 @@ helpviewer_keywords:
 - std::set [C++], upper_bound
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b3b697901ac564a88f48cdbc3154f29089c23acc
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 694ef08582409117b898d173e7647d59effc30e2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706159"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605503"
 ---
 # <a name="set-class"></a>set-Klasse
 
@@ -905,7 +895,6 @@ Gibt den "past-the-end"-Iterator zurück.
 ```cpp
 const_iterator end() const;
 
-
 iterator end();
 ```
 
@@ -1124,7 +1113,6 @@ Gibt einen Iterator zurück, der auf den Speicherort eines Elements in einem Sat
 ```cpp
 iterator find(const Key& key);
 
-
 const_iterator find(const Key& key) const;
 ```
 
@@ -1288,19 +1276,16 @@ Fügt ein Element oder einen Elementbereich in einen Satz ein.
 pair<iterator, bool> insert(
     const value_type& Val);
 
-
 // (2) single element, perfect forwarded
 template <class ValTy>
 pair<iterator, bool>
 insert(
     ValTy&& Val);
 
-
 // (3) single element with hint
 iterator insert(
     const_iterator Where,
     const value_type& Val);
-
 
 // (4) single element, perfect forwarded, with hint
 template <class ValTy>
@@ -1308,13 +1293,11 @@ iterator insert(
     const_iterator Where,
     ValTy&& Val);
 
-
 // (5) range
 template <class InputIterator>
 void insert(
     InputIterator First,
     InputIterator Last);
-
 
 // (6) initializer list
 void insert(
@@ -1988,21 +1971,20 @@ set(
     const Compare& Comp,
     const Allocator& Al);
 
-
 template <class InputIterator>
 set(
- InputIterator First,
+    InputIterator First,
     InputIterator Last);
 
 template <class InputIterator>
 set(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp);
 
 template <class InputIterator>
 set(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp,
     const Allocator& Al);

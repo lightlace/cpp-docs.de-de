@@ -1,10 +1,6 @@
 ---
-title: bitset-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: bitset-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - bitset/std::bitset
 - bitset/std::bitset::element_type
@@ -21,8 +17,6 @@ f1_keywords:
 - bitset/std::bitset::to_ullong
 - bitset/std::bitset::to_ulong
 - bitset/std::bitset::reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::bitset [C++]
 - std::bitset [C++], element_type
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - std::bitset [C++], to_ulong
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6a385ac850148caab582821b039fece5709f75b6
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5e5d1e14e6cdf35c907b2bb1f7816fc07bbd416f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701661"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562837"
 ---
 # <a name="bitset-class"></a>bitset-Klasse
 
@@ -112,7 +102,7 @@ Ein Bit ist festgelegt, wenn es den Wert 1 hat, und zurückgesetzt, wenn es den 
 
 |Operator|Beschreibung|
 |-|-|
-|[operator!=](#op_neq)|Überprüft ein `bitset`-Zielobjekt auf Ungleichheit mit einem angegebenen `bitset`-Objekt.|
+|[Operator!=](#op_neq)|Überprüft ein `bitset`-Zielobjekt auf Ungleichheit mit einem angegebenen `bitset`-Objekt.|
 |[operator&=](#op_and_eq)|Kombiniert zwei Bitmengen in einem logischen `AND`-Vorgang.|
 |[operator<<](#op_lshift)|Verschiebt die Bits in einem `bitset`-Objekt um eine angegebene Anzahl von Positionen nach links und gibt das Ergebnis in einem neuen `bitset`-Objekt zurück.|
 |[operator<<=](#op_lshift_eq)|Verschiebt die Bits in einem `bitset`-Objekt um eine angegebene Anzahl von Positionen nach links und gibt das Ergebnis im selben `bitset`-Objekt zurück.|

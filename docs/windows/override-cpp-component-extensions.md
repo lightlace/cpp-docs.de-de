@@ -1,5 +1,5 @@
 ---
-title: außer Kraft setzen (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
+title: außer Kraft setzen (C++ / CLI und C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 708b69bc63e59d8ba6ba882d894d6f17b59d8237
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1d97558dc50adc0bac8758d0821badff14707c04
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592368"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056138"
 ---
-# <a name="override--c-component-extensions"></a>override (Komponentenerweiterungen für C++)
+# <a name="override--ccli-and-ccx"></a>außer Kraft setzen (C++ / CLI und C++ / CX)
 
 Die **überschreiben** kontextbezogenes Schlüsselwort Gibt an, dass ein Member eines Typs eine Basisklasse oder einen Basisschnittstellenmember überschreibt.
 
@@ -55,7 +55,7 @@ struct X : public I1 {
 
 Das folgende Codebeispiel zeigt, dass **überschreiben** in Windows-Runtime-Kompilierungen verwendet werden kann.
 
-```cpp 
+```cpp
 // override_keyword_2.cpp
 // compile with: /ZW /c
 ref struct I1 {
@@ -93,5 +93,5 @@ Compileroption: `/clr`
 
 ## <a name="see-also"></a>Siehe auch
 
-[override-Bezeichner](../cpp/override-specifier.md)  
+[override-Bezeichner](../cpp/override-specifier.md)<br/>
 [Überschreibungsspezifizierer](../windows/override-specifiers-cpp-component-extensions.md)

@@ -1,10 +1,6 @@
 ---
-title: _snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _snprintf_s
 - _snprintf_s_l
@@ -35,8 +31,6 @@ f1_keywords:
 - snwprintf_s
 - sntprintf_s
 - sntprintf_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _snprintf_s_l function
 - _snwprintf_s_l function
@@ -52,16 +46,12 @@ helpviewer_keywords:
 - _snwprintf_s function
 - formatted text [C++]
 ms.assetid: 9336ab86-13e5-4a29-a3cd-074adfee6891
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f3744fc543cd5c478ffba01e3abca9b152145be6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5918ab1dd9b7108248e638f267ceb8757802231a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416438"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560029"
 ---
 # <a name="snprintfs-snprintfsl-snwprintfs-snwprintfsl"></a>_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l
 
@@ -122,7 +112,7 @@ int _snwprintf_s(
 Speicherort für die Ausgabe.
 
 *sizeOfBuffer*<br/>
-Die Größe des Speicherorts für die Ausgabe. Größe in **Bytes** für **_snprintf_s** oder Anzahl der **Wörter** für **_snwprintf_s**.
+Die Größe des Speicherorts für die Ausgabe. Größe in **Bytes** für **_snprintf_s** oder Größe in **Wörter** für **_snwprintf_s**.
 
 *count*<br/>
 Die maximale Anzahl der zu speichernden Zeichen oder [_TRUNCATE](../../c-runtime-library/truncate.md).
@@ -138,26 +128,26 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_snprintf_s** gibt die Anzahl der Zeichen, die in gespeicherten *Puffer*, das abschließende Null-Zeichen wird dabei nicht mitgezählt. **_snwprintf_s** gibt die Anzahl der Breitzeichen, die in gespeicherten *Puffer*, das abschließende null-Breitzeichen wird dabei nicht mitgezählt.
+**_snprintf_s** gibt die Anzahl der Zeichen, die in gespeicherten *Puffer*, das abschließende Null-Zeichen wird dabei nicht mitgezählt. **_snwprintf_s** gibt die Anzahl der gespeicherten Breitzeichen *Puffer*, das beendende null-Breitzeichen wird dabei nicht mitgezählt.
 
-Wenn der Speicher erforderlich, die zum Speichern der Daten und ein abschließendes Nullzeichen überschreitet *SizeOfBuffer*, Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die Ausführung nach dem Handler für ungültige Parameter fortgesetzt wird, legen diese Funktionen *Puffer* auf eine leere Zeichenfolge festgelegt **Errno** auf **ERANGE**, und geben-1 zurück.
+Überschreitet der Speicher zum Speichern von Daten und eines abschließenden Nullzeichens erforderlich *SizeOfBuffer*, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die Ausführung nach dem Handler für ungültige Parameter fortgesetzt werden soll, legen diese Funktionen *Puffer* auf eine leere Zeichenfolge festgelegt **Errno** zu **ERANGE**, und geben-1 zurück.
 
-Wenn *Puffer* oder *Format* ist ein **NULL** -Zeiger ist, oder wenn *Anzahl* ist kleiner als oder gleich 0 ist, wird der Handler für ungültige Parameter aufgerufen. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** auf **EINVAL** und geben-1 zurück.
+Wenn *Puffer* oder *Format* ist eine **NULL** -Zeiger ist, oder wenn *Anzahl* ist kleiner als oder gleich 0 (null), wird der Handler für ungültige Parameter aufgerufen. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EINVAL** und geben-1 zurück.
 
 Weitere Informationen über diese und andere Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_snprintf_s** Funktion formatiert und speichert *Anzahl* oder weniger Zeichen in *Puffer* und fügt ein abschließendes Nullzeichen. Jedes Argument (sofern vorhanden) konvertiert und ausgegeben wird, entsprechend der jeweiligen Formatangabe in *Format*. Die Formatierung ist konsistent mit der **Printf** Funktionsreihe; Siehe [Syntax der Formatangabe: printf- und Wprintf-Funktionen](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
+Die **_snprintf_s** -Funktion formatiert und speichert *Anzahl* oder weniger Zeichen in *Puffer* und fügt ein abschließendes Nullzeichen. Jedes Argument (sofern vorhanden) konvertiert und ausgegeben wird, entsprechend der jeweiligen Formatangabe in *Format*. Die Formatierung ist konsistent mit der **Printf** -Funktionsreihe, siehe [Syntax der Formatangabe: printf- und Wprintf-Funktionen](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
 
-Wenn *Anzahl* ist [_TRUNCATE](../../c-runtime-library/truncate.md), klicken Sie dann **_snprintf_s** Schreibvorgänge größtmöglicher Teil der Zeichenfolge wie groß *Puffer* lassen Platz für ein null wird beendet. Wenn die gesamte Zeichenfolge (mit dem abschließenden Nullzeichen) in passt *Puffer*, klicken Sie dann **_snprintf_s** gibt die Anzahl von Zeichen geschrieben (ohne das abschließende Nullzeichen); andernfalls **_snprintf_s**  gibt-1 zurück, um anzugeben, dass Daten abgeschnitten ist aufgetreten.
+Wenn *Anzahl* ist [_TRUNCATE](../../c-runtime-library/truncate.md), klicken Sie dann **_snprintf_s** Schreibvorgänge so großen Teil der Zeichenfolge wie passt *Puffer* ohne Beeinträchtigung der Platz für ein Beenden von null. Wenn die gesamte Zeichenfolge (mit abschließenden Nullzeichen) in passt *Puffer*, klicken Sie dann **_snprintf_s** gibt die Anzahl der Zeichen (einschließlich der nicht das abschließende Zeichen Null), die geschrieben; andernfalls **_snprintf_s**  zurückgibt, 1, um anzugeben, um ein Abschneiden ist aufgetreten.
 
 > [!IMPORTANT]
 > Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist.
 
-**_snwprintf_s** ist eine Breitzeichen-Version von **_snprintf_s**; die Zeigerargumente zu **_snwprintf_s** sind Zeichenfolgen mit Breitzeichen. Erkennung von Codierungsfehlern in **_snwprintf_s** unterscheiden sich von der in **_snprintf_s**. **_snwprintf_s**, z. B. **Swprintf_s**, schreibt die Ausgabe in eine Zeichenfolge anstatt an ein Ziel vom Typ **Datei**.
+**_snwprintf_s** ist eine Breitzeichen-Version von **_snprintf_s**; die Zeigerargumente zu **_snwprintf_s** sind Breitzeichen Zeichenfolgen. Erkennung von Codierungsfehlern in **_snwprintf_s** unterscheiden sich von der in **_snprintf_s**. **_snwprintf_s**, z. B. **Swprintf_s**, schreibt die Ausgabe in eine Zeichenfolge anstatt an ein Ziel vom Typ **Datei**.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschemaparameter, der übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas.
+Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
 
 In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -170,7 +160,7 @@ In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinf
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_snprintf_s**, **_snprintf_s_l**|\<stdio.h>|
 |**_snwprintf_s**, **_snwprintf_s_l**|\<stdio.h> oder \<wchar.h>|

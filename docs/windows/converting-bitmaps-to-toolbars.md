@@ -1,28 +1,17 @@
 ---
-title: Konvertieren von Bitmaps in Symbolleisten (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Konvertieren von Bitmaps in Symbolleisten (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - bitmaps [C++], converting to toolbars
 - Toolbar editor [C++], converting bitmaps
 - toolbars [C++], converting bitmaps
 ms.assetid: 971c181b-40f5-44be-843d-677a7c235667
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ed77f1df88bb3f3572c3ea819ffac5cb9a1f45b1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1b40d43ef756151a743bbee32cd74a3ee100194e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317226"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563604"
 ---
 # <a name="converting-bitmaps-to-toolbars-c"></a>Konvertieren von Bitmaps in Symbolleisten (C++)
 
@@ -51,5 +40,5 @@ MFC oder ATL
 
 ## <a name="see-also"></a>Siehe auch
 
-[Erstellen neuer Symbolleisten](../windows/creating-new-toolbars.md)  
+[Erstellen neuer Symbolleisten](../windows/creating-new-toolbars.md)<br/>
 [Symbolleisten-Editor](../windows/toolbar-editor.md)

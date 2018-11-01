@@ -1,10 +1,6 @@
 ---
-title: CSocketAddr-Klasse | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
+title: CSocketAddr-Klasse
+ms.date: 10/22/2018
 f1_keywords:
 - CSocketAddr
 - ATLSOCKET/ATL::CSocketAddr
@@ -14,21 +10,15 @@ f1_keywords:
 - ATLSOCKET/ATL::CSocketAddr::FindINET6Addr
 - ATLSOCKET/ATL::CSocketAddr::GetAddrInfo
 - ATLSOCKET/ATL::CSocketAddr::GetAddrInfoList
-dev_langs:
-- C++
 helpviewer_keywords:
 - CSocketAddr class
 ms.assetid: 2fb2d8a7-899e-4a36-a342-cc9f4fcdd68c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2c39ca72136db7c11e925f28cc3413a5f7b77002
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9ab0367d5a83096c1bb6e9166ee2b43fe2000ab4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040855"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570455"
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr-Klasse
 
@@ -62,7 +52,7 @@ class CSocketAddr
 
 Diese Klasse stellt eine IP-Version, dass unabhängig Ansatz für die Suche nach Adressen im Netzwerk für die Verwendung mit Windows sockets-API-Funktionen und Socket-Wrappern in Bibliotheken.
 
-Die Elemente dieser Klasse, die verwendet werden, um das Suchen der Adressen im Netzwerk verwenden Sie die Win32-API-Funktion [Getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo).
+Die Elemente dieser Klasse, die verwendet werden, um das Suchen der Adressen im Netzwerk verwenden Sie die Win32-API-Funktion [Getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo). Die ANSI- oder Unicode-Version der Funktion wird aufgerufen, je nachdem, ob der Code für ANSI- oder UNICODE kompiliert wird.
 
 Diese Klasse unterstützt sowohl IPv4-Netzwerkadressen, andIPv6.
 
@@ -88,15 +78,15 @@ Rufen Sie diese Methode, um die angegebene Hostname in die Adresse des Hosts zu 
 
 ```
 int FindAddr(
-    const char *szHost,
-    const char *szPortOrServiceName,
+    const TCHAR *szHost,
+    const TCHAR *szPortOrServiceName,
     int flags,
     int addr_family,
     int sock_type,
     int ai_proto);
 
 int FindAddr(
-    const char *szHost,
+    const TCHAR *szHost,
     int nPortNo,
     int flags,
     int addr_family,
@@ -141,10 +131,10 @@ Rufen Sie diese Methode, um den Namen des IPv4-Hosts in die Adresse des Hosts zu
 
 ```
 int FindINET4Addr(
-    const char *szHost,
+    const TCHAR *szHost,
     int nPortNo,
-    int flags,
-    int sock_type,);
+    int flags = 0,
+    int sock_type = SOCK_STREAM);
 ```
 
 ### <a name="parameters"></a>Parameter
@@ -175,10 +165,10 @@ Rufen Sie diese Methode, um den Namen des IPv6-Hosts in die Adresse des Hosts zu
 
 ```
 int FindINET6Addr(
-    const char *szHost,
+    const TCHAR *szHost,
     int nPortNo,
-    int flags,
-    int sock_type,);
+    int flags = 0,
+    int sock_type = SOCK_STREAM);
 ```
 
 ### <a name="parameters"></a>Parameter
@@ -208,7 +198,7 @@ Diese Methode ruft die Win32-API-Funktion [Getaddrinfo](/windows/desktop/api/ws2
 Rufen Sie diese Methode, um die Rückgabe eines Zeigers auf ein bestimmtes Element in der `addrinfo` Liste.
 
 ```
-addrinfo* const GetAddrInfoint nIndex = 0) const;
+addrinfo* const GetAddrInfo(int nIndex = 0) const;
 ```
 
 ### <a name="parameters"></a>Parameter

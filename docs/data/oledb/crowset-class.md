@@ -1,10 +1,6 @@
 ---
-title: CRowset-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: CRowset-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: reference
 f1_keywords:
 - ATL.CRowset<TAccessor>
 - CRowset
@@ -215,8 +211,6 @@ f1_keywords:
 - ATL::CRowset<TAccessor>::UpdateAll
 - CRowset<TAccessor>::UpdateAll
 - ATL::CRowset::UpdateAll
-dev_langs:
-- C++
 helpviewer_keywords:
 - CRowset class
 - AddRefRows method
@@ -244,709 +238,704 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: e99ba311251b1759e947a3739016718ae30ef2e5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6af7b30ef7055fbf5b3c998dba6f3b84d0129c31
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092166"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543064"
 ---
 # <a name="crowset-class"></a>CRowset-Klasse
 
-Kapselt ein OLE DB-Rowset-Objekt, und einige im Zusammenhang Schnittstellen und bietet Methoden für die Rowsetdaten bearbeiten.  
-  
+Kapselt ein OLE DB-Rowset-Objekt, und einige im Zusammenhang Schnittstellen und bietet Methoden für die Rowsetdaten bearbeiten.
+
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-template <class TAccessor = CAccessorBase>  
-class CRowset  
-```  
-  
-### <a name="parameters"></a>Parameter  
+template <class TAccessor = CAccessorBase>
+class CRowset
+```
+
+### <a name="parameters"></a>Parameter
 
 *TAccessor*<br/>
-Ein Accessor-Klasse. Die Standardeinstellung ist `CAccessorBase`.  
-  
-## <a name="requirements"></a>Anforderungen  
+Ein Accessor-Klasse. Die Standardeinstellung ist `CAccessorBase`.
 
-**Header:** atldbcli.h  
+## <a name="requirements"></a>Anforderungen
 
-## <a name="members"></a>Member  
-  
-### <a name="methods"></a>Methoden  
-  
-|||  
-|-|-|  
-|[AddRefRows](#addrefrows)|Inkrementiert der Verweiszähler fest, die der aktuellen Zeile zugeordnet ist.|  
-|[Schließen](#close)|Versionen von Zeilen und der aktuelle `IRowset` Schnittstelle.|  
-|[Compare](#compare)|Vergleicht zwei Lesezeichen mit [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539\(v=vs.85\)).|  
-|[CRowset](#crowset)|Erstellt ein neues `CRowset` -Objekt und ordnet sie (optional) eine `IRowset` Schnittstelle, die als Parameter übergeben.|  
-|[Löschen](#delete)|Löscht Zeilen aus dem Rowset mit [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)).|  
-|[FindNextRow](#findnextrow)|Sucht nach der nächsten Zeile nach dem angegebenen Lesezeichen.|  
-|[GetApproximatePosition](#getapproximateposition)|Gibt die ungefähre Position eine Zeile zu einem Lesezeichen zurück.|  
-|[GetData](#getdata)|Ruft Daten aus der Zeile des Rowsets ab.|  
-|[GetDataHere](#getdatahere)|Ruft Daten aus dem angegebenen Puffer ab.|  
-|[GetOriginalData](#getoriginaldata)|Ruft ab, die Daten zuletzt von abgerufen oder übertragen mit der Datenquelle, die ausstehende Änderungen werden ignoriert.|  
-|[GetRowStatus](#getrowstatus)|Der Status aller Zeilen zurückgegeben.|  
-|[Einfügen](#insert)|Erstellt und fügt eine neue Zeile mit [IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921\(v=vs.85\)).|  
-|[IsSameRow](#issamerow)|Vergleicht die angegebene Zeile mit der aktuellen Zeile.|  
-|[MoveFirst](#movefirst)|Positioniert den weiter-Fetch-Speicherort auf die ursprüngliche Position.|  
-|[MoveLast](#movelast)|Wechselt zum letzten Datensatz.|  
-|[MoveNext](#movenext)|Ruft Daten aus der nächsten sequenziellen Zeile oder eine angegebene Anzahl von Positionen nach der nächsten Zeile ab.|  
-|[MovePrev](#moveprev)|Wechselt zum vorherigen Datensatz.|  
-|[MoveToBookmark](#movetobookmark)|Ruft die Zeile, die durch ein Lesezeichen markiert oder auf die Zeile an einem angegebenen Offset aus diesem Lesezeichen ab.|  
-|[MoveToRatio](#movetoratio)|Ruft Zeilen ab der ein Bruchteil Ausgangsposition im Rowset ab.|  
-|[ReleaseRows](#releaserows)|Aufrufe [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) zum Freigeben des Handles der aktuellen Zeile.|  
-|[SetData](#setdata)|Legt Datenwerte in einer oder mehreren Spalten einer Zeile mit [IRowsetChange:SetData](/previous-versions/windows/desktop/ms721232\(v=vs.85\)).|  
-|[Rückgängig machen](#undo)|Macht alle Änderungen, die auf eine Zeile seit der letzten Fetch oder [Update](../../data/oledb/crowset-update.md).|  
-|[Update (Aktualisieren)](#update)|Sendet alle ausstehenden Änderungen an der aktuellen Zeile seit der letzten Fetch oder aktualisieren.|  
-|[UpdateAll](#updateall)|Sendet alle ausstehenden Änderungen, die seit der letzten Fetch oder ein Update auf alle Zeilen.|  
-  
-## <a name="remarks"></a>Hinweise  
+**Header:** atldbcli.h
 
-In der OLE DB ist ein Rowset für das Objekt über dem ein Programm, legt sie fest, und ruft Daten ab.  
-  
-Diese Klasse ist nicht vorgesehen, werden instanziiert, sondern stattdessen als einen Vorlagenparameter übergeben `CTable` oder `CCommand` (`CRowset` ist die Standardeinstellung).  
+## <a name="members"></a>Member
+
+### <a name="methods"></a>Methoden
+
+|||
+|-|-|
+|[AddRefRows](#addrefrows)|Inkrementiert der Verweiszähler fest, die der aktuellen Zeile zugeordnet ist.|
+|[Schließen](#close)|Versionen von Zeilen und der aktuelle `IRowset` Schnittstelle.|
+|[Compare](#compare)|Vergleicht zwei Lesezeichen mit [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539).|
+|[CRowset](#crowset)|Erstellt ein neues `CRowset` -Objekt und ordnet sie (optional) eine `IRowset` Schnittstelle, die als Parameter übergeben.|
+|[Löschen](#delete)|Löscht Zeilen aus dem Rowset mit [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)).|
+|[FindNextRow](#findnextrow)|Sucht nach der nächsten Zeile nach dem angegebenen Lesezeichen.|
+|[GetApproximatePosition](#getapproximateposition)|Gibt die ungefähre Position eine Zeile zu einem Lesezeichen zurück.|
+|[GetData](#getdata)|Ruft Daten aus der Zeile des Rowsets ab.|
+|[GetDataHere](#getdatahere)|Ruft Daten aus dem angegebenen Puffer ab.|
+|[GetOriginalData](#getoriginaldata)|Ruft ab, die Daten zuletzt von abgerufen oder übertragen mit der Datenquelle, die ausstehende Änderungen werden ignoriert.|
+|[GetRowStatus](#getrowstatus)|Der Status aller Zeilen zurückgegeben.|
+|[Einfügen](#insert)|Erstellt und fügt eine neue Zeile mit [IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921).|
+|[IsSameRow](#issamerow)|Vergleicht die angegebene Zeile mit der aktuellen Zeile.|
+|[MoveFirst](#movefirst)|Positioniert den weiter-Fetch-Speicherort auf die ursprüngliche Position.|
+|[MoveLast](#movelast)|Wechselt zum letzten Datensatz.|
+|[MoveNext](#movenext)|Ruft Daten aus der nächsten sequenziellen Zeile oder eine angegebene Anzahl von Positionen nach der nächsten Zeile ab.|
+|[MovePrev](#moveprev)|Wechselt zum vorherigen Datensatz.|
+|[MoveToBookmark](#movetobookmark)|Ruft die Zeile, die durch ein Lesezeichen markiert oder auf die Zeile an einem angegebenen Offset aus diesem Lesezeichen ab.|
+|[MoveToRatio](#movetoratio)|Ruft Zeilen ab der ein Bruchteil Ausgangsposition im Rowset ab.|
+|[ReleaseRows](#releaserows)|Aufrufe [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771) zum Freigeben des Handles der aktuellen Zeile.|
+|[SetData](#setdata)|Legt Datenwerte in einer oder mehreren Spalten einer Zeile mit [IRowsetChange:SetData](/previous-versions/windows/desktop/ms721232).|
+|[Rückgängig machen](#undo)|Macht alle Änderungen, die auf eine Zeile seit der letzten Fetch oder [Update](../../data/oledb/crowset-update.md).|
+|[Update (Aktualisieren)](#update)|Sendet alle ausstehenden Änderungen an der aktuellen Zeile seit der letzten Fetch oder aktualisieren.|
+|[UpdateAll](#updateall)|Sendet alle ausstehenden Änderungen, die seit der letzten Fetch oder ein Update auf alle Zeilen.|
+
+## <a name="remarks"></a>Hinweise
+
+In der OLE DB ist ein Rowset für das Objekt über dem ein Programm, legt sie fest, und ruft Daten ab.
+
+Diese Klasse ist nicht vorgesehen, werden instanziiert, sondern stattdessen als einen Vorlagenparameter übergeben `CTable` oder `CCommand` (`CRowset` ist die Standardeinstellung).
 
 ## <a name="addrefrows"></a> CRowset:: Addrefrows
 
-Aufrufe [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) zugeordnet mit dem Zeilenhandle der aktuellen (durch eine) der Verweiszähler inkrementiert werden soll.  
-  
-### <a name="syntax"></a>Syntax  
-  
+Aufrufe [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) zugeordnet mit dem Zeilenhandle der aktuellen (durch eine) der Verweiszähler inkrementiert werden soll.
+
+### <a name="syntax"></a>Syntax
+
 ```cpp
-HRESULT AddRefRows() throw();  
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
+HRESULT AddRefRows() throw();
+```
 
-Ein standard-HRESULT.  
-  
-### <a name="remarks"></a>Hinweise  
+### <a name="return-value"></a>Rückgabewert
 
-Diese Methode inkrementiert den Verweiszähler für das aktuelle Zeilenhandle. Rufen Sie [ReleaseRows](../../data/oledb/crowset-releaserows.md) um die Anzahl der zu verringern. Die Move-Methoden zurückgegebene Zeilen haben einen Verweiszähler eines.  
+Ein standard-HRESULT.
+
+### <a name="remarks"></a>Hinweise
+
+Diese Methode inkrementiert den Verweiszähler für das aktuelle Zeilenhandle. Rufen Sie [ReleaseRows](../../data/oledb/crowset-releaserows.md) um die Anzahl der zu verringern. Die Move-Methoden zurückgegebene Zeilen haben einen Verweiszähler eines.
 
 ## <a name="close"></a> CRowset:: Close
 
-Versionen von Zeilen und der aktuelle [IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\)) Schnittstelle.  
-  
-### <a name="syntax"></a>Syntax  
-  
-```cpp
-void Close() throw();  
-```  
-  
-### <a name="remarks"></a>Hinweise  
+Versionen von Zeilen und der aktuelle [IRowset](/previous-versions/windows/desktop/ms720986) Schnittstelle.
 
-Diese Methode gibt alle Zeilen im Rowset frei.  
+### <a name="syntax"></a>Syntax
+
+```cpp
+void Close() throw();
+```
+
+### <a name="remarks"></a>Hinweise
+
+Diese Methode gibt alle Zeilen im Rowset frei.
 
 ## <a name="compare"></a> CRowset:: Compare
 
-Vergleicht zwei Lesezeichen mit [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539\(v=vs.85\)).  
-  
-### <a name="syntax"></a>Syntax  
-  
+Vergleicht zwei Lesezeichen mit [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539).
+
+### <a name="syntax"></a>Syntax
+
 ```cpp
-HRESULT Compare(const CBookmarkBase& bookmark1,   
-   const CBookmarkBase& bookmark2,   
-   DBCOMPARE* pComparison) const throw();  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+HRESULT Compare(const CBookmarkBase& bookmark1, 
+   const CBookmarkBase& bookmark2, 
+   DBCOMPARE* pComparison) const throw();
+```
+
+#### <a name="parameters"></a>Parameter
 
 *Bookmark1*<br/>
-[in] Das erste zu vergleichende Lesezeichen.  
-  
+[in] Das erste zu vergleichende Lesezeichen.
+
 *Bookmark2*<br/>
-[in] Das zweite zu vergleichende Lesezeichen.  
-  
+[in] Das zweite zu vergleichende Lesezeichen.
+
 *pComparison*<br/>
-[out] Ein Zeiger auf das Ergebnis des Vergleichs.  
-  
-### <a name="return-value"></a>Rückgabewert  
+[out] Ein Zeiger auf das Ergebnis des Vergleichs.
 
-Ein standard-HRESULT.  
-  
-### <a name="remarks"></a>Hinweise  
+### <a name="return-value"></a>Rückgabewert
 
-Diese Methode erfordert die optionale Schnittstelle `IRowsetLocate`, ist der Fall, die für alle Anbieter, wenn diese möglicherweise nicht unterstützt wird, wird die Methode, wird E_NOINTERFACE zurückgegeben. Sie müssen auch festlegen, `DBPROP_IRowsetLocate` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält.  
-  
-Weitere Informationen zur Verwendung von Lesezeichen im Consumer, finden Sie unter [mithilfe von Lesezeichen](../../data/oledb/using-bookmarks.md).  
+Ein standard-HRESULT.
+
+### <a name="remarks"></a>Hinweise
+
+Diese Methode erfordert die optionale Schnittstelle `IRowsetLocate`, ist der Fall, die für alle Anbieter, wenn diese möglicherweise nicht unterstützt wird, wird die Methode, wird E_NOINTERFACE zurückgegeben. Sie müssen auch festlegen, `DBPROP_IRowsetLocate` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält.
+
+Weitere Informationen zur Verwendung von Lesezeichen im Consumer, finden Sie unter [mithilfe von Lesezeichen](../../data/oledb/using-bookmarks.md).
 
 ## <a name="crowset"></a> CRowset:: CRowset
 
-Erstellt ein neues `CRowset` -Objekt und ordnet sie (optional) eine [IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\)) Schnittstelle, die als Parameter übergeben.  
-  
-### <a name="syntax"></a>Syntax  
-  
-```cpp
-CRowset();   
+Erstellt ein neues `CRowset` -Objekt und ordnet sie (optional) eine [IRowset](/previous-versions/windows/desktop/ms720986) Schnittstelle, die als Parameter übergeben.
 
-CRowset(IRowset* pRowset);  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+### <a name="syntax"></a>Syntax
+
+```cpp
+CRowset(); 
+
+CRowset(IRowset* pRowset);
+```
+
+#### <a name="parameters"></a>Parameter
 
 *pRowset*<br/>
-[in] Ein Zeiger auf ein `IRowset` Schnittstelle mit dieser Klasse zugeordnet werden soll.  
+[in] Ein Zeiger auf ein `IRowset` Schnittstelle mit dieser Klasse zugeordnet werden soll.
 
 ## <a name="delete"></a> CRowset:: Delete
 
-Aufrufe [IRowsetChange:: DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)) auf die aktuelle Zeile aus dem Rowset gelöscht.  
-  
-### <a name="syntax"></a>Syntax  
-  
-```cpp
-HRESULT Delete() const throw();  
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
+Aufrufe [IRowsetChange:: DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)) auf die aktuelle Zeile aus dem Rowset gelöscht.
 
-Ein standard-HRESULT.  
+### <a name="syntax"></a>Syntax
+
+```cpp
+HRESULT Delete() const throw();
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein standard-HRESULT.
 
 ## <a name="findnextrow"></a> CRowset:: FindNextRow
 
-Sucht nach der nächsten Zeile nach dem angegebenen Lesezeichen.  
-  
-### <a name="syntax"></a>Syntax  
-  
+Sucht nach der nächsten Zeile nach dem angegebenen Lesezeichen.
+
+### <a name="syntax"></a>Syntax
+
 ```cpp
-HRESULT FindNextRow(DBCOMPAREOP op,   
-   BYTE* pData,   
-   DBTYPE wType,   
-   DBLENGTH nLength,   
-   BYTE bPrecision,   
-   BYTE bScale,   
-   BOOL bSkipCurrent = TRUE,   
-   CBookmarkBase* pBookmark = NULL) throw();  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+HRESULT FindNextRow(DBCOMPAREOP op, 
+   BYTE* pData, 
+   DBTYPE wType, 
+   DBLENGTH nLength, 
+   BYTE bPrecision, 
+   BYTE bScale, 
+   BOOL bSkipCurrent = TRUE, 
+   CBookmarkBase* pBookmark = NULL) throw();
+```
+
+#### <a name="parameters"></a>Parameter
 
 *op*<br/>
-[in] Der Vorgang zum Vergleichen von Zeilenwerten verwenden. Werte, finden Sie unter [irowsetfind:: FindNextRow](/previous-versions/windows/desktop/ms723091\(v=vs.85\)).  
-  
+[in] Der Vorgang zum Vergleichen von Zeilenwerten verwenden. Werte, finden Sie unter [irowsetfind:: FindNextRow](/previous-versions/windows/desktop/ms723091).
+
 *pData*<br/>
-[in] Ein Zeiger auf den Wert, der zugeordnet werden.  
-  
+[in] Ein Zeiger auf den Wert, der zugeordnet werden.
+
 *wType*<br/>
-[in] Gibt an, der den Datentyp des Value-Teil des Puffers. Informationen zu typindikatoren, finden Sie unter [Datentypen](/previous-versions/windows/desktop/ms723969\(v=vs.85\)) in die *OLE DB-Programmierreferenz* im Windows SDK.  
-  
+[in] Gibt an, der den Datentyp des Value-Teil des Puffers. Informationen zu typindikatoren, finden Sie unter [Datentypen](/previous-versions/windows/desktop/ms723969) in die *OLE DB-Programmierreferenz* im Windows SDK.
+
 *nLength*<br/>
-[in] Die Länge in Bytes der Consumer-Datenstruktur, die für den Datenwert zugeordnet. Weitere Informationen finden Sie unter der Beschreibung der `cbMaxLen` in [DBBINDING-Strukturen](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) in die *OLE DB-Programmiererreferenz.*  
-  
+[in] Die Länge in Bytes der Consumer-Datenstruktur, die für den Datenwert zugeordnet. Weitere Informationen finden Sie unter der Beschreibung der `cbMaxLen` in [DBBINDING-Strukturen](/previous-versions/windows/desktop/ms716845) in die *OLE DB-Programmiererreferenz.*
+
 *bPrecision*<br/>
-[in] Die maximale Genauigkeit, die beim Abrufen von Daten verwendet wird. Nur verwendet werden, wenn *wType* DBTYPE_NUMERIC ist. Weitere Informationen finden Sie unter [Konvertierungen, die im Zusammenhang mit DBTYPE_NUMERIC oder DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
-  
+[in] Die maximale Genauigkeit, die beim Abrufen von Daten verwendet wird. Nur verwendet werden, wenn *wType* DBTYPE_NUMERIC ist. Weitere Informationen finden Sie unter [Konvertierungen, die im Zusammenhang mit DBTYPE_NUMERIC oder DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714) in die *OLE DB-Programmierreferenz*.
+
 *bScale*<br/>
-[in] Die Skalierung, die beim Abrufen von Daten verwendet. Nur verwendet werden, wenn *wType* DBTYPE_NUMERIC oder DBTYPE_DECIMAL ist. Weitere Informationen finden Sie unter [Konvertierungen, die im Zusammenhang mit DBTYPE_NUMERIC oder DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
-  
+[in] Die Skalierung, die beim Abrufen von Daten verwendet. Nur verwendet werden, wenn *wType* DBTYPE_NUMERIC oder DBTYPE_DECIMAL ist. Weitere Informationen finden Sie unter [Konvertierungen, die im Zusammenhang mit DBTYPE_NUMERIC oder DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714) in die *OLE DB-Programmierreferenz*.
+
 *bSkipCurrent*<br/>
-[in] Die Anzahl der Zeilen aus das Lesezeichen, an dem eine Suche zu beginnen.  
-  
+[in] Die Anzahl der Zeilen aus das Lesezeichen, an dem eine Suche zu beginnen.
+
 *pBookmark*<br/>
-[in] Das Lesezeichen für die Position, an dem mit eine Suche begonnen werden soll.  
-  
-### <a name="return-value"></a>Rückgabewert  
+[in] Das Lesezeichen für die Position, an dem mit eine Suche begonnen werden soll.
 
-Ein standard-HRESULT.  
-  
-### <a name="remarks"></a>Hinweise  
+### <a name="return-value"></a>Rückgabewert
 
-Diese Methode erfordert die optionale Schnittstelle `IRowsetFind`, ist der Fall, die für alle Anbieter, wenn diese möglicherweise nicht unterstützt wird, wird die Methode, wird E_NOINTERFACE zurückgegeben. Sie müssen auch festlegen, `DBPROP_IRowsetFind` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält.  
-  
-Weitere Informationen zur Verwendung von Lesezeichen im Consumer, finden Sie unter [mithilfe von Lesezeichen](../../data/oledb/using-bookmarks.md).  
+Ein standard-HRESULT.
+
+### <a name="remarks"></a>Hinweise
+
+Diese Methode erfordert die optionale Schnittstelle `IRowsetFind`, ist der Fall, die für alle Anbieter, wenn diese möglicherweise nicht unterstützt wird, wird die Methode, wird E_NOINTERFACE zurückgegeben. Sie müssen auch festlegen, `DBPROP_IRowsetFind` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält.
+
+Weitere Informationen zur Verwendung von Lesezeichen im Consumer, finden Sie unter [mithilfe von Lesezeichen](../../data/oledb/using-bookmarks.md).
 
 ## <a name="getapproximateposition"></a> CRowset:: Getapproximateposition
 
-Gibt die ungefähre Position eine Zeile zu einem Lesezeichen zurück.  
-  
-### <a name="syntax"></a>Syntax  
-  
+Gibt die ungefähre Position eine Zeile zu einem Lesezeichen zurück.
+
+### <a name="syntax"></a>Syntax
+
 ```cpp
-HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark,   
-   DBCOUNTITEM* pPosition,   
-   DBCOUNTITEM* pcRows) throw();  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark, 
+   DBCOUNTITEM* pPosition, 
+   DBCOUNTITEM* pcRows) throw();
+```
+
+#### <a name="parameters"></a>Parameter
 
 *pBookmark*<br/>
-[in] Ein Zeiger auf ein Lesezeichen, das die Zeile identifiziert, dessen Position gesucht wird. NULL, wenn nur die Anzahl der Zeilen erforderlich ist.  
-  
+[in] Ein Zeiger auf ein Lesezeichen, das die Zeile identifiziert, dessen Position gesucht wird. NULL, wenn nur die Anzahl der Zeilen erforderlich ist.
+
 *pPosition*<br/>
-[out] Ein Zeiger auf den Speicherort, in denen `GetApproximatePosition` gibt die Position der Zeile zurück. NULL, wenn die Position nicht erforderlich ist.  
-  
+[out] Ein Zeiger auf den Speicherort, in denen `GetApproximatePosition` gibt die Position der Zeile zurück. NULL, wenn die Position nicht erforderlich ist.
+
 *pcRows*<br/>
-[out] Ein Zeiger auf den Speicherort, in denen `GetApproximatePosition` gibt die Gesamtzahl der Zeilen zurück. NULL, wenn die Anzahl der Zeilen nicht erforderlich ist.  
-  
-### <a name="return-value"></a>Rückgabewert  
+[out] Ein Zeiger auf den Speicherort, in denen `GetApproximatePosition` gibt die Gesamtzahl der Zeilen zurück. NULL, wenn die Anzahl der Zeilen nicht erforderlich ist.
 
-Ein standard-HRESULT.  
-  
-### <a name="remarks"></a>Hinweise  
+### <a name="return-value"></a>Rückgabewert
 
-Diese Methode erfordert die optionale Schnittstelle `IRowsetScroll`, ist der Fall, die für alle Anbieter, wenn diese möglicherweise nicht unterstützt wird, wird die Methode, wird E_NOINTERFACE zurückgegeben. Sie müssen auch festlegen, `DBPROP_IRowsetScroll` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält.  
-  
-Weitere Informationen zur Verwendung von Lesezeichen im Consumer, finden Sie unter [mithilfe von Lesezeichen](../../data/oledb/using-bookmarks.md).  
+Ein standard-HRESULT.
+
+### <a name="remarks"></a>Hinweise
+
+Diese Methode erfordert die optionale Schnittstelle `IRowsetScroll`, ist der Fall, die für alle Anbieter, wenn diese möglicherweise nicht unterstützt wird, wird die Methode, wird E_NOINTERFACE zurückgegeben. Sie müssen auch festlegen, `DBPROP_IRowsetScroll` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält.
+
+Weitere Informationen zur Verwendung von Lesezeichen im Consumer, finden Sie unter [mithilfe von Lesezeichen](../../data/oledb/using-bookmarks.md).
 
 ## <a name="getdata"></a> CRowset:: GetData
 
-Ruft Daten aus der Zeile des Rowsets ab.  
-  
-### <a name="syntax"></a>Syntax  
-  
-```cpp
-HRESULT GetData() throw();   
+Ruft Daten aus der Zeile des Rowsets ab.
 
-HRESULT GetData(int nAccessor) throw();  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+### <a name="syntax"></a>Syntax
+
+```cpp
+HRESULT GetData() throw(); 
+
+HRESULT GetData(int nAccessor) throw();
+```
+
+#### <a name="parameters"></a>Parameter
 
 *nAccessor*<br/>
-[in] Die Indexnummer des (0 (null)-Offset) des Accessors, für den Zugriff auf die Daten verwenden.  
-  
-### <a name="return-value"></a>Rückgabewert  
+[in] Die Indexnummer des (0 (null)-Offset) des Accessors, für den Zugriff auf die Daten verwenden.
 
-Ein standard-HRESULT.  
-  
-### <a name="remarks"></a>Hinweise  
+### <a name="return-value"></a>Rückgabewert
 
-Wenn Sie einen Accessor angeben, die keinen Autoaccessor in [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md), verwenden Sie diese Methode, um die Daten durch Übergeben der Anzahl der Accessor explizit zu erhalten.  
+Ein standard-HRESULT.
+
+### <a name="remarks"></a>Hinweise
+
+Wenn Sie einen Accessor angeben, die keinen Autoaccessor in [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md), verwenden Sie diese Methode, um die Daten durch Übergeben der Anzahl der Accessor explizit zu erhalten.
 
 ## <a name="getdatahere"></a> CRowset:: GetDataHere
 
-Ruft Daten aus der aktuellen Zeile ab, und setzt es in den angegebenen Puffer.  
-  
-### <a name="syntax"></a>Syntax  
-  
+Ruft Daten aus der aktuellen Zeile ab, und setzt es in den angegebenen Puffer.
+
+### <a name="syntax"></a>Syntax
+
 ```cpp
-HRESULT GetDataHere(int nAccessor,   
-   void* pBuffer) throw();  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+HRESULT GetDataHere(int nAccessor, 
+   void* pBuffer) throw();
+```
+
+#### <a name="parameters"></a>Parameter
 
 *nAccessor*<br/>
-[in] Die Indexnummer des Accessors, für den Zugriff auf die Daten verwendet werden soll.  
-  
-*pBuffer*<br/>
-[out] Ein Puffer, in dem die Daten für den aktuellen Datensatz platziert werden soll.  
-  
-### <a name="return-value"></a>Rückgabewert  
+[in] Die Indexnummer des Accessors, für den Zugriff auf die Daten verwendet werden soll.
 
-Ein standard-HRESULT.  
-  
-### <a name="remarks"></a>Hinweise  
+*pBuffer*<br/>
+[out] Ein Puffer, in dem die Daten für den aktuellen Datensatz platziert werden soll.
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein standard-HRESULT.
+
+### <a name="remarks"></a>Hinweise
 
 Ein Beispiel dafür, wie Sie diese Funktion verwenden, finden Sie die [MultiRead-Beispiel](../../visual-cpp-samples.md).
 
 ## <a name="getoriginaldata"></a> CRowset:: Getoriginaldata
 
-Aufrufe `IRowsetUpdate::GetOriginalData` zum Abrufen der Daten, die zuletzt von abgerufen oder an die Datenquelle übertragen.  
-  
-### <a name="syntax"></a>Syntax  
-  
+Aufrufe `IRowsetUpdate::GetOriginalData` zum Abrufen der Daten, die zuletzt von abgerufen oder an die Datenquelle übertragen.
+
+### <a name="syntax"></a>Syntax
+
 ```cpp
-HRESULT GetOriginalData() throw();  
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
+HRESULT GetOriginalData() throw();
+```
 
-Ein standard-HRESULT.  
-  
-### <a name="remarks"></a>Hinweise  
+### <a name="return-value"></a>Rückgabewert
 
-Diese Methode ruft die Daten aus den zuletzt abgerufen oder übertragen werden, mit der Datenquelle ab; Werte, die basierend auf ausstehende Änderungen werden nicht abgerufen werden.  
-  
-Diese Methode erfordert die optionale Schnittstelle `IRowsetUpdate`, ist der Fall, die für alle Anbieter, wenn diese möglicherweise nicht unterstützt wird, wird die Methode, wird E_NOINTERFACE zurückgegeben. Sie müssen auch festlegen, `DBPROP_IRowsetUpdate` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält. 
+Ein standard-HRESULT.
+
+### <a name="remarks"></a>Hinweise
+
+Diese Methode ruft die Daten aus den zuletzt abgerufen oder übertragen werden, mit der Datenquelle ab; Werte, die basierend auf ausstehende Änderungen werden nicht abgerufen werden.
+
+Diese Methode erfordert die optionale Schnittstelle `IRowsetUpdate`, ist der Fall, die für alle Anbieter, wenn diese möglicherweise nicht unterstützt wird, wird die Methode, wird E_NOINTERFACE zurückgegeben. Sie müssen auch festlegen, `DBPROP_IRowsetUpdate` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält.
 
 ## <a name="getrowstatus"></a> CRowset:: GetRowStatus
 
-Der Status aller Zeilen zurückgegeben.  
-  
-### <a name="syntax"></a>Syntax  
-  
+Der Status aller Zeilen zurückgegeben.
+
+### <a name="syntax"></a>Syntax
+
 ```cpp
-HRESULT GetRowStatus(DBPENDINGSTATUS* pStatus) const throw();  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+HRESULT GetRowStatus(DBPENDINGSTATUS* pStatus) const throw();
+```
+
+#### <a name="parameters"></a>Parameter
 
 *pStatus*<br/>
-[out] Ein Zeiger auf einen Speicherort, in denen `GetRowStatus` gibt den Statuswert zurück. Finden Sie unter DBPENDINGSTATUS in der OLE DB Programmer's Reference.  
-  
-### <a name="return-value"></a>Rückgabewert  
+[out] Ein Zeiger auf einen Speicherort, in denen `GetRowStatus` gibt den Statuswert zurück. Finden Sie unter DBPENDINGSTATUS in der OLE DB Programmer's Reference.
 
-Ein standard-HRESULT.  
-  
-### <a name="remarks"></a>Hinweise  
+### <a name="return-value"></a>Rückgabewert
 
-Diese Methode erfordert die optionale Schnittstelle `IRowsetUpdate`, ist der Fall, die für alle Anbieter, wenn diese möglicherweise nicht unterstützt wird, wird die Methode, wird E_NOINTERFACE zurückgegeben. Sie müssen auch festlegen, `DBPROP_IRowsetUpdate` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält.   
+Ein standard-HRESULT.
+
+### <a name="remarks"></a>Hinweise
+
+Diese Methode erfordert die optionale Schnittstelle `IRowsetUpdate`, ist der Fall, die für alle Anbieter, wenn diese möglicherweise nicht unterstützt wird, wird die Methode, wird E_NOINTERFACE zurückgegeben. Sie müssen auch festlegen, `DBPROP_IRowsetUpdate` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält.
 
 ## <a name="insert"></a> CRowset:: Insert
 
-Erstellt und initialisiert eine neue Zeile mit Daten aus der Zugriffsmethode.  
-  
-### <a name="syntax"></a>Syntax  
-  
+Erstellt und initialisiert eine neue Zeile mit Daten aus der Zugriffsmethode.
+
+### <a name="syntax"></a>Syntax
+
 ```cpp
-HRESULT Insert(int nAccessor = 0,   
-   bool bGetHRow = false) throw();  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+HRESULT Insert(int nAccessor = 0, 
+   bool bGetHRow = false) throw();
+```
+
+#### <a name="parameters"></a>Parameter
 
 *nAccessor*<br/>
-[in] Die Anzahl der Accessor für das Einfügen von Daten verwenden.  
-  
+[in] Die Anzahl der Accessor für das Einfügen von Daten verwenden.
+
 *bGetHRow*<br/>
-[in] Gibt an, ob das Handle für die eingefügte Zeile abgerufen wird.  
-  
-### <a name="return-value"></a>Rückgabewert  
+[in] Gibt an, ob das Handle für die eingefügte Zeile abgerufen wird.
 
-Ein standard-HRESULT.  
-  
-### <a name="remarks"></a>Hinweise  
+### <a name="return-value"></a>Rückgabewert
 
-Diese Methode erfordert die optionale Schnittstelle `IRowsetChange`, ist der Fall, die für alle Anbieter, wenn diese möglicherweise nicht unterstützt wird, wird die Methode, wird E_NOINTERFACE zurückgegeben. Sie müssen auch festlegen, `DBPROP_IRowsetChange` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält.  
-  
-INSERT kann fehlschlagen, wenn eine oder mehrere Spalten ist nicht beschreibbar. Ändern Sie die Cursorzuordnung, um diesen Fehler zu beheben.  
-  
-### <a name="example"></a>Beispiel  
+Ein standard-HRESULT.
 
-Das folgende Beispiel zeigt, wie Sie auf eine Datenquelle zugreifen, bis ein Rowset aus, und fügen Sie dann eine Zeichenfolge, die Verwendung einer Tabelle in dieses Rowset besitzt.  
-  
-Erstellen Sie zunächst eine Tabellenklasse, durch Einfügen eines neuen ATL-Objekts in Ihr Projekt. Beispielsweise mit der rechten Maustaste in des Projekts im Bereich "Arbeitsbereich", und wählen Sie **neue ATL-Objekt**. Von der **Datenzugriff** Kategorie **Consumer**. Erstellen Sie ein Consumerobjekt des Typs **Tabelle**. (Auswahl **Tabelle** erstellt ein Rowset direkt aus der Tabelle; wählen **Befehl** erstellt ein Rowset über einen SQL‑Befehl.) Wählen Sie eine Datenquelle, die Angabe einer Tabelle durch die diese Datenquelle zugreifen. Wenn Sie das Consumerobjekt Aufrufen **CCustomerTable**, dann implementieren Sie Ihren Code einfügen wie folgt:  
-  
-[!code-cpp[NVC_OLEDB_Consumer#10](../../data/oledb/codesnippet/cpp/crowset-insert_1.cpp)]  
+### <a name="remarks"></a>Hinweise
+
+Diese Methode erfordert die optionale Schnittstelle `IRowsetChange`, ist der Fall, die für alle Anbieter, wenn diese möglicherweise nicht unterstützt wird, wird die Methode, wird E_NOINTERFACE zurückgegeben. Sie müssen auch festlegen, `DBPROP_IRowsetChange` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält.
+
+INSERT kann fehlschlagen, wenn eine oder mehrere Spalten ist nicht beschreibbar. Ändern Sie die Cursorzuordnung, um diesen Fehler zu beheben.
+
+### <a name="example"></a>Beispiel
+
+Das folgende Beispiel zeigt, wie Sie auf eine Datenquelle zugreifen, bis ein Rowset aus, und fügen Sie dann eine Zeichenfolge, die Verwendung einer Tabelle in dieses Rowset besitzt.
+
+Erstellen Sie zunächst eine Tabellenklasse, durch Einfügen eines neuen ATL-Objekts in Ihr Projekt. Beispielsweise mit der rechten Maustaste in des Projekts im Bereich "Arbeitsbereich", und wählen Sie **neue ATL-Objekt**. Von der **Datenzugriff** Kategorie **Consumer**. Erstellen Sie ein Consumerobjekt des Typs **Tabelle**. (Auswahl **Tabelle** erstellt ein Rowset direkt aus der Tabelle; wählen **Befehl** erstellt ein Rowset über einen SQL‑Befehl.) Wählen Sie eine Datenquelle, die Angabe einer Tabelle durch die diese Datenquelle zugreifen. Wenn Sie das Consumerobjekt Aufrufen **CCustomerTable**, dann implementieren Sie Ihren Code einfügen wie folgt:
+
+[!code-cpp[NVC_OLEDB_Consumer#10](../../data/oledb/codesnippet/cpp/crowset-insert_1.cpp)]
 
 ## <a name="issamerow"></a> CRowset:: Issamerow
 
-Vergleicht die angegebene Zeile mit der aktuellen Zeile.  
-  
-### <a name="syntax"></a>Syntax  
-  
+Vergleicht die angegebene Zeile mit der aktuellen Zeile.
+
+### <a name="syntax"></a>Syntax
+
 ```cpp
-HRESULT IsSameRow(HROW hRow) const throw();  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+HRESULT IsSameRow(HROW hRow) const throw();
+```
+
+#### <a name="parameters"></a>Parameter
 
 *hRow*<br/>
-[in] Ein Handle für die Zeile, auf die aktuelle Zeile verglichen werden soll.  
-  
-### <a name="return-value"></a>Rückgabewert  
+[in] Ein Handle für die Zeile, auf die aktuelle Zeile verglichen werden soll.
 
-Ein standard-HRESULT. S_OK gibt an, dass die Zeilen identisch sind. Weitere Werte finden Sie unter [IRowsetIndentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\)) in die *OLE DB-Programmierreferenz* im Windows SDK.  
+### <a name="return-value"></a>Rückgabewert
+
+Ein standard-HRESULT. S_OK gibt an, dass die Zeilen identisch sind. Weitere Werte finden Sie unter [IRowsetIndentity::IsSameRow](/previous-versions/windows/desktop/ms719629) in die *OLE DB-Programmierreferenz* im Windows SDK.
 
 ## <a name="movefirst"></a> CRowset:: MoveFirst
 
-Verschiebt den Cursor auf die ursprüngliche Position und ruft die erste Zeile ab.  
-  
-### <a name="syntax"></a>Syntax  
-  
+Verschiebt den Cursor auf die ursprüngliche Position und ruft die erste Zeile ab.
+
+### <a name="syntax"></a>Syntax
+
 ```cpp
-HRESULT MoveFirst() throw();  
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
+HRESULT MoveFirst() throw();
+```
 
-Ein standard-HRESULT.  
-  
-### <a name="remarks"></a>Hinweise  
+### <a name="return-value"></a>Rückgabewert
 
-Aufrufe [IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877\(v=vs.85\)) um den weiter-Fetch-Speicherort zu verschieben, um die ursprüngliche Position (die Position, die den weiter-Fetch-Speicherort wurde, wenn das Rowset erstellt wurde) und ruft die erste Zeile ab.  
+Ein standard-HRESULT.
+
+### <a name="remarks"></a>Hinweise
+
+Aufrufe [IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877) um den weiter-Fetch-Speicherort zu verschieben, um die ursprüngliche Position (die Position, die den weiter-Fetch-Speicherort wurde, wenn das Rowset erstellt wurde) und ruft die erste Zeile ab.
 
 ## <a name="movelast"></a> CRowset:: MoveLast
 
-Verschiebt den Cursor auf die letzte Zeile an.  
-  
-### <a name="syntax"></a>Syntax  
-  
+Verschiebt den Cursor auf die letzte Zeile an.
+
+### <a name="syntax"></a>Syntax
+
 ```cpp
-HRESULT MoveLast() throw();  
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
+HRESULT MoveLast() throw();
+```
 
-Ein standard-HRESULT.  
-  
-### <a name="remarks"></a>Hinweise  
+### <a name="return-value"></a>Rückgabewert
 
-Aufrufe [IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877\(v=vs.85\)) um den nächsten-Fetch-Speicherort mit dem letzten neu positionieren, und ruft die letzte Zeile ab.  
-  
-Diese Methode erfordert, dass Sie festlegen, `DBPROP_CANSCROLLBACKWARDS` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält. (Sie können auch festlegen, zur Verbesserung der Leistung `DBPROP_QUICKRESTART` auf VARIANT_TRUE fest.)  
+Ein standard-HRESULT.
+
+### <a name="remarks"></a>Hinweise
+
+Aufrufe [IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877) um den nächsten-Fetch-Speicherort mit dem letzten neu positionieren, und ruft die letzte Zeile ab.
+
+Diese Methode erfordert, dass Sie festlegen, `DBPROP_CANSCROLLBACKWARDS` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält. (Sie können auch festlegen, zur Verbesserung der Leistung `DBPROP_QUICKRESTART` auf VARIANT_TRUE fest.)
 
 ## <a name="movenext"></a> CRowset:: MoveNext
 
-Verschiebt den Cursor auf den nächsten Datensatz.  
-  
-### <a name="syntax"></a>Syntax  
-  
+Verschiebt den Cursor auf den nächsten Datensatz.
+
+### <a name="syntax"></a>Syntax
+
 ```cpp
 HRESULT MoveNext() throw();
 
-HRESULT MoveNext(LONG lSkip,   
-   bool bForward= true) throw();  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+HRESULT MoveNext(LONG lSkip, 
+   bool bForward= true) throw();
+```
+
+#### <a name="parameters"></a>Parameter
 
 *lSkip*<br/>
-[in] Die Anzahl der zu überspringenden vor dem Abrufen der Zeilen.  
-  
+[in] Die Anzahl der zu überspringenden vor dem Abrufen der Zeilen.
+
 *bForward*<br/>
-[in] Übergeben Sie **"true"** auf den nächsten Datensatz, voranschreiten **"false"** um rückwärts zu bewegen.  
-  
-### <a name="return-value"></a>Rückgabewert  
+[in] Übergeben Sie **"true"** auf den nächsten Datensatz, voranschreiten **"false"** um rückwärts zu bewegen.
 
-Ein standard-HRESULT. Wenn das Ende des Rowsets erreicht wurde, gibt die DB_S_ENDOFROWSET zurück.  
-  
-### <a name="remarks"></a>Hinweise  
+### <a name="return-value"></a>Rückgabewert
 
-Dadurch wird die nächste sequenzielle Zeile aus der `CRowset` Objekt speichert die vorherige Position. Optional können Sie entscheiden zu überspringenden *lSkip* Zeilen "oder" Rückwärts navigieren.  
-  
-Diese Methode erfordert, dass Sie festlegen, dass die folgenden Eigenschaften vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält:  
-  
-- `DBPROP_CANSCROLLBACKWARDS` muss auf VARIANT_TRUE festgelegt werden, wenn *lSkip* < 0  
-  
-- `DBPROP_CANFETCHBACKWARDS` muss auf VARIANT_TRUE festgelegt werden, wenn *bForward* = "false"  
-  
-Andernfalls (Wenn *lSkip* > = 0 und *bForward* = True), Sie müssen keine zusätzlichen Eigenschaften festlegen.  
+Ein standard-HRESULT. Wenn das Ende des Rowsets erreicht wurde, gibt die DB_S_ENDOFROWSET zurück.
+
+### <a name="remarks"></a>Hinweise
+
+Dadurch wird die nächste sequenzielle Zeile aus der `CRowset` Objekt speichert die vorherige Position. Optional können Sie entscheiden zu überspringenden *lSkip* Zeilen "oder" Rückwärts navigieren.
+
+Diese Methode erfordert, dass Sie festlegen, dass die folgenden Eigenschaften vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält:
+
+- `DBPROP_CANSCROLLBACKWARDS` muss auf VARIANT_TRUE festgelegt werden, wenn *lSkip* < 0
+
+- `DBPROP_CANFETCHBACKWARDS` muss auf VARIANT_TRUE festgelegt werden, wenn *bForward* = "false"
+
+Andernfalls (Wenn *lSkip* > = 0 und *bForward* = True), Sie müssen keine zusätzlichen Eigenschaften festlegen.
 
 ## <a name="moveprev"></a> CRowset:: MovePrev
 
-Verschiebt den Cursor zum vorherigen Datensatz.  
-  
-### <a name="syntax"></a>Syntax  
-  
+Verschiebt den Cursor zum vorherigen Datensatz.
+
+### <a name="syntax"></a>Syntax
+
 ```cpp
-HRESULT MovePrev() throw();  
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
+HRESULT MovePrev() throw();
+```
 
-Ein standard-HRESULT.  
-  
-### <a name="remarks"></a>Hinweise  
+### <a name="return-value"></a>Rückgabewert
 
-Diese Methode erfordert, dass Sie, entweder festlegen `DBPROP_CANFETCHBACKWARDS` oder `DBPROP_CANSCROLLBACKWARDS` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält. 
+Ein standard-HRESULT.
+
+### <a name="remarks"></a>Hinweise
+
+Diese Methode erfordert, dass Sie, entweder festlegen `DBPROP_CANFETCHBACKWARDS` oder `DBPROP_CANSCROLLBACKWARDS` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält.
 
 ## <a name="movetobookmark"></a> CRowset:: MoveToBookmark
 
-Dadurch wird die Zeile, die durch ein Lesezeichen oder auf die Zeile an einem angegebenen Offset gekennzeichnet (*lSkip*) von diesem Lesezeichen.  
-  
-### <a name="syntax"></a>Syntax  
-  
+Dadurch wird die Zeile, die durch ein Lesezeichen oder auf die Zeile an einem angegebenen Offset gekennzeichnet (*lSkip*) von diesem Lesezeichen.
+
+### <a name="syntax"></a>Syntax
+
 ```cpp
-HRESULT MoveToBookmark(const CBookmarkBase& bookmark,   
-   LONG lSkip = 0) throw();  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+HRESULT MoveToBookmark(const CBookmarkBase& bookmark, 
+   LONG lSkip = 0) throw();
+```
+
+#### <a name="parameters"></a>Parameter
 
 *Lesezeichen*<br/>
-[in] Ein Lesezeichen, markieren den Speicherort, von dem Daten abgerufen werden sollen.  
-  
+[in] Ein Lesezeichen, markieren den Speicherort, von dem Daten abgerufen werden sollen.
+
 *lSkip*<br/>
-[in] Die Anzahl Anzahl von Zeilen aus das Lesezeichen die Zielzeile. Wenn *lSkip* 0 (null), wird die erste Zeile abgerufen wird, den mit Lesezeichen versehenen Zeile. Wenn *lSkip* 1 ist, die erste Zeile abgerufen wird die Zeile nach der Lesezeichen versehenen Zeile. Wenn *lSkip* ist-1. die erste Zeile abgerufen wird die Zeile vor den mit Lesezeichen versehenen Zeile.  
-  
-### <a name="return-value"></a>Rückgabewert  
+[in] Die Anzahl Anzahl von Zeilen aus das Lesezeichen die Zielzeile. Wenn *lSkip* 0 (null), wird die erste Zeile abgerufen wird, den mit Lesezeichen versehenen Zeile. Wenn *lSkip* 1 ist, die erste Zeile abgerufen wird die Zeile nach der Lesezeichen versehenen Zeile. Wenn *lSkip* ist-1. die erste Zeile abgerufen wird die Zeile vor den mit Lesezeichen versehenen Zeile.
 
-Ein standard-HRESULT.  
-  
-### <a name="remarks"></a>Hinweise  
+### <a name="return-value"></a>Rückgabewert
 
-Diese Methode erfordert die optionale Schnittstelle `IRowsetLocate`, ist der Fall, die für alle Anbieter, wenn diese möglicherweise nicht unterstützt wird, wird die Methode, wird E_NOINTERFACE zurückgegeben. Sie müssen auch festlegen `DBPROP_IRowsetLocate` auf VARIANT_TRUE fest und `DBPROP_CANFETCHBACKWARDS` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält.  
-  
-Weitere Informationen zur Verwendung von Lesezeichen im Consumer, finden Sie unter [mithilfe von Lesezeichen](../../data/oledb/using-bookmarks.md).  
-  
+Ein standard-HRESULT.
+
+### <a name="remarks"></a>Hinweise
+
+Diese Methode erfordert die optionale Schnittstelle `IRowsetLocate`, ist der Fall, die für alle Anbieter, wenn diese möglicherweise nicht unterstützt wird, wird die Methode, wird E_NOINTERFACE zurückgegeben. Sie müssen auch festlegen `DBPROP_IRowsetLocate` auf VARIANT_TRUE fest und `DBPROP_CANFETCHBACKWARDS` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält.
+
+Weitere Informationen zur Verwendung von Lesezeichen im Consumer, finden Sie unter [mithilfe von Lesezeichen](../../data/oledb/using-bookmarks.md).
+
 ## <a name="movetoratio"></a> CRowset:: Movetoratio
 
-Ruft Zeilen ab der ein Bruchteil Ausgangsposition im Rowset ab.  
-  
-### <a name="syntax"></a>Syntax  
-  
+Ruft Zeilen ab der ein Bruchteil Ausgangsposition im Rowset ab.
+
+### <a name="syntax"></a>Syntax
+
 ```cpp
-HRESULT MoveToRatio(DBCOUNTITEM nNumerator,   
-   DBCOUNTITEM nDenominator,bool bForward = true) throw();  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+HRESULT MoveToRatio(DBCOUNTITEM nNumerator, 
+   DBCOUNTITEM nDenominator,bool bForward = true) throw();
+```
+
+#### <a name="parameters"></a>Parameter
 
 *nNumerator*<br/>
-[in] Der Zähler verwendet, um zu bestimmen, die Nachkommastellen mit Feldern fester Breite aus der zum Abrufen von Daten.  
-  
+[in] Der Zähler verwendet, um zu bestimmen, die Nachkommastellen mit Feldern fester Breite aus der zum Abrufen von Daten.
+
 *nDenominator*<br/>
-[in] Der Nenner verwendet, um zu bestimmen, die Nachkommastellen mit Feldern fester Breite aus der zum Abrufen von Daten.  
-  
+[in] Der Nenner verwendet, um zu bestimmen, die Nachkommastellen mit Feldern fester Breite aus der zum Abrufen von Daten.
+
 *bForward*<br/>
-[in] Gibt an, ob vorwärts oder rückwärts verschoben werden soll. Der Standardwert ist.  
-  
-### <a name="return-value"></a>Rückgabewert  
+[in] Gibt an, ob vorwärts oder rückwärts verschoben werden soll. Der Standardwert ist.
 
-Ein standard-HRESULT.  
-  
-### <a name="remarks"></a>Hinweise  
+### <a name="return-value"></a>Rückgabewert
 
-`MoveToRatio` Ruft die Zeilen, die gemäß der folgenden Formel ungefähr ab:  
-  
-`(nNumerator *  RowsetSize ) / nDenominator`  
-  
-Wo `RowsetSize` ist die Größe des Rowsets, gemessen in Zeilen. Die Genauigkeit zu dieser Formel hängt von dem Anbieter ab. Weitere Informationen finden Sie unter [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602\(v=vs.85\)).  
-  
-Diese Methode erfordert die optionale Schnittstelle `IRowsetScroll`, ist der Fall, die für alle Anbieter, wenn diese möglicherweise nicht unterstützt wird, wird die Methode, wird E_NOINTERFACE zurückgegeben. Sie müssen auch festlegen, `DBPROP_IRowsetScroll` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält.  
+Ein standard-HRESULT.
+
+### <a name="remarks"></a>Hinweise
+
+`MoveToRatio` Ruft die Zeilen, die gemäß der folgenden Formel ungefähr ab:
+
+`(nNumerator *  RowsetSize ) / nDenominator`
+
+Wo `RowsetSize` ist die Größe des Rowsets, gemessen in Zeilen. Die Genauigkeit zu dieser Formel hängt von dem Anbieter ab. Weitere Informationen finden Sie unter [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602).
+
+Diese Methode erfordert die optionale Schnittstelle `IRowsetScroll`, ist der Fall, die für alle Anbieter, wenn diese möglicherweise nicht unterstützt wird, wird die Methode, wird E_NOINTERFACE zurückgegeben. Sie müssen auch festlegen, `DBPROP_IRowsetScroll` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält.
 
 ## <a name="releaserows"></a> CRowset:: ReleaseRows
 
-Aufrufe [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) zum Freigeben des Handles der aktuellen Zeile.  
-  
-### <a name="syntax"></a>Syntax  
-  
-```cpp
-HRESULT ReleaseRows() throw();  
-```  
-  
-### <a name="return-value"></a>Rückgabewert  
+Aufrufe [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771) zum Freigeben des Handles der aktuellen Zeile.
 
-Ein standard-HRESULT.  
+### <a name="syntax"></a>Syntax
+
+```cpp
+HRESULT ReleaseRows() throw();
+```
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein standard-HRESULT.
 
 ## <a name="setdata"></a> CRowset:: SetData
 
-Legt Datenwerte in einer oder mehreren Spalten einer Zeile fest.  
-  
-### <a name="syntax"></a>Syntax  
-  
-```cpp
-HRESULT SetData() const throw();   
+Legt Datenwerte in einer oder mehreren Spalten einer Zeile fest.
 
-HRESULT SetData(int nAccessor) const throw();  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+### <a name="syntax"></a>Syntax
+
+```cpp
+HRESULT SetData() const throw(); 
+
+HRESULT SetData(int nAccessor) const throw();
+```
+
+#### <a name="parameters"></a>Parameter
 
 *nAccessor*<br/>
-[in] Die Anzahl des Accessors, für den Zugriff auf die Daten verwendet werden soll.  
-  
-### <a name="return-value"></a>Rückgabewert  
+[in] Die Anzahl des Accessors, für den Zugriff auf die Daten verwendet werden soll.
 
-Ein standard-HRESULT.  
-  
-### <a name="remarks"></a>Hinweise  
+### <a name="return-value"></a>Rückgabewert
 
-Für die `SetData` Form, die akzeptiert keine Argumente, die alle Accessoren werden für die Aktualisierung verwendet. Rufen Sie in der Regel `SetData` rufen Sie dann zum Festlegen von Datenwerten in Spalten in einer Zeile [Update](../../data/oledb/crowset-update.md) , diese Änderungen zu übertragen.  
-  
-Diese Methode erfordert die optionale Schnittstelle `IRowsetChange`, ist der Fall, die für alle Anbieter, wenn diese möglicherweise nicht unterstützt wird, wird die Methode, wird E_NOINTERFACE zurückgegeben. Sie müssen auch festlegen, `DBPROP_IRowsetChange` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält.  
-  
-Der Vorgang fehlschlagen, wenn eine oder mehrere Spalten ist nicht beschreibbar. Ändern Sie die Cursorzuordnung, um diesen Fehler zu beheben. 
-  
+Ein standard-HRESULT.
+
+### <a name="remarks"></a>Hinweise
+
+Für die `SetData` Form, die akzeptiert keine Argumente, die alle Accessoren werden für die Aktualisierung verwendet. Rufen Sie in der Regel `SetData` rufen Sie dann zum Festlegen von Datenwerten in Spalten in einer Zeile [Update](../../data/oledb/crowset-update.md) , diese Änderungen zu übertragen.
+
+Diese Methode erfordert die optionale Schnittstelle `IRowsetChange`, ist der Fall, die für alle Anbieter, wenn diese möglicherweise nicht unterstützt wird, wird die Methode, wird E_NOINTERFACE zurückgegeben. Sie müssen auch festlegen, `DBPROP_IRowsetChange` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält.
+
+Der Vorgang fehlschlagen, wenn eine oder mehrere Spalten ist nicht beschreibbar. Ändern Sie die Cursorzuordnung, um diesen Fehler zu beheben.
+
 ## <a name="undo"></a> CRowset:: Undo
 
-Macht alle Änderungen, die auf eine Zeile seit der letzten Fetch oder [Update](../../data/oledb/crowset-update.md).  
-  
-### <a name="syntax"></a>Syntax  
-  
+Macht alle Änderungen, die auf eine Zeile seit der letzten Fetch oder [Update](../../data/oledb/crowset-update.md).
+
+### <a name="syntax"></a>Syntax
+
 ```cpp
-HRESULT Undo(DBCOUNTITEM* pcRows = NULL,   
-   HROW* phRow = NULL,   
-   DBROWSTATUS* pStatus = NULL) throw();  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+HRESULT Undo(DBCOUNTITEM* pcRows = NULL, 
+   HROW* phRow = NULL, 
+   DBROWSTATUS* pStatus = NULL) throw();
+```
+
+#### <a name="parameters"></a>Parameter
 
 *pcRows*<br/>
-[out] Ein Zeiger auf den Speicherort, in denen `Undo` gibt die Anzahl der Zeilen, die versucht wurde, rückgängig machen, wenn erforderlich.  
-  
+[out] Ein Zeiger auf den Speicherort, in denen `Undo` gibt die Anzahl der Zeilen, die versucht wurde, rückgängig machen, wenn erforderlich.
+
 *phRow*<br/>
-[out] Ein Zeiger auf den Speicherort, in denen `Undo` gibt ein Array von Handles, alle Zeilen, die versucht wurde, rückgängig machen, wenn erforderlich.  
-  
+[out] Ein Zeiger auf den Speicherort, in denen `Undo` gibt ein Array von Handles, alle Zeilen, die versucht wurde, rückgängig machen, wenn erforderlich.
+
 *pStatus*<br/>
-[out] Ein Zeiger auf den Speicherort, in denen `Undo` den Statuswert Zeile zurückgibt. Es wird kein Status zurückgegeben, wenn *pStatus* ist null.  
-  
-### <a name="return-value"></a>Rückgabewert  
+[out] Ein Zeiger auf den Speicherort, in denen `Undo` den Statuswert Zeile zurückgibt. Es wird kein Status zurückgegeben, wenn *pStatus* ist null.
 
-Ein standard-HRESULT.  
-  
-### <a name="remarks"></a>Hinweise  
+### <a name="return-value"></a>Rückgabewert
 
-Diese Methode erfordert die optionale Schnittstelle `IRowsetUpdate`, ist der Fall, die für alle Anbieter, wenn diese möglicherweise nicht unterstützt wird, wird die Methode, wird E_NOINTERFACE zurückgegeben. Sie müssen auch festlegen, `DBPROP_IRowsetUpdate` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält.  
+Ein standard-HRESULT.
+
+### <a name="remarks"></a>Hinweise
+
+Diese Methode erfordert die optionale Schnittstelle `IRowsetUpdate`, ist der Fall, die für alle Anbieter, wenn diese möglicherweise nicht unterstützt wird, wird die Methode, wird E_NOINTERFACE zurückgegeben. Sie müssen auch festlegen, `DBPROP_IRowsetUpdate` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält.
 
 ## <a name="update"></a> CRowset:: Update
 
-Überträgt alle ausstehenden Änderungen an der aktuellen Zeile seit der letzten Fetch oder `Update` für ihn aufrufen.  
-  
-### <a name="syntax"></a>Syntax  
-  
+Überträgt alle ausstehenden Änderungen an der aktuellen Zeile seit der letzten Fetch oder `Update` für ihn aufrufen.
+
+### <a name="syntax"></a>Syntax
+
 ```cpp
-HRESULT Update(DBCOUNTITEM* pcRows = NULL,   
-   HROW* phRow = NULL,   
-   DBROWSTATUS* pStatus = NULL) throw();  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+HRESULT Update(DBCOUNTITEM* pcRows = NULL, 
+   HROW* phRow = NULL, 
+   DBROWSTATUS* pStatus = NULL) throw();
+```
+
+#### <a name="parameters"></a>Parameter
 
 *pcRows*<br/>
-[out] Ein Zeiger auf den Speicherort, in denen `Update` gibt die Anzahl der Zeilen, die versucht wurde, aktualisieren, falls erforderlich.  
-  
+[out] Ein Zeiger auf den Speicherort, in denen `Update` gibt die Anzahl der Zeilen, die versucht wurde, aktualisieren, falls erforderlich.
+
 *phRow*<br/>
-[out] Ein Zeiger auf den Speicherort, in denen `Update` gibt das Handle der Zeile, die es versucht, zu aktualisieren. Kein Handle wird zurückgegeben, wenn *PhRow* ist null.  
-  
+[out] Ein Zeiger auf den Speicherort, in denen `Update` gibt das Handle der Zeile, die es versucht, zu aktualisieren. Kein Handle wird zurückgegeben, wenn *PhRow* ist null.
+
 *pStatus*<br/>
-[out] Ein Zeiger auf den Speicherort, in denen `Update` den Statuswert Zeile zurückgibt. Es wird kein Status zurückgegeben, wenn *pStatus* ist null.  
-  
-### <a name="return-value"></a>Rückgabewert  
+[out] Ein Zeiger auf den Speicherort, in denen `Update` den Statuswert Zeile zurückgibt. Es wird kein Status zurückgegeben, wenn *pStatus* ist null.
 
-Ein standard-HRESULT.  
-  
-### <a name="remarks"></a>Hinweise  
+### <a name="return-value"></a>Rückgabewert
 
-Überträgt alle Änderungen an der aktuellen Zeile vorgenommen werden, da die Zeile zuletzt abgerufen oder aktualisiert wurde (mit `Update` oder [UpdateAll](../../data/oledb/crowset-updateall.md)). Rufen Sie in der Regel [SetData](../../data/oledb/crowset-setdata.md) von Datenwerten in Spalten in einer Zeile, und rufen Sie dann `Update` , diese Änderungen zu übertragen.  
-  
-Diese Methode erfordert die optionale Schnittstelle `IRowsetUpdate`, ist der Fall, die für alle Anbieter, wenn diese möglicherweise nicht unterstützt wird, wird die Methode, wird E_NOINTERFACE zurückgegeben. Sie müssen auch festlegen, `DBPROP_IRowsetUpdate` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält.  
+Ein standard-HRESULT.
+
+### <a name="remarks"></a>Hinweise
+
+Überträgt alle Änderungen an der aktuellen Zeile vorgenommen werden, da die Zeile zuletzt abgerufen oder aktualisiert wurde (mit `Update` oder [UpdateAll](../../data/oledb/crowset-updateall.md)). Rufen Sie in der Regel [SetData](../../data/oledb/crowset-setdata.md) von Datenwerten in Spalten in einer Zeile, und rufen Sie dann `Update` , diese Änderungen zu übertragen.
+
+Diese Methode erfordert die optionale Schnittstelle `IRowsetUpdate`, ist der Fall, die für alle Anbieter, wenn diese möglicherweise nicht unterstützt wird, wird die Methode, wird E_NOINTERFACE zurückgegeben. Sie müssen auch festlegen, `DBPROP_IRowsetUpdate` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält.
 
 ## <a name="updateall"></a> CRowset:: UpdateAll
 
-Überträgt alle ausstehenden Änderungen, die seit der letzten Abruf auf alle Zeilen oder `Update` für ihn aufrufen.  
-  
-### <a name="syntax"></a>Syntax  
-  
+Überträgt alle ausstehenden Änderungen, die seit der letzten Abruf auf alle Zeilen oder `Update` für ihn aufrufen.
+
+### <a name="syntax"></a>Syntax
+
 ```cpp
-HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,   
-   HROW** pphRow = NULL,   
-   DBROWSTATUS** ppStatus = NULL) throw();  
-```  
-  
-#### <a name="parameters"></a>Parameter  
+HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL, 
+   HROW** pphRow = NULL, 
+   DBROWSTATUS** ppStatus = NULL) throw();
+```
+
+#### <a name="parameters"></a>Parameter
 
 *pcRows*<br/>
-[out] Ein Zeiger auf den Speicherort, in denen `UpdateAll` gibt die Anzahl der Zeilen, die versucht wurde, aktualisieren, falls erforderlich.  
-  
+[out] Ein Zeiger auf den Speicherort, in denen `UpdateAll` gibt die Anzahl der Zeilen, die versucht wurde, aktualisieren, falls erforderlich.
+
 *pphRow*<br/>
-[out] Ein Zeiger auf Speicher, in den `UpdateAll` gibt das Handle der Zeile, die es versucht, zu aktualisieren. Kein Handle wird zurückgegeben, wenn *PphRow* ist null.  
-  
+[out] Ein Zeiger auf Speicher, in den `UpdateAll` gibt das Handle der Zeile, die es versucht, zu aktualisieren. Kein Handle wird zurückgegeben, wenn *PphRow* ist null.
+
 *ppStatus*<br/>
-[out] Ein Zeiger auf den Speicherort, in denen `Update` den Statuswert Zeile zurückgibt. Es wird kein Status zurückgegeben, wenn *PpStatus* ist null.  
-  
-### <a name="remarks"></a>Hinweise  
+[out] Ein Zeiger auf den Speicherort, in denen `Update` den Statuswert Zeile zurückgibt. Es wird kein Status zurückgegeben, wenn *PpStatus* ist null.
 
-Überträgt alle Änderungen an allen Zeilen vorgenommen werden, da die Zeilen zuletzt abgerufen wurden oder mithilfe von aktualisiert [Update](../../data/oledb/crowset-update.md) oder `UpdateAll`. `UpdateAll` Jede Zeile, die geändert wurde unabhängig davon, ob Sie das Handle für diese immer noch, aktualisiert (finden Sie unter *PphRow*) oder nicht.  
-  
-Angenommen, Sie verwendet `Insert` um fünf Zeilen in einem Rowset einzufügen, können Sie entweder Aufruf `Update` fünfmal oder Aufruf `UpdateAll` einmal, um alle zu aktualisieren.  
-  
-Diese Methode erfordert die optionale Schnittstelle `IRowsetUpdate`, ist der Fall, die für alle Anbieter, wenn diese möglicherweise nicht unterstützt wird, wird die Methode, wird E_NOINTERFACE zurückgegeben. Sie müssen auch festlegen, `DBPROP_IRowsetUpdate` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält.  
-  
-### <a name="return-value"></a>Rückgabewert  
+### <a name="remarks"></a>Hinweise
 
-Ein standard-HRESULT.  
+Überträgt alle Änderungen an allen Zeilen vorgenommen werden, da die Zeilen zuletzt abgerufen wurden oder mithilfe von aktualisiert [Update](../../data/oledb/crowset-update.md) oder `UpdateAll`. `UpdateAll` Jede Zeile, die geändert wurde unabhängig davon, ob Sie das Handle für diese immer noch, aktualisiert (finden Sie unter *PphRow*) oder nicht.
 
-## <a name="see-also"></a>Siehe auch  
+Angenommen, Sie verwendet `Insert` um fünf Zeilen in einem Rowset einzufügen, können Sie entweder Aufruf `Update` fünfmal oder Aufruf `UpdateAll` einmal, um alle zu aktualisieren.
+
+Diese Methode erfordert die optionale Schnittstelle `IRowsetUpdate`, ist der Fall, die für alle Anbieter, wenn diese möglicherweise nicht unterstützt wird, wird die Methode, wird E_NOINTERFACE zurückgegeben. Sie müssen auch festlegen, `DBPROP_IRowsetUpdate` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält.
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein standard-HRESULT.
+
+## <a name="see-also"></a>Siehe auch
 
 [DBViewer-Beispiel](../../visual-cpp-samples.md)<br/>
 [MultiRead-Beispiel](../../visual-cpp-samples.md)<br/>

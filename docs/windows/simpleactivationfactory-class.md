@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07c37dbf1629461141d592eb1987ce071324e22c
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 111015fdd8887ae779aeb8fecc8274cfcf7c6c68
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691470"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441277"
 ---
 # <a name="simpleactivationfactory-class"></a>SimpleActivationFactory-Klasse
 
@@ -43,7 +43,7 @@ class SimpleActivationFactory : public ActivationFactory<>;
 
 ### <a name="parameters"></a>Parameter
 
-*Basis*  
+*Basis*<br/>
 Eine Basisklasse.
 
 ## <a name="remarks"></a>Hinweise
@@ -106,7 +106,7 @@ STDMETHOD( ActivateInstance )(
 
 #### <a name="parameters"></a>Parameter
 
-*ppvObject*  
+*ppvObject*<br/>
 Wenn dieser Vorgang abgeschlossen ist, Zeiger auf eine Instanz des Objekts gemäß der `Base` Klassenvorlagenparameter.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -129,7 +129,7 @@ STDMETHOD( GetRuntimeClassName )(
 
 #### <a name="parameters"></a>Parameter
 
-*runtimeName*  
+*runtimeName*<br/>
 Wenn dieser Vorgang abgeschlossen ist, den Namen der Common Language Runtime-Klasse.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -152,7 +152,7 @@ STDMETHOD(
 
 #### <a name="parameters"></a>Parameter
 
-*trustLvl*  
+*trustLvl*<br/>
 Wenn dieser Vorgang abgeschlossen ist, die Vertrauensebene des aktuellen Klassenobjekts.
 
 ### <a name="return-value"></a>Rückgabewert

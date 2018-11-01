@@ -1,25 +1,15 @@
 ---
-title: COM+ 1.0, ATL COM+ 1.0 Komponenten-Assistent | Microsoft-Dokumentation
-ms.custom: ''
+title: COM+ 1.0, ATL COM+ 1.0-Komponenten-Assistent
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.mts.options
-dev_langs:
-- C++
 ms.assetid: 2fbe259c-6be1-4d0e-9cfe-721c75c97cb1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 471d6a273bfb4a446dbf5aba1c3b1bb31d988b24
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 014193f4017aa47b819558cbd4753e6abcffcaaf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116099"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562057"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, ATL COM+ 1.0-Komponenten-Assistent
 
@@ -34,7 +24,7 @@ Weitere Informationen zu ATL-Projekte und ATL-COM-Klassen finden Sie unter [ATL 
    |Option|Beschreibung|
    |------------|-----------------|
    |**Dual**|Gibt an, dass das Objekt eine duale Schnittstelle unterstützt (die Vtable besitzt, benutzerdefinierte Funktionen und späte Bindung `IDispatch` Methoden). Ermöglicht es COM-Clients sowohl Automatisierungscontroller auf das Objekt zuzugreifen.|
-   |**Benutzerdefiniert**|Gibt an, dass das Objekt eine benutzerdefinierte Schnittstelle unterstützt (die Vtable hat benutzerdefinierte Funktionen). Eine benutzerdefinierte Schnittstelle kann vor allem über Prozessgrenzen hinweg schneller als das duale Schnittstelle sein.<br /><br /> -   **Automatisierungskompatibel** die benutzerdefinierte Schnittstelle-Unterstützung hinzugefügt. Legt für die attributierte Projekte die **Oleautomation** -Attribut in der Co-Klasse.|
+   |**Benutzerdefiniert**|Gibt an, dass das Objekt eine benutzerdefinierte Schnittstelle unterstützt (die Vtable hat benutzerdefinierte Funktionen). Eine benutzerdefinierte Schnittstelle kann vor allem über Prozessgrenzen hinweg schneller als das duale Schnittstelle sein.<br /><br /> - **Automatisierungskompatibel** die benutzerdefinierte Schnittstelle-Unterstützung hinzugefügt. Legt für die attributierte Projekte die **Oleautomation** -Attribut in der Co-Klasse.|
 
 - **Queueable**
 

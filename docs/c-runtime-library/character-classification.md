@@ -17,20 +17,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 262479a4538843cef2af61be0ec56347c7afc75f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f4c194432c3d7442677a78046ac893e5e3e2a7ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222447"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101344"
 ---
 # <a name="character-classification"></a>Zeichenklassifizierung
 
 Jede dieser Routinen testet zum Erfüllen einer Bedingung ein angegebenes Einzelbytezeichen, ein Breitzeichen oder ein Multibytezeichen. (Der ASCII-Zeichensatz zwischen 0 und 127 ist definitionsgemäß eine Teilmenge jedes Multibyte-Zeichensatzes.) Beispielsweise enthält die japanische Katakana sowohl ASCII-als auch Nicht-ASCII-Zeichen.)
 
- Die Kategorieeinstellung **LC_CTYPE** des Gebietsschemas wirkt sich auf die Testbedingungen aus. Weitere Informationen finden Sie unter [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter.
+Die Kategorieeinstellung **LC_CTYPE** des Gebietsschemas wirkt sich auf die Testbedingungen aus. Weitere Informationen finden Sie unter [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter.
 
- Im Allgemeinen sind diese Routinen schneller als von Ihnen erstellte Tests und sollten daher bevorzugt werden. Beispielsweise wird der folgende Code langsamer ausgeführt als ein Aufruf von `isalpha(c)`:
+Im Allgemeinen sind diese Routinen schneller als von Ihnen erstellte Tests und sollten daher bevorzugt werden. Beispielsweise wird der folgende Code langsamer ausgeführt als ein Aufruf von `isalpha(c)`:
 
 ```C
 if ((c >= 'A') && (c <= 'Z')) || ((c >= 'a') && (c <= 'z'))

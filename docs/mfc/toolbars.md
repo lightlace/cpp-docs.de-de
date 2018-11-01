@@ -1,5 +1,5 @@
 ---
-title: Symbolleisten | Microsoft Docs
+title: Symbolleisten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,31 +15,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4477a06e6b181da01eea0e1636406b0cd7023912
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7fd8738c0dec9771a94ba94aefdcaf2af87fdb09
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381347"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890543"
 ---
 # <a name="toolbars"></a>Symbolleisten
-Die Symbolleiste Artikelreihe beschreibt MFC-Symbolleisten und zum Erstellen und zu verwenden.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
-  
--   [Implementieren der MFC-Symbolleiste](../mfc/mfc-toolbar-implementation.md)  
-  
--   [Grundlagen zu Symbolleisten](../mfc/toolbar-fundamentals.md)  
-  
--   [Wie Aktualisieren von Benutzeroberflächenobjekten (Aktivieren/Deaktivieren von Symbolleisten-Schaltflächen)](../mfc/how-to-update-user-interface-objects.md)  
-  
--   Die [CToolBar](../mfc/reference/ctoolbar-class.md) und [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) Klassen  
-  
--   [Beispiel](../mfc/toolbar-sample-list.md)  
-  
- Weitere Informationen über MFC-Symbolleisten finden Sie im Artikel Q232017, "So wird's gemacht: Hinzufügen Text auf Schaltflächen der Symbolleiste" in der Microsoft Knowledge Base http://support.microsoft.com.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Benutzeroberflächenelemente](../mfc/user-interface-elements-mfc.md)   
- [Symbolleisten-Editor](../windows/toolbar-editor.md)
 
+Die Symbolleiste Artikelreihe beschreibt die MFC-Symbolleisten und zum Erstellen und verwenden diese.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
+
+- [Implementieren der MFC-Symbolleiste](../mfc/mfc-toolbar-implementation.md)
+
+- [Grundlegendes über Symbolleisten](../mfc/toolbar-fundamentals.md)
+
+- [Wie Aktualisieren von Benutzeroberflächenobjekten (Aktivieren/Deaktivieren von Schaltflächen der Symbolleiste)](../mfc/how-to-update-user-interface-objects.md)
+
+- Die [CToolBar](../mfc/reference/ctoolbar-class.md) und [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) Klassen
+
+- [Beispiel](../mfc/toolbar-sample-list.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Elemente der Benutzeroberfläche](../mfc/user-interface-elements-mfc.md)<br/>
+[Symbolleisten-Editor](../windows/toolbar-editor.md)

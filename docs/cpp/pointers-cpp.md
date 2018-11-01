@@ -1,78 +1,58 @@
 ---
-title: Zeiger (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Zeiger (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - declarators, pointers
 - declarations, pointers
 - pointers [C++]
 - pointers, declarations
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a39ee9c45084d03198157f427ca3edca13767e6c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a258a71b8b89643ee98785ee9dfbf30cdf128db7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024111"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667869"
 ---
 # <a name="pointers-c"></a>Zeiger (C++)
 
 Zeiger werden mithilfe der folgenden Sequenz deklariert.
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers 
-[ms-modifier] declarator ;
-```
+> \[*Speicherklassenspezifizierer*] \[ *cv-Qualifizierer*] *-Typspezifizierer* \[ *ms-Modifizierer*]  *Deklarator* **;**
 
-wobei ein beliebiger gültiger Zeigerdeklarator für `declarator` verwendet werden kann. Die Syntax für einen einfachen Zeigerdeklarator lautet wie folgt:
+Wo beliebiger gültiger zeigerdeklarator für verwendet werden dürfen *Deklarator*. Die Syntax für einen einfachen Zeigerdeklarator lautet wie folgt:
 
-```
-* [cv-qualifiers] identifier [= expression]
-```
+> __\*__ \[*CV-Qualifizierer*] *Bezeichner* \[ **=** *Ausdruck*]
 
 1. Die Deklarationsspezifizierer:
 
-    - Ein optionaler Speicherklassenbezeichner. Weitere Informationen finden Sie unter [Spezifizierer](../cpp/specifiers.md).
+   - Ein optionaler Speicherklassenbezeichner. Weitere Informationen finden Sie unter [Spezifizierer](../cpp/specifiers.md).
 
-    - Eine optionale **const** oder **flüchtige** Schlüsselwort, das in den Typ des Objekts, auf das gezeigt werden angewendet.
+   - Eine optionale **const** oder **flüchtige** Schlüsselwort, das in den Typ des Objekts, auf das gezeigt werden angewendet.
 
-    - Der Typspezifizierer: der Name eines Typs, der den Typ des Objekts dargestellt, auf das gezeigt wird.
+   - Der Typspezifizierer: der Name eines Typs, der den Typ des Objekts dargestellt, auf das gezeigt wird.
 
-2. Der Deklarator:
+1. Der Deklarator:
 
-    - Ein optionaler Microsoft-spezifischer Modifizierer. Weitere Informationen finden Sie unter [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md).
+   - Ein optionaler Microsoft-spezifischer Modifizierer. Weitere Informationen finden Sie unter [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md).
 
-    - Der Operator `*`.
+   - Die __\*__ Operator.
 
-    - Eine optionale **const** oder **flüchtige** Schlüsselwort, das auf den Zeiger selbst angewendet.
+   - Eine optionale **const** oder **flüchtige** Schlüsselwort, das auf den Zeiger selbst angewendet.
 
-    - Der Bezeichner.
+   - Der Bezeichner.
 
-    - Ein optionaler Initialisierer.
+   - Ein optionaler Initialisierer.
 
-     Der Deklarator für einen Zeiger auf eine Funktion sieht wie folgt aus:
+Der Deklarator für einen Zeiger auf eine Funktion sieht wie folgt aus:
 
-```
-(* [cv-qualifiers] identifier )( argument-list ) [cv-qualifers]
-[exception specification] [= expression];
-```
+> __(\*__  \[ *cv-Qualifizierer*] *Bezeichner* **) (** *Argumentliste* **)** \[ *cv-Qualifizierer*] \[ *Ausnahmespezifikation*] \[ **=** *Ausdruck*] **;**
 
-- Für ein Array von Zeigern, sieht die Syntax wie folgt aus:
+Für ein Array von Zeigern, sieht die Syntax wie folgt aus:
 
-```
-* identifier [ [ constant-expression ] ]
-```
+> __\*__ *Bezeichner* **\[** \[ *Konstantenausdruck*] **]**
 
-- Mehrere Deklaratoren und ihre Initialisierer erscheinen möglicherweise zusammen in einer einzigen Deklaration in einer durch Trennzeichen getrennten Liste, die dem Deklarationsspezifizierer folgt.
+Mehrere Deklaratoren und ihre Initialisierer erscheinen möglicherweise zusammen in einer einzigen Deklaration in einer durch Trennzeichen getrennten Liste, die dem Deklarationsspezifizierer folgt.
 
 Ein einfaches Beispiel für eine Zeigerdeklaration ist:
 

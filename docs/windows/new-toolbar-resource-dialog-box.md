@@ -1,28 +1,17 @@
 ---
-title: Neue Symbolleiste Ressource (Dialogfeld) (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Neue Symbolleiste Ressource (Dialogfeld) (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.newtoolbarresource
-dev_langs:
-- C++
 helpviewer_keywords:
 - New Toolbar Resource dialog box [C++]
 ms.assetid: 52dd01ad-e748-4ab2-b3eb-59f5df990ca6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6ca09463a2934db0097c09d6a4f928f108fd0760
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 7c45daeb2c07426918f1a636f4230c1c07026ca2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316301"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595922"
 ---
 # <a name="new-toolbar-resource-dialog-box-c"></a>Neue Symbolleiste Ressource (Dialogfeld) (C++)
 
@@ -46,6 +35,6 @@ MFC oder ATL
 
 ## <a name="see-also"></a>Siehe auch
 
-[Eigenschaften von Symbolleisten-Schaltflächen](../windows/toolbar-button-properties.md)  
-[Konvertieren von Bitmaps in Symbolleisten](../windows/converting-bitmaps-to-toolbars.md)  
+[Eigenschaften von Symbolleisten-Schaltflächen](../windows/toolbar-button-properties.md)<br/>
+[Konvertieren von Bitmaps in Symbolleisten](../windows/converting-bitmaps-to-toolbars.md)<br/>
 [Symbolleisten-Editor](../windows/toolbar-editor.md)

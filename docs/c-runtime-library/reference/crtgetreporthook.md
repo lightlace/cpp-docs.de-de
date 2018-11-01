@@ -1,10 +1,6 @@
 ---
-title: _CrtGetReportHook | Microsoft-Dokumentation
-ms.custom: ''
+title: _CrtGetReportHook
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtGetReportHook
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtGetReportHook
 - _CrtGetReportHook
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtGetReportHook function
 - _CrtGetReportHook function
 ms.assetid: 922758ed-7edd-4359-9c92-0535192dc11a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d78c176d5d4de54f4ae5eea84b0483b9e6bc3bec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b8b666093807c95312d4328ca9b3043ad1e09df
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395009"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536759"
 ---
 # <a name="crtgetreporthook"></a>_CrtGetReportHook
 
@@ -61,7 +51,7 @@ Weitere Informationen zur Verwendung anderer hookfähiger Laufzeitfunktionen und
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_CrtGetReportHook**|\<crtdbg.h>|
 
@@ -73,7 +63,7 @@ Nur Debugversionen von [C-Laufzeitbibliotheken](../../c-runtime-library/crt-libr
 
 ## <a name="example"></a>Beispiel
 
-Ein Beispiel zum Verwenden von **_CrtSetReportHook**, finden Sie unter [Bericht](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/report).
+Ein Beispiel zur Verwendung **_CrtSetReportHook**, finden Sie unter [Bericht](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/report).
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,12 +1,7 @@
 ---
-title: Ressourcenverwaltungsklassen | Microsoft Docs
-ms.custom: ''
+title: Ressourcenverwaltungsklassen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - resource management
 - managed classes, resource management
@@ -14,27 +9,24 @@ helpviewer_keywords:
 - resource management, C++ classes
 - resources [C++], management
 ms.assetid: 1040e813-f1cd-4b13-83b6-d329f8e75d2e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: f5457cf9062de233a4489f92cb2a1bf561a2e30d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31b30d612b625d8dc170110e7c7820dec6ff18de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161433"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50555705"
 ---
 # <a name="resource-management-classes"></a>Ressourcenverwaltungsklassen
-Diese Klassen bieten die automatische Verwaltung von verwalteten Klassen.  
-  
-## <a name="in-this-section"></a>In diesem Abschnitt  
-  
-|||  
-|-|-|  
-|[auto_gcroot](../dotnet/auto-gcroot.md)|Ein virtuelles Handle in einen systemeigenen Typ eingebettet.|  
-|[auto_handle](../dotnet/auto-handle.md)|Bettet ein virtuelle Handle in einem verwalteten Typ an.|  
-  
-## <a name="see-also"></a>Siehe auch  
- [C++-Standardbibliothek](../dotnet/cpp-support-library.md)
+
+Diese Klassen bieten automatische Verwaltung von verwalteten Klassen.
+
+## <a name="in-this-section"></a>In diesem Abschnitt
+
+|||
+|-|-|
+|[auto_gcroot](../dotnet/auto-gcroot.md)|Ein virtuelles Handle in einen systemeigenen Typ eingebettet.|
+|[auto_handle](../dotnet/auto-handle.md)|Ein virtuelles Handle in einen verwalteten Typ eingebettet.|
+
+## <a name="see-also"></a>Siehe auch
+
+[C++-Standardbibliothek](../dotnet/cpp-support-library.md)

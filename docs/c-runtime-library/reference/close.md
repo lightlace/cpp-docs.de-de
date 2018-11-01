@@ -1,10 +1,6 @@
 ---
-title: _close | Microsoft-Dokumentation
-ms.custom: ''
+title: _close
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _close
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _close
-dev_langs:
-- C++
 helpviewer_keywords:
 - _close function
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eabf084d2e4dd7e280c0ff730d1ec34d86f1ed98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: faea008903136e8abdc39297672b31800ada796d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394196"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528023"
 ---
 # <a name="close"></a>_close
 
@@ -59,19 +49,19 @@ Dateideskriptor, der auf die geöffnete Datei verweist.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_close** gibt 0 zurück, wenn die Datei wurde erfolgreich geschlossen. Ein Rückgabewert von – 1 zeigt einen Fehler.
+**_close** gibt 0 zurück, wenn die Datei erfolgreich geschlossen wurde. Ein Rückgabewert 1 gibt einen Fehler.
 
 ## <a name="remarks"></a>Hinweise
 
 Die **_close** -Funktion schließt die zugeordnete Datei *fd*.
 
-Der Dateideskriptor und das zugrunde liegende Betriebssystem-Dateihandle werden geschlossen. Es ist daher nicht notwendig, **CloseHandle** , wenn die Datei ursprünglich geöffnet wurde mit der Win32-Funktion **CreateFile** und konvertiert Sie in eine Datei Deskriptor **_open_osfhandle**.
+Der Dateideskriptor und das zugrunde liegende Betriebssystem-Dateihandle werden geschlossen. Folglich ist es nicht notwendig, **"CloseHandle"** wird die Datei ursprünglich geöffnet wurde, mithilfe der Win32-Funktion **CreateFile** und konvertiert Sie in eine Sicherheitsbeschreibung **_open_osfhandle**.
 
-Diese Funktion überprüft ihre Parameter. Wenn *fd* ein fehlerhaften Dateideskriptor wird der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktionen gibt-1 zurück und **Errno** festgelegt ist, um **EBADF**.
+Diese Funktion überprüft ihre Parameter. Wenn *fd* ein fehlerhafter Dateideskriptor, wird der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktionen-1 zurück und **Errno** nastaven NA hodnotu **EBADF**.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|Optionaler Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|
 |-------------|---------------------|---------------------|
 |**_close**|\<io.h>|\<errno.h>|
 

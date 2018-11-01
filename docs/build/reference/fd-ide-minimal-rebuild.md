@@ -1,29 +1,19 @@
 ---
-title: -FD (minimale Neuerstellung in der IDE) | Microsoft-Dokumentation
-ms.custom: ''
+title: /FD (Minimale Neuerstellung in der IDE)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /FD
-dev_langs:
-- C++
 helpviewer_keywords:
 - /FD compiler option [C++]
 - -FD compiler option [C++]
 - FD compiler option [C++]
 ms.assetid: 7ef21b8c-a448-4bb4-9585-a2a870028e17
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 74fb35ec25bed808e2165498c00b65723aba5bac
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a902096bf13105e6a6a66b7bd3ccc56b8f7cf624
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702441"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50433591"
 ---
 # <a name="fd-ide-minimal-rebuild"></a>/FD (Minimale Neuerstellung in der IDE)
 
@@ -33,6 +23,6 @@ Wenn Sie nicht aktivieren **/GM** in der Entwicklungsumgebung **/FD** verwendet 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Ausgabedatei (/ F) Optionen](../../build/reference/output-file-f-options.md)
+[Ausgabedatei (/F) Optionen](../../build/reference/output-file-f-options.md)<br/>
 [Compileroptionen](../../build/reference/compiler-options.md)<br/>
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

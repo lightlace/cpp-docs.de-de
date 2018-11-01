@@ -1,10 +1,6 @@
 ---
-title: COleDateTimeSpan-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: COleDateTimeSpan-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleDateTimeSpan
 - ATLCOMTIME/ATL::COleDateTimeSpan
@@ -23,8 +19,6 @@ f1_keywords:
 - ATLCOMTIME/ATL::COleDateTimeSpan::SetStatus
 - ATLCOMTIME/ATL::COleDateTimeSpan::m_span
 - ATLCOMTIME/ATL::COleDateTimeSpan::m_status
-dev_langs:
-- C++
 helpviewer_keywords:
 - timespan
 - time span
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ee7ccca718a05529e5ebc88bccc7d23d258810c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7bcf4c50577cf7211f90415143edac9fd0df1d5b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758361"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509330"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan-Klasse
 
@@ -124,7 +114,7 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*dateSpan*  
+*dateSpan*<br/>
 Der zu vergleichende `COleDateTimeSpan`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -154,10 +144,10 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*dblSpanSrc*  
+*dblSpanSrc*<br/>
 Die Anzahl der Tage, die in die neue kopiert werden `COleDateTimeSpan` Objekt.
 
-*lDays*, *nHours*, *nMins*, *nSecs*  
+*lDays*, *nHours*, *nMins*, *nSecs*<br/>
 Geben Sie den Tag und Werte in die neue kopiert werden `COleDateTimeSpan` Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -189,7 +179,7 @@ CString Format(UINT nID) const;
 
 ### <a name="parameters"></a>Parameter
 
-*pFormat*  
+*pFormat*<br/>
 Eine Formatierungszeichenfolge ähnelt der `printf` Formatierungszeichenfolge. Formatierungscodes Prozentsatz vorangestellt (`%`) anmelden, werden mit den entsprechenden ersetzt `COleDateTimeSpan` Komponente. Andere Zeichen in der Formatierungszeichenfolge werden auf die zurückgegebene Zeichenfolge unverändert kopiert. Der Wert und die Bedeutung der Formatierungscodes für `Format` sind nachfolgend aufgeführt:
 
 - **%H** Stunden in den aktuellen Tag
@@ -204,7 +194,7 @@ Die vier oben aufgeführten Formatcodes sind die einzige Codes, die Format akzep
 
 -
 
-*nID*  
+*nID*<br/>
 Die Ressourcen-ID für die Format-Zeichenfolge.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -217,10 +207,10 @@ Rufen Sie diese Funktionen um eine formatierte Darstellung des Werts Zeitspanne 
 
 Eine kurze Beschreibung der Formate für diese Funktion folgt:
 
-**Format (** *pFormat* **)**  
+**Format (** *pFormat* **)**<br/>
 Dieses Formular formatiert den Wert, der mit der Formatzeichenfolge, die spezielle Formatierungscodes enthält, die ein Prozentzeichen (%) vorangestellt werden, wie in `printf`. Die Formatierungszeichenfolge wird als Parameter an die Funktion übergeben.
 
-**Format (** *nID* **)**  
+**Format (** *nID* **)**<br/>
 Dieses Formular formatiert den Wert, der mit der Formatzeichenfolge, die spezielle Formatierungscodes enthält, die ein Prozentzeichen (%) vorangestellt werden, wie in `printf`. Die Formatierungszeichenfolge ist eine Ressource. Die ID der Ressource, diese Zeichenfolge wird als Parameter übergeben.
 
 ### <a name="example"></a>Beispiel
@@ -388,11 +378,11 @@ Der Status dieser `COleDateTimeSpan` Wert.
 Der Rückgabewert wird definiert, durch die `DateTimeSpanStatus` Enumerationstyp, der in definiert ist die `COleDateTimeSpan` Klasse.
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-};  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+};
 ```
 
 Eine kurze Beschreibung dieser Status-Werte finden Sie in der folgenden Liste:
@@ -585,11 +575,11 @@ DateTimeSpanStatus m_status;
 ### <a name="remarks"></a>Hinweise
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-   };  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+   };
 ```
 
 Eine kurze Beschreibung dieser Status-Werte finden Sie in der folgenden Liste:
@@ -694,7 +684,7 @@ void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*lDays*, *nHours*, *nMins*, *nSecs*  
+*lDays*, *nHours*, *nMins*, *nSecs*<br/>
 Zeigen die Werte für Datum-Span und Zeitspanne, die in diese kopiert werden `COleDateTimeSpan` Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -731,7 +721,7 @@ void SetStatus(DateTimeSpanStatus status) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*status*  
+*Status*<br/>
 Der neue Statuswert für diesen `COleDateTimeSpan` Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -739,11 +729,11 @@ Der neue Statuswert für diesen `COleDateTimeSpan` Objekt.
 Die *Status* Parameterwert wird definiert, indem die `DateTimeSpanStatus` Enumerationstyp, der in definiert ist die `COleDateTimeSpan` Klasse.
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-   };  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+   };
 ```
 
 Eine kurze Beschreibung dieser Status-Werte finden Sie in der folgenden Liste:
@@ -763,9 +753,9 @@ Eine kurze Beschreibung dieser Status-Werte finden Sie in der folgenden Liste:
 
 ## <a name="see-also"></a>Siehe auch
 
-[COleDateTime-Klasse](../../atl-mfc-shared/reference/coledatetime-class.md)   
-[CTime-Klasse](../../atl-mfc-shared/reference/ctime-class.md)   
-[CTimeSpan-Klasse](../../atl-mfc-shared/reference/ctimespan-class.md)   
-[Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
+[COleDateTime-Klasse](../../atl-mfc-shared/reference/coledatetime-class.md)<br/>
+[CTime-Klasse](../../atl-mfc-shared/reference/ctime-class.md)<br/>
+[CTimeSpan-Klasse](../../atl-mfc-shared/reference/ctimespan-class.md)<br/>
+[Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [Freigegebene ATL-/MFC-Klassen](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

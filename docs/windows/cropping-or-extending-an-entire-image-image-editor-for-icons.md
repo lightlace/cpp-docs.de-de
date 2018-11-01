@@ -1,28 +1,17 @@
 ---
-title: Abschneiden oder Erweitern eines ganzen Bilds (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
-ms.custom: ''
+title: Abschneiden oder Erweitern eines ganzen Bilds (Bildbearbeitung für Symbole)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - images [C++], cropping
 - images [C++], extending
 - Image editor [C++], cropping or extending images
 ms.assetid: 21cdaff5-6636-4ad9-a2f0-ca2228321927
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: bbb5bfb19d56ae41d743de795788961690f327b0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2a091fd04aa56daa2b215e6ad7aed8003519c201
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583415"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50474112"
 ---
 # <a name="cropping-or-extending-an-entire-image-image-editor-for-icons"></a>Abschneiden oder Erweitern eines ganzen Bilds (Bildbearbeitung für Symbole)
 
@@ -46,5 +35,5 @@ Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Größenänderungen bei Bildern](../windows/resizing-an-image-image-editor-for-icons.md)

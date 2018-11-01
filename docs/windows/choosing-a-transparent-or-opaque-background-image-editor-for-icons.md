@@ -1,12 +1,6 @@
 ---
-title: Auswählen eines transparenten oder deckenden Hintergrunds (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
-ms.custom: ''
+title: Auswählen eines transparenten oder deckenden Hintergrunds (Bildbearbeitung für Symbole)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - opaque backgrounds [C++]
 - colors [C++], image
@@ -14,17 +8,12 @@ helpviewer_keywords:
 - images [C++], transparency
 - images [C++], opaque background
 ms.assetid: 61b743d9-c86b-405d-9a81-0806431b4363
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 5c0c4c306191af519103c65b39e3bb89afdb47f9
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: a7e4d427a6926d48b5115a1b5bb9ba2ca2d8068c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313480"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50653530"
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>Auswählen eines transparenten oder deckenden Hintergrunds (Bildbearbeitung für Symbole)
 
@@ -32,7 +21,7 @@ Beim Verschieben oder kopieren eine Auswahl aus einem Image, werden alle Pixel i
 
 Sie können über einen transparenten Hintergrund (Standard) wechseln, um ein nicht transparenter Hintergrund und wieder zurück. Wenn Sie eine Auswahltool verwenden, die **transparenten Hintergrund** und **nicht transparenter Hintergrund** Optionen angezeigt, der **Option** -Selektor auf die **Bildbearbeitung** Symbolleiste (siehe unten).
 
-![Optionen im Hintergrund &#45; undurchsichtig oder durchsichtig](../windows/media/vcimageeditoropaqtranspback.gif "VcImageEditorOpaqTranspBack")  
+![Optionen im Hintergrund &#45; undurchsichtig oder durchsichtig](../windows/media/vcimageeditoropaqtranspback.gif "VcImageEditorOpaqTranspBack")<br/>
 **Transparente und undurchsichtige Optionen** auf die **Symbolleiste der Bildbearbeitung**
 
 ### <a name="to-switch-between-a-transparent-and-opaque-background"></a>So wechseln Sie zwischen einem transparente und undurchsichtige-Hintergrund
@@ -57,5 +46,5 @@ Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Arbeiten mit Farben](../windows/working-with-color-image-editor-for-icons.md)

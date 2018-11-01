@@ -1,23 +1,30 @@
 ---
 title: __vectorcall | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
+f1_keywords:
+- __vectorcall_cpp
+- __vectorcall
+- _vectorcall
 dev_langs:
 - C++
+helpviewer_keywords:
+- __vectorcall keyword
+- __vectorcall
 ms.assetid: 1c95ed59-86c6-4857-b4ed-10519193f851
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 335f81a204ec91361c51f7573e58b61fad91f97b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 018f8834b182f2179ccec9931b61bf66a46eb4f9
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061707"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162125"
 ---
 # <a name="vectorcall"></a>__vectorcall
 
@@ -27,7 +34,7 @@ Die **__vectorcall** -Aufrufkonvention gibt an, dass Argumente für Funktionen, 
 
 |Element|Implementierung|
 |-------------|--------------------|
-|C-Namensergänzungskonvention|Funktionsnamen werden mit zwei "@"-Zeichen als Suffix (\@\@) gefolgt von der Anzahl von Bytes (als Dezimalzahl) in der Parameterliste.|
+|C-Namensergänzungskonvention|Funktionsnamen werden mit zwei "\@"-Zeichen als Suffix (\@\@) gefolgt von der Anzahl von Bytes (als Dezimalzahl) in der Parameterliste.|
 |Konvention zur Umwandlung von Groß- in Kleinbuchstaben und umgekehrt|Groß-/Kleinbuchstaben werden nicht umgewandelt.|
 
 Mithilfe der [/GV](../build/reference/gd-gr-gv-gz-calling-convention.md) -Compileroption werden die einzelnen Funktionen im Modul als Kompilieren **__vectorcall** , wenn die Funktion eine Memberfunktion ist, wird mit einem in Konflikt stehenden aufrufkonventionsattribut deklariert, verwendet eine `vararg` Variable Argumentliste oder hat den Namen `main`.
@@ -79,6 +86,8 @@ Die **__vectorcall** Aufrufkonventionsmodifizierer, muss angegeben werden, wenn 
 ```cpp
 typedef __m256 (__vectorcall * vcfnptr)(double, double, double, double);
 ```
+
+Für die Kompatibilität mit früheren Versionen **_vectorcall** ist ein Synonym für **__vectorcall** , wenn Compileroption [/Za \(spracherweiterungen deaktivieren)](../build/reference/za-ze-disable-language-extensions.md)angegeben ist.
 
 ## <a name="vectorcall-convention-on-x64"></a>__vectorcall-Konvention auf x64
 

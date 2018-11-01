@@ -1,24 +1,22 @@
 ---
-title: DeferrableEventArgs-Klasse | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: DeferrableEventArgs-Klasse
+ms.date: 10/03/2018
 ms.topic: reference
-dev_langs:
-- C++
+f1_keywords:
+- event/Microsoft::WRL::DeferrableEventArgs
+- event/Microsoft::WRL::DeferrableEventArgs::GetDeferral
+- event/Microsoft::WRL::DeferrableEventArgs::InvokeAllFinished
+helpviewer_keywords:
+- Microsoft::WRL::DeferrableEventArgs class
+- Microsoft::WRL::DeferrableEventArgs::GetDeferral method
+- Microsoft::WRL::DeferrableEventArgs::InvokeAllFinished method
 ms.assetid: ece89267-7b72-40e1-8185-550c865b070a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8a53e33d55ccfac7eff763e53240295ea9b7b2a1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e00dcd5d1e62598e393d3798bd05d4bbc5633f72
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600970"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471330"
 ---
 # <a name="deferrableeventargs-class"></a>DeferrableEventArgs-Klasse
 
@@ -27,35 +25,32 @@ Eine für die Ereignisargumenttypen für Verzögerungen verwendete Vorlagenklass
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-template <
-typename TEventArgsInterface,
-typename TEventArgsClass
->
-class DeferrableEventArgs : public TEventArgsInterface
+template <typename TEventArgsInterface, typename TEventArgsClass>
+class DeferrableEventArgs : public TEventArgsInterface;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*TEventArgsInterface*  
+*TEventArgsInterface*<br/>
 Der Schnittstellentyp, der die Argumente für ein zurückgestelltes Ereignis deklariert.
 
-*TEventArgsClass*  
+*TEventArgsClass*<br/>
 Implementiert die Klasse, *TEventArgsInterface*.
 
 ## <a name="members"></a>Member
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|Name|Beschreibung|
-|----------|-----------------|
-|[DeferrableEventArgs::GetDeferral-Methode](../windows/deferrableeventargs-getdeferral-method.md)|Ruft einen Verweis auf die [Verzögerung](http://go.microsoft.com/fwlink/p/?linkid=526520) Objekt, das ein zurückgestelltes Ereignis darstellt.|
-|[DeferrableEventArgs::InvokeAllFinished-Methode](../windows/deferrableeventargs-invokeallfinished-method.md)|Wird aufgerufen, um anzugeben, dass das Behandeln eines zurückgestellten Ereignisses abgeschlossen ist.|
+Name                                                         | Beschreibung
+------------------------------------------------------------ | -----------------------------------------------------------------------------------------------------------------------------
+[Deferrableeventargs:: Getdeferral](#getdeferral)             | Ruft einen Verweis auf die [Verzögerung](http://go.microsoft.com/fwlink/p/?linkid=526520) Objekt, das ein zurückgestelltes Ereignis darstellt.
+[Deferrableeventargs:: Invokeallfinished](#invokeallfinished) | Wird aufgerufen, um anzugeben, dass das Behandeln eines zurückgestellten Ereignisses abgeschlossen ist.
 
 ## <a name="remarks"></a>Hinweise
 
 Instanzen dieser Klasse werden an die Ereignishandler für zurückgestellte Ereignisse übergeben. Der Vorlagenparameter stellt eine Schnittstelle, die die Details der Ereignisargumente für einen bestimmten Typ eines zurückgestellten Ereignisses definiert, und eine Klasse dar, die diese Schnittstelle implementiert.
 
-Die Klasse wird als erstes Argument in einem Ereignishandler für ein zurückgestelltes Ereignis angezeigt. Rufen Sie die [GetDeferral](../windows/deferrableeventargs-getdeferral-method.md) -Methode zum Abrufen der [Verzögerung](http://go.microsoft.com/fwlink/p/?linkid=526520) Objekt aus dem Sie alle Informationen über das zurückgestellte Ereignis erhalten. Wenn die Ereignisbehandlung abgeschlossen ist, müssen Sie „Complete“ für das Deferral-Objekt aufrufen. Rufen Sie dann [InvokeAllFinished](../windows/deferrableeventargs-invokeallfinished-method.md) am Ende der Ereignishandlermethode, die sicherstellt, dass es sich bei der Abschluss aller zurückgestellten Ereignisse ordnungsgemäß übermittelt wird.
+Die Klasse wird als erstes Argument in einem Ereignishandler für ein zurückgestelltes Ereignis angezeigt. Rufen Sie die [GetDeferral](#getdeferral) -Methode zum Abrufen der [Verzögerung](http://go.microsoft.com/fwlink/p/?linkid=526520) Objekt aus dem Sie alle Informationen über das zurückgestellte Ereignis erhalten. Wenn die Ereignisbehandlung abgeschlossen ist, müssen Sie „Complete“ für das Deferral-Objekt aufrufen. Rufen Sie dann [InvokeAllFinished](#invokeallfinished) am Ende der Ereignishandlermethode, die sicherstellt, dass es sich bei der Abschluss aller zurückgestellten Ereignisse ordnungsgemäß übermittelt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,6 +58,31 @@ Die Klasse wird als erstes Argument in einem Ereignishandler für ein zurückges
 
 **Namespace:** Microsoft::WRL
 
-## <a name="see-also"></a>Siehe auch
+## <a name="getdeferral"></a>Deferrableeventargs:: Getdeferral
 
-[Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)
+Ruft einen Verweis auf die [Verzögerung](http://go.microsoft.com/fwlink/p/?linkid=526520) Objekt, das ein zurückgestelltes Ereignis darstellt.
+
+```cpp
+HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
+```
+
+### <a name="parameters"></a>Parameter
+
+*Ergebnis*<br/>
+Ein Zeiger, der auf die [Verzögerung](http://go.microsoft.com/fwlink/p/?linkid=526520) Objekt, wenn der Aufruf abgeschlossen ist.
+
+### <a name="return-value"></a>Rückgabewert
+
+S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.
+
+## <a name="invokeallfinished"></a>Deferrableeventargs:: Invokeallfinished
+
+Wird aufgerufen, um anzugeben, dass das Behandeln eines zurückgestellten Ereignisses abgeschlossen ist.
+
+```cpp
+void InvokeAllFinished()
+```
+
+### <a name="remarks"></a>Hinweise
+
+Sie sollten diese Methode aufrufen, nach dem Aufrufen der Quelle Ereignis [InvokeAll](../windows/eventsource-invokeall-method.md). Das Aufrufen dieser Methode verhindert weitere Verzögerungen und erzwingt die Ausführung des Abschlusshandlers, wenn keine Verzögerungen ausgeführt wurden.

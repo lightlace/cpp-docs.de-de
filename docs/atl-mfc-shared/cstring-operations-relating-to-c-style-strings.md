@@ -1,12 +1,6 @@
 ---
-title: CString-Vorgänge im Zusammenhang mit Zeichenfolgen im C-Stil | Microsoft-Dokumentation
-ms.custom: ''
+title: CString-Vorgänge bei Zeichenfolgen im C-Format
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - CString objects, basic operations
 - MFC [C++], string handling class
@@ -21,16 +15,12 @@ helpviewer_keywords:
 - strings [C++], class CString
 - casting CString objects
 ms.assetid: 5048de8a-5298-4891-b8a0-c554b5a3ac1b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cda24d58e26157b8730ae5d010e0874195151b79
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f68f021d16de7ad701ce20c3be59ed6958aa6893
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756927"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528400"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>CString-Vorgänge bei Zeichenfolgen im C-Format
 
@@ -54,9 +44,9 @@ Ein [CString](../atl-mfc-shared/using-cstring.md) -Objekt enthält Zeichenfolgen
 
 Verwenden einer `CString` -Objekt als Zeichenfolge im C-Format, das Objekt, das LPCTSTR umgewandelt. Im folgenden Beispiel gibt `CString` einen Zeiger auf eine schreibgeschützte auf NULL abschließende Zeichenfolge im C-Format zurück. Die `strcpy`-Funktion fügt eine Kopie der Zeichenfolge im C-Format in der Variablen `myString` ein.
 
-```
-CString aCString = "A string";  
-char myString[256];  
+```cpp
+CString aCString = "A string";
+char myString[256];
 strcpy(myString, (LPCTSTR)aCString);
 ```
 
@@ -67,7 +57,7 @@ Gelegentlich benötigen Sie eine Kopie der `CString`-Daten, um direkte Änderung
 [!code-cpp[NVC_ATLMFC_Utilities#189](../atl-mfc-shared/codesnippet/cpp/cstring-operations-relating-to-c-style-strings_1.cpp)]
 
 > [!NOTE]
->  Das dritte Argument `strcpy_s` (oder das Unicode/MBCS-Portable `_tcscpy_s`) ist entweder ein `const wchar_t*` (Unicode) oder ein `const char*` (ANSI). Das oben stehende Beispiel übergibt einen `CString` für dieses Argument. Der C++-Compiler wendet automatisch die Konvertierungsfunktion an, die für die `CString`-Klasse definiert wurde, mit der ein `CString` in einen `LPCTSTR` konvertiert wird. Die Fähigkeit, Umwandlungsvorgänge von einem Typ in einen anderen zu definieren, ist eine der nützlichsten Funktionen von C++.
+> Das dritte Argument `strcpy_s` (oder das Unicode/MBCS-Portable `_tcscpy_s`) ist entweder ein `const wchar_t*` (Unicode) oder ein `const char*` (ANSI). Das oben stehende Beispiel übergibt einen `CString` für dieses Argument. Der C++-Compiler wendet automatisch die Konvertierungsfunktion an, die für die `CString`-Klasse definiert wurde, mit der ein `CString` in einen `LPCTSTR` konvertiert wird. Die Fähigkeit, Umwandlungsvorgänge von einem Typ in einen anderen zu definieren, ist eine der nützlichsten Funktionen von C++.
 
 ##  <a name="_core_working_with_standard_run.2d.time_library_string_functions"></a> Arbeiten mit Funktionen der Standard-Laufzeitbibliothek-Zeichenfolgen
 
@@ -83,13 +73,13 @@ Es gibt einige Situationen, in denen es sinnvoll ist, die `CString`-Inhalte dire
 
 Die `GetBuffer`- und `ReleaseBuffer`-Methoden bieten Zugriff auf den internen Zeichenpuffer eines `CString`-Objekts, sodass Sie es direkt ändern können. Die folgenden Schritte zeigen Ihnen, wie Sie diese Funktionen zu diesem Zweck verwenden können.
 
-#### <a name="to-use-getbuffer-and-releasebuffer-to-access-the-internal-character-buffer-of-a-cstring-object"></a>So verwenden Sie GetBuffer und ReleaseBuffer für den Zugriff auf den internen Zeichenpuffer eines CString-Objekts
+### <a name="to-use-getbuffer-and-releasebuffer-to-access-the-internal-character-buffer-of-a-cstring-object"></a>So verwenden Sie GetBuffer und ReleaseBuffer für den Zugriff auf den internen Zeichenpuffer eines CString-Objekts
 
 1. Rufen Sie `GetBuffer` für ein `CString`-Objekt auf, und geben Sie die Länge des benötigten Puffers an.
 
-2. Verwenden Sie den von `GetBuffer` zurückgegebenen Zeiger, um Zeichen direkt in das `CString`-Objekt zu schreiben.
+1. Verwenden Sie den von `GetBuffer` zurückgegebenen Zeiger, um Zeichen direkt in das `CString`-Objekt zu schreiben.
 
-3. Rufen Sie `ReleaseBuffer` für das `CString`-Objekt auf, um alle internen `CString`-Statusinformationen, z. B. die Länge der Zeichenfolge, zu aktualisieren. Nachdem Sie die Inhalte eines `CString`-Objekts direkt geändert haben, müssen Sie `ReleaseBuffer` aufrufen, bevor Sie eine andere `CString`-Memberfunktion aufrufen.
+1. Rufen Sie `ReleaseBuffer` für das `CString`-Objekt auf, um alle internen `CString`-Statusinformationen, z. B. die Länge der Zeichenfolge, zu aktualisieren. Nachdem Sie die Inhalte eines `CString`-Objekts direkt geändert haben, müssen Sie `ReleaseBuffer` aufrufen, bevor Sie eine andere `CString`-Memberfunktion aufrufen.
 
 ##  <a name="_core_using_cstring_objects_with_variable_argument_functions"></a> Verwenden von CString-Objekten mit Variablen Argumentsfunktionen
 
@@ -111,6 +101,5 @@ Bei den meisten Funktionsergebnissen können Sie einfach ein `CString`-Objekt na
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zeichenfolgen (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
+[Zeichenfolgen (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [CString-Argumentübergabe](../atl-mfc-shared/cstring-argument-passing.md)
-

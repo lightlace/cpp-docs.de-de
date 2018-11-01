@@ -1,27 +1,16 @@
 ---
-title: Hinzufügen eines Eintrags zu einer Zugriffstastentabelle (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Hinzufügen eines Eintrags zu einer Zugriffstastentabelle (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - accelerator tables [C++], adding entries
 - New Accelerator command
 ms.assetid: 559c2415-8323-4339-9447-6966665f8288
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 7055c21a2b9e7d0e32f3dac56641513b19953e18
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 63ae7296d7571bb70f4ca7abe05f39591cc40ced
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315579"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626849"
 ---
 # <a name="adding-an-entry-to-an-accelerator-table-c"></a>Hinzufügen eines Eintrags zu einer Zugriffstastentabelle (C++)
 
@@ -51,5 +40,5 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Bearbeiten von Zugriffstastentabellen](../windows/editing-accelerator-tables.md)  
+[Bearbeiten von Zugriffstastentabellen](../windows/editing-accelerator-tables.md)<br/>
 [Zugriffstasten-Editor](../windows/accelerator-editor.md)

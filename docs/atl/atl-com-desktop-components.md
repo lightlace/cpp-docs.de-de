@@ -1,7 +1,7 @@
 ---
 title: ATL-COM-Desktop-Komponenten | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/19/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eadbcd138bd9fc73835938b8ff59d694ede152b8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e5cce23d34c739ed6a3aca67e05b59c6cafd9191
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46065620"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062300"
 ---
 # <a name="atl-com-desktop-components"></a>ATL-COM-Desktop-Komponenten
 
-Die ATL-dokumentiert die Active Vorlage Library (ATL), einen Satz von Template-basierten C++-Klassen, die die Programmierung von Component Object Model (COM)-Objekten zu vereinfachen. Um die Vorteile von ATL voll nutzen zu können, wird mit COM auszukennen dringend empfohlen.
+Die ATL-dokumentiert die Active Vorlage Library (ATL), einen Satz von Template-basierten C++-Klassen, die die Programmierung von Component Object Model (COM)-Objekten zu vereinfachen. COM ist eine binäre Spezifikation zum Erstellen und auf Windows-Software-Komponenten nutzen. Um die Vorteile von ATL voll nutzen zu können, wird mit COM auszukennen dringend empfohlen. Weitere Informationen zu COM, finden Sie unter [Component Object Model (COM)](/windows/desktop/com/component-object-model--com--portal).
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -61,4 +61,4 @@ Führt Sie durch die Erstellung eines Steuerelements und zeigt einige ATL-Grundl
 Beispielcode, der zeigt, wie mit ATL um COM-Objekte zu schreiben.
 
 [OLE DB-Vorlagen](../data/oledb/ole-db-templates.md)<br/>
-Enthält Referenzmaterial zu den OLE DB-Consumer- und -Anbietervorlagen, einer Gruppe von Vorlagenklassen, die zahlreiche häufig verwendete OLE DB-Schnittstellen implementieren.  
+Enthält Referenzmaterial zu den OLE DB-Consumer- und -Anbietervorlagen, einer Gruppe von Vorlagenklassen, die zahlreiche häufig verwendete OLE DB-Schnittstellen implementieren.

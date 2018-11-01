@@ -1,30 +1,20 @@
 ---
-title: / EXPORT (exportiert eine Funktion) | Microsoft-Dokumentation
-ms.custom: ''
+title: /EXPORT (Funktion exportieren)
 ms.date: 09/05/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.ExportFunctions
 - /export
-dev_langs:
-- C++
 helpviewer_keywords:
 - /EXPORT linker option
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ae9ab3c2e8f077d943b69b419694fbf686ffdf38
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a26df26849302ae1cce449f92cdeb5ee6dfd9baa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703858"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456129"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (Funktion exportieren)
 
@@ -70,9 +60,9 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
 
-2. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **Befehlszeile** Eigenschaftenseite.
+1. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **Befehlszeile** Eigenschaftenseite.
 
-3. Geben Sie die Option in der **zusätzliche Optionen** Feld.
+1. Geben Sie die Option in der **zusätzliche Optionen** Feld.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest
 

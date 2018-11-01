@@ -1,31 +1,21 @@
 ---
-title: Event (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Event (C++ / CLI und C++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
 - event
 - event_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: d301f2bc7464d52be643d252e4febf7049657c2b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 66125645582fbc95523aea74047563bfd4f712b2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724759"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50542466"
 ---
-# <a name="event--c-component-extensions"></a>event (Komponentenerweiterungen für C++)
+# <a name="event--ccli-and-ccx"></a>Event (C++ / CLI und C++ / CX)
 
 Die **Ereignis** -Schlüsselwort deklariert eine *Ereignis*, d. h. eine Benachrichtigung an die registrierten Abonnenten (*Ereignishandler*), die Aktionen von Interesse ist aufgetreten.
 
@@ -50,19 +40,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parameter
 
-*Modifizierer*  
+*Modifizierer*<br/>
 Ein Modifizierer, der entweder für die Ereignisdeklaration oder eine Ereigniszugriffsmethode verwendet werden kann.  Mögliche Werte sind **statische** und **virtuellen**.
 
-*delegate*  
+*delegate*<br/>
 Die [Delegieren](../windows/delegate-cpp-component-extensions.md), deren Signatur der Ereignishandler übereinstimmen muss.
 
-*event_name*  
+*event_name*<br/>
 Der Name des Ereignisses.
 
-*return_value*  
+*return_value*<br/>
 Der Rückgabewert der Ereigniszugriffsmethode.  Um überprüfbar zu sein, muss der Rückgabetyp **"void"**.
 
-*Parameter*  
+*Parameter*<br/>
 (optional) Parameter für die `raise` -Methode, die der Signatur der entsprechen den *Delegieren* Parameter.
 
 ### <a name="remarks"></a>Hinweise
@@ -71,10 +61,10 @@ Ein Ereignis ist eine Zuordnung zwischen einem Delegaten und einer Memberfunktio
 
 Es gibt zwei Arten von Ereignisdeklarationen:
 
-*Ereignis-Datenmember*  
+*Ereignis-Datenmember*<br/>
 Der Compiler erstellt automatisch Speicherplatz für das Ereignis in Form eines Members des Delegattyps und erstellt interne Memberfunktionen `add()`, `remove()` und `raise()`. Ein Ereignisdatenmember muss innerhalb einer Klasse deklariert werden. Der Rückgabetyp des Rückgabetyps des Delegaten muss dem Rückgabetyp des Ereignishandlers entsprechen.
 
-*Event-block*  
+*Event-block*<br/>
 Ein Event-Block ermöglicht es Ihnen, das Verhalten der Methoden `add()`, `remove()` und `raise()` explizit zu deklarieren und anzupassen.
 
 Können Sie **Operatoren +=** und **Operator-=** hinzufügen und entfernen ein Ereignis-Handler, oder rufen die `add()` und `remove()` Methoden explizit.
@@ -114,19 +104,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parameter
 
-*Modifizierer*  
+*Modifizierer*<br/>
 Ein Modifizierer, der entweder für die Ereignisdeklaration oder eine Ereigniszugriffsmethode verwendet werden kann.  Mögliche Werte sind **statische** und **virtuellen**.
 
-*delegate*  
+*delegate*<br/>
 Die [Delegieren](../windows/delegate-cpp-component-extensions.md), deren Signatur der Ereignishandler übereinstimmen muss.
 
-*event_name*  
+*event_name*<br/>
 Der Name des Ereignisses.
 
-*return_value*  
+*return_value*<br/>
 Der Rückgabewert der Ereigniszugriffsmethode.  Um überprüfbar zu sein, muss der Rückgabetyp **"void"**.
 
-*Parameter*  
+*Parameter*<br/>
 (optional) Parameter für die `raise` -Methode, die der Signatur der entsprechen den *Delegieren* Parameter.
 
 ### <a name="remarks"></a>Hinweise
@@ -137,10 +127,10 @@ Der Delegat kann eine oder mehrere zugeordnete Methoden haben, die aufgerufen we
 
 Es gibt zwei Arten von Ereignisdeklarationen:
 
-*Ereignis-Datenmember*  
+*Ereignis-Datenmember*<br/>
 Speicher für das Ereignis in der Form eines Members des Delegattyps wird vom Compiler für Datenmemberereignisse erstellt.  Ein Ereignisdatenmember muss innerhalb einer Klasse deklariert werden. Dies wird auch als triviales Ereignis bezeichnet (siehe untenstehendes Codebeispiel).
 
-*Ereignis-Blöcke*  
+*Ereignis-Blöcke*<br/>
 Über Ereignis-Blöcke können Sie das Verhalten der Add-, Remove- und Raise-Methoden anpassen, indem Sie Add-, Remove- und Raise-Methoden implementieren. Die Signatur der Add-, Remove- und Raise-Methoden muss mit der Signatur des Delegaten übereinstimmen.  Event-Block-Ereignisse sind keine Datenmember und jede Verwendung als Datenmember führt zu einem Compilerfehler.
 
 Der Rückgabetyp des Ereignishandlers muss dem Rückgabetyp des Delegaten entsprechen.
@@ -282,4 +272,4 @@ int main() {
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET und UWP](../windows/component-extensions-for-runtime-platforms.md)

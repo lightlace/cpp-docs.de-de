@@ -1,7 +1,7 @@
 ---
 title: multimap-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d69497092ba89b91a4dbfaf56ac842fa8e07236
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9ae6c027947cf869a159b1561a7f7a3b853af0c2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707453"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068931"
 ---
 # <a name="multimap-class"></a>multimap-Klasse
 
@@ -887,7 +887,6 @@ Gibt den "past-the-end"-Iterator zurück.
 ```cpp
 const_iterator end() const;
 
-
 iterator end();
 ```
 
@@ -960,8 +959,8 @@ int main( )
 
    cout << "A direct call of upper_bound( 2 ) gives "
         << m1_RcIter -> second << "," << endl
-        << " matching the 2nd element of the pair"
-        << " returned by equal_range( 2 )." << endl;
+        << "matching the 2nd element of the pair "
+        << "returned by equal_range( 2 )." << endl;
 
    p2 = m1.equal_range( 4 );
 
@@ -980,7 +979,7 @@ int main( )
 The lower bound of the element with a key of 2 in the multimap m1 is: 20.
 The upper bound of the element with a key of 2 in the multimap m1 is: 30.
 A direct call of upper_bound( 2 ) gives 30,
- matching the 2nd element of the pair returned by equal_range( 2 ).
+matching the 2nd element of the pair returned by equal_range( 2 ).
 The multimap m1 doesn't have an element with a key less than 4.
 ```
 
@@ -1030,7 +1029,6 @@ Gibt einen Iterator zurück, der auf den ersten Speicherort eines Elements in ei
 
 ```cpp
 iterator find(const Key& key);
-
 
 const_iterator find(const Key& key) const;
 ```
@@ -1194,19 +1192,16 @@ Fügt ein Element oder einen Elementbereich in eine Mehrfachzuordnung ein.
 pair<iterator, bool> insert(
     const value_type& Val);
 
-
 // (2) single element, perfect forwarded
 template <class ValTy>
 pair<iterator, bool>
 insert(
     ValTy&& Val);
 
-
 // (3) single element with hint
 iterator insert(
     const_iterator Where,
     const value_type& Val);
-
 
 // (4) single element, perfect forwarded, with hint
 template <class ValTy>
@@ -1214,13 +1209,11 @@ iterator insert(
     const_iterator Where,
     ValTy&& Val);
 
-
 // (5) range
 template <class InputIterator>
 void insert(
     InputIterator First,
     InputIterator Last);
-
 
 // (6) initializer list
 void insert(
@@ -1652,18 +1645,18 @@ multimap(
 
 template <class InputIterator>
 multimap(
- InputIterator First,
+    InputIterator First,
     InputIterator Last);
 
 template <class InputIterator>
 multimap(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp);
 
 template <class InputIterator>
 multimap(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp,
     const Allocator& Al);
@@ -2339,7 +2332,7 @@ Gibt das Vergleichsfunktionsobjekt zurück, das eine Mehrfachzuordnung zum Sorti
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn zwei Elemente *e*1( *k*1, *d*1) und *e*2( *k*2, `d`2) mit *k*1 und *k*2 als ihre Schlüssel des Typs `key_type` sowie `d`1 und `d`2 als ihre Daten des Typs `mapped_type` in einer Mehrfachzuordnung *m* Objekte des Typs `value_type` sind, dann sind *m.*`value_comp`( *e*1, *e*2) und *m.*`key_comp`( *k*1, *k*2) gleichwertig.
+Für eine mehrfachzuordnung *m*, wenn zwei Elemente *e1*(*k1*, *d1*) und *e2*(*K2*, *d2*) sind Objekte vom Typ `value_type`, wobei *k1* und *K2* sind ihre Schlüssel vom Typ `key_type` und *d1*  und *d2* sind ihre Daten vom Typ `mapped_type`, klicken Sie dann `m.value_comp(e1, e2)` entspricht `m.key_comp(k1, k2)`.
 
 ### <a name="example"></a>Beispiel
 

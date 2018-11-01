@@ -1,10 +1,6 @@
 ---
-title: _get_daylight | Microsoft-Dokumentation
-ms.custom: ''
+title: _get_daylight
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __daylight
 - _get_daylight
@@ -24,23 +20,17 @@ apitype: DLLExport
 f1_keywords:
 - get_daylight
 - _get_daylight
-dev_langs:
-- C++
 helpviewer_keywords:
 - get_daylight function
 - daylight saving time offset
 - _get_daylight function
 ms.assetid: f85a6ba3-e187-4ca7-aed7-ffc694c8ac4c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0fbe7e36db2e5ca5365f43dc23281d9b5e79077d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03c3386e59379f460d3c07dc310153d990c02b05
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398122"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50444641"
 ---
 # <a name="getdaylight"></a>_get_daylight
 
@@ -59,19 +49,19 @@ Die Verschiebung der Sommerzeit in Stunden.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg NULL oder ein **Errno** Wert, wenn ein Fehler auftritt.
+Bei Erfolg NULL oder eine **Errno** -Wert, wenn ein Fehler auftritt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_get_daylight** Funktion ruft die Anzahl der Stunden in der Sommerzeit als Ganzzahl ab. Wenn die Sommerzeit gültig ist, beträgt die Standardzeitverschiebung eine Stunde (obwohl in ein paar Regionen eine Zeitverschiebung von zwei Stunden gilt).
+Die **_get_daylight** Funktion ruft die Anzahl der Stunden in der Sommerzeit als Ganzzahl. Wenn die Sommerzeit gültig ist, beträgt die Standardzeitverschiebung eine Stunde (obwohl in ein paar Regionen eine Zeitverschiebung von zwei Stunden gilt).
 
-Wenn *Stunden* ist **NULL**, den Handler für ungültige Parameter aufgerufen wird, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** auf **EINVAL** und gibt **EINVAL**.
+Wenn *Stunden* ist **NULL**, wird der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** zu **EINVAL** und gibt **EINVAL**.
 
 Es wird empfohlen, diese Funktion statt des Makros **_daylight** oder der veralteten Funktion **__daylight**.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_get_daylight**|\<time.h>|
 

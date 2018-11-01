@@ -1,7 +1,7 @@
 ---
-title: Handle für Objekt (^) (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
+title: Handle für Objekt (^) (C++ / CLI und C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 569770b548d4bb076bdfac83942def5684ebdf5e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5fe5bf67df643f83d555d3f2d6fc9a0aadf84b01
+ms.sourcegitcommit: 68cd127a6606f0aed2eb1bc9a75cdfb95b9b6526
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597296"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204889"
 ---
-# <a name="handle-to-object-operator---c-component-extensions"></a>Handle für Objekt (^) (Komponentenerweiterungen für C++)
+# <a name="handle-to-object-operator---ccli-and-ccx"></a>Handle für Objekt (^) (C++ / CLI und C++ / CX)
 
 Die *handledeklarator* (`^`, ausgesprochen "hat"), modifiziert den [Spezifizierer](../cpp/overview-of-declarators.md) so, dass das deklarierte Objekt automatisch gelöscht werden sollen, wenn das System feststellt, dass das Objekt ist nicht mehr zugegriffen werden kann.
 
@@ -34,7 +34,7 @@ Eine Variable, die mit dem Handledeklarator deklariert wird, verhält sich wie e
 
 Der Compiler verwendet die COM *verweiszählung* Mechanismus, um zu bestimmen, ob das Objekt nicht mehr verwendet wird und gelöscht werden kann. Dies ist möglich, da es sich bei einem Objekt, das von einer Windows Runtime-Schnittstelle abgeleitet wird, um ein COM-Objekt handelt. Der Verweiszähler wird inkrementiert, wenn das Objekt erstellt oder kopiert wird, und dekrementiert, wenn das Objekt auf NULL festgelegt wird oder den gültigen Bereichs verlässt. Wenn der Verweiszähler den Wert 0 erreicht, wird das Objekt automatisch und sofort gelöscht.
 
-Der Vorteil des Handledeklarators ist, dass Sie in COM den Verweiszählerwert für ein Objekt nicht mehr explizit verwalten müssen, was ein langwieriger und fehleranfälliger Prozess ist. Dabei müssen Sie alle AddRef()- bzw. Release()-Methoden des Objekts aufrufen, um den Verweiszähler zu inkrementieren bzw. zu dekrementieren. Wenn Sie dagegen ein Objekt mit dem Handledeklarator deklarieren, generiert der Visual C++-Compiler Code, der den Verweiszähler automatisch anpasst.
+Der Vorteil des Handledeklarators ist, dass Sie in COM den Verweiszählerwert für ein Objekt nicht mehr explizit verwalten müssen, was ein langwieriger und fehleranfälliger Prozess ist. Dabei müssen Sie alle AddRef()- bzw. Release()-Methoden des Objekts aufrufen, um den Verweiszähler zu inkrementieren bzw. zu dekrementieren. Wenn Sie ein Objekt mit dem handledeklarator deklarieren, generiert der Compiler jedoch Code, der den Verweiszähler automatisch anpasst.
 
 Informationen dazu, wie ein Objekt instanziieren, finden Sie unter [Ref neue](../windows/ref-new-gcnew-cpp-component-extensions.md).
 
@@ -44,11 +44,9 @@ Compileroption: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-Das System verwendet die CLR *Garbage Collector* Mechanismus, um zu bestimmen, ob das Objekt nicht mehr verwendet wird und gelöscht werden kann. Die Common Language Runtime verwaltet einen Heap, auf dem sie Objekten Arbeitsspeicher zuordnet, und verwendet im Programm verwaltete Verweise (Variablen), die den Speicherort von Objekten auf dem Heap angeben. Wenn ein Objekt nicht mehr verwendet wird, wird der Arbeitsspeicher freigegeben, den das Objekt auf dem Heap belegt. In regelmäßigen Abständen komprimiert der Garbage Collector den Heap, damit der freigegebene Arbeitsspeicher optimal verwendet werden kann. Das Komprimieren des Heaps kann Objekte auf dem Heap verschieben, wodurch die von den verwalteten Verweisen bezeichneten Speicherorte ungültig werden. Deshalb berücksichtigt der Garbage Collector die Positionen in allen verwalteten Verweisen und aktualisiert sie automatisch, damit sie weiterhin die aktuellen Positionen der Objekte auf dem Heap angeben.
+Das System verwendet die CLR *Garbage Collector* Mechanismus, um zu bestimmen, ob das Objekt nicht mehr verwendet wird und gelöscht werden kann. Die Common Language Runtime verwaltet einen Heap, auf dem sie Objekten Arbeitsspeicher zuordnet, und verwendet im Programm verwaltete Verweise (Variablen), die den Speicherort von Objekten auf dem Heap angeben. Wenn ein Objekt nicht mehr verwendet wird, wird der Arbeitsspeicher freigegeben, den das Objekt auf dem Heap belegt. In regelmäßigen Abständen komprimiert der Garbage Collector den Heap, damit der freigegebene Arbeitsspeicher optimal verwendet werden kann. Das Komprimieren des Heaps kann Objekte auf dem Heap verschieben das erklärt die Speicherorte, die von den verwalteten verweisen bezeichnet. Deshalb berücksichtigt der Garbage Collector die Positionen in allen verwalteten Verweisen und aktualisiert sie automatisch, damit sie weiterhin die aktuellen Positionen der Objekte auf dem Heap angeben.
 
 Weil aber systemeigene C++-Zeiger (`*`) und Verweise (`&`) keine verwalteten Verweise sind, kann der Garbage Collector die Adressen, auf die sie zeigen, nicht automatisch aktualisieren. Zur Umgehung dieses Problems verwenden Sie den Handledeklarator, um für eine Variable festzulegen, dass sie vom Garbage Collector verwaltet und automatisch aktualisiert werden soll.
-
-In Visual C++ 2002 und Visual C++ 2003 wurde `__gc *` verwendet, um ein Objekt auf dem verwalteten Heap zu deklarieren.  `^` ersetzt `__gc *` in der neuen Syntax.
 
 Weitere Informationen finden Sie unter [wie: Deklarieren Sie in systemeigenen Typen behandelt](../dotnet/how-to-declare-handles-in-native-types.md).
 
@@ -96,7 +94,7 @@ using namespace System;
 void Test(Object^ o) {
    Int32^ i = dynamic_cast<Int32^>(o);
 
-   if(i)  
+   if(i)
       Console::WriteLine(i);
    else
       Console::WriteLine("Not a boxed int");
@@ -175,12 +173,12 @@ private:
 public:
    DataCollection(int i) : Size(i) {
       x = gcnew array<String^>(Size);
-      for (int i = 0 ; i < Size ; i++)  
+      for (int i = 0 ; i < Size ; i++)
          x[i] = i.ToString();
    }
 
    void f(int Item) {
-      if (Item >= Size)  
+      if (Item >= Size)
       {
          System::Console::WriteLine("Cannot access array element {0}, size is {1}", Item, Size);
          return;
@@ -235,5 +233,5 @@ Compileroption: `/clr`
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)  
+[Komponentenerweiterungen für .NET und UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Nachverfolgungsverweisoperator](../windows/tracking-reference-operator-cpp-component-extensions.md)

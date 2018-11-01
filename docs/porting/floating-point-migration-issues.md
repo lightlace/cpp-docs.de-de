@@ -12,14 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb8f7d4835fe50dba2cb7eb6d4e7cb6a54efdbba
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e204e8dcc0d846294393edf9bf73b86360b40de2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578204"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421985"
 ---
 # <a name="floating-point-migration-issues"></a>Gleitkomma-Migrationsprobleme  
+
   
 Wenn Sie Ihre Projekte auf eine neuere Version von Visual Studio upgraden, kann es manchmal vorkommen, dass sich die Ergebnisse bestimmter Operationen mit Gleitkommazahlen geändert haben. Dies geschieht in der Regel aus zwei Gründen: Änderungen beim Generieren von Code, die den verfügbaren Prozessor besser nutzen, und Fehlerbehebungen oder Änderungen an den Algorithmen, die in den mathematischen Funktionen der C-Laufzeitbibliothek (CRT) verwendet werden. Im Allgemeinen sind die neuen Ergebnisse innerhalb der Grenzen, die vom Sprachstandard festgelegt wurden, korrekt. Lesen Sie weiter, um herauszufinden, was sich geändert hat, und wenn es wichtig ist, wie Sie die gleichen Ergebnisse für Ihre Funktionen bekommen wie zuvor.  
 
@@ -41,6 +42,6 @@ In den meisten Fällen führen Gleitkomma-Änderungen in den neuesten Compilern 
   
 ## <a name="see-also"></a>Siehe auch  
   
-[Aktualisieren von Projekten von früheren Versionen von Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
-[Überblick über potenzielle Aktualisierungsprobleme (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  
+[Aktualisieren von Projekten von früheren Versionen von Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Überblick über potenzielle Aktualisierungsprobleme (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Änderungsverlauf von Visual C++ von 2003 bis 2015](visual-cpp-change-history-2003-2015.md)  

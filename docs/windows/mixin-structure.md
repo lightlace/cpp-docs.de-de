@@ -1,7 +1,7 @@
 ---
 title: MixIn-Struktur | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6ccea9a053f47ae206cbe5c8412c387f07bd5b52
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e4a9e9eb2804e5abbb3f84ab157043402d48166f
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603426"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789097"
 ---
 # <a name="mixin-structure"></a>MixIn-Struktur
 
@@ -32,23 +32,22 @@ Stellt sicher, dass eine Runtime-Klasse aus Windows-Runtime-Schnittstellen (sofe
 
 ```cpp
 template<
-   typename Derived,
-   typename MixInType,
-   bool hasImplements = __is_base_of(Details::ImplementsBase,
-   MixInType)  
+    typename Derived,
+    typename MixInType,
+    bool hasImplements = __is_base_of(Details::ImplementsBase, MixInType)
 >
 struct MixIn;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*Abgeleitete*  
+*Abgeleitete*<br/>
 Ein abgeleiteter Typ von der [implementiert](../windows/implements-structure.md) Struktur.
 
-*MixInType*  
+*MixInType*<br/>
 Ein Basistyp.
 
-*hasImplements*  
+*hasImplements*<br/>
 **"true"** Wenn *MixInType* ist abgeleitet von der aktuellen Implementierung Basistyp **"false"** andernfalls.
 
 ## <a name="remarks"></a>Hinweise

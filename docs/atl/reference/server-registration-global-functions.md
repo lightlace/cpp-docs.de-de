@@ -1,29 +1,19 @@
 ---
-title: Globale Funktionen für Server-Registrierung | Microsoft-Dokumentation
-ms.custom: ''
+title: Globale Funktionen für Server-Registrierung
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlComModuleRegisterServer
 - atlbase/ATL::AtlComModuleUnregisterServer
 - atlbase/ATL::AtlComModuleRegisterClassObjects
 - atlbase/ATL::AtlComModuleRevokeClassObjects
 - atlbase/ATL::AtlComModuleGetClassObject
-dev_langs:
-- C++
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6fb3febbbaffc7c3a0de945fc9d30b544fd22188
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f97a4ff0dc28077d42fe0f8ca4992946db4082f1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46023305"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441789"
 ---
 # <a name="server-registration-global-functions"></a>Globale Funktionen für Server-Registrierung
 
@@ -38,7 +28,7 @@ Diese Funktionen bieten Unterstützung für das Registrieren und Aufheben der Re
 |[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)|Diese Funktion wird aufgerufen, um die Registrierung aller Objekte in der Objektzuordnung aufzuheben.|
 |[AtlComModuleRegisterClassObjects](#atlcommoduleregisterclassobjects)|Diese Funktion wird aufgerufen, um Klassenobjekte zu registrieren.|
 |[AtlComModuleRevokeClassObjects](#atlcommodulerevokeclassobjects)|Diese Funktion wird aufgerufen, um Objekte der Klasse aus einem COM­Modul zu widerrufen.|
-|[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|Diese Funktion wird aufgerufen, um das Klassenobjekt abrufen.|  
+|[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|Diese Funktion wird aufgerufen, um das Klassenobjekt abrufen.|
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -125,7 +115,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 Zeiger auf die COM-Modul.
 
 *dwClsContext*<br/>
-Gibt den Kontext, in dem das Klassenobjekt ist, ausgeführt werden. Mögliche Werte sind CLSCTX_INPROC_SERVER CLSCTX_INPROC_HANDLER oder CLSCTX_LOCAL_SERVER. Finden Sie unter [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) Weitere Details.
+Gibt den Kontext, in dem das Klassenobjekt ist, ausgeführt werden. Mögliche Werte sind CLSCTX_INPROC_SERVER CLSCTX_INPROC_HANDLER oder CLSCTX_LOCAL_SERVER. Finden Sie unter [CLSCTX](/windows/desktop/api/wtypesbase/ne-wtypesbase-tagclsctx) Weitere Details.
 
 *dwFlags*<br/>
 Bestimmt die Art der Verbindung mit dem Klassenobjekt. Mögliche Werte sind REGCLS_SINGLEUSE REGCLS_MULTIPLEUSE oder REGCLS_MULTI_SEPARATE. Finden Sie unter [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) Weitere Details.

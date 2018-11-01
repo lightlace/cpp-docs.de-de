@@ -1,28 +1,17 @@
 ---
-title: Ein- oder Ausblenden der Symbolleiste (Bildbearbeitung für Symbole C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Ein- oder Ausblenden der Symbolleiste (Bildbearbeitung für Symbole C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], toolbar
 - toolbars [C++], showing
 - toolbars [C++], hiding
 ms.assetid: 78d25184-a8f4-457f-aa6f-069a5a27bcf8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 360884c27e834f31badce0b02119203ee7877e4e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 6a96c16e4a4a8da927ec54e23960c3b9179fd650
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318927"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595818"
 ---
 # <a name="displaying-or-hiding-the-toolbar-c-image-editor-for-icons"></a>Ein- oder Ausblenden der Symbolleiste (Bildbearbeitung für Symbole C++)
 
@@ -43,6 +32,6 @@ Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
-[Fenster "Farben"](../windows/colors-window-image-editor-for-icons.md)  
-[Symbolleiste](../windows/toolbar-image-editor-for-icons.md)  
+[Fenster "Farben"](../windows/colors-window-image-editor-for-icons.md)<br/>
+[Symbolleiste](../windows/toolbar-image-editor-for-icons.md)<br/>
 [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)

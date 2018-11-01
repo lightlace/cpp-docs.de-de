@@ -1,7 +1,7 @@
 ---
 title: CTime-Klasse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 758a62b0d93b93798004470de47af2fd3a7ca2eb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2b82d172ec449a48866ee973421da95787bc9858
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765208"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070529"
 ---
 # <a name="ctime-class"></a>CTime-Klasse
 
@@ -49,7 +49,7 @@ Stellt eine absolute Zeit und Datum dar.
 ## <a name="syntax"></a>Syntax
 
 ```
-class CTime  
+class CTime
 ```
 
 ## <a name="members"></a>Member
@@ -119,17 +119,17 @@ Weitere Informationen zur Verwendung von `CTime`, finden Sie in den Artikeln [Da
 Vergleichsoperatoren.
 
 ```
-bool operator==(CTime time) const throw(); 
+bool operator==(CTime time) const throw();
 bool operator!=(CTime time) const throw();
 bool operator<(CTime time) const throw();
 bool operator>(CTime time) const throw();
 bool operator<=(CTime time) const throw();
-bool operator>=(CTime time) const throw(); 
+bool operator>=(CTime time) const throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*time*  
+*time*<br/>
 Das zu vergleichende `CTime`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -152,22 +152,21 @@ CTime(int nYear, int nMonth, int nDay,
 CTime(WORD wDosDate, WORD wDosTime, int nDST = -1);
 CTime(const SYSTEMTIME& st, int nDST = - 1) throw();
 CTime(const FILETIME& ft, int nDST = - 1);
-CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
+CTime(const DBTIMESTAMP& dbts, int nDST = -1) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*timeSrc*  
+*timeSrc*<br/>
 Gibt eine `CTime` -Objekt, das bereits vorhanden ist.
 
-*time*  
-Ein **__time64_t** Time-Werten, die die Anzahl der Sekunden an, nach dem 1. Januar 1970 UTC ist. Beachten Sie, dass dies in die lokale Zeit angepasst wird. Angenommen, Sie befinden sich in New York, und erstellen eine `CTime` -Objekt durch Übergeben eines Parameters von 0 (null) [CTime::GetMonth](#getmonth) 12 zurück.  
+*time*<br/>
+Ein `__time64_t` Time-Werten, die die Anzahl der Sekunden an, nach dem 1. Januar 1970 UTC ist. Beachten Sie, dass dies in die lokale Zeit angepasst wird. Angenommen, Sie befinden sich in New York, und erstellen eine `CTime` -Objekt durch Übergeben eines Parameters von 0 (null) [CTime::GetMonth](#getmonth) 12 zurück.
 
-
-*nYear*, *nMonth*, *NChronoplan Midi*, *Nuhrzeitangabe*, *nmin*, *nSec*  
+*nYear*, *nMonth*, *NChronoplan Midi*, *Nuhrzeitangabe*, *nmin*, *nSec*<br/>
 Gibt den Wert für Datum und Uhrzeit in die neue kopiert werden `CTime` Objekt.
 
-*nDST*  
+*nDST*<br/>
 Gibt an, ob die Sommerzeit wirksam ist. Dabei kann es sich um einen von drei Werten haben:
 
 - *nDST* 0Standard Zeit ist aktiviert.
@@ -176,16 +175,16 @@ Gibt an, ob die Sommerzeit wirksam ist. Dabei kann es sich um einen von drei Wer
 
 - *nDST* auf einen Wert kleiner als 0The standardmäßig festgelegt. Wird automatisch berechnet, ob Normalzeit oder Sommerzeit wirksam ist.
 
-*wDosDate*, *wDosTime*  
+*wDosDate*, *wDosTime*<br/>
 MS-DOS-Datum und Uhrzeit-Werte in einen Datum/Uhrzeit-Wert konvertiert werden, und kopiert in das neue `CTime` Objekt.
 
-*St*  
-Ein [SYSTEMTIME](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/d6609fff-1931-4818-8a26-f042630af0b0/locales/en-us) Struktur in einen Datum/Uhrzeit-Wert konvertiert werden, und kopiert in das neue `CTime` Objekt.
+*St*<br/>
+Ein [SYSTEMTIME](../../mfc/reference/systemtime-structure.md) Struktur in einen Datum/Uhrzeit-Wert konvertiert werden, und kopiert in das neue `CTime` Objekt.
 
-*FT*  
-Ein [FILETIME](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/979ce746-dc17-4147-89f8-41d05c5fcc5f/locales/en-us) Struktur in einen Datum/Uhrzeit-Wert konvertiert werden, und kopiert in das neue `CTime` Objekt.
+*FT*<br/>
+Ein [FILETIME](../../mfc/reference/filetime-structure.md) Struktur in einen Datum/Uhrzeit-Wert konvertiert werden, und kopiert in das neue `CTime` Objekt.
 
-DBTS  
+*DBTS*<br/>
 Ein Verweis auf eine DBTIMESTAMP-Struktur, die die aktuelle lokale Uhrzeit enthält.
 
 ### <a name="remarks"></a>Hinweise
@@ -200,13 +199,13 @@ Jeder Konstruktor lautet wie folgt:
 
 - `CTime( int, int, ...);` Erstellt eine `CTime` Objekt aus der lokalen Zeitkomponenten für jede Komponente beschränkt, die den folgenden Bereichen:
 
-   |Komponente|Bereich|  
-   |---------------|-----------|  
-   |*nYear*|1970-3000|  
-   |*nMonth*|1-12|  
-   |*NChronoplan MIDI*|1-31|  
-   |*Nuhrzeitangabe*|0-23|  
-   |*nmin.*|0-59|  
+   |Komponente|Bereich|
+   |---------------|-----------|
+   |*nYear*|1970-3000|
+   |*nMonth*|1-12|
+   |*NChronoplan MIDI*|1-31|
+   |*Nuhrzeitangabe*|0-23|
+   |*nmin.*|0-59|
    |*nSec*|0-59|
 
    Dieser Konstruktor wird die entsprechende Konvertierung in UTC. Die Debugversion der Microsoft Foundation Class-Bibliothek bestätigt wird, wenn eine oder mehrere die Zeitkomponenten werden außerhalb des gültigen Bereichs. Sie müssen die Argumente vor dem Aufruf überprüfen. Dieser Konstruktor erwartet, dass eine lokale Zeit.
@@ -231,16 +230,16 @@ Weitere Informationen finden Sie unter den [SYSTEMTIME](https://msdn.microsoft.c
 Rufen Sie diese Memberfunktion, um eine formatierte Darstellung des DateTime-Werts zu erstellen.
 
 ```
-CString Format(LPCTSTR pszFormat) const; 
-CString Format(UINT nFormatID) const; 
+CString Format(LPCTSTR pszFormat) const;
+CString Format(UINT nFormatID) const;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*pszFormat*  
+*pszFormat*<br/>
 Eine Formatierungszeichenfolge ähnelt der `printf` Formatierungszeichenfolge. Formatierungscodes Prozentsatz vorangestellt (`%`) anmelden, werden mit den entsprechenden ersetzt `CTime` Komponente. Andere Zeichen in der Formatierungszeichenfolge werden auf die zurückgegebene Zeichenfolge unverändert kopiert. Finden Sie unter der Run-Time-Funktion [Strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) eine Liste der Formatierungscodes.
 
-*nFormatID*  
+*nFormatID*<br/>
 Die ID der Zeichenfolge, die dieses Format identifiziert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -268,10 +267,10 @@ CString FormatGmt(UINT nFormatID) const;
 
 ### <a name="parameters"></a>Parameter
 
-*pszFormat*  
+*pszFormat*<br/>
 Gibt an, eine Formatierungszeichenfolge, die ähnlich wie die `printf` Formatierungszeichenfolge. Finden Sie unter der Run-Time-Funktion [Strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) Details.
 
-*nFormatID*  
+*nFormatID*<br/>
 Die ID der Zeichenfolge, die dieses Format identifiziert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -298,7 +297,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*DBTS*  
+*DBTS*<br/>
 Ein Verweis auf eine DBTIMESTAMP-Struktur, die die aktuelle lokale Uhrzeit enthält.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -323,7 +322,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*timeDest*  
+*timeDest*<br/>
 Ein Verweis auf eine [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die den konvertierten Datum/Uhrzeit-Wert, der enthalten, wird die `CTime` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -359,7 +358,7 @@ Gibt das aktuelle Systemdatum und die Uhrzeit in Coordinated Universal Time (UTC
 Gibt den Tag darstellt, durch die `CTime` Objekt.
 
 ```
-int GetDay() const throw(); 
+int GetDay() const throw();
 ```
 
 ### <a name="return-value"></a>Rückgabewert
@@ -404,7 +403,7 @@ struct tm* GetGmtTm(struct tm* ptm) const;
 
 ### <a name="parameters"></a>Parameter
 
-*ptm*  
+*ptm*<br/>
 Verweist auf einen Puffer, der die Zeitdaten erhält. Wenn dieser Zeiger NULL ist, wird eine Ausnahme ausgelöst.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -451,7 +450,7 @@ struct tm* GetLocalTm(struct tm* ptm) const;
 
 ### <a name="parameters"></a>Parameter
 
-*ptm*  
+*ptm*<br/>
 Verweist auf einen Puffer, der die Zeitdaten erhält. Wenn dieser Zeiger NULL ist, wird eine Ausnahme ausgelöst.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -574,7 +573,7 @@ CTime& operator=(__time64_t time) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*time*  
+*time*<br/>
 Die neuen Datums-/Uhrzeit-Wert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -597,10 +596,10 @@ CTimeSpan operator-(CTime time) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*timeSpan*  
+*timeSpan*<br/>
 Die `CTimeSpan` Objekt, das hinzugefügt oder entfernt werden.
 
-*time*  
+*time*<br/>
 Die `CTime` Objekt, das subtrahiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -626,7 +625,7 @@ CTime& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*umfassen*  
+*umfassen*<br/>
 Die `CTimeSpan` Objekt, das hinzugefügt oder entfernt werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -654,7 +653,7 @@ CArchive& Serialize64(CArchive& ar);
 
 ### <a name="parameters"></a>Parameter
 
-*ar*  
+*ar*<br/>
 Die `CArchive` -Objekt, das Sie aktualisieren möchten.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -663,12 +662,12 @@ Die aktualisierte `CArchive` Objekt.
 
 ## <a name="see-also"></a>Siehe auch
 
-[asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
-[_ftime_s, _ftime32_s, _ftime64_s](../../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)   
-[gmtime_s, _gmtime32_s, _gmtime64_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
-[localtime_s, _localtime32_s, _localtime64_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
-[strftime, wcsftime, _strftime_l, _wcsftime_l](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)   
-[time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)   
-[CTimeSpan-Klasse](../../atl-mfc-shared/reference/ctimespan-class.md)   
-[Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
+[asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)<br/>
+[_ftime_s, _ftime32_s, _ftime64_s](../../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)<br/>
+[gmtime_s, _gmtime32_s, _gmtime64_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)<br/>
+[localtime_s, _localtime32_s, _localtime64_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)<br/>
+[strftime, wcsftime, _strftime_l, _wcsftime_l](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)<br/>
+[time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)<br/>
+[CTimeSpan-Klasse](../../atl-mfc-shared/reference/ctimespan-class.md)<br/>
+[Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [Freigegebene ATL-/MFC-Klassen](../../atl-mfc-shared/atl-mfc-shared-classes.md)

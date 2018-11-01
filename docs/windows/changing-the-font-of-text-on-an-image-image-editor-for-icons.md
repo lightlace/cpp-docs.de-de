@@ -1,26 +1,15 @@
 ---
-title: Ändern der Schriftart von Text in einem Bild (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
-ms.custom: ''
+title: Ändern der Schriftart von Text in einem Bild (Bildbearbeitung für Symbole)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - fonts, changing on an image
 ms.assetid: b8849d40-d401-4e06-808f-e615cb2bee3b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0898d8a787c6d2c14f341a31e202738d666cdf86
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 2bbd8096a2957099acc8c06d501f3ad407b9a974
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678463"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495523"
 ---
 # <a name="changing-the-font-of-text-on-an-image-image-editor-for-icons"></a>Ändern der Schriftart von Text in einem Bild (Bildbearbeitung für Symbole)
 
@@ -32,7 +21,7 @@ Das folgende Verfahren ist ein Beispiel an:
 
 ### <a name="to-change-the-font-of-text-on-an-image"></a>Ändern die Schriftart von Text in einem Bild
 
-1. Erstellen einer C++-Windows Forms-Anwendung. Weitere Informationen finden Sie unter [Erstellen eines Windows-Anwendungsprojekts](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5\(v=vs.100\)). Ein `app.ico` Datei wird standardmäßig zum Projekt hinzugefügt.
+1. Erstellen einer C++-Windows Forms-Anwendung. Weitere Informationen finden Sie unter [Erstellen eines Windows-Anwendungsprojekts](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5). Ein `app.ico` Datei wird standardmäßig zum Projekt hinzugefügt.
 
 2. In **Projektmappen-Explorer**, doppelklicken Sie auf die Datei app.ico. Die [Bildbearbeitung](../windows/image-editor-for-icons.md) wird geöffnet.
 
@@ -56,5 +45,5 @@ Das folgende Verfahren ist ein Beispiel an:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Symbolleiste](../windows/toolbar-image-editor-for-icons.md)

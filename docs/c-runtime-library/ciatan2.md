@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbeca42c9b00558823e36463eab39d5caabec632
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a79274b7614e060b681eb9d4c3ba17c14c53f7ab
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016395"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235255"
 ---
 # <a name="ciatan2"></a>_CIatan2
 
@@ -53,7 +53,8 @@ Diese Version der `atan2`-Funktion verfügt über eine spezielle Aufrufkonventio
 Der resultierende Wert wird oben auf dem Stapel abgelegt.
 
 ## <a name="requirements"></a>Anforderungen
- **Plattform:** x86
+
+**Plattform:** x86
 
 ## <a name="see-also"></a>Siehe auch
 

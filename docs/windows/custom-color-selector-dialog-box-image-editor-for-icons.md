@@ -1,29 +1,18 @@
 ---
-title: Benutzerdefinierte Farbendialogfeld (C++) (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
-ms.custom: ''
+title: Benutzerdefinierte Farbendialogfeld (C++) (Bildbearbeitung für Symbole)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.customcolorselector
-dev_langs:
-- C++
 helpviewer_keywords:
 - Custom Color Selector dialog box [C++]
 - colors [C++], image
 ms.assetid: 534d0c2a-b3f6-4f09-9346-3bbf85bb3dd7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 715ed5bf12c424c49e96012c5391dfe334e44db4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e9ba60ab433643704542b64a03fbf43dbeeeba94
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705886"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50575944"
 ---
 # <a name="custom-color-selector-dialog-box-c-image-editor-for-icons"></a>Benutzerdefinierte Farbendialogfeld (C++) (Bildbearbeitung für Symbole)
 
@@ -71,6 +60,6 @@ Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
-[Menü "Bild"](../windows/image-menu-image-editor-for-icons.md)  
-[Anpassen oder Ändern von Farben](../windows/customizing-or-changing-colors-image-editor-for-icons.md)  
+[Menü "Bild"](../windows/image-menu-image-editor-for-icons.md)<br/>
+[Anpassen oder Ändern von Farben](../windows/customizing-or-changing-colors-image-editor-for-icons.md)<br/>
 [Fenster "Farben"](../windows/colors-window-image-editor-for-icons.md)

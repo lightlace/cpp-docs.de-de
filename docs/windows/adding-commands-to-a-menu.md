@@ -1,30 +1,19 @@
 ---
-title: Hinzufügen von Befehlen zu einem Menü (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Hinzufügen von Befehlen zu einem Menü (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.menu
-dev_langs:
-- C++
 helpviewer_keywords:
 - menu items, adding to menus
 - menus [C++], adding items
 - commands [C++], adding to menus
 ms.assetid: 1523a755-0ab5-42f8-9e98-bb9881564431
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c2c67242195f54f543bdc8c0c1be49fbed69fe91
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 71a3a13b3c86fa4a4238fd9a42dd45b48ef318de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318719"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50571417"
 ---
 # <a name="adding-commands-to-a-menu-c"></a>Hinzufügen von Befehlen zu einem Menü (C++)
 
@@ -63,4 +52,4 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Menü-Editor](../windows/menu-editor.md)  
+[Menü-Editor](../windows/menu-editor.md)
