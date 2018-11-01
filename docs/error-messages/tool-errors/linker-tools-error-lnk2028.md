@@ -1,27 +1,17 @@
 ---
-title: Linkertoolfehler Lnk2028 | Microsoft Docs
-ms.custom: ''
+title: Linkertoolfehler LNK2028
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK2028
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK2028
 ms.assetid: e2b03293-6066-464d-a050-ce747bcf7f0e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e9c8eaa03927f51acd3c3d84731e9ef2b282b7c6
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ed2dc1a95d4dd7c447b360da21b5046e20f79083
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704153"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643676"
 ---
 # <a name="linker-tools-error-lnk2028"></a>Linkertoolfehler LNK2028
 
@@ -29,13 +19,13 @@ ms.locfileid: "34704153"
 
 ## <a name="remarks"></a>Hinweise
 
-Beim Versuch, eine systemeigene Funktion in einem reinen Image zu importieren, denken Sie daran, dass die impliziten Aufrufkonventionen zwischen systemeigenen und reinen Kompilierungen unterscheiden.
+Beim Versuch, eine native Funktion in einem reinen Image importieren, denken Sie daran, dass die Konventionen für die impliziten Aufrufen zwischen systemeigenen und reinen Kompilierungen unterscheiden.
 
-Die **/CLR: pure** -Compileroption in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt wird.
+Die **/CLR: pure** Compileroption ist in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt.
 
 ## <a name="example"></a>Beispiel
 
-In diesem Codebeispiel wird eine Komponente mit einer exportierten, systemeigen Funktion, deren Aufrufkonvention implizit generiert [__cdecl](../../cpp/cdecl.md).
+In diesem Codebeispiel wird eine Komponente mit einer exportierten, systemeigen-Funktion, deren Aufrufkonvention implizit wird, generiert [__cdecl](../../cpp/cdecl.md).
 
 ```cpp
 // LNK2028.cpp
@@ -47,7 +37,7 @@ __declspec(dllexport) int func() {
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel erstellt einen reinen Client, der die systemeigene Funktion verwendet. Allerdings die Aufrufkonvention unter **/CLR: pure** ist [__clrcall](../../cpp/clrcall.md). Im folgende Beispiel wird LNK2028 generiert.
+Das folgende Beispiel erstellt einen reinen Client, der in der nativen Funktion benötigt. Allerdings die Aufrufkonvention unter **/CLR: pure** ist [__clrcall](../../cpp/clrcall.md). Im folgende Beispiel wird die LNK2028 generiert.
 
 ```cpp
 // LNK2028_b.cpp
