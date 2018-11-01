@@ -1,26 +1,16 @@
 ---
-title: Grammatikzusammenfassung (C/C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Grammatikzusammenfassung (C/C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - grammar
 - preprocessor, grammar
 ms.assetid: 0acb6e9b-364c-4ef8-ace4-7be980521121
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 875101f99f06f4755d2dcc80f563534b6637db42
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: f61aaaf041ca566f52a2e3e95cb12d17e4cb2230
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50053213"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50461281"
 ---
 # <a name="grammar-summary-cc"></a>Grammatikzusammenfassung (C/C++)
 In diesem Abschnitt wird die formale Grammatik des Präprozessors beschrieben. Er behandelt die Syntax von vorverarbeitungsanweisungen und Operatoren im [der Präprozessor](../preprocessor/preprocessor.md) und [Pragma-Direktiven](../preprocessor/pragma-directives-and-the-pragma-keyword.md).

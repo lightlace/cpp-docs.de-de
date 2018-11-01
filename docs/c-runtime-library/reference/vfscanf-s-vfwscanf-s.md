@@ -1,10 +1,6 @@
 ---
-title: vfscanf_s, vfwscanf_s | Microsoft-Dokumentation
-ms.custom: ''
+title: vfscanf_s, vfwscanf_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - vfscanf_s
 - vfwscanf_s
@@ -24,19 +20,13 @@ f1_keywords:
 - vfscanf_s
 - vfwscanf_s
 - _vftscanf_s
-dev_langs:
-- C++
 ms.assetid: 9b0133f0-9a18-4581-b24b-3b72683ad432
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 79b00ee0216120451c029b7de1caf9ac1967f802
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40bfad26ebdf7ffba48a184491a371f4010e90ef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416310"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429405"
 ---
 # <a name="vfscanfs-vfwscanfs"></a>vfscanf_s, vfwscanf_s
 
@@ -73,16 +63,16 @@ Variablenargumentenliste.
 
 Jede dieser Funktionen gibt die Anzahl der Felder zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Wenn ein Fehler auftritt oder wenn das Ende des Dateistreams vor der ersten Konvertierung erreicht wird, des Rückgabewerts ist **EOF** für **Vfscanf_s** und **Vfwscanf_s**.
 
-Diese Funktionen überprüfen ihre Parameter. Wenn *Stream* ist ein ungültigen Dateizeiger oder *Format* ist ein null-Zeiger, rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EOF** und **Errno** auf **EINVAL**.
+Diese Funktionen überprüfen ihre Parameter. Wenn *Stream* ist ein ungültiger Dateizeiger ist oder *Format* ist ein null-Zeiger rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EOF** und **Errno** zu **EINVAL**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Vfscanf_s** -Funktion liest Daten aus der aktuellen Position des *Stream* in die Speicherorte, die sich durch die *Arglist* Argumentliste (sofern vorhanden). Jedes Argument in der Liste muss ein Zeiger auf eine Variable eines Typs, der einem Typspezifizierer in entspricht *Format*. *Format* steuert die Interpretation der Eingabefelder und hat die gleiche form und Funktion wie die *Format* Argument für **Scanf_s**; finden Sie unter [Formatangabefelder: Scanf und Wscanf-Funktionen](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) eine Beschreibung der *Format*. **Vfwscanf_s** ist eine Breitzeichen-Version von **Vfscanf_s**; das Formatierungsargument **Vfwscanf_s** ist eine Breitzeichen-Zeichenfolge. Diese Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Vfscanf_s** unterstützt derzeit nicht die Eingabe aus einem Unicode-Stream.
+Die **Vfscanf_s** -Funktion liest Daten aus der aktuellen Position des *Stream* in die Speicherorte, die von erhalten die *Arglist* Argumentliste (sofern vorhanden). Jedes Argument in der Liste muss ein Zeiger auf eine Variable eines Typs, der einem Typspezifizierer in entspricht *Format*. *Format* steuert die Interpretation der Eingabefelder und hat die gleiche form und Funktion wie der *Format* Argument für **Scanf_s**; finden Sie unter [Formatangabefelder: Scanf und Wscanf-Funktionen](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) eine Beschreibung der *Format*. **Vfwscanf_s** ist eine Breitzeichen-Version von **Vfscanf_s**; das Formatargument für **Vfwscanf_s** ist eine Breitzeichen-Zeichenfolge. Diese Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Vfscanf_s** unterstützt derzeit keine Eingabe aus einem unicodestream.
 
-Der Hauptunterschied zwischen den sichereren Funktionen (, auf denen die **_s** Suffix) und den anderen Versionen ist, dass die sichereren Funktionen die Größe in Zeichen von jedem erfordern **c**, **C**, **s**, **S**, und **[** -Typfeld als Argument sofort nach der folgenden Variablen übergeben werden. Weitere Informationen finden Sie unter [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) und [scanf-Breitenangabe](../../c-runtime-library/scanf-width-specification.md).
+Der Hauptunterschied zwischen den sichereren Funktionen (die die **_s** Suffix) und den anderen Versionen ist, dass die sichereren Funktionen, die Größe in Zeichen von jedem erfordern **c**, **C**, **s**, **S**, und **[** -Typfeld als Argument sofort nach der folgenden Variablen übergeben werden. Weitere Informationen finden Sie unter [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) und [scanf-Breitenangabe](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
-> Der Größenparameter ist vom Typ **ohne Vorzeichen**, nicht **Size_t**.
+> Size-Parameter ist vom Typ **ohne Vorzeichen**, nicht **"size_t"**.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

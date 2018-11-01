@@ -1,28 +1,18 @@
 ---
-title: _mm_stream_ss | Microsoft-Dokumentation
-ms.custom: ''
+title: _mm_stream_ss
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _mm_stream_ss
-dev_langs:
-- C++
 helpviewer_keywords:
 - movntss instruction
 - _mm_stream_ss intrinsic
 ms.assetid: c53dffe9-0dfe-4063-85d3-e8987b870fce
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7061559cf7acd2e6607c2e64dbd505a5cf9c3814
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 089f8d5501c18b679a3d5878bb30762d2dcc1e04
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375477"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438908"
 ---
 # <a name="mmstreamss"></a>_mm_stream_ss
 
@@ -44,7 +34,7 @@ void _mm_stream_ss(
 *dest*<br/>
 [out] Ein Zeiger auf den Speicherort, in denen die Quelldaten geschrieben werden.
 
-*Source*<br/>
+*Quelle*<br/>
 [in] Eine 128-Bit-Zahl, die enthält die `float` Wert, der in der unteren 32 Bits geschrieben werden...
 
 ## <a name="return-value"></a>Rückgabewert

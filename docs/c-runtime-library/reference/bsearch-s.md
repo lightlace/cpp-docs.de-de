@@ -1,10 +1,6 @@
 ---
-title: bsearch_s | Microsoft-Dokumentation
-ms.custom: ''
+title: bsearch_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - bsearch_s
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - bsearch_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c2600b77031967bec5d5dd549a7dd8f34fc5c5e3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cd621c1dae2cae847bbbf032dec7e6972c526203
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400615"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430835"
 ---
 # <a name="bsearchs"></a>bsearch_s
 
@@ -71,30 +61,30 @@ Anzahl der Elemente.
 Breite der Elemente.
 
 *compare*<br/>
-Rückruffunktion, die zwei Elemente vergleicht. Das erste Argument ist der *Kontext* Zeiger. Das zweite Argument ist ein Zeiger auf die *Schlüssel* für die Suche. Das dritte Argument ist ein Zeiger auf das Arrayelement, verglichen mit *Schlüssel*.
+Rückruffunktion, die zwei Elemente vergleicht. Das erste Argument ist der *Kontext* Zeiger. Das zweite Argument ist ein Zeiger auf die *Schlüssel* für die Suche. Das dritte Argument ist ein Zeiger auf das Arrayelement mit verglichen werden soll *Schlüssel*.
 
 *context*<br/>
 Ein Zeiger auf ein Objekt, auf das in der Vergleichsfunktion zugegriffen werden kann.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Bsearch_s** gibt einen Zeiger auf ein Vorkommen von *Schlüssel* im Array verweist *Basis*. Wenn *Schlüssel* nicht gefunden wird, gibt die Funktion **NULL**. Wenn das Array nicht in aufsteigender Reihenfolge sortiert ist oder doppelte Datensätze mit identischen Schlüsseln enthält, ist das Ergebnis nicht vorhersehbar.
+**Bsearch_s** gibt einen Zeiger auf ein Vorkommen von *Schlüssel* in das Array verweist *Basis*. Wenn *Schlüssel* nicht gefunden wird, wird die Funktion gibt **NULL**. Wenn das Array nicht in aufsteigender Reihenfolge sortiert ist oder doppelte Datensätze mit identischen Schlüsseln enthält, ist das Ergebnis nicht vorhersehbar.
 
-Wenn ungültige Parameter an die Funktion übergeben werden, ruft sie den Handler für ungültige Parameter auf, wie in [Parameter Validation](../../c-runtime-library/parameter-validation.md)beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und die Funktion gibt **NULL**. Weitere Informationen finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Wenn ungültige Parameter an die Funktion übergeben werden, ruft sie den Handler für ungültige Parameter auf, wie in [Parameter Validation](../../c-runtime-library/parameter-validation.md)beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und die Funktion gibt **NULL**. Weitere Informationen finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
 |||||||
 |-|-|-|-|-|-|
 |*key*|*base*|*compare*|*Anzahl*|*width*|**errno**|
-|**NULL**|alle|alle|alle|alle|**EINVAL**|
-|alle|**NULL**|alle|!= 0|alle|**EINVAL**|
-|alle|alle|alle|alle|= 0|**EINVAL**|
-|alle|alle|**NULL**|ein|alle|**EINVAL**|
+|**NULL**|any|any|any|any|**EINVAL**|
+|any|**NULL**|any|!= 0|any|**EINVAL**|
+|any|any|any|any|= 0|**EINVAL**|
+|any|any|**NULL**|ein|any|**EINVAL**|
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Bsearch_s** Funktion führt eine binäre Suche eines sortierten Arrays aus *Anzahl* Elementen, von denen jedes *Breite* Byte lang. Die *Basis* Wert ist ein Zeiger auf die Basis des zu durchsuchenden, Arrays und *Schlüssel* ist der gesuchte Wert. Die *vergleichen* Parameter ist ein Zeiger auf eine vom Benutzer bereitgestellte Routine, die den angeforderten Schlüssel auf ein Arrayelement vergleicht und einen der folgenden Werte Angabe ihrer Beziehung zurückgibt:
+Die **Bsearch_s** Funktion führt eine binäre Suche eines sortierten Arrays von *Anzahl* Elementen, die jeweils von *Breite* Bytes groß. Die *Basis* Wert ist ein Zeiger auf die Basis des Arrays, das gesucht werden soll, und *Schlüssel* ist der Wert, der gesucht wird. Die *vergleichen* Parameter ist ein Zeiger auf eine benutzerdefinierte Routine, die den angeforderten Schlüssel auf ein Arrayelement vergleicht und gibt einen der folgenden Werte, der ihre Beziehung angibt:
 
 |Rückgabewert von *vergleichen* Routine|Beschreibung|
 |-----------------------------------------|-----------------|
@@ -102,11 +92,11 @@ Die **Bsearch_s** Funktion führt eine binäre Suche eines sortierten Arrays aus
 |0|Schlüssel und Arrayelement sind gleich.|
 |> 0|Der Schlüssel ist größer als das Arrayelement.|
 
-Die *Kontext* -Zeiger kann nützlich sein, wenn die durchsuchte Datenstruktur Teil eines Objekts ist und die Vergleichsfunktion auf Member des Objekts zugreifen muss. Die *vergleichen* Funktion möglicherweise den void-Zeiger umgewandelt, in das entsprechende Objekt und auf Member des Objekts. Das Hinzufügen der *Kontext* -Parameters macht **Bsearch_s** sicherer, da weiterer Kontext verwendet werden kann, zur Vermeidung von Reentranz-Fehlern, die mit der Verwendung von statischer Variablen Daten zur Verfügung zu stellen die *vergleichen* Funktion.
+Die *Kontext* -Zeiger kann nützlich sein, wenn die durchsuchte Datenstruktur Teil eines Objekts ist und die Vergleichsfunktion auf Member des Objekts zugreifen muss. Die *vergleichen* Funktion möglicherweise den void-Zeiger umgewandelt, in das entsprechende Objekt und auf Member des Objekts. Das Hinzufügen der *Kontext* -Parameters macht **Bsearch_s** sicherer, da weiterer Kontext verwendet werden kann, um Wiedereintreten mit der Verwendung statischer Variablen zur Daten zur Verfügung stellen zu vermeiden. die *vergleichen* Funktion.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**bsearch_s**|\<stdlib.h> und \<search.h>|
 
@@ -114,7 +104,7 @@ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../
 
 ## <a name="example"></a>Beispiel
 
-Dieses Programm sortiert ein Zeichenfolgenarray mit [qsort_s](qsort-s.md) und verwendet anschließend „bsearch_s“, um nach dem Wort „cat“ zu suchen.
+Dieses Programm sortiert ein Zeichenfolgenarray mit [qsort_s](qsort-s.md)und verwendet anschließend bsearch_s, um nach dem Wort „Katze“ zu suchen.
 
 ```cpp
 // crt_bsearch_s.cpp

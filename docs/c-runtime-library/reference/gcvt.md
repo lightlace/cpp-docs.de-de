@@ -1,10 +1,6 @@
 ---
-title: _gcvt | Microsoft-Dokumentation
-ms.custom: ''
+title: _gcvt
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _gcvt
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _gcvt
-dev_langs:
-- C++
 helpviewer_keywords:
 - _gcvt function
 - _CVTBUFSIZE
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d824d42a102aee68619d602044c39f398af177dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9cf966b455af601d09b4444a5c590e305a6681c8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400979"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430861"
 ---
 # <a name="gcvt"></a>_gcvt
 
@@ -72,19 +62,19 @@ Speicherort für das Ergebnis.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_gcvt** gibt einen Zeiger auf die Zeichenfolge von Ziffern zurück.
+**_gcvt** gibt einen Zeiger zur Zeichenfolge der Ziffern zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_gcvt** -Funktion konvertiert eine Gleitkommazahl *Wert* in eine Zeichenfolge (enthält Dezimaltrennzeichen und ein Byte möglichen Anmeldung) und speichert die Zeichenfolge in *Puffer*. Die *Puffer* muss groß genug für den konvertierten Wert plus ein abschließendes Nullzeichen, das automatisch angefügt wird. Wenn die Größe des Befehlspuffers von *Ziffern* + 1 verwendet wird, wird die Funktion überschreibt das Ende des Puffers. Dies geschieht, da die konvertierte Zeichenfolge ein Dezimaltrennzeichen enthält und Informationen über Zeichen und Exponenten enthalten kann. Es wird kein Überlauf bereitgestellt. **_gcvt** erzeugen versucht *Ziffern* Ziffern im Dezimalformat. Wenn es nicht möglich ist, erzeugt es *Ziffern* Ziffern im Exponentialformat. Bei der Konvertierung können Nachstellen von Nullen unterdrückt werden.
+Die **_gcvt** Funktion konvertiert ein Gleitkomma *Wert* in eine Zeichenfolge (enthält Dezimaltrennzeichen und einem möglichen Zeichen-Byte) und speichert die Zeichenfolge in *Puffer*. Die *Puffer* muss groß genug für den konvertierten Wert und ein abschließendes Nullzeichen, das automatisch angefügt wird. Wenn eine Puffergröße *Ziffern* + 1 verwendet wird, überschreibt die Funktion das Ende des Puffers. Dies geschieht, da die konvertierte Zeichenfolge ein Dezimaltrennzeichen enthält und Informationen über Zeichen und Exponenten enthalten kann. Es wird kein Überlauf bereitgestellt. **_gcvt** versucht, erzeugen *Ziffern* -Ziffern im Dezimalformat. Wenn dies nicht möglich ist, erzeugt es *Ziffern* -Ziffern im Exponentialformat. Bei der Konvertierung können Nachstellen von Nullen unterdrückt werden.
 
-Ein *Puffer* Länge **_CVTBUFSIZE** reicht für alle Gleitkommawert Datenpunktwert.
+Ein *Puffer* Länge **_CVTBUFSIZE** reicht für alle Gleitkommawerte Wert.
 
-Diese Funktion überprüft ihre Parameter. Wenn *Puffer* ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** auf **EINVAL** und gibt **NULL**.
+Diese Funktion überprüft ihre Parameter. Wenn *Puffer* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** zu **EINVAL** und gibt **NULL**.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_gcvt**|\<stdlib.h>|
 

@@ -1,12 +1,7 @@
 ---
-title: Erweiterungen für .NET und UWP-Komponente | Microsoft-Dokumentation
-ms.custom: ''
+title: Komponentenerweiterungen für .NET- und UWP
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - what's new [C++], keywords
 - what's new [C++], language features
@@ -14,17 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 45f83fbaaa867e2f58e329d8531259fa3751a521
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 3b29b2e8b00aa436d1687cdbbd5f299f4787c71b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328414"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432357"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>Komponentenerweiterungen für .NET- und UWP
 
@@ -54,7 +44,7 @@ In der folgenden Tabelle sind Schlüsselwörter in der C++-Spracherweiterung auf
 |**Schnittstellenklasse**<br /><br /> **Interface-Struktur**|Nein|Deklariert eine Schnittstelle.|[Schnittstellenklasse](../windows/interface-class-cpp-component-extensions.md)|
 |**Enumerationsklasse**<br /><br /> **Enum-Struktur**|Nein|Deklariert eine Enumeration.|[Enumerationsklasse](../windows/enum-class-cpp-component-extensions.md)|
 |**Eigenschaft**|Ja|Deklariert eine Eigenschaft.|[Eigenschaft](../windows/property-cpp-component-extensions.md)|
-|**delegate**|Ja|Deklariert einen Delegaten.|[Delegaten (C++ / CLI und C++ / CX)](../windows/delegate-cpp-component-extensions.md)|
+|**delegate**|Ja|Deklariert einen Delegaten.|[Delegat (C++/CLI und C++/CX)](../windows/delegate-cpp-component-extensions.md)|
 |**event**|Ja|Deklariert ein Ereignis.|[event](../windows/event-cpp-component-extensions.md)|
 
 ## <a name="override-specifiers"></a>Überschreibungsspezifizierer

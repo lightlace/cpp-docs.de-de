@@ -1,10 +1,6 @@
 ---
-title: _ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbcl2
 - _ismbcl1
@@ -38,8 +34,6 @@ f1_keywords:
 - _ismbcl0_l
 - _ismbcl2
 - ismbcl2_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbcl0_l function
 - _ismbcl2 function
@@ -54,16 +48,12 @@ helpviewer_keywords:
 - _ismbcl2_l function
 - _ismbcl0 function
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 29d80c6d26171d9ac347aae1ac488d1fcadb1fec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b4ea5a165e5fb06229c3fdf69c53cdf82c4f35f4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403156"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430887"
 ---
 # <a name="ismbcl0-ismbcl0l-ismbcl1-ismbcl1l-ismbcl2-ismbcl2l"></a>_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
 
@@ -108,30 +98,30 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Routinen gibt einen Wert ungleich 0 zurück, wenn das Zeichen die Testbedingung erfüllt, bzw. 0, wenn es sie nicht erfüllt. Wenn *c* < = 255, und es wird ein entsprechendes **_ismbb** Routine (z. B. **_ismbcalnum** entspricht **_ismbbalnum**), die Ergebnis ist der Rückgabewert der entsprechenden **_ismbb** Routine.
+Jede dieser Routinen gibt einen Wert ungleich 0 zurück, wenn das Zeichen die Testbedingung erfüllt, bzw. 0, wenn es sie nicht erfüllt. Wenn *c* < = 255 und gibt es eine entsprechende **_ismbb** Routine (z. B. **_ismbcalnum** entspricht **_ismbbalnum**), wird die Ergebnis ist der Rückgabewert der entsprechenden **_ismbb** Routine.
 
 ## <a name="remarks"></a>Hinweise
 
 Jede dieser Funktionen testet ein angegebenes Mehrbytezeichen auf eine angegebene Bedingung.
 
-Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-|Routine|Testbedingung (nur Codepage 932)|
+|-Routine zurückgegebener Wert|Testbedingung (nur Codepage 932)|
 |-------------|-------------------------------------------|
-|**_ismbcl0**|JIS nicht-Kanji-Schriftarten: 0x8140 < =*c*< = 0x889E.|
-|**_ismbcl0_l**|JIS nicht-Kanji-Schriftarten: 0x8140 < =*c*< = 0x889E.|
-|**_ismbcl1**|JIS auf Ebene 1: 0x889F < =*c*< = 0x9872.|
-|**_ismbcl1_l**|JIS auf Ebene 1: 0x889F < =*c*< = 0x9872.|
-|**_ismbcl2**|JIS auf Ebene 2: 0x989F < =*c*< = 0xEAA4.|
-|**_ismbcl2_l**|JIS auf Ebene 2: 0x989F < =*c*< = 0xEAA4.|
+|**_ismbcl0**|JIS, nicht Kanji: 0 x 8140 < =*c*< = 0x889E.|
+|**_ismbcl0_l**|JIS, nicht Kanji: 0 x 8140 < =*c*< = 0x889E.|
+|**_ismbcl1**|JIS, Ebene 1: 0x889F < =*c*< = 0 x 9872.|
+|**_ismbcl1_l**|JIS, Ebene 1: 0x889F < =*c*< = 0 x 9872.|
+|**_ismbcl2**|JIS, Ebene 2: 0x989F < =*c*< = 0xEAA4.|
+|**_ismbcl2_l**|JIS, Ebene 2: 0x989F < =*c*< = 0xEAA4.|
 
-Überprüfen Sie die Funktionen, die den angegebenen Wert *c* Übereinstimmungen die testbedingungen oben beschriebenen, jedoch nicht überprüft, *c* ein gültiges Multibytezeichen ist. Wenn das untere Byte in den Bereichen 0x00–0x3F, 0x7F oder 0xFD–0xFF liegt, geben diese Funktionen einen Wert ungleich 0 (null) zurück. Dies gibt an, dass das Zeichen die Testbedingung erfüllt. Verwenden Sie [_ismbbtrail](ismbbtrail-ismbbtrail-l.md), um zu prüfen, ob das Multibytezeichen definiert ist.
+Die Funktionen überprüfen, ob der angegebene Wert *c* Übereinstimmungen testbedingungen oben beschriebenen, jedoch nicht überprüft, *c* ein gültiges Multibytezeichen ist. Wenn das untere Byte in den Bereichen 0x00–0x3F, 0x7F oder 0xFD–0xFF liegt, geben diese Funktionen einen Wert ungleich 0 (null) zurück. Dies gibt an, dass das Zeichen die Testbedingung erfüllt. Verwenden Sie [_ismbbtrail](ismbbtrail-ismbbtrail-l.md), um zu prüfen, ob das Multibytezeichen definiert ist.
 
 **Ende der Codepage 932 (spezifisch)**
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_ismbcl0**|\<mbstring.h>|
 |**_ismbcl0_l**|\<mbstring.h>|

@@ -1,10 +1,6 @@
 ---
-title: _finite, _finitef | Microsoft-Dokumentation
-ms.custom: ''
+title: _finite, _finitef
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _finite
 - _finitef
@@ -28,23 +24,17 @@ f1_keywords:
 - math/_finite
 - math/_finitef
 - float/_finite
-dev_langs:
-- C++
 helpviewer_keywords:
 - finite function
 - _finite function
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3367f13e68aa85e53d9f5f0ee83521ef465d3996
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b1bce6f1b2da77ed9de255f49dd8d0160e33e31
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396640"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431662"
 ---
 # <a name="finite-finitef"></a>_finite, _finitef
 
@@ -69,11 +59,11 @@ Der zu testende Gleitkommawert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Sowohl **_finite** und **_finitef** einen Wert ungleich NULL zurück, wenn das Argument *x* endlich; d. h., wenn – INF < *x* < + INF. 0 (null), wenn das Argument unendlich oder ein NaN-Wert ist.
+Beide **_finite** und **_finitef** einen Wert ungleich NULL zurück, wenn das Argument *x* ist endlich ist, d.h., wenn -INF < *x* < + INF. 0 (null), wenn das Argument unendlich oder ein NaN-Wert ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_finite** und **_finitef** Funktionen sind Microsoft-spezifisch. Die **_finitef** -Funktion ist nur verfügbar, wenn für X86, ARM oder ARM64 Plattformen kompiliert.
+Die **_finite** und **_finitef** Funktionen sind Microsoft-spezifisch. Die **_finitef** -Funktion ist nur verfügbar, wenn für X86, ARM und ARM64-Plattformen kompiliert.
 
 ## <a name="requirements"></a>Anforderungen
 

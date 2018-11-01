@@ -1,10 +1,6 @@
 ---
-title: sin, Sinf, Sinl | Microsoft Docs
-ms.custom: ''
+title: sin, Sinf, sinl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - sinl
 - sinf
@@ -27,8 +23,6 @@ f1_keywords:
 - sinf
 - sinl
 - sin
-dev_langs:
-- C++
 helpviewer_keywords:
 - _sinl function
 - sinl function
@@ -37,20 +31,16 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f99e7792e177c6203d38a368f3dd4125fe848a76
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7006d7246837e5dc69733a007b3f7dab1c55280e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407576"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430361"
 ---
 # <a name="sin-sinf-sinl"></a>sin, Sinf, sinl
 
-Berechnet den Sinus des einen Gleitkommawert an.
+Berechnet den Sinus eines Gleitkommawerts.
 
 ## <a name="syntax"></a>Syntax
 
@@ -72,7 +62,7 @@ Winkel im Bogenmaß.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **sin** Funktionen geben den Sinus des *x*. Wenn *x* ist größer als oder gleich 263 oder kleiner als oder gleich-263 einer im Ergebnis kommt.
+Die **sin** Funktionen geben den Sinus des *x*. Wenn *x* ist größer als oder gleich 263 oder kleiner als oder gleich-263, tritt ein Genauigkeitsverlust in das Ergebnis.
 
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
 |-----------|-------------------|-----------------------|
@@ -87,7 +77,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **sin** v
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header (C)|Erforderlicher Header (C++)|
+|-Routine zurückgegebener Wert|Erforderlicher Header (C)|Erforderlicher Header (C++)|
 |-|-|-|
 |**sin**, **Sinf**, **Sinl**|\<math.h>|\<cmath> oder \<math.h>|
 
