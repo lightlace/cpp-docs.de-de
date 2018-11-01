@@ -1,31 +1,24 @@
 ---
-title: Einstufen von Typen und Membern als veraltet (C++ / CX) | Microsoft-Dokumentation
-ms.custom: ''
+title: Einstufen von Typen und Membern als veraltet (C++/CX)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 500b93f3a84ecb39706b5c1575887a7339d1fdd4
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 661445c8a365451d94f938cfe262623866b0fa5e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102090"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618633"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>Einstufen von Typen und Membern als veraltet (C++/CX)
 
 In C++ / CX werden veraltete von Windows-Runtime-Typen und Membern für Producer und Consumer durch das [veraltet](/uwp/api/windows.foundation.metadata.deprecatedattribute) -Attribut wird unterstützt. Wenn Sie eine API nutzen, für die dieses Attribut gilt, erhalten Sie zur Kompilierzeit eine Warnmeldung, die angibt, dass die API veraltet ist, und auch eine alternative API zur Verwendung empfiehlt. In Ihren eigenen öffentlichen Typen und Methoden können Sie dieses Attribut anwenden und eine eigene benutzerdefinierte Meldung bereitstellen.
 
 > [!CAUTION]
-> Die [veraltet](/uwp/api/windows.foundation.metadata.deprecatedattribute) -Attribut ist nur mit Windows-Runtime-Typen. Verwenden Sie für Standard-c++-Klassen und Member [__declspec(deprecated)](../cpp/deprecated-cpp.md).
+> Die [veraltet](/uwp/api/windows.foundation.metadata.deprecatedattribute) -Attribut ist nur mit Windows-Runtime-Typen. Verwenden Sie für Standard-C++-Klassen und -Member das Attribut [__declspec(deprecated)](../cpp/deprecated-cpp.md).
 
 ### <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird gezeigt, wie eine eigene öffentliche API – z. B. in einer Windows Runtime-Komponente als veraltet markiert wird. Der zweite Parameter vom Typ [Windows: Foundation:: Metadata:: deprecationtype](/uwp/api/windows.foundation.metadata.deprecationtype) gibt an, ob die API als veraltet markiert oder entfernt. Derzeit wird nur der Wert DeprecationType::Deprecated unterstützt. Der dritte Parameter im Attribut gibt die [Windows::Foundation::Metadata::Platform](/uwp/api/windows.foundation.metadata.platformattribute) auf die das Attribut angewendet wird.
+Im folgenden Beispiel wird gezeigt, wie eine eigene öffentliche API – z. B. in einer Windows Runtime-Komponente als veraltet markiert wird. Der zweite Parameter vom Typ [Windows:Foundation::Metadata::DeprecationType](/uwp/api/windows.foundation.metadata.deprecationtype) gibt an, ob die API als veraltet markiert oder entfernt wird. Derzeit wird nur der Wert DeprecationType::Deprecated unterstützt. Der dritte Parameter im Attribut gibt die [Windows::Foundation::Metadata::Platform](/uwp/api/windows.foundation.metadata.platformattribute) an, auf die das Attribut angewendet wird.
 
 ```
 

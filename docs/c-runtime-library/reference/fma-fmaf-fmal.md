@@ -1,11 +1,6 @@
 ---
-title: fma, fmaf, fmal | Microsoft-Dokumentation
-ms.custom: ''
+title: fma, fmaf, fmal
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fma
 - fmaf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/fma
 - math/fmaf
 - math/fmal
-dev_langs:
-- C++
 helpviewer_keywords:
 - fma function
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b28009a9c3cc4edceb9032660a0c2a71916dfb2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3b540a72c6f2fc2264d6366111831fbe2a02a6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401476"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529947"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
@@ -106,11 +95,11 @@ Andernfalls wird möglicherweise einer der folgenden Werte zurückgeben:
 
 |Problem|Zurück|
 |-----------|------------|
-|*X* = UNENDLICH, *y* = 0 oder<br /><br /> *X* = 0, *y* = UNENDLICH|NaN|
-|*X* oder *y* = genaue ± UNENDLICH, *z* = UNENDLICH mit umgekehrtem Vorzeichen|NaN|
-|*X* oder *y* = "NaN"|NaN|
-|keine (*x* = 0, *y*= unbegrenzt) und *z* = "NaN"<br /><br /> keine (*x*= undefiniert *y*= 0) und *z* = "NaN"|NaN|
-|Überlaufbereichsfehler|±HUGE_VAL, ±HUGE_VALF oder ±HUGE_VALL|
+|*X* = INFINITY, *y* = 0 oder<br /><br /> *X* = 0, *y* = INFINITY|NaN|
+|*X* oder *y* = genaue ± UNENDLICH *z* = INFINITY mit umgekehrtem Vorzeichen|NaN|
+|*X* oder *y* = NaN|NaN|
+|keine (*x* = 0, *y*= indefinite) und *z* = NaN<br /><br /> keine (*x*= indefinite, *y*= 0) und *z* = NaN|NaN|
+|Überlaufbereichsfehler|±HUGE_VAL ±HUGE_VALF oder ±HUGE_VALL|
 |Unterlaufbereichsfehler|Richtige Wert nach dem Runden|
 
 Fehler werden gemäß der Angaben in [_matherr](matherr.md) gemeldet.

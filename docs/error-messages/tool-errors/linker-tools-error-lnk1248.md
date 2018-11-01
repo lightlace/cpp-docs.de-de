@@ -1,29 +1,19 @@
 ---
-title: Linkertoolfehler Lnk1248 | Microsoft Docs
-ms.custom: ''
+title: Linkertoolfehler LNK1248
 ms.date: 12/28/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK1248
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK1248
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5367ab248a34d85132ddc51578f477101dea1100
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec042251ef7cf6da5035d3d713927a46c87e3ac5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301982"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50573045"
 ---
 # <a name="linker-tools-error-lnk1248"></a>Linkertoolfehler LNK1248
 
-> bildanforderungen ("*Größe*") überschreitet die maximal zulässige Größe (80000000)
+> Bildgröße ("*Größe*') überschreitet die maximal zulässige Größe (80000000)
 
-Der Linker hat festgestellt, dass die Größe der Ausgabedatei die maximal zulässige Größe für ein 32-Bit-Programm-Image überschreitet. Sie möchten das Programm mit mehreren DLLs machen.
+Der Linker hat festgestellt, dass die Größe der Ausgabedatei die maximal zulässige Größe für ein für 32-Bit-Programmimage überschreitet. Sie sollten Ihr Programm mit mehreren DLLs vornehmen.

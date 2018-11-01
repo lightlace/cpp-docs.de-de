@@ -1,10 +1,6 @@
 ---
-title: _heapchk | Microsoft-Dokumentation
-ms.custom: ''
+title: _heapchk
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _heapchk
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _heapchk
 - heapchk
-dev_langs:
-- C++
 helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - consistency checking of heaps
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b3fc500ee86bde40def0e1e2d3dd3edad3127daf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b34b4ea1bb2512628213cabb55e26e2dad6d445c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399633"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580621"
 ---
 # <a name="heapchk"></a>_heapchk
 
@@ -65,15 +55,15 @@ int _heapchk( void );
 **_HEAPEMPTY**|Der Heap wurde noch nicht initialisiert.
 **_HEAPOK**|Der Heap scheint konsistent zu sein.
 
-Darüber hinaus, wenn ein Fehler auftritt **_heapchk** legt **Errno** auf **ENOSYS**.
+Darüber hinaus, wenn ein Fehler auftritt **_heapchk** legt **Errno** zu **ENOSYS**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_heapchk** -Funktion hilft beim Heapbezogene Probleme Debuggen überprüft auf minimale Konsistenz des Heaps. Wenn das Betriebssystem nicht unterstützt **_heapchk**(z. B. Windows 98), gibt die Funktion **_HEAPOK** und legt **Errno** auf **ENOSYS**.
+Die **_heapchk** -Funktion hilft, Heap-bezogene Probleme zu debuggen, indem auf minimale Konsistenz des Heaps überprüfen. Wenn das Betriebssystem nicht unterstützt **_heapchk**(z. B. Windows 98), die Funktion gibt **_HEAPOK** und **Errno** zu **ENOSYS**.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|Optionaler Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|
 |-------------|---------------------|---------------------|
 |**_heapchk**|\<malloc.h>|\<errno.h>|
 

@@ -1,27 +1,17 @@
 ---
-title: Schwerwiegender Fehler C1189 | Microsoft Docs
-ms.custom: ''
+title: Schwerwiegender Fehler C1189
 ms.date: 04/27/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C1189
-dev_langs:
-- C++
 helpviewer_keywords:
 - C1189
 ms.assetid: 2e5c8a78-edd4-411c-b619-558a96be148a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 051b7eb965526d12311dfacaeae7a00e4fbe4e75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06d42316a0109ac063bba43cefebd9aab71c2e72
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199793"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565528"
 ---
 # <a name="fatal-error-c1189"></a>Schwerwiegender Fehler C1189
 
@@ -29,11 +19,11 @@ ms.locfileid: "33199793"
 
 ## <a name="remarks"></a>Hinweise
 
-C1189 wird generiert, indem die `#error` Richtlinie. Der Entwickler, der die Direktive codes gibt den Text der Fehlermeldung. Weitere Informationen finden Sie unter [#error-Direktive (C/C++)](../../preprocessor/hash-error-directive-c-cpp.md).
+C1189 wird generiert, indem die `#error` Richtlinie. Der Entwickler, der die Direktive codes gibt den Text der Fehlermeldung an. Weitere Informationen finden Sie unter [#error-Direktive (C/C++)](../../preprocessor/hash-error-directive-c-cpp.md).
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird C1189 generiert. In diesem Beispiel gibt der Entwickler eine benutzerdefinierte Fehlermeldung, da die `_WIN32` Bezeichner ist nicht definiert:
+Im folgende Beispiel wird die C1189 generiert. In diesem Beispiel gibt der Entwickler eine benutzerdefinierte Fehlermeldung, da die `_WIN32` Bezeichner ist nicht definiert:
 
 ```cpp
 // C1189.cpp
