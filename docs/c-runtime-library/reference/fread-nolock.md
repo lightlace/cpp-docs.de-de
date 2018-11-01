@@ -1,10 +1,6 @@
 ---
-title: _fread_nolock | Microsoft-Dokumentation
-ms.custom: ''
+title: _fread_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fread_nolock
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _fread_nolock
 - fread_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - reading data [C++], from input streams
 - data [C++], reading from input stream
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - _fread_nolock function
 - streams [C++], reading data from
 ms.assetid: 60e4958b-1097-46f5-a77b-94af5e7dba40
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 444a4b371eb6b4add140c5d0d96f48a69e35152c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 81827363d670c7cdeeddcb86390323bf431c6f98
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396708"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597287"
 ---
 # <a name="freadnolock"></a>_fread_nolock
 
@@ -78,7 +68,7 @@ Weitere Informationen finden Sie unter [fread](fread.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion ist eine nicht sperrende Version von **Fread**. Sie ist identisch mit **Fread** mit dem Unterschied, dass sie nicht vor Störungen durch andere Threads geschützt ist. Sie ist möglicherweise schneller, da sie nicht den Mehraufwand zum Sperren anderer Threads mit sich bringt. Verwenden Sie diese Funktion nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen bereits der aufrufende Bereich die Threadisolation handhabt.
+Diese Funktion ist eine nicht sperrende Version von **Fread**. Es ist identisch mit **Fread** mit dem Unterschied, dass sie nicht vor Störungen durch andere Threads geschützt ist. Sie ist möglicherweise schneller, da sie nicht den Mehraufwand zum Sperren anderer Threads mit sich bringt. Verwenden Sie diese Funktion nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen bereits der aufrufende Bereich die Threadisolation handhabt.
 
 ## <a name="requirements"></a>Anforderungen
 

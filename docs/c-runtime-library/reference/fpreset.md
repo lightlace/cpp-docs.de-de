@@ -1,10 +1,6 @@
 ---
-title: _fpreset | Microsoft-Dokumentation
-ms.custom: ''
+title: _fpreset
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fpreset
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - _fpreset
 - fpreset
-dev_langs:
-- C++
 helpviewer_keywords:
 - fpreset function
 - floating-point numbers, resetting math package
 - _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8b550df3e43b56038ae6d1b2d6695c86d90c3499
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b3ea4289cd0ff031fd2828e3c4183911459297c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398893"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592610"
 ---
 # <a name="fpreset"></a>_fpreset
 
@@ -53,9 +43,9 @@ void _fpreset( void );
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_fpreset** Funktion initialisiert mathematischen gleitkommapaket neu. **_fpreset** dient in der Regel mit **Signal**, **System**, oder die **_exec** oder **_spawn** Funktionen. Wenn ein Programm Gleitkommafehler Signale aufgefangen (**SIGFPE**) mit **Signal**, sie können problemlos aus Gleitkommafehlern wiederherstellen, durch den Aufruf **_fpreset** und verwenden**Longjmp**.
+Die **_fpreset** Funktion initialisiert mathematischen gleitkommapaket. **_fpreset** dient in der Regel mit **Signal**, **System**, oder die **_exec** oder **_spawn** Funktionen. Wenn ein Programm Signale für Gleitkommafehler traps (**SIGFPE**) mit **Signal**, sie können problemlos von Gleitkommafehlern wiederhergestellt, durch den Aufruf **_fpreset** und verwenden**Longjmp**.
 
-Diese Funktion ist veraltet, beim Kompilieren mit [/CLR (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md) , da die common Language Runtime nur die standardmäßige Genauigkeit von Gleitkommawerten unterstützt.
+Diese Funktion ist veraltet, beim Kompilieren mit [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) da die common Language Runtime nur die Genauigkeit der standardgleitkommawerte unterstützt.
 
 ## <a name="requirements"></a>Anforderungen
 
