@@ -1,27 +1,17 @@
 ---
-title: Compilerfehler C2142 | Microsoft-Dokumentation
-ms.custom: ''
+title: Compilerfehler C2142
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2142
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2142
 ms.assetid: d0dbe10e-0952-49a4-8b33-e82fb7558b19
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 32301087ac1f06f1958ca8de7d2f66645dafb3d2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: eda60204e07fd025a8c62b19de70e8204f9f80f1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46032493"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50502010"
 ---
 # <a name="compiler-error-c2142"></a>Compilerfehler C2142
 

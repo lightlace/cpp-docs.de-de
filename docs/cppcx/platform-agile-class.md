@@ -1,8 +1,6 @@
 ---
-title: 'Platform:: Agile-Klasse | Microsoft-Dokumentation'
-ms.custom: ''
+title: Platform::Agile-Klasse
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - AGILE/Platform::Platform
@@ -11,21 +9,15 @@ f1_keywords:
 - AGILE/Platform::Platform::Agile::GetAddressOf
 - AGILE/Platform::Platform::Agile::GetAddressOfForInOut
 - AGILE/Platform::Platform::Agile::Release
-dev_langs:
-- C++
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3745ead4fec8466df3f164c415b21d98f68c0ef7
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9350d94fdff615056fca193d654b2bb001d78d72
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109783"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471200"
 ---
 # <a name="platformagile-class"></a>Platform::Agile-Klasse
 
@@ -162,11 +154,11 @@ Ein Typ, der durch den Typnamenparameter der Vorlage spezifiziert wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Adresse eines Handles für ein Objekt des Typs `T`.
+Die Adresse eines Handles für ein Objekt des Typs `T`
 
 ### <a name="remarks"></a>Hinweise
 
-Dieser Vorgang gibt die aktuelle Darstellung eines Objekts vom Typ `T`, falls vorhanden; Datenmember für das Agile-Objekt initialisiert, erhält der aktuelle threadingkontext abgerufen; und dann gibt die Adresse einer Handle-to-Object-Variablen, die darstellen, können eine nicht-agile-Objekt. Damit eine Agile-Klasseninstanz ein Objekt dargestellt wird, verwenden Sie den Zuweisungsoperator ([Agile:: =](#operator-assign)) auf das Objekt für die Agile-Klasseninstanz zuzuweisen.
+Dieser Vorgang gibt die aktuelle Darstellung eines Objekts vom Typ `T` frei, sofern vorhanden. Dann werden die Datenmember des Agile-Objekts initialisiert, der aktuelle Threadingkontext abgerufen und anschließend die Adresse einer handle-to-object-Variablen zurückgegeben, die ein Nicht-Agile-Objekt darstellen kann. Damit eine Agile-Klasseninstanz ein Objekt dargestellt wird, verwenden Sie den Zuweisungsoperator ([Agile:: =](#operator-assign)) auf das Objekt für die Agile-Klasseninstanz zuzuweisen.
 
 ## <a name="getaddressofforinout"></a>  Agile:: getaddressofforinout-Methode
 

@@ -1,8 +1,6 @@
 ---
-title: 'Platform:: stringreference-Klasse | Microsoft-Dokumentation'
-ms.custom: ''
+title: Platform::StringReference-Klasse
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::StringReference::StringReference
@@ -10,19 +8,13 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::Length
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
-dev_langs:
-- C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1b177cf30b4eee49d144ddf3516a4bbf3da91c85
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 09b15a1530661ce537c9d2aab333a1a17fa52ff9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105795"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50498383"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference-Klasse
 
@@ -72,7 +64,7 @@ class StringReference
 
 ## <a name="data"></a>  Stringreference:: Data-Methode
 
-Gibt den Inhalt dieses `StringReference` als ein Array von char16-Wertearray.
+Gibt die Inhalte dieses `StringReference` als char16-Wertearray zurück.
 
 ### <a name="syntax"></a>Syntax
 
@@ -199,7 +191,7 @@ Die Anzahl von Elementen in `__strArg`.
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Version dieses Konstruktors ist der Standardkonstruktor. Die zweite Version initialisiert eine neue `StringReference`-Instanzklasse aus dem Objekt, das durch den `__fstrArg`-Parameter spezifiziert wird. Die dritten und vierten Überladungen initialisieren eine neue `StringReference` Instanz aus einem Array von char16-Wertearray. char16 stellt ein 16-Bit-UNICODE-Textzeichen dar.
+Die erste Version dieses Konstruktors ist der Standardkonstruktor. Die zweite Version initialisiert eine neue `StringReference`-Instanzklasse aus dem Objekt, das durch den `__fstrArg`-Parameter spezifiziert wird. Die dritten und vierten Überladungen initialisieren eine neue `StringReference`-Instanz aus einem char16-Wertearray. char16 stellt ein 16-Bit-UNICODE-Textzeichen dar.
 
 ## <a name="see-also"></a>Siehe auch
 

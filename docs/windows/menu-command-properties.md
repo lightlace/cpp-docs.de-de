@@ -1,26 +1,15 @@
 ---
-title: Menübefehlseigenschaften (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Menübefehlseigenschaften (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - menu items, properties
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c846cecb415365db92e3097bbf04ab06cd4209d0
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: ddb33293d654944aa9390b9955388d6e3b01cddb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860445"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468977"
 ---
 # <a name="menu-command-properties-c"></a>Menübefehlseigenschaften (C++)
 
@@ -28,7 +17,7 @@ Die folgenden Informationen sind entsprechend so aufgebaut, dass die **Menü** E
 
 |Eigenschaft|Beschreibung|
 |--------------|-----------------|
-|**Break**|Einer der folgenden Werte ist möglich:<br /><br />- **Keine** (Standard): kein Wechsel.<br />- **Spalte**: bei statischen Menüs bewirkt, dass dieser Wert der Menübefehl in eine neue Zeile gesetzt. Bei Popupmenüs bewirkt dieser Wert, dass der Menübefehl in eine neue Spalte gesetzt wird, ohne dass zwischen den Spalten eine Trennlinie angezeigt wird. Diese Eigenschaft wirkt sich nicht im Menü-Editor, sondern erst zur Laufzeit auf die Darstellung des Menüs aus.<br />- **Leiste**: identisch mit **Spalte** außer dass bei Popupmenüs dieser Wert die neue Spalte von der alten Spalte getrennt durch eine vertikale Linie. Diese Eigenschaft wirkt sich auf die Darstellung des Menüs nur zur Laufzeit nicht in der **Menü** Editor.|
+|**Break**|Einer der folgenden Werte ist möglich:<br /><br />- **Kein** (Standard): Kein Wechsel.<br />- **Spalte**: Bei statischen Menüs bewirkt dieser Wert, dass der Menübefehl in eine neue Zeile gesetzt wird. Bei Popupmenüs bewirkt dieser Wert, dass der Menübefehl in eine neue Spalte gesetzt wird, ohne dass zwischen den Spalten eine Trennlinie angezeigt wird. Diese Eigenschaft wirkt sich nicht im Menü-Editor, sondern erst zur Laufzeit auf die Darstellung des Menüs aus.<br />- **Leiste**: identisch mit **Spalte** außer dass bei Popupmenüs dieser Wert die neue Spalte von der alten Spalte getrennt durch eine vertikale Linie. Diese Eigenschaft wirkt sich auf die Darstellung des Menüs nur zur Laufzeit nicht in der **Menü** Editor.|
 |**Beschriftung**|Text zur Beschreibung des Menübefehls (der Menüname). Einem der Buchstaben in der Beschriftung eines Menübefehls kann eine Zugriffstaste zugeordnet werden, indem ihm ein kaufmännisches Und-Zeichen (&) vorangestellt wird.|
 |**Aktiviert**|Wenn **"true"**, der Menübefehl zu Beginn aktiviert ist. Typ: **"bool"**. Standardwert: **FALSE**.|
 |**Aktiviert**|Wenn **FALSE**, ist das Menüelement deaktiviert.|

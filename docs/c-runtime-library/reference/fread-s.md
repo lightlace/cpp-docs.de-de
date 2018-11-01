@@ -1,10 +1,6 @@
 ---
-title: fread_s | Microsoft-Dokumentation
-ms.custom: ''
+title: fread_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fread_s
 apilocation:
@@ -23,19 +19,13 @@ apitype: DLLExport
 f1_keywords:
 - fread_s
 - stdio/fread_s
-dev_langs:
-- C++
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: febfab21889afab773dd9a8405b1e07dc7798f5c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 898e813c19fd53cfdacd536c2e9819743a62a8da
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401892"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519820"
 ---
 # <a name="freads"></a>fread_s
 
@@ -58,7 +48,7 @@ size_t fread_s(
 *buffer*<br/>
 Speicherort für Daten.
 
-*BufferSize*<br/>
+*Puffergröße*<br/>
 Größe des Zielpuffers in Byte.
 
 *elementSize*<br/>
@@ -72,13 +62,13 @@ Zeiger auf die **FILE**-Struktur.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Fread_s** gibt die Anzahl der (ganz) der Elemente, die in den Puffer gelesen wurden u. u. weniger als *Anzahl* , wenn ein Lesefehler bzw. das Ende der Datei vor dem kommt *Anzahl* erreicht ist. Verwenden der **Feof** oder **Ferror** Funktion, um einen Fehler von einer End-of-File-Bedingung zu unterscheiden. Wenn *Größe* oder *Anzahl* ist 0, **Fread_s** gibt 0 und der Inhalt des Puffers nicht geändert werden. Wenn *Stream* oder *Puffer* ist ein null-Zeiger **Fread_s** wird den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** auf **EINVAL** und gibt 0 zurück.
+**Fread_s** gibt die Anzahl der (ganzen) Elemente, die in den Puffer gelesen wurden, die möglicherweise weniger als *Anzahl* , wenn ein Fehler oder das Ende der Datei gefunden wird, bevor Sie *Anzahl* erreicht ist. Verwenden der **Feof** oder **Ferror** Funktion, um einen Fehler, die von einer End-of-File-Bedingung zu unterscheiden. Wenn *Größe* oder *Anzahl* ist 0 (null) **Fread_s** gibt 0 und die pufferinhalte bleiben unverändert. Wenn *Stream* oder *Puffer* ist ein null-Zeiger **Fread_s** wird der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** zu **EINVAL** und gibt 0 zurück.
 
 Weitere Informationen zu diesen Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Fread_s** Funktion liest bis zum *Anzahl* Elemente *ElementSize* Bytes aus der Eingabe *Stream* und speichert diese im *Puffer*.  Der Dateizeiger, das zugeordnete *Stream* (sofern vorhanden) wird durch die Anzahl der tatsächlich gelesenen Bytes erhöht. Wenn dem angegebenen Datenstrom im Textmodus geöffnet wird, werden die Carriage Return-Zeilenvorschub-Paare mit einzelnen Zeilenvorschubzeichen ersetzt. Dieser Vorgang hat keine Auswirkung auf den Dateizeiger oder den Rückgabewert. Die Position des Dateizeigers ist unbestimmt, wenn ein Fehler auftritt. Der Wert eines teilweise gelesenen Elements kann nicht bestimmt werden.
+Die **Fread_s** Funktion liest bis zum *Anzahl* Elemente *ElementSize* Bytes aus dem Eingabe- *Stream* und speichert sie in *Puffer*.  Der Dateizeiger, der zugeordnet wird *Stream* (sofern vorhanden) wird durch die Anzahl tatsächlich gelesener Bytes erhöht. Wenn der angegebene Stream im Textmodus geöffnet wird, werden die Carriage Return-Zeilenvorschub-Paare durch Zeilenvorschubzeichen ersetzt. Dieser Vorgang hat keine Auswirkung auf den Dateizeiger oder den Rückgabewert. Die Position des Dateizeigers ist unbestimmt, wenn ein Fehler auftritt. Der Wert eines teilweise gelesenen Elements kann nicht bestimmt werden.
 
 Diese Funktion sperrt alle anderen Threads. Wenn Sie eine nicht sperrende Version benötigen, verwenden Sie **_fread_nolock**.
 
