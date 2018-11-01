@@ -1,10 +1,6 @@
 ---
-title: _matherr | Microsoft-Dokumentation
-ms.custom: ''
+title: _matherr
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _matherr
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _matherr
 - matherr
-dev_langs:
-- C++
 helpviewer_keywords:
 - _matherr function
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5f8cba1887fe806c3a6cfa795437d3d60ed7f31e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 980bf8a14ceace82a76562cc47d353f78dbca582
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402324"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445720"
 ---
 # <a name="matherr"></a>_matherr
 
@@ -56,17 +46,17 @@ Ein Zeiger auf die Struktur, die Fehlerinformationen enthält.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_matherr** gibt 0 für einen Fehler oder einen Wert ungleich NULL, um den Erfolg anzugeben. Wenn **_matherr** 0 zurückgibt, eine Fehlermeldung angezeigt werden können und **Errno** auf einen entsprechenden Fehlerwert festgelegt ist. Wenn **_matherr** gibt ein Wert ungleich NULL, keine Fehlermeldung angezeigt wird und **Errno** bleibt unverändert.
+**_matherr** gibt 0 für einen Fehler oder einen Wert ungleich NULL, um den Erfolg mitzuteilen. Wenn **_matherr** 0 zurückgibt, eine Fehlermeldung angezeigt werden können und **Errno** auf einen ordnungsgemäßen Fehlerwert festgelegt ist. Wenn **_matherr** gibt ein Wert ungleich NULL, keine Fehlermeldung wird angezeigt und **Errno** bleibt unverändert.
 
 Weitere Informationen zu Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_matherr** Funktion verarbeitet, durch die Gleitkommafunktionen der mathematischen Bibliothek generierten Fehler. Diese Funktionen aufrufen **_matherr** kein Fehler aufgetreten ist.
+Die **_matherr** -Funktion verarbeitet Fehler, die von Gleitkommafunktionen der mathematischen Bibliothek generiert. Diese Funktionen aufrufen **_matherr** kein Fehler aufgetreten ist.
 
-Für die spezielle Fehlerbehandlung, bieten Sie eine andere Definition von **_matherr**. Wenn Sie die dynamisch verknüpfte Version der C-Laufzeitbibliothek (CRT) verwenden, können Sie die Standardeinstellung ersetzen **_matherr** routinemäßige in einem Client, die ausführbare Datei mit der eine benutzerdefinierte Versionsnummer. Sie können nicht ersetzt jedoch die Standardeinstellung **_matherr** routinemäßige in einem DLL-Client, der die CRT-DLL.
+Für spezielle Fehlerbehandlungen können Sie eine andere Definition von bereitstellen können **_matherr**. Wenn Sie die dynamisch verknüpfte Version der C-Laufzeitbibliothek (CRT) verwenden, können Sie die Standardeinstellung ersetzen **_matherr** routinemäßige in einem ausführbaren Client durch eine benutzerdefinierte Version. Sie können nicht ersetzt jedoch die Standardeinstellung **_matherr** routinemäßige in einem DLL-Client der CRT-DLL.
 
-Tritt ein Fehler in einer Routine mathematische **_matherr** aufgerufen wird und ein Zeiger auf ein **_exception** Geben Sie die Struktur (definiert \<math.h >) als Argument. Die Struktur **_exception** enthält die folgenden Elemente:
+Tritt ein Fehler in einer mathematischen Routine, **_matherr** aufgerufen wird und ein Zeiger auf ein **_exception** -Typstruktur (definiert \<math.h >) als Argument. Die Struktur **_exception** enthält die folgenden Elemente:
 
 ```C
 struct _exception
@@ -79,24 +69,24 @@ struct _exception
 };
 ```
 
-Die **Typ** Element gibt den Typ der Mathematik-Fehler. Es ist einer der folgenden Werte, die in definierten \<math.h >:
+Die **Typ** -Member gibt den Typ des mathematischen Fehlers an. Es ist eine der folgenden Werte an, in definiert \<math.h >:
 
 |Makro|Bedeutung|
 |-|-|
-**_DOMAIN**|Domänenfehler Argument
-**_SING**|Argument Singularität
+**_DOMAIN**|Arguments-Bereichsfehler
+**_SING**|Einzigartigkeit des Arguments
 **_OVERFLOW**|Überlaufbereichsfehler
-**_PLOSS**|Partielle Verlust von "significance"
-**_TLOSS**|Insgesamt Verlust von "significance"
+**_PLOSS**|Teilweiser Verlust von Bedeutung
+**_TLOSS**|Vollständiger Verlust von Bedeutung
 **_UNDERFLOW**|Das Ergebnis ist zu klein, um dargestellt werden zu können. (Diese Bedingung wird derzeit nicht unterstützt.)
 
-Der Strukturmember **name** ist ein Zeiger auf eine mit NULL endende Zeichenfolge mit dem Namen der Funktion, die den Fehler verursacht hat. Die Strukturmember **arg1** und **arg2** geben die Werte an, die den Fehler verursacht haben. Wenn nur ein Argument angegeben ist, wird Sie in gespeichert **arg1**.
+Der Strukturmember **name** ist ein Zeiger auf eine mit NULL endende Zeichenfolge mit dem Namen der Funktion, die den Fehler verursacht hat. Die Strukturmember **arg1** und **arg2** geben die Werte an, die den Fehler verursacht haben. Wenn nur ein Argument angegeben ist, es befindet sich in **arg1**.
 
 Der Standardrückgabewert für den angegebenen Fehler ist **retval**. Wenn Sie den Rückgabewert ändern, muss dieser angeben, ob ein Fehler wirklich passiert ist.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_matherr**|\<math.h>|
 
