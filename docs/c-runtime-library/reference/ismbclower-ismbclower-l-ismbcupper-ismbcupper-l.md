@@ -1,10 +1,6 @@
 ---
-title: _ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbclower
 - _ismbclower_l
@@ -26,8 +22,6 @@ apitype: DLLExport
 f1_keywords:
 - _ismbcupper
 - _ismbclower
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbcupper function
 - ismbclower function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - ismbclower_l function
 - _ismbcupper_l function
 ms.assetid: 17d89587-65bc-477c-ba8f-a84e63cf59e7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4ef7b21cc10ca5e72a5054e34b0e228be89d74cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 29a1e97f4583808931e5228a6905aed7c0a62702
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402233"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431862"
 ---
 # <a name="ismbclower-ismbclowerl-ismbcupper-ismbcupperl"></a>_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 
@@ -85,24 +75,24 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Routinen gibt einen Wert ungleich 0 zurück, wenn das Zeichen die Testbedingung erfüllt, bzw. 0, wenn es sie nicht erfüllt. Wenn *c*< = 255, und es wird ein entsprechendes **_ismbb** Routine (z. B. **_ismbcalnum** entspricht **_ismbbalnum**), die Ergebnis ist der Rückgabewert der entsprechenden **_ismbb** Routine.
+Jede dieser Routinen gibt einen Wert ungleich 0 zurück, wenn das Zeichen die Testbedingung erfüllt, bzw. 0, wenn es sie nicht erfüllt. Wenn *c*< = 255 und gibt es eine entsprechende **_ismbb** Routine (z. B. **_ismbcalnum** entspricht **_ismbbalnum**), wird die Ergebnis ist der Rückgabewert der entsprechenden **_ismbb** Routine.
 
 ## <a name="remarks"></a>Hinweise
 
 Jede dieser Funktionen testet ein angegebenes Mehrbytezeichen auf eine angegebene Bedingung.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, außer dass sie das Gebietsschema für den übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie das Gebietsschema für den übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-|Routine|Testbedingung|Beispiel für Codepage 932|
+|-Routine zurückgegebener Wert|Testbedingung|Beispiel für Codepage 932|
 |-------------|--------------------|---------------------------|
-|**_ismbclower**|Kleinbuchstaben alphabetisch|Gibt einen Wert ungleich NULL und nur, wenn *c* ist eine Single-Byte-Darstellung von einem Kleinbuchstaben ASCII-Buchstaben: 0 x 61 < =*c*< = 0x7A.|
-|**_ismbclower_l**|Kleinbuchstaben alphabetisch|Gibt einen Wert ungleich NULL und nur, wenn *c* ist eine Single-Byte-Darstellung von einem Kleinbuchstaben ASCII-Buchstaben: 0 x 61 < =*c*< = 0x7A.|
-|**_ismbcupper**|Großbuchstaben alphabetisch|Gibt einen Wert ungleich NULL und nur, wenn *c* eine einzelbytedarstellung eines englischen ASCII-Großbuchstabens ist: 0 x 41 nach < =*c*< = 0x5A.|
-|**_ismbcupper_l**|Großbuchstaben alphabetisch|Gibt einen Wert ungleich NULL und nur, wenn *c* eine einzelbytedarstellung eines englischen ASCII-Großbuchstabens ist: 0 x 41 nach < =*c*< = 0x5A.|
+|**_ismbclower**|Kleinbuchstaben alphabetisch|Gibt einen Wert ungleich NULL und nur, wenn *c* eine Single-Byte-Darstellung einer englischen ASCII-Kleinbuchstabens ist: 0 x 61 < =*c*< = 0x7A.|
+|**_ismbclower_l**|Kleinbuchstaben alphabetisch|Gibt einen Wert ungleich NULL und nur, wenn *c* eine Single-Byte-Darstellung einer englischen ASCII-Kleinbuchstabens ist: 0 x 61 < =*c*< = 0x7A.|
+|**_ismbcupper**|Großbuchstaben alphabetisch|Gibt einen Wert ungleich NULL und nur, wenn *c* eine einzelbytedarstellung eines englischen ASCII-Großbuchstabens ist: 0 x 41 < =*c*< = 0x5A.|
+|**_ismbcupper_l**|Großbuchstaben alphabetisch|Gibt einen Wert ungleich NULL und nur, wenn *c* eine einzelbytedarstellung eines englischen ASCII-Großbuchstabens ist: 0 x 41 < =*c*< = 0x5A.|
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_ismbclower**|\<mbstring.h>|
 |**_ismbclower_l**|\<mbstring.h>|

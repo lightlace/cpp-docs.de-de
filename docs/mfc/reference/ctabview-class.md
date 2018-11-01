@@ -1,10 +1,6 @@
 ---
-title: CTabView-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: CTabView-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CTabView
 - AFXTABVIEW/CTabView
@@ -16,8 +12,6 @@ f1_keywords:
 - AFXTABVIEW/CTabView::SetActiveView
 - AFXTABVIEW/CTabView::IsScrollBar
 - AFXTABVIEW/CTabView::OnActivateView
-dev_langs:
-- C++
 helpviewer_keywords:
 - CTabView [MFC], AddView
 - CTabView [MFC], FindTab
@@ -28,16 +22,12 @@ helpviewer_keywords:
 - CTabView [MFC], IsScrollBar
 - CTabView [MFC], OnActivateView
 ms.assetid: 8e6ecd9d-d28d-432b-8ec8-0446f0204d52
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8f204c545ed9179438a2498c39229d328f821973
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 38c56cd5d6f464cd560c6671f4ebf0a9c118d020
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436350"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50443786"
 ---
 # <a name="ctabview-class"></a>CTabView-Klasse
 
@@ -110,7 +100,7 @@ int AddView(
 *iIndex*<br/>
 [in] Gibt die nullbasierte Position, an dem die Ansicht eingefügt werden soll. Wenn die Position 1, wird die neue Registerkarte am Ende eingefügt.
 
-*"pContext"*<br/>
+*pContext*<br/>
 [in] Ein Zeiger auf die `CCreateContext` der Ansicht.
 
 ### <a name="return-value"></a>Rückgabewert
