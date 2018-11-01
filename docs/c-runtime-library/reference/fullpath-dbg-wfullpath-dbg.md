@@ -1,10 +1,6 @@
 ---
-title: _fullpath_dbg, _wfullpath_dbg | Microsoft-Dokumentation
-ms.custom: ''
+title: _fullpath_dbg, _wfullpath_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wfullpath_dbg
 - _fullpath_dbg
@@ -25,8 +21,6 @@ f1_keywords:
 - _wfullpath_dbg
 - _fullpath_dbg
 - fullpath_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _fullpath_dbg function
 - relative file paths
@@ -35,20 +29,16 @@ helpviewer_keywords:
 - _wfullpath_dbg function
 - wfullpath_dbg function
 ms.assetid: 81f72f85-07da-4f5c-866a-598e0fb03f6b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d04f3d7b53eca27d38a38b0bce284c17b15cae02
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: b84c5b77d0a9bfb298d4c597e372cd39a92441f9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450894"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50488009"
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg, _wfullpath_dbg
 
-Versionen von [_fullpath _wfullpath](fullpath-wfullpath.md) , verwenden die Debugversion des **"malloc"** belegt werden.
+Versionen von [_fullpath, _wfullpath](fullpath-wfullpath.md) , verwenden die Debugversion des **Malloc** um Speicher zu belegen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -79,8 +69,8 @@ Zeiger auf einen Puffer, der den absoluten oder vollständigen Pfadnamen enthäl
 *relPath*<br/>
 Relativer Pfadname.
 
-*maxLength*<br/>
-Maximale Länge des Puffers des absoluten Pfadnamens (*AbsPath*). Diese Länge in Byte für wird **_fullpath** jedoch in Breitzeichen (**Wchar_t**) für **_wfullpath**.
+*MaxLength*<br/>
+Maximale Länge des Puffers Namen absoluten Pfad (*AbsPath*). Diese Länge ist, in Bytes für **_fullpath** jedoch in Breitzeichen (**"wchar_t"**) für **_wfullpath**.
 
 *blockType*<br/>
 Angeforderter Typ des Speicherblocks: **_CLIENT_BLOCK** oder **_NORMAL_BLOCK**.
@@ -89,17 +79,17 @@ Angeforderter Typ des Speicherblocks: **_CLIENT_BLOCK** oder **_NORMAL_BLOCK**.
 Zeiger auf den Namen der Quelldatei, die Belegung angefordert oder **NULL**.
 
 *linenumber*<br/>
-Zeilennummer in der Quelldatei, in die Belegung angefordert wurde, oder **NULL**.
+Zeilennummer in der Quelldatei, in denen die Belegung angefordert wurde, oder **NULL**.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede Funktion gibt einen Zeiger auf einen Puffer, enthält des absolute Pfadname (*AbsPath*). Wenn ein Fehler vorliegt (z. B., wenn der Wert übergeben *RelPath* enthält einen Laufwerkbuchstaben an, die ist ungültig oder kann nicht gefunden werden, oder wenn die Länge der erstellte absolute Pfadname (*AbsPath*) ist größer als *MaxLength*) gibt die Funktion **NULL**.
+Jede Funktion gibt einen Zeiger auf einen Puffer, enthält des absolute Pfadname (*AbsPath*). Wenn ein Fehler auftritt (z. B., wenn der Wert übergeben *RelPath* enthält einen Laufwerkbuchstaben an, die ist ungültig oder wurde nicht gefunden, oder wenn die Länge der erstellte absolute Pfadname (*AbsPath*) ist größer als *MaxLength*) die Funktion gibt **NULL**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_fullpath_dbg** und **_wfullpath_dbg** -Funktionen sind identisch mit **_fullpath** und **_wfullpath** mit dem Unterschied, dass, wenn **_DEBUG** wird definiert, verwenden Sie diese Funktionen die Debugversion des **"malloc"**, **_malloc_dbg**, um Speicher zuzuordnen **NULL** übergeben wird als erster Parameter. Informationen zu den Debugfunktionen von **_malloc_dbg**, finden Sie unter [_malloc_dbg](malloc-dbg.md).
+Die **_fullpath_dbg** und **_wfullpath_dbg** -Funktionen sind identisch mit **_fullpath** und **_wfullpath** mit dem Unterschied, dass wenn **_DEBUG** wird definiert, verwenden Sie diese Funktionen die Debugversion von **Malloc**, **_malloc_dbg**, um Arbeitsspeicher zu belegen, wenn **NULL** übergeben wird als ersten Parameter. Informationen zu den Debugfunktionen von **_malloc_dbg**, finden Sie unter [_malloc_dbg](malloc-dbg.md).
 
-In den meisten Fällen müssen Sie diese Funktionen nicht explizit aufrufen. Stattdessen können Sie definieren die **_CRTDBG_MAP_ALLOC** Flag. Wenn **_CRTDBG_MAP_ALLOC** definiert ist, werden Aufrufe von **_fullpath** und **_wfullpath** neu zu **_fullpath_dbg** und **_wfullpath_dbg**nahezu mit der *BlockType* festgelegt **_NORMAL_BLOCK**. Daher, Sie müssen nicht auf diese Funktionen explizit aufrufen, wenn Sie die Heapblöcke als markieren möchten **_CLIENT_BLOCK**. Weitere Informationen finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details).
+In den meisten Fällen müssen Sie diese Funktionen nicht explizit aufrufen. Stattdessen können Sie definieren die **_CRTDBG_MAP_ALLOC** Flag. Wenn **_CRTDBG_MAP_ALLOC** definiert ist, werden Aufrufe von **_fullpath** und **_wfullpath** neu zu **_fullpath_dbg** und **_wfullpath_dbg**, mit der *BlockType* festgelegt **_NORMAL_BLOCK**. Also, Sie müssen nicht dieser Funktionen explizit aufrufen, es sei denn, Sie möchten die Heapblöcke als markieren **_CLIENT_BLOCK**. Weitere Informationen finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

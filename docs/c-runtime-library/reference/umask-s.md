@@ -1,10 +1,6 @@
 ---
-title: _umask_s | Microsoft-Dokumentation
-ms.custom: ''
+title: _umask_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _umask_s
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - unmask_s
 - _umask_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - masks, file-permission-setting
 - _umask_s function
@@ -33,16 +27,12 @@ helpviewer_keywords:
 - umask_s function
 - files [C++], permission settings for
 ms.assetid: 70898f61-bf2b-4d8d-8291-0ccaa6d33145
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d45cb3ded6fd2c3d7a380069a7d7f3fd79619810
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 878a22cb2884c36e792ff8dead1453582addb5b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414479"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480667"
 ---
 # <a name="umasks"></a>_umask_s
 
@@ -67,22 +57,22 @@ Der vorherige Wert der Berechtigungseinstellung.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wird ein Fehlercode zurückgegeben, wenn *Modus* gibt keinen gültigen Modus oder den *pOldMode* Zeiger **NULL**.
+Gibt einen Fehlercode zurück, wenn *Modus* gibt keinen gültigen Modus oder den *pOldMode* Zeiger **NULL**.
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
 |*mode*|*pOldMode*|Rückgabewert|Inhalt der *pOldMode*|
 |------------|----------------|----------------------|--------------------------------|
-|alle|**NULL**|**EINVAL**|nicht geändert|
-|ungültiger Modus|alle|**EINVAL**|nicht geändert|
+|any|**NULL**|**EINVAL**|nicht geändert|
+|ungültiger Modus|any|**EINVAL**|nicht geändert|
 
-Wenn eine der obengenannten Bedingungen auftritt, wird der Handler für ungültige Parameter aufgerufen wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **_umask_s** gibt **EINVAL** und legt **Errno** auf **EINVAL**.
+Wenn eine der obengenannten Bedingungen auftritt, wird der Handler für ungültige Parameter aufgerufen wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **_umask_s** gibt **EINVAL** und **Errno** zu **EINVAL**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_umask_s** Funktion legt die dateiberechtigungsmaske des aktuellen Prozesses für den Modus gemäß *Modus*. Die dateiberechtigungsmaske ändert die berechtigungseinstellung neue Dateien erstellt, indem **_creat**, **_open**, oder **_sopen**. Wenn ein Bit in der Maske 1 ist, wird das entsprechende Bit im angeforderten Berechtigungswert der Datei auf 0 (nicht zulässig) festgelegt. Wenn ein Bit in der Maske 0 ist, bleibt das entsprechende Bit unverändert. Die Berechtigungseinstellung für eine neue Datei wird erst festgelegt, wenn die Datei zum ersten Mal geschlossen wird.
+Die **_umask_s** Funktion setzt die dateiberechtigungsmaske des aktuellen Prozesses auf den vom angegebenen Modus *Modus*. Die dateiberechtigungsmaske ändert die berechtigungseinstellung neuer Dateien, die von erstellten **_creat**, **_open**, oder **_sopen**. Wenn ein Bit in der Maske 1 ist, wird das entsprechende Bit im angeforderten Berechtigungswert der Datei auf 0 (nicht zulässig) festgelegt. Wenn ein Bit in der Maske 0 ist, bleibt das entsprechende Bit unverändert. Die Berechtigungseinstellung für eine neue Datei wird erst festgelegt, wenn die Datei zum ersten Mal geschlossen wird.
 
-Der Ganzzahlausdruck *Pmode* enthält eine oder beide der folgenden Manifestkonstanten besteht, definiert in SYS\STAT. H
+Der ganzzahlige Ausdruck *Pmode* enthält eine oder beide der folgenden Manifestkonstanten, die in SYS\STAT definiert. H:
 
 |*pmode*||
 |-|-|
@@ -90,13 +80,13 @@ Der Ganzzahlausdruck *Pmode* enthält eine oder beide der folgenden Manifestkons
 |**_S_IREAD**|Lesen erlaubt.|
 |**_S_IREAD** \| **_S_IWRITE**|Lesen und Schreiben erlaubt.|
 
-Wenn beide Konstanten gegeben sind, werden sie mit dem bitweisen OR-Operator verknüpft ( **|** ). Wenn die *Modus* Argument ist **_S_IREAD**, lesen, ist nicht zulässig (die Datei schreibgeschützt ist). Wenn die *Modus* Argument ist **_S_IWRITE**, schreiben ist nicht zulässig (die Datei ist schreibgeschützt). Wenn z.B. das Schreib-Bit in der Maske festgelegt ist, sind alle neuen Dateien schreibgeschützt. Beachten Sie, dass in MS-DOS und Windows-Betriebssystemen alle Dateien lesbar sind und es nicht möglich ist, nur Schreibberechtigungen zu vergeben. Daher ist das Festlegen des Lesevorgangs bit hat **_umask_s** hat keine Auswirkung auf die Datei-Modi.
+Wenn beide Konstanten gegeben sind, werden sie mit dem bitweisen OR-Operator verbunden ( **|** ). Wenn die *Modus* Argument **_S_IREAD**, lesen, ist nicht zulässig (die Datei ist lesegeschützt). Wenn die *Modus* Argument **_S_IWRITE**, Schreiben nicht zulässig (die Datei ist schreibgeschützt). Wenn z.B. das Schreib-Bit in der Maske festgelegt ist, sind alle neuen Dateien schreibgeschützt. Beachten Sie, dass in MS-DOS und Windows-Betriebssystemen alle Dateien lesbar sind und es nicht möglich ist, nur Schreibberechtigungen zu vergeben. Daher ist das Festlegen der Lesevorgangs-bit mit **_umask_s** hat keine Auswirkungen auf den Dateimodus.
 
-Wenn *Pmode* ist keine Kombination von einem der Manifestkonstanten oder alternative enthält Konstanten, die die Funktion einfach ignoriert diese.
+Wenn *Pmode* keine Kombination aus einer der Manifestkonstanten ist oder enthält eine Alternative Gruppe von Konstanten, die Funktion einfach ignoriert diese.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_umask_s**|\<io.h> und \<sys/stat.h> und \<sys/types.h>|
 

@@ -1,34 +1,24 @@
 ---
-title: checked_array_iterator-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: checked_array_iterator-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - iterator/checked_array_iterator
 - iterator/stdext::checked_array_iterator::difference_type
 - iterator/stdext::checked_array_iterator::pointer
 - iterator/stdext::checked_array_iterator::reference
 - iterator/stdext::checked_array_iterator::base
-dev_langs:
-- C++
 helpviewer_keywords:
 - stdext::checked_array_iterator [C++], difference_type
 - stdext::checked_array_iterator [C++], pointer
 - stdext::checked_array_iterator [C++], reference
 - stdext::checked_array_iterator [C++], base
 ms.assetid: 7f07185e-d588-4ae3-9c4f-84ec4aa25a28
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b7c8f9e29cc71cd12c04d4135e4f02d273ab4725
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2d7788a33321f794af6b395de3188bc51f662ad0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44319031"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476599"
 ---
 # <a name="checkedarrayiterator-class"></a>checked_array_iterator-Klasse
 
@@ -174,7 +164,7 @@ int main()
 |Operator|Beschreibung|
 |-|-|
 |[operator==](#op_eq_eq)|Prüft zwei `checked_array_iterator`en auf Gleichheit.|
-|[operator!=](#op_neq)|Prüft zwei `checked_array_iterator`en auf Ungleichheit.|
+|[Operator!=](#op_neq)|Prüft zwei `checked_array_iterator`en auf Ungleichheit.|
 |[operator<](#op_lt)|Testet, ob `checked_array_iterator` links vom Operator kleiner als `checked_array_iterator` auf der rechten Seite ist.|
 |[operator>](#op_gt)|Testet, ob `checked_array_iterator` links vom Operator größer als `checked_array_iterator` auf der rechten Seite ist.|
 |[operator<=](#op_lt_eq)|Testet, ob `checked_array_iterator` links vom Operator kleiner oder gleich `checked_array_iterator` auf der rechten Seite ist.|
@@ -205,7 +195,7 @@ _Iterator base() const;
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md).
+Weitere Informationen finden Sie unter [Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -264,7 +254,7 @@ Die Größe des Arrays.
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md).
+Weitere Informationen finden Sie unter [Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -333,7 +323,7 @@ Der `checked_array_iterator` für die Durchführung von Gleichheitsüberprüfung
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md).
+Weitere Informationen finden Sie unter [Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -389,7 +379,7 @@ Der `checked_array_iterator` für die Durchführung von Ungleichheitsüberprüfu
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md).
+Weitere Informationen finden Sie unter [Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -445,7 +435,7 @@ Der `checked_array_iterator` für die Durchführung von Ungleichheitsüberprüfu
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md).
+Weitere Informationen finden Sie unter [Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -503,7 +493,7 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
 
 Siehe [checked_array_iterator::operator&lt;](#op_lt) für ein Codebeispiel.
 
-Weitere Informationen finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md).
+Weitere Informationen finden Sie unter [Checked Iterators](../standard-library/checked-iterators.md).
 
 ## <a name="lt_eq"></a> checked_array_iterator::operator&lt;=
 
@@ -522,7 +512,7 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
 
 Siehe [checked_array_iterator::operator&gt;=](#op_gt_eq) für ein Codebeispiel.
 
-Weitere Informationen finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md).
+Weitere Informationen finden Sie unter [Checked Iterators](../standard-library/checked-iterators.md).
 
 ## <a name="gt_eq"></a> checked_array_iterator::operator&gt;=
 
@@ -539,7 +529,7 @@ bool operator>=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md).
+Weitere Informationen finden Sie unter [Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -594,7 +584,7 @@ Der Wert des von `checked_array_iterator` adressierten Elements.
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md).
+Weitere Informationen finden Sie unter [Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -657,7 +647,7 @@ Ein Zeiger auf das von `checked_array_iterator` adressierte Element.
 
 Siehe [checked_array_iterator::pointer](#pointer) für ein Codebeispiel.
 
-Weitere Informationen finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md).
+Weitere Informationen finden Sie unter [Checked Iterators](../standard-library/checked-iterators.md).
 
 ## <a name="op_add_add"></a> checked_array_iterator::operator++
 
@@ -675,7 +665,7 @@ Der erste Operator gibt den präinkrementierten `checked_array_iterator` zurück
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md).
+Weitere Informationen finden Sie unter [Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -723,7 +713,7 @@ Der erste Operator gibt den prädekrementierten `checked_array_iterator` zurück
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md).
+Weitere Informationen finden Sie unter [Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -774,7 +764,7 @@ Ein Verweis auf das von `checked_array_iterator` adressierte Element.
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md).
+Weitere Informationen finden Sie unter [Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -822,7 +812,7 @@ Ein `checked_array_iterator`, der das Offsetelement adressiert.
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md).
+Weitere Informationen finden Sie unter [Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -870,7 +860,7 @@ Ein Verweis auf das von `checked_array_iterator` adressierte Element.
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md).
+Weitere Informationen finden Sie unter [Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -923,7 +913,7 @@ Ein `checked_array_iterator`, der das Offsetelement adressiert.
 
 Siehe [checked_array_iterator::operator-](#operator-) für ein Codebeispiel.
 
-Weitere Informationen finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md).
+Weitere Informationen finden Sie unter [Checked Iterators](../standard-library/checked-iterators.md).
 
 ## <a name="op_at"></a> checked_array_iterator::operator[]
 
@@ -944,7 +934,7 @@ Der Verweis auf den Elementoffset.
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md).
+Weitere Informationen finden Sie unter [Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -987,7 +977,7 @@ typedef typename iterator_traits<_Iterator>::pointer pointer;
 
 Siehe [checked_array_iterator::operator*](#op_star) für ein Codebeispiel.
 
-Weitere Informationen finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md).
+Weitere Informationen finden Sie unter [Checked Iterators](../standard-library/checked-iterators.md).
 
 ## <a name="reference"></a> checked_array_iterator::reference
 
@@ -1001,7 +991,7 @@ typedef typename iterator_traits<_Iterator>::reference reference;
 
 Siehe [checked_array_iterator::operator[]](#op_at) für ein Codebeispiel.
 
-Weitere Informationen finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md).
+Weitere Informationen finden Sie unter [Checked Iterators](../standard-library/checked-iterators.md).
 
 ## <a name="see-also"></a>Siehe auch
 
