@@ -1,10 +1,6 @@
 ---
-title: _CrtGetDumpClient | Microsoft-Dokumentation
-ms.custom: ''
+title: _CrtGetDumpClient
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtGetDumpClient
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - CrtGetDumpClient
 - _CrtGetDumpClient
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtGetDumpClient function
 - CrtGetDumpClient function
 ms.assetid: 9051867f-341b-493b-b53d-45d2b454a3ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1f15e41c91867c7728a1d006b8038aa1ca18010a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e4700bd936bec97014508c4a971f6e6c278c6a11
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394408"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50550734"
 ---
 # <a name="crtgetdumpclient"></a>_CrtGetDumpClient
 
-Ruft die aktuelle anwendungsdefinierte Funktion für Sicherung der **_CLIENT_BLOCK** -typspeicherblöcken (nur Debugversion).
+Ruft die aktuelle anwendungsdefinierte Funktion zum Abrufen der **_CLIENT_BLOCK** -typspeicherblöcke (nur Debugversion).
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,13 +45,13 @@ Gibt die aktuelle Dumproutine zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_CrtGetDumpClient** Funktion ruft die aktuelle Hookfunktion zum Ausgeben von Objekten, die in gespeicherten ab der **_CLIENT_BLOCK** Speicherblöcke für die C-Laufzeit debug-speicherabbildprozess.
+Die **_CrtGetDumpClient** Funktion ruft die aktuelle Hookfunktion zum Ausgeben von Objekten, die in gespeicherten ab, der **_CLIENT_BLOCK** Speicherblöcke für die C-Laufzeit debug-speicherabbildprozess.
 
 Weitere Informationen zur Verwendung anderer hookfähiger Laufzeitfunktionen und zum Schreiben eigener clientdefinierter Hookfunktionen finden Sie unter [Debug Hook Function Writing (Schreiben von Hookfunktionen zum Debuggen)](/visualstudio/debugger/debug-hook-function-writing).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_CrtGetDumpClient**|\<crtdbg.h>|
 
