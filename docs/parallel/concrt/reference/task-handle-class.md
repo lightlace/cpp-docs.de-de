@@ -1,33 +1,23 @@
 ---
-title: Task_handle-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: task_handle-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - task_handle
 - PPL/concurrency::task_handle
 - PPL/concurrency::task_handle::task_handle
-dev_langs:
-- C++
 helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 75a1effbd833ec28da2285d3c38fb58ee5ce7928
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c1a12555b0b7277fd6b52d935518e4bb1f297285
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388419"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50521358"
 ---
 # <a name="taskhandle-class"></a>task_handle-Klasse
 
-Die `task_handle`-Klasse stellt eine einzelne parallele Arbeitsaufgabe dar. Sie kapselt die Anweisungen und die zum Ausführen eines Teils der Arbeit erforderlichen Daten.
+Die `task_handle`-Klasse stellt ein einzelnes paralleles Arbeitselement dar. Sie kapselt die Anweisungen und die zum Ausführen eines Teils der Arbeit erforderlichen Daten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,7 +46,7 @@ Der Typ des Funktionsobjekts, die aufgerufen werden, um die Arbeit, dargestellt 
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[operator()](#task_handle__operator_call)|Der Funktionsaufrufoperator, den von der Laufzeit aufgerufen, um die Arbeit des Aufgabenhandles auszuführen.|
+|[Operator()](#task_handle__operator_call)|Der Funktionsaufrufoperator, den von der Laufzeit aufgerufen, um die Arbeit des Aufgabenhandles auszuführen.|
 
 ## <a name="remarks"></a>Hinweise
 

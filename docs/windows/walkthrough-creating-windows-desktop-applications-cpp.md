@@ -1,27 +1,17 @@
 ---
-title: 'Exemplarische Vorgehensweise: Erstellen eine herkömmlichen Windows-Desktop-Anwendung (C++) | Microsoft-Dokumentation'
+title: 'Exemplarische Vorgehensweise: Erstellen einer herkömmlichen Windows-Desktop-Anwendung (C++)'
 ms.custom: get-started-article
 ms.date: 09/18/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0b50234efa193adda081520667658f57e42de1b4
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: fc2080470e3292a459325679a6c5dc00c01d6b35
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235416"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528377"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Exemplarische Vorgehensweise: Erstellen einer herkömmlichen Windows-Desktop-Anwendung (C++)
 
@@ -32,7 +22,7 @@ Die Windows-API (auch bekannt als die Win32-API, Windows-Desktop-API und klassis
 > [!IMPORTANT]
 > Aus Gründen der Übersichtlichkeit werden einige codeanweisungen im Text weggelassen. Die [erstellen Sie den Code](#build-the-code) Abschnitt am Ende dieses Dokuments wird der vollständige Code gezeigt.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - Ein Computer, der Microsoft Windows 7 oder höher ausgeführt wird. Wir empfehlen die Windows 10, für die bestmögliche entwicklungserfahrung.
 
@@ -167,7 +157,7 @@ Als Nächstes erfahren Sie, wie Sie den Code für eine Windows-desktop-Anwendung
 
    Weitere Informationen zu den Feldern der oben genannten-Struktur, finden Sie unter [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577).
 
-1. Registrieren der `WNDCLASSEX` mit Windows, damit das Fenster "und" Gewusst wie: Senden von Nachrichten an sie, dass die It kennt. Verwenden der [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587) Funktion, und übergeben Sie die Fensterklassenstruktur als Argument. Die `_T` Makro wird verwendet, da wir verwenden die `TCHAR` Typ.
+1. Registrieren der `WNDCLASSEX` mit Windows, damit das Fenster "und" Gewusst wie: Senden von Nachrichten an sie, dass die It kennt. Verwenden Sie die [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587) -Funktion, und übergeben Sie die Fensterklassenstruktur als Argument. Die `_T` Makro wird verwendet, da wir verwenden die `TCHAR` Typ.
 
    ```cpp
    if (!RegisterClassEx(&wcex))
@@ -181,7 +171,7 @@ Als Nächstes erfahren Sie, wie Sie den Code für eine Windows-desktop-Anwendung
    }
    ```
 
-1. Sie können nun ein Fenster erstellen. Verwenden der [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Funktion.
+1. Sie können nun ein Fenster erstellen. Verwenden Sie die [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) -Funktion.
 
    ```cpp
    static TCHAR szWindowClass[] = _T("DesktopApp");
@@ -247,7 +237,7 @@ Als Nächstes erfahren Sie, wie Sie den Code für eine Windows-desktop-Anwendung
    return (int) msg.wParam;
    ```
 
-   Weitere Informationen über die Strukturen und Funktionen in der Nachrichtenschleife finden Sie unter [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958), ["GetMessage"](https://msdn.microsoft.com/library/windows/desktop/ms644936), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage), und [DispatchMessage ](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
+   Weitere Informationen über die in der Nachrichtenschleife verwendeten Strukturen und Funktionen finden Sie unter [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958), [GetMessage](https://msdn.microsoft.com/library/windows/desktop/ms644936), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
 
    An diesem Punkt sollte die `WinMain` -Funktion in etwa dem folgenden Code entsprechen.
 
@@ -342,7 +332,7 @@ Als Nächstes erfahren Sie, wie Sie den Code für eine Windows-desktop-Anwendung
 
    Eine wichtige Meldung verarbeiten wird die [WM_PAINT](/windows/desktop/gdi/wm-paint) Nachricht. Die Anwendung empfängt die `WM_PAINT` Nachricht als Teil der angezeigten Fenster aktualisiert werden muss. Das Ereignis kann auftreten, wenn ein Benutzer ein Fenster vor das Fenster verschiebt, dann verschiebt Sie es noch mal weg, und Ihre Anwendung weiß nicht, wenn diese Ereignisse auftreten. Nur Windows bekannt ist, damit Sie mit benachrichtigt `WM_PAINT`. Wenn das Fenster erstmals angezeigt wird, müssen alle Daten aktualisiert werden.
 
-   Behandelt ein `WM_PAINT` Nachricht, der erste Aufruf ["BeginPaint"](/windows/desktop/api/winuser/nf-winuser-beginpaint), behandeln Sie anschließend die gesamte Logik, um das Layout von Text, Schaltflächen und anderen Steuerelementen im Fenster, und rufen dann ["EndPaint"](/windows/desktop/api/winuser/nf-winuser-endpaint). Ist für die Anwendung die Logik zwischen dem Anfangs- und dem Beendigungsanruf zur Anzeige der Zeichenfolge "Hello, Windows Desktop!" im Fenster. In den folgenden Code, beachten Sie, dass die [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta) Funktion wird verwendet, um die Anzeige der Zeichenfolge.
+   Rufen Sie zur Behandlung einer `WM_PAINT` -Nachricht zuerst [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint)auf, behandeln Sie anschließend die gesamte Logik, um das Layout von Text, Schaltflächen und anderen Steuerelementen im Fenster zu behandeln, und rufen Sie anschließend [EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint)auf. Ist für die Anwendung die Logik zwischen dem Anfangs- und dem Beendigungsanruf zur Anzeige der Zeichenfolge "Hello, Windows Desktop!" im Fenster. Im folgenden Code wird die [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta) -Funktion zur Anzeige der Zeichenfolge verwendet.
 
    ```cpp
    PAINTSTRUCT ps;

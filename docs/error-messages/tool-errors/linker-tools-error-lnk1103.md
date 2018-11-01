@@ -1,27 +1,17 @@
 ---
-title: Linkertoolfehler Lnk1103 | Microsoft-Dokumentation
-ms.custom: ''
+title: Linkertoolfehler LNK1103
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK1103
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK1103
 ms.assetid: c8e9bc54-6a71-471c-899e-6f98122ee3c4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3abb7472e37edbec80381bbf6b4329d9da718d19
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1dc70044113e06b4a19e1bbe1a054c944761214b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095427"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50526632"
 ---
 # <a name="linker-tools-error-lnk1103"></a>Linkertoolfehler LNK1103
 
