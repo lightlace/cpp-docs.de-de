@@ -1,16 +1,10 @@
 ---
-title: -D (Präprozessordefinitionen) | Microsoft-Dokumentation
-ms.custom: ''
+title: /D (Präprozessordefinitionen)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCNMakeTool.PreprocessorDefinitions
 - VC.Project.VCCLCompilerTool.PreprocessorDefinitions
 - /d
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor definition symbols
 - constants, defining
@@ -19,16 +13,12 @@ helpviewer_keywords:
 - -D compiler option [C++]
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3dc4da4235b57e9abd8e5f32b8f3e696bd1ce2de
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 21836d2842427581cc5019a42c563a78356d1ec2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397181"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620505"
 ---
 # <a name="d-preprocessor-definitions"></a>/D (Präprozessordefinitionen)
 
@@ -42,7 +32,7 @@ Definiert ein Vorverarbeitungssymbol für eine Quelldatei.
 
 ## <a name="remarks"></a>Hinweise
 
-Sie können dieses Symbol mit `#if` oder `#ifdef` zur bedingten Kompilierung von Quellcode verwenden. Die Symboldefinition bleibt bestehen, bis sie im Code neu definiert wird oder ihre Definition im Code durch die `#undef`-Direktive aufgehoben wird.
+Sie können dieses Symbol mit `#if` oder `#ifdef` zur bedingten Kompilierung von Quellcode verwenden. Die Symboldefinition bleibt bestehen, bis sie im Code neu definiert wird oder ihre Definition im Code durch die `#undef`-Anweisung aufgehoben wird.
 
 **/ D** hat dieselbe Wirkung wie das `#define` -Direktive am Anfang einer Quellcodedatei, außer dass **/d** Anführungszeichen in der Befehlszeile entfernt und `#define` beibehält.
 

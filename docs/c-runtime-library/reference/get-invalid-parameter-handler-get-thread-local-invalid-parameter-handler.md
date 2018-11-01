@@ -1,10 +1,6 @@
 ---
-title: _get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler | Microsoft-Dokumentation
-ms.custom: ''
+title: _get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_invalid_parameter_handler
 - _get_thread_local_invalid_parameter_handler
@@ -26,22 +22,16 @@ f1_keywords:
 - stdlib/_get_invalid_parameter_handler
 - _get_thread_local_invalid_parameter_handler
 - stdlib/_get_thread_local_invalid_parameter_handler
-dev_langs:
-- C++
 helpviewer_keywords:
 - _get_thread_local_invalid_parameter_handler function
 - _get_invalid_parameter_handler function
 ms.assetid: a176da0e-38ca-4d99-92bb-b0e2b8072f53
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0302f0ba8e7e34ca60ab73aa0193b48b8352bc77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7d1a87f9ade0845994918d5a4d59dc56e190d2b6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399916"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50623976"
 ---
 # <a name="getinvalidparameterhandler-getthreadlocalinvalidparameterhandler"></a>_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler
 
@@ -60,7 +50,7 @@ Ein Zeiger auf die derzeit festgelegte Funktion für ungültige Parameterhandler
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_get_invalid_parameter_handler** Funktion ruft das aktuell festgelegte globale ungültigen parameterhandler ab. Sie gibt einen NULL-Zeiger zurück, wenn kein globaler Handler für ungültige Parameter festgelegt wurde. Auf ähnliche Weise die **_get_thread_local_invalid_parameter_handler** Ruft aktuelle Handler für ungültige Parameter von threadlokalen des Threads für aufgerufen wird, oder ein null-Zeiger, wenn kein Handler festgelegt wurde. Informationen zum Festlegen von globalen und Thread-lokalen ungültigen Parameterhandlern finden Sie unter [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
+Die **_get_invalid_parameter_handler** Funktion ruft den derzeit festgelegten globalen ungültigen parameterhandler auf. Sie gibt einen NULL-Zeiger zurück, wenn kein globaler Handler für ungültige Parameter festgelegt wurde. Auf ähnliche Weise die **_get_thread_local_invalid_parameter_handler** Ruft den aktuelle Thread-lokalen ungültige parameterhandler des Threads, die es für aufgerufen wird, oder ein null-Zeiger, wenn kein Handler festgelegt wurde. Informationen zum Festlegen von globalen und Thread-lokalen ungültigen Parameterhandlern finden Sie unter [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
 
 Der zurückgegebene Funktionszeiger des ungültigen Parameterhandlers hat den folgenden Typ:
 
@@ -78,7 +68,7 @@ Mehr Informationen über ungültige Parameterhandler finden sie unter dem Protot
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_get_invalid_parameter_handler**, **_get_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib> oder \<stdlib.h>|
 

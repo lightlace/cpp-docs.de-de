@@ -1,10 +1,6 @@
 ---
-title: _set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler | Microsoft-Dokumentation
-ms.custom: ''
+title: _set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_invalid_parameter_handler
 - _set_thread_local_invalid_parameter_handler
@@ -25,24 +21,18 @@ f1_keywords:
 - set_invalid_parameter_handler
 - _set_invalid_parameter_handler
 - _set_thread_local_invalid_parameter_handler
-dev_langs:
-- C++
 helpviewer_keywords:
 - invalid parameter handler
 - set_invalid_parameter_handler function
 - _set_invalid_parameter_handler function
 - _set_thread_local_invalid_parameter_handler function
 ms.assetid: c0e67934-1a41-4016-ad8e-972828f3ac11
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d4808367c94ec6c869c7f3bcafd2965a317553a6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1df876d6df9327e817d5d2c401e0abe97ad7a548
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407602"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617034"
 ---
 # <a name="setinvalidparameterhandler-setthreadlocalinvalidparameterhandler"></a>_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
 
@@ -70,7 +60,7 @@ Ein Zeiger auf den Handler für ungültigen Parameter vor dem Aufruf.
 
 ## <a name="remarks"></a>Hinweise
 
-Viele C-Laufzeitfunktionen überprüfen die Gültigkeit der an sie übergebenen Argumente. Wenn ein ungültiges Argument übergeben wird, kann die Funktion Festlegen der **Errno** Fehlernummer oder einen Fehlercode zurück. In solchen Fällen wird der Handler für ungültige Parameter ebenfalls aufgerufen. Die C-Laufzeit stellt einen globalen Standardhandler für ungültige Parameter bereit, der das Programm beendet und eine Laufzeitfehlermeldung anzeigt. Sie können die **_set_invalid_parameter_handler** Ihre eigene Funktion als den ungültigen parameterhandler auf global festgelegt. Die C-Laufzeitbibliothek unterstützt auch einen threadlokalen Handler für ungültige Parameter. Wenn ein Thread-lokalen parameterhandler in einem Thread mit festgelegt ist **_set_thread_local_invalid_parameter_handler**, die Funktionen der C-Laufzeit aus dem Thread aufgerufen dieser Handler anstelle der globalen Handler verwenden. Es kann jederzeit immer nur eine Funktion als globaler Handler für ungültige Argumente angegeben werden. Nur eine Funktion kann als threadlokaler Handler für ungültige Argumente pro Thread angegeben werden, aber verschiedene Threads können über unterschiedliche threadlokale Handler verfügen. Dadurch können Sie den in einem Teil des Codes verwendeten Handler ohne Auswirkung auf das Verhalten anderer Threads zu ändern.
+Viele C-Laufzeitfunktionen überprüfen die Gültigkeit der an sie übergebenen Argumente. Wenn ein ungültiges Argument übergeben wird, kann die Funktion Festlegen der **Errno** Fehlernummer oder einen Fehlercode zurückgeben. In solchen Fällen wird der Handler für ungültige Parameter ebenfalls aufgerufen. Die C-Laufzeit stellt einen globalen Standardhandler für ungültige Parameter bereit, der das Programm beendet und eine Laufzeitfehlermeldung anzeigt. Sie können die **_set_invalid_parameter_handler** Ihre eigene Funktion als der globaler Ungültiger parametertyphandler festgelegt. Die C-Laufzeitbibliothek unterstützt auch einen threadlokalen Handler für ungültige Parameter. Wenn ein Thread-lokalen parameterhandler in einem Thread festgelegt ist, mithilfe von **_set_thread_local_invalid_parameter_handler**, über den Thread aufgerufenen C-Laufzeitfunktionen diesen Handler verwenden, nicht den globalen Handler. Es kann jederzeit immer nur eine Funktion als globaler Handler für ungültige Argumente angegeben werden. Nur eine Funktion kann als threadlokaler Handler für ungültige Argumente pro Thread angegeben werden, aber verschiedene Threads können über unterschiedliche threadlokale Handler verfügen. Dadurch können Sie den in einem Teil des Codes verwendeten Handler ohne Auswirkung auf das Verhalten anderer Threads zu ändern.
 
 Wenn die Laufzeit die Funktion für ungültige Parameter aufruft, bedeutet dies normalerweise, dass ein nicht behebbarer Fehler aufgetreten ist. Die Funktion Handler für ungültige Parameter sollte alle Daten speichern, bei denen dies möglich ist, und dann abbrechen. Sie sollte die Steuerung nur dann an die Funktion "main" zurückgeben, wenn Sie sicher sind, dass der Fehler behebbar ist.
 
@@ -86,11 +76,11 @@ void _invalid_parameter(
 );
 ```
 
-Die *Ausdruck* Argument ist eine Breitzeichenfolge Darstellung des Expression-Arguments, das den Fehler ausgelöst. Die *Funktion* -Argument ist der Name der CRT-Funktion, die die ungültige Argument zu empfangen. Die *Datei* -Argument ist der Name der CRT-Quelldatei, die die Funktion enthält. Die *Zeile* Argument ist die Nummer der Zeile in dieser Datei. Das letzte Argument ist reserviert. Die Parameter, die alle haben den Wert **NULL** , wenn eine Debugversion der CRT-Bibliothek verwendet wird.
+Die *Ausdruck* Argument ist die Darstellung einer breiten Zeichenfolge des Argumentausdrucks, der den Fehler ausgelöst hat. Die *Funktion* Argument ist der Name der CRT-Funktion, die das ungültige Argument empfangen. Die *Datei* Argument ist der Name der CRT-Quelldatei, die die Funktion enthält. Die *Zeile* Argument ist die Nummer der Zeile in dieser Datei. Das letzte Argument ist reserviert. Alle Parameter haben den Wert **NULL** , wenn eine Debugversion der CRT-Bibliothek verwendet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_set_invalid_parameter_handler**, **_set_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib> oder \<stdlib.h>|
 

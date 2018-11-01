@@ -1,25 +1,15 @@
 ---
-title: 'Vorgehensweise: Festlegen der LIB. Optionen für die EXE-Datei in der Visual Studio-Entwicklungsumgebung | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Gewusst wie: Festlegen der LIB.EXE-Optionen in der Visual Studio-Entwicklungsumgebung'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - lib.exe options, setting in the Visual Studio Development Environment
 ms.assetid: b00da2bb-19e2-4078-a912-0d2e9294d7a7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d8319ac7a40af4b43248c402306040c15f04a225
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 67e29ab9a6c38eee003677ddf733d4786d4ac0bc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707214"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50576149"
 ---
 # <a name="how-to-set-libexe-options-in-the-visual-studio-development-environment"></a>Gewusst wie: Festlegen der LIB.EXE-Optionen in der Visual Studio-Entwicklungsumgebung
 
