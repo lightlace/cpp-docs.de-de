@@ -1,27 +1,17 @@
 ---
-title: Compilerfehler C3851 | Microsoft-Dokumentation
-ms.custom: ''
+title: Compilerfehler C3851
 ms.date: 09/05/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3851
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3851
 ms.assetid: da30c21c-33aa-4439-8fb3-2f5021ea4985
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e6d0f6da9c3295aa6a8fad4bf5dfd8e725424739
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 52c4f3a393ffaf2b61a65c8e2e0dcc8efac08288
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46032478"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50502998"
 ---
 # <a name="compiler-error-c3851"></a>Compilerfehler C3851
 
@@ -29,7 +19,7 @@ ms.locfileid: "46032478"
 
 ## <a name="remarks"></a>Hinweise
 
-Im als C++ kompilierten Code können Sie keinen universellen Zeichennamen verwenden, der ein Zeichen des einfachen Quellzeichensatzes außerhalb einer Zeichenfolge oder eines Zeichenliterals darstellt. Weitere Informationen finden Sie unter [Zeichensätze](../../cpp/character-sets.md). Im als C kompilierten Code, Sie können keine keinen universellen Zeichennamen für Zeichen im Bereich von 0 x 20-0x7f (einschließlich), mit Ausnahme von 0 x 24 ("$"), 0 x 40 ("\@"), oder 0 x 60 ("\`").
+Im als C++ kompilierten Code können Sie keinen universellen Zeichennamen verwenden, der ein Zeichen des einfachen Quellzeichensatzes außerhalb einer Zeichenfolge oder eines Zeichenliterals darstellt. Weitere Informationen finden Sie unter [Character Sets](../../cpp/character-sets.md). Im als C kompilierten Code, Sie können keine keinen universellen Zeichennamen für Zeichen im Bereich von 0 x 20-0x7f (einschließlich), mit Ausnahme von 0 x 24 ("$"), 0 x 40 ("\@"), oder 0 x 60 ("\`").
 
 ## <a name="example"></a>Beispiel
 

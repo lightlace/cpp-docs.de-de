@@ -1,10 +1,6 @@
 ---
-title: _aligned_offset_malloc_dbg | Microsoft-Dokumentation
-ms.custom: ''
+title: _aligned_offset_malloc_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _aligned_offset_malloc_dbg
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _aligned_offset_malloc_dbg
 - aligned_offset_malloc_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _aligned_offset_malloc_dbg function
 - aligned_offset_malloc_dbg function
 ms.assetid: 6c242307-c59e-4d63-aae5-d8cbec8e021c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fd938b935ff5e69adf4d4e56cd70693cfd1a872d
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 481109a5ed7d137aa2d10c77955a2f460cba43c0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451510"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507535"
 ---
 # <a name="alignedoffsetmallocdbg"></a>_aligned_offset_malloc_dbg
 
@@ -67,26 +57,26 @@ Der Ausrichtungswert, der eine ganzzahlige Potenz von 2 sein muss.
 Der Offset in der Speicherbelegung zum Erzwingen der Ausrichtung.
 
 *filename*<br/>
-Zeiger auf den Namen der Quelldatei, die die Belegung angefordert oder **NULL**.
+Zeiger auf den Namen der Quelldatei, die die Belegung angefordert hat oder **NULL**.
 
 *linenumber*<br/>
-Zeilennummer in der Quelldatei, in die Belegung angefordert wurde, oder **NULL**.
+Zeilennummer in der Quelldatei, in denen die Belegung angefordert wurde, oder **NULL**.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf den Speicherblock, der belegt wurde oder **NULL** bei fehlgeschlagenem Vorgang.
+Ein Zeiger auf den Speicherblock, der zugewiesen wurde oder **NULL** bei fehlgeschlagenem Vorgang.
 
 ## <a name="remarks"></a>Hinweise
 
-**_aligned_offset_malloc_dbg** ist eine Debugversion der [_aligned_offset_malloc](aligned-offset-malloc.md) Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, bei jedem Aufruf **_aligned_offset_malloc_dbg** wird zu einem Aufruf von reduziert **_aligned_offset_malloc**. Beide **_aligned_offset_malloc** und **_aligned_offset_malloc_dbg** belegen einen Speicherblock im Basisheap, jedoch **_aligned_offset_malloc_dbg** bietet mehrere Debugfunktionen: Puffer auf beiden Seiten des benutzerteils des Blocks zum Prüfen auf Speicherverluste, einen blocktypparameter zum Nachverfolgen von bestimmten belegungstypen und *Filename*/*Linenumber* Informationen zum Ermitteln des Ursprungs von belegungsanforderungen.
+**_aligned_offset_malloc_dbg** ist eine Debugversion von der [_aligned_offset_malloc](aligned-offset-malloc.md) Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, jeden Aufruf von **_aligned_offset_malloc_dbg** wird nach einer Verkleinerung auf einen Aufruf von **_aligned_offset_malloc**. Beide **_aligned_offset_malloc** und **_aligned_offset_malloc_dbg** belegen einen Speicherblock im Basisheap, jedoch **_aligned_offset_malloc_dbg** verfügt über mehrere Debugfunktionen: Puffer auf beiden Seiten des benutzerteils des Blocks zum Prüfen auf Speicherverluste, einen blocktypparameter zum Nachverfolgen bestimmter belegungstypen und *Filename*/*Linenumber* Informationen zum Ermitteln des Ursprungs von belegungsanforderungen.
 
 **_aligned_offset_malloc_dbg** belegt den Speicherblock mit etwas mehr Speicherplatz als der angeforderten *Größe*. Der zusätzliche Speicherplatz wird vom Debugheapmanager verwendet, um die Debugspeicherblöck zu verknüpfen und Debugheaderinformationen und Überschreibungspuffer für die Anwendung bereitzustellen. Wenn der Block belegt wurde, wird der Benutzerteil des Blocks mit dem Wert "0xCD" gefüllt, und jeder der Überschreibungspuffer wird mit "0xFD" gefüllt.
 
-**_aligned_offset_malloc_dbg** eignet sich für Situationen, in denen eine Ausrichtung für ein geschachteltes Element; erforderlich ist z. B., wenn eine Ausrichtung für eine geschachtelte Klasse erforderlich war.
+**_aligned_offset_malloc_dbg** eignet sich für Situationen, in denen Ausrichtung für ein geschachteltes Element; erforderlich ist z. B., wenn die Ausrichtung auf eine geschachtelte Klasse erforderlich war.
 
-**_aligned_offset_malloc_dbg** basiert auf **"malloc"**; Weitere Informationen finden Sie unter ["malloc"](malloc.md).
+**_aligned_offset_malloc_dbg** basiert auf **Malloc**; Weitere Informationen finden Sie unter [Malloc](malloc.md).
 
-Diese Funktion legt **Errno** auf **ENOMEM** , wenn die speicherbelegung fehlgeschlagen ist oder wenn die angeforderte Größe größer war **_HEAP_MAXREQ**. Weitere Informationen zu **Errno**, finden Sie unter [Errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Darüber hinaus **_aligned_offset_malloc** überprüft die eigenen Parameter. Wenn *Ausrichtung* Potenz von 2 ist oder wenn *Offset* ist größer als oder gleich *Größe* und ungleich NULL ist, ruft diese Funktion den Handler für ungültige Parameter wie beschrieben in [ Überprüfen der Parameter](../../c-runtime-library/parameter-validation.md). Diese Funktion gibt zurück, wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **NULL** und legt **Errno** auf **EINVAL**.
+Diese Funktion legt **Errno** zu **ENOMEM** , wenn die speicherbelegung fehlgeschlagen ist oder die angeforderte Größe größer als war **_HEAP_MAXREQ**. Weitere Informationen zu **Errno**, finden Sie unter [Errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Darüber hinaus **_aligned_offset_malloc** überprüft die eigenen Parameter. Wenn *Ausrichtung* ist keine Potenz von 2 ist oder wenn *Offset* ist größer als oder gleich *Größe* und ungleich NULL ist, ruft diese Funktion den Handler für ungültige Parameter wie beschrieben in [ Parametervalidierung](../../c-runtime-library/parameter-validation.md). Diese Funktion gibt zurück, wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **NULL** und **Errno** zu **EINVAL**.
 
 Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
@@ -94,7 +84,7 @@ Informationen zu den Belegungsblocktypen und ihrer Verwendung finden Sie unter [
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_aligned_offset_malloc_dbg**|\<crtdbg.h>|
 
