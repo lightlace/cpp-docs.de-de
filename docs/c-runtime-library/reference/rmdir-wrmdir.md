@@ -1,10 +1,6 @@
 ---
-title: _rmdir, _wrmdir | Microsoft-Dokumentation
-ms.custom: ''
+title: _rmdir, _wrmdir
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wrmdir
 - _rmdir
@@ -27,8 +23,6 @@ f1_keywords:
 - wrmdir
 - _rmdir
 - _wrmdir
-dev_langs:
-- C++
 helpviewer_keywords:
 - _rmdir function
 - directories [C++], deleting
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 11e6521060932bd1273b6a3888332ac2c8b2bb7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1169405ae2f03a1e6affe2fcc00d594912e08ae1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406988"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511123"
 ---
 # <a name="rmdir-wrmdir"></a>_rmdir, _wrmdir
 
@@ -67,12 +57,12 @@ int _wrmdir(
 
 ### <a name="parameters"></a>Parameter
 
-*Verwendung*<br/>
+*DirName*<br/>
 Der Pfad des Verzeichnisses, das entfernt werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt 0 zurück, wenn das Verzeichnis erfolgreich gelöscht wird. Ein Rückgabewert von – 1 zeigt einen Fehler und **Errno** auf einen der folgenden Werte festgelegt:
+Jede dieser Funktionen gibt 0 zurück, wenn das Verzeichnis erfolgreich gelöscht wird. Der Rückgabewert 1 gibt an, einen Fehler und **Errno** auf einen der folgenden Werte festgelegt:
 
 |errno-Wert|Bedingung|
 |-|-|
@@ -84,9 +74,9 @@ Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_do
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_rmdir** Funktion löscht das Verzeichnis, das vom angegebenen *Dirname*. Das Verzeichnis muss leer sein, und es darf sich nicht um das aktuelle Arbeitsverzeichnis oder das Stammverzeichnis handeln.
+Die **_rmdir** Funktion löscht die im angegebenen Verzeichnis *Dirname*. Das Verzeichnis muss leer sein, und es darf sich nicht um das aktuelle Arbeitsverzeichnis oder das Stammverzeichnis handeln.
 
-**_wrmdir** ist eine Breitzeichen-Version von **_rmdir**; das *Dirname* Argument **_wrmdir** ist eine Breitzeichen-Zeichenfolge. **_wrmdir** und **_rmdir** Verhalten sich andernfalls identisch.
+**_wrmdir** ist eine Breitzeichen-Version von **_rmdir**; die *Dirname* Argument **_wrmdir** ist eine Breitzeichen-Zeichenfolge. **_wrmdir** und **_rmdir** Verhalten sich andernfalls identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -96,7 +86,7 @@ Die **_rmdir** Funktion löscht das Verzeichnis, das vom angegebenen *Dirname*. 
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_rmdir**|\<direct.h>|
 |**_wrmdir**|\<direct.h> oder \<wchar.h>|
