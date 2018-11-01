@@ -1,10 +1,6 @@
 ---
-title: _get_purecall_handler, _set_purecall_handler | Microsoft-Dokumentation
-ms.custom: ''
+title: _get_purecall_handler, _set_purecall_handler
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_purecall_handler
 - _set_purecall_handler_m
@@ -29,8 +25,6 @@ f1_keywords:
 - stdlib/_set_purecall_handler
 - stdlib/_get_purecall_handler
 - _get_purecall_handler
-dev_langs:
-- C++
 helpviewer_keywords:
 - _set_purecall_handler function
 - set_purecall_handler function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - _set_purecall_handler_m function
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1dca104d04546786a361c63461e502f7aa8b6127
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0009b4bc1c7bf70bd84b9a82ecdc8643789e8164
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400274"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646359"
 ---
 # <a name="getpurecallhandler-setpurecallhandler"></a>_get_purecall_handler, _set_purecall_handler
 
@@ -68,25 +58,25 @@ _purecall_handler __cdecl _set_purecall_handler(
 ### <a name="parameters"></a>Parameter
 
 *function*<br/>
-Die aufzurufende Funktion, wenn eine rein virtuelle Funktion aufgerufen wird. Ein **_purecall_handler** Funktion muss einen void-Rückgabetyp haben.
+Die aufzurufende Funktion, wenn eine rein virtuelle Funktion aufgerufen wird. Ein **_purecall_handler** Funktion muss einen void-Rückgabetyp aufweisen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der vorherige **_purecall_handler**. Gibt **Nullptr** es war kein vorheriger Handler.
+Die vorherige **_purecall_handler**. Gibt **"nullptr"** Wenn kein vorheriger Handler vorhanden war.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_get_purecall_handler** und **_set_purecall_handler** Funktionen sind Microsoft-spezifische und gelten nur für C++-Code.
+Die **_get_purecall_handler** und **_set_purecall_handler** Funktionen sind Microsoft-spezifisch und gelten nur für C++-Code.
 
-Ein Aufruf an eine rein virtuelle Funktion ist ein Fehler, da sie keine Implementierung hat. Standardmäßig generiert der Compiler einen Code, um eine Fehlerhandlerfunktion aufzurufen, wenn eine reine virtuelle Funktion aufgerufen wird, womit das Programm beendet wird. Sie können Ihre eigene Fehlerhandlerfunktion für rein virtuelle Funktionsaufrufe installieren, um sie für das Debuggen und für Berichtszwecke abzufangen. Um einen eigenen Fehlerhandler verwenden zu können, erstellen Sie eine Funktion mit der **_purecall_handler** Signatur, verwenden Sie dann **_set_purecall_handler** auf den aktuellen Handler zu vereinfachen.
+Ein Aufruf an eine rein virtuelle Funktion ist ein Fehler, da sie keine Implementierung hat. Standardmäßig generiert der Compiler einen Code, um eine Fehlerhandlerfunktion aufzurufen, wenn eine reine virtuelle Funktion aufgerufen wird, womit das Programm beendet wird. Sie können Ihre eigene Fehlerhandlerfunktion für rein virtuelle Funktionsaufrufe installieren, um sie für das Debuggen und für Berichtszwecke abzufangen. Um Ihren eigenen Fehlerhandler zu verwenden, erstellen Sie eine Funktion mit der **_purecall_handler** Signatur verwenden **_set_purecall_handler** , es sich um den aktuellen Handler festzulegen.
 
-Da es Gib nur ein **_purecall_handler** für jeden Prozess, der beim Aufrufen von **_set_purecall_handler** es sofort wirkt sich auf alle Threads. Der letzte Aufrufer in einem beliebigen Thread legt den Handler fest.
+Da ist nur ein **_purecall_handler** für jeden Prozess, der beim Aufrufen **_set_purecall_handler** beeinflusst alle Threads. Der letzte Aufrufer in einem beliebigen Thread legt den Handler fest.
 
-Rufen Sie zum Wiederherstellen der Standardverhalten **_set_purecall_handler** mithilfe einer **Nullptr** Argument.
+Rufen Sie zum Wiederherstellen der Standardverhalten **_set_purecall_handler** mithilfe einer **"nullptr"** Argument.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_get_purecall_handler**, **_set_purecall_handler**|\<cstdlib> oder \<stdlib.h>|
 

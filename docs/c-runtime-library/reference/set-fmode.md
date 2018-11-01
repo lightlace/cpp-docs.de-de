@@ -1,10 +1,6 @@
 ---
-title: _set_fmode | Microsoft-Dokumentation
-ms.custom: ''
+title: _set_fmode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_fmode
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - _set_fmode
 - set_fmode
-dev_langs:
-- C++
 helpviewer_keywords:
 - file translation [C++], default mode
 - _set_fmode function
 - file translation [C++], setting mode
 - set_fmode function
 ms.assetid: f80eb9c7-733b-4652-a9bc-6b3790a35f12
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 64b8be6d678a6907fc63018c99dd38d2fc8407ea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: df6efcf3fd89ec87ad098200d1d9ba3d6b52c7e4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406393"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500359"
 ---
 # <a name="setfmode"></a>_set_fmode
 
@@ -49,29 +39,29 @@ Legt den Standarddateiübersetzungsmodus für Datei E/A-Vorgänge fest.
 ## <a name="syntax"></a>Syntax
 
 ```C
-errno_t _set_fmode( 
-   int mode 
+errno_t _set_fmode( 
+   int mode 
 );
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *mode*<br/>
-Die gewünschte dateiübersetzungsmodus: **_O_TEXT** oder **_O_BINARY**.
+Der gewünschte dateiübersetzungsmodus: **_O_TEXT** oder **_O_BINARY**.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 bzw. im Fehlerfall einen Fehlercode zurück. Wenn *Modus* nicht **_O_TEXT** oder **_O_BINARY** oder **_O_WTEXT**, den Handler für ungültige Parameter aufgerufen, wie beschrieben in [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** auf **EINVAL** und gibt **EINVAL**.
+Gibt bei Erfolg 0 bzw. im Fehlerfall einen Fehlercode zurück. Wenn *Modus* nicht **_O_TEXT** oder **_O_BINARY** oder **_O_WTEXT**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** zu **EINVAL** und gibt **EINVAL**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Funktion legt die globale Variable [_fmode](../../c-runtime-library/fmode.md) fest. Diese Variable gibt den Standard-dateiübersetzungsmodus für die-e/a-Dateivorgänge **_open** und **_pipe**.
+Die Funktion legt die globale Variable [_fmode](../../c-runtime-library/fmode.md) fest. Diese Variable gibt an, den Standard-dateiübersetzungsmodus für die e/a-Vorgänge **_open** und **_pipe**.
 
-**_O_TEXT** und **_O_BINARY** in Fcntl.h definiert sind. **EINVAL** in Errno.h definiert ist.
+**_O_TEXT** und **_O_BINARY** werden in Fcntl.h definiert. **EINVAL** in Errno.h definiert ist.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|Optionaler Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|
 |-------------|---------------------|---------------------|
 |**_set_fmode**|\<stdlib.h>|\<fcntl.h>, \<errno.h>|
 

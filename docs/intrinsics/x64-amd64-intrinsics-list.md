@@ -1,26 +1,16 @@
 ---
-title: X64 (amd64) Liste der intrinsischen Funktionen | Microsoft-Dokumentation
-ms.custom: ''
+title: Liste der intrinsischen Funktionen für x64 (amd64)
 ms.date: 06/01/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - cl-exe compiler, intrinsics
 - intrinsics, x64
 - intrinsics, amd64
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 006b6ce67182b698a1f6d0bb5d87d8165fba9cde
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 28a1d01910fd996ea396d2fd3e845001fa208341
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406866"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491250"
 ---
 # <a name="x64-amd64-intrinsics-list"></a>Liste der intrinsischen Funktionen für x64 (amd64)
 
@@ -30,11 +20,11 @@ Weitere Informationen über einzelne systeminterne Funktionen finden Sie in dies
 
 - Die Headerdatei. Viele systeminterne Funktionen werden in den Kommentaren in der Headerdatei dokumentiert.
 
-- [Die systeminternen Funktionen Handbuch Intel](https://software.intel.com/sites/landingpage/IntrinsicsGuide). Verwenden Sie das Suchfeld, um nach spezifischen systeminternen Funktionen zu suchen.
+- [Intel Intrinsics Guide](https://software.intel.com/sites/landingpage/IntrinsicsGuide). Verwenden Sie das Suchfeld, um nach spezifischen systeminternen Funktionen zu suchen.
 
-- [Intel 64 und IA-32-Architekturen Software-Entwickler-Handbücher](https://software.intel.com/articles/intel-sdm)
+- [Intel 64 and IA-32 Architectures Software Developer Manuals](https://software.intel.com/articles/intel-sdm)
 
-- [Intel Architektur Instruction Set Extensions Programming Reference](https://software.intel.com/isa-extensions)
+- [Intel Architecture Instruction Set Extensions Programming Reference](https://software.intel.com/isa-extensions)
 
 - [Einführung in die Intel Advanced Vector Extensions](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
@@ -1284,4 +1274,4 @@ Die folgende Tabelle enthält die systeminternen Funktionen, die auf x64-Prozess
 
 [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
 [Intrinsische ARM-Funktionen](../intrinsics/arm-intrinsics.md)<br/>
-[X86 systeminterne Funktionen](../intrinsics/x86-intrinsics-list.md)
+[Systeminterne x86-Funktionen](../intrinsics/x86-intrinsics-list.md)

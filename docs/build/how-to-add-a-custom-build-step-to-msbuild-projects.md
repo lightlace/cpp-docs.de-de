@@ -1,27 +1,17 @@
 ---
-title: 'Vorgehensweise: Hinzufügen ein benutzerdefinierten Buildschritts zu MSBuild-Projekten | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Gewusst wie: Hinzufügen eines benutzerdefinierten Buildschritts zu MSBuild-Projekten'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
 f1_keywords:
 - msbuild.cpp.howto.addcustombuildstep
-dev_langs:
-- C++
 helpviewer_keywords:
 - 'msbuild (c++), howto: add a custom build step'
 ms.assetid: a20a0c47-4df4-4754-a1f0-a94a99958916
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ca8206024f4fbaf38b8161a9e12672782551db83
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7b169bfc6668fc284b45554d08d68880967a7de1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712173"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50610976"
 ---
 # <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Gewusst wie: Hinzufügen eines benutzerdefinierten Buildschritts zu MSBuild-Projekten
 

@@ -1,10 +1,6 @@
 ---
-title: _getw | Microsoft-Dokumentation
-ms.custom: ''
+title: _getw
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getw
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _getw
-dev_langs:
-- C++
 helpviewer_keywords:
 - _getw function
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3caffb90252780b833b80e3e5d1cd6d5ef6b0fcb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 615d3ac9bdc73ad200368eaeabf7c84951bc91ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400541"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487606"
 ---
 # <a name="getw"></a>_getw
 
@@ -59,15 +49,15 @@ Zeiger auf die **FILE**-Struktur.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_getw** gibt den ganzzahligen Wert zu lesen. Ein Rückgabewert von **EOF** entweder eine Fehler- oder Ende der Datei angibt. Jedoch, da die **EOF** Wert ist auch eine gültige ganze Zahl, verwenden Sie **Feof** oder **Ferror** ein Ende der Datei oder eine fehlerbedingung zu überprüfen. Wenn *Stream* ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und die Funktion gibt **EOF**.
+**_getw** gibt den ganzzahligen Wert zu lesen. Der Rückgabewert **EOF** gibt an, einen Fehler oder ein Dateiende. Aber da die **EOF** Wert ist auch ein legitimer Ganzzahlwert, verwenden Sie **Feof** oder **Ferror** um eine End-of-File oder eine fehlerbedingung zu überprüfen. Wenn *Stream* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und die Funktion gibt **EOF**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_getw** Funktion liest den nächsten binären Wert vom Typ **Int** aus der Datei zugeordneten *Stream* und erhöht den zugeordneten Dateizeiger (sofern vorhanden), um zu zeigen auf das nächste ungelesenen Zeichen. **_getw** nicht davon, dass besondere Ausrichtung der Elemente in den Stream. Probleme beim Portieren ist möglich, mit **_getw** da die Größe des der **Int** Typ und die Reihenfolge der Bytes in der **Int** Typ über Systeme hinweg zu unterscheiden.
+Die **_getw** Funktion liest den nächsten Binärwert des Typs **Int** aus der Datei zugeordneten *Stream* und erhöht den zugeordneten Dateizeiger (sofern vorhanden), um zu zeigen auf das nächste ungelesene Zeichen. **_getw** allen speziellen elementausrichtungen im Stream nicht vorausgesetzt. Probleme beim Portieren können beim Auftreten **_getw** da die Größe der **Int** Typ und die Anordnung der Bytes in der **Int** Typ über Systeme hinweg zu unterscheiden.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_getw**|\<stdio.h>|
 
@@ -115,7 +105,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 First data word in file: 0x656e694c

@@ -1,10 +1,6 @@
 ---
-title: mbsinit | Microsoft-Dokumentation
-ms.custom: ''
+title: mbsinit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - mbsinit
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - mbsinit
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbsinit function
 ms.assetid: 4618555b-baaa-4d04-93fa-36abae411034
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 413592bcf3af01c898a72d0ca70239364ee432f9
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 8b467ae7f705fc2f4b2b38d3f76f3936f30ec15e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450449"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597235"
 ---
 # <a name="mbsinit"></a>mbsinit
 
@@ -56,11 +46,11 @@ Ein Zeiger auf eine [mbstate_t](../../c-runtime-library/standard-types.md)-Varia
 
 ## <a name="return-value"></a>Rückgabewert
 
-Einen Wert ungleich NULL *Ps* ist **NULL** oder, wenn nicht in der Mitte eine Konvertierung.
+Einen Wert ungleich NULL *Ps* ist **NULL** oder, wenn nicht in der Mitte einer Konvertierung.
 
 ## <a name="remarks"></a>Hinweise
 
-Bei Verwendung einer der ANSI-Funktionen, die akzeptiert ein **Mbstate_t** -Zeiger ist, übergeben die Adresse eines Ihrer **Mbstate_t** Informationen zu gibt an, ob das letzte Byte in den Puffer konvertiert wurde.
+Bei Verwendung einer der ANSI-Funktionen, die akzeptiert eine **Mbstate_t** -Zeiger ist, übergeben Sie die Adresse des Ihre **Mbstate_t** Informationen, ob das letzte Byte im Puffer konvertiert wurde zurückgegeben.
 
 Die entsprechende Codepage muss installiert werden, um die multibyte-Zeichen zu unterstützen.
 

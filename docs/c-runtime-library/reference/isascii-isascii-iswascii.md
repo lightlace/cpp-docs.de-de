@@ -1,10 +1,6 @@
 ---
-title: isascii, __isascii, iswascii | Microsoft-Dokumentation
-ms.custom: ''
+title: isascii, __isascii, iswascii
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswascii
 - __isascii
@@ -30,8 +26,6 @@ f1_keywords:
 - ctype/isascii
 - ctype/__isascii
 - corecrt_wctype/iswascii
-dev_langs:
-- C++
 helpviewer_keywords:
 - __isascii function
 - _isascii function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - istascii function
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bffc46bae24689558999d188f96e5b9f8d21c54e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d150e7bb335dc77ed86f445128eebf97b8be5ac3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402272"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50433656"
 ---
 # <a name="isascii-isascii-iswascii"></a>isascii, __isascii, iswascii
 
@@ -75,13 +65,13 @@ Zu testende ganze Zahl.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Routinen gibt ungleich NULL, wenn **c** ist eine bestimmte Darstellung von ASCII-Zeichen. **__isascii** gibt einen Wert ungleich NULL zurück, wenn **c** wird ein ASCII-Zeichen (im Bereich 0 x 00 – 0x7F). **Iswascii** gibt einen Wert ungleich NULL zurück, wenn **c** ist eine Breitzeichen-Darstellung von ASCII-Zeichen. Jede dieser Routinen gibt 0 zurück, wenn **c** die testbedingung nicht erfüllt.
+Jede dieser Routinen gibt ungleich NULL, wenn **c** eine bestimmte Darstellung eines ASCII-Zeichens. **__isascii** gibt einen Wert ungleich NULL zurück, wenn **c** ein ASCII-Zeichen (im Bereich 0 x 00 – 0x7F). **Iswascii** gibt einen Wert ungleich NULL zurück, wenn **c** ist eine Breitzeichen-Darstellung eines ASCII-Zeichens. Jede dieser Routinen gibt 0 zurück, wenn **c** die testbedingung nicht erfüllt.
 
 ## <a name="remarks"></a>Hinweise
 
-Beide **__isascii** und **Iswascii** werden als Makros implementiert, es sei denn, die _CTYPE_DISABLE_MACROS Präprozessormakro definiert ist.
+Beide **__isascii** und **Iswascii** werden als Makros implementiert, es sei denn, das Präprozessormakro _CTYPE_DISABLE_MACROS ist definiert.
 
-Gründen der Abwärtskompatibilität **Isascii** wird als nur, wenn ein Makro implementiert [ &#95; &#95;STDC++&#95; &#95; ](../../preprocessor/predefined-macros.md) ist nicht definiert oder wird definiert als 0; andernfalls ist es nicht definiert.
+Für die Abwärtskompatibilität **Isascii** wird als nur ein Makro, wenn implementiert [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) ist nicht definiert oder wird als 0 definiert; andernfalls ist es nicht definiert.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -91,7 +81,7 @@ Gründen der Abwärtskompatibilität **Isascii** wird als nur, wenn ein Makro im
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**Isascii**, **__isascii**|C: \<ctype.h><br /><br /> C++: \<cctype> oder \<ctype.h>|
 |**iswascii**|C: \<wctype.h>, \<ctype.h>, oder \<wchar.h><br /><br /> C++: \<cwctype>, \<cctype>, \<wctype.h>, \<ctype.h>, oder \<wchar.h>|

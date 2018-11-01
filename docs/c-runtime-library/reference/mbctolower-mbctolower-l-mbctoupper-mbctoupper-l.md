@@ -1,10 +1,6 @@
 ---
-title: _mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbctolower_l
 - _mbctoupper_l
@@ -32,8 +28,6 @@ f1_keywords:
 - mbctoupper
 - mbctolower
 - _mbctoupper_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbctolower function
 - mbctolower_l function
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1af1ae33d9f3b752ed58aaa7bd3dd3e22f7de8c2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e620af526e5f0af02868bba4ba635e9ed6e34ff6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403660"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539685"
 ---
 # <a name="mbctolower-mbctolowerl-mbctoupper-mbctoupperl"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 
@@ -95,18 +85,18 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt das konvertierte Zeichen *c*, sofern dies möglich. Andernfalls wird das Zeichen zurückgegeben *c* unverändert.
+Jede dieser Funktionen gibt das konvertierte Zeichen *c*, sofern möglich. Andernfalls wird das Zeichen zurückgegeben *c* unverändert.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Funktionen testen ein Zeichen *c* und, falls möglich, eine der folgenden Konvertierungen zurück.
+Die Funktionen testen ein Zeichen *c* und, falls möglich, eine der folgenden Konvertierungen.
 
 |Routinen|Konvertiert|
 |--------------|--------------|
 |**_mbctolower**, **_mbctolower_l**|Großbuchstaben in Kleinbuchstaben.|
 |**_mbctoupper**, **_mbctoupper_l**|Kleinbuchstaben in Großbuchstaben.|
 
-Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Version dieser Funktion ohne die **_l** -Suffix verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Version mit der **_l** -Suffix ist beinahe identisch, außer dass mithilfe den Locale-Parameter Stattdessen übergeben. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Version dieser Funktion ohne die **_l** -Suffix verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Version mit der **_l** -Suffix ist beinahe identisch, außer dass mithilfe den Locale-Parameter Stattdessen übergeben. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 In früheren Versionen **_mbctolower** hieß **Jtolower**, und **_mbctoupper** hieß **Jtoupper**. Verwenden Sie bei dem neuen Code stattdessen die die neuen Namen.
 

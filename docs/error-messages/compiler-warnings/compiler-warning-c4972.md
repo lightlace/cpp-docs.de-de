@@ -1,27 +1,17 @@
 ---
-title: Compilerwarnung C4972 | Microsoft-Dokumentation
-ms.custom: ''
+title: Compilerwarnung C4972
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4972
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4972
 ms.assetid: d18e8e65-b2ef-4d75-a207-fbd0c17c9060
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e083a91397ee00d8e74b5ee4549a192bba62b643
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dcf08f26809c7c61e3e00c41c555416c95f4a0e0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46037774"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50598834"
 ---
 # <a name="compiler-warning-c4972"></a>Compilerwarnung C4972
 
@@ -29,7 +19,7 @@ Das direkte Ändern oder Behandeln des Ergebnisses eines Unboxing-Vorgangs als L
 
 Das Dereferenzieren eines Handles für einen Werttyp (auch als Unboxing bezeichnet) und das anschließende Zuweisen ist nicht überprüfbar.
 
-Weitere Informationen finden Sie unter [Boxing](../../windows/boxing-cpp-component-extensions.md).
+Weitere Informationen finden Sie unter [Boxing](../../windows/boxing-cpp-component-extensions.md)definiert sind.
 
 ## <a name="example"></a>Beispiel
 

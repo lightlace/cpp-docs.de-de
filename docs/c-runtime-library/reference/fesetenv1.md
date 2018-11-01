@@ -1,11 +1,6 @@
 ---
-title: Fesetenv | Microsoft Docs
-ms.custom: ''
+title: fesetenv
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fesetenv
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - fesetenv
 - fenv/fesetenv
-dev_langs:
-- C++
 helpviewer_keywords:
 - fesetenv function
 ms.assetid: ffc64fff-8ea7-4d59-9e04-ff96ef8cd012
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bd761f505c602aad44c5e00df223d4a6c983e851
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c91bfbb89df964fed0a632d5fb5ebac47ebe948
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397245"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50436147"
 ---
 # <a name="fesetenv"></a>fesetenv
 
@@ -55,7 +44,7 @@ int fesetenv(
 ### <a name="parameters"></a>Parameter
 
 *penv*<br/>
-Zeiger auf eine **Fenv_t** Objekt, das eine Gleitkomma-Umgebung als Satz durch einen Aufruf von enthält [Fegetenv](fegetenv1.md) oder [Feholdexcept](feholdexcept2.md). Sie können standardmäßige Start gleitkommaumgebung auch angeben, indem die **FE_DFL_ENV** Makro.
+Zeiger auf eine **Fenv_t** Objekt, das eine gleitkommaumgebung als Satz von einem Aufruf von enthält [Fegetenv](fegetenv1.md) oder [Feholdexcept](feholdexcept2.md). Sie können die standardmäßigen Start Gleitkomma-Umgebung auch angeben, indem die **FE_DFL_ENV** Makro.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -63,9 +52,9 @@ Gibt 0 zurück, wenn die Umgebung erfolgreich eingerichtet wurde. Andernfalls wi
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Fesetenv** -Funktion legt fest, die aktuelle Gleitkomma-Umgebung aus der in gespeicherten Wert der **Fenv_t** Objekt verweist *Penv*. Die Gleitkommaumgebung ist ein Satz von Statusflags und Steuermodi, die Gleitkommaberechnungen beeinflussen. Dies beinhaltet das Rundungsverhalten und die Statusflags für Gleitkommaausnahmen.  Wenn *Penv* nicht **FE_DFL_ENV** oder verweist nicht auf eine gültige **Fenv_t** -Objekt nachfolgenden Verhalten ist nicht definiert.
+Die **Fesetenv** -Funktion legt fest, die aktuelle gleitkommaumgebung aus dem Wert gespeichert, der **Fenv_t** Objekt verweist *Penv*. Die Gleitkommaumgebung ist ein Satz von Statusflags und Steuermodi, die Gleitkommaberechnungen beeinflussen. Dies beinhaltet das Rundungsverhalten und die Statusflags für Gleitkommaausnahmen.  Wenn *Penv* nicht **FE_DFL_ENV** oder verweist nicht auf ein gültiges **Fenv_t** -Objekt resultierende Verhalten nicht definiert ist.
 
-Ein Aufruf dieser Funktion legt die Ausnahme Status-Flags, die in der *Penv* Objekt jedoch nicht diese Ausnahmen auslösen.
+Ein Aufruf dieser Funktion legt die Ausnahme Gleitkommaausnahme-Flags, die in der *Penv* -Objekt, aber es löst keine Ausnahmen.
 
 Um diese Funktion zu verwenden, müssen Sie vor dem Aufruf Gleitkommaoptimierungen deaktivieren, die den Zugriff mithilfe der `#pragma fenv_access(on)`-Direktive verhindern könnten. Weitere Informationen finden Sie unter [fenv_access](../../preprocessor/fenv-access.md).
 

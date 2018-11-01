@@ -1,10 +1,6 @@
 ---
-title: _cputs _cputws | Microsoft-Dokumentation
-ms.custom: ''
+title: _cputs, _cputws
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cputws
 - _cputs
@@ -25,8 +21,6 @@ f1_keywords:
 - cputws
 - _cputs
 - _cputws
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], writing
 - _cputs function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3c192adccb6fe0e0cee66f03b5d85d89fc2e446a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 81d2364cd1fc409ca3267bc416bd3cbd16c62a15
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399763"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601174"
 ---
 # <a name="cputs-cputws"></a>_cputs, _cputws
 
@@ -76,9 +66,9 @@ Im Erfolgsfall **_cputs** gibt 0 zurück. Wenn die Funktion fehlschlägt, wird e
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_cputs** -Funktion gibt die Null-terminierte Zeichenfolge, die zeigt *str* direkt über die Konsole. Eine Kombination aus Wagenrücklauf-Zeilenvorschub (CR-LF) wird nicht automatisch an die Zeichenfolge angefügt.
+Die **_cputs** Funktion schreibt die Null-terminierte Zeichenfolge, auf das von *str* direkt an die Konsole. Eine Kombination aus Wagenrücklauf-Zeilenvorschub (CR-LF) wird nicht automatisch an die Zeichenfolge angefügt.
 
-Diese Funktion überprüft seine Parameter. Wenn *str* ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und-1 zurückgegeben.
+Diese Funktion überprüft seine Parameter. Wenn *str* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und-1 zurückgegeben.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -88,7 +78,7 @@ Diese Funktion überprüft seine Parameter. Wenn *str* ist **NULL**, den Handler
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|Optionaler Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|
 |-------------|---------------------|---------------------|
 |**_cputs**|\<conio.h>|\<errno.h>|
 |**_cputws**|\<conio.h>|\<errno.h>|

@@ -1,23 +1,13 @@
 ---
-title: C. 2 Regeln | Microsoft-Dokumentation
-ms.custom: ''
+title: C.2 Regeln
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 4d52fef7-3eb7-4480-a335-8ed48681092b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c5845a9125bb32254fc0c03b03e9b6076a086d1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7c0de4c14e229716bcf764d9859be439090368b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404773"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642805"
 ---
 # <a name="c2-rules"></a>C.2 Regeln
 
@@ -26,7 +16,7 @@ Die Notation wird in Abschnitt 6.1 des C-standard beschrieben. In diesem Anhang 
 **/\* in C++ (ISO/IEC 14882:1998) \*/**
 
 *Anweisung-Seq*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Anweisung*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Anweisung (OpenMP)*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Anweisung-Seq-Anweisung*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Anweisung-Seq-Anweisung (OpenMP)*
@@ -34,7 +24,7 @@ Die Notation wird in Abschnitt 6.1 des C-standard beschrieben. In diesem Anhang 
 **/\* in C90 (ISO/IEC 9899:1990) \*/**
 
 *statement-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Anweisung*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Anweisung (OpenMP)*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Statement-List-Anweisung*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Anweisung-List-Anweisung (OpenMP)*
@@ -42,8 +32,8 @@ Die Notation wird in Abschnitt 6.1 des C-standard beschrieben. In diesem Anhang 
 **/\* in C99 (ISO/IEC 9899: 1999) \*/**
 
 *Block-Element*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Deklaration*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Anweisung*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Anweisung (OpenMP)*
 
 **/\* Standard-Anweisungen \*/**
@@ -68,7 +58,7 @@ Die Notation wird in Abschnitt 6.1 des C-standard beschrieben. In diesem Anhang 
 &nbsp;&nbsp;&nbsp;&nbsp;*Flush-Direktive*
 
 *strukturierte-Block*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Anweisung*
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*
 
 *Parallel-Konstrukt*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Parallel-Direktive strukturiert-block*
@@ -203,14 +193,14 @@ Die Notation wird in Abschnitt 6.1 des C-standard beschrieben. In diesem Anhang 
 
 *Data-Klausel*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Private (** *Variablenliste* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Copyprivate (***Variablenliste***)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Firstprivate (***Variablenliste***)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Copyprivate (***Variablenliste***)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Firstprivate (***Variablenliste***)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Lastprivate (** *Variablenliste*  **)** <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Freigegebene (** *Variablenliste* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Standard (freigegeben)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Standard (keine)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Verringerung der (***Reduction-Operator***:***Variablenliste***)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Copyin (***Variablenliste***)** 
+&nbsp;&nbsp;&nbsp;&nbsp;**Verringerung der (***Reduction-Operator***:***Variablenliste***)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Copyin (***Variablenliste***)**
 
 *Reduction-Operator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Einer der:  **+  \* -& ^ &#124; & &&#124;&#124;**

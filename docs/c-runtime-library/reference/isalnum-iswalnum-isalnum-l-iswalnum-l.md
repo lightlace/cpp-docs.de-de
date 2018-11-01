@@ -1,10 +1,6 @@
 ---
-title: isalnum, iswalnum, _isalnum_l, _iswalnum_l | Microsoft-Dokumentation
-ms.custom: ''
+title: isalnum, iswalnum, _isalnum_l, _iswalnum_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _iswalnum_l
 - _isalnum_l
@@ -30,8 +26,6 @@ f1_keywords:
 - _isalnum_l
 - isalnum
 - _istalnum
-dev_langs:
-- C++
 helpviewer_keywords:
 - _istalnum function
 - _ismbcalnum_l function
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - _istalnum_l function
 - _iswalnum_l function
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9c7c1156341d4c1b0b54d54f52a5a33eb6506e50
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97ac18eb85c62861c701f1498da0b4851021ca74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401541"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456627"
 ---
 # <a name="isalnum-iswalnum-isalnuml-iswalnuml"></a>isalnum, iswalnum, _isalnum_l, _iswalnum_l
 
@@ -76,11 +66,11 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Routinen gibt ungleich NULL, wenn *c* eine bestimmte Darstellung eines alphanumerischen Zeichens ist. **Isalnum** gibt einen Wert ungleich NULL zurück, falls **Isalpha** oder **Isdigit** ungleich NULL ist für *c*, d. h. wenn *c* liegt innerhalb der Bereiche A - Z, a - Z oder 0 - 9. **Iswalnum** gibt einen Wert ungleich NULL zurück, falls **iswalpha_l** oder **Iswdigit** ungleich NULL ist für *c*. Jede dieser Routinen gibt 0 zurück, wenn *c* die testbedingung nicht erfüllt.
+Jede dieser Routinen gibt ungleich NULL, wenn *c* eine bestimmte Darstellung eines alphanumerischen Zeichens ist. **Isalnum** gibt einen Wert ungleich NULL zurück, falls **Isalpha** oder **Isdigit** ist ungleich NULL für *c*, d. h. wenn *c* innerhalb der Bereiche A - Z, a - Z oder 0 - 9. **Iswalnum** gibt einen Wert ungleich NULL zurück, falls **iswalpha_l** oder **Iswdigit** ist ungleich NULL für *c*. Jede dieser Routinen gibt 0 zurück, wenn *c* die testbedingung nicht erfüllt.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix verwenden den Gebietsschemaparameter, der übergeben wird anstelle des aktuellen Gebietsschemas. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die Versionen dieser Funktionen, die **_l** -Suffix verwenden den Gebietsschemaparameter, der übergeben wird, anstelle des aktuellen Gebietsschemas. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Das Verhalten des **Isalnum** und **_isalnum_l** ist undefiniert, wenn *c* nicht EOF ist oder im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und *c* ist keine dieser Werte, lösen die Funktionen eine Assertion.
+Das Verhalten der **Isalnum** und **_isalnum_l** ist undefiniert, wenn *c* nicht EOF-Markierung ist oder im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und *c* ist keine dieser Werte, lösen die Funktionen eine Assertion.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -91,7 +81,7 @@ Das Verhalten des **Isalnum** und **_isalnum_l** ist undefiniert, wenn *c* nicht
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**isalnum**|\<ctype.h>|
 |**iswalnum**|\<ctype.h> oder \<wchar.h>|

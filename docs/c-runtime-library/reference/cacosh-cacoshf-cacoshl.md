@@ -1,11 +1,6 @@
 ---
-title: cacosh, cacoshf, cacoshl | Microsoft-Dokumentation
-ms.custom: ''
+title: cacosh, cacoshf, cacoshl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cacosh
 - cacoshf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/cacosh
 - complex/cacoshf
 - complex/cacoshl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cacosh function
 - cacoshf function
 - cacoshl function
 ms.assetid: 83fd05eb-3587-4741-9be6-589a830a1703
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c61130dbfcc0363ef020216389299634cfcd002f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa31dfa1b29eda18d34528fc8aa9544e58a5a082
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394154"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668194"
 ---
 # <a name="cacosh-cacoshf-cacoshl"></a>cacosh, cacoshf, cacoshl
 
@@ -79,7 +68,7 @@ Eine komplexe Zahl, die einen Winkel als Bogenmaß darstellt
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der umgekehrte hyperbolische Kosinus von *z*, im Bogenmaß. Das Ergebnis ist nicht gebunden und nicht Negative, echte Achse, und klicken Sie im Intervall [-Iπ, + Iπ] der imaginäre Achse.
+Der umgekehrte hyperbolische Kosinus von *z*, im Bogenmaß zurück. Das Ergebnis ist nicht gebunden und nicht-Negative auf der reellen Achse, und klicken Sie im Intervall [-Iπ, + Iπ] auf der imaginären Achse.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -87,7 +76,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Cacosh*
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|C-Header|C++-Header|
+|-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
 |**Cacosh**, **Cacoshf**, **Cacoshl**|\<complex.h>|\<ccomplex>|
 

@@ -1,26 +1,16 @@
 ---
-title: 'Exemplarische Vorgehensweise: Hinzufügen ein CTaskDialog zu einer Anwendung | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Exemplarische Vorgehensweise: Hinzufügen eines CTaskDialog zu einer Anwendung'
 ms.date: 09/19/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CTaskDialog, adding
 - walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 899ddba8ee72039702f05b0d369b79e347f7db7e
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: f0992d476326e5175db799ea0f9e5667eab3704b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235606"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492274"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Exemplarische Vorgehensweise: Hinzufügen eines CTaskDialog zu einer Anwendung
 
@@ -33,7 +23,7 @@ Die `CTaskDialog` ist ein Aufgabendialogfeld angezeigt, die das Windows-Meldungs
 
 Der `CTaskDialog` unterstützt mehrere optionale Elemente zum Sammeln und Anzeigen von Informationen. Ein `CTaskDialog` kann beispielsweise Befehlslinks, benutzerdefinierte Schaltflächen, benutzerdefinierte Symbole und eine Fußzeile anzeigen. Der `CTaskDialog` verfügt auch über mehrere Methoden, mit denen Sie den Status des Aufgabendialogfelds abfragen können, um festzustellen, welche optionalen Elemente der Benutzer ausgewählt hat.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:
 

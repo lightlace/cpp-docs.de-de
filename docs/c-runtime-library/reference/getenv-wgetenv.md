@@ -1,10 +1,6 @@
 ---
-title: getenv, _wgetenv | Microsoft-Dokumentation
-ms.custom: ''
+title: getenv, _wgetenv
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - getenv
 - _wgetenv
@@ -25,8 +21,6 @@ f1_keywords:
 - _wgetenv
 - getenv
 - _tgetenv
-dev_langs:
-- C++
 helpviewer_keywords:
 - getenv function
 - tgetenv function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - _tgetenv function
 - _wgetenv function
 ms.assetid: 3b9cb9ab-a126-4e0e-a44f-6c5a7134daf4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a2e68ca55d9e33995df583719e4797a6880d34ca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 79c685fef8d6a4b966c53bb7d94b423d16971976
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403985"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50568159"
 ---
 # <a name="getenv-wgetenv"></a>getenv, _wgetenv
 
@@ -72,27 +62,27 @@ Umgebungsvariablenname.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf die Umgebung Tabelle Eintrag mit *Varname*. Es ist nicht sicher, der Wert der Umgebungsvariablen mit dem zurückgegebenen Zeiger zu ändern. Verwenden der [_putenv](putenv-wputenv.md) Funktion zum Ändern des Werts einer Umgebungsvariablen. Der Rückgabewert ist **NULL** Wenn *Varname* nicht in der umgebungstabelle gefunden wird.
+Gibt einen Zeiger auf die Umgebung Tabelle Eintrag mit *Varname*. Es ist nicht sicher, der Wert der Umgebungsvariablen mit dem zurückgegebenen Zeiger zu ändern. Verwenden der [_putenv](putenv-wputenv.md) Funktion, um den Wert einer Umgebungsvariablen zu ändern. Der Rückgabewert ist **NULL** Wenn *Varname* wurde nicht in der umgebungstabelle gefunden.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Getenv** -Funktion sucht die Liste von Umgebungsvariablen für *Varname*. **Getenv** ist nicht in der Groß-/Kleinschreibung beachtet, in der Windows-Betriebssystem. **Getenv** und **_putenv** verwenden die Kopie der Umgebung verweist die globale Variable **_environ** auf die Umgebung zuzugreifen. **Getenv** arbeitet nur auf den Datenstrukturen, die auf die Laufzeitbibliothek zugreifen kann und nicht auf die Umgebung "Segment" für den Prozess vom Betriebssystem erstellt wurde. Aus diesem Grund Programme, von denen die *Envp* Argument [main](../../cpp/main-program-startup.md) oder ["wmain"](../../cpp/main-program-startup.md) möglicherweise ungültige Informationen abzurufen.
+Die **Getenv** -Funktion sucht die Liste von Umgebungsvariablen für *Varname*. **Getenv** ist nicht in der Groß-/Kleinschreibung beachtet, im Windows-Betriebssystem. **Getenv** und **_putenv** verwenden die Kopie der Umgebung auf die globale Variable zeigt **_environ** auf die Umgebung zuzugreifen. **Getenv** arbeitet nur auf den Datenstrukturen, die auf die Laufzeitbibliothek zugreifen kann und nicht auf die Umgebung "Segment", die vom Betriebssystem für den Prozess erstellt wurde. Aus diesem Grund Programme, von denen die *Envp* Argument [main](../../cpp/main-program-startup.md) oder [Wmain](../../cpp/main-program-startup.md) möglicherweise ungültige Informationen abzurufen.
 
-Wenn *Varname* ist **NULL**, ruft diese Funktion einen Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** auf **EINVAL** und gibt **NULL**.
+Wenn *Varname* ist **NULL**, ruft diese Funktion einen Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** zu **EINVAL** und gibt **NULL**.
 
-**_wgetenv** ist eine Breitzeichen-Version von **Getenv**; der Wert Argument- und Rückgabetypen der **_wgetenv** sind Zeichenfolgen mit Breitzeichen. Die **_wenviron** (globale Variable) ist eine Breitzeichen-Version von **_environ**.
+**_wgetenv** ist eine Breitzeichen-Version von **Getenv**; der Wert Argument- und Rückgabetypen der **_wgetenv** sind Breitzeichen Zeichenfolgen. Die **_wenviron** globale Variable ist eine Breitzeichen-Version von **_environ**.
 
-In einem MBCS-Programm (z. B. in einem SBCS-ASCII-Programm) **_wenviron** beträgt anfänglich **NULL** , da die Umgebung aus Multibyte-Zeichenfolgen besteht. Klicken Sie dann auf den ersten Aufruf von [_wputenv](putenv-wputenv.md), oder beim ersten Aufruf von **_wgetenv** Wenn bereits eine (MBCS)-Umgebung vorhanden ist, wird eine entsprechende Breitzeichen-Umgebung wird erstellt und zeigt dann durch **_wenviron**.
+In einem MBCS-Programm (z. B. in einem SBCS-ASCII-Programm) **_wenviron** ist Anfangs **NULL** , da die Umgebung aus Multibyte-Zeichenfolgen besteht. Klicken Sie auf dem ersten Aufruf von [_wputenv](putenv-wputenv.md), oder klicken Sie auf dem ersten Aufruf von **_wgetenv** Wenn bereits eine (MBCS)-Umgebung vorhanden ist, wird eine entsprechende Zeichenfolge mit Breitzeichen-Umgebung wird erstellt und zeigt dann durch **_wenviron**.
 
-In einem Unicodeprogramm (**_wmain**) Programm **_environ** beträgt anfänglich **NULL** , da die Umgebung der Breitzeichen-Zeichenfolgen besteht. Klicken Sie dann auf den ersten Aufruf von **_putenv**, oder beim ersten Aufruf von **Getenv** Wenn bereits eine (Unicode)-Umgebung vorhanden ist, wird eine entsprechende MBCS-Umgebung wird erstellt und zeigt dann durch **_ Environ**.
+In einem Unicodeprogramm (**_wmain**) Programm **_environ** ist Anfangs **NULL** , da die Umgebung aus Zeichenfolgen mit Breitzeichen besteht. Klicken Sie auf dem ersten Aufruf von **_putenv**, oder klicken Sie auf dem ersten Aufruf von **Getenv** Wenn bereits eine (Unicode)-Umgebung vorhanden ist, wird eine entsprechende MBCS-Umgebung wird erstellt und zeigt dann durch **_ Environ-**.
 
-Wenn in einem Programm zwei Kopien der Umgebung (MBCS und Unicode) gleichzeitig vorhanden sind, muss das Laufzeitsystem beide Kopien verwalten, wodurch sich die Ausführungszeit verlangsamt. Wenn Sie z. B. Aufrufen **_putenv**, einen Aufruf von **_wputenv** wird ebenfalls automatisch ausgeführt werden, damit die beiden Umgebungszeichenfolgen übereinstimmen.
+Wenn in einem Programm zwei Kopien der Umgebung (MBCS und Unicode) gleichzeitig vorhanden sind, muss das Laufzeitsystem beide Kopien verwalten, wodurch sich die Ausführungszeit verlangsamt. Jedes Mal, wenn Sie z. B. Aufrufen **_putenv**, einen Aufruf von **_wputenv** wird auch automatisch ausgeführt werden, damit die beiden Umgebungszeichenfolgen übereinstimmen.
 
 > [!CAUTION]
 > In seltenen Fällen, wenn das Laufzeitsystem sowohl eine Unicodeversion als auch eine Multibyteversion der Umgebung verwaltet, stimmen diese zwei Versionen möglicherweise nicht exakt überein. Dies liegt daran, dass die Zuordnung von einer eindeutigen Unicodezeichenfolge zu einer Multibyte-Zeichenfolge nicht unbedingt eindeutig ist, obwohl sich jede eindeutige Multibyte-Zeichenfolge einer eindeutigen Unicodezeichenfolge zuordnen lässt. Weitere Informationen finden Sie unter [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).
 
 > [!NOTE]
-> Die **_putenv** und **_getenv** -Funktionsfamilie sind nicht threadsicher. **_getenv** gibt möglicherweise einen Zeichenfolgenzeiger beim zurück **_putenv** ist die Zeichenfolge ändert, was zu zufällige Fehlern führt. Stellen Sie sicher, dass Aufrufe dieser Funktionen synchronisiert sind.
+> Die **_putenv** und **_getenv** Funktionsreihe sind nicht threadsicher. **_getenv** gibt möglicherweise einen Zeichenfolgenzeiger beim zurück **_putenv** ist die Zeichenfolge ändert, was zu zufällige Fehlern führt. Stellen Sie sicher, dass Aufrufe dieser Funktionen synchronisiert sind.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -100,11 +90,11 @@ Wenn in einem Programm zwei Kopien der Umgebung (MBCS und Unicode) gleichzeitig 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tgetenv**|**getenv**|**getenv**|**_wgetenv**|
 
-Um zu überprüfen oder ändern Sie den Wert, der die **TZ** Umgebung, verwenden **Getenv**, **_putenv** und **_tzset** nach Bedarf. Weitere Informationen zu **TZ**, finden Sie unter [_tzset](tzset.md) und [_daylight, _timezone und _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
+Um zu überprüfen oder ändern Sie den Wert, der die **TZ** Umgebung, verwenden **Getenv**, **_putenv** und **_tzset** nach Bedarf. Weitere Informationen zu **TZ**, finden Sie unter [_tzset](tzset.md) und [_daylight, Timezone und _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**getenv**|\<stdlib.h>|
 |**_wgetenv**|\<stdlib.h> oder \<wchar.h>|

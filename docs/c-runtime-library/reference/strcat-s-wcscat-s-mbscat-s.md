@@ -1,10 +1,6 @@
 ---
-title: strcat_s, wcscat_s, _mbscat_s | Microsoft-Dokumentation
-ms.custom: ''
+title: strcat_s, wcscat_s, _mbscat_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strcat_s
 - _mbscat_s
@@ -27,8 +23,6 @@ f1_keywords:
 - strcat_s
 - wcscat_s
 - _mbscat_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcscat_s function
 - strcat_s function
@@ -37,23 +31,19 @@ helpviewer_keywords:
 - _mbscat_s function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1f97152da60697edfcf337f8cceddfd77ed2704c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b622fbefc690317a4b57e3fd1bb54712b84f2a0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414008"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621311"
 ---
 # <a name="strcats-wcscats-mbscats"></a>strcat_s, wcscat_s, _mbscat_s
 
 Fügt eine Zeichenfolge an. Diese Versionen von [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md) enthalten Sicherheitsverbesserungen, wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben wird.
 
 > [!IMPORTANT]
-> **_mbscat_s** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscat_s** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -109,13 +99,13 @@ Null, wenn erfolgreich, ein Fehlercode, wenn ein Fehler auftritt.
 
 |*strDestination*|*numberOfElements*|*strSource*|Rückgabewert|Inhalt der *StrDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**NULL** oder nicht abgeschlossen|alle|alle|**EINVAL**|nicht geändert|
-|alle|alle|**NULL**|**EINVAL**|*StrDestination*[0] auf 0 festgelegt|
-|alle|0 oder zu klein|alle|**ERANGE**|*StrDestination*[0] auf 0 festgelegt|
+|**NULL** oder nicht abgeschlossen|any|any|**EINVAL**|nicht geändert|
+|any|any|**NULL**|**EINVAL**|*StrDestination*[0] auf 0 festgelegt ist|
+|any|0 oder zu klein|any|**ERANGE**|*StrDestination*[0] auf 0 festgelegt ist|
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Strcat_s** -Funktion fügt *StrSource* auf *StrDestination* und beendet die Ergebniszeichenfolge mit einem Null-Zeichen. Das erste Zeichen von *StrSource* überschreibt das abschließende Nullzeichen von *StrDestination*. Das Verhalten des **Strcat_s** ist undefiniert, wenn die Quell- und Zielzeichenfolgen überlappen.
+Die **Strcat_s** -Funktion fügt *StrSource* zu *StrDestination* und beendet die Ergebniszeichenfolge mit einem Null-Zeichen. Das erste Zeichen von *StrSource* überschreibt das abschließende Nullzeichen von *StrDestination*. Das Verhalten der **Strcat_s** ist undefiniert, wenn die Quell- und Zielzeichenfolgen überlappen.
 
 Beachten Sie, dass es sich bei dem zweiten Parameter um die Gesamtgröße des Puffers handelt, nicht um die verbleibende Größe:
 
@@ -126,9 +116,9 @@ strcat_s(buf, 16, " End");               // Correct
 strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 ```
 
-**Wcscat_s** und **_mbscat_s** sind Breitzeichen- und multibytezeichenversionen von **Strcat_s**. Die Argumente und der Rückgabewert von **Wcscat_s** sind Breitzeichen-Zeichenfolgen, die von **_mbscat_s** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
+**Wcscat_s** und **_mbscat_s** sind Breitzeichen- und multibytezeichenversionen von Versionen von **Strcat_s**. Die Argumente und der Rückgabewert von **Wcscat_s** sind Breitzeichen-Zeichenfolgen, die von **_mbscat_s** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
 
-Wenn *StrDestination* ein null-Zeiger ist oder kein Null-terminiert ist, oder wenn *StrSource* ist ein **NULL** -Zeiger ist, oder wenn die Zielzeichenfolge zu klein ist ungültige Parameter Handler aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EINVAL** und **Errno** auf **EINVAL**.
+Wenn *StrDestination* ist ein null-Zeiger oder ist kein Null-terminiert ist, oder, wenn *StrSource* ist eine **NULL** -Zeiger ist, oder wenn die Zielzeichenfolge zu klein ist, wird der ungültige Parameter Handler wird aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EINVAL** und **Errno** zu **EINVAL**.
 
 In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -142,7 +132,7 @@ Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**strcat_s**|\<string.h>|
 |**wcscat_s**|\<string.h> oder \<wchar.h>|

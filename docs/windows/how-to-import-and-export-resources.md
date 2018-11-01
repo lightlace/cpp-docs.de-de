@@ -1,15 +1,9 @@
 ---
-title: 'Vorgehensweise: Importieren und Exportieren von Ressourcen (C++) | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Vorgehensweise: Importieren und Exportieren von Ressourcen (C++)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vs.resvw.resource.importing
 - vc.resvw.resource.importing
-dev_langs:
-- C++
 helpviewer_keywords:
 - resources [C++], exporting
 - graphics [C++], exporting
@@ -22,17 +16,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 3c9329dc-dcb8-4edd-a600-78e3e572bd89
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: e2fcbd51e472614104cd74df4bf5697512a2e0df
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2e35526b1b2f0455970a06f42ff2d67c171f3804
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419428"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50555271"
 ---
 # <a name="how-to-import-and-export-resources"></a>Gewusst wie: Importieren und Exportieren von Ressourcen
 

@@ -1,23 +1,13 @@
 ---
-title: Verwenden von Lambdas, Funktionsobjekten und eingeschränkten Funktionen | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwenden von Lambdas, Function-Objekten und eingeschränkten Funktionen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 25346cc9-869d-4ada-aad3-e2228cad3d6c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 854a07055407bc69eb00d4c8e32f96182beea599
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 819605eac6408751456479fbc3daa38aac1418ea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446765"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629397"
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>Verwenden von Lambdas, Function-Objekten und eingeschränkten Funktionen
 
@@ -73,7 +63,7 @@ void AddArraysWithLambda() {
 }
 ```
 
-Der Lambda-Ausdruck muss einen Indizierungsparameter und `restrict(amp)` enthalten. Im Beispiel die [Array_view](../../parallel/amp/reference/array-view-class.md) `sum` Objekt hat den Rang 1. Der Parameter der Lambda-Anweisung aus diesem Grund ist eine [Index](../../parallel/amp/reference/index-class.md) Objekt mit dem Rang 1. Zur Laufzeit wird der Lambda-Ausdruck für jedes Element im einmal ausgeführt der [Array_view](../../parallel/amp/reference/array-view-class.md) Objekt. Weitere Informationen finden Sie unter [Lambda-Ausdruckssyntax](../../cpp/lambda-expression-syntax.md).
+Der Lambdaausdruck muss einen Indizierungsparameter und `restrict(amp)` enthalten. Im Beispiel die [Array_view](../../parallel/amp/reference/array-view-class.md) `sum` Objekt hat den Rang 1. Der Parameter der Lambda-Anweisung aus diesem Grund ist eine [Index](../../parallel/amp/reference/index-class.md) Objekt mit dem Rang 1. Zur Laufzeit wird der Lambda-Ausdruck für jedes Element im einmal ausgeführt der [Array_view](../../parallel/amp/reference/array-view-class.md) Objekt. Weitere Informationen finden Sie unter [Lambda-Ausdruckssyntax](../../cpp/lambda-expression-syntax.md).
 
 ## <a name="function-object"></a>Function-Objekt
 
