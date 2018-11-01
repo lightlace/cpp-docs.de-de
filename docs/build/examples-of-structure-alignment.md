@@ -1,30 +1,20 @@
 ---
-title: Beispiele für die Strukturausrichtung | Microsoft Docs
-ms.custom: ''
+title: Beispiele für die Strukturausrichtung
 ms.date: 03/26/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - structure alignment
 - examples [C++], structure alignment
 ms.assetid: 03d137bf-5cc4-472e-9583-6498f2534199
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a9c4e8cb27d02777e40af56217bd82dec6e647b6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 27f7e89b1c7faec06347d8760247a76a33e0b91e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367741"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466243"
 ---
 # <a name="examples-of-structure-alignment"></a>Beispiele für die Strukturausrichtung
 
-Die folgenden vier Beispielen jedes deklarieren, dass eine ausgerichteten Struktur oder Union und die entsprechenden Zahlen veranschaulichen das Layout, Struktur oder Union im Arbeitsspeicher. Jede Spalte in der Abbildung steht ein Byte des Arbeitsspeichers und der Wert in der Spalte an der Verschiebung von Bytes. Der Name in der zweiten Zeile jeder Abbildung entspricht dem Namen einer Variablen in der Deklaration. Die schattierten Spalten anzugeben, dass die Auffüllung, die zum Erreichen der angegebenen Ausrichtung erforderlich ist.
+Die folgenden vier Beispielen wird jeweils deklarieren, dass eine ausgerichtete Struktur oder Union und die entsprechenden Zahlen veranschaulichen das Layout der Struktur oder Union im Arbeitsspeicher. Jede Spalte in einer Abbildung stellt ein Byte Arbeitsspeicher und die Anzahl in der Spalte gibt an, die Verschiebung dieser Bytes. Der Name in der zweiten Zeile von jeder Abbildung entspricht dem Namen einer Variablen in der Deklaration. Die schattierten Spalten anzugeben, dass die Auffüllung, die erforderlich ist, um die angegebene Ausrichtung zu erzielen.
 
 ## <a name="example-1"></a>Beispiel 1
 

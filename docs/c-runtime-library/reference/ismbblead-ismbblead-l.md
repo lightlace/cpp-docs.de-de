@@ -1,10 +1,6 @@
 ---
-title: _ismbblead, _ismbblead_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _ismbblead, _ismbblead_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbblead_l
 - _ismbblead
@@ -28,8 +24,6 @@ f1_keywords:
 - _ismbblead_l
 - ismbblead
 - _istlead
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbblead_l function
 - ismbblead function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - ismbblead_l function
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e2d85459f4addf0688acb5a82b0108ec6133b749
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7bf8e8c88153e2f22cfa08bb35ff8d4ba01a8804
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400592"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452545"
 ---
 # <a name="ismbblead-ismbbleadl"></a>_ismbblead, _ismbblead_l
 
@@ -79,9 +69,9 @@ Gibt einen Wert ungleich NULL zurück, wenn die ganze Zahl *c* ist das erste Byt
 
 ## <a name="remarks"></a>Hinweise
 
-Multibytezeichen bestehen aus einem führenden Byte gefolgt von einem nachfolgendem Byte. Führende Bytes werden anhand ihrer Zugehörigkeit zu einem bestimmten Bereich für einen gegebenen Zeichensatz unterschieden. Z. B. in Code Codepage 932 führenden Byte im Bereich von 0 x 81-0x9F und 0xE0 - 0xFC.
+Multibytezeichen bestehen aus einem führenden Byte gefolgt von einem nachfolgendem Byte. Führende Bytes werden anhand ihrer Zugehörigkeit zu einem bestimmten Bereich für einen gegebenen Zeichensatz unterschieden. Beispielsweise in Codepage 932 führenden Codebytes reichen von 0 x 81-0x9F und 0xE0 - 0xFC liegt.
 
-**_ismbblead** verwendet das aktuelle Gebietsschema für gebietsschemaabhängige Verhalten. **_ismbblead_l** ist nahezu identisch, das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+**_ismbblead** verwendet das aktuelle Gebietsschema für gebietsschemaabhängige Verhalten. **_ismbblead_l** ist identisch, außer dass sie das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -91,7 +81,7 @@ Multibytezeichen bestehen aus einem führenden Byte gefolgt von einem nachfolgen
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|Optionaler Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|
 |-------------|---------------------|---------------------|
 |**_ismbblead**|\<mbctype.h> oder \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
 |**_ismbblead_l**|\<mbctype.h> oder \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|

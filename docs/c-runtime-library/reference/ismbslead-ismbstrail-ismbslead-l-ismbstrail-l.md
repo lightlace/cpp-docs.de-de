@@ -1,10 +1,6 @@
 ---
-title: _ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbstrail
 - _ismbslead_l
@@ -34,8 +30,6 @@ f1_keywords:
 - _ismbstrail_l
 - ismbstrail
 - _ismbslead_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbstrail function
 - _ismbslead function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c0dc0fb0a6912d728343de360b4e8f8a3a252566
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b4d3f371f4be640cc22a1bdc3d920acf88e2585
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403195"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468912"
 ---
 # <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 
@@ -100,17 +90,17 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_ismbslead** gibt-1 zurück, wenn das Zeichen ein führendes Byte ist und **_ismbstrail** gibt-1 zurück, wenn das Zeichen ein nachfolgendes Byte ist. Wenn die Eingabezeichenfolgen gültig sind, aber keine führenden oder nachfolgenden Bytes, geben diese Funktionen 0 zurück. Wenn eines der Argumente ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **NULL** und **Errno** auf **EINVAL**.
+**_ismbslead** gibt-1 zurück, wenn das Zeichen ein führendes Byte ist und **_ismbstrail** gibt-1 zurück, wenn das Zeichen ein nachfolgendes Byte ist. Wenn die Eingabezeichenfolgen gültig sind, aber keine führenden oder nachfolgenden Bytes, geben diese Funktionen 0 zurück. Wenn ein Argument ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **NULL** und **Errno** zu **EINVAL**.
 
 ## <a name="remarks"></a>Hinweise
 
 **_ismbslead** und **_ismbstrail** sind langsamer als die **_ismbblead** und **_ismbbtrail** Versionen, da sie den Zeichenfolgenkontext berücksichtigen.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, außer dass Sie für ihr vom Gebietsschema abhängiges Verhalten verwenden sie das das übergebene Gebietsschema anstelle des aktuellen Gebietsschemas. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die Versionen dieser Funktionen, die **_l** -Suffix sind beinahe identisch, außer dass für ihr vom Gebietsschema abhängiges Verhalten verwenden sie das Gebietsschema, das übergeben wird, anstelle des aktuellen Gebietsschemas. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|Optionaler Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|
 |-------------|---------------------|---------------------|
 |**_ismbslead**|\<mbctype.h> oder \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
 |**_ismbstrail**|\<mbctype.h> oder \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|

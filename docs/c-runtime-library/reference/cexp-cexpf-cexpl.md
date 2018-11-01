@@ -1,11 +1,6 @@
 ---
-title: cexp, cexpf, cexpl | Microsoft-Dokumentation
-ms.custom: ''
+title: cexp, cexpf, cexpl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cexp
 - cexpf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/cepx
 - complex/cexpf
 - complex/cexpl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cexp function
 - cexpl function
 - cexpf function
 ms.assetid: f27fd5a9-70c7-4957-a7ee-5256d19bd1da
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3a54dc0c25fd0b476887914778278ec83c19fe8e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 401dd30b326fcd6caef7cae6f1ecbdc43ed5dd5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393991"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462932"
 ---
 # <a name="cexp-cexpf-cexpl"></a>cexp, cexpf, cexpl
 
@@ -72,7 +61,7 @@ Eine komplexe Zahl, die den Exponenten darstellt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Wert der **e** potenziert mit der *z*.
+Der Wert des **e** potenziert mit der *z*.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -80,7 +69,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Cexp** 
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|C-Header|C++-Header|
+|-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
 |**Cexp**, **Cexpf**, **Cexpl**|\<complex.h>|\<complex.h>|
 
