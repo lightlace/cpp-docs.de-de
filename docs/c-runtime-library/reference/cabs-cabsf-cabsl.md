@@ -1,11 +1,6 @@
 ---
-title: cabs, cabsf, cabsl | Microsoft-Dokumentation
-ms.custom: ''
+title: cabs, cabsf, cabsl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cabs
 - cabsf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/cabs
 - complex/cabsf
 - complex/cabsl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cabs function
 - cabsf function
 - cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c14252e7857331482b0fe6f99dd56e49ab838dd0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cfa437a5d248a83568032d4c9ef8d4f938074dfe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393562"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50623961"
 ---
 # <a name="cabs-cabsf-cabsl"></a>cabs, cabsf, cabsl
 
@@ -83,13 +72,13 @@ Der Absolute Wert des *z*.
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Cabs** nehmen **_Fcomplex** oder **_Lcomplex** Werte, und der Rückgabewert **"float"** oder **lange** **doppelte** Werte. In einem C-Programm **Cabs** immer ein **_Dcomplex** Wert und gibt eine **doppelte** Wert.
+Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Cabs** , Take **_Fcomplex** oder **_Lcomplex** Werte und Rückgabe **"float"** oder **lange** **doppelte** Werte. In einem C-Programm **Cabs** immer eine **_Dcomplex** Wert und gibt eine **doppelte** Wert.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|C-Header|C++-Header|
+|-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
-|**CABs**, **Cabsf**, **Cabsl**|\<complex.h>|\<ccomplex>|
+|**CAB-Dateien**, **Cabsf**, **Cabsl**|\<complex.h>|\<ccomplex>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

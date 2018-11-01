@@ -1,10 +1,6 @@
 ---
-title: ferror | Microsoft-Dokumentation
-ms.custom: ''
+title: ferror
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - ferror
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - ferror
-dev_langs:
-- C++
 helpviewer_keywords:
 - ferror function
 - streams, testing for errors
 - errors [C++], testing for stream
 ms.assetid: 528a34bc-f2aa-4c3f-b89a-5b148e6864f7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 49aaff776a90dd687ee4dae1902903ed01b83e20
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2be90ffe8a135b4108abd9504099bd2f6c28f249
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397368"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587888"
 ---
 # <a name="ferror"></a>ferror
 
@@ -59,13 +49,13 @@ Zeiger auf die **FILE**-Struktur.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn kein Fehler aufgetreten ist, auf *Stream*, **Ferror** gibt 0 zurück. Andernfalls gibt es einen Wert ungleich 0 (null) zurück. Wenn der Stream ist **NULL**, **Ferror** wird den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** auf **EINVAL** und gibt 0 zurück.
+Wenn kein Fehler aufgetreten ist, auf *Stream*, **Ferror** gibt 0 zurück. Andernfalls gibt es einen Wert ungleich 0 (null) zurück. Wenn der Stream **NULL**, **Ferror** wird der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** zu **EINVAL** und gibt 0 zurück.
 
 Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Ferror** Routine (sowohl als Funktion und als Makro implementiert) für eine Lesen oder Schreiben auf die zugeordnete Datei Fehler testet *Stream*. Wenn ein Fehler aufgetreten ist, der Fehlerindikator für Streams bleibt festgelegt, bis der Stream geschlossen ist oder zurückgesetzt wird, oder bis **Clearerr** gegenüber diesem aufgerufen wird.
+Die **Ferror** -Routine (die sowohl als Funktion und Makro implementiert werden) wird getestet, ob eine Lese- oder Schreibfehler auf die zugeordnete Datei *Stream*. Wenn ein Fehler aufgetreten ist, der Fehlerindikator für den Stream bleibt festgelegt, bis der Stream geschlossen oder zurückgespult wird oder bis **Clearerr** dagegen aufgerufen wird.
 
 ## <a name="requirements"></a>Anforderungen
 
