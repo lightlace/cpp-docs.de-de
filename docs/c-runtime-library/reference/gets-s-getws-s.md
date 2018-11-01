@@ -1,10 +1,6 @@
 ---
-title: gets_s, _getws_s | Microsoft-Dokumentation
-ms.custom: ''
+title: gets_s, _getws_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getws_s
 - gets_s
@@ -24,8 +20,6 @@ apitype: DLLExport
 f1_keywords:
 - _getws_s
 - gets_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - getws_s function
 - _getws_s function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - gets_s function
 - standard input, reading from
 ms.assetid: 5880c36f-122c-4061-a1a5-aeeced6fe58c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b3a5047871937d96288798768e17618ab791c75e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f71fafceaf1974bc5ff736ff175a67cf6c924ee6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401817"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50482900"
 ---
 # <a name="getss-getwss"></a>gets_s, _getws_s
 
@@ -83,17 +73,17 @@ Die Größe des Puffers.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt *Puffer* bei Erfolg. Ein **NULL** Zeiger gibt eine Fehler- oder End-of-File-Bedingung an. Verwenden Sie [ferror](ferror.md) oder [feof](feof.md), um festzulegen, was aufgetreten ist.
+Gibt *Puffer* bei erfolgreicher Ausführung. Ein **NULL**-Zeiger weist auf einen Fehler oder eine Dateiendebedingung hin. Verwenden Sie [ferror](ferror.md) oder [feof](feof.md) , um festzulegen, was aufgetreten ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Gets_s** Funktion liest eine Zeile aus dem Standardeingabestream **Stdin** und speichert ihn in *Puffer*. Die Zeile enthält alle Zeichen einschließlich des ersten Zeilenumbruchzeichens ('\n'). **Gets_s** ersetzt dann das neue Zeilenumbruchzeichen mit einem Nullzeichen ('\0'), ehe die Zeile zurückgegeben. Im Gegensatz dazu die **Fgets_s** Funktion behält das neue Zeilenumbruchzeichen.
+Die **Gets_s** Funktion liest eine Zeile aus dem Standardeingabestream **Stdin** und speichert ihn in *Puffer*. Die Zeile enthält alle Zeichen einschließlich des ersten Zeilenumbruchzeichens ('\n'). **Gets_s** ersetzt dann das neue Zeilenumbruchzeichen mit einem Null-Zeichen ('\0'), ehe die Zeile zurückgegeben. Im Gegensatz dazu die **Fgets_s** das neue Zeilenumbruchzeichen beibehalten.
 
-Wenn das erste gelesene Zeichen das EOF-Zeichen ist, wird ein Null-Zeichen am Anfang des gespeichert *Puffer* und **NULL** zurückgegeben wird.
+Wenn das erste gelesene Zeichen das EOF Zeichen ist, wird ein Null-Zeichen am Anfang gespeichert *Puffer* und **NULL** zurückgegeben wird.
 
 **_getws_s** ist eine Breitzeichen-Version von **Gets_s**; das Argument und der Rückgabewert sind Breitzeichen Zeichenfolgen.
 
-Wenn *Puffer* ist **NULL** oder *SizeInCharacters* ist kleiner oder gleich 0 (null), oder wenn der Puffer zu klein, um die Eingabezeile und der null-Terminator enthalten ist, rufen diese Funktionen ein Handler für ungültige Parameter, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **NULL** und setzen "Errno" auf **ERANGE**.
+Wenn *Puffer* ist **NULL** oder *SizeInCharacters* ist kleiner als oder gleich 0 (null) oder wenn der Puffer zu klein für die Eingabezeile und der null-Terminator ist, rufen diese Funktionen ein Handler für ungültige Parameter wie beschrieben in [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **NULL** , und legen Sie Errno auf **ERANGE**.
 
 In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -105,12 +95,12 @@ In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinf
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**gets_s**|\<stdio.h>|
 |**_getws_s**|\<stdio.h> oder \<wchar.h>|
 
-Die Konsole wird in apps der universellen Windows-Plattform (UWP) nicht unterstützt. Standardstream Handles, die mit der Konsole verknüpften sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in uwp-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die Konsole wird in apps für universelle Windows-Plattform (UWP) nicht unterstützt. Standardstreamhandles, die mit der Konsole verknüpft sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in UWP-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 
