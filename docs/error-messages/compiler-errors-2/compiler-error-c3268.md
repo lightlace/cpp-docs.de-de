@@ -1,31 +1,21 @@
 ---
-title: Compilerfehler C3268 | Microsoft Docs
-ms.custom: ''
+title: Compilerfehler C3268
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3268
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3268
 ms.assetid: d74a630c-daea-4e29-9759-83efef7fb184
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eac0c4e7c25df466ecf1e7e28bccf9ee2a2e2953
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c766488b29273f321feffa8e38a97e54454db7b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705256"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480534"
 ---
 # <a name="compiler-error-c3268"></a>Compilerfehler C3268
 
-> "*Funktion*': eine generische Funktion oder eine Memberfunktion einer generischen Klasse darf nicht keine Variablenparameterliste haben
+> "*Funktion*': eine generische Funktion oder eine Memberfunktion einer generischen Klasse kann keine Variablenparameterliste haben
 
 ## <a name="remarks"></a>Hinweise
 

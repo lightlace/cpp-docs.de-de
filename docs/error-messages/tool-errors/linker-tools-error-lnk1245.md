@@ -1,27 +1,17 @@
 ---
-title: Linkertoolfehler Lnk1245 | Microsoft-Dokumentation
-ms.custom: ''
+title: Linkertoolfehler LNK1245
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK1245
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK1245
 ms.assetid: 179c8165-ffbb-44cd-9f24-5250f29577cc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ef7bace5cec937399d7a2ed440e21b9b751f4141
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4cf9a6c4356872b727a10a360396e51e38928b29
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46041791"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505481"
 ---
 # <a name="linker-tools-error-lnk1245"></a>Linkertoolfehler LNK1245
 

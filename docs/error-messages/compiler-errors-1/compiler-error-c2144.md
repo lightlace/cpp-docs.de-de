@@ -1,43 +1,33 @@
 ---
-title: Compilerfehler C2144 | Microsoft Docs
-ms.custom: ''
+title: Compilerfehler C2144
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2144
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 60a6b0a6019ab6ddf1a403d2cbd4f6ef96b2a865
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f6472fc70ee4a86bed1422941e758127009f14cb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171147"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50483329"
 ---
 # <a name="compiler-error-c2144"></a>Compilerfehler C2144
 
-> Syntaxfehler: "*Typ*"sollte vorangestellt werden"*token*"
+> Syntaxfehler: "*Typ*"sollte auf folgen"*token*"
 
 Der Compiler erwartet *token* und *Typ* stattdessen.
 
-Dieser Fehler kann durch eine fehlende schließende Klammer gefunden, schließende Klammern oder durch Semikolons verursacht werden.
+Dieser Fehler kann durch eine fehlende schließende geschweifte Klammer, Rechte Klammer und Semikolon verursacht werden.
 
-C2144 kann auch auftreten, wenn Sie versuchen, erstellen Sie ein Makro aus einem CLR-Schlüsselwort, das ein Leerzeichen enthält.
+C2144 kann auch auftreten, wenn Sie versuchen, ein Makro aus einem CLR-Schlüsselwort zu erstellen, die ein Leerzeichen enthält.
 
-C2144 möglicherweise auch angezeigt, wenn Sie versuchen, die Weiterleitung eingeben. Finden Sie unter [Typweiterleitung (C + c++ / CLI)](../../windows/type-forwarding-cpp-cli.md) für Weitere Informationen.
+Sie können auch C2144 angezeigt, wenn Sie versuchen, die Weiterleitung eingeben. Finden Sie unter [Typweiterleitung (C++ / CLI)](../../windows/type-forwarding-cpp-cli.md) für Weitere Informationen.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird C2144 generiert und zeigt eine Möglichkeit, sie diesen Fehler beheben:
+Im folgende Beispiel wird die C2144 generiert, und zeigt, wie Sie diesen Fehler beheben:
 
 ```cpp
 // C2144.cpp
@@ -50,7 +40,7 @@ REF struct MyStruct0;   // C2144
 REF1 MyStruct1;
 ```
 
-Im folgenden Beispiel wird C2144 generiert und zeigt eine Möglichkeit, sie diesen Fehler beheben:
+Im folgende Beispiel wird die C2144 generiert, und zeigt, wie Sie diesen Fehler beheben:
 
 ```cpp
 // C2144_2.cpp
