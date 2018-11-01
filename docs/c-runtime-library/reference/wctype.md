@@ -1,10 +1,6 @@
 ---
-title: wctype | Microsoft-Dokumentation
-ms.custom: ''
+title: wctype
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wctype
 apilocation:
@@ -21,22 +17,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wctype
-dev_langs:
-- C++
 helpviewer_keywords:
 - wctype function
 - wide characters
 ms.assetid: 14aded12-4087-4123-bc48-db4e10999223
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0bb5003db02ed27c2906ebc3619313489e40e5fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 81caf8e1ab04635d205d7b01af2d4c2896eec01c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411899"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456900"
 ---
 # <a name="wctype"></a>wctype
 
@@ -57,7 +47,7 @@ Eigenschaftszeichenfolge
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die **LC_CTYPE** Kategorie des aktuellen Gebietsschemas definiert eine Klassifizierungsregel, deren Name mit der Eigenschaftszeichenfolge für die keine *Eigenschaft*, gibt die Funktion 0 (null) zurück. Andernfalls wird ein Wert ungleich 0 zurückgegeben, der für die Verwendung als das zweite Argument für einen nachfolgenden Aufruf von [towctrans](towctrans.md) geeignet ist.
+Wenn die **LC_CTYPE** -Kategorie des aktuellen Gebietsschemas definiert eine Klassifizierungsregel, deren Name der Eigenschaftszeichenfolge entspricht, nicht *Eigenschaft*, gibt die Funktion 0 (null) zurück. Andernfalls wird ein Wert ungleich 0 zurückgegeben, der für die Verwendung als das zweite Argument für einen nachfolgenden Aufruf von [towctrans](towctrans.md) geeignet ist.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -65,21 +55,21 @@ Die Funktion bestimmt eine Klassifizierungsregel für Breitzeichencodes. Die fol
 
 |Funktion|Identisch mit|
 |--------------|-------------|
-|iswalnum(c)|Iswctype (C, Wctype ("" alnum ""))|
+|iswalnum(c)|Iswctype (C, Wctype ("Alnum"))|
 |iswalpha(c)|Iswctype (C, Wctype ("Alpha"))|
 |iswcntrl(c)|Iswctype (C, Wctype ("Strg"))|
 |iswdigit(c)|Iswctype (C, Wctype ("Digit"))|
-|iswgraph(c)|Iswctype (C, Wctype ("Diagramm"))|
+|iswgraph(c)|Iswctype (C, Wctype ("Graph"))|
 |iswlower(c)|Iswctype (C, Wctype ("niedriger"))|
 |iswprint(c)|Iswctype (C, Wctype ("Print"))|
-|iswpunct(c)|Iswctype (C, Wctype ("Interpunktion"))|
-|iswspace(c)|Iswctype (C, Wctype ("Space"))|
-|iswupper(c)|Iswctype (C, Wctype ("Upper"))|
+|iswpunct(c)|Iswctype (C, Wctype ("Punct"))|
+|iswspace(c)|Iswctype (C, Wctype ("Leerzeichen"))|
+|iswupper(c)|Iswctype (C, Wctype ("oberen"))|
 |iswxdigit(c)|Iswctype (C, Wctype ("Xdigit"))|
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**wctype**|\<wctype.h>|
 

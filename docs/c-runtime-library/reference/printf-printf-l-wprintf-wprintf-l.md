@@ -1,10 +1,6 @@
 ---
-title: printf, _printf_l, wprintf, _wprintf_l | Microsoft-Dokumentation
-ms.custom: ''
+title: printf, _printf_l, wprintf, _wprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _printf_l
 - wprintf
@@ -26,8 +22,6 @@ f1_keywords:
 - printf
 - _tprintf
 - wprintf
-dev_langs:
-- C++
 helpviewer_keywords:
 - printf function
 - printf_l function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e66c185a6ee56e4a82a98e62d8d2c7d8167399e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1f3d439c12fa803bfe1af31a9a45d777b2e1caa2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405236"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666894"
 ---
 # <a name="printf-printfl-wprintf-wprintfl"></a>printf, _printf_l, wprintf, _wprintf_l
 
@@ -95,17 +85,17 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Anzahl gedruckter Zeichen oder einen negativen Wert zurück, wenn ein Fehler auftritt. Wenn *Format* ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktion-1 zurück und legt **Errno** auf **EINVAL**. Wenn **EOF** (0xFFFF) in festgestellt wird *Argument*, gibt die Funktion-1 zurück.
+Gibt die Anzahl gedruckter Zeichen oder einen negativen Wert zurück, wenn ein Fehler auftritt. Wenn *Format* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktion gibt-1 zurück und legt **Errno** zu **EINVAL**. Wenn **EOF** (0xFFFF) gefunden wird in *Argument*, gibt die Funktion-1 zurück.
 
-Informationen zu **Errno** und andere Fehlercodes finden Sie unter [_doserrno, Errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Informationen zum **Errno** und Fehlercodes finden Sie unter [_doserrno, Errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Printf** -Funktion formatiert und druckt eine Reihe von Zeichen und Werten für den Standardausgabestream **"stdout"**. Wenn Argumente der *Format* Zeichenfolge, die *Format* Zeichenfolge muss Spezifikationen enthalten, die das Ausgabeformat für die Argumente bestimmen. **Printf** und [Fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md) Verhalten sich identisch, außer dass **Printf** schreibt die Ausgabe an **"stdout"** anstelle eines Ziels vom Typ **Datei** .
+Die **Printf** -Funktion formatiert und gibt eine Reihe von Zeichen und Werten in den Standardausgabestream **"stdout"**. Wenn Argumente der *Format* Zeichenfolge, die *Format* Zeichenfolge muss Spezifikationen enthalten, die das Ausgabeformat für die Argumente bestimmen. **Printf** und [Fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md) Verhalten sich identisch, außer dass **Printf** schreibt die Ausgabe zu **"stdout"** anstelle eines Ziels vom Typ **Datei** .
 
-**"wprintf"** ist eine Breitzeichen-Version von **Printf**; *Format* ist eine Breitzeichen-Zeichenfolge. **"wprintf"** und **Printf** Verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Printf** unterstützt derzeit keine Ausgabe in einen Unicode-Stream.
+**Wprintf** ist eine Breitzeichen-Version von **Printf**; *Format* ist eine Breitzeichen-Zeichenfolge. **Wprintf** und **Printf** Verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Printf** unterstützt derzeit keine Ausgabe in eine UNICODE-Stream.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschemaparameter, der übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas.
+Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -113,7 +103,7 @@ Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, v
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tprintf**|**printf**|**printf**|**wprintf**|
 
-Die *Format* Argument besteht aus normalen Zeichen, Escapesequenzen und (wenn Argumente folgen *Format*) Formatangaben. Die normalen Zeichen und die Escapesequenzen werden in kopiert **"stdout"** in Reihenfolge ihrer Darstellung. Zum Beispiel die Zeile:
+Die *Format* Argument besteht aus normalen Zeichen, Escapesequenzen und (wenn Argumente folgen *Format*) Formatspezifikationen. Normale Zeichen und Escapesequenzen werden in kopiert **"stdout"** in der Reihenfolge ihrer Darstellung. Zum Beispiel die Zeile:
 
 ```C
 printf("Line one\n\t\tLine two\n");
@@ -126,7 +116,7 @@ Line one
         Line two
 ```
 
-[Formatangaben](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) beginnen immer mit einem Prozentzeichen (**%**) und werden von links nach rechts gelesen. Wenn **Printf** die erste Formatspezifikation (falls vorhanden) trifft er konvertiert den Wert des ersten Arguments *Format* und gibt ihn entsprechend. Mit der zweiten Formatspezifikation wird das zweite Argument konvertiert und ausgegeben, usw. Wenn es mehrere Argumente als Formatspezifikationen gibt, werden die zusätzlichen Argumente ignoriert. Die Ergebnisse sind nicht definiert, wenn nicht genügend Argumente für alle Formatspezifikationen vorhanden sind.
+[Formatspezifikationen](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) beginnen immer mit einem Prozentzeichen (**%**) und werden von links nach rechts gelesen. Wenn **Printf** erkennt die erste Formatspezifikation, (sofern vorhanden), konvertiert Sie den Wert des ersten Arguments *Format* und gibt ihn entsprechend. Mit der zweiten Formatspezifikation wird das zweite Argument konvertiert und ausgegeben, usw. Wenn es mehrere Argumente als Formatspezifikationen gibt, werden die zusätzlichen Argumente ignoriert. Die Ergebnisse sind nicht definiert, wenn nicht genügend Argumente für alle Formatspezifikationen vorhanden sind.
 
 > [!IMPORTANT]
 > Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist.
@@ -140,12 +130,12 @@ Line one
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**Printf**, **_printf_l**|\<stdio.h>|
-|**"wprintf"**, **_wprintf_l**|\<stdio.h> oder \<wchar.h>|
+|**Wprintf**, **_wprintf_l**|\<stdio.h> oder \<wchar.h>|
 
-Die Konsole wird in apps der universellen Windows-Plattform (UWP) nicht unterstützt. Standardstream Handles, die mit der Konsole verknüpften sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in uwp-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die Konsole wird in apps für universelle Windows-Plattform (UWP) nicht unterstützt. Standardstreamhandles, die mit der Konsole verknüpft sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in UWP-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 

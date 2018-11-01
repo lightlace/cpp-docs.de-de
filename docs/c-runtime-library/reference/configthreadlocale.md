@@ -1,10 +1,6 @@
 ---
-title: _configthreadlocale | Microsoft-Dokumentation
-ms.custom: ''
+title: _configthreadlocale
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _configthreadlocale
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _configthreadlocale
 - configthreadlocale
-dev_langs:
-- C++
 helpviewer_keywords:
 - configthreadlocale function
 - locales, per-thread
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7531a5849bc1e86d469a12747b5c4648b76c9117
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 244ef9ce93e39bef23a9d5d6792a10ca25355f5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395776"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648382"
 ---
 # <a name="configthreadlocale"></a>_configthreadlocale
 
@@ -60,27 +50,27 @@ Die festzulegende Option. Eine der in der folgenden Tabelle aufgelisteten Option
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der vorherige Status des threadspezifischen Gebietsschemas (**_DISABLE_PER_THREAD_LOCALE** oder **_ENABLE_PER_THREAD_LOCALE**), oder -1, bei einem Fehler.
+Der vorherige Status der threadspezifischen Gebietsschemas (**_DISABLE_PER_THREAD_LOCALE** oder **_ENABLE_PER_THREAD_LOCALE**), oder-1 bei einem Fehler.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_configurethreadlocale** Funktion wird verwendet, um die Verwendung von threadspezifischen Gebietsschemas gesteuert. Verwenden Sie eines der folgenden *Per_thread_locale_type* Optionen angeben oder den Status des threadspezifischen Gebietsschemas ermitteln:
+Die **_configurethreadlocale** Funktion wird verwendet, um die Verwendung des threadspezifischen Gebietsschemas zu steuern. Verwenden Sie eine der folgenden *Per_thread_locale_type* Optionen angeben oder der Status des threadspezifischen Gebietsschemas ermitteln:
 
 |||
 |-|-|
-**_ENABLE_PER_THREAD_LOCALE**|Legen Sie fest, dass der aktuelle Thread ein threadspezifisches Gebietsschema verwendet. Nachfolgende Aufrufe **Setlocale** in diesem Thread betreffen nur das eigene Gebietsschema des Threads.
-**_DISABLE_PER_THREAD_LOCALE**|Legen Sie fest, dass der aktuelle Thread das globale Gebietsschema verwendet. Nachfolgende Aufrufe **Setlocale** in diesem Thread wirken sich auf andere Threads, die das globale Gebietsschema verwenden.
+**_ENABLE_PER_THREAD_LOCALE**|Legen Sie fest, dass der aktuelle Thread ein threadspezifisches Gebietsschema verwendet. Nachfolgende Aufrufe von **Setlocale** in diesem Thread betreffen nur das eigene Gebietsschema des Threads.
+**_DISABLE_PER_THREAD_LOCALE**|Legen Sie fest, dass der aktuelle Thread das globale Gebietsschema verwendet. Nachfolgende Aufrufe von **Setlocale** in diesem Thread wirken sich auf andere Threads, die das globale Gebietsschema verwenden.
 **0**|Ruft die aktuelle Einstellung für diesen speziellen Thread ab.
 
-Diese Funktionen beeinflussen das Verhalten des **Setlocale**, **_tsetlocale**, **_wsetlocale**, und **_setmbcp**. Wenn threadspezifisches Gebietsschema ist deaktiviert, die jeder nachfolgende Aufruf von **Setlocale** oder **_wsetlocale** ändert das Gebietsschema aller Threads, die das globale Gebietsschema verwenden. Wenn das threadspezifische Gebietsschema aktiviert ist, **Setlocale** oder **_wsetlocale** wirkt sich nur auf das Gebietsschema des aktuellen Threads.
+Diese Funktionen beeinflussen das Verhalten des **Setlocale**, **_tsetlocale**, **_wsetlocale**, und **_setmbcp**. Wenn threadspezifisches Gebietsschema ist deaktiviert, alle nachfolgenden Aufruf von **Setlocale** oder **_wsetlocale** ändert das Gebietsschema aller Threads, die das globale Gebietsschema verwenden. Wenn das threadspezifische Gebietsschema aktiviert ist, **Setlocale** oder **_wsetlocale** wirkt sich nur auf das aktuelle Threadgebietsschema.
 
-Bei Verwendung von **_configurethreadlocale** zum Aktivieren eines threadspezifischen Gebietsschemas wird empfohlen, die Sie aufrufen **Setlocale** oder **_wsetlocale** auf das bevorzugte Gebietsschema in diesem Thread festzulegen. unmittelbar danach.
+Bei Verwendung von **_configurethreadlocale** um ein threadspezifisches Gebietsschema zu aktivieren, sollten Sie **Setlocale** oder **_wsetlocale** das bevorzugte Gebietsschema in diesem Thread festlegen unmittelbar danach.
 
-Wenn *Per_thread_locale_type* ist keiner der Werte in der Tabelle aufgeführten, ruft diese Funktion den Handler für ungültige Parameter wie beschrieben in [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** auf **EINVAL** und gibt-1 zurück.
+Wenn *Per_thread_locale_type* ist keiner der Werte in der Tabelle aufgeführten, ruft diese Funktion den Handler für ungültige Parameter wie beschrieben in [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** zu **EINVAL** und gibt-1 zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_configthreadlocale**|\<locale.h>|
 
