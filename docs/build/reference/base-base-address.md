@@ -1,15 +1,9 @@
 ---
-title: -BASE (Basisadresse) | Microsoft-Dokumentation
-ms.custom: ''
+title: /BASE (Basisadresse)
 ms.date: 09/05/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /base
 - VC.Project.VCLinkerTool.BaseAddress
-dev_langs:
-- C++
 helpviewer_keywords:
 - base addresses [C++]
 - programs [C++], preventing relocation
@@ -26,16 +20,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - at sign symbol for base address
 ms.assetid: 00b9f6fe-0bd2-4772-a69c-7365eb199069
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 28e4e2ea0118d79e2746db93ba30478ed2563434
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 00bac7b15263d976fa840e22406f4be4c7836962
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860536"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551709"
 ---
 # <a name="base-base-address"></a>/BASE (Basisadresse)
 
@@ -56,7 +46,7 @@ Der Linker gibt einen Fehler aus, wenn *Adresse* ist kein Vielfaches von 64 KB. 
 
 In der Befehlszeile ist eine weitere Möglichkeit zum Angeben der Basisadresse mit einer Antwortdatei für die Basisadresse. Eine Antwortdatei für die Basisadresse ist eine Textdatei, die die Basisadressen und optional Größen enthält alle DLLs, die Ihr Programm verwendet und eine eindeutige Schlüssel für alle Basisadressen. Verwenden Sie zum Angeben einer Basisadresse mithilfe einer Antwortdatei ein at-Zeichen (**\@**) gefolgt vom Namen der Antwortdatei, *Filename*, gefolgt von einem Komma und dann die *Schlüssel*Wert für die Basisadresse für die Verwendung in der Datei. Der Linker sucht nach *Filename* in entweder dem angegebenen Pfad, oder wenn kein Pfad angegeben ist, die in der LIB-Umgebungsvariablen angegebenen Verzeichnisse. Jede Zeile in *Filename* entspricht einer DLL und weist die folgende Syntax:
 
-> *Schlüssel* *Adresse* [*Größe*] **;** *Kommentar*
+> *Schlüssel* *Adresse* [*Größe*] **;** *Kommentar*
 
 Die *Schlüssel* ist eine Zeichenfolge mit alphanumerischen Zeichen und wird Groß-/ Kleinschreibung nicht berücksichtigt. Dies ist normalerweise der Name einer DLL, aber nicht zwingend erforderlich. Die *Schlüssel* gefolgt von einer Basis *Adresse* in der Programmiersprache C, Hexadezimal- oder Dezimalformat Notation und optional eine maximale Größe *Größe*. Alle drei Argumente werden durch Leerzeichen oder Tabstopps getrennt. Der Linker eine Warnung ausgibt, wenn das angegebene *Größe* ist kleiner als der virtuelle Adressraum von der Anwendung erforderlich sind. Ein *Kommentar* angegeben ist, durch ein Semikolon (**;**) und kann auf demselben oder auf einer separaten Zeile. Der Linker ignoriert allen Text aus dem Semikolon am Ende der Zeile. In diesem Beispiel zeigt einen Teil einer solchen Datei:
 

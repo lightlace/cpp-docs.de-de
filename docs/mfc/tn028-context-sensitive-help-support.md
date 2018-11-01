@@ -1,29 +1,19 @@
 ---
-title: ': Tn028 Bereitstellen kontextbezogener Hilfe | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'TN028: Bereitstellen kontextbezogener Hilfe'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.help
-dev_langs:
-- C++
 helpviewer_keywords:
 - context-sensitive Help [MFC], MFC applications
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e2bc7b3db974a34022089facb2536cf12c49b48a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: db20cb087d70284103cd02dcfa34b2089ae09821
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394165"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533418"
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028: Bereitstellen kontextbezogener Hilfe
 
@@ -135,7 +125,7 @@ LOWORD(lParam) enthält die x-Gerät-Koordinate, in Bezug auf den Clientbereich 
 HIWORD(lParam) enthält die y-Koordinate.
 
 *wParam-Parameter*<br/>
-wird nicht verwendet und ist 0 (null). Wenn der Rückgabewert ungleich NULL ist, wird die WinHelp mit diesen Kontext aufgerufen. Wenn der Rückgabewert 0 (null) ist, wird das übergeordnete Fenster Hilfe abgefragt.
+Wird nicht verwendet und ist 0 (null). Wenn der Rückgabewert ungleich NULL ist, wird die WinHelp mit diesen Kontext aufgerufen. Wenn der Rückgabewert 0 (null) ist, wird das übergeordnete Fenster Hilfe abgefragt.
 
 In vielen Fällen können Sie die Treffertests Code nutzen, die Sie bereits verfügen können. Die Implementierung der `CToolBar::OnHelpHitTest` ein Beispiel Behandlung der WM_HELPHITTEST-Meldung (der Code nutzt den Treffertest-Code, der auf Schaltflächen und QuickInfos im verwendet `CControlBar`).
 

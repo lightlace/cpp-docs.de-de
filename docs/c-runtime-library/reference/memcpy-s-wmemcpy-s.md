@@ -1,10 +1,6 @@
 ---
-title: memcpy_s, wmemcpy_s | Microsoft-Dokumentation
-ms.custom: ''
+title: memcpy_s, wmemcpy_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - memcpy_s
 - wmemcpy_s
@@ -24,22 +20,16 @@ apitype: DLLExport
 f1_keywords:
 - wmemcpy_s
 - memcpy_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12bf97e596a7cb4e3befa4c0633a8ef2df29a6d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7d6cc7abdd5f343bf1482f534f5112eabbc96b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403793"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607154"
 ---
 # <a name="memcpys-wmemcpys"></a>memcpy_s, wmemcpy_s
 
@@ -84,20 +74,20 @@ Null, wenn erfolgreich, ein Fehlercode, wenn ein Fehler auftritt.
 
 |*dest*|*destSize*|*src*|*count*|Rückgabewert|Inhalt der *Dest*|
 |------------|----------------|-----------|---|------------------|------------------------|
-|alle|alle|alle|0|0|Nicht geändert|
-|**NULL**|alle|alle|ungleich null|**EINVAL**|Nicht geändert|
-|alle|alle|**NULL**|ungleich null|**EINVAL**|*Dest* gesetzt ist|
-|alle|< *Anzahl*|alle|ungleich null|**ERANGE**|*Dest* gesetzt ist|
+|any|any|any|0|0|Nicht geändert|
+|**NULL**|any|any|ungleich null|**EINVAL**|Nicht geändert|
+|any|any|**NULL**|ungleich null|**EINVAL**|*Dest* ist auf NULL gesetzt werden|
+|any|< *Anzahl*|any|ungleich null|**ERANGE**|*Dest* ist auf NULL gesetzt werden|
 
 ## <a name="remarks"></a>Hinweise
 
-**Memcpy_s** Kopien *Anzahl* Bytes vom *Src* auf *Dest*; **Wmemcpy_s** Kopien *Anzahl* Breitzeichen (zwei Bytes). Wenn die Quelle und Ziel überlappen, ist das Verhalten des **Memcpy_s** ist nicht definiert. Verwendung **Memmove_s** um überlappende Bereiche zu behandeln.
+**Memcpy_s** Kopien *Anzahl* Bytes vom *Src* zu *Dest*; **Wmemcpy_s** Kopien *Anzahl* Breitzeichen (zwei Bytes). Wenn sich Quelle und Ziel überlappen, ist das Verhalten der **Memcpy_s** ist nicht definiert. Verwendung **Memmove_s** um überlappende Bereiche zu behandeln.
 
-Diese Funktionen überprüfen ihre Parameter. Wenn *Anzahl* ist ungleich NULL und *Dest* oder *Src* ist ein null-Zeiger oder *DestSize* ist kleiner als *Anzahl*, rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EINVAL** oder **ERANGE** und **Errno** auf den Rückgabewert.
+Diese Funktionen überprüfen ihre Parameter. Wenn *Anzahl* ungleich NULL und *Dest* oder *Src* ist ein null-Zeiger oder *DestSize* ist kleiner als *Anzahl*, rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EINVAL** oder **ERANGE** und **Errno** auf den Rückgabewert.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**memcpy_s**|\<memory.h> oder \<string.h>|
 |**wmemcpy_s**|\<wchar.h>|

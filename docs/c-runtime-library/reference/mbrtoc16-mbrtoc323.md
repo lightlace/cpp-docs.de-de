@@ -1,11 +1,6 @@
 ---
-title: mbrtoc16, mbrtoc323 | Microsoft-Dokumentation
-ms.custom: ''
+title: mbrtoc16, mbrtoc323
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - mbrtoc16
 - mbrtoc32
@@ -27,22 +22,16 @@ f1_keywords:
 - mbrtoc32
 - uchar/mbrtoc16
 - uchar/mbrtoc32
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbrtoc16 function
 - mbrtoc32 function
 ms.assetid: 099ade4d-56f7-4e61-8b45-493f1d7a64bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a12e90f9a4bc0cc27df421c27d77a1b9b69334b9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7c1683bad8d015071eb2267283630e2f61995fb9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405301"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534627"
 ---
 # <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
 
@@ -70,36 +59,36 @@ size_t mbrtoc32(
 ### <a name="parameters"></a>Parameter
 
 *Ziel*<br/>
-Zeiger auf die **char16_t** oder **char32_t** entspricht, der das zu konvertierende multibyte-Zeichen. Wenn der Wert NULL ist, speichert die Funktion keinen Wert.
+Zeiger auf die **char16_t** oder **char32_t** entspricht, der die zu konvertierenden multibytezeichens. Wenn der Wert NULL ist, speichert die Funktion keinen Wert.
 
-*Datenquelle*<br/>
+*source*<br/>
 Zeiger auf die zu konvertierende Multibyte-Zeichenfolge.
 
 *max_bytes*<br/>
 Die maximale Anzahl von Bytes in *Quelle* auf ein zu konvertierendes Zeichen untersucht. Dies muss ein Wert zwischen 1 und die Anzahl der Bytes, einschließlich eines eventuellen nullterminators, die im verbleibenden *Quelle*.
 
 *state*<br/>
-Zeiger auf eine **Mbstate_t** konvertierungszustandsobjekt verwendet, um die multibyte-Zeichenfolge auf einem oder mehreren Ausgabezeichen zu interpretieren.
+Zeiger auf eine **Mbstate_t** konvertierungszustandsobjekt verwendet, um die multibyte-Zeichenfolge zu einem oder mehreren Ausgabezeichen zu interpretieren.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg gibt den Wert des ersten erfüllten Bedingung, bestimmten aktuellen *Zustand* Wert:
+Bei Erfolg wird den Wert des ersten dieser Bedingungen, die angewendet werden, da der aktuelle *Zustand* Wert:
 
 |Wert|Bedingung|
 |-----------|---------------|
-|0|Das nächste *Max_bytes* oder weniger Zeichen aus konvertiert *Quelle* entsprechen dem breiten Nullzeichen, das den Wert gespeichert werden, wenn *Ziel* ist ungleich null.<br /><br /> *Status* enthält den ursprünglichen Umschaltzustand zurückgesetzt.|
-|Zwischen 1 und *Max_bytes*(einschließlich)|Der zurückgegebene Wert ist die Anzahl der Bytes der *Quelle* , ein gültiges Multibytezeichen abgeschlossen. Das konvertierte Breitzeichen wird gespeichert, wenn *Ziel* ist ungleich null.|
-|-3|Der nächste Breitzeichen, das aus einem vorherigen Aufruf der Funktion stammenden in gespeichert wurde *Ziel* Wenn *Ziel* ist ungleich null. Keine Bytes von *Quelle* durch diesen Aufruf an die Funktion verwendet werden.<br /><br /> Wenn *Quelle* verweist auf ein Multibytezeichen, die mehr als ein Breitzeichen (z. B. ein Ersatzzeichenpaar) darstellen, erfordert die *Zustand* Wert wird aktualisiert, sodass der nächste Funktionsaufruf schreibt  das zusätzliche Zeichen.|
-|-2|Das nächste *Max_bytes* Bytes stellen ein unvollständiges, aber möglicherweise ungültig, multibyte-Zeichen dar. Kein Wert befindet sich in *Ziel*. Dieses Ergebnis kann auftreten, wenn *Max_bytes* 0 (null).|
-|-1|Es ist ein Codierungsfehler aufgetreten. Das nächste *Max_bytes* oder weniger Bytes tragen nicht zu einem vollständigen und gültigen Multibytezeichen bei. Kein Wert befindet sich in *Ziel*.<br /><br /> **EILSEQ** befindet sich in **Errno** und der Konvertierungsstatus *Zustand* ist nicht angegeben.|
+|0|Die nächste *Max_bytes* oder weniger Zeichen konvertiert wird, von *Quelle* entsprechen dem breiten Nullzeichen, das den Wert gespeichert werden, wenn *Ziel* nicht null ist.<br /><br /> *Status* enthält den ursprünglichen Umschaltzustand zurückgesetzt.|
+|Zwischen 1 und *Max_bytes*(einschließlich)|Der zurückgegebene Wert ist die Anzahl der Bytes der *Quelle* , ein gültiges Multibytezeichen abgeschlossen. Das konvertierte Breitzeichen wird gespeichert, wenn *Ziel* nicht null ist.|
+|-3|Das nächste Breitzeichen, das aus einem vorherigen Aufruf an die Funktion gespeichert wurden *Ziel* Wenn *Ziel* nicht null ist. Keine Bytes von *Quelle* durch diesen Aufruf an die Funktion verwendet werden.<br /><br /> Wenn *Quelle* verweist auf ein Multibytezeichen, die mehr als ein Breitzeichen (z. B. ein Ersatzzeichenpaar) darstellen, erfordert die *Zustand* Wert wird aktualisiert, sodass der nächste Funktionsaufruf schreibt  das zusätzliche Zeichen.|
+|-2|Die nächste *Max_bytes* Bytes stellen ein unvollständiges, aber möglicherweise ungültig, die multibyte-Zeichen. Kein Wert befindet sich in *Ziel*. Dieses Ergebnis kann auftreten, wenn *Max_bytes* ist 0 (null).|
+|-1|Es ist ein Codierungsfehler aufgetreten. Die nächste *Max_bytes* oder weniger Bytes tragen nicht in einer vollständigen und gültigen Multibytezeichen. Kein Wert befindet sich in *Ziel*.<br /><br /> **EILSEQ** befindet sich in **Errno** und der Konvertierungsstatus *Zustand* ist nicht angegeben.|
 
 ## <a name="remarks"></a>Hinweise
 
-Die **mbrtoc16** Funktion liest bis zum *Max_bytes* Bytes vom *Quelle* die erste vollständige gültige Multibytezeichen, und speichert dann die entsprechende UTF-16 gefunden Zeichen in *Ziel*. Die Quellbytes werden gemäß dem Multibyte-Gebietsschema des aktuellen Threads interpretiert. Wenn das Multibytezeichen mehr als ein UTF-16-Ausgabezeichen, z. B. ein Ersatzzeichenpaar erfordert die *Status* festgelegt ist, speichern das nächste UTF-16-Zeichen in *Ziel* beim nächsten Aufruf von **mbrtoc16**. Die **mbrtoc32** -Funktion ist identisch, aber die Ausgabe wird als UTF-32-Zeichen gespeichert.
+Die **mbrtoc16** Funktion liest bis zum *Max_bytes* Bytes vom *Quelle* um die erste vollständige gültige Multibytezeichen und speichert die entsprechende UTF-16 suchen Zeichen in *Ziel*. Die Quellbytes werden gemäß dem Multibyte-Gebietsschema des aktuellen Threads interpretiert. Wenn das Multibytezeichen mehr als ein UTF-16-Ausgabezeichen, z. B. ein Ersatzzeichenpaar, erfordert die *Zustand* festgelegt ist, speichern das nächste UTF-16-Zeichen im *Ziel* beim nächsten Aufruf von **mbrtoc16**. Die **mbrtoc32** -Funktion ist identisch, aber die Ausgabe wird als UTF-32-Zeichen gespeichert.
 
-Wenn *Quelle* Null ist, diese return Funktionen das Äquivalent eines Aufrufs mit den Argumenten **NULL** für *Ziel*, **""** für *Quelle*, und 1 für *Max_bytes*. Die übergebenen Werte von *Ziel* und *Max_bytes* werden ignoriert.
+Wenn *Quelle* Null ist, diese return Funktionen das Äquivalent eines Aufrufs wurde mit der Argumente der **NULL** für *Ziel*, **""** für *Quelle*, und 1 für *Max_bytes*. Die übergebenen Werte von *Ziel* und *Max_bytes* werden ignoriert.
 
-Wenn *Quelle* ist ungleich null, die Funktion beginnt am Anfang der Zeichenfolge und untersucht bis zu *Max_bytes* Bytes bestimmen die Anzahl der Bytes, die zum Abschließen des nächsten multibytezeichens erforderlich einschließlich eventueller umschaltsequenzen. Wenn die untersuchten Bytes ein gültiges und vollständiges Multibytezeichen enthalten, konvertiert die Funktion das Zeichen in das bzw. die entsprechende(n) 16 Bit oder 32 Bit breite(n) Zeichen. Wenn *Ziel* nicht NULL ist, speichert die Funktion, die die erste (und möglicherweise einzige) ergebniszeichen im Ziel. Wenn weitere Ausgabezeichen erforderlich sind, wird ein Wert festgelegt, *Status*, sodass nachfolgende Aufrufe an die Funktion die zusätzlichen Zeichen ausgeben und den Wert-3 zurückgeben. Wenn keine weiteren Ausgabezeichen erforderlich sind, werden *Zustand* festgelegt ist, um den ursprünglichen Umschaltzustand zurückgesetzt.
+Wenn *Quelle* ist nicht null ist, die Funktion beginnt am Anfang der Zeichenfolge und untersucht bis zu *Max_bytes* Bytes, um die Anzahl der Bytes, die zum Abschließen des nächsten multibytezeichens erforderlich zu bestimmen, einschließlich eventueller umschaltsequenzen. Wenn die untersuchten Bytes ein gültiges und vollständiges Multibytezeichen enthalten, konvertiert die Funktion das Zeichen in das bzw. die entsprechende(n) 16 Bit oder 32 Bit breite(n) Zeichen. Wenn *Ziel* ist nicht null ist, speichert die Funktion, die die erste (und möglicherweise einzige) ergebniszeichen im Ziel. Wenn weitere Ausgabezeichen erforderlich sind, wird ein Wert festgelegt, *Zustand*, sodass nachfolgende Aufrufe an die Funktion die zusätzlichen Zeichen ausgeben und den Wert-3 zurückgeben. Wenn keine weiteren Ausgabezeichen erforderlich sind *Zustand* festgelegt ist, um den ursprünglichen Umschaltzustand zurückgesetzt.
 
 ## <a name="requirements"></a>Anforderungen
 

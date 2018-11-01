@@ -1,11 +1,6 @@
 ---
-title: creal, crealf, creall | Microsoft-Dokumentation
-ms.custom: ''
+title: creal, crealf, creall
 ms.date: 03/30/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - creal
 - crealf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/creal
 - complex/crealf
 - complex/creall
-dev_langs:
-- C++
 helpviewer_keywords:
 - creal function
 - crealf function
 - creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6b8d3ca02aeb0f3f9b12c8b82cbb27d9bd3ad3aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 32fd0898ccac80b74b467dbfe0a136eef139e642
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400859"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50604303"
 ---
 # <a name="creal-crealf-creall"></a>creal, crealf, creall
 
@@ -72,19 +61,19 @@ Eine komplexe Zahl.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der reelle Teil *z*.
+Der reelle Teil von *z*.
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Creal** nehmen **_Fcomplex** oder **_Lcomplex** Werte, und der Rückgabewert **"float"** oder **long double** Werte. In einem C-Programm **Creal** immer ein **_Dcomplex** Wert und gibt eine **doppelte** Wert.
+Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Creal** , Take **_Fcomplex** oder **_Lcomplex** Werte und Rückgabe **"float"** oder **long double** Werte. In einem C-Programm **Creal** immer eine **_Dcomplex** Wert und gibt eine **doppelte** Wert.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|C-Header|C++-Header|
+|-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
 |**Creal**, **Crealf**, **Creall**|\<complex.h>|\<ccomplex>|
 
-Die **_Fcomplex**, **_Dcomplex**, und **_Lcomplex** Typen sind Microsoft-spezifische-Entsprechungen der implementierten native C99 Typen **_Complex float** , **doppelte _Complex**, und **long double _Complex**zugeordnet. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die **_Fcomplex**, **_Dcomplex**, und **_Lcomplex** Typen sind Microsoft-spezifische Entsprechungen nicht implementierte nativen Typen C99 **float _Complex** , **double _Complex**, und **long double _Complex**bzw. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,10 +1,6 @@
 ---
-title: system, _wsystem | Microsoft-Dokumentation
-ms.custom: ''
+title: system, _wsystem
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - system
 - _wsystem
@@ -24,8 +20,6 @@ apitype: DLLExport
 f1_keywords:
 - _tsystem
 - _wsystem
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wsystem function
 - wsystem function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ca44648ed378d4484b8e4c32a38a6780b3eddd53
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fa034b164a188b1b5b7ccd8a4ca71ab7ac754fa1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414701"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624665"
 ---
 # <a name="system-wsystem"></a>system, _wsystem
 
@@ -71,7 +61,7 @@ Der Befehl, der ausgeführt werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn *Befehl* ist **NULL** und der Befehlsinterpreter gefunden wird, gibt einen Wert ungleich NULL zurück. Wenn der Befehlsinterpreter gefunden wird, gibt 0 zurück und legt **Errno** auf **ENOENT**. Wenn *Befehl* nicht **NULL**, **System** gibt den Wert, der vom Befehlsinterpreter zurückgegeben wird. Gibt den Wert 0 nur zurück, wenn der Befehlsinterpreter den Wert 0 zurückgibt. Ein Rückgabewert von – 1 zeigt einen Fehler, und **Errno** auf einen der folgenden Werte festgelegt:
+Wenn *Befehl* ist **NULL** und der Befehlsinterpreter gefunden wird, gibt einen Wert ungleich NULL zurück. Wenn nicht der Befehlsinterpreter gefunden wird, gibt 0 zurück und legt **Errno** zu **ENOENT**. Wenn *Befehl* nicht **NULL**, **System** gibt den Wert zurück, die von den Befehlsinterpreter zurückgegeben wird. Gibt den Wert 0 nur zurück, wenn der Befehlsinterpreter den Wert 0 zurückgibt. Ein Rückgabewert von – 1 gibt einen Fehler, und **Errno** auf einen der folgenden Werte festgelegt:
 
 |||
 |-|-|
@@ -84,11 +74,11 @@ Weitere Informationen zu diesen Rückgabecodes finden Sie unter [_doserrno, errn
 
 ## <a name="remarks"></a>Hinweise
 
-Die **System** -Funktion übergibt *Befehl* an den Befehlsinterpreter, der die Zeichenfolge als ein Betriebssystembefehl ausgeführt. **System** verwendet die **COMSPEC** und **Pfad** Umgebungsvariablen zum Suchen des Befehlsinterpreters Datei CMD.exe. Wenn *Befehl* ist **NULL**, überprüft die Funktion lediglich, ob der Befehlsinterpreter vorhanden ist.
+Die **System** -Funktion übergibt *Befehl* an den Befehlsinterpreter, der die Zeichenfolge als Betriebssystem-Befehl ausgeführt wird. **System** verwendet die **COMSPEC** und **Pfad** Umgebungsvariablen zum Suchen des Befehlsinterpreters befehlsinterpreterdatei CMD.exe zu suchen. Wenn *Befehl* ist **NULL**, überprüft die Funktion lediglich, ob der Befehlsinterpreter vorhanden ist.
 
-Sie müssen explizit leeren, mithilfe von [Fflush](fflush.md) oder [_flushall](flushall.md), oder schließen Sie vor dem Aufruf ein Streams **System**.
+Sie müssen explizit leeren, mithilfe von [Fflush](fflush.md) oder [_flushall](flushall.md), oder schließen ein Streams, vor dem Aufruf **System**.
 
-**_wsystem** ist eine Breitzeichen-Version von **System**; das *Befehl* Argument **_wsystem** ist eine Breitzeichen-Zeichenfolge. Anderenfalls verhalten sich diese Funktionen identisch.
+**_wsystem** ist eine Breitzeichen-Version von **System**; die *Befehl* Argument **_wsystem** ist eine Breitzeichen-Zeichenfolge. Anderenfalls verhalten sich diese Funktionen identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -98,7 +88,7 @@ Sie müssen explizit leeren, mithilfe von [Fflush](fflush.md) oder [_flushall](f
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**system**|\<process.h> oder\<stdlib.h>|
 |**_wsystem**|\<process.h> oder \<stdlib.h> oder \<wchar.h>|
@@ -127,7 +117,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 Line one.

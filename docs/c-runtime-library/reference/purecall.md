@@ -1,10 +1,6 @@
 ---
-title: _purecall | Microsoft-Dokumentation
-ms.custom: ''
+title: _purecall
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _purecall
 apilocation:
@@ -23,22 +19,16 @@ apitype: DLLExport
 f1_keywords:
 - purecall
 - _purecall
-dev_langs:
-- C++
 helpviewer_keywords:
 - _purecall function
 - purecall function
 ms.assetid: 56135d9b-3403-4e22-822d-e714523801cc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3095f6fee4458af5a12662886fdc6b9d81fe07f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a7a6db42dc4b8d9b2962a66c7866aae9db55eb3b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403065"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541183"
 ---
 # <a name="purecall"></a>_purecall
 
@@ -52,13 +42,13 @@ extern "C" int __cdecl _purecall();
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_purecall** Funktion ist eine Microsoft-spezifische Implementierungsdetail des Microsoft Visual C++-Compilers. Diese Funktion soll nicht direkt von Ihrem Code aufgerufen werden, und sie hat keine öffentliche Header-Deklaration. Es ist hier dokumentiert, da es sich um einen öffentlichen Export der C-Laufzeitbibliothek handelt.
+Die **_purecall** Funktion ist ein Microsoft-spezifisches Implementierungsdetail des Microsoft Visual C++-Compilers. Diese Funktion soll nicht direkt von Ihrem Code aufgerufen werden, und sie hat keine öffentliche Header-Deklaration. Es ist hier dokumentiert, da es sich um einen öffentlichen Export der C-Laufzeitbibliothek handelt.
 
-Ein Aufruf an eine rein virtuelle Funktion ist ein Fehler, da sie keine Implementierung hat. Der Compiler generiert Code zum Aufrufen der **_purecall** fehlerhandlerfunktion, wenn eine reine virtuelle Funktion aufgerufen wird. Standardmäßig **_purecall** wird das Programm beendet. Vor der Beendigung, die **_purecall** -Funktion aufruft, eine **_purecall_handler** funktioniert, wenn eine für den Prozess festgelegt wurde. Sie können Ihre eigene Fehlerhandlerfunktion für rein virtuelle Funktionsaufrufe installieren, um sie für das Debuggen und für Berichtszwecke abzufangen. Um einen eigenen Fehlerhandler verwenden zu können, erstellen Sie eine Funktion mit der **_purecall_handler** Signatur, verwenden Sie dann [_set_purecall_handler](get-purecall-handler-set-purecall-handler.md) auf den aktuellen Handler zu vereinfachen.
+Ein Aufruf an eine rein virtuelle Funktion ist ein Fehler, da sie keine Implementierung hat. Der Compiler generiert Code zum Aufrufen der **_purecall** fehlerhandlerfunktion, wenn eine reine virtuelle Funktion aufgerufen wird. In der Standardeinstellung **_purecall** das Programm beendet. Vor dem Beenden der **_purecall** -Funktion aufruft, ein **_purecall_handler** ausgeführt werden, wenn eine für den Prozess festgelegt wurde. Sie können Ihre eigene Fehlerhandlerfunktion für rein virtuelle Funktionsaufrufe installieren, um sie für das Debuggen und für Berichtszwecke abzufangen. Um Ihren eigenen Fehlerhandler zu verwenden, erstellen Sie eine Funktion mit der **_purecall_handler** Signatur verwenden [_set_purecall_handler](get-purecall-handler-set-purecall-handler.md) , es sich um den aktuellen Handler festzulegen.
 
 ## <a name="requirements"></a>Anforderungen
 
-Die **_purecall** Funktion verfügt nicht über eine Kopfzeile-Deklaration. Die **_purecall_handler** Typedef ist definiert \<stdlib.h >.
+Die **_purecall** Funktion verfügt nicht über eine Header-Deklaration. Die **_purecall_handler** -Typedefinition ist in \<stdlib.h >.
 
 ## <a name="see-also"></a>Siehe auch
 

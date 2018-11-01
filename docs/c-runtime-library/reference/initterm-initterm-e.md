@@ -1,10 +1,6 @@
 ---
-title: _initterm, _initterm_e | Microsoft-Dokumentation
-ms.custom: ''
+title: _initterm, _initterm_e
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _initterm_e
 - _initterm
@@ -26,24 +22,18 @@ f1_keywords:
 - initterm
 - _initterm
 - initterm_e
-dev_langs:
-- C++
 helpviewer_keywords:
 - initterm function
 - initterm_e function
 - _initterm function
 - _initterm_e function
 ms.assetid: 85131efe-c747-429a-8897-bcdedb000172
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 470ad6cbf13efb170f61aa12f7859f2baa248c2b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 65963e95507d4d6444ebcc9038b5b8cf797f9feb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395834"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620713"
 ---
 # <a name="initterm-initterme"></a>_initterm, _initterm_e
 
@@ -73,7 +63,7 @@ Ein Fehlercode ungleich null, wenn eine Initialisierung fehlschlägt und einen F
 
 Diese Methoden werden während der Initialisierung eines C++-Programms nur intern aufgerufen. Rufen Sie diese Methoden nicht in einem Programm auf.
 
-Wenn diese Methoden auf eine Tabelle mit der Funktion Einträge abzuarbeiten, überspringen sie **NULL** Einträge und den Vorgang fortzusetzen.
+Wenn diese Methoden eine Tabelle mit Funktionseinträgen durchlaufen, überspringen sie **NULL** Einträge und fortfahren.
 
 ## <a name="see-also"></a>Siehe auch
 
