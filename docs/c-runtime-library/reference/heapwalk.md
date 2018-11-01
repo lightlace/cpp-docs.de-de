@@ -1,10 +1,6 @@
 ---
-title: _heapwalk | Microsoft-Dokumentation
-ms.custom: ''
+title: _heapwalk
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _heapwalk
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - heapwalk
 - _heapwalk
-dev_langs:
-- C++
 helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - heapwalk function
 - _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d98260ce281bc8773f597dae5897afe4beee0bc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cc2a49d9032746cc6c82c9dc401fc96baabbe2e1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403400"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454898"
 ---
 # <a name="heapwalk"></a>_heapwalk
 
@@ -70,13 +60,13 @@ Der Puffer, der die Heapinformationen enthält.
 |**_HEAPBADPTR**| Die **_pentry** Feld der **_HEAPINFO** -Struktur enthält keinen gültigen Zeiger im Heap oder *Entryinfo* ist ein null-Zeiger.|
 |**_HEAPEND**| Ende des Heaps erfolgreich erreicht.|
 |**_HEAPEMPTY**| Heap wurde nicht initialisiert.|
-|**_HEAPOK**| Keine Fehler bisher; *Entryinfo* wird mit Informationen zum nächsten heapeintrag aktualisiert.|
+|**_HEAPOK**| Keine Fehler bisher; *Entryinfo* mit Informationen zum nächsten heapeintrag aktualisiert.|
 
-Darüber hinaus, wenn ein Fehler auftritt **_heapwalk** legt **Errno** auf **ENOSYS**.
+Darüber hinaus, wenn ein Fehler auftritt **_heapwalk** legt **Errno** zu **ENOSYS**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_heapwalk** -Funktion hilft beim Heapbezogene Probleme in Programmen zu debuggen. Die Funktion durchläuft den Heap, durchsucht einen Eintrag pro Aufruf und gibt einen Zeiger auf eine Struktur des Typs **_HEAPINFO** , die Informationen zum nächsten heapeintrag enthält. Die **_HEAPINFO** Typ, der in Malloc.h definiert, enthält die folgenden Elemente.
+Die **_heapwalk** Funktion hilft beim Debuggen heapbezogener Probleme in Programmen. Die Funktion durchläuft den Heap, durchsucht einen Eintrag pro Aufruf und gibt einen Zeiger auf eine Struktur des Typs **_HEAPINFO** , die Informationen zum nächsten heapeintrag enthält. Die **_HEAPINFO** Typ, der in Malloc.h definiert, enthält die folgenden Elemente.
 
 |Feld|Bedeutung|
 |-|-|
@@ -84,13 +74,13 @@ Die **_heapwalk** -Funktion hilft beim Heapbezogene Probleme in Programmen zu de
 |`size_t _size`|Größe des Heapeintrags.|
 |`int _useflag`|Kennzeichnung, die angibt, ob der Heapeintrag verwendet wird.|
 
-Ein Aufruf von **_heapwalk** zurückgibt **_HEAPOK** speichert die Größe des Eintrags in der **_size** -Feld und setzt die **_useflag** -Feld auf **_FREEENTRY** oder **_USEDENTRY** (beide Konstanten, die in Malloc.h definiert sind). Zum Abrufen dieser Informationen zu den ersten Eintrag im Heap übergeben **_heapwalk** ein Zeiger auf eine **_HEAPINFO** Struktur, deren **_pentry** angehört **NULL** . Wenn das Betriebssystem nicht unterstützt **_heapwalk**(z. B. Windows 98), gibt die Funktion **_HEAPEND** und legt **Errno** auf **ENOSYS**.
+Ein Aufruf von **_heapwalk** zurückgibt **_HEAPOK** speichert die Größe des Eintrags in der **_Größe** -Feld und setzt die **_useflag** -Feld auf **_FREEENTRY** oder **_USEDENTRY** (beide sind Konstanten, die in Malloc.h definiert sind). Zum Abrufen dieser Informationen zu den ersten Eintrag im Heap übergeben **_heapwalk** ein Zeiger auf eine **_HEAPINFO** Struktur, deren **_pentry** angehört **NULL** . Wenn das Betriebssystem nicht unterstützt **_heapwalk**(z. B. Windows 98), die Funktion gibt **_HEAPEND** und **Errno** zu **ENOSYS**.
 
-Diese Funktion überprüft seine Parameter. Wenn *Entryinfo* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und die Funktion gibt **_HEAPBADPTR**.
+Diese Funktion überprüft seine Parameter. Wenn *Entryinfo* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und die Funktion gibt **_HEAPBADPTR**.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|Optionaler Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|
 |-------------|---------------------|---------------------|
 |**_heapwalk**|\<malloc.h>|\<errno.h>|
 

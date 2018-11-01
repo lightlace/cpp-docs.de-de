@@ -1,11 +1,6 @@
 ---
-title: quick_exit1 | Microsoft-Dokumentation
-ms.custom: ''
+title: quick_exit1
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - quick_exit
 apilocation:
@@ -25,21 +20,15 @@ f1_keywords:
 - quick_exit
 - process/quick_exit
 - stdlib/quick_exit
-dev_langs:
-- C++
 helpviewer_keywords:
 - quick_exit function
 ms.assetid: ecfbdae6-01c4-45fa-aaeb-b368e1de2a9c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: de3eb88093db0eea470a0c1d775516574c466ddd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 50f1ee72cce04c2bebc8f7396a2b6fad98301dd7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405730"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429014"
 ---
 # <a name="quickexit"></a>quick_exit
 
@@ -55,24 +44,24 @@ __declspec(noreturn) void quick_exit(
 
 ### <a name="parameters"></a>Parameter
 
-*status*<br/>
+*Status*<br/>
 Der an die Hostumgebung zurückzugebende Statuscode.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **Quick_exit** -Funktion kann nicht an den Aufrufer zurückgeben.
+Die **Quick_exit** Funktion kann nicht an den Aufrufer zurückgeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Quick_exit** Funktion bewirkt eine normale programmbeendigung. Sie ruft keine registriert, indem Sie Funktionen **Atexit**, **_onexit** oder vom registrierten Signalhandler der **Signal** Funktion. Verhalten ist undefiniert, wenn **Quick_exit** aufgerufen wird, mehr als nach, und wenn die **beenden** Funktion wird auch aufgerufen.
+Die **Quick_exit** Funktion bewirkt eine normale programmbeendigung. Es ruft keine Funktionen registriert, indem **von "atexit"**, **_onexit** oder von registrierten Signalhandler der **Signal** Funktion. Verhalten ist undefiniert, wenn **Quick_exit** aufgerufen wird, mehr als nach, und wenn die **beenden** Funktion wird auch aufgerufen werden.
 
-Die **Quick_exit** Funktionsaufrufe in Last in, First Out (LIFO)-Auftrag, die von registrierten Funktionen **At_quick_exit**, abgesehen von den für diese Funktionen bereits wird aufgerufen, wenn die Funktion registriert wurde.  Das Verhalten ist undefiniert, wenn ein [longjmp](longjmp.md)-Aufruf während des Aufrufs einer registrierten Funktion erfolgt, die den Aufruf der Funktion beenden würde.
+Die **Quick_exit** Funktionsaufrufe, in der Last in, First Out (LIFO)-Auftrag, indem registrierten Funktionen **At_quick_exit**, außer dass für diese Funktionen bereits wird aufgerufen, wenn die Funktion registriert wurde.  Da Verhalten ist undefiniert, wenn ein [longjmp](longjmp.md) -Aufruf während des Aufrufs einer registrierten Funktion erfolgt, die den Aufruf der Funktion beenden würde.
 
-Nachdem die registrierten Funktionen aufgerufen wurden, **Quick_exit** ruft **_Exit** mithilfe der *Status* Wert, um die Steuerung an die hostumgebung zurückzugeben.
+Nachdem die registrierten Funktionen aufgerufen wurden, **Quick_exit** aufruft **_Exit** mithilfe der *Status* Wert, um die Steuerung an die hostumgebung zurückzugeben.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**quick_exit**|\<process.h> oder\<stdlib.h>|
 

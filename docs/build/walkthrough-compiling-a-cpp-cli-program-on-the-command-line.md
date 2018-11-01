@@ -1,23 +1,13 @@
 ---
-title: 'Exemplarische Vorgehensweise: Kompilieren eines C++ / CLI-Programms in der Befehlszeile | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Exemplarische Vorgehensweise: Kompilieren eines C++/CLI-Programms in der Befehlszeile'
 ms.date: 09/24/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: cef41c88-faf9-439d-8423-25aa3f5674dd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bdc09d5c1de2e74f7e24b72439910068fe9f6c1a
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: e8841600fd61aacfe5b942ac4a4305619dff7e90
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820625"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451024"
 ---
 # <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Exemplarische Vorgehensweise: Kompilieren eines C++/CLI-Programms in der Befehlszeile
 

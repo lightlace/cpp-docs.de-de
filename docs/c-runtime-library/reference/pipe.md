@@ -1,10 +1,6 @@
 ---
-title: _pipe | Microsoft-Dokumentation
-ms.custom: ''
+title: _pipe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _pipe
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - pipe
 - _pipe
-dev_langs:
-- C++
 helpviewer_keywords:
 - pipes, creating
 - _pipe function
 - pipes
 - pipe function
 ms.assetid: 8d3e9800-4041-44b5-9e93-2df0b0354a75
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e3e636bc5aac889e3c3a16b856525d4d7268e262
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c5db59fecd84ae291e5651b1cec1be31c815e53a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405126"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50453980"
 ---
 # <a name="pipe"></a>_pipe
 
@@ -62,7 +52,7 @@ int _pipe(
 ### <a name="parameters"></a>Parameter
 
 *PDFs*<br/>
-Zeiger auf ein Array von zwei **Int** Lese-und schreibdatei.
+Zeiger auf ein Array mit zwei **Int** Lese-und schreibdatei.
 
 *psize*<br/>
 Menge des zugesicherten Arbeitsspeichers.
@@ -72,37 +62,37 @@ Dateimodus.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück. Gibt-1 zurück, um einen Fehler anzugeben. Bei Fehler **Errno** auf einen der folgenden Werte festgelegt:
+Gibt bei Erfolg 0 zurück. Gibt 1, um einen Fehler anzugeben. Bei einem Fehler **Errno** ist auf einen der folgenden Werte festgelegt:
 
 - **EMFILE**, was bedeutet, dass keine weiteren Dateideskriptoren verfügbar sind.
 
-- **/ ENFILE**, gibt ein Überlauf Systemtabelle-Datei an.
+- **/ ENFILE**, womit ein Überlauf Datei-Systemtabelle.
 
-- **EINVAL**, gibt an, dass entweder das Array *PDFs* ein null-Zeiger ist oder, die ein ungültiger Wert für *Textmode* übergeben wurde.
+- **EINVAL**, die angibt, dass entweder das Array *PDFs* ein null-Zeiger oder für den ein ungültiger Wert für *Textmode* übergeben wurde.
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_pipe** -Funktion erstellt eine *Pipe*, dies ist ein künstlicher ein-/ Ausgabekanal, die einem Programm verwendet, um Informationen an andere Programmen zu übergeben. Eine Pipe ähnelt einer Datei, da sie über einen Dateizeiger, einen Dateideskriptor oder über beides verfügt. Es kann aus ihr gelesen oder in sie geschrieben werden, indem die Ein- und Ausgabefunktionen der Standardbibliothek verwendet werden. Eine Pipe repräsentiert jedoch weder eine bestimmte Datei noch ein bestimmtes Gerät. Stattdessen repräsentiert die Pipe einen temporären Speicher im Arbeitsspeicher, der vom Arbeitsspeicher des Programms unabhängig ist und vollständig über das Betriebssystem gesteuert wird.
+Die **_pipe** -Funktion erstellt eine *Pipe*, dies ist ein künstlicher ein-/ Ausgabekanal, die eine Anwendung verwendet, um Informationen an andere Programme zu übergeben. Eine Pipe ähnelt einer Datei, da sie über einen Dateizeiger, einen Dateideskriptor oder über beides verfügt. Es kann aus ihr gelesen oder in sie geschrieben werden, indem die Ein- und Ausgabefunktionen der Standardbibliothek verwendet werden. Eine Pipe repräsentiert jedoch weder eine bestimmte Datei noch ein bestimmtes Gerät. Stattdessen repräsentiert die Pipe einen temporären Speicher im Arbeitsspeicher, der vom Arbeitsspeicher des Programms unabhängig ist und vollständig über das Betriebssystem gesteuert wird.
 
-**_pipe** ähnelt **_open** jedoch die Pipe zum Lesen und Schreiben geöffnet, und gibt zwei Dateideskriptoren statt in einem. Das Programm kann beide Seiten der Pipe verwenden oder diejenige Seite schließen, die sie nicht benötigt. Beispielsweise erstellt der Befehlsprozessor in Windows eine Pipe, wenn sie einen Befehl, z. B. ausführt **PROGRAM1** | **PROGRAM2**.
+**_pipe** ähnelt **_open** jedoch die Pipe zum Lesen und Schreiben geöffnet, und gibt zwei Dateideskriptoren anstelle eines. Das Programm kann beide Seiten der Pipe verwenden oder diejenige Seite schließen, die sie nicht benötigt. Beispielsweise erstellt der Befehlsprozessor in Windows eine Pipe, wenn sie einen Befehl, z. B. ausführt **: "Program1"** | **"Program2"**.
 
-Der standardausgabedeskriptor von **PROGRAM1** schreibdeskriptor der Pipe angefügt ist. Der standardeingabedeskriptor von **PROGRAM2** lesedeskriptor der Pipe angefügt ist. Hierdurch entfällt die Notwendigkeit, temporäre Dateien zu erstellen, um Informationen an andere Programme zu übergeben.
+Der standardausgabedeskriptor von **: "Program1"** schreibdeskriptor der Pipe angefügt ist. Der standardeingabedeskriptor von **"Program2"** lesedeskriptor der Pipe angefügt ist. Hierdurch entfällt die Notwendigkeit, temporäre Dateien zu erstellen, um Informationen an andere Programme zu übergeben.
 
-Die **_pipe** Funktion gibt zwei Dateideskriptoren an die Pipe im die *PDFs* Argument. Das Element *PDFs*[0] enthält den lesedeskriptor und das Element *PDFs*[1] enthält den schreibdeskriptor. Pipedateideskriptoren werden auf die gleiche Weise wie andere Dateideskriptoren verwendet. (Die Low-Level Eingabe und ausgabefunktionen **_microsoft** und **_write** auslesen und in eine Pipe schreiben können.) Um das Ende der Pipe-Bedingung erkennen zu können, überprüfen Sie für eine **_microsoft** -Anforderung, die als die Anzahl der gelesenen Bytes "0" zurück.
+Die **_pipe** Funktion gibt zwei Dateideskriptoren zurück, an die Pipe im der *PDFs* Argument. Das Element *PDFs*[0] enthält den lesedeskriptor und das Element *PDFs*[1] enthält den schreibdeskriptor. Pipedateideskriptoren werden auf die gleiche Weise wie andere Dateideskriptoren verwendet. (Die Low-Level-Eingabe und die Ausgabefunktionen **_read** und **_write** auslesen und in eine Pipe schreiben können.) Um das Ende der Pipe Bedingung zu erkennen, zu suchen, für eine **_read** -Anforderung, die 0 als die Anzahl der gelesenen Bytes zurückgibt.
 
-Die *Psize* -Argument gibt die Größe des Speichers in Bytes, die für die Pipe zugesichert. Die *Textmode* Argument gibt den Übersetzungsmodus für die Pipe an. Die manifestkonstante **_O_TEXT** gibt eine textübersetzung und die Konstante **_O_BINARY** gibt die binärübersetzung an. (Unter [fopen, _wfopen](fopen-wfopen.md) finden Sie eine Beschreibung von Text- und Binärmodi.) Wenn die *Textmode* Argument ist 0 (null) **_pipe** verwendet den standardübersetzungsmodus, der durch die standardmodusvariable angegebenen [_fmode](../../c-runtime-library/fmode.md).
+Die *Psize* -Argument gibt die Menge des Arbeitsspeichers in Bytes, die für die Pipe zugesichert. Die *Textmode* Argument gibt den Übersetzungsmodus für die Pipe an. Die manifestkonstante **_O_TEXT** gibt eine textübersetzung, und die Konstante **_O_BINARY** gibt an, die binäre Übersetzung. (Unter [fopen, _wfopen](fopen-wfopen.md) finden Sie eine Beschreibung von Text- und Binärmodi.) Wenn die *Textmode* -Argument 0 ist, **_pipe** verwendet den standardübersetzungsmodus, der durch die standardmodusvariable angegeben ist [_fmode](../../c-runtime-library/fmode.md).
 
-In Multithreadprogrammen wird keine Sperre ausgeführt. Die zurückgegebenen Dateideskriptoren werden neu geöffnet und sollte nicht verwiesen werden, von jedem Thread erst nach der **_pipe** -Aufruf abgeschlossen ist.
+In Multithreadprogrammen wird keine Sperre ausgeführt. Die die zurückgegebenen Dateideskriptoren werden neu geöffnet und sollte nicht verwiesen werden, von jedem Thread erst nach dem die **_pipe** -Aufruf abgeschlossen ist.
 
-Verwenden der **_pipe** Funktion, um die Kommunikation zwischen einem übergeordneten Prozess und einem untergeordneten Prozess, muss jeder Prozess nur einen Deskriptor, öffnen Sie auf der Pipe. Die Deskriptoren müssen entgegengesetzt sein: Wenn das übergeordnete Element über einen geöffneten Lesedeskriptor verfügt, muss das untergeordnete Element über einen geöffneten Schreibdeskriptor verfügen. Die einfachste Möglichkeit hierzu ist zu bitweise oder (**|**) der **_O_NOINHERIT** mit flag *Textmode*. Verwenden Sie dann **_dup** oder **_dup2** eine vererbbare Kopie des pipedeskriptors zu erstellen, die Sie dem untergeordneten Element übergeben möchten. Schließen Sie den ursprünglichen Deskriptor, und starten Sie dann den untergeordneten Prozess. Schließen Sie nach dem Startaufruf den doppelten Deskriptor im übergeordneten Prozess. Weitere Informationen finden Sie im zweiten Beispiel weiter unten in diesem Artikel.
+Verwenden der **_pipe** Funktion, um die Kommunikation zwischen einem übergeordneten Prozess und einem untergeordneten Prozess, muss jeder Prozess nur ein Deskriptor, der auf der Pipe geöffnet. Die Deskriptoren müssen entgegengesetzt sein: Wenn das übergeordnete Element über einen geöffneten Lesedeskriptor verfügt, muss das untergeordnete Element über einen geöffneten Schreibdeskriptor verfügen. Die einfachste Möglichkeit hierzu ist zu bitweise oder (**|**) die **_O_NOINHERIT** flag mit *Textmode*. Verwenden Sie dann **_dup** oder **_dup2** eine vererbbare Kopie des pipedeskriptors zu erstellen, die Sie dem untergeordneten Element übergeben möchten. Schließen Sie den ursprünglichen Deskriptor, und starten Sie dann den untergeordneten Prozess. Schließen Sie nach dem Startaufruf den doppelten Deskriptor im übergeordneten Prozess. Weitere Informationen finden Sie im zweiten Beispiel weiter unten in diesem Artikel.
 
 Im Windows-Betriebssystem wird eine Pipe zerstört, wenn alle zugehörigen Deskriptoren geschlossen sind. (Wenn alle Lesedeskriptoren auf der Pipe geschlossen sind, dann führt das Schreiben in die Pipe zu einem Fehler.) Alle Lese- und Schreibvorgänge auf der Pipe werden nicht ausgeführt, bis es genügend Daten oder ausreichend Pufferplatz gibt, um die E/A-Anforderung abzuschließen.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|Optionaler Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|
 |-------------|---------------------|---------------------|
 |**_pipe**|\<io.h>|\<fcntl.h>,1 \<errno.h>2|
 
