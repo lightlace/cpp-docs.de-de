@@ -1,40 +1,31 @@
 ---
-title: Compilerfehler Fehler C2672 | Microsoft Docs
+title: Compilerfehler C2672
 ms.date: 10/24/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2672
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2672
 ms.assetid: 7e86338a-2d4b-40fe-9dd2-ac6886f3f31a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 98c569c8b9b1466f184b44d345e76341d1476935
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df0f656c9db23739ec62629088b9cc5f7950a92d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236117"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570442"
 ---
-# <a name="compiler-error-c2672"></a>Compilerfehler Fehler C2672
+# <a name="compiler-error-c2672"></a>Compilerfehler C2672
 
-> "*Funktion*': kein passendes überladene Funktion gefunden
+> "*Funktion*": keine übereinstimmende überladene Funktion gefunden.
 
-Der Compiler keine überladene Funktion gefunden, die die angegebene Funktion entspricht. Es wurde keine Funktion gefunden, dass übereinstimmender Parameter oder keine entsprechende Funktion übernimmt den erforderlichen Zugriff im Kontext verfügt.
+Der Compiler keine überladene Funktion gefunden, die die angegebene Funktion entspricht. Keine Funktion gefunden, übereinstimmender Parameter oder keine entsprechende Funktion nimmt den erforderlichen Zugriff in Kontext hat.
 
-Bei Verwendung durch bestimmte standardbibliothekscontainer oder Algorithmen müssen die Typen angeben, zugängliche Member oder Friend-Funktionen, die die Anforderungen des Containers oder des Algorithmus zu erfüllen. Z. B. die iteratortypen ableiten sollte `std::iterator<>`. Vergleichsoperationen oder nutzen von anderen Operatoren auf Elementtypen für Container möglicherweise der Typ als eine linke und eine rechter Operand betrachtet werden. Verwenden des Typs, wie ein rechter Operand des Operators als nicht-Memberfunktion des Typs Implementierung kann.
+Wenn durch bestimmte-standardbibliothekscontainer oder Algorithmen verwendet, müssen die Typen angeben, zugängliche Member oder Friend-Funktionen, die die Anforderungen des Containers oder des-Algorithmus zu erfüllen. Z. B. die iteratortypen ableiten sollten `std::iterator<>`. Vergleichsvorgänge oder die Verwendung von anderen Operatoren auf Elementtypen für Container unter Umständen der Typ als einen linken und einen rechtsseitigen Operanden betrachtet werden. Verwenden des Typs, wie ein rechtsseitigen Operanden Implementierung des Operators als Funktion nicht-Member des Typs erforderlich sein kann.
 
 ## <a name="example"></a>Beispiel
 
-Compilerversionen vor Visual Studio 2017 Zugriff, die Prüfung auf qualifizierte Namen in bestimmten Kontexten für die Vorlage nicht ausgeführt werden. Das erwartete SFINAE-Verhalten kann behindert werden, in dem die Ersetzung aufgrund der Nichterreichbarkeit des Namens erwartungsgemäß fehlschlägt. Dies kann potenziell einen Absturz oder unerwartetes Verhalten zur Laufzeit auslösen, da der Compiler fälschlicherweise die falsche Überladung des Operators aufgerufen hat. In Visual Studio 2017 wird ein Compilerfehler ausgelöst.
+Die Versionen des Compilers vor dem Zugriff auf qualifizierte Namen in bestimmten Kontexten von Vorlagen von Visual Studio 2017 nicht ausgeführt haben. Das erwartete SFINAE-Verhalten kann behindert werden, in dem die Ersetzung aufgrund der Nichterreichbarkeit des Namens erwartungsgemäß fehlschlägt. Dies kann potenziell einen Absturz oder unerwartetes Verhalten zur Laufzeit auslösen, da der Compiler fälschlicherweise die falsche Überladung des Operators aufgerufen hat. In Visual Studio 2017 wird ein Compilerfehler ausgelöst.
 
-In diesem Beispiel in Visual Studio 2015 kompiliert wird, aber löst einen Fehler in Visual Studio 2017 aus. Um dieses Problem zu beheben, stellen Sie die Vorlage Parameterelements zugegriffen werden kann, in denen ausgewertet.
+In diesem Beispiel wird in Visual Studio 2015 kompiliert, aber löst einen Fehler in Visual Studio 2017. Um dieses Problem zu beheben, stellen Sie das Element der Vorlage Parameter zugegriffen werden kann, in dem sie ausgewertet wird.
 
 ```cpp
 #include <type_traits>
