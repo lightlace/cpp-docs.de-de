@@ -1,29 +1,19 @@
 ---
-title: 'Exemplarische Vorgehensweise: Matrixmultiplikation | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Exemplarische Vorgehensweise: Matrixmultiplikation'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d10ab2a6243af5b6e70cb86d3d54ca291a5b9173
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a8f43f5b9df0726c9c01f940965b77b856e35430
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446126"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647450"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Exemplarische Vorgehensweise: Matrixmultiplikation
 
 Befolgen Sie die exemplarische Vorgehensweise, um mithilfe von C++ AMP die Ausführung der Matrixmultiplikation zu beschleunigen. Es werden zwei Algorithmen vorgestellt, einer ohne und einer mit Tiling.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Vor dem Start:
 
