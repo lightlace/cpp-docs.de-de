@@ -1,32 +1,22 @@
 ---
-title: '&lt;system_error&gt; | Microsoft-Dokumentation'
-ms.custom: ''
+title: '&lt;system_error&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <system_error>
 - system_error
-dev_langs:
-- C++
 helpviewer_keywords:
 - system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6f182df5bda73f9b31c86407cc1475ee6c5ec9b9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cb4870a22fd06039751f87f26dfa40e8ddcf2500
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856943"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662760"
 ---
 # <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
 
-Fügen Sie den Header \<System_error > zum Definieren der Ausnahmeklasse `system_error` und Vorlagen für die Verarbeitung von Systemfehlern auf niedriger Ebene beziehen.
+Fügen Sie den Header \<System_error > zum Definieren der Ausnahmeklasse `system_error` und zugehörige Vorlagen für die Verarbeitung von Systemfehlern auf niedriger Ebene.
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,7 +49,7 @@ Fügen Sie den Header \<System_error > zum Definieren der Ausnahmeklasse `system
 |Operator|Beschreibung|
 |-|-|
 |[operator==](../standard-library/system-error-operators.md#op_eq_eq)|Testet, ob das Objekt links vom Operator gleich dem Objekt rechts vom Operator ist.|
-|[operator!=](../standard-library/system-error-operators.md#op_neq)|Testet, ob das Objekt links vom Operator ungleich dem Objekt rechts vom Operator ist.|
+|[Operator!=](../standard-library/system-error-operators.md#op_neq)|Testet, ob das Objekt links vom Operator ungleich dem Objekt rechts vom Operator ist.|
 |[operator<](../standard-library/system-error-operators.md#op_lt)|Testet, ob ein Objekt kleiner ist als das Objekt, das für den Vergleich übergeben wurde.|
 
 ### <a name="enumerations"></a>Enumerationen
