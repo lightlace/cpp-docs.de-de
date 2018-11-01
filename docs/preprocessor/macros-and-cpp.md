@@ -1,26 +1,16 @@
 ---
-title: Makros und C++ | Microsoft-Dokumentation
-ms.custom: ''
+title: Makros und C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - macros, C++
 - macros
 ms.assetid: 83a344c1-73c9-4ace-8b93-cccfb62c6133
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 61984597d01f900faafd44352db76b2b41019809
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: cd5d1237bc025cceb25cc290509b929b595a215f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083463"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499891"
 ---
 # <a name="macros-and-c"></a>Makros und C++
 C++ bietet neue Funktionen, von denen einige die Funktionen ablösen, die vom ANSI-C-Präprozessor bereitgestellt werden. Diese neuen Funktionen erweitern die Typsicherheit und die Voraussagbarkeit der Sprache:

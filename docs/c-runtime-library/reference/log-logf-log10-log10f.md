@@ -1,10 +1,6 @@
 ---
-title: Protokoll, Logf, Logl, log10, log10f, log10l | Microsoft Docs
-ms.custom: ''
+title: Log, Logf, Logl, log10, log10f, log10l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - log10f
 - logf
@@ -34,8 +30,6 @@ f1_keywords:
 - log10f
 - log10l
 - log10
-dev_langs:
-- C++
 helpviewer_keywords:
 - calculating logarithms
 - log10f function
@@ -46,18 +40,14 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12f475cde27d4660f4b4936f3f7717a665b70e86
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8e3f73e61fefa7a39a6d53d63739b094d78c499
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402841"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543298"
 ---
-# <a name="log-logf-logl-log10-log10f-log10l"></a>Protokoll, Logf, Logl, log10, log10f, log10l
+# <a name="log-logf-logl-log10-log10f-log10l"></a>Log, Logf, Logl, log10, log10f, log10l
 
 Berechnet die Logarithmen.
 
@@ -86,25 +76,25 @@ Ein Wert, dessen Logarithmus gesucht wird.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **Protokoll** Funktionen geben den natürlichen Logarithmus (Basis *e*) des *x* bei Erfolg. Die **log10** Funktionen geben den Logarithmus zur Basis 10 zurück. Wenn *x* ist negativ ist, geben diese Funktionen zurück ein unbestimmtes (IND), in der Standardeinstellung. Wenn *x* gleich 0 ist, geben sie die unendlich (INF) zurück.
+Die **Log** Funktionen geben den natürlichen Logarithmus (Basis *e*) der *x* bei erfolgreicher Ausführung. Die **log10** Funktionen geben den Logarithmus zur Basis-10 zurück. Wenn *x* ist negativ, diese Funktionen ein unbestimmtes (Suchen), geben standardmäßig zurück. Wenn *x* gleich 0 ist, geben sie die unendlich (INF) zurück.
 
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
 |-----------|-------------------|-----------------------|
-|± QNAN, SUCH-|Keine|_DOMAIN|
+|± QNAN, SUCHEN|Keine|_DOMAIN|
 |± 0|ZERODIVIDE|_SING|
 |*X* < 0|INVALID|_DOMAIN|
 
-**Protokoll** und **log10** eine Implementierung, die Streaming SIMD Extensions 2 (SSE2) verwendet haben. Informationen und Einschränkungen zur Verwendung der SSE2-Implementierung finden Sie unter [_set_SSE2_enable](set-sse2-enable.md).
+**Log** und **log10** eine Implementierung, Streaming SIMD Extensions 2 (SSE2) verwendet, haben. Informationen und Einschränkungen zur Verwendung der SSE2-Implementierung finden Sie unter [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Hinweise
 
-C++ das Überladen zulässt, sodass Sie Überladungen von aufrufen können **Protokoll** und **log10** verwenden und zurückgeben **"float"** oder **long double** Werte. In einem C-Programm **Protokoll** und **log10** immer verwenden und Zurückgeben einer **doppelte**.
+Da C++ das Überladen zulässt, können Sie Überladungen von aufrufen können **Log** und **log10** verwenden und zurückgeben **"float"** oder **long double** Werte. In einem C-Programm **Log** und **log10** immer annehmen und Zurückgeben einer **doppelte**.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
-|**Protokoll**, **Logf**, **Logl**, **log10**, **log10f**, **log10l**|\<math.h>|
+|**Log**, **Logf**, **Logl**, **log10**, **log10f**, **log10l**|\<math.h>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

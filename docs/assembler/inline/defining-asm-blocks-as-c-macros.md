@@ -1,27 +1,17 @@
 ---
-title: Definieren von __asm-Blöcken als C-Makros | Microsoft-Dokumentation
-ms.custom: ''
+title: Definieren von __asm-Blöcken als C-Makros
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - macros, __asm blocks
 - Visual C, macros
 - __asm keyword [C++], as C macros
 ms.assetid: 677ba11c-21c8-4609-bba7-cd47312243b0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0cb9ef740ec8b521771c84a1edd194a6ee6ace4f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: c48298cf802600995dbbf68885896b6feccb807d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683096"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554725"
 ---
 # <a name="defining-asm-blocks-as-c-macros"></a>Definieren von __asm-Blöcken als C-Makros
 
