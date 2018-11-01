@@ -1,10 +1,6 @@
 ---
-title: strcat, wcscat, _mbscat | Microsoft-Dokumentation
-ms.custom: ''
+title: strcat, wcscat, _mbscat
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbscat
 - wcscat
@@ -29,8 +25,6 @@ f1_keywords:
 - _tcscat
 - strcat
 - wcscat
-dev_langs:
-- C++
 helpviewer_keywords:
 - concatenating strings
 - mbscat function
@@ -45,23 +39,19 @@ helpviewer_keywords:
 - appending strings
 - wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f2daf6621cb2e72c38212227da20f6b847bb08e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b49e2e39fb0acd9128a52e83bf704567bb82d532
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413413"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546391"
 ---
 # <a name="strcat-wcscat-mbscat"></a>strcat, wcscat, _mbscat
 
 Fügt eine Zeichenfolge an. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [strcat_s, wcscat_s, _mbscat_s](strcat-s-wcscat-s-mbscat-s.md).
 
 > [!IMPORTANT]
-> **_mbscat_s** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscat_s** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -109,12 +99,12 @@ Jede dieser Funktionen gibt die Zielzeichenfolge zurück (*StrDestination*). Kei
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Strcat** -Funktion fügt *StrSource* auf *StrDestination* und beendet die Ergebniszeichenfolge mit einem Null-Zeichen. Das erste Zeichen von *StrSource* überschreibt das abschließende Nullzeichen von *StrDestination*. Das Verhalten des **Strcat** ist undefiniert, wenn die Quell- und Zielzeichenfolgen überlappen.
+Die **Strcat** -Funktion fügt *StrSource* zu *StrDestination* und beendet die Ergebniszeichenfolge mit einem Null-Zeichen. Das erste Zeichen von *StrSource* überschreibt das abschließende Nullzeichen von *StrDestination*. Das Verhalten der **Strcat** ist undefiniert, wenn die Quell- und Zielzeichenfolgen überlappen.
 
 > [!IMPORTANT]
-> Da **Strcat** überprüft nicht auf genügend Speicherplatz *StrDestination* vor dem Anfügen *StrSource*, es wird eine mögliche Ursache von Pufferüberläufen. Verwenden Sie stattdessen [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md).
+> Da **Strcat** überprüft nicht auf genügend Speicherplatz *StrDestination* vor dem Anfügen *StrSource*, es ist eine mögliche Ursache von Pufferüberläufen. Verwenden Sie stattdessen [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md).
 
-**Wcscat** und **_mbscat** sind Breitzeichen- und multibytezeichenversionen von **Strcat**. Die Argumente und der Rückgabewert von **Wcscat** sind Breitzeichen-Zeichenfolgen, die von **_mbscat** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
+**Wcscat** und **_mbscat** sind Breitzeichen- und multibytezeichenversionen von Versionen von **Strcat**. Die Argumente und der Rückgabewert von **Wcscat** sind Breitzeichen-Zeichenfolgen, die von **_mbscat** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
 
 In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -126,7 +116,7 @@ In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sich
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**strcat**|\<string.h>|
 |**wcscat**|\<string.h> oder \<wchar.h>|

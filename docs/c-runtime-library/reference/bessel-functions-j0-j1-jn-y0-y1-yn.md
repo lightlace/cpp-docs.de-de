@@ -1,10 +1,6 @@
 ---
-title: 'Bessel-Funktionen: _j0, _j1, _jn, _y0, _y1, _yn | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Bessel-Funktionen: _j0, _j1, _jn, _y0, _y1, _yn'
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _j0
 - _j1
@@ -33,8 +29,6 @@ f1_keywords:
 - _y0
 - _y1
 - _yn
-dev_langs:
-- C++
 helpviewer_keywords:
 - Bessel functions
 - _j0 function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cf461a7737ee1f23650ff80f203524c427fb644d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 682eaa99d0be1b959152ff94cc10a86aa68d988d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393601"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531862"
 ---
 # <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Bessel-Funktionen: _j0, _j1, _jn, _y0, _y1, _yn
 
@@ -94,27 +84,27 @@ Ganzzahlige Ordnung der Bessel-Funktion.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Routinen gibt eine Besselfunktion der *x*. Wenn *x* ist ein negativer Wert in der **_y0**, **_y1**, oder **_yn** Funktionen, legt die Routine **Errno** zu  **EDOM**, druckt eine **_DOMAIN** Fehlermeldung **"stderr"**, und gibt **_HUGE_VAL**. Sie können die Fehlerbehandlung mithilfe **_matherr**.
+Jede dieser Routinen gibt eine Bessel-Funktion von *x*. Wenn *x* ist ein negativer Wert in der **_y0**, **_y1**, oder **_yn** Funktionen, legt die Routine **Errno** zu  **EDOM**, gibt eine **_DOMAIN** Fehlermeldung **"stderr"**, und gibt **_HUGE_VAL**. Sie können ändern, für die Fehlerbehandlung mit **_matherr**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_j0**, **_j1**, und **_jn** Routinen Rückgabe Bessel-Funktionen der ersten Art: Ordnung 0, 1, n, bzw.
+Die **_j0**, **_j1**, und **_jn** Routinen geben Bessel Funktionen der ersten Art zurück: 0, 1 und n, bzw. sortiert.
 
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|**UNGÜLTIG**|**_DOMAIN**|
+|± **QNAN**, **SUCHEN**|**UNGÜLTIG**|**_DOMAIN**|
 
-Die **_y0**, **_y1**, und **_yn** Routinen Rückgabe Bessel-Funktionen der zweiten Art: Ordnung 0, 1, n, bzw.
+Die **_y0**, **_y1**, und **_yn** Routinen geben Bessel Funktionen der zweiten Art zurück: 0, 1 und n, bzw. ordnet.
 
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|**UNGÜLTIG**|**_DOMAIN**|
+|± **QNAN**, **SUCHEN**|**UNGÜLTIG**|**_DOMAIN**|
 |± 0|**ZERODIVIDE**|**_SING**|
 |&#124;X&#124; < 0,0|**UNGÜLTIG**|**_DOMAIN**|
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_j0**, **_j1**, **_jn**, **_y0**, **_y1**, **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
 
