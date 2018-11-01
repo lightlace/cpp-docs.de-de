@@ -1,29 +1,19 @@
 ---
-title: Umgebungsvariablen für Profilgesteuerte Optimierungen | Microsoft Docs
-ms.custom: ''
+title: Umgebungsvariablen für profilgesteuerte Optimierungen
 ms.date: 03/14/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - profile-guided optimizations, environment variables
 ms.assetid: f95a6d1e-49a4-4802-a144-092026b600a3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 19edc9c8a2702e5b7ac9ae4a49364718f19d3900
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2d69019f01a59f170aeeee22ef10b1af0de07a68
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379444"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595662"
 ---
 # <a name="environment-variables-for-profile-guided-optimizations"></a>Umgebungsvariablen für profilgesteuerte Optimierungen
 
-Es gibt drei Umgebungsvariablen, die Testszenarien auf ein Bild mit erstellt betreffen **/LTCG: PGI** für Profilgesteuerte Optimierungen:
+Es gibt drei Umgebungsvariablen, die Testszenarien, die auf einem Image erstellt, die mit Auswirkungen auf **/LTCG: PGI** für Profilgesteuerte Optimierungen:
 
 - **PogoSafeMode** gibt an, ob schnelle oder abgesicherte Modus zur anwendungsprofilerstellung verwendet.
 
@@ -31,49 +21,49 @@ Es gibt drei Umgebungsvariablen, die Testszenarien auf ein Bild mit erstellt bet
 
 - **VCPROFILE_PATH** können Sie den Ordner für PGC-Dateien angeben.
 
-**Die Umgebungsvariablen PogoSafeMode und VCPROFILE_ALLOC_SCALE sind in Visual Studio 2015 ab veraltet.** Die Optionen des Linkers [/genprofile oder/fastgenprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) und [/useprofile](useprofile.md) das gleiche Verhalten für den Linker als diese Umgebungsvariablen angeben.
+**Die Umgebungsvariablen PogoSafeMode und VCPROFILE_ALLOC_SCALE sind ab Visual Studio 2015 veraltet.** Die Optionen des Linkers [/genprofile oder/fastgenprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) und [/USERPROFILE angegeben](useprofile.md) Geben Sie das gleiche linkerverhalten, als diese Umgebungsvariablen.
 
 ## <a name="pogosafemode"></a>PogoSafeMode
 
-Diese Umgebungsvariable ist veraltet. Verwenden der **EXACT** oder **NOEXACT** Argumente **/genprofile** oder **/fastgenprofile** auf dieses Verhalten zu steuern.
+Diese Umgebungsvariable ist veraltet. Verwenden der **EXACT** oder **NOEXACT** Argumente **/genprofile** oder **/fastgenprofile** zur Steuerung dieses Verhaltens.
 
-Deaktivieren oder Festlegen der **PogoSafeMode** Umgebungsvariable, um anzugeben, ob schnelle oder abgesicherte Modus zur anwendungsprofilerstellung auf X86 verwenden Systeme.
+Deaktivieren oder Festlegen der **PogoSafeMode** Umgebungsvariable, um anzugeben, ob schnelle oder abgesicherte Modus zu verwenden, für die anwendungsprofilerstellung auf X86 Systeme.
 
-Profilgesteuerte Optimierung (PGO) besitzt zwei mögliche Modi während der Profilerstellungsphase: *schnellen Modus* und *im abgesicherten Modus*. Wenn die profilerstellung im schnellen Modus stattfindet, verwendet der **INC** Anweisung, um Leistungsindikatoren zu erhöhen. Die **INC** -Anweisung ist schneller, jedoch nicht threadsicher. Wenn die profilerstellung im abgesicherten Modus stattfindet, verwendet der **SPERRE INC** Anweisung, um Leistungsindikatoren zu erhöhen. Die **SPERRE INC** -Anweisung besitzt die gleiche Funktionalität wie die **INC** -Anweisung und ist threadsicher, dabei jedoch langsamer als die **INC** Anweisung.
+Profilgesteuerte Optimierung (PGO) besitzt zwei mögliche Modi während der Profilerstellungsphase: *schnellen Modus* und *im abgesicherten Modus*. Wenn die profilerstellung im schnellen Modus stattfindet, die sie verwendet die **INC** Anweisung, um Daten von Leistungsindikatoren zu erhöhen. Die **INC** Anweisung ist schneller, aber ist nicht threadsicher. Wenn die profilerstellung im abgesicherten Modus stattfindet, er verwendet den **SPERRE INC** Anweisung, um Daten von Leistungsindikatoren zu erhöhen. Die **SPERRE INC** Anweisung weist die gleiche Funktionalität wie die **INC** -Anweisung und ist threadsicher, aber es ist langsamer als die **INC** Anweisung.
 
 Standardmäßig wird PGO-Profilerstellung im schnellen Modus ausgeführt. **PogoSafeMode** ist nur erforderlich, wenn Sie den abgesicherten Modus verwenden möchten.
 
-Um PGO-profilerstellung im abgesicherten Modus auszuführen, müssen Sie entweder die Umgebungsvariable verwenden **PogoSafeMode** oder den Linkerschalter **/PogoSafeMode**, je nachdem, auf dem System. Wenn Sie die Profilerstellung auf einem x64-Computer ausführen, müssen Sie den Linkerschalter verwenden. Wenn Sie die profilerstellung auf x X86 ausführen-Computer können den Linker wechseln, oder legen Sie die **PogoSafeMode** -Umgebungsvariable auf einen beliebigen Wert, bevor Sie den Optimierungsprozess zu starten.
+Um PGO-profilerstellung im abgesicherten Modus auszuführen, müssen Sie entweder die Umgebungsvariable verwenden **PogoSafeMode** oder den Linkerschalter **/PogoSafeMode**, je nachdem, auf dem System. Wenn Sie die Profilerstellung auf einem x64-Computer ausführen, müssen Sie den Linkerschalter verwenden. Wenn Sie während der profilerstellung auf x X86 ausführen-Computer können Sie den Linker wechseln, oder legen Sie die **PogoSafeMode** -Umgebungsvariable auf einen beliebigen Wert aus, bevor Sie den Optimierungsprozess starten.
 
 ### <a name="pogosafemode-syntax"></a>PogoSafeMode-syntax
 
 > **Legen Sie PogoSafeMode**[**=**_Wert_]
 
-Legen Sie **PogoSafeMode** auf einen beliebigen Wert im abgesicherten Modus zu aktivieren. Legen Sie keinen Wert auf einen früheren Wert deaktivieren und reaktivieren schnellen Modus.
+Legen Sie **PogoSafeMode** auf einen beliebigen Wert im abgesicherten Modus zu aktivieren. Legen Sie keinen Wert auf einen früheren Wert zu löschen und erneutes Aktivieren der schnelle Modus.
 
 ## <a name="vcprofileallocscale"></a>VCPROFILE_ALLOC_SCALE
 
-Diese Umgebungsvariable ist veraltet. Verwenden der **MEMMIN** und **MEMMAX** Argumente **/genprofile** oder **/fastgenprofile** auf dieses Verhalten zu steuern.
+Diese Umgebungsvariable ist veraltet. Verwenden der **MEMMIN** und **MEMMAX** Argumente **/genprofile** oder **/fastgenprofile** zur Steuerung dieses Verhaltens.
 
-Ändern der **VCPROFILE_ALLOC_SCALE** -Umgebungsvariable so ändern Sie die Größe des Arbeitsspeichers, die die Profildaten enthält zugeordnet. In seltenen Fällen kann es werden genügend Arbeitsspeicher zur Unterstützung beim Ausführen des Testszenarios Profil Datensammlung. In diesen Fällen können Sie die Menge an Arbeitsspeicher erhöhen, indem **VCPROFILE_ALLOC_SCALE**. Wenn Sie während eines Testlaufs eine Fehlermeldung, der angibt erhalten, dass Sie nicht genügend Arbeitsspeicher verfügen, weisen Sie einen höheren Wert zu **VCPROFILE_ALLOC_SCALE**, bis der Test abgeschlossen, ohne Out-of-Memory-Fehler ausgeführt wird.
+Ändern der **VCPROFILE_ALLOC_SCALE** -Umgebungsvariable so ändern Sie die Menge an Arbeitsspeicher zugewiesen wird, um die Profildaten enthält. In seltenen Fällen nicht mehr genügend Arbeitsspeicher verfügbar ist, zur Unterstützung bei der Ausführung von Testszenarien Profil Datensammlung. In diesen Fällen können Sie die Menge an Arbeitsspeicher erhöhen, indem Sie die Einstellung **VCPROFILE_ALLOC_SCALE**. Wenn Sie während eines Testlaufs, der angibt, dass Sie nicht genügend Arbeitsspeicher verfügen eine Fehlermeldung erhalten, weisen Sie einen höheren Wert zu **VCPROFILE_ALLOC_SCALE**, bis der Test abgeschlossen ist, ohne Out-of-Memory-Fehler ausgeführt wird.
 
 ### <a name="vcprofileallocscale-syntax"></a>VCPROFILE_ALLOC_SCALE-syntax
 
 > **Legen Sie VCPROFILE_ALLOC_SCALE**[__=__*Scale_value*]
 
-Die *Scale_value* Parameter ist ein Skalierungsfaktor für die Menge an Arbeitsspeicher zum Ausführen des Testszenarios werden sollen.  Der Standard ist 1. Beispielsweise legt diese über die Befehlszeile den Skalierungsfaktor auf 2:
+Die *Scale_value* -Parameter ist ein Skalierungsfaktor für die Menge an Arbeitsspeicher, die für die Ausführung von Testszenarien verwendet werden sollen.  Der Standard ist 1. Mit dieser Befehlszeile werden z. B. den Skalierungsfaktor auf 2 festgelegt:
 
 `set VCPROFILE_ALLOC_SCALE=2`
 
 ## <a name="vcprofilepath"></a>VCPROFILE_PATH
 
-Verwenden der **VCPROFILE_PATH** -Umgebungsvariable das Verzeichnis zum Erstellen von PGC-Dateien angeben. Standardmäßig werden PGC-Dateien im selben Verzeichnis wie die Binärdatei profilierten erstellt. Wenn der absolute Pfad der Binärdatei nicht vorhanden ist wie die Groß-/Kleinschreibung möglicherweise beim Ausführen von Profilszenarien auf einem anderen Computer aus, in denen die Binärdatei erstellt wurde, Sie können jedoch festlegen **VCPROFILE_PATH** auf einen Pfad, der auf dem Zielcomputer vorhanden ist.
+Verwenden der **VCPROFILE_PATH** Umgebungsvariable das Verzeichnis zum Erstellen von PGC-Dateien angeben. Standardmäßig werden die PGC-Dateien im selben Verzeichnis wie die Binärdatei, profiliert werden erstellt. Wenn der absolute Pfad der Binärdatei nicht vorhanden ist, wie der Fall sein kann, beim Ausführen von Szenarien mit Profil auf einem anderen Computer aus, in dem das Binary erstellt wurde, Sie können jedoch festlegen **VCPROFILE_PATH** auf einen Pfad, der auf dem Zielcomputer vorhanden ist.
 
 ### <a name="vcprofilepath-syntax"></a>VCPROFILE_PATH-syntax
 
 > **Legen Sie VCPROFILE_PATH**[**=**_Pfad_]
 
-Legen Sie die *Pfad* Parameter in das Verzeichnis in der PGC-Dateien hinzugefügt. Mit dieser Befehlszeile wird z. B. den Ordner, auf C:\profile:
+Legen Sie die *Pfad* Parameter, um den Verzeichnispfad, der PGC-Dateien hinzugefügt. Mit dieser Befehlszeile wird z. B. den Ordner, auf C:\profile:
 
 `set VCPROFILE_PATH=c:\profile`
 
@@ -81,4 +71,4 @@ Legen Sie die *Pfad* Parameter in das Verzeichnis in der PGC-Dateien hinzugefüg
 
 [Profilgesteuerte Optimierungen](../../build/reference/profile-guided-optimizations.md)<br/>
 [/ GENPROFILE und/fastgenprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
-[/ USEPROFILE](useprofile.md)<br/>
+[/USEPROFILE](useprofile.md)<br/>

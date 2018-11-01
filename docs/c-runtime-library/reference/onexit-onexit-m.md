@@ -1,10 +1,6 @@
 ---
-title: _onexit, _onexit_m | Microsoft-Dokumentation
-ms.custom: ''
+title: _onexit, _onexit_m
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _onexit
 - _onexit_m
@@ -25,8 +21,6 @@ f1_keywords:
 - onexit_m
 - onexit
 - _onexit_m
-dev_langs:
-- C++
 helpviewer_keywords:
 - onexit function
 - registry, registering exit routines
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - registering exit routines
 - registering to be called on exit
 ms.assetid: 45743298-0e2f-46cf-966d-1ca44babb443
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c190ce2c78135625a502d7509e56771fd670aa3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c190f777032904802f771bab9fc323ba305ff32e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401707"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609602"
 ---
 # <a name="onexit-onexitm"></a>_onexit, _onexit_m
 
@@ -69,19 +59,19 @@ Zeiger an eine bei Beendigung aufzurufende Funktion.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_onexit** einen Zeiger auf die Funktion zurückgibt, im Erfolgsfall oder **NULL** es ist kein Speicherplatz zum Speichern des Funktionszeigers.
+**_onexit** gibt bei Erfolg einen Zeiger an die Funktion zurück oder **NULL** , wenn kein Speicherplatz zum Speichern des Funktionszeigers vorhanden ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_onexit** Funktion wird die Adresse einer Funktion übergeben (*Funktion*) aufgerufen werden, wenn das Programm normal beendet wird. Aufeinander folgende Aufrufe von **_onexit** erstellen ein Registers Funktionen, die in LIFO (Last-in-First-Out)-Reihenfolge ausgeführt werden. Die Funktionen übergeben, um **_onexit** können keine Parameter akzeptieren.
+Die **_onexit** Funktion wird die Adresse einer Funktion übergeben (*Funktion*) aufgerufen werden, wenn das Programm normal beendet wird. Aufeinander folgende Aufrufe von **_onexit** erstellen ein Registers von Funktion, die in LIFO (Last-in-First-Out)-Reihenfolge ausgeführt werden. Die Funktionen, die an **_onexit** können keine Parameter akzeptieren.
 
-In die Groß-/Kleinschreibung beim **_onexit** innerhalb einer DLL registriert Routinen heißt **_onexit** ausführen auf eine DLL-Datei nach dem Entladen des **DllMain** mit DLL_PROCESS_DETACH aufgerufen wird.
+Im Fall beim **_onexit** innerhalb einer DLL, die Routinen, die bei registriert heißt **_onexit** auf einer DLL nach dem Entladen des **DllMain** mit DLL_PROZESS_DETACH aufgerufen wird.
 
 **_onexit** ist eine Microsoft-Erweiterung. Verwenden Sie für ANSI-Portabilität [Atexit](atexit.md). Die **_onexit_m** Version der Funktion ist für die Verwendung des gemischten Modus.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_onexit**|\<stdlib.h>|
 
@@ -132,7 +122,7 @@ int fn4()
 }
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 This is executed first.

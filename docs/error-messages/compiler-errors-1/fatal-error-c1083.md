@@ -1,27 +1,17 @@
 ---
-title: Schwerwiegender Fehler C1083 | Microsoft-Dokumentation
-ms.custom: ''
+title: Schwerwiegender Fehler C1083
 ms.date: 09/01/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C1083
-dev_langs:
-- C++
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c29fa07d13eb8d0a18491cb67b65fe4ad2d87de6
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: ae4c6a9f6c41d94aa1e36ba4a79226b49df08b49
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538281"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50628006"
 ---
 # <a name="fatal-error-c1083"></a>Schwerwiegender Fehler C1083
 
@@ -45,7 +35,7 @@ Bestimmte Header der C-Laufzeitbibliothek befinden sich in einem Unterverzeichni
 
 ## <a name="the-file-is-not-included-in-the-include-search-path"></a>Die Datei ist nicht in den Include-Suchpfad enthalten.
 
-Der Compiler kann die Datei anhand der Suchregeln, die in einer `#include`- oder `#import`-Direktive angegeben wurden, nicht finden. Z. B. bei der eine Header-Dateiname in Anführungszeichen eingeschlossen ist,
+Der Compiler kann die Datei anhand der Suchregeln, die in einer `#include`- oder `#import`-Anweisung angegeben wurden, nicht finden. Z. B. bei der eine Header-Dateiname in Anführungszeichen eingeschlossen ist,
 
 `#include "myincludefile.h"`
 
@@ -93,7 +83,7 @@ Wenn Sie zum Bearbeiten oder Zugriff auf die Datei ein anderes Programm verwende
 
 ## <a name="the-wrong-version-of-a-file-name-is-included"></a>Die falsche Version eines Dateinamens wird verwendet
 
-Ein Fehler C1083 kann auch darauf hinweisen, dass die falsche Version einer Datei verwendet wird. Ein Build kann z. B. die falsche Version einer Datei enthalten, die eine nicht für diesen Build vorgesehene `#include`-Direktive für eine Headerdatei aufweist. Z. B. bestimmte Dateien möglicherweise gelten nur für X86 erstellt wurde, oder klicken Sie auf der Debug-Builds. Wenn die Headerdatei nicht gefunden wird, generiert der Compiler einen Fehler C1083. Dieses Problem kann behoben werden, indem die richtige Datei verwendet wird. Durch Hinzufügen der Headerdatei oder des Verzeichnisses zum Build lässt sich das Problem nicht beheben.
+Ein Fehler C1083 kann auch darauf hinweisen, dass die falsche Version einer Datei verwendet wird. Ein Build kann z. B. die falsche Version einer Datei enthalten, die eine nicht für diesen Build vorgesehene `#include`-Anweisung für eine Headerdatei aufweist. Z. B. bestimmte Dateien möglicherweise gelten nur für X86 erstellt wurde, oder klicken Sie auf der Debug-Builds. Wenn die Headerdatei nicht gefunden wird, generiert der Compiler einen Fehler C1083. Dieses Problem kann behoben werden, indem die richtige Datei verwendet wird. Durch Hinzufügen der Headerdatei oder des Verzeichnisses zum Build lässt sich das Problem nicht beheben.
 
 ## <a name="the-precompiled-headers-are-not-yet-precompiled"></a>Die vorkompilierten Header sind noch nicht vorkompiliert
 

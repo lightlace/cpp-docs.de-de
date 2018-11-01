@@ -1,26 +1,16 @@
 ---
-title: Pufferungseffekte | Microsoft-Dokumentation
-ms.custom: ''
+title: Pufferungseffekte
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - buffers, effects of buffering
 - buffering, effects of
 ms.assetid: 5d544812-e95e-4f28-b15a-edef3f3414fd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c28deb0f5e30d3ec28fac4805a86645bebf27f22
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e10b28edffdfe3411f86c031bfd12ea886410e20
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842377"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631438"
 ---
 # <a name="effects-of-buffering"></a>Pufferungseffekte
 
@@ -49,7 +39,7 @@ Damit das Programm logisch funktioniert, muss sich das `cout` -Objekt selbst lee
 cout <<"Please wait..." <<flush;
 ```
 
-In diesem Schritt wird der Puffer geleert, wodurch sichergestellt wird, dass die Meldung vor dem Wartevorgang ausgegeben wird. Sie können auch die `endl` Manipulator, der leert den Puffer und gibt einen Zeilenumbruch, oder Sie können die `cin` Objekt. Dieses Objekt (mit dem `cerr` - oder dem `clog` -Objekt) ist in der Regel mit dem `cout` -Objekt verknüpft. Daher wird bei jeder Verwendung von `cin` (oder einem der Objekte `cerr` oder `clog` ) das `cout` -Objekt geleert.
+In diesem Schritt wird der Puffer geleert, wodurch sichergestellt wird, dass die Meldung vor dem Wartevorgang ausgegeben wird. Sie können auch die `endl` Manipulator, der den Puffer leert und gibt einen Zeilenumbruch, oder Sie können die `cin` Objekt. Dieses Objekt (mit dem `cerr` - oder dem `clog` -Objekt) ist in der Regel mit dem `cout` -Objekt verknüpft. Daher wird bei jeder Verwendung von `cin` (oder einem der Objekte `cerr` oder `clog` ) das `cout` -Objekt geleert.
 
 ## <a name="see-also"></a>Siehe auch
 

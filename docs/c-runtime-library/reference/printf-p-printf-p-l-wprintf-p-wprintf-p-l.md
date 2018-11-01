@@ -1,10 +1,6 @@
 ---
-title: _printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _printf_p
 - _wprintf_p
@@ -31,8 +27,6 @@ f1_keywords:
 - _wprintf_p_l
 - _printf_p_l
 - wprintf_p_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - printf_p function
 - printf_p_l function
@@ -45,16 +39,12 @@ helpviewer_keywords:
 - tprintf_p_l function
 - _printf_p_l function
 ms.assetid: 1b7e9ef9-a069-45db-af9d-c2730168322e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 09a66fc0149b33d8fb5fe2d7eab411bf66e8dbdc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c7d798bde3ab68541bdcd64b768275b864694284
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404244"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660359"
 ---
 # <a name="printfp-printfpl-wprintfp-wprintfpl"></a>_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
 
@@ -100,18 +90,18 @@ Gibt die Anzahl gedruckter Zeichen oder einen negativen Wert zurück, wenn ein F
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_printf_p** -Funktion formatiert und druckt eine Reihe von Zeichen und Werten für den Standardausgabestream **"stdout"**. Wenn Argumente der *Format* Zeichenfolge, die *Format* Zeichenfolge muss Spezifikationen enthalten, die das Ausgabeformat für die Argumente bestimmen (finden Sie unter [Printf_p-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md)).
+Die **_printf_p** -Funktion formatiert und gibt eine Reihe von Zeichen und Werten in den Standardausgabestream **"stdout"**. Wenn Argumente der *Format* Zeichenfolge, die *Format* Zeichenfolge muss Spezifikationen enthalten, die das Ausgabeformat der Argumente festlegen (finden Sie unter [Printf_p-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md)).
 
-Der Unterschied zwischen **_printf_p** und **Printf_s** handelt, **_printf_p** positionelle Parameter unterstützt, wodurch ermöglicht das Angeben der Reihenfolge, in denen die Argumente sind, in der Formatzeichenfolge verwendet. Weitere Informationen finden Sie unter [printf-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md).
+Der Unterschied zwischen **_printf_p** und **Printf_s** ist, die **_printf_p** positionelle Parameter unterstützt, wodurch angeben der Reihenfolge, in denen die Argumente sind, in der Formatzeichenfolge verwendet. Weitere Informationen finden Sie unter [printf-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**_wprintf_p** ist die Breitzeichen-Version des **_printf_p**; sie verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **_printf_p** derzeit die Ausgabe in eine Unicode-Stream unterstützt keine.
+**_wprintf_p** ist die Breitzeichen-Version von **_printf_p**; sie verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **_printf_p** unterstützt derzeit keine Ausgabe in eine UNICODE-Stream.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschemaparameter, der übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas.
+Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
 
 > [!IMPORTANT]
 > Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist.
 
-Wenn *Format* oder *Argument* sind **NULL**, oder die Formatzeichenfolge enthält ungültige Formatierungszeichen **_printf_p** und **_wprintf_p** Funktionen einen Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktion-1 zurück und legt **Errno** auf **EINVAL**.
+Wenn *Format* oder *Argument* sind **NULL**, oder die Formatzeichenfolge enthält ungültige Formatierungszeichen **_printf_p** und **_wprintf_p** Funktionen einen Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktion gibt-1 zurück und legt **Errno** zu **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -122,12 +112,12 @@ Wenn *Format* oder *Argument* sind **NULL**, oder die Formatzeichenfolge enthäl
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_printf_p**, **_printf_p_l**|\<stdio.h>|
 |**_wprintf_p**, **_wprintf_p_l**|\<stdio.h> oder \<wchar.h>|
 
-Die Konsole wird in apps der universellen Windows-Plattform (UWP) nicht unterstützt. Standardstream Handles, die mit der Konsole verknüpften sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in uwp-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die Konsole wird in apps für universelle Windows-Plattform (UWP) nicht unterstützt. Standardstreamhandles, die mit der Konsole verknüpft sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in UWP-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 

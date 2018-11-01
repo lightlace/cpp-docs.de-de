@@ -1,10 +1,6 @@
 ---
-title: _stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32 | Microsoft-Dokumentation
-ms.custom: ''
+title: _stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wstat64
 - _stati64
@@ -78,8 +74,6 @@ f1_keywords:
 - stat/_wstati64
 - stat/_wstat32i64
 - stat/_wstat64i32
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], status information
 - _stat function
@@ -112,16 +106,12 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 13ce367bdee78be1610a36c887a04f2130375114
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 316012479ec374cc5f40061384475008fe04e331
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418012"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637280"
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 
@@ -190,26 +180,26 @@ Ein Zeiger auf die Struktur, in der die Ergebnisse gespeichert werden.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt „0“ zurück, wenn die Dateistatusinformationen abgerufen werden. Ein Rückgabewert "-1" gibt einen Fehler an, in diesem Fall **Errno** festgelegt ist, um **ENOENT**, der angibt, dass der Dateiname oder Pfad nicht gefunden werden konnte. Ein Rückgabewert von **EINVAL** zeigt einen ungültigen Parameter; **Errno** auch **EINVAL** in diesem Fall.
+Jede dieser Funktionen gibt „0“ zurück, wenn die Dateistatusinformationen abgerufen werden. Ein Rückgabewert 1 gibt einen Fehler, in diesem Fall **Errno** nastaven NA hodnotu **ENOENT**, gibt an, dass der Dateiname oder Pfad nicht gefunden werden konnte. Der Rückgabewert **EINVAL** zeigt einen ungültigen Parameter; **Errno** nastaven NA hodnotu auch **EINVAL** in diesem Fall.
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
-Der Datumsstempel einer Datei dargestellt werden kann, wird jedoch höher als Mitternacht, 1. Januar 1970 und vor 23:59:59, 31. Dezember 3000, UTC, es sei denn, Sie verwenden **_stat32** oder **_wstat32**, oder definiertes **_ USE_32BIT_TIME_T**, in diesem Fall das Datum nur bis 23:59:59 am 18. Januar 2038 UTC dargestellt werden kann.
+Der Datumsstempel einer Datei dargestellt werden kann, wenn es als Mitternacht, 1. Januar 1970 und vor 23:59:59, 31. Dezember 3000 UTC ist, es sei denn, Sie verwenden **_stat32** oder **_wstat32**, oder Sie definiert haben **_ USE_32BIT_TIME_T**, in diesem Fall das Datum nur bis 23:59:59 am 18. Januar 2038, UTC dargestellt werden kann.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_stat** Funktion ruft Informationen über die Datei oder das Verzeichnis, die gemäß *Pfad* und speichert ihn in der Struktur verweist *Puffer*. **_stat** automatisch behandelt Multibyte-Zeichenfolgenargumente nach Bedarf, erkennen Multibyte-Zeichensequenzen entsprechend der multibyte-Codepage aktuell in Verwendung.
+Die **_stat** Funktion ruft Informationen über die Datei oder das Verzeichnis, die anhand des *Pfad* und speichert sie in der Struktur verweist *Puffer*. **_stat** behandelt automatisch Multibyte-Zeichenfolge nach Bedarf erkennt multibytezeichensequenzen gemäß dem multibyte-Codepage aktuell.
 
-**_wstat** ist eine Breitzeichen-Version von **_stat**; das *Pfad* Argument **_wstat** ist eine Breitzeichen-Zeichenfolge. **_wstat** und **_stat** Verhalten sich identisch, außer dass **_wstat** verarbeitet keine Multibyte-Zeichenfolgen.
+**_wstat** ist eine Breitzeichen-Version von **_stat**; die *Pfad* Argument **_wstat** ist eine Breitzeichen-Zeichenfolge. **_wstat** und **_stat** Verhalten sich identisch, außer dass **_wstat** verarbeitet keine Multibyte-Zeichenfolgen.
 
 Varianten dieser Funktionen unterstützen 32-Bit- oder 64-Bit-Zeittypen und 32-Bit- oder 64-Bit-Dateilängen. Das erste numerische Suffix (**32** oder **64**) gibt die Größe der Zeit verwendet; das zweite Suffix ist entweder **i32** oder **i64**, der angibt, ob die Dateigröße als ganze 32-Bit oder 64-Bit-Zahl dargestellt wird.
 
-**_stat** entspricht **_stat64i32**, und **Struktur** **_stat** enthält einen 64-Bit-Uhrzeitwert. Dies ist "true", wenn **_USE_32BIT_TIME_T** definiert ist, wird in diesem Fall wird das alte Verhalten wirksam; **_stat** verwendet eine 32-Bit-Zeit und **Struktur** **_stat** enthält einen 32-Bit-Uhrzeitwert. Dasselbe gilt für **_stati64**.
+**_stat** entspricht **_stat64i32**, und **Struktur** **_stat** enthält einen 64-Bit-Uhrzeitwert. Dies gilt, es sei denn, **_USE_32BIT_TIME_T** definiert ist, wird in diesem Fall ist das alte Verhalten wirksam. **_stat** verwendet einen 32-Bit-Uhrzeitwert, und **Struktur** **_stat** enthält einen 32-Bit-Uhrzeitwert. Das gleiche gilt für **_stati64**.
 
 > [!NOTE]
-> **_wstat** mit Windows Vista symbolischen Links nicht funktioniert. In diesen Fällen **_wstat** meldet immer eine Größe von 0. **_stat** funktioniert ordnungsgemäß mit symbolischen Verknüpfungen.
+> **_wstat** funktioniert nicht mit symbolischen Verknüpfungen von Windows Vista. In diesen Fällen **_wstat** wird immer eine Größe von 0. **_stat** funktioniert ordnungsgemäß mit symbolischen Verknüpfungen.
 
-Diese Funktion überprüft ihre Parameter. Wenn entweder *Pfad* oder *Puffer* ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
+Diese Funktion überprüft ihre Parameter. Wenn entweder *Pfad* oder *Puffer* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
 
 ### <a name="time-type-and-file-length-type-variations-of-stat"></a>_stat-Variationen des Uhrzeittyps und Dateilängentyps
 
@@ -241,20 +231,20 @@ Die **_stat** Struktur, die in SYS\STAT definiert. H, enthält die folgenden Fel
 **st_gid**|Numerischer Bezeichner der Gruppe, die die Datei besitzt (UNIX-spezifisch). Dieses Feld weist auf Windows-Systemen immer den Wert „0“ (null) auf. Eine umgeleitete Datei wird als Windows-Datei klassifiziert.
 **st_atime**|Zeitpunkt des letzten Zugriffs auf die Datei. Gültig auf NTFS-, aber nicht auf FAT-formatierten Laufwerken.
 **st_ctime**|Uhrzeit der Dateierstellung. Gültig auf NTFS-, aber nicht auf FAT-formatierten Laufwerken.
-**st_dev**|Laufwerksnummer des Datenträgers, der die Datei enthält (wie **St_rdev**).
-**st_ino**|Anzahl der Informationsknoten (der **Inode**) für die Datei (UNIX-spezifisch). In UNIX-Dateisystemen die **Inode** beschreibt die Datums- und Zeitstempel, Berechtigungen und Inhalt. Wenn Dateien feste miteinander verknüpft sind, verwenden sie dieselbe **Inode**. Die **Inode**, und daher **St_ino**, in den Dateisystemen FAT, HPFS oder NTFS ohne Bedeutung hat.
-**st_mode**|Bitmaske für Dateimodusinformationen. Die **_S_IFDIR** Bit ist gesetzt, wenn *Pfad* gibt das Verzeichnis an; das **_S_IFREG** Bit ist gesetzt, wenn *Pfad* gibt eine gewöhnliche Datei oder ein Gerät. Lese-/Schreibbits für Benutzer werden entsprechend dem Berechtigungsmodus der Datei festgelegt; Ausführungsbits für Benutzer werden entsprechend der Dateierweiterung festgelegt.
+**st_dev**|Laufwerksnummer des Datenträgers, das Dateien enthält (wie **St_rdev**).
+**st_ino**|Anzahl der Informationsknoten (der **Inode**) für die Datei (UNIX-spezifisch). Bei UNIX-Dateisystemen die **Inode** wird beschrieben, die Datum und Zeitstempel, Berechtigungen und Inhalt. Wenn Dateien schwer-miteinander verknüpft sind, verwenden sie dieselbe **Inode**. Die **Inode**, weshalb **St_ino**, in der FAT, HPFS oder NTFS-Dateisysteme keine Bedeutung hat.
+**st_mode**|Bitmaske für Dateimodusinformationen. Die **_S_IFDIR** Bit ist gesetzt, wenn *Pfad* gibt ein Verzeichnis an, die **_S_IFREG** Bit ist gesetzt, wenn *Pfad* gibt eine normale Datei oder ein Gerät. Lese-/Schreibbits für Benutzer werden entsprechend dem Berechtigungsmodus der Datei festgelegt; Ausführungsbits für Benutzer werden entsprechend der Dateierweiterung festgelegt.
 **st_mtime**|Uhrzeit der letzten Änderung der Datei.
 **st_nlink**|Bei Nicht-NTFS-Dateisystemen immer „1“.
-**st_rdev**|Laufwerksnummer des Datenträgers, der die Datei enthält (wie **St_dev**).
-**st_size**|Die Größe der Datei in Bytes. eine ganze 64-Bit-Zahl für Varianten mit der **i64** Suffix.
+**st_rdev**|Laufwerksnummer des Datenträgers, das Dateien enthält (wie **St_dev**).
+**st_size**|Die Größe der Datei in Byte; eine 64-Bit ganze Zahl für Varianten mit dem **i64** Suffix.
 **st_uid**|Numerischer Bezeichner des Benutzers, der die Datei besitzt (UNIX-spezifisch). Dieses Feld hat bei Windows-Systemen immer den Wert „0“. Eine umgeleitete Datei wird als Windows-Datei klassifiziert.
 
-Wenn *Pfad* bezieht sich auf einem Gerät die **St_size**, verschiedenen Zeitfelder, **St_dev**, und **St_rdev** Felder in der **_stat**  Struktur sind bedeutungslos. Da „STAT.H“ den [_dev_t](../../c-runtime-library/standard-types.md) -Typ verwendet, der in „TYPES.H“ definiert ist, müssen Sie „TYPES.H“ vor „STAT.H“ in Ihrem Code einschließen.
+Wenn *Pfad* bezieht sich auf einem Gerät der **St_size**, verschiedenen Zeitfelder, **St_dev**, und **St_rdev** Felder in der **_stat**  Struktur sind bedeutungslos. Da „STAT.H“ den [_dev_t](../../c-runtime-library/standard-types.md) -Typ verwendet, der in „TYPES.H“ definiert ist, müssen Sie „TYPES.H“ vor „STAT.H“ in Ihrem Code einschließen.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|Optionale Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionale Header|
 |-------------|---------------------|----------------------|
 |**_stat**, **_stat32**, **_stat64**, **_stati64**, **_stat32i64**, **_stat64i32**|\<sys/types.h> gefolgt von \<sys/stat.h>|\<errno.h>|
 |**_wstat**, **_wstat32**, **_wstat64**, **_wstati64**, **_wstat32i64**, **_wstat64i32**|\<sys/types.h> gefolgt von \<sys/stat.h> oder \<wchar.h>|\<errno.h>|

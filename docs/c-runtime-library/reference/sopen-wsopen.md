@@ -1,10 +1,6 @@
 ---
-title: _sopen, _wsopen | Microsoft-Dokumentation
-ms.custom: ''
+title: _sopen, _wsopen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _sopen
 - _wsopen
@@ -26,8 +22,6 @@ f1_keywords:
 - wsopen
 - _sopen
 - _tsopen
-dev_langs:
-- C++
 helpviewer_keywords:
 - sopen function
 - sharing files
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - files [C++], sharing
 - _wsopen function
 ms.assetid: a9d4cccf-06e9-414d-96fa-453fca88cc1f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0e8d7f7624dc8c521186aa697ad8825c77e0108f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4bb728b8e48190eb01e47dc9cd7de65a350f612d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418098"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626130"
 ---
 # <a name="sopen-wsopen"></a>_sopen, _wsopen
 
@@ -88,12 +78,12 @@ Berechtigungseinstellung.
 
 Jede dieser Funktionen gibt einen Dateideskriptor für die geöffnete Datei zurück.
 
-Wenn *Filename* oder *Oflag* ist ein **NULL** -Zeiger ist, oder wenn *Oflag* oder *Shflag* liegt nicht innerhalb einer gültigen Bereich der Werte, die Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen – 1 zurück und legen Sie **Errno** auf einen der folgenden Werte.
+Wenn *Filename* oder *Oflag* ist eine **NULL** -Zeiger ist, oder wenn *Oflag* oder *Shflag* ist nicht in einen gültigen Bereich der Werte, die Handler für ungültige Parameter aufgerufen wird, der wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen-1 zurück und legen Sie **Errno** auf einen der folgenden Werte.
 
 |errno-Wert|Bedingung|
 |-|-|
 **EACCES**|Der angegebene Pfad ist ein Verzeichnis, oder die Datei ist schreibgeschützt, aber es wurde versucht, sie zum Schreiben zu öffnen.
-**EEXIST**|**_O_CREAT** und **_O_EXCL** Kennzeichen wurden angegeben, aber *Filename* ist bereits vorhanden.
+**EEXIST**|**_O_CREAT** und **_O_EXCL** Flag wurden angegeben, aber *Filename* ist bereits vorhanden.
 **EINVAL**|Ungültige *Oflag* oder *Shflag* Argument.
 **EMFILE**|Es sind keine Dateideskriptoren mehr verfügbar.
 **ENOENT**|Datei oder Pfad nicht gefunden.
@@ -102,7 +92,7 @@ Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_do
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_sopen** -Funktion öffnet die Datei, die vom angegebenen *Filename* und die Datei für Lese- oder Schreibfreigabe, vorbereitet werden, gemäß der Definition von *Oflag* und *Shflag* . **_wsopen** ist eine Breitzeichen-Version von **_sopen**; das *Filename* Argument **_wsopen** ist eine Breitzeichen-Zeichenfolge. **_wsopen** und **_sopen** Verhalten sich andernfalls identisch.
+Die **_sopen** -Funktion öffnet die angegebene Datei *Filename* und die Datei für Lese- oder Schreibfreigabe, vorbereitet werden, gemäß *Oflag* und *Shflag* . **_wsopen** ist eine Breitzeichen-Version von **_sopen**; die *Filename* Argument **_wsopen** ist eine Breitzeichen-Zeichenfolge. **_wsopen** und **_sopen** Verhalten sich andernfalls identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -110,35 +100,35 @@ Die **_sopen** -Funktion öffnet die Datei, die vom angegebenen *Filename* und d
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tsopen**|**_sopen**|**_sopen**|**_wsopen**|
 
-Der Ganzzahlausdruck *Oflag* wird gebildet, indem die Kombination einer oder mehrerer der folgenden Manifestkonstanten besteht, die in definiert sind \<fcntl.h >. Wenn zwei oder mehr Konstanten das Argument bilden *Oflag*, sind mit dem bitweisen OR-Operator kombiniert ( **&#124;** ).
+Der ganzzahlige Ausdruck *Oflag* wird gebildet durch Kombination einer oder mehrere der folgenden Manifestkonstanten, die definiert sind \<fcntl.h >. Wenn zwei oder mehr Konstanten das Argument bilden *Oflag*, sie werden mit dem bitweisen OR-Operator kombiniert ( **&#124;** ).
 
 |*Oflag* Konstanten|Verhalten|
 |-|-|
 **_O_APPEND**|Verschiebt den Dateizeiger vor jedem Schreibvorgang an das Ende der Datei.
 **_O_BINARY**|Öffnet die Datei im Binärmodus (nicht übersetzt). (Eine Beschreibung des binären Modus finden Sie unter [fopen](fopen-wfopen.md).)
-**_O_CREAT**|Erstellt eine Datei und öffnet sie zum Schreiben. Hat keine Auswirkung, wenn die Datei durch angegeben *Filename* vorhanden ist. Die *Pmode* Argument ist erforderlich, wenn **_O_CREAT** angegeben ist.
+**_O_CREAT**|Erstellt eine Datei und öffnet sie zum Schreiben. Hat keine Auswirkungen, wenn die Datei durch angegeben *Filename* vorhanden ist. Die *Pmode* Argument ist erforderlich, wenn **_O_CREAT** angegeben ist.
 **_O_CREAT** &AMP;#124; **_O_SHORT_LIVED**|Erstellt eine temporäre Datei und leert sie, wenn möglich, nicht auf die Festplatte. Die *Pmode* Argument ist erforderlich, wenn **_O_CREAT** angegeben ist.
 **_O_CREAT** &AMP;#124; **_O_TEMPORARY**|Erstellt eine temporäre Datei. Die Datei wird gelöscht, wenn der letzte Dateideskriptor geschlossen wird. Die *Pmode* Argument ist erforderlich, wenn **_O_CREAT** angegeben ist.
-**_O_CREAT**&AMP;#124; ` _O_EXCL`|Gibt einen Fehlerwert zurück, wenn eine Datei gemäß *Filename* vorhanden ist. Gilt nur bei Verwendung mit **_O_CREAT**.
+**_O_CREAT**&AMP;#124; ` _O_EXCL`|Gibt einen Fehlerwert zurück, wenn eine Datei, die anhand des *Filename* vorhanden ist. Gilt nur bei Verwendung mit **_O_CREAT**.
 **_O_NOINHERIT**|Verhindert die Erstellung eines gemeinsam verwendeten Dateideskriptors.
 **_O_RANDOM**|Gibt an, dass das Zwischenspeichern für den zufälligen Zugriff vom Datenträger optimiert, aber nicht darauf beschränkt ist.
 **_O_RDONLY**|Öffnet eine Datei nur zum Lesen. Kann nicht angegeben werden, mit **_O_RDWR** oder **_O_WRONLY**.
 **_O_RDWR**|Öffnet eine Datei zum Lesen und zum Schreiben. Kann nicht angegeben werden, mit **_O_RDONLY** oder **_O_WRONLY**.
 **_O_SEQUENTIAL**|Gibt an, dass das Zwischenspeichern für den sequenziellen Zugriff vom Datenträger optimiert, aber nicht darauf beschränkt ist.
 **_O_TEXT**|Öffnet eine Datei im Textmodus (übersetzt). (Weitere Informationen finden Sie unter [Text- und Binärmodus-Datei-E/A](../../c-runtime-library/text-and-binary-mode-file-i-o.md) und [fopen](fopen-wfopen.md).)
-**_O_TRUNC**|Öffnet eine Datei und verkürzt sie auf die Länge Null. Für die Datei muss Schreibberechtigung bestehen. Kann nicht angegeben werden, mit **_O_RDONLY**. **_O_TRUNC** mit verwendet **_O_CREAT** öffnet eine vorhandene Datei oder eine Datei erstellt. **Hinweis:** der **_O_TRUNC** Flag zerstört den Inhalt der angegebenen Datei.
+**_O_TRUNC**|Öffnet eine Datei und verkürzt sie auf die Länge Null. Für die Datei muss Schreibberechtigung bestehen. Kann nicht angegeben werden, mit **_O_RDONLY**. **_O_TRUNC** mit verwendet **_O_CREAT** öffnet eine vorhandene Datei oder erstellt eine Datei. **Hinweis:** der **_O_TRUNC** Flag zerstört die Inhalte der angegebenen Datei.
 **_O_WRONLY**|Öffnet eine Datei nur zum Schreiben. Kann nicht angegeben werden, mit **_O_RDONLY** oder **_O_RDWR**.
 **_O_U16TEXT**|Öffnet eine Datei im Unicode-UTF-16-Modus.
 **_O_U8TEXT**|Öffnet eine Datei im Unicode-UTF-8-Modus.
 **_O_WTEXT**|Öffnet eine Datei im Unicode-Modus.
 
-Um die Dateizugriffsmodus anzugeben, geben Sie **_O_RDONLY**, **_O_RDWR**, oder **_O_WRONLY**. Es gibt keinen Standardwert für den Zugriffsmodus.
+Um den Zugriffsmodus für die Datei anzugeben, geben Sie **_O_RDONLY**, **_O_RDWR**, oder **_O_WRONLY**. Es gibt keinen Standardwert für den Zugriffsmodus.
 
-Wenn eine Datei im Unicode-Modus mit geöffnet wird **_O_WTEXT**, **_O_U8TEXT**, oder **_O_U16TEXT**Eingabe übersetzen die Eingabefunktionen die aus der Datei Daten in UTF-16-Daten gelesenen gespeichert als Typ **Wchar_t**. Funktionen, die in eine im Unicode-Modus geöffnete Datei schreiben, erwarten Puffer, die UTF-16-Daten gespeichert, die als Typ enthalten **Wchar_t**. Wenn eine Datei als UTF-8 kodiert ist, dann werden UTF-16-Daten beim Schreiben in UTF-8 übersetzt, und die UTF-8-kodierten Inhalte der Datei werden beim Lesen in UTF-16 übersetzt. Der Versuch, in diesem Modus eine ungerade Anzahl von Bytes in Unicode zu lesen oder zu schreiben, führt zu einem Parametervalidierungsfehler. Wenn Sie Daten lesen oder schreiben möchten, die in Ihrem Programm als UTF-8 gespeichert sind, verwenden Sie den Text- oder Binärdateienmodus anstelle eines Unicode-Modus. Sie sind für jede erforderliche Kodierungsübersetzung verantwortlich.
+Wenn eine Datei im Unicode-Modus mit geöffnet wird **_O_WTEXT**, **_O_U8TEXT**, oder **_O_U16TEXT**Eingabe übersetzen Eingabefunktionen die Daten, die aus der Datei in UTF-16-Daten gelesen werden gespeichert als Typ **"wchar_t"**. Funktionen, die für eine im Unicode-Modus geöffnete Datei zu schreiben, erwarten Puffer, die UTF-16-Daten als Typ enthalten **"wchar_t"**. Wenn eine Datei als UTF-8 kodiert ist, dann werden UTF-16-Daten beim Schreiben in UTF-8 übersetzt, und die UTF-8-kodierten Inhalte der Datei werden beim Lesen in UTF-16 übersetzt. Der Versuch, in diesem Modus eine ungerade Anzahl von Bytes in Unicode zu lesen oder zu schreiben, führt zu einem Parametervalidierungsfehler. Wenn Sie Daten lesen oder schreiben möchten, die in Ihrem Programm als UTF-8 gespeichert sind, verwenden Sie den Text- oder Binärdateienmodus anstelle eines Unicode-Modus. Sie sind für jede erforderliche Kodierungsübersetzung verantwortlich.
 
-Wenn **_sopen** aufgerufen wird und **_O_WRONLY** | **_O_APPEND** (Anfügemodus) und **_O_WTEXT**, **_O_ U16TEXT**, oder **_O_U8TEXT**, versucht sie zuerst Öffnen der Datei zum Lesen und schreiben, die BOM zu lesen, und öffnen Sie es erneut nur zum Schreiben. Wenn das Öffnen der Datei zum Lesen und Schreiben fehlschlägt, wird die Datei nur zum Schreiben geöffnet und der Standardwert für die Unicode-Moduseinstellung verwendet.
+Wenn **_sopen** aufgerufen wird und **_O_WRONLY** | **_O_APPEND** (Anfügemodus) und **_O_WTEXT**, **_O_ U16TEXT**, oder **_O_U8TEXT**, zuerst wird versucht, das Öffnen der Datei zum Lesen und schreiben, die BOM zu lesen, und öffnen Sie es erneut nur zum Schreiben. Wenn das Öffnen der Datei zum Lesen und Schreiben fehlschlägt, wird die Datei nur zum Schreiben geöffnet und der Standardwert für die Unicode-Moduseinstellung verwendet.
 
-Das Argument *Shflag* ist ein konstanter Ausdruck, der aus einer der folgenden Manifestkonstanten besteht, die in definiert sind \<share.h >.
+Das Argument *Shflag* ist ein konstanter Ausdruck, der aus einer der folgenden Manifestkonstanten, die definiert sind \<share.h >.
 
 |*Shflag* Konstanten|Verhalten|
 |-|-|
@@ -147,7 +137,7 @@ Das Argument *Shflag* ist ein konstanter Ausdruck, der aus einer der folgenden M
 **_SH_DENYRD**|Verweigert den Lesezugriff auf eine Datei.
 **_SH_DENYNO**|Gestattet Lese- und Schreibzugriff.
 
-Die *Pmode* Argument ist erforderlich, nur wenn **_O_CREAT** angegeben ist. Wenn die Datei nicht vorhanden ist, *Pmode* gibt an, die berechtigungseinstellungen der Datei, die festgelegt werden, wenn die neue Datei zum ersten Mal geschlossen wird. Andernfalls *Pmode* wird ignoriert. *Pmode* ist ein Ganzzahlausdruck, der eine oder beide der Manifestkonstanten enthält **_S_IWRITE** und **_S_IREAD**, die definiert werden, \<sys\stat >. Wenn beide Konstanten verwendet werden, werden sie mithilfe des bitweisen OR-Operators kombiniert. Die Bedeutung der *Pmode* lautet wie folgt.
+Die *Pmode* Argument ist erforderlich, nur, wenn **_O_CREAT** angegeben ist. Wenn die Datei nicht vorhanden ist, *Pmode* gibt an, die berechtigungseinstellungen der Datei, die festgelegt werden, wenn die neue Datei zum ersten Mal geschlossen wird. Andernfalls *Pmode* wird ignoriert. *Pmode* ist ein Ganzzahlausdruck, der eine oder beide der Manifestkonstanten enthält **_S_IWRITE** und **_S_IREAD**, die definiert werden, \<sys\stat >. Wenn beide Konstanten verwendet werden, werden sie mithilfe des bitweisen OR-Operators kombiniert. Die Bedeutung der *Pmode* lautet wie folgt.
 
 |*pmode*|Bedeutung|
 |-|-|
@@ -155,13 +145,13 @@ Die *Pmode* Argument ist erforderlich, nur wenn **_O_CREAT** angegeben ist. Wenn
 **_S_IWRITE**|Schreiben zugelassen. (Lässt tatsächlich Lesen und Schreiben zu.)
 **_S_IREAD** &AMP;#124; **_S_IWRITE**|Lesen und Schreiben erlaubt.
 
-Wenn keine Schreibberechtigung gewährt wird, kann die Datei nur gelesen werden. Im Windows-Betriebssystem sind alle Dateien lesbar. Es ist nicht möglich, nur Schreibberechtigungen zu vergeben. Aus diesem Grund die Modi **_S_IWRITE** und **_S_IREAD** | **_S_IWRITE** sind gleichwertig.
+Wenn keine Schreibberechtigung gewährt wird, kann die Datei nur gelesen werden. Im Windows-Betriebssystem sind alle Dateien lesbar. Es ist nicht möglich, nur Schreibberechtigungen zu vergeben. Daher sind die Modi **_S_IWRITE** und **_S_IREAD** | **_S_IWRITE** entsprechen.
 
-**_sopen** gilt die aktuelle dateiberechtigungsmaske auf *Pmode* , bevor die Berechtigungen festgelegt sind. (Siehe [_umask](umask.md).)
+**_sopen** wendet auf die aktuelle dateiberechtigungsmaske *Pmode* , bevor die Berechtigungen festgelegt sind. (Siehe [_umask](umask.md).)
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|Optionaler Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|
 |-------------|---------------------|---------------------|
 |**_sopen**|\<io.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|
 |**_wsopen**|\<io.h> oder \<wchar.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|

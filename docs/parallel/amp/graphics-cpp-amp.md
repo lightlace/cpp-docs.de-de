@@ -1,23 +1,13 @@
 ---
-title: (Grafiken (c++ AMP) | Microsoft-Dokumentation
-ms.custom: ''
+title: Grafiken (C++ AMP)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 97c673e564a91447854dc02a18ced0b4f0061a9f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fcc1f11ff716654aadef91d86137b97e93b0a80f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408218"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570314"
 ---
 # <a name="graphics-c-amp"></a>Grafiken (C++ AMP)
 
@@ -67,7 +57,7 @@ Der Vorgang wird für jede Komponente einzeln zwischen der jeweiligen Komponente
 
 ### <a name="swizzling-expressions"></a>Swizzeln von Ausdrücken
 
-Die Kurzvektorbibliothek unterstützt das Accessorkonstrukt `vector_type.identifier`, um auf die Komponenten eines Kurzvektors zuzugreifen. Die `identifier`, dies wird auch bezeichnet als eine *swizzelnder Ausdruck*, gibt die Komponenten des Vektors. Der Ausdruck kann ein l-Wert oder ein r-Wert sein. Einzelne Zeichen des Bezeichners möglicherweise: X, y, Z und w; oder "R", "g", "b", und ein. "X" und "R" bedeutet, dass die nullte Komponente, "y" und "g" die erste Komponente, und So weiter. (Beachten Sie, dass "x" und "r" nicht im gleichen Bezeichner verwendet werden dürfen.) Daher geben "rgba" und "xyzw" dasselbe Ergebnis zurück. Zugriffsmethoden mit einzelnen Komponenten wie „x“ und „y“ sind Skalarwerttypen. Accessoren mit mehreren Komponenten sind Kurzvektortypen. Wenn Sie z. B. einen Vektor `int_4` mit dem Namen `fourInts` und den Werten 2, 4, 6 und 8 erstellen, dann gibt `fourInts.y` die ganze Zahl 4 wieder, und `fourInts.rg` gibt ein `int_2`-Objekt zurück, das die Werte 2 und 4 hat.
+Die Kurzvektorbibliothek unterstützt das Zugriffsmethodenkonstrukt `vector_type.identifier`, um auf die Komponenten eines Kurzvektors zuzugreifen. Die `identifier`, dies wird auch bezeichnet als eine *swizzelnder Ausdruck*, gibt die Komponenten des Vektors. Der Ausdruck kann ein l-Wert oder ein r-Wert sein. Einzelne Zeichen des Bezeichners möglicherweise: X, y, Z und w; oder "R", "g", "b", und ein. "X" und "R" bedeutet, dass die nullte Komponente, "y" und "g" die erste Komponente, und So weiter. (Beachten Sie, dass "x" und "r" nicht im gleichen Bezeichner verwendet werden dürfen.) Daher geben "rgba" und "xyzw" dasselbe Ergebnis zurück. Zugriffsmethoden mit einzelnen Komponenten wie „x“ und „y“ sind Skalarwerttypen. Accessoren mit mehreren Komponenten sind Kurzvektortypen. Wenn Sie z. B. einen Vektor `int_4` mit dem Namen `fourInts` und den Werten 2, 4, 6 und 8 erstellen, dann gibt `fourInts.y` die ganze Zahl 4 wieder, und `fourInts.rg` gibt ein `int_2`-Objekt zurück, das die Werte 2 und 4 hat.
 
 ## <a name="texture-classes"></a>Texturklassen
 

@@ -1,10 +1,6 @@
 ---
-title: Sinh, Sinhf, Sinhl | Microsoft Docs
-ms.custom: ''
+title: Sinh, Sinhf, sinhl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - sinhl
 - sinhf
@@ -26,8 +22,6 @@ f1_keywords:
 - sinh
 - sinhf
 - sinhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - sinh function
 - sinhl function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 220bbeb1d78957be153e23b578f217c8098f7e7d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7327809a20569c520aa799690203458d54e30fb5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410462"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569805"
 ---
 # <a name="sinh-sinhf-sinhl"></a>Sinh, Sinhf, sinhl
 
@@ -72,7 +62,7 @@ Winkel im Bogenmaß.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **Sinh** Funktionen geben den hyperbolischen Sinus *x*. In der Standardeinstellung, wenn das Ergebnis zu groß ist **Sinh** legt **Errno** auf **ERANGE** und gibt ±**HUGE_VAL**.
+Die **Sinh** Funktionen geben den hyperbolischen Sinus *x*. Standardmäßig, wenn das Ergebnis zu groß ist, ist **Sinh** legt **Errno** zu **ERANGE** und ± gibt**HUGE_VAL**.
 
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
 |-----------|-------------------|-----------------------|
@@ -87,7 +77,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Sinh** 
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header (C)|Erforderlicher Header (C++)|
+|-Routine zurückgegebener Wert|Erforderlicher Header (C)|Erforderlicher Header (C++)|
 |-|-|-|
 |**Sinh**, **Sinhf**, **Sinhl**|\<math.h>|\<cmath> oder \<math.h>|
 
