@@ -1,10 +1,6 @@
 ---
-title: _execlp, _wexeclp | Microsoft-Dokumentation
-ms.custom: ''
+title: _execlp, _wexeclp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wexeclp
 - _execlp
@@ -25,24 +21,18 @@ f1_keywords:
 - _wexeclp
 - wexeclp
 - _execlp
-dev_langs:
-- C++
 helpviewer_keywords:
 - execlp function
 - _execlp function
 - _wexeclp function
 - wexeclp function
 ms.assetid: 7b179163-4bcd-4d6a-8baf-68f886791928
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 43105dc6dc12546dd8fbb99367ba430205a62a42
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: db13263ca4574d59821d5783b9ae83f278fef14d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399666"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506638"
 ---
 # <a name="execlp-wexeclp"></a>_execlp, _wexeclp
 
@@ -78,7 +68,7 @@ Liste von Zeigern zu Parametern.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg kehren diese Funktionen nicht zum aufrufenden Prozess zurück. Ein Rückgabewert "-1" gibt einen Fehler an, in diesem Fall die **Errno** (globale Variable) festgelegt ist.
+Bei Erfolg kehren diese Funktionen nicht zum aufrufenden Prozess zurück. Ein Rückgabewert 1 gibt einen Fehler, in diesem Fall die **Errno** globale Variable festgelegt ist.
 
 |**Errno** Wert|Beschreibung|
 |-------------------|-----------------|
@@ -94,9 +84,9 @@ Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_do
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Funktionen lädt einen neuen Prozess und führt, übergibt jedes Befehlszeilenargument als separaten Parameter und mithilfe der **Pfad** -Umgebungsvariable zum Ermitteln der auszuführenden Datei.
+Jede dieser Funktionen lädt einen neuen Prozess und führt, übergibt jedes Befehlszeilenargument als separaten Parameter und Verwenden der **Pfad** -Umgebungsvariable zum Ermitteln der auszuführenden Datei.
 
-Die **_execlp** Funktionen überprüfen ihre Parameter. Wenn *Cmdname* oder *arg0* ist ein null-Zeiger oder eine leere Zeichenfolge ist, rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** auf **EINVAL** und geben-1 zurück. Es wird kein neuer Prozess gestartet.
+Die **_execlp** Funktionen überprüfen ihre Parameter. Wenn *Cmdname* oder *arg0* ist ein null-Zeiger oder leere Zeichenfolge ist, rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EINVAL** und geben-1 zurück. Es wird kein neuer Prozess gestartet.
 
 ## <a name="requirements"></a>Anforderungen
 

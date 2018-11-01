@@ -1,10 +1,6 @@
 ---
-title: _execlpe, _wexeclpe | Microsoft-Dokumentation
-ms.custom: ''
+title: _execlpe, _wexeclpe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execlpe
 - _wexeclpe
@@ -26,24 +22,18 @@ f1_keywords:
 - execlpe
 - wexeclpe
 - _execlpe
-dev_langs:
-- C++
 helpviewer_keywords:
 - wexeclpe function
 - _wexeclpe function
 - _execlpe function
 - execlpe function
 ms.assetid: 07b861da-3e7e-4f1d-bb80-ad69b55e5162
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6b0dd88ce15b3a74c491ae751d4f32196e914d09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e3aa4189d2a384a0092c742909e97c5efc52b5ff
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402175"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506854"
 ---
 # <a name="execlpe-wexeclpe"></a>_execlpe, _wexeclpe
 
@@ -84,7 +74,7 @@ Array von Zeigern zu Umgebungseinstellungen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg kehren diese Funktionen nicht zum aufrufenden Prozess zurück. Ein Rückgabewert "-1" gibt einen Fehler an, in diesem Fall die **Errno** (globale Variable) festgelegt ist.
+Bei Erfolg kehren diese Funktionen nicht zum aufrufenden Prozess zurück. Ein Rückgabewert 1 gibt einen Fehler, in diesem Fall die **Errno** globale Variable festgelegt ist.
 
 |**Errno** Wert|Beschreibung|
 |-------------------|-----------------|
@@ -100,9 +90,9 @@ Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_do
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Funktionen erstellt einen neuen Prozess und führt diesen aus, übergibt jedes Befehlszeilenargument als separaten Parameter und übergibt außerdem ein Array von Zeigern auf die Umgebungseinstellungen. Verwenden Sie diese Funktionen die **Pfad** -Umgebungsvariable zum Ermitteln der auszuführenden Datei.
+Jede dieser Funktionen erstellt einen neuen Prozess und führt diesen aus, übergibt jedes Befehlszeilenargument als separaten Parameter und übergibt außerdem ein Array von Zeigern auf die Umgebungseinstellungen. Diese Funktionen verwenden die **Pfad** -Umgebungsvariable zum Ermitteln der auszuführenden Datei.
 
-Die **_execlpe** Funktionen überprüfen ihre Parameter. Wenn entweder *Cmdname* oder *arg0* ist eine Null-Zeiger oder eine leere Zeichenfolge, rufen diese Funktionen den Handler für ungültige Parameter wie beschrieben in [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** auf **EINVAL** und geben-1 zurück. Es wird kein neuer Prozess gestartet.
+Die **_execlpe** Funktionen überprüfen ihre Parameter. Wenn entweder *Cmdname* oder *arg0* ist eine Null-Zeiger oder leere Zeichenfolge ist, rufen diese Funktionen den Handler für ungültige Parameter wie beschrieben in [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EINVAL** und geben-1 zurück. Es wird kein neuer Prozess gestartet.
 
 ## <a name="requirements"></a>Anforderungen
 

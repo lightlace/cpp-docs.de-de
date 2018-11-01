@@ -1,10 +1,6 @@
 ---
-title: strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l | Microsoft-Dokumentation
-ms.custom: ''
+title: strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wcsncat_s_l
 - wcsncat_s
@@ -35,8 +31,6 @@ f1_keywords:
 - strncat_s
 - _mbsncat_s
 - _tcsncat_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - concatenating strings
 - _mbsncat_s function
@@ -53,23 +47,19 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d88467034eeab3f3a269f735d5b158d94a429873
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb188f9cb5ab5f6f1a8bb66575364b7a94fe6e22
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418470"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500749"
 ---
 # <a name="strncats-strncatsl-wcsncats-wcsncatsl-mbsncats-mbsncatsl"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 
 Fügt einer Zeichenfolge Zeichen an. Diese Versionen von [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) enthalten Sicherheitsverbesserungen, wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
 > [!IMPORTANT]
-> **_mbsncat_s** und **_mbsncat_s_l** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncat_s** und **_mbsncat_s_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -179,15 +169,15 @@ Gibt bei Erfolg 0 (null) zurück und einen Fehlercode, wenn ein Fehler auftritt.
 
 |*strDestination*|*numberOfElements*|*strSource*|Rückgabewert|Inhalt der *StrDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**NULL** oder nicht abgeschlossen|alle|alle|**EINVAL**|nicht geändert|
-|alle|alle|**NULL**|**EINVAL**|nicht geändert|
-|alle|0 oder zu klein|alle|**ERANGE**|nicht geändert|
+|**NULL** oder nicht abgeschlossen|any|any|**EINVAL**|nicht geändert|
+|any|any|**NULL**|**EINVAL**|nicht geändert|
+|any|0 oder zu klein|any|**ERANGE**|nicht geändert|
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktionen versuchen, das erste Anfügen *D* Zeichen des *StrSource* bis zum Ende des *StrDest*, wobei *D* ist das kleinere der *Anzahl* und die Länge des *StrSource*. Wenn solche Anfügen *D* Zeichen passt in *StrDest* (erhält, dessen Größe als *NumberOfElements*) und noch Platz für ein null-Abschlusszeichen, und klicken Sie dann auf diese Zeichen angefügt werden, wird die ursprüngliche Beenden von null ausgehend *StrDest*, und ein neues abschließendes Null ist, angehängt ist, andernfalls *StrDest*[0] auf das Null-Zeichen "und" Ungültiger Parameter festgelegt ist Handler aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
+Diese Funktionen versuchen, fügen Sie die erste *D* Zeichen *StrSource* bis zum Ende des *StrDest*, wobei *D* ist kleiner als *Anzahl* und die Länge der *StrSource*. Wenn die Anfügen *D* Zeichen in passt *StrDest* (, dessen Größe als angegeben wird *NumberOfElements*) und noch Platz für einen null-Terminator, und klicken Sie dann auf diese Zeichen angefügt werden, beginnend ab der ursprünglichen Beenden von null *StrDest*, und eine neue beendende Null wird angehängt ist, andernfalls *StrDest*[0] auf das Null-Zeichen und der ungültige Parameter festgelegt ist Handler wird aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
 
-Zu der oberen Aufführung gibt es eine Ausnahme. Wenn *Anzahl* ist [_TRUNCATE](../../c-runtime-library/truncate.md) wird so viel von *StrSource* wie Anpassung angehängt *StrDest* während weiterhin Platz anzufügende bleibt ein null wird beendet.
+Zu der oberen Aufführung gibt es eine Ausnahme. Wenn *Anzahl* ist [_TRUNCATE](../../c-runtime-library/truncate.md) wird so viel von *StrSource* wie Anpassung an angefügt *StrDest* während weiterhin Platz zum Anhängen einer Beenden von null.
 
 Ein auf ein Objekt angewendeter
 
@@ -197,9 +187,9 @@ strncpy_s(dst, _countof(dst), "12", 2);
 strncat_s(dst, _countof(dst), "34567", 3);
 ```
 
-bedeutet, die wir Navigationssystem **Strncat_s** anzufügende drei Zeichen an zwei Zeichen in einem Puffer fünf Zeichen langen; somit gäbe es keinen Platz für das Nullabschlusszeichen daher **Strncat_s** Nullen (0) der Zeichenfolge der Handler für ungültige Parameter aufgerufen.
+bedeutet, die wir stellen **Strncat_s** zum Anfügen von drei Zeichen an zwei Zeichen in einem Puffer fünf Zeichen langen; Dies wird allerdings kein Platz mehr für den null-Terminator, daher **Strncat_s** Nullen der Zeichenfolge Handler für ungültige Parameter aufgerufen.
 
-Wenn ein abschneideverhalten erforderlich ist, verwenden Sie **_TRUNCATE** , oder passen Sie die *Größe* Parameter entsprechend:
+Wenn ein abschneideverhalten erforderlich ist, verwenden Sie **_TRUNCATE** oder passen Sie die *Größe* Parameter entsprechend:
 
 ```C
 strncat_s(dst, _countof(dst), "34567", _TRUNCATE);
@@ -213,11 +203,11 @@ strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
 
 In jedem Fall wird die Ergebniszeichenfolge mit einem NULL-Zeichen beendet. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
 
-Wenn *StrSource* oder *StrDest* ist **NULL**, oder *NumberOfElements* NULL ist, wird der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, gibt die Funktion **EINVAL** ohne Parameter zu ändern.
+Wenn *StrSource* oder *StrDest* ist **NULL**, oder *NumberOfElements* ist 0 (null), Handler für ungültige Parameter aufgerufen, wie in beschrieben. [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, gibt die Funktion **EINVAL** ohne Parameter zu ändern.
 
-**Wcsncat_s** und **_mbsncat_s** sind Breitzeichen- und multibytezeichenversionen von **Strncat_s**. Die Zeichenfolgenargumente und der Rückgabewert von **Wcsncat_s** sind Breitzeichen-Zeichenfolgen, die von **_mbsncat_s** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
+**Wcsncat_s** und **_mbsncat_s** sind Breitzeichen- und multibytezeichenversionen von Versionen von **Strncat_s**. Die Zeichenfolgenargumente und der Rückgabewert von **Wcsncat_s** sind Breitzeichen-Zeichenfolgen, die von **_mbsncat_s** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
 
-Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -230,11 +220,11 @@ Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf
 |**_tcsncat_s**|**strncat_s**|**_mbsnbcat_s**|**wcsncat_s**|
 |**_tcsncat_s_l**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
 
-**_strncat_s_l** und **_wcsncat_s_l** haben keine gebietsschemaabhängigkeit, werden nur für bereitgestellt **_tcsncat_s_l**.
+**_strncat_s_l** und **_wcsncat_s_l** haben keine gebietsschemaabhängigkeit; sie stehen nur für **_tcsncat_s_l**.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**strncat_s**|\<string.h>|
 |**wcsncat_s**|\<string.h> oder \<wchar.h>|
