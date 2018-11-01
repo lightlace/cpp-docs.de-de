@@ -1,35 +1,25 @@
 ---
-title: Compilerfehler Fehler C2712 | Microsoft Docs
-ms.custom: ''
+title: Compilerfehler C2712
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2712
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2712
 ms.assetid: f7d4ffcc-7ed2-459b-8067-a728ce647071
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 27db5f8ae3fd56078a3085c8d216e7dd34edb2fc
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 19b9c5a54bf405114bd4d596c2a2cc4708aadcc9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704255"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507912"
 ---
-# <a name="compiler-error-c2712"></a>Compilerfehler Fehler C2712
+# <a name="compiler-error-c2712"></a>Compilerfehler C2712
 
 > __try kann nicht in Funktionen verwendet werden, die eine Objektentladung benötigen
 
 ## <a name="remarks"></a>Hinweise
 
-Fehler C2712 kann auftreten, wenn Sie [/EHsc /](../../build/reference/eh-exception-handling-model.md), und eine Funktion mit strukturierter Ausnahmebehandlung auch Objekte besitzt, die Entladung (Zerstörung) benötigen.
+Fehler C2712 kann auftreten, bei Verwendung von [/EHsc](../../build/reference/eh-exception-handling-model.md), und eine Funktion mit strukturierter Ausnahmebehandlung auch Objekte besitzt, die Entladung (Zerstörung) benötigen.
 
 Folgende Lösungen sind möglich:
 
@@ -39,9 +29,9 @@ Folgende Lösungen sind möglich:
 
 - Kompilieren ohne /EHsc
 
-Fehler C2712 kann auch auftreten, wenn Sie eine Methode deklariert, indem Aufrufen der [__event](../../cpp/event.md) Schlüsselwort. Da das Ereignis möglicherweise in einer Multithreadumgebung verwendet werden, generiert der Compiler Code, der Bearbeitung des zugrunde liegenden Ereignisobjekts verhindert, und schließt den generierten Code dann in eine SEH- [Try-finally-Anweisung](../../cpp/try-finally-statement.md). Folglich wird Fehler C2712 auftreten, wenn Sie die Ereignismethode aufrufen und ein Argument, dessen Typ einen Destruktor enthält, als Wert übergeben. Eine Lösung besteht in diesem Fall darin, das Argument als konstanten Verweis zu übergeben.
+Fehler C2712 kann auch auftreten, wenn Sie eine Methode deklariert, indem Aufrufen der [__event](../../cpp/event.md) Schlüsselwort. Da das Ereignis in einer Multithreadumgebung verwendet werden kann, generiert der Compiler Code, der Bearbeitung des zugrunde liegenden Ereignisobjekts verhindert und schließt dann den generierten Code in eine SEH- [Try-finally-Anweisung](../../cpp/try-finally-statement.md). Folglich wird Fehler C2712 auftreten, wenn Sie die Ereignismethode aufrufen und ein Argument, dessen Typ einen Destruktor enthält, als Wert übergeben. Eine Lösung besteht in diesem Fall darin, das Argument als konstanten Verweis zu übergeben.
 
-C2712 kann auch auftreten, wenn beim Kompilieren mit **/CLR: pure** , und deklarieren Sie einen statischen Array von Zeigern auf Funktionen in einer `__try` Block. Ein statischer Member benötigt den Compiler an, verwenden Sie die dynamische Initialisierung unter **/CLR: pure**, wodurch eine C++-Ausnahmebehandlung impliziert. Eine C++-Ausnahmebehandlung ist jedoch in einem `__try`-Block nicht zulässig.
+C2712 kann auch auftreten, wenn Sie mit der Kompilierung **/CLR: pure** und deklarieren Sie einen statischen Array von Zeigern auf Funktionen in einer `__try` Block. Ein statischer Member benötigt den Compiler an die dynamische Initialisierung unter **/CLR: pure**, wodurch eine C++-Ausnahmebehandlung impliziert. Eine C++-Ausnahmebehandlung ist jedoch in einem `__try`-Block nicht zulässig.
 
 Die **/CLR: pure** und **/CLR: safe** Compileroptionen in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt werden.
 

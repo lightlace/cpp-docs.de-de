@@ -1,10 +1,6 @@
 ---
-title: ispunct, iswpunct, _ispunct_l, _iswpunct_l | Microsoft-Dokumentation
-ms.custom: ''
+title: ispunct, iswpunct, _ispunct_l, _iswpunct_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - ispunct
 - _iswpunct_l
@@ -27,8 +23,6 @@ f1_keywords:
 - iswpunct
 - _istpunct
 - ispunct
-dev_langs:
-- C++
 helpviewer_keywords:
 - _istpunct function
 - _ispunct_l function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _iswpunct_l function
 - iswpunct_l function
 ms.assetid: 94403240-85c8-40a4-9c2b-e3e95c729c76
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9509270906de3f0a9c7a20fd5f126ecffcafcff0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 209f94bb8f9d3338f62b719d4d4b94b152ed5ab7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402669"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496394"
 ---
 # <a name="ispunct-iswpunct-ispunctl-iswpunctl"></a>ispunct, iswpunct, _ispunct_l, _iswpunct_l
 
@@ -83,11 +73,11 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Routinen gibt ungleich NULL, wenn *c* eine bestimmte Darstellung eines interpunktionszeichens ist. **Ispunct** gibt einen Wert ungleich NULL für jedes druckbare Zeichen, der ein Leerzeichen oder ein Zeichen für die kein ist **Isalnum** ungleich NULL ist. **Iswpunct** gibt einen Wert ungleich NULL für jedes druckbare Breitzeichen, das weder das leerzeichenbreitzeichen noch ein Breitzeichen für die **Iswalnum** ungleich NULL ist. Jede dieser Routinen gibt 0 zurück, wenn *c* die testbedingung nicht erfüllt.
+Jede dieser Routinen gibt ungleich NULL, wenn *c* eine bestimmte Darstellung eines interpunktionszeichens ist. **Ispunct** gibt einen Wert ungleich NULL für jedes druckbare Zeichen, die ein Leerzeichen oder ein Zeichen für das nicht ist **Isalnum** ungleich NULL ist. **Iswpunct** gibt einen Wert ungleich NULL für jedes druckbare Breitzeichen, die weder das leerzeichenbreitzeichen noch ein Breitzeichen ist für die **Iswalnum** ungleich NULL ist. Jede dieser Routinen gibt 0 zurück, wenn *c* die testbedingung nicht erfüllt.
 
-Das Ergebnis der testbedingung für die **Ispunct** Funktion hängt von der **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale, _wsetlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktionen, die nicht die **_l** -Suffix verwenden das aktuelle Gebietsschema für jedes vom Gebietsschema abhängige Verhalten; die Versionen, auf denen die **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschema, das übergebene. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Das Ergebnis der testbedingung für die **Ispunct** Funktion hängt von der **LC_CTYPE** -kategorieeinstellung des Gebietsschemas, siehe [Setlocale, _wsetlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktionen, denen keine das **_l** -Suffix verwenden das aktuelle Gebietsschema für jedes vom Gebietsschema abhängige Verhalten; die Versionen, auf denen die **_l** -Suffix sind beinahe identisch, außer dass sie verwenden die Gebietsschema, das stattdessen den übergebenen. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Das Verhalten des **Ispunct** und **_ispunct_l** ist undefiniert, wenn *c* nicht EOF ist oder im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und *c* ist keine dieser Werte, lösen die Funktionen eine Assertion.
+Das Verhalten der **Ispunct** und **_ispunct_l** ist undefiniert, wenn *c* nicht EOF-Markierung ist oder im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und *c* ist keine dieser Werte, lösen die Funktionen eine Assertion.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -97,7 +87,7 @@ Das Verhalten des **Ispunct** und **_ispunct_l** ist undefiniert, wenn *c* nicht
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**ispunct**|\<ctype.h>|
 |**iswpunct**|\<ctype.h> oder \<wchar.h>|

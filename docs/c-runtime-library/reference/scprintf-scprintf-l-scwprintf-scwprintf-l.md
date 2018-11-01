@@ -1,10 +1,6 @@
 ---
-title: _scprintf, _scprintf_l, _scwprintf, _scwprintf_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _scprintf, _scprintf_l, _scwprintf, _scwprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _scprintf_l
 - _scwprintf
@@ -33,8 +29,6 @@ f1_keywords:
 - _sctprintf_l
 - scwprintf_l
 - _sctprintf
-dev_langs:
-- C++
 helpviewer_keywords:
 - scprintf function
 - sctprintf_l function
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - _scprintf function
 - scwprintf function
 ms.assetid: ecbb0ba6-5f4c-4ce6-a64b-144ad8b5fe92
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d9d912d039cc732ebfe5399a90422d8b68d51332
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 09c44bbf6f918211c1aa2ee875a23bfcc7ca2da5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407212"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500853"
 ---
 # <a name="scprintf-scprintfl-scwprintf-scwprintfl"></a>_scprintf, _scprintf_l, _scwprintf, _scwprintf_l
 
@@ -105,15 +95,15 @@ Weitere Informationen finden Sie unter [Formatangaben](../../c-runtime-library/f
 
 Gibt die Anzahl der Zeichen zurück, die erzeugt wird, wenn die Zeichenfolge gedruckt oder mithilfe der angegebenen Formatierungscodes an eine Datei oder einen Puffer gesendet wird. Der Rückgabewert umfasst nicht das abschließende NULL-Zeichen. **_scwprintf** führt dieselbe Funktion für Breitzeichen.
 
-Wenn *Format* ist ein **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen – 1 zurück und legen Sie **Errno** auf **EINVAL**.
+Wenn *Format* ist eine **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**.
 
 Weitere Informationen über diese und andere Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Jede *Argument* (sofern vorhanden) wird entsprechend der jeweiligen Formatangabe in konvertiert *Format*. Das Format besteht aus normalen Zeichen und hat die gleiche form und Funktion wie die *Format* Argument für [Printf](printf-printf-l-wprintf-wprintf-l.md).
+Jede *Argument* (sofern vorhanden) wird entsprechend der jeweiligen Formatangabe in konvertiert *Format*. Das Format besteht aus normalen Zeichen und hat die gleiche form und Funktion wie der *Format* Argument für [Printf](printf-printf-l-wprintf-wprintf-l.md).
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschemaparameter, der übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas.
+Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
 
 > [!IMPORTANT]
 > Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist.
@@ -127,7 +117,7 @@ Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, v
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_scprintf**, **_scprintf_l**|\<stdio.h>|
 |**_scwprintf**, **_scwprintf_l**|\<stdio.h> oder \<wchar.h>|

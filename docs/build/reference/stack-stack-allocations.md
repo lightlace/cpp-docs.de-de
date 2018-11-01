@@ -1,16 +1,10 @@
 ---
-title: -STACK (Stapelreservierungen) | Microsoft-Dokumentation
-ms.custom: ''
+title: /STACK (Stapelreservierungen)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.StackReserveSize
 - VC.Project.VCLinkerTool.StackCommitSize
 - /stack
-dev_langs:
-- C++
 helpviewer_keywords:
 - STACK linker option
 - -STACK linker option
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - /STACK linker option
 - stack, setting size
 ms.assetid: 73283660-e4bd-47cc-b5ca-04c5d739034c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7bd61f1cd56043dd7e2a2234630d722850850735
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2ccdd33c77f5c7bfa9ee5dcd041f6778e8eb85d3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703338"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50572028"
 ---
 # <a name="stack-stack-allocations"></a>/STACK (Stapelreservierungen)
 
@@ -41,7 +31,7 @@ Durch die Option /STACK wird die Stapelgröße in Bytes festgelegt. Verwenden Si
 
 Der `reserve`-Wert gibt die gesamte Stapelzuordnung im virtuellen Speicher an. Für ARM X86- und X64 Computer, die standardmäßige Stapelgröße beträgt 1 MB.
 
-Wie das `commit`-Argument interpretiert wird, hängt vom jeweiligen Betriebssystem ab. Unter Windows RT wird damit die physische Speichermenge bezeichnet, die zu einem Zeitpunkt belegt werden soll. Die Zusicherung von virtuellem Speicher bewirkt die Belegung von Speicher in der Auslagerungsdatei. Ein höherer `commit`-Wert spart Zeit, wenn die Anwendung mehr Stapelspeicher benötigt, erhöht aber auch den Arbeitsspeicherbedarf und möglicherweise die Startzeit. Für ARM X86- und X64 Computer, der Standardcommitwert 4 KB ist.
+Wie das `commit`-Argument interpretiert wird, hängt vom jeweiligen Betriebssystem ab. Unter Windows RT wird damit die physische Speichermenge bezeichnet, die zu einem Zeitpunkt belegt werden soll. Die Zusicherung von virtuellem Speicher bewirkt die Belegung von Speicher in der Auslagerungsdatei. Ein höherer `commit`-Wert spart Zeit, wenn die Anwendung mehr Stapelspeicher benötigt, erhöht aber auch die Arbeitsspeicheranforderungen und möglicherweise die Startzeit. Für ARM X86- und X64 Computer, der Standardcommitwert 4 KB ist.
 
 Geben Sie die Werte für `reserve` und `commit` dezimal oder in C-Notation an.
 

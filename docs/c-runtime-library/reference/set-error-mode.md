@@ -1,10 +1,6 @@
 ---
-title: _set_error_mode | Microsoft-Dokumentation
-ms.custom: ''
+title: _set_error_mode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_error_mode
 apilocation:
@@ -23,26 +19,20 @@ apitype: DLLExport
 f1_keywords:
 - set_error_mode
 - _set_error_mode
-dev_langs:
-- C++
 helpviewer_keywords:
 - _set_error_mode function
 - set_error_mode function
 ms.assetid: f0807be5-73d1-4a32-a701-3c9bdd139c5c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 130e9fee13401c8b598a5d6eef7d1fab3ed80ae9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c95ed45423b791a688f05ea30f48e188826a797
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406494"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50502309"
 ---
 # <a name="seterrormode"></a>_set_error_mode
 
-Ändert **__error_mode** um einen nicht standardmäßigen Speicherort zu bestimmen, an die C-Laufzeit schreibt eine Fehlermeldung für einen Fehler, der das Programm beenden kann.
+Ändert **__error_mode** um einen nicht standardmäßigen Speicherort zu bestimmen, in dem die C-Laufzeit schreibt eine Fehlermeldung für einen Fehler, der das Programm beenden kann.
 
 > [!IMPORTANT]
 > Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -66,7 +56,7 @@ Gibt die alte Einstellung oder -1 zurück, wenn ein Fehler auftritt.
 
 ## <a name="remarks"></a>Hinweise
 
-Steuert die fehlerausgabesenke durch Festlegen des Werts der **__error_mode**. Beispielsweise können Sie Ausgabe in einen Standardfehler weiterleiten oder die **MessageBox** API.
+Steuert die fehlerausgabesenke durch Festlegen des Werts der **__error_mode**. Sie können z. B. leiten Sie die Ausgabe in einen Standardfehler oder verwenden Sie die **MessageBox** API.
 
 Die *Mode_val* Parameter kann auf einen der folgenden Werte festgelegt werden.
 
@@ -77,13 +67,13 @@ Die *Mode_val* Parameter kann auf einen der folgenden Werte festgelegt werden.
 |**_OUT_TO_MSGBOX**|Fehlersenke ist ein Meldungsfeld.|
 |**_REPORT_ERRMODE**|Melden Sie den aktuellen **__error_mode** Wert.|
 
-Wenn ein anderer Wert als die aufgeführten übergeben wird, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **_set_error_mode** legt **Errno** auf **EINVAL** und gibt-1 zurück.
+Wenn ein anderer Wert als die aufgeführten übergeben wird, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **_set_error_mode** legt **Errno** zu **EINVAL** und gibt-1 zurück.
 
-Bei der Verwendung einer [assert](assert-macro-assert-wassert.md), **_set_error_mode** zeigt die fehlgeschlagene Anweisung im Dialogfeld an und bietet Ihnen die Möglichkeit der Auswahl der **ignorieren** Schaltfläche können Sie Führen Sie das Programm weiterhin.
+Bei Verwendung mit einem [assert](assert-macro-assert-wassert.md), **_set_error_mode** die fehlerhafte Anweisung im Dialogfeld angezeigt, und Ihnen die Möglichkeit der Auswahl der **ignorieren** Schaltfläche können Sie das Programm weiter ausführen.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_set_error_mode**|\<stdlib.h>|
 
