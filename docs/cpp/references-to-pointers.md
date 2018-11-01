@@ -1,25 +1,15 @@
 ---
-title: Verweise auf Zeiger | Microsoft-Dokumentation
-ms.custom: ''
+title: Verweise auf Zeiger
 ms.date: 08/20/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - references, to pointers
 ms.assetid: 4ce48b08-1511-4d2f-a31f-95f99eac0c70
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a93321eeb05f0e0448dca607177fcba6e89089a8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 060bbaef74c934de4d8529b3ceafc61d1b70dc70
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107077"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512722"
 ---
 # <a name="references-to-pointers"></a>Verweise auf Zeiger
 
@@ -29,7 +19,7 @@ Verweise auf Zeiger können nahezu auf die gleiche Weise wie Verweise auf Objekt
 
 Die folgenden Codebeispiele veranschaulichen den Unterschied zwischen einem Zeiger auf einen Zeiger und einem Verweis auf einen Zeiger.
 
-Die Funktionen `Add1` und `Add2` sind funktional äquivalent (obwohl sie nicht auf die gleiche Weise aufgerufen werden.) Der Unterschied besteht darin, dass `Add1` eine doppelte Indirektion verwendet, während `Add2` die Vorteile eines Verweises auf einen Zeiger nutzt.
+Die Funktionen `Add1` und `Add2` sind funktional äquivalent (obwohl sie nicht auf die gleiche Weise aufgerufen werden.) Der Unterschied besteht darin, dass `Add1` eine doppelte Dereferenzierung verwendet, während `Add2` die Vorteile eines Verweises auf einen Zeiger nutzt.
 
 ```cpp
 // references_to_pointers.cpp

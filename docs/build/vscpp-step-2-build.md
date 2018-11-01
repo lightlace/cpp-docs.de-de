@@ -1,31 +1,23 @@
 ---
-title: Erstellen und Ausführen einer C++-Konsolen-app-Projekts | Microsoft-Dokumentation
+title: Erstellen Sie und führen Sie einer C++-Konsolen-app-Projekts aus
 description: Erstellen Sie und führen Sie eine Hello World-Konsolenanwendung in Visual C++
 ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: tutorial
-ms.technology:
-- cpp-tools
 ms.devlang: C++
-dev_langs:
-- C++
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c9c32f6811a18fae00cb2943a9ca97a89cf159a1
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 89681b4f6b2ff2780cc8dc1947e2ad758d294b48
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029592"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50467833"
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Erstellen Sie und führen Sie einer C++-Konsolen-app-Projekts aus
 
 Wenn Sie eine C++-Konsolen-app-Projekts erstellt und Ihr Code eingegeben haben, können Sie erstellen und führen Sie es in Visual Studio und es dann als eine eigenständige app von der Befehlszeile aus ausführen.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - Haben Sie Visual Studio mit der Desktopentwicklung mit C++-Arbeitslast installiert und auf Ihrem Computer ausgeführt. Wenn sie noch nicht installiert ist, führen Sie die Schritte in [Installieren von C++-Unterstützung in Visual Studio](../build/vscpp-step-0-installation.md).
 

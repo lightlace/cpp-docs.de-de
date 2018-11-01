@@ -1,10 +1,6 @@
 ---
-title: _mbsnbcat_s, _mbsnbcat_s_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _mbsnbcat_s, _mbsnbcat_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbcat_s_l
 - _mbsnbcat_s
@@ -26,8 +22,6 @@ f1_keywords:
 - mbsnbcat_s
 - _mbsnbcat_s_l
 - mbsnbcat_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tcsncat function
 - mbsnbcat_s function
@@ -38,20 +32,16 @@ helpviewer_keywords:
 - mbsnbcat_s_l function
 - tcsncat function
 ms.assetid: 2c9e9be7-d979-4a54-8ada-23428b6648a9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cead47b21a066d7e55c22d6bc8fba63cb73a0224
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d7e7a9d121336486e590ca3bd9e3967b02a2df08
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405113"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497330"
 ---
 # <a name="mbsnbcats-mbsnbcatsl"></a>_mbsnbcat_s, _mbsnbcat_s_l
 
-Fügt zu einer Multibyte-Zeichenfolge darf höchstens die ersten **n** Bytes von einer anderen Multibyte-Zeichenfolge. Dies sind Versionen von [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md), enthalten aber Sicherheitserweiterungen wie unter [Sicherheitsfunktionen im CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
+Fügt in eine Zeichenfolge mit Multibytezeichen, höchstens die ersten **n** Byte einer anderen Multibytezeichen-Zeichenfolge. Dies sind Versionen von [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md), enthalten aber Sicherheitserweiterungen wie unter [Sicherheitsfunktionen im CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
 > [!IMPORTANT]
 > Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -93,13 +83,13 @@ errno_t _mbsnbcat_s_l(
 Auf NULL endende Multibytezielzeichenfolge.
 
 *sizeInBytes*<br/>
-Größe der *Dest* Puffers in Bytes.
+Größe der *Dest* Puffers in Byte.
 
 *src*<br/>
 Auf NULL endende Multibytequellzeichenfolge.
 
 *count*<br/>
-Anzahl der Bytes vom *Src* zum Anfügen an *Dest*.
+Anzahl von Bytes aus *Src* anzufügende *Dest*.
 
 *locale*<br/>
 Zu verwendendes Gebietsschema.
@@ -110,19 +100,19 @@ Null, wenn erfolgreich, andernfalls ein Fehlercode.
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
-|**Dest**|*sizeInBytes*|*src*|Rückgabewert|
+|**dest**|*sizeInBytes*|*src*|Rückgabewert|
 |------------|-------------------|-----------|------------------|
-|**NULL**|alle|alle|**EINVAL**|
-|Beliebig|<= 0|alle|**EINVAL**|
-|Beliebig|alle|**NULL**|**EINVAL**|
+|**NULL**|any|any|**EINVAL**|
+|Beliebig|<= 0|any|**EINVAL**|
+|Beliebig|any|**NULL**|**EINVAL**|
 
-Wenn eine dieser Fehlerbedingungen auftritt, generiert die Funktion einen Fehler über ungültige Parameter, wie dies unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben wird. Wenn der Fehler behandelt wird, gibt die Funktion **EINVAL** und legt **Errno** auf **EINVAL**.
+Wenn eine dieser Fehlerbedingungen auftritt, generiert die Funktion einen Fehler über ungültige Parameter, wie dies unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben wird. Wenn der Fehler behandelt wird, gibt die Funktion **EINVAL** und **Errno** zu **EINVAL**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mbsnbcat_s** Funktion fügt an *Dest*höchstens die ersten *Anzahl* Bytes *Src*. Wenn das Byte, die direkt das Nullzeichen in voransteht *Dest* ist ein führendes Byte ist, wird Sie durch das ursprüngliche Byte von überschrieben *Src*. Andernfalls das ursprüngliche Byte von *Src* überschreibt das abschließende Nullzeichen von *Dest*. Wenn ein in Nullbyte *Src* vor *Anzahl* Bytes angefügt werden, **_mbsnbcat_s** fügt alle Bytes von *Src*, bis zu das Null-Zeichen Zeichen. Wenn *Anzahl* ist größer als die Länge des *Src*, die Länge des *Src* wird verwendet, anstelle von *Anzahl*. Die resultierende Zeichenfolge wird durch ein NULL-Zeichen beendet. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
+Die **_mbsnbcat_s** Funktion hinzufügt *Dest*höchstens die ersten *Anzahl* Bytes *Src*. Wenn das Byte, die direkt das Nullzeichen in vorangeht *Dest* ist ein führendes Byte ist, wird Sie durch das anfangsbyte von überschrieben *Src*. Andernfalls das ursprüngliche Byte von *Src* überschreibt das abschließende Nullzeichen von *Dest*. Wenn ein in Nullbyte *Src* vor *Anzahl* Bytes angefügt werden, **_mbsnbcat_s** fügt alle Bytes von *Src*, bis das Null-Zeichen Zeichen. Wenn *Anzahl* ist größer als die Länge des *Src*, die Länge des *Src* dient anstelle von *Anzahl*. Die resultierende Zeichenfolge wird durch ein NULL-Zeichen beendet. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
 
-Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale, _wsetlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktionen sind nahezu identisch, außer dass diejenigen ohne haben die **_l** -Suffix verwenden das aktuelle Gebietsschema und die diejenigen mit den **_l** -Suffix verwenden stattdessen den Gebietsschemaparameter, der übergeben wird. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert wird von der Einstellung beeinflusst die **LC_CTYPE** -kategorieeinstellung des Gebietsschemas, siehe [Setlocale, _wsetlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktionen sind nahezu identisch, außer dass diejenigen ohne haben die **_l** -Suffix verwenden das aktuelle Gebietsschema und diejenigen, auf denen die **_l** -Suffix verwenden stattdessen den Gebietsschemaparameter, der übergeben. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht. Die Überladungen können automatisch Rückschlüsse über die Pufferlänge ziehen, wodurch kein „size“-Argument angegeben werden muss. Zudem können sie automatisch ihre neueren und sichereren Funktionen zum Ersetzen von älteren, unsichereren Funktionen verwenden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -137,7 +127,7 @@ Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_mbsnbcat_s**|\<mbstring.h>|
 |**_mbsnbcat_s_l**|\<mbstring.h>|

@@ -1,10 +1,6 @@
 ---
-title: tmpfile_s | Microsoft-Dokumentation
-ms.custom: ''
+title: tmpfile_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tmpfile_s
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - tmpfile_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - temporary files
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1cd7866a7135f04aa580910d5ac121311312c542
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 341e1c8ed6dd20ec7e6a3d71999fb365e45e614a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412149"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50488113"
 ---
 # <a name="tmpfiles"></a>tmpfile_s
 
@@ -67,19 +57,19 @@ Gibt bei Erfolg 0 (null) zurück und einen Fehlercode, wenn ein Fehler auftritt.
 |----------------|----------------------|---------------------------------|
 |**NULL**|**EINVAL**|nicht geändert|
 
-Wenn der obengenannte Parametervalidierungsfehler auftritt, wird der ungültige Parameterhandler wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und der Rückgabewert ist **EINVAL**.
+Wenn der obengenannte Parametervalidierungsfehler auftritt, wird der ungültige Parameterhandler wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und der Rückgabewert ist **EINVAL**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Tmpfile_s** Funktion erstellt eine temporäre Datei und fügt einen Zeiger zu diesem Datenstrom in die *pFilePtr* Argument. Die temporäre Datei wird im Stammverzeichnis erstellt. Verwenden Sie zum Erstellen einer temporären Datei in einem anderen Verzeichnis als dem Stammverzeichnis [tmpnam_s](tmpnam-s-wtmpnam-s.md) oder [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) in Verbindung mit [fopen](fopen-wfopen.md).
+Die **Tmpfile_s** -Funktion erstellt eine temporäre Datei und fügt einen Zeiger auf diesen Datenstrom in die *pFilePtr* Argument. Die temporäre Datei wird im Stammverzeichnis erstellt. Verwenden Sie zum Erstellen einer temporären Datei in einem anderen Verzeichnis als dem Stammverzeichnis [tmpnam_s](tmpnam-s-wtmpnam-s.md) oder [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) in Verbindung mit [fopen](fopen-wfopen.md).
 
-Wenn die Datei kann nicht geöffnet werden, **Tmpfile_s** schreibt **NULL** auf die *pFilePtr* Parameter. Diese temporäre Datei wird automatisch gelöscht, wenn die Datei, beim Beenden des Programms normal oder wenn geschlossen ist **_rmtmp** aufgerufen wird, vorausgesetzt, dass das aktuelle Arbeitsverzeichnis nicht ändert. Die temporäre Datei wird geöffnet, **w + b** (Lese-/Schreibzugriff binären) Modus.
+Wenn die Datei kann nicht geöffnet werden, **Tmpfile_s** schreibt **NULL** auf die *pFilePtr* Parameter. Diese temporäre Datei wird automatisch gelöscht, wenn die Datei geschlossen wird, wenn das Programm beendet, normalerweise, oder wenn wird, **_rmtmp** aufgerufen wird, unter der Annahme, dass das aktuelle Arbeitsverzeichnis nicht ändert. Die temporäre Datei wird geöffnet, **w + b** (binären Lese-/Schreib-) Modus.
 
 Fehler kann auftreten, wenn Sie versuchen, mehr als **TMP_MAX_S** (Siehe STDIO. H) Aufrufe mit **Tmpfile_s**.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**tmpfile_s**|\<stdio.h>|
 
@@ -88,7 +78,7 @@ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../
 ## <a name="example"></a>Beispiel
 
 > [!NOTE]
-> In diesem Beispiel wird möglicherweise Administratorrechte verfügen, um unter Windows ausgeführt werden.
+> In diesem Beispiel wird möglicherweise über Administratorrechte auf dem Windows ausgeführt.
 
 ```C
 // crt_tmpfile_s.c

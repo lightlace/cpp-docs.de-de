@@ -1,10 +1,6 @@
 ---
-title: _strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnset
 - _strnset
@@ -43,8 +39,6 @@ f1_keywords:
 - _mbsnset
 - _wcsnset
 - _tcsncset
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wcsnset function
 - strnset_l function
@@ -71,23 +65,19 @@ helpviewer_keywords:
 - strings [C++], initializing
 - tcsnset_l function
 ms.assetid: 3f306489-5763-48e5-b939-aefee7c94ef5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9348b2797b137599e8c7f54e41e493003bc4fc58
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 7eefbe3a193157751a991bb069ebe94f48946e7d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451627"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466694"
 ---
 # <a name="strnset-strnsetl-wcsnset-wcsnsetl-mbsnset-mbsnsetl"></a>_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
 
 Initialisiert Zeichen einer Zeichenfolge auf ein angegebenes Zeichen. Sicherere Versionen dieser Funktionen sind vorhanden. Weitere Informationen finden Sie unter [_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md).
 
 > [!IMPORTANT]
-> **_mbsnset** und **_mbsnset_l** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnset** und **_mbsnset_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -147,11 +137,11 @@ Gibt einen Zeiger zur geänderten Zeichenfolge zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_strnset** -Funktion legt höchstens die ersten *Anzahl* Zeichen des *str* auf *c* (konvertiert **Char**). Wenn *Anzahl* ist größer als die Länge des *str*, die Länge des *str* anstelle von *Anzahl*.
+Die **_strnset** -Funktion legt höchstens die ersten *Anzahl* Zeichen *str* zu *c* (konvertiert **Char**). Wenn *Anzahl* ist größer als die Länge des *str*, die Länge des *str* anstelle *Anzahl*.
 
-**_wcsnset** und **_mbsnset** sind Breitzeichen- und multibytezeichenversionen von **_strnset**. Die Zeichenfolgenargumente und der Rückgabewert von **_wcsnset** sind Breitzeichen-Zeichenfolgen, die von **_mbsnset** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
+**_wcsnset** und **_mbsnset** sind Breitzeichen- und multibytezeichenversionen von Versionen von **_strnset**. Die Zeichenfolgenargumente und der Rückgabewert von **_wcsnset** sind Breitzeichen-Zeichenfolgen, die von **_mbsnset** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
 
-**_mbsnset** überprüft seine Parameter angegeben werden, wenn *str* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **_mbsnset** gibt **NULL** und legt **Errno** auf **EINVAL**. **_strnset** und **_wcsnset** überprüfen ihre Parameter nicht.
+**_mbsnset** überprüft die eigenen Parameter; Wenn *str* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **_mbsnset** gibt **NULL** und **Errno** zu **EINVAL**. **_strnset** und **_wcsnset** überprüfen ihre Parameter nicht.
 
 Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
@@ -164,7 +154,7 @@ Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_strnset**|\<string.h>|
 |**_strnset_l**|\<tchar.h>|

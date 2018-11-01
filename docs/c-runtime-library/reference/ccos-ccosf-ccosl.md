@@ -1,11 +1,6 @@
 ---
-title: ccos, ccosf, ccosl | Microsoft-Dokumentation
-ms.custom: ''
+title: ccos, ccosf, ccosl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - ccos
 - ccosf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/ccos
 - complex/ccosf
 - complex/ccosl
-dev_langs:
-- C++
 helpviewer_keywords:
 - ccos function
 - ccosf function
 - ccosl function
 ms.assetid: 4ab936ac-ff85-49ac-9418-2b69cf5d4696
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4345926f3eebb6c65c8f70f65cd37f1add956ed5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d1a94f7ad0bbd525480d344fa8ac5b3ee591a1b2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394543"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50489686"
 ---
 # <a name="ccos-ccosf-ccosl"></a>ccos, ccosf, ccosl
 
@@ -79,7 +68,7 @@ Eine komplexe Zahl, die den Winkel als Bogenmaß darstellt
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Kosinus von *z*, im Bogenmaß.
+Der Kosinus von *z*, im Bogenmaß zurück.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -87,7 +76,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Ccos** 
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|C-Header|C++-Header|
+|-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
 |**Ccos**, **Ccosf**, **Ccosl**|\<complex.h>|\<ccomplex>|
 

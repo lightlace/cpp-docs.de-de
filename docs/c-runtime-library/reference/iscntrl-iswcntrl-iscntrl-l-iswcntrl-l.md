@@ -1,10 +1,6 @@
 ---
-title: iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l | Microsoft-Dokumentation
-ms.custom: ''
+title: iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iscntrl
 - _iswcntrl_l
@@ -30,8 +26,6 @@ f1_keywords:
 - _iscntrl_l
 - iscntrl
 - _istcntrl
-dev_langs:
-- C++
 helpviewer_keywords:
 - iscntrl function
 - _iscntrl_l function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - iswcntrl function
 - _istcntrl_l function
 ms.assetid: 616eebf9-aed4-49ba-ba2c-8677c8fe6fb5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c87745a4aa1c2e9d93f2c779e089e0bff6f66fcb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 150073e78426f5029dd46cbc6766fbd6a2a242e1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401528"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506751"
 ---
 # <a name="iscntrl-iswcntrl-iscntrll-iswcntrll"></a>iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
 
@@ -85,11 +75,11 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Routinen gibt ungleich NULL, wenn *c* eine bestimmte Darstellung eines Steuerzeichens ist. **Iscntrl** gibt einen Wert ungleich NULL zurück, wenn *c* ein Steuerzeichen ist (0 x 00 – 0x1F oder 0x7F). **Iswcntrl** gibt einen Wert ungleich NULL zurück, wenn *c* ist ein Steuerelement Breitzeichen. Jede dieser Routinen gibt 0 zurück, wenn *c* die testbedingung nicht erfüllt.
+Jede dieser Routinen gibt ungleich NULL, wenn *c* eine bestimmte Darstellung eines Steuerzeichens ist. **Iscntrl** gibt einen Wert ungleich NULL zurück, wenn *c* ein Steuerzeichen ist (0 x 00-0x1F oder 0x7F). **Iswcntrl** gibt einen Wert ungleich NULL zurück, wenn *c* ist ein Steuerelement Breitzeichen. Jede dieser Routinen gibt 0 zurück, wenn *c* die testbedingung nicht erfüllt.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix verwenden den Gebietsschemaparameter, der übergeben wird anstelle des aktuellen Gebietsschemas. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die Versionen dieser Funktionen, die **_l** -Suffix verwenden den Gebietsschemaparameter, der übergeben wird, anstelle des aktuellen Gebietsschemas. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Das Verhalten des **Iscntrl** und **_iscntrl_l** ist undefiniert, wenn *c* nicht EOF ist oder im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und *c* ist keine dieser Werte, lösen die Funktionen eine Assertion.
+Das Verhalten der **Iscntrl** und **_iscntrl_l** ist undefiniert, wenn *c* nicht EOF-Markierung ist oder im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und *c* ist keine dieser Werte, lösen die Funktionen eine Assertion.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -100,7 +90,7 @@ Das Verhalten des **Iscntrl** und **_iscntrl_l** ist undefiniert, wenn *c* nicht
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**iscntrl**|\<ctype.h>|
 |**iswcntrl**|\<ctype.h> oder \<wchar.h>|
