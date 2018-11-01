@@ -1,26 +1,17 @@
 ---
-title: 'Exemplarische Vorgehensweise: Erstellen und verwenden Sie Ihren eigenen Dynamic Link Library (C++) | Microsoft-Dokumentation'
+title: 'Exemplarische Vorgehensweise: Erstellen Sie und verwenden Sie Ihren eigenen Dynamic Link Library (C++)'
 ms.custom: conceptual
 ms.date: 09/24/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9806a17bfb603ff54609f2d509c50d0a5d91e15d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: d997cb37c6cadb03bd3d16c4b1d4e56874f00018
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821254"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591008"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Exemplarische Vorgehensweise: Erstellen Sie und verwenden Sie Ihren eigenen Dynamic Link Library (C++)
 
@@ -64,7 +55,7 @@ In diesem Satz von Aufgaben erstellen Sie ein Projekt für Ihre DLL-Datei, füge
 
 ### <a name="to-create-a-dll-project-in-visual-studio-2017-version-153-or-later"></a>Zum Erstellen einer DLL-Projekt in Visual Studio 2017 Version 15.3 oder höher
 
-1. Wählen Sie auf der Menüleiste **Datei** > **neu** > **Projekt** zum Öffnen der **neues Projekt** Dialogfeld.
+1. Klicken Sie in der Menüleiste auf **Datei** > **Neu** > **Projekt**, um das Dialogfeld **Neues Projekt** zu öffnen.
 
 1. Im linken Bereich des der **neues Projekt** Dialogfeld erweitern Sie **installiert** und **Visual C++** bei Bedarf, und wählen Sie dann **Windows Desktop** . Wählen Sie im mittleren Bereich **-Assistenten für Windows Desktop**. Geben Sie `MathLibrary` in die **Namen** Feld einen Namen für das Projekt angeben.
 
@@ -405,7 +396,7 @@ Drücken Sie eine beliebige Taste, um das Befehlsfenster zu schließen.
 
 Nun, dass Sie eine DLL-Datei und einer Clientanwendung erstellt haben, können Sie experimentieren. Legen Sie Haltepunkte im Code der Client-app, und führen Sie die app im Debugger. Finden Sie, was geschieht, wenn Sie eine Bibliotheksaufruf schrittweise ausführen. Fügen Sie andere Funktionen zur Bibliothek hinzu, oder Schreiben Sie einen anderen Client-app, die die DLL verwendet.
 
-Wenn Sie Ihre app bereitstellen, müssen Sie auch die DLLs bereitstellen, verwendet. Die einfachste Möglichkeit, die DLLs, die Sie erstellen oder, die Sie einschließen, von Drittanbietern zur Verfügung stellen zu Ihrer app wird im gleichen Verzeichnis wie die app, auch bekannt als Einsatzort *lokalen app-Bereitstellung*. Weitere Informationen zur Bereitstellung finden Sie unter [Bereitstellung in Visual C++](..\ide\deployment-in-visual-cpp.md).
+Wenn Sie Ihre app bereitstellen, müssen Sie auch die DLLs bereitstellen, verwendet. Die einfachste Möglichkeit, die DLLs, die Sie erstellen oder, die Sie einschließen, von Drittanbietern zur Verfügung stellen zu Ihrer app wird im gleichen Verzeichnis wie die app, auch bekannt als Einsatzort *lokalen app-Bereitstellung*. Weitere Informationen zur Bereitstellung finden Sie unter [Deployment in Visual C++](..\ide\deployment-in-visual-cpp.md).
 
 ## <a name="see-also"></a>Siehe auch
 

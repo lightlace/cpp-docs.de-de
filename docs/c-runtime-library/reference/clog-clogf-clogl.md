@@ -1,11 +1,6 @@
 ---
-title: clog, clogf, clogl | Microsoft-Dokumentation
-ms.custom: ''
+title: clog, clogf, clogl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - clog
 - clogf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/clog
 - complex/clogf
 - complex/clogl
-dev_langs:
-- C++
 helpviewer_keywords:
 - clog function
 - clogf function
 - clogl function
 ms.assetid: 870b9b0b-6618-46f3-bfcf-da595cbd5e18
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ca1b5b917b48a0307b9bd2a362ac7eb6a21dca3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fcbc9ba7984898d51f7a3d0beb5ef7c8b6d6892c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394794"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636552"
 ---
 # <a name="clog-clogf-clogl"></a>clog, clogf, clogl
 
@@ -79,7 +68,7 @@ Die Basis des Logarithmus.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der natürliche Logarithmus des *z*. Das Ergebnis ist unbounded entlang der echte und im Intervall [-Iπ, + Iπ] der imaginäre Achse.
+Der natürliche Logarithmus des *z*. Das Ergebnis ist unbegrenzt, auf der reellen Achse und im Intervall [-Iπ, + Iπ] auf der imaginären Achse.
 
 Die möglichen Rückgabewerte sind:
 
@@ -97,7 +86,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **clog** 
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|C-Header|C++-Header|
+|-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
 |**CLOG**, **Clogf**, **Clogl**|\<complex.h>|\<ccomplex>|
 
