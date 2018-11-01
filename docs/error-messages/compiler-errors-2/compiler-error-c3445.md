@@ -1,39 +1,29 @@
 ---
-title: Compilerfehler Fehler C3445 | Microsoft Docs
-ms.custom: ''
+title: Compilerfehler C3445
 ms.date: 04/10/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3445
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3445
 ms.assetid: 0d272bfc-136b-4025-a9ba-5e4eea5f8215
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4c37f04b907183b883772fd144ae0179683f088f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2eddeb5a56c953ca0864e29187fbe28c53bdee24
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256765"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50574212"
 ---
-# <a name="compiler-error-c3445"></a>Compilerfehler Fehler C3445
+# <a name="compiler-error-c3445"></a>Compilerfehler C3445
 
-> Copy-Liste-Initialisierung von "*Typ*' können keine expliziten Konstruktor
+> Copy-List-Initialisierung von "*Typ*' können keine expliziten Konstruktor
 
-Gemäß dem ISO C ++ 17-standard der Compiler ist erforderlich, um einen expliziten Konstruktor für die Auflösung von funktionsüberladungen im kopierinitialisierung-Liste sollten allerdings muss einen Fehler wird ausgelöst, wenn Sie diese Überladung tatsächlich ausgewählt wird.
+Gemäß dem ISO C ++ 17-standard der Compiler ist erforderlich, um einen expliziten Konstruktor für die Auflösung von funktionsüberladungen im Copy-List-Initialisierung zu berücksichtigen, aber muss ein Fehler ausgelöst, wenn diese Überladung tatsächlich ausgewählt wird.
 
-Ab Visual Studio 2017, sucht der Compiler Fehler im Zusammenhang mit objekterstellung mithilfe einer Initialisiererliste, die von Visual Studio 2015 nicht gefunden wurden. Dieser Fehler können zu abstürzt oder nicht definiertes Verhalten zur Laufzeit führen.
+Ab Visual Studio 2017, sucht der Compiler Fehler im Zusammenhang mit der Erstellung von Objekten mithilfe einer Initialisiererliste, die von Visual Studio 2015 nicht gefunden wurden. Dieser Fehler können zu Abstürzen oder nicht definiertem Verhalten zur Laufzeit führen.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird C3445 generiert.
+Im folgende Beispiel wird C3445 generiert.
 
 ```cpp
 // C3445.cpp
@@ -50,7 +40,7 @@ int main()
 }
 ```
 
-Um den Fehler zu beheben, verwenden Sie stattdessen direkte Initialisierung:
+Verwenden Sie stattdessen direkte Initialisierung, um den Fehler zu beheben:
 
 ```cpp
 // C3445b.cpp

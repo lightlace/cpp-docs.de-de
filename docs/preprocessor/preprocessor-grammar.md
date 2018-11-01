@@ -1,27 +1,17 @@
 ---
-title: Präprozessor-Grammatik | Microsoft-Dokumentation
-ms.custom: ''
+title: Präprozessor-Grammatik
 ms.date: 09/04/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 56df4d0bfdaf87ace87a9f9dcbde85166929e642
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 17768b7ec1442f2af1abf76596527d4df69b1534
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766115"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614187"
 ---
 # <a name="preprocessor-grammar"></a>Präprozessor-Grammatik
 
@@ -30,7 +20,7 @@ ms.locfileid: "43766115"
 &nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>Bezeichner</em>**(** *Bezeichner*<sub>opt</sub> **,** ... **,** *Bezeichner*<sub>opt</sub> **)** *-Token-Zeichenfolge*<sub>deaktivieren</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *Path-Spec* **"**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *Path-Spec* **>**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#line** *Ziffernfolge***"** *Filename* **"**<sub>deaktivieren  </sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#line** *Ziffernfolge***"** *Filename* **"**<sub>deaktivieren</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#undef** *Bezeichner*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#error** *-Token-Zeichenfolge*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *-Token-Zeichenfolge*
@@ -68,8 +58,8 @@ ms.locfileid: "43766115"
 &nbsp;&nbsp;&nbsp;&nbsp;**#endif**
 
 *Digit-Sequence* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Ziffer*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Digit-Sequence* *Ziffer*
+&nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence* *digit*
 
 *Ziffer* : eines der<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
@@ -78,11 +68,11 @@ ms.locfileid: "43766115"
 &nbsp;&nbsp;&nbsp;&nbsp;Zeichenfolge von tokens
 
 *Token* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Schlüsselwort*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Bezeichner*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Konstante*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Operator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Markierungszeichen*
+&nbsp;&nbsp;&nbsp;&nbsp;*keyword*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*constant*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*operator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*punctuator*
 
 *FileName* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Rechtliche Betriebssystem-Dateiname
