@@ -1,11 +1,6 @@
 ---
-title: _fread_nolock_s2 | Microsoft-Dokumentation
-ms.custom: ''
+title: _fread_nolock_s2
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - _fread_nolock_s
 apilocation:
@@ -24,19 +19,13 @@ apitype: DLLExport
 f1_keywords:
 - _fread_nolock_s
 - stdio/_fread_nolock_s
-dev_langs:
-- C++
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: db0cd82d251595be586b46fb66a0f0262484e2f8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1dccbd362577e524f0455a2248d4d0f209ea6295
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398249"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580794"
 ---
 # <a name="freadnolocks"></a>_fread_nolock_s
 
@@ -59,13 +48,13 @@ size_t _fread_nolock_s(
 *buffer*<br/>
 Speicherort für Daten.
 
-*BufferSize*<br/>
+*Puffergröße*<br/>
 Größe des Zielpuffers in Byte.
 
 *elementSize*<br/>
 Größe des zu lesenden Elements in Byte.
 
-*elementCount*<br/>
+*Wert ElementCount-Objekts*<br/>
 Maximale Anzahl der zu lesenden Elemente.
 
 *Stream*<br/>
@@ -77,7 +66,7 @@ Weitere Informationen finden Sie unter [fread_s](fread-s.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion ist eine nicht sperrende Version von **Fread_s**. Sie ist identisch mit **Fread_s** mit dem Unterschied, dass sie nicht vor Störungen durch andere Threads geschützt ist. Sie ist möglicherweise schneller, da sie nicht den Mehraufwand zum Sperren anderer Threads mit sich bringt. Verwenden Sie diese Funktion nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen bereits der aufrufende Bereich die Threadisolation handhabt.
+Diese Funktion ist eine nicht sperrende Version von **Fread_s**. Es ist identisch mit **Fread_s** mit dem Unterschied, dass sie nicht vor Störungen durch andere Threads geschützt ist. Sie ist möglicherweise schneller, da sie nicht den Mehraufwand zum Sperren anderer Threads mit sich bringt. Verwenden Sie diese Funktion nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen bereits der aufrufende Bereich die Threadisolation handhabt.
 
 ## <a name="requirements"></a>Anforderungen
 
