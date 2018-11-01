@@ -1,10 +1,6 @@
 ---
-title: atan, atanf, atanl, atan2, atan2f, atan2l | Microsoft-Dokumentation
-ms.custom: ''
+title: atan, atanf, atanl, atan2, atan2f, atan2l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - atan2f
 - atan2l
@@ -32,8 +28,6 @@ f1_keywords:
 - atanl
 - atanf
 - atan2f
-dev_langs:
-- C++
 helpviewer_keywords:
 - atan function
 - atanf function
@@ -44,20 +38,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5e1f8b60c25c57e3e2eb6a9a964fd80664e3aa4c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 59a67b0d213a11630f551fd7582b44aab60e314f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393897"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541725"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
-Berechnet den Arkustangens von **x** (**Atan**, **Atanf**, und **Atanl**) oder den Arkustangens von **y** / **x** (**atan2**, **atan2f**, und **atan2l**).
+Berechnet den Arkustangens des **x** (**Atan**, **Atanf**, und **Atanl**) oder den Arkustangens von **y** / **x** (**atan2**, **atan2f**, und **atan2l**).
 
 ## <a name="syntax"></a>Syntax
 
@@ -86,25 +76,25 @@ Alle Zahlen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**ATAN** gibt den Arkustangens von *x* in den Bereich - π/2 bis π/2 zurück. **atan2** gibt den Arkustangens von *y*/*x* in den Bereich - π bis π zurück. Wenn *x* ist 0, **Atan** gibt 0 zurück. Wenn beide Parameter von **atan2** sind 0, gibt die Funktion 0 zurück. Alle Ergebnisse sind in Bogenmaß.
+**ATAN** gibt den Arkustangens der *x* im Bereich - π/2 auf π/2-Bogenmaßes zurück. **atan2** gibt den Arkustangens der *y*/*x* in den Bereich - π π Bogenmaß. Wenn *x* ist 0 (null) **Atan** gibt 0 zurück. Wenn beide Parameter von **atan2** 0 sind, gibt die Funktion 0 zurück. Alle Ergebnisse sind in Bogenmaß.
 
-**atan2** die Zeichen beider Parameter verwendet, um den Quadranten des Rückgabewerts zu bestimmen.
+**atan2** verwendet Sie die Zeichen beider Parameter, um den Quadranten des Rückgabewerts zu bestimmen.
 
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|Keine|**_DOMAIN**|
+|± **QNAN**, **SUCHEN**|Keine|**_DOMAIN**|
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Atan** -Funktion berechnet den Arkustangens (die umgekehrte Tangensfunktion) von *x*. **atan2** berechnet den Arkustangens von *y*/*x* (Wenn *x* gleich 0 ist, **atan2** π/2 zurück, wenn *y* positiv ist, - π/2, wenn *y* ist negativ oder 0, wenn *y* ist 0.)
+Die **Atan** -Funktion berechnet den Arkustangens (die umgekehrte Tangensfunktion) von *x*. **atan2** berechnet den Arkustangens des *y*/*x* (Wenn *x* gleich 0 ist, **atan2** π/2 zurück, wenn *y* positiv ist, - π/2-If *y* ist negativ oder 0, wenn *y* ist 0.)
 
-**ATAN** ist eine Implementierung, die Streaming SIMD Extensions 2 (SSE2) verwendet. Informationen und Einschränkungen zur Verwendung der SSE2-Implementierung finden Sie unter [_set_SSE2_enable](set-sse2-enable.md).
+**ATAN** verfügt über eine Implementierung, Streaming SIMD Extensions 2 (SSE2) verwendet. Informationen und Einschränkungen zur Verwendung der SSE2-Implementierung finden Sie unter [_set_SSE2_enable](set-sse2-enable.md).
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Atan** und **atan2** nehmen **"float"** oder **lange** **double**  Argumente. In einem C-Programm **Atan** und **atan2** immer im Voraus erstellen **doppelte** Argumente und der Rückgabewert eine **doppelte**.
+Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Atan** und **atan2** , Take **"float"** oder **lange** **double**  Argumente. In einem C-Programm **Atan** und **atan2** immer **doppelte** Argumenten und Rückgabetypen einer **doppelte**.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header (C)|Erforderlicher Header (C++)|
+|-Routine zurückgegebener Wert|Erforderlicher Header (C)|Erforderlicher Header (C++)|
 |-------------|---------------------|-|
 |**ATAN**, **atan2**, **Atanf**, **atan2f**, **Atanl**, **atan2l**|\<math.h>|\<cmath> oder \<math.h>|
 

@@ -1,10 +1,6 @@
 ---
-title: _ASSERT-, _ASSERTE-, _ASSERT_EXPR-Makros| Microsoft-Dokumentation
-ms.custom: ''
+title: _ASSERT-, _ASSERTE-, _ASSERT_EXPR-Makros
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,8 +18,6 @@ f1_keywords:
 - ASSERTE
 - _ASSERT
 - _ASSERT_EXPR
-dev_langs:
-- C++
 helpviewer_keywords:
 - debugging [CRT], using macros
 - _ASSERTE macro
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - _ASSERT macro
 - _ASSERT_EXPR macro
 ms.assetid: e98fd2a6-7f5e-4aa8-8fe8-e93490deba36
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 254550acf94acb846826bc0efe76ef26753c54b8
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: d2d83c3afa8e22c1f75480fe2afefa8bf68be858
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107587"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50598457"
 ---
 # <a name="assert-asserte-assertexpr-macros"></a>_ASSERT-, _ASSERTE-, _ASSERT_EXPR-Makros
 
@@ -80,11 +70,11 @@ Sofern Sie es nicht mithilfe der Funktionen [_CrtSetReportMode](crtsetreportmode
 _CrtSetReportMode(CRT_ASSERT, _CRTDBG_MODE_WNDW);
 ````
 
-**_CrtDbgReportW** generiert den Debugbericht und bestimmt sein Ziel oder seine Ziele, basierend auf den aktuellen Berichtsmodus oder den Modi und die Datei, die für definiert die **_CRT_ASSERT** Berichtstyp. Standardmäßig werden Assertionsfehler und Fehler an ein Debugmeldungsfenster geleitet. Die Funktionen [_CrtSetReportMode](crtsetreportmode.md) und [_CrtSetReportFile](crtsetreportfile.md) werden verwendet, um die Ziele für jeden Berichtstyp zu definieren.
+**_CrtDbgReportW** generiert den Debugbericht und bestimmt sein Ziel oder seine Ziele, basierend auf den aktuellen Berichtsmodus oder den Modi und die Datei, die für definiert die **_CRT_ASSERT** Berichtstyp. Standardmäßig werden Assertionsfehler und Fehler an ein Debugmeldungsfenster geleitet. Die Funktionen [_CrtSetReportMode](crtsetreportmode.md) und [_CrtSetReportFile](crtsetreportfile.md) werden verwendet, um das Ziel für jeden Berichtstyp zu definieren.
 
 Wenn das Ziel ein debugmeldungsfenster und dem Benutzer klickt der **wiederholen** Schaltfläche **_CrtDbgReportW** gibt 1 zurück, verursacht die **_ASSERT_EXPR**, **_ ASSERT** und **_ASSERTE** Makros den Debugger zu starten, vorausgesetzt, dass die just-in-Time (JIT)-Debuggen aktiviert ist.
 
-Weitere Informationen zum Berichtstellungsverfahren finden Sie bei der Funktion [_CrtDbgReport, _CrtDbgReportW](crtdbgreport-crtdbgreportw.md). Weitere Informationen zum Beheben von Assertionsfehlern und zum Verwenden dieser Makros als Behandlungsmechanismus für Debugfehler finden Sie unter [Verwenden von Makros zur Überprüfung und Berichterstellung](/visualstudio/debugger/macros-for-reporting).
+Weitere Informationen zum Berichtstellungsverfahren finden Sie bei der Funktion [_CrtDbgReport, _CrtDbgReportW](crtdbgreport-crtdbgreportw.md) . Weitere Informationen zum Beheben von Assertionsfehlern und zum Verwenden dieser Makros als Behandlungsmechanismus für Debugfehler finden Sie unter [Verwenden von Makros zur Überprüfung und Berichterstellung](/visualstudio/debugger/macros-for-reporting).
 
 Zusätzlich zu den **_ASSERT** Makros, die [assert](assert-macro-assert-wassert.md) -Makro zum Prüfen von Programmlogik verwendet werden kann. Dieses Makro steht sowohl in der Debug- als auch in der endgültigen Version der Bibliotheken zur Verfügung. Die Debugmakros [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) sind ebenfalls für die Erstellung eines Debugberichts verfügbar, werten aber keinen Ausdruck aus. Die **_RPT** -Makros erstellen einen einfachen Bericht. Die **_RPTF** Makros sind die Quell- und die Zeilennummer Anzahl, in denen das Berichtsmakro aufgerufen wurde, im generierten Bericht. Die Breitzeichenversionen dieser Makros sind verfügbar (**_RPTW**, **_RPTFW**). Die Breitzeichenversionen sind mit den Versionen mit schmalen Zeichen identisch, mit dem Unterschied, dass für alle Zeichenfolgenparameter und Ausgaben Breitzeichen-Zeichenfolgen verwendet werden.
 

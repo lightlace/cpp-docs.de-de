@@ -1,10 +1,6 @@
 ---
-title: _CrtDumpMemoryLeaks | Microsoft-Dokumentation
-ms.custom: ''
+title: _CrtDumpMemoryLeaks
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtDumpMemoryLeaks
 apilocation:
@@ -26,8 +22,6 @@ f1_keywords:
 - CrtDumpMemoryLeaks
 - _CrtDumpMemoryLeaks
 - _CRTDBG_CHECK_CRT_DF
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtDumpMemoryLeaks function
 - CRTDBG_LEAK_CHECK_DF macro
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - CRTDBG_CHECK_CRT_DF macro
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: 71b2eab4-7f55-44e8-a55a-bfea4f32d34c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 68a187283eedadcd2f435b0900fde648a5010368
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: baf4f8d8234ba744acda20541d37bbc3ed076678
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396965"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531967"
 ---
 # <a name="crtdumpmemoryleaks"></a>_CrtDumpMemoryLeaks
 
@@ -64,19 +54,19 @@ int _CrtDumpMemoryLeaks( void );
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_CrtDumpMemoryLeaks** -Funktion bestimmt, ob seit dem Start der programmausführung ein Speicherverlust aufgetreten ist. Wenn ein Verlust erkannt wird, werden die Debugheaderinformationen für alle Objekte im Heap in einer für den Benutzer lesbaren Form ausgegeben. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von **_CrtDumpMemoryLeaks** während der vorverarbeitung entfernt.
+Die **_CrtDumpMemoryLeaks** Funktion bestimmt, ob seit dem Beginn der programmausführung ein Speicherverlust aufgetreten ist. Wenn ein Verlust erkannt wird, werden die Debugheaderinformationen für alle Objekte im Heap in einer für den Benutzer lesbaren Form ausgegeben. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von **_CrtDumpMemoryLeaks** werden während der vorverarbeitung entfernt.
 
-**_CrtDumpMemoryLeaks** wird häufig aufgerufen werden, am Ende der Ausführung des Programms stellen Sie sicher, dass alle von der Anwendung belegten Arbeitsspeicher freigegeben wurde. Die Funktion kann aufgerufen werden automatisch bei Beendigung des Programms durch das Einschalten der **_CRTDBG_LEAK_CHECK_DF** -Bitfeld des der [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) Flags mithilfe der [_CrtSetDbgFlag](crtsetdbgflag.md)Funktion.
+**_CrtDumpMemoryLeaks** wird häufig aufgerufen werden, am Ende der Ausführung des Programms stellen Sie sicher, dass alle von der Anwendung belegten Arbeitsspeicher freigegeben wurde. Die Funktion kann aufgerufen werden automatisch bei Beendigung des Programms durch Aktivieren der **_CRTDBG_LEAK_CHECK_DF** -Bitfeld des der [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) Flags mithilfe der [_CrtSetDbgFlag](crtsetdbgflag.md)Funktion.
 
-**_CrtDumpMemoryLeaks** Aufrufe [_CrtMemCheckpoint](crtmemcheckpoint.md) um den aktuellen Zustand des Heaps abzurufen und sucht dann in den Zustand für Speicherblöcke, die nicht freigegeben wurden. Wenn ein nicht freigegebene Block gefunden wird, **_CrtDumpMemoryLeaks** Aufrufe [_CrtMemDumpAllObjectsSince](crtmemdumpallobjectssince.md) um Informationen für alle Objekte im Heap vom Beginn der Ausführung des Programms zugeordnet.
+**_CrtDumpMemoryLeaks** Aufrufe [_CrtMemCheckpoint](crtmemcheckpoint.md) auf den aktuellen Zustand des Heaps abzurufen und sucht dann in den Zustand für Speicherblöcke, die nicht freigegeben wurden. Bei ein-Blocks auftreten **_CrtDumpMemoryLeaks** Aufrufe [_CrtMemDumpAllObjectsSince](crtmemdumpallobjectssince.md) um Informationen für alle Objekte, die seit dem Beginn der programmausführung im Heap zugeordnet.
 
-Standardmäßig sind interne C-laufzeitblöcke (**_CRT_BLOCK**) sind nicht in speicherabbildvorgängen enthalten. Die [_CrtSetDbgFlag](crtsetdbgflag.md) -Funktion kann verwendet werden, zum Aktivieren der **_CRTDBG_CHECK_CRT_DF** -Bit von **_crtDbgFlag** um diese Blöcke in die Erkennung von Speicherverlusten einzuschließen.
+Standardmäßig sind interne C-laufzeitblöcke (**_CRT_BLOCK**) sind nicht in speicherabbildvorgängen enthalten. Die [_CrtSetDbgFlag](crtsetdbgflag.md) Funktion kann verwendet werden, zum Aktivieren der **_CRTDBG_CHECK_CRT_DF** -Bit von **_crtDbgFlag** um diese Blöcke bei der Erkennung von Speicherverlusten einzuschließen.
 
-Weitere Informationen über heapzustandsfunktionen und die **_CrtMemState** -Struktur, finden Sie unter [den Heapzustand](/visualstudio/debugger/crt-debug-heap-details). Weitere Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Weitere Informationen über heapzustandsfunktionen und die **_CrtMemState** Struktur, siehe [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Weitere Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_CrtDumpMemoryLeaks**|\<crtdbg.h>|
 
@@ -88,7 +78,7 @@ Nur Debugversionen von [C-Laufzeitbibliotheken](../../c-runtime-library/crt-libr
 
 ## <a name="example"></a>Beispiel
 
-Ein Beispiel zum Verwenden von **_CrtDumpMemoryLeaks**, finden Sie unter [crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1).
+Ein Beispiel zur Verwendung **_CrtDumpMemoryLeaks**, finden Sie unter [crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1).
 
 ## <a name="see-also"></a>Siehe auch
 

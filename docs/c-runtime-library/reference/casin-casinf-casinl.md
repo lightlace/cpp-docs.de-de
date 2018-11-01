@@ -1,11 +1,6 @@
 ---
-title: casin, casinf, casinl | Microsoft-Dokumentation
-ms.custom: ''
+title: casin, casinf, casinl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - casin
 - casinf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/casin
 - complex/casinf
 - complex/casinl
-dev_langs:
-- C++
 helpviewer_keywords:
 - casin function
 - casinf function
 - casinl function
 ms.assetid: b75d1455-7b1e-43b0-bd46-c530be190be9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c977430528d8fa5834d3959cbf0645bf68165f0f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 209c3da6d6ed03cb5a5b129003c999b002a1a6b7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394576"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539619"
 ---
 # <a name="casin-casinf-casinl"></a>casin, casinf, casinl
 
-Ruft den Arkussinus einer komplexen Zahl, mit Branch Schnitte außerhalb des Intervalls [-1, + 1] auf der tatsächlichen Achse ab.
+Ruft den Arkussinus einer komplexen Zahl mit achsenabschnitten außerhalb des Intervalls [-1, + 1] auf der reellen Achse ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -79,7 +68,7 @@ Eine komplexe Zahl, die einen Winkel als Bogenmaß darstellt
 
 ## <a name="return-value"></a>Rückgabewert
 
-Den Arkussinus des *z*, im Bogenmaß. Das Ergebnis ist unbounded imaginären Achse, und klicken Sie im Intervall [-π/2 + π/2] der echte Achse.
+Der Arkussinus von *z*, im Bogenmaß zurück. Das Ergebnis ist unbegrenzt, auf der imaginären Achse, und klicken Sie im Intervall [-π/2 + π/2] auf der reellen Achse.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -87,7 +76,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Casin**
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|C-Header|C++-Header|
+|-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
 |**Casin**, **Casinf**, **Casinl**|\<complex.h>|\<ccomplex>|
 

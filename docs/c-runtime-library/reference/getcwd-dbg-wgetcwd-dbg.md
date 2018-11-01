@@ -1,10 +1,6 @@
 ---
-title: _getcwd_dbg, _wgetcwd_dbg | Microsoft-Dokumentation
-ms.custom: ''
+title: _getcwd_dbg, _wgetcwd_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wgetcwd_dbg
 - _getcwd_dbg
@@ -26,8 +22,6 @@ f1_keywords:
 - _wgetcwd_dbg
 - getcwd_dbg
 - wgetcwd_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - wgetcwd_dbg function
 - working directory
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - _wgetcwd_dbg function
 - directories [C++], current working
 ms.assetid: 8d5d151f-d844-4aa6-a28c-1c11a22dc00d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2b4124b5825f27ec26afdb40f0ccc9e4de4ed087
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9616c5f7e29b4f003d3943ba058d1f1a1d5adb5c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401554"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50521137"
 ---
 # <a name="getcwddbg-wgetcwddbg"></a>_getcwd_dbg, _wgetcwd_dbg
 
@@ -77,28 +67,28 @@ wchar_t *_wgetcwd_dbg(
 Speicherort für den Pfad.
 
 *maxlen*<br/>
-Maximale Länge des Pfads in Zeichen: **Char** für **_getcwd_dbg** und **Wchar_t** für **_wgetcwd_dbg**.
+Maximale Länge des Pfads in Zeichen: **Char** für **_getcwd_dbg** und **"wchar_t"** für **_wgetcwd_dbg**.
 
 *blockType*<br/>
 Angeforderter Typ des Speicherblocks: **_CLIENT_BLOCK** oder **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Zeiger auf den Namen der Quelldatei, die die Belegung angefordert oder **NULL**.
+Zeiger auf den Namen der Quelldatei, die die Belegung angefordert hat oder **NULL**.
 
 *linenumber*<br/>
-Zeilennummer in der Quelldatei, in die Belegung angefordert wurde, oder **NULL**.
+Zeilennummer in der Quelldatei, in denen die Belegung angefordert wurde, oder **NULL**.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf *Puffer*. Ein **NULL** -Rückgabewert zeigt einen Fehler und **Errno** entweder auf festgelegt ist **ENOMEM**, gibt an, dass nicht genügend Arbeitsspeicher zuweisen *Maxlen* Bytes (Wenn eine **NULL** Argument erhält als *Puffer*), oder auf **ERANGE**, der angibt, dass der Pfad länger als *Maxlen*  Zeichen.
+Gibt einen Zeiger auf *Puffer*. Ein **NULL** Rückgabewert gibt einen Fehler an und **Errno** entweder auf festgelegt ist **ENOMEM**, gibt an, dass nicht genügend Arbeitsspeicher zuordnen *Maxlen* Bytes (Wenn eine **NULL** Argument erhält als *Puffer*), oder **ERANGE**, der angibt, dass der Pfad länger als *Maxlen*  Zeichen.
 
 Weitere Informationen finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_getcwd_dbg** und **_wgetcwd_dbg** -Funktionen sind identisch mit **_getcwd** und **_wgetcwd** mit dem Unterschied, dass, wenn **_ DEBUGGEN** wird definiert, verwenden Sie diese Funktionen die Debugversion des **"malloc"** und **_malloc_dbg** Arbeitsspeicher belegt werden, wenn **NULL** übergeben wird, als der erste Parameter. Weitere Informationen finden Sie unter [_malloc_dbg](malloc-dbg.md).
+Die **_getcwd_dbg** und **_wgetcwd_dbg** -Funktionen sind identisch mit **_getcwd** und **_wgetcwd** mit dem Unterschied, dass wenn **_ DEBUGGEN** wird definiert, verwenden Sie diese Funktionen die Debugversion von **Malloc** und **_malloc_dbg** um Speicher zu belegen, wenn **NULL** übergeben wird, als die erste Parameter. Weitere Informationen finden Sie unter [_malloc_dbg](malloc-dbg.md).
 
-In den meisten Fällen müssen Sie diese Funktionen nicht explizit aufrufen. Stattdessen können Sie definieren die **_CRTDBG_MAP_ALLOC** Flag. Wenn **_CRTDBG_MAP_ALLOC** definiert ist, werden Aufrufe von **_getcwd** und **_wgetcwd** neu zu **_getcwd_dbg** und **_ Wgetcwd_dbg**nahezu mit der *BlockType* festgelegt **_NORMAL_BLOCK**. Daher, Sie müssen nicht auf diese Funktionen explizit aufrufen, wenn Sie die Heapblöcke als markieren möchten **_CLIENT_BLOCK**. Weitere Informationen finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details).
+In den meisten Fällen müssen Sie diese Funktionen nicht explizit aufrufen. Stattdessen können Sie definieren die **_CRTDBG_MAP_ALLOC** Flag. Wenn **_CRTDBG_MAP_ALLOC** definiert ist, werden Aufrufe von **_getcwd** und **_wgetcwd** neu zu **_getcwd_dbg** und **_ Wgetcwd_dbg**, mit der *BlockType* festgelegt **_NORMAL_BLOCK**. Also, Sie müssen nicht dieser Funktionen explizit aufrufen, es sei denn, Sie möchten die Heapblöcke als markieren **_CLIENT_BLOCK**. Weitere Informationen finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -108,7 +98,7 @@ In den meisten Fällen müssen Sie diese Funktionen nicht explizit aufrufen. Sta
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_getcwd_dbg**|\<crtdbg.h>|
 |**_wgetcwd_dbg**|\<crtdbg.h>|

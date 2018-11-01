@@ -1,10 +1,6 @@
 ---
-title: assert-Makro, _assert, _wassert | Microsoft-Dokumentation
-ms.custom: ''
+title: assert-Makro, _assert, _wassert
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - assert
 - _assert
@@ -27,23 +23,17 @@ f1_keywords:
 - _assert
 - _wassert
 - assert/_wassert
-dev_langs:
-- C++
 helpviewer_keywords:
 - aborting programs
 - assert function
 - assert macro
 ms.assetid: a9ca031a-648b-47a6-bdf1-65fc7399dd40
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 67fef1231d4488b1714cc2f0f2f0e892737e627d
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7ac299213ba3de878f7cf2dc99b44c45273bc3b2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101936"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590956"
 ---
 # <a name="assert-macro-assert-wassert"></a>assert-Makro, _assert, _wassert
 
@@ -97,7 +87,7 @@ Weitere Informationen zum CRT-Debugging (C Runtime Library) finden Sie unter [CR
 
 Die **_assert** und **_wassert** Funktionen sind interne CRT-Funktionen. Sie helfen dabei, den für die Unterstützung von Assertion in Ihren Objektdateien erforderlichen Code zu minimieren. Wir empfehlen nicht, diese Funktionen direkt aufzurufen.
 
-Die **assert** Makro ist in den Release- und Debugkonfigurationen Versionen der C-Laufzeitbibliotheken aktiviert Wenn **NDEBUG** ist nicht definiert. Wenn **NDEBUG** wird definiert, das Makro steht jedoch das Argument wird nicht ausgewertet und hat keine Auswirkungen. Wenn es aktiviert ist, die **assert** Makro Aufrufe **_wassert** für die Implementierung. Andere Assertionsmakros, [_ASSERT](assert-asserte-assert-expr-macros.md), [_ASSERTE](assert-asserte-assert-expr-macros.md) und [_ASSERT_EXPR](assert-asserte-assert-expr-macros.md), sind ebenfalls verfügbar, sie werten die ihnen übergebenen Ausdrücke jedoch nur aus, wenn das [_DEBUG](../../c-runtime-library/debug.md)-Makro definiert wurde und sie sich in Code befinden, der mit der Debugversion der C-Laufzeitbibliotheken gelinkt wurde.
+Die **assert** Makro ist in den Release- und Debugkonfigurationen Versionen der C-Laufzeitbibliotheken aktiviert Wenn **NDEBUG** ist nicht definiert. Wenn **NDEBUG** wird definiert, das Makro steht jedoch das Argument wird nicht ausgewertet und hat keine Auswirkungen. Wenn es aktiviert ist, die **assert** Makro Aufrufe **_wassert** für die Implementierung. Andere Assertionsmakros, [_ASSERT](assert-asserte-assert-expr-macros.md), [_ASSERTE](assert-asserte-assert-expr-macros.md) und [_ASSERT_EXPR](assert-asserte-assert-expr-macros.md), sind ebenfalls verfügbar, sie werten die ihnen übergebenen Ausdrücke jedoch nur aus, wenn das [_DEBUG](../../c-runtime-library/debug.md) -Makro definiert wurde und sie sich in Code befinden, der mit der Debugversion der C-Laufzeitbibliotheken gelinkt wurde.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7d895671efdec4649faf1f0611380d2065770ac
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
-ms.translationtype: MT
+ms.openlocfilehash: dec0456c880fea47219dc11c509bbecac025f5d3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861446"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070582"
 ---
 # <a name="standard-conversions"></a>Standardkonvertierungen
 
@@ -81,11 +81,11 @@ Wertneutrale Erweiterungen und vorzeichenneutrale Erweiterungen erzeugen normale
 
 - Ein Operand vom **/**, `%`, `/=`, `%=`, **<**, **\< =**, **>**, oder **>=**
 
-     Diese Operatoren benötigen Vorzeichen zum Bestimmen des Ergebnisses. Daher ergeben wert- und vorzeichenneutrale Erweiterungen andere Ergebnisse, wenn sie auf diese Operanden angewendet werden.
+   Diese Operatoren benötigen Vorzeichen zum Bestimmen des Ergebnisses. Daher ergeben wert- und vorzeichenneutrale Erweiterungen andere Ergebnisse, wenn sie auf diese Operanden angewendet werden.
 
 - Der linke Operand des **>>** oder **>>=**
 
-     Diese Operatoren behandeln Mengen mit Vorzeichen und Mengen ohne Vorzeichen unterschiedlich, wenn eine Verschiebeoperation ausgeführt wird. Für Mengen mit Vorzeichen wird das Vorzeichenbit beim Verschieben einer Menge nach rechts in die frei werdenden Bitpositionen übertragen. Bei Mengen ohne Vorzeichen werden die frei werdenden Bitpositionen mit Nullen gefüllt.
+   Diese Operatoren behandeln Mengen mit Vorzeichen und Mengen ohne Vorzeichen unterschiedlich, wenn eine Verschiebeoperation ausgeführt wird. Für Mengen mit Vorzeichen wird das Vorzeichenbit beim Verschieben einer Menge nach rechts in die frei werdenden Bitpositionen übertragen. Bei Mengen ohne Vorzeichen werden die frei werdenden Bitpositionen mit Nullen gefüllt.
 
 - Ein Argument zu einer überladenen Funktion oder zum Operand eines überladenen Operators, das vom Vorzeichen des Typs des Operanden für die Argumentübereinstimmung abhängt. (Finden Sie unter [überladene Operatoren](../cpp/operator-overloading.md) für Weitere Informationen zum Definieren von überladenen Operatoren.)
 
@@ -221,7 +221,7 @@ Im zweiten Fall, in dem ein Zeiger auf eine Klasse in einen Zeiger auf eine Basi
 
 Das Ergebnis einer solchen Konvertierung ist ein Zeiger auf das "Unterobjekt", den Teil des Objekts, der vollständig von der Basisklasse beschrieben wird.
 
-Der folgende Code definiert zwei Klassen, `A` und `B`, wobei `B` von `A` abgeleitet ist. (Weitere Informationen zu Vererbung, finden Sie unter [abgeleitete Klassen](../cpp/inheritance-cpp.md).) Zudem definiert der Code `bObject`, ein Objekt vom Typ `B`, und zwei Zeiger (`pA` und `pB`), die auf das Objekt zeigen.
+Der folgende Code definiert zwei Klassen, `A` und `B`, wobei `B` von `A` abgeleitet ist. (Weitere Informationen zu Vererbung, finden Sie unter [abgeleitete Klassen](../cpp/inheritance-cpp.md).) Zudem definiert der Code , ein Objekt vom Typ `bObject`, und zwei Zeiger (`B` und `pB`), die auf das Objekt zeigen.
 
 ```cpp
 // C2039 expected

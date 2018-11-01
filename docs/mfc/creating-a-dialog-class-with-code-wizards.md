@@ -1,28 +1,18 @@
 ---
-title: Erstellen einer Dialogfeldklasse mit Code-Assistenten | Microsoft-Dokumentation
-ms.custom: ''
+title: Erstellen einer Dialogfeldklasse mit Code-Assistenten
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - dialog boxes [MFC], creating
 - MFC dialog boxes, creating
 - code wizards
 - dialog classes [MFC], creating
 ms.assetid: a7157b9d-f1a8-4381-a4cf-180cd2c7f1b2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d8127b6df9ab8ebb8d99007eb3273badad2c871b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6fb1b941e4c813d13a14f4c8870d9013d3987f74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398158"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578541"
 ---
 # <a name="creating-a-dialog-class-with-code-wizards"></a>Erstellen einer Dialogfeldklasse mit Code-Assistenten
 

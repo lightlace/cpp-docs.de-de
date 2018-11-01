@@ -1,11 +1,6 @@
 ---
-title: lgamma, lgammaf, lgammal | Microsoft-Dokumentation
-ms.custom: ''
+title: lgamma, lgammaf, lgammal
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - lgamma
 - lgammaf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/lgamma
 - math/lgammaf
 - math/lgammal
-dev_langs:
-- C++
 helpviewer_keywords:
 - lgamma function
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4fb668e1c24d3f24331e0892002530192afdaeb6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43ce1599ab9161b9fadf5643ddd2ec739ab2d8b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400251"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533483"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
 
@@ -72,16 +61,16 @@ Der zu berechnende Wert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg zurück den natürlichen Logarithmus der Absolute Wert der Gammafunktion von *x*.
+Bei Erfolg zurückgegeben. der natürliche Logarithmus des absoluten Werts der Gammafunktion des *x*.
 
 |Problem|Zurück|
 |-----------|------------|
-|*X* = "NaN"|NaN|
-|*X* = ±0|+INFINITY|
+|*X* = NaN|NaN|
+|*X* ±0 =|+INFINITY|
 |*X*= negative ganze Zahl|+INFINITY|
 |±INFINITY|+INFINITY|
 |pole-Fehler|+HUGE_VAL, +HUGE_VALF, oder +HUGE_VALL|
-|Überlaufbereichsfehler|±HUGE_VAL, ±HUGE_VALF oder ±HUGE_VALL|
+|Überlaufbereichsfehler|±HUGE_VAL ±HUGE_VALF oder ±HUGE_VALL|
 
 Fehler werden wie in [_matherr](matherr.md) angegeben gemeldet.
 
@@ -89,7 +78,7 @@ Fehler werden wie in [_matherr](matherr.md) angegeben gemeldet.
 
 Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Lgamma** verwenden und zurückgeben **"float"** und **lange** **doppelte** Typen. In einem C-Programm **Lgamma** immer Double und gibt eine **doppelte**.
 
-Wenn x einen rationale Zahl ist, gibt diese Funktion den Logarithmus Fakultät (X - 1) zurück.
+Wenn x eine rationale Zahl ist, gibt diese Funktion den Logarithmus der Fakultät von (X - 1) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

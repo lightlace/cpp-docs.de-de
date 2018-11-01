@@ -1,10 +1,6 @@
 ---
-title: _chsize_s | Microsoft-Dokumentation
-ms.custom: ''
+title: _chsize_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _chsize_s
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - chsize_s
 - _chsize_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], changing size
 - chsize_s function
 - _chsize_s function
 ms.assetid: d88d2e94-6e3b-42a5-8631-16ac4d82fa38
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d131f5e21fa4980e77cfb9dc858d5329b94e2b93
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a56efe826d43c80dc2cdee295e58872e7dd3c9ea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395110"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597599"
 ---
 # <a name="chsizes"></a>_chsize_s
 
@@ -64,21 +54,21 @@ Neue Länge der Datei in Bytes.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_chsize_s** gibt den Wert 0 zurück, wenn die Dateigröße erfolgreich geändert wurde. Ein Wert ungleich Null zeigt einen Fehler: der Rückgabewert ist **EACCES** Wenn für den Zugriff auf die angegebene Datei gesperrt ist **EBADF** , wenn die angegebene Datei schreibgeschützt ist oder die Beschreibung ungültig ist, **ENOSPC** Wenn kein auf dem Gerät Speicherplatz oder **EINVAL** Wenn Größe ist kleiner als 0 (null). **Errno** auf denselben Wert festgelegt ist.
+**_chsize_s** gibt den Wert 0 zurück, wenn die Dateigröße erfolgreich geändert wurde. Ein Rückgabewert ungleich Null gibt einen Fehler: der Rückgabewert ist **EACCES** , wenn die angegebene Datei für den Zugriff gesperrt ist **EBADF** , wenn die angegebene Datei schreibgeschützt ist oder des Deskriptors ungültig ist, **ENOSPC** , wenn kein Speicherplatz mehr auf dem Gerät vorhanden ist oder **EINVAL** Wenn Größe ist kleiner als 0 (null). **Errno** auf den gleichen Wert festgelegt ist.
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_chsize_s** Funktion erweitert oder verkürzt die zugeordnete Datei *fd* auf die Länge, angegeben durch *Größe*. Die Datei muss in einem Modus geöffnet sein, der Schreiben zulässt. Wenn die Datei erweitert wird, werden NULL-Zeichen ('\0') angefügt. Wenn die Datei abgeschnitten wird, gehen alle Daten vom Ende der gekürzten Datei bis zur ursprünglichen Länge der Datei verloren.
+Die **_chsize_s** -Funktion erweitert oder verkürzt die zugeordnete Datei *fd* der vom angegebenen Länge *Größe*. Die Datei muss in einem Modus geöffnet sein, der Schreiben zulässt. Wenn die Datei erweitert wird, werden NULL-Zeichen ('\0') angefügt. Wenn die Datei abgeschnitten wird, gehen alle Daten vom Ende der gekürzten Datei bis zur ursprünglichen Länge der Datei verloren.
 
-**_chsize_s** ist eine 64-Bit-Ganzzahl als die Dateigröße, und daher Dateigrößen, die größer als 4 GB verarbeiten kann. **_chsize** ist auf 32-Bit-Dateigrößen beschränkt.
+**_chsize_s** ist eine 64-Bit-Ganzzahl als die Dateigröße, und aus diesem Grund können Dateien handhaben, größer als 4 GB. **_chsize** ist auf 32-Bit-Dateigrößen.
 
-Diese Funktion überprüft ihre Parameter. Wenn *fd* ist eine gültige Dateideskriptor oder Größe ist kleiner als 0 (null), wird der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
+Diese Funktion überprüft ihre Parameter. Wenn *fd* ist ein gültiger Dateideskriptor oder die Größe ist kleiner als 0 (null), wird der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|Optionaler Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|
 |-------------|---------------------|---------------------|
 |**_chsize_s**|\<io.h>|\<errno.h>|
 

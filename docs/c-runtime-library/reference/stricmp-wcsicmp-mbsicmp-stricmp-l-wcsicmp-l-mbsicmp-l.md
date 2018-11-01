@@ -1,10 +1,6 @@
 ---
-title: _stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _stricmp_l
 - _mbsicmp
@@ -39,8 +35,6 @@ f1_keywords:
 - _fstricmp
 - mbsicmp_l
 - mbsicmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wcsicmp function
 - _stricmp_l function
@@ -62,23 +56,19 @@ helpviewer_keywords:
 - mbsicmp_l function
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0014ea3c727db2a368123696c47df1eca6ba3bb4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d27b2128d79d7ff3ab0150e182d494fed52d46ca
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418327"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50559075"
 ---
 # <a name="stricmp-wcsicmp-mbsicmp-stricmpl-wcsicmpl-mbsicmpl"></a>_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 
 Führt einen Vergleich von Zeichenfolgen ohne Beachtung der Groß-/Kleinschreibung durch.
 
 > [!IMPORTANT]
-> **_mbsicmp** und **_mbsicmp_l** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsicmp** und **_mbsicmp_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -114,7 +104,7 @@ int _mbsicmp_l(
 
 ### <a name="parameters"></a>Parameter
 
-*String1*, *Zeichenfolge2*<br/>
+*Zeichenfolge1*, *Zeichenfolge2*<br/>
 Zu vergleichende mit NULL endende Zeichenfolgen.
 
 *locale*<br/>
@@ -122,36 +112,36 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert gibt an, die Beziehung zwischen *string1* auf *Zeichenfolge2* wie folgt.
+Der Rückgabewert gibt an, die Beziehung zwischen *string1* zu *Zeichenfolge2* wie folgt.
 
 |Rückgabewert|Beschreibung|
 |------------------|-----------------|
-|< 0|*String1* kleiner als *Zeichenfolge2*|
-|0|*String1* identisch mit *Zeichenfolge2*|
-|> 0|*String1* größer als *Zeichenfolge2*|
+|< 0|*Zeichenfolge1* kleiner als *Zeichenfolge2*|
+|0|*Zeichenfolge1* identisch mit *Zeichenfolge2*|
+|> 0|*Zeichenfolge1* größer als *Zeichenfolge2*|
 
-Bei einem Fehler **_mbsicmp** gibt **_NLSCMPERROR**, definiert \<string.h > und \<mbstring.h >.
+Bei einem Fehler **_mbsicmp** gibt **_NLSCMPERROR**, definiert in \<string.h > und \<mbstring.h >.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_stricmp** -Funktion vergleicht der Reihe *string1* und *Zeichenfolge2* nach dem konvertieren jedes Zeichens in Kleinbuchstaben, und gibt eines Wert, der angibt, deren Beziehungen. **_stricmp** unterscheidet sich von **_stricoll** , da die **_stricmp** Vergleich nur betroffen **LC_CTYPE**, der bestimmt, welche Zeichen oberen sind und Kleinbuchstaben. Die **_stricoll** Funktion vergleicht Zeichenfolgen gemäß der **LC_CTYPE** und **LC_COLLATE** Kategorien des Gebietsschemas, einschließlich der Groß-/Kleinschreibung und Sortierung Reihenfolge. Weitere Informationen zu den **LC_COLLATE** Kategorie finden Sie unter [Setlocale](setlocale-wsetlocale.md) und [Gebietsschemakategorien](../../c-runtime-library/locale-categories.md). Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebietsschema für gebietsschemaabhängige Verhalten. Die Versionen mit dem Suffix sind identisch, verwenden allerdings das übergebene Gebietsschema. Wenn das Gebietsschema nicht festgelegt wurde, wird das C-Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die **_stricmp** -Funktion vergleicht der Reihe *string1* und *Zeichenfolge2* nach der Konvertierung der jedes Zeichen in Kleinbuchstaben, und gibt eines Wert, der ihre Beziehung angibt. **_stricmp** unterscheidet sich von **_stricoll** darin, dass die **_stricmp** hat nur Auswirkungen auf Vergleich von **LC_CTYPE**, der bestimmt, welche Zeichen oberen sind und Kleinbuchstaben. Die **_stricoll** Funktion vergleicht Zeichenfolgen gemäß der **LC_CTYPE** und **LC_COLLATE** Kategorien des Gebietsschemas, die die Groß-/Kleinschreibung und Sortierung umfasst die Reihenfolge. Weitere Informationen zu den **LC_COLLATE** Kategorie finden Sie unter [Setlocale](setlocale-wsetlocale.md) und [Gebietsschemakategorien](../../c-runtime-library/locale-categories.md). Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebietsschema für gebietsschemaabhängige Verhalten. Die Versionen mit dem Suffix sind identisch, verwenden allerdings das übergebene Gebietsschema. Wenn das Gebietsschema nicht festgelegt wurde, wird das C-Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 > [!NOTE]
-> **_stricmp** entspricht **_strcmpi**. Synonym verwendet werden, aber **_stricmp** ist der bevorzugte Standard.
+> **_stricmp** entspricht **_strcmpi**. Sie können austauschbar verwendet werden, aber **_stricmp** ist der bevorzugte Standard.
 
-Die **_strcmpi** -Funktion ist gleichbedeutend mit **_stricmp** und wird nur für Abwärtskompatibilität bereitgestellt.
+Die **_strcmpi** -Funktion ist gleichbedeutend mit **_stricmp** und wird nur zur Abwärtskompatibilität bereitgestellt.
 
 Da **_stricmp** kleinbuchstabenvergleiche ausführt, kann es zu unerwartetem Verhalten führen.
 
-Um zu veranschaulichen, wann case-Konvertierung durch **_stricmp** wirkt sich auf das Ergebnis eines Vergleichs wird davon ausgegangen, dass Sie die beiden Zeichenfolgen JOHNSTON und JOHN_HENRY verfügen. Die Zeichenfolge JOHN_HENRY wird als kleiner als JOHNSTON angesehen, da das Zeichen „_“ einen niedrigeren ASCII-Wert hat als der Kleinbuchstabe „s“. Jedes Zeichen mit einem ASCII-Wert zwischen 91 und 96 wird als kleiner als jeder Buchstabe angesehen.
+Um zu veranschaulichen, wann kleinschreibungskonvertierung durch **_stricmp** wirkt sich auf das Ergebnis eines Vergleichs wird davon ausgegangen, dass Sie die beiden Zeichenfolgen JOHNSTON und JOHN_HENRY verfügen. Die Zeichenfolge JOHN_HENRY wird als kleiner als JOHNSTON angesehen, da das Zeichen „_“ einen niedrigeren ASCII-Wert hat als der Kleinbuchstabe „s“. Jedes Zeichen mit einem ASCII-Wert zwischen 91 und 96 wird als kleiner als jeder Buchstabe angesehen.
 
 Wenn die [Strcmp](strcmp-wcscmp-mbscmp.md) Funktion dient anstelle von **_stricmp**, john_henry größer als JOHNSTON.
 
-**_wcsicmp** und **_mbsicmp** sind Breitzeichen- und multibytezeichenversionen von **_stricmp**. Die Argumente und der Rückgabewert von **_wcsicmp** sind Breitzeichen-Zeichenfolgen, die von **_mbsicmp** sind Multibyte Zeichenfolgen. **_mbsicmp** erkennt Multibyte-Zeichenfolgen entsprechend der aktuellen multibyte-Codepage und gibt **_NLSCMPERROR** bei einem Fehler. Weitere Informationen finden Sie unter [Codepages](../../c-runtime-library/code-pages.md). Diese drei Funktionen verhalten sich andernfalls identisch.
+**_wcsicmp** und **_mbsicmp** sind Breitzeichen- und multibytezeichenversionen von Versionen von **_stricmp**. Die Argumente und der Rückgabewert von **_wcsicmp** sind Breitzeichen-Zeichenfolgen, die von **_mbsicmp** sind Multibyte Zeichenfolgen. **_mbsicmp** erkennt multibytezeichensequenzen gemäß der aktuellen multibyte-Codepage und gibt **_NLSCMPERROR** bei einem Fehler. Weitere Informationen finden Sie unter [Codepages](../../c-runtime-library/code-pages.md). Diese drei Funktionen verhalten sich andernfalls identisch.
 
-**_wcsicmp** und **Wcscmp** Verhalten sich identisch, außer dass **Wcscmp** nicht konvertiert, die Argumente in Kleinbuchstaben, bevor diese verglichen werden. **_mbsicmp** und **_mbscmp** Verhalten sich identisch, außer dass **_mbscmp** nicht konvertiert, die Argumente in Kleinbuchstaben, bevor diese verglichen werden.
+**_wcsicmp** und **Wcscmp** Verhalten sich identisch, außer dass **Wcscmp** Argumente in Kleinbuchstaben, bevor diese verglichen werden nicht konvertiert. **_mbsicmp** und **_mbscmp** Verhalten sich identisch, außer dass **_mbscmp** Argumente in Kleinbuchstaben, bevor diese verglichen werden nicht konvertiert.
 
-Sie müssen Aufrufen [Setlocale](setlocale-wsetlocale.md) für **_wcsicmp** mit Latin 1-Zeichen funktionieren. Das C-Gebietsschema ist standardmäßig aktiviert, deshalb ist z. B. "ä" nicht identisch mit "Ä". Rufen Sie **Setlocale** mit einem anderen Gebietsschema als das Gebietsschema "C" vor dem Aufruf von **_wcsicmp**. Im folgende Beispiel wird veranschaulicht, wie **_wcsicmp** wird vom Gebietsschema abhängt:
+Sie müssen Aufrufen [Setlocale](setlocale-wsetlocale.md) für **_wcsicmp** mit Latin 1-Zeichen funktionieren. Das C-Gebietsschema ist standardmäßig aktiviert, deshalb ist z. B. "ä" nicht identisch mit "Ä". Rufen Sie **Setlocale** mit einem anderen Gebietsschema als das Gebietsschema "C" vor dem Aufruf von **_wcsicmp**. Im folgende Beispiel wird veranschaulicht, wie **_wcsicmp** ist vom Gebietsschema abhängt:
 
 ```C
 // crt_stricmp_locale.c
@@ -169,7 +159,7 @@ int main() {
 
 Eine Alternative besteht darin, rufen Sie [_create_locale _wcreate_locale](create-locale-wcreate-locale.md) und übergeben Sie das zurückgegebene Gebietsschemaobjekt als Parameter an **_wcsicmp_l**.
 
-Mit allen diesen Funktionen werden ihre Parameter überprüft. Wenn entweder *string1* oder *Zeichenfolge2* null-Zeiger, der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **_NLSCMPERROR** und **Errno** auf **EINVAL**.
+Mit allen diesen Funktionen werden ihre Parameter überprüft. Wenn entweder *string1* oder *Zeichenfolge2* null-Zeiger, der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **_NLSCMPERROR** und **Errno** zu **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -179,7 +169,7 @@ Mit allen diesen Funktionen werden ihre Parameter überprüft. Wenn entweder *st
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_stricmp**, **_stricmp_l**|\<string.h>|
 |**_wcsicmp**, **_wcsicmp_l**|\<string.h> oder \<wchar.h>|

@@ -1,31 +1,21 @@
 ---
-title: 'Exemplarische Vorgehensweise: Aktualisieren der MFC Scribble-Anwendung (Teil 2) | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Exemplarische Vorgehensweise: Aktualisieren der MFC Scribble-Anwendung (Teil 2)'
 ms.date: 09/20/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d3623eb594ff82660e97809eef609a33e74e74dc
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: d618d79c50892523b3e4a71be163b8778402e48e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235437"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570338"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Exemplarische Vorgehensweise: Aktualisieren der MFC Scribble-Anwendung (Teil 2)
 
 [Teil 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) dieser exemplarischen Vorgehensweise wurde gezeigt, wie Sie ein Office Fluent-Multifunktionsleiste klassischen hinzufügen Scribble-Anwendung. Dieser Teil zeigt das Hinzufügen von menübandbereichen und Steuerelementen, die Benutzer anstelle von Menüs und Befehlen verwenden können.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 [Visual C++-Beispiele](../visual-cpp-samples.md)
 
@@ -190,7 +180,7 @@ Fügen Sie als Nächstes eine [CMFCRibbonColorButton](../mfc/reference/cmfcribbo
 
 ### <a name="to-add-a-color-button-to-the-pen-panel"></a>Eine Schaltfläche "Farbe" das Bedienfeld "Stift" hinzu
 
-1. Bevor Sie die Schaltfläche "Farbe" hinzufügen, erstellen Sie ein Menüelement für. In der **Ressourcenansicht** geöffnete Fenster die **IDR_SCRIBBTYPE** Menüressource. Klicken Sie auf die **Stift** Menüelement, das Pen-Menü zu öffnen. Klicken Sie dann auf **Text hier eingeben** und `&Color`. Mit der rechten Maustaste in des Texts, die von Ihnen zum Anzeigen eingegebene der **Eigenschaften** Fenster. Ändern Sie die ID, `ID_PEN_COLOR`.
+1. Bevor Sie die Schaltfläche "Farbe" hinzufügen, erstellen Sie ein Menüelement für. In der **Ressourcenansicht** geöffnete Fenster die **IDR_SCRIBBTYPE** Menüressource. Klicken Sie auf die **Stift** Menüelement, das Pen-Menü zu öffnen. Klicken Sie dann auf **Text hier eingeben** und `&Color`. Mit der rechten Maustaste in des Texts, die von Ihnen zum Anzeigen eingegebene der **Eigenschaften** Fenster. Ändern Sie die ID in `ID_PEN_COLOR`.
 
 1. Fügen Sie jetzt die Schaltfläche "Farbe" hinzu. Von der **Toolbox**, ziehen Sie eine **Farbenschaltfläche** auf die **Stift** Bereich.
 

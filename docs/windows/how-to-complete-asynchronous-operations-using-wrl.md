@@ -1,24 +1,14 @@
 ---
-title: 'Vorgehensweise: Abschließen asynchroner Vorgänge mit WRL | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Gewusst wie: Abschließen asynchroner Vorgänge mit WRL'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 02173eae-731b-49bc-b412-f1f69388b99d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6c68a6cfedb7af73ee2fa7710452968320996aea
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ec57d6dd94357a65b7aaa300d5622ec5feac9932
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595431"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534068"
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>Gewusst wie: Abschließen asynchroner Vorgänge mit WRL
 
@@ -44,7 +34,7 @@ Mit den folgenden Schritten wird ein asynchroner Timer und gestartet und gewarte
 
    `Windows.System.Threading.h` deklariert die Typen, die für die Verwendung eines asynchronen Timers erforderlich sind.
 
-   Es wird empfohlen, den Code mithilfe der `using namespace`-Direktive in der CPP-Datei verständlicher zu gestalten.
+   Es wird empfohlen, den Code mithilfe der `using namespace`-Anweisung in der CPP-Datei verständlicher zu gestalten.
 
 2. Initialisieren Sie die Windows-Runtime.
 
@@ -94,7 +84,7 @@ Mit den folgenden Schritten starten Sie einen Arbeitsthread und definieren die A
 
    Windows.System.Threading.h deklariert die Typen, die zur Verwendung eines Arbeitsthreads benötigt werden.
 
-   Es wird empfohlen, den Code mithilfe der `using namespace`-Direktive in der CPP-Datei verständlicher zu gestalten.
+   Es wird empfohlen, den Code mithilfe der `using namespace`-Anweisung in der CPP-Datei verständlicher zu gestalten.
 
 2. Initialisieren Sie die Windows-Runtime.
 

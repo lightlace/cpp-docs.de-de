@@ -1,11 +1,6 @@
 ---
-title: log2, log2f, log2l | Microsoft-Dokumentation
-ms.custom: ''
+title: log2, log2f, log2l
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - log2
 - log2l
@@ -23,19 +18,13 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 apitype: DLLExport
-dev_langs:
-- C++
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 16fb56b1a3aef56e201d469974c5de434a08aa41
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f1db48abdc7237dc46a0ea8a3ea5647a0fce62f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399526"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579308"
 ---
 # <a name="log2-log2f-log2l"></a>log2, log2f, log2l
 
@@ -73,14 +62,14 @@ Der Wert, um den Basis 2-Logarithmus zu bestimmen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg gibt log2 zurückgeben *x*.
+Bei Erfolg wird log2 gibt *x*.
 
 Andernfalls wird möglicherweise einer der folgenden Werte zurückgeben:
 
 |Problem|Zurück|
 |-----------|------------|
 |*X* < 0|NaN|
-|*X* = ±0|-UNENDLICH|
+|*X* ±0 =|-UNENDLICH|
 |*X* = 1|+0|
 |+UNENDLICH|+INFINITY|
 |NaN|NaN|
@@ -91,7 +80,7 @@ Fehler werden gemäß der Angaben in [_matherr](matherr.md) gemeldet.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn x eine ganze Zahl ist, gibt diese Funktion im Wesentlichen die nullbasierten Index des das höchstwertige 1 Bit der *x*.
+Wenn x eine ganze Zahl ist, gibt diese Funktion im Wesentlichen den nullbasierten Index des höchstwertigen 1 Bit der *x*.
 
 ## <a name="requirements"></a>Anforderungen
 

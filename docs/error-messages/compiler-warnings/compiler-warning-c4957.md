@@ -1,31 +1,21 @@
 ---
-title: Compilerwarnung C4957 | Microsoft Docs
-ms.custom: ''
+title: Compilerwarnung C4957
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4957
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4957
 ms.assetid: a18c52d4-23e2-44f1-b4b5-f7fa5a7f3987
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 60cf1c03ace94c866b77c5340e2a04a9d8190e4d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9afdd213baadd907afacde0ff7f14f3c78bc60a5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705217"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528257"
 ---
 # <a name="compiler-warning-c4957"></a>Compilerwarnung C4957
 
-> "*Umwandlung*": explizite Umwandlung von '*Cast_from*'to'*Cast_to*"ist nicht überprüfbar
+> "*Umwandlung*": explizite Umwandlung von '*Cast_from*'to'*Cast_to*' kann nicht überprüft werden
 
 ## <a name="remarks"></a>Hinweise
 
@@ -33,9 +23,9 @@ Eine Umwandlung ergibt ein nicht überprüfbares Image.
 
 Einige Umwandlungen sind sicher (z. B. eine `static_cast` die benutzerdefinierte Umwandlungen auslöst, und eine `const_cast`). Eine [safe_cast](../../windows/safe-cast-cpp-component-extensions.md) generiert auf jeden Fall überprüfbaren Code.
 
-Weitere Informationen finden Sie unter [reiner und überprüfbarer Code (C + c++ / CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Weitere Informationen finden Sie unter [reiner und überprüfbarer Code (C++ / CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
-Die **/CLR: safe** -Compileroption in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt wird.
+Die **/CLR: safe** Compileroption ist in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt.
 
 Diese Warnung wird als Fehler ausgegeben. Sie kann mithilfe des [warning](../../preprocessor/warning.md) -Pragmas oder der Compileroption [/wd](../../build/reference/compiler-option-warning-level.md) deaktiviert werden.
 

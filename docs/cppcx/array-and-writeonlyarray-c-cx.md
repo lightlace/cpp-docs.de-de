@@ -1,20 +1,13 @@
 ---
-title: Array und WriteOnlyArray (C++ / CX) | Microsoft-Dokumentation
-ms.custom: ''
+title: Array und WriteOnlyArray (C++/CX)
 ms.date: 01/22/2017
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4423616a9a05268a68e6eff095a2503c3a1d0590
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b957e7d34486aced4796a029ebfdfa710dc71fcc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103670"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530194"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array und WriteOnlyArray (C++/CX)
 
@@ -86,13 +79,13 @@ Das Windows Runtime-Typsystem unterstützt nicht das Konzept von verzweigten Arr
 
 In einigen Szenarien, in denen Daten über die ABI an ein [Platform::Array](../cppcx/platform-array-class.md)übergeben werden und diese Daten aus Effizienzgründen letztlich in einem Array im C-Format verarbeitet werden sollen, können Sie [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) verwenden, um den zusätzlichen Kopiervorgang zu vermeiden. Wenn Sie [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) als Argument an einen Parameter übergeben, der ein `Platform::Array`akzeptiert, speichert `ArrayReference` die Daten direkt in ein angegebenes Array im C-Format. Beachten Sie, dass `ArrayReference` nicht über eine Sperre für die Quelldaten verfügt. Wenn diese Daten geändert oder in einem anderen Thread gelöscht werden, bevor der Aufruf abgeschlossen wird, sind die Ergebnisse nicht definiert.
 
-Der folgende Codeausschnitt veranschaulicht, wie die Ergebnisse einer [DataReader](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx) Vorgang in einer `Platform::Array` (das übliche Muster), und wie `ArrayReference` zum Kopieren der Daten direkt in ein Array im C-Format:
+Der folgende Codeausschnitt zeigt, wie die Ergebnisse eines [DataReader](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx) -Vorgangs in ein `Platform::Array` (das übliche Muster) kopiert werden und wie `ArrayReference` ersetzt wird, um die Daten direkt in ein Array im C-Format zu kopieren:
 
 [!code-cpp[cx_arrays#07](../cppcx/codesnippet/CPP/js-array/class1.h#07)]
 
 ## <a name="avoid-exposing-an-array-as-a-property"></a>Vermeiden, ein Array als Eigenschaft verfügbar zu machen
 
-Im Allgemeinen sollten Sie einen `Platform::Array` -Typ möglichst nicht als Eigenschaft in einer Verweisklasse verfügbar machen, da das gesamte Array zurückgegeben wird, auch wenn der Clientcode nur versucht, auf ein einzelnes Element zuzugreifen. Wenn Sie einen sequenzcontainer als Eigenschaft in einer öffentlichen Verweisklasse verfügbar machen möchten [Windows::Foundation::IVector](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) ist die bessere Wahl. In privaten oder internen APIs (die nicht in Metadaten veröffentlicht werden) sollten Sie die Verwendung eines C++-Standardcontainers wie [std::vector](../standard-library/vector-class.md)erwägen.
+Im Allgemeinen sollten Sie einen `Platform::Array` -Typ möglichst nicht als Eigenschaft in einer Verweisklasse verfügbar machen, da das gesamte Array zurückgegeben wird, auch wenn der Clientcode nur versucht, auf ein einzelnes Element zuzugreifen. Wenn Sie einen Sequenzcontainer als Eigenschaft in einer öffentlichen Verweisklasse verfügbar machen müssen, verwenden Sie am besten [Windows::Foundation::IVector](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) . In privaten oder internen APIs (die nicht in Metadaten veröffentlicht werden) sollten Sie die Verwendung eines C++-Standardcontainers wie [std::vector](../standard-library/vector-class.md)erwägen.
 
 ## <a name="see-also"></a>Siehe auch
 
