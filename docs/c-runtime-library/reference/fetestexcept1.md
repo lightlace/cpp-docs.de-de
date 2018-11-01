@@ -1,11 +1,6 @@
 ---
-title: Fetestexcept | Microsoft Docs
-ms.custom: ''
+title: fetestexcept
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fetestexcept
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - fetestexcept
 - fenv/fetestexcept
-dev_langs:
-- C++
 helpviewer_keywords:
 - fetestexept function
 ms.assetid: ca4dc43f-5573-440d-bc19-ead7571b13dc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0450fcaddf8ca05484d0b2bd122ff006eb8355f1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ae170e4c5826e2053b330d81773b75f176303332
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397397"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667440"
 ---
 # <a name="fetestexcept"></a>fetestexcept
 
@@ -55,7 +44,7 @@ int fetestexcept(
 
 ### <a name="parameters"></a>Parameter
 
-*excepts*<br/>
+*Ausnahme*<br/>
 Bitweiser OR der zu testenden Gleitkomma-Statusflags
 
 ## <a name="return-value"></a>Rückgabewert
@@ -64,7 +53,7 @@ Gibt bei Erfolg eine Bitmaske mit einem bitweisen OR der Gleitkommaausnahme-Makr
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie die Funktion „fetestexcept“, um zu bestimmen, welche Ausnahmen durch einen Gleitkommavorgang ausgelöst wurden. Verwenden der *excepts* Parameter an, welche Ausnahme Statusflags zu testen. Die **Fetestexcept** -Funktion verwendet diese Ausnahmemakros in definierten \<fenv.h > in *excepts* und der Rückgabewert:
+Verwenden Sie die Funktion „fetestexcept“, um zu bestimmen, welche Ausnahmen durch einen Gleitkommavorgang ausgelöst wurden. Verwenden der *Ausnahme* Parameter, um welche Gleitkommaausnahme-Flags zum Testen anzugeben. Die **Fetestexcept** -Funktion verwendet, diese definierten Ausnahmemakros \<fenv.h > in *Ausnahme* und der Rückgabewert:
 
 |Ausnahmemakro|Beschreibung|
 |---------------------|-----------------|
@@ -75,7 +64,7 @@ Verwenden Sie die Funktion „fetestexcept“, um zu bestimmen, welche Ausnahmen
 |FE_UNDERFLOW|Das Ergebnis einer früheren Gleitkommaoperation war zu klein, um ganz genau dargestellt zu werden; ein nicht normaler Wert wurde erstellt.|
 |FE_ALLEXCEPT|Bitweiser OR-Operator oder alle unterstützten Gleitkommaausnahmen|
 
-Das angegebene *excepts* Argument möglicherweise 0, einem der unterstützten Gleitkommaausnahme Makros oder bitweisen oder von zwei oder mehr der Makros. Die Auswirkung eines anderen *excepts* Argumentwert ist nicht definiert.
+Das angegebene *Ausnahme* Argument kann 0 (null) eines der unterstützten Gleitkommaausnahme-Makros oder das bitweise OR von mindestens zwei der Makros sein. Der Effekt von jedem anderen *Ausnahme* -Argumentwert ist nicht definiert.
 
 Um diese Funktion zu verwenden, müssen Sie vor dem Aufruf Gleitkommaoptimierungen deaktivieren, die den Zugriff mithilfe der `#pragma fenv_access(on)`-Direktive verhindern könnten. Weitere Informationen finden Sie unter [fenv_access](../../preprocessor/fenv-access.md).
 
