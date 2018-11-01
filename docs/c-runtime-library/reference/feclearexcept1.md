@@ -1,11 +1,6 @@
 ---
-title: feclearexcept1 | Microsoft-Dokumentation
-ms.custom: ''
+title: feclearexcept1
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - feclearexcept
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - feclearexcept
 - fenv/feclearexcept
-dev_langs:
-- C++
 helpviewer_keywords:
 - feclearexcept function
 ms.assetid: ef419da3-c248-4432-b53c-8e7a475d9533
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: face2637f308a56d95baa7563a6409dd38870d73
-ms.sourcegitcommit: 2f571220e16f6c20e1fdb005f6cbc9e7ef5608f5
+ms.openlocfilehash: 3c2f037a5be903fc006debfa7319c483431fdd92
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37070076"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551111"
 ---
 # <a name="feclearexcept"></a>feclearexcept
 
@@ -54,16 +43,16 @@ int feclearexcept(
 
 ### <a name="parameters"></a>Parameter
 
-*excepts*<br/>
+*Ausnahme*<br/>
 Die zu löschenden Gleitkommaausnahme-Flags.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt NULL, wenn *excepts* NULL ist, oder wenn die angegebenen Ausnahmen wurden erfolgreich gelöscht wurden. Andernfalls wird ein Wert ungleich 0 (null) zurückgegeben.
+Gibt zurück, NULL, wenn *Ausnahme* NULL ist, oder wenn alle angegebenen Ausnahmen erfolgreich gelöscht wurden. Andernfalls wird ein Wert ungleich 0 (null) zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Feclearexcept** Funktion Versuche zum Deaktivieren der Gleitkommawert zeigen Ausnahme Statusflags gemäß *excepts*. Die Funktion unterstützt diese in fenv.h> definierten Ausnahmemakros:
+Die **Feclearexcept** zeigen Sie Funktion versucht, das Löschen von angegebenen Gleitkommaausnahme-Flags *Ausnahme*. Die Funktion unterstützt diese in fenv.h> definierten Ausnahmemakros:
 
 |Ausnahmemakro|Beschreibung|
 |---------------------|-----------------|
@@ -74,7 +63,7 @@ Die **Feclearexcept** Funktion Versuche zum Deaktivieren der Gleitkommawert zeig
 |FE_UNDERFLOW|Das Ergebnis einer früheren Gleitkommaoperation war zu klein, um ganz genau dargestellt zu werden; ein nicht normaler Wert wurde erstellt.|
 |FE_ALL_EXCEPT|Bitweiser OR-Operator oder alle unterstützten Gleitkommaausnahmen|
 
-Die *excepts* Argument 0 (null) oder den bitweisen OR von mindestens einem der unterstützten Ausnahmemakros sein. Das Ergebnis von jedem anderen Argumentwert ist nicht definiert.
+Die *Ausnahme* Argument kann 0 (null) oder das bitweise OR von mindestens einer der unterstützten Ausnahmemakros sein. Das Ergebnis von jedem anderen Argumentwert ist nicht definiert.
 
 ## <a name="requirements"></a>Anforderungen
 

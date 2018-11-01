@@ -1,10 +1,6 @@
 ---
-title: _execvp, _wexecvp | Microsoft-Dokumentation
-ms.custom: ''
+title: _execvp, _wexecvp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execvp
 - _wexecvp
@@ -25,24 +21,18 @@ f1_keywords:
 - _execvp
 - wexecvp
 - _wexecvp
-dev_langs:
-- C++
 helpviewer_keywords:
 - _execvp function
 - _wexecvp function
 - wexecvp function
 - execvp function
 ms.assetid: a4db15df-b204-4987-be7c-de84c3414380
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c47154bd999b421c2170118236a899dcc4e2860
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 876ace62ac46b80d42f3ed0a3549757839e0b47a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402217"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505312"
 ---
 # <a name="execvp-wexecvp"></a>_execvp, _wexecvp
 
@@ -74,7 +64,7 @@ Array von Zeigern zu Parametern.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg kehren diese Funktionen nicht zum aufrufenden Prozess zurück. Ein Rückgabewert "-1" gibt einen Fehler an, in diesem Fall die **Errno** (globale Variable) festgelegt ist.
+Bei Erfolg kehren diese Funktionen nicht zum aufrufenden Prozess zurück. Ein Rückgabewert 1 gibt einen Fehler, in diesem Fall die **Errno** globale Variable festgelegt ist.
 
 |**Errno** Wert|Beschreibung|
 |-------------------|-----------------|
@@ -90,9 +80,9 @@ Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_do
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Funktionen lädt einen neuen Prozess und führt, übergibt ein Array von Zeigern auf Befehlszeilenargumente und mithilfe der **Pfad** -Umgebungsvariable zum Ermitteln der auszuführenden Datei.
+Jede dieser Funktionen lädt einen neuen Prozess und führt, übergibt ein Array von Zeigern auf Befehlszeilenargumente und Verwenden der **Pfad** -Umgebungsvariable zum Ermitteln der auszuführenden Datei.
 
-Die **_execvp** Funktionen überprüfen ihre Parameter. Wenn die *Cmdname* ist ein null-Zeiger oder *Argv* ist ein null-Zeiger, Zeiger auf ein leeres Array, oder wenn das Array als erstes Argument eine leere Zeichenfolge enthält, rufen diese Funktionen den Handler für ungültige Parameter wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** auf **EINVAL** und geben-1 zurück. Es wird kein Prozess gestartet.
+Die **_execvp** Funktionen überprüfen ihre Parameter. Wenn die *Cmdname* ist ein null-Zeiger oder *Argv* ist ein null-Zeiger auf ein leeres Array ist oder wenn das Array als erstes Argument eine leere Zeichenfolge enthält, rufen diese Funktionen den Handler für ungültige Parameter Siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EINVAL** und geben-1 zurück. Es wird kein Prozess gestartet.
 
 ## <a name="requirements"></a>Anforderungen
 
