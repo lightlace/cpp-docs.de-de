@@ -1,10 +1,6 @@
 ---
-title: _CrtReportBlockType | Microsoft-Dokumentation
-ms.custom: ''
+title: _CrtReportBlockType
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtReportBlockType
 apilocation:
@@ -22,8 +18,6 @@ apitype: DLLExport
 f1_keywords:
 - _CrtReportBlockType
 - CrtReportBlockType
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtReportBlockType function
 - BLOCK_SUBTYPE macro
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - _BLOCK_SUBTYPE macro
 - BLOCK_TYPE macro
 ms.assetid: 0f4b9da7-bebb-4956-9541-b2581640ec6b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 59f8e919ee8a3ec9cc0822420ebbf6581480a13b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 186c63ce1619d6427436ff1458ca551e464d0bce
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395564"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50516062"
 ---
 # <a name="crtreportblocktype"></a>_CrtReportBlockType
 
@@ -62,17 +52,17 @@ Zeiger für einen gültigen Debugheapblock.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn einen gültiger debugheapzeiger übergeben der **_CrtReportBlockType** Funktion gibt den Blocktyp und Untertyp in Form von einer **Int**. Wenn ein ungültiger Zeiger übergeben wird, gibt die Funktion -1 zurück.
+Wenn einen gültiger debugheapzeiger übergeben die **_CrtReportBlockType** Funktionsergebnis Blocktyp und Untertyp in Form von einer **Int**. Wenn ein ungültiger Zeiger übergeben wird, gibt die Funktion -1 zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Extrahieren Sie den Typ und Untertyp zurückgegebenes **_CrtReportBlockType**, verwenden Sie die Makros **_BLOCK_TYPE** und **_BLOCK_SUBTYPE** (beide in "CRTDBG.h" definiert) für den Rückgabewert.
+Extrahieren Sie den zurückgegebenen Typ und Untertyp von **_CrtReportBlockType**, verwenden Sie die Makros **_BLOCK_TYPE** und **_BLOCK_SUBTYPE** (beide in "CRTDBG.h" definiert) auf den Rückgabewert.
 
 Weitere Informationen zu den Zuordnungsblocktypen und ihrer Verwendung finden Sie unter [Types of Blocks on the Debug Heap (Blocktypen auf dem Debugheap)](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_CrtReportBlockType**|\<crtdbg.h>|
 

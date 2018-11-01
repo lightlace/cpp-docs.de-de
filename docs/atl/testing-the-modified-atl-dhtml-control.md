@@ -1,27 +1,17 @@
 ---
-title: Prüfen des geänderten ATL-DHTML-Steuerelements | Microsoft-Dokumentation
-ms.custom: ''
+title: Prüfen des geänderten ATL-DHTML-Steuerelements
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - HTML controls, testing
 - testing controls
 - DHTML controls, testing
 ms.assetid: 42316118-9433-410f-9d8a-0efcc1eff824
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9bd0f1dd58704a49847ebd78de5cee205ad787be
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: f0fec3e2430fd5956e3cc48cd64532efee30926d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860757"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50501672"
 ---
 # <a name="testing-the-modified-atl-dhtml-control"></a>Prüfen des geänderten ATL-DHTML-Steuerelements
 

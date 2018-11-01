@@ -1,11 +1,6 @@
 ---
-title: Fesetexceptflag | Microsoft Docs
-ms.custom: ''
+title: fesetexceptflag
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fesetexceptflag
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - fesetexceptflag
 - fenv/fesetexceptflag
-dev_langs:
-- C++
 helpviewer_keywords:
 - fesetexceptflag function
 ms.assetid: 2f7dad77-9e54-4097-a3e3-35176ace4de5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eef8ba1c91e6db4f0d620ef820a6487b3b17e649
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9ac79e790f0b1e7a89413a0d4974f6053c95616e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398607"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50615877"
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
 
@@ -56,9 +45,9 @@ int fesetexceptflag(
 ### <a name="parameters"></a>Parameter
 
 *pstatus*<br/>
-Zeiger auf eine **Fexcept_t** Objekt mit den Werten, die Ausnahme Statusflags festgelegt werden soll. Das Objekt kann auf einen früheren Aufruf von [fegetexceptflag](fegetexceptflag2.md) festgelegt werden .
+Zeiger auf ein **Fexcept_t** -Objekt, das die Werte, um die ausnahmestatusflags festgelegt enthält. Das Objekt kann auf einen früheren Aufruf von [fegetexceptflag](fegetexceptflag2.md) festgelegt werden .
 
-*excepts*<br/>
+*Ausnahme*<br/>
 Die festzulegenden Gleitkommaausnahme-Statusflags
 
 ## <a name="return-value"></a>Rückgabewert
@@ -67,7 +56,7 @@ Wenn alle angegebenen Ausnahmestatusflags erfolgreich festgelegt wurden, wird 0 
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Fesetexceptflag** Funktion legt den Status der Gleitkommaausnahme Status-Markierungen gemäß *excepts* auf die entsprechenden Werte festgelegt werden, der **Fexcept_t** Objekt verweist *Pstatus*.  Es löst die Ausnahmen aber nicht aus. Die *Pstatus* Zeiger muss einem gültigen zeigen **Fexcept_t** Objekt oder nachfolgenden Verhalten ist nicht definiert. Die **Fesetexceptflag** -Funktion unterstützt diese Ausnahme-Makrowerte im *excepts*in definierte \<fenv.h >:
+Die **Fesetexceptflag** Funktion legt den Status die Gleitkommaausnahme-Statusflags gemäß *Ausnahme* auf die entsprechenden Werte festgelegt werden, der **Fexcept_t** Objekt verweist *Pstatus*.  Es löst die Ausnahmen aber nicht aus. Die *Pstatus* Zeiger muss einem gültigen zeigen **Fexcept_t** Objekt daraus resultierende Verhalten nicht definiert ist. Die **Fesetexceptflag** -Funktion unterstützt diese Werte der Ausnahmemakros in *Ausnahme*, definiert in \<fenv.h >:
 
 |Ausnahmemakro|Beschreibung|
 |---------------------|-----------------|
@@ -78,7 +67,7 @@ Die **Fesetexceptflag** Funktion legt den Status der Gleitkommaausnahme Status-M
 |FE_UNDERFLOW|Das Ergebnis einer früheren Gleitkommaoperation war zu klein, um ganz genau dargestellt zu werden; ein nicht normaler Wert wurde erstellt.|
 |FE_ALLEXCEPT|Bitweiser OR-Operator oder alle unterstützten Gleitkommaausnahmen|
 
-Die *excepts* Argument NULL ist, werden möglicherweise einem der unterstützten Gleitkommaausnahme Makros oder bitweisen oder zwei oder mehr der Makros. Der Effekt von jedem anderen Argumentwert ist nicht definiert.
+Die *Ausnahme* Argument kann NULL sein, eines der unterstützten Gleitkommaausnahme-Makros oder das bitweise OR von mindestens zwei der Makros. Der Effekt von jedem anderen Argumentwert ist nicht definiert.
 
 Um diese Funktion zu verwenden, müssen Sie vor dem Aufruf Gleitkommaoptimierungen deaktivieren, die den Zugriff mithilfe der `#pragma fenv_access(on)`-Direktive verhindern könnten. Weitere Informationen finden Sie unter [fenv_access](../../preprocessor/fenv-access.md).
 

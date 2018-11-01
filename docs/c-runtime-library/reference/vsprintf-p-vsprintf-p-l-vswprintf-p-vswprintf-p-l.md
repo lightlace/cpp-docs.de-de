@@ -1,10 +1,6 @@
 ---
-title: _vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _vsprintf_p
 - _vswprintf_p
@@ -29,8 +25,6 @@ f1_keywords:
 - vswprintf_p
 - _vsprintf_p
 - vstprintf_p
-dev_langs:
-- C++
 helpviewer_keywords:
 - vstprintf_p_l function
 - _vsprintf_p_l function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - _vsprintf_p function
 - _vstprintf_p_l function
 ms.assetid: 00821c0d-9fee-4d8a-836c-0669cfb11317
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ab2c33301f5746065e46dcba9f166679a330c98f
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 15f368da84eb9cbf8c394a0e9b5eeec2611c3f7f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450878"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50628370"
 ---
 # <a name="vsprintfp-vsprintfpl-vswprintfp-vswprintfpl"></a>_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
 
@@ -114,17 +104,17 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_vsprintf_p** und **_vswprintf_p** Zurückgeben der Anzahl der Zeichen geschrieben, ohne das abschließende Null-Zeichen oder einen negativen Wert, wenn ein Ausgabefehler auftritt.
+**_vsprintf_p** und **_vswprintf_p** Zurückgeben der Anzahl der geschriebenen Zeichen nicht einschließlich des abschließenden Zeichens Null oder ein negativer Wert, wenn ein Ausgabefehler auftritt.
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Funktionen verwendet einen Zeiger auf eine Argumentliste und dann formatiert und schreibt die angegebenen Daten in den Speicher verweist *Puffer*.
+Jede dieser Funktionen verwendet einen Zeiger auf eine Argumentliste und formatiert und schreibt die angegebenen Daten in den Speicher verweist *Puffer*.
 
-Diese Funktionen unterscheiden sich von der **Vsprintf_s** und **Vswprintf_s** nur darin, dass sie positionelle Parameter unterstützt. Weitere Informationen finden Sie unter [printf-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md).
+Diese Funktionen unterscheiden sich von der **Vsprintf_s** und **Vswprintf_s** nur darin, dass sie Positionsparameter unterstützen. Weitere Informationen finden Sie unter [printf-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md).
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschemaparameter, der übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas.
+Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
 
-Wenn die *Puffer* oder *Format* Parameter sind **NULL** Zeiger, wenn die Anzahl 0 (null), oder wenn die Formatzeichenfolge ungültige Formatierung enthält Zeichen, die den ungültigen Parameter Handler aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben die Funktionen – 1 zurück und legen Sie **Errno** auf **EINVAL**.
+Wenn die *Puffer* oder *Format* Parameter sind **NULL** Zeigern, wenn die Anzahl Null ist, ist oder wenn Formatzeichenfolge ungültige Formatierung enthält Zeichen, die ungültigen Parameter Handler wird aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -135,7 +125,7 @@ Wenn die *Puffer* oder *Format* Parameter sind **NULL** Zeiger, wenn die Anzahl 
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|Optionale Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionale Header|
 |-------------|---------------------|----------------------|
 |**_vsprintf_p**, **_vsprintf_p_l**|\<stdio.h> und \<stdarg.h>|\<varargs.h>*|
 |**_vswprintf_p**, **_vswprintf_p_l**|\<stdio.h> oder \<wchar.h> und \<stdarg.h>|\<varargs.h>*|

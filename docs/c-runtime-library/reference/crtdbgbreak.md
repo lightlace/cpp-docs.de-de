@@ -1,10 +1,6 @@
 ---
-title: _CrtDbgBreak | Microsoft-Dokumentation
-ms.custom: ''
+title: _CrtDbgBreak
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtDbgBreak
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _CrtDbgBreak
 - CrtDbgBreak
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtDbgBreak function
 - _CrtDbgBreak function
 ms.assetid: 01f8b4a2-a2c7-4e1f-9f39-e573b4a7871f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2141b3c70755eb03e77c8f66feed482b5e86b529
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4cf64daaea3193f7cf6b3aaa0b1aab031f104704
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394050"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478300"
 ---
 # <a name="crtdbgbreak"></a>_CrtDbgBreak
 
@@ -55,13 +45,13 @@ Es ist kein Rückgabewert vorhanden.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_CrtDbgBreak** Funktion legt einen Haltepunkt auf bestimmten Zeile des Codes befindet, in dem die Funktion. Diese Funktion wird nur im Debugmodus verwendet und ist abhängig von **_DEBUG** zuvor definiert wird.
+Die **_CrtDbgBreak** Funktion Debuggen legt einen Haltepunkt fest in der bestimmten Zeile des Codes, in dem sich die Funktion befindet. Diese Funktion wird nur im Debugmodus verwendet und ist abhängig von **_DEBUG** , was zuvor definiert.
 
 Weitere Informationen zur Verwendung anderer hookfähiger Laufzeitfunktionen und zum Schreiben eigener clientdefinierter Hookfunktionen finden Sie unter [Writing Your Own Debug Hook Functions (Schreiben von Hookfunktionen zum Debuggen)](/visualstudio/debugger/debug-hook-function-writing).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_CrtDbgBreak**|\<CRTDBG.h>|
 

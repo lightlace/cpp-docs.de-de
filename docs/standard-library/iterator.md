@@ -1,28 +1,18 @@
 ---
-title: '&lt;iterator&gt; | Microsoft-Dokumentation'
-ms.custom: ''
+title: '&lt;Iterator&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <iterator>
 - iterator/std::<iterator>
-dev_langs:
-- C++
 helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 68d2ca3de8e6e3c05095580ce63a5bac253548c0
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 1582f6167d8aae3a9d5a318726cc7404c7e1ea62
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955451"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640361"
 ---
 # <a name="ltiteratorgt"></a>&lt;Iterator&gt;
 
@@ -76,7 +66,7 @@ Visual Studio besitzt zusätzliche Erweiterungen für C++-Standardbibliotheksite
 
 |Operator|Beschreibung|
 |-|-|
-|[operator!=](../standard-library/iterator-operators.md#op_neq)|Testet, ob das Iterator-Objekt links vom Operator ungleich dem Iterator-Objekt rechts vom Operator ist.|
+|[Operator!=](../standard-library/iterator-operators.md#op_neq)|Testet, ob das Iterator-Objekt links vom Operator ungleich dem Iterator-Objekt rechts vom Operator ist.|
 |[operator==](../standard-library/iterator-operators.md#op_eq_eq)|Testet, ob das Iterator-Objekt links vom Operator gleich dem Iterator-Objekt rechts vom Operator ist.|
 |[operator<](../standard-library/iterator-operators.md#op_lt)|Testet, ob das Iterator-Objekt links vom Operator kleiner ist als das Iterator-Objekt rechts vom Operator.|
 |[operator\<=](../standard-library/iterator-operators.md#op_gt_eq)|Testet, ob das Iterator-Objekt links vom Operator kleiner als oder gleich dem Iterator-Objekt rechts vom Operator ist.|

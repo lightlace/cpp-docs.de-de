@@ -1,10 +1,6 @@
 ---
-title: _isctype, iswctype, _isctype_l, _iswctype_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _isctype, iswctype, _isctype_l, _iswctype_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isctype_l
 - iswctype
@@ -32,8 +28,6 @@ f1_keywords:
 - iswctype_l
 - isctype_l
 - _iswctype_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - isctype_l function
 - iswctype_l function
@@ -44,20 +38,16 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a9ca4580ba19c4efc342186c0c3b348d76ce94e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c5eb0b51cf0371100ed884221ee04885dfbe9ad9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402551"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563159"
 ---
 # <a name="isctype-iswctype-isctypel-iswctypel"></a>_isctype, iswctype, _isctype_l, _iswctype_l
 
-Tests *c* für die Ctype-Eigenschaft, die gemäß der *"DESC"* Argument. Für jeden gültigen Wert des *"DESC"*, es wird eine entsprechende breitzeichenklassifizierungs-Routine.
+Tests *c* für die Ctype-Eigenschaft, die gemäß der *Desc* Argument. Für jeden gültigen Wert des *Desc*, es wird eine entsprechende breitzeichenklassifizierungs-Routine.
 
 ## <a name="syntax"></a>Syntax
 
@@ -87,7 +77,7 @@ int _iswctype_l(
 *c*<br/>
 Zu testende ganze Zahl.
 
-*"DESC"*<br/>
+*DESC*<br/>
 Eigenschaft, für die der Test durchgeführt werden soll. Diese wird normalerweise mithilfe von ctype oder [wctype](wctype.md) abgerufen.
 
 *locale*<br/>
@@ -95,9 +85,9 @@ Das für alle gebietsschemaabhängigen Tests zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_isctype** und **Iswctype** einen Wert ungleich NULL zurück, wenn *c* wurde durch die angegebene Eigenschaft *"DESC"* in das aktuelle Gebietsschema oder 0, wenn dies nicht der Fall. Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, außer dass sie das Gebietsschema für den übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+**_isctype** und **Iswctype** einen Wert ungleich NULL zurück, wenn *c* verfügt über die Eigenschaft, die anhand des *Desc* in das aktuelle Gebietsschema oder 0, wenn dies nicht der Fall. Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie das Gebietsschema für den übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Das Verhalten des **_isctype** und **_isctype_l** ist undefiniert, wenn *c* nicht EOF ist oder im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und *c* ist keine dieser Werte, lösen die Funktionen eine Assertion.
+Das Verhalten der **_isctype** und **_isctype_l** ist undefiniert, wenn *c* nicht EOF-Markierung ist oder im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und *c* ist keine dieser Werte, lösen die Funktionen eine Assertion.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -108,7 +98,7 @@ Das Verhalten des **_isctype** und **_isctype_l** ist undefiniert, wenn *c* nich
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_isctype**|\<ctype.h>|
 |**iswctype**|\<ctype.h> oder \<wchar.h>|

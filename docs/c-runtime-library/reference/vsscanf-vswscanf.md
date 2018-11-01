@@ -1,10 +1,6 @@
 ---
-title: vsscanf, vswscanf | Microsoft-Dokumentation
-ms.custom: ''
+title: vsscanf, vswscanf
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - vsscanf
 - vswscanf
@@ -24,22 +20,16 @@ f1_keywords:
 - _vstscanf
 - vsscanf
 - vswscanf
-dev_langs:
-- C++
 helpviewer_keywords:
 - vswscanf function
 - vsscanf function
 ms.assetid: e96180f2-df46-423d-b4eb-0a49ab819bde
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7267e308f8b75a0e040e3fe33d51a9bdeea3914f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5bbe80cd2463c5c5b9b4ea55b8d6574675e42054
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415890"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478582"
 ---
 # <a name="vsscanf-vswscanf"></a>vsscanf, vswscanf
 
@@ -73,20 +63,20 @@ Variablenargumentenliste.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt die Anzahl der Felder zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Der Rückgabewert ist **EOF** für einen Fehler oder das Ende der Zeichenfolge vor der ersten Konvertierung erreicht wird.
+Jede dieser Funktionen gibt die Anzahl der Felder zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Der Rückgabewert ist **EOF** für einen Fehler oder am Ende der Zeichenfolge vor der ersten Konvertierung erreicht wird.
 
-Wenn *Puffer* oder *Format* ist ein **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen – 1 zurück und legen Sie **Errno** auf **EINVAL**.
+Wenn *Puffer* oder *Format* ist eine **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**.
 
 Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr (errno, _doserrno, _sys_errlist und _sys_nerr)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Vsscanf** -Funktion liest Daten von *Puffer* in die Speicherorte, die sich von jedem Argument in der *Arglist* Argumentliste. Jedes Argument in der Liste muss ein Zeiger auf eine Variable, deren Typ, der einem Typspezifizierer in entspricht *Format*. Die *Format* -Argument steuert die Interpretation der Eingabefelder und hat die gleiche form und Funktion wie die *Format* Argument für die **Scanf** Funktion. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
+Die **Vsscanf** -Funktion liest Daten aus *Puffer* in die Speicherorte, die von jedem Argument im erhalten die *Arglist* Argumentliste. Jedes Argument in der Liste muss ein Zeiger auf eine Variable, deren Typ, der einem Typspezifizierer in entspricht *Format*. Die *Format* -Argument steuert die Interpretation der Eingabefelder und hat die gleiche form und Funktion wie der *Format* Argument für die **Scanf** Funktion. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
 
 > [!IMPORTANT]
-> Bei Verwendung von **Vsscanf** um eine Zeichenfolge zu lesen, geben Sie immer eine Breite für die **%s** Format (z. B. **"% 32s"** anstelle von **"%s"**); Andernfalls kann falsch formatierte Eingabe einen Pufferüberlauf verursachen.
+> Bei Verwendung von **Vsscanf** um eine Zeichenfolge zu lesen, geben Sie immer eine Breite für die **%s** Format (z. B. **"% 32 Sekunden"** anstelle von **"%s"**); falsch formatierte Eingabe kann, andernfalls einen Pufferüberlauf verursachen.
 
-**Vswscanf** ist eine Breitzeichen-Version von **Vsscanf**; die Argumente für **Vswscanf** sind Zeichenfolgen mit Breitzeichen. **Vsscanf** verarbeitet keine multibyte-Hexadezimalzeichen. **Vswscanf** verarbeitet keine Unicode Hexadezimalzeichen in voller Breite oder "Kompatibilität Zone" Zeichen. Andernfalls **Vswscanf** und **Vsscanf** Verhalten sich identisch.
+**Vswscanf** ist eine Breitzeichen-Version von **Vsscanf**; die Argumente für **Vswscanf** sind Breitzeichen Zeichenfolgen. **Vsscanf** verarbeitet keine multibyte-Hexadezimalzeichen. **Vswscanf** verarbeitet keine Unicode-voller Breite Hexadezimal- oder im "Kompatibilität der Zone" Zeichen. Andernfalls **Vswscanf** und **Vsscanf** Verhalten sich identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -96,7 +86,7 @@ Die **Vsscanf** -Funktion liest Daten von *Puffer* in die Speicherorte, die sich
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**vsscanf**|\<stdio.h>|
 |**vswscanf**|\<stdio.h> oder \<wchar.h>|

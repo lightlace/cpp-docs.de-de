@@ -1,28 +1,17 @@
 ---
-title: Registration_script (C++-COM-Attribut) | Microsoft-Dokumentation
-ms.custom: ''
+title: Registration_script (C++-COM-Attribut)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.registration_script
-dev_langs:
-- C++
 helpviewer_keywords:
 - registration_script attribute
 ms.assetid: 786f8072-9187-4163-a979-7a604dd4c888
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 78d108dfda75147e4147e94544ddddcdfa04481d
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 304d4139cb1adbbb7c345cd3ce6f7fc985907712
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50062859"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50555128"
 ---
 # <a name="registrationscript"></a>registration_script
 

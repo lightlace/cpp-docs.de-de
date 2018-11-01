@@ -1,10 +1,6 @@
 ---
-title: rint, rintf, rintl | Microsoft-Dokumentation
-ms.custom: ''
+title: rint, rintf, rintl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - rintf
 - rintl
@@ -26,23 +22,17 @@ f1_keywords:
 - rintf
 - rintl
 - rint
-dev_langs:
-- C++
 helpviewer_keywords:
 - rintf function
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 784a540982c41ba7aa144559d3846746b59481f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9e0e3875b7484735b5439c6c0e0a7252940d4552
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407287"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609481"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -68,7 +58,7 @@ Der zu rundende Gleitkommawert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **Rint** Funktionen geben einen Gleitkommawert, der die nächste ganze Zahl zu darstellt zurück *x*. Halbe Werte werden gerundet, gemäß der aktuellen Einstellung des Gleitkomma-Rundungsmodus, identisch mit der **Nearbyint** Funktionen. Im Gegensatz zu den **Nearbyint** Funktionen, die **Rint** Funktionen authentifizierungsbibliotheksmethoden der **FE_INEXACT** Gleitkommaausnahme, wenn das Ergebnis im Wert des Arguments unterscheidet. Es gibt keine Fehlerrückgabe.
+Die **Rint** Funktionen geben einen Gleitkommawert, der die nächste ganze Zahl, um darstellt zurück *x*. Halbe Werte werden gerundet, gemäß der aktuellen Einstellung des Gleitkomma-Rundungsmodus, identisch mit der **Nearbyint** Funktionen. Im Gegensatz zu der **Nearbyint** Funktionen, die **Rint** Funktionen auslösen können die **FE_INEXACT** Gleitkomma-Ausnahmezustände, wenn das Ergebnis im Wert des Arguments unterscheidet. Es gibt keine Fehlerrückgabe.
 
 |Eingabe|SEH-Ausnahme|**_matherr** Ausnahme|
 |-----------|-------------------|--------------------------|

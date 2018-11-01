@@ -1,10 +1,6 @@
 ---
-title: _rotl, _rotl64, _rotr, _rotr64 | Microsoft-Dokumentation
-ms.custom: ''
+title: _rotl, _rotl64, _rotr, _rotr64
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _rotr64
 - _rotl
@@ -32,8 +28,6 @@ f1_keywords:
 - _rotr
 - _rotl
 - rotl
-dev_langs:
-- C++
 helpviewer_keywords:
 - rotl64 function
 - _rotl function
@@ -46,20 +40,16 @@ helpviewer_keywords:
 - _rotr64 function
 - bits, rotating
 ms.assetid: cfce439b-366f-4584-8ab1-d527b13fcfc6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a4ec4844c54bef09522191be62599ed79b97eb6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8cf61ecd8ffab9433f5c6ad077ddba39401c0e4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406653"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50567413"
 ---
 # <a name="rotl-rotl64-rotr-rotr64"></a>_rotl, _rotl64, _rotr, _rotr64
 
-Bits nach links gedreht (**_rotl**) oder rechts (**_rotr**).
+Rotiert Bits nach links (**_rotl**) oder rechts (**_rotr**).
 
 ## <a name="syntax"></a>Syntax
 
@@ -97,11 +87,11 @@ Der gedrehte Wert. Es gibt keine Fehlerrückgabe.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_rotl** und **_rotr** Funktionen drehen Sie das nicht signierte *Wert* von *UMSCHALT* Bits. **_rotl** den Wert nach links gedreht. **_rotr** Wert nach rechts gedreht. Beide Funktionen umschließen Bits, die von einem Ende des *value* zum anderen Ende rotieren.
+Die **_rotl** und **_rotr** Funktionen ohne Vorzeichen Drehen *Wert* von *UMSCHALT* Bits. **_rotl** rotiert den Wert nach links. **_rotr** rotiert den Wert nach rechts. Beide Funktionen umschließen Bits, die von einem Ende des *value* zum anderen Ende rotieren.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_rotl**, **_rotl64**|\<stdlib.h>|
 |**_rotr**, **_rotr64**|\<stdlib.h>|
@@ -139,7 +129,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 0xfd93 rotated left three times is 0x7ec98
