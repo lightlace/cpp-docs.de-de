@@ -1,43 +1,33 @@
 ---
-title: 'Vorgehensweise: Zusammenführen mehrerer PGO-Profile in einem einzigen Profil | Microsoft Docs'
-ms.custom: ''
+title: 'Gewusst wie: Zusammenführen mehrerer PGO-Profile in einem einzigen Profil'
 ms.date: 03/14/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - merging profiles
 - profile-guided optimizations, merging profiles
 ms.assetid: aab686b5-59dd-40d1-a04b-5064690f65a6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6ca8fd6ef94af290d568f3186747c659b918c0fd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 04730524fa756b0c6f1e505f3610609bdec6262a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372281"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476543"
 ---
 # <a name="how-to-merge-multiple-pgo-profiles-into-a-single-profile"></a>Gewusst wie: Zusammenführen mehrerer PGO-Profile in einem einzigen Profil
 
-Profilgesteuerte Optimierung (PGO) eignet sich hervorragend zum Erstellen von optimierte Binärdateien, die basierend auf einem Szenario, das ein Profil erstellt wird. Aber was geschieht, wenn Sie eine Anwendung, die mehrere wichtige, noch unterschiedliche Szenarien haben? Erstellen Sie ein einzelnes Profil, das für die profilgesteuerte Optimierung verwenden, können wie in verschiedenen Szenarien? In Visual Studio den Manager für die profilgesteuerte Optimierung [pgomgr.exe](pgomgr.md), übernimmt diese Aufgabe für Sie.
+Profilgesteuerte Optimierung (PGO) ist ein hervorragendes Tool zum Erstellen von optimierter Binärdateien, die basierend auf einem Szenario, das ein Profil erstellt wird. Aber was geschieht, wenn eine Anwendung, die mehrere wichtige, doch unterschiedliche Szenarien hat? Wie erstellen Sie ein einzelnes Profil an, dem Profilgesteuerte Optimierung verwenden, können aus verschiedenen Szenarien? In Visual Studio der PGO-Manager [pgomgr.exe](pgomgr.md), übernimmt diese Aufgabe für Sie.
 
 Die Syntax für das Zusammenführen von Profilen lautet:
 
 `pgomgr /merge[:num] [.pgc_files] .pgd_files`
 
-wobei `num` ist eine optionale Gewichtung für die PGC-Dateien hinzugefügt werden, indem Sie diese Zusammenführung verwendet. Gewichtungen werden häufig verwendet, wenn es gibt einige Szenarios wichtiger als andere sind oder es gibt Szenarien, die mehrere Male ausgeführt werden sollen.
+wo `num` ist eine optionale Gewichtung, die für die PGC-Dateien hinzugefügt, indem diese Zusammenführung verwendet. Gewichtungen werden häufig verwendet, wenn es gibt einige Szenarien, die wichtiger als andere sind oder es gibt Szenarien, in denen mehrere Male ausgeführt werden sollen.
 
 > [!NOTE]
-> PGO-Manager funktioniert nicht mit veralteten Profildaten. Um eine PGC-Datei in einer PGD-Datei zusammenzuführen, muss die PGC-Datei durch eine ausführbare Datei generiert das durch den Aufruf der gleiche Link erstellt wurde, die die PGD-Datei generiert.
+> Der PGO-Manager funktioniert nicht mit veralteten Profildaten. Um eine PGC-Datei in eine PGD-Datei zu importieren, muss die .pgc-Datei durch eine ausführbare Datei generiert werden, die werden die gleichen Link erstellt wurde, die die PGD-Datei generiert.
 
 ## <a name="examples"></a>Beispiele
 
-In diesem Beispiel fügt der PGO-Manager Datei Datei sechs Mal:
+In diesem Beispiel fügt der PGO-Manager Datei Datei bis zu sechs Mal:
 
 `pgomgr /merge:6 pgcFile.pgc pgdFile.pgd`
 
@@ -45,7 +35,7 @@ In diesem Beispiel fügt der PGO-Manager die beiden Dateien Pgcdatei1.pgc und Pg
 
 `pgomgr /merge:2 pgcFile1.pgc pgcFile2.pgc pgdFile.pgd`
 
-Wenn der PGO-Manager ohne Argumente PGC-Datei ausgeführt wird, durchsucht das lokale Verzeichnis für alle PGC-Dateien, die über den gleichen Basisnamen wie die PGD-Datei gefolgt von einem Ausrufezeichen (!) und dann eine oder mehrere beliebige Zeichen enthalten. Angenommen, wenn das lokale Verzeichnis Dateien test.pgd, Test! 1.pgc test2.pgc und Test! Hello.pgc, und klicken Sie dann den folgenden Befehl wird aus dem lokalen Verzeichnis ausführen **Pgomgr** führt Test! 1.pgc und Test! Hello.pgc in test.pgd.
+Wenn es sich bei der PGO-Manager, die ohne Argumente PGC-Datei ausgeführt wird, durchsucht sie das lokale Verzeichnis für alle PGC-Dateien, die den gleichen Basisnamen wie die PGD-Datei gefolgt von einem Ausrufezeichen (!), und klicken Sie dann eine oder mehrere beliebige Zeichen enthalten. Z. B., wenn das lokale Verzeichnis Dateien test.pgd, Test! 1.pgc, test2.pgc und Test! Hello.pgc, und klicken Sie dann der folgende Befehl wird aus dem lokalen Verzeichnis, ausgeführt **"pgomgr"** führt Test! 1.pgc und Test! Hello.pgc in test.pgd.
 
 `pgomgr /merge test.pgd`
 

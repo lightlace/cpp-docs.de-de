@@ -1,10 +1,6 @@
 ---
-title: Funktionen "_InterlockedAdd" | Microsoft-Dokumentation
-ms.custom: ''
+title: Intrinsische Funktionen „_InterlockedAdd“
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _InterlockedAdd64_acq_cpp
 - _InterlockedAdd64_acq
@@ -20,8 +16,6 @@ f1_keywords:
 - _InterlockedAdd_acq_cpp
 - _InterlockedAdd64_nf
 - _InterlockedAdd
-dev_langs:
-- C++
 helpviewer_keywords:
 - _InterlockedAdd_nf intrinsic
 - _InterlockedAdd_rel intrinsic
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7a94bb2941662fc19fffa27f72497b04f79e7ac7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0952a7727a433a718eac2f1873249327647599dc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445476"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50461593"
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedAdd“
 
@@ -140,7 +130,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Ausgabe
+## <a name="output"></a>Output
 
 ```
 0xffffff00 0xff0000 0xffffff00
@@ -170,7 +160,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Ausgabe
+## <a name="output"></a>Output
 
 ```
 ff0000000000 + ff0000ffffffff = ffff00ffffffff

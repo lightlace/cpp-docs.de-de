@@ -1,10 +1,6 @@
 ---
-title: _strdup, _wcsdup, _mbsdup | Microsoft-Dokumentation
-ms.custom: ''
+title: _strdup, _wcsdup, _mbsdup
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdup
 - _mbsdup
@@ -30,8 +26,6 @@ f1_keywords:
 - _strdup
 - _ftcsdup
 - _wcsdup
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcsdup function
 - ftcsdup function
@@ -48,23 +42,19 @@ helpviewer_keywords:
 - tcsdup function
 - _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a88051cbf5ac32f51e18f6d3dd256b177b7044a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 094843fdb1432aa58ec04b3b4e39ac8861b928ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413511"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50461515"
 ---
 # <a name="strdup-wcsdup-mbsdup"></a>_strdup, _wcsdup, _mbsdup
 
 Dupliziert Zeichenfolgen.
 
 > [!IMPORTANT]
-> **_mbsdup** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie unter [CRT-Funktionen, die in universellen Windows-Plattform-apps nicht unterstützt](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsdup** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [in apps der universellen Windows-Plattform nicht unterstützte CRT-Funktionen](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -87,13 +77,13 @@ Mit NULL endende Quellzeichenfolge.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt einen Zeiger auf den Speicherort für die kopierte Zeichenfolge oder **NULL** Wenn Speicher belegt werden kann.
+Jede dieser Funktionen gibt einen Zeiger auf den Speicherort für die kopierte Zeichenfolge oder **NULL** Wenn Speicher zugeordnet werden kann.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_strdup** Funktionsaufrufe ["malloc"](malloc.md) zum Zuweisen von Speicherplatz für eine Kopie des *StrSource* und kopiert dann *StrSource* auf der zugewiesener Speicherplatz.
+Die **_strdup** Funktionsaufrufe [Malloc](malloc.md) Zuweisen von Speicherplatz für eine Kopie des *StrSource* und kopiert dann *StrSource* auf der zugewiesenen Speicherplatz.
 
-**_wcsdup** und **_mbsdup** sind Breitzeichen- und multibytezeichenversionen von **_strdup**. Die Argumente und der Rückgabewert von **_wcsdup** sind Breitzeichen-Zeichenfolgen, die von **_mbsdup** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
+**_wcsdup** und **_mbsdup** sind Breitzeichen- und multibytezeichenversionen von Versionen von **_strdup**. Die Argumente und der Rückgabewert von **_wcsdup** sind Breitzeichen-Zeichenfolgen, die von **_mbsdup** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -101,13 +91,13 @@ Die **_strdup** Funktionsaufrufe ["malloc"](malloc.md) zum Zuweisen von Speicher
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsdup**|**_strdup**|**_mbsdup**|**_wcsdup**|
 
-Da **_strdup** Aufrufe **"malloc"** zum Zuweisen von Speicherplatz für die Kopie des *StrSource*, es wird empfohlen, diesen Speicher durch Aufrufen der release[freien](free.md) -Routine für den Zeiger, der durch den Aufruf zurückgegeben wird **_strdup**.
+Da **_strdup** Aufrufe **Malloc** Zuweisen von Speicherplatz für die Kopie der *StrSource*, es wird empfohlen, diesen Speicher freizugeben, durch den Aufruf der [kostenlose](free.md) -Routine für den durch den Aufruf zurückgegebenen Zeiger **_strdup**.
 
 Wenn **_DEBUG** und **_CRTDBG_MAP_ALLOC** definiert sind, **_strdup** und **_wcsdup** werden durch Aufrufe von ersetzt **_strdup_dbg**  und **_wcsdup_dbg** zum Debuggen von speicherbelegungen zuzulassen. Weitere Informationen finden Sie unter [_strdup_dbg, _wcsdup_dbg](strdup-dbg-wcsdup-dbg.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_strdup**|\<string.h>|
 |**_wcsdup**|\<string.h> oder \<wchar.h>|

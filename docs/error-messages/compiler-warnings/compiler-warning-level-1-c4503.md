@@ -1,45 +1,35 @@
 ---
-title: Compilerwarnung (Stufe 1) C4503 | Microsoft Docs
-ms.custom: ''
+title: Compilerwarnung (Stufe 1) C4503
 ms.date: 05/14/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4503
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4503
 ms.assetid: 7c5a98ae-5b6d-41d8-b881-12d3ffd5e392
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f60fdb44c5368ccc5c5f089002614332d95a63fe
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 94c88511d87c3adf3cf5687a94948c83ebc5b3d5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255673"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459786"
 ---
 # <a name="compiler-warning-level-1-c4503"></a>Compilerwarnung (Stufe 1) C4503
 
-> "*Bezeichner*": ergänzter Name zu lang, Name wurde abgeschnitten.
+> "*Bezeichner*': Länge des ergänzten Namens wurde überschritten, Name wurde gekürzt.
 
 ## <a name="remarks"></a>Hinweise
 
-Dieser compilerwarnung ist veraltet und wird nicht in Visual Studio 2017 und höher Compiler generiert.
+Diese compilerwarnung ist veraltet und wird nicht in Visual Studio 2017 und höher Compiler generiert.
 
-Der ergänzte Name wurde länger als das Compilerlimit überschritten (4096) und wurde abgeschnitten. Um diese Warnung und das Abschneiden zu vermeiden, reduzieren Sie die Anzahl der Argumente oder die Länge der Namen von Bezeichnern verwendet. Ergänzte Namen, die länger als das Compilerlimit einen Hashwert angewendet werden, und sind nicht Gefahr, dass er ein Konflikt von geschachteltem Klassennamen.
+Der ergänzte Name war länger als das Compilerlimit (4096) und wurde abgeschnitten. Um diese Warnung und das Abschneiden zu vermeiden, verringern Sie die Anzahl der Argumente oder die Länge der Namen von Bezeichnern verwendet. Von ergänzten Namen, die länger als das Compilerlimit einen Hash angewendet werden, und sind nicht Gefahr, dass er ein Konflikt von geschachteltem Klassennamen.
 
-Wenn Sie eine ältere Version von Visual Studio verwenden, diese Warnung ausgegeben werden kann, wenn Ihr Code Vorlagen enthält spezialisiert auf Vorlagen wiederholt. Z. B. eine Zuordnung von Karten (aus der C++-Standardbibliothek). In diesem Fall möglich den Typdefinitionen einen Typ (ein **Struktur**, z. B.), die die Zuordnung enthält.
+Wenn Sie eine ältere Version von Visual Studio verwenden zu können, diese Warnung ausgegeben werden kann, wenn Ihr Code Vorlagen enthält wiederholt, der auf Vorlagen spezialisiert. Z. B. eine Zuordnung von Zuordnungen (in der C++-Standardbibliothek). In diesem Fall möglich Ihre Typdefinitionen einen Typ (ein **Struktur**, z. B.), die die Zuordnung enthält.
 
-Sie könnten jedoch nicht den Code umstrukturieren.  Ist es möglich, eine Anwendung ausgeliefert, die C4503 generiert kann, aber wenn Link Zeit Fehlermeldungen auf ein Symbol, das abgeschnitten angezeigt werden, es schwieriger, den Typ des Symbols in den Fehler zu ermitteln. Debuggen auch möglicherweise sein schwieriger; der Debugger möglicherweise difficultly Zuordnen der Symbolname dem Typnamen. Die Richtigkeit des Programms, ist jedoch nicht betroffen, durch den gekürzten Namen.
+Möglicherweise möchten Sie jedoch nicht den Code umstrukturieren.  Es ist möglich, eine Anwendung, die von C4503 generiert, aber wenn Sie auf ein Symbol abgeschnittene Link-Time-Fehler erhalten, kann schwieriger, den Typ des Symbols in den Fehler zu ermitteln sein. Debuggen von Mai auch sein schwieriger; der Debugger möglicherweise schwierigkeiten der Symbolname zuordnen, auf den Namen fest. Die Richtigkeit des Programms, ist jedoch nicht betroffen, durch den gekürzten Namen.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird im Compiler vor Visual Studio 2017 C4503 generiert:
+Das folgende Beispiel generiert C4503 in Compilern vor Visual Studio 2017:
 
 ```cpp
 // C4503.cpp
@@ -57,7 +47,7 @@ typedef std::map<std::string, WebAppTest> Hello;
 Hello MyWAT;
 ```
 
-Dieses Beispiel zeigt eine Möglichkeit, Schreiben Sie Code um C4503 zu beheben:
+Dieses Beispiel zeigt eine Möglichkeit zum Schreiben von Code zum Beheben von C4503:
 
 ```cpp
 // C4503b.cpp
