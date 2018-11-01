@@ -1,27 +1,17 @@
 ---
-title: Concurrency-Namespace (C++-AMP) | Microsoft-Dokumentation
-ms.custom: ''
+title: Concurrency-Namespace (C++ AMP)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: reference
 f1_keywords:
 - AMP/Concurrency
-dev_langs:
-- C++
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7b22650e87863a659ad3f36d6632776130bc6558
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5ddafe5dd821fb21eb6dd03d63122fa98a56af51
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396744"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50635369"
 ---
 # <a name="concurrency-namespace-c-amp"></a>Concurrency-Namespace (C++ AMP)
 
@@ -40,7 +30,7 @@ namespace Concurrency;
 |Name|Beschreibung|
 |----------|-----------------|
 |[Concurrency::direct3d Namespace](concurrency-direct3d-namespace.md)|Stellt Funktionen bereit, welche die D3D-Interoperabilität unterstützen. Ermöglicht die einfache Verwendung von D3D-Ressourcen für Berechnungen in AMP-Code sowie die Verwendung von in AMP erstellten Ressourcen in D3D-Code, ohne dass redundante Zwischenkopien erstellt werden. Sie können C++ AMP verwenden, um die berechnungsintensiven Abschnitte Ihrer DirectX-Anwendungen inkrementell zu beschleunigen und die D3D-API für Daten nutzen, die aus AMP-Berechnungen resultieren.|
-|[Concurrency::fast_math Namespace](concurrency-fast-math-namespace.md)|Funktionen im `fast_math`-Namespace sind nicht C99-kompatibel. Für jede Funktion werden nur Versionen mit einfacher Genauigkeit bereitgestellt. Diese Funktionen verwenden die systeminternen DirectX-Funktionen, die schneller als die entsprechenden Funktionen im `precise_math`-Namespace sind und keine erweiterte Unterstützung doppelter Genauigkeit auf der Zugriffstaste benötigen. Sie sind jedoch weniger genau. Für jede Funktion gibt es zwei Versionen für Quellebenenkompatibilität mit Code C99. Beide Versionen akzeptieren und geben Werte mit einfacher Genauigkeit zurück.|
+|[Concurrency::fast_math Namespace](concurrency-fast-math-namespace.md)|Funktionen im `fast_math`-Namespace sind nicht C99-kompatibel. Für jede Funktion werden nur Versionen mit einfacher Genauigkeit bereitgestellt. Diese Funktionen verwenden die intrinsischen DirectX-Funktionen, die schneller als die entsprechenden Funktionen im `precise_math`-Namespace sind und keine erweiterte Unterstützung doppelter Genauigkeit auf der Zugriffstaste benötigen. Sie sind jedoch weniger genau. Für jede Funktion gibt es zwei Versionen für Quellebenenkompatibilität mit Code C99. Beide Versionen akzeptieren und geben Werte mit einfacher Genauigkeit zurück.|
 |[Concurrency::graphics Namespace](concurrency-graphics-namespace.md)|Stellt Typen und Funktionen bereit, die für die Grafikprogrammierung vorgesehen sind.|
 |[Concurrency::precise_math Namespace](concurrency-precise-math-namespace.md)|Funktionen im `precise_math`-Namespace sind C99-kompatibel. Für jede Funktion sind Versionen mit einfacher und doppelter Genauigkeit enthalten. Diese Funktionen, Funktionen mit einfacher Genauigkeit eingeschlossen, erfordern erweiterte Unterstützung doppelter Genauigkeit auf der Zugriffstaste.|
 

@@ -1,17 +1,11 @@
 ---
-title: Ausführen von LIB | Microsoft-Dokumentation
-ms.custom: ''
+title: Ausführen von LIB
 ms.date: 09/28/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.TargetMachine
 - Lib
 - VC.Project.VCLibrarianTool.PrintProgress
 - VC.Project.VCLibrarianTool.SuppressStartupBanner
-dev_langs:
-- C++
 helpviewer_keywords:
 - -MACHINE target platform option
 - command files, LIB
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5d8a221a829d3cded8d974c608bdd27edab07f60
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 73a259faa57d74fbe535bfa329dfc2a39cb6bbad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235417"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656975"
 ---
 # <a name="running-lib"></a>Ausführen von LIB
 
@@ -86,15 +76,15 @@ Für LIB die **"/ LTCG"** Option gibt an, dass die Eingaben von cl.exe Objektdat
 
 Im Buildprozess wird die Ausgabe von LIB Link gesendet. LINK verfügt über einen eigenen separaten **"/ LTCG"** Option aus, die zum Ausführen von verschiedenen Optimierungen, einschließlich der Optimierung des ganzen Programms und Profilgesteuerte Optimierung (PGO)-Instrumentation verwendet wird. Weitere Informationen über die LINK-Option finden Sie unter ["/ LTCG"](ltcg-link-time-code-generation.md).
 
-> **/ COMPUTER**
+> **/MACHINE**
 
 Gibt die Zielplattform für das Programm an. In der Regel müssen Sie nicht/Machine angeben. LIB leitet den Computertyp aus den OBJ-Dateien ab. Allerdings wird in einigen Fällen ein LIB den Computertyp kann nicht bestimmt werden kann und eine Fehlermeldung ausgegeben. Geben Sie "/MACHINE" an, wenn ein solcher Fehler auftritt. Im/EXTRACT-Modus wird diese Option nur zur Überprüfung. Verwendung `lib /?` in der Befehlszeile, um die verfügbaren Computertypen finden Sie unter.
 
-> **/ NOLOGO**
+> **/NOLOGO**
 
 Unterdrückt die Anzeige der LIB Copyrightmeldung und der Versionsnummer, und verhindert die Anzeige von Befehlsdateien aus.
 
-> **/ VERBOSE**
+> **/VERBOSE**
 
 Zeigt Details zu den Status der Sitzung, einschließlich Namen OBJ-Dateien hinzugefügt wird. Die Informationen werden an die Standardausgabe gesendet und können in eine Datei umgeleitet werden.
 

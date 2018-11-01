@@ -1,10 +1,6 @@
 ---
-title: fgetc, fgetwc | Microsoft-Dokumentation
-ms.custom: ''
+title: fgetc, fgetwc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fgetwc
 - fgetc
@@ -25,8 +21,6 @@ f1_keywords:
 - _fgettc
 - fgetwc
 - fgetc
-dev_langs:
-- C++
 helpviewer_keywords:
 - fgettc function
 - characters, reading
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f06c5c2f092932d97755a8f0cff63cde3a9682c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a853a46fc43106c9ea57be84b37fb46a18041ba8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401284"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639919"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc, fgetwc
 
@@ -69,15 +59,15 @@ Zeiger auf die **FILE**-Struktur.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Fgetc** gibt das gelesene Zeichen als ein **Int** oder gibt **EOF** um einen Fehler oder ein Dateiende anzugeben. **Fgetwc** zurückgegeben wird, als ein [Wint_t](../../c-runtime-library/standard-types.md), der Breitzeichen, das das gelesene Zeichen entspricht, oder gibt **WEOF** um einen Fehler oder ein Dateiende anzugeben. Verwenden Sie für beide Funktionen **Feof** oder **Ferror** ein Fehler auftritt und eine End-of-File-Bedingung unterscheiden. Wenn ein Lesefehler auftritt, wird der Fehlerindikator für den Stream festgelegt. Wenn *Stream* ist **NULL**, **Fgetc** und **Fgetwc** Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parameter Überprüfung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** auf **EINVAL** inventurüberprüfung **EOF**.
+**Fgetc** gibt das gelesene Zeichen als ein **Int** fest oder gibt **EOF** auf einen Fehler oder ein Dateiende anzugeben. **Fgetwc** zurückgegeben wird, als eine [Wint_t](../../c-runtime-library/standard-types.md), das Breitzeichen, die das gelesene Zeichen entspricht, oder gibt **WEOF** auf einen Fehler oder ein Dateiende anzugeben. Verwenden Sie für beide Funktionen **Feof** oder **Ferror** ein Fehler auftritt und eine End-of-File-Bedingung unterscheiden. Wenn ein Lesefehler auftritt, wird der Fehlerindikator für den Stream festgelegt. Wenn *Stream* ist **NULL**, **Fgetc** und **Fgetwc** der Handler für ungültige Parameter aufgerufen, siehe [Parameter Überprüfung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EINVAL** und zurückgeben **EOF**.
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Funktionen liest ein einzelnes Zeichen aus der aktuellen Position der Datei zugeordneten *Stream*. Die Funktion erhöht dann den zugeordneten Dateizeiger (sofern definiert), um auf das nächste Zeichen zu zeigen. Wenn der Stream am Dateiende ist, wird der Dateiende-Indikator für den Stream festgelegt.
+Jede dieser Funktionen liest ein einzelnes Zeichen von der aktuellen Position der Datei zugeordneten *Stream*. Die Funktion erhöht dann den zugeordneten Dateizeiger (sofern definiert), um auf das nächste Zeichen zu zeigen. Wenn der Stream am Dateiende ist, wird der Dateiende-Indikator für den Stream festgelegt.
 
-**Fgetc** entspricht **Getc**, jedoch anstelle einer Funktion und eines Makros nur als Funktion implementiert wird.
+**Fgetc** entspricht **Getc**, jedoch nur als Funktion anstelle einer Funktion und Makro implementiert.
 
-**Fgetwc** ist die Breitzeichen-Version des **Fgetc**; er liest **c** als Multibytezeichen oder Breitzeichen, je nachdem, ob *Stream* in geöffnet wird Textmodus oder Binärmodus.
+**Fgetwc** ist die Breitzeichen-Version von **Fgetc**; er liest **c** als Multibytezeichen oder Breitzeichen, je nachdem, ob *Stream* im geöffnet ist im Textmodus oder Binärmodus.
 
 Die Versionen mit dem Suffix **_nolock** sind identisch, allerdings sind sie nicht vor Störungen durch andere Threads geschützt.
 
@@ -142,7 +132,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 Line one.
