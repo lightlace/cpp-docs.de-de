@@ -1,10 +1,6 @@
 ---
-title: _mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbctohira
 - _mbctohira_l
@@ -32,8 +28,6 @@ f1_keywords:
 - mbctokata_l
 - mbctohira_l
 - _mbctokata_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbctokata function
 - _mbctokata_l function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 85c5cbca9d5decee1719f575f60db725c285d607
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 11b08449a7d27015c4ffe0ce398c471bbd6069f0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403091"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637800"
 ---
 # <a name="mbctohira-mbctohiral-mbctokata-mbctokatal"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 
@@ -91,24 +81,24 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt das konvertierte Zeichen *c*, sofern dies möglich. Andernfalls wird das Zeichen zurückgegeben *c* unverändert.
+Jede dieser Funktionen gibt das konvertierte Zeichen *c*, sofern möglich. Andernfalls wird das Zeichen zurückgegeben *c* unverändert.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mbctohira** und **_mbctokata** Funktionen testen ein Zeichen *c* und, falls möglich, eine der folgenden Konvertierungen zurück.
+Die **_mbctohira** und **_mbctokata** Funktionen testen ein Zeichen *c* und, falls möglich, eine der folgenden Konvertierungen.
 
 |Routinen|Konvertiert|
 |--------------|--------------|
 |**_mbctohira**, **_mbctohira_l**|Multibyte-Katakana in Multibyte-Hiragana.|
 |**_mbctokata**, **_mbctokata_l**|Multibyte-Hiragana in Multibyte-Katakana.|
 
-Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktionen sind nahezu identisch, außer dass diejenigen ohne haben die **_l** -Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängiges Verhalten und die diejenigen mit den **_l** stattdessen suffix Verwenden Sie den Gebietsschemaparameter, der übergeben wird. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen sind nahezu identisch, außer dass diejenigen ohne haben die **_l** -Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängiges Verhalten und diejenigen, auf denen die **_l** stattdessen suffix Verwenden des Locale-Parameters, der übergeben wird. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 In früheren Versionen **_mbctohira** hieß **Jtohira** und **_mbctokata** hieß **Jtokata**. Verwenden Sie bei neuem Code die neuen Namen.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_mbctohira**|\<mbstring.h>|
 |**_mbctohira_l**|\<mbstring.h>|
