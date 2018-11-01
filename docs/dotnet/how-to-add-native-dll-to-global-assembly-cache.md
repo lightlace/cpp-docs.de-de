@@ -1,28 +1,18 @@
 ---
-title: 'Vorgehensweise: Hinzufügen einer systemeigenen DLL zum globalen Assemblycache | Microsoft-Dokumentation'
+title: 'Gewusst wie: Hinzufügen einer systemeigenen DLL zum globalen Assemblycache'
 ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - DLLs [C++], native
 - GAC (global assembly cache), loading native DLLs
 - native DLLs [C++]
 ms.assetid: 25e8d78a-b197-4269-b4e9-237a544ab3c8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 74b24b96b28d8c5805a075a5ac1eee41173fc427
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1b11ebfae704ca1529113a00b463df728c85fe60
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46431995"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50641362"
 ---
 # <a name="how-to-add-native-dll-to-global-assembly-cache"></a>Gewusst wie: Hinzufügen einer systemeigenen DLL zum globalen Assemblycache
 
