@@ -1,25 +1,15 @@
 ---
-title: Planerinstanzen | Microsoft-Dokumentation
-ms.custom: ''
+title: Planerinstanzen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fc11888c3f655572bbdf33a5238e07f8ef99ba90
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 370f8a3a8fdcc8e1daaee2d3424f939fb719a449
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375653"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570169"
 ---
 # <a name="scheduler-instances"></a>Planerinstanzen
 
@@ -117,7 +107,7 @@ Die folgende Tabelle zeigt die wichtigen Methoden, die von definiert sind die `S
 |------------|-----------------|
 |[Erstellen](reference/scheduler-class.md#create)|Erstellt eine `Scheduler` Objekt, das die angegebene Richtlinie verwendet.|
 |[Anfügen](reference/scheduler-class.md#attach)|Ordnet die `Scheduler` Objekt zusammen mit den aktuellen Kontext.|
-|[Referenz](reference/scheduler-class.md#reference)|Inkrementiert den Verweiszähler des dem `Scheduler` Objekt.|
+|[Verweis](reference/scheduler-class.md#reference)|Inkrementiert den Verweiszähler des dem `Scheduler` Objekt.|
 |[Version](reference/scheduler-class.md#release)|Dekrementiert den Verweiszähler des dem `Scheduler` Objekt.|
 |[RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent)|Registriert ein Ereignis, das die Laufzeit festgelegt wird, wenn die `Scheduler` -Objekt zerstört wird.|
 |[CreateScheduleGroup](reference/scheduler-class.md#createschedulegroup)|Erstellt eine [Concurrency:: ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) -Objekt in der `Scheduler` Objekt.|
