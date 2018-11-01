@@ -1,27 +1,18 @@
 ---
-title: 'Vorgehensweise: Ändern des Zielframeworks und Plattformtoolset | Microsoft-Dokumentation'
+title: 'Gewusst wie: Ändern des Zielframeworks und des Plattformtoolsets'
 ms.custom: conceptual
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
 f1_keywords:
 - msbuild.cpp.howto.modifytargetframeworkandplatformtoolset
-dev_langs:
-- C++
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 60fa9bd3d6db9d90e5d7f3bc94e7686e5cf9481e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7759cf13e95fab97ee5a7b77e22c690a69fde41a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708447"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523102"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Gewusst wie: Ändern des Zielframeworks und des Plattformtoolsets
 
@@ -35,7 +26,7 @@ Wenn Sie das Zielframework ändern, ändern Sie auch das Plattformtoolset in ein
 > [!NOTE]
 >  Zum Ändern des Toolsets der Zielplattform muss die zugehörige Version von Visual Studio oder die Windows-Plattform SDK installiert sein. Um beispielsweise die Itanium-Plattform mit dem **Windows7.1SDK** -Plattformtoolset als Ziel festzulegen, muss [Microsoft Windows-SDK für Windows 7 und .NET Framework 4 SP1](http://www.microsoft.com/download/details.aspx?id=8279) installiert sein. Sie können aber auch eine andere Visual Studio-Version für die Entwicklung verwenden, sofern Sie die richtige Frameworkversion und das richtige Plattformtoolset als Ziel festlegen.
 
-Sie können die Zielplattform zusätzlich erweitern, indem Sie ein benutzerdefiniertes Plattformtoolset erstellen. Weitere Informationen finden Sie unter [C++ Native Festlegung von Zielversionen](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) im Visual C++-Blog.
+Sie können die Zielplattform zusätzlich erweitern, indem Sie ein benutzerdefiniertes Plattformtoolset erstellen. Weitere Informationen finden Sie unter [Systemeigene Festlegung von C++-Zielversionen](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) im Visual C++-Blog.
 
 ### <a name="to-change-the-target-framework"></a>So ändern Sie das Zielframework
 

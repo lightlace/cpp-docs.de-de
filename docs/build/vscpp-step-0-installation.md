@@ -1,31 +1,23 @@
 ---
-title: Installieren von C++-Unterstützung in Visual Studio 2017 | Microsoft-Dokumentation
+title: Installieren von C++-Unterstützung in Visual Studio 2017
 description: Installieren Sie Visual Studio-Unterstützung für Visual C++
 ms.custom: mvc
 ms.date: 09/17/2018
 ms.topic: tutorial
-ms.technology:
-- cpp-tools
 ms.devlang: C++
-dev_langs:
-- C++
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 80e84bb7c81ccd9c3347989e68041125993ee73c
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 019eadee35829bb546de0a69707520dc98f4077e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029631"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507236"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Installieren von C++-Unterstützung in Visual Studio
 
 Wenn Sie noch nicht heruntergeladen und installiert noch Visual Studio 2017 und Visual C++-Tools, sieht aus wie für den Einstieg.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - Eine Breitband-Internetverbindung. Visual Studio-Installer kann mehrere Gigabyte Daten herunterladen.
 
