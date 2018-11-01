@@ -1,10 +1,6 @@
 ---
-title: _strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strlwr_l
 - _strlwr
@@ -35,8 +31,6 @@ f1_keywords:
 - strlwr_l
 - _tcslwr
 - mbslwr
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcslwr function
 - _strlwr function
@@ -61,23 +55,19 @@ helpviewer_keywords:
 - strings [C++], converting case
 - _mbslwr_l function
 ms.assetid: d279181d-2e7d-401f-ab44-6e7c2786a046
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3468795c1f99bd6e79f9b10aae2a220a1876f4c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a442afd0ede8d9c6e892f50c12153b22f80733b0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413257"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505689"
 ---
 # <a name="strlwr-wcslwr-mbslwr-strlwrl-wcslwrl-mbslwrl"></a>_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 
 Konvertiert eine Zeichenfolge in Kleinbuchstaben. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md).
 
 > [!IMPORTANT]
-> **_mbslwr** und **_mbslwr_l** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbslwr** und **_mbslwr_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -146,11 +136,11 @@ Jede dieser Funktionen gibt einen Zeiger auf die konvertierte Zeichenfolge zurü
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_strlwr** -Funktion konvertiert alle Großbuchstaben in *str* in Kleinbuchstaben gemäß der **LC_CTYPE** -kategorieneinstellung des Gebietsschemas. Andere Zeichen sind nicht betroffen. Weitere Informationen zu **LC_CTYPE**, finden Sie unter [Setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebietsschema für ihr vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch das übergebene Gebietsschema Stattdessen. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die **_strlwr** -Funktion konvertiert alle Großbuchstaben in *str* in Kleinbuchstaben gemäß der **LC_CTYPE** -kategorieeinstellung des Gebietsschemas. Andere Zeichen sind nicht betroffen. Weitere Informationen zu **LC_CTYPE**, finden Sie unter [Setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebietsschema für ihr vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l** -Suffix sind beinahe identisch, außer dass sie das übergebene Gebietsschema verwenden Stattdessen verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Die **_wcslwr** und **_mbslwr** Funktionen sind Breitzeichen- und multibytezeichenversionen von **_strlwr**. Die Argument- und Rückgabetypen Wert **_wcslwr** sind Breitzeichen-Zeichenfolgen, die von **_mbslwr** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
+Die **_wcslwr** und **_mbslwr** Funktionen sind Breitzeichen- und multibytezeichenversionen von Versionen von **_strlwr**. Der Wert Argument- und Rückgabetypen der **_wcslwr** sind Breitzeichen-Zeichenfolgen, die von **_mbslwr** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
 
-Wenn *str* ist ein **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, diese Funktionen die ursprüngliche Zeichenfolge zurück und legen **Errno** auf **EINVAL**.
+Wenn *str* ist eine **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, diese Funktionen zurück, die ursprüngliche Zeichenfolge und legen **Errno** zu **EINVAL**.
 
 In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -163,7 +153,7 @@ In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sich
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_strlwr**, **_strlwr_l**|\<string.h>|
 |**_wcslwr**, **_wcslwr_l**|\<string.h> oder \<wchar.h>|

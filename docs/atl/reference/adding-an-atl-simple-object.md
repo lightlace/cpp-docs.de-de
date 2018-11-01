@@ -1,29 +1,19 @@
 ---
-title: Hinzufügen eines einfachen ATL-Objekts | Microsoft-Dokumentation
-ms.custom: ''
+title: Hinzufügen eines einfachen ATL-Objekts
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.classes.adding.atl
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL projects, adding objects
 - objects [ATL]
 - ATL, simple objects
 ms.assetid: 9c57d2ef-0447-4c84-8982-3304b8e49847
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f757602459c55b7b66e01d9512d9d4cdeb2f3946
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: df835b35bb036086382fc6adb4beed142f99be76
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861043"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50508299"
 ---
 # <a name="adding-an-atl-simple-object"></a>Hinzufügen eines einfachen ATL-Objekts
 

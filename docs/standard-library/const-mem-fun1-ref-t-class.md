@@ -1,27 +1,17 @@
 ---
-title: const_mem_fun1_ref_t-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: const_mem_fun1_ref_t-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xfunctional/std::const_mem_fun1_ref_t
-dev_langs:
-- C++
 helpviewer_keywords:
 - const_mem_fun1_ref_t class
 ms.assetid: 8220d373-fa1c-44be-a21d-96d49b3ea6bb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c2dafffcaee1dc4ba9bc87c2bfaa60dee45ca234
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e90ac09543c0704cf900e0fc5448e295034dcb66
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100766"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50516442"
 ---
 # <a name="constmemfun1reft-class"></a>const_mem_fun1_ref_t-Klasse
 
@@ -56,7 +46,7 @@ Eine anpassungsfähige binäre Funktion.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse speichert eine Kopie des *Uhr*, die einen Zeiger auf eine Memberfunktion der Klasse sein muss `Type`, in einem privaten Memberobjekt. Für seine Memberfunktion `operator()` definiert sie als Rückgabewert `left`.\* *Pm*)( `right`) **const**.
+Die Vorlagenklasse speichert eine Kopie des *Uhr*, die einen Zeiger auf eine Memberfunktion der Klasse sein muss `Type`, in einem privaten Memberobjekt. Für seine Memberfunktion `operator()` definiert sie als Rückgabewert `left`.\* Pm)( `right`) **const**.
 
 ## <a name="example"></a>Beispiel
 
