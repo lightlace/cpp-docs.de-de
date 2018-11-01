@@ -1,23 +1,15 @@
 ---
-title: 'Gewusst wie: Erstellen und Verwenden von Shared_ptr-Instanzen | Microsoft-Dokumentation'
+title: 'Gewusst wie: Erstellen und Verwenden von shared_ptr-Instanzen'
 ms.custom: how-to
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
 ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 168569ba04b0b2599f951982dede90468f936347
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f437ccb476456a8081fa3be293bf67adb4fb2d0e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056793"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50606647"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>Gewusst wie: Erstellen und Verwenden von shared_ptr-Instanzen
 
@@ -65,7 +57,7 @@ Sie können einen `shared_ptr` folgendermaßen an eine andere Funktion übergebe
 
 - Wenn Sie einer Hilfsfunktion Zugriff auf den zugrunde liegenden Zeiger erteilen müssen und Sie wissen, dass die Hilfsfunktion nur den Zeiger verwendet und dann zurückgegeben wird, bevor die aufrufende Funktion zurückgegeben wird, muss die Funktion den Besitz des zugrunde liegenden Zeigers nicht teilen. Sie muss lediglich innerhalb der Lebensdauer des `shared_ptr` des Aufrufers auf den Zeiger zugreifen. In diesem Fall ist es sicher, den `shared_ptr` als Verweis zu übergeben bzw. den Rohdatenzeiger oder einen Verweis an das zugrunde liegende Objekt zu übergeben. Ein Übergeben auf diese Weise bietet einen leichten Leistungsvorteil und hilft Ihnen dabei, Ihre Programmierabsicht besser zum Ausdruck zu bringen.
 
-- Manchmal, beispielsweise in einem `std:vector<shared_ptr<T>>`, müssen Sie jeden `shared_ptr` an einen Text eines Lambda-Ausdrucks oder ein benanntes Funktionsobjekt übergeben. Wenn das Lambda oder die Funktion den Zeiger nicht speichert, übergeben Sie den `shared_ptr` als Verweis, damit der Kopierkonstruktor nicht für jedes Element aufgerufen wird.
+- Manchmal, beispielsweise in einem `std:vector<shared_ptr<T>>`, müssen Sie jeden `shared_ptr` an einen Text eines Lambdaausdrucks oder ein benanntes Funktionsobjekt übergeben. Wenn das Lambda oder die Funktion den Zeiger nicht speichert, übergeben Sie den `shared_ptr` als Verweis, damit der Kopierkonstruktor nicht für jedes Element aufgerufen wird.
 
 ## <a name="example"></a>Beispiel
 

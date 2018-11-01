@@ -1,10 +1,6 @@
 ---
-title: _fcvt_s | Microsoft-Dokumentation
-ms.custom: ''
+title: _fcvt_s
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fcvt_s
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - fcvt_s
 - _fcvt_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - fcvt_s function
 - converting floating point, to strings
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2897c199b1b7022de8d5735c4da5f02d7627a418
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51ff3c675f1f53aee9beab629b17193164a2e7eb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404060"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536850"
 ---
 # <a name="fcvts"></a>_fcvt_s
 
@@ -91,30 +81,30 @@ Zeiger auf den gespeicherten Zeichen-Indikator.
 
 Null, wenn erfolgreich. Der Rückgabewert ist ein Fehlercode, wenn ein Fehler auftritt. Fehlercodes sind in Errno.h definiert. Eine Liste dieser Fehler finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Bei einem in der folgenden Tabelle enthaltenen ungültigen Parameter wird von dieser Funktion der Handler für ungültige Parameter aufgerufen, wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** auf **EINVAL** und gibt **EINVAL**.
+Bei einem in der folgenden Tabelle enthaltenen ungültigen Parameter wird von dieser Funktion der Handler für ungültige Parameter aufgerufen, wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** zu **EINVAL** und gibt **EINVAL**.
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
 |*buffer*|*sizeInBytes*|Wert|count|dec|sign|Zurück|Wert in *Puffer*|
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|
-|**NULL**|alle|alle|alle|alle|alle|**EINVAL**|Nicht geändert.|
-|Nicht **NULL** (verweist auf gültige Speicher)|<=0|alle|alle|alle|alle|**EINVAL**|Nicht geändert.|
-|alle|alle|alle|alle|**NULL**|alle|**EINVAL**|Nicht geändert.|
-|alle|alle|alle|alle|alle|**NULL**|**EINVAL**|Nicht geändert.|
+|**NULL**|any|any|any|any|any|**EINVAL**|Nicht geändert.|
+|Nicht **NULL** (zeigt auf gültigen Speicher)|<=0|any|any|any|any|**EINVAL**|Nicht geändert.|
+|any|any|any|any|**NULL**|any|**EINVAL**|Nicht geändert.|
+|any|any|any|any|any|**NULL**|**EINVAL**|Nicht geändert.|
 
 ## <a name="security-issues"></a>Sicherheitsprobleme
 
-**_fcvt_s** möglicherweise eine zugriffsverletzung generiert, wenn *Puffer* zeigt nicht auf gültige Speicher und ist nicht **NULL**.
+**_fcvt_s** kann eine zugriffsverletzung erzeugen, wenn *Puffer* nicht auf gültigen Speicher verweist und nicht **NULL**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_fcvt_s** -Funktion konvertiert eine Gleitkommazahl in eine Null-terminierte Zeichenfolge. Die *Wert* Parameter ist die Gleitkommazahl konvertiert werden. **_fcvt_s** speichert die Ziffern des *Wert* als Zeichenfolge und fügt ein Null-Zeichen ('\0'). Die *Anzahl* Parameter gibt die Anzahl der Ziffern nach dem Dezimalzeichen gespeichert werden soll. Um überzählige Ziffern gerundet werden *Anzahl* platziert. Wenn weniger als *Anzahl* Dezimalstellen, die Zeichenfolge wird mit Nullen aufgefüllt.
+Die **_fcvt_s** -Funktion konvertiert eine Gleitkommazahl in eine Null-terminierte Zeichenfolge. Die *Wert* -Parameter ist die zu konvertierende Gleitkommazahl. **_fcvt_s** speichert die Ziffern von *Wert* als Zeichenfolge und fügt ein Null-Zeichen ('\0'). Die *Anzahl* Parameter gibt die Anzahl der Ziffern nach dem Dezimaltrennzeichen gespeichert werden. Überschüssige Ziffern werden gerundet, *Anzahl* platziert. Wenn weniger als *Anzahl* Dezimalstellen, die Zeichenfolge mit Nullen aufgefüllt.
 
-In der Zeichenfolge werden nur Ziffern gespeichert. Die Position des Dezimaltrennzeichen und das Vorzeichen des *Wert* abgerufen werden kann, aus *Dec* und *Anmeldung* nach dem Aufruf. Die *Dec* Parameter verweist auf einen ganzzahligen Wert; dieser Integer-Wert gibt die Position neben dem Dezimalzeichen in Bezug auf den Anfang der Zeichenfolge. Der Wert null oder ein negativer ganzzahliger Wert geben an, dass sich die Dezimalstelle links neben der ersten Ziffer befindet. Der Parameter *Anmeldung* verweist auf eine ganze Zahl, der das Vorzeichen *Wert*. Die ganze Zahl auf 0 festgelegt wird, wenn *Wert* positiv ist, und klicken Sie auf eine Zahl ungleich NULL, wenn festgelegt ist *Wert* ist ein negativer Wert.
+In der Zeichenfolge werden nur Ziffern gespeichert. Die Position der Dezimalstelle und das Vorzeichen des *Wert* erhalten *Dec* und *anmelden* nach dem Aufruf. Die *Dec* Parameter verweist auf einen ganzzahligen Wert; dieser ganzzahlige Wert gibt die Position der Dezimalstelle im Verhältnis der Anfang der Zeichenfolge. Der Wert null oder ein negativer ganzzahliger Wert geben an, dass sich die Dezimalstelle links neben der ersten Ziffer befindet. Der Parameter *anmelden* verweist auf eine ganze Zahl, der das Vorzeichen *Wert*. Die ganze Zahl auf 0 festgelegt ist, wenn *Wert* positiv ausfällt und wird festgelegt, auf eine Zahl ungleich NULL, wenn *Wert* ist negativ.
 
-Ein Puffer von Länge **_CVTBUFSIZE** reicht für alle Gleitkommawert Datenpunktwert.
+Ein Puffer der Länge **_CVTBUFSIZE** reicht für alle Gleitkommawerte Wert.
 
-Der Unterschied zwischen **_ecvt_s** und **_fcvt_s** befindet sich in der Interpretation der *Anzahl* Parameter. **_ecvt_s** interpretiert *Anzahl* als die Gesamtzahl der Ziffern in der Ausgabezeichenfolge und **_fcvt_s** interpretiert *Anzahl* als die Anzahl der Ziffern nach dem Dezimaltrennzeichen.
+Der Unterschied zwischen **_ecvt_s** und **_fcvt_s** befindet sich in die Interpretation der *Anzahl* Parameter. **_ecvt_s** interpretiert *Anzahl* als die Gesamtanzahl von Ziffern in der Ausgabezeichenfolge und **_fcvt_s** interpretiert *Anzahl* als die Anzahl der Ziffern nach dem Dezimaltrennzeichen an.
 
 Die Verwendung dieser Funktion in C++ wird durch eine Vorlagenüberladung vereinfacht. Eine Überladung kann automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

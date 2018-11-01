@@ -1,10 +1,6 @@
 ---
-title: atexit | Microsoft-Dokumentation
-ms.custom: ''
+title: atexit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - atexit
 apilocation:
@@ -21,22 +17,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - atexit
-dev_langs:
-- C++
 helpviewer_keywords:
 - processing, at exit
 - atexit function
 ms.assetid: 92c156d2-8052-4e58-96dc-00128baac6f9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d66954348d5d812fac7eca0b231304267cc26157
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 48f0fbfa1f3350f73899fcdbb3bf7922f1c6174d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393133"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50556641"
 ---
 # <a name="atexit"></a>atexit
 
@@ -57,25 +47,25 @@ Die aufzurufende Funktion.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Atexit** gibt 0 bei Erfolg oder einen Wert ungleich NULL zurück, wenn ein Fehler auftritt.
+**von "atexit"** gibt bei Erfolg 0 oder einen Wert ungleich NULL zurück, wenn ein Fehler auftritt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Atexit** Funktion wird die Adresse einer Funktion übergeben *Func* aufgerufen werden, wenn das Programm normal beendet wird. Aufeinander folgende Aufrufe von **Atexit** erstellen ein Registers Funktionen, die in der Last in, First Out (LIFO) Reihenfolge ausgeführt werden. Die Funktionen übergeben, um **Atexit** können keine Parameter akzeptieren. **Atexit** und **_onexit** verwenden Sie den Heap, um die Registrierung von Funktionen aufzunehmen. Dementsprechend wird die Anzahl an Funktionen, die verzeichnet werden können, nur durch den Heapspeicher eingeschränkt.
+Die **von "atexit"** Funktion wird die Adresse einer Funktion übergeben *Func* aufgerufen werden, wenn das Programm normal beendet wird. Aufeinander folgende Aufrufe von **von "atexit"** Erstellung eines Registers von Funktion, in der Last in, First Out (LIFO) Reihenfolge ausgeführt werden. Die Funktionen, die an **von "atexit"** können keine Parameter akzeptieren. **von "atexit"** und **_onexit** verwenden Sie den Heap, um die Registers von Funktion zu speichern. Dementsprechend wird die Anzahl an Funktionen, die verzeichnet werden können, nur durch den Heapspeicher eingeschränkt.
 
-Der Code in der **Atexit** Funktion dürfen nicht für jede Abhängigkeit auf eine beliebige DLL, die bereits entladen Wenn hätten verwendet werden können die **Atexit** Funktion aufgerufen wird.
+Der Code in der **von "atexit"** Funktion sollte eine Abhängigkeit von einer DLL, die bereits entladen wurde konnte keine enthalten die **von "atexit"** Funktion wird aufgerufen.
 
-Um eine ANSI-kompatible Anwendung zu erstellen, verwenden Sie die ANSI-Standard **Atexit** Funktion (anstatt das ähnliche **_onexit** Funktion).
+Um eine ANSI-kompatible Anwendung zu generieren, verwenden Sie die ANSI-Standardfunktion **von "atexit"** Funktion (statt der ähnlichen **_onexit** Funktion).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**atexit**|\<stdlib.h>|
 
 ## <a name="example"></a>Beispiel
 
-Dieses Programm Pushvorgänge vier Funktionen auf den Stapel von Funktionen, um ausgeführt wird, wenn **Atexit** aufgerufen wird. Wenn das Programm beendet wird, werden die Programme nach dem Last In, First Out-Prinzip ausgeführt.
+Dieses Programm legt vier neue Funktionen im Stapel von Funktionen, die ausgeführt wird, wenn **von "atexit"** aufgerufen wird. Wenn das Programm beendet wird, werden die Programme nach dem Last In, First Out-Prinzip ausgeführt.
 
 ```C
 // crt_atexit.c
