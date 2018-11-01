@@ -1,10 +1,6 @@
 ---
-title: _findclose | Microsoft-Dokumentation
-ms.custom: ''
+title: _findclose
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _findclose
 apilocation:
@@ -23,22 +19,16 @@ apitype: DLLExport
 f1_keywords:
 - _findclose
 - findclose
-dev_langs:
-- C++
 helpviewer_keywords:
 - _findclose function
 - findclose function
 ms.assetid: 9216c573-0878-444c-b5d7-cdaf16fb9163
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9a25ed42f1a53eb81c834997f42db0154658f376
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 29010f8a502d463eeb6ca98837a1b7dae9f5ae6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395685"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50538111"
 ---
 # <a name="findclose"></a>_findclose
 
@@ -59,7 +49,7 @@ Von einem vorherigen Aufruf zurückgegebene Suchhandle **_findfirst**.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Im Erfolgsfall **_findclose** gibt 0 zurück. Hingegen gibt-1 zurück und legt **Errno** auf **ENOENT**, gibt an, dass keine übereinstimmenden Dateien gefunden werden.
+Im Erfolgsfall **_findclose** gibt 0 zurück. Andernfalls wird-1 zurückgegeben und legt **Errno** zu **ENOENT**, gibt an, dass keine übereinstimmenden Dateien gefunden werden.
 
 ## <a name="requirements"></a>Anforderungen
 

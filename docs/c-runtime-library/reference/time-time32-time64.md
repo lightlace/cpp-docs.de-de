@@ -1,10 +1,6 @@
 ---
-title: time, _time32, _time64 | Microsoft-Dokumentation
-ms.custom: ''
+title: time, _time32, _time64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - time
 - _time64
@@ -29,8 +25,6 @@ f1_keywords:
 - time/_time32
 - time/_time64
 - _time32
-dev_langs:
-- C++
 helpviewer_keywords:
 - time32 function
 - _time32 function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - system time
 - time64 function
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3f627f0b9cbcfea1d048122d63c56d03aa61062d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0749ecbf0f88620e7293a043130b49dbe45aaf31
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410566"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546575"
 ---
 # <a name="time-time32-time64"></a>time, _time32, _time64
 
@@ -69,17 +59,17 @@ Zeiger auf den Speicherort für die Zeit.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Zeit zurück, die Sekunden seit Mitternacht des 1. Januar 1970, oder-1 im Fall eines Fehlers verstrichen sind.
+Gibt die Zeit, als Sekunden seit Mitternacht des 1. Januar 1970, oder-1 im Fall eines Fehlers verstrichen sind.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Zeit** Funktion gibt die Anzahl der Sekunden seit Mitternacht vergangenen (00: 00:00), 1. Januar 1970, koordinierte Weltzeit (UTC), entsprechend der Systemuhr. Der Rückgabewert wird in der vom angegebenen Speicherort gespeichert *DestTime*. Dieser Parameter ist möglicherweise **NULL**, wobei der Rückgabewert nicht gespeichert ist.
+Die **Zeit** Funktion gibt die Anzahl der Sekunden seit Mitternacht vergangenen (00: 00:00), 1. Januar 1970, koordinierte Weltzeit (UTC), entsprechend der Systemuhr. Der zurückgegebene Wert befindet sich in den Speicherort von *DestTime*. Dieser Parameter ist möglicherweise **NULL**, wobei der Rückgabewert nicht gespeichert ist.
 
-**Zeit** ist ein Wrapper für **_time64** und **Time_t** ist, wird standardmäßig gleichbedeutend mit **__time64_t**. Wenn Sie den Compiler, interpretieren erzwingen müssen **Time_t** als das alte 32-Bit **Time_t**, können Sie definieren **_USE_32BIT_TIME_T**. Dies ist nicht zu empfehlen, weil die Anwendung nach dem 18. Januar 2038 fehlschlagen kann. Die Verwendung dieses Makros ist auf 64-Bit-Plattformen nicht zulässig.
+**Zeit** ist ein Wrapper für **_time64** und **Time_t** ist, in der Standardeinstellung entspricht **__time64_t**. Wenn Sie erzwingen, dass den Compiler interpretiert müssen **Time_t** als das alte 32-Bit **Time_t**, können Sie definieren **_USE_32BIT_TIME_T**. Dies ist nicht zu empfehlen, weil die Anwendung nach dem 18. Januar 2038 fehlschlagen kann. Die Verwendung dieses Makros ist auf 64-Bit-Plattformen nicht zulässig.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher C-Header|Erforderlicher C++-Header|
+|-Routine zurückgegebener Wert|Erforderlicher C-Header|Erforderlicher C++-Header|
 |-------------|---------------------|
 |**Zeit**, **_time32**, **_time64**|\<time.h>|\<CTime > oder \<time.h >|
 
