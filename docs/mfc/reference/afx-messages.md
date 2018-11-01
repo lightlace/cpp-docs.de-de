@@ -1,10 +1,6 @@
 ---
-title: AFX-Meldungen | Microsoft-Dokumentation
-ms.custom: ''
+title: AFX-Meldungen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - SB_LINELEFT
 - SB_THUMBTRACK
@@ -65,21 +61,15 @@ f1_keywords:
 - AFX_WM_CREATETOOLBAR
 - SB_THUMBPOSITION
 - AFX_WM_POSTSETPREVIEWFRAME
-dev_langs:
-- C++
 helpviewer_keywords:
 - AFX messages [MFC]
 ms.assetid: 3d601f3c-af6d-47d3-8553-34f1318fa74f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 92f24c18de594cfe734b703ec13c3116b7b5d31b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 45c6a9174cbd39c4c0c24ffbdfdefb9d184a3cc1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390988"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594687"
 ---
 # <a name="afx-messages"></a>AFX-Meldungen
 
@@ -100,7 +90,7 @@ Die folgende Tabelle enthält die Nachrichten, die in der MFC-Bibliothek verwend
 |AFX_WM_CHANGING_ACTIVE_TAB|Gesendet, um das übergeordnete Element des `CMFCTabCtrl` Objekt.  Diese Meldung verarbeiten, wenn Sie Benachrichtigungen erhalten möchten `CMFCTabCtrl` Objekte, wenn ein Benutzer eine Registerkarte zurücksetzt.|Der Index der Registerkarte, die aktiviert wird.|Nicht verwendet.|Ungleich NULL ist.|
 |AFX_WM_CHECKEMPTYMINIFRAME|Nur für interne Verwendung.|Nicht zutreffend.|Nicht zutreffend.|Nicht zutreffend.|
 |AFX_WM_CREATETOOLBAR|Gesendet von `CMFCToolBarsListPropertyPage` Wenn ein Benutzer erstellt eine neue Symbolleiste während der Anpassung. Sie können diese Nachricht, um ein benutzerdefiniertes CMFCToolBar abgeleitete Objekt instanziieren verarbeiten. Wenn Sie diese Meldung verarbeiten und erstellen eine eigene Symbolleiste, lassen Sie den Aufruf an den Standardhandler.|Nicht verwendet.|Ein Zeiger auf eine Zeichenfolge, die den Namen der Symbolleiste enthält.|Ein Zeiger auf der Symbolleiste des neu erstellten. NULL gibt an, dass die Symbolleiste Erstellung abgebrochen wurde.|
-|AFX_WM_CUSTOMIZEHELP|An das Hauptrahmenfenster gesendet wird, aus dem Eigenschaftenblatt Anpassung `CMFCToolbarCustomize Dialog` Wenn der Benutzer drückt die **Hilfe** Schaltfläche oder die F1-Taste.|Gibt an, die aktive Seite der Eigenschaftenseite anpassen.|Ein Zeiger auf eine `CMFCToolbarCustomize Dialog` Objekt.|0 (null).|
+|AFX_WM_CUSTOMIZEHELP|An das Hauptrahmenfenster gesendet wird, aus dem Eigenschaftenblatt Anpassung `CMFCToolbarCustomize Dialog` Wenn der Benutzer drückt die **Hilfe** Schaltfläche oder die F1-Taste.|Gibt an, die aktive Seite der Eigenschaftenseite anpassen.|Ein Zeiger auf ein `CMFCToolbarCustomize Dialog` -Objekt.|0 (null).|
 |AFX_WM_CUSTOMIZETOOLBAR|Die `CMFCToolbarCustomize Dialog` sendet diese Nachricht an dem übergeordneten Frame zu benachrichtigen, dass der Benutzer eine neue Symbolleiste erstellt.|TRUE, wenn die Anpassung "false" gestartet wurde, wird bei der Anpassung abgeschlossen ist.|Nicht verwendet.|0 (null).|
 |AFX_WM_DELETETOOLBAR|An das Hauptrahmenfenster gesendet, wenn der Benutzer zu eine Symbolleiste in den Anpassungsmodus zu löschen.<br /><br /> Verarbeiten Sie diese Meldung zusätzliche Aktionen ausführen, wenn ein Benutzer eine Symbolleiste im Anpassungsmodus löscht. Sie sollten auch den standardmäßige Handler aufrufen (`OnToolbarDelete`), das Sie die Symbolleiste gelöscht. Der standardmäßige Handler gibt einen Wert, der angibt, ob es möglich ist, löschen Sie die Symbolleiste zurück.|Nicht verwendet.|Zeiger auf eine `CMFCToolBar` Objekt gelöscht wird.|Ungleich NULL, wenn eine Symbolleiste kann nicht gelöscht werden; andernfalls 0.|
 |AFX_WM_GETDOCUMENTCOLORS|`CMFCColorMenuButton` sendet diese Nachricht an das Hauptrahmenfenster den Farben des Dokuments abgerufen.|Nicht verwendet.|[in, out] Zeiger auf eine `CList<COLORREF, COLORREF>` Objekt.|0 (null).|

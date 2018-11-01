@@ -1,10 +1,6 @@
 ---
-title: toascii, __toascii | Microsoft-Dokumentation
-ms.custom: ''
+title: toascii, __toascii
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __toascii
 apilocation:
@@ -25,24 +21,18 @@ f1_keywords:
 - toascii
 - ctype/toascii
 - ctype/__toascii
-dev_langs:
-- C++
 helpviewer_keywords:
 - toascii function
 - string conversion, to ASCII characters
 - __toascii function
 - ASCII characters, converting to
 ms.assetid: a07c0608-b0e2-4da2-a20c-7b64d6a9b77c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cead516a7e298e56d13d8f1a09a054057796ca64
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22f76bdbdb21eb5b3cc9a226c111e321ee2fd0ce
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408421"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578970"
 ---
 # <a name="toascii-toascii"></a>toascii, __toascii
 
@@ -64,21 +54,21 @@ Zu konvertierendes Zeichen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**__toascii** konvertiert den Wert der *c* und 7-Bit-ASCII liegen, und gibt das Ergebnis zurück. Es ist kein Rückgabewert zur Fehleranzeige reserviert.
+**__toascii** konvertiert den Wert der *c* und das 7-Bit-ASCII liegen, und gibt das Ergebnis zurück. Es ist kein Rückgabewert zur Fehleranzeige reserviert.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **__toascii** Routine konvertiert das angegebene Zeichen in eine ASCII-Zeichen an, auf das niederwertige 7 Bits abgeschnitten. Es wird keine andere Transformation angewendet.
+Die **__toascii** Routine konvertiert das angegebene Zeichen in eine ASCII-Zeichen an, um die niederwertigen 7 Bits abgeschnitten. Es wird keine andere Transformation angewendet.
 
-Die **__toascii** Routine als Makro definiert werden, es sei denn, die _CTYPE_DISABLE_MACROS Präprozessormakro definiert ist. Gründen der Abwärtskompatibilität **Toascii** wird als Makro definiert nur, wenn [ &#95; &#95;STDC++&#95; &#95; ](../../preprocessor/predefined-macros.md) ist nicht definiert oder wird definiert als 0; andernfalls ist es nicht definiert.
+Die **__toascii** Routine ist als Makro definiert, es sei denn, das Präprozessormakro _CTYPE_DISABLE_MACROS ist definiert. Für die Abwärtskompatibilität **Toascii** ist als Makro definiert nur, wenn [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) ist nicht definiert oder wird als 0 definiert; andernfalls ist es nicht definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**ToAscii**, **__toascii**|C: \<ctype.h><br /><br /> C++: \<cctype> oder \<ctype.h>|
 
-Die **Toascii** -Makro ist eine Erweiterung für POSIX und **__toascii** ist eine Microsoft-spezifische Implementierung der POSIX-Erweiterung. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die **Toascii** Makro ist eine POSIX-Erweiterung und **__toascii** ist eine Microsoft-spezifische Implementierung der POSIX-Erweiterung. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Siehe auch
 

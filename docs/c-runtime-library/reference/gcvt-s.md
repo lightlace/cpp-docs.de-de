@@ -1,10 +1,6 @@
 ---
-title: _gcvt_s | Microsoft-Dokumentation
-ms.custom: ''
+title: _gcvt_s
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _gcvt_s
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _gcvt_s
 - gcvt_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _gcvt_s function
 - _CVTBUFSIZE
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a2bd12a63db064bca0c880484f99a2df9d210f8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 168e0657150d072bbe41cd0ad6e914ca1f53e512
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403767"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554961"
 ---
 # <a name="gcvts"></a>_gcvt_s
 
@@ -89,17 +79,17 @@ Null, wenn erfolgreich. Tritt ein Fehler aufgrund eines ungültigen Parameters a
 
 |*buffer*|*sizeInBytes*|*Wert*|*Ziffern*|Zurück|Wert in *Puffer*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
-|**NULL**|alle|alle|alle|**EINVAL**|Nicht geändert.|
-|Nicht **NULL** (verweist auf gültige Speicher)|Null|alle|alle|**EINVAL**|Nicht geändert.|
-|Nicht **NULL** (verweist auf gültige Speicher)|alle|alle|>= *sizeInBytes*|**EINVAL**|Nicht geändert.|
+|**NULL**|any|any|any|**EINVAL**|Nicht geändert.|
+|Nicht **NULL** (zeigt auf gültigen Speicher)|Null|any|any|**EINVAL**|Nicht geändert.|
+|Nicht **NULL** (zeigt auf gültigen Speicher)|any|any|>= *sizeInBytes*|**EINVAL**|Nicht geändert.|
 
 **Sicherheitsprobleme**
 
-**_gcvt_s** kann eine zugriffsverletzung generiert, wenn *Puffer* zeigt nicht auf gültige Speicher und ist nicht **NULL**.
+**_gcvt_s** kann eine zugriffsverletzung erzeugen, wenn *Puffer* nicht auf gültigen Speicher verweist und nicht **NULL**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_gcvt_s** -Funktion konvertiert eine Gleitkommazahl *Wert* in eine Zeichenfolge (enthält Dezimaltrennzeichen und ein Byte möglichen Anmeldung) und speichert die Zeichenfolge in *Puffer* . *Puffer* muss groß genug für den konvertierten Wert plus ein abschließendes Nullzeichen, das automatisch angefügt wird. Ein Puffer von Länge **_CVTBUFSIZE** reicht für alle Gleitkommawert Datenpunktwert. Wenn die Größe des Befehlspuffers von *Ziffern* + 1 wird verwendet, die Funktion überschreibt keine am Ende des Puffers, daher unbedingt einen ausreichenden Puffer für diesen Vorgang angeben. **_gcvt_s** erzeugen versucht *Ziffern* Ziffern im Dezimalformat. Wenn es nicht möglich ist, erzeugt es *Ziffern* Ziffern im Exponentialformat. Bei der Konvertierung können Nachstellen von Nullen unterdrückt werden.
+Die **_gcvt_s** Funktion konvertiert ein Gleitkomma *Wert* in eine Zeichenfolge (enthält Dezimaltrennzeichen und einem möglichen Zeichen-Byte) und speichert die Zeichenfolge in *Puffer* . *Puffer* muss groß genug für den konvertierten Wert und ein abschließendes Nullzeichen, das automatisch angefügt wird. Ein Puffer der Länge **_CVTBUFSIZE** reicht für alle Gleitkommawerte Wert. Wenn eine Puffergröße *Ziffern* + 1 verwendet wird, wird die Funktion überschreibt nicht das Ende des Puffers, daher unbedingt einen ausreichenden Puffer für diesen Vorgang übergeben. **_gcvt_s** versucht, erzeugen *Ziffern* -Ziffern im Dezimalformat. Wenn dies nicht möglich ist, erzeugt es *Ziffern* -Ziffern im Exponentialformat. Bei der Konvertierung können Nachstellen von Nullen unterdrückt werden.
 
 Die Verwendung dieser Funktion in C++ wird durch eine Überladung (als Vorlagen vorhanden) vereinfacht. Eine Überladung kann automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -107,7 +97,7 @@ Die Debugversion dieser Funktion füllt zunächst den Puffer mit „0xFD“ auf.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|Optionaler Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|
 |-------------|---------------------|---------------------|
 |**_gcvt_s**|\<stdlib.h>|\<error.h>|
 

@@ -1,28 +1,18 @@
 ---
-title: While-Anweisung (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: while-Anweisung (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - while_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - while keyword [C++]
 - while keyword [C++], syntax
 ms.assetid: 358dbe76-5e5e-4af5-b575-c2293c636899
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 76820d46940927aab20856fef6fdbbf28539451f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 63a1b4c5433a42edd798926c1b025ab4494b64b7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097756"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50608980"
 ---
 # <a name="while-statement-c"></a>while-Anweisung (C++)
 
@@ -32,7 +22,7 @@ Führt *Anweisung* solange wiederholt, bis *Ausdruck* zu NULL ausgewertet wird.
 
 ```
 while ( expression )
-   statement
+   statement
 ```
 
 ## <a name="remarks"></a>Hinweise
