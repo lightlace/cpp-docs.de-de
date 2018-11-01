@@ -1,10 +1,6 @@
 ---
-title: _memicmp, _memicmp_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _memicmp, _memicmp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _memicmp_l
 - _memicmp
@@ -25,24 +21,18 @@ f1_keywords:
 - _memicmp
 - memicmp_l
 - _memicmp_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - memicmp function
 - _memicmp function
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a3ddd09fbfbfd4de095bfbc67bc669cf9c794dee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8beb632c8bd2cfac486fc58fc930b94490bdecbc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403052"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636812"
 ---
 # <a name="memicmp-memicmpl"></a>_memicmp, _memicmp_l
 
@@ -91,15 +81,15 @@ Der Rückgabewert gibt die Beziehung zwischen den Puffern an.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_memicmp** Funktion vergleicht die ersten *Anzahl* Zeichen der zwei Puffer *buffer1* und *buffer2* byteweise. Beim Vergleich wird die Groß-/Kleinschreibung nicht berücksichtigt.
+Die **_memicmp** -Funktion vergleicht die ersten *Anzahl* Zeichen der beiden Puffer *buffer1* und *buffer2* byteweise. Beim Vergleich wird die Groß-/Kleinschreibung nicht berücksichtigt.
 
-Wenn entweder *buffer1* oder *buffer2* ist ein null-Zeiger, ruft diese Funktion einen Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktion **_NLSCMPERROR** und legt **Errno** auf **EINVAL**.
+Wenn entweder *buffer1* oder *buffer2* ist ein null-Zeiger ruft diese Funktion einen Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktion **_NLSCMPERROR** und **Errno** zu **EINVAL**.
 
-**_memicmp** verwendet das aktuelle Gebietsschema für gebietsschemaabhängige Verhalten. **_memicmp_l** ist nahezu identisch, das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+**_memicmp** verwendet das aktuelle Gebietsschema für gebietsschemaabhängige Verhalten. **_memicmp_l** ist identisch, außer dass sie das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_memicmp**|\<memory.h> oder \<string.h>|
 |**_memicmp_l**|\<memory.h> oder \<string.h>|
