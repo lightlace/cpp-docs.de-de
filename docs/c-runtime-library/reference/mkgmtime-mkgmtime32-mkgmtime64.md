@@ -1,10 +1,6 @@
 ---
-title: _mkgmtime, _mkgmtime32, _mkgmtime64 | Microsoft-Dokumentation
-ms.custom: ''
+title: _mkgmtime, _mkgmtime32, _mkgmtime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mkgmtime32
 - _mkgmtime64
@@ -29,8 +25,6 @@ f1_keywords:
 - mkgmtime
 - mkgmtime64
 - _mkgmtime
-dev_langs:
-- C++
 helpviewer_keywords:
 - mkgmtime32 function
 - time functions
@@ -42,20 +36,16 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bcb587cf5504f661512ccf88cf4f15d0555e2f18
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 65d96d79a45e05e4b371315c0612ed086f6ea2a0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405139"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452259"
 ---
 # <a name="mkgmtime-mkgmtime32-mkgmtime64"></a>_mkgmtime, _mkgmtime32, _mkgmtime64
 
-Konvertiert eine Zeit in UTC dargestellt durch eine **Struktur** **tm** in UTC-Zeit dargestellt, indem eine **Time_t** Typ.
+Konvertiert eine UTC-Zeit einer **Struktur** **tm** dargestellt wird, eine UTC-Zeit durch eine **Time_t** Typ.
 
 ## <a name="syntax"></a>Syntax
 
@@ -78,15 +68,15 @@ Ein Zeiger auf die UTC-Zeit, als eine **Struktur** **tm** konvertieren.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Menge des Typs **__time32_t** oder **__time64_t** , der die Anzahl der Sekunden seit Mitternacht des 1. Januar 1970, in die koordinierte Weltzeit (UTC) verstrichen. Wenn das Datum außerhalb des gültigen Bereichs liegt (siehe Abschnitt "Hinweise") oder die Eingabe kann nicht als gültig interpretiert werden kann, wird-1 zurückgegeben.
+Eine Menge von Typ **__time32_t** oder **__time64_t** seit Mitternacht, 1. Januar 1970, in die koordinierte Weltzeit (UTC) verstrichenen, die die Anzahl der Sekunden darstellt. Wenn das Datum außerhalb des gültigen Bereichs liegt (siehe Abschnitt "Hinweise") oder die Eingabe kann nicht als gültige Uhrzeit interpretiert werden, wird-1 zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mkgmtime32** und **_mkgmtime64** Funktionen konvertieren eine UTC-Zeit für eine **__time32_t** oder **__time64_t** Typ, der die Zeit in darstellt (UTC). Verwenden Sie zum Konvertieren einer Ortszeit in UTC-Zeit **Mktime**, **_mktime32**, und **_mktime64** stattdessen.
+Die **_mkgmtime32** und **_mkgmtime64** Funktionen konvertieren eine UTC-Zeit, um eine **__time32_t** oder **__time64_t** Typ, der die Zeit in darstellt UTC. Um eine Ortszeit in UTC-Zeit zu konvertieren, verwenden **Mktime**, **_mktime32**, und **_mktime64** stattdessen.
 
-**_mkgmtime** ist eine Inlinefunktion, der ergibt **_mkgmtime64**, und **Time_t** entspricht **__time64_t**. Wenn Sie den Compiler, interpretieren erzwingen müssen **Time_t** als das alte 32-Bit **Time_t**, können Sie definieren **_USE_32BIT_TIME_T**. Dies wird nicht empfohlen, da die Anwendung nach dem 18. Januar 2038 fehlschlagen (der maximalbereich von 32-Bit- **Time_t**), und es kann kein überhaupt auf 64-Bit-Plattformen.
+**_mkgmtime** ist eine Inlinefunktion, die ergibt **_mkgmtime64**, und **Time_t** entspricht **__time64_t**. Wenn Sie erzwingen, dass den Compiler interpretiert müssen **Time_t** als das alte 32-Bit **Time_t**, können Sie definieren **_USE_32BIT_TIME_T**. Dies wird nicht empfohlen, da Ihre Anwendung nach dem 18. Januar 2038 fehlschlägt (der maximalbereich von einer 32-Bit- **Time_t**), und es kann kein überhaupt auf 64-Bit-Plattformen.
 
-Die Zeit, die Struktur übergeben werden wie folgt auf die gleiche Weise geändert werden, da sie mit geändert wurden die **_mktime** Funktionen: das **Tm_wday** und **Tm_yday** -Feld auf neu festgelegt werden Werte auf Grundlage der Werte der **Tm_mday** und **Tm_year**. Beim Angeben einer **tm** -strukturzeit, legen Sie die **Tm_isdst** -Feld hinzu:
+Die jeweilige Zeitstruktur wird wie folgt auf die gleiche Weise geändert werden, wie sie mit geändert wurden die **_mktime** Funktionen: das **Tm_wday** und **Tm_yday** Felder auf neu festgelegt werden Werte basierend auf den Werten der **Tm_mday** und **Tm_year**. Beim Angeben einer **tm** -strukturzeit, legen Sie die **Tm_isdst** Feld:
 
 - Null (0) weist darauf hin, dass die Normalzeit gilt.
 
@@ -94,11 +84,11 @@ Die Zeit, die Struktur übergeben werden wie folgt auf die gleiche Weise geände
 
 - Ein Wert kleiner als null gibt an, dass der C-Laufzeitbibliothekscode berechnet, ob Normalzeit oder Sommerzeit gilt.
 
-Die C-Laufzeitbibliothek verwendet die ZZ-Umgebungsvariable, um die richtige Sommerzeit zu bestimmen. Wurde keine ZZ festgelegt, wird das Betriebssystem abgefragt, um das richtige regionale Sommerzeitverhalten abzurufen. **Tm_isdst** ist ein Pflichtfeld. Wenn nicht festgelegt ist, dessen Wert nicht definiert ist und der Rückgabewert **Mktime** kann nicht berechnet werden.
+Die C-Laufzeitbibliothek verwendet die ZZ-Umgebungsvariable, um die richtige Sommerzeit zu bestimmen. Wurde keine ZZ festgelegt, wird das Betriebssystem abgefragt, um das richtige regionale Sommerzeitverhalten abzurufen. **Tm_isdst** ist ein Pflichtfeld. Wenn nicht festgelegt ist, dessen Wert nicht definiert ist und der Rückgabewert von **Mktime** ist unvorhersehbar.
 
-Der Bereich von der **_mkgmtime32** Funktion wird von Mitternacht, 1. Januar 1970 UTC bis 23:59:59 dem 18. Januar 2038 UTC. Der Bereich von **_mkgmtime64** von Mitternacht, 1. Januar 1970 UTC bis 23:59:59 am 31. Dezember 3000 UTC ist. Ein Datum außerhalb des gültigen Bereichs führt ein Rückgabewert von – 1. Der Bereich von **_mkgmtime** davon abhängig, ob **_USE_32BIT_TIME_T** definiert ist. Wenn keine (Standard) definiert der Bereich ist, der **_mkgmtime64**ist, andernfalls der Bereich ist beschränkt auf den 32-Bit-Bereich des **_mkgmtime32**.
+Das Spektrum der **_mkgmtime32** Funktion ist ab Mitternacht, 1. Januar 1970 UTC bis 23:59:59 am 18. Januar 2038, UTC. Das Spektrum **_mkgmtime64** liegt zwischen Mitternacht, 1. Januar 1970 UTC und 23:59:59, 31. Dezember 3000 UTC. Ein Datum außerhalb des gültigen Bereichs führt zu einem Rückgabewert-1. Das Spektrum **_mkgmtime** davon abhängig, ob **_USE_32BIT_TIME_T** definiert ist. (Standard) nicht definiert werden, die von der Bereich ist **_mkgmtime64**ist, andernfalls der Bereich ist beschränkt auf den 32-Bit-Bereich von **_mkgmtime32**.
 
-Beachten Sie, dass **Gmtime** und **Localtime** verwenden Sie einen einzelnen statisch zugeordneten Puffer für die Konvertierung. Wenn Sie diesen Puffer für angeben **Mkgmtime**, der vorherige Inhalt zerstört.
+Beachten Sie, dass **Gmtime** und **Localtime** verwenden einen einzelnen statisch zugewiesenen Puffer für die Konvertierung. Wenn Sie diesen Puffer für angeben **Mkgmtime**, der vorherige Inhalt zerstört.
 
 ## <a name="example"></a>Beispiel
 
@@ -186,7 +176,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 Before calling _mkgmtime, t1 = Sun Feb 12 00:00:00 2003

@@ -1,10 +1,6 @@
 ---
-title: realloc | Microsoft-Dokumentation
-ms.custom: ''
+title: realloc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - realloc
 apilocation:
@@ -25,8 +21,6 @@ f1_keywords:
 - _nrealloc
 - realloc
 - _frealloc
-dev_langs:
-- C++
 helpviewer_keywords:
 - _brealloc function
 - realloc function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - _frealloc function
 - reallocate memory blocks
 ms.assetid: 2b2239de-810b-4b11-9438-32ab0a244185
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6452d14e0a8630c68d5e179fd94d531db1b667ab
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d61746365a8ded8d68072b1f398a18ba6ce7605
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408093"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544962"
 ---
 # <a name="realloc"></a>realloc
 
@@ -74,21 +64,21 @@ Neue Größe in Bytes.
 
 **Realloc** gibt eine **"void"** Zeiger auf den neu belegten (und möglicherweise verschobenen) Speicherblock.
 
-Wenn es nicht genügend Arbeitsspeicher verfügbar ist, um den Block auf die vorgegebene Größe auszudehnen, die ursprüngliche Blockgröße ist unverändert, und **NULL** zurückgegeben wird.
+Wenn es nicht genügend Arbeitsspeicher verfügbar ist, um den Block auf die vorgegebene Größe auszudehnen, der ursprüngliche Block unverändert, und **NULL** zurückgegeben wird.
 
-Wenn *Größe* ist 0 (null), und klicken Sie dann auf den Block verweist *Memblock* freigegeben wird; der Rückgabewert ist **NULL**, und *Memblock* bleibt zeigen Sie auf eine Freigegebene Block.
+Wenn *Größe* ist 0 (null), und klicken Sie dann auf den Block verweist *Memblock* wird, freigegeben; der Rückgabewert ist **NULL**, und *Memblock* bleibt zeigt auf eine freigegebenen Block.
 
-Der Rückgabewert zeigt auf einen Speicherplatz, der für die Speicherung eines beliebigen Objekttyps geeignet ist. Um einen Zeiger auf einem Typ außer **"void"**, verwenden Sie eine Typumwandlung für den Rückgabewert.
+Der Rückgabewert zeigt auf einen Speicherplatz, der für die Speicherung eines beliebigen Objekttyps geeignet ist. Um einen Zeiger auf einem Typ als **"void"**, verwenden Sie eine Typumwandlung für den Rückgabewert.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Realloc** Funktion ändert die Größe eines belegten Blocks. Die *Memblock* Argument verweist auf den Anfang des Speicherblocks. Wenn *Memblock* ist **NULL**, **Realloc** verhält sich genauso wie **"malloc"** und ordnet einen neuen Block *Größe*Bytes. Wenn *Memblock* nicht **NULL**, es muss ein Zeiger von einem vorherigen Aufruf zurückgegebene **Calloc**, **"malloc"**, oder **Realloc** .
+Die **Realloc** -Funktion ändert die Größe eines belegten Speicherblocks. Die *Memblock* -Argument zeigt auf den Anfang des Speicherblocks. Wenn *Memblock* ist **NULL**, **Realloc** verhält sich genauso wie **Malloc** und weist einen neuen Block an *Größe*Bytes. Wenn *Memblock* nicht **NULL**, wird ein Zeiger von einem vorherigen Aufruf zurückgegebene **"calloc"**, **Malloc**, oder **Realloc** .
 
-Die *Größe* Argument gibt die neue Größe des Blocks in Bytes an. Der Inhalt des Blocks bleibt bis zum Minimum von neuer und alter Größe unverändert, obwohl sich der neue Block an einem anderen Speicherort befinden kann. Da in einem neuen Speicherort des neuen Blocks sein kann, der zurückgegebene Zeiger durch **Realloc** ist nicht unbedingt der Zeiger übergeben der *Memblock* Argument. **Realloc** ist nicht 0 (null) neu Arbeitsspeicher belegt bei Puffer Wachstum.
+Die *Größe* Argument gibt die neue Größe des Blocks in Bytes. Der Inhalt des Blocks bleibt bis zum Minimum von neuer und alter Größe unverändert, obwohl sich der neue Block an einem anderen Speicherort befinden kann. Da der neue Block an einem neuen Speicherort sein kann, wird der Zeiger von zurückgegebenen **Realloc** nicht notwendigerweise übergebenen Zeiger über die *Memblock* Argument. **Realloc** ist nicht 0 (null) neu Arbeitsspeicher belegt bei Puffer Wachstum.
 
-**Realloc** legt **Errno** auf **ENOMEM** , wenn die speicherbelegung fehlschlägt oder wenn die Größe des Arbeitsspeichers größer ist als **_HEAP_MAXREQ**. Informationen hierzu und über andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**Realloc** legt **Errno** zu **ENOMEM** , wenn die speicherbelegung fehlschlägt oder gegebenenfalls die Größe des Arbeitsspeichers übersteigt **_HEAP_MAXREQ**. Informationen hierzu und über andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**Realloc** Aufrufe **"malloc"** um die c++ [_set_new_mode](set-new-mode.md) -Funktion zum Festlegen der neue handlermodus. Der neue handlermodus gibt an, ob bei einem Fehler **"malloc"** ist, rufen Sie die neue Handlerroutine Isolationstransaktionen gemäß [_set_new_handler](set-new-handler.md). Standardmäßig **"malloc"** auf bei einem speicherbelegungsfehler nicht die neue Handlerroutine aufgerufen. Sie können dieses Standardverhalten überschreiben, damit, wenn **Realloc** Arbeitsspeicher nicht belegen kann **"malloc"** die neue Handlerroutine genauso aufruft wie der **neue** Operator ist. Wenn dieser aus demselben Grund fehlschlägt. Um den Standardwert zu überschreiben, rufen Sie
+**Realloc** Aufrufe **Malloc** um die C++ [_set_new_mode](set-new-mode.md) Funktion, um den neuen handlermodus festzulegen. Der neue handlermodus gibt an, ob bei einem Fehler **Malloc** besteht darin, rufen Sie die neue Handlerroutine mit [_set_new_handler](set-new-handler.md). In der Standardeinstellung **Malloc** Ruft die neue Handlerroutine nicht bei einem Fehler, um Speicher zu belegen. Sie können dieses Standardverhalten überschreiben, damit, wenn **Realloc** ein Fehler auftritt, bei der speicherbelegung **"malloc"** die neue Handlerroutine aufruft, in der gleichen Weise wie die **neue** Operator ist Wenn dieser aus demselben Grund fehlschlägt. Um den Standardwert zu überschreiben, rufen Sie
 
 ```C
 _set_new_mode(1);
@@ -98,11 +88,11 @@ rechtzeitig im Programm auf, oder stellen Sie eine Verknüpfung mit NEWMODE.OBJ 
 
 Wenn die Anwendung mit einer Debugversion der C-Laufzeitbibliotheken verknüpft ist **Realloc** löst in [_realloc_dbg](realloc-dbg.md). Weitere Informationen dazu, wie der Heap während des Debugprozesses verwaltet wird, finden Sie unter [CRT-Debugheap](/visualstudio/debugger/crt-debug-heap-details).
 
-**Realloc** RuntimeCompatibility `__declspec(noalias)` und `__declspec(restrict)`, was bedeutet, dass die Funktion wird sichergestellt, dass keine globalen Variablen zu ändern, und dass der zurückgegebene Zeiger nicht als Alias ist. Weitere Informationen finden Sie unter [noalias](../../cpp/noalias.md) und [restrict](../../cpp/restrict.md).
+**Realloc** RuntimeCompatibility `__declspec(noalias)` und `__declspec(restrict)`, was bedeutet, dass die Funktion nicht, so ändern Sie globale Variablen definitiv, und dass der zurückgegebene Zeiger keinen Alias hat. Weitere Informationen finden Sie unter [noalias](../../cpp/noalias.md) und [restrict](../../cpp/restrict.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**realloc**|\<stdlib.h> und \<malloc.h>|
 

@@ -1,27 +1,17 @@
 ---
-title: Schwerwiegender Fehler C1103 | Microsoft-Dokumentation
-ms.custom: ''
+title: Schwerwiegender Fehler C1103
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C1103
-dev_langs:
-- C++
 helpviewer_keywords:
 - C1103
 ms.assetid: 9d276939-9c47-4235-9d20-76b8434f9731
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d9e48d827c58ebf41ce3cf3862cbfbeaa494cf76
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b6253af9fcf400321fb58d4d8a6d7aacf461b926
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46055948"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50577644"
 ---
 # <a name="fatal-error-c1103"></a>Schwerwiegender Fehler C1103
 
