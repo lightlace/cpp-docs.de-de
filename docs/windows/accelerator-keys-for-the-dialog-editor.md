@@ -1,28 +1,17 @@
 ---
-title: Zugriffstasten für den Dialog-Editor (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Zugriffstasten für den Dialog-Editor (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog
-dev_langs:
-- C++
 helpviewer_keywords:
 - Dialog Editor [C++], shortcut keys
 ms.assetid: 940270e9-a974-425b-a681-dfeaba0adf66
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6314d4333254957ea2d8116786128843dafef64a
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 4946dc940b6a3e70110ee35978187b5ec2d4d0df
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313571"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50483602"
 ---
 # <a name="accelerator-keys-for-the-dialog-editor-c"></a>Zugriffstasten für den Dialog-Editor (C++)
 

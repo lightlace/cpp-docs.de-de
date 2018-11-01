@@ -1,10 +1,6 @@
 ---
-title: Schwerwiegende Compilerfehler C999 bis C1999 | Microsoft Docs
-ms.custom: ''
+title: Schwerwiegende Compilerfehler C999 bis C1999
 ms.date: 11/17/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C1012
 - C1013
@@ -165,19 +161,13 @@ helpviewer_keywords:
 - C1901
 - C1903
 - C1904
-dev_langs:
-- C++
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bdd0949d2d76cad636f833a75ea1371246ee3ebf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: edf2227bd0a542ce9ca5e8a6a3f908347bd816e6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237262"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677330"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Schwerwiegende Compilerfehler C999 bis C1999
 
@@ -198,7 +188,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Schwerwiegender Fehler C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|Unbekanntes Flag „*string*“ in „*option*“.|
 |[Schwerwiegender Fehler C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|Keine Quelldatei angegeben|
 |[Schwerwiegender Fehler C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|Compilerlimit: zu tiefe Schachtelung von Makros|
-|[Schwerwiegender Fehler C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie vergessen hinzufügen ' #include <*Datei*>', im Quellcode?|
+|[Schwerwiegender Fehler C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie vergessen, hinzufügen ' #include <*Datei*>' Quellcode?|
 |Schwerwiegender Fehler C1012|Fehlende zugehörige Klammer: „*character*“ fehlt.|
 |Schwerwiegender Fehler C1013|Compilerlimit: zu viele geöffnete Klammern|
 |Schwerwiegender Fehler C1014|Zu viele Includedateien: Tiefe = *number*|
@@ -224,7 +214,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Schwerwiegender Fehler C1048|Unbekannte Option „*string*“ in „*option*“.|
 |Schwerwiegender Fehler C1049|Ungültiges numerisches Argument „*value*“.|
 |[Schwerwiegender Fehler C1051](../../error-messages/compiler-errors-1/fatal-error-c1051.md)|Programmdatenbankdatei „*file*“ hat ein veraltetes Format. Löschen Sie sie, und starten Sie die Kompilierung erneut.|
-|[Schwerwiegender Fehler C1052](fatal-error-c1052.md)|Programmdatenbankdatei "*Filename*", wurde vom Linker mit Fastlink; generiert Compiler kann nicht solche PDB-Dateien zu aktualisieren; löschen Sie es oder/FD an einem anderen PDB-Dateinamen verwenden|
+|[Schwerwiegender Fehler C1052](fatal-error-c1052.md)|Programmdatenbankdatei "*Filename*', wurde vom Linker mit/Debug: Fastlink; generiert Compiler kann nicht solche PDB-Dateien zu aktualisieren, löschen Sie es oder/FD an einen anderen PDB-Dateinamen verwenden|
 |Schwerwiegender Fehler C1053|„*function*“: Funktion ist zu groß.|
 |[Schwerwiegender Fehler C1054](../../error-messages/compiler-errors-1/fatal-error-c1054.md)|Compilerlimit: zu tiefe Schachtelung von Initialisierungen|
 |[Schwerwiegender Fehler C1055](../../error-messages/compiler-errors-1/fatal-error-c1055.md)|Compilerlimit: keine weiteren Schlüssel|
@@ -260,8 +250,8 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Schwerwiegender Fehler C1092](../../error-messages/compiler-errors-1/fatal-error-c1092.md)|Bearbeiten und Fortfahren unterstützt keine Änderungen an Datentypen. Build erforderlich|
 |[Schwerwiegender Fehler C1093](../../error-messages/compiler-errors-1/fatal-error-c1093.md)|Fehler beim API-Aufruf von „*function*“ in „*HRESULT*“: „*description*“.|
 |[Schwerwiegender Fehler C1094](../../error-messages/compiler-errors-1/fatal-error-c1094.md)|„-Zm*number*“: Die Befehlszeilenoption stimmt nicht mit dem Wert überein, der zum Erstellen des vorkompilierten Headers verwendet wurde („-Zm*number*“).|
-|Schwerwiegender Fehler C1098|Nicht übereinstimmende Version im Modul für Bearbeiten und Fortfahren|
-|Schwerwiegender Fehler C1099|Kompilierungsabbruch durch Modul für Bearbeiten und Fortfahren|
+|Schwerwiegender Fehler C1098|Nicht übereinstimmende Version in der Engine für Bearbeiten und Fortfahren|
+|Schwerwiegender Fehler C1099|Kompilierungsabbruch durch Engine für Bearbeiten und Fortfahren|
 |Schwerwiegender Fehler C1100|OLE kann nicht initialisiert werden: *error*.|
 |Schwerwiegender Fehler C1101|Der Handler kann für das Attribut „*identifier*“ nicht erstellt werden.|
 |Schwerwiegender Fehler C1102|Initialisierung konnte nicht durchgeführt werden: *error*.|

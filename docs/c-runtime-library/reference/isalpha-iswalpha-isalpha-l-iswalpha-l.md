@@ -1,10 +1,6 @@
 ---
-title: isalpha, iswalpha, _isalpha_l, _iswalpha_l | Microsoft-Dokumentation
-ms.custom: ''
+title: isalpha, iswalpha, _isalpha_l, _iswalpha_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswalpha
 - _iswalpha_l
@@ -31,8 +27,6 @@ f1_keywords:
 - iswalpha
 - _istalpha_l
 - _iswalpha_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _iswalpha_l function
 - _isalpha_l function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 28d533a7865a49df7cc962e0f2cc392f5e56d95d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47b7e43172884524e50e332dcb421e84a99b9806
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401993"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591749"
 ---
 # <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
 
@@ -88,11 +78,11 @@ Das statt des aktuellen Gebietsschemas zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Routinen gibt ungleich NULL, wenn *c* eine bestimmte Darstellung eines alphabetischen Zeichens ist. **Isalpha** gibt einen Wert ungleich NULL zurück, wenn *c* innerhalb der Bereiche A - Z oder a - Z. **iswalpha_l** gibt einen Wert ungleich NULL nur für Breitzeichen zurück, für die [Iswupper](isupper-isupper-l-iswupper-iswupper-l.md) oder **Iswlower** ungleich NULL ist; d. h. für jedes Breitzeichen Zeichen, das ein von der Implementierung definierten für Welche keines **Iswcntrl**, **Iswdigit**, **Iswpunct**, oder **Iswspace** ungleich NULL ist. Jede dieser Routinen gibt 0 zurück, wenn *c* die testbedingung nicht erfüllt.
+Jede dieser Routinen gibt ungleich NULL, wenn *c* eine bestimmte Darstellung eines alphabetischen Zeichens ist. **Isalpha** gibt einen Wert ungleich NULL zurück, wenn *c* innerhalb der Bereiche A - Z oder a - Z. **iswalpha_l** gibt einen Wert ungleich NULL nur für Breitzeichen zurück, für die [Iswupper](isupper-isupper-l-iswupper-iswupper-l.md) oder **Iswlower** ungleich NULL ist, d. h. für jedes Breitzeichen Zeichen, das ein von der Implementierung definierten für den **Iswcntrl**, **Iswdigit**, **Iswpunct**, oder **Iswspace** ungleich NULL ist. Jede dieser Routinen gibt 0 zurück, wenn *c* die testbedingung nicht erfüllt.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix verwenden den Gebietsschemaparameter, der übergeben wird anstelle des aktuellen Gebietsschemas. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die Versionen dieser Funktionen, die **_l** -Suffix verwenden den Gebietsschemaparameter, der übergeben wird, anstelle des aktuellen Gebietsschemas. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Das Verhalten des **Isalpha** und **_isalpha_l** ist undefiniert, wenn *c* nicht EOF ist oder im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und *c* ist keine dieser Werte, lösen die Funktionen eine Assertion.
+Das Verhalten der **Isalpha** und **_isalpha_l** ist undefiniert, wenn *c* nicht EOF-Markierung ist oder im Bereich von 0 bis 0xFF liegt. Wenn eine CRT-Debugbibliothek verwendet wird und *c* ist keine dieser Werte, lösen die Funktionen eine Assertion.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -103,7 +93,7 @@ Das Verhalten des **Isalpha** und **_isalpha_l** ist undefiniert, wenn *c* nicht
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**isalpha**|\<ctype.h>|
 |**iswalpha**|\<ctype.h> oder \<wchar.h>|

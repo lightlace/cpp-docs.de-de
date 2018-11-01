@@ -1,41 +1,31 @@
 ---
-title: Compilerwarnung (Stufe 1) C4399 | Microsoft Docs
-ms.custom: ''
+title: Compilerwarnung (Stufe 1) C4399
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4399
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4399
 ms.assetid: f58d9ba7-71a0-4c3b-b26f-f946dda8af30
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aedad6aed07a6056f74ad338037a7268c722627f
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 56fe0f314142d873fc02136bc2c3fe65e71f4dda
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34703719"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544065"
 ---
 # <a name="compiler-warning-level-1-c4399"></a>Compilerwarnung (Stufe 1) C4399
 
-> "*Symbol*": prozessspezifisch Symbol sollten nicht gekennzeichnet werden, mit von "__declspec(dllimport)" "beim Kompilieren mit/clr: pure
+> "*Symbol*": Prozessspezifische Symbole sollten nicht gekennzeichnet werden, mit der von "__declspec(dllimport)" ", bei der Kompilierung mit/clr: pure
 
 ## <a name="remarks"></a>Hinweise
 
-Die **/CLR: pure** -Compileroption in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt wird.
+Die **/CLR: pure** Compileroption ist in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt.
 
-Daten über ein systemeigenes Image oder ein Bild mit einheitlichen und den CLR-Konstrukte können in einem reinen Image nicht importiert werden. Um diese Warnung zu beheben, kompilieren Sie mit **"/ CLR"** (nicht **/CLR: pure**) oder Löschen von `__declspec(dllimport)`.
+Daten über ein systemeigenes Image oder ein Bild mit systemeigenen und CLR-Konstrukte können nicht in einem reinen Image importiert werden. Um diese Warnung zu beheben, kompilieren Sie mit **"/ CLR"** (nicht **/CLR: pure**) oder Löschen von `__declspec(dllimport)`.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird C4399 generiert.
+Im folgende Beispiel wird C4399 generiert.
 
 ```cpp
 // C4399.cpp

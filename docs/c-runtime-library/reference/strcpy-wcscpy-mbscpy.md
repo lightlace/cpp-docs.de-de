@@ -1,10 +1,6 @@
 ---
-title: strcpy, wcscpy, _mbscpy | Microsoft-Dokumentation
-ms.custom: ''
+title: strcpy, wcscpy, _mbscpy
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strcpy
 - wcscpy
@@ -29,8 +25,6 @@ f1_keywords:
 - wcscpy
 - _tcscpy
 - strcpy
-dev_langs:
-- C++
 helpviewer_keywords:
 - strcpy function
 - tcscpy function
@@ -43,23 +37,19 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c996fc8ceb81d98d24e3c95330f2ed9c37097e7d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a6846123fedf48601d36ab8779d7c9868e5e9917
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413920"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640062"
 ---
 # <a name="strcpy-wcscpy-mbscpy"></a>strcpy, wcscpy, _mbscpy
 
 Kopiert eine Zeichenfolge. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
 
 > [!IMPORTANT]
-> **_mbscpy** kann nicht in Anwendungen, die in der Windows-Runtime ausgeführt verwendet werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscpy** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -107,12 +97,12 @@ Jede dieser Funktionen gibt die Zielzeichenfolge zurück. Kein Rückgabewert ist
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Strcpy** -Funktion kopiert *StrSource*, einschließlich des abschließenden Null-Zeichens zu dem Speicherort, der von angegeben wird *StrDestination*. Das Verhalten des **Strcpy** ist undefiniert, wenn die Quell- und Zielzeichenfolgen überlappen.
+Die **Strcpy** -Funktion kopiert *StrSource*, einschließlich des abschließenden Zeichens Null mit der angegebenen *StrDestination*. Das Verhalten der **Strcpy** ist undefiniert, wenn die Quell- und Zielzeichenfolgen überlappen.
 
 > [!IMPORTANT]
-> Da **Strcpy** überprüft nicht auf genügend Speicherplatz *StrDestination* bevor kopiert *StrSource*, es wird eine mögliche Ursache von Pufferüberläufen. Deshalb wird empfohlen, stattdessen [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md) zu verwenden.
+> Da **Strcpy** überprüft nicht auf genügend Speicherplatz *StrDestination* bevor kopiert *StrSource*, es ist eine mögliche Ursache von Pufferüberläufen. Deshalb wird empfohlen, stattdessen [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md) zu verwenden.
 
-**Wcscpy** und **_mbscpy** sind jeweils Breitzeichen- und multibytezeichenversionen von **Strcpy**. Die Argumente und der Rückgabewert von **Wcscpy** sind Breitzeichen-Zeichenfolgen, die von **_mbscpy** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
+**Wcscpy** und **_mbscpy** sind Breitzeichen- und multibytezeichenversionen von Versionen von **Strcpy**. Die Argumente und der Rückgabewert von **Wcscpy** sind Breitzeichen-Zeichenfolgen, die von **_mbscpy** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
 
 In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -124,7 +114,7 @@ In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sich
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**strcpy**|\<string.h>|
 |**wcscpy**|\<string.h> oder \<wchar.h>|

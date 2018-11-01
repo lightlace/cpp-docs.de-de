@@ -1,10 +1,6 @@
 ---
-title: strftime, wcsftime, _strftime_l, _wcsftime_l | Microsoft-Dokumentation
-ms.custom: ''
+title: strftime, wcsftime, _strftime_l, _wcsftime_l
 ms.date: 03/22/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strftime
 - _wcsftime_l
@@ -29,8 +25,6 @@ f1_keywords:
 - wcsftime
 - _strftime_l
 - _wcsftime_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _strftime_l function
 - strftime function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 573e89b7be9818ac45f70c7c614e3bf7869c95f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 932a7827ef61a5e111f86f8bc44291827843b76e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418158"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505663"
 ---
 # <a name="strftime-wcsftime-strftimel-wcsftimel"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
@@ -92,7 +82,7 @@ size_t _wcsftime_l(
 Ausgabezeichenfolge.
 
 *maxsize*<br/>
-Größe der *StrDest* Puffer, gemessen in Zeichen (**Char** oder **Wchar_t**).
+Größe der *StrDest* -Puffers in Zeichen (**Char** oder **"wchar_t"**).
 
 *format*<br/>
 Formatsteuerzeichenfolge.
@@ -105,17 +95,17 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Strftime** gibt die Anzahl der Zeichen platziert *StrDest* und **Wcsftime** gibt die entsprechende Anzahl von Breitzeichen zurück.
+**Strftime** gibt die Anzahl der Zeichen in platziert *StrDest* und **Wcsftime** gibt Sie die entsprechende Anzahl von Breitzeichen zurück.
 
-Ist die Gesamtzahl der Zeichen, z. B. das abschließende Null-Zeichen, mehr als *Maxsize*, beide **Strftime** und **Wcsftime** zurückgeben, 0 und den Inhalt der  *StrDest* sind unbestimmt.
+Wenn die Gesamtanzahl von Zeichen, einschließlich abschließende Null ist mehr als *Maxsize*, beide **Strftime** und **Wcsftime** 0 zurück, und den Inhalt der  *StrDest* sind unbestimmt.
 
-Die Anzahl der Zeichen in *StrDest* ist gleich der Anzahl von Literalzeichen in *Format* sowie alle Zeichen, die hinzugefügt werden können *Format* über Formatierungscodes. Das abschließende NULL-Zeichen einer Zeichenfolge wird nicht im Rückgabewert berücksichtigt.
+Die Anzahl der Zeichen in *StrDest* ist gleich der Anzahl von Literalzeichen in *Format* sowie aller Zeichen, die hinzugefügt werden, möglicherweise *Format* über Formatierungscodes. Das abschließende NULL-Zeichen einer Zeichenfolge wird nicht im Rückgabewert berücksichtigt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Strftime** und **Wcsftime** Formatieren der **tm** Zeitwert in *Timeptr* gemäß den angegebenen  *Format* Argument und speichern das Ergebnis in den Puffer *StrDest*. Darf höchstens *Maxsize* Zeichen in der Zeichenfolge eingefügt werden. Eine Beschreibung der Felder in der *Timeptr* -Struktur, finden Sie unter [Asctime](asctime-wasctime.md). **Wcsftime** entspricht der Breitzeichen- **Strftime**; Zeichenfolgenzeiger Argument in eine Breitzeichen-Zeichenfolge verweist. Anderenfalls verhalten sich diese Funktionen identisch.
+Die **Strftime** und **Wcsftime** Formatieren der **tm** -Zeitwert in *Timeptr* gemäß der bereitgestellten  *Format* -Argument und speichern das Ergebnis im Puffer *StrDest*. Höchstens *Maxsize* Zeichen befinden sich in der Zeichenfolge. Eine Beschreibung der Felder in der *Timeptr* Struktur, siehe [Asctime](asctime-wasctime.md). **Wcsftime** entspricht der Breitzeichen- **Strftime**; die Zeichenfolgenargument zeigt auf eine Zeichenfolge mit Breitzeichen. Anderenfalls verhalten sich diese Funktionen identisch.
 
-Diese Funktion überprüft ihre Parameter. Wenn *StrDest*, *Format*, oder *Timeptr* ein null-Zeiger ist oder wenn die **tm** Datenstruktur adressiert werden, indem *Timeptr* ist ungültig (z. B., wenn er außerhalb des gültigen Bereichswerte enthält, für das Datum oder Uhrzeit), oder wenn die *Format* enthält eine ungültige Formatierungscode, Handler für ungültige Parameter aufgerufen, wie beschrieben in [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktion 0 zurück und stellt **Errno** auf **EINVAL**.
+Diese Funktion überprüft ihre Parameter. Wenn *StrDest*, *Format*, oder *Timeptr* ein null-Zeiger ist oder wenn die **tm** Datenstruktur adressiert werden, indem *Timeptr* ist ungültig (z. B., wenn er aus der Werte für Uhrzeit oder Datum enthält), oder wenn die *Format* Zeichenfolge enthält einen ungültigen Formatierungscode, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktion gibt 0 zurück und legt **Errno** zu **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -123,7 +113,7 @@ Diese Funktion überprüft ihre Parameter. Wenn *StrDest*, *Format*, oder *Timep
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsftime**|**strftime**|**strftime**|**wcsftime**|
 
-Die *Format* -Argument besteht aus mindestens Codes; da in **Printf**, Formatierungscodes vorangestellt werden, wird ein Prozentzeichen (**%**). Zeichen, die nicht mit beginnen **%** beim Übertragungsvorgang kopiert werden unverändert an den *StrDest*. Die **LC_TIME** Kategorie des aktuellen Gebietsschemas wirkt sich auf die Formatierung der Ausgabe von **Strftime**. (Weitere Informationen zu **LC_TIME**, finden Sie unter [Setlocale](setlocale-wsetlocale.md).) Die **Strftime** und **Wcsftime** Funktionen verwenden, die aktuell festgelegten Gebietsschema. Die **_strftime_l** und **_wcsftime_l** Versionen dieser Funktionen sind nahezu identisch, außer dass sie das Gebietsschema als Parameter übernehmen und, anstatt die aktuell festgelegten verwenden Gebietsschema. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die *Format* -Argument besteht aus, der einen oder mehrere Codes; wie in **Printf**, vorangestellt Formatierungscodes ein Prozentzeichen (**%**). Zeichen, die nicht mit beginnen **%** beim Übertragungsvorgang kopiert werden unverändert in *StrDest*. Die **LC_TIME** -Kategorie des aktuellen Gebietsschemas wirkt sich auf die ausgabeformatierung von **Strftime**. (Weitere Informationen zu **LC_TIME**, finden Sie unter [Setlocale](setlocale-wsetlocale.md).) Die **Strftime** und **Wcsftime** Funktionen verwenden, das derzeit festgelegte Gebietsschema. Die **_strftime_l** und **_wcsftime_l** Versionen dieser Funktionen sind nahezu identisch, außer dass sie das Gebietsschema als Parameter übernehmen und, anstatt des aktuellen verwenden Gebietsschemas. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 Die **Strftime** Funktionen unterstützen diese Formatierungscodes:
 
@@ -132,56 +122,56 @@ Die **Strftime** Funktionen unterstützen diese Formatierungscodes:
 |Code|Ersetzungszeichenfolge|
 |**%a**|Abgekürzten Wochentagsnamen im Gebietsschema|
 |**%A**|Vollen Wochentagsnamen im Gebietsschema|
-|**%b**|Abgekürzten Monatsnamen im Gebietsschema|
-|**%B**|Vollständigen Monatsnamen im Gebietsschema|
+|**%b**|Abgekürzte monatsbezeichnung im Gebietsschema|
+|**%B**|Vollständigen Monatsnamen in das Gebietsschema|
 |**%c**|Für das Gebietsschema geeignete Darstellung von Datum und Uhrzeit|
-|**%C**|Das Jahr durch 100 dividiert, und als Dezimalzahl (00−99) auf eine ganze Zahl gekürzt werden.|
+|**%C**|Das Jahr durch 100 dividiert, und klicken Sie auf eine ganze Zahl gekürzt wird, als Dezimalzahl (00−99)|
 |**%d**|Tag des Monats als Dezimalzahl (01-31)|
-|**%D**|Entspricht **%m/%d/%y**|
-|**%e**|Tag des Monats wird als Dezimalzahl (1-31), in denen einzelne Ziffern durch ein Leerzeichen vorangestellt sind|
-|**%F**|Entspricht **%Y-%m-%d.**|
-|**%g**|Die letzten 2 Ziffern des ISO 8601 Woche basierende Jahres als Dezimalzahl (00 - 99)|
-|**%G**|Das Jahr mit ISO 8601 Woche als Dezimalzahl|
+|**%D**|Äquivalent zu **%m/%d/%y**|
+|**%e**|Tag des Monats als Dezimalzahl (1-31), in denen einzelne Ziffern durch ein Leerzeichen vorangestellt ist|
+|**%F**|Äquivalent zu **%Y-%m-%d.**|
+|**%g**|Die letzten 2 Ziffern des ISO 8601-Woche-basierte Jahres als Dezimalzahl (00 - 99)|
+|**%G**|Das ISO 8601-Woche-basierte Jahr als Dezimalzahl|
 |**%h**|Abgekürzte Name des Monats (Äquivalent zu **%b**)|
-|**%H**|Stundenangabe im 24-Stunden-Format (00 - 23)|
-|**%I**|Stundenangabe im 12-Stunden-Format (01 bis 12)|
+|**%H**|Stunde im 24-Stunden-Format (00 - 23)|
+|**%I**|Stunde im 12-Stunden-Format (01-12)|
 |**%j**|Tag des Jahres als Dezimalzahl (001-366)|
-|**%m**|Monatsangabe als Dezimalzahl (01 bis 12)|
-|**%M**|Minutenangabe als Dezimalzahl (00 - 59)|
+|**%m**|Monat als Dezimalzahl (01-12)|
+|**%M**|Minute als Dezimalzahl (00 - 59)|
 |**%n**|Ein neue Zeilenumbruchzeichen (**\n**)|
-|**%p**|Das Gebietsschema A.M./P.M.-Kennung. Indikator für 12-Stunden-Uhr|
-|**%r**|Zeit für das Gebietsschema-12-Stunden-Format|
-|**%R**|Entspricht **% h, %M**|
+|**%p**|A.M./P.M.-Kennung des Gebietsschemas Indikator für 12-Stunden-Uhr|
+|**%r**|Zeit für das Gebietsschema des 12-Stunden-Format|
+|**%R**|Äquivalent zu **% H: %M**|
 |**%S**|Sekundenangabe als Dezimalzahl (00 - 59)|
 |**%t**|Ein horizontales Tabstoppzeichen (**\t**)|
-|**%T**|Entspricht **"% h" M: %s**, das ISO 8601-Uhrzeit-Format|
+|**%T**|Äquivalent zu **%hh: %mm: %ss**, das ISO 8601-Zeitformat|
 |**%u**|ISO 8601-Wochentags als Dezimalzahl (1-7. Montag ist 1)|
-|**%U**|Anzahl der Woche des Jahres als Dezimalzahl (00 - 53), wobei die erste Sonntag den ersten Tag der Woche 1|
-|**%V**|Nummer der ISO 8601-Woche als Dezimalzahl (00 - 53)|
-|**%w**|Angabe des Wochentags als Dezimalzahl (0 - 6; Sonntag ist 0)|
-|**%W**|Anzahl der Woche des Jahres als Dezimalzahl (00 - 53), wobei die erste Montag den ersten Tag der Woche 1|
-|**%x**|Darstellung von Datum für das Gebietsschema|
-|**%X**|Time-Darstellung für das Gebietsschema|
+|**%U**|Anzahl der Woche des Jahres als Dezimalzahl (00: 53), wobei die erste Sonntag der erste Tag der Woche 1 ist|
+|**%V**|Nummer der ISO 8601-Woche als Dezimalzahl (00: 53)|
+|**%w**|Wochentag als Dezimalzahl (0 - 6; Sonntag ist 0)|
+|**%W**|Anzahl der Woche des Jahres als Dezimalzahl (00: 53), wobei die erste Montag der erste Tag der Woche 1 ist|
+|**%x**|Datumsdarstellung für das Gebietsschema|
+|**%X**|Uhrzeitdarstellung für das Gebietsschema|
 |**%y**|Jahresangabe ohne Jahrhundert als Dezimalzahl (00 - 99)|
 |**%Y**|Jahresangabe mit Jahrhundert als Dezimalzahl|
-|**%z**|Der Offset von UTC in ISO 8601-Format; keine Zeichen, wenn Zeitzone unbekannt ist.|
-|**%Z**|Des Gebietsschemas Zeitzonenname oder Abkürzung der Zeitzone, je nach registrierungseinstellungen; keine Zeichen, wenn Zeitzone unbekannt ist.|
+|**%z**|Der Offset von UTC im ISO 8601-Format; keine Zeichen, wenn Zeitzone unbekannt ist|
+|**%Z**|Des Gebietsschemas des dreibuchstabiger Zeitzonenname oder Abkürzung der Zeitzone, abhängig von den registrierungseinstellungen; keine Zeichen, wenn Zeitzone unbekannt ist|
 |**%%**|Prozentzeichen (%)|
 
-Wie in der **Printf** -Funktion, die **#** Flag kann eine beliebige Formatierungscode Präfix. In diesem Fall wird die Bedeutung des Formatcodes wie folgt geändert.
+Wie in der **Printf** -Funktion, die **#** Flag möglicherweise Formatierungscode vorangestellt. In diesem Fall wird die Bedeutung des Formatcodes wie folgt geändert.
 
 |Formatcode|Bedeutung|
 |-----------------|-------------|
 |**% #a**, **%#A**, **%#b**, **%#B**, **%#g**, **%#G**, **%#h**, **%#n**, **%#p**, **%#t**, **%#u**, **%#w**, **%#X** , **%#z**, **%#Z**, **%#%**|**#** Flag wird ignoriert.|
-|**%#c**|Langes Datum und Uhrzeit Darstellung, für das Gebietsschema geeignet. Beispiel: „Dienstag, 14. März 1995, 12:41:29“.|
-|**%#x**|Langes Datum Darstellung, für das Gebietsschema geeignet. Beispiel: „Dienstag, 14. März 1995“.|
+|**% zu #c**|Lange Datums- / Darstellung, für das Gebietsschema geeignet. Beispiel: „Dienstag, 14. März 1995, 12:41:29“.|
+|**%#x**|Langes Datumsformat für das Gebietsschema geeignete Darstellung. Beispiel: „Dienstag, 14. März 1995“.|
 |**%#d**, **%#D**, **%#e**, **%#F**, **%#H**, **% #ich**, **%#j**, **%#m**, **%#M**, **%#r**, **%#R**, **%#S**, **%#T** , **%#U**, **%#V**, **%#W**, **%#y**, **%#Y**|Entfernen Sie führende Nullen oder Leerzeichen (sofern vorhanden).|
 
-Das ISO 8601-Woche und das Jahr basierende Woche von erzeugten **%V**, **%g**, und **%G**, verwendet pro Woche beginnt am Montag, auf dem Woche 1 Woche, die 4. Januar enthält, die das erste die Woche, die über mindestens 4 Tage des Jahres enthält. Ist der erste Montag des Jahres das 2., gehören 3. und 4., die vorherigen Tagen der letzten Woche des vorherigen Jahrs. Für diese Tage **%V** Fassung 53, und beide **%g** und **%G** werden durch die Ziffern des Vorjahres ersetzt.
+Das ISO 8601-Woche und das Jahr Woche basierende erzeugten **%V**, **%g**, und **%G**, verwendet eine Woche, die am Montag beginnt, auf dem Woche 1 Woche, an dem 4. Januar, enthält die erste die Woche, die mindestens vier Tage des Jahres enthält. Beim erste Montag des Jahres das 2. ist, sind 3. und 4., die vorherigen Tagen Teil der letzten Woche des vorherigen Jahres. Für diese Tage **%V** wird ersetzt durch 53 und beide **%g** und **%G** ersetzt werden, durch die Ziffern des vorherigen Jahres.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**strftime**|\<time.h>|
 |**wcsftime**|\<time.h> oder \<wchar.h>|

@@ -1,14 +1,8 @@
 ---
-title: -Zm (Begrenzung der Speicherzuweisung für vorkompilierten Header festlegen) | Microsoft-Dokumentation
-ms.custom: ''
+title: /Zm (Begrenzung der Speicherzuweisung für vorkompilierten Header festlegen)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /zm
-dev_langs:
-- C++
 helpviewer_keywords:
 - PCH files, memory allocation limit
 - Zm compiler option [C++]
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - memory allocation, Memory Allocation Limit compiler option
 - -Zm compiler option [C++]
 ms.assetid: 94c77d5e-6672-46a7-92e0-3f69e277727d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9dfd1b0525991f81736af571d2c450e0c12edfc4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ee42fc2d1065a755fa816a99563ccc9f0108e847
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702732"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50634797"
 ---
 # <a name="zm-specify-precompiled-header-memory-allocation-limit"></a>/Zm (Begrenzung der Speicherzuweisung für vorkompilierten Header festlegen)
 
@@ -60,7 +50,7 @@ Die folgende Tabelle zeigt, wie die *Faktor* Argument wirkt sich auf die Begrenz
 |-----------------------|-----------------------------|
 |10|7.5 MB|
 |100|75 MB|
-|300|150 MB|
+|200|150 MB|
 |1000|750 MB|
 |2000|1.500 MB|
 

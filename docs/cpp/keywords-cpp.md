@@ -1,12 +1,7 @@
 ---
-title: Schlüsselwörter (C++) | Microsoft-Dokumentation
+title: Schlüsselwörter (C++)
 ms.custom: index-page
 ms.date: 10/10/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, keywords
 - keywords [C++]
@@ -14,16 +9,12 @@ helpviewer_keywords:
 - Microsoft-specific keywords
 - __identifer keyword [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 86912ad8dfa3e048b74c67b6936eb09f74db308a
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 645a0edb053320499c3ecca1c9d2ffd639b15931
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162450"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659311"
 ---
 # <a name="keywords-c"></a>Schlüsselwörter (C++)
 
@@ -85,7 +76,7 @@ Schlüsselwörter sind vordefinierte, reservierte Bezeichner, die besondere Bede
 
 In Microsoft C++ sind Bezeichner mit zwei vorangehenden Unterstrichen für Compilerimplementierungen reserviert. Daher werden gemäß Microsoft-Konvention Microsoft-spezifischen Schlüsselwörtern doppelte Unterstriche vorangestellt. Diese Wörter können nicht als Bezeichnernamen verwendet werden.
 
-Standardmäßig sind Microsoft-Erweiterungen aktiviert. Um sicherzustellen, dass Ihre Programme vollständig portabel sind, können Sie Microsoft-Erweiterungen deaktivieren, indem Sie die Angabe der [/Za \(spracherweiterungen deaktivieren)](../build/reference/za-ze-disable-language-extensions.md) Option während der Kompilierung. Wenn Sie dies tun, sind einige Microsoft-spezifische Schlüsselwörter deaktiviert.
+Standardmäßig sind Microsoft-Erweiterungen aktiviert. Um sicherzustellen, dass Ihre Programme vollständig portabel sind, können Sie Microsoft-Erweiterungen deaktivieren, indem Sie während der Kompilierung die Option [/Za \( (Spracherweiterungen deaktivieren)](../build/reference/za-ze-disable-language-extensions.md) angeben. Dabei werden einige Microsoft-spezifische Schlüsselwörter deaktiviert.
 
 Wenn Microsoft-Erweiterungen aktiviert sind, können Sie Microsoft-spezifische Schlüsselwörter in Programmen verwenden. Zur Einhaltung der ANSI-Kompatibilität wird diesen Schlüsselwörtern ein doppelter Unterstrich vorangestellt. Für die Abwärtskompatibilität werden Versionen vieler der Schlüsselwörtern mit doppelten unterstrichen mit einem Unterstrich unterstützt. Darüber hinaus **__cdecl** ohne vorangehenden Unterstrich verfügbar ist.
 

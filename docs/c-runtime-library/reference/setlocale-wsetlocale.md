@@ -1,10 +1,6 @@
 ---
-title: setlocale, _wsetlocale | Microsoft-Dokumentation
-ms.custom: ''
+title: setlocale, _wsetlocale
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wsetlocale
 - setlocale
@@ -25,8 +21,6 @@ f1_keywords:
 - _wsetlocale
 - _tsetlocale
 - setlocale
-dev_langs:
-- C++
 helpviewer_keywords:
 - wsetlocale function
 - setlocale function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - defining locales
 - _wsetlocale function
 ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 666cb9954569d4c5bd232f387d63e320af52818a
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 0f2c0478ba5898ab369a04362734891f6d45cf42
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451835"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50548537"
 ---
 # <a name="setlocale-wsetlocale"></a>setlocale, _wsetlocale
 
@@ -74,7 +64,7 @@ Gebietsschemaspezifizierer.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn Sie eine gültige *Gebietsschema* und *Kategorie* angegeben sind, gibt einen Zeiger auf die Zeichenfolge, die mit dem angegebenen verknüpften *Gebietsschema* und *Kategorie*. Wenn die *Gebietsschema* oder *Kategorie* ist nicht gültig ist, wird ein null-Zeiger und die aktuellen gebietsschemaeinstellungen des Programms werden nicht geändert.
+Wenn Sie einen gültigen *Gebietsschema* und *Kategorie* angegeben sind, gibt einen Zeiger auf die angegebene Zeichenfolge *Gebietsschema* und *Kategorie*. Wenn die *Gebietsschema* oder *Kategorie* ist nicht gültig ist, wird ein null-Zeiger und die aktuellen gebietsschemaeinstellungen des Programms werden nicht geändert.
 
 Beispiel: Der Aufruf
 
@@ -88,13 +78,13 @@ legt alle Kategorien fest und gibt nur folgende Zeichenfolge zurück
 en-US
 ```
 
-Sie können die zurückgegebene Zeichenfolge kopieren **Setlocale** um diesen Teil der Gebietsschemainformation des Programms wiederherzustellen. Global oder Thread lokaler Speicher wird verwendet, für die zurückgegebene Zeichenfolge **Setlocale**. Spätere Aufrufe von **Setlocale** überschreiben die Zeichenfolge, die von früheren aufrufen zurückgegebenen Zeichenfolgenzeiger erklärt.
+Sie können die von zurückgegebene Zeichenfolge kopieren **Setlocale** um diesen Teil der Gebietsschemainformationen des Programms wiederherzustellen. Global oder Thread-lokaler Speicher wird verwendet, für die zurückgegebene Zeichenfolge **Setlocale**. Spätere Aufrufe von **Setlocale** überschreiben die Zeichenfolge, die von früheren aufrufen zurückgegebenen Zeichenfolgenzeiger erklärt.
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden der **Setlocale** Funktion festlegen, ändern oder abzufragen, einige oder alle Gebietsschemainformationen des aktuellen Programms gemäß *Gebietsschema* und *Kategorie*. *Gebietsschema* verweist auf den Ort (Land/Region und Sprache), für die Sie bestimmte Aspekte des Programms anpassen können. Vom Gebietsschema abhängig sind u. a. Datumsformat und Währungsformat. Wenn Sie festlegen, *Gebietsschema* um die Standardzeichenfolge für eine Sprache, die mehrere Formulare, die auf Ihrem Computer unterstützt, sollten Sie überprüfen die **Setlocale** Rückgabewert, um festzustellen, welche Sprache wirksam ist. Wenn Sie festlegen, z. B. *Gebietsschema* auf "Chinesisch" konnte der Rückgabewert entweder "Chinesisch-vereinfacht" oder "Chinesisch-traditionell" sein.
+Verwenden der **Setlocale** Funktion, um festzulegen, ändern oder abzufragen, einige oder alle anhand des aktuellen Programms Gebietsschemainformationen des *Gebietsschema* und *Kategorie*. *Gebietsschema* verweist auf den Ort (Land/Region und Sprache), das für die Sie bestimmte Aspekte des Programms anpassen können. Vom Gebietsschema abhängig sind u. a. Datumsformat und Währungsformat. Setzen Sie *Gebietsschema* auf die Standardzeichenfolge für eine Sprache, die auf Ihrem Computer mehrere Formen unterstützt, sollten Sie überprüfen die **Setlocale** Rückgabewert, um festzustellen, welche Sprache wirksam ist. Wenn Sie festlegen, z. B. *Gebietsschema* auf "Chinesisch" kann der Rückgabewert entweder "Chinesisch-vereinfacht" oder "Chinesisch-traditionell" sein.
 
-**_wsetlocale** ist eine Breitzeichen-Version von **Setlocale**; das *Gebietsschema* Argument- und Rückgabetypen Wert **_wsetlocale** sind Zeichenfolgen mit Breitzeichen. **_wsetlocale** und **Setlocale** Verhalten sich andernfalls identisch.
+**_wsetlocale** ist eine Breitzeichen-Version von **Setlocale**; die *Gebietsschema* Argument- und Rückgabetypen Wert **_wsetlocale** sind Breitzeichen Zeichenfolgen. **_wsetlocale** und **Setlocale** Verhalten sich andernfalls identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -102,28 +92,28 @@ Verwenden der **Setlocale** Funktion festlegen, ändern oder abzufragen, einige 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsetlocale**|**setlocale**|**setlocale**|**_wsetlocale**|
 
-Die *Kategorie* -Argument gibt die Teile der Gebietsschemainformationen eines Programms, die betroffen sind. Die Makros, die zum *Kategorie* und die Teile des Programms sind wie folgt:
+Die *Kategorie* Argument gibt an, die Teile der Gebietsschemainformationen eines Programms, die betroffen sind. Die Makros, die zum *Kategorie* und die Teile des Programms lauten wie folgt:
 
 |*Kategorie* Flag|Betrifft|
 |-|-|
 **LC_ALL**|Alle unten aufgeführten Kategorien.
 **LC_COLLATE**|Die **Strcoll**, **_stricoll**, **Wcscoll**, **_wcsicoll**, **Strxfrm**, **_ Strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**, und **Wcsxfrm** Funktionen.
-**LC_CTYPE**|Die Funktionen zur Verarbeitung von Zeichen (mit Ausnahme von **Isdigit**, **Isxdigit**, **Mbstowcs**, und **Mbtowc**, die nicht betroffen sind).
-**LC_MONETARY**|Währungsformatierung Informationen zurückgegeben werden, indem Sie die **Localeconv** Funktion.
-**LC_NUMERIC**|Dezimaltrennzeichen für die formatierten ausgaberoutinen (wie z. B. **Printf**), für die datenkonvertierungsroutinen und für die nicht monetären Formatierungsinformationen zurückgegebenes **Localeconv**. Neben dem Dezimaltrennzeichen **LC_NUMERIC** legt das Tausendertrennzeichen und die Steuerung von zurückgegebene Zeichenfolge [Localeconv](localeconv.md).
+**LC_CTYPE**|Die Funktionen zur Behandlung von Zeichen (mit Ausnahme von **Isdigit**, **Isxdigit**, **Mbstowcs**, und **Mbtowc**, die nicht betroffen sind).
+**LC_MONETARY**|Informationen zur währungsformatierung zurückgegebenes der **Localeconv** Funktion.
+**LC_NUMERIC**|Dezimaltrennzeichen für die formatierten ausgaberoutinen (wie z. B. **Printf**), für die datenkonvertierungsroutinen und für die nicht monetären Formatierungsinformationen, die vom **Localeconv**. Neben dem Dezimaltrennzeichen **LC_NUMERIC** legt das Tausendertrennzeichen und das Steuern von zurückgegebene Zeichenfolge [Localeconv](localeconv.md).
 **LC_TIME**|Die **Strftime** und **Wcsftime** Funktionen.
 
-Diese Funktion überprüft den Kategorienparameter. Wenn es sich bei dem Kategorienparameter um keinen der Werte handelt, die in der vorherigen Tabelle angegeben sind, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt der Funktion **Errno** auf **EINVAL** und gibt **NULL**.
+Diese Funktion überprüft den Kategorienparameter. Wenn es sich bei dem Kategorienparameter um keinen der Werte handelt, die in der vorherigen Tabelle angegeben sind, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Die Funktion legt fest, wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** zu **EINVAL** und gibt **NULL**.
 
-Die *Gebietsschema* Argument ist ein Zeiger auf eine Zeichenfolge, die das Gebietsschema angibt. Informationen zum Format von der *Gebietsschema* Argument, finden Sie unter [Gebietsschemanamen, Sprachen und Zeichenfolgen für Länder/Regionen](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Wenn *locale* auf eine leere Zeichenfolge zeigt, ist das Gebietsschema die durch die Implementierung definierte native Umgebung. Der Wert **C** gibt die minimale Umgebung ANSI-Konformität für die C-Übersetzung an. Die **C** -Gebietsschema geht davon aus, die alle **Char** -Datentypen 1 Byte und werden, die der Wert ist immer kleiner als 256.
+Die *Gebietsschema* Argument ist ein Zeiger auf eine Zeichenfolge, die das Gebietsschema angibt. Informationen zum Format von der *Gebietsschema* Argument finden Sie unter [Gebietsschemanamen, Sprachen und Zeichenfolgen für Länder/Regionen](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Wenn *locale* auf eine leere Zeichenfolge zeigt, ist das Gebietsschema die durch die Implementierung definierte native Umgebung. Der Wert **C** gibt an, die konformen Umgebung mit minimaler ANSI C-Übersetzung. Die **C** -Gebietsschema geht davon aus, die alle **Char** -Datentypen 1 Byte groß sind und, die ihren Wert ist immer kleiner als 256.
 
 Zum Programmstart wird die Entsprechung der folgenden Anweisung ausgeführt:
 
 `setlocale( LC_ALL, "C" );`
 
-Die *Gebietsschema* Argument kann einen Gebietsschemanamen, eine Sprachenzeichenfolge, eine Sprachenzeichenfolge und Länder-/Regionscode, eine Codepage oder eine Sprachenzeichenfolge, Länder-/Regionscode und Codepage zu verwenden. Der Satz verfügbarer Gebietsschemanamen, Sprachen, Länder-/Regionscodes und Codepages umfasst alle diejenigen, die von der Windows NLS API unterstützt werden, ausgenommen Codepages, die mehr als zwei Bytes pro Zeichen benötigen, wie z. B. UTF-7 und UTF-8. Wenn Sie eine Codepage-Wert eines UTF-7 oder UTF-8 bereitstellen **Setlocale** schlägt fehl, Zurückgeben von **NULL**. Die Anzahl von unterstützten Gebietsschemanamen **Setlocale** in beschriebenen [Gebietsschemanamen, Sprachen und Zeichenfolgen für Länder/Regionen](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Der Satz von Sprache und Land/Region-Zeichenfolgen, die von unterstützt **Setlocale** in aufgelisteten [Sprachenzeichenfolgen](../../c-runtime-library/language-strings.md) und [Länder-/Regionszeichenfolgen](../../c-runtime-library/country-region-strings.md). Wie empfehlen die Gebietsschema-Namensform aus Gründen der Leistung und leichteren Verwaltung von Gebietsschema-Zeichenfolgen, die in Code eingebettet sind oder für den Speicher serialisiert sind. Es ist weniger wahrscheinlich, dass Gebietsschema-Zeichenfolgen durch eine Betriebssystemaktualisierung geändert werden, als dies bei der Namensform für Sprache und Land/Region der Fall ist.
+Die *Gebietsschema* -Argument kann einen Gebietsschemanamen, eine Sprachenzeichenfolge, eine Sprachenzeichenfolge und Länder-/Regionscode, eine Codepage oder eine Sprachenzeichenfolge, Länder-/Regionscode und Codepage annehmen. Der Satz verfügbarer Gebietsschemanamen, Sprachen, Länder-/Regionscodes und Codepages umfasst alle diejenigen, die von der Windows NLS API unterstützt werden, ausgenommen Codepages, die mehr als zwei Bytes pro Zeichen benötigen, wie z. B. UTF-7 und UTF-8. Wenn Sie einen Codepage-Wert wie UTF-7 oder UTF-8 bereitstellen **Setlocale** fehl und gibt zurück **NULL**. Der Satz von Gebietsschemanamen, die von unterstützt **Setlocale** werden in beschrieben [Gebietsschemanamen, Sprachen und Zeichenfolgen für Länder/Regionen](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Die unterstützte Satz von Sprach- und Länder-/regionszeichenfolgen von **Setlocale** finden Sie in [Sprachzeichenfolgen](../../c-runtime-library/language-strings.md) und [Länder-/Regionszeichenfolgen](../../c-runtime-library/country-region-strings.md). Wie empfehlen die Gebietsschema-Namensform aus Gründen der Leistung und leichteren Verwaltung von Gebietsschema-Zeichenfolgen, die in Code eingebettet sind oder für den Speicher serialisiert sind. Es ist weniger wahrscheinlich, dass Gebietsschema-Zeichenfolgen durch eine Betriebssystemaktualisierung geändert werden, als dies bei der Namensform für Sprache und Land/Region der Fall ist.
 
-Ein null-Zeiger, die als übergeben der *Gebietsschema* -Argument teilt **Setlocale** anstelle von Abfragen, die internationale Umgebung festlegen. Wenn die *Gebietsschema* Argument ist ein null-Zeiger, die aktuelle gebietsschemaeinstellung des Programms wird nicht geändert. Stattdessen **Setlocale** gibt einen Zeiger auf die Zeichenfolge, die mit zugeordnetem der *Kategorie* des aktuellen threadgebietsschemas. Wenn die *Kategorie* Argument ist **LC_ALL**, die Funktion gibt eine Zeichenfolge, die die aktuelle Einstellung der einzelnen Kategorien, die durch Semikolons getrennte angibt. Beispiel: Die Reihenfolge der Aufrufe
+Ein null-Zeiger, die als übergeben die *Gebietsschema* Argument teilt **Setlocale** anstelle von Abfragen, die internationale Umgebung festlegen. Wenn die *Gebietsschema* Argument ist ein null-Zeiger, die aktuelle gebietsschemaeinstellung nicht des Programms wird nicht geändert. Stattdessen **Setlocale** gibt einen Zeiger auf die Zeichenfolge, die mit zugeordnetem der *Kategorie* des aktuellen Gebietsschemas des Threads. Wenn die *Kategorie* Argument **LC_ALL**, die Funktion gibt eine Zeichenfolge, die die aktuelle Einstellung der einzelnen Kategorien, die durch Semikolons getrennte angibt. Beispiel: Die Reihenfolge der Aufrufe
 
 ```C
 // Set all categories and return "en-US"
@@ -139,7 +129,7 @@ gibt
 LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 ```
 
-Dies ist die Zeichenfolge, die mit zugeordnetem der **LC_ALL** Kategorie.
+Dies ist die Zeichenfolge, die zugeordnet wird die **LC_ALL** Kategorie.
 
 Die folgenden Beispiele beziehen sich auf die **LC_ALL** Kategorie. Jede der Zeichenfolgen „.OCP" und „.ACP" kann anstelle einer Codepageseitenzahl verwendet werden, um jeweils die voreingestellte OEM-Benutzercodepage und die voreingestellte ANSI-Benutzercodepage anzugeben.
 
@@ -165,7 +155,7 @@ Die folgenden Beispiele beziehen sich auf die **LC_ALL** Kategorie. Jede der Zei
 
 - `setlocale( LC_ALL, "<language>_<country>.<code_page>" );`
 
-   Legt das Gebietsschema auf Sprache, Land/Region und Codepage angegeben wird, durch die  *\<Sprache >*,  *\<Land >*, und  *\<Codepage >* Zeichenfolgen. Sie können verschiedene Kombinationen von Sprache, Land/Region und Codepage verwenden. Bei diesem Aufruf wird beispielsweise das Gebetsschema auf Französisch (Kanada) festgelegt, mit der Codepage 1252:
+   Legt das Gebietsschema, das die Sprache, Land/Region und Codepage angegeben wird, durch die  *\<Sprache >*,  *\<Land >*, und  *\<Codepage >* Zeichenfolgen. Sie können verschiedene Kombinationen von Sprache, Land/Region und Codepage verwenden. Bei diesem Aufruf wird beispielsweise das Gebetsschema auf Französisch (Kanada) festgelegt, mit der Codepage 1252:
 
    `setlocale( LC_ALL, "French_Canada.1252" );`
 
@@ -193,7 +183,7 @@ Die folgenden Beispiele beziehen sich auf die **LC_ALL** Kategorie. Jede der Zei
 
    Legt die Codepage auf den Wert fest, der durch *<Codepage>* angegeben ist, wobei zugleich das Standardland bzw. die Standardregion und Sprache (gemäß der Definition vom Hostbetriebssystem) für die angegebene Codepage verwendet wird.
 
-Die Kategorie muss entweder **LC_ALL** oder **LC_CTYPE** auf eine Änderung der Codepage wirksam. Beispielsweise, wenn die standardmäßige Land/Region und Sprache des Host-Betriebssystem "USA" und "Englisch" sind, die folgenden beiden Aufrufe von **Setlocale** sind funktional äquivalent:
+Die Kategorie muss entweder **LC_ALL** oder **LC_CTYPE** zu Auswirkungen auf eine Änderung der Codepage. Z. B. wenn das Standardland bzw. die Standardregion und Sprache des Host-Betriebssystem "USA" und "Englisch" sind, die folgenden beiden Aufrufe von **Setlocale** sind funktional äquivalent:
 
 `setlocale( LC_ALL, ".1252" );`
 
@@ -205,7 +195,7 @@ Die Funktion [_configthreadlocale](configthreadlocale.md) wird verwendet, um zu 
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**setlocale**|\<locale.h>|
 |**_wsetlocale**|\<locale.h> oder \<wchar.h>|
@@ -318,7 +308,7 @@ The time in de-DE locale is: 'Mittwoch, 12. Mai 2004'
 
 ## <a name="see-also"></a>Siehe auch
 
-[Gebietsschemanamen, Sprachen und Zeichenfolgen für Länder/Regionen](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[Gebietsschema-Namen, Sprachen und Zeichenfolgen für Länder und Regionen](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [_configthreadlocale](configthreadlocale.md)<br/>
 [_create_locale, _wcreate_locale](create-locale-wcreate-locale.md)<br/>
 [Locale](../../c-runtime-library/locale.md)<br/>

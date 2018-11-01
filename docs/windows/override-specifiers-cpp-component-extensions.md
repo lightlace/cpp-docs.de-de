@@ -1,27 +1,17 @@
 ---
-title: Überschreibungsspezifizierer (C++ / CLI und C++ / CX) | Microsoft-Dokumentation
-ms.custom: ''
+title: Überschreibungsspezifizierer (C++ / CLI und C++ / CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - override specifiers, C++
 - override specifiers
 ms.assetid: 155bbf6f-4722-4654-afb1-9cb52af799fb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0620bc7045dcb312667cfdfe670e1f19b0545cf2
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 9d839b9530cff144cda7897b0c96af48c14454a6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327463"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639854"
 ---
 # <a name="override-specifiers--ccli-and-ccx"></a>Überschreibungsspezifizierer (C++ / CLI und C++ / CX)
 
@@ -65,4 +55,4 @@ Compileroption: `/clr`
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für .NET- und UWP](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für .NET und UWP](../windows/component-extensions-for-runtime-platforms.md)
