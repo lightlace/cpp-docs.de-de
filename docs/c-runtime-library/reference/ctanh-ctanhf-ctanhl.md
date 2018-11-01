@@ -1,11 +1,6 @@
 ---
-title: ctanh, ctanhf, ctanhl | Microsoft-Dokumentation
-ms.custom: ''
+title: ctanh, ctanhf, ctanhl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - ctanh
 - ctahf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/ctanh
 - complex/ctanhf
 - complex/ctanhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - ctanh function
 - ctanhl function
 - ctanhf function
 ms.assetid: 807f2cd1-8740-4988-afff-5911c346385b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bf81e503405959686974a26ceb5d064c1ab84400
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e390aceaad2ee82e1fe2a865d3903f5062f52e9d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396081"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50470559"
 ---
 # <a name="ctanh-ctanhf-ctanhl"></a>ctanh, ctanhf, ctanhl
 
@@ -79,7 +68,7 @@ Eine komplexe Zahl, die einen Winkel als Bogenmaß darstellt
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der komplexe Hyperbeltangens von *z*.
+Den komplexen hyperbolischen Tangens *z*.
 
 |Eingabe|SEH-Ausnahme|**_matherr** Ausnahme|
 |-----------|-------------------|--------------------------|
@@ -92,7 +81,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Ctanh**
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|C-Header|C++-Header|
+|-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
 |**Ctanh**, **Ctanhf**, **Ctanhl**|\<complex.h>|\<ccomplex>|
 

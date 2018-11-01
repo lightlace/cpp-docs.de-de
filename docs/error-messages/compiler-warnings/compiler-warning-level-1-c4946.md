@@ -1,27 +1,17 @@
 ---
-title: Compilerwarnung (Stufe 1) C4946 | Microsoft-Dokumentation
-ms.custom: ''
+title: Compilerwarnung (Stufe 1) C4946
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4946
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4946
 ms.assetid: b85cbef0-e053-4de6-9b14-7b0f82d40495
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f7186848ffc005721fca430d53558100789eae76
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f215c621486bf223d8f6c90b0a4f4ae119ad4b1f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46086654"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50574225"
 ---
 # <a name="compiler-warning-level-1-c4946"></a>Compilerwarnung (Stufe 1) C4946
 

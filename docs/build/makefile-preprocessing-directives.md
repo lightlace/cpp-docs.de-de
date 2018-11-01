@@ -1,17 +1,11 @@
 ---
-title: Makefile-Präprozessordirektiven | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
+title: Anweisungen für den Präprozessorlauf eines Makefiles
+ms.date: 06/14/2018
 f1_keywords:
 - '!UNDEF'
 - '!INCLUDE'
 - '!IFNDEF'
 - '!MESSAGE'
-dev_langs:
-- C++
 helpviewer_keywords:
 - ERROR directive
 - '!MESSAGE directive'
@@ -45,59 +39,71 @@ helpviewer_keywords:
 - ELSE directive
 - ELSEIFDEF directive
 ms.assetid: bcedeccb-d981-469d-b9e8-ab5d097fd8c2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6a84557388f521fb6c70c33ce6814ce33a5f6a1d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: adc81e5c4ea3d0d4a80e7efad4eaab15a5048cd3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50593569"
 ---
 # <a name="makefile-preprocessing-directives"></a>Anweisungen für den Präprozessorlauf eines Makefiles
-Vorverarbeitungsdirektiven sind nicht in der Groß-/Kleinschreibung beachtet. Das Ausrufungszeichen (!) muss am Anfang der Zeile angezeigt werden. 0 (null) oder mehrere Leerzeichen bzw. Tabstopps können nach dem Ausrufezeichen, für den Einzug angezeigt werden.  
-  
- **! CMDSWITCHES**  
- {**+** &#124; **-**}*Option*... Aktiviert die einzelnen *Option* aufgeführt, aktivieren oder deaktivieren. Leerzeichen oder Tabstopps müssen angezeigt werden, bevor Sie das + oder - Operator ist; keine können zwischen dem Operator angezeigt und die [option Buchstaben](../build/nmake-options.md). Buchstaben werden die Groß-/ Kleinschreibung nicht und ohne ein Schrägstrich (/) angegeben werden. Um usw. einige Optionen auf off zu aktivieren, verwenden Sie separate Spezifikationen von **! CMDSWITCHES**.  
-  
- Nur/d / I, / n und/s in einem Makefile verwendet werden können. In der Datei Tools.ini dürfen sich alle Optionen außer/f "," / Help "," / nologo, / X, und /?. Änderungen, die in einem Beschreibungsblock angegeben werden nicht bis zum nächsten Beschreibung Blocks wirksam. Diese Direktive aktualisiert **MAKEFLAGS**; Änderungen werden während der Rekursion geerbt, wenn **MAKEFLAGS** angegeben ist.  
-  
- **! Fehler beim***Text*   
- Zeigt *Text* in Fehler U1050 an, und hält NMAKE, selbst wenn/k, / I, **. IGNORIEREN**, **! CMDSWITCHES**, oder die Befehlsparameter Bindestrich (-) verwendet wird. Leerzeichen oder Tabstopps vor *Text* werden ignoriert.  
-  
- **! Nachricht***Text*   
- Zeigt *Text* an die Standardausgabe. Leerzeichen oder Tabstopps vor *Text* werden ignoriert.  
-  
- **! UMFASSEN**[ **\<**] *Filename*[ **>**]  
- Liest *Filename* als Makefile, fährt mit dem aktuellen Makefile. NMAKE sucht *Filename* zuerst im Verzeichnis angegebenen oder aktuellen dann rekursiv in Verzeichnissen aller an die übergeordnete Makefiles, klicken Sie dann, wenn *Filename* in spitzen Klammern eingeschlossen wird (\<>), in den Verzeichnissen, die gemäß der **INCLUDE** -Makro, das anfänglich auf die INCLUDE-Umgebungsvariable festgelegt ist. Wird zum Übergeben von **. SUFFIXE** Einstellungen **. WERTVOLLE**, und auf rekursive Makefiles Rückschlussregeln.  
-  
- **! IF**  `constantexpression`  
- Anweisungen zwischen verarbeitet **! IF** und dem nächsten **! ELSE** oder `!ENDIF` Wenn `constantexpression` einen Wert ungleich null ergibt.  
-  
- **! IFDEF***Macroname*   
- Anweisungen zwischen verarbeitet `!IFDEF` und dem nächsten **! ELSE** oder `!ENDIF` Wenn *Macroname* definiert ist. Ein null-Makro gilt definiert werden.  
-  
- **! IFNDEF***Macroname*   
- Anweisungen zwischen verarbeitet **! IFNDEF** und dem nächsten **! ELSE** oder `!ENDIF` Wenn *Macroname* ist nicht definiert.  
-  
- **! ELSE**[**IF** *KonstanterAusdruck* &#124; **IFDEF** *Macroname* &#124; **IFNDEF**  *Macroname*]  
- Anweisungen zwischen verarbeitet **! ELSE** und dem nächsten `!ENDIF` Wenn die vorherige **! IF**, `!IFDEF`, oder **! IFNDEF** Anweisung nach 0 (null) ausgewertet. Die optionalen Schlüsselwörter bieten eine weitere Steuerung der vorverarbeitung.  
-  
- **! ELSEIF**  
- Synonym für **! ElseIf**.  
-  
- **! ELSEIFDEF**  
- Synonym für **! ELSE IFDEF**.  
-  
- **! ELSEIFNDEF**  
- Synonym für **! ELSE IFNDEF**.  
-  
- `!ENDIF`  
- Markiert das Ende einer **! IF**, `!IFDEF`, oder **! IFNDEF** Block. Beliebiger Text nach `!ENDIF` in derselben Zeile wird ignoriert.  
-  
- **! UNDEF***Macroname*   
- Hebt die Definition *Macroname*.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Vorverarbeitung eines Makefiles](../build/makefile-preprocessing.md)
+
+Vorverarbeitungsdirektiven sind nicht in der Groß-/Kleinschreibung beachtet. Das Ausrufungszeichen (!) muss am Anfang der Zeile angezeigt werden. 0 (null) oder mehr Leerzeichen oder Tabstopps können nach dem Ausrufezeichen, für den Einzug angezeigt werden.
+
+- **! CMDSWITCHES** {**+** &#124; **-**}*Option* ...
+
+   Aktiviert die einzelnen *Option* aufgeführt, aktivieren oder deaktivieren. Leerzeichen oder Tabstopps müssen angezeigt werden, bevor Sie das + oder - Operator ist; keiner enthalten sein zwischen dem Operator und die [option Buchstaben](../build/nmake-options.md). Buchstaben werden Groß-/ Kleinschreibung nicht und werden ohne einen Schrägstrich (/) angegeben. Um auf einige Optionen und andere aus aktivieren möchten, verwenden Sie separate Spezifikationen von **! CMDSWITCHES**.
+
+   Nur/d / ich/n und "/ s" kann in einem Makefile verwendet werden. In der Datei Tools.ini dürfen sich alle Optionen außer/f "," / Help "," / nologo, / X und /?. Änderungen, die in einem Beschreibungsblock angegeben werden nicht bis zum nächsten Beschreibung Blocks wirksam. Diese Direktive aktualisiert **MAKEFLAGS**; Änderungen werden während der Rekursion geerbt, wenn **MAKEFLAGS** angegeben ist.
+
+- **! Fehler***Text* 
+
+   Zeigt *Text* in Fehler U1050 an, und hält NMAKE, selbst wenn/k, /, **. IGNORIEREN Sie**, **! CMDSWITCHES**, oder dem Bindestrich (-) Befehlsmodifizierer verwendet wird. Leerzeichen oder vor dem Registerkarten *Text* werden ignoriert.
+
+- **! Nachricht***Text* 
+
+   Zeigt *Text* an die Standardausgabe. Leerzeichen oder vor dem Registerkarten *Text* werden ignoriert.
+
+- **! UMFASSEN** [ **\<** ] *Filename* [ **>** ]
+
+   Liest *Filename* als Makefile, klicken Sie dann mit dem aktuellen Makefile zu fort. NMAKE sucht *Filename* zuerst im Verzeichnis angegebenen oder aktuellen dann rekursiv in den Verzeichnissen aller an die übergeordnete Makefiles, klicken Sie dann, wenn *Filename* von spitzen Klammern eingeschlossen (\<>), in den Verzeichnissen durch die **INCLUDE** Makro, das anfänglich auf die INCLUDE-Umgebungsvariable festgelegt ist. Wird zum Übergeben von **. SUFFIXE** Einstellungen **. WERTVOLLE**, und Rückschlussregeln zum rekursiven Makefiles.
+
+- **! IF** *Constant_expression*
+
+   Verarbeitet die Anweisungen zwischen **! IF** und dem nächsten **! ANDERE** oder **! ENDIF** Wenn *Constant_expression* einen Wert ungleich null ergibt.
+
+- **! IFDEF***Makroname* 
+
+   Verarbeitet die Anweisungen zwischen **! IFDEF** und dem nächsten **! ANDERE** oder **! ENDIF** Wenn *Macroname* definiert ist. Ein null-Makro gilt definiert werden.
+
+- **! IFNDEF***Makroname* 
+
+   Verarbeitet die Anweisungen zwischen **! IFNDEF** und dem nächsten **! ANDERE** oder **! ENDIF** Wenn *Macroname* ist nicht definiert.
+
+- **! ANDERE** [**IF** *Constant_expression* &#124; **IFDEF** *Macroname* &#124; **IFNDEF**  *Macroname*]
+
+   Verarbeitet die Anweisungen zwischen **! ANDERE** und dem nächsten **! ENDIF** Wenn der vorherige **! IF**, **! IFDEF**, oder **! IFNDEF** Anweisung 0 (null) ausgewertet. Die optionalen Schlüsselwörter bieten eine weitere Steuerung der vorverarbeitung.
+
+- **! ELSEIF**
+
+   Synonym für **! ElseIf**.
+
+- **! ELSEIFDEF**
+
+   Synonym für **! ANDERE IFDEF**.
+
+- **! ELSEIFNDEF**
+
+   Synonym für **! ANDERE IFNDEF**.
+
+- **! ENDIF**
+
+   Markiert das Ende einer **! IF**, **! IFDEF**, oder **! IFNDEF** Block. Sämtlicher Text nach **! ENDIF** in der gleichen Zeile wird ignoriert.
+
+- **! UNDEF***Makroname* 
+
+   Hebt die Definierung *Macroname*.
+
+## <a name="see-also"></a>Siehe auch
+
+- [Vorverarbeitung eines Makefiles](../build/makefile-preprocessing.md)

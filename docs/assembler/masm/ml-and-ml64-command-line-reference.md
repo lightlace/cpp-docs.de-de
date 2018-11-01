@@ -1,14 +1,8 @@
 ---
-title: ML- und ML64-Befehlszeilenreferenz | Microsoft-Dokumentation
-ms.custom: ''
+title: ML- und ML64-Befehlszeilenreferenz
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: reference
 f1_keywords:
 - ML
-dev_langs:
-- C++
 helpviewer_keywords:
 - /W* MASM compiler option
 - /c MASM compiler option
@@ -60,16 +54,12 @@ helpviewer_keywords:
 - command line, reference [ML]
 - /Ta MASM compiler option
 ms.assetid: 712623c6-f77e-47ea-a945-089e57c50b40
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 41d3603bc09b7c63fdd152e1c7d5921c2bb3eb7c
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 64d56ea5eb29162e65782998e91fc1ff70cbf73b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693402"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430224"
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>ML- und ML64-Befehlszeilenreferenz
 
@@ -85,7 +75,7 @@ Weitere Informationen zu ml64.exe, finden Sie unter [MASM für X64 (ml64.exe)](.
 
 ### <a name="parameters"></a>Parameter
 
-*Optionen*<br/>
+*options*<br/>
 In der folgenden Tabelle aufgeführten Optionen.
 
 |Option|Aktion|
@@ -98,7 +88,7 @@ In der folgenden Tabelle aufgeführten Optionen.
 |**/ Cu**|Ordnet alle Bezeichner in Großbuchstaben (Standard).<br /><br /> In ml64.exe nicht verfügbar.|
 |**/Cx**|Behält Groß-/Kleinschreibung im öffentlichen und Extern-Symbole.|
 |**/ D** *Symbol*[[=*Wert*]]|Definiert ein Textmakro, mit dem angegebenen Namen. Wenn *Wert* ist nicht vorhanden ist, ist es leer. Mehrere durch Leerzeichen getrennte Token müssen in Anführungszeichen eingeschlossen werden.|
-|**/ EP**|Generiert eine vorverarbeitete quellcodeauflistung (an "stdout" gesendet). Finden Sie unter **/SF**.|
+|**/EP**|Generiert eine vorverarbeitete quellcodeauflistung (an "stdout" gesendet). Finden Sie unter **/SF**.|
 |**/ ERRORREPORT** [ **NONE** &AMP;#124; **EINGABEAUFFORDERUNG** &AMP;#124; **WARTESCHLANGE** &AMP;#124; **SENDEN** ]|Wenn ml.exe "oder" ml64.exe zur Laufzeit fehlschlägt, können Sie **/errorreport** Informationen zu diesen internen Fehlern an Microsoft zu senden.<br /><br /> Weitere Informationen zu **/errorreport**, finden Sie unter [/errorreport (interne Compilerfehler Bericht)](../../build/reference/errorreport-report-internal-compiler-errors.md).|
 |**/ F** *Hexnum*|Legt die Stapelgröße auf *Hexnum* Bytes (Dies entspricht dem **/Link/STACK**:*Anzahl*). Der Wert muss in hexadezimaler Schreibweise ausgedrückt werden. Es muss ein Leerzeichen zwischen **/f** und *Hexnum*.|
 |**/ FE** *Dateiname*|Benennt die ausführbare Datei an.|

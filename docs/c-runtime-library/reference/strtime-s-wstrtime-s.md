@@ -1,10 +1,6 @@
 ---
-title: _strtime_s, _wstrtime_s | Microsoft-Dokumentation
-ms.custom: ''
+title: _strtime_s, _wstrtime_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wstrtime_s
 - _strtime_s
@@ -26,8 +22,6 @@ f1_keywords:
 - strtime_s
 - wstrtime_s
 - _strtime_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wstrtime_s function
 - copying time to buffers
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e7f9814bb783c763eef6d94e9d1372316a2393a6
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 579c4a99b52c66bd14cea947eaa1f301cc1127e1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451246"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642363"
 ---
 # <a name="strtimes-wstrtimes"></a>_strtime_s, _wstrtime_s
 
@@ -91,21 +81,21 @@ Wenn ein Fehler auftritt, wird der Handler für ungültige Parameter aufgerufen,
 |*buffer*|*numberOfElements*|Zurück|Inhalt der *Puffer*|
 |--------------|------------------------|------------|--------------------------|
 |**NULL**|(alle)|**EINVAL**|Nicht geändert|
-|Nicht **NULL** (verweist auf gültige Puffer)|0|**EINVAL**|Nicht geändert|
-|Nicht **NULL** (verweist auf gültige Puffer)|0 < Größe < 9|**EINVAL**|Leere Zeichenfolge|
-|Nicht **NULL** (verweist auf gültige Puffer)|Größe > 9|0|Aktuelle Zeit, wie sie in den Hinweisen angegeben wurde|
+|Nicht **NULL** (zeigt auf gültigen Puffer)|0|**EINVAL**|Nicht geändert|
+|Nicht **NULL** (zeigt auf gültigen Puffer)|0 < Größe < 9|**EINVAL**|Leere Zeichenfolge|
+|Nicht **NULL** (zeigt auf gültigen Puffer)|Größe > 9|0|Aktuelle Zeit, wie sie in den Hinweisen angegeben wurde|
 
 ## <a name="security-issues"></a>Sicherheitsprobleme
 
-Übergeben eine ungültige nicht-**NULL** Wert für der Puffer eine zugriffsverletzung führen wird, wenn die *NumberOfElements* -Parameters ist größer als 9.
+Übergabe eines ungültigen nicht-**NULL** Wert für der Puffer zu einer zugriffsverletzung führt, wenn die *NumberOfElements* Parameter größer als 9 ist.
 
-Die Übergabe des Werts für *NumberOfElements* größer als die tatsächliche Größe des Puffers Pufferüberlauf führt.
+Übergeben eines Werts für *NumberOfElements* , die größer ist als die tatsächliche Größe des Puffers Pufferüberlauf führt.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktionen geben Weitere sicherere Versionen [_strtime](strtime-wstrtime.md) und [_wstrtime](strtime-wstrtime.md). Die **_strtime_s** Funktion kopiert die aktuelle lokale Zeit in den Puffer verweist *Timestr*. Die Zeit wird als formatiert **hh: mm:** , in denen **"hh"** sich um zwei Ziffern, die für die Stunde im 24-Stunden-Notation **mm** sich um zwei Ziffern, die die Minuten der Stunde und darstellt.**ss** sich um zwei Ziffern, die Sekunden darstellt. Z. B. die Zeichenfolge **18:23:44** 23 Minuten und 44 Sekunden nach 6 Uhr darstellt Der Puffer muss mindestens 9 Bytes lang sein. Die tatsächliche Größe wird durch den zweiten Parameter angegeben.
+Diese Funktionen bieten sicherere Versionen [_strtime](strtime-wstrtime.md) und [_wstrtime](strtime-wstrtime.md). Die **_strtime_s** Funktion kopiert die aktuelle lokale Zeit in den Puffer, der auf *Timestr*. Die Zeit wird als formatiert **hh: mm:** , in denen **Hh** zwei Ziffern für die Stunde im 24-Stunden-Notation **mm** zwei Ziffern für die Minuten nach der Stunde und **ss** zwei Ziffern für Sekunden. Z. B. die Zeichenfolge **18:23:44** stellt 23 Minuten und 44 Sekunden nach 6 Uhr Der Puffer muss mindestens 9 Bytes lang sein. Die tatsächliche Größe wird durch den zweiten Parameter angegeben.
 
-**_wstrtime** ist eine Breitzeichen-Version von **_strtime**; der Wert Argument- und Rückgabetypen der **_wstrtime** sind Zeichenfolgen mit Breitzeichen. Anderenfalls verhalten sich diese Funktionen identisch.
+**_wstrtime** ist eine Breitzeichen-Version von **_strtime**; der Wert Argument- und Rückgabetypen der **_wstrtime** sind Breitzeichen Zeichenfolgen. Anderenfalls verhalten sich diese Funktionen identisch.
 
 In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -117,7 +107,7 @@ In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinf
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_strtime_s**|\<time.h>|
 |**_wstrtime_s**|\<time.h> oder \<wchar.h>|

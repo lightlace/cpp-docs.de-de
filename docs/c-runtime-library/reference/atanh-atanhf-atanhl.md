@@ -1,10 +1,6 @@
 ---
-title: atanh, atanhf, atanhl | Microsoft-Dokumentation
-ms.custom: ''
+title: atanh, atanhf, atanhl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - atanhl
 - atanhf
@@ -26,23 +22,17 @@ f1_keywords:
 - atanhl
 - atanhf
 - atanh
-dev_langs:
-- C++
 helpviewer_keywords:
 - atanhf function
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 90a24945a7d630fac909e097728ea4df61ae2b40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6044c40427e407ee9746867e4b04104c1ca29c7c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393302"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435359"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
 
@@ -68,12 +58,12 @@ Gleitkommawert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **Atanh** Funktionen geben den umgekehrten hyperbolischen Tangens (hyperbolischen Arcustangens) *x*. Wenn *x* ist größer als 1 oder kleiner als -1, **Errno** festgelegt ist, um **EDOM** und das Ergebnis ist ein stilles NaN. Wenn *x* ist gleich 1 oder-1 ist, eine positiv oder negativ unendlich wird ausgegeben, und **Errno** festgelegt ist, um **ERANGE**.
+Die **Atanh** Funktionen geben den umgekehrten hyperbolischen Tangens (hyperbolischen Arcustangens) *x*. Wenn *x* ist größer als 1 oder kleiner als -1, **Errno** nastaven NA hodnotu **EDOM** und das Ergebnis ist ein stilles NaN. Wenn *x* ist gleich 1 oder-1 ist, eine positive oder negative Unendlichkeit zurückgegeben wird, bzw. und **Errno** nastaven NA hodnotu **ERANGE**.
 
 |Eingabe|SEH-Ausnahme|**Matherr** Ausnahme|
 |-----------|-------------------|-------------------------|
 |± QNAN,IND|Keine|Keine|
-|*X* ≥ 1; *x* ≤-1|Keine|Keine|
+|*X* ≥ 1 *x* ≤-1|Keine|Keine|
 
 ## <a name="remarks"></a>Hinweise
 

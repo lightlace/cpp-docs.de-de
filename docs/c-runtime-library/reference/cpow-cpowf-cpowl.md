@@ -1,11 +1,6 @@
 ---
-title: cpow, cpowf, cpowl | Microsoft-Dokumentation
-ms.custom: ''
+title: cpow, cpowf, cpowl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cpow
 - cpowf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/cpow
 - complex/cpowf
 - complex/copwl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cpow function
 - cpowf function
 - complex/cpowl function
 ms.assetid: 83fe2187-22b7-4295-ab16-4d77abdbb80b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8311b4c8bd8c082b03f01a2df253c55d170c560e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 588c437a01237de297e1db31fb2c507eb1145d90
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394781"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562486"
 ---
 # <a name="cpow-cpowf-cpowl"></a>cpow, cpowf, cpowl
 
@@ -82,7 +71,7 @@ Der Exponent
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Wert der *x* potenziert mit der *y* mit einer Verzweigung für Ausschneiden *x* entlang der negativen real.
+Der Wert des *x* potenziert mit der *y* mit einem Achsenabschnitt für *x* entlang der negativen reellen Achse.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -90,7 +79,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Cpow** 
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|C-Header|C++-Header|
+|-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
 |**Cpow**, **Cpowf**, **Cpowl**|\<complex.h>|\<ccomplex>|
 

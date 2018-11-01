@@ -1,10 +1,6 @@
 ---
-title: vsscanf_s, vswscanf_s | Microsoft-Dokumentation
-ms.custom: ''
+title: vsscanf_s, vswscanf_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - vswscanf_s
 - vsscanf_s
@@ -24,19 +20,13 @@ f1_keywords:
 - vsscanf_s
 - vswscanf_s
 - _vstscanf_s
-dev_langs:
-- C++
 ms.assetid: 7b732e68-c6f4-4579-8917-122f5a7876e1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dbcf6d0a8b54cc08242d613b24c415ac1ef05fd3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3106e3533f5bb65334f8a4f3d38f55d886faef4c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417102"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477167"
 ---
 # <a name="vsscanfs-vswscanfs"></a>vsscanf_s, vswscanf_s
 
@@ -70,26 +60,26 @@ Variablenargumentenliste.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt die Anzahl der Felder zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Der Rückgabewert ist **EOF** für einen Fehler oder das Ende der Zeichenfolge vor der ersten Konvertierung erreicht wird.
+Jede dieser Funktionen gibt die Anzahl der Felder zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Der Rückgabewert ist **EOF** für einen Fehler oder am Ende der Zeichenfolge vor der ersten Konvertierung erreicht wird.
 
-Wenn *Puffer* oder *Format* ist ein **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen – 1 zurück und legen Sie **Errno** auf **EINVAL**.
+Wenn *Puffer* oder *Format* ist eine **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**.
 
 Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr (errno, _doserrno, _sys_errlist und _sys_nerr)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Vsscanf_s** -Funktion liest Daten von *Puffer* in die Speicherorte, die sich von jedem Argument in der *Arglist* Argumentliste. Die Argumente in der Argumentliste geben Zeiger zu den Variablen, die einen Typ aufweisen, der einem Typspezifizierer in entspricht *Format*. Im Gegensatz zu den weniger sicheren Version **Vsscanf**, ein puffergrößenparameter erforderlich ist, bei der Verwendung der typfeldzeichen **c**, **C**, **s**, **S**, oder legt ihn fest-Zeichenfolge-Steuerelement, die in Klammern stehen **[]**. Nach jedem Pufferparameter, der dies erfordert, muss die Puffergröße in Zeichen als zusätzlicher Parameter angegeben werden.
+Die **Vsscanf_s** -Funktion liest Daten aus *Puffer* in die Speicherorte, die von jedem Argument im erhalten die *Arglist* Argumentliste. Die Argumente in der Argumentliste geben Zeiger zu den Variablen, die einen Typ aufweisen, der einem Typspezifizierer in entspricht *Format*. Im Gegensatz zu den weniger sicheren Version **Vsscanf**, ein puffergrößenparameter ist erforderlich, bei der Verwendung der typfeldzeichen **c**, **C**, **s**, **S**, oder legt ihn fest-Zeichenfolge-Steuerelement, die in eingeschlossen sind **[]**. Nach jedem Pufferparameter, der dies erfordert, muss die Puffergröße in Zeichen als zusätzlicher Parameter angegeben werden.
 
 Die Puffergröße enthält das abschließende NULL-Zeichen. Ein Feld für die Breitenangabe muss verwendet werden, um sicherzustellen, dass das eingelesene Token in den Puffer passt. Wenn kein Feld für die Breiteangabe verwendet wird und das eingelesen Token zu groß für den Puffer ist, wird nichts in diesen Puffer geschrieben.
 
 Weitere Informationen finden Sie unter [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) und [scanf-Typenfeldzeichen](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> Der Größenparameter ist vom Typ **ohne Vorzeichen**, nicht **Size_t**.
+> Size-Parameter ist vom Typ **ohne Vorzeichen**, nicht **"size_t"**.
 
-Die *Format* -Argument steuert die Interpretation der Eingabefelder und hat die gleiche form und Funktion wie die *Format* Argument für die **Scanf_s** Funktion. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
+Die *Format* -Argument steuert die Interpretation der Eingabefelder und hat die gleiche form und Funktion wie der *Format* Argument für die **Scanf_s** Funktion. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
 
-**Vswscanf_s** ist eine Breitzeichen-Version von **Vsscanf_s**; die Argumente für **Vswscanf_s** sind Zeichenfolgen mit Breitzeichen. **Vsscanf_s** verarbeitet keine multibyte-Hexadezimalzeichen. **Vswscanf_s** verarbeitet keine Unicode Hexadezimalzeichen in voller Breite oder "Kompatibilität Zone" Zeichen. Andernfalls **Vswscanf_s** und **Vsscanf_s** Verhalten sich identisch.
+**Vswscanf_s** ist eine Breitzeichen-Version von **Vsscanf_s**; die Argumente für **Vswscanf_s** sind Breitzeichen Zeichenfolgen. **Vsscanf_s** verarbeitet keine multibyte-Hexadezimalzeichen. **Vswscanf_s** verarbeitet keine Unicode-voller Breite Hexadezimal- oder im "Kompatibilität der Zone" Zeichen. Andernfalls **Vswscanf_s** und **Vsscanf_s** Verhalten sich identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -99,7 +89,7 @@ Die *Format* -Argument steuert die Interpretation der Eingabefelder und hat die 
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**vsscanf_s**|\<stdio.h>|
 |**vswscanf_s**|\<stdio.h> oder \<wchar.h>|

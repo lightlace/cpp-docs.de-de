@@ -1,10 +1,6 @@
 ---
-title: _chsize | Microsoft-Dokumentation
-ms.custom: ''
+title: _chsize
 ms.date: 03/29/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _chsize
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _chsize
-dev_langs:
-- C++
 helpviewer_keywords:
 - size
 - _chsize function
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - files [C++], changing size
 - chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eb40d218439ebe308e7d7cf01ab5043a2ebb3b1e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5c60f3aa08a405eb9a83dc6ba8636cd316a32925
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395753"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50600641"
 ---
 # <a name="chsize"></a>_chsize
 
@@ -65,19 +55,19 @@ Neue Länge der Datei in Bytes.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_chsize** gibt den Wert 0 zurück, wenn die Dateigröße erfolgreich geändert wurde. Ein Rückgabewert von – 1 zeigt einen Fehler: **Errno** festgelegt ist, um **EACCES** , wenn die angegebene Datei schreibgeschützt ist oder die angegebene Datei ist gesperrt, Zugriff, zu **EBADF** Wenn die Sicherheitsbeschreibung ist ungültig, **ENOSPC** Wenn kein auf dem Gerät Speicherplatz oder **EINVAL** Wenn *Größe* ist kleiner als 0 (null).
+**_chsize** gibt den Wert 0 zurück, wenn die Dateigröße erfolgreich geändert wurde. Der Rückgabewert 1 gibt an, einen Fehler: **Errno** nastaven NA hodnotu **EACCES** , wenn die angegebene Datei schreibgeschützt ist oder auf die angegebene Datei ist für den Zugriff gesperrt **EBADF** Wenn die der Deskriptor ungültig ist, **ENOSPC** , wenn kein Speicherplatz mehr auf dem Gerät vorhanden ist oder **EINVAL** Wenn *Größe* ist kleiner als 0 (null).
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_chsize** Funktion erweitert oder verkürzt die zugeordnete Datei *fd* auf die Länge, angegeben durch *Größe*. Die Datei muss in einem Modus geöffnet sein, der Schreiben zulässt. Wenn die Datei erweitert wird, werden NULL-Zeichen ('\0') angefügt. Wenn die Datei abgeschnitten wird, gehen alle Daten vom Ende der gekürzten Datei bis zur ursprünglichen Länge der Datei verloren.
+Die **_chsize** -Funktion erweitert oder verkürzt die zugeordnete Datei *fd* der vom angegebenen Länge *Größe*. Die Datei muss in einem Modus geöffnet sein, der Schreiben zulässt. Wenn die Datei erweitert wird, werden NULL-Zeichen ('\0') angefügt. Wenn die Datei abgeschnitten wird, gehen alle Daten vom Ende der gekürzten Datei bis zur ursprünglichen Länge der Datei verloren.
 
-Diese Funktion überprüft ihre Parameter. Wenn *Größe* ist kleiner als 0 (null) oder *fd* ein fehlerhaften Dateideskriptor wird der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
+Diese Funktion überprüft ihre Parameter. Wenn *Größe* ist kleiner als 0 (null) oder *fd* ein fehlerhafter Dateideskriptor, wird der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|Optionaler Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|
 |-------------|---------------------|---------------------|
 |**_chsize**|\<io.h>|\<errno.h>|
 

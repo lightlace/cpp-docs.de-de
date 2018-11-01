@@ -1,12 +1,6 @@
 ---
-title: Empfehlungen für die Wahl einer Auflistungsklasse | Microsoft-Dokumentation
-ms.custom: ''
+title: Empfehlungen für die Auswahl einer Sammlungsklasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - type safety of collection classes [MFC]
 - collection classes [MFC], serialization
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - collection classes [MFC], duplicates allowed
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0bb6338d7a40059da5f4e351dfac0d8d879e8c21
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2c8cb323feb44618909895a4ee536ad3b7832173
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404786"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50446734"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>Empfehlungen für die Auswahl einer Sammlungsklasse
 
@@ -95,11 +85,11 @@ In der folgenden Tabelle, [Merkmale von MFC-Auflistungsklassen](#_core_character
 |`CUIntArray`|Nein|Nein|Ja|Ja 3|
 |`CWordArray`|Nein|Ja|Ja|Ja 3|
 
-1. Um zu serialisieren, müssen Sie explizit aufrufen des Auflistungsobjekts `Serialize` Funktion; Sie müssen explizit aufrufen, zum Sichern der `Dump` Funktion. Sie können nicht die Form `ar << collObj` zum Serialisieren oder die Form `dmp` `<< collObj` zum Sichern verwenden.
+1. Zum Serialisieren müssen Sie explizit die `Serialize`-Funktion des Auflistungsobjekts aufrufen; zum Sichern müssen Sie explizit seine `Dump`-Funktion aufrufen. Sie können nicht die Form `ar << collObj` zum Serialisieren oder die Form `dmp` `<< collObj` zum Sichern verwenden.
 
-2. Serialisierbarkeit hängt vom zugrunde liegenden Auflistungstyp ab. Wenn z. B. ein typisiertes Zeigerarray auf `CObArray`basiert, ist es serialisierbar; auf `CPtrArray`basierend ist es nicht serialisierbar. Im Allgemeinen können die „Ptr“-Klassen nicht serialisiert werden.
+2. Serialisierbarkeit hängt vom zugrunde liegenden Auflistungstyp ab. Wenn z. B. ein typisiertes Zeigerarray auf `CObArray` basiert, ist es serialisierbar; auf `CPtrArray` basierend ist es nicht serialisierbar. Im Allgemeinen können die „Ptr“-Klassen nicht serialisiert werden.
 
-3. Wenn in dieser Spalte „Ja“ markiert ist, ist eine Auflistungsklasse ohne Vorlage typsicher, sofern Sie sie wie vorgesehen verwenden. Wenn Sie z. B. Bytes in einem `CByteArray`speichern, ist das Array typsicher. Aber wenn Sie es zum Speichern von Zeichen verwenden, ist die Typsicherheit nicht so sicher.
+3. Wenn in dieser Spalte „Ja“ markiert ist, ist eine Auflistungsklasse ohne Vorlage typsicher, sofern Sie sie wie vorgesehen verwenden. Wenn Sie z. B. Bytes in einem `CByteArray` speichern, ist das Array typsicher. Aber wenn Sie es zum Speichern von Zeichen verwenden, ist die Typsicherheit nicht so sicher.
 
 ## <a name="see-also"></a>Siehe auch
 

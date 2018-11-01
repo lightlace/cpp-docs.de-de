@@ -1,10 +1,6 @@
 ---
-title: _lrotl, _lrotr | Microsoft-Dokumentation
-ms.custom: ''
+title: _lrotl, _lrotr
 ms.date: 04/04/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lrotl
 - _lrotr
@@ -26,8 +22,6 @@ f1_keywords:
 - lrotl
 - _lrotr
 - _lrotl
-dev_langs:
-- C++
 helpviewer_keywords:
 - lrotl function
 - bits
@@ -37,20 +31,16 @@ helpviewer_keywords:
 - _lrotl function
 - bits, rotating
 ms.assetid: d42f295b-35f9-49d2-9ee4-c66896ffe68e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0182256b06a3f04acbb941d02624e2b512b22a97
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 71ca61676e4551155f9f14e792c5c1cee65ddb7e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400628"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518416"
 ---
 # <a name="lrotl-lrotr"></a>_lrotl, _lrotr
 
-Bits nach links gedreht (**_lrotl**) oder rechts (**_lrotr**).
+Rotiert Bits nach links (**_lrotl**) oder rechts (**_lrotr**).
 
 ## <a name="syntax"></a>Syntax
 
@@ -73,11 +63,11 @@ Beide Funktionen geben den rotierten Wert zurück. Es gibt keine Fehlerrückgabe
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_lrotl** und **_lrotr** Funktionen Drehen *Wert* von *UMSCHALT* Bits. **_lrotl** dreht den Wert nach links, gegen aussagekräftigere Bits. **_lrotr** gegen weniger signifikanten Bits Wert nach rechts gedreht. Beide Funktionen umschließen Bits, die von einem Ende des *value* zum anderen Ende rotieren.
+Die **_lrotl** und **_lrotr** Funktionen Drehen *Wert* von *UMSCHALT* Bits. **_lrotl** rotiert den Wert nach links, auf mehr signifikante Bits. **_lrotr** rotiert den Wert nach rechts, für weniger signifikante Bits. Beide Funktionen umschließen Bits, die von einem Ende des *value* zum anderen Ende rotieren.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_lrotl**, **_lrotr**|\<stdlib.h>|
 

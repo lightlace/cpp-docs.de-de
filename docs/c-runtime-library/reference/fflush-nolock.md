@@ -1,10 +1,6 @@
 ---
-title: _fflush_nolock | Microsoft-Dokumentation
-ms.custom: ''
+title: _fflush_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fflush_nolock
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - fflush_nolock
 - _fflush_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - fflush_nolock function
 - _fflush_nolock function
 - streams, flushing
 - flushing
 ms.assetid: 5e33c4a1-b10c-4001-ad01-210757919291
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 635d0339125483b385a49e8d42cc7c67b2fb92ba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 721098899525df02dc3b3d121cf894f8056fcb98
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395590"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464102"
 ---
 # <a name="fflushnolock"></a>_fflush_nolock
 
@@ -65,7 +55,7 @@ Weitere Informationen finden Sie unter [fflush](fflush.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion ist eine nicht sperrende Version von **Fflush**. Sie ist identisch mit **Fflush** mit dem Unterschied, dass sie nicht vor Störungen durch andere Threads geschützt ist. Sie ist möglicherweise schneller, da sie nicht den Mehraufwand zum Sperren anderer Threads mit sich bringt. Verwenden Sie diese Funktion nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen bereits der aufrufende Bereich die Threadisolation handhabt.
+Diese Funktion ist eine nicht sperrende Version von **Fflush**. Es ist identisch mit **Fflush** mit dem Unterschied, dass sie nicht vor Störungen durch andere Threads geschützt ist. Sie ist möglicherweise schneller, da sie nicht den Mehraufwand zum Sperren anderer Threads mit sich bringt. Verwenden Sie diese Funktion nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen bereits der aufrufende Bereich die Threadisolation handhabt.
 
 ## <a name="requirements"></a>Anforderungen
 

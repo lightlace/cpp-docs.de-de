@@ -1,10 +1,6 @@
 ---
-title: _CrtSetDebugFillThreshold | Microsoft-Dokumentation
-ms.custom: ''
+title: _CrtSetDebugFillThreshold
 ms.date: 03/21/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetDebugFillThreshold
 apilocation:
@@ -22,8 +18,6 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetDebugFillThreshold
 - CrtSetDebugFillThreshold
-dev_langs:
-- C++
 helpviewer_keywords:
 - debug, buffer-filling behavior
 - CrtSetDebugFillThreshold function
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - buffer-filling behavior
 - 0xFD
 ms.assetid: 6cb360e8-56ae-4248-b17f-e28aee3e0ed7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c0980331389a36fa123c6ee64989296f5afec5c8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ebe958ddc1c9a5c372f4ae68336e0dea3144e8b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398658"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602201"
 ---
 # <a name="crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
 
@@ -55,7 +45,7 @@ size_t _CrtSetDebugFillThreshold( size_t newThreshold );
 ### <a name="parameters"></a>Parameter
 
 *newThreshold*<br/>
-Neue Schwellengröße in Byte.
+Neue Schwellenwert-Größe in Bytes.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -63,7 +53,7 @@ Der vorherige Schwellenwert.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Debugversionen der einige CRT-Funktionen mit erweiterter Sicherheit füllen den mit einem Sonderzeichen an Sie übergebenen Puffer (0xFE). Dadurch lassen sich Fälle identifizieren, in denen die falsche Größe an die Funktion übergeben wurde. Allerdings ist dies häufig mit Leistungseinbußen verbunden. Verwenden Sie zum Verbessern der Leistung **_CrtSetDebugFillThreshold** deaktivieren Puffer füllenden für Puffer, die größer als die *NewThreshold* Schwellenwert. Ein *NewThreshold* der Wert 0 für alle Puffer deaktiviert.
+Die Debugversionen einiger CRT-Funktionen mit erhöhter Sicherheit füllen übergebene Puffer mit Sonderzeichen (0xFE). Dadurch lassen sich Fälle identifizieren, in denen die falsche Größe an die Funktion übergeben wurde. Allerdings ist dies häufig mit Leistungseinbußen verbunden. Verwenden Sie zur Verbesserung der Leistung **_CrtSetDebugFillThreshold** deaktivieren Puffer füllenden für Puffer, die größer als die *NewThreshold* Schwellenwert. Ein *NewThreshold* Wert 0 deaktiviert sie für alle Puffer.
 
 Der Standardschwellenwert beträgt **SIZE_T_MAX**.
 
@@ -107,7 +97,7 @@ Nachfolgend finden Sie eine Liste der betroffenen Funktionen:
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_CrtSetDebugFillThreshold**|\<crtdbg.h>|
 
@@ -115,7 +105,7 @@ Diese Funktion ist die Microsoft-spezifisch. Weitere Informationen zur Kompatibi
 
 ## <a name="libraries"></a>Bibliotheken
 
-Debugversionen von der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md) nur.
+Debugversionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md) nur.
 
 ## <a name="example"></a>Beispiel
 

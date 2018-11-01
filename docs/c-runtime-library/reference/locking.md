@@ -1,10 +1,6 @@
 ---
-title: _locking | Microsoft-Dokumentation
-ms.custom: ''
+title: _locking
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _locking
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _locking
-dev_langs:
-- C++
 helpviewer_keywords:
 - locking function
 - bytes [C++], locking file
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1666f631d9bceccb8925b2002b797753e024ab9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1309d99d8e7040626384e38324c1e910e4731295
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404145"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523808"
 ---
 # <a name="locking"></a>_locking
 
@@ -69,20 +59,20 @@ Die Anzahl der zu sperrenden Bytes.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_Locking** gibt bei Erfolg 0 zurück. Ein Rückgabewert-1 gibt Fehler auftritt, in diesem Fall an [Errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) auf einen der folgenden Werte festgelegt.
+**_Locking** gibt bei Erfolg 0 zurück. Der Rückgabewert-1 gibt Fehler an, in diesem Fall [Errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) auf einen der folgenden Werte festgelegt ist.
 
 |errno-Wert|Bedingung|
 |-|-|
 **EACCES**|Sperrverletzung (Datei bereits gesperrt oder entsperrt).
 **EBADF**|Ungültiger Dateideskriptor.
-**EDEADLOCK**|Sperrverletzung. Zurückgegeben, wenn die **_LK_LOCK** oder **_LK_RLCK** Flag angegeben wird und die Datei kann nicht nach 10 Versuchen nicht gesperrt werden.
-**EINVAL**|Ein ungültiges Argument wurde angegeben, um **_locking**.
+**EDEADLOCK**|Sperrverletzung. Zurückgegeben wird, wenn die **_LK_LOCK** oder **_LK_RLCK** Flag angegeben wird und die Datei kann nicht nach 10 Versuchen nicht gesperrt werden.
+**EINVAL**|Ein ungültiges Argument wurde übergeben, um **_locking**.
 
 Wenn der Fehler aufgrund eines ungültigen Parameters entstanden ist, wie z.B. ein ungültiger Dateideskriptor, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_locking** Funktion sperrt oder entsperrt *Anzahl_Byte* Bytes der Datei gemäß *fd*. Das Sperren von Bytes in einer Datei verhindert den Zugriff auf diese Bytes durch andere Prozesse. Alle Sperr- oder Entsperraktionen beginnen an der aktuellen Position des Dateizeigers und laufen für die nächsten *nbytes*-Bytes ab. Es ist möglich, Bytes nach dem Ende der Datei zu sperren.
+Die **_locking** -Funktion sperrt oder entsperrt *Nbytes* Bytes der Datei anhand des *fd*. Das Sperren von Bytes in einer Datei verhindert den Zugriff auf diese Bytes durch andere Prozesse. Alle Sperr- oder Entsperraktionen beginnen an der aktuellen Position des Dateizeigers und laufen für die nächsten *nbytes*-Bytes ab. Es ist möglich, Bytes nach dem Ende der Datei zu sperren.
 
 Der *Modus* muss eine der folgenden Manifestkonstanten sein, die in „Locking.h“ definiert sind.
 
@@ -94,11 +84,11 @@ Der *Modus* muss eine der folgenden Manifestkonstanten sein, die in „Locking.h
 **_LK_RLCK**|Identisch mit **_LK_LOCK**.
 **_LK_UNLCK**|Entsperrt die angegebenen Bytes, die zuvor gesperrt sein mussten.
 
-Mehrere Bereiche einer Datei, die sich nicht überschneiden, können gesperrt werden. Ein Bereich, der entsperrt wird, muss zuvor gesperrt worden sein. **_Locking** nicht zusammenführen, angrenzende Regionen ist; Wenn zwei gesperrte Bereiche nebeneinander angeordnet sind, jede Region muss entsperrt werden separat. Bereichen sollten nur über einen kurzen Zeitraum gesperrt sein und sollten entsperrt werden, bevor eine Datei geschlossen oder das Programm beendet wird.
+Mehrere Bereiche einer Datei, die sich nicht überschneiden, können gesperrt werden. Ein Bereich, der entsperrt wird, muss zuvor gesperrt worden sein. **_Locking** werden benachbarte Bereiche nicht zusammen, wenn zwei gesperrte Bereiche aneinandergrenzen, jeder Region muss separat entsperrt werden. Bereichen sollten nur über einen kurzen Zeitraum gesperrt sein und sollten entsperrt werden, bevor eine Datei geschlossen oder das Programm beendet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|Optionaler Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|
 |-------------|---------------------|---------------------|
 |**_locking**|\<io.h> und \<sys/locking.h>|\<errno.h>|
 
