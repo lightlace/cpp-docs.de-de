@@ -1,10 +1,6 @@
 ---
-title: _umask | Microsoft-Dokumentation
-ms.custom: ''
+title: _umask
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _umask
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _umask
-dev_langs:
-- C++
 helpviewer_keywords:
 - masks, file-permission-setting
 - _umask function
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ce3053bfb19cc81dff15d41d1b5bc6d405da619f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f51e2c19933953eb4910cdeb5e1ec50b7387bd59
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412614"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677161"
 ---
 # <a name="umask"></a>_umask
 
@@ -60,13 +50,13 @@ Standard-Berechtigungseinstellung.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_umask** gibt den vorherigen Wert der *Pmode*. Es gibt keine Fehlerrückgabe.
+**_umask** gibt zurück, den vorherigen Wert der *Pmode*. Es gibt keine Fehlerrückgabe.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_umask** Funktion legt die dateiberechtigungsmaske des aktuellen Prozesses für den Modus gemäß *Pmode*. Die dateiberechtigungsmaske ändert die berechtigungseinstellung neue Dateien erstellt, indem **_creat**, **_open**, oder **_sopen**. Wenn ein Bit in der Maske 1 ist, wird das entsprechende Bit im angeforderten Berechtigungswert der Datei auf 0 (nicht zulässig) festgelegt. Wenn ein Bit in der Maske 0 ist, bleibt das entsprechende Bit unverändert. Die Berechtigungseinstellung für eine neue Datei wird erst festgelegt, wenn die Datei zum ersten Mal geschlossen wird.
+Die **_umask** Funktion setzt die dateiberechtigungsmaske des aktuellen Prozesses auf den vom angegebenen Modus *Pmode*. Die dateiberechtigungsmaske ändert die berechtigungseinstellung neuer Dateien, die von erstellten **_creat**, **_open**, oder **_sopen**. Wenn ein Bit in der Maske 1 ist, wird das entsprechende Bit im angeforderten Berechtigungswert der Datei auf 0 (nicht zulässig) festgelegt. Wenn ein Bit in der Maske 0 ist, bleibt das entsprechende Bit unverändert. Die Berechtigungseinstellung für eine neue Datei wird erst festgelegt, wenn die Datei zum ersten Mal geschlossen wird.
 
-Der Ganzzahlausdruck *Pmode* enthält eine oder beide der folgenden Manifestkonstanten besteht, definiert in SYS\STAT. H
+Der ganzzahlige Ausdruck *Pmode* enthält eine oder beide der folgenden Manifestkonstanten, die in SYS\STAT definiert. H:
 
 |*pmode*||
 |-|-|
@@ -74,13 +64,13 @@ Der Ganzzahlausdruck *Pmode* enthält eine oder beide der folgenden Manifestkons
 **_S_IREAD**|Lesen erlaubt.
 **_S_IREAD** \| **_S_IWRITE**|Lesen und Schreiben erlaubt.
 
-Wenn beide Konstanten gegeben sind, werden sie mit dem bitweisen OR-Operator verknüpft ( **|** ). Wenn die *Pmode* Argument ist **_S_IREAD**, lesen, ist nicht zulässig (die Datei schreibgeschützt ist). Wenn die *Pmode* Argument ist **_S_IWRITE**, schreiben ist nicht zulässig (die Datei ist schreibgeschützt). Wenn z.B. das Schreib-Bit in der Maske festgelegt ist, sind alle neuen Dateien schreibgeschützt. Beachten Sie, dass in MS-DOS und Windows-Betriebssystemen alle Dateien lesbar sind und es nicht möglich ist, nur Schreibberechtigungen zu vergeben. Daher ist das Festlegen des Lesevorgangs bit hat **_umask** hat keine Auswirkung auf die Datei-Modi.
+Wenn beide Konstanten gegeben sind, werden sie mit dem bitweisen OR-Operator verbunden ( **|** ). Wenn die *Pmode* Argument **_S_IREAD**, lesen, ist nicht zulässig (die Datei ist lesegeschützt). Wenn die *Pmode* Argument **_S_IWRITE**, Schreiben nicht zulässig (die Datei ist schreibgeschützt). Wenn z.B. das Schreib-Bit in der Maske festgelegt ist, sind alle neuen Dateien schreibgeschützt. Beachten Sie, dass in MS-DOS und Windows-Betriebssystemen alle Dateien lesbar sind und es nicht möglich ist, nur Schreibberechtigungen zu vergeben. Daher ist das Festlegen der Lesevorgangs-bit mit **_umask** hat keine Auswirkungen auf den Dateimodus.
 
-Wenn *Pmode* ist keine Kombination von einem der Manifestkonstanten oder alternative enthält Konstanten, die die Funktion einfach ignoriert diese.
+Wenn *Pmode* keine Kombination aus einer der Manifestkonstanten ist oder enthält eine Alternative Gruppe von Konstanten, die Funktion einfach ignoriert diese.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_umask**|\<io.h>, \<sys/stat.h>, \<sys/types.h>|
 

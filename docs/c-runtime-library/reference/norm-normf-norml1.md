@@ -1,11 +1,6 @@
 ---
-title: Norm, Normf, Norml | Microsoft Docs
-ms.custom: ''
+title: norm, normf, norml
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - norm
 - normf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/norm
 - complex/normf
 - complex/norml
-dev_langs:
-- C++
 helpviewer_keywords:
 - norm function
 - normf function
 - norml function
 ms.assetid: 9786ecfe-0019-4553-b378-0af6c691e15c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 272f43a7b92c069da8fc4eda64a678ff38efd6ab
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c1803a54f0dfc27975af5bb0eeb7e5c042b2579
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401128"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50628110"
 ---
 # <a name="norm-normf-norml"></a>norm, normf, norml
 
@@ -72,19 +61,19 @@ Eine komplexe Zahl.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Quadriert Maßeinheit *z*.
+Die quadratische Größe *z*.
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Norm** nehmen **_Fcomplex** oder **_Lcomplex** Werte, und der Rückgabewert **"float"** oder **long double** Werte. In einem C-Programm **Norm** immer ein **_Dcomplex** Wert und gibt eine **doppelte** Wert.
+Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Norm** , Take **_Fcomplex** oder **_Lcomplex** Werte und Rückgabe **"float"** oder **long double** Werte. In einem C-Programm **Norm** immer eine **_Dcomplex** Wert und gibt eine **doppelte** Wert.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|C-Header|C++-Header|
+|-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
 |**Norm**, **Normf**, **Norml**|\<complex.h>|\<complex.h>|
 
-Die **_Fcomplex**, **_Dcomplex**, und **_Lcomplex** Typen sind Microsoft-spezifische-Entsprechungen der implementierten native C99 Typen **_Complex float** , **doppelte _Complex**, und **long double _Complex**zugeordnet.  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die **_Fcomplex**, **_Dcomplex**, und **_Lcomplex** Typen sind Microsoft-spezifische Entsprechungen nicht implementierte nativen Typen C99 **float _Complex** , **double _Complex**, und **long double _Complex**bzw.  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Siehe auch
 

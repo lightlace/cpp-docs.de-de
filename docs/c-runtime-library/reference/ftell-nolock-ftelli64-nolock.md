@@ -1,10 +1,6 @@
 ---
-title: _ftell_nolock, _ftelli64_nolock | Microsoft-Dokumentation
-ms.custom: ''
+title: _ftell_nolock, _ftelli64_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ftelli64_nolock
 - _ftell_nolock
@@ -26,8 +22,6 @@ f1_keywords:
 - ftelli64_nolock
 - ftell_nolock
 - _ftell_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - ftelli64_nolock function
 - _ftelli64_nolock function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - ftell_nolock function
 - file pointers [C++], getting current position
 ms.assetid: 84e68b0a-32f8-4c4a-90ad-3f2387685ede
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 15d1001b1f0465273771649404de306153edf920
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 58bfc8c7a8b8e820fdec09d52e24dfcb07f328f8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398451"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580842"
 ---
 # <a name="ftellnolock-ftelli64nolock"></a>_ftell_nolock, _ftelli64_nolock
 
@@ -68,11 +58,11 @@ Ziel der **Datei** Struktur.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Identisch mit **Ftell** und **_ftelli64**. Weitere Informationen finden Sie unter [Ftell _ftelli64](ftell-ftelli64.md).
+Identisch mit **Ftell** und **_ftelli64**. Weitere Informationen finden Sie unter [Ftell, _ftelli64](ftell-ftelli64.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktionen sind nicht sperrende-Versionen **Ftell** und **_ftelli64**zugeordnet. Sie sind identisch mit **Ftell** und **_ftelli64** mit dem Unterschied, dass sie nicht vor Störungen durch andere Threads geschützt werden. Diese Funktionen sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.
+Diese Funktionen sind nicht sperrende Versionen von **Ftell** und **_ftelli64**bzw. Sind sie identisch mit **Ftell** und **_ftelli64** mit dem Unterschied, dass sie nicht vor Störungen durch andere Threads geschützt sind. Diese Funktionen sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.
 
 ## <a name="requirements"></a>Anforderungen
 

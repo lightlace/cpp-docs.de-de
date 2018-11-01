@@ -1,10 +1,6 @@
 ---
-title: getc, getwc | Microsoft-Dokumentation
-ms.custom: ''
+title: getc, getwc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - getwc
 - getc
@@ -26,8 +22,6 @@ f1_keywords:
 - getwc
 - _gettchar
 - getc
-dev_langs:
-- C++
 helpviewer_keywords:
 - characters, reading
 - _gettc function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - getwc function
 - gettc function
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9a4908e8fa3343bb54191fe2494f738ff0edf887
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bbaee79eac6802959a11f7f1ba30eaf590ecf2f6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404330"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664866"
 ---
 # <a name="getc-getwc"></a>getc, getwc
 
@@ -71,7 +61,7 @@ Eingabestream
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das gelesene Zeichen zurück. Zur Angabe eines Lesefehler oder End-of-File-Bedingung **Getc** gibt **EOF**, und **Getwc** gibt **WEOF**. Für **Getc**, verwenden Sie **Ferror** oder **Feof** Fehler- oder dateiendeüberprüfung überprüfen. Wenn *Stream* ist **NULL**, **Getc** und **Getwc** Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parameter Überprüfung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EOF** (oder **WEOF** für **Getwc**), und legen **Errno** auf  **EINVAL**.
+Gibt das gelesene Zeichen zurück. Zum Angeben eines Lesefehlers oder einer End-of-File-Bedingung, **Getc** gibt **EOF**, und **Getwc** gibt **WEOF**. Für **Getc**, verwenden Sie **Ferror** oder **Feof** für einen Fehler oder Dateiende zu überprüfen. Wenn *Stream* ist **NULL**, **Getc** und **Getwc** der Handler für ungültige Parameter aufgerufen, siehe [Parameter Überprüfung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EOF** (oder **WEOF** für **Getwc**) und legen Sie **Errno** zu  **EINVAL**.
 
 Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -83,9 +73,9 @@ Diese Funktionen sperren den aufrufenden Thread und sind daher threadsicher. Ein
 
 Es folgen routinespezifische Hinweise.
 
-|Routine|Hinweise|
+|-Routine zurückgegebener Wert|Hinweise|
 |-------------|-------------|
-|**getc**|Identisch mit **Fgetc**, jedoch implementiert, als eine Funktion und eines Makros.|
+|**getc**|Identisch mit **Fgetc**, jedoch implementiert, wie eine Funktion und Makro.|
 |**getwc**|Breitzeichen Version von **Getc**. Liest ein Multibytezeichen oder Breitzeichen, je nachdem, ob *Stream* im Textmodus oder Binärmodus geöffnet ist.|
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
@@ -96,7 +86,7 @@ Es folgen routinespezifische Hinweise.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**getc**|\<stdio.h>|
 |**getwc**|\<stdio.h> oder \<wchar.h>|
@@ -147,7 +137,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 Input was: Line one.

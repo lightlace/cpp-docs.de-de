@@ -1,10 +1,6 @@
 ---
-title: imaxabs | Microsoft-Dokumentation
-ms.custom: ''
+title: imaxabs
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - imaxabs
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - imaxabs
-dev_langs:
-- C++
 helpviewer_keywords:
 - imaxabs function
 ms.assetid: de2566a3-1415-4e9a-91b5-7ac3a49ebf5e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e9476db108a4296811e1c88e820d12ddd24b1386
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a7492e08c3a078698292923ce395524ab5327ecf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400488"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666247"
 ---
 # <a name="imaxabs"></a>imaxabs
 
@@ -60,11 +50,11 @@ Ganzzahliger Wert.
 Die **Imaxabs** Funktion gibt den absoluten Wert des Arguments zurück. Es gibt keine Fehlerrückgabe.
 
 > [!NOTE]
-> Da der Bereich von negativen ganzen Zahlen, die mit dargestellt werden können **Intmax_t** ist größer als der entsprechende Bereich von positiven ganzen Zahlen, die dargestellt werden können, ist es möglich, geben Sie ein Argument an **Imaxabs** ein nicht konvertierbares, sein. Wenn der Absolute Wert des Arguments nicht durch den Rückgabetyp dargestellt werden kann eingeben, wird das Verhalten des **Imaxabs** ist nicht definiert.
+> Da der Bereich von negativen ganzen Zahlen, die mithilfe von dargestellt werden können **Intmax_t** ist größer als der entsprechende Bereich von positiven ganzen Zahlen, die dargestellt werden können, ist es möglich, ein Argument bereitgestellt **Imaxabs** die kann nicht konvertiert werden. Wenn der Absolute Wert des Arguments nicht durch den Rückgabetyp dargestellt werden kann nicht eingeben, wird das Verhalten der **Imaxabs** ist nicht definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**imaxabs**|\<inttypes.h>|
 
