@@ -1,10 +1,6 @@
 ---
-title: atof, _atof_l, _wtof, _wtof_l | Microsoft-Dokumentation
-ms.custom: ''
+title: atof, _atof_l, _wtof, _wtof_l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wtof_l
 - atof
@@ -36,8 +32,6 @@ f1_keywords:
 - corecrt_wstdlib/_wtof
 - _wtof_l
 - corecrt_wstdlib/_wtof_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tstof function
 - atof_l function
@@ -52,16 +46,12 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d78fe14783200e1e145c39b9b274d9e7e3ddb6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c2ec158ac0b75a861b5b226d33de113d76988cb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396809"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471174"
 ---
 # <a name="atof-atofl-wtof-wtofl"></a>atof, _atof_l, _wtof, _wtof_l
 
@@ -98,7 +88,7 @@ Zu verwendendes Gebietsschema.
 
 Jede Funktion gibt die **doppelte** Wert erzeugt, indem die Eingabezeichen als Zahl interpretiert. Der Rückgabewert ist 0,0, wenn die Eingabe nicht in einen Wert dieses Typs umgewandelt werden kann.
 
-In allen Fällen außerhalb des gültigen Bereichs **Errno** festgelegt ist, um **ERANGE**. Wenn der übergebene Parameter ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** auf **EINVAL** und geben 0 zurück.
+In allen Fällen außerhalb des gültigen Bereichs **Errno** nastaven NA hodnotu **ERANGE**. Wenn der übergebene Parameter ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EINVAL** und gibt 0 zurück.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -106,15 +96,15 @@ Diese Funktionen konvertieren eine Zeichenfolge in einen Gleitkommawert mit dopp
 
 Die Eingabezeichenfolge ist eine Sequenz von Zeichen, die als numerischer Wert des angegebenen Typs interpretiert werden. Die Funktion beendet das Lesen der Eingabezeichenfolge am ersten Zeichen, das nicht als Teil einer Zahl erkannt wird. Möglicherweise ist dies das Zeichen NULL ('\0' oder L'\0'), das am Ende der Zeichenfolge steht.
 
-Die *str* Argument **Atof** und **_wtof** weist folgende Form:
+Die *str* Argument **Atof** und **_wtof** hat folgendes Format:
 
-[*Leerzeichen*] [*Anmeldung*] [*Ziffern*] [__.__ *Ziffern*] [{**e** &#124; **E** } [*Anmeldung*]*Ziffern*]
+[*Leerzeichen*] [*anmelden*] [*Ziffern*] [__.__ *Ziffern*] [{**e** &#124; **E** } [*anmelden*]*Ziffern*]
 
-Ein *Leerzeichen* besteht aus Leerzeichen oder Tabulatorzeichen, die ignoriert werden. *Anmeldung* ist entweder Pluszeichen (+) oder Minuszeichen (-) und *Ziffern* sind eine oder mehrere Dezimalstellen. Wenn keine Ziffern vor dem Dezimaltrennzeichen stehen, muss mindestens eine Ziffer nach dem Dezimaltrennzeichen stehen. Die Dezimalstellen darauf folgt möglicherweise ein Exponent, besteht aus einem einführenden Buchstaben (**e**, oder **E**) und einer optional Zahl mit Vorzeichen decimal.
+Ein *Leerzeichen* besteht aus Leerzeichen oder Tabulatorzeichen, die ignoriert werden; *anmelden* ist entweder Pluszeichen (+) oder Minuszeichen (-) und *Ziffern* sind eine oder mehrere Dezimalstellen. Wenn keine Ziffern vor dem Dezimaltrennzeichen stehen, muss mindestens eine Ziffer nach dem Dezimaltrennzeichen stehen. Die Dezimalstellen folgt möglicherweise ein Exponent, der besteht aus einem einführenden Buchstaben (**e**, oder **E**) und einer optionalen ganzen Dezimalzahl.
 
-Die UCRT Versionen dieser Funktionen unterstützen keine Konvertierung von Fortran-Format (**d** oder **D**) Exponent Buchstaben. Diese nicht-standardmäßige Erweiterung wurde in früheren Versionen der CRT unterstützt. Sie ist möglicherweise eine fehlerhafte Änderung für Ihren Code.
+Die UCRT-Versionen dieser Funktionen unterstützen keine Konvertierung von Fortran-Stil (**d** oder **D**) Buchstaben in Exponenten. Diese nicht-standardmäßige Erweiterung wurde in früheren Versionen der CRT unterstützt. Sie ist möglicherweise eine fehlerhafte Änderung für Ihren Code.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den *Gebietsschema* Parameter übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas.
+Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie verwenden die *Gebietsschema* übergebene Parameter anstelle des aktuellen Gebietsschemas.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -132,7 +122,7 @@ Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, v
 
 ## <a name="example"></a>Beispiel
 
-Dieses Programm zeigt, wie als Zeichenfolgen gespeicherte Zahlen in numerische Werte mit konvertiert werden können die **Atof** und **_atof_l** Funktionen.
+Dieses Programm zeigt, wie als Zeichenfolgen gespeicherte Zahlen in numerische Werte konvertiert werden können die **Atof** und **_atof_l** Funktionen.
 
 ```C
 // crt_atof.c

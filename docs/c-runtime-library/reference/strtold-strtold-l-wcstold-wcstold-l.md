@@ -1,10 +1,6 @@
 ---
-title: strtold, _strtold_l, wcstold, _wcstold_l | Microsoft-Dokumentation
-ms.custom: ''
+title: strtold, _strtold_l, wcstold, _wcstold_l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcstold
 - strtold
@@ -30,19 +26,13 @@ f1_keywords:
 - strtold
 - _strtold_l
 - wcstold
-dev_langs:
-- C++
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1a5018f9245da77fbadb301a8fa45d1f0f7b4117
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fce60775ee1ef6def214e559779004d4de95453c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417076"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484577"
 ---
 # <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold, _strtold_l, wcstold, _wcstold_l
 
@@ -84,15 +74,15 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Strtold** gibt den Wert der Gleitkommazahl als eine **lange** **doppelte**, außer wenn die Darstellung würde einen Überlauf verursachen – in diesem Fall gibt die Funktion +/-**HUGE_VALL**. Das Vorzeichen des **HUGE_VALL** entspricht dem Zeichen des Werts, der nicht dargestellt werden kann. **Strtold** gibt 0 zurück, wenn keine Konvertierung ausgeführt werden kann oder ein Unterlauf auftritt.
+**Strtold** gibt den Wert der Gleitkommazahl als eine **lange** **doppelte**, außer wenn die Darstellung würde einen Überlauf verursachen — in diesem Fall gibt die Funktion +/-zurück**HUGE_VALL**. Das Vorzeichen des **HUGE_VALL** entspricht dem Zeichen des Werts, der nicht dargestellt werden kann. **Strtold** gibt 0 zurück, wenn keine Konvertierung ausgeführt werden kann oder ein Unterlauf auftritt.
 
-**Wcstold** gibt Werte analog zu **Strtold**. Für beide Funktionen **Errno** festgelegt ist, um **ERANGE** Wenn Überlauf oder Unterlauf auftritt und der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
+**Wcstold** gibt Werte analog zu **Strtold**. Für beide Funktionen **Errno** nastaven NA hodnotu **ERANGE** Überlauf oder Unterlauf auftritt und der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
 
 Weitere Informationen zu diesen Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Jede Funktion wandelt die Eingabezeichenfolge *StrSource* zu einem **lange** **doppelte**. Die **Strtold** Funktion beendet das Lesen einer Zeichenfolge *StrSource* am ersten Zeichen, das nicht als Teil einer Zahl erkannt. Dies ist möglicherweise das beendende NULL-Zeichen. Der Breitzeichen Version von **Strtold** ist **Wcstold**; die *StrSource* -Argument ist eine Breitzeichen-Zeichenfolge. Ansonsten verhalten sich diese Funktionen identisch.
+Jede Funktion wandelt die Eingabezeichenfolge *StrSource* zu einem **lange** **doppelte**. Die **Strtold** Funktion stoppt das Lesen der Zeichenfolge *StrSource* mit dem ersten Zeichen, die nicht als Teil einer Zahl erkannt. Dies ist möglicherweise das beendende NULL-Zeichen. Die Breitzeichen-Version des **Strtold** ist **Wcstold**, dessen *StrSource* Argument ist eine Breitzeichen-Zeichenfolge. Ansonsten verhalten sich diese Funktionen identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -101,19 +91,19 @@ Jede Funktion wandelt die Eingabezeichenfolge *StrSource* zu einem **lange** **d
 |**_tcstold**|**strtold**|**strtold**|**wcstold**|
 |**_tcstold_l**|**_strtold_l**|**_strtold_l**|**_wcstold_l**|
 
-Die **LC_NUMERIC** -kategorieneinstellung des aktuellen Gebietsschemas bestimmt das Erkennen des Basiszeichens in *StrSource*. Weitere Informationen finden Sie unter [setlocale, _wsetlocale](setlocale-wsetlocale.md). Die Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebietsschema. **_strtold_l** und **_wcstold_l** sind identisch mit **_strtold** und **_wcstold** , verwenden jedoch stattdessen das Gebietsschema, die übergeben wird. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die **LC_NUMERIC** -kategorieeinstellung des aktuellen Gebietsschemas bestimmt das Erkennen des Basiszeichens in *StrSource*. Weitere Informationen finden Sie unter [setlocale, _wsetlocale](setlocale-wsetlocale.md). Die Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebietsschema. **_strtold_l** und **_wcstold_l** sind identisch mit **_strtold** und **_wcstold** , sie stattdessen das Gebietsschema verwenden, das übergeben. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Wenn *Endptr* nicht **NULL**, ein Zeiger auf das Zeichen, die Überprüfung beendet, wird gespeichert, an dem Speicherort, auf den durch *Endptr*. Wenn keine Konvertierung ausgeführt werden kann (keine gültigen Ziffern gefunden oder ungültige Basis angegeben wurde), den Wert der *StrSource* wird an dem Speicherort gespeichert, auf den durch *Endptr*.
+Wenn *Endptr* nicht **NULL**, ein Zeiger auf das Zeichen, die Überprüfung beendet, wird gespeichert, an dem Speicherort, auf das von *Endptr*. Wenn keine Konvertierung ausgeführt werden kann (keine gültigen Ziffern gefunden oder ungültige Basis angegeben) den Wert der *StrSource* wird an dem Speicherort gespeichert, auf das von *Endptr*.
 
-**Strtold** erwartet *StrSource* , zeigen Sie auf eine Zeichenfolge der folgenden Form:
+**Strtold** erwartet *StrSource* auf eine Zeichenfolge der folgenden Form zeigt:
 
-[*Leerzeichen*] [*Anmeldung*] [*Ziffern*] [. *Ziffern*] [{**d** &#124; **D** &#124; **e** &#124; **E**} [*anmelden* ]*Ziffern*]
+[*Leerzeichen*] [*anmelden*] [*Ziffern*] [. *Ziffern*] [{**d** &#124; **D** &#124; **e** &#124; **E**} [*anmelden* ]*Ziffern*]
 
-Ein *Leerzeichen* besteht möglicherweise aus Leerzeichen und Tabulatorzeichen, die ignoriert werden. *Anmeldung* handelt es sich um plus (**+**) oder Minuszeichen (**-**); und *Ziffern* sind eine oder mehrere Dezimalstellen. Wenn keine Ziffern vor dem Basiszeichen stehen, muss mindestens eine Ziffer nach dem Basiszeichen stehen. Auf die Dezimalstellen kann ein Exponent folgen, der aus einem einführenden Buchstaben (**d**, **D**, **e** oder **E**) und einer ganzen Zahl mit optionalem Vorzeichen besteht. Wenn weder ein Exponententeil noch ein Basiszeichen angezeigt wird, wird davon ausgegangen, dass ein Basiszeichen auf die letzte Ziffer in der Zeichenfolge folgt. Das erste Zeichen, das dieser Form nicht entspricht, beendet die Überprüfung.
+Ein *Leerzeichen* besteht möglicherweise aus Leerzeichen und Tabulatorzeichen, die ignoriert werden; *anmelden* ist entweder plus (**+**) oder ein Minuszeichens (**-**); und *Ziffern* sind eine oder mehrere Dezimalstellen. Wenn keine Ziffern vor dem Basiszeichen stehen, muss mindestens eine Ziffer nach dem Basiszeichen stehen. Auf die Dezimalstellen kann ein Exponent folgen, der aus einem einführenden Buchstaben (**d**, **D**, **e** oder **E**) und einer ganzen Zahl mit optionalem Vorzeichen besteht. Wenn weder ein Exponententeil noch ein Basiszeichen angezeigt wird, wird davon ausgegangen, dass ein Basiszeichen auf die letzte Ziffer in der Zeichenfolge folgt. Das erste Zeichen, das dieser Form nicht entspricht, beendet die Überprüfung.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**Strtold**, **_strtold_l**|\<stdlib.h>|
 |**Wcstold**, **_wcstold_l**|\<stdlib.h> oder \<wchar.h>|
