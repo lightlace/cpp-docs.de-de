@@ -1,35 +1,25 @@
 ---
-title: ATL-Eigenschaftenseiten-Assistent | Microsoft-Dokumentation
-ms.custom: ''
+title: ATL-Eigenschaftenseiten-Assistent
 ms.date: 10/03/2018
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.ppg.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 206fe83407421a7aabfd920214590a86e4727714
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: 9b698616dbde06452e9ab08f37c646a2cedbc37c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250418"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50572769"
 ---
 # <a name="atl-property-page-wizard"></a>ATL-Eigenschaftenseiten-Assistent
 
 Dieser Assistent [ein ATL-Projekt auf einer Eigenschaftenseite fügt](../../atl/reference/adding-an-atl-property-page.md) oder zu einem MFC-Projekt mit ATL-Unterstützung. Eine ATL-Eigenschaftenseite bietet eine Benutzeroberfläche zum Festlegen der Eigenschaften (oder Aufrufen der Methoden) von ein oder mehrere COM-Objekten.
 
 > [!WARNING]
-> Dieser Code-Assistenten ist veraltet und wird in einer zukünftigen Version von Visual Studio entfernt, in Visual Studio 2017 Version 15.9. Dieser Assistent ist nur selten verwendet. Allgemeine Unterstützung für ATL und MFC wird durch das Entfernen dieses Assistenten nicht beeinträchtigt. Wenn Sie uns Ihr Feedback zu dieser Einstellung freigeben möchten, füllen Sie bitte [diese Umfrage](https://www.surveymonkey.com/r/QDWKKCN). Ihr Feedback ist uns wichtig.
+> Ab Version 15.9 von Visual Studio 2017 ist dieser Codeassistent veraltet. Er wird in einer zukünftigen Version von Visual Studio entfernt. Dieser Assistent wird nur selten verwendet. Die Entfernung dieses Assistenten wirkt sich nicht auf die allgemeine Unterstützung für Active Template Library (ATL) und Microsoft Foundation Classes (MFC) aus. In [dieser Umfrage](https://www.surveymonkey.com/r/QDWKKCN) können Sie Ihr Feedback zu dieser Veraltung mitteilen. Ihr Feedback ist uns wichtig.
 
 ## <a name="remarks"></a>Hinweise
 

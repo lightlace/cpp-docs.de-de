@@ -1,35 +1,25 @@
 ---
-title: Fehler und Warnungen der Linkertools | Microsoft Docs
-ms.custom: ''
+title: Fehler und Warnungen der Linkertools
 ms.date: 11/17/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - errors [C++]
 - linker [C++], errors and warnings
 - errors [C++], linker
 ms.assetid: d4b12c0f-4dae-48b2-9b9e-fedf94c94cb0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f279c4e59f8eb7f655ae10f8ea99ec6ed31115ec
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 7fc68641feae286c85d6f8ebec00387cdca1a43c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569955"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50521177"
 ---
 # <a name="linker-tools-errors-and-warnings"></a>Fehler und Warnungen der Linkertools
 
-LINK "," LIB "," DUMPBIN "und" EDITBIN generieren diese Fehler und Warnungen.
+LINK "," LIB "," DUMPBIN "und" EDITBIN diese Fehler und Warnungen zu generieren.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-## <a name="linker-errors"></a>Linkerfehler
+## <a name="linker-errors"></a>Linker-Fehler
 
 [Linkertoolfehler LNK1000](../../error-messages/tool-errors/linker-tools-error-lnk1000.md)
 
@@ -185,7 +175,7 @@ LINK "," LIB "," DUMPBIN "und" EDITBIN generieren diese Fehler und Warnungen.
 
 [Linkertoolwarnung LNK4014](../../error-messages/tool-errors/linker-tools-warning-lnk4014.md)
 
-[Linkertoolwarnung LNK4020](../../error-messages/tool-errors/linker-tools-warning-lnk4020.md)
+[Linkertoolwarnung LNK4020 Warnung](../../error-messages/tool-errors/linker-tools-warning-lnk4020.md)
 
 [Linkertoolwarnung LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md)
 

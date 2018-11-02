@@ -1,32 +1,22 @@
 ---
-title: / PGD (Angeben einer Datenbank für Profilgesteuerte Optimierungen) | Microsoft Docs
-ms.custom: ''
+title: /PGD (Angeben einer Datenbank für die profilgesteuerte Optimierungen)
 ms.date: 03/14/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.ProfileGuidedDatabase
-dev_langs:
-- C++
 helpviewer_keywords:
 - -PGD linker option
 - /PGD linker option
 ms.assetid: 9f312498-493b-461f-886f-92652257e443
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7685f99137a1b599a5f9020fac9e3cae4ba3bc3c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 68d112c0a40289ba62e3fe5c37ae23f8f55f9209
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378443"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601291"
 ---
 # <a name="pgd-specify-database-for-profile-guided-optimizations"></a>/PGD (Angeben einer Datenbank für die profilgesteuerte Optimierungen)
 
-**Die PGD-Option ist veraltet.** Ab Visual Studio 2015 bevorzugen die [/genprofile oder/fastgenprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) Linkeroptionen stattdessen. Diese Option wird verwendet, um den Namen des vom Prozess Profilgesteuerte Optimierung verwendet die PGD-Datei angeben.
+**Die/PGD-Option ist veraltet.** Ab Visual Studio 2015, bevorzugen die [/genprofile oder/fastgenprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) stattdessen Optionen des Linkers. Diese Option wird verwendet, um den Namen der PGD-Datei verwendet wird, durch den Prozess für die profilgesteuerte Optimierung anzugeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,9 +29,9 @@ Gibt den Namen der PGD-Datei, die zum Speichern von Informationen zum ausgeführ
 
 ## <a name="remarks"></a>Hinweise
 
-Bei den veralteten [/LTCG: PGINSTRUMENT](../../build/reference/ltcg-link-time-code-generation.md) mit **/PGD** einen nicht standardmäßigen Namen oder Speicherort für die PGD-Datei angeben. Wenn Sie keinen angeben **/PGD**, der Basisnamen für die PGD-Datei ist der Name der Ausgabedatei (.exe oder .dll) Basis identisch und wird im gleichen Verzeichnis, von dem die Verknüpfung aufgerufen wurde, erstellt.
+Wenn es sich bei den veralteten [/LTCG: PGINSTRUMENT](../../build/reference/ltcg-link-time-code-generation.md) option können Sie **/PGD** einen nicht standardmäßigen Namen oder Speicherort für die PGD-Datei an. Wenn Sie keinen angeben **/PGD**, der Basisnamen für die PGD-Datei ist der Name der Ausgabedatei (.exe oder .dll) Basis identisch und wird im gleichen Verzeichnis aus dem auf der Link aufgerufen wurde erstellt.
 
-Bei den veralteten **/LTCG: PGOPTIMIZE** aktivieren, verwenden Sie die **/PGD** Option aus, um den Namen der PGD-Datei zu verwenden, um das optimierte Image Erstellen angeben. Die *Filename* Argument übereinstimmen, die *Filename* angegebenen **/LTCG: PGINSTRUMENT**.
+Wenn es sich bei den veralteten **/LTCG: PGOPTIMIZE** option können Sie die **/PGD** Option aus, um den Namen der PGD-Datei verwenden Sie zum Erstellen des optimierten Images angeben. Die *Filename* Argument sollte übereinstimmen. die *Filename* angegebenen **/LTCG: PGINSTRUMENT**.
 
 Weitere Informationen finden Sie unter [Profilgesteuerte Optimierung](../../build/reference/profile-guided-optimizations.md).
 

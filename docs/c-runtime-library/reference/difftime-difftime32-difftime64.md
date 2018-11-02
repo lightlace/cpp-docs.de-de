@@ -1,10 +1,6 @@
 ---
-title: difftime, _difftime32, _difftime64 | Microsoft-Dokumentation
-ms.custom: ''
+title: difftime, _difftime32, _difftime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _difftime32
 - difftime
@@ -28,8 +24,6 @@ f1_keywords:
 - difftime64
 - _difftime32
 - difftime32
-dev_langs:
-- C++
 helpviewer_keywords:
 - _difftime32 function
 - difftime function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a972a8f7ee2cc5e97c22afeaa21f86e4b4d6d509
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eefa946f0458f79950b443c0a84272866845df8d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398720"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505949"
 ---
 # <a name="difftime-difftime32-difftime64"></a>difftime, _difftime32, _difftime64
 
@@ -71,21 +61,21 @@ Uhrzeit Anfang.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Difftime** gibt die verstrichene Zeit in Sekunden an, aus *TimeStart* auf *TimeEnd*. Der zurückgegebene Wert ist eine Gleitkommazahl mit doppelter Genauigkeit. Der zurückgegeben Wert ist möglicherweise 0, was auf einen Fehler hindeutet.
+**Difftime** gibt die verstrichene Zeit in Sekunden an, von *TimeStart* zu *TimeEnd*. Der zurückgegebene Wert ist eine Gleitkommazahl mit doppelter Genauigkeit. Der zurückgegeben Wert ist möglicherweise 0, was auf einen Fehler hindeutet.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Difftime** -Funktion berechnet den Unterschied zwischen den zwei angegebenen Time-Werten *TimeStart* und *TimeEnd*.
+Die **Difftime** Funktion berechnet den Unterschied zwischen den beiden angegebenen Zeitwerten *TimeStart* und *TimeEnd*.
 
-Bereitgestellte Zeitwert muss innerhalb des Bereichs von passen **Time_t**. **Time_t** ist ein 64-Bit-Wert. Das Bereichsende wurde vom 18. Januar 2038, 23:59:59 UTC auf den 31. Dezember 3000, 23:59:59 verlegt. Den unteren Bereich der **Time_t** ist nach wie vor Mitternacht, 1. Januar 1970.
+Der angegebene Zeitwert muss innerhalb des Bereichs von passen **Time_t**. **Time_t** ist ein 64-Bit-Wert. Das Bereichsende wurde vom 18. Januar 2038, 23:59:59 UTC auf den 31. Dezember 3000, 23:59:59 verlegt. Der untere Bereich von **Time_t** ist nach wie vor Mitternacht, 1. Januar 1970.
 
-**Difftime** ist eine Inlinefunktion, die entweder ergibt **_difftime32** oder **_difftime64** je nachdem, ob **_USE_32BIT_TIME_T** definiert ist. _difftime32 und _difftime64 können direkt verwendet werden, um die Verwendung einer bestimmten Größe des time-Typs zu erzwingen.
+**Difftime** ist eine Inlinefunktion, die ausgewertet wird **_difftime32** oder **_difftime64** je nachdem, ob **_USE_32BIT_TIME_T** definiert ist. _difftime32 und _difftime64 können direkt verwendet werden, um die Verwendung einer bestimmten Größe des time-Typs zu erzwingen.
 
-Diese Funktionen überprüfen ihre Parameter. Wenn einer der Parameter Null oder negativ ist, wird der Handler für ungültige Parameter aufgerufen, wie unter [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen 0 zurück und legen Sie **Errno** auf **EINVAL**.
+Diese Funktionen überprüfen ihre Parameter. Wenn einer der Parameter Null oder negativ ist, wird der Handler für ungültige Parameter aufgerufen, wie unter [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen 0 zurück und legen Sie **Errno** zu **EINVAL**.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**difftime**|\<time.h>|
 |**_difftime32**|\<time.h>|
