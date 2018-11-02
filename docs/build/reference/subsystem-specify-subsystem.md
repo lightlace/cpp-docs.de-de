@@ -1,32 +1,22 @@
 ---
-title: -SUBSYSTEM (Subsystem angeben) | Microsoft-Dokumentation
-ms.custom: ''
+title: /SUBSYSTEM (Subsystem angeben)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /subsystem
 - VC.Project.VCLinkerTool.SubSystem
 - VC.Project.VCLinkerTool.SubSystemVersion
-dev_langs:
-- C++
 helpviewer_keywords:
 - /SUBSYSTEM linker option
 - SUBSYSTEM linker option
 - -SUBSYSTEM linker option
 - subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 75e4612104fdc57fd1442f1a35efbf317a60310d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3d808f86a9ea3b34da0dccae18ecc000ca364f0a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717092"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518390"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (Subsystem angeben)
 
@@ -43,7 +33,7 @@ ms.locfileid: "45717092"
 Eine in der Windows-Startumgebung ausgeführte Anwendung. Weitere Informationen zu startanwendungen finden Sie unter [Informationen zu BCD](/previous-versions/windows/desktop/bcd/about-bcd).
 
 **VERWALTUNGSKONSOLE**<br/>
-Win32-Zeichenmodusanwendung. Im Betriebssystem wird eine Konsole für Konsolenanwendungen zur Verfügung gestellt. Wenn `main` oder `wmain` für systemeigenen Code definiert ist, ist `int main(array<String ^> ^)` für verwalteten Code definiert. Sie können die Anwendung auch nur mithilfe von `/clr:safe` erstellen. CONSOLE ist der Standardwert.
+Win32-Zeichenmodusanwendung. Im Betriebssystem wird eine Konsole für Konsolenanwendungen zur Verfügung gestellt. Wenn `main` oder `wmain` für nativen Code definiert ist, ist `int main(array<String ^> ^)` für verwalteten Code definiert. Sie können die Anwendung auch nur mithilfe von `/clr:safe` erstellen. CONSOLE ist der Standardwert.
 
 **EFI_APPLICATION**<br/>
 **EFI_BOOT_SERVICE_DRIVER**<br/>
@@ -58,7 +48,7 @@ Kernelmodustreiber für Windows NT. Diese Option ist üblicherweise für Windows
 Anwendung, die mit dem POSIX-Subsystem unter Windows NT ausgeführt wird.
 
 **WINDOWS**<br/>
-Für die Anwendung ist keine Konsole erforderlich, wahrscheinlich da für die Interaktion mit dem Benutzer eigene Fenster erstellt werden. Wenn `WinMain` oder `wWinMain` für systemeigenen Code definiert ist oder `WinMain(HISTANCE *, HINSTANCE *, char *, int)` oder `wWinMain(HINSTANCE *, HINSTANCE *, wchar_t *, int)` für verwalteten Code definiert ist, ist WINDOWS der Standardwert.
+Für die Anwendung ist keine Konsole erforderlich, wahrscheinlich da für die Interaktion mit dem Benutzer eigene Fenster erstellt werden. Wenn `WinMain` oder `wWinMain` für nativen Code definiert ist oder `WinMain(HISTANCE *, HINSTANCE *, char *, int)` oder `wWinMain(HINSTANCE *, HINSTANCE *, wchar_t *, int)` für verwalteten Code definiert ist, ist WINDOWS der Standardwert.
 
 *wichtige* und *kleinere*<br/>
 (Optional) Geben Sie die erforderliche Mindestversion des Subsystems an. Die Argumente sind Dezimalzahlen im Bereich 0 bis 65.535. Weitere Informationen finden Sie in den Hinweisen. Für die Versionsnummern sind keine Obergrenzen festgelegt.

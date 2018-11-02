@@ -1,10 +1,6 @@
 ---
-title: _getcwd, _wgetcwd | Microsoft-Dokumentation
-ms.custom: ''
+title: _getcwd, _wgetcwd
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wgetcwd
 - _getcwd
@@ -28,8 +24,6 @@ f1_keywords:
 - _wgetcwd
 - tgetcwd
 - _tgetcwd
-dev_langs:
-- C++
 helpviewer_keywords:
 - getcwd function
 - working directory
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 10f242569579680c8e388b84bdcaca235a142a34
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4c533f0e716cb9a13c152b9be3c46f60291118d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405288"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50520237"
 ---
 # <a name="getcwd-wgetcwd"></a>_getcwd, _wgetcwd
 
@@ -73,21 +63,21 @@ wchar_t *_wgetcwd(
 Speicherort für den Pfad.
 
 *maxlen*<br/>
-Maximale Länge des Pfads in Zeichen: **Char** für **_getcwd** und **Wchar_t** für **_wgetcwd**.
+Maximale Länge des Pfads in Zeichen: **Char** für **_getcwd** und **"wchar_t"** für **_wgetcwd**.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf *Puffer*. Ein **NULL** -Rückgabewert zeigt einen Fehler und **Errno** entweder auf festgelegt ist **ENOMEM**, gibt an, dass nicht genügend Arbeitsspeicher zuweisen *Maxlen* Bytes (Wenn eine **NULL** Argument erhält als *Puffer*), oder auf **ERANGE**, der angibt, dass der Pfad länger als *Maxlen*  Zeichen. Wenn *Maxlen* ist kleiner als oder gleich 0 ist, ruft diese Funktion einen Handler für ungültige Parameter wie beschrieben in [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
+Gibt einen Zeiger auf *Puffer*. Ein **NULL** Rückgabewert gibt einen Fehler an und **Errno** entweder auf festgelegt ist **ENOMEM**, gibt an, dass nicht genügend Arbeitsspeicher zuordnen *Maxlen* Bytes (Wenn eine **NULL** Argument erhält als *Puffer*), oder **ERANGE**, der angibt, dass der Pfad länger als *Maxlen*  Zeichen. Wenn *Maxlen* ist kleiner als oder gleich 0 (null), ruft diese Funktion einen Handler für ungültige Parameter wie beschrieben in [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_getcwd** Funktion ruft Sie für das Standardlaufwerk den vollständigen Pfad des aktuellen Arbeitsverzeichnisses ab und speichert ihn unter *Puffer*. Das ganzzahlige Argument *Maxlen* gibt die maximale Länge für den Pfad. Ein Fehler auftritt, wenn die Länge des Pfads (einschließlich das abschließende Nullzeichen) überschreitet *Maxlen*. Die *Puffer* Argument kann **NULL**; einen Puffer Mindestgröße *Maxlen* (mehr nur bei Bedarf) wird automatisch zugeordnet und mit **"malloc"**, zum Speichern des Pfades. Dieser Puffer kann später geleert werden, durch den Aufruf **freien** und zur Übergabe an die **_getcwd** -Rückgabewert (ein Zeiger auf den zugeordneten Puffer).
+Die **_getcwd** Funktion ruft den vollständigen Pfad des aktuellen Arbeitsverzeichnisses für das Standardlaufwerk ab und speichert ihn unter *Puffer*. Das ganzzahlige Argument *Maxlen* gibt die maximale Länge für den Pfad. Ein Fehler auftritt, wenn die Länge des Pfads (einschließlich des abschließenden Zeichens Null) überschreitet *Maxlen*. Die *Puffer* -Argument kann es sich **NULL**; einen Puffer mit mindestens der Größe *Maxlen* (mehr nur bei Bedarf) wird automatisch zugeordnet und mit **Malloc**, um den Pfad zu speichern. Dieser Puffer kann später geleert werden, durch den Aufruf **kostenlose** und an Sie übergeben die **_getcwd** Rückgabewert (einen Zeiger auf den zugeordneten Puffer).
 
 **_getcwd** gibt eine Zeichenfolge, die den Pfad des aktuellen Arbeitsverzeichnisses repräsentiert. Wenn das aktuelle Arbeitsverzeichnis das Stammverzeichnis ist, endet die Zeichenfolge mit einem umgekehrten Schrägstrich ( **\\** ). Wenn das aktuelle Arbeitsverzeichnis nicht das Stammverzeichnis ist, endet die Zeichenfolge mit dem Verzeichnisnamen und nicht mit einem umgekehrten Schrägstrich.
 
-**_wgetcwd** ist eine Breitzeichen-Version von **_getcwd**; das *Puffer* Argument- und Rückgabetypen Wert **_wgetcwd** sind Zeichenfolgen mit Breitzeichen. **_wgetcwd** und **_getcwd** Verhalten sich andernfalls identisch.
+**_wgetcwd** ist eine Breitzeichen-Version von **_getcwd**; die *Puffer* Argument- und Rückgabetypen Wert **_wgetcwd** sind Breitzeichen Zeichenfolgen. **_wgetcwd** und **_getcwd** Verhalten sich andernfalls identisch.
 
 Wenn **_DEBUG** und **_CRTDBG_MAP_ALLOC** definiert sind, werden Aufrufe von **_getcwd** und **_wgetcwd** werden durch Aufrufe von ersetzt **_ Getcwd_dbg** und **_wgetcwd_dbg** zum Debuggen von speicherbelegungen zuzulassen. Weitere Informationen finden Sie unter [_getcwd_dbg, _wgetcwd_dbg](getcwd-dbg-wgetcwd-dbg.md).
 
@@ -99,7 +89,7 @@ Wenn **_DEBUG** und **_CRTDBG_MAP_ALLOC** definiert sind, werden Aufrufe von **_
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_getcwd**|\<direct.h>|
 |**_wgetcwd**|\<direct.h> oder \<wchar.h>|
