@@ -1,10 +1,6 @@
 ---
-title: fsetpos | Microsoft-Dokumentation
-ms.custom: ''
+title: fsetpos
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fsetpos
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fsetpos
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, setting position indicators
 - fsetpos function
 ms.assetid: 6d19ff48-1a2b-47b3-9f23-ed0a47b5a46e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c381cf478a97d47efe10c68096fffe3d9fd8efdf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9854c71e381da6ec9a75d440b9588e2476bada7c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399308"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528231"
 ---
 # <a name="fsetpos"></a>fsetpos
 
@@ -62,13 +52,13 @@ Speicher des Positionsindikators
 
 ## <a name="return-value"></a>Rückgabewert
 
-Im Erfolgsfall **Fsetpos** gibt 0 zurück. Bei einem Fehler, die Funktion gibt einen Wert ungleich NULL zurück und legt **Errno** auf einen der folgenden Manifestkonstanten (definiert in ERRNO. H): **EBADF**, d. h. die Datei kann nicht zugegriffen werden oder das Objekt, *Stream* verweist, ist keine gültige Dateistruktur; oder **EINVAL**, was bedeutet, dass einen ungültigen Wert für *Stream* oder *pos* übergeben wurde. Wenn ein ungültiger Parameter übergeben wird, rufen diese Funktionen den Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben wird.
+Im Erfolgsfall **Fsetpos** gibt 0 zurück. Bei einem Fehler, die Funktion gibt einen Wert ungleich NULL zurück und legt **Errno** auf eine der folgenden Manifestkonstanten, die (definiert in ERRNO. H): **EBADF**, was bedeutet die Datei kann nicht zugegriffen werden oder das Objekt, das *Stream* verweist, ist keine gültige Dateistruktur hat; oder **EINVAL**, was bedeutet, dass einen ungültigen Wert für *Stream* oder *pos* übergeben wurde. Wenn ein ungültiger Parameter übergeben wird, rufen diese Funktionen den Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben wird.
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Fsetpos** Funktion legt der dateipositionszeiger für *Stream* auf den Wert der *pos*, erhalten Sie in einem vorherigen Aufruf für **Fgetpos**gegen *Stream*. Die Funktion löscht den Dateiende-Indikator und macht alle mit dem [Ungetc](ungetc-ungetwc.md) auf *Stream*. Nach dem Aufruf **Fsetpos**, auf den nächsten Vorgang *Stream* werden möglicherweise entweder Eingabe oder Ausgabe.
+Die **Fsetpos** Funktion legt den dateipositionszeiger für *Stream* auf den Wert der *pos*, erhalten Sie in einem vorherigen Aufruf von **Fgetpos**für *Stream*. Die Funktion löscht den Dateiende-Indikator und macht alle Effekte von [Ungetc](ungetc-ungetwc.md) auf *Stream*. Nach dem Aufruf **Fsetpos**, der nächste Vorgang *Stream* unter Umständen werden entweder eine Eingabe oder Ausgabe.
 
 ## <a name="requirements"></a>Anforderungen
 

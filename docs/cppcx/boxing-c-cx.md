@@ -1,24 +1,17 @@
 ---
-title: Boxing (C++ / CX) | Microsoft-Dokumentation
-ms.custom: ''
+title: Boxing (C++/CX)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: edfb12fa-2a9b-42f6-bdac-d4d76cb8274e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e9ab84bf840f01fbb22ef3b2510056338d10c74
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: dd950e2463da7541ebad731e74275ce360a1c8a4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108376"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491038"
 ---
 # <a name="boxing-ccx"></a>Boxing (C++/CX)
 
-*Boxing* wird eine Werttypvariable wie z. B. wrapping [Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)– oder ein grundlegender Skalartyp wie z. B. `int`– in einer Verweisklasse, wenn die Variable an eine Methode übergeben wird, die akzeptiert [ Platform:: Object ^](../cppcx/platform-object-class.md) als Eingabetyp.
+Beim*Boxing* wird eine Werttypvariable wie [Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)– oder ein grundlegender Skalartyp wie `int`– innerhalb einer Verweisklasse umgebrochen, wenn die Variable an eine Methode übergeben wird, die [Platform::Object^](../cppcx/platform-object-class.md) als Eingabetyp akzeptiert.
 
 ## <a name="passing-a-value-type-to-an-object-parameter"></a>Übergeben eines Werttyps an einen Object^-Parameter
 

@@ -1,10 +1,6 @@
 ---
-title: _execl, _wexecl | Microsoft-Dokumentation
-ms.custom: ''
+title: _execl, _wexecl
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execl
 - _wexecl
@@ -25,24 +21,18 @@ f1_keywords:
 - _execl
 - _wexecl
 - wexecl
-dev_langs:
-- C++
 helpviewer_keywords:
 - _execl function
 - wexecl function
 - _wexecl function
 - execl function
 ms.assetid: 81fefb8a-0a06-4221-b2bc-be18e38e89f4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 32ec50c83a29f3c517955979c2df0de5203dc9a0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3d736849f90782425e6e1c1cff04536972318c91
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398502"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530307"
 ---
 # <a name="execl-wexecl"></a>_execl, _wexecl
 
@@ -78,7 +68,7 @@ Liste von Zeigern zu den Parametern.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg kehren diese Funktionen nicht zum aufrufenden Prozess zurück. Ein Rückgabewert "-1" gibt einen Fehler an, in diesem Fall die **Errno** (globale Variable) festgelegt ist.
+Bei Erfolg kehren diese Funktionen nicht zum aufrufenden Prozess zurück. Ein Rückgabewert 1 gibt einen Fehler, in diesem Fall die **Errno** globale Variable festgelegt ist.
 
 |errno-Wert|Beschreibung|
 |-----------------|-----------------|
@@ -94,7 +84,7 @@ Bei Erfolg kehren diese Funktionen nicht zum aufrufenden Prozess zurück. Ein R�
 
 Jede dieser Funktionen lädt einen neuen Prozess und führt ihn aus. Jedes Befehlszeilenargument wird dabei als separater Parameter übergeben. Das erste Argument ist der Name des Befehls oder der ausführbaren Datei. Das zweite Argument muss das gleiche wie das erste sein. Es wird im ausgeführten Prozess zu `argv[0]`. Das dritte Argument `argv[1]` ist das erste Argument des ausgeführten Prozesses.
 
-Die **_execl** Funktionen überprüfen ihre Parameter. Wenn entweder *Cmdname* oder *arg0* ist ein null-Zeiger oder eine leere Zeichenfolge ist, rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md) Wenn Ausführung wird zugelassen, diese Funktionen **Errno** auf **EINVAL** und geben-1 zurück. Es wird kein neuer Prozess ausgeführt.
+Die **_execl** Funktionen überprüfen ihre Parameter. Wenn entweder *Cmdname* oder *arg0* ist ein null-Zeiger oder leere Zeichenfolge ist, rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md) Wenn Ausführung um den Vorgang fortzusetzen, legen diese Funktionen kann **Errno** zu **EINVAL** und geben-1 zurück. Es wird kein neuer Prozess ausgeführt.
 
 ## <a name="requirements"></a>Anforderungen
 

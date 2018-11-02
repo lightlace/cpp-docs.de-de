@@ -1,10 +1,6 @@
 ---
-title: fputs, fputws | Microsoft-Dokumentation
-ms.custom: ''
+title: fputs, fputws
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fputs
 - fputws
@@ -25,8 +21,6 @@ f1_keywords:
 - fputs
 - fputws
 - _fputts
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, writing strings to
 - fputws function
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - fputs function
 - fputts function
 ms.assetid: d48c82b8-aa17-4830-8c7d-30442ddbb326
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 94a8a872d88d42b2e76c5171b1adb22900b66436
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f7c7cff3300ae28717062a41aebd9e19c0cb5e0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400176"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50574849"
 ---
 # <a name="fputs-fputws"></a>fputs, fputws
 
@@ -72,15 +62,15 @@ Zeiger auf die **FILE**-Struktur.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt bei Erfolg einen nicht negativen Wert zurück. Bei einem Fehler **Fputs** und **Fputws** zurückgeben **EOF**. Wenn *str* oder *Stream* ist ein null-Zeiger, rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** auf **EINVAL** und dann **Fputs** gibt **EOF**, und  **Fputws** gibt **WEOF**.
+Jede dieser Funktionen gibt bei Erfolg einen nicht negativen Wert zurück. Bei einem Fehler **Fputs** und **Fputws** zurückgeben **EOF**. Wenn *str* oder *Stream* ist ein null-Zeiger rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EINVAL** und dann **Fputs** gibt **EOF**, und  **Fputws** gibt **WEOF**.
 
 Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Funktionen kopiert *str* an die Ausgabe *Stream* an der aktuellen Position. **Fputws** kopiert das breitzeichenargument *str* auf *Stream* als Multibyte Zeichenfolge oder eine Breitzeichen-Zeichenfolge, je nachdem, ob *Stream*wird im Textmodus oder Binärmodus geöffnet. Keine der Funktionen kopiert das am Ende stehende NULL-Zeichen.
+Jede dieser Funktionen kopiert *str* an die Ausgabe *Stream* an der aktuellen Position. **Fputws** kopiert das breitzeichenargument *str* zu *Stream* als eine Multibyte Zeichenfolge oder eine Zeichenfolge mit Breitzeichen je nachdem, ob *Stream*bzw. im Textmodus oder Binärmodus geöffnet ist. Keine der Funktionen kopiert das am Ende stehende NULL-Zeichen.
 
-Die zwei Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Fputs** unterstützt derzeit keine Ausgabe in einen Unicode-Stream.
+Die zwei Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Fputs** unterstützt derzeit keine Ausgabe in eine UNICODE-Stream.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -95,7 +85,7 @@ Die zwei Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geö
 |**fputs**|\<stdio.h>|
 |**fputws**|\<stdio.h> oder \<wchar.h>|
 
-Die Konsole wird in apps der universellen Windows-Plattform (UWP) nicht unterstützt. Standardstream Handles, die mit der Konsole verknüpften sind –**Stdin**, **"stdout"**, und **"stderr"**– umgeleitet werden müssen, damit C-Laufzeitfunktionen in uwp-apps verwendet werden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die Konsole wird in apps für universelle Windows-Plattform (UWP) nicht unterstützt. Die mit der Konsole verknüpften standardstreamhandles,**Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in UWP-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 

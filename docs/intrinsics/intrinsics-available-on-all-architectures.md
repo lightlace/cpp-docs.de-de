@@ -1,29 +1,19 @@
 ---
-title: Systeminterne Funktionen verfügbar in allen Architekturen | Microsoft Docs
-ms.custom: ''
+title: Intrinsische Funktionen verfügbar für alle Architekturen
 ms.date: 04/11/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dbe070c2bae69563d65344072a56003f808d1486
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0a1331f53cd8b44c8a7bfc903216cbdbaf5fec1f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340618"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473280"
 ---
-# <a name="intrinsics-available-on-all-architectures"></a>Systeminterne Funktionen verfügbar in allen Architekturen
+# <a name="intrinsics-available-on-all-architectures"></a>Intrinsische Funktionen verfügbar für alle Architekturen
 
-Der Microsoft C/C++-Compiler und die universelle C Runtime Library (UCRT) stellen einige systeminterne Funktionen in allen Architekturen verfügbar.
+Microsoft C/C++-Compiler und der Universal C Runtime Library (UCRT) stellen einige systeminterne Funktionen in allen Architekturen verfügbar.
 
 ## <a name="compiler-intrinsics"></a>Intrinsische Compilerfunktionen
 
@@ -99,7 +89,7 @@ Die folgenden systeminternen Funktionen sind in den x86-, AMD64- und ARM-Archite
 
 ## <a name="ucrt-intrinsics"></a>UCRT systeminterne Funktionen
 
-Die folgenden UCRT Funktionen haben systeminterne Formen in allen Architekturen:
+Die folgenden UCRT-Funktionen haben systeminterne Formen in allen Architekturen:
 
 |Systemintern|Header|
 |---------------|------------|

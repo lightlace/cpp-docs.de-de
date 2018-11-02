@@ -1,11 +1,6 @@
 ---
-title: exp2, exp2f, exp2l | Microsoft-Dokumentation
-ms.custom: ''
+title: exp2, exp2f, exp2l
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - exp2
 - exp2f
@@ -30,27 +25,21 @@ f1_keywords:
 - math/exp2f
 - exp2l
 - math/exp2l
-dev_langs:
-- C++
 helpviewer_keywords:
 - exp2 function
 - exp2f function
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aea847d367200635c8fecbd694f8a50be859b3ea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70a3b7eb610556d4a26de7cf0aad55affcdbdc94
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396721"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562759"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
 
-Berechnet die 2, die ausgelöst wird, auf den angegebenen Wert.
+Wird ausgelöst, auf den angegebenen Wert 2 berechnet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -83,16 +72,16 @@ Der Wert des Exponenten.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg gibt der Exponent zur Basis-2 *x*, d. h. 2<sup>x</sup>. Andernfalls gibt einen der folgenden Werte zurück:
+Wenn erfolgreich, wird die Basis-2-Exponent *x*, d. h. 2<sup>x</sup>. Andernfalls wird eine der folgenden Werte zurückgegeben:
 
 |Problem|Zurück|
 |-----------|------------|
-|*X* = ±0|1|
-|*X* = - UNENDLICH|+0|
+|*X* ±0 =|1|
+|*X* = - INFINITY|+0|
 |*X* = Plus UNENDLICH|+INFINITY|
-|*X* = "NaN"|NaN|
+|*X* = NaN|NaN|
 |Überlaufbereichsfehler|+HUGE_VAL, +HUGE_VALF, oder +HUGE_VALL|
-|Unterlaufbereichsfehler|Korrekte Ergebnis, nach dem runden|
+|Unterlaufbereichsfehler|Korrektes Ergebnis nach dem runden|
 
 Fehler werden gemäß der Angaben in [_matherr](matherr.md) gemeldet.
 
@@ -102,9 +91,9 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **exp2** 
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|C-Header|C++-Header|
+|-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
-|**exp**, **Expf**, **Expl**|\<math.h>|\<cmath>|
+|**"exp"**, **Expf**, **Expl**|\<math.h>|\<cmath>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

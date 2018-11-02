@@ -1,10 +1,6 @@
 ---
-title: _getc_nolock, _getwc_nolock | Microsoft-Dokumentation
-ms.custom: ''
+title: _getc_nolock, _getwc_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getc_nolock
 - _getwc_nolock
@@ -28,8 +24,6 @@ f1_keywords:
 - getwc_nolock
 - gettc_nolock
 - _getwc_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - characters, reading
 - _getc_nolock function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - gettc_nolock function
 - _gettc_nolock function
 ms.assetid: eb37b272-e177-41c9-b077-12ce7ffd3b88
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7c727f43748be8beb327115350923ee3ea9994db
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 82c7e1f44dc3177985560319067f9114964218bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399208"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50465350"
 ---
 # <a name="getcnolock-getwcnolock"></a>_getc_nolock, _getwc_nolock
 
@@ -78,7 +68,7 @@ Siehe [getc, getwc](getc-getwc.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktionen sind identisch mit **Getc** und **Getwc** mit dem Unterschied, dass sie den aufrufenden Thread nicht gesperrte. Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsichere Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.
+Diese Funktionen sind identisch mit **Getc** und **Getwc** mit dem Unterschied, dass sie nicht den aufrufenden Thread sperren. Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsichere Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -88,7 +78,7 @@ Diese Funktionen sind identisch mit **Getc** und **Getwc** mit dem Unterschied, 
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**getc_nolock**|\<stdio.h>|
 |**getwc_nolock**|\<stdio.h> oder \<wchar.h>|
@@ -138,7 +128,7 @@ Line the first.
 Line the second.
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 Input was: Line the first.

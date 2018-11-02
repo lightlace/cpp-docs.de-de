@@ -1,27 +1,17 @@
 ---
-title: Lambdaausdrücke in C++ | Microsoft-Dokumentation
-ms.custom: ''
+title: Lambdaausdrücke in C++
 ms.date: 07/19/2017
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - lambda expressions [C++]
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d7a9915c7ca6b9d2c3f01cea12e2979ef256f904
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 44255df8633ad677587129dd27c0bdc23a616d96
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821178"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493807"
 ---
 # <a name="lambda-expressions-in-c"></a>Lambdaausdrücke in C++
 
@@ -167,7 +157,7 @@ In der Regel ist ein Aufrufoperator einer Lambda Funktion Const-by-Value, aber v
 
 ### <a name="exception-specification"></a>Ausnahmespezifikation
 
-Sie können die `noexcept`-Ausnahmespezifikation verwenden, um anzugeben, dass der Lambda-Ausdruck keine Ausnahmen auslöst. Wie bei normalen Funktionen generiert der Visual C++-Compiler die Warnung [C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md) Wenn ein Lambda-Ausdruck deklariert die `noexcept` Ausnahmespezifikation und der Lambda-Text eine Ausnahme auslöst, wie hier gezeigt:
+Sie können die `noexcept`-Ausnahmespezifikation verwenden, um anzugeben, dass der Lambdaausdruck keine Ausnahmen auslöst. Wie bei normalen Funktionen generiert der Visual C++-Compiler die Warnung [C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md) Wenn ein Lambda-Ausdruck deklariert die `noexcept` Ausnahmespezifikation und der Lambda-Text eine Ausnahme auslöst, wie hier gezeigt:
 
 ```cpp
 // throw_lambda_expression.cpp
@@ -182,7 +172,7 @@ Weitere Informationen finden Sie unter [Ausnahmespezifikationen (Throw)](../cpp/
 
 ### <a name="return-type"></a>Rückgabetyp
 
-Der Rückgabetyp von Lambdaausdrücken wird automatisch hergeleitet. Müssen Sie nicht mit der [automatisch](../cpp/auto-cpp.md) Schlüsselwort, außer Sie geben eine *trailing-Return-Type*. Die *trailing-Return-Type* ähnelt den Rückgabetyp Teil einer normalen Methode oder Funktion. Der Rückgabetyp folgt jedoch auf die Parameterliste, und das Schlüsselwort trailing-return-type `->` muss vor dem Rückgabetyp angegeben werden.
+Der Rückgabetyp von Lambdaausdrücken wird automatisch hergeleitet. Müssen Sie nicht mit der [automatisch](../cpp/auto-cpp.md) Schlüsselwort, außer Sie geben eine *trailing-Return-Type*. Die *trailing-Return-Type* ähnelt den Rückgabetyp Teil einer normalen Methode oder Funktion. Der Rückgabetyp folgt jedoch auf die Parameterliste, und das Schlüsselwort „trailing-return-type `->`“ muss vor dem Rückgabetyp angegeben werden.
 
 Sie können den Rückgabetyp eines Lambda-Ausdrucks weglassen, wenn der Lambda-Text nur eine einzelne Return-Anweisung enthält oder der Lambda-Ausdruck keinen Wert zurückgibt. Wenn der Lambda-Text aus einer einzelnen Rückgabeanweisung besteht, leitet der Compiler den Rückgabetyp vom Typ des Rückgabeausdrucks ab. Andernfalls leitet der Compiler den Rückgabetyp **"void"**. Betrachten Sie die folgenden Beispiele von Codeausschnitten, die dieses Prinzip veranschaulichen.
 
@@ -208,7 +198,7 @@ Der Lambda-Text (*Compound-Statement* in der Standardsyntax) eines Lambda-Ausdru
 
 - Jede beliebige Variable mit statischer Speicherdauer (z. B. globale Variablen)
 
-Das folgende Beispiel enthält einen Lambda-Ausdruck, welcher explizit die Variable `n` nach ihrem Wert erfasst und implizit die Variable `m` als Verweis erfasst:
+Das folgende Beispiel enthält einen Lambdaausdruck, welcher explizit die Variable `n` nach ihrem Wert erfasst und implizit die Variable `m` als Verweis erfasst:
 
 ```cpp
 // captures_lambda_expression.cpp
@@ -230,7 +220,7 @@ int main()
 0
 ```
 
-Da die Variable `n` als Wert erfasst wird, bleibt der Wert `0` nach dem Aufruf des Lambda-Ausdrucks erhalten. Die **änderbare** -Spezifikation ermöglicht `n` innerhalb des Lambda geändert werden.
+Da die Variable `n` als Wert erfasst wird, bleibt der Wert `0` nach dem Aufruf des Lambdaausdrucks erhalten. Die **änderbare** -Spezifikation ermöglicht `n` innerhalb des Lambda geändert werden.
 
 Obwohl ein Lambdaausdruck nur Variablen mit automatischer Speicherdauer aufzeichnen kann, können Sie Variablen verwenden, die eine statische Speicherdauer im Text eines Lambdaausdrucks aufweisen. Im folgenden Beispiel wird die Funktion `generate` und ein Lambda-Ausdruck verwendet, um jedem Element in einem `vector`-Objekt einen Wert zuzuweisen. Der Lambdaausdruck ändert die statische Variable, um den Wert des nächsten Elements zu generieren.
 
@@ -250,7 +240,7 @@ void fillVector(vector<int>& v)
 
 Weitere Informationen finden Sie unter [generieren](../standard-library/algorithm-functions.md#generate).
 
-Das folgende Codebeispiel verwendet die Funktion aus dem vorherigen Beispiel und fügt Sie ein Beispiel für einen Lambda-Ausdruck, den C++-Standardbibliothek-Algorithmus verwendet `generate_n`. Dieser lambda-Ausdruck weist ein Element eines `vector`-Objekts der Summe der vorangehenden zwei Elemente zu. Die **änderbare** -Schlüsselwort wird verwendet, sodass der Text des Lambda-Ausdrucks seine Kopien der externen Variablen ändern kann `x` und `y`, die der Lambda-Ausdruck als Wert erfasst. Da der Lambda-Ausdruck die originalen Variablen `x` und `y` als Wert erfasst, bleiben die Werte `1`, nachdem das Lambda ausgeführt wird.
+Das folgende Codebeispiel verwendet die Funktion aus dem vorherigen Beispiel und fügt Sie ein Beispiel für einen Lambda-Ausdruck, den C++-Standardbibliothek-Algorithmus verwendet `generate_n`. Dieser Lambdaausdruck weist ein Element eines `vector`-Objekts der Summe der vorangehenden zwei Elemente zu. Die **änderbare** -Schlüsselwort wird verwendet, sodass der Text des Lambda-Ausdrucks seine Kopien der externen Variablen ändern kann `x` und `y`, die der Lambda-Ausdruck als Wert erfasst. Da der Lambdaausdruck die originalen Variablen `x` und `y` als Wert erfasst, bleiben die Werte `1`, nachdem das Lambda ausgeführt wird.
 
 ```cpp
 // compile with: /W4 /EHsc

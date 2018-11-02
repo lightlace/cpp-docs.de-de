@@ -1,27 +1,17 @@
 ---
-title: Concurrency Runtime | Microsoft-Dokumentation
-ms.custom: ''
+title: Concurrency Runtime
 ms.date: 07/20/2018
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Concurrency Runtime, getting started
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ac7999919daa7dc028bd8e12e7d98b737afc4e36
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bed1d7680d9bc6615476c7d5d4b700d729026c66
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413808"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495952"
 ---
 # <a name="concurrency-runtime"></a>Concurrency Runtime
 
@@ -108,13 +98,13 @@ Referenzdokumentation finden Sie unter [Verweis](../../parallel/concrt/reference
 
 |||
 |-|-|
-|[Asynchrone Programmierung Muster und Tipps in Hilo (Windows Store-apps mit C++ und XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Erfahren Sie, wie wir die Concurrency Runtime verwendet, um asynchrone Vorgänge in Hilo, einer Windows-Runtime-app, die mit C++ und XAML implementiert.|
-|[Codebeispiele für die Concurrency Runtime und Parallel Pattern Library in Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Bietet Beispielanwendungen und Hilfsprogramme zur Veranschaulichung der Concurrency Runtime.|
-|[Parallele Programmierung in systemeigenem Code (Blog)](http://go.microsoft.com/fwlink/p/?linkid=183873)|Bietet zusätzliche ausführliche Blogartikel zur parallelen Programmierung in der Concurrency Runtime.|
-|[Parallel Computing in C++ und nativem Code-forum](http://go.microsoft.com/fwlink/p/?linkid=183874)|Ermöglicht Ihnen die Teilnahme an Communitydiskussionen über die Concurrency Runtime.|
+|[Muster und Tipps für die asynchrone Programmierung in Hilo (Windows Store-Apps mit C++ und XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Erfahren Sie, wie wir die Concurrency Runtime verwendet, um asynchrone Vorgänge in Hilo, einer Windows-Runtime-app, die mit C++ und XAML implementiert.|
+|[Code samples for the Concurrency Runtime and Parallel Pattern Library in Visual Studio 2010 (Codebeispiele für die Concurency Runtime und Parallel Pattern Library in Visual Studio 2010)](http://go.microsoft.com/fwlink/p/?linkid=183875)|Bietet Beispielanwendungen und Hilfsprogramme zur Veranschaulichung der Concurrency Runtime.|
+|[Parallel Programming in Native Code blog (Blog zum Thema paralleles Programmieren in nativem Code)](http://go.microsoft.com/fwlink/p/?linkid=183873)|Bietet zusätzliche ausführliche Blogartikel zur parallelen Programmierung in der Concurrency Runtime.|
+|[Parallel Computing in C++ and Native Code forum (Forum zum Thema paralleles Computing in C++ und nativem Code)](http://go.microsoft.com/fwlink/p/?linkid=183874)|Ermöglicht Ihnen die Teilnahme an Communitydiskussionen über die Concurrency Runtime.|
 |[Parallele Programmierung](/dotnet/standard/parallel-programming/index)|Erfahren Sie, das parallel-Programmiermodell, das in .NET Framework verfügbar ist.|
 
 ## <a name="see-also"></a>Siehe auch
 
-[Referenz](../../parallel/concrt/reference/reference-concurrency-runtime.md)
+[Verweis](../../parallel/concrt/reference/reference-concurrency-runtime.md)
 

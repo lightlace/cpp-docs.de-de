@@ -1,10 +1,6 @@
 ---
-title: unexpected (CRT) | Microsoft-Dokumentation
-ms.custom: ''
+title: unexpected (CRT)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - unexpected
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - unexpected
-dev_langs:
-- C++
 helpviewer_keywords:
 - unexpected function
 ms.assetid: 2f873763-15ad-4556-a924-dcf28f2b52b4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fd8dc51c41ebf938f59493cbd62fac3e0a491601
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 78538c0a10e183e72c742b041b297275c0859a03
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408106"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534019"
 ---
 # <a name="unexpected-crt"></a>unexpected (CRT)
 
@@ -49,11 +39,11 @@ void unexpected( void );
 
 ## <a name="remarks"></a>Hinweise
 
-Die **unerwarteter** Routine nicht mit der aktuellen Implementierung der C++-Ausnahmebehandlung verwendet wird. **Unerwarteter** Aufrufe **beenden** standardmäßig. Sie können dieses Standardverhalten ändern, indem Sie eine benutzerdefinierte Beendigungsfunktion schreiben und Aufrufen **Set_unexpected** mit dem Namen Ihrer Funktion als Argument. **Unerwarteter** Ruft die letzte Funktion als Argument an **Set_unexpected**.
+Die **unerwartete** Routine ist nicht mit der aktuellen Implementierung von C++-Ausnahmebehandlung verwendet. **Unerwarteter** Aufrufe **beenden** standardmäßig. Sie können dieses Standardverhalten ändern, indem eine benutzerdefinierte Beendigungsfunktion schreiben und Aufrufen **Set_unexpected** mit dem Namen Ihrer Funktion als Argument. **Unerwarteter** Ruft die letzte Funktion, die als Argument an **Set_unexpected**.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**unexpected**|\<eh.h>|
 

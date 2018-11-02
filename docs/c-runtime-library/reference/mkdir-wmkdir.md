@@ -1,10 +1,6 @@
 ---
-title: _mkdir, _wmkdir | Microsoft-Dokumentation
-ms.custom: ''
+title: _mkdir, _wmkdir
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wmkdir
 - _mkdir
@@ -27,8 +23,6 @@ f1_keywords:
 - _tmkdir
 - wmkdir
 - _wmkdir
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wmkdir function
 - folders [C++], creating
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 40641911af9c61285049a5943cdc8f5c21cba99b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d89e1f0930cf9131156a4691069f1f17c15c124
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402139"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496616"
 ---
 # <a name="mkdir-wmkdir"></a>_mkdir, _wmkdir
 
@@ -68,12 +58,12 @@ int _wmkdir(
 
 ### <a name="parameters"></a>Parameter
 
-*Verwendung*<br/>
+*DirName*<br/>
 Der Pfad für ein neues Verzeichnis.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt den Wert 0 zurück, wenn das neue Verzeichnis erstellt wurde. Auf einen Fehler, die Funktion gibt-1 zurück und stellt **Errno** wie folgt.
+Jede dieser Funktionen gibt den Wert 0 zurück, wenn das neue Verzeichnis erstellt wurde. Auf einen Fehler, die Funktion gibt-1 zurück und legt **Errno** wie folgt.
 
 **EEXIST** Verzeichnis wurde nicht erstellt werden, da *Dirname* ist der Name einer vorhandenen Datei, Verzeichnis oder Gerät.
 
@@ -83,9 +73,9 @@ Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_do
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mkdir** Funktion erstellt ein neues Verzeichnis mit dem angegebenen *Dirname.* **_mkdir** können nur ein neues Verzeichnis pro Aufruf, sodass nur die letzte Komponente erstellen *Dirname* können Sie ein neues Verzeichnis benennen. **_mkdir** Pfadtrennzeichen nicht übersetzt. Unter Windows NT sind sowohl der umgekehrte Schrägstrich (\\) als auch der Schrägstrich () gültige Pfadtrennzeichen in Zeichenfolgen in Laufzeitroutinen.
+Die **_mkdir** Funktion erstellt ein neues Verzeichnis mit dem angegebenen *Dirname.* **_mkdir** können nur ein neues Verzeichnis pro Aufruf, sodass nur die letzte Komponente erstellen *Dirname* ein neues Verzeichnis benennen kann. **_mkdir** übersetzt keine Pfadtrennzeichen. Unter Windows NT sind sowohl der umgekehrte Schrägstrich (\\) als auch der Schrägstrich () gültige Pfadtrennzeichen in Zeichenfolgen in Laufzeitroutinen.
 
-**_wmkdir** ist eine Breitzeichen-Version von **_mkdir**; das *Dirname* Argument **_wmkdir** ist eine Breitzeichen-Zeichenfolge. **_wmkdir** und **_mkdir** Verhalten sich andernfalls identisch.
+**_wmkdir** ist eine Breitzeichen-Version von **_mkdir**; die *Dirname* Argument **_wmkdir** ist eine Breitzeichen-Zeichenfolge. **_wmkdir** und **_mkdir** Verhalten sich andernfalls identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -95,7 +85,7 @@ Die **_mkdir** Funktion erstellt ein neues Verzeichnis mit dem angegebenen *Dirn
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_mkdir**|\<direct.h>|
 |**_wmkdir**|\<direct.h> oder \<wchar.h>|

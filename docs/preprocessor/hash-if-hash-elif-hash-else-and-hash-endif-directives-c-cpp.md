@@ -1,10 +1,6 @@
 ---
-title: '#IF, #elif-, #else- und #endif-Direktiven (C/C++) | Microsoft-Dokumentation'
-ms.custom: ''
+title: '#IF, #elif-, #else- und #endif-Direktiven (C/C++)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - '#else'
 - '#endif'
@@ -12,8 +8,6 @@ f1_keywords:
 - '#elif'
 - defined
 - __has_include
-dev_langs:
-- C++
 helpviewer_keywords:
 - '#elif directive'
 - conditional compilation, directives
@@ -27,16 +21,12 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8dcacaab21ca763a9ce45a9ab6eb503cd6fc7b74
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 76b8be265145896105490a82946c50bc576e6f9f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753840"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50520421"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if-, #elif-, #else- und #endif-Anweisungen (C/C++)
 
@@ -51,16 +41,16 @@ Die **#if** -Direktive, zusammen mit den **#elif**, **#else**, und **#endif** St
 &nbsp;&nbsp;&nbsp;&nbsp;*If-Line text*
 
 *If-Line-* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if***konstanter Ausdruck* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef***Bezeichner* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef***Bezeichner* 
+&nbsp;&nbsp;&nbsp;&nbsp;**#if***konstanter Ausdruck*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef***Bezeichner*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef***Bezeichner*
 
 *Elif-Teile* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Elif-Line text*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Elif-Teile Elif-Line text*
 
 *Elif-Line-* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif***konstanter Ausdruck* 
+&nbsp;&nbsp;&nbsp;&nbsp;**#elif***konstanter Ausdruck*
 
 *else-Teil* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Else-Line text*
@@ -154,7 +144,7 @@ Die Anweisungen für die bedingte Kompilierung im folgenden Beispiel gehen von e
 #endif
 ```
 
-Die erste **#if** -Block zeigt zwei Sätze von verschachtelten **#if**, **#else**, und **#endif** Anweisungen. Der erste Satz von Direktiven wird nur verarbeitet, wenn `DLEVEL > 5` "true" ist. Andernfalls die Anweisungen nach **#else** verarbeitet werden.
+Die erste **#if** -Block zeigt zwei Sätze von verschachtelten **#if**, **#else**, und **#endif** Anweisungen. Der erste Satz von Anweisungen wird nur verarbeitet, wenn `DLEVEL > 5` "true" ist. Andernfalls die Anweisungen nach **#else** verarbeitet werden.
 
 Die **#elif** und **#else** Anweisungen im zweiten Beispiel verwendet, um eine der vier Auswahlmöglichkeiten, basierend auf den Wert der `DLEVEL`. Die Konstante `STACK` ist auf 0, 100 oder 200 festgelegt, abhängig von der Definition von `DLEVEL`. Wenn `DLEVEL` größer als 5 ist, wird die Anweisung
 
