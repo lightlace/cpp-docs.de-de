@@ -1,35 +1,25 @@
 ---
-title: Compilerwarnung (Stufe 1) C4067 | Microsoft Docs
-ms.custom: ''
+title: Compilerwarnung (Stufe 1) C4067
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4067
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4067
 ms.assetid: 1d10353e-8cd5-4b01-9184-a06189b965a4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ee6b48327e8754f9388e0df8f43009a5be70c97
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 012866e328433ec9511782c26a39265481ff4940
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255452"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541186"
 ---
 # <a name="compiler-warning-level-1-c4067"></a>Compilerwarnung (Stufe 1) C4067
 
-> Unerwartetes Token nach Präprozessordirektive - Zeilenvorschub erwartet
+> Unerwartetes Token nach Präprozessordirektive - Zeilenvorschub erwartet.
 
 ## <a name="remarks"></a>Hinweise
 
-Der Compiler gefunden und zusätzliche Zeichen hinter einer Präprozessordirektive ignoriert. Dies kann durch eine unerwarteten Zeichen verursacht werden, obwohl eine häufige Ursache ein fehlgeleitetes Semikolon nach der Direktive ist. Kommentare führen nicht dazu, dass diese Warnung. Die **"/ Za"** -Compileroption kann diese Warnung für weitere Präprozessordirektiven als die Standardeinstellung.
+Der Compiler gefunden und zusätzliche Zeichen, die nach einer Präprozessordirektive ignoriert. Dies kann durch beliebige unerwartete Zeichen verursacht werden, obwohl eine häufige Ursache ein vereinzelten Semikolon nach der Direktive ist. Kommentare sind nicht dazu führen, dass diese Warnung. Die **/Za** -Compileroption kann diese Warnung für weitere präprozessoranweisungen, als die Standardeinstellung.
 
 ## <a name="example"></a>Beispiel
 
@@ -49,7 +39,7 @@ int main()
 }
 ```
 
-Zur Behebung des Problems, löschen Sie die einzelnen Zeichen, oder verschieben sie in einem Kommentarblock. Bestimmte C4067 Warnungen werden möglicherweise deaktiviert, durch das Entfernen der **"/ Za"** -Compileroption.
+Um diese Warnung zu beheben, löschen Sie die vereinzelten Zeichen, oder verschieben in einen Kommentarblock. Bestimmte Warnungen C4067 können deaktiviert werden, durch das Entfernen der **/Za** -Compileroption.
 
 ```cpp
 // C4067b.cpp

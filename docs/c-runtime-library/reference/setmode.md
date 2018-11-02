@@ -1,10 +1,6 @@
 ---
-title: _setmode | Microsoft-Dokumentation
-ms.custom: ''
+title: _setmode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _setmode
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _setmode
-dev_langs:
-- C++
 helpviewer_keywords:
 - Unicode [C++], console output
 - files [C++], modes
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 59aed27ec4803cd1709635da44ef37d748342e29
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 887936299dce0a13738f9dd891a168785d17c979
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407495"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617437"
 ---
 # <a name="setmode"></a>_setmode
 
@@ -68,22 +58,22 @@ Neuer Übersetzungsmodus.
 
 Im Erfolgsfall wird der vorherige Übersetzungsmodus zurückgegeben.
 
-Wenn ungültige Parameter an die Funktion übergeben werden, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md)beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt diese Funktion gibt-1 zurück und setzt **Errno** entweder **EBADF**, wodurch einen Ungültiger Dateideskriptor oder **EINVAL**, welche kennzeichnet eine ungültige *Modus* Argument.
+Wenn ungültige Parameter an die Funktion übergeben werden, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md)beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, diese Funktion gibt-1 zurück und legt **Errno** entweder **EBADF**, wodurch einen Ungültiger Dateideskriptor, oder **EINVAL**, kennzeichnet eine ungültige *Modus* Argument.
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_setmode** Funktion legt fest, um *Modus* den Übersetzungsmodus der Datei, die vom *fd*. Übergeben von **_O_TEXT** als *Modus* legt Text (die übersetzt wird,) Modus. Carriage Return Line feed (CR-LF) Kombinationen werden in ein einzelnes Zeilenvorschubzeichen bei Eingabe übersetzt. Zeilenvorschubzeichen werden bei der Ausgabe in Kombinationen aus Wagenrücklauf und Zeilenvorschub (CR-LF) übersetzt. Übergeben von **_O_BINARY** legt binären (unübersetzten) Modus, in dem diese Übersetzungen unterdrückt werden.
+Die **_setmode** -Funktion legt fest, um *Modus* den Übersetzungsmodus der Datei durch *fd*. Übergeben von **_O_TEXT** als *Modus* legt Text (die übersetzt wird,) Modus. Carriage Return-Line feed (CR-LF) Kombinationen werden in ein einzelnes Zeilenvorschubzeichen bei Eingabe übersetzt. Zeilenvorschubzeichen werden bei der Ausgabe in Kombinationen aus Wagenrücklauf und Zeilenvorschub (CR-LF) übersetzt. Übergeben von **_O_BINARY** legt binären (unübersetzten) Modus, in dem diese Übersetzungen unterdrückt werden.
 
-Sie können auch übergeben **_O_U16TEXT**, **_O_U8TEXT**, oder **_O_WTEXT** Unicode-Modus zu aktivieren, wie im zweiten Beispiel weiter unten in diesem Dokument veranschaulicht. **_setmode** dient normalerweise zum Ändern des standardübersetzungsmodus von **Stdin** und **"stdout"**, aber Sie können auf eine beliebige Datei verwenden. Wenn Sie anwenden **_setmode** aufrufen, um den Dateideskriptor für einen Datenstrom, **_setmode** vor der Durchführung von Eingabe- oder Vorgängen für den Stream.
+Sie können auch übergeben **_O_U16TEXT**, **_O_U8TEXT**, oder **_O_WTEXT** Unicode-Modus zu aktivieren, wie im zweiten Beispiel weiter unten in diesem Dokument veranschaulicht. **_setmode** dient normalerweise zum Ändern der Standardmodus für die Übersetzung von **Stdin** und **"stdout"**, aber Sie können auf eine beliebige Datei verwenden. Wenn Sie anwenden **_setmode** aufrufen, um den Dateideskriptor für einen Stream, **_setmode** vor dem Ausführen von Eingabe- oder Vorgänge für den Stream.
 
 > [!CAUTION]
-> Wenn Sie Daten in einen Dateistream explizit leeren den Code mithilfe von schreiben [Fflush](fflush.md) vor der Verwendung **_setmode** um den Modus ändern. Wenn Sie den Code nicht leeren, kann es zu unerwartetem Verhalten kommen. Wenn Sie keine Daten in den Stream geschrieben haben, müssen Sie den Code nicht leeren.
+> Wenn Sie Daten in einen Dateistream explizit leeren den Code mithilfe von schreiben [Fflush](fflush.md) vor der Verwendung **_setmode** zum Ändern des websitemodus. Wenn Sie den Code nicht leeren, kann es zu unerwartetem Verhalten kommen. Wenn Sie keine Daten in den Stream geschrieben haben, müssen Sie den Code nicht leeren.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|Optionale Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionale Header|
 |-------------|---------------------|----------------------|
 |**_setmode**|\<io.h>|\<fcntl.h>|
 

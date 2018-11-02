@@ -1,10 +1,6 @@
 ---
-title: tmpfile | Microsoft-Dokumentation
-ms.custom: ''
+title: tmpfile
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tmpfile
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - tmpfile
-dev_langs:
-- C++
 helpviewer_keywords:
 - temporary files
 - tmpfile function
 - temporary files, creating
 ms.assetid: c4a4dc24-70da-438d-ae4e-98352d88e375
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ebcad2a25af2f2acb0056d882c4191f1a51293d3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 98afcb7a3e04a96a1b08bc1b975634153e550839
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409068"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530324"
 ---
 # <a name="tmpfile"></a>tmpfile
 
@@ -52,19 +42,19 @@ FILE *tmpfile( void );
 
 ## <a name="return-value"></a>Rückgabewert
 
-Im Erfolgsfall **Tmpfile** gibt einen streamzeiger zurück. Andernfalls gibt es eine **NULL** Zeiger.
+Im Erfolgsfall **Tmpfile** einen streamzeiger zurück. Andernfalls wird eine **NULL** Zeiger.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Tmpfile** Funktion erstellt eine temporäre Datei und gibt einen Zeiger auf diesen Datenstrom. Die temporäre Datei wird im Stammverzeichnis erstellt. Verwenden Sie zum Erstellen einer temporären Datei in einem anderen Verzeichnis als dem Stammverzeichnis [tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) oder [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) in Verbindung mit [fopen](fopen-wfopen.md).
+Die **Tmpfile** Funktion erstellt eine temporäre Datei und gibt einen Zeiger auf den Stream. Die temporäre Datei wird im Stammverzeichnis erstellt. Verwenden Sie zum Erstellen einer temporären Datei in einem anderen Verzeichnis als dem Stammverzeichnis [tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) oder [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) in Verbindung mit [fopen](fopen-wfopen.md).
 
-Wenn die Datei kann nicht geöffnet werden, **Tmpfile** gibt eine **NULL** Zeiger. Diese temporäre Datei wird automatisch gelöscht, wenn die Datei, beim Beenden des Programms normal oder wenn geschlossen ist **_rmtmp** aufgerufen wird, vorausgesetzt, dass das aktuelle Arbeitsverzeichnis nicht ändert. Die temporäre Datei wird geöffnet, **w + b** (Lese-/Schreibzugriff binären) Modus.
+Wenn die Datei kann nicht geöffnet werden, **Tmpfile** gibt eine **NULL** Zeiger. Diese temporäre Datei wird automatisch gelöscht, wenn die Datei geschlossen wird, wenn das Programm beendet, normalerweise, oder wenn wird, **_rmtmp** aufgerufen wird, unter der Annahme, dass das aktuelle Arbeitsverzeichnis nicht ändert. Die temporäre Datei wird geöffnet, **w + b** (binären Lese-/Schreib-) Modus.
 
 Fehler kann auftreten, wenn Sie, mehr als TMP_MAX versuchen (Siehe STDIO. H) Aufrufe mit **Tmpfile**.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**tmpfile**|\<stdio.h>|
 

@@ -1,10 +1,6 @@
 ---
-title: Funktionen "_InterlockedExchangePointer" | Microsoft-Dokumentation
-ms.custom: ''
+title: Intrinsische Funktionen „_InterlockedExchangePointer“
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _InterlockedExchangePointer_cpp
 - _InterlockedExchangePointer_rel
@@ -14,8 +10,6 @@ f1_keywords:
 - _InterlockedExchangePointer
 - _InterlockedExchangePointer_acq_cpp
 - _InterlockedExchangePointer_HLEAcquire
-dev_langs:
-- C++
 helpviewer_keywords:
 - _InterlockedExchangePointer_rel intrinsic
 - _InterlockedExchangePointer_HLERelease intrinsic
@@ -26,16 +20,12 @@ helpviewer_keywords:
 - InterlockedExchangePointer_acq intrinsic
 - InterlockedExchangePointer intrinsic
 ms.assetid: 0eaca0b0-d79e-406b-892d-b3b462c50bbb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 881d8dbdb7563197beaea66c4c83d7dbc7921a3f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7599d4221d7dbd0e08585b51982e839aa267a011
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390941"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512098"
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedExchangePointer“
 
@@ -98,7 +88,7 @@ In der x86-Architektur ist `_InterlockedExchangePointer` ein Makro, das `_Interl
 
 In einem 64-Bit-System sind die Parameter 64 Bits und müssen auf 64-Bit-Grenzen ausgerichtet sein. Andernfalls schlägt die Funktion fehl. In einem 32-Bit-System sind die Parameter 32 Bits und müssen auf 32-Bit-Grenzen ausgerichtet sein. Weitere Informationen finden Sie unter [ausrichten](../cpp/align-cpp.md).
 
-Verwenden Sie auf ARM-Plattformen die systeminternen Funktionen mit den Suffixen `_acq` und `_rel`, wenn Sie Semantiken zum Abrufen bzw. Freigeben benötigen, wie am Anfang und Ende eines kritischen Abschnitts. Die systeminternen Funktionen mit dem Suffix `_nf` („keine Umgrenzung“) fungieren nicht als Arbeitsspeicherbarriere.
+Verwenden Sie auf ARM-Plattformen die systeminternen Funktionen mit den Suffixen `_acq` und `_rel`, wenn Sie Semantiken abrufen und freigeben müssen, beispielsweise am Anfang und Ende eines kritischen Abschnitts. Die systeminternen Funktionen mit dem Suffix `_nf` („keine Umgrenzung“) fungieren nicht als Arbeitsspeicherbarriere.
 
 Auf Intel-Plattformen, die Hardware Lock Elision (HLE)-Anweisungen unterstützen, enthalten die systeminternen Funktionen mit den Suffixen `_HLEAcquire` und `_HLERelease` einen Hinweis für den Prozessor, wie die Leistung durch den Wegfall der Schreibsperre in der Hardware beschleunigt werden kann. Wenn diese systeminternen Funktionen auf Plattformen aufgerufen werden, die HLE nicht unterstützen, wird der Hinweis ignoriert.
 
