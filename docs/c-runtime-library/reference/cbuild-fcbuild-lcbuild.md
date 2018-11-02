@@ -1,11 +1,6 @@
 ---
-title: _Cbuild, _FCbuild, _LCbuild | Microsoft Docs
-ms.custom: ''
+title: _Cbuild, _FCbuild, _LCbuild
 ms.date: 03/30/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - _Cbuild
 - _FCbuild
@@ -30,26 +25,20 @@ f1_keywords:
 - complex/_Cbuild
 - complex/_FCbuild
 - complex/_LCbuild
-dev_langs:
-- C++
 helpviewer_keywords:
 - _Cbuild function
 - _FCbuild function
 - _LCbuild function
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c6d567dc02715b9e55644b755b6d7360f2fe3d37
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5565c87a3cccd1715a1357f417238587f3fba4d5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394386"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511799"
 ---
 # <a name="cbuild-fcbuild-lcbuild"></a>_Cbuild, _FCbuild, _LCbuild
 
-Erstellt eine komplexe Zahl aus reellen und imaginären teilen.
+Erstellt eine komplexe Zahl von reellen und imaginären Teile.
 
 ## <a name="syntax"></a>Syntax
 
@@ -69,19 +58,19 @@ Der imaginäre Teil der komplexen Zahl zu erstellen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein **_Dcomplex**, **_Fcomplex**, oder **_Lcomplex** -Struktur, die komplexe Zahl darstellt (*echte*, *imaginären*  \* ich) für Werte des angegebenen Gleitkommatyp.
+Ein **_Dcomplex**, **_Fcomplex**, oder **_Lcomplex** -Struktur, die komplexe Zahl darstellt (*echte*, *imaginären*  \* ich) für die Werte der angegebenen Gleitkomma-Typs.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_Cbuild**, **_FCbuild**, und **_LCbuild** Funktionen vereinfachen die Erstellung komplexer Typen. Verwenden der [Creal, Crealf, Creall](creal-crealf-creall.md) und [Cimag, Cimagf, Cimagl](cimag-cimagf-cimagl.md) Funktionen zum Abrufen der reellen und imaginären Teile der komplexen Zahlen dargestellt.
+Die **_Cbuild**, **_FCbuild**, und **_LCbuild** Funktionen vereinfachen die Erstellung von komplexen Typen. Verwenden der [Creal, Crealf, Creall](creal-crealf-creall.md) und [Cimag, Cimagf, Cimagl](cimag-cimagf-cimagl.md) Funktionen für die reellen und imaginären Teile der komplexen Zahlen dargestellt abrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|C-Header|C++-Header|
+|-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
 |**_Cbuild**, **_FCbuild**, **_LCbuild**|\<complex.h>|\<ccomplex>|
 
-Diese Funktionen sind Microsoft-spezifisch. Die Typen **_Dcomplex**, **_Fcomplex**, und **_Lcomplex** sind Microsoft-spezifische Entsprechungen zu den nicht implementierten C99 systemeigenen Typen **doppelte _Complex** , **float _Complex**, und **long double _Complex**zugeordnet. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Diese Funktionen sind Microsoft-spezifisch. Die Typen **_Dcomplex**, **_Fcomplex**, und **_Lcomplex** sind Microsoft-spezifische-Entsprechungen für den nicht implementierten C99 systemeigenen Typen **double _Complex** , **float _Complex**, und **long double _Complex**bzw. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Siehe auch
 

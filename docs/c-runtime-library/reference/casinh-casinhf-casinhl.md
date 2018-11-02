@@ -1,11 +1,6 @@
 ---
-title: casinh, casinhf, casinhl | Microsoft-Dokumentation
-ms.custom: ''
+title: casinh, casinhf, casinhl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - casinh
 - casinhl
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/casinh
 - complex/casinhf
 - complex/casinhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - casinh function
 - casinhf function
 - casinhl function
 ms.assetid: bd18340b-21dd-4c86-a14e-e8e15dd97e3b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 460c5cdd41d49b9448aa8d4b7fbd2454e8301e4b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c274f4dcdfb16317820ce5c39918fa6135210eea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393965"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580774"
 ---
 # <a name="casinh-casinhf-casinhl"></a>casinh, casinhf, casinhl
 
-Ruft ab den umgekehrten hyperbolischen Sinus einer komplexen Zahl, mit der Verzweigung Schnitte außerhalb des Intervalls [-i + ich] der imaginäre Achse.
+Ruft den umgekehrten hyperbolischen Sinus einer komplexen Zahl mit achsenabschnitten außerhalb des Intervalls [-i + ich] auf der imaginären Achse.
 
 ## <a name="syntax"></a>Syntax
 
@@ -79,7 +68,7 @@ Eine komplexe Zahl, die einen Winkel als Bogenmaß darstellt
 
 ## <a name="return-value"></a>Rückgabewert
 
-Den umgekehrten hyperbolischen Sinus *z*, im Bogenmaß. Das Ergebnis wird aufgehoben, der echte Achse, und klicken Sie im Intervall [-Iπ/2 + Iπ/2] der imaginäre Achse.
+Der umgekehrte hyperbolische Sinus von *z*, im Bogenmaß zurück. Das Ergebnis wird aufgehoben, auf der reellen Achse, und klicken Sie im Intervall [-Iπ/2 + Iπ/2] auf der imaginären Achse.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -87,7 +76,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Casinh*
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|C-Header|C++-Header|
+|-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
 |**Casinh**, **Casinhf**, **Casinhl**|\<complex.h>|\<ccomplex>|
 

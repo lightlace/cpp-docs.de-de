@@ -1,11 +1,6 @@
 ---
-title: _Cmulcc, _FCmulcc, _LCmulcc | Microsoft Docs
-ms.custom: ''
+title: _Cmulcc, _FCmulcc, _LCmulcc
 ms.date: 03/30/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - _Cmulcc
 - _FCmulcc
@@ -30,22 +25,16 @@ f1_keywords:
 - complex/_Cmulcc
 - complex/_FCmulcc
 - complex/_LCmulcc
-dev_langs:
-- C++
 helpviewer_keywords:
 - _Cmulcc function
 - _FCmulcc function
 - _LCmulcc function
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f1c4290c7e1f7a1ec917f2b2a197f787d28b9cd9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f81ccb641a80ab264e8bc54ba1987e2c2c8469f1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394983"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656767"
 ---
 # <a name="cmulcc-fcmulcc-lcmulcc"></a>_Cmulcc, _FCmulcc, _LCmulcc
 
@@ -62,10 +51,10 @@ _Lcomplex _LCmulcc( _Lcomplex x, _Lcomplex y );
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
-Einer der zu multiplizierende komplexe Operanden.
+Einer der Operanden zu multiplizierende komplexeren.
 
 *y*<br/>
-Der andere komplexe Operand multipliziert.
+Der andere komplexe Operand multipliziert werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -73,15 +62,15 @@ Ein **_Dcomplex**, **_Fcomplex**, oder **_Lcomplex** -Struktur, die das komplexe
 
 ## <a name="remarks"></a>Hinweise
 
-Da die integrierten arithmetischen Operatoren nicht auf die Microsoft-Implementierung der komplexen Typen funktionieren, die **_Cmulcc**, **_FCmulcc**, und **_LCmulcc** Funktionen Vereinfachen Sie die Multiplikation mit komplexen Typen.
+Da die integrierten arithmetischen Operatoren nicht auf die Microsoft-Implementierung der komplexen Typen funktionieren, die **_Cmulcc**, **_FCmulcc**, und **_LCmulcc** Funktionen Vereinfachen Sie die Multiplikation von komplexen Typen.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|C-Header|C++-Header|
+|-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
 |**_Cmulcc**, **_FCmulcc**, **_LCmulcc**|\<complex.h>|\<complex.h>|
 
-Diese Funktionen sind Microsoft-spezifisch. Die Typen **_Dcomplex**, **_Fcomplex**, und **_Lcomplex** sind Microsoft-spezifische Entsprechungen zu den nicht implementierten C99 systemeigenen Typen **doppelte _Complex** , **float _Complex**, und **long double _Complex**zugeordnet. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Diese Funktionen sind Microsoft-spezifisch. Die Typen **_Dcomplex**, **_Fcomplex**, und **_Lcomplex** sind Microsoft-spezifische-Entsprechungen für den nicht implementierten C99 systemeigenen Typen **double _Complex** , **float _Complex**, und **long double _Complex**bzw. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Siehe auch
 
