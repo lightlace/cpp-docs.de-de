@@ -1,25 +1,15 @@
 ---
-title: Beispiele für Lambda-Ausdrücke | Microsoft-Dokumentation
-ms.custom: ''
+title: Beispiele für Lambdaausdrücke
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b25d2914285e6ddab9e727f484823d40c9910d3b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6854c5710d8a27093078c0f2013d691ac22c5870
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061824"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663952"
 ---
 # <a name="examples-of-lambda-expressions"></a>Beispiele für Lambdaausdrücke
 
@@ -56,7 +46,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 5
@@ -101,7 +91,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 47
@@ -132,7 +122,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 9
@@ -177,7 +167,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 The first even number in the list is 42.
@@ -215,7 +205,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 13
@@ -223,7 +213,7 @@ int main()
 
 ### <a name="remarks"></a>Hinweise
 
-In diesem Beispiel ist `[](int y) { return y * 2; }` der geschachtelte Lambda-Ausdruck.
+In diesem Beispiel ist `[](int y) { return y * 2; }` der geschachtelte Lambdaausdruck.
 
 [[In diesem Artikel](#top)]
 
@@ -268,7 +258,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 30
@@ -354,7 +344,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 3
@@ -365,7 +355,7 @@ int main()
 
 ### <a name="remarks"></a>Hinweise
 
-Die `ApplyScale`-Funktion verwendet einen Lambda-Ausdruck, um das Produkt des Skalierungswerts und eines jeden Elements in einem `vector`-Objekt auszugeben. Der Lambdaausdruck erfasst implizit **dies** , damit darauf zugreifen, kann die `_scale` Member.
+Die `ApplyScale`-Funktion verwendet einen Lambdaausdruck, um das Produkt des Skalierungswerts und eines jeden Elements in einem `vector`-Objekt auszugeben. Der Lambdaausdruck erfasst implizit **dies** , damit darauf zugreifen, kann die `_scale` Member.
 
 [[In diesem Artikel](#top)]
 
@@ -415,7 +405,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 34
@@ -477,7 +467,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 Caught 'invalid vector<T> subscript'.
@@ -514,7 +504,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 Hello!
