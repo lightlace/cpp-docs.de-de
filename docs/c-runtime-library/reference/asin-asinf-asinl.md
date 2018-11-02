@@ -1,10 +1,6 @@
 ---
-title: asin, asinf, asinl | Microsoft-Dokumentation
-ms.custom: ''
+title: asin, asinf, asinl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - asinf
 - asinl
@@ -26,8 +22,6 @@ f1_keywords:
 - asin
 - asinl
 - asinf
-dev_langs:
-- C++
 helpviewer_keywords:
 - asin function
 - asinl function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ee65e4c8ce884ac42de35a23c81dbf5009dd1185
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 20a2ffc37ea666207b9558cb5c282c414cfd4838
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393276"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476046"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -70,14 +60,14 @@ Wert, dessen Arkussinus berechnet werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **Asin** -Funktion gibt den Arkussinus (die umgekehrte Sinusfunktion) von *x* in den Bereich - π/2 bis π/2 zurück.
+Die **Asin** Funktion gibt den Arkussinus (den Arkussinus-Funktion) *x* im Bereich - π/2 auf π/2-Bogenmaßes zurück.
 
 In der Standardeinstellung Wenn *x* ist kleiner als-1 oder größer als 1 ist, **Asin** einen unbestimmten Wert zurück.
 
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
 |-----------|-------------------|-----------------------|
 |± ∞|**UNGÜLTIG**|**_DOMAIN**|
-|± **QNAN**, **IND**|Keine|**_DOMAIN**|
+|± **QNAN**, **SUCHEN**|Keine|**_DOMAIN**|
 |&#124;x&#124;>1|**UNGÜLTIG**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Hinweise
@@ -86,7 +76,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Asin** 
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header (C)|Erforderlicher Header (C++)|
+|-Routine zurückgegebener Wert|Erforderlicher Header (C)|Erforderlicher Header (C++)|
 |-------------|---------------------|-|
 |**ASIN**, **Asinf**, **Asinl**|\<math.h>|\<cmath> oder \<math.h>|
 

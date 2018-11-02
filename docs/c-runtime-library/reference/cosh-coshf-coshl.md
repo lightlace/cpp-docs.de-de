@@ -1,10 +1,6 @@
 ---
-title: Cosh, Coshf, Coshl | Microsoft Docs
-ms.custom: ''
+title: Cosh, Coshf, coshl
 ms.date: 04/11/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cosh
 - coshf
@@ -26,28 +22,22 @@ f1_keywords:
 - cosh
 - coshf
 - coshl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cosh function
 - coshf function
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d77bb1d1b8f055bb4fe11d4c44c48fb3bf3be535
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f55e084e760cb6d04dbe7ec4fefb5e2ac1d79fd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395470"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609533"
 ---
 # <a name="cosh-coshf-coshl"></a>Cosh, Coshf, coshl
 
-Berechnet den hyperbolischen Cosinus.
+Berechnet den hyperbolischen Kosinus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -69,14 +59,14 @@ Winkel im Bogenmaß.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Hyperbelkosinus von *x*.
+Der hyperbolische Kosinus von *x*.
 
-Standardmäßig ist das Ergebnis zu groß ist, in eine **Cosh**, **Coshf**, oder **Coshl** aufrufen, gibt die Funktion **HUGE_VAL** und legt **Errno** auf **ERANGE**.
+Standardmäßig ist das Ergebnis zu groß, eine **Cosh**, **Coshf**, oder **Coshl** aufrufen, gibt die Funktion zurück **HUGE_VAL** und **Errno** zu **ERANGE**.
 
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|Keine|**_DOMAIN**|
-|*X* ≥ 7, 104760e + 002|**UNGENAUE**+**"ÜBERLAUF"**|**"ÜBERLAUF"**|
+|± **QNAN**, **SUCHEN**|Keine|**_DOMAIN**|
+|*X* ≥ 7, 104760e + 002|**UNGENAUE**+**OVERFLOW**|**ÜBERLAUF**|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -84,7 +74,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Cosh** 
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header (C)|Erforderlicher Header (C++)|
+|-Routine zurückgegebener Wert|Erforderlicher Header (C)|Erforderlicher Header (C++)|
 |-------------|---------------------|-|
 |**Coshf**, **Cosl**, **Coshl**|\<math.h>|\<cmath> oder \<math.h>|
 

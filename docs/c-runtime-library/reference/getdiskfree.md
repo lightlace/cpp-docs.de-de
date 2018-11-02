@@ -1,10 +1,6 @@
 ---
-title: _getdiskfree | Microsoft-Dokumentation
-ms.custom: ''
+title: _getdiskfree
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getdiskfree
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - getdiskfree
 - _getdiskfree
-dev_langs:
-- C++
 helpviewer_keywords:
 - diskfree_t type
 - _getdiskfree function
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2fad5c67f247a40f1c8d65bec50ccf80f44b3d4d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03c39802301406bc4250328983c8cf8bad94497f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401616"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602279"
 ---
 # <a name="getdiskfree"></a>_getdiskfree
 
@@ -65,15 +55,15 @@ unsigned _getdiskfree(
 Das Laufwerk, zu dem Sie Informationen abrufen möchten.
 
 *DriveInfo*<br/>
-Ein **_diskfree_t** -Struktur, die mit Informationen zum Laufwerk aufgefüllt wird.
+Ein **_diskfree_t** -Struktur, die mit Informationen über das Laufwerk aufgefüllt wird.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert „0“. Wenn die Funktion fehlerhaft ist, wird der Fehlercode als Rückgabewert ausgegeben. Der Wert **Errno** festgelegt ist, Fehler, die vom Betriebssystem zurückgegeben werden. Weitere Informationen zu fehlerbedingungen, die von angegeben sind **Errno**, finden Sie unter [Errno-Konstanten](../../c-runtime-library/errno-constants.md).
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert „0“. Wenn die Funktion fehlerhaft ist, wird der Fehlercode als Rückgabewert ausgegeben. Der Wert **Errno** festgelegt ist, Fehler, die vom Betriebssystem zurückgegeben werden. Weitere Informationen zu fehlerbedingungen, die angegeben wurden **Errno**, finden Sie unter [Errno-Konstanten](../../c-runtime-library/errno-constants.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_diskfree_t** -Struktur ist in "Direct.h" definiert.
+Die **_diskfree_t** Struktur wird in "Direct.h" definiert.
 
 ```C
 struct _diskfree_t {
@@ -84,11 +74,11 @@ struct _diskfree_t {
 };
 ```
 
-Diese Funktion überprüft ihre Parameter. Wenn die *Driveinfo* Zeiger **NULL** oder *Laufwerk* ein ungültiges Laufwerk angibt, ruft diese Funktion einen Handler für ungültige Parameter aus, wie in beschrieben [ Überprüfen der Parameter](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktion **EINVAL** und legt **Errno** auf **EINVAL**. Der gültige Laufwerksbereich liegt zwischen 0 und 26. Ein *Laufwerk* der Wert 0 gibt an, das aktuelle Laufwerk; danach Zahlen zuordnen Buchstaben des englischen Alphabets, dass 1 gibt die Laufwerk A, 3 Laufwerk C usw.
+Diese Funktion überprüft ihre Parameter. Wenn die *Driveinfo* Zeiger **NULL** oder *Laufwerk* ein ungültiges Laufwerk angibt, wie in beschrieben, ruft diese Funktion einen Handler für ungültige Parameter [ Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktion **EINVAL** und **Errno** zu **EINVAL**. Der gültige Laufwerksbereich liegt zwischen 0 und 26. Ein *Laufwerk* Wert 0 gibt an, das aktuelle Laufwerk werden danach Zahlen Buchstaben des englischen Alphabets, 1 gibt Laufwerk A, 3 Laufwerk C, und So weiter.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_getdiskfree**|\<direct.h>|
 

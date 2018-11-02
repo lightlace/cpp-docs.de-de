@@ -1,10 +1,6 @@
 ---
-title: _CrtSetBreakAlloc | Microsoft-Dokumentation
-ms.custom: ''
+title: _CrtSetBreakAlloc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetBreakAlloc
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtSetBreakAlloc
 - _CrtSetBreakAlloc
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtSetBreakAlloc function
 - _CrtSetBreakAlloc function
 ms.assetid: 33bfc6af-a9ea-405b-a29f-1c2d4d9880a1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 32e8fedcd70d0e901c63cd5e794773451f436326
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bbc4b0de553533dde95f37675b3c9234569e3505
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395434"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487827"
 ---
 # <a name="crtsetbreakalloc"></a>_CrtSetBreakAlloc
 
@@ -62,7 +52,7 @@ Gibt die vorherige Bestellnummer der Objektzuordnung zurück, die einen festgele
 
 ## <a name="remarks"></a>Hinweise
 
-**_CrtSetBreakAlloc** ermöglicht es einer Anwendung an den Ursprung der Anforderung angehalten und wichtige zu einem bestimmten Zeitpunkt der speicherbelegung speicherverlusterkennung ausführen. Die Funktion verwendet die sequenzielle Bestellnummer der Objektzuordnung, die dem Speicherblock zugewiesen wird, wenn sie im Heap reserviert wurde. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von **_CrtSetBreakAlloc** während der vorverarbeitung entfernt.
+**_CrtSetBreakAlloc** ermöglicht einer Anwendung, die an den Ursprung der Anforderung angehalten und an einem bestimmten Punkt der speicherbelegung speicherverlusterkennung ausführen. Die Funktion verwendet die sequenzielle Bestellnummer der Objektzuordnung, die dem Speicherblock zugewiesen wird, wenn sie im Heap reserviert wurde. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von **_CrtSetBreakAlloc** werden während der vorverarbeitung entfernt.
 
 Die Bestellnummer der Objektzuordnung wird im *lRequest*-Feld der **_CrtMemBlockHeader**-Struktur gespeichert, die in „Crtdbg.h“ definiert ist. Wenn Informationen zu einem Speicherblock von einer der debugdumpfunktionen ausgegeben werden, diese Zahl wird in geschweiften Klammern, z. B. {36}.
 
@@ -70,7 +60,7 @@ Weitere Informationen dazu, wie **_CrtSetBreakAlloc** kann mit anderen Speicherv
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_CrtSetBreakAlloc**|\<crtdbg.h>|
 

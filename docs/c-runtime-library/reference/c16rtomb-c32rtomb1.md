@@ -1,11 +1,6 @@
 ---
-title: c16rtomb, c32rtomb1 | Microsoft-Dokumentation
-ms.custom: ''
+title: c16rtomb, c32rtomb1
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - c16rtomb
 - c32rtomb
@@ -27,22 +22,16 @@ f1_keywords:
 - c32rtomb
 - uchar/c16rtomb
 - uchar/c32rtomb
-dev_langs:
-- C++
 helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3282fb13e5b59ad3214c67410eef5186687114e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d735363bbb317b06c1ebc73a2b0678479a243ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394540"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536590"
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb, c32rtomb
 
@@ -76,19 +65,19 @@ Ein Zeiger auf ein **Mbstate_t** Objekt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Anzahl der Bytes im Arrayobjekt gespeicherten *Mbchar*, einschließlich eventueller umschaltsequenzen. Wenn *Wchar* ist kein gültiges Breitzeichen ist, den Wert (**Size_t**)(-1) zurückgegeben, **Errno** festgelegt ist, um **EILSEQ**, und der Wert des *Zustand* ist nicht angegeben.
+Die Anzahl der Bytes, die in Arrayobjekt gespeicherten *Mbchar*, einschließlich eventueller umschaltsequenzen. Wenn *Wchar* ist kein gültiges Breitzeichen ist, den Wert (**"size_t"**)(-1) zurückgegeben, **Errno** nastaven NA hodnotu **EILSEQ**, und der Wert der *Zustand* ist nicht angegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **c16rtomb** -Funktion konvertiert das UTF-16-Zeichen *Wchar* der Sequenz äquivalente multibytesequenz aus halbbreiten Zeichen im aktuellen Gebietsschema. Wenn *Mbchar* ist kein Nullzeiger ist, speichert die Funktion, die die konvertierte Sequenz im Arrayobjekt verweist *Mbchar*. Bis zu **MB_CUR_MAX** Bytes werden in gespeicherten *Mbchar*, und *Status* auf den resultierenden multibyte-UMSCHALT-Status festgelegt ist.    Wenn *Wchar* ist ein null-Breitzeichen, eine Sequenz, die erforderlich, um die UMSCHALT-Status gespeichert wird, wird bei Bedarf wiederherstellen gefolgt von Null-Zeichen und *Status* auf den ursprünglichen konvertierungszustand festgelegt ist. Die **c32rtomb** -Funktion ist identisch, aber ein UTF-32-Zeichen konvertiert.
+Die **c16rtomb** -Funktion konvertiert das UTF-16-Zeichen *Wchar* der Sequenz entspricht multibytesequenz aus halbbreiten Zeichen im aktuellen Gebietsschema. Wenn *Mbchar* ist kein null-Zeiger, speichert die Funktion, die die konvertierte Sequenz im Arrayobjekt verweist *Mbchar*. Bis zu **MB_CUR_MAX** Bytes befinden sich im *Mbchar*, und *Zustand* auf den resultierenden multibyte-UMSCHALT-Status festgelegt ist.    Wenn *Wchar* ist ein null-Breitzeichen, eine Sequenz, die zum Wiederherstellen der ursprünglichen UMSCHALT-Status, gespeichert wird, wenn erforderlich, gefolgt von Null-Zeichen und *Zustand* auf den ursprünglichen Konvertierungsstatus festgelegt ist. Die **c32rtomb** Funktion ist identisch, aber ein UTF-32-Zeichen konvertiert.
 
 Wenn *Mbchar* ein null-Zeiger ist das Verhalten ist gleichbedeutend mit einem Aufruf an die Funktion, die einen internen Puffer ersetzt *Mbchar* und ein Null-Breitzeichen für *Wchar*.
 
-Die *Status* -konvertierungsstatusobjekt ermöglicht Ihnen, aufeinander folgende Aufrufe dieser Funktion und anderer erneut startbarer Funktionen, die die UMSCHALT-Status der multibyteausgabezeichen verwalten vorzunehmen. Wenn Sie erneut startbare und nicht startbare Funktionen gemischt oder wenn ein Aufruf von sind die Ergebnisse undefiniert **Setlocale** erfolgt zwischen zwei aufrufen.
+Die *Zustand* -konvertierungsstatusobjekt ermöglicht Ihnen, aufeinander folgende Aufrufe dieser Funktion und anderer erneut startbaren Funktionen, die die UMSCHALT-Status der multibyteausgabezeichen zu verwalten. Wenn Sie die Verwendung von erneut startbare und nicht startbare Funktionen gemischt oder wenn ein Aufruf von sind die Ergebnisse undefiniert **Setlocale** erfolgt zwischen zwei aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**c16rtomb**, **c32rtomb**|C, C++: \<uchar.h>|
 

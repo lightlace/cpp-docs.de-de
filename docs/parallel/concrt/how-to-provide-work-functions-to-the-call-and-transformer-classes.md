@@ -1,33 +1,23 @@
 ---
-title: 'Gewusst wie: Bereitstellen von Arbeitsfunktionen für die Call- und Transformer-Klassen | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Gewusst wie: Bereitstellen von Arbeitsfunktionen für die call- und transformer-Klassen'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - call class, example
 - using the transformer class [Concurrency Runtime]
 - using the call class [Concurrency Runtime]
 ms.assetid: df715ce4-8507-41ca-b204-636d11707a73
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3102947009780f6f4e735b70506c5b2dc02f416b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d9d472ddd8d5c7baf3cb16e1df33a2bdb74c5381
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438963"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500999"
 ---
 # <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>Gewusst wie: Bereitstellen von Arbeitsfunktionen für die call- und transformer-Klassen
 
 In diesem Thema veranschaulicht verschiedene Möglichkeiten zum Bereitstellen von Arbeitsfunktionen der [Concurrency:: Call](../../parallel/concrt/reference/call-class.md) und [Concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md) Klassen.
 
-Im ersten Beispiel wird gezeigt, wie ein Lambda-Ausdruck an ein `call`-Objekt übergeben wird. Im zweiten Beispiel wird gezeigt, wie ein Funktionsobjekt an ein `call`-Objekt übergeben wird. Im dritten Beispiel wird gezeigt, wie eine Klassenmethode an ein `call`-Objekt gebunden wird.
+Im ersten Beispiel wird gezeigt, wie ein Lambdaausdruck an ein `call`-Objekt übergeben wird. Im zweiten Beispiel wird gezeigt, wie ein Funktionsobjekt an ein `call`-Objekt übergeben wird. Im dritten Beispiel wird gezeigt, wie eine Klassenmethode an ein `call`-Objekt gebunden wird.
 
 Zu Illustrationszwecken wird in allen Beispielen dieses Themas die `call`-Klasse verwendet. Ein Beispiel für die Verwendung der `transformer` Klasse, finden Sie unter [Vorgehensweise: Verwenden von Transformer in einer Datenpipeline](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md).
 

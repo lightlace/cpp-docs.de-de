@@ -1,10 +1,6 @@
 ---
-title: _eof | Microsoft-Dokumentation
-ms.custom: ''
+title: _eof
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _eof
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _eof
-dev_langs:
-- C++
 helpviewer_keywords:
 - eof function
 - end of file, testing for
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da7ccad98491762d30db2741f8c3d9fe0d784dc6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1da849c3721d4d83ff0b3166bc18f95728ebf124
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395123"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50522394"
 ---
 # <a name="eof"></a>_eof
 
@@ -62,11 +52,11 @@ Dateideskriptor, der auf die geöffnete Datei verweist.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_eof** gibt 1 zurück, wenn die aktuelle Position Ende der Datei, oder 0 ist, ist er nicht. Ein Rückgabewert von – 1 zeigt einen Fehler; In diesem Fall den Handler für ungültige Parameter aufgerufen wird, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EBADF**, wodurch einen Ungültiger Dateideskriptor angezeigt.
+**_eof** gibt 1 zurück, wenn die aktuelle Position Ende der Datei, oder 0 ist, ist dies nicht. Der Rückgabewert 1 gibt an, ein Fehler; In diesem Fall den Handler für ungültige Parameter aufgerufen wird, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EBADF**, wodurch einen Ungültiger Dateideskriptor.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_eof** -Funktion bestimmt, ob das Ende der Datei zugeordneten *fd* wurde erreicht.
+Die **_eof** Funktion bestimmt, ob das Ende der Datei zugeordnet *fd* wurde erreicht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -122,7 +112,7 @@ int main( void )
 This file contains some text.
 ```
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```Output
 Number of bytes read = 29

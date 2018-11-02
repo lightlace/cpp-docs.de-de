@@ -1,10 +1,6 @@
 ---
-title: _mbbtype, _mbbtype_l | Microsoft-Dokumentation
-ms.custom: ''
+title: _mbbtype, _mbbtype_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbbtype
 - _mbbtype_l
@@ -26,24 +22,18 @@ f1_keywords:
 - mbbtype
 - mbbtype_l
 - _mbbtype
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbbtype function
 - _mbbtype_l function
 - mbbtype function
 - mbbtype_l function
 ms.assetid: b8e34b40-842a-4298-aa39-0bd2d8e51c2a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 91b78b0dc57873810f96a793288da3f1457299de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a6d17b99e4314c2ab836a16129ab8a0e6ac7720e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404414"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50467170"
 ---
 # <a name="mbbtype-mbbtypel"></a>_mbbtype, _mbbtype_l
 
@@ -79,27 +69,27 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_mbbtype** gibt den Typ der Byte in einer Zeichenfolge zurück. Diese Entscheidung ist kontextabhängig, wie durch den Wert des angegebenen *Typ*, das Steuerelement-testbedingung bereitstellt. *Typ* ist der Typ des vorherigen Byte in der Zeichenfolge. Die Manifestkonstanten in der folgenden Tabelle sind in Mbctype.h definiert.
+**_mbbtype** gibt den Typ des Bytes in einer Zeichenfolge zurück. Diese Entscheidung ist kontextabhängig, wie durch den Wert des angegebenen *Typ*, die die Steuerelement-testbedingung bereitstellt. *Typ* ist der Typ des vorherigen Byte in der Zeichenfolge. Die Manifestkonstanten in der folgenden Tabelle sind in Mbctype.h definiert.
 
-|Wert des *Typ*|**_mbbtype** wird geprüft|Rückgabewert|*c*|
+|Wert von *Typ*|**_mbbtype** für tests|Rückgabewert|*c*|
 |---------------------|--------------------------|------------------|---------|
-|Einen beliebiger Wert außer 1|Gültiges Einzelbyte oder führendes Byte|**_MBC_SINGLE** (0)|Single-Byte (0 x 20 – 0x7E, 0xA1 – 0xDF)|
+|Einen beliebiger Wert außer 1|Gültiges Einzelbyte oder führendes Byte|**_MBC_SINGLE** (0)|Einzelnes Byte (0 x 20 – 0x7E, 0xA1 – 0xDF)|
 |Einen beliebiger Wert außer 1|Gültiges Einzelbyte oder führendes Byte|**_MBC_LEAD** (1)|Führendes Byte des multibytezeichens (0 x 81 – 0x9F, 0xE0 – 0xFC)|
-|Einen beliebiger Wert außer 1|Gültiges Einzelbyte oder führendes Byte|**_MBC_ILLEGAL**<br /><br /> ( -1)|Ungültiges Zeichen (jeder Wert außer 0 x 20 – 0x7E, 0xA1 – 0xDF, 0 x 81 – 0x9F, 0xE0 – 0xFC|
+|Einen beliebiger Wert außer 1|Gültiges Einzelbyte oder führendes Byte|**_MBC_ILLEGAL**<br /><br /> ( -1)|Ungültiges Zeichen (jeder Wert außer 0 x 20 – 0x7E, 0xA1 – 0xDF, 0 x 81 – 0x9F, 0xE0 – 0xFC liegt|
 |1|Gültiges nachfolgendes Byte|**_MBC_TRAIL** (2)|Nachfolgendes Byte des multibytezeichens (0 x 40 – 0x7E, 0 x 80 – 0xFC)|
-|1|Gültiges nachfolgendes Byte|**_MBC_ILLEGAL**<br /><br /> ( -1)|Ungültiges Zeichen (jeder Wert außer 0 x 20 – 0x7E, 0xA1 – 0xDF, 0 x 81 – 0x9F, 0xE0 – 0xFC|
+|1|Gültiges nachfolgendes Byte|**_MBC_ILLEGAL**<br /><br /> ( -1)|Ungültiges Zeichen (jeder Wert außer 0 x 20 – 0x7E, 0xA1 – 0xDF, 0 x 81 – 0x9F, 0xE0 – 0xFC liegt|
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mbbtype** -Funktion bestimmt den Typ eines Bytes in einem multibyte-Zeichen. Wenn der Wert der *Typ* beliebiger Wert außer 1, **_mbbtype** testet, ob ein gültiges Einzelbyte oder führendes Byte eines multibytezeichens. Wenn der Wert der *Typ* beträgt 1, **_mbbtype** Tests auf ein gültiges nachfolgendes Byte eines multibytezeichens.
+Die **_mbbtype** -Funktion bestimmt den Typ eines Bytes in einem multibyte-Zeichen. Wenn der Wert des *Typ* beliebiger Wert außer 1 **_mbbtype** Tests für ein gültiges Einzelbyte oder führendes Byte eines multibytezeichens. Wenn der Wert des *Typ* ist 1, **_mbbtype** Tests für ein gültiges nachfolgendes Byte eines multibytezeichens.
 
-Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale, _wsetlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die **_mbbtype** Version dieser Funktion verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die **_mbbtype_l** -Version ist beinahe identisch, verwendet jedoch den Gebietsschemaparameter, der übergebene . Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert wird von der Einstellung beeinflusst die **LC_CTYPE** -kategorieeinstellung des Gebietsschemas, siehe [Setlocale, _wsetlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die **_mbbtype** Version dieser Funktion verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die **_mbbtype_l** -Version ist beinahe identisch, außer dass sie verwenden den Gebietsschemaparameter, der stattdessen den übergebenen . Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 In früheren Versionen **_mbbtype** hieß **Chkctype**. Verwenden Sie bei neuem Code **_mbbtype** stattdessen.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|Optionaler Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|
 |-------------|---------------------|---------------------|
 |**_mbbtype**|\<mbstring.h>|\<mbctype.h>*|
 |**_mbbtype_l**|\<mbstring.h>|\<mbctype.h>*|

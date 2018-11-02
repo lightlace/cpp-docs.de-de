@@ -1,10 +1,6 @@
 ---
-title: _flushall | Microsoft-Dokumentation
-ms.custom: ''
+title: _flushall
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _flushall
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _flushall
-dev_langs:
-- C++
 helpviewer_keywords:
 - flushall function
 - flushing streams
 - streams, flushing
 - _flushall function
 ms.assetid: 2cd73562-6d00-4ca2-b13c-80d0ae7870b5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7fb094e2f99e0554320df69946470f42f461819d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: de8caf30568816f41441f5d9487293c346d2bff1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398021"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466237"
 ---
 # <a name="flushall"></a>_flushall
 
@@ -53,15 +43,15 @@ int _flushall( void );
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_flushall** gibt die Anzahl der geöffneten Streams (Eingaben und Ausgaben). Es gibt keine Fehlerrückgabe.
+**_flushall** gibt die Anzahl der geöffneten Streams (Eingabe- und Ausgabe). Es gibt keine Fehlerrückgabe.
 
 ## <a name="remarks"></a>Hinweise
 
-Wird standardmäßig die **_flushall** Funktion schreibt in die entsprechenden Dateien den Inhalt aller Puffer mit geöffneten Ausgabestreams verknüpft sind. Aus allen Puffern, die geöffneten Eingabestreams zugeordnet sind, wird der aktuelle Inhalt gelöscht. (Diese Puffer werden normalerweise vom Betriebssystem verwaltet, das die optimale Zeit zum automatischen Schreiben der Daten auf den Datenträger bestimmt: wenn ein Puffer ist voll, wenn ein Stream geschlossen wird oder wenn ein Programm normal beendet wird, ohne die Streams zu schließen.)
+In der Standardeinstellung die **_flushall** -Funktion schreibt in die entsprechenden Dateien den Inhalt aller Puffer, die mit geöffneten Ausgabestreams verknüpft ist. Aus allen Puffern, die geöffneten Eingabestreams zugeordnet sind, wird der aktuelle Inhalt gelöscht. (Diese Puffer werden normalerweise vom Betriebssystem verwaltet, das die optimale Zeit zum automatischen Schreiben der Daten auf den Datenträger bestimmt: wenn ein Puffer ist voll, wenn ein Stream geschlossen wird oder wenn ein Programm normal beendet wird, ohne die Streams zu schließen.)
 
-Wenn ein Lesevorgang einen Aufruf folgt **_flushall**, neue Daten werden aus den Eingabedateien in den Puffer gelesen. Alle Streams bleiben nach dem Aufruf von open **_flushall**.
+Wenn ein Lesevorgang mit einen Aufruf von folgt **_flushall**, neue Daten aus den Eingabedateien in den Puffer gelesen. Alle Streams bleiben nach dem Aufruf von open **_flushall**.
 
-Mit der Datenträgercommitfunktion der Laufzeitbibliothek können Sie sicherstellen, dass wichtige Daten direkt auf den Datenträger anstatt in die Betriebssystempuffer geschrieben werden. Sie können diese Funktion aktivieren, ohne ein vorhandenes Programm umzuschreiben. Verknüpfen Sie hierzu die Objektdateien des Programms mit "Commode.obj". In der resultierenden ausführbaren Datei aufruft, um **_flushall** den Inhalt aller Puffer auf den Datenträger schreiben. Nur **_flushall** und [Fflush](fflush.md) werden von "commode.obj" beeinflusst.
+Mit der Datenträgercommitfunktion der Laufzeitbibliothek können Sie sicherstellen, dass wichtige Daten direkt auf den Datenträger anstatt in die Betriebssystempuffer geschrieben werden. Sie können diese Funktion aktivieren, ohne ein vorhandenes Programm umzuschreiben. Verknüpfen Sie hierzu die Objektdateien des Programms mit "Commode.obj". In der resultierenden ausführbaren Datei Aufruf von **_flushall** den Inhalt aller Puffer auf Datenträger zu schreiben. Nur **_flushall** und [Fflush](fflush.md) werden von "commode.obj" beeinflusst.
 
 Weitere Informationen zum Steuern der Datenträgercommitfunktion finden Sie unter [Stream-E/A](../../c-runtime-library/stream-i-o.md), [fopen](fopen-wfopen.md) und [_fdopen](fdopen-wfdopen.md).
 

@@ -1,10 +1,6 @@
 ---
-title: _spawnv, _wspawnv | Microsoft-Dokumentation
-ms.custom: ''
+title: _spawnv, _wspawnv
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wspawnv
 - _spawnv
@@ -25,8 +21,6 @@ f1_keywords:
 - wspawnv
 - _spawnv
 - _wspawnv
-dev_langs:
-- C++
 helpviewer_keywords:
 - wspawnv function
 - processes, creating
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - _wspawnv function
 - spawnv function
 ms.assetid: 72360ef4-dfa9-44c1-88c1-b3ecb660aa7d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ba46190ddf3707761ecf1e8537c336015426776d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4f6e24135a040e0b081016041192d2ae196d1037
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412451"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50576748"
 ---
 # <a name="spawnv-wspawnv"></a>_spawnv, _wspawnv
 
@@ -78,11 +68,11 @@ Ausführungsmodus für den aufrufenden Prozess.
 Pfad der auszuführenden Datei.
 
 *argv*<br/>
-Array von Zeigern zu Argumenten. Das Argument *Argv*[0] ist gewöhnlich ein Zeiger auf einen Pfad im Echtzeitmodus oder auf den Programmnamen im geschützten Modus und *Argv*[1] bis *Argv*[**n**] sind Zeiger auf Zeichenfolgen, die neue Argumentliste bilden. Das Argument *Argv*[**n** + 1] muss ein **NULL** Zeiger auf das Ende der Argumentliste zu markieren.
+Array von Zeigern zu Argumenten. Das Argument *Argv*[0] ist normalerweise ein Zeiger auf einen Pfad im Echtzeitmodus oder auf den Programmnamen im geschützten Modus und *Argv*[1] bis *Argv*[**n**] sind Zeiger auf die Zeichenfolgen, die die neue Argumentliste bilden. Das Argument *Argv*[**n** + 1] muss eine **NULL** Zeiger auf das Ende der Argumentliste zu markieren.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert eines synchronen **_spawnv** oder **_wspawnv** (**_P_WAIT** angegeben für *Modus*) ist der Beendigungsstatus des neuen Prozesses. Der Rückgabewert eines asynchronen **_spawnv** oder **_wspawnv** (**_P_NOWAIT** oder **_P_NOWAITO** für angegebene *Modus* ) ist das Prozesshandle. Der Beendigungsstatus ist 0, wenn der Prozess ordnungsgemäß beendet wurde. Sie können den Beendigungsstatus auf einen Wert ungleich Null festlegen, wenn der gestartete Prozess speziell Ruft die **beenden** -Routine mit einem Argument ungleich. Wenn der neue Prozess nicht explizit einen positiven Beendigungsstatus eingestellt hat, weist ein positiver Beendigungsstatus auf eine abnormale Beendigung mit einem Abbruch oder einer Unterbrechung hin. Ein Rückgabewert "-1" gibt einen Fehler (der neue Prozess wird nicht gestartet) an. In diesem Fall **Errno** auf einen der folgenden Werte festgelegt.
+Der Rückgabewert eines synchronen **_spawnv** oder **_wspawnv** (**_P_WAIT** für *Modus*) ist der Beendigungsstatus des neuen Prozesses. Der Rückgabewert eines asynchronen **_spawnv** oder **_wspawnv** (**_P_NOWAIT** oder **_P_NOWAITO** für *Modus* ) ist das Prozesshandle. Der Beendigungsstatus ist 0, wenn der Prozess ordnungsgemäß beendet wurde. Sie können den Beendigungsstatus auf einen Wert ungleich Null festlegen, wenn der gestartete Prozess speziell aufruft der **beenden** Routine mit einem Argument ungleich. Wenn der neue Prozess nicht explizit einen positiven Beendigungsstatus eingestellt hat, weist ein positiver Beendigungsstatus auf eine abnormale Beendigung mit einem Abbruch oder einer Unterbrechung hin. Der Rückgabewert-1 gibt an, ein Fehler (der neue Prozess wird nicht gestartet). In diesem Fall **Errno** auf einen der folgenden Werte festgelegt ist.
 
 |||
 |-|-|
@@ -98,11 +88,11 @@ Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_do
 
 Jede dieser Funktionen erstellt einen neuen Prozess, führt ihn aus und übergibt ein Array von Zeigern auf Befehlszeilenargumente.
 
-Diese Funktionen überprüfen ihre Parameter. Wenn entweder *Cmdname* oder *Argv* ein null-Zeiger ist oder wenn *Argv* null-Zeiger zeigt oder *Argv*[0] ist eine leere Zeichenfolge, die ungültige parameterhandler aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** auf **EINVAL**, und geben-1 zurück. Es wird kein neuer Prozess erzeugt.
+Diese Funktionen überprüfen ihre Parameter. Wenn entweder *Cmdname* oder *Argv* ein null-Zeiger ist oder wenn *Argv* null-Zeiger zeigt oder *Argv*[0] ist eine leere Zeichenfolge, die ungültig parameterhandler wird aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EINVAL**, und geben-1 zurück. Es wird kein neuer Prozess erzeugt.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_spawnv**|\<stdio.h> oder \<process.h>|
 |**_wspawnv**|\<stdio.h> oder \<wchar.h>|
