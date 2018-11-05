@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51921f8e55b9d4ce4e1875f5216984fe3257ca97
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: f005beb9bc71724c289322822a3bae4c03f19d48
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084112"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136249"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++: Neuerungen von 2003 bis 2015
 
@@ -128,7 +128,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
     struct S2
     {
-        template <class C, void (C::*Function)(int) const> void f() {}        
+        template <class C, void (C::*Function)(int) const> void f() {}
     };
 
     void f()
@@ -271,7 +271,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
    Angenommen, der Code definiert sowohl einen **Platzierungsoperator „new“** als auch einen **Platzierungsoperator „delete“**:
 
    ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
    ```
 
@@ -318,14 +318,14 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
    ```cpp
     struct S {
-      S();
-     };
+      S();
+     };
 
-     union {
-      struct {
-       S s;
-      };
-     } u; // C2280
+     union {
+      struct {
+       S s;
+      };
+     } u; // C2280
    ```
 
    Der oben genannte Code geniert in Visual Studio 2015 den folgenden Fehler:
@@ -525,7 +525,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
 - **Private virtuelle Basisklassen und indirekte Vererbung**
 
-   In früheren Versionen des Compilers war es abgeleiteten Klassen möglich, Member ihrer *indirekt abgeleiteten*`private virtual` Basisklassen aufzurufen. Dieses alte Verhalten war falsch und entsprach nicht dem C++-Standard. Der Compiler akzeptiert in dieser Weise erstellten Code nicht mehr und gibt den Compilerfehler C2280 als Ergebnis aus.
+   In früheren Versionen des Compilers war es abgeleiteten Klassen möglich, Memberfunktionen ihrer *indirekt abgeleiteten* `private virtual`-Basisklassen aufzurufen. Dieses alte Verhalten war falsch und entsprach nicht dem C++-Standard. Der Compiler akzeptiert in dieser Weise erstellten Code nicht mehr und gibt den Compilerfehler C2280 als Ergebnis aus.
 
    ```Output
     error C2280: 'void *S3::__delDtor(unsigned int)': attempting to reference a deleted function
@@ -834,7 +834,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
 - **#include: Verwendung des Bezeichners „..“ für das übergeordnete Verzeichnis im Pfadnamen** (betrifft nur `/Wall` `/WX`)
 
-     Frühere Versionen des Compilers haben die Verwendung des Bezeichners '..' für das übergeordnete Verzeichnis im Pfadnamen von  `#include` -Anweisungen nicht erkannt. Bei in dieser Weise erstelltem Code wird normalerweise die Absicht verfolgt, Header einzuschließen, die sich außerhalb des Projekts befinden, und dazu werden fälschlicherweise projektrelative Pfade verwendet. Bei diesem alten Verhalten ergab sich die Gefahr, dass das Programm möglicherweise mit Einschluss einer anderen als der vom Programmierer beabsichtigten Quelldatei compiliert wurde oder dass diese relativen Pfade nicht auf andere Buildumgebungen portiert werden konnten. Der Compiler erkennt jetzt in dieser Weise erstellten Code und benachrichtigt den Programmierer mit der optionalen Compilerwarnung C4464, sofern diese aktiviert ist.
+   Frühere Versionen des Compilers haben die Verwendung des Bezeichners '..' für das übergeordnete Verzeichnis im Pfadnamen von  `#include` -Anweisungen nicht erkannt. Bei in dieser Weise erstelltem Code wird normalerweise die Absicht verfolgt, Header einzuschließen, die sich außerhalb des Projekts befinden, und dazu werden fälschlicherweise projektrelative Pfade verwendet. Bei diesem alten Verhalten ergab sich die Gefahr, dass das Programm möglicherweise mit Einschluss einer anderen als der vom Programmierer beabsichtigten Quelldatei compiliert wurde oder dass diese relativen Pfade nicht auf andere Buildumgebungen portiert werden konnten. Der Compiler erkennt jetzt in dieser Weise erstellten Code und benachrichtigt den Programmierer mit der optionalen Compilerwarnung C4464, sofern diese aktiviert ist.
 
    ```Output
     warning C4464: relative include path contains '..'
@@ -1465,7 +1465,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
    Beispiel (vorher):
 
-     X.cpp (-Ycc.h)
+   X.cpp (-Ycc.h)
 
    ```cpp
     #include "a.h"
@@ -1473,7 +1473,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     #include "c.h"
    ```
 
-     Z.cpp (-Yuc.h)
+   Z.cpp (-Yuc.h)
 
    ```cpp
     #include "b.h"
@@ -1483,7 +1483,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
    Beispiel (nachher)
 
-     X.cpp (-Ycc.h)
+   X.cpp (-Ycc.h)
 
    ```cpp
     #include "a.h"
@@ -1491,7 +1491,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     #include "c.h"
    ```
 
-     Z.cpp (-Yuc.h)
+   Z.cpp (-Yuc.h)
 
    ```cpp
     #include "a.h"
@@ -1774,7 +1774,7 @@ Verwenden Sie das neue Komponententestframework für C++ in Visual Studio, um Ko
 
 #### <a name="architecture-dependency-graphs"></a>Architektur der Abhängigkeitsdiagramme
 
-Damit Sie Ihren Code besser verstehen können, können Sie jetzt Abhängigkeitsdiagramme für die Binärdatei, die Klasse und den Namespace generieren und Dateien in eine Projektmappe einfügen. Klicken Sie zunächst in der Menüleiste auf **Architektur** > **Abhängigkeitsdiagramm generieren** und anschließend auf **For Solution** (Für die Projektmappe) oder **For Include File** (Für die Includedatei), um ein Abhängigkeitsgramm zu erstellen. Nachdem das Diagramm erstellt wurde, können Sie es durchsuchen, indem Sie jeden Knoten erweitern, sich über Abhängigkeitsbeziehungen informieren, indem Sie zwischen den Knoten wechseln, und Quellcode suchen, indem Sie im Kontextmenü eines Knotens auf **Inhalt anzeigen** klicken. Wenn Sie ein Abhängigkeitsdiagramm für Includedateien generieren möchten, klicken Sie im Kontextmenü für eine *CPP-Quellcodedatei oder für eine *H-Headerdatei auf **Generate Graph of Include Files** (Diagramm für Includedatei generieren).
+Damit Sie Ihren Code besser verstehen können, können Sie jetzt Abhängigkeitsdiagramme für die Binärdatei, die Klasse und den Namespace generieren und Dateien in eine Projektmappe einfügen. Klicken Sie zunächst in der Menüleiste auf **Architektur** > **Abhängigkeitsdiagramm generieren** und anschließend auf **For Solution** (Für die Projektmappe) oder **For Include File** (Für die Includedatei), um ein Abhängigkeitsgramm zu erstellen. Nachdem das Diagramm erstellt wurde, können Sie es durchsuchen, indem Sie jeden Knoten erweitern, sich über Abhängigkeitsbeziehungen informieren, indem Sie zwischen den Knoten wechseln, und Quellcode suchen, indem Sie im Kontextmenü eines Knotens auf **Inhalt anzeigen** klicken. Wenn Sie ein Abhängigkeitsdiagramm für Includedateien generieren möchten, klicken Sie im Kontextmenü für eine Quellcodedatei („\*.cpp“) oder eine Headerdatei („\*.h“) auf **Diagramm für Includedatei generieren**.
 
 #### <a name="architecture-explorer"></a>Architektur-Explorer
 
@@ -2100,7 +2100,7 @@ In diesem Release sind bedeutende Änderungen des Compilers enthalten.
 - Die `/CLRIMAGETYPE`-Linkeroption (Angeben des CLR-Bildtyps) wurde hinzugefügt.
 - Die `/CLRSUPPORTLASTERROR`-Linkeroption (Letzten Fehlercode für PInvoke-Aufrufe beibehalten) wurde hinzugefügt.
 - Die `/CLRTHREADATTRIBUTE`-Linkeroption (Festlegen des CLR-Threadattributs) wurde hinzugefügt.
-- Die `/CLRUNMANAGEDCODECHECK`-Linkeroption (SupressUnmanagedCodeSecurityAttribute hinzufügen) wurde hinzugefügt.
+- Die `/CLRUNMANAGEDCODECHECK`-Linkeroption (SuppressUnmanagedCodeSecurityAttribute hinzufügen) wurde hinzugefügt.
 - Die `/ERRORREPORT`-Linkeroption (Weiterleiten von internen Linkerfehlern) wurde hinzugefügt.
 - Die `/EXETYPE`-Linkeroption wurde entfernt. Der Linker unterstützt das Erstellen von Gerätetreibern für Windows 95 und Windows 98 nicht mehr. Verwenden Sie eine geeignete DDK zum Erstellen dieser Gerätetreiber. Das EXETYPE-Schlüsselwort ist für Moduldefinitionsdateien nicht mehr gültig.
 - Die `/FUNCTIONPADMIN`-Linkeroption (Erstellen eines Hotpatch-fähigen Images) wurde hinzugefügt.

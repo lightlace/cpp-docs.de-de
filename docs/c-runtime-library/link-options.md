@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98965b94c83b69e15c38319d7bc5a6e4151b323e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 91b97c653a5f035a767fbedcfcbfdfa7ca178327
+ms.sourcegitcommit: 038f1406b1172318f8832371ad14176f788c44fa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704885"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50132152"
 ---
 # <a name="link-options"></a>Linkoptionen
 
@@ -52,11 +52,12 @@ Das Verzeichnis „CRT lib“ umfasst eine Anzahl von kleinen Dateien, die besti
 
 Die reinen CLR-Versionen dieser Objekte sind in Visual Studio 2015 als veraltet markiert und werden in Visual Studio 2017 nicht unterstützt. Verwenden Sie die Standardversionen für nativen Code und /CLR-Code.
 
-|Native und /CLR|Reiner Modus|description|
+|Native und /CLR|Reiner Modus|Beschreibung |
 |----------------------|---------------|-----------------|
 |binmode.obj|pbinmode.obj|Legt den Standard-Dateiübersetzungsmodus auf „binär“ fest. Siehe [_fmode](../c-runtime-library/fmode.md).|
 |chkstk.obj|n/v|Bietet Stapelüberprüfung und alloca-Unterstützung, wenn CRT nicht verwendet wird.|
 |commode.obj|pcommode.obj|Legt das globale Commit-Flag auf „commit“ fest. Siehe [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md) und [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md).|
+|exe_initialize_mta.lib|n/v|Initialisiert das MTA (Multithread-Apartment) während des Starts der EXE-Datei, wodurch die Verwendung von COM-Objekten in globalen intelligenten Zeigern ermöglicht wird. Verwenden Sie diese Option nicht für DLLs, da sie während des Beendens einen MTA-Verweis offenlegt. Eine Verknüpfung hiermit entspricht dem Einfügen von „combase.h“ und Definieren von _EXE_INITIALIZE_MTA. |
 |fp10.obj|n/v|Ändert das Standard-Präzisionssteuerelement in 64 Bit. Siehe [Gleitkommaunterstützung](../c-runtime-library/floating-point-support.md).|
 |invalidcontinue.obj|pinvalidcontinue.obj|Legt einen standardmäßigen Handler für ungültige Parameter fest, der nichts bewirkt; d.h., dass ungültige Parameter, die an CRT-Funktionen übergeben werden, nur errno festlegen und ein Fehlerergebnis zurückgeben.|
 |loosefpmath.obj|n/v|Stellt sicher, dass der Gleitkommacode nicht normale Werte toleriert.|

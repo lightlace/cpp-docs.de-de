@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31b9c0c8668ec16d84ad84627eb73a0f406eb21e
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 99fdb8f9c08845c5f440fc4ae1f100f8afd832e2
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328375"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136158"
 ---
 # <a name="ide-and-compiler-tools-for-visual-c-development"></a>IDE und Compilertools für die Visual C++-Entwicklung
 
@@ -30,7 +30,7 @@ Zusätzlich zu den gemeinsam verwendeten Tools in der integrierten Visual Studio
 
 ## <a name="create-projects"></a>Erstellen von Projekten
 
-Ein *Projekt* ist im Grunde eine Reihe von Quellcodedateien und Ressourcen wie Bilder oder Datendateien, aus denen eine ausführbare Datei erstellt wird. 
+Ein *Projekt* ist im Grunde eine Reihe von Quellcodedateien und Ressourcen wie Bilder oder Datendateien, aus denen eine ausführbare Datei erstellt wird.
 
 Visual Studio 2015 unterstützt MSBuild-Projekte. Sie können Visual Studio-Erweiterungen für andere Buildsysteme wie Qt oder CMake herunterladen.
 
@@ -51,7 +51,7 @@ Mithilfe von Quellcodeverwaltung können Sie die Arbeit mehrerer Entwickler koor
 
 ![Team Explorer](media/vs2017-team-explorer.png "Visual Studio 2017 Team Explorer")
 
-Weitere Informationen zur Git-Integration mit Repositorys in Azure finden Sie unter [Share your code with Visual Studio 2017 and Azure Repos Git](/azure/devops/repos/git/share-your-code-in-git-vs-2017) (Teilen Ihres Codes mit Visual Studio 2017 und Azure Repos Git). Informationen zur Git-Integration mit GitHub finden Sie unter [GitHub-Erweiterung für Visual Studio](https://visualstudio.github.com/).
+Weitere Informationen zur Git-Integration mit Repositorys in Azure finden Sie unter [Share your code with Visual Studio 2017 and Azure Repos Git](/azure/devops/repos/git/share-your-code-in-git-vs-2017) (Teilen Ihres Codes mit Visual Studio 2017 und Azure Repos Git). Informationen zur Git-Integration mit GitHub finden Sie unter [GitHub Extension for Visual Studio (GitHub-Erweiterung für Visual Studio)](https://visualstudio.github.com/).
 
 ## <a name="create-user-interfaces-with-designers"></a>Erstellen von Benutzeroberflächen mit Designern
 
@@ -65,7 +65,7 @@ Weitere Informationen zum Erstellen einer Benutzeroberfläche für eine MFC-Anwe
 
 ## <a name="write-code"></a>Schreiben von Code
 
-Nachdem Sie ein Projekt erstellt haben, werden alle Projektdateien im Fenster des **Projektmappen-Explorers** angezeigt. (Eine *Projektmappe* ist ein logischer Container für ein oder mehrere verwandte Projekte.) Wenn Sie auf im **Projektmappen-Explorer** auf eine H- oder CPP-Datei klicken, wird die Datei im Code-Editor geöffnet. 
+Nachdem Sie ein Projekt erstellt haben, werden alle Projektdateien im Fenster des **Projektmappen-Explorers** angezeigt. (Eine *Projektmappe* ist ein logischer Container für ein oder mehrere verwandte Projekte.) Wenn Sie auf im **Projektmappen-Explorer** auf eine H- oder CPP-Datei klicken, wird die Datei im Code-Editor geöffnet.
 
 ![Projektmappen-Explorer und Code-Editor](media/vs2017-solution-explorer-code-editor.png "Projektmappen-Explorer und Code-Editor von Visual Studio 2017")
 
