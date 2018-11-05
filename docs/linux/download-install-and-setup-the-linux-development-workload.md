@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: a45d216f1d6ddcef704dba40ff97f6ed71f98240
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 8ef0a8d3ecae6371603716ad31530776eed7ee86
+ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410641"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143691"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>Herunterladen, Installieren und Einrichten der Linux-Workload
 
@@ -26,14 +26,14 @@ Sie können die Visual Studio-IDE unter Windows verwenden, um C++-Projekte zu er
 
 ## <a name="visual-studio-setup"></a>Setup von Visual Studio
 
-1. Geben Sie „Visual Studio-Installer“ in das Windows-Suchmenü ein, und suchen Sie unter den Ergebnissen **Apps** nach dem Installer. Doppelklicken Sie anschließend darauf. Wenn der Installer geöffnet wird, wählen Sie **Ändern**aus, und klicken Sie dann auf die Registerkarte **Workloads**. Scrollen Sie nach unten zu **Andere Toolsets**, und wählen Sie die Workload **Linux Entwicklung mit C++** aus.
+1. Geben Sie „Visual Studio Installer“ in das Windows-Suchfeld ein: ![Windows-Suchfeld](media/visual-studio-installer-search.png)
+2. Suchen Sie in den Ergebnissen unter **Apps** nach dem Installer, und doppelklicken Sie auf ihn. Wenn der Installer geöffnet wird, wählen Sie **Ändern**aus, und klicken Sie dann auf die Registerkarte **Workloads**. Scrollen Sie nach unten zu **Andere Toolsets**, und wählen Sie die Workload **Linux Entwicklung mit C++** aus.
 
    ![Workload „Visual C++ für Linux-Entwicklung“](media/linuxworkload.png)
 
-1. Wenn Sie CMake verwenden oder IoT- oder eingebettete Zielplattformen nutzen möchten, navigieren Sie auf der rechten Seite zum Bereich **Installationsdetails**, und erweitern Sie **Optionale Komponenten** unter **Linux-Entwicklung mit C++**. Wählen Sie dann die gewünschten Komponenten aus. 
+1. Wenn Sie CMake verwenden oder IoT- oder eingebettete Zielplattformen nutzen möchten, navigieren Sie auf der rechten Seite zum Bereich **Installationsdetails**, und erweitern Sie **Optionale Komponenten** unter **Linux-Entwicklung mit C++**. Wählen Sie dann die gewünschten Komponenten aus.
 
 1. Klicken Sie auf **Ändern**, um mit der Installation fortzufahren.
-
 
 ## <a name="options-for-creating-a-linux-environment"></a>Optionen zum Erstellen einer Linux-Umgebung
 

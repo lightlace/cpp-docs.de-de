@@ -1,7 +1,7 @@
 ---
 title: CMake-Projekte in Visual C++ | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/26/2018
+ms.date: 10/18/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76877a0559fd954661fb3e38131796e89c41679f
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 93cfa14e943e277b5255eeb486491c831eba0da3
+ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235099"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143730"
 ---
 # <a name="cmake-projects-in-visual-c"></a>CMake-Projekte in Visual C++
 
@@ -215,7 +215,7 @@ Da Ninja für schnelle Buildgeschwindigkeiten statt für Flexibilität und Funkt
 
 1. **buildRoot:** führt eine Zuordnung für die Option **-DCMAKE_BINARY_DIR** und gibt an, wo der CMake-Cache erstellt wird Wenn der Ordner noch nicht vorhanden ist, wird dieser erstellt.
 
-1. **variables:** enthält ein Name/Wert-Paar von CMake-Variablen, die als **-D**_Name_**=**_Wert_ an CMake übergeben werden Wenn die Buildanweisungen Ihres CMake-Projekts das direkte Hinzufügen aller Variablen zur CMake-Cachedatei festlegen, wird empfohlen, diese stattdessen hier hinzuzufügen. Im folgenden Beispiel wird gezeigt, wie Sie die Name-Wert-Paare im Code angeben können:
+1. **variables:** enthält ein Name/Wert-Paar von CMake-Variablen, die als **-D** *_name_=_value_* an CMake übergeben werden. Wenn die Buildanweisungen Ihres CMake-Projekts das direkte Hinzufügen aller Variablen zur CMake-Cachedatei festlegen, wird empfohlen, diese stattdessen hier hinzuzufügen. Im folgenden Beispiel wird gezeigt, wie Sie die Name-Wert-Paare im Code angeben können:
 
 ```json
 "variables": [
@@ -285,7 +285,7 @@ usage: ninja [options] [targets...]
 
 Das obige Beispiel entspricht der Ausführung der **Developer-Eingabeaufforderung für Visual Studio 2017** mit den Argumenten **-arch=amd64 -host_arch=amd64**.
 
-Folgende Tabelle führt die Standardwerte und die zugehörigen Befehlszeilen auf:
+In der folgenden Tabelle werden die Standardwerte gezeigt:
 
 |Kontextname|Beschreibung |
 |-----------|-----------------|

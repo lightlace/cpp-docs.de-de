@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ca75ca3b69fb175bea160d7f2a35d36416ea2f5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e032c2f1579294431b01d5a7695bf2c8a35aa421
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441368"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136119"
 ---
 # <a name="extract-function"></a>Extract-Funktion
 **Zweck:** Umwandeln eines Codefragments in dessen eigene Funktion.
@@ -41,7 +41,7 @@ ms.locfileid: "46441368"
 
 1. Geben Sie im Fenster **Funktion/Methode extrahieren (experimentell)** den neuen Funktionsnamen ein, wählen Sie aus, wo der Code platziert werden soll, und klicken Sie auf **OK**.
 
-   ![Funktion „Funktion extrahieren“](images/extractfunction_dialog.png)
+   ![Dialogfeld „Funktion extrahieren“](images/extractfunction_dialog.png)
 
 1. Die neue Funktion wird am angegebenen Ort erstellt, ein Funktionsprototyp wird in der entsprechenden Headerdatei erstellt und der ursprüngliche Code wird so geändert, dass er die Funktion aufruft.
 
