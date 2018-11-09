@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB providers, multithreaded
 - threading [C++], providers
 ms.assetid: a91270dc-cdf9-4855-88e7-88a54be7cbe8
-ms.openlocfilehash: 653736b52c116f1c72856bf0c12e9deff05e0cfb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 14acaa6ad96f74b2a3f88ca366a43caa9199a1d8
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676199"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265034"
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>Unterstützen des Freethreadings im Anbieter
 
@@ -39,7 +39,7 @@ HRESULT MyObject::MyMethod(void)
 
 Weitere Informationen dazu, wie Sie kritische Abschnitte mit schützen `Lock` und `Unlock`, finden Sie unter [Multithreading: Gewusst wie: der Synchronisierungsklassen](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
-Sie müssen außerdem sicherstellen, dass alle Methoden außer Kraft setzen (wie z. B. `Execute`) sind threadsicher.
+Stellen Sie sicher, dass alle Methoden außer Kraft setzen (wie z. B. `Execute`) sind threadsicher.
 
 ## <a name="see-also"></a>Siehe auch
 
