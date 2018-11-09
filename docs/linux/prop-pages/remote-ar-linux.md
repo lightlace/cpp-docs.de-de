@@ -1,28 +1,18 @@
 ---
-title: Remotearchiveigenschaften (C++ Linux) | Microsoft Docs
-ms.custom: ''
+title: Remotearchiveigenschaften (C++ Linux)
 ms.date: 9/26/2017
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: 5ee1e44c-8337-4c3a-b2f3-35e4be954f9f
-author: mikeblome
-ms.author: mblome
 f1_keywords: []
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 004e015b7e5ad8a99b3bea2bf21b7b598f2fedbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcd0e0eef16addc60743000b6ed8cba12276e29c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328652"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50439223"
 ---
 # <a name="remote-archive-properties-c-linux"></a>Remotearchiveigenschaften (C++ Linux)
 
-Eigenschaft | description
+Eigenschaft | Beschreibung 
 --- | ---
 Erstellen eines Archivindex | Erstellt einen Archivindex (vgl. ranlib).  Dies kann das Linken beschleunigen und die Abhängigkeit innerhalb der eigenen Bibliothek verringern.
 Schlankes Archiv erstellen | Erstellt ein schlankes Archiv.  Ein schlankes Archiv enthält relative Pfade zu den Objekten, anstatt die Objekte einzubetten.  Um zwischen schlank und normal zu wechseln, muss die vorhandene Bibliothek gelöscht werden.

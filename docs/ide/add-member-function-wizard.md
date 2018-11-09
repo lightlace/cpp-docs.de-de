@@ -1,27 +1,17 @@
 ---
-title: Assistent zum Hinzufügen von Memberfunktionen | Microsoft-Dokumentation
-ms.custom: ''
+title: Assistent zum Hinzufügen von Memberfunktionen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.function.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - Add Member Function Wizard [C++]
 ms.assetid: 13b6defc-faa6-4d57-83db-9dd854cbea3d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d66cc2f7f56d0405a610e28441b8c89e86030282
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6ba95026d712c71a9d706baddfefda548100c64a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432452"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50615045"
 ---
 # <a name="add-member-function-wizard"></a>Assistent zum Hinzufügen von Memberfunktionen
 

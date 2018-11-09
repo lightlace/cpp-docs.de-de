@@ -1,28 +1,18 @@
 ---
-title: Assistent zum Hinzufügen von Methoden | Microsoft-Dokumentation
-ms.custom: ''
+title: Assistent zum Hinzufügen von Methoden
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.method.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - Add Method Wizard [C++]
 - methods [C++], adding using wizards
 ms.assetid: b9a71b0e-9ecf-40fa-9f86-4200cb23d671
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 45c3b0ca9a3e6c88e4ae40a5eb52aeb3223d2860
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e03f1fe925a82baa8c291ebf6fc6ccca34a00b90
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397299"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50547848"
 ---
 # <a name="add-method-wizard"></a>Assistent zum Hinzufügen von Methoden
 
@@ -36,8 +26,8 @@ Verwenden Sie diesen Assistenten, um eine Methode zu einer Schnittstelle hinzuzu
 
    |Schnittstellentyp|Beschreibung |
    |--------------------|-----------------|
-   |Duale Schnittstelle|`HRESULT` Kann nicht geändert werden.|
-   |Benutzerdefinierte Schnittstelle|`HRESULT` Kann nicht geändert werden.|
+   |Duale Schnittstelle|`HRESULT`. Kann nicht geändert werden.|
+   |Benutzerdefinierte Schnittstelle|`HRESULT`. Kann nicht geändert werden.|
    |Lokale benutzerdefinierte Schnittstelle|Geben Sie einen eigenen Rückgabetyp an, oder wählen Sie einen aus der Liste aus.|
    |Disp-Schnittstelle|Geben Sie einen eigenen Rückgabetyp an, oder wählen Sie einen aus der Liste aus.|
    |Disp-Schnittstelle des MFC-ActiveX-Steuerelements|Wenn Sie eine vordefinierte Methode implementieren, wird der Rückgabetyp auf den entsprechenden Wert festgelegt und kann nicht geändert werden. Wenn Sie eine Methode aus der Liste **Methodenname** auswählen und auf **Benutzerdefiniert** klicken, wählen Sie unter **Methodentyp auswählen** einen Rückgabetyp aus der Liste aus.|
