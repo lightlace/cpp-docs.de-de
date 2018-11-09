@@ -1,10 +1,6 @@
 ---
-title: Die Routinen is und isw| Microsoft-Dokumentation
-ms.custom: ''
+title: is- und isw-Routinen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 apilocation:
 - msvcr110_clr0400.dll
 - msvcr90.dll
@@ -16,22 +12,16 @@ apitype: DLLExport
 f1_keywords:
 - isw
 - is
-dev_langs:
-- C++
 helpviewer_keywords:
 - is routines
 - isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 98f7edcf115a6fadc741c7f1bcde8f240c93abcc
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 65dc5bbfbaeab59e91cdca23c4f0f01b5ef7ebbb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895122"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620170"
 ---
 # <a name="is-isw-routines"></a>is- und isw-Routinen
 
@@ -61,75 +51,75 @@ Der Ausgabewert ist von der `LC_CTYPE`-Kategorieeinstellung des Gebietsschemas b
 
 Im „C“-Gebietsschema sind die Testbedingungen für die **is** Routinen wie folgt:
 
-`isalnum`  
+`isalnum`<br/>
 Alphanumerisch (A-Z, a-z oder 0-9)
 
-`isalpha`  
+`isalpha`<br/>
 Alphabetisch (A-Z oder a-z)
 
-`__isascii`  
+`__isascii`<br/>
 Ein ASCII-Zeichen (0x00-0x7F)
 
-`isblank`  
+`isblank`<br/>
 Horizontaler Tabulator oder Leerzeichen (0x09 oder 0x20).
 
-`iscntrl`  
+`iscntrl`<br/>
 Ein Steuerzeichen (0x00-0x1F oder 0x7F)
 
-`__iscsym`  
+`__iscsym`<br/>
 Buchstabe, Unterstrich oder Ziffer.
 
-`__iscsymf`  
+`__iscsymf`<br/>
 Buchstabe oder Unterstrich.
 
-`isdigit`  
+`isdigit`<br/>
 Eine Dezimalstelle (0-9)
 
-`isgraph`  
+`isgraph`<br/>
 Druckbares Zeichen außer Leerzeichen ( ).
 
-`islower`  
+`islower`<br/>
 Ein Kleinbuchstabe (a-z)
 
-`isprint`  
+`isprint`<br/>
 Ein druckbares Zeichen einschließlich Leerzeichen (0x20-0x7E)
 
-`ispunct`  
+`ispunct`<br/>
 Interpunktionszeichen.
 
-`isspace`  
+`isspace`<br/>
 Ein Leerzeichen (0x09-0x0D oder 0x20)
 
-`isupper`  
+`isupper`<br/>
 Ein Großbuchstabe (A-Z)
 
-`isxdigit`  
+`isxdigit`<br/>
 Eine Hexadezimalziffer (A-F, a-f oder 0-9)
 
 Bei den **isw**-Routinen ist das Ergebnis des Tests für die angegebene Bedingung vom Gebietsschema unabhängig. Die Testbedingungen für die **isw**-Funktionen sind wie folgt:
 
-`iswalnum`  
+`iswalnum`<br/>
 `iswalpha` oder `iswdigit`.
 
-`iswalpha`  
+`iswalpha`<br/>
 Beliebiges Breitzeichen, das einen von der Implementierung abhängigen Satz darstellt, für den `iswcntrl`, `iswdigit`, `iswpunct` oder `iswspace` nicht 0 sind. `iswalpha` liefert einen Rückgabewert ungleich 0 (null) nur für Breitzeichen, für die `iswupper` oder `iswlower` ungleich 0 (null) ist.
 
-`iswascii`  
+`iswascii`<br/>
 Eine Breitzeichendarstellung von ASCII-Zeichen (0x0000 - 0x007F)
 
-`iswblank`  
+`iswblank`<br/>
 Breitzeichen, das dem Standardleerzeichen entspricht oder ein von der Implementierung abhängiger Breitzeichensatz, für den `iswalnum` "false" ist. Standardleerzeichen sind das Leerzeichen (L' ') und der horizontale Tabulator (L'\t').
 
-`iswcntrl`  
+`iswcntrl`<br/>
 Steuerbreitzeichen.
 
-`__iswcsym`  
+`__iswcsym`<br/>
 Beliebiges Breitzeichen, für das `isalnum` "true" ist oder das '_'-Zeichen.
 
-`__iswcsymf`  
+`__iswcsymf`<br/>
 Beliebiges Breitzeichen, für das `iswalpha` "true" ist oder das '_'-Zeichen.
 
-`iswctype`  
+`iswctype`<br/>
 Das Zeichen hat die Eigenschaft, die vom `desc`-Argument angegeben wird. Für jeden gültigen Wert des `desc`-Arguments von `iswctype` gibt es eine entsprechende Breitzeichenklassifizierungs-Routine, wie in der folgenden Tabelle dargestellt:
 
 ### <a name="equivalence-of-iswctypec-desc-to-other-isw-testing-routines"></a>Äquivalent von iswctype(c, desc) zu anderen isw-Testroutinen
@@ -150,28 +140,28 @@ Das Zeichen hat die Eigenschaft, die vom `desc`-Argument angegeben wird. Für je
 |**_UPPER**|**iswupper(** `c` **)**|
 |**_HEX**|**iswxdigit(** `c` **)**|
 
-`iswdigit`  
+`iswdigit`<br/>
 Breitzeichen, das einem Dezimalstellenzeichen entspricht.
 
-`iswgraph`  
+`iswgraph`<br/>
 Druckbares Breitzeichen außer Leerzeichen-Breitzeichen (L' ').
 
-`iswlower`  
+`iswlower`<br/>
 Kleinbuchstabe oder ein von der Implementierung abhängiger Breitzeichensatz für den `iswcntrl`, `iswdigit`, `iswpunct` oder `iswspace` nicht 0 sind. `iswlower` gibt einen Wert ungleich 0 (null) nur für Breitzeichen zurück, die den Kleinbuchstaben entsprechen.
 
-`iswprint`  
+`iswprint`<br/>
 Druckbares Breitzeichen, einschließlich Leerzeichen-Breitzeichen (L' ').
 
-`iswpunct`  
+`iswpunct`<br/>
 Druckbares Breitzeichen, das weder ein Leerzeichen-Breitzeichen (L' ') noch ein Breitzeichen ist, für das `iswalnum` ungleich Null ist.
 
-`iswspace`  
+`iswspace`<br/>
 Breitzeichen, das dem Standardleerzeichen entspricht oder ein von der Implementierung abhängiger Breitzeichensatz ist, für den `iswalnum` "false" ist. Standardleerstellenzeichen sind: Leerzeichen (L' '), Seitenvorschub (L'\f'), Zeilenumbruch (L'\n'), Wagenrücklaufzeichen (L'\r'), Horizontaler Tabulator (L'\t') und vertikaler Tabulator (L'\v').
 
-`iswupper`  
+`iswupper`<br/>
 Ein Breitzeichen ist ein Großbuchstabe oder ein von der Implementierung abhängiger Breitzeichensatz, für den `iswcntrl`, `iswdigit`, `iswpunct` oder `iswspace` nicht 0 sind. `iswupper` gibt einen Rückgabewert ungleich 0 (null) nur für Breitzeichen zurück, die den Großbuchstaben entsprechen.
 
-`iswxdigit`  
+`iswxdigit`<br/>
 Breitzeichen, das einem Hexadezimalziffernzeichen entspricht.
 
 ## <a name="example"></a>Beispiel
@@ -181,16 +171,16 @@ Breitzeichen, das einem Hexadezimalziffernzeichen entspricht.
 /* This program tests all characters between 0x0
 * and 0x7F, then displays each character with abbreviations
 * for the character-type codes that apply.
-*/  
+*/
 
 #include <stdio.h>
 #include <ctype.h>
 
-int main( void )  
-{  
+int main( void )
+{
    int ch;
-   for( ch = 0; ch <= 0x7F; ch++ )  
-   {  
+   for( ch = 0; ch <= 0x7F; ch++ )
+   {
       printf( "%.2x  ", ch );
       printf( " %c", isprint( ch )  ? ch   : ' ' );
       printf( "%4s", isalnum( ch )  ? "AN" : "" );
@@ -208,11 +198,11 @@ int main( void )
       printf( "%3s", isupper( ch )  ? "U"  : "" );
       printf( "%3s", isxdigit( ch ) ? "X"  : "" );
       printf( ".\n" );
-   }  
-}  
-```  
+   }
+}
+```
 
-## <a name="output"></a>Ausgabe
+## <a name="output"></a>Output
 
 ```Output
 00            AS  C                              .
@@ -347,8 +337,8 @@ int main( void )
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zeichenklassifizierung](../c-runtime-library/character-classification.md)   
-[Gebietsschema](../c-runtime-library/locale.md)   
-[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
-[Interpretation von Multibyte-Zeichensequenzen](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
+[Zeichenklassifizierung](../c-runtime-library/character-classification.md)<br/>
+[Locale](../c-runtime-library/locale.md)<br/>
+[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
+[Interpretation von Multibyte-Zeichensequenzen](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [to-Funktionen](../c-runtime-library/to-functions.md)
