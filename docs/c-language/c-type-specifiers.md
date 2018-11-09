@@ -1,26 +1,16 @@
 ---
-title: C-Typspezifizierer | Microsoft-Dokumentation
-ms.custom: ''
+title: C-Typspezifizierer
 ms.date: 01/29/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - type specifiers, C
 - specifiers, type
 ms.assetid: fbe13441-04c3-4829-b047-06d374adc2b6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 16c204636baf87cd88f80294b1f413cacc9f5ddc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1191cf4d2912cda535547f465fe4bfbedebe8fa2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764263"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50628097"
 ---
 # <a name="c-type-specifiers"></a>C-Typspezifizierer
 
@@ -28,19 +18,7 @@ Typspezifizierer in Deklarationen definieren den Typ einer Variablen oder Funkti
 
 ## <a name="syntax"></a>Syntax
 
-*type-specifier*:  
-&nbsp;&nbsp;&nbsp;&nbsp;**void**  
-&nbsp;&nbsp;&nbsp;&nbsp;**char**  
-&nbsp;&nbsp;&nbsp;&nbsp;**short**  
-&nbsp;&nbsp;&nbsp;&nbsp;**int**  
-&nbsp;&nbsp;&nbsp;&nbsp;**long**  
-&nbsp;&nbsp;&nbsp;&nbsp;**float**  
-&nbsp;&nbsp;&nbsp;&nbsp;**double**  
-&nbsp;&nbsp;&nbsp;&nbsp;**signed**  
-&nbsp;&nbsp;&nbsp;&nbsp;**unsigned**  
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*  
-&nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier*  
-&nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*  
+*type-specifier*: &nbsp;&nbsp;&nbsp;&nbsp;**void** &nbsp;&nbsp;&nbsp;&nbsp;**char** &nbsp;&nbsp;&nbsp;&nbsp;**short** &nbsp;&nbsp;&nbsp;&nbsp;**int** &nbsp;&nbsp;&nbsp;&nbsp;**long** &nbsp;&nbsp;&nbsp;&nbsp;**float** &nbsp;&nbsp;&nbsp;&nbsp;**double** &nbsp;&nbsp;&nbsp;&nbsp;**signed** &nbsp;&nbsp;&nbsp;&nbsp;**unsigned** &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier* &nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier* &nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*
 
 Die Typen **signed char**, **signed int**, **signed short int** und **signed long int** werden zusammen mit ihren **unsigned**-Äquivalenten und **enum** als *ganzzahlige* Typen bezeichnet. Die Typspezifizierer **float**, **double** sowie **long double** werden als *Gleitkommatypen* bezeichnet. Sie können einen beliebigen ganzzahligen oder Gleitkomma-Typspezifizierer in einer Variablen oder einer Funktionsdeklaration verwenden. Wenn ein *type-specifier* in einer Deklaration nicht angegeben ist, wird dafür **int** angenommen.
 
@@ -87,4 +65,4 @@ Sie können mit **typedef**-Deklarationen zusätzliche Typspezifizierer erstelle
 
 ## <a name="see-also"></a>Siehe auch
 
-[Deklarationen und Typen](../c-language/declarations-and-types.md)  
+[Deklarationen und Typen](../c-language/declarations-and-types.md)

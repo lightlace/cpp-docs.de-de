@@ -1,26 +1,16 @@
 ---
-title: 'Vorgehensweise: Organisieren von Projektausgabedateien für Builds | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Gewusst wie: Organisieren von Projektausgabedateien für Builds'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, output files
 - output files, organizing
 ms.assetid: 521d95ea-2dcc-4da0-b5eb-ac3e57941446
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f139342e7ccb264d89f9012b8177ff57260f3738
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9dd70f52c79d00282122f935b19770b973901103
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399794"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50575967"
 ---
 # <a name="how-to-organize-project-output-files-for-builds"></a>Gewusst wie: Organisieren von Projektausgabedateien für Builds
 
@@ -30,7 +20,7 @@ In diesem Thema werden empfohlene Vorgehensweisen zum Organisieren von Projektau
 
 #### <a name="to-reference-assemblies-with-using"></a>So verweisen Sie mit #using auf Assemblys
 
-1. Sie können direkt aus dem Code heraus auf eine Assembly verweisen, indem Sie eine #using-Direktive wie `#using <System.Data.dll>` verwenden. Weitere Information finden Sie unter [#using Directive (#using-Direktive)](../preprocessor/hash-using-directive-cpp.md).
+1. Sie können direkt aus dem Code heraus auf eine Assembly verweisen, indem Sie eine #using-Anweisung wie `#using <System.Data.dll>` verwenden. Weitere Information finden Sie unter [#using Directive (#using-Direktive)](../preprocessor/hash-using-directive-cpp.md).
 
    Die angegebene Datei kann eine DLL-, EXE, .NETMODULE oder OBJ-Datei sein, solange sie in MSIL ist. Die Komponente, auf die verwiesen wird, kann in einer beliebigen Sprache erstellt sein. Mit dieser Option erhalten Sie Zugriff auf IntelliSense, da die Metadaten aus MSIL extrahiert werden. Die fragliche Datei muss sich im Pfad für das Projekt befinden, ansonsten wird das Projekt nicht kompiliert, und IntelliSense ist nicht verfügbar. Eine einfache Möglichkeit zum Bestimmen, ob eine Datei sich im Pfad befindet, besteht darin, mit der rechten Maustaste auf die #using-Zeile zu klicken und den Befehl **Dokument öffnen** auszuwählen. Wenn die Datei nicht gefunden werden kann, erhalten Sie eine Benachrichtigung.
 
