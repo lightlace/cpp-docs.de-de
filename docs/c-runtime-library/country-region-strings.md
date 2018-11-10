@@ -1,29 +1,19 @@
 ---
-title: Zeichenfolgen für Länder und Regionen | Microsoft-Dokumentation
-ms.custom: ''
+title: Land/Region-Zeichenfolgen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.strings
-dev_langs:
-- C++
 helpviewer_keywords:
 - country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4e5cd978c5774a4deb8b5bb79fc2b8e59c198e45
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3a3bbe9d1278cf733bafbeb23efcb0a1ad577228
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028388"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463465"
 ---
-# <a name="countryregion-strings"></a>Country/Region Strings
+# <a name="countryregion-strings"></a>Land/Region-Zeichenfolgen
 
 Zeichenfolgen für Länder und Regionen können mit einer Sprachenzeichenfolge kombiniert werden, um eine Gebietsschemaspezifikation für die Funktionen `setlocale`, `_wsetlocale`, `_create_locale`und `_wcreate_locale` zu erstellen. Eine Liste der von den verschiedenen Windows-Betriebssystemversionen unterstützten Länder und Regionen finden Sie unter **Sprache**, **Ort** in der Spalte **Sprachtag** der Tabelle unter [Anhang A: Produktverhalten](https://msdn.microsoft.com/library/cc233982.aspx) in [MS-LCID]: Windows-Sprachcodebezeichner – Referenz. Ein Beispiel für Code, der verfügbare Gebietsschemanamen und zugehörige Werte aufzählt, finden Sie unter [NLS: Namenbasierte APIs – Beispiel](/windows/desktop/intl/nls--name-based-apis-sample).
 

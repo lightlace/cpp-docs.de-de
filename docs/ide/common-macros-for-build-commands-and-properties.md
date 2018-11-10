@@ -1,15 +1,9 @@
 ---
 title: Gängige Makros für Buildbefehle und -eigenschaften
-ms.custom: ''
 ms.date: 05/29/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
 - VC.Project.VCCLCompilerTool.XMLDocumentationFileName
-dev_langs:
-- C++
 helpviewer_keywords:
 - $(FrameworkSDKDir) macro
 - ProjectName macro $(ProjectName)
@@ -98,16 +92,12 @@ helpviewer_keywords:
 - $(PlatformName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 278cb34a49650d88b9e7de9efd8456ff430aca63
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 3ccd5b7a8fe8a04b69a963e8edc3811cc3fd2772
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569926"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50628578"
 ---
 # <a name="common-macros-for-build-commands-and-properties"></a>Gängige Makros für Buildbefehle und -eigenschaften
 
@@ -121,7 +111,7 @@ Klicken Sie auf einer beliebigen Eigenschaftenseite im Dialogfeld **Eigenschafte
 
 In dieser Tabelle wird ein Teil der häufig verwendeten verfügbaren Makros beschrieben. Diese Liste ist längst nicht vollständig. Ausführliche Informationen zum Erstellen von MSBuild-Eigenschaftsdefinitionen und wie diese als Makros in PROPS, TARGETS und VCXPROJ-Dateien verwendet werden, finden Sie unter [MSBuild-Eigenschaften](/visualstudio/msbuild/msbuild-properties).
 
-|Makro|description|
+|Makro|Beschreibung |
 |-----------|-----------------|
 |**$(Configuration)**|Der Name der aktuellen Projektkonfiguration, z.B. „Debug“.|
 |**$(DevEnvDir)**|Das Installationsverzeichnis von Visual Studio (als „Laufwerk + Pfad“ definiert). Es enthält den nachgestellten umgekehrten Schrägstrich „\\“.|
@@ -158,7 +148,7 @@ In dieser Tabelle wird ein Teil der häufig verwendeten verfügbaren Makros besc
 
 Das Buildsystem wurde zwischen Visual Studio 2008 und Visual Studio 2010 erheblich geändert. Viele Makros, die in früheren Projekttypen verwendet wurden, wurden durch neue ersetzt. Diese Makros werden nicht mehr verwendet oder wurden durch mindestens eine entsprechende Eigenschaft oder ein Makro für [Elementmetadatenwerte](/visualstudio/msbuild/itemmetadata-element-msbuild) (**%(**_name_**)**) ersetzt. Makros, die als „Migriert“ markiert sind, können mithilfe des Migrationstools für Projekte aktualisiert werden. Wenn das Projekt, das das Makro enthält, zudem von Visual Studio 2008 oder früher zu Visual Studio 2010 migriert wird, konvertiert Visual Studio das Makro in das entsprechende aktuelle Makro. Höhere Versionen von Visual Studio können Projekte von Visual Studio 2008 und früher nicht in den neuen Projekttyp konvertieren. Sie müssen diese Projekte in zwei Schritten konvertieren. Konvertieren Sie sie zunächst in Visual Studio 2010, und konvertieren Sie das Ergebnis anschließend in ihre neuere Version von Visual Studio. Weitere Informationen finden Sie in der [Übersicht über potenzielle Probleme beim Upgrade](../porting/overview-of-potential-upgrade-issues-visual-cpp.md).
 
-|Makro|description|
+|Makro|Beschreibung |
 |-----------|-----------------|
 |**$(InputDir)**|(Migriert) Das Verzeichnis der Eingabedatei (als „Laufwerk + Pfad“ definiert). Es enthält den nachgestellten umgekehrten Schrägstrich „\\“. Wenn das Projekt die Eingabe darstellt, entspricht dieses Makro **$(ProjectDir)**.|
 |**$(InputExt)**|(Migriert) Die Dateierweiterung der Eingabedatei. Sie umfasst den „.“ vor der Dateierweiterung. Wenn das Projekt die Eingabe darstellt, entspricht dieses Makro **$(ProjectExt)**. Für Quelldateien entspricht dies **%(Extension)**.|

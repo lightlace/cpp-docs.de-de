@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-ms.openlocfilehash: 4a0a0ea51cf6ac347cd79cb777f9cb6a51670063
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 326a52805cb78a3f31141d3eac6a0942a7fee477
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584625"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51264722"
 ---
 # <a name="provider-support-for-bookmarks"></a>Anbieterunterstützung für Lesezeichen
 
@@ -60,7 +60,7 @@ Sie müssen auch die Zuordnung in verknüpft die `CRowsetImpl` Klasse. -Makro Ve
 
 Behandeln Sie abschließend die `IColumnsInfo::GetColumnsInfo` aufrufen. Normalerweise würden Sie dazu die-Makros verwenden. Allerdings kann ein Consumer Lesezeichen verwenden möchten. Sie müssen möglicherweise von zum Ändern der Spalten, die der Anbieter gibt zurück, je nachdem, ob der Consumer ein Lesezeichen anfordert.
 
-Behandelt die `IColumnsInfo::GetColumnsInfo` aufrufen, löschen Sie die `PROVIDER_COLUMN` ordnen Sie in der `CTextData` Klasse. Das Makro-Makro definiert eine Funktion `GetColumnInfo`. Sie definieren müssen Ihre eigenen `GetColumnInfo` Funktion. Die Funktionsdeklaration sollte wie folgt aussehen:
+Behandelt die `IColumnsInfo::GetColumnsInfo` aufrufen, löschen Sie die PROVIDER_COLUMN-Zuordnung in der `CTextData` Klasse. Das Makro-Makro definiert eine Funktion `GetColumnInfo`. Definieren Sie eigene `GetColumnInfo` Funktion. Die Funktionsdeklaration sollte wie folgt aussehen:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -78,7 +78,7 @@ class CTextData
 };
 ```
 
-Implementieren Sie anschließend die `GetColumnInfo` -Funktion in der Datei CustomRS.cpp wie folgt:
+Implementieren Sie anschließend die `GetColumnInfo` Funktion in der *benutzerdefinierte*RS.cpp Datei wie folgt:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////
@@ -119,7 +119,6 @@ ATLCOLUMNINFO* CommonGetColInfo(IUnknown* pPropsUnk, ULONG* pcCols)
                         DBCOLUMNFLAGS_ISBOOKMARK)
          ulCols++;
       }
-
    }
 
    // Next set the other columns up.
@@ -151,9 +150,9 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 
 `GetColumnInfo` zuerst überprüft, ob eine Eigenschaft namens `DBPROP_IRowsetLocate` festgelegt ist. OLE DB verfügt über Eigenschaften für jede der optionalen Schnittstellen außerhalb der Rowset-Objekt. Wenn der Consumer eine optionale Schnittstellen verwenden möchte, legt eine Eigenschaft auf "true" fest. Der Anbieter kann Klicken Sie dann diese Eigenschaft überprüfen und spezielle darauf basierenden Maßnahmen ergreifen.
 
-In Ihrer Implementierung erhalten Sie die Eigenschaft mithilfe des Zeigers auf das Befehlsobjekt aus. Die `pThis` Zeiger darstellt, die Rowset- oder -Klasse. Da Vorlagen hier verwendet werden, müssen Sie als übergeben eine `void` Zeiger oder der Code nicht kompiliert.
+In Ihrer Implementierung erhalten Sie die Eigenschaft mithilfe des Zeigers auf das Befehlsobjekt aus. Die `pThis` Zeiger darstellt, die Rowset- oder -Klasse. Da Vorlagen hier verwendet werden, müssen Sie als übergeben eine **"void"** Zeiger oder der Code nicht kompiliert.
 
-Geben Sie ein statisches Array die Spalteninformationen enthalten. Wenn der Consumer die Lesezeichenspalte nicht möchte, wird ein Eintrag im Array verschwendet. Sie können dieses Array dynamisch zuordnen, aber Sie müssen sicherstellen, dass es ordnungsgemäß zerstört. In diesem Beispiel definiert und verwendet die Makros ADD_COLUMN_ENTRY und ADD_COLUMN_ENTRY_EX, die Informationen in das Array eingefügt werden. Sie können die Makros, die in die Datei CustomRS.H, wie im folgenden Code gezeigt hinzufügen:
+Geben Sie ein statisches Array zum Speichern der Spalteninformationen. Wenn der Consumer die Lesezeichenspalte nicht möchte, wird ein Eintrag im Array verschwendet. Sie können dieses Array dynamisch zuordnen, aber Sie müssen sicherstellen, dass es ordnungsgemäß zerstört. In diesem Beispiel definiert und verwendet die Makros ADD_COLUMN_ENTRY und ADD_COLUMN_ENTRY_EX, die Informationen in das Array eingefügt werden. Sie können die Makros hinzufügen, die *benutzerdefinierte*RS. H-Datei wie im folgenden Code gezeigt:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -236,9 +235,9 @@ HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,
 }
 ```
 
-Die **während** Schleife enthält Code zum Aufrufen der `Compare` -Methode in der die `IRowsetLocate` Schnittstelle. Der Code, was man sollte immer übergeben werden, da Sie exakten dieselben Lesezeichen vergleichen. Darüber hinaus ein Lesezeichen in einer temporären Variablen gespeichert werden, damit Sie ihn nach dem verwenden können die **während** Schleife abgeschlossen ist, rufen Sie die `MoveToBookmark` -Funktion in die Consumervorlagen. Die `MoveToBookmark` Funktionsaufrufe der `GetRowsAt` -Methode in der `IRowsetLocate`.
+Die **während** Schleife enthält Code zum Aufrufen der `Compare` -Methode in der die `IRowsetLocate` Schnittstelle. Der Code, was man sollte immer übergeben werden, da Sie exakt gleichen Lesezeichen verglichen werden. Darüber hinaus ein Lesezeichen in einer temporären Variablen gespeichert werden, damit Sie ihn nach dem verwenden können die **während** Schleife abgeschlossen ist, rufen Sie die `MoveToBookmark` -Funktion in die Consumervorlagen. Die `MoveToBookmark` Funktionsaufrufe der `GetRowsAt` -Methode in der `IRowsetLocate`.
 
-Sie müssen auch den Benutzerdatensatz im Consumer zu aktualisieren. Fügen Sie einen Eintrag in der Klasse, behandeln ein Lesezeichen und ein Eintrag in der `COLUMN_MAP`:
+Sie müssen auch den Benutzerdatensatz im Consumer zu aktualisieren. Fügen Sie einen Eintrag in der Klasse, ein Lesezeichen und ein Eintrag im COLUMN_MAP behandeln:
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////
