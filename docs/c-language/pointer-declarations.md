@@ -1,28 +1,18 @@
 ---
-title: Zeigerdeklarationen | Microsoft-Dokumentation
-ms.custom: ''
+title: Zeigerdeklarationen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - pointer declarations
 - declarations, pointers
 - const keyword [C]
 - pointers, declarations
 ms.assetid: 8b3b7fc7-f44d-480d-b6f9-cebe4e5462a6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2870b2958f2e18b711ea568fdda2ae01d41e37f6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c09e73eec0f020ccc334d443248feb09631a0f7f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752722"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432467"
 ---
 # <a name="pointer-declarations"></a>Zeigerdeklarationen
 
@@ -59,6 +49,7 @@ Der *Deklarator* benennt die Variable und kann einen Typmodifizierer enthalten. 
 Sie können einen Zeiger auf einen Struktur-, Union- oder Enumerationstyp deklarieren, bevor Sie den Struktur-, Union- oder Enumerationstyp definieren. Sie deklarieren den Zeiger, indem Sie das Struktur- oder Uniontag wie in den Beispielen unten verwenden. Derartige Deklarationen sind zulässig, da dem Compiler die Größe der Struktur oder Union nicht bekannt sein muss, um Speicherplatz für die Zeigervariable zuzuweisen.
 
 ## <a name="examples"></a>Beispiele
+
 Die folgenden Beispiele veranschaulichen Zeigerdeklarationen.
 
 ```

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE DB provider templates, notifications
 - OLE DB providers, notifications
 ms.assetid: 76e875fd-2bfd-4e4e-9f43-dbe5a3fa7382
-ms.openlocfilehash: 92af327ee69de73697464de59e8c29bdd971b46d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2e5327f2197a1d48542ad5f7a615294a915948f5
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616553"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265021"
 ---
 # <a name="supporting-notifications"></a>Unterstützen von Benachrichtigungen
 
@@ -24,9 +24,9 @@ Um Benachrichtigungen zu implementieren, muss von eine Klasse erben [IRowsetNoti
 
 `IRowsetNotifyCP` die Website für die Verbindungspunkt-Schnittstelle implementiert [IRowsetNotify](/previous-versions/windows/desktop/ms712959). `IRowsetNotifyCP` broadcast-implementiert Funktionen, um den Listener auf dem Verbindungspunkt empfehlen `IID_IRowsetNotify` von Änderungen an den Inhalt des Rowsets.
 
-Beachten Sie, dass Sie auch implementieren registrieren müssen `IRowsetNotify` vom Consumer (auch bekannt als die Senke) mit [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) , damit der Consumer mit Benachrichtigungen behandeln kann. Informationen zur Implementierung der vom Consumer der Verbindungspunkt-Schnittstelle finden Sie unter [empfangen von Benachrichtigungen](../../data/oledb/receiving-notifications.md).
+Müssen Sie auch implementieren und registrieren Sie `IRowsetNotify` vom Consumer (auch bekannt als die Senke) mit [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) , damit der Consumer mit Benachrichtigungen behandeln kann. Informationen zur Implementierung der vom Consumer der Verbindungspunkt-Schnittstelle finden Sie unter [empfangen von Benachrichtigungen](../../data/oledb/receiving-notifications.md).
 
-Darüber hinaus muss die Klasse auch eine Zuordnung enthalten, die der Verbindung des Punkt-Eintrag wie folgt definiert:
+Darüber hinaus muss die Klasse eine Zuordnung verfügen, die der Verbindung des Punkt-Eintrag wie folgt definiert:
 
 ```cpp
 BEGIN_CONNECTION_POINT_MAP
@@ -85,21 +85,21 @@ Sie müssen auch die folgenden Eigenschaften an Ihren Anbieter hinzufügen. Sie 
 
 |Eigenschaft|Bei Unterstützung hinzufügen|
 |--------------|------------------------|
-|`DBPROP_IConnectionPointContainer`|Immer|
-|`DBPROP_NOTIFICATIONGRANULARITY`|Immer|
-|`DBPROP_NOTIFICATIONPHASES`|Immer|
-|`DBPROP_NOTIFYCOLUMNSET`|`IRowsetChange`|
-|`DBPROP_NOTIFYROWDELETE`|`IRowsetChange`|
-|`DBPROP_NOTIFYROWINSERT`|`IRowsetChange`|
-|`DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE`|Immer|
-|`DBPROP_NOTIFYROWFIRSTCHANGE`|`IRowsetUpdate`|
-|`DBPROP_NOTIFYROWSETRELEASE`|Immer|
-|`DBPROP_NOTIFYROWUNDOCHANGE`|`IRowsetUpdate`|
-|`DBPROP_NOTIFYROWUNDODELETE`|`IRowsetUpdate`|
-|`DBPROP_NOTIFYROWUNDOINSERT`|`IRowsetUpdate`|
-|`DBPROP_NOTIFYROWUPDATE`|`IRowsetUpdate`|
+|DBPROP_IConnectionPointContainer|Immer|
+|DBPROP_NOTIFICATIONGRANULARITY|Immer|
+|DBPROP_NOTIFICATIONPHASES|Immer|
+|DBPROP_NOTIFYCOLUMNSET|`IRowsetChange`|
+|DBPROP_NOTIFYROWDELETE|`IRowsetChange`|
+|DBPROP_NOTIFYROWINSERT|`IRowsetChange`|
+|DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE|Immer|
+|DBPROP_NOTIFYROWFIRSTCHANGE|`IRowsetUpdate`|
+|DBPROP_NOTIFYROWSETRELEASE|Immer|
+|DBPROP_NOTIFYROWUNDOCHANGE|`IRowsetUpdate`|
+|DBPROP_NOTIFYROWUNDODELETE|`IRowsetUpdate`|
+|DBPROP_NOTIFYROWUNDOINSERT|`IRowsetUpdate`|
+|DBPROP_NOTIFYROWUPDATE|`IRowsetUpdate`|
 
-Den größten Teil der Implementierung für die Benachrichtigungen ist bereits in der OLE DB-Anbietervorlagen eingebettet. Wenn Sie keine hinzufügen `IRowsetNotifyCP` der Vererbungskette der Compiler, diesen gesamten Code aus Ihrem Kompilierung-Datenstrom, wodurch Ihr Code Codegröße entfernt.
+Den größten Teil der Implementierung für die Benachrichtigungen ist bereits in der OLE DB-Anbietervorlagen eingebettet. Wenn Sie nicht `IRowsetNotifyCP` der Vererbungskette der Compiler, diesen gesamten Code aus Ihrem Kompilierung-Datenstrom, wodurch Ihr Code Codegröße entfernt.
 
 ## <a name="see-also"></a>Siehe auch
 

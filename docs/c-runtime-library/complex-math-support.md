@@ -1,28 +1,18 @@
 ---
-title: C-Unterstützung für komplexe Mathematik| Microsoft-Dokumentation
-ms.custom: ''
+title: C-Unterstützung für komplexe Mathematik
 ms.date: 03/30/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.complex
-dev_langs:
-- C++
 helpviewer_keywords:
 - complex numbers, math routines
 - math routines
 - complex numbers
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 661e1367ea64713cf7a143f276cd195d54fecf85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 12ba858993d3712cbf390288df60faedc602c90a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392077"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452610"
 ---
 # <a name="c-complex-math-support"></a>C-Unterstützung für komplexe Mathematik
 
@@ -50,7 +40,7 @@ Der Header „math.h“ definiert einen separaten Typ, **struct _complex**, der 
 
 ## <a name="trigonometric-functions"></a>Trigonometrische Funktionen
 
-|Funktion|description|
+|Funktion|Beschreibung |
 |-|-|
 |[cacos, cacosf, cacosl](../c-runtime-library/reference/cacos-cacosf-cacosl.md)|Berechnen des komplexen Arcuscosinuswerts einer komplexen Zahl|
 |[casin, casinf, casinl](../c-runtime-library/reference/casin-casinf-casinl.md)|Berechnen des komplexen Arcussinuswerts einer komplexen Zahl|
@@ -61,7 +51,7 @@ Der Header „math.h“ definiert einen separaten Typ, **struct _complex**, der 
 
 ## <a name="hyperbolic-functions"></a>Hyperbolische Funktionen
 
-|Funktion|description|
+|Funktion|Beschreibung |
 |-|-|
 |[cacosh, cacoshf, cacoshl](../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)|Berechnen des komplexen hyperbolischen Arcuscosinuswerts einer komplexen Zahl|
 |[casinh, casinhf, casinhl](../c-runtime-library/reference/casinh-casinhf-casinhl.md)|Berechnen des komplexen hyperbolischen Arcussinuswerts einer komplexen Zahl|
@@ -72,7 +62,7 @@ Der Header „math.h“ definiert einen separaten Typ, **struct _complex**, der 
 
 ## <a name="exponential-and-logarithmic-functions"></a>Exponentielle und logarithmische Funktionen
 
-|Funktion|description|
+|Funktion|Beschreibung |
 |-|-|
 |[cexp, cexpf, cexpl](../c-runtime-library/reference/cexp-cexpf-cexpl.md)|Berechnen der Exponentialzahl zur Basis *e* einer komplexen Zahl|
 |[clog, clogf, clogl](../c-runtime-library/reference/clog-clogf-clogl.md)|Berechnen des natürlichen Logarithmus zur Basis *e* einer komplexen Zahl|
@@ -80,7 +70,7 @@ Der Header „math.h“ definiert einen separaten Typ, **struct _complex**, der 
 
 ## <a name="power-and-absolute-value-functions"></a>Potenzfunktionen und Absolutwertfunktionen
 
-|Funktion|description|
+|Funktion|Beschreibung |
 |-|-|
 |[cabs, cabsf, cabsl](../c-runtime-library/reference/cabs-cabsf-cabsl.md)|Berechnen des komplexen Absolutwerts (auch Norm, Modulo oder Größe genannt) für eine komplexe Zahl|
 |[cpow, cpowf, cpowl](../c-runtime-library/reference/cpow-cpowf-cpowl.md)|Berechnen der komplexen Potenzfunktion x<sup>y</sup>|
@@ -88,7 +78,7 @@ Der Header „math.h“ definiert einen separaten Typ, **struct _complex**, der 
 
 ## <a name="manipulation-functions"></a>Bearbeitungsfunktionen
 
-|Funktion|description|
+|Funktion|Beschreibung |
 |-|-|
 |[_Cbuild, _FCbuild, _LCbuild](../c-runtime-library/reference/cbuild-fcbuild-lcbuild.md)|Erstellen einer komplexen Zahl aus realen und nicht realen Teilen|
 |[carg, cargf, cargl](../c-runtime-library/reference/carg-cargf-cargl.md)|Berechnen des Arguments (also des Phasenwinkels) einer komplexen Zahl|
@@ -102,7 +92,7 @@ Der Header „math.h“ definiert einen separaten Typ, **struct _complex**, der 
 
 Da komplexe Zahlen keinen nativen Typ im Microsoft-Compiler darstellen, werden die arithmetischen Standardoperatoren nicht für komplexe Typen definiert. Der Einfachheit halber werden diese komplexen mathematischen Bibliotheksfunktionen bereitgestellt, um die beschränkte Bearbeitung komplexer Zahlen im Benutzercode zu ermöglichen:
 
-|Funktion|description|
+|Funktion|Beschreibung |
 |-|-|
 |[_Cmulcc, _FCmulcc, _LCmulcc](../c-runtime-library/reference/cmulcc-fcmulcc-lcmulcc.md)|Addition zweier komplexer Zahlen|
 |[_Cmulcr, _FCmulcr, _LCmulcr](../c-runtime-library/reference/cmulcr-fcmulcr-lcmulcr.md)|Multiplikation einer komplexe Zahl und einer Gleitkommazahl|

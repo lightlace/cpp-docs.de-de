@@ -1,29 +1,19 @@
 ---
-title: Linkereigenschaften (Linux C++) | Microsoft Docs
-ms.custom: ''
+title: Linkereigenschaften (Linux C++)
 ms.date: 9/26/2017
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 9187222d2ced21ece2f183655591c483abc8d500
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db2fc37189ca05835888faed26b242abc0fe5fcb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333104"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580673"
 ---
 # <a name="linker-properties-linux-c"></a>Linkereigenschaften (Linux C++)
 
 ## <a name="general"></a>Allgemein
 
-Eigenschaft | description | Auswahlmöglichkeiten
+Eigenschaft | Beschreibung  | Auswahlmöglichkeiten
 --- | ---| ---
 Ausgabedatei | Die Option überschreibt den Standardnamen und den Speicherort des Programms, das der Linker erstellt. (-o)
 Status anzeigen | Gibt Linkerstatusmeldungen aus.
@@ -42,7 +32,7 @@ Ausgabe kopieren | Gibt an, ob die Buildausgabedatei vom Remotesystem auf den lo
 
 ## <a name="input"></a>Eingabe
 
-Eigenschaft | description | Auswahlmöglichkeiten
+Eigenschaft | Beschreibung  | Auswahlmöglichkeiten
 --- | ---| ---
 Bestimmte Standardbibliotheken ignorieren | Gibt einen oder mehrere Namen der zu ignorierenden Standardbibliotheken an. (--exclude-libs lib,lib)
 Standardbibliotheken ignorieren | Ignoriert Standardbibliotheken und sucht nur nach explizit angegebenen Bibliotheken.
@@ -52,14 +42,14 @@ Zusätzliche Abhängigkeiten | Gibt zusätzliche Elemente an, die der Linkerbefe
 
 ## <a name="debugging"></a>Debuggen
 
-Eigenschaft | description | Auswahlmöglichkeiten
+Eigenschaft | Beschreibung  | Auswahlmöglichkeiten
 --- | ---| ---
 Debuggersymbolinformationen | Debuggersymbolinformationen aus der Ausgabedatei. | **Alle einschließen**<br>**Nur Debuggersymbolinformationen auslassen**<br>**Alle Symbolinformationen auslassen**<br>
 Name der Zuordnungsdatei | Die Option Map weist den Linker an, eine Zuordnungsdatei mit dem vom Benutzer angegebenen Namen zu erstellen. (-Map=)
 
 ## <a name="advanced"></a>Erweitert
 
-Eigenschaft | description | Auswahlmöglichkeiten
+Eigenschaft | Beschreibung  | Auswahlmöglichkeiten
 --- | ---| ---
 Variablen nach dem Umsetzen als ReadOnly kennzeichnen | Diese Option kennzeichnet Variablen nach dem Umsetzen als schreibgeschützt.
 Sofortige Funktionsbindung aktivieren | Diese Option kennzeichnet das Objekt für sofortige Funktionsbindung.

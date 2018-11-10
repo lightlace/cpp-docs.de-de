@@ -1,12 +1,6 @@
 ---
-title: Visual C++-Projekttypen | Microsoft-Dokumentation
-ms.custom: ''
+title: Visual C++-Projekttypen
 ms.date: 10/30/2017
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - programs [C++], projects
 - project templates [Visual Studio], C++
@@ -16,20 +10,16 @@ helpviewer_keywords:
 - applications [C++], projects
 - Visual C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 45b62d5ce8f49b023721cf7323dc42e1c65c2109
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 456fdb5ec2025b3085332eced3a0c7f33e117918
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396687"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658015"
 ---
 # <a name="visual-c-project-types"></a>Visual C++-Projekttypen
 
-Sie können eine Projektvorlage verwenden, um eine grundlegende Programmstruktur, Menüs, Symbolleisten, Symbole, Verweise und `#include` -Anweisungen zu erstellen, die für das gewünschte Projekt angemessen sind. Visual Studio umfasst verschiedene Arten von Visual C++-Projektvorlagen und bietet für viele von ihnen Assistenten, sodass Sie Ihre Projekte beim Erstellen anpassen können. Sie können die Anwendung unmittelbar nach dem Erstellen eines Projekts erstellen und ausführen. Es ist empfehlenswert, den Buildprozess in Abständen durchzuführen, während Sie Ihre Anwendung entwickeln.
+Sie können eine Projektvorlage verwenden, um eine grundlegende Programmstruktur, Menüs, Symbolleisten, Symbole, Verweise und `#include`-Anweisungen zu erstellen, die für das gewünschte Projekt angemessen sind. Visual Studio umfasst verschiedene Arten von Visual C++-Projektvorlagen und bietet für viele von ihnen Assistenten, sodass Sie Ihre Projekte beim Erstellen anpassen können. Sie können die Anwendung unmittelbar nach dem Erstellen eines Projekts erstellen und ausführen. Es ist empfehlenswert, den Buildprozess in Abständen durchzuführen, während Sie Ihre Anwendung entwickeln.
 
 Sie müssen keine Vorlage verwenden, um ein Projekt zu erstellen, doch in den meisten Fällen ist es effizienter dies zu tun, da es einfacher ist, die bereitgestellten Projektdateien und die Struktur zu ändern, anstatt sie von Grund auf neu zu erstellen.
 
