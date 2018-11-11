@@ -8,12 +8,12 @@ helpviewer_keywords:
 - conformance testing [OLE DB]
 - OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
-ms.openlocfilehash: f7c5435003866e2c3490bd07e28ec10eca0ec0cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7365176df314baf40ac1cc1ed53936598f05c79e
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491714"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265073"
 ---
 # <a name="passing-ole-db-conformance-tests"></a>Erfolgreiche Durchführung der OLE DB-Konformitätstests
 
@@ -26,7 +26,7 @@ In Visual C++ 6.0 hinzugefügt, die OLE DB-Anbietervorlagen eine Reihe von hooki
 > [!NOTE]
 > Sie müssen mehrere Validierungsfunktionen für Ihren Anbieter, um die OLE DB-Konformitätstests besteht hinzufügen.
 
-Der Anbieter erfordert zwei Überprüfungsroutinen. Die erste Routine, `CRowsetImpl::ValidateCommandID`, ist Teil der Rowsetklasse. Es wird während der Erstellung des Rowsets von die Anbietervorlagen aufgerufen werden. Das Beispiel verwendet diese Routine, um Consumern mitzuteilen, dass sie die Indizes nicht unterstützt. Der erste Aufruf `CRowsetImpl::ValidateCommandID` (Beachten Sie, die der Anbieter verwendet die `_RowsetBaseClass` Typedef, die hinzugefügt werden, in die schnittstellenzuordnung für `CCustomRowset` in [Anbieterunterstützung für Lesezeichen](../../data/oledb/provider-support-for-bookmarks.md), sodass Sie nicht, lange Zeile in der Vorlage eingeben (Argumente). Als Nächstes DB_E_NOINDEX zurückgegeben, wenn der Indexparameter nicht NULL ist (das heißt, möchte, dass der Consumer einen Index verwenden). Weitere Informationen zu den Befehls-IDs finden Sie in der OLE DB-Spezifikation, und suchen Sie nach `IOpenRowset::OpenRowset`.
+Der Anbieter erfordert zwei Überprüfungsroutinen. Die erste Routine, `CRowsetImpl::ValidateCommandID`, ist Teil der Rowsetklasse. Es wird während der Erstellung des Rowsets von die Anbietervorlagen aufgerufen werden. Das Beispiel verwendet diese Routine, um Consumern mitzuteilen, dass sie die Indizes nicht unterstützt. Der erste Aufruf `CRowsetImpl::ValidateCommandID` (Beachten Sie, die der Anbieter verwendet die `_RowsetBaseClass` Typedef, die hinzugefügt werden, in die schnittstellenzuordnung für `CCustomRowset` in [Anbieterunterstützung für Lesezeichen](../../data/oledb/provider-support-for-bookmarks.md), sodass Sie keine, lange Zeile in der Vorlage eingeben (Argumente). Als Nächstes zurückgegeben Sie DB_E_NOINDEX, wenn der Indexparameter nicht NULL ist, (was darauf hinweist, dass der Consumer einen Index verwenden möchte). Weitere Informationen zu den Befehls-IDs finden Sie in der OLE DB-Spezifikation, und suchen Sie nach `IOpenRowset::OpenRowset`.
 
 Der folgende Code ist die `ValidateCommandID` Validierungsroutine:
 
@@ -48,9 +48,9 @@ HRESULT ValidateCommandID(DBID* pTableID, DBID* pIndexID)
 }
 ```
 
-Die Anbietervorlagen rufen die `OnPropertyChanged` -Methode auf, wenn jemand auf eine Eigenschaft ändert die `DBPROPSET_ROWSET` Gruppe. Sollten Sie die Eigenschaften für andere Gruppen zu behandeln, fügen Sie sie in das entsprechende Objekt (d. h. `DBPROPSET_SESSION` Überprüfungen wechseln Sie der `CCustomSession` Klasse).
+Die Anbietervorlagen rufen die `OnPropertyChanged` -Methode auf, wenn jemand eine Eigenschaft in der DBPROPSET_ROWSET-Gruppe ändert. Sollten Sie die Eigenschaften für andere Gruppen zu behandeln, fügen Sie sie in das entsprechende Objekt (DBPROPSET_SESSION-Überprüfungen, also zu wechseln, der `CCustomSession` Klasse).
 
-Der Code überprüft zuerst, um festzustellen, ob die Eigenschaft auf einen anderen verknüpft ist. Wenn die Eigenschaft verkettet ist, wird die `DBPROP_BOOKMARKS` Eigenschaft `True`. Anhang C der OLE DB-Spezifikation enthält Informationen zu Eigenschaften. Diese Informationen darüber hinaus erfahren Sie, ob die Eigenschaft auf einen anderen verkettet ist.
+Der Code überprüft zuerst, um festzustellen, ob die Eigenschaft auf einen anderen verknüpft ist. Wenn die Eigenschaft verkettet ist, wird die Eigenschaft DBPROP_BOOKMARKS auf `True`. Anhang C der OLE DB-Spezifikation enthält Informationen zu Eigenschaften. Diese Informationen darüber hinaus erfahren Sie, ob die Eigenschaft auf einen anderen verkettet ist.
 
 Sie können auch hinzufügen möchten die `IsValidValue` routinemäßige an Ihrem Code. Der Aufruf Vorlagen `IsValidValue` beim Versuch, eine Eigenschaft festzulegen. Sie würden diese Methode überschreiben, wenn eine zusätzliche Verarbeitung erforderlich ist, wenn Sie einen Eigenschaftswert festlegen. Sie können eine dieser Methoden für jeden Eigenschaftensatz verwenden.
 
