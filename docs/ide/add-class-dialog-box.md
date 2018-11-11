@@ -1,27 +1,17 @@
 ---
-title: Klasse hinzufügen (Dialogfeld) | Microsoft-Dokumentation
-ms.custom: ''
+title: Klasse hinzufügen (Dialogfeld)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - vc.addclass
-dev_langs:
-- C++
 helpviewer_keywords:
 - Add Class dialog box
 ms.assetid: 916259b8-8e5f-4267-bd10-313483beba67
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f1eb848ae20ba9a587bfdf14881e1a3df3bbeb31
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 405f88f7f77ea75584ec3cfd76af1ea9a0457ed6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420282"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643195"
 ---
 # <a name="add-class-dialog-box"></a>Klasse hinzufügen (Dialogfeld)
 
@@ -33,7 +23,7 @@ Das Dialogfeld **Klasse hinzufügen** enthält Vorlagen, die Ihnen folgende Mög
 
 - Erstellen Sie die neue Klasse automatisch durch Hinzufügen der entsprechenden Dateien und des Quellcodes zum Projekt.
 
-Sie können über das Menü **Projekt**, den **Projektmappen-Explorer** oder die [Klassenansicht](/visualstudio/ide/viewing-the-structure-of-code) auf das Dialogfeld **Klasse hinzufügen** zugreifen.
+Sie können auf das Dialogfeld **Klasse hinzufügen** über das Menü **Projekt** , den **Projektmappen-Explorer**oder die [Klassenansicht](/visualstudio/ide/viewing-the-structure-of-code)zugreifen.
 
 > [!NOTE]
 >  Wenn Sie versuchen, eine Klasse hinzuzufügen, die für das aktuelle Projekt nicht geeignet ist, erhalten Sie eine Fehlermeldung. Klicken Sie auf **OK** , um zum Dialogfeld **Klasse hinzufügen** zurückzukehren.

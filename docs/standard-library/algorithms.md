@@ -1,12 +1,6 @@
 ---
-title: Algorithmen | Microsoft-Dokumentation
-ms.custom: ''
+title: Algorithmen
 ms.date: 10/18/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - libraries [C++], C++ algorithm conventions
 - algorithms [C++], C++
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0388a3c21fec2d902b74856e4a0ca596b4b3bcca
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: a0a1165d731e44568d530e3ed919d73e2a3e8e5e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50063021"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648027"
 ---
 # <a name="algorithms"></a>Algorithmen
 
@@ -35,7 +25,7 @@ Die Beschreibungen der Algorithmusvorlagenfunktionen verwenden einige Kurznotati
 
 - Der Ausdruck "im Bereich von \[ *ein*, *B*)" bezeichnet eine Sequenz von keinem oder mehreren diskreten Werten beginnend mit *ein* bis, jedoch nicht einschließlich *B* . Ein Bereich gilt nur, wenn *B* aus erreichbar ist *A;* können Sie speichern *ein* in einem Objekt *N* (*N*  =  *Ein*), erhöhen Sie das Objekt NULL oder mehr Vorkommen (++*N*), und dass das Objekt, das mit gleich *B* nach einer endlichen Anzahl von Schritten (*N*   ==  *B*).
 
-- Der Ausdruck "jedes *N* im Bereich von \[ *ein*, *B*)" bedeutet, dass *N* beginnt mit dem Wert *eine*und erhöht wird, NULL oder mehrmals, bis es gleich dem Wert *B*. Der Fall N** == B* ist nicht im Bereich.
+- Der Ausdruck "jedes *N* im Bereich von \[ *ein*, *B*)" bedeutet, dass *N* beginnt mit dem Wert *eine*und erhöht wird, NULL oder mehrmals, bis es gleich dem Wert *B*. Der Fall N* == *B* ist nicht im Bereich.
 
 - Der Ausdruck "der niedrigste Wert der *N* im Bereich von \[ *ein*, *B*) so, dass *X*" bedeutet, dass die Bedingung *X* wird bestimmt, für die einzelnen *N* im Bereich von \[ *ein*, *B*) bis die Bedingung *X*erfüllt ist.
 
