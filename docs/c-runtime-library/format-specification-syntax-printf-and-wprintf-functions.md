@@ -1,12 +1,6 @@
 ---
-title: 'Syntax der Formatangabe: printf - und wprintf-Funktionen | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Syntax der Formatangabe: printf- und wprintf-Funktionen'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - format specification fields for printf function
 - printf function format specification fields
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6253b52d322982efe8beafc45c9942fb3787818a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cb7d99077a082323a6662d29c0386cd1d416297c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082494"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665334"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Syntax der Formatangabe: printf- und wprintf-Funktionen
 
@@ -70,7 +60,7 @@ Ganzzahlige Typen wie `short`, `int`, `long`, `long long` und ihre `unsigned`-Va
 |**i**|Ganze Zahl|Ganze Dezimalzahl mit Vorzeichen|
 |**o**|Ganze Zahl|Oktale ganze Zahl ohne Vorzeichen|
 |**n**|Ganze Zahl|Ganze Dezimalzahl ohne Vorzeichen|
-|**x**|Ganze Zahl|Ganze Hexadezimalzahl ohne Vorzeichen; verwendet „abcdef“.|
+|**w**|Ganze Zahl|Ganze Hexadezimalzahl ohne Vorzeichen; verwendet „abcdef“.|
 |**X**|Ganze Zahl|Ganze Hexadezimalzahl ohne Vorzeichen; verwendet „ABCDEF“.|
 |**e**|Gleitkomma|Ein Wert mit Vorzeichen im Format [–]*d.dddd*__e±__*dd*[*d*], wobei *d* eine Dezimalzahl ist, *dddd* eine oder mehrere Dezimalstellen sind, je nach angegebener Präzision, oder standardmäßig sechs. *dd*[*d*] stellt zwei oder drei Dezimalstellen dar, je nach [Ausgabeformat](../c-runtime-library/set-output-format.md) und Exponentengröße.|
 |**E**|Gleitkomma|Identisch mit dem **e**-Format mit der Ausnahme, dass **E** anstelle von **e** den Exponenten einführt.|
@@ -88,7 +78,7 @@ Ganzzahlige Typen wie `short`, `int`, `long`, `long long` und ihre `unsigned`-Va
 
 Ab Visual Studio 2015 entspricht die formatierte Ausgabe dem C99-Standard, wenn das Argument, das einem Gleitkomma-Konvertierungsspezifizierer (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) entspricht, unendlich, unbestimmt oder NaN ist. In dieser Tabelle ist die formatierte Ausgabe aufgeführt:
 
-|Wert|Ausgabe|
+|Wert|Output|
 |-----------|------------|
 |infinity|`inf`|
 |Stiller NaN|`nan`|
@@ -99,7 +89,7 @@ All diesen Werten kann ein Vorzeichen vorangestellt werden. Wenn ein Gleitkomma-
 
 Vor Visual Studio 2015 verwendete die CRT ein anderes, Nicht-Standard-Format für die Ausgabe von unendlichen, unbestimmten oder NaN-Werten:
 
-|Wert|Ausgabe|
+|Wert|Output|
 |-----------|------------|
 |+unendlich|`1.#INF` *random-digits*|
 |- infinity|`-1.#INF` *random-digits*|
