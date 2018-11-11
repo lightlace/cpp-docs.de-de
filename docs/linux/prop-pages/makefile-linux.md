@@ -1,23 +1,13 @@
 ---
 title: Allgemeine Eigenschaften (Linux C++ Makefile-Projekt) | Microsoft Docs
-ms.custom: ''
 ms.date: 9/26/2017
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: 3dec6853-43f6-412b-9806-9bfad333a204
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 6fb23d2c7275788b05fe4450613770c268ca6c64
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: fb742d552d0b70ba5f5c406dd43bdf4cf8d1914b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705698"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524591"
 ---
 # <a name="makefile-project-properties-linux-c"></a>MakeFile-Projekteigenschaften (Linux C++)
 
@@ -25,7 +15,7 @@ Dies ist eine unvollständige Liste der Eigenschaften, dir in einem Linux Makefi
 
 ## <a name="general"></a>Allgemein
 
-Eigenschaft | description | Auswahlmöglichkeiten
+Eigenschaft | Beschreibung  | Auswahlmöglichkeiten
 --- | ---| ---
 Ausgabeverzeichnis | Gibt einen relativen Pfad zum Ausgabedateiverzeichnis an. Kann Umgebungsvariablen enthalten.
 Zwischenverzeichnis | Gibt einen relativen Pfad zum Zwischendateiverzeichnis an. Kann Umgebungsvariablen enthalten.
@@ -47,37 +37,37 @@ Siehe [Kopieren von Quellprojekteigenschaften (Linux C++)](copy-sources-project.
 
 ### <a name="pre-build-event"></a>Präbuildereignis
 
-Eigenschaft | description
+Eigenschaft | Beschreibung 
 --- | ---
 Befehlszeile | Gibt eine Befehlszeile für das auszuführende Präbuildereignis-Tool an.
-description | Gibt eine Beschreibung für das anzuzeigende Präbuildereignis-Tool an.
+Beschreibung  | Gibt eine Beschreibung für das anzuzeigende Präbuildereignis-Tool an.
 In Build verwenden | Gibt an, ob dieses Buildereignis aus dem Build für die aktuelle Konfiguration ausgeschlossen wird.
 Zusätzliche zu kopierende Dateien | Gibt zusätzliche Dateien an, die auf das Remotesystem kopiert werden sollen. Optional kann die Liste als Zuordnungspaare zwischen lokal und remote mit der folgenden Syntax bereitgestellt werden: fulllocalpath1:=fullremotepath1;fulllocalpath2:=fullremotepath2. Dabei kann eine lokale Datei an den angegebenen Remotespeicherort auf dem Remotesystem kopiert werden.
 
 ### <a name="post-build-event"></a>Postbuildereignis
 
-Eigenschaft | description
+Eigenschaft | Beschreibung 
 --- | ---
 Befehlszeile | Gibt eine Befehlszeile für das auszuführende Postbuildereignis-Tool an.
-description | Gibt eine Beschreibung für das anzuzeigende Postbuildereignis-Tool an.
+Beschreibung  | Gibt eine Beschreibung für das anzuzeigende Postbuildereignis-Tool an.
 In Build verwenden | Gibt an, ob dieses Buildereignis aus dem Build für die aktuelle Konfiguration ausgeschlossen wird.
 Zusätzliche zu kopierende Dateien | Gibt zusätzliche Dateien an, die auf das Remotesystem kopiert werden sollen. Optional kann die Liste als Zuordnungspaare zwischen lokal und remote mit der folgenden Syntax bereitgestellt werden: fulllocalpath1:=fullremotepath1;fulllocalpath2:=fullremotepath2. Dabei kann eine lokale Datei an den angegebenen Remotespeicherort auf dem Remotesystem kopiert werden.
 
 ### <a name="remote-pre-build-event"></a>Remote-Präbuildereignis
 
-Eigenschaft | description
+Eigenschaft | Beschreibung 
 --- | ---
 Befehlszeile | Gibt eine Befehlszeile für das auf dem Remotesystem auszuführende Präbuildereignis-Tool an.
-description | Gibt eine Beschreibung für das anzuzeigende Präbuildereignis-Tool an.
+Beschreibung  | Gibt eine Beschreibung für das anzuzeigende Präbuildereignis-Tool an.
 In Build verwenden | Gibt an, ob dieses Buildereignis aus dem Build für die aktuelle Konfiguration ausgeschlossen wird.
 Zusätzliche zu kopierende Dateien | Gibt zusätzliche Dateien an, die vom Remotesystem kopiert werden sollen. Optional kann die Liste als Zuordnungspaare zwischen remote und lokal mit der folgenden Syntax bereitgestellt werden: fullremotepath1:=fulllocalpath1;fullremotepath2:=fulllocalpath2. Dabei kann eine Remotedatei an den angegebenen Speicherort auf dem lokalen Computer kopiert werden.
 
 ### <a name="remote-post-build-event"></a>Remote-Postbuildereignis
 
-Eigenschaft | description
+Eigenschaft | Beschreibung 
 --- | ---
 Befehlszeile | Gibt eine Befehlszeile für das auf dem Remotesystem auszuführende Postbuildereignis-Tool an.
-description | Gibt eine Beschreibung für das anzuzeigende Postbuildereignis-Tool an.
+Beschreibung  | Gibt eine Beschreibung für das anzuzeigende Postbuildereignis-Tool an.
 In Build verwenden | Gibt an, ob dieses Buildereignis aus dem Build für die aktuelle Konfiguration ausgeschlossen wird.
 Zusätzliche zu kopierende Dateien | Gibt zusätzliche Dateien an, die vom Remotesystem kopiert werden sollen. Optional kann die Liste als Zuordnungspaare zwischen remote und lokal mit der folgenden Syntax bereitgestellt werden: fullremotepath1:=fulllocalpath1;fullremotepath2:=fulllocalpath2. Dabei kann eine Remotedatei an den angegebenen Speicherort auf dem lokalen Computer kopiert werden.
 
@@ -87,7 +77,7 @@ Zusätzliche zu kopierende Dateien | Gibt zusätzliche Dateien an, die vom Remot
 
 Die IntelliSense-Eigenschaften können auf Projekt- oder Dateiebene festgelegt werden, um Hinweise für die IntelliSense-Engine bereitzustellen. Sie wirken sich nicht auf die Kompilierung aus.
 
-Eigenschaft | description
+Eigenschaft | Beschreibung 
 --- | ---
 Includesuchpfad | Gibt den Includesuchpfad zum Auflösen von eingebundenen Dateien an.
 Erzwungene Includedateien | Gibt die Dateien an, deren Einbindung erzwungen wird
@@ -97,7 +87,7 @@ Zusätzliche Optionen | Gibt zusätzliche Compilerschalter an, die von IntelliSe
 
 ### <a name="build"></a>Build
 
-Eigenschaft | description
+Eigenschaft | Beschreibung 
 --- | ---
 Befehlszeile „Build“ | Gibt die Befehlszeile an, die für den Befehl „Build“ ausgeführt werden soll.
 Befehlszeile „Rebuild All“ | Gibt die Befehlszeile die für den Befehl „Build All“ ausgeführt werden soll.
@@ -105,7 +95,7 @@ Befehlszeile „Clean“ | Gibt die Befehlszeile an, die für den Befehl „Clea
 
 ### <a name="remote-build"></a>Remotebuild
 
-Eigenschaft | description
+Eigenschaft | Beschreibung 
 --- | ---
 Befehlszeile „Build“ | Gibt die Befehlszeile an, die für den Befehl „Build“ ausgeführt werden soll. Dies wird auf dem Remotesystem ausgeführt.
 Befehlszeile „Rebuild All“ | Gibt die Befehlszeile die für den Befehl „Build All“ ausgeführt werden soll. Dies wird auf dem Remotesystem ausgeführt.

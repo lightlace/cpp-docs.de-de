@@ -1,25 +1,13 @@
 ---
-title: Schreiben und Refactoring von Code (C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Schreiben und Refactoring von Code (C++)
 ms.date: 04/30/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 977fc221a5a940e2446dbf0ede8445680218dc73
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: bc839a759d2ff3f403ca001ab32702d3fe27833e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705617"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570429"
 ---
 # <a name="writing-and-refactoring-code-c"></a>Schreiben und Refactoring von Code (C++)
 
@@ -87,7 +75,7 @@ Zeigen Sie auf eine Variable, um die Typinformationen anzuzeigen.
 
 ## <a name="open-document-navigate-to-header"></a>Geöffnetes Dokument (zu Header navigieren)
 
-Klicken Sie mit der rechten Maustaste auf den Headernamen in einer `#include`-Richtlinie, und öffnen Sie die Headerdatei.
+Klicken Sie mit der rechten Maustaste auf den Headernamen in einer `#include`-Anweisung, und öffnen Sie die Headerdatei.
 
 ![Visual C&#43;&#43;-Menüoption „Dokument öffnen“](../ide/media/vs2015_cpp_open_document.png "vs2015_cpp_open_document")
 

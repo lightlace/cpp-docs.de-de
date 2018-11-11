@@ -1,27 +1,17 @@
 ---
-title: Standardkonvertierungen | Microsoft-Dokumentation
-ms.custom: ''
+title: Standardkonvertierungen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - standard conversions, categories of
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dec0456c880fea47219dc11c509bbecac025f5d3
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: 7a42a4f35a29489fe23327c6b34ed49197a64724
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50070582"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50575447"
 ---
 # <a name="standard-conversions"></a>Standardkonvertierungen
 
@@ -221,7 +211,7 @@ Im zweiten Fall, in dem ein Zeiger auf eine Klasse in einen Zeiger auf eine Basi
 
 Das Ergebnis einer solchen Konvertierung ist ein Zeiger auf das "Unterobjekt", den Teil des Objekts, der vollständig von der Basisklasse beschrieben wird.
 
-Der folgende Code definiert zwei Klassen, `A` und `B`, wobei `B` von `A` abgeleitet ist. (Weitere Informationen zu Vererbung, finden Sie unter [abgeleitete Klassen](../cpp/inheritance-cpp.md).) Zudem definiert der Code , ein Objekt vom Typ `bObject`, und zwei Zeiger (`B` und `pB`), die auf das Objekt zeigen.
+Der folgende Code definiert zwei Klassen, `A` und `B`, wobei `B` von `A` abgeleitet ist. (Weitere Informationen zu Vererbung, finden Sie unter [abgeleitete Klassen](../cpp/inheritance-cpp.md).) Zudem definiert der Code `bObject`, ein Objekt vom Typ `B`, und zwei Zeiger (`pA` und `pB`), die auf das Objekt zeigen.
 
 ```cpp
 // C2039 expected
