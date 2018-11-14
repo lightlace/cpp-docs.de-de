@@ -6,16 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
-ms.openlocfilehash: 932661227daa216934c061a8b6807b05ca8270ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e607e35b2b3970f329692ba8d2c612d7f6a6591b
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443757"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522310"
 ---
 # <a name="options-atl-control-wizard"></a>Optionen, ATL-Steuerelement-Assistent
-
-Fügen Sie hier "Suchergebnisse" Zusammenfassung.
 
 Mithilfe dieser Seite des Assistenten können Sie um den Typ des Steuerelements zu definieren, die Sie erstellen, und die Ebene der Unterstützung von Schnittstellen enthält.
 
@@ -29,17 +27,17 @@ Die Art des Steuerelements, das Sie erstellen möchten.
 
 - **Zusammengesetztes Steuerelement**: ein ActiveX-Steuerelement, das (ähnlich wie ein Dialogfeld, das) enthalten, kann andere ActiveX-Steuerelemente oder Windows-Steuerelemente. Ein zusammengesetztes Steuerelement umfasst Folgendes:
 
-   - Eine Vorlage für das Dialogfeld, das das zusammengesetzte Steuerelement implementiert werden soll.
+  - Eine Vorlage für das Dialogfeld, das das zusammengesetzte Steuerelement implementiert werden soll.
 
-   - Eine benutzerdefinierte Ressource, Registrierung, die automatisch registriert, das zusammengesetzte Steuerelement aufgerufen.
+  - Eine benutzerdefinierte Ressource, Registrierung, die automatisch registriert, das zusammengesetzte Steuerelement aufgerufen.
 
-   - Eine C++-Klasse, die das zusammengesetzte Steuerelement implementiert.
+  - Eine C++-Klasse, die das zusammengesetzte Steuerelement implementiert.
 
-   - Eine COM-Schnittstelle, die vom zusammengesetzten Steuerelement verfügbar gemacht.
+  - Eine COM-Schnittstelle, die vom zusammengesetzten Steuerelement verfügbar gemacht.
 
-   - Ein HTML-Testseite, die das zusammengesetzte Steuerelement enthält.
+  - Ein HTML-Testseite, die das zusammengesetzte Steuerelement enthält.
 
-   Dieses Steuerelement legt standardmäßig [CComControlBase](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) auf "true", um anzugeben, dass dies ein Steuerelement mit Fenster ist. Eine Zuordnung für die Senke implementiert. Weitere Informationen finden Sie unter [-Unterstützung für DHTML-Steuerelement](../../atl/atl-support-for-dhtml-controls.md).
+    Dieses Steuerelement legt standardmäßig [CComControlBase](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) auf "true", um anzugeben, dass dies ein Steuerelement mit Fenster ist. Eine Zuordnung für die Senke implementiert. Weitere Informationen finden Sie unter [-Unterstützung für DHTML-Steuerelement](../../atl/atl-support-for-dhtml-controls.md).
 
 - **DHTML-Steuerelements**: Gibt an, ein ATL-DHTML-Steuerelement der Benutzeroberfläche mithilfe von HTML. DHTML-UI-Klasse enthält eine COM-Zuordnung. Dieses Steuerelement legt standardmäßig [CComControlBase](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) auf "true", um anzugeben, dass dies ein Steuerelement mit Fenster ist.
 

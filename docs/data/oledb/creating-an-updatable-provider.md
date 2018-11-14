@@ -6,12 +6,12 @@ helpviewer_keywords:
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-ms.openlocfilehash: 39e0fffa10af560537a932d503946ec2469bef5e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04db02bc8ad4db0c669e07a0bcf1b60ffa22e8ad
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570585"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521400"
 ---
 # <a name="creating-an-updatable-provider"></a>Erstellen eines aktualisierbaren Anbieters
 
@@ -40,7 +40,7 @@ Beachten Sie, dass `IRowsetUpdateImpl` leitet sich von `IRowsetChangeImpl`. Dahe
 
 1. In der Rowsetklasse erben `IRowsetChangeImpl` oder `IRowsetUpdateImpl`. Diese Klassen bieten die entsprechende Schnittstellen für das Ändern des Datenspeichers:
 
-     **Hinzufügen von IRowsetChange**
+   **Hinzufügen von IRowsetChange**
 
    Hinzufügen `IRowsetChangeImpl` der Vererbungskette, die mit dieser Form:
 
@@ -50,7 +50,7 @@ Beachten Sie, dass `IRowsetUpdateImpl` leitet sich von `IRowsetChangeImpl`. Dahe
 
    Auch hinzufügen, `COM_INTERFACE_ENTRY(IRowsetChange)` auf die `BEGIN_COM_MAP` Abschnitt in der Rowsetklasse.
 
-     **IRowsetUpdate hinzufügen**
+   **IRowsetUpdate hinzufügen**
 
    Hinzufügen `IRowsetUpdate` der Vererbungskette, die mit dieser Form:
 
@@ -58,22 +58,27 @@ Beachten Sie, dass `IRowsetUpdateImpl` leitet sich von `IRowsetChangeImpl`. Dahe
     IRowsetUpdateImpl< rowset-name, storage>
     ```
 
-    > [!NOTE]
-    > Entfernen Sie die `IRowsetChangeImpl` Zeile aus der Vererbungskette. Diese Ausnahme von der zuvor erwähnten Direktive muss den Code für enthalten `IRowsetChangeImpl`.
+   > [!NOTE]
+   > Entfernen Sie die `IRowsetChangeImpl` Zeile aus der Vererbungskette. Diese Ausnahme von der zuvor erwähnten Direktive muss den Code für enthalten `IRowsetChangeImpl`.
 
 1. Fügen Sie Folgendes der COM-Zuordnung (`BEGIN_COM_MAP ... END_COM_MAP`):
 
-    |Wenn Sie implementieren|COM-Zuordnung hinzufügen|
-    |----------------------|--------------------|
-    |`IRowsetChangeImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)`|
-    |`IRowsetUpdateImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)COM_INTERFACE_ENTRY(IRowsetUpdate)`|
+   |  Wenn Sie implementieren   |           COM-Zuordnung hinzufügen             |
+   |---------------------|--------------------------------------|
+   | `IRowsetChangeImpl` | `COM_INTERFACE_ENTRY(IRowsetChange)` |
+   | `IRowsetUpdateImpl` | `COM_INTERFACE_ENTRY(IRowsetUpdate)` |
+
+   | Wenn Sie implementieren | Fügen Sie zum Festlegen der eigenschaftenzuordnung |
+   |----------------------|-----------------------------|
+   | `IRowsetChangeImpl` | `PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)` |
+   | `IRowsetUpdateImpl` | `PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)` |
 
 1. Fügen Sie in zunutze, Folgendes ein, um die Zuordnung des Set (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`):
 
-    |Wenn Sie implementieren|Fügen Sie zum Festlegen der eigenschaftenzuordnung|
-    |----------------------|-----------------------------|
-    |`IRowsetChangeImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`|
-    |`IRowsetUpdateImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)`|
+   |  Wenn Sie implementieren   |                                             Fügen Sie zum Festlegen der eigenschaftenzuordnung                                              |
+   |---------------------|------------------------------------------------------------------------------------------------------------------|
+   | `IRowsetChangeImpl` |                            `PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`                             |
+   | `IRowsetUpdateImpl` | `PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)` |
 
 1. In der Zuordnung des Eigenschaftensets sollten Sie auch alle der folgenden Einstellungen hinzufügen wie sie unten angezeigt werden:
 
@@ -97,41 +102,41 @@ Beachten Sie, dass `IRowsetUpdateImpl` leitet sich von `IRowsetChangeImpl`. Dahe
 
    Sie finden die Werte in diesen anhand Atldb.h für die Eigenschaft-IDs und Werte (wenn die Onlinedokumentation Atldb.h unterscheidet, Atldb.h Vorrang vor der Dokumentation).
 
-    > [!NOTE]
-    > Viele der `VARIANT_FALSE` und `VARIANT_TRUE` Einstellungen sind erforderlich, durch die OLE DB-Vorlagen, die OLE DB-Spezifikation sagt, können sie Lese-/Schreibzugriff sein, aber die OLE DB-Vorlagen unterstützt nur einen Wert.
+   > [!NOTE]
+   > Viele der `VARIANT_FALSE` und `VARIANT_TRUE` Einstellungen sind erforderlich, durch die OLE DB-Vorlagen, die OLE DB-Spezifikation sagt, können sie Lese-/Schreibzugriff sein, aber die OLE DB-Vorlagen unterstützt nur einen Wert.
 
-     **Wenn Sie IRowsetChangeImpl implementieren**
+   **Wenn Sie IRowsetChangeImpl implementieren**
 
    Wenn Sie implementieren `IRowsetChangeImpl`, Sie müssen die folgenden Eigenschaften festlegen, für den Anbieter. Diese Eigenschaften werden in erster Linie verwendet, um die Schnittstellen durch anzufordern `ICommandProperties::SetProperties`.
 
-    - `DBPROP_IRowsetChange`: Automatisches Festlegen von diesem legt `DBPROP_IRowsetChange`.
+   - `DBPROP_IRowsetChange`: Automatisches Festlegen von diesem legt `DBPROP_IRowsetChange`.
 
-    - `DBPROP_UPDATABILITY`: Eine Bitmaske, die unterstützten Methoden für `IRowsetChange`: `SetData`, `DeleteRows`, oder `InsertRow`.
+   - `DBPROP_UPDATABILITY`: Eine Bitmaske, die unterstützten Methoden für `IRowsetChange`: `SetData`, `DeleteRows`, oder `InsertRow`.
 
-    - `DBPROP_CHANGEINSERTEDROWS`: Der Consumer kann Aufrufen `IRowsetChange::DeleteRows` oder `SetData` für neu eingefügte Zeilen.
+   - `DBPROP_CHANGEINSERTEDROWS`: Der Consumer kann Aufrufen `IRowsetChange::DeleteRows` oder `SetData` für neu eingefügte Zeilen.
 
-    - `DBPROP_IMMOBILEROWS`: Rowset nicht eingefügte oder aktualisierte Zeilen neu angeordnet.
+   - `DBPROP_IMMOBILEROWS`: Rowset nicht eingefügte oder aktualisierte Zeilen neu angeordnet.
 
-     **Wenn Sie IRowsetUpdateImpl implementieren**
+   **Wenn Sie IRowsetUpdateImpl implementieren**
 
    Wenn Sie implementieren `IRowsetUpdateImpl`, müssen Sie die folgenden Eigenschaften festlegen für den Anbieter darüber hinaus mit dem Festlegen aller Eigenschaften für `IRowsetChangeImpl` oben aufgeführt:
 
-    - `DBPROP_IRowsetUpdate`.
+   - `DBPROP_IRowsetUpdate`.
 
-    - `DBPROP_OWNINSERT`: READ_ONLY und auf VARIANT_TRUE festgelegt muss werden.
+   - `DBPROP_OWNINSERT`: READ_ONLY und auf VARIANT_TRUE festgelegt muss werden.
 
-    - `DBPROP_OWNUPDATEDELETE`: READ_ONLY und auf VARIANT_TRUE festgelegt muss werden.
+   - `DBPROP_OWNUPDATEDELETE`: READ_ONLY und auf VARIANT_TRUE festgelegt muss werden.
 
-    - `DBPROP_OTHERINSERT`: READ_ONLY und auf VARIANT_TRUE festgelegt muss werden.
+   - `DBPROP_OTHERINSERT`: READ_ONLY und auf VARIANT_TRUE festgelegt muss werden.
 
-    - `DBPROP_OTHERUPDATEDELETE`: READ_ONLY und auf VARIANT_TRUE festgelegt muss werden.
+   - `DBPROP_OTHERUPDATEDELETE`: READ_ONLY und auf VARIANT_TRUE festgelegt muss werden.
 
-    - `DBPROP_REMOVEDELETED`: READ_ONLY und auf VARIANT_TRUE festgelegt muss werden.
+   - `DBPROP_REMOVEDELETED`: READ_ONLY und auf VARIANT_TRUE festgelegt muss werden.
 
-    - `DBPROP_MAXPENDINGROWS`.
+   - `DBPROP_MAXPENDINGROWS`.
 
-        > [!NOTE]
-        > Wenn Sie Benachrichtigungen unterstützen, müssen Sie auch einige andere Eigenschaften sowie möglicherweise; finden Sie im Abschnitt `IRowsetNotifyCP` für diese Liste.
+   > [!NOTE]
+   > Wenn Sie Benachrichtigungen unterstützen, müssen Sie auch einige andere Eigenschaften sowie möglicherweise; finden Sie im Abschnitt `IRowsetNotifyCP` für diese Liste.
 
 ##  <a name="vchowwritingtothedatasource"></a> Das Schreiben in die Datenquelle
 

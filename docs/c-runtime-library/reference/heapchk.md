@@ -26,12 +26,12 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: b34b4ea1bb2512628213cabb55e26e2dad6d445c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bdc0137761664a668d6ef95d739f09501e8290e5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580621"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331398"
 ---
 # <a name="heapchk"></a>_heapchk
 
@@ -49,11 +49,11 @@ int _heapchk( void );
 
 |Rückgabewert|Bedingung|
 |-|-|
-**_HEAPBADBEGIN**|Die ursprüngliche Headerinformation ist schlecht oder wurde nicht gefunden.
-**_HEAPBADNODE**|Ein ungültiger Knoten wurde gefunden, oder Heap ist beschädigt.
-**_HEAPBADPTR**|Der Zeiger auf einen Heap ist ungültig.
-**_HEAPEMPTY**|Der Heap wurde noch nicht initialisiert.
-**_HEAPOK**|Der Heap scheint konsistent zu sein.
+| **_HEAPBADBEGIN** | Die ursprüngliche Headerinformation ist schlecht oder wurde nicht gefunden. |
+| **_HEAPBADNODE** | Ein ungültiger Knoten wurde gefunden, oder Heap ist beschädigt. |
+| **_HEAPBADPTR** | Der Zeiger auf einen Heap ist ungültig. |
+| **_HEAPEMPTY** | Der Heap wurde noch nicht initialisiert. |
+| **_HEAPOK** | Der Heap scheint konsistent zu sein. |
 
 Darüber hinaus, wenn ein Fehler auftritt **_heapchk** legt **Errno** zu **ENOSYS**.
 

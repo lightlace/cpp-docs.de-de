@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2338
 ms.assetid: 49bba575-1de4-4963-86c6-ce3226a2ba51
-ms.openlocfilehash: 4ca3feb2a71efa60229afdbf918109a5d5d59cad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a76ecaf78b117b0c1acabd9fcd50c9ae0f73b98
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539593"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332061"
 ---
 # <a name="compiler-error-c2338"></a>Compilerfehler C2338
 
@@ -21,11 +21,11 @@ Dieser Fehler kann verursacht werden, indem eine `static_assert` Fehler während
 
 Diese Fehlermeldung kann auch von externen Anbietern für den Compiler generiert werden. In den meisten Fällen werden diese Fehler von einem Attributanbieter DLL, z. B. ATLPROV gemeldet. Einige allgemeinen Formen der dieser Nachricht gehören:
 
-> "*Attribut*" Atl-Attributanbieter: Fehler ATL*Anzahl* *Nachricht*
+- "*Attribut*" Atl-Attributanbieter: Fehler ATL*Anzahl* *Nachricht*
 
-> Falsche Verwendung des Attributs "*Attribut*"
+- Falsche Verwendung des Attributs "*Attribut*"
 
-> "*Nutzung*": falsches Format für das Attribut "Nutzung"
+- "*Nutzung*": falsches Format für das Attribut "Nutzung"
 
 Diese Fehler sind häufig nicht behebbar, und ein schwerwiegender Compilerfehler gefolgt werden können.
 

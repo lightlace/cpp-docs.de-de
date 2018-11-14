@@ -28,12 +28,12 @@ helpviewer_keywords:
 - _ungettc function
 - ungetc function
 ms.assetid: e0754f3a-b4c6-408f-90c7-e6387b830d84
-ms.openlocfilehash: 95d2160ba4d008ab67f443d4e9dda7180d62b590
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c504540f8fbbe14961fa051bb93ebef350c2c1da
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633583"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332386"
 ---
 # <a name="ungetc-ungetwc"></a>ungetc, ungetwc
 
@@ -62,7 +62,7 @@ Zeiger auf die **FILE**-Struktur.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn erfolgreich, jede dieser Funktionen das Zeichenargument zurückgibt *c*. Wenn *c* nicht zurückgeschoben werden oder wenn kein Zeichen gelesen wurde, der Eingabestream unverändert und **Ungetc** gibt ** EOF`; **ungetwc` gibt **WEOF**. Wenn *Stream* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **EOF** oder **WEOF** zurückgegeben und **Errno** nastaven NA hodnotu **EINVAL**.
+Wenn erfolgreich, jede dieser Funktionen das Zeichenargument zurückgibt *c*. Wenn *c* nicht zurückgeschoben werden oder wenn kein Zeichen gelesen wurde, der Eingabestream unverändert und **Ungetc** gibt **EOF**; **Ungetwc** gibt **WEOF**. Wenn *Stream* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **EOF** oder **WEOF** zurückgegeben und **Errno** nastaven NA hodnotu **EINVAL**.
 
 Weitere Informationen über diese und andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr (_doserrno, errno, _sys_errlist und _sys_nerr)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

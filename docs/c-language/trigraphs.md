@@ -1,12 +1,6 @@
 ---
-title: Trigraphen | Microsoft-Dokumentation
-ms.custom: ''
+title: Trigraphen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - ??) trigraph
 - ??- trigraph
@@ -21,16 +15,12 @@ helpviewer_keywords:
 - ??! trigraph
 - ??' trigraph
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fb65bf8cf2f9585ff12ba0a098d9ca441310933f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f84e5c1a1455e35992aa4b118c345bc1fa6ae587
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101932"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331619"
 ---
 # <a name="trigraphs"></a>Trigraphen
 
@@ -44,29 +34,29 @@ Die folgende Tabelle zeigt die neun Trigraphsequenzen. Alle in einer Quelldatei 
 
 ### <a name="trigraph-sequences"></a>Trigraphsequenzen
 
-|Trigraph|Interpunktionszeichen|
-|--------------|---------------------------|
-|??=|#|
-|??(|[|
-|??/|\|
-|??)|]|
-|??'|^|
-|??\<|{|
-|??!|&#124;|
-|??>|}|
-|??-|~|
+| Trigraph | Interpunktionszeichen |
+|----------|-----------------------|
+| ??= | # |
+| ??( | \[ |
+| ??/ | \\ |
+| ??) | ] |
+| ??' | ^ |
+| ??\< | { |
+| ??! | &#124; |
+| ??> | } |
+| ??- | ~ |
 
 Ein Trigraph wird immer als einzelnes Quellzeichen behandelt. Die Übersetzung von Trigraphen findet vor der Erkennung von Escapezeichen in Zeichenfolgenliteralen und Zeichenkonstanten in der ersten [Übersetzungsphase](../preprocessor/phases-of-translation.md) statt. Nur die neun Trigraphen, die in der obigen Tabelle angegeben sind, werden erkannt. Alle anderen Zeichensequenzen werden unübersetzt gelassen.
 
 Die Zeichen-Escapesequenz **\\?** verhindert die Fehlinterpretation von Zeichenfolgen, die einem Trigraphen ähneln. (Informationen zu Escapesequenzen finden Sie unter [Escape Sequences (Escapesequenzen)](../c-language/escape-sequences.md).) Nehmen wir einmal an, Sie versuchen, die Zeichenfolge `What??!` mit dieser `printf`-Anweisung zu drucken:
 
-```
+```C
 printf( "What??!\n" );
 ```
 
 Die gedruckte Zeichenfolge lautet `What|`, da `??!` eine Trigraphsequenz ist, die durch das Zeichen `|` ersetzt wurde. Schreiben Sie die Anweisung wie folgt, um die Zeichenfolge ordnungsgemäß auszugeben:
 
-```
+```C
 printf( "What?\?!\n" );
 ```
 

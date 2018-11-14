@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: 5af2a520a8f4ad584098d5831558b063fb37633e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: daaddf6de79411aea58b79feb0fbfd0f8ff56f5c
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466669"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332607"
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray&gt;-Operatoren
 

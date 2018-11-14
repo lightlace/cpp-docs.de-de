@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _tfdopen function
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
-ms.openlocfilehash: c68bc835adf19df7f1538d30b2be162fe6dc6021
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0cde110bf1dd12c23a6b0b658809502743d9edd3
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584456"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327160"
 ---
 # <a name="fdopen-wfdopen"></a>_fdopen, _wfdopen
 
@@ -85,25 +85,25 @@ Dateideskriptoren übergebenen **_fdopen** gehören mit dem zurückgegebenen **D
 
 Die *Modus* Zeichenfolge gibt den Typ des Dateizugriffs, die für die Datei angeforderten:
 
-|*mode*|Zugriff|
-|-|-|
-**"r"**|Öffnet zum Lesen. Wenn die Datei nicht vorhanden ist oder wurde nicht gefunden, die **Fopen** -Aufruf fehl.
-**"w"**|Öffnet eine leere Datei zum Schreiben. Wenn die angegebene Datei vorhanden ist, wird ihr Inhalt zerstört.
-**„a“**|Öffnet zum Schreiben am Ende der Datei (Anfügen). Erstellt die Datei, wenn sie nicht vorhanden ist.
-**„r+“**|Öffnet sowohl zum Lesen als auch zum Schreiben. Die Datei muss vorhanden sein.
-**„w+“**|Öffnet eine leere Datei zum Lesen und Schreiben. Wenn die Datei vorhanden ist, wird ihr Inhalt zerstört.
-**„a+“**|Öffnet sich zum Lesen und Anfügen. Erstellt die Datei, wenn sie nicht vorhanden ist.
+| *mode* | Zugriff |
+|--------|--------|
+| **"r"** | Öffnet zum Lesen. Wenn die Datei nicht vorhanden ist oder wurde nicht gefunden, die **Fopen** -Aufruf fehl. |
+| **"w"** | Öffnet eine leere Datei zum Schreiben. Wenn die angegebene Datei vorhanden ist, wird ihr Inhalt zerstört. |
+| **„a“** | Öffnet zum Schreiben am Ende der Datei (Anfügen). Erstellt die Datei, wenn sie nicht vorhanden ist. |
+| **„r+“** | Öffnet sowohl zum Lesen als auch zum Schreiben. Die Datei muss vorhanden sein. |
+| **„w+“** | Öffnet eine leere Datei zum Lesen und Schreiben. Wenn die Datei vorhanden ist, wird ihr Inhalt zerstört. |
+| **„a+“** | Öffnet sich zum Lesen und Anfügen. Erstellt die Datei, wenn sie nicht vorhanden ist. |
 
 Wenn eine Datei geöffnet wird, mit der **"a"** oder **"a +"** Zugriffstyp am Ende der Datei erfolgen alle Schreibvorgänge. Der Dateizeiger kann mit [Fseek](fseek-fseeki64.md) oder [rewind](rewind.md), er wird jedoch immer verschoben zurück an das Ende der Datei, bevor ein Schreibvorgang durchgeführt wird. Folglich können vorhandene Daten nicht überschrieben werden. Wenn die **"R +"**, **"w +"**, oder **"a +"** angegeben wird, sind Lese- und Schreibvorgänge zulässig (die Datei gilt als für "Update" geöffnet). Aber wenn Sie zwischen Lesen und Schreiben wechseln, muss vorhanden sein einen dazwischen liegenden [Fflush](fflush.md), [Fsetpos](fsetpos.md), [Fseek](fseek-fseeki64.md), oder [rewind](rewind.md) der Vorgang. Sie können angeben, dass die aktuelle Position für die [Fsetpos](fsetpos.md) oder [Fseek](fseek-fseeki64.md) -Operation, wenn Sie möchten.
 
 Zusätzlich zu den obigen Werten können die folgenden Zeichen enthalten sein *Modus* um den Übersetzungsmodus für Zeilenumbruchzeichen anzugeben:
 
-|*Modus* Modifizierer|Verhalten|
-|-|-|
-**t**|Öffnen im Textmodus (übersetzt). Im Textmodus werden Wagenrücklauf-/Zeilenvorschub-Kombinationen (CR-LF) bei der Eingabe in einzelne Zeilenvorschübe (LF) übersetzt. LF-Zeichen werden bei der Ausgabe in CR-LF-Kombinationen übersetzt. Außerdem wird STRG+Z bei der Eingabe als EOF-Zeichen interpretiert.
-**b**|Wird im binären (nicht übersetzten) Modus geöffnet. Übersetzungen aus **t** -Modus werden unterdrückt.
-**c**|Aktivieren Sie das commitflag für den zugeordneten *Filename* , damit der Inhalt des Dateipuffers direkt, wenn entweder auf den Datenträger geschrieben werden **Fflush** oder **_flushall** aufgerufen wird.
-**n**|Zurücksetzen der Commit-Flag für das zugeordnete *Filename* auf "No-Commit". Dies ist die Standardeinstellung. Dabei wird auch das globale Commitflag überschrieben, wenn Sie das Programm mit „Commode.obj“ verknüpfen. Der Standardwert des globalen Commitflags lautet „no-commit“, es sei denn, Sie verknüpfen das Programm explizit mit „Commode.obj“.
+| *Modus* Modifizierer | Verhalten |
+|-----------------|----------|
+| **t** | Öffnen im Textmodus (übersetzt). Im Textmodus werden Wagenrücklauf-/Zeilenvorschub-Kombinationen (CR-LF) bei der Eingabe in einzelne Zeilenvorschübe (LF) übersetzt. LF-Zeichen werden bei der Ausgabe in CR-LF-Kombinationen übersetzt. Außerdem wird STRG+Z bei der Eingabe als EOF-Zeichen interpretiert. |
+| **b** | Wird im binären (nicht übersetzten) Modus geöffnet. Übersetzungen aus **t** -Modus werden unterdrückt. |
+| **c** | Aktivieren Sie das commitflag für den zugeordneten *Filename* , damit der Inhalt des Dateipuffers direkt, wenn entweder auf den Datenträger geschrieben werden **Fflush** oder **_flushall** aufgerufen wird. |
+| **n** | Zurücksetzen der Commit-Flag für das zugeordnete *Filename* auf "No-Commit". Dies ist die Standardeinstellung. Dabei wird auch das globale Commitflag überschrieben, wenn Sie das Programm mit „Commode.obj“ verknüpfen. Der Standardwert des globalen Commitflags lautet „no-commit“, es sei denn, Sie verknüpfen das Programm explizit mit „Commode.obj“. |
 
 Die **t**, **c**, und **n** *Modus* Optionen sind Microsoft-Erweiterungen für **Fopen** und **_fdopen**. Verwenden Sie sie nicht, wenn Sie die ANSI-Portabilität beibehalten möchten.
 

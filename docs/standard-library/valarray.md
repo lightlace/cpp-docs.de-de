@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: efd3e750abb68ad84eb8894ea6b53fe8e29e0e17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b8118722d7219e3b30e11ad67411595c3dc36ad
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447787"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332633"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -21,12 +21,11 @@ Definiert die valarray-Vorlagenklasse sowie zahlreiche unterstützende Vorlagenk
 
 ```cpp
 #include <valarray>
-
 ```
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Vorlagenklassen und Funktionen haben im Interesse einer verbesserten Leistung ungewöhnliche Freiheiten. Insbesondere kann jede Funktion, die den Typ **valarray\<** T1**>** zurückgibt, ein Objekt eines anderen Typs T2 zurückgeben. In diesem Fall muss jede Funktion, die mindestens ein Argument des Typs **valarray\<** T2**>** akzeptiert, Überladungen haben, die beliebige Kombinationen dieser Argumente akzeptieren, wobei jedes durch ein Argument des Typs T2 ersetzt ist.
+Diese Vorlagenklassen und Funktionen haben im Interesse einer verbesserten Leistung ungewöhnliche Freiheiten. Insbesondere kann jede Funktion, die Rückgabe von Typ `valarray<T1>` kann ein Objekt eines anderen Typs T2 zurückgeben. In diesem Fall jede Funktion, die ein oder mehrere Argumente des Typs akzeptiert `valarray<T2>` müssen verfügen über Überladungen, die beliebige Kombinationen dieser Argumente, wobei jedes durch ein Argument des Typs T2 ersetzt akzeptieren.
 
 ### <a name="functions"></a>Funktionen
 

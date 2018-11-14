@@ -92,12 +92,12 @@ helpviewer_keywords:
 - tfindnext32i64 function
 - _tfindnexti64 function
 ms.assetid: 75d97188-5add-4698-a46c-4c492378f0f8
-ms.openlocfilehash: 32d21b310d8a7826fd1d95f806d470a1fb7e492e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c7df8649625488a83239a19e4afcecea129f9072
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518507"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329448"
 ---
 # <a name="findnext-findnext32-findnext32i64-findnext64-findnext64i32-findnexti64-wfindnext-wfindnext32-wfindnext32i64-wfindnext64-wfindnext64i32-wfindnexti64"></a>_findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
 
@@ -170,9 +170,9 @@ Im Erfolgsfall wird 0 zurückgegeben. Andernfalls-1 zurück und setzt **Errno** 
 
 |errno-Wert|Bedingung|
 |-|-|
-**EINVAL**|Ungültiger Parameter: *"FileInfo"* wurde **NULL**. oder das Betriebssystem hat einen unerwarteten Fehler zurückgegeben.
-**ENOENT**|Es konnten keine übereinstimmenden Dateien gefunden werden.
-**ENOMEM**|Nicht genügend Arbeitsspeicher oder der Dateiname zu lang **MAX_PATH**.
+| **EINVAL** | Ungültiger Parameter: *"FileInfo"* wurde **NULL**. oder das Betriebssystem hat einen unerwarteten Fehler zurückgegeben. |
+| **ENOENT** | Es konnten keine übereinstimmenden Dateien gefunden werden. |
+| **ENOMEM** | Nicht genügend Arbeitsspeicher oder der Dateiname zu lang **MAX_PATH**. |
 
 Wenn ein ungültiger Parameter übergeben wird, rufen diese Funktionen den Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben wird.
 

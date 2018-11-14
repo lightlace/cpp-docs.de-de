@@ -10,16 +10,16 @@ helpviewer_keywords:
 - ISupportErrorInfoImpl class
 - error information, ATL
 ms.assetid: e33a4b11-a123-41cf-bcea-7b19743902af
-ms.openlocfilehash: a4427a1190f145cc001a3288535df287326e97e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3227142d6ca31d0015411a3619281894eb5e419
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523287"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520048"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoImpl-Klasse
 
-Diese Klasse stellt eine Standardimplementierung von der [ISupportErrorInfo Schnittstelle](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo) und kann verwendet werden, wenn nur eine einzelne Schnittstelle Fehler bei einem Objekt generiert.
+Diese Klasse stellt eine Standardimplementierung von der [ISupportErrorInfo Schnittstelle](/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo) und kann verwendet werden, wenn nur eine einzelne Schnittstelle Fehler bei einem Objekt generiert.
 
 > [!IMPORTANT]
 >  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.
@@ -35,7 +35,7 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
 #### <a name="parameters"></a>Parameter
 
 *piid*<br/>
-Ein Zeiger auf eine Schnittstelle, unterstützt die IID [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo).
+Ein Zeiger auf eine Schnittstelle, unterstützt die IID [IErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo).
 
 ## <a name="members"></a>Member
 
@@ -43,11 +43,11 @@ Ein Zeiger auf eine Schnittstelle, unterstützt die IID [IErrorInfo](/previous-v
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|Gibt an, ob die Schnittstelle durch identifiziert `riid` unterstützt die [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) Schnittstelle.|
+|[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|Gibt an, ob die Schnittstelle durch identifiziert `riid` unterstützt die [IErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) Schnittstelle.|
 
 ## <a name="remarks"></a>Hinweise
 
-Die [ISupportErrorInfo Schnittstelle](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo) wird sichergestellt, dass die Fehlerinformationen an den Client zurückgegeben werden kann. Objekten, `IErrorInfo` müssen implementieren `ISupportErrorInfo`.
+Die [ISupportErrorInfo Schnittstelle](/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo) wird sichergestellt, dass die Fehlerinformationen an den Client zurückgegeben werden kann. Objekten, `IErrorInfo` müssen implementieren `ISupportErrorInfo`.
 
 Klasse `ISupportErrorInfoImpl` stellt eine Standardimplementierung von `ISupportErrorInfo` und kann verwendet werden, wenn nur eine einzelne Schnittstelle Fehler bei einem Objekt generiert. Zum Beispiel:
 
@@ -65,7 +65,7 @@ Klasse `ISupportErrorInfoImpl` stellt eine Standardimplementierung von `ISupport
 
 ##  <a name="interfacesupportserrorinfo"></a>  ISupportErrorInfoImpl::InterfaceSupportsErrorInfo
 
-Gibt an, ob die Schnittstelle durch identifiziert `riid` unterstützt die [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) Schnittstelle.
+Gibt an, ob die Schnittstelle durch identifiziert `riid` unterstützt die [IErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) Schnittstelle.
 
 ```
 STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
@@ -73,7 +73,7 @@ STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [ISupportErrorInfo:: InterfaceSupportsErrorInfo](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-isupporterrorinfo-interfacesupportserrorinfo) in das Windows SDK.
+Finden Sie unter [ISupportErrorInfo:: InterfaceSupportsErrorInfo](/windows/desktop/api/oaidl/nf-oaidl-isupporterrorinfo-interfacesupportserrorinfo) in das Windows SDK.
 
 ##  <a name="getsize"></a>  IThreadPoolConfig::GetSize
 

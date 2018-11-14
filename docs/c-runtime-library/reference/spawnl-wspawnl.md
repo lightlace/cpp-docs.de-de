@@ -31,12 +31,12 @@ helpviewer_keywords:
 - wspawnl function
 - process creation
 ms.assetid: dd4584c9-7173-4fc5-b93a-6e7d3c2316d7
-ms.openlocfilehash: 4dbc8fab611d98f7f87529196b0e10e85196faa9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 11ff3447487fcaf1a4225825c222b873005b2a1c
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518078"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326978"
 ---
 # <a name="spawnl-wspawnl"></a>_spawnl, _wspawnl
 
@@ -83,11 +83,11 @@ Der Rückgabewert eines synchronen **_spawnl** oder **_wspawnl** (**_P_WAIT** f�
 
 |||
 |-|-|
-**E2BIG**|Argumentliste umfasst mehr als 1024 Byte.
-**EINVAL**|*Modus* Argument ist ungültig.
-**ENOENT**|Datei oder Pfad nicht gefunden.
-**ENOEXEC**|Die angegebene Datei ist nicht ausführbar oder hat ein ungültiges Format für eine ausführbare Datei.
-**ENOMEM**|Es ist nicht genügend Arbeitsspeicher verfügbar, um den neuen Prozess auszuführen.
+| **E2BIG** | Argumentliste umfasst mehr als 1024 Byte. |
+| **EINVAL** | *Modus* Argument ist ungültig. |
+| **ENOENT** | Datei oder Pfad nicht gefunden. |
+| **ENOEXEC** | Die angegebene Datei ist nicht ausführbar oder hat ein ungültiges Format für eine ausführbare Datei. |
+| **ENOMEM** | Es ist nicht genügend Arbeitsspeicher verfügbar, um den neuen Prozess auszuführen. |
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

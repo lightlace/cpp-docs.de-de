@@ -2,12 +2,12 @@
 title: Explizit vorgegebene und gelöschte Funktionen
 ms.date: 11/04/2016
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
-ms.openlocfilehash: a090bd1b1a60dd7a5a5350fcf81dec7f17e083c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa03ca826eebe467e45e2bb7e0bc47537d40f366
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662604"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327017"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Explizit vorgegebene und gelöschte Funktionen
 
@@ -36,12 +36,12 @@ Dies ist für einfache Typen praktisch, komplexe Typen definieren jedoch häufig
    - Es wird kein Bewegungszuweisungsoperator automatisch generiert.
 
 > [!NOTE]
->  Darüber hinaus gibt der C++11-Standard die folgenden zusätzlichen Regeln an:
+> Darüber hinaus gibt der C++11-Standard die folgenden zusätzlichen Regeln an:
 >
 > - Wenn ein Kopierkonstruktor oder Destruktor explizit deklariert wird, wird die automatische Generierung des Kopierzuweisungsoperators abgelehnt.
 > - Wenn ein Kopierzuweisungsoperator oder Destruktor explizit deklariert wird, wird die automatische Generierung eines Kopierkonstruktors abgelehnt.
 >
->  In beiden Fällen werden die erforderlichen Funktionen weiterhin automatisch von Visual Studio implizit generiert, und es wird keine Warnung+ ausgegeben.
+> In beiden Fällen werden die erforderlichen Funktionen weiterhin automatisch von Visual Studio implizit generiert, und es wird keine Warnung+ ausgegeben.
 
 Die Folgen dieser Regeln können auch in Objekthierarchien einfließen. Z. B., wenn aus irgendeinem Grund keine Basisklasse einen Standardkonstruktor verfügen, die von einer abgeleiteten Klasse aufgerufen werden kann –, also eine **öffentliche** oder **geschützt** Konstruktor, der keine Parameter akzeptiert, klicken Sie dann eine Klasse abgeleitet, die ihren eigenen Standardkonstruktor können nicht automatisch generiert.
 

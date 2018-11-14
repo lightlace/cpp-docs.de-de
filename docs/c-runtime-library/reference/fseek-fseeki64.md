@@ -28,12 +28,12 @@ helpviewer_keywords:
 - file pointers [C++]
 - seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
-ms.openlocfilehash: 15ff6e4a70069845369acdc3ffd153c48f228201
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5f775eab370f8f4a3b6a5c1d7f0918ec7efa3ff
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447540"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331086"
 ---
 # <a name="fseek-fseeki64"></a>fseek, _fseeki64
 
@@ -75,9 +75,9 @@ Die **Fseek** und **_fseeki64** functions verschiebt der Dateizeiger (sofern vor
 
 |Origin-Wert|Bedeutung|
 |-|-|
-**SEEK_CUR**|Aktuelle Position des Dateizeigers
-**SEEK_END**|Ende der Datei
-**SEEK_SET**|Anfang der Datei
+| **SEEK_CUR** | Aktuelle Position des Dateizeigers |
+| **SEEK_END** | Ende der Datei |
+| **SEEK_SET** | Anfang der Datei |
 
 Sie können **Fseek** und **_fseeki64** um den Zeiger an einer beliebigen Stelle in einer Datei zu verschieben. Der Zeiger kann auch nach dem Ende der Datei positioniert werden. **Fseek** und **_fseeki64** löscht den Dateiende-Indikator und negieren die Auswirkung aller vorherigen [Ungetc](ungetc-ungetwc.md) Laufzeitaufrufe *Stream*.
 

@@ -49,12 +49,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-ms.openlocfilehash: 2cec64e408b326dccc7b950656d0aa699c084f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36d8b0d6480266f86136119a470fb7af5859a5b8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677785"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331242"
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 
@@ -107,14 +107,14 @@ Die **_fstat** Funktion ruft Informationen über die geöffnete Datei zugeordnet
 
 |Feld|Bedeutung|
 |-|-|
-**st_atime**|Zeitpunkt des letzten Zugriffs auf die Datei
-**st_ctime**|Zeitpunkt der Erstellung der Datei.
-**st_dev**|Wenn ein Gerät *fd*, andernfalls 0.
-**st_mode**|Bitmaske für Dateimodusinformationen. Die **_S_IFCHR** Bit ist gesetzt, wenn *fd* bezieht sich auf einem Gerät. Die **_S_IFREG** Bit ist gesetzt, wenn *fd* bezieht sich auf eine normale Datei. Die Bits für den Lese-/Schreibzugriff werden gemäß dem Dateiberechtigungsmodus festgelegt. **_S_IFCHR** und andere Konstanten sind in sys\stat definiert.
-**st_mtime**|Uhrzeit der letzten Änderung der Datei
-**st_nlink**|Bei Nicht-NTFS-Dateisystemen immer „1“.
-**st_rdev**|Wenn ein Gerät *fd*, andernfalls 0.
-**st_size**|Die Länge der Datei in Bytes.
+| **st_atime** | Zeitpunkt des letzten Zugriffs auf die Datei |
+| **st_ctime** | Zeitpunkt der Erstellung der Datei. |
+| **st_dev** | Wenn ein Gerät *fd*, andernfalls 0. |
+| **st_mode** | Bitmaske für Dateimodusinformationen. Die **_S_IFCHR** Bit ist gesetzt, wenn *fd* bezieht sich auf einem Gerät. Die **_S_IFREG** Bit ist gesetzt, wenn *fd* bezieht sich auf eine normale Datei. Die Bits für den Lese-/Schreibzugriff werden gemäß dem Dateiberechtigungsmodus festgelegt. **_S_IFCHR** und andere Konstanten sind in sys\stat definiert. |
+| **st_mtime** | Uhrzeit der letzten Änderung der Datei |
+| **st_nlink** | Bei Nicht-NTFS-Dateisystemen immer „1“. |
+| **st_rdev** | Wenn ein Gerät *fd*, andernfalls 0. |
+| **st_size** | Die Länge der Datei in Bytes. |
 
 Wenn *fd* bezieht sich auf einem Gerät der **St_atime**, **St_ctime**, **St_mtime**, und **St_size** Felder sind nicht aussagekräftig.
 

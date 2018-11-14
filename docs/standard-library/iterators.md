@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-ms.openlocfilehash: cf1f519521d86f2b7782fb93ed3b4aca4ecd5b24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b6713a80244d7063baac2c75ffead76fe93facc
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643442"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326498"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -41,7 +41,7 @@ for (auto num : vec)
 
 Es gibt fünf Kategorien von Iteratoren. Die Kategorien zum Erhöhen der Leistung sind:
 
-- **Output**. Ein *Ausgabeiterator* `X` kann vorwärts Durchlaufen einer Sequenz mithilfe der **++** -Operator, und ein Element mit nur einmal schreiben zu können die **&ast;** Operator.
+- **Output**. Ein *Ausgabeiterator* `X` kann vorwärts Durchlaufen einer Sequenz mithilfe der **++** -Operator, und ein Element mit nur einmal schreiben zu können die __\*__ Operator.
 
 - **Input**. Ein *eingabeiterator* `X` kann vorwärts Durchlaufen einer Sequenz mithilfe der ++-Operator, und erhalten ein Element beliebig häufig mithilfe der **&ast;** Operator. Sie können eingabeiteratoren mithilfe von Vergleichen die **++** und **! =** Operatoren. Nach der Inkrementierung einer Kopie eines Eingabeiterators kann keine der anderen Kopien sicher verglichen, dereferenziert oder inkrementiert werden.
 

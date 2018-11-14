@@ -8,12 +8,12 @@ helpviewer_keywords:
 - resource identifiers, naming and numbering
 - resource identifiers
 ms.assetid: aecbd2cf-68b3-47f6-ae21-b1f507917245
-ms.openlocfilehash: c5ae31303d87840017320f580632e567be79e6a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e575ee99b78b8efa75096cac4559eb9aea7fd21
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464501"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518670"
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: ID-Benennungs- und Nummerierungskonventionen
 
@@ -89,13 +89,13 @@ Gründe für diese Begrenzungen:
 
 - Das interne MFC-Framework reserviert diese Bereiche:
 
-   - 0x7000 bis 0x7FFF (siehe afxres.h)
+  - 0x7000 bis 0x7FFF (siehe afxres.h)
 
-   - 0xE000 bis 0xEFFF (siehe afxres.h)
+  - 0xE000 bis 0xEFFF (siehe afxres.h)
 
-   - 16000 bis 18000 (siehe afxribbonres.h)
+  - 16000 bis 18000 (siehe afxribbonres.h)
 
-   Diese Bereiche ändern sich möglicherweise in zukünftigen MFC-Implementierungen.
+  Diese Bereiche ändern sich möglicherweise in zukünftigen MFC-Implementierungen.
 
 - Einige Windows-Systembefehle verwenden den Bereich von 0xF000 bis 0xFFFF.
 

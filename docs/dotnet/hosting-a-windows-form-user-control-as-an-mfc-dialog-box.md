@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms [C++], hosting as MFC Dialog
 - hosting Windows Forms control [C++]
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
-ms.openlocfilehash: 44123e3cbad3115dc990cd8dc9f1316994560656
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6b7b7b3d1cb5ed9f3cd2b3655b45aaac8d8d195
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580920"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524923"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Hosten eines Windows Form-Benutzersteuerelements als MFC-Dialogfeld
 
@@ -68,7 +68,7 @@ Eine beispielanwendung, die Windows Forms, die mit MFC verwendet wird, finden Si
 
    Als Nächstes fügen Sie Code zum Überwachen des Zustands eines Steuerelements in den Windows Forms aus der MFC-Anwendung hinzu.
 
-9. Fügen Sie einen Handler für OnInitDialog hinzu.
+1. Fügen Sie einen Handler für OnInitDialog hinzu.
 
    Anzeigen der **Eigenschaften** Fenster (F4). In **Klassenansicht**, wählen Sie CHostForWinForm aus. In der **Eigenschaften** , wählen Sie überschreibt, und klicken Sie in der Zeile für OnInitDialog, in der linken Spalte und wählen \< hinzufügen >. Dadurch wird in CHostForWinForm.h die folgende Zeile hinzugefügt:
 
@@ -76,9 +76,9 @@ Eine beispielanwendung, die Windows Forms, die mit MFC verwendet wird, finden Si
     virtual BOOL OnInitDialog();
     ```
 
-10. Definieren Sie OnInitDialog (in CHostForWinForm.cpp) wie folgt:
+1. Definieren Sie OnInitDialog (in CHostForWinForm.cpp) wie folgt:
 
-    ```
+    ```cpp
     BOOL CHostForWinForm::OnInitDialog() {
        CWinFormsDialog<WindowsControlLibrary1::UserControl1>::OnInitDialog();
        GetControl()->button1->Click += MAKE_DELEGATE(System::EventHandler, OnButton1);
@@ -86,9 +86,9 @@ Eine beispielanwendung, die Windows Forms, die mit MFC verwendet wird, finden Si
     }
     ```
 
-11. Fügen Sie anschließend den OnButton1-Handler hinzu. Fügen Sie dem öffentlichen Abschnitt der CHostForWinForm-Klasse in CHostForWinForm.h die folgenden Zeilen hinzu:
+1. Fügen Sie anschließend den OnButton1-Handler hinzu. Fügen Sie dem öffentlichen Abschnitt der CHostForWinForm-Klasse in CHostForWinForm.h die folgenden Zeilen hinzu:
 
-    ```
+    ```cpp
     virtual void OnButton1( System::Object^ sender, System::EventArgs^ e );
 
     BEGIN_DELEGATE_MAP( CHostForWinForm )
@@ -98,41 +98,41 @@ Eine beispielanwendung, die Windows Forms, die mit MFC verwendet wird, finden Si
 
    Fügen Sie in CHostForWinForm.cpp die folgende Definition hinzu:
 
-    ```
+    ```cpp
     void CHostForWinForm::OnButton1( System::Object^ sender, System::EventArgs^ e )
     {
        System::Windows::Forms::MessageBox::Show("test");
     }
     ```
 
-12. Erstellen Sie das Projekt, und führen Sie es aus. Wenn Sie auf die Schaltfläche klicken, die sich im Windows Form befindet, wird der Code in der MFC-Anwendung ausgeführt.
+1. Erstellen Sie das Projekt, und führen Sie es aus. Wenn Sie auf die Schaltfläche klicken, die sich im Windows Form befindet, wird der Code in der MFC-Anwendung ausgeführt.
 
-   Als Nächstes fügen Sie Code hinzu, mit dem der Wert aus dem MFC-Code im Textfeld des Windows Forms angezeigt wird.
+    Als Nächstes fügen Sie Code hinzu, mit dem der Wert aus dem MFC-Code im Textfeld des Windows Forms angezeigt wird.
 
-13. Fügen Sie in CHostForWinForm.h im öffentlichen Abschnitt der CHostForWinForm-Klasse die folgende Deklaration hinzu:
+1. Fügen Sie in CHostForWinForm.h im öffentlichen Abschnitt der CHostForWinForm-Klasse die folgende Deklaration hinzu:
 
-    ```
+    ```cpp
     CString m_sEditBoxOnWinForm;
     ```
 
-14. Fügen Sie in der Definition von DoDataExchange in CHostForWinForm.cpp am Ende der Funktion die folgenden drei Zeilen hinzu:
+1. Fügen Sie in der Definition von DoDataExchange in CHostForWinForm.cpp am Ende der Funktion die folgenden drei Zeilen hinzu:
 
-    ```
+    ```cpp
     if (pDX->m_bSaveAndValidate)
        m_sEditBoxOnWinForm = CString( GetControl()->textBox1->Text);
     else
        GetControl()->textBox1->Text = gcnew System::String(m_sEditBoxOnWinForm);
     ```
 
-15. Fügen Sie in der Definition von OnButton1 in CHostForWinForm.cpp am Ende der Funktion die folgenden drei Zeilen hinzu:
+1. Fügen Sie in der Definition von OnButton1 in CHostForWinForm.cpp am Ende der Funktion die folgenden drei Zeilen hinzu:
 
-    ```
+    ```cpp
     this->UpdateData(TRUE);
     System::String ^ z = gcnew System::String(m_sEditBoxOnWinForm);
     System::Windows::Forms::MessageBox::Show(z);
     ```
 
-16. Erstellen Sie das Projekt, und führen Sie es aus.
+1. Erstellen Sie das Projekt, und führen Sie es aus.
 
 ## <a name="see-also"></a>Siehe auch
 

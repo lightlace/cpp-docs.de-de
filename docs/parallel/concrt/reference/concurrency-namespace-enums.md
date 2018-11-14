@@ -12,12 +12,12 @@ f1_keywords:
 - CONCRT/concurrency::join_type
 - CONCRT/concurrency::message_status Enumeration
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-ms.openlocfilehash: 97d2e9fd8e64475d9194bb8b2ab12fdee315e176
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 342655e290167315b7f10caba979804461e10658
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677343"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521075"
 ---
 # <a name="concurrency-namespace-enums"></a>Concurrency-Namespace-Enumerationen
 
@@ -164,6 +164,7 @@ enum DynamicProgressFeedbackType;
 |----------|-----------------|
 |`ProgressFeedbackDisabled`|Der Scheduler wird nicht von Statusinformationen sammeln. Neuverteilen von basiert ausschließlich auf Abonnementebene des zugrunde liegenden Hardwarethreads erfolgt. Weitere Informationen zu den Abonnementstufen, finden Sie unter [IExecutionResource:: CurrentSubscriptionLevel](IExecutionResource-structure.md).<br /><br /> Dieser Wert ist für die Verwendung von der Laufzeit reserviert.|
 |`ProgressFeedbackEnabled`|Der Planer sammelt Informationen und übergibt sie an dem Ressourcen-Manager. Der Ressourcen-Manager wird diese statistischen Informationen zum Ausgleichen von Ressourcen im Auftrag der Planer zusätzlich die Abonnementstufe des zugrunde liegenden Hardwarethreads zu verwenden. Weitere Informationen zu den Abonnementstufen, finden Sie unter [IExecutionResource:: CurrentSubscriptionLevel](IExecutionResource-structure.md).|
+
 ##  <a name="join_type"></a>  Join_type-Enumeration
 
 Der Typ eines `join`-Meldungsblocks.

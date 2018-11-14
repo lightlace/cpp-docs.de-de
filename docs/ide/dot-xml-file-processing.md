@@ -1,25 +1,15 @@
 ---
-title: Verarbeiten der XML-Datei | Microsoft-Dokumentation
-ms.custom: ''
+title: Verarbeiten der XML-Datei
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f7cdbbe704e283177e4e3b4f0767db66e2e284e5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bc9aa57ffd68630d0a4209f8f8611882f8f36fc3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446319"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524169"
 ---
 # <a name="xml-file-processing"></a>Verarbeiten der XML-Datei
 
@@ -33,50 +23,50 @@ Der Compiler beachtet beim Generieren der ID-Zeichenfolgen die folgenden Regeln:
 
 - Der erste Teil der ID-Zeichenfolge kennzeichnet die Art des zu identifizierenden Members durch ein einzelnes Zeichen, gefolgt von einem Doppelpunkt. Die folgenden Membertypen werden verwendet:
 
-   |Zeichen|Beschreibung |
-   |---------------|-----------------|
-   |N|namespace<br /><br /> Einem Namespace können keine Dokumentationskommentare hinzugefügt werden. Allerdings sind cref-Verweise auf einen Namespace möglich.|
-   |T|Typ: Klasse, Schnittstelle, Struktur, Enumeration, Delegat|
-   |D|typedef|
-   |F|Feld|
-   |P|Eigenschaft (einschließlich von Indexern oder anderen indizierten Eigenschaften)|
-   |M|Methode (einschließlich spezieller Methoden wie Konstruktoren, Operatoren usw.)|
-   |E|event|
-   |!|Fehlerzeichenfolge<br /><br /> Der verbleibende Teil der Zeichenfolge enthält Fehlerinformationen. Vom Visual C++-Compiler werden Fehlerinformationen für Links erstellt, die nicht aufgelöst werden können.|
+  | Zeichen | Beschreibung  |
+  |---------------|-----------------|
+  | N | namespace<br /><br /> Einem Namespace können keine Dokumentationskommentare hinzugefügt werden. Allerdings sind cref-Verweise auf einen Namespace möglich. |
+  | T | Typ: Klasse, Schnittstelle, Struktur, Enumeration, Delegat |
+  | D | typedef |
+  | F | Feld |
+  | P | Eigenschaft (einschließlich von Indexern oder anderen indizierten Eigenschaften) |
+  | M | Methode (einschließlich spezieller Methoden wie Konstruktoren, Operatoren usw.) |
+  | E | event |
+  | ! | Fehlerzeichenfolge<br /><br /> Der verbleibende Teil der Zeichenfolge enthält Fehlerinformationen. Vom Visual C++-Compiler werden Fehlerinformationen für Links erstellt, die nicht aufgelöst werden können. |
 
 - Beim zweiten Teil der Zeichenfolge handelt es sich um den vollqualifizierten Namen eines Elements, beginnend mit dem Namespace-Stammverzeichnis. Der Name des Elements, die einschließenden Typen und der Namespace sind durch Punkte getrennt. Wenn der Name des Elements selbst Punkte enthält, werden sie durch ein Rautezeichen (#) ersetzt. Es wird vorausgesetzt, dass kein Element direkt im Namen ein Rautezeichen enthält. Der vollqualifizierte Name des `String`-Konstruktors würde beispielsweise „System.String.#ctor“ lauten.
 
 - Wenn es sich bei Eigenschaften und Methoden um Argumente der Methode handelt, folgt die in Klammern eingeschlossene Argumentliste. Wenn keine Argumente vorhanden sind, werden keine Klammern verwendet. Die Argumente werden durch Kommas voneinander getrennt. Die Codierung jedes Arguments erfolgt genauso wie die Codierung in einer .NET Framework-Signatur:
 
-   - Basistypen. Reguläre Typen (ELEMENT_TYPE_CLASS oder ELEMENT_TYPE_VALUETYPE) werden als vollqualifizierter Name des Typs dargestellt.
+  - Basistypen. Reguläre Typen (ELEMENT_TYPE_CLASS oder ELEMENT_TYPE_VALUETYPE) werden als vollqualifizierter Name des Typs dargestellt.
 
-   - Systeminterne Typen (z.B. ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF und ELEMENT_TYPE_VOID) werden als vollqualifizierter Name des entsprechenden vollständigen Typs dargestellt, z.B. **System.Int32** oder **System.TypedReference**.
+  - Systeminterne Typen (z.B. ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF und ELEMENT_TYPE_VOID) werden als vollqualifizierter Name des entsprechenden vollständigen Typs dargestellt, z.B. **System.Int32** oder **System.TypedReference**.
 
-   - ELEMENT_TYPE_PTR wird als * dargestellt, das auf den geänderten Typ folgt.
+  - ELEMENT_TYPE_PTR wird als * dargestellt, das auf den geänderten Typ folgt.
 
-   - ELEMENT_TYPE_BYREF wird als \@ dargestellt, das auf den geänderten Typ folgt.
+  - ELEMENT_TYPE_BYREF wird als \@ dargestellt, das auf den geänderten Typ folgt.
 
-   - ELEMENT_TYPE_PINNED wird als ^ dargestellt, das auf den geänderten Typ folgt. Vom Visual C++-Compiler wird dies niemals generiert.
+  - ELEMENT_TYPE_PINNED wird als ^ dargestellt, das auf den geänderten Typ folgt. Vom Visual C++-Compiler wird dies niemals generiert.
 
-   - ELEMENT_TYPE_CMOD_REQ wird als &#124; und vollqualifizierter Name der Modifiziererklasse dargestellt, das bzw. der auf den geänderten Typ folgt. Vom Visual C++-Compiler wird dies niemals generiert.
+  - ELEMENT_TYPE_CMOD_REQ wird als &#124; und vollqualifizierter Name der Modifiziererklasse dargestellt, das bzw. der auf den geänderten Typ folgt. Vom Visual C++-Compiler wird dies niemals generiert.
 
-   - ELEMENT_TYPE_CMOD_OPT wird als ! mit nachstehendem vollqualifizierten Namen der Modifiziererklasse dargestellt, das auf den geänderten Typ folgt.
+  - ELEMENT_TYPE_CMOD_OPT wird als ! mit nachstehendem vollqualifizierten Namen der Modifiziererklasse dargestellt, das auf den geänderten Typ folgt.
 
-   - ELEMENT_TYPE_SZARRAY wird als [] dargestellt, das auf den Elementtyp des Arrays folgt.
+  - ELEMENT_TYPE_SZARRAY wird als [] dargestellt, das auf den Elementtyp des Arrays folgt.
 
-   - ELEMENT_TYPE_GENERICARRAY wird als [?] dargestellt, das auf den Elementtyp des Arrays folgt. Vom Visual C++-Compiler wird dies niemals generiert.
+  - ELEMENT_TYPE_GENERICARRAY wird als [?] dargestellt, das auf den Elementtyp des Arrays folgt. Vom Visual C++-Compiler wird dies niemals generiert.
 
-   - ELEMENT_TYPE_ARRAY wird als [*lowerbound*:`size`,*lowerbound*:`size`] dargestellt, wobei die Anzahl von Kommas als Rang minus 1 berechnet wird und die untere Grenze sowie die Größe jeder Dimension – sofern bekannt – dezimal dargestellt werden. Wenn die untere Grenze oder die Größe nicht angegeben ist, wird sie einfach ausgelassen. Wenn die untere Grenze und die Größe für eine bestimmte Dimension ausgelassen werden, kann der Doppelpunkt (:) ebenfalls ausgelassen werden. [1:,1:] ist beispielsweise ein zweidimensionales Array mit 1 als unterer Grenze und nicht angegebenen Größen.
+  - ELEMENT_TYPE_ARRAY wird als [*lowerbound*:`size`,*lowerbound*:`size`] dargestellt, wobei die Anzahl von Kommas als Rang minus 1 berechnet wird und die untere Grenze sowie die Größe jeder Dimension – sofern bekannt – dezimal dargestellt werden. Wenn die untere Grenze oder die Größe nicht angegeben ist, wird sie einfach ausgelassen. Wenn die untere Grenze und die Größe für eine bestimmte Dimension ausgelassen werden, kann der Doppelpunkt (:) ebenfalls ausgelassen werden. [1:,1:] ist beispielsweise ein zweidimensionales Array mit 1 als unterer Grenze und nicht angegebenen Größen.
 
-   - ELEMENT_TYPE_FNPTR wird als „=FUNC:`type`(*signature*)“ dargestellt, wobei `type` den Rückgabetyp angibt und es sich bei *signature* um die Argumente der Methode handelt. Sind keine Argumente vorhanden, werden keine Klammern verwendet. Vom Visual C++-Compiler wird dies niemals generiert.
+  - ELEMENT_TYPE_FNPTR wird als „=FUNC:`type`(*signature*)“ dargestellt, wobei `type` den Rückgabetyp angibt und es sich bei *signature* um die Argumente der Methode handelt. Sind keine Argumente vorhanden, werden keine Klammern verwendet. Vom Visual C++-Compiler wird dies niemals generiert.
 
-   Die folgenden Signaturkomponenten werden nicht dargestellt, weil sie nicht zur Unterscheidung überladener Methoden verwendet werden:
+  Die folgenden Signaturkomponenten werden nicht dargestellt, weil sie nicht zur Unterscheidung überladener Methoden verwendet werden:
 
-   - Aufrufkonvention
+  - Aufrufkonvention
 
-   - Rückgabetyp
+  - Rückgabetyp
 
-   - ELEMENT_TYPE_SENTINEL
+  - ELEMENT_TYPE_SENTINEL
 
 - Nur für Konvertierungsoperatoren wird wie zuvor gezeigt der Rückgabewert der Methode als „~“ gefolgt vom Rückgabewert codiert.
 
@@ -86,9 +76,9 @@ Der Compiler beachtet beim Generieren der ID-Zeichenfolgen die folgenden Regeln:
     <member name="T:MyClass`2">
     ```
 
-   Für einen Typ, der als `public class MyClass<T, U>` definiert ist.
+  Für einen Typ, der als `public class MyClass<T, U>` definiert ist.
 
-   Bei Methoden, die generische Typen als Parameter verwenden, werden die generischen Parameter des Typs als Zahlen mit vorangestelltem Graviszeichen angegeben (z.B. \`0, \`1).  Jede Zahl stellt eine bei 0 beginnende Arraynotation für die generischen Parameter des Typs dar.
+  Bei Methoden, die generische Typen als Parameter verwenden, werden die generischen Parameter des Typs als Zahlen mit vorangestelltem Graviszeichen angegeben (z.B. \`0, \`1).  Jede Zahl stellt eine bei 0 beginnende Arraynotation für die generischen Parameter des Typs dar.
 
 ## <a name="example"></a>Beispiel
 

@@ -2,12 +2,12 @@
 title: Upgraden Ihres Codes auf die Universal CRT
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: 5e417df380ff2239b7c09ba32cc02b784e9343d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41b33698c1617cef02f1b98a654d3403843215d8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668610"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331749"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Upgraden Ihres Codes auf die Universal CRT
 
@@ -37,7 +37,7 @@ Da die UCRT jetzt eine Komponente des Betriebssystems Microsoft Windows ist, ist
 
 Sie können die UCRT unter jeder Version von Windows verwenden, die von Visual Studio 2015 oder Visual Studio 2017 unterstützt wird. Sie können die URCT über ein vcredist-Paket für unterstützte Versionen von Windows neu verteilen, die nicht Windows 10 sind. Die vcredist-Pakete enthalten die UCRT-Komponenten und installieren diese automatisch auf Windows-Betriebssystemen, auf denen sie nicht automatisch installiert sind. Weitere Informationen finden Sie unter [Verteilen von Visual C++-Dateien](../ide/redistributing-visual-cpp-files.md).
 
-Eine lokale Bereitstellung der App der UCRT wird zwar unterstützt, wird jedoch aus Leistungs- und Sicherheitsgründen nicht empfohlen. Die DLLs für die lokale Bereitstellung der App sind als Teil des Windows SDK im Unterverzeichnis **redist** enthalten. Die erforderlichen DLLs enthalten „ucrtbase.dll“ und eine Reihe **APISet-Weiterleitungs**-DLLs mit dem Namen „api-ms-win-_subset_.dll“. Die Reihe der erforderlichen DLLs auf jedem Betriebssystem variiert, deshalb empfiehlt es sich, dass Sie alle DLLs einschließen, wenn Sie die lokale Bereitstellung der App verwenden. Zusätzliche Details und Hinweise zu der lokalen App-Bereitstellung finden Sie unter [Deployment in Visual C++ (Bereitstellung in Visual C++)](../ide/deployment-in-visual-cpp.md).
+Eine lokale Bereitstellung der App der UCRT wird zwar unterstützt, wird jedoch aus Leistungs- und Sicherheitsgründen nicht empfohlen. Die DLLs für die lokale Bereitstellung der App sind als Teil des Windows SDK im Unterverzeichnis **redist** enthalten. Die erforderlichen DLLs enthalten „ucrtbase.dll“ und eine Reihe **APISet-Weiterleitungs**-DLLs mit dem Namen „api-ms-win-_subset_.dll“. Die Reihe der erforderlichen DLLs auf jedem Betriebssystem variiert, deshalb empfiehlt es sich, dass Sie alle DLLs einschließen, wenn Sie die lokale Bereitstellung der App verwenden. Zusätzliche Details und Hinweise zu der lokalen App-Bereitstellung finden Sie unter [Deployment in Visual C++ (Bereitstellung in Visual C++)](../ide/deployment-in-visual-cpp.md).
 
 ## <a name="changes-to-the-universal-crt-functions-and-macros"></a>Änderungen an den Universal CRT-Funktionen und -Makros
 

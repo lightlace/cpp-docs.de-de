@@ -2,12 +2,12 @@
 title: Gleitkomma-Migrationsprobleme
 ms.date: 05/17/2017
 ms.assetid: 36a1b552-2f2b-4919-bc9d-c17f42434954
-ms.openlocfilehash: ea34f1eb8e8bd528273da5d7d18cd545cd22de37
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a259cf276c0347fda4954b46318cc79be88028ee
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530870"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332347"
 ---
 # <a name="floating-point-migration-issues"></a>Gleitkomma-Migrationsprobleme
 
@@ -17,7 +17,7 @@ Wenn Sie Ihre Projekte auf eine neuere Version von Visual Studio upgraden, kann 
 
 Die meisten mathematischen CRT-Funktionen sind seit Jahren in Visual Studio verfügbar, jedoch sind ab Visual Studio 2013 alle Funktionen enthalten, die für ISO C99 erforderlich sind. Diese Funktionen werden implementiert, damit die Sprache ebenso leistungsfähig wie korrekt ist. Da das korrekt gerundete Ergebnis in jedem Fall nur sehr teuer errechenbar ist, wurden diese Funktionen dazu entworfen, eine starke Annäherung an das korrekt gerundete Ergebnis zu erzielen. In den meisten Fällen liegt das erzeugte Ergebnis innerhalb der +/-1-Einheit der geringsten Präzision, oder *ulp*, des korrekt gerundeten Ergebnisses, obwohl die Ungenauigkeit auch größer ausfallen kann. Wenn Sie zuvor eine andere math-Bibliothek verwendet haben, um diese Funktionen zu erhalten, können Unterschiede bei der Implementierung für die Änderung in Ihren Ergebnissen verantwortlich sein.
 
-Wenn die mathematischen Funktionen in die universelle CRT in Visual Studio 2015 verschoben wurden, wurden einige neue Algorithmen verwendet und mehrere Fehler in der Implementierung der Funktionen, die in Visual Studio 2013 neu waren, wurden korrigiert. Diese Änderungen können zu feststellbaren Unterschieden in den Ergebnissen von Gleitkommaberechnungen führen, die diese Funktionen verwenden. Die fehlerbehafteten Funktionen waren erf, exp2, remainder, remquo, scalbln, und scalbn, und ihre float- und long double-Varianten.  Durch andere Änderungen in Visual Studio 2015 wurden Probleme beim Beibehalten des Gleitkommastatusworts und von Ausnahmestatusinformationen in den folgenden Funktionen behoben: _clear87, _clearfp, fegetenv. fesetenv und feholdexcept.
+Wenn die mathematischen Funktionen in die universelle CRT in Visual Studio 2015 verschoben wurden, wurden einige neue Algorithmen verwendet und mehrere Fehler in der Implementierung der Funktionen, die in Visual Studio 2013 neu waren, wurden korrigiert. Diese Änderungen können zu feststellbaren Unterschieden in den Ergebnissen von Gleitkommaberechnungen führen, die diese Funktionen verwenden. Die fehlerbehafteten Funktionen waren erf, exp2, remainder, remquo, scalbln, und scalbn, und ihre float- und long double-Varianten.  Andere Änderungen in Visual Studio 2015 haben Probleme bei der Information des beibehaltenen Statuswort des Gleitkommas und des Ausnahmestatus in den Funktionen _clear87, _clearfp, fegetenv, fesetenv, und feholdexcept behoben.
 
 ## <a name="processor-differences-and-compiler-flags"></a>Prozessorunterschiede und Compilerflags
 

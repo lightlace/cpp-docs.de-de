@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: f30194d552f8bafb4d52597aeb53dbe02a780213
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b37cff8bd3eb3bd05bc7030c4cc12b9b84568b1f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438115"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333640"
 ---
 # <a name="chtmlview-class"></a>CHtmlView-Klasse
 
@@ -1194,7 +1194,7 @@ Ein Zeiger auf eine Zeichenfolge, die die UNC-URL ergibt die Datei anzugeben, od
 
 Nicht jeder Frame wird dieses Ereignis, aber jeder Frame, der ausgelöst wird ausgelöst, wenn ein [OnDownloadBegin](#ondownloadbegin) Ereignis wird ausgelöst, eine entsprechende `OnDocumentComplete` Ereignis.
 
-Die URL angegeben werden, indem *LpszURL* kann sich von der URL, die der Browser navigieren, mitgeteilt wurde, da diese URL der vereinheitlichte und qualifizierte URL sein. Wenn eine Anwendung "www.microsoft.com" in einem Aufruf an eine URL gibt z. B. [Navigate](#navigate) oder [Navigate2](#navigate2), der URL übergeben von `OnNavigateComplete2` werden "http://www.microsoft.com/". Auch wenn der Server den Browser zu einer anderen URL umgeleitet, wird die umgeleitete URL hier angezeigt.
+Die URL angegeben werden, indem *LpszURL* kann sich von der URL, die der Browser navigieren, mitgeteilt wurde, da diese URL der vereinheitlichte und qualifizierte URL sein. Wenn eine Anwendung "www.microsoft.com" in einem Aufruf an eine URL gibt z. B. [Navigate](#navigate) oder [Navigate2](#navigate2), der URL übergeben von `OnNavigateComplete2` werden "<http://www.microsoft.com/>". Auch wenn der Server den Browser zu einer anderen URL umgeleitet, wird die umgeleitete URL hier angezeigt.
 
 ##  <a name="ondocwindowactivate"></a>  CHtmlView::OnDocWindowActivate
 
@@ -1458,7 +1458,7 @@ Ein Zeichenfolgenausdruck, der die URL ergibt UNC-Namen, oder PIDL (einen Zeiger
 
 Der URL-Parameter kann ein PIDL im Falle einer Shell Name Space-Entität sein, für die keine URL-Darstellung vorhanden ist.
 
-Beachten Sie, die in die URL enthalten *StrURL* kann sich von der URL, die der Browser navigieren, mitgeteilt wurde, da diese URL der vereinheitlichte und qualifizierte URL sein. Wenn eine Anwendung "www.microsoft.com" in einem Aufruf an eine URL gibt z. B. [Navigate](#navigate) oder [Navigate2](#navigate2), der URL übergeben von `OnNavigateComplete2` werden "http://www.microsoft.com/". Auch wenn der Server den Browser zu einer anderen URL umgeleitet, wird die umgeleitete URL hier angezeigt.
+Beachten Sie, die in die URL enthalten *StrURL* kann sich von der URL, die der Browser navigieren, mitgeteilt wurde, da diese URL der vereinheitlichte und qualifizierte URL sein. Wenn eine Anwendung "www.microsoft.com" in einem Aufruf an eine URL gibt z. B. [Navigate](#navigate) oder [Navigate2](#navigate2), der URL übergeben von `OnNavigateComplete2` werden "<http://www.microsoft.com/>". Auch wenn der Server den Browser zu einer anderen URL umgeleitet, wird die umgeleitete URL hier angezeigt.
 
 ##  <a name="onnavigateerror"></a>  CHtmlView::OnNavigateError
 

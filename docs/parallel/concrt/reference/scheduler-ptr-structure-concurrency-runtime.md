@@ -8,12 +8,12 @@ f1_keywords:
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::get
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::operator bool
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
-ms.openlocfilehash: 7fd81a1ccf6702c74a013c5772d59f01121b61a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0da45fa18d12b3f1c93df6b8c8736ed1bfb58ade
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479221"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524995"
 ---
 # <a name="schedulerptr-structure"></a>Scheduler_ptr-Struktur
 
@@ -58,7 +58,7 @@ struct scheduler_ptr;
 
 ##  <a name="get"></a>  scheduler_ptr:: Get-Methode
 
-Gibt den Rohzeiger auf den Planer zurück.
+Gibt den rohzeiger auf den Planer zurück.
 
 ```
 scheduler_interface* get() const;
@@ -68,39 +68,39 @@ scheduler_interface* get() const;
 
 ##  <a name="operator_bool"></a>  scheduler_ptr:: Operator bool
 
-Testet, dass der scheduler-Zeiger nicht NULL ist.
-
-```operator bool() const;
-```
-
-##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;
-
-Behave like a pointer
+Testet, ob der Scheduler-Zeiger nicht Null ist.
 
 ```
-Scheduler_interface-*-Operator (const) ->;
+operator bool() const;
 ```
 
-### Return Value
+##  <a name="operator_ptr"></a>  scheduler_ptr:: Operator-&gt;
 
-##  <a name="ctor"></a>  scheduler_ptr::scheduler_ptr Constructor
-
-Creates a scheduler pointer from shared_ptr to scheduler
+Verhält sich wie ein Zeiger.
 
 ```
-explizite Scheduler_ptr (Std:: shared_ptr < Scheduler_interface > Zeitplanungsmodul);
-
-explizite Scheduler_ptr (_In_opt_ pScheduler Scheduler_interface *);
+scheduler_interface* operator->() const;
 ```
 
-### Parameters
+### <a name="return-value"></a>Rückgabewert
+
+##  <a name="ctor"></a>  scheduler_ptr:: scheduler_ptr-Konstruktor
+
+Erstellt einen Scheduler-Zeiger von "shared_ptr" Scheduler an.
+
+```
+explicit scheduler_ptr(std::shared_ptr<scheduler_interface> scheduler);
+explicit scheduler_ptr(_In_opt_ scheduler_interface* pScheduler);
+```
+
+### <a name="parameters"></a>Parameter
 
 *scheduler*<br/>
-The scheduler to convert.
+Der Planer zu konvertieren.
 
 *pScheduler*<br/>
-The scheduler pointer to convert.
+Der Scheduler-Zeiger konvertiert werden soll.
 
-## See Also
+## <a name="see-also"></a>Siehe auch
 
-[concurrency Namespace](concurrency-namespace.md)
+[Concurrency-Namespace](concurrency-namespace.md)

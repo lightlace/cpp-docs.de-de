@@ -6,18 +6,18 @@ helpviewer_keywords:
 - databases [C++], ODBC
 - data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
-ms.openlocfilehash: 49955f12c5e9d4105d9fdbe0ec16bbd302672546
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a4d6cad399b1773102dc0bc64e28049cca30d2d
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468730"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523350"
 ---
 # <a name="open-database-connectivity-odbc"></a>Open Database Connectivity (ODBC)
 
 Die MFC-Bibliothek (Microsoft Foundation Classes) stellt Klassen für die Programmierung mit ODBC (Open Database Connectivity) zur Verfügung. Ab Visual Studio 2015 und SQL Server 2012-ODBC-die ist die bevorzugte Methode für die Verbindung mit SQL-Datenquellen aus.
 
-Weitere Informationen zur Verwendung der ODBC-API ohne MFC finden Sie unter den [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252) -SDK in MSDN.
+Weitere Informationen zur Verwendung der ODBC-API ohne MFC finden Sie unter den [Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) -SDK in MSDN.
 
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
@@ -58,7 +58,7 @@ Weitere Informationen zur Verwendung der ODBC-API ohne MFC finden Sie unter den 
 
 ## <a name="odbc-database-tasks"></a>Aufgaben bei ODBC-Datenbanken
 
-Diese Aufgaben basieren auf die MFC-Bibliothek [ODBC](odbc-basics.md) Klassen. Weitere Informationen zur Verwendung der ODBC-API ohne MFC finden Sie unter den [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252) SDK.
+Diese Aufgaben basieren auf die MFC-Bibliothek [ODBC](odbc-basics.md) Klassen. Weitere Informationen zur Verwendung der ODBC-API ohne MFC finden Sie unter den [Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK.
 
 - [Installation und erste Schritte mit dem ODBC-](installing-and-getting-started-with-odbc.md)
 

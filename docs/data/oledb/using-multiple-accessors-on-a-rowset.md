@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rowsets [C++], multiple accessors
 - accessors [C++], rowsets
 ms.assetid: 80d4dc5d-4940-4a28-a4ee-d8602f71d2a6
-ms.openlocfilehash: 2f88213fce0c5aa1d91f94d7fbeb26eab6432207
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ce150375b98c697c32767001911eade53ed2f8c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483290"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522024"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Verwenden mehrerer Zugriffsmethoden für ein Rowset
 
@@ -20,19 +20,19 @@ Es gibt drei grundlegende Szenarien, in denen Sie mehrere Accessoren für Ereign
 
 - **Mehrere Rowsets von Lese-/Schreibzugriff.** In diesem Szenario müssen Sie eine Tabelle mit einem Primärschlüssel. Sie möchten können alle Spalten in der Zeile, einschließlich des primären Schlüssels lesen. Sie möchten auch in der Lage, zum Schreiben von Daten für alle Spalten außer dem Primärschlüssel (da Sie in der Primärschlüsselspalte schreiben können). In diesem Fall richten Sie zwei Zugriffsmethoden:
 
-   - Accessor 0 enthält alle Spalten.
+  - Accessor 0 enthält alle Spalten.
 
-   - Accessor 1 enthält alle Spalten außer dem Primärschlüssel.
+  - Accessor 1 enthält alle Spalten außer dem Primärschlüssel.
 
 - **Leistung:** In diesem Szenario müssen einer oder mehreren Spalten eine große Menge von Daten, z. B. Grafiken, Audio- oder video-Dateien. Jedes Mal, wenn Sie auf eine Zeile verschieben, möchten Sie wahrscheinlich nicht die Spalte mit der Datei große Datenmengen abrufen, da dadurch die Leistung Ihrer Anwendung also verlangsamen würde.
 
-   Sie können separate Accessoren einrichten, in der die erste Accessor enthält alle Spalten mit Ausnahme des mit großen Datenmengen, und er ruft Daten aus diesen Spalten automatisch; der erste-Accessor ist der Autoaccessor. Der zweite Accessor ruft nur die Spalte, die große Datenmengen enthalten, aber es nicht abrufen von Daten aus dieser Spalte automatisch. Sie können die anderen Methoden aktualisieren oder Abrufen umfangreicher Datenmengen bei Bedarf verwenden.
+  Sie können separate Accessoren einrichten, in der die erste Accessor enthält alle Spalten mit Ausnahme des mit großen Datenmengen, und er ruft Daten aus diesen Spalten automatisch; der erste-Accessor ist der Autoaccessor. Der zweite Accessor ruft nur die Spalte, die große Datenmengen enthalten, aber es nicht abrufen von Daten aus dieser Spalte automatisch. Sie können die anderen Methoden aktualisieren oder Abrufen umfangreicher Datenmengen bei Bedarf verwenden.
 
-   - Accessor 0 ist eine automatische Accessor verfügbar. alle Spalten mit Ausnahme des mit umfangreichen Daten abgerufen.
+  - Accessor 0 ist eine automatische Accessor verfügbar. alle Spalten mit Ausnahme des mit umfangreichen Daten abgerufen.
 
-   - Accessor 1 ist eine automatische Accessor nicht. Sie ruft die Spalte mit großen Datenmengen ab.
+  - Accessor 1 ist eine automatische Accessor nicht. Sie ruft die Spalte mit großen Datenmengen ab.
 
-   Verwenden Sie das automatische-Argument, um anzugeben, ob der Accessor ein Autoaccessor ist.
+  Verwenden Sie das automatische-Argument, um anzugeben, ob der Accessor ein Autoaccessor ist.
 
 - **Mehrere Spalten von einer ISequentialStream-Schnittstelle.** In diesem Szenario haben Sie mehr als eine Spalte enthalten `ISequentialStream` Daten. Jeder Accessor kann jedoch nur einmal `ISequentialStream` -Datenstrom. Um dieses Problem zu beheben, legen Sie mehrere Accessoren jeweils eine `ISequentialStream` Zeiger.
 

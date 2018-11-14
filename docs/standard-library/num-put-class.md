@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::num_put [C++], do_put
 - std::num_put [C++], put
 ms.assetid: 36c5bffc-8283-4201-8ed4-78c4d81f8a17
-ms.openlocfilehash: c6866358cde7d381ec8a703d50aeb3193bef9d5e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ede0ccd85f116f300939c819ae8209435da72b7
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441859"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327329"
 ---
 # <a name="numput-class"></a>num_put-Klasse
 
@@ -258,7 +258,7 @@ virtual iter_type do_put(iter_type next,
 
 verhält sich genauso wie die erste, außer dass es sich um ein boolesches Ausgabefeld aus generiert *Val*.
 
-Ein boolesches Ausgabefeld nimmt eine von zwei Formen an. Wenn **iosbase**. **flags** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) **falsch** ist, gibt die Memberfunktion `do_put`(_ *Next*, \_ *Iosbase*, \_ *Fill*, ( **long**) `val`) zurück, was in der Regel eine generierte Sequenz von 0 (für **FALSE**) oder 1 (für **TRUE**) erstellt. Andernfalls ist die generierte Sequenz entweder **fac**. [falsename](../standard-library/numpunct-class.md#falsename)`)` (für **FALSE**), oder **fac**. [truename](../standard-library/numpunct-class.md#truename) (für **TRUE**) übereinstimmen.
+Ein boolesches Ausgabefeld nimmt eine von zwei Formen an. Wenn `iosbase.flags & ios_base::` [Boolalpha](../standard-library/ios-functions.md#boolalpha) ist **"false"**, die Memberfunktion gibt `do_put(_Next, _Iosbase, _Fill, (long)val)`, das in der Regel generiert einer generierte Sequenz entweder 0 (für **"false"**) oder 1 (für **"true"**). Andernfalls wird von die generierte Sequenz entweder *Fac*.[ Falsename](../standard-library/numpunct-class.md#falsename) (für **"false"**), oder *Fac*.[ TrueName](../standard-library/numpunct-class.md#truename) (für **"true"**).
 
 Die siebte virtuelle geschützte Memberfunktion:
 

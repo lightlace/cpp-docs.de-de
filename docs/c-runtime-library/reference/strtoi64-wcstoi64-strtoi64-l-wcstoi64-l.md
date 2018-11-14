@@ -39,12 +39,12 @@ helpviewer_keywords:
 - strtoi64 function
 - wcstoi64_l function
 ms.assetid: ea2abc50-7bfe-420e-a46b-703c3153593a
-ms.openlocfilehash: a8097a31ebbc56281008f14da58671d5b2e4e8b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b5479448a4e3a3cedba3a62d9b12b0dbe4160f7c
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490778"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331697"
 ---
 # <a name="strtoi64-wcstoi64-strtoi64l-wcstoi64l"></a>_strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l
 
@@ -112,7 +112,7 @@ Die **_strtoi64** -Funktion konvertiert *StrSource* auf eine **__int64**. Beide 
 |**_tcstoi64**|**_strtoi64**|**_strtoi64**|**_wcstoi64**|
 |**_tcstoi64_l**|**_strtoi64_l**|**_strtoi64_l**|**_wcstoi64_l**|
 
-Des Gebietsschemas des **LC_NUMERIC** bestimmt das Erkennen des Basiszeichens in *StrSource **;* Weitere Informationen finden Sie unter [Setlocale](setlocale-wsetlocale.md). Die Funktionen ohne das _l-Suffix verwenden das aktuelle Gebietsschema; **_strtoi64_l** und **_wcstoi64_l** sind identisch mit der entsprechenden Funktion ohne die **_l** suffix mit dem Unterschied, dass sie das übergebene Gebietsschema verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Des Gebietsschemas des **LC_NUMERIC** bestimmt das Erkennen des Basiszeichens in *StrSource*; Weitere Informationen finden Sie unter [Setlocale](setlocale-wsetlocale.md). Die Funktionen ohne das _l-Suffix verwenden das aktuelle Gebietsschema; **_strtoi64_l** und **_wcstoi64_l** sind identisch mit der entsprechenden Funktion ohne die **_l** suffix mit dem Unterschied, dass sie das übergebene Gebietsschema verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 Wenn *Endptr* nicht **NULL**, ein Zeiger auf das Zeichen, die Überprüfung beendet, wird gespeichert, an der Position zeigt *Endptr*. Wenn keine Konvertierung ausgeführt werden kann (keine gültigen Ziffern gefunden oder ungültige Basis angegeben) den Wert der *StrSource* befindet sich in den Speicherort verweist *Endptr*.
 

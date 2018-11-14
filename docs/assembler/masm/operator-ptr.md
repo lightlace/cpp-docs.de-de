@@ -8,12 +8,12 @@ helpviewer_keywords:
 - PTR operator
 - operator PTR
 ms.assetid: df280f36-ca06-4578-b99d-0aa139b2b969
-ms.openlocfilehash: b6552b2611808fadafe54b330aa4825e63c56a9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87aa8ff044318d778f823827c451c0ad3332e279
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614096"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331996"
 ---
 # <a name="operator-ptr"></a>Operator PTR
 
@@ -22,8 +22,8 @@ Der erste Operator erzwingt, dass die *Ausdruck* behandelt werden soll, mit dem 
 ## <a name="syntax"></a>Syntax
 
 > *Typ* PTR *Ausdruck*
-
-> [[*Abstand*]] PTR *Typ*
+>
+> \[*Abstand*] PTR *Typ*
 
 ## <a name="see-also"></a>Siehe auch
 

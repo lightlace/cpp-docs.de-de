@@ -1,15 +1,15 @@
 ---
 title: Erstellen eines einfachen Consumers
-ms.date: 10/09/2018
+ms.date: 11/06/2018
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
-ms.openlocfilehash: 2a10e4da743c1f867d801ffe6767ab6b5b6c0290
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4346bca99d3744657072a4940776934e3c03e9de
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608051"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326640"
 ---
 # <a name="creating-a-simple-consumer"></a>Erstellen eines einfachen Consumers
 
@@ -51,18 +51,18 @@ Verwenden Sie als Nächstes die **ATL-OLE DB-Consumer-Assistenten** zum Hinzufü
 
 1. In der **Datenlinkeigenschaften** Dialogfeld Feld, gehen Sie folgendermaßen vor:
 
-    1. Auf der **Anbieter** Registerkarte, geben Sie einen OLE DB-Anbieter.
+   1. Auf der **Anbieter** Registerkarte, geben Sie einen OLE DB-Anbieter.
 
-    1. Auf der **Verbindung** Registerkarte, geben Sie die erforderliche Informationen, z. B. Servername, Anmelde-ID und Kennwort für die Datenquelle und die Datenbank auf dem Server.
+   1. Auf der **Verbindung** Registerkarte, geben Sie die erforderliche Informationen, z. B. Servername, Anmelde-ID und Kennwort für die Datenquelle und die Datenbank auf dem Server.
 
-       > [!NOTE]
-       > Es wurde ein Sicherheitsproblem mit der **Speichern von Kennwort zulassen** Feature von der **Datenlinkeigenschaften** im Dialogfeld. In **Geben Sie Informationen zum Anmelden an den Server**, es gibt zwei Optionsfelder: **Windows NT integrated Security verwenden** und **bestimmten Benutzernamen und bestimmtes Kennwort**.
+      > [!NOTE]
+      > Es wurde ein Sicherheitsproblem mit der **Speichern von Kennwort zulassen** Feature von der **Datenlinkeigenschaften** im Dialogfeld. In **Geben Sie Informationen zum Anmelden an den Server**, es gibt zwei Optionsfelder: **Windows NT integrated Security verwenden** und **bestimmten Benutzernamen und bestimmtes Kennwort**.
 
-       > [!NOTE]
-       > Bei Auswahl von **bestimmten Benutzernamen und bestimmtes Kennwort**, Sie haben die Möglichkeit, speichern Sie das Kennwort (mit der **Speichern von Kennwort zulassen** Kontrollkästchen), aber diese Option ist nicht sicher. Es wird empfohlen, die Sie auswählen, **Windows NT integrated Security verwenden**; diese Option verwendet die Windows NT zur Überprüfung Ihrer Identität.
+      > [!NOTE]
+      > Bei Auswahl von **bestimmten Benutzernamen und bestimmtes Kennwort**, Sie haben die Möglichkeit, speichern Sie das Kennwort (mit der **Speichern von Kennwort zulassen** Kontrollkästchen), aber diese Option ist nicht sicher. Es wird empfohlen, die Sie auswählen, **Windows NT integrated Security verwenden**; diese Option verwendet die Windows NT zur Überprüfung Ihrer Identität.
 
-       > [!NOTE]
-       > Wenn Sie Windows NT integrated Security verwenden können, sollten Sie eine Anwendung der mittleren Ebene verwenden, um den Benutzer für das Kennwort aufzufordern oder das Kennwort an einem Ort mit Sicherheitsmechanismen, um dessen Schutz zu speichern (nicht im Quellcode).
+      > [!NOTE]
+      > Wenn Sie Windows NT integrated Security verwenden können, sollten Sie eine Anwendung der mittleren Ebene verwenden, um den Benutzer für das Kennwort aufzufordern oder das Kennwort an einem Ort mit Sicherheitsmechanismen, um dessen Schutz zu speichern (nicht im Quellcode).
 
    1. Nachdem Sie Ihren Anbieter und andere Einstellungen auswählen, klicken Sie auf **Testverbindung** um zu überprüfen, ob die Auswahl auf der vorherigen dialogfeldseiten. Wenn die **Ergebnisse** Feld Berichte `Test connection succeeded`, klicken Sie auf **OK** zum Erstellen der datenverknüpfung.
 

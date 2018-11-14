@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: fcf673d8e6d871a7920150b5f62fd3d62135b52c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 817e7fb2b434d06d6c0dfdfc100be8004f6fa4ef
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500528"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332646"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf-Klasse
 
@@ -504,11 +504,11 @@ Das Zeichen, das in den Puffer eingefügt werden soll, oder `traits_type::eof`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion nicht erfolgreich abgeschlossen werden kann, wird `traits_type::eof` zurückgegeben. Andernfalls wird **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*) zurückgegeben.
+Wenn die Funktion nicht erfolgreich abgeschlossen werden kann, wird `traits_type::eof` zurückgegeben. Andernfalls wird **Traits_type::**[Not_eof](../standard-library/char-traits-struct.md#not_eof)(*\_Meta*).
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte virtuelle Memberfunktion versetzt ein Element zurück in den Eingabepuffer und ernennt es dann zum aktuellen Element (wird mit dem nächsten Zeiger darauf gezeigt). Bei _ *Meta* **== traits_type::**[eof](../standard-library/char-traits-struct.md#eof) ist das Element für den Pushback das Element, das sich bereits vor dem aktuellen Element im Stream befindet. Andernfalls wird dieses Element durch **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) ersetzt. Ein Element kann auf verschiedene Arten durch die Funktion wiederhergestellt werden:
+Die geschützte virtuelle Memberfunktion versetzt ein Element zurück in den Eingabepuffer und ernennt es dann zum aktuellen Element (wird mit dem nächsten Zeiger darauf gezeigt). Wenn  *\_Meta* **== Traits_type::**[eof](../standard-library/char-traits-struct.md#eof), das Element, das Pushback ist bereits in den Stream vor dem aktuellen Element. Andernfalls wird dieses Element durch ersetzt **ch = Traits_type::**[To_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*). Ein Element kann auf verschiedene Arten durch die Funktion wiederhergestellt werden:
 
 - Wenn eine Position zur Wiederherstellung zur Verfügung steht, und das Element dort gespeicherten gleich `ch`, kann er den nächsten Zeiger für den Eingabepuffer verringert.
 
