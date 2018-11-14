@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: 25bb370c0714bfef97bc6659deae2fbd21aed23f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 46cf285e07bffe178874546d13d196b5165cb28b
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664567"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524357"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Feldstatus-Datenmember in vom Assistenten generierten Zugriffsmethoden
 
@@ -58,7 +58,7 @@ Sie können die Status-Werte verwenden, zu Debugzwecken. Wenn vom Code generiert
 
 Sie können auch die Status-Werte verwenden, um einen NULL-Wert für ein bestimmtes Feld festzulegen. Auf diese Weise können Sie in Fällen, in denen Sie einen Feldwert als NULL statt 0 (null) zu unterscheiden möchten. Es liegt an Ihnen zu entscheiden, ob NULL ein gültiger Wert oder ein spezieller Wert, und entscheiden, wie Sie Ihre Anwendung behandelt werden soll. OLE DB definiert DBSTATUS_S_ISNULL als die richtige Methode zur Angabe der eines generischen NULL-Werts. Wenn der Consumer Daten liest, und der Wert null ist, wird das Statusfeld auf DBSTATUS_S_ISNULL festgelegt. Wenn der Consumer einen NULL-Wert festgelegt möchte, setzt der Consumer den Statuswert auf DBSTATUS_S_ISNULL vor dem Aufruf des Anbieters an.
 
-Öffnen Sie als Nächstes "OleDb.h", und suchen Sie nach DBSTATUSENUM. Sie können dann der numerische Wert des Status ungleich NULL für Enumerationswerte DBSTATUSENUM übereinstimmen. Ist der Enumerationsname nicht ausreichen, um Sie zu informieren, was falsch ist, finden Sie unter den **Status** Thema in der **Datenwerte binden** Teil der [OLE DB Programmer's Guide](/previous-versions/windows/desktop/ms713643). Dieses Thema enthält Tabellen mit dem Status-Werte, die beim Abrufen oder Festlegen der Daten verwendet. Informationen zu Längenwerten finden Sie unter den **Länge** Thema im gleichen Abschnitt.
+Öffnen Sie als Nächstes "OleDb.h", und suchen Sie nach DBSTATUSENUM. Sie können dann der numerische Wert des Status ungleich NULL für Enumerationswerte DBSTATUSENUM übereinstimmen. Ist der Enumerationsname nicht ausreichen, um Sie zu informieren, was falsch ist, finden Sie unter den **Status** Thema in der **Datenwerte binden** Teil der [OLE DB Programmer's Guide](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming). Dieses Thema enthält Tabellen mit dem Status-Werte, die beim Abrufen oder Festlegen der Daten verwendet. Informationen zu Längenwerten finden Sie unter den **Länge** Thema im gleichen Abschnitt.
 
 ## <a name="retrieving-the-length-or-status-of-a-column"></a>Abrufen der Länge oder der Status einer Spalte
 

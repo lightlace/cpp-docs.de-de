@@ -32,12 +32,12 @@ helpviewer_keywords:
 - ungettc_nolock function
 - ungetc_nolock function
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
-ms.openlocfilehash: 17fadee825aff7b691db74eaaa7b695ba5a49a42
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55888f122af0848c92204168a23cca93e2517904
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482861"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331502"
 ---
 # <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock, _ungetwc_nolock
 
@@ -66,7 +66,7 @@ Zeiger auf die **FILE**-Struktur.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn erfolgreich, jede dieser Funktionen das Zeichenargument zurückgibt *c*. Wenn *c* nicht zurückgeschoben werden oder wenn kein Zeichen gelesen wurde, der Eingabestream unverändert und **_ungetc_nolock** gibt ** EOF`; **_ungetwc_nolock` gibt **WEOF**. Wenn *Stream* ist **NULL**, **EOF** oder **WEOF** zurückgegeben und **Errno** nastaven NA hodnotu  **EINVAL**.
+Wenn erfolgreich, jede dieser Funktionen das Zeichenargument zurückgibt *c*. Wenn *c* nicht zurückgeschoben werden oder wenn kein Zeichen gelesen wurde, der Eingabestream unverändert und **_ungetc_nolock** gibt **EOF**; **_ungetwc_nolock** gibt **WEOF**. Wenn *Stream* ist **NULL**, **EOF** oder **WEOF** zurückgegeben und **Errno** nastaven NA hodnotu  **EINVAL**.
 
 Weitere Informationen über diese und andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr (_doserrno, errno, _sys_errlist und _sys_nerr)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

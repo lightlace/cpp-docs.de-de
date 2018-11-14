@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, classes
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
-ms.openlocfilehash: 40294e0d0af3f5181ffe295a2a6c625fa5223f5b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c35d7bf16b851fe9a96bdd896babfa450c726374
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463387"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525275"
 ---
 # <a name="mfc-classes"></a>MFC-Klassen
 
@@ -1012,7 +1012,7 @@ Wird für OLE-Server mit direkter Aktivierung, Automatisierungsserver und Linkco
 Wird für einen Sonderfall des OLE-Dialogfelds "Verknüpfungen bearbeiten" verwendet, das eingesetzt werden sollte, wenn in einem Dokument nur vorhandene Links oder eingebettete Objekte aktualisiert werden müssen.
 
 [COleVariant-Klasse](../../mfc/reference/colevariant-class.md)<br/>
-Kapselt den Datentyp [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) .
+Kapselt den Datentyp [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) .
 
 [CPagerCtrl-Klasse](../../mfc/reference/cpagerctrl-class.md)<br/>
 Die Klasse `CPagerCtrl` kapselt das Windows-Pagersteuerelement, in dem der Benutzer einen Bildlauf durchführen kann, um ein Fenster innerhalb eines anderen Fensters in den sichtbaren Bereich zu verschieben, sofern es größer ist als das umgebende Fenster.

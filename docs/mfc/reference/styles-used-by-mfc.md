@@ -196,12 +196,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: dc70059e2de054e4b1aac4800e1d61c58bc9b467
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a0aef399b734ad5b15a9a2d4028be3fde3f02505
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642909"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525302"
 ---
 # <a name="styles-used-by-mfc"></a>Von MFC verwendete Stile
 
@@ -338,7 +338,7 @@ Listenfeldstile gelten für [CListBox-Klasse](../../mfc/reference/clistbox-class
 |LBS_HASSTRINGS|Gibt ein Ownerdrawn-Listenfeld aus, die Elemente, die aus Zeichenfolgen bestehen enthält. Im Listenfeld verwaltet den Arbeitsspeicher und die Zeiger für die Zeichenfolgen, damit die Anwendung verwenden, kann die `GetText` Member-Funktion, um den Text für ein bestimmtes Element abzurufen.|
 |LBS_MULTICOLUMN|Gibt ein mehrspaltiges Listenfeld, das ein horizontaler Bildlauf durchgeführt wird. Die `SetColumnWidth` Memberfunktion legt die Breite der Spalten fest.|
 |LBS_MULTIPLESEL|Auswahl der Zeichenfolge wird jedes Mal umgeschaltet, der Benutzer klickt, oder die Zeichenfolge doppelklickt. Eine beliebige Anzahl von Zeichenfolgen kann ausgewählt werden.|
-|LBS_NODATA|Gibt ein ohne-Data-Listenfeld an. Geben Sie dieses Format, wenn die Anzahl der Elemente im Listenfeld Tausend überschreitet. Ein ohne-Data-Listenfeld, das müssen auch des LBS_OWNERDRAWFIXED-Stils, aber es darf keinen den LBS_SORT oder LBS_HASSTRINGS-Stil. <br /></br / > eine ohne-Data-Listenfeld ähnelt einem Ownerdrawn-Listenfeld aus, mit dem Unterschied, dass er keine Zeichenfolge oder eine Bitmap-Daten für ein Element enthält. Befehle zum Hinzufügen, einfügen oder Löschen eines Elements ein beliebiges Element Daten immer zu ignorieren Anforderungen nach einer Zeichenfolge innerhalb des Listenfelds immer fehl. Das System sendet die Nachricht WM_DRAWITEM an das besitzende Fenster, wenn ein Element gezeichnet werden muss. Das Element-ID-Mitglied der `DRAWITEMSTRUCT` Struktur übergeben, mit der Meldung WM_DRAWITEM gibt die Zeilennummer des Elements gezeichnet werden soll. Ein ohne-Data-Listenfeld sendet eine Nachricht WM_DELETEITEM nicht.|
+|LBS_NODATA|Gibt ein ohne-Data-Listenfeld an. Geben Sie dieses Format, wenn die Anzahl der Elemente im Listenfeld Tausend überschreitet. Ein ohne-Data-Listenfeld, das müssen auch des LBS_OWNERDRAWFIXED-Stils, aber es darf keinen den LBS_SORT oder LBS_HASSTRINGS-Stil.<br/><br/> Ein ohne-Data-Listenfeld ähnelt einem Ownerdrawn-Listenfeld aus, mit dem Unterschied, dass er keine Zeichenfolge oder eine Bitmap-Daten für ein Element enthält. Befehle zum Hinzufügen, einfügen oder Löschen eines Elements ein beliebiges Element Daten immer zu ignorieren Anforderungen nach einer Zeichenfolge innerhalb des Listenfelds immer fehl. Das System sendet die Nachricht WM_DRAWITEM an das besitzende Fenster, wenn ein Element gezeichnet werden muss. Das Element-ID-Mitglied der `DRAWITEMSTRUCT` Struktur übergeben, mit der Meldung WM_DRAWITEM gibt die Zeilennummer des Elements gezeichnet werden soll. Ein ohne-Data-Listenfeld sendet eine Nachricht WM_DELETEITEM nicht.|
 |LBS_NOINTEGRALHEIGHT|Die Größe des Listenfelds ist genau der Größe von der Anwendung angegeben werden, bei der Erstellung im Listenfeld aus. Windows-Größen in der Regel ein Listenfeld, das so, dass das Listenfeld Elemente nicht angezeigt wird.|
 |LBS_NOREDRAW|Listenfeld-Anzeige wird nicht aktualisiert werden, wenn Änderungen vorgenommen werden. Dieses Format kann jederzeit geändert werden, durch Senden einer Nachricht WM_SETREDRAW.|
 |LBS_NOSEL|Gibt an, dass das Listenfeld Elemente enthält, die angezeigt, aber nicht ausgewählt werden können.|
@@ -350,7 +350,7 @@ Listenfeldstile gelten für [CListBox-Klasse](../../mfc/reference/clistbox-class
 |LBS_USETABSTOPS|Können ein Listenfeld zu erkennen und Erweitern von Tabulatorzeichen beim Zeichnen von Zeichenfolgen. Die Registerkarte Standardpositionen sind 32 Dialogeinheiten. (Eine Dialogeinheit ist einem horizontalen oder vertikalen Abstand. Eine horizontale Dialogfeld-Einheit ist ein Viertel des die aktuelle Basis Breite Dialogeinheit gleich. Die Dialogfeld Basiseinheiten werden basierend auf die Höhe und Breite der aktuellen Systemschriftart berechnet. Die `GetDialogBaseUnits` Windows-Funktion gibt das aktuelle Dialogfeld Basiseinheiten in Pixeln.) Diese Art sollten nicht mit LBS_OWNERDRAWFIXED verwendet werden.|
 |LBS_WANTKEYBOARDINPUT|Der Besitzer des Listenfelds empfängt WM_VKEYTOITEM oder WM_CHARTOITEM Nachrichten, wenn der Benutzer eine Taste drückt, während das Listenfeld den Eingabefokus besitzt. Dies kann eine Anwendung auf der Tastatur, geben Sie speziellen Verarbeitungsschritte ausgeführt werden.|
 
-##<a name="message-box-styles"></a>  Meldungsfeldstile
+## <a name="message-box-styles"></a>  Meldungsfeldstile
 
 Meldungsfeldstile gelten für [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) Elemente. Geben Sie eine Kombination der Formate in der *nType* Parameter `AfxMessageBox`. Weitere Informationen zu Message Box-Stile in Windows finden Sie unter [MessageBox-Funktion (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox).
 
@@ -383,6 +383,7 @@ Die folgenden meldungsfeldstile sind verfügbar.
 |MB_ICONINFORMATION|Ein Symbol aus einem "I" in einem Kreis besteht, die im Meldungsfeld wird angezeigt.|
 |MB_ICONQUESTION|Ein Fragezeichen-Symbol, die im Meldungsfeld wird angezeigt.|
 |MB_ICONSTOP|Eine Stop-anmelden-Symbol wird im Meldungsfeld angezeigt.|
+
 ### <a name="message-box-default-buttons"></a>MessageBox-Standard-Schaltflächen
 
 |Stil|Beschreibung|

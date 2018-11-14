@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], str
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
-ms.openlocfilehash: 87ea8150e13076d176665bc3ddcc04482d639b79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ed9deee46f7c99750ee3260a6b2a8de1f0f3397
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462024"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329643"
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf-Klasse
 
@@ -183,7 +183,7 @@ Wenn die Funktion nicht erfolgreich abgeschlossen werden kann, wird `traits_type
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn _ *Meta* nicht **traits_type::**[eof](../standard-library/char-traits-struct.md#eof) entspricht, versucht die geschützte virtuelle Memberfunktion, das Element **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) in den Ausgabepuffer einzufügen. Hierfür gibt es verschiedene Möglichkeiten:
+Wenn  *\_Meta* ist nicht gleich **Traits_type::**[eof](../standard-library/char-traits-struct.md#eof), die geschützte virtuelle Memberfunktion versucht, das Element eingefügt  **Traits_type::**[To_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*) in den Ausgabepuffer. Hierfür gibt es verschiedene Möglichkeiten:
 
 - Wenn eine Schreibposition verfügbar ist, kann das Element in der Schreibposition gespeichert werden, und der nächste Zeiger für den Ausgabepuffer kann inkrementiert werden.
 

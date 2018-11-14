@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-ms.openlocfilehash: f118f55ddaa4a2dbc8a4a3ad1e596ec461a2b078
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8707ac716a010ea1d3dc0fa51740e76a5822462
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615058"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329299"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (Ausnahmebehandlungsmodell)
 
@@ -29,12 +29,17 @@ Gibt die Art der Ausnahmebehandlung an, die vom Compiler verwendet werden soll, 
 
 ## <a name="arguments"></a>Argumente
 
-|||
-|-|-|
-**a**|Das Ausnahmebehandlungsmodell, die zwar beide asynchron abfängt (strukturierte) und synchrone (C++) Ausnahmen mithilfe c++ `catch(...)` Syntax.
-**s**|Das Ausnahmebehandlungsmodell, die nur synchrone (C++)-Ausnahmen erfasst, und weist den Compiler an, wird davon ausgegangen, dass Funktionen als deklariert **Extern "C"** möglicherweise eine Ausnahme auslösen.
-**c**|Bei Verwendung mit **s** (**/EHsc**) nur C++-Ausnahmen erfasst, und weist den Compiler an, wird davon ausgegangen, dass Funktionen als deklariert **Extern "C"** nie eine C++-Ausnahme auslösen. **/EHca** entspricht **/EHa**.
-**r**|Weist den Compiler an, immer laufzeitbeendigungsprüfungen für alle generieren **"noexcept"** Funktionen. Standardmäßig sucht Common Language Runtime **"noexcept"** wegoptimiert werden, wenn der Compiler bestimmt die Funktion ruft nur nicht auslösende Funktionen.
+**a**<br/>
+Das Ausnahmebehandlungsmodell, die zwar beide asynchron abfängt (strukturierte) und synchrone (C++) Ausnahmen mithilfe c++ `catch(...)` Syntax.
+
+**s**<br/>
+Das Ausnahmebehandlungsmodell, die nur synchrone (C++)-Ausnahmen erfasst, und weist den Compiler an, wird davon ausgegangen, dass Funktionen als deklariert **Extern "C"** möglicherweise eine Ausnahme auslösen.
+
+**c**<br/>
+Bei Verwendung mit **s** (**/EHsc**) nur C++-Ausnahmen erfasst, und weist den Compiler an, wird davon ausgegangen, dass Funktionen als deklariert **Extern "C"** nie eine C++-Ausnahme auslösen. **/EHca** entspricht **/EHa**.
+
+**r**<br/>
+Weist den Compiler an, immer laufzeitbeendigungsprüfungen für alle generieren **"noexcept"** Funktionen. Standardmäßig sucht Common Language Runtime **"noexcept"** wegoptimiert werden, wenn der Compiler bestimmt die Funktion ruft nur nicht auslösende Funktionen.
 
 ## <a name="remarks"></a>Hinweise
 

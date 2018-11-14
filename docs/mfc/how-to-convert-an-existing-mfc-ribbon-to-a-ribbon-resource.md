@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ribbon resource, converting from an MFC ribbon
 - MFC ribbon, converting to a ribbon resource
 ms.assetid: 324b7ff6-58f9-4691-96a9-9836a79d0fb6
-ms.openlocfilehash: 2ba2907a95018948670847282fd09e0a71a8c106
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 627c50758b10ad18e45fc1432340c0eb2dad7b19
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509564"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524351"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>Gewusst wie: Umwandeln eines vorhandenen MFC-Menübands in eine Menübandressource
 
@@ -24,7 +24,6 @@ Benötigen Sie ein vorhandenes MFC-Projekt mit Code, der die MFC-Menübandklasse
 
 ```
     m_wndRibbonBar.SaveToXMLFile("RibbonOutput.xml");
-
 ```
 
    Speichern und schließen Sie die Datei.
@@ -41,7 +40,6 @@ Benötigen Sie ein vorhandenes MFC-Projekt mit Code, der die MFC-Menübandklasse
 
 ```
     m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);
-
 ```
 
 1. Erstellen Sie das Projekt, und führen Sie das Programm.

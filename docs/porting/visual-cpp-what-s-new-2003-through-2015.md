@@ -1,24 +1,13 @@
 ---
-title: 'Visual C++: Neuerungen von 2003 bis 2015 | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Visual C++: Neuerungen von 2003 bis 2015'
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f005beb9bc71724c289322822a3bae4c03f19d48
-ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
+ms.openlocfilehash: 6d79406e07b8839e196f15d9bc3aed96cbc3dca8
+ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50136249"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51520176"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++: Neuerungen von 2003 bis 2015
 
@@ -271,7 +260,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
    Angenommen, der Code definiert sowohl einen **Platzierungsoperator „new“** als auch einen **Platzierungsoperator „delete“**:
 
    ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
    ```
 
@@ -317,15 +306,15 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
    weisen nun eine höhere Standardkonformität auf. Frühere Versionen des Compilers haben einen expliziten Konstruktor und Destruktor für anonyme Unions generiert. Diese sind in Visual Studio 2015 nicht mehr vorhanden.
 
    ```cpp
-    struct S {
-      S();
-     };
+   struct S {
+      S();
+   };
 
-     union {
-      struct {
-       S s;
-      };
-     } u; // C2280
+   union {
+      struct {
+         S s;
+      };
+   } u; // C2280
    ```
 
    Der oben genannte Code geniert in Visual Studio 2015 den folgenden Fehler:
@@ -339,14 +328,14 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
    ```cpp
     struct S {
-    // Provide a default constructor by adding an empty function body.
-    S() {}
+       // Provide a default constructor by adding an empty function body.
+       S() {}
     };
 
     union {
-    struct {
-    S s;
-    };
+       struct {
+          S s;
+       };
     } u;
    ```
 
@@ -563,7 +552,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     }
    ```
 
-  - oder - 
+  \- oder -
 
    ```cpp
     class base;  // as above
@@ -597,7 +586,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     void * __cdecl operator new(size_t cb, const std::nothrow_t&)  // removed 'static inline'
    ```
 
-      Additionally, although the compiler doesn't give a specific diagnostic, inline operator new is considered ill-formed.
+   Außerdem, auch wenn dazu keine spezifische Diagnose ausgegeben wird, wird ein Inlineoperator „new“ als nicht wohlgeformt angesehen.
 
 - **Aufrufen von „operator *type*()“ (Benutzerdefinierter Wechsel für Nichtklassentypen)** Frühere Versionen des Compilers haben den Aufruf von „operator *type*()“ für Nichtklassentypen zugelassen und den Aufruf still ignoriert. Durch dieses alte Verhalten entstand die Gefahr der stummen Erzeugung von ungültigem Code, was zu unvorhersehbarem Laufzeitverhalten führt. Der Compiler akzeptiert in dieser Weise erstellten Code nicht mehr und gibt den Compilerfehler C2228 als Ergebnis aus.
 
@@ -1684,10 +1673,10 @@ Diese verbesserte Unterstützung für ISO-C/C++-Standards erfordert möglicherwe
 - Unterstützung für bereichsbezogene Enumerationen. Der Enumerationsschlüssel der C++-Enumerationsklasse wird jetzt unterstützt. Folgender Code stellt dar, wie dieser Enumerationsschlüssel vom vorherigen Enumerationsverhalten abweicht.
 
    ```cpp
-enum class Element { Hydrogen, Helium, Lithium, Beryllium };
-void func1(Element e);
-func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
-func1(Element::Helium); // OK
+  enum class Element { Hydrogen, Helium, Lithium, Beryllium };
+  void func1(Element e);
+  func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
+  func1(Element::Helium); // OK
    ```
 
 ### <a name="windows-runtime-app-development-support"></a>Unterstützung für die Entwicklung von Windows-Runtime-Apps

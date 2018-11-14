@@ -1,10 +1,6 @@
 ---
-title: vector&lt;bool&gt;-Klasse | Microsoft-Dokumentation
-ms.custom: ''
+title: vector&lt;bool&gt;-Klasse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - vector<bool>
 - vector/std::vector::const_pointer
@@ -12,8 +8,6 @@ f1_keywords:
 - vector/std::vector::pointer
 - vector/std::vector::flip
 - vector/std::vector::swap
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::vector [C++], const_pointer
 - std::vector [C++], const_reference
@@ -21,16 +15,12 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b158f6bedd2dba2d65f7b0778758eafe08e88851
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f7663987b2759c762d1f6c1604923478915f5726
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702909"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521985"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt;-Klasse
 
@@ -136,7 +126,6 @@ int main()
     }
     cout << endl;
 }
-
 ```
 
 ## <a name="op_at"></a> vector\<bool>::operator[]
@@ -163,7 +152,7 @@ Wenn die angegebene Position größer oder gleich der Größe des Containers ist
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn Sie mit _ITERATOR_DEBUG_LEVEL kompilieren, tritt ein Laufzeitfehler auf, wenn Sie versuchen, auf ein Element außerhalb der Grenzen des Vektors zuzugreifen.  Weitere Informationen finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md).
+Wenn Sie mit _ITERATOR_DEBUG_LEVEL kompilieren, tritt ein Laufzeitfehler auf, wenn Sie versuchen, auf ein Element außerhalb der Grenzen des Vektors zuzugreifen.  Weitere Informationen finden Sie unter [Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Beispiel
 

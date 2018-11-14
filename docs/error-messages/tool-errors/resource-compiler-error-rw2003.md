@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - RW2003
 ms.assetid: 9dc0ba70-6776-4aef-b316-5f1711d8e42e
-ms.openlocfilehash: 2e0a7d2d5b7e8fc4603b10450ba30dbf014e02cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f359c1f71f03ce0d946579776230398fb31d046f
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583169"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520607"
 ---
 # <a name="resource-compiler-error-rw2003"></a>Ressourcencompiler: Fehler RW2003
 
@@ -51,10 +51,10 @@ Fehler bei der skriptgenerierung
 
    Für Windows 3.1 darf eine Ressource mit ungefähr 65.000 Bytes nicht überschreiten. Wenn die Ressource der Fall ist, klicken Sie dann werden Sie nicht können sie mit Visual C++- oder der Befehlszeile Ressourcencompiler kompiliert. Dieser Grenzwert gilt nicht für Cursor, Symbole, Bitmaps oder andere dateibasierte Ressourcen.
 
-9. **Ressourcendatei entspricht nicht 3.00-Format**
+1. **Ressourcendatei entspricht nicht 3.00-Format**
 
    Ein Cursor oder ein Symbol für verwendet das Format vor der Version 3.00. Die Ressource muss konvertiert oder neu gezeichnet, mit dem Format der Version 3.00 oder höher sein.
 
-10. **Temporäre Datei kann nicht geöffnet**
+1. **Temporäre Datei kann nicht geöffnet**
 
    Der Ressourcencompiler/Visual C++ konnte eine temporäre Datei nicht öffnen. Die wahrscheinlichste Ursache ist, dass Sie nicht über Schreibberechtigungen für das Verzeichnis verfügen oder ein Verzeichnis nicht vorhanden ist. Der Ressourcencompiler/Visual C++ versucht, diese Dateien im von der **TMP** -Umgebungsvariablen angegebenen Verzeichnis bzw. im aktuellen Verzeichnis zu verwenden, wenn kein Verzeichnis angegeben ist.

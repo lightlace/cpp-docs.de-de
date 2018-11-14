@@ -5,12 +5,12 @@ helpviewer_keywords:
 - servers, implementing
 - OLE server applications [MFC], implementing OLE servers
 ms.assetid: 5bd57e8e-3b23-4f23-9597-496fac2d24b5
-ms.openlocfilehash: bd5967fe07670bd4b3bd076ca23fda62b02b2177
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5c89ff1256d557ef417b9e53ce76bbf1b5d6196
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566755"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518957"
 ---
 # <a name="servers-implementing-a-server"></a>Server: Implementieren eines Servers
 
@@ -22,11 +22,11 @@ Der Servercode, den der Anwendungs-Assistent bietet fällt in verschiedene Kateg
 
 - Definieren von Serverressourcen:
 
-   - Die Menüressource verwendet, wenn der Server ein eingebettetes Element in einem eigenen Fenster bearbeitet wird.
+  - Die Menüressource verwendet, wenn der Server ein eingebettetes Element in einem eigenen Fenster bearbeitet wird.
 
-   - Die Menü- und Symbolleistenobjekte Ressourcen verwendet, wenn der Server direkt aktiv ist.
+  - Die Menü- und Symbolleistenobjekte Ressourcen verwendet, wenn der Server direkt aktiv ist.
 
-   Weitere Informationen zu diesen Ressourcen finden Sie unter [Menüs und Ressourcen: Servererweiterungen](../mfc/menus-and-resources-server-additions.md).
+  Weitere Informationen zu diesen Ressourcen finden Sie unter [Menüs und Ressourcen: Servererweiterungen](../mfc/menus-and-resources-server-additions.md).
 
 - Definieren eine Elementklasse abgeleitet `COleServerItem`. Weitere Informationen zu Server-Elemente, finden Sie unter [Server: Serverelemente](../mfc/servers-server-items.md).
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: 3df2252e1879fbbcdf6cc950fa8dd637894ba3f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0c734648b084c3f58577cb56984e3ea003a6a8e
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664554"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523936"
 ---
 # <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>Vorgehensweise: Konfigurieren von Visual C++-Projekte für 64-Bit-X64 Plattformen
 
@@ -43,18 +43,18 @@ Sie können die Projektkonfigurationen in Visual Studio-IDE verwenden, C++-Anwen
 
 - Wenn das Dialogfeld **Neue Projektmappenplattform** geöffnet ist, während Sie ein Projekt für eine 64-Bit-Zielplattform einrichten, wählen Sie in der Dropdownliste **Einstellungen kopieren von** den Wert **Win32**aus. Diese Projekteinstellungen werden auf der Projektebene automatisch aktualisiert:
 
-   - Die Linkeroption [/MACHINE](../build/reference/machine-specify-target-platform.md) wird auf **/MACHINE:X64**festgelegt.
+  - Die Linkeroption [/MACHINE](../build/reference/machine-specify-target-platform.md) wird auf **/MACHINE:X64**festgelegt.
 
-   - **Ausgabe registrieren** ist deaktiviert. Weitere Informationen finden Sie unter [Linker Property Pages](../ide/linker-property-pages.md).
+  - **Ausgabe registrieren** ist deaktiviert. Weitere Informationen finden Sie unter [Linker Property Pages](../ide/linker-property-pages.md).
 
-   - **Zielumgebung** wird auf **/env x64**festgelegt. Weitere Informationen finden Sie unter [MIDL Property Pages: General](../ide/midl-property-pages-general.md).
+  - **Zielumgebung** wird auf **/env x64**festgelegt. Weitere Informationen finden Sie unter [MIDL Property Pages: General](../ide/midl-property-pages-general.md).
 
-   - **Parameter überprüfen** wird deaktiviert und auf den Standardwert zurückgesetzt. Weitere Informationen finden Sie unter [MIDL Property Pages: Advanced](../ide/midl-property-pages-advanced.md).
+  - **Parameter überprüfen** wird deaktiviert und auf den Standardwert zurückgesetzt. Weitere Informationen finden Sie unter [MIDL Property Pages: Advanced](../ide/midl-property-pages-advanced.md).
 
-   - Wenn **Debuginformationsformat** in der Win32-Projektkonfiguration auf **/ZI** festgelegt war, wird der Wert in der 64-Bit-Projektkonfiguration auf **/Zi** festgelegt. Weitere Informationen finden Sie unter [/Z7, /Zi, /ZI (Debuginformationsformat)](../build/reference/z7-zi-zi-debug-information-format.md).
+  - Wenn **Debuginformationsformat** in der Win32-Projektkonfiguration auf **/ZI** festgelegt war, wird der Wert in der 64-Bit-Projektkonfiguration auf **/Zi** festgelegt. Weitere Informationen finden Sie unter [/Z7, /Zi, /ZI (Debuginformationsformat)](../build/reference/z7-zi-zi-debug-information-format.md).
 
-   > [!NOTE]
-   > Keine dieser Projekteigenschaften wird geändert, wenn sie auf der Dateiebene überschrieben werden.
+  > [!NOTE]
+  > Keine dieser Projekteigenschaften wird geändert, wenn sie auf der Dateiebene überschrieben werden.
 
 ## <a name="see-also"></a>Siehe auch
 

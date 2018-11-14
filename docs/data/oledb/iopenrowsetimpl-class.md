@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CreateRowset method
 - OpenRowset method
 ms.assetid: d259cedc-1db4-41cf-bc9f-5030907ab486
-ms.openlocfilehash: 1535c6beeaed9aadad89f06dbcbaf8ad38ddcc94
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 437f78636d1fa75f5bb8e4304a347dc3b554c34d
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512774"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556257"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl-Klasse
 
@@ -52,11 +52,11 @@ Abgeleitet von die Klasse `IOpenRowsetImpl`.
 
 ## <a name="remarks"></a>Hinweise
 
-Die [IOpenRowset](/previous-versions/windows/desktop/ms716946) Schnittstelle ist erforderlich, damit ein Sitzungsobjekt. Es wird geöffnet und gibt ein Rowset, das alle Zeilen aus einer einzelnen Basistabelle oder einem Index enthält.
+Die [IOpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716946(v=vs.85)) Schnittstelle ist erforderlich, damit ein Sitzungsobjekt. Es wird geöffnet und gibt ein Rowset, das alle Zeilen aus einer einzelnen Basistabelle oder einem Index enthält.
 
 ## <a name="createrowset"></a> Iopenrowsetimpl:: CreateRowset
 
-Erstellt ein Rowsetobjekt. Nicht direkt vom Benutzer aufgerufen. Finden Sie unter [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724) in die *OLE DB-Programmierreferenz.*
+Erstellt ein Rowsetobjekt. Nicht direkt vom Benutzer aufgerufen. Finden Sie unter [IOpenRowset:: OPENROWSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) in die *OLE DB-Programmierreferenz.*
 
 ### <a name="syntax"></a>Syntax
 
@@ -80,7 +80,7 @@ Ein Member von Vorlage-Klasse, die Rowset-Klasse für den Benutzer darstellt. In
 *pRowsetObj*<br/>
 [out] Ein Zeiger auf eine Rowset-Objekt. Dieser Parameter wird in der Regel nicht verwendet, aber es kann verwendet werden, wenn Sie mehr Arbeit für das Rowset ausführen müssen, vor der Übergabe an ein COM-Objekt. Die Lebensdauer des *pRowsetObj* gebunden ist, indem *PpRowset*.
 
-Andere Parameter, finden Sie unter [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724) in die *OLE DB-Programmiererreferenz.*
+Andere Parameter, finden Sie unter [IOpenRowset:: OPENROWSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) in die *OLE DB-Programmiererreferenz.*
 
 ## <a name="openrowset"></a> Iopenrowsetimpl:: OPENROWSET
 
@@ -100,7 +100,7 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [IOpenRowset:: OPENROWSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
 ### <a name="remarks"></a>Hinweise
 

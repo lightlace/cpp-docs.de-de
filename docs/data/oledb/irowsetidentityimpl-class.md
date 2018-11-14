@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IRowsetIdentityImpl class
 - IsSameRow method
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
-ms.openlocfilehash: 5ce4db130f4e8569b666047ca7a5c2bc4e0e6cb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b70ebdaa44331d9fa545763f0dd19e6320dd652b
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593192"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556217"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl-Klasse
 
-Implementiert die OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913) -Schnittstelle, die Tests für die Zeilenidentität.
+Implementiert die OLE DB [IRowsetIdentity](https://docs.microsoft.com/previous-versions/windows/desktop/ms715913(v=vs.85)) -Schnittstelle, die Tests für die Zeilenidentität.
 
 ## <a name="syntax"></a>Syntax
 
@@ -66,7 +66,7 @@ STDMETHOD(IsSameRow )(HROW hThisRow,
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [IRowsetIdentity::IsSameRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms719629(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
 ### <a name="remarks"></a>Hinweise
 

@@ -3,12 +3,12 @@ title: Behandeln von Fehlern und Ausnahmen (Modern C++)
 ms.date: 09/17/2018
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-ms.openlocfilehash: 8f5e0070f3e52d20293ddd624a0d0de57660e316
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6192ab800667ceb35bf2e18dcbdc0be95ec70f5
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667990"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523287"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Behandeln von Fehlern und Ausnahmen (Modern C++)
 
@@ -58,7 +58,6 @@ int main()
     //...
     return 0;
 }
-
 ```
 
 Ausnahmen in C++ ähneln denen in Sprachen wie C# und Java. In der **versuchen Sie es** blockieren, wenn eine Ausnahme ist *ausgelöst* wird *abgefangen* vom ersten zugehörigen **catch** Block, dessen Typ, die von übereinstimmt, der Diese Ausnahme. Das heißt, springt die Ausführung von der **auslösen** Anweisung, um die **catch** Anweisung. Ist kein verwendbarer catch-Block vorhanden, wird `std::terminate` aufgerufen und das Programm beendet. In C++ kann jeder Typ ausgelöst werden. Es wird jedoch empfohlen, einen Typ auslösen, der direkt oder indirekt von `std::exception` abgeleitet ist. Im vorherigen Beispiel der Ausnahmetyp, [Invalid_argument](../standard-library/invalid-argument-class.md), wird in der Standardbibliothek in definiert die [ \<Stdexcept >](../standard-library/stdexcept.md) Headerdatei. C++ stellt keine bereit und ist nicht erforderlich, eine **schließlich** Block, um sicherzustellen, dass alle Ressourcen freigegeben werden, wenn eine Ausnahme ausgelöst wird. Die RAII-Technik (Resource Acquisition Is Initialization, Ressourcenbelegung ist Initialisierung), die intelligente Zeiger verwendet, bietet die erforderliche Funktionalität zur Ressourcenbereinigung. Weitere Informationen finden Sie unter [Vorgehensweise: Entwurf für die Ausnahmesicherheit](../cpp/how-to-design-for-exception-safety.md). Weitere Informationen über die C++-stapelentlademechanismus finden Sie unter [Ausnahmen und Stapel entladen](../cpp/exceptions-and-stack-unwinding-in-cpp.md).

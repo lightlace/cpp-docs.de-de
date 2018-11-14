@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _matherr function
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
-ms.openlocfilehash: 980bf8a14ceace82a76562cc47d353f78dbca582
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b830dc940fa2abb131f70130033d27b057412137
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445720"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329630"
 ---
 # <a name="matherr"></a>_matherr
 
@@ -73,12 +73,12 @@ Die **Typ** -Member gibt den Typ des mathematischen Fehlers an. Es ist eine der 
 
 |Makro|Bedeutung|
 |-|-|
-**_DOMAIN**|Arguments-Bereichsfehler
-**_SING**|Einzigartigkeit des Arguments
-**_OVERFLOW**|Überlaufbereichsfehler
-**_PLOSS**|Teilweiser Verlust von Bedeutung
-**_TLOSS**|Vollständiger Verlust von Bedeutung
-**_UNDERFLOW**|Das Ergebnis ist zu klein, um dargestellt werden zu können. (Diese Bedingung wird derzeit nicht unterstützt.)
+| **_DOMAIN** | Arguments-Bereichsfehler |
+| **_SING** | Einzigartigkeit des Arguments |
+| **_OVERFLOW** | Überlaufbereichsfehler |
+| **_PLOSS** | Teilweiser Verlust von Bedeutung |
+| **_TLOSS** | Vollständiger Verlust von Bedeutung |
+| **_UNDERFLOW** | Das Ergebnis ist zu klein, um dargestellt werden zu können. (Diese Bedingung wird derzeit nicht unterstützt.) |
 
 Der Strukturmember **name** ist ein Zeiger auf eine mit NULL endende Zeichenfolge mit dem Namen der Funktion, die den Fehler verursacht hat. Die Strukturmember **arg1** und **arg2** geben die Werte an, die den Fehler verursacht haben. Wenn nur ein Argument angegeben ist, es befindet sich in **arg1**.
 

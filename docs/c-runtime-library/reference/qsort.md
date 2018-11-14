@@ -25,12 +25,12 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: e912a7a53619e9347cf2c0cd40adf0f9162b314b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dd2fc9cd789b02f1fa1e0b9969b597aa51aceedd
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618490"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327550"
 ---
 # <a name="qsort"></a>qsort
 
@@ -41,7 +41,7 @@ Führt eine schnelle Sortierung aus. Es ist eine sicherere Version dieser Funkti
 ```C
 void qsort(
    void *base,
-   size_t num,
+   size_t number,
    size_t width,
    int (__cdecl *compare )(const void *, const void *)
 );
@@ -49,7 +49,7 @@ void qsort(
 
 ### <a name="parameters"></a>Parameter
 
-<br/>
+*base*<br/>
 Start des Zielarrays.
 
 *Anzahl*<br/>
@@ -68,7 +68,7 @@ Die **Qsort** -Funktion implementiert einen Schnellsortierungsalgorithmus, um ei
 **Qsort** Aufrufe der *vergleichen* -Routine einmal oder mehrere Male während der Sortierung und Zeiger auf zwei Arrayelemente übergeben, bei jedem Aufruf.
 
 ```C
-compare( (void *) & elem1, (void *) & elem2 );
+compare( (void *) & elem1, (void *) & elem2 );
 ```
 
 Die Routine vergleicht die Elemente und gibt einen der folgenden Werte zurück.
@@ -81,7 +81,7 @@ Die Routine vergleicht die Elemente und gibt einen der folgenden Werte zurück.
 
 Das Array wird in aufsteigender Reihenfolge sortiert, wie von der Vergleichsfunktion definiert. Kehren Sie den Sinn der „größer als“ und „kleiner als“ in der Vergleichsfunktion um, um ein Array in absteigender Reihenfolge zu sortieren.
 
-Diese Funktion überprüft ihre Parameter. Wenn *vergleichen* oder *Anzahl* ist **NULL**, oder wenn *Basis* ist **NULL** und **Anzahl* ungleich NULL ist, oder wenn *Breite* ist kleiner als 0 (null), Handler für ungültige Parameter aufgerufen wird, der unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktion und **Errno** nastaven NA hodnotu **EINVAL**.
+Diese Funktion überprüft ihre Parameter. Wenn *vergleichen* oder *Anzahl* ist **NULL**, oder wenn *Basis* ist **NULL** und *Anzahl* ungleich NULL ist, oder wenn *Breite* ist kleiner als 0 (null), Handler für ungültige Parameter aufgerufen wird, der unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktion und **Errno** nastaven NA hodnotu **EINVAL**.
 
 ## <a name="requirements"></a>Anforderungen
 

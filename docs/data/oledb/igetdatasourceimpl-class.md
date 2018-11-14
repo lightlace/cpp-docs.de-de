@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IGetDataSourceImpl class
 - GetDataSource method
 ms.assetid: d63f3178-d663-4f01-8c09-8aab2dd6805a
-ms.openlocfilehash: 75b95f871023d7bfdea198a69377b1f360ab115f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cd6b56f4281a2fdde77229ec54be6d6289a87148
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637839"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556568"
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl-Klasse
 
-Stellt eine Implementierung der [IGetDataSource](/previous-versions/windows/desktop/ms709721) Objekt.
+Stellt eine Implementierung der [IGetDataSource](https://docs.microsoft.com/previous-versions/windows/desktop/ms709721(v=vs.85)) Objekt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,13 +60,13 @@ Gibt einen Schnittstellenzeiger auf das Datenquellenobjekt, das die Sitzung erst
 ### <a name="syntax"></a>Syntax
 
 ```cpp
-STDMETHOD(GetDataSource)(REFIID riid, 
+STDMETHOD(GetDataSource)(REFIID riid,
    IUnknown ** ppDataSource);
 ```
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [IGetDataSource::GetDataSource](https://docs.microsoft.com/previous-versions/windows/desktop/ms725443(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
 ### <a name="remarks"></a>Hinweise
 

@@ -27,12 +27,12 @@ helpviewer_keywords:
 - CStreamRowset class, constructor
 - Close method
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
-ms.openlocfilehash: d15807c7204841a436180d4da96357eba89dbb5e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69844a9048601060a425f7bcf52bc2cf30381227
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488178"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556465"
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset-Klasse
 
@@ -61,7 +61,7 @@ Ein Accessor-Klasse.
 |||
 |-|-|
 |[CStreamRowset](#cstreamrowset)|Konstruktor. Instanziiert und initialisiert die `CStreamRowset` Objekt.|
-|[Schließen](#close)|Versionen der [ISequentialStream](/previous-versions/windows/desktop/ms718035) Schnittstellenzeiger in der Klasse.|
+|[Schließen](#close)|Versionen der [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) Schnittstellenzeiger in der Klasse.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -94,7 +94,7 @@ CStreamRowset();
 
 ## <a name="close"></a> CStreamRowset:: Close
 
-Versionen der [ISequentialStream](/previous-versions/windows/desktop/ms718035) Schnittstellenzeiger in der Klasse.
+Versionen der [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) Schnittstellenzeiger in der Klasse.
 
 ### <a name="syntax"></a>Syntax
 

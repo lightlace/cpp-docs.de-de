@@ -58,12 +58,12 @@ helpviewer_keywords:
 - tutime64 function
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
-ms.openlocfilehash: f1e9633784ad78a2b46701e6600ad1ddb6b3318e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e52845a828e272ff3b8458b299c3757b8def748
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471091"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524630"
 ---
 # <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 
@@ -112,10 +112,10 @@ Jede dieser Funktionen gibt „0“ zurück, wenn die Dateiänderungszeit geänd
 
 |errno-Wert|Bedingung|
 |-|-|
-**EACCES**|Pfad gibt Verzeichnis oder schreibgeschützte Datei an.
-**EINVAL**|Ungültige *Zeiten* Argument
-**EMFILE**|Zu viele Dateien geöffnet. (Die Datei muss geöffnet werden, damit die Änderungszeit geändert werden kann.)
-**ENOENT**|Pfad oder Dateiname wurde nicht gefunden.
+| **EACCES** | Pfad gibt Verzeichnis oder schreibgeschützte Datei an. |
+| **EINVAL** | Ungültige *Zeiten* Argument |
+| **EMFILE** | Zu viele Dateien geöffnet. (Die Datei muss geöffnet werden, damit die Änderungszeit geändert werden kann.) |
+| **ENOENT** | Pfad oder Dateiname wurde nicht gefunden. |
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr (_doserrno, errno, _sys_errlist und _sys_nerr)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -123,14 +123,14 @@ Wenn das Datum der Änderung nach dem 1. Januar 1970, Mitternacht, und vor dem E
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_utime** Funktion legt das Änderungsdatum für die angegebene Datei *Filename **.* Damit die Zeit geändert werden kann, benötigt der Prozess Schreibzugriff für die Datei. Sie können im Windows-Betriebssystem, ändern, Zugriffszeit und Änderungszeit in der **_utimbuf** Struktur. Wenn *Zeiten* ist eine **NULL** -Zeiger ist, wird die Änderungszeit auf die aktuelle lokale Zeit festgelegt. Andernfalls *Zeiten* muss auf eine Struktur vom Typ zeigen **_utimbuf**, definiert in SYS\UTIME. H.
+Die **_utime** Funktion legt das Änderungsdatum für die angegebene Datei *Filename*. Damit die Zeit geändert werden kann, benötigt der Prozess Schreibzugriff für die Datei. Sie können im Windows-Betriebssystem, ändern, Zugriffszeit und Änderungszeit in der **_utimbuf** Struktur. Wenn *Zeiten* ist eine **NULL** -Zeiger ist, wird die Änderungszeit auf die aktuelle lokale Zeit festgelegt. Andernfalls *Zeiten* muss auf eine Struktur vom Typ zeigen **_utimbuf**, definiert in SYS\UTIME. H.
 
 Die **_utimbuf** -Struktur speichert die Datei und Zeiten von verwendeten **_utime** so ändern Sie die Datei-Änderungsdatum. Die Struktur enthält die folgenden Felder, die beide vom Typ **Time_t**:
 
-|Feld||
-|-|-|
-**actime**|Uhrzeit des Dateizugriffs
-**modtime**|Uhrzeit der Dateiänderung
+| Feld |   |
+|-------|---|
+| **actime** | Uhrzeit des Dateizugriffs |
+| **modtime** | Uhrzeit der Dateiänderung |
 
 Bestimmte Versionen von der **_utimbuf** Struktur (**_utimebuf32** und **__utimbuf64**) werden mit der 32-Bit und 64-Bit-Versionen des Zeittyps definiert. Diese werden in den 32-Bit- und 64-Bit-spezifischen Versionen dieser Funktion verwendet. **_utimbuf** selbst verwendet standardmäßig einen 64-Bit-Zeittyp, sofern **_USE_32BIT_TIME_T** definiert ist.
 

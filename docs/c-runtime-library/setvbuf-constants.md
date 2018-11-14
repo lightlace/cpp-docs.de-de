@@ -1,16 +1,10 @@
 ---
-title: setvbuf-Konstanten | Microsoft-Dokumentation
-ms.custom: ''
+title: setvbuf-Konstanten
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - _IOFBF
 - _IONBF
 - _IOLBF
-dev_langs:
-- C++
 helpviewer_keywords:
 - _IOFBF constant
 - IOFBF constant
@@ -19,16 +13,12 @@ helpviewer_keywords:
 - IOLBF constant
 - _IONBF constant
 ms.assetid: a6ec4dd5-1f24-498c-871a-e874cd28d33c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1a367522c2f22007abcf24cdf74ada467d94b104
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 661cf64c71e06c222503388df198d47429566602
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46032821"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523805"
 ---
 # <a name="setvbuf-constants"></a>setvbuf-Konstanten
 
@@ -37,7 +27,6 @@ ms.locfileid: "46032821"
 ```
 
 #include <stdio.h>
-
 ```
 
 ## <a name="remarks"></a>Hinweise

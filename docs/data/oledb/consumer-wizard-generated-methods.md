@@ -14,12 +14,12 @@ helpviewer_keywords:
 - OpenRowset method
 - GetRowsetProperties method
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-ms.openlocfilehash: 4c364d0caccfc422b91a68e15704628a949ef67b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d525c0e82d7fbc8bf0f83217eaa2cf9a1bd2f17b
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635798"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331853"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Vom Consumer-Assistenten generierte Methoden
 
@@ -40,7 +40,7 @@ Die **ATL-OLE DB-Consumer-Assistenten** und **MFS-Anwendungsassistenten** bestim
 ## <a name="openall-and-closeall"></a>OpenAll und CloseAll
 
 ```cpp
-HRESULT OpenAll(); 
+HRESULT OpenAll();
 
 void CloseAll();
 ```
@@ -85,7 +85,7 @@ Wenn Sie definieren eine `HasBookmark` -Methode, die `OpenAll` code wird die `DB
 ## <a name="openrowset"></a>OpenRowset
 
 ```cpp
-// OLE DB Template version: 
+// OLE DB Template version:
 HRESULT OpenRowset(DBPROPSET* pPropSet = NULL)
 // Attribute-injected version:
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);
@@ -150,7 +150,7 @@ Sie sollten nicht definieren, eine globale `GetRowsetProperties` Methode, da sie
 ## <a name="opendatasource-and-closedatasource"></a>OpenDataSource und CloseDataSource
 
 ```cpp
-HRESULT OpenDataSource(); 
+HRESULT OpenDataSource();
 
 void CloseDataSource();
 ```

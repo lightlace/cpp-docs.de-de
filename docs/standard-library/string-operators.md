@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: a35188e0194a57ac399610f3130634132addf8f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3ca469058ba65f83b0df60a93c63895e34f916e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644820"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332217"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt;-Operatoren
 
@@ -115,7 +115,7 @@ Die Zeichenfolge, die die Verkettung der Eingabezeichenfolgen ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Jede der Funktionen überlädt `operator+`, um zwei Objekte der Vorlagenklasse [basic_string-Klasse](../standard-library/basic-string-class.md) zu verketten. Alle zurück `basic_string` \< **CharType**, **"traits"**, **Allocator**> (_ *Links*). [Fügen Sie](../standard-library/basic-string-class.md#append)(\_ *rechts*).
+Jede der Funktionen überlädt `operator+`, um zwei Objekte der Vorlagenklasse [basic_string-Klasse](../standard-library/basic-string-class.md) zu verketten. Alle zurück `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Weitere Informationen finden Sie unter [Anfügen](../standard-library/basic-string-class.md#append).
 
 ### <a name="example"></a>Beispiel
 
@@ -575,7 +575,7 @@ Schreibt den Wert der angegebenen Zeichenfolge in den Ausgabestream *_Ostr*.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion überlädt **operator<<**, um ein Objekt _ *Str* von Vorlagenklasse [basic_string](../standard-library/basic-string-class.md) in den Stream \_ *Ostr* einzufügen. Die Funktion gibt \_ *Ostr* zurück. **write**( \_ *Str*. [c_str](../standard-library/basic-string-class.md#c_str), \_ *Str*. [size](../standard-library/basic-string-class.md#size)).
+Die Vorlagenfunktion überlädt **Operator <<** zum Einfügen eines Objekts *str* der Vorlagenklasse ["basic_string"](../standard-library/basic-string-class.md) in den Stream  *\_ Ostr*. Gibt die Funktion `_Ostr.write( str.c_str, str.size )`.
 
 ## <a name="op_gt"></a> operator&gt;
 

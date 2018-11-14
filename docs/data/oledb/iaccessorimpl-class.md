@@ -37,16 +37,16 @@ helpviewer_keywords:
 - GetBindings method
 - ReleaseAccessor method
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-ms.openlocfilehash: 45e7f7e86344f1928bb007e5f2bde1c0eca1f745
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a01a090d4302983f7d53e051cf4d8a72bd739b4a
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632231"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556737"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl-Klasse
 
-Stellt eine Implementierung der [IAccessor](/previous-versions/windows/desktop/ms719672) Schnittstelle.
+Stellt eine Implementierung der [IAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719672(v=vs.85)) Schnittstelle.
 
 ## <a name="syntax"></a>Syntax
 
@@ -91,7 +91,7 @@ Storage-Einheit für die Spalteninformationen. Der Standardwert ist [CAtlMap](..
 
 ## <a name="remarks"></a>Hinweise
 
-Dies ist erforderlich für Rowsets und Befehle. OLE DB verlangt von Anbietern zum Implementieren einer HACCESSOR, dies ist ein Tag auf ein Array von [DBBINDING](/previous-versions/windows/desktop/ms716845) Strukturen. Von bereitgestellten HACCESSORs `IAccessorImpl` Adressen sind die `BindType` Strukturen. In der Standardeinstellung `BindType` ist definiert als eine `ATLBINDINGS` in `IAccessorImpl`der Vorlagendefinition. `BindType` Stellt einen Mechanismus, der von verwendeten `IAccessorImpl` zum Nachverfolgen der Anzahl der Elemente in der `DBBINDING` array sowie einen Verweis Count "und"-Accessor-Flags.
+Dies ist erforderlich für Rowsets und Befehle. OLE DB verlangt von Anbietern zum Implementieren einer HACCESSOR, dies ist ein Tag auf ein Array von [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) Strukturen. Von bereitgestellten HACCESSORs `IAccessorImpl` Adressen sind die `BindType` Strukturen. In der Standardeinstellung `BindType` ist definiert als eine `ATLBINDINGS` in `IAccessorImpl`der Vorlagendefinition. `BindType` Stellt einen Mechanismus, der von verwendeten `IAccessorImpl` zum Nachverfolgen der Anzahl der Elemente in der `DBBINDING` array sowie einen Verweis Count "und"-Accessor-Flags.
 
 ## <a name="iaccessorimpl"></a> IAccessorImpl:: IAccessorImpl
 
@@ -116,7 +116,7 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [IAccessor::AddRefAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms714978(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
 ## <a name="createaccessor"></a> IAccessorImpl:: CreateAccessor
 
@@ -135,7 +135,7 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [IAccessor:: CreateAccessor](/previous-versions/windows/desktop/ms720969) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [IAccessor:: CreateAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms720969(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
 ## <a name="getbindings"></a> IAccessorImpl:: Getbindings
 
@@ -152,7 +152,7 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [IAccessor::GetBindings](https://docs.microsoft.com/previous-versions/windows/desktop/ms721253(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
 ## <a name="releaseaccessor"></a> IAccessorImpl:: ReleaseAccessor
 
@@ -167,7 +167,7 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [ReleaseAccessor](/previous-versions/windows/desktop/ms719717) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [ReleaseAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719717(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
 ## <a name="see-also"></a>Siehe auch
 

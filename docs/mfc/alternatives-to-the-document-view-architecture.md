@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CDocument class [MFC], space requirements
 - views [MFC], applications without
 ms.assetid: 2c22f352-a137-45ce-9971-c142173496fb
-ms.openlocfilehash: 5a9026ca400c3e7c403ff8f2b86f486bcde79cf8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b4da7df691837b47daa35c4b474711062d4e5c7
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569779"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523168"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternativen zur Dokument-/Ansichtarchitektur
 
@@ -48,15 +48,15 @@ Es wird dringend empfohlen, dass MFC-Anwendung des Assistenten zum Erstellen von
 
    Deklariert `CDocument`:
 
-   - Zwei `CString` Objekte.
+  - Zwei `CString` Objekte.
 
-   - Drei **"bool"** s.
+  - Drei **"bool"** s.
 
-   - Eine `CDocTemplate` Zeiger.
+  - Eine `CDocTemplate` Zeiger.
 
-   - Eine `CPtrList` -Objekt, das eine Liste der Ansichten des Dokuments enthält.
+  - Eine `CPtrList` -Objekt, das eine Liste der Ansichten des Dokuments enthält.
 
-   Außerdem erfordert das Dokument die Zeitspanne, um das Document-Objekt, dessen Objekte anzeigen, ein Rahmenfenster und ein Dokumentobjekt für die Vorlage zu erstellen.
+  Außerdem erfordert das Dokument die Zeitspanne, um das Document-Objekt, dessen Objekte anzeigen, ein Rahmenfenster und ein Dokumentobjekt für die Vorlage zu erstellen.
 
 - Behandeln Sie das Dokument und die Ansicht als nicht verwendete Anhänge an. Fügen Sie Ihr die datenverwaltung und den Code zum Zeichnen in der Ansicht, anstatt das Rahmenfenster. Dieser Ansatz ist näher an der Programmiersprache C-Programmiermodell.
 

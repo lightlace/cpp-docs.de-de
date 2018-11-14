@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 4d69b0b262ec53460d655a19cd421051f7177636
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0415fb98cec6b1d92f6a5a43ff705f1b5a7cd348
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498854"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523818"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget-Klasse
 
@@ -329,7 +329,7 @@ Die Anzahl der Schnittstellen mit Typinformationen.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion im Grunde implementiert [IDispatch:: GetTypeInfoCount](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount).
+Diese Memberfunktion im Grunde implementiert [IDispatch:: GetTypeInfoCount](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount).
 
 Abgeleitete Klassen überschreiben, sollte dieser Funktion können Sie die Anzahl von Schnittstellen mit Typinformationen bereitgestellt (0 oder 1) zurückgegeben. Wenn Sie nicht überschrieben, `GetTypeInfoCount` gibt 0 zurück. Um zu überschreiben, verwenden die [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) Makro, das implementiert auch `GetTypeLib` und `GetTypeLibCache`.
 

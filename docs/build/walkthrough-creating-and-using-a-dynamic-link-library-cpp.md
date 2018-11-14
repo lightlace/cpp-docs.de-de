@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: d997cb37c6cadb03bd3d16c4b1d4e56874f00018
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c09fa369cd4e0b726d809fa709518574d4fdbc6e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591008"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330540"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Exemplarische Vorgehensweise: Erstellen Sie und verwenden Sie Ihren eigenen Dynamic Link Library (C++)
 
@@ -396,7 +396,7 @@ Drücken Sie eine beliebige Taste, um das Befehlsfenster zu schließen.
 
 Nun, dass Sie eine DLL-Datei und einer Clientanwendung erstellt haben, können Sie experimentieren. Legen Sie Haltepunkte im Code der Client-app, und führen Sie die app im Debugger. Finden Sie, was geschieht, wenn Sie eine Bibliotheksaufruf schrittweise ausführen. Fügen Sie andere Funktionen zur Bibliothek hinzu, oder Schreiben Sie einen anderen Client-app, die die DLL verwendet.
 
-Wenn Sie Ihre app bereitstellen, müssen Sie auch die DLLs bereitstellen, verwendet. Die einfachste Möglichkeit, die DLLs, die Sie erstellen oder, die Sie einschließen, von Drittanbietern zur Verfügung stellen zu Ihrer app wird im gleichen Verzeichnis wie die app, auch bekannt als Einsatzort *lokalen app-Bereitstellung*. Weitere Informationen zur Bereitstellung finden Sie unter [Deployment in Visual C++](..\ide\deployment-in-visual-cpp.md).
+Wenn Sie Ihre app bereitstellen, müssen Sie auch die DLLs bereitstellen, verwendet. Die einfachste Möglichkeit, die DLLs, die Sie erstellen oder, die Sie einschließen, von Drittanbietern zur Verfügung stellen zu Ihrer app wird im gleichen Verzeichnis wie die app, auch bekannt als Einsatzort *lokalen app-Bereitstellung*. Weitere Informationen zur Bereitstellung finden Sie unter [Deployment in Visual C++](../ide/deployment-in-visual-cpp.md).
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,25 +1,15 @@
 ---
-title: Verwenden von „Ordner öffnen“ mit Projekten in Visual C++ | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwenden von „Ordner öffnen“ mit Projekten in Visual C++
 ms.date: 06/01/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Open Folder Projects in Visual C++
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5c7473cd7d6f2f07d81011eca0826b8066513d23
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 6354cc656d501d1611219378f72831cc2fa94389
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50069255"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523996"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Verwenden von „Ordner öffnen“ mit Projekten in Visual C++
 
@@ -43,7 +33,8 @@ Sie können ein beliebiges Buildsystem in Visual C++ verwenden und trotzdem die 
 ## <a name="configuring-open-folder-projects"></a>Konfigurieren von Projekten, bei denen „Ordner öffnen“ verwendet wird
 
 Sie können ein Projekt, bei dem „Ordner öffnen“ verwendet wird, über drei JSON-Dateien anpassen:
-|||
+
+| | |
 |-|-|
 |CppProperties.json|Geben Sie benutzerdefinierte Konfigurationsinformationen für das Durchsuchen an. Erstellen Sie diese Datei bei Bedarf im Stammordner des Projekts.|
 |launch.vs.json|Geben Sie Befehlszeilenargumente an. Der Zugriff erfolgt über das Kontextmenüelement **Einstellungen für Debuggen und Starten** im **Projektmappen-Explorer**.|
@@ -68,6 +59,7 @@ IntelliSense und das Verhalten beim Durchsuchen hängen teilweise von der aktive
   ]
 }
 ```
+
 Eine Konfiguration kann folgende Eigenschaften aufweisen:
 
 |||
@@ -145,6 +137,7 @@ Sie können benutzerdefinierte Umgebungsvariablen in „CppProperties.json“ en
   ]
 }
 ```
+
 Sie können eine **environments**-Eigenschaft ebenfalls innerhalb einer Konfiguration definieren, sodass sie nur für diese Konfiguration gilt und alle globalen Variablen mit gleichem Namen überschreibt. Im folgenden Beispiel definiert die x64-Konfiguration eine lokale **INCLUDE**-Variable, die den globalen Wert überschreibt:
 
 ```json
@@ -196,6 +189,7 @@ Alle Standardumgebungsvariablen und benutzerdefinierten Umgebungsvariablen sind 
 #### <a name="macros"></a>Makros
 
 Sie können innerhalb von „CppProperties.json“ auf folgende integrierte Makros zugreifen:
+
 |||
 |-|-|
 |`${workspaceRoot}`| den vollständigen Pfad zum Arbeitsbereichordner|
@@ -268,11 +262,13 @@ Dadurch wird die `tasks.vs.json`-Datei im Ordner „.vs“ erstellt oder geöffn
   ]
 }
 ```
+
 Wenn Sie „tasks.vs.json“ gespeichert haben, können Sie mit der rechten Maustaste auf eine beliebige CPP-Datei im Ordner klicken und im Kontextmenü **Echo filename** auswählen. Anschließend wird der Dateiname im Ausgabefenster angezeigt.
 
 #### <a name="appliesto"></a>appliesTo
 
 Sie können Tasks für jede Datei und jeden Ordner erstellen, indem Sie den Namen der Datei bzw. des Ordners im Feld `appliesTo` angeben. Beispiel: `"appliesTo" : "hello.cpp"`. Die folgenden Dateimasken können als Werte verwendet werden:
+
 |||
 |-|-|
 |`"*"`| Der Task ist für alle Dateien und Ordner im Arbeitsbereich verfügbar.|
@@ -350,4 +346,3 @@ Wenn Sie diese Datei speichern, wird die neue Konfiguration in der Dropdownliste
 ## <a name="see-also"></a>Siehe auch
 
 [IDE und Tools für Visual C++-Entwicklung](ide-and-tools-for-visual-cpp-development.md)
-

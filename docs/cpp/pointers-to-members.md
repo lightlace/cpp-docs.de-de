@@ -8,12 +8,12 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: ac8a1b43b3bf8bde8f910e72b601bf7d94e0d19d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a15e519be14d9a05cb30a8c9282baccc87a5f35e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480287"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326965"
 ---
 # <a name="pointers-to-members"></a>Zeiger auf Member
 
@@ -25,28 +25,40 @@ Deklarationen von Zeigern auf Member sind Sonderfälle von Zeigerdeklarationen. 
 ```
 
 1. Der Deklarationsbezeichner:
-  - Ein optionaler Speicherklassenbezeichner.
 
-  - Optionale **const** und/oder **flüchtige** Spezifizierer.
+   - Ein optionaler Speicherklassenbezeichner.
 
-  - Der Typspezifizierer: der Name eines Typs  Dies ist der Typ des Members, auf das gezeigt werden muss, nicht der der Klasse.
+   - Optionale **const** und/oder **flüchtige** Spezifizierer.
+
+   - Der Typspezifizierer: der Name eines Typs  Dies ist der Typ des Members, auf das gezeigt werden muss, nicht der der Klasse.
 
 1. Der Deklarator:
 
-  - Ein optionaler Microsoft-spezifischer Modifizierer. Weitere Informationen finden Sie unter [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md).
-1. Der qualifizierte Name der Klasse, die die Member enthält, auf die gezeigt werden muss.
-  - Der Operator "::"
-  - Die <strong>\*</strong> Operator.
-  - Optionale **const** und/oder **flüchtige** Spezifizierer.
-  - Der Bezeichner, der den Zeiger auf ein Member benennt.
+   - Ein optionaler Microsoft-spezifischer Modifizierer. Weitere Informationen finden Sie unter [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md).
 
-  - Ein optionaler Initialisierer:
-  - Die **=** Operator.
-  - Die **&** Operator.
-  - Der qualifizierte Name der Klasse.
-  - Der Operator `::`.
-  - Der Name eines nicht statischen Members der Klasse des entsprechenden Typs.
-  - Wie immer sind mehrere Deklaratoren (sowie alle zugeordneten Initialisierer) in einer einzelnen Deklaration zulässig.
+   - Der qualifizierte Name der Klasse, die die Member enthält, auf die gezeigt werden muss.
+
+   - Die __::__ Operator.
+
+   - Die __\*__ Operator.
+
+   - Optionale **const** und/oder **flüchtige** Spezifizierer.
+
+   - Der Bezeichner, der den Zeiger auf ein Member benennt.
+
+1. Ein optionaler Initialisierer:
+
+   - Die **=** Operator.
+
+   - Die **&** Operator.
+
+   - Der qualifizierte Name der Klasse.
+
+   - Die __::__ Operator.
+
+   - Der Name eines nicht statischen Members der Klasse des entsprechenden Typs.
+
+Wie immer sind mehrere Deklaratoren (sowie alle zugeordneten Initialisierer) in einer einzelnen Deklaration zulässig.
 
 Ein Zeiger auf einen Member einer Klasse unterscheidet sich von einem normalen Zeiger, da er Typinformationen für den Membertyp und die Klasse besitzt, zu der der Member gehört. Ein normaler Zeiger identifiziert nur ein einzelnes Objekt im Arbeitsspeicher (hat nur die Adresse dieses Objekts). Ein Zeiger auf einen Member einer Klasse identifiziert den Member in jeder Instanz der Klasse. Im folgenden Beispiel werden die Klasse `Window` und mehrere Zeiger auf Memberdaten deklariert.
 
