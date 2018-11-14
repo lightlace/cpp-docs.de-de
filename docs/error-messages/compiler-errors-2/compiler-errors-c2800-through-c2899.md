@@ -42,12 +42,12 @@ helpviewer_keywords:
 - C2895
 - C2899
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
-ms.openlocfilehash: 1c1b001e4d55c913cd2b9a50ee2e4bb4d2915523
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c35cd91f836070ff45faa489e1c16c40909f922
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601108"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332074"
 ---
 # <a name="compiler-errors-c2800-through-c2899"></a>Compilerfehler C2800 bis C2899
 
@@ -74,7 +74,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerfehler C2812](compiler-error-c2812.md)|#import wird nicht unterstützt. mit/clr: pure und/CLR: safe|
 |[Compilerfehler C2813](compiler-error-c2813.md)|#import wird mit "/MP" nicht unterstützt.|
 |[Compilerfehler C2814](compiler-error-c2814.md)|"*Member*": ein systemeigener Typ kann nicht geschachtelt werden, innerhalb eines verwalteten/WinRT-Typs "*Klasse*"|
-|[Compilerfehler C2815](compiler-error-c2815.md)|"Operator delete": der erste formale Parameter muss "" void " *", aber "* Type *" verwendet wurde|
+|[Compilerfehler C2815](compiler-error-c2815.md)|"Operator delete": der erste formale Parameter muss "" void " \*", aber "*Typ*" verwendet wurde|
 |Compilerfehler Fehler C2816|Veraltet.|
 |[Compilerfehler C2817](compiler-error-c2817.md)|Rückgabetyp für Delete-Operator' muss 'void' sein.|
 |[Compilerfehler C2818](compiler-error-c2818.md)|Anwendung des überladenen Operators "->" wird durch den Typ "*Klasse*"|
@@ -83,7 +83,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerfehler C2821](compiler-error-c2821.md)|erste formale Parameter für "Operator new" muss "Size_t" sein.|
 |Compilerfehler Fehler C2822|lokale Entladung wird auf dieser Plattform nicht unterstützt.|
 |[Compilerfehler C2823](compiler-error-c2823.md)|eine Typedef Vorlagen-/generische ist nicht zulässig|
-|[Compilerfehler C2824](compiler-error-c2824.md)|Rückgabetyp für "Operator new" muss "void *"|
+|[Compilerfehler C2824](compiler-error-c2824.md)|Rückgabetyp für "Operator new" muss "void \*"|
 |[Compilerfehler C2825](compiler-error-c2825.md)|"*Bezeichner*": muss eine Klasse oder Namespace verwenden, wenn gefolgt von "::"|
 |Compilerfehler C2826|Veraltet.|
 |[Compilerfehler C2827](compiler-error-c2827.md)|' Operator *Operator*' kann nicht global überschrieben werden, in unärem Format|

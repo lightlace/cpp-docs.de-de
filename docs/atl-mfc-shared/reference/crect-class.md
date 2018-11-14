@@ -1,6 +1,6 @@
 ---
 title: CRect-Klasse
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 f1_keywords:
 - CRect
 - ATLTYPES/ATL::CRect
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: 200f4a9345904055496a53ff2f751c3e2571e7d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f2ecaeb4f3b434ef7b57573f2ea379719aebcbff
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471486"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520035"
 ---
 # <a name="crect-class"></a>CRect-Klasse
 
@@ -97,8 +97,8 @@ class CRect : public tagRECT
 |[CRect::operator! =](#operator_neq)|Bestimmt, ob `CRect` entspricht keinem Rechteck.|
 |[CRect::operator &amp;](#operator_amp)|Erstellt die Schnittmenge der `CRect` und ein Rechteck und gibt das resultierende `CRect`.|
 |[CRect::operator &amp;=](#operator_amp_eq)|Legt `CRect` gleich für die Schnittmenge der `CRect` und ein Rechteck.|
-|[CRect::operator |](#operator_or)|Erstellt die Union der `CRect` und ein Rechteck und gibt das resultierende `CRect`.|
-|[CRect::operator |=](#operator_or_eq)|Legt `CRect` bezüglich ihrer Gesamtmenge gleich `CRect` und ein Rechteck.|
+|[CRect::operator&#124;](#operator_or)|Erstellt die Union der `CRect` und ein Rechteck und gibt das resultierende `CRect`.|
+|[CRect::operator &#124;=](#operator_or_eq)|Legt `CRect` bezüglich ihrer Gesamtmenge gleich `CRect` und ein Rechteck.|
 |[CRect::operator +](#operator_add)|Fügt die angegebenen Offsets zu ILS der `CRect` oder vergrößert `CRect` und gibt das resultierende `CRect`.|
 |[CRect::operator +=](#operator_add_eq)|Fügt die angegebenen Offsets `CRect` oder vergrößert `CRect`.|
 |[CRect::operator =](#operator_eq)|Kopiert die Abmessungen eines Rechtecks an `CRect`.|
@@ -112,7 +112,7 @@ class CRect : public tagRECT
 Ein `CRect` Objekt übergeben werden kann, als Funktionsparameter immer eine `RECT` Struktur `LPCRECT`, oder `LPRECT` übergeben werden kann.
 
 > [!NOTE]
->  Diese Klasse ist abgeleitet von der `tagRECT` Struktur. (Der Name `tagRECT` weniger häufig verwendete Name ist für die `RECT` Struktur.) Dies bedeutet, dass die Datenmember (`left`, `top`, `right`, und `bottom`) von der `RECT` Struktur werden die zugänglichen Datenmember `CRect`.
+> Diese Klasse ist abgeleitet von der `tagRECT` Struktur. (Der Name `tagRECT` weniger häufig verwendete Name ist für die `RECT` Struktur.) Dies bedeutet, dass die Datenmember (`left`, `top`, `right`, und `bottom`) von der `RECT` Struktur werden die zugänglichen Datenmember `CRect`.
 
 Ein `CRect` Membervariablen, die definieren, der oberen linken und rechten unteren Punkten eines Rechtecks enthält.
 
@@ -443,11 +443,11 @@ Ungleich NULL ist, wenn die zwei Rechtecke der gleichen oben, links, unten und r
 ### <a name="example"></a>Beispiel
 
 ```cpp
-   CRect rect1(35, 150, 10, 25);
-   CRect rect2(35, 150, 10, 25);
-   CRect rect3(98, 999, 6, 3);
+CRect rect1(35, 150, 10, 25);
+CRect rect2(35, 150, 10, 25);
+CRect rect3(98, 999, 6, 3);
 ASSERT(rect1.EqualRect(rect2));
-   ASSERT(!rect1.EqualRect(rect3));
+ASSERT(!rect1.EqualRect(rect3));
 // works just fine against RECTs, as well
 
 RECT test;
@@ -484,12 +484,8 @@ Der resultierende Wert kann negativ sein.
 CRect rect(20, 30, 80, 70);
 int nHt = rect.Height();
 
-```cpp
-   CRect rect(20, 30, 80, 70);
-int nHt = rect.Height();
-
-   // nHt is now 40
-   ASSERT(nHt == 40);
+// nHt is now 40
+ASSERT(nHt == 40);
 ```
 
 ##  <a name="inflaterect"></a>  CRect::InflateRect
@@ -578,7 +574,6 @@ Die Schnittmenge ist das größte Rechteck, das in beiden vorhandenen Rechtecke 
 CRect rectOne(125, 0, 150, 200);
 CRect rectTwo(0, 75, 350,  95);
 CRect rectInter;
-
 ```cpp
    CRect rectOne(125,  0, 150, 200);
    CRect rectTwo(0, 75, 350, 95);
@@ -617,7 +612,6 @@ Ein Rechteck ist leer, wenn die Breite bzw. Höhe 0 sind oder negativ sein. Unte
 ```cpp
 CRect rectNone(0, 0, 0, 0);
 CRect rectSome(35, 50, 135, 150);
-
 ```cpp
    CRect rectNone(0, 0, 0, 0);
    CRect rectSome(35, 50, 135, 150);
@@ -648,7 +642,6 @@ Unterscheidet sich von `IsRectEmpty`, der bestimmt, ob das Rechteck leer ist.
 ```cpp
 CRect rectNone(0, 0, 0, 0);
 CRect rectSome(35, 50, 135, 150);
-
 ```cpp
    CRect rectNone(0, 0, 0, 0);
    CRect rectSome(35, 50, 135, 150);
@@ -678,7 +671,6 @@ Die absolute X-Koordinate für die linke obere Ecke des Rechtecks.
 ```cpp
 CRect rect(0, 0, 100, 100);
 rect.MoveToX(10);
-
 ```cpp
    CRect rect(0, 0, 100, 100);
 rect.MoveToX(10);
@@ -712,7 +704,6 @@ Ein `POINT` -Struktur, die die absolute linke obere Ecke des Rechtecks angibt.
 ```cpp
 CRect rect(0, 0, 100, 100);
 rect.MoveToXY(10, 10);
-
 ```cpp
    CRect rect(0, 0, 100, 100);
    rect.MoveToXY(10, 10);

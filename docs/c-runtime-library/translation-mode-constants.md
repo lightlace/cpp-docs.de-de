@@ -1,16 +1,10 @@
 ---
-title: Übersetzungsmoduskonstanten | Microsoft-Dokumentation
-ms.custom: ''
+title: Übersetzungsmoduskonstanten
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - _O_BINARY
 - _O_TEXT
 - _O_RAW
-dev_langs:
-- C++
 helpviewer_keywords:
 - O_BINARY constant
 - O_TEXT constant
@@ -23,16 +17,12 @@ helpviewer_keywords:
 - translation, modes
 - translation modes (file I/O)
 ms.assetid: a5993bf4-7e7a-47f9-83c3-e46332b85579
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7c2eff59c8f766b96c1abaeaa2eb9b369720cc75
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 25588758e682409bad0a6cb2723304275f00c25e
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46015950"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519723"
 ---
 # <a name="translation-mode-constants"></a>Übersetzungsmoduskonstanten
 
@@ -41,7 +31,6 @@ ms.locfileid: "46015950"
 ```
 
 #include <fcntl.h>
-
 ```
 
 ## <a name="remarks"></a>Hinweise

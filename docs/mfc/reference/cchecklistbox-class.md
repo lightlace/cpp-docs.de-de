@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: 72038e119f7d4483dcd6c6b343d20fd3655856b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3bf93a876f9092d5615b75ca45fea71341d3557
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533873"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327342"
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox-Klasse
 
@@ -80,13 +80,13 @@ Wenn Sie Windows gesendete benachrichtigungsmeldungen von ein Listenfeld, das an
 
 Jede Nachricht-Zuordnungseintrag weist folgende Form:
 
-**ON_** Benachrichtigung **(**`id`, `memberFxn` **)**
+**ON\_**_Benachrichtigung_ **(** _Id_, _MemberFxn_ **)**
 
 wo `id` gibt die untergeordneten Fenster-ID des Steuerelements, das Senden der Benachrichtigung und `memberFxn` ist der Name der übergeordneten Member-Funktion, die Sie geschrieben haben, um die Benachrichtigung zu verarbeiten.
 
 Funktionsprototyp des übergeordneten Elements lautet wie folgt aus:
 
-**Afx_msg** `void` `memberFxn` **();**
+`afx_msg void memberFxn();`
 
 Es gibt nur eine Meldungszuordnungseintrags, die speziell gehört `CCheckListBox` (aber auch die Meldungszuordnungseinträge für [CListBox](../../mfc/reference/clistbox-class.md)):
 

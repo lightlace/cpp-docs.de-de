@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::strstreambuf [C++], str
 - std::strstreambuf [C++], underflow
 ms.assetid: b040b8ea-0669-4eba-8908-6a9cc159c54b
-ms.openlocfilehash: 5a9fa47ab19a5935bf0c7c36dea37b3cfe6180ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75c9a96b727ef60280055536296f850f492d16ac
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512384"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327303"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf-Klasse
 
@@ -186,11 +186,11 @@ Das Zeichen, das in den Puffer eingefügt werden soll, oder `EOF`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion nicht erfolgreich abgeschlossen werden kann, wird `EOF` zurückgegeben. Andernfalls gilt: Wenn _ *Meta* == `EOF`, wird ein anderer Wert als `EOF` zurückgegeben. Andernfalls wird \_ *Meta* zurückgegeben.
+Wenn die Funktion nicht erfolgreich abgeschlossen werden kann, wird `EOF` zurückgegeben. Andernfalls gilt: Wenn  *\_Meta* == `EOF`, es gibt einige Wert außer `EOF`. Andernfalls wird  *\_Meta*.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn _ *Meta* != `EOF`, versucht die geschützte virtuelle Memberfunktion, das Element ( `char`)\_ *Meta* in den Ausgabepuffer einzufügen. Hierfür gibt es verschiedene Möglichkeiten:
+Wenn  *\_Meta* ! = `EOF`, die geschützte virtuelle Memberfunktion versucht, das Element eingefügt `(char)_Meta` in den Ausgabepuffer. Hierfür gibt es verschiedene Möglichkeiten:
 
 - Wenn eine Schreibposition verfügbar ist, kann das Element in der Schreibposition gespeichert werden, und der nächste Zeiger für den Ausgabepuffer kann inkrementiert werden.
 
@@ -211,13 +211,13 @@ Das Zeichen, das in den Puffer eingefügt werden soll, oder `EOF`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion nicht erfolgreich abgeschlossen werden kann, wird `EOF` zurückgegeben. Andernfalls gilt: Wenn _ *Meta* == `EOF`, wird ein anderer Wert als `EOF` zurückgegeben. Andernfalls wird \_ *Meta* zurückgegeben.
+Wenn die Funktion nicht erfolgreich abgeschlossen werden kann, wird `EOF` zurückgegeben. Andernfalls gilt: Wenn  *\_Meta* == `EOF`, es gibt einige Wert außer `EOF`. Andernfalls wird  *\_Meta*.
 
 ### <a name="remarks"></a>Hinweise
 
 Die geschützte virtuelle Memberfunktion versucht, ein Element im Eingabepuffer wiederherzustellen und es dann zum aktuellen Element zu machen (der nächste Zeiger zeigt auf das Element).
 
-Wenn _ *Meta* == `EOF`, ist das Element für den Pushback das Element, das sich bereits vor dem aktuellen Element im Stream befindet. Andernfalls wird dieses Element durch **ch** = ( `char`)\_ *Meta* ersetzt. Ein Element kann auf verschiedene Arten durch die Funktion wiederhergestellt werden:
+Wenn  *\_Meta* == `EOF`, das Element, das Pushback ist bereits in den Stream vor dem aktuellen Element. Andernfalls wird dieses Element durch ersetzt `ch = (char)_Meta`. Ein Element kann auf verschiedene Arten durch die Funktion wiederhergestellt werden:
 
 - Wenn eine Position zur Wiederherstellung zur Verfügung steht, und das Element dort gespeicherten gleich `ch`, kann er den nächsten Zeiger für den Eingabepuffer verringert.
 
@@ -289,15 +289,15 @@ Die geschützte virtuelle Memberfunktion versucht, die aktuellen Positionen für
 
 Die neue Position wird wie folgt bestimmt:
 
-- Bei `_Way` == `ios_base::beg` ist die neue Position der Anfang des Streams plus _ *Off*.
+- Wenn `_Way == ios_base::beg`, die neue Position ist der Anfang des Streams plus *_Off*.
 
-- Bei `_Way` == `ios_base::cur` ist die neue Position die aktuelle Streamposition plus _ *Off*.
+- Wenn `_Way == ios_base::cur`, ist die neue Position die aktuelle Streamposition plus *_Off*.
 
-- Bei `_Way` == `ios_base::end` ist die neue Position das Ende des Streams plus _ *Off*.
+- Wenn `_Way == ios_base::end`, ist die neue Position das Ende des Streams plus *_Off*.
 
-Wenn `_Which` & **ios_base::in** ungleich null ist, ändert die Funktion die nächste Position, die im Eingabepuffer gelesen werden soll. Wenn `_Which` & **ios_base::out** ebenfalls ungleich null, `_Way` != **ios_base::cur** und der Ausgabepuffer vorhanden ist, legt die Funktion auch die nächste zu schreibende Position so fest, dass sie der nächsten zu lesenden Position entspricht.
+Wenn `_Which & ios_base::in` ungleich NULL ist und der Eingabepuffer vorhanden sind, ändert die Funktion die nächste Position, die im Eingabepuffer gelesen. Wenn `_Which & ios_base::out` ebenfalls ungleich NULL ist, `_Way != ios_base::cur`, und der Ausgabepuffer vorhanden ist, wird die Funktion legt auch die nächste zu schreibende Position auf der nächsten zu lesenden Position entspricht.
 
-Ansonsten ändert die Funktion die nächste Position, die im Ausgabepuffer geschrieben werden soll, wenn `_Which` & `ios_base::out` ungleich null ist. Andernfalls schlägt der Positionierungsvorgang fehl. Damit eine Positionierung erfolgreich ist, muss die resultierende Streamposition innerhalb der kontrollierten Sequenz liegen.
+Andernfalls gilt: Wenn `_Which & ios_base::out` ungleich NULL ist und der Ausgabepuffer vorhanden ist, ändert die Funktion die nächste Position, die in den Ausgabepuffer geschrieben. Andernfalls schlägt der Positionierungsvorgang fehl. Damit eine Positionierung erfolgreich ist, muss die resultierende Streamposition innerhalb der kontrollierten Sequenz liegen.
 
 ## <a name="seekpos"></a> strstreambuf::seekpos
 
@@ -321,7 +321,7 @@ Wenn die Funktion eine der beiden Streampositionen erfolgreich ändert, gibt sie
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte virtuelle Memberfunktion versucht, die aktuellen Positionen für die gesteuerten Streams zu ändern. Für ein Objekt der Klasse strstreambuf besteht eine Streamposition lediglich aus einem Streamoffset. Das Offset null legt das erste Element der kontrollierten Sequenz fest. Die neue Position wird von _ *Sp* bestimmt.
+Die geschützte virtuelle Memberfunktion versucht, die aktuellen Positionen für die gesteuerten Streams zu ändern. Für ein Objekt der Klasse strstreambuf besteht eine Streamposition lediglich aus einem Streamoffset. Das Offset null legt das erste Element der kontrollierten Sequenz fest. Die neue Position richtet sich nach *_Sp*.
 
 Wenn `_Which` & **ios_base::in** ungleich null ist, ändert die Funktion die nächste Position, die im Eingabepuffer gelesen werden soll. Wenn `_Which` & `ios_base::out` ungleich null und der Ausgabepuffer vorhanden ist, legt die Funktion auch die nächste zu schreibende Position so fest, dass sie der nächsten zu lesenden Position entspricht. Ansonsten ändert die Funktion die nächste Position, die im Ausgabepuffer geschrieben werden soll, wenn `_Which` & `ios_base::out` ungleich null ist. Andernfalls schlägt der Positionierungsvorgang fehl. Damit eine Positionierung erfolgreich ist, muss die resultierende Streamposition innerhalb der kontrollierten Sequenz liegen.
 
@@ -398,7 +398,7 @@ Ein Puffer, der für die Ausgabe verwendet wird.
 
 Der erste Konstruktor speichert einen NULL-Zeiger in allen Zeigern, die den Eingabepuffer, den Ausgabepuffer und die strstreambuf-Zuweisung steuern. Legt den strstreambuf-Modus so fest, dass die kontrollierte Sequenz änderbar und erweiterbar ist. Er akzeptiert auch *Anzahl* als empfohlene anfängliche Speichergröße.
 
-Der zweite Konstruktor verhält sich wie die erste, außer dass er _ *Allocfunc* als Zeiger auf die Funktion speichert, die zur Speicherzuweisung aufzurufen ist, und \_ *Freefunc* als Zeiger auf die Funktion, die zum Freigeben dieses Speichers aufzurufen ist.
+Der zweite Konstruktor verhält sich wie die erste, außer dass es speichert  *\_Allocfunc* als Zeiger auf die Funktion aufrufen, um Speicher zu belegen und  *\_Freefunc* Zeiger um die Funktion zum Aufrufen dieses Speichers.
 
 Die drei Konstruktoren:
 

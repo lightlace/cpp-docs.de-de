@@ -23,12 +23,12 @@ helpviewer_keywords:
 - stream buffering
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
-ms.openlocfilehash: b2a5cfc08da7812e32ad84940ab4c78288017720
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4336c6cc478a035fcc0b9b059a7161d58bc4442
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445772"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328096"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -75,9 +75,9 @@ Der Modus muss **_IOFBF**, **_IOLBF**, oder **_IONBF**. Wenn *Modus* ist **_IOFB
 
 |*Modus* Wert|Bedeutung|
 |-|-|
-**_IOFBF**|Vollständige Pufferung; d. h. *Puffer* dient als Puffer und *Größe* als die Größe des Puffers verwendet wird. Wenn *Puffer* ist **NULL**, ein automatisch zugewiesener Puffer *Größe* Byte verwendet wird.
-**_IOLBF**|Für einige Systeme bietet dies Zeilenpufferung. Allerdings für Win32 ist das Verhalten identisch mit **_IOFBF** – vollständige Pufferung.
-**_IONBF**|Kein Puffer wird verwendet, unabhängig von *Puffer* oder *Größe*.
+| **_IOFBF** | Vollständige Pufferung; d. h. *Puffer* dient als Puffer und *Größe* als die Größe des Puffers verwendet wird. Wenn *Puffer* ist **NULL**, ein automatisch zugewiesener Puffer *Größe* Byte verwendet wird. |
+| **_IOLBF** | Für einige Systeme bietet dies Zeilenpufferung. Allerdings für Win32 ist das Verhalten identisch mit **_IOFBF** – vollständige Pufferung. |
+| **_IONBF** | Kein Puffer wird verwendet, unabhängig von *Puffer* oder *Größe*. |
 
 ## <a name="requirements"></a>Anforderungen
 

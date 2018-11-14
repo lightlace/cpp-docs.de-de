@@ -29,12 +29,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: fa034b164a188b1b5b7ccd8a4ca71ab7ac754fa1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 46c4949fcc8cfbe4a3477e66b57d8fc6fc97ed73
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624665"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328655"
 ---
 # <a name="system-wsystem"></a>system, _wsystem
 
@@ -65,10 +65,10 @@ Wenn *Befehl* ist **NULL** und der Befehlsinterpreter gefunden wird, gibt einen 
 
 |||
 |-|-|
-**E2BIG**|Die Argumentliste (systemabhängig) ist zu groß.
-**ENOENT**|Der Befehlsinterpreter kann nicht gefunden werden.
-**ENOEXEC**|Die Befehlsinterpreterdatei kann nicht ausgeführt werden, da das Format ungültig ist.
-**ENOMEM**|Es ist nicht genügend Arbeitsspeicher verfügbar, um den Befehl auszuführen; der verfügbare Arbeitsspeicher ist beschädigt; oder es ist ein ungültiger Block vorhanden, was darauf hinweist, dass der aufrufende Prozess nicht ordnungsgemäß zugeordnet wurde.
+| **E2BIG** | Die Argumentliste (systemabhängig) ist zu groß. |
+| **ENOENT** | Der Befehlsinterpreter kann nicht gefunden werden. |
+| **ENOEXEC** | Die Befehlsinterpreterdatei kann nicht ausgeführt werden, da das Format ungültig ist. |
+| **ENOMEM** | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Befehl auszuführen; der verfügbare Arbeitsspeicher ist beschädigt; oder es ist ein ungültiger Block vorhanden, was darauf hinweist, dass der aufrufende Prozess nicht ordnungsgemäß zugeordnet wurde. |
 
 Weitere Informationen zu diesen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - linker [C++], DEPENDENTLOADFLAG
 - DEPENDENTLOADFLAG linker option
 - /DEPENDENTLOADFLAG linker option
-ms.openlocfilehash: 80065bb4e67674c49761d0832395ae535bbfbf24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0bdf2542d641f751f40757079eb576f2c97540dc
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604274"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326159"
 ---
 # <a name="dependentloadflag-set-default-dependent-load-flags"></a>/ DEPENDENTLOADFLAG (festgelegte Standardwert abhängiger Ladevorgang Flags)
 
@@ -27,9 +27,8 @@ Legt die Standard-Load-Flags verwendet wird, wenn `LoadLibrary` wird verwendet, 
 
 ### <a name="arguments"></a>Argumente
 
-|||
-|-|-|
-*loadflags*|Ein optionaler "C"-Style-16-Bit-Ganzzahl-Wert in Dezimal, mit einer führenden Null Oktal- oder Hexadezimalformat, mit einem vorangestellten `0x`, die angibt, dass die abhängiger Ladevorgang-Flags, die auf alle anwenden [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) aufrufen. Der Standardwert ist 0.
+*loadflags*<br/>
+Ein optionaler "C"-Style-16-Bit-Ganzzahl-Wert in Dezimal, mit einer führenden Null Oktal- oder Hexadezimalformat, mit einem vorangestellten `0x`, die angibt, dass die abhängiger Ladevorgang-Flags, die auf alle anwenden [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) aufrufen. Der Standardwert ist 0.
 
 ## <a name="remarks"></a>Hinweise
 

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-ms.openlocfilehash: 0ede14d56dc093b83078bf28eb01f5b5c55d8949
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 109a1d93692d0c65269b40fd0559381907ce1cab
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545924"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326562"
 ---
 # <a name="createlocale-wcreatelocale"></a>_create_locale, _wcreate_locale
 
@@ -70,16 +70,16 @@ Die **_create_locale** Funktion können Sie ein Objekt zu erstellen, die bestimm
 
 **_wcreate_locale** ist eine Breitzeichen-Version von **_create_locale**; die *Gebietsschema* Argument **_wcreate_locale** ist eine Breitzeichen-Zeichenfolge. **_wcreate_locale** und **_create_locale** Verhalten sich andernfalls identisch.
 
-Die *Kategorie* Argument gibt an, die Teile des gebietsschemaspezifischen Verhaltens an, die betroffen sind. Die Flags, die zum *Kategorie* und die Teile des Programms sind, wie in der folgenden Tabelle gezeigt.
+Die *Kategorie* Argument gibt an, die Teile des gebietsschemaspezifischen Verhaltens an, die betroffen sind. Die Flags, die zum *Kategorie* und die Teile des Programms sind, wie in dieser Tabelle dargestellt:
 
-|*Kategorie* Flag|Betrifft|
-|-|-|
-**LC_ALL**|Alle unten aufgeführten Kategorien.
-**LC_COLLATE**|Die **Strcoll**, **_stricoll**, **Wcscoll**, **_wcsicoll**, **Strxfrm**, **_ Strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**, und **Wcsxfrm** Funktionen.
-**LC_CTYPE**|Die Funktionen zur Behandlung von Zeichen (mit Ausnahme von **Isdigit**, **Isxdigit**, **Mbstowcs**, und **Mbtowc**, die nicht betroffen sind).
-**LC_MONETARY**|Informationen zur währungsformatierung zurückgegebenes der **Localeconv** Funktion.
-**LC_NUMERIC**|Dezimaltrennzeichen für die formatierten ausgaberoutinen (wie z. B. **Printf**), für die datenkonvertierungsroutinen und für die nicht monetären Formatierungsinformationen, die vom **Localeconv**. Neben dem Dezimaltrennzeichen **LC_NUMERIC** legt das Tausendertrennzeichen und das Steuern von zurückgegebene Zeichenfolge [Localeconv](localeconv.md).
-**LC_TIME**|Die **Strftime** und **Wcsftime** Funktionen.
+| *Kategorie* Flag | Betrifft |
+|-----------------|---------|
+| **LC_ALL** |Alle unten aufgeführten Kategorien. |
+| **LC_COLLATE** |Die **Strcoll**, **_stricoll**, **Wcscoll**, **_wcsicoll**, **Strxfrm**, **_ Strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**, und **Wcsxfrm** Funktionen. |
+| **LC_CTYPE** | Die Funktionen zur Behandlung von Zeichen (mit Ausnahme von **Isdigit**, **Isxdigit**, **Mbstowcs**, und **Mbtowc**, die nicht betroffen sind). |
+| **LC_MONETARY** | Informationen zur währungsformatierung zurückgegebenes der **Localeconv** Funktion. |
+| **LC_NUMERIC** | Dezimaltrennzeichen für die formatierten ausgaberoutinen (wie z. B. **Printf**), für die datenkonvertierungsroutinen und für die nicht monetären Formatierungsinformationen, die vom **Localeconv**. Neben dem Dezimaltrennzeichen **LC_NUMERIC** legt das Tausendertrennzeichen und das Steuern von zurückgegebene Zeichenfolge [Localeconv](localeconv.md). |
+| **LC_TIME** | Die **Strftime** und **Wcsftime** Funktionen. |
 
 Diese Funktion überprüft den *Kategorie* und *Gebietsschema* Parameter. Wenn der Category-Parameter nicht einen der Werte in der vorherigen Tabelle angegeben ist, oder wenn *Gebietsschema* ist **NULL**, die Funktion gibt **NULL**.
 

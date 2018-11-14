@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 9509b122e271ac22529c1b8a7b8e8d0b4b50025b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91cf9b2035bf24c16007ed6021772c7d5344fc68
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641102"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333266"
 ---
 # <a name="ccombobox-class"></a>CComboBox-Klasse
 
@@ -208,7 +208,7 @@ Wenn Sie Windows gesendete benachrichtigungsmeldungen von eines Kombinationsfeld
 
 Jede Nachricht-Zuordnungseintrag weist folgende Form:
 
-**ON_** Benachrichtigung **(**`id`**,**`memberFxn`**)**
+**ON\_**_Benachrichtigung_ **(** _Id_, _MemberFxn_ **)**
 
 wo `id` gibt die ID der untergeordneten Fensters mit der im Kombinationsfeld-Steuerelements, das Senden der Benachrichtigung und `memberFxn` ist der Name der übergeordneten Member-Funktion, die Sie geschrieben haben, um die Benachrichtigung zu verarbeiten.
 

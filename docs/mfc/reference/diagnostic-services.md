@@ -20,12 +20,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: a6677d5d265b2de9f94160dae6afaedfb3c8b89f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a900a472a3783bde66584b64e361d80c606f0e9
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644326"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524559"
 ---
 # <a name="diagnostic-services"></a>Diagnosedienste
 
@@ -657,7 +657,7 @@ Diese Funktion erfolgreich verwenden zu können:
 - Die Datei IMAGEHLP. DLL muss auf Ihrem Pfad befinden. Wenn Sie nicht über diese DLL-Datei verfügen, wird die Funktion eine Fehlermeldung angezeigt. Finden Sie unter [Image-Hilfe-Bibliothek](/windows/desktop/Debug/image-help-library) Informationen zu den von IMAGEHLP bereitgestellte Funktion.
 
 - Die Module, die Frames im Stapel müssen Debuginformationen einschließen. Wenn sie keine Debuginformationen enthalten, die Funktion generiert eine stapelüberwachung nach wie vor, aber die Ablaufverfolgung weniger detailliert.
-### <a name="requirements"></a>Anforderungen
+  ### <a name="requirements"></a>Anforderungen
 
 **Header:** afx.h
 

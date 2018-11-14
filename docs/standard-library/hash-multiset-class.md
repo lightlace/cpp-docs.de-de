@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_multiset::upper_bound
 - stdext::hash_multiset::value_comp
 ms.assetid: 0580397a-a76e-40ad-aea2-5c6f3a9d0a21
-ms.openlocfilehash: 31ea9e74dc00a511351614ab708949e05ab2c567
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b12c782ff7071987214acfe1ef8c52ca391b25ad
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636942"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333562"
 ---
 # <a name="hashmultiset-class"></a>hash_multiset-Klasse
 
@@ -555,7 +555,7 @@ Die Anzahl der Elemente im hash_multiset mit dem von einem Parameter angegebenen
 
 Die Memberfunktion gibt die Anzahl der Elemente im folgenden Bereich zurück:
 
-[ `lower_bound` (_ `Key` ), `upper_bound` (\_ `Key` ) ).
+\[ Lower_bound (*Schlüssel*), Upper_bound (*Schlüssel*)).
 
 ### <a name="example"></a>Beispiel
 

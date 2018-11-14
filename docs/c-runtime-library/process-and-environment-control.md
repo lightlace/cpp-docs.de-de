@@ -1,14 +1,8 @@
 ---
-title: Prozess- und Umgebungssteuerung | Microsoft-Dokumentation
-ms.custom: ''
+title: Prozess- und Umgebungssteuerung
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.programs
-dev_langs:
-- C++
 helpviewer_keywords:
 - processes, stopping
 - processes, administrative tasks
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - environment control routines
 - process control routines
 ms.assetid: 7fde74c3-c2a6-4d15-84b8-092160d60c3e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0c314decf15886f8d99ed8be3b7bafe4fff3e36b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: df080d1ed8c5a00711468a159acb07159ad31930
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085757"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329409"
 ---
 # <a name="process-and-environment-control"></a>Prozess- und Umgebungssteuerung
 
@@ -56,7 +46,7 @@ Verwenden Sie die Prozesssteuerungsroutinen, um Prozesse aus einem Programm hera
 |[exit](../c-runtime-library/reference/exit-exit-exit.md)|Ruft von **atexit** und **_onexit** registrierte Funktionen auf, leert alle Puffer, schließt alle offenen Dateien und beendet den Prozess.|
 |[_exit](../c-runtime-library/reference/exit-exit-exit.md)|Beendet den Prozess sofort, ohne **atexit** oder **_onexit** aufzurufen oder Puffer zu leeren.|
 |[getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md), [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|Ruft den Wert der Umgebungsvariablen ab.|
-|[_getpid](../c-runtime-library/reference/getpid.md)|Ruft die Prozess-ID-Nummer ab.|[System::Diagnostics::Process::Id](https://msdn.microsoft.com/library/system.diagnostics.process.id.aspx)|
+|[_getpid](../c-runtime-library/reference/getpid.md)|Ruft die Prozess-ID-Nummer ab.|
 |[longjmp](../c-runtime-library/reference/longjmp.md)|Stellt die gespeicherte Stapelumgebung wieder her. Wird zur Ausführung eines nicht lokalen **goto**-Befehls verwendet.|
 |[_onexit](../c-runtime-library/reference/onexit-onexit-m.md)|Plant Routinen für die Ausführung bei Beendigung des Programms, wird zur Kompatibilität mit Microsoft C/C++ Version 7.0 und früher verwendet.|
 |[_pclose](../c-runtime-library/reference/pclose.md)|Wartet auf einen neuen Befehlsprozessor und schließt den Stream auf der zugeordneten Pipe.|

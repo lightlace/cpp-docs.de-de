@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_set::upper_bound
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
-ms.openlocfilehash: 12f177887552cb14edba6ae8cfeeab1abe24a45b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0668342468e30733f8257ccd2682bfe785551857
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657508"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333601"
 ---
 # <a name="hashset-class"></a>hash_set-Klasse
 
@@ -565,7 +565,7 @@ Der Schlüssel des Elements mit einem übereinstimmenden Schlüssel aus der hash
 
 Die Memberfunktion gibt die Anzahl der Elemente im folgenden Bereich zurück:
 
-[ **lower_bound** (_ *Key* ), **upper_bound** (\_ *Key* ) ).
+\[ Lower_bound (*Schlüssel*), Upper_bound (*Schlüssel*)).
 
 ### <a name="example"></a>Beispiel
 
@@ -1534,7 +1534,7 @@ Weitere Informationen zu *"traits"* finden Sie unter den [Hash_set-Klasse](../st
 
 Das gespeicherte Objekt definiert die Memberfunktion:
 
-**bool operator**( **const Key&** _ *xVal*, **const Key&** \_ `yVal`),
+`bool operator( const Key& _xVal, const Key& _yVal );`
 
 die **TRUE** zurückgibt, wenn `_xVal` vorangestellt ist und nicht gleich `_yVal` in der Sortierreihenfolge ist.
 
@@ -2296,7 +2296,7 @@ Weitere Informationen zu *vergleichen*, finden Sie im Abschnitt "Hinweise" der [
 
 Das gespeicherte Objekt definiert die Memberfunktion:
 
-**bool operator**( **const Key&** _ *xVal*, **const Key&** \_ `yVal`),
+`bool operator( const Key& _xVal, const Key& _yVal );`
 
 die **TRUE** zurückgibt, wenn `_xVal` vorangestellt ist und nicht gleich `_yVal` in der Sortierreihenfolge ist.
 

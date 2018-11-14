@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
-ms.openlocfilehash: 093509d838ba6dc06a9b84b4c680c631a47826ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ed1521cbf768e5b473281e5f9b7c6597cdc4692
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435178"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519554"
 ---
 # <a name="comerror-class"></a>_com_error-Klasse
 
@@ -73,4 +73,4 @@ Ein **_com_error** Objekt stellt eine Ausnahmebedingung, die von den Fehlerbehan
 ## <a name="see-also"></a>Siehe auch
 
 [Compilerklassen für COM-Unterstützung](../cpp/compiler-com-support-classes.md)<br/>
-[IErrorInfo-Schnittstelle](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)
+[IErrorInfo-Schnittstelle](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)

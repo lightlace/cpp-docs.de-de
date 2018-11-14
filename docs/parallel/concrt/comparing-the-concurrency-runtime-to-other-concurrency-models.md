@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 0b5c24761f176d9c256c1ef6aee85b25231cea2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82e1dca1345b909919320b911c4c107e965c9850
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655844"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332672"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Concurrency Runtime im Vergleich zu anderen Parallelitätsmodellen
 
@@ -33,7 +33,7 @@ Das präemptive Modell und kooperative Planungsmodelle sind zwei allgemeine Verf
 
 ### <a name="preemptive-and-cooperative-scheduling"></a>Präemptive und kooperative Planung
 
-*Präemptive Planung* ist ein prioritätsbasierter Roundrobin-Mechanismus, bei dem Aufgaben nacheinander jeweils für einen bestimmten Zeitraum exklusiven Zugriff auf eine Computerressource erhalten. Präemptive Planung wird häufig in Multitasking-Betriebssystemen wie Windows verwendet. *Kooperative Planung* ist ein Mechanismus, der jedem Task exklusiven Zugriff auf eine Computerressource gibt, bis der Task abgeschlossen ist oder den Zugriff an die Ressource übergibt. Concurrency Runtime verwendet die kooperative Planung zusammen mit dem präemptiven Planer des Betriebssystems, um eine maximale Nutzung der Verarbeitungsressourcen zu erreichen.
+*Präemptive Planung* ist ein prioritätsbasierter Roundrobin-Mechanismus, bei dem Aufgaben nacheinander jeweils für einen bestimmten Zeitraum exklusiven Zugriff auf eine Computerressource erhalten. Präemptive Planung wird häufig in Multitasking-Betriebssystemen wie Windows. *Kooperative Planung* ist ein Mechanismus, der jeder Aufgabe exklusiven Zugriff auf eine Computerressource gibt, bis die Aufgabe abgeschlossen ist oder die Aufgabe den Zugriff auf die Ressource übergibt. Concurrency Runtime verwendet die kooperative Planung zusammen mit dem präemptiven Planer des Betriebssystems, um eine maximale Nutzung der Verarbeitungsressourcen zu erreichen.
 
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>Unterschiede zwischen präemptiven und kooperativen Planern
 

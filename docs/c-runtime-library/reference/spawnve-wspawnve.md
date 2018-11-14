@@ -31,12 +31,12 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: 26d1713d-b551-4f21-a07b-e9891a2ae6cf
-ms.openlocfilehash: 03fa25f5800928aad7185c98a331d06b1c39779b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e3a8d3cf476dfff7c74007ec371c39f5128bbe7
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562018"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326472"
 ---
 # <a name="spawnve-wspawnve"></a>_spawnve, _wspawnve
 
@@ -82,11 +82,11 @@ Der Rückgabewert eines synchronen **_spawnve** oder **_wspawnve** (**_P_WAIT** 
 
 |||
 |-|-|
-**E2BIG**|Argumentliste umfasst mehr als 1024 Byte.
-**EINVAL**|*Modus* Argument ist ungültig.
-**ENOENT**|Datei oder Pfad nicht gefunden.
-**ENOEXEC**|Die angegebene Datei ist nicht ausführbar oder hat ein ungültiges Format für eine ausführbare Datei.
-**ENOMEM**|Es ist nicht genügend Arbeitsspeicher verfügbar, um den neuen Prozess auszuführen.
+| **E2BIG** | Argumentliste umfasst mehr als 1024 Byte. |
+| **EINVAL** | *Modus* Argument ist ungültig. |
+| **ENOENT** | Datei oder Pfad nicht gefunden. |
+| **ENOEXEC** | Die angegebene Datei ist nicht ausführbar oder hat ein ungültiges Format für eine ausführbare Datei. |
+| **ENOMEM** | Es ist nicht genügend Arbeitsspeicher verfügbar, um den neuen Prozess auszuführen. |
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

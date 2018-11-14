@@ -1,21 +1,23 @@
 ---
 title: Compilerfehler C3409
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 f1_keywords:
 - C3409
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: 2a677da40b64a19c4d2a27436344eec7adb80c14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b6ceb6f2e8700a5459dbd01db443ef90de314b5e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600888"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330085"
 ---
 # <a name="compiler-error-c3409"></a>Compilerfehler C3409
 
-ein leerer Attributblock ist nicht zulässig.
+> ein leerer Attributblock ist nicht zulässig.
+
+## <a name="remarks"></a>Hinweise
 
 Die eckigen Klammern wurden vom Compiler als interpretiert eine [Attribut](../../windows/cpp-attributes-reference.md) blockieren, aber keine Attribute gefunden wurden.
 
@@ -29,19 +31,15 @@ Der Compiler kann diesen Fehler generieren, bei der Verwendung von eckigen Klamm
 
    1. Entfernen Sie den Attributblock.
 
-1. Wenn die eckigen Klammern Teil eines Lambda-Ausdrucks sind:
+1. Wenn die eckigen Klammern Teil eines Lambda-Ausdrucks sind, stellen Sie sicher, dass es sich bei der Lambda-Ausdruck gültiger Syntaxregeln befolgt.
 
-   1. Stellen Sie sicher, dass der Lambda-Ausdruck gültiger Syntaxregeln befolgt.
-
-         Weitere Informationen zu Lambda-Ausdruckssyntax, finden Sie unter [Lambda-Ausdruckssyntax](../../cpp/lambda-expression-syntax.md).
-
-    2.
+   Weitere Informationen zu Lambda-Ausdruckssyntax, finden Sie unter [Lambda-Ausdruckssyntax](../../cpp/lambda-expression-syntax.md).
 
 ## <a name="example"></a>Beispiel
 
 Im folgende Beispiel wird die C3409 generiert.
 
-```
+```cpp
 // C3409.cpp
 // compile with: /c
 #include <windows.h>
@@ -60,7 +58,7 @@ class b : public x {};
 
 Im folgende Beispiel wird C3409 generiert, da ein Lambda-Ausdruck verwendet die `mutable` -Spezifikation, aber keine Parameterliste bereitstellt. Der Compiler kann nicht bestimmen, ob die eckigen Klammern Teil der Definition eines Lambda-Ausdrucks oder ein Attributblock sind.
 
-```
+```cpp
 // C3409b.cpp
 
 int main()

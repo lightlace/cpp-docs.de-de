@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], sharing
 - _wsopen function
 ms.assetid: a9d4cccf-06e9-414d-96fa-453fca88cc1f
-ms.openlocfilehash: 4bb728b8e48190eb01e47dc9cd7de65a350f612d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3773550fd32df75f0a3819767de1171daebaf0f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626130"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330124"
 ---
 # <a name="sopen-wsopen"></a>_sopen, _wsopen
 
@@ -82,11 +82,11 @@ Wenn *Filename* oder *Oflag* ist eine **NULL** -Zeiger ist, oder wenn *Oflag* od
 
 |errno-Wert|Bedingung|
 |-|-|
-**EACCES**|Der angegebene Pfad ist ein Verzeichnis, oder die Datei ist schreibgeschützt, aber es wurde versucht, sie zum Schreiben zu öffnen.
-**EEXIST**|**_O_CREAT** und **_O_EXCL** Flag wurden angegeben, aber *Filename* ist bereits vorhanden.
-**EINVAL**|Ungültige *Oflag* oder *Shflag* Argument.
-**EMFILE**|Es sind keine Dateideskriptoren mehr verfügbar.
-**ENOENT**|Datei oder Pfad nicht gefunden.
+| **EACCES** | Der angegebene Pfad ist ein Verzeichnis, oder die Datei ist schreibgeschützt, aber es wurde versucht, sie zum Schreiben zu öffnen. |
+| **EEXIST** | **_O_CREAT** und **_O_EXCL** Flag wurden angegeben, aber *Filename* ist bereits vorhanden. |
+| **EINVAL** | Ungültige *Oflag* oder *Shflag* Argument. |
+| **EMFILE** | Es sind keine Dateideskriptoren mehr verfügbar. |
+| **ENOENT** | Datei oder Pfad nicht gefunden. |
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -104,23 +104,23 @@ Der ganzzahlige Ausdruck *Oflag* wird gebildet durch Kombination einer oder mehr
 
 |*Oflag* Konstanten|Verhalten|
 |-|-|
-**_O_APPEND**|Verschiebt den Dateizeiger vor jedem Schreibvorgang an das Ende der Datei.
-**_O_BINARY**|Öffnet die Datei im Binärmodus (nicht übersetzt). (Eine Beschreibung des binären Modus finden Sie unter [fopen](fopen-wfopen.md).)
-**_O_CREAT**|Erstellt eine Datei und öffnet sie zum Schreiben. Hat keine Auswirkungen, wenn die Datei durch angegeben *Filename* vorhanden ist. Die *Pmode* Argument ist erforderlich, wenn **_O_CREAT** angegeben ist.
-**_O_CREAT** &AMP;#124; **_O_SHORT_LIVED**|Erstellt eine temporäre Datei und leert sie, wenn möglich, nicht auf die Festplatte. Die *Pmode* Argument ist erforderlich, wenn **_O_CREAT** angegeben ist.
-**_O_CREAT** &AMP;#124; **_O_TEMPORARY**|Erstellt eine temporäre Datei. Die Datei wird gelöscht, wenn der letzte Dateideskriptor geschlossen wird. Die *Pmode* Argument ist erforderlich, wenn **_O_CREAT** angegeben ist.
-**_O_CREAT**&AMP;#124; ` _O_EXCL`|Gibt einen Fehlerwert zurück, wenn eine Datei, die anhand des *Filename* vorhanden ist. Gilt nur bei Verwendung mit **_O_CREAT**.
-**_O_NOINHERIT**|Verhindert die Erstellung eines gemeinsam verwendeten Dateideskriptors.
-**_O_RANDOM**|Gibt an, dass das Zwischenspeichern für den zufälligen Zugriff vom Datenträger optimiert, aber nicht darauf beschränkt ist.
-**_O_RDONLY**|Öffnet eine Datei nur zum Lesen. Kann nicht angegeben werden, mit **_O_RDWR** oder **_O_WRONLY**.
-**_O_RDWR**|Öffnet eine Datei zum Lesen und zum Schreiben. Kann nicht angegeben werden, mit **_O_RDONLY** oder **_O_WRONLY**.
-**_O_SEQUENTIAL**|Gibt an, dass das Zwischenspeichern für den sequenziellen Zugriff vom Datenträger optimiert, aber nicht darauf beschränkt ist.
-**_O_TEXT**|Öffnet eine Datei im Textmodus (übersetzt). (Weitere Informationen finden Sie unter [Text- und Binärmodus-Datei-E/A](../../c-runtime-library/text-and-binary-mode-file-i-o.md) und [fopen](fopen-wfopen.md).)
-**_O_TRUNC**|Öffnet eine Datei und verkürzt sie auf die Länge Null. Für die Datei muss Schreibberechtigung bestehen. Kann nicht angegeben werden, mit **_O_RDONLY**. **_O_TRUNC** mit verwendet **_O_CREAT** öffnet eine vorhandene Datei oder erstellt eine Datei. **Hinweis:** der **_O_TRUNC** Flag zerstört die Inhalte der angegebenen Datei.
-**_O_WRONLY**|Öffnet eine Datei nur zum Schreiben. Kann nicht angegeben werden, mit **_O_RDONLY** oder **_O_RDWR**.
-**_O_U16TEXT**|Öffnet eine Datei im Unicode-UTF-16-Modus.
-**_O_U8TEXT**|Öffnet eine Datei im Unicode-UTF-8-Modus.
-**_O_WTEXT**|Öffnet eine Datei im Unicode-Modus.
+| **_O_APPEND** | Verschiebt den Dateizeiger vor jedem Schreibvorgang an das Ende der Datei. |
+| **_O_BINARY** | Öffnet die Datei im Binärmodus (nicht übersetzt). (Eine Beschreibung des binären Modus finden Sie unter [fopen](fopen-wfopen.md).) |
+| **_O_CREAT** | Erstellt eine Datei und öffnet sie zum Schreiben. Hat keine Auswirkungen, wenn die Datei durch angegeben *Filename* vorhanden ist. Die *Pmode* Argument ist erforderlich, wenn **_O_CREAT** angegeben ist. |
+| **_O_CREAT** &AMP;#124; **_O_SHORT_LIVED** | Erstellt eine temporäre Datei und leert sie, wenn möglich, nicht auf die Festplatte. Die *Pmode* Argument ist erforderlich, wenn **_O_CREAT** angegeben ist. |
+| **_O_CREAT** &AMP;#124; **_O_TEMPORARY** | Erstellt eine temporäre Datei. Die Datei wird gelöscht, wenn der letzte Dateideskriptor geschlossen wird. Die *Pmode* Argument ist erforderlich, wenn **_O_CREAT** angegeben ist. |
+| **_O_CREAT**&AMP;#124; ` _O_EXCL` | Gibt einen Fehlerwert zurück, wenn eine Datei, die anhand des *Filename* vorhanden ist. Gilt nur bei Verwendung mit **_O_CREAT**. |
+| **_O_NOINHERIT** | Verhindert die Erstellung eines gemeinsam verwendeten Dateideskriptors. |
+| **_O_RANDOM** | Gibt an, dass das Zwischenspeichern für den zufälligen Zugriff vom Datenträger optimiert, aber nicht darauf beschränkt ist. |
+| **_O_RDONLY** | Öffnet eine Datei nur zum Lesen. Kann nicht angegeben werden, mit **_O_RDWR** oder **_O_WRONLY**. |
+| **_O_RDWR** | Öffnet eine Datei zum Lesen und zum Schreiben. Kann nicht angegeben werden, mit **_O_RDONLY** oder **_O_WRONLY**. |
+| **_O_SEQUENTIAL** | Gibt an, dass das Zwischenspeichern für den sequenziellen Zugriff vom Datenträger optimiert, aber nicht darauf beschränkt ist. |
+| **_O_TEXT** | Öffnet eine Datei im Textmodus (übersetzt). (Weitere Informationen finden Sie unter [Text- und Binärmodus-Datei-E/A](../../c-runtime-library/text-and-binary-mode-file-i-o.md) und [fopen](fopen-wfopen.md).) |
+| **_O_TRUNC** | Öffnet eine Datei und verkürzt sie auf die Länge Null. Für die Datei muss Schreibberechtigung bestehen. Kann nicht angegeben werden, mit **_O_RDONLY**. **_O_TRUNC** mit verwendet **_O_CREAT** öffnet eine vorhandene Datei oder erstellt eine Datei. **Hinweis:** der **_O_TRUNC** Flag zerstört die Inhalte der angegebenen Datei. |
+| **_O_WRONLY** | Öffnet eine Datei nur zum Schreiben. Kann nicht angegeben werden, mit **_O_RDONLY** oder **_O_RDWR**. |
+| **_O_U16TEXT** | Öffnet eine Datei im Unicode-UTF-16-Modus. |
+| **_O_U8TEXT** | Öffnet eine Datei im Unicode-UTF-8-Modus. |
+| **_O_WTEXT** | Öffnet eine Datei im Unicode-Modus. |
 
 Um den Zugriffsmodus für die Datei anzugeben, geben Sie **_O_RDONLY**, **_O_RDWR**, oder **_O_WRONLY**. Es gibt keinen Standardwert für den Zugriffsmodus.
 
@@ -132,18 +132,18 @@ Das Argument *Shflag* ist ein konstanter Ausdruck, der aus einer der folgenden M
 
 |*Shflag* Konstanten|Verhalten|
 |-|-|
-**_SH_DENYRW**|Verweigert den Lese- und Schreibzugriff auf eine Datei.
-**_SH_DENYWR**|Verweigert den Schreibzugriff auf eine Datei.
-**_SH_DENYRD**|Verweigert den Lesezugriff auf eine Datei.
-**_SH_DENYNO**|Gestattet Lese- und Schreibzugriff.
+| **_SH_DENYRW** | Verweigert den Lese- und Schreibzugriff auf eine Datei. |
+| **_SH_DENYWR** | Verweigert den Schreibzugriff auf eine Datei. |
+| **_SH_DENYRD** | Verweigert den Lesezugriff auf eine Datei. |
+| **_SH_DENYNO** | Gestattet Lese- und Schreibzugriff. |
 
 Die *Pmode* Argument ist erforderlich, nur, wenn **_O_CREAT** angegeben ist. Wenn die Datei nicht vorhanden ist, *Pmode* gibt an, die berechtigungseinstellungen der Datei, die festgelegt werden, wenn die neue Datei zum ersten Mal geschlossen wird. Andernfalls *Pmode* wird ignoriert. *Pmode* ist ein Ganzzahlausdruck, der eine oder beide der Manifestkonstanten enthält **_S_IWRITE** und **_S_IREAD**, die definiert werden, \<sys\stat >. Wenn beide Konstanten verwendet werden, werden sie mithilfe des bitweisen OR-Operators kombiniert. Die Bedeutung der *Pmode* lautet wie folgt.
 
 |*pmode*|Bedeutung|
 |-|-|
-**_S_IREAD**|Nur Lesen zugelassen.
-**_S_IWRITE**|Schreiben zugelassen. (Lässt tatsächlich Lesen und Schreiben zu.)
-**_S_IREAD** &AMP;#124; **_S_IWRITE**|Lesen und Schreiben erlaubt.
+| **_S_IREAD** | Nur Lesen zugelassen. |
+| **_S_IWRITE** | Schreiben zugelassen. (Lässt tatsächlich Lesen und Schreiben zu.) |
+| **_S_IREAD** &AMP;#124; **_S_IWRITE** | Lesen und Schreiben erlaubt. |
 
 Wenn keine Schreibberechtigung gewährt wird, kann die Datei nur gelesen werden. Im Windows-Betriebssystem sind alle Dateien lesbar. Es ist nicht möglich, nur Schreibberechtigungen zu vergeben. Daher sind die Modi **_S_IWRITE** und **_S_IREAD** | **_S_IWRITE** entsprechen.
 

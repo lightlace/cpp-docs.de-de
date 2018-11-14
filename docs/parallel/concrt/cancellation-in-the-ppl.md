@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-ms.openlocfilehash: b776aedb71f81d7dc27f9322ed87fd080c8819a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1a762f97cf144c39043203dbf68d927b2cbd0e4
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558725"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327420"
 ---
 # <a name="cancellation-in-the-ppl"></a>Abbruch in der PPL
 
@@ -90,13 +90,12 @@ Das folgende Beispiel zeigt das erste grundlegende Muster für den Aufgabenabbru
 Die `cancel_current_task`-Funktion löst eine Ausnahme aus; daher müssen Sie nicht explizit von der aktuellen Schleife oder Funktion zurückkehren.
 
 > [!TIP]
-
->  Sie können alternativ Aufrufen der [Concurrency:: interruption_point](reference/concurrency-namespace-functions.md#interruption_point) -Funktion anstelle von `cancel_current_task`.
+> Sie können alternativ Aufrufen der [Concurrency:: interruption_point](reference/concurrency-namespace-functions.md#interruption_point) -Funktion anstelle von `cancel_current_task`.
 
 Es ist wichtig, `cancel_current_task` als Reaktion auf einen Abbruch aufzurufen, da die Aufgabe dadurch in den abgebrochenen Zustand übergeht. Wenn Sie zu früh zurückkehren, anstatt `cancel_current_task` aufzurufen, geht der Vorgang in den abgeschlossenen Zustand über, und alle wertbasierten Fortsetzungen werden ausgeführt.
 
 > [!CAUTION]
->  Lösen Sie nie `task_canceled` in Ihrem Code aus. Rufen Sie stattdessen `cancel_current_task` auf.
+> Lösen Sie nie `task_canceled` in Ihrem Code aus. Rufen Sie stattdessen `cancel_current_task` auf.
 
 Wenn eine Aufgabe im abgebrochenen Zustand endet die [Concurrency](reference/task-class.md#get) -Methode löst [Concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md). (Im Gegensatz dazu [Concurrency:: Task::](reference/task-class.md#wait) gibt [task_status:: Canceled](reference/concurrency-namespace-enums.md#task_group_status) und wird nicht ausgelöst.) Das folgende Beispiel veranschaulicht dieses Verhalten für eine aufgabenbasierte Fortsetzung. Eine aufgabenbasierte Fortsetzung wird immer aufgerufen, auch wenn die Vorgängeraufgabe abgebrochen wurde.
 
@@ -107,8 +106,7 @@ Da wertbasierte Fortsetzungen das Token der Vorgängeraufgabe erben, wenn sie ni
 [!code-cpp[concrt-task-canceled#2](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_4.cpp)]
 
 > [!CAUTION]
-
->  Wenn Sie kein Abbruchtoken, übergeben die `task` Konstruktor oder die [Concurrency:: create_task](reference/concurrency-namespace-functions.md#create_task) -Funktion, die diese Aufgabe kann nicht abgebrochen werden. Außerdem müssen Sie an den Konstruktor geschachtelter Aufgaben – Aufgaben, die im Text einer anderen Aufgabe erstellt werden – das Abbruchtoken dieser Aufgabe übergeben, um alle Aufgaben gleichzeitig abzubrechen.
+> Wenn Sie kein Abbruchtoken, übergeben die `task` Konstruktor oder die [Concurrency:: create_task](reference/concurrency-namespace-functions.md#create_task) -Funktion, die diese Aufgabe kann nicht abgebrochen werden. Außerdem müssen Sie an den Konstruktor geschachtelter Aufgaben – Aufgaben, die im Text einer anderen Aufgabe erstellt werden – das Abbruchtoken dieser Aufgabe übergeben, um alle Aufgaben gleichzeitig abzubrechen.
 
 Sie haben die Möglichkeit, beliebigen Code auszuführen, wenn ein Abbruchtoken abgebrochen wird. Wenn der Benutzer wählt z. B. eine **Abbrechen** Schaltfläche auf der Benutzeroberfläche, um den Vorgang abzubrechen, konnte Sie diese Schaltfläche deaktiviert, bis der Benutzer einen anderen Vorgang startet. Das folgende Beispiel zeigt, wie Sie mit der [Concurrency::cancellation_token::register_callback](reference/cancellation-token-class.md#register_callback) Methode, um eine Rückruffunktion zu registrieren, die ausgeführt wird, wenn ein Abbruchtoken abgebrochen wird.
 
@@ -123,11 +121,10 @@ Das Dokument [Aufgabenparallelität](../../parallel/concrt/task-parallelism-conc
 Diese Verhalten werden nicht durch eine fehlerhafte Aufgabe beeinträchtigt (das heißt, eine Aufgabe, die eine Ausnahme auslöst). Auch in diesem Fall wird eine wertbasierte Fortsetzung abgebrochen, und eine aufgabenbasierte Fortsetzung wird nicht abgebrochen.
 
 > [!CAUTION]
->  Eine Aufgabe, die in einer anderen Aufgabe erstellt wird (das heißt, eine geschachtelte Aufgabe) erbt nicht das Abbruchtoken der übergeordneten Aufgabe. Nur wertbasierte Fortsetzungen erben das Abbruchtoken ihrer Vorgängeraufgabe.
+> Eine Aufgabe, die in einer anderen Aufgabe erstellt wird (das heißt, eine geschachtelte Aufgabe) erbt nicht das Abbruchtoken der übergeordneten Aufgabe. Nur wertbasierte Fortsetzungen erben das Abbruchtoken ihrer Vorgängeraufgabe.
 
 > [!TIP]
-
->  Verwenden der [Concurrency:: cancellation_token:: none](reference/cancellation-token-class.md#none) Methode, wenn Sie rufen einen Konstruktor oder eine Funktion, die akzeptiert eine `cancellation_token` -Objekt, und Sie möchten nicht den Vorgang abbrechbar ist.
+> Verwenden der [Concurrency:: cancellation_token:: none](reference/cancellation-token-class.md#none) Methode, wenn Sie rufen einen Konstruktor oder eine Funktion, die akzeptiert eine `cancellation_token` -Objekt, und Sie möchten nicht den Vorgang abbrechbar ist.
 
 Sie können auch ein Abbruchtoken für den Konstruktor eines `task_group`- oder `structured_task_group`-Objekts angeben. Ein wichtiger Aspekt hierfür ist, dass die untergeordneten Aufgabengruppen dieses Abbruchtoken erben. Ein Beispiel für die dieses Konzept unter Verwendung der [Concurrency:: run_with_cancellation_token](reference/concurrency-namespace-functions.md#run_with_cancellation_token) Funktion, die zum Aufrufen von `parallel_for`, finden Sie unter [Abbrechen von parallelen Algorithmen](#algorithms) weiter unten in diesem Dokument.
 

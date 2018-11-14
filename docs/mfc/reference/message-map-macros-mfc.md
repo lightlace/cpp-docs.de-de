@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 8d4caca4d5a0b5c12b0af5a948b17b7e2ad05221
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4012f1f0729ff0f46a8504c44f27a37cd55c77e5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474268"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327446"
 ---
 # <a name="message-map-macros-mfc"></a>Meldungszuordnungsmakros (MFC)
 
@@ -250,27 +250,8 @@ Der Name der Meldungshandler-Funktion, die der Befehl zugeordnet ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine erweiterte Form der Nachricht Befehlshandler ist verfügbar für erweiterte verwendet. Die ON_COMMAND_EX-Makro wird für solche Meldungshandler verwendet, und es bietet eine Obermenge der Funktionen [ON_COMMAND] (#On_command).  Erweiterte Befehlshandler Member-Funktionen auf einen einzelnen Parameter, UINT, enthält die Befehls-ID und einen booleschen Wert zurückzugeben. Der Rückgabewert muss wahr sein.
-
-Dieses Makro ordnet eine befehlsmeldung an eine erweiterte Befehlshandler Member-Funktion.
-
-### <a name="syntax"></a>Syntax
-
-```
-ON_COMMAND_EX(id,  memberFxn);
-```
-
-### <a name="parameters"></a>Parameter
-
-*ID*<br/>
-Die Befehls-ID.
-
-*memberFxn*<br/>
-Der Name der Meldungshandler-Funktion, die der Befehl zugeordnet ist.
-
-### <a name="remarks"></a>Hinweise
-
 Eine erweiterte Form der Nachricht Befehlshandler ist verfügbar für erweiterte verwendet. Die ON_COMMAND_EX-Makro wird für solche Meldungshandler verwendet, und es bietet eine Obermenge der der [ON_COMMAND](message-map-macros-mfc.md#on_command) Funktionalität. Erweiterte Befehlshandler Member-Funktionen auf einen einzelnen Parameter, UINT, enthält die Befehls-ID und einen booleschen Wert zurückzugeben. Der Rückgabewert muss auf "true", um anzugeben, dass der Befehl behandelt wurde; Andernfalls wird auf anderen Befehl Zielobjekte weiterzuleiten.
+
 Weitere Informationen finden Sie im technischen Hinweis [TN006: Meldungszuordnungen] tm006-Nachricht-maps.md).
 
 ### <a name="requirements"></a>Anforderungen

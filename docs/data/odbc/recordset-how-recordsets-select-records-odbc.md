@@ -9,12 +9,12 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-ms.openlocfilehash: 9e39929b4e669b6d7ed5662484ee71f762b4ea42
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e7bbaad949b5f4456ce4c8aea60099792deb786
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618451"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329467"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>Recordset: Datensatzauswahl durch Recordsets (ODBC)
 
@@ -61,9 +61,8 @@ Beim Aufruf eines Recordset-Objekts [öffnen](../../mfc/reference/crecordset-cla
 
 - Die [Sortierreihenfolge](../../data/odbc/recordset-sorting-records-odbc.md) Reihenfolge für das Recordset, falls vorhanden, die in enthaltenen der [M_strSort](../../mfc/reference/crecordset-class.md#m_strsort) -Datenmember. Das Framework verwendet diese Zeichenfolge, um eine SQL-Konstrukt **ORDER BY** Klausel.
 
-
-    > [!TIP]
-    >  Zur Verwendung der SQL **GROUP BY** Klausel (und möglicherweise die **HAVING** Klausel), fügen Sie die Klauseln an das Ende der Filterzeichenfolge.
+   > [!TIP]
+   > Zur Verwendung der SQL **GROUP BY** Klausel (und möglicherweise die **HAVING** Klausel), fügen Sie die Klauseln an das Ende der Filterzeichenfolge.
 
 - Die Werte eines beliebigen [Parameterdatenmember](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) Sie für die Klasse angegeben. Legen Sie Parameterwerte nur vor dem Aufruf `Open` oder `Requery`. Das Framework bindet die Parameterwerte, "?" Platzhalter in der SQL-Zeichenfolge. Geben Sie zum Zeitpunkt der Kompilierung eine Zeichenfolge mit Platzhaltern. Zur Laufzeit füllt das Framework die Details basierend auf den Parameterwerten, die Sie übergeben.
 

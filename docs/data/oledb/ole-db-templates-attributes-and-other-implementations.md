@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB templates, about OLE DB templates
 - OLE DB templates
 ms.assetid: 0c780c1b-9bba-4788-8c33-8552d9f120ac
-ms.openlocfilehash: 97924110d6dd59e59eda9492713518dedf68af55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 079ec68afe2e538a40920fb2c6524f8d5b8aae89
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596598"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520638"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>Vorlagen, Attribute und andere Implementierungen von OLE DB
 
@@ -25,7 +25,7 @@ Diese Vorlagenbibliothek besteht aus zwei Teilen:
 
 - **OLE DB-Anbietervorlagen** verwendet, um eine OLE DB-Server (Provider)-Anwendung zu implementieren.
 
-Sie sollten mit C++-Vorlagen, COM und den OLE DB-Schnittstellen vertraut sein, um OLE DB-Vorlagen verwenden zu können. Wenn Sie nicht mit OLE DB vertraut sind, finden Sie unter [OLE DB-Programmierreferenz](/previous-versions/windows/desktop/ms713643).
+Sie sollten mit C++-Vorlagen, COM und den OLE DB-Schnittstellen vertraut sein, um OLE DB-Vorlagen verwenden zu können. Wenn Sie nicht mit OLE DB vertraut sind, finden Sie unter [OLE DB-Programmierreferenz](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming).
 
 Weitere Informationen können Sie folgende Aktionen ausführen:
 
@@ -37,7 +37,7 @@ Weitere Informationen können Sie folgende Aktionen ausführen:
 
 - Die Liste der [OLE DB-Vorlagenbeispiele](https://github.com/Microsoft/VCSamples).
 
-- Finden Sie unter [OLE DB-Programmierreferenz](/previous-versions/windows/desktop/ms713643) (in der Windows-SDK).
+- Finden Sie unter [OLE DB-Programmierreferenz](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming) (in der Windows-SDK).
 
 ## <a name="ole-db-attributes"></a>OLE DB-Attribute
 
@@ -49,7 +49,7 @@ Die MFC-Bibliothek enthält eine Klasse, [COleDBRecordView](../../mfc/reference/
 
 ## <a name="ole-db-sdk-interfaces"></a>OLE DB-SDK-Schnittstellen
 
-In den Fällen, in denen OLE DB-Vorlagen OLE DB-Funktionen unterstützen, müssen Sie den OLE DB-Schnittstellen verwenden. Weitere Informationen finden Sie unter [OLE DB-Programmierreferenz](/previous-versions/windows/desktop/ms713643) im Windows SDK.
+In den Fällen, in denen OLE DB-Vorlagen OLE DB-Funktionen unterstützen, müssen Sie den OLE DB-Schnittstellen verwenden. Weitere Informationen finden Sie unter [OLE DB-Programmierreferenz](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming) im Windows SDK.
 
 ## <a name="see-also"></a>Siehe auch
 

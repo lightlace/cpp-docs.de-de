@@ -8,12 +8,12 @@ helpviewer_keywords:
 - connection strings [C++], OLE DB consumers
 - ATL OLE DB Consumer Wizard
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-ms.openlocfilehash: 835b3e6246741c3859f51e017686531f450db194
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59ad635f62ab7a20a31de7255ec4522136e102ec
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499566"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524130"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL-OLE DB-Consumer-Assistent
 
@@ -84,13 +84,13 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
 
       **Sonstiges:** In **Verbindungstimeout**, geben Sie die Anzahl von Sekunden Zeit im Leerlauf, die zulässig sind, bevor ein Timeout auftritt. In **Zugriffsberechtigungen**, geben Sie die Zugriffsberechtigungen auf die Datenverbindung.
 
-       Weitere Informationen zu erweiterten Eigenschaften finden Sie in der Begleitdokumentation für jeden bestimmten OLE DB-Anbieter.
+      Weitere Informationen zu erweiterten Eigenschaften finden Sie in der Begleitdokumentation für jeden bestimmten OLE DB-Anbieter.
 
    - **Alle** Registerkarte
 
       Diese Registerkarte zeigt eine Zusammenfassung der Initialisierungseigenschaften für die Datenquelle und die Verbindung, die Sie angegeben haben. Sie können diese Werte bearbeiten.
 
-   Klicken Sie auf **OK** um den Vorgang abzuschließen. Die **Datenbankobjekt auswählen** Dialogfeld wird angezeigt. Wählen Sie in diesem Dialogfeld die Tabelle, Sicht oder gespeicherte Prozedur, den vom Consumer verwendet wird.
+      Klicken Sie auf **OK** um den Vorgang abzuschließen. Die **Datenbankobjekt auswählen** Dialogfeld wird angezeigt. Wählen Sie in diesem Dialogfeld die Tabelle, Sicht oder gespeicherte Prozedur, den vom Consumer verwendet wird.
 
 - **Klasse**
 

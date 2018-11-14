@@ -8,12 +8,12 @@ helpviewer_keywords:
 - task parallelism
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
-ms.openlocfilehash: 43af08f3be75bff7621cd2f57b9d50b658420f26
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9f18dfd1498538ce3700fd73a27ce6f6088ee42
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630424"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331216"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Aufgabenparallelität (Concurrency Runtime)
 
@@ -22,8 +22,7 @@ In der Concurrency Runtime eine *Aufgabe* ist eine Arbeitseinheit, die einen bes
 Sie verwenden Aufgaben, wenn Sie asynchronen Code schreiben und ein Vorgang erst ausgeführt werden soll, nachdem der asynchrone Vorgang abgeschlossen ist. Sie können z. B. eine Aufgabe verwenden, asynchron aus einer Datei gelesen und anschließend eine andere Aufgabe – eine *Fortsetzungsaufgabe*, die weiter unten in diesem Dokument erläutert wird – zum Verarbeiten der Daten, nachdem er wieder verfügbar ist. Umgekehrt können Sie Aufgabengruppen verwenden, um parallele Arbeitsvorgänge in kleinere Teile zu zerlegen. Nehmen Sie zum Beispiel einmal an, dass Sie über einen rekursiven Algorithmus verfügen, der die verbleibende Arbeit in zwei Partitionen unterteilt. Sie können Aufgabengruppen verwenden, um diese Partitionen gleichzeitig auszuführen, und dann warten, bis die aufgeteilte Arbeit abgeschlossen ist.
 
 > [!TIP]
-
->  Wenn Sie die gleiche Routine auf jedes Element einer Auflistung gleichzeitig anwenden möchten, verwenden Sie parallele Algorithmen, wie z. B. [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for), statt einer Aufgabe oder Aufgabengruppe. Weitere Informationen zu parallelen Algorithmen finden Sie unter [parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md).
+> Wenn Sie die gleiche Routine auf jedes Element einer Auflistung gleichzeitig anwenden möchten, verwenden Sie parallele Algorithmen, wie z. B. [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for), statt einer Aufgabe oder Aufgabengruppe. Weitere Informationen zu parallelen Algorithmen finden Sie unter [parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md).
 
 ## <a name="key-points"></a>Wesentliche Punkte
 
@@ -205,7 +204,6 @@ Erwägen Sie eine UWP-app, die c++ und XAML verwendet und einen Satz von Dateien
 1. Implementieren Sie in "MainPage.xaml.cpp" `WriteFilesAsync` wie im Beispiel dargestellt.
 
 > [!TIP]
-
 > `when_all` ist eine nicht blockierende Funktion, die `task` als Ergebnis erzeugt. Im Gegensatz zu [Task:: wait](reference/task-class.md#wait), es ist sicher, diese Funktion in einer UWP-app auf dem ASTA (Application STA-) Thread aufzurufen.
 
 ###  <a name="when-any"></a> When_any-Funktion
@@ -229,14 +227,14 @@ Wie bei `when_all` wird häufig eine Fortsetzung verwendet, in der mithilfe von 
 In diesem Beispiel können Sie auch `task<pair<int, size_t>>` angeben, um eine aufgabenbasierte Fortsetzung zu erstellen.
 
 > [!NOTE]
->  Wie bei `when_all` müssen alle an `when_any` übergebenen Aufgaben denselben Typ zurückgeben.
+> Wie bei `when_all` müssen alle an `when_any` übergebenen Aufgaben denselben Typ zurückgeben.
 
 Sie können auch die Syntax `||` verwenden, um eine Aufgabe zu erstellen, die nach der ersten Aufgabe in einem Satz von Aufgaben abgeschlossen wird, wie im folgenden Beispiel gezeigt.
 
 `auto t = t1 || t2; // same as when_any`
 
 > [!TIP]
->  Wie bei `when_all`, `when_any` nicht blockierend und sicher in einer UWP-app auf dem ASTA-Thread aufgerufen wird.
+> Wie bei `when_all`, `when_any` nicht blockierend und sicher in einer UWP-app auf dem ASTA-Thread aufgerufen wird.
 
 ##  <a name="delayed-tasks"></a> Verzögerte Aufgabenausführung
 
@@ -257,8 +255,7 @@ In der PPL mithilfe der [Concurrency:: task_group](reference/task-group-class.md
 Die PPL Unterscheidet zwischen Aufgabengruppen zu diesen beiden Kategorien: *unstrukturierte Aufgabengruppen* und *strukturierte Aufgabengruppen*. In der PPL werden unstrukturierte Aufgabengruppen mithilfe der `task_group`-Klasse und strukturierte Aufgabengruppen mithilfe der `structured_task_group`-Klasse dargestellt.
 
 > [!IMPORTANT]
-
->  Die PPL definiert auch die [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) -Algorithmus, der verwendet die `structured_task_group` Klasse, um eine Reihe von Aufgaben parallel ausgeführt. Da der `parallel_invoke`-Algorithmus eine kompaktere Syntax aufweist, wird empfohlen, diesen, sofern möglich, anstelle der `structured_task_group`-Klasse zu verwenden. Das Thema [parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md) beschreibt `parallel_invoke` ausführlicher.
+> Die PPL definiert auch die [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) -Algorithmus, der verwendet die `structured_task_group` Klasse, um eine Reihe von Aufgaben parallel ausgeführt. Da der `parallel_invoke`-Algorithmus eine kompaktere Syntax aufweist, wird empfohlen, diesen, sofern möglich, anstelle der `structured_task_group`-Klasse zu verwenden. Das Thema [parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md) beschreibt `parallel_invoke` ausführlicher.
 
 Verwenden Sie `parallel_invoke`, um mehrere unabhängige Aufgaben gleichzeitig auszuführen und sofort darauf zu warten, dass alle Aufgaben abgeschlossen sind. Diese Technik wird häufig als bezeichnet *Zweig- und Joinknoten* Parallelität. Verwenden Sie `task_group`, um mehrere unabhängige Aufgaben gleichzeitig auszuführen und später darauf zu warten, dass alle Aufgaben abgeschlossen sind. Beispielsweise können Sie einem `task_group`-Objekt Aufgaben hinzufügen und in einer anderen Funktion oder einem anderen Thread darauf warten, dass die Aufgaben beendet werden.
 

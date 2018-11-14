@@ -2,12 +2,12 @@
 title: Attribute in C++
 ms.date: 06/01/2018
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: a4d24324165f3cce60d259adf6e3d21638296cf8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 444abf2ddf6d4563dcbeb5b683adc52f903bd97f
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471824"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520789"
 ---
 # <a name="attributes-in-c"></a>Attribute in C++
 
@@ -45,16 +45,16 @@ Attribute, die eine standardisierte Alternative zu anbieterspezifischer Erweiter
 
 - `[[nodiscard]]` **Visual Studio 2017 Version 15.3 und höher:** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) gibt an, dass der Rückgabewert einer Funktion nicht verworfen werden soll. Löst die Warnung von C4834, wie im folgenden Beispiel gezeigt:
 
-   ```cpp
-   [[nodiscard]]
-   int foo(int i) { return i * i; }
+    ```cpp
+    [[nodiscard]]
+    int foo(int i) { return i * i; }
 
-   int main()
-   {
-       foo(42); //warning C4834: discarding return value of function with 'nodiscard' attribute
-       return 0;
-   }
-   ```
+    int main()
+    {
+        foo(42); //warning C4834: discarding return value of function with 'nodiscard' attribute
+        return 0;
+    }
+    ```
 
 - `[[maybe_unused]]` **Visual Studio 2017 Version 15.3 und höher:** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) gibt an, dass die Variable, Funktion, Klasse, Typedef, nicht statischen Datenmember, Enumeration oder Spezialisierung einer Klassenvorlage absichtlich nicht verwendet werden kann. Der Compiler warnt nicht, wenn eine Entität markiert `[[maybe_unused]]` wird nicht verwendet. Eine Entität, die ohne das Attribut deklariert ist kann später mit dem Attribut und umgekehrt erneut deklariert werden. Eine Entität wird markiert, nachdem die erste Deklaration, die markiert ist, analysiert wird und für den Rest der Übersetzung von der aktuellen Übersetzungseinheit betrachtet.
 
@@ -75,12 +75,12 @@ Attribute, die eine standardisierte Alternative zu anbieterspezifischer Erweiter
     }
     ```
 
-   Das Beispiel löst Warnungen aus:
+  Das Beispiel löst Warnungen aus:
 
-   - 26494 (Typ-Regel 5: immer ein Objekt zu initialisieren.)
+  - 26494 (Typ-Regel 5: immer ein Objekt zu initialisieren.)
 
-   - 26485 (Bounds-Regel 3: kein Array zu zeigerverfall.)
+  - 26485 (Bounds-Regel 3: kein Array zu zeigerverfall.)
 
-   - 26481 (Begrenzungen Regel 1: Verwenden Sie keine Zeigerarithmetik. Verwenden Sie Spanne stattdessen.)
+  - 26481 (Begrenzungen Regel 1: Verwenden Sie keine Zeigerarithmetik. Verwenden Sie Spanne stattdessen.)
 
-   Die ersten beiden Warnungen ausgelöst werden, wenn Sie mit dem CppCoreCheck Code Analysetool installiert und aktiviert diesen Code kompilieren. Aber aufgrund des Attributs wird nicht die dritte Warnung ausgelöst. Sie können das gesamte begrenzungsprofil unterdrücken, indem Sie das Schreiben von [[gsl::suppress(bounds)]], ohne eine spezielle regelzahl. Der C++ Core Guidelines dienen können Sie besser und sicherer Code zu schreiben. Das Attribut unterdrücken erleichtert es, die die Warnungen zu deaktivieren, wenn sie nicht erwünscht sind.
+  Die ersten beiden Warnungen ausgelöst werden, wenn Sie mit dem CppCoreCheck Code Analysetool installiert und aktiviert diesen Code kompilieren. Aber aufgrund des Attributs wird nicht die dritte Warnung ausgelöst. Sie können das gesamte begrenzungsprofil unterdrücken, indem Sie das Schreiben von [[gsl::suppress(bounds)]], ohne eine spezielle regelzahl. Der C++ Core Guidelines dienen können Sie besser und sicherer Code zu schreiben. Das Attribut unterdrücken erleichtert es, die die Warnungen zu deaktivieren, wenn sie nicht erwünscht sind.

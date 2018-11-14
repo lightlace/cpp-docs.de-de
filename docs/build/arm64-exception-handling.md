@@ -1,12 +1,12 @@
 ---
 title: ARM64-Ausnahmebehandlung
 ms.date: 07/11/2018
-ms.openlocfilehash: 82775a61adf8437565b5bb691716451b225e72e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5189c399a4cbff071d2ec846008229ba76306882
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620596"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333588"
 ---
 # <a name="arm64-exception-handling"></a>ARM64-Ausnahmebehandlung
 
@@ -56,7 +56,7 @@ Hierbei handelt es sich um die Annahmen, die in der Beschreibung für die Ausnah
 
 Für Funktionen der Frame verkettet kann das fp-Lr-Paar an beliebiger Position in der lokalen Variablen Bereich je nach der Optimierung Überlegungen gespeichert werden. Das Ziel ist, um die Anzahl der lokalen Variablen zu maximieren, die von einer einzelnen Anweisung, die basierend auf Frame-Pointer (R29 entwickelt bei) oder der Stapelzeiger (sp) erreicht werden kann. Jedoch für `alloca` Funktionen, er verkettet werden muss und R29 entwickelt bei muss am Ende Stack verweisen. Für eine bessere Abdeckung von Register-Paar-Adressierung-Modus nicht flüchtig registrieren, damit Aave, Bereiche am oberen Rand der LAN-Stack positioniert werden. Hier sind Beispiele, die einige der am effizientesten Prolog Sequenzen zu veranschaulichen. Aus Gründen der Übersichtlichkeit und besseren Ort des Caches aufweist die Reihenfolge der aufgerufenen gespeicherten Register speichern, in dem alle kanonischen Prologe "immer größer werdenden einrichten" Reihenfolge. `#framesz` unten können Sie die Größe des gesamten Stapels (außer ' Alloca-Bereich) darstellt. `#localsz` und `#outsz` LAN-Größe zu kennzeichnen (einschließlich des Speichervorgangs Bereich für die \<R29 entwickelt bei, Lr > Paar) und der Parametergröße bzw. ausgehende.
 
-1. Verkettet, #localsz < = 512
+1. Verkettet, #localsz \<= 512
 
     ```asm
         stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -95,7 +95,7 @@ Für Funktionen der Frame verkettet kann das fp-Lr-Paar an beliebiger Position i
         sub    sp,#framesz-72           // allocate the remaining local area
     ```
 
-   Alle lokalen erfolgt basierend auf SP. \<R29 entwickelt bei, Lr > verweist auf den vorherigen Frame. Für die Größe des Quellframes < = 512, die "sub sp,..." können wegoptimiert werden, wenn der Bereich Regs gespeichert am unteren Rand der Stapel verschoben wird. Der Nachteil dieser ist, dass es ist nicht konsistent mit anderer Layouts, die oben genannten, gespeicherten Regs nehmen Sie Teil des Bereichs für das Paar-Regs und vor und nach dem indizierten Offset Adressierung.
+   Alle lokalen erfolgt basierend auf SP. \<R29 entwickelt bei, Lr > verweist auf den vorherigen Frame. Für die Größe des Quellframes \<= 512, die "sub sp,..." können wegoptimiert werden, wenn der Bereich Regs gespeichert am unteren Rand der Stapel verschoben wird. Der Nachteil dieser ist, dass es ist nicht konsistent mit anderer Layouts, die oben genannten, gespeicherten Regs nehmen Sie Teil des Bereichs für das Paar-Regs und vor und nach dem indizierten Offset Adressierung.
 
 1. Nicht verkettete nichtblatt-Funktionen (Int, gespeichert im Bereich wird Lr gespeichert)
 
@@ -131,7 +131,7 @@ Für Funktionen der Frame verkettet kann das fp-Lr-Paar an beliebiger Position i
 
    Alle lokalen erfolgt basierend auf SP. \<R29 entwickelt bei > verweist auf den vorherigen Frame.
 
-1. Verkettet, #framesz < = 512, #outsz = 0
+1. Verkettet, #framesz \<= 512, #outsz = 0
 
     ```asm
         stp    r29, lr, [sp, -#framesz]!    // pre-indexed, save <r29,lr>
@@ -283,40 +283,40 @@ Wenn Ausnahmen garantiert immer nur innerhalb einer Funktion (und nicht mit eine
 
 Gemäß der folgenden Tabelle werden die entladungscodes codiert wird. Alle entladungscodes sind eine einzelne/Doppelbyte, mit Ausnahme der, die einen großen Stapel zuordnet. Es sind völlig 21 entladungscode. Jede Entladung Code Maps genau eine Anweisung in die Prolog-und Epilogcode um für die Entladung teilweise ausgeführter Prologe und Epiloge zu ermöglichen.
 
-Entladungscode|Bits und interpretation
+|Entladungscode|Bits und interpretation|
 |-|-|
-`alloc_s`|000xxxxx: Zuordnen von kleinen Stapel mit Größe < 512 (2 ^ 5 * 16).
-`save_r19r20_x`|    001zzzzz: Speichern \<r19, r20 > an [sp-#Z * 8]!, vorab indizierte Offset > =-248
-`save_fplr`|        01zzzzzz: Speichern \<R29 entwickelt bei, Lr > gekoppelt werden am [sp + #Z * 8], Offset < = 504.
-`save_fplr_x`|        10zzzzzz: Speichern \<R29 entwickelt bei, Lr > gekoppelt werden am [sp-(#Z + 1) * 8]!, vorab indizierte Offset > =-512
-`alloc_m`|        bis jetzt 11000xxx\|Xxxxxxxx: große Stack mit einer Größe von 16 KB < zuordnen (2 ^ 11 * 16).
-`save_regp`|        110010xx\|Xxzzzzzz: Speichern von r(19+#X)-Paar an [sp + #Z * 8], Offset < = 504
-`save_regp_x`|        110011xx\|Xxzzzzzz: Speichern von Paar r(19+#X) am [sp-(#Z + 1) * 8]!, vorab indizierte Offset > =-512
-`save_reg`|        110100xx\|Xxzzzzzz: Speichern Sie die Reg-r(19+#X) am [sp + #Z * 8], Offset < = 504
-`save_reg_x`|        1101010 X\|Xxxzzzzz: Speichern Sie die Reg-r(19+#X) am [sp-(#Z + 1) * 8]!, vorab indizierte Offset > =-256
-`save_lrpair`|         1101011 X\|Xxzzzzzz: Speichern von Paar \<r19 + 2 *#X, Lr > am [sp + #Z*8], Offset < = 504
-`save_fregp`|        1101100 X\|Xxzzzzzz: Speichern von Paar d(8+#X) am [sp + #Z * 8], Offset < = 504
-`save_fregp_x`|        1101101 X\|Xxzzzzzz: Speichern Sie Paar d(8+#X), [sp-(#Z + 1) * 8]!, vorab indizierte Offset > =-512
-`save_freg`|        1101110 X\|Xxzzzzzz: Speichern Sie die Reg-d(8+#X) am [sp + #Z * 8], Offset < = 504
-`save_freg_x`|        11011110\|Xxxzzzzz: Speichern Sie die Reg-d(8+#X) am [sp-(#Z + 1) * 8]!, vorab indizierte Offset > =-256
-`alloc_l`|         11100000\|Xxxxxxxx\|Xxxxxxxx\|Xxxxxxxx: große Stack mit einer Größe von 256 M < zuordnen (2 ^ 24 * 16)
-`set_fp`|        11100001: Richten Sie R29 entwickelt bei: mit: R29 entwickelt bei Mov, sp
-`add_fp`|        11100010\|Xxxxxxxx: R29 entwickelt bei mit einrichten: Hinzufügen von R29 entwickelt bei, sp, #x * 8
-`nop`|            11100011: keine Entladung Vorgang erforderlich ist.
-`end`|            11100100: Ende der entladungscodes. Impliziert ret im Epilog.
-`end_c`|        11100101: Ende entladungscode im aktuellen verketteten Bereich.
-`save_next`|        11100110: Speichern des nächsten nicht flüchtigen Int oder FP registrieren Paar.
-`arithmetic(add)`|    11100111\| 000zxxxx: Lr Cookie reg(z) hinzugefügt (0 = X28, 1 = sp); Hinzufügen von Lr, Lr, reg(z)
-`arithmetic(sub)`|    11100111\| 001zxxxx: sub-Cookie reg(z) von Lr (0 = X28, 1 = sp); sub-Lr "," Lr "," reg(z)
-`arithmetic(eor)`|    11100111\| 010zxxxx: Eor Lr mit Cookie reg(z) (0 = X28, 1 = sp); Eor Lr, Lr, reg(z)
-`arithmetic(rol)`|    11100111\| 0110xxxx: simulierten Rol von Lr mit Cookie Reg (x28); xip0 = Neg X28; Ror Lr, xip0
-`arithmetic(ror)`|    11100111\| 100zxxxx: Ror Lr mit Cookie reg(z) (0 = X28, 1 = sp); Ror Lr, Lr, reg(z)
-||            11100111: Xxxz---: – reserviert
-||              11101xxx: reserviert für benutzerdefinierte Stack folgenden Anwendungsfälle generiert nur für Asm-Routinen
-||              11101001: benutzerdefinierte Stack für MSFT_OP_TRAP_FRAME
-||              11101010: benutzerdefinierte Stack für MSFT_OP_MACHINE_FRAME
-||              11101011: benutzerdefinierte Stack für MSFT_OP_CONTEXT
-||              1111xxxx: reservierte
+|`alloc_s`|000xxxxx: Zuordnen von kleinen Stapel mit einer Größe \< 512 (2 ^ 5 * 16).|
+|`save_r19r20_x`|    001zzzzz: Speichern \<r19, r20 > an [sp-#Z * 8]!, vorab indizierte Offset > =-248 |
+|`save_fplr`|        01zzzzzz: Speichern \<R29 entwickelt bei, Lr > gekoppelt werden am [sp + #Z * 8], Offset \<= 504. |
+|`save_fplr_x`|        10zzzzzz: Speichern \<R29 entwickelt bei, Lr > gekoppelt werden am [sp-(#Z + 1) * 8]!, vorab indizierte Offset > =-512 |
+|`alloc_m`|        bis jetzt 11000xxx'Xxxxxxxx: Zuordnen von besetzen mit einer Größe \< 16 KB (2 ^ 11 * 16). |
+|`save_regp`|        110010xx "Xxzzzzzz: Speichern von r(19+#X)-Paar an [sp + #Z * 8], Offset \<= 504 |
+|`save_regp_x`|        110011xx "Xxzzzzzz: Speichern von Paar r(19+#X) an [sp-(#Z + 1) * 8]!, vorab indizierte Offset > =-512 |
+|`save_reg`|        110100xx "Xxzzzzzz: Speichern Sie die Reg-r(19+#X) am [sp + #Z * 8], Offset \<= 504 |
+|`save_reg_x`|        1101010 X "Xxxzzzzz: Speichern Sie die Reg-r(19+#X) auf [sp-(#Z + 1) * 8]!, vorab indizierte Offset > =-256 |
+|`save_lrpair`|         1101011 X'Xxzzzzzz: Speichern von Paar \<r19 + 2 *#X, Lr > am [sp + #Z*8], Offset \<= 504 |
+|`save_fregp`|        1101100 X'Xxzzzzzz: Speichern von Paar d(8+#X) am [sp + #Z * 8], Offset \<= 504 |
+|`save_fregp_x`|        1101101 X'Xxzzzzzz: Speichern Sie Paar d(8+#X), [sp-(#Z + 1) * 8]!, vorab indizierte Offset > =-512 |
+|`save_freg`|        1101110 X'Xxzzzzzz: Speichern Sie die Reg-d(8+#X) am [sp + #Z * 8], Offset \<= 504 |
+|`save_freg_x`|        11011110' Xxxzzzzz: Speichern Sie die Reg-d(8+#X) auf [sp-(#Z + 1) * 8]!, vorab indizierte Offset > =-256 |
+|`alloc_l`|         11100000' Xxxxxxxx 'Xxxxxxxx' Xxxxxxxx: Zuordnen von besetzen mit einer Größe \< 256 MB (2 ^ 24 * 16) |
+|`set_fp`|        11100001: Richten Sie R29 entwickelt bei: mit: R29 entwickelt bei Mov, sp |
+|`add_fp`|        11100010' Xxxxxxxx: R29 entwickelt bei mit einrichten: Hinzufügen von R29 entwickelt bei, sp, #x * 8 |
+|`nop`|            11100011: keine Entladung Vorgang erforderlich ist. |
+|`end`|            11100100: Ende der entladungscodes. Impliziert ret im Epilog. |
+|`end_c`|        11100101: Ende entladungscode im aktuellen verketteten Bereich. |
+|`save_next`|        11100110: Speichern des nächsten nicht flüchtigen Int oder FP registrieren Paar. |
+|`arithmetic(add)`|    11100111' 000zxxxx: Lr Cookie reg(z) hinzugefügt (0 = X28, 1 = sp); Hinzufügen von Lr, Lr, reg(z) |
+|`arithmetic(sub)`|    11100111' 001zxxxx: sub-Cookie reg(z) von Lr (0 = X28, 1 = sp); Sub-Lr "," Lr "," reg(z) |
+|`arithmetic(eor)`|    11100111' 010zxxxx: Eor Lr mit Cookie reg(z) (0 = X28, 1 = sp); Eor Lr, Lr, reg(z) |
+|`arithmetic(rol)`|    11100111' 0110xxxx: simulierten Rol von Lr mit Cookie Reg (x28); xip0 = Neg X28; Ror Lr, xip0 |
+|`arithmetic(ror)`|    11100111' 100zxxxx: Ror Lr mit Cookie reg(z) (0 = X28, 1 = sp); Ror Lr, Lr, reg(z) |
+| |            11100111: Xxxz---: – reserviert |
+| |              11101xxx: reserviert für benutzerdefinierte Stack folgenden Anwendungsfälle generiert nur für Asm-Routinen |
+| |              11101001: benutzerdefinierte Stack für MSFT_OP_TRAP_FRAME |
+| |              11101010: benutzerdefinierte Stack für MSFT_OP_MACHINE_FRAME |
+| |              11101011: benutzerdefinierte Stack für MSFT_OP_CONTEXT |
+| |              1111xxxx: reservierte |
 
 In Anweisungen mit großen Werten umfassen mehrere Bytes werden die höchstwertigen Bits zuerst gespeichert werden. Die oben genannten entladungscodes sind so entworfen, dass durch das erste Byte des Codes einfach überprüfen, kennen die Gesamtgröße in Bytes des entladungscodes möglich ist. Angesichts der Tatsache, dass jede entladungscode genau eine Anweisung in Prolog-und Epilogcode zugeordnet ist, um die Größe der Prolog oder Epilog berechnen muss erfolgen lediglich, ab dem Anfang der Sequenz durchlaufen, bis zum Ende, eine Nachschlagetabelle oder ähnliches Gerät verwenden, um zu bestimmen, wie lange der cor reagiert Opcode ist.
 
@@ -382,7 +382,7 @@ Schritt #|Flagwerte|Anzahl von Anweisungen|Opcode|Entladungscode
 5D|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz < = 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
 5e|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
-\*: Bei **CR** == 01 und **RegI** eine ungerade Zahl ist, Schritt2 und letzten Save_rep in Schritt 1 in einem Save_regp zusammengeführt werden.
+\* Wenn **CR** == 01 und **RegI** eine ungerade Zahl ist, Schritt2 und letzten Save_rep in Schritt 1 in einem Save_regp zusammengeführt werden.
 
 \*\* Wenn **RegI** == **CR** == 0 (null) und **RegF** ! = 0 ist, das erste stp aus, für die Gleitkommazahlen der prädekrement ist.
 

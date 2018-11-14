@@ -25,12 +25,12 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-ms.openlocfilehash: 1309d99d8e7040626384e38324c1e910e4731295
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90327ed3388d4f18e0f64f92c33112c9ddd800f5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523808"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327043"
 ---
 # <a name="locking"></a>_locking
 
@@ -63,10 +63,10 @@ Die Anzahl der zu sperrenden Bytes.
 
 |errno-Wert|Bedingung|
 |-|-|
-**EACCES**|Sperrverletzung (Datei bereits gesperrt oder entsperrt).
-**EBADF**|Ungültiger Dateideskriptor.
-**EDEADLOCK**|Sperrverletzung. Zurückgegeben wird, wenn die **_LK_LOCK** oder **_LK_RLCK** Flag angegeben wird und die Datei kann nicht nach 10 Versuchen nicht gesperrt werden.
-**EINVAL**|Ein ungültiges Argument wurde übergeben, um **_locking**.
+| **EACCES** | Sperrverletzung (Datei bereits gesperrt oder entsperrt). |
+| **EBADF** | Ungültiger Dateideskriptor. |
+| **EDEADLOCK** | Sperrverletzung. Zurückgegeben wird, wenn die **_LK_LOCK** oder **_LK_RLCK** Flag angegeben wird und die Datei kann nicht nach 10 Versuchen nicht gesperrt werden. |
+| **EINVAL** | Ein ungültiges Argument wurde übergeben, um **_locking**. |
 
 Wenn der Fehler aufgrund eines ungültigen Parameters entstanden ist, wie z.B. ein ungültiger Dateideskriptor, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.
 
@@ -78,11 +78,11 @@ Der *Modus* muss eine der folgenden Manifestkonstanten sein, die in „Locking.h
 
 |*Modus* Wert|Effekt|
 |-|-|
-**_LK_LOCK**|Sperrt die angegebenen Bytes. Wenn die Bytes nicht gesperrt werden können, führt das Programm nach 1 Sekunde sofort einen neuen Versuch durch. Wenn nach 10 Versuchen die Bytes nicht gesperrt werden können, gibt die Konstante einen Fehler zurück.
-**_LK_NBLCK**|Sperrt die angegebenen Bytes. Wenn die Bytes nicht gesperrt werden können, gibt die Konstante einen Fehler zurück.
-**_LK_NBRLCK**|Identisch mit **_LK_NBLCK**.
-**_LK_RLCK**|Identisch mit **_LK_LOCK**.
-**_LK_UNLCK**|Entsperrt die angegebenen Bytes, die zuvor gesperrt sein mussten.
+| **_LK_LOCK** | Sperrt die angegebenen Bytes. Wenn die Bytes nicht gesperrt werden können, führt das Programm nach 1 Sekunde sofort einen neuen Versuch durch. Wenn nach 10 Versuchen die Bytes nicht gesperrt werden können, gibt die Konstante einen Fehler zurück. |
+| **_LK_NBLCK** | Sperrt die angegebenen Bytes. Wenn die Bytes nicht gesperrt werden können, gibt die Konstante einen Fehler zurück. |
+| **_LK_NBRLCK** | Identisch mit **_LK_NBLCK**. |
+| **_LK_RLCK** | Identisch mit **_LK_LOCK**. |
+| **_LK_UNLCK** | Entsperrt die angegebenen Bytes, die zuvor gesperrt sein mussten. |
 
 Mehrere Bereiche einer Datei, die sich nicht überschneiden, können gesperrt werden. Ein Bereich, der entsperrt wird, muss zuvor gesperrt worden sein. **_Locking** werden benachbarte Bereiche nicht zusammen, wenn zwei gesperrte Bereiche aneinandergrenzen, jeder Region muss separat entsperrt werden. Bereichen sollten nur über einen kurzen Zeitraum gesperrt sein und sollten entsperrt werden, bevor eine Datei geschlossen oder das Programm beendet wird.
 

@@ -106,12 +106,12 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-ms.openlocfilehash: 316012479ec374cc5f40061384475008fe04e331
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9272cd4596a54a38e1ba21ac92b038c2da0d207
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637280"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331203"
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 
@@ -228,17 +228,17 @@ Die **_stat** Struktur, die in SYS\STAT definiert. H, enthält die folgenden Fel
 
 |Feld||
 |-|-|
-**st_gid**|Numerischer Bezeichner der Gruppe, die die Datei besitzt (UNIX-spezifisch). Dieses Feld weist auf Windows-Systemen immer den Wert „0“ (null) auf. Eine umgeleitete Datei wird als Windows-Datei klassifiziert.
-**st_atime**|Zeitpunkt des letzten Zugriffs auf die Datei. Gültig auf NTFS-, aber nicht auf FAT-formatierten Laufwerken.
-**st_ctime**|Uhrzeit der Dateierstellung. Gültig auf NTFS-, aber nicht auf FAT-formatierten Laufwerken.
-**st_dev**|Laufwerksnummer des Datenträgers, das Dateien enthält (wie **St_rdev**).
-**st_ino**|Anzahl der Informationsknoten (der **Inode**) für die Datei (UNIX-spezifisch). Bei UNIX-Dateisystemen die **Inode** wird beschrieben, die Datum und Zeitstempel, Berechtigungen und Inhalt. Wenn Dateien schwer-miteinander verknüpft sind, verwenden sie dieselbe **Inode**. Die **Inode**, weshalb **St_ino**, in der FAT, HPFS oder NTFS-Dateisysteme keine Bedeutung hat.
-**st_mode**|Bitmaske für Dateimodusinformationen. Die **_S_IFDIR** Bit ist gesetzt, wenn *Pfad* gibt ein Verzeichnis an, die **_S_IFREG** Bit ist gesetzt, wenn *Pfad* gibt eine normale Datei oder ein Gerät. Lese-/Schreibbits für Benutzer werden entsprechend dem Berechtigungsmodus der Datei festgelegt; Ausführungsbits für Benutzer werden entsprechend der Dateierweiterung festgelegt.
-**st_mtime**|Uhrzeit der letzten Änderung der Datei.
-**st_nlink**|Bei Nicht-NTFS-Dateisystemen immer „1“.
-**st_rdev**|Laufwerksnummer des Datenträgers, das Dateien enthält (wie **St_dev**).
-**st_size**|Die Größe der Datei in Byte; eine 64-Bit ganze Zahl für Varianten mit dem **i64** Suffix.
-**st_uid**|Numerischer Bezeichner des Benutzers, der die Datei besitzt (UNIX-spezifisch). Dieses Feld hat bei Windows-Systemen immer den Wert „0“. Eine umgeleitete Datei wird als Windows-Datei klassifiziert.
+| **st_gid** | Numerischer Bezeichner der Gruppe, die die Datei besitzt (UNIX-spezifisch). Dieses Feld weist auf Windows-Systemen immer den Wert „0“ (null) auf. Eine umgeleitete Datei wird als Windows-Datei klassifiziert. |
+| **st_atime** | Zeitpunkt des letzten Zugriffs auf die Datei. Gültig auf NTFS-, aber nicht auf FAT-formatierten Laufwerken. |
+| **st_ctime** | Uhrzeit der Dateierstellung. Gültig auf NTFS-, aber nicht auf FAT-formatierten Laufwerken. |
+| **st_dev** | Laufwerksnummer des Datenträgers, das Dateien enthält (wie **St_rdev**). |
+| **st_ino** | Anzahl der Informationsknoten (der **Inode**) für die Datei (UNIX-spezifisch). Bei UNIX-Dateisystemen die **Inode** wird beschrieben, die Datum und Zeitstempel, Berechtigungen und Inhalt. Wenn Dateien schwer-miteinander verknüpft sind, verwenden sie dieselbe **Inode**. Die **Inode**, weshalb **St_ino**, in der FAT, HPFS oder NTFS-Dateisysteme keine Bedeutung hat. |
+| **st_mode** | Bitmaske für Dateimodusinformationen. Die **_S_IFDIR** Bit ist gesetzt, wenn *Pfad* gibt ein Verzeichnis an, die **_S_IFREG** Bit ist gesetzt, wenn *Pfad* gibt eine normale Datei oder ein Gerät. Lese-/Schreibbits für Benutzer werden entsprechend dem Berechtigungsmodus der Datei festgelegt; Ausführungsbits für Benutzer werden entsprechend der Dateierweiterung festgelegt. |
+| **st_mtime** | Uhrzeit der letzten Änderung der Datei. |
+| **st_nlink** | Bei Nicht-NTFS-Dateisystemen immer „1“. |
+| **st_rdev** | Laufwerksnummer des Datenträgers, das Dateien enthält (wie **St_dev**). |
+| **st_size** | Die Größe der Datei in Byte; eine 64-Bit ganze Zahl für Varianten mit dem **i64** Suffix. |
+| **st_uid** | Numerischer Bezeichner des Benutzers, der die Datei besitzt (UNIX-spezifisch). Dieses Feld hat bei Windows-Systemen immer den Wert „0“. Eine umgeleitete Datei wird als Windows-Datei klassifiziert. |
 
 Wenn *Pfad* bezieht sich auf einem Gerät der **St_size**, verschiedenen Zeitfelder, **St_dev**, und **St_rdev** Felder in der **_stat**  Struktur sind bedeutungslos. Da „STAT.H“ den [_dev_t](../../c-runtime-library/standard-types.md) -Typ verwendet, der in „TYPES.H“ definiert ist, müssen Sie „TYPES.H“ vor „STAT.H“ in Ihrem Code einschließen.
 

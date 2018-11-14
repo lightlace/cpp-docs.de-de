@@ -108,12 +108,12 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-ms.openlocfilehash: 3c9b1081a7e2ccd45c64c1cbcd833dcda9470f7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8911c3763e6a0c861c162611e1b2617ec26f0cf9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648668"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333350"
 ---
 # <a name="iosbase-class"></a>ios_base-Klasse
 
@@ -914,7 +914,7 @@ Die vorherigen Formatflags
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Memberfunktion ruft effektiv [Flags](#flags)(_ *Maske* &#124; \_ *Flags*) (ausgewählte Bits festgelegt) und gibt dann die vorherigen Formatflags zurück. Die zweite Memberfunktion ruft effektiv **Flags**(\_ *Maske* **& Fmtfl, Flags & ~**`_Mask`) (ersetzen Sie ausgewählte Bits in eine Mask) und dann gibt die vorherige Formatflags.
+Die erste Memberfunktion ruft effektiv [Flags](#flags)(  *\_Maske* &#124;  *\_Flags*) (ausgewählte Bits festgelegt) und gibt anschließend die Vorherige Formatflags. Die zweite Memberfunktion ruft effektiv `flags(_Mask & fmtfl, flags & ~_Mask)` (ersetzen Sie ausgewählte Bits in eine Mask) und gibt dann die vorherigen Formatflags zurück.
 
 ### <a name="example"></a>Beispiel
 

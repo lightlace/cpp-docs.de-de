@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::priority_queue [C++], size
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
-ms.openlocfilehash: 1b276f427fc127fb04f4f8e09f0278033ef64754
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8f2b4ab788c82e531d1121f04dd0d422efb17cd
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677174"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333214"
 ---
 # <a name="priorityqueue-class"></a>priority_queue-Klasse
 
@@ -224,9 +224,9 @@ Erstellt eine Warteschlange mit hoher Priorität, die leer ist oder eine Kopie e
 ```cpp
 priority_queue();
 
-explicit priority_queue(const Traits&_comp);
+explicit priority_queue(const Traits& _comp);
 
-priority_queue(const Traits&_comp, const container_type& _Cont);
+priority_queue(const Traits& _comp, const container_type& _Cont);
 
 priority_queue(const priority_queue& right);
 
@@ -234,15 +234,15 @@ template <class InputIterator>
 priority_queue(InputIterator first, InputIterator last);
 
 template <class InputIterator>
-priority_queue(InputIterator first, InputIterator last, const Traits&_comp);
+priority_queue(InputIterator first, InputIterator last, const Traits& _comp);
 
 template <class InputIterator>
-priority_queue(InputIterator first, InputIterator last, const Traits&_comp, const container_type& _Cont);
+priority_queue(InputIterator first, InputIterator last, const Traits& _comp, const container_type& _Cont);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*_ comp*<br/>
+*_comp*<br/>
 Die Vergleichsfunktion des Typs **constTraits** wird verwendet, um Elemente in der priority_queue zu sortieren, deren Standard die Vergleichsfunktion des Basiscontainer ist.
 
 *_Cont*<br/>
@@ -263,7 +263,7 @@ Jeder der ersten drei Konstruktoren gibt eine leere anfängliche Warteschlange m
 
 Der vierte Konstruktor gibt eine Kopie der Priority_queue *rechten*.
 
-Die letzten drei Konstruktoren kopieren den Bereich [* erste, letzte *) von einem Container und verwenden Sie die Werte zum Initialisieren einer Warteschlange mit hoher mit steigender Explizitheit bei Angabe des Typs der Vergleichsfunktion der Klasse **"traits"** und `container_type`.
+Die letzten drei Konstruktoren kopieren den Bereich \[ *erste*, *letzten*) von einem Container und verwenden Sie die Werte zum Initialisieren einer Warteschlange mit hoher mit steigender Explizitheit bei Angabe des Typs der Vergleichsfunktion der Klasse `Traits` und `container_type`.
 
 ### <a name="example"></a>Beispiel
 

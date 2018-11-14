@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: ae1b444d424693a2372389fb27fcec90133b3a7d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 14018a1bf3265642f8ab06af51eea51eb1125dc8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662851"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333536"
 ---
 # <a name="cbutton-class"></a>CButton-Klasse
 
@@ -153,13 +153,13 @@ Wenn Sie Windows gesendete benachrichtigungsmeldungen von einem Schaltflächen-S
 
 Jede Nachricht-Zuordnungseintrag weist folgende Form:
 
-**ON_** Benachrichtigung **(**`id`, `memberFxn` **)**
+**ON\_**_Benachrichtigung_ **(** _Id_, _MemberFxn_ **)**
 
-wo `id` gibt die untergeordneten Fenster-ID des Steuerelements, das Senden der Benachrichtigung und `memberFxn` ist der Name der übergeordneten Member-Funktion, die Sie geschrieben haben, um die Benachrichtigung zu verarbeiten.
+wo *Id* gibt die untergeordneten Fenster-ID des Steuerelements, das Senden der Benachrichtigung und *MemberFxn* ist der Name der übergeordneten Member-Funktion, die Sie geschrieben haben, um die Benachrichtigung zu verarbeiten.
 
 Funktionsprototyp des übergeordneten Elements lautet wie folgt aus:
 
-**Afx_msg** `void` `memberFxn` **();**
+`afx_msg void memberFxn();`
 
 Potenzielle Meldungszuordnungseinträge lauten wie folgt aus:
 

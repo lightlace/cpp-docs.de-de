@@ -23,12 +23,12 @@ helpviewer_keywords:
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-ms.openlocfilehash: 33fd1cc0a618fccc4a59e5aff059d3f2cdeec8fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6312297e6daa9b4790674bd26d21812d5bee34c6
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661759"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330254"
 ---
 # <a name="tzset"></a>_tzset
 
@@ -51,11 +51,11 @@ Die **_tzset** -Funktion verwendet die aktuelle Einstellung der Umgebungsvariabl
 
 |Parameter|Beschreibung|
 |-|-|
-*tzn*|Dreibuchstabiger Zeitzonenname, z. B. PST. Sie müssen die richtige Verschiebung (Offset) von der Ortszeit zur UTC angeben.
-*hh*|Unterschied in Stunden zwischen UTC und Ortszeit. Das Pluszeichen (+) ist für positive Werte optional.
-*mm*|Minuten. Von getrennt *Hh* durch einen Doppelpunkt (**:**).
-*ss*|Sekunden. Von getrennt *mm* durch einen Doppelpunkt (**:**).
-*dzn*|Dreibuchstabige Sommerzeitzone, z. B. PDT. Wenn Sommerzeit nie aktiviert am Ort ist, legen Sie **TZ** ohne einen Wert für *Dzn*. Die C-Laufzeitbibliothek wendet die Regeln der Vereinigten Staaten an, um die Berechnung der Sommerzeit (DST, Daylight Saving Time) zu implementieren.
+| *tzn* | Dreibuchstabiger Zeitzonenname, z. B. PST. Sie müssen die richtige Verschiebung (Offset) von der Ortszeit zur UTC angeben. |
+| *hh* | Unterschied in Stunden zwischen UTC und Ortszeit. Das Pluszeichen (+) ist für positive Werte optional. |
+| *mm* | Minuten. Von getrennt *Hh* durch einen Doppelpunkt (**:**). |
+| *ss* | Sekunden. Von getrennt *mm* durch einen Doppelpunkt (**:**). |
+| *dzn* | Dreibuchstabige Sommerzeitzone, z. B. PDT. Wenn Sommerzeit nie aktiviert am Ort ist, legen Sie **TZ** ohne einen Wert für *Dzn*. Die C-Laufzeitbibliothek wendet die Regeln der Vereinigten Staaten an, um die Berechnung der Sommerzeit (DST, Daylight Saving Time) zu implementieren. |
 
 > [!NOTE]
 > Seien Sie vorsichtig, wenn Sie das Zeichen des Zeitunterschieds berechnen. Da der Zeitunterschied die Verschiebung von der Ortszeit zu UTC (anstatt umgekehrt) ist, ist das dazugehörige Zeichen gegenüber dem erwarteten möglicherweise das entgegengesetzte. Für Zeitzonen vor UTC ist der Zeitunterschied negativ; für Zeitzonen hinter UTC ist der Unterschied positiv.
