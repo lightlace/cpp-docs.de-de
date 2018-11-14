@@ -5,12 +5,12 @@ helpviewer_keywords:
 - walkthroughs [Concurrency Runtime]
 - Concurrency Runtime, walkthroughs
 ms.assetid: 7374c5e9-54eb-44bf-9ed9-5e190cfd290b
-ms.openlocfilehash: f26ff3ba35539b24e4c670935212069a34b942a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2307581dc1cda3ed75ee1cea9fc4ff504a0a98b3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511084"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519489"
 ---
 # <a name="concurrency-runtime-walkthroughs"></a>Exemplarische Vorgehensweisen für die Concurrency Runtime
 
@@ -19,7 +19,7 @@ Die szenariobasierte Themen in diesem Abschnitt zeigen, wie viele der Funktionen
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 [Exemplarische Vorgehensweise: Verbinden von Verwendungsaufgaben und XML-HTTP-Anforderungen](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
-Zeigt, wie die [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) und [IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) -Schnittstellen zusammen mit Aufgaben für HTTP-GET und POST-Anforderungen an einen Webdienst in einer app (Universelle Windows Plattform).
+Zeigt, wie die [IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) und [IXMLHTTPRequest2Callback](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) -Schnittstellen zusammen mit Aufgaben für HTTP-GET und POST-Anforderungen an einen Webdienst in einer app (Universelle Windows Plattform).
 
 [Exemplarische Vorgehensweise: Erstellen einer agentbasierten Anwendung](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br/>
 Beschreibt das Erstellen einer einfachen agentbasierten Anwendung.

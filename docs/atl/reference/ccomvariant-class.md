@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CComVariant class
 - VARIANT macro, ATL
 ms.assetid: 4d31149c-d005-44b5-a509-10f84afa2b61
-ms.openlocfilehash: dd53bdea211610b208516860b29c1b0094f5a4da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a6ad49533028dbcb8c45b63c55a51090533137e
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523266"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522485"
 ---
 # <a name="ccomvariant-class"></a>CComVariant-Klasse
 
@@ -98,7 +98,7 @@ HRESULT Attach(VARIANT* pSrc);
 ### <a name="parameters"></a>Parameter
 
 *pSrc*<br/>
-[in] Verweist auf die [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) an das Objekt angefügt werden.
+[in] Verweist auf die [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) an das Objekt angefügt werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -242,7 +242,7 @@ HRESULT Copy(const VARIANT* pSrc);
 ### <a name="parameters"></a>Parameter
 
 *pSrc*<br/>
-[in] Ein Zeiger auf die [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) kopiert werden soll.
+[in] Ein Zeiger auf die [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) kopiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -342,7 +342,7 @@ CComVariant& operator=(char cSrc) throw();
 ### <a name="parameters"></a>Parameter
 
 *varSrc*<br/>
-[in] Die `CComVariant` oder [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) zugewiesen werden die `CComVariant` Objekt. Der Inhalt der Variante Quelle werden an das Ziel ohne Konvertierung kopiert.
+[in] Die `CComVariant` oder [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) zugewiesen werden die `CComVariant` Objekt. Der Inhalt der Variante Quelle werden an das Ziel ohne Konvertierung kopiert.
 
 *bstrSrc*<br/>
 [in] BSTR, zugewiesen werden soll die `CComVariant` Objekt. Der Typ des der `CComVariant` Objekt werden VT_BSTR.
