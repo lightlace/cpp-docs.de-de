@@ -28,12 +28,12 @@ helpviewer_keywords:
 - standard output, writing to
 - putwchar function
 ms.assetid: 93657c7f-cca1-4032-8e3a-cd6ab6193748
-ms.openlocfilehash: 69ae5d7a24d7cf440d1dfb5ad716ee106f91576c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: becee3d79f58ac018d1161c1af36e9a4646640bf
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483349"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327056"
 ---
 # <a name="putchar-putwchar"></a>putchar, putwchar
 
@@ -57,7 +57,7 @@ Zu schreibende Zeichen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das geschriebene Zeichen zurück. Um einen Fehler oder End-of-File-Bedingung anzugeben **Putc** und **Putchar** zurückgeben ** EOF`; **putwc` und **Putwchar** zurückgeben **WEOF**. Verwenden Sie bei allen vier Routinen [ferror](ferror.md) oder [feof](feof.md), um auf einen Fehler oder ein Dateiende zu prüfen. Wenn ein null-Zeiger *Stream*, wie in beschrieben, generieren diese Funktionen eine Ausnahme für ungültige Parameter, wegen [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben sie zurück **EOF** oder **WEOF** und **Errno** zu **EINVAL**.
+Gibt das geschriebene Zeichen zurück. Um einen Fehler oder End-of-File-Bedingung anzugeben **Putc** und **Putchar** zurückgeben **EOF**; **Putwc** und **Putwchar** zurückgeben **WEOF**. Verwenden Sie bei allen vier Routinen [ferror](ferror.md) oder [feof](feof.md), um auf einen Fehler oder ein Dateiende zu prüfen. Wenn ein null-Zeiger *Stream*, wie in beschrieben, generieren diese Funktionen eine Ausnahme für ungültige Parameter, wegen [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben sie zurück **EOF** oder **WEOF** und **Errno** zu **EINVAL**.
 
 Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

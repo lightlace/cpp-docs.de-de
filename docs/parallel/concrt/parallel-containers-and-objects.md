@@ -6,12 +6,12 @@ helpviewer_keywords:
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-ms.openlocfilehash: 0d3d883fa2199096d4dc880e2d8e78cff6d9830c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b406bc194735a2796f03f1e9d6cf0cf2ae2e6f86
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542557"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333285"
 ---
 # <a name="parallel-containers-and-objects"></a>Parallele Container und Objekte
 
@@ -95,15 +95,19 @@ Die folgende Tabelle zeigt die allgemeine `concurrent_vector` Methoden und Opera
 
 ||||
 |-|-|-|
-
-|[am](reference/concurrent-vector-class.md#at)|[End](reference/concurrent-vector-class.md#end)|[Operator&#91;&#93;](reference/concurrent-vector-class.md#operator_at)||[ Begin](reference/concurrent-vector-class.md#begin)|[Front](reference/concurrent-vector-class.md#front)|[Push_back](reference/concurrent-vector-class.md#push_back)||[ wieder](reference/concurrent-vector-class.md#back)|[Grow_by](reference/concurrent-vector-class.md#grow_by)|[Rbegin](reference/concurrent-vector-class.md#rbegin)||[ Kapazität](reference/concurrent-vector-class.md#capacity)|[Grow_to_at_least](reference/concurrent-vector-class.md#grow_to_at_least)|[rend](reference/concurrent-vector-class.md#rend)||[ leere](reference/concurrent-vector-class.md#empty)|[Max_size](reference/concurrent-vector-class.md#max_size)|[Größe](reference/concurrent-vector-class.md#size)|
+|[at](reference/concurrent-vector-class.md#at)|[end](reference/concurrent-vector-class.md#end)|[operator&#91;&#93;](reference/concurrent-vector-class.md#operator_at)|
+|[begin](reference/concurrent-vector-class.md#begin)|[Vorderseite](reference/concurrent-vector-class.md#front)|[push_back](reference/concurrent-vector-class.md#push_back)|
+|[Rückseite](reference/concurrent-vector-class.md#back)|[grow_by](reference/concurrent-vector-class.md#grow_by)|[rbegin](reference/concurrent-vector-class.md#rbegin)|
+|[capacity](reference/concurrent-vector-class.md#capacity)|[grow_to_at_least](reference/concurrent-vector-class.md#grow_to_at_least)|[rend](reference/concurrent-vector-class.md#rend)|
+|[empty](reference/concurrent-vector-class.md#empty)|[max_size](reference/concurrent-vector-class.md#max_size)|[size](reference/concurrent-vector-class.md#size)|
 
 Vorgänge, die die Laufzeit für die Kompatibilität mit der C++-Standardbibliothek, z. B. bereitstellt `reserve`, sind nicht nebenläufigkeitssicher. Die folgende Tabelle zeigt die allgemeinen Methoden und Operatoren, die nicht parallelitätssicher sind.
 
 |||
 |-|-|
-
-|[Weisen Sie](reference/concurrent-vector-class.md#assign)|[reservieren](reference/concurrent-vector-class.md#reserve)||[ Deaktivieren Sie](reference/concurrent-vector-class.md#clear)|[Größe](reference/concurrent-vector-class.md#resize)||[ Operator =](reference/concurrent-vector-class.md#operator_eq)|[Shrink_to_fit](reference/concurrent-vector-class.md#shrink_to_fit)|
+|[assign](reference/concurrent-vector-class.md#assign)|[reserve](reference/concurrent-vector-class.md#reserve)|
+|[clear](reference/concurrent-vector-class.md#clear)|[resize](reference/concurrent-vector-class.md#resize)|
+|[operator=](reference/concurrent-vector-class.md#operator_eq)|[shrink_to_fit](reference/concurrent-vector-class.md#shrink_to_fit)|
 
 Vorgänge, die den Wert von vorhandenen Elementen zu ändern, sind nicht nebenläufigkeitssicher. Verwenden Sie z. B. ein Synchronisierungsobjekt, das eine [Reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) Objekt, das Synchronisieren gleichzeitiger Lese- und Schreibvorgänge mit dem gleichen Data-Element. Weitere Informationen zu Synchronisierungsobjekte, finden Sie unter [Synchronisierungsdatenstrukturen](../../parallel/concrt/synchronization-data-structures.md).
 
