@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: d6a910f53d15e637ead31235380b27fe608a792c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3d4a1a6f4680579adafec7c1fcf5f4372f9918e
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470316"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556711"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor-Klasse
 
@@ -84,7 +84,7 @@ void AddBindEntry(DBORDINAL nOrdinal,
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [DBBINDING](/previous-versions/windows/desktop/ms716845) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
 *nOrdinal*<br/>
 [in] Nummer der Spalte.
@@ -125,7 +125,7 @@ void AddParameterEntry(DBORDINAL nOrdinal,
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [DBBINDING](/previous-versions/windows/desktop/ms716845) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
 *nOrdinal*<br/>
 [in] Parameteranzahl.
@@ -159,8 +159,8 @@ Belegt Speicher für die Spalte binden, Strukturen und der Spaltenelemente für 
 ### <a name="syntax"></a>Syntax
 
 ```cpp
-HRESULT CreateAccessor(int nBindEntries, 
-  void* pBuffer, 
+HRESULT CreateAccessor(int nBindEntries,
+  void* pBuffer,
    DBLENGTH nBufferSize) throw();
 ```
 
@@ -190,8 +190,8 @@ Belegt Speicher für den Parameter binden Strukturen und initialisiert die Daten
 ### <a name="syntax"></a>Syntax
 
 ```cpp
-HRESULT CreateParameterAccessor(int nBindEntries, 
-   void* pBuffer, 
+HRESULT CreateParameterAccessor(int nBindEntries,
+   void* pBuffer,
    DBLENGTH nBufferSize) throw();
 ```
 

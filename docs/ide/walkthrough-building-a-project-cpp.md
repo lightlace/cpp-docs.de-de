@@ -1,27 +1,17 @@
 ---
-title: 'Exemplarische Vorgehensweise: Erstellen eines Projekts (C++) | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Exemplarische Vorgehensweise: Erstellen eines Projekts (C++)'
 ms.date: 09/14/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - building projects [C++]
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3071b779338150816cb1d52d16932ac0e3878538
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: c12cd50dd92e728c88945cd83029f7e5e62816da
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50079316"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524156"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Exemplarische Vorgehensweise: Erstellen eines Projekts (C++)
 
@@ -37,15 +27,15 @@ In dieser exemplarischen Vorgehensweise fügen Sie absichtlich einen Visual C++-
 
 1. Löschen Sie das Semikolon in der letzten Zeile von „Games.cpp“, sodass diese Zeile ungefähr wie die folgende Anweisung aussieht:
 
-    `return 0`
+   `return 0`
 
 1. Wählen Sie auf der Menüleiste **Erstellen** > **Projektmappe erstellen** aus.
 
 1. Eine Meldung im Fenster **Fehlerliste** gibt an, dass bei der Erstellung des Projekts ein Fehler aufgetreten ist. Die Beschreibung sieht in etwa wie die folgende Fehlermeldung aus:
 
-    `error C2143: syntax error: missing ';' before '}'`
+   `error C2143: syntax error: missing ';' before '}'`
 
-  Markieren Sie einen Fehler im Fenster **Fehlerliste**, und drücken Sie die Taste **F1**, um Hilfeinformationen anzuzeigen.
+   Markieren Sie einen Fehler im Fenster **Fehlerliste**, und drücken Sie die Taste **F1**, um Hilfeinformationen anzuzeigen.
 
 1. Fügen Sie das Semikolon wieder am Ende der Zeile mit dem Syntaxfehler ein:
 
@@ -53,7 +43,7 @@ In dieser exemplarischen Vorgehensweise fügen Sie absichtlich einen Visual C++-
 
 1. Wählen Sie auf der Menüleiste **Erstellen** > **Projektmappe erstellen** aus.
 
-  Die im Fenster **Ausgabe** angezeigte Meldung gibt an, dass das Projekt ordnungsgemäß kompiliert wurde.
+   Die im Fenster **Ausgabe** angezeigte Meldung gibt an, dass das Projekt ordnungsgemäß kompiliert wurde.
 
     ```Output
     1>------ Build started: Project: Game, Configuration: Debug Win32 ------

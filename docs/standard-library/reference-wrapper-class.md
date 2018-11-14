@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::reference_wrapper [C++], type
 - std::reference_wrapper [C++], get
 ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
-ms.openlocfilehash: 52e8876e1bd72259154a3be7518d91ba09ec2ffc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: baf38dd637e31f6fabdf869a242f8f18e2812717
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513489"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525235"
 ---
 # <a name="referencewrapper-class"></a>reference_wrapper-Klasse
 
@@ -84,6 +84,7 @@ Die Hilfsfunktionen [std::ref](functional-functions.md#ref) und [std::cref](func
 |-|-|
 |[reference_wrapper::operator Ty&amp;](#op_ty_amp)|Ruft einen Zeiger auf den umschlossenen Verweis ab.|
 |[reference_wrapper::operator()](#op_call)|Ruft den umschlossenen Verweis auf.|
+
 ## <a name="requirements"></a>Anforderungen
 
 **Header:** \<functional>

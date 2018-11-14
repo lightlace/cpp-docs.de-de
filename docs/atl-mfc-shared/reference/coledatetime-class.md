@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 2f63535210110e699daedd39a0b5a5ac25fc53c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9791f1c59bb393f7de64ffb16ccb95e99928b04c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505897"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525339"
 ---
 # <a name="coledatetime-class"></a>COleDateTime-Klasse
 
@@ -104,7 +104,7 @@ class COleDateTime
 
 `COleDateTime` eine Basisklasse keinen.
 
-Es ist eine der möglichen Typen für die [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) -Datentyp der OLE-Automatisierung. Ein `COleDateTime` Wert darstellt, ein absolutes Datum und Uhrzeit-Wert.
+Es ist eine der möglichen Typen für die [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) -Datentyp der OLE-Automatisierung. Ein `COleDateTime` Wert darstellt, ein absolutes Datum und Uhrzeit-Wert.
 
 Die `DATE` Typ wird als Gleitkommawert implementiert. Tage werden aus dem 30. Dezember 1899 wieder, um Mitternacht gemessen. Die folgende Tabelle zeigt einige Daten und die zugehörigen Werte an:
 
@@ -828,7 +828,7 @@ Diese überladenen Zuweisungsoperatoren kopieren Sie den Source-Datum/Uhrzeit-We
 
 - **Operator = (** `dateSrc` **)** den Wert und Status des Operanden werden in diese kopiert `COleDateTime` Objekt.
 
-- **Operator = (** *VarSrc* **)** Wenn die Konvertierung der [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) Wert (oder [COleVariant](../../mfc/reference/colevariant-class.md) Objekt) um einen Datums-/Uhrzeitwert (VT_ Datum) erfolgreich ist, lautet der konvertierte Wert wird in diese kopiert `COleDateTime` -Objekt und seinen Status zu ungültig festgelegt ist. Wenn die Konvertierung nicht erfolgreich ist, wird der Wert dieses Objekts auf Null (am 30. Dezember 1899 Mitternacht) festgelegt und dessen Status als ungültig.
+- **Operator = (** *VarSrc* **)** Wenn die Konvertierung der [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) Wert (oder [COleVariant](../../mfc/reference/colevariant-class.md) Objekt) um einen Datums-/Uhrzeitwert (VT_ Datum) erfolgreich ist, lautet der konvertierte Wert wird in diese kopiert `COleDateTime` -Objekt und seinen Status zu ungültig festgelegt ist. Wenn die Konvertierung nicht erfolgreich ist, wird der Wert dieses Objekts auf Null (am 30. Dezember 1899 Mitternacht) festgelegt und dessen Status als ungültig.
 
 - **Operator = (** `dtSrc` **)** der `DATE` Wert wird in diese kopiert `COleDateTime` -Objekt und seinen Status zu ungültig festgelegt ist.
 
@@ -836,11 +836,11 @@ Diese überladenen Zuweisungsoperatoren kopieren Sie den Source-Datum/Uhrzeit-We
 
 - **Operator = (** *SystimeSrc* **)** der [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Wert konvertiert und in diese kopiert `COleDateTime` Objekt. Wenn die Konvertierung erfolgreich ist, wird der Status des Objekts gültig auf festgelegt. Wenn dies nicht gelingt, sie festgelegt ist, ungültig.
 
-- **Operator = (** `udate` **)** der `UDATE` Wert konvertiert und in diese kopiert `COleDateTime` Objekt. Wenn die Konvertierung erfolgreich ist, wird der Status des Objekts gültig auf festgelegt. Wenn dies nicht gelingt, sie festgelegt ist, ungültig. Ein `UDATE` -Struktur stellt ein "lose" Datum dar. Finden Sie unter der Funktion [VarDateFromUdate](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate) Weitere Details.
+- **Operator = (** `udate` **)** der `UDATE` Wert konvertiert und in diese kopiert `COleDateTime` Objekt. Wenn die Konvertierung erfolgreich ist, wird der Status des Objekts gültig auf festgelegt. Wenn dies nicht gelingt, sie festgelegt ist, ungültig. Ein `UDATE` -Struktur stellt ein "lose" Datum dar. Finden Sie unter der Funktion [VarDateFromUdate](/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate) Weitere Details.
 
 - **Operator = (** `filetimeSrc` **)** der [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) Wert konvertiert und in diese kopiert `COleDateTime` Objekt. Wenn die Konvertierung erfolgreich ist, wird der Status des Objekts gültig auf festgelegt. andernfalls als ungültig. `FILETIME` Koordinierte Weltzeit (UTC) verwendet, wenn Sie eine UTC-Zeit in der Struktur übergeben, die Ergebnisse von UTC-Zeit in die Ortszeit konvertiert und als variant-Zeit gespeichert werden. Dieses Verhalten ist der gleiche wie in Visual C++ 6.0 und Visual C++ .NET 2003 Service Pack 2. Finden Sie unter [Dateizeitangaben](/windows/desktop/SysInfo/file-times) im Windows SDK für Weitere Informationen.
 
-Weitere Informationen finden Sie unter den [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) Eintrag in das Windows SDK.
+Weitere Informationen finden Sie unter den [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) Eintrag in das Windows SDK.
 
 Weitere Informationen zu den `time_t` -Datentyp, finden Sie die [Zeit](../../c-runtime-library/reference/time-time32-time64.md) Funktion in der *Run-Time Library Reference*.
 
@@ -1083,7 +1083,7 @@ Finden Sie in der folgenden Tabelle für die Grenzen für die Parameterwerte:
 |*nmin.*|0 - 59|
 |*nSec*|0 - 59|
 
-Wenn der Tag des Monats überläuft, wird eine Konvertierung in den richtigen Tag des nächsten Monats und den Monat bzw. Jahr entsprechend erhöht wird. Ein Wert für den Tag 0 (null) gibt an, den letzten Tag des vorherigen Monats. Das Verhalten ist identisch mit [SystemTimeToVariantTime](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-systemtimetovarianttime).
+Wenn der Tag des Monats überläuft, wird eine Konvertierung in den richtigen Tag des nächsten Monats und den Monat bzw. Jahr entsprechend erhöht wird. Ein Wert für den Tag 0 (null) gibt an, den letzten Tag des vorherigen Monats. Das Verhalten ist identisch mit [SystemTimeToVariantTime](/windows/desktop/api/oleauto/nf-oleauto-systemtimetovarianttime).
 
 Wenn der von den Parametern angegebenen Datum oder Uhrzeit-Wert ist nicht gültig ist, wird der Status des Objekts ungültig und der Wert dieses Objekts festgelegt ist, wird nicht geändert.
 

@@ -1,27 +1,17 @@
 ---
-title: Erstellen einer COM-Schnittstelle (Visual C++) | Microsoft-Dokumentation
-ms.custom: ''
+title: Erstellen einer COM-Schnittstelle (Visual C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.com.creating.interfaces
-dev_langs:
-- C++
 helpviewer_keywords:
 - COM interfaces, creating
 ms.assetid: 1be84d3c-6886-4d1e-8493-56c4d38a96d4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e573e65e1b9f3638aaa2f1b25c36d6c959f194d8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2d76dac150f86078e67374eec2e5e2e0f8b9f5e3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390092"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523495"
 ---
 # <a name="creating-a-com-interface-visual-c"></a>Erstellen einer COM-Schnittstelle (Visual C++)
 
@@ -63,7 +53,6 @@ Darüber hinaus können Sie neue Schnittstellen in Ihrem COM-Steuerelement imple
 ```
 interface IMyInterface {
 };
-
 ```
 
 Weitere Informationen finden Sie unter [Implementing an Interface (Implementieren einer Schnittstelle)](../ide/implementing-an-interface-visual-cpp.md) und [Adding Objects and Controls to an ATL Project (Hinzufügen von Objekten und Steuerelementen zu einem ATL-Projekt)](../atl/reference/adding-objects-and-controls-to-an-atl-project.md).

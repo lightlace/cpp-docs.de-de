@@ -2,12 +2,12 @@
 title: 1.2. Begriffsdefinition
 ms.date: 11/04/2016
 ms.assetid: fcaa8eb8-bbbf-4a24-ad0e-e299c442db79
-ms.openlocfilehash: ac117a03f784e617e5db246f4bda28e350d2e7a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cd8bcc47a7fc9d1d0683c220ccd5ef1edac2b4e9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597209"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326029"
 ---
 # <a name="12-definition-of-terms"></a>1.2. Begriffsdefinition
 
@@ -63,7 +63,7 @@ Die folgenden Begriffe werden in diesem Dokument verwendet:
 
 - vor einem strukturierten block
 
-   Ein strukturierter Block ist eine Anweisung aus (einzelne oder zusammengesetzte), die einen einzelnen Eintrag, und eine einzelne beenden. Keine Anweisung ist einem strukturierten Block bei ein Sprung in oder aus dieser Anweisung (einschließlich einen Aufruf von **Longjmp**(3 C) oder die Verwendung der **auslösen**, aber ein Aufruf von **beenden** ist zulässig). Eine verbundanweisung ist einem strukturierten Block aus, wenn die Ausführung immer an das öffnende beginnt **{** und immer endet mit dem schließenden **}**. Eine Ausdrucksanweisung, auswahlanweisung, iterationsanweisung oder **versuchen** Block ist einem strukturierten Block auf, wenn die entsprechende verbundanweisung erworben haben, schließen Sie ihn in **{** und **}** ein strukturierter Block wäre. Eine Jump-Anweisung, die Anweisung mit Bezeichnung oder die deklarationsanweisung ist keinem strukturierten Block.
+   Ein strukturierter Block ist eine Anweisung aus (einzelne oder zusammengesetzte), die einen einzelnen Eintrag, und eine einzelne beenden. Keine Anweisung ist einem strukturierten Block bei ein Sprung in oder aus dieser Anweisung (einschließlich einen Aufruf von **Longjmp**(3 C) oder die Verwendung der **auslösen**, aber ein Aufruf von **beenden** ist zulässig). Eine verbundanweisung ist einem strukturierten Block aus, wenn die Ausführung immer an das öffnende beginnt **{** und immer endet mit dem schließenden **}**. Eine Ausdrucksanweisung, auswahlanweisung, iterationsanweisung oder **versuchen** Block ist einem strukturierten Block auf, wenn die entsprechende verbundanweisung erworben haben, schließen Sie ihn in **{** und **}**  ein strukturierter Block wäre. Eine Jump-Anweisung, die Anweisung mit Bezeichnung oder die deklarationsanweisung ist keinem strukturierten Block.
 
 - Team
 

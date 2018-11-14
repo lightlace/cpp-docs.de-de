@@ -54,12 +54,12 @@ helpviewer_keywords:
 - command line, reference [ML]
 - /Ta MASM compiler option
 ms.assetid: 712623c6-f77e-47ea-a945-089e57c50b40
-ms.openlocfilehash: 64d56ea5eb29162e65782998e91fc1ff70cbf73b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a452bab03e31436ee5dde476117bce8b73c7571f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430224"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331255"
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>ML- und ML64-Befehlszeilenreferenz
 
@@ -69,9 +69,9 @@ Weitere Informationen zu ml64.exe, finden Sie unter [MASM für X64 (ml64.exe)](.
 
 ## <a name="syntax"></a>Syntax
 
-> ML [[*Optionen*]] *Filename* [[[[*Optionen*]] *Filename*]]
-
-> ML64 [[*Optionen*]] *Filename* [[[[*Optionen*]] *Filename*]]... [[/ link *Linkoptions*]]
+> ML \[ *Optionen*] *Filename* \[ \[ *Optionen*] *Filename*]
+>
+> ML64 \[ *Optionen*] *Filename* \[ \[ *Optionen*] *Filename*]... \[/link *Linkoptions*]
 
 ### <a name="parameters"></a>Parameter
 

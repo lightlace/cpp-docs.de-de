@@ -25,7 +25,6 @@ f1_keywords:
 - async/Microsoft::WRL::AsyncBase::put_Id
 - async/Microsoft::WRL::AsyncBase::PutOnComplete
 - async/Microsoft::WRL::AsyncBase::PutOnProgress
-- async/Microsoft::WRL::AsyncBase::Start
 - async/Microsoft::WRL::AsyncBase::TryTransitionToCompleted
 - async/Microsoft::WRL::AsyncBase::TryTransitionToError
 helpviewer_keywords:
@@ -51,16 +50,15 @@ helpviewer_keywords:
 - Microsoft::WRL::AsyncBase::put_Id method
 - Microsoft::WRL::AsyncBase::PutOnComplete method
 - Microsoft::WRL::AsyncBase::PutOnProgress method
-- Microsoft::WRL::AsyncBase::Start method
 - Microsoft::WRL::AsyncBase::TryTransitionToCompleted method
 - Microsoft::WRL::AsyncBase::TryTransitionToError method
 ms.assetid: 64259b9b-f427-4ffd-a611-e7a2f82362b2
-ms.openlocfilehash: 71839fbea4300560dbf2b9617fe7b8d3864676b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19c4779dbd4d39260d5fe03967e8c0a530a75026
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599667"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556919"
 ---
 # <a name="asyncbase-class"></a>AsyncBase-Klasse
 
@@ -116,7 +114,7 @@ Name                                         | Beschreibung
 [Asyncbase:: Put_id](#put-id)                 | Legt das Handle des asynchronen Vorgangs fest.
 [Asyncbase:: Putoncomplete](#putoncomplete)   | Legt die Adresse des ereignishandlers Abschluss auf den angegebenen Wert fest.
 [Asyncbase:: Putonprogress](#putonprogress)   | Legt die Adresse des ereignishandlers Status mit dem angegebenen Wert fest.
-[Asyncbase:: Start](#start)                   | Beginnt den asynchronen Vorgang an.
+
 
 ### <a name="protected-methods"></a>Geschützte Methoden
 
@@ -130,6 +128,7 @@ Name                                                                         | B
 [Asyncbase:: OnCancel](#oncancel)                                             | Ruft beim Überschreiben in einer abgeleiteten Klasse Bricht einen asynchronen Vorgang ab.
 [Asyncbase:: OnClose](#onclose)                                               | Ruft beim Überschreiben in einer abgeleiteten Klasse schließt einen asynchronen Vorgang.
 [Asyncbase:: OnStart](#onstart)                                               | Ruft beim Überschreiben in einer abgeleiteten Klasse wird einen asynchronen Vorgang gestartet.
+[Asyncbase:: Start](#start)                                                   | Beginnt den asynchronen Vorgang an.
 [Asyncbase:: Trytransitiontocompleted](#trytransitiontocompleted)             | Gibt an, ob der aktuelle asynchrone Vorgang abgeschlossen wurde.
 [Asyncbase:: Trytransitiontoerror](#trytransitiontoerror)                     | Gibt an, ob der angegebene Fehlercode auf den internen Fehlerzustand ändern kann.
 
@@ -504,7 +503,7 @@ S_OK, wenn der Vorgang gestartet oder bereits gestartet. andernfalls E_ILLEGAL_S
 
 ### <a name="remarks"></a>Hinweise
 
-`Start()` ist eine Standardimplementierung der `IAsyncInfo::Start`, und keine Arbeit erledigt. Um einen asynchronen Vorgang tatsächlich zu starten, überschreiben die `OnStart()` rein virtuelle Methode.
+`Start()` ist eine geschützte Methode, die nicht extern sichtbar ist, da asynchrone Vorgänge "Beginn"Hot"" vor der Rückgabe an den Aufrufer.
 
 ## <a name="trytransitiontocompleted"></a>Asyncbase:: Trytransitiontocompleted
 

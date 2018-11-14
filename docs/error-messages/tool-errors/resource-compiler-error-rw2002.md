@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
-ms.openlocfilehash: e703fe27c725c29518a302f51200c405df16032c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4cd922fff691b524ec9d278ac5948992fc096e09
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607908"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523499"
 ---
 # <a name="resource-compiler-error-rw2002"></a>Ressourcencompiler: Fehler RW2002
 
@@ -51,114 +51,114 @@ Fehler beim Analysieren
 
    Ein Steuerzeichen in der **ACCELERATORS** -Anweisung ist ungültig. Das auf das Caretzeichen (**^**) folgende Zeichen muss zwischen A und Z (einschl.) liegen.
 
-9. **Leere Menüs nicht zulässig**
+1. **Leere Menüs nicht zulässig**
 
    Ein **END** Schlüsselwort angezeigt wird, bevor alle Menüelemente, in definiert werden der **Menü** Anweisung. Der Ressourcencompiler lässt sich nicht auf leere Menüs aus. Stellen Sie sicher, Sie verfügen nicht über keine öffnenden Anführungszeichen innerhalb der **Menü** Anweisung.
 
-10. **END erwartet im Dialogfeld "**
+1. **END erwartet im Dialogfeld "**
 
    Die **END** Schlüsselwort muss erfolgen, am Ende einer **Dialogfeld** Anweisung. Stellen Sie sicher, dass es sind keine geöffneten Angebote, die aus der vorherigen Anweisung übrig.
 
-11. **END in Menü erwartet.**
+1. **END in Menü erwartet.**
 
    Das **END** -Schlüsselwort muss am Ende einer **MENU** -Anweisung stehen. Stellen Sie sicher, dass keine öffnenden Anführungszeichen oder nicht übereinstimmende Paare von **BEGIN** - und **END** -Anweisungen vorhanden sind.
 
-12. **Komma in Zugriffstastentabelle erwartet**
+1. **Komma in Zugriffstastentabelle erwartet**
 
    Der Ressourcencompiler erfordert ein Komma zwischen dem Feld `event` und dem Feld *idvalue* in der **ACCELERATORS** -Anweisung.
 
-13. **erwartete steuerelementklassenname**
+1. **erwartete steuerelementklassenname**
 
    Die `class` Feld eine **Steuerelement** -Anweisung in der **Dialogfeld** -Anweisung muss eine der folgenden Typen sein: Schaltfläche, KOMBINATIONSFELD, bearbeiten, LISTBOX, BILDLAUFLEISTE, statischen und oder eine benutzerdefinierte. Stellen Sie sicher, dass die Klasse richtig geschrieben ist.
 
-14. **Name einer Schriftart erwartet**
+1. **Name einer Schriftart erwartet**
 
    Das Feld *typeface* der FONT-Option in der **DIALOG** -Anweisung muss eine ASCII-Zeichenfolge in doppelten Anführungszeichen sein. Dieses Feld gibt den Namen einer Schriftart an.
 
-15. **Erwarteter ID-Wert für "MenuItem"**
+1. **Erwarteter ID-Wert für "MenuItem"**
 
    Die **MENU** -Anweisung muss ein *menuID* -Feld aufweisen, in dem der Name oder die Nummer angegeben ist, der bzw. die die Menüressource identifiziert.
 
-16. **Menüzeichenfolge erwartet**
+1. **Menüzeichenfolge erwartet**
 
    Jede **MENUITEM** - und **POPUP** -Anweisung muss ein *Text* -Feld enthalten. Hierbei handelt es sich um eine Zeichenfolge in doppelten Anführungszeichen, die den Namen des Menüelements oder Popupmenüs angibt. Ein **"MenuItem" TRENNZEICHEN** -Anweisung erfordert keine Zeichenfolge in Anführungszeichen.
 
-17. **numerische Befehls-Wert erwartet**
+1. **numerische Befehls-Wert erwartet**
 
    Der Ressourcencompiler erwartet wurde ein numerisches *Idvalue* -Feld in der **ACCELERATORS** Anweisung. Stellen Sie sicher, dass Sie verwendet haben, eine `#define` Konstante zum Angeben des Werts und dass die Konstante richtig geschrieben ist.
 
-18. **Numerische Konstante erwartet in Zeichenfolgentabelle**
+1. **Numerische Konstante erwartet in Zeichenfolgentabelle**
 
    Eine in einer `#define` -Anweisung definierte numerische Konstante muss direkt auf das **BEGIN** -Schlüsselwort in einer **STRINGTABLE** -Anweisung folgen.
 
-19. **Numerische Punktgröße erwartet**
+1. **Numerische Punktgröße erwartet**
 
    Das Feld *pointsize* der Option FONT in der Anweisung **DIALOG** muss ein ganzzahliger Punktgrößenwert sein.
 
-20. **erwartete numerische Dialog-Konstante**
+1. **erwartete numerische Dialog-Konstante**
 
    Ein **Dialogfeld** -Anweisung erfordert ganzzahlige Werte für die *X, y, Breite*, und *Höhe* Felder. Stellen Sie sicher, dass diese Werte nach enthalten sind die **Dialogfeld** -Schlüsselwort und, dass sie nicht negativ sind.
 
-21. **Erwartete Zeichenfolge in STRINGTABLE**
+1. **Erwartete Zeichenfolge in STRINGTABLE**
 
    Nach jedem *stringid* -Wert in einer **STRINGTABLE** -Anweisung wird eine Zeichenfolge erwartet.
 
-22. **Erwartete Zeichenfolge oder Konstantenzugriffstaste**
+1. **Erwartete Zeichenfolge oder Konstantenzugriffstaste**
 
    Der Ressourcencompiler konnte nicht bestimmen, welche Art von Schlüssel für die Zugriffstaste eingerichtet wurde. Das `event` -Feld in der **ACCELERATORS** -Anweisung ist möglicherweise ungültig.
 
-23. **Zahl erwartet als ID**
+1. **Zahl erwartet als ID**
 
    Erwartet eine Zahl für die `id` einer Steuerelement-Anweisung in der **Dialogfeld** Anweisung. Stellen Sie sicher, dass eine Zahl oder `#define` -Anweisung für die Steuerelement-ID.
 
-24. **Zeichenfolge in Anführungszeichen erwartet in Dialogklasse**
+1. **Zeichenfolge in Anführungszeichen erwartet in Dialogklasse**
 
    Das `class` -Feld der CLASS-Option in der **DIALOG** -Anweisung muss eine ganze Zahl oder eine Zeichenfolge, die in doppelte Anführungszeichen eingeschlossen ist, enthalten.
 
-25. **Zeichenfolge in Anführungszeichen erwartet in Dialogfeldtitel**
+1. **Zeichenfolge in Anführungszeichen erwartet in Dialogfeldtitel**
 
    Das `captiontext` -Feld der CAPTION-Option in der **DIALOG** -Anweisung muss eine ASCII-Zeichenfolge in doppelten Anführungszeichen sein.
 
-26. **Datei wurde nicht gefunden: Dateiname**
+1. **Datei wurde nicht gefunden: Dateiname**
 
    Die in der Befehlszeile des Ressourcencompilers angegebene Datei wurde nicht gefunden. Überprüfen Sie, ob die Datei in ein anderes Verzeichnis verschoben wurde und ob der Dateiname und der Pfad korrekt eingegeben wurden. Für die Verwendung von durchsucht die **INCLUDE** -Umgebungsvariablen oder der Visual Workbench-Einstellung, falls verfügbar.
 
-27. **Schriftartnamen müssen Ordnungszahlen sein.**
+1. **Schriftartnamen müssen Ordnungszahlen sein.**
 
    Die *Pointsize* Feld in die Schriftart-Anweisung muss eine ganze Zahl, nicht um eine Zeichenfolge sein.
 
-28. **Ungültige Zugriffstaste**
+1. **Ungültige Zugriffstaste**
 
    Ein `event` -Feld in der **ACCELERATORS** -Anweisung wurde nicht erkannt oder ist mehr als zwei Zeichen lang.
 
-29. **Ungültiger Zugriffstastentyp (ASCII oder VIRTKEY)**
+1. **Ungültiger Zugriffstastentyp (ASCII oder VIRTKEY)**
 
    Das `type` -Feld der **ACCELERATORS** -Anweisung muss entweder den ASCII- oder den VIRTKEY-Wert enthalten.
 
-30. **ungültige Steuerzeichen**
+1. **ungültige Steuerzeichen**
 
    Ein Steuerzeichen in der **ACCELERATORS** -Anweisung ist ungültig. Ein gültiges Steuerzeichen besteht aus einem Buchstaben (nur) folgt ein Caretzeichen (^).
 
-31. **Ungültiger-Steuerelementtyp**
+1. **Ungültiger-Steuerelementtyp**
 
    Jede Control-Anweisung in einem **Dialogfeld** -Anweisung muss eine der folgenden sein: Kontrollkästchen, COMBOBOX, -Steuerelement, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, Symbol, LISTBOX, LTEXT, PUSHBUTTON, RADIOBUTTON, RTEXT, BILDLAUFLEISTE. Stellen Sie sicher, dass diese Steueranweisungen richtig geschrieben sind.
 
-32. **Ungültiger Typ**
+1. **Ungültiger Typ**
 
    Der Ressourcentyp war nicht zu den Typen, die in der Datei WINDOWS.h definiert.
 
-33. **Textzeichenfolge oder Ordnungszahl im Steuerelement erwartet**
+1. **Textzeichenfolge oder Ordnungszahl im Steuerelement erwartet**
 
    Die *Text* Feld eine **Steuerelement** -Anweisung in der **Dialogfeld** -Anweisung muss entweder eine Textzeichenfolge oder einen Ordnungszahlverweis auf den Typ des Steuerelements sein. Wenn Sie eine Ordnungszahl verwenden, achten Sie darauf, eine `#define` -Anweisung für das Steuerelement zu verwenden.
 
-34. **Nicht übereinstimmende Klammern**
+1. **Nicht übereinstimmende Klammern**
 
    Stellen Sie sicher, dass Sie alle offenen Klammern geschlossen haben, der **Dialogfeld** Anweisung.
 
-35. **Unerwarteter Wert in RCData**
+1. **Unerwarteter Wert in RCData**
 
    Die *raw-data* -Werte in der **RCDATA** -Anweisung müssen ganze Zahlen oder Zeichenfolgen und jeweils durch ein Komma voneinander getrennt sein. Stellen Sie sicher, dass Sie kein Komma oder Anführungszeichen um eine Zeichenfolge vergessen haben.
 
-36. **Menü "Unbekannt" Untertyp**
+1. **Menü "Unbekannt" Untertyp**
 
    Die *Elementdefinition* Feld der **Menü** -Anweisung enthalten nur **"MenuItem"** und **POPUP** Anweisungen.

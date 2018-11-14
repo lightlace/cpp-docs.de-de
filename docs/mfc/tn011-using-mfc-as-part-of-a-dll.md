@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-ms.openlocfilehash: e709404ed6e0ba79159131de1cbff80905e9f216
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1c98056d5a5e2565e57044b1fb551db4f354f34
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517649"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326199"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: Verwenden von MFC als Teil einer DLL
 
@@ -33,7 +33,7 @@ reguläre MFC-DLLs haben mehrere Vorteile:
 
 - Mit regulären MFC-DLLs, die statisch mit MFC verknüpft sind, hängt von die Größe der DLL nur die MFC- und C-Laufzeitroutinen, die verwendet und verknüpft sind.
 
-- In regulären MFC DLL-Dateien, die dynamisch mit MFC verknüpft, können die einsparungen im Arbeitsspeicher verwenden Sie die freigegebene Version von MFC erheblich sein. Allerdings müssen Sie verteilen, die gemeinsam genutzte DLLs, Mfc*\<Version >* DLL- und Msvvcrt*\<Version >*.dll, zusammen mit der DLL.
+- In regulären MFC DLL-Dateien, die dynamisch mit MFC verknüpft, können die einsparungen im Arbeitsspeicher verwenden Sie die freigegebene Version von MFC erheblich sein. Allerdings müssen Sie verteilen, die gemeinsam genutzte DLLs, Mfc\<*Version*> .dll und Msvvcrt\<*Version*> .dll, zusammen mit der DLL.
 
 - Der DLL-Entwurf ist unabhängig von der Implementierung von Klassen. Ihr Design DLL exportiert nur für die APIs werden sollen. Wenn die Implementierung geändert wird, sind reguläre MFC-DLLs daher weiterhin gültig.
 

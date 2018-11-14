@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: a3acc035a1781bd67cfc3b5561eb6dbdef41de72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b820ea3687fd52947eff48e4814ab4173fd95c7
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586324"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519292"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession-Klasse
 
@@ -318,12 +318,12 @@ Zeiger auf eine auf Null endende Zeichenfolge, die den Namen des Benutzers für 
 *pstrPassword*<br/>
 Ein Zeiger auf eine auf Null endende Zeichenfolge, die das Kennwort für die Anmeldung angibt. Wenn beide *PstrPassword* und *PstrUserName* NULL sind, die das anonymen Standard-Kennwort wird den e-Mail-Adresse des Benutzers. Wenn *PstrPassword* ist NULL (oder eine leere Zeichenfolge), aber *PstrUserName* ist nicht NULL ist, wird ein leeres Kennwort verwendet. Die folgende Tabelle beschreibt das Verhalten für die vier möglichen Einstellungen der *PstrUserName* und *PstrPassword*:
 
-|*pstrUserName*|*pstrPassword*|FTP-Server gesendeten Benutzernamen|Kennwort für FTP-Server gesendet wird.|
-|--------------------|--------------------|---------------------------------|---------------------------------|
-|NULL oder ""|NULL oder ""|"Anonym"|Die e-Mail-Adresse des Benutzers|
-|Nicht-NULL-Zeichenfolge|NULL oder ""|*pstrUserName*|" "|
-|NULL|Nicht-NULL-Zeichenfolge|FEHLER|FEHLER||
-|Nicht-NULL-Zeichenfolge|Nicht-NULL-Zeichenfolge|*pstrUserName*|*pstrPassword*|
+| *pstrUserName*  | *pstrPassword*  | FTP-Server gesendeten Benutzernamen | Kennwort für FTP-Server gesendet wird. |
+|-----------------|-----------------|-----------------------------|-----------------------------|
+|   NULL oder ""   |   NULL oder ""   |         "Anonym"         |      Die e-Mail-Adresse des Benutzers      |
+| Nicht-NULL-Zeichenfolge |   NULL oder ""   |       *pstrUserName*        |             " "             |
+|      NULL       | Nicht-NULL-Zeichenfolge |            ERROR            |            ERROR            |
+| Nicht-NULL-Zeichenfolge | Nicht-NULL-Zeichenfolge |       *pstrUserName*        |       *pstrPassword*        |
 
 *%nPort*<br/>
 Eine Zahl, die TCP/IP-Port für die Verwendung auf dem Server identifiziert.

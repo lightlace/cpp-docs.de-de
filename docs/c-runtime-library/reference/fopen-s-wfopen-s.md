@@ -33,12 +33,12 @@ helpviewer_keywords:
 - files [C++], opening
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
-ms.openlocfilehash: b5ac5203f2246a7ede31bcbc9a34c4632772a14c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1309f991b8251bde7d614aa274d8d2e9da7a8ed3
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636110"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333345"
 ---
 # <a name="fopens-wfopens"></a>fopen_s, _wfopen_s
 
@@ -131,12 +131,12 @@ Die Zeichenfolge *Modus* gibt die Art des Zugriffs, die wie folgt für die Datei
 
 |*mode*|Zugriff|
 |-|-|
-**"r"**|Öffnet zum Lesen. Wenn die Datei nicht vorhanden ist oder wurde nicht gefunden, die **Fopen_s** -Aufruf fehl.
-**"w"**|Öffnet eine leere Datei zum Schreiben. Wenn die angegebene Datei vorhanden ist, wird ihr Inhalt zerstört.
-**„a“**|Wird vor dem Schreiben neuer Daten in die Datei zum Schreiben am Ende der Datei (Anfügen) geöffnet, ohne die EOF-Markierung (end-of-file, Dateiende) zu entfernen. Erstellt die Datei, wenn sie nicht vorhanden ist.
-**„r+“**|Öffnet sowohl zum Lesen als auch zum Schreiben. Die Datei muss vorhanden sein.
-**„w+“**|Öffnet eine leere Datei zum Lesen und Schreiben. Wenn die Datei vorhanden ist, wird ihr Inhalt zerstört.
-**„a+“**|Öffnet sich zum Lesen und Anfügen. Der Anfügevorgang umfasst das Entfernen der EOF-Markierung, bevor neue Daten in die Datei geschrieben werden. Die EOF-Markierung wird nach Abschluss des Schreibvorgangs nicht wiederhergestellt. Erstellt die Datei, wenn sie nicht vorhanden ist.
+| **"r"** | Öffnet zum Lesen. Wenn die Datei nicht vorhanden ist oder wurde nicht gefunden, die **Fopen_s** -Aufruf fehl. |
+| **"w"** | Öffnet eine leere Datei zum Schreiben. Wenn die angegebene Datei vorhanden ist, wird ihr Inhalt zerstört. |
+| **„a“** | Wird vor dem Schreiben neuer Daten in die Datei zum Schreiben am Ende der Datei (Anfügen) geöffnet, ohne die EOF-Markierung (end-of-file, Dateiende) zu entfernen. Erstellt die Datei, wenn sie nicht vorhanden ist. |
+| **„r+“** | Öffnet sowohl zum Lesen als auch zum Schreiben. Die Datei muss vorhanden sein. |
+| **„w+“** | Öffnet eine leere Datei zum Lesen und Schreiben. Wenn die Datei vorhanden ist, wird ihr Inhalt zerstört. |
+| **„a+“** | Öffnet sich zum Lesen und Anfügen. Der Anfügevorgang umfasst das Entfernen der EOF-Markierung, bevor neue Daten in die Datei geschrieben werden. Die EOF-Markierung wird nach Abschluss des Schreibvorgangs nicht wiederhergestellt. Erstellt die Datei, wenn sie nicht vorhanden ist. |
 
 Wenn eine Datei geöffnet wird, mithilfe der **"a"** oder **"a +"** Zugriffstyp am Ende der Datei erfolgen alle Schreibvorgänge. Der Dateizeiger kann mit [Fseek](fseek-fseeki64.md) oder [rewind](rewind.md), er wird jedoch immer verschoben zurück an das Ende der Datei, bevor ein Schreibvorgang durchgeführt wird, damit vorhandene Daten überschrieben werden können.
 
@@ -148,8 +148,8 @@ Zusätzlich zu den obigen Werten können können in die folgenden Zeichen enthal
 
 |*Modus* Modifizierer|Commit-Modus|
 |-|-|
-**t**|Öffnen im Textmodus (übersetzt).
-**b**|Öffnen im binären (unübersetzten) Modus; Übersetzungen von Wagenrücklauf- und Zeilenvorschubzeichen werden unterdrückt.
+| **t** | Öffnen im Textmodus (übersetzt). |
+| **b** | Öffnen im binären (unübersetzten) Modus; Übersetzungen von Wagenrücklauf- und Zeilenvorschubzeichen werden unterdrückt. |
 
 Im (übersetzten) Textmodus wird STRG + Z als EOF Zeichen bei Eingabe interpretiert. In den Dateien geöffnet zum Lesen/Schreiben mit **"a +"**, **Fopen_s** STRG + Z am Ende der Datei überprüft und entfernt, wenn möglich die Markierung. Dies geschieht, da mit [Fseek](fseek-fseeki64.md) und **Ftell** zum Navigieren innerhalb einer Datei, die mit STRG + Z, endet kann dazu führen, dass [Fseek](fseek-fseeki64.md) am Ende der Datei nicht ordnungsgemäß verhält.
 
@@ -161,14 +161,14 @@ Weitere Informationen zur Anwendung von Text- und Binärmodi in Unicode- und Mul
 
 |*Modus* Modifizierer|Verhalten|
 |-|-|
-**c**|Aktivieren Sie das commitflag für den zugeordneten *Filename* , damit der Inhalt des Dateipuffers direkt, wenn entweder auf den Datenträger geschrieben werden **Fflush** oder **_flushall** aufgerufen wird.
-**n**|Zurücksetzen der Commit-Flag für das zugeordnete *Filename* auf "No-Commit". Dies ist die Standardeinstellung. Dabei wird auch das globale Commitflag überschrieben, wenn Sie das Programm mit COMMODE.OBJ verknüpfen. Der Standardwert des globalen Commitflags lautet "no-commit", es sei denn, Sie verknüpfen das Programm explizit mit COMMODE.OBJ (siehe [Link Options](../../c-runtime-library/link-options.md)).
-**N**|Gibt an, dass die Datei nicht von untergeordneten Prozessen geerbt wird.
-**S**|Gibt an, dass das Zwischenspeichern für den sequenziellen Zugriff vom Datenträger optimiert, aber nicht darauf beschränkt ist.
-**R**|Gibt an, dass das Zwischenspeichern für den zufälligen Zugriff vom Datenträger optimiert, aber nicht darauf beschränkt ist.
-**T**|Gibt an, dass eine Datei temporär ist. Wenn möglich, wird sie nicht auf den Datenträger geschrieben.
-**D**|Gibt an, dass eine Datei temporär ist. Sie wird gelöscht, wenn der letzte Dateizeiger geschlossen wird.
-**CCS =**_Codierung_|Gibt den codierten Zeichensatz verwenden (eines **UTF-8**, **UTF-16LE**, oder **UNICODE**) für diese Datei. Machen Sie keine Angabe, wenn Sie ANSI-Codierung wünschen.
+| **c** | Aktivieren Sie das commitflag für den zugeordneten *Filename* , damit der Inhalt des Dateipuffers direkt, wenn entweder auf den Datenträger geschrieben werden **Fflush** oder **_flushall** aufgerufen wird. |
+| **n** | Zurücksetzen der Commit-Flag für das zugeordnete *Filename* auf "No-Commit". Dies ist die Standardeinstellung. Dabei wird auch das globale Commitflag überschrieben, wenn Sie das Programm mit COMMODE.OBJ verknüpfen. Der Standardwert des globalen Commitflags lautet "no-commit", es sei denn, Sie verknüpfen das Programm explizit mit COMMODE.OBJ (siehe [Link Options](../../c-runtime-library/link-options.md)). |
+| **N** | Gibt an, dass die Datei nicht von untergeordneten Prozessen geerbt wird. |
+| **S** | Gibt an, dass das Zwischenspeichern für den sequenziellen Zugriff vom Datenträger optimiert, aber nicht darauf beschränkt ist. |
+| **R** | Gibt an, dass das Zwischenspeichern für den zufälligen Zugriff vom Datenträger optimiert, aber nicht darauf beschränkt ist. |
+| **T** | Gibt an, dass eine Datei temporär ist. Wenn möglich, wird sie nicht auf den Datenträger geschrieben. |
+| **D** | Gibt an, dass eine Datei temporär ist. Sie wird gelöscht, wenn der letzte Dateizeiger geschlossen wird. |
+| **CCS =**_Codierung_ | Gibt den codierten Zeichensatz verwenden (eines **UTF-8**, **UTF-16LE**, oder **UNICODE**) für diese Datei. Machen Sie keine Angabe, wenn Sie ANSI-Codierung wünschen. |
 
 Gültige Zeichen für die *Modus* in verwendete Zeichenfolge **Fopen_s** und [_fdopen](fdopen-wfdopen.md) entsprechen *Oflag* verwendeten Argumenten [_ Öffnen Sie](open-wopen.md) und [_sopen](sopen-wsopen.md)wie folgt.
 

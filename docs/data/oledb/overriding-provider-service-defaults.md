@@ -5,16 +5,16 @@ helpviewer_keywords:
 - service providers [OLE DB]
 - OLE DB services [OLE DB], overriding defaults
 ms.assetid: 08e366c0-74d8-463b-93a6-d58a8dc195f8
-ms.openlocfilehash: a9f8eb1c96c40336f39f14fe1a0ee29d60efd003
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
-ms.translationtype: HT
+ms.openlocfilehash: 9f845834b844c16bf2820a295768696e8f6a6526
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265216"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556295"
 ---
 # <a name="overriding-provider-service-defaults"></a>Überschreiben der Standardwerte für Anbieterdienste
 
-Der Anbieter Registrierungswert für OLEDB_SERVICES wird zurückgegeben, als der Standardwert für die [DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898) -Eigenschaft zur datenquelleninitialisierung auf das Datenquellenobjekt.
+Der Anbieter Registrierungswert für OLEDB_SERVICES wird zurückgegeben, als der Standardwert für die [DBPROP_INIT_OLEDBSERVICES](https://docs.microsoft.com/previous-versions/windows/desktop/ms716898(v=vs.85)) -Eigenschaft zur datenquelleninitialisierung auf das Datenquellenobjekt.
 
 Solange der Registrierungseintrag vorhanden ist, wird die Anbieterobjekte aggregiert. Der Benutzer kann der Anbieter Standardeinstellung für die aktivierten Dienste durch Festlegen der Eigenschaft DBPROP_INIT_OLEDBSERVICES vor der Initialisierung überschreiben. Zum Aktivieren oder deaktivieren einen bestimmten Dienst, der Benutzer ruft den aktuellen Wert der Eigenschaft DBPROP_INIT_OLEDBSERVICES festlegt oder löscht das Bit für die betreffende Eigenschaft aktiviert bzw. deaktiviert werden soll, und setzt die Eigenschaft zurück. DBPROP_INIT_OLEDBSERVICES kann festgelegt werden, direkt in der OLE DB oder in der Verbindungszeichenfolge, die an ADO oder `IDataInitialize::GetDatasource`. Die entsprechenden Werte zum Aktivieren/Deaktivieren einzelner Dienste werden in der folgenden Tabelle aufgeführt.
 
@@ -30,7 +30,7 @@ Wenn der Registrierungseintrag für den Anbieter nicht vorhanden ist, wird nicht
 
 ## <a name="see-also"></a>Siehe auch
 
-[Ressourcenpooling](/previous-versions/windows/desktop/ms713655)<br/>
-[Verwendung Kunden, die Ressourcenpooling](/previous-versions/windows/desktop/ms715907)<br/>
-[Funktionsweise von Anbietern effektiv mit Ressourcenpooling](/previous-versions/windows/desktop/ms714906)<br/>
+[Ressourcenpooling](https://docs.microsoft.com/previous-versions/windows/desktop/ms713655(v=vs.85))<br/>
+[Verwendung Kunden, die Ressourcenpooling](https://docs.microsoft.com/previous-versions/windows/desktop/ms715907(v=vs.85))<br/>
+[Funktionsweise von Anbietern effektiv mit Ressourcenpooling](https://docs.microsoft.com/previous-versions/windows/desktop/ms714906(v=vs.85))<br/>
 [Aktivieren und Deaktivieren von OLE DB-Diensten](../../data/oledb/enabling-and-disabling-ole-db-services.md)<br/>

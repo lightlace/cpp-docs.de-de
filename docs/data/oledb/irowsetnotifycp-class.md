@@ -24,16 +24,16 @@ helpviewer_keywords:
 - Fire_OnRowChange method
 - Fire_OnRowsetChange method
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
-ms.openlocfilehash: de27bef1131081ddfc244fe0d787a85b468cc7e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 119cc79cf0f3ed5784e1b3b291fce52f06695d36
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523681"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556282"
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP-Klasse
 
-Die Website für die Verbindungspunkt-Schnittstelle implementiert [IRowsetNotify](/previous-versions/windows/desktop/ms712959).
+Die Website für die Verbindungspunkt-Schnittstelle implementiert [IRowsetNotify](https://docs.microsoft.com/previous-versions/windows/desktop/ms712959(v=vs.85)).
 
 ## <a name="syntax"></a>Syntax
 
@@ -85,7 +85,7 @@ Ausführliche Informationen zum Implementieren von Benachrichtigungen finden Sie
 
 ## <a name="onfieldchange"></a> IRowsetNotifyCP:: Fire_onfieldchange
 
-Überträgt ein [OnFieldChange](/previous-versions/windows/desktop/ms715961) Ereignis benachrichtigt Kunden über eine Änderung an den Wert einer Spalte.
+Überträgt ein [OnFieldChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715961(v=vs.85)) Ereignis benachrichtigt Kunden über eine Änderung an den Wert einer Spalte.
 
 ### <a name="syntax"></a>Syntax
 
@@ -101,11 +101,11 @@ HRESULT Fire_OnFieldChange(IRowset* pRowset,
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [IRowsetNotify::OnFieldChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715961(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
 ## <a name="onrowchange"></a> IRowsetNotifyCP:: Fire_onrowchange
 
-Überträgt ein [OnRowChange](/previous-versions/windows/desktop/ms722694) Ereignis an alle Listener für den Verbindungspunkt `IID_IRowsetNotify` benachrichtigen Kunden über eine Änderung, die Auswirkungen auf die Zeilen.
+Überträgt ein [OnRowChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722694(v=vs.85)) Ereignis an alle Listener für den Verbindungspunkt `IID_IRowsetNotify` benachrichtigen Kunden über eine Änderung, die Auswirkungen auf die Zeilen.
 
 ### <a name="syntax"></a>Syntax
 
@@ -120,11 +120,11 @@ HRESULT Fire_OnRowChange(IRowset* pRowset,
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [IRowsetNotify::OnRowChange](/previous-versions/windows/desktop/ms722694) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [IRowsetNotify::OnRowChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722694(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
 ## <a name="onrowsetchange"></a> IRowsetNotifyCP:: Fire_onrowsetchange
 
-Überträgt ein [OnRowsetChange](/previous-versions/windows/desktop/ms722669) Ereignis an alle Listener für den Verbindungspunkt `IID_IRowsetNotify` benachrichtigen Kunden über eine Änderung, die Auswirkungen auf das gesamte Rowset.
+Überträgt ein [OnRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722669(v=vs.85)) Ereignis an alle Listener für den Verbindungspunkt `IID_IRowsetNotify` benachrichtigen Kunden über eine Änderung, die Auswirkungen auf das gesamte Rowset.
 
 ### <a name="syntax"></a>Syntax
 
@@ -137,7 +137,7 @@ HRESULT Fire_OnRowsetChange(IRowset* pRowset,
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [IRowsetNotify::OnRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722669(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
 ## <a name="see-also"></a>Siehe auch
 

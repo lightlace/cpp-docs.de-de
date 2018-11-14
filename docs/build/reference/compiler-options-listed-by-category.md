@@ -1,15 +1,15 @@
 ---
 title: Compileroptionen nach Kategorien sortiert
-ms.date: 08/20/2018
+ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 20dab3e4ec1d0a409d591e2b470e127e20156a8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa93158e518950efa9d1f2f8092aeabbc3c7724c
+ms.sourcegitcommit: 99437d7da4528ce72cabe6b6a65a9be5dfd090f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532950"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51598820"
 ---
 # <a name="compiler-options-listed-by-category"></a>Compileroptionen nach Kategorien sortiert
 
@@ -46,7 +46,7 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/Gh](gh-enable-penter-hook-function.md)|Ruft die Hookfunktion `_penter`auf.|
 |[/GH](gh-enable-pexit-hook-function.md)|Ruft die Hookfunktion `_pexit`auf.|
 |[/GL](gl-whole-program-optimization.md)|Aktiviert die Optimierung des gesamten Programms.|
-|[/Gm](gm-enable-minimal-rebuild.md)|Aktiviert minimale Neuerstellung.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Veraltet. Aktiviert minimale Neuerstellung.|
 |[/GR](gr-enable-run-time-type-information.md)|Aktiviert Laufzeit-Typeninformation (RTTI).|
 |[/Gr](gd-gr-gv-gz-calling-convention.md)|Verwendet die `__fastcall` -Aufrufkonvention. (nur x86)|
 |[/GS](gs-buffer-security-check.md)|Überprüft die Puffersicherheit.|
@@ -202,6 +202,7 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/clr:noAssembly](clr-common-language-runtime-compilation.md)|Veraltet. Verwenden Sie stattdessen [/LN (Create MSIL Module)](ln-create-msil-module.md) .|
 |[/Fr](fr-fr-create-dot-sbr-file.md)|Veraltet. Erstellt eine Browseinformationsdatei ohne lokale Variablen.|
 |[/Ge](ge-enable-stack-probes.md)|Veraltet. Aktiviert Stapelüberprüfungen. Standardmäßig aktiviert.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Veraltet. Aktiviert minimale Neuerstellung.|
 |[/GX](gx-enable-exception-handling.md)|Veraltet. Aktiviert synchrone Ausnahmebehandlung. Verwenden Sie stattdessen [/EH](eh-exception-handling-model.md) .|
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Veraltet. Ermöglicht schnelle Überprüfungen. Verwenden Sie stattdessen [/RTC1](rtc-run-time-error-checks.md) .|
 |[/H](h-restrict-length-of-external-names.md)|Veraltet. Beschränkt die Länge externer (öffentlicher) Namen.|

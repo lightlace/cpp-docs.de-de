@@ -24,12 +24,12 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: e8b7dc097c1af60894c627b8b660c4d9d81361db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f45ca46cae459c8606f88a98d03b64c40e5d5f01
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519456"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327862"
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
 
@@ -64,10 +64,10 @@ Sind diese Manifestkonstanten in definiert \<fcntl.h >:
 
 |||
 |-|-|
-**\_O\_ANFÜGEN**|Positioniert einen Dateizeiger vor jedem Schreibvorgang am Ende der Datei.
-**\_O\_RDONLY**|Öffnet eine Datei nur zum Lesen.
-**\_O\_TEXT**|Öffnet eine Datei im Textmodus (übersetzt).
-**\_O\_WTEXT**|Öffnet eine Datei in Unicode (übersetzt UTF-16).
+| **\_O\_ANFÜGEN** | Positioniert einen Dateizeiger vor jedem Schreibvorgang am Ende der Datei. |
+| **\_O\_RDONLY** | Öffnet eine Datei nur zum Lesen. |
+| **\_O\_TEXT** | Öffnet eine Datei im Textmodus (übersetzt). |
+| **\_O\_WTEXT** | Öffnet eine Datei in Unicode (übersetzt UTF-16). |
 
 Die **_open_osfhandle** Aufruf überträgt den Besitz des Win32-Dateihandles auf den Dateideskriptor. Eine mit geöffnete Datei schließen **_open_osfhandle**, rufen Sie [ \_schließen](close.md). Das zugrunde liegende Betriebssystem-Dateihandle ist ebenfalls geschlossen, durch einen Aufruf von **_close**, daher es nicht notwendig ist, die Win32-Funktion **"CloseHandle"** am ursprünglichen Handle. Wenn der Dateideskriptor Besitz ist eine **Datei &#42;**  Stream, rufen Sie dann [Fclose](fclose-fcloseall.md) auf, die **Datei &#42;**  Stream schließt außerdem sowohl den Dateideskriptor und das zugrunde liegende Handle. Rufen Sie in diesem Fall nicht **_close** auf den Dateideskriptor.
 

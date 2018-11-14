@@ -1,30 +1,20 @@
 ---
-title: Uhrzeitverwaltung | Microsoft-Dokumentation
-ms.custom: ''
+title: Uhrzeitverwaltung
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.memory
-dev_langs:
-- C++
 helpviewer_keywords:
 - dates, run-time library members
 - time, time management
 - date functions
 - time functions
 ms.assetid: 93599220-c011-45d5-978f-12182abfdd2f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f63bfe358e3f077bff780e2c5b4436fb841fd145
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 67b993325c7f9c649d1509ce2c1ecf09a2404bc8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46083976"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328928"
 ---
 # <a name="time-management"></a>Uhrzeitverwaltung
 
@@ -39,7 +29,7 @@ Die Routinen **_ftime** und **localtime** verwenden die Umgebungsvariable **TZ**
 |[asctime, _wasctime](../c-runtime-library/reference/asctime-wasctime.md), [asctime_s, _wasctime_s](../c-runtime-library/reference/asctime-s-wasctime-s.md)|Konvertiert einen Zeitwert vom Typ **struct tm** in eine Zeichenfolge. Die Versionen dieser Funktionen mit dem Suffix **_s** sind sicherer.|
 |[clock](../c-runtime-library/reference/clock.md)|Gibt die verstrichene Wanduhrzeit für den Prozess zurück.|
 |[ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md), [_ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)|Konvertiert einen Zeitwert vom Typ **time_t**, **__time32_t** oder **__time64_t** in eine Zeichenfolge. Die Versionen dieser Funktionen mit dem Suffix **_s** sind sicherer.|
-|[difftime, _difftime32, _difftime64](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|Bestimmt den Unterschied zwischen zwei Uhrzeiten.|[System::DateTime::Subtract](https://msdn.microsoft.com/library/system.datetime.subtract.aspx)|
+|[difftime, _difftime32, _difftime64](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|Bestimmt den Unterschied zwischen zwei Uhrzeiten.|
 |[_ftime, _ftime32, _ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md),[_ftime_s, _ftime32_s, _ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)|Speichert die aktuelle Systemzeit in einer Variablen vom Typ **struct _timeb** oder **struct __timeb64**. Die Versionen dieser Funktionen mit dem Suffix **_s** sind sicherer.|
 |[_futime, _futime32, _futime64](../c-runtime-library/reference/futime-futime32-futime64.md)|Legt die Änderungszeit einer offenen Datei fest.|
 |[gmtime, _gmtime32, _gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md), [gmtime_s, _gmtime32_s, _gmtime64_s](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)|Konvertiert einen Zeitwert vom Typ **time_t** in **struct tm** oder vom Typ **__time64_t** in **struct tm**. Die Versionen dieser Funktionen mit dem Suffix **_s** sind sicherer.|

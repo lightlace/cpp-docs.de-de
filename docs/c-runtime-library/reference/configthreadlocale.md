@@ -26,12 +26,12 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-ms.openlocfilehash: 244ef9ce93e39bef23a9d5d6792a10ca25355f5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99e10a0330ba4880ea181e9fe3d56f3fb6bd6493
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648382"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326042"
 ---
 # <a name="configthreadlocale"></a>_configthreadlocale
 
@@ -56,11 +56,11 @@ Der vorherige Status der threadspezifischen Gebietsschemas (**_DISABLE_PER_THREA
 
 Die **_configurethreadlocale** Funktion wird verwendet, um die Verwendung des threadspezifischen Gebietsschemas zu steuern. Verwenden Sie eine der folgenden *Per_thread_locale_type* Optionen angeben oder der Status des threadspezifischen Gebietsschemas ermitteln:
 
-|||
+| Option | Beschreibung |
 |-|-|
-**_ENABLE_PER_THREAD_LOCALE**|Legen Sie fest, dass der aktuelle Thread ein threadspezifisches Gebietsschema verwendet. Nachfolgende Aufrufe von **Setlocale** in diesem Thread betreffen nur das eigene Gebietsschema des Threads.
-**_DISABLE_PER_THREAD_LOCALE**|Legen Sie fest, dass der aktuelle Thread das globale Gebietsschema verwendet. Nachfolgende Aufrufe von **Setlocale** in diesem Thread wirken sich auf andere Threads, die das globale Gebietsschema verwenden.
-**0**|Ruft die aktuelle Einstellung für diesen speziellen Thread ab.
+| **_ENABLE_PER_THREAD_LOCALE** | Legen Sie fest, dass der aktuelle Thread ein threadspezifisches Gebietsschema verwendet. Nachfolgende Aufrufe von **Setlocale** in diesem Thread betreffen nur das eigene Gebietsschema des Threads. |
+| **_DISABLE_PER_THREAD_LOCALE** | Legen Sie fest, dass der aktuelle Thread das globale Gebietsschema verwendet. Nachfolgende Aufrufe von **Setlocale** in diesem Thread wirken sich auf andere Threads, die das globale Gebietsschema verwenden. |
+| **0** | Ruft die aktuelle Einstellung für diesen speziellen Thread ab. |
 
 Diese Funktionen beeinflussen das Verhalten des **Setlocale**, **_tsetlocale**, **_wsetlocale**, und **_setmbcp**. Wenn threadspezifisches Gebietsschema ist deaktiviert, alle nachfolgenden Aufruf von **Setlocale** oder **_wsetlocale** ändert das Gebietsschema aller Threads, die das globale Gebietsschema verwenden. Wenn das threadspezifische Gebietsschema aktiviert ist, **Setlocale** oder **_wsetlocale** wirkt sich nur auf das aktuelle Threadgebietsschema.
 

@@ -88,12 +88,12 @@ helpviewer_keywords:
 - std::map [C++], upper_bound
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
-ms.openlocfilehash: 8694d554261468c4e828936f6a999f073e98849f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d804113cda3af6fdecdbbd91b8f007f069d05aac
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429691"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524845"
 ---
 # <a name="map-class"></a>map-Klasse
 
@@ -577,7 +577,7 @@ Der Schlüsselwert der aus der Zuordnung zu entfernenden Elemente.
 
 Die Memberfunktion gibt die Anzahl der Elemente *x* im Bereich zurück
 
-(`lower_bound`(_ *Schlüssel*), `upper_bound` (\_ *Schlüssel*))
+\[ Lower_bound (*Schlüssel*), Upper_bound (*Schlüssel*))
 
 0 oder 1 für eine Zuordnung, was einem eindeutigen assoziativen Container entspricht.
 
@@ -869,7 +869,6 @@ int main()
     }
     cout << endl;
 }
-
 ```
 
 ## <a name="emplace_hint"></a> map::emplace_hint
@@ -947,7 +946,6 @@ int main()
     print(m1);
     cout << endl;
 }
-
 ```
 
 ## <a name="empty"></a> map::empty
@@ -1210,7 +1208,6 @@ int main()
     cout << "After the element with a key of 2 is deleted, the map m3 is:" << endl;
     printmap(m3);
 }
-
 ```
 
 ## <a name="find"></a> map::find
@@ -1298,7 +1295,6 @@ int main()
     findit(m1, 45);
     findit(m1, 6);
 }
-
 ```
 
 ## <a name="get_allocator"></a> map::get_allocator
@@ -1540,7 +1536,6 @@ int main()
     print(m4);
     cout << endl;
 }
-
 ```
 
 ## <a name="iterator"></a> map::iterator
@@ -1936,7 +1931,6 @@ int main()
         cout << i.first << " " << i.second << ", ";
     cout << endl;
 }
-
 ```
 
 ## <a name="mapped_type"></a> map::mapped_type

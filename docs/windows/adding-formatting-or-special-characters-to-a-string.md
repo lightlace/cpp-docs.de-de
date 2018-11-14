@@ -7,12 +7,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: c40f394a-8b2c-4896-ab30-6922863ddbb5
-ms.openlocfilehash: 740bf02d40dfcb236eef0dccbf55201dd79aec4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b60f48983913f4dc146af1b4645710cd1393d072
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493846"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328330"
 ---
 # <a name="adding-formatting-or-special-characters-to-a-string-resource-c"></a>Hinzufügen von Formatierung oder Sonderzeichen auf eine Zeichenfolgenressource (C++)
 
@@ -29,12 +29,12 @@ ms.locfileid: "50493846"
 
    |Um dies zu erhalten.|Geben Sie Folgendes|
    |-----------------|---------------|
-   |Zeilenwechsel|\n|
-   |Wagenrücklauf|\r|
-   |Registerkarte|\t|
-   |Umgekehrter Schrägstrich (\\)|\\\|
-   |ASCII-Zeichen|\ddd (oktale)|
-   |Warnung (Glocke)|\a|
+   | Zeilenwechsel | \\n |
+   | Wagenrücklauf | \\R |
+   | Registerkarte | \\t |
+   | Umgekehrter Schrägstrich (\\) | \\\\ |
+   | ASCII-Zeichen | \\Ddd (Oktalnotation) |
+   | Warnung (Glocke) | \\a |
 
 > [!NOTE]
 > Die **Zeichenfolge** -Editor unterstützt nicht den vollständigen Satz von ASCII-Zeichen in Escapezeichen. Sie können nur die oben aufgeführten verwenden.

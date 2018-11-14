@@ -2,12 +2,12 @@
 title: 2.4.1 for-Konstrukt
 ms.date: 11/04/2016
 ms.assetid: 27d2cbce-786b-4819-91d3-d55b2cc57a5e
-ms.openlocfilehash: adf2d5d0580f3b65f90ab68ca21885be12abf678
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6cd1733677a6211055a9b06231fb1686c8e2fde
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496511"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329493"
 ---
 # <a name="241-for-construct"></a>2.4.1 for-Konstrukt
 
@@ -71,11 +71,11 @@ Eine ganze Zahl mit Vorzeichen-Variable. Wenn diese Variable andernfalls freigeg
 *logischer Vorgang durchgeführt*<br/>
 Eine der folgenden:
 
-<
+\<
 
 \<=
 
->
+\>
 
 \>=
 
@@ -93,7 +93,7 @@ Tabelle 2-1 **Zeitplan** Klausel *Art* Werte
 |static|Wenn **Zeitplan (statische** *Chunk_size* **)** angegeben ist, Iterationen werden in Blöcken mit einer Größe von angegeben unterteilt *Chunk_size*. Die Blöcke werden für Threads in das Team in einem roundrobinverfahren in die Thread-Anzahl, Reihenfolge der statisch zugewiesen werden. Wenn kein *Chunk_size* angegeben ist, wird der Speicherplatz für die Iteration ist unterteilt in Blöcke unterteilt, die ungefähr gleich groß ist, abschnittsweise für jeden Thread zugewiesen sind.|
 |dynamic|Wenn **Zeitplan (dynamische** *Chunk_size* **)** angegeben ist, wird die Iterationen werden in einer Reihe von Blöcken, die jeweils unterteilt *Chunk_size* Iterationen. Jeder Block wird ein Thread zugewiesen, der für eine Zuweisung wartet. Der Thread den Block von Iterationen ausgeführt und wartet dann auf die nächste Zuweisung, bis sich keine Blöcke befinden, um die zugewiesen werden. Beachten Sie, dass eine kleinere Anzahl von Iterationen das letzte Segment zugewiesen werden kann. Wenn kein *Chunk_size* angegeben ist, wird der Standardwert lautet 1.|
 |geführtes|Wenn **Zeitplan (geführtes,** *Chunk_size* **)** angegeben wird, wird die Iterationen für Threads in Blöcken mit abnehmenden Größen zugewiesen sind. Wenn ein Thread seine zugewiesene Teil der Iterationen abgeschlossen ist, wird er einen anderen Block dynamisch zugewiesen, bis keine mehr vorhanden. Für eine *Chunk_size* von 1, wird die Größe jedes Segments ungefähr der Anzahl der nicht zugewiesenen Iterationen geteilt durch die Anzahl der Threads. Diese Größen werden ungefähr 1 exponentiell verringern. Für eine *Chunk_size* mit dem Wert *k* größer als 1 ist, die Größe zu verringern ungefähr exponentiell zu *k*, außer dass das letzte Segment weniger als möglicherweise  *k* Iterationen. Wenn kein *Chunk_size* angegeben ist, wird der Standardwert lautet 1.|
-|Laufzeit|Wenn **Schedule(Runtime)":** angegeben wird, die Entscheidung zur Planung bis zur Laufzeit verzögert wird. Der Zeitplan *Art* und Größe der Segmente kann zur Laufzeit ausgewählt werden, durch Festlegen der Umgebungsvariablen **OMP_SCHEDULE**. Wenn diese Umgebungsvariable nicht festgelegt ist, wird der daraus resultierende Zeitplan Implementierung definiert. Wenn **Schedule(Runtime)":** angegeben wird, *Chunk_size* darf nicht angegeben werden.|
+|runtime|Wenn **Schedule(Runtime)":** angegeben wird, die Entscheidung zur Planung bis zur Laufzeit verzögert wird. Der Zeitplan *Art* und Größe der Segmente kann zur Laufzeit ausgewählt werden, durch Festlegen der Umgebungsvariablen **OMP_SCHEDULE**. Wenn diese Umgebungsvariable nicht festgelegt ist, wird der daraus resultierende Zeitplan Implementierung definiert. Wenn **Schedule(Runtime)":** angegeben wird, *Chunk_size* darf nicht angegeben werden.|
 
 Ohne einen explizit definierten **Zeitplan** -Klausel, ist der **Zeitplan** wird durch die Implementierung definiert.
 

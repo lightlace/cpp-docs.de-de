@@ -6,16 +6,16 @@ helpviewer_keywords:
 - references, to properties in providers
 - referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-ms.openlocfilehash: d6a750d3c2c6c409a1b7d3ce40ef13566b522cff
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
-ms.translationtype: HT
+ms.openlocfilehash: 642e6219f72e506205e8192770be7d8af5d0d817
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265164"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556463"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>Verweisen auf eine Eigenschaft im Anbieter
 
-Finden Sie die Eigenschaftengruppe und die Eigenschafts-ID für die gewünschte Eigenschaft an. Weitere Informationen finden Sie unter [OLE DB-Eigenschaften](/previous-versions/windows/desktop/ms722734) in die **OLE DB-Programmierreferenz**.
+Finden Sie die Eigenschaftengruppe und die Eigenschafts-ID für die gewünschte Eigenschaft an. Weitere Informationen finden Sie unter [OLE DB-Eigenschaften](https://docs.microsoft.com/previous-versions/windows/desktop/ms722734(v=vs.85)) in die **OLE DB-Programmierreferenz**.
 
 Im folgende Beispiel wird davon ausgegangen, dass Sie versuchen, eine Eigenschaft aus dem Rowset abzurufen. Der Code für die Verwendung der Sitzung oder einen Befehl ähnelt, verwendet jedoch eine andere Schnittstelle.
 

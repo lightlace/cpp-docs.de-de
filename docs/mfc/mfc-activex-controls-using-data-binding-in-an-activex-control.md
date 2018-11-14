@@ -14,12 +14,12 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: 54cfbc6d31c0c86163400df691dec47e0c093d36
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9efac8ba0889d648def622ca045b9398c8eeef11
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603657"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518488"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Verwenden der Datenbindung in einem ActiveX-Steuerelement
 
@@ -45,7 +45,7 @@ In diesem Artikel werden die folgenden Themen behandelt:
 Es ist möglich, eine datengebundene Eigenschaft, zu erstellen, obwohl es wahrscheinlicher ist, dass Sie sollten eine [bindbare Get/Set-Methode](#vchowcreatingbindablegetsetmethod).
 
 > [!NOTE]
->  Vordefinierte Eigenschaften haben die `bindable` und `requestedit` Attribute standardmäßig.
+> Vordefinierte Eigenschaften haben die `bindable` und `requestedit` Attribute standardmäßig.
 
 #### <a name="to-add-a-bindable-stock-property-using-the-add-property-wizard"></a>Um eine bindbare Eigenschaft mithilfe des Assistenten zum Hinzufügen von Eigenschaften hinzuzufügen.
 
@@ -74,7 +74,7 @@ Sie können jetzt das Projekt erstellen, das das Steuerelement registriert wird.
 Sie können auch erstellen, zusätzlich zu einem datengebundenen get-/Set-Methode, eine [bindbare Eigenschaft](#vchowcreatingbindablestockproperty).
 
 > [!NOTE]
->  Dieses Verfahren setzt voraus, dass Sie ein ActiveX-Steuerelement, Unterklassen ein Steuerelements für die Windows-Projekt verfügen.
+> Dieses Verfahren setzt voraus, dass Sie ein ActiveX-Steuerelement, Unterklassen ein Steuerelements für die Windows-Projekt verfügen.
 
 #### <a name="to-add-a-bindable-getset-method-using-the-add-property-wizard"></a>Zum Hinzufügen einer bindbaren get-/Set-Methode, die mithilfe des Assistenten zum Hinzufügen von Eigenschaften
 
@@ -96,37 +96,37 @@ Sie können auch erstellen, zusätzlich zu einem datengebundenen get-/Set-Method
 
 1. Klicken Sie unter **Implementierungstyp**auf **Get/Set-Methoden**.
 
-9. Wählen Sie auf der Registerkarte "IDL-Attribute" die folgenden Kontrollkästchen: **bindbare**, **Requestedit**, **Displaybind**, und **Defaultbind** hinzufügen die Attribute auf die Eigenschaftsdefinition des Projekts. IDL-Datei. Diese Attribute stellen das Steuerelement für den Benutzer sichtbar und der vordefinierten Eigenschaft die bindbare Standardeigenschaft.
+1. Wählen Sie auf der Registerkarte "IDL-Attribute" die folgenden Kontrollkästchen: **bindbare**, **Requestedit**, **Displaybind**, und **Defaultbind** hinzufügen die Attribute auf die Eigenschaftsdefinition des Projekts. IDL-Datei. Diese Attribute stellen das Steuerelement für den Benutzer sichtbar und der vordefinierten Eigenschaft die bindbare Standardeigenschaft.
 
-10. Klicken Sie auf **Fertig stellen**.
+1. Klicken Sie auf **Fertig stellen**.
 
-11. Ändern Sie den Hauptteil der `SetMyProp` Funktion so, dass sie den folgenden Code enthält:
+1. Ändern Sie den Hauptteil der `SetMyProp` Funktion so, dass sie den folgenden Code enthält:
 
    [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]
 
-12. Der Parameter zu übergeben, um die `BoundPropertyChanged` und `BoundPropertyRequestEdit` Functions ist die Dispid der Eigenschaft, das den Parameter an die übergeben werden, für die Eigenschaft in der. IDL-Datei.
+1. Der Parameter zu übergeben, um die `BoundPropertyChanged` und `BoundPropertyRequestEdit` Functions ist die Dispid der Eigenschaft, das den Parameter an die übergeben werden, für die Eigenschaft in der. IDL-Datei.
 
-13. Ändern der [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) funktionieren, sodass sie den folgenden Code enthält:
+1. Ändern der [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) funktionieren, sodass sie den folgenden Code enthält:
 
    [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
 
-14. Ändern der `OnDraw` Funktion so, dass sie den folgenden Code enthält:
+1. Ändern der `OnDraw` Funktion so, dass sie den folgenden Code enthält:
 
    [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]
 
-15. Fügen Sie mit dem öffentlichen Abschnitt der Headerdatei die Headerdatei für eine Klasse die folgenden Definitionen (Konstruktoren) für die Membervariablen hinzu:
+1. Fügen Sie mit dem öffentlichen Abschnitt der Headerdatei die Headerdatei für eine Klasse die folgenden Definitionen (Konstruktoren) für die Membervariablen hinzu:
 
    [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]
 
-16. Stellen Sie der folgenden Zeile die letzte Zeile in der `DoPropExchange` Funktion:
+1. Stellen Sie der folgenden Zeile die letzte Zeile in der `DoPropExchange` Funktion:
 
    [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]
 
-17. Ändern der `OnResetState` Funktion so, dass sie den folgenden Code enthält:
+1. Ändern der `OnResetState` Funktion so, dass sie den folgenden Code enthält:
 
    [!code-cpp[NVC_MFC_AxData#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]
 
-18. Ändern der `GetMyProp` Funktion so, dass sie den folgenden Code enthält:
+1. Ändern der `GetMyProp` Funktion so, dass sie den folgenden Code enthält:
 
    [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]
 

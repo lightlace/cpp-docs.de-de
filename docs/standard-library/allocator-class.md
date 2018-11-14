@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: dbae9ef71927fd5b781488258bf801cf19f4fb90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40e99901d4d4105902010a9e5b71ed3edf7d00db
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450673"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518865"
 ---
 # <a name="allocator-class"></a>allocator-Klasse
 
@@ -63,7 +63,7 @@ Alle C++-Standardbibliothek-Containern haben einen Template-Parameter, die stand
 
 Beispielsweise kann ein Zuweisungsobjekt Speicher in einem privaten Heap oder im freigegebenen Arbeitsspeicher zuweisen oder für kleine oder große Objektgrößen optimieren. Es könnte auch über die von ihm bereitgestellten Typdefinitionen angeben, dass über spezielle Zugriffsmethodenobjekte auf Elemente zugegriffen wird, die den freigegebenen Arbeitsspeicher verwalten, oder dass eine automatische Garbage Collection ausgeführt wird. Daher sollte eine Klasse, die den Speicher mithilfe eines Zuweisungsobjekts zuweist, diese Typen für das Deklarieren von Zeiger- und Verweisobjekten verwenden, wie dies bei den Containern in der C++-Standardbibliothek der Fall ist.
 
-**(nur C_++98/03)** Wenn Sie eine Ableitung aus einer Zuweisungsklasse vornehmen, müssen Sie eine [rebind](#rebind)-Struktur bereitstellen, deren `_Other`-Typedef Ihre neue abgeleitete Klasse verweist.
+<strong>(C ++ 98/03 nur)</strong>  Beim Ableiten von Allocator-Klasse, Sie müssen eine [erneut binden](#rebind) Struktur, deren `_Other` Typedef verweist auf Ihre neue abgeleitete Klasse.
 
 Daher definiert eine Zuweisung die folgenden Typen:
 

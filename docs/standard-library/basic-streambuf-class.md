@@ -94,12 +94,12 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsgetn
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
-ms.openlocfilehash: d15e38c63e335dbd574ad2d1c1ee23e0d5a70a30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 581652ea39d0729079666dc675b7214b4b3a4da3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565723"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524676"
 ---
 # <a name="basicstreambuf-class"></a>basic_streambuf-Klasse
 
@@ -457,7 +457,7 @@ Wenn die Funktion nicht erfolgreich ausgeführt werden kann, wird **traits_type:
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn _ *Meta* nicht **traits_type::eof** entspricht, versucht die geschützte virtuelle Memberfunktion, das Element **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) in den Ausgabestream einzufügen. Hierfür gibt es verschiedene Möglichkeiten:
+Wenn  *\_Meta* ist nicht gleich **traits_type:: EOF**, die geschützte virtuelle Memberfunktion versucht, das Element eingefügt **Traits_type::** [ To_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*) in den Ausgabestream. Hierfür gibt es verschiedene Möglichkeiten:
 
 - Wenn `write position` verfügbar ist, kann das Element in der Schreibposition gespeichert werden, und der nächste Zeiger für den Ausgabepuffer kann inkrementiert werden.
 
@@ -492,7 +492,7 @@ Wenn die Funktion nicht erfolgreich ausgeführt werden kann, wird **traits_type:
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn _ *Meta* mit **traits_type::eof** übereinstimmt, ist das Element für den Pushback das Element, das sich bereits vor dem aktuellen Element im Stream befindet. Andernfalls wird dieses Element durch **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) ersetzt. Ein Element kann auf verschiedene Arten durch die Funktion wiederhergestellt werden:
+Wenn  *\_Meta* übereinstimmt **traits_type:: EOF**, das Element, das Pushback ist bereits in den Stream vor dem aktuellen Element. Andernfalls wird dieses Element durch ersetzt **Traits_type::**[To_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*). Ein Element kann auf verschiedene Arten durch die Funktion wiederhergestellt werden:
 
 - Wenn eine Position zur Wiederherstellung verfügbar ist, kann das Element in der Position zur Wiederherstellung gespeichert werden, und der nächste Zeiger für den Eingabepuffer kann verringert werden.
 
@@ -689,15 +689,12 @@ int main( )
 }
 ```
 
-```Output
-
+```Input
 3
-
 ```
 
 ```Output
-
-      33
+33
 51
 ```
 
@@ -967,14 +964,11 @@ int main( )
 }
 ```
 
-```Output
-
+```Input
 aa
-
 ```
 
 ```Output
-
 aa97
 ```
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Detach method [C++]
 - VARIANT object
 ms.assetid: c348ac08-62cf-4657-a16f-974a79c12158
-ms.openlocfilehash: 4b19e3c1615912550cdf1eb6a2b0b3f906ee4af9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 719852c4556291747b612d54c44d4bf82caa9188
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522329"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519005"
 ---
 # <a name="varianttdetach"></a>_variant_t::Detach
 
@@ -34,7 +34,7 @@ Das gekapselte `VARIANT`.
 
 ## <a name="remarks"></a>Hinweise
 
-Extrahiert und gibt den gekapselten `VARIANT`, löscht Sie dann dieses `_variant_t` Objekt ohne Sie zu zerstören. Diese Memberfunktion entfernt die `VARIANT` aus der Kapselung und legt die `VARTYPE` dieses `_variant_t` Objekt auf VT_EMPTY. Sie entscheiden, ob Sie das zurückgegebene Version ist `VARIANT` durch Aufrufen der [VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear) Funktion.
+Extrahiert und gibt den gekapselten `VARIANT`, löscht Sie dann dieses `_variant_t` Objekt ohne Sie zu zerstören. Diese Memberfunktion entfernt die `VARIANT` aus der Kapselung und legt die `VARTYPE` dieses `_variant_t` Objekt auf VT_EMPTY. Sie entscheiden, ob Sie das zurückgegebene Version ist `VARIANT` durch Aufrufen der [VariantClear](/windows/desktop/api/oleauto/nf-oleauto-variantclear) Funktion.
 
 **Ende Microsoft-spezifisch**
 

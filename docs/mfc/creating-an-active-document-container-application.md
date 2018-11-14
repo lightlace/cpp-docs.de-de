@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MFC COM, active document containment
 - applications [MFC], active document container
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
-ms.openlocfilehash: ecce997c451b39600606550dd1198cddfd764334
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5cdd3de8f4efcc23f89b81cb61302b5950938800
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463335"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520412"
 ---
 # <a name="creating-an-active-document-container-application"></a>Erstellen einer Containeranwendung für aktive Dokumente
 
@@ -37,15 +37,15 @@ Die einfachste und am häufigsten empfohlene Möglichkeit zum Erstellen einer co
 
 1. Klicken Sie auf **Fertig stellen**.
 
-9. Wenn der MFC-Anwendung-Assistent abgeschlossen ist, generieren die Anwendung, öffnen Sie mithilfe des Projektmappen-Explorer die folgenden Dateien:
+1. Wenn der MFC-Anwendung-Assistent abgeschlossen ist, generieren die Anwendung, öffnen Sie mithilfe des Projektmappen-Explorer die folgenden Dateien:
 
    - *MyProjview.cpp*
 
-10. In *MyProjview.cpp*, nehmen Sie die folgenden Änderungen:
+1. In *MyProjview.cpp*, nehmen Sie die folgenden Änderungen:
 
    - In `CMyProjView::OnPreparePrinting`, ersetzen Sie den Inhalt für die Funktion, mit dem folgenden Code:
 
-         [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
+     [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
 
    `OnPreparePrinting` bietet Unterstützung für den Druck. Dieser Code ersetzt `DoPreparePrinting`, dies ist die Standard-print-Vorbereitung.
 
@@ -59,7 +59,7 @@ Die einfachste und am häufigsten empfohlene Möglichkeit zum Erstellen einer co
 
    Die statische Memberfunktionen `COleDocObjectItem::OnPrint` und `COleDocObjectItem::OnPreparePrinting`, wie im vorherigen Code, implementiert dieses verbesserte drucken-Schema verarbeiten.
 
-11. Fügen Sie eigene Implementierung, und erstellen Sie die Anwendung.
+1. Fügen Sie eigene Implementierung, und erstellen Sie die Anwendung.
 
 ## <a name="see-also"></a>Siehe auch
 
