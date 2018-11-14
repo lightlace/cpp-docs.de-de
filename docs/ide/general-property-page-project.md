@@ -1,10 +1,6 @@
 ---
-title: Eigenschaftenseite „Allgemein“ (Projekt) | Microsoft-Dokumentation
-ms.custom: ''
+title: Eigenschaftenseite "Allgemein" (Projekt)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCConfiguration.IntermediateDirectory
 - VC.Project.VCConfiguration.ConfigurationType
@@ -25,22 +21,16 @@ f1_keywords:
 - VC.Project.VCConfiguration.AppSupport
 - VC.Project.VCConfiguration.ToolFiles
 - VC.Project.VCConfiguration.useOfATL
-dev_langs:
-- C++
 helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4d68cf6be3a512d478f4d7808ce321f18c0efd84
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6f7af0f3dd9ff373a458a6f93fb78fda443bd8e9
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422255"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520477"
 ---
 # <a name="general-property-page-project"></a>Eigenschaftenseite "Allgemein" (Projekt)
 
@@ -120,29 +110,29 @@ Die Eigenschaften im Abschnitt “Projektstandards“ stellen änderbare Standar
 
 - **Konfigurationstyp**
 
-   Sie können aus einer Reihe unterschiedlicher Konfigurationstypen auswählen:
+  Sie können aus einer Reihe unterschiedlicher Konfigurationstypen auswählen:
 
-   - **Anwendung (EXE-Datei)**
+  - **Anwendung (EXE-Datei)**
 
-      Zeigt das Linkertoolset (C/C++-Compiler, MIDL, Ressourcencompiler, Linker, BSCMake, XML-Webdienst-Proxy-Generator, benutzerdefinierte Build-, Präbuild-, Prälink- und Postbuildereignisse) an.
+     Zeigt das Linkertoolset (C/C++-Compiler, MIDL, Ressourcencompiler, Linker, BSCMake, XML-Webdienst-Proxy-Generator, benutzerdefinierte Build-, Präbuild-, Prälink- und Postbuildereignisse) an.
 
-   - **Dynamische Bibliothek (.dll)**
+  - **Dynamische Bibliothek (.dll)**
 
-      Zeigt das Linkertoolset an, legt die /DLL-Linkeroption fest und fügt CL die _WINDLL-Definition hinzu.
+     Zeigt das Linkertoolset an, legt die /DLL-Linkeroption fest und fügt CL die _WINDLL-Definition hinzu.
 
-   - **Makefile**
+  - **Makefile**
 
-      Zeigt das Makefile-Toolset (NMake) an.
+     Zeigt das Makefile-Toolset (NMake) an.
 
-   - **Statische Bibliothek (LIB-Datei)**
+  - **Statische Bibliothek (LIB-Datei)**
 
-      Zeigt das Bibliothekstoolset an (von zwei Ausnahmen abgesehen ist dieses Toolset mit dem Linkertoolset identisch: Der Linker wird durch den Bibliothekar ersetzt, und der XML-Webdienst-Proxy-Generator fällt weg).
+     Zeigt das Bibliothekstoolset an (von zwei Ausnahmen abgesehen ist dieses Toolset mit dem Linkertoolset identisch: Der Linker wird durch den Bibliothekar ersetzt, und der XML-Webdienst-Proxy-Generator fällt weg).
 
-   - **Hilfsprogramm**
+  - **Hilfsprogramm**
 
-      Zeigt das Hilfsprogramm-Toolset (MIDL, benutzerdefinierte Build-, Präbuild-, Postbuildereignisse) an.
+     Zeigt das Hilfsprogramm-Toolset (MIDL, benutzerdefinierte Build-, Präbuild-, Postbuildereignisse) an.
 
-   Informationen zum programmgesteuerten Zugriff auf diese Eigenschaft finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>.
+  Informationen zum programmgesteuerten Zugriff auf diese Eigenschaft finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>.
 
 - **Verwendung von MFC**
 

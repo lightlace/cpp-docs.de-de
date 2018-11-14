@@ -1,28 +1,18 @@
 ---
-title: 'Exemplarische Vorgehensweise: Arbeiten mit Projekten und Projektmappen (C++) | Microsoft-Dokumentation'
-ms.custom: ''
+title: 'Exemplarische Vorgehensweise: Arbeiten mit Projekten und Lösungen (C++)'
 ms.date: 09/14/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - solutions [C++]
 - projects [C++], about projects
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 56b5e41872ebe4b3cdc4800d7818cceb05f03dd1
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 968e4981a28d646b75335ee380635fd8f8e863e3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235151"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519230"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>Exemplarische Vorgehensweise: Arbeiten mit Projekten und Lösungen (C++)
 
@@ -80,7 +70,7 @@ In diesem Teil der exemplarischen Vorgehensweise wird gezeigt, wie dem Projekt e
 1. Bearbeiten Sie die Datei „Cardgame.h“, und nehmen Sie folgende Änderungen vor:
 
    - Fügen Sie hinter der öffnenden geschweiften Klammer der Klassendefinition zwei private Datenmember hinzu.
-      <!--      [!code-cpp[NVC_Walkthrough_Working_With_Projects#100](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_1.h)] -->
+     <!--      [!code-cpp[NVC_Walkthrough_Working_With_Projects#100](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_1.h)] -->
 
       ```cpp
       int players;
@@ -102,18 +92,19 @@ In diesem Teil der exemplarischen Vorgehensweise wird gezeigt, wie dem Projekt e
    Die Datei „Cardgame.h“ sieht nach der Änderung ungefähr wie der folgende Code aus:
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#103](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_4.h)]-->
-   ```cpp
-   #pragma once
-   class Cardgame
-   {
-       int players;
-       static int totalParticipants;
-   public:
-       Cardgame(int players);
-       ~Cardgame();
-       static int GetParticipants() { return totalParticipants; }
-   };
-   ```
+
+    ```cpp
+    #pragma once
+    class Cardgame
+    {
+        int players;
+        static int totalParticipants;
+    public:
+        Cardgame(int players);
+        ~Cardgame();
+        static int GetParticipants() { return totalParticipants; }
+    };
+    ```
 
    Die Zeile `#pragma once` teilt dem Compiler mit, die Headerdatei nur einmal aufzunehmen. Weitere Informationen finden Sie unter [once](../preprocessor/once.md). Informationen zu weiteren C++-Schlüsselwörtern in der oben gezeigten Headerdatei finden Sie unter [class](../cpp/class-cpp.md), [int](../cpp/fundamental-types-cpp.md), [static](../cpp/storage-classes-cpp.md) und [public](../cpp/public-cpp.md).
 
@@ -122,27 +113,28 @@ In diesem Teil der exemplarischen Vorgehensweise wird gezeigt, wie dem Projekt e
 1. Löschen Sie den gesamten Inhalt der Datei, und ersetzen Sie ihn durch den folgenden Code:
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#111](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_5.cpp)]-->
-   ```cpp
-   #include "pch.h"
-   #include "Cardgame.h"
-   #include <iostream>
 
-   using namespace std;
+    ```cpp
+    #include "pch.h"
+    #include "Cardgame.h"
+    #include <iostream>
 
-   int Cardgame::totalParticipants = 0;
+    using namespace std;
 
-   Cardgame::Cardgame(int players)
-       : players(players)
-   {
-       totalParticipants += players;
-       cout << players << " players have started a new game.  There are now "
-            << totalParticipants << " players in total." << endl;
-   }
+    int Cardgame::totalParticipants = 0;
 
-   Cardgame::~Cardgame()
-   {
-   }
-   ```
+    Cardgame::Cardgame(int players)
+        : players(players)
+    {
+        totalParticipants += players;
+        cout << players << " players have started a new game.  There are now "
+             << totalParticipants << " players in total." << endl;
+    }
+
+    Cardgame::~Cardgame()
+    {
+    }
+    ```
 
    > [!NOTE]
    > Sie können bei der Codeeingabe die automatische Vervollständigung verwenden. Wenn Sie diesen Code beispielsweise über die Tastatur eingeben, können Sie *pl* oder *tot* eingeben und **STRG**+**LEERTASTE** drücken. Die automatische Vervollständigung gibt `players` oder `totalParticipants` für Sie ein.
@@ -156,31 +148,33 @@ Fügen Sie Code zu Ihrer App hinzu, der die neuen Funktionen testet.
 1. Ersetzen Sie im Editor-Fenster **Game.cpp** den vorhandenen Code durch Folgendes:
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#120](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_6.cpp)]-->
-   ```cpp
-   // Game.cpp : Defines the entry point for the console application.
-   //
 
-   #include "pch.h"
-   #include "Cardgame.h"
-   #include <iostream>
+    ```cpp
+    // Game.cpp : Defines the entry point for the console application.
+    //
 
-   using namespace std;
+    #include "pch.h"
+    #include "Cardgame.h"
+    #include <iostream>
 
-   void PlayGames()
-   {
-       Cardgame bridge(4);
-       Cardgame blackjack(8);
-       Cardgame solitaire(1);
-       Cardgame poker(5);
-   }
+    using namespace std;
 
-   int main()
-   {
-       PlayGames();
-       return 0;
-   }
-   ```
-Der Code fügt eine Testfunktion (`PlayGames`) zum Quellcode hinzu und ruft diese in `main` auf.
+    void PlayGames()
+    {
+        Cardgame bridge(4);
+        Cardgame blackjack(8);
+        Cardgame solitaire(1);
+        Cardgame poker(5);
+    }
+
+    int main()
+    {
+        PlayGames();
+        return 0;
+    }
+    ```
+
+   Der Code fügt eine Testfunktion (`PlayGames`) zum Quellcode hinzu und ruft diese in `main` auf.
 
 ## <a name="build-and-run-your-app-project"></a>Erstellen und Ausführen Ihres App-Projekts
 
@@ -192,15 +186,15 @@ Erstellen Sie nun das Projekt, und führen Sie die App aus.
 
    Die Ausgabe eines Builds wird im **Ausgabefenster** angezeigt. Wenn der Build erfolgreich erstellt wurde, sollte die Ausgabe in etwa wie folgt aussehen:
 
-   ```Output
-   1>------ Build started: Project: Game, Configuration: Debug Win32 ------
-   1>pch.cpp
-   1>Cardgame.cpp
-   1>Game.cpp
-   1>Generating Code...
-   1>Game.vcxproj -> C:\Users\<username>\source\repos\Game\Debug\Game.exe
-   ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
-   ```
+    ```Output
+    1>------ Build started: Project: Game, Configuration: Debug Win32 ------
+    1>pch.cpp
+    1>Cardgame.cpp
+    1>Game.cpp
+    1>Generating Code...
+    1>Game.vcxproj -> C:\Users\<username>\source\repos\Game\Debug\Game.exe
+    ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+    ```
 
    Abhängig von der Buildkonfiguration können im **Ausgabefenster** verschiedene Schritte angezeigt werden. Wenn das Projekt jedoch erfolgreich erstellt wird, sollte die letzte Zeile der angezeigten Ausgabe ähneln.
 
@@ -208,13 +202,14 @@ Erstellen Sie nun das Projekt, und führen Sie die App aus.
 
 1. Klicken Sie zum Ausführen des Projekts auf der Menüleiste auf **Debuggen** > **Starten ohne Debuggen**. Es sollte ein Konsolenfenster angezeigt werden, und die Ausgabe sollte dem folgenden Beispiel ähneln:
 
-   ```Output
-   4 players have started a new game.  There are now 4 players in total.
-   8 players have started a new game.  There are now 12 players in total.
-   1 players have started a new game.  There are now 13 players in total.
-   5 players have started a new game.  There are now 18 players in total.
-   ```
-Drücken Sie eine Taste, um das Konsolenfenster zu schließen.
+    ```Output
+    4 players have started a new game.  There are now 4 players in total.
+    8 players have started a new game.  There are now 12 players in total.
+    1 players have started a new game.  There are now 13 players in total.
+    5 players have started a new game.  There are now 18 players in total.
+    ```
+
+   Drücken Sie eine Taste, um das Konsolenfenster zu schließen.
 
 Glückwunsch, Sie haben erfolgreich ein App-Projekt und eine Projektmappe erstellt. Fahren Sie mit der exemplarischen Vorgehensweise fort, um mehr über das Erstellen von C++-Codeprojekten in Visual Studio zu erfahren.
 
