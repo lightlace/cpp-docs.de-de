@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-ms.openlocfilehash: 5bf5deec5820976c742efa490bf02d0c0d830a09
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 7ad375c14e9034a55d280a2927d6ef00f098ddbc
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464895"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693906"
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution-Klasse
 
@@ -230,7 +230,7 @@ Der Standardkonstruktor erstellt ein Objekt, dessen gespeicherter Wahrscheinlich
 
 Der Iteratorbereichskonstruktor mit den Parametern *firstW* und *lastW* erstellt mithilfe von Gewichtungswerten, die den Iteratoren während der Intervallsequenz [*firstW*, *lastW*] entnommen werden, ein Verteilungsobjekt.
 
-Der Initialisiererlistenkonstruktor mit einem *weightlist*-Parameter erstellt ein Verteilungsobjekt mit Gewichtungen aus der Initialisiererliste *weightlist*.
+Der initialisiererlistenkonstruktor, die eine *Weightlist* Parameter erstellt ein Verteilungsobjekt mit Gewichten aus der Initialisiererliste *Weightlist*.
 
 Der Konstruktor mit den Parametern *count*, *low*, *high* und *weightfunc* erstellt ein Verteilungsobjekt, das anhand der folgenden Regeln initialisiert wird:
 
