@@ -80,12 +80,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-ms.openlocfilehash: fa7562f49834bf71da6bd095aec19360a43f1538
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: def8334cf0ed9b6b2ee821e1e0f1a717d90f2163
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447956"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694581"
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase-Klasse
 
@@ -1547,7 +1547,7 @@ Gibt TRUE zurück, wenn das Steuerelement erfolgreich den Fokus erhält. andernf
 
 ### <a name="remarks"></a>Hinweise
 
-Für ein Steuerelement mit Fenster, die Windows-API-Funktion [SetFocus](https://msdn.microsoft.com/library/windows/desktop/ms646312) aufgerufen wird. Bei einem fensterlosen Steuerelement [IOleInPlaceSiteWindowless::SetFocus](/windows/desktop/api/ocidl/nf-ocidl-ioleinplacesitewindowless-setfocus) aufgerufen wird. Durch diesen Aufruf ein fensterloses Steuerelement den Tastaturfokus erhält und auf Windows-Meldungen reagieren kann.
+Für ein Steuerelement mit Fenster, die Windows-API-Funktion [SetFocus](/windows/desktop/api/winuser/nf-winuser-setfocus) aufgerufen wird. Bei einem fensterlosen Steuerelement [IOleInPlaceSiteWindowless::SetFocus](/windows/desktop/api/ocidl/nf-ocidl-ioleinplacesitewindowless-setfocus) aufgerufen wird. Durch diesen Aufruf ein fensterloses Steuerelement den Tastaturfokus erhält und auf Windows-Meldungen reagieren kann.
 
 ##  <a name="setdirty"></a>  CComControlBase::SetDirty
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-ms.openlocfilehash: f16a8cd21fe724c44a1ed648f29e42cb5d00dcd1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6fdef34ba5873718caed509100cbe7e905d880d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663303"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693522"
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd-Klasse
 
@@ -167,7 +167,7 @@ virtual BOOL CreateEx(
 Gibt an, den erweiterten Stil, der die `CMiniFrameWnd` erstellt wird. Wendet keine der der [erweiterte Fensterstile](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) an das Fenster.
 
 *lpClassName*<br/>
-Verweist auf eine Null-terminierte Zeichenfolge, die Namen die Windows-Klasse (ein [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) Struktur). Der Klassenname kann einen beliebigen Namen, die mit der globalen registriert sein [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) Funktion oder einem der vordefinierten Steuerelementklasse-Namen. Es darf nicht NULL sein.
+Verweist auf eine Null-terminierte Zeichenfolge, die Namen die Windows-Klasse (ein [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Struktur). Der Klassenname kann einen beliebigen Namen, die mit der globalen registriert sein [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) Funktion oder einem der vordefinierten Steuerelementklasse-Namen. Es darf nicht NULL sein.
 
 *lpWindowName*<br/>
 Verweist auf eine Null-terminierte Zeichenfolge, die den Fensternamen enthält.

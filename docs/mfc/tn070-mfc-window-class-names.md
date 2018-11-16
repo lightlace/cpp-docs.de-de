@@ -7,12 +7,12 @@ helpviewer_keywords:
 - window class names [MFC]
 - TN070 [MFC]
 ms.assetid: 90617912-dd58-4a7c-9082-ced71736d7cd
-ms.openlocfilehash: d59dc052cc253c8d036de0559018065e4ba7457d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 609cfade60b1b7b51fb2fd5597c4d491d3eb861c
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533613"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51692662"
 ---
 # <a name="tn070-mfc-window-class-names"></a>TN070: MFC-Fensterklassennamen
 
@@ -28,7 +28,7 @@ Afx:%x:%x
 Afx:%x:%x:%x:%x:%x
 ```
 
-Die hexadezimale Ziffern, die ersetzt die `%x` Zeichen werden von den Daten ausgefüllt der [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) Struktur. MFC verwendet dieses Verfahren, damit mehrere C++-Klassen, die erfordern einen identischen **WNDCLASS** Strukturen können die gleichen registrierten Fensterklasse freigeben. MFC-Anwendungen im Gegensatz zu den meisten einfachen Win32-Anwendungen haben nur eine **WNDPROC**, sodass Sie ganz einfach freigeben können **WNDCLASS** Strukturen, um Zeit und Arbeitsspeicher zu sparen. Die ersetzbaren Werte für die `%x` Zeichen, die oben gezeigte sind wie folgt:
+Die hexadezimale Ziffern, die ersetzt die `%x` Zeichen werden von den Daten ausgefüllt der [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Struktur. MFC verwendet dieses Verfahren, damit mehrere C++-Klassen, die erfordern einen identischen **WNDCLASS** Strukturen können die gleichen registrierten Fensterklasse freigeben. MFC-Anwendungen im Gegensatz zu den meisten einfachen Win32-Anwendungen haben nur eine **WNDPROC**, sodass Sie ganz einfach freigeben können **WNDCLASS** Strukturen, um Zeit und Arbeitsspeicher zu sparen. Die ersetzbaren Werte für die `%x` Zeichen, die oben gezeigte sind wie folgt:
 
 - **WNDCLASS.hInstance**
 

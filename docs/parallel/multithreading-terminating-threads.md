@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-ms.openlocfilehash: c92d95bc2aa63d78c98d10e25de79344fe1ee0f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37a7a6fc443e172f80cc7c30c462ec4d69b3e8de
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484018"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693294"
 ---
 # <a name="multithreading-terminating-threads-in-mfc"></a>Multithreading: Beenden von Threads in MFC
 
@@ -34,7 +34,7 @@ In den beiden folgenden Fällen wird die Beendigung eines Threads ordnungsgemä�
 
 Von einem Arbeitsthread werden bei der normalen Threadbeendigung folgende einfache Schritte ausgeführt: die Steuerungsfunktion wird beendet und es wird ein Wert zurückgegeben, aus dem der Grund für die Beendung hervorgeht. Verwenden Sie entweder die [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) Funktion oder ein **zurückgeben** Anweisung. Normalerweise steht 0 für die erfolgreiche Ausführung; dies ist ganz Ihnen überlassen.
 
-Der Prozess für einen UI-Thread ist ebenso einfach: innerhalb von den Benutzeroberflächen-Thread aufgerufen werden [PostQuitMessage](https://msdn.microsoft.com/library/windows/desktop/ms644945) im Windows SDK. Der einzige Parameter, die `PostQuitMessage` ist der Exitcode des Threads. Bei Arbeitsthreads steht 0 normalerweise für eine erfolgreiche Ausführung.
+Der Prozess für einen UI-Thread ist ebenso einfach: innerhalb von den Benutzeroberflächen-Thread aufgerufen werden [PostQuitMessage](/windows/desktop/api/winuser/nf-winuser-postquitmessage) im Windows SDK. Der einzige Parameter, die `PostQuitMessage` ist der Exitcode des Threads. Bei Arbeitsthreads steht 0 normalerweise für eine erfolgreiche Ausführung.
 
 ##  <a name="_core_premature_thread_termination"></a> Vorzeitige Threadbeendigung
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CREATESTRUCT structure [MFC]
 ms.assetid: 028c7b5e-4fdc-48da-a550-d3e4f9e6cc85
-ms.openlocfilehash: 13f715dc914ccc052945790aeaff9c47bd34ed46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1de42ba3e26f7a06918a69358083e68f142836cc
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619647"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694698"
 ---
 # <a name="createstruct-structure"></a>CREATESTRUCT-Struktur
 
@@ -69,7 +69,7 @@ Gibt an, die im neuen Fensters [Stil](../../mfc/reference/styles-used-by-mfc.md)
 Verweist auf eine auf Null endende Zeichenfolge, die das neue Fenster Namen angibt.
 
 *lpszClass*<br/>
-Verweist auf eine auf Null endende Zeichenfolge, die Windows-Klassennamen des neuen Fensters angibt (eine [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) Struktur; Weitere Informationen finden Sie im Windows SDK).
+Verweist auf eine auf Null endende Zeichenfolge, die Windows-Klassennamen des neuen Fensters angibt (eine [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Struktur; Weitere Informationen finden Sie im Windows SDK).
 
 *dwExStyle*<br/>
 Gibt an, die [erweiterten Stil](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) für das neue Fenster.

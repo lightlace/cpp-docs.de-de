@@ -37,12 +37,12 @@ f1_keywords:
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_HANDLER
 ms.assetid: eefdd546-8934-4a30-b263-9c06a8addcbd
-ms.openlocfilehash: 5502dae40392679f47b691a822260accbf597dc0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a246e907d401167011b5a3e1306c146a338e233a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555102"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694373"
 ---
 # <a name="message-map-macros-atl"></a>Meldungszuordnungsmakros (ATL)
 
@@ -607,7 +607,7 @@ Die Zuordnung Nachrichtensätze `bHandled` auf "true", bevor Sie `MessageHandler
 > [!NOTE]
 >  Beginnen Sie immer eine meldungszuordnung mit [BEGIN_MSG_MAP](#begin_msg_map). Sie können dann mit nachfolgenden alternativen meldungszuordnungen deklarieren [ALT_MSG_MAP](#alt_msg_map). Die [END_MSG_MAP](#end_msg_map) Makro markiert das Ende der nachrichtenzuordnung. Jede nachrichtenzuordnung muss genau eine Instanz des BEGIN_MSG_MAP und END_MSG_MAP haben.
 
-Zusätzlich zu MESSAGE_HANDLER aus, können Sie [COMMAND_HANDLER](#command_handler) und [NOTIFY_HANDLER](#notify_handler) zuordnen [WM_COMMAND](/windows/desktop/menurc/wm-command) und [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) Nachrichten , bzw.
+Zusätzlich zu MESSAGE_HANDLER aus, können Sie [COMMAND_HANDLER](#command_handler) und [NOTIFY_HANDLER](#notify_handler) zuordnen [WM_COMMAND](/windows/desktop/menurc/wm-command) und [WM_NOTIFY](/windows/desktop/controls/wm-notify) Nachrichten , bzw.
 
 Weitere Informationen zur Verwendung von meldungszuordnungen in ATL finden Sie unter [Meldungszuordnungen](../../atl/message-maps-atl.md).
 
@@ -644,7 +644,7 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
 
 ##  <a name="notify_code_handler"></a>  NOTIFY_CODE_HANDLER
 
-Ähnlich wie [NOTIFY_HANDLER](#notify_handler), jedoch ordnet eine [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) Nachricht nur anhand der Benachrichtigungscode.
+Ähnlich wie [NOTIFY_HANDLER](#notify_handler), jedoch ordnet eine [WM_NOTIFY](/windows/desktop/controls/wm-notify) Nachricht nur anhand der Benachrichtigungscode.
 
 ```
 NOTIFY_CODE_HANDLER(cd, func)
@@ -683,7 +683,7 @@ NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="remarks"></a>Hinweise
 
-NOTIFY_HANDLER ordnet eine [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) Nachricht an die angegebenen Handler-Funktion, die auf der Grundlage der Benachrichtigungscode und der Bezeichner des.
+NOTIFY_HANDLER ordnet eine [WM_NOTIFY](/windows/desktop/controls/wm-notify) Nachricht an die angegebenen Handler-Funktion, die auf der Grundlage der Benachrichtigungscode und der Bezeichner des.
 
 Jede Funktion, die in einem Makro NOTIFY_HANDLER angegebenen muss wie folgt definiert werden:
 
@@ -708,7 +708,7 @@ Weitere Informationen zur Verwendung von meldungszuordnungen in ATL finden Sie u
 
 ##  <a name="notify_id_handler"></a>  NOTIFY_ID_HANDLER
 
-Ähnlich wie [NOTIFY_HANDLER](#notify_handler), jedoch ordnet eine [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) Nachricht nur auf Grundlage des Steuerelements.
+Ähnlich wie [NOTIFY_HANDLER](#notify_handler), jedoch ordnet eine [WM_NOTIFY](/windows/desktop/controls/wm-notify) Nachricht nur auf Grundlage des Steuerelements.
 
 ```
 NOTIFY_ID_HANDLER( id, func )
@@ -728,7 +728,7 @@ NOTIFY_ID_HANDLER( id, func )
 
 ##  <a name="notify_range_code_handler"></a>  NOTIFY_RANGE_CODE_HANDLER
 
-Ähnlich wie [NOTIFY_RANGE_HANDLER](#notify_range_handler), jedoch ordnet [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) Nachrichten mit einem bestimmten Benachrichtigungscode aus einem Bereich von Steuerelementen zu einer einzelnen Handler-Funktion.
+Ähnlich wie [NOTIFY_RANGE_HANDLER](#notify_range_handler), jedoch ordnet [WM_NOTIFY](/windows/desktop/controls/wm-notify) Nachrichten mit einem bestimmten Benachrichtigungscode aus einem Bereich von Steuerelementen zu einer einzelnen Handler-Funktion.
 
 ```
 NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
@@ -758,7 +758,7 @@ Dieser Bereich basiert auf den Bezeichner des Steuerelements, das Sie die Nachri
 
 ##  <a name="notify_range_handler"></a>  NOTIFY_RANGE_HANDLER
 
-Ähnlich wie [NOTIFY_HANDLER](#notify_handler), jedoch ordnet [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) Nachrichten aus einem Bereich von Steuerelementen zu einer einzelnen Handler-Funktion.
+Ähnlich wie [NOTIFY_HANDLER](#notify_handler), jedoch ordnet [WM_NOTIFY](/windows/desktop/controls/wm-notify) Nachrichten aus einem Bereich von Steuerelementen zu einer einzelnen Handler-Funktion.
 
 ```
 NOTIFY_RANGE_HANDLER( idFirst, idLast, func )

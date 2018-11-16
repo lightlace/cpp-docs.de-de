@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: f325423c940df46940d7074c599eb8e502e90586
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 679cdc5b5a0a85ade09fe1999e8de40300a8ae8e
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669078"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694386"
 ---
 # <a name="cview-class"></a>CView-Klasse
 
@@ -548,7 +548,7 @@ Die Standardimplementierung ist keine Aktion durchführen und Zurückgeben einer
 
 Überschreiben Sie diese Funktion, um die Auswirkungen einer rechten Maustaste Drag & Drop zu implementieren. Drag & Drop von rechten Maustaste und zeigt in der Regel zur Auswahl, wenn die rechte Maustaste losgelassen wird.
 
-Ihre Überschreibung der `OnDropEx` sollten Abfragen für die rechte Maustaste. Rufen Sie [GetKeyState](https://msdn.microsoft.com/library/windows/desktop/ms646301) oder speichern Sie den Zustand der rechten Maustaste aus Ihrem [OnDragEnter](#ondragenter) Handler.
+Ihre Überschreibung der `OnDropEx` sollten Abfragen für die rechte Maustaste. Rufen Sie [GetKeyState](/windows/desktop/api/winuser/nf-winuser-getkeystate) oder speichern Sie den Zustand der rechten Maustaste aus Ihrem [OnDragEnter](#ondragenter) Handler.
 
 - Wenn auf der rechten Maustaste angezeigt wird, sollte Ihre Überschreibung ein Popupmenü angezeigt die bietet, dass die Drop-Effekten durch die Drop-Quelle unterstützt werden.
 

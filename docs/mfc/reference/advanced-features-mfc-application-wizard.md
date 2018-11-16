@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, advanced features
 ms.assetid: 8a6681c5-6576-4b12-841a-6862beee76fa
-ms.openlocfilehash: 28850211fc43e162c227a8bb55da9cf92178ae41
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1af16f7009ceb97ea86d641f47cf56ea5a398c26
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465532"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694295"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>Erweiterte Features, MFC-Anwendungs-Assistent
 
@@ -57,7 +57,7 @@ Unter diesem Thema werden die Optionen für zusätzliche Funktionen für Ihre An
 
 - **Unterstützung für Neustart-Manager**
 
-   Bietet Unterstützung für die [Windows-Neustart-Manager](/windows/desktop/RstMgr/using-restart-manager). Dieses Video zeigt, wie Sie mit den Neustart-Manager von MFC: [How Do I: Use the New Restart Manager](https://msdn.microsoft.com/vstudio/ee886407).
+   Bietet Unterstützung für die [Windows-Neustart-Manager](/windows/desktop/RstMgr/using-restart-manager). Dieses Video zeigt, wie Sie mit den Neustart-Manager von MFC: [How Do I: Use the New Restart Manager](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100)).
 
 - **Erweiterte Framebereiche**
 

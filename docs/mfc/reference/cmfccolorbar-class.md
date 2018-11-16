@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: 6dc3044d1ca402ca099184eced2e5615ff161804
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e6ce3f48e2b0a7b0aa8396047eb4a52015f364d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636877"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694841"
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar-Klasse
 
@@ -129,7 +129,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 |[CMFCColorBar::AllowChangeTextLabels](#allowchangetextlabels)|Gibt an, ob die textbezeichnung des Color-Schaltflächen geändert werden kann.|
 |[CMFCColorBar::AllowShowOnList](#allowshowonlist)|Gibt an, ob das Steuerelementobjekt Farbleiste während des Anpassungsvorgangs in der Liste eine Symbolleiste angezeigt werden kann.|
 |[CMFCColorBar::CalcSize](#calcsize)|Wird aufgerufen, durch das Framework als Teil der Berechnungsprozess Layout.|
-|[CMFCColorBar::CreatePalette](#createpalette)|Initialisiert eine Palette mit den Farben in einem angegebenen Array von Farben.|
+|[CMFCColorBar::CreatePalette](#createpalette)|Initialisiert eine Palette mit den Farben in einem angegebenen Array von Farben an.|
 |[CMFCColorBar::GetColorGridSize](#getcolorgridsize)|Berechnet die Anzahl von Zeilen und Spalten im Raster eine Farbleiste-Steuerelements.|
 |[CMFCColorBar::GetExtraHeight](#getextraheight)|Berechnet die zusätzliche Höhe, die der aktuellen Farbleiste erfordert verschiedene Elemente der Benutzeroberfläche angezeigt, wie z. B. die **andere** Schaltfläche Dokumentfarben und So weiter.|
 |[CMFCColorBar::InitColors](#initcolors)|Initialisiert ein Array von Farben mit den Farben in einer angegebenen Palette oder der System-Standardpalette an.|

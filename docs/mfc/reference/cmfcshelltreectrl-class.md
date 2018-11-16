@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCShellTreeCtrl [MFC], SetFlags
 - CMFCShellTreeCtrl [MFC], SetRelatedList
 ms.assetid: 3d1da715-9554-4ed7-968c-055c48146267
-ms.openlocfilehash: 5f257cb57e7b6f287d5032bdc2655bb65fe946cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf7e5f9c9b44524491737b27098bc91bb472cb32
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445876"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694282"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl-Klasse
 
@@ -53,7 +53,7 @@ class CMFCShellTreeCtrl : public CTreeCtrl
 |Name|Beschreibung|
 |----------|-----------------|
 |[CMFCShellTreeCtrl::EnableShellContextMenu](#enableshellcontextmenu)|Aktiviert oder deaktiviert das Kontextmenü.|
-|[CMFCShellTreeCtrl::GetFlags](#getflags)|Gibt eine Kombination von Flags, die übergeben werden [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066).|
+|[CMFCShellTreeCtrl::GetFlags](#getflags)|Gibt eine Kombination von Flags, die übergeben werden [IShellFolder::EnumObjects](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects).|
 |[CMFCShellTreeCtrl::GetItemPath](#getitempath)|Ruft den Pfad zu einem Element.|
 |[CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist)|Gibt einen Zeiger auf die [CMFCShellListCtrl-Klasse](../../mfc/reference/cmfcshelllistctrl-class.md) -Objekt, das verwendet wird, zusammen mit dieser `CMFCShellTreeCtrl` Objekt zum Erstellen einer Explorer-ähnlichen-Fensters.|
 |[CMFCShellTreeCtrl::OnChildNotify](#onchildnotify)|Diese Memberfunktion wird von diesem Fenster des übergeordneten Fensters aufgerufen, wenn sie eine Meldung empfängt, die auf dieses Fenster bezieht. (Überschreibt [CWnd:: OnChildNotify](../../mfc/reference/cwnd-class.md#onchildnotify).)|
@@ -118,7 +118,7 @@ Legen Sie ein DWORD-Wert, der angibt, die Kombination von Flags aktuell.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Flags legen Sie in der `CMFCShellTreeCtrl` gesendet werden, an die Methode [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066) jedes Mal, wenn das Objekt aktualisiert wird. Sie können ändern, dass die Flags, mit der [CMFCShellTreeCtrl::SetFlags](#setflags) Methode.
+Die Flags legen Sie in der `CMFCShellTreeCtrl` gesendet werden, an die Methode [IShellFolder::EnumObjects](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects) jedes Mal, wenn das Objekt aktualisiert wird. Sie können ändern, dass die Flags, mit der [CMFCShellTreeCtrl::SetFlags](#setflags) Methode.
 
 ##  <a name="getitempath"></a>  CMFCShellTreeCtrl::GetItemPath
 
@@ -269,7 +269,7 @@ void SetFlags(
 
 ### <a name="remarks"></a>Hinweise
 
-Die `CMFCShellTreeCtrl` übergibt alle Flags, um festlegen [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066). Weitere Informationen zu den Werten der verschiedenen Kennzeichnungen, finden Sie unter [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066).
+Die `CMFCShellTreeCtrl` übergibt alle Flags, um festlegen [IShellFolder::EnumObjects](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects). Weitere Informationen zu den Werten der verschiedenen Kennzeichnungen, finden Sie unter [IShellFolder::EnumObjects](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects).
 
 ##  <a name="setrelatedlist"></a>  CMFCShellTreeCtrl::SetRelatedList
 

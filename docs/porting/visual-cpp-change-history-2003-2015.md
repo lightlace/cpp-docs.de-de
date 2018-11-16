@@ -1,25 +1,15 @@
 ---
-title: Änderungsverlauf von Visual C++ von 2003 bis 2015 | Microsoft-Dokumentation
-ms.custom: ''
+title: Änderungsverlauf von Visual C++ von 2003 bis 2015
 ms.date: 08/30/2017
-ms.technology:
-- cpp-language
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8bda25bc1705183d1482355ae064f87c040daec4
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: b1070a330e40c0bf73f3713783b3f126d0848cbc
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50068072"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525521"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Änderungsverlauf von Visual C++ von 2003 bis 2015
 
@@ -74,19 +64,19 @@ Darüber hinaus können fortlaufende Verbesserungen der Übereinstimmung des Com
 
    Funktionen, die verschoben wurden:
 
-   - double abs(double) und float abs(float)
+  - double abs(double) und float abs(float)
 
-   - double pow(double, int), float pow(float, float), float pow(float, int), long double pow(long double, long double), long double pow(long double, int)
+  - double pow(double, int), float pow(float, float), float pow(float, int), long double pow(long double, long double), long double pow(long double, int)
 
-   - float- und long double-Versionen von floating point-Funktionen acos, acosh, asin, asinh, atan, atanh, atan2, cbrt, ceil, copysign, cos, cosh, erf, erfc, exp, exp2, expm1, fabs, fdim, floor, fma, fmax, fmin, fmod, frexp, hypot, ilogb, ldexp, lgamma, llrint, llround, log, log10, log1p, log2, lrint, lround, modf, nearbyint, nextafter, nexttoward, remainder, remquo, rint, round, scalbln, scalbn, sin, sinh, sqrt, tan, tanh, tgamma, trunc
+  - float- und long double-Versionen von floating point-Funktionen acos, acosh, asin, asinh, atan, atanh, atan2, cbrt, ceil, copysign, cos, cosh, erf, erfc, exp, exp2, expm1, fabs, fdim, floor, fma, fmax, fmin, fmod, frexp, hypot, ilogb, ldexp, lgamma, llrint, llround, log, log10, log1p, log2, lrint, lround, modf, nearbyint, nextafter, nexttoward, remainder, remquo, rint, round, scalbln, scalbn, sin, sinh, sqrt, tan, tanh, tgamma, trunc
 
-   Wenn Sie über Code verfügen, der abs mit einem Gleitkommatyp verwendet, der nur den math.h-Header enthält, sind Gleitkommaversionen nicht mehr verfügbar, sodass der Aufruf, auch mit einem Gleitkommaargument, zu abs(int) aufgelöst wird. Dadurch wird der folgende Fehler generiert:
+  Wenn Sie über Code verfügen, der abs mit einem Gleitkommatyp verwendet, der nur den math.h-Header enthält, sind Gleitkommaversionen nicht mehr verfügbar, sodass der Aufruf, auch mit einem Gleitkommaargument, zu abs(int) aufgelöst wird. Dadurch wird der folgende Fehler generiert:
 
     ```Output
     warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
     ```
 
-   Ersetzen Sie zur Behebung dieses Problems den Aufruf von `abs` durch eine Gleitkommaversion von `abs`, z.B. `fabs` bei einem doppelten Argument oder `fabsf` bei einem Gleitkommaargument, oder fügen Sie den cmath-Header ein, und fahren Sie mit der Verwendung von `abs` fort.
+  Ersetzen Sie zur Behebung dieses Problems den Aufruf von `abs` durch eine Gleitkommaversion von `abs`, z.B. `fabs` bei einem doppelten Argument oder `fabsf` bei einem Gleitkommaargument, oder fügen Sie den cmath-Header ein, und fahren Sie mit der Verwendung von `abs` fort.
 
 - **Gleitkommakonformität**
 
@@ -126,7 +116,7 @@ Darüber hinaus können fortlaufende Verbesserungen der Übereinstimmung des Com
 
    Öffnen Sie zum Hinzufügen dieser Bibliothek zu Ihrer Linkereingabe in IDE das Kontextmenü für den Projektknoten, wählen Sie **Eigenschaften** und anschließend im Dialogfeld **Projekteigenschaften** den Eintrag **Linker** aus. Bearbeiten Sie anschließend die **Linkereingabe**, um `legacy_stdio_definitions.lib` zur durch Semikolons getrennten Liste hinzuzufügen.
 
-   Wenn Ihr Projekt mit statischen Bibliotheken verknüpft ist, die mit einem früheren Visual Studio-Release als 2015 kompiliert wurden, meldet der Linker möglicherweise ein nicht aufgelöstes externes Symbol. Diese Fehler verweisen möglicherweise auf interne stdio-Definitionen für _iob, _iob_func oder verknüpfte Importe für bestimmte stdio-Funktionen in der Form von _imp\_*. Microsoft empfiehlt, alle statischen Bibliotheken mit der neuesten Version von C++-Compiler und -Bibliotheken zu kompilieren, wenn Sie ein Upgrade für ein Projekt durchführen. Wenn die Bibliothek eine Drittanbieterbibliothek ohne verfügbare Quelle ist, sollten Sie entweder eine aktualisierte Binärdatei vom Drittanbieter anfordern oder die Verwendung dieser Bibliothek in einer separaten DLL kapseln, die Sie mit einer älteren Version des Compilers und Bibliotheken kompilieren.
+   Wenn Ihr Projekt mit statischen Bibliotheken verknüpft ist, die mit einem früheren Visual Studio-Release als 2015 kompiliert wurden, meldet der Linker möglicherweise ein nicht aufgelöstes externes Symbol. Diese Fehler verweisen möglicherweise auf interne stdio-Definitionen für `_iob`, `_iob_func` oder verknüpfte Importe für bestimmte stdio-Funktionen in der Form von _imp_\*. Microsoft empfiehlt, alle statischen Bibliotheken mit der neuesten Version von C++-Compiler und -Bibliotheken zu kompilieren, wenn Sie ein Upgrade für ein Projekt durchführen. Wenn die Bibliothek eine Drittanbieterbibliothek ohne verfügbare Quelle ist, sollten Sie entweder eine aktualisierte Binärdatei vom Drittanbieter anfordern oder die Verwendung dieser Bibliothek in einer separaten DLL kapseln, die Sie mit einer älteren Version des Compilers und Bibliotheken kompilieren.
 
     > [!WARNING]
     > Wenn Sie eine Verknüpfung mit Windows SDK 8.1 oder früher erstellen, tritt ggf. der Fehler „nicht aufgelöstes externes Symbol“ auf. Fügen Sie zur Behebung dieses Fehlers in diesem Fall legacy_stdio_definitions.lib zu der Linkerausgabe wie bereits beschrieben hinzu.
@@ -149,27 +139,27 @@ Darüber hinaus können fortlaufende Verbesserungen der Übereinstimmung des Com
 
    In früheren Versionen wurden unendliche und NaN-Werte mit einem Satz MSVC-spezifischer Sentinelzeichenfolgen formatiert.
 
-   - Unendlich: 1.#INF
+  - Unendlich: 1.#INF
 
-   - Stiller NaN: 1. #QNAN
+  - Stiller NaN: 1. #QNAN
 
-   - Signaling-NaN: 1.#SNAN
+  - Signaling-NaN: 1.#SNAN
 
-   - Unbestimmter NaN: 1. #IND
+  - Unbestimmter NaN: 1. #IND
 
-   Allen diesen Werte konnte ein Vorzeichen vorangestellt werden und sie wurden möglicherweise je nach Feldbreite und Genauigkeit unterschiedlich formatiert (z.B. mit ungewöhnlichen Effekten, z.B. würde die Funktion `printf("%.2f\n", INFINITY)` „1.#J“ ausgeben, da #INF auf zwei Stellen „gerundet“ werden würde). In C99 wurden neue Anforderungen an die Formatierung von unendlichen und NaN-Werten eingeführt. Die MSVC-Implementierung entspricht nun diesen Anforderungen. Die neuen Zeichenfolgen lauten wie folgt:
+  Allen diesen Werte konnte ein Vorzeichen vorangestellt werden und sie wurden möglicherweise je nach Feldbreite und Genauigkeit unterschiedlich formatiert (z.B. mit ungewöhnlichen Effekten, z.B. würde die Funktion `printf("%.2f\n", INFINITY)` „1.#J“ ausgeben, da #INF auf zwei Stellen „gerundet“ werden würde). In C99 wurden neue Anforderungen an die Formatierung von unendlichen und NaN-Werten eingeführt. Die MSVC-Implementierung entspricht nun diesen Anforderungen. Die neuen Zeichenfolgen lauten wie folgt:
 
-   - Unendlich: inf
+  - Unendlich: inf
 
-   - Stiller NaN: nan
+  - Stiller NaN: nan
 
-   - Signaling-NaN: nan(snan)
+  - Signaling-NaN: nan(snan)
 
-   - Unbestimmter NaN:nan(ind)
+  - Unbestimmter NaN:nan(ind)
 
-   All diesen Werten kann ein Vorzeichen vorangestellt werden. Bei Verwendung eines Großbuchstaben-Formatspezifizierers (%F statt %f) werden die Zeichenfolgen wie angefordert in Großbuchstaben ausgegeben (INF statt inf).
+  All diesen Werten kann ein Vorzeichen vorangestellt werden. Bei Verwendung eines Großbuchstaben-Formatspezifizierers (%F statt %f) werden die Zeichenfolgen wie angefordert in Großbuchstaben ausgegeben (INF statt inf).
 
-   Die [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)-Funktionen analysieren die neuen Zeichenfolgen so, dass über printf und scanf ein Roundtrip für diese ausgeführt wird.
+  Die [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)-Funktionen analysieren die neuen Zeichenfolgen so, dass über printf und scanf ein Roundtrip für diese ausgeführt wird.
 
 - **Formatierung von Gleitkommawerten und** Analyse
 
@@ -181,8 +171,16 @@ Darüber hinaus können fortlaufende Verbesserungen der Übereinstimmung des Com
     printf("%.0f\n", pow(2.0, 80))
     ```
 
+   Alte Ausgabe:
+
     ```Output
-        Old:  1208925819614629200000000    New:  1208925819614629174706176
+    1208925819614629200000000
+    ```
+
+   Neue Ausgabe:
+
+    ```Output
+    1208925819614629174706176
     ```
 
    Mit den alten Analysealgorithmen werden nur bis zu 17 signifikante Ziffern aus der Eingabezeichenfolge berücksichtigt und die restlichen Ziffern verworfen. Dies ist ausreichend, um einen durch die Zeichenfolge dargestellten Näherungswert zu generieren. Das Ergebnis liegt in der Regel sehr nah am richtigen gerundeten Ergebnis. Mit der neuen Implementierung werden alle vorhanden Ziffern berücksichtigt und das ordnungsgemäß gerundete Ergebnis für alle Eingaben (bis zu 768 Ziffern) generiert. Darüber hinaus berücksichtigen diese Funktionen nun den Rundungsstatus (steuerbar über fesetround).  Dies ist eine potenziell wichtige Verhaltensänderung, da diese Funktionen ggf. abweichende Ergebnisse ausgeben. Die neuen Ergebnisse sind in jedem Fall genauer als die alten Ergebnisse.
@@ -651,7 +649,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
    Angenommen Ihr Code definiert einen **new**- und einen **delete**-Platzierungsoperator:
 
     ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
     ```
 

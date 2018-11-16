@@ -34,12 +34,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-ms.openlocfilehash: d06ec86b4a049daba945c347f4b424b5987010f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 615c9a409b66ca0f515b15fbb55fd794102524fd
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605803"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694074"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc-Klasse
 
@@ -186,7 +186,7 @@ Gibt "true" zurück, wenn die Methode erfolgreich ist, False, wenn ein Fehler au
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode ruft [GetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa446647).
+Diese Methode ruft [GetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-getsecuritydescriptorcontrol).
 
 ##  <a name="getdacl"></a>  CSecurityDesc::GetDacl
 
@@ -553,7 +553,7 @@ bool SetControl(
 ### <a name="parameters"></a>Parameter
 
 *ControlBitsOfInterest*<br/>
-Eine SECURITY_DESCRIPTOR_CONTROL-Maske, die die festzulegenden Steuerungsbits angibt. Eine Liste der Flags, die festgelegt werden können, finden Sie unter [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582).
+Eine SECURITY_DESCRIPTOR_CONTROL-Maske, die die festzulegenden Steuerungsbits angibt. Eine Liste der Flags, die festgelegt werden können, finden Sie unter [SetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
 
 *ControlBitsToSet*<br/>
 Eine SECURITY_DESCRIPTOR_CONTROL-Maske, die die neuen Werte für die Steuerbits gemäß gibt an die *ControlBitsOfInterest* Maske. Dieser Parameter kann eine Kombination der Flags für aufgeführt sein der *ControlBitsOfInterest* Parameter.
@@ -564,7 +564,7 @@ Gibt bei Erfolg true zurück, bei einem Fehler false.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode ruft [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582).
+Diese Methode ruft [SetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
 
 ##  <a name="setdacl"></a>  CSecurityDesc:: SetDacl
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - ON_COMMAND_EX macro [MFC]
 - message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
-ms.openlocfilehash: 91d1793999c12951bd80e0f592772bbae1e2d679
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab08476923f253d666e024d8944aec64ed0af8da
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463299"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693654"
 ---
 # <a name="tn006-message-maps"></a>TN006: Meldungszuordnungen
 
@@ -237,7 +237,7 @@ Für die Verwendung erweiterter [ON_CONTROL_RANGE](reference/message-map-macros-
 > [!NOTE]
 > Klassen-Assistenten unterstützt erstellen einen ON_CONTROL oder ON_CONTROL_RANGE-Handler in der Benutzeroberfläche nicht. Sie müssen diese manuell mit dem Texteditor eingeben. Klassen-Assistent diese Einträge analysiert und lassen Sie diese genau wie alle anderen Meldungszuordnungseinträge durchsuchen.
 
-Die Windows-Standardsteuerelemente verwenden die leistungsstärkere [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) für komplexe steuerelementbenachrichtigungen. Diese Version von MFC hat direkte Unterstützung für diese neue Nachricht mit den ON_NOTIFY- und ON_NOTIFY_RANGE-Makros. Finden Sie in der Produktdokumentation für Weitere Informationen zu diesen Makros.
+Die Windows-Standardsteuerelemente verwenden die leistungsstärkere [WM_NOTIFY](/windows/desktop/controls/wm-notify) für komplexe steuerelementbenachrichtigungen. Diese Version von MFC hat direkte Unterstützung für diese neue Nachricht mit den ON_NOTIFY- und ON_NOTIFY_RANGE-Makros. Finden Sie in der Produktdokumentation für Weitere Informationen zu diesen Makros.
 
 ## <a name="see-also"></a>Siehe auch
 

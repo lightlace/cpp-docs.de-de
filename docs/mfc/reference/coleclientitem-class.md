@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: 706e7cd290e41ba9f3761f43688dc89fad5f3b74
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80d28aa6a71adb72b8a3e0f5cd997577d61d0a52
+ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579321"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678586"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem-Klasse
 
@@ -226,7 +226,7 @@ class COleClientItem : public CDocItem
 |[COleClientItem::GetDocument](#getdocument)|Gibt die `COleDocument` -Objekt, das vorhandene-Element enthält.|
 |[COleClientItem::GetDrawAspect](#getdrawaspect)|Ruft die aktuelle Ansicht des Elements für das Rendering ab.|
 |[COleClientItem::GetExtent](#getextent)|Gibt die Grenzen des Rechtecks für das OLE-Element zurück.|
-|[COleClientItem::GetIconFromRegistry](#geticonfromregistry)|Ruft ein Handle für ein Symbol fest, die der Server von einer bestimmten CLSID zugeordnet ist.|
+|[COleClientItem::GetIconFromRegistry](#geticonfromregistry)|Ruft ein Handle für ein dem Server von einer bestimmten CLSID zugeordnete Symbol ab.|
 |[COleClientItem::GetIconicMetafile](#geticonicmetafile)|Ruft die Metadatei, die zum Zeichnen des Symbols ab.|
 |[COleClientItem::GetInPlaceWindow](#getinplacewindow)|Gibt einen Zeiger auf das Element des direktes-Bearbeitungsfenster.|
 |[COleClientItem::GetItemState](#getitemstate)|Ruft die aktuellen Zustand des Elements ab.|

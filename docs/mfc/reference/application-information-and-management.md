@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 71b5eb9c97b8c6370a08281fdf4be7074a579f8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d5216cd399943cda67bc9387ea37c938e5cab48
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596663"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694334"
 ---
 # <a name="application-information-and-management"></a>Anwendungsinformationen und Anwendungsverwaltung
 
@@ -646,7 +646,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
 ### <a name="parameters"></a>Parameter
 
 *lpWndClass*<br/>
-Zeiger auf eine [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) Struktur mit Informationen über die Fensterklasse registriert werden. Weitere Informationen zu dieser Struktur finden Sie im Windows-SDK.
+Zeiger auf eine [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Struktur mit Informationen über die Fensterklasse registriert werden. Weitere Informationen zu dieser Struktur finden Sie im Windows-SDK.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -681,7 +681,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 ### <a name="parameters"></a>Parameter
 
 *nClassStyle*<br/>
-Gibt den Stil für Windows-Klasse oder eine Kombination von Stilen, die das bitweise OR mit erstellt ( **&#124;**) Operator, für die Fensterklasse. Eine Liste der Klassenstile, finden Sie unter den [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) Struktur im Windows SDK. Wenn der Wert NULL ist, werden die Standardwerte wie folgt festgelegt werden:
+Gibt den Stil für Windows-Klasse oder eine Kombination von Stilen, die das bitweise OR mit erstellt ( **&#124;**) Operator, für die Fensterklasse. Eine Liste der Klassenstile, finden Sie unter den [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Struktur im Windows SDK. Wenn der Wert NULL ist, werden die Standardwerte wie folgt festgelegt werden:
 
 - Legt den Stil der Maus auf CS_DBLCLKS, sendet Nachrichten an die Fensterprozedur doppelklicken, wenn der Benutzer die Maustaste doppelklickt fest.
 

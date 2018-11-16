@@ -2,12 +2,12 @@
 title: Universelle Windows-Apps (C++)
 ms.date: 03/30/2018
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
-ms.openlocfilehash: e6e294b45e183e5e8baebcaad65cece846adb07e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ffcc38dfd849c9cd5eaf9e6466d53731becdd9a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481899"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693086"
 ---
 # <a name="universal-windows-apps-c"></a>Universelle Windows-Apps (C++)
 
@@ -32,8 +32,9 @@ C++ / WinRT ist eine neue, nur-Header-Bibliothek basierende C++-sprachprojektion
 
 ## <a name="uwp-apps-that-use-the-windows-runtime-c-template-library-wrl"></a>UWP-Apps, die die Windows Runtime C++-Vorlagenbibliothek (WRL) verwenden.
 
-Die Windows Runtime C++ Template Library stellt die Low-Level COM-Schnittstellen, die über denen ISO C++-Code auf die Windows-Runtime in einer ausnahmefreien Umgebung zugreifen kann. In den meisten Fällen empfiehlt es sich, dass Sie C++ verwenden c++ / WinRT oder C++ / CX anstelle der Windows Runtime C++ Template Library für die Entwicklung von UWP-Apps. Weitere Informationen zu den Windows Runtime C++ Template Library, finden Sie unter [Windows Runtime C++ Template Library (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
+Die Windows Runtime C++ Template Library stellt die Low-Level COM-Schnittstellen, die über denen ISO C++-Code auf die Windows-Runtime in einer ausnahmefreien Umgebung zugreifen kann. In den meisten Fällen empfiehlt es sich, dass Sie C++ verwenden c++ / WinRT oder C++ / CX anstelle der Windows Runtime C++ Template Library für die Entwicklung von UWP-Apps. Weitere Informationen zu den Windows Runtime C++ Template Library, finden Sie unter [Windows Runtime C++ Template Library (WRL)](windows-runtime-cpp-template-library-wrl.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 [Visual C++](../visual-cpp-in-visual-studio.md)<br/>
+[Übersicht über Windows-Programmierung in C++](overview-of-windows-programming-in-cpp.md)<br/>

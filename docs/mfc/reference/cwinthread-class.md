@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: c1eeb649917e8457af5a3a27324ae65ae8259ac8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f6c41b3675251df6b07e44003215fa67fb7e795
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477319"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694191"
 ---
 # <a name="cwinthread-class"></a>CWinThread-Klasse
 
@@ -90,7 +90,7 @@ class CWinThread : public CCmdTarget
 |[CWinThread::PreTranslateMessage](#pretranslatemessage)|Filtert Nachrichten, bevor sie für die Windows-Funktionen weitergeleitet werden [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).|
 |[CWinThread::ProcessMessageFilter](#processmessagefilter)|Bestimmte Nachrichten abfängt, bevor sie die Anwendung erreichen.|
 |[CWinThread::ProcessWndProcException](#processwndprocexception)|Fängt alle nicht behandelte Ausnahmen, die von der Thread die Nachricht und befehlshandlern ausgelöst.|
-|[CWinThread::PumpMessage](#pumpmessage)|enthält die Nachrichtenschleife des Threads.|
+|[CWinThread::PumpMessage](#pumpmessage)|Enthält die Nachrichtenschleife des Threads.|
 |[CWinThread:: ResumeThread](#resumethread)|Wird ein Thread den Unterbrechungszähler.|
 |[Hauptmeldungsschleife](#run)|Die Steuerungsfunktion für Threads mit der eine Meldungsverteilschleife. Überschreiben Sie, um die Standardnachrichtenschleife anpassen.|
 |[CWinThread::SetThreadPriority](#setthreadpriority)|Legt die Priorität des aktuellen Threads fest.|
@@ -445,7 +445,7 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 Die bereitgestellte Nachricht wird an den entsprechenden Meldungshandler durch das Makro ON_THREAD_MESSAGE der Message-Zuordnung zugeordnet.
 
 > [!NOTE]
-> Beim Aufruf [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946), die Nachricht wird in der Thread die Warteschlange eingefügt. Jedoch, da auf diese Weise zu geposteten Nachrichten keinem Fenster zugeordnet sind, wird MFC nicht diese an die Nachricht oder einen Befehl Handler ausgewählt werden. Um diese Nachrichten zu verarbeiten, überschreiben die `PreTranslateMessage()` Funktion Ihrer CWinApp-abgeleitete Klasse, und die Nachrichten manuell verarbeiten.
+> Beim Aufruf [PostThreadMessage](/windows/desktop/api/winuser/nf-winuser-postthreadmessagea), die Nachricht wird in der Thread die Warteschlange eingefügt. Jedoch, da auf diese Weise zu geposteten Nachrichten keinem Fenster zugeordnet sind, wird MFC nicht diese an die Nachricht oder einen Befehl Handler ausgewählt werden. Um diese Nachrichten zu verarbeiten, überschreiben die `PreTranslateMessage()` Funktion Ihrer CWinApp-abgeleitete Klasse, und die Nachrichten manuell verarbeiten.
 
 ##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage
 
@@ -535,7 +535,7 @@ Diese Memberfunktion ist nur in Threads verwendet, die eine Meldungsverteilschle
 
 ##  <a name="pumpmessage"></a>  CWinThread::PumpMessage
 
-enthält die Nachrichtenschleife des Threads.
+Enthält die Nachrichtenschleife des Threads.
 
 ```
 virtual BOOL PumpMessage();

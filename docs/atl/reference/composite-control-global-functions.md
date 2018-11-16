@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 6438b9d125cc2b44c6c4525dcfa5a2bd95763304
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 3b4abc1afc99a00d83c25574df06ebfb27141c65
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524429"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694178"
 ---
 # <a name="composite-control-global-functions"></a>Globale Funktionen zusammengesetzter Steuerelemente
 
@@ -490,7 +490,7 @@ Gibt immer "true" zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Funktion ruft einfach [UnregisterClass](https://msdn.microsoft.com/library/windows/desktop/ms644899) wie beschrieben in das Windows SDK.
+Diese Funktion ruft einfach [UnregisterClass](/windows/desktop/api/winuser/nf-winuser-unregisterclassa) wie beschrieben in das Windows SDK.
 
 Rufen Sie diese Funktion zu bereinigen, nachdem alle vorhandenen Hostfenster zerstört wurden, wenn Sie aufgerufen [AtlAxWinInit](#atlaxwininit) und Sie nicht mehr benötigen, um Host-Windows zu erstellen. Wenn Sie diese Funktion nicht aufrufen, werden die Fensterklasse aufgehoben automatisch beim Beenden des Prozesses.
 

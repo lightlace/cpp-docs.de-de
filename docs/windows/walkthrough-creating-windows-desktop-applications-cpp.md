@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: fc2080470e3292a459325679a6c5dc00c01d6b35
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da95b1dac2f058de67719b4754d2df6dbeb6f7f0
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528377"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694048"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Exemplarische Vorgehensweise: Erstellen einer herkömmlichen Windows-Desktop-Anwendung (C++)
 
@@ -132,7 +132,7 @@ Als Nächstes erfahren Sie, wie Sie den Code für eine Windows-desktop-Anwendung
 
    In dieser Funktion, die Sie schreiben Code zum Behandeln von *Nachrichten* , die die Anwendung empfängt von Windows beim *Ereignisse* auftreten. Beispielsweise wenn ein Benutzer die Schaltfläche "OK" in Ihrer Anwendung auswählt, sendet Windows eine Nachricht an Sie und können Sie Code in schreiben Ihre `WndProc` Funktion, die ausführt, beliebige Aufgaben geeignet ist. Es heißt *behandeln* ein Ereignis. Sie behandeln, nur die Ereignisse, die für Ihre Anwendung relevant sind.
 
-   Weitere Informationen finden Sie unter [Window Procedures](https://msdn.microsoft.com/library/windows/desktop/ms632593).
+   Weitere Informationen finden Sie unter [Window Procedures](/windows/desktop/winmsg/window-procedures).
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>So fügen Sie der WinMain-Funktion Funktionen hinzu
 
@@ -157,7 +157,7 @@ Als Nächstes erfahren Sie, wie Sie den Code für eine Windows-desktop-Anwendung
 
    Weitere Informationen zu den Feldern der oben genannten-Struktur, finden Sie unter [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577).
 
-1. Registrieren der `WNDCLASSEX` mit Windows, damit das Fenster "und" Gewusst wie: Senden von Nachrichten an sie, dass die It kennt. Verwenden Sie die [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587) -Funktion, und übergeben Sie die Fensterklassenstruktur als Argument. Die `_T` Makro wird verwendet, da wir verwenden die `TCHAR` Typ.
+1. Registrieren der `WNDCLASSEX` mit Windows, damit das Fenster "und" Gewusst wie: Senden von Nachrichten an sie, dass die It kennt. Verwenden Sie die [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa) -Funktion, und übergeben Sie die Fensterklassenstruktur als Argument. Die `_T` Makro wird verwendet, da wir verwenden die `TCHAR` Typ.
 
    ```cpp
    if (!RegisterClassEx(&wcex))
@@ -237,7 +237,7 @@ Als Nächstes erfahren Sie, wie Sie den Code für eine Windows-desktop-Anwendung
    return (int) msg.wParam;
    ```
 
-   Weitere Informationen über die in der Nachrichtenschleife verwendeten Strukturen und Funktionen finden Sie unter [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958), [GetMessage](https://msdn.microsoft.com/library/windows/desktop/ms644936), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
+   Weitere Informationen über die in der Nachrichtenschleife verwendeten Strukturen und Funktionen finden Sie unter [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958), [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
 
    An diesem Punkt sollte die `WinMain` -Funktion in etwa dem folgenden Code entsprechen.
 
