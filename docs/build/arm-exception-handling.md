@@ -2,12 +2,12 @@
 title: ARM-Ausnahmebehandlung
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: b2b6b9b3508dd7a4dd42a2e22ad1052851c7c0c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6df8afd453f7e71d1ecc2ebb188c079a3aad02a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522270"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694347"
 ---
 # <a name="arm-exception-handling"></a>ARM-Ausnahmebehandlung
 
@@ -15,7 +15,7 @@ Windows auf ARM verwendet denselben strukturierten Mechanismus für die Ausnahme
 
 ## <a name="arm-exception-handling"></a>ARM-Ausnahmebehandlung
 
-Windows auf ARM verwendet *entladungscodes* zur Steuerung der stapelentladung während der [strukturierte Ausnahmebehandlung](https://msdn.microsoft.com/library/windows/desktop/ms680657) (SEH). Entladungscodes sind eine Folge von Bytes, die im „.xdata“-Abschnitt des ausführbaren Images gespeichert sind. Sie beschreiben den Betrieb von Funktionseinleitungs- und -epilogcode auf abstrakte Weise, sodass die Wirkung eines Funktionsprologs sich als Vorbereitung auf die Entladung des Stapelrahmens des Aufrufers rückgängig machen lässt.
+Windows auf ARM verwendet *entladungscodes* zur Steuerung der stapelentladung während der [strukturierte Ausnahmebehandlung](/windows/desktop/debug/structured-exception-handling) (SEH). Entladungscodes sind eine Folge von Bytes, die im „.xdata“-Abschnitt des ausführbaren Images gespeichert sind. Sie beschreiben den Betrieb von Funktionseinleitungs- und -epilogcode auf abstrakte Weise, sodass die Wirkung eines Funktionsprologs sich als Vorbereitung auf die Entladung des Stapelrahmens des Aufrufers rückgängig machen lässt.
 
 Das ARM EABI (Embedded Application Binary Interface) legt ein Ausnahmeentladungsmodell fest, das Entladungscodes verwendet, aber für SEH-Entladung in Windows nicht ausreichend ist. Denn hier müssen asynchrone Fälle gehandhabt werden, in denen der Prozessor inmitten des Prologs oder Epilogs einer Funktion ist. Windows teilt außerdem die Entladungssteuerung in Entladung auf Funktionsebene und für den sprachspezifischen Bereich auf, was in der ARM EABI nicht definiert ist. Deshalb legt Windows auf ARM mehr Details für die Entladung von Daten und Verfahren fest.
 
@@ -121,20 +121,20 @@ Die Anweisungen 2 und 4 werden abhängig davon festgelegt, ob eine Pushübertagu
 
 |C|L|R|PF|Ganzzahlregister per Push abgelegt|VFP-Register per Push abgelegt|
 |-------|-------|-------|--------|------------------------------|--------------------------|
-|0|0|0|0|R4-R*N*|Keine|
-|0|0|0|1|R*S*- R*N*|Keine|
-|0|0|1|0|Keine|D8-d*E*|
+|0|0|0|0|R4-R*N*|none|
+|0|0|0|1|R*S*- R*N*|none|
+|0|0|1|0|none|D8-d*E*|
 |0|0|1|1|R*S*-r3|D8-d*E*|
-|0|1|0|0|R4-R*N*, LR|Keine|
-|0|1|0|1|R*S*- R*N*, LR|Keine|
+|0|1|0|0|R4-R*N*, LR|none|
+|0|1|0|1|R*S*- R*N*, LR|none|
 |0|1|1|0|LR|D8-d*E*|
 |0|1|1|1|R*S*-r3, LR|D8-d*E*|
-|1|0|0|0|R4-R*N*, r11|Keine|
-|1|0|0|1|R*S*- R*N*, r11|Keine|
+|1|0|0|0|R4-R*N*, r11|none|
+|1|0|0|1|R*S*- R*N*, r11|none|
 |1|0|1|0|r11|D8-d*E*|
 |1|0|1|1|R*S*-r3 r11|D8-d*E*|
-|1|1|0|0|R4-R*N*, r11, LR|Keine|
-|1|1|0|1|R*S*- R*N*, r11, LR|Keine|
+|1|1|0|0|R4-R*N*, r11, LR|none|
+|1|1|0|1|R*S*- R*N*, r11, LR|none|
 |1|1|1|0|r11, LR|D8-d*E*|
 |1|1|1|1|R*S*-r3, r11, LR|D8-d*E*|
 

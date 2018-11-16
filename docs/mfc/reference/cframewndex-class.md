@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: 5e847fd3a3c5a4217db694ec5586a24313c8102f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9489e1a36eac89ccff510c3c0fae467c2bb2deab
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612204"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694620"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx-Klasse
 
@@ -359,7 +359,7 @@ Ein Handle für eine Struktur, die Positionen der mehrere Fenster enthält. sein
 
 ### <a name="remarks"></a>Hinweise
 
-Die Struktur Hdwp wird initialisiert, indem die [BeginDeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632672) Methode.
+Die Struktur Hdwp wird initialisiert, indem die [BeginDeferWindowPos](/windows/desktop/api/winuser/nf-winuser-begindeferwindowpos) Methode.
 
 ##  <a name="delayupdateframemenu"></a>  CFrameWndEx::DelayUpdateFrameMenu
 
@@ -1197,7 +1197,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
 ### <a name="parameters"></a>Parameter
 
 *lpMMI*<br/>
-[in] Zeiger auf eine [MINMAXINFO](https://msdn.microsoft.com/library/windows/desktop/ms632605) Struktur.
+[in] Zeiger auf eine [MINMAXINFO](/windows/desktop/api/winuser/ns-winuser-tagminmaxinfo) Struktur.
 
 ### <a name="remarks"></a>Hinweise
 

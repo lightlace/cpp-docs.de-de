@@ -7,14 +7,15 @@ helpviewer_keywords:
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-ms.openlocfilehash: c1b9f9ca0565bfb04c3bff56b23ea1ef1dfa42d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dab4860bcc69780fa6a6390e2ef111216642637a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613667"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693642"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Übersicht über die Concurrency Runtime
+
 Dieses Dokument enthält eine Übersicht über die Concurrency Runtime. Es beschreibt die Vorteile der Concurrency Runtime, wann sie verwendet wird und wie ihre Komponenten miteinander und mit dem Betriebssystem und den Anwendungen interagieren.
 
 ##  <a name="top"></a> Abschnitte

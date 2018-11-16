@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: 94530f17c801c62005e837055ce3608e2eaa512f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87f99b4f037c8cc881b33e1d07b4f07596ee9a1b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499682"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694542"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog-Klasse
 
@@ -258,7 +258,7 @@ Verwenden einer `CFileDialog` Objekt, erstellen Sie zuerst mithilfe der `CFileDi
 Nachdem Sie die Dialogfeld-Steuerelemente initialisieren, rufen die [CFileDialog::DoModal](#domodal) Methode, um die Anzeige des Dialogfelds Feld, damit der Benutzer den Pfad und den Namen eingeben kann. `DoModal` Gibt zurück, ob der Benutzer das OK (IDOK) oder auf die Schaltfläche Abbrechen (IDCANCEL) geklickt hat. Wenn `DoModal` gibt IDOK, können Sie eine der der `CFileDialog` öffentliche Memberfunktionen zum Abrufen der Informationen in versetzt, durch das der Benutzer.
 
 > [!NOTE]
-> Unter Windows Vista oder höher, mehrere Aufrufe [IFileDialog::SetFileTypes](https://msdn.microsoft.com/library/windows/desktop/bb775980) verursacht einen Fehler. Der zweite Aufruf von `SetFileTypes` für jede Instanz einer `CFileDialog` E_UNEXPECTED in Windows Vista oder höher zurück. Einige `CFileDialog` Methode-Funktionen rufen `SetFileTypes`. Zum Beispiel zwei Aufrufe von `CFileDialog::DoModal` für dieselbe Instanz von einem `CFileDialog` generiert [ASSERT](diagnostic-services.md#assert).
+> Unter Windows Vista oder höher, mehrere Aufrufe [IFileDialog::SetFileTypes](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setfiletypes) verursacht einen Fehler. Der zweite Aufruf von `SetFileTypes` für jede Instanz einer `CFileDialog` E_UNEXPECTED in Windows Vista oder höher zurück. Einige `CFileDialog` Methode-Funktionen rufen `SetFileTypes`. Zum Beispiel zwei Aufrufe von `CFileDialog::DoModal` für dieselbe Instanz von einem `CFileDialog` generiert [ASSERT](diagnostic-services.md#assert).
 
 `CFileDialog` enthält mehrere geschützte Member, mit denen Sie die benutzerdefinierte Behandlung von Verletzungen der Freigabe, Datei Überprüfung und Listenfeld änderungsbenachrichtigung führen. Diese geschützte Member sind Rückruffunktionen, die meisten Anwendungen nicht verwendet werden, da die Standardbehandlung automatisch ausgeführt wird. Meldungszuordnungseinträge für diese Funktionen sind nicht erforderlich, da sie die standardmäßigen virtuellen Funktionen sind.
 
@@ -851,7 +851,7 @@ Der Zeiger auf das interne COM-Objekt, für die `CFileDialog`. Es ist Ihre Aufga
 
 Verwenden Sie diese Funktion nur unter Windows Vista oder höher mit der ein Objekt mit *bVistaStyle* auf "true" festgelegt. Diese Funktion gibt NULL zurück, wenn die `CFileDialog` kein **öffnen** Dialogfeld oder, wenn *bVistaStyle* auf "false" festgelegt ist. In diesem letzten Fall die Funktion nur gibt NULL zurück, im Releasemodus - im Debugmodus befinden, löst es eine Assertion.
 
-Weitere Informationen zu den `IFileOpenDialog` Benutzeroberfläche, siehe [IFileOpenDialog](https://msdn.microsoft.com/library/windows/desktop/bb775834).
+Weitere Informationen zu den `IFileOpenDialog` Benutzeroberfläche, siehe [IFileOpenDialog](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifileopendialog).
 
 ### <a name="example"></a>Beispiel
 

@@ -1,12 +1,6 @@
 ---
-title: Lokaler Threadspeicher | Microsoft-Dokumentation
-ms.custom: ''
+title: Threadlokaler Speicher
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - thread-local variables
 - TLS (thread local storage)
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - thread-local storage
 - storage, thread local storage
 ms.assetid: a0f1b109-c953-4079-aa10-e47f5483173d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d0dca0359ea385e3a30f5dab6e8745a2d567ec1e
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 8a20e337cddcc45701f20941ac5d7fea5e4324a5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50055254"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330306"
 ---
 # <a name="thread-local-storage"></a>Threadlokaler Speicher
 
@@ -96,7 +86,7 @@ Diese Richtlinien müssen bei der Deklaration von statisch gebundenen threadloka
 
    Beachten Sie, dass ein sizeof-Ausdruck, der die Variable enthält, die derzeit initialisiert wird, keinen Verweis auf sich selbst darstellt und zulässig ist.
 
-- Die Verwendung von **__declspec(thread)** kann beim [verzögerten Laden](../build/reference/linker-support-for-delay-loaded-dlls.md) von DLL-Importen zu Konflikten führen **.**
+- Die Verwendung von **\_\_declspec(thread)** kann beim [verzögerten Laden](../build/reference/linker-support-for-delay-loaded-dlls.md) von DLL-Importen zu Konflikten führen.
 
 Weitere Informationen zur Verwendung des Threadattributs finden Sie unter [Multithreading-Themen](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory [MFC], managing
 - memory allocation [MFC], MFC
 ms.assetid: 934ac81b-d630-4232-88e5-ea74f7187987
-ms.openlocfilehash: b5b91245d08c6c4a17c9ba96a0ca4dcf19932d9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22c5c2c835872a189fe342093a737d7887538256
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461381"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51692742"
 ---
 # <a name="memory-management"></a>Speicherverwaltung
 
@@ -21,7 +21,7 @@ Dieser Gruppe von Artikeln wird beschrieben, wie Sie von der Microsoft Foundatio
 
 Ein Hauptunterschied zwischen den zwei Zuordnung Techniken ist, dass die Frame-Zuordnung, die Sie in der Regel mit den tatsächlichen Arbeitsspeicher arbeiten, zu blockieren, während mit Heapzuordnung Sie immer einen Zeiger zum Speicherblock erhalten. Eine andere Hauptunterschied zwischen den beiden Schemas ist, dass der Keyframe-Objekte automatisch gelöscht werden, während die Heap-Objekte explizit gelöscht werden müssen, können Sie durch den Programmierer.
 
-MFC-fremde Informationen zur Verwaltung des Arbeitsspeichers in Programmen für Windows finden Sie [Speicherverwaltung](https://msdn.microsoft.com/library/windows/desktop/aa366779) im Windows SDK.
+MFC-fremde Informationen zur Verwaltung des Arbeitsspeichers in Programmen für Windows finden Sie [Speicherverwaltung](/windows/desktop/memory/memory-management) im Windows SDK.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
 

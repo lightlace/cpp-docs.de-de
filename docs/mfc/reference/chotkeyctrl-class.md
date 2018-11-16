@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 1ab89c860813996360cddbf0caf5d4ebc395603d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ec5b734b23a27522fe430d24d2a65eebcca3dd3
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452714"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694724"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl-Klasse
 
@@ -67,7 +67,7 @@ Dieses Steuerelement (und somit die `CHotKeyCtrl` Klasse) ist nur für Programme
 
 Wenn der Benutzer eine Tastenkombination ausgewählt hat, kann die Anwendung die angegebene Tastenkombination aus dem Steuerelement abzurufen und verwenden die WM_SETHOTKEY-Nachricht im System den Schlüssel für den direkten einrichten. Wenn der Benutzer die Abkürzungstaste danach von einem beliebigen Teil des Systems drückt empfängt das Fenster, in der Meldung WM_SETHOTKEY angegebene eine Angabe SC_HOTKEY WM_SYSCOMMAND-Nachricht. Diese Nachricht wird das Fenster, das er empfängt aktiviert. Die Abkürzungstaste bleibt gültig, bis die Anwendung, die WM_SETHOTKEY beendet aufgerufen wird.
 
-Dieser Mechanismus unterscheidet sich von "Hot" Key-Unterstützung, von denen abhängig von der WM_HOTKEY-Nachricht und die Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) und [UnregisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646327) Funktionen.
+Dieser Mechanismus unterscheidet sich von "Hot" Key-Unterstützung, von denen abhängig von der WM_HOTKEY-Nachricht und die Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) und [UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey) Funktionen.
 
 Weitere Informationen zur Verwendung von `CHotKeyCtrl`, finden Sie unter [Steuerelemente](../../mfc/controls-mfc.md) und [Verwenden von CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).
 

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - CMainFrame class [MFC]
 - styles [MFC], windows
 ms.assetid: 77fa4f03-96b4-4687-9ade-41e46f7e4b0a
-ms.openlocfilehash: 8ee18cd311d9ab304a3096f8e8dcbb2c7edf42f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebef671a34d2b50bd547a2fd9e484581df8ee3e8
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507983"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693217"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>Ändern der Stile eines mit MFC erstellten Fensters
 
@@ -78,7 +78,7 @@ Dieser Code erstellt die untergeordneten MDI-Formulars Windows ohne eine Schaltf
 
 - [Rahmenfensterstile](../mfc/frame-window-styles-cpp.md)
 
-- [Window-Stile](https://msdn.microsoft.com/library/windows/desktop/ms632600)
+- [Window-Stile](/windows/desktop/winmsg/window-styles)
 
 ## <a name="see-also"></a>Siehe auch
 

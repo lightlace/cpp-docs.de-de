@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: 495d30f9fabcb3a9586504282dee881362988c3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9b6a462cf359bbd31958509c4fe7d0d71e490d11
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523480"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694308"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA-Struktur
 
@@ -259,10 +259,10 @@ Verwenden der [OpenThemeData](/windows/desktop/api/uxtheme/nf-uxtheme-openthemed
 [in] Zeiger auf einen Gerätekontext.
 
 *iPartId*<br/>
-[in] Der Teil des Steuerelements mit dem gewünschten Text aussehen. Weitere Informationen finden Sie im Artikel [Parts and States](https://msdn.microsoft.com/library/windows/desktop/bb773210)(Teile und Zustände) in der Tabellenspalte „Part“ (Teil). Wenn der Wert 0 lautet, wird der Text in der Standardschriftart oder in einer im Gerätekontext ausgewählten Schriftart gezeichnet.
+[in] Der Teil des Steuerelements mit dem gewünschten Text aussehen. Weitere Informationen finden Sie im Artikel [Parts and States](/windows/desktop/controls/parts-and-states)(Teile und Zustände) in der Tabellenspalte „Part“ (Teil). Wenn der Wert 0 lautet, wird der Text in der Standardschriftart oder in einer im Gerätekontext ausgewählten Schriftart gezeichnet.
 
 *iStateId*<br/>
-[in] Der Steuerelementzustand, der dem gewünschten Text aussehen. Weitere Informationen finden Sie im Artikel [Parts and States](https://msdn.microsoft.com/library/windows/desktop/bb773210)(Teile und Zustände) in der Tabellenspalte „States“ (Zustände).
+[in] Der Steuerelementzustand, der dem gewünschten Text aussehen. Weitere Informationen finden Sie im Artikel [Parts and States](/windows/desktop/controls/parts-and-states)(Teile und Zustände) in der Tabellenspalte „States“ (Zustände).
 
 *strText*<br/>
 [in] Der zu zeichnende Text.
@@ -293,7 +293,7 @@ Ein Design definiert den visuellen Stil einer Anwendung. Ein Design wird nicht z
 
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [COLORREF](/windows/desktop/gdi/colorref)<br/>
-[Teile und Zustände](https://msdn.microsoft.com/library/windows/desktop/bb773210)<br/>
+[Teile und Zustände](/windows/desktop/controls/parts-and-states)<br/>
 [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)<br/>
 [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
 [Desktopfenster-Manager](/windows/desktop/dwm/dwm-overview)<br/>
@@ -431,7 +431,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ### <a name="parameters"></a>Parameter
 
 *Info*<br/>
-[in, out] Ein [NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175) -Struktur, die skalierbare Metriken zugeordneten nicht-Clientbereichs eines nicht minimierten Fensters enthält.
+[in, out] Ein [NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa) -Struktur, die skalierbare Metriken zugeordneten nicht-Clientbereichs eines nicht minimierten Fensters enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -439,7 +439,7 @@ TRUE, wenn diese Methode erfolgreich ist. andernfalls "false".
 
 ### <a name="see-also"></a>Siehe auch
 
-[NONCLIENTMETRICS-Struktur](https://msdn.microsoft.com/library/windows/desktop/ff729175)
+[NONCLIENTMETRICS-Struktur](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)
 
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
 

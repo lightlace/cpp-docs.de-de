@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: cb1143b51dafd9711e058134a9338e28ffcb44b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a15291b49127b6c5f1efd97d8102b272c126cc10
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599887"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694360"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar-Klasse
 
@@ -391,7 +391,7 @@ Ungleich NULL, wenn die Methode erfolgreich ist; andernfalls 0.
 
 Verwenden Sie diese Funktion statt des [CMFCMenuBar::Create](#create) Wenn Sie Formatvorlagen zusätzlich zu den Stil der Symbolleiste angeben möchten. Einige häufig verwendete Weitere Formate sind TBSTYLE_TRANSPARENT und CBRS_TOP.
 
-Der zusätzliche Formate finden Sie unter [Toolbar-Steuerelement und Button-Stile](/windows/desktop/Controls/toolbar-control-and-button-styles), [Steuerelementtypen für die allgemeine](/windows/desktop/Controls/common-control-styles), und [allgemeine Fensterstile](https://msdn.microsoft.com/library/windows/desktop/ms632600).
+Der zusätzliche Formate finden Sie unter [Toolbar-Steuerelement und Button-Stile](/windows/desktop/Controls/toolbar-control-and-button-styles), [Steuerelementtypen für die allgemeine](/windows/desktop/Controls/common-control-styles), und [allgemeine Fensterstile](/windows/desktop/winmsg/window-styles).
 
 ### <a name="example"></a>Beispiel
 

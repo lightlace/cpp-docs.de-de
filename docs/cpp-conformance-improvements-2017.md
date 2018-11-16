@@ -6,12 +6,12 @@ ms.technology:
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 5dca047f6de1ee77734be8842f0ac68402b7dbfc
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 7755e0f1cb2292fc88788ab1b75e19c00f144310
+ms.sourcegitcommit: 48d7d17820be7a95b793e2485b7223879ece5f08
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524247"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51635164"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159update159"></a>C++-Konformitätsverbesserungen in Visual Studio 2017, Versionen 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158), [15.9](#update_159)
 
@@ -1844,7 +1844,6 @@ struct A
   private:
     template <template <typename...> typename Type, typename... Args>
     static constexpr A<Args...> from_template(A<Type<Args...>>);
-
 };
 
 A<>::from_template_t<A<int>> a;
@@ -1852,7 +1851,7 @@ A<>::from_template_t<A<int>> a;
 
 In Visual Studio 2017, Version 15.9 löst der Compiler im **/permissive-**-Modus folgenden Fehler aus: C3861: *'from_template': Bezeichner nicht gefunden.*
 
-Um den Fehler zu beheben, deklarieren Sie `A` vor `a`.
+Um den Fehler zu beheben, deklarieren Sie `from_template_t` vor `from_template`.
 
 ### <a name="modules-changes"></a>Moduländerungen
 

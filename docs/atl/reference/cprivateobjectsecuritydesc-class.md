@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: 6b8f84966ed58c5b031518bdf5e9f42cf7cedb48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2617113f2805f8d1c56e7fa6cbebfe669709c100
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429214"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694035"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc-Klasse
 
@@ -101,7 +101,7 @@ Gibt bei Erfolg true zurück, bei einem Fehler false.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode versucht zu bestimmen, ob die ACEs in der Zugriffssteuerungsliste (DACL) auflisten und die System Access Control List (SACL) der aktuellen Sicherheitsbeschreibung wurden aus der Sicherheitsbeschreibung des übergeordneten geerbt. Ruft die [ConvertToAutoInheritPrivateObjectSecurity](https://msdn.microsoft.com/library/windows/desktop/aa376403) Funktion.
+Diese Methode versucht zu bestimmen, ob die ACEs in der Zugriffssteuerungsliste (DACL) auflisten und die System Access Control List (SACL) der aktuellen Sicherheitsbeschreibung wurden aus der Sicherheitsbeschreibung des übergeordneten geerbt. Ruft die [ConvertToAutoInheritPrivateObjectSecurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity) Funktion.
 
 ##  <a name="cprivateobjectsecuritydesc"></a>  CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc
 
@@ -181,7 +181,7 @@ Gibt bei Erfolg true zurück, bei einem Fehler false.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode ruft [CreatePrivateObjectSercurity](https://msdn.microsoft.com/library/windows/desktop/aa376405) oder [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581).
+Diese Methode ruft [CreatePrivateObjectSercurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity) oder [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581).
 
 Die zweite Methode ermöglicht das Angeben der GUID des Objekttyp des neuen Objekts oder steuern, wie ACEs geerbt werden.
 

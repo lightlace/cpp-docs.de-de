@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 33ca9e1c07dc350845104a6027166e511b3bbe4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf2f97c1c3b389d0ee2b3d4bcdd2d9da2dbb3c8d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605078"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694854"
 ---
 # <a name="cregkey-class"></a>CRegKey-Klasse
 
@@ -892,7 +892,7 @@ Gibt die Komponenten der Sicherheitsbeschreibung fest. Der Wert eine Kombination
 |DACL_SECURITY_INFORMATION|Legt die DACL (des Schlüssels discretionary Access Control List) fest. Der Schlüssel muss über WRITE_DAC-Zugriff, oder der aufrufende Prozess muss den Besitzer des Objekts sein.|
 |GROUP_SECURITY_INFORMATION|Legt fest, primäre Gruppe Sicherheits-ID (SID) des Schlüssels. Der Schlüssel muss WRITE_OWNER Zugriffsrechte besitzen, oder der aufrufende Prozess muss den Besitzer des Objekts sein.|
 |OWNER_SECURITY_INFORMATION|Legt fest, Besitzer-SID des Schlüssels. Der Schlüssel muss WRITE_OWNER Zugriff, oder der aufrufende Prozess muss den Besitzer des Objekts oder die Berechtigung zum SE_TAKE_OWNERSHIP_NAME aktiviert.|
-|SACL_SECURITY_INFORMATION|Legt fest, der mit dem Schlüssel System Access Control List (SACL). Der Schlüssel muss es sich um ACCESS_SYSTEM_SECURITY Zugriff haben. Der richtige Weg, um diesen Zugriff zu erhalten ist zum Aktivieren der SE_SECURITY_NAME [Berechtigungen](https://msdn.microsoft.com/library/windows/desktop/aa379306) in der aktuellen Zugriffstoken des Aufrufers, öffnen Sie das Handle für den ACCESS_SYSTEM_SECURITY Zugriff, und deaktivieren Sie die Berechtigung.|
+|SACL_SECURITY_INFORMATION|Legt fest, der mit dem Schlüssel System Access Control List (SACL). Der Schlüssel muss es sich um ACCESS_SYSTEM_SECURITY Zugriff haben. Der richtige Weg, um diesen Zugriff zu erhalten ist zum Aktivieren der SE_SECURITY_NAME [Berechtigungen](/windows/desktop/secauthz/privileges) in der aktuellen Zugriffstoken des Aufrufers, öffnen Sie das Handle für den ACCESS_SYSTEM_SECURITY Zugriff, und deaktivieren Sie die Berechtigung.|
 
 *PSD*<br/>
 Zeiger auf eine [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) Struktur, die Attribute für die Sicherheit für den angegebenen Schlüssel festlegen angibt.
