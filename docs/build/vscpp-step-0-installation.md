@@ -2,16 +2,16 @@
 title: Installieren von C++-Unterstützung in Visual Studio 2017
 description: Installieren Sie Visual Studio-Unterstützung für Visual C++
 ms.custom: mvc
-ms.date: 09/17/2018
+ms.date: 11/19/2018
 ms.topic: tutorial
 ms.devlang: C++
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 019eadee35829bb546de0a69707520dc98f4077e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0dd1c25cd17c67c310840396c80fe05dfc2b7e1
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507236"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175742"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Installieren von C++-Unterstützung in Visual Studio
 
@@ -45,11 +45,11 @@ In der Regel wird die Verwendung von Visual Studio 2017 empfohlen, auch wenn Sie
 
 1. Suchen Sie die Installer-Datei, die Sie heruntergeladen haben und ihn ausführen. Sie können in Ihrem Browser angezeigt werden, oder Umständen ist es in Ihrem Ordner "Downloads". Das Installationsprogramm benötigt Administratorrechte ausgeführt. Sie sehen möglicherweise eine **User Account Control** Dialogfeld werden Sie aufgefordert, erteilen Sie Berechtigungen zum können des Installationsprogramms, nehmen Sie Änderungen an Ihrem System aus, wählen **Ja**. Wenn Sie Probleme auftreten, suchen Sie die heruntergeladene Datei im Datei-Explorer, mit der rechten Maustaste auf das Symbol "Installer" aus, und wählen **als Administrator ausführen** aus dem Kontextmenü.
 
-   ![Führen Sie das Visual Studio 2017-Installationsprogramm](../build/media/vscpp-concierge-run-installer.gif "führen Sie den Visual Studio-Installer")
+   ![Herunterladen und installieren Sie Visual Studio-Installer](../build/media/vscpp-concierge-run-installer.gif "herunterladen und installieren Sie Visual Studio-Installer")
 
 1. Der Installer bietet Ihnen eine Liste von Workloads, bei denen es sich um Gruppen von verwandten Optionen für bestimmte Entwicklungsbereiche handelt. Unterstützung für C++ ist jetzt Teil der optionalen Workloads, die standardmäßig installiert sind.
 
-   ![Desktopentwicklung mit C++](../build/media/desktop-development-with-cpp.png "Desktopentwicklung mit C++")
+   ![Desktopentwicklung mit C++-Arbeitslast](../build/media/desktop-development-with-cpp.png "Desktopentwicklung mit C++")
 
    Wählen Sie für C++, die **Desktopentwicklung mit C++** Workload und wählen Sie dann **installieren**.
 

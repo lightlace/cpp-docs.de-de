@@ -1,6 +1,6 @@
 ---
 title: 'Recordset: Dynamisches Binden von Datenspalten (ODBC)'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - ODBC recordsets [C++], binding columns dynamically
 - data binding [C++], recordset columns
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: 0284fbeed23c5fdad47cafd29af7a47251b923a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2fc870ba08bbec0a886b3d77281f3c697ae09fe
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469679"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175664"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Recordset: Dynamisches Binden von Datenspalten (ODBC)
 
@@ -78,7 +78,7 @@ Dynamisches Binden von hinzugefügt Spalten zur Laufzeit erfordert die folgenden
 
    Ein Ansatz ist die Erstellung eine oder mehrere dynamische Listen, einen Namen für die neuen Spalten, eine andere für die Ergebniswerte und eine dritte für ihre Datentypen (falls erforderlich). Diese Listen, insbesondere der Werteliste, geben Sie die Informationen und der notwendigen Speicher für die Bindung. Die folgende Abbildung veranschaulicht das Erstellen von Listen.
 
-   ![Erstellen von Listen für dynamisch gebundene Spalten](../../data/odbc/media/vc37w61.gif "vc37w61")<br/>
+   ![Erstellen von Listen für dynamisch gebundene Spalten](../../data/odbc/media/vc37w61.gif "Erstellen von Listen für dynamisch gebundene Spalten")<br/>
    Erstellen von Listen für dynamisch gebundene Spalten
 
 1. Hinzufügen von RFX-Funktion in Ihrer Haupt-Recordsets `DoFieldExchange` -Funktion für jede Spalte hinzugefügt. Diese Aufrufe RFX erledigen der Arbeit einen Datensatz abrufen, einschließlich der zusätzlichen Spalten und Binden der Spalten auf Recordsetdatenmember oder dynamisch bereitgestellten Speicher für diese.

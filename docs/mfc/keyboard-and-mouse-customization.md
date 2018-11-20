@@ -1,16 +1,16 @@
 ---
 title: Anpassen von Tastatur und Maus
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - customizations [MFC], keyboard and mouse (MFC Extensions)
 - keyboard and mouse customizations (MFC Extensions)
 ms.assetid: 1f789f1b-5f2e-4b11-b974-e3e2a2e49d82
-ms.openlocfilehash: 8bb685974ed4020611ffe275ba504951d132afac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ccbe83185c48439273024a97c881f1c32a2ddc7
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487386"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175679"
 ---
 # <a name="keyboard-and-mouse-customization"></a>Anpassen von Tastatur und Maus
 
@@ -22,7 +22,8 @@ In der **Anpassung** im Dialogfeld der Benutzer kann die benutzerdefinierte Steu
 
 Die folgende Abbildung zeigt die **Tastatur** Registerkarte die **Anpassung** Dialogfeld.
 
-![Registerkarte "Tastatur" im Dialogfeld "anpassen"](../mfc/media/mfcnextkeyboardtab.png "Mfcnextkeyboardtab") Tastatur Registerkarte "Anpassung"
+![Registerkarte "Tastatur" im Dialogfeld "anpassen"](../mfc/media/mfcnextkeyboardtab.png "Registerkarte \"Tastatur\" im Dialogfeld \"anpassen\"") <br/>
+Tastatur-Registerkarte "Anpassung"
 
 Der Benutzer interagiert mit der Registerkarte "Tastatur" zu einem Befehl eine oder mehrere Tastenkombinationen zuweisen. Die verfügbaren Befehle finden Sie auf der linken Seite der Registerkarte. Der Benutzer kann einen der verfügbaren Befehle im Menü auswählen. Nur Befehle im Menü können eine Tastenkombination zugeordnet werden. Nachdem der Benutzer eine neue Verknüpfung, gibt die **weisen** Schaltfläche aktiviert wird. Wenn der Benutzer diese Schaltfläche klickt, ordnet die Anwendung den ausgewählten Befehl diese Tastenkombination auftaucht.
 
@@ -36,7 +37,8 @@ Wenn Sie den Assistenten zum Erstellen Ihrer Anwendung verwenden, wird der Assis
 
 Die folgende Abbildung zeigt die **Maus** Registerkarte die **Anpassung** Dialogfeld.
 
-![Registerkarte "Maus" im Dialogfeld "anpassen"](../mfc/media/mfcnextmousetab.png "Mfcnextmousetab") Maus-Registerkarte "Anpassung"
+![Registerkarte "Maus" im Dialogfeld "anpassen"](../mfc/media/mfcnextmousetab.png "Registerkarte \"Maus\" im Dialogfeld \"anpassen\"") <br/>
+Registerkarte "Maus-Anpassung"
 
 Der Benutzer interagiert mit dieser Registerkarte können Sie ein Menü zuweisen Befehl aus, um die Maus, doppelklicken Sie auf Aktion. Der Benutzer eine Ansicht aus der linken Seite des Fensters ausgewählt und verwendet dann die Steuerelemente auf der rechten Seite, die Doppelklickaktion aus einen Befehl zugeordnet werden soll. Nachdem der Benutzer klickt auf **schließen**, führt die Anwendung den zugeordneten Befehl aus, wenn der Benutzer eine beliebige Stelle in der Ansicht doppelklickt.
 

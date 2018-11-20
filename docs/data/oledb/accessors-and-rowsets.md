@@ -1,6 +1,6 @@
 ---
 title: Accessoren und Rowsets
-ms.date: 10/22/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - accessors [C++]
 - OLE DB consumer templates, rowset support
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-ms.openlocfilehash: 74a839d36f96b115d1f4e0c35532bd76d998a4b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d29c409f2ed410d9f697419e9a98b675eee7a69d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651255"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175712"
 ---
 # <a name="accessors-and-rowsets"></a>Accessoren und Rowsets
 
@@ -34,7 +34,7 @@ Alle Accessoren werden von [CAccessorBase](../../data/oledb/caccessorbase-class.
 
 Die folgende Abbildung zeigt die Accessortypen.
 
-![Zugriffsmethodentypen](../../data/oledb/media/vcaccessortypes.gif "Vcaccessortypes")<br/>
+![Zugriffsmethodentypen](../../data/oledb/media/vcaccessortypes.gif "zugriffsmethodentypen")<br/>
 Accessorklassen
 
 - [CAccessor](../../data/oledb/caccessor-class.md) verwenden Sie diesen Accessor, wenn Sie die Struktur der Datenbankquelle zur Entwurfszeit bekannt. `CAccessor` statisch bindet ein Datenbankeintrag, die den Puffer enthält, mit der Datenquelle ein.
@@ -63,7 +63,7 @@ OLE DB-Vorlagen unterstützen drei Arten von Rowsets (siehe Abbildung oben): ein
 
 Die folgende Abbildung zeigt die Rowsettypen.
 
-![Grafik zu RowsetType](../../data/oledb/media/vcrowsettypes.gif "Vcrowsettypes")<br/>
+![Grafik zu RowsetType](../../data/oledb/media/vcrowsettypes.gif "Grafik zu RowsetType")<br/>
 Schemarowset-Klassen
 
 [Schemarowsets](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) nicht den Zugriff auf Daten in den Daten zu speichern, sondern auf Informationen über den Datenspeicher, die als Metadaten bezeichnet. Schemarowsets werden in der Regel in Situationen verwendet, in denen die Struktur der Datenbank ist nicht zur Kompilierzeit bekannt und muss zur Laufzeit abgerufen werden.

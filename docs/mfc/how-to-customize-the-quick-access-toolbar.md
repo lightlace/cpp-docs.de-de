@@ -1,21 +1,21 @@
 ---
 title: 'Gewusst wie: Anpassen der Symbolleiste für den Schnellzugriff'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-ms.openlocfilehash: d9bdc523218c7fad217d066eabd518aaff011df3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aced2e732b68f838c679518ef67b1d6bdd361964
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558482"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176327"
 ---
 # <a name="how-to-customize-the-quick-access-toolbar"></a>Gewusst wie: Anpassen der Symbolleiste für den Schnellzugriff
 
 Der schnelle Zugriff Symbolleiste (QAT) ist eine anpassbare Symbolleiste, die eine Reihe von Befehlen enthält, die entweder neben der Schaltfläche "Anwendung" oder auf den Registerkarten für die Kategorie angezeigt. Die folgende Abbildung zeigt eine typische Symbolleiste für den Schnellzugriff an.
 
-![MFC-Menüband die Symbolleiste für Schnellzugriff](../mfc/media/quick_access_toolbar.png "Quick_access_toolbar")
+![MFC-Menüband-Symbolleiste für Schnellzugriff](../mfc/media/quick_access_toolbar.png "MFC-Menüband-Symbolleiste für Schnellzugriff")
 
 Informationen zum Anpassen der Symbolleiste für den Schnellzugriff öffnen Sie es in der **Eigenschaften** , ändern Sie die Befehle, und klicken Sie dann eine Vorschau des Menüband-Steuerelements.
 
@@ -55,4 +55,3 @@ Symbolleiste für den schnellbefehle werden nicht auf der Entwurfsoberfläche an
 ## <a name="see-also"></a>Siehe auch
 
 [Menüband-Designer (MFC)](../mfc/ribbon-designer-mfc.md)
-

@@ -1,6 +1,6 @@
 ---
 title: CRectTracker-Klasse
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CRectTracker
 - AFXEXT/CRectTracker
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: 519f88a3706812ae77d7dbd77e199b3e3ef4e97a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c82b06903f0705a79a15b263b1dbdfc6aee4c8ca
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473371"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176509"
 ---
 # <a name="crecttracker-class"></a>CRectTracker-Klasse
 
@@ -237,7 +237,7 @@ Die Handles zur Größenänderung werden auf den Seiten und die Ecken des Rechte
 
 Ein Rechteck ist 8 Handles zur Größenänderung nummeriert von 0 bis 7. Jede Ziehpunkt wird durch ein wenig in der Maske dargestellt; der Wert dieses Bit ist 2 ^ *n*, wobei *n* ist die Anzahl der Größenänderung-Handle. Bits 0 bis 3 entsprechen die Ecke Ziehpunkte, die oben links, gleitenden im Uhrzeigersinn ab. Bits 4 bis 7 auf der Seite entsprechen Ziehpunkte, die oben im Uhrzeigersinn verschieben. Die folgende Abbildung zeigt das Ändern der Größe eines Rechtecks behandelt und die entsprechenden Nummern der Ziehpunkte und Werte Größe:
 
-![Ändern Sie die Nummern der Ziehpunkte Größe](../../mfc/reference/media/vc35dp1.gif "vc35dp1")
+![Ändern Sie die Nummern der Ziehpunkte Größe](../../mfc/reference/media/vc35dp1.gif "Nummern der Ziehpunkte ändern")
 
 Die standardmäßige Implementierung des `GetHandleMask` gibt die Maske der Bits zurück, sodass die Handles zur Größenänderung angezeigt werden. Wenn es sich bei den einzelne Bit aktiviert ist, wird der entsprechenden Ziehpunkt gezeichnet.
 

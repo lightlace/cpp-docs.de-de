@@ -1,13 +1,13 @@
 ---
 title: Abrufen von Zeigern auf Datenpuffer (C++/CX)
-ms.date: 12/30/2016
+ms.date: 11/19/2018
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-ms.openlocfilehash: 6fc136af4098659779b4b4ff7fb8878e1cea6590
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2cd99019d75272f4362518de78b729cd7a2549f3
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514269"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175105"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Abrufen von Zeigern auf Datenpuffer (C++/CX)
 
@@ -15,7 +15,7 @@ In Windows Runtime bietet die [Windows::Storage::Streams::IBuffer](https://msdn.
 
 Im folgenden Diagramm ist ein XAML-Imageelement dargestellt, dessen Quelle eine [Windows::UI::Xaml::Media::Imaging WriteableBitmap](https://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx)ist. Eine Client-App, die in einer beliebigen Sprache geschrieben ist, kann einen Verweis auf `WriteableBitmap` an den C++-Code übergeben. Dann kann C++ mit diesem Verweis zum zugrunde liegenden Puffer gelangen. In einer universellen Windows-Plattform-app, die in C++ geschrieben ist, können Sie die Funktion im folgenden Beispiel direkt im Quellcode verwenden, ohne die in einer Windows-Runtime-Komponente verpacken.
 
-![C&#43; &#43; Code direkt auf Pixeldaten zugreift](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")
+![C&#43; &#43; Code, der direkt auf Pixeldaten zugreift](../cppcx/media/ibufferbyteaccessdiagram.png "C&#43; &#43; Code, der direkt auf Pixeldaten zugreift")
 
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData
 

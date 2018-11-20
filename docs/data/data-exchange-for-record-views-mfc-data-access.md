@@ -1,6 +1,6 @@
 ---
 title: Datenaustausch für Datensatzansichten (MFC-Datenzugriff)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - RFX (record field exchange), data exchange mechanism
 - RFX (record field exchange), record views
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DDX (dialog data exchange), record views
 - RFX (record field exchange)
 ms.assetid: abc52ca7-6997-47a7-98f3-f347f52b1f72
-ms.openlocfilehash: d3b1c5b997baa0938c532c7a2806d5e65eb125a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf9f32e970becd1ef8dc4e347512dcfaa7cf62ac
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546467"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175409"
 ---
 # <a name="data-exchange-for-record-views---mfc-data-access"></a>Datenaustausch für Datensatzansichten (MFC-Datenzugriff)
 
@@ -23,7 +23,7 @@ DDX für Datensatzansichten funktioniert in Verbindung mit [RFX](../data/odbc/re
 
 Die folgende Abbildung zeigt die Beziehung zwischen DDX und RFX für Datensatzansichten.
 
-![Dialogfeld&#45;Datenaustausch und eines Eintrags&#45;Feld Exchange](../data/media/vc37xt1.gif "vc37xt1")<br/>
+![Dialogfeld&#45;Datenaustausch und eines Eintrags&#45;Feld Exchange](../data/media/vc37xt1.gif "Dialogfeld&#45;Datenaustausch und eines Eintrags&#45;Feld Exchange")<br/>
 Dialogdatenaustausch und Datensatzfeldaustausch
 
 Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -validierung](../mfc/dialog-data-exchange-and-validation.md). Weitere Informationen über RFX finden Sie unter [Datensatzfeldaustausch (RFX)](../data/odbc/record-field-exchange-rfx.md).

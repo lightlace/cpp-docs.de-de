@@ -1,15 +1,15 @@
 ---
 title: 'Gewusst wie: Erstellen und Verwenden von unique_ptr-Instanzen'
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
-ms.openlocfilehash: 13823b34042d8658d0d690e6657e1f41db50f788
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3e5705b47a4cfdf17b9a4b4829f1e13565dd7ce
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610248"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174877"
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>Gewusst wie: Erstellen und Verwenden von unique_ptr-Instanzen
 
@@ -17,7 +17,7 @@ Ein [Unique_ptr](../standard-library/unique-ptr-class.md) der Zeiger wird nicht 
 
 Das folgende Diagramm veranschaulicht die Eigentumsübertragung zwischen zwei `unique_ptr`-Instanzen.
 
-![Verschieben den Besitz der einen eindeutigen&#95;Ptr](../cpp/media/unique_ptr.png "Unique_ptr")
+![Verschieben den Besitz der einen eindeutigen&#95;Ptr](../cpp/media/unique_ptr.png "verschieben den Besitz der einen eindeutigen&#95;Ptr")
 
 `unique_ptr` wird definiert, der `<memory>` -Header in der C++-Standardbibliothek. Dabei handelt es sich genau so effizient wie ein unformatierter Zeiger in C++-Standardbibliothek-Containern verwendet werden können. Das Hinzufügen von `unique_ptr` -Instanzen, die C++-Standardbibliothek-Containern ist effizient, da der bewegungskonstruktor des der `unique_ptr` entfällt die Notwendigkeit für einen Kopiervorgang ab.
 

@@ -1,6 +1,6 @@
 ---
 title: Gültigkeitsbereich (C++)
-ms.date: 04/08/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - classes [C++], scope
 - scope [C++]
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-ms.openlocfilehash: f44b75be7b2b1459e3ee9d0472f9a5ef6dac9025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 534bb9711ff54e21ca091b399aa3d13ec5a7359d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506612"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176756"
 ---
 # <a name="scope-c"></a>Gültigkeitsbereich (C++)
 
@@ -41,7 +41,8 @@ Es gibt sechs Arten von Gültigkeitsbereichen:
 
 Sie können einen Namen verbergen, indem Sie ihn in einem eingeschlossenen Block deklarieren. In der folgenden Abbildung wird `i` innerhalb des inneren Blocks neu deklariert. Dadurch wird die Variable ausgeblendet, die `i` im äußeren Blockbereich zugeordnet ist.
 
-![Block&#45;Bereich Ausblenden von Namen](../cpp/media/vc38sf1.png "vc38SF1") Blockbereich und Ausblenden von Namen
+![Block&#45;Bereich Ausblenden von Namen](../cpp/media/vc38sf1.png "Block&#45;Bereich Ausblenden von Namen") <br/>
+Blockbereich und Ausblenden von Namen
 
 Die in der Abbildung dargestellte Ausgabe des Programms lautet wie folgt:
 

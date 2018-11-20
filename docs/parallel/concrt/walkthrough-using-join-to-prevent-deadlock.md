@@ -1,18 +1,18 @@
 ---
 title: 'Exemplarische Vorgehensweise: Verhindern von Deadlocks mit join'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - preventing deadlock with joins [Concurrency Runtime]
 - deadlock, preventing [Concurrency Runtime]
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: b98c2deb158b9b9fc71caa7133aeaeb2acfd369c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b62f4007a79faaff479e4e8ff998a8b48e4d5dd1
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498819"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175913"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>Exemplarische Vorgehensweise: Verhindern von Deadlocks mit join
 
@@ -48,7 +48,7 @@ Diese exemplarische Vorgehensweise enthält folgende Abschnitte:
 
 Das Philosophenproblem veranschaulicht, wie Deadlocks in einer Anwendung auftreten. Bei diesem Problem sitzen fünf Philosophen an einem runden Tisch. Die einzelnen Philosophen haben Phasen, in denen sie denken, und Phasen, in denen sie essen. Jeder Philosoph muss ein Essstäbchen mit dem Tischnachbarn zu seiner Linken und ein anderes Essstäbchen mit dem Tischnachbarn zu seiner Rechten teilen. Die folgende Abbildung veranschaulicht diese Anordnung.
 
-![Das Problem der dinierenden Philosophen](../../parallel/concrt/media/dining_philosophersproblem.png "Dining_philosophersproblem")
+![Das Philosophenproblem](../../parallel/concrt/media/dining_philosophersproblem.png "das Philosophenproblem")
 
 Um essen zu können, benötigt ein Philosoph zwei Essstäbchen. Wenn jeder Philosoph nur ein Essstäbchen hat und auf das zweite wartet, kann kein Philosoph essen und alle bleiben hungrig.
 

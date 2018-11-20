@@ -1,6 +1,6 @@
 ---
 title: CMFCPropertySheet-Klasse
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCPropertySheet
 - AFXPROPERTYSHEET/CMFCPropertySheet
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 8e643474d577c606e80f5f34c6166a59753610f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1168375606ef86061269454aa361a076efa331a4
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531611"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176405"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet-Klasse
 
@@ -112,15 +112,15 @@ Führen Sie die folgenden Schritte aus, um die `CMFCPropertySheet`-Klasse in Ihr
 
 In der folgenden Abbildung wird ein Eigenschaftsblatt gezeigt, das im Stile einer eingebetteten Microsoft Outlook-Symbolleiste vorliegt. Die Outlook-Symbolleiste wird auf der linken Seite des Eigenschaftenfensters angezeigt.
 
-![CMFCPropertySheet-Farbsteuerelemente](../../mfc/reference/media/cmfcpropertysheet_color.png "Cmfcpropertysheet_color")
+![CMFCPropertySheet-Farbsteuerelemente](../../mfc/reference/media/cmfcpropertysheet_color.png "CMFCPropertySheet-Farbsteuerelemente")
 
 Die folgende Abbildung zeigt ein Eigenschaftenblatt an, die enthält eine [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md) Objekt. Bei diesem Objekt handelt es sich um ein Eigenschaftsblatt im Stile eines Eigenschaftsblatts für allgemeine Standardsteuerelemente.
 
-![CMFCPropertySheet-Listen- und Farbsteuerelemente](../../mfc/reference/media/cmfcpropertysheet_list.png "Cmfcpropertysheet_list")
+![CMFCPropertySheet-Listen- und Farbsteuerelemente](../../mfc/reference/media/cmfcpropertysheet_list.png "CMFCPropertySheet-Listen- und Farbsteuerelemente")
 
 In der folgenden Abbildung wird ein Eigenschaftsblatt gezeigt, das im Stile eines Struktursteuerelements vorliegt.
 
-![Eigenschaftenstruktur](../../mfc/reference/media/proptree.png "Proptree")
+![Eigenschaftenstruktur](../../mfc/reference/media/proptree.png "Eigenschaftenstruktur")
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 

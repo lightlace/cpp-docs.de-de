@@ -1,6 +1,6 @@
 ---
 title: Verbindungspunkte
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - IConnectionPoint
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - CCmdTarget class [MFC], and connection points
 - sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
-ms.openlocfilehash: cddbdb30cbc5f5ddb5fa98524ad067655f262be1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf21e7bf591a5b1977784db1542053817a73e6cd
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517636"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175482"
 ---
 # <a name="connection-points"></a>Verbindungspunkte
 
@@ -30,7 +30,8 @@ In der Vergangenheit definiert das Component Object Model (COM) einen allgemeine
 
 Eine Verbindung besteht aus zwei Teilen: das Objekt mit dem Aufruf der Schnittstelle, die aufgerufen wird, die Quelle und das Objekt, das die-Schnittstelle implementieren, die Senke aufgerufen haben. Ein Verbindungspunkt ist die Schnittstelle, die von der Quelle verfügbar gemacht werden. Durch einen Verbindungspunkt verfügbar zu machen, kann eine Quelle senken, um Verbindungen mit sich selbst (Quelle) herzustellen. Zeigen Sie über die Verbindung Mechanismus (die `IConnectionPoint` Schnittstelle), ein Zeiger auf die Ereignissenken-Schnittstelle mit dem Quellobjekt übergeben wird. This-Zeigers stellt die Quelle mit Zugriff auf die Senke in der Implementierung eines Satzes von Memberfunktionen bereit. Beispielsweise kann die Quelle zum Auslösen eines Ereignisses, das von der Senke implementiert, die entsprechende Methode der Senke der Implementierung aufrufen. Die folgende Abbildung veranschaulicht die Verbindung Zeitpunkt gerade beschrieben.
 
-![Verbindungspunkt implementiert](../mfc/media/vc37lh1.gif "vc37lh1") ein implementiert Verbindung zeigen.
+![Verbindungspunkt implementiert](../mfc/media/vc37lh1.gif "Verbindungspunkt implementiert") <br/>
+Implementierter Verbindungspunkt
 
 MFC implementiert dieses Modell in der [CConnectionPoint](../mfc/reference/cconnectionpoint-class.md) und [CCmdTarget](../mfc/reference/ccmdtarget-class.md) Klassen. Von abgeleiteten Klassen `CConnectionPoint` implementieren die `IConnectionPoint` Schnittstelle verwendet, um Verbindungspunkte für andere Objekte verfügbar zu machen. Von abgeleiteten Klassen `CCmdTarget` implementieren die `IConnectionPointContainer` -Schnittstelle, die Auflisten aller verfügbaren Verbindungspunkte eines Objekts oder einen bestimmten Verbindungspunkt finden kann.
 
@@ -54,7 +55,8 @@ Fügen Sie schließlich einen Aufruf von `EnableConnections` in den Konstruktor 
 
 Nachdem dieser Code eingefügt wurde, Ihre `CCmdTarget`-abgeleiteten Klasse stellt einen Verbindungspunkt für die `ISampleSink` Schnittstelle. Die folgende Abbildung veranschaulicht dieses Beispiel.
 
-![Mithilfe von MFC implementierter Verbindungspunkt](../mfc/media/vc37lh2.gif "vc37lh2") eine Verbindung mit MFC implementierter zeigen
+![Mithilfe von MFC implementierter Verbindungspunkt](../mfc/media/vc37lh2.gif "mithilfe von MFC implementierter Verbindungspunkt") <br/>
+Mit MFC implementierter Verbindungspunkt
 
 Verbindungspunkte unterstützen in der Regel "Multicasting" – die Möglichkeit, mehrere senken übertragen verbunden sind, auf die gleiche Schnittstelle. Das folgende Beispielfragment zeigt, wie Sie Multicast, indem jede Senke an einem Verbindungspunkt durchlaufen:
 

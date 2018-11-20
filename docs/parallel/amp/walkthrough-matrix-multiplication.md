@@ -1,13 +1,13 @@
 ---
 title: 'Exemplarische Vorgehensweise: Matrixmultiplikation'
-ms.date: 11/06/2018
+ms.date: 11/19/2018
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: d9516cf79b738ec03dd98133a4603b47f75eb2c8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: ae86ff5a111348404616c8bb4fecd3bf22afc90c
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327108"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176158"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Exemplarische Vorgehensweise: Matrixmultiplikation
 
@@ -41,13 +41,13 @@ Vor dem Start:
 
 In diesem Abschnitt erwägen Sie die Multiplikation von zwei Matrizen, A und B, die folgendermaßen definiert werden:
 
-![3&#45;von&#45;2-Matrix](../../parallel/amp/media/campmatrixanontiled.png "Campmatrixanontiled")
+![3&#45;von&#45;2-Matrix ein](../../parallel/amp/media/campmatrixanontiled.png "3&#45;von&#45;2-Matrix ein")
 
-![2&#45;von&#45;3-Matrix](../../parallel/amp/media/campmatrixbnontiled.png "Campmatrixbnontiled")
+![2&#45;von&#45;B-3-Matrix](../../parallel/amp/media/campmatrixbnontiled.png "2&#45;von&#45;B-3-Matrix")
 
 A ist eine 3 x 2-Matrix und B eine 2 x 3-Matrix. Das Produkt der Multiplikation von A nach B ist die folgende Matrix 3 x 3-Matrix. Das Produkt wird berechnet, indem die Zeilen von A mit den Spalten von B Element für Element multipliziert werden.
 
-![3&#45;von&#45;3-Matrix](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;von&#45;3-Matrix")
+![3&#45;von&#45;3 Produktmatrix](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;von&#45;3 Produktmatrix.")
 
 ### <a name="to-multiply-without-using-c-amp"></a>Multiplizieren ohne C++ AMP
 
@@ -159,21 +159,21 @@ Tiling ist eine Technik, die Daten in gleich skalierte Teilmengen partitioniert 
 
 Um Tiling in der Matrixmultiplikation zu nutzen, muss der Algorithmus die Matrix in Tiles partitionieren und die Tiledaten für einen schnelleren Zugriff in `tile_static`-Variable kopieren. In diesem Beispiel wird die Matrix in Submatrizes gleicher Größe partitioniert. Das Produkt wird gefunden, indem die Submatrizes multipliziert werden. Die zwei Matrizen und ihr Produkt sind in diesem Beispiel:
 
-![4&#45;von&#45;4-Matrix](../../parallel/amp/media/campmatrixatiled.png "4&#45;von&#45;4-Matrix ein")
+![4&#45;von&#45;4-Matrix ein](../../parallel/amp/media/campmatrixatiled.png "4&#45;von&#45;4-Matrix ein")
 
-![4&#45;von&#45;4-Matrix](../../parallel/amp/media/campmatrixbtiled.png "4&#45;von&#45;B-4-Matrix")
+![4&#45;von&#45;4-Matrix B](../../parallel/amp/media/campmatrixbtiled.png "4&#45;von&#45;B-4-Matrix")
 
-![4&#45;von&#45;4-Matrix](../../parallel/amp/media/campmatrixproducttiled.png "4&#45;von&#45;4 Matrixprodukt")
+![4&#45;von&#45;4 Produktmatrix](../../parallel/amp/media/campmatrixproducttiled.png "4&#45;von&#45;4 Produktmatrix.")
 
 Die Matrizen sind in vier 2 x 2-Matrizen partitioniert, die wie folgt definiert werden:
 
-![4&#45;von&#45;4-Matrix aufgeteilt in 2&#45;von&#45;2 Sub&#45;Matrizen](../../parallel/amp/media/campmatrixapartitioned.png "4&#45;von&#45;4-Matrix aufgeteilt in 2&#45;von&#45;2 Sub&#45;Matrizen")
+![4&#45;von&#45;4-Matrix aufgeteilt in 2 eine&#45;von&#45;2 Sub&#45;Matrizen](../../parallel/amp/media/campmatrixapartitioned.png "4&#45;von&#45;4-Matrix aufgeteilt in 2 eine&#45;von&#45;2 Sub&#45;Matrizen")
 
-![4&#45;von&#45;4-Matrix aufgeteilt in 2&#45;von&#45;2 Sub&#45;Matrizen](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;von&#45;4-Matrix aufgeteilt in 2&#45;von&#45;2 Sub&#45;Matrizen")
+![4&#45;von&#45;B-4-Matrix aufgeteilt in 2&#45;von&#45;2 Sub&#45;Matrizen](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;von&#45;B-4-Matrix aufgeteilt in 2&#45;von&#45;2 Sub&#45;Matrizen")
 
 Das Produkt von A und B kann nun wie folgt geschrieben und berechnet werden:
 
-![4&#45;von&#45;4-Matrix aufgeteilt in 2&#45;von&#45;2 Sub&#45;Matrizen](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;von&#45;4 Matrixprodukt von A und B")
+![4&#45;von&#45;4-Matrix aufgeteilt in 2 A-B&#45;von&#45;2 Sub&#45;Matrizen](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;von&#45;4-Matrix aufgeteilt in 2 A-B&#45;von&#45;2 Sub&#45;Matrizen")
 
 Da es sich bei den Matrizen `a` bis `h` um 2 x 2-Matrizen handelt, sind alle Produkte und Summen aus ihnen ebenfalls 2 x 2-Matrizen. Außerdem folgt, dass das Produkt von A und B ist ein 4 x 4-Matrix an, wie erwartet. Um den Algorithmus schnell zu überprüfen, berechnen Sie den Wert des Elements in der ersten Zeile/ ersten Spalte im Produkt. In diesem Beispiel ist dies der Wert des Elements in der ersten Zeile/ersten Spalte von `ae + bg`. Sie müssen für jeden Begriff nur die erste Spalte/erste Zeile von `ae` und `bg` berechnen. Dieser Wert für `ae` ist `(1 * 1) + (2 * 5) = 11`. Der Wert für `bg` ist `(3 * 1) + (4 * 5) = 23`. Der endgültige Wert ist `11 + 23 = 34`. Dies ist korrekt.
 

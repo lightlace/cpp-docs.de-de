@@ -1,6 +1,6 @@
 ---
 title: ATL-Auflistungsklassen
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - DestructElements function
 - collection classes, choosing
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CTraits classes
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-ms.openlocfilehash: dcb784fe2df8383382c7a9d184e9f241684bf931
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f24e5f7dd2ffa4eb5992362aee18a78fb0000aa9
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474818"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176704"
 ---
 # <a name="atl-collection-classes"></a>ATL-Auflistungsklassen
 
@@ -110,7 +110,7 @@ Eine Liste der CTraits-Klassen, finden Sie unter [Auflistungsklassen](../atl/col
 
 Das folgende Diagramm zeigt die Klassenhierarchie für die CTraits-Klassen.
 
-![Merkmalhierarchie für Auflistungsklassen](../atl/media/vctraitscollectionclasseshierarchy.gif "Vctraitscollectionclasseshierarchy")
+![Merkmalhierarchie für Auflistungsklassen](../atl/media/vctraitscollectionclasseshierarchy.gif "merkmalhierarchie für Auflistungsklassen")
 
 ## <a name="collection-classes-samples"></a>Beispiele für Auflistungsklassen
 
@@ -128,4 +128,3 @@ Die folgenden Beispiele veranschaulichen die Auflistungsklassen:
 
 [Konzepte](../atl/active-template-library-atl-concepts.md)<br/>
 [Auflistungsklassen](../atl/collection-classes.md)
-

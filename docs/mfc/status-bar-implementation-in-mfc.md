@@ -1,6 +1,6 @@
 ---
 title: Implementieren der Statusleiste mit MFC
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - COldStatusBar
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - status indicators
 - status bars [MFC], Windows 95 implementation
 ms.assetid: be5cd876-38e3-4d5c-b8cb-16d57a16a142
-ms.openlocfilehash: 25848e4467a0d767c40ffb00a1bd4d50a062d3a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 521b24646b673159d14e89bd57ea698a7ba73381
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496278"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175368"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>Implementieren der Statusleiste mit MFC
 
@@ -33,7 +33,8 @@ Ab MFC 4.0, Statusleisten werden durch-Klasse implementiert [CStatusBarCtrl](../
 
 Die folgende Abbildung zeigt eine Statusleiste, in dem mehrere Indikatoren angezeigt.
 
-![Statusleiste](../mfc/media/vc37dy1.gif "vc37dy1") eine Statusleiste
+![Statusleiste](../mfc/media/vc37dy1.gif "Statusleiste") <br/>
+Statusleiste
 
 Wie die Symbolleiste wird das Objekt mit der Statusleiste in seiner übergeordneten Rahmenfensters eingebettet ist, und wird automatisch erstellt, wenn das Rahmenfenster erstellt wird. Die Statusleiste, wie alle Steuerleisten, automatisch auch zerstört, wenn der übergeordneten Frame zerstört wird.
 

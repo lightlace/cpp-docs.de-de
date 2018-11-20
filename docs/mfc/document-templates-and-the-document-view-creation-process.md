@@ -1,6 +1,6 @@
 ---
 title: Dokumentvorlagen und der Dokument-/-Erstellungsvorgang
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - icons, for multiple document templates
 - document templates [MFC], and views
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CDocTemplate class [MFC]
 - templates [MFC], document templates
 ms.assetid: 311ce4cd-fbdf-4ea1-a51b-5bb043abbcee
-ms.openlocfilehash: 544a9bf60ee2066688703faa7e430e2337454e66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29575166a188b0691465bef0a72810d2e3d97624
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606348"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174882"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>Dokumentvorlagen und der Erstellungsvorgang für Dokumente und Ansichten
 
@@ -24,7 +24,8 @@ Zum Verwalten komplexen Prozess, der Erstellen von Dokumenten mit ihren zugehör
 
 Einige Anwendungen unterstützen mehrere Dokumenttypen. Eine Anwendung kann z. B. Textdokumente und Dokumente mit Grafiken unterstützen. Wenn der Benutzer den neuen Befehl im Menü Datei auswählt, zeigt ein Dialogfeld in einer solchen Anwendung eine Liste der neuen Dokumenttypen zu öffnen. Für jeden unterstützten Dokumenttyp verwendet die Anwendung ein individuelles Dokument Template-Objekt. Die folgende Abbildung veranschaulicht die Konfiguration des MDI-Anwendung, die unterstützt zwei Typen von Dokumenten und mehrere offene Dokumente anzeigt.
 
-![MDI-Anwendung mit zwei Dokumenttypen](../mfc/media/vc387h1.gif "vc387h1") ein MDI-Anwendung mit zwei Dokumenttypen
+![MDI-Anwendung mit zwei Dokumenttypen](../mfc/media/vc387h1.gif "MDI-Anwendung mit zwei Dokumenttypen") <br/>
+MDI-Anwendung mit zwei Dokumenttypen
 
 Dokumentvorlagen erstellt und verwaltet werden, durch das-Objekt. Einer der wesentlichen Aufgaben ausgeführt, während Ihrer Anwendungsverzeichnis `InitInstance` Funktion besteht darin, eine oder mehrere Dokumentvorlagen des entsprechenden Typs zu erstellen. Dieses Feature finden Sie im [Erstellen von Dokumentvorlagen](../mfc/document-template-creation.md). Das Anwendungsobjekt speichert einen Zeiger auf jede Dokumentvorlage in der Vorlagenliste und stellt eine Schnittstelle für das Hinzufügen von Dokumentvorlagen.
 

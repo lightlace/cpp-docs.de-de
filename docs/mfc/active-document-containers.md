@@ -1,18 +1,18 @@
 ---
 title: Active Document-Container
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - active documents [MFC], containers
 - active document containers [MFC]
 - containers [MFC], active document
 - MFC COM, active document containment
 ms.assetid: ba20183a-8b4c-440f-9031-e5fcc41d391b
-ms.openlocfilehash: ec2e4d11e00040cf0b94957db8466d127e0b5420
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bfd4018496f1516f8016bb56da2406f2e4b04c08
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510837"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176782"
 ---
 # <a name="active-document-containers"></a>Active Document-Container
 
@@ -54,7 +54,7 @@ Die Frame-Objekt, die Objekte anzeigen und Container-Objekt können optional imp
 
 Die folgende Abbildung zeigt die konzeptionelle Beziehung zwischen einem Container und seine Komponenten (auf der linken Seite), und das aktive Dokument und seinen Ansichten (rechts). Das aktive Dokument verwaltet, Speicher und Daten, und die Ansicht zeigt oder gibt optional die Daten. Schnittstellen in Fettdruck sind diejenigen, die für die Teilnahme des aktiven Dokuments erforderlich; Die fett und kursiv sind optional. Alle anderen Schnittstellen sind erforderlich.
 
-![Active Document-Containerschnittstellen](../mfc/media/vc37gj1.gif "vc37gj1")
+![Active Document-Containerschnittstellen](../mfc/media/vc37gj1.gif "Active Document-Container-Schnittstellen")
 
 Ein Dokument, das nur eine einzige Ansicht unterstützt, kann die Ansicht und die Dokument-Komponenten (d. h. die entsprechenden Schnittstellen) auf einer einzigen konkreten Klasse implementieren. Darüber hinaus kann eine Containerwebsite, die nur eine Ansicht zu einem Zeitpunkt unterstützt das Dokument und dem Standort anzeigen in einer einzigen konkreten-Standort-Klasse kombinieren. Rahmenobjekt des Containers, muss jedoch unterschiedliche bleiben, und die Komponente für den Container lediglich befindet sich hier um ein vollständiges Bild von der Architektur zu ermöglichen; Es ist nicht betroffen von der active Document Containment-Architektur.
 

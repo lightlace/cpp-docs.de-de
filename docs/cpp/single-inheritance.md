@@ -1,6 +1,6 @@
 ---
 title: Einfache Vererbung
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - single inheritance
 - base classes [C++], indirect
@@ -10,18 +10,19 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-ms.openlocfilehash: a188780201c00451b125288b37c7c62fbe2322c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96af0c42a32f14280fd8c208a3e4eaec38a8ca3a
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461853"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175625"
 ---
 # <a name="single-inheritance"></a>Einfache Vererbung
 
 In der einfachen Vererbung, eine häufige Art der Vererbung, haben Klassen nur eine Basisklasse. Betrachten Sie die Beziehung, wie in der folgenden Abbildung veranschaulicht.
 
-![Grundlegende einzelne&#45;Vererbungsdiagramm](../cpp/media/vc38xj1.gif "vc38XJ1") einfaches Single-Inheritance-Diagramm
+![Grundlegende einzelne&#45;Vererbungsdiagramm](../cpp/media/vc38xj1.gif "grundlegenden einzelnen&#45;Inheritance-Diagramm") <br/>
+Einfaches Diagramm für einzelne Vererbung
 
 Beachten Sie den Ablauf von allgemein zu spezifisch in der Abbildung. Ein anderes häufiges Attribut, das im Entwurf der meisten Klassenhierarchien zu finden ist, ist, dass die abgeleitete Klasse "eine Art" Beziehung mit der Basisklasse hat. In der Abbildung ist `Book` eine Art `PrintedDocument` und `PaperbackBook` eine Art `book`.
 
@@ -47,12 +48,13 @@ Im vorherigen Beispiel, dem Zugriffsspezifizierer **öffentliche** verwendet wir
 
 Eine Klasse kann als Basisklasse für viele bestimmte Klassen dienen, wie in der folgenden Abbildung veranschaulicht.
 
-![Gesteuerte azyklisches Diagramm](../cpp/media/vc38xj2.gif "vc38XJ2") Beispiel eines gerichteten Azyklischen Diagramms
+![Gesteuerte azyklisches Diagramm](../cpp/media/vc38xj2.gif "gesteuerte azyklisches Diagramm") <br/>
+Beispiel für gerichtetes azyklisches Diagramm
 
 Im oben gezeigten Diagramm, das "gerichtetes azyklisches Diagramm" (oder "DAG") genannt wird, sind einige der Klassen Basisklassen für mehrere abgeleitete Klassen. Umgekehrt ist dies jedoch nicht wahr: Es gibt nur eine direkte Basisklasse für jede abgeleitete Klasse. Das Diagramm in der Abbildung stellt eine Struktur mit einfacher Vererbung dar.
 
 > [!NOTE]
->  Gerichtete azyklische Diagramme sind nicht eindeutig für die einfache Vererbung. Sie werden auch verwendet, um Mehrfachvererbungsdiagramme darzustellen.
+> Gerichtete azyklische Diagramme sind nicht eindeutig für die einfache Vererbung. Sie werden auch verwendet, um Mehrfachvererbungsdiagramme darzustellen.
 
 Bei der Vererbung enthält die abgeleitete Klasse die Member der Basisklasse plus alle neuen Member, die Sie hinzufügen. Daher kann eine abgeleitete Klasse auf Member der Basisklasse verweisen (es sei denn, diese Member werden in der abgeleiteten Klasse neu definiert). Der Bereichsauflösungsoperator (`::`) kann verwendet werden, um auf Member von direkten oder indirekten Basisklassen zu verweisen, wenn diese Member in der abgeleiteten Klasse neu definiert wurden. Betrachten Sie das folgende Beispiel:
 

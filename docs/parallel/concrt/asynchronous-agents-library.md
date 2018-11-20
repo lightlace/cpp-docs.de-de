@@ -1,16 +1,16 @@
 ---
 title: Asynchronous Agents Library
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Agents Library
 - Asynchronous Agents Library
 ms.assetid: d2a72a31-8ba6-4220-ad7a-e403a6acaa42
-ms.openlocfilehash: 9086734b22523d395022299fb75b7a130a8e7a16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b4e8e6489e98aadb6ea41d32d5a9ba14efe2668
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629280"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175859"
 ---
 # <a name="asynchronous-agents-library"></a>Asynchronous Agents Library
 
@@ -26,7 +26,7 @@ Die Agents Library besteht aus drei Komponenten: *asynchrone Agents*, *asynchron
 
 Aus folgender Abbildung geht hervor, wie zwei Agents mithilfe von Meldungsblöcke und Meldungsübergabefunktionen kommunizieren. In dieser Abbildung `agent1` sendet eine Nachricht an `agent2` mithilfe der [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) Funktion und ein [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) Objekt. `agent2` verwendet die [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) Funktion, um die Nachricht zu lesen. `agent2` verwendet dieselbe Methode, um eine Meldung an `agent1` zu senden. Gestrichelte Pfeile stellen den Datenstrom zwischen Agents dar. Ausgefüllte Pfeile verbinden die Agents mit den Meldungsblöcken, auf die sie schreiben oder von denen sie lesen.
 
-![Die Komponenten der Agents Library](../../parallel/concrt/media/agent_librarycomp.png "Agent_librarycomp")
+![Die Komponenten der Agents Library](../../parallel/concrt/media/agent_librarycomp.png "die Komponenten der Agents Library")
 
 Ein Codebeispiel, bei dem diese Abbildung implementiert wird, finden Sie weiter unten in diesem Thema.
 

@@ -1,6 +1,6 @@
 ---
 title: 'MFC-ActiveX-Steuerelemente: Verwenden von Schriftarten'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - OnFontChanged
 - HeadingFont
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 6a647f67849d84119d58186fc71ec1b412713734
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9fb7668f65b04372b87059034c3ec6cd20abc48d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608912"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175820"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC-ActiveX-Steuerelemente: Verwenden von Schriftarten
 
@@ -204,7 +204,8 @@ In den meisten Fällen muss das Steuerelement kennen, wenn die Eigenschaften des
 
 Wenn das Steuerelement die vordefinierte Schriftarteigenschaft verwendet wird, werden von Benachrichtigungen behandelt die `OnFontChanged` Memberfunktion `COleControl`. Wenn Sie die Eigenschaften für benutzerdefinierte Schriftart hinzufügen, haben Sie diese dieselbe Implementierung verwenden. Im Beispiel im vorherigen Abschnitt zu diesem Zweck übergeben &*M_xFontNotification* beim Initialisieren der *M_fontHeading* Membervariablen gespeichert.
 
-![Implementieren mehrerer Schnittstellen für Schriftartobjekte](../mfc/media/vc373q1.gif "vc373q1") Implementieren mehrerer Schnittstellen für Schriftartobjekte
+![Implementieren mehrerer Schnittstellen für Schriftartobjekte](../mfc/media/vc373q1.gif "Implementieren mehrerer Schnittstellen für Schriftartobjekte") <br/>
+Implementieren mehrerer Schnittstellen für Schriftartobjekte
 
 Die durchgezogene Linien in der obigen Abbildung zeigen, dass beide Schriftartobjekte dieselbe Implementierung von verwenden `IFontNotification`. Dies kann Probleme verursachen, wenn Sie zu unterscheiden, welche Schriftart geändert wurde.
 

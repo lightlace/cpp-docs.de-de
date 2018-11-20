@@ -1,17 +1,17 @@
 ---
 title: Memberzugriffssteuerung (C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - access control [C++]
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-ms.openlocfilehash: ee4e9d89878aab4be2e4daf45525f9e951d214f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 546b23b939078c723084bdfc659ff4fd3216b479
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611418"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176224"
 ---
 # <a name="member-access-control-c"></a>Memberzugriffssteuerung (C++)
 
@@ -234,7 +234,8 @@ Im vorherigen Beispiel wird das Aufrufen der virtuellen Funktion `GetState` mith
 
 In den Mehrfachvererbungsgittern, die virtuelle Basisklassen betreffen, kann ein angegebener Name über mehrere Pfade erreicht werden. Da unterschiedliche Zugriffssteuerungen entlang dieser verschiedenen Pfaden angewendet werden können, wählt der Compiler den Pfad aus, der den umfangreichsten Zugriff gewährt. Das Ergebnis wird in der folgende Abbildung gezeigt.
 
-![Access-along-Pfade eines vererbungsdiagramms](../cpp/media/vc38v91.gif "vc38V91") Zugriff entlang Pfade eines vererbungsdiagramms
+![Access-along-Pfade eines vererbungsdiagramms](../cpp/media/vc38v91.gif "Access-along-Pfade eines vererbungsdiagramms") <br/>
+Access-Along-Pfade eines Vererbungsdiagramms
 
 In der Abbildung wird ein Name, der in der Klasse `VBase` deklariert wird, immer durch die Klasse `RightPath` erreicht. Auf den rechten Pfad kann einfacher zugegriffen werden, da `RightPath``VBase` als öffentliche Basisklasse deklariert, während `LeftPath``VBase` als privat deklariert.
 

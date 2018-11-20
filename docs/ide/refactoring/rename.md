@@ -2,14 +2,15 @@
 title: Umbenennen
 ms.date: 11/16/2016
 ms.assetid: 64b42a88-3bd9-4399-8b96-75bceffc353b
-ms.openlocfilehash: b677d825675ebb0b60da8f43f778774e2e08695e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a747784f46341f130d1271fd0f15475b63d7b6d8
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455509"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51692540"
 ---
 # <a name="rename"></a>Umbenennen
+
 **Beschreibung**: Hiermit können Sie Bezeichner für Codesymbole (z.B. Felder, lokale Variablen, Methoden, Namespaces, Eigenschaften und Typen) umbenennen.
 
 **Hintergrund**: Sie möchten ein Element sicher umbenennen, ohne alle Instanzen suchen und den neuen Namen kopieren und einfügen zu müssen.

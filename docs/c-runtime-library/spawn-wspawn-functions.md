@@ -45,12 +45,12 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: 49a65680d330752679c86c47c4b142ee3153237c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: caaa3fb40a75292bd32e14ddec33b504e0c1296b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533795"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693713"
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn- und _wspawn-Funktionen
 
@@ -139,7 +139,7 @@ Neue Prozesse, die durch Aufrufe von `_spawn`-Routinen erstellt werden, behalten
 
 Wenn Sie `_spawn` über eine DLL- oder eine GUI-Anwendung aufrufen und die Ausgabe zu einer Pipe umleiten möchten, haben Sie zwei Möglichkeiten:
 
-- Verwenden Sie die Win32-API zum Erstellen einer Pipe, rufen Sie dann [AllocConsole](https://msdn.microsoft.com/library/windows/desktop/ms681944) auf, legen Sie die Handlewerte in der Startstruktur fest, und rufen Sie [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) auf.
+- Verwenden Sie die Win32-API zum Erstellen einer Pipe, rufen Sie dann [AllocConsole](/windows/console/allocconsole) auf, legen Sie die Handlewerte in der Startstruktur fest, und rufen Sie [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) auf.
 
 - Rufen Sie [_popen, _wpopen](../c-runtime-library/reference/popen-wpopen.md) auf, das eine Pipe erstellt und die Anwendung mit **cmd.exe/c** (oder **command.exe/c**) aufruft.
 

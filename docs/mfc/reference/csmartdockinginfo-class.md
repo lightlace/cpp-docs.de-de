@@ -1,6 +1,6 @@
 ---
 title: CSmartDockingInfo-Klasse
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CSmartDockingInfo
 - AFXDOCKINGMANAGER/CSmartDockingInfo
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CSmartDockingInfo [MFC], m_uiMarkerBmpResID
 - CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
-ms.openlocfilehash: 885af55987c2d1e78cd0145fcee5ca0f4ef67dc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8931af856bc75bd499d8237278998adfcdb02a6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524659"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176769"
 ---
 # <a name="csmartdockinginfo-class"></a>CSmartDockingInfo-Klasse
 
@@ -75,7 +75,7 @@ class CSmartDockingInfo : public CObject
 
 Das Framework behandelt den intelligenten andockmarkern intern. Die folgende Abbildung zeigt die standardmäßige intelligente andockmarker:
 
-![Standardmarker für intelligentes Andocken](../../mfc/reference/media/nextsdmarkers.png "Nextsdmarkers")
+![Standardmarker für intelligentes Andocken](../../mfc/reference/media/nextsdmarkers.png "standardmarker für intelligentes Andocken")
 
 In dieser Abbildung zeigt das Bild auf der linken Seite einen zentrale Gruppe intelligente Andocken Marker, der keinen Andocken zu einer Registerkarte aktiviert. Das Bild in der Mitte zeigt einen rechten Rand intelligente docking-Marker. Das Bild auf der rechten Seite zeigt einen zentrale Gruppe intelligente Andocken Marker, der besitzt Andocken zu einer Registerkarte aktiviert. Der zentrale Gruppe-smart-docking-Marker ist einer wichtigsten Bitmap und fünf intelligente Andocken Marker-Bitmaps.
 
@@ -93,7 +93,7 @@ Sie können die folgenden Parameter von intelligenten andockmarkern anpassen:
 
 Die folgende Abbildung zeigt ein Beispiel von intelligenten andockmarkern, die angepasst wurden:
 
-![Benutzerdefinierte Marker für intelligentes Andocken](../../mfc/reference/media/nextsdmarkerscustom.png "Nextsdmarkerscustom")
+![Benutzerdefinierte Marker für intelligentes Andocken](../../mfc/reference/media/nextsdmarkerscustom.png "benutzerdefinierte Marker für intelligentes Andocken")
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 

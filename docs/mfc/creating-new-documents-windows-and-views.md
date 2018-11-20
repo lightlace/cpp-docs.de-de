@@ -1,6 +1,6 @@
 ---
 title: Erstellen neuer Dokumente, Fenster und Ansichten
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - MDI [MFC], creating windows
 - window objects [MFC], creating
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - views [MFC], overriding default behavior
 - initializing views [MFC]
 ms.assetid: 88aa1f5f-2078-4603-b16b-a2b4c7b4a2a3
-ms.openlocfilehash: 20bc94c7a688d3cf88fa89fff060ab155d327606
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57e558848ce76a7c74b5715529661ad24c9cbb8e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643897"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175391"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>Erstellen neuer Dokumente, Fenster und Ansichten
 
@@ -37,11 +37,14 @@ Die folgenden Abbildungen geben einen Überblick über der Erstellungsvorgang f�
 
 Nach Abschluss dieses Prozesses die kooperierender Objekte vorhanden, und Speichern von Zeigern miteinander. Die folgenden Abbildungen zeigen die Sequenz, in der Objekte erstellt werden. Sie können die Sequenz von Abbildung zu Abbildung folgen.
 
-![Sequenz für die Erstellung eines Dokuments](../mfc/media/vc387l1.gif "vc387l1") Reihenfolge beim Erstellen eines Dokuments
+![Sequenz für die Erstellung eines Dokuments](../mfc/media/vc387l1.gif "Sequenz für die Erstellung eines Dokuments") <br/>
+Reihenfolge beim Erstellen eines Dokuments
 
-![Frame-Fenster bei der Fenstererstellung](../mfc/media/vc387l2.png "vc387l2") Reihenfolge beim Erstellen eines Rahmenfensters
+![Frame-Fenster bei der Fenstererstellung](../mfc/media/vc387l2.png "Frame-Fenster bei der Fenstererstellung") <br/>
+Reihenfolge beim Erstellen eines Rahmenfensters
 
-![Sequenz zum Erstellen einer Ansicht](../mfc/media/vc387l3.gif "vc387l3") Reihenfolge beim Erstellen einer Ansicht
+![Sequenz zum Erstellen einer Ansicht](../mfc/media/vc387l3.gif "Sequenz zum Erstellen einer Ansicht") <br/>
+Reihenfolge beim Erstellen einer Ansicht
 
 Informationen wie das Framework für das neue Dokument, Ansicht und Rahmenfenster Objekte initialisiert werden, finden Sie unter Klassen [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), und [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) in der MFC-Bibliothek-Referenz. Siehe auch [technischen Hinweis 22](../mfc/tn022-standard-commands-implementation.md), dem erläutert wird, die Erstellung und Initialisierung Prozesse weiter unter der Erläuterung der des Frameworks-Standardbefehle für die **neu** und **Öffnen** Elemente auf der **Datei** Menü.
 

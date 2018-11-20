@@ -1,6 +1,6 @@
 ---
 title: 'MFC-ActiveX-Steuerelemente: Verwenden der Datenbindung in einem ActiveX-Steuerelement'
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 f1_keywords:
 - bindable
 - requestedit
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: 9efac8ba0889d648def622ca045b9398c8eeef11
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a5cb73496cd6678e3f45500d9d53c2127b0fb17c
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518488"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175807"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Verwenden der Datenbindung in einem ActiveX-Steuerelement
 
@@ -30,7 +30,8 @@ Einer der leistungsfähigere Verwendungszwecke von ActiveX-Steuerelementen ist d
 
 Dieser Artikel behandelt die Steuerelement-Seite Ihrer Aufgabe. Implementieren die Daten binden von Interaktionen mit der Datenbank ist die Verantwortung für den Steuerelementcontainer. Wie Sie die Interaktionen mit der Datenbank in Ihrem Container verwalten, ist über den Rahmen dieser Dokumentation hinaus. Wie Sie das Steuerelement für die Datenbindung vorbereiten, werden im Rest dieses Artikels erläutert.
 
-![Konzeptuelles Diagramm eines&#45;gebundenes Steuerelement](../mfc/media/vc374v1.gif "vc374v1") Konzeptuelles Diagramm eines datengebundenen Steuerelements
+![Konzeptuelles Diagramm eines&#45;gebundenes Steuerelement](../mfc/media/vc374v1.gif "Konzeptuelles Diagramm eines&#45;gebundenes Steuerelement") <br/>
+Konzeptuelles Diagramm eines datengebundenen Steuerelements
 
 Die `COleControl` Klasse enthält zwei Memberfunktionen, mit denen einen einfachen Prozess zum Implementieren der Datenbindung. Die erste Funktion, [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit), zum Anfordern von Berechtigungen so ändern Sie den Wert der Eigenschaft verwendet wird. [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged), die zweite Funktion wird aufgerufen, nachdem Sie den Wert der Eigenschaft erfolgreich geändert wurde.
 

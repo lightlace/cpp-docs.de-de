@@ -1,16 +1,16 @@
 ---
 title: Schnittstellenelemente
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-ms.openlocfilehash: 564f0baa34cfb0fe682c2a761fcf8c0d41cd6cb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cf38d3d469da181d15a10434525b3aca63969f0
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668688"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175898"
 ---
 # <a name="interface-elements"></a>Schnittstellenelemente
 
@@ -18,7 +18,7 @@ In diesem Dokument wird beschrieben, die Elemente der Benutzeroberfläche, die i
 
 Die folgende Abbildung zeigt eine Anwendung, die mit die Elemente der neuen Benutzeroberfläche erstellt wurde.
 
-![MFC-Feature Pack-beispielanwendung](../mfc/media/mfc_featurepack.png "Mfc_featurepack")
+![MFC-Feature Pack-beispielanwendung](../mfc/media/mfc_featurepack.png "MFC Feature Pack-beispielanwendung")
 
 ## <a name="window-docking"></a>Andocken von Fenstern
 

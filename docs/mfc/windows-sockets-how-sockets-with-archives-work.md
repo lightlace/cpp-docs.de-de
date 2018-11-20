@@ -1,6 +1,6 @@
 ---
 title: 'Windows Sockets: Wie Sockets mit Archiven arbeiten'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Windows Sockets [MFC], synchronous
 - sockets [MFC], synchronous operation
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Sockets [MFC], with archives
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
-ms.openlocfilehash: e87ee1467946003580ffa75e36e39b2c747892b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6101193c85e41fbf82681b0b2ae1e09e4162f87
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510759"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174911"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: Wie Sockets mit Archiven arbeiten
 
@@ -30,7 +30,8 @@ Die `CSocketFile` Objekt ruft Funktionen des die `CSocket` Objekt zum Senden ode
 
 Die folgende Abbildung zeigt die Beziehungen zwischen diesen Objekten auf beiden Seiten der Kommunikation.
 
-![CArchive, CSocketFile und CSocket](../mfc/media/vc38ia1.gif "vc38ia1") CArchive, CSocketFile und CSocket
+![CArchive, CSocketFile und CSocket](../mfc/media/vc38ia1.gif "CArchive, CSocketFile und CSocket") <br/>
+CArchive, CSocketFile und CSocket
 
 Der Zweck dieser offensichtlichen Komplexität ist, Sie über die Notwendigkeit, die Details des Sockets selbst verwalten zu schützen. Sie erstellen den Socket, die Datei und des Archivs und klicken Sie dann zunächst senden oder empfangende von Daten in das Archiv einfügen oder extrahieren es aus dem Archiv. [CArchive](../mfc/reference/carchive-class.md), [CSocketFile](../mfc/reference/csocketfile-class.md), und [CSocket](../mfc/reference/csocket-class.md) verwalten Sie die Details im Hintergrund.
 
@@ -41,7 +42,7 @@ Ein `CSocket` Objekt ist tatsächlich ein zwei-Status-Objekt: manchmal asynchron
 Wenn `CSocket` wurden nicht implementiert, wie ein zwei-Status-Objekt ist es eventuell möglich, um zusätzliche Benachrichtigungen für die gleiche Art von Ereignis zu empfangen, während Sie eine vorherige Benachrichtigung verarbeitet wurden. Angenommen, Sie erhalten möglicherweise eine `OnReceive` Benachrichtigung während der Verarbeitung einer `OnReceive`. Im obigen Codefragment, extrahieren `str` aus dem Archiv zu Rekursion führen. Durch den Wechsel der Zustände `CSocket` wird verhindert, dass Rekursion durch zusätzliche Benachrichtigungen zu verhindern. Als allgemeine Regel gilt keine Benachrichtigungen Benachrichtigungen.
 
 > [!NOTE]
->  Ein `CSocketFile` kann auch verwendet werden, als (begrenzt) Datei ohne eine `CArchive` Objekt. In der Standardeinstellung die `CSocketFile` des Konstruktors *bArchiveCompatible* Parameter **"true"**. Dies gibt an, dass das Objekt "Datei" für die Verwendung mit einem Archiv. Um das Objekt "Datei" ohne ein Archiv zu verwenden, übergeben **"false"** in die *bArchiveCompatible* Parameter.
+> Ein `CSocketFile` kann auch verwendet werden, als (begrenzt) Datei ohne eine `CArchive` Objekt. In der Standardeinstellung die `CSocketFile` des Konstruktors *bArchiveCompatible* Parameter **"true"**. Dies gibt an, dass das Objekt "Datei" für die Verwendung mit einem Archiv. Um das Objekt "Datei" ohne ein Archiv zu verwenden, übergeben **"false"** in die *bArchiveCompatible* Parameter.
 
 In den Modus "Archive-Compatible" ein `CSocketFile` Objekt bietet eine bessere Leistung und reduziert die Gefahr von "Deadlock". Ein Deadlock tritt auf, wenn die sendenden und empfangenden Sockets sind aufeinander warten, oder warten auf eine gemeinsame Ressource. Diese Situation kann eintreten, wenn die `CArchive` Objekt hat die `CSocketFile` die Möglichkeit, dies der Fall ist mit, einem `CFile` Objekt. Mit `CFile`, das Archiv kann davon ausgehen, empfängt er weniger Bytes als angefordert, am Ende der Datei erreicht wurde. Mit `CSocketFile`, jedoch Daten basiert auf Nachrichten; der Puffer kann mehrere Nachrichten enthalten, erhalten also weniger als die Anzahl der angeforderten Bytes Ende der Datei nicht impliziert. Die Anwendung wird in diesem Fall nicht blockiert, wie sie mit `CFile`, und sie können fortfahren, Lesen von Nachrichten aus dem Puffer, bis der Puffer leer ist. Die [IsBufferEmpty](../mfc/reference/carchive-class.md#isbufferempty) -Funktion in `CArchive` eignet sich zum Überwachen des Status des Archivs Puffer in einem solchen Fall.
 
@@ -51,4 +52,3 @@ Weitere Informationen finden Sie unter [Windows Sockets: Verwenden von Sockets m
 
 [Windows-Sockets in MFC](../mfc/windows-sockets-in-mfc.md)<br/>
 [CObject:: Serialize](../mfc/reference/cobject-class.md#serialize)
-

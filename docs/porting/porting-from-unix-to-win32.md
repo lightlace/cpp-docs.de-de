@@ -10,12 +10,12 @@ helpviewer_keywords:
 - porting to Win32 [C++]
 - Win32 applications [C++], migrating from UNIX
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: ac1fb2304c6d06a6d3e1638fa7ded8a6903ee9fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70cbff207931ada378a89b978acf13fadb3a8744
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467781"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694087"
 ---
 # <a name="porting-from-unix-to-win32"></a>Portieren von UNIX auf Win32
 
@@ -61,7 +61,7 @@ Dies ist die Website eines Drittanbieters für Software, die das Portieren von U
 
 Eine weitere Möglichkeit besteht in dem direkten Portieren von UNIX-Anwendungen auf Win32. Durch die Verwendung von ANSI C/C++-Bibliotheken und kommerziellen C-Compilerbibliotheken sind die herkömmlichen Systemaufrufe, die von UNIX-Anwendungen verwendet werden, größtenteils auch in Win32-Anwendungen verfügbar.
 
-Das Ausgabemodell der **stdio**-basierten Anwendungen muss nicht geändert werden, da die Win32-Konsolen-APIs das **stdio**-Modell imitieren und Versionen von *curses* vorhanden sind, die Win32-Konsolen-APIs verwenden. Weitere Informationen finden Sie unter [SetConsoleCursorPosition](https://msdn.microsoft.com/library/windows/desktop/ms686025).
+Das Ausgabemodell der **stdio**-basierten Anwendungen muss nicht geändert werden, da die Win32-Konsolen-APIs das **stdio**-Modell imitieren und Versionen von *curses* vorhanden sind, die Win32-Konsolen-APIs verwenden. Weitere Informationen finden Sie unter [SetConsoleCursorPosition](/windows/console/setconsolecursorposition).
 
 Auf Berkeley-Sockets basierende Anwendungen müssen nur geringfügig geändert werden, um als Win32-Anwendungen ausgeführt werden zu können. Beim Entwerfen der Windows Sockets-Schnittstelle wurde auf Portabilität mit BSD-Sockets geachtet, wobei nur minimale Änderungen, die in der Einführung der WinSock-Spezifikation beschrieben werden, in Kauf genommen werden müssen.
 
@@ -69,7 +69,7 @@ Windows unterstützt den DCE-kompatiblen RPC, sodass RPC-Anwendungen problemlos 
 
 Einer der Bereiche mit den deutlichsten Unterschieden ist das Prozessmodell. UNIX verfügt über `fork`, Win32 nicht. Abhängig davon, wie `fork` und die Codebasis verwendet werden, können in Win32 zwei APIs verwendet werden: `CreateProcess` und `CreateThread`. Eine UNIX-Anwendung, die mehrere Kopien von sich selbst erstellt, kann in Win32 so überarbeitet werden, dass sie entweder mehrere Prozesse oder einen Prozess mit mehreren Threads besitzt. Bei Verwendung mehrerer Prozesse stehen mehrere IPC-Methoden für die Kommunikation zwischen Prozessen zur Verfügung (und eventuell auch für die Aktualisierung von Code und Daten des neuen Prozesses in Anpassung an den übergeordneten Prozess, falls die von `fork` bereitgestellte Funktionalität benötigt wird). Weitere Informationen zu IPC finden Sie unter [Interprocess Communications (Prozessübergreifende Kommunikation)](/windows/desktop/ipc/interprocess-communications).
 
-Die Grafikmodelle von Windows und UNIX weisen große Unterschiede auf. UNIX verwendet die X Window System GUI, während Windows GDI verwendet. Obwohl beide Schnittstellen ähnlich konzipiert sind, ist keine einfache Zuordnung zwischen X-APIs und GDI-APIs möglich. Jedoch ist OpenGL-Unterstützung für die Migration von OpenGL-basierten UNIX-Anwendungen verfügbar. Außerdem stehen X-Clients und X-Server für Windows zur Verfügung. Informationen über GDI finden Sie unter [Gerätekontexte](https://msdn.microsoft.com/library/windows/desktop/dd183553).
+Die Grafikmodelle von Windows und UNIX weisen große Unterschiede auf. UNIX verwendet die X Window System GUI, während Windows GDI verwendet. Obwohl beide Schnittstellen ähnlich konzipiert sind, ist keine einfache Zuordnung zwischen X-APIs und GDI-APIs möglich. Jedoch ist OpenGL-Unterstützung für die Migration von OpenGL-basierten UNIX-Anwendungen verfügbar. Außerdem stehen X-Clients und X-Server für Windows zur Verfügung. Informationen über GDI finden Sie unter [Gerätekontexte](/windows/desktop/gdi/device-contexts).
 
 UNIX-Basisanwendungen, darunter zahlreiche CGI-Anwendungen, sollten in der Regel leicht auf Visual C++, das unter Windows ausgeführt wird, portierbar sein. Funktionen wie `open`, `fopen`, `read`, `write` und andere sind in der Visual C++-Laufzeitbibliothek verfügbar. Darüber hinaus werden C-UNIX-APIs und Win32-APIs in einem Verhältnis von 1:1 zugeordnet: `open` zu `CreateFile`, `read` zu `ReadFile`, `write` zu `WriteFile`, `ioctl` zu `DeviceIOControl`, `close` zu `CloseFile` usw.
 

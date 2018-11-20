@@ -1,13 +1,13 @@
 ---
 title: Auflistungen (C++/CX)
-ms.date: 01/22/2017
+ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: d139bcfc6cdf61940a40ca069dd157c1805e2034
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d256e333ddf31bdb637680b70718af85e753a21d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531588"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176392"
 ---
 # <a name="collections-ccx"></a>Auflistungen (C++/CX)
 
@@ -15,7 +15,7 @@ In einem C++ / CX-Programm verwenden, können Sie der Container der Standardvorl
 
 Die Windows-Runtime definiert die Schnittstellen für Auflistungen und verwandte Typen und C++ / CX stellt die konkreten C++-Implementierungen in der Headerdatei "Collection.h" bereit. Diese Abbildung zeigt die Beziehungen zwischen den Auflistungstypen:
 
-![C&#43;&#43;&#47;CX-Vererbungsstruktur für Auflistungstypen](../cppcx/media/cppcxcollectionsinheritancetree.png "CPPCXCollectionsInheritanceTree")
+![C&#43;&#43;&#47;CX-Vererbungsstruktur für Auflistungstypen](../cppcx/media/cppcxcollectionsinheritancetree.png "C&#43;&#43;&#47;CX-Vererbungsstruktur für Auflistungstypen")
 
 - Die [Platform::Collections::Vector-Klasse](../cppcx/platform-collections-vector-class.md) ähnelt der [std::vector-Klasse](../standard-library/vector-class.md).
 
@@ -63,7 +63,7 @@ Wenn Sie eine `range for` -Schleife über `IVector` -Container verwenden, verwen
 
 Die folgende Abbildung zeigt ein Beispiel für eine `range for` -Schleife über eine `IVector<Person^>`. Beachten Sie, dass die Ausführung am Haltepunkt in Zeile 64 beendet wird. Im Fenster **Schnellüberwachung** wird angezeigt, dass die Iteratorvariable `p` tatsächlich eine `VectorProxy<Person^>` ist, die die Membervariablen `m_v` und `m_i` aufweist. Wenn Sie jedoch `GetType` für diese Variable aufrufen, gibt sie den identischen Typ zur Instanz `Person` `p2`zurück. Die Schlussfolgerung daraus: Obwohl möglicherweise `VectorProxy` und `ArrowProxy` in der **Schnellüberwachung**, in bestimmten Compilerfehlern des Debuggers oder an anderen Stellen angezeigt werden, müssen Sie sie in der Regel nicht explizit codieren.
 
-![VectorProxy in Bereich&#45;for-Schleife basierend](../cppcx/media/vectorproxy-1.png "VectorProxy_1")
+![VectorProxy in Bereich&#45;for-Schleife basierend](../cppcx/media/vectorproxy-1.png "VectorProxy in Bereich&#45;for-Schleife basierend")
 
 Ein Szenario, in dem Sie Code um das Proxyobjekt herum schreiben müssen, ist, wenn Sie eine `dynamic_cast` für die Elemente durchführen müssen, zum Beispiel, wenn Sie nach XAML-Objekte eines bestimmten Typs in einer `UIElement` -Elementauflistung suchen. In diesem Fall müssen Sie zuerst das Element in [Platform::Object](../cppcx/platform-object-class.md)^ umwandeln und dann die dynamische Umwandlung ausführen:
 

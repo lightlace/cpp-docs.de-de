@@ -2,14 +2,15 @@
 title: Implementieren von rein virtuellen Elementen
 ms.date: 11/16/2016
 ms.assetid: ea9b4719-34a3-474a-b4ec-05b1859f80f1
-ms.openlocfilehash: e693fdc17057d3800053bf5a7bad64ec441bcc3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59e4519f57a1d9bd9ba1cee1ed6ae41bea785a9f
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614902"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51692663"
 ---
 # <a name="implement-pure-virtuals"></a>Implementieren von rein virtuellen Elementen
+
 **Zweck:**: Sofortiges Generieren des Codes, der zum Implementieren aller rein virtuellen Methoden in einer Klasse erforderlich ist.
 
 **Anwendung:** Sie möchten von einer Klasse mit rein virtuellen Funktionen erben.

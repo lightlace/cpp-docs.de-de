@@ -1,6 +1,6 @@
 ---
 title: Dokumente, Ansichten und das Framework
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - document templates [MFC], template objects
 - applications [MFC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - MFC object relationships
 - thread objects [MFC]
 ms.assetid: 409ddd9b-66ad-4625-84f7-bf55a41d697b
-ms.openlocfilehash: f9397c2a16d8411fe91cbf6c1c1de3ecdffbeae7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e59e8b69dcdf0bf3b22d4286ba4692558a11e096
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662370"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175755"
 ---
 # <a name="documents-views-and-the-framework"></a>Dokumente, Ansichten und das Framework
 
@@ -59,7 +59,8 @@ Die wichtigsten Objekte in einer ausgeführten Anwendung sind:
 
 In einer ausgeführten Anwendung reagieren auf Benutzeraktionen, eine gemeinsame von Befehlen und anderen Nachrichten verbunden sind kooperativ diese Objekte. Eine einzelne Application-Objekt verwaltet einen oder mehrere Dokumentvorlagen. Jede Dokumentvorlage erstellt und verwaltet eine oder mehrere Dokumente (je nachdem, ob die Anwendung SDI- oder MDI). Der Benutzer Ansichten und bearbeitet ein Dokument über eine Sicht, die in einem Rahmenfenster enthalten sind. Die folgende Abbildung zeigt die Beziehungen zwischen diesen Objekten für einer SDI-Anwendung.
 
-![Objekte in einer ausgeführten SDI-Anwendung](../mfc/media/vc386v1.gif "vc386v1") Objekte in einer ausgeführten SDI-Anwendung
+![Objekte in einer ausgeführten SDI-Anwendung](../mfc/media/vc386v1.gif "Objekte in einer ausgeführten SDI-Anwendung") <br/>
+Objekte in einer ausgeführten SDI-Anwendung
 
 Die restlichen in dieser Artikelreihe wird erläutert, wie die Framework-Tools, den Assistenten zum MFC-Anwendungen und die Ressourcen-Editoren, die diese Objekte erstellen, wie diese zusammenarbeiten und wie Sie sie bei der Programmierung verwenden. Dokumente, Ansichten und Rahmenfenster werden ausführlicher in [Fensterobjekte](../mfc/window-objects.md) und [Dokument-/Ansichtarchitektur](../mfc/document-view-architecture.md).
 

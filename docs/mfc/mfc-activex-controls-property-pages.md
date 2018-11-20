@@ -1,6 +1,6 @@
 ---
 title: 'MFC-ActiveX-Steuerelemente: Eigenschaftenseite'
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - DDP_ functions [MFC]
 - MFC ActiveX controls [MFC], properties
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CPropertyPageDialog class [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
-ms.openlocfilehash: 764590b5d7162d7f10a60dda24649adde9e090c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7027a58960e07903c9d774e07379c8050bc489b8
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656182"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176457"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC-ActiveX-Steuerelemente: Eigenschaftenseite
 
@@ -32,7 +32,8 @@ Eigenschaftenseiten von ActiveX-Steuerelement werden auf zwei Arten angezeigt:
 
 Das Dialogfeld "Eigenschaften" (in der folgenden Abbildung dargestellt) besteht aus einem Bereich für die Anzeige der aktuellen Eigenschaftenseite der Registerkarten für den Wechsel zwischen Seiten und eine Sammlung von Schaltflächen, die allgemeine Aufgaben ausführen, z. B. das Schließen der eigenschaftenseitendialog, Alle vorgenommenen Änderungen abbrechen oder sofortiges Anwenden von Änderungen auf das ActiveX-Steuerelement.
 
-![Eigenschaftendialogfeld für Circ3](../mfc/media/vc373i1.gif "vc373i1") Eigenschaftendialogfeld
+![Eigenschaftendialogfeld für Circ3](../mfc/media/vc373i1.gif "Eigenschaftendialogfeld für Circ3") <br/>
+Im Dialogfeld Eigenschaften
 
 Dieser Artikel behandelt die Themen in Bezug auf die Verwendung von Eigenschaftenseiten in einem ActiveX-Steuerelement. Dazu gehören:
 

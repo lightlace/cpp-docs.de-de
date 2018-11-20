@@ -1,15 +1,15 @@
 ---
 title: Implementieren einer Eigenschaftenseite (ATL)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 6eb65ca3ddff79262c2f2b53d84d2f964f273c9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a76a0f49e8b0ec7458b781785cd5030d2c523f0b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669091"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176470"
 ---
 # <a name="example-implementing-a-property-page"></a>Beispiel: Das Implementieren einer Eigenschaftenseite
 
@@ -58,7 +58,7 @@ Klicken Sie auf **OK** , damit der Assistent die Eigenschaftenseite erstellt.
 
 Nun, dass Ihr Eigenschaftenseite generiert wurde, müssen Sie die Ressource Ihrer Seite darstellt, einige Steuerelemente hinzu. Fügen Sie ein Bearbeitungsfeld, ein statisches Textsteuerelement und ein Kontrollkästchen hinzu, und legen Sie deren IDs ein, wie unten dargestellt:
 
-![Dialogfeldressource bearbeiten](../atl/media/ppgresourcelabeled.gif "Ppgresourcelabeled")
+![Dialogfeldressource bearbeiten](../atl/media/ppgresourcelabeled.gif "Dialogfeldressource bearbeiten")
 
 Diese Steuerelemente werden verwendet werden, um den Dateinamen des Dokuments und den schreibgeschützten Status anzuzeigen.
 
