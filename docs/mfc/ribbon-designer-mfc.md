@@ -1,24 +1,24 @@
 ---
 title: Menüband-Designer (MFC)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - vc.editors.ribbon.F1
 helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 3b28783cb12aeeb03bf1687e5922b276af0d52c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 903adc96f4c9bc092ac23787781a76c0e7e3714c
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521397"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175833"
 ---
 # <a name="ribbon-designer-mfc"></a>Menüband-Designer (MFC)
 
 Mit dem Menüband-Designer können Sie Menübänder in MFC-Anwendungen erstellen und anpassen. Ein Menüband ist ein Element der Benutzeroberfläche (UI), auf dem Befehle in logischen Gruppen organisiert werden. Diese Gruppen werden auf separaten Registerkarten in einem Streifen entlang des oberen Fensterrahmens angezeigt. Das Menüband ersetzt die Menü- und Symbolleisten. Mit einem Menüband kann die Benutzerfreundlichkeit von Anwendungen erheblich verbessert werden. Weitere Informationen finden Sie unter [Menübänder](/windows/desktop/uxguide/cmd-ribbons). Die folgende Abbildung zeigt ein Menüband.
 
-![MFC-Menüband-Ressourcensteuerung](../mfc/media/ribbon_no_callouts.png "Ribbon_no_callouts")
+![MFC-Menüband-Ressourcensteuerung](../mfc/media/ribbon_no_callouts.png "MFC-Menüband-Ressourcensteuerung")
 
 In früheren Versionen von Visual Studio Menübänder erstellt werden, indem Sie Code schreiben, der die MFC-Menübandklassen, wie z. B. verwendet musste [CMFCRibbonBar Class](../mfc/reference/cmfcribbonbar-class.md). In Visual Studio 2010 und höher bietet der Menüband-Designer eine alternative Methode zum Erstellen von Menübändern dar. Zunächst erstellen Sie ein Menüband als Ressource und passen es an. Dann laden Sie die Menübandressource vom Code in der MFC-Anwendung. Sie können Menübandressourcen und MFC-Menübandklassen sogar zusammen verwenden. Beispielsweise können Sie eine menübandressource erstellen und dann programmgesteuert weitere Elemente hinzufügen, zur Laufzeit mithilfe von Code.
 
@@ -71,7 +71,7 @@ Um ein Menüband im Menüband-Designer zu öffnen, doppelklicken Sie in der Ress
 
 Die folgende Abbildung zeigt die verschiedenen Komponenten im Menüband-Designer.
 
-![MFC-Menüband-Designer](../mfc/media/ribbon_designer.png "Ribbon_designer")
+![MFC-Menüband-Designer](../mfc/media/ribbon_designer.png "MFC-Menüband-Designer")
 
 - **Toolbox:** enthält Steuerelemente, die auf die Designeroberfläche gezogen werden können.
 
@@ -95,7 +95,7 @@ In den folgenden Themen wird die Verwendung der Funktionen im Menüband-Designer
 
 ## <a name="definitions-of-ribbon-elements"></a>Definitionen von Menübandelementen
 
-![MFC-Menüband](../mfc/media/ribbon.png "Menüband")
+![MFC-Menüband](../mfc/media/ribbon.png "MFC-Menüband")
 
 - **Schaltfläche "Anwendung":** die Schaltfläche, die auf der linken oberen Ecke eines Menübands angezeigt wird. Die Anwendungsschaltfläche ersetzt das Datei-Menü und ist sichtbar, wenn das Menüband minimiert wird. Wenn auf die Schaltfläche geklickt wird, wird ein Menü mit einer Liste von Befehlen angezeigt.
 

@@ -1,6 +1,6 @@
 ---
 title: Verwenden von CReBarCtrl
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CReBarCtrl
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - combo boxes [MFC], in rebar controls
 - rebar controls
 ms.assetid: 2c0aeec2-ffc3-44b8-97b5-0f56e116a338
-ms.openlocfilehash: 0317ece49d3d5ee3c815df6f9716809ebb1fd27f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2749e4ec919e2014b3de50f1cd164ef66d2fa0ad
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562174"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175443"
 ---
 # <a name="using-crebarctrl"></a>Verwenden von CReBarCtrl
 
@@ -21,7 +21,7 @@ Einem Grundleisten-Steuerelement fungiert als Container für untergeordnete Fens
 
 Die folgende Abbildung zeigt ein Grundleistensteuerelement, das zwei Bändern. Eine enthält das eine Ziehpunktleiste, eine Beschriftung ("Address") und ein Kombinationsfeld Feld untergeordnetes Fenster. Das andere Band enthält eine Ziehpunktleiste einer textbezeichnung und eine flache Symbolleiste (implementiert mit einem untergeordneten Fenster).
 
-![Grundleisten-Steuerelement mit zwei Bändern](../mfc/media/vc4ruz1.gif "vc4ruz1")
+![Grundleisten-Steuerelement mit zwei Bändern](../mfc/media/vc4ruz1.gif "Grundleisten-Steuerelement mit zwei Bändern")
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
 

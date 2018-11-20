@@ -1,6 +1,6 @@
 ---
 title: Grundlagen der MFC-Internetprogrammierung
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - ISAPI extensions, programming with ISAPI
 - Internet applications [MFC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: 9d44d78474ccb030184c6e79ed2f257ffb00a068
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bb6a1d379ed754ed96637dfe5b3e4da983edb9f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509460"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175586"
 ---
 # <a name="mfc-internet-programming-basics"></a>Grundlagen der MFC-Internetprogrammierung
 
@@ -30,7 +30,7 @@ Microsoft bietet viele APIs für die Programmierung von Client- und serveranwend
 >[!IMPORTANT]
 > ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
 
-![Client- und serveranwendungen](../mfc/media/vc38bq1.gif "vc38bq1")
+![Client- und serveranwendungen](../mfc/media/vc38bq1.gif "Client- und serveranwendungen")
 
 MFC enthält Klassen, die internetprogrammierung unterstützen. Sie können [COleControl](../mfc/reference/colecontrol-class.md) und [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md) und verwandte Klassen von MFC-ActiveX-Steuerelemente und aktive Dokumente zu schreiben. Sie können MFC-Klassen wie z. B. [CInternetSession](../mfc/reference/cinternetsession-class.md), [CFtpConnection](../mfc/reference/cftpconnection-class.md), und [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) zum Abrufen von Dateien und Informationen über Internet-Protokolle wie FTP, HTTP und Gopher.
 

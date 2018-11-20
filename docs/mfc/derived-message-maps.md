@@ -1,18 +1,18 @@
 ---
 title: Abgeleitete Meldungszuordnungen
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - message handling [MFC], derived message handlers
 - messages, routing
 - message maps [MFC], derived
 - derived message maps
 ms.assetid: 21829556-6e64-40c3-8279-fed85d99de77
-ms.openlocfilehash: 1413290bc04af37a6d3204150dff5244e1dcb5c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ae536a53a43472a4fb81d30e685fbc3faaa603f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662526"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175600"
 ---
 # <a name="derived-message-maps"></a>Abgeleitete Meldungszuordnungen
 
@@ -20,7 +20,8 @@ Während der Nachrichtenverarbeitung verarbeiten, überprüfen eine Nachricht vo
 
 Beachten Sie, dass `CView`, die Basisklasse der `CMyView`, ergibt sich wiederum aus `CWnd`. Daher `CMyView` *ist* eine `CView` und *ist* eine `CWnd`. Jede dieser Klassen hat ihre eigene meldungszuordnung. Beachten Sie in der Abbildung "Eine Hierarchie von Inhaltsansichten" unten zeigt die hierarchische Beziehung der Klassen, aber beachten Sie, dass eine `CMyView` Objekt stellt ein einzelnes Objekt mit den Eigenschaften der alle drei Klassen.
 
-![Ansichtshierarchie](../mfc/media/vc38621.gif "vc38621") eine Hierarchie von Inhaltsansichten
+![Ansichtshierarchie](../mfc/media/vc38621.gif "Ansichtshierarchie") <br/>
+Eine Hierarchie von Inhaltsansichten
 
 Wenn eine Meldung in Klasse nicht realisiert werden kann `CMyView`meldungszuordnung, die das Framework auch auf die meldungszuordnung, die von den direkten Basisklassen gesucht. Die `BEGIN_MESSAGE_MAP` Makro am Anfang der meldungszuordnung gibt zwei Klassennamen als Argumente an:
 

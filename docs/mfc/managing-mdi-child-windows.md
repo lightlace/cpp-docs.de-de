@@ -1,6 +1,6 @@
 ---
 title: Verwalten von untergeordneten MDI-Fenstern
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - MDICLIENT
 helpviewer_keywords:
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - child windows [MFC]
 - MDI [MFC], frame windows
 ms.assetid: 1828d96e-a561-48ae-a661-ba9701de6bee
-ms.openlocfilehash: 2055c215392c6805791de729ff6ab8c6a9057308
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4b6ccf8a75cc7679f78fba48314073bc53b66a5
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629410"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176795"
 ---
 # <a name="managing-mdi-child-windows"></a>Verwalten von untergeordneten MDI-Fenstern
 
@@ -25,7 +25,8 @@ MDI-Hauptrahmenfenster (eine pro Anwendung) enthalten spezielle untergeordnete F
 
 In einer MDI-Rahmenfenster verwaltet das Rahmenfenster der MDICLIENT-Fenster, in Verbindung mit Schiebeleisten-Steuerelemente neu positionieren. Die MDICLIENT-Fenster verwaltet wiederum alle MDI-untergeordneten Rahmenfenster. Die folgende Abbildung zeigt die Beziehung zwischen einer MDI-Rahmenfenster, das MDICLIENT-Fenster und seine untergeordneten Dokumentrahmenfenster.
 
-![Untergeordnete Fenster in ein MDI-Rahmenfenster](../mfc/media/vc37gb1.gif "vc37gb1") MDI-Frame-Windows und untergeordneten Elementen
+![Untergeordnete Fenster in ein MDI-Rahmenfenster](../mfc/media/vc37gb1.gif "untergeordnete Fenster in ein MDI-Rahmenfenster") <br/>
+MDI-Rahmenfenster und untergeordnete Fenster
 
 Ein MDI-Rahmenfenster funktioniert auch in Verbindung mit der aktuellen untergeordneten MDI-Fensters, falls vorhanden. MDI-Rahmenfensters mitverwenden delegiert Command-Meldungen auf untergeordneten MDI-Fensters auf, bevor er versucht, diese selbst zu behandeln.
 

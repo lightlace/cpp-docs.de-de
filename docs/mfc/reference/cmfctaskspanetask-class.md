@@ -1,6 +1,6 @@
 ---
 title: CMFCTasksPaneTask-Klasse
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCTasksPaneTask
 - AFXTASKSPANE/CMFCTasksPaneTask
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCTasksPaneTask [MFC], m_strName
 - CMFCTasksPaneTask [MFC], m_uiCommandID
 ms.assetid: c5a7513b-cd8f-4e2e-b16f-650e1fe30954
-ms.openlocfilehash: 77fd20ad7a7f5bae8b9c654ef12b708c58cab33f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d7f5a87dc005ee67f9ce65f4ad686cb27d007c2
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516882"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176548"
 ---
 # <a name="cmfctaskspanetask-class"></a>CMFCTasksPaneTask-Klasse
 
@@ -81,10 +81,10 @@ class CMFCTasksPaneTask : public CObject
 
 Die folgende Abbildung zeigt eine Aufgabengruppe, die drei Aufgaben enthält:
 
-![Aufgabengruppe, erweitert](../../mfc/reference/media/nexttaskgrpexpand.png "Nexttaskgrpexpand")
+![Aufgabengruppe, erweitert](../../mfc/reference/media/nexttaskgrpexpand.png "Aufgabengruppe, erweitert")
 
 > [!NOTE]
->  Wenn eine Aufgabe nicht über eine gültige Befehls-ID verfügt, wird es als einfache Bezeichnung behandelt.
+> Wenn eine Aufgabe nicht über eine gültige Befehls-ID verfügt, wird es als einfache Bezeichnung behandelt.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 

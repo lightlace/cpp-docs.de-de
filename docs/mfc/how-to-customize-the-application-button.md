@@ -1,21 +1,21 @@
 ---
 title: 'Gewusst wie: Anpassen der Anwendungsschaltfläche'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-ms.openlocfilehash: e556e9e6509179b692e4c86b67d59ff2e2ec0f02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba29e9ad65e0bb1d2163e4051c7c7b53664d8817
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592789"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175326"
 ---
 # <a name="how-to-customize-the-application-button"></a>Gewusst wie: Anpassen der Anwendungsschaltfläche
 
 Wenn Sie die Schaltfläche "Anwendung" klicken, wird ein Menü mit Befehlen angezeigt. In der Regel das Menü enthält dateibezogenen Befehle wie z. B. **öffnen**, **speichern**, **Drucken**, und **beenden**.
 
-![MFC-Menüband-Schaltfläche "Anwendung"](../mfc/media/application_button.png "Application_button")
+![MFC-Menüband-Schaltfläche "Anwendung"](../mfc/media/application_button.png "MFC-Menüband-Schaltfläche \"Anwendung\"")
 
 Um die Anwendungsschaltfläche anpassen möchten, öffnen Sie es in der **Eigenschaften** , ihre Eigenschaften ändern, und klicken Sie dann eine Vorschau des Menüband-Steuerelements.
 
@@ -57,4 +57,3 @@ Klicken Sie im Menü für die Anwendung wird nicht auf der Entwurfsoberfläche a
 ## <a name="see-also"></a>Siehe auch
 
 [Menüband-Designer (MFC)](../mfc/ribbon-designer-mfc.md)
-

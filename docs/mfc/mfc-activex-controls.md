@@ -1,6 +1,6 @@
 ---
 title: MFC-ActiveX-Steuerelemente
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 f1_keywords:
 - MFC ActiveX Controls (MFC)
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
-ms.openlocfilehash: 95e1e1cc47d9c14448635fae5d6a9added8e15e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 10ad0645e873a1a745168be9b839bbf97a1c05a6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553270"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174870"
 ---
 # <a name="mfc-activex-controls"></a>MFC-ActiveX-Steuerelemente
 
@@ -39,7 +39,8 @@ Sie können fensterlose ActiveX-Steuerelemente und Steuerelemente erstellen, die
 
 Ein ActiveX-Steuerelement wird als prozessinterner Server implementiert (in der Regel ein kleines Objekt), der in jedem OLE-Container verwendet werden kann. Beachten Sie, dass die volle Funktionalität eines ActiveX-Steuerelements nur verfügbar ist, wenn es innerhalb eines OLE-Containers verwendet wird, der in ActiveX-Steuerelementen berücksichtigt wird. Finden Sie unter [Port ActiveX-Steuerelementen in andere Anwendungen](../mfc/containers-for-activex-controls.md) eine Liste der Container, die ActiveX-Steuerelemente zu unterstützen. Dieser Containertyp (im Folgenden "Steuerelementcontainer" genannt) kann ein ActiveX-Steuerelement ausführen. Dazu werden die Eigenschaften und Methoden des Steuerelements verwendet und Benachrichtigungen aus dem ActiveX-Steuerelement in Form von Ereignissen empfangen. Dies wird in der folgenden Abbildung veranschaulicht.
 
-![Zusammenspiel von ActiveX-Steuerelementcontainer und-Steuerelement](../mfc/media/vc37221.gif "vc37221") Interaktion zwischen einer ActiveX-Steuerelementcontainer und ActiveX-Steuerelement
+![Zusammenspiel von ActiveX-Steuerelementcontainer und-Steuerelement](../mfc/media/vc37221.gif "Zusammenspiel von ActiveX-Steuerelementcontainer und-Steuerelement") <br/>
+Interaktion zwischen einem ActiveX-Steuerelement-Container und einem ActiveX-Steuerelement mit Fenster
 
 Einige neue Informationen zum Optimieren der ActiveX-Steuerelemente, finden Sie unter [MFC-ActiveX-Steuerelemente: Optimierung](../mfc/mfc-activex-controls-optimization.md).
 
@@ -69,7 +70,8 @@ Das letzte Element ist eine Dispatchzuordnung, mit der eine Reihe von Funktionen
 
 Wenn ein Steuerelement in einem Steuerelementcontainers verwendet wird, werden zwei Kommunikationsmechanismen verwendet: Es macht Eigenschaften und Methoden verfügbar, und es löst Ereignisse aus. Die folgende Abbildung zeigt, wie diese beiden Mechanismen implementiert werden.
 
-![ActiveX-Steuerelement kommuniziert mit seinem Container](../mfc/media/vc37222.gif "vc37222") Kommunikation zwischen einer ActiveX-Steuerelementcontainer und ActiveX-Steuerelement
+![ActiveX-Steuerelement kommuniziert mit seinem Container](../mfc/media/vc37222.gif "ActiveX-Steuerelement kommuniziert mit seinem Container") <br/>
+Kommunikation zwischen einem ActiveX-Steuerelement-Container und einem ActiveX-Steuerelement
 
 Die vorherige Abbildung zeigt auch, wie andere OLE-Schnittstellen (mit Ausnahme von Automatisierung und Ereignisse) von Steuerelementen behandelt werden.
 
@@ -83,7 +85,8 @@ Wenn eine [fensterloses Steuerelement](../mfc/providing-windowless-activation.md
 
 Wenn ein Steuerelement mit einem Fenster aktiv wird, ist es möglich, vollständig mit dem Steuerelementcontainer, dem Benutzer und Windows zu interagieren. Die folgende Abbildung zeigt die Pfade der Kommunikation zwischen dem ActiveX-Steuerelement, dem Steuerelementcontainer und dem Betriebssystem.
 
-![Meldungsverarbeitung in ActiveX-Steuerelement mit aktiven Fenster](../mfc/media/vc37223.gif "vc37223") Windows-Nachrichtenverarbeitung in einem ActiveX-Steuerelement mit Fenster (wenn aktiv)
+![Meldungsverarbeitung in ActiveX-Steuerelement mit aktiven Fenster](../mfc/media/vc37223.gif "Meldungsverarbeitung in ActiveX-Steuerelement mit aktiven Fenster") <br/>
+Windows-Nachrichtenverarbeitung in einem ActiveX-Steuerelement mit Fenster (sofern aktiv)
 
 ##  <a name="_core_serializing_activex_elements"></a> Serialisierung
 

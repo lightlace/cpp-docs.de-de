@@ -1,6 +1,6 @@
 ---
 title: Umwandlung
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - casting [C++]
 - coercion [C++]
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - polymorphic classes [C++]
 - classes [C++], polymorphism
 ms.assetid: 3dbeb06e-2f4b-4693-832d-624bc8ec95de
-ms.openlocfilehash: eb309319a4af6d604d8558552ce313ba1d0fb629
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02ade663ee92d3a301fda95bb385c3ffa48ead12
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560796"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175547"
 ---
 # <a name="casting"></a>Umwandlung
 
@@ -23,11 +23,13 @@ Die Programmiersprache C++ setzt voraus, dass, wenn eine Klasse von einer Basisk
 
 Da eine abgeleitete Klasse die Definitionen aller Basisklassen enthält, von der sie abgeleitet ist, kann ein Zeiger oben in der Klassenhierarchie in jede dieser Basisklassen umgewandelt werden. Bei einem Zeiger auf eine Basisklasse, kann es sicherer sein, den Zeiger die Hierarchie herunter umzuwandeln. Es ist sicher, wenn das Objekt, auf das gezeigt wird, tatsächlich einen Typ aufweist, der aus der Basisklasse abgeleitet ist. In diesem Fall wird das eigentliche Objekt als "vollständiges Objekt" angesehen. Der Zeiger auf die Basisklasse zeigt auf ein "Unterobjekt" des vollständigen Objekts. Betrachten Sie z. B. die Klassenhierarchie, die in der folgenden Abbildung gezeigt wird.
 
-![Klassenhierarchie](../cpp/media/vc38zz1.gif "vc38ZZ1") Klassenhierarchie
+![Klassenhierarchie](../cpp/media/vc38zz1.gif "Klassenhierarchie") <br/>
+Klassenhierarchie
 
 Ein Objekt vom Typ `C` könnte visualisiert werden, wie in der folgenden Abbildung zu sehen ist.
 
-![Klasse C mit Sub&#45;Objekte B und A](../cpp/media/vc38zz2.gif "vc38ZZ2") Klasse C mit Unterobjekt B und A-Unterobjekt
+![Klasse C mit Sub&#45;Objekte B und A](../cpp/media/vc38zz2.gif "Klasse C mit Sub&#45;Objekte B und A") <br/>
+Klasse C mit Unterobjekten B und A
 
 Bei einer Instanz der Klasse `C`, gibt es die Unterobjekte `B` und `A`. Die Instanz von `C`, einschließlich der Unterobjekte `A` und `B`, ist das "vollständige Objekt".
 

@@ -1,6 +1,6 @@
 ---
 title: try-finally-Anweisung
-ms.date: 10/09/2018
+ms.date: 11/19/2018
 f1_keywords:
 - __try
 - _try
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: 55d22951c4203c582f7823fef033a0476f8c9a52
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: d05e1d113f4fc661cb6e2e2905fbd8c9dcdd7e2d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326918"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175920"
 ---
 # <a name="try-finally-statement"></a>try-finally-Anweisung
 
@@ -68,7 +68,8 @@ Im Falle eine Ausnahme der **__try** blockieren, muss das Betriebssystem einen H
 
 Nehmen Sie z. B. an, eine Reihe von Funktionsaufrufen verbindet Funktion A mit Funktion D, wie in der folgenden Abbildung dargestellt. Jede Funktion verfügt über einen Beendigungshandler. Wenn eine Ausnahme in Funktion D ausgelöst und in A behandelt wird, werden die Beendigungshandler in folgender Reihenfolge aufgerufen, während das System den Stapel abwickelt: D, C, B.
 
-![Reihenfolge der Beendigung&#45;Handler Ausführung](../cpp/media/vc38cx1.gif "vc38CX1") Reihenfolge von Handlerausführung
+![Reihenfolge der Beendigung&#45;Handler Ausführung](../cpp/media/vc38cx1.gif "Reihenfolge der Beendigung&#45;Handler-Ausführung") <br/>
+Reihenfolge für das Beenden bei Handlerausführung
 
 > [!NOTE]
 > Das Verhalten des Try-finally-unterscheidet sich von einigen anderen Sprachen, die die Verwendung von unterstützen **schließlich**, wie z. B. c#.  Ein einzelnes **__try** möglicherweise, jedoch nicht beide von **__finally** und **__except**.  Wenn beide zusammen verwendet werden sollen, muss eine äußere try-except-Anweisung die innere try-finally-Anweisung einschließen.  Es gelten andere Regeln für die Angabe, wann ein einzelner Block ausgeführt wird.

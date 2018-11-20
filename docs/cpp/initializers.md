@@ -1,6 +1,6 @@
 ---
 title: Initialisierer
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - array-element initializers
 - initializing arrays [C++], initializers
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - declarators, as initializers
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: 2948e65538359815da151a540e96227e56bbea6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1890899fb2ad63bff06d514ae8b18f9dc3ff9e21
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544663"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176288"
 ---
 # <a name="initializers"></a>Initialisierer
 
@@ -528,7 +528,8 @@ Referenztypvariablen können ohne Initialisierer nur in folgenden Objekten dekla
 
 Bei der Initialisierung einer Referenztypvariable verwendet der Compiler das Entscheidungsdiagramm, wie in der folgenden Abbildung gezeigt, um zwischen dem Erstellen eines Verweises auf ein Objekt und dem Erstellen eines temporären Objekts auszuwählen, auf das der Verweis zeigt.
 
-![Entscheidungsdiagramm zur Initialisierung von Verweistypen](../cpp/media/vc38s71.gif "vc38S71") Entscheidungsdiagramm für Initialisierung von Verweistypen
+![Entscheidungsdiagramm zur Initialisierung von Verweistypen](../cpp/media/vc38s71.gif "entscheidungsdiagramm zur Initialisierung von Verweistypen") <br/>
+Entscheidungsdiagramm zur Initialisierung von Verweistypen
 
 Verweise auf **flüchtige** Typen (deklariert als **flüchtige** *Typename* <strong>&</strong> *Bezeichner*) kann mit initialisiert werden **flüchtige** Objekte desselben Typs oder mit Objekten, die nicht als deklarierten **flüchtige**. Sie können jedoch nicht, initialisiert werden, mit **const** Objekte dieses Typs. Auf ähnliche Weise Verweise auf **const** Typen (deklariert als **const** *Typename* <strong>&</strong> *Bezeichner* ) initialisiert werden kann, mit **const** Objekte des gleichen Typs (oder ein beliebiges Element, das ist eine Konvertierung auf diesen Typ oder mit Objekten, die nicht als deklarierten **const**). Sie können jedoch nicht, initialisiert werden, mit **flüchtige** Objekte dieses Typs.
 

@@ -1,6 +1,6 @@
 ---
 title: Bitmap-Funktionen zu Ausgrauen und Dithering
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - AFXWIN/AfxDrawGrayBitmap
 - AFXWIN/AfxGetGrayBitmap
@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-ms.openlocfilehash: 1134cde55fbe5addac34b9c0433ff11df4c9bdc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e1d4bd0e851a14680a46d7d6ae79dcf4bd190e4
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490895"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176730"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>Bitmap-Funktionen zu Ausgrauen und Dithering
 
@@ -22,7 +22,7 @@ ms.locfileid: "50490895"
 
 MFC enthält zwei Funktionen, die verwendet werden können, um einer Bitmap das Aussehen eines deaktivierten Steuerelements zu verleihen.
 
-![Vergleich von grauen und ursprünglichen Symbolversionen](../../mfc/reference/media/vcgraybitmap.gif "Vcgraybitmap")
+![Vergleich von grauen und ursprünglichen Symbolversionen](../../mfc/reference/media/vcgraybitmap.gif "Vergleich von grauen und ursprünglichen Symbolversionen")
 
 |||
 |-|-|
@@ -33,7 +33,7 @@ MFC enthält zwei Funktionen, die verwendet werden können, um einer Bitmap das 
 
 MFC enthält außerdem zwei Funktionen, mit denen der Hintergrund einer Bitmap durch ein gedithertes Muster ersetzt werden kann.
 
-![Vergleich von geditherten und ursprünglichen Symbolversionen](../../mfc/reference/media/vcditheredbitmap.gif "Vcditheredbitmap")
+![Vergleich von geditherten und ursprünglichen Symbolversionen](../../mfc/reference/media/vcditheredbitmap.gif "Vergleich von geditherten und ursprünglichen Symbolversionen")
 
 |||
 |-|-|
@@ -74,7 +74,7 @@ Die neue Hintergrundfarbe (normalerweise grau, wie etwa COLOR_MENU).
 
 Eine mit `AfxDrawGrayBitmap` gezeichnete Bitmap hat das Aussehen eines deaktivierten Steuerelements.
 
-![Vergleich von grauen und ursprünglichen Symbolversionen](../../mfc/reference/media/vcgraybitmap.gif "Vcgraybitmap")
+![Vergleich von grauen und ursprünglichen Symbolversionen](../../mfc/reference/media/vcgraybitmap.gif "Vergleich von grauen und ursprünglichen Symbolversionen")
 
 ### <a name="example"></a>Beispiel
 
@@ -110,7 +110,7 @@ Die neue Hintergrundfarbe (normalerweise grau, wie etwa COLOR_MENU).
 
 Eine mit `AfxGetGrayBitmap` kopierte Bitmap hat das Aussehen eines deaktivierten Steuerelements.
 
-![Vergleich von grauen und ursprünglichen Symbolversionen](../../mfc/reference/media/vcgraybitmap.gif "Vcgraybitmap")
+![Vergleich von grauen und ursprünglichen Symbolversionen](../../mfc/reference/media/vcgraybitmap.gif "Vergleich von grauen und ursprünglichen Symbolversionen")
 
 ### <a name="example"></a>Beispiel
 
@@ -158,7 +158,7 @@ Die anderen Dithering mit Farbe, in der Regel hellgrau (etwa COLOR_MENU).
 
 Die Quell-Bitmap gezeichnet wird, auf dem Zieldomänencontroller mit einer zwei-Farbe (*cr1* und *cr2*) kariertes Muster, die die Bitmap-Hintergrund ersetzt. Der Hintergrund des Quellbitmaps ist als seine weißen Pixel und alle Pixel, die die Farbe des Pixels in der oberen linken Ecke der Bitmap für die Übereinstimmung definiert.
 
-![Vergleich von geditherten und ursprünglichen Symbolversionen](../../mfc/reference/media/vcditheredbitmap.gif "Vcditheredbitmap")
+![Vergleich von geditherten und ursprünglichen Symbolversionen](../../mfc/reference/media/vcditheredbitmap.gif "Vergleich von geditherten und ursprünglichen Symbolversionen")
 
 ### <a name="example"></a>Beispiel
 

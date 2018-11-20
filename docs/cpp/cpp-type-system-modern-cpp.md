@@ -1,14 +1,14 @@
 ---
 title: C++- Typsystem (Modern C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: ba24a4a739e4eb13d983202943ca046f857422d2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 476ebabc4bfc19f995119649d6f012d4b39d8369
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521091"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176340"
 ---
 # <a name="c-type-system-modern-c"></a>C++- Typsystem (Modern C++)
 
@@ -59,7 +59,7 @@ Die grundlegenden Typen werden vom Compiler erkannt, der über interne Regeln ve
 
 In der folgende Abbildung wird die relative Größe der integrierten Datentypen dargestellt:
 
-![Größe in Bytes erstellt&#45;in Typen](../cpp/media/built-intypesizes.png "integrierte-InTYpeSizes")
+![Größe in Bytes erstellt&#45;in Typen](../cpp/media/built-intypesizes.png "Größe in Bytes erstellt&#45;in Typen")
 
 In der folgenden Tabelle werden die am häufigsten verwendeten grundlegenden Typen aufgelistet:
 
@@ -70,13 +70,13 @@ In der folgenden Tabelle werden die am häufigsten verwendeten grundlegenden Typ
 |bool|1 Byte|Stellt Werte dar, die entweder wahr oder falsch sein können.|
 |char|1 Byte|Verwenden Sie sie für ASCII-Zeichen in Zeichenfolgen im älteren C-Format oder in std::string Objekten, die nie in den UNICODE konvertiert werden müssen.|
 |wchar_t|2 Bytes|Stellt "breite" Zeichenwerte dar, die in den UNICODE-Format codiert werden (UTF-16 bei Windows, andere Betriebssysteme können abweichen). Dies ist der Zeichentyp, der in Zeichenfolgen des Typs `std::wstring` verwendet wird.|
-|unsigned char|1 Byte|C++ verfügt über keine integrierten `byte`-Typen.  Verwenden Sie "char" ohne Vorzeichen, um einen Bytewert darzustellen.|
+|nicht signierte&nbsp;Char|1 Byte|C++ verfügt über keine integrierten `byte`-Typen.  Verwenden Sie "char" ohne Vorzeichen, um einen Bytewert darzustellen.|
 |unsigned int|4 Bytes|Die Standardauswahl für Bitflags.|
 |long long|8 Bytes|Stellt sehr große ganzzahlige Werte dar.|
 
 ## <a name="the-void-type"></a>Der void-Typ
 
-Die **"void"** Typ ist ein spezieller Typ; Sie können eine Variable vom Typ nicht deklarieren **"void"**, aber Sie können eine Variable vom Typ deklarieren `void *` (Zeiger auf **"void"**), d.h. Manchmal erforderlich, wenn unformatierten (nicht typisiertem) Arbeitsspeicher zugeordnet. Jedoch Zeiger auf **"void"** sind nicht typsicher, und in der Regel ihre Verwendung ist stark in modernem C++ abgesehen. In der Deklaration einer Funktion einer **"void"** zurückgegeben Wert bedeutet, dass die Funktion keinen Wert zurückgibt,; dies ist eine generelle und zulässige Verwendung **"void"**. Während Sie die Funktionen der C-Sprache, die erforderlich sind, die keine Parameter, um zu deklarieren haben **"void"** in der Parameterliste, z. B. `fou(void)`, diese Vorgehensweise ist in modernem C++ abgesehen und sollte als deklariert werden `fou()`. Weitere Informationen finden Sie unter [Typumwandlungen und Typsicherheit](../cpp/type-conversions-and-type-safety-modern-cpp.md).
+Die **"void"** Typ ist ein spezieller Typ; Sie können eine Variable vom Typ nicht deklarieren **"void"**, aber Sie können eine Variable vom Typ deklarieren __"void" \*__  (Zeiger auf **"void"**), das ist manchmal erforderlich, wenn die unformatierten (nicht typisiertem) Arbeitsspeicher zuordnen. Jedoch Zeiger auf **"void"** sind nicht typsicher, und in der Regel ihre Verwendung ist stark in modernem C++ abgesehen. In der Deklaration einer Funktion einer **"void"** zurückgegeben Wert bedeutet, dass die Funktion keinen Wert zurückgibt,; dies ist eine generelle und zulässige Verwendung **"void"**. Während Sie die Funktionen der C-Sprache, die erforderlich sind, die keine Parameter, um zu deklarieren haben **"void"** in der Parameterliste, z. B. `fou(void)`, diese Vorgehensweise ist in modernem C++ abgesehen und sollte als deklariert werden `fou()`. Weitere Informationen finden Sie unter [Typumwandlungen und Typsicherheit](../cpp/type-conversions-and-type-safety-modern-cpp.md).
 
 ## <a name="const-type-qualifier"></a>const-Typqualifizierer
 

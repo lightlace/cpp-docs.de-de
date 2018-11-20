@@ -1,16 +1,16 @@
 ---
 title: 'Exemplarische Vorgehensweise: Entfernen von Arbeit aus einem Benutzeroberflächenthread'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 85622b68f94342ece2c9fc666b9ff6d515cfe10b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1230cf2b3fa510aeca8516e41cf30f9665987d05
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472436"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176314"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Exemplarische Vorgehensweise: Entfernen von Arbeit aus einem Benutzeroberflächenthread
 
@@ -104,11 +104,11 @@ Dieser Abschnitt beschreibt, wie die Mandelbrotfraktal gezeichnet wird. Diese Ve
 
    [!code-cpp[concrt-mandelbrot#8](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_8.cpp)]
 
-9. Stellen Sie sicher, dass die Anwendung erfolgreich aktualisiert wurde, indem Sie erstellen und ausführen.
+1. Stellen Sie sicher, dass die Anwendung erfolgreich aktualisiert wurde, indem Sie erstellen und ausführen.
 
 Die folgende Abbildung zeigt die Ergebnisse der Mandelbrot-Anwendung.
 
-![Die Mandelbrot-Anwendung](../../parallel/concrt/media/mandelbrot.png "Mandelbrot")
+![Die Mandelbrot-Anwendung](../../parallel/concrt/media/mandelbrot.png "Mandelbrot-Anwendung")
 
 Da die Berechnung für jedes Pixel rechenintensiv ist, kann nicht im UI-Thread zusätzliche Nachrichten verarbeiten, bis die gesamte Berechnung abgeschlossen ist. Dies konnte die Reaktionszeit der Anwendung verringern. Allerdings können Sie dieses Problem reduzieren, durch das Entfernen von Arbeit aus dem UI-Thread.
 

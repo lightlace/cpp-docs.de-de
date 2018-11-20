@@ -1,18 +1,18 @@
 ---
 title: Mehrere Basisklassen
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - base classes [C++], multiple
 - derived classes [C++], multiple bases
 - multiple inheritance, class declaration
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
-ms.openlocfilehash: fbbe6d6194b878b4851cbde84b55d71b9e4fc02c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b58c238da37fbbaf7c2c2913b652c26d98fbd96e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483459"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176362"
 ---
 # <a name="multiple-base-classes"></a>Mehrere Basisklassen
 
@@ -52,11 +52,13 @@ Wenn Sie eine virtuelle Basisklasse deklarieren die **virtuellen** -Schlüsselwo
 
 Betrachten Sie die Klassenhierarchie in der folgenden Abbildung, die eine simulierte Warteschlange veranschaulicht.
 
-![Diagramm der warteschlangensimulation](../cpp/media/vc38xp1.gif "vc38XP1") simulierten Mitvs-Diagramm
+![Diagramm der warteschlangensimulation](../cpp/media/vc38xp1.gif "Diagramm der warteschlangensimulation") <br/>
+Diagramm der warteschlangensimulation
 
 In der Abbildung ist `Queue` die Basisklasse für `CashierQueue` und `LunchQueue`. Wenn jedoch beide Klassen kombiniert werden, um `LunchCashierQueue` zu bilden, tritt folgendes Problem auf: Die neue Klasse enthält zwei Unterobjekte des Typs `Queue`, eines von `CashierQueue` und das andere von `LunchQueue`. Die folgende Abbildung zeigt das konzeptuelle Speicherlayout (das tatsächliche Speicherlayout kann unter Umständen optimiert werden).
 
-![Simulierte Mittagessen&#45;Line-Objekt](../cpp/media/vc38xp2.gif "vc38XP2") simuliertes Warteschlangenobjekt
+![Simulierte Mittagessen&#45;Line-Objekt](../cpp/media/vc38xp2.gif "simulierte Mittagessen&#45;Line-Objekt") <br/>
+Simuliertes Warteschlangenobjekt
 
 Beachten Sie, dass es zwei `Queue`-Unterobjekte im `LunchCashierQueue`-Objekt gibt. Der folgende Code deklariert `Queue` als virtuelle Basisklasse:
 
@@ -71,15 +73,18 @@ class LunchCashierQueue : public LunchQueue, public CashierQueue {};
 
 Die **virtuellen** -Schlüsselwort stellt sicher, nur eine Kopie des Unterobjekts `Queue` enthalten ist (siehe die folgende Abbildung).
 
-![Simulierte Mittagessen&#45;Line-Objekt, das virtuelle Basisklassen](../cpp/media/vc38xp3.gif "vc38XP3") simuliertes Warteschlangenobjekt mit virtuellen Basisklassen
+![Simulierte Mittagessen&#45;Line-Objekt, das virtuelle Basisklassen](../cpp/media/vc38xp3.gif "simulierte Mittagessen&#45;Line-Objekt, das virtuelle Basisklassen") <br/>
+Simuliertes Warteschlangenobjekt mit virtuellen Basisklassen
 
 Eine Klasse kann eine virtuelle Komponente und eine nicht virtuelle Komponente eines bestimmten Typs haben. Dies geschieht unter den Bedingungen, die in der folgenden Abbildung veranschaulicht werden.
 
-![Virtuelle und nicht virtuelle Komponenten einer Klasse](../cpp/media/vc38xp4.gif "vc38XP4") virtuelle und nicht virtuelle Komponenten der gleichen Klasse
+![Virtuelle und nicht&#45;virtuelle Komponenten einer Klasse](../cpp/media/vc38xp4.gif "virtuelle und nicht&#45;virtuelle Komponenten einer Klasse") <br/>
+Virtuelle und nicht virtuelle Komponenten der gleichen Klasse
 
 In der Abbildung verwenden `CashierQueue` und `LunchQueue``Queue` als virtuelle Basisklasse. Allerdings spezifiziert `TakeoutQueue` `Queue` als Basisklasse und nicht als virtuelle Basisklasse. Daher verfügt `LunchTakeoutCashierQueue` über zwei Unterobjekte des Typs `Queue`: eines aus dem Vererbungspfad, der `LunchCashierQueue` einschließt, und eines aus dem Pfad, der `TakeoutQueue` einschließt. Dies wird in der folgenden Abbildung verdeutlicht.
 
-![Virtuelle und nicht virtuelle Vererbung in Objektlayout](../cpp/media/vc38xp5.gif "vc38XP5") Objektlayout mit virtueller und nicht virtueller Vererbung
+![Virtuelle und nicht&#45;virtuelle Vererbung in Objektlayout](../cpp/media/vc38xp5.gif "virtuelle und nicht&#45;virtuelle Vererbung in Objektlayout") <br/>
+Das Objektlayout mit virtueller und nicht virtuelle Vererbung
 
 > [!NOTE]
 >  Virtuelle Vererbung bietet wesentliche Vorteile im Vergleich zur nicht virtuellen Vererbung. Allerdings kann es zu Mehraufwand bei der Verarbeitung kommen.
@@ -187,7 +192,8 @@ Explizite und implizite Konvertierungen von Zeigern oder Verweisen auf Klassenty
 
 - Der Effekt der expliziten Konvertierung des Zeigers, der unter Verwendung des address-of-Operators für den Basisklassentyp `A` abgerufen wurde. Beachten Sie, dass dem Compiler mit der Koersion der Adresse des Objekts in Typ `A*` nicht immer genügend Informationen darüber bereitgestellt werden, welches Unterobjekt vom Typ `A` auszuwählen ist. In diesem Fall gibt es zwei Unterobjekte.
 
-![Mehrdeutige Konvertierung der Zeiger auf Basisklassen](../cpp/media/vc38xt1.gif "vc38XT1") mehrdeutige Konvertierung der Zeiger auf Basisklassen
+![Mehrdeutige Konvertierung der Zeiger auf Basisklassen](../cpp/media/vc38xt1.gif "mehrdeutige Konvertierung der Zeiger auf Basisklassen") <br/>
+Mehrdeutige Konvertierung der Zeiger auf Basisklassen
 
 Die Konvertierung in Typ `A*` (Zeiger auf `A`) ist mehrdeutig, da nicht erkannt werden kann, welches Unterobjekt des Typs `A` das richtige ist. Sie können Mehrdeutigkeiten vermeiden, indem Sie wie folgt explizit angeben, welches Unterobjekt verwendet werden soll:
 
@@ -202,7 +208,8 @@ Wenn virtuelle Basisklassen verwendet werden, können Funktionen, Objekte, Typen
 
 Die folgende Abbildung zeigt, wie Objekte mithilfe von virtueller und nicht virtueller Vererbung zusammengestellt werden.
 
-![Virtuelle und nicht virtuelle Ableitung](../cpp/media/vc38xr1.gif "vc38XR1") virtuellen Visual Studio. nicht virtuelle Ableitung
+![Virtuelle und nicht&#45;virtuellen Ableitung](../cpp/media/vc38xr1.gif "virtuellen Ableitung und nicht&#45;virtuellen Ableitung") <br/>
+Virtuelle und nicht virtuelle Ableitung
 
 In der Abbildung führt der Zugriff auf beliebige Member der `A`-Klasse durch nicht virtuelle Basisklassen zu einer Mehrdeutigkeit. Der Compiler hat keine Informationen darüber, ob das `B` zugeordnete Unterobjekt oder das `C` zugeordnete Unterobjekt zu verwenden ist. Wenn jedoch `A` als virtuelle Basisklasse angegeben ist, ist klar, auf welches Unterobjekt zugegriffen wird.
 

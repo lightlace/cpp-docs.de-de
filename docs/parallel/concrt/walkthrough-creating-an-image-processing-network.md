@@ -1,16 +1,16 @@
 ---
 title: 'Exemplarische Vorgehensweise: Erstellen eines Bildverarbeitungsnetzwerks'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-ms.openlocfilehash: 4eb1d6f9e5bc0055a1a4b4be5e18497b20c3a73a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93a20ca9967c8730e1563a653c8f4546d94161fb
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643637"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176171"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Exemplarische Vorgehensweise: Erstellen eines Bildverarbeitungsnetzwerks
 
@@ -134,7 +134,7 @@ Wenn Ihre Anwendung erfordert von mehreren Nachrichtenblöcken Verarbeiten der N
 
 Die folgende Abbildung zeigt das Bildverarbeitungsnetzwerk:
 
-![Bildverarbeitungsnetzwerk](../../parallel/concrt/media/concrt_imageproc.png "Concrt_imageproc")
+![Bildverarbeitungsnetzwerk](../../parallel/concrt/media/concrt_imageproc.png "Bildverarbeitungsnetzwerk")
 
 Die `countdown_event` Objekt in diesem Beispiel ermöglicht das Bildverarbeitungsnetzwerk Hauptdatei der Anwendung zu informieren, wenn alle Bilder verarbeitet wurden. Die `countdown_event` -Klasse verwendet ein [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) -Objekt signalisiert, wenn ein Wert des Leistungsindikators 0 (null) erreicht. Die Hauptassembly der Anwendung erhöht den Zähler jedes Mal, dass die It einen Dateinamen mit dem Netzwerk sendet. Terminalknoten des Netzwerks verringert den Zähler, nachdem jedes Image verarbeitet wurde. Nachdem die hauptanwendung das angegebene Verzeichnis durchsucht, wartet es für die `countdown_event` -Objekt signalisiert, dass sein Zähler 0 (null) erreicht hat.
 
@@ -152,7 +152,7 @@ Der folgende Code veranschaulicht das vollständige Beispiel. Die `wmain` -Funkt
 
 Die folgende Abbildung zeigt die Ausgabe des Beispiels. Jedes Quellbild liegt über dem entsprechenden geänderten Bild.
 
-![Beispielausgabe für das Beispiel](../../parallel/concrt/media/concrt_imageout.png "Concrt_imageout")
+![Beispielausgabe für das Beispiel](../../parallel/concrt/media/concrt_imageout.png "Beispielausgabe für das Beispiel")
 
 `Lighthouse` Tom Alphin erstellt wird und daher in Graustufen konvertiert wird. `Chrysanthemum`, `Desert`, `Koala`, und `Tulips` Rot als der dominanten Farbe haben und daher die grün und Blau-Farbkomponenten entfernt und abgedunkelt werden. `Hydrangeas`, `Jellyfish`, und `Penguins` die Standardkriterien erfüllen, und sind daher Sepia Farbtönen an.
 

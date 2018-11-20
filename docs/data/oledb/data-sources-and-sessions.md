@@ -1,23 +1,24 @@
 ---
 title: Datenquellen und Sitzungen
-ms.date: 10/22/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - data sources [C++], OLE DB
 - connections [C++], data source
 - OLE DB consumer templates [C++], data sources
 ms.assetid: 6ee52216-e082-4869-a1d6-ce561cfb76e5
-ms.openlocfilehash: 04b274677d98f1a544bcc190ce7155c00c4ee8d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c43061ccb462fe472821c76251430b5e3b0f0809
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650327"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175300"
 ---
 # <a name="data-sources-and-sessions"></a>Datenquellen und Sitzungen
 
 Die folgende Abbildung zeigt die Klassen, die eine Verbindung mit und Zugreifen auf eine Datenquelle zu unterstützen. Jede Klasse basiert auf eine Standardimplementierung der OLE DB-Komponente.
 
-![Daten-Datenquelle und Sitzungsklassen](../../data/oledb/media/vcdatasourcesessionclasses.gif "Vcdatasourcesessionclasses") Datenquelle und Sitzungsklassen
+![Daten-Datenquelle und Sitzungsklassen](../../data/oledb/media/vcdatasourcesessionclasses.gif "Daten Datenquelle und Sitzungsklassen") <br/>
+Datenquelle und Sitzungsklassen
 
 Die Klassen sind:
 

@@ -1,6 +1,6 @@
 ---
 title: 'MFC-ActiveX-Steuerelemente: Lizenzieren eines ActiveX-Steuerelements'
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 f1_keywords:
 - COleObjectFactory
 helpviewer_keywords:
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - GetLicenseKey method [MFC]
 - licensing ActiveX controls
 ms.assetid: cacd9e45-701a-4a1f-8f1f-b0b39f6ac303
-ms.openlocfilehash: 4001d49da8477ab9dd481d0eb3ee02cb10e1e18b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35ca5d410f642f2557d9ee797eda2d9529f7f4d1
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465623"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176357"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Lizenzieren eines ActiveX-Steuerelements
 
 Lizenzierung unterstützen können ein optionales Feature von ActiveX-Steuerelemente, Sie steuern, wer kann verwenden oder verteilen das Steuerelement. (Weitere Informationen zu ermitteln, finden Sie unter Lizenzierungsprobleme im [Upgrading eines vorhandenen ActiveX-Steuerelements](../mfc/upgrading-an-existing-activex-control.md).)
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen zu moderne Technologien, die ActiveX-ablösen, finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
 
 In diesem Artikel werden die folgenden Themen behandelt:
@@ -43,13 +43,15 @@ Um die Lizenzierung unterstützen ActiveX-Steuerelemente, die [COleObjectFactory
 
 Die folgende Abbildung zeigt die lizenzüberprüfung eines ActiveX-Steuerelements, die während der Entwicklung einer Anwendung mit Containern verwendet werden. Wie bereits erwähnt, muss der Entwickler der Container-Anwendung die richtigen verfügen. LIC-Datei installiert wird, auf dem Entwicklungscomputer zum Erstellen einer Instanz des Steuerelements.
 
-![ActiveX-Steuerelementen überprüft wird, auf die Entwicklung lizenziert](../mfc/media/vc374d1.gif "vc374d1") Überprüfung von einem lizenzierten ActiveX-Steuerelements während der Entwicklung
+![ActiveX-Steuerelementen überprüft wird, auf die Entwicklung lizenziert](../mfc/media/vc374d1.gif "lizenzierten ActiveX-Steuerelementen überprüft auf die Entwicklung") <br/>
+Überprüfung eines lizenzierten ActiveX-Steuerelements während der Entwicklung
 
 Der nächste Prozess, in der folgenden Abbildung gezeigten tritt auf, wenn der Endbenutzer die Container-Anwendung ausgeführt wird.
 
 Wenn die Anwendung gestartet wird, muss eine Instanz des Steuerelements in der Regel erstellt werden. Der Container erreicht dies durch einen Aufruf an `CreateInstanceLic`, die eingebettete Lizenzschlüssel als Parameter übergeben. Ein Zeichenfolgenvergleich wird zwischen den eingebetteten Lizenzschlüssel und die Kopie des Steuerelements des Lizenzschlüssels hergestellt. Wenn die Übereinstimmung erfolgreich ist, wird eine Instanz des Steuerelements wird erstellt, und die Anwendung wird weiterhin normal ausgeführt. Beachten Sie, dass die. LIC-Datei muss nicht auf Computer des Benutzers, der das Steuerelement vorhanden sein.
 
-![ActiveX-Steuerelementen überprüft bei der Ausführung lizenziert](../mfc/media/vc374d2.gif "vc374d2") lizenzierten ActiveX-Steuerelements während der Ausführung einer Überprüfung
+![ActiveX-Steuerelementen überprüft bei der Ausführung lizenziert](../mfc/media/vc374d2.gif "lizenzierten ActiveX-Steuerelementen überprüft bei der Ausführung") <br/>
+Überprüfung eines lizenzierten ActiveX-Steuerelements während der Ausführung
 
 Lizenzierung von ASP.NET-Serversteuerelementen besteht aus zwei grundlegenden Komponenten: spezifischen Code in der Implementierung des Steuerelements DLL und die Lizenzdatei. Der Code besteht aus zwei (oder möglicherweise drei)-Funktionsaufrufe und eine Zeichenfolge, die im folgenden als "Lizenz String", mit einem Urheberrechtshinweis bezeichnet. Diese Aufrufe und die Lizenzzeichenfolge finden Sie in der Implementierung des Steuerelements (. CPP)-Datei. Die Lizenzdatei, die von der ActiveX-Steuerelement-Assistent, generierte ist eine Textdatei mit der eine urheberrechtserklärung. Es heißt, verwenden den Namen des Projekts mit ein. LIC-Erweiterung, z. B. Beispiel. LIC. Ein lizenziertes Steuerelement muss die Lizenzdatei metaelementtyp bei Bedarf zur Entwurfszeit verwendet wird.
 

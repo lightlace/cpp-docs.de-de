@@ -1,18 +1,18 @@
 ---
 title: Übersicht über die Concurrency Runtime
-ms.date: 07/20/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Concurrency Runtime, requirements
 - Concurrency Runtime, architecture
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-ms.openlocfilehash: dab4860bcc69780fa6a6390e2ef111216642637a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: ffaf560361da2fd54febb5e38af121ad5149f012
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693642"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176665"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Übersicht über die Concurrency Runtime
 
@@ -60,10 +60,10 @@ Die Concurrency Runtime ist in vier Komponenten unterteilt: die Parallel Pattern
 
 **Architektur von Concurrency Runtime**
 
-![Architektur von Concurrency Runtime](../../parallel/concrt/media/concurrencyrun.png "Concurrencyrun")
+![Architektur von Concurrency Runtime](../../parallel/concrt/media/concurrencyrun.png "Architektur von Concurrency Runtime")
 
 > [!IMPORTANT]
->  Die Aufgabenplanung und Resource Manager-Komponenten sind nicht verfügbar, über eine app (Universelle Windows Plattform) oder wenn Sie die Aufgabenklasse oder andere Typen in "ppltasks.h" verwenden.
+> Die Aufgabenplanung und Resource Manager-Komponenten sind nicht verfügbar, über eine app (Universelle Windows Plattform) oder wenn Sie die Aufgabenklasse oder andere Typen in "ppltasks.h" verwenden.
 
 Die Concurrency Runtime ist hochgradig *zusammensetzbar*, d. h. Sie können die vorhandene Funktionalität kombinieren um mehr zu erreichen. Die Concurrency Runtime kombiniert viele Funktionen aus Komponenten auf niedrigerer Ebene, wie z. B. parallele Algorithmen.
 

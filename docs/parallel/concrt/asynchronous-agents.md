@@ -1,16 +1,16 @@
 ---
 title: Asynchrone Agents
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - asynchronous agents
 - agents [Concurrency Runtime]
 ms.assetid: 6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a
-ms.openlocfilehash: 949074981d77702fd23ee3ff70f219c013fa6543
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a99400e4df49e36e1cddda7068f315485b976cde
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467599"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176535"
 ---
 # <a name="asynchronous-agents"></a>Asynchrone Agents
 
@@ -22,7 +22,7 @@ Die Agents Library definiert die [Concurrency:: Agent](../../parallel/concrt/ref
 
 Agents besitzen einen festgelegten Lebenszyklus. Die [concurrency::agent_status](reference/concurrency-namespace-enums.md#agent_status) Enumeration definiert die verschiedenen Zustände eines Agents. In der folgende Abbildung ist ein Zustandsdiagramm, das zeigt, wie die Agents von einem Zustand in einen anderen übergehen. In dieser Abbildung darstellen durchgezogene Linien für Methoden, die von Ihrer Anwendung aufgerufen werden; gepunktete Linien stellen die Methoden, die von der Laufzeit aufgerufen werden.
 
-![Agent-Zustandsdiagramm](../../parallel/concrt/media/agentstate.png " /var /")
+![Agent-Zustandsdiagramm](../../parallel/concrt/media/agentstate.png "Agent-Zustandsdiagramm")
 
 Die folgende Tabelle beschreibt die einzelnen Status in der `agent_status` Enumeration.
 

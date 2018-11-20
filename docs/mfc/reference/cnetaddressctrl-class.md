@@ -1,6 +1,6 @@
 ---
 title: CNetAddressCtrl-Klasse
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CNetAddressCtrl
 - AFXCMN/CNetAddressCtrl
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 09dfdb57fb22b958edc64ec8cbdce95527a304d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee44c05fa6417aaca367798d7a94a900d521b896
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654675"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176237"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl-Klasse
 
@@ -64,7 +64,7 @@ Die `CNetAddressCtrl` abgeleitete Klasse wird die [CEdit](../../mfc/reference/ce
 
 Die folgende Abbildung zeigt ein Dialogfeld, das eine Netzwerkadressen-Steuerelement enthält. Der Text Box (1) für das Netzwerkadressen-Steuerelement enthält eine ungültige Netzwerk-Adresse. Die QuickInfo-Meldung (2) wird angezeigt, wenn die Netzwerkadresse ungültig ist.
 
-![Dialogfeld mit einem Netzwerkadressen-Steuerelement und Infotipps. ](../../mfc/reference/media/cnetaddctrl.png "Cnetaddctrl")
+![Dialogfeld mit einem Netzwerkadressen-Steuerelement und Infotipps. ](../../mfc/reference/media/cnetaddctrl.png "Dialogfeld mit einem Netzwerkadressen-Steuerelement und Infotipps.")
 
 ## <a name="example"></a>Beispiel
 

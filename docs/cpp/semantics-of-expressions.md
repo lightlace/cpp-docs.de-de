@@ -1,18 +1,18 @@
 ---
 title: Semantik von Ausdrücken
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - grammar, expressions
 - expressions [C++], semantics
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: df86f73aa38ad9393adcbf193390cd785c934115
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2ce510478bcf1574429c85f704552e6b73100ea
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490960"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175784"
 ---
 # <a name="semantics-of-expressions"></a>Semantik von Ausdrücken
 
@@ -43,7 +43,8 @@ int main()
 54
 ```
 
-![Auswertungsreihenfolge in einem Ausdruck](../cpp/media/vc38zv1.gif "vc38ZV1") Reihenfolge der Auswertung von Ausdruck
+![Auswertungsreihenfolge in einem Ausdruck](../cpp/media/vc38zv1.gif "Auswertungsreihenfolge in einem Ausdruck") <br/>
+Reihenfolge der Auswertung von Ausdruck
 
 Die Reihenfolge der Auswertung des in der obigen Abbildung dargestellten Ausdrucks wird durch die Reihenfolge und die Assoziativität der Operatoren bestimmt:
 
@@ -55,7 +56,8 @@ Die Reihenfolge der Auswertung des in der obigen Abbildung dargestellten Ausdruc
 
 Wenn Teilausdrücke mit Klammern gruppiert werden, werden die Rangfolge sowie die Reihenfolge der Auswertung des Ausdrucks geändert, wie in der folgenden Abbildung gezeigt.
 
-![Die Reihenfolge der Auswertung eines Ausdrucks mit Klammern](../cpp/media/vc38zv2.gif "vc38ZV2") Reihenfolge der Auswertung von Ausdrücken mit Klammern
+![Die Reihenfolge der Auswertung eines Ausdrucks mit Klammern](../cpp/media/vc38zv2.gif "Reihenfolge der Auswertung eines Ausdrucks mit Klammern") <br/>
+Reihenfolge der Auswertung von Ausdrücken mit Klammern
 
 Ausdrücke, wie in der Abbildung oben, werden ausschließlich für ihre Nebeneffekte ausgewertet – in diesem Fall, um Informationen zum Standardausgabegerät zu übertragen.
 
@@ -68,7 +70,7 @@ Die Programmiersprache C++ gibt beim Angeben von Operanden bestimmte Kompatibili
 |Typ erwartet|Typen zulässig|
 |-------------------|-------------------|
 |*Typ*|`const` *Typ*<br /> `volatile` *Typ*<br /> *type*&<br /> `const` *Typ*&<br /> `volatile` *Typ*&<br /> `volatile const` *Typ*<br /> `volatile const` *Typ*&|
-|*type*\*|*type*\*<br /> `const` *Typ*\*<br /> `volatile` *Typ*\*<br /> `volatile const` *Typ*\*|
+|*Typ* \*|*Typ* \*<br /> `const` *Typ* \*<br /> `volatile` *Typ* \*<br /> `volatile const` *Typ* \*|
 |`const` *Typ*|*Typ*<br /> `const` *Typ*<br />`const` *Typ*&|
 |`volatile` *Typ*|*Typ*<br /> `volatile` *Typ*<br /> `volatile` *Typ*&|
 

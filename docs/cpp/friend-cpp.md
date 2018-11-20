@@ -1,6 +1,6 @@
 ---
 title: Friend (C++)
-ms.date: 07/02/2018
+ms.date: 11/19/2018
 f1_keywords:
 - friend_cpp
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - friend classes [C++]
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
-ms.openlocfilehash: 46027692bfa4a7245418ab032168b5b3c107e839
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 769720877cc58de530791b268811d7d01adad3e6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480521"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176717"
 ---
 # <a name="friend-c"></a>Friend (C++)
 
@@ -230,7 +230,8 @@ Die Friendship-Klasse wird nicht vererbt. Dies bedeutet, dass die von `YourOther
 
 Die folgende Abbildung zeigt vier Klassendeklarationen: `Base`, `Derived`, `aFriend` und `anotherFriend`. Nur die `aFriend`-Klasse hat direkten Zugriff auf die privaten Member der `Base`-Klassendeklaration (und auf alle Member, die `Base` möglicherweise geerbt hat).
 
-![Auswirkungen von Friend-Beziehungen](../cpp/media/vc38v41.gif "vc38V41") Auswirkungen von Friend-Beziehungen
+![Auswirkungen von Friend-Beziehungen](../cpp/media/vc38v41.gif "Auswirkungen von Friend-Beziehungen") <br/>
+Auswirkungen von Friend-Beziehungen
 
 ## <a name="inline-friend-definitions"></a>Inline-Friend-Definitionen
 

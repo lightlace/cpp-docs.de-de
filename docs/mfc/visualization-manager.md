@@ -1,29 +1,34 @@
 ---
 title: Visualisierungs-Manager
-ms.date: 06/28/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Visualization Manager
 ms.assetid: c9dd1365-27ac-42e5-8caa-1004525b4129
-ms.openlocfilehash: befff860f50677f9c70c0fbb6b45ac528c36e773
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c9dc19266d80d56f696953c5f5896eb9d99cc8b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521371"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175573"
 ---
 # <a name="visualization-manager"></a>Visualisierungs-Manager
 
 Visuelle Manager ist ein Objekt, das die Darstellung einer ganzen Anwendung steuert. Er fungiert als eine einzelne Klasse, in dem Sie alle der Zeichencode für Ihre Anwendung einfügen. Die MFC-Bibliothek enthält mehrere Erscheinungsbild-Manager. Sie können auch Ihre eigenen visuellen Manager erstellen, wenn Sie eine benutzerdefinierte Ansicht für Ihre Anwendung erstellen möchten. Die folgenden Abbildungen zeigen die gleiche Anwendung aus, wenn verschiedene Erscheinungsbild-Manager aktiviert sind:
 
-![Von CMFCVisualManagerWindows gerenderte MyApp](../mfc/media/vmwindows.png "Vmwindows") "MyApp", die den visuellen Manager mit CMFCVisualManagerWindows verwendet.
+![Von CMFCVisualManagerWindows gerenderte MyApp](../mfc/media/vmwindows.png "cmfcvisualmanagerwindows gerenderte MyApp") <br/>
+"MyApp", die den visuellen Manager mit CMFCVisualManagerWindows verwendet.
 
-![Von CMFCVisualManagerVS2005 gerenderte MyApp](../mfc/media/vmvs2005.png "vmvs2005") "MyApp", die den visuellen CMFCVisualManagerVS2005-Manager verwendet.
+![Von CMFCVisualManagerVS2005 gerenderte MyApp](../mfc/media/vmvs2005.png "cmfcvisualmanagervs2005 gerenderte MyApp") <br/>
+"MyApp", die den visuellen CMFCVisualManagerVS2005-Manager verwendet.
 
-![Von CMFCVisualManagerOfficeXP gerenderte MyApp](../mfc/media/vmofficexp.png "Vmofficexp") "MyApp", die den visuellen CMFCVisualManagerOfficeXP-Manager verwendet.
+![Von CMFCVisualManagerOfficeXP gerenderte MyApp](../mfc/media/vmofficexp.png "cmfcvisualmanagerofficexp gerenderte MyApp") <br/>
+"MyApp", die den visuellen CMFCVisualManagerOfficeXP-Manager verwendet.
 
-![Von CMFCVisualManagerOffice2003 gerenderte MyApp](../mfc/media/vmoffice2003.png "vmoffice2003") "MyApp", die den visuellen CMFCVisualManagerOffice2003-Manager verwendet.
+![Von CMFCVisualManagerOffice2003 gerenderte MyApp](../mfc/media/vmoffice2003.png "cmfcvisualmanageroffice2003 gerenderte MyApp") <br/>
+"MyApp", die den visuellen CMFCVisualManagerOffice2003-Manager verwendet.
 
-![Von CMFCVisualManagerOffice2007 gerenderte MyApp](../mfc/media/msoffice2007.png "msoffice2007") "MyApp", die den visuellen CMFCVisualManagerOffice2007-Manager verwendet.
+![Von CMFCVisualManagerOffice2007 gerenderte MyApp](../mfc/media/msoffice2007.png "cmfcvisualmanageroffice2007 gerenderte MyApp") <br/>
+"MyApp", die den visuellen CMFCVisualManagerOffice2007-Manager verwendet.
 
 Standardmäßig behält der visuelle Manager der Zeichencode für mehrere GUI-Elemente. Um benutzerdefinierte Benutzeroberflächenelemente zu gewährleisten, müssen Sie verwandten Zeichenmethoden der visuellen Manager außer Kraft zu setzen. Die Liste der Methoden, finden Sie unter [CMFCVisualManager-Klasse](../mfc/reference/cmfcvisualmanager-class.md). Die Methoden, die Sie überschreiben können, um eine benutzerdefinierte Darstellung bereitstellen, sind alle Methoden, die mit `OnDraw`.
 

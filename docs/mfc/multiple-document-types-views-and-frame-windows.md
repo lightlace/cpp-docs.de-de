@@ -1,6 +1,6 @@
 ---
 title: Mehrere Dokumenttypen, Ansichten und Rahmenfenster
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - static splitter windows [MFC]
 - multiple views [MFC]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-ms.openlocfilehash: 3c1422aed5535d30a2f9fb79300f6093326d2ef3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9c26413d45dfa03087bf9909bf8004064766a00
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669104"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175790"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Mehrere Dokumenttypen, Ansichten und Rahmenfenster
 
@@ -64,7 +64,8 @@ MFC unterstützt drei allgemeine Benutzeroberflächen, die mehrere Ansichten des
 
 Die folgende Abbildung für die Dokumente „a“, „b“ und „c“ zeigt die drei Benutzeroberflächenmodelle in der oben genannten Reihenfolge.
 
-![Mehrere&#45;Benutzeroberflächen anzeigen](../mfc/media/vc37a71.gif "vc37a71") Benutzeroberflächen mit mehreren Ansichten
+![Mehrere&#45;Benutzeroberflächen anzeigen](../mfc/media/vc37a71.gif "mehrere&#45;Benutzeroberflächen anzeigen") <br/>
+Benutzeroberflächen mit mehreren Ansichten
 
 Das Framework ermöglicht diese Modelle durch Implementieren des Befehls „Neues Fenster“ und Bereitstellen der Klasse [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), wie im Abschnitt [Splitterfenster](#_core_splitter_windows)erläutert. Sie können diese Modelle als Ausgangspunkt verwenden und darauf basierend weitere Modelle implementieren. Beispielprogramme für die verschiedenen Konfigurationen von Ansichten, Rahmenfenstern und Aufteilungen finden Sie unter [MFC-Beispiele](../visual-cpp-samples.md).
 

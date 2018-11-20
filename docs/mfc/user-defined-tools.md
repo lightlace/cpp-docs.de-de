@@ -1,15 +1,15 @@
 ---
 title: Benutzerdefinierte Tools
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - user-defined tools (MFC Extensions)
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
-ms.openlocfilehash: 5c5773cdbbd641b30f39494b2d11c282d2d43954
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df8ba98fa1986052bae82b2afbdf40725298bef7
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607076"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175729"
 ---
 # <a name="user-defined-tools"></a>Benutzerdefinierte Tools
 
@@ -17,7 +17,8 @@ MFC unterstützt benutzerdefinierte Tools. Ein benutzerdefiniertes Tool ist ein 
 
 Wenn Sie Unterstützung von benutzerdefinierten Tools aktiviert haben, enthält das Dialogfeld "anpassen" automatisch die **Tools** Registerkarte. Die folgende Abbildung zeigt die **Tools** Seite.
 
-![Tools im Dialogfeld "anpassen" Registerkarte](../mfc/media/custdialogboxtoolstab.png "Custdialogboxtoolstab") Anpassung Registerkarte des Dialogfeldes-Tools
+![Tools im Dialogfeld "anpassen" Registerkarte](../mfc/media/custdialogboxtoolstab.png "Registerkarte \"Tools\" im Dialogfeld \"anpassen\"") <br/>
+Registerkarte "Anpassung Dialogfeld Feld Tools"
 
 ## <a name="enabling-user-defined-tools-support"></a>Aktivieren die benutzerdefinierte Unterstützung für tools
 
@@ -57,4 +58,3 @@ Wenn Sie einige Tools, die beim Start der Anwendung vordefinieren möchten, müs
 [CUserTool-Klasse](../mfc/reference/cusertool-class.md)<br/>
 [CUserToolsManager-Klasse](../mfc/reference/cusertoolsmanager-class.md)<br/>
 [CWinAppEx-Klasse](../mfc/reference/cwinappex-class.md)
-

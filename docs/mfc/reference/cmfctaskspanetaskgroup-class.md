@@ -1,6 +1,6 @@
 ---
 title: CMFCTasksPaneTaskGroup-Klasse
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCTasksPaneTaskGroup
 - AFXTASKSPANE/CMFCTasksPaneTaskGroup
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCTasksPaneTaskGroup [MFC], m_rectGroup
 - CMFCTasksPaneTaskGroup [MFC], m_strName
 ms.assetid: 2111640b-a46e-4b27-b033-29e88632b86a
-ms.openlocfilehash: 25e714aa617cdccc4e02e288f1a24f636e05cb0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ed50950bc62a0c2f382e42782c58a0d7354116f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539606"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176587"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>CMFCTasksPaneTaskGroup-Klasse
 
@@ -72,19 +72,19 @@ class CMFCTasksPaneTaskGroup : public CObject
 
 Die folgende Abbildung zeigt eine erweiterte Aufgabengruppe:
 
-![Aufgabengruppe, erweitert](../../mfc/reference/media/nexttaskgrpexpand.png "Nexttaskgrpexpand")
+![Aufgabengruppe, erweitert](../../mfc/reference/media/nexttaskgrpexpand.png "Aufgabengruppe, erweitert")
 
 Die folgende Abbildung zeigt eine reduzierte Aufgabengruppe:
 
-![Reduzierte Aufgabengruppe](../../mfc/reference/media/nexttaskgrpcollapse.png "Nexttaskgrpcollapse")
+![Reduzierte Aufgabengruppe](../../mfc/reference/media/nexttaskgrpcollapse.png "reduzierte Aufgabengruppe")
 
 Die folgende Abbildung zeigt eine Aufgabengruppe ohne Beschriftung:
 
-![Aufgabengruppe ohne Beschriftung](../../mfc/reference/media/nexttaskgrpnocapt.png "Nexttaskgrpnocapt")
+![Aufgabengruppe ohne Beschriftung](../../mfc/reference/media/nexttaskgrpnocapt.png "Aufgabengruppe ohne Beschriftung")
 
 Die folgende Abbildung zeigt zwei Aufgabengruppen. Die erste Aufgabengruppe wird als Sonderzeichen markiert, indem die `m_bIsSpecial` flag auf "true", die zweite Aufgabengruppe ist zwar keine speziellen. Beachten Sie, wie die Beschriftung für die erste Aufgabengruppe dunkler als der zweite Aufgabengruppe ist:
 
-![Spezielle Aufgabengruppe](../../mfc/reference/media/nexttaskgrpspecial.png "Nexttaskgrpspecial")
+![Spezielle Aufgabengruppe](../../mfc/reference/media/nexttaskgrpspecial.png "spezielle Aufgabengruppe")
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 

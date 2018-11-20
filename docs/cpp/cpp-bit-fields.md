@@ -1,17 +1,17 @@
 ---
 title: C++-Bitfelder
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - bitfields [C++]
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-ms.openlocfilehash: df4e5a068f76c35dc22b3915ad7e4ace421ca10b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 747920378472cc091928a080e303a0543e287aaa
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644960"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175092"
 ---
 # <a name="c-bit-fields"></a>C++-Bitfelder
 
@@ -43,7 +43,8 @@ struct Date {
 
 Das konzeptionelle Speicherlayout eines Objekts vom Typ `Date` wird in der folgenden Abbildung dargestellt.
 
-![Speicherlayout eines Datumsobjekts](../cpp/media/vc38uq1.png "vc38UQ1") Layout des Datumsobjekts Arbeitsspeicher
+![Speicherlayout eines Datumsobjekts](../cpp/media/vc38uq1.png "Speicherlayout eines Datumsobjekts") <br/>
+Speicherlayout von Datumsobjekten
 
 Beachten Sie, dass `nYear` 8 Bit lang und verursacht einen Überlauf der Wortgrenze des deklarierten Typs, **ohne Vorzeichen** **kurze**. Aus diesem Grund ist es am Anfang eines neuen begonnen **ohne Vorzeichen** **kurze**. Es ist nicht notwendig, dass alle Bitfelder in ein Objekt des zugrunde liegenden Typs passen. Neue Speichereinheiten werden entsprechend der Anzahl von Bits, die in der Deklaration angefordert werden, zugeordnet.
 
@@ -69,7 +70,8 @@ struct Date {
 
 das Speicherlayout ist dann in der folgenden Abbildung dargestellt:
 
-![Layout des Datumsobjekts mit 0 (null)&#45;Bitfeld der Länge](../cpp/media/vc38uq2.png "vc38UQ2") Layout des Datumsobjekts mit Bitfeld der Länge 0 (null)
+![Layout des Datumsobjekts mit 0 (null)&#45;Bitfeld der Länge](../cpp/media/vc38uq2.png "Layout des Datumsobjekts mit 0 (null)&#45;Bitfeld der Länge") <br/>
+Layout des Datumsobjekts mit Bitfeld der Länge 0 (null)
 
 Der zugrunde liegende Typ eines Bitfelds muss ein ganzzahliger Typ sein, wie in beschrieben [Basistypen](../cpp/fundamental-types-cpp.md).
 

@@ -1,17 +1,17 @@
 ---
 title: C++-Attribute für COM und .NET
 ms.custom: index-page
-ms.date: 10/02/2018
+ms.date: 11/19/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: bacfd4cb78c5bf65422fb4472a4563776041a87b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a37542bd69926572e44322c406862117560affe
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589279"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175768"
 ---
 # <a name="c-attributes-for-com-and-net"></a>C++-Attribute für COM und .NET
 
@@ -55,7 +55,7 @@ Als wenn das Projekt erstellt wird, analysiert, der Compiler jede C++-Quelldatei
 
 Die folgende Abbildung veranschaulicht die Beziehung zwischen dem Compiler und Attributanbieter.
 
-![Komponentenattributkommunikation](../media/vccompattrcomm.gif "VcCompAttrComm")
+![Komponentenattributkommunikation](../media/vccompattrcomm.gif "komponentenattributkommunikation")
 
 > [!NOTE]
 > Verwendung von Attributen wird den Inhalt der Quelldatei nicht geändert werden. Nur dann, die der generierten Attributcode sichtbar ist, ist während des Debuggens von Sitzungen. Darüber hinaus können für jede Quelldatei im Projekt, eine Textdatei generiert werden, in dem die Ergebnisse der Ersetzung Attribut angezeigt. Weitere Informationen zu dieser Vorgehensweise finden Sie unter [/FX (eingefügten Code zusammenführen)](../../build/reference/fx-merge-injected-code.md) und [Debuggen von Injiziertem Code](/visualstudio/debugger/how-to-debug-injected-code).

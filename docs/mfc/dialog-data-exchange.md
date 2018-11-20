@@ -1,6 +1,6 @@
 ---
 title: Dialogdatenaustausch
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - initializing dialog boxes
 - canceling data exchange
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - UpdateData method [MFC]
 - retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
-ms.openlocfilehash: a72be4daf6c10a7d16b8558bfdddb8337ff1b1be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f80d80dc9e212dbe0d87da65ac92943ad1f0edad
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566282"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175495"
 ---
 # <a name="dialog-data-exchange"></a>Dialogdatenaustausch
 
@@ -34,7 +34,8 @@ Derselbe Mechanismus überträgt die Werte aus den Steuerelementen, die die Memb
 
 Die folgende Abbildung veranschaulicht die Dialogfeld-Datenaustausch.
 
-![Dialogfeld-Datenaustausch](../mfc/media/vc379d1.gif "vc379d1") Dialogfeld-Datenaustausch
+![Dialogfeld-Datenaustausch](../mfc/media/vc379d1.gif "Dialogfeld-Datenaustausch") <br/>
+Dialogdatenaustausch
 
 `UpdateData` funktioniert in beide Richtungen, laut der **"bool"** Parameter übergeben. Um den Austausch, die durchzuführen `UpdateData` richtet eine `CDataExchange` -Objekt und ruft der Dialogfeldklasse-Überschreibung `CDialog`des `DoDataExchange` Member-Funktion. `DoDataExchange` akzeptiert ein Argument des Typs `CDataExchange`. Die `CDataExchange` -Objekt übergeben, um `UpdateData` stellt den Kontext des Exchange, definieren solche Informationen als die Richtung der Exchange-dar.
 
