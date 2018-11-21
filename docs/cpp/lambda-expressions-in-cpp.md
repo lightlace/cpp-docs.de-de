@@ -1,17 +1,17 @@
 ---
 title: Lambdaausdrücke in C++
-ms.date: 07/19/2017
+ms.date: 11/19/2018
 helpviewer_keywords:
 - lambda expressions [C++]
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: 44255df8633ad677587129dd27c0bdc23a616d96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1b8568d69fea002e59925e1e9354407457954e42
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493807"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176262"
 ---
 # <a name="lambda-expressions-in-c"></a>Lambdaausdrücke in C++
 
@@ -43,7 +43,7 @@ void abssort(float* x, unsigned n) {
 
 In dieser Abbildung werden die Bestandteile eines Lambda-Ausdrucks dargestellt:
 
-![Strukturelle Elemente eines Lambda-Ausdrucks](../cpp/media/lambdaexpsyntax.png "LambdaExpSyntax")
+![Strukturelle Elemente eines Lambda-Ausdrucks](../cpp/media/lambdaexpsyntax.png "strukturellen Elemente eines Lambda-Ausdrucks")
 
 1. *Erfassungsklausel* (auch bekannt als die *Lambda-Introducer* in der C++-Spezifikation.)
 
