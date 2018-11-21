@@ -1,17 +1,17 @@
 ---
 title: Funktionsüberladung
-ms.date: 1/25/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-ms.openlocfilehash: f37a539c74b995b1dce5f68344c555a679a87991
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c05e4b840a02b3d9bbcd4ed259509be4c35c22c2
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333370"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176301"
 ---
 # <a name="function-overloading"></a>Funktionsüberladung
 
@@ -280,7 +280,8 @@ Die Reihenfolge für Konvertierungen lautet wie folgt:
 
    - Die Konvertierung von einem Zeiger auf eine abgeleitete Klasse in einen Zeiger auf eine Basisklasse erzeugt eine bessere Übereinstimmung, je näher die Basisklasse der direkten Basisklasse ist. Angenommen, die Klassenhierarchie folgt der in der folgenden Abbildung dargestellten Klassenhierarchie.
 
-![Bevorzugte Konvertierungen](../cpp/media/vc391t1.gif "vc391T1") Diagramm zur Veranschaulichung bevorzugter Konvertierungen
+![Diagramm der bevorzugte Konvertierungen](../cpp/media/vc391t1.gif "Diagramm der bevorzugte Konvertierungen") <br/>
+Diagramm mit bevorzugten Konvertierungen
 
 Die Konvertierung von Typ `D*` in Typ `C*` ist der Konvertierung von Typ `D*` in Typ `B*` vorzuziehen. Entsprechend ist die Konvertierung von Typ `D*` in Typ `B*` der Konvertierung von Typ `D*` in Typ `A*` vorzuziehen.
 
@@ -290,7 +291,8 @@ Die gleiche Regel gilt für pointer-to-member-Konvertierungen. Die Konvertierung
 
 Die vorhergehende Regel gilt nur für einen bestimmten Ableitungspfad. Betrachten Sie das Diagramm, das in der folgenden Abbildung dargestellt wird.
 
-![Mit mehreren&#45;Vererbung, die bevorzugten Konvertierungen](../cpp/media/vc391t2.gif "vc391T2") mehrfache Vererbung Diagramm zur Veranschaulichung bevorzugter Konvertierungen
+![Mehrere&#45;Vererbung, die bevorzugten Konvertierungen](../cpp/media/vc391t2.gif "mehrere&#45;Vererbung, die bevorzugten Konvertierungen") <br/>
+Mehrfachvererbungsdiagramm zur Verfügung, die bevorzugten Konvertierungen
 
 Die Konvertierung von Typ `C*` in Typ `B*` ist der Konvertierung von Typ `C*` in Typ `A*` vorzuziehen. Der Grund liegt darin, dass sie sich auf dem gleichen Pfad befinden, und `B*` näher liegt. Allerdings ist die Konvertierung von Typ `C*` in Typ `D*` der Konvertierung in Typ `A*` nicht vorzuziehen. Keiner der Typen hat Vorrang gegenüber dem anderen, da die Konvertierungen verschiedenen Pfaden folgen.
 

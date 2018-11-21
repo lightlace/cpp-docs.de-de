@@ -1,6 +1,6 @@
 ---
 title: CMFCTasksPane-Klasse
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCTasksPane
 - AFXTASKSPANE/CMFCTasksPane
@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: e11d1f95cf44756a39ab52fcd4dfeb87addc6e17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aaf0e68391dd1273c3f973315ac58fe0d6bd1c24
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563656"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176808"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane-Klasse
 
@@ -350,11 +350,11 @@ Befolgen Sie folgende Schritte, um das `CMFCTasksPane`-Steuerelement in Ihrer An
 
 Die folgende Abbildung zeigt ein typisches Aufgabenbereich-Steuerelement. Die erste Gruppe ist eine *spezielle* Gruppe und die Beschriftung weist eine dunklere Farbe. Die dritte Gruppe wird reduziert. Die letzte Gruppe orientiert sich am unteren Rand des Aufgabenbereichs und besitzt keine Beschriftung und die letzte Aufgabe in der Gruppe ist eine einfache Beschriftung:
 
-![Beispiel des Aufgabenbereichs](../../mfc/reference/media/nexttaskpane.png "Nexttaskpane")
+![Beispiel des Aufgabenbereichs](../../mfc/reference/media/nexttaskpane.png "Beispiel des Aufgabenbereichs")
 
 Sie können die Darstellung des Aufgabenbereichs anpassen, indem Sie verschiedene Ränder und Offsets anpassen. Die folgende Abbildung verdeutlicht die Bedeutung dieser Variablen:
 
-![Benutzerdefinierte Aufgabengruppe](../../mfc/reference/media/nexttaskgrpcustom.png "Nexttaskgrpcustom")
+![Benutzerdefinierte Aufgabengruppe](../../mfc/reference/media/nexttaskgrpcustom.png "benutzerdefinierte Aufgabengruppe")
 
 ## <a name="example"></a>Beispiel
 

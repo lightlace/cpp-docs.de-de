@@ -1,6 +1,6 @@
 ---
 title: CWnd-Klasse
-ms.date: 08/27/2018
+ms.date: 11/19/2018
 f1_keywords:
 - CWnd
 - AFXWIN/CWnd
@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 365ecea539d47892b8697bb7b6ce2015bc18cda3
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f1d418cadd2739b840efd14874fd4bbd6afeb4c5
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694893"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177107"
 ---
 # <a name="cwnd-class"></a>CWnd-Klasse
 
@@ -5688,10 +5688,10 @@ Das folgende Beispiel zeigt die verschiedenen Systemsymbole, die in einem Meldun
 
 |||
 |-|-|
-|![Beenden Sie &#40;x&#41; Symbol](../../mfc/reference/media/vc364f1.gif "vc364f1")|MB_ICONHAND MB_ICONSTOP und MB_ICONERROR|
-|![Hilfe &#40; &#41; Symbol](../../mfc/reference/media/vc364f2.gif "vc364f2")|MB_ICONQUESTION|
-|![Wichtige &#40; &#33; &#41; Symbol](../../mfc/reference/media/vc364f3.gif "vc364f3")|MB_ICONEXCLAMATION und MB_ICONWARNING|
-|![Informationen &#40;ich&#41; Symbol](../../mfc/reference/media/vc364f4.gif "vc364f4")|MB_ICONASTERISK und MB_ICONINFORMATION|
+|![Beenden Sie &#40;x&#41; Symbol](../../mfc/reference/media/vc364f1.gif "beenden &#40;x&#41; Symbol")|MB_ICONHAND MB_ICONSTOP und MB_ICONERROR|
+|![Hilfe &#40;? &#41; Symbol](../../mfc/reference/media/vc364f2.gif "Hilfe &#40;?&#41; Symbol")|MB_ICONQUESTION|
+|![Wichtige &#40; &#33; &#41; Symbol](../../mfc/reference/media/vc364f3.gif "wichtig &#40; &#33; &#41; Symbol")|MB_ICONEXCLAMATION und MB_ICONWARNING|
+|![Informationen &#40;ich&#41; Symbol](../../mfc/reference/media/vc364f4.gif "Informationen &#40;ich&#41; Symbol")|MB_ICONASTERISK und MB_ICONINFORMATION|
 
 ### <a name="example"></a>Beispiel
 
@@ -11728,7 +11728,7 @@ Der für eine standard-Bildlaufleiste liegt zwischen 0 und 100. Der Standardbere
 
 ##  <a name="settimer"></a>  CWnd::SetTimer
 
-Installiert einen Systemtimer.
+Installiert einen Systemzeitgeber.
 
 ```
 UINT_PTR SetTimer(
@@ -11743,7 +11743,7 @@ UINT_PTR SetTimer(
 ### <a name="parameters"></a>Parameter
 
 *nIDEvent*<br/>
-Gibt einen Timerbezeichner ungleich 0 (null) an. Wenn der Zeitgeberbezeichner eindeutig ist, wird von `SetTimer` der gleiche Wert zurückgegeben. Andernfalls wird von `SetTimer` ein neuer eindeutiger Wert festgelegt und zurückgegeben. Bei einem Fensterzeitgeber (der eine NULL-Rückruffunktion besitzt), muss der Wert nur für andere Fensterzeitgeber eindeutig sein, die dem aktiven Fenster zugeordnet sind. Für einen Rückrufzeitgeber muss der Wert für alle Zeitgeber in allen Prozessen eindeutig sein. Beim Erstellen eines Rückruftimers ist es daher wahrscheinlicher, dass der zurückgegebene Wert von dem von Ihnen angegebenen Wert abweicht.
+Gibt einen Zeitgeberbezeichner ungleich 0 (null) an. Wenn der Zeitgeberbezeichner eindeutig ist, wird von `SetTimer` der gleiche Wert zurückgegeben. Andernfalls wird von `SetTimer` ein neuer eindeutiger Wert festgelegt und zurückgegeben. Bei einem Fensterzeitgeber (der eine NULL-Rückruffunktion besitzt), muss der Wert nur für andere Fensterzeitgeber eindeutig sein, die dem aktiven Fenster zugeordnet sind. Für einen Rückrufzeitgeber muss der Wert für alle Zeitgeber in allen Prozessen eindeutig sein. Beim Erstellen eines Rückrufzeitgebers ist es daher wahrscheinlicher, dass der zurückgegebene Wert von dem von Ihnen angegebenen Wert abweicht.
 
 *nElapse*<br/>
 Gibt den Timeoutwert oder Intervall in Millisekunden an.
@@ -11753,7 +11753,7 @@ Gibt die Adresse der Anwendung bereitgestellten `TimerProc` Callback-Funktion, d
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Timerbezeichner des neuen Timers, wenn die Funktion erfolgreich ist. Dieser Wert kann oder möglicherweise nicht gleich dem Wert, der durch Übergeben der *nIDEvent* Parameter. Eine Anwendung sollte stets den Rückgabewert in übergeben die [KillTimer](#killtimer) Memberfunktion versucht, die den Zeitgeber zu beenden. Ungleich 0 (null), wenn erfolgreich, andernfalls 0 (null).
+Der Zeitgeberbezeichner des neuen Zeitgebers, wenn die Funktion erfolgreich ist. Dieser Wert kann oder möglicherweise nicht gleich dem Wert, der durch Übergeben der *nIDEvent* Parameter. Eine Anwendung sollte stets den Rückgabewert in übergeben die [KillTimer](#killtimer) Memberfunktion versucht, die den Zeitgeber zu beenden. Ungleich 0 (null), wenn erfolgreich, andernfalls 0 (null).
 
 ### <a name="remarks"></a>Hinweise
 
