@@ -1,6 +1,6 @@
 ---
 title: Übersicht über C++ AMP
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, requirements
 - C++ Accelerated Massive Parallelism, architecture
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 070f0885f11f29413aca3028d4f747e0edfd2413
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26f24e922769a565c88264032373662116eee290
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663787"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176990"
 ---
 # <a name="c-amp-overview"></a>Übersicht über C++ AMP
 
@@ -316,7 +316,7 @@ Die *compute-Domäne* ist ein `extent` Objekt oder ein `tiled_extent` Objekt, da
 
 Die *Lambda-Ausdruck* definiert den Code, der in jedem Thread ausgeführt. Die Erfassungsklausel `[=]`, gibt an, dass der Text des Lambda-Ausdrucks greift auf alle erfassten Variablen nach Wert an, die in diesem Fall sind `a`, `b`, und `sum`. In diesem Beispiel wird in der Parameterliste eine eindimensionale `index`-Variable mit dem Namen `idx` erstellt. Der Wert von `idx[0]` beträgt im ersten Thread null und wird in jedem nachfolgenden Thread um eins erhöht. Die Anweisung `restrict(amp)` gibt an, dass nur die Teilmenge der Programmiersprache C++ verwendet wird, die mit C++ AMP beschleunigt werden kann.  Die Einschränkungen für Funktionen, die den Restrict-Modifizierer aufweisen, werden in beschrieben [einschränken (C++-AMP)](../../cpp/restrict-cpp-amp.md). Weitere Informationen finden Sie unter, [Lambda-Ausdruckssyntax](../../cpp/lambda-expression-syntax.md).
 
-Der Lambdaausdruck kann den auszuführenden Code enthalten oder eine separate Kernelfunktion aufrufen. Die Kernelfunktion muss den `restrict(amp)`-Modifizierer enthalten. Das folgende Beispiel entspricht dem vorherigen Beispiel, jedoch wird eine separate Kernelfunktion aufgerufen.
+Der Lambda-Ausdruck kann den auszuführenden Code enthalten oder eine separate Kernelfunktion aufrufen. Die Kernelfunktion muss den `restrict(amp)`-Modifizierer enthalten. Das folgende Beispiel entspricht dem vorherigen Beispiel, jedoch wird eine separate Kernelfunktion aufgerufen.
 
 ```cpp
 #include <amp.h>
@@ -362,7 +362,7 @@ In typischen Anwendungen sind die Elemente in einer Kachel auf irgendeine Weise 
 
 Im folgenden Diagramm wird ein zweidimensionales Array mit Samplingdaten dargestellt, das in Kacheln angeordnet ist.
 
-![Indizieren Sie Werte in einer gekachelten Erweiterung](../../parallel/amp/media/camptiledgridexample.png "Camptiledgridexample")
+![Indizieren Sie Werte in einer gekachelten Erweiterung](../../parallel/amp/media/camptiledgridexample.png "indizieren Sie Werte in einer gekachelten Erweiterung")
 
 Im folgenden Codebeispiel werden die Samplingdaten aus dem vorherigen Diagramm verwendet. Im Code wird jeder Wert in der Kachel durch den Durchschnitt der Werte in der Kachel ersetzt.
 

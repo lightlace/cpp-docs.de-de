@@ -1,17 +1,17 @@
 ---
 title: Arrays (C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - declaring arrays [C++], about declaring arrays
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-ms.openlocfilehash: 746a6b5a2122a7ccdd207d278d285af3e448d7ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 176e358bd0217ac914eb4ee6079126d3f429b6dd
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550669"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176878"
 ---
 # <a name="arrays-c"></a>Arrays (C++)
 
@@ -19,8 +19,8 @@ Ein Array ist eine Auflistung von gleichen Objekten. Der einfachste Fall eines A
 
 > *Decl-Specifiers* *Bezeichner* **\[** *Konstantenausdruck* **]**<br/>
 > *Decl-Specifiers* *Bezeichner*  **\[]**<br/>
-> *Decl-Specifiers* *Bezeichner* **\[]\[** *Konstantenausdruck* **]** . sein. sein.<br/>
-> *Decl-Specifiers* *Bezeichner* **\[** *Konstantenausdruck* **]** **\[** *Konstantenausdruck* **]** . sein. sein.
+> *Decl-Specifiers* *Bezeichner* **\[]\[** *Konstantenausdruck* **]** . . .<br/>
+> *Decl-Specifiers* *Bezeichner* **\[** *Konstantenausdruck* **]** **\[** *Konstantenausdruck* **]** . . .
 
 1. Der Deklarationsbezeichner:
 
@@ -75,7 +75,8 @@ int i2[5][7];
 
 Es gibt ein Array vom Typ **Int**, konzeptionell in einer zweidimensionalen Matrix von fünf Zeilen und sieben Spalten angeordnet, wie in der folgenden Abbildung gezeigt:
 
-![Konzeptionelles Layout eines mehreren&#45;-dimensionales Array](../cpp/media/vc38rc1.gif "vc38RC1") konzeptionelles Layout eines mehrdimensionalen Arrays
+![Konzeptionelles Layout eines mehreren&#45;-dimensionales Array](../cpp/media/vc38rc1.gif "konzeptionelles Layout eines mehreren&#45;-dimensionales Array") <br/>
+Konzeptionelles Layout eines mehrdimensionalen Arrays
 
 In Deklarationen mehrdimensionaler Arrays mit einer Initialisiererliste (wie in beschrieben [Initialisierer](../cpp/initializers.md)), kann der Konstantenausdruck, der angibt, die Grenzen für die erste Dimension ausgelassen werden. Zum Beispiel:
 

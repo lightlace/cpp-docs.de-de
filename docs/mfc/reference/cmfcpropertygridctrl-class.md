@@ -1,6 +1,6 @@
 ---
 title: CMFCPropertyGridCtrl-Klasse
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCPropertyGridCtrl
 - AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl
@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: 764a1fc33d91888c8c32111eca41666d9d0abbd7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fe22924039cc0e2547df2cc07b0c4387ad908bd
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557325"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177055"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl-Klasse
 
@@ -293,7 +293,7 @@ Die folgende Tabelle enthält vier Arten der Auswahl-Eigenschaft:
 
 Die folgenden Abbildungen dargestellt ein Eigenschaftenraster-Steuerelement, das Eigenschaften, gibt es zwei Möglichkeiten anzeigt. Die erste Abbildung zeigt die Eigenschaften auf hierarchisch und der zweiten werden die Eigenschaften alphabetisch angezeigt.
 
-![PropertySheet-Eigenschaftenliste](../../mfc/reference/media/proplist.png "Proplist")
+![PropertySheet-Eigenschaftenliste](../../mfc/reference/media/proplist.png "PropertySheet-Eigenschaftenliste")
 
 ## <a name="example"></a>Beispiel
 
