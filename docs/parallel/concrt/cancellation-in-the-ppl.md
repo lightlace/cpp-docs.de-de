@@ -1,6 +1,6 @@
 ---
 title: Abbruch in der PPL
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - parallel algorithms, canceling [Concurrency Runtime]
 - canceling parallel algorithms [Concurrency Runtime]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-ms.openlocfilehash: b1a762f97cf144c39043203dbf68d927b2cbd0e4
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 1cb5404ff8c18492b940f7396ab4c8f4154d69e6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327420"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177016"
 ---
 # <a name="cancellation-in-the-ppl"></a>Abbruch in der PPL
 
@@ -57,7 +57,7 @@ In diesem Dokument wird die Rolle des Abbruchs in der Parallel Patterns Library 
 
 Differenzierte Aufgaben und Berechnungen werden in der PPL mithilfe von Aufgaben und Aufgabengruppen verwaltet. Sie können Aufgabengruppen zu schachteln *Strukturen* paralleler Arbeitsaufgaben. Die folgende Abbildung zeigt eine parallele Arbeitsstruktur. In dieser Abbildung stellen `tg1` und `tg2` Aufgabengruppen dar; `t1`, `t2`, `t3`, `t4` und `t5` stellen die Arbeitsvorgänge dar, die von den Aufgabengruppen durchgeführt wird.
 
-![Eine parallele Arbeitsstruktur](../../parallel/concrt/media/parallelwork_trees.png "Parallelwork_trees")
+![Eine parallele Arbeitsstruktur](../../parallel/concrt/media/parallelwork_trees.png "parallele Arbeitsstruktur")
 
 Das folgende Beispiel zeigt den Code, der zum Erstellen der Struktur in der Abbildung erforderlich ist. In diesem Beispiel `tg1` und `tg2` sind [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) Objekte. `t1`, `t2`, `t3`, `t4`, und `t5` sind [Concurrency:: task_handle](../../parallel/concrt/reference/task-handle-class.md) Objekte.
 
@@ -69,7 +69,7 @@ Sie können auch die [Concurrency:: task_group](reference/task-group-class.md) K
 
 ##  <a name="tasks"></a> Abbrechen paralleler Aufgaben
 
-Es gibt verschiedene Möglichkeiten, parallele Arbeitsvorgänge abzubrechen. Die bevorzugte Methode ist, ein Abbruchtoken zu verwenden. Aufgabengruppen unterstützen auch die [task_group](reference/task-group-class.md#cancel) Methode und die [Concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel) Methode. Eine letzte Möglichkeit ist, im Text einer Arbeitsfunktion einer Aufgabe eine Ausnahme auszulösen. Unabhängig von der gewählten Methode sollten Sie bedenken, dass der Abbruch nicht sofort auftritt. Es werden zwar keine neuen Arbeitsvorgänge gestartet, wenn eine Aufgabe oder eine Aufgabengruppe abgebrochen wird, aktive Arbeitsvorgänge müssen den Abbruch aber überprüfen und auf diesen reagieren.
+Es gibt verschiedene Möglichkeiten, parallele Arbeitsvorgänge abzubrechen. Die bevorzugte Methode ist, ein Abbruchtoken zu verwenden. Aufgabengruppen unterstützen auch die [task_group](reference/task-group-class.md#cancel) Methode und die [Concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel) Methode. Eine letzte Möglichkeit ist, im Text einer Arbeitsfunktion eine Ausnahme auszulösen. Unabhängig von der gewählten Methode sollten Sie bedenken, dass der Abbruch nicht sofort auftritt. Es werden zwar keine neuen Arbeitsvorgänge gestartet, wenn eine Aufgabe oder eine Aufgabengruppe abgebrochen wird, aktive Arbeitsvorgänge müssen den Abbruch aber überprüfen und auf diesen reagieren.
 
 Weitere Beispiele zum Abbrechen paralleler Aufgaben finden Sie unter [Exemplarische Vorgehensweise: Verbinden von Verwendungsaufgaben und XML-HTTP-Anforderungen](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md), [Vorgehensweise: Verwenden eines Abbruchs zum Verlassen einer Parallel-Schleife](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md), und [Vorgehensweise: verwenden Ausnahmebehandlung zum Verlassen einer Parallel-Schleife](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
 
@@ -138,7 +138,7 @@ Wenn ein Abbruchtoken an die `when_all`- oder `when_any`-Funktion übergeben wir
 
 Die Funktion `when_all` erbt das Abbruchtoken von jeder Aufgabe, die zum Gesamtvorgang gehört, sofern Sie ihr kein Abbruchtoken übergeben. Die Aufgabe, die von `when_all` zurückgegeben wird, wird abgebrochen, wenn eines der Token abgebrochen wird, und wenn mindestens eine der beteiligten Aufgaben noch nicht gestartet wurde oder ausgeführt wird. Ein ähnliches Verhalten tritt auf, wenn eine der Aufgaben einer Ausnahme: die Aufgabe, die von zurückgegeben wird `when_all` wird mit dieser Ausnahme sofort abgebrochen.
 
-Die Runtime wählt das Abbruchtoken für die Aufgabe aus, das von der Funktion `when_any` zurückgegeben wird, wenn diese Aufgabe abgeschlossen ist. Wenn keine der beteiligten Aufgaben mit einem abgeschlossenen Zustand beendet wird und mindestens eine der Aufgaben eine Ausnahme auslöst, wird eine der auslösenden Aufgaben ausgewählt, um `when_any` zu beenden, und dessen Token wird als Token für die letzte Aufgabe ausgewählt. Wenn mehr als eine Aufgabe mit einem abgeschlossenen Zustand beendet wird, endet die Aufgabe, die von der Aufgabe `when_any` zurückgegeben wird, mit einem abgeschlossenen Zustand. Die Runtime versucht, eine abgeschlossene Aufgabe auszuwählen, deren Token zum Zeitpunkt des Abschlusses nicht abgebrochen ist, sodass die Aufgabe, die von `when_any` zurückgegeben wird, nicht sofort abgebrochen wird, auch wenn andere ausgeführte Aufgaben möglicherweise zu einem späteren Zeitpunkt abgeschlossen werden.
+Die Runtime wählt das Abbruchtoken für die Aufgabe aus, das von der Funktion `when_any` zurückgegeben wird, wenn diese Aufgabe abgeschlossen ist. Wenn keine der beteiligten Aufgaben mit einem abgeschlossenen Zustand beendet wird und mindestens eine der Aufgaben eine Ausnahme auslöst, wird eine der auslösenden Aufgaben ausgewählt, um `when_any` zu beenden, und dessen Token wird als Token für die letzte Aufgabe ausgewählt. Wenn mehr als eine Aufgabe mit einem abgeschlossenen Zustand beendet wird, endet die Aufgabe, die von der Aufgabe `when_any` zurückgegeben wird, mit einem abgeschlossenen Zustand. Die Runtime versucht, eine abgeschlossene Aufgabe auszuwählen, deren Token zum Zeitpunkt des Abschlusses nicht abgebrochen ist, sodass die Aufgabe, die von `when_any` zurückgegeben wird, nicht sofort abgebrochen wird, auch wenn wenn andere ausgeführte Aufgaben möglicherweise zu einem späteren Zeitpunkt abgeschlossen werden.
 
 [[Nach oben](#top)]
 
@@ -158,9 +158,9 @@ Wenn Sie keinen Zugriff auf das übergeordnete Aufgabengruppenobjekt haben, rufe
 
 Die `cancel`-Methode wird nur auf die jeweils untergeordneten Aufgaben angewendet. Wenn Sie z. B. die Aufgabengruppe `tg1` in der Abbildung der parallelen Arbeitsstruktur abbrechen, sind alle Aufgaben in der Struktur (`t1`, `t2`, `t3`, `t4` und `t5`) betroffen. Wenn Sie die geschachtelte Aufgabengruppe `tg2` abbrechen, sind dagegen nur die Aufgaben `t4` und `t5` betroffen.
 
-Wenn Sie die `cancel`-Methode aufrufen, werden auch alle untergeordneten Aufgabengruppen abgebrochen. Dies gilt jedoch nicht für die übergeordneten Elemente der Aufgabengruppe in der parallelen Arbeitsstruktur. In den folgenden Beispielen wird dies auf Grundlage der Abbildung der parallelen Arbeitsstruktur veranschaulicht.
+Wenn Sie die `cancel`-Methode aufrufen, werden auch alle untergeordneten Aufgabengruppen abgebrochen. Dies gilt jedoch nicht für die übergeordneten Elemente der Aufgabengruppe in der parallelen Arbeitsstruktur. In den folgenden Beispielen wird dies auf Grundlage der Abbildung oben veranschaulicht.
 
-Im ersten Beispiel wird eine Arbeitsfunktion für die Aufgabe `t4` erstellt, die der Arbeitsgruppe `tg2` untergeordnet ist. Die Arbeitsfunktion ruft die Funktion `work` in einer Schleife auf. Wenn ein Aufruf von `work` fehlschlägt, wird die übergeordnete Aufgabengruppe der Aufgabe abgebrochen. Hierdurch geht die Aufgabengruppe `tg2` in den Zustand „abgebrochen“ über, die Aufgabengruppe `tg1` wird jedoch nicht abgebrochen.
+Im ersten Beispiel wird eine Arbeitsfunktion für die Aufgabe `t4` erstellt, die der Arbeitsgruppe `tg2` untergeordnet ist. Die Arbeitsfunktion ruft die Funktion `work` in einer Schleife auf. Wenn ein Aufruf von `work` fehlschlägt, wird die übergeordnete Aufgabengruppe der Aufgabe abgebrochen. Hierdurch geht die Aufgabengruppe `tg2` in den Zustand "abgebrochen" über, die Aufgabengruppe `tg1` wird jedoch nicht abgebrochen.
 
 [!code-cpp[concrt-task-tree#2](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_7.cpp)]
 
@@ -184,11 +184,11 @@ Die Verwendung von Abbruchtoken und `cancel`-Methode ist effizienter als die Aus
 
 Wenn Sie im Text einer Arbeitsfunktion, die Sie an eine Aufgabengruppe übergeben, eine Ausnahme auslösen, speichert die Runtime diese Ausnahme und marshallt sie an den Kontext, der auf das Beenden der Aufgabengruppe wartet. Wie auch bei der `cancel`-Methode verwirft die Runtime alle Aufgaben, die noch nicht gestartet wurden, und akzeptiert keine neuen Aufgaben.
 
-Dieses dritte Beispiel ähnelt dem zweiten, mit dem Unterschied, dass die Aufgabe `t4` eine Ausnahme auslöst, um die Aufgabengruppe `tg2` abzubrechen. Dieses Beispiel verwendet eine `try` - `catch` Block, um nach einem Abbruch gesucht Wenn die Aufgabengruppe `tg2` seine untergeordneten Aufgaben wartet. Wie im ersten Beispiel geht die Aufgabengruppe `tg2` in den Zustand „abgebrochen“ über, die Aufgabengruppe `tg1` ist jedoch nicht betroffen.
+Dieses dritte Beispiel ähnelt dem zweiten, mit dem Unterschied, dass die Aufgabe `t4` eine Ausnahme auslöst, um die Aufgabengruppe `tg2` abzubrechen. Dieses Beispiel verwendet eine `try` - `catch` Block, um nach einem Abbruch gesucht Wenn die Aufgabengruppe `tg2` seine untergeordneten Aufgaben wartet. Wie im ersten Beispiel geht die Aufgabengruppe `tg2` in den Zustand "abgebrochen" über, die Aufgabengruppe `tg1` ist jedoch nicht betroffen.
 
 [!code-cpp[concrt-task-tree#4](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_9.cpp)]
 
-In diesem vierten Beispiel wird mithilfe der Ausnahmebehandlung die gesamte Arbeitsstruktur abgebrochen. Im Beispiel wird die Ausnahme abgefangen, wenn Aufgabengruppe `tg1` auf das Beenden der untergeordneten Aufgaben wartet, nicht `tg2`. Wie im zweiten Beispiel gehen so beide Aufgabengruppen in der Struktur (`tg1` und `tg2`) in den Zustand „abgebrochenen“ über.
+In diesem vierten Beispiel wird mithilfe der Ausnahmebehandlung die gesamte Arbeitsstruktur abgebrochen. Im Beispiel wird die Ausnahme abgefangen, wenn Aufgabengruppe `tg1` auf das Beenden der untergeordneten Aufgaben wartet, nicht `tg2`. Wie im zweiten Beispiel gehen so beide Aufgabengruppen in der Struktur (`tg1` und `tg2`) in den Zustand "abgebrochenen" über.
 
 [!code-cpp[concrt-task-tree#5](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_10.cpp)]
 
@@ -245,7 +245,7 @@ Die Verwendung eines Abbruchs ist sinnvoll, wenn jeder Member einer Gruppe zusam
 |Titel|Beschreibung|
 |-----------|-----------------|
 |[Vorgehensweise: Verwenden eines Abbruchs zum Verlassen einer Parallel-Schleife](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)|Zeigt, wie mit dem Abbrechen ein paralleler Suchalgorithmus implementiert wird.|
-|[Vorgehensweise: Verwenden der Ausnahmebehandlung zum Verlassen einer Parallel-Schleife](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Zeigt, wie mit der `task_group`-Klasse ein Suchalgorithmus für eine einfache Struktur geschrieben wird.|
+|[Vorgehensweise: Verwenden der Ausnahmebehandlung zum Verlassen einer Parallel-Schleife](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Zeigt, wie mit der `task_group`-Klasse ein Suchalgorithmus für eine einfache Baumstruktur geschrieben wird.|
 |[Ausnahmebehandlung](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)|Beschreibt, wie die Runtime Ausnahmen behandelt, die von Aufgabengruppen, einfachen Aufgaben und asynchronen Agents ausgelöst werden, und wie in Anwendungen auf Ausnahmen reagiert wird.|
 |[Aufgabenparallelität](../../parallel/concrt/task-parallelism-concurrency-runtime.md)|Beschreibt, wie sich Aufgaben und Aufgabengruppen zueinander verhalten und wie Sie unstrukturierte und strukturierte Parallelität in Ihren Anwendungen verwenden können.|
 |[Parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md)|Beschreibt die parallelen Algorithmen, die Auflistungen von Daten gleichzeitig verarbeiten.|

@@ -1,17 +1,17 @@
 ---
 title: Standardkonvertierungen
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - standard conversions, categories of
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-ms.openlocfilehash: 7a42a4f35a29489fe23327c6b34ed49197a64724
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aee100bdc7e8ba6dd7d06c6bca9ed39c09cf2d97
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575447"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176977"
 ---
 # <a name="standard-conversions"></a>Standardkonvertierungen
 
@@ -143,16 +143,16 @@ Wenn ein Objekt vom Gleitkommatyp in einen ganzzahligen Typ konvertiert wird, we
 
 ## <a name="arithmetic-conversions"></a>Arithmetische Konvertierungen
 
-Viele binäre Operatoren (ausführlicher [Ausdrücke mit Binäroperatoren](../cpp/expressions-with-binary-operators.md)) führen zu Konvertierungen von Operanden und zu Ergebnissen führen, die gleiche Weise. Die Art und Weise der Konvertierung durch diese Operatoren wird als "übliche arithmetische Konvertierungen" bezeichnet. Arithmetische Konvertierungen von Operanden unterschiedlicher nativer Typen werden entsprechend der Darstellung in der folgenden Tabelle ausgeführt. Typedef-Typen verhalten sich entsprechend ihren zugrunde liegenden systemeigenen Typen.
+Viele binäre Operatoren (ausführlicher [Ausdrücke mit Binäroperatoren](../cpp/expressions-with-binary-operators.md)) führen zu Konvertierungen von Operanden und zu Ergebnissen führen, die gleiche Weise. Die Art und Weise der Konvertierung durch diese Operatoren wird als "übliche arithmetische Konvertierungen" bezeichnet. Arithmetische Konvertierungen von Operanden unterschiedlicher systemeigener Typen werden entsprechend der Darstellung in der folgenden Tabelle ausgeführt. Typedef-Typen verhalten sich entsprechend ihren zugrunde liegenden systemeigenen Typen.
 
 ### <a name="conditions-for-type-conversion"></a>Bedingungen für die Typkonvertierung
 
-|Bedingungen erfüllt|Umwandeln|
+|Bedingungen erfüllt|Conversion|
 |--------------------|----------------|
 |Einer der Operanden ist vom Typ **long double**.|Anderer Operand wird in den Typ konvertiert **long double**.|
 |Vorangehende Bedingung nicht erfüllt und jeder Operand ist vom Typ **doppelte**.|Anderer Operand wird in den Typ konvertiert **doppelte**.|
 |Vorangehende Bedingungen nicht erfüllt und jeder Operand ist vom Typ **"float"**.|Anderer Operand wird in den Typ konvertiert **"float"**.|
-|Vorausgehende Bedingungen nicht erfüllt (keiner der Operanden ist vom Typ „floating“).|Ganzzahlige Erweiterungen werden bei den Operanden wie folgt ausgeführt:<br /><br />– Wenn ein Operand vom Typ **unsigned long**, der andere Operand wird in den Typ konvertiert **unsigned long**.<br />– Wenn vorherige Bedingung nicht erfüllt, und wenn ein Operand vom Typ **lange** und der andere vom Typ **ganze Zahl ohne Vorzeichen**, beide Operanden sind in den Typ konvertiert **unsigned long**.<br />– Wenn die oben genannten zwei Bedingungen nicht erfüllt sind, und wenn ein Operand vom Typ **lange**, der andere Operand wird in den Typ konvertiert **lange**.<br />– Wenn die oben genannten drei Bedingungen nicht erfüllt sind, und wenn ein Operand vom Typ **ganze Zahl ohne Vorzeichen**, der andere Operand wird in den Typ konvertiert **ganze Zahl ohne Vorzeichen**.<br />– Wenn keines der oben genannten Bedingungen erfüllt sind, werden beide Operanden Typ konvertiert **Int**.|
+|Vorausgehende Bedingungen nicht erfüllt (keiner der Operanden ist vom Typ "floating").|Ganzzahlige Erweiterungen werden bei den Operanden wie folgt ausgeführt:<br /><br />– Wenn ein Operand vom Typ **unsigned long**, der andere Operand wird in den Typ konvertiert **unsigned long**.<br />– Wenn vorherige Bedingung nicht erfüllt, und wenn ein Operand vom Typ **lange** und der andere vom Typ **ganze Zahl ohne Vorzeichen**, beide Operanden sind in den Typ konvertiert **unsigned long**.<br />– Wenn die oben genannten zwei Bedingungen nicht erfüllt sind, und wenn ein Operand vom Typ **lange**, der andere Operand wird in den Typ konvertiert **lange**.<br />– Wenn die oben genannten drei Bedingungen nicht erfüllt sind, und wenn ein Operand vom Typ **ganze Zahl ohne Vorzeichen**, der andere Operand wird in den Typ konvertiert **ganze Zahl ohne Vorzeichen**.<br />– Wenn keines der oben genannten Bedingungen erfüllt sind, werden beide Operanden Typ konvertiert **Int**.|
 
 Das folgende Codebeispiel veranschaulicht die Konvertierungsregeln, die in der Tabelle beschrieben werden:
 
@@ -189,7 +189,8 @@ Der erste Fall tritt auf, wenn auf die bezeichnete Basisklasse zugegriffen werde
 
 Ob auf eine Basisklasse zugegriffen werden kann, hängt von der Art der Vererbung bei der Ableitung ab. Betrachten Sie die Vererbung, wie in der folgenden Abbildung veranschaulicht.
 
-![Vererbungsdiagramm mit Basis&#45;Klasse Barrierefreiheit](../cpp/media/vc38xa1.gif "vc38XA1") Vererbungsdiagramm für Abbildung der Basisklasse-Barrierefreiheit
+![Vererbungsdiagramm mit Basis&#45;Klasse Barrierefreiheit](../cpp/media/vc38xa1.gif "Vererbungsdiagramm mit Basis&#45;Klasse Barrierefreiheit") <br/>
+Vererbungsdiagramm für Abbildung der Basisklasse-Barrierefreiheit
 
 Die folgende Tabelle zeigt die Zugriffsmöglichkeiten auf die Basisklassen bei der Situation, die in der Abbildung veranschaulicht wird.
 
@@ -197,14 +198,14 @@ Die folgende Tabelle zeigt die Zugriffsmöglichkeiten auf die Basisklassen bei d
 
 |Typ der Funktion|Ableitung|Konvertierung von<br /><br /> B * a\* zulässig?|
 |----------------------|----------------|-------------------------------------------|
-|Externe (nicht im Klassenumfang enthaltene) Funktion|Private|Nein|
-||Protected|Nein|
-||Public|Ja|
-|B-Memberfunktion (im B-Bereich)|Private|Ja|
-||Protected|Ja|
+|Externe (nicht im Klassenumfang enthaltene) Funktion|Privat|Nein|
+||Geschützt|Nein|
+||Öffentlich|Ja|
+|B-Memberfunktion (im B-Bereich)|Privat|Ja|
+||Geschützt|Ja|
 ||Öffentlich|Ja|
 |C-Memberfunktion (im C-Bereich)|Privat|Nein|
-||Protected|Ja|
+||Geschützt|Ja|
 ||Öffentlich|Ja|
 
 Im zweiten Fall, in dem ein Zeiger auf eine Klasse in einen Zeiger auf eine Basisklasse konvertiert werden kann, wird eine explizite Typkonvertierung verwendet. (Finden Sie unter [expliziter Typkonvertierungsoperator](explicit-type-conversion-operator-parens.md) für Weitere Informationen zu expliziten typkonvertierungen.)

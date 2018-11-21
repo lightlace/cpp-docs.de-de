@@ -1,6 +1,6 @@
 ---
 title: Sitzungsobjekt-Schnittstellen
-ms.date: 10/24/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - session objects [OLE DB]
 - session objects [OLE DB], interfaces
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - interfaces, session object
 - interfaces, list of
 ms.assetid: ac01a958-6dde-4bd7-8b63-94459e488335
-ms.openlocfilehash: 6b4748b804572c72b75f63b8ea2473818bdac989
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 284f93d96b974a616e957a65ef0c8aa39b33a564
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556620"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176899"
 ---
 # <a name="session-object-interfaces"></a>Sitzungsobjekt-Schnittstellen
 
 Die folgende Tabelle zeigt die erforderlichen und optionalen Schnittstellen, die durch OLE DB für ein Objekt definiert.
 
-|Interface|Erforderlich?|Vom OLE DB-Vorlagen implementiert?|
+|Schnittstelle|Erforderlich?|Vom OLE DB-Vorlagen implementiert?|
 |---------------|---------------|--------------------------------------|
 |[IGetDataSource](https://docs.microsoft.com/previous-versions/windows/desktop/ms709721(v=vs.85))|Erforderlich|Ja|
 |[IOpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716946(v=vs.85))|Erforderlich|Ja|
@@ -42,7 +42,7 @@ Die folgende Tabelle zeigt die erforderlichen und optionalen Schnittstellen, die
 
 Das Sitzungsobjekt erstellt ein Rowsetobjekt. Wenn der Anbieter Befehle unterstützt, der die Sitzung auch erstellt ein Command-Objekt (`CCommand`, implementiert der OLE DB `TCommand`). Das Command-Objekt implementiert die `ICommand` -Schnittstelle und verwendet die `ICommand::Execute` Methode zum Ausführen von Befehlen auf das Rowset, wie in der folgenden Abbildung dargestellt.
 
-![Konzeptionelles Diagramm zu Anbietern](../../data/oledb/media/vc4u551.gif "vc4u551")
+![Konzeptionelles Diagramm zu Anbietern](../../data/oledb/media/vc4u551.gif "konzeptionelles Diagramm zu Anbietern")
 
 ## <a name="see-also"></a>Siehe auch
 

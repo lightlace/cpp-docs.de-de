@@ -1,6 +1,6 @@
 ---
 title: Dokument-/ Ansichtarchitektur
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - CView class [MFC], view architecture
 - CDocument class [MFC]
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-ms.openlocfilehash: 943199e2398bcb49c7dddf6b3a67f5556c9c81a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0886f364637c8844aceb5d5d7b6b2ed7175225d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509278"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176848"
 ---
 # <a name="documentview-architecture"></a>Dokument-/Ansichtsarchitektur
 
@@ -47,7 +47,8 @@ Die [CView](../mfc/reference/cview-class.md) (oder eines der vielen abgeleiteten
 
 Die folgende Abbildung zeigt die Beziehung zwischen einem Dokument und dessen Ansicht.
 
-![Die Ansicht ist Teil des Dokuments, das angezeigt wird,](../mfc/media/vc379n1.gif "vc379n1") Dokument und Ansicht
+![Die Ansicht ist Teil des Dokuments, das angezeigt wird,](../mfc/media/vc379n1.gif "Ansicht ist Teil des Dokuments, das angezeigt wird") <br/>
+Dokument und Ansicht
 
 Die Implementierung von Dokument/Ansicht, in der Klassenbibliothek trennt die Daten selbst die Anzeige von Benutzervorgänge für die Daten. Alle Änderungen an den Daten werden über die Dokumentklasse verwaltet. Die Ansicht ruft diese Schnittstelle, um den Zugriff auf und die Daten aktualisieren.
 

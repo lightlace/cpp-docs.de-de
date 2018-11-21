@@ -1,6 +1,6 @@
 ---
 title: CDC-Klasse
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CDC
 - AFXWIN/CDC
@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 40de8b3aca3cca7acb2fefa352f9358a16f43e51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06c68d02433ce53c2b27167a985fc5854ca49700
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492078"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176912"
 ---
 # <a name="cdc-class"></a>CDC-Klasse
 
@@ -3242,7 +3242,7 @@ Ein Zeiger auf eine `CBrush` -Objekt, wenn erfolgreich; andernfalls NULL.
 
 Ein Rasterbild Pinsel zeigt Pixel, die Vordergrund- und Hintergrundfarben, erstellen Sie ein Muster mit Dithering Alternativ sind. Folgendes ist ein Beispiel für eine Dithering Muster, das von einem Pinsel Halbton.
 
-![Detail eines geditherten Stiftstrichs](../../mfc/reference/media/vc318s1.gif "vc318s1")
+![Detail eines geditherten Stiftstrichs](../../mfc/reference/media/vc318s1.gif "Detail eines geditherten Stiftstrichs")
 
 ##  <a name="getkerningpairs"></a>  CDC::GetKerningPairs
 
@@ -6816,7 +6816,7 @@ Die `StretchBlt` -Funktion verschiebt die Bitmap vom Quellgerät vom *pSrcDC* an
 
 Die `StretchBlt` Funktion ein Spiegelbild der Bitmap erstellt, wenn die Zeichen der *nSrcWidth* und *nWidth* oder *nSrcHeight* und *nHeight* Parameter unterscheiden. Wenn *nSrcWidth* und *nWidth* unterschiedliche Vorzeichen haben, die Funktion erstellt ein Spiegelbild der Bitmap entlang der x-Achse. Wenn *nSrcHeight* und *nHeight* unterschiedliche Vorzeichen haben, die Funktion erstellt ein Spiegelbild der Bitmap entlang der y-Achse.
 
-Die Funktion `StretchBlt` streckt oder komprimiert die Quellbitmap im Speicher und kopiert dann das Ergebnis in das Ziel. Wenn ein Muster mit dem Ergebnis zusammengeführt werden soll, wird es erst zusammengeführt, wenn die gestreckte Quellbitmap in das Ziel kopiert wurde. Wenn ein Pinsel verwendet wird, ist es der ausgewählte Pinsel im Zielgerätekontext. Die Zielkoordinaten werden gemäß dem Zielgerätekontext transformiert. Die Quellkoordinaten werden gemäß dem Quellgerätekontext transformiert.
+Die Funktion `StretchBlt` streckt oder komprimiert die Quellbitmap im Speicher und kopiert dann das Ergebnis in das Ziel. Wenn ein Muster mit dem Ergebnis zusammengeführt werden soll, wird es erst zusammengeführt, wenn die gestreckte Quellbitmap in das Ziel kopiert wurde. Wenn ein Pinsel verwendet wird, ist es der ausgewählte Pinsel im Zielgerätekontext. Die Zielkoordinaten werden gemäß dem Zielgerätekontext umgewandelt. Die Quellkoordinaten werden gemäß dem Quellgerätekontext umgewandelt.
 
 Wenn das Ziel, die Quelle und die Musterbitmaps nicht dasselbe Farbformat haben, konvertiert `StretchBlt` die Quelle und die Musterbitmaps so, dass sie mit den Zielbitmaps übereinstimmen. Die Vordergrund- und Hintergrundfarben des Zielgerätekontexts werden bei der Konvertierung verwendet.
 

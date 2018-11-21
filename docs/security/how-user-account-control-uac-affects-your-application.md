@@ -1,22 +1,22 @@
 ---
 title: Wie Benutzerkontensteuerung (UAC) die Anwendung beeinflusst
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - UAC [C++]
 - security [C++], User Account Control
 - user accounts [C++]
 - User Account Control [C++]
 ms.assetid: 0d001870-253e-4989-b689-f78035953799
-ms.openlocfilehash: 336260ddc1c9da795478d5541af73d9801633843
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04bfc16f2d82863faca806d4cb8d5295104a0cc9
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556961"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177042"
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>Wie Benutzerkontensteuerung (UAC) die Anwendung beeinflusst
 
-Benutzerkontensteuerung (UAC) ist eine Funktion von Windows Vista, in der Benutzerkonten eingeschränkte Berechtigungen haben. Ausführliche Informationen über UAC finden Sie auf diesen Sites:
+Benutzerkontensteuerung (UAC) ist ein Feature von Windows Vista, in dem Benutzerkonten eingeschränkte Berechtigungen haben. Ausführliche Informationen über UAC finden Sie auf diesen Sites:
 
 - [Developer Best Practices and Guidelines for Applications in einer Umgebung mit geringsten rechten](/windows/desktop/uxguide/winenv-uac)
 
@@ -34,7 +34,7 @@ Die zweite Option besteht darin, durch Angabe der `/MANIFESTUAC:NO`-Linkeroption
 
 Im folgenden Flussdiagramm wird beschrieben, wie die Anwendung abhängig davon ausgeführt wird, ob UAC aktiviert ist und ob die Anwendung ein UAC-Manifest besitzt:
 
-![Windows Vista-Ladeprogramms Verhalten](media/uacflowchart.png "UACflowchart")
+![Windows-Ladeprogramm Verhalten](media/uacflowchart.png "Verhalten der Windows-Ladeprogramm")
 
 ## <a name="see-also"></a>Siehe auch
 
