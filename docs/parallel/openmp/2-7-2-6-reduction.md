@@ -75,7 +75,7 @@ Die folgende Tabelle enthält die Operatoren, die gültig sind und ihre kanonisc
 |&#124;|0|
 |^|0|
 |&amp;&amp;|1|
-||||0|
+|&#124;&#124;|0|
 
 Die Einschränkungen fest, die `reduction` Klausel lauten wie folgt:
 
