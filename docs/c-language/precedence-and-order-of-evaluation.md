@@ -61,9 +61,9 @@ Die folgende Liste zeigt, wie der Compiler automatisch mehrere Musterausdrücke 
 
 |Ausdruck|Automatische Bindung|
 |----------------|-----------------------|
-|a & b || c|(a & b) || c|
-|a = b || c|a = (b || c)|
-|q && r || s--|(q && r) || s--|
+|a & b &#124;&#124; c|(a & b) &#124;&#124; c|
+|a = b &#124;&#124; c|a = (b &#124;&#124; c)|
+|q && r &#124;&#124; s--|(q && r) &#124;&#124; s--|
 
 Im ersten Ausdruck hat der bitweise AND-Operator (**&**) Vorrang vor dem logischen OR-Operator (**||**), deshalb bildet `a & b` den ersten Operanden der logischen OR-Operation.
 

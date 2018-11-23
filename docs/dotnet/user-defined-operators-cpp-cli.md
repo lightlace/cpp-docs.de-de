@@ -60,7 +60,7 @@ Sie können die folgenden Operatoren definieren:
 |False|Unär|
 |true|Unär|
 |&#124;|Binär|
-||||Binär|
+|&#124;&#124;|Binär|
 |~|Unär|
 
 ## <a name="example"></a>Beispiel
