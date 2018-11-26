@@ -101,7 +101,7 @@ Beispielsweise übersetzt zu
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|Legt das Element am angegebenen Index fest oder ruft es ab.|
+|[CObArray::operator [ ]](../../mfc/reference/cobarray-class.md#operator_at)|Legt das Element am angegebenen Index fest oder ruft es ab.|
 
 ## <a name="remarks"></a>Hinweise
 
