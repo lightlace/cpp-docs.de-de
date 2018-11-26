@@ -1,13 +1,13 @@
 ---
 title: 'Leitfaden zum Portieren: Spy++'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 9e36bbefb2ab851350e17c0561addb680593f457
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bd69853b13d58ff79910eafcc601b0507d5a9ad
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487814"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177003"
 ---
 # <a name="porting-guide-spy"></a>Leitfaden zum Portieren: Spy++
 
@@ -25,7 +25,7 @@ Die Projektdatei mit zwei alten DSW-Dateien aus Visual C++ 6.0 wird problemlos k
 
 Nach dem Upgrade der beiden Projekte sah unsere Projektmappe folgendermaßen aus:
 
-![Die Spy&#43;&#43;-Lösung](../porting/media/spyxxsolution.PNG "SpyxxSolution")
+![Die Spy&#43;&#43;-Lösung](../porting/media/spyxxsolution.PNG "The Spy&#43;&#43; Solution")
 
 Es sind zwei Projekte enthalten, ein mit einer großen Anzahl von C++-Dateien und ein anderes eine in C geschriebene DLL-Datei.
 
