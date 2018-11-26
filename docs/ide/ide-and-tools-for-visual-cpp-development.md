@@ -1,16 +1,16 @@
 ---
 title: IDE und Tools für Visual C++-Entwicklung
 description: Die Visual Studio-IDE unterstützt C++-Entwicklung unter Windows, Linux, Android und iOS mit einem Code-Editor, Debugger, Testframeworks, statischen Analysetools und weiteren Programmiertools.
-ms.date: 09/27/2018
+ms.date: 11/18/2018
 helpviewer_keywords:
 - Visual C++, development tools
 ms.assetid: 56eabafb-1956-4f0f-bec5-29b887763559
-ms.openlocfilehash: e24ba58cf0cf94f1505adaf056f64580b8f7829e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5dd7f681d05d36215c4086165165122a05be23c
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473358"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693957"
 ---
 # <a name="ide-and-compiler-tools-for-visual-c-development"></a>IDE und Compilertools für die Visual C++-Entwicklung
 
@@ -105,14 +105,24 @@ Auch die Bereitstellung von nativen C++-Desktops auf anderen Computern ist mögl
 
 Weitere Informationen zum Bereitstellen eines C++/CLI-Programms finden Sie im [Deployment Guide for Developers (Bereitstellungshandbuch für Entwickler)](/dotnet/framework/deployment/deployment-guide-for-developers).
 
+## <a name="in-this-section"></a>In diesem Abschnitt
+
+|||
+|-|-|
+|[Schreiben und Refactoring von Code (C++)](writing-and-refactoring-code-cpp.md)| So verwenden Sie den C++-Code-Editor zum Schreiben und Umgestalten von und für die Navigation im Code|
+|[Visual C++-Tools und -Features in Visual Studio-Editionen](visual-cpp-tools-and-features-in-visual-studio-editions.md)|Gibt an, welche Features in den verschiedenen Editionen von Visual Studio verfügbar sind.|
+|[C++ Open Folder projects in Visual Studio (Verwenden von „Ordner öffnen“-Projekten in C++ mit Visual Studio)](non-msbuild-projects.md)|So verwenden Sie ein beliebiges C++-Buildsystem über Visual Studio|
+|[CMake-Projekte in Visual C++](cmake-tools-for-visual-cpp.md)|So erstellen Sie CMake-Projekte in Visual Studio|
+|[Creating and managing MSBuild-based projects (Erstellen und Verwalten von MSBuild-basierten Projekten)](creating-and-managing-visual-cpp-projects.md)|Bietet eine Übersicht über MSBuild-basierte C++-Projekte in Visual Studio und Links zu anderen Artikeln, die beschreiben, wie diese Projekte erstellt und verwaltet werden.|
+|[Deploying Desktop Applications (Bereitstellen von Desktopanwendungen)](deploying-native-desktop-applications-visual-cpp.md)|Bietet einen Überblick über die Bereitstellung von C++-Apps sowie Links zu anderen Artikeln, die die Bereitstellung im Detail beschreiben.|
+|[Hinzufügen neuer Funktionen mit Code-Assistenten](adding-functionality-with-code-wizards-cpp.md)| So fügen Sie mithilfe von Assistenten Klassen, Dateien oder Benutzeroberflächenelemente zu einem Projekt hinzu|
+|[XML-Dokumentation (Visual C++)](xml-documentation-visual-cpp.md)| So erstellen Sie eine XML-Dokumentation für Ihre APIs|
+|[Erstellen von C++-Projekten in Visual Studio](building-cpp-projects-in-visual-studio.md)|So verwenden Sie die Visual Studio-IDE zum Erstellen von Projekten|
+
 ## <a name="related-articles"></a>Verwandte Artikel
 
 |||
 |-|-|
-|[Visual C++-Tools und -Features in Visual Studio-Editionen](visual-cpp-tools-and-features-in-visual-studio-editions.md)|Gibt an, welche Features in den verschiedenen Editionen von Visual Studio verfügbar sind.|
-|[Creating and managing MSBuild-based projects (Erstellen und Verwalten von MSBuild-basierten Projekten)](creating-and-managing-visual-cpp-projects.md)|Bietet eine Übersicht über MSBuild-basierte C++-Projekte in Visual Studio und Links zu anderen Artikeln, die beschreiben, wie diese Projekte erstellt und verwaltet werden.|
-|[CMake-Projekte in Visual C++](cmake-tools-for-visual-cpp.md)|Beschreibt, wie CMake-Projekte oder andere Nicht-MSBuild-Projekte in Visual C++ erstellt werden.|
-|[Erstellen von C/C++-Programmen](../build/building-c-cpp-programs.md)|Beschreibt das Erstellen von C++-Projekten.|
-|[Deploying Desktop Applications (Bereitstellen von Desktopanwendungen)](deploying-native-desktop-applications-visual-cpp.md)|Bietet einen Überblick über die Bereitstellung von C++-Apps sowie Links zu anderen Artikeln, die die Bereitstellung im Detail beschreiben.|
+|[Erstellen von C/C++-Programmen](../build/building-c-cpp-programs.md)|Ausführliche Informationen zum Erstellen von C++-Projekten|
 |[Visual C++-Handbuch: Portieren und Aktualisieren](../porting/visual-cpp-porting-and-upgrading-guide.md)|Weitere Informationen zum Upgraden von C++-Anwendungen, die in früheren Versionen von Visual Studio erstellt wurden sowie zur Migration von Anwendungen, die mithilfe von anderen Tools als Visual Studio erstellt wurden.|
 |[Visual C++](../visual-cpp-in-visual-studio.md)|Beschreibt die wichtigsten Features von Visual C++ in Visual Studio und verlinkt zum Rest der Visual C++-Dokumentation.|

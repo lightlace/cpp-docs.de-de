@@ -1,13 +1,13 @@
 ---
 title: 'Leitfaden zum Portieren: MFC Scribble'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: b41689b1e0207029f4494cfd91c261705789a733
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 353dc8fb42b73ec7e0ee748ef9fefd030c073703
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539762"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175651"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Leitfaden zum Portieren: MFC Scribble
 
@@ -31,7 +31,7 @@ Beachten Sie, dass Sie devenv auch in der Befehlszeile mithilfe der `/Upgrade`-O
 
 Wenn Sie eine alte Projektdatei in Visual Studio 2017 öffnen, bietet Visual Studio das Konvertieren der Projektdatei in die aktuelle Version an, was wir akzeptiert haben. Das folgende Dialogfeld wurde angezeigt:
 
-![Projekt- und Projektmappenänderungen überprüfen](../porting/media/scribbleprojectupgrade.PNG "ScribbleProjectUpgrade")
+![Prüfen der Änderungen an Projekten und Projektmappen](../porting/media/scribbleprojectupgrade.PNG "Review Project and Solution Changes")
 
 Es ist ein Fehler aufgetreten, der uns darüber informiert, dass das Itanium-Ziel nicht verfügbar ist und nicht konvertiert wird.
 
@@ -43,7 +43,7 @@ Zu dem Zeitpunkt, als das vorherige Scribble-Projekt erstellt wurde, war Itanium
 
 Visual Studio hat dann einen Migrationsbericht mit einer Liste aller Probleme der alten Projektdatei angezeigt.
 
-![Aktualisierungsbericht](../porting/media/scribblemigrationreport.PNG "ScribbleMigrationReport")
+![Upgradebericht](../porting/media/scribblemigrationreport.PNG "Upgrade Report")
 
 In diesem Fall waren alle Probleme Warnungen, und Visual Studio hat die entsprechenden Änderungen in der Projektdatei vorgenommen. Der große Unterschied hinsichtlich des Projekts liegt darin, dass das Buildtool von vcbuild in msbuild geändert wurde. Diese Änderung wurde in Visual Studio 2010 eingeführt. Weitere Änderungen umfassen u. a. eine Neuanordnung der Elementreihenfolge in der Projektdatei selbst. Keines der Probleme bedurfte für dieses einfache Projekt weiterer Aufmerksamkeit.
 

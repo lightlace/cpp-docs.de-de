@@ -1,75 +1,91 @@
 ---
-title: Erstellen einer COM-Schnittstelle (Visual C++)
-ms.date: 11/04/2016
+title: Erstellen einer COM-Schnittstelle
+ms.date: 11/12/2018
 f1_keywords:
 - vc.codewiz.com.creating.interfaces
+- vc.codewiz.com.editing.interfaces
 helpviewer_keywords:
 - COM interfaces, creating
+- methods [C++], adding to COM interfaces
+- COM interfaces, editing
+- properties [C++], adding to COM interfaces
 ms.assetid: 1be84d3c-6886-4d1e-8493-56c4d38a96d4
-ms.openlocfilehash: 2d76dac150f86078e67374eec2e5e2e0f8b9f5e3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: dfc4b09f4fa42b179bdef91877e0a004caa69187
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523495"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693700"
 ---
-# <a name="creating-a-com-interface-visual-c"></a>Erstellen einer COM-Schnittstelle (Visual C++)
+# <a name="create-a-com-interface"></a>Erstellen einer COM-Schnittstelle
 
 Visual C++ stellt Assistenten und Vorlagen zum Erstellen von Projekten bereit, die definierende COM-Schnittstellen und Disp-Schnittstellen für Ihre COM-Objekte und Automatisierungsklassen verwenden.
 
-Sie können diese Assistenten zum Ausführen der folgenden allgemeinen Aufgaben verwenden:
+Sie können diese Assistenten zum Ausführen der folgenden häufig benötigten Aufgaben verwenden:
 
 - [Hinzufügen von ATL-Unterstützung zu einem MFC-Projekt](../mfc/reference/adding-atl-support-to-your-mfc-project.md)
 
-   Hinzufügen von ATL-Unterstützung zu einer MFC-Anwendung, nachdem Sie ein MFC-Projekt mithilfe des [MFC-Anwendungs-Assistenten](../mfc/reference/mfc-application-wizard.md) erstellt haben, und Ausführen des Code-Assistenten zum **Hinzufügen von ATL-Unterstützung zu MFC**. Diese Unterstützung gilt nur für einfache COM-Objekte, die einer MFC-Anwendung oder einem DLL-Projekt hinzugefügt werden. Diese ATL-Objekte können über mehrere Schnittstellen verfügen.
+  Fügen Sie ATL-Unterstützung zu einer MFC-Anwendung hinzu, wenn Sie ein MFC-Projekt mithilfe des [MFC-Anwendungs-Assistenten](../mfc/reference/mfc-application-wizard.md) erstellt haben, und führen Sie den Codeassistenten zum **Hinzufügen von ATL-Unterstützung zu MFC** aus. Diese Unterstützung gilt nur für einfache COM-Objekte, die einer MFC-Anwendung oder einem DLL-Projekt hinzugefügt werden. Diese ATL-Objekte können über mehrere Schnittstellen verfügen.
 
 - [Erstellen eines MFC-ActiveX-Steuerelements](../mfc/reference/creating-an-mfc-activex-control.md)
 
-   Öffnen Sie den [MFC-ActiveX-Steuerelement-Assistenten](../mfc/reference/mfc-activex-control-wizard.md), um ein ActiveX-Steuerelement mit einer Disp-Schnittstelle und einer Ereigniszuordnung zu erstellen, die jeweils in der IDL-Datei und der Steuerelementklasse definiert werden.
+  Öffnen Sie den [MFC-ActiveX-Steuerelement-Assistenten](../mfc/reference/mfc-activex-control-wizard.md), um ein ActiveX-Steuerelement mit einer Display-Schnittstelle und einer Ereigniszuordnung zu erstellen, die jeweils in der IDL-Datei und der Steuerelementklasse definiert werden.
 
 - [Hinzufügen eines ATL-Steuerelements](../atl/reference/adding-an-atl-control.md)
 
-   Verwenden Sie eine Kombination aus dem [ATL-Projekt-Assistenten](../atl/reference/atl-project-wizard.md) und dem [ATL-Steuerelement-Assistenten](../atl/reference/atl-control-wizard.md), um ein ATL-ActiveX-Steuerelement zu erstellen.
+  Verwenden Sie eine Kombination aus dem [ATL-Projekt-Assistenten](../atl/reference/atl-project-wizard.md) und dem [ATL-Steuerelement-Assistenten](../atl/reference/atl-control-wizard.md), um ein ATL-ActiveX-Steuerelement zu erstellen.
 
-   Sie können auch einem MFC-Projekt, dem Sie wie oben beschrieben ATL-Unterstützung hinzugefügt haben, ein ATL-Steuerelement hinzufügen. Darüber hinaus zeigt Visual Studio ein Dialogfeld zur Bestätigung des Hinzufügens von ATL-Unterstützung zu dem MFC-Projekt an, wenn Sie **ATL-Steuerelement** im Dialogfeld **Klasse hinzufügen** ausgewählt und dem MFC-Projekt noch keine ATL-Unterstützung hinzugefügt haben.
+  Sie können auch einem MFC-Projekt, dem Sie wie oben beschrieben ATL-Unterstützung hinzugefügt haben, ein ATL-Steuerelement hinzufügen. Darüber hinaus zeigt Visual Studio ein Dialogfeld zur Bestätigung des Hinzufügens von ATL-Unterstützung zu dem MFC-Projekt an, wenn Sie **ATL-Steuerelement** im Dialogfeld **Klasse hinzufügen** ausgewählt und dem MFC-Projekt noch keine ATL-Unterstützung hinzugefügt haben.
 
-   Dieser Assistent generiert die IDL-Quelle und eine COM-Zuordnung in den Projektklassen.
+  Dieser Assistent generiert die IDL-Quelle und eine COM-Zuordnung in den Projektklassen.
 
 Sobald Sie ein ATL-Projekt geöffnet haben, erhalten Sie im Dialogfeld [Klasse hinzufügen](../ide/add-class-dialog-box.md) eine Auswahl zusätzlicher Assistenten und Vorlagen zum Hinzufügen von COM-Schnittstellen zum Projekt. Mithilfe der folgenden Assistenten können Sie mehrere Schnittstellen für das Objekt erstellen:
 
-- [ATL COM+ 1.0 Komponenten-Assistent](../atl/reference/atl-com-plus-1-0-component-wizard.md)
+- [ATL COM+ 1.0 component wizard (ATL COM+ 1.0 Komponenten-Assistent)](../atl/reference/atl-com-plus-1-0-component-wizard.md)
+- [ATL simple object wizard (ATL-Assistent für einfache Objekte)](../atl/reference/atl-simple-object-wizard.md)
+- [ATL active server page component wizard (ATL-Assistent für Active Server Page-Komponenten)](../atl/reference/atl-active-server-page-component-wizard.md)
+- [ATL control wizard (ATL-Steuerelement-Assistent)](../atl/reference/atl-control-wizard.md)
 
-- [ATL-Assistent für einfache Objekte](../atl/reference/atl-simple-object-wizard.md)
-
-- [ATL-Assistent für Active Server Page-Komponenten](../atl/reference/atl-active-server-page-component-wizard.md)
-
-- [ATL-Steuerelement-Assistent](../atl/reference/atl-control-wizard.md)
-
-Darüber hinaus können Sie neue Schnittstellen in Ihrem COM-Steuerelement implementieren, indem Sie in der Klassenansicht mit der rechten Maustaste auf die Steuerelementklasse des Objekts klicken, klicken Sie dann auf [Schnittstelle implementieren](../ide/implement-interface-wizard.md).
+Außerdem können Sie neue Schnittstellen für Ihre COM-Steuerelemente implementieren. Klicken Sie dafür erst mit der rechten Maustaste auf die Steuerelementklasse des Objekts in der Klassenansicht und anschließend mit der linken auf [Schnittstelle implementieren](../ide/implement-interface-wizard.md).
 
 > [!NOTE]
->  Visual Studio stellt keinen Assistenten dafür bereit, Schnittstellen zu einem Projekt hinzuzufügen. Sie können Schnittstellen zu einem ATL-Projekt oder zu einem [MFC-Projekt](../mfc/reference/adding-atl-support-to-your-mfc-project.md) hinzufügen, indem Sie mithilfe des [ATL-Assistenten für einfache Objekte](../atl/reference/atl-simple-object-wizard.md) ein einfaches Objekt hinzufügen. Öffnen Sie alternativ die IDL-Datei des Projekts, und erstellen Sie die Schnittstelle, indem Sie Folgendes eingeben:
+> Visual Studio stellt keinen Assistenten dafür bereit, Schnittstellen zu einem Projekt hinzuzufügen. Sie können Schnittstellen zu einem ATL-Projekt oder zu einem [MFC-Projekt](../mfc/reference/adding-atl-support-to-your-mfc-project.md) hinzufügen, zu dem von ATL-Unterstützung hinzugefügt wurde, indem Sie mithilfe des [ATL-Assistenten für einfache Objekte](../atl/reference/atl-simple-object-wizard.md) ein einfaches Objekt hinzufügen. Öffnen Sie alternativ die IDL-Datei des Projekts, und erstellen Sie die Schnittstelle, indem Sie Folgendes eingeben:
 
 ```
 interface IMyInterface {
 };
 ```
 
-Weitere Informationen finden Sie unter [Implementing an Interface (Implementieren einer Schnittstelle)](../ide/implementing-an-interface-visual-cpp.md) und [Adding Objects and Controls to an ATL Project (Hinzufügen von Objekten und Steuerelementen zu einem ATL-Projekt)](../atl/reference/adding-objects-and-controls-to-an-atl-project.md).
+Weitere Informationen finden Sie unter [Implementieren einer Schnittstelle](../ide/implementing-an-interface-visual-cpp.md) und [Hinzufügen von Objekten und Steuerelementen zu einem ATL-Projekt](../atl/reference/adding-objects-and-controls-to-an-atl-project.md).
 
-Visual C++ bietet mehrere Möglichkeiten zum Anzeigen und [Bearbeiten der COM-Schnittstellen](../ide/editing-a-com-interface.md), die für Ihre Projekte definiert sind. Die [Klassenansicht](/visualstudio/ide/viewing-the-structure-of-code) zeigt Symbole für Schnittstellen oder Disp-Schnittstellen an, die in einer IDL-Datei in Ihrem Projekt definiert sind.
+Visual C++ bietet mehrere Möglichkeiten zum Anzeigen und [Bearbeiten der COM-Schnittstellen](#edit-a-com-interface), die für Ihre Projekte definiert sind. Die [Klassenansicht](/visualstudio/ide/viewing-the-structure-of-code) zeigt Symbole für Schnittstellen oder Disp-Schnittstellen an, die in einer IDL-Datei in Ihrem Projekt definiert sind.
 
 Bei ATL-basierten COM-Objektklassen liest die Klassenansicht die COM-Zuordnung in der ATL-Klasse zum Anzeigen der Beziehung zwischen der ATL-Klasse und allen Schnittstellen, die sie implementiert.
 
 In der Klassenansicht und den zugehörigen Kontextmenüs können Sie wie folgt mit Schnittstellen arbeiten:
 
 - Fügen Sie ATL-Objekte zu einer MFC-basierten Anwendung hinzu.
-
 - Fügen Sie Methoden, Eigenschaften und Ereignisse hinzu.
-
 - Navigieren Sie direkt zum Schnittstellencode eines Elements, indem Sie auf das Element doppelklicken.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Erstellen von Desktopprojekten mit Anwendungs-Assistenten](../ide/creating-desktop-projects-by-using-application-wizards.md)<br>
-[Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../ide/adding-functionality-with-code-wizards-cpp.md)
+- [Bearbeiten einer COM-Schnittstelle](#edit-a-com-interface)
+
+## <a name="edit-a-com-interface"></a>Bearbeiten einer COM-Schnittstelle
+
+Mithilfe der Befehle des Kontextmenüs der Klassenansicht können Sie neue Methoden und Eigenschaften für die COM-Schnittstellen in Ihren Visual C++-Projekten definieren. Darüber hinaus können Sie mit der Toolbox Ereignisse für ActiveX-Steuerelemente definieren.
+
+Bei ATL- und MFC-basierten COM-Objektklassen können Sie die Implementierung der Klasse und die Schnittstelle zur gleichen Zeit bearbeiten.
+
+> [!NOTE]
+> Für Schnittstellen, die Sie außerhalb des Dialogfelds **Klasse hinzufügen** definiert haben, fügt Visual C++ die Methoden oder Eigenschaften der IDL-Datei und Stubs den Klassen hinzu, die Methoden implementieren, auch wenn die Schnittstellen manuell hinzugefügt werden.
+
+Die folgenden drei Assistenten unterstützen Sie beim Anpassen vorhandener Schnittstellen. Sie sind in der Klassenansicht verfügbar:
+
+|Assistent|Projekttyp:|
+|------------|------------------|
+|[Assistent zum Hinzufügen von Eigenschaften](../ide/names-add-property-wizard.md)|ATL- oder MFC-Projekte, die ATL unterstützen. Klicken Sie mit der rechten Maustaste auf die Schnittstelle, der die Eigenschaft hinzugefügt werden soll.<br /><br />Visual C++ erkennt den Projekttyp und ändert die Optionen im Assistenten zum Hinzufügen von Eigenschaften nach Bedarf:<br /><br />– Für Disp-Schnittstellen in Projekten, die mit dem [MFC-Anwendungs-Assistenten](../mfc/reference/mfc-application-wizard.md) erstellt wurden, werden durch das Aufrufen des Assistenten zum Hinzufügen von Eigenschaften MFC-spezifische Optionen bereitgestellt.<br />– Für ActiveX-Steuerelementschnittstellen stellt der Assistent zum Hinzufügen von Eigenschaften eine Liste vordefinierter Methoden und Eigenschaften bereit, die Sie verwenden oder für Ihr Steuerelement anpassen können.<br />– Für alle anderen Schnittstellen stellt der Assistent zum Hinzufügen von Eigenschaften Optionen bereit, die in den meisten Situationen nützlich sind.|
+|[Assistent zum Hinzufügen von Methoden](../ide/add-method-wizard.md)|ATL- oder MFC-Projekte, die ATL unterstützen. Klicken Sie mit der rechten Maustaste auf die Schnittstelle, der die Methode hinzugefügt werden soll.<br /><br />Visual C++ erkennt den Projekttyp und ändert die Optionen im Assistenten zum Hinzufügen von Methoden nach Bedarf:<br /><br />– Für Disp-Schnittstellen in Projekten, die mit dem [MFC-Anwendungs-Assistenten](../mfc/reference/mfc-application-wizard.md) erstellt wurden, werden durch das Aufrufen des Assistenten zum Hinzufügen von Methoden MFC-spezifische Optionen bereitgestellt.<br />– Für ActiveX-Steuerelementschnittstellen stellt der Assistent zum Hinzufügen von Methoden eine Liste vordefinierter Methoden und Eigenschaften bereit, die Sie verwenden oder für Ihr Steuerelement anpassen können.<br />– Für alle anderen Schnittstellen stellt der **Assistent zum Hinzufügen von Methoden** Optionen bereit, die in den meisten Situationen nützlich sind.|
+
+Außerdem können Sie neue Schnittstellen für Ihre COM-Steuerelemente implementieren. Klicken Sie dafür erst mit der rechten Maustaste auf die Steuerelementklasse des Objekts in der Klassenansicht und anschließend mit der linken auf [Schnittstelle implementieren](../ide/implement-interface-wizard.md).

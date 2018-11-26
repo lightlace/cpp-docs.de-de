@@ -1,21 +1,21 @@
 ---
 title: Streamzustände
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - streams, states
 ms.assetid: 5f28c968-f132-403f-968c-8417ff315e52
-ms.openlocfilehash: d51f24b82c10d58e91f5d20b6656eb16621004ac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43d28fa504c64fcb25d5c7cd3ee2c6ed906acd7e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481171"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175560"
 ---
 # <a name="stream-states"></a>Streamzustände
 
 Die gültigen Zustände und Statusübergänge für einen Stream sind in der folgenden Abbildung dargestellt.
 
-![Stream](../c-runtime-library/media/stream.gif "stream")
+![Streamstatusdiagramm](../c-runtime-library/media/stream.gif "Stream state diagram")
 
 Jeder der Kreise kennzeichnet einen stabilen Zustand. Jede der Linien kennzeichnet einen Übergang, der als Ergebnis eines Funktionsaufrufs auftritt, der auf dem Stream verwendet wird. Fünf Funktionsgruppen können zu Statusübergängen führen.
 

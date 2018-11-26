@@ -1,27 +1,29 @@
 ---
-title: Hinzufügen eines Ereignishandlers (Visual C++)
-ms.date: 11/04/2016
+title: Hinzufügen eines Ereignishandlers
+ms.date: 11/12/2018
 f1_keywords:
+- vc.codewiz.eventhandler.overview
 - vc.codewiz.eventhandler.overview
 helpviewer_keywords:
 - event handlers, adding
 - properties [Visual Studio], MSBuild
 - MSBuild, properties
+- event handler wizard [C++]
 ms.assetid: 050bebf0-a9e0-474b-905c-796fe5ac8fc3
-ms.openlocfilehash: d9256fca75b6980d87382bbeb794fa90b89f37c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e6b2511b00b7f949718e5b0d9fd793ac53d0d8b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512438"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694516"
 ---
-# <a name="adding-an-event-handler-visual-c"></a>Hinzufügen eines Ereignishandlers (Visual C++)
+# <a name="add-an-event-handler"></a>Hinzufügen eines Ereignishandlers
 
-Sie können einen neuen Ereignishandler über den Ressourcen-Editor hinzufügen oder einen vorhandenen Ereignishandler mithilfe des [Ereignishandler-Assistenten](../ide/event-handler-wizard.md) für ein Dialogfeld-Steuerelement bearbeiten.
+Sie können einen neuen Ereignishandler über den Ressourcen-Editor hinzufügen oder einen vorhandenen Ereignishandler mithilfe des [Ereignishandler-Assistenten](#event-handler-wizard) für ein Dialogfeld-Steuerelement bearbeiten.
 
 Sie können der Klasse, die das Dialogfeld implementiert, mithilfe des [Eigenschaftenfensters](/visualstudio/ide/reference/properties-window) ein Ereignis hinzufügen. Wenn Sie das Ereignis einer anderen Klasse hinzufügen möchten, verwenden Sie den Ereignishandler-Assistenten.
 
-### <a name="to-add-an-event-handler-to-a-dialog-box-control"></a>So fügen Sie einem Dialogfeld-Steuerelement einen Ereignishandler hinzu
+**So fügen Sie einem Dialogfeld-Steuerelement einen Ereignishandler hinzu:**
 
 1. Führen Sie einen Doppelklick auf die Dialogfeldressource in der [Ressourcenansicht](../windows/resource-view-window.md) aus, um die Dialogfeldressource zu öffnen, die das Steuerelement im [Dialog-Editor](../windows/dialog-editor.md) enthält.
 
@@ -39,11 +41,38 @@ Sie können der Klasse, die das Dialogfeld implementiert, mithilfe des [Eigensch
 
 Alternativ können Sie Ereignishandler über das [Eigenschaftenfenster](/visualstudio/ide/reference/properties-window) hinzufügen. Weitere Informationen finden Sie unter [Adding Event Handlers for Dialog Box Controls (Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente)](../windows/adding-event-handlers-for-dialog-box-controls.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../ide/adding-functionality-with-code-wizards-cpp.md)<br>
-[Hinzufügen einer Klasse](../ide/adding-a-class-visual-cpp.md)<br>
-[Adding a Member Variable (Hinzufügen einer Membervariablen)](../ide/adding-a-member-variable-visual-cpp.md)<br>
-[Hinzufügen einer Memberfunktion](../ide/adding-a-member-function-visual-cpp.md)<br>
-[MFC Message Handler (MFC-Meldungshandler)](../mfc/reference/adding-an-mfc-message-handler.md)<br>
-[Navigating the Class Structure (Navigieren in der Klassenstruktur)](../ide/navigating-the-class-structure-visual-cpp.md)
+- [Ereignishandler-Assistent](#event-handler-wizard)
+
+## <a name="event-handler-wizard"></a>Ereignishandler-Assistent
+
+Dieser Assistent fügt einer beliebigen Klasse einen Ereignishandler für ein Dialogfeld-Steuerelement hinzu. Wenn Sie einen Ereignishandler über das [Eigenschaftenfenster](/visualstudio/ide/reference/properties-window) hinzufügen, können Sie ihn nur der Klasse hinzufügen, die das Dialogfeld implementiert. Weitere Informationen finden Sie unter [Adding Event Handlers for Dialog Box Controls (Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente)](../windows/adding-event-handlers-for-dialog-box-controls.md).
+
+- **Befehlsname**
+
+  Identifiziert das ausgewählte Steuerelement, für das der Ereignishandler hinzugefügt wird. Dieses Feld ist nicht verfügbar.
+
+- **Nachrichtentyp**
+
+  Zeigt die Liste der aktuell verfügbaren Meldungshandler für das ausgewählte Steuerelement an.
+
+- **Handlerfunktionsname**
+
+  Zeigt den Namen der Funktion an, die zur Behandlung des Ereignisses hinzugefügt wird. Der Name basiert standardmäßig auf dem Nachrichtentyp und dem Befehl, und `On` wird vorangestellt. Beispielsweise zeigt der Nachrichtentyp `BN_CLICKED` für die Schaltfläche namens `IDC_BUTTON1` den Handlerfunktionsnamen `OnBnClickedButton1` an.
+
+- **Klassenliste**
+
+  Zeigt die verfügbaren Klassen an, denen Sie einen Ereignishandler hinzufügen können. Die Klasse für das ausgewählte Dialogfeld wird rot angezeigt.
+
+- **Handlerbeschreibung**
+
+  Gibt eine Beschreibung für das im Feld **Nachrichtentyp** ausgewählte Element an. Dieses Feld ist nicht verfügbar.
+
+- **Hinzufügen und Bearbeiten**
+
+  Fügt den Meldungshandler zu der ausgewählten Klasse oder dem ausgewählten Objekt hinzu. Öffnet außerdem den Text-Editor bei der neuen Funktion, damit Sie den Handlercode für Benachrichtigungen des Steuerelements hinzufügen oder bearbeiten können.
+
+- **Code bearbeiten**
+
+  Öffnet den Text-Editor bei der ausgewählten vorhandenen Funktion, damit Sie den Handlercode für Benachrichtigungen des Steuerelements hinzufügen oder bearbeiten können.
