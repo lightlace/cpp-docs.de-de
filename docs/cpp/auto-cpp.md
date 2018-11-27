@@ -30,9 +30,9 @@ auto declarator initializer;
 
 ## <a name="remarks"></a>Hinweise
 
-Die **automatisch** -Schlüsselwort weist den Compiler an den Initialisierungsausdruck einer deklarierten Variable oder einen lambdaausdrucksparameter zu verwenden, um den Typ herzuleiten.
+Die **auto** -Schlüsselwort weist den Compiler an den Initialisierungsausdruck einer deklarierten Variable oder einen lambdaausdrucksparameter zu verwenden, um den Typ herzuleiten.
 
-Wir empfehlen die Verwendung der **automatisch** Schlüsselwort für die meisten Situationen – es sei denn, Sie wirklich eine Konvertierung möchten, da sie diese Vorteile bietet:
+Wir empfehlen die Verwendung des **auto** Schlüsselwort für die meisten Situationen – es sei denn, Sie möchten wirklich eine Konvertierung vornehmen, da diese Vorteile bietet:
 
 - **Stabilität:** , wenn der Typ des Ausdrucks geändert wird – dies schließt, wenn der Rückgabetyp einer Funktion geändert wird, dann funktioniert.
 
@@ -42,7 +42,7 @@ Wir empfehlen die Verwendung der **automatisch** Schlüsselwort für die meisten
 
 - **Effizienz:** Ihre Codierung kann effizienter sein.
 
-Fälle von Konvertierungen in der Sie möglicherweise nicht verwenden möchten **automatisch**:
+Fälle von Konvertierungen in denen Sie möglicherweise **auto** nicht verwenden möchten:
 
 - Wenn Sie einen ganz bestimmten Typ benötigen, und nichts anderes infrage kommt.
 
@@ -56,17 +56,17 @@ Die **automatisch** -Schlüsselwort ist ein Platzhalter für einen Typ, aber es 
 
 ## <a name="usefulness"></a>Nützlichkeit
 
-Die **automatisch** Schlüsselwort ist eine einfache Möglichkeit zum Deklarieren einer Variablen, die einen komplizierten Typ aufweist. Beispielsweise können Sie **automatisch** zum Deklarieren einer Variablen, in dem der Initialisierungsausdruck, Vorlagen, Zeiger auf Funktionen oder Zeiger auf Member umfasst.
+Das **auto** Schlüsselwort ist eine einfache Möglichkeit zum Deklarieren einer Variablen, die einen komplizierten Typ aufweist. Beispielsweise können Sie **auto** zum Deklarieren einer Variablen verwenden, welcher einen Initialisierungsausdruck, Vorlagen, Zeiger auf Funktionen oder Zeiger auf Member umfasst.
 
-Sie können auch **automatisch** zu deklarieren und initialisieren eine Variable, die einen Lambda-Ausdruck. Sie können den Typ der Variable nicht selbst deklarieren, da der Typ eines Lambdaausdrucks nur dem Compiler bekannt ist. Weitere Informationen finden Sie unter [Beispiele für Lambdaausdrücke](../cpp/examples-of-lambda-expressions.md).
+Sie können auch **auto** zum deklarieren und initialisieren einer Variable mit einem Lambda-Ausdruck verwenden. Sie können den Typ der Variable nicht selbst deklarieren, da der Typ eines Lambdaausdrucks nur dem Compiler bekannt ist. Weitere Informationen finden Sie unter [Beispiele für Lambdaausdrücke](../cpp/examples-of-lambda-expressions.md).
 
 ## <a name="trailing-return-types"></a>Nachstehende Rückgabetypen
 
-Sie können **automatisch**zusammen mit der **"decltype"** Typspezifizierer verwenden, um Hilfe Vorlagenbibliotheken zu schreiben. Verwendung **automatisch** und **"decltype"** um eine Vorlagenfunktion deklarieren, deren Rückgabetyp Typ hängt von den Typen seiner Vorlagenargumente. Oder verwenden Sie **automatisch** und **"decltype"** um eine Vorlagenfunktion zu deklarieren, die einen Aufruf einer anderen Funktion umschließt und gibt dann zurück, was der Rückgabetyp dieser anderen Funktion ist. Weitere Informationen finden Sie unter ["decltype"](../cpp/decltype-cpp.md).
+Sie können **auto**zusammen mit dem **"decltype"** Typspezifizierer verwenden, um Hilfe Vorlagenbibliotheken zu schreiben. Verwendung **auto** und **"decltype"** um eine Vorlagenfunktion deklarieren, deren Rückgabetyp Typ hängt von den Typen seiner Vorlagenargumente. Oder verwenden Sie **auto** und **"decltype"** um eine Vorlagenfunktion zu deklarieren, die einen Aufruf einer anderen Funktion umschließt und gibt dann zurück, was der Rückgabetyp dieser anderen Funktion ist. Weitere Informationen finden Sie unter ["decltype"](../cpp/decltype-cpp.md).
 
 ## <a name="references-and-cv-qualifiers"></a>Verweise und CV-Qualifizierer
 
-Beachten Sie, dass die Verwendung **automatisch** Löscht Verweise, const-Qualifizierer und flüchtige Qualifizierer. Betrachten Sie das folgende Beispiel:
+Beachten Sie, dass die Verwendung **auto** Verweise, const-Qualifizierer und flüchtige Qualifizierer löscht. Betrachten Sie das folgende Beispiel:
 
 ```cpp
 // cl.exe /analyze /EHsc /W4
@@ -88,7 +88,7 @@ int main( )
 }
 ```
 
-Im vorherigen Beispiel ist der MyAuto eine ganze Zahl, ein Int-Verweis, damit die Ausgabe erfolgt `11 11`, nicht `11 12` wie der Fall wäre, wenn der Verweis-Qualifizierer nicht wäre, indem abgelegt worden **automatisch**.
+Im vorherigen Beispiel ist der MyAuto eine ganze Zahl, ein Int-Verweis, damit erfolgt die Ausgabe `11 11`, nicht `11 12` wie es der Fall wäre, wenn der Verweis-Qualifizierer nicht wäre, indem **auto** abgelegt wurde.
 
 ## <a name="type-deduction-with-braced-initializers-c14"></a>Typableitung mit in Klammern gesetzte Initialisierern (C ++ 14)
 
@@ -121,7 +121,7 @@ int main()
 
 ## <a name="restrictions-and-error-messages"></a>Beschränkungen und Fehlermeldungen
 
-Die folgende Tabelle enthält die Einschränkungen für die Verwendung der **automatisch** -Schlüsselwort und die entsprechende diagnosefehlermeldung, die der Compiler gibt.
+Die folgende Tabelle enthält die Einschränkungen für die Verwendung des **autom** -Schlüsselwort und die entsprechende diagnosefehlermeldung, die der Compiler gibt.
 
 |Fehlernummer|Beschreibung|
 |------------------|-----------------|
@@ -137,7 +137,7 @@ Die folgende Tabelle enthält die Einschränkungen für die Verwendung der **aut
 
 ## <a name="examples"></a>Beispiele
 
-Die Codefragmente veranschaulichen einige der Methoden in der die **automatisch** -Schlüsselwort kann verwendet werden.
+Die Codefragmente veranschaulichen einige der Methoden in der das **auto** -Schlüsselwort verwendet werden kann.
 
 Die folgenden Deklarationen sind gleichwertig. In der ersten Anweisung, die Variable `j` wird deklariert, um Typ **Int**. In der zweiten Anweisung, die Variable `k` abgeleitet wird, um Typ **Int** , da der Initialisierungsausdruck (0) eine ganze Zahl ist.
 
@@ -146,14 +146,14 @@ int j = 0;  // Variable j is explicitly type int.
 auto k = 0; // Variable k is implicitly type int because 0 is an integer.
 ```
 
-Die folgenden Deklarationen sind gleichwertig, die zweite Deklaration ist jedoch einfacher als die erste. Eines der überzeugendsten Gründe für die Verwendung der **automatisch** -Schlüsselworts ist die Einfachheit.
+Die folgenden Deklarationen sind gleichwertig, die zweite Deklaration ist jedoch einfacher als die erste. Einer der überzeugendsten Gründe für die Verwendung des **auto** -Schlüsselworts ist die Einfachheit.
 
 ```cpp
 map<int,list<string>>::iterator i = m.begin();
 auto i = m.begin();
 ```
 
-Das folgende Codefragment deklariert den Typ der Variablen `iter` und `elem` bei der **für** und **für** Schleifen starten.
+Das folgende Codefragment deklariert den Typ der Variablen `iter` und `elem` bei der **for** und **for** Schleifen starten.
 
 ```cpp
 // cl /EHsc /nologo /W4
@@ -181,7 +181,7 @@ int main()
 }
 ```
 
-Das folgende Codefragment verwendet den **neue** Operator und die Zeigerdeklaration Deklaration Zeiger deklariert werden.
+Das folgende Codefragment verwendet den **new** Operator und die Zeigerdeklaration Deklaration Zeiger deklariert werden.
 
 ```cpp
 double x = 12.34;
