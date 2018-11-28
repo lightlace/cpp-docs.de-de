@@ -1,15 +1,15 @@
 ---
 title: /sdl (Aktivieren zusätzlicher Sicherheitsüberprüfungen)
-ms.date: 11/04/2016
+ms.date: 11/26/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SDLCheck
 ms.assetid: 3dcf86a0-3169-4240-9f29-e04a9f535826
-ms.openlocfilehash: 84e3b7b80727c359e711f182e2f06a7332989549
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49ac57f81ef07eb2a9c1e11280e160f0c48fce73
+ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587459"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389941"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (Aktivieren zusätzlicher Sicherheitsüberprüfungen)
 
@@ -49,7 +49,17 @@ Wenn **/SDL** ist aktiviert, generiert der Compiler Code, um diese Überprüfung
 
 - Führt eingeschränkte Zeigerbereinigung aus. In Ausdrücken ohne Dereferenzierungen und in Typen ohne benutzerdefinierten Destruktor werden Zeigerverweise nach einem Aufruf von `delete` auf eine ungültige Adresse festgelegt. Dies dient dazu, die Wiederverwendung von veralteten Zeigerverweisen zu verhindern.
 
-- Führt Klassenmemberinitialisierung aus. Initialisiert bei der Objektinstanziierung (bevor der Konstruktor ausgeführt wird) automatisch alle Klassenmember auf null. Dies dient dazu, die Verwendung von nicht initialisierten Daten zu verhindern, die Klassenmembern zugeordnet sind, die der Konstruktor nicht explizit initialisiert.
+- Führt klassenmemberinitialisierung Zeiger. Automatisch initialisiert Klassenmember des Zeigertyps, **"nullptr"** auf Objektinstanziierung (bevor der Konstruktor ausgeführt wird). Dies verhindert die Verwendung von nicht initialisierten Zeiger, die der Konstruktor nicht explizit initialisiert. Die vom Compiler generierten Member Zeiger-Initialisierung wird aufgerufen, solange:
+
+  - Das Objekt ist mithilfe einer benutzerdefinierten (Benutzerdefiniert) nicht zugeordnet. `operator new`
+
+  - Das Objekt wird nicht als Teil eines Arrays zugewiesen (z. B. `new A[x]`)
+
+  - Die Klasse wird nicht verwaltete oder importiert
+
+  - Die Klasse verfügt über einen benutzerdefinierten Standardkonstruktor.
+
+  Um durch die Initialisierungsfunktion vom Compiler generierte Klasse initialisiert werden, muss Mitglied ein Zeiger ist, und nicht um eine Eigenschaft oder eine Konstante sein.
 
 ## <a name="remarks"></a>Hinweise
 
