@@ -48,11 +48,11 @@ Fälle von Konvertierungen in denen Sie möglicherweise **auto** nicht verwenden
 
 - Hilfetypen – z. B. `(valarray+valarray)`.
 
-Verwenden der **automatisch** -Schlüsselwort, verwenden sie anstelle eines Typs zum Deklarieren einer Variablen, und geben Sie einen Initialisierungsausdruck. Darüber hinaus können Sie ändern die **automatisch** -Schlüsselwort mithilfe von Bezeichnern und Deklaratoren wie z. B. **const**, **flüchtige**, Zeiger (`*`), Referenz (`&`), und Rvalue-Verweis (`&&`). Der Compiler wertet den Initialisierungsausdruck aus und verwendet dann diese Informationen, um den Typ der Variable herzuleiten.
+Das **auto** -Schlüsselwort verwenden sie anstelle eines Typs zum Deklarieren einer Variablen, und für einen Initialisierungsausdruck. Darüber hinaus können Sie das **auto** -Schlüsselwort mithilfe von Bezeichnern und Deklaratoren wie z. B. **const**, **flüchtige**, Zeiger (`*`), Referenz (`&`), und Rvalue-Verweis (`&&`) verwenden. Der Compiler wertet den Initialisierungsausdruck aus und verwendet dann diese Informationen, um den Typ der Variable herzuleiten.
 
 Der Initialisierungsausdruck kann eine Zuweisung (Gleichheitszeichensyntax), eine direkte Initialisierung (funktionsformatsyntax), werden ein [new-Operator](new-operator-cpp.md) möglich, Ausdruck oder der Initialisierungsausdruck der  *for-Range-Declaration* Parameter in einer [bereichsbasiert für Anweisung (C++)](../cpp/range-based-for-statement-cpp.md) Anweisung. Weitere Informationen finden Sie unter [Initialisierer](../cpp/initializers.md) und den Codebeispielen weiter unten in diesem Dokument.
 
-Die **automatisch** -Schlüsselwort ist ein Platzhalter für einen Typ, aber es ist nicht selbst ein. Aus diesem Grund die **automatisch** -Schlüsselwort kann nicht in Umwandlungen und Operatoren wie z. B. verwendet werden ["sizeof"](../cpp/sizeof-operator.md) und [Typeid](../windows/typeid-cpp-component-extensions.md).
+Die **auto** -Schlüsselwort ist ein Platzhalter für einen Typ, aber es ist nicht selbst ein Typ. Aus diesem Grund kann das **auto** -Schlüsselwort nicht in Umwandlungen und Operatoren wie z. B. ["sizeof"](../cpp/sizeof-operator.md) und [Typeid](../windows/typeid-cpp-component-extensions.md) verwendet werden.
 
 ## <a name="usefulness"></a>Nützlichkeit
 
@@ -92,7 +92,7 @@ Im vorherigen Beispiel ist der MyAuto eine ganze Zahl, ein Int-Verweis, damit er
 
 ## <a name="type-deduction-with-braced-initializers-c14"></a>Typableitung mit in Klammern gesetzte Initialisierern (C ++ 14)
 
-Im folgenden Codebeispiel wird veranschaulicht, wie Sie eine automatische Variable, die mit geschweiften Klammern initialisiert werden. Beachten Sie den Unterschied zwischen B und C sowie zwischen A und E.
+Im folgenden Codebeispiel wird veranschaulicht, wie Sie eine **auto** Variable, mit geschweiften Klammern initialisiert wird. Beachten Sie den Unterschied zwischen B und C sowie zwischen A und E.
 
 ```cpp
 #include <initializer_list>
