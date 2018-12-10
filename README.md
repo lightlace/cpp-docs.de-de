@@ -10,7 +10,7 @@ Die Dokumentationen für Visual Basic und Visual C# befinden sich in einem separ
 
 Wir freuen uns auf Ihre Beiträge, mit denen wir die Visual C++-Dokumentation verbessern können. Wenn Sie an docs.microsoft.com mitwirken möchten, finden Sie ausführliche Anweisungen in der [Übersicht über den Leitfaden für Mitwirkende an der Microsoft-Dokumentation](https://docs.microsoft.com/contribute). Wenn Sie an der Visual C++-Dokumentation mitwirken möchten, finden Sie weitere Informationen im [Leitfaden für Mitwirkende](CONTRIBUTING.md).
 
-Mehrere Funktionsbereiche von Visual C++ verfügen über eigene Ordner in diesem Repository, z.B. `standard-library` für Artikel zur C++-Standardbibliothek und `ide` für C++-spezifische Artikel zur Visual Studio-IDE (Interactive Development Environment). Der Unterordner `/media` in jedem Ordner enthält ClipArt-Dateien für die Artikel. Weitere Informationen finden Sie im [Leitfaden für Mitwirkende](CONTRIBUTING.md).
+Mehrere Funktionsbereiche von Visual C++ verfügen über eigene Ordner in diesem Repository, z.B. `standard-library` für Artikel zur C++-Standardbibliothek und `ide` für C++-spezifische Artikel zur Visual Studio-IDE (Interactive Development Environment). Der Unterordner `/media` in jedem Ordner enthält ClipArt-Dateien für die Artikel. Weitere Informationen finden Sie im [Contributing guide (Leitfaden für Mitwirkende)](CONTRIBUTING.md).
 
 ## <a name="microsoft-open-source-code-of-conduct"></a>Microsoft Open Source-Verhaltensregeln
 
