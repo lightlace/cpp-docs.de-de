@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CBrush [MFC], FromHandle
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
-ms.openlocfilehash: 4f6b5db22b956584507a2979a517ff26d5364a0c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dbc5e36fdf613f1db2818ac6193709829e3bd001
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661642"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178706"
 ---
 # <a name="cbrush-class"></a>CBrush-Klasse
 
@@ -185,7 +185,7 @@ BOOL CreateDIBPatternBrush(
 Identifiziert einen globalen Arbeitsspeicher-Objekt, die eine gepackte geräteunabhängige Bitmap (DIB) enthält.
 
 *Nsyntax*<br/>
-Gibt an, ob die `bmiColors[]` Felder der [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) Datenstruktur (ein Teil von "gepackt das DIB") enthalten die explizite RGB-Werte oder Indizes in der derzeit realisierten logische Palette. Der Parameter muss einen der folgenden Werte sein:
+Gibt an, ob die `bmiColors[]` Felder der [BITMAPINFO](/windows/desktop/api/wingdi/ns-wingdi-tagbitmapinfo) Datenstruktur (ein Teil von "gepackt das DIB") enthalten die explizite RGB-Werte oder Indizes in der derzeit realisierten logische Palette. Der Parameter muss einen der folgenden Werte sein:
 
 - DIB_PAL_COLORS die Farbtabelle besteht aus einem Array von 16-Bit-Indizes.
 

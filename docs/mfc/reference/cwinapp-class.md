@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: c25d79dc1fb201d10e090f512a5a96f649efbcfe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f9afdf18fcaff0d3613b4204d8690f915079e7d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542362"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178940"
 ---
 # <a name="cwinapp-class"></a>CWinApp-Klasse
 
@@ -347,7 +347,7 @@ Zusätzlich zu den `CWinApp` Member-Funktionen, die Microsoft Foundation Class-B
 
 - [AfxGetAppName](application-information-and-management.md#afxgetappname) erhält einen Zeiger auf eine Zeichenfolge, die den Namen der Anwendung enthält. Auch wenn man einen Zeiger auf die `CWinApp` -Objekts `m_pszExeName` um den Namen der Anwendung zu erhalten.
 
-Finden Sie unter [CWinApp: die Anwendungsklasse](../../mfc/cwinapp-the-application-class.md) Weitere Informationen zu den `CWinApp` -Klasse, einschließlich einer Übersicht über die folgenden:
+Finden Sie unter [CWinApp: Die Anwendungsklasse](../../mfc/cwinapp-the-application-class.md) Weitere Informationen zu den `CWinApp` -Klasse, einschließlich einer Übersicht über die folgenden:
 
 - `CWinApp`-Code geschrieben, die vom Anwendungs-Assistenten abgeleitet.
 
@@ -1060,7 +1060,7 @@ Ungleich NULL ist, wenn die Initialisierung erfolgreich ist; andernfalls 0.
 
 Initialisieren der Anwendung ist im Prinzip in zwei Abschnitte unterteilt: einmalige anwendungsinitialisierung, die erfolgt die erste Ausführung des Programms und Initialisierung von Instanzen, die jeweils ausgeführt, wird bei der eine Kopie für die Anwendung ausgeführt wird, einschließlich der ersten Zeit. Die Framework Implementierung von `WinMain` ruft diese Funktion.
 
-Außer Kraft setzen `InitInstance` zum Initialisieren der jede neue Instanz der Anwendung unter Windows ausgeführt wird. In der Regel, die Sie überschreiben `InitInstance` das Hauptfenster-Objekt zu erstellen und Festlegen der `CWinThread::m_pMainWnd` Datenmembers, der für dieses Fenster zeigen. Weitere Informationen zum Überschreiben dieser Memberfunktion finden Sie unter [CWinApp: die Anwendungsklasse](../../mfc/cwinapp-the-application-class.md).
+Außer Kraft setzen `InitInstance` zum Initialisieren der jede neue Instanz der Anwendung unter Windows ausgeführt wird. In der Regel, die Sie überschreiben `InitInstance` das Hauptfenster-Objekt zu erstellen und Festlegen der `CWinThread::m_pMainWnd` Datenmembers, der für dieses Fenster zeigen. Weitere Informationen zum Überschreiben dieser Memberfunktion finden Sie unter [CWinApp: Die Anwendungsklasse](../../mfc/cwinapp-the-application-class.md).
 
 > [!NOTE]
 > MFC-Anwendungen müssen als Singlethread-Apartment (STA) initialisiert werden. Wenn Sie aufrufen [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) in Ihre `InitInstance` außer Kraft setzen, geben Sie COINIT_APARTMENTTHREADED (anstelle von COINIT_MULTITHREADED) an.
@@ -1508,7 +1508,7 @@ LPCTSTR m_pszRegistryKey;
 
 Dieses Datenelement wird normalerweise als schreibgeschützt behandelt.
 
-- Der Wert wird auf einen Registrierungsschlüssel gespeichert. Der Name für die anwendungseinstellung für das Profil wird an den folgenden Registrierungsschlüssel angefügt: HKEY_CURRENT_USER/Software/LocalAppWizard-generiert /.
+- Der Wert wird auf einen Registrierungsschlüssel gespeichert. Der Name für die anwendungseinstellung für das Profil wird für den folgenden Registrierungsschlüssel angefügt: HKEY_CURRENT_USER/Software/LocalAppWizard-generiert /.
 
 Wenn Sie einen Wert zuzuweisen `m_pszRegistryKey`, es muss dynamisch auf dem Heap zugeordnet werden. Die `CWinApp` Destruktoraufrufe **kostenlose**(), mit dem this-Zeiger. Sie verwenden möchten die `_tcsdup`()-Laufzeitbibliothek-Funktion der zuordnen möchten. Darüber hinaus können freigeben Sie den Speicher, der Zeiger für den aktuellen zugeordnet sind, bevor Sie einen neuen Wert zuweisen. Zum Beispiel:
 
@@ -1793,7 +1793,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Parameter
 
 *pMsg*<br/>
-Ein Zeiger auf eine [MSG](../../mfc/reference/msg-structure1.md) -Struktur, die zu verarbeitende Meldung enthält.
+Ein Zeiger auf eine [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) -Struktur, die zu verarbeitende Meldung enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1815,7 +1815,7 @@ virtual BOOL ProcessMessageFilter(
 Gibt einen Hookcode. Diese Memberfunktion verwendet der Code, um zu bestimmen, wie verarbeiten *LpMsg.*
 
 *lpMsg*<br/>
-Ein Zeiger auf ein Windows [MSG](../../mfc/reference/msg-structure1.md) Struktur.
+Ein Zeiger auf ein Windows [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1886,7 +1886,7 @@ virtual LRESULT ProcessWndProcException(
 Ein Zeiger auf eine nicht abgefangene Ausnahme.
 
 *pMsg*<br/>
-Ein [MSG](../../mfc/reference/msg-structure1.md) Struktur, die Informationen über die Windows-Meldung enthält, die das Framework eine Ausnahme verursacht hat.
+Ein [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) Struktur, die Informationen über die Windows-Meldung enthält, die das Framework eine Ausnahme verursacht hat.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2118,7 +2118,7 @@ void SelectPrinter(
 ### <a name="parameters"></a>Parameter
 
 *hDevNames*<br/>
-Ein Handle für ein [DEVNAMES](../../mfc/reference/devnames-structure.md) Struktur, die der Treiber, Gerät und Ausgabe-Anschlussnamen, der einen bestimmten Drucker bezeichnet.
+Ein Handle für ein [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) Struktur, die der Treiber, Gerät und Ausgabe-Anschlussnamen, der einen bestimmten Drucker bezeichnet.
 
 *hDevMode-Feld*<br/>
 Ein Handle für ein [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) -Struktur, die Informationen über die Initialisierung für Grafikgeräte und die Umgebung eines Druckers angibt.
@@ -2168,7 +2168,7 @@ ID des eine Zeichenfolgenressource mit dem Namen des Registrierungsschlüssels.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Funktion legt *M_pszRegistryKey*, wird dann von verwendet die `GetProfileInt`, `GetProfileString`, `WriteProfileInt`, und `WriteProfileString` Memberfunktionen der `CWinApp`. Wenn diese Funktion aufgerufen wurde, wird die Liste der zuletzt verwendeten (MRU)-Dateien auch in der Registrierung gespeichert. Der Registrierungsschlüssel ist in der Regel der Name eines Unternehmens. Es befindet sich in einem Schlüssel mit dem folgenden Format: HKEY_CURRENT_USER\Software\\< Firmenname\>\\< Anwendungsname\>\\< Name des Abschnitts\>\\< Wert Namen\>.
+Diese Funktion legt *M_pszRegistryKey*, wird dann von verwendet die `GetProfileInt`, `GetProfileString`, `WriteProfileInt`, und `WriteProfileString` Memberfunktionen der `CWinApp`. Wenn diese Funktion aufgerufen wurde, wird die Liste der zuletzt verwendeten (MRU)-Dateien auch in der Registrierung gespeichert. Der Registrierungsschlüssel ist in der Regel der Name eines Unternehmens. Es befindet sich in einem Schlüssel mit dem folgenden Format: HKEY_CURRENT_USER\Software\\< Firmenname\>\\< Anwendungsname\>\\< Name des Abschnitts\>\\< Name des\>.
 
 ##  <a name="supportsapplicationrecovery"></a>  CWinApp::SupportsApplicationRecovery
 
@@ -2395,4 +2395,4 @@ Gibt an, die Anwendung Benutzer-Modell-ID.
 
 [CWinThread-Klasse](../../mfc/reference/cwinthread-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
-[Vorgehensweise: Hinzufügen von Unterstützung für den Neustart-Manager](../../mfc/how-to-add-restart-manager-support.md)
+[So wird es gemacht: Hinzufügen von Unterstützung für Neustart-Manager](../../mfc/how-to-add-restart-manager-support.md)

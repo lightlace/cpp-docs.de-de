@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - shared classes, classes
 ms.assetid: ca8b4b6b-744d-430b-b31f-d5b2f17bf210
-ms.openlocfilehash: 6e63664020508252a61682c46439af85033cf068
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9943a9b56b660165f8ecfd46f0a69107ecaa632c
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583871"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177908"
 ---
 # <a name="classes-shared-by-mfc-and-atl"></a>Von MFC und ATL freigegebenen Klassen
 
@@ -23,10 +23,10 @@ Die folgende Tabelle enthält die von MFC und ATL freigegebenen Klassen
 |[CImage](../../atl-mfc-shared/reference/cimage-class.md)|Bietet erweiterte Bitmapunterstützung, einschließlich der Möglichkeit zum Laden und Speichern von Bildern in JPEG, GIF, BMP und Portable Network Graphics (PNG).|atlimage.h|
 |[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)|Kapselt die DATE-Datentyp in OLE-Automatisierung verwendet.|"atlcomtime.h"|
 |[COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md)|Stellt einen relativen Zeitpunkt, eine Zeitspanne dar.|"atlcomtime.h"|
-|[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)|Eine Klasse, die ähnlich wie die Windows [Punkt](../../mfc/reference/point-structure.md) -Struktur, die Member-Funktionen zum Bearbeiten von der ereignissteuerung `CPoint` und `POINT` Strukturen.|atltypes.h|
-|[CRect](../../atl-mfc-shared/reference/crect-class.md)|Eine Klasse, die ähnlich wie eine Windows [RECT](../../mfc/reference/rect-structure.md) -Struktur, die Member-Funktionen zum Bearbeiten von der ereignissteuerung `CRect` Objekte und Windows `RECT` Strukturen.|atltypes.h|
+|[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)|Eine Klasse, die ähnlich wie die Windows [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) -Struktur, die Member-Funktionen zum Bearbeiten von der ereignissteuerung `CPoint` und `POINT` Strukturen.|atltypes.h|
+|[CRect](../../atl-mfc-shared/reference/crect-class.md)|Eine Klasse, die ähnlich wie eine Windows [RECT](/windows/desktop/api/windef/ns-windef-tagrect) -Struktur, die Member-Funktionen zum Bearbeiten von der ereignissteuerung `CRect` Objekte und Windows `RECT` Strukturen.|atltypes.h|
 |[CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md)|Stellt eine `CSimpleStringT` Objekt.|atlsimpstr.h|
-|[CSize](../../atl-mfc-shared/reference/csize-class.md)|Eine Klasse, die die Größe der Windows-Struktur, die eine relative Koordinate oder Position implementiert wird, ähnelt.|atltypes.h|
+|[CSize](../../atl-mfc-shared/reference/csize-class.md)|Eine Klasse, die ähnlich wie die Windows [Größe](/windows/desktop/api/windef/ns-windef-tagsize) -Struktur, die eine relative Koordinate oder Position implementiert.|atltypes.h|
 |[CStrBufT](../../atl-mfc-shared/reference/cstrbuft-class.md)|Bietet automatische ressourcenbereinigung für `GetBuffer` und `ReleaseBuffer` Ruft für eine vorhandene `CStringT` Objekt.|atlsimpstr.h|
 |[CStringData](../../atl-mfc-shared/reference/cstringdata-class.md)|Stellt die Daten von einem String-Objekt.|atlsimpstr.h|
 |[CStringT](../../atl-mfc-shared/reference/cstringt-class.md)|Stellt eine `CStringT` Objekt.|CStringT.h (MFC-abhängig) atlstr.h (MFC-unabhängig)|

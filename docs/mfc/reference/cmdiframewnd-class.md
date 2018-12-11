@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: a565e1c9d9c9e4d3773763b0ee78c49f61696723
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d9a2d33f61aa9033bb17c090989b4f08ee82bd7
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617541"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178381"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd-Klasse
 
@@ -160,7 +160,7 @@ virtual BOOL CreateClient(
 ### <a name="parameters"></a>Parameter
 
 *lpCreateStruct*<br/>
-Ein long-Zeiger auf eine [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) Struktur.
+Ein long-Zeiger auf eine [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) Struktur.
 
 *pWindowMenu*<br/>
 Ein Zeiger auf das Popup-Menü Fenster.
@@ -276,7 +276,7 @@ void MDICascade(int nType);
 ### <a name="parameters"></a>Parameter
 
 *nType*<br/>
-Gibt ein Flag Cascade an. Nur das Flag kann angegeben werden: MDITILE_SKIPDISABLED, die verhindert, dass die aktiven untergeordneten MDI-Fenster überlappend angeordnet wird.
+Gibt ein Flag Cascade an. Nur das Flag kann angegeben werden: MDITILE_SKIPDISABLED, verhindert, dass die aktiven untergeordneten MDI-Fenster überlappend angeordnet wird.
 
 ### <a name="remarks"></a>Hinweise
 

@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 176c076027a0b1b315fbcef3edd4104bad66ae34
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef44c917411efefeb6719af95185ddf7993fbab1
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534133"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179018"
 ---
 # <a name="colecontrol-class"></a>COleControl-Klasse
 
@@ -556,7 +556,7 @@ Sie sollten immer verwenden, in einem fensterlosen Steuerelement, das `COleContr
 
 OLE-Steuerelement-Objekte können auch ein Fenster erstellen, nur, wenn sie aktiv ist, werden jedoch die Menge der Arbeit, die erforderlich sind, für den inaktiven / aktiv-Übergang steigt und die Geschwindigkeit des Übergangs ausfällt. Es gibt Fälle, in denen dieses Problem auftritt: berücksichtigen Sie beispielsweise ein Raster mit Textfeldern. Wenn Einfügemarke mit Bildlauf verschieben nach oben und unten durch die Spalte, jedes Steuerelement direktes muss aktiviert und anschließend deaktiviert. Die Geschwindigkeit des Übergangs inaktiv/aktiv-wirkt sich direkt auf die Geschwindigkeit des Bildlaufs aus.
 
-Weitere Informationen zum Entwickeln von einer OLE-Steuerelement-Framework finden Sie in den Artikeln [MFC-ActiveX-Steuerelemente](../../mfc/mfc-activex-controls.md) und [Übersicht: Erstellen einer MFC-ActiveX-Steuerelement-Programm](../../mfc/reference/mfc-activex-control-wizard.md). Informationen zum Optimieren der OLE-Steuerelemente, einschließlich fensterlose und flimmerfreie-Steuerelemente finden Sie unter [MFC-ActiveX-Steuerelemente: Optimierung](../../mfc/mfc-activex-controls-optimization.md).
+Weitere Informationen zum Entwickeln von einer OLE-Steuerelement-Framework finden Sie in den Artikeln [MFC-ActiveX-Steuerelemente](../../mfc/mfc-activex-controls.md) und [Übersicht: Erstellen eine MFC-ActiveX-Steuerelement-Programm](../../mfc/reference/mfc-activex-control-wizard.md). Informationen zum Optimieren der OLE-Steuerelemente, einschließlich fensterlose und flimmerfreie-Steuerelemente finden Sie unter [MFC-ActiveX-Steuerelemente: Optimierung](../../mfc/mfc-activex-controls-optimization.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -848,7 +848,7 @@ BOOL ClipCaretRect(LPRECT lpRect);
 ### <a name="parameters"></a>Parameter
 
 *lpRect*<br/>
-Bei Eingabe einen Zeiger auf eine [RECT](../../mfc/reference/rect-structure1.md) -Struktur, enthält der Bereich "Einfügemarke" angepasst werden. Klicken Sie auf Ausgabe Bereich angepasste Einfügemarke oder NULL, wenn das Caretzeichen Rechteck vollständig abgedeckt wird.
+Bei Eingabe einen Zeiger auf eine [RECT](/windows/desktop/api/windef/ns-windef-tagrect) -Struktur, enthält der Bereich "Einfügemarke" angepasst werden. Klicken Sie auf Ausgabe Bereich angepasste Einfügemarke oder NULL, wenn das Caretzeichen Rechteck vollständig abgedeckt wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -953,7 +953,7 @@ Ein Zeiger auf ein `CPropExchange` -Objekt. Das Framework stellt dieses Objekt a
 
 Diese Funktion führt normalerweise Aufrufe an die **PX_** Funktionsreihe zum Laden oder Speichern von spezifischen, benutzerdefinierten Eigenschaften eines OLE-Steuerelements.
 
-Wenn der Steuerelement-Assistent zum Erstellen des Projekts der OLE-Steuerelement verwendet wurde, wird die überschriebene Version dieser Funktion die vordefinierten Eigenschaften, die von unterstützt Serialisieren `COleControl` durch einen Aufruf der Funktion der Basisklasse `COleControl::DoPropExchange`. Hinzufügen von benutzerdefinierten Eigenschaften zu Ihrem OLE-Steuerelement müssen Sie diese Funktion zum Serialisieren der neuen Eigenschaften zu ändern. Weitere Informationen zur Serialisierung finden Sie im Artikel [ActiveX-Steuerelemente: Serialisierung](../../mfc/mfc-activex-controls-serializing.md).
+Wenn der Steuerelement-Assistent zum Erstellen des Projekts der OLE-Steuerelement verwendet wurde, wird die überschriebene Version dieser Funktion die vordefinierten Eigenschaften, die von unterstützt Serialisieren `COleControl` durch einen Aufruf der Funktion der Basisklasse `COleControl::DoPropExchange`. Hinzufügen von benutzerdefinierten Eigenschaften zu Ihrem OLE-Steuerelement müssen Sie diese Funktion zum Serialisieren der neuen Eigenschaften zu ändern. Weitere Informationen zur Serialisierung finden Sie im Artikel [ActiveX-Steuerelemente: Serialisieren von](../../mfc/mfc-activex-controls-serializing.md).
 
 ##  <a name="dosuperclasspaint"></a>  COleControl::DoSuperclassPaint
 
@@ -1099,7 +1099,7 @@ Ungleich null der die Funktion erfolgreich ausgeführt wird; andernfalls 0.
 
 Diese werden in der Regel die erste Funktion eines Steuerelements Überschreiben der azurenode `COleControl::DoPropExchange`. Beim Laden, diese Funktion liest die Versionsnummer der permanenten Daten und wird das Versionsattribut des der [CPropExchange](../../mfc/reference/cpropexchange-class.md) -Objekt entsprechend. Beim Speichern, schreibt diese Funktion die Versionsnummer der permanenten Daten.
 
-Weitere Informationen zu Persistenz und versionsverwaltung, finden Sie im Artikel [ActiveX-Steuerelemente: Serialisierung](../../mfc/mfc-activex-controls-serializing.md).
+Weitere Informationen zu Persistenz und versionsverwaltung, finden Sie im Artikel [ActiveX-Steuerelemente: Serialisieren von](../../mfc/mfc-activex-controls-serializing.md).
 
 ##  <a name="fireclick"></a>  COleControl::FireClick
 
@@ -3636,9 +3636,9 @@ void ResetStockProps();
 
 ### <a name="remarks"></a>Hinweise
 
-Die Eigenschaften sind: Darstellung, Hintergrundfarbe, BorderStyle, Beschriftung, aktiviert, Schriftart, ForeColor, hWnd und Text. Eine Beschreibung der vordefinierten Eigenschaften, finden Sie unter [ActiveX-Steuerelemente: Hinzufügen von Basiseigenschaften](../../mfc/mfc-activex-controls-adding-stock-properties.md).
+Dabei handelt es sich um die folgenden Eigenschaften: Darstellung, Hintergrundfarbe, BorderStyle, Beschriftung, aktiviert, Schriftart, ForeColor, hWnd und Text. Eine Beschreibung der vordefinierten Eigenschaften, finden Sie unter [ActiveX-Steuerelemente: Hinzufügen von vordefinierten Eigenschaften](../../mfc/mfc-activex-controls-adding-stock-properties.md).
 
-Können Sie eines Steuerelements binäre Initialisierung Leistung verbessern, mithilfe von `ResetStockProps` und `ResetVersion` überschreiben `COleControl::OnResetState`. Siehe das unten aufgeführte Beispiel. Weitere Informationen zum Optimieren der Initialisierung finden Sie [ActiveX-Steuerelemente: Optimierung](../../mfc/mfc-activex-controls-optimization.md).
+Können Sie eines Steuerelements binäre Initialisierung Leistung verbessern, mithilfe von `ResetStockProps` und `ResetVersion` überschreiben `COleControl::OnResetState`. Siehe das unten aufgeführte Beispiel. Weitere Informationen zum Optimieren der Initialisierung finden Sie unter [ActiveX-Steuerelemente: Optimierung](../../mfc/mfc-activex-controls-optimization.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -3659,7 +3659,7 @@ Die Versionsnummer des Steuerelements zugewiesen werden.
 
 ### <a name="remarks"></a>Hinweise
 
-Können Sie eines Steuerelements binäre Initialisierung Leistung verbessern, mithilfe von `ResetVersion` und `ResetStockProps` überschreiben `COleControl::OnResetState`. Siehe das Beispiel unter [ResetStockProps](#resetstockprops). Weitere Informationen zum Optimieren der Initialisierung finden Sie [ActiveX-Steuerelemente: Optimierung](../../mfc/mfc-activex-controls-optimization.md).
+Können Sie eines Steuerelements binäre Initialisierung Leistung verbessern, mithilfe von `ResetVersion` und `ResetStockProps` überschreiben `COleControl::OnResetState`. Siehe das Beispiel unter [ResetStockProps](#resetstockprops). Weitere Informationen zum Optimieren der Initialisierung finden Sie unter [ActiveX-Steuerelemente: Optimierung](../../mfc/mfc-activex-controls-optimization.md).
 
 ##  <a name="scrollwindow"></a>  COleControl::ScrollWindow
 
@@ -3741,7 +3741,7 @@ Ein `CArchive` zu zu oder von zu serialisierenden Objekts.
 
 ### <a name="remarks"></a>Hinweise
 
-Können Sie eines Steuerelements binäre Persistenz-Leistung verbessern, mithilfe von `SerializeExtent`, `SerializeStockProps`, und `SerializeVersion` überschreiben `COleControl::Serialize`. Siehe das unten aufgeführte Beispiel. Weitere Informationen zum Optimieren der Initialisierung finden Sie [ActiveX-Steuerelemente: Optimierung](../../mfc/mfc-activex-controls-optimization.md).
+Können Sie eines Steuerelements binäre Persistenz-Leistung verbessern, mithilfe von `SerializeExtent`, `SerializeStockProps`, und `SerializeVersion` überschreiben `COleControl::Serialize`. Siehe das unten aufgeführte Beispiel. Weitere Informationen zum Optimieren der Initialisierung finden Sie unter [ActiveX-Steuerelemente: Optimierung](../../mfc/mfc-activex-controls-optimization.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -3749,7 +3749,7 @@ Können Sie eines Steuerelements binäre Persistenz-Leistung verbessern, mithilf
 
 ##  <a name="serializestockprops"></a>  COleControl::SerializeStockProps
 
-Serialisiert bzw. initialisiert den Zustand des der `COleControl` Basiseigenschaften: Darstellung, Hintergrundfarbe, BorderStyle, Beschriftung, aktiviert, Schriftart, ForeColor und Text.
+Serialisiert bzw. initialisiert den Zustand des der `COleControl` vordefinierte Eigenschaften: Darstellung, Hintergrundfarbe, BorderStyle, aktivierter Beschriftung, Schriftart, ForeColor und Text.
 
 ```
 void SerializeStockProps(CArchive& ar);
@@ -3762,9 +3762,9 @@ Ein `CArchive` zu zu oder von zu serialisierenden Objekts.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine Beschreibung der vordefinierten Eigenschaften, finden Sie unter [ActiveX-Steuerelemente: Hinzufügen von Basiseigenschaften](../../mfc/mfc-activex-controls-adding-stock-properties.md).
+Eine Beschreibung der vordefinierten Eigenschaften, finden Sie unter [ActiveX-Steuerelemente: Hinzufügen von vordefinierten Eigenschaften](../../mfc/mfc-activex-controls-adding-stock-properties.md).
 
-Können Sie eines Steuerelements binäre Persistenz-Leistung verbessern, mithilfe von `SerializeStockProps`, `SerializeExtent`, und `SerializeVersion` überschreiben `COleControl::Serialize`. Ein Beispiel finden Sie in den Code am [SerializeExtent](#serializeextent). Weitere Informationen zum Optimieren der Initialisierung finden Sie [ActiveX-Steuerelemente: Optimierung](../../mfc/mfc-activex-controls-optimization.md).
+Können Sie eines Steuerelements binäre Persistenz-Leistung verbessern, mithilfe von `SerializeStockProps`, `SerializeExtent`, und `SerializeVersion` überschreiben `COleControl::Serialize`. Ein Beispiel finden Sie in den Code am [SerializeExtent](#serializeextent). Weitere Informationen zum Optimieren der Initialisierung finden Sie unter [ActiveX-Steuerelemente: Optimierung](../../mfc/mfc-activex-controls-optimization.md).
 
 ##  <a name="serializeversion"></a>  COleControl::SerializeVersion
 
@@ -3794,7 +3794,7 @@ Die Versionsnummer des Steuerelements. Wenn die angegebene Archivdatei geladen w
 
 ### <a name="remarks"></a>Hinweise
 
-Können Sie eines Steuerelements binäre Persistenz-Leistung verbessern, mithilfe von `SerializeVersion`, `SerializeExtent`, und `SerializeStockProps` überschreiben `COleControl::Serialize`. Ein Beispiel finden Sie in den Code am [SerializeExtent](#serializeextent). Weitere Informationen zum Optimieren der Initialisierung finden Sie [ActiveX-Steuerelemente: Optimierung](../../mfc/mfc-activex-controls-optimization.md).
+Können Sie eines Steuerelements binäre Persistenz-Leistung verbessern, mithilfe von `SerializeVersion`, `SerializeExtent`, und `SerializeStockProps` überschreiben `COleControl::Serialize`. Ein Beispiel finden Sie in den Code am [SerializeExtent](#serializeextent). Weitere Informationen zum Optimieren der Initialisierung finden Sie unter [ActiveX-Steuerelemente: Optimierung](../../mfc/mfc-activex-controls-optimization.md).
 
 ##  <a name="setappearance"></a>  COleControl::SetAppearance
 
@@ -3964,7 +3964,7 @@ virtual void SetInitialDataFormats();
 
 ### <a name="remarks"></a>Hinweise
 
-Die Standardimplementierung gibt zwei Formate an: CF_METAFILEPICT und die permanenten Eigenschaft festgelegt.
+Die Standardimplementierung gibt zwei Formate an: CF_METAFILEPICT und die dauerhaften Eigenschaften festlegen.
 
 ##  <a name="setinitialsize"></a>  COleControl::SetInitialSize
 

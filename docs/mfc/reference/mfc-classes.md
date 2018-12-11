@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, classes
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
-ms.openlocfilehash: c35d7bf16b851fe9a96bdd896babfa450c726374
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: ee64ca259f2466bb02f7dd650a10dc18f8d8f8a1
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525275"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178953"
 ---
 # <a name="mfc-classes"></a>MFC-Klassen
 
@@ -1099,7 +1099,7 @@ Stellt eine Gruppe von Datensätzen dar, die aus einer Datenquelle ausgewählt w
 Eine Sicht, die Datenbankdatensätze in Steuerelementen anzeigt.
 
 [CRect-Klasse](../../atl-mfc-shared/reference/crect-class.md)<br/>
-Ähnlich wie eine Windows [RECT-Struktur](rect-structure.md).
+Ähnlich wie eine Windows [RECT-Struktur](/windows/desktop/api/windef/ns-windef-tagrect).
 
 [CRectTracker-Klasse](../../mfc/reference/crecttracker-class.md)<br/>
 Ermöglicht, dass ein Element angezeigt, verschoben und in unterschiedlichen Größen dargestellt werden kann.
@@ -1165,7 +1165,7 @@ Kapselt einen Übergang mit sinusförmigem Bereich und angegebenem Schwingungsbe
 Kapselt einen Übergang mit sinusförmiger Geschwindigkeit und einer Amplitude, die von der ursprünglichen Geschwindigkeit der Animationsvariablen bestimmt wird.
 
 [CSize-Klasse](../../atl-mfc-shared/reference/csize-class.md)<br/>
-Ähnelt der Windows-Struktur [SIZE](https://msdn.microsoft.com/library/windows/desktop/dd145106) , bei der eine relative Koordinate oder Position implementiert wird
+Ähnelt der Windows-Struktur [SIZE](/windows/desktop/api/windef/ns-windef-tagsize) , bei der eine relative Koordinate oder Position implementiert wird
 
 [CSliderCtrl-Klasse](../../mfc/reference/csliderctrl-class.md)<br/>
 Stellt die Funktionalität des allgemeinen Windows-Schieberegler-Steuerelements bereit.

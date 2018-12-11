@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 745b04751c96e79c6bfa332ebdde15b254578137
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 26dcf50cc3dc48fec5d6e4957ffd1ef340ad1dbf
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694802"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178642"
 ---
 # <a name="cbutton-class"></a>CButton-Klasse
 
@@ -265,7 +265,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parameter
 
 *lpDrawItemStruct*<br/>
-Ein long-Zeiger auf eine [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) Struktur. Die Struktur enthält Informationen über das Element, das gezeichnet werden und den Typ der Zeichnung, die erforderlich sind.
+Ein long-Zeiger auf eine [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) Struktur. Die Struktur enthält Informationen über das Element, das gezeichnet werden und den Typ der Zeichnung, die erforderlich sind.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -532,7 +532,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*pSize*|[out] Zeiger auf eine [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) -Struktur, die Beschreibung eines Rechtecks empfängt.|
+|*pSize*|[out] Zeiger auf eine [Größe](/windows/desktop/api/windef/ns-windef-tagsize) -Struktur, die Beschreibung eines Rechtecks empfängt.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1006,7 +1006,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*pSize*|[in] Zeiger auf eine [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur, die ein umschließendes Rechteck beschreibt.|
+|*pSize*|[in] Zeiger auf eine [Größe](/windows/desktop/api/windef/ns-windef-tagsize) Struktur, die ein umschließendes Rechteck beschreibt.|
 
 ### <a name="return-value"></a>Rückgabewert
 

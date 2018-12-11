@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 295f61ed120e957bc0d5ec1746e7d3bdfbb6d001
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6722011bf343a391fcc7180558eead5c039afc59
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624600"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178173"
 ---
 # <a name="cbitmap-class"></a>CBitmap-Klasse
 
@@ -155,7 +155,7 @@ Obwohl eine Bitmap nicht direkt für ein Anzeigegerät ausgewählt werden kann, 
 
 Wenn Sie mit dem `CBitmap` -Objekt fertig sind, das von der `CreateBitmap` -Funktion erstellt wurde, wählen Sie zunächst die Bitmap im Gerätekontext aus, und löschen Sie dann das `CBitmap` -Objekt.
 
-Weitere Informationen finden Sie unter der Beschreibung des der `bmBits` -Feld in der `BITMAP` Struktur. Die [BITMAP](../../mfc/reference/bitmap-structure.md) -Struktur wird unter der [CBitmap::CreateBitmapIndirect](#createbitmapindirect) -Memberfunktion beschrieben.
+Weitere Informationen finden Sie unter der Beschreibung des der `bmBits` -Feld in der `BITMAP` Struktur. Die [BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) -Struktur wird unter der [CBitmap::CreateBitmapIndirect](#createbitmapindirect) -Memberfunktion beschrieben.
 
 ##  <a name="createbitmapindirect"></a>  CBitmap:: Createbitmapindirect
 
@@ -168,7 +168,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="parameters"></a>Parameter
 
 *lpBitmap*<br/>
-Verweist auf eine [BITMAP](../../mfc/reference/bitmap-structure.md) -Struktur, die Informationen über die Bitmap enthält.
+Verweist auf eine [BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) -Struktur, die Informationen über die Bitmap enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -286,7 +286,7 @@ int GetBitmap(BITMAP* pBitMap);
 ### <a name="parameters"></a>Parameter
 
 *pBitMap*<br/>
-Zeiger auf eine [Bitmapstruktur](../../mfc/reference/bitmap-structure.md) -Struktur, die die abbildeigenschaften erhält. Dieser Parameter darf nicht NULL sein.
+Zeiger auf eine [BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) -Struktur, die die abbildeigenschaften erhält. Dieser Parameter darf nicht NULL sein.
 
 ### <a name="return-value"></a>Rückgabewert
 

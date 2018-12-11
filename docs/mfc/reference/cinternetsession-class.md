@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: 3b820ea3687fd52947eff48e4814ab4173fd95c7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 216f3bf0ce62eb6e69ad0650289c4c2d91f95159
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519292"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178160"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession-Klasse
 
@@ -457,7 +457,7 @@ Die *DwInternetStatus* Parameter gibt den Vorgang ausgeführt wird und bestimmt,
 |-----------|-------------|
 |INTERNET_STATUS_RESOLVING_NAME|Die IP-Adresse mit dem Namen, die in enthaltenen Nachschlagen *LpvStatusInformation*.|
 |INTERNET_STATUS_NAME_RESOLVED|Die IP-Adresse mit dem Namen, die in enthaltenen gefunden *LpvStatusInformation*.|
-|INTERNET_STATUS_CONNECTING_TO_SERVER|Herstellen einer Verbindung mit der Socketadresse ([SOCKADDR](../../mfc/reference/sockaddr-structure.md)) verweist *LpvStatusInformation*.|
+|INTERNET_STATUS_CONNECTING_TO_SERVER|Herstellen einer Verbindung mit der Socketadresse ([SOCKADDR](/windows/desktop/winsock/sockaddr-2)) verweist *LpvStatusInformation*.|
 |INTERNET_STATUS_CONNECTED_TO_SERVER|Verbindung erfolgreich hergestellt, um die Socketadresse (SOCKADDR) verweist *LpvStatusInformation*.|
 |INTERNET_STATUS_SENDING_REQUEST|Die informationsanforderung an den Server gesendet. Die *LpvStatusInformation* Parameter NULL ist.|
 |INTERNET_STATUS_ REQUEST_SENT|Die informationsanforderung erfolgreich an den Server gesendet werden. Die *LpvStatusInformation* Parameter NULL ist.|

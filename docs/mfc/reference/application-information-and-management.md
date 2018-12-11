@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 9d5216cd399943cda67bc9387ea37c938e5cab48
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: c1e742d3320dae4140cc4886c47d34dbe9b6071f
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694334"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178342"
 ---
 # <a name="application-information-and-management"></a>Anwendungsinformationen und Anwendungsverwaltung
 
@@ -567,9 +567,9 @@ Wenn kein Pfad angegeben ist, und die Dateierweiterung nicht angegeben wird, lau
 
 - Das aktuelle Verzeichnis.
 
-- **Windows 95/98:** das Windows-Systemverzeichnis. **Windows NT:** das 32-Bit-Windows-Systemverzeichnis. Der Name dieses Verzeichnisses ist "System32".
+- **Windows 95/98:** Das Systemverzeichnis von Windows. **Windows NT:** Das 32-Bit-Windows-Systemverzeichnis. Der Name dieses Verzeichnisses ist "System32".
 
-- **Nur Windows NT:** der 16-Bit-Windows-Systemverzeichnis. Es gibt keine Win32-Funktion, die den Pfad für dieses Verzeichnis abruft, aber es durchsucht wird. Der Name dieses Verzeichnisses ist SYSTEM.
+- **Nur Windows NT:** Das 16-Bit-Windows-Systemverzeichnis. Es gibt keine Win32-Funktion, die den Pfad für dieses Verzeichnis abruft, aber es durchsucht wird. Der Name dieses Verzeichnisses ist SYSTEM.
 
 - Das Windows-Verzeichnis.
 
@@ -715,7 +715,7 @@ Registrierter Name für eine Klasse von `AfxRegisterWndClass` ausschließlich au
 
 Wenn Sie aufrufen `AfxRegisterWndClass` für mehrere CWnd abgeleiteten Klassen mit identischen Parametern, die anstelle einer separaten Fenster-Klasse für jede Klasse, verwendet jede Klasse die gleichen Fensterklasse. Dies kann Probleme verursachen, wenn das Format der CS_CLASSDC-Klasse verwendet wird. Anstatt mehrere CS_CLASSDC Fensterklassen erhalten Sie eine CS_CLASSDC Fensterklasse, und alle C++-Fenster, die diese Klasse Freigabe der gleichen Domänencontroller zu verwenden. Um dieses Problem zu vermeiden, rufen Sie [AfxRegisterClass](#afxregisterclass) zum Registrieren der Klasse.
 
-Finden Sie in der technischen Hinweis [TN001: Fensterklassenregistrierung](../../mfc/tn001-window-class-registration.md) für Weitere Informationen zu fensterklassenregistrierung und `AfxRegisterWndClass` Funktion.
+Lesen Sie bitte zu technischen [TN001: Fensterklassenregistrierung](../../mfc/tn001-window-class-registration.md) für Weitere Informationen zu fensterklassenregistrierung und `AfxRegisterWndClass` Funktion.
 
 ### <a name="example"></a>Beispiel
 
@@ -802,7 +802,7 @@ BOOL AfxSocketInit(WSADATA* lpwsaData = NULL);
 ### <a name="parameters"></a>Parameter
 
 *lpwsaData*<br/>
-Ein Zeiger auf eine [WSADATA](../../mfc/reference/wsadata-structure.md) Struktur. Wenn *LpwsaData* ist nicht gleich NULL ist, klicken Sie dann die Adresse der `WSADATA` Struktur wird ausgefüllt, durch den Aufruf von `WSAStartup`. Diese Funktion wird auch sichergestellt, dass `WSACleanup` für Sie aufgerufen wird, bevor die Anwendung beendet wird.
+Ein Zeiger auf eine [WSADATA](/windows/desktop/api/winsock2/ns-winsock2-wsadata) Struktur. Wenn *LpwsaData* ist nicht gleich NULL ist, klicken Sie dann die Adresse der `WSADATA` Struktur wird ausgefüllt, durch den Aufruf von `WSAStartup`. Diese Funktion wird auch sichergestellt, dass `WSACleanup` für Sie aufgerufen wird, bevor die Anwendung beendet wird.
 
 ### <a name="return-value"></a>Rückgabewert
 

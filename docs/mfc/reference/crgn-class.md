@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 9c08b679f1423b499a5b95b260fd0fac9ddeaf9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74ee046e81e0f55e5550220166c957317c2bf6cd
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467979"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178550"
 ---
 # <a name="crgn-class"></a>CRgn-Klasse
 
@@ -78,13 +78,13 @@ class CRgn : public CGdiObject
 |[CRgn::CombineRgn](#combinergn)|Legt eine `CRgn` Objekts, sodass es die Union von zwei angegebenen entspricht `CRgn` Objekte.|
 |[CRgn::CopyRgn](#copyrgn)|Legt eine `CRgn` Objekts, sodass es sich um eine Kopie einer angegebenen ist `CRgn` Objekt.|
 |[CRgn::CreateEllipticRgn](#createellipticrgn)|Initialisiert eine `CRgn` Objekt mit einer elliptischen Region.|
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Initialisiert eine `CRgn` Objekt mit einer elliptischen Bereichs, der durch eine [RECT](../../mfc/reference/rect-structure1.md) Struktur.|
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Initialisiert eine `CRgn` Objekt mit einer elliptischen Bereichs, der durch eine [RECT](/windows/desktop/api/windef/ns-windef-tagrect) Struktur.|
 |[CRgn::CreateFromData](#createfromdata)|Erstellt einen Bereich aus der angegebenen Region und die Transformation Daten an.|
 |[CRgn::CreateFromPath](#createfrompath)|Erstellt einen Bereich aus dem Pfad, der für den angegebenen Gerätekontext ausgewählt ist.|
 |[CRgn::CreatePolygonRgn](#createpolygonrgn)|Initialisiert eine `CRgn` Objekt mit einer polygonalen Region. Das System des Polygons wird automatisch geschlossen, falls erforderlich, durch eine Linie zwischen dem letzten Scheitelpunkt mit dem ersten.|
 |[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|Initialisiert eine `CRgn` Objekt mit einer Region mit einer Reihe von geschlossenen Polygonen. Die Polygone zusammenhanglosen werden, oder sie möglicherweise überlappen.|
 |[CRgn::CreateRectRgn](#createrectrgn)|Initialisiert eine `CRgn` Objekt mit einem rechteckigen Bereich.|
-|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Initialisiert eine `CRgn` Objekt mit einer rechteckigen Bereichs, der durch eine [RECT](../../mfc/reference/rect-structure1.md) Struktur.|
+|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Initialisiert eine `CRgn` Objekt mit einer rechteckigen Bereichs, der durch eine [RECT](/windows/desktop/api/windef/ns-windef-tagrect) Struktur.|
 |[CRgn::CreateRoundRectRgn](#createroundrectrgn)|Initialisiert eine `CRgn` Objekt mit einem rechteckigen Bereich mit abgerundeten Ecken.|
 |[CRgn::EqualRgn](#equalrgn)|Überprüft zwei `CRgn` Objekte zu bestimmen, ob sie gleich sind.|
 |[CRgn::FromHandle](#fromhandle)|Gibt einen Zeiger auf eine `CRgn` Objekt, wenn ein Handle zu einer Windows-Region zu erhalten.|
@@ -297,13 +297,13 @@ BOOL CreateFromData(
 ### <a name="parameters"></a>Parameter
 
 *lpXForm*<br/>
-Verweist auf eine [XFORM](../../mfc/reference/xform-structure.md) -Datenstruktur, die die Transformation definiert, in der Region ausgeführt werden soll. Wenn dieser Zeiger NULL ist, wird die Identitätstransformation verwendet.
+Verweist auf eine [XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform) -Datenstruktur, die die Transformation definiert, in der Region ausgeführt werden soll. Wenn dieser Zeiger NULL ist, wird die Identitätstransformation verwendet.
 
 *nCount*<br/>
 Gibt die Anzahl der Bytes, die auf den von *pRgnData*.
 
 *pRgnData*<br/>
-Verweist auf eine [RGNDATA](../../mfc/reference/rgndata-structure.md) -Datenstruktur, die Daten für die Region enthält.
+Verweist auf eine [RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-_rgndata) -Datenstruktur, die Daten für die Region enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -631,7 +631,7 @@ int GetRegionData(
 ### <a name="parameters"></a>Parameter
 
 *lpRgnData*<br/>
-Verweist auf eine [RGNDATA](../../mfc/reference/rgndata-structure.md) -Datenstruktur, die die Informationen erhält. Wenn dieser Parameter NULL ist, enthält der Rückgabewert die Anzahl der Bytes, die für die Region-Daten erforderlich sind.
+Verweist auf eine [RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-_rgndata) -Datenstruktur, die die Informationen erhält. Wenn dieser Parameter NULL ist, enthält der Rückgabewert die Anzahl der Bytes, die für die Region-Daten erforderlich sind.
 
 *nCount*<br/>
 Gibt die Größe in Bytes, der die *LpRgnData* Puffer.

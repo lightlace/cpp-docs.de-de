@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 136f172dcd406e323afddae87d6fb234b5d4b273
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d3fdcfa664de93f62b8b4dbcbc6184d08fdf591c
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544884"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178081"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog-Klasse
 
@@ -142,7 +142,7 @@ Ein oder mehrere Flags, die Sie, zum Anpassen der Einstellungen des Dialogfelds 
 
 - PSD_DISABLEORIENTATION deaktiviert das Steuerelement Seite Ausrichtung des Dialogfelds.
 
-- Bewirkt, dass PSD_RETURNDEFAULT `CPageSetupDialog` zurückzugebenden [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) und [DEVNAMES](../../mfc/reference/devnames-structure.md) Strukturen, die für den Standarddrucker System initialisiert werden, ohne dass ein Dialogfeld angezeigt. Es wird davon ausgegangen, dass beide `hDevNames` und `hDevMode` NULL sind; andernfalls gibt die Funktion einen Fehler zurück. Wenn Sie der Standarddrucker System von einer alten Druckertreiber (älter als Windows-Version 3.0) unterstützt wird nur `hDevNames` zurückgegeben. `hDevMode` ist NULL.
+- Bewirkt, dass PSD_RETURNDEFAULT `CPageSetupDialog` zurückzugebenden [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) und [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) Strukturen, die für den Standarddrucker System initialisiert werden, ohne dass ein Dialogfeld angezeigt. Es wird davon ausgegangen, dass beide `hDevNames` und `hDevMode` NULL sind; andernfalls gibt die Funktion einen Fehler zurück. Wenn Sie der Standarddrucker System von einer alten Druckertreiber (älter als Windows-Version 3.0) unterstützt wird nur `hDevNames` zurückgegeben. `hDevMode` ist NULL.
 
 - PSD_DISABLEPAPER deaktiviert das Steuerelement zur Auswahl von Papier.
 
@@ -171,7 +171,7 @@ Verwenden der [DoModal](../../mfc/reference/cdialog-class.md#domodal) Funktion, 
 
 ##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC
 
-Erstellt einen Drucker-Gerätekontext aus der [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) und [DEVNAMES](../../mfc/reference/devnames-structure.md) Strukturen.
+Erstellt einen Drucker-Gerätekontext aus der [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) und [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) Strukturen.
 
 ```
 HDC CreatePrinterDC();
@@ -262,7 +262,7 @@ void GetMargins(
 ### <a name="parameters"></a>Parameter
 
 *lpRectMargins*<br/>
-Zeiger auf eine [RECT](rect-structure.md) Struktur oder [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt, das (in 1/1000 Zoll oder 1/100 mm) die Druckränder für den aktuell ausgewählten Drucker beschreibt. Übergeben Sie NULL für diesen Parameter fest, wenn Sie nicht dieses Rechteck interessiert sind.
+Zeiger auf eine [RECT](/windows/desktop/api/windef/ns-windef-tagrect) Struktur oder [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt, das (in 1/1000 Zoll oder 1/100 mm) die Druckränder für den aktuell ausgewählten Drucker beschreibt. Übergeben Sie NULL für diesen Parameter fest, wenn Sie nicht dieses Rechteck interessiert sind.
 
 *lpRectMinMargins*<br/>
 Zeiger auf eine `RECT` Struktur oder `CRect` Objekt, das (in 1/1000 Zoll oder 1/100 mm) die minimalen Druckränder für den aktuell ausgewählten Drucker beschreibt. Übergeben Sie NULL für diesen Parameter fest, wenn Sie nicht dieses Rechteck interessiert sind.
@@ -341,7 +341,7 @@ Gibt eine Meldung an, den Bereich der Seite derzeit gerade gezeichnet wird. Eine
 - Eine Darstellung der Rückgabeadresse WM_PSD_YAFULLPAGERECT-Bereich. Dieser Bereich wird auf dem Rand des Seitenbereichs Beispiel erweitert.
 
 *lpRect*<br/>
-Zeiger auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) oder [RECT](rect-structure.md) -Objekt, das die Koordinaten des Zeichenbereichs enthält.
+Zeiger auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) oder [RECT](/windows/desktop/api/windef/ns-windef-tagrect) -Objekt, das die Koordinaten des Zeichenbereichs enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 

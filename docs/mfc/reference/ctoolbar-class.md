@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: 4faa067f95f43939d6dbd05837f961b3baa7f17f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 938df6599ca3bfec3e08e77d7a60106133f54324
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593244"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178537"
 ---
 # <a name="ctoolbar-class"></a>CToolBar-Klasse
 
@@ -406,7 +406,7 @@ virtual void GetItemRect(
 Der Index des Elements (Schaltfläche oder ein Trennzeichen), dessen Rechteckkoordinaten sind, abgerufen werden sollen.
 
 *lpRect*<br/>
-Adresse von der [RECT](../../mfc/reference/rect-structure1.md) -Struktur, die Koordinaten für das Element enthält.
+Adresse von der [RECT](/windows/desktop/api/windef/ns-windef-tagrect) -Struktur, die Koordinaten für das Element enthält.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -565,7 +565,7 @@ Neue Index für das Bild der Schaltfläche innerhalb der Bitmap.
 Diese Funktion legt für Trennzeichen, die den Stil TBBS_SEPARATOR verfügen, das Trennzeichen für die Breite in Pixel um den Wert, der in gespeicherten *iImage*.
 
 > [!NOTE]
->  Sie können auch festlegen, Schaltflächenstatus mithilfe der *nStyle* Parameter, aber da Schaltflächenstatus von gesteuert werden die [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) Handler auf, einen Status Sie festlegen, über `SetButtonInfo` verloren während der Verarbeitung der nächsten im Leerlauf befindet. Finden Sie unter [wie Aktualisieren von Benutzeroberflächenobjekten](../../mfc/how-to-update-user-interface-objects.md) und [TN031: Schiebeleisten-Steuerelemente](../../mfc/tn031-control-bars.md) für Weitere Informationen.
+>  Sie können auch festlegen, Schaltflächenstatus mithilfe der *nStyle* Parameter, aber da Schaltflächenstatus von gesteuert werden die [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) Handler auf, einen Status Sie festlegen, über `SetButtonInfo` verloren während der Verarbeitung der nächsten im Leerlauf befindet. Finden Sie unter [Aktualisieren von Benutzeroberflächenobjekten](../../mfc/how-to-update-user-interface-objects.md) und [TN031: Steuerleisten](../../mfc/tn031-control-bars.md) für Weitere Informationen.
 
 Informationen zu Schaltflächen und Bitmapbilder, finden Sie unter den [CToolBar](../../mfc/reference/ctoolbar-class.md) Übersicht und [CToolBar::LoadBitmap](#loadbitmap).
 
@@ -640,7 +640,7 @@ Einer der Stil der Schaltfläche bestimmt, wie die Schaltfläche angezeigt wird 
 Vor dem Aufruf `SetButtonStyle`, rufen Sie die [GetButtonStyle](#getbuttonstyle) Memberfunktion versucht, den Stil Schaltfläche oder ein Trennzeichen abzurufen.
 
 > [!NOTE]
->  Sie können auch festlegen, Schaltflächenstatus mithilfe der *nStyle* Parameter, aber da Schaltflächenstatus von gesteuert werden die [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) Handler auf, einen Status Sie festlegen, über `SetButtonStyle` verloren während der Verarbeitung der nächsten im Leerlauf befindet. Finden Sie unter [wie Aktualisieren von Benutzeroberflächenobjekten](../../mfc/how-to-update-user-interface-objects.md) und [TN031: Schiebeleisten-Steuerelemente](../../mfc/tn031-control-bars.md) für Weitere Informationen.
+>  Sie können auch festlegen, Schaltflächenstatus mithilfe der *nStyle* Parameter, aber da Schaltflächenstatus von gesteuert werden die [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) Handler auf, einen Status Sie festlegen, über `SetButtonStyle` verloren während der Verarbeitung der nächsten im Leerlauf befindet. Finden Sie unter [Aktualisieren von Benutzeroberflächenobjekten](../../mfc/how-to-update-user-interface-objects.md) und [TN031: Steuerleisten](../../mfc/tn031-control-bars.md) für Weitere Informationen.
 
 ##  <a name="setbuttontext"></a>  CToolBar::SetButtonText
 
