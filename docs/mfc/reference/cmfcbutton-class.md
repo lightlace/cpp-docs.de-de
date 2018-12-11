@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: b33c4c89276b99b6b5f8a4129ef17f809f058ac5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a82793ce29765bf01e8c52c94257bd3150187505
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547315"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178459"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton-Klasse
 
@@ -567,7 +567,7 @@ virtual void OnDraw(
 [in] Ein Verweis auf ein Rechteck, das die Schaltfläche mit den umschließt.
 
 *uiState*<br/>
-[in] Der aktuelle Zustand der Schaltfläche. Weitere Informationen finden Sie unter den `itemState` Mitglied der [DRAWITEMSTRUCT-Struktur](../../mfc/reference/drawitemstruct-structure.md) Thema.
+[in] Der aktuelle Zustand der Schaltfläche. Weitere Informationen finden Sie unter den `itemState` Mitglied der [DRAWITEMSTRUCT-Struktur](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) Thema.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -593,7 +593,7 @@ virtual void OnDrawBorder(
 [in] Ein Verweis auf ein Rechteck, das die Schaltfläche mit den umschließt.
 
 *uiState*<br/>
-[in] Der aktuelle Zustand der Schaltfläche. Weitere Informationen finden Sie unter den `itemState` Mitglied der [DRAWITEMSTRUCT-Struktur](../../mfc/reference/drawitemstruct-structure.md) Thema.
+[in] Der aktuelle Zustand der Schaltfläche. Weitere Informationen finden Sie unter den `itemState` Mitglied der [DRAWITEMSTRUCT-Struktur](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) Thema.
 
 ### <a name="remarks"></a>Hinweise
 

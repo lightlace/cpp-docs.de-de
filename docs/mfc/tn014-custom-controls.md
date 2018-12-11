@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-ms.openlocfilehash: e773d270c302ef71a6f6527061ba13c870fa4500
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f04029e47ee7d262cdc5e2eab463799acd7d943
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557819"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178407"
 ---
 # <a name="tn014-custom-controls"></a>TN014: Benutzerdefinierte Steuerelemente
 
@@ -88,7 +88,7 @@ Mithilfe der Steuerelemente selbst zeichnen können Sie wiederverwendbaren Klass
     // insert code to delete an item from this combo box
     ```
 
-Ausführliche Informationen über die Ownerdrawn-Strukturen ([DRAWITEMSTRUCT](../mfc/reference/drawitemstruct-structure.md), [MEASUREITEMSTRUCT](../mfc/reference/measureitemstruct-structure.md), [COMPAREITEMSTRUCT](../mfc/reference/compareitemstruct-structure.md), und [DELETEITEMSTRUCT](../mfc/reference/deleteitemstruct-structure.md)) finden Sie in der Dokumentation MFC `CWnd::OnDrawItem`, `CWnd::OnMeasureItem`, `CWnd::OnCompareItem`, und `CWnd::OnDeleteItem` bzw.
+Ausführliche Informationen über die Ownerdrawn-Strukturen ([DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct), [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct), [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct), und [DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct)) finden Sie in der Dokumentation MFC `CWnd::OnDrawItem`, `CWnd::OnMeasureItem`, `CWnd::OnCompareItem`, und `CWnd::OnDeleteItem` bzw.
 
 ## <a name="using-self-draw-controls-and-menus"></a>Verwenden von Steuerelementen selbst zeichnen und Menüs
 

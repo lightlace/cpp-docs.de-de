@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMetaFileDC [MFC], Create
 - CMetaFileDC [MFC], CreateEnhanced
 ms.assetid: ffce60fa-4181-4d46-9832-25e46fad4db4
-ms.openlocfilehash: 343ab1a5d0c38ab0d17c609fbfc134b144502553
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bfbe03c5c81b2c7d6517dff7ce4e5f88b7c076bc
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471811"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178303"
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC-Klasse
 
@@ -186,7 +186,7 @@ Identifiziert ein Referenzgerät für die erweiterte Metadatei an.
 Verweist auf eine Null-terminierte Zeichenfolge. Gibt den Dateinamen für die erweiterte Metadatei erstellt werden. Wenn dieser Parameter NULL ist, wird die erweiterte Metadatei speicherbasierten und seinen Inhalt verloren gehen, wenn das Objekt zerstört wird oder wenn die Win32 `DeleteEnhMetaFile` -Funktion aufgerufen wird.
 
 *lpBounds*<br/>
-Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) Datenstruktur oder [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das die Abmessungen gibt an, in HIMETRIC-Einheiten (in Schritten von.01-Millimeter) des Bilds in der erweiterten Metadatei gespeichert werden.
+Verweist auf eine [RECT](/windows/desktop/api/windef/ns-windef-tagrect) Datenstruktur oder [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das die Abmessungen gibt an, in HIMETRIC-Einheiten (in Schritten von.01-Millimeter) des Bilds in der erweiterten Metadatei gespeichert werden.
 
 *lpszDescription*<br/>
 Verweist auf eine 0 (null) endende Zeichenfolge, die den Namen der Anwendung angibt, die das Bild als auch der Grafik Titel erstellt.
