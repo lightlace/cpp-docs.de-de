@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: d2214af96f3eba7d1b1d3c8e52f0c82873b982d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e2df5117f6cbb96c69f54fe9e21f85b45218d6d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463006"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178979"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl-Klasse
 
@@ -1106,7 +1106,7 @@ BOOL GetMaxSize(LPSIZE pSize) const;
 ### <a name="parameters"></a>Parameter
 
 *pSize*<br/>
-Ein Zeiger auf eine [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur, die die Größe der Elemente empfängt.
+Ein Zeiger auf eine [Größe](/windows/desktop/api/windef/ns-windef-tagsize) Struktur, die die Größe der Elemente empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1247,7 +1247,7 @@ Schaltfläche, um die Statusinformationen im Erfolgsfall oder -1, die andernfall
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Funktion ist besonders praktisch, wenn mehr als eine die Schaltflächenstatus abgerufen werden soll. Um nur einen Status abzurufen, gehen Sie die folgenden Memberfunktionen: [IsButtonEnabled](#isbuttonenabled), [IsButtonChecked](#isbuttonchecked), [IsButtonPressed](#isbuttonpressed), [IsButtonHidden ](#isbuttonhidden), oder [IsButtonIndeterminate](#isbuttonindeterminate). Allerdings die `GetState` Memberfunktion ist die einzige Möglichkeit zum Erkennen des Status der TBSTATE_WRAP-Schaltfläche.
+Diese Funktion ist besonders praktisch, wenn mehr als eine die Schaltflächenstatus abgerufen werden soll. Um nur einen Status abzurufen, verwenden Sie eine der folgenden Memberfunktionen: [IsButtonEnabled](#isbuttonenabled), [IsButtonChecked](#isbuttonchecked), [IsButtonPressed](#isbuttonpressed), [IsButtonHidden](#isbuttonhidden), oder [IsButtonIndeterminate](#isbuttonindeterminate). Allerdings die `GetState` Memberfunktion ist die einzige Möglichkeit zum Erkennen des Status der TBSTATE_WRAP-Schaltfläche.
 
 ##  <a name="getstring"></a>  CToolBarCtrl::GetString
 
@@ -2335,7 +2335,7 @@ Ungleich 0, wenn erfolgreich, andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Funktion ist besonders praktisch, wenn Sie mehr als einen der Zustände der Schaltfläche festlegen möchten. Um nur ein Status festgelegt wird, gehen Sie die folgenden Memberfunktionen: [EnableButton](#enablebutton), [CheckButton](#checkbutton), [HideButton](#hidebutton), [unbestimmt](#indeterminate), oder [PressButton](#pressbutton).
+Diese Funktion ist besonders praktisch, wenn Sie mehr als einen der Zustände der Schaltfläche festlegen möchten. Um nur ein Status festgelegt wird, gehen Sie die folgenden Memberfunktionen: [EnableButton](#enablebutton), [CheckButton](#checkbutton), [HideButton](#hidebutton), [unbestimmten](#indeterminate), oder [PressButton](#pressbutton).
 
 ##  <a name="setstyle"></a>  CToolBarCtrl::SetStyle
 

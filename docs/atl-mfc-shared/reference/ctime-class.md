@@ -25,12 +25,12 @@ helpviewer_keywords:
 - CTime class
 - shared classes, CTime
 ms.assetid: 0a299544-485b-48dc-9d3c-fdc30f57d612
-ms.openlocfilehash: bed403e4bc1cca1d31a394be7157de9e65abff95
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cedd1bfd4ea955f920e13b5d01beb3a478656b69
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519443"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178121"
 ---
 # <a name="ctime-class"></a>CTime-Klasse
 
@@ -169,10 +169,10 @@ Gibt an, ob die Sommerzeit wirksam ist. Dabei kann es sich um einen von drei Wer
 MS-DOS-Datum und Uhrzeit-Werte in einen Datum/Uhrzeit-Wert konvertiert werden, und kopiert in das neue `CTime` Objekt.
 
 *St*<br/>
-Ein [SYSTEMTIME](../../mfc/reference/systemtime-structure.md) Struktur in einen Datum/Uhrzeit-Wert konvertiert werden, und kopiert in das neue `CTime` Objekt.
+Ein [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur in einen Datum/Uhrzeit-Wert konvertiert werden, und kopiert in das neue `CTime` Objekt.
 
 *FT*<br/>
-Ein [FILETIME](../../mfc/reference/filetime-structure.md) Struktur in einen Datum/Uhrzeit-Wert konvertiert werden, und kopiert in das neue `CTime` Objekt.
+Ein [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) Struktur in einen Datum/Uhrzeit-Wert konvertiert werden, und kopiert in das neue `CTime` Objekt.
 
 *DBTS*<br/>
 Ein Verweis auf eine DBTIMESTAMP-Struktur, die die aktuelle lokale Uhrzeit enthält.

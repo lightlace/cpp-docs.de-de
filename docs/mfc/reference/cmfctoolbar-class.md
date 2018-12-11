@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: d1677716db42f7f2e3b74e63562d00527291c144
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98de92a9473d64a87b9b7a9f2891adf4263e1951
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524665"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178966"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar-Klasse
 
@@ -519,7 +519,7 @@ Integrieren einer `CMFCToolBar` -Objekt in Ihrer Anwendung, gehen Sie folgenderm
 
 1. Rufen Sie [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) den andockstil angeben.
 
-Um eine spezielle Schaltfläche eingefügt werden soll, z. B. ein Kombinationsfeld oder das Dropdown-Symbolleisten, reservieren Sie eine dummy-Schaltfläche in der übergeordneten Ressource, und Ersetzen Sie die platzhalterschaltfläche zur Laufzeit durch [CMFCToolBar::ReplaceButton](#replacebutton). Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf Symbolleisten](../walkthrough-putting-controls-on-toolbars.md).
+Um eine spezielle Schaltfläche eingefügt werden soll, z. B. ein Kombinationsfeld oder das Dropdown-Symbolleisten, reservieren Sie eine dummy-Schaltfläche in der übergeordneten Ressource, und Ersetzen Sie die platzhalterschaltfläche zur Laufzeit durch [CMFCToolBar::ReplaceButton](#replacebutton). Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf der Symbolleiste](../walkthrough-putting-controls-on-toolbars.md).
 
 `CMFCToolBar` ist die Basisklasse für die MFC-Bibliotheksklassen [CMFCMenuBar-Klasse](../../mfc/reference/cmfcmenubar-class.md), [CMFCPopupMenuBar-Klasse](../../mfc/reference/cmfcpopupmenubar-class.md), und [CMFCDropDownToolBar-Klasse](../../mfc/reference/cmfcdropdowntoolbar-class.md).
 
@@ -2491,7 +2491,7 @@ TRUE, wenn Sie über die Schaltfläche mit dem letzte Befehl gesendet wurde, *pB
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode ruft einen Zeiger auf eine [MSG-Struktur](../../mfc/reference/msg-structure1.md) durch Aufrufen von `CWnd::GetCurrentMessage`. Es vergleicht dann das HWND des mit der Schaltfläche mit den `MSG::lParam` und `MSG::hwnd` Elemente zu bestimmen, ob die Schaltfläche mit der die Quelle des Befehls war.
+Diese Methode ruft einen Zeiger auf eine [MSG-Struktur](/windows/desktop/api/winuser/ns-winuser-tagmsg) durch Aufrufen von `CWnd::GetCurrentMessage`. Es vergleicht dann das HWND des mit der Schaltfläche mit den `MSG::lParam` und `MSG::hwnd` Elemente zu bestimmen, ob die Schaltfläche mit der die Quelle des Befehls war.
 
 ##  <a name="islocked"></a>  CMFCToolBar::IsLocked
 
@@ -3905,5 +3905,5 @@ AFX_IMPORT_DATA static BOOL m_bDontScaleImages;
 [CMFCMenuBar-Klasse](../../mfc/reference/cmfcmenubar-class.md)<br/>
 [CMFCPopupMenuBar-Klasse](../../mfc/reference/cmfcpopupmenubar-class.md)<br/>
 [CMFCDropDownToolBar-Klasse](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
-[Exemplarische Vorgehensweise: Steuerelemente in eine Symbolleiste einfügen](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+[Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf der Symbolleiste](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 

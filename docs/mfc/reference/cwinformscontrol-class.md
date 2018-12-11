@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: c27bcfa88ec5ba8b330a62f6ecfbad7e10a54d6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8728c876badcf6648740cc842a1f289789bf0f4
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547484"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178238"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl-Klasse
 
@@ -111,10 +111,10 @@ inline BOOL CreateManagedControl(
 Der Datentyp des Steuerelements erstellt werden. Muss eine [Typ](https://msdn.microsoft.com/library/system.type) -Datentyp.
 
 *dwStyle*<br/>
-Der Fensterstil, um auf das Steuerelement angewendet werden soll. Geben Sie eine Kombination von [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles). Derzeit werden nur die folgenden Formate unterstützt: WS_TABSTOP, WS_VISIBLE, WS_DISABLED und WS_GROUP.
+Der Fensterstil, um auf das Steuerelement angewendet werden soll. Geben Sie eine Kombination von [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles). Derzeit werden nur die folgenden Formate unterstützt: WS_TABSTOP "," WS_VISIBLE "," WS_DISABLED "und" WS_GROUP ".
 
 *Rect*<br/>
-Ein [RECT-Struktur](../../mfc/reference/rect-structure1.md) , die die Koordinaten der oberen linken und rechten unteren Ecke des Steuerelements definiert (nur erste Überladung).
+Ein [RECT-Struktur](/windows/desktop/api/windef/ns-windef-tagrect) , die die Koordinaten der oberen linken und rechten unteren Ecke des Steuerelements definiert (nur erste Überladung).
 
 *nPlaceHolderID*<br/>
 Das Handle des Steuerelements Inhaber statische Stelle platziert der Ressourcen-Editor. Das neu erstellte Windows Forms-Steuerelement ersetzt das statische-Steuerelement, wenn seine Position, die Z-Reihenfolge und die Stile (nur zweite Überladung).

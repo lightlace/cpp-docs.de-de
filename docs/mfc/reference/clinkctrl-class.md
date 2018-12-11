@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CLinkCtrl [MFC], SetItemState
 - CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
-ms.openlocfilehash: 79c6aa9f0448ed399554d634d48f666aaaf60566
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b24b92006b73dff2ae9f091256ef8401efc64fe9
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597560"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178044"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl-Klasse
 
@@ -134,7 +134,7 @@ Zeiger auf eine 0 (null) endende Zeichenfolge, die anzuzeigenden Text gekennzeic
 Gibt die Link-Steuerelement-Stil. Wenden Sie eine beliebige Kombination der Stile von Listensteuerelementen. Finden Sie unter [allgemeinen Stile von Listensteuerelementen](/windows/desktop/Controls/common-control-styles) in die `Windows SDK` für Weitere Informationen.
 
 *Rect*<br/>
-Gibt an, den des Linksteuerelements Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](../../mfc/reference/rect-structure1.md) Struktur.
+Gibt an, den des Linksteuerelements Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](/windows/desktop/api/windef/ns-windef-tagrect) Struktur.
 
 *pParentWnd*<br/>
 Gibt an, die linksteuerung übergeordnete Fenster. Es darf nicht NULL sein.
@@ -196,7 +196,7 @@ Gibt den erweiterten Stil des Linksteuerelements an. Eine Liste der erweiterten 
 Gibt die Link-Steuerelement-Stil. Wenden Sie eine beliebige Kombination der Stile von Listensteuerelementen. Weitere Informationen finden Sie unter [allgemeinen Stile von Listensteuerelementen](/windows/desktop/Controls/common-control-styles) im Windows SDK.
 
 *Rect*<br/>
-Gibt an, den des Linksteuerelements Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](../../mfc/reference/rect-structure1.md) Struktur.
+Gibt an, den des Linksteuerelements Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](/windows/desktop/api/windef/ns-windef-tagrect) Struktur.
 
 *pParentWnd*<br/>
 Gibt an, die linksteuerung übergeordnete Fenster. Es darf nicht NULL sein.
@@ -245,7 +245,7 @@ int GetIdealSize(
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*cxMaxWidth*|[in] Die maximale Breite des Links in Pixeln.|
-|[out] \* *pSize*|Ein Zeiger auf ein Windows [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur. Bei der Rückgabe dieser Methode die *cy* Mitglied der `SIZE` Struktur enthält die Höhe des idealen Link-Text für die Breite der Link-Text, der angegeben wird *CxMaxWidth*. Die *Cx* Member der Struktur enthält die Breite der Link-Text, der tatsächlich benötigt wird.|
+|[out] \* *pSize*|Ein Zeiger auf ein Windows [Größe](/windows/desktop/api/windef/ns-windef-tagsize) Struktur. Bei der Rückgabe dieser Methode die *cy* Mitglied der `SIZE` Struktur enthält die Höhe des idealen Link-Text für die Breite der Link-Text, der angegeben wird *CxMaxWidth*. Die *Cx* Member der Struktur enthält die Breite der Link-Text, der tatsächlich benötigt wird.|
 
 ### <a name="return-value"></a>Rückgabewert
 

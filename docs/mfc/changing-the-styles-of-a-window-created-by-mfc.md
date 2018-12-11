@@ -21,12 +21,12 @@ helpviewer_keywords:
 - CMainFrame class [MFC]
 - styles [MFC], windows
 ms.assetid: 77fa4f03-96b4-4687-9ade-41e46f7e4b0a
-ms.openlocfilehash: ebef671a34d2b50bd547a2fd9e484581df8ee3e8
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 19ff4e41f3b8c73e7ae62fbf264ea955b42bbc1a
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693217"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177904"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>Ändern der Stile eines mit MFC erstellten Fensters
 
@@ -46,7 +46,7 @@ Für Windows der Hauptframe können Sie auch angeben, ob das Fenster ein Systemm
 
 Wenn Sie im Fenster Attribute in einer vorhandenen Anwendung ändern möchten, befolgen Sie die Anweisungen im weiteren Verlauf dieses Artikels stattdessen.
 
-Um die Standardattribute-Fenster ein, die mit der Anwendungs-Assistent erstellt eine Framework-Anwendung zu ändern, außer Kraft setzen des Fensters [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) virtuelle Memberfunktion. `PreCreateWindow` ermöglicht es einer Anwendung des Erstellungsprozesses normalerweise intern verwaltet werden, indem Sie den Zugriff auf die [CDocTemplate](../mfc/reference/cdoctemplate-class.md) Klasse. Das Framework ruft `PreCreateWindow` unmittelbar vor dem Erstellen des Fensters. Durch Ändern der [CREATESTRUCT](../mfc/reference/createstruct-structure.md) Zeitstruktur `PreCreateWindow`, die Anwendung kann die Attribute, die zum Erstellen des Fensters ändern. Um sicherzustellen, dass ein Fenster eine Beschriftung nicht verwendet wird, verwenden Sie beispielsweise den folgenden bitweisen Vorgang:
+Um die Standardattribute-Fenster ein, die mit der Anwendungs-Assistent erstellt eine Framework-Anwendung zu ändern, außer Kraft setzen des Fensters [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) virtuelle Memberfunktion. `PreCreateWindow` ermöglicht es einer Anwendung des Erstellungsprozesses normalerweise intern verwaltet werden, indem Sie den Zugriff auf die [CDocTemplate](../mfc/reference/cdoctemplate-class.md) Klasse. Das Framework ruft `PreCreateWindow` unmittelbar vor dem Erstellen des Fensters. Durch Ändern der [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) Zeitstruktur `PreCreateWindow`, die Anwendung kann die Attribute, die zum Erstellen des Fensters ändern. Um sicherzustellen, dass ein Fenster eine Beschriftung nicht verwendet wird, verwenden Sie beispielsweise den folgenden bitweisen Vorgang:
 
 [!code-cpp[NVC_MFCDocView#15](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_1.cpp)]
 

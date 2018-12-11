@@ -106,12 +106,12 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: c9aa5b57b2610dbe0528d99d1c8ad996e1fc4a60
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26d0f5e875c4f3982705a2cf571b15cd5bfac985
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437803"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178919"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite-Klasse
 
@@ -444,7 +444,7 @@ virtual BOOL EnableWindow(BOOL bEnable);
 ### <a name="parameters"></a>Parameter
 
 *bAktivieren*<br/>
-Gibt an, ob zum Aktivieren oder deaktivieren das Fenster: "true", wenn im Fenster Eingaben werden soll, aktiviert ist, andernfalls "false".
+Gibt an, ob aktivieren oder deaktivieren das Fenster aus: "True", wenn im Fenster Eingaben werden soll, aktiviert ist, andernfalls "false".
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1062,7 +1062,7 @@ virtual CWnd* SetFocus(LPMSG lpmsg);
 ### <a name="parameters"></a>Parameter
 
 *lpmsg*<br/>
-Ein Zeiger auf eine [MSG-Struktur](../../mfc/reference/msg-structure1.md). Diese Struktur enthält das Windows-Meldung Auslösen der `SetFocus` Anforderung für das Steuerelement, das in die Website des aktuellen Steuerelements enthalten sind.
+Ein Zeiger auf eine [MSG-Struktur](/windows/desktop/api/winuser/ns-winuser-tagmsg). Diese Struktur enthält das Windows-Meldung Auslösen der `SetFocus` Anforderung für das Steuerelement, das in die Website des aktuellen Steuerelements enthalten sind.
 
 ### <a name="return-value"></a>Rückgabewert
 

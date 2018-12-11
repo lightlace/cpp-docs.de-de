@@ -4,18 +4,18 @@ ms.date: 11/17/2017
 f1_keywords:
 - c.errors
 ms.assetid: 78019050-9a30-4b61-8250-a5702e0e2393
-ms.openlocfilehash: 06d1885d01b5b3808a150e54ac68257b747c9764
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74494a92d9ac8d84da64af7a896f3c32913afc40
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530934"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178257"
 ---
 # <a name="c-runtime-errors-r6002-through-r6035"></a>C-Laufzeitfehler von R6002 bis einschließlich R6035
 
 In diesem Abschnitt wird auf die Fehler verwiesen, die von der C-Laufzeitbibliothek (C Runtime Library; CRT) generiert werden können, wenn Ihre App geladen oder ausgeführt wird. Auch wenn die Nachricht an die Microsoft Visual C++-Laufzeit bezieht, geben diese Fehler entweder einen Fehler im Code Ihrer app oder eine Bedingung, die die Laufzeitbibliothek, z.B. zu wenig Arbeitsspeicher nicht verarbeiten kann. Endbenutzer Ihrer App möglicherweise dieser Fehler angezeigt, wenn Sie nicht Ihre app, um zu verhindern, dass die Bedingungen, die dazu führen, sie dass code oder Code schreiben, um diese Fehler zu erfassen und präsentieren eine benutzerfreundliche Meldung für Ihre Benutzer.
 
-Finden Sie unter Umständen zusätzliche Unterstützung für Fehler und Warnungen in öffentlichen Foren von Microsoft. Sie können für den Fehler oder die Nummer der codeanalysewarnung suchen, auf die [Entwicklercommunity](https://developercommunity.visualstudio.com) Standort. Die [Visual C++ – Allgemeines](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vcgeneral) Forum finden Sie Fragen zu Visual C++, die in anderen Foren nicht behandelt werden. Sie können auch suchen Sie nach Fehlern und Warnungen, und Fragen [Stack Overflow](http://stackoverflow.com/) um Lösungen zu finden.
+Finden Sie unter Umständen zusätzliche Unterstützung für Fehler und Warnungen in öffentlichen Foren von Microsoft. Sie können für den Fehler oder die Nummer der codeanalysewarnung suchen, auf die [Entwicklercommunity](https://developercommunity.visualstudio.com) Standort. Die [Visual C++ – Allgemeines](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vcgeneral) Forum finden Sie Fragen zu Visual C++, die in anderen Foren nicht behandelt werden. Sie können auch suchen Sie nach Fehlern und Warnungen, und Fragen [Stack Overflow](http://stackoverflow.com/) um Lösungen zu finden.
 
 Links zu zusätzlichen Hilfe und Community-Ressourcen, finden Sie unter [Visual C++-Hilfe und Community](../../visual-cpp-help-and-community.md).
 

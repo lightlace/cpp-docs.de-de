@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 0f6c41b3675251df6b07e44003215fa67fb7e795
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 9c2b393354f65195e0d0060a08b83e321e3d5b1d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694191"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178420"
 ---
 # <a name="cwinthread-class"></a>CWinThread-Klasse
 
@@ -90,7 +90,7 @@ class CWinThread : public CCmdTarget
 |[CWinThread::PreTranslateMessage](#pretranslatemessage)|Filtert Nachrichten, bevor sie für die Windows-Funktionen weitergeleitet werden [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).|
 |[CWinThread::ProcessMessageFilter](#processmessagefilter)|Bestimmte Nachrichten abfängt, bevor sie die Anwendung erreichen.|
 |[CWinThread::ProcessWndProcException](#processwndprocexception)|Fängt alle nicht behandelte Ausnahmen, die von der Thread die Nachricht und befehlshandlern ausgelöst.|
-|[CWinThread::PumpMessage](#pumpmessage)|Enthält die Nachrichtenschleife des Threads.|
+|[CWinThread::PumpMessage](#pumpmessage)|enthält die Nachrichtenschleife des Threads.|
 |[CWinThread:: ResumeThread](#resumethread)|Wird ein Thread den Unterbrechungszähler.|
 |[Hauptmeldungsschleife](#run)|Die Steuerungsfunktion für Threads mit der eine Meldungsverteilschleife. Überschreiben Sie, um die Standardnachrichtenschleife anpassen.|
 |[CWinThread::SetThreadPriority](#setthreadpriority)|Legt die Priorität des aktuellen Threads fest.|
@@ -126,7 +126,7 @@ Rufen Sie zum Erstellen eines Threads [AfxBeginThread](application-information-a
 
 Statt `AfxBeginThread`, können Sie erstellen eine `CWinThread`-Typ abgeleitete Objekt und rufen Sie dann `CreateThread`. Diese zweistufige Konstruktion-Methode ist nützlich, wenn Sie wiederverwenden möchten die `CWinThread` Objekt zwischen aufeinander folgenden Erstellung und kündigungen von Thread-Ausführungen.
 
-Weitere Informationen zu `CWinThread`, finden Sie in den Artikeln [Multithreading mit C++ und MFC](../../parallel/multithreading-with-cpp-and-mfc.md), [Multithreading: Erstellen von Benutzeroberflächenthreads](../../parallel/multithreading-creating-user-interface-threads.md), [Multithreading: Worker erstellen Threads](../../parallel/multithreading-creating-worker-threads.md), und [Multithreading: Gewusst wie: der Synchronisierungsklassen](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Weitere Informationen zu `CWinThread`, finden Sie in den Artikeln [Multithreading mit C++ und MFC](../../parallel/multithreading-with-cpp-and-mfc.md), [Multithreading: Erstellen von Benutzeroberflächenthreads](../../parallel/multithreading-creating-user-interface-threads.md), [Multithreading: Erstellen von Arbeitsthreads](../../parallel/multithreading-creating-worker-threads.md), und [Multithreading: Gewusst wie: der Synchronisierungsklassen](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -458,7 +458,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Parameter
 
 *pMsg*<br/>
-Verweist auf eine [MSG-Struktur](../../mfc/reference/msg-structure1.md) , die die zu verarbeitende Meldung enthält.
+Verweist auf eine [MSG-Struktur](/windows/desktop/api/winuser/ns-winuser-tagmsg) , die die zu verarbeitende Meldung enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -484,7 +484,7 @@ virtual BOOL ProcessMessageFilter(
 Gibt einen Hookcode. Diese Memberfunktion verwendet der Code, um zu bestimmen, wie verarbeiten *LpMsg.*
 
 *lpMsg*<br/>
-Ein Zeiger auf ein Windows [MSG-Struktur](../../mfc/reference/msg-structure1.md).
+Ein Zeiger auf ein Windows [MSG-Struktur](/windows/desktop/api/winuser/ns-winuser-tagmsg).
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -512,7 +512,7 @@ virtual LRESULT ProcessWndProcException(
 Verweist auf eine nicht behandelte Ausnahme.
 
 *pMsg*<br/>
-Verweist auf eine [MSG-Struktur](../../mfc/reference/msg-structure1.md) mit Informationen über die Windows-Meldung, die das Framework eine Ausnahme verursacht hat.
+Verweist auf eine [MSG-Struktur](/windows/desktop/api/winuser/ns-winuser-tagmsg) mit Informationen über die Windows-Meldung, die das Framework eine Ausnahme verursacht hat.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -535,7 +535,7 @@ Diese Memberfunktion ist nur in Threads verwendet, die eine Meldungsverteilschle
 
 ##  <a name="pumpmessage"></a>  CWinThread::PumpMessage
 
-Enthält die Nachrichtenschleife des Threads.
+enthält die Nachrichtenschleife des Threads.
 
 ```
 virtual BOOL PumpMessage();

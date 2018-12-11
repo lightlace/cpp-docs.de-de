@@ -1,50 +1,50 @@
 ---
 title: Von MFC verwendete Strukturen
-ms.date: 11/04/2016
+ms.date: 12/03/2018
 f1_keywords:
 - vc.mfc.structures
 helpviewer_keywords:
 - structures
 - structures, MFC
 ms.assetid: 2168fcc6-e800-4814-aabf-0bca86ff790d
-ms.openlocfilehash: 06735e4bf8967a95c2f14c0187a653cfda8a15fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1b691741338b1fe9ec8296b95ee67f031028d5e3
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475568"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178108"
 ---
 # <a name="structures-used-by-mfc"></a>Von MFC verwendete Strukturen
 
 Die folgende Tabelle enthält die Strukturen, die von verschiedenen Memberfunktionen aufgerufen werden. Weitere Informationen über die Verwendung der einzelnen Struktur finden Sie in die Klassen und Member-Funktionen, die in der Liste "Siehe auch" für jede Struktur notiert haben.
 
-|[ABC-Struktur](../../mfc/reference/abc-structure.md)|[HSE_VERSION_INFO-Struktur](../../mfc/reference/hse-version-info-structure.md)|
-|--------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-|[ABCFLOAT-Struktur](../../mfc/reference/abcfloat-structure.md)|[LINGER-Struktur](../../mfc/reference/linger-structure.md)|
-|[AFX_EXTENSION_MODULE-Struktur](../../mfc/reference/afx-extension-module-structure.md)|[LOGBRUSH-Struktur](../../mfc/reference/logbrush-structure.md)|
-|[BITMAP-Struktur](../../mfc/reference/bitmap-structure.md)|[LOGPEN-Struktur](../../mfc/reference/logpen-structure.md)|
-|[BITMAPINFO-Struktur](../../mfc/reference/bitmapinfo-structure.md)|[MEASUREITEMSTRUCT-Struktur](../../mfc/reference/measureitemstruct-structure.md)|
-|[CDaoDatabaseInfo-Struktur](../../mfc/reference/cdaodatabaseinfo-structure.md)|[MINMAXINFO-Struktur](../../mfc/reference/minmaxinfo-structure.md)|
-|[CDaoErrorInfo-Struktur](../../mfc/reference/cdaoerrorinfo-structure.md)|[MSG-Struktur](../../mfc/reference/msg-structure1.md)|
-|[CDaoFieldInfo-Struktur](../../mfc/reference/cdaofieldinfo-structure.md)|[NCCALCSIZE_PARAMS-Struktur](../../mfc/reference/nccalcsize-params-structure.md)|
-|[CDaoIndexFieldInfo-Struktur](../../mfc/reference/cdaoindexfieldinfo-structure.md)|[PAINTSTRUCT-Struktur](../../mfc/reference/paintstruct-structure.md)|
-|[CDaoIndexInfo-Struktur](../../mfc/reference/cdaoindexinfo-structure.md)|[POINT-Struktur](../../mfc/reference/point-structure1.md)|
-|[CDaoParameterInfo-Struktur](../../mfc/reference/cdaoparameterinfo-structure.md)|[RECT-Struktur](../../mfc/reference/rect-structure1.md)|
-|[CDaoQueryDefInfo-Struktur](../../mfc/reference/cdaoquerydefinfo-structure.md)|[RGNDATA-Struktur](../../mfc/reference/rgndata-structure.md)|
-|[CDaoRelationFieldInfo-Struktur](../../mfc/reference/cdaorelationfieldinfo-structure.md)|[SOCKADDR-Struktur](../../mfc/reference/sockaddr-structure.md)|
-|[CDaoRelationInfo-Struktur](../../mfc/reference/cdaorelationinfo-structure.md)|[SOCKADDR_IN-Struktur](../../mfc/reference/sockaddr-in-structure.md)|
-|[CDaoTableDefInfo-Struktur](../../mfc/reference/cdaotabledefinfo-structure.md)|[SYSTEMTIME-Struktur](systemtime-structure1.md)
-|[CDaoWorkspaceInfo-Struktur](../../mfc/reference/cdaoworkspaceinfo-structure.md)|[WINDOWPLACEMENT-Struktur](../../mfc/reference/windowplacement-structure.md)|
-|[CODBCFieldInfo-Struktur](../../mfc/reference/codbcfieldinfo-structure.md)|[WINDOWPOS-Struktur](../../mfc/reference/windowpos-structure1.md)
-|[COLORADJUSTMENT-Struktur](../../mfc/reference/coloradjustment-structure.md)|[WSADATA-Struktur](../../mfc/reference/wsadata-structure.md)|
-|[COMPAREITEMSTRUCT-Struktur](../../mfc/reference/compareitemstruct-structure.md)|[XFORM-Struktur](../../mfc/reference/xform-structure.md)|
-|[CREATESTRUCT-Struktur](../../mfc/reference/createstruct-structure.md)||
-|[DELETEITEMSTRUCT-Struktur](../../mfc/reference/deleteitemstruct-structure.md)||
-|[DEVNAMES-Struktur](../../mfc/reference/devnames-structure.md)||
+|||
+|-|-|
+|[ABC-Struktur](/windows/desktop/api/wingdi/ns-wingdi-_abc)|[HSE_VERSION_INFO-Struktur](../../mfc/reference/hse-version-info-structure.md)|
+|[ABCFLOAT-Struktur](/windows/desktop/api/wingdi/ns-wingdi-_abcfloat)|[LINGER-Struktur](/windows/desktop/api/winsock/ns-winsock-linger)|
+|[AFX_EXTENSION_MODULE-Struktur](../../mfc/reference/afx-extension-module-structure.md)|[LOGBRUSH-Struktur](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)|
+|[BITMAP-Struktur](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)|[LOGPEN-Struktur](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen)|
+|[BITMAPINFO-Struktur](/windows/desktop/api/wingdi/ns-wingdi-tagbitmapinfo)|[MEASUREITEMSTRUCT-Struktur](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct)|
+|[CDaoDatabaseInfo-Struktur](../../mfc/reference/cdaodatabaseinfo-structure.md)|[MINMAXINFO-Struktur](/windows/desktop/api/winuser/ns-winuser-tagminmaxinfo)|
+|[CDaoErrorInfo-Struktur](../../mfc/reference/cdaoerrorinfo-structure.md)|[MSG-Struktur](/windows/desktop/api/winuser/ns-winuser-tagmsg)|
+|[CDaoFieldInfo-Struktur](../../mfc/reference/cdaofieldinfo-structure.md)|[NCCALCSIZE_PARAMS-Struktur](/windows/desktop/api/winuser/ns-winuser-tagnccalcsize_params)|
+|[CDaoIndexFieldInfo-Struktur](../../mfc/reference/cdaoindexfieldinfo-structure.md)|[PAINTSTRUCT-Struktur](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)|
+|[CDaoIndexInfo-Struktur](../../mfc/reference/cdaoindexinfo-structure.md)|[POINT-Struktur](/windows/desktop/api/windef/ns-windef-tagpoint)|
+|[CDaoParameterInfo-Struktur](../../mfc/reference/cdaoparameterinfo-structure.md)|[RECT-Struktur](/windows/desktop/api/windef/ns-windef-tagrect)|
+|[CDaoQueryDefInfo-Struktur](../../mfc/reference/cdaoquerydefinfo-structure.md)|[RGNDATA-Struktur](/windows/desktop/api/wingdi/ns-wingdi-_rgndata)|
+|[CDaoRelationFieldInfo-Struktur](../../mfc/reference/cdaorelationfieldinfo-structure.md)|[SOCKADDR-Struktur](/windows/desktop/winsock/sockaddr-2)|
+|[CDaoRelationInfo-Struktur](../../mfc/reference/cdaorelationinfo-structure.md)|[SOCKADDR_IN-Struktur](/windows/desktop/winsock/sockaddr-2)|
+|[CDaoTableDefInfo-Struktur](../../mfc/reference/cdaotabledefinfo-structure.md)|[SYSTEMTIME-Struktur](https://msdn.microsoft.com/library/windows/desktop/ms724950)
+|[CDaoWorkspaceInfo-Struktur](../../mfc/reference/cdaoworkspaceinfo-structure.md)|[WINDOWPLACEMENT-Struktur](/windows/desktop/api/winuser/ns-winuser-tagwindowplacement)|
+|[CODBCFieldInfo-Struktur](../../mfc/reference/codbcfieldinfo-structure.md)|[WINDOWPOS-Struktur](/windows/desktop/api/winuser/ns-winuser-tagwindowpos)
+|[COLORADJUSTMENT-Struktur](/windows/desktop/api/wingdi/ns-wingdi-tagcoloradjustment)|[WSADATA-Struktur](/windows/desktop/api/winsock2/ns-winsock2-wsadata)|
+|[COMPAREITEMSTRUCT-Struktur](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct)|[XFORM-Struktur](/windows/desktop/api/wingdi/ns-wingdi-tagxform)|
+|[CREATESTRUCT-Struktur](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)||
+|[DELETEITEMSTRUCT-Struktur](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct)||
+|[DEVNAMES-Struktur](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)||
 |[DHtmlUrlEventMapEntry-Struktur](../../mfc/reference/dhtmlurleventmapentry-structure.md)||
-|[DRAWITEMSTRUCT-Struktur](../../mfc/reference/drawitemstruct-structure.md)||
-|**EXTENSION_CONTROL_BLOCK-Struktur**||
-|[FILETIME-Struktur](../../mfc/reference/filetime-structure.md)
+|[DRAWITEMSTRUCT-Struktur](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)||
+|[FILETIME-Struktur](https://msdn.microsoft.com/library/windows/desktop/ms724284)||
 
 ## <a name="see-also"></a>Siehe auch
 

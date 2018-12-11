@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 2eebfe18275aa63ac26c0c898a5d796300860db8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8cfaef2c8b064cb9faa8c0f6bf65a8868eed7cc7
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476614"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178739"
 ---
 # <a name="cricheditview-class"></a>CRichEditView-Klasse
 
@@ -787,7 +787,7 @@ virtual void OnFindNext(
 Die zu suchende Zeichenfolge.
 
 *bWeiter*<br/>
-Die Sortierrichtung zu suchen: "true" gibt an, nach unten; False gibt an, auf.
+Die Richtung zu suchen: TRUE gibt an, nach unten; False gibt an, auf.
 
 *bCase*<br/>
 Gibt an, ob die Suche Groß-/Kleinschreibung beachtet werden.
@@ -933,7 +933,7 @@ virtual void OnReplaceSel(
 Der Text ersetzt werden.
 
 *bWeiter*<br/>
-Gibt die Richtung der Suche: "true" wird nach unten; False gibt an, auf.
+Gibt die Richtung für die Suche an: "True" ist nicht verfügbar; False gibt an, auf.
 
 *bCase*<br/>
 Gibt an, ob es sich bei der Suche die Groß-/Kleinschreibung beachtet wird.
@@ -1050,7 +1050,7 @@ long PrintInsideRect(
 Zeiger auf einen Gerätekontext für den Ausgabebereich.
 
 *rectLayout*<br/>
-[RECT](../../mfc/reference/rect-structure1.md) oder [CRect](../../atl-mfc-shared/reference/crect-class.md) definiert, die den Ausgabebereich.
+[RECT](/windows/desktop/api/windef/ns-windef-tagrect) oder [CRect](../../atl-mfc-shared/reference/crect-class.md) definiert, die den Ausgabebereich.
 
 *nIndexStart*<br/>
 Nullbasierte Index des ersten Zeichens, das formatiert werden.

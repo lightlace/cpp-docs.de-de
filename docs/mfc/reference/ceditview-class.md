@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: e0095f2c490ebde10d20ec0705b1297b976b76b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e853a770dd1f98b1e7f06afd814962f3b3805ceb
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528660"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177874"
 ---
 # <a name="ceditview-class"></a>CEditView-Klasse
 
@@ -110,7 +110,7 @@ Jede `CEditView` den Text des Steuerelements in sein eigenes Objekt globaler Spe
 
 Erstellen von Objekten des Typs `CEditView` Wunsch eine Editor-Fenster mit den oben aufgeführten zusätzlicher Funktionalität, oder sollen einfachen Text-Editor-Funktionen. Ein `CEditView` Objekt belegt werden kann den gesamte Clientbereich eines Fensters. Leiten Sie Ihre eigenen Klassen von `CEditView` hinzufügen oder ändern die grundlegende Funktionen oder Klassen deklarieren, die eine Dokumentvorlage hinzugefügt werden kann.
 
-Die Standardimplementierung der Klasse `CEditView` behandelt die folgenden Befehle: ID_EDIT_SELECT_ALL, ID_EDIT_FIND, ID_EDIT_REPLACE, ID_EDIT_REPEAT und ID_FILE_PRINT.
+Die Standardimplementierung der Klasse `CEditView` behandelt die folgenden Befehle aus: ID_EDIT_SELECT_ALL, ID_EDIT_FIND, ID_EDIT_REPLACE, ID_EDIT_REPEAT und ID_FILE_PRINT.
 
 Das Standardlimit für die Zeichen für `CEditView` ist (1024 \* 1024-1 = 1048575). Dies kann durch Aufrufen der Funktion EM_LIMITTEXT des zugrunde liegenden Edit-Steuerelements geändert werden. Allerdings die Grenzwerte unterscheiden sich je nach Betriebssystem und der Typ des Bearbeitungssteuerelements (einzelne oder mehrzeiligen). Weitere Informationen zu diesen Einschränkungen finden Sie unter [EM_LIMITTEXT](/windows/desktop/Controls/em-limittext).
 
@@ -401,7 +401,7 @@ UINT PrintInsideRect(
 Zeiger auf den Druckergerätekontext.
 
 *rectLayout*<br/>
-Ein Verweis auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder [RECT-Struktur](../../mfc/reference/rect-structure1.md) angeben des Rechtecks, das in der der Text ist, gerendert werden soll.
+Ein Verweis auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder [RECT-Struktur](/windows/desktop/api/windef/ns-windef-tagrect) angeben des Rechtecks, das in der der Text ist, gerendert werden soll.
 
 *nIndexStart*<br/>
 Der Index innerhalb des Puffers des ersten Zeichens gerendert werden soll.

@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 38463d5e7daf86c40cdef429cd80b18598e19025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad9f945a91a96c40afe614240a847a028ba5b5d9
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656091"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178615"
 ---
 # <a name="clistbox-class"></a>CListBox-Klasse
 
@@ -339,7 +339,7 @@ Ein long-Zeiger auf eine `COMPAREITEMSTRUCT` Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die relative Position der beiden Elemente beschrieben, die der [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md) Struktur. Es kann eine der folgenden Werte sein:
+Die relative Position der beiden Elemente beschrieben, die der [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct) Struktur. Es kann eine der folgenden Werte sein:
 
 |Wert|Bedeutung|
 |-----------|-------------|
@@ -426,7 +426,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="parameters"></a>Parameter
 
 *lpDeleteItemStruct*<br/>
-Ein long-Zeiger auf ein Windows [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md) -Struktur, die Informationen über das gelöschte Element enthält.
+Ein long-Zeiger auf ein Windows [DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct) -Struktur, die Informationen über das gelöschte Element enthält.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -511,7 +511,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parameter
 
 *lpDrawItemStruct*<br/>
-Ein long-Zeiger auf eine [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) -Struktur, Informationen über den Typ der Zeichnung, die erforderlich sind enthält.
+Ein long-Zeiger auf eine [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) -Struktur, Informationen über den Typ der Zeichnung, die erforderlich sind enthält.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -770,7 +770,7 @@ int GetItemRect(
 Gibt den nullbasierten Index des Elements an.
 
 *lpRect*<br/>
-Gibt einen long-Zeiger auf eine [RECT-Struktur](../../mfc/reference/rect-structure1.md) , empfängt die Listenfeld Clientkoordinaten des Elements.
+Gibt einen long-Zeiger auf eine [RECT-Struktur](/windows/desktop/api/windef/ns-windef-tagrect) , empfängt die Listenfeld Clientkoordinaten des Elements.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -991,7 +991,7 @@ Mit dieser Funktion wird vor dem Hinzufügen der einer großen Anzahl von Elemen
 
 Diese Funktion hilft, die Initialisierung von Listenfeldern zu beschleunigen, die eine große Anzahl von Elementen (mehr als 100). Es belegt, dass die angegebene Menge Arbeitsspeicher, sodass nachfolgende [AddString](#addstring), [InsertString](#insertstring), und [Dir](#dir) Funktionen nehmen kurz wie möglich. Sie können die Schätzungen für die Parameter verwenden. Wenn Sie überschätzen, ist einige zusätzlichen Arbeitsspeicher zugeteilt. Wenn Sie unterschätzen, wird die normale Zuordnung für Elemente verwendet, die der vorab festgelegten Betrag übersteigen.
 
-Nur Windows 95/98: die *nItems* Parameter ist auf 16-Bit-Werten beschränkt. Dies bedeutet, dass es sich bei Listenfelder mehr als 32.767 Elemente enthalten können. Obwohl die Anzahl der Elemente beschränkt ist, wird die Gesamtgröße der Elemente in einem Listenfeld nur durch den verfügbaren Arbeitsspeicher beschränkt.
+Windows 95/98 nur: Die *nItems* Parameter ist auf 16-Bit-Werten beschränkt. Dies bedeutet, dass es sich bei Listenfelder mehr als 32.767 Elemente enthalten können. Obwohl die Anzahl der Elemente beschränkt ist, wird die Gesamtgröße der Elemente in einem Listenfeld nur durch den verfügbaren Arbeitsspeicher beschränkt.
 
 ### <a name="example"></a>Beispiel
 
@@ -1068,7 +1068,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>Parameter
 
 *lpMeasureItemStruct*<br/>
-Ein long-Zeiger auf eine [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) Struktur.
+Ein long-Zeiger auf eine [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct) Struktur.
 
 ### <a name="remarks"></a>Hinweise
 

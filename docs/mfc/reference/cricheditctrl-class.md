@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 756f50afd9b67e4895d8d1b15652602630c24918
-ms.sourcegitcommit: 984fb4814a2dd9bcea5ec88c9528707f17a7cffa
+ms.openlocfilehash: c42f7b77c04b2c94923908fa8b9542bea313b154
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51949543"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178992"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl-Klasse
 
@@ -427,7 +427,7 @@ virtual BOOL Create(
 Gibt das Steuerelement zum Bearbeiten des Stils an. Eine Kombination aus den in aufgeführten Window-Stile anwenden der **"Hinweise"** unten, und [Bearbeiten der Stile von Listensteuerelementen](/windows/desktop/Controls/edit-control-styles), die im Windows SDK beschrieben.
 
 *Rect*<br/>
-Gibt an, des Steuerelements zum Bearbeiten der Größe und Position. Kann eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder [RECT](../../mfc/reference/rect-structure1.md) Struktur.
+Gibt an, des Steuerelements zum Bearbeiten der Größe und Position. Kann eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder [RECT](/windows/desktop/api/windef/ns-windef-tagrect) Struktur.
 
 *pParentWnd*<br/>
 Gibt an, das Steuerelement zum Bearbeiten des übergeordneten Fensters (häufig eine [CDialog](../../mfc/reference/cdialog-class.md)). Es darf nicht NULL sein.
@@ -552,7 +552,7 @@ BOOL DisplayBand(LPRECT pDisplayRect);
 ### <a name="parameters"></a>Parameter
 
 *pDisplayRect*<br/>
-Zeiger auf eine [RECT](../../mfc/reference/rect-structure1.md) oder [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt, das den Bereich des Geräts zum Anzeigen des Texts angibt.
+Zeiger auf eine [RECT](/windows/desktop/api/windef/ns-windef-tagrect) oder [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt, das den Bereich des Geräts zum Anzeigen des Texts angibt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -973,7 +973,7 @@ void GetRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parameter
 
 *lpRect*<br/>
-[CRect](../../atl-mfc-shared/reference/crect-class.md) oder ein Zeiger auf eine [RECT](../../mfc/reference/rect-structure1.md) zum Empfangen des Formatierungsrechtecks dieses `CRichEditCtrl` Objekt.
+[CRect](../../atl-mfc-shared/reference/crect-class.md) oder ein Zeiger auf eine [RECT](/windows/desktop/api/windef/ns-windef-tagrect) zum Empfangen des Formatierungsrechtecks dieses `CRichEditCtrl` Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1855,7 +1855,7 @@ void SetRect(LPCRECT lpRect);
 ### <a name="parameters"></a>Parameter
 
 *lpRect*<br/>
-[CRect](../../atl-mfc-shared/reference/crect-class.md) oder ein Zeiger auf eine [RECT](../../mfc/reference/rect-structure1.md) , der angibt, der neuen Begrenzungen des Formatierungsrechtecks.
+[CRect](../../atl-mfc-shared/reference/crect-class.md) oder ein Zeiger auf eine [RECT](/windows/desktop/api/windef/ns-windef-tagrect) , der angibt, der neuen Begrenzungen des Formatierungsrechtecks.
 
 ### <a name="remarks"></a>Hinweise
 
