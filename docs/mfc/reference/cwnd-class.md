@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: f1d418cadd2739b840efd14874fd4bbd6afeb4c5
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 0a27b78d873b0a561b84b13cc16c67aef9ff2e8b
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177107"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179083"
 ---
 # <a name="cwnd-class"></a>CWnd-Klasse
 
@@ -1554,7 +1554,7 @@ CDC* BeginPaint(LPPAINTSTRUCT lpPaint);
 ### <a name="parameters"></a>Parameter
 
 *lpPaint*<br/>
-Verweist auf die [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) Struktur, die zum Zeichnen Informationen zu erhalten.
+Verweist auf die [PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct) Struktur, die zum Zeichnen Informationen zu erhalten.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1854,10 +1854,10 @@ void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) 
 ### <a name="parameters"></a>Parameter
 
 *lpPoint*<br/>
-Verweist auf eine [POINT-Struktur](../../mfc/reference/point-structure1.md) oder `CPoint` -Objekt, das den Client enthält koordiniert, konvertiert werden soll.
+Verweist auf eine [POINT-Struktur](/windows/desktop/api/windef/ns-windef-tagpoint) oder `CPoint` -Objekt, das den Client enthält koordiniert, konvertiert werden soll.
 
 *lpRect*<br/>
-Verweist auf eine [RECT-Struktur](../../mfc/reference/rect-structure1.md) oder `CRect` -Objekt, das den Client enthält koordiniert, konvertiert werden soll.
+Verweist auf eine [RECT-Struktur](/windows/desktop/api/windef/ns-windef-tagrect) oder `CRect` -Objekt, das den Client enthält koordiniert, konvertiert werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2061,13 +2061,13 @@ Ein Zeiger auf den Text im Steuerelement angezeigt werden. Legt den Wert der Bes
 Windows-Formate. Die verfügbaren Formate finden Sie unter "Hinweise".
 
 *Rect*<br/>
-Gibt an, die Größe und Position des Steuerelements. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT-Struktur](../../mfc/reference/rect-structure1.md).
+Gibt an, die Größe und Position des Steuerelements. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT-Struktur](/windows/desktop/api/windef/ns-windef-tagrect).
 
 *PPT*<br/>
-Verweist auf eine [POINT-Struktur](../../mfc/reference/point-structure1.md) oder `CPoint` Objekt, das der oberen linken Ecke des Steuerelements enthält.
+Verweist auf eine [POINT-Struktur](/windows/desktop/api/windef/ns-windef-tagpoint) oder `CPoint` Objekt, das der oberen linken Ecke des Steuerelements enthält.
 
 *pSize*<br/>
-Verweist auf eine [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur oder `CSize` Objekt, das die Größe des Steuerelements enthält.
+Verweist auf eine [Größe](/windows/desktop/api/windef/ns-windef-tagsize) Struktur oder `CSize` Objekt, das die Größe des Steuerelements enthält.
 
 *pParentWnd*<br/>
 Gibt die übergeordnete Fenster des Steuerelements an. Es darf nicht NULL sein.
@@ -2977,7 +2977,7 @@ void EndPaint(LPPAINTSTRUCT lpPaint);
 ### <a name="parameters"></a>Parameter
 
 *lpPaint*<br/>
-Verweist auf eine [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) Struktur, die zeichnen Informationen abgerufen, indem die ["BeginPaint"](#beginpaint) Member-Funktion.
+Verweist auf eine [PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct) Struktur, die zeichnen Informationen abgerufen, indem die ["BeginPaint"](#beginpaint) Member-Funktion.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -3710,7 +3710,7 @@ void GetClientRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parameter
 
 *lpRect*<br/>
-Verweist auf eine [RECT-Struktur](../../mfc/reference/rect-structure1.md) oder `CRect` Objekt, um die Clientkoordinaten zu erhalten. Die `left` und `top` Elemente werden auf 0. Die `right` und `bottom` Elemente enthält, die Breite und Höhe des Fensters.
+Verweist auf eine [RECT-Struktur](/windows/desktop/api/windef/ns-windef-tagrect) oder `CRect` Objekt, um die Clientkoordinaten zu erhalten. Die `left` und `top` Elemente werden auf 0. Die `right` und `bottom` Elemente enthält, die Breite und Höhe des Fensters.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -3784,7 +3784,7 @@ static const MSG* PASCAL GetCurrentMessage();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf die [MSG](../../mfc/reference/msg-structure1.md) -Struktur, die die Nachricht im Fenster enthält derzeit verarbeitet. Sollte nur aufgerufen werden, wenn einer **auf**<em>Nachricht</em> Handler.
+Gibt einen Zeiger auf die [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) -Struktur, die die Nachricht im Fenster enthält derzeit verarbeitet. Sollte nur aufgerufen werden, wenn einer **auf**<em>Nachricht</em> Handler.
 
 ### <a name="example"></a>Beispiel
 
@@ -4491,7 +4491,7 @@ Adresse der Variablen, die, auf, erhalten den Wert der Eigenschaft. Es muss den 
 > [!NOTE]
 > Diese Funktion sollte aufgerufen werden, nur auf eine `CWnd` -Objekt, ein ActiveX-Steuerelement darstellt.
 
-Weitere Informationen zur Verwendung von dieser Memberfunktion mit ActiveX-Steuerelementcontainer finden Sie im Artikel [ActiveX-Steuerelementcontainer: Programmieren von ActiveX-Steuerelemente in einem ActiveX-Steuerelementcontainer](../../mfc/programming-activex-controls-in-a-activex-control-container.md).
+Weitere Informationen zur Verwendung von dieser Memberfunktion mit ActiveX-Steuerelementcontainer finden Sie im Artikel [ActiveX-Steuerelementcontainer: Programmieren von ActiveX-Steuerelementen in einem ActiveX-Steuerelementcontainer](../../mfc/programming-activex-controls-in-a-activex-control-container.md).
 
 ##  <a name="getrendertarget"></a>  CWnd::GetRenderTarget
 
@@ -4864,7 +4864,7 @@ BOOL GetUpdateRect(
 ### <a name="parameters"></a>Parameter
 
 *lpRect*<br/>
-Verweist auf eine `CRect` Objekt oder [RECT-Struktur](../../mfc/reference/rect-structure1.md) , die die Clientkoordinaten des Updates zu erhalten, die dem Aktualisierungsbereich eingeschlossen werden.
+Verweist auf eine `CRect` Objekt oder [RECT-Struktur](/windows/desktop/api/windef/ns-windef-tagrect) , die die Clientkoordinaten des Updates zu erhalten, die dem Aktualisierungsbereich eingeschlossen werden.
 
 Legen Sie diesen Parameter auf NULL, um zu bestimmen, ob in eine Update-Region vorhanden ist die `CWnd`. Wenn *LpRect* NULL ist, die `GetUpdateRect` Memberfunktion gibt ungleich NULL zurück, wenn eine Update-Region vorhanden ist und 0, sofern nicht der Fall. Dies bietet eine Möglichkeit zu bestimmen, ob eine WM_PAINT-Meldung auf einen ungültigen Bereich zurückzuführen. Dieser Parameter darf nicht NULL ist in Windows-Version 3.0 und früheren festgelegt werden.
 
@@ -5050,7 +5050,7 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Die `flags` Mitglied der [WINDOWPLACEMENT](../../mfc/reference/windowplacement-structure.md) Struktur abgerufen, indem diese Funktion ist immer 0. Wenn `CWnd` maximiert ist, die `showCmd` Mitglied `WINDOWPLACEMENT` "sw_showmaximized" ist. Wenn das Fenster minimiert wird, ist es SW_SHOWMINIMIZED. Andernfalls ist es entweder "SW_SHOWNORMAL".
+Die `flags` Mitglied der [WINDOWPLACEMENT](/windows/desktop/api/winuser/ns-winuser-tagwindowplacement) Struktur abgerufen, indem diese Funktion ist immer 0. Wenn `CWnd` maximiert ist, die `showCmd` Mitglied `WINDOWPLACEMENT` "sw_showmaximized" ist. Wenn das Fenster minimiert wird, ist es SW_SHOWMINIMIZED. Andernfalls ist es entweder "SW_SHOWNORMAL".
 
 ##  <a name="getwindowrect"></a>  CWnd::GetWindowRect
 
@@ -5063,7 +5063,7 @@ void GetWindowRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parameter
 
 *lpRect*<br/>
-Verweist auf eine `CRect` Objekt oder ein [RECT-Struktur](../../mfc/reference/rect-structure1.md) erhalten, das die Bildschirmkoordinaten der oberen linken und unteren rechten Ecke.
+Verweist auf eine `CRect` Objekt oder ein [RECT-Struktur](/windows/desktop/api/windef/ns-windef-tagrect) erhalten, das die Bildschirmkoordinaten der oberen linken und unteren rechten Ecke.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -5286,7 +5286,7 @@ void InvalidateRect(
 ### <a name="parameters"></a>Parameter
 
 *lpRect*<br/>
-Verweist auf eine `CRect` Objekt oder ein [RECT-Struktur](../../mfc/reference/rect-structure1.md) , das das Rechteck (in Clientkoordinaten) enthält, dem Aktualisierungsbereich hinzugefügt werden. Wenn *LpRect* NULL ist, wird der gesamte Clientbereich in der Region hinzugefügt.
+Verweist auf eine `CRect` Objekt oder ein [RECT-Struktur](/windows/desktop/api/windef/ns-windef-tagrect) , das das Rechteck (in Clientkoordinaten) enthält, dem Aktualisierungsbereich hinzugefügt werden. Wenn *LpRect* NULL ist, wird der gesamte Clientbereich in der Region hinzugefügt.
 
 *bErase*<br/>
 Gibt an, ob der Hintergrund im Aktualisierungsbereich gelöscht werden soll.
@@ -5370,7 +5370,7 @@ Diese Funktion konvertiert die Parameter auf VARIANTARG-Werte und ruft anschlie�
 > [!NOTE]
 > Diese Funktion sollte aufgerufen werden, nur auf eine `CWnd` -Objekt, ein ActiveX-Steuerelement darstellt.
 
-Weitere Informationen zur Verwendung von dieser Memberfunktion mit ActiveX-Steuerelementcontainer finden Sie im Artikel [ActiveX-Steuerelementcontainer: Programmieren von ActiveX-Steuerelemente in einem ActiveX-Steuerelementcontainer](../../mfc/programming-activex-controls-in-a-activex-control-container.md).
+Weitere Informationen zur Verwendung von dieser Memberfunktion mit ActiveX-Steuerelementcontainer finden Sie im Artikel [ActiveX-Steuerelementcontainer: Programmieren von ActiveX-Steuerelementen in einem ActiveX-Steuerelementcontainer](../../mfc/programming-activex-controls-in-a-activex-control-container.md).
 
 ##  <a name="ischild"></a>  CWnd::IsChild
 
@@ -5416,7 +5416,7 @@ BOOL IsDialogMessage(LPMSG lpMsg);
 ### <a name="parameters"></a>Parameter
 
 *lpMsg*<br/>
-Verweist auf eine [MSG](../../mfc/reference/msg-structure1.md) -Struktur, die der Nachricht, die überprüft werden soll.
+Verweist auf eine [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) -Struktur, die der Nachricht, die überprüft werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -5649,7 +5649,7 @@ Gibt das Fenster in den Punkten konvertiert werden. Wenn dieser Parameter NULL i
 Gibt das Rechteck, dessen Punkte sind, konvertiert werden. Die erste Version dieser Funktion ist nur für Windows 3.1 und höher verfügbar.
 
 *lpPoint*<br/>
-Ein Zeiger auf ein Array von [POINT-Struktur](../../mfc/reference/point-structure1.md) , enthalten den Satz von Punkten, konvertiert werden soll.
+Ein Zeiger auf ein Array von [POINT-Struktur](/windows/desktop/api/windef/ns-windef-tagpoint) , enthalten den Satz von Punkten, konvertiert werden soll.
 
 *nCount*<br/>
 Gibt die Anzahl der `POINT` Strukturen in das Array verweist *LpPoint*.
@@ -5827,7 +5827,7 @@ Gibt die neue Höhe der `CWnd`.
 Gibt an, ob `CWnd` wird neu gezeichnet wird. True gibt an, `CWnd` empfängt eine [WM_PAINT](/windows/desktop/gdi/wm-paint) Meldung die [OnPaint](#onpaint) Handler wie gewohnt Nachricht. Wenn dieser Parameter auf "false" ist, tritt ein, ohne Neuzeichnen jeglicher Art. Dies gilt, auf den Clientbereich, der nicht-Clientbereichs (einschließlich der Titel und Bildlaufleisten) und auf einen beliebigen Teil des übergeordneten Fensters als Ergebnis des aufgedeckt `CWnd`des verschieben. Wenn dieser Parameter auf false festgelegt ist, die Anwendung muss explizit für ungültig erklären oder neu gezeichnet werden alle Teile des `CWnd` und übergeordneten Fenster, die neu gezeichnet werden muss.
 
 *lpRect*<br/>
-Die [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder [RECT-Struktur](../../mfc/reference/rect-structure1.md) , der die neue Größe und Position angibt.
+Die [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder [RECT-Struktur](/windows/desktop/api/windef/ns-windef-tagrect) , der die neue Größe und Position angibt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -6338,7 +6338,7 @@ afx_msg int OnCompareItem(
 Der Bezeichner des Steuerelements, das die WM_COMPAREITEM-Nachricht gesendet werden soll.
 
 *lpCompareItemStruct*<br/>
-Enthält einen long-Zeiger auf eine [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md) -Datenstruktur, die Bezeichner und der Anwendung bereitgestellte Daten für zwei Elemente im Kombinationsfeld oder die Liste enthält.
+Enthält einen long-Zeiger auf eine [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct) -Datenstruktur, die Bezeichner und der Anwendung bereitgestellte Daten für zwei Elemente im Kombinationsfeld oder die Liste enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -6446,7 +6446,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ### <a name="parameters"></a>Parameter
 
 *lpCreateStruct*<br/>
-Verweist auf eine [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) -Struktur, die Informationen der `CWnd` Objekt erstellt wird.
+Verweist auf eine [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) -Struktur, die Informationen der `CWnd` Objekt erstellt wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -6581,7 +6581,7 @@ afx_msg void OnDeleteItem(
 Der Bezeichner des Steuerelements, das die WM_DELETEITEM-Nachricht gesendet werden soll.
 
 *lpDeleteItemStruct*<br/>
-Gibt einen long-Zeiger auf eine [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md) -Datenstruktur, die Informationen über das gelöschte Listenfeldelement enthält.
+Gibt einen long-Zeiger auf eine [DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct) -Datenstruktur, die Informationen über das gelöschte Listenfeldelement enthält.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -6749,7 +6749,7 @@ Gibt einen long-Zeiger auf eine `DRAWITEMSTRUCT` -Datenstruktur, Informationen �
 
 ### <a name="remarks"></a>Hinweise
 
-Die `itemAction` Mitglied der [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) Struktur definiert die Zeichenoperation, die ausgeführt werden soll. Die Daten in diesem Member ermöglicht dem Besitzer des Steuerelements zu bestimmen, welche Aktion zeichnen erforderlich ist.
+Die `itemAction` Mitglied der [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) Struktur definiert die Zeichenoperation, die ausgeführt werden soll. Die Daten in diesem Member ermöglicht dem Besitzer des Steuerelements zu bestimmen, welche Aktion zeichnen erforderlich ist.
 
 Vor der Rückgabe von der Verarbeitung dieser Nachricht wird eine Anwendung sollten sicherstellen, dass die identifizierte Gerätekontext die *hDC* Mitglied der `DRAWITEMSTRUCT` Struktur wird auf die Standardwerte wiederhergestellt.
 
@@ -7018,7 +7018,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO* lpMMI);
 ### <a name="parameters"></a>Parameter
 
 *lpMMI*<br/>
-Verweist auf eine `MINMAXINFO` -Struktur, die Informationen über ein Fenster enthält die maximiert, Größe und Position und die nachverfolgung von minimalen und maximalen Größe. Weitere Informationen zu dieser Struktur finden Sie in der [MINMAXINFO](../../mfc/reference/minmaxinfo-structure.md) Struktur.
+Verweist auf eine `MINMAXINFO` -Struktur, die Informationen über ein Fenster enthält die maximiert, Größe und Position und die nachverfolgung von minimalen und maximalen Größe. Weitere Informationen zu dieser Struktur finden Sie in der [MINMAXINFO](/windows/desktop/api/winuser/ns-winuser-tagminmaxinfo) Struktur.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -7502,7 +7502,7 @@ Gibt die x- und y-Koordinate des Cursors an. Diese Koordinaten sind immer relati
 
 ### <a name="remarks"></a>Hinweise
 
-Nur für Windows, die die CS_DBLCLKS [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Stil erhalten `OnLButtonDblClk` aufrufen. Dies ist die Standardeinstellung für die Microsoft Foundation Class-Windows. Windows-Aufrufe `OnLButtonDblClk` Doppelklicken Sie auf Zeitlimit, wenn der Benutzer drückt, frei, und klicken Sie dann die linke Maustaste drückt, innerhalb des Systems wieder. Doppelklicken Sie auf der linken Maustaste vier Ereignisse generiert: [WM_LBUTTONDOWN](#onlbuttondown), [WM_LBUTTONUP](#onlbuttonup) Nachrichten, die WM_LBUTTONDBLCLK-Aufruf und eine andere WM_LBUTTONUP-Meldung, wenn die Schaltfläche ist veröffentlicht.
+Nur für Windows, die die CS_DBLCLKS [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Stil erhalten `OnLButtonDblClk` aufrufen. Dies ist die Standardeinstellung für die Microsoft Foundation Class-Windows. Windows-Aufrufe `OnLButtonDblClk` Doppelklicken Sie auf Zeitlimit, wenn der Benutzer drückt, frei, und klicken Sie dann die linke Maustaste drückt, innerhalb des Systems wieder. Durch Doppelklicken auf die linke Maustaste gedrückt wird tatsächlich vier Ereignisse generiert: [WM_LBUTTONDOWN](#onlbuttondown), [WM_LBUTTONUP](#onlbuttonup) Nachrichten, die WM_LBUTTONDBLCLK-Aufruf und eine andere WM_LBUTTONUP-Meldung, wenn die Maustaste losgelassen wird.
 
 > [!NOTE]
 > Diese Memberfunktion wird vom Framework aufgerufen, um der Anwendung die Bearbeitung einer Windows-Meldung zu ermöglichen. Die Parameter, die an die Funktion übergeben werden, stellen die Parameter dar, die vom Framework empfangen wurden, als die Nachricht empfangen wurde. Wenn Sie die Basisklassenimplementierung dieser Funktion aufrufen, verwendet diese Implementierung die Parameter, die mit der Meldung ursprünglich übergeben wurden, und nicht die Parameter, die Sie der Funktion übergeben.
@@ -7601,7 +7601,7 @@ Gibt die x- und y-Koordinate des Cursors an. Diese Koordinaten sind immer relati
 
 ### <a name="remarks"></a>Hinweise
 
-Nur für Windows, die die CS_DBLCLKS [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Stil erhalten `OnMButtonDblClk` aufrufen. Dies ist die Standardeinstellung für alle Microsoft Foundation Class-Fenster. Windows generiert eine `OnMButtonDblClk` aufgerufen werden, wenn der Benutzer drückt, Versionen und drückt die mittlere Maustaste-Schaltfläche erneut innerhalb des Systems Zeitlimit Doppelklicken Sie auf. Doppelklicken Sie auf der mittleren Maustaste vier Ereignisse generiert: [WM_MBUTTONDOWN](#onmbuttondown) und [WM_MBUTTONUP](#onmbuttonup) Nachrichten, die WM_MBUTTONDBLCLK-Aufruf und eine andere WM_MBUTTONUP-Meldung.
+Nur für Windows, die die CS_DBLCLKS [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Stil erhalten `OnMButtonDblClk` aufrufen. Dies ist die Standardeinstellung für alle Microsoft Foundation Class-Fenster. Windows generiert eine `OnMButtonDblClk` aufgerufen werden, wenn der Benutzer drückt, Versionen und drückt die mittlere Maustaste-Schaltfläche erneut innerhalb des Systems Zeitlimit Doppelklicken Sie auf. Doppelklicken Sie auf der mittleren Maustaste wird tatsächlich vier Ereignisse generiert: [WM_MBUTTONDOWN](#onmbuttondown) und [WM_MBUTTONUP](#onmbuttonup) Nachrichten, die WM_MBUTTONDBLCLK-Aufruf und eine andere WM_MBUTTONUP-Meldung.
 
 > [!NOTE]
 > Diese Memberfunktion wird vom Framework aufgerufen, um der Anwendung die Bearbeitung einer Windows-Meldung zu ermöglichen. Die Parameter, die an die Funktion übergeben werden, stellen die Parameter dar, die vom Framework empfangen wurden, als die Nachricht empfangen wurde. Wenn Sie die Basisklassenimplementierung dieser Funktion aufrufen, verwendet diese Implementierung die Parameter, die mit der Meldung ursprünglich übergeben wurden, und nicht die Parameter, die Sie der Funktion übergeben.
@@ -7714,7 +7714,7 @@ afx_msg void OnMeasureItem(
 Die ID des Steuerelements.
 
 *lpMeasureItemStruct*<br/>
-Verweist auf eine [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) -Datenstruktur, die Dimensionen des Ownerdrawn-Steuerelements enthält.
+Verweist auf eine [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct) -Datenstruktur, die Dimensionen des Ownerdrawn-Steuerelements enthält.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -8149,7 +8149,7 @@ afx_msg void OnMoving(
 Der Rand des Fensters verschoben werden soll.
 
 *lpRect*<br/>
-Adresse von der [CRect](../../atl-mfc-shared/reference/crect-class.md) oder [RECT-Struktur](../../mfc/reference/rect-structure1.md) , die Koordinaten für das Element enthält.
+Adresse von der [CRect](../../atl-mfc-shared/reference/crect-class.md) oder [RECT-Struktur](/windows/desktop/api/windef/ns-windef-tagrect) , die Koordinaten für das Element enthält.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -8196,7 +8196,7 @@ afx_msg void OnNcCalcSize(
 Gibt an, ob die Anwendung angeben sollten, welchen Teil des Clientbereichs gültige Informationen enthält. Windows wird der gültige Informationen in den angegebenen Bereich in den neuen Clientbereich kopiert. Wenn dieser Parameter TRUE ist, sollte die Anwendung angeben, welchem Teil des Clientbereichs gültig ist.
 
 *lpncsp*<br/>
-Verweist auf eine [NCCALCSIZE_PARAMS](../../mfc/reference/nccalcsize-params-structure.md) Datenstruktur, die Informationen enthält, eine Anwendung Sie die neue Größe und Position des zu berechnen können, der `CWnd` Rechteck (einschließlich Clientbereich, Rahmen, Beschriftung, Bildlaufleisten, usw.) .
+Verweist auf eine [NCCALCSIZE_PARAMS](/windows/desktop/api/winuser/ns-winuser-tagnccalcsize_params) Datenstruktur, die Informationen enthält, eine Anwendung Sie die neue Größe und Position des zu berechnen können, der `CWnd` Rechteck (einschließlich Clientbereich, Rahmen, Beschriftung, Bildlaufleisten, usw.) .
 
 ### <a name="remarks"></a>Hinweise
 
@@ -8222,7 +8222,7 @@ afx_msg BOOL OnNcCreate(LPCREATESTRUCT lpCreateStruct);
 ### <a name="parameters"></a>Parameter
 
 *lpCreateStruct*<br/>
-Verweist auf die [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) Datenstruktur für `CWnd`.
+Verweist auf die [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) Datenstruktur für `CWnd`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -8791,7 +8791,7 @@ afx_msg void OnPaintClipboard(
 Gibt einen Zeiger auf das Zwischenablageanwendungsfenster an. Der Zeiger kann temporär sein und sollte nicht für eine spätere Verwendung gespeichert werden.
 
 *hPaintStruct*<br/>
-Identifiziert eine [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) -Datenstruktur, die definiert welcher Teil des Clientbereichs gezeichnet werden soll.
+Identifiziert eine [PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct) -Datenstruktur, die definiert welcher Teil des Clientbereichs gezeichnet werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -9048,7 +9048,7 @@ Gibt an, die x- und y die Koordinaten des Cursors. Diese Koordinaten sind immer 
 
 ### <a name="remarks"></a>Hinweise
 
-Nur für Windows, die die CS_DBLCLKS [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Stil erhalten `OnRButtonDblClk` aufrufen. Dies ist die Standardeinstellung für Windows in der Microsoft Foundation Class-Bibliothek. Windows-Aufrufe `OnRButtonDblClk` Doppelklicken Sie auf Zeitlimit, wenn der Benutzer drückt, frei, und klicken Sie dann erneut die rechte Maustaste, innerhalb des Systems drückt. Doppelklicken Sie auf der rechten Maustaste vier Ereignisse generiert: [WM_RBUTTONDOWN](#onrbuttondown) und [WM_RBUTTONUP](#onrbuttonup) Meldungen, die `OnRButtonDblClk` Aufruf und eine andere WM_RBUTTONUP-Meldung, wenn die Schaltfläche ist veröffentlicht.
+Nur für Windows, die die CS_DBLCLKS [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Stil erhalten `OnRButtonDblClk` aufrufen. Dies ist die Standardeinstellung für Windows in der Microsoft Foundation Class-Bibliothek. Windows-Aufrufe `OnRButtonDblClk` Doppelklicken Sie auf Zeitlimit, wenn der Benutzer drückt, frei, und klicken Sie dann erneut die rechte Maustaste, innerhalb des Systems drückt. Durch Doppelklicken auf die rechte Maustaste gedrückt wird tatsächlich vier Ereignisse generiert: [WM_RBUTTONDOWN](#onrbuttondown) und [WM_RBUTTONUP](#onrbuttonup) Meldungen, die `OnRButtonDblClk` Aufruf und eine andere WM_RBUTTONUP-Meldung, wenn die Maustaste losgelassen wird.
 
 > [!NOTE]
 > Diese Memberfunktion wird vom Framework aufgerufen, um der Anwendung die Bearbeitung einer Windows-Meldung zu ermöglichen. Die Parameter, die an die Funktion übergeben werden, stellen die Parameter dar, die vom Framework empfangen wurden, als die Nachricht empfangen wurde. Wenn Sie die Basisklassenimplementierung dieser Funktion aufrufen, verwendet diese Implementierung die Parameter, die mit der Meldung ursprünglich übergeben wurden, und nicht die Parameter, die Sie der Funktion übergeben.
@@ -9410,7 +9410,7 @@ afx_msg void OnSizing(
 Der Rand des Fensters verschoben werden soll.
 
 *lpRect*<br/>
-Adresse von der [CRect](../../atl-mfc-shared/reference/crect-class.md) oder [RECT-Struktur](../../mfc/reference/rect-structure1.md) , die Koordinaten für das Element enthält.
+Adresse von der [CRect](../../atl-mfc-shared/reference/crect-class.md) oder [RECT-Struktur](/windows/desktop/api/windef/ns-windef-tagrect) , die Koordinaten für das Element enthält.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -9526,7 +9526,7 @@ Die *nFlags* Parameter kann folgende Werte haben:
 
 |Wert|Bedeutung|
 |-----------|-------------|
-|0-15|Gibt die Anzahl von Wiederholungen an. Der Wert ist die Anzahl der Häufigkeit, mit die der Tastenkombination wiederholt wird, weil der Benutzer, die Sie die Taste gedrückt halten...|
+|0-15|Gibt die Anzahl von Wiederholungen an. Der Wert ist die Anzahl der Häufigkeit, mit die der Tastenkombination wiederholt wird, weil der Benutzer, die Sie die Taste gedrückt halten..|
 |16-23|Gibt den Code für die Überprüfung. Der Wert hängt von der Originalgerätehersteller (OEM)|
 |24|Gibt an, ob die einen erweiterten Schlüssel an, wie z. B. die rechte ALT und STRG-Taste ist, die eine erweiterte 101 oder 102-Tasten angezeigt werden. Der Wert ist 1, wenn es sich um eine erweiterte Schlüssel handelt; Andernfalls ist er 0.|
 |25-28|Wird intern von Windows verwendet.|
@@ -9961,7 +9961,7 @@ afx_msg void OnUniChar(
 |---------------|-----------------|
 |*NChar*|[in] Gibt den Zeichencode der gedrückten Taste an.|
 |*nRepCnt*|[in] Gibt die Anzahl von Wiederholungen für die aktuelle Nachricht. Der Wert ist die Anzahl der Häufigkeit, mit die der Tastenkombination Autorepeated, weil der Benutzer die Taste gedrückt wird. Wenn die Tastatureingabe kurz gehalten wird, werden mehrere Nachrichten gesendet. Die Anzahl von Wiederholungen ist jedoch nicht kumulativ.|
-|*nFlags*|[in] Flags, die die Überprüfung von Code, erweiterte Schlüssel, Kontextcode, vorherigen des Status und Übergangsstatus angeben werden, wie in der folgenden Tabelle dargestellt:<br /><br /> **0-7:** gibt der Code für die Überprüfung. Der Wert hängt von der Originalgerätehersteller (OEM) ab.<br /><br /> **8:** gibt einen erweiterte Schlüssel an, wie z. B. die rechte ALT und STRG-Taste, die eine erweiterte 101 oder 102-Tastatur angezeigt werden. Das Flag ist 1, wenn der Schlüssel eine erweiterte Schlüssel ist; Andernfalls ist er 0.<br /><br /> **9 bis 12:** intern von Windows verwendet.<br /><br /> **13:** gibt an, die Kontextcode. Das Flag ist 1, wenn die ALT-Taste gedrückt gehalten wird, während die Taste gedrückt wird; der Wert ist, andernfalls 0.<br /><br /> **14:** gibt an, der vorherige Schlüssel Status. Das Flag ist 1, wenn die Taste gedrückt ist, bevor die Nachricht gesendet wird, oder 0, wenn der Schlüssel aktiviert ist.<br /><br /> **15:** gibt an, den Status des Übergangs. Das Flag ist 1, wenn die Taste losgelassen wird, wird, oder 0, wenn die Taste wird gedrückt wird.|
+|*nFlags*|[in] Flags, die die Überprüfung von Code, erweiterte Schlüssel, Kontextcode, vorherigen des Status und Übergangsstatus angeben werden, wie in der folgenden Tabelle dargestellt:<br /><br /> **0-7:** Gibt den Code für die Überprüfung. Der Wert hängt von der Originalgerätehersteller (OEM) ab.<br /><br /> **8:** Gibt einen erweiterten Schlüssel ein, z. B. die rechten ALT und STRG-Tasten, die eine erweiterte 101 oder 102-Tastatur angezeigt werden. Das Flag ist 1, wenn der Schlüssel eine erweiterte Schlüssel ist; Andernfalls ist er 0.<br /><br /> **9 bis 12:**  Wird intern von Windows verwendet.<br /><br /> **13:**  Gibt den Kontextcode. Das Flag ist 1, wenn die ALT-Taste gedrückt gehalten wird, während die Taste gedrückt wird; der Wert ist, andernfalls 0.<br /><br /> **14:**  Gibt den vorherigen Zustand des Schlüssels an. Das Flag ist 1, wenn die Taste gedrückt ist, bevor die Nachricht gesendet wird, oder 0, wenn der Schlüssel aktiviert ist.<br /><br /> **15:**  Gibt den Status des Übergangs an. Das Flag ist 1, wenn die Taste losgelassen wird, wird, oder 0, wenn die Taste wird gedrückt wird.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -10202,7 +10202,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
 ### <a name="parameters"></a>Parameter
 
 *lpwndpos*<br/>
-Verweist auf eine [WINDOWPOS](../../mfc/reference/windowpos-structure1.md) -Datenstruktur, die Informationen über die neue Größe und Position des Fensters enthält.
+Verweist auf eine [WINDOWPOS](/windows/desktop/api/winuser/ns-winuser-tagwindowpos) -Datenstruktur, die Informationen über die neue Größe und Position des Fensters enthält.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -10226,7 +10226,7 @@ Verweist auf eine `WINDOWPOS` -Datenstruktur, die Informationen über die neue G
 
 ### <a name="remarks"></a>Hinweise
 
-Eine Anwendung kann zu verhindern, dass Änderungen an das Fenster durch Festlegen oder Löschen der entsprechenden Bits in der **Flags** Mitglied der [WINDOWPOS](../../mfc/reference/windowpos-structure1.md) Struktur.
+Eine Anwendung kann zu verhindern, dass Änderungen an das Fenster durch Festlegen oder Löschen der entsprechenden Bits in der **Flags** Mitglied der [WINDOWPOS](/windows/desktop/api/winuser/ns-winuser-tagwindowpos) Struktur.
 
 Für ein Fenster mit den [WS_OVERLAPPED](styles-used-by-mfc.md#window-styles) oder [WS_THICKFRAME](styles-used-by-mfc.md#window-styles) -Stil verfügt, sendet die Standardimplementierung einer [WM_GETMINMAXINFO](/windows/desktop/winmsg/wm-getminmaxinfo) Meldung im Fenster. Dies erfolgt, um die neue Größe und Position des Fensters zu überprüfen und um die Client-Stile für CS_BYTEALIGNCLIENT und CS_BYTEALIGN zu erzwingen. Eine Anwendung kann diese Funktion durch den Aufruf nicht auf der Basisklasse überschreiben.
 
@@ -10549,7 +10549,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ### <a name="parameters"></a>Parameter
 
 *cs*<br/>
-Ein [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) Struktur.
+Ein [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -10597,7 +10597,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Parameter
 
 *pMsg*<br/>
-Verweist auf eine [MSG](../../mfc/reference/msg-structure1.md) -Struktur, die zu verarbeitende Meldung enthält.
+Verweist auf eine [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) -Struktur, die zu verarbeitende Meldung enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -10719,7 +10719,7 @@ BOOL RedrawWindow(
 ### <a name="parameters"></a>Parameter
 
 *lpRectUpdate*<br/>
-Verweist auf eine [RECT-Struktur](../../mfc/reference/rect-structure1.md) mit den Koordinaten des Rechtecks aktualisieren. Dieser Parameter wird ignoriert, wenn *PrgnUpdate* eine gültige Region-Handle enthält.
+Verweist auf eine [RECT-Struktur](/windows/desktop/api/windef/ns-windef-tagrect) mit den Koordinaten des Rechtecks aktualisieren. Dieser Parameter wird ignoriert, wenn *PrgnUpdate* eine gültige Region-Handle enthält.
 
 *prgnUpdate*<br/>
 Die Update-Region angibt. Wenn beide *PrgnUpdate* und *LpRectUpdate* NULL sind, der gesamten Clientbereich der aktualisierungsregion hinzugefügt wird.
@@ -10889,10 +10889,10 @@ Dabei kann es sich um einen der folgenden Werte aufweisen:
 - `CWnd::reposExtra` Addiert die Werte von *LpRectParam* auf den Clientbereich des *nIDLast* und führt auch das Layout.
 
 *lpRectParam*<br/>
-Verweist auf eine [RECT-Struktur](../../mfc/reference/rect-structure1.md); die Verwendung der hängt vom Wert der *nFlag*.
+Verweist auf eine [RECT-Struktur](/windows/desktop/api/windef/ns-windef-tagrect); die Verwendung der hängt vom Wert der *nFlag*.
 
 *lpRectClient*<br/>
-Verweist auf eine [RECT-Struktur](../../mfc/reference/rect-structure1.md) mit den verfügbaren Client-Bereich. Wenn NULL, wird der Clientbereich des Fensters verwendet werden.
+Verweist auf eine [RECT-Struktur](/windows/desktop/api/windef/ns-windef-tagrect) mit den verfügbaren Client-Bereich. Wenn NULL, wird der Clientbereich des Fensters verwendet werden.
 
 *bStretch*<br/>
 Gibt an, ob die Leiste, auf die Größe des Rahmens gestreckt wird.
@@ -10939,10 +10939,10 @@ void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) 
 ### <a name="parameters"></a>Parameter
 
 *lpPoint*<br/>
-Verweist auf eine [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt oder [POINT-Struktur](../../mfc/reference/point-structure1.md) , das die Bildschirmkoordinaten zu konvertierende enthält.
+Verweist auf eine [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt oder [POINT-Struktur](/windows/desktop/api/windef/ns-windef-tagpoint) , das die Bildschirmkoordinaten zu konvertierende enthält.
 
 *lpRect*<br/>
-Verweist auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder [RECT-Struktur](../../mfc/reference/rect-structure1.md) , das die Bildschirmkoordinaten zu konvertierende enthält.
+Verweist auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder [RECT-Struktur](/windows/desktop/api/windef/ns-windef-tagrect) , das die Bildschirmkoordinaten zu konvertierende enthält.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -10973,7 +10973,7 @@ Gibt die Menge in Geräteeinheiten, der horizontale Bildlauffunktion an. Dieser 
 Gibt die Menge in Geräteeinheiten, der einen vertikalen Bildlauf ausführen. Dieser Parameter muss ein negativer Wert, der Bildlauf nach oben.
 
 *lpRect*<br/>
-Verweist auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder [RECT-Struktur](../../mfc/reference/rect-structure1.md) , der den Teil des Clientbereichs gescrollt werden angibt. Wenn *LpRect* NULL ist, der gesamten Clientbereich ein Bildlauf durchgeführt wird. Die Einfügemarke wird neu angeordnet werden, wenn der Cursor-Rechteck das Scroll-Rechteck überschneidet.
+Verweist auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder [RECT-Struktur](/windows/desktop/api/windef/ns-windef-tagrect) , der den Teil des Clientbereichs gescrollt werden angibt. Wenn *LpRect* NULL ist, der gesamten Clientbereich ein Bildlauf durchgeführt wird. Die Einfügemarke wird neu angeordnet werden, wenn der Cursor-Rechteck das Scroll-Rechteck überschneidet.
 
 *lpClipRect*<br/>
 Verweist auf eine `CRect` Objekt oder `RECT` Struktur, die das Auswahlrechteck Scrollen angibt. Nur die Bits in dieses Rechteck werden durchgeführt. Bits außerhalb dieses Rechteck sind nicht betroffen, selbst wenn sie sich in befinden die *LpRect* Rechteck. Wenn *LpClipRect* NULL ist, ohne Clipping für das Bildlaufrechteck ausgeführt wird.
@@ -11012,7 +11012,7 @@ Gibt die Menge in Geräteeinheiten, der horizontale Bildlauffunktion an. Dieser 
 Gibt die Menge in Geräteeinheiten, der einen vertikalen Bildlauf ausführen. Dieser Parameter müssen einen negativen Wert, der Bildlauf nach oben.
 
 *lpRectScroll*<br/>
-Verweist auf eine [RECT-Struktur](../../mfc/reference/rect-structure1.md) , der den Teil des Clientbereichs gescrollt werden angibt. Wenn dieser Parameter NULL ist, wird der gesamte Clientbereich ein Bildlauf durchgeführt.
+Verweist auf eine [RECT-Struktur](/windows/desktop/api/windef/ns-windef-tagrect) , der den Teil des Clientbereichs gescrollt werden angibt. Wenn dieser Parameter NULL ist, wird der gesamte Clientbereich ein Bildlauf durchgeführt.
 
 *lpRectClip*<br/>
 Verweist auf eine `RECT` Struktur, die das Auswahlrechteck Scrollen angibt. Diese Struktur hat Vorrang vor der verweist Rectangle *LpRectScroll*. Nur die Bits in dieses Rechteck werden durchgeführt. Bits außerhalb dieses Rechteck sind nicht betroffen, selbst wenn sie sich in befinden die *LpRectScroll* Rechteck. Wenn dieser Parameter NULL ist, erfolgt keine Clipping für das Scroll-Rechteck.
@@ -11588,7 +11588,7 @@ Einen einzelnen Parameter des Typs vom angegebenen *VtProp*.
 > [!NOTE]
 > Diese Funktion sollte aufgerufen werden, nur auf eine `CWnd` Objekt, das OLE-Steuerelements darstellt.
 
-Weitere Informationen zur Verwendung von dieser Memberfunktion mit OLE Control-Container finden Sie im Artikel [ActiveX-Steuerelementcontainer: Programmieren von ActiveX-Steuerelemente in einem ActiveX-Steuerelementcontainer](../../mfc/programming-activex-controls-in-a-activex-control-container.md).
+Weitere Informationen zur Verwendung von dieser Memberfunktion mit OLE Control-Container finden Sie im Artikel [ActiveX-Steuerelementcontainer: Programmieren von ActiveX-Steuerelementen in einem ActiveX-Steuerelementcontainer](../../mfc/programming-activex-controls-in-a-activex-control-container.md).
 
 ##  <a name="setredraw"></a>  CWnd::SetRedraw
 
@@ -11728,7 +11728,7 @@ Der für eine standard-Bildlaufleiste liegt zwischen 0 und 100. Der Standardbere
 
 ##  <a name="settimer"></a>  CWnd::SetTimer
 
-Installiert einen Systemzeitgeber.
+Installiert einen Systemtimer.
 
 ```
 UINT_PTR SetTimer(
@@ -11743,7 +11743,7 @@ UINT_PTR SetTimer(
 ### <a name="parameters"></a>Parameter
 
 *nIDEvent*<br/>
-Gibt einen Zeitgeberbezeichner ungleich 0 (null) an. Wenn der Zeitgeberbezeichner eindeutig ist, wird von `SetTimer` der gleiche Wert zurückgegeben. Andernfalls wird von `SetTimer` ein neuer eindeutiger Wert festgelegt und zurückgegeben. Bei einem Fensterzeitgeber (der eine NULL-Rückruffunktion besitzt), muss der Wert nur für andere Fensterzeitgeber eindeutig sein, die dem aktiven Fenster zugeordnet sind. Für einen Rückrufzeitgeber muss der Wert für alle Zeitgeber in allen Prozessen eindeutig sein. Beim Erstellen eines Rückrufzeitgebers ist es daher wahrscheinlicher, dass der zurückgegebene Wert von dem von Ihnen angegebenen Wert abweicht.
+Gibt einen Timerbezeichner ungleich 0 (null) an. Wenn der Zeitgeberbezeichner eindeutig ist, wird von `SetTimer` der gleiche Wert zurückgegeben. Andernfalls wird von `SetTimer` ein neuer eindeutiger Wert festgelegt und zurückgegeben. Bei einem Fensterzeitgeber (der eine NULL-Rückruffunktion besitzt), muss der Wert nur für andere Fensterzeitgeber eindeutig sein, die dem aktiven Fenster zugeordnet sind. Für einen Rückrufzeitgeber muss der Wert für alle Zeitgeber in allen Prozessen eindeutig sein. Beim Erstellen eines Rückruftimers ist es daher wahrscheinlicher, dass der zurückgegebene Wert von dem von Ihnen angegebenen Wert abweicht.
 
 *nElapse*<br/>
 Gibt den Timeoutwert oder Intervall in Millisekunden an.
@@ -11753,7 +11753,7 @@ Gibt die Adresse der Anwendung bereitgestellten `TimerProc` Callback-Funktion, d
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Zeitgeberbezeichner des neuen Zeitgebers, wenn die Funktion erfolgreich ist. Dieser Wert kann oder möglicherweise nicht gleich dem Wert, der durch Übergeben der *nIDEvent* Parameter. Eine Anwendung sollte stets den Rückgabewert in übergeben die [KillTimer](#killtimer) Memberfunktion versucht, die den Zeitgeber zu beenden. Ungleich 0 (null), wenn erfolgreich, andernfalls 0 (null).
+Der Timerbezeichner des neuen Timers, wenn die Funktion erfolgreich ist. Dieser Wert kann oder möglicherweise nicht gleich dem Wert, der durch Übergeben der *nIDEvent* Parameter. Eine Anwendung sollte stets den Rückgabewert in übergeben die [KillTimer](#killtimer) Memberfunktion versucht, die den Zeitgeber zu beenden. Ungleich 0 (null), wenn erfolgreich, andernfalls 0 (null).
 
 ### <a name="remarks"></a>Hinweise
 
@@ -11811,7 +11811,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT* lpwndpl);
 ### <a name="parameters"></a>Parameter
 
 *lpwndpl*<br/>
-Verweist auf eine [WINDOWPLACEMENT](../../mfc/reference/windowplacement-structure.md) -Struktur, die neue Anzeigestatus und die Positionen angibt.
+Verweist auf eine [WINDOWPLACEMENT](/windows/desktop/api/winuser/ns-winuser-tagwindowplacement) -Struktur, die neue Anzeigestatus und die Positionen angibt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -12304,7 +12304,7 @@ void ValidateRect(LPCRECT lpRect);
 ### <a name="parameters"></a>Parameter
 
 *lpRect*<br/>
-Verweist auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder [RECT-Struktur](../../mfc/reference/rect-structure1.md) , enthält die Clientkoordinaten des Rechtecks aus dem Aktualisierungsbereich entfernt werden soll. Wenn *LpRect* NULL ist, das gesamte Fenster wird überprüft.
+Verweist auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder [RECT-Struktur](/windows/desktop/api/windef/ns-windef-tagrect) , enthält die Clientkoordinaten des Rechtecks aus dem Aktualisierungsbereich entfernt werden soll. Wenn *LpRect* NULL ist, das gesamte Fenster wird überprüft.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -12342,7 +12342,7 @@ static CWnd* PASCAL WindowFromPoint(POINT point);
 ### <a name="parameters"></a>Parameter
 
 *Zeigen Sie*<br/>
-Gibt an, eine [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt oder [zeigen](../../mfc/reference/point-structure1.md) -Datenstruktur, die den Punkt zu überprüfende definiert.
+Gibt an, eine [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt oder [zeigen](/windows/desktop/api/windef/ns-windef-tagpoint) -Datenstruktur, die den Punkt zu überprüfende definiert.
 
 ### <a name="return-value"></a>Rückgabewert
 

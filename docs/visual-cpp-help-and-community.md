@@ -6,12 +6,12 @@ ms.technology:
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 3b01c58349aa1dff1c782b051156250fd495df91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5aee74c9fee1480d2bb61c36abba97edc5c5d4cf
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460007"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178095"
 ---
 # <a name="visual-c-help-and-community"></a>Hilfe und Community für Visual C++
 
@@ -19,13 +19,13 @@ So erhalten Sie Informationen über das Schreiben von C++-Code und die Verwendun
 
 ## <a name="samples"></a>Beispiele
 
-|Titel|Beschreibung |
+|Titel|Beschreibung|
 |-----------|-----------------|
 |[Entwickler-Codebeispiele](https://code.msdn.microsoft.com/)|Enthält herunterladbaren Beispielcode von Microsoft und Mitwirkenden aus der Community.|
 
 ## <a name="product-documentation"></a>Produktdokumentation
 
-|Titel|Beschreibung |
+|Titel|Beschreibung|
 |-----------|-----------------|
 |[Visual C++](visual-cpp-in-visual-studio.md)|Enthält Verweise auf und Dokumentation zu Visual C++. Teil der MSDN Library.|
 |[Windows Developer Center](https://developer.microsoft.com/windows/)|Enthält Informationen zur Verwendung von C++ und anderen Sprachen zum Entwickeln von Apps für Windows 8. Teil des Windows Developer Centers. Der C++-Inhalt befindet sich unter dem Knoten Dokumente > Sprachverzeichnis.|
@@ -40,9 +40,9 @@ Viele Abschnitte der Dokumentation sind auch im PDF-Format verfügbar. Diese Abs
 
 ## <a name="related-articles"></a>Verwandte Artikel
 
-|Titel|Beschreibung |
+|Titel|Beschreibung|
 |-----------|-----------------|
 |[Visual C++-Team-Blog](https://blogs.msdn.microsoft.com/vcblog/)|Enthält Beiträge zu verschiedenen Themen von Experten aus dem Visual C++-Produktteam.|
 |[Channel 9](https://channel9.msdn.com/)|Enthält Videointerviews und -vorlesungen. Verwenden Sie das Suchfeld auf der Channel 9-Homepage, um C++-Inhalt zu suchen.|
 |[Visual Studio](https://visualstudio.microsoft.com/)|Enthält Artikel und Neuigkeiten zu Visual Studio und verwandte Entwicklungstools.|
-|[MSDN-Foren](https://social.msdn.microsoft.com/Forums/en-US/home?category=visualc) und [Entwicklercommunity](https://developercommunity.visualstudio.com)|Offizielle Microsoft-Foren, in denen Sie Fragen zu C++ posten und Antworten von Microsoft und Experten aus der Community erhalten können.|
+|[MSDN-Foren](https://social.msdn.microsoft.com/Forums/home?category=visualc) und [Entwicklercommunity](https://developercommunity.visualstudio.com)|Offizielle Microsoft-Foren, in denen Sie Fragen zu C++ posten und Antworten von Microsoft und Experten aus der Community erhalten können.|
