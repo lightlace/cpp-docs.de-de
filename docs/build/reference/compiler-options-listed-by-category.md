@@ -4,12 +4,12 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: aa93158e518950efa9d1f2f8092aeabbc3c7724c
-ms.sourcegitcommit: 99437d7da4528ce72cabe6b6a65a9be5dfd090f8
+ms.openlocfilehash: ef61ebbfad62e6a7bf764bad35204247e47d8ddb
+ms.sourcegitcommit: 6990f842fefc27b522b15cf352f3517b319d78da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51598820"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53248571"
 ---
 # <a name="compiler-options-listed-by-category"></a>Compileroptionen nach Kategorien sortiert
 
@@ -62,7 +62,7 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|Erzwingt, dass in Registern übergebene Parameter beim Funktionseinstieg in ihre Speicherorte auf dem Stapel geschrieben werden. Diese Compileroption steht nur für die X64-Compiler (systemeigene und cross-Compiler).|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|Erstellt ein Hotpatch-fähiges Abbild.|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Generiert schnelle Transzendente.|
-|[QIfist](qifist-suppress-ftol.md)|Veraltet. Unterdrückt den Aufruf der `_ftol` -Hilfsfunktion, wenn eine Konvertierung von einem Gleitkommatyp zu einem ganzzahligen Typ erforderlich ist. (nur x86)|
+|[/QIfist](qifist-suppress-ftol.md)|Veraltet. Unterdrückt den Aufruf der `_ftol` -Hilfsfunktion, wenn eine Konvertierung von einem Gleitkommatyp zu einem ganzzahligen Typ erforderlich ist. (nur x86)|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Entfernt `fwait` -Befehle in `try` -Blöcken.|
 |[/Qpar](qpar-auto-parallelizer.md)|Ermöglicht automatische Parallelisierung von Schleifen.|
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|Aktiviert die Berichterstellungsebenen für die automatische Parallelisierung.|
@@ -207,7 +207,7 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Veraltet. Ermöglicht schnelle Überprüfungen. Verwenden Sie stattdessen [/RTC1](rtc-run-time-error-checks.md) .|
 |[/H](h-restrict-length-of-external-names.md)|Veraltet. Beschränkt die Länge externer (öffentlicher) Namen.|
 |[/Og](og-global-optimizations.md)|Veraltet. Verwendet globale Optimierung.|
-|[QIfist](qifist-suppress-ftol.md)|Veraltet. Wurde verwendet, um anzugeben, wie aus einem Gleitkommatyp in einen ganzzahligen Typ konvertiert werden soll.|
+|[/QIfist](qifist-suppress-ftol.md)|Veraltet. Wurde verwendet, um anzugeben, wie aus einem Gleitkommatyp in einen ganzzahligen Typ konvertiert werden soll.|
 |[/V](v-version-number.md)|Veraltet. Legt die Versionszeichenfolge der OBJ-Datei fest.|
 |[/Wp64](wp64-detect-64-bit-portability-issues.md)|Veraltet. Erkennt 64-Bit-Portabilitätsprobleme.|
 |[/Yd](yd-place-debug-information-in-object-file.md)|Veraltet. Legt vollständige Debuginformationen in allen Objektdateien ab. Verwenden Sie stattdessen [/Zi](z7-zi-zi-debug-information-format.md) .|
