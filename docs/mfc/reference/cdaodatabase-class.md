@@ -267,7 +267,7 @@ Es wurde ein Zeichenfolgenausdruck verwendet, um die Sortierreihenfolge für das
 
 - `dbLangCzech` Tschechisch
 
-- `dbLangDutch` Holländisch
+- `dbLangDutch` Niederländisch
 
 - `dbLangGreek` Griechisch
 
