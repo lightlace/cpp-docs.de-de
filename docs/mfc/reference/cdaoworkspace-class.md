@@ -329,7 +329,7 @@ Ein Zeichenfolgenausdruck verwendet, um die Sortierreihenfolge für die Erstellu
 
 - `dbLangCzech` Tschechisch
 
-- `dbLangDutch` Holländisch
+- `dbLangDutch` Niederländisch
 
 - `dbLangGreek` Griechisch
 
