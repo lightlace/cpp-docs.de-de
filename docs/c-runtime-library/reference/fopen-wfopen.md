@@ -143,7 +143,7 @@ Im Textmodus Carriage Return-Zeilenvorschub-Kombinationen in einzelne Zeilenvors
 
 Wenn **t** oder **b** nicht erhält, *Modus*, wird der standardübersetzungsmodus durch die globale Variable definiert [_fmode](../../c-runtime-library/fmode.md). Wenn **t** oder **b** ist das Argument, die Funktion schlägt fehl und gibt mit dem Präfix **NULL**.
 
-Weitere Informationen darüber, wie Sie Textmodus und Binärmodus in Unicode und im Multibyte-Stream-E/A verwenden, finden Sie unter [Text and Binary Mode File I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) und [Unicode Stream I/O in Text and Binary Modes](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
+Weitere Informationen darüber, wie Sie Textmodus und Binärmodus in Unicode und im Multibyte-Stream-E/A verwenden, finden Sie unter [Text and Binary Mode File I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) und [Unicodestream-E/A im Text- und Binärmodus](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
 
 Die folgenden Optionen können angehängt werden, um *Modus* zusätzliche Verhaltensweisen angeben.
 
