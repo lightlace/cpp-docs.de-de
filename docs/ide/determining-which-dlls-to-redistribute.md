@@ -44,7 +44,7 @@ In der folgenden Tabelle werden einige der Visual C++-DLLs beschrieben, von dene
 |msvcp*version*.dll und msvcp*version*_*dotnumber*.dll|C++-Standardbibliothek für nativen Code.|Anwendungen, die die [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md) verwenden.|
 |concrt*version*.dll|Concurrency Runtime-Bibliothek für nativen Code.|Anwendungen, die [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md) verwenden.|
 |mfc*version*.dll|Microsoft Foundation Class-Bibliothek (MFC-Bibliothek).|Anwendungen, die die [MFC-Bibliothek](../mfc/mfc-desktop-applications.md) verwenden.|
-|mfc*version**language*.dll|Microsoft Foundation Classes-Bibliotheksressourcen (MFC).|Anwendungen, die bestimmte Sprachressourcen für MFC verwenden.|
+|mfc*version* *language*.dll|Microsoft Foundation Classes-Bibliotheksressourcen (MFC).|Anwendungen, die bestimmte Sprachressourcen für MFC verwenden.|
 |mfc*version*u.dll|MFC-Bibliothek mit Unicode-Unterstützung.|Anwendungen, die die [MFC-Bibliothek](../mfc/mfc-desktop-applications.md) verwenden und Unicode-Unterstützung erfordern.|
 |mfcmifc80.dll|MFC-Bibliothek für verwaltete Schnittstellen.|Anwendungen, die die [MFC-Bibliothek](../mfc/mfc-desktop-applications.md) mit [Windows Forms-Steuerelementen](/dotnet/framework/winforms/controls/index) verwenden.|
 |mfcm*version*.dll|Verwaltete MFC-Bibliothek.|Anwendungen, die die [MFC-Bibliothek](../mfc/mfc-desktop-applications.md) mit [Windows Forms-Steuerelementen](/dotnet/framework/winforms/controls/index) verwenden.|
