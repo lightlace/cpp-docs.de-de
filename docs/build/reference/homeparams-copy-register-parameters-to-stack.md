@@ -1,48 +1,44 @@
 ---
 title: /homeparams (Registerparameter in den Stapel kopieren)
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - /homeparams
 helpviewer_keywords:
 - /homeparams compiler option [C++]
 - -homeparams compiler option [C++]
 ms.assetid: 51067de4-24f7-436b-b8d9-bc867a7d53aa
-ms.openlocfilehash: 952a38d2ab1268ee3dc1fda0899a3ba047281b44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ffb5ca602feb7a369bb31d0277834786d66ac12a
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518455"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627434"
 ---
 # <a name="homeparams-copy-register-parameters-to-stack"></a>/homeparams (Registerparameter in den Stapel kopieren)
 
-Erzwingt, dass in Registern übergebene Parameter beim Funktionseinstieg in ihre Speicherorte auf dem Stapel geschrieben werden.
+Erzwingt, dass in Registern übergebene Parameter auch an ihre Positionen im Stapel Funktionseinstieg geschrieben werden.
 
 ## <a name="syntax"></a>Syntax
 
-```
-/homeparams
-```
+> **/homeparams**
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Compileroption steht nur für die X64-Compiler (systemeigene und cross-Compiler).
+Diese Compileroption ist nur verfügbar, in die systemeigene und Cross-Compiler, die X64 abzielen.
 
-Wenn Parameter übergeben werden, in x X64 Kompilierung Aufrufkonventionen Stapelspeicher für Parameter erforderlich, auch für Parameter, die in Registern übergeben. Weitere Informationen finden Sie unter [Parameterübergabe](../../build/parameter-passing.md). Allerdings werden standardmäßig in einem Releasebuild die Registerparameter nicht in den Stapel, in den Bereich geschrieben werden, die bereits für die Parameter bereitgestellt wird. Dies erschwert es einem optimierten (Release) Build des Programms zu debuggen.
+Die Aufrufkonvention X64 erfordert Stack Speicherplatz für alle Parameter, auch für Parameter, die in Registern übergeben werden. Weitere Informationen finden Sie unter [Parameterübergabe](../../build/x64-calling-convention.md#parameter-passing). Standardmäßig werden nicht die Registerparameter in den Stapelspeicherplatz dafür in Releasebuilds kopiert. Dies erschwert es zum Debuggen einer optimierten Releasebuild des Programms.
 
-Verwenden Sie für einen Releasebuild **/homeparams in den** um sicherzustellen, dass Sie Ihre Anwendung debuggen können. **/ homeparams in den** einer verminderten Leistung, da eine Schleife, um die Registerparameter auf dem Stapel Laden erforderlich ist.
+Für Releasebuilds, können Sie die **/homeparams in den** Option aus, um den Compiler an, kopieren Sie erzwingen, dass registrieren Parameter für den Stapel, um sicherzustellen, dass Sie Ihre Anwendung debuggen können. **/ homeparams in den** einer verminderten Leistung, da es sich um einen zusätzlichen Zyklus der Registerparameter in den Stapel laden erfordert.
 
-In einem Debugbuild wird der Stapel immer mit Parametern in Registern übergeben aufgefüllt.
+In Debugbuilds wird der Stapel immer mit Parametern in Registern übergeben aufgefüllt.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
 1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
 
-1. Klicken Sie auf den Ordner **C/C++** .
+1. Öffnen der **Konfigurationseigenschaften** > **C/C++-** > **Befehlszeile** Eigenschaftenseite.
 
-1. Klicken Sie auf die Eigenschaftenseite **Befehlszeile** .
-
-1. Geben Sie die Compileroption im Feld **Zusätzliche Optionen** ein.
+1. Geben Sie die Compileroption in der **zusätzliche Optionen** Feld.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
 

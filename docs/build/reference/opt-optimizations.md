@@ -17,12 +17,12 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-ms.openlocfilehash: ad89dfa29df6e4ef500e01e53f203fa3c401602b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a6fa8b9c923ff697831c29b8004ce360baf7d77
+ms.sourcegitcommit: ae2f71fe0d64f1a90ef722759fe93c82abc064ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638229"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53587888"
 ---
 # <a name="opt-optimizations"></a>/OPT (Optimierungen)
 
@@ -67,7 +67,7 @@ In der Standardeinstellung die **/OPT:LBR** Option wird festgelegt, wenn keine i
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn Sie in der Befehlszeile verwendet wird, der Linker standardmäßig **/OPT: REF, ICF LBR**. Wenn **/DEBUG** angegeben ist, wird der Standardwert ist **NOREF, NOICR, NOLBR**.
+Wenn Sie in der Befehlszeile verwendet wird, der Linker standardmäßig **/OPT: REF, ICF LBR**. Wenn **/DEBUG** angegeben ist, wird der Standardwert ist **NOREF, NOICF, NOLBR**.
 
 Die **"/ OPT"** Optimierungen in der Regel die Abbildgröße zu verringern, und beschleunigen die programmausführung. Diese Verbesserungen können in größeren Programmen beträchtlich sein, ist sie standardmäßig für Retail-Builds aktiviert sind.
 

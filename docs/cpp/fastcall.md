@@ -1,6 +1,6 @@
 ---
 title: __fastcall
-ms.date: 10/09/2018
+ms.date: 12/17/2018
 f1_keywords:
 - __fastcall_cpp
 - __fastcall
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __fastcall keyword [C++]
 ms.assetid: bb5b9c8a-dfad-450c-9119-0ac2bc59544f
-ms.openlocfilehash: 19cc8efb98660e8cdb3f6d9b03f0b7bd85a34949
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e7cd4b1202ee717abf9a9767785ed8abe96bd69
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480040"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627363"
 ---
 # <a name="fastcall"></a>__fastcall
 
@@ -29,11 +29,11 @@ Die **__fastcall** -Aufrufkonvention gibt an, dass Argumente für Funktionen, ko
 |Konvention zur Umwandlung von Groß- in Kleinbuchstaben und umgekehrt|Groß-/Kleinbuchstaben werden nicht umgewandelt.|
 
 > [!NOTE]
->  In zukünftigen Versionen werden von Compilern möglicherweise andere Register zum Speichern von Parametern verwendet werden.
+> In zukünftigen Versionen werden von Compilern möglicherweise andere Register zum Speichern von Parametern verwendet werden.
 
 Mithilfe der [/Gr](../build/reference/gd-gr-gv-gz-calling-convention.md) -Compileroption werden die einzelnen Funktionen im Modul als Kompilieren **__fastcall** ausgeführt, wenn die Funktion wurde mit einem in Konflikt stehenden Attribut deklariert oder der Name der Funktion ist `main` .
 
-Die **__fastcall** Schlüsselwort akzeptiert und ignoriert der Compiler, die auf ARM und X64 abzielen Architekturen; auf x X64 chip, gemäß der Konvention werden die ersten vier Argumente konventionsgerecht möglichst in Registern übergeben und es werden zusätzliche Argumente übergeben. auf dem Stapel. Weitere Informationen finden Sie unter [Überblick X64 Aufrufkonventionen](../build/overview-of-x64-calling-conventions.md). Auf einem ARM-Chip werden bis zu vier Ganzzahl- und acht Gleitkommaargumente in Registern übergeben, und zusätzliche Argumente werden auf den Stapel übergeben.
+Die **__fastcall** Schlüsselwort akzeptiert und ignoriert der Compiler, die auf ARM und X64 abzielen Architekturen; auf x X64 chip, gemäß der Konvention werden die ersten vier Argumente konventionsgerecht möglichst in Registern übergeben und es werden zusätzliche Argumente übergeben. auf dem Stapel. Weitere Informationen finden Sie unter [X64 Aufrufkonvention](../build/x64-calling-convention.md). Auf einem ARM-Chip werden bis zu vier Ganzzahl- und acht Gleitkommaargumente in Registern übergeben, und zusätzliche Argumente werden auf den Stapel übergeben.
 
 Wenn die Funktion bei nicht statischen Klassenfunktionen abweichend definiert ist, muss der Aufrufkonventionsmodifizierer nicht in der abweichenden Definition angegeben werden. Das bedeutet, dass für nicht statische Membermethoden der Klasse zum Zeitpunkt der Definition die während der Deklaration angegebene Aufrufkonvention angenommen wird. Bei dieser Klassendefinition:
 

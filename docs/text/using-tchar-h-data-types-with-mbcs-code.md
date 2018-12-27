@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-ms.openlocfilehash: 81e51f136a42c0d0db12744735521ae2b3cdb5f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dcb194c72ca2a64317cddda8a1559e78edc0978f
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510707"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626668"
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>Verwenden von TCHAR.H-Datentypen in _MBCS-Code
 
@@ -43,7 +43,7 @@ Im Folgenden werden drei Lösungen vorgestellt, um einen solchen Typenkonflikt (
     #define _USE_INLINING
     ```
 
-   Diese Methode verursacht eine Inline-Funktionsthunk, bereitgestellt in Tchar.h, um die generische Textroutine direkt der entsprechenden MBCS-Routine zuzuordnen. Im folgenden Codeauszug aus Tchar.h enthält ein Beispiel wie dies vonstatten geht.
+   Diese Methode verursacht eine Inline-Funktionsthunk, bereitgestellt in tchar.h, um die generische Textroutine direkt der entsprechenden MBCS-Routine zuzuordnen. Im folgenden Codeauszug aus tchar.h enthält ein Beispiel wie dies vonstatten geht.
 
     ```cpp
     __inline char *_tcsrev(char *_s1)
@@ -68,4 +68,4 @@ Im Folgenden werden drei Lösungen vorgestellt, um einen solchen Typenkonflikt (
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zuordnungen für generischen Text in Tchar.h](../text/generic-text-mappings-in-tchar-h.md)
+[Zuordnungen für generischen Text in tchar.h](../text/generic-text-mappings-in-tchar-h.md)

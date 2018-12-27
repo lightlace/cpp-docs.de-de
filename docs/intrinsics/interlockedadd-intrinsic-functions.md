@@ -1,6 +1,6 @@
 ---
 title: Intrinsische Funktionen „_InterlockedAdd“
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - _InterlockedAdd64_acq_cpp
 - _InterlockedAdd64_acq
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-ms.openlocfilehash: 0952a7727a433a718eac2f1873249327647599dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 473d113ff9af3b009075dfef657082034b1bbcb6
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461593"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626905"
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedAdd“
 
 **Microsoft-spezifisch**
 
-Führen Sie atomarische Addition aus, die sicherstellt, dass der Vorgang erfolgreich abgeschlossen wird, wenn mehrere Threads auf eine freigegebene Variable zugreifen.
+Diese Funktionen führen atomarische Addition aus, um sicherzustellen, dass der Vorgang erfolgreich abgeschlossen ist, wenn mehr als einem Thread auf eine freigegebene Variable zugreifen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -105,13 +105,13 @@ Beide Funktionen geben das Ergebnis der Addition zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Versionen dieser Funktionen mit den Suffixen `_acq` oder `_rel` führen eine ineinander greifende Addition gemäß der Semantiken zum Abrufen oder Freigeben durch. Mit Semantiken zum Abrufen (Acquire-Semantiken) ist gemeint, dass das Ergebnis des Vorgangs für alle Threads und Prozessoren sichtbar gemacht wird, bevor nachfolgende Speicherlese- und -schreibvorgänge durchgeführt werden. „Acquire“ ist bei der Eingabe eines kritischen Abschnitts nützlich. Mit Semantiken für die Freigabe (Release-Semantiken) ist gemeint, dass alle Speicherlese- und -schreibvorgänge für alle Threads und Prozessoren sichtbar gemacht werden, bevor das Ergebnis des Vorgangs selbst angezeigt wird. „Release“ ist beim Verlassen eines kritischen Abschnitts nützlich. Die systeminternen Funktionen mit einer `_nf`-Suffix ("no fence") fungieren nicht als Speicherbarriere.
+Die Versionen dieser Funktionen mit den Suffixen `_acq` oder `_rel` führen eine ineinander greifende Addition gemäß der Semantiken zum Abrufen oder Freigeben durch. *Acquire-Semantik* bedeutet, dass das Ergebnis des Vorgangs für alle Threads und Prozessoren sichtbar gemacht wird, bevor alle späteren speicherlese- und-Schreibvorgänge. „Acquire“ ist bei der Eingabe eines kritischen Abschnitts nützlich. *Release-Semantik* bedeutet, die alle speicherlese- und-Schreibvorgänge für alle Threads und Prozessoren sichtbar gemacht werden, bevor das Ergebnis des Vorgangs sichtbar, selbst gemacht wird erzwungen werden. „Release“ ist beim Verlassen eines kritischen Abschnitts nützlich. Die systeminternen Funktionen mit einer `_nf` ("no Fence")-Suffix nicht als Arbeitsspeicherbarriere fungieren.
 
 Diese Routinen sind nur als systeminterne Funktionen verfügbar.
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // interlockedadd.cpp
 // Compile with: /Oi /EHsc
 // processor: ARM
@@ -132,13 +132,13 @@ int main()
 
 ## <a name="output"></a>Output
 
-```
+```Output
 0xffffff00 0xff0000 0xffffff00
 ```
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // interlockedadd64.cpp
 // compile with: /Oi /EHsc
 // processor: ARM
@@ -162,7 +162,7 @@ int main()
 
 ## <a name="output"></a>Output
 
-```
+```Output
 ff0000000000 + ff0000ffffffff = ffff00ffffffff
 Return value: ffff00ffffffff
 ```
@@ -172,4 +172,4 @@ Return value: ffff00ffffffff
 ## <a name="see-also"></a>Siehe auch
 
 [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
-[Konflikt mit dem x86-Compiler](../build/conflicts-with-the-x86-compiler.md)
+[Konflikt mit dem x86-Compiler](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

@@ -1,6 +1,6 @@
 ---
 title: Argumentübergabe und Benennungskonventionen
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 helpviewer_keywords:
 - argument passing [C++], conventions
 - arguments [C++], widening
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - passing arguments [C++], conventions
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
-ms.openlocfilehash: 735e703e3e7d3ddb55a04fb0d29b3899682fe24e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca09d31d3d8d50ca94543c5e02262edd7b2deefc
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473293"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627240"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>Argumentübergabe und Benennungskonventionen
 
@@ -31,11 +31,11 @@ Auf x86-Plattformen werden alle Argumente bei Übergabe auf 32 Bits erweitert. R
 Vom Compiler wird Prolog- und Epilogcode zum Speichern und Wiederherstellen von ESI-, EDI-, EBX- sowie EBP-Registern verwendet, sofern sie in der Funktion verwendet werden.
 
 > [!NOTE]
->  Wenn eine Struktur, Union oder Klasse nach Wert aus einer Funktion zurückgegeben wird, müssen alle Definitionen des Typs identisch sein, andernfalls können zur Laufzeit Fehler im Programm auftreten.
+> Wenn eine Struktur, Union oder Klasse nach Wert aus einer Funktion zurückgegeben wird, müssen alle Definitionen des Typs identisch sein, andernfalls können zur Laufzeit Fehler im Programm auftreten.
 
 Informationen zum Definieren Sie eigene Prolog- und epilogsequenzen Funktionscode, finden Sie unter [Naked-Funktionsaufrufe](../cpp/naked-function-calls.md).
 
-Informationen zum Standard-Standardaufrufkonventionen im Code, die Ziele X64 Plattformen finden Sie unter [Überblick X64 Aufrufkonventionen](../build/overview-of-x64-calling-conventions.md). Weitere Informationen zu aufrufkonventionsproblemen im Code, der ARM-Plattformen abzielt, finden Sie unter [häufige Visual C++ ARM-Migrationsprobleme](../build/common-visual-cpp-arm-migration-issues.md).
+Informationen zum Standard-Standardaufrufkonventionen im Code, die Ziele X64 Plattformen finden Sie unter [X64 Aufrufkonvention](../build/x64-calling-convention.md). Weitere Informationen zu aufrufkonventionsproblemen im Code, der ARM-Plattformen abzielt, finden Sie unter [häufige Visual C++ ARM-Migrationsprobleme](../build/common-visual-cpp-arm-migration-issues.md).
 
 Die folgenden Aufrufkonventionen werden vom Visual C/C++-Compiler unterstützt.
 

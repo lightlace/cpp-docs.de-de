@@ -1,6 +1,6 @@
 ---
 title: pack
-ms.date: 09/17/2018
+ms.date: 12/17/2018
 f1_keywords:
 - pack_CPP
 - vc-pragma.pack
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: 0067b30c5c2eae9391defeea11c722d455ec8f1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b959c161a933cc76590cfbd65d295aad36f07d7
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507600"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627446"
 ---
 # <a name="pack"></a>pack
 Gibt die Komprimierungsausrichtung für Struktur, Union und Klassenmember an.
@@ -57,7 +57,7 @@ Weitere Informationen zur Änderung der Ausrichtung finden Sie unter folgenden T
 
 - [__unaligned](../cpp/unaligned.md)
 
-- [Beispiele für die Strukturausrichtung](../build/examples-of-structure-alignment.md) (X64 bestimmte)
+- [Beispiele für die Strukturausrichtung](../build/x64-software-conventions.md#examples-of-structure-alignment) (X64 bestimmte)
 
    > [!WARNING]
    > Beachten Sie, dass Sie in Visual Studio 2015 und höher die standardmäßigen „alignas“- und „alignof“-Operatoren verwenden können, die im Gegensatz zu `__alignof` und `declspec( align )` über Compiler portiert werden. Der C++-Standard behandelt nicht packen, sodass Sie weiterhin verwenden müssen **Pack** (oder die entsprechende Erweiterung auf anderen Compilern) um Ausrichtungen, die kleiner als die Wortgröße der Zielarchitektur anzugeben.

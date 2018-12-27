@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 6c637e06-bba8-4c08-b0fc-cf8cb067ce34
-ms.openlocfilehash: cf4d489661516271e1d21487aaa3b69fe3580e62
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f96c9eee1ca1d0d89a4ce401c8705984efabfeaa
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560198"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657356"
 ---
 # <a name="cstringarray-class"></a>CStringArray-Klasse
 
@@ -109,7 +109,7 @@ wird übersetzt in
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|Legt das Element am angegebenen Index fest oder ruft es ab.|
+|[CObArray::operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|Legt das Element am angegebenen Index fest oder ruft es ab.|
 
 ## <a name="remarks"></a>Hinweise
 

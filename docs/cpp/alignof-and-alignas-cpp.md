@@ -2,12 +2,12 @@
 title: alignof und alignas (C++)
 ms.date: 11/04/2016
 ms.assetid: 1d18aa8a-9621-4fb5-86e5-4cc86d5187f4
-ms.openlocfilehash: e5d023d7969764bdd36030a508abdd94068e48b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 825df25494497e13d29212f7f951be8247b6f136
+ms.sourcegitcommit: 185b8ee6dd4e10045df730c5b957b9729813da2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493651"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53411922"
 ---
 # <a name="alignof-and-alignas-c"></a>alignof und alignas (C++)
 
@@ -15,7 +15,7 @@ Die **Alignas** Typspezifizierer ist eine portierbare, C++-Standardmethode, die 
 
 ## <a name="example"></a>Beispiel
 
-Sie können **Alignas** auf eine Klasse union, oder auf einzelne Elemente. Wenn mehrere **Alignas** Spezifizierer gefunden, wählt der Compiler den strengsten davon aus (denjenigen mit dem größten Wert) wählen.
+Sie können **Alignas** auf eine Klasse, Struktur oder Union oder auf einzelne Elemente. Wenn mehrere **Alignas** Spezifizierer gefunden, wählt der Compiler den strengsten davon aus (denjenigen mit dem größten Wert) wählen.
 
 ```cpp
 // alignas_alignof.cpp

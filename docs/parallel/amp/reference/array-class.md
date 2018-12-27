@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-ms.openlocfilehash: 7543249719cd7fab10bac7824e69023fefbc35f1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 93ef654bb71a342a6215ce5cd60786f36cadedf7
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523727"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657551"
 ---
 # <a name="array-class"></a>array-Klasse
 
@@ -77,7 +77,7 @@ Der Rang des Arrays.
 |----------|-----------------|
 |[operator std::vector&lt;value_type&gt;](#operator_vec)|Verwendet `copy(*this, vector)` implizit konvertieren das Array in eine std::[Vektor](../../../standard-library/vector-class.md) Objekt.|
 |[Operator()](#operator_call)|Gibt den Elementwert zurück, der von den Parametern angegeben wird.|
-|[operator[]](#operator_at)|Gibt das Element am angegebenen Index zurück.|
+|[operator\[\]](#operator_at)|Gibt das Element am angegebenen Index zurück.|
 |[operator=](#operator_eq)|Kopiert den Inhalt des angegebenen `array`-Objekts in dieses Objekt.|
 
 ### <a name="public-constants"></a>Öffentliche Konstanten

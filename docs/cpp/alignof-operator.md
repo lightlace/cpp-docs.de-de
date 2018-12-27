@@ -1,6 +1,6 @@
 ---
 title: __alignof-Operator
-ms.date: 10/09/2018
+ms.date: 12/17/2018
 f1_keywords:
 - alignas_cpp
 - __alignof_cpp
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - alignof [C++]
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
-ms.openlocfilehash: 391535d7d80b075149c797cbd00fa34d46ed677d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96c85db83c133af6f1712baa8597ed3360277854
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479494"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627415"
 ---
 # <a name="alignof-operator"></a>__alignof-Operator
 
@@ -86,11 +86,11 @@ Weitere Informationen über das Ändern der Ausrichtung finden Sie unter:
 
 - [/Zp (Strukturmemberausrichtung)](../build/reference/zp-struct-member-alignment.md)
 
-- [Beispiele für die Strukturausrichtung](../build/examples-of-structure-alignment.md) (X64 bestimmte)
+- [Beispiele für die Strukturausrichtung](../build/x64-software-conventions.md#examples-of-structure-alignment) (X64 bestimmte)
 
 Weitere Informationen zu den Unterschieden bei der Ausrichtung im Code für x86 und x64 finden Sie unter:
 
-- [Konflikt mit dem x86-Compiler](../build/conflicts-with-the-x86-compiler.md)
+- [Konflikt mit dem x86-Compiler](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
 
 **Ende Microsoft-spezifisch**
 

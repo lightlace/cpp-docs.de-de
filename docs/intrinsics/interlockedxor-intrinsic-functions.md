@@ -1,6 +1,6 @@
 ---
 title: Intrinsische Funktionen „_InterlockedXor“
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - _InterlockedXor_nf
 - _InterlockedXor_np
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - InterlockedXor64 intrinsic
 - _InterlockedXor intrinsic
 ms.assetid: faef1796-cb5a-4430-b1e2-9d5eaf9b4a91
-ms.openlocfilehash: ec3397bc19f2a5bb00c05f734de9ee53bdb60f88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8410420564ae641ff5e624cc5a1ddb0f260672e6
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526515"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627376"
 ---
 # <a name="interlockedxor-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedXor“
 
@@ -207,4 +207,4 @@ int main()
 ## <a name="see-also"></a>Siehe auch
 
 [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
-[Konflikt mit dem x86-Compiler](../build/conflicts-with-the-x86-compiler.md)
+[Konflikt mit dem x86-Compiler](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

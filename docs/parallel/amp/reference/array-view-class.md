@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-ms.openlocfilehash: a0d8fa733a5da14e8ee16acf2623df07c9974893
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d33c54e82e9bc228b97bff4802c9231a98f51033
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523369"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657486"
 ---
 # <a name="arrayview-class"></a>array_view-Klasse
 
@@ -94,7 +94,7 @@ Der Rang des `array_view`-Objekts.
 |Name|Beschreibung|
 |----------|-----------------|
 |[Operator()](#operator_call)|Gibt den Wert des Elements zurück, das durch den Parameter bzw. die Parameter angegeben wird.|
-|[operator[]](#operator_at)|Gibt das Element zurück, das von den Parametern angegeben wird.|
+|[operator\[\]](#operator_at)|Gibt das Element zurück, das von den Parametern angegeben wird.|
 |[operator=](#operator_eq)|Kopiert den Inhalt des angegebenen `array_view`-Objekts in dieses Objekt.|
 
 ### <a name="public-constants"></a>Öffentliche Konstanten

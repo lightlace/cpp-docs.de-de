@@ -33,12 +33,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
-ms.openlocfilehash: 367a5ed6bf9d42730a309570c93afd1b315bae25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8036b0942600e5d47254583e2675c525010a5c1
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501750"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657564"
 ---
 # <a name="concurrentvector-class"></a>concurrent_vector-Klasse
 
@@ -121,7 +121,7 @@ Der Typ, der das gespeicherte Zuweisungsobjekt darstellt, das Details zur Speich
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[operator[]](#operator_at)|Überladen. Bietet Zugriff auf das Element am angegebenen Index in den gleichzeitigen Vektor. Diese Methode ist nebenläufigkeitssicher für Lesevorgänge und auch während der den Vektor, wächst, solange Sie haben sichergestellt, das den Wert `_Index` ist kleiner als die Anzahl der gleichzeitigen Vektor.|
+|[operator\[\]](#operator_at)|Überladen. Bietet Zugriff auf das Element am angegebenen Index in den gleichzeitigen Vektor. Diese Methode ist nebenläufigkeitssicher für Lesevorgänge und auch während der den Vektor, wächst, solange Sie haben sichergestellt, das den Wert `_Index` ist kleiner als die Anzahl der gleichzeitigen Vektor.|
 |[operator=](#operator_eq)|Überladen. Weist den Inhalt eines anderen `concurrent_vector`-Objekts diesem Objekt zu. Diese Methode ist nicht nebenläufigkeitssicher.|
 
 ## <a name="remarks"></a>Hinweise
