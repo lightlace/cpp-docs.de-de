@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_map class
 ms.assetid: b2d879dd-87ef-4af9-a266-a5443fd538b8
-ms.openlocfilehash: 31eec71dd134a5c675f70070ce1457462d10b739
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50868d020224e7bade9766f7307bfcc46ce4be47
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509369"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657590"
 ---
 # <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map-Klasse
 
@@ -107,7 +107,7 @@ Der Typ, der das gespeicherte Zuordnungsobjekt darstellt, das Details zur Zuordn
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[operator[]](#operator_at)|Überladen. Sucht ein Element mit dem angegebenen Schlüssel oder fügt es ein. Diese Methode ist nebenläufigkeitssicher.|
+|[operator\[\]](#operator_at)|Überladen. Sucht ein Element mit dem angegebenen Schlüssel oder fügt es ein. Diese Methode ist nebenläufigkeitssicher.|
 |[operator=](#operator_eq)|Überladen. Weist den Inhalt eines anderen `concurrent_unordered_map`-Objekts diesem Objekt zu. Diese Methode ist nicht nebenläufigkeitssicher.|
 
 ## <a name="remarks"></a>Hinweise
@@ -425,7 +425,7 @@ Der itertatortyp für Einfügung verwendet.
 *V*<br/>
 Der Typ des Werts in der Zuordnung eingefügt werden soll.
 
-*Wert*<br/>
+*value*<br/>
 Der Wert eingefügt werden soll.
 
 *_Where*<br/>

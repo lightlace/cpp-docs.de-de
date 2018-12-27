@@ -24,12 +24,12 @@ helpviewer_keywords:
 - portability [C++], character sets
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
-ms.openlocfilehash: bb658db157433aadce183e7fab437f15251ff54c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6083fcf9db8236df15d1cb5e7de4cc15fe5916e
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631295"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626720"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Text und Zeichenfolgen in Visual C++
 
@@ -46,10 +46,10 @@ Beschreibt Unicode, eine Spezifikation zur Unterstützung sämtlicher Zeichensä
 [Unterstützung von Mehrbyte-Zeichensätzen (MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)<br/>
 Beschreibt MBCS, eine Alternative zu Unicode für die Unterstützung von Zeichensätzen, die nicht mit einem Byte pro Zeichen dargestellt werden können, z. B. Japanisch und Chinesisch.
 
-[Zuordnungen für generischen Text in Tchar.h](../text/generic-text-mappings-in-tchar-h.md)<br/>
+[Zuordnungen für generischen Text in tchar.h](../text/generic-text-mappings-in-tchar-h.md)<br/>
 Enthält Microsoft-spezifische Zuordnungen für generischen Text für viele Datentypen, Routinen und andere Objekte.
 
-[Vorgehensweise: Konvertieren zwischen verschiedenen Zeichenfolgentypen](../text/how-to-convert-between-various-string-types.md)<br/>
+[Vorgehensweise: Konvertieren Sie zwischen verschiedenen Zeichenfolgentypen](../text/how-to-convert-between-various-string-types.md)<br/>
 Veranschaulicht, wie verschiedene Visual C++-Zeichenfolgentypen in andere Zeichenfolgen konvertiert werden.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte

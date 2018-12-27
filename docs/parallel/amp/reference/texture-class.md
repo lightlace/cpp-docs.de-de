@@ -17,12 +17,12 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-ms.openlocfilehash: 675112e108f57ad5208899005865570491e0d055
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e427206379f1e7d094362411f074ad9cafb43fd
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486586"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657538"
 ---
 # <a name="texture-class"></a>texture-Klasse
 
@@ -76,7 +76,7 @@ Der Rang der Textur.
 |Name|Beschreibung|
 |----------|-----------------|
 |[Operator()](#operator_call)|Gibt den Elementwert zurück, der von den Parametern angegeben wird.|
-|[operator[]](#operator_at)|Gibt das Element am angegebenen Index zurück.|
+|[operator\[\]](#operator_at)|Gibt das Element am angegebenen Index zurück.|
 |[operator=](#operator_eq)|Kopiert das angegebene [Textur](texture-class.md) -Objekts in dieses Objekt.|
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
@@ -335,7 +335,7 @@ Der Index des Elements.
 *_Rank*<br/>
 Der Rang des Index.
 
-*Wert*<br/>
+*value*<br/>
 Der neue Wert des Elements.
 
 ##  <a name="ctor"></a> Textur

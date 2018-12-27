@@ -96,12 +96,12 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: 6f32519e56e42620caec755e6c250d0ee93c6677
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fdc3705980ac8f763e0438f19920148437e7ed27
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518969"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657525"
 ---
 # <a name="array-class-c-standard-library"></a>array-Klasse (C++-Standardvorlagenbibliothek)
 
@@ -162,7 +162,7 @@ class array;
 |Operator|Beschreibung|
 |-|-|
 |[array::operator=](#op_eq)|Ersetzt die kontrollierte Sequenz.|
-|[array::operator[]](#op_at)|Greift auf ein Element an einer angegebenen Position zu.|
+|[Array::\[\]](#op_at)|Greift auf ein Element an einer angegebenen Position zu.|
 
 ## <a name="remarks"></a>Hinweise
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MBCS [C++], enabling
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
-ms.openlocfilehash: 4476b0805c8806d344a9290ba190aed7c7697a8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51d85991fdab273d1cdad4e99400d1ad8ed6324c
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514633"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627426"
 ---
 # <a name="international-enabling"></a>Aktivierung der Internationalen Programmierung
 
@@ -27,7 +27,7 @@ Die meisten herkömmlichen C- und C++-Code Annahmen zum Zeichen und zeichenfolge
 
    - Verwenden Sie die gleichen portable Laufzeit-Funktionen, die MFC portable unter entweder Umgebung vornehmen.
 
-   - Stellen von Zeichenfolgenliteralen und Zeichen portable unter beiden-Umgebung mithilfe der `_T` Makro. Weitere Informationen finden Sie unter [Zuordnungen für generischen Text in Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+   - Stellen von Zeichenfolgenliteralen und Zeichen portable unter beiden-Umgebung mithilfe der `_T` Makro. Weitere Informationen finden Sie unter [Zuordnungen für generischen Text in tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
    - Vorsichtsmaßnahmen Sie bei der Analyse der MBCS-Zeichenfolgen. Diese Vorsichtsmaßnahmen sind unter Unicode nicht erforderlich. Weitere Informationen finden Sie unter [Tipps für die MBCS-Programmierung](../text/mbcs-programming-tips.md).
 

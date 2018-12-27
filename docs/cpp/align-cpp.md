@@ -1,18 +1,18 @@
 ---
 title: align (C++)
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - align_cpp
 helpviewer_keywords:
 - align __declspec keyword
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
-ms.openlocfilehash: f5353354a334f6ee597bca3e49dfa2b4f98a0005
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1bfe6e7a4646be8cea622078b4d85f20f458e1c5
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440442"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627331"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -78,9 +78,9 @@ Weitere Informationen finden Sie unter:
 
 - [Funktionsweise der Ausrichtung mit der Verpackung von Daten](#vclrfhowalignworkswithdatapacking)
 
-- [Beispiele für die Strukturausrichtung](../build/examples-of-structure-alignment.md) (X64 bestimmte)
+- [Beispiele für die Strukturausrichtung](../build/x64-software-conventions.md#examples-of-structure-alignment) (X64 bestimmte)
 
-##  <a name="vclrfalignexamples"></a> ausrichtungsbeispiele
+## <a name="vclrfalignexamples"></a> ausrichtungsbeispiele
 
 Die folgenden Beispiele zeigen, wie sich `__declspec(align(#))` auf die Größe und die Ausrichtung der Datenstrukturen auswirkt. Die Beispiele gehen von folgenden Definitionen aus:
 
@@ -171,7 +171,7 @@ void fn() {
 
 Wenn der Speicher für Heaps zugewiesen wird, hängt die Ausrichtung davon ab, welche Speicherbelegungsfunktion aufgerufen wird.  Wenn Sie beispielsweise `malloc` verwenden, hängt das Ergebnis von der Größe des Operanden ab. Wenn *Arg* > = 8, der zurückgegebene Arbeitsspeicher mit 8 Bytes ausgerichtet ist. Wenn *Arg* < 8, der die Ausrichtung des zurückgegebenen Arbeitsspeichers ist die erste Potenz von 2 weniger als *Arg*. Wenn Sie beispielsweise "malloc(7)" verwenden, ist die Ausrichtung 4 Bytes.
 
-##  <a name="vclrf_declspecaligntypedef"></a> Definieren neuer Typen mit __declspec(align(#))
+## <a name="vclrf_declspecaligntypedef"></a> Definieren neuer Typen mit __declspec(align(#))
 
 Sie können einen Typ mit einem Ausrichtungsmerkmal definieren.
 
@@ -184,7 +184,7 @@ typedef __declspec(align(32)) struct aType bType;
 
 Jetzt `aType` und `bType` sind dem gleichen Größe (8 Bytes), aber Variablen vom Typ `bType` 32 Bytes ausgerichtet sind.
 
-##  <a name="vclrfthreadlocalstorageallocation"></a> Ausrichten von Daten im threadlokalen Speicher
+## <a name="vclrfthreadlocalstorageallocation"></a> Ausrichten von Daten im threadlokalen Speicher
 
 Statische lokale Threadspeicher (TLS), die mit dem `__declspec(thread)`-Attribut erstellt und im TLS-Abschnitt des Images platziert wurden, verhalten sich bei der Ausrichtung wie normale statische Daten. Zum Erstellen von TLS-Daten ordnet das Betriebssystem die Größe des TLS-Abschnitts zu und berücksichtigt das Ausrichtungsattribut für TLS-Abschnitte.
 
@@ -207,7 +207,7 @@ struct CACHE_ALIGN S9 {
 __declspec(thread) struct S9 a;
 ```
 
-##  <a name="vclrfhowalignworkswithdatapacking"></a> Funktionsweise der Ausrichtung mit der Verpackung von Daten
+## <a name="vclrfhowalignworkswithdatapacking"></a> Funktionsweise der Ausrichtung mit der Verpackung von Daten
 
 Die `/Zp` Compileroption und das `pack` Pragma wirken sich das Verpacken von Daten für Struktur-und Unionmember. Dieses Beispiel zeigt, wie `/Zp` und `__declspec(align(#))` zusammenarbeiten:
 
@@ -244,4 +244,4 @@ Der Offset eines Objekts basiert auf dem Offset des vorherigen Objekts und der a
 
 [__declspec](../cpp/declspec.md)<br/>
 [Übersicht über ARM-ABI-Konventionen](../build/overview-of-arm-abi-conventions.md)<br/>
-[Übersicht über x64-Aufrufkonventionen](../build/overview-of-x64-calling-conventions.md)
+[X64 Softwarekonventionen](../build/x64-software-conventions.md)

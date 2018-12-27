@@ -1,6 +1,6 @@
 ---
 title: __vectorcall
-ms.date: 10/10/2018
+ms.date: 12/17/2018
 f1_keywords:
 - __vectorcall_cpp
 - __vectorcall
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - __vectorcall keyword
 - __vectorcall
 ms.assetid: 1c95ed59-86c6-4857-b4ed-10519193f851
-ms.openlocfilehash: ab542a7fbae286a7f39b66bb4857cd8e8ff6ab59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55c383c4bdf83ddb5fdf1c4990d5f2e47b4d819a
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507223"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627418"
 ---
 # <a name="vectorcall"></a>__vectorcall
 
 **Microsoft-spezifisch**
 
-Die **__vectorcall** -Aufrufkonvention gibt an, dass Argumente für Funktionen, konventionsgerecht möglichst in Registern übergeben werden. **__vectorcall** verwendet mehr Register für Argumente als [__fastcall](../cpp/fastcall.md) oder den Standardwert [X64 Aufrufkonvention](../build/overview-of-x64-calling-conventions.md) verwenden. Die **__vectorcall** -Aufrufkonvention wird nur in systemeigenen Code auf X86 und X64-Prozessoren, die Streaming SIMD Extensions 2 (SSE2) enthalten und höher unterstützt. Verwendung **__vectorcall** zum Beschleunigen von Funktionen, die mehrere Gleitkommazahl übergeben oder SIMD-vektorargumente und Vorgänge, die die Argumente nutzen, die in Registern geladen. Die folgende Liste enthält die Funktionen, die für die X86- und X64 Implementierungen der gelten **__vectorcall**. Die Unterschiede werden später in diesem Artikel erklärt.
+Die **__vectorcall** -Aufrufkonvention gibt an, dass Argumente für Funktionen, konventionsgerecht möglichst in Registern übergeben werden. **__vectorcall** verwendet mehr Register für Argumente als [__fastcall](../cpp/fastcall.md) oder den Standardwert [X64 Aufrufkonvention](../build/x64-calling-convention.md) verwenden. Die **__vectorcall** -Aufrufkonvention wird nur in systemeigenen Code auf X86 und X64-Prozessoren, die Streaming SIMD Extensions 2 (SSE2) enthalten und höher unterstützt. Verwendung **__vectorcall** zum Beschleunigen von Funktionen, die mehrere Gleitkommazahl übergeben oder SIMD-vektorargumente und Vorgänge, die die Argumente nutzen, die in Registern geladen. Die folgende Liste enthält die Funktionen, die für die X86- und X64 Implementierungen der gelten **__vectorcall**. Die Unterschiede werden später in diesem Artikel erklärt.
 
 |Element|Implementierung|
 |-------------|--------------------|

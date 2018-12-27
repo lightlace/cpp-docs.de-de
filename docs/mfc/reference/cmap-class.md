@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 3991ae4c7455aa8e6eb377112cb89c057e9567e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88ca218d4cb4e70dcc46ba04bbdfb7a9d12eb808
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627317"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657577"
 ---
 # <a name="cmap-class"></a>CMap-Klasse
 
@@ -106,7 +106,7 @@ Zum Datentyp *Wert* Argumente, in der Regel einen Verweis auf *Wert*.
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CMap::operator]](#operator_at)|Fügt ein Element in der Zuordnung – Operator Ersetzung für `SetAt`.|
+|[CMap::operator \[ \]](#operator_at)|Fügt ein Element in der Zuordnung – Operator Ersetzung für `SetAt`.|
 
 ## <a name="remarks"></a>Hinweise
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Unicode [C++], programming with
 - Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
-ms.openlocfilehash: 01e5866866bfc9cf81b243c569e527ab5019b928
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df9335fa2fc66ebba73b5c92ecd8007ca435f499
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437935"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627266"
 ---
 # <a name="unicode-programming-summary"></a>Zusammenfassung der Unicode-Programmierung
 
@@ -22,11 +22,11 @@ Wenn Sie von MFC- und C-Laufzeitunterstützung für Unicode profitieren möchten
 
 - Geben Sie den Einstiegspunkt an.
 
-   Auf der **Ausgabe** auf der Seite die **Linker** Ordner des Projekts [Eigenschaftenseiten](../ide/property-pages-visual-cpp.md) (Dialogfeld), legen die **Einstiegspunkt** Symbol `wWinMainCRTStartup`.
+   Auf der **erweitert** auf der Seite die **Linker** Ordner des Projekts [Eigenschaftenseiten](../ide/property-pages-visual-cpp.md) (Dialogfeld), legen die **Einstiegspunkt** Symbol `wWinMainCRTStartup`.
 
 - Verwenden Sie portable Laufzeitfunktionen und Typen.
 
-   Verwenden Sie für die Behandlung von Unicode-Zeichenfolgen die richtigen C-Laufzeitfunktionen. Sie können die `wcs` Familie der Funktionen, aber Sie können auch die portablen (aktivierten) `_TCHAR` Makros. Diese Makros sind alle mit dem Präfix `_tcs`; sie ersetzen, eins zu eins, für die `str` Funktionsreihe. Diese Funktionen werden ausführlich beschrieben die [Internationalisierung](../c-runtime-library/internationalization.md) Teil der *Run-Time Library Reference*. Weitere Informationen finden Sie unter [Zuordnungen für generischen Text in Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+   Verwenden Sie für die Behandlung von Unicode-Zeichenfolgen die richtigen C-Laufzeitfunktionen. Sie können die `wcs` Familie der Funktionen, aber Sie können auch die portablen (aktivierten) `_TCHAR` Makros. Diese Makros sind alle mit dem Präfix `_tcs`; sie ersetzen, eins zu eins, für die `str` Funktionsreihe. Diese Funktionen werden ausführlich beschrieben die [Internationalisierung](../c-runtime-library/internationalization.md) Teil der *Run-Time Library Reference*. Weitere Informationen finden Sie unter [Zuordnungen für generischen Text in tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
    Verwendung `_TCHAR` und die verknüpften portablen Datentypen, die in beschriebenen [-Unterstützung für Unicode](../text/support-for-unicode.md).
 
@@ -87,7 +87,7 @@ Zusammenfassend bieten MFC und die Laufzeitbibliothek folgende Unterstützung f�
 
 - Die Laufzeitbibliothek stellt Unicode-Versionen aller Funktionen zur Behandlung von Zeichenfolgen zur Verfügung. (Die Laufzeitbibliothek enthält mit den _tcs-Makros auch portable, für Unicode Dies sind die `_tcs` Makros.)
 
-- TCHAR.h stellt portable Datentypen und die `_T` -Makro zum Übersetzen von Zeichenfolgenliteralen und Zeichen. Weitere Informationen finden Sie unter [Zuordnungen für generischen Text in Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+- TCHAR.h stellt portable Datentypen und die `_T` -Makro zum Übersetzen von Zeichenfolgenliteralen und Zeichen. Weitere Informationen finden Sie unter [Zuordnungen für generischen Text in tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
 - Die Laufzeitbibliothek enthält eine Breitzeichen-Version von `main`. Verwendung `wmain` , die Unicode-kompatible Anwendung machen.
 

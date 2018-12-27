@@ -1,6 +1,6 @@
 ---
 title: include_alias
-ms.date: 11/04/2016
+ms.date: 12/16/2018
 f1_keywords:
 - vc-pragma.include_alias
 - include_alias_CPP
@@ -8,25 +8,25 @@ helpviewer_keywords:
 - pragmas, include_alias
 - include_alias pragma
 ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
-ms.openlocfilehash: 616672d713a9f0ac6eab4be8bce9b178d2510723
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d32cad2533b6044348651797d0278bcbebcafd6
+ms.sourcegitcommit: ae2f71fe0d64f1a90ef722759fe93c82abc064ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573166"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53587875"
 ---
 # <a name="includealias"></a>include_alias
 
-Gibt an, dass *Short_filename* als Alias für verwendet werden soll *Long_filename*.
+Gibt an, dass *Alias_filename* befindet sich einem `#include` -Anweisung der Compiler ersetzt *Actual_filename* an seiner Stelle.
 
 ## <a name="syntax"></a>Syntax
 
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>Pragma-Include_alias ("*Long_filename*","*Short_filename*")
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>Pragma-Include_alias (*Long_filename*, *Short_filename*)
+> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>Pragma-Include_alias ("*Alias_filename*","*Actual_filename*")
+> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>Pragma-Include_alias (\<*Alias_filename*>, \< *Actual_filename*>)
 
 ## <a name="remarks"></a>Hinweise
 
-Einige Dateisysteme unterstützen längere Headerdateinamen als das 8.3-FAT-Dateisystem. Der Compiler kann die längeren Namen nicht einfach bis 8.3 abschneiden, da die ersten acht Zeichen der längeren Headerdateinamen möglicherweise nicht eindeutig sind. Jedes Mal, wenn der Compiler erkennt die *Long_filename* Zeichenfolge ist, ersetzt er *Short_filename*, und sucht nach der Headerdatei *Short_filename* stattdessen. Dieses Pragma muss vor den entsprechenden `#include`-Anweisungen eingefügt werden. Zum Beispiel:
+Die **Include_alias** Pragma-Direktive können Sie Dateien zu ersetzen, die verschiedene Namen oder die Pfade für die Dateinamen von Quelldateien enthalten. Einige Dateisysteme können z. B. längere Headerdateinamen als das 8.3 Systemlimit von FAT-Datei. Der Compiler kann die längeren Namen nicht einfach bis 8.3 abschneiden, da die ersten acht Zeichen der längeren Headerdateinamen möglicherweise nicht eindeutig sind. Jedes Mal, wenn der Compiler erkennt die *Alias_filename* Zeichenfolge ist, ersetzt er *Actual_filename*, und sucht nach der Headerdatei *Actual_filename* stattdessen. Dieses Pragma muss vor den entsprechenden `#include`-Anweisungen eingefügt werden. Zum Beispiel:
 
 ```cpp
 // First eight characters of these two files not unique.
@@ -83,8 +83,8 @@ Außerdem generiert die folgende Anweisung einen Fehler:
 Beachten Sie, dass der Dateiname in Fehlermeldungen oder als Wert für die vordefinierten gemeldet `__FILE__` Makro verwenden, ist der Name der Datei aus, nachdem die Ersetzung ausgeführt wurde. Beispielsweise sehen Sie die Ausgabe nach den folgenden Anweisungen ein:
 
 ```cpp
-#pragma include_alias( "VeryLongFileName.H", "myfile.h" )
-#include "VeryLongFileName.H"
+#pragma include_alias( "VERYLONGFILENAME.H", "myfile.h" )
+#include "VERYLONGFILENAME.H"
 ```
 
 Fehler im VERYLONGFILENAME. H erzeugt die folgende Fehlermeldung angezeigt:
@@ -93,7 +93,7 @@ Fehler im VERYLONGFILENAME. H erzeugt die folgende Fehlermeldung angezeigt:
 myfile.h(15) : error C2059 : syntax error
 ```
 
-Beachten Sie außerdem, dass Transitivität nicht unterstützt wird. Im Falle der folgenden Direktiven gilt:
+Beachten Sie außerdem, dass Transitivität nicht unterstützt wird. Im Falle der folgenden Anweisungen gilt:
 
 ```cpp
 #pragma include_alias( "one.h", "two.h" )
@@ -101,7 +101,7 @@ Beachten Sie außerdem, dass Transitivität nicht unterstützt wird. Im Falle de
 #include "one.h"
 ```
 
-Der Compiler sucht die Datei TWO.H. statt THREE.H.
+der Compiler sucht nach der Datei Two.h statt Three.h.
 
 ## <a name="see-also"></a>Siehe auch
 

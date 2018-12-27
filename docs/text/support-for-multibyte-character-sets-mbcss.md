@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - MBCS [C++]
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
-ms.openlocfilehash: b6c8dc5548eb1082866b7a069fb38fd329effc75
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f309f6d7147b37691564d3d72c151da90055c6a
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437252"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627344"
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>Unterstützung von Mehrbyte-Zeichensätzen (MBCS)
 
@@ -46,7 +46,7 @@ Die C-Laufzeitbibliothek und MFC unterstützen die Einzelbyte-, MBCS- und Unicod
 
 ### <a name="mbcsunicode-portability"></a>MBCS/Unicode-Portabilität
 
-Mit der Headerdatei Tchar.h können Sie Einzelbyte-, MBCS- und Unicode-Anwendungen aus denselben Quellen erstellen. TCHAR.h definiert Makros, die mit dem Präfix *_tcs* , zugeordnet sind `str`, `_mbs`, oder `wcs` Funktionen nach Bedarf. Definieren Sie zur Erstellung von MBCS das `_MBCS`-Symbol. Definieren Sie das Symbol zur Erstellung von Unicode `_UNICODE`. Standardmäßig wird `_MBCS` für MFC-Anwendungen definiert. Weitere Informationen finden Sie unter [Zuordnungen für generischen Text in Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+Mit der Headerdatei tchar.h können Sie Einzelbyte-, MBCS- und Unicode-erstellen-Anwendungen von derselben Quelle. TCHAR.h definiert Makros, die mit dem Präfix *_tcs* , zugeordnet sind `str`, `_mbs`, oder `wcs` Funktionen nach Bedarf. Definieren Sie zur Erstellung von MBCS das `_MBCS`-Symbol. Definieren Sie das Symbol zur Erstellung von Unicode `_UNICODE`. Standardmäßig wird `_UNICODE` für MFC-Anwendungen definiert. Weitere Informationen finden Sie unter [Zuordnungen für generischen Text in tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
 > [!NOTE]
 >  Verhalten ist nicht definiert, wenn Sie beide definieren `_UNICODE` und `_MBCS`.
