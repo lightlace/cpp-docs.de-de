@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - /SOURCELINK linker option
 - /SOURCELINK
-ms.openlocfilehash: 5c742a37803f450aa6084c862800583f70bcedde
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5a01ca56a49791a608c5c836312c7728e9328c3
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480989"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978282"
 ---
-# <a name="sourcelink-include-sourcelink-file-in-pdb"></a>/ SOURCELINK (umfassen Sourcelink-Datei in die PDB-Datei)
+# <a name="sourcelink-include-source-link-file-in-pdb"></a>/ SOURCELINK (umfassen Link "Quelle"-Datei in die PDB-Datei)
 
-Gibt eine SourceLink-Konfigurationsdatei in der vom Linker generierte PDB-Datei eingeschlossen werden sollen.
+Gibt eine Link "Quelle"-Konfigurationsdatei in der vom Linker generierte PDB-Datei eingeschlossen werden sollen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,7 +28,7 @@ Gibt eine JSON-formatierte Konfigurationsdatei, die eine einfache Zuordnung der 
 
 ## <a name="remarks"></a>Hinweise
 
-SourceLink ist eine Sprache – und unabhängig Quellcodeverwaltungssystem für die Bereitstellung von Quelle für Binärdateien zu debuggen. SourceLink werden für systemeigene C++-Binärdateien, die in Visual Studio 2017 Version 15.8 ab. Einen Überblick über die SourceLink, finden Sie unter [Link "Quelle"](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md). Informationen zum SourceLink in Ihren Projekten zu verwenden und wie Sie die SourceLink-Datei als Teil Ihres Projekts zu generieren, finden Sie unter [mithilfe SourceLink](https://github.com/dotnet/sourcelink#using-sourcelink).
+Link "Quelle" ist eine Sprache – und unabhängig Quellcodeverwaltungssystem für die Bereitstellung von Quelle für Binärdateien zu debuggen. Link "Quelle" wird für systemeigene C++-Binärdateien, die in Visual Studio 2017 Version 15.8 ab unterstützt. Eine Übersicht der Link "Quelle", finden Sie unter [Link "Quelle"](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md). Informationen zum Link "Quelle" in Ihren Projekten zu verwenden und wie Sie die SourceLink-Datei als Teil Ihres Projekts zu generieren, finden Sie unter [mithilfe des Quelllinks](https://github.com/dotnet/sourcelink#using-source-link-in-c-projects).
 
 ### <a name="to-set-the-sourcelink-linker-option-in-visual-studio"></a>So legen Sie die /SOURCELINK-Linkeroption in Visual Studio fest
 

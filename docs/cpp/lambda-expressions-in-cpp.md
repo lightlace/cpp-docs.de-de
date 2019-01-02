@@ -6,12 +6,12 @@ helpviewer_keywords:
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: 1b8568d69fea002e59925e1e9354407457954e42
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 9ebe4fec06996e908c619b6ac14af098b1c07a01
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176262"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978308"
 ---
 # <a name="lambda-expressions-in-c"></a>Lambdaausdrücke in C++
 
@@ -55,7 +55,7 @@ In dieser Abbildung werden die Bestandteile eines Lambda-Ausdrucks dargestellt:
 
 1. *Trailing-Return-Type* Optional.
 
-1. *Lambda-Text*)
+1. *Lambda-Text*.
 
 ### <a name="capture-clause"></a>Erfassungsklausel
 
@@ -102,9 +102,9 @@ void f(Args... args) {
 
 Um Lambda-Ausdrücke im Text einer Klassenmethode verwenden möchten, übergeben die **dies** Zeiger an die Erfassungsklausel, um Zugriff auf die Methoden und Datenmember der einschließenden Klasse bereitzustellen.
 
-**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): die **dies** Zeiger kann nach Wert erfasst werden, indem Sie angeben `*this` in der Erfassungsklausel. Erfassung nach Wert bedeutet, dass die gesamte *Closure*, ist die anonymes Funktionsobjekt, Encapulates Lambda-Ausdrucks und wird in jeder Aufrufposition, an dem der Lambda-Ausdruck aufgerufen wird, kopiert. Erfassung nach Wert ist nützlich, wenn das Lambda in parallelen oder asynchrone Vorgänge, insbesondere auf bestimmter Hardwarearchitekturen wie NUMA ausgeführt wird.
+**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Die **dies** Zeiger kann als Wert erfasst werden, durch Angabe `*this` in der Erfassungsklausel. Erfassung nach Wert bedeutet, dass die gesamte *Closure*, ist die anonymes Funktionsobjekt, Encapulates Lambda-Ausdrucks und wird in jeder Aufrufposition, an dem der Lambda-Ausdruck aufgerufen wird, kopiert. Erfassung nach Wert ist nützlich, wenn das Lambda in parallelen oder asynchrone Vorgänge, insbesondere auf bestimmter Hardwarearchitekturen wie NUMA ausgeführt wird.
 
-Ein Beispiel, das zeigt, wie Sie das Verwenden von Lambdaausdrücken mit Klassenmethoden finden Sie unter "Beispiel: Verwenden eines Lambda-Ausdruck in eine Methode" in [Beispiele für Lambdaausdrücke](../cpp/examples-of-lambda-expressions.md).
+Ein Beispiel für die Verwendung eines Lambda-Ausdrucks mit Klassenmethoden finden Sie unter "Beispiel: Verwenden eines Lambda-Ausdrucks in einer Methode"in [Beispiele für Lambdaausdrücke](../cpp/examples-of-lambda-expressions.md).
 
 Wenn Sie die Erfassungsklausel verwenden, sollten Sie diese wichtigen Punkte beachten, insbesondere wenn Sie Lambdas mit Multithreading verwenden:
 
@@ -324,7 +324,7 @@ Weitere Informationen finden Sie unter [Generate_n](../standard-library/algorith
 
 ## <a name="constexpr-lambda-expressions"></a>"constexpr" Lambda-Ausdrücke
 
-**Visual Studio 2017 Version 15.3 und höher** (zur Verfügung, mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): kann ein Lambda-Ausdruck deklariert werden, als `constexpr` oder in einem konstanten Ausdruck verwendet, wenn die Initialisierung der einzelnen Datenmember, dass die It erfasst oder einführt, die in einem konstanten Ausdruck zulässig ist.
+**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Ein Lambda-Ausdruck kann deklariert werden, als `constexpr` oder in einem konstanten Ausdruck verwendet werden, wenn die Initialisierung der einzelnen Datenmember, das erfasst oder führt in einem konstanten Ausdruck zulässig ist.
 
 ```cpp
     int y = 32;
