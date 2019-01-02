@@ -25,7 +25,7 @@ Die Beschreibungen der Algorithmusvorlagenfunktionen verwenden einige Kurznotati
 
 - Der Ausdruck "im Bereich von \[ *ein*, *B*)" bezeichnet eine Sequenz von keinem oder mehreren diskreten Werten beginnend mit *ein* bis, jedoch nicht einschließlich *B* . Ein Bereich gilt nur, wenn *B* aus erreichbar ist *A;* können Sie speichern *ein* in einem Objekt *N* (*N*  =  *Ein*), erhöhen Sie das Objekt NULL oder mehr Vorkommen (++*N*), und dass das Objekt, das mit gleich *B* nach einer endlichen Anzahl von Schritten (*N*   ==  *B*).
 
-- Der Ausdruck "jedes *N* im Bereich von \[ *ein*, *B*)" bedeutet, dass *N* beginnt mit dem Wert *eine*und erhöht wird, NULL oder mehrmals, bis es gleich dem Wert *B*. Der Fall N* == *B* ist nicht im Bereich.
+- Der Ausdruck "jedes *N* im Bereich von \[ *ein*, *B*)" bedeutet, dass *N* beginnt mit dem Wert *eine*und erhöht wird, NULL oder mehrmals, bis es gleich dem Wert *B*. Der Fall *N*  ==  *B* ist nicht im Bereich.
 
 - Der Ausdruck "der niedrigste Wert der *N* im Bereich von \[ *ein*, *B*) so, dass *X*" bedeutet, dass die Bedingung *X* wird bestimmt, für die einzelnen *N* im Bereich von \[ *ein*, *B*) bis die Bedingung *X*erfüllt ist.
 
