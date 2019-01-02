@@ -12,18 +12,18 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-ms.openlocfilehash: bf7c5e58b88da4f60d2e784692cb6d4a0ed84970
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 59df523cc553881186921a878d131a109ae3cf27
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627450"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978295"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Zuordnungen für generischen Text in tchar.h
 
 Um das Transportieren von Code für die internationale Verwendung zu vereinfachen, stellt Microsoft-spezifische Zuordnungen für generischen Text von der Microsoft-Laufzeitbibliothek für viele Datentypen, Routinen und andere Objekte bereit. Diese Zuordnungen, die in tchar.h, um die generischen Code schreiben, der für Einzelbyte-, Mehrbyte-kompiliert werden, können definiert werden können oder Unicode-Zeichensätze, abhängig von einer eindeutigen Konstante, die Sie definieren, mit einem `#define` Anweisung. Generische Textzuordnungen sind Microsoft-Erweiterungen, die nicht mit ANSI kompatibel sind.
 
-Mit tchar.h, können Sie Einzelbyte- und Mehrbyte-Zeichensätzen (MBCS) Unicode-Anwendungen aus denselben Quellen erstellen. TCHAR.h definiert Makros (Präfix `_tcs`) zugeordnet, die Präprozessordefinitionen sind richtigen `str`, `_mbs`, oder `wcs` Funktionen nach Bedarf. Definieren Sie zur Erstellung von MBCS das `_MBCS`-Symbol. Definieren Sie das Symbol zur Erstellung von Unicode `_UNICODE`. Um eine Einzelbyte-Anwendung zu erstellen, geben Sie nichts an (Standardeinstellung). Standardmäßig wird `_MBCS` für MFC-Anwendungen definiert.
+Mit tchar.h, können Sie Einzelbyte- und Mehrbyte-Zeichensätzen (MBCS) Unicode-Anwendungen aus denselben Quellen erstellen. TCHAR.h definiert Makros (Präfix `_tcs`) zugeordnet, die Präprozessordefinitionen sind richtigen `str`, `_mbs`, oder `wcs` Funktionen nach Bedarf. Definieren Sie zur Erstellung von MBCS das `_MBCS`-Symbol. Definieren Sie das Symbol zur Erstellung von Unicode `_UNICODE`. Um eine Einzelbyte-Anwendung zu erstellen, geben Sie nichts an (Standardeinstellung). Standardmäßig wird `_UNICODE` für MFC-Anwendungen definiert.
 
 Die `_TCHAR` -Datentyp wird in tchar.h bedingt definiert. Wenn das Symbol `_UNICODE` wird definiert, für den Build, `_TCHAR` ist definiert als **"wchar_t"** ist, andernfalls für Einzelbyte- und MBCS-Builds als definiert **Char**. (**"wchar_t"**, die Unicode-Breitzeichen-Basisdatentyp, ist das 16-Bit-Gegenstück zu einem 8-Bit-signiert **Char**.) Verwenden Sie für internationale Anwendungen die `_tcs`-Funktionsreihe, bei der anstelle von Bytes `_TCHAR`-Einheiten verwendet werden. Z. B. `_tcsncpy` Kopien `n` `_TCHARs`, nicht `n` Bytes.
 
