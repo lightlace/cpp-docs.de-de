@@ -12,5 +12,6 @@
 ## [C/C++-Eigenschaften (Linux)](prop-pages/c-cpp-linux.md)
 ## [Linkereigenschaften (Linux)](prop-pages/linker-linux.md)
 ## [Buildereigniseigenschaften (Linux)](prop-pages/build-events-linux.md)
-## [Benutzerdefinierte Buildschritteigenschaften (Linux)](prop-pages/custom-build-step-linux.md) 
+## [Benutzerdefinierte Buildschritteigenschaften (Linux)](prop-pages/custom-build-step-linux.md)
 ## [MakeFile-Projekteigenschaften (Linux)](prop-pages/makefile-linux.md)
+## [Remotearchiveigenschaften (Linux)](prop-pages/remote-ar-linux.md)
