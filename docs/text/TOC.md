@@ -18,6 +18,6 @@
 #### [Zeichenvergleich](character-comparison.md)
 #### [Pufferüberlauf](buffer-overflow.md)
 ## [Unterstützung von ANSI](support-for-ansi.md)
-## [Zuordnungen für generischen Text in Tchar.h](generic-text-mappings-in-tchar-h.md)
+## [Zuordnungen für generischen Text in tchar.h](generic-text-mappings-in-tchar-h.md)
 ### [Verwenden von TCHAR.H-Datentypen in _MBCS-Code](using-tchar-h-data-types-with-mbcs-code.md)
 ## [Vorgehensweise: Konvertieren zwischen verschiedenen Zeichenfolgentypen](how-to-convert-between-various-string-types.md)
