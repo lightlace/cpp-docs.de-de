@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: 43e6b9320fb52fc17f65b27b06e2c6f4d4851528
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7170fe3ae058f832e452089021d9f863f1791f14
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496433"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657512"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>Exemplarische Vorgehensweise: Bereitstellen des Programms (C++)
 
@@ -62,7 +62,7 @@ In dieser exemplarischen Vorgehensweise wird der Windows Installer zum Bereitste
 
 1. Wählen Sie im **Projektmappen-Explorer** das Projekt **Game Installer** aus, und wählen Sie **Ansicht** > **Fenster „Eigenschaften“** aus, oder drücken Sie **F4**, um das Fenster **Eigenschaften** zu öffnen.
 
-1. Geben Sie zusätzliche Details an, die im Installer angezeigt werden sollen.  Verwenden Sie z.B. *Contoso* für den **Hersteller**, *Game Installer* für den **Produktnamen** und *http://www.contoso.com* als **SupportUrl**.
+1. Geben Sie zusätzliche Details an, die im Installer angezeigt werden sollen.  Verwenden Sie z. B. *Contoso* als **Hersteller**, *Game Installer* als **Produktnamen** und *http\://www.contoso.com* als **SupportUrl**.
 
 1. Klicken Sie in der Menüleiste auf **Build** > **Konfigurations-Manager**. Aktivieren Sie in der Tabelle **Projekt** unter der Spalte **Erstellen** das Kontrollkästchen für **Game Installer**. Klicken Sie auf **Schließen**.
 
