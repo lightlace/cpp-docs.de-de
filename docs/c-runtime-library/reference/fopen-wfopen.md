@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: 1397f3b3513fc9a3e93a69841a93b40c16e490cf
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: fb5f78411521dcbaddefda6c621b7fe44ce91736
+ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333227"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031290"
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 
@@ -97,7 +97,7 @@ Die folgende Tabelle enthält die Modi, die für verschiedene **ccs** Flags für
 
 ### <a name="encodings-used-based-on-ccs-flag-and-bom"></a>Verwendete Codierungen auf Grundlage von ccs-Flag und BOM
 
-|CCS-flag|Keine BOM (oder neue Datei)|BOM: UTF-8|BOM: UTF-16|
+|CCS-flag|Keine BOM (oder neue Datei)|BYTEREIHENFOLGE-MARKE: UTF-8|BYTEREIHENFOLGE-MARKE: UTF-16|
 |----------------|----------------------------|-----------------|------------------|
 |**UNICODE**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
 |**UTF-8**|**UTF-8**|**UTF-8**|**UTF-16LE**|
@@ -160,25 +160,25 @@ Die folgenden Optionen können angehängt werden, um *Modus* zusätzliche Verhal
 
 Gültige Zeichen für die *Modus* Zeichenfolge, die verwendet wird **Fopen** und **_fdopen** entsprechen *Oflag* Argumente, die in verwendetwerden[_open](open-wopen.md) und [_sopen](sopen-wsopen.md)wie folgt.
 
-|Zeichen in *Modus* Zeichenfolge|Entsprechende *Oflag* Wert für _open/_sopen|
+|Zeichen in *Modus* Zeichenfolge|Entsprechende *Oflag* Wert für \_öffnen /\_Sopen|
 |-------------------------------|----------------------------------------------------|
-|**a**|**_O_WRONLY** &#124; **_O_APPEND** (in der Regel **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_APPEND **)|
-|**a +**|**_O_RDWR** &#124; **_O_APPEND** (in der Regel **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
-|**r**|**_O_RDONLY**|
-|**R +**|**_O_RDWR**|
-|**W**|**_O_WRONLY** (in der Regel **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_TRUNC **)|
-|**w +**|**_O_RDWR** (in der Regel **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
-|**b**|**_O_BINARY**|
-|**t**|**_O_TEXT**|
-|**c**|Keiner|
-|**n**|Keiner|
-|**S**|**_O_SEQUENTIAL**|
-|**R**|**_O_RANDOM**|
-|**T**|**_O_SHORTLIVED**|
-|**D**|**_O_TEMPORARY**|
-|**CCS = UNICODE**|**_O_WTEXT**|
-|**CCS = UTF-8**|**"_O_UTF8"**|
-|**CCS = UTF-16LE**|**"_O_UTF16"**|
+|**a**|**\_O\_WRONLY** &#124;  **\_O\_APPEND** (in der Regel  **\_O\_WRONLY** &#124;  **\_O\_erstellen** &#124;  **\_O\_APPEND**)|
+|**a +**|**\_O\_RDWR** &#124;  **\_O\_APPEND** (in der Regel  **\_O\_RDWR** &#124;  **\_ O\_APPEND** &#124;  **\_O\_erstellen** )|
+|**r**|**\_O\_RDONLY**|
+|**R +**|**\_O\_RDWR**|
+|**W**|**\_O\_WRONLY** (in der Regel  **\_O\_WRONLY** &#124;  **\_O\_erstellen** &#124;  **\_O\_kürzungs-LSN**)|
+|**w +**|**\_O\_RDWR** (in der Regel  **\_O\_RDWR** &#124;  **\_O\_erstellen** &#124;  **\_ O\_kürzungs-LSN**)|
+|**b**|**\_O\_BINÄRE**|
+|**t**|**\_O\_TEXT**|
+|**c**|Keine|
+|**n**|Keine|
+|**S**|**\_O\_SEQUENZIELL**|
+|**R**|**\_O\_RANDOM**|
+|**T**|**\_O\_SHORTLIVED**|
+|**D**|**\_O\_TEMPORÄRE**|
+|**CCS = UNICODE**|**\_O\_WTEXT**|
+|**CCS = UTF-8**|**\_O\_UTF8**|
+|**CCS = UTF-16LE**|**\_O\_UTF16**|
 
 Bei Verwendung von **Rb** Modus, Sie haben keinen zum Portieren von Code, und wenn Sie erwarten, dass die meisten einer großen Datei lesen oder sind keine Bedenken bezüglich der netzwerkleistung, Sie könnten auch erwägen, ob der arbeitsspeichernutzung Win32-Dateien als Option zugeordnet.
 

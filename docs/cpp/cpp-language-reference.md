@@ -8,16 +8,16 @@ helpviewer_keywords:
 - language reference, Visual C++
 - Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 69b244a1559a4570cc00a72d86426a7929ffc474
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d184e70e6a7284d07e706ce8b8c247c96442750
+ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469380"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031264"
 ---
 # <a name="c-language-reference"></a>C++-Programmiersprachenreferenz
 
-In dieser Referenz wird die Implementierung der Programmiersprache C++ in Microsoft Visual C++ erläutert. Die Organisation basiert auf *The Annotated C++ Reference Manual* von Margaret Ellis und Bjarne Stroustrup sowie auf die ANSI/ISO C++ internationalen Standard (ISO/IEC FDIS 14882). Microsoft-spezifische Implementierungen von Funktionen der Programmiersprache C++- sind enthalten.
+In dieser Referenz wird die Implementierung der Programmiersprache C++ in Microsoft Visual C++ erläutert. Die Organisation basiert auf [ *The Annotated C++ Reference Manual* ](http://www.stroustrup.com/arm.html) von Margaret Ellis und Bjarne Stroustrup sowie auf die ANSI/ISO C++ internationalen Standard (ISO/IEC FDIS 14882). Microsoft-spezifische Implementierungen von Funktionen der Programmiersprache C++- sind enthalten.
 
 Eine Übersicht über moderne C++-Programmiertechniken, finden Sie unter [Willkommen zurück bei C++](welcome-back-to-cpp-modern-cpp.md).
 
