@@ -26,12 +26,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 887936299dce0a13738f9dd891a168785d17c979
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67cca27ba03a99d7e192d438a98f1bb3a93845ee
+ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617437"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031277"
 ---
 # <a name="setmode"></a>_setmode
 
@@ -66,7 +66,12 @@ Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_do
 
 Die **_setmode** -Funktion legt fest, um *Modus* den Übersetzungsmodus der Datei durch *fd*. Übergeben von **_O_TEXT** als *Modus* legt Text (die übersetzt wird,) Modus. Carriage Return-Line feed (CR-LF) Kombinationen werden in ein einzelnes Zeilenvorschubzeichen bei Eingabe übersetzt. Zeilenvorschubzeichen werden bei der Ausgabe in Kombinationen aus Wagenrücklauf und Zeilenvorschub (CR-LF) übersetzt. Übergeben von **_O_BINARY** legt binären (unübersetzten) Modus, in dem diese Übersetzungen unterdrückt werden.
 
-Sie können auch übergeben **_O_U16TEXT**, **_O_U8TEXT**, oder **_O_WTEXT** Unicode-Modus zu aktivieren, wie im zweiten Beispiel weiter unten in diesem Dokument veranschaulicht. **_setmode** dient normalerweise zum Ändern der Standardmodus für die Übersetzung von **Stdin** und **"stdout"**, aber Sie können auf eine beliebige Datei verwenden. Wenn Sie anwenden **_setmode** aufrufen, um den Dateideskriptor für einen Stream, **_setmode** vor dem Ausführen von Eingabe- oder Vorgänge für den Stream.
+Sie können auch übergeben **_O_U16TEXT**, **_O_U8TEXT**, oder **_O_WTEXT** Unicode-Modus zu aktivieren, wie im zweiten Beispiel weiter unten in diesem Dokument veranschaulicht.
+
+> [!CAUTION]
+> Unicode-Modus ist für Breitzeichen Druckfunktionen (z. B. `wprintf`) und wird für schmale Druckfunktionen nicht unterstützt. Verwenden einer schmalen print-Funktion auf einen Unicode-Modus-Stream wird eine Bestätigung ausgelöst.
+
+**_setmode** dient normalerweise zum Ändern der Standardmodus für die Übersetzung von **Stdin** und **"stdout"**, aber Sie können auf eine beliebige Datei verwenden. Wenn Sie anwenden **_setmode** aufrufen, um den Dateideskriptor für einen Stream, **_setmode** vor dem Ausführen von Eingabe- oder Vorgänge für den Stream.
 
 > [!CAUTION]
 > Wenn Sie Daten in einen Dateistream explizit leeren den Code mithilfe von schreiben [Fflush](fflush.md) vor der Verwendung **_setmode** zum Ändern des websitemodus. Wenn Sie den Code nicht leeren, kann es zu unerwartetem Verhalten kommen. Wenn Sie keine Daten in den Stream geschrieben haben, müssen Sie den Code nicht leeren.
