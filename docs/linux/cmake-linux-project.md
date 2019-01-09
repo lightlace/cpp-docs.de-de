@@ -3,12 +3,12 @@ title: Konfigurieren eines CMake-Projekts unter Linux in Visual Studio
 description: Konfigurieren eines Linux CMake-Projekts in Visual Studio
 ms.date: 07/20/2018
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 32d69e28c0991adc6117b7f9496eeb1022943ef2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28902f0a2938fe653eb4dfbb6e512367b1052b8c
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585041"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978321"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Konfigurieren eines Linux CMake-Projekts
 
@@ -18,7 +18,7 @@ Wenn Sie unter Linux die C++-Workload für Visual Studio installieren, ist stand
 Dieses Thema setzt voraus, dass Sie über grundlegende Kenntnisse der CMake-Unterstützung in Visual Studio verfügen. Weitere Informationen finden Sie unter [CMake-Tools für Visual C++](../ide/cmake-tools-for-visual-cpp.md). Weitere Informationen zu CMake selbst finden Sie unter [Erstellen, Testen und Paketerstellung Ihrer Software mit CMake](https://cmake.org/).
 
 > [!NOTE]
-> Die CMake-Unterstützung in Visual Studio erfordert die Servermodusunterstützung, die in CMake 3.8 eingeführt wurde. Für eine von Microsoft bereitgestellte Variante von CMake laden Sie unter [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) die aktuellsten vorab erstellten Binärdateien herunter.
+> Die CMake-Unterstützung in Visual Studio erfordert die Servermodusunterstützung, die in CMake 3.8 eingeführt wurde. Für eine von Microsoft bereitgestellte Variante von CMake laden Sie unter [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) die aktuellsten vorab erstellten Binärdateien herunter. In Visual Studio 2019 können vorab erstellte Binärdateien automatisch bereitgestellt werden (siehe [Herunterladen von vorab erstellten CMake-Binärdateien](#download-prebuilt-cmake-binaries)).
 
 ## <a name="open-a-folder"></a>Öffnen eines Ordners
 
@@ -109,6 +109,9 @@ Mithilfe dieser Optionen können Sie Befehle vor und nach dem Erstellen und vor 
 ## <a name="download-prebuilt-cmake-binaries"></a>Herunterladen vorab erstellter Binärdateien für CMake
 
 Ihre Linux-Distribution enthält möglicherweise eine ältere Version von CMake. Die CMake-Unterstützung in Visual Studio erfordert die Servermodusunterstützung, die in CMake 3.8 eingeführt wurde. Für eine von Microsoft bereitgestellte Variante von CMake laden Sie unter [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) die aktuellsten vorab erstellten Binärdateien herunter.
+
+**Visual Studio 2019**<br/>
+Wenn keine gültige CMake-Version auf dem Remotecomputer gefunden wurde, wird eine Infoleiste mit der Option zum automatischen Erstellen der vorab erstellten CMake-Binärdateien angezeigt. Die Binärdateien werden in `~/.vs/cmake` installiert. Nach dem Bereitstellen der Binärdateien wird Ihr Projekt automatisch neu generiert. Hinweis: Wenn die im Feld `cmakeExecutable` in `CMakeSettings.json` angegebene CMake-Version ungültig ist (Version nicht vorhanden oder ungültig) und die vorab erstellten Binärdateien vorhanden sind, ignoriert Visual Studio `cmakeExecutable` und verwendet die vorab erstellten Binärdateien.
 
 ## <a name="see-also"></a>Siehe auch
 
