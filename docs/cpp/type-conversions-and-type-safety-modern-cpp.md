@@ -3,12 +3,12 @@ title: Typumwandlungen und Typsicherheit (Modern C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-ms.openlocfilehash: 201f09cc9ac17f76634103c9c9b6c0259c8a8637
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 79285e4870b73ff01ed3b230a0162f87c0400aa8
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332620"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220646"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Typumwandlungen und Typsicherheit (Modern C++)
 
@@ -178,7 +178,7 @@ Der Umwandlungsoperator im C-Format ist mit dem Aufrufoperator () identisch und 
 
 ## <a name="see-also"></a>Siehe auch
 
-[C++-Typsystem](../cpp/cpp-type-system-modern-cpp.md)<br/>
-[Willkommen zurück bei C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[C++- Typsystem (Modern C++)](../cpp/cpp-type-system-modern-cpp.md)<br/>
+[Willkommen zurück bei C++ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)<br/>
 [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)

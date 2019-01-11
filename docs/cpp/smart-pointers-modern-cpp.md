@@ -3,12 +3,12 @@ title: Intelligente Zeiger (Modern C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
-ms.openlocfilehash: 5f04a4ab23241d63fc1694d419f85d8b694b7fff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c976f9ec72929f2c8ff91fb9f9594d91c7457365
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616904"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220659"
 ---
 # <a name="smart-pointers-modern-c"></a>Intelligente Zeiger (Modern C++)
 
@@ -116,6 +116,6 @@ Klasse, die Methoden zum Bearbeiten einer Liste von `CAutoPtr`-Knoten kapselt.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Willkommen zurück bei C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Willkommen zurück bei C++ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)<br/>
 [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)
