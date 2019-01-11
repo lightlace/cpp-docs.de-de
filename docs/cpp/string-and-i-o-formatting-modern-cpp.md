@@ -3,12 +3,12 @@ title: Formatieren von Zeichenfolgen und e / A (Modern C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-ms.openlocfilehash: 816eb71dae011f853a6e7ade1a1a2a8144a457c5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c051a7d70042456d30bee0ebb2b362c5d05b8e37
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326185"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220503"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Formatieren von Zeichenfolgen und Ein-/Ausgaben (Modern C++)
 
@@ -42,11 +42,11 @@ Dies kann vielen Fällen außerordentlich lästig sein. Alternativ können Sie "
 
 Einige Vorteile von "Boost.Format" sind:
 
-- Sicher: Typsicher und löst eine Ausnahme bei Fehlern aus, z. B. bei der Angabe von zu wenigen oder zu vielen Elementen
+- Sicher: Typsicher und löst eine Ausnahme bei Fehlern – z. B. der Spezifikation zu wenige oder zu viele Elemente.
 
-- Erweiterbar: Funktioniert für jeden Typ, der gestreamt werden kann
+- Erweiterbar: Kann für jeden Typ, der gestreamt werden kann.
 
-- Bequem: Standard-Posix und ähnliche Formatzeichenfolgen
+- Praktisch: Standard-Posix und ähnliche Formatzeichenfolgen.
 
 Obwohl "boost.Format" auf C++ basiert [Iostreams](../standard-library/iostream-programming.md), die sicher und erweiterbar sind, sie aber nicht leistungsoptimiert. Wenn Sie zur Optimierung der Leistung benötigen, sollten Sie C [Printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) und [Sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), denen sind, schnell und einfach zu verwenden. Allerdings sind sie nicht erweiterbar und können Sicherheitsrisiken bergen. (Sichere Versionen sind vorhanden, doch verursachen diese geringfügige Leistungseinbußen. Weitere Informationen finden Sie unter [Printf_s, _printf_s_l, Wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) und [Sprintf_s, _sprintf_s_l, Swprintf_s, _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).
 
@@ -64,7 +64,7 @@ Im folgenden Code werden einige der Boost-Formatierungsfunktionen verdeutlicht.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Willkommen zurück bei C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Willkommen zurück bei C++ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)<br/>
 [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)<br/>
 [\<iostream>](../standard-library/iostream.md)<br/>

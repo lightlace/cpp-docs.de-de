@@ -1,17 +1,17 @@
 ---
-title: 'Gewusst wie: Entwurfsrichtlinien für sichere Ausnahmebehandlung'
+title: 'Vorgehensweise: Entwurf für sichere Ausnahmebehandlung'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: f384da3eee0c7bca80d8d6c61f8d8cf0cfaece92
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 2dada25ea712b7bb6d48d80525c824a0457b18cf
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327004"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220549"
 ---
-# <a name="how-to-design-for-exception-safety"></a>Gewusst wie: Entwurfsrichtlinien für sichere Ausnahmebehandlung
+# <a name="how-to-design-for-exception-safety"></a>Vorgehensweise: Entwurf für sichere Ausnahmebehandlung
 
 Einer der Vorteile des Ausnahmemechanismus ist, dass die Ausführung – zusammen mit Daten zur Ausnahme – direkt von der Anweisung, die die Ausnahme auslöst, zur ersten catch-Anweisung springt, die sie behandelt. Der Handler kann sich in der Aufrufliste auf einer beliebig höheren Ebene befinden. Funktionen, die zwischen der try- und der throw-Anweisung aufgerufen werden, müssen nicht über Informationen über die ausgelöste Ausnahme verfügen.  Sie müssen jedoch so gestaltet werden, dass sie an jedem Punkt, an dem eine Ausnahme von unten nach oben verteilt wird, den Gültigkeitsbereich "unerwartet" verlassen können. Dabei dürfen sie keine teilweise erstellten Objekte, Speicherverluste oder Datenstrukturen, die in unbrauchbarem Zustand sind, hinterlassen.
 
@@ -95,7 +95,7 @@ In der Regel wird ausnahmesicherheit im Hinblick auf die drei ausnahmegarantien,
 
 Die NO-FAIL-Garantie (oder "NO-THROW") ist die stärkste Garantie, die eine Funktion bereitstellen kann. Sie gibt an, dass die Funktion keine Ausnahme auslöst oder keine Weitergabe einer Ausnahme zulässt. Sie können jedoch eine solche Garantie nur dann zuverlässig bereitstellen, wenn folgende Voraussetzungen zutreffen: (a) Sie wissen, dass alle von dieser Funktion aufgerufenen Funktionen ebenfalls NO-FAIL sind, oder (b) Sie wissen, dass alle ausgelösten Ausnahmen abgefangen werden, bevor sie diese Funktion erreichen, oder (c) Sie wissen, wie Sie alle Ausnahmen abfangen und ordnungsgemäß behandeln, die möglicherweise diese Funktion erreichen.
 
-Sowohl die starke Garantie als auch die grundlegende Garantie basieren auf der Annahme, dass die Destruktoren NO-FAIL sind. Alle Container und Typen in der Standardbibliothek garantieren, dass ihre Destruktoren keine Ausnahmen auslösen. Es gibt auch eine entgegengesetzte Anforderung: Die Standardbibliothek erfordert, dass benutzerdefinierte Typen, die für sie angegeben werden – z. B. Vorlagenargumente – nicht auslösende Destruktoren besitzen.
+Sowohl die starke Garantie als auch die grundlegende Garantie basieren auf der Annahme, dass die Destruktoren NO-FAIL sind. Alle Container und Typen in der Standardbibliothek garantieren, dass ihre Destruktoren keine Ausnahmen auslösen. Es gibt auch eine entgegengesetzte Anforderung: Die Standardbibliothek erfordert, dass benutzerdefinierte, die Typen angegeben werden – z. B. Vorlagenargumente – nicht auslösende Destruktoren benötigen.
 
 ### <a name="strong-guarantee"></a>Starke Garantie
 
@@ -121,5 +121,5 @@ Die integrierten Datentypen sind alle NO-FAIL, und die Standardbibliothekstypen 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Fehler- und Ausnahmebehandlung](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Vorgehensweise: Verbinden von Code, der Ausnahmen zulässt, mit Code ohne Ausnahmen](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)
+[Behandeln von Fehlern und Ausnahmen (Modern C++)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Vorgehensweise: Schnittstelle zwischen Code von nicht- Ausnahmen](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)

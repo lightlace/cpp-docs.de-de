@@ -1,17 +1,17 @@
 ---
-title: 'Gewusst wie: Verbinden von Code, der Ausnahmen zulässt, mit Code ohne Ausnahmen'
+title: 'Vorgehensweise: Schnittstelle zwischen Code von nicht- Ausnahmen'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
-ms.openlocfilehash: b6da1142ee04668033a516f2c20c4a2354ff5598
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8ff92f965f48faa7954ae0364ec7877428e519c
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576682"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220623"
 ---
-# <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Gewusst wie: Verbinden von Code, der Ausnahmen zulässt, mit Code ohne Ausnahmen
+# <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Vorgehensweise: Schnittstelle zwischen Code von nicht- Ausnahmen
 
 In diesem Artikel wird beschrieben, wie die konsistente Ausnahmebehandlung in einem C++-Modul implementiert wird und wie diese Ausnahmen zu und von Fehlercodes an den Ausnahmegrenzen übertragen werden.
 
@@ -236,5 +236,5 @@ Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambda Expressions 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Fehler- und Ausnahmebehandlung](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Vorgehensweise: Entwurfsrichtlinien für sichere Ausnahmebehandlung](../cpp/how-to-design-for-exception-safety.md)<br/>
+[Behandeln von Fehlern und Ausnahmen (Modern C++)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Vorgehensweise: Entwurf für sichere Ausnahmebehandlung](../cpp/how-to-design-for-exception-safety.md)<br/>

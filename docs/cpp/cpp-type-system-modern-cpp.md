@@ -3,12 +3,12 @@ title: C++- Typsystem (Modern C++)
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 476ebabc4bfc19f995119649d6f012d4b39d8369
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ea4d8da9af10df2fb930daaad8374d70b6704d28
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176340"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220672"
 ---
 # <a name="c-type-system-modern-c"></a>C++- Typsystem (Modern C++)
 
@@ -16,9 +16,9 @@ Das Konzept der *Typ* in C++ sehr wichtig ist. Jede Variable, jedes Funktionsarg
 
 ## <a name="terminology"></a>Terminologie
 
-**Variable**: der symbolische Name einer Menge von Daten, damit der Name verwendet werden kann, für den Datenzugriff, die es verweist auf den Gültigkeitsbereich des Codes, in dem sie definiert ist. In C++ *Variable* wird in der Regel verwendet, um auf Instanzen von skalaren Datentypen zu verweisen, wohingegen Instanzen anderer Typen in der Regel aufgerufen werden *Objekte*.
+**Variable**: Die symbolischen Namen für eine Menge von Daten, damit der Name verwendet werden kann, für den Datenzugriff, die es verweist auf den Gültigkeitsbereich des Codes, in dem sie definiert ist. In C++ *Variable* wird in der Regel verwendet, um auf Instanzen von skalaren Datentypen zu verweisen, wohingegen Instanzen anderer Typen in der Regel aufgerufen werden *Objekte*.
 
-**Objekt**: für die Einfachheit und Konsistenz in diesem Artikel verwendet den Begriff *Objekt* verweisen auf eine beliebige Instanz einer Klasse oder Struktur, und wenn es im allgemeinen Sinn verwendet wird enthält alle Typen, sogar skalare Variablen.
+**Objekt**: Für die Einfachheit und Konsistenz in diesem Artikel verwendet den Begriff *Objekt* verweisen auf eine beliebige Instanz einer Klasse oder Struktur, und wenn es im allgemeinen Sinn verwendet wird enthält alle Typen, sogar skalare Variablen.
 
 **POD-Typ** (plain old Data): Diese informelle Kategorie von Datentypen in C++ bezieht sich auf Typen, die skalare sind (siehe Abschnitt "grundlegende Typen) oder *POD-Klassen*. Eine POD-Klasse verfügt über keine statischen Datenmember, die nicht auch PODs sind. Sie verfügt über keine benutzerdefinierten Konstruktoren, keine benutzerdefinierten Destruktoren oder keine benutzerdefinierten Zuweisungsoperatoren. Darüber hinaus verfügt eine POD-Klasse über keine virtuellen Funktionen, keine Basisklasse und keine privaten oder geschützten nicht statischen Datenmember. POD-Typen werden häufig für externen Datenaustausch verwendet, z. B. mit einem in der Programmiersprache C (die nur über POD-Typen verfügt) geschriebenen Modul.
 
@@ -170,6 +170,6 @@ Weitere Informationen zum Typsystem von C++ finden Sie in den folgenden Themen.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Willkommen zurück bei C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Willkommen zurück bei C++ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)<br/>
 [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)

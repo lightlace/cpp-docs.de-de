@@ -1,17 +1,17 @@
 ---
-title: 'Gewusst wie: Erstellen und Verwenden von unique_ptr-Instanzen'
+title: 'Vorgehensweise: Erstellen und Verwenden von Unique_ptr-Instanzen'
 ms.custom: how-to
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
-ms.openlocfilehash: a3e5705b47a4cfdf17b9a4b4829f1e13565dd7ce
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 48e459b69592bf4c231407c2a378a7b7e01ff4ae
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174877"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220581"
 ---
-# <a name="how-to-create-and-use-uniqueptr-instances"></a>Gewusst wie: Erstellen und Verwenden von unique_ptr-Instanzen
+# <a name="how-to-create-and-use-uniqueptr-instances"></a>Vorgehensweise: Erstellen und Verwenden von Unique_ptr-Instanzen
 
 Ein [Unique_ptr](../standard-library/unique-ptr-class.md) der Zeiger wird nicht freigegeben. Es kann nicht in eine andere kopiert werden `unique_ptr`, als Wert an eine Funktion übergeben oder in einen C++-Standardbibliothek-Algorithmus, die Kopien erfordert verwendet. Ein `unique_ptr`-Objekt kann nur verschoben werden. Dies bedeutet, dass der Besitz der Arbeitsspeicherressource einem anderen `unique_ptr`-Objekt übertragen wird und das ursprüngliche `unique_ptr`-Objekt diese Ressource nicht mehr besitzt. Es empfiehlt sich, ein Objekt auf einen Besitzer zu beschränken, da mehrere Besitzer die Komplexität der Programmlogik erhöhen. Wenn Sie einen intelligenten Zeiger für ein einfaches C++-Objekt benötigen, daher können `unique_ptr`, und beim Erstellen einer `unique_ptr`, verwenden die [Make_unique](../standard-library/memory-functions.md#make_unique) Hilfsfunktion.
 
@@ -53,5 +53,5 @@ Weitere Beispiele finden Sie unter [Make_unique](../standard-library/memory-func
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intelligente Zeiger](../cpp/smart-pointers-modern-cpp.md)<br/>
+[Intelligente Zeiger (Modern C++)](../cpp/smart-pointers-modern-cpp.md)<br/>
 [make_unique](../standard-library/memory-functions.md#make_unique)

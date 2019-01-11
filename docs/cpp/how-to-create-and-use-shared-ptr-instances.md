@@ -1,17 +1,17 @@
 ---
-title: 'Gewusst wie: Erstellen und Verwenden von shared_ptr-Instanzen'
+title: 'Vorgehensweise: Erstellen und Verwenden von Shared_ptr-Instanzen'
 ms.custom: how-to
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: 79d85de6859096bdff3e2bc17357b721e5ce5846
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 8363139efddb2fa64057fdb995ab7bd5dfbcfd9b
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176275"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220594"
 ---
-# <a name="how-to-create-and-use-sharedptr-instances"></a>Gewusst wie: Erstellen und Verwenden von shared_ptr-Instanzen
+# <a name="how-to-create-and-use-sharedptr-instances"></a>Vorgehensweise: Erstellen und Verwenden von Shared_ptr-Instanzen
 
 Der Typ `shared_ptr` ist ein intelligenter Zeiger in der C++-Standardbibliothek für Szenarien, in denen möglicherweise mehrere Besitzer die Lebensdauer des Objekts im Arbeitsspeicher verwalten müssen. Nachdem Sie einen `shared_ptr` initialisiert haben, können Sie ihn kopieren, als Wert an Funktionsargumente übergeben oder anderen `shared_ptr`-Instanzen zuweisen. Alle Instanzen zeigen auf dasselbe Objekt und greifen gemeinsam auf einen "Kontrollblock" zu, der den Verweiszähler erhöht bzw. verringert, wenn ein neuer `shared_ptr` hinzugefügt wird, den Gültigkeitsbereich verlässt oder zurückgesetzt wird. Wenn der Verweiszähler Null erreicht, löscht der Kontrollblock die Speicherressource und sich selbst.
 
@@ -67,4 +67,4 @@ Das folgende Beispiel zeigt, wie der `shared_ptr` verschiedene Vergleichsoperato
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intelligente Zeiger](../cpp/smart-pointers-modern-cpp.md)
+[Intelligente Zeiger (Modern C++)](../cpp/smart-pointers-modern-cpp.md)
