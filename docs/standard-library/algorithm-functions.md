@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 5fdb5a89bc475cf2d6a358768b84b8542da5e0e8
-ms.sourcegitcommit: d94714522428834a02ede6e6884572f0f6ca9824
+ms.openlocfilehash: 260b2ee780956550678fcb01b3a018a60fb58deb
+ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597563"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54334676"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;Algorithmusfunktionen&gt;
 
@@ -260,7 +260,7 @@ ForwardIterator adjacent_find(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Forward-Iterator, der die Position des ersten Elements im zu durchsuchenden Bereich adressiert.
 
 *last*<br/>
@@ -355,7 +355,7 @@ bool all_of(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Eingabe-Iterator, der angibt, ab wo nach Bedingungen gesucht werden soll. Der Iterator zeigt an, an welcher Stelle ein Bereich von Elementen beginnt.
 
 *last*<br/>
@@ -386,7 +386,7 @@ bool any_of(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Eingabe-Iterator, der angibt, ab wo ein Bereich von Elementen auf eine Bedingung überprüft werden soll.
 
 *last*<br/>
@@ -426,13 +426,13 @@ bool binary_search(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Forward-Iterator, der die Position des ersten Elements im zu durchsuchenden Bereich adressiert.
 
 *last*<br/>
 Ein Forward-Iterator, der die Position hinter dem letzten Element im zu durchsuchenden Bereich adressiert.
 
-*Wert*<br/>
+*value*<br/>
 Der Wert, mit dem vom Wert des Elements eine Übereinstimmung erzielt werden muss oder der die Bedingung mit dem vom binären Prädikat angegebenen Elementwert erfüllen muss.
 
 *comp*<br/>
@@ -550,7 +550,7 @@ OutputIterator copy(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements im Quellbereich adressiert.
 
 *last*<br/>
@@ -643,7 +643,7 @@ BidirectionalIterator2 copy_backward(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein bidirektionaler Iterator, der die Position des ersten Elements im Quellbereich adressiert.
 
 *last*<br/>
@@ -734,7 +734,7 @@ OutputIterator copy_if(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Eingabeiterator, der den Beginn eines Bereichs angibt, der auf die Bedingung geprüft werden soll.
 
 *last*<br/>
@@ -772,7 +772,7 @@ OutputIterator copy_n(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Eine Eingabeiterator, der angibt, von welcher Position die Elemente kopiert werden.
 
 *count*<br/>
@@ -803,7 +803,7 @@ typename iterator_traits<InputIterator>::difference_type count(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements im zu durchsuchenden Bereich adressiert.
 
 *last*<br/>
@@ -873,7 +873,7 @@ typename iterator_traits<InputIterator>::difference_type count_if(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements im zu durchsuchenden Bereich adressiert.
 
 *last*<br/>
@@ -973,7 +973,7 @@ bool equal(
 
 ### <a name="parameters"></a>Parameter
 
-*first1*<br/>
+*First1*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements im ersten zu testenden Bereich adressiert.
 
 *Last1*<br/>
@@ -1054,7 +1054,7 @@ pair<ForwardIterator, ForwardIterator> equal_range(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Forward-Iterator, der die Position des ersten Elements im zu durchsuchenden Bereich adressiert.
 
 *last*<br/>
@@ -1213,7 +1213,7 @@ void fill(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Forward-Iterator, der die Position des ersten Elements im zu durchsuchenden Bereich adressiert.
 
 *last*<br/>
@@ -1360,7 +1360,7 @@ InputIterator find(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements im nach dem angegebenen Wert zu durchsuchenden Bereich adressiert.
 
 *last*<br/>
@@ -1402,7 +1402,7 @@ ForwardIterator1 find_end(
 
 ### <a name="parameters"></a>Parameter
 
-*first1*<br/>
+*First1*<br/>
 Ein Forward-Iterator, der die Position des ersten Elements im zu durchsuchenden Bereich adressiert.
 
 *Last1*<br/>
@@ -1549,13 +1549,13 @@ ForwardIterator1 find_first_of(
 *first1*<br/>
 Ein Forward-Iterator, der die Position des ersten Elements im zu durchsuchenden Bereich adressiert.
 
-*Last1*<br/>
+*last1*<br/>
 Ein Forward-Iterator, der die Position hinter dem letzten Element im zu durchsuchenden Bereich adressiert.
 
 *first2*<br/>
 Ein Forward-Iterator, der die Position des ersten Elements im abzugleichenden Bereich adressiert.
 
-*Last2*<br/>
+*last2*<br/>
 Ein Forward-Iterator, der die Position hinter dem letzten Element im abzugleichenden Bereich adressiert.
 
 *comp*<br/>
@@ -1684,7 +1684,7 @@ InputIterator find_if(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements im zu durchsuchenden Bereich adressiert.
 
 *last*<br/>
@@ -1800,7 +1800,7 @@ InputIterator find_if_not(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements im zu durchsuchenden Bereich adressiert.
 
 *last*<br/>
@@ -1833,7 +1833,7 @@ Function for_each(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements im zu verarbeitenden Bereich adressiert.
 
 *last*<br/>
@@ -1981,7 +1981,7 @@ void generate(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Forward-Iterator, der die Position des ersten Elements im Bereich, dem Werte zugeordnet werden, adressiert.
 
 *last*<br/>
@@ -2141,13 +2141,13 @@ bool includes(
 *first1*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements im ersten der beiden sortierten Quellbereiche adressiert, die darauf geprüft werden, ob alle Elemente des zweiten Bereichs auch im ersten Bereich enthalten sind.
 
-*Last1*<br/>
+*last1*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements direkt hinter dem letzten Element im ersten der beiden sortierten Quellbereiche adressiert, die darauf geprüft werden, ob alle Elemente des zweiten Bereichs auch im ersten Bereich enthalten sind.
 
 *first2*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements im zweiten der beiden aufeinanderfolgenden sortierten Quellbereiche adressiert, die darauf geprüft werden, ob alle Elemente des zweiten Bereichs auch im ersten Bereich enthalten sind.
 
-*Last2*<br/>
+*last2*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements direkt hinter dem letzten Element im zweiten der beiden aufeinanderfolgenden sortierten Quellbereiche adressiert, die darauf geprüft werden, ob alle Elemente des zweiten Bereichs auch im ersten Bereich enthalten sind.
 
 *comp*<br/>
@@ -2341,10 +2341,10 @@ void inplace_merge(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein bidirektionaler Eingabeiterator, der die Position des ersten Elements im ersten der beiden nacheinander sortierten Bereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen.
 
-*Mitte*<br/>
+*middle*<br/>
 Ein bidirektionaler Eingabeiterator, der die Position des ersten Elements im zweiten der beiden nacheinander sortierten Bereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen.
 
 *last*<br/>
@@ -2491,7 +2491,7 @@ bool is_heap(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein zufälliger direkter Iterator, der den Beginn eines Bereichs angibt, der auf einen Heap geprüft werden soll.
 
 *last*<br/>
@@ -2564,7 +2564,7 @@ bool is_partitioned(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Eingabeiterator, der den Beginn des Bereichs angibt, ab wo nach Bedingungen gesucht werden soll.
 
 *last*<br/>
@@ -2618,7 +2618,7 @@ bool is_permutation(
 
 ### <a name="parameters"></a>Parameter
 
-*first1*<br/>
+*First1*<br/>
 Ein forward-Iterator, der auf das erste Element des Bereichs verweist.
 
 *Last1*<br/>
@@ -2720,7 +2720,7 @@ bool is_sorted(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Forward-Iterator, der angibt, wo der zu prüfende Bereich beginnt.
 
 *last*<br/>
@@ -2755,7 +2755,7 @@ ForwardIterator is_sorted_until(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Forward-Iterator, der angibt, wo der zu prüfende Bereich beginnt.
 
 *last*<br/>
@@ -2956,13 +2956,13 @@ bool lexicographical_compare(
 *first1*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements im ersten zu vergleichenden Bereich adressiert.
 
-*Last1*<br/>
+*last1*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements direkt hinter dem letzten Element im ersten zu vergleichenden Bereich adressiert.
 
 *first2*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements im zweiten zu vergleichenden Bereich adressiert.
 
-*Last2*<br/>
+*last2*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements direkt hinter dem letzten Element im zweiten zu vergleichenden Bereich adressiert.
 
 *comp*<br/>
@@ -3098,13 +3098,13 @@ ForwardIterator lower_bound(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Forward-Iterator, der die Position des ersten Elements im zu durchsuchenden Bereich adressiert.
 
 *last*<br/>
 Ein Forward-Iterator, der die Position hinter dem letzten Element im zu durchsuchenden Bereich adressiert.
 
-*Wert*<br/>
+*value*<br/>
 Der Wert, dessen erste Position oder mögliche erste Position in dem sortierten Bereich gesucht wird.
 
 *comp*<br/>
@@ -3235,7 +3235,7 @@ void make_heap(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements in dem Bereich adressiert, der in einen Heap konvertiert werden soll.
 
 *last*<br/>
@@ -3525,7 +3525,7 @@ constexpr ForwardIterator max_element(ForwardIterator first, ForwardIterator las
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Vorwärtsiterator, der die Position des ersten Elements im nach dem größten Element zu durchsuchenden Bereich adressiert.
 
 *last*<br/>
@@ -3672,16 +3672,16 @@ OutputIterator merge(
 *first1*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements im ersten der beiden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen.
 
-*Last1*<br/>
+*last1*<br/>
 Ein Eingabeiterator, der die Position hinter dem letzten Element im ersten der beiden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen.
 
 *first2*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements im zweiten der beiden nacheinander sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen.
 
-*Last2*<br/>
+*last2*<br/>
 Ein Eingabeiterator, der die Position hinter dem letzten Element im zweiten der beiden nacheinander sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen.
 
-*Ergebnis*<br/>
+*result*<br/>
 Ein Ausgabeiterator, der die Position des ersten Elements im ersten Zielbereich adressiert, in dem die beiden Quellbereiche kombiniert und zu einem einzelnen Bereich sortiert werden sollen.
 
 *comp*<br/>
@@ -4046,7 +4046,7 @@ constexpr ForwardIterator min_element(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Forward-Iterator, der die Position des ersten Elements im nach dem kleinsten Element zu durchsuchenden Bereich adressiert.
 
 *last*<br/>
@@ -4193,7 +4193,7 @@ constexpr pair<ForwardIterator, ForwardIterator> minmax_element(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Forward-Iterator, der das Beginn eines Bereichs angibt.
 
 *last*<br/>
@@ -4208,7 +4208,7 @@ Rückgabe
 
 `pair<ForwardIterator, ForwardIterator>`
 
-`(` [Min_element](../standard-library/algorithm-functions.md#min_element)`(first, last), `[Max_element](../standard-library/algorithm-functions.md#max_element)`(first, last))`.
+`(` [min_element](../standard-library/algorithm-functions.md#min_element)`(first, last), `[max_element](../standard-library/algorithm-functions.md#max_element)`(first, last))`.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -4310,7 +4310,7 @@ mismatch(
 
 ### <a name="parameters"></a>Parameter
 
-*first1*<br/>
+*First1*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements im ersten zu testenden Bereich adressiert.
 
 *Last1*<br/>
@@ -4449,7 +4449,7 @@ OutputIterator move(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Eine Eingabeiterator, der angibt, ab welcher Position die Elemente kopiert werden sollen.
 
 *last*<br/>
@@ -4476,7 +4476,7 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Iterator, der den Beginn eines Bereichs angibt, aus dem Elemente verschoben werden.
 
 *last*<br/>
@@ -4505,7 +4505,7 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, B
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein bidirektionaler Iterator, der auf die Position des ersten Elements im zu permutierenden Bereich zeigt.
 
 *last*<br/>
@@ -4679,7 +4679,7 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements in dem Bereich adressiert, der partitioniert werden soll.
 
 *_N-te*<br/>
@@ -4778,7 +4778,7 @@ bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Eingabe-Iterator, der angibt, ab wo ein Bereich von Elementen auf eine Bedingung überprüft werden soll.
 
 *last*<br/>
@@ -4816,7 +4816,7 @@ void partial_sort(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements in dem Bereich adressiert, der sortiert werden soll.
 
 *sortEnd*<br/>
@@ -4935,13 +4935,13 @@ RandomAccessIterator partial_sort_copy(
 *first1*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements im Quellbereich adressiert.
 
-*Last1*<br/>
+*last1*<br/>
 Ein Eingabeiterator, der die Position hinter dem letzten Element im Quellbereich adressiert.
 
 *first2*<br/>
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements im sortierten Zielbereich adressiert.
 
-*Last2*<br/>
+*last2*<br/>
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements direkt hinter dem letzten Element im sortierten Zielbereich adressiert.
 
 *comp*<br/>
@@ -5047,7 +5047,7 @@ BidirectionalIterator partition(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein bidirektionaler Iterator, der die Position des ersten Elements in dem Bereich adressiert, der partitioniert werden soll.
 
 *last*<br/>
@@ -5124,7 +5124,7 @@ pair<OutputIterator1, OutputIterator2>
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Eingabeiterator, der den Beginn eines Bereichs angibt, der auf eine Bedingung geprüft werden soll.
 
 *last*<br/>
@@ -5157,7 +5157,7 @@ ForwardIterator partition_point(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein `ForwardIterator`, der den Beginn eines Bereichs angibt, der auf eine Bedingung geprüft werden soll.
 
 *last*<br/>
@@ -5188,7 +5188,7 @@ void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredi
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements im Heap adressiert.
 
 *last*<br/>
@@ -5296,7 +5296,7 @@ bool prev_permutation(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein bidirektionaler Iterator, der auf die Position des ersten Elements im zu permutierenden Bereich zeigt.
 
 *last*<br/>
@@ -5465,7 +5465,7 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPre
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements im Heap adressiert.
 
 *last*<br/>
@@ -5561,7 +5561,7 @@ int main() {
 
 ## <a name="random_shuffle"></a> random_shuffle
 
-Die Funktion Std::random_shuffle() ist veraltet, ersetzt durch [Std:: Shuffle](../standard-library/algorithm-functions.md#shuffle). Ein Codebeispiel und Weitere Informationen finden Sie unter [ \<random >](../standard-library/random.md) und im Stackoverflow-Posting [Warum werden Std:: random_shuffle Methods eingestellt in C ++ 14?](http://go.microsoft.com/fwlink/p/?linkid=397954).
+Die Funktion Std::random_shuffle() ist veraltet, ersetzt durch [Std:: Shuffle](../standard-library/algorithm-functions.md#shuffle). Ein Codebeispiel und Weitere Informationen finden Sie unter [ \<random >](../standard-library/random.md) und Stack Overflow-Beitrag [Warum werden Std:: random_shuffle Methods eingestellt in C ++ 14?](http://go.microsoft.com/fwlink/p/?linkid=397954).
 
 ## <a name="remove"></a>  remove
 
@@ -5574,7 +5574,7 @@ ForwardIterator remove(ForwardIterator first, ForwardIterator last, const Type& 
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Vorwärtsiterator zur Position des ersten Elements in dem Bereich, aus dem Elemente entfernt werden.
 
 *last*<br/>
@@ -5656,13 +5656,13 @@ OutputIterator remove_copy(InputIterator first, InputIterator last, OutputIterat
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements in dem Bereich adressiert, aus dem Elemente entfernt werden.
 
 *last*<br/>
 Ein Eingabeiterator, der die Position hinter dem letzten Element in dem Bereich adressiert, aus dem Elemente entfernt werden.
 
-*Ergebnis*<br/>
+*result*<br/>
 Ein Ausgabeiterator, der die Position des ersten Elements in dem Zielbereich adressiert, in den Elemente entfernt werden.
 
 *val*<br/>
@@ -5738,13 +5738,13 @@ OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIte
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements in dem Bereich adressiert, aus dem Elemente entfernt werden.
 
 *last*<br/>
 Ein Eingabeiterator, der die Position hinter dem letzten Element in dem Bereich adressiert, aus dem Elemente entfernt werden.
 
-*Ergebnis*<br/>
+*result*<br/>
 Ein Ausgabeiterator, der die Position des ersten Elements in dem Zielbereich adressiert, in den Elemente entfernt werden.
 
 *_Pred*<br/>
@@ -5832,7 +5832,7 @@ ForwardIterator remove_if(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Forward-Iterator, der auf die Position des ersten Elements in dem Bereich verweist, aus dem Elemente entfernt werden.
 
 *last*<br/>
@@ -5922,7 +5922,7 @@ void replace(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Forward-Iterator, der auf die Position des ersten Elements in dem Bereich verweist, aus dem Elemente ersetzt werden.
 
 *last*<br/>
@@ -5998,13 +5998,13 @@ OutputIterator replace_copy(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Eingabeiterator, der auf die Position des ersten Elements in dem Bereich verweist, aus dem Elemente ersetzt werden.
 
 *last*<br/>
 Ein Eingabeiterator, der auf die Position hinter dem letzten Element in dem Bereich verweist, aus dem Elemente ersetzt werden.
 
-*Ergebnis*<br/>
+*result*<br/>
 Ein Ausgabeiterator, der auf das erste Element im Zielbereich verweist, in den die geänderte Sequenz von Elementen kopiert wird.
 
 *_OldVal*<br/>
@@ -6100,13 +6100,13 @@ OutputIterator replace_copy_if(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Eingabeiterator, der auf die Position des ersten Elements in dem Bereich verweist, aus dem Elemente ersetzt werden.
 
 *last*<br/>
 Ein Eingabeiterator, der auf die Position hinter dem letzten Element in dem Bereich verweist, aus dem Elemente ersetzt werden.
 
-*Ergebnis*<br/>
+*result*<br/>
 Ein Ausgabeiterator, der auf die Position des ersten Elements in dem Zielbereich verweist, in den Elemente kopiert werden.
 
 *_Pred*<br/>
@@ -6208,7 +6208,7 @@ void replace_if(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Forward-Iterator, der auf die Position des ersten Elements in dem Bereich verweist, aus dem Elemente ersetzt werden.
 
 *last*<br/>
@@ -6287,7 +6287,7 @@ void reverse(BidirectionalIterator first, BidirectionalIterator last);
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein bidirektionaler Iterator, der auf die Position des ersten Elements im Bereich verweist, in dem die Elemente permutiert werden.
 
 *last*<br/>
@@ -6353,13 +6353,13 @@ OutputIterator reverse_copy(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein bidirektionaler Iterator, der auf die Position des ersten Elements im Quellbereich verweist, in dem die Elemente permutiert werden.
 
 *last*<br/>
 Ein bidirektionaler Iterator, der auf die Position hinter dem letzten Element im Quellbereich verweist, in dem die Elemente permutiert werden.
 
-*Ergebnis*<br/>
+*result*<br/>
 Ein Ausgabeiterator, der auf die Position des ersten Elements in dem Zielbereich verweist, in den Elemente kopiert werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -6424,10 +6424,10 @@ void rotate(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Forward-Iterator, der die Position des ersten Elements im zu rotierenden Bereich adressiert.
 
-*Mitte*<br/>
+*middle*<br/>
 Ein Forward-Iterator, der die Grenzen innerhalb des Bereichs definiert, der die Position des ersten Elements im zweiten Teil des Bereichs adressiert und dessen Elemente mit denen im ersten Teil des Bereichs ausgetauscht werden sollen.
 
 *letzte*<br/>
@@ -6529,15 +6529,15 @@ OutputIterator rotate_copy(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Forward-Iterator, der die Position des ersten Elements im zu rotierenden Bereich adressiert.
 
-*Mitte*<br/>
+*middle*<br/>
 Ein Forward-Iterator, der die Grenzen innerhalb des Bereichs definiert, der die Position des ersten Elements im zweiten Teil des Bereichs adressiert und dessen Elemente mit denen im ersten Teil des Bereichs ausgetauscht werden sollen.
 
 _ *Letzten* ein vorwärtsiterator, der die Position hinter dem letzten Element im Bereich von rotiert werden soll.
 
-*Ergebnis*<br/>
+*result*<br/>
 Ein Ausgabeiterator, der die Position des ersten Elements im Zielbereich adressiert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -6635,13 +6635,13 @@ ForwardIterator1 search(
 *first1*<br/>
 Ein Forward-Iterator, der die Position des ersten Elements im zu durchsuchenden Bereich adressiert.
 
-*Last1*<br/>
+*last1*<br/>
 Ein Forward-Iterator, der die Position hinter dem letzten Element im zu durchsuchenden Bereich adressiert.
 
 *first2*<br/>
 Ein Forward-Iterator, der die Position des ersten Elements im abzugleichenden Bereich adressiert.
 
-*Last2*<br/>
+*last2*<br/>
 Ein Forward-Iterator, der die Position hinter dem letzten Element im abzugleichenden Bereich adressiert.
 
 *comp*<br/>
@@ -6783,7 +6783,7 @@ ForwardIterator1 search_n(
 *first1*<br/>
 Ein Forward-Iterator, der die Position des ersten Elements im zu durchsuchenden Bereich adressiert.
 
-*Last1*<br/>
+*last1*<br/>
 Ein Forward-Iterator, der die Position hinter dem letzten Element im zu durchsuchenden Bereich adressiert.
 
 *count*<br/>
@@ -6918,16 +6918,16 @@ OutputIterator set_difference(
 *first1*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements im ersten der beiden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der den Unterschied der beiden Quellbereiche repräsentiert.
 
-*Last1*<br/>
+*last1*<br/>
 Ein Eingabeiterator, der die Position hinter dem letzten Element im ersten der beiden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der den Unterschied der beiden Quellbereiche repräsentiert.
 
 *first2*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements im zweiten der beiden aufeinanderfolgenden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der den Unterschied der beiden Quellbereiche repräsentiert.
 
-*Last2*<br/>
+*last2*<br/>
 Ein Eingabeiterator, der die Position hinter dem letzten Element im zweiten der beiden aufeinanderfolgenden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der den Unterschied der beiden Quellbereiche repräsentiert.
 
-*Ergebnis*<br/>
+*result*<br/>
 Ein Ausgabeiterator, der die Position des ersten Elements im Zielbereich adressiert, in den die beiden Quellbereiche kombiniert werden sollen. Dieser Zielbereich wird sortiert und repräsentiert den Unterschied der beiden Quellbereiche.
 
 *comp*<br/>
@@ -7098,13 +7098,13 @@ OutputIterator set_intersection(
 *first1*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements im ersten der beiden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der die Schnittmenge der beiden Quellbereiche repräsentiert.
 
-*Last1*<br/>
+*last1*<br/>
 Ein Eingabeiterator, der die Position hinter dem letzten Element im ersten der beiden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der die Schnittmenge der beiden Quellbereiche repräsentiert.
 
 *first2*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements im zweiten der beiden aufeinanderfolgenden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der die Schnittmenge der beiden Quellbereiche repräsentiert.
 
-*Last2*<br/>
+*last2*<br/>
 Ein Eingabeiterator, der die Position hinter dem letzten Element im zweiten der beiden aufeinanderfolgenden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der die Schnittmenge der beiden Quellbereiche repräsentiert.
 
 **_** *Ergebnis* ein Ausgabeiterator, der die Position des ersten Elements im Zielbereich, in dem die beiden Bereiche Datenquelle, kombiniert werden sollen in einem einzelnen Bereich sortiert, die die Schnittmenge der beiden Quelle darstellt. Bereiche.
@@ -7271,13 +7271,13 @@ OutputIterator set_symmetric_difference(
 *first1*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements im ersten der beiden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der den symmetrischen Unterschied der beiden Quellbereiche repräsentiert.
 
-*Last1*<br/>
+*last1*<br/>
 Ein Eingabeiterator, der die Position hinter dem letzten Element im ersten der beiden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der den symmetrischen Unterschied der beiden Quellbereiche repräsentiert.
 
 *first2*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements im zweiten der beiden aufeinanderfolgenden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der den symmetrischen Unterschied der beiden Quellbereiche repräsentiert.
 
-*Last2*<br/>
+*last2*<br/>
 Ein Eingabeiterator, der die Position hinter den letzten Element im zweiten der beiden aufeinanderfolgenden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der den symmetrischen Unterschied der beiden Quellbereiche repräsentiert.
 
 **_** *Ergebnis* ein Ausgabeiterator, der die Position des ersten Elements im Zielbereich, in dem die beiden Bereiche Datenquelle, kombiniert werden sollen in einem einzelnen Bereich sortiert, die den symmetrischen Unterschied der beiden darstellt. Die Quellbereiche.
@@ -7450,13 +7450,13 @@ OutputIterator set_union(
 *first1*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements im ersten der beiden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der die Verbindung der beiden Quellbereiche repräsentiert.
 
-*Last1*<br/>
+*last1*<br/>
 Ein Eingabeiterator, der die Position hinter dem letzten Element im ersten der beiden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der die Verbindung der beiden Quellbereiche repräsentiert.
 
 *first2*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements im zweiten der beiden aufeinanderfolgenden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der die Verbindung der beiden Quellbereiche repräsentiert.
 
-*Last2*<br/>
+*last2*<br/>
 Ein Eingabeiterator, der die Position hinter dem letzten Element im zweiten der beiden aufeinanderfolgenden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der die Verbindung der beiden Quellbereiche repräsentiert.
 
 **_** *Ergebnis* ein Ausgabeiterator, der die Position des ersten Elements im Zielbereich, in dem die beiden Bereiche Datenquelle, auf einem einzelnen Bereich sortiert repräsentiert die Verbindung der beiden Quellbereiche kombiniert werden.
@@ -7614,13 +7614,13 @@ void shuffle(RandomAccessIterator first,
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Iterator für das erste Element im zu mischenden Bereich, inklusiv. Muss die Anforderungen von `RandomAccessIterator` und `ValueSwappable` erfüllen.
 
 *last*<br/>
 Ein Iterator für das letzte Element im zu mischenden Bereich, exklusiv. Muss die Anforderungen von `RandomAccessIterator` und `ValueSwappable` erfüllen.
 
-*Gen*<br/>
+*gen*<br/>
 Der Zufallszahlengenerator, den die `shuffle()`-Funktion für den Vorgang verwendet. Muss die Anforderungen eines `UniformRandomNumberGenerator` erfüllen.
 
 ### <a name="remarks"></a>Hinweise
@@ -7646,7 +7646,7 @@ template<class RandomAccessIterator, class Predicate>
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements in dem Bereich adressiert, der sortiert werden soll.
 
 *last*<br/>
@@ -7750,7 +7750,7 @@ template<class RandomAccessIterator, class Predicate>
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements im Zielheap adressiert.
 
 *last*<br/>
@@ -7841,7 +7841,7 @@ BidirectionalIterator stable_partition(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein bidirektionaler Iterator, der die Position des ersten Elements in dem Bereich adressiert, der partitioniert werden soll.
 
 *last*<br/>
@@ -7922,7 +7922,7 @@ void stable_sort(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein bidirektionaler Iterator, der die Position des ersten Elements in dem Bereich adressiert, der sortiert werden soll.
 
 *last*<br/>
@@ -8106,7 +8106,7 @@ ForwardIterator2 swap_ranges(
 *first1*<br/>
 Ein Forward-Iterator, der die erste Position des ersten Bereichs anzeigt, dessen Elemente ausgetauscht werden sollen.
 
-*Last1*<br/>
+*last1*<br/>
 Ein Forward-Iterator, der die erste Position direkt hinter der letzten Position des ersten Bereichs anzeigt, dessen Elemente ausgetauscht werden sollen.
 
 *first2*<br/>
@@ -8209,13 +8209,13 @@ OutputIterator transform(
 *first1*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements im ersten Quellbereich adressiert.
 
-*Last1*<br/>
+*last1*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements direkt hinter dem letzten Element im ersten bearbeiteten Quellbereich adressiert.
 
 *first2*<br/>
 Ein Eingabeiterator, der die Position des ersten Elements im zweiten Quellbereich adressiert.
 
-*Ergebnis*<br/>
+*result*<br/>
 Ein Ausgabeiterator, der die Position des ersten Elements im Zielbereich adressiert.
 
 *_Func*<br/>
@@ -8339,7 +8339,7 @@ template<class ForwardIterator, class Predicate>
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Forward-Iterator, der die Position des ersten Elements im Bereich adressiert, der zum Entfernen von doppelten Elementen durchsucht werden soll.
 
 *last*<br/>
@@ -8472,13 +8472,13 @@ OutputIterator unique_copy( InputIterator first,
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Vorwärtsiterator, der die Position des ersten Elements im zu kopierenden Quellbereich adressiert.
 
 *last*<br/>
 Ein Vorwärtsiterator, der die Position hinter dem letzten Element im zu kopierenden Quellbereich adressiert.
 
-*Ergebnis*<br/>
+*result*<br/>
 Ein Vorwärtsiterator, der die Position des ersten Elements im Zielbereich adressiert, der die Kopie erhält, aus der aufeinanderfolgende Duplikate entfernt wurden.
 
 *comp*<br/>
@@ -8591,13 +8591,13 @@ template<class ForwardIterator, class Type, class Predicate>
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Die Position des ersten Elements in dem zu durchsuchenden Bereich.
 
 *last*<br/>
 Die Position eine Stelle hinter dem letzten Element im zu durchsuchenden Bereich.
 
-*Wert*<br/>
+*value*<br/>
 Der Wert im sortierten Bereich, der vom Wert des vom zurückgegebenen Iterator adressierten Elements überschritten werden muss.
 
 *comp*<br/>
