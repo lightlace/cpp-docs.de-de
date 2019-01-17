@@ -41,19 +41,18 @@ helpviewer_keywords:
 - EXDEV constant
 - EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
-ms.openlocfilehash: c7c623b81d626b3d653dbd731521ffe2649671ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d092f9c1626f48dcdb006e18ece2a45bfeed36e
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645600"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220607"
 ---
 # <a name="errno-constants"></a>errno-Konstanten
 
 ## <a name="syntax"></a>Syntax
 
 ```
-
 #include <errno.h>
 ```
 
@@ -67,7 +66,7 @@ Die **errno**-Werte in einem 32-Bit-Windows-Betriebssystem sind eine Teilmenge d
 
 Die folgenden **errno**-Werte werden unterstützt:
 
-|Konstante|Beschreibung |
+|Konstante|Beschreibung|
 |-|-|
 |**ECHILD**|Keine generierten Prozesse.|
 |**EAGAIN**|Keine weiteren Prozesse. Fehler beim Versuch, einen neuen Prozess zu erstellen, da keine weiteren Steckplätze mehr vorhanden sind, der Arbeitsspeicher nicht ausreicht oder die maximale Schachtelungsebene erreicht wurde.|
