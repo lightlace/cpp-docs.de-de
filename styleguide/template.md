@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: c457158c03ed484f20ee847005fa509bfab1bcd2
+ms.sourcegitcommit: 53bfb772c43319d49686c167f492606348ad362b
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52674065"
+---
 # <a name="metadata-and-markdown-template"></a>Metadaten und Markdownvorlage
 
 Diese core-docs-Vorlage enthält Beispiele der Markdownsyntax sowie einen Leitfaden zum Festlegen der Metadaten. Um die Vorlage bestmöglich zu nutzen, müssen Sie sowohl das [unformatierte Markdown](https://raw.githubusercontent.com/dotnet/docs/master/styleguide/template.md) als auch die [gerenderte Ansicht](https://github.com/dotnet/docs/blob/master/styleguide/template.md) anzeigen (beispielsweise zeigt das unformatierte Markdown, anders als die gerenderte Ansicht, den Metadatenblock an).
@@ -155,7 +163,7 @@ Listen sollten von leeren Zeilen umgeben sein.
 1. kommt
 1. eine
 1. eingebettete
-    1. Fräulein Gloria
+    1. Frau Gloria
     1. Professor Bloom
 1. geordnete
 1. Liste
