@@ -1,32 +1,105 @@
 ---
 title: 4. Umgebungsvariablen
-ms.date: 11/04/2016
+ms.date: 01/16/2019
 ms.assetid: 4ec7ed81-e9ca-46a1-84f8-8f9ce4587346
-ms.openlocfilehash: 0dec302762ad22fc3c7f6691ef63df1b07d5940d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d08031c252d1f3c45fc45c021d24476b393fe33
+ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456601"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397328"
 ---
 # <a name="4-environment-variables"></a>4. Umgebungsvariablen
 
-In diesem Kapitel wird beschrieben, die Umgebungsvariablen OpenMP-C- und C++-API (oder Äquivalent plattformspezifischen Mechanismen), die die Ausführung von parallelen Code steuern.  Die Namen der Umgebungsvariablen muss in Großbuchstaben. Die Werte, die ihnen zugewiesene werden Groß-/Kleinschreibung und möglicherweise führende und nachfolgende Leerzeichen.  Änderungen der Werte, die nach dem Start des Programms werden ignoriert.
+In diesem Kapitel wird beschrieben, die Umgebungsvariablen OpenMP-C- und C++-API (oder ähnliche plattformspezifische Mechanismen), die die Ausführung von parallelen Code steuern.  Die Namen der Umgebungsvariablen muss in Großbuchstaben. Die Werte, die ihnen zugewiesene werden Groß-/Kleinschreibung und möglicherweise führende und nachfolgende Leerzeichen.  Änderungen der Werte, die nach dem Start des Programms werden ignoriert.
 
 Die Umgebungsvariablen sind wie folgt aus:
 
-- **OMP_SCHEDULE** legt die Laufzeit-Zeitplan-Typ und Block Größe fest.
+- [OMP_SCHEDULE](#41-omp_schedule) legt die Laufzeit-Zeitplan-Typ und Block Größe fest.
+- [OMP_NUM_THREADS](#42-omp_num_threads) legt die Anzahl der Threads an, während der Ausführung verwendet.
+- [OMP_DYNAMIC](#43-omp_dynamic) aktiviert oder deaktiviert die dynamische Anpassung der Anzahl von Threads.
+- [OMP_NESTED](#44-omp_nested) aktiviert oder deaktiviert die geschachtelten Parallelität.
 
-- **OMP_NUM_THREADS** legt die Anzahl der Threads an, während der Ausführung verwendet.
+Den Beispielen in diesem Kapitel wird nur gezeigt, wie diese Variablen in Unix C shellumgebungen (Csh) festgelegt werden können. In den Korn-Shell und ein DOS-Umgebungen ähneln die Aktionen:
 
-- **OMP_DYNAMIC** aktiviert oder deaktiviert die dynamische Anpassung der Anzahl von Threads.
+Csh:  
+`setenv OMP_SCHEDULE "dynamic"`
 
-- **OMP_NESTED** aktiviert oder deaktiviert die geschachtelten Parallelität.
+Ksh:  
+`export OMP_SCHEDULE="dynamic"`
 
-Den Beispielen in diesem Kapitel wird nur gezeigt, wie diese Variablen in Unix C shellumgebungen (Csh) festgelegt werden können. In Korn ähneln Shell und DOS-Umgebungen die Aktionen, wie folgt:
+DOS:  
+`set OMP_SCHEDULE="dynamic"`
 
-Csh: Setenv OMP_SCHEDULE "dynamisch"
+## <a name="41-ompschedule"></a>4.1 OMP_SCHEDULE
 
-Ksh: Exportieren von OMP_SCHEDULE = "dynamic"
+`OMP_SCHEDULE` gilt nur für `for` und `parallel for` Direktiven, die den Zeitplantyp `runtime`. Der Zeitplan Typ und die Block-Größe für alle Schleifen kann zur Laufzeit festgelegt werden. Diese Umgebungsvariable festgelegt, um alle erkannten Zeitplantyp und eine optionale *Chunk_size*.
 
-DOS: Legen Sie OMP_SCHEDULE = "dynamic"
+Für `for` und `parallel for` Direktiven, die einen Zeitplantyp aufweisen `runtime`, `OMP_SCHEDULE` wird ignoriert. Der Standardwert für diese Umgebungsvariable wird die Implementierung definiert. Wenn der optionale *Chunk_size* festgelegt ist, wird der Wert muss positiv sein. Wenn *Chunk_size* ist nicht festgelegt ist, wird der Wert 1 wird angenommen, es sei denn, der Zeitplan `static`. Für eine `static` planen, die standardmäßige Segmentgröße zum Bereich Iteration Schleife geteilt durch die Anzahl der Threads, die angewendet werden, um die Schleife festgelegt ist.
+
+Beispiel:
+
+```csh
+setenv OMP_SCHEDULE "guided,4"
+setenv OMP_SCHEDULE "dynamic"
+```
+
+### <a name="cross-references"></a>Querverweise
+
+- [für](2-4-1-for-construct.md) Richtlinie
+- [für die parallele](2-5-1-parallel-for-construct.md) Richtlinie
+
+## <a name="42-ompnumthreads"></a>4.2 OMP_NUM_THREADS
+
+Die `OMP_NUM_THREADS` -Umgebungsvariable wird die Standardanzahl von Threads zur Verwendung während der Ausführung. `OMP_NUM_THREADS` wird ignoriert, wenn diese Zahl explizit, durch den Aufruf geändert wird der `omp_set_num_threads` Bibliotheksroutine. Es ist auch ignoriert, wenn ein expliziter `num_threads` -Klausel für eine `parallel` Richtlinie.
+
+Der Wert des der `OMP_NUM_THREADS` -Umgebungsvariable muss eine positive ganze Zahl sein. Die Auswirkungen hängt davon ab, ob die dynamische Anpassung der Anzahl der Threads aktiviert ist. Für einen umfassenden Satz von Regeln über die Interaktion zwischen der `OMP_NUM_THREADS` Umgebung Variable und die dynamische Anpassung der Threads, siehe Abschnitt 2.3.
+
+Die Anzahl der zu verwendenden Threads wird Wenn implementierungsdefinierte:
+
+- die `OMP_NUM_THREADS` -Umgebungsvariable nicht angegeben ist,
+- Der angegebene Wert ist nicht in eine positive ganze Zahl, oder
+- der Wert ist größer als die maximale Anzahl von Threads, die das System unterstützen kann.
+
+Beispiel:
+
+```csh
+setenv OMP_NUM_THREADS 16
+```
+
+### <a name="cross-references"></a>Querverweise
+
+- [Num_threads](2-3-parallel-construct.md) Klausel
+- [omp_set_num_threads](3-1-1-omp-set-num-threads-function.md) function
+- [omp_set_dynamic](3-1-7-omp-set-dynamic-function.md) function
+
+## <a name="43-ompdynamic"></a>4.3 OMP_DYNAMIC
+
+Die `OMP_DYNAMIC` Umgebungsvariablen aktiviert oder deaktiviert die dynamische Anpassung der Anzahl der Threads, die für die Ausführung von parallelen Bereichen verfügbar. `OMP_DYNAMIC` wird ignoriert, wenn die dynamische Anpassung explizit aktiviert oder deaktiviert werden, durch den Aufruf der `omp_set_dynamic` Bibliotheksroutine. Muss sein Wert `TRUE` oder `FALSE`.
+
+Wenn `OMP_DYNAMIC` nastaven NA hodnotu `TRUE`, die Anzahl der Threads, die verwendet werden, für die Ausführung von paralleler Bereichen kann angepasst werden, von der Common Language Runtime-Umgebung zur optimalen Verwendung der Systemressourcen.  Wenn `OMP_DYNAMIC` nastaven NA hodnotu `FALSE`, dynamische Anpassung ist deaktiviert. Die standardbedingung wird die Implementierung definiert.
+
+Beispiel:
+
+```csh
+setenv OMP_DYNAMIC TRUE
+```
+
+### <a name="cross-references"></a>Querverweise
+
+- [Parallelen Bereichen](2-3-parallel-construct.md)
+- [omp_set_dynamic](3-1-7-omp-set-dynamic-function.md) function
+
+## <a name="44-ompnested"></a>4.4 OMP_NESTED
+
+Die `OMP_NESTED` Umgebungsvariablen aktiviert oder geschachtelte Parallelität deaktiviert, es sei denn, geschachtelte Parallelität aktiviert oder werden, durch den Aufruf deaktiviert der `omp_set_nested` Bibliotheksroutine. Wenn `OMP_NESTED` nastaven NA hodnotu `TRUE`, geschachtelte Parallelität aktiviert ist. Wenn `OMP_NESTED` nastaven NA hodnotu `FALSE`, geschachtelte Parallelität deaktiviert ist. Der Standardwert ist `FALSE`.
+
+Beispiel:
+
+```csh
+setenv OMP_NESTED TRUE
+```
+
+### <a name="cross-reference"></a>Querverweise
+
+- [Omp_set_nested](3-1-9-omp-set-nested-function.md) Funktion
