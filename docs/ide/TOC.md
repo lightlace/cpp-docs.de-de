@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 429e20c77c2a5715d1d45b74b3d020ee52daec97
+ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397367"
+---
 # [IDE und Tools für Visual C++-Entwicklung](ide-and-tools-for-visual-cpp-development.md)
 # [Schreiben und Refactoring von Code (C++)](writing-and-refactoring-code-cpp.md)
 ## [Signatur ändern](refactoring/change-signature.md)
@@ -31,10 +39,6 @@
 ##### [Anwendungseinstellungen, Makefile-Projekt-Assistent](application-settings-makefile-project-wizard.md)
 #### [Vorgehensweise: Aktivieren von IntelliSense für Makefile-Projekte](how-to-enable-intellisense-for-makefile-projects.md)
 ### [Vorgehensweise: Erstellen eines C++-Projekts aus vorhandenem Code](how-to-create-a-cpp-project-from-existing-code.md)
-#### [Projektspeicherort und Quelldateien festlegen, Assistent "Neues Projekt aus vorhandenen Codedateien erstellen"](specify-project-location-and-source-files.md)
-#### [Projekteinstellungen angeben, Assistent "Neues Projekt aus vorhandenen Codedateien erstellen"](specify-project-settings-create-new-project-from-existing-code-files-wizard.md)
-#### [Einstellungen für Debugkonfiguration angeben, Assistent "Neues Projekt aus vorhandenen Codedateien erstellen"](specify-debug-configuration-settings.md)
-#### [Einstellungen für Releasekonfiguration angeben, Assistent „Neues Projekt aus vorhandenen Codedateien erstellen“](specify-release-configuration.md)
 ## [Arbeiten mit Projekteigenschaften](working-with-project-properties.md)
 ### [Eigenschaftenseiten (Visual C++)](property-pages-visual-cpp.md)
 #### [Eigenschaftenseite „Allgemein“ (Projekt)](general-property-page-project.md)
@@ -51,17 +55,17 @@
 #### [Eigenschaftenseiten "Ressourcen"](resources-property-pages.md)
 #### [Eigenschaftenseite "Verwaltete Ressourcen"](managed-resources-property-page.md)
 #### [Eigenschaftenseiten "MIDL"](midl-property-pages.md)
-##### [Eigenschaftenseiten "MIDL": "Allgemein"](midl-property-pages-general.md)
-##### [Eigenschaftenseiten "MIDL": "Ausgabe"](midl-property-pages-output.md)
-##### [Eigenschaftenseiten "MIDL": "Erweitert"](midl-property-pages-advanced.md)
+##### [Eigenschaftenseiten „MIDL“: Allgemein](midl-property-pages-general.md)
+##### [Eigenschaftenseiten „MIDL“: Ausgabe](midl-property-pages-output.md)
+##### [Eigenschaftenseiten „MIDL“: Erweitert](midl-property-pages-advanced.md)
 #### [Eigenschaftenseite "Webverweise"](web-references-property-page.md)
 #### [Eigenschaftenseite "Tool zum Generieren von XML-Daten"](xml-data-generator-tool-property-page.md)
 #### [Eigenschaftenseiten für das Tool XML-Dokument-Generator](xml-document-generator-tool-property-pages.md)
 #### [Eigenschaftenseite für benutzerdefinierten Buildschritt: Allgemein](custom-build-step-property-page-general.md)
 #### [Eigenschaftenseiten "HLSL"](hlsl-property-pages.md)
-##### [Eigenschaftenseiten "HLSL": Allgemein](hlsl-property-pages-general.md)
-##### [Eigenschaftenseiten "HLSL": Erweitert](hlsl-property-pages-advanced.md)
-##### [Eigenschaftenseiten "HLSL": Ausgabedateien](hlsl-property-pages-output-files.md)
+##### [HLSL-Eigenschaftenseiten: Allgemein](hlsl-property-pages-general.md)
+##### [HLSL-Eigenschaftenseiten: Erweitert](hlsl-property-pages-advanced.md)
+##### [HLSL-Eigenschaftenseiten: Ausgabedateien](hlsl-property-pages-output-files.md)
 ## [Hinzufügen von Verweisen in Visual C++-Projekten](adding-references-in-visual-cpp-projects.md)
 ## [Vorgehensweise: Organisieren von Projektausgabedateien für Builds](how-to-organize-project-output-files-for-builds.md)
 # [Bereitstellen von nativen Desktopanwendungen (Visual C++)](deploying-native-desktop-applications-visual-cpp.md)
@@ -77,7 +81,7 @@
 ### [Neuverteilen der MFC-Bibliothek](redistributing-the-mfc-library.md)
 ### [Neuverteilen von ATL-Anwendungen](redistributing-an-atl-application.md)
 ## [Bereitstellungsbeispiele](deployment-examples.md)
-### [Exemplarische Vorgehensweise: Bereitstellen einer Visual C++-Anwendung mithilfe eines Setup-Projekts](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)
+### [Exemplarische Vorgehensweise: Bereitstellen einer Visual C++-Anwendung mithilfe eines Setupprojekts](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)
 ### [Exemplarische Vorgehensweise: Bereitstellen einer Visual C++-Anwendung in einem lokalen Anwendungsordner](walkthrough-deploying-a-visual-cpp-application-to-an-application-local-folder.md)
 ### [Exemplarische Vorgehensweise: Bereitstellen einer Visual C++-Anwendung mithilfe von Visual C++ Redistributable Package](deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)
 ### [Vorbereiten eines Testcomputers zum Ausführen einer ausführbaren Debugdatei](preparing-a-test-machine-to-run-a-debug-executable.md)
@@ -130,7 +134,7 @@
 ## [Beispiel-Projektdatei](project-files.md)
 ## [Exemplarische Vorgehensweise: Kompilieren eines C++-Programms für die CLR in Visual Studio](walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)
 # [Verwenden der Visual Studio-IDE für C++-Desktopentwicklung](using-the-visual-studio-ide-for-cpp-desktop-development.md)
-## [Exemplarische Vorgehensweise: Arbeiten mit Projekten und Lösungen (C++)](walkthrough-working-with-projects-and-solutions-cpp.md)
+## [Exemplarische Vorgehensweise: Arbeiten mit Projekten und Projektmappen (C++)](walkthrough-working-with-projects-and-solutions-cpp.md)
 ## [Exemplarische Vorgehensweise: Erstellen eines Projekts (C++)](walkthrough-building-a-project-cpp.md)
 ## [Exemplarische Vorgehensweise: Testen eines Projekts (C++)](walkthrough-testing-a-project-cpp.md)
 ## [Exemplarische Vorgehensweise: Debuggen eines Projekts (C++)](walkthrough-debugging-a-project-cpp.md)
