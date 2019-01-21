@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-ms.openlocfilehash: 7565679c58af83d64fd59419e8e841ee48133edf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec59a02f1302fe4a2149889cf1b48090d061d6b2
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544196"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417615"
 ---
 # <a name="unlink-wunlink"></a>_unlink, _wunlink
 
@@ -61,7 +61,7 @@ Name der zu entfernenden Datei.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt bei Erfolg 0 zurück. Anderenfalls gibt die Funktion-1 zurück und legt **Errno** zu **EACCES**, was bedeutet, dass den Pfad eine schreibgeschützte Datei angibt oder **ENOENT**, d.h. Datei oder Pfad wurde nicht gefunden oder der Pfad ein Verzeichnis angegeben.
+Jede dieser Funktionen gibt bei Erfolg 0 zurück. Andernfalls gibt die Funktion-1 zurück und legt **Errno** zu **EACCES**, was bedeutet, dass den Pfad Gibt an, eine schreibgeschützte Datei oder einem Verzeichnis oder **ENOENT**, das bedeutet, dass die Datei oder Pfad wurde nicht gefunden.
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

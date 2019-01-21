@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: 78abe5e3b491ec0d658a40628dadc81e334c212f
-ms.sourcegitcommit: d94714522428834a02ede6e6884572f0f6ca9824
+ms.openlocfilehash: 77e6d0c97f1d0381fe32ae23f8d7e8bd02ddf219
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597537"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417641"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/ fp (Gleitkommaverhalten festlegen)
 
@@ -24,7 +24,7 @@ Gibt an, wie der Compiler Gleitkommaausdrücken, Optimierungen und Ausnahmen beh
 
 ## <a name="syntax"></a>Syntax
 
-> **/ fp:**[**präzise** | **strict** | **schnell** | **außer**[ **-**]]
+> **/fp:**[**precise** | **strict** | **fast** | **except**[**-**]]
 
 ### <a name="arguments"></a>Argumente
 
@@ -71,13 +71,13 @@ Die [/Za](../../build/reference/za-ze-disable-language-extensions.md) (ANSI-Komp
 
 ### <a name="using-pragmas-to-control-floating-point-behavior"></a>Mithilfe des Pragmas Steuerelement Gleitkomma-Verhalten
 
-Der Compiler bietet drei Pragma Directivess zum Überschreiben der Gleitkommaverhalten in der Befehlszeile angegeben: [Float_control](../../preprocessor/float-control.md), [Fenv_access](../../preprocessor/fenv-access.md), und [Fp_contract](../../preprocessor/fp-contract.md). Sie können diese Pragmas verwenden, zum Steuern des Gleitkommaverhaltens auf Funktionsebene, nicht innerhalb einer Funktion. Beachten Sie, dass diese Pragmas nicht direkt entsprechen den **/fp** Optionen. Diese Tabelle zeigt, wie die **/fp** Optionen und Pragmas zugeordnet werden, miteinander. Weitere Informationen finden Sie in der Dokumentation für die einzelnen Optionen und Pragmas.
+Der Compiler bietet drei Pragma-Direktiven überschreiben die Gleitkommaverhalten in der Befehlszeile angegeben: [Float_control](../../preprocessor/float-control.md), [Fenv_access](../../preprocessor/fenv-access.md), und [Fp_contract](../../preprocessor/fp-contract.md). Sie können diese Pragmas verwenden, zum Steuern des Gleitkommaverhaltens auf Funktionsebene, nicht innerhalb einer Funktion. Beachten Sie, dass diese Pragmas nicht direkt entsprechen den **/fp** Optionen. Diese Tabelle zeigt, wie die **/fp** Optionen und Pragmas zugeordnet werden, miteinander. Weitere Informationen finden Sie in der Dokumentation für die einzelnen Optionen und Pragmas.
 
-||float_control(precise)|float_control(EXCEPT)|fenv_access|fp_contract|
+||float_control(precise)|float_control(except)|fenv_access|fp_contract|
 |-|-|-|-|-|
-|**fast**|Ausschalten|Ausschalten|Ausschalten|an|
-|**/ fp: präzise**|an|Ausschalten|Ausschalten|an|
-|**/ fp: mit Ausnahme**|an|an|an|Ausschalten|
+|**/fp:fast**|Ausschalten|Ausschalten|Ausschalten|an|
+|**/fp:precise**|an|Ausschalten|Ausschalten|an|
+|**/fp:except**|an|an|an|Ausschalten|
 
 ### <a name="the-default-floating-point-environment"></a>Die standardumgebung floating point
 

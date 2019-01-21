@@ -30,12 +30,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: d5636912ea36fd1b1412a556d516ac3e8184e0b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05f1c5b6760520e5a982777faa903b3c5116ad05
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613968"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417602"
 ---
 # <a name="remove-wremove"></a>remove, _wremove
 
@@ -59,7 +59,7 @@ Pfad der zu löschenden Datei.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt 0 zurück, wenn die Datei erfolgreich gelöscht wird. Andernfalls wird-1 zurückgegeben und legt **Errno** entweder auf **EACCES** , um anzugeben, dass der Pfad Gibt an, eine schreibgeschützte Datei oder die Datei geöffnet ist, oder **ENOENT** an, dass die Dateiname oder Pfad wurde nicht gefunden oder, dass der Pfad ein Verzeichnis angibt.
+Jede dieser Funktionen gibt 0 zurück, wenn die Datei erfolgreich gelöscht wird. Andernfalls wird-1 zurückgegeben und legt **Errno** entweder **EACCES** gibt an, um anzugeben, dass der Pfad eine schreibgeschützte Datei angibt, ein Verzeichnis oder die Datei geöffnet ist, oder **ENOENT** um anzugeben, dass der Dateiname oder Pfad nicht gefunden wurde.
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
