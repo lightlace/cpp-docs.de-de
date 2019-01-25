@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHttpFile [MFC], SendRequest
 - CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
-ms.openlocfilehash: 1fa1b63ed045c176841565473476185bb15999e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ee92a6cb627cee701b9b98a8a32666a0877f62c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564458"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893651"
 ---
 # <a name="chttpfile-class"></a>CHttpFile-Klasse
 
@@ -55,14 +55,14 @@ class CHttpFile : public CInternetFile
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CHttpFile:: AddRequestHeaders](#addrequestheaders)|Die Anforderung ein HTTP-Server an werden Header hinzugefügt.|
+|[CHttpFile::AddRequestHeaders](#addrequestheaders)|Die Anforderung ein HTTP-Server an werden Header hinzugefügt.|
 |[CHttpFile::EndRequest](#endrequest)|Beendet eine Anforderung gesendet, um einen HTTP-Server mit der [SendRequestEx](#sendrequestex) Member-Funktion.|
 |[CHttpFile::GetFileURL](#getfileurl)|Ruft die URL für die angegebene Datei.|
 |[CHttpFile::GetObject](#getobject)|Ruft das Zielobjekt des Verbs in einer Anforderung eines HTTP-Servers ab.|
 |[CHttpFile::GetVerb](#getverb)|Ruft das Verb, das in einer Anforderung an einen HTTP-Server verwendet wurde.|
-|[CHttpFile::](#queryinfo)|Gibt die Antwort oder Anforderung-Header der HTTP-Server zurück.|
-|[QueryInfoStatusCode](#queryinfostatuscode)|Ruft den Statuscode einer HTTP-Anforderung zugeordnet ist, und platziert sie in der angegebenen `dwStatusCode` Parameter.|
-|[CHttpFile:: SendRequest](#sendrequest)|Sendet eine Anforderung an einen HTTP-Server.|
+|[CHttpFile::QueryInfo](#queryinfo)|Gibt die Antwort oder Anforderung-Header der HTTP-Server zurück.|
+|[CHttpFile::QueryInfoStatusCode](#queryinfostatuscode)|Ruft den Statuscode einer HTTP-Anforderung zugeordnet ist, und platziert sie in der angegebenen `dwStatusCode` Parameter.|
+|[CHttpFile::SendRequest](#sendrequest)|Sendet eine Anforderung an einen HTTP-Server.|
 |[CHttpFile::SendRequestEx](#sendrequestex)|Sendet eine Anforderung an eine HTTP-Server mit der [schreiben](../../mfc/reference/cinternetfile-class.md#write) oder [WriteString](../../mfc/reference/cinternetfile-class.md#writestring) Methoden `CInternetFile`.|
 
 ## <a name="remarks"></a>Hinweise
@@ -262,7 +262,7 @@ Ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Objekt, das den
 
 Verwenden Sie diese Memberfunktion erst nach einem erfolgreichen Aufruf ["SendRequest"](#sendrequest) oder auf eine `CHttpFile` Objekt erfolgreich erstellt, indem [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).
 
-##  <a name="queryinfo"></a>  CHttpFile::
+##  <a name="queryinfo"></a>  CHttpFile::QueryInfo
 
 Rufen Sie diese Memberfunktion zum Zurückgeben der Antwort oder Header für die Anforderung von einer HTTP-Anforderung.
 
@@ -293,7 +293,7 @@ Eine Kombination des Attributs, Abfrage und die folgenden Flags, die den Typ der
 
 - Die Anwendung fragt HTTP_QUERY_FLAG_REQUEST_HEADERS in der Regel die Header der Antwort, aber eine Anwendung kann auch die Anforderungsheader Abfragen, indem Sie die Verwendung dieses Flags.
 
-- HTTP_QUERY_FLAG_SYSTEMTIME für Header, dessen Wert ein Datum/Uhrzeit-Zeichenfolge, z. B. "Last-Modified-Zeit," dieses Flag gibt den Headerwert als eine standardmäßige Win32- [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) -Struktur, die keine die Anwendung erforderlich ist die Daten analysieren. Wenn Sie dieses Flag verwenden, sollten Sie verwenden die `SYSTEMTIME` außer Kraft setzen, der Funktion.
+- HTTP_QUERY_FLAG_SYSTEMTIME für Header, dessen Wert ein Datum/Uhrzeit-Zeichenfolge, z. B. "Last-Modified-Zeit," dieses Flag gibt den Headerwert als eine standardmäßige Win32- [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) -Struktur, die keine die Anwendung erforderlich ist die Daten analysieren. Wenn Sie dieses Flag verwenden, sollten Sie verwenden die `SYSTEMTIME` außer Kraft setzen, der Funktion.
 
 - HTTP_QUERY_FLAG_NUMBER für Header, dessen Wert eine Zahl, z. B. der Statuscode ist, dieses Flag die Daten als 32-Bit-Zahl zurückgegeben.
 
@@ -311,11 +311,11 @@ Ein Zeiger auf eine nullbasierte Headerindex. NULL kann sein. Verwenden Sie dies
 *str*<br/>
 Ein Verweis auf die [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt empfangen die zurückgegebene Informationen.
 
-*dwIndex ab*<br/>
+*dwIndex*<br/>
 Ein Indexwert. Finden Sie unter *LpdwIndex*.
 
 *pSysTime*<br/>
-Ein Zeiger auf eine Win32- [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur.
+Ein Zeiger auf eine Win32- [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -383,7 +383,7 @@ Die möglichen *DwInfoLevel* Werte sind:
 
 - HTTP_QUERY_RAW_HEADERS_CRLF
 
-##  <a name="queryinfostatuscode"></a>  QueryInfoStatusCode
+##  <a name="queryinfostatuscode"></a>  CHttpFile::QueryInfoStatusCode
 
 Rufen Sie diese Memberfunktion rufen Sie den Statuscode einer HTTP-Anforderung zugeordnet ist, und platzieren Sie sie in der angegebenen *DwStatusCode* Parameter.
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - ON_COMMAND_EX macro [MFC]
 - message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
-ms.openlocfilehash: ab08476923f253d666e024d8944aec64ed0af8da
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 3536cb215da04fb7114853d3fa5d764585cbb58e
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693654"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894080"
 ---
 # <a name="tn006-message-maps"></a>TN006: Meldungszuordnungen
 
@@ -121,7 +121,7 @@ Der Bereich der benutzerdefinierten Nachrichten, die diesen Ansatz verwenden, mu
 
 ## <a name="registered-windows-messages"></a>Registrierte Windows-Meldungen
 
-Die [RegisterWindowMessage registriert](https://msdn.microsoft.com/library/windows/desktop/ms644947) Funktion wird verwendet, um eine neue Fensternachricht zu definieren, die garantiert im gesamten System eindeutig sein. Das ON_REGISTERED_MESSAGE-Makro wird verwendet, um diese Nachrichten zu verarbeiten. Dieses Makro akzeptiert einen Namen für eine *"uint" in der Nähe* Variable, die die registrierte Windows-Nachrichten-ID enthält. Beispiel:
+Die [RegisterWindowMessage registriert](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) Funktion wird verwendet, um eine neue Fensternachricht zu definieren, die garantiert im gesamten System eindeutig sein. Das ON_REGISTERED_MESSAGE-Makro wird verwendet, um diese Nachrichten zu verarbeiten. Dieses Makro akzeptiert einen Namen für eine *"uint" in der Nähe* Variable, die die registrierte Windows-Nachrichten-ID enthält. Beispiel:
 
 ```cpp
 class CMyWnd : public CMyParentWndClass
@@ -213,7 +213,7 @@ Beispiele für die der folgenden Formen:
     }
     ```
 
-Fortgeschrittene Benutzer können eine Auswahl von Befehlen behandeln, indem Sie mit einem einzigen Befehlshandler: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) oder ON_COMMAND_RANGE_EX. Finden Sie in der Produktdokumentation für Weitere Informationen zu diesen Makros.
+Fortgeschrittene Benutzer können eine Auswahl von Befehlen mithilfe eines Handlers für die einzelnen Befehls verarbeiten: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) oder ON_COMMAND_RANGE_EX. Finden Sie in der Produktdokumentation für Weitere Informationen zu diesen Makros.
 
 > [!NOTE]
 > Klassen-Assistent unterstützt die Erstellung ON_COMMAND und ON_UPDATE_COMMAND_UI-Handler erstellen ON_COMMAND_EX oder ON_COMMAND_RANGE-Handler wird nicht unterstützt. Allerdings-Klassen-Assistent analysiert und lassen Sie alle vier Befehl Handler Varianten zu durchsuchen.

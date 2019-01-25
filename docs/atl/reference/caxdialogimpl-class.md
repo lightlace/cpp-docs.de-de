@@ -17,12 +17,12 @@ helpviewer_keywords:
 - CAxDialogImpl class
 - ATL, dialog boxes
 ms.assetid: 817df483-3fa8-44e7-8487-72ba0881cd27
-ms.openlocfilehash: 9cb4ec679e26adc32ffc6d68ebff9b1ed73c2f43
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 852656b33eca1a8c87c6931b58cd49c0c41fe3dc
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694230"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893638"
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl-Klasse
 
@@ -135,7 +135,7 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
 *dwInitParam*<br/>
 [in] Gibt den Wert zu übergeben, um das Dialogfeld in der *lParam* -Parameter der WM_INITDIALOG-Meldung.
 
-*RECT &AMP;*<br/>
+*RECT&*<br/>
 Dieser Parameter wird nicht verwendet. Dieser Parameter wird übergeben, indem `CComControl`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -255,7 +255,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
 ### <a name="parameters"></a>Parameter
 
 *pMsg*<br/>
-Zeiger auf eine [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) -Struktur, die der Nachricht, die überprüft werden soll.
+Zeiger auf eine [MSG](/windows/desktop/api/winuser/ns-winuser-msg) -Struktur, die der Nachricht, die überprüft werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 

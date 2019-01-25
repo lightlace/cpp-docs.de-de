@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CFileFind [MFC], CloseContext
 - CFileFind [MFC], m_pTM
 ms.assetid: 9990068c-b023-4114-9580-a50182d15240
-ms.openlocfilehash: 983c8c46100312947f9b5c357df23b51d6eaabc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9eb192e546bcfbba385beea4f1716ce03bbc8ade
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462153"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894054"
 ---
 # <a name="cfilefind-class"></a>CFileFind-Klasse
 
@@ -208,7 +208,7 @@ virtual BOOL FindFile(
 Ein Zeiger auf eine Zeichenfolge, die mit dem Namen des zu suchenden Datei. Wenn Sie NULL, für die übergeben *PstrName*, `FindFile` ist einen Platzhalter (*.\*) suchen.
 
 *dwUnused*<br/>
-Reserviert, um die stellen `FindFile` von abgeleiteten Klassen polymorph. 0 muss sein.
+Reserviert, um die stellen `FindFile` von abgeleiteten Klassen polymorph. Muss 0 (null) sein.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -332,7 +332,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parameter
 
 *pTimeStamp*<br/>
-Ein Zeiger auf eine [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) -Struktur, enthält die Zeit, die die Datei erstellt wurde.
+Ein Zeiger auf eine [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) -Struktur, enthält die Zeit, die die Datei erstellt wurde.
 
 *refTime*<br/>
 Ein Verweis auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt.
@@ -473,7 +473,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 Ein Verweis auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt.
 
 *pTimeStamp*<br/>
-Ein Zeiger auf eine [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) Struktur, die beim Zugriff auf die Datei wurde zuletzt enthält.
+Ein Zeiger auf eine [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) Struktur, die beim Zugriff auf die Datei wurde zuletzt enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -502,7 +502,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parameter
 
 *pTimeStamp*<br/>
-Ein Zeiger auf eine [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) -Struktur, enthält die Datei zum letzten geschrieben wurde.
+Ein Zeiger auf eine [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) -Struktur, enthält die Datei zum letzten geschrieben wurde.
 
 *refTime*<br/>
 Ein Verweis auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt.

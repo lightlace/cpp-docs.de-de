@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: b577ee002e34fa051b6e1dd5ffca71f935d93433
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad682980fbc885d79598b41a5dcc094bb65db8cf
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619140"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893534"
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT-Klasse
 
@@ -76,8 +76,8 @@ Der Ressourcenbezeichner des Diensts.
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CAtlServiceModuleT:: Handler](#handler)|Der Handlerroutine für den Dienst.|
-|[CAtlServiceModuleT:: InitializeSecurity](#initializesecurity)|Stellt die Sicherheitseinstellungen für den Dienst.|
+|[CAtlServiceModuleT::Handler](#handler)|Der Handlerroutine für den Dienst.|
+|[CAtlServiceModuleT::InitializeSecurity](#initializesecurity)|Stellt die Sicherheitseinstellungen für den Dienst.|
 |[CAtlServiceModuleT::Install](#install)|Installiert und den Dienst erstellt.|
 |[CAtlServiceModuleT::IsInstalled](#isinstalled)|Bestätigt, dass der Dienst installiert wurde.|
 |[CAtlServiceModuleT::LogEvent](#logevent)|Schreibt in das Ereignisprotokoll geschrieben.|
@@ -90,10 +90,10 @@ Der Ressourcenbezeichner des Diensts.
 |[CAtlServiceModuleT::ParseCommandLine](#parsecommandline)|Analysiert die Befehlszeile und führt die Registrierung bei Bedarf.|
 |[CAtlServiceModuleT::PreMessageLoop](#premessageloop)|Diese Methode wird aufgerufen, unmittelbar vor die Nachrichtenschleife eingeben.|
 |[CAtlServiceModuleT::RegisterAppId](#registerappid)|Registriert den Dienst in der Registrierung.|
-|[CAtlServiceModuleT:: Start](#run)|Der Dienst ausgeführt.|
-|[CAtlServiceModuleT:: ServiceMain](#servicemain)|Die Methode wird aufgerufen, durch den Dienststeuerungs-Manager.|
+|[CAtlServiceModuleT::Run](#run)|Der Dienst ausgeführt.|
+|[CAtlServiceModuleT::ServiceMain](#servicemain)|Die Methode wird aufgerufen, durch den Dienststeuerungs-Manager.|
 |[CAtlServiceModuleT::SetServiceStatus](#setservicestatus)|Aktualisiert den Dienststatus.|
-|[CAtlServiceModuleT:: Start](#start)|Wird aufgerufen, indem `CAtlServiceModuleT::WinMain` Wenn der Dienst gestartet wird.|
+|[CAtlServiceModuleT::Start](#start)|Wird aufgerufen, indem `CAtlServiceModuleT::WinMain` Wenn der Dienst gestartet wird.|
 |[CAtlServiceModuleT::Uninstall](#uninstall)|Beendet und entfernt den Dienst.|
 |[CAtlServiceModuleT::Unlock](#unlock)|Verringert die Sperrenanzahl des Diensts.|
 |[CAtlServiceModuleT::UnregisterAppId](#unregisterappid)|Entfernt den Dienst aus der Registrierung.|
@@ -432,7 +432,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>Parameter
 
 *nShowCmd*<br/>
-Gibt an, wie das Fenster angezeigt werden. Dieser Parameter kann sein, einen der Werte in erläutert die [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) Abschnitt. Der Standardwert ist SW_HIDE.
+Gibt an, wie das Fenster angezeigt werden. Dieser Parameter kann sein, einen der Werte in erläutert die [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) Abschnitt. Der Standardwert ist SW_HIDE.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -474,7 +474,7 @@ void SetServiceStatus(DWORD dwState) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*dwState-Datenmember*<br/>
+*dwState*<br/>
 Der neue Status. Finden Sie unter [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) mögliche Werte.
 
 ### <a name="remarks"></a>Hinweise
@@ -492,7 +492,7 @@ HRESULT Start(int nShowCmd) throw();
 ### <a name="parameters"></a>Parameter
 
 *nShowCmd*<br/>
-Gibt an, wie das Fenster angezeigt werden. Dieser Parameter kann sein, einen der Werte in erläutert die [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) Abschnitt.
+Gibt an, wie das Fenster angezeigt werden. Dieser Parameter kann sein, einen der Werte in erläutert die [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) Abschnitt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -553,7 +553,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>Parameter
 
 *nShowCmd*<br/>
-Gibt an, wie das Fenster angezeigt werden. Dieser Parameter kann sein, einen der Werte in erläutert die [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) Abschnitt.
+Gibt an, wie das Fenster angezeigt werden. Dieser Parameter kann sein, einen der Werte in erläutert die [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) Abschnitt.
 
 ### <a name="return-value"></a>Rückgabewert
 

@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: 71b3b8621f4148f680337e9bce6ef469b90de746
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12a8159cbf28c64efe36357761f4f404ccff9541
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614378"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894015"
 ---
 # <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase-Klasse
 
@@ -43,7 +43,7 @@ class CAtlFileMappingBase
 |Name|Beschreibung|
 |----------|-----------------|
 |[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)|Der Konstruktor.|
-|[CAtlFileMappingBase:: ~ CAtlFileMappingBase](#dtor)|Der Destruktor.|
+|[CAtlFileMappingBase::~CAtlFileMappingBase](#dtor)|Der Destruktor.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -193,7 +193,7 @@ Die Dateioffset, in dem Zuordnung ist, um zu beginnen. Der Offset-Wert muss es s
 Der Schutz für die Dateiansicht gewünscht wird, wenn die Datei zugeordnet ist. Finden Sie unter *FlProtect* in [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) im Windows SDK.
 
 *dwViewDesiredAccess*<br/>
-Gibt den Typ des Zugriffs auf die Datei anzeigen und somit den Schutz von der Seiten, die von der Datei zugeordnet. Finden Sie unter *DwDesiredAccess* in [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) im Windows SDK.
+Gibt den Typ des Zugriffs auf die Datei anzeigen und somit den Schutz von der Seiten, die von der Datei zugeordnet. Finden Sie unter *DwDesiredAccess* in [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) im Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -201,7 +201,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Nachdem eine Dateizuordnungsobjekt erstellt wurde, darf die Größe der dateizuordnung Objekts von der Größe der Datei nicht überschreiten. Wenn dies der Fall ist, werden nicht alle der Inhalt der Datei für die Freigabe zur Verfügung. Weitere Informationen finden Sie unter [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) und [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) im Windows SDK.
+Nachdem eine Dateizuordnungsobjekt erstellt wurde, darf die Größe der dateizuordnung Objekts von der Größe der Datei nicht überschreiten. Wenn dies der Fall ist, werden nicht alle der Inhalt der Datei für die Freigabe zur Verfügung. Weitere Informationen finden Sie unter [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) und [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) im Windows SDK.
 
 ### <a name="example"></a>Beispiel
 
@@ -239,7 +239,7 @@ Der Zeiger auf eine `SECURITY_ATTRIBUTES` -Struktur, die bestimmt, ob das zurüc
 Der Schutz für die Dateiansicht, gewünscht wird, wenn die Datei zugeordnet ist. Finden Sie unter *FlProtect* in `CreateFileMapping` im Windows SDK.
 
 *dwViewDesiredAccess*<br/>
-Gibt den Typ des Zugriffs auf die Datei anzeigen und somit den Schutz von der Seiten, die von der Datei zugeordnet. Finden Sie unter *DwDesiredAccess* in [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) im Windows SDK.
+Gibt den Typ des Zugriffs auf die Datei anzeigen und somit den Schutz von der Seiten, die von der Datei zugeordnet. Finden Sie unter *DwDesiredAccess* in [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) im Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -273,7 +273,7 @@ Die Größe für Zuordnung. Bei 0 wird die maximale Größe der dateizuordnung O
 Die Dateioffset, in dem Zuordnung ist, um zu beginnen. Der Offset-Wert muss es sich um ein Vielfaches von Speicher-zuordnungsgranularität des Systems sein.
 
 *dwViewDesiredAccess*<br/>
-Gibt den Typ des Zugriffs auf die Datei anzeigen und somit den Schutz von der Seiten, die von der Datei zugeordnet. Finden Sie unter *DwDesiredAccess* in [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) im Windows SDK.
+Gibt den Typ des Zugriffs auf die Datei anzeigen und somit den Schutz von der Seiten, die von der Datei zugeordnet. Finden Sie unter *DwDesiredAccess* in [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) im Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -314,7 +314,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [UnmapViewOfFile](https://msdn.microsoft.com/library/windows/desktop/aa366882) im Windows SDK für weitere Details.
+Finden Sie unter [UnmapViewOfFile](/windows/desktop/api/memoryapi/nf-memoryapi-unmapviewoffile) im Windows SDK für weitere Details.
 
 ## <a name="see-also"></a>Siehe auch
 

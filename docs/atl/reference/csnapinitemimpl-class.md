@@ -27,12 +27,12 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-ms.openlocfilehash: 19c957ae80267efda89a3b151f57c453ecb935bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff7336d393ca4680b4d448b9c775888063125b86
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609408"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893612"
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl-Klasse
 
@@ -106,7 +106,7 @@ True, wenn das Objekt eine-Snap-in-Erweiterung. andernfalls "false".
 
 ##  <a name="addmenuitems"></a>  CSnapInItemImpl::AddMenuItems
 
-Diese Methode implementiert die Win32-Funktion [IExtendContextMenu::AddMenuItems](https://msdn.microsoft.com/library/aa814841).
+Diese Methode implementiert die Win32-Funktion [IExtendContextMenu::AddMenuItems](/windows/desktop/api/mmc/nf-mmc-iextendcontextmenu-addmenuitems).
 
 ```
 AddMenuItems(
@@ -144,7 +144,7 @@ AddMenuItems(
 
 ##  <a name="command"></a>  CSnapInItemImpl::Command
 
-Diese Methode implementiert die Win32-Funktion [IExtendContextMenu::Command](https://msdn.microsoft.com/library/aa814842).
+Diese Methode implementiert die Win32-Funktion [IExtendContextMenu::Command](/windows/desktop/api/mmc/nf-mmc-iextendcontextmenu-command).
 
 ```
 Command(long lCommandID, DATA_OBJECT_TYPES type);
@@ -168,7 +168,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 
 ##  <a name="createpropertypages"></a>  CSnapInItemImpl::CreatePropertyPages
 
-Diese Methode implementiert die Win32-Funktion [IExtendPropertySheet::CreatePropertyPages](https://msdn.microsoft.com/library/aa814846).
+Diese Methode implementiert die Win32-Funktion [IExtendPropertySheet::CreatePropertyPages](/windows/desktop/api/mmc/nn-mmc-iextendpropertysheet2).
 
 ```
 CreatePropertyPages(
@@ -183,7 +183,7 @@ CreatePropertyPages(
 *lpProvider*<br/>
 [in] Zeiger auf die `IPropertySheetCallback` Schnittstelle.
 
-*Handle*<br/>
+*handle*<br/>
 [in] Gibt das Handle, das die benachrichtigungsmeldung MMCN_PROPERTY_CHANGE an die entsprechenden Datenklasse weitergeleitet.
 
 *pUnk*<br/>
@@ -218,7 +218,7 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 
 ### <a name="parameters"></a>Parameter
 
-*CF*<br/>
+*cf*<br/>
 [in] Das Format (Text, rich-Text oder rich-Text mit OLE-Elemente) aus der Zwischenablage.
 
 *pStream*<br/>
@@ -294,7 +294,7 @@ SCOPEDATAITEM m_scopeDataItem;
 
 ##  <a name="m_resultdataitem"></a>  CSnapInItemImpl::m_resultDataItem
 
-Die [RESULTDATAITEM](https://msdn.microsoft.com/library/aa815165) Objektstruktur-Snap-in-Daten.
+Die [RESULTDATAITEM](/windows/desktop/api/mmc/ns-mmc-resultdataitem) Objektstruktur-Snap-in-Daten.
 
 ```
 RESULTDATAITEM m_resultDataItem;

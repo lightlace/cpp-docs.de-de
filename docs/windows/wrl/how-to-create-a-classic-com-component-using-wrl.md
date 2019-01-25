@@ -3,12 +3,12 @@ title: 'Vorgehensweise: Erstellen einer klassischen COM-Komponente mit WRL'
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 5efe7690-90d5-4c3c-9e53-11a14cefcb19
-ms.openlocfilehash: 918369a6e43dc9cfb81c5f07afc7aa88a663dee3
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: e19ff4a331a98e64c39dc2e163459b2696bbdee5
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54335977"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893729"
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>Vorgehensweise: Erstellen einer klassischen COM-Komponente mit WRL
 
@@ -28,7 +28,7 @@ Dieses Dokument veranschaulicht, wie die Windows Runtime C++ Template Library ve
 
    [!code-cpp[wrl-classic-com-component#1](../codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_1.idl)]
 
-5. Definieren Sie die `CalculatorComponent` Klasse in CalculatorComponent.cpp. Die `CalculatorComponent` Klasse erbt von [Microsoft::WRL::RuntimeClass](runtimeclass-class.md). [Microsoft::wrl::RuntimeClassFlags\<ClassicCom >](runtimeclassflags-structure.md) gibt an, dass die Klasse abgeleitet [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) und nicht ["iinspectable"](https://msdn.microsoft.com/library/br205821). (`IInspectable` ist nur für Windows-Runtime-app-Komponenten verfügbar.) `CoCreatableClass` erstellt eine Factory für die Klasse, die mit Funktionen wie z. B. verwendet werden kann [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).
+5. Definieren Sie die `CalculatorComponent` Klasse in CalculatorComponent.cpp. Die `CalculatorComponent` Klasse erbt von [Microsoft::WRL::RuntimeClass](runtimeclass-class.md). [Microsoft::wrl::RuntimeClassFlags\<ClassicCom >](runtimeclassflags-structure.md) gibt an, dass die Klasse abgeleitet [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) und nicht ["iinspectable"](/windows/desktop/api/inspectable/nn-inspectable-iinspectable). (`IInspectable` ist nur für Windows-Runtime-app-Komponenten verfügbar.) `CoCreatableClass` erstellt eine Factory für die Klasse, die mit Funktionen wie z. B. verwendet werden kann [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).
 
    [!code-cpp[wrl-classic-com-component#2](../codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_2.cpp)]
 

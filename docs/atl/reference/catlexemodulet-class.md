@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
-ms.openlocfilehash: cec3a0fce1147ca58f2ee2c51b9d728d81dddda4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d31dd9ed1d30633b8f7078794dad06d51ec119f2
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601408"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893435"
 ---
 # <a name="catlexemodulet-class"></a>CAtlExeModuleT-Klasse
 
@@ -52,13 +52,13 @@ Die Klasse abgeleitet `CAtlExeModuleT`.
 |Name|Beschreibung|
 |----------|-----------------|
 |[CAtlExeModuleT::CAtlExeModuleT](#catlexemodulet)|Der Konstruktor.|
-|[CAtlExeModuleT:: ~ CAtlExeModuleT](#dtor)|Der Destruktor.|
+|[CAtlExeModuleT::~CAtlExeModuleT](#dtor)|Der Destruktor.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CAtlExeModuleT](#initializecom)|Initialisiert die COM.|
+|[CAtlExeModuleT::InitializeCom](#initializecom)|Initialisiert die COM.|
 |[CAtlExeModuleT::ParseCommandLine](#parsecommandline)|Analysiert die Befehlszeile und führt die Registrierung bei Bedarf.|
 |[CAtlExeModuleT::PostMessageLoop](#postmessageloop)|Diese Methode wird aufgerufen, unmittelbar nach die Nachrichtenschleife beendet wird.|
 |[CAtlExeModuleT::PreMessageLoop](#premessageloop)|Diese Methode wird aufgerufen, unmittelbar vor die Nachrichtenschleife eingeben.|
@@ -284,7 +284,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>Parameter
 
 *nShowCmd*<br/>
-Gibt an, wie das Fenster angezeigt werden. Dieser Parameter kann sein, einen der Werte in erläutert die [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) Abschnitt. Der Standardwert ist SW_HIDE.
+Gibt an, wie das Fenster angezeigt werden. Dieser Parameter kann sein, einen der Werte in erläutert die [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) Abschnitt. Der Standardwert ist SW_HIDE.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -341,7 +341,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>Parameter
 
 *nShowCmd*<br/>
-Gibt an, wie das Fenster angezeigt werden. Dieser Parameter kann sein, einen der Werte in erläutert die [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) Abschnitt.
+Gibt an, wie das Fenster angezeigt werden. Dieser Parameter kann sein, einen der Werte in erläutert die [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) Abschnitt.
 
 ### <a name="return-value"></a>Rückgabewert
 

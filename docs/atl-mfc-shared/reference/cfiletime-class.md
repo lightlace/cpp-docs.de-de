@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CFileTime class
 - shared classes, CFileTime
 ms.assetid: 1a358a65-1383-4124-b0d4-59b026e6860f
-ms.openlocfilehash: 5d3c81a31d49a2817b4605f734d5348dc518076a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42c89bcfa064bbb151f9d110cbd25763dbd44185
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614226"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893937"
 ---
 # <a name="cfiletime-class"></a>CFileTime-Klasse
 
@@ -66,7 +66,7 @@ class CFileTime :  public FILETIME
 |[CFileTime::operator &lt;](#operator_lt)|Dieser Operator vergleicht zwei `CFileTime`-Objekte, um das kleinere zu bestimmen.|
 |[CFileTime::operator &lt;=](#operator_lt_eq)|Dieser Operator vergleicht zwei `CFileTime`-Objekte, um zu bestimmen, ob sie gleich sind oder welches kleiner ist.|
 |[CFileTime::operator =](#operator_eq)|Der Zuweisungsoperator.|
-|[CFileTime::operator =](#operator_-_eq)|Dieser Operator wird verwendet, für die Subtraktion in einem `CFileTimeSpan` Objekt aus, und das Ergebnis mit dem aktuellen Objekt zuzuweisen.|
+|[CFileTime::operator -=](#operator_-_eq)|Dieser Operator wird verwendet, für die Subtraktion in einem `CFileTimeSpan` Objekt aus, und das Ergebnis mit dem aktuellen Objekt zuzuweisen.|
 |[CFileTime::operator ==](#operator_eq_eq)|Dieser Operator überprüft zwei `CFileTime`-Objekte auf Gleichheit.|
 |[CFileTime::operator &gt;](#operator_gt)|Dieser Operator vergleicht zwei `CFileTime`-Objekte, um das größere zu bestimmen.|
 |[CFileTime::operator &gt;=](#operator_gt_eq)|Dieser Operator vergleicht zwei `CFileTime`-Objekte, um zu bestimmen, ob sie gleich sind oder welches größer ist.|
@@ -123,8 +123,8 @@ CFileTime(ULONGLONG nTime) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*FT*<br/>
-Ein [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) Struktur.
+*ft*<br/>
+Ein [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) Struktur.
 
 *nTime*<br/>
 Das Datum und Uhrzeit als 64-Bit-Wert.
@@ -236,10 +236,10 @@ CFileTimeSpan operator-(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*umfassen*<br/>
+*span*<br/>
 Ein `CFileTimeSpan`-Objekt.
 
-*FT*<br/>
+*ft*<br/>
 Ein `CFileTime`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -256,7 +256,7 @@ bool operator!=(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*FT*<br/>
+*ft*<br/>
 Das zu vergleichende `CFileTime`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -273,7 +273,7 @@ CFileTime operator+(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*umfassen*<br/>
+*span*<br/>
 Ein `CFileTimeSpan`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -290,7 +290,7 @@ CFileTime& operator+=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*umfassen*<br/>
+*span*<br/>
 Ein `CFileTimeSpan`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -307,7 +307,7 @@ bool operator<(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*FT*<br/>
+*ft*<br/>
 Das zu vergleichende `CFileTime`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -328,7 +328,7 @@ bool operator<=(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*FT*<br/>
+*ft*<br/>
 Das zu vergleichende `CFileTime`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -345,7 +345,7 @@ CFileTime& operator=(const FILETIME& ft) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*FT*<br/>
+*ft*<br/>
 Ein `CFileTime` Objekt, das das neue Datum und die enthält.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -362,7 +362,7 @@ CFileTime& operator-=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*umfassen*<br/>
+*span*<br/>
 Ein `CFileTimeSpan` -Objekt, das die zu subtrahierende relative Zeit enthält.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -379,7 +379,7 @@ bool operator==(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*FT*<br/>
+*ft*<br/>
 Die `CFileTime` zu vergleichende Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -396,7 +396,7 @@ bool operator>(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*FT*<br/>
+*ft*<br/>
 Das zu vergleichende `CFileTime`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -413,7 +413,7 @@ bool operator>=(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*FT*<br/>
+*ft*<br/>
 Das zu vergleichende `CFileTime`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -475,7 +475,7 @@ Siehe das Beispiel für [CFileTime::Millisecond](#millisecond).
 
 ## <a name="see-also"></a>Siehe auch
 
-[FILETIME-ELEMENT](https://msdn.microsoft.com/library/windows/desktop/ms724284)<br/>
+[FILETIME-ELEMENT](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)<br/>
 [CFileTimeSpan-Klasse](../../atl-mfc-shared/reference/cfiletimespan-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [Freigegebene ATL-/MFC-Klassen](../../atl-mfc-shared/atl-mfc-shared-classes.md)

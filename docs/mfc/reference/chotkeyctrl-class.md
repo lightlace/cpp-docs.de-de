@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 9a06f3bd8a8c5646f384c3f788518078b121bfe1
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 0b673c873f773844c13894d3f0448536f297dc53
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178134"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894509"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl-Klasse
 
@@ -67,7 +67,7 @@ Dieses Steuerelement (und somit die `CHotKeyCtrl` Klasse) ist nur für Programme
 
 Wenn der Benutzer eine Tastenkombination ausgewählt hat, kann die Anwendung die angegebene Tastenkombination aus dem Steuerelement abzurufen und verwenden die WM_SETHOTKEY-Nachricht im System den Schlüssel für den direkten einrichten. Wenn der Benutzer die Abkürzungstaste danach von einem beliebigen Teil des Systems drückt empfängt das Fenster, in der Meldung WM_SETHOTKEY angegebene eine Angabe SC_HOTKEY WM_SYSCOMMAND-Nachricht. Diese Nachricht wird das Fenster, das er empfängt aktiviert. Die Abkürzungstaste bleibt gültig, bis die Anwendung, die WM_SETHOTKEY beendet aufgerufen wird.
 
-Dieser Mechanismus unterscheidet sich von "Hot" Key-Unterstützung, von denen abhängig von der WM_HOTKEY-Nachricht und die Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) und [UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey) Funktionen.
+Dieser Mechanismus unterscheidet sich von "Hot" Key-Unterstützung, von denen abhängig von der WM_HOTKEY-Nachricht und die Windows [RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey) und [UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey) Funktionen.
 
 Weitere Informationen zur Verwendung von `CHotKeyCtrl`, finden Sie unter [Steuerelemente](../../mfc/controls-mfc.md) und [Verwenden von CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).
 
@@ -110,7 +110,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Gibt die Abkürzungstasten-Steuerelements die Art an. Wenden Sie eine beliebige Kombination der Stile von Listensteuerelementen. Finden Sie unter [allgemeinen Stile von Listensteuerelementen](/windows/desktop/Controls/common-control-styles) im Windows SDK für Weitere Informationen.
 
-*Rect*<br/>
+*rect*<br/>
 Gibt an, die Abkürzungstasten-Steuerelements die Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT-Struktur](/windows/desktop/api/windef/ns-windef-tagrect).
 
 *pParentWnd*<br/>
@@ -150,7 +150,7 @@ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erwei
 *dwStyle*<br/>
 Gibt die Abkürzungstasten-Steuerelements die Art an. Wenden Sie eine beliebige Kombination der Stile von Listensteuerelementen. Weitere Informationen finden Sie unter [allgemeinen Stile von Listensteuerelementen](/windows/desktop/Controls/common-control-styles) im Windows SDK.
 
-*Rect*<br/>
+*rect*<br/>
 Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -232,7 +232,7 @@ static CString GetKeyName(
 
 ### <a name="parameters"></a>Parameter
 
-*VK*<br/>
+*vk*<br/>
 Den virtueller Tastencode.
 
 *fExtended*<br/>
@@ -298,9 +298,9 @@ Ein Array von Flags, die ungültige Schlüsselkombinationen angibt. Sie können 
 
 - HKCOMB_A ALT
 
-- HKCOMB_C STRG
+- HKCOMB_C CTRL
 
-- STRG + ALT + HKCOMB_CA
+- HKCOMB_CA CTRL+ALT
 
 - Unveränderte HKCOMB_NONE Schlüssel
 

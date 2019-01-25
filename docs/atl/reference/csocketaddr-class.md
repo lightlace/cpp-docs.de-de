@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSocketAddr class
 ms.assetid: 2fb2d8a7-899e-4a36-a342-cc9f4fcdd68c
-ms.openlocfilehash: 9ab0367d5a83096c1bb6e9166ee2b43fe2000ab4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc0c5f0abc125138c5068682c828a3438dec5102
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570455"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893352"
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr-Klasse
 
@@ -204,7 +204,7 @@ addrinfo* const GetAddrInfo(int nIndex = 0) const;
 ### <a name="parameters"></a>Parameter
 
 *nIndex*<br/>
-Ein Verweis auf ein bestimmtes Element in der [Addrinfo](https://msdn.microsoft.com/library/windows/desktop/ms737530) Liste.
+Ein Verweis auf ein bestimmtes Element in der [Addrinfo](/windows/desktop/api/ws2def/ns-ws2def-addrinfoa) Liste.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -220,7 +220,7 @@ addrinfo* const GetAddrInfoList() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Zeiger auf eine verknüpfte Liste eines oder mehrerer `addrinfo` Strukturen, die Antwortinformationen über den Host. Weitere Informationen finden Sie unter [Addrinfo Struktur](https://msdn.microsoft.com/library/windows/desktop/ms737530).
+Zeiger auf eine verknüpfte Liste eines oder mehrerer `addrinfo` Strukturen, die Antwortinformationen über den Host. Weitere Informationen finden Sie unter [Addrinfo Struktur](/windows/desktop/api/ws2def/ns-ws2def-addrinfoa).
 
 ## <a name="see-also"></a>Siehe auch
 

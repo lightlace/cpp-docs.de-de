@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 4012f1f0729ff0f46a8504c44f27a37cd55c77e5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 6c6364dcf5d558bcdd25a2957721df1863d1f73f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327446"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893664"
 ---
 # <a name="message-map-macros-mfc"></a>Meldungszuordnungsmakros (MFC)
 
@@ -87,7 +87,7 @@ BEGIN_MESSAGE_MAP( theClass, baseClass )
 *theClass*<br/>
 Gibt an, dass der Name der Klasse, dessen Meldung eine Zuordnung, ist.
 
-*Basisklasse*<br/>
+*baseClass*<br/>
 Gibt den Namen der Basisklasse der *TheClass*.
 
 ### <a name="remarks"></a>Hinweise
@@ -126,7 +126,7 @@ Gibt an, dass der Name der Klasse, dessen Meldung eine Zuordnung, ist.
 *type_name*<br/>
 Der Name des Vorlagenparameters für die Klasse angegeben.
 
-*Basisklasse*<br/>
+*baseClass*<br/>
 Gibt den Namen der Basisklasse der *TheClass*.
 
 ### <a name="remarks"></a>Hinweise
@@ -275,7 +275,7 @@ ON_CONTROL( wNotifyCode, id, memberFxn )
 
 ### <a name="parameters"></a>Parameter
 
-*wNotifyCode schalten*<br/>
+*wNotifyCode*<br/>
 Der Benachrichtigungscode des Steuerelements.
 
 *ID*<br/>
@@ -383,97 +383,97 @@ Die Menü-ID, Symbolleisten-ID, Schaltflächen-ID oder andere-ID der Ressource o
 
 Die `IOleCommandTarget` standardmäßigen Menübefehle von MFC in der folgenden Makros implementiert wurden:
 
-**ON_OLECMD_CLEARSELECTION)**
+**ON_OLECMD_CLEARSELECTION( )**
 
 Sendet den Befehl zum Löschen bearbeiten. Als implementiert:
 
 `ON_OLECMD(NULL, OLECMDID_CLEARSELECTION, ID_EDIT_CLEAR)`
 
-**ON_OLECMD_COPY)**
+**ON_OLECMD_COPY( )**
 
 Sendet den Befehl Copy bearbeiten. Als implementiert:
 
 `ON_OLECMD(NULL, OLECMDID_COPY, ID_EDIT_COPY)`
 
-**ON_OLECMD_CUT)**
+**ON_OLECMD_CUT( )**
 
 Sendet den Befehl Cut bearbeiten. Als implementiert:
 
 `ON_OLECMD(NULL, OLECMDID_CUT, ID_EDIT_CUT)`
 
-**ON_OLECMD_NEW)**
+**ON_OLECMD_NEW( )**
 
 Sendet die neue Datei-Befehl. Als implementiert:
 
 `ON_OLECMD(NULL, OLECMDID_NEW, ID_FILE_NEW)`
 
-**ON_OLECMD_OPEN)**
+**ON_OLECMD_OPEN( )**
 
 Sendet die Datei öffnen-Befehl. Als implementiert:
 
 `ON_OLECMD(NULL, OLECMDID_OPEN, ID_FILE_OPEN)`
 
-**ON_OLECMD_PAGESETUP)**
+**ON_OLECMD_PAGESETUP( )**
 
 Sendet die Datei Seite Setup-Befehlsoption. Als implementiert:
 
 `ON_OLECMD(NULL, OLECMDID_PAGESETUP, ID_FILE_PAGE_SETUP)`
 
-**ON_OLECMD_PASTE)**
+**ON_OLECMD_PASTE( )**
 
 Sendet den Befehl Paste bearbeiten. Als implementiert:
 
 `ON_OLECMD(NULL, OLECMDID_PASTE, ID_EDIT_PASTE)`
 
-**ON_OLECMD_PASTESPECIAL)**
+**ON_OLECMD_PASTESPECIAL( )**
 
 Sendet den Befehl Bearbeiten Inhalte einfügen. Als implementiert:
 
 `ON_OLECMD(NULL, OLECMDID_PASTESPECIAL, ID_EDIT_PASTE_SPECIAL)`
 
-**ON_OLECMD_PRINT)**
+**ON_OLECMD_PRINT( )**
 
 Sendet die Datei drucken-Befehl. Als implementiert:
 
 `ON_OLECMD(NULL, OLECMDID_PRINT, ID_FILE_PRINT)`
 
-**ON_OLECMD_PRINTPREVIEW)**
+**ON_OLECMD_PRINTPREVIEW( )**
 
 Sendet den Befehl "Datei Seitenansicht". Als implementiert:
 
 `ON_OLECMD(NULL, OLECMDID_PRINTPREVIEW, ID_FILE_PRINT_PREVIEW)`
 
-**ON_OLECMD_REDO)**
+**ON_OLECMD_REDO( )**
 
 Sendet den Befehl Bearbeiten wiederherstellen. Als implementiert:
 
 `ON_OLECMD(NULL, OLECMDID_REDO, ID_EDIT_REDO)`
 
-**ON_OLECMD_SAVE)**
+**ON_OLECMD_SAVE( )**
 
 Sendet den Befehl Datei zu speichern. Als implementiert:
 
 `ON_OLECMD(NULL, OLECMDID_SAVE, ID_FILE_SAVE)`
 
-**ON_OLECMD_SAVE_AS)**
+**ON_OLECMD_SAVE_AS( )**
 
 Sendet die Datei speichern unter-Befehl. Als implementiert:
 
 `ON_OLECMD(NULL, OLECMDID_SAVEAS, ID_FILE_SAVE_AS)`
 
-**ON_OLECMD_SAVE_COPY_AS)**
+**ON_OLECMD_SAVE_COPY_AS( )**
 
 Sendet die Datei Kopie speichern unter-Befehl. Als implementiert:
 
 `ON_OLECMD(NULL, OLECMDID_SAVECOPYAS, ID_FILE_SAVE_COPY_AS)`
 
-**ON_OLECMD_SELECTALL)**
+**ON_OLECMD_SELECTALL( )**
 
 Sendet den Befehl wählen Sie alle bearbeiten. Als implementiert:
 
 `ON_OLECMD(NULL, OLECMDID_SELECTALL, ID_EDIT_SELECT_ALL)`
 
-**ON_OLECMD_UNDO)**
+**ON_OLECMD_UNDO( )**
 
 Sendet den Befehl Rückgängig bearbeiten. Als implementiert:
 
@@ -528,7 +528,7 @@ END_MESSAGE_MAP()
 
 ### <a name="see-also"></a>Siehe auch
 
-[RegisterWindowMessage registriert](https://msdn.microsoft.com/library/windows/desktop/ms644947)<br/>
+[RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)<br/>
 [Benutzerdefinierte Handler](user-defined-handlers.md)
 
 ## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE
@@ -627,10 +627,10 @@ ON_COMMAND_RANGE( id1, id2, memberFxn )
 
 ### <a name="parameters"></a>Parameter
 
-*"id1"*<br/>
+*id1*<br/>
 Befehls-ID am Anfang des einen zusammenhängenden Bereich von Befehls-IDs.
 
-*"id2"*<br/>
+*id2*<br/>
 Befehls-ID am Ende einen zusammenhängenden Bereich von Befehls-IDs.
 
 *memberFxn*<br/>
@@ -682,10 +682,10 @@ ON_UPDATE_COMMAND_UI_RANGE( id1, id2, memberFxn )
 
 ### <a name="parameters"></a>Parameter
 
-*"id1"*<br/>
+*id1*<br/>
 Befehls-ID am Anfang des einen zusammenhängenden Bereich von Befehls-IDs.
 
-*"id2"*<br/>
+*id2*<br/>
 Befehls-ID am Ende einen zusammenhängenden Bereich von Befehls-IDs.
 
 *memberFxn*<br/>
@@ -713,13 +713,13 @@ ON_CONTROL_RANGE( wNotifyCode, id1, id2, memberFxn )
 
 ### <a name="parameters"></a>Parameter
 
-*wNotifyCode schalten*<br/>
+*wNotifyCode*<br/>
 Der Benachrichtigungscode, der auf dem der Handler geantwortet wird.
 
-*"id1"*<br/>
+*id1*<br/>
 Befehls-ID am Anfang des einen zusammenhängenden Bereich von Steuerelement-IDs.
 
-*"id2"*<br/>
+*id2*<br/>
 Befehls-ID am Ende einen zusammenhängenden Bereich von Steuerelement-IDs.
 
 *memberFxn*<br/>

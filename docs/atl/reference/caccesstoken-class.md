@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: e8fadb6825bbdc970e952d2ea6c26a27b4837dfc
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: e53160860211ba09114f2d4d101a2eaaf7de941f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694529"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894240"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken-Klasse
 
@@ -215,7 +215,7 @@ bool CreateImpersonationToken(
 *pImp*<br/>
 Zeiger auf den neuen `CAccessToken` Objekt.
 
-*Sil*<br/>
+*sil*<br/>
 Gibt an, eine [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) Enumerationstyps, der die Ebene des Identitätswechsels von das neue Token bereitstellt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -224,7 +224,7 @@ Gibt "true" bei Erfolg bei "false".
 
 ### <a name="remarks"></a>Hinweise
 
-`CreateImpersonationToken` Aufrufe [nicht dupliziert werden](https://msdn.microsoft.com/library/windows/desktop/aa446616) um ein neues Identitätswechseltoken zu erstellen.
+`CreateImpersonationToken` Aufrufe [nicht dupliziert werden](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetoken) um ein neues Identitätswechseltoken zu erstellen.
 
 ##  <a name="createprimarytoken"></a>  CAccessToken::CreatePrimaryToken
 
@@ -288,7 +288,7 @@ Zeiger auf eine [PROCESS_INFORMATION](/windows/desktop/api/processthreadsapi/ns-
 *pStartupInfo*<br/>
 Zeiger auf eine [STARTUPINFO](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_startupinfoa) Struktur, die angibt, wie das Hauptfenster für den neuen Prozess angezeigt werden soll.
 
-*"dwCreationFlags"*<br/>
+*dwCreationFlags*<br/>
 Gibt zusätzliche Flags, die die Prioritätsklasse und die Erstellung des Prozesses steuern. Finden Sie im Win32-Funktion [CreateProcessAsUser](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera) für eine Liste von Flags.
 
 *bLoadProfile*<br/>
@@ -661,7 +661,7 @@ Gibt "true" bei Erfolg bei "false".
 
 ### <a name="remarks"></a>Hinweise
 
-Ruft die [OpenProcessToken](https://msdn.microsoft.com/library/aa379295) Win32-Funktion.
+Ruft die [OpenProcessToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-openprocesstoken) Win32-Funktion.
 
 ##  <a name="getprofile"></a>  CAccessToken::GetProfile
 
@@ -781,7 +781,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
 
 ### <a name="parameters"></a>Parameter
 
-*PGeben*<br/>
+*pType*<br/>
 Adresse von der [TOKEN_TYPE](/windows/desktop/api/winnt/ne-winnt-_token_type) Variable, die bei Erfolg, den Typ des Tokens erhält.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1056,7 +1056,7 @@ Gibt an, ob die zugriffsprüfung für den Sicherheitskontext des aufrufenden Thr
 
 Wenn dieser Parameter auf "false" ist, wird die zugriffsprüfung mithilfe des Sicherheitskontexts für den aufrufenden Thread ausgeführt. Wenn der Thread einen Client einen Identitätswechsel ausführt, kann in folgendem Sicherheitskontext, die von einem Clientprozess sein. Wenn dieser Parameter TRUE ist, ist die zugriffsprüfung erfolgt mit den Sicherheitskontext des Prozesses für den aufrufenden Thread.
 
-*Sil*<br/>
+*sil*<br/>
 Gibt an, eine [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) Enumerationstyp, die die Ebene des Identitätswechsels des Tokens angibt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1093,7 +1093,7 @@ Gibt "true" bei Erfolg bei "false".
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn `PrivilegeCheck` zurückgegeben wird, die `Attributes` Mitglied aller ["LUID_AND_ATTRIBUTES"](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes) Struktur auf SE_PRIVILEGE_USED_FOR_ACCESS festgelegt ist, wenn die entsprechende Berechtigung aktiviert ist. Diese Methode ruft die [PrivilegeCheck](https://msdn.microsoft.com/library/windows/desktop/aa379304) Win32-Funktion.
+Wenn `PrivilegeCheck` zurückgegeben wird, die `Attributes` Mitglied aller ["LUID_AND_ATTRIBUTES"](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes) Struktur auf SE_PRIVILEGE_USED_FOR_ACCESS festgelegt ist, wenn die entsprechende Berechtigung aktiviert ist. Diese Methode ruft die [PrivilegeCheck](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-privilegecheck) Win32-Funktion.
 
 ##  <a name="revert"></a>  CAccessToken::Revert
 

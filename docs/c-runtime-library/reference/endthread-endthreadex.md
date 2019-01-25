@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-ms.openlocfilehash: 48a2ce90b6bc90d40f6071898e1e5182502e938f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f54ca9c4cd5e863ca960f1d9c3634b85e7896dd
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597482"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893300"
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
 
@@ -62,7 +62,7 @@ Rufen Sie **_endthread** oder **_endthreadex** explizit auf einen Thread zu been
 > [!NOTE]
 > Rufen Sie für eine mit „Libcmt.lib“ verknüpfte ausführbare Datei die [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) -Win32-API nicht auf, damit das Laufzeitsystem nicht an der Freigabe von zugeordneten Ressourcen gehindert wird. **_endthread** und **_endthreadex** zugeordnete Threadressourcen, und rufen dann **ExitThread**.
 
-**_endthread** schließt das Threadhandle automatisch. (Dieses Verhalten unterscheidet sich vom Win32- **ExitThread** API.) Aus diesem Grund bei Verwendung von **_beginthread** und **_endthread**, explizit schließen Sie nicht das Threadhandle durch Aufrufen der Win32- ["CloseHandle"](https://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API.
+**_endthread** schließt das Threadhandle automatisch. (Dieses Verhalten unterscheidet sich vom Win32- **ExitThread** API.) Aus diesem Grund bei Verwendung von **_beginthread** und **_endthread**, explizit schließen Sie nicht das Threadhandle durch Aufrufen der Win32- ["CloseHandle"](/windows/desktop/api/handleapi/nf-handleapi-closehandle) API.
 
 Wie Sie die Win32 **ExitThread** -API, **_endthreadex** schließt das Threadhandle nicht. Aus diesem Grund bei Verwendung von **_beginthreadex** und **_endthreadex**, müssen Sie das Threadhandle durch Aufrufen der Win32-schließen **"CloseHandle"** API.
 

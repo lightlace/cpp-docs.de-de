@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: bd0bdd1a3f423257b2f73745d7260d1fac12a0d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93189c5c9301e513cfbdf110cf7753e211420fef
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556662"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894132"
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController-Klasse
 
@@ -127,21 +127,21 @@ class CAnimationController : public CObject;
 |Name|Beschreibung|
 |----------|-----------------|
 |[CAnimationController::CAnimationController](#canimationcontroller)|Erstellt einen Animationscontroller.|
-|[CAnimationController:: ~ CAnimationController](#canimationcontroller__~canimationcontroller)|Der Destruktor. Wird aufgerufen, wenn Animation-Controller-Objekt zerstört wird.|
+|[CAnimationController::~CAnimationController](#canimationcontroller__~canimationcontroller)|Der Destruktor. Wird aufgerufen, wenn Animation-Controller-Objekt zerstört wird.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CAnimationController:: AddAnimationObject](#addanimationobject)|Fügt ein Animationsobjekt zu einer Gruppe, die den Animationscontroller angehört.|
+|[CAnimationController::AddAnimationObject](#addanimationobject)|Fügt ein Animationsobjekt zu einer Gruppe, die den Animationscontroller angehört.|
 |[CAnimationController::AddKeyframeToGroup](#addkeyframetogroup)|Fügt einen Keyframe Gruppe hinzu.|
-|[CAnimationController:: AnimateGroup](#animategroup)|Bereitet eine Gruppe zum Ausführen von Animationen und plant diese optional.|
+|[CAnimationController::AnimateGroup](#animategroup)|Bereitet eine Gruppe zum Ausführen von Animationen und plant diese optional.|
 |[CAnimationController::CleanUpGroup](#cleanupgroup)|Überladen. Wird aufgerufen, durch das Framework zum Bereinigen der Gruppe, wenn die Animation geplant wurde.|
-|[Aufrufen](#createkeyframe)|Überladen. Erstellt einen Keyframe, der vom Übergang abhängig ist, und fügt ihn der angegebenen Gruppe hinzu.|
+|[CAnimationController::CreateKeyframe](#createkeyframe)|Überladen. Erstellt einen Keyframe, der vom Übergang abhängig ist, und fügt ihn der angegebenen Gruppe hinzu.|
 |[CAnimationController::EnableAnimationManagerEvent](#enableanimationmanagerevent)|Legt fest oder gibt einen Handler aufrufen, wenn der Animations-Manager-Status ändert.|
-|[CAnimationController:: EnableAnimationTimerEventHandler](#enableanimationtimereventhandler)|Legt fest oder gibt einen Handler für Ereignisse zu abfrageantwortzeiten und Handler für das Zeitsteuerungssystem Updates frei.|
-|[CAnimationController:: EnablePriorityComparisonHandler aktivieren](#enableprioritycomparisonhandler)|Legt fest oder gibt die Priorität Vergleich-Handler, der aufgerufen wird, um festzustellen, ob ein geplantes Storyboard abgebrochen, führten zu dem Schluss, abgeschnitten oder komprimiert werden kann.|
-|[CAnimationController:: EnableStoryboardEventHandler](#enablestoryboardeventhandler)|Legt fest oder gibt einen Handler für die Storyboard-Status "und" Update-Ereignisse.|
+|[CAnimationController::EnableAnimationTimerEventHandler](#enableanimationtimereventhandler)|Legt fest oder gibt einen Handler für Ereignisse zu abfrageantwortzeiten und Handler für das Zeitsteuerungssystem Updates frei.|
+|[CAnimationController::EnablePriorityComparisonHandler](#enableprioritycomparisonhandler)|Legt fest oder gibt die Priorität Vergleich-Handler, der aufgerufen wird, um festzustellen, ob ein geplantes Storyboard abgebrochen, führten zu dem Schluss, abgeschnitten oder komprimiert werden kann.|
+|[CAnimationController::EnableStoryboardEventHandler](#enablestoryboardeventhandler)|Legt fest oder gibt einen Handler für die Storyboard-Status "und" Update-Ereignisse.|
 |[CAnimationController::FindAnimationGroup](#findanimationgroup)|Überladen. Sucht nach einer Animationsgruppe durch das Storyboard.|
 |[CAnimationController::FindAnimationObject](#findanimationobject)|Sucht, die eine Variable angegebene Animation "Animation"-Objekts an.|
 |[CAnimationController::GetKeyframeStoryboardStart](#getkeyframestoryboardstart)|Gibt einen Keyframe, der Anfang des Storyboards identifiziert.|
@@ -151,12 +151,12 @@ class CAnimationController : public CObject;
 |[CAnimationController::GetUITransitionLibrary](#getuitransitionlibrary)|Bietet Zugriff auf gekapselte IUIAnimationTransitionLibrary-Objekt.|
 |[CAnimationController::IsAnimationInProgress](#isanimationinprogress)|Erfahren Sie, ob mindestens eine Gruppe Animation wiedergegeben wird.|
 |[CAnimationController::IsValid](#isvalid)|Erfahren Sie, ob Animationscontroller gültig ist.|
-|[CAnimationController:: OnAnimationIntegerValueChanged](#onanimationintegervaluechanged)|Wird von Framework aufgerufen, wenn es sich bei ganzzahligen Wert der Animationsvariablen geändert hat.|
+|[CAnimationController::OnAnimationIntegerValueChanged](#onanimationintegervaluechanged)|Wird von Framework aufgerufen, wenn es sich bei ganzzahligen Wert der Animationsvariablen geändert hat.|
 |[CAnimationController::OnAnimationManagerStatusChanged](#onanimationmanagerstatuschanged)|Wird aufgerufen, durch das Framework als Reaktion auf StatusChanged-Ereignis von der Animations-Manager.|
 |[CAnimationController::OnAnimationTimerPostUpdate](#onanimationtimerpostupdate)|Vom Framework aufgerufen, nachdem ein Animationsupdate abgeschlossen ist.|
 |[CAnimationController::OnAnimationTimerPreUpdate](#onanimationtimerpreupdate)|Wird vom Framework aufgerufen, bevor ein Animationsupdate beginnt.|
 |[CAnimationController::OnAnimationTimerRenderingTooSlow](#onanimationtimerrenderingtooslow)|Vom Framework aufgerufen, wenn eine minimale wünschenswert Framerate die Rendering-Framerate für eine Animation unterschreitet.|
-|[CAnimationController:: OnAnimationValueChanged](#onanimationvaluechanged)|Vom Framework aufgerufen, wenn der Wert der Animationsvariablen geändert hat.|
+|[CAnimationController::OnAnimationValueChanged](#onanimationvaluechanged)|Vom Framework aufgerufen, wenn der Wert der Animationsvariablen geändert hat.|
 |[CAnimationController::OnBeforeAnimationStart](#onbeforeanimationstart)|Vom Framework aufgerufen, rechts, bevor die Animation geplant wird.|
 |[CAnimationController::OnHasPriorityCancel](#onhasprioritycancel)|Wird vom Framework aufgerufen, um Konflikte bei der Planung zu beheben.|
 |[CAnimationController::OnHasPriorityCompress](#onhasprioritycompress)|Wird vom Framework aufgerufen, um Konflikte bei der Planung zu beheben.|
@@ -168,8 +168,8 @@ class CAnimationController : public CObject;
 |[CAnimationController::RemoveAnimationGroup](#removeanimationgroup)|Entfernt eine Animationsgruppe mit der angegebenen ID aus Animationscontroller an.|
 |[CAnimationController::RemoveAnimationObject](#removeanimationobject)|Entfernen Sie ein Animationsobjekt aus Animationscontroller an.|
 |[CAnimationController::RemoveTransitions](#removetransitions)|Entfernt Übergänge von Animationsobjekten, die der angegebenen Gruppe gehören.|
-|[CAnimationController:: ScheduleGroup auf](#schedulegroup)|Plant eine Animation.|
-|[CAnimationController:: SetRelatedWnd](#setrelatedwnd)|Legt eine Beziehung zwischen den Animationscontroller und ein Fenster.|
+|[CAnimationController::ScheduleGroup](#schedulegroup)|Plant eine Animation.|
+|[CAnimationController::SetRelatedWnd](#setrelatedwnd)|Legt eine Beziehung zwischen den Animationscontroller und ein Fenster.|
 |[CAnimationController::UpdateAnimationManager](#updateanimationmanager)|Leitet die Animations-Manager zum Aktualisieren der Werte aller Variablen der Animation an.|
 
 ### <a name="protected-methods"></a>Geschützte Methoden
@@ -363,7 +363,7 @@ virtual BOOL EnableAnimationManagerEvent(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 Gibt an, ob festgelegt oder einen Handler aufgehoben werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -386,7 +386,7 @@ virtual BOOL EnableAnimationTimerEventHandler(
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 Gibt an, ob festgelegt oder die Handler aufgehoben werden soll.
 
 *idleBehavior*<br/>
@@ -410,7 +410,7 @@ virtual BOOL EnablePriorityComparisonHandler(DWORD dwHandlerType);
 
 ### <a name="parameters"></a>Parameter
 
-*dwHandlerType auf*<br/>
+*dwHandlerType*<br/>
 Eine Kombination von UI_ANIMATION_PHT_ kennzeichnet (siehe "Hinweise"), der angibt, welche Handler festgelegt oder aufgehoben.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -419,7 +419,7 @@ TRUE, wenn der Handler wurde erfolgreich festgelegt oder freigegeben wurde.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn ein Handler (aktiviert) festgelegt ist, ruft Windows Animation die folgenden virtuellen Methoden je nach dwHandlerType auf: OnHasPriorityCancel, OnHasPriorityConclude, OnHasPriorityTrim, OnHasPriorityCompress. DwHandler kann es sich um eine Kombination der folgenden Flags: UI_ANIMATION_PHT_NONE - Version alle Handler UI_ANIMATION_PHT_CANCEL - legen Sie "Abbrechen" Vergleich Handler UI_ANIMATION_PHT_CONCLUDE – Festlegen der Conclude Vergleich Handler UI_ANIMATION_PHT_COMPRESS: festgelegt Compress Vergleich Handler UI_ANIMATION_PHT_TRIM - legen Sie Trim Vergleich Ereignishandler UI_ANIMATION_PHT_CANCEL_REMOVE - entfernen Sie "Abbrechen" Vergleich Handler UI_ANIMATION_PHT_CONCLUDE_REMOVE - entfernungshandlers Conclude Vergleich UI_ANIMATION_PHT_COMPRESS_ Entfernen – komprimieren Vergleich Handler UI_ANIMATION_PHT_TRIM_REMOVE – Entfernen eines Handlers kürzen Vergleich entfernen
+Wenn ein Handler für Windows-Animation Aufrufe für die Gruppe (aktiviert) die folgenden virtuellen Methoden je nach dwHandlerType auf ist: OnHasPriorityCancel, OnHasPriorityConclude, OnHasPriorityTrim, OnHasPriorityCompress. DwHandler kann es sich um eine Kombination der folgenden Flags sein: UI_ANIMATION_PHT_NONE - Version alle Handler UI_ANIMATION_PHT_CANCEL - legen Sie "Abbrechen" Vergleich-Handler UI_ANIMATION_PHT_CONCLUDE - festgelegt Conclude Vergleich Handler UI_ANIMATION_PHT_COMPRESS – Festlegen der komprimieren Vergleich Handler UI_ANIMATION_PHT_TRIM: festgelegt Trim-Vergleich Handler UI_ANIMATION_PHT_CANCEL_REMOVE – entfernen Sie "Abbrechen" Vergleich Handler UI_ANIMATION_PHT_CONCLUDE_REMOVE - Remove Conclude Vergleich Handler UI_ANIMATION_PHT_COMPRESS_REMOVE - komprimieren Vergleich Handler UI_ANIMATION_PHT entfernen _TRIM_REMOVE – Entfernen eines Handlers kürzen Vergleich
 
 ##  <a name="enablestoryboardeventhandler"></a>  CAnimationController:: EnableStoryboardEventHandler
 
@@ -436,7 +436,7 @@ virtual BOOL EnableStoryboardEventHandler(
 *nGroupID*<br/>
 Gibt die Gruppen-ID.
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 Gibt an, ob festgelegt oder einen Handler aufgehoben werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -716,7 +716,7 @@ Ein Zeiger auf eine Animationsgruppe, die ein Animationsobjekt, dessen Wert enth
 *pObject*<br/>
 Ein Zeiger auf eine Animationsobjekt, das eine Animationsvariable enthält, deren Wert geändert wurde.
 
-*Variable*<br/>
+*variable*<br/>
 Ein Zeiger auf eine Animationsvariable.
 
 *newValue*<br/>
@@ -785,7 +785,7 @@ virtual void OnAnimationTimerRenderingTooSlow(UINT32 fps);
 
 ### <a name="parameters"></a>Parameter
 
-*f/s*<br/>
+*fps*<br/>
 Die aktuelle Framerate in Frames pro Sekunde.
 
 ### <a name="remarks"></a>Hinweise
@@ -813,7 +813,7 @@ Ein Zeiger auf eine Animationsgruppe, die ein Animationsobjekt, dessen Wert enth
 *pObject*<br/>
 Ein Zeiger auf eine Animationsobjekt, das eine Animationsvariable enthält, deren Wert geändert wurde.
 
-*Variable*<br/>
+*variable*<br/>
 Ein Zeiger auf eine Animationsvariable.
 
 *newValue*<br/>
@@ -871,7 +871,7 @@ Muss „true“ zurückgeben, wenn das Storyboard im Besitz von pGroupNew Priori
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode wird aufgerufen, wenn Sie Prioritätsvergleichsereignisse mit CAnimationController::EnablePriorityComparisonHandler aktivieren und UI_ANIMATION_PHT_CANCEL angeben. Sie kann in einer abgeleiteten Klasse überschrieben werden, um anwendungsspezifische Aktionen zu verwenden. Lesen Windows Animations-API-Dokumentation für Weitere Informationen zu [Konfliktmanagement](https://msdn.microsoft.com/library/dd371759).
+Diese Methode wird aufgerufen, wenn Sie Prioritätsvergleichsereignisse mit CAnimationController::EnablePriorityComparisonHandler aktivieren und UI_ANIMATION_PHT_CANCEL angeben. Sie kann in einer abgeleiteten Klasse überschrieben werden, um anwendungsspezifische Aktionen zu verwenden. Lesen Windows Animations-API-Dokumentation für Weitere Informationen zu [Konfliktmanagement](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority).
 
 ##  <a name="onhasprioritycompress"></a>  CAnimationController::OnHasPriorityCompress
 
@@ -901,7 +901,7 @@ Muss „true“ zurückgeben, wenn das Storyboard im Besitz von pGroupNew Priori
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode wird aufgerufen, wenn Sie Prioritätsvergleichsereignisse mit CAnimationController::EnablePriorityComparisonHandler aktivieren und UI_ANIMATION_PHT_TRIM angeben. Sie kann in einer abgeleiteten Klasse überschrieben werden, um anwendungsspezifische Aktionen zu verwenden. Lesen Windows Animations-API-Dokumentation für Weitere Informationen zu [Konfliktmanagement](https://msdn.microsoft.com/library/dd371759).
+Diese Methode wird aufgerufen, wenn Sie Prioritätsvergleichsereignisse mit CAnimationController::EnablePriorityComparisonHandler aktivieren und UI_ANIMATION_PHT_TRIM angeben. Sie kann in einer abgeleiteten Klasse überschrieben werden, um anwendungsspezifische Aktionen zu verwenden. Lesen Windows Animations-API-Dokumentation für Weitere Informationen zu [Konfliktmanagement](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority).
 
 ##  <a name="onhaspriorityconclude"></a>  CAnimationController::OnHasPriorityConclude
 
@@ -931,7 +931,7 @@ Muss „true“ zurückgeben, wenn das Storyboard im Besitz von pGroupNew Priori
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode wird aufgerufen, wenn Sie Prioritätsvergleichsereignisse mit CAnimationController::EnablePriorityComparisonHandler aktivieren und UI_ANIMATION_PHT_CONCLUDE angeben. Sie kann in einer abgeleiteten Klasse überschrieben werden, um anwendungsspezifische Aktionen zu verwenden. Lesen Windows Animations-API-Dokumentation für Weitere Informationen zu [Konfliktmanagement](https://msdn.microsoft.com/library/dd371759).
+Diese Methode wird aufgerufen, wenn Sie Prioritätsvergleichsereignisse mit CAnimationController::EnablePriorityComparisonHandler aktivieren und UI_ANIMATION_PHT_CONCLUDE angeben. Sie kann in einer abgeleiteten Klasse überschrieben werden, um anwendungsspezifische Aktionen zu verwenden. Lesen Windows Animations-API-Dokumentation für Weitere Informationen zu [Konfliktmanagement](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority).
 
 ##  <a name="onhasprioritytrim"></a>  CAnimationController::OnHasPriorityTrim
 
@@ -961,7 +961,7 @@ Muss „true“ zurückgeben, wenn das Storyboard im Besitz von pGroupNew Priori
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode wird aufgerufen, wenn Sie Prioritätsvergleichsereignisse mit CAnimationController::EnablePriorityComparisonHandler aktivieren und UI_ANIMATION_PHT_TRIM angeben. Sie kann in einer abgeleiteten Klasse überschrieben werden, um anwendungsspezifische Aktionen zu verwenden. Lesen Windows Animations-API-Dokumentation für Weitere Informationen zu [Konfliktmanagement](https://msdn.microsoft.com/library/dd371759).
+Diese Methode wird aufgerufen, wenn Sie Prioritätsvergleichsereignisse mit CAnimationController::EnablePriorityComparisonHandler aktivieren und UI_ANIMATION_PHT_TRIM angeben. Sie kann in einer abgeleiteten Klasse überschrieben werden, um anwendungsspezifische Aktionen zu verwenden. Lesen Windows Animations-API-Dokumentation für Weitere Informationen zu [Konfliktmanagement](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority).
 
 ##  <a name="onstoryboardstatuschanged"></a>  CAnimationController::OnStoryboardStatusChanged
 
@@ -1110,7 +1110,7 @@ void SetRelatedWnd(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Ein Zeiger auf Window-Objekt festlegen.
 
 ### <a name="remarks"></a>Hinweise

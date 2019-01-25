@@ -3,12 +3,12 @@ title: 'Vorgehensweise: Aktivieren und Verwenden einer Windows-Runtime-Komponent
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-ms.openlocfilehash: 4b8ce40e6c28f952596cab48848873be91b73c95
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: ccc64769ca319e8aba141ce95a00eb876cc051f3
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54335969"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893963"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Vorgehensweise: Aktivieren und Verwenden einer Windows-Runtime-Komponente mit WRL
 
@@ -36,7 +36,7 @@ Die folgenden Schritte verwenden den `Windows::Foundation::IUriRuntimeClass` Sch
 
    Es wird empfohlen, den Code mithilfe der `using namespace`-Anweisung in der CPP-Datei verständlicher zu gestalten.
 
-2. Initialisieren Sie den Thread, in dem die App ausgeführt wird. Jede App muss ihren Thread und ihr Threadingmodell initialisieren. Dieses Beispiel verwendet die [Microsoft::WRL::Wrappers::RoInitializeWrapper](roinitializewrapper-class.md) zum Initialisieren der Windows-Runtime-Klasse und gibt [RO_INIT_MULTITHREADED](https://msdn.microsoft.com/library/windows/apps/br224661.aspx) als Threadingmodell. Die `RoInitializeWrapper`-Klasse ruft `Windows::Foundation::Initialize` auf, wenn sie erstellt, und `Windows::Foundation::Uninitialize`, wenn sie zerstört wird.
+2. Initialisieren Sie den Thread, in dem die App ausgeführt wird. Jede App muss ihren Thread und ihr Threadingmodell initialisieren. Dieses Beispiel verwendet die [Microsoft::WRL::Wrappers::RoInitializeWrapper](roinitializewrapper-class.md) zum Initialisieren der Windows-Runtime-Klasse und gibt [RO_INIT_MULTITHREADED](/windows/desktop/api/roapi/ne-roapi-ro_init_type) als Threadingmodell. Die `RoInitializeWrapper`-Klasse ruft `Windows::Foundation::Initialize` auf, wenn sie erstellt, und `Windows::Foundation::Uninitialize`, wenn sie zerstört wird.
 
    [!code-cpp[wrl-consume-component#3](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_2.cpp)]
 
@@ -66,7 +66,7 @@ Die folgenden Schritte verwenden den `Windows::Foundation::IUriRuntimeClass` Sch
 
    [!code-cpp[wrl-consume-component#9](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_7.cpp)]
 
-   Die [WindowsGetStringRawBuffer](https://msdn.microsoft.com/library/windows/apps/br224636.aspx) Funktion ruft das zugrunde liegende Unicode-Formular der URI-Zeichenfolge ab.
+   Die [WindowsGetStringRawBuffer](/windows/desktop/api/winstring/nf-winstring-windowsgetstringrawbuffer) Funktion ruft das zugrunde liegende Unicode-Formular der URI-Zeichenfolge ab.
 
 Im Folgenden sehen Sie das vollständige Beispiel:
 

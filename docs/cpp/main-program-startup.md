@@ -12,12 +12,12 @@ helpviewer_keywords:
 - startup code, main function
 - main function, program startup
 ms.assetid: f9581cd6-93f7-4bcd-99ec-d07c3c107dd4
-ms.openlocfilehash: 76c580d4b48e1651803ae9bf62f0e2346e19e06c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 358ae8ec88281bab741393b1196ee2a1e615e896
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603280"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894301"
 ---
 # <a name="main-program-startup"></a>main: Programmstart
 
@@ -51,7 +51,7 @@ oder optional
 int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);
 ```
 
-Sie können auch das in TCHAR.h definierte `_tmain` verwenden. `_tmain` Löst in **main** es sei denn, _UNICODE ist definiert. In diesem Fall wird `_tmain` in `wmain` aufgelöst.
+Sie können auch `_tmain`, die in tchar.h definiert ist. `_tmain` Löst in **main** es sei denn, _UNICODE ist definiert. In diesem Fall wird `_tmain` in `wmain` aufgelöst.
 
 Sie können auch die **main** und `wmain` Funktionen können deklariert werden, als Rückgabewert **"void"** (keinen Wert zurückgibt). Wenn Sie deklarieren **main** oder `wmain` als Rückgabewert **"void"**, Sie können nicht an den übergeordneten Prozess oder das Betriebssystem einen Exitcode zurückgeben, indem eine [zurückgeben](../cpp/return-statement-in-program-termination-cpp.md) Anweisung. Zurückzugebenden einen Exitcode beim **main** oder `wmain` wird deklariert als **"void"**, verwenden Sie die [beenden](../cpp/exit-function.md) Funktion.
 

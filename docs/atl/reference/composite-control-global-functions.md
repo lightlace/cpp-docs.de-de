@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 3b4abc1afc99a00d83c25574df06ebfb27141c65
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 26d8d004c933e48833047f85727ae6282c4b43d7
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694178"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893859"
 ---
 # <a name="composite-control-global-functions"></a>Globale Funktionen zusammengesetzter Steuerelemente
 
@@ -77,7 +77,7 @@ ATLAPI_(int) AtlAxDialogBox(
 [in] Gibt das Fenster, das Dialogfeld besitzt.
 
 *lpDialogProc*<br/>
-[in] Verweist auf die Dialogfeldprozedur. Weitere Informationen über die Dialogfeldprozedur finden Sie unter [DialogProc-Funktion](https://msdn.microsoft.com/library/windows/desktop/ms645469).
+[in] Verweist auf die Dialogfeldprozedur. Weitere Informationen über die Dialogfeldprozedur finden Sie unter [DialogProc-Funktion](/windows/desktop/api/winuser/nc-winuser-dlgproc).
 
 *dwInitParam*<br/>
 [in] Gibt den Wert zu übergeben, um das Dialogfeld in der *lParam* -Parameter der WM_INITDIALOG-Meldung.
@@ -95,7 +95,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
-Weitere Informationen zum Bearbeiten des Ressourcenskripts finden Sie unter [Vorgehensweise: Öffnen einer Ressourcenskriptdatei im Textformat](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Weitere Informationen zu Ressourcendefinition Anweisungen, finden Sie unter [allgemeine Steuerelementparameter](/windows/desktop/menurc/common-control-parameters) unter Windows-SDK: SDK Tools.
+Weitere Informationen zum Bearbeiten des Ressourcenskripts finden Sie unter [Vorgehensweise: Öffnen eine Ressourcenskriptdatei im Textformat](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Weitere Informationen zu Ressourcendefinition Anweisungen, finden Sie unter [allgemeine Steuerelementparameter](/windows/desktop/menurc/common-control-parameters) unter Windows-SDK: SDK Tools.
 
 Weitere Informationen zu Dialogfeldern, die im Allgemeinen finden Sie unter [Dialogfeld](/windows/desktop/api/winuser/nf-winuser-dialogboxa) und [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) im Windows SDK.
 
@@ -124,7 +124,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 [in] Gibt das Fenster, das Dialogfeld besitzt.
 
 *lpDialogProc*<br/>
-[in] Verweist auf die Dialogfeldprozedur. Weitere Informationen über die Dialogfeldprozedur finden Sie unter [DialogProc-Funktion](https://msdn.microsoft.com/library/windows/desktop/ms645469).
+[in] Verweist auf die Dialogfeldprozedur. Weitere Informationen über die Dialogfeldprozedur finden Sie unter [DialogProc-Funktion](/windows/desktop/api/winuser/nc-winuser-dlgproc).
 
 *dwInitParam*<br/>
 [in] Gibt den Wert zu übergeben, um das Dialogfeld in der *lParam* -Parameter der WM_INITDIALOG-Meldung.
@@ -413,7 +413,7 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 *h*<br/>
 [in] Ein Handle für das Fenster, das das Steuerelement gehostet wird.
 
-*PP*<br/>
+*pp*<br/>
 [out] Die `IUnknown` des Containers des Steuerelements.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -433,7 +433,7 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 *h*<br/>
 [in] Ein Handle für das Fenster, das das Steuerelement gehostet wird.
 
-*PP*<br/>
+*pp*<br/>
 [out] Die `IUnknown` des gehosteten Steuerelements.
 
 ### <a name="return-value"></a>Rückgabewert
