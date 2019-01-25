@@ -64,12 +64,12 @@ helpviewer_keywords:
 - controls [ATL], stock properties
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
-ms.openlocfilehash: ff7610d85d73a99d55d6181fad178d0b12be0c32
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: a22a419018f3f4b2b7e6cee2471bf0f162b65f2e
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332425"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894002"
 ---
 # <a name="cstockpropimpl-class"></a>CStockPropImpl-Klasse
 
@@ -98,7 +98,7 @@ class ATL_NO_VTABLE CStockPropImpl :
 *T*<br/>
 Die Klasse, die das Steuerelement zu implementieren und Ableiten von `CStockPropImpl`.
 
-*Schnittstellenname*<br/>
+*InterfaceName*<br/>
 Eine duale Schnittstelle, die die vordefinierten Eigenschaften verfügbar zu machen.
 
 *piid*<br/>
@@ -559,7 +559,7 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
 ### <a name="parameters"></a>Parameter
 
 *ppPicture*<br/>
-Variable, die einen Zeiger auf das Bild in den Eigenschaften empfängt. Finden Sie unter [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) Weitere Details.
+Variable, die einen Zeiger auf das Bild in den Eigenschaften empfängt. Finden Sie unter [IPictureDisp](/windows/desktop/api/ocidl/nn-ocidl-ipicturedisp) Weitere Details.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -864,7 +864,7 @@ HRESULT STDMETHODCALLTYPE put_Enabled(VARIANT_BOOL bEnabled);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktiviert*<br/>
+*bEnabled*<br/>
 TRUE, wenn das Steuerelement aktiviert ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -954,7 +954,7 @@ Reserviert.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt E_FAIL zurück.
+Returns E_FAIL.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1005,7 +1005,7 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
 ### <a name="parameters"></a>Parameter
 
 *pPicture*<br/>
-Ein Zeiger auf das Bild der Eigenschaften. Finden Sie unter [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) Weitere Details.
+Ein Zeiger auf das Bild der Eigenschaften. Finden Sie unter [IPictureDisp](/windows/desktop/api/ocidl/nn-ocidl-ipicturedisp) Weitere Details.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1094,7 +1094,7 @@ Das Fensterhandle.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt E_FAIL zurück.
+Returns E_FAIL.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1153,7 +1153,7 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
 ### <a name="parameters"></a>Parameter
 
 *pPicture*<br/>
-Ein Zeiger auf das Bild der Eigenschaften. Finden Sie unter [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) Weitere Details.
+Ein Zeiger auf das Bild der Eigenschaften. Finden Sie unter [IPictureDisp](/windows/desktop/api/ocidl/nn-ocidl-ipicturedisp) Weitere Details.
 
 ### <a name="return-value"></a>Rückgabewert
 

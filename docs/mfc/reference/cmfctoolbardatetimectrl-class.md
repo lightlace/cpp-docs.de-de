@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CMFCToolBarDateTimeCtrl [MFC], SetTime
 - CMFCToolBarDateTimeCtrl [MFC], SetTimeAll
 ms.assetid: a3853cb9-8ebc-444f-a1e4-9cf905e24c18
-ms.openlocfilehash: 570611c335130039495b13624737b820144cb7f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1252f97a93e67348a00c9809e3f216d4ed63c4d8
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545833"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893678"
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>CMFCToolBarDateTimeCtrl-Klasse
 
@@ -87,7 +87,7 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
 |[CMFCToolBarDateTimeCtrl::GetDateTimeCtrl](#getdatetimectrl)|Gibt einen Zeiger auf den Datums- / Zeitauswahl-Steuerelement.|
 |[CMFCToolBarDateTimeCtrl::GetHwnd](#gethwnd)|Ruft das Fensterhandle, das die Symbolleisten-Schaltfläche zugeordnet ist. (Überschreibt [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd).)|
 |`CMFCToolBarDateTimeCtrl::GetThisClass`|Durch das Framework verwendet wird, einen Zeiger zum Abrufen der [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das diesem Klassentyp zugeordnet ist.|
-|[CMFCToolBarDateTimeCtrl::GetTime](#gettime)|Ruft die ausgewählte Zeit aus einem Datums- / Zeitauswahl-Steuerelement ab und setzt es in einem angegebenen [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur.|
+|[CMFCToolBarDateTimeCtrl::GetTime](#gettime)|Ruft die ausgewählte Zeit aus einem Datums- / Zeitauswahl-Steuerelement ab und setzt es in einem angegebenen [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) Struktur.|
 |[CMFCToolBarDateTimeCtrl::GetTimeAll](#gettimeall)|Gibt den ausgewählten Zeitraum über die Zeit Zeitauswahl-Steuerelement-Schaltfläche, die eine angegebenen Befehls-ID|
 |[CMFCToolBarDateTimeCtrl::HaveHotBorder](#havehotborder)|Bestimmt, ob ein Rahmen der Schaltfläche angezeigt wird, wenn ein Benutzer die Schaltfläche auswählt. (Überschreibt [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).)|
 |[CMFCToolBarDateTimeCtrl::NotifyCommand](#notifycommand)|Gibt an, ob die Schaltfläche mit der verarbeitet die [WM_COMMAND](/windows/desktop/menurc/wm-command) Nachricht. (Überschreibt [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|
@@ -110,7 +110,7 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
 
 ## <a name="remarks"></a>Hinweise
 
-Ein Beispiel dafür, wie ein Datums- / Zeitauswahl-Steuerelement verwenden finden Sie das Beispielprojekt ToolbarDateTimePicker. Informationen dazu, wie Sie die Steuerelementschaltflächen in Symbolleisten hinzufügen, finden Sie unter [Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf Symbolleisten](../../mfc/walkthrough-putting-controls-on-toolbars.md).
+Ein Beispiel dafür, wie ein Datums- / Zeitauswahl-Steuerelement verwenden finden Sie das Beispielprojekt ToolbarDateTimePicker. Informationen dazu, wie Sie die Steuerelementschaltflächen in Symbolleisten hinzufügen, finden Sie unter [Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf der Symbolleiste](../../mfc/walkthrough-putting-controls-on-toolbars.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -203,7 +203,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>Parameter
 
-*MenuButton*<br/>
+*menuButton*<br/>
 [in] Ein Verweis auf die Menüschaltfläche Ziel.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -269,7 +269,7 @@ Diese Methode überschreibt die [CMFCToolBarButton::GetHwnd](../../mfc/reference
 
 ##  <a name="gettime"></a>  CMFCToolBarDateTimeCtrl::GetTime
 
-Ruft die ausgewählte Zeit aus das zugeordnete Datum und die / Zeitauswahl-Steuerelement und fügt es in einem angegebenen [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur
+Ruft die ausgewählte Zeit aus das zugeordnete Datum und die / Zeitauswahl-Steuerelement und fügt es in einem angegebenen [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) Struktur
 
 ```
 BOOL GetTime(COleDateTime& timeDest) const;
@@ -283,7 +283,7 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 [out] In der ersten Überladung ist eine [COleDateTime-Klasse](../../atl-mfc-shared/reference/coledatetime-class.md) -Objekt, das die Zeitinformationen System erhält. In der zweiten Überladung ist eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) -Objekt, das die Zeitinformationen System erhält.
 
 *pTimeDest*<br/>
-[out] Ein Zeiger auf die [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, um die Systeminformationen für die Zeit zu erhalten. Nicht darf NULL sein.
+[out] Ein Zeiger auf die [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) Struktur, um die Systeminformationen für die Zeit zu erhalten. Nicht darf NULL sein.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -320,7 +320,7 @@ static DWORD GetTimeAll(
 [out] In der ersten Überladung ist eine [COleDateTime-Klasse](../../atl-mfc-shared/reference/coledatetime-class.md) -Objekt, das die Zeitinformationen System erhält. In der zweiten Überladung ist eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) -Objekt, das die Zeitinformationen System erhält.
 
 *pTimeDest*<br/>
-[out] Ein Zeiger auf die [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, um die Systeminformationen für die Zeit zu erhalten. Nicht darf NULL sein.
+[out] Ein Zeiger auf die [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) Struktur, um die Systeminformationen für die Zeit zu erhalten. Nicht darf NULL sein.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -412,7 +412,7 @@ virtual BOOL OnClick(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Nicht verwendet.
 
 *bDelay*<br/>
@@ -564,7 +564,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew=NULL);
 [in] In der ersten Version, die einen Verweis auf eine [COleDateTime-Klasse](../../atl-mfc-shared/reference/coledatetime-class.md) -Objekt, das den Zeitpunkt enthält, auf den das Steuerelement festgelegt werden. In der zweiten Version, ein Zeiger auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) -Objekt, das den Zeitpunkt enthält, auf den das Steuerelement festgelegt werden.
 
 *pTimeNew*<br/>
-[in] Ein Zeiger auf die [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die die Zeit enthält, auf den das Steuerelement festgelegt werden.
+[in] Ein Zeiger auf die [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) Struktur, die die Zeit enthält, auf den das Steuerelement festgelegt werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -601,7 +601,7 @@ static BOOL SetTimeAll(
 [in] In der ersten Version einer [COleDateTime-Klasse](../../atl-mfc-shared/reference/coledatetime-class.md) -Objekt, das den Zeitpunkt enthält, auf den das Steuerelement festgelegt werden. In der zweiten Version, ein Zeiger auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) -Objekt, das den Zeitpunkt enthält, auf den das Steuerelement festgelegt werden.
 
 *pTimeNew*<br/>
-[in] Ein Zeiger auf die [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die die Zeit enthält, auf den das Steuerelement festgelegt werden.
+[in] Ein Zeiger auf die [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) Struktur, die die Zeit enthält, auf den das Steuerelement festgelegt werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -616,5 +616,5 @@ Sucht nach einer Symbolleisten-Schaltfläche, mit der angegebenen Befehls-ID, un
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [Klassen](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCToolBarButton-Klasse](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
-[Exemplarische Vorgehensweise: Steuerelemente in eine Symbolleiste einfügen](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+[Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf der Symbolleiste](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 

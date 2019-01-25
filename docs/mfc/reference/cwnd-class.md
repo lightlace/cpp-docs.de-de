@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 0a27b78d873b0a561b84b13cc16c67aef9ff2e8b
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ebb0d0abcff069deca4597ffb5a3a2d4e67cab9c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179083"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894535"
 ---
 # <a name="cwnd-class"></a>CWnd-Klasse
 
@@ -1761,7 +1761,7 @@ void CheckDlgButton(
 *nIDButton*<br/>
 Gibt die Schaltfläche geändert werden.
 
-*nPrüfen*<br/>
+*nCheck*<br/>
 Gibt die auszuführende Aktion an. Wenn *nPrüfen* ungleich NULL ist, die `CheckDlgButton` Member-Funktion setzt ein Häkchen neben der Schaltfläche, wenn der Wert 0, wird das Häkchen entfernt. Für Schaltflächen mit drei-Status Wenn *nPrüfen* gleich 2 ist, den Zustand der Schaltfläche ist unbestimmt.
 
 ### <a name="remarks"></a>Hinweise
@@ -1816,7 +1816,7 @@ CWnd* ChildWindowFromPoint(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt an, die Clientkoordinaten des Punkts getestet werden.
 
 *nflags*<br/>
@@ -1914,7 +1914,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parameter
 
-*"lpszclassname"*<br/>
+*lpszClassName*<br/>
 [in] Zeiger auf eine auf Null endende Zeichenfolge, die den Namen des eine Fensterklasse registriert System enthält; oder der Name einer vordefinierten Systemdaten-Fensterklasse.
 
 *lpszWindowName*<br/>
@@ -1923,7 +1923,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 [in] Bitweise Kombination (OR) von [Window-Stile](styles-used-by-mfc.md#window-styles). Die WS_POPUP-Option ist keinem gültigen Stil.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Die Größe und Position des Fensters in Bezug auf der linken oberen Ecke des übergeordneten Fensters.
 
 *pParentWnd*<br/>
@@ -1967,7 +1967,7 @@ virtual HRESULT CreateAccessibleProxy(
 
 ### <a name="parameters"></a>Parameter
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 Identifiziert das Objekt, das die Active Accessibility-Proxy zugreifen. Einen der folgenden Werte kann sein.
 
 |Wert|Bedeutung|
@@ -2060,10 +2060,10 @@ Ein Zeiger auf den Text im Steuerelement angezeigt werden. Legt den Wert der Bes
 *dwStyle*<br/>
 Windows-Formate. Die verfügbaren Formate finden Sie unter "Hinweise".
 
-*Rect*<br/>
+*rect*<br/>
 Gibt an, die Größe und Position des Steuerelements. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT-Struktur](/windows/desktop/api/windef/ns-windef-tagrect).
 
-*PPT*<br/>
+*ppt*<br/>
 Verweist auf eine [POINT-Struktur](/windows/desktop/api/windef/ns-windef-tagpoint) oder `CPoint` Objekt, das der oberen linken Ecke des Steuerelements enthält.
 
 *pSize*<br/>
@@ -2145,7 +2145,7 @@ virtual BOOL CreateEx(
 *dwExStyle*<br/>
 Bitweise Kombination (OR) von [erweiterte Fensterstile](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles); andernfalls NULL für den erweiterten Fensterstil Standard.
 
-*"lpszclassname"*<br/>
+*lpszClassName*<br/>
 Zeiger auf eine auf Null endende Zeichenfolge, die den Namen des eine Fensterklasse registriert System enthält; oder der Name einer vordefinierten Systemdaten-Fensterklasse.
 
 *lpszWindowName*<br/>
@@ -2175,7 +2175,7 @@ Für ein untergeordnetes Fenster, die ID des Fensters; andernfalls die ID eines 
 *lpParam*<br/>
 Zeiger auf Benutzerdaten, die an die [CWnd::OnCreate](#oncreate) -Methode in der die *LpCreateParams* Feld.
 
-*Rect*<br/>
+*rect*<br/>
 Die Größe und Position des Fensters in Bezug auf dem Bildschirm oder das übergeordnete Fenster.
 
 *pParentWnd*<br/>
@@ -2323,7 +2323,7 @@ virtual LRESULT DefWindowProc(
 *message*<br/>
 Gibt die Windows-Meldung verarbeitet werden.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 Gibt zusätzliche Nachricht abhängige Informationen.
 
 *lParam*<br/>
@@ -2766,7 +2766,7 @@ void EnableDynamicLayout(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 TRUE, um das dynamische Layout zu aktivieren; FALSE, um das dynamische Layout zu deaktivieren.
 
 ### <a name="remarks"></a>Hinweise
@@ -2785,7 +2785,7 @@ void EnableD2DSupport(
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 Gibt an, ob die D2D-Unterstützung aktiviert oder deaktiviert werden soll.
 
 *bUseDCRenderTarget*<br/>
@@ -2842,7 +2842,7 @@ void EnableScrollBarCtrl(
 *nBar*<br/>
 Der Bildlaufleisten-Bezeichner.
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 Gibt an, ob die Bildlaufleiste aktiviert oder deaktiviert werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -2859,7 +2859,7 @@ BOOL EnableToolTips(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 Gibt an, ob das QuickInfo-Steuerelement aktiviert oder deaktiviert ist. "True" ermöglicht es dem Steuerelement; "False" wird das Steuerelement deaktiviert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2895,7 +2895,7 @@ BOOL EnableTrackingToolTips(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 Gibt an, ob Tool verfolgt Tipps aktiviert oder deaktiviert werden. Wenn dieser Parameter auf "true", das Tool für die nachverfolgung, die Tipps aktiviert werden ist. Wenn dieser Parameter "false", das Tool zum Nachverfolgen, die Tipps deaktiviert werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2916,7 +2916,7 @@ BOOL EnableWindow(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 Gibt an, ob das angegebene Fenster aktiviert oder deaktiviert werden. Wenn dieser Parameter TRUE ist, wird das Fenster aktiviert. Wenn dieser Parameter auf "false" ist, wird das Fenster deaktiviert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2951,7 +2951,7 @@ virtual void EndModalLoop(int nResult);
 
 ### <a name="parameters"></a>Parameter
 
-*%nergebnis*<br/>
+*nResult*<br/>
 Enthält den Wert an den Aufrufer der zurückzugebenden [RunModalLoop](#runmodalloop).
 
 ### <a name="remarks"></a>Hinweise
@@ -3045,7 +3045,7 @@ static CWnd* PASCAL FindWindow(
 
 ### <a name="parameters"></a>Parameter
 
-*"lpszclassname"*<br/>
+*lpszClassName*<br/>
 Verweist auf eine auf Null endende Zeichenfolge, der angibt, den Namen des Fensters-Klasse (ein `WNDCLASS` Struktur). Wenn *LpClassName* NULL ist, entsprechen Sie allen Klassennamen.
 
 *lpszWindowName*<br/>
@@ -3086,7 +3086,7 @@ Handle für das übergeordnete Fenster, dessen untergeordnete Fenster sind, gesu
 Handle für ein untergeordnetes Fenster. Die Suche beginnt mit dem nächsten untergeordneten Fenster in der Z-Reihenfolge. Das untergeordnete Fenster muss direkt untergeordnetes Fenster des *HwndParent*, nicht nur auf einem untergeordneten Fenster.
 
 *lpszClass*<br/>
-Zeiger auf eine Null-terminierte Zeichenfolge, der angibt, den Namen der Klasse oder ein Klassenatom-erstellt, die durch einen vorherigen Aufruf von der ["registerClass"](https://msdn.microsoft.com/library/windows/desktop/ms633586) oder [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa).
+Zeiger auf eine Null-terminierte Zeichenfolge, der angibt, den Namen der Klasse oder ein Klassenatom-erstellt, die durch einen vorherigen Aufruf von der ["registerClass"](/windows/desktop/api/winuser/nf-winuser-registerclassa) oder [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa).
 
 *lpszWindow*<br/>
 Zeiger auf eine auf Null endende Zeichenfolge, die angibt, der Fenstername (Titel des Fensters). Wenn dieser Parameter NULL ist, entsprechen alle Fensternamen.
@@ -4284,7 +4284,7 @@ COleControlSiteOrWnd* GetNextDlgGroupItem(
 *pWndCtl*<br/>
 Bezeichnet das Steuerelement als Ausgangspunkt für die Suche verwendet werden.
 
-*bVorherige*<br/>
+*bPrevious*<br/>
 Gibt an, wie die Funktion ist, um die Gruppe von Steuerelementen im Dialogfeld Suchen. Bei "true", sucht die Funktion das vorherige Steuerelement in der Gruppe ""; False gibt an, sucht er das nächste Steuerelement in der Gruppe ein.
 
 *pCurSiteOrWnd*<br/>
@@ -4333,7 +4333,7 @@ Bezeichnet das Steuerelement als Ausgangspunkt für die Suche verwendet werden.
 *pCurSiteOrWnd*<br/>
 Identifiziert die `COleControlSiteOrWnd` Steuerelement. Weitere Informationen zu `COleControlSiteOrWnd`, finden Sie unter [CWnd::GetNextDlgGroupItem](#getnextdlggroupitem).
 
-*bVorherige*<br/>
+*bPrevious*<br/>
 Gibt an, wie die Funktion ist, um das Dialogfeld zu suchen. Bei "true", sucht die Funktion das vorherige Steuerelement in das Dialogfeld; False gibt an, sucht er das nächste Steuerelement.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -4899,7 +4899,7 @@ int GetUpdateRgn(
 
 ### <a name="parameters"></a>Parameter
 
-*PRNG*<br/>
+*pRgn*<br/>
 Die Update-Region angibt.
 
 *bErase*<br/>
@@ -5311,7 +5311,7 @@ void InvalidateRgn(
 
 ### <a name="parameters"></a>Parameter
 
-*PRNG*<br/>
+*pRgn*<br/>
 Ein Zeiger auf eine [CRgn](../../mfc/reference/crgn-class.md) -Objekt, identifiziert die Region, in dem Aktualisierungsbereich hinzugefügt werden. Die Region wird als Clientkoordinaten haben. Wenn dieser Parameter NULL ist, wird der gesamte Clientbereich der aktualisierungsregion hinzugefügt.
 
 *bErase*<br/>
@@ -5382,7 +5382,7 @@ BOOL IsChild(const CWnd* pWnd) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Gibt das Fenster, die getestet werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -5941,7 +5941,7 @@ virtual BOOL OnAmbientProperty(
 *pSite*<br/>
 Zeiger auf die Website des Steuerelements, das die Ambiente-Eigenschaft angefordert.
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Dispatch-ID der angeforderten ambient-Eigenschaft.
 
 *pvar*<br/>
@@ -5971,7 +5971,7 @@ afx_msg void OnAppCommand(
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*Aufnehmen*|[in] Zeiger auf eine `CWnd` -Objekt, das Fenster darstellt, in denen der Benutzer hat auf die Schaltfläche mit den allgemeinen geklickt oder den Schlüssel für den. Dieses Fenster kann es sich um ein untergeordnetes Fenster des Fensters empfangen der Nachricht sein.|
+|*pWnd*|[in] Zeiger auf eine `CWnd` -Objekt, das Fenster darstellt, in denen der Benutzer hat auf die Schaltfläche mit den allgemeinen geklickt oder den Schlüssel für den. Dieses Fenster kann es sich um ein untergeordnetes Fenster des Fensters empfangen der Nachricht sein.|
 |*nCmd*|[in] Gibt den Anwendungsbefehl an. Finden Sie eine Liste der möglichen Werte, die Befehle unter der *Cmd* Teil der *lParam* Parameter [WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand).|
 |*nDevice*|[in] Das Eingabegerät, das das Eingabeereignis generiert wird. Finden Sie eine Liste der möglichen Werte, die Geräte unter der *uDevice* Teil der *lParam* Parameter [WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand).|
 |*nKey*|[in] Gibt an, alle virtuellen Tasten, die nach unten, wie z. B. die STRG-Taste oder die linke Maustaste gedrückt. Finden Sie eine Liste der möglichen Werte, die Schlüssel unter der *DwKeys* Teil der *lParam* Parameter [WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand). Weitere Informationen finden Sie unter der Unterüberschrift "Meldungsparameter" in [zu Mauseingabe](/windows/desktop/inputdev/about-mouse-input).|
@@ -6022,7 +6022,7 @@ afx_msg void OnCancelMode();
 
 Wenn die `CWnd` Objekt den Fokus hat, seine `OnCancelMode` Memberfunktion aufgerufen wird, wenn ein Dialogfeld oder ein Meldungsfeld angezeigt wird. Dadurch wird die `CWnd` die Möglichkeit, Modi, z. B. die Erfassung von Mauseingaben abzubrechen.
 
-Die Standardimplementierung antwortet durch Aufrufen der [ReleaseCapture](https://msdn.microsoft.com/library/windows/desktop/ms646261) Windows-Funktion. Überschreiben Sie diese Memberfunktion in der abgeleiteten Klasse, um andere Modi zu behandeln.
+Die Standardimplementierung antwortet durch Aufrufen der [ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture) Windows-Funktion. Überschreiben Sie diese Memberfunktion in der abgeleiteten Klasse, um andere Modi zu behandeln.
 
 ##  <a name="oncapturechanged"></a>  CWnd::OnCaptureChanged
 
@@ -6034,12 +6034,12 @@ afx_msg void OnCaptureChanged(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Ein Zeiger auf das Fenster, um die Erfassung von Mauseingaben zu erhalten.
 
 ### <a name="remarks"></a>Hinweise
 
-Ein Fenster empfängt diese Nachricht, selbst wenn es aufruft [ReleaseCapture](https://msdn.microsoft.com/library/windows/desktop/ms646261) selbst. Eine Anwendung sollten nicht versuchen, das Erfassen von Mauseingaben in Reaktion auf diese Nachricht festgelegt. Wenn diese Meldung empfangen wird, ein Fenster, bei Bedarf, um den neuen Status der Erfassung von Mauseingaben entsprechend neu gezeichnet werden soll.
+Ein Fenster empfängt diese Nachricht, selbst wenn es aufruft [ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture) selbst. Eine Anwendung sollten nicht versuchen, das Erfassen von Mauseingaben in Reaktion auf diese Nachricht festgelegt. Wenn diese Meldung empfangen wird, ein Fenster, bei Bedarf, um den neuen Status der Erfassung von Mauseingaben entsprechend neu gezeichnet werden soll.
 
 Informationen finden Sie das Windows SDK auf die `ReleaseCapture` Windows-Funktion.
 
@@ -6118,7 +6118,7 @@ afx_msg void OnChar(
 
 ### <a name="parameters"></a>Parameter
 
-*NChar*<br/>
+*nChar*<br/>
 Enthält den Zeichen-Code-Wert des Schlüssels.
 
 *nRepCnt*<br/>
@@ -6161,7 +6161,7 @@ afx_msg int OnCharToItem(
 
 ### <a name="parameters"></a>Parameter
 
-*NChar*<br/>
+*nChar*<br/>
 Gibt den Wert von der vom Benutzer gedrückten Taste.
 
 *pListBox*<br/>
@@ -6204,7 +6204,7 @@ virtual BOOL OnChildNotify(
 *message*<br/>
 Eine Zahl von Windows-Nachricht an ein übergeordnetes Fenster gesendet.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 Die *Wparam* der Nachricht zugeordnet.
 
 *lParam*<br/>
@@ -6281,7 +6281,7 @@ virtual BOOL OnCommand(
 
 ### <a name="parameters"></a>Parameter
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 Das niedrige Word der *wParam* identifiziert die Befehls-ID des Menüelements, Control oder Accelerator. Das höherwertige Word des *wParam* gibt die benachrichtigungsmeldung an, ob die Nachricht von einem Steuerelement ist. Wenn die Nachricht von einer Zugriffstaste ist, ist das höherwertige Wort 1 an. Wenn die Nachricht in einem Menü ist, ist das höherwertige Wort 0.
 
 *lParam*<br/>
@@ -6388,10 +6388,10 @@ afx_msg void OnContextMenu(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Handle für das Fenster, in dem rechten Maustaste die Maus geklickt. Dies kann ein untergeordnetes Fenster des Fensters empfangen der Nachricht sein. Weitere Informationen zur Verarbeitung dieser Nachricht finden Sie im Abschnitt "Hinweise".
 
-*POS*<br/>
+*pos*<br/>
 Die Position des Cursors, in Bildschirmkoordinaten, zum Zeitpunkt der Maus klicken Sie auf.
 
 ### <a name="remarks"></a>Hinweise
@@ -6412,7 +6412,7 @@ afx_msg BOOL OnCopyData(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Ein Zeiger auf eine `CWnd` -Objekt, das die Daten sendet.
 
 *pCopyDataStruct*<br/>
@@ -6479,7 +6479,7 @@ afx_msg HBRUSH OnCtlColor(
 *pDC*<br/>
 Enthält einen Zeiger für den Anzeigekontext für das untergeordnete Fenster. Kann temporär sein.
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Enthält einen Zeiger auf das Steuerelement in der die Farbe. Kann temporär sein.
 
 *nCtlColor*<br/>
@@ -6533,7 +6533,7 @@ afx_msg void OnDeadChar(
 
 ### <a name="parameters"></a>Parameter
 
-*NChar*<br/>
+*nChar*<br/>
 Gibt den Zeichenwert für die Warteschlange für unzustellbare Nachrichten-Key.
 
 *nRepCnt*<br/>
@@ -6713,7 +6713,7 @@ virtual void OnDrawIconicThumbnailOrLivePreview(
 *dc*<br/>
 Gibt den Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 Gibt das umschließende Rechteck des Bereichs zu rendern.
 
 *szRequiredThumbnailSize*<br/>
@@ -6788,7 +6788,7 @@ afx_msg void OnEnable(BOOL bEnable);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 Gibt an, ob die `CWnd` Objekt aktiviert oder deaktiviert wurde. Dieser Parameter ist "true", wenn die `CWnd` aktiviert wurde; es ist "false", wenn die `CWnd` wurde deaktiviert.
 
 ### <a name="remarks"></a>Hinweise
@@ -6808,7 +6808,7 @@ afx_msg void OnEndSession(BOOL bEnding);
 
 ### <a name="parameters"></a>Parameter
 
-*Anzahl von Krümmungen*<br/>
+*bEnding*<br/>
 Gibt an, und zwar unabhängig davon, ob die Sitzung beendet wird. Es ist "true", wenn die Sitzung beendet wird; andernfalls "false".
 
 ### <a name="remarks"></a>Hinweise
@@ -6999,7 +6999,7 @@ Eine oder mehrere der folgenden Werte, verarbeitet, der angibt, welchen Typ der 
 
 - Alle DLGC_WANTMESSAGE Tastatureingaben. Die Anwendung übergibt diese Nachricht an das Steuerelement.
 
-- DLGC_WANTTAB TAB-Taste.
+- DLGC_WANTTAB TAB key.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -7119,7 +7119,7 @@ afx_msg void OnHotKey(
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode empfängt die [WM_HOTKEY](/windows/desktop/inputdev/wm-hotkey) Benachrichtigung, die im Windows SDK beschrieben wird. Diese Nachricht befindet sich am Anfang der Nachrichtenwarteschlange, die dem Thread, der die Abkürzungstaste registriert zugeordnet. Verwenden der [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) Funktion, um eine systemweite Abkürzungstaste zu registrieren.
+Diese Methode empfängt die [WM_HOTKEY](/windows/desktop/inputdev/wm-hotkey) Benachrichtigung, die im Windows SDK beschrieben wird. Diese Nachricht befindet sich am Anfang der Nachrichtenwarteschlange, die dem Thread, der die Abkürzungstaste registriert zugeordnet. Verwenden der [RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey) Funktion, um eine systemweite Abkürzungstaste zu registrieren.
 
 > [!NOTE]
 > Diese Memberfunktion wird vom Framework aufgerufen, um der Anwendung die Bearbeitung einer Windows-Meldung zu ermöglichen. Die Parameter, die an die Funktion übergeben werden, stellen die Parameter dar, die vom Framework empfangen wurden, als die Nachricht empfangen wurde. Wenn Sie die Basisklassenimplementierung dieser Funktion aufrufen, verwendet diese Implementierung die Parameter, die mit der Meldung ursprünglich übergeben wurden, und nicht die Parameter, die Sie der Funktion übergeben.
@@ -7377,7 +7377,7 @@ afx_msg void OnKeyDown(
 
 ### <a name="parameters"></a>Parameter
 
-*NChar*<br/>
+*nChar*<br/>
 Gibt den virtuellen Tastencode des angegebenen Schlüssels. Eine Liste der standardmäßige virtuelle Tastencodes finden Sie in der Winuser.h
 
 *nRepCnt*<br/>
@@ -7422,7 +7422,7 @@ afx_msg void OnKeyUp(
 
 ### <a name="parameters"></a>Parameter
 
-*NChar*<br/>
+*nChar*<br/>
 Gibt den virtuellen Tastencode des angegebenen Schlüssels. Eine Liste der standardmäßige virtuelle Tastencodes finden Sie in der Winuser.h
 
 *nRepCnt*<br/>
@@ -7497,7 +7497,7 @@ Gibt an, ob es sich bei verschiedenen virtuelle Tasten ausgefallen sind. Dieser 
 
 - MK_SHIFT wird festgelegt, wenn die UMSCHALT-Taste gedrückt ist.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt die x- und y-Koordinate des Cursors an. Diese Koordinaten sind immer relativ zu der oberen linken Ecke des Fensters.
 
 ### <a name="remarks"></a>Hinweise
@@ -7532,7 +7532,7 @@ Gibt an, ob es sich bei verschiedenen virtuelle Tasten ausgefallen sind. Dieser 
 
 - MK_SHIFT wird festgelegt, wenn die UMSCHALT-Taste gedrückt ist.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt die x- und y-Koordinate des Cursors an. Diese Koordinaten sind immer relativ zu der oberen linken Ecke des Fensters.
 
 ### <a name="remarks"></a>Hinweise
@@ -7563,7 +7563,7 @@ Gibt an, ob es sich bei verschiedenen virtuelle Tasten ausgefallen sind. Dieser 
 
 - MK_SHIFT wird festgelegt, wenn die UMSCHALT-Taste gedrückt ist.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt die x- und y-Koordinate des Cursors an. Diese Koordinaten sind immer relativ zu der oberen linken Ecke des Fensters.
 
 ### <a name="remarks"></a>Hinweise
@@ -7596,7 +7596,7 @@ Gibt an, ob es sich bei verschiedenen virtuelle Tasten ausgefallen sind. Dieser 
 
 - MK_SHIFT wird festgelegt, wenn die UMSCHALT-Taste gedrückt ist.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt die x- und y-Koordinate des Cursors an. Diese Koordinaten sind immer relativ zu der oberen linken Ecke des Fensters.
 
 ### <a name="remarks"></a>Hinweise
@@ -7631,7 +7631,7 @@ Gibt an, ob es sich bei verschiedenen virtuelle Tasten ausgefallen sind. Dieser 
 
 - MK_SHIFT wird festgelegt, wenn die UMSCHALT-Taste gedrückt ist.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt die x- und y-Koordinate des Cursors an. Diese Koordinaten sind immer relativ zu der oberen linken Ecke des Fensters.
 
 ### <a name="remarks"></a>Hinweise
@@ -7662,7 +7662,7 @@ Gibt an, ob es sich bei verschiedenen virtuelle Tasten ausgefallen sind. Dieser 
 
 - MK_SHIFT wird festgelegt, wenn die UMSCHALT-Taste gedrückt ist.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt die x- und y-Koordinate des Cursors an. Diese Koordinaten sind immer relativ zu der oberen linken Ecke des Fensters.
 
 ### <a name="remarks"></a>Hinweise
@@ -7744,7 +7744,7 @@ afx_msg LRESULT OnMenuChar(
 
 ### <a name="parameters"></a>Parameter
 
-*NChar*<br/>
+*nChar*<br/>
 In Abhängigkeit der Einstellungen der Buildkonfiguration gibt die ANSI- oder Unicode-Zeichen, das der Benutzer geklickt hat.
 
 *nFlags*<br/>
@@ -7964,7 +7964,7 @@ afx_msg void OnMouseHover(
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*nFlags*|[in] Eine bitweise Kombination (OR) von Flags, die angeben, welche Modifizierertasten gedrückt sind. Das Flag MK_CONTROL gibt beispielsweise an, dass die STRG-Taste gedrückt wird.|
-|*Zeigen Sie*|[in] Ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) -Objekt, das gibt an, die *x* und *y* Koordinaten des Cursors relativ zu der oberen linken Ecke des Clientbereichs.|
+|*point*|[in] Ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) -Objekt, das gibt an, die *x* und *y* Koordinaten des Cursors relativ zu der oberen linken Ecke des Clientbereichs.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -8051,7 +8051,7 @@ Gibt an, ob es sich bei verschiedenen virtuelle Tasten ausgefallen sind. Dieser 
 
 - MK_SHIFT wird festgelegt, wenn die UMSCHALT-Taste gedrückt ist.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt die x- und y-Koordinate des Cursors an. Diese Koordinaten sind immer relativ zu der oberen linken Ecke des Fensters.
 
 ### <a name="remarks"></a>Hinweise
@@ -8145,7 +8145,7 @@ afx_msg void OnMoving(
 
 ### <a name="parameters"></a>Parameter
 
-*n*<br/>
+*nSide*<br/>
 Der Rand des Fensters verschoben werden soll.
 
 *lpRect*<br/>
@@ -8257,7 +8257,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Enthält die x- und y-Koordinaten des Cursors an. Diese Koordinaten sind immer Bildschirmkoordinaten.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -8284,7 +8284,7 @@ afx_msg void OnNcLButtonDblClk(
 *nHitTest*<br/>
 Gibt an, die [Treffertests Code](#onnchittest). Ein Treffertest ist ein Test, der die Position des Cursors bestimmt.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt an, eine `CPoint` Objekt, das die x- und y enthält Bildschirmkoordinaten der Position des Mauszeigers. Diese Koordinaten sind immer relativ zu der oberen linken Ecke des Bildschirms.
 
 ### <a name="remarks"></a>Hinweise
@@ -8309,7 +8309,7 @@ afx_msg void OnNcLButtonDown(
 *nHitTest*<br/>
 Gibt an, die [Treffertests Code](#onnchittest). Ein Treffertest ist ein Test, der die Position des Cursors bestimmt.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt an, eine `CPoint` Objekt, das die x- und y enthält Bildschirmkoordinaten der Position des Mauszeigers. Diese Koordinaten sind immer relativ zu der oberen linken Ecke des Bildschirms.
 
 ### <a name="remarks"></a>Hinweise
@@ -8334,7 +8334,7 @@ afx_msg void OnNcLButtonUp(
 *nHitTest*<br/>
 Gibt an, die [Treffertests Code](#onnchittest). Ein Treffertest ist ein Test, der die Position des Cursors bestimmt.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt an, eine `CPoint` Objekt, das die x- und y enthält Bildschirmkoordinaten der Position des Mauszeigers. Diese Koordinaten sind immer relativ zu der oberen linken Ecke des Bildschirms.
 
 ### <a name="remarks"></a>Hinweise
@@ -8359,7 +8359,7 @@ afx_msg void OnNcMButtonDblClk(
 *nHitTest*<br/>
 Gibt an, die [Treffertests Code](#onnchittest). Ein Treffertest ist ein Test, der die Position des Cursors bestimmt.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt an, eine `CPoint` Objekt, das die x- und y enthält Bildschirmkoordinaten der Position des Mauszeigers. Diese Koordinaten sind immer relativ zu der oberen linken Ecke des Bildschirms.
 
 ### <a name="remarks"></a>Hinweise
@@ -8382,7 +8382,7 @@ afx_msg void OnNcMButtonDown(
 *nHitTest*<br/>
 Gibt an, die [Treffertests Code](#onnchittest). Ein Treffertest ist ein Test, der die Position des Cursors bestimmt.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt an, eine `CPoint` Objekt, das die x- und y enthält Bildschirmkoordinaten der Position des Mauszeigers. Diese Koordinaten sind immer relativ zu der oberen linken Ecke des Bildschirms.
 
 ### <a name="remarks"></a>Hinweise
@@ -8405,7 +8405,7 @@ afx_msg void OnNcMButtonUp(
 *nHitTest*<br/>
 Gibt an, die [Treffertests Code](#onnchittest). Ein Treffertest ist ein Test, der die Position des Cursors bestimmt.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt an, eine `CPoint` Objekt, das die x- und y enthält Bildschirmkoordinaten der Position des Mauszeigers. Diese Koordinaten sind immer relativ zu der oberen linken Ecke des Bildschirms.
 
 ### <a name="remarks"></a>Hinweise
@@ -8428,7 +8428,7 @@ afx_msg void OnNcMouseHover(
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*nHitTest*|[in] Die Treffertest-Rückgabewert von der [CWnd::DefWindowProc](#defwindowproc) Funktion, die als Ergebnis der Verarbeitung der [eine WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) Nachricht.|
-|*Zeigen Sie*|[in] Ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) -Objekt, das gibt an, die *x* und *y* Koordinaten des Cursors relativ zu der oberen linken Ecke des Bildschirms.|
+|*point*|[in] Ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) -Objekt, das gibt an, die *x* und *y* Koordinaten des Cursors relativ zu der oberen linken Ecke des Bildschirms.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -8467,7 +8467,7 @@ afx_msg void OnNcMouseMove(
 *nHitTest*<br/>
 Gibt an, die [Treffertests Code](#onnchittest). Ein Treffertest ist ein Test, der die Position des Cursors bestimmt.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt an, eine `CPoint` Objekt, das die x- und y enthält Bildschirmkoordinaten der Position des Mauszeigers. Diese Koordinaten sind immer relativ zu der oberen linken Ecke des Bildschirms.
 
 ### <a name="remarks"></a>Hinweise
@@ -8506,7 +8506,7 @@ afx_msg void OnNcRButtonDblClk(
 *nHitTest*<br/>
 Gibt an, die [Treffertests Code](#onnchittest). Ein Treffertest ist ein Test, der die Position des Cursors bestimmt.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt an, eine `CPoint` Objekt, das die x- und y enthält Bildschirmkoordinaten der Position des Mauszeigers. Diese Koordinaten sind immer relativ zu der oberen linken Ecke des Bildschirms.
 
 ### <a name="remarks"></a>Hinweise
@@ -8529,7 +8529,7 @@ afx_msg void OnNcRButtonDown(
 *nHitTest*<br/>
 Gibt an, die [Treffertests Code](#onnchittest). Ein Treffertest ist ein Test, der die Position des Cursors bestimmt.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt an, eine `CPoint` Objekt, das die x- und y enthält Bildschirmkoordinaten der Position des Mauszeigers. Diese Koordinaten sind immer relativ zu der oberen linken Ecke des Bildschirms.
 
 ### <a name="remarks"></a>Hinweise
@@ -8552,7 +8552,7 @@ afx_msg void OnNcRButtonUp(
 *nHitTest*<br/>
 Gibt an, die [Treffertests Code](#onnchittest). Ein Treffertest ist ein Test, der die Position des Cursors bestimmt.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt an, eine `CPoint` Objekt, das die x- und y enthält Bildschirmkoordinaten der Position des Mauszeigers. Diese Koordinaten sind immer relativ zu der oberen linken Ecke des Bildschirms.
 
 ### <a name="remarks"></a>Hinweise
@@ -8597,8 +8597,8 @@ void OnNcXButtonDblClk(
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*nHitTest*|[in] Die Treffertest-Rückgabewert von der [CWnd::DefWindowProc](#defwindowproc) Funktion, die als Ergebnis der Verarbeitung der [eine WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) Nachricht.|
-|*Nschaltfläche*|[in] Ein Wert, der XBUTTON1, wenn die erste Microsoft Intellimouse-X-Schaltfläche doppelgeklickt wird, oder XButton2 loslässt Wenn die zweite X-Schaltfläche doppelgeklickt wird.|
-|*Zeigen Sie*|[in] Ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) -Objekt, das gibt an, die *x* und *y* Koordinaten des Cursors relativ zu der oberen linken Ecke des Clientbereichs.|
+|*nButton*|[in] Ein Wert, der XBUTTON1, wenn die erste Microsoft Intellimouse-X-Schaltfläche doppelgeklickt wird, oder XButton2 loslässt Wenn die zweite X-Schaltfläche doppelgeklickt wird.|
+|*point*|[in] Ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) -Objekt, das gibt an, die *x* und *y* Koordinaten des Cursors relativ zu der oberen linken Ecke des Clientbereichs.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -8623,8 +8623,8 @@ afx_msg void OnNcXButtonDown(
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*nHitTest*|[in] Die Treffertest-Rückgabewert von der [CWnd::DefWindowProc](#defwindowproc) Funktion, die als Ergebnis der Verarbeitung der [eine WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) Nachricht.|
-|*Nschaltfläche*|[in] Ein Wert von XBUTTON1, wenn die erste X-Maus-Schaltfläche gedrückt wird oder XBUTTON2 Wenn die zweite X-Schaltfläche gedrückt wird.|
-|*Zeigen Sie*|[in] Ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) -Objekt, das gibt an, die *x* und *y* Koordinaten des Cursors relativ zu der oberen linken Ecke des Bildschirms.|
+|*nButton*|[in] Ein Wert von XBUTTON1, wenn die erste X-Maus-Schaltfläche gedrückt wird oder XBUTTON2 Wenn die zweite X-Schaltfläche gedrückt wird.|
+|*point*|[in] Ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) -Objekt, das gibt an, die *x* und *y* Koordinaten des Cursors relativ zu der oberen linken Ecke des Bildschirms.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -8649,8 +8649,8 @@ afx_msg void OnNcXButtonUp(
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*nHitTest*|[in] Die Treffertest-Rückgabewert von der [CWnd::DefWindowProc](#defwindowproc) Funktion, die als Ergebnis der Verarbeitung der [eine WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) Nachricht.|
-|*Nschaltfläche*|[in] Wert XBUTTON1, wenn die erste X-Maus losgelassen wird, oder XBUTTON2 Wenn die zweite X-Taste wird losgelassen.|
-|*Zeigen Sie*|[in] Ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) -Objekt, das gibt an, die *x* und *y* Koordinaten des Cursors relativ zu der oberen linken Ecke des Bildschirms.|
+|*nButton*|[in] Wert XBUTTON1, wenn die erste X-Maus losgelassen wird, oder XBUTTON2 Wenn die zweite X-Taste wird losgelassen.|
+|*point*|[in] Ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) -Objekt, das gibt an, die *x* und *y* Koordinaten des Cursors relativ zu der oberen linken Ecke des Bildschirms.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -8696,7 +8696,7 @@ virtual BOOL OnNotify(
 
 ### <a name="parameters"></a>Parameter
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 Gibt das Steuerelement, das die Nachricht sendet, wenn die Nachricht von einem Steuerelement an. Andernfalls *wParam* ist 0.
 
 *lParam*<br/>
@@ -8731,8 +8731,8 @@ afx_msg UINT OnNotifyFormat(
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*Aufnehmen*|[in] Ein Zeiger auf eine `CWnd` Objekt, das Fenster senden darstellt, die [WM_NOTIFY](/windows/desktop/controls/wm-notify) Nachricht.<br /><br /> Dieser Parameter ist der Zeiger auf ein Steuerelement aus, wenn die *%nbefehl* Parameter ist NF_QUERY oder der Zeiger auf das übergeordnete Fenster eines Steuerelements, wenn *%nbefehl* NF_REQUERY ist.|
-|*%nbefehl*|[in] Ein Befehlswert, der WM_NOTIFY-Meldung spezialisiert hat. Mögliche Werte sind:<br /><br /> -NF_QUERY-<br />     Die Meldung ist eine Abfrage, um zu bestimmen, ob ANSI oder Unicode-Strukturen, die in der WM_NOTIFY-Meldungen verwendet werden soll. Diese Meldung wird während der Erstellung eines Steuerelements und als Reaktion auf das Formular NF_REQUERY dieser Nachricht von einem Steuerelement an das übergeordnete Fenster gesendet.<br />-NF_REQUERY-<br />     Die Nachricht ist eine Anforderung für ein Steuerelement NF_QUERY Form dieser Nachricht an das übergeordnete Fenster zu senden. Diese Anforderung wird über das übergeordnete Fenster gesendet, und fordert das Steuerelement, das das übergeordnete Element über den Typ der Struktur, in der WM_NOTIFY-Meldungen mit erneut abfragen. Wenn die *%nbefehl* Parameter NF_REQUERY ist der Rückgabewert ist das Ergebnis des Vorgangs erneut abgefragt.|
+|*pWnd*|[in] Ein Zeiger auf eine `CWnd` Objekt, das Fenster senden darstellt, die [WM_NOTIFY](/windows/desktop/controls/wm-notify) Nachricht.<br /><br /> Dieser Parameter ist der Zeiger auf ein Steuerelement aus, wenn die *%nbefehl* Parameter ist NF_QUERY oder der Zeiger auf das übergeordnete Fenster eines Steuerelements, wenn *%nbefehl* NF_REQUERY ist.|
+|*nCommand*|[in] Ein Befehlswert, der WM_NOTIFY-Meldung spezialisiert hat. Mögliche Werte sind:<br /><br /> - NF_QUERY -<br />     Die Meldung ist eine Abfrage, um zu bestimmen, ob ANSI oder Unicode-Strukturen, die in der WM_NOTIFY-Meldungen verwendet werden soll. Diese Meldung wird während der Erstellung eines Steuerelements und als Reaktion auf das Formular NF_REQUERY dieser Nachricht von einem Steuerelement an das übergeordnete Fenster gesendet.<br />- NF_REQUERY -<br />     Die Nachricht ist eine Anforderung für ein Steuerelement NF_QUERY Form dieser Nachricht an das übergeordnete Fenster zu senden. Diese Anforderung wird über das übergeordnete Fenster gesendet, und fordert das Steuerelement, das das übergeordnete Element über den Typ der Struktur, in der WM_NOTIFY-Meldungen mit erneut abfragen. Wenn die *%nbefehl* Parameter NF_REQUERY ist der Rückgabewert ist das Ergebnis des Vorgangs erneut abgefragt.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -9043,7 +9043,7 @@ Gibt an, ob es sich bei verschiedenen virtuelle Tasten ausgefallen sind. Dieser 
 
 - MK_SHIFT wird festgelegt, wenn die UMSCHALTTASTE gedrückt ist.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt an, die x- und y die Koordinaten des Cursors. Diese Koordinaten sind immer relativ zu der oberen linken Ecke des Fensters.
 
 ### <a name="remarks"></a>Hinweise
@@ -9078,7 +9078,7 @@ Gibt an, ob es sich bei verschiedenen virtuelle Tasten ausgefallen sind. Dieser 
 
 - MK_SHIFT wird festgelegt, wenn die UMSCHALTTASTE gedrückt ist.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt an, die x- und y die Koordinaten des Cursors. Diese Koordinaten sind immer relativ zu der oberen linken Ecke des Fensters.
 
 ### <a name="remarks"></a>Hinweise
@@ -9108,7 +9108,7 @@ Gibt an, ob es sich bei verschiedenen virtuelle Tasten ausgefallen sind. Dieser 
 
 - MK_SHIFT wird festgelegt, wenn die UMSCHALTTASTE gedrückt ist.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt an, die x- und y die Koordinaten des Cursors. Diese Koordinaten sind immer relativ zu der oberen linken Ecke des Fensters.
 
 ### <a name="remarks"></a>Hinweise
@@ -9127,7 +9127,7 @@ afx_msg LRESULT OnRegisteredMouseWheel(
 
 ### <a name="parameters"></a>Parameter
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 Horizontale Position des Zeigers.
 
 *lParam*<br/>
@@ -9219,7 +9219,7 @@ afx_msg BOOL OnSetCursor(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Gibt einen Zeiger auf das Fenster, das den Cursor enthält. Der Zeiger kann temporär sein und sollte nicht für eine spätere Verwendung gespeichert werden.
 
 *nHitTest*<br/>
@@ -9350,10 +9350,10 @@ Gibt den Typ des Ändern der Größe angefordert. Dieser Parameter kann einen de
 
 - SIZE_MAXSHOW-Nachricht wird an alle Popup-Fenster gesendet, wenn die vorherige Größe einige andere Fenster wiederhergestellt wurde.
 
-*CX*<br/>
+*cx*<br/>
 Gibt die neue Breite des Clientbereichs.
 
-*CY*<br/>
+*cy*<br/>
 Gibt die neue Höhe des Clientbereichs.
 
 ### <a name="remarks"></a>Hinweise
@@ -9406,7 +9406,7 @@ afx_msg void OnSizing(
 
 ### <a name="parameters"></a>Parameter
 
-*n*<br/>
+*nSide*<br/>
 Der Rand des Fensters verschoben werden soll.
 
 *lpRect*<br/>
@@ -9468,7 +9468,7 @@ Gibt an, ob des Fensters erweiterte oder nonextended Stile wurden geändert. Die
 - GWL_STYLE haben nonextended Fensterstile geändert.
 
 *lpStyleStruct*<br/>
-Verweist auf eine [STYLESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632607) Struktur, die die neuen Formate für das Fenster enthält. Eine Anwendung kann die Stile untersuchen, aber es kann nicht geändert werden.
+Verweist auf eine [STYLESTRUCT](/windows/desktop/api/winuser/ns-winuser-stylestruct) Struktur, die die neuen Formate für das Fenster enthält. Eine Anwendung kann die Stile untersuchen, aber es kann nicht geändert werden.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -9495,7 +9495,7 @@ Gibt an, ob des Fensters erweiterte oder nonextended Stile wurden geändert. Die
 - GWL_STYLE haben nonextended Fensterstile geändert.
 
 *lpStyleStruct*<br/>
-Verweist auf eine [STYLESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632607) Struktur, die die neuen Formate für das Fenster enthält. Eine Anwendung kann die Formatvorlagen überprüfen und ändern.
+Verweist auf eine [STYLESTRUCT](/windows/desktop/api/winuser/ns-winuser-stylestruct) Struktur, die die neuen Formate für das Fenster enthält. Eine Anwendung kann die Formatvorlagen überprüfen und ändern.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -9515,7 +9515,7 @@ afx_msg void OnSysChar(
 
 ### <a name="parameters"></a>Parameter
 
-*NChar*<br/>
+*nChar*<br/>
 Gibt den ASCII-Zeichen-Tastencode ein Systemmenü Schlüssel an.
 
 *nRepCnt*<br/>
@@ -9526,7 +9526,7 @@ Die *nFlags* Parameter kann folgende Werte haben:
 
 |Wert|Bedeutung|
 |-----------|-------------|
-|0-15|Gibt die Anzahl von Wiederholungen an. Der Wert ist die Anzahl der Häufigkeit, mit die der Tastenkombination wiederholt wird, weil der Benutzer, die Sie die Taste gedrückt halten..|
+|0-15|Gibt die Anzahl von Wiederholungen an. Der Wert ist die Anzahl der Häufigkeit, mit die der Tastenkombination wiederholt wird, weil der Benutzer, die Sie die Taste gedrückt halten...|
 |16-23|Gibt den Code für die Überprüfung. Der Wert hängt von der Originalgerätehersteller (OEM)|
 |24|Gibt an, ob die einen erweiterten Schlüssel an, wie z. B. die rechte ALT und STRG-Taste ist, die eine erweiterte 101 oder 102-Tasten angezeigt werden. Der Wert ist 1, wenn es sich um eine erweiterte Schlüssel handelt; Andernfalls ist er 0.|
 |25-28|Wird intern von Windows verwendet.|
@@ -9639,7 +9639,7 @@ afx_msg void OnSysDeadChar(
 
 ### <a name="parameters"></a>Parameter
 
-*NChar*<br/>
+*nChar*<br/>
 Gibt den Zeichenwert für die Warteschlange für unzustellbare Nachrichten-Key.
 
 *nRepCnt*<br/>
@@ -9678,7 +9678,7 @@ afx_msg void OnSysKeyDown(
 
 ### <a name="parameters"></a>Parameter
 
-*NChar*<br/>
+*nChar*<br/>
 Gibt den virtuellen Tastencode der Taste gedrückt wird. Eine Liste der standardmäßige virtuelle Tastencodes finden Sie in der Winuser.h
 
 *nRepCnt*<br/>
@@ -9725,7 +9725,7 @@ afx_msg void OnSysKeyUp(
 
 ### <a name="parameters"></a>Parameter
 
-*NChar*<br/>
+*nChar*<br/>
 Gibt den virtuellen Tastencode der Taste gedrückt wird. Eine Liste der standardmäßige virtuelle Tastencodes finden Sie in der Winuser.h
 
 *nRepCnt*<br/>
@@ -9860,10 +9860,10 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt die x- und y-Koordinate des Cursors an. Diese Koordinaten sind immer relativ zu der oberen linken Ecke des Fensters
 
-*PTI*<br/>
+*pTI*<br/>
 Ein Zeiger auf eine [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) Struktur. Die folgenden Strukturwerte werden standardmäßig festgelegt:
 
 - *HWND*  =  `m_hWnd` Fensterhandle
@@ -9959,9 +9959,9 @@ afx_msg void OnUniChar(
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*NChar*|[in] Gibt den Zeichencode der gedrückten Taste an.|
+|*nChar*|[in] Gibt den Zeichencode der gedrückten Taste an.|
 |*nRepCnt*|[in] Gibt die Anzahl von Wiederholungen für die aktuelle Nachricht. Der Wert ist die Anzahl der Häufigkeit, mit die der Tastenkombination Autorepeated, weil der Benutzer die Taste gedrückt wird. Wenn die Tastatureingabe kurz gehalten wird, werden mehrere Nachrichten gesendet. Die Anzahl von Wiederholungen ist jedoch nicht kumulativ.|
-|*nFlags*|[in] Flags, die die Überprüfung von Code, erweiterte Schlüssel, Kontextcode, vorherigen des Status und Übergangsstatus angeben werden, wie in der folgenden Tabelle dargestellt:<br /><br /> **0-7:** Gibt den Code für die Überprüfung. Der Wert hängt von der Originalgerätehersteller (OEM) ab.<br /><br /> **8:** Gibt einen erweiterten Schlüssel ein, z. B. die rechten ALT und STRG-Tasten, die eine erweiterte 101 oder 102-Tastatur angezeigt werden. Das Flag ist 1, wenn der Schlüssel eine erweiterte Schlüssel ist; Andernfalls ist er 0.<br /><br /> **9 bis 12:**  Wird intern von Windows verwendet.<br /><br /> **13:**  Gibt den Kontextcode. Das Flag ist 1, wenn die ALT-Taste gedrückt gehalten wird, während die Taste gedrückt wird; der Wert ist, andernfalls 0.<br /><br /> **14:**  Gibt den vorherigen Zustand des Schlüssels an. Das Flag ist 1, wenn die Taste gedrückt ist, bevor die Nachricht gesendet wird, oder 0, wenn der Schlüssel aktiviert ist.<br /><br /> **15:**  Gibt den Status des Übergangs an. Das Flag ist 1, wenn die Taste losgelassen wird, wird, oder 0, wenn die Taste wird gedrückt wird.|
+|*nFlags*|[in] Flags, die die Überprüfung von Code, erweiterte Schlüssel, Kontextcode, vorherigen des Status und Übergangsstatus angeben werden, wie in der folgenden Tabelle dargestellt:<br /><br /> **0-7:** Gibt den Code für die Überprüfung. Der Wert hängt von der Originalgerätehersteller (OEM) ab.<br /><br /> **8:** Gibt einen erweiterten Schlüssel ein, z. B. die rechten ALT und STRG-Tasten, die eine erweiterte 101 oder 102-Tastatur angezeigt werden. Das Flag ist 1, wenn der Schlüssel eine erweiterte Schlüssel ist; Andernfalls ist er 0.<br /><br /> **9-12:**  Wird intern von Windows verwendet.<br /><br /> **13:**  Gibt den Kontextcode. Das Flag ist 1, wenn die ALT-Taste gedrückt gehalten wird, während die Taste gedrückt wird; der Wert ist, andernfalls 0.<br /><br /> **14:**  Gibt den vorherigen Zustand des Schlüssels an. Das Flag ist 1, wenn die Taste gedrückt ist, bevor die Nachricht gesendet wird, oder 0, wenn der Schlüssel aktiviert ist.<br /><br /> **15:**  Gibt den Status des Übergangs an. Das Flag ist 1, wenn die Taste losgelassen wird, wird, oder 0, wenn die Taste wird gedrückt wird.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -10276,7 +10276,7 @@ virtual BOOL OnWndMsg(
 *message*<br/>
 Gibt die Meldung gesendet werden.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 Gibt zusätzliche Nachricht abhängige Informationen.
 
 *lParam*<br/>
@@ -10311,8 +10311,8 @@ afx_msg void OnXButtonDblClk(
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*nFlags*|[in] Eine bitweise Kombination (OR) von Flags, die angeben, welche Modifizierertasten gedrückt sind. Das Flag MK_CONTROL gibt beispielsweise an, dass die STRG-Taste gedrückt wird.|
-|*Nschaltfläche*|[in] Ein Wert, der XBUTTON1, wenn die erste Microsoft Intellimouse-X-Schaltfläche doppelgeklickt wird, oder XButton2 loslässt Wenn die zweite X-Schaltfläche doppelgeklickt wird.|
-|*Zeigen Sie*|[in] Ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) -Objekt, das gibt an, die *x* und *y* Koordinaten des Cursors relativ zu der oberen linken Ecke des Clientbereichs.|
+|*nButton*|[in] Ein Wert, der XBUTTON1, wenn die erste Microsoft Intellimouse-X-Schaltfläche doppelgeklickt wird, oder XButton2 loslässt Wenn die zweite X-Schaltfläche doppelgeklickt wird.|
+|*point*|[in] Ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) -Objekt, das gibt an, die *x* und *y* Koordinaten des Cursors relativ zu der oberen linken Ecke des Clientbereichs.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -10349,8 +10349,8 @@ afx_msg void OnXButtonDown(
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*nFlags*|[in] Eine bitweise Kombination (OR) von Flags, die angeben, welche Modifizierertasten gedrückt sind. Das Flag MK_CONTROL gibt beispielsweise an, dass die STRG-Taste gedrückt wird.|
-|*Nschaltfläche*|[in] Der Wert XBUTTON1, wenn die erste Microsoft Intellimouse-X-Schaltfläche geklickt wurde, oder XButton2 loslässt Wenn die zweite X-Schaltfläche geklickt wurde.|
-|*Zeigen Sie*|[in] Ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) -Objekt, das gibt an, die *x* und *y* Koordinaten des Cursors relativ zu der oberen linken Ecke des Clientbereichs.|
+|*nButton*|[in] Der Wert XBUTTON1, wenn die erste Microsoft Intellimouse-X-Schaltfläche geklickt wurde, oder XButton2 loslässt Wenn die zweite X-Schaltfläche geklickt wurde.|
+|*point*|[in] Ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) -Objekt, das gibt an, die *x* und *y* Koordinaten des Cursors relativ zu der oberen linken Ecke des Clientbereichs.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -10387,8 +10387,8 @@ afx_msg void OnXButtonUp(
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*nFlags*|[in] Eine bitweise Kombination (OR) von Flags, die angeben, welche Modifizierertasten gedrückt sind. Das Flag MK_CONTROL gibt beispielsweise an, dass die STRG-Taste gedrückt wird.|
-|*Nschaltfläche*|[in] Wert XBUTTON1, wenn die erste Microsoft Intellimouse-X-Schaltfläche doppelgeklickt wurde, oder XButton2 loslässt Wenn die zweite X-Schaltfläche doppelgeklickt wurde.|
-|*Zeigen Sie*|[in] Ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) -Objekt, das gibt an, die *x* und *y* Koordinaten des Cursors relativ zu der oberen linken Ecke des Clientbereichs.|
+|*nButton*|[in] Wert XBUTTON1, wenn die erste Microsoft Intellimouse-X-Schaltfläche doppelgeklickt wurde, oder XButton2 loslässt Wenn die zweite X-Schaltfläche doppelgeklickt wurde.|
+|*point*|[in] Ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) -Objekt, das gibt an, die *x* und *y* Koordinaten des Cursors relativ zu der oberen linken Ecke des Clientbereichs.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -10506,7 +10506,7 @@ BOOL PostMessage(
 *message*<br/>
 Gibt an, die zu sendende Nachricht.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 Gibt zusätzliche Nachrichteninformationen. Der Inhalt dieses Parameters hängt von der gesendeten Nachricht ab.
 
 *lParam*<br/>
@@ -10782,7 +10782,7 @@ BOOL ReflectChildNotify(
 *message*<br/>
 Gibt die Meldung berücksichtigt werden.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 Gibt zusätzliche Nachricht abhängige Informationen.
 
 *lParam*<br/>
@@ -11005,7 +11005,7 @@ int ScrollWindowEx(
 
 ### <a name="parameters"></a>Parameter
 
-*DX*<br/>
+*dx*<br/>
 Gibt die Menge in Geräteeinheiten, der horizontale Bildlauffunktion an. Dieser Parameter muss einen negativen Wert auf der linken Seite einen Bildlauf durchführen müssen.
 
 *dy*<br/>
@@ -11044,7 +11044,7 @@ Wenn [SW_INVALIDATE](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) und
 
 Wenn das Fenster hat die [WS_CLIPCHILDREN](/windows/desktop/api/winuser/nf-winuser-createwindowa) Formatvorlage, die die zurückgegebenen Bereiche, die anhand des *PrgnUpdate* und *LpRectUpdate* die Gesamtfläche des Fensters ein Bildlauf ausgeführt wird, die müssen darstellen aktualisiert werden, einschließlich der Bereiche in untergeordnete Fenster, die die zu aktualisierenden.
 
-Wenn die [SW_SCROLLCHILDREN](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) Flag angegeben wird, Windows wird nicht ordnungsgemäß den Bildschirm zu aktualisieren, wenn ein Teil eines untergeordneten Fensters ein Bildlauf durchgeführt wird. Der Teil des gescrollten untergeordneten Fensters, die sich außerhalb des Quellrechtecks werden nicht gelöscht und wird nicht neu gezeichnet werden ordnungsgemäß als neues Ziel. Verwenden der [DeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632681) Windows-Funktion zum Verschieben untergeordnete Fenster, die nicht vollständig in befinden die *LpRectScroll* Rechteck. Der Cursor wird neu angeordnet werden, wenn das SW_SCROLLCHILDREN-Flag festgelegt ist, und das Rechteck der Einfügemarke das Scroll-Rechteck schneidet.
+Wenn die [SW_SCROLLCHILDREN](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) Flag angegeben wird, Windows wird nicht ordnungsgemäß den Bildschirm zu aktualisieren, wenn ein Teil eines untergeordneten Fensters ein Bildlauf durchgeführt wird. Der Teil des gescrollten untergeordneten Fensters, die sich außerhalb des Quellrechtecks werden nicht gelöscht und wird nicht neu gezeichnet werden ordnungsgemäß als neues Ziel. Verwenden der [DeferWindowPos](/windows/desktop/api/winuser/nf-winuser-deferwindowpos) Windows-Funktion zum Verschieben untergeordnete Fenster, die nicht vollständig in befinden die *LpRectScroll* Rechteck. Der Cursor wird neu angeordnet werden, wenn das SW_SCROLLCHILDREN-Flag festgelegt ist, und das Rechteck der Einfügemarke das Scroll-Rechteck schneidet.
 
 Alle Eingabe- und Koordinaten (für *LpRectScroll*, *LpRectClip*, *LpRectUpdate*, und *PrgnUpdate*) wird angenommen, dass in Clientkoordinaten, unabhängig davon, ob das Fenster der Klassenstil CS_OWNDC oder CS_CLASSDC verfügt. Verwenden der [LPtoDP](/windows/desktop/api/wingdi/nf-wingdi-lptodp) und [DPtoLP](/windows/desktop/api/wingdi/nf-wingdi-dptolp) Windows-Funktionen in und aus den logischen Koordinaten bei Bedarf zu konvertieren.
 
@@ -11091,7 +11091,7 @@ Gibt den Bezeichner, der das Dialogfeldsteuerelement, das die Nachricht empfange
 *message*<br/>
 Gibt die Meldung gesendet werden.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 Gibt zusätzliche Nachricht abhängige Informationen.
 
 *lParam*<br/>
@@ -11127,7 +11127,7 @@ LRESULT SendMessage(
 *message*<br/>
 Gibt die Meldung gesendet werden.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 Gibt zusätzliche Nachricht abhängige Informationen.
 
 *lParam*<br/>
@@ -11163,7 +11163,7 @@ void SendMessageToDescendants(
 *message*<br/>
 Gibt die Meldung gesendet werden.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 Gibt zusätzliche Nachricht abhängige Informationen.
 
 *lParam*<br/>
@@ -11201,7 +11201,7 @@ BOOL SendNotifyMessage(
 *message*<br/>
 Gibt die Meldung gesendet werden.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 Gibt zusätzliche Nachricht abhängige Informationen.
 
 *lParam*<br/>
@@ -11247,7 +11247,7 @@ Ein Zeiger auf das Fensterobjekt, das alle Mauseingabe unterzeichnen. Es ist NUL
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn `CWnd` ist nicht mehr erforderlich, alle mit der Maus Eingabe, die Anwendung aufrufen, sollte die [ReleaseCapture](https://msdn.microsoft.com/library/windows/desktop/ms646261) Funktion so, dass andere Fenster Mauseingabe empfangen können.
+Wenn `CWnd` ist nicht mehr erforderlich, alle mit der Maus Eingabe, die Anwendung aufrufen, sollte die [ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture) Funktion so, dass andere Fenster Mauseingabe empfangen können.
 
 Während Mauseingaben erfasst wird, werden keine eine WM_NCHITTEST oder WM_SETCURSOR-Nachrichten an das aktive Fenster gesendet.
 
@@ -11261,7 +11261,7 @@ static void PASCAL SetCaretPos(POINT point);
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt an, die neue x und y die Koordinaten (in Clientkoordinaten) von der Einfügemarke.
 
 ### <a name="remarks"></a>Hinweise
@@ -11331,7 +11331,7 @@ void SetDlgItemInt(
 *nID*<br/>
 Gibt an, die ganzzahlige ID des Steuerelements geändert werden.
 
-*nWert*<br/>
+*nValue*<br/>
 Gibt den ganzzahligen Wert verwendet, um den Elementtext zu generieren.
 
 *bSigned*<br/>
@@ -11852,10 +11852,10 @@ Gibt die neue Position der linken Seite des Fensters.
 *y*<br/>
 Gibt die neue Position des oberen Rand des Fensters an.
 
-*CX*<br/>
+*cx*<br/>
 Gibt die neue Breite des Fensters.
 
-*CY*<br/>
+*cy*<br/>
 Gibt die neue Höhe des Fensters.
 
 *nFlags*<br/>
@@ -12322,7 +12322,7 @@ void ValidateRgn(CRgn* pRgn);
 
 ### <a name="parameters"></a>Parameter
 
-*PRNG*<br/>
+*pRgn*<br/>
 Ein Zeiger auf eine [CRgn](../../mfc/reference/crgn-class.md) -Objekt, das eine Region, definiert, identifiziert den Bereich aus dem Aktualisierungsbereich entfernt werden soll. Wenn dieser Parameter NULL ist, wird der gesamte Clientbereich entfernt.
 
 ### <a name="remarks"></a>Hinweise
@@ -12341,7 +12341,7 @@ static CWnd* PASCAL WindowFromPoint(POINT point);
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt an, eine [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt oder [zeigen](/windows/desktop/api/windef/ns-windef-tagpoint) -Datenstruktur, die den Punkt zu überprüfende definiert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -12368,7 +12368,7 @@ virtual LRESULT WindowProc(
 *message*<br/>
 Gibt die Windows-Meldung verarbeitet werden.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 Enthält zusätzliche Informationen, die beim Verarbeiten der Nachricht verwendet. Der Wert des Parameters hängt von der Nachricht ab.
 
 *lParam*<br/>
@@ -12416,7 +12416,7 @@ BOOL RegisterTouchWindow(
 
 ### <a name="parameters"></a>Parameter
 
-*bRegistrieren Sie sich*<br/>
+*bRegister*<br/>
 TRUE gibt an, registrieren Sie sich Windows touch-Unterstützung; "False" andernfalls.
 
 *ulFlags*<br/>
