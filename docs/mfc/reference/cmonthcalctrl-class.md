@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 26a0feadfd6603f74ce222e4850f0da9cf71e7d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48b02843cc957994aa3f3109a82cb2188dd9acff
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509588"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894197"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl-Klasse
 
@@ -148,7 +148,7 @@ class CMonthCalCtrl : public CWnd
 |[CMonthCalCtrl::SetColor](#setcolor)|Legt die Farbe der einem angegebenen Bereich von einem Monatskalender-Steuerelement fest.|
 |[CMonthCalCtrl::SetCurrentView](#setcurrentview)|Legt den aktuellen Monatskalender-Steuerelement zum Anzeigen der angegebenen Ansicht fest.|
 |[CMonthCalCtrl::SetCurSel](#setcursel)|Legt fest, das derzeit ausgewählte Datum für ein Monatskalender-Steuerelement.|
-|[CMonthCalCtrl:: SetDayState](#setdaystate)|Legt die Anzeige die Tage in einem Monatskalender-Steuerelement fest.|
+|[CMonthCalCtrl::SetDayState](#setdaystate)|Legt die Anzeige die Tage in einem Monatskalender-Steuerelement fest.|
 |[CMonthCalCtrl::SetDecadeView](#setdecadeview)|Legt den aktuellen Monatskalender-Steuerelement für die zehn Jahren-Ansicht.|
 |[CMonthCalCtrl::SetFirstDayOfWeek](#setfirstdayofweek)|Legt fest, den Tag der Woche, die in der am weitesten links stehende Spalte des Kalenders angezeigt werden.|
 |[CMonthCalCtrl::SetMaxSelCount](#setmaxselcount)|Legt die maximale Anzahl von Tagen an, die in einem Monatskalender-Steuerelement ausgewählt werden können.|
@@ -226,7 +226,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Gibt die Kombination von Windows-Formatvorlagen auf den Monatskalender-Steuerelement angewendet. Finden Sie unter [Month Calendar-Steuerelement-Stile](/windows/desktop/Controls/month-calendar-control-styles) im Windows SDK für Weitere Informationen zu den Stilen.
 
-*Rect*<br/>
+*rect*<br/>
 Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur. Enthält die Position und Größe der im Monatskalender-Steuerelement.
 
 *pt*<br/>
@@ -412,7 +412,7 @@ BOOL GetCurSel(LPSYSTEMTIME pDateTime) const;
 Ein Verweis auf eine [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) Objekt oder ein [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt. Empfängt die aktuelle Uhrzeit an.
 
 *pDateTime*<br/>
-Ein Zeiger auf eine [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) -Struktur, die die derzeit ausgewählte Datumsinformationen erhält. Dieser Parameter muss eine gültige Adresse sein und darf nicht NULL sein.
+Ein Zeiger auf eine [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) -Struktur, die die derzeit ausgewählte Datumsinformationen erhält. Dieser Parameter muss eine gültige Adresse sein und darf nicht NULL sein.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -579,7 +579,7 @@ Ein Verweis auf eine [COleDateTime](../../atl-mfc-shared/reference/coledatetime-
 Ein Verweis auf eine `COleDateTime` oder `CTime` -Objekt, das das maximal zulässige Datum enthält.
 
 *pMinRange*<br/>
-Ein Zeiger auf eine [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die das Datum am niedrigsten Ende des Bereichs enthält.
+Ein Zeiger auf eine [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) Struktur, die das Datum am niedrigsten Ende des Bereichs enthält.
 
 *pMaxRange*<br/>
 Ein Zeiger auf eine `SYSTEMTIME` Struktur, die das Datum am höchsten Ende des Bereichs enthält.
@@ -625,10 +625,10 @@ DWORD GetRange(
 ### <a name="parameters"></a>Parameter
 
 *pMinRange*<br/>
-Ein Zeiger auf eine `COleDateTime` Objekt eine `CTime` Objekt oder [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die das Datum am niedrigsten Ende des Bereichs enthält.
+Ein Zeiger auf eine `COleDateTime` Objekt eine `CTime` Objekt oder [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) Struktur, die das Datum am niedrigsten Ende des Bereichs enthält.
 
 *pMaxRange*<br/>
-Ein Zeiger auf eine `COleDateTime` Objekt eine `CTime` Objekt oder [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die das Datum am höchsten Ende des Bereichs enthält.
+Ein Zeiger auf eine `COleDateTime` Objekt eine `CTime` Objekt oder [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) Struktur, die das Datum am höchsten Ende des Bereichs enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -674,7 +674,7 @@ Ein Verweis auf eine [COleDateTime](../../atl-mfc-shared/reference/coledatetime-
 Ein Verweis auf eine `COleDateTime` oder `CTime` -Objekt, das das maximal zulässige Datum enthält.
 
 *pMinRange*<br/>
-Ein Zeiger auf eine [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die das Datum am niedrigsten Ende des Bereichs enthält.
+Ein Zeiger auf eine [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) Struktur, die das Datum am niedrigsten Ende des Bereichs enthält.
 
 *pMaxRange*<br/>
 Ein Zeiger auf eine `SYSTEMTIME` Struktur, die das Datum am höchsten Ende des Bereichs enthält.
@@ -705,7 +705,7 @@ BOOL GetToday(LPSYSTEMTIME pDateTime) const;
 Ein Verweis auf eine [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) oder [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt, das den aktuellen Tag angibt.
 
 *pDateTime*<br/>
-Ein Zeiger auf eine [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) -Struktur, die die Datumsinformationen erhält. Dieser Parameter muss eine gültige Adresse sein und darf nicht NULL sein.
+Ein Zeiger auf eine [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) -Struktur, die die Datumsinformationen erhält. Dieser Parameter muss eine gültige Adresse sein und darf nicht NULL sein.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -953,7 +953,7 @@ BOOL SetCurrentView(DWORD dwNewView);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*dwNewView*|[in] Einer der folgenden Werte, der angibt, ein monatlich, jährlich, zehn oder Jahrhundert anzeigen.<br /><br /> MCMV_MONTH: Monatsansicht der<br /><br /> MCMV_YEAR: Jährliche Ansicht<br /><br /> MCMV_DECADE: Jahrzehnt anzeigen<br /><br /> MCMV_CENTURY: Jahrhundert anzeigen|
+|*dwNewView*|[in] Einer der folgenden Werte, der angibt, ein monatlich, jährlich, zehn oder Jahrhundert anzeigen.<br /><br /> MCMV_MONTH: Monatliche Ansicht<br /><br /> MCMV_YEAR: Jährliche anzeigen<br /><br /> MCMV_DECADE: Zehn Jahre anzeigen<br /><br /> MCMV_CENTURY: Jahrhundert anzeigen|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -979,7 +979,7 @@ BOOL SetCurSel(const CTime& refDateTime);
 Ein Verweis auf eine [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) oder [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt, das das aktuell ausgewählte Monatskalender-Steuerelement angibt.
 
 *pDateTime*<br/>
-Zeiger auf eine [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) -Struktur, enthält das Datum an, wie die aktuelle Auswahl festgelegt werden.
+Zeiger auf eine [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) -Struktur, enthält das Datum an, wie die aktuelle Auswahl festgelegt werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1079,7 +1079,7 @@ BOOL SetMaxSelCount(int nMax);
 
 ### <a name="parameters"></a>Parameter
 
-*nmax.*<br/>
+*nMax*<br/>
 Der Wert, der festgelegt wird, um die maximale Anzahl von auswählbaren Tage darzustellen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1164,7 +1164,7 @@ BOOL SetRange(
 ### <a name="parameters"></a>Parameter
 
 *pMinRange*<br/>
-Ein Zeiger auf eine `COleDateTime` Objekt eine `CTime` Objekt oder [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die das Datum am niedrigsten Ende des Bereichs enthält.
+Ein Zeiger auf eine `COleDateTime` Objekt eine `CTime` Objekt oder [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) Struktur, die das Datum am niedrigsten Ende des Bereichs enthält.
 
 *pMaxRange*<br/>
 Ein Zeiger auf eine `COleDateTime` Objekt eine `CTime` Objekt oder `SYSTEMTIME` Struktur, die das Datum am höchsten Ende des Bereichs enthält.
@@ -1202,7 +1202,7 @@ BOOL SetSelRange(
 ### <a name="parameters"></a>Parameter
 
 *pMinRange*<br/>
-Ein Zeiger auf eine `COleDateTime` Objekt eine `CTime` Objekt oder [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die das Datum am niedrigsten Ende des Bereichs enthält.
+Ein Zeiger auf eine `COleDateTime` Objekt eine `CTime` Objekt oder [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) Struktur, die das Datum am niedrigsten Ende des Bereichs enthält.
 
 *pMaxRange*<br/>
 Ein Zeiger auf eine `COleDateTime` Objekt eine `CTime` Objekt oder `SYSTEMTIME` Struktur, die das Datum am höchsten Ende des Bereichs enthält.
@@ -1231,7 +1231,7 @@ void SetToday(const CTime* pDateTime);
 Ein Verweis auf eine [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) -Objekt, das das aktuelle Datum enthält.
 
 *pDateTime*<br/>
-In der zweiten Version, ein Zeiger auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt mit Informationen über das aktuelle Datum. In der dritten Version, ein Zeiger auf eine [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) -Struktur, die das aktuelle Datum die Informationen enthält.
+In der zweiten Version, ein Zeiger auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt mit Informationen über das aktuelle Datum. In der dritten Version, ein Zeiger auf eine [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) -Struktur, die das aktuelle Datum die Informationen enthält.
 
 ### <a name="remarks"></a>Hinweise
 

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: d7e98ae38d91fbc0c1d428e94c6fa29fd8651e85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d70d2fb0ecb647d4854a6277d6c69cd9886e072f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626784"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894210"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -121,7 +121,7 @@ Es ist sicherer, verwenden Sie **_beginthreadex** als **_beginthread**. Wenn der
 
 Rufen Sie [_endthread](endthread-endthreadex.md) oder **_endthreadex** explizit auf einen Thread zu beenden. allerdings **_endthread** oder **_endthreadex** aufgerufen wird automatisch bei der Thread von der Routine zurück, der als Parameter übergeben wird. Beenden eines Threads durch einen Aufruf von **_endthread** oder **_endthreadex** sichergestellt korrekte Wiederherstellung der Ressourcen, die für den Thread zugewiesen werden.
 
-**_endthread** schließt das Threadhandle automatisch, während **_endthreadex** nicht. Aus diesem Grund bei Verwendung von **_beginthread** und **_endthread**, explizit schließen Sie nicht das Threadhandle durch Aufrufen der Win32- ["CloseHandle"](https://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API. Dieses Verhalten unterscheidet sich von dem der [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) -Win32-API.
+**_endthread** schließt das Threadhandle automatisch, während **_endthreadex** nicht. Aus diesem Grund bei Verwendung von **_beginthread** und **_endthread**, explizit schließen Sie nicht das Threadhandle durch Aufrufen der Win32- ["CloseHandle"](/windows/desktop/api/handleapi/nf-handleapi-closehandle) API. Dieses Verhalten unterscheidet sich von dem der [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) -Win32-API.
 
 > [!NOTE]
 > Für eine mit "LIBCMT.lib" verknüpfte ausführbare Datei, rufen Sie nicht die Win32 **ExitThread** API, damit Sie das Laufzeitsystem Freigabe zu verhindern, dass keine zugeordneten Ressourcen. **_endthread** und **_endthreadex** zugeordnete Threadressourcen, und rufen dann **ExitThread**.

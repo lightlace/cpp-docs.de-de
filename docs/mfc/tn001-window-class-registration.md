@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WNDCLASS [MFC]
 - AfxRegisterClass function
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
-ms.openlocfilehash: 8f16480d238ca2a3e683219984c54d67159f806d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 4ae94d1c9c57f6c315ae482e44576ae25194c00f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693858"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894262"
 ---
 # <a name="tn001-window-class-registration"></a>TN001: Fensterklassenregistrierung
 
@@ -31,7 +31,7 @@ Dies `WNDCLASS` muss über eine der vier Plattformen registriert werden:
 
 - Explizit durch Aufrufen der MFC [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) oder [AfxRegisterClass](../mfc/reference/application-information-and-management.md#afxregisterclass).
 
-- Explizit durch Aufrufen der Windows-Routine ["registerClass"](https://msdn.microsoft.com/library/windows/desktop/ms633586).
+- Explizit durch Aufrufen der Windows-Routine ["registerClass"](/windows/desktop/api/winuser/nf-winuser-registerclassa).
 
 ## <a name="wndclass-fields"></a>WNDCLASS-Felder
 
@@ -40,14 +40,14 @@ Die `WNDCLASS` Struktur besteht aus verschiedenen Feldern, die eine Fensterklass
 |Feld|Beschreibung|
 |-----------|-----------------|
 |*lpfnWndProc*|die Fensterprozedur, muss ein `AfxWndProc`|
-|*WNDCLAS*|nicht verwendet (sollte Null sein)|
+|*cbClsExtra*|nicht verwendet (sollte Null sein)|
 |*cbWndExtra*|nicht verwendet (sollte Null sein)|
 |*hInstance*|automatisch mit gefüllt [AfxGetInstanceHandle](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)|
 |*hIcon*|Symbol für das Rahmenfenster, finden Sie weiter unten|
 |*hCursor*|Cursor für Fenster, wenn Mauszeiger befindet, finden Sie weiter unten|
 |*hbrBackground*|Farbe des Hintergrunds, finden Sie weiter unten|
 |*lpszMenuName*|nicht verwendet (sollte NULL sein)|
-|*"lpszclassname"*|Klassenname, finden Sie weiter unten|
+|*lpszClassName*|Klassenname, finden Sie weiter unten|
 
 ## <a name="provided-wndclasses"></a>WNDCLASSes bereitgestellt
 
@@ -59,9 +59,9 @@ Zwei Symbole unterstützt MDI-Anwendungen mit einzelnen Dokumenttypen: ein Symbo
 
 `CFrameWnd::LoadFrame` registriert eine `WNDCLASS` mithilfe der Symbol-ID, die Sie als ersten Parameter und die folgenden standard-Attribute angeben:
 
-- -Klassenstil: CS_DBLCLKS &#124; CS_HREDRAW &#124; CS_VREDRAW;
+- Format der Klasse: CS_DBLCLKS &#124; CS_HREDRAW &#124; CS_VREDRAW;
 
-- Symbol "AFX_IDI_STD_FRAME"
+- icon AFX_IDI_STD_FRAME
 
 - Cursor mit Pfeil
 

@@ -80,12 +80,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-ms.openlocfilehash: def8334cf0ed9b6b2ee821e1e0f1a717d90f2163
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 67d2be23aa6209c36b1a72eca3322efd1e977447
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694581"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894431"
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase-Klasse
 
@@ -113,7 +113,7 @@ class ATL_NO_VTABLE CComControlBase
 |Name|Beschreibung|
 |----------|-----------------|
 |[CComControlBase::CComControlBase](#ccomcontrolbase)|Der Konstruktor.|
-|[CComControlBase:: ~ CComControlBase](#dtor)|Der Destruktor.|
+|[CComControlBase::~CComControlBase](#dtor)|Der Destruktor.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -124,12 +124,12 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::DoesVerbUIActivate](#doesverbuiactivate)|Überprüft, ob die *iVerb* vom verwendeter Parameter `IOleObjectImpl::DoVerb` bewirkt, dass Sie in der Benutzeroberfläche des Steuerelements zu aktivieren, und gibt TRUE zurück.|
 |[CComControlBase::DoVerbProperties](#doverbproperties)|Zeigt die Eigenschaftenseiten des Steuerelements.|
 |[CComControlBase::FireViewChange](#fireviewchange)|Rufen Sie diese Methode zum Teilen Sie des Containers an das Steuerelement neu gezeichnet werden soll, oder benachrichtigen Sie die registrierten Advise-senken, die Ansicht des Steuerelements geändert wurde.|
-|[CComControlBase](#getambientappearance)|Ruft die DISPID_AMBIENT_APPEARANCE, die aktuelle Darstellung, die Einstellung für das Steuerelement ab: 0 für flache und 1 für 3D.|
+|[CComControlBase::GetAmbientAppearance](#getambientappearance)|Ruft die DISPID_AMBIENT_APPEARANCE, die aktuelle Darstellung, die Einstellung für das Steuerelement ab: 0 für flache und 1 für 3D.|
 |[CComControlBase::GetAmbientAutoClip](#getambientautoclip)|Ruft die DISPID_AMBIENT_AUTOCLIP, ein Flag, der angibt, ob der Container unterstützt die automatische Clipping bei den Anzeigebereich des Steuerelements ab.|
 |[CComControlBase::GetAmbientBackColor](#getambientbackcolor)|Ruft ab die DISPID_AMBIENT_BACKCOLOR, die ambient-Hintergrundfarbe für alle Steuerelemente, die vom Container definiert.|
 |[CComControlBase::GetAmbientCharSet](#getambientcharset)|Ruft ab, DISPID_AMBIENT_CHARSET, die ambient-Zeichensatz für alle Steuerelemente, die vom Container definiert.|
 |[CComControlBase::GetAmbientCodePage](#getambientcodepage)|Ruft ab, DISPID_AMBIENT_CODEPAGE, die ambient-Zeichensatz für alle Steuerelemente, die vom Container definiert.|
-|[CComControlBase:: GetAmbientDisplayAsDefault](#getambientdisplayasdefault)|Ruft ab die DISPID_AMBIENT_DISPLAYASDEFAULT, ein Flag, das TRUE ist, wenn der Container verfügt über das Steuerelement an diesem Standort eine Standardschaltfläche werden markiert, und daher ein Schaltflächen-Steuerelement selbst mit einem breiteren Rahmen zeichnen soll.|
+|[CComControlBase::GetAmbientDisplayAsDefault](#getambientdisplayasdefault)|Ruft ab die DISPID_AMBIENT_DISPLAYASDEFAULT, ein Flag, das TRUE ist, wenn der Container verfügt über das Steuerelement an diesem Standort eine Standardschaltfläche werden markiert, und daher ein Schaltflächen-Steuerelement selbst mit einem breiteren Rahmen zeichnen soll.|
 |[CComControlBase::GetAmbientDisplayName](#getambientdisplayname)|Ruft ab die DISPID_AMBIENT_DISPLAYNAME, den Namen, der Container für das Steuerelement angegeben wurde.|
 |[CComControlBase::GetAmbientFont](#getambientfont)|Ruft ein Zeiger auf den Container dem ambient `IFont` Schnittstelle.|
 |[CComControlBase::GetAmbientFontDisp](#getambientfontdisp)|Ruft ein Zeiger auf den Container dem ambient `IFontDisp` Dispatch-Schnittstellen.|
@@ -143,7 +143,7 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::GetAmbientShowGrabHandles](#getambientshowgrabhandles)|Ruft ab, DISPID_AMBIENT_SHOWGRABHANDLES, ein Flag, der angibt, ob der Container das Steuerelement zum Anzeigen der Ziehpunkte für sich selbst beim active zulässt.|
 |[CComControlBase::GetAmbientShowHatching](#getambientshowhatching)|Ruft ab die DISPID_AMBIENT_SHOWHATCHING, ein Flag, der angibt, ob der Container kann das Steuerelement selbst mit einer Schraffur angezeigt, wenn die Benutzeroberfläche aktiv ist.|
 |[CComControlBase::GetAmbientSupportsMnemonics](#getambientsupportsmnemonics)|Ruft ab die DISPID_AMBIENT_SUPPORTSMNEMONICS, ein Flag, der angibt, ob der Container Tastatur mnemonische Zeichen unterstützt.|
-|[CComControlBase::GetAmbientTextAlign](#getambienttextalign)|Ruft DISPID_AMBIENT_TEXTALIGN, die Ausrichtung des Texts, die vom Container bevorzugt: 0 für die allgemeine Ausrichtung (Zahlen, Text rechts nach links), 1 für die linksbündige Ausrichtung, 2 für die Ausrichtung zentriert und 3 für Rechts-Ausrichtung.|
+|[CComControlBase::GetAmbientTextAlign](#getambienttextalign)|Ruft die DISPID_AMBIENT_TEXTALIGN, die vom Container bevorzugte Ausrichtung des Texts ab: 0 für die allgemeine Ausrichtung (Zahlen, Text rechts nach links), 1 für die linksbündige Ausrichtung, für die Ausrichtung zentriert 2 und 3 für die richtige Ausrichtung.|
 |[CComControlBase::GetAmbientTopToBottom](#getambienttoptobottom)|Ruft die DISPID_AMBIENT_TOPTOBOTTOM, die Richtung, in dem Inhalt, durch den Container angezeigt wird, ab.|
 |[CComControlBase::GetAmbientUIDead](#getambientuidead)|Ruft ab die DISPID_AMBIENT_UIDEAD, ein Flag, der angibt, ob der Container das Steuerelement auf der Benutzeroberfläche Aktionen reagieren möchte.|
 |[CComControlBase::GetAmbientUserMode](#getambientusermode)|Ruft ab die DISPID_AMBIENT_USERMODE, ein Flag, das angibt, ob der Container im Ausführungsmodus (TRUE) oder Entwurfsmodus (FALSE) ist.|
@@ -151,7 +151,7 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::GetZoomInfo](#getzoominfo)|Ruft ab, der x- und y die Werte der Zähler und Nenner der Zoomfaktor für ein Steuerelement, für die aktiviert direkte Bearbeitung.|
 |[CComControlBase::InPlaceActivate](#inplaceactivate)|Bewirkt, dass das Steuerelement für den Übergang von den inaktiven Status, was das Verb im Status *iVerb* angibt.|
 |[CComControlBase::InternalGetSite](#internalgetsite)|Rufen Sie diese Methode, um die Website des Steuerelements für einen Zeiger auf die angegebene Schnittstelle Abfragen.|
-|[CComControlBase:: OnDraw](#ondraw)|Überschreiben Sie diese Methode, um Ihr Steuerelement zu zeichnen.|
+|[CComControlBase::OnDraw](#ondraw)|Überschreiben Sie diese Methode, um Ihr Steuerelement zu zeichnen.|
 |[CComControlBase::OnDrawAdvanced](#ondrawadvanced)|Der Standardwert `OnDrawAdvanced` bereitet einen normalisierten Gerätekontext zum Zeichnen, und klicken Sie dann ruft der Steuerelementklasse `OnDraw` Methode.|
 |[CComControlBase::OnKillFocus](#onkillfocus)|Überprüft, dass das Steuerelement direkt aktiv ist und verfügt über ein gültiges Steuerelement-Standort, und informiert dem Container, dass das Steuerelement den Fokus verloren hat.|
 |[CComControlBase::OnMouseActivate](#onmouseactivate)|Überprüft, dass die Benutzeroberfläche im Benutzermodus ist, wird das Steuerelement aktiviert.|
@@ -182,7 +182,7 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::m_bUIActive](#m_buiactive)|Flag zum angeben, die Benutzeroberfläche des Steuerelements, z. B. Menüs und Symbolleisten, ist aktiv.|
 |[CComControlBase::m_bUsingWindowRgn](#m_busingwindowrgn)|Flag zum angeben, dass das Steuerelement den Container bereitgestellten Fensterbereich verwendet.|
 |[CComControlBase::m_bWasOnceWindowless](#m_bwasoncewindowless)|Flag zum angeben, das Steuerelement wurde fensterlose, aber möglicherweise oder möglicherweise nicht fensterlos jetzt.|
-|[CComControlBase](#m_bwindowonly)|Flag zum angeben, dass das Steuerelement im Fenstermodus, sein, auch wenn der Container Fensterlose Steuerelemente unterstützt.|
+|[CComControlBase::m_bWindowOnly](#m_bwindowonly)|Flag zum angeben, dass das Steuerelement im Fenstermodus, sein, auch wenn der Container Fensterlose Steuerelemente unterstützt.|
 |[CComControlBase::m_bWndLess](#m_bwndless)|Flag zum angeben, dass das Steuerelement fensterlose ist.|
 |[CComControlBase::m_hWndCD](#m_hwndcd)|Enthält einen Verweis auf das Fensterhandle, das dem Steuerelement zugeordnet.|
 |[CComControlBase::m_nFreezeEvents](#m_nfreezeevents)|Die Anzahl wie oft der Container hat Ereignisse (Ereignisse akzeptieren abgelehnt) ohne einen zwischenzeitlichen Entsperren von Ereignissen (Annahme von Ereignissen) fixiert.|
@@ -258,7 +258,7 @@ virtual HRESULT ControlQueryInterface(const IID& iid,
 
 ### <a name="parameters"></a>Parameter
 
-*IID*<br/>
+*iid*<br/>
 Die GUID der Schnittstelle angefordert wird.
 
 *ppv*<br/>
@@ -404,7 +404,7 @@ HRESULT GetAmbientBackColor(OLE_COLOR& BackColor);
 
 ### <a name="parameters"></a>Parameter
 
-*Hintergrundfarbe*<br/>
+*BackColor*<br/>
 Die DISPID_AMBIENT_BACKCOLOR-Eigenschaft.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -511,7 +511,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
 ### <a name="parameters"></a>Parameter
 
 *ppFont*<br/>
-Ein Zeiger auf den Container dem ambient [IFontDisp](https://msdn.microsoft.com/library/windows/desktop/ms692695) Dispatch-Schnittstellen.
+Ein Zeiger auf den Container dem ambient [IFontDisp](/windows/desktop/api/ocidl/nn-ocidl-ifontdisp) Dispatch-Schnittstellen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -531,7 +531,7 @@ HRESULT GetAmbientForeColor(OLE_COLOR& ForeColor);
 
 ### <a name="parameters"></a>Parameter
 
-*Vordergrundfarbe*<br/>
+*ForeColor*<br/>
 Die DISPID_AMBIENT_FORECOLOR-Eigenschaft.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -603,7 +603,7 @@ HRESULT GetAmbientProperty(DISPID dispid, VARIANT& var);
 
 ### <a name="parameters"></a>Parameter
 
-*DISPID*<br/>
+*dispid*<br/>
 Der Bezeichner für die Containereigenschaft abgerufen werden sollen.
 
 *var*<br/>
@@ -704,7 +704,7 @@ Einer der standardmäßigen HRESULT-Werte.
 
 ##  <a name="getambienttextalign"></a>  CComControlBase::GetAmbientTextAlign
 
-Ruft DISPID_AMBIENT_TEXTALIGN, die Ausrichtung des Texts, die vom Container bevorzugt: 0 für die allgemeine Ausrichtung (Zahlen, Text rechts nach links), 1 für die linksbündige Ausrichtung, 2 für die Ausrichtung zentriert und 3 für Rechts-Ausrichtung.
+Ruft die DISPID_AMBIENT_TEXTALIGN, die vom Container bevorzugte Ausrichtung des Texts ab: 0 für die allgemeine Ausrichtung (Zahlen, Text rechts nach links), 1 für die linksbündige Ausrichtung, für die Ausrichtung zentriert 2 und 3 für die richtige Ausrichtung.
 
 ```
 HRESULT GetAmbientTextAlign(short& nTextAlign);
@@ -800,7 +800,7 @@ void GetZoomInfo(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>Parameter
 
-*Dependency Injection*<br/>
+*di*<br/>
 Die Struktur, die Zähler und Nenner des Zoomfaktor enthält. Weitere Informationen finden Sie unter [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md).
 
 ### <a name="remarks"></a>Hinweise
@@ -1037,7 +1037,7 @@ unsigned m_bWasOnceWindowless:1;
 > [!NOTE]
 >  Um dieses Datenelement in der Steuerelementklasse verwenden zu können, müssen Sie es als Datenmember in der Steuerelementklasse deklarieren. Die Steuerelementklasse wird dieses Datenelement nicht von der Basisklasse erben, da es in einer Union in der Basisklasse deklariert ist.
 
-##  <a name="m_bwindowonly"></a>  CComControlBase
+##  <a name="m_bwindowonly"></a>  CComControlBase::m_bWindowOnly
 
 Flag zum angeben, dass das Steuerelement im Fenstermodus, sein, auch wenn der Container Fensterlose Steuerelemente unterstützt.
 
@@ -1217,7 +1217,7 @@ Die `m_spInPlaceSite` Zeiger gilt nur, wenn die [M_bNegotiatedWnd](#m_bnegotiate
 
 Die folgende Tabelle zeigt, wie die `m_spInPlaceSite` Zeigertyp hängt von der [M_bWndLess](#m_bwndless) und [M_bInPlaceSiteEx](#m_binplacesiteex) Data-Member-Flags:
 
-|M_spInPlaceSite Typ|M_bWndLess Wert|M_bInPlaceSiteEx Wert|
+|M_spInPlaceSite Typ|m_bWndLess Value|M_bInPlaceSiteEx Wert|
 |---------------------------|-----------------------|-----------------------------|
 |`IOleInPlaceSiteWindowless`|true|"True" oder "false"|
 |`IOleInPlaceSiteEx`|false|true|
@@ -1249,7 +1249,7 @@ virtual HRESULT OnDraw(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>Parameter
 
-*Dependency Injection*<br/>
+*di*<br/>
 Ein Verweis auf die [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md) Struktur, zeichnen Informationen wie z. B. den Draw-Aspekt der Begrenzungen des Steuerelements, und gibt an, ob das Zeichnen optimiert ist oder nicht.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1276,7 +1276,7 @@ virtual HRESULT OnDrawAdvanced(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>Parameter
 
-*Dependency Injection*<br/>
+*di*<br/>
 Ein Verweis auf die [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md) Struktur, zeichnen Informationen wie z. B. den Draw-Aspekt der Begrenzungen des Steuerelements, und gibt an, ob das Zeichnen optimiert ist oder nicht.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1305,7 +1305,7 @@ LRESULT OnKillFocus(UINT /* nMsg */,
 *nMsg*<br/>
 Reserviert.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 Reserviert.
 
 *lParam*<br/>
@@ -1334,7 +1334,7 @@ LRESULT OnMouseActivate(UINT /* nMsg */,
 *nMsg*<br/>
 Reserviert.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 Reserviert.
 
 *lParam*<br/>
@@ -1363,7 +1363,7 @@ LRESULT OnPaint(UINT /* nMsg */,
 *nMsg*<br/>
 Reserviert.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 Eine vorhandene HDC.
 
 *lParam*<br/>
@@ -1396,7 +1396,7 @@ LRESULT OnSetFocus(UINT /* nMsg */,
 *nMsg*<br/>
 Reserviert.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 Reserviert.
 
 *lParam*<br/>
@@ -1460,7 +1460,7 @@ HRESULT SendOnDataChange(DWORD advf = 0);
 
 ### <a name="parameters"></a>Parameter
 
-*ADVF*<br/>
+*advf*<br/>
 Empfehlen von Flags, die angeben, wie der Aufruf von [IAdviseSink::OnDataChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-ondatachange) erfolgt. Werte reichen von der [ADVF](/windows/desktop/api/objidl/ne-objidl-tagadvf) Enumeration.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1477,7 +1477,7 @@ HRESULT SendOnRename(IMoniker* pmk);
 
 ### <a name="parameters"></a>Parameter
 
-*PMK*<br/>
+*pmk*<br/>
 Zeiger auf den neuen Moniker des Steuerelements.
 
 ### <a name="return-value"></a>Rückgabewert

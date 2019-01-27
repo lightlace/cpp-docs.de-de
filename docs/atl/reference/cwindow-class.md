@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: 4ce3c93c7cb8c26ae6008516c93faa8c8a5b37fb
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f420715f0e90cbdf811d9a4f731885bd4f382d11
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694594"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894457"
 ---
 # <a name="cwindow-class"></a>CWindow-Klasse
 
@@ -252,7 +252,7 @@ class CWindow
 |[CWindow::GetWindowRect](#getwindowrect)|Ruft die umgebende Dimensionen des Fensters ab.|
 |[CWindow::GetWindowRgn](#getwindowrgn)|Ruft eine Kopie der Fensterregion eines Fensters ab.|
 |[CWindow::GetWindowText](#getwindowtext)|Ruft den Text des Fensters ab.|
-|[CWindow:: Getwindowtextlength](#getwindowtextlength)|Ruft die Länge der den Text des Fensters ab.|
+|[CWindow::GetWindowTextLength](#getwindowtextlength)|Ruft die Länge der den Text des Fensters ab.|
 |[CWindow::GetWindowThreadID](#getwindowthreadid)|Ruft den Bezeichner des Threads, die das angegebene Fenster erstellt.|
 |[CWindow::GetWindowWord](#getwindowword)|Ruft einen 16-Bit-Wert an einem angegebenen Offset in den Arbeitsspeicher zusätzliche Fenster ab.|
 |[CWindow::GotoDlgCtrl](#gotodlgctrl)|Legt den Tastaturfokus auf ein Steuerelement im Dialogfeld fest.|
@@ -317,7 +317,7 @@ class CWindow
 |[CWindow::SetWindowPlacement](#setwindowplacement)|Legt den Anzeigestatus und die Positionen an.|
 |[CWindow::SetWindowPos](#setwindowpos)|Legt fest, die Größe, Position und Z-Reihenfolge.|
 |[CWindow::SetWindowRgn](#setwindowrgn)|Legt fest, die Fensterregion eines Fensters.|
-|[CWindow:: SetWindowText](#setwindowtext)|Ändert den Text des Fensters.|
+|[CWindow::SetWindowText](#setwindowtext)|Ändert den Text des Fensters.|
 |[CWindow::SetWindowWord](#setwindowword)|Legt einen 16-Bit-Wert an einem angegebenen Offset in den Arbeitsspeicher zusätzliche Fenster fest.|
 |[CWindow::ShowCaret](#showcaret)|Zeigt den Systemzeiger an.|
 |[CWindow::ShowOwnedPopups](#showownedpopups)|Anzeigen oder Ausblenden der Popupfenster, das dem Fenster gehören.|
@@ -349,7 +349,7 @@ class CWindow
 
 |CWindow-Methode|Win32-Funktion|
 |--------------------|--------------------|
-|**"Bool" ShowWindow (Int** `nCmdShow` **);**|**"Bool" ShowWindow (HWND** `hWnd` **, Int** `nCmdShow` **);**|
+|**BOOL ShowWindow( int** `nCmdShow` **);**|**"Bool" ShowWindow (HWND** `hWnd` **, Int** `nCmdShow` **);**|
 
 `CWindow::ShowWindow` Ruft die Win32-Funktion `ShowWindow` durch Übergabe `CWindow::m_hWnd` als ersten Parameter. Jede `CWindow` -Methode, die direkt für eine Win32-Funktion dient als Wrapper übergibt die `m_hWnd` Element; aus diesem Grund ein Großteil der `CWindow` Dokumentation verweisen Sie auf das Windows SDK.
 
@@ -521,7 +521,7 @@ HWND ChildWindowFromPoint(POINT point, UINT uFlags) const throw();
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [ChildWindowFromPointEx](https://msdn.microsoft.com/library/windows/desktop/ms632677) in das Windows SDK.
+Finden Sie unter [ChildWindowFromPointEx](/windows/desktop/api/winuser/nf-winuser-childwindowfrompointex) in das Windows SDK.
 
 ##  <a name="clienttoscreen"></a>  CWindow::ClientToScreen
 
@@ -562,7 +562,7 @@ HWND Create(
 *hWndParent*<br/>
 [in] Das Handle für das übergeordnete Element oder Besitzer-Fenster.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Eine Variable vom Typ [_U_RECT](../../atl/reference/u-rect-class.md) die Position des Fensters angeben. Der Standardwert ist NULL. Wenn dieser Parameter gleich NULL ist, den Wert der `CWindow::rcDefault` verwendet wird.
 
 *szWindowName*<br/>
@@ -669,7 +669,7 @@ HDWP DeferWindowPos(
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [DeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632681) in das Windows SDK.
+Finden Sie unter [DeferWindowPos](/windows/desktop/api/winuser/nf-winuser-deferwindowpos) in das Windows SDK.
 
 ##  <a name="destroywindow"></a>  CWindow::DestroyWindow
 
@@ -928,7 +928,7 @@ HRESULT GetDlgControl(
 *nID*<br/>
 [in] Die Ressourcen-ID des Steuerelements abgerufen wird.
 
-*IID*<br/>
+*iid*<br/>
 [in] Die ID der Schnittstelle aus dem Steuerelement abgerufen werden sollen.
 
 *ppCtrl*<br/>
@@ -970,7 +970,7 @@ HRESULT GetDlgHost(
 *nID*<br/>
 [in] Die Ressourcen-ID des Steuerelements abgerufen wird.
 
-*IID*<br/>
+*iid*<br/>
 [in] Die ID der Schnittstelle aus dem Steuerelement abgerufen werden sollen.
 
 *ppHost*<br/>
@@ -1456,7 +1456,7 @@ Wenn der Text erfolgreich kopiert wurde, ist der zurückgegebene Wert "true"; De
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [GetWindowText](https://msdn.microsoft.com/library/windows/desktop/ms633520) in das Windows SDK.
+Finden Sie unter [GetWindowText](/windows/desktop/api/winuser/nf-winuser-getwindowtexta) in das Windows SDK.
 
 Die zweite Version dieser Methode können Sie den Text in einem BSTR zu speichern; die dritte Version können Sie zum Speichern des Ergebnisses in einer [CString](../../atl-mfc-shared/reference/cstringt-class.md), da `CSimpleString` ist die Basisklasse der `CString`.
 
@@ -2229,7 +2229,7 @@ void SendMessageToDescendants(
 *message*<br/>
 [in] Die Nachricht gesendet werden.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 [in] Zusätzliche meldungsspezifische Informationen.
 
 *lParam*<br/>
@@ -2629,7 +2629,7 @@ BOOL SetWindowText(LPCTSTR lpszString) throw();
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [SetWindowText](https://msdn.microsoft.com/library/windows/desktop/ms633546) in das Windows SDK.
+Finden Sie unter [SetWindowText](/windows/desktop/api/winuser/nf-winuser-setwindowtexta) in das Windows SDK.
 
 ### <a name="example"></a>Beispiel
 

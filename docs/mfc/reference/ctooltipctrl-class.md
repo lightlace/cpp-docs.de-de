@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 808d8b5f023e88b67458c514e871692aac94ccd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 177f6eeada942440c33f7dd0a0cbc6d9e59d867c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500411"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894145"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -121,7 +121,7 @@ class CToolTipCtrl : public CWnd
 |[CToolTipCtrl::HitTest](#hittest)|Testet einen Punkt, um festzustellen, ob es das umschließende Rechteck des angegebenen Tools befindet. Wenn dies der Fall ist, ruft Informationen über das Tool ab.|
 |[CToolTipCtrl::Pop](#pop)|Entfernt eine angezeigte QuickInfo-Fenster aus der Ansicht.|
 |[CToolTipCtrl::Popup](#popup)|Bewirkt, dass das aktuelle QuickInfo-Steuerelement an den Koordinaten der Maus letzten Nachricht angezeigt.|
-|[CToolTipCtrl:: RelayEvent](#relayevent)|Übergibt eine Maus-Nachricht an ein QuickInfo-Steuerelement für die Verarbeitung.|
+|[CToolTipCtrl::RelayEvent](#relayevent)|Übergibt eine Maus-Nachricht an ein QuickInfo-Steuerelement für die Verarbeitung.|
 |[CToolTipCtrl::SetDelayTime](#setdelaytime)|Legt den ersten, Popup und Wiederholungsdauern für ein QuickInfo-Steuerelement.|
 |[CToolTipCtrl::SetMargin](#setmargin)|Legt fest, der oben, linken, unteren und rechten Rändern für ein QuickInfo-Fenster.|
 |[CToolTipCtrl::SetMaxTipWidth](#setmaxtipwidth)|Legt die maximale Breite für ein QuickInfo-Fenster fest.|
@@ -203,7 +203,7 @@ BOOL AddTool(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Zeiger auf das Fenster, das Tool enthält.
 
 *nIDText*<br/>
@@ -287,7 +287,7 @@ Einen Wert ungleich null der `CToolTipCtrl` Objekt ist, wurde erfolgreich erstel
 
 Sie erstellen eine `CToolTipCtrl` in zwei Schritten. Rufen Sie zunächst den Konstruktor zum Erstellen der `CToolTipCtrl` Objekt aus, und rufen dann `Create` erstellen das QuickInfo-Steuerelement, und fügen Sie ihn auf die `CToolTipCtrl` Objekt.
 
-Die *DwStyle* Parameter kann eine beliebige Kombination von sein [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles). Darüber hinaus gelten für ein QuickInfo-Steuerelement zwei mandantenklassen geltenden schemaanpassungen Stile: TTS_ALWAYSTIP und TTS_NOPREFIX.
+Die *DwStyle* Parameter kann eine beliebige Kombination von sein [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles). Darüber hinaus weist ein QuickInfo-Steuerelement zwei mandantenklassen geltenden schemaanpassungen Formate an: TTS_ALWAYSTIP und TTS_NOPREFIX.
 
 |Stil|Bedeutung|
 |-----------|-------------|
@@ -360,7 +360,7 @@ void DelTool(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Zeiger auf das Fenster, das Tool enthält.
 
 *nIDTool*<br/>
@@ -498,7 +498,7 @@ void GetText(
 *str*<br/>
 Ein Verweis auf eine `CString` -Objekt, das Tool den Text empfängt.
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Zeiger auf das Fenster, das Tool enthält.
 
 *nIDTool*<br/>
@@ -586,7 +586,7 @@ BOOL GetToolInfo(
 *ToolInfo*<br/>
 Ein Verweis auf eine `TOOLINFO` -Objekt, das Tool den Text empfängt.
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Zeiger auf das Fenster, das Tool enthält.
 
 *nIDTool*<br/>
@@ -613,7 +613,7 @@ BOOL HitTest(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Zeiger auf das Fenster, das Tool enthält.
 
 *pt*<br/>
@@ -693,7 +693,7 @@ void RelayEvent(LPMSG lpMsg);
 ### <a name="parameters"></a>Parameter
 
 *lpMsg*<br/>
-Zeiger auf eine [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) Struktur, die die Nachricht an das Relay enthält.
+Zeiger auf eine [MSG](/windows/desktop/api/winuser/ns-winuser-msg) Struktur, die die Nachricht an das Relay enthält.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -784,7 +784,7 @@ void SetTipBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parameter
 
-*CLR*<br/>
+*clr*<br/>
 Die neue Hintergrundfarbe.
 
 ### <a name="remarks"></a>Hinweise
@@ -801,7 +801,7 @@ void SetTipTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parameter
 
-*CLR*<br/>
+*clr*<br/>
 Die neue Textfarbe.
 
 ### <a name="remarks"></a>Hinweise
@@ -860,7 +860,7 @@ void SetToolRect(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Zeiger auf das Fenster, das Tool enthält.
 
 *nIDTool*<br/>
@@ -919,7 +919,7 @@ void UpdateTipText(
 *lpszText*<br/>
 Zeiger auf den Text für das Tool.
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Zeiger auf das Fenster, das Tool enthält.
 
 *nIDTool*<br/>

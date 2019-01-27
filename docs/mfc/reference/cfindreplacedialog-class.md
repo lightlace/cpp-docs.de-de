@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CFindReplaceDialog [MFC], SearchDown
 - CFindReplaceDialog [MFC], m_fr
 ms.assetid: 610f0b5d-b398-4ef6-8c05-e9d6641e50a8
-ms.openlocfilehash: e891a6694f0a85715a7d76d196865e3238695753
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: abf230f8c9e68365f8d1db8b654174ad3e152862
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571183"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894405"
 ---
 # <a name="cfindreplacedialog-class"></a>CFindReplaceDialog-Klasse
 
@@ -81,7 +81,7 @@ class CFindReplaceDialog : public CCommonDialog
 
 ## <a name="remarks"></a>Hinweise
 
-Im Gegensatz zu den anderen Windows Standarddialogfelder `CFindReplaceDialog` Objekte sind nicht modales, Benutzer können mit anderen Fenstern interagieren, während sie sich auf dem Bildschirm befinden. Es gibt zwei Arten von `CFindReplaceDialog` Objekte: suchen, Dialogfelder und Dialogfelder in Dateien suchen/ersetzen. Obwohl Sie die Dialogfelder den Benutzer Eingabe-Search "und" Suchen/Ersetzen-Zeichenfolgen können, führen sie keine Suchvorgänge oder Ersetzen von Funktionen aus. Sie müssen diese für die Anwendung hinzufügen.
+Im Gegensatz zu den anderen Windows Standarddialogfelder `CFindReplaceDialog` Objekte sind nicht modales, Benutzer können mit anderen Fenstern interagieren, während sie sich auf dem Bildschirm befinden. Es gibt zwei Arten von `CFindReplaceDialog` Objekte: Suchen Sie die angezeigten Dialogfelder und Dialogfelder in Dateien suchen/ersetzen. Obwohl Sie die Dialogfelder den Benutzer Eingabe-Search "und" Suchen/Ersetzen-Zeichenfolgen können, führen sie keine Suchvorgänge oder Ersetzen von Funktionen aus. Sie müssen diese für die Anwendung hinzufügen.
 
 Zum Erstellen einer `CFindReplaceDialog` Objekt, verwenden Sie den bereitgestellten Konstruktor (die keine Argumente verfügt). Da es sich um ein nicht modales Dialogfeld handelt, ordnen Sie das Objekt auf dem Heap mit dem **neue** -Operator, und nicht auf dem Stapel.
 
@@ -89,7 +89,7 @@ Einmal eine `CFindReplaceDialog` -Objekts, rufen Sie die [erstellen](#create) Me
 
 Verwenden der [M_fr](#m_fr) Struktur zum Initialisieren des Dialogfelds vor dem Aufruf `Create`. Die `m_fr` Struktur ist vom Typ [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea). Weitere Informationen zu dieser Struktur finden Sie im Windows-SDK.
 
-In der Reihenfolge für das übergeordnete Fenster, in Dateien suchen/ersetzen-Anforderungen benachrichtigt zu werden, müssen Sie die Windows verwenden [RegisterWindowMessage registriert](https://msdn.microsoft.com/library/windows/desktop/ms644947) -Funktion und die Nutzung der [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) meldungszuordnung Makro in Ihrem Frame Fenster, das diese registrierte Meldung verarbeitet.
+In der Reihenfolge für das übergeordnete Fenster, in Dateien suchen/ersetzen-Anforderungen benachrichtigt zu werden, müssen Sie die Windows verwenden [RegisterWindowMessage registriert](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) -Funktion und die Nutzung der [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) meldungszuordnung Makro in Ihrem Frame Fenster, das diese registrierte Meldung verarbeitet.
 
 Sie können bestimmen, ob der Benutzer entschieden hat, um das Dialogfeld zu beenden. die `IsTerminating` Member-Funktion.
 
@@ -175,7 +175,7 @@ Ungleich NULL, wenn das Dialogfeld wurde erfolgreich erstellt wurde; andernfalls
 
 ### <a name="remarks"></a>Hinweise
 
-In der Reihenfolge für das übergeordnete Fenster, in Dateien suchen/ersetzen-Anforderungen benachrichtigt zu werden, müssen Sie die Windows verwenden [RegisterWindowMessage registriert](https://msdn.microsoft.com/library/windows/desktop/ms644947) Funktion, deren Rückgabewert ist die Nummer einer Anwendungsinstanz eindeutig. Ihr Rahmenfenster müssen einen Zuordnungseintrag für Nachrichten, die die Callback-Funktion deklariert ( `OnFindReplace` in das folgende Beispiel), die diese registrierten Nachricht verarbeitet. Das folgende Codefragment ist ein Beispiel für ein Rahmenfenster (Klasse) mit dem Namen `CMyRichEditView`:
+In der Reihenfolge für das übergeordnete Fenster, in Dateien suchen/ersetzen-Anforderungen benachrichtigt zu werden, müssen Sie die Windows verwenden [RegisterWindowMessage registriert](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) Funktion, deren Rückgabewert ist die Nummer einer Anwendungsinstanz eindeutig. Ihr Rahmenfenster müssen einen Zuordnungseintrag für Nachrichten, die die Callback-Funktion deklariert ( `OnFindReplace` in das folgende Beispiel), die diese registrierten Nachricht verarbeitet. Das folgende Codefragment ist ein Beispiel für ein Rahmenfenster (Klasse) mit dem Namen `CMyRichEditView`:
 
 [!code-cpp[NVC_MFCDocView#171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]
 

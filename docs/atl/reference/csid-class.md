@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 57edb46047021d0ede04164584e79748028e05b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6fcff646a577500fd05b7c938b2c336ebe725957
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465363"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894314"
 ---
 # <a name="csid-class"></a>CSid-Klasse
 
@@ -85,10 +85,10 @@ class CSid
 |||
 |-|-|
 |[operator ==](#operator_eq_eq)|Testet zwei Security Descriptor Objekte auf Gleichheit|
-|[Operator! =](#operator_neq)|Testet zwei Security Descriptor-Objekte auf Ungleichheit|
-|[Operator \<](#operator_lt_)|Vergleicht die relativen Wert von zwei Security Descriptor-Objekten.|
+|[operator !=](#operator_neq)|Testet zwei Security Descriptor-Objekte auf Ungleichheit|
+|[operator \<](#operator_lt_)|Vergleicht die relativen Wert von zwei Security Descriptor-Objekten.|
 |[operator >](#operator_gt_)|Vergleicht die relativen Wert von zwei Security Descriptor-Objekten.|
-|[Operator \<=](#operator_lt__eq)|Vergleicht die relativen Wert von zwei Security Descriptor-Objekten.|
+|[operator \<=](#operator_lt__eq)|Vergleicht die relativen Wert von zwei Security Descriptor-Objekten.|
 |[operator >=](#operator_gt__eq)|Vergleicht die relativen Wert von zwei Security Descriptor-Objekten.|
 
 ## <a name="remarks"></a>Hinweise
@@ -146,7 +146,7 @@ explicit CSid(
 
 ### <a name="parameters"></a>Parameter
 
-*RS*<br/>
+*rhs*<br/>
 Eine vorhandene `CSid` Objekt oder `SID` -Struktur (Sicherheits-ID).
 
 *IdentifierAuthority*<br/>
@@ -223,7 +223,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*RS*<br/>
+*rhs*<br/>
 Die `SID` -Struktur (Sicherheits-ID) oder `CSid` zu vergleichende Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -232,7 +232,7 @@ Gibt "true" bei Erfolg bei "false".
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [EqualPrefixSid](https://msdn.microsoft.com/library/windows/desktop/aa446621) im Windows SDK für weitere Details.
+Finden Sie unter [EqualPrefixSid](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-equalprefixsid) im Windows SDK für weitere Details.
 
 ##  <a name="getlength"></a>  CSid::GetLength
 
@@ -381,7 +381,7 @@ CSid& operator= (const SID& rhs) throw(...);
 
 ### <a name="parameters"></a>Parameter
 
-*RS*<br/>
+*rhs*<br/>
 Die `SID` (Sicherheits-ID) oder `CSid` Zuweisen der `CSid` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -400,10 +400,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parameter
 
-*LHS*<br/>
+*lhs*<br/>
 Die `SID` (Sicherheits-ID) oder `CSid` , angezeigt wird, auf der linken Seite von den Operator ==-Operator.
 
-*RS*<br/>
+*rhs*<br/>
 Die `SID` (Sicherheits-ID) oder `CSid` , angezeigt wird, klicken Sie auf der rechten Seite der den Operator ==-Operator.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -422,10 +422,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parameter
 
-*LHS*<br/>
+*lhs*<br/>
 Die `SID` (Sicherheits-ID) oder `CSid` , angezeigt wird, auf der linken Seite von der! = (Operator).
 
-*RS*<br/>
+*rhs*<br/>
 Die `SID` (Sicherheits-ID) oder `CSid` , angezeigt wird, auf der rechten Seite von der! = (Operator).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -444,10 +444,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Parameter
 
-*LHS*<br/>
+*lhs*<br/>
 Die `SID` (Sicherheits-ID) oder `CSid` , angezeigt wird, auf der linken Seite von der! = (Operator).
 
-*RS*<br/>
+*rhs*<br/>
 Die `SID` (Sicherheits-ID) oder `CSid` , angezeigt wird, auf der rechten Seite von der! = (Operator).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -466,10 +466,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parameter
 
-*LHS*<br/>
+*lhs*<br/>
 Die `SID` (Sicherheits-ID) oder `CSid` , angezeigt wird, auf der linken Seite von der! = (Operator).
 
-*RS*<br/>
+*rhs*<br/>
 Die `SID` (Sicherheits-ID) oder `CSid` , angezeigt wird, auf der rechten Seite von der! = (Operator).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -488,10 +488,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Parameter
 
-*LHS*<br/>
+*lhs*<br/>
 Die `SID` (Sicherheits-ID) oder `CSid` , angezeigt wird, auf der linken Seite von der! = (Operator).
 
-*RS*<br/>
+*rhs*<br/>
 Die `SID` (Sicherheits-ID) oder `CSid` , angezeigt wird, auf der rechten Seite von der! = (Operator).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -510,10 +510,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parameter
 
-*LHS*<br/>
+*lhs*<br/>
 Die `SID` (Sicherheits-ID) oder `CSid` , angezeigt wird, auf der linken Seite von der! = (Operator).
 
-*RS*<br/>
+*rhs*<br/>
 Die `SID` (Sicherheits-ID) oder `CSid` , angezeigt wird, auf der rechten Seite von der! = (Operator).
 
 ### <a name="return-value"></a>Rückgabewert
