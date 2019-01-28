@@ -1,24 +1,24 @@
 ---
 title: B. Stubs für Funktionen der Laufzeitbibliothek
-ms.date: 11/04/2016
+ms.date: 01/22/2019
 ms.assetid: fdfdabe0-f678-4551-80d5-827b62354427
-ms.openlocfilehash: 3b2d48155a3baf4d317d3114bb5ae5a8ed306bef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e8d439eefad005c673cfb6c4ea12399b8236fb5
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551449"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087261"
 ---
 # <a name="b-stubs-for-run-time-library-functions"></a>B. Stubs für Funktionen der Laufzeitbibliothek
 
-Dieser Abschnitt enthält Stubs für die Laufzeitbibliothek-Funktionen, die in der OpenMP-C- und C++-API definiert. Die Stubs werden bereitgestellt, um Portabilität auf Plattformen zu ermöglichen, die nicht mit der OpenMP-C- und C++-API unterstützen. OpenMP-Programme müssen mit einer Bibliothek, die diese Stubfunktionen enthalten verknüpft werden, auf diesen Plattformen. Die Stubfunktionen wird davon ausgegangen, dass die Anweisungen in der OpenMP-Programm ignoriert werden. Daher ist es möglich, emulieren sie serielle Semantik.
+Dieser Abschnitt enthält Stubs für die Laufzeitbibliothek-Funktionen, die in der OpenMP-C- und C++-API definiert. Die Stubs werden bereitgestellt, um Portabilität auf Plattformen zu ermöglichen, die der OpenMP-C- und C++-API nicht unterstützt. OpenMP-Programme müssen mit einer Bibliothek, die diese Stubfunktionen enthalten verknüpft werden, auf diesen Plattformen. Die Stubfunktionen wird davon ausgegangen, dass die Anweisungen in der OpenMP-Programm ignoriert werden. Daher ist es möglich, emulieren sie serielle Semantik.
 
 > [!NOTE]
->  Die Sperren der Variable, die in der Lock-Funktionen angezeigt wird, muss exklusiv über diese Funktionen zugegriffen werden. Es sollte nicht initialisiert oder andernfalls geändert werden in der Anwendung für Benutzer. Benutzer sollten keine Annahmen über die Mechanismen, die von OpenMP-C- und C++-Implementierungen verwendet werden, um Sperren auf Grundlage des Schemas, die von der Stubfunktionen zu implementieren vornehmen.
+> Die Sperren der Variable, die in der Lock-Funktionen angezeigt wird, muss exklusiv über diese Funktionen zugegriffen werden. Es sollte nicht initialisiert oder andernfalls geändert werden in der Anwendung für Benutzer. Benutzer sollten keine Annahmen über die Mechanismen, die von OpenMP-C- und C++-Implementierungen verwendet werden, um Sperren auf Grundlage des Schemas, die von der Stubfunktionen zu implementieren vornehmen.
 
-### <a name="code"></a>Code
+## <a name="code"></a>Code
 
-```
+```cpp
 #include <stdio.h>
 #include <stdlib.h>
 #include "omp.h"

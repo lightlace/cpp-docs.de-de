@@ -2,12 +2,12 @@
 title: 2. Anweisungen
 ms.date: 01/18/2019
 ms.assetid: d1a69374-6c03-45fb-8c86-e91cea8adae8
-ms.openlocfilehash: bf96d5ee6963a76c2b2462d5b3a0639c1141ea15
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 125d2d83b277e62d007e3a208e426ea717d52790
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894244"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087339"
 ---
 # <a name="2-directives"></a>2. Anweisungen
 
@@ -111,12 +111,12 @@ Einschränkungen für die `parallel` Richtlinie lauten wie folgt:
 ### <a name="cross-references"></a>Querverweise
 
 - `private`, `firstprivate`, `default`, `shared`, `copyin`, und `reduction` Klauseln ([Abschnitt 2.7.2](#272-data-sharing-attribute-clauses))
-- [OMP_NUM_THREADS](4-2-omp-num-threads.md) -Umgebungsvariable
-- [Omp_set_dynamic](3-1-7-omp-set-dynamic-function.md) Library-Funktion
-- [OMP_DYNAMIC](4-3-omp-dynamic.md) -Umgebungsvariable
-- [Omp_set_nested](3-1-9-omp-set-nested-function.md) Funktion
-- [OMP_NESTED](4-4-omp-nested.md) -Umgebungsvariable
-- [Omp_set_num_threads](3-1-1-omp-set-num-threads-function.md) Library-Funktion
+- [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads) -Umgebungsvariable
+- [Omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) Library-Funktion
+- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic) -Umgebungsvariable
+- [Omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function) Funktion
+- [OMP_NESTED](4-environment-variables.md#44-omp_nested) -Umgebungsvariable
+- [Omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function) Library-Funktion
 
 ## <a name="24-work-sharing-constructs"></a>2.4 Arbeitsteilungskonstrukte
 
@@ -227,7 +227,7 @@ Einschränkungen für die `for` Richtlinie lauten wie folgt:
 #### <a name="cross-references"></a>Querverweise
 
 - `private`, `firstprivate`, `lastprivate`, und `reduction` Klauseln ([Abschnitt 2.7.2](#272-data-sharing-attribute-clauses))
-- [OMP_SCHEDULE](4-1-omp-schedule.md) -Umgebungsvariable
+- [OMP_SCHEDULE](4-environment-variables.md#41-omp_schedule) -Umgebungsvariable
 - [geordnete](#266-ordered-construct) erstellen
 - [Zeitplan](d-using-the-schedule-clause.md) Klausel
 
@@ -520,7 +520,7 @@ Einschränkungen für die `ordered` Richtlinie lauten wie folgt:
 
 In diesem Abschnitt wird eine Richtlinie und mehrere Klauseln zum Steuern der datenumgebung während der Ausführung von parallelen Bereichen wie folgt:
 
-- Ein `threadprivate` Richtlinie (siehe folgenden Abschnitt) wird bereitgestellt werden, um für einen Thread Dateigültigkeitsbereichs-, -Namespace-Gültigkeitsbereich oder Blockbereiche mit statischen Variablen lokalen machen.
+- Ein [Threadprivate](#271-threadprivate-directive) Richtlinie wird bereitgestellt, um für einen Thread Dateigültigkeitsbereichs-, -Namespace-Gültigkeitsbereich oder Blockbereiche mit statischen Variablen lokalen machen.
 
 - Klauseln, die auf die Direktiven zum Steuern der Freigabe Attribute von Variablen für die Dauer der parallelen oder Freigabe von Arbeit Konstrukte angegeben werden können, werden in beschrieben [Abschnitt 2.7.2](#272-data-sharing-attribute-clauses).
 
@@ -582,8 +582,8 @@ void f(int n) {
 
 #### <a name="cross-references"></a>Querverweise
 
-- [Dynamische threads](3-1-7-omp-set-dynamic-function.md)
-- [OMP_DYNAMIC](4-3-omp-dynamic.md) -Umgebungsvariable
+- [Dynamische threads](3-run-time-library-functions.md#317-omp_set_dynamic-function)
+- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic) -Umgebungsvariable
 
 ### <a name="272-data-sharing-attribute-clauses"></a>2.7.2 Datenfreigabe-attributklauseln
 
