@@ -2,12 +2,12 @@
 title: 'Visual C++: Neuerungen von 2003 bis 2015'
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 6d79406e07b8839e196f15d9bc3aed96cbc3dca8
-ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
+ms.openlocfilehash: bc0092aeb8910f960befc174c1f71ce05c4eb131
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51520176"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894353"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++: Neuerungen von 2003 bis 2015
 
@@ -1797,7 +1797,7 @@ Ein Trigraph besteht aus zwei aufeinander folgenden Fragezeichen (??) gefolgt vo
 
 **Neue Common Language Runtime-Option „/clr:nostdlib“.** Für `/clr` wurde eine neue Option hinzugefügt (Common Language Runtime-Kompilierung). Wenn verschiedene Versionen derselben Bibliotheken enthalten sind, wird ein Compilerfehler zurückgegeben. Mithilfe der neuen Option können Sie die CLR-Standardbibliotheken ausschließen, damit Ihr Programm eine festgelegte Version verwenden kann.
 
-**Die neue pragma-Anweisung „detect_mistmatch“.** Mithilfe der pragma-Anweisung „detect_mismatch“ können Sie Ihren Dateien eine Markierung hinzufügen, die mit anderen Markierungen mit demselben Namen verglichen wird. Wenn es mehrere Werte für denselben Namen gibt, wird vom Linker ein Fehler zurückgegeben.
+**Die neue pragma-Anweisung „detect_mismatch“** Mithilfe der pragma-Anweisung „detect_mismatch“ können Sie Ihren Dateien eine Markierung hinzufügen, die mit anderen Markierungen mit demselben Namen verglichen wird. Wenn es mehrere Werte für denselben Namen gibt, wird vom Linker ein Fehler zurückgegeben.
 
 **Intrinsische XOP-Funktionen, intrinsische FMA4-Funktion und intrinsische LWP-Funktionen.** Neue intrinsische Funktionen wurden hinzugefügt, um Prozessortechnologien für intrinsische XOP-Funktionen (für Visual Studio 2010 SP1 hinzugefügt), intrinsische FMA4-Funktionen (für Visual Studio 2010 SP1 hinzugefügt) und intrinsische LWP-Funktionen (für Visual Studio 2010 SP1 hinzugefügt) zu unterstützen. Verwenden Sie „__cpuid“ und „__cpuidex“, um zu bestimmen, welche Prozessortechnologien auf den einzelnen Computern unterstützt werden.
 
@@ -1854,7 +1854,7 @@ Die meisten `/analyze`-Warnungen (Enterprise-Codeanalyse) wurden aus den CRT-, M
 
 #### <a name="animation-and-d2d-support"></a>Animation und D2D-Unterstützung
 
-MFC unterstützt jetzt die Animation und Direct2D-Grafiken. Die MFC-Bibliothek verfügt über einige neue MFC-Klassen und -Funktionen, um diese Funktion zu unterstützen. Es gibt außerdem zwei neue exemplarische Vorgehensweisen, in denen dargestellt wird, wie Sie einem Projekt ein D2D-Objekt und ein Animationsobjekt hinzufügen. **Exemplarische Vorgehensweise: Hinzufügen eines D2D-Objekts zu einem MFC-Projekt** und **Exemplarische Vorgehensweise: Hinzufügen von Animationen zu einem MFC-Projekt**.
+MFC unterstützt jetzt die Animation und Direct2D-Grafiken. Die MFC-Bibliothek verfügt über einige neue MFC-Klassen und -Funktionen, um diese Funktion zu unterstützen. Es gibt außerdem zwei neue exemplarische Vorgehensweisen, in denen dargestellt wird, wie Sie einem Projekt ein D2D-Objekt und ein Animationsobjekt hinzufügen. Diese finden Sie unter **Exemplarische Vorgehensweise: Hinzufügen eines D2D-Objekts zu einem MFC-Projekt** und **Exemplarische Vorgehensweise: Hinzufügen von Animationen zu einem MFC-Projekt**.
 
 ### <a name="ide"></a>IDE
 
@@ -2197,7 +2197,7 @@ In diesem Release sind bedeutende Änderungen des Compilers enthalten.
 
 - Informationen zum Ausführen einer Managed Extensions for C++-Anwendung, die mit dem Compiler der aktuellen Version für eine Vorgängerversion der Runtime erstellt wird.
 - Häufig gestellte Fragen: Managed Extensions for C++
-- Eine exemplarische Vorgehensweise wurde hinzugefügt, um darzustellen, wie eine bereits vorhandene native Anwendung für die Verwendung von Managed Extensions for C++ portiert wird (Walkthrough: Porting an Existing Native C++ Application to Interoperate with .NET Framework Components (Exemplarische Vorgehensweise: Portieren einer bereits vorhandenen nativen C++-Anwendung zur Zusammenarbeit mit .NET Framework-Komponenten)).
+- Es wurde eine exemplarische Vorgehensweise hinzugefügt, in der veranschaulicht wird, wie Sie eine vorhandene native Anwendung für die Verwendung von „Managed Extensions for C++“ portieren können: Exemplarische Vorgehensweise: Portieren einer vorhandenen nativen C++-Anwendung für die Kompatibilität mit .NET Framework-Komponenten.
 - Sie können jetzt einen Delegat für eine Methode eines Werttypen erstellen.
 - Die Konformität des Compilers mit dem C++-Standard wurde für Visual C++ .NET 2003 deutlich verbessert.
 - Die `/arch`-Compileroption wurde hinzugefügt.
