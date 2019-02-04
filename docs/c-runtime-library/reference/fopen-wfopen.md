@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: fb5f78411521dcbaddefda6c621b7fe44ce91736
-ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
+ms.openlocfilehash: 9c7a7fed8eabc38f1a0a67587d495e75ba8fa3d8
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031290"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702907"
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 
@@ -82,7 +82,7 @@ Die **Fopen** -Funktion öffnet die Datei, die angegebenen *Filename*. Standardm
 
 **Fopen** unterstützt Unicode-Dateistreams. Um eine Unicode-Datei zu öffnen, geben eine **ccs** Flag, das angibt, das die gewünschte Codierung zu **Fopen**wie folgt.
 
-> **Datei *fp Fopen = ("newfile.txt", "rt und höher, ccs =**_Codierung_**");**
+> **FILE \*fp = fopen("newfile.txt", "rt+, ccs=**_encoding_**");**
 
 Zulässige Werte von *Codierung* sind **UNICODE**, **UTF-8**, und **UTF-16LE**.
 
@@ -156,18 +156,18 @@ Die folgenden Optionen können angehängt werden, um *Modus* zusätzliche Verhal
 | **R** | Gibt an, dass das Zwischenspeichern für den zufälligen Zugriff vom Datenträger optimiert, aber nicht darauf beschränkt ist. |
 | **T** | Gibt an, dass eine Datei temporär ist. Wenn möglich, wird sie nicht auf den Datenträger geschrieben. |
 | **D** | Gibt an, dass eine Datei temporär ist. Sie wird gelöscht, wenn der letzte Dateizeiger geschlossen wird. |
-| **CCS =**_Codierung_ | Gibt den codierten Zeichensatz verwenden (eines **UTF-8**, **UTF-16LE**, oder **UNICODE**) für diese Datei. Machen Sie keine Angabe, wenn Sie ANSI-Codierung wünschen. |
+| **ccs=**_encoding_ | Gibt den codierten Zeichensatz verwenden (eines **UTF-8**, **UTF-16LE**, oder **UNICODE**) für diese Datei. Machen Sie keine Angabe, wenn Sie ANSI-Codierung wünschen. |
 
 Gültige Zeichen für die *Modus* Zeichenfolge, die verwendet wird **Fopen** und **_fdopen** entsprechen *Oflag* Argumente, die in verwendetwerden[_open](open-wopen.md) und [_sopen](sopen-wsopen.md)wie folgt.
 
 |Zeichen in *Modus* Zeichenfolge|Entsprechende *Oflag* Wert für \_öffnen /\_Sopen|
 |-------------------------------|----------------------------------------------------|
-|**a**|**\_O\_WRONLY** &#124;  **\_O\_APPEND** (in der Regel  **\_O\_WRONLY** &#124;  **\_O\_erstellen** &#124;  **\_O\_APPEND**)|
-|**a +**|**\_O\_RDWR** &#124;  **\_O\_APPEND** (in der Regel  **\_O\_RDWR** &#124;  **\_ O\_APPEND** &#124;  **\_O\_erstellen** )|
+|**a**|**\_O\_WRONLY** &#124; **\_O\_APPEND** (usually **\_O\_WRONLY** &#124; **\_O\_CREAT** &#124; **\_O\_APPEND**)|
+|**a+**|**\_O\_RDWR** &#124;  **\_O\_APPEND** (in der Regel  **\_O\_RDWR** &#124;  **\_ O\_APPEND** &#124;  **\_O\_erstellen** )|
 |**r**|**\_O\_RDONLY**|
-|**R +**|**\_O\_RDWR**|
-|**W**|**\_O\_WRONLY** (in der Regel  **\_O\_WRONLY** &#124;  **\_O\_erstellen** &#124;  **\_O\_kürzungs-LSN**)|
-|**w +**|**\_O\_RDWR** (in der Regel  **\_O\_RDWR** &#124;  **\_O\_erstellen** &#124;  **\_ O\_kürzungs-LSN**)|
+|**r+**|**\_O\_RDWR**|
+|**w**|**\_O\_WRONLY** (usually **\_O\_WRONLY** &#124; **\_O\_CREAT** &#124; **\_O\_TRUNC**)|
+|**w+**|**\_O\_RDWR** (usually **\_O\_RDWR** &#124; **\_O\_CREAT** &#124; **\_O\_TRUNC**)|
 |**b**|**\_O\_BINÄRE**|
 |**t**|**\_O\_TEXT**|
 |**c**|Keine|
@@ -177,8 +177,8 @@ Gültige Zeichen für die *Modus* Zeichenfolge, die verwendet wird **Fopen** und
 |**T**|**\_O\_SHORTLIVED**|
 |**D**|**\_O\_TEMPORÄRE**|
 |**CCS = UNICODE**|**\_O\_WTEXT**|
-|**CCS = UTF-8**|**\_O\_UTF8**|
-|**CCS = UTF-16LE**|**\_O\_UTF16**|
+|**ccs=UTF-8**|**\_O\_UTF8**|
+|**ccs=UTF-16LE**|**\_O\_UTF16**|
 
 Bei Verwendung von **Rb** Modus, Sie haben keinen zum Portieren von Code, und wenn Sie erwarten, dass die meisten einer großen Datei lesen oder sind keine Bedenken bezüglich der netzwerkleistung, Sie könnten auch erwägen, ob der arbeitsspeichernutzung Win32-Dateien als Option zugeordnet.
 

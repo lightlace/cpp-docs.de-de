@@ -5,12 +5,12 @@ helpviewer_keywords:
 - x64 coding conventions
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
-ms.openlocfilehash: eea2059a8c06a8ba4d032b87fb41d7d51bc8eac2
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 55be8f381b39ee566b389350ff70a9b0a3fe7694
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627298"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702067"
 ---
 # <a name="x64-software-conventions"></a>X64 Softwarekonventionen
 
@@ -51,15 +51,15 @@ Obwohl es möglich, den Zugriff auf Daten mit einer Ausrichtung ist, wird empfoh
 |**UINT8**|**unsigned char**|1|Byte|
 |**INT16**|**short**|2|Word|
 |**UINT16**|**unsigned short**|2|Word|
-|**INT32**|**Int**, **lange**|4|Zeigt Doppelwort|
-|**UINT32**|**ganze Zahl ohne Vorzeichen, unsigned long**|4|Zeigt Doppelwort|
-|**INT64**|**__int64**|8|Vierfachwort|
-|**UINT64**|**__int64 ohne Vorzeichen**|8|Vierfachwort|
-|**FP32-Vorgänge (einfache Genauigkeit)**|**float**|4|Zeigt Doppelwort|
-|**FP64 (doppelte Genauigkeit)**|**double**|8|Vierfachwort|
-|**ZEIGER**|__\*__|8|Vierfachwort|
-|**__m64**|**Struktur __m64**|8|Vierfachwort|
-|**__m128**|**Struktur __m128**|16|Octaword|
+|**INT32**|**int**, **long**|4|Doubleword|
+|**UINT32**|**ganze Zahl ohne Vorzeichen, unsigned long**|4|Doubleword|
+|**INT64**|**__int64**|8|Quadword|
+|**UINT64**|**__int64 ohne Vorzeichen**|8|Quadword|
+|**FP32-Vorgänge (einfache Genauigkeit)**|**float**|4|Doubleword|
+|**FP64 (doppelte Genauigkeit)**|**double**|8|Quadword|
+|**ZEIGER**|__\*__|8|Quadword|
+|**__m64**|**struct __m64**|8|Quadword|
+|**__m128**|**struct __m128**|16|Octaword|
 
 ### <a name="aggregates-and-unions"></a>Aggregate und unions
 
@@ -86,15 +86,15 @@ Die folgende Tabelle zeigt die empfohlene Ausrichtung für die skalaren Member v
 |**UINT8**|**unsigned char**|Byte|
 |**INT16**|**short**|Word|
 |**UINT16**|**unsigned short**|Word|
-|**INT32**|**Int**, **lange**|Zeigt Doppelwort|
-|**UINT32**|**ganze Zahl ohne Vorzeichen, unsigned long**|Zeigt Doppelwort|
-|**INT64**|**__int64**|Vierfachwort|
-|**UINT64**|**__int64 ohne Vorzeichen**|Vierfachwort|
-|**FP32-Vorgänge (einfache Genauigkeit)**|**float**|Zeigt Doppelwort|
-|**FP64 (doppelte Genauigkeit)**|**double**|Vierfachwort|
-|**ZEIGER**|<strong>\*</strong>|Vierfachwort|
-|**__m64**|**Struktur __m64**|Vierfachwort|
-|**__m128**|**Struktur __m128**|Octaword|
+|**INT32**|**int**, **long**|Doubleword|
+|**UINT32**|**ganze Zahl ohne Vorzeichen, unsigned long**|Doubleword|
+|**INT64**|**__int64**|Quadword|
+|**UINT64**|**__int64 ohne Vorzeichen**|Quadword|
+|**FP32-Vorgänge (einfache Genauigkeit)**|**float**|Doubleword|
+|**FP64 (doppelte Genauigkeit)**|**double**|Quadword|
+|**ZEIGER**|<strong>\*</strong>|Quadword|
+|**__m64**|**struct __m64**|Quadword|
+|**__m128**|**struct __m128**|Octaword|
 
 Die folgenden aggregierten Ausrichtung Regeln gelten:
 
@@ -141,7 +141,7 @@ _declspec(align(8)) struct {
 #### <a name="example-3"></a>Beispiel 3
 
 ```C
-// Total size = 22 bytes, alignment = 4 bytes (doubleword).
+// Total size = 12 bytes, alignment = 4 bytes (doubleword).
 
 _declspec(align(4)) struct {
     char a;       // +0; size = 1 byte

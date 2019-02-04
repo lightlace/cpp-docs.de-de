@@ -1,9 +1,10 @@
 ---
-title: strcat_s, wcscat_s, _mbscat_s
-ms.date: 11/04/2016
+title: strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
+ms.date: 01/22/2019
 apiname:
 - strcat_s
 - _mbscat_s
+- _mbscat_s_l
 - wcscat_s
 apilocation:
 - msvcrt.dll
@@ -23,27 +24,29 @@ f1_keywords:
 - strcat_s
 - wcscat_s
 - _mbscat_s
+- _mbscat_s_l
 helpviewer_keywords:
 - wcscat_s function
 - strcat_s function
 - mbscat_s function
 - strings [C++], appending
 - _mbscat_s function
+- _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: 7b622fbefc690317a4b57e3fd1bb54712b84f2a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 92829421cc0adac0ff9bbd2354fe4438a7b22871
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621311"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702920"
 ---
-# <a name="strcats-wcscats-mbscats"></a>strcat_s, wcscat_s, _mbscat_s
+# <a name="strcats-wcscats-mbscats-mbscatsl"></a>strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
 
 Fügt eine Zeichenfolge an. Diese Versionen von [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md) enthalten Sicherheitsverbesserungen, wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben wird.
 
 > [!IMPORTANT]
-> **_mbscat_s** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscat_s** und **_mbscat_s_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -63,6 +66,12 @@ errno_t _mbscat_s(
    size_t numberOfElements,
    const unsigned char *strSource
 );
+errno_t _mbscat_s_l(
+   unsigned char *strDestination,
+   size_t numberOfElements,
+   const unsigned char *strSource,
+   _locale_t locale
+);
 template <size_t size>
 errno_t strcat_s(
    char (&strDestination)[size],
@@ -78,6 +87,12 @@ errno_t _mbscat_s(
    unsigned char (&strDestination)[size],
    const unsigned char *strSource
 ); // C++ only
+template <size_t size>
+errno_t _mbscat_s_l(
+   unsigned char (&strDestination)[size],
+   const unsigned char *strSource,
+   _locale_t locale
+); // C++ only
 ```
 
 ### <a name="parameters"></a>Parameter
@@ -90,6 +105,9 @@ Größe des Zielzeichenfolgenpuffers.
 
 *strSource*<br/>
 Auf NULL endender Quellzeichenfolgepuffer.
+
+*locale*<br/>
+Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -119,6 +137,8 @@ strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 **Wcscat_s** und **_mbscat_s** sind Breitzeichen- und multibytezeichenversionen von Versionen von **Strcat_s**. Die Argumente und der Rückgabewert von **Wcscat_s** sind Breitzeichen-Zeichenfolgen, die von **_mbscat_s** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
 
 Wenn *StrDestination* ist ein null-Zeiger oder ist kein Null-terminiert ist, oder, wenn *StrSource* ist eine **NULL** -Zeiger ist, oder wenn die Zielzeichenfolge zu klein ist, wird der ungültige Parameter Handler wird aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EINVAL** und **Errno** zu **EINVAL**.
+
+Die Versionen der Funktionen, die **_l** Suffix weisen das gleiche Verhalten, aber verwenden den Gebietsschemaparameter, der anstelle des aktuellen Gebietsschemas übergeben wird. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

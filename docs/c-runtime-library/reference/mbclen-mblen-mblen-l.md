@@ -1,10 +1,11 @@
 ---
-title: _mbclen, mblen, _mblen_l
-ms.date: 11/04/2016
+title: _mbclen, mblen, _mblen_l, _mbclen_l
+ms.date: 01/22/2019
 apiname:
 - _mbclen
 - mblen
 - _mblen_l
+- _mbclen_l
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,6 +24,7 @@ f1_keywords:
 - mblen
 - ftclen
 - _mbclen
+- _mbclen_l
 - tclen
 - _ftclen
 - _tclen
@@ -33,17 +35,18 @@ helpviewer_keywords:
 - _tclen function
 - mblen_l function
 - _mbclen function
+- _mbclen_l function
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-ms.openlocfilehash: dddf7d3a1705460d2c8d42cc1b36230d7bdaf942
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7888b0b8c87a632dcbb63f54ade11080c7a309a
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434385"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702959"
 ---
-# <a name="mbclen-mblen-mblenl"></a>_mbclen, mblen, _mblen_l
+# <a name="mbclen-mblen-mblenl-mbclenl"></a>_mbclen, mblen, _mblen_l, _mbclen_l
 
 Ruft die Länge ab und bestimmt die Gültigkeit eines Multibytezeichens.
 
@@ -55,6 +58,10 @@ Ruft die Länge ab und bestimmt die Gültigkeit eines Multibytezeichens.
 ```C
 size_t _mbclen(
    const unsigned char *c
+);
+size_t _mbclen_l(
+   unsigned char const* c,
+   _locale_t locale
 );
 int mblen(
    const char *mbstr,
@@ -83,7 +90,7 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_mbclen** gibt 1 oder 2, je nachdem, ob das Multibytezeichen *c* 1 oder 2 Bytes lang ist. Es gibt keine Fehlerrückgabe für **_mbclen**. Wenn *Mbstr* nicht **NULL**, **Mblen** gibt die Länge in Byte des multibytezeichens zurück. Wenn *Mbstr* ist **NULL** oder das Objekt zeigt auf das Breitzeichen Null-Zeichen, **Mblen** gibt 0 zurück. Wenn das Objekt, *Mbstr* verweist auf ein gültiges Multibytezeichen innerhalb der ersten nicht bildet *Anzahl* Zeichen **Mblen** gibt-1 zurück.
+**_mbclen** gibt 1 oder 2, je nachdem, ob das Multibytezeichen *c* 1 oder 2 Bytes lang ist. Es gibt keine Fehlerrückgabe für **_mbclen**. Wenn *Mbstr* ist nicht **NULL**, **Mblen** gibt die Länge in Byte des multibytezeichens zurück. Wenn *Mbstr* ist **NULL** oder das Objekt zeigt auf das Breitzeichen Null-Zeichen, **Mblen** gibt 0 zurück. Wenn das Objekt, *Mbstr* verweist auf kein gültiges Multibytezeichen innerhalb der ersten form *Anzahl* Zeichen, **Mblen** gibt-1 zurück.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -91,7 +98,7 @@ Die **_mbclen** Funktion gibt die Länge in Byte des multibytezeichens zurück *
 
 **Mblen** gibt die Länge in Bytes zurück *Mbstr* , wenn sie ein gültiges Multibytezeichen ist und die Gültigkeit der Multibytezeichen der Codepage zugeordnet bestimmt. **Mblen** untersucht *Anzahl* oder weniger Bytes, die in enthaltenen *Mbstr*, aber nicht länger als **MB_CUR_MAX** Bytes.
 
-Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert wird von beeinflusst die **LC_CTYPE** -kategorieeinstellung des Gebietsschemas, siehe [Setlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktionen ohne das **_l** Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten. Die **_l** Suffix Versionen verhalten sich identisch, aber sie verwenden den stattdessen den übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

@@ -4,7 +4,7 @@ ms.date: 04/05/2018
 apiname:
 - nearbyint
 - nearbyintf
-- nerabyintl
+- nearbyintl
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - nearbyintf function
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-ms.openlocfilehash: 4a36bddb28db9fb4c5809432dfaef9ca3ece4328
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 827286c840c6564c8c3f8b351197b0201509d241
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668311"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702992"
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
 
@@ -65,9 +65,9 @@ Wenn erfolgreich, wird *x*, gerundet auf die nächste ganze Zahl, mit dem aktuel
 
 |Problem|Zurück|
 |-----------|------------|
-|*X* ±INFINITY =|±Infinity, unverändert|
-|*X* ±0 =|±0, unverändert|
-|*X* = NaN|NaN|
+|*x* = ±INFINITY|±Infinity, unverändert|
+|*x* = ±0|±0, unverändert|
+|*x* = NaN|NaN|
 
 Fehler werden nicht gemeldet, über [_matherr](matherr.md), genauer gesagt, diese Funktion meldet keine **FE_INEXACT** Ausnahmen.
 
@@ -83,7 +83,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von aufrufen können *
 
 |Funktion|C-Header|C++-Header|
 |--------------|--------------|------------------|
-|**Nearbyint**, **Nearbyintf**, **Nearbyintl**|\<math.h>|\<cmath> oder \<math.h>|
+|**nearbyint**, **nearbyintf**, **nearbyintl**|\<math.h>|\<cmath> oder \<math.h>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
