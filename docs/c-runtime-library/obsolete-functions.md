@@ -1,6 +1,31 @@
 ---
 title: Veraltete Funktionen
-ms.date: 11/04/2016
+ms.date: 01/22/2019
+apiname:
+- _beep
+- _sleep
+- _loaddll
+- _getdllprocaddr
+- _seterrormode
+- is_wctype
+- _getsystime
+- _setsystime
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-process-l1-1-0.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
 f1_keywords:
 - is_wctype
 - _loaddll
@@ -25,12 +50,12 @@ helpviewer_keywords:
 - _sleep function
 - _seterrormode function
 ms.assetid: 8e14c2d4-1481-4240-8586-47eb43db02b0
-ms.openlocfilehash: 2f42593620c3457694bd57ccdc5a90216b3a28f1
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: edac8fde530752c911058acdaccccea6d0318b8c
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893885"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702673"
 ---
 # <a name="obsolete-functions"></a>Veraltete Funktionen
 
@@ -56,14 +81,14 @@ Bestimmte Bibliotheksfunktionen sind veraltet, und es stehen äquivalente neuere
 |-----------------------|-----------------|
 |[_cgets, _cgetws](../c-runtime-library/cgets-cgetws.md)|[_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|
 |[gets, _getws](../c-runtime-library/gets-getws.md)|[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|
-|[_get_output_format](../c-runtime-library/get-output-format.md)|Keiner|
-|[_heapadd](../c-runtime-library/heapadd.md)|Keiner|
-|[_heapset](../c-runtime-library/heapset.md)|Keiner|
-|[inp, inpw](../c-runtime-library/inp-inpw.md)|Keiner|
-|[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Keiner|
-|[outp, outpw](../c-runtime-library/outp-outpw.md)|Keiner|
-|[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Keiner|
-|[_set_output_format](../c-runtime-library/set-output-format.md)|Keiner|
+|[_get_output_format](../c-runtime-library/get-output-format.md)|Keine|
+|[_heapadd](../c-runtime-library/heapadd.md)|Keine|
+|[_heapset](../c-runtime-library/heapset.md)|Keine|
+|[inp, inpw](../c-runtime-library/inp-inpw.md)|Keine|
+|[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Keine|
+|[outp, outpw](../c-runtime-library/outp-outpw.md)|Keine|
+|[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Keine|
+|[_set_output_format](../c-runtime-library/set-output-format.md)|Keine|
 
 ## <a name="removed-from-the-crt-in-earlier-versions-of-visual-studio"></a>Aus der CRT in früheren Versionen von Visual Studio entfernt
 
