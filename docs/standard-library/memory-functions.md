@@ -1,6 +1,6 @@
 ---
 title: '&lt;memory&gt;-Funktionen'
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - memory/std::addressof
 - memory/std::align
@@ -74,12 +74,12 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: e0a62b7afd215a9cad62ba1d0469f68459e6f403
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 71cae7bfbb8bfc0bef79a087d4450505c2880e5c
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519177"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55763933"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt;-Funktionen
 
@@ -135,7 +135,7 @@ Die auszuprobierende Ausrichtungsgrenze.
 *Size*<br/>
 Die Größe in Bytes für den ausgerichteten Speicher.
 
-*PTR*<br/>
+*Ptr*<br/>
 Die Startadresse des verfügbaren zusammenhängenden Speicherpools, der verwendet werden soll. Dieser Parameter ist auch ein Output-Parameter, und es wird festgelegt, um die neue Startadresse enthalten, wenn die Ausrichtung erfolgreich ist. Wenn `align()` nicht erfolgreich ist, wird dieser Parameter nicht geändert.
 
 *LEERTASTE*<br/>
@@ -261,7 +261,7 @@ void declare_no_pointers(
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*ptr*|Adresse des ersten Zeichens, das keinen nachweisbaren Zeiger mehr enthält.|
-|*_Größe*|Größe des Blocks, die bei beginnt *Ptr* , die keine nachweisbaren Zeiger enthält.|
+|*_Size*|Größe des Blocks, die bei beginnt *Ptr* , die keine nachweisbaren Zeiger enthält.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -299,7 +299,7 @@ struct default_delete {
 
 ### <a name="parameters"></a>Parameter
 
-*PTR*<br/>
+*Ptr*<br/>
 Zeiger auf das zu löschende Objekt.
 
 *Andere*<br/>
@@ -327,7 +327,7 @@ Der Typ, der vom zurückgegebenen gemeinsamen Zeiger (shared pointer) gesteuert 
 *Andere*<br/>
 Der Typ, der vom Argument für den gemeinsamen Zeiger gesteuert wird.
 
-*SP*<br/>
+*sp*<br/>
 Das Argument für den gemeinsamen Zeiger.
 
 ### <a name="remarks"></a>Hinweise
@@ -387,7 +387,7 @@ Der Deleter-Typ.
 *Ty*<br/>
 Der vom freigegebenen Zeiger gesteuerte Typ.
 
-*SP*<br/>
+*sp*<br/>
 Der freigegebene Zeiger.
 
 ### <a name="remarks"></a>Hinweise
@@ -647,13 +647,13 @@ Die Anzahl von Elementen, denen im neue Array ein Bereich zugeordnet werden soll
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Überladung wird für einzelne Objekte verwendet, die zweite Überladung wird für Arrays aufgerufen, und die dritte Überladung verhindert die Angabe einer Arraygröße im Typargument (make_unique\<T[N]>). Diese Konstruktion wird nicht vom aktuellen Standard unterstützt. Wenn Sie `make_unique` verwenden, um `unique_ptr` in ein Array zu erstellen, müssen die Arrayelemente separat initialisiert werden. Bei Berücksichtigung dieser Überladung ist die Verwendung von [std::vector](../standard-library/vector-class.md) eventuell besser.
+Die erste Überladung wird für einzelne Objekte verwendet, die zweite Überladung wird für Arrays aufgerufen und die dritte Überladung verhindert, dass Sie Angabe einer Arraygröße im Typargument (Make_unique\<T [N] >); diese Konstruktion wird nicht unterstützt, von der aktuellen Standard. Wenn Sie `make_unique` verwenden, um `unique_ptr` in ein Array zu erstellen, müssen die Arrayelemente separat initialisiert werden. Bei Berücksichtigung dieser Überladung ist die Verwendung von [std::vector](../standard-library/vector-class.md) eventuell besser.
 
 Da `make_unique` sorgfältig für die Ausnahmesicherheit implementiert wird, wird empfohlen, `make_unique` zu verwenden, anstatt `unique_ptr` -Konstruktoren direkt aufzurufen.
 
 ### <a name="example"></a>Beispiel
 
-Das folgende Beispiel veranschaulicht die Verwendung von `make_unique`. Weitere Beispiele finden Sie unter [Vorgehensweise: Erstellen und Verwenden von unique_ptr-Instanzen](../cpp/how-to-create-and-use-unique-ptr-instances.md).
+Das folgende Beispiel veranschaulicht die Verwendung von `make_unique`. Weitere Beispiele finden Sie unter [Vorgehensweise: Erstellen und Verwenden von Unique_ptr-Instanzen](../cpp/how-to-create-and-use-unique-ptr-instances.md).
 
 [!code-cpp[stl_smart_pointers#214](../cpp/codesnippet/CPP/memory-functions_1.cpp)]
 
@@ -953,7 +953,7 @@ ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, Forw
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Eingabeiterator, der das erste Element im Quellbereich adressiert.
 
 *last*<br/>
@@ -1061,7 +1061,7 @@ ForwardIterator uninitialized_copy_n(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Eingabeiterator, der auf das zu kopierende Objekt verweist.
 
 *count*<br/>
@@ -1098,7 +1098,7 @@ void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type&
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Forward-Iterator, der die Position des ersten Elements im zu initiierenden Zielbereich adressiert.
 
 *last*<br/>
@@ -1170,7 +1170,7 @@ void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Forward-Iterator, der die Position des ersten Elements im zu initiierenden Zielbereich adressiert.
 
 *count*<br/>
