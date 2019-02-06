@@ -193,6 +193,7 @@
 ### [/ASSEMBLYMODULE (MSIL-Modul zur Assembly hinzufügen)](assemblymodule-add-a-msil-module-to-the-assembly.md)
 ### [/ASSEMBLYRESOURCE (Verwaltete Ressource einbetten)](assemblyresource-embed-a-managed-resource.md)
 ### [/BASE (Basisadresse)](base-base-address.md)
+### [/CETCOMPAT (kompatibel mit der Erzwingungstechnologie der Ablaufsteuerung)](cetcompat.md)
 ### [/CGTHREADS (Compilerthreads)](cgthreads-compiler-threads.md)
 ### [/CLRIMAGETYPE (CLR-Imagetyp festlegen)](clrimagetype-specify-type-of-clr-image.md)
 ### [/CLRSUPPORTLASTERROR (Letzten Fehlercode für PInvoke-Aufrufe beibehalten)](clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)
