@@ -20,12 +20,12 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 6a4320b1f2c5d0c47dac64c486e7fb70ea5991bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a6de35f9e3154b6d182eddcc51fd7a14cbd0dd5
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481821"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55764011"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Dialogdatenaustausch-Funktionen für CRecordView und CDaoRecordView
 
@@ -124,7 +124,7 @@ Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *nIDC*<br/>
 Die ID eines Steuerelements in der [CRecordView](../../mfc/reference/crecordview-class.md) oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) Objekt.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf ein Felddatenmember in der zugeordneten `CRecordset` oder `CDaoRecordset` Objekt.
 
 *pRecordset*<br/>
@@ -172,7 +172,7 @@ Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *nIDC*<br/>
 Die ID eines Steuerelements in der [CRecordView](../../mfc/reference/crecordview-class.md) oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) Objekt.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf ein Felddatenmember in der zugeordneten `CRecordset` oder `CDaoRecordset` Objekt.
 
 *pRecordset*<br/>
@@ -220,7 +220,7 @@ Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *nIDC*<br/>
 Die Ressourcen-ID des Kontrollkästchen-Steuerelements, das der Eigenschaft des Steuerelements zugeordnet werden soll.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansicht oder steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.
 
 *pRecordset*<br/>
@@ -310,7 +310,7 @@ Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *nIDC*<br/>
 Die ID eines Steuerelements in der [CRecordView](../../mfc/reference/crecordview-class.md) oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) Objekt.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf ein Felddatenmember in der zugeordneten `CRecordset` oder `CDaoRecordset` Objekt.
 
 *pRecordset*<br/>
@@ -358,7 +358,7 @@ Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *nIDC*<br/>
 Die ID eines Steuerelements in der [CRecordView](../../mfc/reference/crecordview-class.md) oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) Objekt.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf ein Felddatenmember in der zugeordneten `CRecordset` oder `CDaoRecordset` Objekt.
 
 *pRecordset*<br/>
@@ -406,7 +406,7 @@ Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *nIDC*<br/>
 Die ID des ersten in einer Gruppe (mit WS_GROUP-Stil) von benachbarten Optionsfeld-Steuerelemente in der [CRecordView](../../mfc/reference/crecordview-class.md) oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) Objekt.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf ein Felddatenmember in der zugeordneten `CRecordset` oder `CDaoRecordset` Objekt.
 
 *pRecordset*<br/>
@@ -454,7 +454,7 @@ Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *nIDC*<br/>
 Die ID des ersten in einer Gruppe (mit WS_GROUP-Stil) von benachbarten Optionsfeld-Steuerelemente in der [CRecordView](../../mfc/reference/crecordview-class.md) oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) Objekt.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf ein Felddatenmember in der zugeordneten `CRecordset` oder `CDaoRecordset` Objekt.
 
 *pRecordset*<br/>
@@ -476,7 +476,7 @@ Finden Sie unter [DDX_FieldText](#ddx_fieldtext) für ein allgemeines DDX_Field-
 
   **Header** afxdao.h
 
-  ## <a name="nameddxfieldslidera--ddxfieldslider"></a>name="ddx_fieldslider"></a>  DDX_FieldSlider
+  ## <a name="ddx_fieldslider"></a>  DDX_FieldSlider
 Die `DDX_FieldSlider` Funktion wird die Position Thumb-Steuerelement von einem Schieberegler-Steuerelement in einer Datensatzansicht synchronisiert und ein **Int** felddatenelement eines Recordsets, die mit der Datensatzansicht (oder beliebige ganzzahlige Variable, die Sie auswählen, für die Zuordnung) zugeordnet ist.
 
 ### <a name="syntax"></a>Syntax
@@ -503,7 +503,7 @@ Ein Zeiger auf eine [CDataExchange](cdataexchange-class.md) Objekt. Das Framewor
 *nIDC*<br/>
 Die Ressourcen-ID des Schieberegler-Steuerelements.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf den Wert ausgetauscht werden sollen. Dieser Parameter enthält, oder wird verwendet, um die aktuelle Thumb-Position des Schieberegler-Steuerelements festgelegt.
 
 *pRecordset*<br/>
@@ -653,7 +653,7 @@ Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *nIDC*<br/>
 Die ID eines Steuerelements in der [CRecordView](../../mfc/reference/crecordview-class.md) oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) Objekt.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf ein Felddatenmember in der zugeordneten `CRecordset` oder `CDaoRecordset` Objekt. Der Datentyp des Werts hängt vom verwendeten der überladenen Versionen der `DDX_FieldText` Sie verwenden.
 
 *pRecordset*<br/>
