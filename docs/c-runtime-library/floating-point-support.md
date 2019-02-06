@@ -1,6 +1,6 @@
 ---
 title: Mathematische Unterstützung und Gleitkommaunterstützung
-ms.date: 04/06/2018
+ms.date: 01/31/2019
 f1_keywords:
 - c.math
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: 9e1baeb7236e5b1144b52df0bd83cc0f4a4b7796
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d03333dee12989af5897c34ba96484930a39673
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558235"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703128"
 ---
 # <a name="math-and-floating-point-support"></a>Mathematische Unterstützung und Gleitkommaunterstützung
 
@@ -25,7 +25,7 @@ Viele der Gleitkommafunktionen in der mathematischen Bibliothek haben unterschie
 
 ## <a name="supported-math-and-floating-point-routines"></a>Unterstützte mathematische und Gleitkommaroutinen
 
-|-Routine zurückgegebener Wert|Mit|
+|-Routine zurückgegebener Wert|Verwendung|
 |-|-|
 [abs, labs, llabs, _abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|Berechnet den absoluten Wert eines Ganzzahltyps
 [acos, acosf, acosl](../c-runtime-library/reference/acos-acosf-acosl.md)|Berechnet den Arkuskosinus
@@ -69,7 +69,6 @@ Viele der Gleitkommafunktionen in der mathematischen Bibliothek haben unterschie
 [fesetround](../c-runtime-library/reference/fegetround-fesetround2.md)|Legt den angegebenen Rundungsmodus des Gleitkommas fest
 [fetestexcept](../c-runtime-library/reference/fetestexcept1.md)|Bestimmt, welche Gleitkommaausnahme-Statusflags festgelegt werden
 [feupdateenv](../c-runtime-library/reference/feupdateenv.md)|Stellt eine Gleitkommaumgebung wieder her und löst dann vorherige Ausnahmen aus
-[_finite, _finitef](../c-runtime-library/reference/finite-finitef.md)|Bestimmt, ob ein Wert endlich ist
 [floor, floorf, floorl](../c-runtime-library/reference/floor-floorf-floorl.md)|Berechnet den Tiefstwert
 [fma, fmaf, fmal](../c-runtime-library/reference/fma-fmaf-fmal.md)|Berechnet eine Fused-multiply-add-Operation
 [fmax, fmaxf, fmaxl](../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)|Berechnet die maximale Anzahl der Argumente
@@ -87,7 +86,11 @@ Viele der Gleitkommafunktionen in der mathematischen Bibliothek haben unterschie
 [ilogb, ilogbf, ilogbl](../c-runtime-library/reference/ilogb-ilogbf-ilogbl2.md)|Berechnet den ganzzahligen Exponenten zur Basis 2
 [imaxabs](../c-runtime-library/reference/imaxabs.md)|Berechnet den absoluten Wert eines Ganzzahltyps
 [imaxdiv](../c-runtime-library/reference/imaxdiv.md)|Berechnet den Quotienten und den Rest von zwei ganzzahligen Werten
+[isfinite, _finite, _finitef](../c-runtime-library/reference/finite-finitef.md)|Bestimmt, ob ein Wert endlich ist
+[isgreater, isgreaterequal, isless, islessequal, islessgreater, isunordered](../c-runtime-library/reference/floating-point-ordering.md)|Reihenfolge zweier Gleitkommawerte vergleichen
+[isinf](../c-runtime-library/reference/isinf.md)|Bestimmt, ob ein Gleitkommawert endlich ist
 [isnan, _isnan, _isnanf](../c-runtime-library/reference/isnan-isnan-isnanf.md)|Testet einen Gleitkommawert auf NaN
+[isnormal](../c-runtime-library/reference/isnormal.md)|Testet, ob ein Gleitkommawert sowohl unendlich als auch subnormal ist
 [_j0, _j1, _jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Berechnet die Bessel-Funktion
 [ldexp, ldexpf, ldexpl](../c-runtime-library/reference/ldexp.md)|Berechnet x*2<sup>n</sup>
 [lgamma, lgammaf, lgammal](../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)|Berechnet den natürlichen Logarithmus des absoluten Werts der Gammafunktion
@@ -118,6 +121,7 @@ Viele der Gleitkommafunktionen in der mathematischen Bibliothek haben unterschie
 [scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl](../c-runtime-library/reference/scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)|Multipliziert eine Gleitkommazahl mit einer integralen Potenz von **FLT_RADIX**
 [_set_controlfp](../c-runtime-library/reference/set-controlfp.md)|Legt das Gleitkommasteuerwort fest
 [_set_SSE2_enable](../c-runtime-library/reference/set-sse2-enable.md)|Aktiviert oder deaktiviert SSE2-Anweisungen
+[signbit](../c-runtime-library/reference/signbit.md)|Testet das Vorzeichenbit eines Gleitkommawerts
 [sin, sinf, sinl](../c-runtime-library/reference/sin-sinf-sinl.md)|Berechnet den Sinus
 [sinh, sinhf, sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|Berechnet den hyperbolischen Sinus
 [sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|Berechnet die Quadratwurzel
@@ -134,3 +138,4 @@ Viele der Gleitkommafunktionen in der mathematischen Bibliothek haben unterschie
 ## <a name="see-also"></a>Siehe auch
 
 [Universelle C-Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Gleitkommaprimitive](../c-runtime-library/reference/floating-point-primitives.md)<br/>
