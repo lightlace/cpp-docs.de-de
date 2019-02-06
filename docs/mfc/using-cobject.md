@@ -23,21 +23,21 @@ ms.locfileid: "50564826"
 
 ## <a name="what-do-you-want-to-do"></a>Was möchten Sie tun
 
-- [Leiten Sie eine Klasse von CObject](../mfc/deriving-a-class-from-cobject.md)
+- [Leiten Sie eine Klasse von CObject ab](../mfc/deriving-a-class-from-cobject.md)
 
 - [Hinzufügen von Unterstützung für die Laufzeit Klasseninformationen, dynamische Erstellung und Serialisierung meiner abgeleiteten Klasse](../mfc/specifying-levels-of-functionality.md)
 
-- [Zugriff zur Laufzeit-Klasseninformationen](../mfc/accessing-run-time-class-information.md)
+- [Zugriff auf Laufzeit-Klasseninformationen](../mfc/accessing-run-time-class-information.md)
 
 - [Dynamisches Erstellen von Objekten](../mfc/dynamic-object-creation.md)
 
 - [Sichern Sie die Daten des Objekts zu Diagnosezwecken](/previous-versions/visualstudio/visual-studio-2010/sc15kz85)
 
-- Überprüfen Sie die internen Zustand des Objekts (finden Sie unter [MFC ASSERT_VALID und CObject:: AssertValid](reference/diagnostic-services.md#assert_valid))
+- Überprüfen Sie den internen Zustand des Objekts (zu finden unter [MFC ASSERT_VALID und CObject:: AssertValid](reference/diagnostic-services.md#assert_valid))
 
-- [Haben Sie die Klasse, die sich in den permanenten Speicher serialisieren.](../mfc/serialization-in-mfc.md)
+- [Erstellen einer Klasse, die sich in den permanenten Speicher serialisiert.](../mfc/serialization-in-mfc.md)
 
-- Eine Liste der [häufig gestellte Fragen zu CObject](../mfc/cobject-class-frequently-asked-questions.md)
+- Eine Liste der [häufig gestellten Fragen zu CObject](../mfc/cobject-class-frequently-asked-questions.md)
 
 ## <a name="see-also"></a>Siehe auch
 
