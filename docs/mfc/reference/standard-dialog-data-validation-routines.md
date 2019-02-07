@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-ms.openlocfilehash: b5813600bbf8eb2a7b25992b3e1b020fcf8dfa02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dce982f76e25da424c02d621c1b760ec29e88918
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513944"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850163"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Standardroutinen zur Validierung der Dialogfelddaten
 
@@ -54,7 +54,7 @@ void AFXAPI DDV_MaxChars(
 *pDX*<br/>
 Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansicht oder steuerungsansichtsobjekts, mit denen Daten überprüft werden.
 
 *nChars*<br/>
@@ -85,7 +85,7 @@ void AFXAPI DDV_MinMaxByte(
 *pDX*<br/>
 Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansicht oder steuerungsansichtsobjekts, mit denen Daten überprüft werden.
 
 *minVal*<br/>
@@ -159,7 +159,7 @@ void AFXAPI DDV_MinMaxDouble(
 *pDX*<br/>
 Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansicht oder steuerungsansichtsobjekts, mit denen Daten überprüft werden.
 
 *minVal*<br/>
@@ -193,7 +193,7 @@ void AFXAPI DDV_MinMaxDWord(
 *pDX*<br/>
 Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansicht oder steuerungsansichtsobjekts, mit denen Daten überprüft werden.
 
 *minVal*<br/>
@@ -227,7 +227,7 @@ void AFXAPI DDV_MinMaxFloat(
 *pDX*<br/>
 Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansicht oder steuerungsansichtsobjekts, mit denen Daten überprüft werden.
 
 *minVal*<br/>
@@ -261,7 +261,7 @@ void AFXAPI DDV_MinMaxInt(
 *pDX*<br/>
 Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansicht oder steuerungsansichtsobjekts, mit denen Daten überprüft werden.
 
 *minVal*<br/>
@@ -295,7 +295,7 @@ void AFXAPI DDV_MinMaxLong(
 *pDX*<br/>
 Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansicht oder steuerungsansichtsobjekts, mit denen Daten überprüft werden.
 
 *minVal*<br/>
@@ -329,7 +329,7 @@ void AFXAPI DDV_MinMaxLongLong(
 *pDX*<br/>
 Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansicht oder steuerungsansichtsobjekts, mit denen Daten überprüft werden.
 
 *minVal*<br/>
@@ -403,7 +403,7 @@ void AFXAPI DDV_MinMaxShort(
 *pDX*<br/>
 Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansicht oder steuerungsansichtsobjekts, mit denen Daten überprüft werden.
 
 *minVal*<br/>
@@ -437,7 +437,7 @@ void AFXAPI DDV_MinMaxSlider(
 *pDX*<br/>
 Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf das zu überprüfende Wert. Dieser Parameter enthält, oder legt das Schieberegler-Steuerelement aktuelle Thumb-Steuerelementposition fest.
 
 *minVal*<br/>
@@ -471,7 +471,7 @@ void AFXAPI DDV_MinMaxUInt(
 *pDX*<br/>
 Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansicht oder steuerungsansichtsobjekts, mit denen Daten überprüft werden.
 
 *minVal*<br/>
@@ -505,7 +505,7 @@ void AFXAPI DDV_MinMaxULongLong(
 *pDX*<br/>
 Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansicht oder steuerungsansichtsobjekts, mit denen Daten überprüft werden.
 
 *minVal*<br/>
@@ -521,11 +521,6 @@ Weitere Informationen zu DDV, finden Sie unter [Dialogdatenaustausch und Validie
 ### <a name="requirements"></a>Anforderungen
 
   **Header** afxdd_.h
-
-## <a name="see-also"></a>Siehe auch
-
-[Standard-Dialogdatenaustauschroutinen](../../mfc/reference/standard-dialog-data-exchange-routines.md)<br/>
-[Makros und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)
 
 ## <a name="ddvminmaxunsigned"></a>DDV_MinMaxUnsigned
 
@@ -546,7 +541,7 @@ Rufen Sie `DDV_MinMaxUnsigned` um sicherzustellen, dass der Wert im Steuerelemen
 *pDX*<br/>
 Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansicht oder steuerungsansichtsobjekts, mit denen Daten überprüft werden.
 
 *minVal*<br/>
@@ -563,9 +558,10 @@ Weitere Informationen zu DDV, finden Sie unter [Dialogdatenaustausch und Validie
 
 **Header:** afxdd_.h
 
-### <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Siehe auch
 
+[Standard-Dialogdatenaustauschroutinen](standard-dialog-data-exchange-routines.md)<br/>
 [Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
-[DDX_Slider](#ddx_slider)<br/>
-[DDX_FieldSlider](#ddx_fieldslider)
+[DDX_Slider](standard-dialog-data-exchange-routines.md#ddx_slider)<br/>
+[DDX_FieldSlider](dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md#ddx_fieldslider)
 

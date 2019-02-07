@@ -13,12 +13,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: d44928d9fda20082496df1c475d8b3ab05ba4fc4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8b40afbfcc453a4908b434dc53b7b86959673453
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522075"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55851681"
 ---
 # <a name="exception-processing"></a>Ausnahmeverarbeitung
 
@@ -314,7 +314,7 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 
 ### <a name="parameters"></a>Parameter
 
-*Ursache*<br/>
+*cause*<br/>
 Gibt eine ganze Zahl, die den Grund für die Ausnahme angibt. Eine Liste der möglichen Werte finden Sie [CArchiveException::m_cause](../../mfc/reference/carchiveexception-class.md#m_cause).
 
 *lpszArchiveName*<br/>
@@ -337,7 +337,7 @@ void AfxThrowFileException(
 
 ### <a name="parameters"></a>Parameter
 
-*Ursache*<br/>
+*cause*<br/>
 Gibt eine ganze Zahl, die den Grund für die Ausnahme angibt. Eine Liste der möglichen Werte finden Sie [CFileException::m_cause](../../mfc/reference/cfileexception-class.md#m_cause).
 
 *lOsError*<br/>
@@ -371,12 +371,6 @@ Diese Funktion wird aufgerufen, wenn ungültige Argumente verwendet werden.
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afx.h
-
-### <a name="see-also"></a>Siehe auch
-
-[Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
-[CInvalidArgException-Klasse](cinvalidargexception-class.md)<br/>
-[THROW](#throw)
 
 ##  <a name="afxthrowmemoryexception"></a>  AfxThrowMemoryException
 
@@ -456,7 +450,7 @@ void AFXAPI AfxThrowOleDispatchException(
 
 ### <a name="parameters"></a>Parameter
 
-*WCode*<br/>
+*wCode*<br/>
 Ein Fehlercode, die spezifisch für Ihre Anwendung.
 
 *lpszDescription*<br/>
@@ -491,10 +485,10 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
 
 ### <a name="parameters"></a>Parameter
 
-*SC*<br/>
+*sc*<br/>
 Ein OLE-Statuscode, der die Ursache der Ausnahme angibt.
 
-*HR*<br/>
+*hr*<br/>
 Handle für ein Ergebniscode, der den Grund für die Ausnahme angibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -527,7 +521,7 @@ Ein OLE-Fehlercode von DAO, des Typs SCODE. Weitere Informationen finden Sie unt
 
 Das Framework ruft auch `AfxThrowDaoException`. Aufruf können Sie einen der Parameter oder beide übergeben. Z. B. Wenn Sie eine der auslösen möchten die Fehler in definierten **CDaoException::nAfxDaoError** , aber Sie ist nicht wichtig die *Scode* Parameter, übergeben Sie einen gültigen Code in die *nAfxDaoError* Parameters und akzeptieren Sie den Standardwert für *Scode*.
 
-Informationen zu Ausnahmen im Zusammenhang mit den MFC-DAO-Klassen finden Sie in der Klasse `CDaoException` in diesem Buch sowie im Artikel [Ausnahmen: Datenbankausnahmen](../../mfc/exceptions-database-exceptions.md).
+Informationen zu Ausnahmen im Zusammenhang mit den MFC-DAO-Klassen finden Sie in der Klasse `CDaoException` in diesem Buch sowie im Artikel [Ausnahmen: Datenbank-Ausnahmen](../../mfc/exceptions-database-exceptions.md).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -549,10 +543,10 @@ void AfxThrowDBException(
 *nRetCode*<br/>
 Ein Wert vom Typ "RETCODE", definieren den Typ des Fehlers, der die auszulösende Ausnahme verursacht hat.
 
-*PDB-Datei*<br/>
+*pdb*<br/>
 Ein Zeiger auf die `CDatabase` Objekt, das die datenquellenverbindung darstellt, der die Ausnahme zugeordnet ist.
 
-*Befehls beschäftigt*<br/>
+*hstmt*<br/>
 Eine ODBC HSTMT-Handle, das das Anweisungshandle gibt an, das die Ausnahme zugeordnet ist.
 
 ### <a name="remarks"></a>Hinweise
@@ -587,5 +581,6 @@ Siehe das Beispiel für [CATCH](#catch).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Makros und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)<br/>
-[CException-Klasse](../../mfc/reference/cexception-class.md)
+[Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
+[CException-Klasse](cexception-class.md)<br/>
+[CInvalidArgException-Klasse](cinvalidargexception-class.md)

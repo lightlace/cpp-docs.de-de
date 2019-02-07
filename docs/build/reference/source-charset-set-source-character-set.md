@@ -1,18 +1,18 @@
 ---
 title: / Source-CharSet (Quellzeichensatz festlegen)
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - source-charset
 - /source-charset
 helpviewer_keywords:
 - /execution-charset compiler option
 ms.assetid: d3c5bf7f-526d-4ee4-acc5-c1a02a4fc481
-ms.openlocfilehash: 6927c6e54a89f619182916c561dcbe7d1c92a25b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a204000be6e4e434b6ef4aabf6bbc0db1593fb0
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663826"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849716"
 ---
 # <a name="source-charset-set-source-character-set"></a>/ Source-CharSet (Quellzeichensatz festlegen)
 
@@ -48,9 +48,9 @@ Wenn Sie sowohl die Quell- und ausführungszeichensatz in UTF-8 festlegen möcht
 
 1. Erweitern Sie die **Konfigurationseigenschaften**, **C/C++-**, **Befehlszeile** Ordner.
 
-1. In **erweiterte Optionen**, Hinzufügen der **/Source-CharSet** aus, und geben Sie Ihre bevorzugten Codierung.
+1. In **zusätzliche Optionen**, Hinzufügen der **/Source-CharSet** aus, und geben Sie Ihre bevorzugten Codierung.
 
-1. Wählen Sie **OK** zum Speichern der Änderungen.
+1. Klicken Sie auf **OK**, um die Änderungen zu speichern.
 
 ## <a name="see-also"></a>Siehe auch
 

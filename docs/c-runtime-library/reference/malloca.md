@@ -23,12 +23,12 @@ helpviewer_keywords:
 - malloca function
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
-ms.openlocfilehash: 8c8ce8bdf8ab40cae45ecec9c4b182bdf3d6bc82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22a63002c900d69e8a7706a54acedf0b4b4f6376
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563981"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850409"
 ---
 # <a name="malloca"></a>_malloca
 
@@ -51,13 +51,13 @@ Bytes, die vom Stapel zugeordnet werden.
 
 Die **_malloca** -Routine gibt einen **"void"** Zeiger auf den zugewiesenen Speicherplatz, der für die Speicherung eines beliebigen Objekttyps geeignet. Wenn *Größe* ist 0 (null) **_malloca** weist ein Element der Länge 0 (null) und gibt einen gültigen Zeiger auf dieses Element zurück.
 
-Eine Stapelüberlaufausnahme wird generiert, wenn der Speicherplatz nicht zugeordnet werden kann. Die Stapelüberlaufausnahme ist keine C++-Ausnahme, sondern eine strukturierte Ausnahme. Sie müssen anstelle der C++-Ausnahmebehandlung die [Strukturierte Ausnahmebehandlung](../../cpp/structured-exception-handling-c-cpp.md) (Structured Exception Handling, SEH) verwenden.
+Wenn *Größe* ist größer als **_ALLOCA_S_THRESHOLD**, klicken Sie dann **_malloca** versucht, auf dem Heap zugewiesen werden soll, und gibt einen null-Zeiger zurück, wenn der Speicherplatz nicht zugeordnet werden kann. Wenn *Größe* ist kleiner als oder gleich **_ALLOCA_S_THRESHOLD**, klicken Sie dann **_malloca** versucht, auf dem Stapel und eine Stapelüberlaufausnahme zugewiesen wird generiert, wenn der Speicherplatz nicht möglich ist zugeordnet werden. Die Stapelüberlaufausnahme ist eine C++-Ausnahme nicht. Es ist eine strukturierte Ausnahme. Sie müssen anstelle der C++-Ausnahmebehandlung verwenden [Structured Exception Handling](../../cpp/structured-exception-handling-c-cpp.md) (SEH), um diese Ausnahme abzufangen.
 
 ## <a name="remarks"></a>Hinweise
 
 **_malloca** ordnet *Größe* Bytes aus dem Programmstapel oder dem Heap, wenn die Anforderung eine bestimmte Größe in Bytes, die vom überschreitet **_ALLOCA_S_THRESHOLD**. Der Unterschied zwischen **_malloca** und **_alloca** ist, die **_alloca** immer auf dem Stapel, unabhängig von der Größe zuordnet. Im Gegensatz zu **_alloca**, die nicht erfordern oder einen Aufruf von zulassen **kostenlose** um den zugeordneten, Arbeitsspeicher freizugeben **_malloca** erfordert die Verwendung von [_freea](freea.md)um Arbeitsspeicher freizugeben. Im Debugmodus befindet **_malloca** weist immer Speicher vom Heap.
 
-Es gibt Einschränkungen beim expliziten Aufruf **_malloca** in einem Ausnahmehandler (EH). EH-Routinen, die auf x86-Klasse-Prozessoren ausgeführt werden, arbeiten in ihrem eigenen Speicherrahmen: Sie führen Ihre Tasks im Speicherplatz aus, der nicht auf der aktuellen Position des Stapelzeigers der einschließenden Funktion basiert. Die am häufigsten verwendeten Implementierungen umfassen die strukturierte Windows NT-Ausnahmebehandlung (SEH) und C++-Catch-Klauselausdrücke. Aus diesem Grund explizit aufrufen **_malloca** in einem der folgenden Szenarien Ergebnisse in einem Programmfehler während an die aufrufende EH-Routine zurückgegeben:
+Es gibt Einschränkungen beim expliziten Aufruf **_malloca** in einem Ausnahmehandler (EH). EH-Routinen, die auf X86-Klasse-Prozessoren ausgeführt, die in ihrem eigenen Speicherrahmen ausgeführt werden: Sie führen ihre Tasks im Speicherbereich, der nicht auf der aktuellen Position des Stapelzeigers der einschließenden Funktion basiert. Die am häufigsten verwendeten Implementierungen umfassen die strukturierte Windows NT-Ausnahmebehandlung (SEH) und C++-Catch-Klauselausdrücke. Aus diesem Grund explizit aufrufen **_malloca** in einem der folgenden Szenarien Ergebnisse in einem Programmfehler während an die aufrufende EH-Routine zurückgegeben:
 
 - Windows NT-SEH-Ausnahme-Filterausdruck: **__except** (`_malloca ()` )
 

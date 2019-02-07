@@ -2,12 +2,12 @@
 title: ATL HTTP-Hilfsfunktionen
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-ms.openlocfilehash: 43813d91daf572ad6094a5a9fe070234e5086593
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be38dc8b8547574ea47021f8b14f21060a0755f0
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481714"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849647"
 ---
 # <a name="atl-http-utility-functions"></a>ATL HTTP-Hilfsfunktionen
 
@@ -26,7 +26,7 @@ Diese Funktionen unterstützen die Bearbeitung von URLs.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** "atlutil.h"
+**Header:** atlutil.h
 
 ## <a name="atlcanonicalizeurl"></a> AtlCanonicalizeUrl
 
@@ -75,10 +75,6 @@ Gibt "true" bei Erfolg bei "false".
 ### <a name="remarks"></a>Hinweise
 
 Verhält sich wie die aktuelle Version des [InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla) erfordert aber keine WinInet oder Internet Explorer installiert sein.
-
-### <a name="see-also"></a>Siehe auch
-
-[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)
 
 ## <a name="atlcombineurl"></a> AtlCombineUrl
 
@@ -250,7 +246,7 @@ bool inline RGBToHtml(
 
 ### <a name="parameters"></a>Parameter
 
-*Farbe*<br/>
+*color*<br/>
 Ein RGB-Farbwert.
 
 *pbOut*<br/>
@@ -279,7 +275,7 @@ inline void SystemTimeToHttpDate(
 
 ### <a name="parameters"></a>Parameter
 
-*St*<br/>
+*st*<br/>
 Die Systemzeit als eine HTTP-Formatzeichenfolge abgerufen werden sollen.
 
 *strTime*<br/>
@@ -287,5 +283,6 @@ Ein Verweis auf eine Zeichenfolgenvariable, in der HTTP-Empfangsadapter Datum Uh
 
 ## <a name="see-also"></a>Siehe auch
 
-[Konzepte](../../atl/active-template-library-atl-concepts.md)<br/>
-[ATL-COM-Desktop-Komponenten](../../atl/atl-com-desktop-components.md)
+[Konzepte](../active-template-library-atl-concepts.md)<br/>
+[ATL-COM-Desktop-Komponenten](../atl-com-desktop-components.md)<br/>
+[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)

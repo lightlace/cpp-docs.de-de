@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 6c6364dcf5d558bcdd25a2957721df1863d1f73f
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 09c023f6dcbf1fd33a0caac17af75f449d80c509
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893664"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850271"
 ---
 # <a name="message-map-macros-mfc"></a>Meldungszuordnungsmakros (MFC)
 
@@ -258,11 +258,6 @@ Weitere Informationen finden Sie im technischen Hinweis [TN006: Meldungszuordnun
 
 Headerdatei: afxmsg_.h
 
-### <a name="see-also"></a>Siehe auch
-
-[ON_COMMAND](message-map-macros-mfc.md#on_command)<br/>
-[TN006: Meldungszuordnungen](../tn006-message-maps.md)
-
 ## <a name="on_control"></a>  ON_CONTROL
 
 Gibt an, welche Funktion eine Benachrichtigung für benutzerdefinierte Steuerelemente behandelt.
@@ -483,11 +478,6 @@ Sendet den Befehl Rückgängig bearbeiten. Als implementiert:
 
 **Header:** afxdocob.h
 
-### <a name="see-also"></a>Siehe auch
-
-[COleCmdUI-Klasse](colecmdui-class.md)<br/>
-[COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)
-
 ## <a name="on_registered_message"></a>  ON_REGISTERED_MESSAGE
 
 Die Windows `RegisterWindowMessage` Funktion wird verwendet, um eine neue Fensternachricht zu definieren, die garantiert im gesamten System eindeutig sein.
@@ -525,11 +515,6 @@ END_MESSAGE_MAP()
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxmsg_.h
-
-### <a name="see-also"></a>Siehe auch
-
-[RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)<br/>
-[Benutzerdefinierte Handler](user-defined-handlers.md)
 
 ## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE
 
@@ -610,10 +595,6 @@ Weitere Informationen und Beispiele finden Sie unter [Nachrichtenbehandlung und 
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxole.h
-
-### <a name="see-also"></a>Siehe auch
-
-[CCmdUI-Klasse](ccmdui-class.md)
 
 ## <a name="on_command_range"></a>  ON_COMMAND_RANGE
 
@@ -736,3 +717,13 @@ Weitere Informationen zum Implementieren von Handlerfunktionen für einen Bereic
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxmsg_.h
+
+## <a name="see-also"></a>Siehe auch
+
+[ON_COMMAND](message-map-macros-mfc.md#on_command)<br/>
+[TN006: Meldungszuordnungen](../tn006-message-maps.md)<br/>
+[COleCmdUI-Klasse](colecmdui-class.md)<br/>
+[COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)<br/>
+[RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)<br/>
+[Benutzerdefinierte Handler](user-defined-handlers.md)<br/>
+[CCmdUI-Klasse](ccmdui-class.md)

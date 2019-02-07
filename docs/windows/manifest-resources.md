@@ -4,13 +4,14 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifest resources [C++]
 - resources [C++], manifest
+- resources [C++], opening
 ms.assetid: 8615334c-22a0-44c0-93e0-5924528c9917
-ms.openlocfilehash: 081fd12a86c31973c7856ca7b9f3fcb129e2eb81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d135cb2d512313f107eef7e95ec90d7972b68b4
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578281"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850189"
 ---
 # <a name="manifest-resources-c"></a>Manifestressourcen Sie (C++)
 
@@ -34,9 +35,23 @@ In C++-Desktopprojekten werden Ressourcen in einem Dienstmanifest XML-Dateien, d
 
 Bei Windows XP- oder Windows Vista-Anwendungen gibt die Manifestressource nicht nur an, dass die Anwendung die aktuellste Version der allgemeinen Windows-Steuerelemente (v6.0, wie oben dargestellt) verwendet, sondern dass sie darüber hinaus das [Syslink-Steuerelement](/windows/desktop/Controls/syslink-overview)unterstützt.
 
-Zum Anzeigen der Version, und geben Sie in einer Manifestressource enthaltenen Informationen, können Sie die Datei in einem XML-Viewer oder im Visual Studio-Text-Editor öffnen. Weitere Informationen finden Sie unter [Öffnen einer Manifestressource im Text-Editor von Visual Studio](../windows/how-to-open-a-manifest-resource.md).
-
 Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*.
+
+Zum Anzeigen der Version, und geben Sie in einer Manifestressource enthaltenen Informationen, können Sie die Datei in einem XML-Viewer oder im Visual Studio-Text-Editor öffnen. Beim Öffnen einer Manifestressource aus [Ressourcenansicht](../windows/resource-view-window.md)wird die Ressource im Binärformat geöffnet. Um den Inhalt einer Manifestressource in einem besser lesbaren Format anzuzeigen, müssen Sie die Ressource aus öffnen **Projektmappen-Explorer**.
+
+## <a name="to-open-a-manifest-resource-in-the-text-editor"></a>Öffnen einer Manifestressource im Text-Editor
+
+1. Mit das Projekt im **Projektmappen-Explorer**, erweitern Sie die **Ressourcendateien** Ordner.
+
+1. Doppelklicken Sie auf die .manifest-Datei.
+
+   Die Manifestressource wird geöffnet, der **Text-Editor**.
+
+## <a name="to-open-a-manifest-resource-in-another-editor"></a>Öffnen einer Manifestressource in einem anderen Editor
+
+1. In **Projektmappen-Explorer**mit der rechten Maustaste auf die .manifest-Datei, und wählen Sie **Öffnen mit...**  aus dem Kontextmenü.
+
+1. In der **Öffnen mit** Dialogfeld Geben Sie den Editor, Sie möchten, und aktivieren Sie **öffnen**.
 
 ## <a name="limitations"></a>Einschränkungen
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-ms.openlocfilehash: 06153a72ce6ed6e5422022255eec333110709778
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 374618aba297fb2c055ce02f93d0c7c93b38dc06
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618308"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850176"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Standard-Dialogdatenaustauschroutinen
 
@@ -90,7 +90,7 @@ Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt b
 *nIDC*<br/>
 Die Ressourcen-ID des Kombinationsfeld-Steuerelements mit der Eigenschaft des Steuerelements verknüpft ist.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansicht oder steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -125,7 +125,7 @@ Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt b
 *nIDC*<br/>
 Die Ressourcen-ID des Kombinationsfeld-Steuerelements mit der Eigenschaft des Steuerelements verknüpft ist.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansicht oder steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -160,7 +160,7 @@ Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt b
 *nIDC*<br/>
 Die Ressourcen-ID des Kontrollkästchen-Steuerelements, das der Eigenschaft des Steuerelements zugeordnet werden soll.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansicht oder steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -234,7 +234,7 @@ Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *nIDC*<br/>
 Die Ressourcen-ID, der die Datums- / Zeitauswahl-Steuerelement die Membervariable zugeordnet werden soll.
 
-*Wert*<br/>
+*value*<br/>
 In den ersten beiden Versionen, die einen Verweis auf eine `CTime` oder `COleDateTime` Membervariablen gespeichert, das Dialogfeld, Formularansicht oder steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden. In der dritten Version, die einen Verweis auf eine `CString` Data Member steuerungsansichtsobjekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -278,16 +278,11 @@ Ein Verweis auf eine [CWinFormsControl-Klasse](cwinformscontrol-class.md) Objekt
 
 `DDX_ManagedControl` Aufrufe [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) zum Erstellen eines Steuerelements mit der Resource-Steuerelement-ID übereinstimmt. Verwendung `DDX_ManagedControl` zum Erstellen von Steuerelementen aus dem Ressourcen-IDs in [CDialog::](cdialog-class.md#oninitdialog). Für den Datenaustausch verwendet müssen Sie nicht die DDX-/DDV-Funktionen mit Windows Forms-Steuerelemente verwenden.
 
-Weitere Informationen finden Sie unter [wie: tun DDX-/DDV-Datenbindung mit Windows Forms](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
+Weitere Informationen finden Sie unter [Vorgehensweise: DDX/DDV-Datenbindung mit Windows Forms](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
 
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxwinforms.h
-
-### <a name="see-also"></a>Siehe auch
-
-[CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
-[CDialog::](cdialog-class.md#oninitdialog)
 
 ##  <a name="ddx_ipaddress"></a>  DDX_IPAddress
 
@@ -308,7 +303,7 @@ Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt b
 *nIDC*<br/>
 Die Ressourcen-ID des Steuerelements IP-Adresse der Eigenschaft des Steuerelements zugeordnet werden soll.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf den DWORD-Wert, der mit dem 4-Feld-Wert, der das Steuerelement für die IP-Adresse. Die Felder ausgefüllt oder wie folgt zu lesen.
 
 |Feld|Bits, die den Wert des Felds enthält.|
@@ -381,7 +376,7 @@ Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt b
 *nIDC*<br/>
 Die Ressourcen-ID des Listenfeld-Steuerelements mit der Eigenschaft des Steuerelements verknüpft ist.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansicht oder steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -418,7 +413,7 @@ Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt b
 *nIDC*<br/>
 Die Ressourcen-ID des Listenfeld-Steuerelements mit der Eigenschaft des Steuerelements verknüpft ist.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansicht oder steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -460,7 +455,7 @@ Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *nIDC*<br/>
 Die Ressourcen-ID, der im Monatskalender-Steuerelement, die die Membervariable zugeordnet ist.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine `CTime` oder `COleDateTime` Membervariable des Dialogfelds, Formularansicht oder steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -495,7 +490,7 @@ Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt b
 *nIDC*<br/>
 Die Ressourcen-ID, der das erste Optionsfeld-Steuerelement in der Gruppe.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansicht oder steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -529,7 +524,7 @@ Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt b
 *nIDC*<br/>
 Die Ressourcen-ID des Schiebeleisten-Steuerelements mit der Eigenschaft des Steuerelements verknüpft ist.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansichts- oder Steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -561,7 +556,7 @@ Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *nIDC*<br/>
 Die Ressourcen-ID des Schieberegler-Steuerelements.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf den Wert ausgetauscht werden sollen. Dieser Parameter enthält, oder legt die aktuelle Position des Schieberegler-Steuerelements fest.
 
 ### <a name="remarks"></a>Hinweise
@@ -643,7 +638,7 @@ Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *nIDC*<br/>
 Die ID des ein Bearbeitungssteuerelement im im Dialogfeld, in der Formularansicht oder steuerungsansichtsobjekt.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf einen Datenmember in das Dialogfeld, Formularansicht oder steuerungsansichtsobjekt. Der Datentyp des *Wert* abhängig von der überladenen Versionen `DDX_Text` Sie verwenden.
 
 ### <a name="remarks"></a>Hinweise
@@ -656,5 +651,7 @@ Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und -vali
 
 ## <a name="see-also"></a>Siehe auch
 
-[Standardroutinen zur Validierung der Dialogfelddaten](../../mfc/reference/standard-dialog-data-validation-routines.md)<br/>
-[Makros und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)
+[Standardroutinen zur Validierung der Dialogfelddaten](standard-dialog-data-validation-routines.md)<br/>
+[Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
+[CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
+[CDialog::OnInitDialog](cdialog-class.md#oninitdialog)

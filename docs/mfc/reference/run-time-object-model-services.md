@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: fb5d35782e70924605fd344e2c330e18d611f44c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fce6fb938b501da7bc9251de51c71714e4613fd5
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519203"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850284"
 ---
 # <a name="run-time-object-model-services"></a>Objektmodelldienste zur Laufzeit
 
@@ -79,11 +79,6 @@ Verwenden Sie dieses Makro, um zu bestimmen, ob die allgemeine Steuerelemente-Bi
 
 afxcomctl32.h, afxcomctl32.inl
 
-### <a name="see-also"></a>Siehe auch
-
-[Isolierung der MFC-Bibliothek für Standardsteuerelemente](../isolation-of-the-mfc-common-controls-library.md)<br/>
-[AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)
-
 ## <a name="afx_comctl32_if_exists2"></a>  AFX_COMCTL32_IF_EXISTS2
 
 Bestimmt, ob die allgemeine Steuerelemente-Bibliothek die angegebene API implementiert (Dies ist die Unicode-Version von [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)).
@@ -107,11 +102,6 @@ Verwenden Sie dieses Makro, um zu bestimmen, ob die allgemeine Steuerelemente-Bi
 
 afxcomctl32.h, afxcomctl32.inl
 
-### <a name="see-also"></a>Siehe auch
-
-[Isolierung der MFC-Bibliothek für Standardsteuerelemente](../isolation-of-the-mfc-common-controls-library.md)<br/>
-[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
-
 ##  <a name="declare_dynamic"></a>  DECLARE_DYNAMIC
 
 Fügt die Fähigkeit zur Laufzeit Zugriff auf Informationen über die Klasse eines Objekts beim Ableiten einer Klasse von `CObject`.
@@ -122,7 +112,7 @@ DECLARE_DYNAMIC(class_name)
 
 ### <a name="parameters"></a>Parameter
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Der tatsächliche Name der Klasse.
 
 ### <a name="remarks"></a>Hinweise
@@ -153,7 +143,7 @@ DECLARE_DYNCREATE(class_name)
 
 ### <a name="parameters"></a>Parameter
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Der tatsächliche Name der Klasse.
 
 ### <a name="remarks"></a>Hinweise
@@ -189,7 +179,7 @@ DECLARE_OLECTLTYPE( class_name )
 
 ### <a name="parameters"></a>Parameter
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Der Name der Steuerelement-Klasse.
 
 ### <a name="remarks"></a>Hinweise
@@ -199,10 +189,6 @@ Der Name der Steuerelement-Klasse.
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxctl.h
-
-### <a name="see-also"></a>Siehe auch
-
-[IMPLEMENT_OLECTLTYPE](#implement_olectltype)
 
 ## <a name="declareproppageids"></a>DECLARE_PROPPAGEIDS
 
@@ -216,7 +202,7 @@ DECLARE_PROPPAGEIDS( class_name )
 
 ### <a name="parameters"></a>Parameter
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Der Name der Steuerelement-Klasse, die die Eigenschaftenseiten besitzt.
 
 ### <a name="remarks"></a>Hinweise
@@ -229,11 +215,6 @@ Weitere Informationen zu Eigenschaftenseiten, finden Sie im Artikel [ActiveX-Ste
 
 **Header:** afxctl.h
 
-### <a name="see-also"></a>Siehe auch
-
-[BEGIN_PROPPAGEIDS](#begin_proppageids)<br/>
-[END_PROPPAGEIDS](#end_proppageids)
-
 ##  <a name="declare_serial"></a>  DECLARE_SERIAL
 
 Generiert den Code der C++-Header für eine `CObject`-abgeleitete Klasse, die serialisiert werden kann.
@@ -244,7 +225,7 @@ DECLARE_SERIAL(class_name)
 
 ### <a name="parameters"></a>Parameter
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Der tatsächliche Name der Klasse.
 
 ### <a name="remarks"></a>Hinweise
@@ -281,7 +262,7 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
 
 ### <a name="parameters"></a>Parameter
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Der tatsächliche Name der Klasse.
 
 *base_class_name*<br/>
@@ -313,7 +294,7 @@ IMPLEMENT_DYNCREATE(class_name, base_class_name)
 
 ### <a name="parameters"></a>Parameter
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Der tatsächliche Name der Klasse.
 
 *base_class_name*<br/>
@@ -352,7 +333,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 
 ### <a name="parameters"></a>Parameter
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Der tatsächliche Name der Klasse.
 
 *external_name*<br/>
@@ -382,12 +363,6 @@ Die OLE-Klassen-ID ist für das Objekt einen eindeutigen 128-Bit-Bezeichner. Es 
 
 **Header:** afxdisp.h
 
-### <a name="see-also"></a>Siehe auch
-
-[Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
-[DECLARE_OLECREATE](#declare_olecreate)<br/>
-[CLSID-Schlüssel](/windows/desktop/com/clsid-key-hklm)
-
 ## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
 
 Implementiert die `GetUserTypeNameID` und `GetMiscStatus` Memberfunktionen der Steuerelementklasse.
@@ -400,7 +375,7 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 
 ### <a name="parameters"></a>Parameter
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Der Name der Steuerelement-Klasse.
 
 *idsUserTypeName*<br/>
@@ -422,11 +397,6 @@ Die `GetUserTypeNameID` Memberfunktion gibt die Ressourcenzeichenfolge, die die 
 
 **Header:** afxctl.h
 
-### <a name="see-also"></a>Siehe auch
-
-[Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
-[DECLARE_OLECTLTYPE](#declare_olectltype)
-
 ##  <a name="implement_serial"></a>  IMPLEMENT_SERIAL
 
 Generiert den C++-Code für eine dynamische `CObject`-Klasse mit der Run-Time-Zugriff auf den Klassennamen und die Position innerhalb der Hierarchie.
@@ -437,7 +407,7 @@ IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)
 
 ### <a name="parameters"></a>Parameter
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Der tatsächliche Name der Klasse.
 
 *base_class_name*<br/>
@@ -474,7 +444,7 @@ RUNTIME_CLASS(class_name)
 
 ### <a name="parameters"></a>Parameter
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Der tatsächliche Name der Klasse (nicht in Anführungszeichen eingeschlossen).
 
 ### <a name="remarks"></a>Hinweise
@@ -501,7 +471,7 @@ DECLARE_OLECREATE(class_name)
 
 ### <a name="parameters"></a>Parameter
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Der tatsächliche Name der Klasse.
 
 ### <a name="remarks"></a>Hinweise
@@ -526,7 +496,7 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
 
 ### <a name="parameters"></a>Parameter
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Der tatsächliche Name der Klasse.
 
 *external_name*<br/>
@@ -549,5 +519,7 @@ Die OLE-Klassen-ID ist für das Objekt einen eindeutigen 128-Bit-Bezeichner. Es 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Makros und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)
+[Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
+[Isolierung der MFC-Bibliothek für Standardsteuerelemente](../isolation-of-the-mfc-common-controls-library.md)<br/>
+[CLSID-Schlüssel](/windows/desktop/com/clsid-key-hklm)
 

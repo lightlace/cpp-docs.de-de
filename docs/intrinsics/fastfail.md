@@ -2,12 +2,12 @@
 title: __fastfail
 ms.date: 11/04/2016
 ms.assetid: 9cd32639-e395-4c75-9f3a-ac3ba7f49921
-ms.openlocfilehash: b05c86148014a4a34d852d1a00caeb71ee136548
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e96d981be5c5186d6cc472cc8f4dffcbf1c2b7bf
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521384"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849475"
 ---
 # <a name="fastfail"></a>__fastfail
 
@@ -41,6 +41,7 @@ Intern wird `__fastfail` mithilfe mehrerer architekturspezifischer Mechanismen i
 |x86|int 0x29|ecx|
 |x64|int 0x29|rcx|
 |ARM|Opcode 0xDEFB|r0|
+|ARM64|Opcode 0xF003|x0|
 
 Eine Fast-Fail-Anforderung ist in sich abgeschlossen und erfordert in der Regel nur zwei Anweisungen, die ausgeführt werden müssen. Nachdem eine Fast-Fail-Anforderung ausgeführt wurde, leitet der Kernel die entsprechende Aktion ein. Im Benutzermoduscode bestehen keine Speicherabhängigkeiten über den Anweisungszeiger selbst hinaus, wenn ein Fast-Fail-Ereignis ausgelöst wird. Dadurch wird eine maximale Zuverlässigkeit erreicht, selbst wenn eine schwerwiegende Speicherbeschädigung vorliegt.
 
@@ -56,7 +57,7 @@ Unterstützung für systemeigene Fast-Fail-Mechanismen begann mit Windows 8. Win
 
 |Systemintern|Architektur|
 |---------------|------------------|
-|`__fastfail`|X86, x 64, ARM|
+|`__fastfail`|x86, x64, ARM, ARM64|
 
 **Headerdatei** \<intrin.h >
 

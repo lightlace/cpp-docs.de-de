@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event map macros [MFC]
 - interface map macros [MFC]
 ms.assetid: 3840e642-ff7d-4bdc-998b-c7d8fc50890e
-ms.openlocfilehash: cd1f38236baf2caca9f2a2a426f28f797291fb13
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8f48b916f7130551fc8d4da5bb2ebc75d8d728d5
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524650"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850202"
 ---
 # <a name="delegate-and-interface-map-macros"></a>Zuordnungsmakros von Delegaten und -Schnittstelle
 
@@ -51,10 +51,6 @@ Dieses Makro markiert den Anfang einer Liste von Einträgen für Delegaten, die 
 
 **Header:** msclr\event.h
 
-### <a name="see-also"></a>Siehe auch
-
-[Vorgehensweise: Auffangen von Windows Forms-Ereignissen aus nativen C++-Klassen](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
-
 ##  <a name="begin_interface_map"></a>BEGIN_INTERFACE_MAP
 
 Der Beginn der Definition der interfaced Zuordnung in der Implementierungsdatei verwendet.
@@ -70,7 +66,7 @@ BEGIN_INTERFACE_MAP( theClass, baseClass )
 *theClass*<br/>
 Die Klasse, in der die Schnittstellenzuordnung definiert werden soll
 
-*Basisklasse*<br/>
+*baseClass*<br/>
 Die Klasse, von der *TheClass* abgeleitet.
 
 ### <a name="remarks"></a>Hinweise
@@ -102,17 +98,13 @@ Die Befehls-ID.
 
 Dieser Delegat registriert eine Befehlsquelle Rückrufmethoden. Wenn Sie einen Delegaten an das Quellobjekt für den Befehl hinzufügen, wird die Callback-Methode einen Handler für Befehle, die aus der angegebenen Quelle stammen.
 
-Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen Befehlsrouting an der Windows Forms-Steuerelement](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
+Weitere Informationen finden Sie unter [Vorgehensweise: Befehl "hinzufügen" Routing an das Windows Forms-Steuerelement](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
 
 Weitere Informationen zur Verwendung von Windows Forms finden Sie unter [verwenden ein Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxwinforms.h (definiert in der Assembly atlmfc\lib\mfcmifc80.dll)
-
-### <a name="see-also"></a>Siehe auch
-
-[Vorgehensweise: Hinzufügen von Befehlsrouting zum Windows Forms-Steuerelement](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)
 
 ##  <a name="commanduihandler"></a>CommandUIHandler
 
@@ -142,11 +134,6 @@ Weitere Informationen zur Verwendung von Windows Forms finden Sie unter [verwend
 
 **Header:** afxwinforms.h (definiert in der Assembly atlmfc\lib\mfcmifc80.dll)
 
-### <a name="see-also"></a>Siehe auch
-
-[Vorgehensweise: Hinzufügen von Befehlsrouting zum Windows Forms-Steuerelement](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
-[CommandHandler](#commandhandler)
-
 ##  <a name="end_delegate_map"></a>END_DELEGATE_MAP
 
 Eine Delegat-Zuordnung wird beendet.
@@ -165,10 +152,6 @@ Dieses Makro markiert das Ende einer Liste von Einträgen für Delegaten, die ei
 
 **Header:** msclr\event.h
 
-### <a name="see-also"></a>Siehe auch
-
-[Vorgehensweise: Auffangen von Windows Forms-Ereignissen aus nativen C++-Klassen](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
-
 ##  <a name="end_interface_map"></a>END_INTERFACE_MAP
 
 Beendet die schnittstellenzuordnung in der Implementierungsdatei hinzu.
@@ -186,11 +169,6 @@ Weitere Informationen zu schnittstellenzuordnungen, finden Sie unter [technische
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxwin.h
-
-### <a name="see-also"></a>Siehe auch
-
-[Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
-[BEGIN_INTERFACE_MAP](#begin_interface_map)
 
 ##  <a name="event_delegate_entry"></a>EVENT_DELEGATE_ENTRY
 
@@ -231,12 +209,6 @@ END_DELEGATE_MAP()
 
 **Header:** msclr\event.h
 
-### <a name="see-also"></a>Siehe auch
-
-[MAKE_DELEGATE](#make_delegate)<br/>
-[BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
-[END_DELEGATE_MAP](#end_delegate_map)
-
 ##  <a name="interface_part"></a>INTERFACE_PART
 
 Zwischen der BEGIN_INTERFACE_MAP-Makro und das END_INTERFACE_MAP-Makro verwendet, für jede Schnittstelle, die von Ihrem Objekt unterstützt werden.
@@ -251,7 +223,7 @@ INTERFACE_PART( theClass, iid, localClass)
 
 *theClass*<br/>
 Der Name der Klasse, die die Schnittstellenzuordnung enthält.
-*IID*<br/>
+*iid*<br/>
 Die IID, die der eingebetteten Klasse zugeordnet werden soll.
 *localClass*<br/>
 Der Name der lokalen Klasse.
@@ -306,9 +278,8 @@ void CMyView::OnInitialUpdate()
 
 **Header:** msclr\event.h
 
-### <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Siehe auch
 
-[BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
-[END_DELEGATE_MAP](#end_delegate_map)<br/>
-[EVENT_DELEGATE_ENTRY](#event_delegate_entry)
-
+[Vorgehensweise: Auffangen von Windows Forms-Ereignissen aus nativen C++-Klassen](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)<br/>
+[Vorgehensweise: Hinzufügen von Befehlsrouting zum Windows Forms-Steuerelement](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
+[Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
