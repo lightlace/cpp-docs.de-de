@@ -20,12 +20,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: dbb243453b6d869082a4232b12b27f5510d84aa5
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: a4979ab7bbc0e396de5629fba1b86f3bfb602dcf
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657629"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850439"
 ---
 # <a name="diagnostic-services"></a>Diagnosedienste
 
@@ -147,7 +147,7 @@ ASSERT(booleanExpression)
 
 ### <a name="parameters"></a>Parameter
 
-*boolescher Ausdruck*<br/>
+*booleanExpression*<br/>
 Gibt einen Ausdruck (einschließlich Zeigerwerte), der ungleich NULL oder 0 ergibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -186,7 +186,7 @@ ASSERT_KINDOF(classname, pobject)
 *classname*<br/>
 Der Name des eine `CObject`-abgeleitete Klasse.
 
-*pObject*<br/>
+*pobject*<br/>
 Ein Zeiger auf ein Objekt der Klasse.
 
 ### <a name="remarks"></a>Hinweise
@@ -302,7 +302,7 @@ ENSURE_VALID( booleanExpression  )
 
 ### <a name="parameters"></a>Parameter
 
-*boolescher Ausdruck*<br/>
+*booleanExpression*<br/>
 Gibt einen booleschen Ausdruck getestet werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -319,12 +319,6 @@ Wenn einer dieser Tests fehlschlägt, wird eine Warnmeldung in die gleiche Weise
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afx.h
-
-### <a name="see-also"></a>Siehe auch
-
-[Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
-[VERIFY](#verify)<br/>
-[ATLENSURE](#altensure)
 
 ## <a name="this_file"></a> THIS_FILE
 
@@ -355,12 +349,6 @@ static char THIS_FILE[] = __FILE__;
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afx.h
-
-### <a name="see-also"></a>Siehe auch
-
-[Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
-[ASSERT](#assert)<br/>
-[VERIFY](#verify)
 
 ##  <a name="trace"></a>  TRACE
 
@@ -393,7 +381,7 @@ VERIFY(booleanExpression)
 
 ### <a name="parameters"></a>Parameter
 
-*boolescher Ausdruck*<br/>
+*booleanExpression*<br/>
 Gibt einen Ausdruck (einschließlich Zeigerwerte), der ungleich NULL oder 0 ergibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -452,7 +440,7 @@ void AfxDump(const CObject* pOb);
 
 ### <a name="parameters"></a>Parameter
 
-*Geschäftssitz*<br/>
+*pOb*<br/>
 Ein Zeiger auf ein Objekt einer Klasse abgeleitet `CObject`.
 
 ### <a name="remarks"></a>Hinweise
@@ -464,10 +452,6 @@ Programmcode sollte nicht aufrufen `AfxDump`, aber Sie sollten stattdessen aufru
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afx.h
-
-### <a name="see-also"></a>Siehe auch
-
-[CObject::Dump](cobject-class.md#dump)
 
 ##  <a name="afxmemdf"></a>  afxMemDF
 
@@ -569,7 +553,7 @@ void AfxDump(const CObject* pOb);
 
 ### <a name="parameters"></a>Parameter
 
-*Geschäftssitz*<br/>
+*pOb*<br/>
 Ein Zeiger auf ein Objekt einer Klasse abgeleitet `CObject`.
 
 ### <a name="remarks"></a>Hinweise
@@ -581,10 +565,6 @@ Programmcode sollte nicht aufrufen `AfxDump`, aber Sie sollten stattdessen aufru
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afx.h
-
-### <a name="see-also"></a>Siehe auch
-
-[CObject::Dump](cobject-class.md#dump)
 
 ##  <a name="afxdumpstack"></a>  AfxDumpStack
 
@@ -776,7 +756,7 @@ BOOL AfxIsValidAddress(
 
 ### <a name="parameters"></a>Parameter
 
-*LP*<br/>
+*lp*<br/>
 Verweist auf die Speicheradresse, die getestet werden.
 
 *nBytes*<br/>
@@ -856,7 +836,7 @@ Ungleich NULL, wenn Sie die Zuordnung zulassen möchten; andernfalls 0.
 
 Die Microsoft Foundation Class-Bibliothek Debug-Speicherreservierungsfunktion kann aufrufen, damit die Benutzer aus, um eine speicherbelegung zu überwachen und zu steuern, ob die Zuordnung zulässig ist eine benutzerdefinierte Hookfunktion. Hookfunktionen lauten wie folgt Prototyp:
 
-**"Bool" AFXAPI AllocHook (Size_t** `nSize` **, "bool"** `bObject` **langen** `lRequestNumber` **);**
+**BOOL AFXAPI AllocHook( size_t** `nSize`**, BOOL** `bObject`**, LONG** `lRequestNumber` **);**
 
 *nSize*<br/>
 Die Größe der vorgeschlagenen speicherbelegung.
@@ -942,4 +922,5 @@ Stapel, globale oder eingebettete Objekte werden nicht aufgezählt. Der Zeiger �
 
 ## <a name="see-also"></a>Siehe auch
 
-[Makros und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)
+[Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
+[CObject::Dump](cobject-class.md#dump)

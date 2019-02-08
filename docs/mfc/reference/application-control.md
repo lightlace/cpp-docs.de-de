@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
-ms.openlocfilehash: 55a5dcad21502e7aff7427dbdad41d25298356e7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: e4944c1cf1114bbd009ebc62b776628ba86b3b4d
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518917"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850310"
 ---
 # <a name="application-control"></a>Anwendungssteuerelement
 
@@ -212,11 +212,6 @@ AfxOleLockControl(_T("MSCAL.Calendar"));
 
 **Header:** afxwin.h
 
-### <a name="see-also"></a>Siehe auch
-
-[Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
-[AfxOleUnlockControl](#afxoleunlockcontrol)
-
 ##  <a name="afxoleregisterserverclass"></a>  AfxOleRegisterServerClass
 
 Diese Funktion können Sie Ihren Server in der OLE-systemregistrierung registrieren.
@@ -237,7 +232,7 @@ BOOL AFXAPI AfxOleRegisterServerClass(
 *clsid*<br/>
 Referenz-ID des Servers OLE-Klasse.
 
-*"lpszclassname"*<br/>
+*lpszClassName*<br/>
 Zeiger auf eine Zeichenfolge, die den Klassennamen des Servers Objekte enthält.
 
 *lpszShortTypeName*<br/>
@@ -327,15 +322,11 @@ Wenn der Server nur ein primäres Verb erkennt, wird das Menüelement "Verb *Typ
 
 Sie benötigen die folgende Anweisung im Ressourcenskript für Ihren Client-Anwendung (. RC)-Datei:
 
-**#include \<afxolecl.rc >**
+**#include \<afxolecl.rc>**
 
 ### <a name="requirements"></a>Anforderungen
 
 **Header**: afxole.h
-
-## <a name="see-also"></a>Siehe auch
-
-[Makros und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)
 
 ## <a name="afxoleunlockcontrol"></a> AfxOleUnlockControl
 
@@ -376,8 +367,6 @@ AfxOleUnlockControl(_T("MSCAL.Calendar"));
 
 **Header:** afxwin.h
 
-### <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Siehe auch
 
 [Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
-[AfxOleLockControl](#afxolelockcontrol)
-

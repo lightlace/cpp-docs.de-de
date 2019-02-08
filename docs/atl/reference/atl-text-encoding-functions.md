@@ -25,12 +25,12 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-ms.openlocfilehash: a97f914905c2f98bc948b76e1d79d4af0f5dbadd
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 2a076b666577920c940413fba4951f7de5f24fc6
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327498"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850258"
 ---
 # <a name="atl-text-encoding-functions"></a>ATL-Textcodierung-Funktionen
 
@@ -48,7 +48,7 @@ Diese Funktionen unterstützen, Text, Codierung und Decodierung durchführen.
 |[AtlUnicodeToUTF8](#atlunicodetoutf8)|Mit dieser Funktion können Sie eine Unicode-Zeichenfolge in UTF-8 konvertieren. |
 |[BEncode](#bencode)|Mit dieser Funktion werden einige Daten mit "B"-Codierung konvertiert.|
 |[BEncodeGetRequiredLength](#bencodegetrequiredlength)|Mit dieser Funktion können Sie die Größe eines Puffers in Zeichen abrufen, der eine Zeichenfolge enthalten kann, die aus Daten der angegebenen Größe codiert wurde.|
-|["Escapexml"](#escapexml)|Mit dieser Funktion werden für die Verwendung in XML unsichere Zeichen in sichere Zeichen konvertiert.|
+|[EscapeXML](#escapexml)|Mit dieser Funktion werden für die Verwendung in XML unsichere Zeichen in sichere Zeichen konvertiert.|
 |[GetExtendedChars](#getextendedchars)|Mit dieser Funktion können Sie die Anzahl von Sonderzeichen in einer Zeichenfolge abrufen.|
 |[IsExtendedChar](#isextendedchar)|Mit dieser Funktion können Sie herausfinden, ob ein angegebenes Zeichen ein Sonderzeichen ist (kleiner als 32, größer als 126 und kein Tabstopp-, Zeilenvorschub- oder Wagenrücklaufzeichen)|
 |[QEncode](#qencode)|Mit dieser Funktion werden einige Daten mit "Q"-Codierung konvertiert.  |
@@ -93,7 +93,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 
 ### <a name="parameters"></a>Parameter
 
-*Beibehalten*<br/>
+*pReserved*<br/>
 Ein reserviertes Zeiger.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -721,7 +721,7 @@ Die erforderliche Anzahl von Zeichen für einen Puffer, die codierte Daten entha
 
 Diese Implementierung Binärstreams in UUENCODE folgt der POSIX-P1003.2b/D11-Spezifikation.
 
-### <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Siehe auch
 
-[Konzepte](../../atl/active-template-library-atl-concepts.md)<br/>
-[ATL-COM-Desktop-Komponenten](../../atl/atl-com-desktop-components.md)
+[Konzepte](../active-template-library-atl-concepts.md)<br/>
+[ATL-COM-Desktop-Komponenten](../atl-com-desktop-components.md)

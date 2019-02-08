@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - /utf-8 compiler option
 ms.assetid: f0e1f3cb-6cae-46eb-9483-04ed13d9b504
-ms.openlocfilehash: cb71e1846348adf4cf8a8eb385e6c5f7ac2bac74
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: efe37f66790832874f7ff2aa9623b07b5fba5371
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636526"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55851634"
 ---
 # <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/UTF-8 (Quelle festlegen und ausführbare Zeichensätze auf UTF-8)
 
@@ -35,9 +35,9 @@ Standardmäßig erkennt Visual Studio eine Bytereihenfolge-Marke, um festzustell
 
 1. Erweitern Sie die **Konfigurationseigenschaften**, **C/C++-**, **Befehlszeile** Ordner.
 
-1. In **erweiterte Optionen**, Hinzufügen der **/utf-8** aus, und geben Sie Ihre bevorzugten Codierung.
+1. In **zusätzliche Optionen**, Hinzufügen der **/utf-8** verwenden, um die bevorzugte Codierung anzugeben.
 
-1. Wählen Sie **OK** zum Speichern der Änderungen.
+1. Klicken Sie auf **OK**, um die Änderungen zu speichern.
 
 ## <a name="see-also"></a>Siehe auch
 

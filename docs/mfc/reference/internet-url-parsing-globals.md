@@ -7,12 +7,12 @@ helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-ms.openlocfilehash: 8765a0712fc79ee60041f9142fbd25f744246ac8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 144ca5cddb70dd04bf25d790c493d15d75b8163a
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477154"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850133"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Analysieren von Internet-URLs und -Hilfsprogramme
 
@@ -86,10 +86,10 @@ Gibt den Typ des Internet-Diensts an. Folgende Werte sind möglich:
 *strServer*<br/>
 Das erste Segment der URL nach der Diensttyp.
 
-*%{strObject/*<br/>
+*strObject*<br/>
 Ein Objekt, das auf die URL verweist (kann leer sein).
 
-*%nPort*<br/>
+*nPort*<br/>
 Durch den Server oder Objekt Teile der URL bestimmt, soweit vorhanden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -102,13 +102,13 @@ Analysiert eine URL-Zeichenfolge und gibt den Typ des Diensts und seiner Kompone
 
 Z. B. `AfxParseURL` URLs im Format analysiert *Service://server/dir/dir/object.ext:port* und gibt seine Komponenten wie folgt gespeichert:
 
-*StrServer* == "Server"
+*strServer* == "server"
 
-*%{strObject/* == "/ dir/dir/object/object.ext"
+*strObject* == "/dir/dir/object/object.ext"
 
-*%nPort* #port ==
+*nPort* == #port
 
-*DwServiceType* #service ==
+*dwServiceType* == #service
 
 > [!NOTE]
 >  Um diese Funktion aufzurufen, muss Ihr Projekt CFILEFIND enthalten. H.
@@ -174,13 +174,13 @@ Gibt den Typ des Internet-Diensts an. Folgende Werte sind möglich:
 *strServer*<br/>
 Das erste Segment der URL nach der Diensttyp.
 
-*%{strObject/*<br/>
+*strObject*<br/>
 Ein Objekt, das auf die URL verweist (kann leer sein).
 
-*%nPort*<br/>
+*nPort*<br/>
 Durch den Server oder Objekt Teile der URL bestimmt, soweit vorhanden.
 
-*"strUserName"*<br/>
+*strUsername*<br/>
 Ein Verweis auf eine `CString` -Objekt, das den Namen des Benutzers enthält.
 
 *strPassword*<br/>
@@ -213,10 +213,6 @@ Analysiert eine URL-Zeichenfolge und gibt den Typ des Diensts und seiner Kompone
 ### <a name="requirements"></a>Anforderungen
 
   **Header** afxinet.h
-
-## <a name="see-also"></a>Siehe auch
-
-[Makros und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)
 
 ## <a name="afxgetinternethandletype"></a>  AfxGetInternetHandleType
 
@@ -274,11 +270,6 @@ Die folgende Liste enthält mögliche Internet-Typen, die vom `AfxGetInternetHan
 
 **Header:** afxinet.h
 
-### <a name="see-also"></a>Siehe auch
-
-[Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
-[AfxParseURL](internet-url-parsing-globals.md#afxparseurl)
-
 ## <a name="afxthrowinternetexception"></a>  AfxThrowInternetException
 
 Eine Internet-Ausnahme ausgelöst.
@@ -308,9 +299,9 @@ Sie sind verantwortlich für das Ermitteln der Ursache, die basierend auf dem Be
 
 **Header:** afxinet.h
 
-### <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Siehe auch
 
 [Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
 [CInternetException-Klasse](cinternetexception-class.md)<br/>
-[THROW](#throw)
+[AfxParseURL](internet-url-parsing-globals.md#afxparseurl)
 

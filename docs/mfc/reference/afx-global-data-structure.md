@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: 9b6a462cf359bbd31958509c4fe7d0d71e490d11
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 0fd8143564beecccd8943f3ceba531e8697151d1
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694308"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850323"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA-Struktur
 
@@ -85,7 +85,7 @@ struct AFX_GLOBAL_DATA
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[AFX_GLOBAL_DATA::Cleanup](#cleanup)|Gibt Ressourcen frei, die vom Framework zugeordnet werden, z. B. Pinsel, Schriftarten und DLLs.|
+|[AFX_GLOBAL_DATA::CleanUp](#cleanup)|Gibt Ressourcen frei, die vom Framework zugeordnet werden, z. B. Pinsel, Schriftarten und DLLs.|
 |[AFX_GLOBAL_DATA::D2D1MakeRotateMatrix](#d2d1makerotatematrix)|Erstellt eine Drehtransformation, die sich in einem angegebenen Winkel um einen angegebenen Punkt dreht.|
 |[AFX_GLOBAL_DATA::DrawParentBackground](#drawparentbackground)|Zeichnet den Hintergrund des übergeordneten Elements eines Steuerelements im angegebenen Bereich.|
 |[AFX_GLOBAL_DATA::DrawTextOnGlass](#drawtextonglass)|Zeichnet den angegebenen Text im Stil des angegebenen Designs.|
@@ -121,7 +121,7 @@ struct AFX_GLOBAL_DATA
 |----------|-----------------|
 |[AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport)|Aktiviert oder deaktiviert Microsoft Active Accessibility-Unterstützung. Active Accessibility stellt zuverlässige Methoden zum Anzeigen von Informationen über Benutzeroberflächenelemente bereit.|
 |[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)|Gibt an, ob Microsoft Active Accessibility-Unterstützung aktiviert ist.|
-|[Iswindowslayersupportavailable](#iswindowslayersupportavailable)|Gibt an, ob das Betriebssystem überlappende Fenster unterstützt.|
+|[AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable](#iswindowslayersupportavailable)|Gibt an, ob das Betriebssystem überlappende Fenster unterstützt.|
 
 ### <a name="data-members"></a>Datenmember
 
@@ -154,11 +154,6 @@ Die meisten Daten in der `AFX_GLOBAL_DATA` -Struktur werden beim Start der Anwen
 
 **Header:** afxglobals.h
 
-### <a name="see-also"></a>Siehe auch
-
-[Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
-[Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
-
 ## <a name="bisosalphablendingsupport"></a> AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport
 
 Gibt an, ob das Betriebssystem Alphablending unterstützt.
@@ -171,7 +166,7 @@ BOOL  bIsOSAlphaBlendingSupport;
 
 TRUE gibt an, dass Alphablending unterstützt wird; andernfalls "false".
 
-## <a name="cleanup"></a> AFX_GLOBAL_DATA::Cleanup
+## <a name="cleanup"></a> AFX_GLOBAL_DATA::CleanUp
 
 Gibt Ressourcen frei, die vom Framework zugeordnet werden, z. B. Pinsel, Schriftarten und DLLs.
 
@@ -192,13 +187,13 @@ HRESULT D2D1MakeRotateMatrix(
 
 ### <a name="parameters"></a>Parameter
 
-*Winkel*<br/>
+*angle*<br/>
 Der Winkel der Drehung im Uhrzeigersinn in Grad.
 
-*Center*<br/>
+*center*<br/>
 Der Punkt, um die gedreht werden soll.
 
-*Matrix*<br/>
+*matrix*<br/>
 Bei der Rückgabe dieser Methode enthält die neue Drehungstransformation. Sie müssen diesen Parameter Speicher zuweisen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -218,7 +213,7 @@ BOOL DrawParentBackground(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Zeiger auf Fenster eines Steuerelements.
 
 *pDC*<br/>
@@ -267,7 +262,7 @@ Verwenden der [OpenThemeData](/windows/desktop/api/uxtheme/nf-uxtheme-openthemed
 *strText*<br/>
 [in] Der zu zeichnende Text.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Die Begrenzung des Bereichs, in dem der angegebene Text gezeichnet wird.
 
 *dwFlags*<br/>
@@ -289,16 +284,6 @@ TRUE, wenn ein Design wird zum Zeichnen des angegebenen Texts verwendet. andernf
 
 Ein Design definiert den visuellen Stil einer Anwendung. Ein Design wird nicht zum Zeichnen des Textes der *hTheme* Parameter NULL ist, oder, wenn die [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex) Methode wird nicht unterstützt, oder wenn [Desktopfenster-Manager](/windows/desktop/dwm/dwm-overview) (DWM) Komposition ist deaktiviert.
 
-### <a name="see-also"></a>Siehe auch
-
-[Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
-[COLORREF](/windows/desktop/gdi/colorref)<br/>
-[Teile und Zustände](/windows/desktop/controls/parts-and-states)<br/>
-[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)<br/>
-[DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
-[Desktopfenster-Manager](/windows/desktop/dwm/dwm-overview)<br/>
-[Aktivieren und Steuern der DWM-Komposition](/windows/desktop/dwm/composition-ovw)
-
 ## <a name="enableaccessibilitysupport"></a> AFX_GLOBAL_DATA::EnableAccessibilitySupport
 
 Aktiviert oder deaktiviert Microsoft Active Accessibility-Unterstützung.
@@ -309,7 +294,7 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] True, um Unterstützung für Barrierefreiheit aktivieren. "False", um Unterstützung für Barrierefreiheit zu deaktivieren. Der Standardwert ist "true".
 
 ### <a name="remarks"></a>Hinweise
@@ -317,11 +302,6 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 Active Accessibility ist eine COM-basierte Technologie, die die Weise, wie Programme und gemeinsam mit der Windows-Betriebssystem hilfstechnologie-Produkte verbessert. Es stellt zum Anzeigen von Informationen über Benutzeroberflächenelemente auf zuverlässige Weise bereit. Allerdings ist ein neueres Barrierefreiheitsmodell namens Microsoft-Benutzeroberflächenautomatisierung jetzt verfügbar. Einen Vergleich der beiden Technologien finden Sie unter [Benutzeroberflächenautomatisierung und Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility).
 
 Verwenden der [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport) Methode, um zu bestimmen, ob Microsoft Active Accessibility-Unterstützung aktiviert ist.
-
-### <a name="see-also"></a>Siehe auch
-
-[Benutzeroberflächenautomatisierung und Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)<br/>
-[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)
 
 ## <a name="excludetag"></a> AFX_GLOBAL_DATA::ExcludeTag
 
@@ -361,13 +341,13 @@ Verwenden Sie die Symbole in der folgenden Tabelle, um die Codierung eines Satze
 
 |Symbol|Escapezeichen|
 |------------|----------------------|
-|_T ("\\\t")|_T("\t")|
+|_T("\\\t")|_T("\t")|
 |_T ("\\\n")|_T("\n")|
 |_T ("\\\r")|_T("\r")|
-|_T ("\\\b")|_T("\b")|
+|_T("\\\b")|_T("\b")|
 |_T("LT")|_T ("\<")|
-|_T("GT")|_T("&GT;")|
-|_T("AMP")|_T("&AMP;")|
+|_T("GT")|_T(">")|
+|_T("AMP")|_T("&")|
 
 ## <a name="getcolor"></a> AFX_GLOBAL_DATA::GetColor
 
@@ -389,12 +369,6 @@ Die RGB-Farbwert, der das angegebene Benutzeroberflächenelement. Weitere Inform
 ### <a name="remarks"></a>Hinweise
 
 Wenn die *nColor* Parameter liegt außerhalb des Bereichs, der Rückgabewert ist 0 (null). Da 0 (null), die auch einen gültigen RGB-Wert ist, können nicht Sie diese Methode verwenden, um zu bestimmen, ob eine Systemfarbe vom aktuellen Betriebssystem unterstützt wird. Verwenden Sie stattdessen die [GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush) -Methode, die NULL zurückgibt, wenn die Farbe nicht unterstützt wird.
-
-### <a name="see-also"></a>Siehe auch
-
-[GetSysColor-Funktion](/windows/desktop/api/winuser/nf-winuser-getsyscolor)<br/>
-[COLORREF](/windows/desktop/gdi/colorref)<br/>
-[GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)
 
 ## <a name="getdirect2dfactory"></a> AFX_GLOBAL_DATA::GetDirect2dFactory
 
@@ -430,16 +404,12 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 
 ### <a name="parameters"></a>Parameter
 
-*Info*<br/>
+*info*<br/>
 [in, out] Ein [NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa) -Struktur, die skalierbare Metriken zugeordneten nicht-Clientbereichs eines nicht minimierten Fensters enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
 TRUE, wenn diese Methode erfolgreich ist. andernfalls "false".
-
-### <a name="see-also"></a>Siehe auch
-
-[NONCLIENTMETRICS-Struktur](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)
 
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
 
@@ -538,10 +508,6 @@ Microsoft Active Accessibility war die vorherige Lösung zum Herstellen von Anwe
 
 Verwenden der [AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport) zu aktivieren oder deaktivieren Sie die Active Accessibility-Unterstützung.
 
-### <a name="see-also"></a>Siehe auch
-
-[Benutzeroberflächenautomatisierung und Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)
-
 ## <a name="isd2dinitialized"></a> AFX_GLOBAL_DATA::IsD2DInitialized
 
 Bestimmt, ob die D2D initialisiert wurde
@@ -566,11 +532,6 @@ BOOL IsDwmCompositionEnabled();
 
 TRUE, wenn [Desktopfenster-Manager](/windows/desktop/dwm/dwm-overview) (DWM) Komposition ist aktiviert; andernfalls "false".
 
-### <a name="see-also"></a>Siehe auch
-
-[Desktopfenster-Manager](/windows/desktop/dwm/dwm-overview)<br/>
-[Aktivieren und Steuern der DWM-Komposition](/windows/desktop/dwm/composition-ovw)
-
 ## <a name="ishighcontrastmode"></a> AFX_GLOBAL_DATA::IsHighContrastMode
 
 Gibt an, ob Bilder nur mit hohem Kontrast angezeigt werden.
@@ -586,7 +547,7 @@ True, wenn Images derzeit im Modus für hohe Kontraste von Schwarz oder Weiß an
 
 Hohen Kontrast Schwarz der Lichtquelle zugewandte Seiten sind weiß und des Hintergrunds Schwarz. Hohen Kontrast weiß Schwarz sind, der Lichtquelle zugewandte Seiten aus, und der Hintergrund weiß ist.
 
-## <a name="iswindowslayersupportavailable"></a> Iswindowslayersupportavailable
+## <a name="iswindowslayersupportavailable"></a> AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable
 
 Gibt an, ob das Betriebssystem überlappende Fenster unterstützt.
 
@@ -743,11 +704,6 @@ Der qualifizierte Name der registrierten Klasse, wenn diese Methode erfolgreich 
 
 Der Rückgabewert ist ein Doppelpunkt getrennte Liste von der *LpszClassNamePrefix* Parameterzeichenfolge und die hexadezimale Textdarstellungen der Handles von der aktuellen Anwendungsinstanz ist die Anwendung-Cursor, der es der Pfeil ist Cursor, dessen Bezeichner IDC_ARROW ist; und der Hintergrundpinsel. Weitere Informationen zum Registrieren von MFC-Klassen finden Sie unter [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass).
 
-### <a name="see-also"></a>Siehe auch
-
-[AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)<br/>
-[AfxThrowResourceException](../../mfc/reference/exception-processing.md#afxthrowresourceexception)
-
 ## <a name="resume"></a> AFX_GLOBAL_DATA::Resume
 
 Initialisiert die internen Funktionszeiger für den Zugriff auf Methoden, die Windows-Designs und visuelle Stile unterstützen.
@@ -778,7 +734,7 @@ BOOL SetLayeredAttrib(
 
 ### <a name="parameters"></a>Parameter
 
-*HWND*<br/>
+*hwnd*<br/>
 [in] Handle für das überlappende Fenster.
 
 *crKey*<br/>
@@ -793,11 +749,6 @@ BOOL SetLayeredAttrib(
 ### <a name="return-value"></a>Rückgabewert
 
 TRUE, wenn diese Methode erfolgreich ist. andernfalls "false".
-
-### <a name="see-also"></a>Siehe auch
-
-[COLORREF](/windows/desktop/gdi/colorref)<br/>
-[SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)
 
 ## <a name="setmenufont"></a> AFX_GLOBAL_DATA::SetMenuFont
 
@@ -943,3 +894,20 @@ Ein Verweis auf eine Schnittstellen-ID.
 
 Gibt S_OK zurück, wenn erfolgreich; einen Fehlerwert, die andernfalls.
 
+## <a name="see-also"></a>Siehe auch
+
+[Hierarchiediagramm](../hierarchy-chart.md)<br/>
+[Strukturen, Stile, Rückrufe und Meldungszuordnungen](structures-styles-callbacks-and-message-maps.md)<br/>
+[COLORREF](/windows/desktop/gdi/colorref)<br/>
+[Teile und Zustände](/windows/desktop/controls/parts-and-states)<br/>
+[CDC::DrawText](cdc-class.md#drawtext)<br/>
+[DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
+[Desktopfenster-Manager](/windows/desktop/dwm/dwm-overview)<br/>
+[Aktivieren und Steuern der DWM-Komposition](/windows/desktop/dwm/composition-ovw)<br/>
+[Benutzeroberflächenautomatisierung und Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)<br/>
+[GetSysColor-Funktion](/windows/desktop/api/winuser/nf-winuser-getsyscolor)<br/>
+[GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)<br/>
+[NONCLIENTMETRICS-Struktur](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)<br/>
+[AfxRegisterClass](application-information-and-management.md#afxregisterclass)<br/>
+[AfxThrowResourceException](exception-processing.md#afxthrowresourceexception)<br/>
+[SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)

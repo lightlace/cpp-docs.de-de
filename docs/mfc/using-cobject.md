@@ -1,4 +1,4 @@
----
+﻿---
 title: Verwenden von CObject
 ms.date: 11/04/2016
 f1_keywords:
@@ -19,7 +19,7 @@ ms.locfileid: "50564826"
 ---
 # <a name="using-cobject"></a>Verwenden von CObject
 
-[CObject](../mfc/reference/cobject-class.md) ist die Stamm-Basisklasse für die meisten Objekte der Microsoft Foundation Class-Bibliothek (MFC). Die `CObject` -Klasse enthält viele nützliche Features, wie z.B. die Serialisierungsunterstützung, Laufzeit Klasseninformationen und Diagnoseausgaben, die Sie in Ihren eigenen Programmobjekten integrieren können. Wenn Sie eine Klasse von `CObject` ableiten, kann ihre Klasse diese `CObject` Methoden nutzen.
+[CObject](../mfc/reference/cobject-class.md) ist die Stamm-Basisklasse für die meisten Objekte der Microsoft Foundation Class-Bibliothek (MFC). Die `CObject` -Klasse enthält viele nützliche Features, wie z.B. die Serialisierungsunterstützung, Laufzeit Klasseninformationen und Diagnoseausgaben, die Sie in Ihren eigenen Programmobjekten integrieren können. Wenn Sie eine Klasse von ableiten `CObject`, Ihre Klasse kann dies ausnutzen `CObject` Funktionen.
 
 ## <a name="what-do-you-want-to-do"></a>Was möchten Sie tun
 

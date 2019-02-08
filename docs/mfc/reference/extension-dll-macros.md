@@ -4,12 +4,12 @@ ms.date: 04/03/2017
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 66c3477c7f2901cd9986a8b52e3d9287191e7b4b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 1d0cbd1f702a1d26dd2eaafd88efcfd61f52ff78
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329591"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850215"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>Makros und Funktionen für die Verwaltung von DLLs
 
@@ -85,10 +85,6 @@ Weitere Informationen zu Modulzustände und MFC, finden Sie unter "Verwalten der
 
 **Header:** afxstat_.h
 
-### <a name="see-also"></a>Siehe auch
-
-[AfxGetStaticModuleState](#afxgetstaticmodulestate)
-
 ## <a name="a-nameafxoleinitmodulea-afxoleinitmodule"></a><a name="afxoleinitmodule"><a/> AfxOleInitModule
 
 Für OLE-Unterstützung aus einer regulären MFC-DLL, die dynamisch mit MFC verknüpft wird, rufen Sie diese Funktion in Ihre regulären MFC DLL des `CWinApp::InitInstance` Funktion, die die MFC-OLE-DLL zu initialisieren.
@@ -107,12 +103,7 @@ Wenn Sie ein OLE-Steuerelement erstellen und verwenden `COleControlModule`, rufe
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header**: \<afxdll_.h >
-
-### <a name="see-also"></a>Siehe auch
-
-[Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
-[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)
+**Header**: \<afxdll_.h>
 
 ## <a name="afxnetinitmodule"></a>  AfxNetInitModule
 
@@ -130,12 +121,7 @@ Die MFC-Sockets-DLL ist eine MFC-Erweiterungs-DLL. in der Reihenfolge für eine 
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** \<afxdll_.h >
-
-### <a name="see-also"></a>Siehe auch
-
-[Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
-[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)
+**Header:** \<afxdll_.h>
 
 ## <a name="afxgetambientactctx"></a> AfxGetAmbientActCtx
 
@@ -162,13 +148,6 @@ Der Kontext eines Moduls wird in seinem Manifest eingebettet in der Regel in Mod
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxcomctl32.h
-
-### <a name="see-also"></a>Siehe auch
-
-[Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
-[AFX_MANAGE_STATE](#afx_manage_state)<br/>
-[Verwalten der Statusdaten von MFC-Modulen](../managing-the-state-data-of-mfc-modules.md)<br/>
-[AfxSetAmbientActCtx](#setambientactctx)
 
 ## <a name="afxgetstaticmodulestate"></a> AfxGetStaticModuleState
 
@@ -259,11 +238,6 @@ Rufen Sie `AfxTermExtensionModule` bereinigen Sie die MFC-Erweiterungs-DLL wird 
 
 **Header:** afxdll_.h
 
-### <a name="see-also"></a>Siehe auch
-
-[Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
-[AfxTermExtensionModule](#afxtermextensionmodule)
-
 ## <a name="afxsetambientactctx"></a>  AfxSetAmbientActCtx
 
 Verwenden Sie diese Funktion, um die modulspezifischen Zustand fest, wodurch die WinSxS-Verhalten von MFC wirkt sich auf.
@@ -298,13 +272,6 @@ BOOL CMFCListViewApp::InitInstance()
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxcomctl32.h
-
-### <a name="see-also"></a>Siehe auch
-
-[Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
-[AfxGetAmbientActCtx](#afxgetambientactctx)<br/>
-[AFX_MANAGE_STATE](#afx_manage_state)<br/>
-[Verwalten der Statusdaten von MFC-Modulen](../managing-the-state-data-of-mfc-modules.md)
 
 ## <a name="afxtermextensionmodule"></a>  AfxTermExtensionModule
 
@@ -366,7 +333,8 @@ MFC-Erweiterungs-DLLs aufrufen müssen [AfxInitExtensionModule](#afxinitextensio
 
 **Header:** afxdll_.h
 
-### <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Siehe auch
 
 [Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
-[AfxInitExtensionModule](#afxinitextensionmodule)
+[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)<br/>
+[Verwalten der Statusdaten von MFC-Modulen](../managing-the-state-data-of-mfc-modules.md)<br/>

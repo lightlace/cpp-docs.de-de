@@ -1,6 +1,6 @@
 ---
 title: / Execution-CharSet (Ausführungszeichensatz festlegen)
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - execution-charset
 - /execution-charset
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /execution-charset compiler option
 - -execution-charset compiler option
 ms.assetid: 0e02f487-2236-45bc-95f3-5760933a8f96
-ms.openlocfilehash: 3535b60d7aad50f7efc5d1f32726560431ac86a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 13ff185cf7026f1b42f732aae26c11e98d13e9a2
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663969"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849608"
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/ Execution-CharSet (Ausführungszeichensatz festlegen)
 
@@ -47,9 +47,9 @@ Wenn Sie sowohl die Quell- und ausführungszeichensatz in UTF-8 festlegen möcht
 
 1. Erweitern Sie die **Konfigurationseigenschaften**, **C/C++-**, **Befehlszeile** Ordner.
 
-1. In **erweiterte Optionen**, Hinzufügen der **/Execution-CharSet** aus, und geben Sie Ihre bevorzugten Codierung.
+1. In **zusätzliche Optionen**, Hinzufügen der **/Execution-CharSet** aus, und geben Sie Ihre bevorzugten Codierung.
 
-1. Wählen Sie **OK** zum Speichern der Änderungen.
+1. Klicken Sie auf **OK**, um die Änderungen zu speichern.
 
 ## <a name="see-also"></a>Siehe auch
 

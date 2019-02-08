@@ -14,12 +14,12 @@ helpviewer_keywords:
 - ODBC recordsets [C++], documents and views
 - ODBC [C++], forms
 ms.assetid: 83979974-fc63-46ac-b162-e8403a572e2c
-ms.openlocfilehash: 5e4610af199f1fd19c1edd71a8fd67bd82ab9a8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f8bb3be7cdc253f53b50898cfc3ee840e70b2d68
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624834"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849743"
 ---
 # <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC: Verwenden von Datenbankklassen mit Dokumenten und Ansichten
 
@@ -63,7 +63,7 @@ Viele einfache formularbasierte Anwendungen ist die Dokumente nicht erforderlich
 
 ##  <a name="_core_other_factors"></a> Andere Faktoren
 
-Formularbasierte Anwendungen häufig verfügen nicht über keine Verwendung für die Framework Dokument-Serialisierungsmechanismus, daher Sie sollten zu entfernen, deaktivieren oder zu ersetzen die **neu** und **öffnen** Befehle in der **Datei** Menü. Finden Sie im Artikel [Serialisierung: Serialisierung im Vergleich. Datenbank-e/a](../mfc/serialization-serialization-vs-database-input-output.md).
+Formularbasierte Anwendungen häufig verfügen nicht über keine Verwendung für die Framework Dokument-Serialisierungsmechanismus, daher Sie sollten zu entfernen, deaktivieren oder zu ersetzen die **neu** und **öffnen** Befehle in der **Datei** Menü. Finden Sie im Artikel [Serialisierung: Serialisierung im Vergleich zu Datenbank-e/a](../mfc/serialization-serialization-vs-database-input-output.md).
 
 Möchten Sie möglicherweise auch, verwenden Sie die vielen Benutzeroberflächen-Möglichkeiten, die das Framework unterstützt werden. Beispielsweise können Sie mehrere `CRecordView` Objekte in einem Splitterfenster kann mehrere Recordsets in verschiedenen öffnen, mehrere Document Interface (MDI) untergeordnete Fenster und So weiter.
 
@@ -73,4 +73,4 @@ Sie möchten keine Dokumente und Ansichten verwenden. In diesem Fall finden Sie 
 
 ## <a name="see-also"></a>Siehe auch
 
-[MFC-Datenbankklassen (.. / data/mfc-database-classes-odbc-and-dao.md)
+[MFC-Datenbankklassen](../data/mfc-database-classes-odbc-and-dao.md)

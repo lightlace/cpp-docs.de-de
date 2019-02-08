@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: c1e742d3320dae4140cc4886c47d34dbe9b6071f
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 6bdcf97c921dc45939ab9ddf18f1d624c2fd83b8
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178342"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850297"
 ---
 # <a name="application-information-and-management"></a>Anwendungsinformationen und Anwendungsverwaltung
 
@@ -24,10 +24,10 @@ Die Microsoft Foundation Class-Bibliothek bietet die folgenden globalen Funktion
 |||
 |-|-|
 |[AfxBeginThread](#afxbeginthread)|Erstellt einen neuen Thread.|
-|[Globale AfxContextMenuManager](#afxcontextmenumanager)|Zeiger auf die globale [Kontext-Menü-Manager](ccontextmenumanager-class.md).|
+|[AfxContextMenuManager](#afxcontextmenumanager)|Zeiger auf die globale [Kontext-Menü-Manager](ccontextmenumanager-class.md).|
 |[AfxEndThread](#afxendthread)|Beendet den aktuellen Thread.|
 |[AfxFindResourceHandle](#afxfindresourcehandle)|Führt die Ressourcenkette, und suchen Sie eine bestimmte Ressourcen nach Ressourcen-ID und den Ressourcentyp. |
-|["AfxFreeLibrary"](#afxfreelibrary)|Dekrementiert den Verweiszähler des Moduls geladenen Dynamic Link Library (DLL); Wenn der Verweiszähler null erreicht, ist das Modul nicht zugeordnet.|
+|[AfxFreeLibrary](#afxfreelibrary)|Dekrementiert den Verweiszähler des Moduls geladenen Dynamic Link Library (DLL); Wenn der Verweiszähler null erreicht, ist das Modul nicht zugeordnet.|
 |[AfxGetApp](#afxgetapp)|Gibt ein Zeiger auf die Anwendung ist einzelne `CWinApp` Objekt.|
 |[AfxGetAppName](#afxgetappname)|Gibt eine Zeichenfolge, die den Namen der Anwendung enthält.|
 |[AfxGetInstanceHandle](#afxgetinstancehandle)|Gibt eine HINSTANCE, die dieser Instanz der Anwendung darstellt.|
@@ -47,7 +47,7 @@ Die Microsoft Foundation Class-Bibliothek bietet die folgenden globalen Funktion
 |[AfxRegisterWndClass](#afxregisterwndclass)|Registriert eine Windows-Fensterklasse als Ergänzung für die automatisch von MFC registriert.|
 |[AfxSetPerUserRegistration](#afxsetperuserregistration)|Legt fest, ob die Anwendung Zugriff auf die Registrierung, leitet der **HKEY_CURRENT_USER** ( **HKCU**) Knoten.|
 |[AfxSetResourceHandle](#afxsetresourcehandle)|Legt fest, dass das Handle HINSTANCE, in denen die Standardressourcen der Anwendung geladen werden.|
-|[Globale AfxShellManager](#afxshellmanager)|Zeiger auf die globale [Shell-Manager](cshellmanager-class.md). |
+|[AfxShellManager](#afxshellmanager)|Zeiger auf die globale [Shell-Manager](cshellmanager-class.md). |
 |[AfxSocketInit](#afxsocketinit)|Wird aufgerufen, einem `CWinApp::InitInstance` überschreiben, um die Windows-Sockets nicht initialisieren.|
 |[AfxUserToolsManager](#afxusertoolsmanager)|Zeiger auf die globale [Vorgesetzten des Benutzers Tools](cusertoolsmanager-class.md).|
 |[AfxWinInit](#afxwininit)|Wird aufgerufen, von dem vom MFC bereitgestellten `WinMain` Funktion als Teil der [CWinApp](../../mfc/reference/cwinapp-class.md) Initialisierung einer GUI-basierte Anwendung, zum Initialisieren von MFC. Muss für konsolenanwendungen direkt aufgerufen werden, die MFC verwenden.|
@@ -124,7 +124,7 @@ Siehe das Beispiel für [CSocket:: Attach](../../mfc/reference/csocket-class.md#
 
   **Header** afxwin.h
 
-## <a name="afxcontextmenumanager"></a> Globale AfxContextMenuManager
+## <a name="afxcontextmenumanager"></a> AfxContextMenuManager
 
 Zeiger auf die globale [Kontext-Menü-Manager](ccontextmenumanager-class.md).
 
@@ -137,10 +137,6 @@ CContextMenuManager* afxContextMenuManager;
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxcontextmenumanager.h
-
-### <a name="see-also"></a>Siehe auch
-
-[CContextMenuManager-Klasse](ccontextmenumanager-class.md)
 
 ##  <a name="afxendthread"></a>  AfxEndThread
 
@@ -157,7 +153,7 @@ void AFXAPI AfxEndThread(
 *nExitCode*<br/>
 Gibt den Exitcode des Threads an.
 
-*bLöschen*<br/>
+*bDelete*<br/>
 Löscht das Threadobjekt aus dem Arbeitsspeicher.
 
 ### <a name="remarks"></a>Hinweise
@@ -209,10 +205,6 @@ Die Module werden in der folgenden Reihenfolge gesucht:
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxwin.h
-
-### <a name="see-also"></a>Siehe auch
-
-[Makros und globale Variablen](mfc-macros-and-globals.md)
 
 ##  <a name="afxfreelibrary"></a>  "AfxFreeLibrary"
 
@@ -463,7 +455,7 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Ein Zeiger auf ein Objekt, das von abgeleitet ist `CWnd`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -490,11 +482,6 @@ Diese Methode ist nützlich, wenn Sie überprüfen müssen, ob ein Funktions- od
 
 **Header:** „afxpriv.h“
 
-### <a name="see-also"></a>Siehe auch
-
-[CWnd-Klasse](cwnd-class.md)<br/>
-[CFrameWndEx-Klasse](cframewndex-class.md)
-
 ## <a name="afxismfctoolbar"></a> AfxIsMFCToolBar
 
 Bestimmt, ob das angegebene Fenster ein Symbolleistenobjekt.
@@ -507,7 +494,7 @@ BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Ein Zeiger auf ein Objekt, das von abgeleitet ist `CWnd`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -522,11 +509,6 @@ Diese Methode gibt `TRUE` Wenn *aufnehmen* leitet sich von `CMFCToolBar`. Diese 
 
 **Header:** „afxpriv.h“
 
-### <a name="see-also"></a>Siehe auch
-
-[CWnd-Klasse](cwnd-class.md)<br/>
-[CMFCToolBar-Klasse](cmfctoolbar-class.md)
-
 ## <a name="afxkeyboardmanager"></a> AfxKeyboardManager
 
 Zeiger auf die globale [Tastatur Manager](ckeyboardmanager-class.md).
@@ -540,11 +522,6 @@ CKeyboardManager* afxKeyboardManager;
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxkeyboardmanager.h
-
-### <a name="see-also"></a>Siehe auch
-
-[Makros, globale Funktionen und globale Variablen](mfc-macros-and-globals.md)<br/>
-[CKeyboardManager-Klasse](ckeyboardmanager-class.md)
 
 ##  <a name="afxloadlibrary"></a>  "AfxLoadLibrary"
 
@@ -613,10 +590,6 @@ CMenuTearOffManager* g_pTearOffMenuManager;
 
 **Header:** afxmenutearoffmanager.h
 
-### <a name="see-also"></a>Siehe auch
-
-[CMenuTearOffManager-Klasse](cmenutearoffmanager-class.md)
-
 ## <a name="afxmousemanager"></a>  AfxMouseManager
 
 Zeiger auf die globale [Maus Manager](cmousemanager-class.md).
@@ -630,10 +603,6 @@ CMouseManager* afxMouseManager;
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxmousemanager.h
-
-### <a name="see-also"></a>Siehe auch
-
-[CMouseManager-Klasse](cmousemanager-class.md)
 
 ##  <a name="afxregisterclass"></a>  AfxRegisterClass
 
@@ -735,7 +704,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] TRUE gibt an, dass die Informationen in der Registrierung auf den HKCU-Knoten geleitet wird; FALSE gibt an, dass die Anwendung Informationen in der Registrierung auf den Standardknoten schreibt. Der Standardknoten ist **HKEY_CLASSES_ROOT** ( **HKCR**).
 
 ### <a name="remarks"></a>Hinweise
@@ -787,10 +756,6 @@ CShellManager* afxShellManager;
 
 **Header:** afxshellmanager.h
 
-### <a name="see-also"></a>Siehe auch
-
-[CShellManager-Klasse](cshellmanager-class.md)
-
 ##  <a name="afxsocketinit"></a>  AfxSocketInit
 
 Rufen Sie diese Funktion Ihrer `CWinApp::InitInstance` überschreiben, um die Windows-Sockets nicht initialisieren.
@@ -829,10 +794,6 @@ CUserToolsManager* afxUserToolsManager;
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxusertoolsmanager.h
-
-### <a name="see-also"></a>Siehe auch
-
-[CUserToolsManager-Klasse](cusertoolsmanager-class.md)
 
 ##  <a name="afxwininit"></a>  AfxWinInit
 
@@ -879,5 +840,14 @@ Wenn Sie aufrufen `AfxWinInit` selbst, sollten Sie eine Instanz des deklariert e
 
 ## <a name="see-also"></a>Siehe auch
 
-[Makros und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)<br/>
-[CWinApp-Klasse](../../mfc/reference/cwinapp-class.md)
+[Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
+[CWinApp-Klasse](cwinapp-class.md)<br/>
+[CContextMenuManager-Klasse](ccontextmenumanager-class.md)<br/>
+[CWnd-Klasse](cwnd-class.md)<br/>
+[CFrameWndEx-Klasse](cframewndex-class.md)<br/>
+[CMFCToolBar-Klasse](cmfctoolbar-class.md)<br/>
+[CKeyboardManager-Klasse](ckeyboardmanager-class.md)<br/>
+[CMenuTearOffManager-Klasse](cmenutearoffmanager-class.md)<br/>
+[CMouseManager-Klasse](cmousemanager-class.md)<br/>
+[CShellManager-Klasse](cshellmanager-class.md)<br/>
+[CUserToolsManager-Klasse](cusertoolsmanager-class.md)
