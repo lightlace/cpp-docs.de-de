@@ -3,6 +3,7 @@ title: 'Vorgehensweise: Erstellen einer Ressourcenskriptdatei (C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.editors.resource
+- vc.resvw.add.MFC
 helpviewer_keywords:
 - rc files [C++], creating
 - .rc files [C++], creating
@@ -14,20 +15,24 @@ helpviewer_keywords:
 - resource script files [C++], opening in text format
 - .rc files [C++], opening in text format
 - rc files [C++], opening in text format
+- rc files [C++], adding MFC support
+- .rc files [C++], adding MFC support
+- MFC, adding support to resource scripts files
+- resource script files [C++], adding MFC support
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
-ms.openlocfilehash: f3f0adff256742c98a672e40e6b31de9bd7a84ed
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 9055e0f787c238276d3134c2fa6a8afae0102433
+ms.sourcegitcommit: 5a7dbd640376e13379f5d5b2cf66c4842e5e737b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849957"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55905679"
 ---
 # <a name="how-to-create-a-resource-script-file-c"></a>Vorgehensweise: Erstellen einer Ressourcenskriptdatei (C++)
 
 > [!NOTE]
 > Die **Ressourcen-Editor-** ist in Express-Editionen nicht verfügbar.
 >
-> Diese Materialien beziehen sich auf Windows-Desktopanwendungen. Für Projekte in .NET-Sprachen werden keine Ressourcenskriptdateien verwendet. Weitere Informationen finden Sie unter [Ressourcendateien](../windows/resource-files-visual-studio.md), Weitere Informationen.
+> Diese Materialien beziehen sich auf Windows-Desktopanwendungen. Für Projekte in .NET-Sprachen werden keine Ressourcenskriptdateien verwendet. Weitere Informationen finden Sie unter [Ressourcendateien](../windows/resource-files-visual-studio.md).
 
 ## <a name="to-create-a-new-resource-script-rc-file"></a>So erstellen Sie eine neue Ressourcenskriptdatei (RC-Datei)
 
@@ -119,6 +124,34 @@ Sie können die Ressourcendatei einfach öffnen, im Text-Format, um alle darin e
 1. In **Projektmappen-Explorer**, mit der rechten Maustaste in der RC-Datei.
 
 1. Wählen Sie im Kontextmenü den Befehl **Öffnen mit...** , und wählen Sie dann **Quellcode-Editor (Text)**.
+
+## <a name="to-add-mfc-support-to-resource-script-files"></a>Hinzufügen von MFC-Unterstützung zu Ressourcenskriptdateien
+
+In der Regel beim Erstellen einer MFC-Anwendung für die Verwendung von Windows die [MFS-Anwendungsassistenten](../mfc/reference/mfc-application-wizard.md), der Assistent generiert eine Reihe grundlegende Dateien (einschließlich einer Ressourcenskriptdatei (.rc)), das die Kernfunktionen von Microsoft Foundation enthält. Klassen (MFC). Wenn Sie eine RC-Datei für eine Windows-Anwendung, die nicht auf MFC basiert bearbeiten, nicht jedoch die folgenden Funktionen, die spezifisch für das MFC-Framework zur Verfügung:
+
+- MFC-Code-Assistenten
+
+- Zeichenfolgen für Menüaufforderungen
+
+- Auflisten der Inhalte von Kombinationsfeld-Steuerelementen
+
+- Hosting von ActiveX-Steuerelementen
+
+Allerdings können Sie MFC-Unterstützung zu vorhandenen RC-Dateien hinzufügen, die nicht vorhanden ist.
+
+> [!NOTE]
+> Diese Schritte erfordern MFC.
+
+### <a name="to-add-mfc-support-to-rc-files"></a>So fügen Sie RC-Dateien MFC-Unterstützung hinzu
+
+1. Öffnen Sie die Ressourcenskriptdatei.
+
+1. In [Ressourcenansicht](../windows/resource-view-window.md), markieren Sie den Ordner "Resources" (z. B. MFC.rc).
+
+1. In der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window)legen die **MFC Mode** Eigenschaft **"true"**.
+
+   > [!NOTE]
+   > Zusätzlich zum Festlegen dieses Flags muss auch gewährleistet sein, dass die RC-Datei Teil eines MFC-Projekts ist. Festlegen von z. B. nur **MFC Mode** zu **"true"** auf eine RC-Datei in eine Win32-Projekt wird nicht Geben Sie die MFC-Features.
 
 ## <a name="requirements"></a>Anforderungen
 

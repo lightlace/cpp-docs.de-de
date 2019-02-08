@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines Menüs (C++)
+title: Erstellen von Menüs (C++)
 ms.date: 11/04/2016
 f1_keywords:
 - vc.editors.menu
@@ -10,15 +10,28 @@ helpviewer_keywords:
 - menus [C++], adding items
 - commands [C++], adding to menus
 - menu items, adding to menus
+- submenus
+- submenus [C++], creating
+- menus [C++], creating
+- context menus [C++], Menu Editor
+- pop-up menus [C++], creating
+- menus [C++], pop-up
+- menus [C++], creating
+- shortcut menus [C++], creating
+- pop-up menus [C++], displaying
+- pop-up menus [C++], connecting to applications
+- context menus [C++], connecting to applications
+- shortcut menus [C++], connecting to applications
+- pop-up menus
 ms.assetid: 66f94448-9b97-4b73-bf97-10d4bf87cc65
-ms.openlocfilehash: 438480032f1fe9208e406b4ee499267e42148a48
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: e3b3cc58b82f68c55ac98601fd11775422c901e5
+ms.sourcegitcommit: 5a7dbd640376e13379f5d5b2cf66c4842e5e737b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702803"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55905770"
 ---
-# <a name="creating-a-menu-c"></a>Erstellen eines Menüs (C++)
+# <a name="creating-menus-c"></a>Erstellen von Menüs (C++)
 
 > [!NOTE]
 > Die **Ressourcen-Fenster** ist in Express-Editionen nicht verfügbar.
@@ -45,6 +58,14 @@ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie
 
    > [!NOTE]
    > Um ein einzelnes Element im Menü auf der Menüleiste zu erstellen, legen die **Popup** Eigenschaft **"false"**.
+
+## <a name="to-create-a-submenu"></a>So erstellen Sie ein Untermenü
+
+1. Wählen Sie den Menübefehl für den Sie ein Untermenü erstellen möchten.
+
+1. Geben Sie im Feld **Neues Element** , das rechts angezeigt wird, den Namen des neuen Menübefehls ein. Dieser neue Befehl wird im Untermenü an erster Stelle angezeigt.
+
+1. Fügen Sie dem Untermenü weitere Menübefehle hinzu.
 
 ## <a name="to-insert-a-new-menu-between-existing-menus"></a>So fügen Sie ein neues Menüs zwischen vorhandenen Menüs ein
 
@@ -82,6 +103,53 @@ Mit der rechten Maustaste in der Menüleiste, und wählen Sie **neue einfügen**
 1. Drücken Sie **EINGABETASTE** auf den Menübefehl abzuschließen.
 
    Das neue Elementfeld wird ausgewählt, sodass Sie zusätzliche Menübefehle erstellen können.
+
+## <a name="to-create-pop-up-menus"></a>Zum Erstellen von Popupmenüs
+
+[Popupmenüs](../mfc/menus-mfc.md) enthalten häufig verwendete Befehle. Sie können kontextbezogen für die Position des Zeigers sein. Für das Verwenden von Popupmenüs in Ihrer Anwendung muss das Menü selbst erstellt und anschließend mit dem Anwendungscode verbunden werden.
+
+Nachdem Sie die Menüressource erstellt haben, muss der Anwendungscode die Menüressource laden und verwenden [TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu) auf das Menü angezeigt wird. Sobald der Benutzer das Popupmenü dazu außerhalb davon geschlossen oder einen Befehl ausgewählt hat, wird die Funktion zurückgegeben. Wenn der Benutzer einen Befehl auswählt, wird dessen Befehlsmeldung an das Fenster gesendet, dessen Handle übergeben wurde.
+
+### <a name="to-create-a-pop-up-menu"></a>Erstellen eines Popupmenüs
+
+1. [Erstellen eines Menüs](../windows/creating-a-menu.md) mit einem leeren Titel (also ohne Angabe einer **Beschriftung**).
+
+1. [Hinzufügen eines Menübefehls zum neuen Menü](../windows/adding-commands-to-a-menu.md). Verschieben Sie in der ersten Menübefehl unter dem leeren Menütitel (die temporäre Beschriftung sagt `Type Here`). Geben Sie eine **Beschriftung** und weitere Informationen ein.
+
+   Wiederholen Sie diesen Vorgang für alle anderen Menübefehle im Popupmenü.
+
+1. Speichern Sie die Menüressource.
+
+### <a name="to-connect-a-pop-up-menu-to-your-application"></a>So verbinden Sie ein Popupmenü mit Ihrer Anwendung
+
+1. Fügen Sie einen Meldungshandler für WM_CONTEXTMENU (z. B.). Weitere Informationen finden Sie unter [Zuordnen von Meldungen zu Funktionen](../mfc/reference/mapping-messages-to-functions.md).
+
+1. Fügen Sie dem Meldungshandler folgenden Code hinzu.
+
+    ```cpp
+    CMenu menu;
+    VERIFY(menu.LoadMenu(IDR_MENU1));
+    CMenu* pPopup = menu.GetSubMenu(0);
+    ASSERT(pPopup != NULL);
+    pPopup->TrackPopupMenu(TPM_LEFTALIGN | TPM_RIGHTBUTTON, point.x, point.y, AfxGetMainWnd());
+    ```
+
+   > [!NOTE]
+   > Die [CPoint](../atl-mfc-shared/reference/cpoint-class.md) übergeben durch die Nachricht Handler ist, in Bildschirmkoordinaten.
+
+   > [!NOTE]
+   > Verbinden eines Popupmenüs mit der Anwendung erfordert MFC.
+
+### <a name="to-view-a-menu-resource-as-a-pop-up-menu"></a>So zeigen Sie eine Menüressource als ein Popupmenü an
+
+Normalerweise, wenn Sie arbeiten der **Menü** -Editor wird eine Menüressource als Menüleiste angezeigt. Sie verfügen jedoch möglicherweise über Menüressourcen, die während der Ausführung des Programms zur Menüleiste der Anwendung hinzugefügt werden.
+
+Mit der rechten Maustaste im Menüs, und wählen Sie **als Popup anzeigen** aus dem Kontextmenü.
+
+   Diese Option ist nur eine anzeigeeinstellung, und es ändert sich das Menü nicht.
+
+   > [!NOTE]
+   > Um zur Ansicht Menüleiste zu ändern, klicken Sie auf **als Popup anzeigen** erneut aus (die das Häkchen entfernt und Ihre Menüleistenansicht zurückgibt).
 
 ## <a name="requirements"></a>Anforderungen
 
