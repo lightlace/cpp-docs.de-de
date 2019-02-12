@@ -1,10 +1,13 @@
 ---
-title: 'Vorgehensweise: Kopieren von Ressourcen (C++)'
+title: 'Vorgehensweise: Verwalten von Ressourcen (C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.resvw.resource.copying
 - vs.resvw.resource.copying
 - vc.resvw.resource.changing
+- vb.xmldesigner.data
+- vs.resvw.resource.importing
+- vc.resvw.resource.importing
 helpviewer_keywords:
 - resources [C++], moving between files
 - resources [C++], copying
@@ -13,15 +16,32 @@ helpviewer_keywords:
 - .rc files [C++], copying resources between
 - rc files [C++], copying resources between
 - Language property [C++]
+- .resx files [C++], editing
+- resource files [C++], editing
+- resx files [C++], editing
+- resources [C++], exporting
+- graphics [C++], exporting
+- graphics [C++], importing
+- resources [C++], importing
+- bitmaps [C++], importing and exporting
+- toolbars [C++], importing
+- images [C++], importing
+- toolbars [C++], exporting
+- cursors [C++], importing and exporting
+- images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 772c9b905d4cb0c4e2ccab9ec51aa02860b2db32
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: e8b976f974e397b8012ebf59ede08ee64f4f7191
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849660"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150791"
 ---
-# <a name="how-to-copy-resources-c"></a>Vorgehensweise: Kopieren von Ressourcen (C++)
+# <a name="how-to-manage-resources-c"></a>Vorgehensweise: Verwalten von Ressourcen (C++)
+
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+
+## <a name="to-copy-resources"></a>So kopieren Sie Ressourcen
 
 Sie können Ressourcen in eine andere aus einer Datei kopieren, ohne sie zu ändern, oder Sie können die Sprache oder Bedingung einer Ressource während des Kopiervorgangs ändern.
 
@@ -32,24 +52,24 @@ Sie können Ressourcen problemlos aus einer vorhandenen Ressource oder die ausf�
 
 Sie können die Drag & Drop-Methode verwenden, RC-Dateien, die geöffnet sind [außerhalb des Projekts](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
 
-## <a name="to-copy-resources-between-files-using-the-drag-and-drop-method"></a>So kopieren Sie Ressourcen zwischen den Dateien, die mithilfe der Drag & Drop-Methode
+### <a name="to-copy-resources-between-files-using-the-drag-and-drop-method"></a>So kopieren Sie Ressourcen zwischen den Dateien, die mithilfe der Drag & Drop-Methode
 
-1. Öffnen Sie beide Ressourcendateien eigenständig (Weitere Informationen finden Sie unter [eine Ressourcenskriptdatei Datei außerhalb eines Projekts](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)). Öffnen Sie beispielsweise Source1.rc und Source2.rc.
+1. Öffnen Sie beide Ressourcendateien eigenständig (Weitere Informationen finden Sie unter [Anzeigen von Ressourcen in einer RC-Datei außerhalb eines Projekts](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)). Öffnen Sie z. B. *Source1.rc* und *Source2.rc*.
 
-1. Wählen Sie in der ersten RC-Datei die Ressource, die Sie kopieren möchten. Z. B. in `Source1.rc`Option **IDD_DIALOG1**.
+1. Wählen Sie in der ersten RC-Datei die Ressource, die Sie kopieren möchten. Z. B. in *Source1.rc*Option **IDD_DIALOG1**.
 
-1. Halten Sie die **STRG** gedrückt, und ziehen Sie die Ressource in der zweiten RC-Datei. Ziehen Sie z. B. **IDD_DIALOG1** aus `Source1.rc` zu `Source2.rc`.
+1. Halten Sie die **STRG** gedrückt, und ziehen Sie die Ressource in der zweiten RC-Datei. Ziehen Sie z. B. **IDD_DIALOG1** aus *Source1.rc* zu *Source2.rc*.
 
    > [!NOTE]
    > Ziehen die Ressource ohne gedrückt der **STRG** drücken, das verschoben wird, die Ressource, statt es zu kopieren.
 
-## <a name="to-copy-resources-using-copy-and-paste"></a>Zum Kopieren von Ressourcen mithilfe von kopieren und einfügen
+### <a name="to-copy-resources-using-copy-and-paste"></a>Zum Kopieren von Ressourcen mithilfe von kopieren und einfügen
 
-1. Öffnen Sie beide Ressourcendateien eigenständig (Weitere Informationen finden Sie unter [eine Ressourcenskriptdatei Datei außerhalb eines Projekts](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)). Beispielsweise Source1.rc und Source2.rc.
+1. Öffnen Sie beide Ressourcendateien eigenständig (Weitere Informationen finden Sie unter [Anzeigen von Ressourcen in einer RC-Datei außerhalb eines Projekts](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)). Z. B. *Source1.rc* und *Source2.rc*.
 
-1. In der Quelldatei, die von dem Sie eine Ressource zu kopieren möchten (z. B. `Source1.rc`) mit der rechten Maustaste auf eine Ressource, und wählen Sie **Kopie** aus dem Kontextmenü.
+1. In der Quelldatei, die von dem Sie eine Ressource zu kopieren möchten (z. B. *Source1.rc*) mit der rechten Maustaste auf eine Ressource, und wählen Sie **Kopie** aus dem Kontextmenü.
 
-1. Mit der rechten Maustaste in der Ressourcendatei in die Sie die Ressource einfügen möchten (z. B. `Source2.rc`). Wählen Sie **einfügen** aus dem Kontextmenü.
+1. Mit der rechten Maustaste in der Ressourcendatei in die Sie die Ressource einfügen möchten (z. B. *Source2.rc*). Wählen Sie **einfügen** aus dem Kontextmenü.
 
    > [!NOTE]
    > Sie können keine drag und drop, kopieren, Ausschneiden, oder fügen Sie zwischen Ressourcendateien im Projekt (**Ressourcenansicht**) und eigenständige RC-Dateien (die im Dokumentfenster geöffnet). In früheren Versionen des Produkts können Sie dazu.
@@ -57,7 +77,7 @@ Sie können die Drag & Drop-Methode verwenden, RC-Dateien, die geöffnet sind [a
    > [!NOTE]
    > Um Konflikte mit Symbolnamen oder Werten in die vorhandene Datei zu vermeiden, kann Visual C++ Symbolwert der übertragenen Ressource oder Symbolnamens und-Werts ändern, wenn Sie ihn in die neue Datei kopieren.
 
-## <a name="to-change-the-language-or-condition-of-a-resource-while-copying-c"></a>So ändern Sie die Sprache oder Bedingung einer Ressource während des Kopiervorgangs (C++)
+### <a name="to-change-the-language-or-condition-of-a-resource-while-copying"></a>So ändern Sie die Sprache oder Bedingung einer Ressource während des Kopierens
 
 Beim Kopieren in eine Ressource können Sie ihre Sprachen- und/oder Bedingungseigenschaft ändern.
 
@@ -65,13 +85,13 @@ Beim Kopieren in eine Ressource können Sie ihre Sprachen- und/oder Bedingungsei
 
 - Die Bedingung einer Ressource stellt ein definiertes Symbol dar, das eine Bedingung angibt, unter der diese bestimmte Ressourcenkopie zu verwenden ist.
 
-Sprache und Bedingung einer Ressource werden im Arbeitsbereichsfenster nach dem Ressourcennamen in Klammern angezeigt. In diesem Beispiel verwendet die Ressource mit dem Namen IDD_AboutBox Finnisch als Sprache und XX33 als Bedingung aus.
+Die Sprache und Bedingung einer Ressource in Klammern angezeigt, nach dem Namen der Ressource in der **Arbeitsbereich** Fenster. In diesem Beispiel ist die Ressource mit dem Namen `IDD_AboutBox` verwendet `Finnish` ist als seine Sprache und der Bedingung `XX33`.
 
 ```cpp
 IDD_AboutBox (Finnish - XX33)
 ```
 
-### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>So kopieren Sie eine vorhandene Ressource und ändern die Sprache oder Bedingung
+So kopieren eine vorhandene Ressource aus, und ändern Sie die Sprache oder Bedingung:
 
 1. In der RC-Datei oder in der [Ressourcenansicht](../windows/resource-view-window.md) Fenster mit der rechten Maustaste in der Ressource, die Sie kopieren möchten.
 
@@ -83,7 +103,39 @@ IDD_AboutBox (Finnish - XX33)
 
    - In der **Bedingung** geben die Bedingung.
 
-Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+## <a name="to-edit-managed-resource-files"></a>Bearbeiten von verwalteten Ressourcendateien
+
+Verwaltete Ressourcendateien (.resx) sind XML-Dateien. Wenn Sie eine verwaltete Ressourcendatei hinzufügen, um das Projekt aus der **neues Element hinzufügen** im Dialogfeld die **verwaltete Ressourcen-Editor** wird standardmäßig geöffnet.
+
+## <a name="to-import-and-export-resources"></a>Zum Importieren und Exportieren von Ressourcen
+
+Sie können grafische Ressourcen (Bitmaps, Symbole, Cursor und Symbolleisten), HTML-Dateien und benutzerdefinierte Ressourcen für die Verwendung in Visual C++ importieren. Die können dieselben Dateitypen aus einem Visual C++-Projekt exportieren, um Dateien zu trennen, die außerhalb der Entwicklungsumgebung verwendet werden können.
+
+> [!NOTE]
+> Ressourcentypen wie Zugriffstasten, Dialogfelder und Zeichenfolgentabellen können weder im- noch exportiert werden, da sie keine eigenständigen Dateitypen sind.
+
+### <a name="to-import-an-individual-resource-into-your-current-resource-file"></a>So importieren Sie eine einzelne Ressource in Ihre aktuelle Ressourcendatei
+
+1. In [Ressourcenansicht](../windows/resource-view-window.md), mit der rechten Maustaste des Knotens für das Ressourcenskript (* .rc)-Datei zu dem beim Hinzufügen einer Ressource werden sollen.
+
+1. Wählen Sie **Import** im Kontextmenü auf.
+
+1. Suchen Sie nach dem Dateinamen der Bitmap- (.bmp), Symbol- (.ico), Cursor- (.cur), HTML- (.html) oder einer anderen zu importierenden Datei, und wählen Sie ihn aus.
+
+1. Wählen Sie **OK** zum Hinzufügen der Ressource zur ausgewählten Datei in **Ressource** anzeigen.
+
+   > [!NOTE]
+   > Der Importvorgang funktioniert auf die gleiche Weise, und zwar unabhängig davon, welchen bestimmten Ressourcentyp Sie ausgewählt haben. Die importierte Ressource wird automatisch zum richtigen Knoten für diesen Ressourcentyp hinzugefügt.
+
+### <a name="to-export-a-bitmap-icon-or-cursor-as-a-separate-file-for-use-outside-of-visual-c"></a>So exportieren Sie Bitmaps, Symbole oder Cursor als eine getrennte Datei (für die Verwendung außerhalb von Visual C++)
+
+1. In **Ressource** Anzeigen der rechten Maustaste auf die Ressource, die Sie exportieren möchten.
+
+1. Wählen Sie **exportieren** im Kontextmenü auf.
+
+1. In der **Ressource exportieren** Dialogfeld Feld, oder übernehmen Sie den aktuellen Dateinamen geben Sie eine neue Ressourcengruppe.
+
+1. Navigieren Sie zu dem Ordner, in dem Sie die Datei speichern, und wählen Sie möchten **exportieren**.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -92,5 +144,4 @@ Win32
 ## <a name="see-also"></a>Siehe auch
 
 [Ressourcendateien](../windows/resource-files-visual-studio.md)<br/>
-[Ressourcen-Editor](../windows/resource-editors.md)<br/>
-[Vorgehensweise: Öffnen einer Ressourcenskriptdatei außerhalb eines Projekts (eigenständig)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)<br/>
+[Ressourcen-Editor](../windows/resource-editors.md)
