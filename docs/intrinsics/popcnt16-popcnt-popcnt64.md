@@ -11,18 +11,18 @@ helpviewer_keywords:
 - __popcnt64
 - __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-ms.openlocfilehash: a0a5a51bfcb5265f7b415433c3f6b64423840ebe
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a6424f3414d9da17e52c0a9f78290497f5e5e01e
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522458"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56146891"
 ---
 # <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
 
 **Microsoft-spezifisch**
 
-Zählt die Anzahl von einem Bits (Population Count) in einen 16-, 32- oder 64-Byte-Ganzzahl ohne Vorzeichen.
+Zählt die Anzahl von einem Bits (Population Count) in einen 16-, 32- oder 64-Bit-Ganzzahl ohne Vorzeichen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ unsigned __int64 __popcnt64(
 
 #### <a name="parameters"></a>Parameter
 
-*Wert*<br/>
+*value*<br/>
 [in] Die 16, 32- oder 64-Bit-Ganzzahl ohne Vorzeichen für die die Anzahl der Auffüllen soll.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -59,7 +59,7 @@ Die Anzahl der Bits in der `value` Parameter.
 
 ## <a name="remarks"></a>Hinweise
 
-Jede von diesen systeminternen Funktionen generiert der `popcnt` Anweisung.  Die Größe des Werts, der die `popcnt` Anweisung zurückgibt, ist die Größe des Arguments identisch.  In 32-Bit-Modus sind keine 64-Bit-Allzweckregister, daher keine 64-Bit- `popcnt`.
+Jede von diesen systeminternen Funktionen generiert der `popcnt` Anweisung. In 32-Bit-Modus sind keine 64-Bit-Allzweckregister, daher keine 64-Bit- `popcnt`.
 
 Um zu bestimmen, Hardware-Unterstützung für die `popcnt` -Anweisung, rufen die `__cpuid` systeminternen Funktionen mit `InfoType=0x00000001` und überprüfen Sie wenig 23 `CPUInfo[2] (ECX)`. Dieses Bit ist 1, wenn die Anweisung unterstützt wird, und andernfalls 0. Wenn Sie Code, verwendet dieser systeminternen Funktion auf Hardware ausgeführt, die nicht unterstützt. die `popcnt` -Anweisung, die die Ergebnisse sind unvorhersehbar.
 
@@ -101,7 +101,7 @@ __popcnt(0xffffffff) = 32
 
 **Ende Microsoft-spezifisch**
 
-Copyright 2007 erweiterten Micro-Geräte, Inc. Alle Rechte vorbehalten. Reproduziert werden, mit der Berechtigung, die von erweiterten Micro-Geräte, Inc.
+Copyright 2007 by Advanced Micro Devices, Inc. Alle Rechte vorbehalten. Reproduziert werden, mit der Berechtigung, die von erweiterten Micro-Geräte, Inc.
 
 ## <a name="see-also"></a>Siehe auch
 

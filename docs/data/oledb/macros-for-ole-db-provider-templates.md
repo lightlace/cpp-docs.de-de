@@ -1,6 +1,6 @@
 ---
 title: Makros für OLE DB-Anbietervorlagen
-ms.date: 11/04/2016
+ms.date: 02/11/2019
 f1_keywords:
 - vc.templates.ole
 - BEGIN_PROPERTY_SET
@@ -51,12 +51,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: 8fbad23d49490f42416dd7e7234776ff1c5ac7bf
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: a2a5bf14da1a39439db67a4fb062fd06763754fc
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557050"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151116"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Makros für OLE DB-Anbietervorlagen
 
@@ -114,7 +114,7 @@ BEGIN_PROPERTY_SET(guid)
 
 #### <a name="parameters"></a>Parameter
 
-*GUID*<br/>
+*guid*<br/>
 [in] Die GUID-Eigenschaft.
 
 #### <a name="example"></a>Beispiel
@@ -133,7 +133,7 @@ BEGIN_PROPERTY_SET_EX(guid, flags)
 
 #### <a name="parameters"></a>Parameter
 
-*GUID*<br/>
+*guid*<br/>
 [in] Die GUID-Eigenschaft.
 
 *flags*<br/>
@@ -204,7 +204,7 @@ END_PROPERTY_SET(guid)
 
 #### <a name="parameters"></a>Parameter
 
-*GUID*<br/>
+*guid*<br/>
 [in] Die GUID-Eigenschaft.
 
 #### <a name="example"></a>Beispiel
@@ -298,7 +298,7 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 *dwPropID*<br/>
 [in] Ein [DBPROPID](https://docs.microsoft.com/previous-versions/windows/desktop/ms723882(v=vs.85)) -Wert, der in Verbindung mit dem GUID-Eigenschaftensatz verwendet werden kann, um eine Eigenschaft zu identifizieren.
 
-*Wert*<br/>
+*value*<br/>
 [in] Der Eigenschaftswert von Typ `DWORD`.
 
 #### <a name="remarks"></a>Hinweise
@@ -359,7 +359,7 @@ PROVIDER_COLUMN_ENTRY (name, ordinal, member)
 *name*<br/>
 [in] Name der Spalte.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] Die Nummer der Spalte. Wenn die Spalte eine Lesezeichenspalte ist, muss die Nummer der Spalte nicht 0 sein.
 
 *member*<br/>
@@ -380,10 +380,10 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 *name*<br/>
 [in] Name der Spalte.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] Die Nummer der Spalte. Wenn die Spalte eine Lesezeichenspalte ist, muss die Nummer der Spalte nicht 0 sein.
 
-*DbType*<br/>
+*dbtype*<br/>
 [in] Der Datentyp im [DBTYPE](https://docs.microsoft.com/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
 *member*<br/>
@@ -412,7 +412,7 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 *name*<br/>
 [in] Name der Spalte.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] Die Nummer der Spalte. Wenn die Spalte eine Lesezeichenspalte ist, muss die Nummer der Spalte nicht 0 sein.
 
 *flags*<br/>
@@ -421,16 +421,16 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 *colSize*<br/>
 [in] Die Größe der Spalte.
 
-*DbType*<br/>
+*dbtype*<br/>
 [in] Gibt den Datentyp des Werts an. Finden Sie unter den `wType` Beschreibung im [DBBINDING-Strukturen](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
 *precision*<br/>
 [in] Gibt die Genauigkeit verwenden, beim Abrufen von Daten, wenn *DbType* DBTYPE_NUMERIC oder DBTYPE_DECIMAL ist. Finden Sie unter den `bPrecision` Beschreibung im [DBBINDING-Strukturen](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
-*Skalieren*<br/>
+*scale*<br/>
 [in] Gibt die zu verwendende beim Abrufen von Daten, wenn DbType DBTYPE_NUMERIC oder DBTYPE_DECIMAL Skala an. Finden Sie unter den `bScale` Beschreibung im [DBBINDING-Strukturen](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
-*GUID*<br/>
+*guid*<br/>
 Ein Schemarowset-GUID. Finden Sie unter [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) in die *OLE DB-Programmierreferenz* eine Liste der Schemarowsets und die GUIDs.
 
 #### <a name="remarks"></a>Hinweise
@@ -452,7 +452,7 @@ PROVIDER_COLUMN_ENTRY_LENGTH(name, ordinal, size, member)
 *name*<br/>
 [in] Name der Spalte.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] Die Nummer der Spalte. Wenn die Spalte eine Lesezeichenspalte ist, muss die Nummer der Spalte nicht 0 sein.
 
 *size*<br/>
@@ -484,7 +484,7 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
 *name*<br/>
 [in] Name der Spalte.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] Die Nummer der Spalte. Wenn die Spalte eine Lesezeichenspalte ist, muss die Nummer der Spalte nicht 0 sein.
 
 *member*<br/>
@@ -513,10 +513,10 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 *name*<br/>
 [in] Name der Spalte.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] Die Nummer der Spalte. Wenn die Spalte eine Lesezeichenspalte ist, muss die Nummer der Spalte nicht 0 sein.
 
-*DbType*<br/>
+*dbtype*<br/>
 [in] Der Datentyp im [DBTYPE](https://docs.microsoft.com/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
 *size*<br/>
@@ -544,7 +544,7 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
 *name*<br/>
 [in] Name der Spalte.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] Die Nummer der Spalte. Wenn die Spalte eine Lesezeichenspalte ist, muss die Nummer der Spalte nicht 0 sein.
 
 *member*<br/>
@@ -583,9 +583,9 @@ Kennzeichnet das Ende der schemazuordnung.
 END_SCHEMA_MAP()
 ```
 
-#### <a name="see-also"></a>Siehe auch
+#### <a name="remarks"></a>Hinweise
 
-[IDBSchemaRowsetImpl-Klasse](../../data/oledb/idbschemarowsetimpl-class.md)
+Weitere Informationen finden Sie unter [IDBSchemaRowsetImpl-Klasse](../../data/oledb/idbschemarowsetimpl-class.md).
 
 ### <a name="schema_entry"></a> SCHEMA_ENTRY
 
@@ -600,7 +600,7 @@ SCHEMA_ENTRY(guid,
 
 #### <a name="parameters"></a>Parameter
 
-*GUID*<br/>
+*guid*<br/>
 Ein Schemarowset-GUID. Finden Sie unter [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) in die *OLE DB-Programmierreferenz* eine Liste der Schemarowsets und die GUIDs.
 
 *rowsetClass*<br/>

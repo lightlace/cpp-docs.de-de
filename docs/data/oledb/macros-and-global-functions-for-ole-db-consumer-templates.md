@@ -1,6 +1,6 @@
 ---
 title: Makros und globale Funktionen für OLE-Consumervorlagen
-ms.date: 11/04/2016
+ms.date: 02/11/2019
 f1_keywords:
 - vc.templates.ole
 - ATL.AtlTraceErrorRecords
@@ -100,12 +100,12 @@ helpviewer_keywords:
 - END_PARAM_MAP macro
 - SET_PARAM_TYPE macro
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-ms.openlocfilehash: 4254c2637c4ed937a3196310ffa83c48504911af
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1826f674e219b850e62fdae07b3a97e8b8cf2d48
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557114"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148997"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>Makros und globale Funktionen für OLE-Consumervorlagen
 
@@ -198,11 +198,7 @@ inline void AtlTraceErrorRecords(HRESULT hrErr = S_OK);
 
 #### <a name="remarks"></a>Hinweise
 
-Wenn *hErr* ist nicht S_OK, `AtlTraceErrorRecords` gibt OLE DB-Fehlerdatensatz Informationen auf dem Sicherungsmedium (die **Debuggen** Registerkarte dem Fenster "Ausgabe" oder eine Datei). Die Error-Datensatzes von Informationen vom Anbieter abgerufen wird, enthält die Nummer der Zeile, Quelle, Beschreibung, Hilfe, Kontext und GUID für jeden Eintrag der Fehler. `AtlTraceErrorRecords` gibt diese Informationen nur in Debug-Builds. In Releasebuilds ist es sich um einen leeren Stub, der Sie optimiert ist.
-
-#### <a name="see-also"></a>Siehe auch
-
-[CDBErrorInfo-Klasse](../../data/oledb/cdberrorinfo-class.md)
+Wenn *hErr* ist nicht S_OK, `AtlTraceErrorRecords` gibt OLE DB-Fehlerdatensatz Informationen auf dem Sicherungsmedium (die **Debuggen** Registerkarte dem Fenster "Ausgabe" oder eine Datei). Die Error-Datensatzes von Informationen vom Anbieter abgerufen wird, enthält die Nummer der Zeile, Quelle, Beschreibung, Hilfe, Kontext und GUID für jeden Eintrag der Fehler. `AtlTraceErrorRecords` gibt diese Informationen nur in Debug-Builds. In Releasebuilds ist es sich um einen leeren Stub, der Sie optimiert ist. Weitere Informationen finden Sie unter [CDBErrorInfo-Klasse](../../data/oledb/cdberrorinfo-class.md).
 
 ### <a name="begin_accessor"></a> BEGIN_ACCESSOR
 
@@ -618,7 +614,7 @@ BOOKMARK_ENTRY(variable)
 
 #### <a name="parameters"></a>Parameter
 
-*Variable*<br/>
+*variable*<br/>
 [in] Die Variable an die Lesezeichenspalte gebunden werden muss.
 
 #### <a name="example"></a>Beispiel
@@ -669,10 +665,7 @@ END_COLUMN_MAP()
 };
 ```
 
-#### <a name="see-also"></a>Siehe auch
-
-[CBookmark-Klasse](../../data/oledb/cbookmark-class.md)<br/>
-[DBPROP_BOOKMARKS](https://docs.microsoft.com/previous-versions/windows/desktop/ms709728(v=vs.85))
+Weitere Informationen finden Sie unter [mithilfe von Lesezeichen](using-bookmarks.md) und [CBookmark-Klasse](../../data/oledb/cbookmark-class.md).
 
 ### <a name="column_entry"></a> COLUMN_ENTRY
 
@@ -1071,7 +1064,7 @@ COLUMN_ENTRY_TYPE_SIZE(nOrdinal, wType, nLength, data)
 
 Dieses Makro ist eine spezielle Variante der [COLUMN_ENTRY](../../data/oledb/column-entry.md) Makro, das eine Möglichkeit zur Angabe der Größe der Daten und den Typ enthält.
 
-### <a name="column_name"></a> SPALTENNAME
+### <a name="column_name"></a> COLUMN_NAME
 
 Stellt eine Bindung für das Rowset für die spezifische Spalte des Rowsets dar. Ähnlich wie [COLUMN_ENTRY](../../data/oledb/column-entry.md), außer dass dieses Makro anstelle die Nummer der Spalte den Namen der Spalte verwendet.
 
