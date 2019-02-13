@@ -20,15 +20,17 @@ helpviewer_keywords:
 - directories [C++], specifying include paths for resources
 - include files [C++], specifying for resources
 - resources [C++], including in projects
+- symbols [C++], finding
+- resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: 52145d2a656a7cac0d07a43ceaf298fbebb5ad40
-ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
+ms.openlocfilehash: 8df5a8ee6583b1e9f5c50a428b69babb0d56961b
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55764076"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152377"
 ---
-# <a name="how-to-include-resources-at-compile-time"></a>Vorgehensweise: Einfügen von Ressourcen zur Kompilierungszeit
+# <a name="how-to-include-resources-at-compile-time-c"></a>Vorgehensweise: Einfügen von Ressourcen zur Kompilierungszeit (C++)
 
 Normalerweise ist es einfach und bequem, arbeiten mit der standardanordnung aller Ressourcen in einer Ressourcenskriptdatei (.rc). Aber Sie können Ressourcen hinzufügen in anderen Dateien zu Ihrem aktuellen Projekt zum Zeitpunkt der Kompilierung durch Auflisten der in der **Kompilierzeitdirektiven** im Feld der **Ressourcenincludes** Dialogfeld.
 
@@ -42,7 +44,7 @@ Es gibt verschiedene Gründe für das Platzieren von Ressourcen in einer Datei, 
 
 - Zum Einbeziehen von Ressourcen, die durch mehrere unterschiedliche Projekte verwendet werden, oder die Teil einer Version-Quellcodeverwaltungssystem, und muss also vorhanden sein an einem zentralen Ort, in denen Änderungen auf alle Projekte auswirken.
 
-- Zum Einbeziehen von Ressourcen (beispielsweise RCDATA-Ressourcen), die ein benutzerdefiniertes Format aufweisen. RCDATA-Ressourcen weisen möglicherweise spezielle Anforderungen auf. Beispielsweise können Sie einen Ausdruck für das Feld „nameID“ nicht als Wert verwenden. Finden Sie unter der Windows SDK-Dokumentation für Weitere Informationen.
+- Zum Einbeziehen von Ressourcen (beispielsweise RCDATA-Ressourcen), die ein benutzerdefiniertes Format aufweisen. RCDATA-Ressourcen weisen möglicherweise spezielle Anforderungen auf. Sie können keine z. B. einen Ausdruck als Wert für das Feld "NameID" verwenden. Weitere Informationen finden Sie in der Windows SDK-Dokumentation.
 
 Wenn Sie über Abschnitte in Ihren vorhandenen RC-Dateien, die eine der folgenden Bedingungen erfüllen verfügen, sollten Sie in den Abschnitten platzieren, in einem oder mehr getrennten RC-Datei, und beziehen Sie diese in Ihrem Projekt mithilfe der **Ressourcenincludes** Dialogfeld. Die *Projectname*RC2-Datei erstellt, die im Unterverzeichnis \res eines neuen Projekts für diesen Zweck verwendet wird.
 
@@ -59,7 +61,7 @@ Zu öffnen der **Ressourcenincludes** klicken Sie im Dialogfeld mit der rechten 
 > [!NOTE]
 > Einträge in diesen Textfeldern angezeigt werden, in der RC-Datei markiert `TEXTINCLUDE 1`, `TEXTINCLUDE 2`, und `TEXTINCLUDE 3` bzw. Weitere Informationen finden Sie unter [TN035: Verwenden mehrerer Ressourcendateien und Headerdateien mit Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md).
 
-Nachdem Sie Änderungen, um Ihrer Ressourcendatei mithilfe vorgenommen haben der **Ressourcenincludes** im Dialogfeld müssen Sie die RC-Datei zu schließen und erneut öffnen, damit die Änderungen wirksam werden. Weitere Informationen finden Sie unter [Einfügen von Ressourcen zur Kompilierungszeit](../windows/how-to-include-resources-at-compile-time.md).
+Nachdem Sie Änderungen, um Ihrer Ressourcendatei mithilfe vorgenommen haben der **Ressourcenincludes** im Dialogfeld müssen Sie die RC-Datei zu schließen und erneut öffnen, damit die Änderungen wirksam werden.
 
 Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in .NET Framework-Entwicklerhandbuch.
 
@@ -73,11 +75,27 @@ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie
 
    Die auf diese Weise in die Dateien einbezogenen Ressourcen werden zum Bestandteil Ihrer ausführbaren Datei zum Zeitpunkt der Kompilierung. Sie sind nicht für die Bearbeitung oder Änderung direkt zur Verfügung, wenn Sie auf die RC-Hauptdatei Datei des Projekts arbeiten. Öffnen Sie einbezogene RC-Dateien einzeln. Alle Dateien, die sind enthalten, aber keine RC-Erweiterung wird nicht von der Ressourcen-Editor bearbeitet werden.
 
-## <a name="to-specify-include-directories-for-a-specific-resource-rc-file-c"></a>Angeben der Includeverzeichnisse für eine bestimmte Ressource (RC-Datei) (C++)
+## <a name="to-specify-include-directories-for-a-specific-resource-rc-file"></a>Angeben der Includeverzeichnisse für eine bestimmte Ressource (RC-Datei)
 
 1. Mit der rechten Maustaste im Projektmappen-Explorer auf der RC-Datei, und wählen Sie **Eigenschaften** aus dem Kontextmenü.
 
 1. In der **Eigenschaftenseiten** wählen Sie im Dialogfeld die **Ressourcen** Knoten im linken Bereich, geben Sie dann die zusätzlichen "include"-Verzeichnissen in die **Zusätzliche Includeverzeichnisse**Eigenschaft.
+
+## <a name="to-find-symbols-in-resources"></a>So suchen Sie Symbole in Ressourcen
+
+1. Von der **bearbeiten** Menü wählen **Suchsymbol**.
+
+1. In der [Suchsymbol-Dialogfeld](/visualstudio/ide/go-to)in die **Suchen nach** Feld, wählen Sie einen früheren Suchbegriff aus der Dropdown Liste aus, oder geben Sie die Zugriffstaste, die Sie (z. B. ID_ACCEL1) suchen möchten.
+
+   > [!TIP]
+   > Mit [reguläre Ausdrücke](/visualstudio/ide/using-regular-expressions-in-visual-studio) für die Suche, müssen Sie verwenden die [Befehl in Dateien suchen](/visualstudio/ide/reference/find-command) aus der **bearbeiten** Menü anstelle von der **Suchsymbol**Befehl. Um reguläre Ausdrücke zu aktivieren, müssen Sie die **verwenden: Reguläre Ausdrücke** Kontrollkästchen der [suchen (Dialogfeld)](/visualstudio/ide/finding-and-replacing-text). Dann können Sie den nach rechts weisenden Pfeil rechts neben der **Suchen nach** Feld, um eine Liste von regulären Suchausdrücken anzuzeigen. Wenn Sie einen Ausdruck aus dieser Liste auswählen, wird dieser als Suchtext im der **Suchen nach** Feld.
+
+1. Aktivieren Sie keines der **finden** Optionen.
+
+1. Wählen Sie **Weitersuchen**.
+
+> [!NOTE]
+> Die Suche nach Symbolen in Zeichenfolgen-, Zugriffstasten- oder Binärressourcen wird nicht unterstützt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -87,5 +105,4 @@ Win32
 
 [Ressourcendateien](../windows/resource-files-visual-studio.md)<br/>
 [Ressourcen-Editor](../windows/resource-editors.md)<br/>
-[TN035: Verwenden mehrerer Ressourcendateien und Headerdateien mit Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)<br/>
 [Symbole: Ressourcenbezeichner](../windows/symbols-resource-identifiers.md)<br/>
