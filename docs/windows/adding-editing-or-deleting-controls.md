@@ -36,13 +36,19 @@ helpviewer_keywords:
 - variables, dialog box control member variables
 - controls [C++], member variables
 - Dialog Editor [C++], defining member variables for controls
+- controls [C++], troubleshooting
+- Dialog Editor [C++], troubleshooting
+- dialog boxes [C++], troubleshooting
+- InitCommonControls
+- RichEdit 1.0 control
+- rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: b4edb5b7a51e4f6d368759ebc2e05a1cc585f19a
-ms.sourcegitcommit: 52c05e10b503e834c443ef11e7ca1987e332f876
+ms.openlocfilehash: 648ac3329409ba221881f75eaa51e1779091b0f0
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55742751"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264867"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>Hinzufügen, Bearbeiten oder Löschen von Steuerelementen
 
@@ -51,44 +57,6 @@ Mithilfe der **Dialogfeld** -Editor die Größe ändern, bearbeiten und löschen
 Die **Dialog-Editor** Registerkarte wird angezeigt, der [Fenster "Toolbox"](/visualstudio/ide/reference/toolbox) beim Arbeiten der **Dialogfeld** Editor. Sie können auch anpassen, die **Toolbox** Fenster zur einfacheren Verwendung. Weitere Informationen finden Sie unter [mithilfe der Toolbox](/visualstudio/ide/using-the-toolbox) und [ein- oder Ausblenden der Fenster "Toolbox"](showing-or-hiding-the-dialog-editor-toolbar.md).
 
 Können Sie das Kontextmenü in der **Dialogfeld** -Editor, um schnell hinzufügen registriert ActiveX-Steuerelemente in einem Dialogfeld aus, und Sie können ActiveX-Steuerelemente zum Hinzufügen der **Toolbox** für den Schnellzugriff.
-
-Die Standardsteuerelemente sind in der **Toolbox** Standardwert Ereignisse sind:
-
-|Steuerelementname|Standardereignis|
-|---|---|
-|[Schaltflächen-Steuerelement](../mfc/reference/cbutton-class.md)|BN_CLICKED|
-|[Kontrollkästchen-Steuerelement](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[Kombinationsfeld-Steuerelement](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
-|[Steuerelement bearbeiten](../mfc/reference/cedit-class.md)|EN_CHANGE-EREIGNIS|
-|Gruppenfeld|(Nicht zutreffend)|
-|[Listenfeld-Steuerelement](../mfc/reference/clistbox-class.md)|LBN_SELCHANGE|
-|[Optionsfeld-Steuerelement](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[Statischer Text-Steuerelement](../mfc/reference/cstatic-class.md)|(Nicht zutreffend)|
-|[Bildsteuerelement](../mfc/reference/cpictureholder-class.md)|(Nicht zutreffend)|
-|[Rich Edit 2.0-Steuerelement](../mfc/using-cricheditctrl.md)|EN_CHANGE-EREIGNIS|
-|[Bildlaufleisten-Steuerelement](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
-
-Weitere Informationen zur Verwendung der **RichEdit 1.0** mit MFC zu steuern, finden Sie unter [Verwenden des RichEdit 1.0-Steuerelements mit MFC](../windows/using-the-richedit-1-0-control-with-mfc.md) und [Rich bearbeiten Beispiele für](../mfc/rich-edit-control-examples.md).
-
-Die [Windows-Standardsteuerelemente](../mfc/controls-mfc.md) zur Verfügung, in der **Toolbox** bieten gesteigerte Funktionalität in Ihrer Anwendung. Dazu zählen:
-
-|Steuerelementname|Standardereignis|
-|---|---|
-|[Schieberegler-Steuerelement](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
-|[Drehfeld-Steuerelement](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
-|[Statuskontrolle](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
-|[Abkürzungstasten-Steuerelement](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
-|[Listensteuerelement](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
-|[Strukturansicht-Steuerelement](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
-|[Registerkarten-Steuerelement](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
-|[Animation-Steuerelement](../mfc/using-an-animation-control.md)|ACN_START|
-|[Datums-/ Zeitauswahl-Steuerelement](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
-|[Monatskalender-Steuerelement](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
-|[IP-Adressensteuerelement](../mfc/reference/cipaddressctrl-class.md)|IPN_FIELDCHANGED|
-|[Erweitertes Kombinationsfeld-Steuerelement](../mfc/creating-an-extended-combo-box-control.md)||
-|[Benutzerdefiniertes Steuerelement](custom-controls-in-the-dialog-editor.md)|TTN_GETDISPINFO|
-
-Weitere Informationen finden Sie unter [Steuerelementklassen](../mfc/control-classes.md), [Dialogfeldklassen](../mfc/dialog-box-classes.md), und [Stile des Schiebeleisten Steuerelements](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles).
 
 Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
 
@@ -239,14 +207,53 @@ Auf der **bearbeiten** , wählen Sie im Menü **löschen**.
    > [!TIP]
    > Bei der Verwendung der **Dialogfeld** -Editor in vielen Fällen können Sie die rechte Maustaste gedrückt, um ein Kontextmenü mit häufig verwendeten Befehlen anzuzeigen klicken.
 
+## <a name="known-issue"></a>Bekannte Probleme
+
+Nach dem Hinzufügen einer allgemeinen Steuerelements oder rich-Edit-Steuerelement in einem Dialogfeld an, nicht es angezeigt, wenn Sie Sie das Dialogfeld Testen oder das Dialogfeld selbst wird nicht angezeigt.
+
+Um ein Beispiel für das Problem finden Sie unter:
+
+1. Erstellen Sie eine Win32-Projekts, das die Anwendungseinstellungen ändern, damit Sie eine Windows-Anwendung (keine Konsolen-app erstellen).
+
+1. In [Ressourcenansicht](../windows/resource-view-window.md), doppelklicken Sie auf die RC-Datei.
+
+1. Doppelklicken Sie unter der Dialogfeldoption auf die **zu** Feld.
+
+1. Hinzufügen einer **IP-Adressensteuerelement** auf das Dialogfeld.
+
+1. Speichern und **alles neu erstellen**.
+
+1. Führen Sie das Programm an.
+
+1. In des Dialogfelds **helfen** im Menü klicken Sie auf die **zu** Befehl, kein Dialogfeld angezeigt wird.
+
+Derzeit den **Dialogfeld** Editor nicht Code automatisch zu Ihrem Projekt hinzugefügt werden, wenn Drag & drop die folgenden allgemeinen Steuerelemente oder Rich--Steuerelemente in einem Dialogfeld Edit. Auch Visual Studio bietet Fehler oder Warnung, wenn dieses Problem auftritt. Um das Problem zu beheben, fügen Sie den Code für das Steuerelement manuell hinzu.
+
+||||
+|-|-|-|
+|Schiebereglersteuerung|Strukturansicht-Steuerelement|Datums-/Zeitauswahl|
+|Drehfeld-Steuerelement|Registerkarten-Steuerelement|Monatskalender|
+|Statuskontrolle|Animation-Steuerelement|IP-Adressensteuerelement|
+|Abkürzungstaste|Rich Edit-Steuerelements|Erweitertes Kombinationsfeld|
+|Listensteuerelement|Rich Edit 2.0-Steuerelements|Benutzerdefiniertes Steuerelement|
+
+Um allgemeine Steuerelemente in einem Dialogfeld verwenden zu können, müssen Sie zum Aufrufen [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) oder `AFXInitCommonControls` vor der Erstellung des Dialogfelds.
+
+Um RichEdit-Steuerelemente verwenden, rufen Sie `LoadLibrary`. Weitere Informationen finden Sie unter [über Rich-Edit-Steuerelemente](/windows/desktop/Controls/about-rich-edit-controls) im Windows SDK und [Überblick über das RichEdit-Steuerelement](../mfc/overview-of-the-rich-edit-control.md).
+
+> [!NOTE]
+> Um ein RichEdit-Steuerelement mit MFC verwenden zu können, müssen Sie zuerst Aufrufen [AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2) beim Laden des RichEdit-2.0-Steuerelements (RICHED20. DLL), oder rufen Sie [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit) beim Laden des älteren RichEdit 1.0-Steuerelements (RICHED32. (DLL).
+>
+> Möglicherweise verwenden Sie die aktuelle [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) Klasse mit dem älteren RichEdit 1.0-Steuerelement, aber `CRichEditCtrl` dient nur zur Unterstützung des RichEdit-2.0-Steuerelements. Da RichEdit 1.0 und 2.0 des RichEdit ähnlich sind, funktionieren die meisten Methoden. Beachten Sie jedoch, dass es gibt einige Unterschiede zwischen den Steuerelementen 1.0 und 2.0, sodass einige Methoden möglicherweise nicht ordnungsgemäß oder überhaupt nicht funktionsfähig.
+
 ## <a name="requirements"></a>Anforderungen
 
 Win32
 
 ## <a name="see-also"></a>Siehe auch
 
+[Dialog-Editor](../windows/dialog-editor.md)<br/>
 [Steuerelemente in Dialogfeldern](controls-in-dialog-boxes.md)<br/>
-[Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)<br/>
 [Ressourcendateien](../windows/resource-files-visual-studio.md)<br/>
 
 <!-- excluded links

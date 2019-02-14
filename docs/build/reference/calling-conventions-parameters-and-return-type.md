@@ -1,17 +1,17 @@
 ---
 title: Aufrufkonventionen, Parameter und Rückgabetyp
-ms.date: 11/04/2016
+ms.date: 02/13/2019
 helpviewer_keywords:
 - calling conventions, helper functions
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-ms.openlocfilehash: 8343c17828040ca36b042cb99e0c51c37548d3b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15631b305246cbfd7dcd8081cb1ee488bf225fec
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654427"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264802"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>Aufrufkonventionen, Parameter und Rückgabetyp
 
@@ -27,12 +27,12 @@ FARPROC WINAPI __delayLoadHelper2(
 ### <a name="parameters"></a>Parameter
 
 *pidd*<br/>
-Ein `const`-Zeiger zu `ImgDelayDescr` (siehe delayimp.h), der die Offsets verschiedener importrelevanter Daten, einen Zeitstempel für das Binden von Informationen und einen Satz von Attributen enthält, die weitere Informationen zum Inhalt des Deskriptors bereitstellen. Derzeit gibt es nur ein Attribut, `dlattrRva`, das angibt, dass die Adressen im Deskriptor relative virtuelle Adressen sind (im Gegensatz zu virtuellen Adressen).
+Ein `const` Zeiger auf eine `ImgDelayDescr` , enthält die Offsets verschiedener importrelevanter Daten, einen Zeitstempel für das Binden von Informationen und einen Satz von Attributen, die Weitere Informationen zum Inhalt Deskriptors bereitstellen. Derzeit ist es jedoch nur ein Attribut, `dlattrRva`, was bedeutet, dass die Adressen im Deskriptor relative virtuelle Adressen sind. Weitere Informationen finden Sie in den Deklarationen in *delayimp.h*.
 
 Die Definition der `PCImgDelayDescr` Struktur, siehe [Struktur- und Konstantendefinitionen](../../build/reference/structure-and-constant-definitions.md).
 
 *ppfnIATEntry*<br/>
-Ein Zeiger zum Slot in der mit Verzögerung geladenen Importadresstabelle (IAT), die mit der Adresse der importierten Funktion aktualisiert werden soll. Die Hilfsroutine muss denselben Wert speichern, den sie an diesen Speicherort zurückgibt.
+Ein Zeiger zum Slot in der Delay Load Importadresstabelle (IAT), die mit der Adresse der importierten Funktion aktualisiert wird. Die Hilfsroutine muss denselben Wert speichern, den sie an diesen Speicherort zurückgibt.
 
 ## <a name="expected-return-values"></a>Erwartete Rückgabewerte
 
@@ -46,11 +46,11 @@ Wenn die Funktion fehlschlägt, wird eine Ausnahme ausgelöst und 0 zurückgegeb
 
 - Fehlschlagen von `GetProcAddress`.
 
-Es liegt in Ihrer Verantwortung, diese Ausnahmen zu handhaben.
+Es ist Ihre Aufgabe, diese Ausnahmen zu behandeln.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Aufrufkonvention für die Hilfsfunktion ist `__stdcall`. Der Typ des Rückgabewerts ist nicht relevant, deshalb wird FARPROC verwendet. Diese Funktion hat eine C-Bindung.
+Die Aufrufkonvention für die Hilfsfunktion ist `__stdcall`. Der Typ des Rückgabewerts ist nicht relevant, deshalb wird FARPROC verwendet wird. Diese Funktion hat eine C-Bindung.
 
 Der Rückgabewert für die Hilfsfunktion für das verzögerte Laden muss im übergegebenen Funktionszeigerspeicherort gespeichert werden, es sei denn, Sie möchten, dass Ihre Hilfsfunktion als Benachrichtigungshook verwendet wird. In diesem Fall ist Ihr Code dafür verantwortlich, den entsprechenden Funktionszeiger zum Zurückgeben zu finden. Der vom Linker generierte Thunkcode übernimmt dann diesen Rückgabewert als reales Ziel für den Importvorgang und springt direkt dorthin.
 
@@ -131,7 +131,7 @@ FARPROC WINAPI delayHook(unsigned dliNotify, PDelayLoadInfo pdli)
 
 /*
 and then at global scope somewhere
-PfnDliHook __pfnDliNotifyHook2 = delayHook;
+const PfnDliHook __pfnDliNotifyHook2 = delayHook;
 */
 ```
 

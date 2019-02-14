@@ -1,6 +1,8 @@
 ---
-title: Definieren von Tastenkombinationen
+title: Steuern des Zugriffs und Werte definieren
 ms.date: 11/04/2016
+f1_keywords:
+- vc.editors.dialog.combo
 helpviewer_keywords:
 - access keys [C++], adding
 - keyboard shortcuts [C++], controls
@@ -13,15 +15,74 @@ helpviewer_keywords:
 - Check Mnemonics command
 - controls [C++], access keys
 - access keys [C++]
+- combo boxes [C++], Data property
+- controls [C++], testing values in combo boxes
+- combo boxes [C++], adding values
+- combo boxes [C++], previewing values
+- Data property
+- combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-ms.openlocfilehash: 8682ab38abebe1c453ef562e8eaac0e627f5c4bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a885ad57ba05304d51cb45d0b498d81ad37a148
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488919"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264854"
 ---
-# <a name="defining-mnemonics-access-keys"></a>Definieren von Tastenkombinationen
+# <a name="defining-control-access-and-values"></a>Steuern des Zugriffs und Werte definieren
+
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+
+## <a name="change-the-tab-order-of-controls"></a>Ändern der Aktivierreihenfolge von Steuerelementen
+
+Die Aktivierreihenfolge ist die Reihenfolge, in der **Registerkarte** -Taste wird den Eingabefokus von einem Steuerelement verschoben, an den nächsten in einem Dialogfeld. In der Regel wird die Aktivierreihenfolge auf, von links nach rechts und von oben nach unten in einem Dialogfeld. Jedes Steuerelement verfügt über eine **Tabstop** -Eigenschaft, die bestimmt, ob ein Steuerelement den Eingabefokus erhält.
+
+### <a name="to-set-input-focus-for-a-control"></a>Eingabefokus für ein Steuerelement festgelegt.
+
+In der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window)Option **"true"** oder **"false"** in die **Tabstop** Eigenschaft.
+
+Auch Steuerelemente, die nicht die **Tabstop** -Eigenschaftensatz auf **"true"** müssen Teil der Aktivierreihenfolge. Tab-Reihenfolge ist wichtig, z. B., wenn Sie [definieren Sie Zugriffstasten (mnemonischen Zeichen)](../windows/defining-mnemonics-access-keys.md) für Steuerelemente, die keine Beschriftungen haben. Statischer Text, der eine Zugriffstaste für ein verwandtes Steuerelement enthält muss das zugehörige Steuerelement in der Aktivierreihenfolge unmittelbar vorangestellt sein.
+
+> [!NOTE]
+> Wenn das Dialogfeld überlappende Steuerelemente enthält, unter Umständen ändern der Aktivierreihenfolge verändern, wie die Steuerelemente angezeigt werden. Steuerelemente, die weiter unten in der Aktivierreihenfolge erläutert werden immer auf überlappende Steuerelemente angezeigt, die ihnen in der Aktivierreihenfolge vorausgehen.
+
+### <a name="to-view-the-current-tab-order-for-all-controls-in-a-dialog-box"></a>Anzeigen die aktuellen Aktivierreihenfolge für alle Steuerelemente in einem Dialogfeld
+
+Auf der **Format** , wählen Sie im Menü **Aktivierreihenfolge**.
+
+\- oder –
+
+- Drücken Sie **STRG** + **D**.
+
+### <a name="to-change-the-tab-order-for-all-controls-in-a-dialog-box"></a>So ändern Sie die Aktivierreihenfolge für alle Steuerelemente in einem Dialogfeld
+
+1. Auf der **Format** , wählen Sie im Menü **Aktivierreihenfolge**.
+
+   Eine Zahl in der oberen linken Ecke der einzelnen Steuerelemente zeigt seine Position in der aktuellen Aktivierreihenfolge.
+
+1. Festlegen der Aktivierreihenfolge durch Klicken auf jedes Steuerelement in der gewünschten Reihenfolge der **Registerkarte** Schlüssel folgen.
+
+1. Drücken Sie **EINGABETASTE** beendet **Aktivierreihenfolge** Modus.
+
+   > [!TIP]
+   > Nach der Eingabe **Aktivierreihenfolge** -Modus können Sie durch Drücken **Esc** oder **EINGABETASTE** So deaktivieren Sie die Möglichkeit zum Ändern der Aktivierreihenfolge.
+
+### <a name="to-change-the-tab-order-for-two-or-more-controls"></a>So ändern Sie die Aktivierreihenfolge für zwei oder mehr Steuerelementen
+
+1. Von der **Format** Menü wählen **Aktivierreihenfolge**.
+
+1. Geben Sie die Änderung in der Reihenfolge, in denen beginnt. Halten Sie zunächst die **STRG** Schlüssel wählen Sie das Steuerelement, und wählen Sie diejenige aus, die Reihenfolge geänderte werden sollen.
+
+   Z. B., wenn Sie die Reihenfolge der Steuerelemente ändern möchten `7` über `9`, halten Sie die **STRG**, wählen Sie dann das Steuerelement `6` erste.
+
+   > [!NOTE]
+   > Für ein bestimmtes Steuerelement festzulegen, Anzahl `1` (zuerst in der Aktivierreihenfolge), doppelklicken Sie auf das Steuerelement.
+
+1. Version der **STRG** Schlüssel aus, und wählen Sie die Steuerelemente in der gewünschten Reihenfolge der **Registerkarte** -Taste, um von diesem Punkt folgen.
+
+1. Drücken Sie **EINGABETASTE** beendet **Aktivierreihenfolge** Modus.
+
+## <a name="define-mnemonics-access-keys"></a>Definieren der mnemonischen Zeichen (Zugriffstasten)
 
 In der Regel Benutzer über die Tastatur verschieben den Eingabefokus von einem Steuerelement zu einem anderen in einem Dialogfeld mit den **Registerkarte** und **Pfeil** Schlüssel. Allerdings können Sie eine Zugriffstaste (ein mnemonisches oder einfach zu merkenden-Name) definieren, die Benutzern ermöglicht, ein Steuerelement auswählen, indem Sie eine Taste zu drücken.
 
@@ -49,7 +110,41 @@ Alle Zugriffstasten in einem Dialogfeld sollte eindeutig sein.
 
 1. Auf der **Format** Menü klicken Sie auf **Mnemonik**.
 
-Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+## <a name="add-values-to-a-combo-box-control"></a>Fügen Sie Werte an ein Kombinationsfeld-Steuerelement hinzu.
+
+Sie können Werte an ein Kombinationsfeld-Steuerelement hinzufügen, solange Sie haben die **Dialogfeld** Editor öffnen.
+
+> [!TIP]
+> Es ist eine gute Idee, alle Werte im Kombinationsfeld hinzufügen *vor* Sie seine Größe im der **Dialogfeld** -Editor, oder Sie können truncate Text, der im Kombinationsfeld-Steuerelement angezeigt werden soll.
+
+### <a name="to-enter-values-into-a-combo-box-control"></a>Um die Werte in einem Kombinationsfeld-Steuerelement eingeben
+
+1. Wählen Sie das Kombinationsfeld-Steuerelement, indem Sie darauf klicken.
+
+1. In der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window), führen Sie einen Bildlauf nach unten, um die **Daten** Eigenschaft.
+
+   > [!NOTE]
+   > Wenn Sie Eigenschaften gruppiert nach Typ anzeigen **Daten** wird in der **Verschiedenes** Eigenschaften.
+
+1. Wählen Sie den Wertebereich für die **Daten** Eigenschaft, und geben die Datenwerte, die durch Semikolons getrennt sind.
+
+   > [!NOTE]
+   > Stellen Sie nicht zwischen den Werten Leerzeichen stehen, da Leerzeichen in der Dropdown Liste verfälschen.
+
+1. Drücken Sie **EINGABETASTE** Sie abschließend Werte hinzufügen.
+
+Informationen dazu, wie den Dropdown-Teil eines Kombinationsfelds vergrößern, finden Sie unter [Festlegen der Größe des Kombinationsfelds und einem Dropdown-Listenfeld](setting-the-size-of-the-combo-box-and-its-drop-down-list.md).
+
+> [!NOTE]
+> Win32-Projekte, die mit dieser Prozedur können keine Werte hinzugefügt (die **Daten** Eigenschaft abgeblendet ist, für die Win32-Projekte). Da Win32-Projekte nicht über Bibliotheken, die diese Funktion hinzuzufügen verfügen, müssen Sie Werte an ein Kombinationsfeld mit einem Win32-Projekt programmgesteuert hinzufügen.
+
+### <a name="to-test-the-appearance-of-values-in-a-combo-box"></a>So testen Sie die Darstellung der Werte in einem Kombinationsfeld
+
+Nach der Eingabe von Werten in der **Daten** -Eigenschaft die Option der **Test** Schaltfläche der [Dialog-Editor-Symbolleiste](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
+
+   Versuchen Sie es in den gesamten Wert-Liste nach unten scrollen. Werte angezeigt werden, genau wie die Eingabe in die **Daten** -Eigenschaft in der **Eigenschaften** Fenster. Es gibt keine Rechtschreib- oder Großschreibung zu überprüfen.
+
+   Drücken Sie **ESC-Taste** zum Zurückgeben der **Dialogfeld** Editor.
 
 ## <a name="requirements"></a>Anforderungen
 
