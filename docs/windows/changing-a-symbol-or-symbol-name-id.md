@@ -1,6 +1,6 @@
 ---
 title: 'Vorgehensweise: Verwaltung von Symbolen'
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.symbol.changing
 - vc.editors.symbol.restrictions.name
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 4bc0376b6b5ff402f0cc9f40093e000763ad6656
-ms.sourcegitcommit: bec1480a03e7b4070b469a6c131a69f516bbac70
+ms.openlocfilehash: 4f1c44e8fc2ae34ddcb65ec23ca8d98e11d50ec0
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56226370"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320587"
 ---
 # <a name="how-to-manage-symbols"></a>Vorgehensweise: Verwaltung von Symbolen
 
@@ -49,8 +49,6 @@ Wenn Sie eine neue Ressource oder ein Ressourcenobjekt erstellen, weist die Entw
 Symbole, die eine einzelne Ressource zugeordnet werden, können Sie auch die **Eigenschaften** um den Symbolwert zu ändern. Können Sie die [Dialogfeld Ressourcensymbole](../windows/resource-symbols-dialog-box.md) so ändern Sie den Wert von Symbolen, die derzeit nicht auf eine Ressource zugewiesen.
 
 Normalerweise alle Symboldefinitionen, die in gespeichert werden `Resource.h`. Jedoch müssen Sie den Namen dieser Includedatei möglicherweise ändern, sodass Sie z. B. mit mehr als eine Ressourcendatei im selben Verzeichnis arbeiten können.
-
-Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*.
 
 > [!NOTE]
 > Wenn Ihr Projekt noch keine RC-Datei enthält, finden Sie unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).
@@ -93,7 +91,7 @@ Symbolnamen weisen beschreibende Präfixe auf, die die Art der Ressource oder de
 
 Sie können die [Ressourcensymbole (Dialogfeld)](../windows/resource-symbols-dialog-box.md) so ändern Sie die Namen der derzeit nicht auf eine Ressource zugewiesenen Symbole.
 
-## <a name="symbol-value-restrictions"></a>Beschränkungen für Symbolwerte
+## <a name="symbol-value-restrictions"></a>Beschränkungen bei Symbolwerten
 
 Bei einem Symbolwert kann es sich um eine beliebige Ganzzahl handeln, die in normaler Form für „#define preprocessor“-Anweisungen ausgedrückt wird. Hier sind einige Beispiele für Symbolwerte:
 
@@ -142,7 +140,7 @@ Weitere Informationen über Zahlenbereiche finden Sie unter [TN023: MFC-Standard
 
 Der neue Wert wird in der Symbolheaderdatei gespeichert, wenn Sie das nächste Mal das Projekt speichern. Nur der Symbolnamen verbleibt weiterhin angezeigt, in das Feld-ID; Das Gleichheitszeichen und Wert werden nicht angezeigt, nachdem sie überprüft haben.
 
-## <a name="change-or-delete-unassigned-symbols"></a>Ändern Sie oder löschen Sie nicht zugewiesener Symbole
+## <a name="change-or-delete-symbols"></a>Ändern oder Löschen von Symbolen
 
 Während Sie sich in der [Ressourcensymbole (Dialogfeld)](../windows/resource-symbols-dialog-box.md), können Sie bearbeiten oder löschen Sie vorhandene Symbole, die bereits auf eine Ressource oder das Objekt zugewiesen wird.
 
@@ -162,7 +160,7 @@ In der [Dialogfeld Ressourcensymbole](../windows/resource-symbols-dialog-box.md)
    > [!NOTE]
    > Stellen Sie vor dem Löschen eines nicht verwendeten Symbols in einer Ressourcendatei sicher, dass es nicht an anderer Stelle im Programm oder durch die Ressourcendateien zum Zeitpunkt der Kompilierung verwendet wird.
 
-## <a name="include-shared-read-only-or-calculated-symbols"></a>Einschließen gemeinsam genutzter (schreibgeschützter) oder berechneter Symbole
+## <a name="include-symbols"></a>Symbole einschließen
 
 Wenn die Entwicklungsumgebung erstmals eine durch eine andere Anwendung erstellte Ressourcendatei liest, markiert sie alle einbezogenen Headerdateien als schreibgeschützt. Dennoch können Sie Sie verwenden die [Dialogfeld Ressourcenincludes](../windows/resource-includes-dialog-box.md) um zusätzliche schreibgeschützte Symbolheaderdateien hinzuzufügen.
 
@@ -217,6 +215,6 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Symbole: Ressourcenbezeichner](../windows/symbols-resource-identifiers.md)<br/>
+[Ressourcen-IDs (Symbole)](../windows/symbols-resource-identifiers.md)<br/>
+[Erstellen von Symbolen](../windows/creating-new-symbols.md)<br/>
 [Vordefinierte Symbol-IDs](../windows/predefined-symbol-ids.md)<br/>
-[Anzeigen von Ressourcensymbolen](../windows/viewing-resource-symbols.md)<br/>

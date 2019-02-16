@@ -1,37 +1,37 @@
 ---
 title: Arbeiten mit Ressourcendateien (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 helpviewer_keywords:
 - resources [C++], about resources
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 276a63f01eba3cfc8c4fd45e0f875d78ada1942a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a989eddd0800062ecfaabf9de857e4ab04e873bd
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483316"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320483"
 ---
 # <a name="working-with-resource-files"></a>Arbeiten mit Ressourcendateien
 
 > [!WARNING]
 > Dieser Abschnitt gilt für in C++ erstellte Windows-Desktopanwendungen. Weitere Informationen zu Ressourcen in die universelle Windows-Plattform-apps in C++ geschrieben wurden, finden Sie unter [Definieren von App-Ressourcen](/windows/uwp/app-resources/).
 >
-> Informationen zum Hinzufügen von Ressourcen zu C++ / CLI-Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*.
+> Informationen zum Hinzufügen von Ressourcen zu C++-/ c++ / CLI (verwaltet)-Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*.
 
-Ressourcen können aus einer Vielzahl an Elementen bestehen, darunter Schnittstellenelemente, über die dem Benutzer Informationen bereitgestellt werden (z. B. eine Bitmap, ein Symbol oder ein Cursor); benutzerdefinierte Ressourcen, die die von einer Anwendung benötigten Daten enthalten; Versionsressourcen, die von Setup-APIs verwendet werden, sowie Menü- und Dialogfeldressourcen.
+Ressourcen können eine Vielzahl von Elementen, z. B. die Elemente der Benutzeroberfläche, die Informationen für den Benutzer (z. B. eine Bitmap, Symbol oder Cursor) bereitstellen, benutzerdefinierte Ressourcen, die Daten, die eine Anwendung benötigt enthalten, die Versionsressourcen zusammengesetzt werden, die von Setup-APIs verwendet werden, und im Menü und Dialogfeldressourcen.
 
 Sie können Ihrem Projekt neue Ressourcen hinzufügen und diese mit dem entsprechenden Ressourcen-Editor ändern. Die meisten Visual C++-Assistenten generieren automatisch ein RC-Datei für Ihr Projekt.
 
-Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 [Ressourcendateien](../windows/resource-files-visual-studio.md)<br/>
-Beschreibt die Ressourcendateien und wie sie in Windows-Desktopanwendungen verwendet werden. Bietet auch Links zu Themen, unter denen beschrieben wird, wie die Ressourcendateien verwendet werden.
+Beschreibt, Ressourcendateien und wie sie in der Windows-desktop-Anwendungen verwendet werden. Außerdem bietet Links zu Artikeln, die beschreiben, wie die Ressourcendateien verwendet.
 
-[Symbole: Ressourcenbezeichner](../windows/symbols-resource-identifiers.md)<br/>
+[Ressourcen-IDs (Symbole)](../windows/symbols-resource-identifiers.md)<br/>
 Beschreiben Symbole und bieten Informationen zur Verwendung des Dialogfelds **Ressourcensymbole** , um Symbole in Ihren Projekten zu verwalten.
 
 [Ressourcen-Editor](../windows/resource-editors.md)<br/>
