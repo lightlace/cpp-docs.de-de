@@ -1,6 +1,6 @@
 ---
 title: Ressourcendateien (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.resource
 helpviewer_keywords:
@@ -24,20 +24,16 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: 65500644b70841f372edcc6911edefc6c7b9f432
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 4d56a62dfa350b3113a28355433130563464c6be
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152689"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320535"
 ---
 # <a name="resource-files-c"></a>Ressourcendateien (C++)
 
 > [!NOTE]
-> Diese Materialien beziehen sich auf Windows-Desktopanwendungen. Weitere Informationen zu Ressourcen in die universelle Windows-Plattform-apps finden Sie unter [Definieren von App-Ressourcen](/windows/uwp/app-resources/).
->
-> Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
->
 > Da Projekte in .NET-Programmiersprachen keine Ressourcenskriptdateien verwenden, müssen Sie Ihre Ressourcen im **Projektmappen-Explorer**. Mit der [Bildbearbeitung](../windows/image-editor-for-icons.md) und dem [Binär-Editor](binary-editor.md) ist die Bearbeitung von Ressourcendateien in verwalteten Projekten möglich. Bei den zu bearbeitenden verwalteten Ressourcen muss es sich um verknüpfte Ressourcen handeln. Das Bearbeiten eingebetteter Ressourcen wird von den Visual Studio-Ressourcen-Editoren nicht unterstützt.
 
 Der Begriff „Ressourcendatei“ kann sich auf verschiedene Dateitypen beziehen, einschließlich dieser:
@@ -50,7 +46,7 @@ Der Begriff „Ressourcendatei“ kann sich auf verschiedene Dateitypen beziehen
 
 - Eine von der Entwicklungsumgebung generierte Headerdatei, beispielsweise „Resource.h“, auf die von einer RC-Datei verwiesen wird.
 
-Ressourcen befinden sich auch unter [andere Dateitypen](../windows/editable-file-types-for-resources.md) z. B. .exe, DLL und RES-Dateien. Sie können mit Ressourcen und Ressourcendateien aus arbeiten, in Ihrem Projekt und diejenigen, die nicht Teil des aktuellen Projekts sind. Sie können auch mit Ressourcendateien arbeiten, die in der Entwicklungsumgebung von Visual Studio nicht erstellt worden wäre. Sie haben unter anderem folgende Möglichkeiten:
+Ressourcen werden auch in andere Dateitypen, z. B. .exe, DLL und RES-Dateien gefunden. Sie können mit Ressourcen und Ressourcendateien aus arbeiten, in Ihrem Projekt und diejenigen, die nicht Teil des aktuellen Projekts sind. Sie können auch mit Ressourcendateien arbeiten, die in der Entwicklungsumgebung von Visual Studio nicht erstellt worden wäre. Sie haben unter anderem folgende Möglichkeiten:
 
 - Arbeiten mit geschachtelten und bedingt eingeschlossenen Ressourcendateien.
 
@@ -64,26 +60,6 @@ Ressourcen befinden sich auch unter [andere Dateitypen](../windows/editable-file
 
 - Einschließen von Ressourcentypen, die von der Entwicklungsumgebung nicht unterstützt werden.
 
-Die folgenden Typen von Dateien zu öffnen können und bearbeiten die darin enthaltenen Ressourcen:
-
-|Dateiname|Beschreibung|
-|---------------|-----------------|
-|.rc|Ressourcenskriptdateien|
-|.rct|Ressourcenvorlagendateien|
-|.res|Ressourcendateien|
-|.resx|Verwaltete Ressourcendateien|
-|.exe|Ausführbare Dateien.|
-|.dll|Dynamic Link Library-Dateien.|
-|.bmp, .ico, .dib und .cur|Bitmap-, Symbol-, Symbolleisten- und Cursordateien|
-
-Visual Studio-Umgebung funktioniert bei und wirkt sich auf die Dateien, die in der folgenden Tabelle gezeigt wird, während Ihrer Sitzung zur Bearbeitung von Ressourcen:
-
-|Dateiname|Beschreibung|
-|---------------|-----------------|
-|Resource.h|Durch die Entwicklungsumgebung generierte Headerdatei; enthält Symboldefinitionen. (Enthalten Sie diese Datei in der quellcodeverwaltung.)|
-|Filename.aps|Binäre Version der aktuellen Ressourcenskriptdatei; zum schnellen Laden verwendet.<br /><br /> Die Ressourcen-Editoren Lesen nicht direkt. rc- oder resource.h-Dateien. Der Ressourcencompiler kompiliert sie in .aps-Dateien, die von den Ressourcen-Editoren genutzt werden. Diese Datei ist ein Kompilierungsschritt und speichert nur symbolische Daten. Wie bei einer normalen Kompilierung werden Informationen, die nicht symbolisch sind (z. B. Kommentare) ist während der Kompilierung verworfen. Sobald die .aps-Datei nicht mehr mit der .rc-Datei synchron ist, wird die .rc-Datei neu generiert (z. B. überschreibt der Ressourcen-Editor beim Speichern die .rc-Datei und resource.h-Datei). Alle Änderungen an den Ressourcen selbst bleiben in der .rc-Datei, aber Kommentare gehen immer verloren, sobald die .rc-Datei überschrieben wird. Weitere Informationen zur Erhaltung von Kommentaren, finden Sie unter [Einfügen von Ressourcen zur Kompilierungszeit](../windows/how-to-include-resources-at-compile-time.md). (In der Regel sollte nicht Sie die .aps-Datei in der quellcodeverwaltung enthalten.)|
-|.rc|Ressourcenskriptdatei, die Skript für die Ressourcen im aktuellen Projekt enthält. Diese Datei wird bei jedem Speichern durch die .aps-Datei überschrieben. (Enthalten Sie diese Datei in der quellcodeverwaltung.)|
-
 Dieser Abschnitt enthält Gewusst wie:
 
 - [Erstellen von Ressourcen](../windows/how-to-create-a-resource-script-file.md)
@@ -91,6 +67,28 @@ Dieser Abschnitt enthält Gewusst wie:
 - [Verwalten von Ressourcen](../windows/how-to-copy-resources.md)
 
 - [Einfügen von Ressourcen zur Kompilierungszeit](../windows/how-to-include-resources-at-compile-time.md)
+
+## <a name="editable-resource-file-types"></a>Bearbeitbare Ressourcendateitypen
+
+Um die darin enthaltenen Ressourcen zu bearbeiten, können die folgenden Typen von Dateien geöffnet werden:
+
+|Dateiname|Beschreibung|
+|---------|-----------------|
+|.rc|Ressourcenskriptdateien|
+|.rct|Ressourcenvorlagendateien|
+|.res|Ressourcendateien|
+|.resx|Verwaltete Ressourcendateien|
+|.exe|Ausführbare Dateien|
+|.dll|Dynamic Link Library-Dateien|
+|.bmp, .ico, .dib und .cur|Bitmap-, Symbol-, Symbolleisten- und Cursordateien|
+
+Visual Studio-Umgebung funktioniert bei und wirkt sich auf die folgenden Dateien, während Ihre Ressource-offlinebearbeitungssitzung zu starten:
+
+|Dateiname|Beschreibung|
+|---------------|-----------------|
+|Resource.h|Durch die Entwicklungsumgebung generierte Headerdatei; enthält Symboldefinitionen. (Enthalten Sie diese Datei in der quellcodeverwaltung.)|
+|Filename.aps|Binäre Version der aktuellen Ressourcenskriptdatei; zum schnellen Laden verwendet.<br /><br /> Die Ressourcen-Editoren Lesen nicht direkt. rc- oder resource.h-Dateien. Der Ressourcencompiler kompiliert sie in .aps-Dateien, die von den Ressourcen-Editoren genutzt werden. Diese Datei ist ein Kompilierungsschritt und speichert nur symbolische Daten. Wie bei einer normalen Kompilierung werden Informationen, die nicht symbolisch sind (z. B. Kommentare) ist während der Kompilierung verworfen. Sobald die .aps-Datei nicht mehr mit der .rc-Datei synchron ist, wird die .rc-Datei neu generiert (z. B. überschreibt der Ressourcen-Editor beim Speichern die .rc-Datei und resource.h-Datei). Alle Änderungen an den Ressourcen selbst bleiben in der .rc-Datei, aber Kommentare gehen immer verloren, sobald die .rc-Datei überschrieben wird. Weitere Informationen zur Erhaltung von Kommentaren, finden Sie unter [sind Ressourcen zur Kompilierungszeit](../windows/how-to-include-resources-at-compile-time.md). (In der Regel sollte nicht Sie die .aps-Datei in der quellcodeverwaltung enthalten.)|
+|.rc|Ressourcenskriptdatei, die Skript für die Ressourcen im aktuellen Projekt enthält. Diese Datei wird bei jedem Speichern durch die .aps-Datei überschrieben. (Enthalten Sie diese Datei in der quellcodeverwaltung.)|
 
 ## <a name="manifest-resources"></a>Manifestressourcen
 
@@ -116,11 +114,15 @@ Für eine Windows XP oder Windows Vista-Anwendung gibt die Manifestressource nic
 
 Zum Anzeigen der Version, und geben Sie in einer Manifestressource enthaltenen Informationen, können Sie die Datei in einem XML-Viewer oder im Visual Studio-Text-Editor öffnen. Beim Öffnen einer Manifestressource aus [Ressourcenansicht](../windows/resource-view-window.md)wird die Ressource im Binärformat geöffnet. Um den Inhalt einer Manifestressource in einem besser lesbaren Format anzuzeigen, müssen Sie die Ressource aus öffnen **Projektmappen-Explorer**.
 
-Wählen Sie zum Öffnen einer Manifestressource aus die folgenden Schritte aus:
+### <a name="to-open-a-manifest-resource"></a>Zum Öffnen einer Manifestressource
 
-- Für Text-Editor, während Ihr Projekt in **Projektmappen-Explorer**, erweitern Sie die **Ressourcendateien** Ordner und doppelklicken Sie auf die .manifest-Datei.
+1. Öffnen Sie Ihr Projekt in Visual Studio.
 
-- Für einen anderen Editor in **Projektmappen-Explorer**mit der rechten Maustaste auf die .manifest-Datei, und wählen Sie **Öffnen mit...**  aus dem Kontextmenü. In der **Öffnen mit** Dialogfeld Geben Sie den Editor, Sie möchten, und aktivieren Sie **öffnen**.
+1. Navigieren Sie zu **Projektmappen-Explorer** und erweitern Sie die **Ressourcendateien** Ordner.
+
+   - Doppelklicken Sie auf die .manifest-Datei, für die Text-Editor.
+
+   - Für andere Editoren, mit der rechten Maustaste der .manifest-Datei, und wählen Sie **Öffnen mit...** , geben Sie den Editor, und wählen Sie dann **öffnen**.
 
 > [!NOTE]
 > Es kann nur eine Manifestressource pro Modul verwendet werden.
@@ -131,7 +133,6 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Ressourcen-Editor](../windows/resource-editors.md)<br/>
 [Arbeiten mit Ressourcendateien](../windows/working-with-resource-files.md)<br/>
-[Menüs und weitere Ressourcen](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)<br/>
-[Steuerelemente](../mfc/controls-mfc.md)<br/>
+[Ressourcen-IDs (Symbole)](../windows/symbols-resource-identifiers.md)<br/>
+[Ressourcen-Editor](../windows/resource-editors.md)<br/>

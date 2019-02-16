@@ -23,13 +23,23 @@ helpviewer_keywords:
 - context menus [C++], connecting to applications
 - shortcut menus [C++], connecting to applications
 - pop-up menus
+- menu commands [C++], selecting
+- menus [C++], selecting
+- commands [C++], menu commands
+- commands [C++], copying on menus
+- menu items, moving
+- commands [C++], moving on menus
+- menu items, copying
+- menu items, deleting
+- commands [C++], deleting from menus
+- menus [C++], deleting
 ms.assetid: 66f94448-9b97-4b73-bf97-10d4bf87cc65
-ms.openlocfilehash: e3b3cc58b82f68c55ac98601fd11775422c901e5
-ms.sourcegitcommit: 5a7dbd640376e13379f5d5b2cf66c4842e5e737b
+ms.openlocfilehash: da5fc355ae11ee5efb1c58be9e33bd4fb8bff02d
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55905770"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320522"
 ---
 # <a name="creating-menus-c"></a>Erstellen von Menüs (C++)
 
@@ -38,7 +48,7 @@ ms.locfileid: "55905770"
 
 Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
 
-## <a name="to-create-a-standard-menu"></a>So erstellen Sie ein Standardmenü
+## <a name="create-a-standard-menu"></a>Erstellen Sie ein Standardmenü
 
 1. Von der **Ansicht** , wählen Sie im Menü **Ressourcenansicht** , und klicken Sie dann mit der rechten Maustaste auf die **Menü** Überschrift, und wählen Sie **Ressource hinzufügen**. Wählen Sie **Menü**aus.
 
@@ -59,7 +69,7 @@ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie
    > [!NOTE]
    > Um ein einzelnes Element im Menü auf der Menüleiste zu erstellen, legen die **Popup** Eigenschaft **"false"**.
 
-## <a name="to-create-a-submenu"></a>So erstellen Sie ein Untermenü
+## <a name="create-a-submenu"></a>Erstellen eines Untermenüs
 
 1. Wählen Sie den Menübefehl für den Sie ein Untermenü erstellen möchten.
 
@@ -75,7 +85,7 @@ Wählen Sie einen vorhandenen Menünamen, und drücken Sie die **einfügen** Sch
 
 Mit der rechten Maustaste in der Menüleiste, und wählen Sie **neue einfügen** aus dem Kontextmenü.
 
-## <a name="to-add-commands-to-a-menu"></a>So fügen Sie Befehle zu einem Menü hinzu
+## <a name="add-commands-to-a-menu"></a>Hinzufügen von Befehlen zu einem Menü
 
 1. Erstellen Sie ein Menü an.
 
@@ -104,7 +114,7 @@ Mit der rechten Maustaste in der Menüleiste, und wählen Sie **neue einfügen**
 
    Das neue Elementfeld wird ausgewählt, sodass Sie zusätzliche Menübefehle erstellen können.
 
-## <a name="to-create-pop-up-menus"></a>Zum Erstellen von Popupmenüs
+## <a name="create-pop-up-menus"></a>Erstellen von Popupmenüs
 
 [Popupmenüs](../mfc/menus-mfc.md) enthalten häufig verwendete Befehle. Sie können kontextbezogen für die Position des Zeigers sein. Für das Verwenden von Popupmenüs in Ihrer Anwendung muss das Menü selbst erstellt und anschließend mit dem Anwendungscode verbunden werden.
 
@@ -150,6 +160,52 @@ Mit der rechten Maustaste im Menüs, und wählen Sie **als Popup anzeigen** aus 
 
    > [!NOTE]
    > Um zur Ansicht Menüleiste zu ändern, klicken Sie auf **als Popup anzeigen** erneut aus (die das Häkchen entfernt und Ihre Menüleistenansicht zurückgibt).
+
+## <a name="edit-multiple-menus-or-menu-commands"></a>Bearbeiten Sie mehrerer Menüs oder Menübefehle
+
+### <a name="to-select-multiple-menu-commands"></a>Auswählen mehrerer Menübefehle
+
+Sie können mehrere Menünamen oder Menübefehle zum Ausführen von Massenvorgängen wie z. B. das Löschen oder Ändern der Eigenschaften auswählen.
+
+Halten Sie die **STRG** Schlüssel, wählen Sie die Menüs oder Untermenübefehle werden sollen.
+
+### <a name="to-move-and-copy-menus-and-menu-commands"></a>Zum Verschieben und Kopieren von Menüs und Menübefehlen
+
+Sie können Menüs und Menübefehle mithilfe der Drag-and-Drop-Methode oder mithilfe von Befehlen im Kontextmenü (Rechtsklickmenü) verschieben oder kopieren.
+
+#### <a name="to-move-or-copy-menus-or-menu-commands-using-the-drag-and-drop-method"></a>So verschieben oder kopieren Sie Menüs oder Menübefehle mithilfe der Drag-and-Drop-Methode
+
+1. Ziehen oder kopieren Sie das zu verschiebende Elemente in:
+
+   - Eine neue Position im aktuellen Menü.
+
+   - Ein anderes Menü. (Sie können zu anderen Menüs navigieren, indem Sie den Mauszeiger darüber ziehen.)
+
+1. Legen Sie den Menübefehl ab, wenn die Einfügemarke die gewünschte Position anzeigt.
+
+#### <a name="to-move-or-copy-menus-or-menu-commands-using-shortcut-menu-commands"></a>So verschieben oder kopieren Sie Menübefehle mithilfe von Kontextmenübefehlen
+
+1. Klicken Sie mit der rechten Maustaste auf mindestens ein Menü oder Menübefehl
+
+1. Wählen Sie im Kontextmenü **Ausschneiden** (zum Verschieben) oder **Kopieren**aus.
+
+1. Wenn Sie die Elemente zu einer anderen Menüressource verschieben, Ressource oder Ressourcenskriptdatei [öffnen Sie es in ein anderes Fenster](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
+
+1. Wählen Sie die Position des Menüs oder Menübefehls aus, zu der Sie das Verschieben oder Kopieren vornehmen möchten.
+
+1. Wählen Sie im Kontextmenü **Einfügen**aus. Das verschobene oder kopierte Element wird vor dem von Ihnen ausgewählten Element platziert.
+
+   > [!NOTE]
+   > Sie können Elemente auch ziehen und kopieren und sie in anderen Menüs in anderen Menüfenstern einfügen.
+
+### <a name="to-delete-a-menu-or-menu-command"></a>So löschen Sie ein Menü oder einen Menübefehl
+
+1. Klicken Sie mit der rechten Maustaste auf den Menünamen oder den Befehl.
+
+1. Wählen Sie **Löschen** aus dem Kontextmenü.
+
+   > [!NOTE]
+   > Entsprechend können Sie mit dem Kontextmenü andere Aktionen ausführen, wie z. B. Kopieren, Ausschneiden, Einfügen, Neue einfügen, Trennzeichen einfügen, IDs bearbeiten, Als Popup anzeigen, Mnemonik überprüfen usw.
 
 ## <a name="requirements"></a>Anforderungen
 

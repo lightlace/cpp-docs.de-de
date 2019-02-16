@@ -1,6 +1,6 @@
 ---
 title: Symbolleisten-Editor (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.toolbar.F1
 - vc.editors.toolbar
@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: 61b4d3ba6fc70e78c6f794528822eb66fb94de7e
-ms.sourcegitcommit: 5a7dbd640376e13379f5d5b2cf66c4842e5e737b
+ms.openlocfilehash: 7ef08551960c9308a84b9838249a3d9ff4950d98
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55905783"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320613"
 ---
 # <a name="toolbar-editor-c"></a>Symbolleisten-Editor (C++)
 
@@ -66,23 +66,6 @@ Die **Symbolleiste** -Editor-Fenster zeigt zwei Ansichten eines Schaltflächensy
 ![Symbolleisten-Editor](../mfc/media/vctoolbareditor.gif "VcToolbarEditor") Symbolleisten-Editor
 
 Die **Symbolleiste** -Editor ähnelt dem **Image** -Editor-Funktionen. Menüelemente, grafische Tools und Bitmapraster sind dieselben wie in der **Image** Editor. Steht der Menübefehl im auf der **Image** Menü können Sie zwischen wechseln die **Symbolleiste** Editor und die **Image** Editor. Weitere Informationen zur Verwendung der **Grafiken** Symbolleiste **Farben** Palette, oder **Image** im Menü finden Sie unter [Bild-Editor](../windows/image-editor-for-icons.md).
-
-Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
-
-Mit der **Symbolleiste** -Editor können Sie:
-
-## <a name="create-new-toolbars"></a>Erstellen neuer Symbolleisten
-
-1. In **Ressource** anzeigen, mit der rechten Maustaste in der RC-Datei, und wählen Sie dann **Ressource hinzufügen** aus dem Kontextmenü. (Wenn Sie eine vorhandene Symbolleiste in der RC-Datei verfügen, Sie können einfach mit der rechten Maustaste die **Symbolleiste** Ordner, und wählen **Toolbar einfügen** aus dem Kontextmenü.)
-
-   > [!NOTE]
-   > Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).
-
-1. In der **Ressource hinzufügen** wählen Sie im Dialogfeld **Symbolleiste** in die **Ressourcentyp** Liste aus, und wählen Sie dann **neu**.
-
-   Wenn ein Pluszeichen (**+**) wird neben der **Symbolleiste** Ressourcentyp an, es bedeutet, dass die Symbolleistenvorlagen verfügbar sind. Wählen Sie das Pluszeichen, um die Liste der Vorlagen erweitern, wählen Sie eine Vorlage aus, und wählen **neu**.
-
-## <a name="convert-bitmaps-to-toolbar-resources"></a>Konvertieren von Bitmaps in Symbolleistenressourcen
 
 Sie können eine neue Symbolleiste in einem C++-Projekt erstellen, durch die Konvertierung einer Bitmaps. Die Grafik aus dem Bitmap, die in der Schaltflächenbilder für eine Symbolleiste konvertiert werden. Die Bitmap wird in der Regel mehrere Images von Schaltfläche auf einer einzelnen Bitmap mit einem einzelnen Abbild für jede Schaltfläche enthält. Bilder können eine beliebige Größe sein, wie der Standardwert 16 Pixel breit und die Höhe des Bilds ist. Sie können angeben, die Größe der Schaltflächenbilder in der **neue Symbolleistenressource** Dialogfeld bei der Auswahl **Symbolleisten-Editor** aus der **Image** in der Grafik-Editor im Menü.
 
@@ -97,7 +80,32 @@ Das Dialogfeld enthält die folgenden Eigenschaften:
 |**Schaltflächenbreite**|Dient zur Eingabe von der Breite für das Symbolleisten-Schaltflächen, die Sie aus einer Bitmap-Ressource in einer Symbolleistenressource konvertieren. Die Bilder werden zugeschnitten, um die Breite und Höhe angegeben, und die Farben werden angepasst, um die Farben der Standardsymbolleiste (16 Farben) zu verwenden.|
 |**Schaltflächenhöhe**|Dient zur Eingabe von der Höhe für die Symbolleisten-Schaltflächen, die Sie aus einer Bitmap-Ressource in einer Symbolleistenressource konvertieren. Die Bilder werden zugeschnitten, um die Breite und Höhe angegeben, und die Farben werden angepasst, um die Farben der Standardsymbolleiste (16 Farben) zu verwenden.|
 
-### <a name="to-convert-bitmaps-to-a-toolbar"></a>Konvertieren von Bitmaps zu einer Symbolleiste
+Standardmäßig wird eine neue oder leere Schaltfläche am rechten Ende der Symbolleiste angezeigt. Sie können diese Schaltfläche, verschieben, bevor Sie ihn bearbeiten. Wenn Sie eine neue Schaltfläche erstellen, wird eine andere, leere Schaltfläche rechts neben der bearbeiteten Schaltfläche angezeigt. Wenn Sie eine Symbolleiste speichern, wird die Schaltfläche "leere" nicht gespeichert.
+
+Die Eigenschaften einer Symbolleisten-Schaltfläche sind:
+
+|Eigenschaft|Beschreibung|
+|--------------|-----------------|
+|**ID**|Definiert die ID für die Schaltfläche. Die Dropdown-Liste enthält allgemeine **ID** Namen.|
+|**Width**|Legt die Breite der Schaltfläche fest. 16 Pixel wird empfohlen.|
+|**Height**|Legt die Höhe der Schaltfläche fest. Die Höhe einer Schaltfläche ändert sich die Höhe aller Schaltflächen auf der Symbolleiste. 15 Pixel wird empfohlen.|
+|**Eingabeaufforderung**|Definiert die Nachricht in der Statusleiste angezeigt. Hinzufügen von \n und einen Namen hinzugefügt, Symbolleisten-Schaltfläche eine QuickInfo. Weitere Informationen finden Sie unter [Erstellen einer QuickInfo](../windows/creating-a-tool-tip-for-a-toolbar-button.md).|
+
+**Breite** und **Höhe** gelten für alle Schaltflächen. Eine Bitmap, die zum Erstellen einer Symbolleiste verwendet wird, hat eine maximale Breite von 2048. Also, wenn Sie die Schaltflächenbreite auf 512 festlegen, können Sie nur vier Schaltflächen haben, und wenn Sie die Breite auf 513 festlegen, Sie können Sie nur drei Schaltflächen verwenden.
+
+## <a name="how-to"></a>Exemplarische Vorgehensweise
+
+Die **Symbolleiste** -Editor können Sie:
+
+### <a name="to-create-new-toolbars"></a>Zum Erstellen neuer Symbolleisten
+
+1. In **Ressource** anzeigen, mit der rechten Maustaste in der RC-Datei, und wählen Sie dann **Ressource hinzufügen** aus dem Kontextmenü. (Wenn Sie eine vorhandene Symbolleiste in der RC-Datei verfügen, Sie können einfach mit der rechten Maustaste die **Symbolleiste** Ordner, und wählen **Toolbar einfügen** aus dem Kontextmenü.)
+
+1. In der **Ressource hinzufügen** wählen Sie im Dialogfeld **Symbolleiste** in die **Ressourcentyp** Liste aus, und wählen Sie dann **neu**.
+
+   Wenn ein Pluszeichen (**+**) wird neben der **Symbolleiste** Ressourcentyp an, es bedeutet, dass die Symbolleistenvorlagen verfügbar sind. Wählen Sie das Pluszeichen, um die Liste der Vorlagen erweitern, wählen Sie eine Vorlage aus, und wählen **neu**.
+
+### <a name="to-convert-bitmaps-to-toolbar-resources"></a>Zum Konvertieren von Bitmaps in Symbolleistenressourcen
 
 1. Öffnen Sie eine vorhandene Bitmapressource in der [bildbearbeitung](../windows/image-editor-for-icons.md). (Wenn die Bitmap nicht bereits in der RC-Datei, mit der rechten Maustaste in der RC-Datei, wählen Sie **Import** aus dem Kontextmenü aus, navigieren Sie zu der Bitmap, die Sie auf die RC-Datei hinzufügen möchten, und wählen Sie dann **öffnen**.)
 
@@ -112,31 +120,13 @@ Das Dialogfeld enthält die folgenden Eigenschaften:
 
 Sie können auch die Befehls-IDs der Schaltflächen auf die neue Symbolleiste ändern, mit der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window).
 
-## <a name="create-move-and-edit-toolbar-buttons"></a>Erstellen, Verschieben und Bearbeiten von Schaltflächen der Symbolleiste
+### <a name="to-create-move-and-edit-toolbar-buttons"></a>Um zu erstellen, verschieben und Bearbeiten von Schaltflächen der Symbolleiste
 
-Sie können ganz einfach erstellen, verschieben, kopieren und Bearbeiten von Symbolleistenschaltflächen.
+Sie können ganz einfach erstellen, verschieben, kopieren und Bearbeiten von Symbolleistenschaltflächen:
 
-Standardmäßig wird eine neue oder leere Schaltfläche am rechten Ende der Symbolleiste angezeigt. Sie können diese Schaltfläche, verschieben, bevor Sie ihn bearbeiten. Wenn Sie eine neue Schaltfläche erstellen, wird eine andere, leere Schaltfläche rechts neben der bearbeiteten Schaltfläche angezeigt. Wenn Sie eine Symbolleiste speichern, wird die Schaltfläche "leere" nicht gespeichert.
-
-Die Eigenschaften einer Symbolleisten-Schaltfläche sind:
-
-|Eigenschaft|Beschreibung|
-|--------------|-----------------|
-|**ID**|Definiert die ID für die Schaltfläche. Die Dropdown-Liste enthält allgemeine **ID** Namen.|
-|**Width**|Legt die Breite der Schaltfläche fest. 16 Pixel wird empfohlen.|
-|**Height**|Legt die Höhe der Schaltfläche fest. Die Höhe einer Schaltfläche ändert sich die Höhe aller Schaltflächen auf der Symbolleiste. 15 Pixel wird empfohlen.|
-|**Eingabeaufforderung**|Definiert die Nachricht in der Statusleiste angezeigt. Hinzufügen von \n und einen Namen hinzugefügt, Symbolleisten-Schaltfläche eine QuickInfo. Weitere Informationen finden Sie unter [Erstellen einer QuickInfo](../windows/creating-a-tool-tip-for-a-toolbar-button.md).|
-
-**Breite** und **Höhe** gelten für alle Schaltflächen. Eine Bitmap, die zum Erstellen einer Symbolleiste verwendet wird, hat eine maximale Breite von 2048. Also, wenn Sie die Schaltflächenbreite auf 512 festlegen, können Sie nur vier Schaltflächen haben, und wenn Sie die Breite auf 513 festlegen, Sie können Sie nur drei Schaltflächen verwenden.
-
-Finden Sie die folgenden Aktionen aus:
-
-### <a name="to-create-a-new-toolbar-button"></a>Erstellen Sie eine neue Symbolleisten-Schaltfläche
+#### <a name="to-create-a-new-toolbar-button"></a>Erstellen Sie eine neue Symbolleisten-Schaltfläche
 
 1. In [Ressourcenansicht](../windows/resource-view-window.md) erweitern Sie den Ressourcenordner (z. B. *Projekt1.rc*).
-
-   > [!NOTE]
-   > Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).
 
 1. Erweitern Sie die **Symbolleiste** Ordner, und wählen Sie eine Symbolleiste zur Bearbeitung.
 
@@ -148,7 +138,7 @@ Finden Sie die folgenden Aktionen aus:
 
 Sie können auch kopieren und fügen Sie ein Image auf einer Symbolleiste als neue Schaltfläche.
 
-### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Hinzufügen eines Bilds zu einer Symbolleiste als Schaltfläche
+#### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Hinzufügen eines Bilds zu einer Symbolleiste als Schaltfläche
 
 1. In [Ressourcenansicht](../windows/resource-view-window.md), öffnen Sie die Symbolleiste, indem Sie darauf doppelklicken.
 
@@ -165,21 +155,21 @@ Sie können auch kopieren und fügen Sie ein Image auf einer Symbolleiste als ne
 
    Das Bild wird auf der Symbolleiste als neue Schaltfläche angezeigt.
 
-### <a name="to-move-a-toolbar-button"></a>Verschieben eine Symbolleisten-Schaltfläche
+#### <a name="to-move-a-toolbar-button"></a>Verschieben eine Symbolleisten-Schaltfläche
 
 In der **Symbolleiste anzeigen** Bereich, ziehen Sie die Schaltfläche, die Sie auf der Symbolleiste am neuen Speicherort verschieben möchten.
 
-### <a name="to-copy-buttons-from-a-toolbar"></a>Zum Kopieren von Schaltflächen von einer Symbolleiste
+#### <a name="to-copy-buttons-from-a-toolbar"></a>Zum Kopieren von Schaltflächen von einer Symbolleiste
 
 1. Halten Sie die **STRG** Schlüssel.
 
 1. In der **Symbolleiste anzeigen** Bereich, ziehen Sie die Schaltfläche mit den neuen Speicherort auf der Symbolleiste oder an einem Speicherort auf einer anderen Symbolleiste.
 
-### <a name="to-delete-a-toolbar-button"></a>So löschen Sie eine Symbolleisten-Schaltfläche
+#### <a name="to-delete-a-toolbar-button"></a>So löschen Sie eine Symbolleisten-Schaltfläche
 
 Wählen Sie die Symbolleisten-Schaltfläche, und ziehen Sie es aus der Symbolleiste.
 
-### <a name="to-insert-or-remove-space-between-buttons-on-a-toolbar"></a>Zum Einfügen oder Entfernen von Leerzeichen zwischen den Schaltflächen einer Symbolleiste
+#### <a name="to-insert-or-remove-space-between-buttons-on-a-toolbar"></a>Zum Einfügen oder Entfernen von Leerzeichen zwischen den Schaltflächen einer Symbolleiste
 
 Im Allgemeinen um ein Leerzeichen zwischen den Schaltflächen einzufügen, ziehen Sie sie von anderen auf der Symbolleiste. Um Speicherplatz zu entfernen, ziehen Sie sie in Richtung gegenseitig aus.
 
@@ -193,13 +183,13 @@ Im Allgemeinen um ein Leerzeichen zwischen den Schaltflächen einzufügen, ziehe
 > [!NOTE]
 > Wenn kein Platz im Zweifelsfall die Schaltfläche, die Sie ziehen ist aus, und Sie ziehen Sie die Schaltfläche mit den mehr als zur Hälfte hinter die benachbarte Schaltfläche der **Symbolleiste** Editor fügt auch ein Leerzeichen auf der entgegengesetzten Seite der Schaltfläche, die Sie durch Ziehen.
 
-### <a name="to-change-the-properties-of-a-toolbar-button"></a>Zum Ändern der Eigenschaften einer Symbolleisten-Schaltfläche
+#### <a name="to-change-the-properties-of-a-toolbar-button"></a>Zum Ändern der Eigenschaften einer Symbolleisten-Schaltfläche
 
 1. Wählen Sie die Symbolleisten-Schaltfläche in einem C++-Projekt.
 
 1. Geben Sie die neue ID in der **ID** -Eigenschaft in der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window), oder verwenden Sie die Dropdownliste, wählen Sie ein neues **ID**.
 
-### <a name="to-create-a-tool-tip-for-a-toolbar-button"></a>Um eine QuickInfo für eine Symbolleisten-Schaltfläche zu erstellen.
+#### <a name="to-create-a-tool-tip-for-a-toolbar-button"></a>Um eine QuickInfo für eine Symbolleisten-Schaltfläche zu erstellen.
 
 1. Wählen Sie die Symbolleisten-Schaltfläche.
 

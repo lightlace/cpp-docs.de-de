@@ -1,6 +1,6 @@
 ---
 title: Zugriffstasten (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.accelerator
 helpviewer_keywords:
@@ -10,16 +10,14 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: 1e87d80b8995760eecda34334dab702480bd9669
-ms.sourcegitcommit: 5beace7dcc6bf0e8b8cc96a930e7424f9daa05cb
+ms.openlocfilehash: 6ef8f84564d6fd1957452971cb1e88dc99aa27e9
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55232122"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320509"
 ---
 # <a name="accelerator-keys-c"></a>Zugriffstasten (C++)
-
-Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*.
 
 ## <a name="predefined-accelerator-keys"></a>Vordefinierte Zugriffstasten
 
@@ -79,7 +77,7 @@ Es gibt eine Anzahl vordefinierter Zugriffstasten, die Teil eines Windows-Anwend
 |VK_XBUTTON1|Windows: X1-Maustaste|
 |VK_XBUTTON2|Windows: X2-Maustaste|
 
-## <a name="associating-an-accelerator-key-with-a-menu-item"></a>Verknüpfen einer Zugriffstaste mit einem Menüelement
+## <a name="accelerator-key-association"></a>Accelerator-Key-Zuordnung
 
 In vielen Fällen möchten Sie über ein Menüelement und eine Tastenkombination verfügen, um denselben Programmbefehl auszugeben. Hierzu weisen Sie dieselbe Ressourcen-ID zum Menüelement und zum Eintrag in der Zugriffstastentabelle Ihrer Anwendung zu. Sie können die Beschriftung des Menüelements ändern, um den Namen der Zugriffstaste anzuzeigen. Weitere Informationen über Menüelemente und Zugriffstasten finden Sie unter [Verknüpfen eines Menübefehls mit einer Zugriffstaste](../windows/associating-a-menu-command-with-an-accelerator-key.md).
 
@@ -90,4 +88,3 @@ Win32
 ## <a name="see-also"></a>Siehe auch
 
 [Zugriffstasten-Editor](../windows/accelerator-editor.md)<br/>
-[Ressourcen-Editor](../windows/resource-editors.md)
