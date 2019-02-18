@@ -1,6 +1,6 @@
 ---
-title: Verwenden eines Zeichentools
-ms.date: 11/04/2016
+title: 'Vorgehensweise: Verwenden eines Zeichentools'
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.image.drawing
 helpviewer_keywords:
@@ -16,16 +16,18 @@ helpviewer_keywords:
 - graphics [C++], custom brushes
 - custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-ms.openlocfilehash: 72224581e021a22b31ec5e6fa5940ff5a568a4e0
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 135509626e20044b0d4ec8e63d8916f4c537388e
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320548"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336552"
 ---
-# <a name="using-a-drawing-tool"></a>Verwenden eines Zeichentools
+# <a name="how-to-use-a-drawing-tool"></a>Vorgehensweise: Verwenden eines Zeichentools
 
 Die **Image** Editor Freihandzeichnen und Tools, die alle auf die gleiche Weise funktionieren löschen: Wählen Sie das Tool und, falls erforderlich, [auswählen von Vordergrund- und Hintergrundfarben](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) und Optionen für Größe und Form. Klicken Sie dann den Mauszeiger auf das Bild und klicken oder ziehen, um zu zeichnen und zu löschen.
+
+## <a name="drawing-tools"></a>Zeichentools
 
 Bei der Auswahl der **Radierer** -Tool, **Pinsel** -Tool oder **Airbrush** Tool die Optionsauswahl des Tools-Optionen angezeigt.
 
@@ -34,7 +36,7 @@ Bei der Auswahl der **Radierer** -Tool, **Pinsel** -Tool oder **Airbrush** Tool 
 
 Zeichentools wählen Sie aus der **Bildbearbeitung** Symbolleiste oder die **Image** Menü.
 
-## <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Auswählen und verwenden ein Zeichenwerkzeug aus der Symbolleiste der Bildbearbeitung
+### <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Auswählen und verwenden ein Zeichenwerkzeug aus der Symbolleiste der Bildbearbeitung
 
 1. Wählen Sie eine Schaltfläche auf der **Bildbearbeitung** Symbolleiste.
 
@@ -65,7 +67,7 @@ Zeichentools wählen Sie aus der **Bildbearbeitung** Symbolleiste oder die **Ima
 
 1. Wählen Sie im Untermenü das Tool an, die, das Sie verwenden möchten.
 
-## <a name="drawing-lines-or-closed-figures"></a>Zeichnen von Linien oder geschlossenen Körpern
+## <a name="lines-or-closed-figures"></a>Linien oder geschlossenen Körpern
 
 Die Bild-Editor-tools für das Zeichnen von Linien und geschlossene Figuren, die alle auf die gleiche Weise funktioniert: Sie setzen Sie die Einfügemarke an einem bestimmten Punkt, und ziehen Sie auf einen anderen. Für Zeilen sind folgende Punkte der Endpunkte. Diese Punkte sind geschlossenen Figuren gegenüberliegenden Ecke eines Rechtecks umgebenden in der Abbildung.
 
@@ -97,7 +99,7 @@ Zeilen werden in eine Breite bestimmt, indem die aktuelle Auswahl der Pinsel gez
 
 1. Ziehen Sie den Mauszeiger auf die diagonal gegenüber Ecke aus.
 
-## <a name="create-a-custom-brush"></a>Erstellen von benutzerdefinierten Pinseln
+## <a name="custom-brushes"></a>Benutzerdefinierte Pinsel
 
 Ein benutzerdefiniertes Pinsels wird einen rechteckigen Teil eines Bilds, das Sie weitermachen und wie eines der **Image** vorgefertigte Pinsel Editor. Alle Vorgänge, die Sie für eine Auswahl ausführen können, können Sie für einen benutzerdefinierten Pinsel ebenfalls ausführen.
 
@@ -105,11 +107,7 @@ Ein benutzerdefiniertes Pinsels wird einen rechteckigen Teil eines Bilds, das Si
 
 1. [Wählen Sie den Teil des Bilds](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) , die für den Pinsel verwendet werden sollen.
 
-1. Enthält die **UMSCHALT** Schlüssel nach unten, wählen Sie in der Auswahl, und ziehen Sie sie über das Image.
-
-   \- oder –
-
-1. Von der **Image** Menü wählen **Auswahl als Pinsel verwenden**.
+1. Halten Sie die **UMSCHALT** Schlüssel nach unten, wählen Sie in der Auswahl, und ziehen Sie sie über das Image. Oder über die **Image** Menü wählen **Auswahl als Pinsel verwenden**.
 
    Ihre Auswahl wird es sich um einen benutzerdefinierten Pinsel, der die Farben in der Auswahl auf das Bild verteilt. Kopien der Auswahl bleiben entlang des Pfads ziehen. Sie ziehen, desto langsamer, desto mehr Kopien erfolgen.
 
@@ -137,8 +135,6 @@ Drücken Sie die **Pluszeichen** (**+**)-Taste, um die Pinselgröße doppelklick
 ### <a name="to-cancel-the-custom-brush"></a>Um den benutzerdefinierten Pinsel abzubrechen.
 
 Drücken Sie **Esc** , oder wählen Sie einen anderen Zeichenwerkzeug aus.
-
-Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
 
 ## <a name="requirements"></a>Anforderungen
 

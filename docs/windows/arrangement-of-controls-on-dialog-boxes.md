@@ -1,6 +1,6 @@
 ---
-title: Anordnung von Steuerelementen in Dialogfeldern (C++) | Microsoft-Dokumentation
-ms.date: 11/04/2016
+title: 'Vorgehensweise: Anordnen von Steuerelementen (C++) | Microsoft-Dokumentation'
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.grouping
 - vc.editors.dialog.combo
@@ -80,14 +80,14 @@ helpviewer_keywords:
 - CListBox class, scroll bar width
 - scroll bars [C++], width
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
-ms.openlocfilehash: 99667898428fe9532d59277bfedafd24927304dc
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: d9bd73c9cc81b113f222bbc090c62200c93554b2
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264880"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336630"
 ---
-# <a name="arrangement-of-controls-on-dialog-boxes-c"></a>Anordnung von Steuerelementen in Dialogfeldern (C++)
+# <a name="how-to-arrange-controls-c"></a>Vorgehensweise: Anordnen von Steuerelementen (C++)
 
 Die **Dialogfeld** -Editor bietet Layouttools, ausrichten und Größe von Steuerelementen automatisch. Für die meisten Aufgaben können Sie die [Dialog-Editor-Symbolleiste](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Alle **Dialog-Editor** Symbolleistenbefehle stehen auch in der **Format** haben Sie im Menü, und die meisten [Tastenkombinationen](../windows/accelerator-keys-for-the-dialog-editor.md).
 
@@ -95,7 +95,7 @@ Viele Layoutbefehle für Dialogfelder sind verfügbar, nur, wenn mehr als ein St
 
 Der Speicherort, Höhe und Breite des aktuellen Steuerelements werden in der unteren rechten Ecke der Statusleiste angezeigt. Wenn das gesamte Dialogfeld ausgewählt ist, zeigt die Statusleiste die Position im Dialogfeld als Ganzes, und seine Höhe und Breite.
 
-## <a name="dialog-editor-states-guides-and-grids"></a>Gibt an Dialog-Editors (Führungslinien und Raster)
+## <a name="guides-and-grids"></a>Führungslinien und Raster
 
 Sie können Anordnen von Steuerelementen in Dialogfeldern, mit der **Dialogfeld** -Editor in einer von drei verschiedenen Zuständen:
 
@@ -119,26 +119,27 @@ Die **Einstellungen für Führungslinien** Dialogfeld hat die folgenden Eigensch
 |**Breite: DLUs**|Legt die Breite des Layoutrasters in DLUs fest. Eine horizontale DLU ist die durchschnittliche Breite der Dialogfeld-Schriftart geteilt durch vier.|
 |**Height: DLUs**|Legt die Höhe des Layoutrasters in DLUs fest. Eine vertikale DLU ist die durchschnittliche Höhe des geteilt durch acht Dialogfeld-Schriftart.|
 
-### <a name="create-and-set-guides-and-margins"></a>Erstellen und Festlegen von Führungslinien und Rändern
+### <a name="to-create-edit-and-delete-guides-and-margins"></a>Um zu erstellen, bearbeiten und Löschen von Führungslinien und Rändern
 
 Ob verlagern Sie Steuerelemente, Hinzufügen von Steuerelementen, oder den aktuellen Layout neu anordnen, Anleitungen helfen ausrichten Sie Steuerelemente in einem Dialogfeld genau. Anleitungen, die als blaue gepunktete Linien angezeigt, über das Dialogfeld angezeigt, die im Editor, und entsprechende Pfeile in der Lineale am oberen und am linken Rand der **Dialogfeld** Editor.
 
-Wenn Sie ein Dialogfeld erstellen, werden vier Ränder bereitgestellt. Ränder werden geänderte Anleitungen, die als blaue gepunktete Linien angezeigt werden.
+Wenn Sie ein Dialogfeld erstellen, werden vier Ränder bereitgestellt. Ränder werden geänderte Anleitungen, die als blaue gepunktete Linien angezeigt werden. Finden Sie die folgenden Aktionen aus:
 
-|Prozess|Schritte|
-|----------------|----------------|
-|Um eine Anleitung zu erstellen.|Dem Lineal wählen Sie einmal, um eine Anleitung zu erstellen. (Nur einem Klick erstellt ein neues Handbuch; Doppelklicken startet die **Einstellungen für Führungslinien** Dialogfeld, in dem Sie Einstellungen für Führungslinien angeben können.)|
-|Eine Führungslinie festlegen|Klicken Sie auf das Dialogfeld klicken Sie auf der Anleitung, und ziehen Sie es an eine neue Position. (Sie können auch den Pfeil in der zugehörigen Handbuch ziehen das Lineal klicken.)<br/><br/>Die Koordinaten des Handbuchs werden in der Statusleiste am unteren Rand des Fensters und auf dem Lineal angezeigt. Zeigen Sie auf den Pfeil auf das Lineal, um die genaue Position des Handbuchs anzuzeigen.|
-|So löschen Sie eine Führungslinie|Ziehen Sie das Handbuch aus das Dialogfeld ein.<br/><br/>\- oder –<br/><br/>Ziehen Sie die entsprechenden Pfeil vom Lineal.|
-|So verschieben Sie Ränder|Ziehen Sie den Rand auf die neue Position ein.<br/><br/>Um einen Rand zu machen, verschieben Sie den Rand zu einer Position 0 (null). Klicken Sie zum Wiederherstellen des Rands, platzieren Sie den Mauszeiger über des Rands der Nullposition, und verschieben Sie den Rand in Position.|
+- Erstellen eine Führungslinie, dem Lineal, wählen Sie einmal um eine Anleitung zu erstellen. (Nur einem Klick erstellt ein neues Handbuch; Doppelklicken startet die **Einstellungen für Führungslinien** Dialogfeld, in dem Sie Einstellungen für Führungslinien angeben können.)
 
-### <a name="align-controls-on-a-guide"></a>Ausrichten von Steuerelementen an einer Führungslinie
+- Um eine Anleitung, in dem Dialogfeld festzulegen, wählen Sie im Handbuch, und ziehen Sie es in eine neue Position. (Sie können auch den Pfeil in der zugehörigen Handbuch ziehen das Lineal auswählen.) Die Koordinaten des Handbuchs werden in der Statusleiste am unteren Rand des Fensters und auf dem Lineal angezeigt. Zeigen Sie auf den Pfeil auf das Lineal, um die genaue Position des Handbuchs anzuzeigen.
+
+- Um Ränder zu verschieben, ziehen Sie den Rand der neuen Position. Um einen Rand zu machen, verschieben Sie den Rand zu einer Position 0 (null). Klicken Sie zum Wiederherstellen des Rands, platzieren Sie den Mauszeiger über des Rands der Nullposition, und verschieben Sie den Rand in Position.
+
+- Um eine Anleitung zu löschen, ziehen Sie die Anleitung aus das Dialogfeld, oder ziehen Sie den entsprechenden Pfeil vom Lineal.
+
+### <a name="to-align-controls-on-a-guide"></a>Zum Ausrichten von Steuerelementen an einer Führungslinie
 
 Die Ziehpunkte des Steuerelementen ausrichten an Führungslinien, wenn die Steuerelemente verschoben werden, und Anleitungen an Steuerelemente ausrichten, wenn keine zuvor im Handbuch angedockte Steuerelemente enthalten sind. Wenn eine Anleitung verschoben wird, verschieben sowie Steuerelemente, die darauf ausgerichtet sind. Steuerelemente, die an mehr als ein Handbuch Rasterlinie ausgerichtet werden geändert, wenn eine der Anleitungen verschoben wird.
 
 Die Teilstriche in die Lineale, die bestimmen, den Abstand von Führungslinien und Steuerelemente werden durch Dialogeinheiten (DLUs) definiert. Eine DLU basiert auf der Größe der Dialogfeld-Schriftart, normalerweise 8 Punkt MS Shell Dlg. Eine horizontale DLU ist die durchschnittliche Breite der Dialogfeld-Schriftart geteilt durch vier. Eine vertikale DLU ist die durchschnittliche Höhe der Schriftart geteilt durch acht.
 
-Eine Gruppe von Steuerelementen mit Guides Größe:
+#### <a name="to-size-a-group-of-controls-with-guides"></a>Eine Gruppe von Steuerelementen mit Guides Größe
 
 1. Richten Sie eine Seite des Steuerelements (oder Steuerelemente), um eine Anleitung.
 
@@ -148,13 +149,11 @@ Eine Gruppe von Steuerelementen mit Guides Größe:
 
 1. Verschieben Sie entweder Anleitung, die Größe des Steuerelements (bzw. der Steuerelemente).
 
-Die Intervalle der Teilstriche zu ändern:
+#### <a name="to-change-the-intervals-of-the-tick-marks"></a>So ändern Sie die Intervalle der Teilstriche
 
-1. Von der **Format** Menü wählen **Einstellungen für Führungslinien**.
+Von der **Format** im Menü wählen **Einstellungen für Führungslinien**, klicken Sie dann in der **Rasterweite** an eine neue Breite und Höhe in DLUs.
 
-1. In der **Einstellungen für Führungslinien** Dialogfeld die **Rasterweite** an eine neue Breite und Höhe in DLUs.
-
-### <a name="disable-guides"></a>Deaktivieren von Führungslinien
+### <a name="to-disable-guides"></a>So deaktivieren Sie Führungslinien
 
 Sie können spezielle Schlüssel in Verbindung mit der Maus verwenden, so deaktivieren Sie die Andocken Auswirkungen der Anleitungen. Mithilfe der **Alt** Schlüssel deaktiviert die Andocken Auswirkungen des Handbuchs ausgewählt. Verschieben eine Anleitung mit den **UMSCHALT** Schlüssel wird verhindert, dass Steuerelemente automatisch auszurichten mit dem für das verschieben.
 
@@ -170,25 +169,17 @@ Sie können spezielle Schlüssel in Verbindung mit der Maus verwenden, so deakti
 > [!TIP]
 > Eine Verknüpfung zum Deaktivieren von Führungslinien befindet sich auf die **Format** , wählen Sie im Menü **Führungslinien ein-/ausschalten**.
 
-### <a name="modify-the-layout-grid"></a>Ändern des Layoutrasters
+### <a name="to-modify-the-layout-grid"></a>Zum Ändern des Layoutrasters
 
 Beim platzieren oder Anordnen von Steuerelementen in einem Dialogfeld, können Sie das Layoutraster für die eine genauere Positionierung verwenden. Wenn das Raster aktiviert ist, scheinen die Steuerelemente ", die gepunkteten Zeilen im Raster ausrichten" einzurasten. Sie können Aktivieren dieses Feature "am Raster ausrichten" ein, und deaktivieren und Ändern der Größe der Rasterzellen des Layouts.
 
-Um das Layoutraster aktivieren / deaktivieren:
-
-1. Von der **Format** Menü wählen **Einstellungen für Führungslinien**.
-
-1. In der **Einstellungen für Führungslinien** Dialogfeld aktivieren oder Deaktivieren der **Raster** Schaltfläche.
+- Aktivieren das Layoutraster für Telefone oder zu deaktivieren, aus der **Format** Menü wählen **Einstellungen für Führungslinien**dann aktivieren oder Deaktivieren der **Raster** Schaltfläche.
 
    Sie können weiterhin steuern das Raster in einzelnen **Dialogfeld** -Editor-Fenster mit den **Raster umschalten** Schaltfläche der [Dialog-Editor-Symbolleiste](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
 
-So ändern Sie die Größe des Layoutrasters
+- So ändern Sie die Größe des Layoutrasters aus der **Format** Menü wählen **Einstellungen für Führungslinien**, geben Sie dann die Höhe und Breite in DLUs für die Zellen im Raster. Die minimale Höhe oder Breite ist 4 DLUs.
 
-1. Von der **Format** Menü wählen **Einstellungen für Führungslinien**.
-
-1. In der **Einstellungen für Führungslinien** Dialogfeld geben die Höhe und Breite in DLUs für die Zellen im Raster. Die minimale Höhe oder Breite ist 4 DLUs.
-
-## <a name="selecting-controls"></a>Markieren von Steuerelementen
+## <a name="select-controls"></a>Auswählen von Steuerelementen
 
 Auswählen von Steuerelementen auf Größe, ausrichten, verschieben, kopieren, oder löschen, und schließen Sie dann den gewünschten Vorgang. In den meisten Fällen müssen Sie zu verwenden, die Tools zur größenanpassung und die Ausrichtung auf mehrere Steuerelement auswählen, die [Dialog-Editor-Symbolleiste](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
 
@@ -196,7 +187,7 @@ Wenn ein Steuerelement ausgewählt ist, einen schattierten Rahmen mit Solid (akt
 
 Beim Ändern der Größe oder Ausrichtung mehrerer Steuerelemente, die **Dialogfeld** Editor verwendet, das "dominante Steuerelement" um zu bestimmen, wie die anderen Steuerelemente angepasst oder ausgerichtet sind. Standardmäßig ist das dominante Steuerelement das erste Steuerelement ausgewählt.
 
-### <a name="to-select-multiple-controls"></a>Zum Auswählen mehrerer Steuerelemente
+### <a name="to-select-controls"></a>Auswählen von Steuerelementen
 
 1. In der [Fenster "Toolbox"](/visualstudio/ide/reference/toolbox), wählen die **Zeiger** Tool.
 
@@ -208,33 +199,28 @@ Beim Ändern der Größe oder Ausrichtung mehrerer Steuerelemente, die **Dialogf
 
    - Halten Sie die **STRG** gedrückt, und wählen Sie die Steuerelemente, die Sie in der Auswahl einschließen möchten.
 
-### <a name="to-remove-a-control-from-a-group-of-selected-controls-or-to-add-a-control-to-a-group-of-selected-controls"></a>Ein Steuerelement aus einer Gruppe von ausgewählten Steuerelemente zu entfernen oder Hinzufügen des Steuerelements auf eine Gruppe von ausgewählten Steuerelemente
+1. Zum Hinzufügen oder entfernen ein Steuerelement aus der Gruppe der ausgewählten Steuerelemente, halten Sie die **UMSCHALT** gedrückt, und wählen Sie das Steuerelement, das Sie hinzufügen oder entfernen möchten.
 
-Mit der eine Gruppe von Steuerelementen, die ausgewählt werden soll, halten Sie die **UMSCHALT** gedrückt, und wählen Sie das Steuerelement, das Sie verwenden möchten, um die vorhandene Auswahl hinzufügen oder daraus entfernen.
+> [!NOTE]
+> Gedrückt der **STRG** -Taste und der Auswahl eines Steuerelements in eine Auswahl treffen, die in die Auswahl des bestimmenden Steuerelements zu steuern.
 
-   > [!NOTE]
-   > Gedrückt der **STRG** -Taste und der Auswahl eines Steuerelements in eine Auswahl treffen, die in die Auswahl des bestimmenden Steuerelements zu steuern.
+### <a name="to-select-a-dominant-control"></a>Auswählen des bestimmenden Steuerelements
 
-### <a name="to-specify-the-dominant-control"></a>Zum Angeben des bestimmenden Steuerelements
+- Wenn das dominante Steuerelement angeben möchten, halten Sie die **STRG** gedrückt, und wählen Sie das Steuerelement, das Sie nutzen, um die Größe oder Position von anderen Steuerelementen beeinflussen möchten *erste*.
 
-Halten Sie die **STRG** gedrückt, und wählen Sie das Steuerelement, das Sie nutzen, um die Größe oder Position von anderen Steuerelementen beeinflussen möchten *erste*.
+- Um das dominante Steuerelement zu ändern, deaktivieren Sie die aktuelle Auswahl dazu außerhalb aller derzeit ausgewählten Steuerelemente, und wiederholen Sie die vorherigen Schritte, und wählen ein anderes Steuerelement zuerst.
 
 > [!NOTE]
 > Die Ziehpunkte des bestimmenden Steuerelements sind solid, während die Ziehpunkte der untergeordneten Steuerelemente leer sind. Alle weiteren Ändern der Größe oder Ausrichtung basiert auf das dominante Steuerelement.
 
-### <a name="to-change-the-dominant-control"></a>Ändern des bestimmenden Steuerelements
+## <a name="size-controls"></a>Größe von Steuerelementen
 
-1. Löschen Sie die aktuelle Auswahl, indem Sie die außerhalb aller derzeit ausgewählten Steuerelemente auf.
+Verwenden Sie die Ziehpunkte, um die Größe eines Steuerelements. Wenn der Zeiger an einem Ziehpunkt befindet, ändert es Form an, dass die Anweisungen in denen Größe des Steuerelements geändert werden kann. Aktive Ziehpunkte solid sind und wenn ein Ziehpunkt leerer ist, kann nicht das Steuerelement entlang dieser Achse geändert werden.
 
-1. Wiederholen Sie die vorherigen Schritte, und wählen ein anderes Steuerelement zuerst aus.
+> [!TIP]
+> Sie können auch die Größe eines Steuerelements ändern, durch das das Steuerelement an Führungslinien oder Rand andocken, oder durch das Verschieben einer Kontrolle und Anleitung von einem anderen angedockt.
 
-## <a name="sizing-controls"></a>Anpassen von Steuerelementen
-
-Verwenden Sie die Ziehpunkte, um die Größe eines Steuerelements. Wenn der Zeiger an einem Ziehpunkt befindet, ändert es Form an, dass die Anweisungen in denen Größe des Steuerelements geändert werden kann. Es sind aktive Ziehpunkte gefüllt. Wenn ein Ziehpunkt leerer ist, kann nicht das Steuerelement entlang dieser Achse Größe geändert werden.
-
-Sie können auch die Größe eines Steuerelements ändern, durch das das Steuerelement an Führungslinien oder Rand andocken, oder durch das Verschieben einer Kontrolle und Anleitung von einem anderen angedockt.
-
-### <a name="to-size-an-individual-control"></a>Ein einzelnes Steuerelement seine Größe festlegen
+### <a name="to-size-a-control"></a>Größe eines Steuerelements
 
 1. Wählen Sie das Steuerelement.
 
@@ -245,13 +231,12 @@ Sie können auch die Größe eines Steuerelements ändern, durch das das Steuere
    - Ziehpunkte an den Ecken ändern Sie horizontale und vertikale Größe.
 
    > [!TIP]
-   > Sie können die Steuerelement ein Dialog-Einheit (DLU) zu einem Zeitpunkt ändern, halten die **UMSCHALT** Schlüssel- und unter Verwendung der **Pfeil nach rechts** und **nach-unten-** Schlüssel.
+   > Sie können die Steuerelement ein Dialog-Einheit (DLU) zu einem Zeitpunkt ändern, halten die **UMSCHALT** Schlüssel- und unter Verwendung der **rechts** und **unten** unten-Tasten.
 
-### <a name="to-automatically-size-a-control-to-fit-the-text-within-it"></a>Automatisch die Größe ein Steuerelement für den Text angepasst
+> [!TIP]
+> Öffnen Sie ein Steuerelement, um den Text angepasst automatisch die Größe der **Format** Menü oder klicken Sie auf das Steuerelement, und wählen **Größe an Inhalt anpassen**.
 
-Wählen Sie **Größe an Inhalt anpassen** aus der **Format** Menü oder klicken Sie auf das Steuerelement, und wählen Sie **Größe an Inhalt anpassen** aus dem Kontextmenü.
-
-### <a name="to-make-controls-the-same-width-height-or-size"></a>Um machen steuert die gleiche Breite, Höhe oder Größe
+### <a name="to-make-controls-the-same-size"></a>Um die Steuerelemente die gleiche Größe fest.
 
 Sie können eine Gruppe von Steuerelementen basierend auf der Größe des bestimmenden Steuerelements ändern.
 
@@ -259,23 +244,11 @@ Sie können eine Gruppe von Steuerelementen basierend auf der Größe des bestim
 
    Das Steuerelement zuerst in der Reihe ausgewählt ist, das dominante Steuerelement. Die endgültige Größe der Steuerelemente in der Gruppe, hängt von der Größe des bestimmenden Steuerelements ab.
 
-1. Von der **Format** Menü wählen **Größe angleichen**, wählen Sie dann **sowohl**, **Höhe**, oder **Breite**.
+1. Von der **Format** Menü wählen **Größe angleichen**, wählen Sie dann entweder **sowohl**, **Höhe**, oder **Breite**.
 
-### <a name="to-set-the-size-of-the-combo-box-and-its-drop-down-list"></a>Die Größe des Kombinationsfeld Feld und der Dropdown-Liste festgelegt
+### <a name="combo-box"></a>Kombinationsfeld
 
 Sie können ein Kombinationsfeld Größe, wenn Sie sie zum Dialogfeld hinzufügen. Sie können auch die Größe des im Dropdown-Listenfeld angeben. Weitere Informationen finden Sie unter [Werte hinzufügen, um ein Kombinationsfeld-Steuerelement](../windows/adding-values-to-a-combo-box-control.md).
-
-#### <a name="to-size-a-combo-box"></a>Die Größe eines Kombinationsfelds
-
-1. Wählen Sie das Kombinationsfeld-Steuerelement in einem Dialogfeld an.
-
-   Anfangs sind nur die Rechte und linke Ziehpunkt aktiv.
-
-1. Verwenden Sie die Ziehpunkte, um die Breite des Kombinationsfelds festzulegen.
-
-Sie können auch die vertikale Größe des der Dropdownteil des Kombinationsfelds festlegen.
-
-#### <a name="to-set-the-size-of-the-combo-box-drop-down-list"></a>Zum Festlegen von der Größe des Kombinationsfeld-Dropdown-Liste
 
 1. Wählen Sie die Dropdown-Pfeil-Schaltfläche rechts neben dem Kombinationsfeld aus.
 
@@ -289,56 +262,21 @@ Sie können auch die vertikale Größe des der Dropdownteil des Kombinationsfeld
 
 1. Wählen Sie den Dropdown-Pfeil erneut aus, um der Teil der Dropdown-Listenfeld des Kombinationsfelds geschlossen.
 
-### <a name="to-set-the-width-of-a-horizontal-scroll-bar-and-make-it-appear"></a>Legen Sie die Breite einer horizontalen Schiebeleiste, und stellen es so aussieht
+### <a name="horizontal-scroll-bar"></a>Horizontalen Bildlaufleiste
 
 Wenn Sie ein Listenfeld mit einer horizontalen Schiebeleiste eines Dialogfelds mithilfe von MFC-Klassen hinzufügen, wird nicht die Bildlaufleiste automatisch in Ihrer Anwendung angezeigt.
 
-Legen Sie eine maximale Breite für das breiteste Element durch Aufrufen von [CListBox:: SetHorizontalExtent](../mfc/reference/clistbox-class.md#sethorizontalextent) in Ihrem Code.
+Legen Sie eine maximale Breite für das breiteste Element durch Aufrufen von [CListBox:: SetHorizontalExtent](../mfc/reference/clistbox-class.md#sethorizontalextent) in Ihrem Code. Ohne diesen Wert wird nicht die Bildlaufleiste angezeigt, auch wenn die Elemente im Listenfeld breiter als das Feld sind.
 
-   Ohne diesen Wert wird nicht die Bildlaufleiste angezeigt, auch wenn die Elemente im Listenfeld breiter als das Feld sind.
+## <a name="align-controls"></a>Ausrichten von Steuerelementen
 
-## <a name="group-radio-buttons-on-a-dialog-box"></a>Gruppe von Optionsfeldern in einem Dialogfeld
+1. Wählen Sie die Steuerelemente, die Sie ausrichten möchten. Achten Sie darauf, um das Steuerelement auszuwählen, die vorherrschende werden sollen oder zum Festlegen des bestimmenden Steuerelements vor dem Ausführen von die Ausrichtung, oder Ändern der Größe Befehl sein.
 
-Wenn Sie ein Dialogfeld Optionsschaltflächen hinzufügen, behandeln sie als Gruppe durch Festlegen einer **Gruppe** -Eigenschaft in der **Eigenschaften** Fenster für die erste Schaltfläche in der Gruppe. Eine Steuerelement-ID für das betreffende Optionsfeld wird dann im [Assistent zum Hinzufügen von Membervariablen](../ide/add-member-variable-wizard.md)angezeigt und ermöglicht das Hinzufügen einer Membervariablen zur Gruppe der Optionsfelder.
-
-Ein Dialogfeld kann mehrere Gruppen von Optionsfeldern enthalten, und jede Gruppe sollte mithilfe der folgenden Prozedur hinzugefügt werden.
-
-### <a name="to-add-a-group-of-radio-buttons-to-a-dialog-box"></a>So fügen Sie einem Dialogfeld eine Gruppe von Optionsfeldern hinzu
-
-1. Wählen Sie das Optionsfeld-Steuerelement in der [Fenster "Toolbox"](/visualstudio/ide/reference/toolbox) und wählen Sie den Speicherort in das Dialogfeld, in dem Sie das Steuerelement platzieren möchten.
-
-1. Wiederholen Sie Schritt 1, um so viele Optionsfelder hinzuzufügen, wie Sie benötigen. Stellen Sie sicher, dass die Optionsfelder in der Gruppe in der Aktivierreihenfolge aufeinander folgen.
-
-1. Legen Sie im Fenster [Eigenschaften](/visualstudio/ide/reference/properties-window)die Eigenschaft **Gruppe** des *ersten* Optionsfelds in der Aktivierreihenfolge auf **Wahr**fest.
-
-   Durch das Ändern der Eigenschaft **Gruppe** auf **Wahr** wird dem Eintrag des Felds im Dialogfeld des Ressourcenscripts die Formatvorlage „WS_GROUP“ hinzugefügt und so sichergestellt, dass ein Benutzer immer nur ein Optionsfeld in der Feldgruppe aktivieren kann (wenn der Benutzer auf ein Optionsfeld klickt, werden die anderen in der gleichen Gruppe deaktiviert).
-
-   > [!NOTE]
-   > Die Eigenschaft **Gruppe** sollte nur für das erste Optionsfeld einer Gruppe auf **Wahr**festgelegt werden. Wenn Sie über weitere Steuerelemente verfügen, die nicht Teil der Optionsfeldgruppe sind, legen Sie die Eigenschaft **Gruppe** des ersten Steuerelements, *das sich außerhalb der Gruppe befindet* , ebenfalls auf **Wahr** fest. Sie können das erste Steuerelement außerhalb der Gruppe schnell identifizieren, durch Drücken von **STRG**+**D** auf die Aktivierreihenfolge anzuzeigen.
-
-### <a name="to-add-a-member-variable-for-the-radio-button-group"></a>So fügen Sie eine Membervariable für die Optionsfeldgruppe hinzu
-
-1. Klicken Sie auf das erste Optionsfeld-Steuerelement in der Aktivierreihenfolge (das dominante Steuerelement, dessen Eigenschaft **Gruppe** auf „Wahr“ festgelegt ist).
-
-1. Wählen Sie im Kontextmenü **Variable hinzufügen** aus.
-
-1. Aktivieren Sie im [Assistent zum Hinzufügen von Membervariablen](../ide/add-member-variable-wizard.md)das Kontrollkästchen **Steuerungsvariable** , und aktivieren Sie dann das Optionsfeld **Wert** .
-
-1. Geben Sie im Feld **Variablenname** einen Namen für die neue Membervariable ein.
-
-1. In der **Variablentyp** wählen Sie im Listenfeld **Int** oder `int`.
-
-1. Jetzt können Sie Ihren Code ändern, um festzulegen, welches Optionsfeld aus aktiviert angezeigt werden soll. Z. B. `m_radioBox1 = 0;` wählt das erste Optionsfeld in der Gruppe.
-
-## <a name="to-align-groups-of-controls"></a>Ausrichten von Steuerelementgruppen
-
-1. Wählen Sie die Steuerelemente, die Sie ausrichten möchten. Achten Sie darauf, um das Steuerelement auszuwählen, die das dominante Steuerelement werden sollen oder zum Festlegen des bestimmenden Steuerelements vor dem Ausführen von die Ausrichtung, oder Ändern der Größe Befehl sein.
-
-   Die letzte Position in der Gruppe von Steuerelementen, hängt von der Position des bestimmenden Steuerelements ab. Weitere Informationen zum Auswählen des bestimmenden Steuerelements finden Sie unter [Festlegen des bestimmenden Steuerelements](../windows/specifying-the-dominant-control.md).
+   Die letzte Position in der Gruppe von Steuerelementen, hängt von der Position des bestimmenden Steuerelements ab.
 
 1. Von der **Format** Menü wählen **ausrichten**, und wählen Sie dann eines der folgenden Ausrichtungen:
 
-   |Wert|Beschreibung|
+   |Ausrichtung|Beschreibung|
    |-----|-----------|
    |`Lefts`|Richtet den ausgewählten Steuerelemente linksbündig.|
    |`Centers`|Richtet den ausgewählten Steuerelemente horizontal an ihren Mittelpunkt.|
@@ -347,7 +285,7 @@ Ein Dialogfeld kann mehrere Gruppen von Optionsfeldern enthalten, und jede Grupp
    |`Middles`|Richtet den ausgewählten Steuerelemente vertikal an ihren Mittelpunkt.|
    |`Bottoms`|Richtet den ausgewählten Steuerelemente an die unteren Rändern.|
 
-### <a name="to-even-the-spacing-between-controls"></a>Sogar den Abstand zwischen Steuerelementen
+### <a name="to-even-spacing-between-controls"></a>Auch der Abstand zwischen Steuerelementen
 
 Die **Dialogfeld** -Editor können Sie an Steuerelemente der Platz gleichmäßig auf die äußersten Steuerelemente ausgewählt.
 
@@ -355,33 +293,34 @@ Die **Dialogfeld** -Editor können Sie an Steuerelemente der Platz gleichmäßig
 
 1. Von der **Format** Menü wählen **gleichmäßig**, und wählen Sie dann eine der folgenden Ausrichtungsbefehle:
 
-   - `Across`: Steuerelemente gleichmäßig zwischen dem äußeren linken und dem äußersten rechten ausgewählten Steuerelement Speicherplatz.
+   |Abstand|Beschreibung|
+   |---|---|
+   |`Across`|Speicherplatz Steuerelemente gleichmäßig zwischen dem äußeren linken und dem äußersten rechten ausgewählten Steuerelement.|
+   |`Down`|Speicherplatz Steuerelemente gleichmäßig zwischen dem obersten und untersten Steuerelements ausgewählt.|
 
-   - `Down`: Speicherplatz Steuerelemente gleichmäßig zwischen dem obersten und untersten Steuerelements ausgewählt.
-
-### <a name="to-center-controls-in-a-dialog-box"></a>Zentrieren von Steuerelementen in einem Dialogfeld
+### <a name="to-center-controls"></a>Zentrieren von Steuerelementen
 
 1. Wählen Sie das Steuerelement oder Steuerelemente, die Sie neu anordnen möchten.
 
 1. Von der **Format** Menü wählen **Center im Dialogfeld**, und wählen Sie dann eine der folgenden Aktionen:
 
-   - `Vertical`: die Steuerelemente in das Dialogfeld vertikal zentrieren.
+   |Anordnung|Beschreibung|
+   |---|---|
+   |`Vertical`|Zentrieren Sie Steuerelemente in das Dialogfeld vertikal.|
+   |`Horizontal`|Zentrieren von Steuerelementen im Dialogfeld horizontal.|
 
-   - `Horizontal`: Steuerelemente im Dialogfeld horizontal zentriert.
-
-### <a name="to-arrange-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Anordnen von Schaltflächen am rechten oder unteren Rand eines Dialogfelds
+### <a name="to-arrange-push-buttons"></a>Anordnen von Schaltflächen
 
 1. Wählen Sie eine oder mehrere Schaltflächen an.
 
 1. Von der **Format** Menü wählen **Schaltflächen anordnen**, und wählen Sie dann eine der folgenden Aktionen:
 
-   - `Right`: Richtet die Schaltflächen am rechten Rand des Dialogfelds.
+   |Anordnung|Beschreibung|
+   |---|---|
+   |`Right`|Richtet die Schaltflächen am rechten Rand des Dialogfelds.|
+   |`Bottom`|Richtet die Schaltflächen am unteren Rand des Dialogfelds.|
 
-   - `Bottom`: Richtet die Schaltflächen am unteren Rand des Dialogfelds.
-
-       Wenn Sie ein Steuerelement als eine Schaltfläche auswählen, wird nicht seine Position beeinflusst.
-
-Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+   Wenn Sie ein Steuerelement als eine Schaltfläche auswählen, wird nicht seine Position beeinflusst.
 
 ## <a name="requirements"></a>Anforderungen
 

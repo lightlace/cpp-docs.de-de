@@ -1,6 +1,6 @@
 ---
-title: Erstellen eines Symbols oder anderen Bilds
-ms.date: 11/04/2016
+title: 'Vorgehensweise: Erstellen eines Symbols oder anderen Bilds'
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.bitmap
 - vc.editors.icon
@@ -87,14 +87,14 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 3ce4d10c9ab085973f1ab00dba205c22ff17f42f
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 69fffc71a7b5dfad12e70a9132fc61b11a0914cc
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320730"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336591"
 ---
-# <a name="creating-an-icon-or-other-image"></a>Erstellen eines Symbols oder anderen Bilds
+# <a name="how-to-create-an-icon-or-other-image"></a>Vorgehensweise: Erstellen eines Symbols oder anderen Bilds
 
 Sie können ein neues Image (Bitmap, Symbol, Cursor oder Symbolleiste) erstellen und dann die bildbearbeitung verwenden, um ihre Darstellung anzupassen. Sie können auch eine neue Bitmap Standardressource erstellen eine [Vorlage](../windows/how-to-use-resource-templates.md).
 
@@ -133,13 +133,9 @@ Bei der Erstellung ein neues Symbol oder Cursor-Ressource, die **Image** Editor 
 
 Beim Öffnen der Ressource Symbol oder Cursor in die [bildbearbeitung](../windows/image-editor-for-icons.md), das Bild, das das aktuelle Anzeigegerät am ehesten entspricht, wird standardmäßig geöffnet.
 
-#### <a name="new-ltdevicegt-image-type-dialog-box"></a>Neue &lt;Gerät&gt; Bildtyp (Dialogfeld)
-
 Die **neu &lt;Gerät&gt; Bildtyp** Dialogfeld können Sie ein neues Gerätebild eines angegebenen Typs erstellt. Zum Öffnen der **neu \<Gerät > Image** wählen Sie im Dialogfeld **Neuer Bildtyp** auf die **Image** im Menü. Die folgenden Eigenschaften enthalten sind **Image Zieltyp** und **benutzerdefinierte**.
 
-##### <a name="target-image-type"></a>Ziel-Bildtyp
-
-Listet die verfügbaren Images. Wählen Sie den Image-Typ, die, den Sie öffnen möchten:
+Die **Image Zieltyp** -Eigenschaft listet die verfügbaren imagetypen. Wählen Sie den Image-Typ, die, den Sie öffnen möchten:
 
 ||||
 |-|-|-|
@@ -153,9 +149,7 @@ Listet die verfügbaren Images. Wählen Sie den Image-Typ, die, den Sie öffnen 
 > [!NOTE]
 > Alle vorhandenen Bilder werden in dieser Liste nicht angezeigt werden.
 
-##### <a name="custom"></a>Benutzerdefiniert
-
-Öffnet die **benutzerdefiniertes Image** Dialogfeld, in dem Sie ein neues Image mit einer benutzerdefinierten Größe und Anzahl der Farben erstellen können.
+Die **benutzerdefinierte** Eigenschaft öffnet die **benutzerdefiniertes Image** Dialogfeld, in dem Sie ein neues Image mit einer benutzerdefinierten Größe und Anzahl der Farben erstellen können.
 
 Die **benutzerdefiniertes Image** Dialogfeld können Sie ein neues Image mit einer benutzerdefinierten Größe und Anzahl der Farben zu erstellen. Die folgenden Eigenschaften enthalten sind:
 
@@ -164,8 +158,6 @@ Die **benutzerdefiniertes Image** Dialogfeld können Sie ein neues Image mit ein
 |**Width**|Dient zur Eingabe der Breite des benutzerdefinierten Images in Pixel (1-512, Max. 2048).|
 |**Height**|Dient zur Eingabe der Höhe für das benutzerdefinierte Image in Pixel (1-512, Max. 2048).|
 |**Farben**|Ein Eingabefeld für die Anzahl der Farben für das benutzerdefinierte Image auswählen: 2, 16 und 256.|
-
-#### <a name="open-ltdevicegt-image-dialog-box"></a>Open &lt;Gerät&gt; Bild (Dialogfeld)
 
 Verwenden der **öffnen &lt;Gerät&gt; Image** Dialogfeld zum Öffnen von Gerätebildern in C++-Projekten. Vorhandene Images mit der Geräte in der aktuellen Ressourcendatei (Bilder, die Teil der aktuellen Ressource) aufgeführt. Die folgende Eigenschaft enthalten ist:
 
@@ -184,13 +176,13 @@ Verwenden der **öffnen &lt;Gerät&gt; Image** Dialogfeld zum Öffnen von Gerät
 
    Wenn ein Pluszeichen (**+**) wird neben der Image-Ressourcentyp in der **Ressource einfügen** Dialogfeld es bedeutet, dass die Symbolleistenvorlagen verfügbar sind. Wählen Sie das Pluszeichen, um die Liste der Vorlagen erweitern, wählen Sie eine Vorlage aus, und wählen **neu**.
 
-### <a name="add-an-image-for-a-different-display-device"></a>Hinzufügen eines Bilds für ein anderes Anzeigegerät
+### <a name="to-add-an-image-for-a-different-display-device"></a>Hinzufügen eines Bilds für ein anderes Anzeigegerät
 
 1. Auf der **Image** , wählen Sie im Menü **neues Gerätebild** (oder mit der rechten Maustaste die **Bildbearbeitung** Bereich, und wählen Sie **neues Gerätebild** aus der Kontextmenü).
 
 1. Wählen Sie den Typ des Bilds, die Sie hinzufügen möchten. Sie können auch auswählen, **benutzerdefinierte** Erstellen eines Symbols, dessen Größe nicht in der Standardliste zur Verfügung.
 
-### <a name="copy-a-device-image"></a>Kopieren eines Gerätebildes
+### <a name="to-copy-a-device-image"></a>Kopieren ein Gerätebildes
 
 1. Auf der **Image** , wählen Sie im Menü **Bildtyp öffnen** , und wählen Sie ein Image aus der aktuellen Images aus. Wählen Sie beispielsweise ein Symbol mit 32 × 32 Pixel, 16 Farben.
 
@@ -200,14 +192,14 @@ Verwenden der **öffnen &lt;Gerät&gt; Image** Dialogfeld zum Öffnen von Gerät
 
 1. Fügen Sie das Symbolbild (**STRG**+**V**) von einem **Bildbearbeitung** Fenster in den anderen. Wenn Sie eine größere Größe in eine kleinere Größe einfügen, können Sie die Ziehpunkte des Symbols, zum Ändern der Bildgröße.
 
-### <a name="delete-a-device-image"></a>Löschen eines Gerätebildes
+### <a name="to-delete-a-device-image"></a>Löschen ein Gerätebildes
 
 Während das Symbolbild, in angezeigt wird der **Image** -Editor wählen **Bildtyp löschen** aus der **Image** im Menü. Wenn Sie das letzte Symbol-Abbild in der Ressource löschen, wird die Ressource ebenfalls gelöscht.
 
    > [!NOTE]
    > Beim Drücken der **Del** Schlüssel, der Bilder und Farben, die Sie haben auf ein Symbol gezeichnet werden gelöscht, bleibt das Symbol, jedoch können Sie jetzt diese Umgestalten. Wenn Sie drücken **Del** versehen, können Sie durch Drücken **STRG**+**Z** , rückgängig gemacht werden.
 
-### <a name="create-transparent-or-inverse-regions-in-device-images"></a>Erstellen Sie transparenter oder invertierter Bereiche in Gerätebildern
+### <a name="to-create-transparent-or-inverse-regions-in-device-images"></a>Zum Erstellen transparenter oder invertierter Bereiche in Gerätebildern
 
 In der [bildbearbeitung](../windows/image-editor-for-icons.md), das erste Symbol oder Cursor Abbild ein transparent Attribut aufweist. Obwohl das Symbol und der Cursor rechteckigen sind, nicht viele angezeigt, da Teile des Bilds transparent sind; der zugrunde liegenden Bildes auf dem Bildschirm zeigt durch das Symbol oder Cursor. Wenn Sie ein Symbol ziehen, möglicherweise Teile des Bilds in eine invertierte Farbe angezeigt. Sie erstellen diese Auswirkungen durch Festlegen der Bildschirmfarbe und invertierte Farbe in der [Fenster "Farben"](../windows/colors-window-image-editor-for-icons.md).
 
@@ -343,8 +335,6 @@ Sie öffnen können, GIF- oder JPEG-Bilder in der **Image** Editor und speichern
 
    > [!NOTE]
    > Bei den zu bearbeitenden verwalteten Ressourcen muss es sich um verknüpfte Ressourcen handeln. Das Bearbeiten eingebetteter Ressourcen wird von den Visual Studio-Ressourcen-Editoren nicht unterstützt. Weitere Informationen finden Sie unter [Erstellen von Ressourcendateien](/dotnet/framework/resources/creating-resource-files-for-desktop-apps) in die *(.NET Framework Developer's Guide*.
-
-Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
 
 ## <a name="requirements"></a>Anforderungen
 
