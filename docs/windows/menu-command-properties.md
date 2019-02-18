@@ -1,6 +1,6 @@
 ---
-title: Menübefehlseigenschaften (C++)
-ms.date: 11/04/2016
+title: Befehle im Menü (C++)
+ms.date: 02/15/2019
 helpviewer_keywords:
 - menu items, properties
 - keyboard shortcuts [C++], menu association
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: 8989b96640bbb64eb5dcba09d60363dd0989263f
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 9f91973fdf2d5a45c631f24d3eed41482a91a834
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320574"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336604"
 ---
-# <a name="menu-command-properties-c"></a>Menübefehlseigenschaften (C++)
+# <a name="menu-commands-c"></a>Befehle im Menü (C++)
 
 Die folgenden Informationen sind entsprechend so aufgebaut, dass die **Menü** Eigenschaften, die in der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window) bei der Auswahl eines Menübefehls. Diese sind alphabetisch aufgeführt, obwohl die **Eigenschaften** Fenster auch können Sie diese Eigenschaften nach Kategorie anzuzeigen.
 
@@ -47,8 +47,6 @@ Die folgenden Informationen sind entsprechend so aufgebaut, dass die **Menü** E
 
 Häufig ist es wünschenswert, dass ein Menübefehl und eine Tastenkombination den gleichen Programmbefehl ausgeben. Identische Befehle werden mithilfe der **Menü** -Editor, um den gleichen Ressourcenbezeichner des Menübefehls und ein Eintrag in der Zugriffstastentabelle Ihrer Anwendung zugewiesen. Anschließend bearbeiten Sie die [Beschriftung](../windows/menu-command-properties.md) des Menübefehls so, dass sie den Namen der Zugriffstaste anzeigt.
 
-Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
-
 ### <a name="to-associate-a-menu-command-with-an-accelerator-key"></a>So ordnen Sie einen Menübefehl einer Zugriffstaste zu
 
 1. Wählen Sie im **Menü** -Editor den gewünschten Menübefehl aus.
@@ -59,13 +57,13 @@ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie
 
    - Geben Sie den Namen der Modifizierertaste (**STRG**, **Alt**, oder **UMSCHALT**) gefolgt von einem Pluszeichen (**+**) und den Namen, Buchstaben, oder Symbol der zusätzlichen Taste.
 
-       Beispielsweise weisen **STRG**+**O** auf die **öffnen** Befehl die **Datei** im Menü Sie ändern, dass der Menübefehl  **Beschriftung** , damit sie wie folgt aussieht:
+   Beispielsweise weisen **STRG**+**O** auf die **öffnen** Befehl die **Datei** im Menü Sie ändern, dass der Menübefehl  **Beschriftung** , damit sie wie folgt aussieht:
 
-        ```
-        &Open...\tCtrl+O
-        ```
+   ```
+   &Open...\tCtrl+O
+   ```
 
-       Der Menübefehl in die **Menü** Editor wird aktualisiert, um die neue Beschriftung so darzustellen, wie Sie es eingeben.
+   Der Menübefehl in die **Menü** Editor wird aktualisiert, um die neue Beschriftung so darzustellen, wie Sie es eingeben.
 
 1. [Erstellen Sie den Zugriffstastentabellen-Eintrag](../windows/adding-an-entry-to-an-accelerator-table.md) im **Zugriffstasten** -Editor, und weisen Sie ihm den gleichen Bezeichner wie dem Menübefehl zu. Verwenden Sie eine Tastenkombination, die Ihrer Ansicht nach leicht zu merken ist.
 
@@ -98,5 +96,4 @@ Win32
 ## <a name="see-also"></a>Siehe auch
 
 [Menü-Editor](../windows/menu-editor.md)<br/>
-[Hinzufügen von Befehlen zu einem Menü](../windows/adding-commands-to-a-menu.md)<br/>
 [Zeichenfolgen (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>

@@ -1,6 +1,6 @@
 ---
-title: Erstellen eines Dialogfelds (C++)
-ms.date: 11/04/2016
+title: 'Vorgehensweise: Erstellen einer (Dialogfeld) (C++)'
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog
 helpviewer_keywords:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: a3b8143d3a70906f910a445816a188913a593e5d
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: c757c82978a5107374e6de2f8cff24319ed64f9c
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264815"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336474"
 ---
-# <a name="creating-a-dialog-box-c"></a>Erstellen eines Dialogfelds (C++)
+# <a name="how-to-create-a-dialog-box-c"></a>Vorgehensweise: Erstellen einer (Dialogfeld) (C++)
 
 Die Position und Größe der einem C++-Dialogfeld, und die Position und Größe von Steuerelementen, werden in Dialogeinheiten gemessen. In der unteren rechten Ecke der Visual Studio Statusleiste an, wenn Sie sie auswählen, werden die Werte für einzelne Steuerelemente und das Dialogfeld angezeigt.
 
@@ -39,8 +39,6 @@ Beim Entwerfen ein Dialogfeld, können Sie auch simulieren und testen das Verhal
    > Verbindungen mit Dialogfeldcode, die mithilfe des Assistenten hergestellt wurden, sind nicht Teil der Simulation.
 
 Während des Testverfahrens wird ein Dialogfeld normalerweise relativ zum Hauptprogrammfenster angezeigt. Wenn Sie des Dialogfelds festgelegt haben **Absolute Ausrichtung** Eigenschaft **"true"**, im Dialogfeld angezeigt, an der Position, die relativ zu der oberen linken Ecke des Bildschirms ist.
-
-Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
 
 ## <a name="to-create-a-new-dialog-box"></a>Um ein neues Dialogfeld zu erstellen.
 
@@ -82,7 +80,7 @@ Es gibt drei Eigenschaften, die Sie, in festlegen können der [Fenster "Eigensch
 
 1. Wenn die **Dialogfeld** Editor wird das aktive Fenster, in der Menüleiste, wählen Sie **Format** > **Testdialogfeld**.
 
-1. Um die Simulation zu beenden, drücken Sie **Esc**, oder wählen Sie einfach die **schließen** -Schaltfläche in das Dialogfeld, das Sie testen.
+1. Um die Simulation zu beenden, drücken Sie die **Esc** oder wählen Sie die **schließen** -Schaltfläche in das Dialogfeld, das Sie testen.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,6 +1,6 @@
 ---
-title: Bildbearbeitung für Symbole
-ms.date: 10/17/2018
+title: Bildbearbeitung für Symbole (C++)
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.cursor.F1
 - vc.editors.icon.F1
@@ -42,14 +42,14 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 48b363b7b9021042fe6242be70c74f0daeade0c2
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 782462a4aeba72252c4d6043bd192f6892a3966f
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320704"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336578"
 ---
-# <a name="image-editor-for-icons"></a>Bildbearbeitung für Symbole
+# <a name="image-editor-for-icons-c"></a>Bildbearbeitung für Symbole (C++)
 
 Wenn Sie auf eine Bilddatei (z. B. ico, BMP, PNG) im Projektmappen-Explorer klicken, öffnet das Bild im Bild-Editor auf die gleiche Weise, die Codedateien im Code-Editor geöffnet. Wenn eine Registerkarte Bild-Editor aktiv ist, sehen Sie Symbolleisten mit vielen Tools zum Erstellen und Bearbeiten von Bildern. Zusammen mit Bitmaps, Symbolen und Cursorn können Sie Bilder im GIF- oder JPEG-Format mit Befehlen im Bearbeiten der **Image** Menü und die Tools auf die **Bildbearbeitung** Symbolleiste.
 
@@ -231,8 +231,6 @@ Sie können kostenlos herunterladen der **Visual Studio-Bildbibliothek** , enth�
 ## <a name="managed-resources"></a>Verwaltete Ressourcen
 
 Können Sie die **Image** Editor und die [binär-Editor](binary-editor.md) , Bearbeitung von Ressourcendateien in verwalteten Projekten möglich. Bei den zu bearbeitenden verwalteten Ressourcen muss es sich um verknüpfte Ressourcen handeln. Die Visual Studio-Ressourcen-Editoren unterstützt nicht das Bearbeiten eingebetteter Ressourcen.
-
-Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
 
 ## <a name="requirements"></a>Anforderungen
 

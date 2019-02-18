@@ -1,6 +1,6 @@
 ---
 title: Dialog Editor (C++)
-ms.date: 11/04/2016
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.dialog
 - vc.editors.dialog.F1
@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Dialog Editor [C++], switching between controls and code
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: 827a7610aa919d5349313346ac0bfa80bd0647b0
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: fef4a7f0d4c785a40ea946127d8e3c84c797e1aa
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264893"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336695"
 ---
 # <a name="dialog-editor-c"></a>Dialog Editor (C++)
 
@@ -38,28 +38,18 @@ Einer der ersten Schritte beim Erstellen eines neuen Dialogfelds (oder einer Dia
 
 Um ein Dialogfeld später wiederzuverwenden, können Sie es als Vorlage speichern. Auch das Wechseln zwischen dem Entwurf des Dialogfelds und dem Bearbeiten des Codes, mit dem das Feld implementiert wird, ist denkbar einfach.
 
-Der Dialog-Editor bietet zusätzlich die Möglichkeit, die Eigenschaften einzelner oder mehrerer Steuerelemente zu bearbeiten. Sie können die Aktivierreihenfolge ändern, d. h. die Reihenfolge an, bei dem Steuerelemente erhalten, Fokus, wenn die **Registerkarte** gedrückt wird, oder Sie definieren eine Zugriffstaste (Tastenkombination), die Benutzern ermöglicht, wählen Sie ein Steuerelement unter Verwendung der Tastaturfokus. Eine Liste der vordefinierten Zugriffstasten finden Sie unter [Zugriffstasten für den Dialog-Editor](../windows/accelerator-keys-for-the-dialog-editor.md).
+Der Dialog-Editor bietet zusätzlich die Möglichkeit, die Eigenschaften einzelner oder mehrerer Steuerelemente zu bearbeiten. Sie können die Aktivierreihenfolge ändern, d. h. die Reihenfolge an, bei dem Steuerelemente erhalten, Fokus, wenn die **Registerkarte** gedrückt wird, oder Sie definieren eine Zugriffstaste (Tastenkombination), die Benutzern ermöglicht, wählen Sie ein Steuerelement unter Verwendung der Tastaturfokus.
 
 Die **Dialogfeld** Editor ermöglicht auch das Ihnen die Verwendung benutzerdefinierter Steuerelemente einschließlich ActiveX-Steuerelemente. Außerdem können [Formularansichten](../mfc/reference/cformview-class.md), [Datensatzansichten](../data/record-views-mfc-data-access.md)oder [Dialogleisten](../mfc/dialog-bars.md)bearbeitet werden.
 
 Ab Visual Studio 2015 wird können den Dialog-Editor Sie dynamische Layouts definieren, die angeben, wie Sie Steuerelemente zum Verschieben und anpassen, wenn der Benutzer die Größe eines Dialogfelds ändert. Weitere Informationen finden Sie unter [Dynamic Layout](../mfc/dynamic-layout.md).
 
-- [Erstellen eines neuen Dialogfelds](../windows/creating-a-new-dialog-box.md)
-
-- [Erstellen eines Dialogfelds, das zur Laufzeit vom Benutzer nicht beendet werden kann](../windows/creating-a-dialog-box-that-users-cannot-exit.md)
+- [How To: Erstellen Sie ein Dialogfeld](../windows/creating-a-new-dialog-box.md)
 
 - [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)
 
-- [Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](../windows/adding-event-handlers-for-dialog-box-controls.md)
-
-- [Testen eines Dialogfelds](../windows/testing-a-dialog-box.md)
-
-- [Problembehandlung beim Dialog-Editor](../windows/troubleshooting-the-dialog-editor.md)
-
    > [!TIP]
-   > Bei der Verwendung der **Dialogfeld** -Editor in vielen Fällen können Sie die rechte Maustaste gedrückt, um ein Kontextmenü mit häufig verwendeten Befehlen anzuzeigen klicken.
-
-Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+   > Bei der Verwendung der **Dialogfeld** -Editor in vielen Fällen können Sie auswählen der rechten Maustaste auf ein Kontextmenü mit häufig verwendeten Befehlen anzuzeigen.
 
 ## <a name="dialog-editor-toolbar"></a>Symbolleiste des Dialog-Editors
 

@@ -1,6 +1,6 @@
 ---
-title: Bearbeiten eines Bilds
-ms.date: 11/04/2016
+title: 'Vorgehensweise: Bearbeiten eines Bildes'
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.image.editing
 - vc.editors.image.editing
@@ -40,14 +40,14 @@ helpviewer_keywords:
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-ms.openlocfilehash: 928a37d1b85378c3c50f41dba441259ace2d3af9
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 906244b692253a8423af55eb91d46622087713e3
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320678"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336527"
 ---
-# <a name="editing-an-image"></a>Bearbeiten eines Bilds
+# <a name="how-to-edit-an-image"></a>Vorgehensweise: Bearbeiten eines Bildes
 
 Sie können Tools für die Auswahl verwenden, um einen Bereich eines Bildes zu definieren, die Sie Ausschneiden, kopieren, löschen, ändern Sie die Größe, umkehren, oder verschieben möchten. Mit der **Rechteckauswahl** Tool können Sie definieren, und wählen Sie einen rechteckigen Bereich des Bilds. Mit der **Unregelmäßige Auswahl** Tool können Sie einen Freihand über den Bereich, die Sie auswählen, für das Ausschneiden, kopieren oder andere Vorgänge möchten zeichnen.
 
@@ -56,9 +56,7 @@ Sie können Tools für die Auswahl verwenden, um einen Bereich eines Bildes zu d
 
 Sie können auch einen benutzerdefinierten Pinsel aus einer Auswahl erstellen. Weitere Informationen finden Sie unter [Erstellen von benutzerdefinierten Pinseln](../windows/creating-a-custom-brush-image-editor-for-icons.md).
 
-Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
-
-## <a name="selecting-an-image"></a>Ein Bild auswählen
+## <a name="select-an-image"></a>Wählen Sie ein Bild
 
 1. Auf der **Bild-Editor** Symbolleiste (oder von der **Image** Menü **Tools** Befehl), das Auswahlwerkzeug werden sollen.
 
@@ -72,7 +70,7 @@ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie
 
 1. Wählen Sie das Bild außerhalb der aktuellen Auswahl. Die Markierungsrahmen umgeben ändert den Fokus, und das gesamte Bild wieder umfasst.
 
-## <a name="editing-parts-of-an-image"></a>Bearbeiten von Bestandteilen eines Bilds
+## <a name="edit-parts-of-an-image"></a>Bearbeiten von Bestandteilen eines Bilds
 
 Können Sie standard Bearbeitungsvorgänge ausführen – Ausschneiden, kopieren, löschen und verschieben, auf eine [Auswahl](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), ob die Auswahl auf das gesamte Bild oder nur eines Teils davon ist. Da die **Image** Editor verwendet die **Windows-Zwischenablage**, Sie können Bilder zwischen übertragen der **Image** -Editor und andere Anwendungen für Windows.
 
@@ -119,7 +117,7 @@ Von der **bearbeiten** Menü wählen **löschen**.
 
 Weitere Informationen zum Zeichnen mit einer Auswahl, finden Sie unter [Erstellen von benutzerdefinierten Pinseln](../windows/creating-a-custom-brush-image-editor-for-icons.md).
 
-## <a name="flipping-an-image"></a>Kippen eines Bildes
+## <a name="flip-an-image"></a>Kippen Sie ein Bild
 
 Sie können ein Bild, um ein spiegelimage der ursprünglichen erstellen, drehen Sie das Bild um, oder das Bild auf der rechten Seite um 90 Grad drehen, zu einem Zeitpunkt drehen oder kippen.
 
@@ -132,7 +130,7 @@ Sie können ein Bild, um ein spiegelimage der ursprünglichen erstellen, drehen 
    > [!NOTE]
    > Sie können auch die [Zugriffstasten (Tastenkombination)](../windows/accelerator-keys-image-editor-for-icons.md) für diese Befehle oder Zugriff auf die Befehle im Kontextmenü (klicken Sie außerhalb des Abbilds, in dem Bild-Editor).
 
-## <a name="resizing-an-image"></a>Größenänderungen bei Bildern
+## <a name="resize-an-image"></a>Ändern der Bildgröße
 
 Das Verhalten der **Image** -Editor beim Ändern der Bildgröße, hängt davon ab, ob Ihr [ausgewählten](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) das gesamte Bild oder nur eines Teils davon.
 
@@ -185,7 +183,7 @@ In der Regel die **Image** Editor schneidet oder ein Bild vergrößert, wenn Sie
 
 1. Ziehen Sie die Ziehpunkte, bis die Auswahl der richtigen Größe ist.
 
-## <a name="editing-an-image-outside-of-a-project"></a>Bearbeiten eines Bildes außerhalb eines Projekts
+## <a name="edit-an-image-outside-of-a-project"></a>Bearbeiten eines Bildes außerhalb eines Projekts
 
 Sie können öffnen und bearbeiten Images in der Entwicklungsumgebung aus, wie in allen Anwendungen Grafiken. Die Images, mit denen Sie zusammenarbeiten müssen Teil eines Visual Studio-Projekts für unabhängige Bearbeitung nicht.
 
@@ -197,7 +195,7 @@ Sie können öffnen und bearbeiten Images in der Entwicklungsumgebung aus, wie i
 
 1. Suchen Sie und öffnen Sie das Abbild, die, das Sie bearbeiten möchten.
 
-## <a name="changing-image-properties"></a>Ändern von Bildeigenschaften
+## <a name="change-image-properties"></a>Ändern von Bildeigenschaften
 
 Sie können festlegen, oder Ändern der Eigenschaften eines Image mithilfe der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window).
 

@@ -1,6 +1,6 @@
 ---
 title: Steuerelemente in Dialogfeldern (C++) | Microsoft-Dokumentation
-ms.date: 11/04/2016
+ms.date: 02/15/2019
 f1_keywords:
 - Custom Control
 helpviewer_keywords:
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: 1f231a376b335d7fb711ef2039c13f49624e6bfb
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: 6360491ebb4478ee4ce22115eced7ed672866565
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264841"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336513"
 ---
 # <a name="controls-in-dialog-boxes-c"></a>Steuerelemente in Dialogfeldern (C++)
 
@@ -30,25 +30,11 @@ Wenn Sie ein Dialogfeld, das ein Steuerelement hinzufügen oder ihn neu anzuordn
 
 Nachdem Sie das Dialogfeld ein Steuerelement hinzugefügt haben, können Sie Eigenschaften wie z. B. die Beschriftung, im Ändern der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window). Sie können mehrere Steuerelemente auswählen und alle gleichzeitig, ihre Eigenschaften ändern.
 
-- [Hinzufügen, Bearbeiten oder Löschen von Steuerelementen](adding-editing-or-deleting-controls.md)
+- [How To: Hinzufügen, bearbeiten oder Löschen von Steuerelementen](adding-editing-or-deleting-controls.md)
 
-- [Auswählen von Steuerelementen](../windows/selecting-controls.md)
+- [How To: Anordnen von Steuerelementen](../windows/arrangement-of-controls-on-dialog-boxes.md)
 
-- [Festlegen der Größe von individuellen Steuerelementen](../windows/sizing-individual-controls.md)
-
-- [Festlegen der gleichen Breite, Höhe oder Größe für Steuerelemente](../windows/making-controls-the-same-width-height-or-size.md)
-
-- [Festlegen der Größe des Kombinationsfelds und seiner Dropdownliste](setting-the-size-of-the-combo-box-and-its-drop-down-list.md)
-
-- [Hinzufügen von Werten zu einem Kombinationsfeld-Steuerelement](../windows/adding-values-to-a-combo-box-control.md)
-
-- [Festlegen der Breite einer horizontalen Bildlaufleiste](../windows/setting-the-width-of-a-horizontal-scroll-bar.md)
-
-- [Die Anordnung von Steuerelementen in Dialogfeldern](../windows/arrangement-of-controls-on-dialog-boxes.md)
-
-- [Definieren von Tastenkombinationen](../windows/defining-mnemonics-access-keys.md)
-
-- [Festlegen der Position und Größe eines Dialogfelds](../windows/specifying-the-location-and-size-of-a-dialog-box.md)
+- [How To: Steuern des Zugriffs und Werte definieren](../windows/defining-mnemonics-access-keys.md)
 
 Die Standardsteuerelemente sind in der **Toolbox** Standardwert Ereignisse sind:
 
@@ -110,8 +96,6 @@ Für benutzerdefinierte Steuerelemente sind Sie auf:
 - Geben einen 32-Bit-Hexadezimalwert, das Format des Steuerelements legt diese fest.
 
 - Wenn den erweiterten Stil.
-
-Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
 
 ## <a name="requirements"></a>Anforderungen
 
