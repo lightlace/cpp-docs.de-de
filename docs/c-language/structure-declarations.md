@@ -8,12 +8,12 @@ helpviewer_keywords:
 - structure members
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
-ms.openlocfilehash: 5c557b3db2e58001fa0b7a1a5bef5b1043e2cd86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a17bb996f13fdbe11bb569c8af5669a9d0c5363f
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607284"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152286"
 ---
 # <a name="structure-declarations"></a>Strukturdeklarationen
 
@@ -122,7 +122,7 @@ struct sample   /* Defines a structure named x */
 
 Die ersten beiden Member der Struktur sind eine `char`-Variable und ein Zeiger auf einen **float**-Wert. Der dritte Member, `next`, wird als Zeiger auf den definierten Strukturtyp deklariert (`sample`).
 
-Anonyme Strukturen können nützlich sein, wenn der angegebene Tag nicht benötigt wird. Dies ist der Fall, wenn eine Deklaration alle Strukturinstanzen definiert. Zum Beispiel:
+Anonyme Strukturen können nützlich sein, wenn der angegebene Tag nicht benötigt wird. Dies ist der Fall, wenn eine Deklaration alle Strukturinstanzen definiert. Beispiel:
 
 ```C
 struct

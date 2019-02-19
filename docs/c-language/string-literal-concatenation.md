@@ -5,12 +5,12 @@ helpviewer_keywords:
 - concatenating strings
 - strings [C++], concatenating
 ms.assetid: 51486b1f-4b1e-4061-9add-1aa38c6cdb3c
-ms.openlocfilehash: 167ebd2cf9f7f8f2f073b5de68f36aebd1a3951a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cdd9a7811635bf43cd76ecbc84d8ab364e7f9dab
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654495"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152572"
 ---
 # <a name="string-literal-concatenation"></a>Zeichenfolgenliteral-Verkettung
 
@@ -35,7 +35,7 @@ Um eine neue Zeile innerhalb eines Zeichenfolgenliterals zu erzwingen, geben Sie
 "Enter a number between 1 and 100\nOr press Return"
 ```
 
-Da Zeichenfolgen in jeder Spalte des Quellcodes beginnen und lange Zeichenfolgen in jeder Spalte einer Folgezeile fortgesetzt werden können, können Sie Zeichenfolgen positionieren, um die Lesbarkeit des Quellcodes zu verbessern. In jedem Fall ihre Darstellung auf dem Bildschirm, wenn die Ausgabe nicht betroffen ist. Zum Beispiel:
+Da Zeichenfolgen in jeder Spalte des Quellcodes beginnen und lange Zeichenfolgen in jeder Spalte einer Folgezeile fortgesetzt werden können, können Sie Zeichenfolgen positionieren, um die Lesbarkeit des Quellcodes zu verbessern. In jedem Fall ihre Darstellung auf dem Bildschirm, wenn die Ausgabe nicht betroffen ist. Beispiel:
 
 ```
 printf_s ( "This is the first half of the string, "

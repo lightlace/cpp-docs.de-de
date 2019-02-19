@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __LOCAL_SIZE constant
 - stack, stack frame layout
 ms.assetid: 3b8addec-e809-48e4-b1d0-5bad133bd4b8
-ms.openlocfilehash: e7bfeccf41b9e4dace49e9ab209a94598c492b41
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 52403fc45bbb68d693ef154bf39c5dd366dd10c5
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515530"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56146481"
 ---
 # <a name="considerations-when-writing-prologepilog-code"></a>Überlegungen zum Schreiben von Prolog- und Epilogcode
 
@@ -46,7 +46,7 @@ Der Stapel wächst immer nach unten (von hohen zu niedrigen Speicheradressen). D
 
 Der Compiler stellt eine Konstante, **__LOCAL_SIZE**, für die Verwendung im Inlineassemblerblock des Funktionsprologcodes bereit. Mit dieser Konstanten wird Speicherplatz für lokale Variablen im Stapelrahmen im benutzerdefinierten Prologcode zugeordnet.
 
-Der Compiler bestimmt den Wert von **__LOCAL_SIZE**. Der Wert ist die Gesamtzahl von Bytes aller benutzerdefinierten lokalen Variablen und der vom Compiler generierten temporären Variablen. **__LOCAL_SIZE** kann nur als unmittelbarer Operand verwendet werden. Er kann nicht in einem Ausdruck verwendet werden. Sie dürfen den Wert dieser Konstanten nicht ändern oder neu definieren. Zum Beispiel:
+Der Compiler bestimmt den Wert von **__LOCAL_SIZE**. Der Wert ist die Gesamtzahl von Bytes aller benutzerdefinierten lokalen Variablen und der vom Compiler generierten temporären Variablen. **__LOCAL_SIZE** kann nur als unmittelbarer Operand verwendet werden. Er kann nicht in einem Ausdruck verwendet werden. Sie dürfen den Wert dieser Konstanten nicht ändern oder neu definieren. Beispiel:
 
 ```
 mov      eax, __LOCAL_SIZE           ;Immediate operand--Okay
