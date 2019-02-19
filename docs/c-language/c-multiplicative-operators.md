@@ -11,12 +11,12 @@ helpviewer_keywords:
 - slash (/) operator
 - multiplication operator [C++], multiplicative operators
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
-ms.openlocfilehash: debda69d693286aef03363eafd450b5aa531e987
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fdf208ffba3e3d63d8672b84af8cf6168b34dc3f
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506924"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147750"
 ---
 # <a name="c-multiplicative-operators"></a>C-Multiplikationsoperatoren
 
@@ -35,7 +35,7 @@ Die multiplikativen Operatoren führen die üblichen arithmetischen Konvertierun
 
 Die multiplikativen C-Operatoren sind im Folgenden beschrieben:
 
-|Operator|Beschreibung |
+|Operator|Beschreibung|
 |--------------|-----------------|
 |<strong>\*</strong>|Der multiplikative C-Operator bewirkt die Multiplizierung seiner beiden Operanden.|
 |**/**|Der Divisionsoperator bewirkt, dass der erste Operanden durch den zweiten geteilt wird. Wenn zwei ganzzahlige Operanden dividiert werden und das Ergebnis keine ganze Zahl ist, wird sie gemäß den folgenden Regeln gekürzt:<br/><br/>– Das Ergebnis der Division durch 0 (null) ist entsprechend dem ANSI C-Standard nicht definiert. Der Microsoft C-Compiler generiert einen Fehler zur Kompilierzeit oder Laufzeit.<br/><br/>– Wenn beide Operanden positiv oder ohne Vorzeichen sind, wird das Ergebnis in Richtung 0 (null) abgeschnitten.<br/><br/>– Wenn einer der beiden Operanden negativ ist, ist es von der Implementierung abhängig, ob das Ergebnis der Operation die größte ganze Zahl kleiner oder gleich dem algebraischen Quotienten oder die kleinste ganze Zahl größer oder gleich dem algebraischen Quotienten ist. (Weitere Informationen finden Sie im Microsoft-spezifischen Abschnitt weiter unten.)|
@@ -80,7 +80,7 @@ Diese Anweisung weist `n` den ganzzahligen Rest 1 zu, wenn 10 durch 3 dividiert 
 
 **Microsoft-spezifisch**
 
-Das Zeichen für den Rest entspricht dem Zeichen des Divisors. Zum Beispiel:
+Das Zeichen für den Rest entspricht dem Zeichen des Divisors. Beispiel:
 
 ```
 50 % -6 = 2

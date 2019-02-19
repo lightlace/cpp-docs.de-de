@@ -7,12 +7,12 @@ helpviewer_keywords:
 - expanding wildcard arguments
 - wildcards, expanding
 ms.assetid: 80a11c4b-0199-420e-a342-cf1d803be5bc
-ms.openlocfilehash: 2224d01eeb3ec54a9c0ff895dfa45574135f7c0c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1fb964fe98223fb7187b83c7101027ed1f9cbea
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443419"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149049"
 ---
 # <a name="expanding-wildcard-arguments"></a>Erweitern von Platzhalterargumenten
 
@@ -22,7 +22,7 @@ Wenn Sie ein C-Programm ausführen, können Sie einen von zwei Platzhaltern – 
 
 Standardmäßig werden Platzhalter in Befehlszeilenargumenten nicht erweitert. Sie können den die normale `argv` -Laderoutine für den Argumentvektor durch eine Version ersetzen, die Platzhalter durch eine Verknüpfung mit der Datei „setargv.obj“ oder der Datei „wsetargv.obj“ erweitert. Wenn das Programm eine `main` -Funktion verwendet, stellen Sie eine Verknüpfung mit „setargv.obj“ her. Wenn das Programm eine `wmain` -Funktion verwendet, stellen Sie eine Verknüpfung mit „wsetargv.obj“ her. Beide weisen das gleiche Verhalten auf.
 
-Um eine Verknüpfung mit „setargv.obj“ oder „wsetargv.obj“ herzustellen, verwenden Sie die **/link** -Option. Zum Beispiel:
+Um eine Verknüpfung mit „setargv.obj“ oder „wsetargv.obj“ herzustellen, verwenden Sie die **/link** -Option. Beispiel:
 
 **cl example.c /link setargv.obj**
 

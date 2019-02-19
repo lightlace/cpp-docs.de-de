@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - nonterminals definition
 ms.assetid: f9b3cf5f-6a7c-4a10-9b18-9d4a43efdaeb
-ms.openlocfilehash: 60806286ff8bbe64440c8b2f3e7af57b4390e2cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ff3f8b447e29f0da59405a7c0286d7a696b4613
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571443"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152468"
 ---
 # <a name="definitions-and-conventions"></a>Definitionen und Konventionen
 
@@ -25,7 +25,7 @@ gibt einen optionalen Ausdruck an, der in Klammern eingeschlossen wird.
 
 Die Syntaxkonventionen verwenden verschiedene Schriftartattribute für unterschiedliche Syntaxkomponenten. Die Symbole und die Schriftarten lauten wie folgt:
 
-|Attribut|Beschreibung |
+|Attribut|Beschreibung|
 |---------------|-----------------|
 |*nonterminal*|Kursivschrift gibt Nichtterminale an.|
 |**const**|Fett formatierte Terminale sind literale, reservierte Symbole und Wörter, die wie gezeigt eingegeben werden müssen. Bei Zeichen in diesem Kontext wird immer die Groß-/Kleinschreibung beachtet.|

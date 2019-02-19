@@ -6,18 +6,18 @@ helpviewer_keywords:
 - declarators, definition
 - declaring variables, declaration statements
 ms.assetid: 5fd67a6a-3a6a-4ec9-b257-3f7390a48d40
-ms.openlocfilehash: 711c0eb4e0b652f86de74803d5725c5dc3054b31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 928de4b1724577a9fdb282f5109b4b5d0b31c4e6
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562785"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147489"
 ---
 # <a name="declarators-and-variable-declarations"></a>Deklaratoren und Variablendeklarationen
 
 Im folgenden Abschnitt wird die Form und Bedeutung von Deklarationen für die Variablentypen in dieser Liste beschrieben. Insbesondere wird in den übrigen Abschnitten erklärt, wie Sie Folgendes deklarieren:
 
-|Variablentyp|Beschreibung |
+|Variablentyp|Beschreibung|
 |----------------------|-----------------|
 |[Einfache Variablen](../c-language/simple-variable-declarations.md)|Einzelwertvariablen vom Typ "Ganzzahl" oder "Gleitkomma"|
 |[Arrays](../c-language/array-declarations.md)|Variablen, die aus einer Auflistung von Elementen mit demselben Typ bestehen|

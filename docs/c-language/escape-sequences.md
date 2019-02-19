@@ -22,7 +22,7 @@ helpviewer_keywords:
 - "newline character \n escape sequence"
 - nongraphic control characters
 - question mark, literal
-- "\nescape sequence"
+- "\n escape sequence"
 - "vertical tab \v escape sequence"
 - "\a escape sequence"
 - '? symbol'
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - "	 escape sequence"
 - backspace escape sequence
 ms.assetid: 5aef377f-a76c-4d5c-aa04-8308758ad6a8
-ms.openlocfilehash: 810d091b923bd976a4a8bbe6814e8ddc0b243bcd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9aeb8ca549cce8bddbf5d6ddadb6292c05f573d5
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431199"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151415"
 ---
 # <a name="escape-sequences"></a>Escapesequenzen
 
@@ -72,7 +72,7 @@ Wenn einem Zeichen ein umgekehrter Schrägstrich vorangestellt ist, der nicht in
 
 Mithilfe von Escapesequenzen können Sie nicht grafische Steuerzeichen an ein Anzeigegerät senden. Beispielsweise wird das ESC-Zeichen (**\033**) häufig als erstes Zeichen eines Steuerungsbefehls für ein Terminal oder einen Drucker verwendet. Einige Escapesequenzen sind gerätespezifisch. Zum Beispiel beeinflussen die Escapesequenzen für vertikale Tabstopps und Seitenvorschübe (**\v** und **\f**) die Bildschirmausgabe nicht, sondern sie führen die entsprechenden Druckervorgänge aus.
 
-Sie können den umgekehrten Schrägstrich (**\\**) auch als Fortsetzungszeichen verwenden. Wenn ein Zeilenumbruchzeichen (entsprechend dem Drücken der EINGABETASTE) direkt auf den umgekehrten Schrägstrich folgt, ignoriert der Compiler den umgekehrten Schrägstrich und das Zeilenumbruchzeichen und behandelt die nächste Zeile als Teil der vorherigen Zeile. Dies wird in erster Linie für Präprozessordefinitionen verwendet, die länger als eine einzige Zeile sind. Zum Beispiel:
+Sie können den umgekehrten Schrägstrich (**\\**) auch als Fortsetzungszeichen verwenden. Wenn ein Zeilenumbruchzeichen (entsprechend dem Drücken der EINGABETASTE) direkt auf den umgekehrten Schrägstrich folgt, ignoriert der Compiler den umgekehrten Schrägstrich und das Zeilenumbruchzeichen und behandelt die nächste Zeile als Teil der vorherigen Zeile. Dies wird in erster Linie für Präprozessordefinitionen verwendet, die länger als eine einzige Zeile sind. Beispiel:
 
 ```
 #define assert(exp) \

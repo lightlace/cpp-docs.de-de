@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof operator
 ms.assetid: 70826d03-3451-41e4-bebb-a820ae66d53f
-ms.openlocfilehash: 0b5d25e0316c710ce758479ad9417c92201d929d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0bc0de5481cade10f89634d9e4ec78f4ec7b09f6
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577631"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149556"
 ---
 # <a name="sizeof-operator-c"></a>sizeof-Operator (C)
 
@@ -24,7 +24,7 @@ sizeof unary-expression
 sizeof ( type-name )
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Der Operand ist entweder ein Bezeichner, bei dem es sich um einen *unären Ausdruck* (unary-expression) handelt, oder ein Typumwandlungsausdruck (d.h. ein Typspezifizierer in Klammern). *unary-expression* kann kein Bitfeldobjekt, keinen unvollständigen Typ und keinen Funktionskennzeichner darstellen. Das Ergebnis ist eine vorzeichenlose Ganzzahlkonstante. Der Standardheader STDDEF.H definiert diesen Typ als **size_t**.
 

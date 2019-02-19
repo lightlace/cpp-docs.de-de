@@ -6,12 +6,12 @@ helpviewer_keywords:
 - typedef declarations
 - types [C], declarations
 ms.assetid: e92a3b82-9269-4bc6-834a-6f431ccac83e
-ms.openlocfilehash: 6493c5240ca66fc1f12c9617e05072f8399d4786
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4bf7bc82cdf792e5a23f6d5533cc4d800fe4252
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468899"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149621"
 ---
 # <a name="typedef-declarations"></a>Typedef-Deklarationen
 
@@ -51,7 +51,7 @@ Eine typedef-Deklaration wird auf die gleiche Weise wie eine Variable oder eine 
 
 Beachten Sie, dass in einer typedef-Deklaration keine Typen erstellt werden. Es werden Synonyme für vorhandene Typen oder Namen für Typen erstellt, die auf andere Weise angegeben werden können. Wenn ein typedef-Name als Typspezifizierer verwendet wird, kann er nur mit bestimmten Typspezifizierern kombiniert werden. Zulässige Modifizierer sind **const** und `volatile`.
 
-Typedef-Namen verwenden denselben Namespace wie gewöhnliche Bezeichner (weitere Informationen finden Sie unter [Namespaces](../c-language/name-spaces.md)). Aus diesem Grund kann ein Programm einen typedef-Namen und einen Bezeichner für den lokalen Gültigkeitsbereich mit dem gleichen Namen aufweisen. Zum Beispiel:
+Typedef-Namen verwenden denselben Namespace wie gewöhnliche Bezeichner (weitere Informationen finden Sie unter [Namespaces](../c-language/name-spaces.md)). Aus diesem Grund kann ein Programm einen typedef-Namen und einen Bezeichner für den lokalen Gültigkeitsbereich mit dem gleichen Namen aufweisen. Beispiel:
 
 ```C
 typedef char FlagType;
