@@ -1,17 +1,17 @@
 ---
 title: / CETCOMPAT (ablaufsteuerung Erzwingungstechnologie kompatibel)
-ms.date: 02/01/2019
+ms.date: 02/19/2019
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 3adb147804674b52a5d77030c48567ec04da6aa6
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 48eb1e2369e54d855bd19bb1d26ad057c903b9d0
+ms.sourcegitcommit: 7cd712176e5bc341b9d8f899d41ad49f02f85e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703430"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56418691"
 ---
 # <a name="cetcompat-control-flow-enforcement-technology-compatible"></a>/ CETCOMPAT (ablaufsteuerung Erzwingungstechnologie kompatibel)
 
@@ -24,7 +24,7 @@ Gibt an, ob ein ausführbares Image als kompatibel mit der ablaufsteuerung Erzwi
 ## <a name="arguments"></a>Argumente
 
 **NO**<br/>
-Gibt an, dass die Executalbe nicht kompatibel mit MEZ markiert werden soll.
+Gibt an, dass die ausführbare Datei nicht mit MEZ kompatibel gekennzeichnet werden soll.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -44,7 +44,7 @@ Die **/CETCOMPAT** Option ist verfügbar ab der im Toolset Visual Studio 2019 Vo
 
 ### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest
 
-- Diese Option ist keine programmgesteuerte Variante verfügbar sein.
+Diese Option ist keine programmgesteuerte Variante verfügbar sein.
 
 ## <a name="see-also"></a>Siehe auch
 
