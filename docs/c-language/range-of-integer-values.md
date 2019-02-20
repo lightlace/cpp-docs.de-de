@@ -2,18 +2,18 @@
 title: Bereich der ganzzahligen Werte
 ms.date: 11/04/2016
 ms.assetid: 0e9c6161-8f3f-4bfb-9fcc-a6c8dc97d702
-ms.openlocfilehash: bcf79877ed1bbd261a70b56d60df86adc31c897b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e34e700df203004388cd912089711b5849e00fd7
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632037"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152520"
 ---
 # <a name="range-of-integer-values"></a>Bereich der ganzzahligen Werte
 
 **ANSI 3.1.2.5** Die Darstellungen und Sätze von Werten der verschiedenen Ganzzahltypen
 
-Ganze Zahlen enthalten 32 Bit (vier Bytes). Ganzzahlen mit Vorzeichen werden in der Zweierkomplementdarstellung ausgedrückt. Das wichtigste Bit enthält die Zeichen 1 für negative Werte und 0 für positive Werte und Null. Die Werte werden im Folgenden aufgeführt:
+Ganze Zahlen enthalten 32 Bit (vier Bytes). Ganzzahlen mit Vorzeichen werden in der Zweierkomplementdarstellung ausgedrückt. Das wichtigste Bit enthält das Vorzeichen: 1 für negative Werte, 0 für positive Werte und 0. Die Werte werden im Folgenden aufgeführt:
 
 |Typ|Minimum und Maximum|
 |----------|-------------------------|
