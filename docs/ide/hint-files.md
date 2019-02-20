@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: 0b3ca7c6b09d85cddb519242e63af0b8097e3fec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 44566408a3afcfee7a15299a5845b5af385aeef8
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558781"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320691"
 ---
 # <a name="hint-files"></a>Hinweisdateien
 
@@ -145,7 +145,7 @@ Im folgenden Quellcode blendet das Makro `START_NAMESPACE` eine linke geschweift
 #define START_NAMESPACE namespace MyProject {
 ```
 
-**Strategie:** direktes Kopieren
+**Strategie:** Direkte Kopie
 
 Wenn die Semantik eines Makros für die Suchfunktion wichtig ist, erstellen Sie einen Hinweis, der mit dem Makro identisch ist. Das Analysesystem löst das Makro in die Definition in der Hinweisdatei auf.
 
@@ -204,7 +204,7 @@ Der folgende Quellcode enthält das Makro `START_NAMESPACE`, das den Anfang eine
 #define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP
 ```
 
-**Strategie:** direktes Kopieren
+**Strategie:** Direkte Kopie
 
 Erstellen Sie Hinweise für die Makros `START_NAMESPACE` und `BEGIN_CATEGORY_MAP`, und erstellen Sie dann einen Hinweis für das Makro `NSandMAP`, das mit dem übereinstimmt, das zuvor im Quellcode gezeigt wurde. Wenn ein zusammengesetztes Makro nur aus störenden Markos und Leerräumen besteht, können Sie alternativ einen Hinweis erstellen, dessen Ersatzzeichenfolge eine NULL-Definition ist.
 

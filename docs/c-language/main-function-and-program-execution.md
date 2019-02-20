@@ -9,12 +9,12 @@ helpviewer_keywords:
 - main function
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
-ms.openlocfilehash: e975f09b62ffbb536790c13eb8614453b1c1e8b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d16f8a5b7b6b23ad90aad886bbb9654e706549cb
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610430"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151039"
 ---
 # <a name="main-function-and-program-execution"></a>main-Funktion und Programmausführung
 
@@ -26,7 +26,7 @@ Jedes C-Programm verfügt über eine primäre Funktion (main), die mit **main** 
 main( int argc, char *argv[ ], char *envp[ ] )
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Funktionen innerhalb des Quellprogramms führen eine oder mehrere bestimmte Aufgaben aus. Die **main**-Funktion ruft diese Funktionen auf, um die jeweiligen Aufgaben auszuführen. Wenn **main** eine andere Funktion aufruft, übergibt sie die Ablaufsteuerung an die Funktion, sodass die Ausführung bei der ersten Anweisung in der Funktion beginnt. Eine Funktion gibt die Steuerung an **main** zurück, wenn eine `return`-Anweisung ausgeführt wird, oder wenn das Ende der Funktion erreicht ist.
 

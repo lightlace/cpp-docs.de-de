@@ -7,12 +7,12 @@ helpviewer_keywords:
 - portability [C++], type double
 - double data type
 ms.assetid: 17c85b24-1475-4d41-a03c-ddf2d6561d34
-ms.openlocfilehash: 42f8ed943fd9d034d5cae8cb057e094363b27d8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43e6cc444f4d6a973fc58b5ce550e468066aca1b
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532261"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151857"
 ---
 # <a name="type-double"></a>Typ "double"
 
@@ -20,7 +20,7 @@ Werte mit doppelter Genauigkeit und doppeltem Typ besitzen 8 Bytes. Das Format i
 
 **Microsoft-spezifisch**
 
-Der Typ "double" enthält 64 Bit: 1 für das Zeichen, 11 für den Exponent und 52 für die Mantisse. Sein Bereich ist +/-1.7E308 mit mindestens 15 Dezimalstellen.
+Der Typ „double“ enthält 64 Bit: 1 für das Vorzeichen, 11 für den Exponenten und 52 für die Mantisse. Sein Bereich ist +/-1.7E308 mit mindestens 15 Dezimalstellen.
 
 **Ende Microsoft-spezifisch**
 
