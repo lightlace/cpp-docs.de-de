@@ -4,18 +4,18 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: ef61ebbfad62e6a7bf764bad35204247e47d8ddb
-ms.sourcegitcommit: 6990f842fefc27b522b15cf352f3517b319d78da
+ms.openlocfilehash: 63b621bf99a1aeada10706badfe19cde417d7233
+ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53248571"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676499"
 ---
 # <a name="compiler-options-listed-by-category"></a>Compileroptionen nach Kategorien sortiert
 
 Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptionen. Eine alphabetische Liste finden Sie unter [Compiler Options Listed Alphabetically](compiler-options-listed-alphabetically.md).
 
-### <a name="optimization"></a>Optimierung
+## <a name="optimization"></a>Optimierung
 
 |Option|Zweck|
 |------------|-------------|
@@ -31,7 +31,7 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/Oy](oy-frame-pointer-omission.md)|Unterdrückt Framezeiger. (nur x86)|
 |[/favor](favor-optimize-for-architecture-specifics.md)|Erzeugt Code, der für eine bestimmte Architektur optimiert wird, oder für einen Bereich von Architekturen.|
 
-### <a name="code-generation"></a>Codeerzeugung
+## <a name="code-generation"></a>Codeerzeugung
 
 |Option|Zweck|
 |------------|-------------|
@@ -72,7 +72,7 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/RTC](rtc-run-time-error-checks.md)|Aktiviert Laufzeitfehlerüberprüfung.|
 |[/volatile](volatile-volatile-keyword-interpretation.md)|Wählt aus, wie das volatile-Schlüsselwort interpretiert wird.|
 
-### <a name="output-files"></a>Ausgabedateien
+## <a name="output-files"></a>Ausgabedateien
 
 |Option|Zweck|
 |------------|-------------|
@@ -87,7 +87,7 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/Fp](fp-name-dot-pch-file.md)|Gibt den Namen einer vorkompilierten Headerdatei an.|
 |[/FR, /Fr](fr-fr-create-dot-sbr-file.md)|Name generiert Browser SBR-Dateien.|
 
-### <a name="preprocessor"></a>Präprozessor
+## <a name="preprocessor"></a>Präprozessor
 
 |Option|Zweck|
 |------------|-------------|
@@ -105,7 +105,7 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/u](u-u-undefine-symbols.md)|Entfernt alle vorkompilierten Makros.|
 |[/X](x-ignore-standard-include-paths.md)|Ignoriert das standardmäßige Includeverzeichnis.|
 
-### <a name="language"></a>Sprache
+## <a name="language"></a>Sprache
 
 |Option|Zweck|
 |------------|-------------|
@@ -129,7 +129,7 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/Zs](zs-syntax-check-only.md)|Prüft nur die Syntax.|
 |[/ZW](zw-windows-runtime-compilation.md)|Erzeugt eine Ausgabedatei an, in der Windows-Runtime ausgeführt.|
 
-### <a name="linking"></a>Verknüpfen
+## <a name="linking"></a>Verknüpfen
 
 |Option|Zweck|
 |------------|-------------|
@@ -143,7 +143,7 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/MT](md-mt-ld-use-run-time-library.md)|Kompiliert, um mit LIBCMT.LIB eine ausführbare Multithreaddatei zu erstellen.|
 |[/MTd](md-mt-ld-use-run-time-library.md)|Kompiliert, um mit LIBCMTD.LIB eine ausführbare Multithreaddatei für den Debugger zu erstellen.|
 
-### <a name="miscellaneous"></a>Verschiedenes
+## <a name="miscellaneous"></a>Verschiedenes
 
 |Option|Zweck|
 |------------|-------------|
@@ -159,7 +159,7 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/H](h-restrict-length-of-external-names.md)|Veraltet. Beschränkt die Länge externer (öffentlicher) Namen.|
 |[/HELP](help-compiler-command-line-help.md)|Listet die Compileroptionen auf.|
 |[/J](j-default-char-type-is-unsigned.md)|Ändert den `char` -Standardtyp.|
-|[/ JMC](jmc.md)|Unterstützt native C++ nur mein Code debuggen.|
+|[/JMC](jmc.md)|Unterstützt native C++ nur mein Code debuggen.|
 |[/kernel](kernel-create-kernel-mode-binary.md)|Der Compiler und der Linker erstellen eine Binärdatei, die im Kernel von Windows ausgeführt werden kann.|
 |[/MP](mp-build-with-multiple-processes.md)|Erstellt mehrere Quelldateien gleichzeitig.|
 |[/nologo](nologo-suppress-startup-banner-c-cpp.md)|Unterdrückt die Anzeige von Startinformationen.|
@@ -191,11 +191,11 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/execution-charset](execution-charset-set-execution-character-set.md)|Festlegen des ausführungszeichensatzes.|
 |[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|Set Zeichensätze Quell- und auf UTF-8.|
 |[/validate-charset](validate-charset-validate-for-compatible-characters.md)|UTF-8-Dateien auf nur kompatible Zeichen zu überprüfen.|
-|[/ Diagnostics](diagnostics-compiler-diagnostic-options.md)|Steuert das Format von diagnosemeldungen.|
+|[/diagnostics](diagnostics-compiler-diagnostic-options.md)|Steuert das Format von diagnosemeldungen.|
 |[/permissive-](permissive-standards-conformance.md)|Legen Sie die Standard-Standards-Modus.|
 |[/std](std-specify-language-standard-version.md)|C++-standard-Version Kompatibilität Selektor.|
 
-### <a name="deprecated-and-removed-compiler-options"></a>Veraltete und entfernte Compileroptionen
+## <a name="deprecated-and-removed-compiler-options"></a>Veraltete und entfernte Compileroptionen
 
 |Option|Zweck|
 |------------|-------------|
