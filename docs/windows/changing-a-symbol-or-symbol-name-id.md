@@ -35,23 +35,23 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 4f1c44e8fc2ae34ddcb65ec23ca8d98e11d50ec0
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: d3c8a747c1e66490c333ff050c7bfa6e6f723a87
+ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320587"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56954899"
 ---
 # <a name="how-to-manage-symbols"></a>Vorgehensweise: Verwaltung von Symbolen
 
-Wenn Sie eine neue Ressource oder ein Ressourcenobjekt erstellen, weist die Entwicklungsumgebung einen standardmäßigen Symbolnamen zu, beispielsweise IDD_DIALOG1. Sie können die [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window) um den standardmäßigen Symbolnamen zu ändern oder den Namen eines beliebigen bereits mit einer Ressource verknüpften Symbols zu ändern.
+Wenn Sie eine neue Ressource oder ein Ressourcenobjekt erstellen, die Entwicklungsumgebung weist sie einen standardmäßigen Symbolnamen, z. B. `IDD_DIALOG1`. Sie können die [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window) um den standardmäßigen Symbolnamen zu ändern oder den Namen eines beliebigen bereits mit einer Ressource verknüpften Symbols zu ändern.
 
 Symbole, die eine einzelne Ressource zugeordnet werden, können Sie auch die **Eigenschaften** um den Symbolwert zu ändern. Können Sie die [Dialogfeld Ressourcensymbole](../windows/resource-symbols-dialog-box.md) so ändern Sie den Wert von Symbolen, die derzeit nicht auf eine Ressource zugewiesen.
 
 Normalerweise alle Symboldefinitionen, die in gespeichert werden `Resource.h`. Jedoch müssen Sie den Namen dieser Includedatei möglicherweise ändern, sodass Sie z. B. mit mehr als eine Ressourcendatei im selben Verzeichnis arbeiten können.
 
 > [!NOTE]
-> Wenn Ihr Projekt noch keine RC-Datei enthält, finden Sie unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).
+> Wenn Ihr Projekt noch keine RC-Datei enthält, finden Sie unter [Vorgehensweise: Erstellen von Ressourcen](../windows/how-to-create-a-resource-script-file.md).
 
 ## <a name="symbol-name-restrictions"></a>Beschränkungen bei Symbolnamen
 
@@ -67,14 +67,14 @@ Die Einschränkungen für Symbolnamen lauten wie folgt:
 
 - Symbolnamen dürfen nicht beachtet die Groß-/Kleinschreibung der ersten Symboldefinition wird jedoch beibehalten. Die die Symbole definierende Headerdatei wird durch den Ressourcencompiler/Editor und durch das bzw. die C++Programm(e) verwendet, um auf in einer Ressourcendatei definierte Ressourcen zu verweisen. Bei zwei Symbolnamen, die sich nur in der Groß-/Kleinschreibung unterscheiden, erkennt das C++-Programm zwei getrennte Symbole, während der Ressourcencompiler/Editor beide Namen als ein einzelnes Symbol erkennt.
 
-   > [!NOTE]
-   > Wenn Sie das im Folgenden hervorgehobene standardmäßige Symbolnamensschema (ID*_[keyword]) nicht befolgen und Ihr Symbolname dem Schlüsselwort entspricht, das dem Ressourcenskriptcompiler bekannt ist, führt der Versuch, die Ressourcenskriptdatei zu erstellen, anscheinend zu einer zufälligen Fehlergenerierung, die sich schwer diagnostizieren lässt. Halten Sie sich an die standardmäßige Namensgebung, um dies zu verhindern.
+> [!NOTE]
+> Wenn Sie nicht das Standardschema für Symbolnamen einhalten (unten und Ihr Symbolname zufällig Ressourcenskriptcompiler identisch sein, wie ein Schlüsselwort bekannt, dass der Skripts Ressourcencompiler möchten, erstellen Sie die Ressourcenskriptdatei scheinbar zufälligen fehlergenerierung führt Das ist schwer zu diagnostizieren. Halten Sie sich an die standardmäßige Namensgebung, um dies zu verhindern.
 
-Symbolnamen weisen beschreibende Präfixe auf, die die Art der Ressource oder des Objekts andeuten, die bzw. das sie repräsentieren. Diese beschreibenden Präfixe beginnen mit der Textkombinations-ID. Die Microsoft Foundation Class-Bibliothek (MFC) verwendet die in der folgenden Tabelle gezeigten Symbolnamenskonventionen.
+Symbolnamen weisen beschreibende Präfixe auf, die die Art der Ressource oder des Objekts andeuten, die bzw. das sie repräsentieren. Diese beschreibenden Präfixe beginnen mit der Textkombinations-ID. Die Microsoft Foundation Class-Bibliothek (MFC) verwendet, die in der folgenden Tabelle gezeigten symbolnamenskonventionen:
 
 |Kategorie|Präfix|Mit|
 |--------------|------------|---------|
-|Ressourcen|IDR_ IDD_ IDC_ IDI_ IDB_|Zugriffstaste oder Menü (sowie zugehörige oder benutzerdefinierte Ressourcen), Dialogfeld, Cursor, Symbol, Bitmap|
+|Ressourcen|IDR_, IDD_, IDC_, IDI_, IDB_|Zugriffstaste oder Menü (und zugehörige oder benutzerdefinierte Ressourcen), das Dialogfeld, Cursor, Symbol, Bitmap|
 |Menüelemente|ID_|Menüelement|
 |Befehle|ID_|Befehl|
 |Steuerelemente und untergeordnete Fenster|IDC_|Steuerelement|
@@ -89,11 +89,12 @@ Symbolnamen weisen beschreibende Präfixe auf, die die Art der Ressource oder de
 
    Wenn Sie einen neuen Symbolnamen eingeben, ist er automatisch einen Wert zugewiesen.
 
-Sie können die [Ressourcensymbole (Dialogfeld)](../windows/resource-symbols-dialog-box.md) so ändern Sie die Namen der derzeit nicht auf eine Ressource zugewiesenen Symbole.
+> [!NOTE]
+> Sie können die [Ressourcensymbole (Dialogfeld)](../windows/resource-symbols-dialog-box.md) so ändern Sie die Namen der derzeit nicht auf eine Ressource zugewiesenen Symbole.
 
 ## <a name="symbol-value-restrictions"></a>Beschränkungen bei Symbolwerten
 
-Bei einem Symbolwert kann es sich um eine beliebige Ganzzahl handeln, die in normaler Form für „#define preprocessor“-Anweisungen ausgedrückt wird. Hier sind einige Beispiele für Symbolwerte:
+Wert eines Symbols kann eine beliebige ganze Zahl, ausgedrückt in normaler Form für sein `#define` Präprozessordirektiven. Hier sind einige Beispiele für Symbolwerte:
 
 ```
 18
@@ -116,15 +117,13 @@ Im Folgenden finden Sie einige Beschränkungen für Symbolwerte:
     #define IDC_MYEDIT  IDC_OTHEREDIT  //not supported
     ```
 
-- Sie können nicht als Wertdefinitionen Präprozessormakros mit Argumenten verwenden. Zum Beispiel:
+- Sie können nicht als Wertdefinitionen Präprozessormakros mit Argumenten verwenden. Im folgende Beispiel wird ein gültiger Ausdruck, unabhängig davon, was nicht `ID` zum Zeitpunkt der Kompilierung ergibt:
 
     ```cpp
     #define   IDD_ABOUT  ID(7) //not supported
     ```
 
-   ist nicht unabhängig davon, was ein gültiger Ausdruck `ID` zum Zeitpunkt der Kompilierung ergibt.
-
-- Ihre Anwendung verfügt möglicherweise über eine vorhandene Datei, die mit Ausdrücken definierte Symbole enthält. Weitere Informationen zum Einschließen der Symbole als schreibgeschützte Symbole finden Sie unter [gemeinsam genutzter (schreibgeschützter) oder berechneter Symbole](../windows/including-shared-read-only-or-calculated-symbols.md).
+- Ihre Anwendung verfügt möglicherweise über eine vorhandene Datei, die mit Ausdrücken definierte Symbole enthält.
 
 Weitere Informationen über Zahlenbereiche finden Sie unter [TN023: MFC-Standardressourcen](../mfc/tn023-standard-mfc-resources.md).
 
@@ -138,7 +137,7 @@ Weitere Informationen über Zahlenbereiche finden Sie unter [TN023: MFC-Standard
     IDC_EDITNAME=5100
     ```
 
-Der neue Wert wird in der Symbolheaderdatei gespeichert, wenn Sie das nächste Mal das Projekt speichern. Nur der Symbolnamen verbleibt weiterhin angezeigt, in das Feld-ID; Das Gleichheitszeichen und Wert werden nicht angezeigt, nachdem sie überprüft haben.
+   Der neue Wert wird in der Symbolheaderdatei gespeichert, wenn Sie das nächste Mal das Projekt speichern. Nur der Symbolnamen verbleibt weiterhin im Feld-ID angezeigt, und dem Gleichheitszeichen und Wert werden nicht angezeigt, nachdem sie überprüft haben.
 
 ## <a name="change-or-delete-symbols"></a>Ändern oder Löschen von Symbolen
 
@@ -151,14 +150,14 @@ Während Sie sich in der [Ressourcensymbole (Dialogfeld)](../windows/resource-sy
 1. Bearbeiten des Symbols oder -Wert in den angezeigten Feldern der **Symbol ändern** Dialogfeld.
 
    > [!NOTE]
-   > So ändern Sie ein Symbol, *ist* , eine Ressource oder einem Objekt zugewiesen wird, müssen Sie den Ressourcen-Editor verwenden oder **Eigenschaften** Fenster.
+   > Um ein Symbol zu ändern, die eine Ressource oder einem Objekt zugewiesen ist, müssen Sie den Ressourcen-Editor verwenden oder **Eigenschaften** Fenster.
 
 ### <a name="to-delete-an-unassigned-unused-symbol"></a>So löschen Sie ein nicht zugewiesenes (nicht verwendetes) Symbol
 
 In der [Dialogfeld Ressourcensymbole](../windows/resource-symbols-dialog-box.md), wählen Sie das Symbol, das Sie verwenden möchten, löschen, und wählen Sie **löschen**.
 
-   > [!NOTE]
-   > Stellen Sie vor dem Löschen eines nicht verwendeten Symbols in einer Ressourcendatei sicher, dass es nicht an anderer Stelle im Programm oder durch die Ressourcendateien zum Zeitpunkt der Kompilierung verwendet wird.
+> [!NOTE]
+> Stellen Sie vor dem Löschen eines nicht verwendeten Symbols in einer Ressourcendatei können Sie sicher, dass es nicht an anderer Stelle im Programm oder von Ressourcendateien, die zum Zeitpunkt der Kompilierung verwendet wird.
 
 ## <a name="include-symbols"></a>Symbole einschließen
 
@@ -193,9 +192,9 @@ Die Umgebung interpretiert diese berechneten Symbole ordnungsgemäß, sofern Fol
    Rufen Sie die Datei nicht `Resource.h`, da dies der Dateiname, der normalerweise durch die Hauptsymbol-Headerdatei ist.
 
    > [!NOTE]
-   > **Wichtige** Eingabe im Feld Direktiven für schreibgeschützte Symbole in der Ressourcendatei enthalten ist, genau, wie Sie es eingeben. Stellen Sie sicher, dass die Eingabe weder Schreib- noch Syntaxfehler aufweist.
+   > Die Eingabe in die **Anweisungen für schreibgeschützte Symbole** Feld ist in der Ressourcendatei enthalten, genau, wie Sie es eingeben. Stellen Sie sicher, dass die Eingabe weder Schreib- noch Syntaxfehler aufweist.
 
-   Verwenden der **Anweisungen für schreibgeschützte Symbole** Kontrollkästchen, um Dateien mit Symboldefinitionen nur einzubeziehen. Ressourcendefinitionen Sie keine; Andernfalls werden doppelte Ressourcendefinitionen erstellt werden, wenn die Datei gespeichert wird.
+   Verwenden der **Anweisungen für schreibgeschützte Symbole** Kontrollkästchen, um Dateien mit Symboldefinitionen nur einzubeziehen. Keine Ressourcendefinitionen ein, die andernfalls doppelte Ressourcendefinitionen erstellt werden, wenn die Datei gespeichert wird.
 
 1. Platzieren Sie die Symbole in der von Ihnen angegebenen Datei.
 
@@ -215,6 +214,6 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Ressourcen-IDs (Symbole)](../windows/symbols-resource-identifiers.md)<br/>
-[Erstellen von Symbolen](../windows/creating-new-symbols.md)<br/>
+[Ressourcenbezeichner (Symbole)](../windows/symbols-resource-identifiers.md)<br/>
+[Vorgehensweise: Erstellen von Symbolen](../windows/creating-new-symbols.md)<br/>
 [Vordefinierte Symbol-IDs](../windows/predefined-symbol-ids.md)<br/>
