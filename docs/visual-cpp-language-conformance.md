@@ -1,17 +1,16 @@
 ---
 title: Visual C++-Sprachkonformität
 ms.date: 11/15/2017
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 78c4be98ecc8e0a42e2cd0967f2bedece9dabc86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 604057753e67d08c12204f9d3b09bce0e1212966
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630411"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809762"
 ---
 # <a name="visual-c-language-conformance"></a>Visual C++-Sprachkonformität
 
@@ -157,7 +156,7 @@ Informationen zu Kompatibilitätsverbesserungen und anderen Änderungen in Visua
 |&nbsp;&nbsp;[P0521R0 Veraltete shared_ptr::unique()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0521r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0607R0 Inlinevariablen für die Standardbibliothek](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0607r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0618R0 Kennzeichnen von „\<codecvt>“ als veraltet](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0618r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[N4562 Bibliotheksgrundlagen: Boyer-Moore-Suche()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#func.searchers.boyer_moore)<br/>&nbsp;&nbsp;[P0253R1 Beheben der Suchprogramm-Rückgabetypen](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0253r1.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[N4562 Bibliotheksgrundlagen: Boyer-Moore search()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#func.searchers.boyer_moore)<br/>&nbsp;&nbsp;[P0253R1 Beheben der Suchprogramm-Rückgabetypen](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0253r1.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0031R0 constexpr für \<array> (erneut) und \<iterator>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0031r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0040R3 Erweitern von Speicher-Verwaltungstools](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0040r3.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0084R2 Emplace-Rückgabetyp](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0084r2.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
@@ -296,7 +295,7 @@ Die Compileroption /Zc:noexceptTypes- fordert das alte Verhalten von \_\_declspe
 
 <a name="note_charconv"></a>__charconv__  from_chars() and to_chars() sind für ganze Zahlen verfügbar. Aktuell arbeiten wir an from_chars() für Gleitkommazahlen und dann an to_chars() für Gleitkommazahlen.
 
-<a name ="note_parallel"></a> __parallel__ Die parallele Bibliothek von C++17 ist vollständig. Beachten Sie, dass dies nicht bedeutet, dass jeder Algorithmus in jedem Fall parallel ist. Die wichtigsten Algorithmen wurden parallelisiert, und Ausführungsrichtliniensignaturen werden auch dann angegeben, wenn Algorithmen nicht parallelisiert wurden. Die interne Hauptkopfzeile der STL-Implementierung („yvals.h“) enthält Hinweise zu parallelen Algorithmen: C++ lässt zu, dass eine Implementierung parallele Algorithmen als Aufrufe sequentieller Algorithmen implementiert.   Diese Implementierung parallelisiert einige aber nicht alle gängigen Algorithmusaufrufe.
+<a name ="note_parallel"></a> __parallel__ Die parallele Bibliothek von C++17 ist vollständig. Beachten Sie, dass dies nicht bedeutet, dass jeder Algorithmus in jedem Fall parallel ist. Die wichtigsten Algorithmen wurden parallelisiert, und Ausführungsrichtliniensignaturen werden auch dann angegeben, wenn Algorithmen nicht parallelisiert wurden. Der zentrale interne Header der STL-Implementierung, „yvals.h“, enthält folgende Anmerkungen zu parallelen Algorithmen: In C++ kann eine Implementierung parallele Algorithmen aus Aufrufe von seriellen Algorithmen implementieren.   Diese Implementierung parallelisiert einige aber nicht alle gängigen Algorithmusaufrufe.
 
 Die folgenden Algorithmen werden parallelisiert:
 
