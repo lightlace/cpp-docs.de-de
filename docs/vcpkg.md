@@ -3,16 +3,15 @@ title: 'vcpkg: Ein C++-Paket-Manager für Windows, Linux und macOS'
 description: Vcpkg ist ein Befehlszeilen-Paket-Manager, der den Erwerb und die Installation von Open Source-C++-Bibliotheken für Windows erheblich vereinfacht.
 author: mikeblome
 ms.author: mblome
-ms.date: 05/14/2018
-ms.technology:
-- cpp-ide
+ms.date: 02/22/2019
+ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 2f7dc6f1d9c78d894c5cf0e6ba20c8bdfc54e67a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: dc07086f271c9789629b335b58758b88e8e3d4e8
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518683"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809710"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Ein C++-Paket-Manager für Windows, Linux und macOS
 
@@ -32,7 +31,7 @@ Bei der Erstellung eines vcpkg-Klons mit privaten Bibliotheken in der Ports-Samm
 
 ## <a name="installation"></a>Installation
 
-Klonen Sie das vcpkg-Repository von GitHub: https://github.com/Microsoft/vcpkg. Sie können es in jeden beliebigen Ordner herunterladen.
+Klonen Sie das vcpkg-Repository von GitHub: [https://github.com/Microsoft/vcpkg](https://github.com/Microsoft/vcpkg). Sie können es in jeden beliebigen Ordner herunterladen.
 
 Führen Sie den Bootstrapper im Stammverzeichnis aus:
 
@@ -82,7 +81,7 @@ The following packages will be built and installed:
 Additional packages (*) will be installed to complete this operation.
 ```
 
-Verwenden Sie bei CMAKE-Projekten CMAKE_TOOLCHAIN_FILE, um Bibliotheken mit `find_package()` zur Verfügung zu stellen. Zum Beispiel:
+Verwenden Sie bei CMAKE-Projekten CMAKE_TOOLCHAIN_FILE, um Bibliotheken mit `find_package()` zur Verfügung zu stellen. Beispiel:
 
 ```cmd
 cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)
@@ -207,7 +206,7 @@ Der Inhalt einer vcpkg-Instanz sieht folgendermaßen aus:
 
 ## <a name="command-line-reference"></a>Befehlszeilenreferenz
 
-|Befehl|Beschreibung |
+|Befehl|Beschreibung|
 |---------|---------|
 |**vcpkg search [pat]**|Suchen nach installationsbereiten Paketen|
 |**vcpkg install \<pkg>...**|Installieren eines Pakets|
@@ -229,7 +228,7 @@ Der Inhalt einer vcpkg-Instanz sieht folgendermaßen aus:
 
 ### <a name="options"></a>Optionen
 
-|Option|Beschreibung |
+|Option|Beschreibung|
 |---------|---------|
 |**--triplet \<t>**|Angeben der Dreiergruppe der Zielarchitektur (Standard: `%VCPKG_DEFAULT_TRIPLET%`, siehe auch **vcpkg help triplet**)|
 |**--vcpkg-root \<path>**|Angeben des vcpkg-Stammverzeichnisses (Standard: `%VCPKG_ROOT%`)|
