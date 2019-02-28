@@ -1,21 +1,21 @@
 ---
 title: binary_negate-Klasse
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::binary_negate
+- functional/std::binary_negate
 helpviewer_keywords:
 - binary_negate class
 ms.assetid: 7b86f02c-af7e-4c7f-9df1-08addae4dd65
-ms.openlocfilehash: 6ac5ebc991174ca5f835d30571b4995bedb5dea2
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 5e00e398f1c43d0a8d762ca42c3f4f3ab51b9866
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329773"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006343"
 ---
 # <a name="binarynegate-class"></a>binary_negate-Klasse
 
-Eine Klasse, mit der eine Memberfunktion bereitgestellt wird, die den Rückgabewert einer angegebenen binären Funktion negiert.
+Eine Klasse, mit der eine Memberfunktion bereitgestellt wird, die den Rückgabewert einer angegebenen binären Funktion negiert. Veraltet in C ++ 17 zugunsten des [Not_fn](functional-functions.md#not_fn).
 
 ## <a name="syntax"></a>Syntax
 

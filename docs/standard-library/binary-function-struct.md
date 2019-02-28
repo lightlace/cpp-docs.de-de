@@ -1,21 +1,21 @@
 ---
 title: binary_function-Struktur
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- functional/std::binary
+- functional/std::binary_function
 helpviewer_keywords:
 - binary_function class
 ms.assetid: 79b6d53d-644c-4add-b0ba-3a5f40f69c60
-ms.openlocfilehash: 5a153d85f9f6dcb93a074725ee9582ccfc1a66ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a6735ab558480039a0d2fa0e83ee4c5de02c5f2
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466767"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006265"
 ---
 # <a name="binaryfunction-struct"></a>binary_function-Struktur
 
-Eine leere Basisstruktur, mit der Typen definiert werden, die möglicherweise von abgeleiteten Klassen geerbt werden, die ein binäres Funktionsobjekt bereitstellen.
+Eine leere Basisstruktur, mit der Typen definiert werden, die möglicherweise von abgeleiteten Klassen geerbt werden, die ein binäres Funktionsobjekt bereitstellen. Veraltet in C ++ 11, C ++ 17 entfernt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,7 +31,7 @@ struct binary_function {
 
 Die Vorlagenstruktur dient als Basis für Klassen, die eine Memberfunktion der folgenden Form definieren:
 
-> *RESULT_TYPE* ** operator() (Const ** <em>First_argument_type</em>**&, const** <em>Second_argument_type</em>**&) const**
+> *result_type* ** operator()( const** <em>first_argument_type</em>**&, const** <em>second_argument_type</em>**& ) const**
 
 Alle binären Funktionen dieser Art können auf ihren ersten Argumenttyp als *first_argument_type*, ihren zweiten Argumenttyp als *second_argument_type* und ihren Rückgabetyp als *result_type* verweisen.
 
