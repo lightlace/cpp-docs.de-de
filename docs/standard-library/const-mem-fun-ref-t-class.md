@@ -1,21 +1,21 @@
 ---
 title: const_mem_fun_ref_t-Klasse
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::const_mem_fun_ref_t
+- functional/std::const_mem_fun_ref_t
 helpviewer_keywords:
 - const_mem_fun_ref_t class
 ms.assetid: 316ddbaa-9f46-4931-8eba-ea4ca66360ef
-ms.openlocfilehash: 3f0a87b71f39847590c5fbc4e94038b216ec4b1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16025764cdcf28900c30ef53dced871998f8bd07
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515517"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006577"
 ---
 # <a name="constmemfunreft-class"></a>const_mem_fun_ref_t-Klasse
 
-Eine Adapterklasse, die einer **const**-Memberfunktion, die keine Argumente akzeptiert, ermöglicht, als unäres Funktionsobjekt aufgerufen zu werden, wenn sie mit einem Verweisargument initialisiert wird.
+Eine Adapterklasse, die einer **const**-Memberfunktion, die keine Argumente akzeptiert, ermöglicht, als unäres Funktionsobjekt aufgerufen zu werden, wenn sie mit einem Verweisargument initialisiert wird. Veraltet in C ++ 11, C ++ 17 entfernt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,7 +31,7 @@ class const_mem_fun_ref_t
 
 ### <a name="parameters"></a>Parameter
 
-*PM*<br/>
+*Pm*<br/>
 Ein Zeiger auf die Memberfunktion der Klasse `Type`, die in ein Funktionsobjekt konvertiert werden soll.
 
 *left*<br/>
