@@ -21,76 +21,77 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: 2a3ff3d89c809f57ea3ddbd70d5664fc8d13cec4
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 420c5ecf44f8e8b264d9eafd93de58c0db3bedf4
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320821"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210717"
 ---
 # <a name="binary-editor-c"></a>Binär-Editor (C++)
 
-> [!WARNING]
-> Die **Binär-Editor** ist in Express-Editionen nicht verfügbar.
-
-Der Binär-Editor ermöglicht eine Bearbeitung beliebige Ressourcen auf Binärebene im hexadezimalen Format oder im ASCII-Format. Außerdem können Sie mit dem [Suchbefehl](/visualstudio/ide/reference/find-command) ASCII-Zeichenfolgen oder hexadezimale Bytes suchen. Verwenden Sie die **binäre** Editor lediglich bei Bedarf anzeigen oder geringfügige Änderungen, benutzerdefinierte Ressourcen oder Ressourcentypen, die von Visual Studio-Umgebung nicht unterstützt.
-
-Zum Öffnen der **Binär-Editor**, wählen Sie zuerst **Datei** > **neu** > **Datei** wählen Sie im Hauptmenü auf der Datei, die Sie bearbeiten möchten, und dann aktivieren Sie den Dropdownpfeil neben der **öffnen** , und wählen **Öffnen mit** > **Binär-Editor**.
-
 > [!CAUTION]
-> Das Bearbeiten von Ressourcen, wie Dialogfeldern, Bildern oder Menüs ist im Binär-Editor äußerst riskant. Eine falsche Bearbeitung kann zu einer Beschädigung der Ressource führen, sodass sie anschließend im systemeigenen Editor nicht mehr einsetzbar ist.
+> Bearbeiten von Ressourcen wie z. B. Dialogfeldern, Bildern oder Menüs in die **Binär-Editor** ist riskant. Eine falsche Bearbeitung kann zu einer Beschädigung der Ressource führen, sodass sie anschließend im systemeigenen Editor nicht mehr einsetzbar ist.
 
-![Binär-Editor](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
-Binärdaten für ein Dialogfeld in der Darstellung im Binär-Editor
+Die **Binär-Editor** können Sie beliebige Ressourcen auf Binärebene im hexadezimalen Format oder im ASCII-Format bearbeiten. Außerdem können Sie mit dem [Suchbefehl](/visualstudio/ide/reference/find-command) ASCII-Zeichenfolgen oder hexadezimale Bytes suchen. Verwenden der **Binär-Editor** nur wenn Sie anzeigen oder geringfügige vornehmen müssen, benutzerdefinierte Ressourcen oder Ressourcentypen, die von Visual Studio-Umgebung nicht unterstützt wird geändert.
 
-Nur bestimmte ASCII-Werte werden im Binär-Editor dargestellt (0x20 bis 0x7E). Erweiterte Zeichen werden im Bereich „ASCII-Wert“ des Binär-Editors (dem rechten Bereich) als Punkte dargestellt. Die "druckbaren" Zeichen sind die ASCII-Werte 32 bis 126.
+Zum Öffnen der **Binär-Editor** auf eine neue Datei, wechseln Sie zum Menü **Datei** > **neu** > **Datei**, wählen Sie den Typ der Datei, die Sie bearbeiten möchten, und dann aktivieren Sie den Dropdownpfeil neben der **öffnen** , und wählen **Öffnen mit** > **Binär-Editor**.
+
+Zum Öffnen der **Binär-Editor** auf einer vorhandenen Datei, wechseln Sie zum Menü **Datei** > **öffnen** > **Datei**, wählen die Datei, die Sie bearbeiten möchten, und dann aktivieren Sie den Dropdownpfeil neben der **öffnen** , und wählen **Öffnen mit** > **Binär-Editor**.
+
+   ![Binär-Editor](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
+   Binärdaten für ein Dialogfeld angezeigt, der **Binär-Editor**
+
+Nur bestimmte ASCII-Werte dargestellt werden, der **Binär-Editor** (0 x 20 bis 0x7E). Erweiterte Zeichen werden als Punkte angezeigt, in im rechten Bereich ASCII-Wert-Abschnitt, der die **Binär-Editor**. Die druckbaren Zeichen sind ASCII-Werte 32 bis 126.
 
 > [!TIP]
-> Bei der Verwendung der **binäre** -Editor, in vielen Fällen, Sie können mit der rechten Maustaste ein Kontextmenü mit ressourcenspezifische Befehle angezeigt. Welche Befehle verfügbar sind, hängt von dem Element ab, auf das Sie mit dem Cursor zeigen. Angenommen, Sie klicken können, während Sie auf die **binäre** -Editor mit Hexadezimalwerte markiert sind, im Kontextmenü werden die **Ausschneiden**, **Kopie**, und **einfügen**  Befehle.
+> Bei der Verwendung der **Binär-Editor**, können Sie in vielen Fällen mit der rechten Maustaste ein Kontextmenü mit ressourcenspezifische Befehle angezeigt. Welche Befehle verfügbar sind, hängt von dem Element ab, auf das Sie mit dem Cursor zeigen. Angenommen, Sie klicken können, während Sie auf die **Binär-Editor** mit Hexadezimalwerte markiert sind, zeigt das Kontextmenü der **Ausschneiden**, **Kopie**, und **einfügen**  Befehle.
 
-## <a name="how-to"></a>Exemplarische Vorgehensweise
+Die **Binär-Editor** ist in Express-Editionen nicht verfügbar.
 
-Die **binäre** -Editor können Sie:
+## <a name="how-to"></a>Gewusst wie
+
+Die **Binär-Editor** können Sie:
 
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>So öffnen Sie eine Windows-Desktopressource zur Binärbearbeitung
 
 1. Wählen Sie in der [Ressourcenansicht](../windows/resource-view-window.md)die bestimmte Ressourcendatei aus, die Sie bearbeiten möchten.
 
-1. Klicken Sie mit der rechten Maustaste auf die Ressource, und klicken Sie im Kontextmenü auf **Binärdaten öffnen** .
+1. Mit der rechten Maustaste in der Ressource, und wählen Sie **Binärdaten öffnen**.
 
-   > [!NOTE]
-   > Bei Verwendung der [Ressourcenansicht](../windows/resource-view-window.md) Fenster aus, um eine Ressource in einem Format zu öffnen, dass Visual Studio nicht (etwa eine RCDATA- oder eine benutzerdefinierte Ressource), die Ressource erkennt wird automatisch geöffnet, der **binäre** Editor.
+> [!NOTE]
+> Bei Verwendung der [Ressourcenansicht](../windows/resource-view-window.md) Fenster aus, um eine Ressource in einem Format zu öffnen, die Visual Studio nicht erkannt werden, etwa eine RCDATA- oder eine benutzerdefinierte Ressource, die Ressource automatisch im geöffnet ist die **Binär-Editor**.
 
 ### <a name="to-open-a-managed-resource-for-binary-editing"></a>So öffnen Sie eine verwaltete Ressource für die Binärbearbeitung
 
 1. In **Projektmappen-Explorer**, wählen Sie die bestimmte Ressourcendatei, die Sie bearbeiten möchten.
 
-1. Klicken Sie mit der rechten Maustaste auf die Ressource, und wählen Sie im Kontextmenü **Öffnen mit** aus.
+1. Mit der rechten Maustaste in der Ressource, und wählen Sie **Öffnen mit**.
 
 1. Wählen Sie im Dialogfeld **Öffnen mit** den **Binär-Editor**aus.
 
-   > [!NOTE]
-   > Mit der [Bildbearbeitung](../windows/image-editor-for-icons.md) und dem [Binär-Editor](binary-editor.md) ist die Bearbeitung von Ressourcendateien in verwalteten Projekten möglich. Bei den zu bearbeitenden verwalteten Ressourcen muss es sich um verknüpfte Ressourcen handeln. Das Bearbeiten eingebetteter Ressourcen wird von den Visual Studio-Ressourcen-Editoren nicht unterstützt.
-
 > [!NOTE]
-> Wenn Sie verwenden möchten. die **binäre** -Editor auf eine Ressource, die bereits in einem anderen Editorfenster bearbeitet wird schließen Sie zuerst das andere Editorfenster.
+> Können Sie die [Bildbearbeitung](../windows/image-editor-for-icons.md) und **Binär-Editor** , Bearbeitung von Ressourcendateien in verwalteten Projekten möglich. Bei den zu bearbeitenden verwalteten Ressourcen muss es sich um verknüpfte Ressourcen handeln. Das Bearbeiten eingebetteter Ressourcen wird von den Visual Studio-Ressourcen-Editoren nicht unterstützt.
 
 ### <a name="to-edit-a-resource"></a>So bearbeiten Sie eine Ressource
 
+> [!NOTE]
+> Wenn Sie verwenden möchten. die **Binär-Editor** für eine Ressource, die bereits in einem anderen Editorfenster bearbeitet wird, zuerst das andere Editorfenster schließen.
+
 1. Wählen Sie das Byte, die, das Sie bearbeiten möchten.
 
-   Die **Registerkarte** Schlüssel verschiebt den Fokus zwischen der Hexadezimal- und ASCII-Teile der **binäre** Editor. Können Sie die **Bild-auf** und **Seite nach unten** Schlüssel im einem Bildschirm "Resource" zu einem Zeitpunkt zu verschieben.
+   Die **Registerkarte** Schlüssel verschiebt den Fokus zwischen der Hexadezimal- und ASCII-Teile der **Binär-Editor**. Können Sie die **Bild-auf** und **Seite nach unten** Schlüssel im einem Bildschirm "Resource" zu einem Zeitpunkt zu verschieben.
 
 1. Geben Sie den neuen Wert ein.
 
    Der Wert Änderungen sofort in der sowohl Hexadezimal- und ASCII-Abschnitte und der Fokus wechselt zum nächsten Wert in Zeile.
 
-   > [!NOTE]
-   > Die **binäre** Editor nimmt Änderungen automatisch, wenn Sie den Editor zu schließen.
+> [!NOTE]
+> Die **Binär-Editor** Änderungen automatisch akzeptiert, wenn Sie den Editor zu schließen.
 
 ### <a name="to-find-binary-data"></a>Binärdaten suchen
 
-Sie können für ASCII-Zeichenfolgen oder hexadezimale Bytes suchen. Z. B. um "Hello" zu suchen, Sie können entweder die Zeichenfolge "Hello" oder suchen für "48 65 6 c 6 C 6F" (die hexadezimale Entsprechung).
+Sie können für ASCII-Zeichenfolgen oder hexadezimale Bytes suchen. Beispielsweise, um suchen *Hello*, Suche nach können Sie entweder die Zeichenfolge *Hello* oder seinem Hexadezimalwert, *48 65 6 c 6 C 6F*.
 
 1. Von der **bearbeiten** Menü wählen [finden](/visualstudio/ide/reference/find-command).
 
@@ -100,25 +101,25 @@ Sie können für ASCII-Zeichenfolgen oder hexadezimale Bytes suchen. Z. B. um "H
 
 ### <a name="to-create-a-new-custom-or-data-resource"></a>So erstellen Sie eine neue benutzerdefinierte oder Datenressource
 
-Sie können eine neue benutzerdefinierte oder Datenressource erstellen, indem Sie die Ressource in einer separaten Datei mit der normalen Syntax von Ressourcenskriptdateien (RC), und klicken Sie dann die Datei einschließen, mit der rechten Maustaste in das Projekt im platzieren **Projektmappen-Explorer** und auf **Ressource umfasst** im Kontextmenü auf.
+Sie können eine neue benutzerdefinierte oder Datenressource erstellen, indem Sie die Ressource in einer separaten Datei mit der normalen Syntax von Ressourcenskriptdateien (RC), und klicken Sie dann die Datei einschließen, mit der rechten Maustaste in das Projekt im platzieren **Projektmappen-Explorer** und auswählen **Ressourcenincludes**.
 
 1. [Erstellen Sie eine RC-Datei](../windows/how-to-create-a-resource-script-file.md) , die die benutzerdefinierte oder Datenressource enthält.
 
    Sie können benutzerdefinierte Daten in einer RC-Datei als in Anführungszeichen eingeschlossene nullterminierte Zeichenfolgen oder als ganze Zahlen im dezimalen, hexadezimalen oder oktalen Format eingeben.
 
-1. Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf die RC-Datei Ihres Projekts, und klicken Sie dann im Kontextmenü auf **Ressourcenincludes** .
+1. In **Projektmappen-Explorer**mit der rechten Maustaste auf die RC-Datei des Projekts, und wählen Sie **Ressourcenincludes**.
 
-1. In der **Kompilierzeitdirektiven** geben eine `#include` -Anweisung, die den Namen der Datei mit der benutzerdefinierten Ressource enthält. Zum Beispiel:
+1. In der **Kompilierzeitdirektiven** geben eine `#include` -Anweisung, die den Namen der Datei, die Ihre benutzerdefinierte Ressource, z. B. enthält enthält:
 
     ```cpp
     #include mydata.rc
     ```
 
-   Achten Sie auf die korrekte Syntax und Rechtschreibung Ihrer Eingaben. Der Inhalt des Felds **Kompilierzeitdirektiven** wird in die Ressourcenskriptdatei genau so eingefügt, wie sie ihn eingegeben haben.
+   Achten Sie auf die korrekte Syntax und Rechtschreibung Ihrer Eingaben. Den Inhalt der **Kompilierzeitdirektiven** Feld genau wie die Eingabe in die Ressourcenskriptdatei eingefügt.
 
 1. Wählen Sie **OK** um Ihre Änderungen aufzuzeichnen.
 
-Eine weitere Möglichkeit zum Erstellen einer benutzerdefinierten Ressource ist das Importieren einer externen Datei als benutzerdefinierte Ressource. Weitere Informationen finden Sie unter [Importieren und Exportieren von Ressourcen](../windows/how-to-import-and-export-resources.md).
+Eine weitere Möglichkeit zum Erstellen einer benutzerdefinierten Ressource ist eine externe Datei als benutzerdefinierte Ressource importieren, finden Sie unter [Vorgehensweise: Verwalten von Ressourcen](../windows/how-to-import-and-export-resources.md).
 
 > [!NOTE]
 > Erstellen neue benutzerdefinierte oder Ressourcen erfordert Win32.
