@@ -27,6 +27,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _itoa
@@ -98,14 +99,14 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 182e7190554382f56d43f94fefe209fd38a7b78b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 016f3474345b623415be9fe33556bb9f466542ad
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464089"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210535"
 ---
-# <a name="itoa-itoa-ltoa-ltoa-ultoa-ultoa-i64toa-ui64toa-itow-ltow-ultow-i64tow-ui64tow"></a>Itoa, _itoa, Ltoa, _ltoa, Ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
+# <a name="itoa-itoa-ltoa-ltoa-ultoa-ultoa-i64toa-ui64toa-itow-ltow-ultow-i64tow-ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
 Konvertiert eine ganze Zahl in eine Zeichenfolge. Sicherere Versionen dieser Funktionen sind verfügbar. finden Sie unter [_itoa_s, _itow_s Funktionen](itoa-s-itow-s.md).
 
@@ -164,7 +165,7 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 
 ### <a name="parameters"></a>Parameter
 
-*Wert*<br/>
+*value*<br/>
 Zu konvertierende Zahl.
 
 *buffer*<br/>
@@ -187,7 +188,7 @@ Die **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**, und **_ui64toa** Funktionen k
 > [!IMPORTANT]
 > Diese Funktionen können über das Ende eines Puffers hinaus schreiben, die zu klein ist. Um Pufferüberläufe zu verhindern, stellen sicher, dass *Puffer* ist groß genug für die konvertierten Ziffern und das abschließende Null-Zeichen sowie ein Zeichen sein. Falsche Verwendung dieser Funktionen kann schwerwiegende von Sicherheitsproblemen im Code führen.
 
-Aufgrund der Potenzial für Sicherheitsprobleme zu erkennen, in der Standardeinstellung führen diese Funktionen veraltungswarnung [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **diese Funktion oder Variable ist möglicherweise unsicher. Erwägen Sie die Verwendung** *Safe_function* **stattdessen. Zum Deaktivieren der veraltungswarnung verwenden Sie "_crt_secure_no_warnings".** Es wird empfohlen, ändern Sie den Source-Code verwendet die *Safe_function* vorgeschlagen, durch die Warnmeldung. Die sichereren Funktionen schreiben nicht mehr Zeichen als die angegebene Puffergröße. Weitere Informationen finden Sie unter [_itoa_s, _itow_s Funktionen](itoa-s-itow-s.md).
+Aufgrund der Potenzial für Sicherheitsprobleme zu erkennen, in der Standardeinstellung führen diese Funktionen veraltungswarnung [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **Diese Funktion oder Variable möglicherweise unsicher. Erwägen Sie die Verwendung** *Safe_function* **stattdessen. Zum Deaktivieren der veraltungswarnung verwenden Sie "_crt_secure_no_warnings".** Es wird empfohlen, ändern Sie den Source-Code verwendet die *Safe_function* vorgeschlagen, durch die Warnmeldung. Die sichereren Funktionen schreiben nicht mehr Zeichen als die angegebene Puffergröße. Weitere Informationen finden Sie unter [_itoa_s, _itow_s Funktionen](itoa-s-itow-s.md).
 
 Um dieser Funktionen ohne die veraltungswarnung verwenden zu können, definieren die **"_crt_secure_no_warnings"** Präprozessor-Makro, bevor Sie CRT-Header einschließen. Sie können dazu in der Befehlszeile an einer Developer-Eingabeaufforderung durch das Hinzufügen der **/D_CRT_SECURE_NO_WARNINGS** -Compileroption verwenden, um die **cl** Befehl. Definieren Sie andernfalls das Makro in den Quelldateien an. Wenn Sie den vorkompilierten Header verwenden, definieren Sie das Makro am oberen Rand der vorkompilierte Header-Datei, in der Regel "stdafx.h" enthalten. Verwenden Sie zum Definieren von Makros im Quellcode einer **#define** Richtlinie, bevor Sie alle CRT-Header, wie im folgenden Beispiel einfügen:
 
@@ -198,7 +199,7 @@ Um dieser Funktionen ohne die veraltungswarnung verwenden zu können, definieren
 
 In C++ haben diese Funktionen vorlagenüberladungen, mit die die sichereren Entsprechungen aufgerufen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-Der Posix-Namen **Itoa**, **Ltoa**, und **Ultoa** vorhanden sind, wie Aliase für die **_itoa**, **_ltoa**, und **_ultoa** Funktionen. Der Posix-Namen sind veraltet, da sie nicht die Namenskonventionen auf implementierungsspezifische-Funktion von ISO C. folgen Standardmäßig führen diese Funktionen veraltungswarnung [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **der POSIX-Name für dieses Element ist veraltet. Verwenden Sie stattdessen den ISO C- und C++-konformen Namen:** *New_name*. Es wird empfohlen, Sie ändern, Ihren Quellcode, um die sichereren Versionen dieser Funktionen verwenden **_itoa_s**, **_ltoa_s**, oder **_ultoa_s**. Weitere Informationen finden Sie unter [_itoa_s, _itow_s Funktionen](itoa-s-itow-s.md).
+Der Posix-Namen **Itoa**, **Ltoa**, und **Ultoa** vorhanden sind, wie Aliase für die **_itoa**, **_ltoa**, und **_ultoa** Funktionen. Der Posix-Namen sind veraltet, da sie nicht die Namenskonventionen auf implementierungsspezifische-Funktion von ISO C. folgen Standardmäßig führen diese Funktionen veraltungswarnung [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **Der POSIX-Name für dieses Element ist veraltet. Verwenden Sie stattdessen den ISO C- und C++-konformen Namen:** *New_name*. Es wird empfohlen, Sie ändern, Ihren Quellcode, um die sichereren Versionen dieser Funktionen verwenden **_itoa_s**, **_ltoa_s**, oder **_ultoa_s**. Weitere Informationen finden Sie unter [_itoa_s, _itow_s Funktionen](itoa-s-itow-s.md).
 
 Für die Quelle der Codeportabilität empfiehlt es sich, die Posix-Namen in Ihrem Code beizubehalten. Um dieser Funktionen ohne die veraltungswarnung verwenden zu können, definieren Sie sowohl die **_CRT_NONSTDC_NO_WARNINGS** und **"_crt_secure_no_warnings"** Präprozessormakros, bevor Sie CRT-Header einschließen. Sie können dazu in der Befehlszeile an einer Developer-Eingabeaufforderung durch das Hinzufügen der **/D_CRT_SECURE_NO_WARNINGS** und **/D_CRT_NONSTDC_NO_WARNINGS** Compileroptionen die **cl**Befehl. Definieren Sie andernfalls die Makros, die in Ihren Quelldateien an. Wenn Sie den vorkompilierten Header verwenden, definieren die Makros, die am oberen Rand der vorkompilierten Headerdatei Includedatei, in der Regel "stdafx.h". Verwenden Sie zum definieren die Makros, die in Ihrem Quellcode **#define** Direktiven, bevor Sie alle CRT-Header, wie im folgenden Beispiel einfügen:
 
@@ -249,7 +250,7 @@ int main()
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
-|**Itoa**, **Ltoa**, **Ultoa**|\<stdlib.h>|
+|**itoa**, **ltoa**, **ultoa**|\<stdlib.h>|
 |**_itoa**, **_ltoa**, **_ultoa**, **_i64toa**, **_ui64toa**|\<stdlib.h>|
 |**_itow**, **_ltow**, **_ultow**, **_i64tow**, **_ui64tow**|\<stdlib.h> oder \<wchar.h>|
 
