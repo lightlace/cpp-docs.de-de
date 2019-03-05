@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlPreviewCtrlImpl class
 ms.assetid: 39b3299e-07e4-4abc-9b6e-b54bfa3b0802
-ms.openlocfilehash: ffa2613909145bffaf901b2d5bae4129e6d434c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71c50771889381ad2288637c23930103b5925a2c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505052"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283268"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>CAtlPreviewCtrlImpl-Klasse
 
@@ -46,7 +46,7 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CAtlPreviewCtrlImpl:: ~ CAtlPreviewCtrlImpl](#dtor)|Destructs ein Vorschau-Control-Objekt.|
+|[CAtlPreviewCtrlImpl::~CAtlPreviewCtrlImpl](#dtor)|Destructs ein Vorschau-Control-Objekt.|
 |[CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl](#catlpreviewctrlimpl)|Erstellt ein Objekt der Preview-Steuerelement.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
@@ -93,7 +93,7 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 
 `ATL::CWindowImplBaseT<TBase,TWinTraits>`
 
-[ATL::CWindowImpl\<CAtlPreviewCtrlImpl >](../../atl/reference/cwindowimpl-class.md)
+[ATL::CWindowImpl\<CAtlPreviewCtrlImpl>](../../atl/reference/cwindowimpl-class.md)
 
 `IPreviewCtrl`
 
@@ -137,7 +137,7 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
 *hWndParent*<br/>
 Ein Handle für das Hostfenster, die von der Shell for Rich Preview bereitgestellt.
 
-*Volksrepublik China*<br/>
+*prc*<br/>
 Gibt an, die ursprüngliche Größe und Position des Fensters.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -228,7 +228,7 @@ LRESULT OnPaint(
 *nMsg*<br/>
 Legen Sie auf der WM_PAINT.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 Dieser Parameter wird nicht verwendet.
 
 *lParam*<br/>
@@ -287,7 +287,7 @@ Hintergrundfarbe des Vorschaufensters.
 *clrText*<br/>
 Die Textfarbe des Vorschaufensters.
 
-*PLF*<br/>
+*plf*<br/>
 Schriftart für Text in einem Vorschaufenster angezeigt.
 
 ### <a name="remarks"></a>Hinweise
@@ -302,7 +302,7 @@ virtual void SetRect(const RECT* prc, BOOL bRedraw);
 
 ### <a name="parameters"></a>Parameter
 
-*Volksrepublik China*<br/>
+*prc*<br/>
 Gibt an, die neue Größe und Position des Steuerelements (Vorschau).
 
 *bRedraw*<br/>

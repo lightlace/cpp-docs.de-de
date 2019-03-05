@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CD2DTextLayout [MFC], SetLocaleName
 - CD2DTextLayout [MFC], m_pTextLayout
 ms.assetid: 724bd13c-f2ef-4e55-a775-8cb04b7b7908
-ms.openlocfilehash: 378c96622144a4acac27785cef844f0c1d21b98b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa51b050543b6a027e354afa18b5e9c002c6bca1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630944"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283968"
 ---
 # <a name="cd2dtextlayout-class"></a>CD2DTextLayout-Klasse
 
@@ -52,7 +52,7 @@ class CD2DTextLayout : public CD2DResource;
 |Name|Beschreibung|
 |----------|-----------------|
 |[CD2DTextLayout::CD2DTextLayout](#cd2dtextlayout)|Erstellt ein CD2DTextLayout-Objekt.|
-|[CD2DTextLayout:: ~ CD2DTextLayout](#cd2dtextlayout__~cd2dtextlayout)|Der Destruktor. Wird aufgerufen, wenn ein D2D-Text-Layout-Objekt zerstört wird.|
+|[CD2DTextLayout::~CD2DTextLayout](#cd2dtextlayout__~cd2dtextlayout)|Der Destruktor. Wird aufgerufen, wenn ein D2D-Text-Layout-Objekt zerstört wird.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -72,7 +72,7 @@ class CD2DTextLayout : public CD2DResource;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CD2DTextLayout::Operator IDWriteTextLayout *](#operator_idwritetextlayout_star)|Gibt die IDWriteTextLayout-Schnittstelle|
+|[CD2DTextLayout::operator IDWriteTextLayout*](#operator_idwritetextlayout_star)|Gibt die IDWriteTextLayout-Schnittstelle|
 
 ### <a name="protected-data-members"></a>Geschützte Datenmember
 
@@ -121,7 +121,7 @@ Ein Zeiger auf das Renderziel.
 *strText*<br/>
 Eine CString-Objekt, das enthält die Zeichenfolge zum Erstellen eines neuen CD2DTextLayout-Objekts aus.
 
-*Von "Textformat"*<br/>
+*textFormat*<br/>
 Eine CString-Objekt, das auf die Zeichenfolge anzuwendende Format enthält.
 
 *sizeMax*<br/>
@@ -177,7 +177,7 @@ CString GetFontFamilyName(
 *currentPosition*<br/>
 Die Position des zu untersuchenden Texts.
 
-*TextRange*<br/>
+*textRange*<br/>
 Der Bereich des Texts mit dem gleichen Formatierung wie der Text an der Position von CurrentPosition angegeben. Dies bedeutet, dass die Ausführung die exakte Formatierung als die angegebene Position, einschließlich, aber nicht beschränkt auf den Namen der Schriftfamilie.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -199,7 +199,7 @@ CString GetLocaleName(
 *currentPosition*<br/>
 Die Position des zu untersuchenden Texts.
 
-*TextRange*<br/>
+*textRange*<br/>
 Der Bereich des Texts mit dem gleichen Formatierung wie der Text an der Position von CurrentPosition angegeben. Dies bedeutet, dass die Ausführung die exakte Formatierung als die angegebene Position, einschließlich, aber nicht beschränkt auf den Gebietsschemanamen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -265,7 +265,7 @@ BOOL SetFontFamilyName(
 *pwzFontFamilyName*<br/>
 Den Namen der Schriftfamilie, der für die gesamte Textzeichenfolge innerhalb des Bereichs von TextRange angegebenen gilt
 
-*TextRange*<br/>
+*textRange*<br/>
 Text-Bereich, für die diese Änderung gilt
 
 ### <a name="return-value"></a>Rückgabewert
@@ -287,7 +287,7 @@ BOOL SetLocaleName(
 *pwzLocaleName*<br/>
 Eine Gebietsschema Null-terminierte Zeichenfolge
 
-*TextRange*<br/>
+*textRange*<br/>
 Text-Bereich, für die diese Änderung gilt
 
 ### <a name="return-value"></a>Rückgabewert

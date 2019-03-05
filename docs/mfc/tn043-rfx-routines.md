@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TN043
 - RFX (record field exchange)
 ms.assetid: f552d0c1-2c83-4389-b472-42c9940aa713
-ms.openlocfilehash: 278351ad1cf81215f4c6033f4cff0b100adedf23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18820c7d17ddea355490ee32679d5d690ec3533e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658860"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294485"
 ---
 # <a name="tn043-rfx-routines"></a>TN043: RFX-Routinen
 
@@ -144,13 +144,13 @@ Es gibt verschiedene Möglichkeiten zum Erweitern des Standard-RFX-Mechanismus. 
 
 Um Ihre eigene benutzerdefinierte RFX-Funktion zu schreiben, wird empfohlen, dass Sie eine vorhandene RFX-Funktion kopieren, und sie für Ihre eigenen Zwecke ändern. Auswählen der richtigen RFX kopieren kann Ihren Auftrag erheblich vereinfachen. Einige RFX-Funktionen verfügen einige eindeutige Eigenschaften, die Sie berücksichtigen sollten bei der Entscheidung, das kopiert werden.
 
-`RFX_Long` und `RFX_Int`: Hierbei handelt es sich um die einfachste RFX-Funktionen. Der Datenwert ist nicht erforderlich für jede spezielle Interpretation, und die Größe der Daten wurde behoben.
+`RFX_Long` und `RFX_Int`: Dies sind die einfachste RFX-Funktionen. Der Datenwert ist nicht erforderlich für jede spezielle Interpretation, und die Größe der Daten wurde behoben.
 
-`RFX_Single` und `RFX_Double`: wie RFX-Long RFX_Int oben, diese Funktionen sind einfach und kann die standardmäßige Implementierung umfassend nutzen. Sie sind im dbflt.cpp statt dbrfx.cpp, jedoch gespeichert, um aktivieren Sie das Laden der Laufzeit floating Point-Bibliothek, nur, wenn sie explizit Verweis sind.
+`RFX_Single` und `RFX_Double`: Wie RFX-Long und RFX_Int oben wird dieser Funktionen sind einfach und können die standardmäßige Implementierung umfassend nutzen. Sie sind im dbflt.cpp statt dbrfx.cpp, jedoch gespeichert, um aktivieren Sie das Laden der Laufzeit floating Point-Bibliothek, nur, wenn sie explizit Verweis sind.
 
 `RFX_Text` und `RFX_Binary`: Diese beiden Funktionen vorab einen statischen Puffer zum Speichern von Informationen für Zeichenfolge/Binary, und müssen diese Puffer registrieren & Wert bei ODBC SQLBindCol registrieren. Aus diesem Grund habe diese beiden Funktionen speziellen Code.
 
-`RFX_Date`: ODBC gibt die Datums-und Uhrzeitinformationen in ihre eigenen TIMESTAMP_STRUCT Datenstruktur zurück. Diese Funktion weist eine TIMESTAMP_STRUCT dynamisch als "Proxy" für das Senden und Empfangen von Daten für Datum-Zeit. Verschiedene Vorgänge müssen die Informationen für Datum und Uhrzeit zwischen dem C++ übertragen `CTime` Objekt und dem TIMESTAMP_STRUCT-Proxy. Dies erschwert diese Funktion erheblich, aber es ist ein gutes Beispiel dafür, wie einen Proxy für die Datenübertragung verwendet.
+`RFX_Date`: ODBC gibt Datum und Uhrzeit-Informationen in ihren eigenen TIMESTAMP_STRUCT Datenstruktur zurück. Diese Funktion weist eine TIMESTAMP_STRUCT dynamisch als "Proxy" für das Senden und Empfangen von Daten für Datum-Zeit. Verschiedene Vorgänge müssen die Informationen für Datum und Uhrzeit zwischen dem C++ übertragen `CTime` Objekt und dem TIMESTAMP_STRUCT-Proxy. Dies erschwert diese Funktion erheblich, aber es ist ein gutes Beispiel dafür, wie einen Proxy für die Datenübertragung verwendet.
 
 `RFX_LongBinary`: Dies ist der einzige Klassenbibliothek RFX-Funktion, die nicht spaltenbindung zum Empfangen und Senden von Daten. Diese Funktion ignoriert die Operation BindFieldToColumn stattdessen während des Vorgangs Fixup reserviert Speicher, um die eingehenden SQL_LONGVARCHAR oder SQL_LONGVARBINARY Daten enthalten, und führt einen SQLGetData-Aufruf zum Abrufen des Werts in den zugeordneten Speicher. Beim Vorbereiten zum Zurücksenden von Datenwerten mit der Datenquelle (z. B. NameValue und Wert-Vorgänge) verwendet diese Funktion ODBCs-DATA_AT_EXEC-Funktionalität. Finden Sie unter [technischen Hinweis 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md) für Weitere Informationen zum Arbeiten mit SQL_LONGVARBINARY und SQL_LONGVARCHARs.
 

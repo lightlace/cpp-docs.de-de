@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: 98de92a9473d64a87b9b7a9f2891adf4263e1951
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 1f92afa4f40a5a37f32e1bc86418056c8591625f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178966"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283136"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar-Klasse
 
@@ -365,7 +365,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 |[CMFCToolBar::Create](#create)|Erstellt ein `CMFCToolBar`-Objekt.|
 |[CMFCToolBar::CreateEx](#createex)|Erstellt eine `CMFCToolBar` Objekt, das zusätzliche Formatoptionen, z. B. große Symbole verwendet.|
 |[CMFCToolBar::Deactivate](#deactivate)|Deaktiviert die Symbolleiste an.|
-|[Cmfctoolbar:: Enablecustomizebutton](#enablecustomizebutton)|Aktiviert oder deaktiviert die **Schaltflächen hinzufügen oder entfernen** Schaltfläche, auf der Seite der Symbolleiste angezeigt wird.|
+|[CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton)|Aktiviert oder deaktiviert die **Schaltflächen hinzufügen oder entfernen** Schaltfläche, auf der Seite der Symbolleiste angezeigt wird.|
 |[CMFCToolBar::EnableDocking](#enabledocking)|Ermöglicht das Andocken des Bereichs zum Hauptframe auf. (Überschreibt [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).)|
 |[CMFCToolBar::EnableLargeIcons](#enablelargeicons)|Aktiviert oder deaktiviert die große Symbole auf Symbolleisten-Schaltflächen.|
 |[CMFCToolBar::EnableQuickCustomization](#enablequickcustomization)|Aktiviert oder deaktiviert die schnelle Anpassung von Symbolleisten, damit der Benutzer durch Drücken von kann die **Alt** gedrückt, und ziehen Sie eine Schaltfläche in einem neuen Speicherort.|
@@ -439,14 +439,14 @@ class CMFCToolBar : public CMFCBaseToolBar
 |[CMFCToolBar::IsLargeIcons](#islargeicons)|Gibt an, ob Symbolleisten in der Anwendung derzeit große Symbole angezeigt.|
 |[CMFCToolBar::IsLastCommandFromButton](#islastcommandfrombutton)|Bestimmt, ob die zuletzt ausgeführten Befehl über die angegebene Symbolleisten-Schaltfläche gesendet wurde.|
 |[CMFCToolBar::IsLocked](#islocked)|Bestimmt, ob die Symbolleiste gesperrt ist.|
-|[Cmfctoolbar:: Isonerowwithsibling](#isonerowwithsibling)|Bestimmt, ob die Symbolleiste und gleichgeordnete Symbolleisten auf derselben Zeile positioniert sind.|
+|[CMFCToolBar::IsOneRowWithSibling](#isonerowwithsibling)|Bestimmt, ob die Symbolleiste und gleichgeordnete Symbolleisten auf derselben Zeile positioniert sind.|
 |[CMFCToolBar::IsUserDefined](#isuserdefined)|Gibt an, ob die Symbolleiste benutzerdefiniert ist.|
 |[CMFCToolBar::LoadBitmap](#loadbitmap)|Lädt Symbolleistenbilder aus Anwendungsressourcen.|
 |[CMFCToolBar::LoadBitmapEx](#loadbitmapex)|Lädt Symbolleistenbilder aus Anwendungsressourcen. Enthält die große Bilder.|
 |[CMFCToolBar::LoadParameters](#loadparameters)|Lädt globale Symbolleistenoptionen aus der Windows-Registrierung.|
 |[CMFCToolBar::LoadState](#loadstate)|Lädt die Zustandsinformationen für die Symbolleiste aus der Windows-Registrierung. (Überschreibt [CPane::LoadState](../../mfc/reference/cpane-class.md#loadstate).)|
 |[CMFCToolBar::LoadToolBar](#loadtoolbar)|Lädt die Symbolleiste aus Anwendungsressourcen.|
-|[Cmfctoolbar:: Loadtoolbarex](#loadtoolbarex)|Lädt die Symbolleiste aus Anwendungsressourcen mithilfe der `CMFCToolBarInfo` Hilfsklasse für die Anwendung große Bilder verwenden kann.|
+|[CMFCToolBar::LoadToolBarEx](#loadtoolbarex)|Lädt die Symbolleiste aus Anwendungsressourcen mithilfe der `CMFCToolBarInfo` Hilfsklasse für die Anwendung große Bilder verwenden kann.|
 |[CMFCToolBar::OnChangeHot](#onchangehot)|Vom Framework aufgerufen, wenn ein Benutzer auf der Symbolleiste eine Schaltfläche auswählt.|
 |[CMFCToolBar::OnFillBackground](#onfillbackground)|Wird aufgerufen, durch das Framework aus [CBasePane::DoPaint](../../mfc/reference/cbasepane-class.md#dopaint) den Symbolleistenhintergrund ausgefüllt.|
 |[CMFCToolBar::OnReset](#onreset)|Auf der Symbolleiste wiederhergestellt auf den ursprünglichen Zustand.|
@@ -477,14 +477,14 @@ class CMFCToolBar : public CMFCBaseToolBar
 |[CMFCToolBar::SetLockedSizes](#setlockedsizes)|Legt die Größe der gesperrten Schaltflächen und gesperrte Bilder auf der Symbolleiste.|
 |[CMFCToolBar::SetMenuSizes](#setmenusizes)|Legt die Größe der Schaltflächen der Symbolleiste im Menü und Images fest.|
 |[CMFCToolBar::SetNonPermittedCommands](#setnonpermittedcommands)|Legt die Liste der Befehle, die vom Benutzer ausgeführt werden kann.|
-|[Cmfctoolbar:: Setonerowwithsibling](#setonerowwithsibling)|Die Symbolleiste und gleichgeordnete positioniert derselben Zeile.|
+|[CMFCToolBar::SetOneRowWithSibling](#setonerowwithsibling)|Die Symbolleiste und gleichgeordnete positioniert derselben Zeile.|
 |[CMFCToolBar::SetPermament](#setpermament)|Gibt an, ob ein Benutzer auf die Symbolleiste schließen kann.|
 |[CMFCToolBar::SetRouteCommandsViaFrame](#setroutecommandsviaframe)|Gibt an, ob die übergeordneten Rahmens oder der Besitzer die Befehle an die Symbolleiste sendet.|
 |[CMFCToolBar::SetShowTooltips](#setshowtooltips)|Gibt an, ob das Framework QuickInfos angezeigt.|
-|[Cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar)|Gibt an, das gleichgeordnete Element in der Symbolleiste.|
+|[CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar)|Gibt an, das gleichgeordnete Element in der Symbolleiste.|
 |[CMFCToolBar::SetSizes](#setsizes)|Gibt die Größe der Schaltflächen und Bilder auf allen Symbolleisten an.|
 |[CMFCToolBar::SetToolBarBtnText](#settoolbarbtntext)|Gibt die Eigenschaften einer Schaltfläche auf der Symbolleiste an.|
-|[Cmfctoolbar:: Settworowswithsibling](#settworowswithsibling)|Positioniert die Symbolleiste und gleichgeordnete in separaten Zeilen an.|
+|[CMFCToolBar::SetTwoRowsWithSibling](#settworowswithsibling)|Positioniert die Symbolleiste und gleichgeordnete in separaten Zeilen an.|
 |[CMFCToolBar::SetUserImages](#setuserimages)|Legt die Auflistung von benutzerdefinierten Images in der Anwendung fest.|
 |[CMFCToolBar::StretchPane](#stretchpane)|Wird die Symbolleiste gestreckt, vertikal oder horizontal. (Überschreibt [cbasepane:: Stretchpane](../../mfc/reference/cbasepane-class.md#stretchpane).)|
 |[CMFCToolBar::TranslateChar](#translatechar)|Führt einen schaltflächenbefehl aus, wenn der angegebene Schlüssel-Code eine gültige Tastenkombination entspricht.|
@@ -729,7 +729,7 @@ static void AutoGrayInactiveImages(
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] Ein boolescher Wert, der angibt, ob inaktive Images dim angibt. Wenn dieser Parameter TRUE ist, sind inaktiv Images abgeblendet. Inaktive Bilder sind, andernfalls nicht abgeblendet.
 
 *nGrayImagePercentage*<br/>
@@ -1123,7 +1123,7 @@ virtual void DrawSeparator(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck des Speicherorts, in dem das Trennzeichen in Pixel gezeichnet wird.
 
 *bHorz*<br/>
@@ -1155,7 +1155,7 @@ void EnableCustomizeButton(
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] Aktiviert oder deaktiviert die Schaltfläche "anpassen".
 
 *iCustomizeCmd*<br/>
@@ -1205,7 +1205,7 @@ void EnableLargeIcons(BOOL bEnable);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] "True", um große Symbole, "false" zu aktivieren, um große Symbole zu deaktivieren.
 
 ### <a name="remarks"></a>Hinweise
@@ -1222,7 +1222,7 @@ static void EnableQuickCustomization(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] TRUE, um schnelle Anpassung, "false" zu aktivieren, um schnelle Anpassung zu deaktivieren.
 
 ##  <a name="enablereflections"></a>  CMFCToolBar::EnableReflections
@@ -1235,7 +1235,7 @@ void EnableReflections(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] True, um den Befehl Reflektion zu aktivieren. So deaktivieren Sie den Befehl Reflektion wird false ZURÜCKGEGEBEN.
 
 ### <a name="remarks"></a>Hinweise
@@ -1254,7 +1254,7 @@ void EnableTextLabels(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 True, wenn die Beschriftungen unter Symbolleisten-Schaltflächen angezeigt werden. andernfalls "false".
 
 ### <a name="remarks"></a>Hinweise
@@ -1271,7 +1271,7 @@ static CMFCToolBar* __stdcall FromHandlePermanent(HWND hwnd);
 
 ### <a name="parameters"></a>Parameter
 
-*HWND*<br/>
+*hwnd*<br/>
 [in] Das Fensterhandle, der gesucht werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2146,7 +2146,7 @@ virtual int HitTest(CPoint point);
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Der Punkt, die in Clientkoordinaten getestet werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2169,7 +2169,7 @@ virtual int InsertButton(
 
 ### <a name="parameters"></a>Parameter
 
-*Schaltfläche "*<br/>
+*button*<br/>
 [in] Gibt die Schaltfläche zum Einfügen.
 
 *iInsertAt*<br/>
@@ -2586,7 +2586,7 @@ virtual BOOL LoadBitmap(
 *uiMenuResID*<br/>
 [in] Die Ressourcen-ID der Bitmap, die auf die normalen Menübilder verweist.
 
-*Blockiert*<br/>
+*bLocked*<br/>
 [in] True, um die Symbolleiste zu sperren. andernfalls "false".
 
 *uiDisabledResID*<br/>
@@ -2615,8 +2615,8 @@ virtual BOOL LoadBitmapEx(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Params*<br/>
-[in] *blockiert*<br/>
+[in] *params*<br/>
+[in] *bLocked*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2630,7 +2630,7 @@ static BOOL __stdcall LoadLargeIconsState(LPCTSTR lpszProfileName = NULL);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *LpszProfileName*<br/>
+[in] *lpszProfileName*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2715,7 +2715,7 @@ virtual BOOL LoadToolBar(
 *uiMenuResID*<br/>
 [in] Die Ressourcen-ID der Bitmap, die auf die normalen Menübilder verweist.
 
-*Blockiert*<br/>
+*bLocked*<br/>
 [in] Ein boolescher Wert, der angibt, ob die Symbolleiste oder nicht gesperrt ist. Wenn dieser Parameter ist *"true"*, die Symbolleiste ist gesperrt. Andernfalls wird die Symbolleiste nicht gesperrt werden.
 
 *uiDisabledResID*<br/>
@@ -2761,7 +2761,7 @@ virtual BOOL LoadToolBarEx(
 *params*<br/>
 [in] Ein Verweis auf eine `CMFCToolBarInfo` Objekt, das die Ressourcen-IDs für die Symbolleistenbilder enthält.
 
-*Blockiert*<br/>
+*bLocked*<br/>
 [in] Ein boolescher Wert, der angibt, ob die Symbolleiste oder nicht gesperrt ist. Wenn dieser Parameter TRUE ist, wird die Symbolleiste gesperrt. Andernfalls wird die Symbolleiste nicht gesperrt werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2809,7 +2809,7 @@ virtual BOOL OnBeforeRemoveButton(
 *pButton*<br/>
 [in] Nicht verwendet.
 
-*-DropEffect-*<br/>
+*dropEffect*<br/>
 [in] Nicht verwendet.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -3063,7 +3063,7 @@ int ReplaceButton(
 *uiCmd*<br/>
 [in] Die Befehls-ID der Schaltfläche zu ersetzen.
 
-*Schaltfläche "*<br/>
+*button*<br/>
 [in] Ein Verweis auf die `CMFCToolBarButton` eingefügt.
 
 *bAll*<br/>
@@ -3150,7 +3150,7 @@ static BOOL __stdcall SaveParameters(LPCTSTR lpszProfileName = NULL);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *LpszProfileName*<br/>
+[in] *lpszProfileName*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -3802,7 +3802,7 @@ virtual CSize StretchPane(
 *nLength*<br/>
 [in] Das Ausmaß in Pixel, um stretch-Bereich.
 
-*bHoriz*<br/>
+*bVert*<br/>
 [in] Bei "true", wird den Bereich vertikal gestreckt. False gibt an, wird den Bereich horizontal gestreckt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -3825,7 +3825,7 @@ virtual BOOL TranslateChar(UINT nChar);
 
 ### <a name="parameters"></a>Parameter
 
-*NChar*<br/>
+*nChar*<br/>
 [in] Gibt ein virtueller Tastencode an. Eine Liste der standardmäßige virtuelle Tastencodes finden Sie in der Winuser.h
 
 ### <a name="return-value"></a>Rückgabewert
@@ -3906,4 +3906,3 @@ AFX_IMPORT_DATA static BOOL m_bDontScaleImages;
 [CMFCPopupMenuBar-Klasse](../../mfc/reference/cmfcpopupmenubar-class.md)<br/>
 [CMFCDropDownToolBar-Klasse](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
 [Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf der Symbolleiste](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-

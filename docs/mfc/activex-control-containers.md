@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ActiveX control containers [MFC]
 - OLE controls [MFC], containers
 ms.assetid: 0eb1a713-e607-4c79-a0c7-67c5f1fd5fab
-ms.openlocfilehash: 3356c5d94eaf4cef0b44c509144d0de4a5d42abf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8340acafc81447052fcb8d90df8997e81dc4117
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549111"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296500"
 ---
 # <a name="activex-control-containers"></a>ActiveX-Steuerelementcontainer
 
@@ -39,13 +39,13 @@ Artikel beschreiben die verschiedenen Themen über das Erstellen eines ActiveX-S
 
 - [ActiveX-Steuerelementcontainer: Verbinden eines ActiveX-Steuerelements mit einer Membervariablen](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)
 
-- [ActiveX-Steuerelementcontainer: Behandeln von Ereignissen eines ActiveX-steuern](../mfc/activex-control-containers-handling-events-from-an-activex-control.md)
+- [ActiveX-Steuerelementcontainer: Behandeln von Ereignissen eines ActiveX-Steuerelements](../mfc/activex-control-containers-handling-events-from-an-activex-control.md)
 
 - [ActiveX-Steuerelementcontainer: Anzeigen und Ändern von Steuerelementeigenschaften](../mfc/activex-control-containers-viewing-and-modifying-control-properties.md)
 
 - [ActiveX-Steuerelementcontainer: Programmieren von ActiveX-Steuerelementen in einem ActiveX-Steuerelementcontainer](../mfc/programming-activex-controls-in-a-activex-control-container.md)
 
-- [ActiveX-Steuerelementcontainer: Verwenden von Steuerelementen in Containern, die keine Dialogfelder sind](../mfc/activex-control-containers-using-controls-in-a-non-dialog-container.md)
+- [ActiveX-Steuerelementcontainer: Verwenden von Steuerelementen in einem Container für die keine Dialogfelder sind](../mfc/activex-control-containers-using-controls-in-a-non-dialog-container.md)
 
 Weitere Informationen zur Verwendung von ActiveX-Steuerelemente in einem Dialogfeld finden Sie unter den [Dialog-Editor](../windows/dialog-editor.md) Themen.
 
@@ -54,4 +54,3 @@ Eine Liste von Artikeln, die die Details der Entwicklung von ActiveX-Steuereleme
 ## <a name="see-also"></a>Siehe auch
 
 [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)
-

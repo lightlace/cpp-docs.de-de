@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - nested_scheduler_missing_detach class
 ms.assetid: 65d3f277-6d43-4160-97ef-caf8b26c1641
-ms.openlocfilehash: ff60c5d9486f4c82bd48971c1a511df9a3372e9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: db51f7b083cc0cbd9337fbbe5c672d190208f328
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536798"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292446"
 ---
 # <a name="nestedschedulermissingdetach-class"></a>nested_scheduler_missing_detach-Klasse
 
@@ -45,7 +45,7 @@ Diese Ausnahme wird ausgelöst, nur, wenn Sie einen Planer in einen anderen, dur
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** concrt.h hinzu
+**Header:** concrt.h
 
 **Namespace:** Parallelität
 
@@ -61,7 +61,7 @@ nested_scheduler_missing_detach() throw();
 
 ### <a name="parameters"></a>Parameter
 
-*_Nachricht*<br/>
+*_Message*<br/>
 Eine beschreibende Fehlermeldung.
 
 ## <a name="see-also"></a>Siehe auch

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
-ms.openlocfilehash: bced900cd7bac666daf415d91a4540828c769025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e05d6a47ea67138e8d1d456077526dd3178cc44
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660381"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292913"
 ---
 # <a name="registry-macros"></a>Registrierungsmakros
 
@@ -61,7 +61,7 @@ DECLARE_LIBID( libid )
 
 ### <a name="parameters"></a>Parameter
 
-*LIBID*<br/>
+*libid*<br/>
 Die GUID der Typbibliothek.
 
 ### <a name="remarks"></a>Hinweise
@@ -104,11 +104,11 @@ DECLARE_REGISTRY(
 *vpid*<br/>
 [in] LPCTSTR, die eine versionsunabhängige Programm-ID ist.
 
-*nID*<br/>
+*nid*<br/>
 [in] UINT, die einen Index der Ressourcenzeichenfolge in der Registrierung, die als die Beschreibung des Programms verwendet wird.
 
 *flags*<br/>
-[in] Ein DWORD, das mit des Programms-threading-Modell in der Registrierung. Muss einer der folgenden Werte sein: THREADFLAGS_APARTMENT THREADFLAGS_BOTH oder AUTPRXFLAG.
+[in] Ein DWORD, das mit des Programms-threading-Modell in der Registrierung. Dabei muss es sich um einen der folgenden Werte sein: THREADFLAGS_APARTMENT, THREADFLAGS_BOTH oder AUTPRXFLAG.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -128,10 +128,10 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 
 ### <a name="parameters"></a>Parameter
 
-*"RESID"*<br/>
+*resid*<br/>
 Die Ressourcen-Id der RGS-Datei, die Informationen der *Appid*.
 
-*App-ID*<br/>
+*appid*<br/>
 Ein GUID.
 
 ### <a name="remarks"></a>Hinweise

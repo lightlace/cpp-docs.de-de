@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CMFCToolTipCtrl [MFC], SetLocation
 - CMFCToolTipCtrl [MFC], SetParams
 ms.assetid: 9fbfcfb1-a8ab-417f-ae29-9a9ca85ee58f
-ms.openlocfilehash: e8ab9485cb2613e88ef136b3c470af9915bf7725
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aaf9d9570906b7886d8ec78575c39db5d62099f7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564866"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293198"
 ---
 # <a name="cmfctooltipctrl-class"></a>CMFCToolTipCtrl-Klasse
 
@@ -208,7 +208,7 @@ virtual void OnDrawBorder(
 *pDC*<br/>
 [in] Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck der QuickInfo.
 
 *clrLine*<br/>
@@ -230,7 +230,7 @@ virtual CSize OnDrawDescription(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *bCalcOnly*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
@@ -279,7 +279,7 @@ virtual CSize OnDrawLabel(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Umschließende Rechteck des Beschriftungsbereichs.
 
 *bCalcOnly*<br/>
@@ -342,7 +342,7 @@ virtual void OnFillBackground(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Gibt das umschließende Rechteck der den auszufüllenden Bereich an.
 
 *clrText*<br/>

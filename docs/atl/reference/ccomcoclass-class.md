@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CComCoClass class
 - aggregation [C++], aggregation models
 ms.assetid: 67cfefa4-8df9-47fa-ad58-2d1a1ae25762
-ms.openlocfilehash: 51da70cc1972e6a69e28d7699703f803b6fa8701
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c52e1a95483807f9c842b0b904cd2314258f0e26
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630697"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282642"
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass-Klasse
 
@@ -87,7 +87,7 @@ Die COM-Schnittstelle, die über zurückgegeben werden sollen *pp*.
 *punkOuter*<br/>
 [in] Die äußere unbekannte oder "Unbekannt" des Aggregats steuern.
 
-*PP*<br/>
+*pp*<br/>
 [out] Die Adresse einer Zeigervariablen, die den angeforderten Schnittstellenzeiger empfängt, wenn Erstellung erfolgreich ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -159,10 +159,10 @@ static HRESULT Error(
 *lpszDesc*<br/>
 [in] Die Zeichenfolge, die den Fehler beschreibt. Die Unicode-Version von `Error` gibt an, dass *LpszDesc* vom LPCOLESTR geben an, die ANSI-Version gibt eine Art von LPCSTR.
 
-*IID*<br/>
+*iid*<br/>
 [in] Die IID der Schnittstelle definieren den Fehler oder die GUID_NULL (Standardwert), wenn der Fehler vom Betriebssystem definiert ist.
 
-*' hres '*<br/>
+*hRes*<br/>
 [in] Das HRESULT, Sie möchten, die an den Aufrufer zurückgegeben werden. Der Standardwert ist 0. Weitere Informationen zu *' hres '*, finden Sie unter "Hinweise".
 
 *nID*<br/>

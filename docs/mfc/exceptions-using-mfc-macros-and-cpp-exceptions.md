@@ -16,12 +16,12 @@ helpviewer_keywords:
 - heap corruption [MFC]
 - nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
-ms.openlocfilehash: 021f80f71a3921ed10b07f481ff7b7ce934d9f7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 00e88ddabf3a8e8b591bebae7ebc8ced0e1dc637
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443380"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297709"
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Ausnahmen: Verwenden von MFC-Makros und C++-Ausnahmen
 
@@ -58,4 +58,3 @@ Weitere Informationen finden Sie unter [Ausnahmen: Untersuchen von Ausnahmeinhal
 ## <a name="see-also"></a>Siehe auch
 
 [Ausnahmebehandlung](../mfc/exception-handling-in-mfc.md)
-

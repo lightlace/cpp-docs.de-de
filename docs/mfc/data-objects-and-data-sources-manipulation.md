@@ -1,5 +1,5 @@
 ---
-title: 'Datenobjekte und Datenquellen: Bearbeitung'
+title: 'Datenobjekte und Datenquellen: Datenbearbeitung'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data objects [MFC], manipulating
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-ms.openlocfilehash: ee5cb320cb07a656675bd6735d6761cb69573d0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81dfe911866c4d1ba1720ee2c9854076c499f0a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636149"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286750"
 ---
-# <a name="data-objects-and-data-sources-manipulation"></a>Datenobjekte und Datenquellen: Bearbeitung
+# <a name="data-objects-and-data-sources-manipulation"></a>Datenobjekte und Datenquellen: Datenbearbeitung
 
 Nach einer Datenquelle oder ein Datenobjekt, das erstellt wurde, können Sie eine Reihe allgemeiner Vorgänge für die Daten, z. B. einfügen und Entfernen von Daten, das Aufzählen von Formaten, ab die Daten in und vieles mehr ausführen. Dieser Artikel beschreibt die Techniken, die zum Abschließen der am häufigsten verwendeten Vorgänge erforderlich sind. Folgende Themen werden behandelt:
 

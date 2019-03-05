@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DDV (dialog data validation) [MFC]
 - data validation [MFC], message boxes
 ms.assetid: f070c309-2044-4ff2-8c92-1ec1ea84af58
-ms.openlocfilehash: 2283806d3fe7c4ff6bd3abc2ae6a86f5dd176d10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cef9941cccd49ca61f0a93472636656f7241a61e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483346"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289597"
 ---
 # <a name="dialog-data-validation"></a>Validieren von Dialogfelddaten
 
@@ -29,4 +29,3 @@ Die [Assistenten zum Hinzufügen von Membervariablen](../ide/add-member-variable
 [Dialogdatenaustausch und -validierung](../mfc/dialog-data-exchange-and-validation.md)<br/>
 [Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [Dialogdatenaustausch](../mfc/dialog-data-exchange.md)
-

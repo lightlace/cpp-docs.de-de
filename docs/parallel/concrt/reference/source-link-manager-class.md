@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-ms.openlocfilehash: 881b4f15c7238e69a91def08e5d20ad8955ec4e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4979eaf9065183be646be72cfdd5a94500edf55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545989"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295200"
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager-Klasse
 
@@ -56,7 +56,7 @@ Die Registrierung des Netzwerk-Link.
 |Name|Beschreibung|
 |----------|-----------------|
 |[source_link_manager](#ctor)|Erstellt ein `source_link_manager`-Objekt.|
-|[~ Source_link_manager-Destruktor](#dtor)|Zerstört das `source_link_manager`-Objekt.|
+|[~source_link_manager Destructor](#dtor)|Zerstört das `source_link_manager`-Objekt.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -64,7 +64,7 @@ Die Registrierung des Netzwerk-Link.
 |----------|-----------------|
 |[add](#add)|Fügt einen Link "Quelle", um die `source_link_manager` Objekt.|
 |[begin](#begin)|Gibt einen Iterator zurück, auf das erste Element in der `source_link_manager` Objekt.|
-|[Enthält](#contains)|Sucht die `network_link_registry` innerhalb dieser `source_link_manager` -Objekt für einen angegebenen Block.|
+|[contains](#contains)|Sucht die `network_link_registry` innerhalb dieser `source_link_manager` -Objekt für einen angegebenen Block.|
 |[count](#count)|Zählt die Anzahl der verknüpften Blöcken in der `source_link_manager` Objekt.|
 |[Verweis](#reference)|Ruft einen Verweis auf die `source_link_manager` Objekt.|
 |[register_target_block](#register_target_block)|Registriert den Zielblock, die solche enthalten `source_link_manager` Objekt.|
@@ -96,7 +96,7 @@ void add(_EType _Link);
 
 ### <a name="parameters"></a>Parameter
 
-*_Mit verknüpfen*<br/>
+*_Link*<br/>
 Ein Zeiger auf einen Block hinzugefügt werden.
 
 ##  <a name="begin"></a> beginnen
@@ -125,7 +125,7 @@ bool contains(_EType _Link);
 
 ### <a name="parameters"></a>Parameter
 
-*_Mit verknüpfen*<br/>
+*_Link*<br/>
 Ein Zeiger auf einen Block, der für die gesucht werden soll, in der `source_link_manager` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -183,7 +183,7 @@ bool remove(_EType _Link);
 
 ### <a name="parameters"></a>Parameter
 
-*_Mit verknüpfen*<br/>
+*_Link*<br/>
 Ein Zeiger auf einen Block, wenn entfernt wurde gefunden.
 
 ### <a name="return-value"></a>Rückgabewert

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-ms.openlocfilehash: 921d87de72c13e1971d9b40474bf3d91033c0580
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 054db83e4d8e140af37dcff9a7664ffdf7902325
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529310"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284644"
 ---
 # <a name="index-class"></a>index-Klasse
 
@@ -121,7 +121,7 @@ Die Länge der zweitwichtigsten Dimension.
 *_I2*<br/>
 Die Länge der unwichtigsten Dimension.
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Ein Indexobjekt, das auf dem das neue Indexobjekt basiert.
 
 ## <a name="operator--"></a>  Operator--
@@ -268,7 +268,7 @@ index<_Rank>& operator=(
 
 ### <a name="parameters"></a>Parameter
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Die Indexobjekt, das kopiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert

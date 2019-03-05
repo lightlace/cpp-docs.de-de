@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-ms.openlocfilehash: b392a46c3aafac9ab5f3ca2b626f5f78daebc85d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05256516c0a693a282b8d0de56d6c9e7465f2740
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630749"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299972"
 ---
 # <a name="combinable-class"></a>combinable-Klasse
 
@@ -41,7 +41,7 @@ Der Datentyp des Endergebnisses zusammengeführt werden soll. Der Typ muss es si
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[mit den flexibel kombinierbaren](#ctor)|Überladen. Erstellt ein neues `combinable`-Objekt.|
+|[combinable](#ctor)|Überladen. Erstellt ein neues `combinable`-Objekt.|
 |[~ combinable-Destruktor](#dtor)|Zerstört ein `combinable`-Objekt.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
@@ -102,7 +102,7 @@ Der Typ des Initialisierung Functor-Objekts.
 *_FnInitialize*<br/>
 Eine Funktion, die aufgerufen wird, initialisiert jeder neue Thread-Private-Wert des Typs `T`. Es muss einen Funktionsaufrufoperator mit der Signatur unterstützen `T ()`.
 
-*"_Copy"*<br/>
+*_Copy*<br/>
 Eine vorhandene `combinable` Objekt, das in dieses Objekt kopiert werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -178,7 +178,7 @@ Ein Verweis auf einen booleschen Wert. Der boolesche Wert, der auf die dieses Ar
 
 Ein Verweis auf die privaten untergeordnete Berechnung.
 
-##  <a name="operator_eq"></a> Operator =
+##  <a name="operator_eq"></a> operator=
 
 Weist eine `combinable` Objekt von einem anderen `combinable` Objekt.
 
@@ -188,7 +188,7 @@ combinable& operator= (const combinable& _Copy);
 
 ### <a name="parameters"></a>Parameter
 
-*"_Copy"*<br/>
+*_Copy*<br/>
 Eine vorhandene `combinable` Objekt, das in dieses Objekt kopiert werden.
 
 ### <a name="return-value"></a>Rückgabewert

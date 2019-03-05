@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-ms.openlocfilehash: a6fdef34ba5873718caed509100cbe7e905d880d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 70f090e2d9830ccfdd98640b54ff07440064d542
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693522"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293263"
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd-Klasse
 
@@ -129,7 +129,7 @@ Gibt an, der die Stilattribute für Fenster. Diese können standard Window-Stile
 
 Finden Sie unter [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) eine Beschreibung der möglichen Werte für Fensterstil. Die typische Kombination, die zum Minirahmenfenster ist WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU.
 
-*Rect*<br/>
+*rect*<br/>
 Ein `RECT` -Struktur, die die gewünschten Dimensionen des Fensters angibt.
 
 *pParentWnd*<br/>
@@ -175,7 +175,7 @@ Verweist auf eine Null-terminierte Zeichenfolge, die den Fensternamen enthält.
 *dwStyle*<br/>
 Gibt an, der die Stilattribute für Fenster. Finden Sie unter [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles) und [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) eine Beschreibung der möglichen Werte.
 
-*Rect*<br/>
+*rect*<br/>
 Die Größe und Position des Fensters, in Clientkoordinaten des *pParentWnd*.
 
 *pParentWnd*<br/>

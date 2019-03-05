@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 97012e1d8cdc36f080245243c5f099b340225fc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05a4ad17feea20c67069e65c5c5df43d543e2377
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533860"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293484"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton-Klasse
 
@@ -162,7 +162,7 @@ void EnableAutomaticButton(
 *colorAutomatic*<br/>
 [in] Ein RGB-Wert, der angibt, die automatische Schaltfläche Standardfarbe.
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] Gibt an, ob die automatische Schaltfläche aktiviert oder deaktiviert ist.
 
 ### <a name="remarks"></a>Hinweise
@@ -186,7 +186,7 @@ void EnableOtherButton(
 *bAltColorDlg*<br/>
 [in] Gibt an, ob die [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) im Dialogfeld bzw. im Dialogfeld Farbe System wird geöffnet, wenn der Benutzer auf die Schaltfläche klickt.
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] Gibt an, ob die Schaltfläche "other" aktiviert oder deaktiviert ist.
 
 ### <a name="remarks"></a>Hinweise
@@ -263,7 +263,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] Verweist auf den Gerätekontext, der verwendet wird, um das Bild der Schaltfläche zu rendern.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Schaltfläche mit den umschließt.
 
 *uiState*<br/>
@@ -355,7 +355,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Parameter
 
-*Farbe*<br/>
+*color*<br/>
 [in] Ein RGB-Wert.
 
 ### <a name="remarks"></a>Hinweise
@@ -372,7 +372,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Parameter
 
-*Farbe*<br/>
+*color*<br/>
 [in] Die Farbe der RGB-Wert.
 
 *strName*<br/>
@@ -465,7 +465,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Parameter
 
-*Farbe*<br/>
+*color*<br/>
 [in] Eine Farbe, die vom Benutzer ausgewählt wurde.
 
 ### <a name="remarks"></a>Hinweise

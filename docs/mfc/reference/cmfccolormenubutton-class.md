@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDraw
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
-ms.openlocfilehash: adb0cdbdde90ad7bdd6aef42c1e83c7ba3fd28b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64d61cc9464ef0877baad33a8685cee1482f240d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624886"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301336"
 ---
 # <a name="cmfccolormenubutton-class"></a>CMFCColorMenuButton-Klasse
 
@@ -208,7 +208,7 @@ void EnableAutomaticButton(
 *colorAutomatic*<br/>
 [in] Gibt eine neue automatische Farbe an.
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] Gibt an, ob die Schaltfläche zum automatischen oder nicht.
 
 ### <a name="remarks"></a>Hinweise
@@ -230,7 +230,7 @@ void EnableDocumentColors(
 *lpszLabel*<br/>
 [in] Gibt den Text der Schaltfläche an.
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] "True", um dokumentspezifische Farben oder "false" zum Anzeigen von Systemfarben anzuzeigen.
 
 ### <a name="remarks"></a>Hinweise
@@ -256,7 +256,7 @@ void EnableOtherButton(
 *bAltColorDlg*<br/>
 [in] Geben Sie "true", zeigen die `CMFCColorDialog` Dialogfeld oder "false", um das Dialogfeld Farbe Standardsystem anzuzeigen.
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] Geben Sie "true", "other" die Schaltfläche anzuzeigen; andernfalls "false". Der Standardwert ist "true".
 
 ### <a name="remarks"></a>Hinweise
@@ -390,7 +390,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das den Bereich zu zeichnenden umschließt.
 
 *pImages*<br/>
@@ -429,7 +429,7 @@ virtual int OnDrawOnCustomizeList(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Schaltfläche gezeichnet werden umschließt.
 
 *bSelected*<br/>
@@ -481,7 +481,7 @@ virtual void SetColor(
 
 ### <a name="parameters"></a>Parameter
 
-*CLR*<br/>
+*clr*<br/>
 [in] Ein RGB-Farbwert.
 
 *bNotify*<br/>
@@ -506,7 +506,7 @@ static void SetColorByCmdID(
 *uiCmdID*<br/>
 [in] Die Ressourcen-ID einer Menüschaltfläche Farbe.
 
-*Farbe*<br/>
+*color*<br/>
 [in] Ein RGB-Farbwert.
 
 ##  <a name="setcolorname"></a>  CMFCColorMenuButton::SetColorName
@@ -521,7 +521,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Parameter
 
-*Farbe*<br/>
+*color*<br/>
 [in] Der RGB-Wert, der die Farbe, deren Name geändert, werden soll.
 
 *strName*<br/>

@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - IWorkerThreadClient interface
 ms.assetid: 56f4a2f5-007e-4a33-9e20-05187629f715
-ms.openlocfilehash: 22ea136dd91a514ff10e13cd02b796565b7b0307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1fa8a5e42d002260076f737d3d33cfa191ff297a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523634"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295278"
 ---
 # <a name="iworkerthreadclient-interface"></a>IWorkerThreadClient-Schnittstelle
 
@@ -35,7 +35,7 @@ __interface IWorkerThreadClient
 
 |||
 |-|-|
-|["CloseHandle"](#closehandle)|Implementieren Sie diese Methode, um das Handle, das diesem Objekt zugeordneten zu schließen.|
+|[CloseHandle](#closehandle)|Implementieren Sie diese Methode, um das Handle, das diesem Objekt zugeordneten zu schließen.|
 |[Execute](#execute)|Implementieren Sie diese Methode, um Code auszuführen, wenn das diesem Objekt zugeordnete Handle signalisiert wird.|
 
 ## <a name="remarks"></a>Hinweise
@@ -44,7 +44,7 @@ Implementieren Sie diese Schnittstelle, wenn Sie über Code verfügen, die auf e
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** "atlutil.h"
+**Header:** atlutil.h
 
 ##  <a name="closehandle"></a>  IWorkerThreadClient::CloseHandle
 

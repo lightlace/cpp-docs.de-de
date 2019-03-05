@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: 938df6599ca3bfec3e08e77d7a60106133f54324
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ee1820601f80ed270221b3186188793f7fdcbe08
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178537"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301453"
 ---
 # <a name="ctoolbar-class"></a>CToolBar-Klasse
 
@@ -74,14 +74,14 @@ class CToolBar : public CControlBar
 |Name|Beschreibung|
 |----------|-----------------|
 |[CToolBar::CommandToIndex](#commandtoindex)|Gibt den Index einer Schaltfläche mit der angegebenen Befehls-ID.|
-|[Symbolleistenformate](#create)|Erstellt die Windows-Symbolleiste, und fügt es der `CToolBar` Objekt.|
+|[CToolBar::Create](#create)|Erstellt die Windows-Symbolleiste, und fügt es der `CToolBar` Objekt.|
 |[CToolBar::CreateEx](#createex)|Erstellt eine `CToolBar` Objekt mit zusätzlichen Stilen für den eingebetteten `CToolBarCtrl` Objekt.|
 |[CToolBar::GetButtonInfo](#getbuttoninfo)|Ruft ab, die ID, Stil und Image-Anzahl, der eine Schaltfläche.|
 |[CToolBar::GetButtonStyle](#getbuttonstyle)|Ruft den Stil für eine Schaltfläche ab.|
 |[CToolBar::GetButtonText](#getbuttontext)|Ruft den Text ab, der auf eine Schaltfläche angezeigt wird.|
 |[CToolBar::GetItemID](#getitemid)|Gibt die Befehls-ID einer Schaltfläche oder ein Trennzeichen am angegebenen Index zurück.|
 |[CToolBar::GetItemRect](#getitemrect)|Ruft das Anzeigerechteck für das Element am angegebenen Index ab.|
-|[GetToolBarCtrl](#gettoolbarctrl)|Ermöglicht den direkten Zugriff auf die zugrunde liegende allgemeine-Steuerelement.|
+|[CToolBar::GetToolBarCtrl](#gettoolbarctrl)|Ermöglicht den direkten Zugriff auf die zugrunde liegende allgemeine-Steuerelement.|
 |[CToolBar::LoadBitmap](#loadbitmap)|Lädt die Bitmap, die Bitmap-Schaltfläche Bilder enthält.|
 |[CToolBar::LoadToolBar](#loadtoolbar)|Lädt eine Symbolleistenressource, die mit dem Ressourcen-Editor erstellt wurden.|
 |[CToolBar::SetBitmap](#setbitmap)|Legt ein Bitmapbild fest.|

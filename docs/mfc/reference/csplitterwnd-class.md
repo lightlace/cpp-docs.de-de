@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 450699d001ee7246742fe23d9bf89d03c2d61cb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42913ddea7818636dce8d630ed2d79d13c19ce81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600511"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302103"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd-Klasse
 
@@ -103,10 +103,10 @@ class CSplitterWnd : public CWnd
 |----------|-----------------|
 |[CSplitterWnd::ActivateNext](#activatenext)|Führt den Befehl zum nächsten oder vorherigen Bereich.|
 |[CSplitterWnd::CanActivateNext](#canactivatenext)|Überprüft, um festzustellen, ob es sich bei der nächsten oder vorherigen Bereich Befehl derzeit möglich ist.|
-|[Splitterfenstern](#create)|Aufruf erstellen ein dynamisches Teilungsfenster und fügen Sie ihn auf die `CSplitterWnd` Objekt.|
+|[CSplitterWnd::Create](#create)|Aufruf erstellen ein dynamisches Teilungsfenster und fügen Sie ihn auf die `CSplitterWnd` Objekt.|
 |[CSplitterWnd::CreateScrollBarCtrl](#createscrollbarctrl)|Erstellt ein freigegebenes Bildlaufleistensteuerelement an.|
 |[CSplitterWnd::CreateStatic](#createstatic)|Aufruf erstellen ein statisches Splitterfenster, und fügen Sie ihn auf die `CSplitterWnd` Objekt.|
-|[CSplitterWnd:: CreateView-Funktion](#createview)|Rufen Sie auf, um einen Bereich in einem Splitterfenster zu erstellen.|
+|[CSplitterWnd::CreateView](#createview)|Rufen Sie auf, um einen Bereich in einem Splitterfenster zu erstellen.|
 |[CSplitterWnd::DeleteColumn](#deletecolumn)|Löscht eine Spalte aus der Teilungsfenster.|
 |[CSplitterWnd::DeleteRow](#deleterow)|Löscht eine Zeile aus Teilungsfenster.|
 |[CSplitterWnd::DeleteView](#deleteview)|Löscht eine Ansicht aus Teilungsfenster.|
@@ -388,10 +388,10 @@ virtual BOOL CreateView(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeile*<br/>
+*row*<br/>
 Gibt die Zeile des Splitter-Fenster in der die neue Ansicht platziert werden soll.
 
-*SP*<br/>
+*col*<br/>
 Gibt die Spalte Splitter-Fenster, in dem die neue Ansicht platziert werden soll.
 
 *pViewClass*<br/>
@@ -475,10 +475,10 @@ virtual void DeleteView(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeile*<br/>
+*row*<br/>
 Gibt die Zeile des Splitter-Fenster, die Ansicht zu löschen.
 
-*SP*<br/>
+*col*<br/>
 Gibt die Spalte des Splitter-Fenster, die Ansicht zu löschen.
 
 ### <a name="remarks"></a>Hinweise
@@ -628,7 +628,7 @@ void GetColumnInfo(
 
 ### <a name="parameters"></a>Parameter
 
-*SP*<br/>
+*col*<br/>
 Gibt eine Spalte.
 
 *cxCur*<br/>
@@ -649,10 +649,10 @@ CWnd* GetPane(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeile*<br/>
+*row*<br/>
 Gibt eine Zeile an.
 
-*SP*<br/>
+*col*<br/>
 Gibt eine Spalte.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -684,7 +684,7 @@ void GetRowInfo(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeile*<br/>
+*row*<br/>
 Gibt eine Zeile an.
 
 *cyCur*<br/>
@@ -727,10 +727,10 @@ int IdFromRowCol(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeile*<br/>
+*row*<br/>
 Gibt die Zeile der Splitter-Fenster.
 
-*SP*<br/>
+*col*<br/>
 Gibt die Spalte der Splitter-Fenster.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -758,7 +758,7 @@ BOOL IsChildPane(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Ein Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) zu testende Objekt.
 
 *pRow*<br/>
@@ -818,7 +818,7 @@ Der Wert der `enum ESplitType`, stehen die folgenden:
 
     - `splitBorder` Der Fensterrahmen "Split".
 
-*Rect*<br/>
+*rect*<br/>
 Ein Verweis auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt, das die Größe und Form der Teilfenstern angibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -837,7 +837,7 @@ virtual void OnInvertTracker(const CRect& rect);
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 Ein Verweis auf eine `CRect` Objekt, das das Rechteck Überwachung angibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -877,13 +877,13 @@ virtual void SetActivePane(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeile*<br/>
+*row*<br/>
 Wenn *aufnehmen* NULL ist, gibt die Zeile im Bereich, der aktiv sein werden.
 
-*SP*<br/>
+*col*<br/>
 Wenn *aufnehmen* NULL ist, gibt die Spalte im Bereich, der aktiv sein werden.
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Ein Zeiger auf ein `CWnd` -Objekt. Wenn der Wert NULL ist, im Bereich gemäß *Zeile* und *Col* aktiv festgelegt ist. Falls ungleich NULL, gibt den Bereich, der aktiv festgelegt ist.
 
 ### <a name="remarks"></a>Hinweise
@@ -905,7 +905,7 @@ void SetColumnInfo(
 
 ### <a name="parameters"></a>Parameter
 
-*SP*<br/>
+*col*<br/>
 Gibt eine Spalte der Splitter-Fenster.
 
 *cxIdeal*<br/>
@@ -937,7 +937,7 @@ void SetRowInfo(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeile*<br/>
+*row*<br/>
 Gibt eine Zeile der Splitter-Fenster an.
 
 *cyIdeal*<br/>

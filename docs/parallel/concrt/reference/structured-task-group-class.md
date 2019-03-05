@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
-ms.openlocfilehash: 486829b7d990aab7860059feed78b26207d0074d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27610539ab500a113ea41021744c55425fe9cd9b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600667"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299292"
 ---
 # <a name="structuredtaskgroup-class"></a>structured_task_group-Klasse
 
@@ -124,7 +124,7 @@ Der Typ des Funktionsobjekts, das aufgerufen wird, um den Text der Aufgabenhandl
 *_Task_handle*<br/>
 Ein Handle für die Arbeit geplant. Beachten Sie, dass der Aufrufer die Verantwortung für die Lebensdauer dieses Objekts verfügt. Die Laufzeit ist so lange Sie erwartet, bis entweder die Gültigkeitsdauer der `wait` oder `run_and_wait` für diese Methode aufgerufen wurde `structured_task_group` Objekt.
 
-*_Platzierung*<br/>
+*_Placement*<br/>
 Ein Verweis auf den Speicherort, in denen die Aufgabe, durch dargestellt, die `_Task_handle` Parameter sollte ausgeführt werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -228,5 +228,5 @@ In den Pfad ohne Ausnahmen der Ausführung haben Sie eine zwingende Vorgabe entw
 ## <a name="see-also"></a>Siehe auch
 
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
-[Task_group-Klasse](task-group-class.md)<br/>
+[task_group-Klasse](task-group-class.md)<br/>
 [task_handle-Klasse](task-handle-class.md)

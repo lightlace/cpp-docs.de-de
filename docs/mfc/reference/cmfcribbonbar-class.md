@@ -188,12 +188,12 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-ms.openlocfilehash: 78566eaa15eb695d892471925a9dadcad9655c5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3656b6a135757a4658f2ef08b80a54efffe89012
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640244"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288414"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar-Klasse
 
@@ -221,7 +221,7 @@ class CMFCRibbonBar : public CPane
 |----------|-----------------|
 |[CMFCRibbonBar::ActivateContextCategory](#activatecontextcategory)|Aktiviert eine bereits angezeigte Kontextkategorie.|
 |[CMFCRibbonBar::AddCategory](#addcategory)|Fügt dem Menüband eine neue Menübandkategorie hinzu.|
-|[CMFCRibbonBar:: Addcontextcategory](#addcontextcategory)|Fügt eine Kontextkategorie hinzu.|
+|[CMFCRibbonBar::AddContextCategory](#addcontextcategory)|Fügt eine Kontextkategorie hinzu.|
 |[CMFCRibbonBar::AddMainCategory](#addmaincategory)|Fügt dem Menüband eine neue Hauptkategorie hinzu.|
 |[CMFCRibbonBar::AddPrintPreviewCategory](#addprintpreviewcategory)||
 |[CMFCRibbonBar::AddQATOnlyCategory](#addqatonlycategory)||
@@ -315,7 +315,7 @@ class CMFCRibbonBar : public CPane
 
 Microsoft hat das Office Fluent-Menüband zusammen mit Microsoft Office 2007 eingeführt. Dies Menübandleiste ist nicht nur ein neues Steuerelement. Sie stellt auch eine neue Sichtweise der Benutzeroberfläche dar. Das Menüband ist ein Bereich mit einer Reihe von Registerkarten, die als „Kategorien“ bezeichnet werden. Jede Kategorie ist logisch in Menübandbereiche aufgeteilt, und jeder Bereich kann verschiedene Steuerelemente und Befehlsschaltflächen enthalten.
 
-Die Elemente auf der Menübandleiste werden je nach Bedarf ein- und ausgeblendet, um den verfügbaren Platz optimal zu nutzen. Wenn ein Menübandbereich zum Beispiel nicht über ausreichend Platz verfügt, um alle Elemente anzuzeigen, wird er zu einer Menüschaltfläche, in dem untergeordnete Elemente in einem Popupmenü angezeigt werden. Die Menübandleiste verhält sich wie eine statische (unverankerte) Steuerleiste und kann am oberen Rand des Rahmens verankert werden.
+Die Elemente auf der Menübandleiste werden je nach Bedarf erweitert und reduziert, um den verfügbaren Platz optimal zu nutzen. Wenn ein Menübandbereich zum Beispiel nicht über ausreichend Platz verfügt, um alle Elemente anzuzeigen, wird er zu einer Menüschaltfläche, in dem untergeordnete Elemente in einem Popupmenü angezeigt werden. Die Menübandleiste verhält sich wie eine statische (unverankerte) Steuerleiste und kann am oberen Rand des Rahmens verankert werden.
 
 Mit der `CMFCRibbonStatusBar`-Klasse können Sie eine Statusleiste implementieren, die der in Office 2007 verwendeten Statusleiste ähnelt. Eine Menübandkategorie enthält (und zeigt) eine Gruppe von [Bereiche des Menübands](../../mfc/reference/cmfcribbonpanel-class.md). Jeder Menübandbereich umfasst eine oder mehrere Menübandelemente, die abgeleitet sind [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md).
 
@@ -738,7 +738,7 @@ void EnableKeyTips(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] True, um das Keytips-Feature zu aktivieren. "False", um das Keytips-Feature deaktivieren.
 
 ### <a name="remarks"></a>Hinweise
@@ -755,7 +755,7 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] "True" aktiviert die **Seitenansicht** Features. "False" zum Deaktivieren der **Seitenansicht** Feature.
 
 ### <a name="remarks"></a>Hinweise
@@ -776,7 +776,7 @@ void EnableToolTips(
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] True, um QuickInfos in der menübandleiste zu aktivieren. So deaktivieren Sie die QuickInfos im Menüband wird false ZURÜCKGEGEBEN.
 
 *bEnableDescr*<br/>
@@ -1067,7 +1067,7 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems,
 
 ### <a name="parameters"></a>Parameter
 
-*Mit*<br/>
+*lstItems*<br/>
 [out] Die Liste der Befehls-IDs für Menübandelemente, die in der menübandleiste enthalten sind.
 
 *bHiddenOnly*<br/>
@@ -1305,7 +1305,7 @@ virtual CMFCRibbonBaseElement* HitTest(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Die Position des Punkts in der menübandleiste koordiniert.
 
 *bCheckActiveCategory*<br/>
@@ -1478,7 +1478,7 @@ virtual void OnClickButton(
 *pButton*<br/>
 [in] Zeiger auf die Schaltfläche, die auf die geklickt wurde.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Dieser Parameter wird nicht verwendet.
 
 ### <a name="remarks"></a>Hinweise
@@ -1494,7 +1494,7 @@ virtual void OnEditContextMenu(
 ### <a name="parameters"></a>Parameter
 
 [in] *pEdit*<br/>
-[in] *zeigen*<br/>
+[in] *point*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1545,7 +1545,7 @@ virtual BOOL OnShowRibbonContextMenu(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *aufnehmen*<br/>
+[in] *pWnd*<br/>
 [in] *x*<br/>
 [in] *y*<br/>
 [in] *pHit*<br/>
@@ -1566,7 +1566,7 @@ virtual BOOL OnShowRibbonQATMenu(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *aufnehmen*<br/>
+[in] *pWnd*<br/>
 [in] *x*<br/>
 [in] *y*<br/>
 [in] *pHit*<br/>
@@ -1591,7 +1591,7 @@ BOOL OnSysKeyDown(
 *pFrameWnd*<br/>
 [in] Zeiger auf das übergeordnete Hauptrahmenfenster der menübandleiste.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 [in] Virtuellem Tastencode der Taste gedrückt wird.
 
 *lParam*<br/>
@@ -1619,7 +1619,7 @@ BOOL OnSysKeyUp(
 *pFrameWnd*<br/>
 [in] Zeiger auf das übergeordnete Hauptrahmenfenster der menübandleiste.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 [in] Virtuellem Tastencode des freigegeben Schlüssels.
 
 *lParam*<br/>
@@ -1755,7 +1755,7 @@ void SetActiveMDIChild(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Zeiger auf einen untergeordneten MDI-Fensters.
 
 ### <a name="remarks"></a>Hinweise
@@ -1855,7 +1855,7 @@ void SetMaximizeMode(
 *bMax*<br/>
 [in] "True", das System für einen untergeordneten MDI-Fensters im Menüband angezeigt werden sollen; So entfernen Sie die Systemschaltflächen für einen untergeordneten MDI-Fensters von der menübandleiste wird false ZURÜCKGEGEBEN.
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Zeiger auf das Hauptrahmenfenster für die menübandleiste.
 
 ### <a name="remarks"></a>Hinweise
@@ -2014,7 +2014,7 @@ virtual BOOL TranslateChar(UINT nChar);
 
 ### <a name="parameters"></a>Parameter
 
-*NChar*<br/>
+*nChar*<br/>
 [in] Ein Zeichencode der Tastatureingabe an.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2156,4 +2156,3 @@ void SetWindows7Look(
 [CMFCRibbonPanel-Klasse](../../mfc/reference/cmfcribbonpanel-class.md)<br/>
 [CMFCRibbonBaseElement-Klasse](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
 [Exemplarische Vorgehensweise: Aktualisieren der MFC Scribble-Anwendung](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
-

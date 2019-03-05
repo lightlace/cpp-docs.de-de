@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-ms.openlocfilehash: bbfe75ad996841cd4ea78adab56c7cf91ac55f3c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 790cf064fcffe1f0cd3c191c28ed0a0614062406
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565554"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283448"
 ---
 # <a name="worker-archetype"></a>Worker-Archetype
 
@@ -52,7 +52,7 @@ Diese Vorlagenparameter erwarten, dass die Klasse, um dieser Archetyp entspreche
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** "atlutil.h"
+**Header:** atlutil.h
 
 ## <a name="execute"></a>WorkerArchetype::Execute
 
@@ -67,13 +67,13 @@ void Execute(
 
 #### <a name="parameters"></a>Parameter
 
-*Anforderung*<br/>
+*request*<br/>
 Die Arbeitsaufgabe verarbeitet werden. Das Arbeitselement ist vom gleichen Typ wie `RequestType`.
 
 *pvWorkerParam*<br/>
 Einen benutzerdefinierten Parameter, der verstanden werden, durch die Workerklasse. Auch an übergeben `WorkerArchetype::Initialize` und `Terminate`.
 
-*"pOverlapped"*<br/>
+*pOverlapped*<br/>
 Ein Zeiger auf die [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped) Struktur verwendet, um die Warteschlange zu erstellen, auf welche Elemente wurden in die Warteschlange eingereiht.
 
 ## <a name="initialize"></a> WorkerArchetype::Initialize
@@ -121,4 +121,3 @@ Einen benutzerdefinierten Parameter, der verstanden werden, durch die Workerklas
 
 [Konzepte](../../atl/active-template-library-atl-concepts.md)<br/>
 [ATL-COM-Desktop-Komponenten](../../atl/atl-com-desktop-components.md)
-

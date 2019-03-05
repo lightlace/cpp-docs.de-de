@@ -21,12 +21,12 @@ helpviewer_keywords:
 - ON_EN_KILLFOCUS macro [MFC]
 - edit controls [MFC], edit control handlers
 ms.assetid: 55b88b5e-12b5-4422-b03e-c8c2f27d095c
-ms.openlocfilehash: 67734281191d0b16d3ebaa43610915b04a8069ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 53586de574fca6ab88b93444c9d571c62354cef2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509030"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302025"
 ---
 # <a name="edit-control-handlers"></a>Handler für Bearbeitungssteuerelemente
 
@@ -34,16 +34,15 @@ Die folgenden Zuordnungseinträge entsprechen der Funktionsprototyp.
 
 |Zuordnungseintrag|Funktionsprototyp|
 |---------------|------------------------|
-|ON_EN_CHANGE ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
-|ON_EN_ERRSPACE ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
-|ON_EN_HSCROLL ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
-|ON_EN_KILLFOCUS ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
-|ON_EN_MAXTEXT ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
-|ON_EN_SETFOCUS ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
-|ON_EN_UPDATE ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
-|ON_EN_VSCROLL ( \<Id >, \<MemberFxn >)|Afx_msg "void" MemberFxn (-);|
+|ON_EN_CHANGE( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
+|ON_EN_ERRSPACE( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
+|ON_EN_HSCROLL ( \<Id >, \<MemberFxn >)|afx_msg void memberFxn( );|
+|ON_EN_KILLFOCUS ( \<Id >, \<MemberFxn >)|afx_msg void memberFxn( );|
+|ON_EN_MAXTEXT ( \<Id >, \<MemberFxn >)|afx_msg void memberFxn( );|
+|ON_EN_SETFOCUS ( \<Id >, \<MemberFxn >)|afx_msg void memberFxn( );|
+|ON_EN_UPDATE( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
+|ON_EN_VSCROLL ( \<Id >, \<MemberFxn >)|afx_msg void memberFxn( );|
 
 ## <a name="see-also"></a>Siehe auch
 
 [Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md)
-

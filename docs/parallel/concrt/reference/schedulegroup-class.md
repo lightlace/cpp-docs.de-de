@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-ms.openlocfilehash: 6132ec6623a009c09a37b7d704ce683a58956a04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ce7734a1330f2d6e495565338879764482439d09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518715"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283851"
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup-Klasse
 
@@ -51,11 +51,11 @@ class ScheduleGroup;
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** concrt.h hinzu
+**Header:** concrt.h
 
 **Namespace:** Parallelität
 
-##  <a name="id"></a> ID
+##  <a name="id"></a> Id
 
 Gibt einen Bezeichner für die Planungsgruppe zurück, der innerhalb des Planers eindeutig ist, zu dem die Gruppe gehört.
 
@@ -121,7 +121,7 @@ Dies wird normalerweise zum Verwalten der Lebensdauer der Gruppe "Zeitplan" für
 
 Eine Planungsgruppe ist ein bestimmtes Zeitplanungsmodul-Instanz zugeordnet. Sie müssen sicherstellen, dass alle Verweise auf die Planungsgruppe freigegeben werden, bevor alle Verweise auf den Planer veröffentlicht werden, da in der Planer zerstört führen können. Andernfalls kann dies nicht definiertem Verhalten.
 
-##  <a name="dtor"></a> ~ ScheduleGroup
+##  <a name="dtor"></a> ~ScheduleGroup
 
 ```
 virtual ~ScheduleGroup();
@@ -142,7 +142,7 @@ virtual void ScheduleTask(
 *_Proc*<br/>
 Ein Zeiger auf die Funktion, die ausgeführt werden, um den Text der Aufgabe leicht durchführen.
 
-*"_Data"*<br/>
+*_Data*<br/>
 Ein void-Zeiger auf die Daten, die in den Text der Aufgabe als Parameter übergeben werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -155,4 +155,3 @@ Aufrufen der `ScheduleTask` -Methode setzt implizit einen Verweiszähler für di
 [CurrentScheduler-Klasse](currentscheduler-class.md)<br/>
 [Scheduler-Klasse](scheduler-class.md)<br/>
 [Aufgabenplanung](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

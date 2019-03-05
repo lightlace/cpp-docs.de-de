@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CFtpConnection [MFC], Rename
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
-ms.openlocfilehash: 71e5c8629a1aa1c489cc51224f9d008c4cdd3397
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12ef4de16279c5c2033a95df5928a6dfb7a2a652
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504246"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295122"
 ---
 # <a name="cftpconnection-class"></a>CFtpConnection-Klasse
 
@@ -61,15 +61,15 @@ class CFtpConnection : public CInternetConnection
 |----------|-----------------|
 |[CFtpConnection::Command](#command)|Sendet einen Befehl direkt an einen FTP-Server.|
 |[CFtpConnection::CreateDirectory](#createdirectory)|Erstellt ein Verzeichnis auf dem Server.|
-|[CFtpConnection:: GetCurrentDirectory](#getcurrentdirectory)|Ruft das aktuelle Verzeichnis für diese Verbindung ab.|
+|[CFtpConnection::GetCurrentDirectory](#getcurrentdirectory)|Ruft das aktuelle Verzeichnis für diese Verbindung ab.|
 |[CFtpConnection::GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl)|Ruft das aktuelle Verzeichnis für diese Verbindung als URL ab.|
 |[CFtpConnection::GetFile](#getfile)|Ruft eine Datei aus dem verbundenen Server ab.|
-|[CFtpConnection:: OpenFile](#openfile)|Öffnet eine Datei auf dem verbundenen Server.|
+|[CFtpConnection::OpenFile](#openfile)|Öffnet eine Datei auf dem verbundenen Server.|
 |[CFtpConnection::PutFile](#putfile)|Fügt eine Datei auf dem Server.|
-|[CFtpConnection:: Remove](#remove)|Entfernt eine Datei vom Server an.|
+|[CFtpConnection::Remove](#remove)|Entfernt eine Datei vom Server an.|
 |[CFtpConnection::RemoveDirectory](#removedirectory)|Entfernt das angegebene Verzeichnis auf dem Server.|
 |[CFtpConnection::Rename](#rename)|Benennt eine Datei auf dem Server.|
-|[CFtpConnection:: SetCurrentDirectory](#setcurrentdirectory)|Legt das aktuelle FTP-Verzeichnis fest.|
+|[CFtpConnection::SetCurrentDirectory](#setcurrentdirectory)|Legt das aktuelle FTP-Verzeichnis fest.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -140,10 +140,10 @@ Ein Zeiger auf eine auf Null endende Zeichenfolge, die das Kennwort für die Anm
 |--------------------|--------------------|---------------------------------|---------------------------------|
 |NULL oder ""|NULL oder ""|"Anonym"|Die e-Mail-Adresse des Benutzers|
 |Nicht-NULL-Zeichenfolge|NULL oder ""|*pstrUserName*|" "|
-|NULL-nicht-NULL-Zeichenfolge|FEHLER|FEHLER||
+|NULL-nicht-NULL-Zeichenfolge|ERROR|ERROR||
 |Nicht-NULL-Zeichenfolge|Nicht-NULL-Zeichenfolge|*pstrUserName*|*pstrPassword*|
 
-*%nPort*<br/>
+*nPort*<br/>
 Eine Zahl, die TCP/IP-Port für die Verwendung auf dem Server identifiziert.
 
 *bPassive*<br/>

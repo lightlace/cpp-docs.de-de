@@ -42,12 +42,12 @@ helpviewer_keywords:
 - EVENT_STOCK_READYSTATECHANGE event
 - EVENT_STOCK_KEYPRESS event
 ms.assetid: 3eeadc67-4b3d-4444-8caa-53054073988a
-ms.openlocfilehash: d224bfada94878fcec69b0675bd0faa03575ed27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f6f3c63f0436296791df428c704bce96eca3ec0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540009"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291118"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Hinzufügen von vordefinierten Ereignissen zu einem ActiveX-Steuerelement
 
@@ -61,16 +61,16 @@ Die `COleControl` Klasse enthält zehn vordefinierte Ereignisse, die in der folg
 
 |event|Auslösen der Funktion|Kommentare|
 |-----------|---------------------|--------------|
-|Klicken|**"void" FireClick)**|Wird ausgelöst, wenn das Steuerelement die Mausauswahl, alle erhält **BUTTONUP** (linke, mittlere oder Rechte) Nachricht empfangen wird und die Maustaste losgelassen wird, über dem Steuerelement. Die Lagerbestände MouseDown und das MouseUp-Ereignisse auftreten, bevor Sie dieses Ereignis.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_CLICK)**|
-|DblClick|**"void" FireDblClick)**|Ähnlich wie auf jedoch ausgelöst, wenn eine **BUTTONDBLCLK** Nachricht empfangen wird.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_DBLCLICK)**|
-|Fehler|**"void" FireError (SCODE**  *Scode*  **, LPCSTR** `lpszDescription` **, "uint"**`nHelpID`**= 0)**|Ausgelöst, wenn Sie in das ActiveX-Steuerelement außerhalb des Bereichs eine Methode aufrufen oder Eigenschaftszugriff ein Fehler auftritt.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_ERROREVENT)**|
-|KeyDown|**"void" FireKeyDown (kurze** `nChar` **, short**  `nShiftState`  **)**|Wird ausgelöst, wenn eine `WM_SYSKEYDOWN` oder `WM_KEYDOWN` Nachricht empfangen wird.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_KEYDOWN)**|
-|KeyPress|**"void" FireKeyPress (kurze** <strong>\*</strong> `pnChar` **)**|Wird ausgelöst, wenn eine `WM_CHAR` Nachricht empfangen wird.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_KEYPRESS)**|
-|KeyUp|**"void" FireKeyUp (kurze** `nChar` **, short**`nShiftState`**)**|Wird ausgelöst, wenn eine `WM_SYSKEYUP` oder `WM_KEYUP` Nachricht empfangen wird.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_KEYUP)**|
-|MouseDown|**"void" FireMouseDown (kurze**  `nButton`  **, short**  `nShiftState` **, "float"**  *x*  **, "float"**  *y*  **)**|Wird ausgelöst, wenn alle **BUTTONDOWN** (links, mittleren oder rechten) empfangen wird. Die Mauseingabe wird unmittelbar vor diesem Ereignis ausgelöst wird.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_MOUSEDOWN)**|
-|MouseMove|**"void" FireMouseMove (kurze**  `nButton`  **, short**  `nShiftState` **, "float"**  *x*  **, "float"**  *y*  **)**|Wird ausgelöst, wenn eine WM_MOUSEMOVE-Meldung empfangen wird.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_MOUSEMOVE)**|
-|MouseUp|**"void" FireMouseUp (kurze**  `nButton`  **, short**  `nShiftState`  **, "float"**  *x*  **, "float"**  *y*  **)**|Wird ausgelöst, wenn alle **BUTTONUP** (links, mittleren oder rechten) empfangen wird. Das Erfassen von Mauseingaben wird freigegeben, bevor dieses Ereignis ausgelöst wird.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_MOUSEUP)**|
-|ReadyStateChange|**"void" FireReadyStateChange)**|Wird ausgelöst, wenn der Übergang eines Steuerelements zum nächsten Zustand "bereit" aufgrund der Menge der empfangenen Daten.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_READYSTATECHANGE)**|
+|Klicken|**void FireClick( )**|Wird ausgelöst, wenn das Steuerelement die Mausauswahl, alle erhält **BUTTONUP** (linke, mittlere oder Rechte) Nachricht empfangen wird und die Maustaste losgelassen wird, über dem Steuerelement. Die Lagerbestände MouseDown und das MouseUp-Ereignisse auftreten, bevor Sie dieses Ereignis.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_CLICK( )**|
+|DblClick|**void FireDblClick( )**|Ähnlich wie auf jedoch ausgelöst, wenn eine **BUTTONDBLCLK** Nachricht empfangen wird.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_DBLCLICK( )**|
+|Fehler|**"void" FireError (SCODE**  *Scode*  **, LPCSTR** `lpszDescription` **, "uint"**`nHelpID`**= 0)**|Ausgelöst, wenn Sie in das ActiveX-Steuerelement außerhalb des Bereichs eine Methode aufrufen oder Eigenschaftszugriff ein Fehler auftritt.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_ERROREVENT( )**|
+|KeyDown|**"void" FireKeyDown (kurze** `nChar` **, short**  `nShiftState`  **)**|Wird ausgelöst, wenn eine `WM_SYSKEYDOWN` oder `WM_KEYDOWN` Nachricht empfangen wird.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_KEYDOWN( )**|
+|KeyPress|**"void" FireKeyPress (kurze** <strong>\*</strong> `pnChar` **)**|Wird ausgelöst, wenn eine `WM_CHAR` Nachricht empfangen wird.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_KEYPRESS( )**|
+|KeyUp|**"void" FireKeyUp (kurze** `nChar` **, short**`nShiftState`**)**|Wird ausgelöst, wenn eine `WM_SYSKEYUP` oder `WM_KEYUP` Nachricht empfangen wird.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_KEYUP( )**|
+|MouseDown|**"void" FireMouseDown (kurze**  `nButton`  **, short**  `nShiftState` **, "float"**  *x*  **, "float"**  *y*  **)**|Wird ausgelöst, wenn alle **BUTTONDOWN** (links, mittleren oder rechten) empfangen wird. Die Mauseingabe wird unmittelbar vor diesem Ereignis ausgelöst wird.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_MOUSEDOWN( )**|
+|MouseMove|**"void" FireMouseMove (kurze**  `nButton`  **, short**  `nShiftState` **, "float"**  *x*  **, "float"**  *y*  **)**|Wird ausgelöst, wenn eine WM_MOUSEMOVE-Meldung empfangen wird.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_MOUSEMOVE( )**|
+|MouseUp|**"void" FireMouseUp (kurze**  `nButton`  **, short**  `nShiftState`  **, "float"**  *x*  **, "float"**  *y*  **)**|Wird ausgelöst, wenn alle **BUTTONUP** (links, mittleren oder rechten) empfangen wird. Das Erfassen von Mauseingaben wird freigegeben, bevor dieses Ereignis ausgelöst wird.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_MOUSEUP( )**|
+|ReadyStateChange|**void FireReadyStateChange( )**|Wird ausgelöst, wenn der Übergang eines Steuerelements zum nächsten Zustand "bereit" aufgrund der Menge der empfangenen Daten.<br /><br /> Ereignis-Zuordnungseintrag: **EVENT_STOCK_READYSTATECHANGE( )**|
 
 ##  <a name="_core_adding_a_stock_event_using_classwizard"></a> Hinzufügen eines Ereignis mit der Ereignis-Assistent zum Hinzufügen von
 

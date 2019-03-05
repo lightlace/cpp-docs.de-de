@@ -28,12 +28,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::operator++
 - amp_short_vectors/Concurrency::graphics::uint_2::rg
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
-ms.openlocfilehash: dc7b00d70a4f816845f5741bf605f1c1bb631ee2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42c4f238e7277174a5f6b04a9e692f541b32a3e0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589357"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296720"
 ---
 # <a name="uint2-class"></a>uint_2-Klasse
 
@@ -64,36 +64,36 @@ class uint_2;
 |Name|Beschreibung|
 |----------|-----------------|
 |uint_2::get_x||
-|uint_2:: get_xy||
-|uint_2:: get_Y||
+|uint_2::get_xy||
+|uint_2::get_y||
 |uint_2::get_yx||
 |uint_2::ref_g_Method||
 |uint_2::ref_r_Method||
 |uint_2::ref_x_Method||
 |uint_2::ref_y_Method||
-|uint_2:: set_X||
-|uint_2:: set_xy||
-|uint_2:: set_y||
-|uint_2:: set_yx||
+|uint_2::set_x||
+|uint_2::set_xy||
+|uint_2::set_y||
+|uint_2::set_yx||
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
 |Name|Beschreibung|
 |----------|-----------------|
-|uint_2:::||
+|uint_2::operator--||
 |uint_2::operator%=||
-|uint_2:: & =||
+|uint_2::operator&=||
 |uint_2::operator*=||
 |uint_2::operator/=||
 |uint_2::operator^=||
-|uint_2::&#124;=||
+|uint_2::operator&#124;=||
 |uint_2::operator~||
-|uint_2:: Operator++-||
+|uint_2::operator++||
 |uint_2::operator+=||
 |uint_2::operator<\<=||
 |uint_2::operator=||
-|uint_2:: Operator-=||
-|uint_2:: >> =||
+|uint_2::operator-=||
+|uint_2::operator>>=||
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
@@ -110,7 +110,7 @@ class uint_2;
 |uint_2::r||
 |uint_2::rg||
 |uint_2::x||
-|uint_2:: XY||
+|uint_2::xy||
 |uint_2::y||
 |uint_2::yx||
 
@@ -177,7 +177,7 @@ Der Wert 1 Element initialisiert werden.
 *_V*<br/>
 Der Wert für die Initialisierung.
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Das Objekt, das zum Initialisieren verwendet.
 
 ##  <a name="uint_2__size"></a> Größe

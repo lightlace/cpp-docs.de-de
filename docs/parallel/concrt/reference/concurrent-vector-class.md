@@ -33,12 +33,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
-ms.openlocfilehash: e8036b0942600e5d47254583e2675c525010a5c1
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 7c2ca35239dfb3ce4c0f710259f54005ff9f3c94
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657564"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283175"
 ---
 # <a name="concurrentvector-class"></a>concurrent_vector-Klasse
 
@@ -170,7 +170,7 @@ Verweis auf einen Wert verwendet, um den gleichzeitigen Vektor zu füllen.
 *_Begin*<br/>
 Ein Iterator für das erste Element des Quellbereichs.
 
-*_Beenden*<br/>
+*_End*<br/>
 Ein Iterator für die erste Position direkt hinter dem letzten Element des Quellbereichs.
 
 ### <a name="remarks"></a>Hinweise
@@ -339,7 +339,7 @@ Der Wert der Elemente im erstellten Objekt.
 *_Begin*<br/>
 Die Position des ersten Elements in dem zu kopierenden Elementbereich.
 
-*_Beenden*<br/>
+*_End*<br/>
 Die Position des ersten Elements nach dem zu kopierenden Elementbereich.
 
 ### <a name="remarks"></a>Hinweise
@@ -500,7 +500,7 @@ size_type max_size() const;
 
 Die maximale Anzahl von Elementen der `concurrent_vector` Objekt enthalten kann.
 
-##  <a name="operator_eq"></a> Operator =
+##  <a name="operator_eq"></a> operator=
 
 Weist den Inhalt eines anderen `concurrent_vector`-Objekts diesem Objekt zu. Diese Methode ist nicht nebenläufigkeitssicher.
 
@@ -689,4 +689,3 @@ Die `concurrent_vector` Objekt, das Inhalt getauscht.
 
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
 [Parallele Container und Objekte](../../../parallel/concrt/parallel-containers-and-objects.md)
-

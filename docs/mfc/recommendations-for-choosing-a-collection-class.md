@@ -16,12 +16,12 @@ helpviewer_keywords:
 - collection classes [MFC], duplicates allowed
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
-ms.openlocfilehash: 2c8cb323feb44618909895a4ee536ad3b7832173
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c72a57385b0036d98629d1ee24111500b9d2f8ad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446734"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288037"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>Empfehlungen für die Auswahl einer Sammlungsklasse
 
@@ -87,9 +87,9 @@ In der folgenden Tabelle, [Merkmale von MFC-Auflistungsklassen](#_core_character
 
 1. Zum Serialisieren müssen Sie explizit die `Serialize`-Funktion des Auflistungsobjekts aufrufen; zum Sichern müssen Sie explizit seine `Dump`-Funktion aufrufen. Sie können nicht die Form `ar << collObj` zum Serialisieren oder die Form `dmp` `<< collObj` zum Sichern verwenden.
 
-2. Serialisierbarkeit hängt vom zugrunde liegenden Auflistungstyp ab. Wenn z. B. ein typisiertes Zeigerarray auf `CObArray` basiert, ist es serialisierbar; auf `CPtrArray` basierend ist es nicht serialisierbar. Im Allgemeinen können die „Ptr“-Klassen nicht serialisiert werden.
+2. Serialisierbarkeit hängt vom zugrunde liegenden Auflistungstyp ab. Wenn z. B. ein typisiertes Zeigerarray auf `CObArray`basiert, ist es serialisierbar; auf `CPtrArray`basierend ist es nicht serialisierbar. Im Allgemeinen können die „Ptr“-Klassen nicht serialisiert werden.
 
-3. Wenn in dieser Spalte „Ja“ markiert ist, ist eine Auflistungsklasse ohne Vorlage typsicher, sofern Sie sie wie vorgesehen verwenden. Wenn Sie z. B. Bytes in einem `CByteArray` speichern, ist das Array typsicher. Aber wenn Sie es zum Speichern von Zeichen verwenden, ist die Typsicherheit nicht so sicher.
+3. Wenn in dieser Spalte „Ja“ markiert ist, ist eine Auflistungsklasse ohne Vorlage typsicher, sofern Sie sie wie vorgesehen verwenden. Wenn Sie z. B. Bytes in einem `CByteArray`speichern, ist das Array typsicher. Aber wenn Sie es zum Speichern von Zeichen verwenden, ist die Typsicherheit nicht so sicher.
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -97,4 +97,3 @@ In der folgenden Tabelle, [Merkmale von MFC-Auflistungsklassen](#_core_character
 [Vorlagenbasierte Klassen](../mfc/template-based-classes.md)<br/>
 [Vorgehensweise: Erstellen einer typsicheren Auflistung](../mfc/how-to-make-a-type-safe-collection.md)<br/>
 [Zugreifen auf alle Elemente einer Auflistung](../mfc/accessing-all-members-of-a-collection.md)
-

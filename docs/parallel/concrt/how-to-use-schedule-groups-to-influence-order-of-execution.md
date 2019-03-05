@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Beeinflussen der Ausführungsreihenfolge mithilfe von Zeitplangruppen'
+title: 'Vorgehensweise: Der Ausführungsreihenfolge mithilfe von Zeitplangruppen'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - schedule groups, using [Concurrency Runtime]
 - using schedule groups [Concurrency Runtime]
 ms.assetid: 73124194-fc3a-491e-a23f-fbd7b5a4455c
-ms.openlocfilehash: 1117e0d24aae023fbb4dec4fbb9721e6da2ad768
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99e0383fc8d16f3eeb6e43e59424ab0984ee5c14
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642301"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284358"
 ---
-# <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>Gewusst wie: Beeinflussen der Ausführungsreihenfolge mithilfe von Zeitplangruppen
+# <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>Vorgehensweise: Der Ausführungsreihenfolge mithilfe von Zeitplangruppen
 
 In der Concurrency Runtime ist die Reihenfolge, in der Aufgaben geplant werden, nicht deterministisch. Sie können die Reihenfolge der Aufgabenausführung jedoch mithilfe von Planungsrichtlinien beeinflussen. In diesem Thema veranschaulicht, wie Planungsgruppen zusammen mit den [SchedulingProtocol](reference/concurrency-namespace-enums.md#policyelementkey) Planerrichtlinie, um die Reihenfolge beeinflussen, in dem Aufgaben ausgeführt werden.
 
@@ -112,4 +112,3 @@ Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, o
 
 [Planungsgruppen](../../parallel/concrt/schedule-groups.md)<br/>
 [Asynchrone Agents](../../parallel/concrt/asynchronous-agents.md)
-

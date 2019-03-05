@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: f18866dca3610db275c629bbb2ac885c21cbdcb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6af054ea27233de2cc3b551bbec69c0ab3b4be9e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455808"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289961"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -187,7 +187,7 @@ wo `id` gibt die untergeordneten Fenster-ID des Edit-Steuerelements, das Senden 
 
 Funktionsprototyp des übergeordneten Elements lautet wie folgt aus:
 
-**Afx_msg** "void" MemberFxn **();**
+**afx_msg** void memberFxn **( );**
 
 Es folgt eine Liste der möglichen Meldungszuordnungseinträge und eine Beschreibung der Fälle in denen sie das dem übergeordneten gesendet werden sollen:
 
@@ -348,7 +348,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Gibt das Steuerelement zum Bearbeiten des Stils an. Wenden Sie eine beliebige Kombination von [Bearbeiten von Stilen](styles-used-by-mfc.md#edit-styles) an das Steuerelement.
 
-*Rect*<br/>
+*rect*<br/>
 Gibt an, des Steuerelements zum Bearbeiten der Größe und Position. Kann eine `CRect` Objekt oder `RECT` Struktur.
 
 *pParentWnd*<br/>
@@ -966,7 +966,7 @@ CPoint PosFromChar(UINT nChar) const;
 
 ### <a name="parameters"></a>Parameter
 
-*NChar*<br/>
+*nChar*<br/>
 Der nullbasierte Index des angegebenen Zeichens.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1117,7 +1117,7 @@ void SetLimitText(UINT nMax);
 
 ### <a name="parameters"></a>Parameter
 
-*nmax.*<br/>
+*nMax*<br/>
 Der neue Text-Grenzwert, in Zeichen.
 
 ### <a name="remarks"></a>Hinweise

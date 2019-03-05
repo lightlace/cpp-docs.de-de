@@ -94,12 +94,12 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], WinHelpA
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
-ms.openlocfilehash: c30ced2f19602dca17badeec6e1b27ad1e90bf5c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ebf63e6cf31f3852434926c3559774e7b4b46d3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612731"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285346"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx-Klasse
 
@@ -225,7 +225,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Hdwp*<br/>
+[in] *hdwp*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -242,7 +242,7 @@ void DockPane(
 
 [in] *pBar*<br/>
 [in] *nDockBarID*<br/>
-[in] *LpRect*<br/>
+[in] *lpRect*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -280,7 +280,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *DwDockStyle*<br/>
+[in] *dwDockStyle*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -294,7 +294,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *DwDockStyle*<br/>
+[in] *dwDockStyle*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -506,7 +506,7 @@ BOOL InsertPane(
 
 [in] *pControlBar*<br/>
 [in] *pTarget*<br/>
-[in] *bNach*<br/>
+[in] *bAfter*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -539,7 +539,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *zeigen*<br/>
+[in] *point*<br/>
 [in] *DwBarAlignment*<br/>
 [in] *bOuterEdge*<br/>
 
@@ -560,7 +560,7 @@ virtual BOOL LoadFrame(
 ### <a name="parameters"></a>Parameter
 
 [in] *nIDResource*<br/>
-[in] *DwDefaultStyle*<br/>
+[in] *dwDefaultStyle*<br/>
 [in] *pParentWnd*<br/>
 [in] *"pContext"*<br/>
 
@@ -839,7 +839,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *zeigen*<br/>
+[in] *point*<br/>
 [in] *nSensitivity*<br/>
 [in] *bExactBar*<br/>
 [in] *pRTCBarType*<br/>
@@ -926,7 +926,7 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>Parameter
 
-*Menü "*<br/>
+*menu*<br/>
 [in] Ein Verweis auf eine [CMenu](../../mfc/reference/cmenu-class.md) Objekt geändert werden.
 
 *uiViewUserToolbarCmdFirst*<br/>

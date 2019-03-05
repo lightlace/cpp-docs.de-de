@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: dc0e6f75f4794b94d6e94d77f2e427b9c1df9f06
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f287b04b32b7bc45342ac7248fbe986a3dcf959e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644144"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289867"
 ---
 # <a name="cfile-class"></a>CFile-Klasse
 
@@ -98,10 +98,10 @@ class CFile : public CObject
 |[CFile::GetFileTitle](#getfiletitle)|Ruft den Titel der ausgewählten Datei ab.|
 |[CFile::GetLength](#getlength)|Ruft die Länge der Datei ab.|
 |[CFile::GetPosition](#getposition)|Ruft die aktuelle Dateizeiger ab.|
-|[CFile:: GetStatus](#getstatus)|Ruft den Status der geöffneten Datei oder in der statischen Version ab, ruft den Status der angegebenen Datei (statische virtuelle Funktion) ab.|
+|[CFile::GetStatus](#getstatus)|Ruft den Status der geöffneten Datei oder in der statischen Version ab, ruft den Status der angegebenen Datei (statische virtuelle Funktion) ab.|
 |[CFile::LockRange](#lockrange)|Sperrt einen Bereich von Bytes in einer Datei an.|
 |[CFile::Open](#open)|Sichere öffnet eine Datei mit einer Option zum Testen der Fehler ein.|
-|[CFile:: Read](#read)|Lesevorgänge (gepufferten) Daten aus einer Datei an die aktuelle Dateiposition.|
+|[CFile::Read](#read)|Lesevorgänge (gepufferten) Daten aus einer Datei an die aktuelle Dateiposition.|
 |[CFile::Remove](#remove)|Löscht die angegebene Datei (statische Funktion).|
 |[CFile::Rename](#rename)|Benennt die angegebene Datei (statische Funktion).|
 |[CFile::Seek](#seek)|Positioniert die Dateizeiger für den aktuellen.|
@@ -720,7 +720,7 @@ UINT nFrom);
 *lOff*<br/>
 Die Anzahl der Bytes, den Dateizeiger zu verschieben. Positive Werte verschieben den Dateizeiger am Ende der Datei; negative Werte verschieben den Dateizeiger zum Anfang der Datei.
 
-*nWenn*<br/>
+*nFrom*<br/>
 Die Position aus suchen. Finden Sie im Abschnitt "Hinweise" Mögliche Werte.
 
 ### <a name="return-value"></a>Rückgabewert

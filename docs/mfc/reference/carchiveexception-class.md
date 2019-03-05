@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CArchiveException [MFC], m_cause
 - CArchiveException [MFC], m_strFileName
 ms.assetid: da31a127-e86c-41d1-b0b6-bed0865b1b49
-ms.openlocfilehash: 6fe475ebd90ff13fec6a2835b6fdd4cf3d6034a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 731735bccf9225e67d82b1fe90336c92a630b368
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476880"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283565"
 ---
 # <a name="carchiveexception-class"></a>CArchiveException-Klasse
 
@@ -74,7 +74,7 @@ CArchiveException(
 
 ### <a name="parameters"></a>Parameter
 
-*Ursache*<br/>
+*cause*<br/>
 Ein enumerierter Typ-Variable, die den Grund für die Ausnahme angibt. Eine Liste der Enumeratoren, finden Sie unter den [M_cause](#m_cause) -Datenmember.
 
 *lpszArchiveName*<br/>
@@ -135,4 +135,3 @@ CString m_strFileName;
 [CArchive-Klasse](../../mfc/reference/carchive-class.md)<br/>
 [AfxThrowArchiveException](../../mfc/reference/exception-processing.md#afxthrowarchiveexception)<br/>
 [Ausnahmeverarbeitung](../../mfc/reference/exception-processing.md)
-
