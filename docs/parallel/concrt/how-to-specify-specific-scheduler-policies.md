@@ -1,22 +1,22 @@
 ---
-title: 'Gewusst wie: Angeben von bestimmten Planerrichtlinien'
+title: 'Vorgehensweise: Angeben von bestimmten Planerrichtlinien'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - specifying scheduler policies [Concurrency Runtime]
 - scheduler policies, specifying [Concurrency Runtime]
 ms.assetid: 9c5149f9-ac34-4ff3-9e79-0bad103e4e6b
-ms.openlocfilehash: 1334b8dcf8b6615120d4be8db8530af60df9d668
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c03ef6661ebefe0bfe9fab62938ce9987a4bca1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520028"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277858"
 ---
-# <a name="how-to-specify-specific-scheduler-policies"></a>Gewusst wie: Angeben von bestimmten Planerrichtlinien
+# <a name="how-to-specify-specific-scheduler-policies"></a>Vorgehensweise: Angeben von bestimmten Planerrichtlinien
 
 Mithilfe von Planerrichtlinien können Sie die Strategie festlegen, die der Planer zum Verwalten von Aufgaben verwendet. In diesem Thema wird veranschaulicht, wie eine Planerrichtlinie verwendet wird, um die Threadpriorität einer Aufgabe zu erhöhen, die eine Statusanzeige an die Konsole ausgibt.
 
-Ein Beispiel für die benutzerdefinierte Planerrichtlinien zusammen mit asynchronen Agents finden Sie unter [Vorgehensweise: Erstellen von Agents, mit bestimmten Planerrichtlinien können](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
+Ein Beispiel für die benutzerdefinierte Planerrichtlinien zusammen mit asynchronen Agents finden Sie unter [Vorgehensweise: Erstellen von Agents, die bestimmte Planerrichtlinien verwenden](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -54,4 +54,3 @@ Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, o
 [Planerrichtlinien](../../parallel/concrt/scheduler-policies.md)<br/>
 [Vorgehensweise: Verwalten einer Planerinstanz](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>
 [Vorgehensweise: Erstellen von Agents, die bestimmte Planerrichtlinien verwenden](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
-

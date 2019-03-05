@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CBitmapRenderTarget [MFC], GetBitmapRenderTarget
 - CBitmapRenderTarget [MFC], m_pBitmapRenderTarget
 ms.assetid: c89a4437-812e-4943-acb2-b429a04cc4d2
-ms.openlocfilehash: ffead8d1f4a903fba79e4b22eefbf0a2955f56fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c110ec8f7c232180bf054e8e4ba90a18f1902c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562239"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283552"
 ---
 # <a name="cbitmaprendertarget-class"></a>CBitmapRenderTarget-Klasse
 
@@ -56,7 +56,7 @@ class CBitmapRenderTarget : public CRenderTarget;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *](#operator_id2d1bitmaprendertarget_star)|Gibt die ID2D1BitmapRenderTarget-Schnittstelle|
+|[CBitmapRenderTarget::operator ID2D1BitmapRenderTarget*](#operator_id2d1bitmaprendertarget_star)|Gibt die ID2D1BitmapRenderTarget-Schnittstelle|
 
 ### <a name="protected-data-members"></a>Geschützte Datenmember
 
@@ -119,7 +119,7 @@ BOOL GetBitmap(CD2DBitmap& bitmap);
 
 ### <a name="parameters"></a>Parameter
 
-*Bitmap*<br/>
+*bitmap*<br/>
 Bei der Rückgabe dieser Methode enthält die gültigen Bitmap für das Renderziel. Diese Bitmap kann für das Zeichnen von Vorgängen verwendet werden.
 
 ### <a name="return-value"></a>Rückgabewert

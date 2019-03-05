@@ -11,12 +11,12 @@ helpviewer_keywords:
 - OLE [MFC], classes
 - containers [MFC], OLE container applications
 ms.assetid: 1e27e1ab-4c22-41eb-8547-6915c72668ae
-ms.openlocfilehash: 518ae4889a2c5d9dae10e5b5cba6845010ba883c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87db824e5ab4daec15870b245ea8341be7442109
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517142"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292553"
 ---
 # <a name="ole-container-classes"></a>OLE-Containerklassen
 
@@ -27,7 +27,7 @@ Verwenden einer `COleClientItem` Objekt, das jeden OLE-Element im Dokument darst
 [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)<br/>
 Active Document-Container wird unterstützt.
 
-[COleDocument-Klasse](../mfc/reference/coledocument-class.md)<br/>
+[COleDocument](../mfc/reference/coledocument-class.md)<br/>
 Für Verbunddokument-Implementierung als auch einfache Container-Unterstützung verwendet. Dient als Container für Klassen abgeleitet `CDocItem`. Diese Klasse kann als Basisklasse verwendet werden, für Container dokumentiert und die Basisklasse für ist `COleServerDoc`.
 
 [COleLinkingDoc](../mfc/reference/colelinkingdoc-class.md)<br/>
@@ -51,4 +51,3 @@ Eine Ausnahme, die nach einem Fehler bei der Verarbeitung von OLE. Diese Klasse 
 ## <a name="see-also"></a>Siehe auch
 
 [Übersicht über die Klasse](../mfc/class-library-overview.md)
-

@@ -1,5 +1,5 @@
 ---
-title: 'Menüs und Ressourcen: Menüs schachteln'
+title: 'Menüs und Ressourcen: Zusammenführen von Menüs'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - status bars [MFC], OLE document applications
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-ms.openlocfilehash: 30663afae0bfd30b42f99daf95cb8ff35979ee50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e00464e59de5e20627fd2423c101c23629d7c4d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438440"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300348"
 ---
-# <a name="menus-and-resources-menu-merging"></a>Menüs und Ressourcen: Menüs schachteln
+# <a name="menus-and-resources-menu-merging"></a>Menüs und Ressourcen: Zusammenführen von Menüs
 
 Dieser Artikel erläutert die erforderlichen Schritte für OLE-dokumentanwendungen zu behandeln, visuelle Bearbeitung und direkte Aktivierung ordnungsgemäß. Direkte Aktivierung ist eine Herausforderung für Container und Server-Anwendungen (Komponente). Der Benutzer bleibt in der gleichen Rahmenfenster (im Kontext des Containerdokuments), aber es ist tatsächlich eine andere Anwendung (dem Server) ausgeführt. Dies erfordert die Koordination zwischen den Ressourcen der Container und Server.
 
@@ -113,4 +113,3 @@ Diese Symbolleiste ist geladen, Ihre `COleIPFrameWnd`-abgeleitete Klasse, die vo
 [Activation (Aktivierung)](../mfc/activation-cpp.md)<br/>
 [Server](../mfc/servers.md)<br/>
 [Container](../mfc/containers.md)
-

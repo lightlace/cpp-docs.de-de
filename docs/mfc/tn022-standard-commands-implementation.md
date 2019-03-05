@@ -1,5 +1,5 @@
 ---
-title: 'TN022: Implementieren von Standardbefehlen'
+title: 'TN022: Standardbefehlen'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.commands
@@ -59,14 +59,14 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-ms.openlocfilehash: 0f79aaaf59f12e226220e51681f64d0bf1131303
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c066521ba2b5be9ac24a8abaece42e57b8ad85f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504337"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279353"
 ---
-# <a name="tn022-standard-commands-implementation"></a>TN022: Implementieren von Standardbefehlen
+# <a name="tn022-standard-commands-implementation"></a>TN022: Standardbefehlen
 
 > [!NOTE]
 >  Der folgende technische Hinweis wurde seit dem ersten Erscheinen in der Onlinedokumentation nicht aktualisiert. Daher können einige Verfahren und Themen veraltet oder falsch sein. Um aktuelle Informationen zu erhalten, wird empfohlen, das gewünschte Thema im Index der Onlinedokumentation zu suchen.
@@ -337,7 +337,7 @@ Für jedes Befehls-ID befindet sich eine Standardnachricht Zeile Eingabeaufforde
 
    Anpassung von diesen Befehlshandler wird nicht empfohlen.
 
-- ID_WINDOW_TILE_HORZ-Kacheln Windows horizontal.
+- ID_WINDOW_TILE_HORZ   Tiles windows horizontally.
 
    Mit diesem Befehl wird in implementiert `CMDIFrameWnd` wie ID_WINDOW_CASCADE, außer dass eine andere MDI-Windows-Meldung für den Vorgang verwendet wird.
 
@@ -468,30 +468,29 @@ Für jedes Befehls-ID befindet sich eine Standardnachricht Zeile Eingabeaufforde
 
 Mehrere Standardbefehls-IDs werden als Indikatoren in Statusleisten verwendet. Diese verwenden dasselbe Updatebefehl UI-Mechanismus zur Behandlung, um ihren aktuellen visuellen Zustand während der Leerlaufzeit Anwendung anzuzeigen. Da Sie nicht vom Benutzer ausgewählt werden (d. h. Sie können nicht per Push übertragen einen Statusleistenbereich), und klicken Sie dann nicht sinnvoll, einen ON_COMMAND-Handler für diese Befehls-IDs zu verwenden.
 
-- ID_INDICATOR_CAPS: CAP Sperrindikator.
+- ID_INDICATOR_CAPS : Indikator der CAP-Sperre.
 
 - ID_INDICATOR_NUM: NUM-Lock-Indikator.
 
 - ID_INDICATOR_SCRL: Kap-Sperrindikator.
 
-- ID_INDICATOR_KANA: KANA Sperrindikator (gilt nur für japanische Systeme).
+- ID_INDICATOR_KANA : KANA Sperren Indikator (gilt nur für japanische Systeme).
 
 Drei davon werden im implementiert `CFrameWnd::OnUpdateKeyIndicator`, eine Implementierung-Hilfe, die die Befehls-ID verwendet, um den entsprechenden virtuellen Schlüssel zuzuordnen. Eine gängige Implementierung aktiviert oder deaktiviert (für Statusbereiche, die deaktiviert = kein Text) der `CCmdUI` Objekt abhängig davon, ob die entsprechende virtuelle Taste derzeit gesperrt ist.
 
 Anpassung von diesen Befehlshandler wird nicht empfohlen.
 
-- ID_INDICATOR_EXT: Indikator für die erweiterte Option.
+- ID_INDICATOR_EXT: Indikator für erweiterte Option.
 
-- ID_INDICATOR_OVR: Dem Überschreibmodus Indikator.
+- ID_INDICATOR_OVR : Indikator mit dem Überschreibmodus.
 
-- ID_INDICATOR_REC: Aufzeichnung Indikator.
+- ID_INDICATOR_REC: Indikator der Aufzeichnung.
 
 Zurzeit besteht keine Standardimplementierung für diese Indikatoren.
 
-Wenn Sie diese Indikatoren implementieren, es wird empfohlen, diesen Indikator-IDs und verwalten, die Reihenfolge der Indikatoren in der Statusleiste (d. h. in der folgenden Reihenfolge: EXT, Obergrenze, NUM, Kap-, ÜB, MAK).
+Wenn Sie diese Indikatoren implementieren, es wird empfohlen, diesen Indikator IDs und verwalten, die Reihenfolge der Indikatoren in der Statusleiste (d. h. in der folgenden Reihenfolge: EXT, CAP, NUM, SCRL, OVR, REC).
 
 ## <a name="see-also"></a>Siehe auch
 
 [Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)<br/>
 [Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)
-

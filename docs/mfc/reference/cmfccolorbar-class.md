@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: 6e6ce3f48e2b0a7b0aa8396047eb4a52015f364d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f1f7610fc315da65145798058fdcf9752e7873d0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694841"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283253"
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar-Klasse
 
@@ -330,10 +330,10 @@ CMFCColorBar(
 
 ### <a name="parameters"></a>Parameter
 
-*Farben*<br/>
+*colors*<br/>
 [in] Ein Array von Farben, die das Framework für das Steuerelement der Farbleiste angezeigt werden soll.
 
-*Farbe*<br/>
+*color*<br/>
 [in] Die anfänglich ausgewählte Farbe.
 
 *lpszAutoColor*<br/>
@@ -459,7 +459,7 @@ virtual BOOL CreateControl(
 *pParentWnd*<br/>
 [in] Zeiger auf das übergeordnete Fenster. Darf nicht NULL sein.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein umgebendes Rechteck, das angibt, wo Sie die Farbleiste-Steuerelement zu zeichnen.
 
 *nID*<br/>
@@ -494,7 +494,7 @@ static BOOL CreatePalette(
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*arColors*|[in] Ein Array von Farben.|
-|*Palette*|[in] Eine Palette von Farben.|
+|*palette*|[in] Eine Palette von Farben.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -521,7 +521,7 @@ Die standardmäßige Bezeichnung für die automatische Schaltfläche ist **autom
 *colorAutomatic*<br/>
 [in] Die Standardfarbe, die das Framework gilt, wenn Sie die automatische Schaltfläche klicken.
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] True, um die automatische Schaltfläche zu aktivieren. "False", um die automatische Schaltfläche zu deaktivieren. Der Standardwert ist "true".
 
 ### <a name="remarks"></a>Hinweise
@@ -549,7 +549,7 @@ Die standardmäßige Bezeichnung für diese Schaltfläche ist **Weitere Farben..
 *bAltColorDlg*<br/>
 [in] "True" Anzeige der [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) Dialogfeld "False" zum Anzeigen des Standards [CColorDialog](../../mfc/reference/ccolordialog-class.md) Dialogfeld. Der Standardwert ist "true".
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] True, um die Schaltfläche zu aktivieren. FALSE, wenn die Schaltfläche zu deaktivieren. Der Standardwert ist "true".
 
 ##  <a name="getcolor"></a>  CMFCColorBar::GetColor
@@ -701,7 +701,7 @@ virtual BOOL OnKey(UINT nChar);
 
 ### <a name="parameters"></a>Parameter
 
-*NChar*<br/>
+*nChar*<br/>
 [in] Der virtuelle Taste Code für den Schlüssel, den ein Benutzer gedrückt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -808,7 +808,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Parameter
 
-*Farbe*<br/>
+*color*<br/>
 [in] Ein RGB-Farbwert.
 
 ##  <a name="setcolorname"></a>  CMFCColorBar::SetColorName
@@ -823,7 +823,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Parameter
 
-*Farbe*<br/>
+*color*<br/>
 [in] Eine Farbe der RGB-Wert.
 
 *strName*<br/>

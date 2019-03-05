@@ -8,12 +8,12 @@ helpviewer_keywords:
 - I/O [MFC], options
 - I/O [MFC], file-based options
 ms.assetid: d664b175-3b4a-40c3-b14b-39de6b12e419
-ms.openlocfilehash: 1144337df9657d63c53a13e03cf31eb487ce4068
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 760c213c3af7f9c75374f04e3dfc6b9499eade5c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585457"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261965"
 ---
 # <a name="recommendations-for-handling-inputoutput"></a>Empfehlungen zur Eingabe-/Ausgabebehandlung
 
@@ -25,7 +25,7 @@ Gibt an, ob Sie dateibasierte e/a verwenden, hängt davon ab, wie Sie auf die Fr
 
      **Die Anwendung die gesamte Datei gelesen, in den Arbeitsspeicher auf die Datei öffnen und Zurückschreiben die gesamte Datei auf dem Datenträger auf die Datei zu speichern**
 
-   - Ja: Dies ist der standardmäßigen MFC-Dokument Fall. Verwendung `CDocument` Serialisierung.
+   - "Ja": Dies ist der Standardfall für MFC-Dokument. Verwendung `CDocument` Serialisierung.
 
    - Nein: Dies ist in der Regel die Groß-/Kleinschreibung transaktionsbasierten Aktualisieren der Datei. Sie aktualisieren Sie die Datei auf einer Basis pro Transaktion und keine `CDocument` Serialisierung.
 
@@ -49,4 +49,4 @@ Weitere Informationen zur Serialisierung finden Sie unter [Serialisierung](../mf
 
 ## <a name="see-also"></a>Siehe auch
 
-[Serialisierung: Serialisierung im Vergleich zur Datenbankeingabe/-Ausgabe](../mfc/serialization-serialization-vs-database-input-output.md)
+[Serialisierung: Serialisierung im Vergleich zu Datenbankeingabe/-Ausgabe](../mfc/serialization-serialization-vs-database-input-output.md)

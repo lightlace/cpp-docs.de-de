@@ -46,12 +46,12 @@ f1_keywords:
 - amp_math/Concurrency::fast_math::tanhf
 - amp_math/Concurrency::fast_math::trunc
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
-ms.openlocfilehash: fa024c781804d404870a0362a027e1bc436902ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96178ee72073e5063fc009f17ab21565f3cf1ab5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667635"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259862"
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>Concurrency:: fast_math Namespace-Funktionen
 
@@ -228,7 +228,7 @@ Gibt den Arkustangens-Wert des Arguments zurück
 
 ##  <a name="ceil"></a>  ceil-
 
-Berechnet den Höchstwert des Arguments
+Berechnet die Höchstwert des Arguments
 
 ```
 inline float ceil(float _X) restrict(amp);
@@ -245,7 +245,7 @@ Gibt den Höchstwert des Arguments
 
 ##  <a name="ceilf"></a>  ceilf
 
-Berechnet den Höchstwert des Arguments
+Berechnet die Höchstwert des Arguments
 
 ```
 inline float ceilf(float _X) restrict(amp);
@@ -611,7 +611,7 @@ inline float frexp(
 *_X*<br/>
 Gleitkommawert
 
-*_EXP zurück*<br/>
+*_Exp*<br/>
 Gibt den ganzzahligen Exponenten von _X in Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -633,7 +633,7 @@ inline float frexpf(
 *_X*<br/>
 Gleitkommawert
 
-*_EXP zurück*<br/>
+*_Exp*<br/>
 Gibt den ganzzahligen Exponenten von _X in Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -706,7 +706,7 @@ inline float ldexp(
 *_X*<br/>
 Gleitkommawert, mentissa
 
-*_EXP zurück*<br/>
+*_Exp*<br/>
 Integer-Exponenten
 
 ### <a name="return-value"></a>Rückgabewert
@@ -728,7 +728,7 @@ inline float ldexpf(
 *_X*<br/>
 Gleitkommawert, mentissa
 
-*_EXP zurück*<br/>
+*_Exp*<br/>
 Integer-Exponenten
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1275,7 +1275,7 @@ Gibt die ganzzahlige Komponente des Arguments zurück
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** amp_math.h **Namespace:** Concurrency:: fast_math
+**Header:** amp_math.h **Namespace:** Concurrency::fast_math
 
 ## <a name="see-also"></a>Siehe auch
 

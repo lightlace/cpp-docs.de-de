@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Anzeigen von Befehlsinformationen in der Statusleiste'
+title: 'Vorgehensweise: Anzeigen von Befehlsinformationen in der Statusleiste'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - prompts [MFC]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - status bars [MFC], message area
 - status bars [MFC], displaying command information
 ms.assetid: de895cbe-61ee-46bf-9787-76b247527d6d
-ms.openlocfilehash: 6da45edf611d70920340d8f9a9c2fd8de5cc0307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c93787b3799306d6008299e7c1be6e429bc4c2d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654102"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282317"
 ---
-# <a name="how-to-display-command-information-in-the-status-bar"></a>Gewusst wie: Anzeigen von Befehlsinformationen in der Statusleiste
+# <a name="how-to-display-command-information-in-the-status-bar"></a>Vorgehensweise: Anzeigen von Befehlsinformationen in der Statusleiste
 
 Wenn Sie den Assistenten zum Erstellen des Grundgerüsts Ihrer Anwendung ausführen, können Sie eine Symbolleiste und Statusleiste unterstützen. Nur eine Option im Anwendungs-Assistenten unterstützt. Wenn eine Statusleiste vorhanden ist, stellt der Anwendung automatisch hilfreiche Hinweise, wie der Benutzer den Zeiger auf Elemente in den Menüs richtet. Die Anwendung zeigt automatisch eine eingabeaufforderungs-Zeichenfolge in der Statusleiste angezeigt, wenn das Menüelement markiert ist. Z. B. wenn der Benutzer den Mauszeiger auf Bewegen der **Ausschneiden** Befehl die **bearbeiten** im Menü die Statusleiste möglicherweise "Schneidet die Auswahl und überträgt sie in der Zwischenablage" in den Bereich der Statusleiste angezeigt. Die Eingabeaufforderung hilft die Benutzer, die den Zweck des Menüelements zu verstehen. Dies funktioniert auch, wenn der Benutzer eine Symbolleisten-Schaltfläche klickt.
 
@@ -25,4 +25,3 @@ Standardmäßig fügt der Anwendungs-Assistent **AFX_IDS_IDLEMESSAGE**, die ID f
 ## <a name="see-also"></a>Siehe auch
 
 [Meldungsbehandlung und Zuordnung](../mfc/message-handling-and-mapping.md)
-

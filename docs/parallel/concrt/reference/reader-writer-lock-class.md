@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
-ms.openlocfilehash: 1c2696695992cac9d51d547913c41234beaecf57
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 111d48b9c4a575078f2342bfaa944871bbd628f5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585990"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268654"
 ---
 # <a name="readerwriterlock-class"></a>reader_writer_lock-Klasse
 
@@ -46,7 +46,7 @@ class reader_writer_lock;
 |Name|Beschreibung|
 |----------|-----------------|
 |[reader_writer_lock](#ctor)|Erstellt ein neues `reader_writer_lock`-Objekt.|
-|[~ Reader_writer_lock-Destruktor](#dtor)|Zerstört das `reader_writer_lock`-Objekt.|
+|[~reader_writer_lock Destructor](#dtor)|Zerstört das `reader_writer_lock`-Objekt.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -68,7 +68,7 @@ Weitere Informationen finden Sie unter [Synchronisierungsdatenstrukturen](../../
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** concrt.h hinzu
+**Header:** concrt.h
 
 **Namespace:** Parallelität
 
@@ -112,7 +112,7 @@ Erstellt ein neues `reader_writer_lock`-Objekt.
 reader_writer_lock();
 ```
 
-##  <a name="dtor"></a> ~ Reader_writer_lock
+##  <a name="dtor"></a> ~reader_writer_lock
 
 Zerstört das `reader_writer_lock`-Objekt.
 
@@ -145,7 +145,7 @@ explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
 *_Reader_writer_lock*<br/>
 Die `reader_writer_lock` Objekt, das als Autor abgerufen.
 
-## <a name="scoped_lock_dtor"></a> Scoped_lock:: ~ Scoped_lock
+## <a name="scoped_lock_dtor"></a> scoped_lock::~scoped_lock
 
 Zerstört eine `reader_writer_lock` Objekt aus, und hebt die Sperre, die in seinem Konstruktor angegeben.
 

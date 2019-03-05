@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Implementieren einer kooperativen Semaphore mithilfe der Context-Klasse'
+title: 'Vorgehensweise: Implementieren einer kooperativen Semaphore mithilfe der Context-Klasse'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - cooperative semaphore implementing
 - context class
 ms.assetid: 22f4b9c0-ca22-4a68-90ba-39e99ea76696
-ms.openlocfilehash: 460a1de03f34cb8ef9753e761aaef37470cd6d0e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 92f77fade972bff1528bc9a22416670354c70f34
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467758"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300764"
 ---
-# <a name="how-to-use-the-context-class-to-implement-a-cooperative-semaphore"></a>Gewusst wie: Implementieren einer kooperativen Semaphore mithilfe der Context-Klasse
+# <a name="how-to-use-the-context-class-to-implement-a-cooperative-semaphore"></a>Vorgehensweise: Implementieren einer kooperativen Semaphore mithilfe der Context-Klasse
 
 In diesem Thema zeigt, wie die Concurrency:: Context-Klasse, die zum Implementieren einer kooperativen Semaphore-Klasse verwendet wird.
 
@@ -90,4 +90,3 @@ Im folgenden Beispiel wird der Text der Arbeitsfunktion geändert, die an den `p
 
 [Kontext](../../parallel/concrt/contexts.md)<br/>
 [Parallele Container und Objekte](../../parallel/concrt/parallel-containers-and-objects.md)
-

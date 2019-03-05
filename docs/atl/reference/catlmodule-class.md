@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
-ms.openlocfilehash: 4d1c8dbfc7606efda50637ba17790ecafc80a976
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f01734d4ec9de323325dc793756f421388542ef2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456822"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302012"
 ---
 # <a name="catlmodule-class"></a>CAtlModule-Klasse
 
@@ -44,7 +44,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 |Name|Beschreibung|
 |----------|-----------------|
 |[CAtlModule::CAtlModule](#catlmodule)|Der Konstruktor.|
-|[CAtlModule:: ~ CAtlModule](#dtor)|Der Destruktor.|
+|[CAtlModule::~CAtlModule](#dtor)|Der Destruktor.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -122,7 +122,7 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 *pFunc*<br/>
 Zeiger auf die Funktion hinzufügen.
 
-*Data Warehouse*<br/>
+*dw*<br/>
 Benutzerdefinierte Daten an die Funktion übergeben.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -266,7 +266,7 @@ Ein Ressourcenname.
 *nResID*<br/>
 Eine Ressourcen-ID
 
-*bRegistrieren Sie sich*<br/>
+*bRegister*<br/>
 True, wenn das Objekt registriert werden soll. "False" andernfalls.
 
 *pMapEntries*<br/>
@@ -300,7 +300,7 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 *lpszRes*<br/>
 Ein Ressourcenname.
 
-*bRegistrieren Sie sich*<br/>
+*bRegister*<br/>
 Gibt an, ob das Objekt registriert werden soll.
 
 *pMapEntries*<br/>
@@ -338,7 +338,7 @@ Eine Ressourcen-ID
 *lpszRes*<br/>
 Ein Ressourcenname.
 
-*bRegistrieren Sie sich*<br/>
+*bRegister*<br/>
 Gibt an, ob das Ressourcenskript registriert werden soll.
 
 *pMapEntries*<br/>

@@ -7,12 +7,12 @@ f1_keywords:
 - PPL/concurrency::task_group::task_group
 helpviewer_keywords:
 - task_group class
-ms.openlocfilehash: 1ba7251afca80c561bd8861968c35e3242c1507a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 545b368b3042da74a42db5a6ea30e97054d5fd03
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588850"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294134"
 ---
 # <a name="taskgroup-class"></a>task_group-Klasse
 
@@ -131,7 +131,7 @@ Der Typ des Funktionsobjekts, das aufgerufen wird, um den Text der Aufgabenhandl
 *_Func*<br/>
 Eine Funktion, die aufgerufen wird, um den Text der Aufgabe aufzurufen. Dies ist möglicherweise ein Lambda-Ausdruck oder ein anderes Objekt, das eine Version von den Funktionsaufrufoperator mit der Signatur unterstützt `void operator()()`.
 
-*_Platzierung*<br/>
+*_Placement*<br/>
 Ein Verweis auf den Speicherort, in denen die Aufgabe, durch dargestellt, die `_Func` Parameter sollte ausgeführt werden.
 
 *_Task_handle*<br/>
@@ -211,7 +211,7 @@ Ein Abbruchtoken, das diese Aufgabengruppe zugeordnet werden soll. Wenn das Toke
 
 Der Konstruktor, die ein Abbruchtoken akzeptiert erstellt eine `task_group` wird, die abgebrochen werden, wenn die Quelle mit dem Token verknüpften abgebrochen wird. Als explizites Abbruchtoken bereitstellen, werden auch diese Aufgabengruppe aus der Einbeziehung in einen impliziten Abbruch von einer übergeordneten Gruppe mit einem anderen Token "oder" kein Token isoliert.
 
-##  <a name="dtor"></a> ~ Task_group
+##  <a name="dtor"></a> ~task_group
 
 Zerstört ein `task_group`-Objekt. Es wird erwartet, rufen Sie entweder die `wait` oder `run_and_wait` Methode für das Objekt vor der Destruktor ausgeführt, es sei denn, der Destruktor als Ergebnis der stapelentladung aufgrund einer Ausnahme ausgeführt wird.
 

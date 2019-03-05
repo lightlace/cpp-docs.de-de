@@ -18,12 +18,12 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - OLE menus and resources [MFC]
 ms.assetid: 52bfa086-7d3d-466f-94c7-c7061f3bdb3a
-ms.openlocfilehash: 8b8e278564c2c293cabfcd56ab9ce2cdb4807e19
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e8f8c7fa8e24349a741b99822f13d5473373e17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511734"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268524"
 ---
 # <a name="menus-and-resources-ole"></a>Menüs und Ressourcen (OLE)
 
@@ -39,16 +39,16 @@ OLE visuelle Bearbeitung zusätzliche stellt Anforderungen an die im Menü und a
 
 Dies erfordert drei verschiedene Menülayouts, eine für jeden möglichen Modus der Anwendung. Zugriffstastentabellen sind auch für jeden neuen Modus erforderlich. Eine Container-Anwendung kann, oder es unterstützen möglicherweise keine direkte Aktivierung; Wenn dies der Fall ist, benötigt eine neue Menüstruktur und zugeordnete Zugriffstastentabellen.
 
-Direkte Aktivierung erfordert, dass die Container und Server-Anwendungen für Menüs, Symbolleisten und Status Leiste Speicherplatz aushandeln müssen. Alle Ressourcen müssen dabei bedenken entworfen werden. Der Artikel [Menüs und Ressourcen: Menüs schachteln](../mfc/menus-and-resources-menu-merging.md) in diesem Thema ausführlich behandelt.
+Direkte Aktivierung erfordert, dass die Container und Server-Anwendungen für Menüs, Symbolleisten und Status Leiste Speicherplatz aushandeln müssen. Alle Ressourcen müssen dabei bedenken entworfen werden. Der Artikel [Menüs und Ressourcen: Menü zusammenführen](../mfc/menus-and-resources-menu-merging.md) in diesem Thema ausführlich behandelt.
 
 Aufgrund dieser Probleme können mit der Anwendungs-Assistenten erstellte OLE-dokumentanwendungen bis zu vier separate Menüs und tabellenressourcen Accelerator haben. Diese werden aus den folgenden Gründen verwendet:
 
 |Ressourcenname|Mit|
 |-------------------|---------|
 |IDR_MAINFRAME|In einer MDI-Anwendung, wenn keine Datei geöffnet ist, oder in einer SDI-Anwendung, unabhängig vom geöffneten Dateien verwendet. Dies ist die standardmäßige Menü in nicht-OLE-Anwendungen verwendet.|
-|IDR_\<Projekt > Typ|In einer MDI-Anwendung verwendet, wenn Dateien geöffnet sind. Verwendet, wenn eine Anwendung eigenständig ausgeführt wird. Dies ist die standardmäßige Menü in nicht-OLE-Anwendungen verwendet.|
-|IDR_\<Projekt > TYPE_SRVR_IP|Von den Server oder den Container verwendet, wenn ein Objekt öffnen vorhanden ist.|
-|IDR_\<Projekt > TYPE_SRVR_EMB|Von einer Serveranwendung verwendet, wenn ein Objekt ohne Verwendung der direkten Aktivierung geöffnet wird.|
+|IDR_\<project>TYPE|In einer MDI-Anwendung verwendet, wenn Dateien geöffnet sind. Verwendet, wenn eine Anwendung eigenständig ausgeführt wird. Dies ist die standardmäßige Menü in nicht-OLE-Anwendungen verwendet.|
+|IDR_\<project>TYPE_SRVR_IP|Von den Server oder den Container verwendet, wenn ein Objekt öffnen vorhanden ist.|
+|IDR_\<project>TYPE_SRVR_EMB|Von einer Serveranwendung verwendet, wenn ein Objekt ohne Verwendung der direkten Aktivierung geöffnet wird.|
 
 Jedes dieser Ressourcennamen darstellt ein Menü und, in der Regel einer Zugriffstastentabelle. Ein ähnliches Schema sollte in MFC-Anwendungen verwendet werden, die nicht mit der Anwendungs-Assistenten erstellt werden.
 
@@ -58,9 +58,8 @@ Die folgenden Artikel behandeln die Themen im Zusammenhang mit Containern, Serve
 
 - [Menüs und Ressourcen: Servererweiterungen](../mfc/menus-and-resources-server-additions.md)
 
-- [Menüs und Ressourcen: Menüs schachteln](../mfc/menus-and-resources-menu-merging.md)
+- [Menüs und Ressourcen: Zusammenführen von Menüs](../mfc/menus-and-resources-menu-merging.md)
 
 ## <a name="see-also"></a>Siehe auch
 
 [OLE](../mfc/ole-in-mfc.md)
-

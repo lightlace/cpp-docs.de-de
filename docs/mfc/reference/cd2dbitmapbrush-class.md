@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CD2DBitmapBrush [MFC], m_pBitmapBrush
 - CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
-ms.openlocfilehash: 59c4e5f4e55947a4eab7a5258d8fe2b943bab3ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1569039db8c1f85d3091282b55d7eda253444deb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501568"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294407"
 ---
 # <a name="cd2dbitmapbrush-class"></a>CD2DBitmapBrush-Klasse
 
@@ -66,7 +66,7 @@ class CD2DBitmapBrush : public CD2DBrush;
 |Name|Beschreibung|
 |----------|-----------------|
 |[CD2DBitmapBrush::CD2DBitmapBrush](#cd2dbitmapbrush)|Überladen. Erstellt eine CD2DBitmapBrush-Objekt, aus der Datei.|
-|[CD2DBitmapBrush:: ~ CD2DBitmapBrush](#dtor)|Der Destruktor. Wird aufgerufen, wenn ein D2D Bitmap Brush-Objekt zerstört wird.|
+|[CD2DBitmapBrush::~CD2DBitmapBrush](#dtor)|Der Destruktor. Wird aufgerufen, wenn ein D2D Bitmap Brush-Objekt zerstört wird.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -77,7 +77,7 @@ class CD2DBitmapBrush : public CD2DBrush;
 |[CD2DBitmapBrush::Destroy](#destroy)|Zerstört ein CD2DBitmapBrush-Objekt. (Überschreibt [CD2DBrush:: Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|
 |[CD2DBitmapBrush::Detach](#detach)|Resource-Schnittstelle aus dem Objekt getrennt|
 |[CD2DBitmapBrush::Get](#get)|Gibt die ID2D1BitmapBrush-Schnittstelle|
-|[CD2DBitmapBrush::getBitmap](#getbitmap)|Ruft die Bitmapquelle, die diesen Pinsel zum Zeichnen verwendet werden|
+|[CD2DBitmapBrush::GetBitmap](#getbitmap)|Ruft die Bitmapquelle, die diesen Pinsel zum Zeichnen verwendet werden|
 |[CD2DBitmapBrush::GetExtendModeX](#getextendmodex)|Ruft die Methode, die mit der die Pinsel Bereiche nebeneinander anordnet, die über seine Bitmap erweitern|
 |[CD2DBitmapBrush::GetExtendModeY](#getextendmodey)|Ruft die Methode, die mit der der Pinsel vertikal Bereiche Kacheln, die über seine Bitmap erweitern|
 |[CD2DBitmapBrush::GetInterpolationMode](#getinterpolationmode)|Ruft die Interpolationsmethode verwendet, wenn die Pinselbitmap skaliert oder gedreht wird|
@@ -96,7 +96,7 @@ class CD2DBitmapBrush : public CD2DBrush;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CD2DBitmapBrush::Operator ID2D1BitmapBrush *](#operator_id2d1bitmapbrush_star)|Gibt die ID2D1BitmapBrush-Schnittstelle|
+|[CD2DBitmapBrush::operator ID2D1BitmapBrush*](#operator_id2d1bitmapbrush_star)|Gibt die ID2D1BitmapBrush-Schnittstelle|
 
 ### <a name="protected-data-members"></a>Geschützte Datenmember
 
@@ -258,7 +258,7 @@ ID2D1BitmapBrush* Get();
 
 Zeiger auf eine ID2D1BitmapBrush-Schnittstelle oder NULL, wenn das Objekt noch nicht initialisiert ist.
 
-##  <a name="getbitmap"></a>  CD2DBitmapBrush::getBitmap
+##  <a name="getbitmap"></a>  CD2DBitmapBrush::GetBitmap
 
 Ruft die Bitmapquelle, die diesen Pinsel zum Zeichnen verwendet werden
 

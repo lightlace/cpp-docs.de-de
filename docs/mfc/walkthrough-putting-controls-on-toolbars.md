@@ -1,18 +1,18 @@
 ---
-title: 'Exemplarische Vorgehensweise: Steuerelemente in eine Symbolleiste einfügen'
+title: 'Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf der Symbolleiste'
 ms.date: 09/20/2018
 helpviewer_keywords:
 - Customize dialog box, adding controls
 - toolbars [MFC], adding controls
 ms.assetid: 8fc94bdf-0da7-45d9-8bc4-52b7b1edf205
-ms.openlocfilehash: 3e0cc066e39cc71833e2061a1964619d04a80be3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b5b8685b3062bf63187a765b7e90e26f8c65681
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580296"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291387"
 ---
-# <a name="walkthrough-putting-controls-on-toolbars"></a>Exemplarische Vorgehensweise: Steuerelemente in eine Symbolleiste einfügen
+# <a name="walkthrough-putting-controls-on-toolbars"></a>Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf der Symbolleiste
 
 Dieser Artikel beschreibt, wie Sie eine Symbolleisten-Schaltfläche hinzufügen, die ein Windows-Steuerelement zu einer Symbolleiste enthält. In MFC muss eine Symbolleisten-Schaltfläche einer [CMFCToolBarButton-Klasse](../mfc/reference/cmfctoolbarbutton-class.md)-abgeleitete Klasse sein, z. B. [CMFCToolBarComboBoxButton-Klasse](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [CMFCToolBarEditBoxButton-Klasse](../mfc/reference/cmfctoolbareditboxbutton-class.md), [CMFCDropDownToolbarButton-Klasse](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), oder [CMFCToolBarMenuButton-Klasse](../mfc/reference/cmfctoolbarmenubutton-class.md).
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - class libraries [MFC], MFC
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
-ms.openlocfilehash: ceedf5c02d92059058bc72942a74852eb8146d38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a55bfae8599e2b221cb853cb17bd4113839fb9c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564722"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270968"
 ---
 # <a name="general-mfc-topics"></a>Allgemeine MFC-Themen
 
@@ -33,7 +33,7 @@ Das MFC-Framework ist ein leistungsfähiger Ansatz, mit dem Sie auf der Arbeit v
 
 [Erstellen im Framework](../mfc/building-on-the-framework.md)
 
-[CWinApp: Die Anwendungsklasse](../mfc/cwinapp-the-application-class.md)
+[CWinApp: Die Anwendungsserver-Klasse](../mfc/cwinapp-the-application-class.md)
 
 [Dokumentvorlagen und der Erstellungsvorgang für Dokumente und Ansichten](../mfc/document-templates-and-the-document-view-creation-process.md)
 
@@ -47,7 +47,7 @@ Das MFC-Framework ist ein leistungsfähiger Ansatz, mit dem Sie auf der Arbeit v
 
 [Anforderungen für die Erstellung von Windows Vista-Standardsteuerelementen](../mfc/build-requirements-for-windows-vista-common-controls.md)
 
-[Vorgehensweise: Hinzufügen von Unterstützung für den Neustart-Manager](../mfc/how-to-add-restart-manager-support.md)
+[Vorgehensweise: Hinzufügen von Unterstützung für Neustart-Manager](../mfc/how-to-add-restart-manager-support.md)
 
 [Dynamisches Layout](../mfc/dynamic-layout.md)
 
@@ -58,4 +58,3 @@ Weitere Informationen über ATL finden Sie unter [Active Template Library Refere
 ## <a name="see-also"></a>Siehe auch
 
 [Arbeiten mit Fensterobjekten](../mfc/working-with-window-objects.md)
-

@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: c6a4d522a05885468a0dfec3889fb950b16b847f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca4b0f4c8ffc3382984660caec7ae04107c8797a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442678"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301849"
 ---
 # <a name="catlarray-class"></a>CAtlArray-Klasse
 
@@ -59,9 +59,9 @@ Der Code verwendet, um die Elemente kopiert oder verschoben wird.
 |-|-|
 |[Add](#add)|Rufen Sie diese Methode, um das Array-Objekt ein Element hinzufügen.|
 |[Anfügen](#append)|Rufen Sie diese Methode, um den Inhalt eines Arrays am Ende eines anderen hinzufügen.|
-|["AssertValid"](#assertvalid)|Rufen Sie diese Methode, um sicherzustellen, dass das Arrayobjekt gültig ist.|
+|[AssertValid](#assertvalid)|Rufen Sie diese Methode, um sicherzustellen, dass das Arrayobjekt gültig ist.|
 |[CAtlArray](#catlarray)|Der Konstruktor.|
-|[~ CAtlArray](#dtor)|Der Destruktor.|
+|[~CAtlArray](#dtor)|Der Destruktor.|
 |[Kopieren](#copy)|Rufen Sie diese Methode, um die Elemente eines Arrays in ein anderes kopieren.|
 |[FreeExtra](#freeextra)|Rufen Sie diese Methode, um leere Elemente aus dem Array entfernt.|
 |[GetAt](#getat)|Rufen Sie diese Methode, um ein einzelnes Element aus dem Arrayobjekt abzurufen.|
@@ -69,10 +69,10 @@ Der Code verwendet, um die Elemente kopiert oder verschoben wird.
 |[GetData](#getdata)|Rufen Sie diese Methode, um einen Zeiger auf das erste Element im Array zurückzugeben.|
 |[InsertArrayAt](#insertarrayat)|Rufen Sie diese Methode, um ein Array in eine andere einzufügen.|
 |[InsertAt](#insertat)|Rufen Sie diese Methode zum Einfügen eines neuen Elements (oder mehrere Kopien eines Elements), in das Array-Objekt.|
-|["IsEmpty"](#isempty)|Rufen Sie diese Methode zu testen, ob das Array leer ist.|
-|["RemoveAll"](#removeall)|Rufen Sie diese Methode, um alle Elemente aus dem Arrayobjekt zu entfernen.|
+|[IsEmpty](#isempty)|Rufen Sie diese Methode zu testen, ob das Array leer ist.|
+|[RemoveAll](#removeall)|Rufen Sie diese Methode, um alle Elemente aus dem Arrayobjekt zu entfernen.|
 |[RemoveAt](#removeat)|Rufen Sie diese Methode, um ein oder mehrere Elemente aus dem Array entfernt.|
-|["SetAt"](#setat)|Rufen Sie diese Methode, um den Wert eines Elements in das Array-Objekt festlegen.|
+|[SetAt](#setat)|Rufen Sie diese Methode, um den Wert eines Elements in das Array-Objekt festlegen.|
 |[SetAtGrow](#setatgrow)|Rufen Sie diese Methode, um den Wert eines Elements in das Array-Objekt, und erweitern das Array als erforderlich festgelegt.|
 |[SetCount](#setcount)|Rufen Sie diese Methode, um die Größe des Array-Objekts festgelegt.|
 
@@ -80,7 +80,7 @@ Der Code verwendet, um die Elemente kopiert oder verschoben wird.
 
 |||
 |-|-|
-|[Operator&#91;&#93;](#operator_at)|Rufen Sie diesen Operator, um einen Verweis auf ein Element im Array zurückzugeben.|
+|[operator &#91;&#93;](#operator_at)|Rufen Sie diesen Operator, um einen Verweis auf ein Element im Array zurückzugeben.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -114,7 +114,7 @@ size_t Add();
 
 ### <a name="parameters"></a>Parameter
 
-*Element*<br/>
+*element*<br/>
 Das Element, das dem Array hinzugefügt werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -255,7 +255,7 @@ E& GetAt(size_t iElement) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*"IElement"*<br/>
+*iElement*<br/>
 Der Indexwert des Arrayelements zurückgegeben.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -354,10 +354,10 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 
 ### <a name="parameters"></a>Parameter
 
-*"IElement"*<br/>
+*iElement*<br/>
 Der Index, in dem das Element oder Elemente sind, eingefügt werden soll.
 
-*Element*<br/>
+*element*<br/>
 Der Wert des Elements oder Elemente eingefügt werden soll.
 
 *nCount*<br/>
@@ -404,7 +404,7 @@ const E& operator[](size_t ielement) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*"IElement"*<br/>
+*iElement*<br/>
 Der Indexwert des Arrayelements zurückgegeben.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -453,7 +453,7 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 
 ### <a name="parameters"></a>Parameter
 
-*"IElement"*<br/>
+*iElement*<br/>
 Der Index des ersten Elements, das entfernt werden soll.
 
 *nCount*<br/>
@@ -479,10 +479,10 @@ void SetAt(size_t iElement, INARGTYPE element);
 
 ### <a name="parameters"></a>Parameter
 
-*"IElement"*<br/>
+*iElement*<br/>
 Der Index verweist auf das Arrayelement festgelegt.
 
-*Element*<br/>
+*element*<br/>
 Der neue Wert des angegebenen Elements.
 
 ### <a name="remarks"></a>Hinweise
@@ -533,10 +533,10 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 
 ### <a name="parameters"></a>Parameter
 
-*"IElement"*<br/>
+*iElement*<br/>
 Der Index verweist auf das Arrayelement festgelegt.
 
-*Element*<br/>
+*element*<br/>
 Der neue Wert des angegebenen Elements.
 
 ### <a name="remarks"></a>Hinweise

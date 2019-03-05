@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - PtInCircle custom method [MFC]
 ms.assetid: 8f8dc344-44a0-4021-8db5-4cdd3d700e18
-ms.openlocfilehash: bd67e5f248f389755b1bf25854867322af60878e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4f5a7dc844d80ae94df8af7c0b2eea141376f9e9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554556"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278846"
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>MFC-ActiveX-Steuerelemente: Hinzufügen von benutzerdefinierten Methoden
 
@@ -26,7 +26,7 @@ Ein ActiveX-Steuerelement-Benutzer kann eine benutzerdefinierte Methode zu einem
 Das folgende Verfahren veranschaulicht die benutzerdefinierte Methode PtInCircle Codegerüst eines ActiveX-Steuerelements hinzufügen. PtInCircle bestimmt, ob die Koordinaten, die an das Steuerelement innerhalb oder außerhalb des Kreises. Dieses Verfahren kann auch verwendet werden, andere benutzerdefinierte Methoden hinzufügen. Ersetzen Sie den Namen Ihrer benutzerdefinierten Methode und seine Parameter für die PtInCircle Methodennamen und Parameter.
 
 > [!NOTE]
->  Dieses Beispiel verwendet die `InCircle` Funktion aus dem Artikel Ereignisse. Weitere Informationen zu dieser Funktion, finden Sie im Artikel [MFC-ActiveX-Steuerelemente: Hinzufügen benutzerdefinierter Ereignisse ein ActiveX-Steuerelement](../mfc/mfc-activex-controls-adding-custom-events.md).
+>  Dieses Beispiel verwendet die `InCircle` Funktion aus dem Artikel Ereignisse. Weitere Informationen zu dieser Funktion, finden Sie im Artikel [MFC-ActiveX-Steuerelemente: Hinzufügen von benutzerdefinierten Ereignissen zu einem ActiveX-Steuerelement](../mfc/mfc-activex-controls-adding-custom-events.md).
 
 #### <a name="to-add-the-ptincircle-custom-method-using-the-add-method-wizard"></a>Die benutzerdefinierte PtInCircle-Methode, die mithilfe des Assistenten zum Hinzufügen einer Methode hinzufügen
 
@@ -80,4 +80,3 @@ Abschließend fügt der Assistent zum Hinzufügen einer Methode die Stub-Funktio
 
 [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)<br/>
 [Symbole in der Klassenansicht und im Objektbrowser](/visualstudio/ide/class-view-and-object-browser-icons)
-

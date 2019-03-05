@@ -7,20 +7,20 @@ helpviewer_keywords:
 - objects [MFC], graphic objects
 - one-stage and two-stage construction of objects [MFC]
 ms.assetid: 5a1c410c-4a4b-4dd9-a2ec-ced831aa7f21
-ms.openlocfilehash: bdfb7879bc926435bdcd72d6776646c449ffef80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 871db7abd2682d557bf2e80e9cb97624f0dc53a6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623313"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263636"
 ---
 # <a name="one-stage-and-two-stage-construction-of-objects"></a>Ein- oder zweistufige Erstellung von Objekten
 
 Sie haben die Wahl zwischen zwei Techniken für die grafische Objekte, z. B. Stifte und Pinsel erstellen:
 
-- *1-Stage-Konstruktion*: Erstellen und Initialisieren des Objekts in einem Schritt ausgeführt, mit dem Konstruktor.
+- *1-Stage-Konstruktion*: Erstellen Sie und initialisieren Sie das Objekt in einem Schritt ausgeführt, alle mit dem Konstruktor.
 
-- *Zweistufige Konstruktion*: Erstellen und initialisieren Sie das Objekt in zwei separaten Phasen. Der Konstruktor erstellt das Objekt, und keine Initialisierungsfunktion initialisiert.
+- *Zweistufige Konstruktion*: Erstellen Sie und initialisieren Sie das Objekt in zwei separaten Phasen. Der Konstruktor erstellt das Objekt, und keine Initialisierungsfunktion initialisiert.
 
 Erstellung in zwei Schritten ist immer sicherer. Bei Erstellung der ein-kann der Konstruktor eine Ausnahme ausgelöst, wenn Sie die falsche Argumente angeben oder die speicherbelegung fehlschlägt. Dieses Problem ist aufgrund der zweistufige Konstruktion vermieden werden, müssen Sie für den Fehler zu überprüfen. In beiden Fällen ist das Zerstören des-Objekts den gleichen Prozess aus.
 
@@ -46,4 +46,3 @@ Das folgende kurze Beispiel zeigt beide Methoden zum Erstellen ein Pen-Objekt:
 ## <a name="see-also"></a>Siehe auch
 
 [Grafikobjekte](../mfc/graphic-objects.md)
-

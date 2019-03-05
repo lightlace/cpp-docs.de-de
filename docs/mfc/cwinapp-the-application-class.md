@@ -1,5 +1,5 @@
 ---
-title: 'CWinApp: Die Anwendungsklasse'
+title: 'CWinApp: Die Application-Klasse'
 ms.date: 11/04/2016
 f1_keywords:
 - CWinApp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - WinMain method [MFC], in MFC
 - CWinApp class [MFC], WinMain
 ms.assetid: 935822bb-d463-481b-a5f6-9719d68ed1d5
-ms.openlocfilehash: a19d510dc4c8835497ff9e1bb7d5ca6242206fe9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9f0d4f5ba6b6b070b23ce98ecda8c7accf44934
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551319"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258709"
 ---
-# <a name="cwinapp-the-application-class"></a>CWinApp: Die Anwendungsklasse
+# <a name="cwinapp-the-application-class"></a>CWinApp: Die Application-Klasse
 
 Die Hauptanwendungsklasse in MFC kapselt die Initialisierung, Ausführung und Beendigung einer Anwendung für das Windows-Betriebssystem. Eine Anwendung, die auf das Framework muss eine und nur ein Objekt einer Klasse abgeleitet [CWinApp](../mfc/reference/cwinapp-class.md). Dieses Objekt wird erstellt, bevor Windows erstellt werden.
 
@@ -43,4 +43,3 @@ Zum Initialisieren der Anwendung `WinMain` Aufrufe des Anwendungsobjekts `InitAp
 [CWinApp und der MFC-Anwendungs-Assistent](../mfc/cwinapp-and-the-mfc-application-wizard.md)<br/>
 [Überschreibbare CWinApp-Memberfunktionen](../mfc/overridable-cwinapp-member-functions.md)<br/>
 [Spezielle CWinApp-Dienste](../mfc/special-cwinapp-services.md)
-

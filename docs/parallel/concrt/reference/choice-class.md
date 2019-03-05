@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-ms.openlocfilehash: 60b09b674bec58a7d35a9a37d9a8f4c40d8cd522
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: aa4945bb5f9ef28937487ba504e23c461992b263
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522726"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267016"
 ---
 # <a name="choice-class"></a>choice-Klasse
 
@@ -57,7 +57,7 @@ Ein `tuple`-basierten Typ, der die Nutzlast der Eingabequellen darstellt.
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[Auswahl](#ctor)|Überladen. Erstellt einen `choice` -Meldungsblock.|
+|[choice](#ctor)|Überladen. Erstellt einen `choice` -Meldungsblock.|
 |[~ Choice-Destruktor](#dtor)|Zerstört die `choice` Meldungsblock.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
@@ -66,7 +66,7 @@ Ein `tuple`-basierten Typ, der die Nutzlast der Eingabequellen darstellt.
 |----------|-----------------|
 |[accept](#accept)|Akzeptiert eine Meldung, die von diesem angeboten wurde `choice` Block übertragen des Besitzes an den Aufrufer.|
 |[acquire_ref](#acquire_ref)|Eine Verweisanzahl dazu `choice` Meldungsblock, um löschen zu verhindern.|
-|[Nutzen](#consume)|Nimmt eine Meldung, die zuvor von diesem angebotenen `choice` -Meldungsblock und erfolgreich vom Ziel übertragen des Besitzes an den Aufrufer reserviert.|
+|[consume](#consume)|Nimmt eine Meldung, die zuvor von diesem angebotenen `choice` -Meldungsblock und erfolgreich vom Ziel übertragen des Besitzes an den Aufrufer reserviert.|
 |[has_value](#has_value)|Überprüft, ob dies `choice` Meldungsblock noch mit einem Wert initialisiert wurde.|
 |[index](#index)|Gibt einen Index in die `tuple` , die vom ausgewählten Element darstellt, die `choice` Meldungsblock.|
 |[link_target](#link_target)|Verknüpft einen Zielblock mit diesem `choice` Meldungsblock.|
@@ -75,7 +75,7 @@ Ein `tuple`-basierten Typ, der die Nutzlast der Eingabequellen darstellt.
 |[reserve](#reserve)|Reserviert eine Meldung, die zuvor von diesem angebotenen `choice` Meldungsblock.|
 |[unlink_target](#unlink_target)|Hebt die Verknüpfung mit einem Zielblock und dadurch `choice` Meldungsblock.|
 |[unlink_targets](#unlink_targets)|Hebt die Verknüpfung alle Ziele aus diesem `choice` Meldungsblock. (Überschreibt [ISource:: Unlink_targets](isource-class.md#unlink_targets).)|
-|[Wert](#value)|Ruft die Meldung ab, dessen Index, indem ausgewählt wurde, die `choice` Meldungsblock.|
+|[value](#value)|Ruft die Meldung ab, dessen Index, indem ausgewählt wurde, die `choice` Meldungsblock.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -174,7 +174,7 @@ Die Runtime verwendet das Standardplanungsprogramm, wenn Sie den `_PScheduler` -
 
 Bewegungskonstruktion wird bei einer aktiven Sperre nicht ausgeführt, d. h., der Benutzer muss sicherstellen, dass zum Zeitpunkt der Bewegung keine einfachen Aufgaben aktiv sind. Andernfalls können zahlreiche Wettläufe auftreten, wodurch Ausnahmen oder inkonsistente Zuständen verursacht werden.
 
-##  <a name="dtor"></a> ~ Choice
+##  <a name="dtor"></a> ~choice
 
 Zerstört die `choice` Meldungsblock.
 

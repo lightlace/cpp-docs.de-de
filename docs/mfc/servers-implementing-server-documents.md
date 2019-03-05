@@ -7,12 +7,12 @@ helpviewer_keywords:
 - servers, server documents
 - server documents [MFC], implementing
 ms.assetid: cca1451a-ad09-47ed-b56e-bccd78fc86d1
-ms.openlocfilehash: 17c90eb6350a2bf3cd5b695a99dea954dd89a033
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17ced1cdb0b40b13fbda68150030efde5735ba7b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436490"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261868"
 ---
 # <a name="servers-implementing-server-documents"></a>Server: Implementieren von Serverdokumenten
 
@@ -28,7 +28,7 @@ Dieser Artikel beschreibt die Schritte, die Sie ausführen müssen, um erfolgrei
 
    `OnGetEmbeddedItem` wird aufgerufen, wenn der Benutzer eine containeranwendung erstellt oder ein eingebettetes Element bearbeitet. Es sollte ein Element, das gesamte Dokument darstellt, zurück. Dies sollte es sich um ein Objekt von Ihr `COleServerItem`-abgeleitete Klasse.
 
-1. Überschreiben der `Serialize` Memberfunktion versucht, den Inhalt des Dokuments serialisieren. Sie müssen nicht die Liste der Serverelemente serialisiert, es sei denn, Sie sie mithilfe die systemeigenen Daten in Ihrem Dokument darstellen. Weitere Informationen finden Sie unter *Berichtsserverelemente implementieren* in diesem Artikel [Server: Serverelemente](../mfc/servers-server-items.md).
+1. Überschreiben der `Serialize` Memberfunktion versucht, den Inhalt des Dokuments serialisieren. Sie müssen nicht die Liste der Serverelemente serialisiert, es sei denn, Sie sie mithilfe die systemeigenen Daten in Ihrem Dokument darstellen. Weitere Informationen finden Sie unter *Berichtsserverelemente implementieren* in diesem Artikel [Server: Berichtsserverelemente](../mfc/servers-server-items.md).
 
 Wenn ein Serverdokument erstellt wird, registriert das Framework automatisch das Dokument mit dem OLE-System-DLLs. Dadurch werden die DLLs, die Serverdokumente zu identifizieren.
 
@@ -37,7 +37,6 @@ Weitere Informationen finden Sie unter [COleServerItem](../mfc/reference/coleser
 ## <a name="see-also"></a>Siehe auch
 
 [Server](../mfc/servers.md)<br/>
-[Server: Serverelemente](../mfc/servers-server-items.md)<br/>
+[Server: Server-Elemente](../mfc/servers-server-items.md)<br/>
 [Server: Implementieren eines Servers](../mfc/servers-implementing-a-server.md)<br/>
-[Server: Implementieren eines In-Place-Frame-Fensters](../mfc/servers-implementing-in-place-frame-windows.md)
-
+[Server: Implementieren von In-Place-Frame-Windows](../mfc/servers-implementing-in-place-frame-windows.md)

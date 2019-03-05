@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: b52ae91b7ce0111725e5ba21a7f8ca8aaa6779e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b45ac09ff87c191e55e403951fdff18cae33256d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517675"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292275"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu-Klasse
 
@@ -435,7 +435,7 @@ virtual BOOL Create(
 *hMenu*<br/>
 [in] Ein Handle für eine Menüressource.
 
-*Blockiert*<br/>
+*bLocked*<br/>
 [in] Ein boolescher Parameter, der angibt, ob Sie im Menü angepasst werden kann. FALSE gibt an, dass Sie im Popupmenü angepasst werden kann.
 
 *bOwnMessage*<br/>
@@ -467,8 +467,8 @@ virtual CPane* CreateTearOffBar(
 ### <a name="parameters"></a>Parameter
 
 [in] *pWndMain*<br/>
-[in] *UiID*<br/>
-[in] *Wert*<br/>
+[in] *uiID*<br/>
+[in] *lpszName*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -518,7 +518,7 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] TRUE, um den Sound, andernfalls "false" aktivieren.
 
 ### <a name="remarks"></a>Hinweise
@@ -533,7 +533,7 @@ void EnableResize(CSize sizeMinResize);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *SizeMinResize*<br/>
+[in] *sizeMinResize*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -569,7 +569,7 @@ CMFCToolBarMenuButton* FindSubItemByCommand(UINT uiCmd) const;
 
 ### <a name="parameters"></a>Parameter
 
-[in] *UiCmd*<br/>
+[in] *uiCmd*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -633,9 +633,9 @@ Die folgende Tabelle enthält die möglichen Animationstypen.
 |||
 |-|-|
 |NO_ANIMATION|Im Popupmenü nicht animiert ist, und es wird sofort angezeigt.  |
-|ERWEITERN|Das Framework wird das Popupmenü aus der oberen linken Ecke der unteren rechten Ecke.  |
+|UNFOLD|Das Framework wird das Popupmenü aus der oberen linken Ecke der unteren rechten Ecke.  |
 |FOLIE|Im Popupmenü wird von oben nach unten verschoben.  |
-|AUSBLENDEN|Im Popupmenü ist erst transparent und allmählich verdichtet.  |
+|FADE|Im Popupmenü ist erst transparent und allmählich verdichtet.  |
 
 ##  <a name="getdropdirection"></a>  CMFCPopupMenu::GetDropDirection
 
@@ -754,7 +754,7 @@ virtual CWnd* GetParentArea(CRect& rectParentBtn);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *RectParentBtn*<br/>
+[in] *rectParentBtn*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -894,7 +894,7 @@ int InsertItem(
 
 ### <a name="parameters"></a>Parameter
 
-*Schaltfläche "*<br/>
+*button*<br/>
 [in] Ein Verweis auf das Menüelement hinzufügen.
 
 *iInsertAt*<br/>
@@ -1119,7 +1119,7 @@ virtual void OnChooseItem(UINT uidCmdID);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *UidCmdID*<br/>
+[in] *uidCmdID*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1369,7 +1369,7 @@ void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Typ*<br/>
+[in] *Type*<br/>
 
 ### <a name="remarks"></a>Hinweise
 

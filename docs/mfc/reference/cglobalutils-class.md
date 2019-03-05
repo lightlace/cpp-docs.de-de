@@ -1,5 +1,5 @@
 ---
-title: CGlobalUtils-Klasse
+title: CGlobalUtils Class
 ms.date: 10/18/2018
 f1_keywords:
 - CGlobalUtils
@@ -38,14 +38,14 @@ helpviewer_keywords:
 - CGlobalUtils [MFC], StringFromCy
 - CGlobalUtils [MFC], StringFromDecimal
 ms.assetid: 2c5bd1a6-f80c-4e79-a476-b4ceebabfb2f
-ms.openlocfilehash: bd382a7f0143d1dce75815430741ef58cee0f8c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c92d3d74bac5e14ed791c6d77cca21eb66a4735
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643312"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271657"
 ---
-# <a name="cglobalutils-class"></a>CGlobalUtils-Klasse
+# <a name="cglobalutils-class"></a>CGlobalUtils Class
 
 Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.
 
@@ -117,17 +117,17 @@ void CalcExpectedDockedRect(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *BarContainerManager*<br/>
+[in] *barContainerManager*<br/>
 
 [in] *pWndTodock*<br/>
 
-[in] *PtMouse*<br/>
+[in] *ptMouse*<br/>
 
 [out] *RectResult*<br/>
 
 [out] *bDrawTab*<br/>
 
-[out] *PpTargetBar*<br/>
+[out] *ppTargetBar*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -139,7 +139,7 @@ BOOL CanBeAttached(CWnd* pWnd) const;
 
 ### <a name="parameters"></a>Parameter
 
-[in] *aufnehmen*<br/>
+[in] *pWnd*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -153,7 +153,7 @@ BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;
 
 ### <a name="parameters"></a>Parameter
 
-[in] *aufnehmen*<br/>
+[in] *pWnd*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -175,7 +175,7 @@ BOOL CheckAlignment(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *zeigen*<br/>
+[in] *point*<br/>
 
 [in] *pBar*<br/>
 
@@ -187,9 +187,9 @@ BOOL CheckAlignment(
 
 [out] *DwAlignment*<br/>
 
-[in] *DwEnabledDockBars*<br/>
+[in] *dwEnabledDockBars*<br/>
 
-[in] *LpRectBounds*<br/>
+[in] *lpRectBounds*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -207,7 +207,7 @@ BOOL CyFromString(
 
 [out] *cy*<br/>
 
-[in] *Psz*<br/>
+[in] *psz*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -225,7 +225,7 @@ BOOL DecimalFromString(
 
 [out] *decimal*<br/>
 
-[in] *Psz*<br/>
+[in] *psz*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -273,7 +273,7 @@ CDockingManager* GetDockingManager(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *aufnehmen*<br/>
+[in] *pWnd*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -307,11 +307,11 @@ BOOL GetPaneAndAlignFromPoint(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *BarContainerManager*<br/>
+[in] *barContainerManager*<br/>
 
 [in] *pt*<br/>
 
-[out] *PpTargetControlBar*<br/>
+[out] *ppTargetControlBar*<br/>
 
 [out] *DwAlignment*<br/>
 
@@ -331,7 +331,7 @@ HICON GetWndIcon(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *aufnehmen*<br/>
+[in] *pWnd*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 

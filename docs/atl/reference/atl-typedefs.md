@@ -23,12 +23,12 @@ helpviewer_keywords:
 - typedefs
 - ATL, typedefs
 ms.assetid: 7dd05baa-3efb-4e3b-af23-793c610f4560
-ms.openlocfilehash: c723d76f17ad1c74ab98e7348450cea3f03c4d78
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3db32e85ea9cba1e946db6259c00c621650e969
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429314"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290559"
 ---
 # <a name="atl-typedefs"></a>ATL-Typedefs
 
@@ -129,7 +129,7 @@ typedef WORD ATL_URL_PORT;
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** "atlutil.h"
+**Header:** atlutil.h
 
 ##  <a name="ccomdispatchdriver"></a>  CComDispatchDriver
 
@@ -175,7 +175,7 @@ Zusätzlich zu `CComGlobalsThreadModel`, ATL stellt die **Typedef** Namen [CComO
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel`; M = `CComMultiThreadModel`
+S= `CComSingleThreadModel`; M= `CComMultiThreadModel`
 
 Verwendung `CComObjectThreadModel` innerhalb einer einzelnen Objekt-Klasse. Verwendung `CComGlobalsThreadModel` in einem Objekt, mit dem Programm global verfügbar ist oder wenn Sie die Modulressourcen über mehrere Threads hinweg schützen möchten.
 
@@ -215,7 +215,7 @@ Zusätzlich zu `CComObjectThreadModel`, ATL stellt die **Typedef** Namen [CComGl
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel`; M = `CComMultiThreadModel`
+S= `CComSingleThreadModel`; M= `CComMultiThreadModel`
 
 Verwendung `CComObjectThreadModel` innerhalb einer einzelnen Objekt-Klasse. Verwendung `CComGlobalsThreadModel` in einem Objekt, das entweder global verfügbar, mit dem Programm oder wenn die Modulressourcen über mehrere Threads hinweg geschützt werden sollen.
 
@@ -301,7 +301,7 @@ typedef const CUrl* LPCURL;
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** "atlutil.h"
+**Header:** atlutil.h
 
 ##  <a name="defaultthreadtraits"></a>  DefaultThreadTraits
 
@@ -335,7 +335,7 @@ typedef CUrl* LPURL;
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** "atlutil.h"
+**Header:** atlutil.h
 
 ## <a name="see-also"></a>Siehe auch
 

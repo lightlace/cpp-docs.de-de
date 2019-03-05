@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWin32Heap class
 ms.assetid: 69176022-ed98-4e3b-96d8-116b0c58ac95
-ms.openlocfilehash: 8ab0d7b8a0eda44adc900884ef5337b22e621806
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35c12a58adc846e0db6d7ee23f19984acbcfa861
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508315"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297254"
 ---
 # <a name="cwin32heap-class"></a>CWin32Heap-Klasse
 
@@ -43,18 +43,18 @@ class CWin32Heap : public IAtlMemMgr
 |Name|Beschreibung|
 |----------|-----------------|
 |[CWin32Heap::CWin32Heap](#cwin32heap)|Der Konstruktor.|
-|[CWin32Heap:: ~ CWin32Heap](#dtor)|Der Destruktor.|
+|[CWin32Heap::~CWin32Heap](#dtor)|Der Destruktor.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CWin32Heap:: Allocate](#allocate)|Führt eine Belegung eines Speicherblocks vom Heapobjekt durch.|
-|[CWin32Heap:: Attach](#attach)|Fügt die heapobjekt an einem vorhandenen Heap befindet.|
+|[CWin32Heap::Allocate](#allocate)|Führt eine Belegung eines Speicherblocks vom Heapobjekt durch.|
+|[CWin32Heap::Attach](#attach)|Fügt die heapobjekt an einem vorhandenen Heap befindet.|
 |[CWin32Heap::Detach](#detach)|Trennt das heapobjekt aus einem vorhandenen Heap befindet.|
-|[CWin32Heap:: Free](#free)|Zuvor vom Heap zugewiesenen Speicher frei.|
+|[CWin32Heap::Free](#free)|Zuvor vom Heap zugewiesenen Speicher frei.|
 |[CWin32Heap::GetSize](#getsize)|Gibt die Größe eines Speicherblocks vom heapobjekt zugeordnet.|
-|[CWin32Heap:: ReAllocate](#reallocate)|Führt eine Neubelegung eines Speicherblocks vom Heapobjekt durch.|
+|[CWin32Heap::Reallocate](#reallocate)|Führt eine Neubelegung eines Speicherblocks vom Heapobjekt durch.|
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
 

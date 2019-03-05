@@ -9,12 +9,12 @@ helpviewer_keywords:
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: 9c72e9b4964aa76631b1b9d42bfbd158a2ae8fc8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 364f29406b2c00d26ecc4cc69060ed8ec21b743b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604203"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291280"
 ---
 # <a name="mfc-desktop-applications"></a>MFC-Desktopanwendungen
 
@@ -66,7 +66,7 @@ Stellt Links zu den Makros und globale Funktionen in der MFC-Bibliothek bereit.
 Stellt Links zu den Strukturen, Stilen, Rückrufen und den Meldungszuordnungen bereit, die von der MFC-Bibliothek verwendet werden.
 
 [MFC-Assistenten und -Dialogfelder](reference/mfc-wizards-and-dialog-boxes.md)<br/>
-Eine Anleitung für die Funktionen in Visual Studio zum Erstellen von MFC-Anwendungen.
+Eine Anleitung für die Features in Visual Studio zum Erstellen von MFC-Anwendungen.
 
 [Arbeiten mit Ressourcendateien](../windows/working-with-resource-files.md)<br/>
 Verwenden von Ressourcendateien zum Verwalten statischer Benutzeroberflächendaten, wie z. B. UI-Zeichenfolgen und Dialogfeldlayout.

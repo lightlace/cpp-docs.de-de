@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - connection points [C++], global functions
 ms.assetid: bcb4bf50-2155-4e20-b8bb-f2908b03a6e7
-ms.openlocfilehash: 200300eaea2bc98f1d87e2c1859610df8d0cb03b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0313e93ee82bb96f3bfe08e45f70ccfee30dbee6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628929"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263883"
 ---
 # <a name="connection-point-global-functions"></a>Verbindungspunkt für globale Funktionen
 
@@ -55,10 +55,10 @@ HRESULT    AtlAdvise(
 *pUnk*<br/>
 [in] Ein Zeiger auf des Clients `IUnknown`.
 
-*IID*<br/>
+*iid*<br/>
 [in] Die GUID des Verbindungspunkts. Dies ist normalerweise identisch mit der von den Verbindungspunkt verwalteten Ausgangsschnittstelle.
 
-*PDW*<br/>
+*pdw*<br/>
 [out] Ein Zeiger auf das Cookie, das die Verbindung eindeutig identifiziert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -92,10 +92,10 @@ HRESULT    AtlUnadvise(
 *pUnkCP*<br/>
 [in] Ein Zeiger auf die `IUnknown` des Objekts, das mit der Client verbunden ist.
 
-*IID*<br/>
+*iid*<br/>
 [in] Die GUID des Verbindungspunkts. Dies ist normalerweise identisch mit der von den Verbindungspunkt verwalteten Ausgangsschnittstelle.
 
-*Data Warehouse*<br/>
+*dw*<br/>
 [in] Das Cookie, das die Verbindung eindeutig identifiziert.
 
 ### <a name="return-value"></a>Rückgabewert

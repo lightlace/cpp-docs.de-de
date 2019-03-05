@@ -92,12 +92,12 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], DrawDocumentIcon
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
-ms.openlocfilehash: ed786f3449f172f1aa4255a4ca677a400b767e83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 775d977fa1c995c42cc85660b1c9d13aea40a01e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429366"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281520"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton-Klasse
 
@@ -123,10 +123,10 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 |Name|Beschreibung|
 |----------|-----------------|
 |[CMFCToolBarMenuButton::CompareWith](#comparewith)|Vergleicht diese Instanz mit dem angegebenen `CMFCToolBarButton` Objekt. (Überschreibt [CMFCToolBarButton::CompareWith](../../mfc/reference/cmfctoolbarbutton-class.md#comparewith).)|
-|[Cmfctoolbarmenubutton:: CopyFrom](#copyfrom)|Kopiert die Eigenschaften von einer anderen Symbolleistenschaltfläche, auf die Schaltfläche "aktuelle". (Überschreibt [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|
+|[CMFCToolBarMenuButton::CopyFrom](#copyfrom)|Kopiert die Eigenschaften von einer anderen Symbolleistenschaltfläche, auf die Schaltfläche "aktuelle". (Überschreibt [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|
 |[CMFCToolBarMenuButton::CreateFromMenu](#createfrommenu)|Initialisiert das workflowsymbolleisten-Menü aus einem Windows-Menü-Handle.|
 |[CMFCToolBarMenuButton::CreateMenu](#createmenu)|Erstellt ein Windows-Menü, das die Befehle in das workflowsymbolleisten-Menü besteht. Gibt ein Handle auf das Menü "Windows".|
-|[Cmfctoolbarmenubutton:: CreatePopupMenu](#createpopupmenu)|Erstellt ein Popupmenü-Objekt ( [CMFCPopupMenu-Klasse](../../mfc/reference/cmfcpopupmenu-class.md)) das workflowsymbolleisten-Menü angezeigt.|
+|[CMFCToolBarMenuButton::CreatePopupMenu](#createpopupmenu)|Erstellt ein Popupmenü-Objekt ( [CMFCPopupMenu-Klasse](../../mfc/reference/cmfcpopupmenu-class.md)) das workflowsymbolleisten-Menü angezeigt.|
 |[CMFCToolBarMenuButton::EnableQuickCustomize](#enablequickcustomize)||
 |[CMFCToolBarMenuButton::GetCommands](#getcommands)|Bietet schreibgeschützten Zugriff auf die Liste der Befehle in das workflowsymbolleisten-Menü.|
 |[CMFCToolBarMenuButton::GetImageRect](#getimagerect)|Ruft das umschließende Rechteck für das Bild der Schaltfläche ab.|
@@ -137,7 +137,7 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 |[CMFCToolBarMenuButton::IsBorder](#isborder)||
 |[CMFCToolBarMenuButton::IsClickedOnMenu](#isclickedonmenu)||
 |[CMFCToolBarMenuButton::IsDroppedDown](#isdroppeddown)|Bestimmt, ob das Popup-Menü angezeigt wird.|
-|[Cmfctoolbarmenubutton:: Isemptymenuallowed](#isemptymenuallowed)|Wird aufgerufen, durch das Framework, um festzustellen, ob ein Benutzer ein Untermenü des ausgewählten Menüelements öffnen kann.|
+|[CMFCToolBarMenuButton::IsEmptyMenuAllowed](#isemptymenuallowed)|Wird aufgerufen, durch das Framework, um festzustellen, ob ein Benutzer ein Untermenü des ausgewählten Menüelements öffnen kann.|
 |[CMFCToolBarMenuButton::IsExclusive](#isexclusive)|Bestimmt, ob die Schaltfläche mit der im exklusiven Modus, d. h. gibt an, ob das Popupmenü geöffnet bleibt, selbst wenn der Benutzer den Zeiger über einem anderen Symbolleiste oder eine Schaltfläche.|
 |[CMFCToolBarMenuButton::IsMenuPaletteMode](#ismenupalettemode)|Bestimmt, ob das Popupmenü im Palettenmodus befindet.|
 |[CMFCToolBarMenuButton::IsQuickMode](#isquickmode)||
@@ -253,7 +253,7 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 
 ### <a name="parameters"></a>Parameter
 
-[in] *andere*<br/>
+[in] *other*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -267,7 +267,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Src*<br/>
+[in] *src*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -628,7 +628,7 @@ virtual BOOL OnClick(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *aufnehmen*<br/>
+[in] *pWnd*<br/>
 [in] *bDelay*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
@@ -661,7 +661,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *aufnehmen*<br/>
+[in] *pWnd*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -684,7 +684,7 @@ virtual void OnDraw(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *pImages*<br/>
 [in] *bHorz*<br/>
 [in] *bCustomizeMode*<br/>
@@ -706,7 +706,7 @@ virtual int OnDrawOnCustomizeList(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *bSelected*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
@@ -723,7 +723,7 @@ virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Gibt an, das Fenster, das die Dropdown-Menübefehle empfängt. Es kann NULL sein, nur dann, wenn die Symbolleisten-Schaltfläche im Menü ein übergeordnetes Fenster verfügt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -760,7 +760,7 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Ar*<br/>
+[in] *ar*<br/>
 
 ### <a name="remarks"></a>Hinweise
 

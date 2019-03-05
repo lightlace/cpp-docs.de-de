@@ -35,12 +35,12 @@ helpviewer_keywords:
 - ON_WM_ACTIVATEAPP [MFC]
 - ON_WM_CHANGECBCHAIN
 ms.assetid: 4e315896-d646-4b87-b0ab-41a4a753b045
-ms.openlocfilehash: 67ab1620d0ad815cc070935a2b314bbfa2ef1408
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08221e7569a8b4c4f4e8decba410bd1fe40f04d7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596832"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266028"
 ---
 # <a name="wm-message-handlers-a---c"></a>WM_-Meldungshandler: A - C
 
@@ -61,14 +61,13 @@ Die folgenden Einträge der Karte auf der linken Seite entsprechen die Funktions
 |ON_WM_CLIPBOARDUPDATE()|die "void" Afx_msg [OnClipboardUpdate](../../mfc/reference/cwnd-class.md#onclipboardupdate)();|
 |ON_WM_CLOSE()|die "void" Afx_msg [OnClose](../../mfc/reference/cwnd-class.md#onclose)();|
 |ON_WM_COMPACTING()|die "void" Afx_msg [OnCompacting](../../mfc/reference/cwnd-class.md#oncompacting)(UINT);|
-|ON_WM_COMPAREITEM()|Afx_msg Int [OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem)(LPCOMPAREITEMSTRUCT);|
+|ON_WM_COMPAREITEM()|afx_msg int [OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem)(LPCOMPAREITEMSTRUCT);|
 |ON_WM_CONTEXTMENU()|die "void" Afx_msg [OnContextMenu](../../mfc/reference/cwnd-class.md#oncontextmenu)(CWnd\*, CPoint);|
-|ON_WM_COPYDATA()|Afx_msg "bool" [OnCopyData](../../mfc/reference/cwnd-class.md#oncopydata)(CWnd\* aufnehmen, COPYDATASTRUCT\* pCopyDataStruct);|
-|ON_WM_CREATE()|Afx_msg Int [OnCreate](../../mfc/reference/cwnd-class.md#oncreate)(LPCREATESTRUCT);|
+|ON_WM_COPYDATA()|afx_msg BOOL [OnCopyData](../../mfc/reference/cwnd-class.md#oncopydata)(CWnd\* pWnd, COPYDATASTRUCT\* pCopyDataStruct);|
+|ON_WM_CREATE()|afx_msg int [OnCreate](../../mfc/reference/cwnd-class.md#oncreate)(LPCREATESTRUCT);|
 |ON_WM_CTLCOLOR()|Afx_msg HBRUSH [OnCtlColor](../../mfc/reference/cwnd-class.md#onctlcolor)(CDC\*, CWnd\*, "uint");|
 
 ## <a name="see-also"></a>Siehe auch
 
 [Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md)<br/>
 [Handler für WM_-Meldungen](../../mfc/reference/handlers-for-wm-messages.md)
-

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - BNF notation
 - Backus Nauer Form (BNF) syntax
 ms.assetid: 994bbef0-9077-4aa8-bdfe-b7e830af9acc
-ms.openlocfilehash: b14e2a4f1c29860b9a624b09805959a9f6b550f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b48e0b4abc8601b5173c3c7d2748c726646fbc5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596728"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267107"
 ---
 # <a name="understanding-backus-nauer-form-bnf-syntax"></a>Grundlegendes zu Backus Nauer Form (BNF)-Syntax
 
@@ -20,7 +20,7 @@ Die Skripts, die von der ATL-Registrierung verwendet werden beschrieben, in dies
 |------------------------|-------------|
 |::=|Entsprechung|
 |&#124;|ODER|
-|X +|Eine oder mehrere Xs.|
+|X+|Eine oder mehrere Xs.|
 |[X]|X ist optional. Optionale Trennzeichen sind gekennzeichnet durch \[].|
 |Alle **fett** Text|Ein Zeichenfolgenliteral.|
 |Alle *Kursiv* Text|So erstellen Sie das Zeichenfolgenliteral.|
@@ -101,4 +101,3 @@ Gibt an, dass der Schlüsselname `testhex` ist ein DWORD-Wert, die auf hexadezim
 ## <a name="see-also"></a>Siehe auch
 
 [Erstellen von Registrierungsskripts](../atl/creating-registrar-scripts.md)
-

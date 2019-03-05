@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 3259780d73004c9d1654c26434b55627923cfe23
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 7bdb681754a500ab86538f3397b4c07284b850d0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178791"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300886"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd-Klasse
 
@@ -139,8 +139,8 @@ class CFrameWnd : public CWnd
 |[CFrameWnd::BeginModalState](#beginmodalstate)|Legt das Rahmenfenster zum modalen Element fest.|
 |[CFrameWnd::Create](#create)|Aufrufen zum Erstellen und initialisieren das zugeordnete Windows-Rahmenfenster der `CFrameWnd` Objekt.|
 |[CFrameWnd::CreateView](#createview)|Erstellt eine Ansicht innerhalb eines Rahmens, der nicht vom abgeleitet wird `CView`.|
-|[CFrameWnd:: DockControlBar](#dockcontrolbar)|Wird eine Steuerleiste angedockt.|
-|[EnableDocking](#enabledocking)|Ermöglicht eine Steuerleiste angedockt werden.|
+|[CFrameWnd::DockControlBar](#dockcontrolbar)|Wird eine Steuerleiste angedockt.|
+|[CFrameWnd::EnableDocking](#enabledocking)|Ermöglicht eine Steuerleiste angedockt werden.|
 |[CFrameWnd::EndModalState](#endmodalstate)|Beendet das Rahmenfenster modalen Zustand. Aktiviert alle deaktiviert Windows `BeginModalState`.|
 |[CFrameWnd::FloatControlBar](#floatcontrolbar)|Schwebt eine Steuerleiste.|
 |[CFrameWnd::GetActiveDocument](#getactivedocument)|Gibt den aktiven `CDocument` Objekt.|
@@ -157,15 +157,15 @@ class CFrameWnd : public CWnd
 |[CFrameWnd::InModalState](#inmodalstate)|Gibt einen Wert, der angibt, ob ein Rahmenfenster in einem modalen Zustand ist.|
 |[CFrameWnd::IsTracking](#istracking)|Bestimmt, ob der Teilerleiste gerade verschoben wird.|
 |[CFrameWnd::LoadAccelTable](#loadacceltable)|Rufen Sie eine Tabelle mit Zugriffstasten wird geladen.|
-|[CFrameWnd:: LoadBarState](#loadbarstate)|Rufen Sie zum Wiederherstellen der Steuerleiste.|
+|[CFrameWnd::LoadBarState](#loadbarstate)|Rufen Sie zum Wiederherstellen der Steuerleiste.|
 |[CFrameWnd::LoadFrame](#loadframe)|Aufruf, um ein Framefenster von Ressourceninformationen dynamisch zu erstellen.|
 |[CFrameWnd::NegotiateBorderSpace](#negotiateborderspace)|Handelt Rahmenbereich Rahmenfenster.|
 |[CFrameWnd::OnBarCheck](#onbarcheck)|Aufgerufen, wenn eine Aktion für die angegebene Steuerleiste ausgeführt wird.|
 |[CFrameWnd::OnContextHelp](#oncontexthelp)|Verarbeitet die UMSCHALT + F1-Hilfe für ein direktes Elemente.|
-|[CFrameWnd:: Onsetpreviewmode](#onsetpreviewmode)|Legt die anwendungshauptrahmenfensters fest, in und aus den Seitenansicht-Modus.|
+|[CFrameWnd::OnSetPreviewMode](#onsetpreviewmode)|Legt die anwendungshauptrahmenfensters fest, in und aus den Seitenansicht-Modus.|
 |[CFrameWnd::OnUpdateControlBarMenu](#onupdatecontrolbarmenu)|Vom Framework aufgerufen, wenn das zugeordnete Menü aktualisiert wird.|
 |[CFrameWnd::RecalcLayout](#recalclayout)|Automatisch neu positioniert und die Steuerleisten, der die `CFrameWnd` Objekt.|
-|[SaveBarState](#savebarstate)|Rufen Sie zum Speichern der Steuerleiste.|
+|[CFrameWnd::SaveBarState](#savebarstate)|Rufen Sie zum Speichern der Steuerleiste.|
 |[CFrameWnd::SetActivePreviewView](#setactivepreviewview)|Legt fest, die angegebene Ansicht die aktive Ansicht for Rich Preview sein.|
 |[CFrameWnd::SetActiveView](#setactiveview)|Legt den aktiven `CView` Objekt.|
 |[CFrameWnd::SetDockState](#setdockstate)|Rufen Sie das Rahmenfenster im Hauptfenster von angedockt.|
@@ -320,7 +320,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parameter
 
-*"lpszclassname"*<br/>
+*lpszClassName*<br/>
 Verweist auf eine Null-terminierte Zeichenfolge, die Namen die Windows-Klasse. Der Klassenname kann einen beliebigen Namen registriert werden die `AfxRegisterWndClass` globale Funktion oder die `RegisterClass` Windows-Funktion. Wenn der Wert NULL ist, verwendet den vordefinierten Standardwert `CFrameWnd` Attribute.
 
 *lpszWindowName*<br/>
@@ -329,7 +329,7 @@ Verweist auf eine Null-terminierte Zeichenfolge, die den Fensternamen darstellt.
 *dwStyle*<br/>
 Gibt das Zeitfenster [Stil](../../mfc/reference/styles-used-by-mfc.md#window-styles) Attribute. Fügen Sie den FWS_ADDTOTITLE-Stil, wenn Sie möchten, dass die Titelleiste, um automatisch den Namen des Dokuments dargestellt im Fenster anzuzeigen.
 
-*Rect*<br/>
+*rect*<br/>
 Gibt an, die Größe und Position des Fensters. Die *RectDefault* Wert ermöglicht Windows die Größe und Position des neuen Fensters an.
 
 *pParentWnd*<br/>
@@ -475,7 +475,7 @@ void FloatControlBar(
 *pBar*<br/>
 Zeigt auf der Steuerleiste abgedockt werden.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Der Speicherort, in Bildschirmkoordinaten, in der oberen linken Ecke der Steuerleiste platziert werden.
 
 *dwStyle*<br/>
@@ -597,7 +597,7 @@ Der Rückgabewert kann es sich um die folgenden Werte aufweisen:
 
 - AFX_MBS_VISIBLE (0 x 01) – wird das Menü angezeigt.
 
-- AFX_MBS_HIDDEN (0 x 02) – klicken Sie im Menü ausgeblendet ist.
+- AFX_MBS_HIDDEN (0x02) - The menu is hidden.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -901,7 +901,7 @@ virtual BOOL OnCreateClient(
 
 ### <a name="parameters"></a>Parameter
 
-*LPCs*<br/>
+*lpcs*<br/>
 Ein Zeiger auf ein Windows [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) Struktur.
 
 *pContext*<br/>
@@ -980,7 +980,7 @@ afx_msg void OnUpdateControlBarMenu(CCmdUI* pCmdUI);
 
 ### <a name="parameters"></a>Parameter
 
-*nämlich pCmdUI*<br/>
+*pCmdUI*<br/>
 Ein Zeiger auf eine [CCmdUI](../../mfc/reference/ccmdui-class.md) Objekt, das das Menü, das die Update-Befehl generiert darstellt. Ruft das Update der [aktivieren](../../mfc/reference/ccmdui-class.md#enable) Memberfunktion die `CCmdUI` -Objekt über *nämlich pCmdUI* zum Aktualisieren der Benutzeroberfläche.
 
 ##  <a name="recalclayout"></a>  CFrameWnd::RecalcLayout
@@ -1115,7 +1115,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*nStyle*|[in] Gibt an, ob im Menü standardmäßig ausgeblendet ist oder sichtbar ist und den Fokus besitzt. Die *nStyle* Parameter kann die folgenden Werte aufweisen:<br /><br />-AFX_MBV_KEEPVISIBLE (0 X 01 –)<br />     Klicken Sie im Menü angezeigt wird, jederzeit und standardmäßig verfügt nicht über den Fokus.<br />-AFX_MBV_DISPLAYONFOCUS (0 X 02):<br />     Klicken Sie im Menü ist standardmäßig ausgeblendet. Wenn Sie im Menü ausgeblendet ist, drücken Sie ALT gedrückt, um das Menü anzuzeigen, und geben Sie ihm den Fokus. Wenn Sie im Menü angezeigt wird, drücken Sie die ALT-Taste oder die ESC-Taste So blenden Sie im Menü aus.<br />-AFX_MBV_ DISPLAYONFOCUS (0 x 02) &#124; AFX_MBV_DISPLAYONF10 (0 x 04)<br />     (bitweise Kombination (OR)) – klicken Sie im Menü ist standardmäßig ausgeblendet. Wenn Sie im Menü ausgeblendet ist, drücken Sie die Taste F10, um das Menü anzuzeigen, und geben Sie ihm den Fokus. Wenn Sie im Menü angezeigt wird, drücken Sie die Taste F10, um den Fokus aktivieren oder deaktivieren Sie im Menü zu wechseln. Klicken Sie im Menü wird angezeigt, bis Sie der ALT-Taste oder die ESC-Taste drücken, um es auszublenden.|
+|*nStyle*|[in] Gibt an, ob im Menü standardmäßig ausgeblendet ist oder sichtbar ist und den Fokus besitzt. Die *nStyle* Parameter kann die folgenden Werte aufweisen:<br /><br />- AFX_MBV_KEEPVISIBLE (0x01) -<br />     Klicken Sie im Menü angezeigt wird, jederzeit und standardmäßig verfügt nicht über den Fokus.<br />- AFX_MBV_DISPLAYONFOCUS (0x02) -<br />     Klicken Sie im Menü ist standardmäßig ausgeblendet. Wenn Sie im Menü ausgeblendet ist, drücken Sie ALT gedrückt, um das Menü anzuzeigen, und geben Sie ihm den Fokus. Wenn Sie im Menü angezeigt wird, drücken Sie die ALT-Taste oder die ESC-Taste So blenden Sie im Menü aus.<br />- AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (bitweise Kombination (OR)) – klicken Sie im Menü ist standardmäßig ausgeblendet. Wenn Sie im Menü ausgeblendet ist, drücken Sie die Taste F10, um das Menü anzuzeigen, und geben Sie ihm den Fokus. Wenn Sie im Menü angezeigt wird, drücken Sie die Taste F10, um den Fokus aktivieren oder deaktivieren Sie im Menü zu wechseln. Klicken Sie im Menü wird angezeigt, bis Sie der ALT-Taste oder die ESC-Taste drücken, um es auszublenden.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1190,7 +1190,7 @@ void SetProgressBarState(TBPFLAG tbpFlags);
 ### <a name="parameters"></a>Parameter
 
 *tbpFlags*<br/>
-Flags, die den aktuellen Zustand der Schaltfläche des Vorgangs zu steuern. Geben Sie nur eine der folgenden Flags aus, da alle Zustände gegenseitig: TBPF_NOPROGRESS TBPF_INDETERMINATE, TBPF_NORMAL, TBPF_ERROR, TBPF_PAUSED.
+Flags, die den aktuellen Zustand der Schaltfläche des Vorgangs zu steuern. Geben Sie nur eine der folgenden Flags aus, da alle Zustände gegenseitig: TBPF_NOPROGRESS, TBPF_INDETERMINATE, TBPF_NORMAL, TBPF_ERROR, TBPF_PAUSED.
 
 ### <a name="remarks"></a>Hinweise
 

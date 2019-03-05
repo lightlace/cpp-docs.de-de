@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-ms.openlocfilehash: 6b3e3fac575d6a1308a9f61b3bf827d76785e94d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96118645aa656e97fcb93a0fd223045208ab03a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639323"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273893"
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset-Klasse
 
@@ -195,7 +195,7 @@ class CDaoRecordset : public CObject
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[AddNew](#addnew)|Bereitet zum Hinzufügen eines neuen Eintrags. Rufen Sie [Update](#update) das Hinzufügen abgeschlossen.|
+|[CDaoRecordset::AddNew](#addnew)|Bereitet zum Hinzufügen eines neuen Eintrags. Rufen Sie [Update](#update) das Hinzufügen abgeschlossen.|
 |[CDaoRecordset::CanAppend](#canappend)|Gibt ungleich NULL, wenn das Recordset über neue Datensätze hinzugefügt werden können die [AddNew](#addnew) Member-Funktion.|
 |[CDaoRecordset::CanBookmark](#canbookmark)|Gibt, die ungleich NULL, wenn das Recordset Lesezeichen unterstützt.|
 |[CDaoRecordset::CancelUpdate](#cancelupdate)|Bricht alle ausstehenden Updates aufgrund einer [bearbeiten](#edit) oder [AddNew](#addnew) Vorgang.|
@@ -205,16 +205,16 @@ class CDaoRecordset : public CObject
 |[CDaoRecordset::CanUpdate](#canupdate)|Gibt ungleich NULL, wenn das Recordset aktualisiert werden kann (Sie können hinzufügen, aktualisieren oder Löschen von Datensätzen).|
 |[CDaoRecordset::Close](#close)|Schließt das Recordset.|
 |[CDaoRecordset::Delete](#delete)|Löscht den aktuellen Datensatz aus dem Recordset. Sie müssen explizit mit einem anderen Datensatz nach dem Löschvorgang scrollen.|
-|[CDaoRecordset:: DoFieldExchange](#dofieldexchange)|Wird aufgerufen, zum Austauschen von Daten (in beide Richtungen) zwischen den Felddatenmembern des Recordsets und der entsprechende Datensatz in der Datenquelle. Implements-DAO-Datensatzfeldaustausch (DFX).|
+|[CDaoRecordset::DoFieldExchange](#dofieldexchange)|Wird aufgerufen, zum Austauschen von Daten (in beide Richtungen) zwischen den Felddatenmembern des Recordsets und der entsprechende Datensatz in der Datenquelle. Implements-DAO-Datensatzfeldaustausch (DFX).|
 |[CDaoRecordset::Edit](#edit)|Bereitet für Änderungen an den aktuellen Datensatz. Rufen Sie `Update` um die Bearbeitung abzuschließen.|
-|[FillCache](#fillcache)|Füllt den gesamten oder einen Teil des lokalen Cache für ein Recordsetobjekt, das Daten aus einer ODBC-Datenquelle enthält.|
+|[CDaoRecordset::FillCache](#fillcache)|Füllt den gesamten oder einen Teil des lokalen Cache für ein Recordsetobjekt, das Daten aus einer ODBC-Datenquelle enthält.|
 |[CDaoRecordset::Find](#find)|Sucht das erste, Next, letzten oder vorherigen Speicherort einer bestimmten Zeichenfolge in einem Typ Dynaset-Recordset, das erfüllt werden, den angegebenen Kriterien und macht, die zum aktuellen Datensatz.|
 |[CDaoRecordset::FindFirst](#findfirst)|Sucht den ersten Datensatz in ein Dynaset oder Snapshot-Type-Recordset, das erfüllt werden, den angegebenen Kriterien und macht diesen des aktuellen Datensatzes an.|
 |[CDaoRecordset::FindLast](#findlast)|Sucht den letzten Datensatz in ein Dynaset oder Snapshot-Type-Recordset, das erfüllt werden, den angegebenen Kriterien und macht diesen des aktuellen Datensatzes an.|
 |[CDaoRecordset::FindNext](#findnext)|Sucht den nächsten Datensatz in ein Dynaset oder Snapshot-Type-Recordset, das erfüllt werden, den angegebenen Kriterien und macht diesen des aktuellen Datensatzes an.|
 |[CDaoRecordset::FindPrev](#findprev)|Sucht nach dem vorherigen Datensatz in ein Dynaset oder Snapshot-Type-Recordset, das erfüllt werden, den angegebenen Kriterien und macht, die zum aktuellen Datensatz.|
-|[CDaoRecordset:: GetAbsolutePosition](#getabsoluteposition)|Gibt die Nummer des aktuellen Datensatzes einem Recordset-Objekt zurück.|
-|[CDaoRecordset:: GetBookmark](#getbookmark)|Gibt einen Wert, der das Lesezeichen für einen Datensatz darstellt.|
+|[CDaoRecordset::GetAbsolutePosition](#getabsoluteposition)|Gibt die Nummer des aktuellen Datensatzes einem Recordset-Objekt zurück.|
+|[CDaoRecordset::GetBookmark](#getbookmark)|Gibt einen Wert, der das Lesezeichen für einen Datensatz darstellt.|
 |[CDaoRecordset::GetCacheSize](#getcachesize)|Gibt einen Wert, der angibt, die Anzahl der Datensätze in einem Recordset Dynaset-Typ, die mit Daten aus einer ODBC-Datenquelle lokal zwischengespeichert werden.|
 |[CDaoRecordset::GetCacheStart](#getcachestart)|Gibt einen Wert, der angibt, das Lesezeichen des ersten Datensatzes im Recordset zwischengespeichert werden.|
 |[CDaoRecordset::GetCurrentIndex](#getcurrentindex)|Gibt eine `CString` für eine indizierte Tabelle – verwendet mit dem Namen des Indexes die vor kurzem `CDaoRecordset`.|
@@ -225,14 +225,14 @@ class CDaoRecordset : public CObject
 |[CDaoRecordset::GetEditMode](#geteditmode)|Gibt einen Wert, der den Status der Bearbeiten für den aktuellen Datensatz angibt.|
 |[CDaoRecordset::GetFieldCount](#getfieldcount)|Gibt einen Wert, der die Anzahl der Felder in einem Recordset darstellt.|
 |[CDaoRecordset::GetFieldInfo](#getfieldinfo)|Gibt bestimmte Arten von Informationen zu den Feldern im Recordset zurück.|
-|[CDaoRecordset:: GetFieldValue](#getfieldvalue)|Gibt den Wert eines Felds in einem Recordset zurück.|
+|[CDaoRecordset::GetFieldValue](#getfieldvalue)|Gibt den Wert eines Felds in einem Recordset zurück.|
 |[CDaoRecordset::GetIndexCount](#getindexcount)|Ruft die Anzahl der Indizes in einer Tabelle mit dem zugrunde liegenden Recordset ab.|
 |[CDaoRecordset::GetIndexInfo](#getindexinfo)|Gibt die verschiedenen Arten von Informationen zu einem Index zurück.|
 |[CDaoRecordset::GetLastModifiedBookmark](#getlastmodifiedbookmark)|Verwendet, um zu bestimmen, die am häufigsten vor kurzem hinzugefügt oder Datensatz aktualisiert.|
 |[CDaoRecordset::GetLockingMode](#getlockingmode)|Gibt einen Wert, der den Typ der Sperre, der während der Bearbeitung aktiviert ist angibt.|
 |[CDaoRecordset::GetName](#getname)|Gibt eine `CString` mit dem Namen des Recordset-Objekts.|
 |[CDaoRecordset::GetParamValue](#getparamvalue)|Ruft den aktuellen Wert des angegebenen Parameters in der zugrunde liegenden DAOParameter-Objekt gespeichert.|
-|[CDaoRecordset:: GetPercentPosition](#getpercentposition)|Gibt die Position des aktuellen Datensatzes als Prozentsatz der Gesamtanzahl von Datensätzen zurück.|
+|[CDaoRecordset::GetPercentPosition](#getpercentposition)|Gibt die Position des aktuellen Datensatzes als Prozentsatz der Gesamtanzahl von Datensätzen zurück.|
 |[CDaoRecordset::GetRecordCount](#getrecordcount)|Gibt die Anzahl der Datensätze, die auf die in einem Recordset-Objekt zurück.|
 |[CDaoRecordset::GetSQL](#getsql)|Ruft die SQL-Zeichenfolge, die zum Auswählen von Datensätzen für das Recordset.|
 |[CDaoRecordset::GetType](#gettype)|Wird aufgerufen, um den Typ eines Recordset-Objekts zu ermitteln: Tabellentyp, Dynaset eines assistentartigen oder Snapshot-Typ.|
@@ -250,29 +250,29 @@ class CDaoRecordset : public CObject
 |[CDaoRecordset::MoveLast](#movelast)|Positioniert den aktuellen Datensatz für den letzten Datensatz im Recordset.|
 |[CDaoRecordset::MoveNext](#movenext)|Den aktuellen Datensatz positioniert den nächsten Datensatz im Recordset.|
 |[CDaoRecordset::MovePrev](#moveprev)|Den aktuellen Datensatz positioniert den vorherigen Datensatz im Recordset.|
-|[CDaoRecordset:: Open](#open)|Erstellt einen neuen Datensatz aus einer Tabelle, die Dynaset oder die Momentaufnahme an.|
+|[CDaoRecordset::Open](#open)|Erstellt einen neuen Datensatz aus einer Tabelle, die Dynaset oder die Momentaufnahme an.|
 |[CDaoRecordset::Requery](#requery)|Führt die Abfrage erneut aus, um die ausgewählten Datensätze aktualisieren des Recordsets.|
 |[CDaoRecordset::Seek](#seek)|Sucht nach dem Datensatz in einem indizierten Tabelle Typ Recordset-Objekt, das für den aktuellen Index und macht, die zum aktuellen Datensatz die angegebenen Kriterien erfüllt.|
 |[CDaoRecordset::SetAbsolutePosition](#setabsoluteposition)|Legt die Nummer des aktuellen Datensatzes einem Recordset-Objekt fest.|
-|[CDaoRecordset:: SetBookmark](#setbookmark)|Positioniert das Recordset einen Datensatz mit dem angegebenen Lesezeichen.|
-|[CDaoRecordset:: SetCacheSize](#setcachesize)|Legt einen Wert, der angibt, die Anzahl der Datensätze in einem Recordset Dynaset-Typ, die mit Daten aus einer ODBC-Datenquelle lokal zwischengespeichert werden.|
-|[CDaoRecordset:: SetCacheStart](#setcachestart)|Legt einen Wert, der angibt, das Lesezeichen des ersten Datensatzes im Recordset zwischengespeichert werden.|
-|[CDaoRecordset:: SetCurrentIndex](#setcurrentindex)|Wird aufgerufen, um einen Index für ein Recordset-Tabelle vom Typ festzulegen.|
-|[CDaoRecordset:: SetFieldDirty](#setfielddirty)|Markiert das angegebene Feld im aktuellen Datensatz an, als geändert.|
+|[CDaoRecordset::SetBookmark](#setbookmark)|Positioniert das Recordset einen Datensatz mit dem angegebenen Lesezeichen.|
+|[CDaoRecordset::SetCacheSize](#setcachesize)|Legt einen Wert, der angibt, die Anzahl der Datensätze in einem Recordset Dynaset-Typ, die mit Daten aus einer ODBC-Datenquelle lokal zwischengespeichert werden.|
+|[CDaoRecordset::SetCacheStart](#setcachestart)|Legt einen Wert, der angibt, das Lesezeichen des ersten Datensatzes im Recordset zwischengespeichert werden.|
+|[CDaoRecordset::SetCurrentIndex](#setcurrentindex)|Wird aufgerufen, um einen Index für ein Recordset-Tabelle vom Typ festzulegen.|
+|[CDaoRecordset::SetFieldDirty](#setfielddirty)|Markiert das angegebene Feld im aktuellen Datensatz an, als geändert.|
 |[CDaoRecordset::SetFieldNull](#setfieldnull)|Legt den Wert des angegebenen Felds in den aktuellen Datensatz auf Null (kein Wert mit) fest.|
 |[CDaoRecordset::SetFieldValue](#setfieldvalue)|Legt den Wert eines Felds in einem Recordset fest.|
 |[CDaoRecordset::SetFieldValueNull](#setfieldvaluenull)|Legt den Wert eines Felds in einem Recordset auf Null fest. (Wenn kein Wert).|
 |[CDaoRecordset::SetLockingMode](#setlockingmode)|Legt einen Wert, der den Typ der Sperren, um während der Bearbeitung vollzogen angibt.|
 |[CDaoRecordset::SetParamValue](#setparamvalue)|Stellt den aktuellen Wert des angegebenen Parameters in der zugrunde liegende Objekt DAOParameter gespeichert|
 |[CDaoRecordset::SetParamValueNull](#setparamvaluenull)|Legt den aktuellen Wert des angegebenen Parameters auf Null (kein Wert mit) fest.|
-|[CDaoRecordset:: SetPercentPosition](#setpercentposition)|Legt die Position des aktuellen Datensatzes an einen Speicherort für einen Prozentsatz der Gesamtzahl der Datensätze in einem Recordset fest.|
+|[CDaoRecordset::SetPercentPosition](#setpercentposition)|Legt die Position des aktuellen Datensatzes an einen Speicherort für einen Prozentsatz der Gesamtzahl der Datensätze in einem Recordset fest.|
 |[CDaoRecordset::Update](#update)|Schließt eine `AddNew` oder `Edit` Vorgang, durch die neuen oder bearbeiteten Daten speichern, in der Datenquelle.|
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CDaoRecordset:: M_bcheckcachefordirtyfields](#m_bcheckcachefordirtyfields)|Enthält ein Flag, das angibt, ob Felder automatisch als geändert markiert werden.|
+|[CDaoRecordset::m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)|Enthält ein Flag, das angibt, ob Felder automatisch als geändert markiert werden.|
 |[CDaoRecordset::m_nFields](#m_nfields)|Enthält die Anzahl der Felddatenmember der Recordset-Klasse und die Anzahl der Spalten, die durch das Recordset aus der Datenquelle ausgewählt.|
 |[CDaoRecordset::m_nParams](#m_nparams)|Enthält die Anzahl der Parameterdatenmember in die Recordset-Klasse, die Anzahl der Parameter zu übergeben, mit der Abfrage des Recordsets|
 |[CDaoRecordset::m_pDAORecordset](#m_pdaorecordset)|Ein Zeiger auf die DAO-Schnittstelle, die zugrunde liegende des Recordset-Objekts.|
@@ -557,7 +557,7 @@ Im Gegensatz zu `AddNew` und `Edit`, einen Aufruf von `Delete` folgt nicht durch
 
 Weitere Informationen finden Sie unter den Themen "AddNew-Methode", "Methode bearbeiten", "-Methode Delete", "Update-Methode" und "Aktualisierbare Property" in-DAO-Hilfe.
 
-##  <a name="dofieldexchange"></a>  CDaoRecordset:: DoFieldExchange
+##  <a name="dofieldexchange"></a>  CDaoRecordset::DoFieldExchange
 
 Das Framework ruft diese Memberfunktion zum Austauschen von Daten zwischen den Felddatenmembern eines Recordset-Objekts und den entsprechenden Spalten des aktuellen Datensatzes in der Datenquelle automatisch an.
 
@@ -1122,7 +1122,7 @@ void GetFieldInfo(
 *nIndex*<br/>
 Der nullbasierte Index des vordefinierten Felds in die Recordset Fields-Sammlung, für die Suche nach Index.
 
-*FieldInfo*<br/>
+*fieldinfo*<br/>
 Ein Verweis auf eine [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) Struktur.
 
 *dwInfoOptions*<br/>
@@ -1130,9 +1130,9 @@ Optionen, die angeben, welche Informationen das Recordset abrufen. Die verfügba
 
 - `AFX_DAO_PRIMARY_INFO` (Standard) Name, Typ, Größe und der Attribute
 
-- `AFX_DAO_SECONDARY_INFO` Primäre Informationen sowie: Ordnungszahl ab, die erforderlich sind, ermöglichen Null Länge Reihenfolge sortieren, Fremdschlüssel, Feld "Quelle" Quelle Namenstabelle
+- `AFX_DAO_SECONDARY_INFO` Primäre Informationen plus: Ordnungsposition, die erforderlich sind, ermöglichen die Länge Null, Sortieren der Reihenfolge "," Foreign Name "," Feld "," Quelltabelle
 
-- `AFX_DAO_ALL_INFO` Informationen zu primären und sekundären sowie: Default Value Validierungsregel Überprüfung Text
+- `AFX_DAO_ALL_INFO` Informationen zu primären und sekundären plus: Standardwert, Validierungsregel Überprüfung Text
 
 *Wert*<br/>
 Der Name des Felds.
@@ -1237,9 +1237,9 @@ Optionen, die angeben, welche Informationen über den Index abrufen. Die verfüg
 
 - `AFX_DAO_PRIMARY_INFO` (Standard) Name, Feldinformationen, Felder
 
-- `AFX_DAO_SECONDARY_INFO` Primäre Informationen sowie: primäre "," Unique "," Clustered "," IgnoreNulls, erforderlich, Fremdschlüssel
+- `AFX_DAO_SECONDARY_INFO` Primäre Informationen plus: Primary, Unique, Clustered, IgnoreNulls, Required, Foreign
 
-- `AFX_DAO_ALL_INFO` Informationen zu primären und sekundären sowie: Distinct Count
+- `AFX_DAO_ALL_INFO` Informationen zu primären und sekundären plus: Distinct Count
 
 *Wert*<br/>
 Ein Zeiger auf den Namen des Index-Objekt, für die Suche anhand des Namens.
@@ -1511,10 +1511,10 @@ Die Auswirkungen der Verschiebevorgänge, die nicht auf dem Wert ein Datensatzes
 
 ||IsBOF|IsEOF|
 |------|-----------|-----------|
-|`MoveFirst`, `MoveLast`|Ungleich null|Ungleich null|
+|`MoveFirst`, `MoveLast`|Nonzero|Nonzero|
 |`Move` 0|Keine Änderung|Keine Änderung|
-|`MovePrev`, `Move` < 0|Ungleich null|Keine Änderung|
-|`MoveNext`, `Move` > 0|Keine Änderung|Ungleich null|
+|`MovePrev`, `Move` < 0|Nonzero|Keine Änderung|
+|`MoveNext`, `Move` > 0|Keine Änderung|Nonzero|
 
 Weitere Informationen finden Sie im Thema "BOF, EOF-Eigenschaften" in-DAO-Hilfe.
 
@@ -1584,10 +1584,10 @@ Die Auswirkungen der Verschiebevorgänge, die nicht auf dem Wert ein Datensatzes
 
 ||IsBOF|IsEOF|
 |------|-----------|-----------|
-|`MoveFirst`, `MoveLast`|Ungleich null|Ungleich null|
+|`MoveFirst`, `MoveLast`|Nonzero|Nonzero|
 |`Move` 0|Keine Änderung|Keine Änderung|
-|`MovePrev`, `Move` < 0|Ungleich null|Keine Änderung|
-|`MoveNext`, `Move` > 0|Keine Änderung|Ungleich null|
+|`MovePrev`, `Move` < 0|Nonzero|Keine Änderung|
+|`MoveNext`, `Move` > 0|Keine Änderung|Nonzero|
 
 Weitere Informationen finden Sie im Thema "BOF, EOF-Eigenschaften" in-DAO-Hilfe.
 
@@ -1601,7 +1601,7 @@ BOOL IsFieldDirty(void* pv);
 
 ### <a name="parameters"></a>Parameter
 
-*PV*<br/>
+*pv*<br/>
 Ein Zeiger auf den Felddatenmember, deren Status zu überprüfen, oder NULL, um zu bestimmen, ob eines der Felder geändert werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1624,7 +1624,7 @@ BOOL IsFieldNull(void* pv);
 
 ### <a name="parameters"></a>Parameter
 
-*PV*<br/>
+*pv*<br/>
 Ein Zeiger auf den Felddatenmember, deren Status zu überprüfen, oder NULL, um zu bestimmen, ob eines der Felder Null sind.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1653,7 +1653,7 @@ BOOL IsFieldNullable(void* pv);
 
 ### <a name="parameters"></a>Parameter
 
-*PV*<br/>
+*pv*<br/>
 Ein Zeiger auf den Felddatenmember, deren Status zu überprüfen, oder NULL, um zu bestimmen, ob eines der Felder Null sind.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2188,7 +2188,7 @@ void SetCacheSize(long lSize);
 
 ### <a name="parameters"></a>Parameter
 
-*lSize beim Aufruf*<br/>
+*lSize*<br/>
 Gibt die Anzahl von Datensätzen. Ein häufig angegebener Wert ist 100. Eine Einstellung mit 0 deaktiviert die Zwischenspeicherung. Die Einstellung muss zwischen 5 und 1200-Datensätze sein. Der Cache kann eine beträchtliche Menge an Arbeitsspeicher verwenden.
 
 ### <a name="remarks"></a>Hinweise
@@ -2261,7 +2261,7 @@ void SetFieldDirty(
 
 ### <a name="parameters"></a>Parameter
 
-*PV*<br/>
+*pv*<br/>
 Enthält die Adresse eines Datenmembers Feld in der Recordset oder NULL. Wenn der Wert NULL ist, werden alle Felddatenmember der Recordset gekennzeichnet. (NULL in C++ ist nicht identisch mit Null in der Terminologie von Datenbanken, d. h. "müssen keinen Wert.")
 
 *bDirty*<br/>
@@ -2304,7 +2304,7 @@ void SetFieldNull(
 
 ### <a name="parameters"></a>Parameter
 
-*PV*<br/>
+*pv*<br/>
 Enthält die Adresse eines Datenmembers Feld in der Recordset oder NULL. Wenn der Wert NULL ist, werden alle Felddatenmember der Recordset gekennzeichnet. (NULL in C++ ist nicht identisch mit Null in der Terminologie von Datenbanken, d. h. "müssen keinen Wert.")
 
 *bNull*<br/>

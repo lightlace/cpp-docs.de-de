@@ -307,12 +307,12 @@ helpviewer_keywords:
 - CMenuImages class [MFC]
 - CleanUp method [MFC]
 ms.assetid: 3e2276aa-b02a-4781-97ba-ea074045e9e2
-ms.openlocfilehash: 706ba4cdd1a8f9d77857c52898058aa62fcca8c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae35aefefe548990eeb7fbe637839e475036c2bc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435489"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300088"
 ---
 # <a name="internal-classes"></a>Interne Klassen
 
@@ -412,4 +412,3 @@ Die folgenden Klassen werden in den MFC intern verwendet. Vollständigkeitshalbe
 ## <a name="see-also"></a>Siehe auch
 
 [MFC-Desktopanwendungen](../../mfc/mfc-desktop-applications.md)
-

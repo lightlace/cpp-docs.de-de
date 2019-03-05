@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CRBMap class
 ms.assetid: 658e94dc-e835-4356-aed1-1513e1f66969
-ms.openlocfilehash: fc702feacff5b2f2bbe53a9ea49f664a241d788c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5dedb26544bb2755bc74894cf36a622f5141f89
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677512"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301505"
 ---
 # <a name="crbmap-class"></a>CRBMap-Klasse
 
@@ -53,7 +53,7 @@ Der Code zum Kopieren oder verschieben Elemente mit dem Wert verwendet.
 |Name|Beschreibung|
 |----------|-----------------|
 |[CRBMap::CRBMap](#crbmap)|Der Konstruktor.|
-|[CRBMap:: ~ CRBMap](#dtor)|Der Destruktor.|
+|[CRBMap::~CRBMap](#dtor)|Der Destruktor.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -139,7 +139,7 @@ CPair* Lookup(KINARGTYPE key) throw();
 *key*<br/>
 Gibt den Schlüssel, der identifiziert das Element gesucht werden soll.
 
-*Wert*<br/>
+*value*<br/>
 Variable, die den Wert der nachgeschlagenen empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -194,7 +194,7 @@ POSITION SetAt(
 *key*<br/>
 Der Schlüsselwert, Hinzufügen der `CRBMap` Objekt.
 
-*Wert*<br/>
+*value*<br/>
 Der Wert, der zum Hinzufügen der `CRBMap` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert

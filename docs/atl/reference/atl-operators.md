@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - operators [ATL]
 ms.assetid: 58ccd252-2869-45ee-8a5c-3ca40ee7f8a2
-ms.openlocfilehash: 361b0316e27ee06c64b3ed5e11c6aab10210596f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f1bd4f88b8d3a37f051a208a887c5264f61955a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476257"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293497"
 ---
 # <a name="atl-operators"></a>ATL-Operatoren
 
@@ -18,7 +18,7 @@ Dieser Abschnitt enthält die Referenzthemen für die globalen ATL-Operatoren.
 |Operator|Beschreibung|
 |--------------|-----------------|
 |[operator ==](#operator_eq_eq)|Vergleicht zwei `CSid` Objekte oder `SID` -Strukturen auf Gleichheit.|
-|[Operator! =](#operator_neq)|Vergleicht zwei `CSid` Objekte oder `SID` -Strukturen auf Ungleichheit.|
+|[operator !=](#operator_neq)|Vergleicht zwei `CSid` Objekte oder `SID` -Strukturen auf Ungleichheit.|
 |[Operator <](#operator_lt)|Testet, ob die `CSid` Objekt oder `SID` Struktur auf der linken Seite des Operators ist kleiner als der `CSid` Objekt oder `SID` Struktur auf der rechten Seite (für C++-Standardbibliothek-Kompatibilität).|
 |[operator >](#operator_gt)|Testet, ob die `CSid` Objekt oder `SID` Struktur auf der linken Seite des Operators ist größer als die `CSid` Objekt oder `SID` Struktur auf der rechten Seite (für C++-Standardbibliothek-Kompatibilität).|
 |[operator <=](#operator_lt__eq)|Testet, ob die `CSid` Objekt oder `SID` Struktur auf der linken Seite des Operators ist kleiner als oder gleich der `CSid` Objekt oder `SID` Struktur auf der rechten Seite (für C++-Standardbibliothek-Kompatibilität).|
@@ -38,10 +38,10 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*LHS*<br/>
+*lhs*<br/>
 Die erste `CSid` Objekt oder `SID` zu vergleichende Struktur.
 
-*RS*<br/>
+*rhs*<br/>
 Die zweite `CSid` Objekt oder `SID` zu vergleichende Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -58,10 +58,10 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*LHS*<br/>
+*lhs*<br/>
 Die erste `CSid` Objekt oder `SID` zu vergleichende Struktur.
 
-*RS*<br/>
+*rhs*<br/>
 Die zweite `CSid` Objekt oder `SID` zu vergleichende Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -78,10 +78,10 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*LHS*<br/>
+*lhs*<br/>
 Die erste `CSid` Objekt oder `SID` zu vergleichende Struktur.
 
-*RS*<br/>
+*rhs*<br/>
 Die zweite `CSid` Objekt oder `SID` zu vergleichende Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -102,10 +102,10 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*LHS*<br/>
+*lhs*<br/>
 Die erste `CSid` Objekt oder `SID` zu vergleichende Struktur.
 
-*RS*<br/>
+*rhs*<br/>
 Die zweite `CSid` Objekt oder `SID` zu vergleichende Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -126,10 +126,10 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*LHS*<br/>
+*lhs*<br/>
 Die erste `CSid` Objekt oder `SID` zu vergleichende Struktur.
 
-*RS*<br/>
+*rhs*<br/>
 Die zweite `CSid` Objekt oder `SID` zu vergleichende Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -150,10 +150,10 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*LHS*<br/>
+*lhs*<br/>
 Die erste `CSid` Objekt oder `SID` zu vergleichende Struktur.
 
-*RS*<br/>
+*rhs*<br/>
 Die zweite `CSid` Objekt oder `SID` zu vergleichende Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -163,4 +163,3 @@ Gibt "true" zurück, wenn die Adresse des der *Lhs* ist größer als oder gleich
 ### <a name="remarks"></a>Hinweise
 
 Dieser Operator bezieht sich auf die Adresse der `CSid` Objekt oder `SID` -Struktur und wird implementiert, um die Kompatibilität mit C++-Standardbibliothek-Auflistungsklassen.
-

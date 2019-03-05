@@ -8,12 +8,12 @@ helpviewer_keywords:
 - databases [MFC], ODBC
 - TN042
 ms.assetid: ecc6b5d9-f480-4582-9e22-8309fe561dad
-ms.openlocfilehash: 2140261c2e90eaee7930d4be3282ec31bda29759
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 462f8229d995add79f48f34b7f81257710b4a8b8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502043"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276610"
 ---
 # <a name="tn042-odbc-driver-developer-recommendations"></a>TN042: Empfehlungen für ODBC-Treiberentwickler
 
@@ -110,7 +110,7 @@ Im folgenden sehen Sie die minimale Unterstützung erforderlich, um ein Dynaset 
 
 `SQLGetInfo`, **SQL_SCROLL_OPTIONS** muss unterstützen **SQL_SO_KEYSET_DRIVEN**.
 
-`SQLGetInfo`, **SQL_ROW_UPDATES** muss "Y" zurückgeben.
+`SQLGetInfo`, **SQL_ROW_UPDATES** must return "Y".
 
 `SQLGetInfo`, **SQL_POSITIONED_UPDATES** muss unterstützen **SQL_PS_POSITIONED_DELETE** und **SQL_PS_POSITIONED_UPDATE**.
 
@@ -120,4 +120,3 @@ Darüber hinaus, wenn pessimistische Sperrung angefordert wird einen Aufruf von 
 
 [Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)<br/>
 [Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)
-

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, advanced features
 ms.assetid: 8a6681c5-6576-4b12-841a-6862beee76fa
-ms.openlocfilehash: 1af16f7009ceb97ea86d641f47cf56ea5a398c26
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 5643e1e9f4f558163c1c2a3b65070f90afdc7dba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694295"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278222"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>Erweiterte Features, MFC-Anwendungs-Assistent
 
@@ -21,7 +21,7 @@ Unter diesem Thema werden die Optionen für zusätzliche Funktionen für Ihre An
 
    Generiert einen Satz von Hilfedateien für die kontextbezogene Hilfe, verfügbar über F1 und ein Menü "Hilfe" oder durch Klicken auf eine **Hilfe** Schaltfläche in einem Dialogfeld. Zur Unterstützung der Hilfe ist der Hilfecompiler erforderlich. Sie können den Hilfecompiler nachträglich installieren, indem Sie Setup erneut ausführen.
 
-   Finden Sie unter [HTML-Hilfe: kontextbezogene Hilfe für Programme](../../mfc/html-help-context-sensitive-help-for-your-programs.md) und [Hilfedateien (HTML-Hilfe)](../../ide/help-files-html-help.md) für Weitere Informationen.
+   Finden Sie unter [HTML-Hilfe: Kontextbezogene Hilfe für Programme](../../mfc/html-help-context-sensitive-help-for-your-programs.md) und [Hilfedateien (HTML-Hilfe)](../../ide/help-files-html-help.md) für Weitere Informationen.
 
 - **Drucken und Druckvorschau**
 
@@ -57,7 +57,7 @@ Unter diesem Thema werden die Optionen für zusätzliche Funktionen für Ihre An
 
 - **Unterstützung für Neustart-Manager**
 
-   Bietet Unterstützung für die [Windows-Neustart-Manager](/windows/desktop/RstMgr/using-restart-manager). Dieses Video zeigt, wie Sie mit den Neustart-Manager von MFC: [How Do I: Use the New Restart Manager](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100)).
+   Bietet Unterstützung für die [Windows-Neustart-Manager](/windows/desktop/RstMgr/using-restart-manager). In diesem Video zeigt, wie Sie den Neustart-Manager von MFC verwendet wird: [Gewusst wie: Verwenden des neuen Neustart-Managers](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100)).
 
 - **Erweiterte Framebereiche**
 
@@ -76,4 +76,3 @@ Unter diesem Thema werden die Optionen für zusätzliche Funktionen für Ihre An
 ## <a name="see-also"></a>Siehe auch
 
 [MFC-Anwendungs-Assistent](../../mfc/reference/mfc-application-wizard.md)
-

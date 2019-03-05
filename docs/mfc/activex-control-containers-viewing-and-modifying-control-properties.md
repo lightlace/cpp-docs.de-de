@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [MFC], properties
 - controls [MFC], properties
 ms.assetid: 14ce5152-742b-4e0d-a9ab-c7b456e32918
-ms.openlocfilehash: abddda015a80b21d941409044524e2f526b26f08
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0a03acfd880bcf63017eec9796315b98e5d5f4d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454940"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326360"
 ---
 # <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>ActiveX-Steuerelementcontainer: Anzeigen und Ändern von Steuerelementeigenschaften
 
@@ -21,7 +21,7 @@ Wenn Sie ein ActiveX-Steuerelement in ein Projekt einfügen, ist es hilfreich, a
 
 Wenn Ihr ActiveX-Steuerelementcontainer-Anwendung eingebettete Steuerelementen verwendet, können Sie anzeigen und ändern die Eigenschaften des Steuerelements im Ressourcen-Editor. Sie können auch den Ressourcen-Editor verwenden, können Sie während der Entwurfszeit festlegen. Der Ressourcen-Editor speichert dann automatisch diese Werte in Ressourcen-Datei des Projekts. Jede Instanz des Steuerelements müssen die Eigenschaften, die mit diesen Werten initialisiert.
 
-Dieses Verfahren setzt voraus, dass Sie ein Steuerelement in Ihrem Projekt eingefügt haben. Weitere Informationen finden Sie unter [ActiveX-Steuerelementcontainer: Einfügen von einem Steuerelement in eine Steuerelementcontainer-Anwendung](../mfc/inserting-a-control-into-a-control-container-application.md).
+Dieses Verfahren setzt voraus, dass Sie ein Steuerelement in Ihrem Projekt eingefügt haben. Weitere Informationen finden Sie unter [ActiveX-Steuerelementcontainer: Einfügen eines Steuerelements in eine Steuerelementcontainer-Anwendung](../mfc/inserting-a-control-into-a-control-container-application.md).
 
 Der erste Schritt beim Anzeigen der Eigenschaften des Steuerelements ist eine Instanz des Steuerelements Dialogfeldvorlage des Projekts hinzu.
 
@@ -42,4 +42,3 @@ Verwenden der **Eigenschaften** Dialogfelds ändern und neue Eigenschaften sofor
 ## <a name="see-also"></a>Siehe auch
 
 [ActiveX-Steuerelementcontainer](../mfc/activex-control-containers.md)
-

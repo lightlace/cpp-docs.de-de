@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-ms.openlocfilehash: d152153ac4e379f4159c4ade5dfc044288f69720
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e523b2a145254cd9b7adf2b066605a679349f6c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541401"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273446"
 ---
 # <a name="cdatabase-class"></a>CDatabase-Klasse
 
@@ -85,18 +85,18 @@ class CDatabase : public CObject
 |[CDatabase::CanTransact](#cantransact)|Gibt, die ungleich NULL, wenn die Datenquelle Transaktionen unterstützt.|
 |[CDatabase::CanUpdate](#canupdate)|Ungleich NULL zurück, wenn die `CDatabase` Objekt kann aktualisiert werden (nicht schreibgeschützt).|
 |[CDatabase::Close](#close)|Schließen die datenquellenverbindung ein.|
-|[CDatabase:: CommitTrans](#committrans)|Schließt eine Transaktion gestartet wird, indem `BeginTrans`. Befehle in der Transaktion, ändern die Datenquelle, ausgeführt werden.|
-|[CDatabase:: ExecuteSQL aufgerufen](#executesql)|Führt eine SQL­Anweisung. Es werden keine Datensätze zurückgegeben.|
-|[CDatabase:: GetBookmarkPersistence](#getbookmarkpersistence)|Identifiziert die Vorgänge, die über denen Lesezeichen auf Recordset-Objekte beibehalten werden.|
-|[CDatabase:: Getconnect](#getconnect)|Gibt zurück, die ODBC-Verbindungszeichenfolge, die zur Verbindung der `CDatabase` Objekt mit einer Datenquelle.|
-|[GetCursorCommitBehavior](#getcursorcommitbehavior)|Identifiziert die Auswirkungen der Commit einer Transaktion in einem geöffneten Recordsetobjekt.|
-|[Rollback](#getcursorrollbackbehavior)|Identifiziert die Auswirkungen des Rollbacks einer Transaktion in einem geöffneten Recordsetobjekt.|
+|[CDatabase::CommitTrans](#committrans)|Schließt eine Transaktion gestartet wird, indem `BeginTrans`. Befehle in der Transaktion, ändern die Datenquelle, ausgeführt werden.|
+|[CDatabase::ExecuteSQL](#executesql)|Führt eine SQL­Anweisung. Es werden keine Datensätze zurückgegeben.|
+|[CDatabase::GetBookmarkPersistence](#getbookmarkpersistence)|Identifiziert die Vorgänge, die über denen Lesezeichen auf Recordset-Objekte beibehalten werden.|
+|[CDatabase::GetConnect](#getconnect)|Gibt zurück, die ODBC-Verbindungszeichenfolge, die zur Verbindung der `CDatabase` Objekt mit einer Datenquelle.|
+|[CDatabase::GetCursorCommitBehavior](#getcursorcommitbehavior)|Identifiziert die Auswirkungen der Commit einer Transaktion in einem geöffneten Recordsetobjekt.|
+|[CDatabase::GetCursorRollbackBehavior](#getcursorrollbackbehavior)|Identifiziert die Auswirkungen des Rollbacks einer Transaktion in einem geöffneten Recordsetobjekt.|
 |[CDatabase::GetDatabaseName](#getdatabasename)|Gibt den Namen der Datenbank, die zurzeit verwendeten zurück.|
 |[CDatabase::IsOpen](#isopen)|Ungleich NULL zurück, wenn die `CDatabase` -Objekt aktuell mit einer Datenquelle verbunden ist.|
 |[CDatabase::OnSetOptions](#onsetoptions)|Wird aufgerufen, durch das Festlegen von Verbindungsoptionen für standard-Framework. Die standardmäßige Implementierung legt den Timeoutwert für Abfragen fest. Sie können diese Optionen voraus einrichten, durch den Aufruf `SetQueryTimeout`.|
-|[CDatabase:: Open](#open)|Herstellen einer Verbindung mit einer Datenquelle (über einen ODBC-Treiber).|
-|[CDatabase:: OpenEx](#openex)|Herstellen einer Verbindung mit einer Datenquelle (über einen ODBC-Treiber).|
-|[CDatabase](#rollback)|Kehrt die während der aktuellen Transaktion vorgenommene Änderungen. Gibt die Datenquelle den ursprünglichen Zustand, zur definiert die `BeginTrans` Aufruf unverändert.|
+|[CDatabase::Open](#open)|Herstellen einer Verbindung mit einer Datenquelle (über einen ODBC-Treiber).|
+|[CDatabase::OpenEx](#openex)|Herstellen einer Verbindung mit einer Datenquelle (über einen ODBC-Treiber).|
+|[CDatabase::Rollback](#rollback)|Kehrt die während der aktuellen Transaktion vorgenommene Änderungen. Gibt die Datenquelle den ursprünglichen Zustand, zur definiert die `BeginTrans` Aufruf unverändert.|
 |[CDatabase::SetLoginTimeout](#setlogintimeout)|Legt die Anzahl der Sekunden nach dem ein Data Source-Verbindungsversuch tritt ein Timeout fest.|
 |[CDatabase::SetQueryTimeout](#setquerytimeout)|Legt die Anzahl der Sekunden an, nach welcher Datenbank Vorgänge Abfragen tritt ein Timeout. Wirkt sich auf alle nachfolgenden Recordset `Open`, `AddNew`, `Edit`, und `Delete` aufrufen.|
 
@@ -104,18 +104,18 @@ class CDatabase : public CObject
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CDatabase:: M_hdbc](#m_hdbc)|Open Database Connectivity (ODBC)-Verbindungshandle mit einer Datenquelle. Typ *HDBC*.|
+|[CDatabase::m_hdbc](#m_hdbc)|Open Database Connectivity (ODBC)-Verbindungshandle mit einer Datenquelle. Typ *HDBC*.|
 
 ## <a name="remarks"></a>Hinweise
 
 Eine Datenquelle ist eine bestimmte Instanz der Daten, die von einigen Datenbank-Managementsystem (DBMS) gehostet wird. Beispiele sind Microsoft SQL Server, Microsoft Access, Borland dBASE und xBASE. Sie haben eine oder mehrere `CDatabase` Objekte, die aktiv in Ihrer Anwendung.
 
 > [!NOTE]
->  Wenn Sie mit den Klassen Datenzugriffsobjekte (DAO) statt mit der Open Database Connectivity (ODBC)-Klassen arbeiten, verwenden Sie die Klasse [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) stattdessen. Weitere Informationen finden Sie im Artikel [Overview: Datenbank-Programmierung](../../data/data-access-programming-mfc-atl.md).
+>  Wenn Sie mit den Klassen Datenzugriffsobjekte (DAO) statt mit der Open Database Connectivity (ODBC)-Klassen arbeiten, verwenden Sie die Klasse [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) stattdessen. Weitere Informationen finden Sie im Artikel [Übersicht: Datenbank-Programmierung](../../data/data-access-programming-mfc-atl.md).
 
 Verwenden `CDatabase`, erstellen Sie eine `CDatabase` Objekt, und rufen die `OpenEx` Member-Funktion. Dadurch wird eine Verbindung geöffnet. Wenn Sie sich dann erstellen `CRecordset` Objekte für den Betrieb in der verbundenen Datenquelle, dem recordsetkonstruktor übergeben Sie einen Zeiger auf Ihre `CDatabase` Objekt. Wenn Sie fertig sind, verwenden die Verbindung, rufen Sie die `Close` Member funktioniert und zerstört der `CDatabase` Objekt. `Close` Schließt alle Recordsets, die Sie nicht bereits geschlossen haben.
 
-Weitere Informationen zu `CDatabase`, finden Sie in den Artikeln [Datenquelle (ODBC)](../../data/odbc/data-source-odbc.md) und [Overview: Datenbank-Programmierung](../../data/data-access-programming-mfc-atl.md).
+Weitere Informationen zu `CDatabase`, finden Sie in den Artikeln [Datenquelle (ODBC)](../../data/odbc/data-source-odbc.md) und [Übersicht: Datenbank-Programmierung](../../data/data-access-programming-mfc-atl.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -173,7 +173,7 @@ virtual void BindParameters(HSTMT hstmt);
 
 ### <a name="parameters"></a>Parameter
 
-*Befehls beschäftigt*<br/>
+*hstmt*<br/>
 Das ODBC-Anweisungshandle, der für das Parameter gebunden werden sollen.
 
 ### <a name="remarks"></a>Hinweise
@@ -341,7 +341,7 @@ Die folgende Tabelle enthält die Bitmaskenwerten, die für den Rückgabewert vo
 |SQL_BP_UPDATE|Das Lesezeichen für eine Zeile ist gültig, nachdem ein `Update` -Vorgang in dieser Zeile.|
 |SQL_BP_OTHER_HSTMT|Lesezeichen, die mit einem recordset-Objekt verbunden sind, sind in einem zweiten Datensatz gültig.|
 
-Weitere Informationen zu diesem Rückgabewert finden Sie unter der ODBC-API-Funktion `SQLGetInfo` im Windows SDK. Weitere Informationen über Lesezeichen finden Sie im Artikel [Recordset: Lesezeichen und Absolute Positionen (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
+Weitere Informationen zu diesem Rückgabewert finden Sie unter der ODBC-API-Funktion `SQLGetInfo` im Windows SDK. Weitere Informationen über Lesezeichen finden Sie im Artikel [Recordset: Lesezeichen und absolute Positionen (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
 
 ##  <a name="getconnect"></a>  CDatabase:: Getconnect
 
@@ -461,7 +461,7 @@ virtual void OnSetOptions(HSTMT hstmt);
 
 ### <a name="parameters"></a>Parameter
 
-*Befehls beschäftigt*<br/>
+*hstmt*<br/>
 Der ODBC-Anweisungshandle, der für das Optionen festgelegt werden.
 
 ### <a name="remarks"></a>Hinweise

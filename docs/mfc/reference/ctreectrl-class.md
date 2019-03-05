@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: cc98a2e24fbb3eaff94e4c941986080d0bdbd7ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9bc31cc9cff12146e6f5fe227e0e191d1c555063
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477947"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271397"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -314,7 +314,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Gibt den Strukturansicht-Steuerelement Stil. Anwenden von Window-Stile, die in beschriebenen [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa), und eine beliebige Kombination von [Struktur Ansicht der Stile von Listensteuerelementen](/windows/desktop/Controls/tree-view-control-window-styles) wie beschrieben in das Windows SDK.
 
-*Rect*<br/>
+*rect*<br/>
 Gibt an, des Strukturansicht-Steuerelements die Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.
 
 *pParentWnd*<br/>
@@ -360,7 +360,7 @@ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erwei
 *dwStyle*<br/>
 Gibt den Strukturansicht-Steuerelement Stil. Anwenden von Window-Stile, die in beschriebenen [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa), und eine beliebige Kombination von [Struktur Ansicht der Stile von Listensteuerelementen](/windows/desktop/Controls/tree-view-control-window-styles) wie beschrieben in das Windows SDK.
 
-*Rect*<br/>
+*rect*<br/>
 Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -850,7 +850,7 @@ BOOL GetItemImage(
 *hItem*<br/>
 Das Handle des Elements, dessen Bild abgerufen werden sollen.
 
-*Nbild*<br/>
+*nImage*<br/>
 Eine ganze Zahl, die den Index des Elements Bildes in der Strukturansicht-Steuerelement die Bildliste empfängt.
 
 *nSelectedImage*<br/>
@@ -1427,7 +1427,7 @@ Ganze Zahl, welche Attribute festlegen. Finden Sie unter den `TVITEM` Struktur i
 *lpszItem*<br/>
 Die Adresse einer Zeichenfolge, die den Text des Elements enthält.
 
-*Nbild*<br/>
+*nImage*<br/>
 Index des Elements Bildes in der Strukturansicht-Steuerelement die Bildliste.
 
 *nSelectedImage*<br/>
@@ -1713,7 +1713,7 @@ COLORREF SetBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parameter
 
-*CLR*<br/>
+*clr*<br/>
 Eine COLORREF-Wert, der die neue Hintergrundfarbe enthält. Wenn dieser Wert-1 ist, wird das Steuerelement wiederhergestellt, auf die Systemfarbe für die Farbe des Hintergrunds.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1739,7 +1739,7 @@ BOOL SetCheck(
 *hItem*<br/>
 Die HTREEITEM, um die Überprüfung der statusänderung zu erhalten.
 
-*Weitere Informationen finden*<br/>
+*fCheck*<br/>
 Gibt an, ob das Strukturelement-Steuerelement aktiviert oder deaktiviert werden. In der Standardeinstellung `SetCheck` legt das Element, das überprüft werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1925,7 +1925,7 @@ Ganze Zahl, welche Attribute festlegen. Finden Sie unter den `mask` Mitglied der
 *lpszItem*<br/>
 Die Adresse einer Zeichenfolge, die den Text des Elements enthält.
 
-*Nbild*<br/>
+*nImage*<br/>
 Index des Elements Bildes in der Strukturansicht-Steuerelement die Bildliste. Finden Sie unter den `iImage` Mitglied der `TVITEM` Struktur.
 
 *nSelectedImage*<br/>
@@ -2054,7 +2054,7 @@ BOOL SetItemImage(
 *hItem*<br/>
 Handle des Elements, dessen Bild festgelegt werden.
 
-*Nbild*<br/>
+*nImage*<br/>
 Index des Elements Bildes in der Strukturansicht-Steuerelement die Bildliste.
 
 *nSelectedImage*<br/>
@@ -2229,7 +2229,7 @@ COLORREF SetTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parameter
 
-*CLR*<br/>
+*clr*<br/>
 Eine COLORREF-Wert, der die neue Textfarbe enthält. Wenn dieses Argument-1 ist, wird das Steuerelement auf die Systemfarbe für die die Textfarbe wiederhergestellt.
 
 ### <a name="return-value"></a>Rückgabewert

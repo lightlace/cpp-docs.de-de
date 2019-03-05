@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetSmallCaption
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
-ms.openlocfilehash: 759f4cdb66c1e16f022731e9d3183ad1192e0975
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b7d72b048d9f44233f96a3af859315ea20e9747
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585132"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291638"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 
@@ -68,7 +68,7 @@ class CMFCDesktopAlertWnd : public CWnd
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[Cmfcdesktopalertwnd:: Create](#create)|Erstellt und initialisiert die desktop-Benachrichtigungsfenster.|
+|[CMFCDesktopAlertWnd::Create](#create)|Erstellt und initialisiert die desktop-Benachrichtigungsfenster.|
 |[CMFCDesktopAlertWnd::GetAnimationSpeed](#getanimationspeed)|Gibt die animationsgeschwindigkeit zurück.|
 |[CMFCDesktopAlertWnd::GetAnimationType](#getanimationtype)|Gibt den Animationstyp zurück.|
 |[CMFCDesktopAlertWnd::GetAutoCloseTime](#getautoclosetime)|Gibt zurück, das Automatisches Schließen-Timeout.|
@@ -219,11 +219,11 @@ Eine der folgenden Animationstypen:
 
 - NO_ANIMATION
 
-- ERWEITERN
+- UNFOLD
 
 - FOLIE
 
-- AUSBLENDEN
+- FADE
 
 - SYSTEM_DEFAULT_ANIMATION
 
@@ -315,7 +315,7 @@ virtual BOOL OnBeforeShow(CPoint&);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *CPoint &*<br/>
+[in] *CPoint&*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -352,7 +352,7 @@ virtual BOOL OnCommand(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *wParam-Parameter*<br/>
+[in] *wParam*<br/>
 
 [in] *lParam*<br/>
 
@@ -380,7 +380,7 @@ BOOL ProcessCommand(HWND hwnd);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Hwnd*<br/>
+[in] *hwnd*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -422,11 +422,11 @@ Rufen Sie diese Methode, um die Animation festgelegt. Sie können einen der folg
 
 - NO_ANIMATION
 
-- ERWEITERN
+- UNFOLD
 
 - FOLIE
 
-- AUSBLENDEN
+- FADE
 
 - SYSTEM_DEFAULT_ANIMATION
 

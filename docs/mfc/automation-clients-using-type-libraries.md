@@ -1,5 +1,5 @@
 ---
-title: 'Automatisierungsclients: Verwenden von Typbibliotheken'
+title: 'Benutzeroberflächenautomatisierungs-Clients: Verwenden von Typbibliotheken'
 ms.date: 11/04/2016
 f1_keywords:
 - MkTypLib
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - MkTypLib tool
 - .odl files
 ms.assetid: d405bc47-118d-4786-b371-920d035b2047
-ms.openlocfilehash: bd11bd8f2666bb2c211f7abe93d473f466963bd6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32179f3913b52ca46f9ea7314b9957f4f4970713
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437049"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282941"
 ---
-# <a name="automation-clients-using-type-libraries"></a>Automatisierungsclients: Verwenden von Typbibliotheken
+# <a name="automation-clients-using-type-libraries"></a>Benutzeroberflächenautomatisierungs-Clients: Verwenden von Typbibliotheken
 
 Benutzeroberflächenautomatisierungs-Clients benötigen Informationen zu Eigenschaften und Methoden von Server-Objekte, wenn die Clients sind, die Server Objekte zu bearbeiten. Datentypen weisen Eigenschaften auf. Methoden werden häufig Rückgabewerte und Parameter akzeptieren. Der Client benötigt Informationen zu den Datentypen, der alle diese zum statisch in Server-Objekt zu binden.
 
@@ -61,4 +61,3 @@ Visual C++ verwaltet diese Typbibliothek-Datei automatisch für Sie, wenn Sie Au
 ## <a name="see-also"></a>Siehe auch
 
 [Automatisierungsclients](../mfc/automation-clients.md)
-

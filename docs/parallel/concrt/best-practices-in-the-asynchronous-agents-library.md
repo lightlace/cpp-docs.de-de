@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Asynchronous Agents Library, practices to avoid
 - practices to avoid, Asynchronous Agents Library
 ms.assetid: 85f52354-41eb-4b0d-98c5-f7344ee8a8cf
-ms.openlocfilehash: 70c979be0d37817cf199af0b6a3cbf114fced265
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c61393957a63895a9ecbdaaae8d83a5fbd710de3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494580"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266418"
 ---
 # <a name="best-practices-in-the-asynchronous-agents-library"></a>Empfohlene Vorgehensweisen in der Asynchronous Agents Library
 
@@ -58,7 +58,7 @@ Die Pipeline wird vom `semaphore`-Objekt eingeschränkt, sodass maximal zwei Nac
 
 Der Producer in diesem Beispiel sendet verhältnismäßig wenig Nachrichten an den Consumer. Daher ist dieses Beispiel ungeeignet, um eine Situation mit einem Mangel an Arbeitsspeicher zu veranschaulichen. Dieser Mechanismus ist jedoch hilfreich, wenn eine Datenpipeline eine relativ hohe Anzahl von Meldungen enthält.
 
-Weitere Informationen zum Erstellen der Semaphore-Klasse, die verwendet wird, in diesem Beispiel finden Sie unter [Vorgehensweise: Verwenden der Context-Klasse zum Implementieren einer kooperativen Semaphore](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
+Weitere Informationen zum Erstellen der Semaphore-Klasse, die verwendet wird, in diesem Beispiel finden Sie unter [Vorgehensweise: Implementieren einer kooperativen Semaphore mithilfe der Context-Klasse](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
 
 [[Nach oben](#top)]
 
@@ -66,7 +66,7 @@ Weitere Informationen zum Erstellen der Semaphore-Klasse, die verwendet wird, in
 
 Die Agents Library ist besonders hilfreich, wenn die Arbeit, die von einer Datenpipeline ausgeführt wird, eher simpel ist. Beispielsweise könnte eine Anwendungskomponente Daten aus einer Datei oder einer Netzwerkverbindung lesen und ab und zu Daten an eine andere Komponente senden. Das Protokoll, das die Agents Library verwendet wird, um die Weitergabe von Nachrichten führt dazu, dass den Message-Passing-Mechanismus, um einen höheren Aufwand als parallelen Konstrukten der Aufgabe zu erhalten, die von bereitgestellt werden die [Parallel Patterns Library](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL). Deshalb müssen Sie sicherstellen, dass die Arbeit, die von einer Datenpipeline ausgeführt wird, lang genug dauert, um diesen Mehraufwand auszugleichen.
 
-Obwohl eine Datenpipeline am effektivsten ist, wenn die Aufgaben simpel sind, können in jeder Phase der Datenpipeline PPL-Konstrukte wie Aufgabengruppen und parallele Algorithmen verwendet werden, um differenziertere Aufgaben auszuführen. Ein Beispiel für ein simple Datennetzwerk, die eine differenzierte Parallelität in jeder Verarbeitungsphase verwendet, finden Sie unter [Exemplarische Vorgehensweise: Erstellen einer Bildverarbeitungsnetzwerks](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Obwohl eine Datenpipeline am effektivsten ist, wenn die Aufgaben simpel sind, können in jeder Phase der Datenpipeline PPL-Konstrukte wie Aufgabengruppen und parallele Algorithmen verwendet werden, um differenziertere Aufgaben auszuführen. Ein Beispiel für ein simple Datennetzwerk, die eine differenzierte Parallelität in jeder Verarbeitungsphase verwendet, finden Sie unter [Exemplarische Vorgehensweise: Erstellen eine Bildverarbeitungsnetzwerks](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 [[Nach oben](#top)]
 
@@ -87,7 +87,7 @@ Using message_data*...
 took 47ms.
 ```
 
-Die Version mit Zeiger weist eine bessere Leistung auf, da von der Laufzeit während der Übergabe vom Producer an den Consumer nicht eine vollständige Kopie jedes `message_data`-Objekts erstellt werden muss.
+Die Version mit Zeiger weist eine bessere Leistungauf, da von der Laufzeit während der Übergabe vom Producer an den Consumer nicht eine vollständige Kopie jedes `message_data`-Objekts erstellt werden muss.
 
 [[Nach oben](#top)]
 
@@ -119,8 +119,7 @@ Destroying resource 64...
 [Bewährte Methoden im Zusammenhang mit der Concurrency Runtime](../../parallel/concrt/concurrency-runtime-best-practices.md)<br/>
 [Asynchrone Agents Library](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Exemplarische Vorgehensweise: Erstellen einer agentbasierten Anwendung](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br/>
-[Exemplarische Vorgehensweise: Erstellen eines Datenfluss-Agent](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
+[Exemplarische Vorgehensweise: Erstellen eines Datenfluss-Agents](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
 [Exemplarische Vorgehensweise: Erstellen eines Bildverarbeitungsnetzwerks](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
 [Bewährte Methoden in der Parallel Patterns Library](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br/>
 [Allgemein bewährte Methoden in der Concurrency Runtime](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)
-

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - template-based collection classes [MFC]
 - simple list collection classes [MFC]
 ms.assetid: c69fc95b-c8f6-4a99-abed-517c9898ef0c
-ms.openlocfilehash: 8bd64e1c5efd1f80f43cb3460719326f30d5416c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40633c8b2b09d27e97443364ed3ce711ee217e18
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557858"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284657"
 ---
 # <a name="template-based-classes"></a>Vorlagenbasierte Klassen
 
@@ -71,7 +71,7 @@ Im erste Beispiel deklariert eine Arrayauflistung `myArray`, enthält **Int**s. 
 
 ###  <a name="_core_simple_map_usage"></a> Einfaches Kartogramm Nutzung
 
-Einfache Map-Klasse, [CMap](../mfc/reference/cmap-class.md), benötigt vier Parameter: *Schlüssel*, *ARG_KEY*, *Wert*, und *ARG_VALUE*. Die Map-Klassen können einen beliebigen Datentyp aufweisen speichern, wie die Klassen-Array und Liste. Im Gegensatz zu Arrays und Listen, die index, und sortieren die Daten, die sie speichern, Zuordnungen zuordnen, Schlüssel und Werte: Sie einen Wert in einer Zuordnung gespeichert wird, durch die Angabe des Werts zugeordneten Schlüssels zugreifen. Die *Schlüssel* Parameter gibt den Datentyp, der für den Zugriff auf Daten, die in der Zuordnung gespeicherten Schlüssel. Wenn der Typ des *Schlüssel* ist eine Struktur oder Klasse, die *ARG_KEY* Parameter ist in der Regel einen Verweis auf den Typ im angegebenen *Schlüssel*. Die *Wert* Parameter gibt den Typ der Elemente in der Zuordnung gespeichert. Wenn der Typ des *ARG_VALUE* ist eine Struktur oder Klasse, die *ARG_VALUE* Parameter ist in der Regel einen Verweis auf den Typ im angegebenen *Wert*. Zum Beispiel:
+Einfache Map-Klasse, [CMap](../mfc/reference/cmap-class.md), benötigt vier Parameter: *Schlüssel*, *ARG_KEY*, *Wert*, und *ARG_VALUE*. Die Map-Klassen können einen beliebigen Datentyp aufweisen speichern, wie die Klassen-Array und Liste. Im Gegensatz zu Arrays und Listen, die index, und die Daten, die sie speichern, ordnen Sie Zuordnungen, Schlüssel und Werte: Sie Zugriff auf einen Wert in einer Zuordnung gespeichert wird, durch die Angabe des Werts zugeordneten Schlüssels. Die *Schlüssel* Parameter gibt den Datentyp, der für den Zugriff auf Daten, die in der Zuordnung gespeicherten Schlüssel. Wenn der Typ des *Schlüssel* ist eine Struktur oder Klasse, die *ARG_KEY* Parameter ist in der Regel einen Verweis auf den Typ im angegebenen *Schlüssel*. Die *Wert* Parameter gibt den Typ der Elemente in der Zuordnung gespeichert. Wenn der Typ des *ARG_VALUE* ist eine Struktur oder Klasse, die *ARG_VALUE* Parameter ist in der Regel einen Verweis auf den Typ im angegebenen *Wert*. Zum Beispiel:
 
 [!code-cpp[NVC_MFCCollections#3](../mfc/codesnippet/cpp/template-based-classes_3.cpp)]
 
@@ -99,7 +99,7 @@ Im zweite Beispiel deklariert eine Liste-Zeiger, `myList`, abgeleitet von `CPtrL
 
 ###  <a name="_core_typed.2d.pointer_map_usage"></a> -Zeiger-Map-Nutzung
 
--Zeiger-Map-Klasse, [CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md), nimmt drei Parameter: *BASE_CLASS*, *Schlüssel*, und *Wert*. Die *BASE_CLASS* Parameter gibt an, die Klasse aus der die neue Klasse abgeleitet werden soll: `CMapPtrToWord`, `CMapPtrToPtr`, `CMapStringToPtr`, `CMapWordToPtr`, `CMapStringToOb`und so weiter. *Schlüssel* ist analog zu *Schlüssel* in `CMap`: der Typ des Schlüssels für Suchvorgänge verwendet wird. *Wert* ist analog zu *Wert* in `CMap`: den Typ des Objekts in der Zuordnung gespeichert wird. Zum Beispiel:
+-Zeiger-Map-Klasse, [CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md), nimmt drei Parameter: *BASE_CLASS*, *Schlüssel*, und *Wert*. Die *BASE_CLASS* Parameter gibt an, die Klasse aus der die neue Klasse abgeleitet werden soll: `CMapPtrToWord`, `CMapPtrToPtr`, `CMapStringToPtr`, `CMapWordToPtr`, `CMapStringToOb`und so weiter. *Schlüssel* ist analog zu *Schlüssel* in `CMap`: Es gibt den Typ des Schlüssels für Suchvorgänge verwendet. *Wert* ist analog zu *Wert* in `CMap`: Es gibt den Typ des Objekts in der Zuordnung gespeichert. Zum Beispiel:
 
 [!code-cpp[NVC_MFCCollections#6](../mfc/codesnippet/cpp/template-based-classes_6.cpp)]
 
@@ -115,4 +115,3 @@ Weitere Informationen finden Sie unter [wie eine typsichere Auflistung](../mfc/h
 ## <a name="see-also"></a>Siehe auch
 
 [Sammlungen](../mfc/collections.md)
-

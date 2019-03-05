@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Schreiben einer parallel_for_each-Schleife'
+title: 'Vorgehensweise: Schreiben einer Parallel_for_each-Schleife'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - writing a parallel_for_each loop [Concurrency Runtime]
 - parallel_for_each function, example
 ms.assetid: fa9c0ba6-ace0-4f88-8681-c7c1f52aff20
-ms.openlocfilehash: e3b19ec180f9f4e75a2f280a0ecd159e5b932565
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19af9be8ef6d9c38a0942e7c85caa0a8bc4e6813
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610508"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272216"
 ---
-# <a name="how-to-write-a-parallelforeach-loop"></a>Gewusst wie: Schreiben einer parallel_for_each-Schleife
+# <a name="how-to-write-a-parallelforeach-loop"></a>Vorgehensweise: Schreiben einer Parallel_for_each-Schleife
 
 Dieses Beispiel zeigt, wie Sie mit der [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) Algorithmus zum Berechnen der Anzahl von Primzahlen in einem [Std:: Array](../../standard-library/array-class-stl.md) -Objekt parallel.
 
@@ -42,10 +42,9 @@ Um den Code zu kompilieren, kopieren Sie ihn und fügen Sie ihn in ein Visual St
 
 ## <a name="robust-programming"></a>Stabile Programmierung
 
-Der Lambdaausdruck, der im Beispiel an den `parallel_for_each`-Algorithmus übergeben wird, aktiviert mithilfe der `InterlockedIncrement`-Funktion parallele Iterationen der Schleife, um den Zähler gleichzeitig zu inkrementieren. Wenn Sie Funktionen wie z. B. `InterlockedIncrement` verwenden, um Zugriff auf freigegebene Ressourcen zu synchronisieren, kann es zu Leistungsengpässen im Code kommen. Sie verwenden einen sperrenfreien Synchronisierungsmechanismus, z. B. die [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) -Klasse, um den gleichzeitigen Zugriff auf freigegebene Ressourcen zu vermeiden. Ein Beispiel für die Verwendung der `combinable` -Klasse auf diese Weise, finden Sie unter [Vorgehensweise: mithilfe von combinable zum Verbessern der Leistung](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md).
+Der Lambdaausdruck, der im Beispiel an den `parallel_for_each`-Algorithmus übergeben wird, aktiviert mithilfe der `InterlockedIncrement`-Funktion parallele Iterationen der Schleife, um den Zähler gleichzeitig zu inkrementieren. Wenn Sie Funktionen wie z. B. `InterlockedIncrement` verwenden, um Zugriff auf freigegebene Ressourcen zu synchronisieren, kann es zu Leistungsengpässen im Code kommen. Sie verwenden einen sperrenfreien Synchronisierungsmechanismus, z. B. die [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) -Klasse, um den gleichzeitigen Zugriff auf freigegebene Ressourcen zu vermeiden. Ein Beispiel für die Verwendung der `combinable` -Klasse auf diese Weise, finden Sie unter [Vorgehensweise: Mithilfe von combinable zum Verbessern der Leistung](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 [Parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md)<br/>
 [Parallel_for_each-Funktion](reference/concurrency-namespace-functions.md#parallel_for_each)
-

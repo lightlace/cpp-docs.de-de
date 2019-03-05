@@ -13,12 +13,12 @@ helpviewer_keywords:
 - status bars [MFC], tool tips
 - flyby status bar updates
 ms.assetid: d1696305-b604-4fad-9f09-638878371412
-ms.openlocfilehash: b7dbae03b23c26c96aa0db740b749ba728a353d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4582b03844e1be3d4cf70bcc3fff1c3b66119ae3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475607"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258358"
 ---
 # <a name="toolbar-tool-tips"></a>QuickInfos für die Symbolleiste
 
@@ -72,4 +72,3 @@ Eine Funktion, die im Zusammenhang mit QuickInfos ist "Flyby" Statusleiste aktua
 ## <a name="see-also"></a>Siehe auch
 
 [Implementieren der MFC-Symbolleiste](../mfc/mfc-toolbar-implementation.md)
-

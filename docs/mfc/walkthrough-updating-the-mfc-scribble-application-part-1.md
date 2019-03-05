@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: 85ff0c17f8ec523fc5cb52101fb44cfc37dd9b50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 213bc8087b58eac232cc8fcfccc88e13785a807e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481847"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258761"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Exemplarische Vorgehensweise: Aktualisieren der MFC Scribble-Anwendung (Teil 1)
 
@@ -24,7 +24,7 @@ In dieser exemplarischen Vorgehensweise wird das klassische MFC-Beispiel Scribbl
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-Die [1.0 MFC Scribble-Beispiel](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Informationen zum Konvertieren in Visual Studio 2017 finden Sie [Handbuch Portieren: MFC Scribble](../porting/porting-guide-mfc-scribble.md).
+Die [1.0 MFC Scribble-Beispiel](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Informationen zum Konvertieren in Visual Studio 2017 finden Sie [Portierungsanleitung: MFC Scribble](../porting/porting-guide-mfc-scribble.md).
 
 ##  <a name="top"></a> Abschnitte
 
@@ -113,7 +113,7 @@ Für die nächsten vier Schritte dieser exemplarischen Vorgehensweise sind Bitma
 
 - Kopieren Sie eine entsprechende Ressourcendatei aus einer anderen Anwendung in Ihr Projekt, und importieren Sie dann Bitmaps von dieser Datei.
 
-In dieser exemplarischen Vorgehensweise werden Ressourcendateien aus dem Beispiel in erstellt kopiert [Exemplarische Vorgehensweise: erstellen ein Menüband mithilfe von MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
+In dieser exemplarischen Vorgehensweise werden Ressourcendateien aus dem Beispiel in erstellt kopiert [Exemplarische Vorgehensweise: Erstellen einer Menübandanwendung mithilfe von MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
 
 ### <a name="to-add-bitmaps-to-the-project"></a>So fügen Sie dem Projekt Bitmaps hinzu
 
@@ -169,7 +169,7 @@ Ein Menüband besteht aus den **Anwendung** Schaltfläche, die die große Schalt
 
 1. Sie können anpassen, die **Anwendung** Schaltfläche durch Ändern der Eigenschaften. Die Meldungs-IDs, die in diesem Code verwendet werden, sind bereits im Menü für Scribble 1.0 definiert.
 
-1. Klicken Sie in der Entwurfsansicht auf die **Anwendung** Schaltfläche, um ihre Eigenschaften anzuzeigen. Eigenschaftswerte wie folgt ändern: **Image** zu `IDB_RIBBON_MAIN`, **Eingabeaufforderung** zu `File`, **Schlüssel** zu `f`, **große Bilder** zu `IDB_RIBBON_FILELARGE`, und **kleine Bilder** zu `IDB_RIBBON_FILESMALL`.
+1. Klicken Sie in der Entwurfsansicht auf die **Anwendung** Schaltfläche, um ihre Eigenschaften anzuzeigen. Ändern Sie die Eigenschaftswerte wie folgt: **Image** zu `IDB_RIBBON_MAIN`, **Eingabeaufforderung** zu `File`, **Schlüssel** zu `f`, **große Bilder** zu `IDB_RIBBON_FILELARGE`, und **Kleine Bilder** zu `IDB_RIBBON_FILESMALL`.
 
 1. Die folgenden Änderungen wird das Menü erstellt, die angezeigt wird, wenn der Benutzer klickt auf die **Anwendung** Schaltfläche. Klicken Sie auf die Auslassungspunkte (**...** ) neben **Main Items** zum Öffnen der **Elemente-Editor**.
 
@@ -238,7 +238,7 @@ Sie erstellt haben die **Anwendung** Schaltfläche können Sie Elemente zum Men�
 
 ### <a name="to-add-a-home-category-and-edit-panel"></a>So fügen Sie eine Kategorie "Startseite" und einen Bereich "Bearbeiten" hinzu
 
-1. Das Scribble-Programm erfordert nur eine Kategorie. In der Entwurfsansicht in der **Toolbox**, doppelklicken Sie auf **Kategorie** hinzufügen und seine Eigenschaften anzuzeigen. Eigenschaftswerte wie folgt ändern: **Beschriftung** zu `&Home`, **große Bilder** zu `IDB_RIBBON_HOMELARGE`, **kleine Bilder** zu `IDB_RIBBON_HOMESMALL`.
+1. Das Scribble-Programm erfordert nur eine Kategorie. In der Entwurfsansicht in der **Toolbox**, doppelklicken Sie auf **Kategorie** hinzufügen und seine Eigenschaften anzuzeigen. Ändern Sie die Eigenschaftswerte wie folgt: **Beschriftung** zu `&Home`, **große Bilder** zu `IDB_RIBBON_HOMELARGE`, **kleine Bilder** zu `IDB_RIBBON_HOMESMALL`.
 
 1. Jede Menübandkategorie ist in benannte Bereiche unterteilt. Jeder Bereich enthält einem Satz von Steuerelementen, dass vollständige verwandte Vorgänge. Diese Kategorie verfügt über einen Bereich. Klicken Sie auf **Bereich**, und ändern Sie dann **Beschriftung** zu `Edit`.
 

@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: e0d48d37d8262c4e82a8532333bbd12f193087b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f774a8db1121dd293db8e58f7cd92aaabaeabada
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604118"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270552"
 ---
 # <a name="coleserveritem-class"></a>COleServerItem-Klasse
 
@@ -105,7 +105,7 @@ class COleServerItem : public CDocItem
 |----------|-----------------|
 |[COleServerItem::AddOtherClipboardData](#addotherclipboarddata)|Platziert die Präsentation und Konvertierung von Formaten in ein `COleDataSource` Objekt.|
 |[COleServerItem::CopyToClipboard](#copytoclipboard)|Kopiert das Element in die Zwischenablage.|
-|[COleServerItem:: DoDragDrop](#dodragdrop)|Führt einen Drag & Drop-Vorgang.|
+|[COleServerItem::DoDragDrop](#dodragdrop)|Führt einen Drag & Drop-Vorgang.|
 |[COleServerItem::GetClipboardData](#getclipboarddata)|Ruft die Datenquelle für die Verwendung bei der Datenübertragung (Drag & Drop oder Zwischenablage) ab.|
 |[COleServerItem::GetDocument](#getdocument)|Gibt zurück, das Serverdokument, das das Element enthält.|
 |[COleServerItem::GetEmbedSourceData](#getembedsourcedata)|Ruft die CF_EMBEDSOURCE Daten für ein OLE-Element ab.|
@@ -116,7 +116,7 @@ class COleServerItem : public CDocItem
 |[COleServerItem::IsLinkedItem](#islinkeditem)|Gibt an, ob das Element ein verknüpftes OLE-Element darstellt.|
 |[COleServerItem::NotifyChanged](#notifychanged)|Aktualisiert alle Container mit automatische Verknüpfung Update an.|
 |[COleServerItem::OnDoVerb](#ondoverb)|Wird aufgerufen, um ein Verb auszuführen.|
-|[COleServerItem:: OnDraw](#ondraw)|Aufgerufen, wenn der Container-zum Zeichnen des Elements Anforderungen. die Implementierung erforderlich sind.|
+|[COleServerItem::OnDraw](#ondraw)|Aufgerufen, wenn der Container-zum Zeichnen des Elements Anforderungen. die Implementierung erforderlich sind.|
 |[COleServerItem::OnDrawEx](#ondrawex)|Wird aufgerufen, für das spezielle Element zeichnen.|
 |[COleServerItem::OnGetClipboardData](#ongetclipboarddata)|Wird aufgerufen, durch das Framework zum Abrufen der Daten, die in die Zwischenablage kopiert werden sollen.|
 |[COleServerItem::OnGetExtent](#ongetextent)|Wird aufgerufen, durch das Framework, um die Größe des OLE-Elements abzurufen.|
@@ -155,7 +155,7 @@ Die `COleServerItem` Klasse definiert mehrere überschreibbare Memberfunktionen,
 
 Verwendung von `COleServerItem`, eine Klasse ableiten und Implementieren der [OnDraw](#ondraw) und [Serialize](../../mfc/reference/cobject-class.md#serialize) Memberfunktionen. Die `OnDraw` -Funktion bietet die Metadateidarstellung des ein Element, sodass er angezeigt wird, wenn eine Container-Anwendung mit einem Verbunddokument geöffnet wird. Die `Serialize` Funktion `CObject` bietet die native Darstellung eines Elements, sodass ein eingebettetes Element zwischen Server und-Container Anwendungen übertragen werden. [OnGetExtent](#ongetextent) Größe des Elements, das den Container, aktivieren den Container, die Größe des Elements enthält.
 
-Weitere Informationen zu Server und verwandten Themen finden Sie im Artikel [Server: Implementieren eines Servers](../../mfc/servers-implementing-a-server.md) und "Erstellen einer Container/Server-Dienstanwendung" in diesem Artikel [Container: Erweiterte Funktionen](../../mfc/containers-advanced-features.md).
+Weitere Informationen zu Server und verwandten Themen finden Sie im Artikel [Server: Implementieren eines Servers](../../mfc/servers-implementing-a-server.md) und "Erstellen einer Container/Server-Dienstanwendung" in diesem Artikel [Container: Erweiterte Features](../../mfc/containers-advanced-features.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -776,7 +776,7 @@ virtual BOOL OnRenderFileData(
 *lpFormatEtc*<br/>
 Verweist auf die [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Struktur, die das Format, in dem Informationen angefordert, angibt.
 
-*pFile-Datei*<br/>
+*pFile*<br/>
 Verweist auf eine `CFile` Objekt, in dem die Daten gerendert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert

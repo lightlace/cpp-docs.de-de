@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
-ms.openlocfilehash: 2fd94ef072fcab9af076fcdfa1b5c094d77f89c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a0c68c2c017eedfa23548bee1d17177e8eaaa1e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547398"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289025"
 ---
 # <a name="multitypejoin-class"></a>multitype_join-Klasse
 
@@ -67,7 +67,7 @@ Die Art der `join` Blocks, entweder `greedy` oder `non_greedy`
 |----------|-----------------|
 |[accept](#accept)|Akzeptiert eine Meldung, die von diesem angeboten wurde `multitype_join` Block übertragen des Besitzes an den Aufrufer.|
 |[acquire_ref](#acquire_ref)|Eine Verweisanzahl dazu `multitype_join` Meldungsblock, um löschen zu verhindern.|
-|[Nutzen](#consume)|Nimmt eine Meldung, die zuvor von Angeboten die `multitype_join` -Meldungsblock und erfolgreich vom Ziel übertragen des Besitzes an den Aufrufer reserviert.|
+|[consume](#consume)|Nimmt eine Meldung, die zuvor von Angeboten die `multitype_join` -Meldungsblock und erfolgreich vom Ziel übertragen des Besitzes an den Aufrufer reserviert.|
 |[link_target](#link_target)|Verknüpft einen Zielblock mit diesem `multitype_join` Meldungsblock.|
 |[release](#release)|Gibt die nachrichtenreservierung einer vorherigen erfolgreichen frei.|
 |[release_ref](#release_ref)|Gibt einen Verweiszähler für diese `multiple_join` Meldungsblock.|
@@ -209,7 +209,7 @@ Die Runtime verwendet das Standardplanungsprogramm, wenn Sie den `_PScheduler` -
 
 Bewegungskonstruktion wird bei einer aktiven Sperre nicht ausgeführt, d. h., der Benutzer muss sicherstellen, dass zum Zeitpunkt der Bewegung keine einfachen Aufgaben aktiv sind. Andernfalls können zahlreiche Wettläufe auftreten, wodurch Ausnahmen oder inkonsistente Zuständen verursacht werden.
 
-##  <a name="dtor"></a> ~ Multitype_join
+##  <a name="dtor"></a> ~multitype_join
 
 Zerstört die `multitype_join` Meldungsblock.
 

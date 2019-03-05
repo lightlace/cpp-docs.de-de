@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::WM_FORWARDMSG
 ms.assetid: 63abd22c-372d-4148-bb04-c605950ae64f
-ms.openlocfilehash: 3ab102ec486af0c7119e8ed28da4898c8beeb293
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7bb5e2fa265c3a5dcabcc16d8343d5b86a4aaf42
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582514"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273912"
 ---
 # <a name="windows-messages-macros"></a>Windows-Meldungen-Makros
 
@@ -41,7 +41,7 @@ Verwenden Sie WM_FORWARDMSG, um eine Nachricht empfangen, die von einem Fenster 
 
 |Parameter|Verwendung|
 |---------------|-----------|
-|WPARAM-PARAMETER|Daten, die vom Benutzer definiert werden.|
+|WPARAM|Daten, die vom Benutzer definiert werden.|
 |LPARAM|Ein Zeiger auf eine `MSG` Struktur, die Informationen zu einer Meldung enthält.|
 
 ### <a name="example"></a>Beispiel

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE containers [MFC], user interface
 - user interface issues
 ms.assetid: c833c249-a633-4f1c-82d6-ec6b4892863a
-ms.openlocfilehash: 340d5b9345d66ea7e797480cffdb9f9c794b4320
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e35f831f3e1a0b2fede03de0bbd846525f3c41f8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605751"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304257"
 ---
 # <a name="containers-user-interface-issues"></a>Container: Probleme mit der Benutzeroberfläche
 
@@ -29,4 +29,3 @@ Sie müssen eine Reihe von Funktionen einer containeranwendung Benutzeroberfläc
 [Container](../mfc/containers.md)<br/>
 [Container: Erweiterte Funktionen](../mfc/containers-advanced-features.md)<br/>
 [Menüs und Ressourcen (OLE)](../mfc/menus-and-resources-ole.md)
-

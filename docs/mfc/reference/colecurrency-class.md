@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: e3b0a369071571fb343d1b5030eebbf7c471bc81
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 64f2b00c8a5aefe8a39c24d26af2a97625225059
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519190"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273178"
 ---
 # <a name="colecurrency-class"></a>COleCurrency-Klasse
 
@@ -62,14 +62,14 @@ class COleCurrency
 |Name|Beschreibung|
 |----------|-----------------|
 |[operator =](#operator_eq)|Kopiert ein `COleCurrency` Wert.|
-|[Operator +, -](#operator_plus_minus)|Fügt, subtrahiert wird und Anzeichen `COleCurrency` Werte.|
-|[Operator +=, =](#operator_plus_minus_eq)|Fügt und subtrahiert einen `COleCurrency` Wert aus diesem `COleCurrency` Objekt.|
+|[operator +, -](#operator_plus_minus)|Fügt, subtrahiert wird und Anzeichen `COleCurrency` Werte.|
+|[operator +=, -=](#operator_plus_minus_eq)|Fügt und subtrahiert einen `COleCurrency` Wert aus diesem `COleCurrency` Objekt.|
 |[Operator * /](#operator_star)|Skaliert ein `COleCurrency` Wert durch einen ganzzahligen Wert.|
-|[Operator * =, / =](#operator_star_div_eq)|Skaliert `COleCurrency` Wert durch einen ganzzahligen Wert.|
+|[operator *=, /=](#operator_star_div_eq)|Skaliert `COleCurrency` Wert durch einen ganzzahligen Wert.|
 |[Operator <<](#operator_stream)|Ausgaben eine `COleCurrency` Wert `CArchive` oder `CDumpContext`.|
-|[Operator >>](#operator_stream)|Eingaben ein `COleCurrency` -Sitzungsobjekts `CArchive`.|
+|[operator >>](#operator_stream)|Eingaben ein `COleCurrency` -Sitzungsobjekts `CArchive`.|
 |[Operator Währung](#operator_currency)|Konvertiert eine `COleCurrency` Wert in eine Währung.|
-|[Operator ==, <, < =, usw..](#colecurrency_relational_operators)|Vergleicht zwei `COleCurrency` Werte.|
+|[operator ==, <, <=, etc.](#colecurrency_relational_operators)|Vergleicht zwei `COleCurrency` Werte.|
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
 
@@ -222,13 +222,13 @@ Weitere Informationen zu Vorgängen, die den Status ungültige, finden Sie unter
 
 - [operator =](#operator_eq)
 
-- [Operator + -](#operator_plus_minus)
+- [operator + -](#operator_plus_minus)
 
-- [Operator += und -=](#operator_plus_minus_eq)
+- [operator += and -=](#operator_plus_minus_eq)
 
-- [Operator * /](#operator_star)
+- [operator * /](#operator_star)
 
-- [Operator * = und / =](#operator_star_div_eq)
+- [operator *= and /=](#operator_star_div_eq)
 
 ### <a name="example"></a>Beispiel
 
@@ -283,13 +283,13 @@ Weitere Informationen zu Vorgängen, die den Status ungültige, finden Sie unter
 
 - [operator =](#operator_eq)
 
-- [Operator +, -](#operator_plus_minus)
+- [operator +, -](#operator_plus_minus)
 
-- [Operator +=, =](#operator_plus_minus_eq)
+- [operator +=, -=](#operator_plus_minus_eq)
 
 - [Operator * /](#operator_star)
 
-- [Operator * =, / =](#operator_star_div_eq)
+- [operator *=, /=](#operator_star_div_eq)
 
 > [!CAUTION]
 >  Dieses Datenelement ist für erweiterte programmierungssituationen. Sie sollten die Inline-Memberfunktionen verwenden [GetStatus](#getstatus) und [SetStatus](#setstatus). Finden Sie unter `SetStatus` für weitere Punkte in Bezug auf die dieses Datenelement explizit festlegen.

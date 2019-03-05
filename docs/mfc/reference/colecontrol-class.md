@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: ef44c917411efefeb6719af95185ddf7993fbab1
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 8587eb76f38c07d54234c810dfd6ab79f487e740
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179018"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283422"
 ---
 # <a name="colecontrol-class"></a>COleControl-Klasse
 
@@ -738,7 +738,7 @@ Im folgenden finden eine Liste von gültigen Werten:
 |------------------|-------------|
 |0|Allgemeine Ausrichtung (Zahlen auf den richtigen, Text auf der linken Seite).|
 |1|Linksbündig ausrichten|
-|2|Center |
+|2|Center|
 |3|Rechtsbündig|
 
 ### <a name="remarks"></a>Hinweise
@@ -787,7 +787,7 @@ void BoundPropertyChanged(DISPID dispid);
 
 ### <a name="parameters"></a>Parameter
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Dispatch-ID einer gebundenen Eigenschaft des Steuerelements.
 
 ### <a name="remarks"></a>Hinweise
@@ -804,7 +804,7 @@ BOOL BoundPropertyRequestEdit(DISPID dispid);
 
 ### <a name="parameters"></a>Parameter
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Dispatch-ID einer gebundenen Eigenschaft des Steuerelements.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -994,7 +994,7 @@ void DrawContent(
 *pDC*<br/>
 Zeiger auf den Gerätekontext.
 
-*RC*<br/>
+*rc*<br/>
 Rechteckige Bereich, gezeichnet werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -1016,7 +1016,7 @@ void DrawMetafile(
 *pDC*<br/>
 Zeiger auf die Metadatei-Gerätekontexts.
 
-*RC*<br/>
+*rc*<br/>
 Rechteckige Bereich, gezeichnet werden soll.
 
 ##  <a name="enablesimpleframe"></a>  COleControl::EnableSimpleFrame
@@ -1174,7 +1174,7 @@ void AFX_CDECL FireEvent(
 
 ### <a name="parameters"></a>Parameter
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Dispatch-ID des Ereignisses ausgelöst werden soll.
 
 *pbParams*<br/>
@@ -1192,7 +1192,7 @@ Die *PbParams* Argument ist eine durch Leerzeichen getrennte Liste von **VTS_**.
 |VTS_FONT|`IFontDisp*`|
 |VTS_HANDLE|HWND|
 |VTS_PICTURE|`IPictureDisp*`|
-|VTS_OPTEXCLUSIVE|OLE_OPTEXCLUSIVE *|
+|VTS_OPTEXCLUSIVE|OLE_OPTEXCLUSIVE*|
 |VTS_TRISTATE|OLE_TRISTATE|
 |VTS_XPOS_HIMETRIC|OLE_XPOS_HIMETRIC|
 |VTS_YPOS_HIMETRIC|OLE_YPOS_HIMETRIC|
@@ -1301,7 +1301,7 @@ void FireMouseDown(
 
 ### <a name="parameters"></a>Parameter
 
-*Nschaltfläche*<br/>
+*nButton*<br/>
 Der numerische Wert in der Maustaste gedrückt wird. Sie können eine der folgenden Werte enthalten:
 
 - LEFT_BUTTON die linke Maustaste wurde gedrückt.
@@ -1345,7 +1345,7 @@ void FireMouseMove(
 
 ### <a name="parameters"></a>Parameter
 
-*Nschaltfläche*<br/>
+*nButton*<br/>
 Der numerische Wert der Maustasten gedrückt. Enthält eine Kombination der folgenden Werte an:
 
 - LEFT_BUTTON die linke Maustaste gedrückt wurde während der Aktion gedrückt.
@@ -1389,7 +1389,7 @@ void FireMouseUp(
 
 ### <a name="parameters"></a>Parameter
 
-*Nschaltfläche*<br/>
+*nButton*<br/>
 Der numerische Wert, der die Maustaste freigegeben werden soll. Es kann einen der folgenden Werte aufweisen:
 
 - LEFT_BUTTON, die die linke Maustaste losgelassen wurde.
@@ -1516,7 +1516,7 @@ Ein Zeiger auf die Adresse der Variablen, die den Wert der Eigenschaft empfangen
 |VT_R4|`float*`|
 |VT_R8|`double*`|
 |VT_CY|`CY*`|
-|DEN WERT VT_COLOR|`OLE_COLOR*`|
+|VT_COLOR|`OLE_COLOR*`|
 |VT_DISPATCH|`LPDISPATCH*`|
 |VT_FONT|`LPFONTDISP*`|
 
@@ -1654,7 +1654,7 @@ Ein Zeiger auf aktuelle Clientsite des Steuerelements in seinem Container.
 
 Der zurückgegebene Zeiger verweist auf eine Instanz von `IOleClientSite`. Die `IOleClientSite` -Schnittstelle, von Containern implementiert ist, des Objekts anzeigen seines Kontexts: an, wo es im Dokument, in den Speicher, Benutzeroberfläche und anderen Ressourcen wird verankert ist.
 
-##  <a name="getcontrolflags"></a>  COleControl:: GetControlFlags
+##  <a name="getcontrolflags"></a>  COleControl::GetControlFlags
 
 Ruft die Einstellungen für das Steuerelement ab.
 
@@ -1975,7 +1975,7 @@ Der aktuelle Wert, der die Text-Zeichenfolge oder eine Zeichenfolge der Länge 0
 
 Beachten Sie, die der Aufrufer dieser Funktion aufrufen muss `SysFreeString` in der Zeichenfolge zurückgegeben, um kostenlos die Ressource. Verwenden Sie in der Implementierung des Steuerelements, `InternalGetText` Zugriff auf vordefinierte Text- oder Caption-Eigenschaft des Steuerelements.
 
-##  <a name="getwindowlessdroptarget"></a>  COleControl:: GetWindowlessDropTarget
+##  <a name="getwindowlessdroptarget"></a>  COleControl::GetWindowlessDropTarget
 
 Außer Kraft setzen `GetWindowlessDropTarget` soll ein fensterloses Steuerelement, das Ziel ein OLE Drag & drop-Vorgangs.
 
@@ -2096,7 +2096,7 @@ void InvalidateRgn(CRgn* pRgn, BOOL bErase = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*PRNG*<br/>
+*pRgn*<br/>
 Ein Zeiger auf eine [CRgn](../../mfc/reference/crgn-class.md) Objekt, das den Anzeigebereich des OLE-Objekts, in Clientkoordinaten des übergeordneten Fensters ungültig gemacht werden, identifiziert. Wenn dieser Parameter NULL ist, wird das Ausmaß des gesamten Objekts.
 
 *bErase*<br/>
@@ -2211,7 +2211,7 @@ void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
 *strNewPath*<br/>
 Ein Zeiger auf eine Zeichenfolge, die mit dem Pfad, der die absolute Position der Steuerelementeigenschaft, asynchrone verweist.
 
-*Prop*<br/>
+*prop*<br/>
 Ein [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md) Objekt implementiert eine asynchrone Steuerelementeigenschaft.
 
 ##  <a name="lockinplaceactive"></a>  COleControl::LockInPlaceActive
@@ -2614,10 +2614,10 @@ virtual BOOL OnGetDisplayString(
 
 ### <a name="parameters"></a>Parameter
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Verteiler-ID einer Eigenschaft des Steuerelements.
 
-*strValue gespeichert*<br/>
+*strValue*<br/>
 Ein Verweis auf eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Objekt über die eine Zeichenfolge zurückgegeben wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2714,7 +2714,7 @@ virtual BOOL OnGetPredefinedStrings(
 
 ### <a name="parameters"></a>Parameter
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Verteiler-ID einer Eigenschaft des Steuerelements.
 
 *pStringArray*<br/>
@@ -2744,7 +2744,7 @@ virtual BOOL OnGetPredefinedValue(
 
 ### <a name="parameters"></a>Parameter
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Verteiler-ID einer Eigenschaft des Steuerelements.
 
 *dwCookie*<br/>
@@ -2936,7 +2936,7 @@ virtual void OnKeyDownEvent(
 
 ### <a name="parameters"></a>Parameter
 
-*NChar*<br/>
+*nChar*<br/>
 Der virtueller Tastencode-Wert, der die gedrückte Taste. Eine Liste der standardmäßige virtuelle Tastencodes finden Sie in der Winuser.h
 
 *nShiftState*<br/>
@@ -2962,7 +2962,7 @@ virtual void OnKeyPressEvent(USHORT nChar);
 
 ### <a name="parameters"></a>Parameter
 
-*NChar*<br/>
+*nChar*<br/>
 Enthält den Wert virtueller Tastencode der Taste gedrückt. Eine Liste der standardmäßige virtuelle Tastencodes finden Sie in der Winuser.h
 
 ### <a name="remarks"></a>Hinweise
@@ -2983,7 +2983,7 @@ virtual void OnKeyUpEvent(
 
 ### <a name="parameters"></a>Parameter
 
-*NChar*<br/>
+*nChar*<br/>
 Der virtueller Tastencode-Wert, der die gedrückte Taste. Eine Liste der standardmäßige virtuelle Tastencodes finden Sie in der Winuser.h
 
 *nShiftState*<br/>
@@ -3012,7 +3012,7 @@ virtual BOOL OnMapPropertyToPage(
 
 ### <a name="parameters"></a>Parameter
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Verteiler-ID einer Eigenschaft des Steuerelements.
 
 *lpclsid*<br/>
@@ -3209,7 +3209,7 @@ virtual BOOL OnRenderFileData(
 *lpFormatEtc*<br/>
 Verweist auf die [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Struktur, die das Format, in dem Informationen angefordert, angibt.
 
-*pFile-Datei*<br/>
+*pFile*<br/>
 Verweist auf eine [CFile](../../mfc/reference/cfile-class.md) Objekt, in dem die Daten gerendert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -3409,10 +3409,10 @@ virtual BOOL OnWindowlessMessage(
 
 ### <a name="parameters"></a>Parameter
 
-*Meldung*<br/>
+*msg*<br/>
 Nachrichten-ID von Windows zu übergeben.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 Von Windows zu übergeben. Gibt zusätzliche meldungsspezifische Informationen. Der Inhalt dieses Parameters ist hängt von den Wert des der *msg* Parameter.
 
 *lParam*<br/>
@@ -3873,10 +3873,10 @@ BOOL SetControlSize(int cx, int cy);
 
 ### <a name="parameters"></a>Parameter
 
-*CX*<br/>
+*cx*<br/>
 Gibt die neue Breite des Steuerelements in Pixel an.
 
-*CY*<br/>
+*cy*<br/>
 Gibt die neue Höhe des Steuerelements in Pixel an.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -3899,7 +3899,7 @@ void SetEnabled(BOOL bEnabled);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktiviert*<br/>
+*bEnabled*<br/>
 True, wenn das Steuerelement aktiviert werden. andernfalls "false".
 
 ### <a name="remarks"></a>Hinweise
@@ -3978,10 +3978,10 @@ void SetInitialSize(
 
 ### <a name="parameters"></a>Parameter
 
-*CX*<br/>
+*cx*<br/>
 Die Ausgangsbreite des OLE-Steuerelements in Pixel.
 
-*CY*<br/>
+*cy*<br/>
 Die Ausgangshöhe des OLE-Steuerelements in Pixel.
 
 ### <a name="remarks"></a>Hinweise
@@ -4085,7 +4085,7 @@ void ThrowError(
 
 ### <a name="parameters"></a>Parameter
 
-*SC*<br/>
+*sc*<br/>
 Der Statuswert des Codes gemeldet werden. Eine vollständige Liste der möglichen Fehlercodes, finden Sie im Artikel [ActiveX-Steuerelemente: Weiterführende Themen](../../mfc/mfc-activex-controls-advanced-topics.md).
 
 *nDescriptionID*<br/>
@@ -4135,7 +4135,7 @@ Eine Kombination der folgenden Werte:
 
 Die ersten beiden Flags, XFORMCOORDS_POSITION und XFORMCOORDS_SIZE, angeben, ob es sich bei die Koordinaten als eine Position oder Größe behandelt werden soll. Die verbleibenden zwei Flags geben an, die Richtung der Transformation wird.
 
-##  <a name="translatecolor"></a>  Memberfunktion COleControl:: TranslateColor
+##  <a name="translatecolor"></a>  COleControl::TranslateColor
 
 Konvertiert einen Farbwert aus den OLE_COLOR-Datentyp in der [COLORREF](/windows/desktop/gdi/colorref) -Datentyp.
 
@@ -4193,7 +4193,7 @@ virtual LRESULT WindowProc(
 *message*<br/>
 Gibt die Windows-Meldung verarbeitet werden.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 Enthält zusätzliche Informationen, die beim Verarbeiten der Nachricht verwendet. Der Wert des Parameters hängt von der Nachricht ab.
 
 *lParam*<br/>

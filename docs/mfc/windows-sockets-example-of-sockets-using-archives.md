@@ -6,12 +6,12 @@ helpviewer_keywords:
 - examples [MFC], Windows Sockets
 - Windows Sockets [MFC], with archives
 ms.assetid: 2e3c9bb2-7e7b-4f28-8dc5-6cb7a484edac
-ms.openlocfilehash: 285053c79b13ebea23aedc7dae52eabe85f55a12
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ea1e2911b156066360da09993fa7302db79f12b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436269"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295256"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: Beispiel für Sockets mithilfe der Archive
 
@@ -43,15 +43,15 @@ Für den Empfang, die Funktion kann auf ähnliche Weise, außer dass mithilfe de
 In diesem Kommunikationsmodell das Wort "Empfangen", die Nachricht gesendet, der *StrText* Variable ist für die Anzeige am anderen Ende der Kommunikation, daher wird für den empfangenden Benutzer, dass eine bestimmte Anzahl von Datenpaketen wurden empfangen. Der Empfänger antwortet mit einer ähnlichen Zeichenfolge durchgeführt, die auf den ursprünglichen Absender Bildschirm "Gesendet", für die Anzeige besagt. Empfang der beiden Zeichenfolgen gibt an, dass erfolgreiche Kommunikation aufgetreten ist.
 
 > [!CAUTION]
->  Wenn Sie eine MFC-Clientprogramm zur Kommunikation mit Servern mit eingerichteten (MFC-Fremd) schreiben, werden C++-Objekte über das Archiv nicht gesendet werden. Wenn der Server eine MFC-Anwendung, die die Arten von Objekten zu verstehen, die Sie senden möchten ist, ist es nicht empfangen und Deserialisieren Ihrer Objekte. Ein Beispiel in diesem Artikel [Windows Sockets: Bytereihenfolge](../mfc/windows-sockets-byte-ordering.md) zeigt eine Kommunikation dieses Typs.
+>  Wenn Sie eine MFC-Clientprogramm zur Kommunikation mit Servern mit eingerichteten (MFC-Fremd) schreiben, werden C++-Objekte über das Archiv nicht gesendet werden. Wenn der Server eine MFC-Anwendung, die die Arten von Objekten zu verstehen, die Sie senden möchten ist, ist es nicht empfangen und Deserialisieren Ihrer Objekte. Ein Beispiel in diesem Artikel [Windows Sockets: Byte-Reihenfolge](../mfc/windows-sockets-byte-ordering.md) zeigt eine Kommunikation dieses Typs.
 
 Weitere Informationen finden Sie unter Windows Sockets-Spezifikation: **Htonl**, **Htons**, **Ntohl**, **Ntohs**. Darüber hinaus weitere Informationen finden Sie unter:
 
-- [Windows-Sockets: Ableiten von Socket-Klassen](../mfc/windows-sockets-deriving-from-socket-classes.md)
+- [Windows Sockets: Ableiten aus Socketklassen](../mfc/windows-sockets-deriving-from-socket-classes.md)
 
-- [Windows-Sockets: Wie Sockets mit Archiven arbeiten](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows Sockets: Wie Sockets mit Archiven arbeiten](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Windows-Sockets: Hintergrund](../mfc/windows-sockets-background.md)
+- [Windows Sockets: Hintergrund](../mfc/windows-sockets-background.md)
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -61,4 +61,3 @@ Weitere Informationen finden Sie unter Windows Sockets-Spezifikation: **Htonl**,
 [CArchive::operator >>](../mfc/reference/carchive-class.md#operator_lt_lt)<br/>
 [CArchive::Flush](../mfc/reference/carchive-class.md#flush)<br/>
 [CObject:: Serialize](../mfc/reference/cobject-class.md#serialize)
-

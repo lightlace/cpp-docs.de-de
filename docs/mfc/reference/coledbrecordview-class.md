@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COleDBRecordView [MFC], OnGetRowset
 - COleDBRecordView [MFC], OnMove
 ms.assetid: 98612427-c4c9-4760-b7e1-85b17448add9
-ms.openlocfilehash: fbbaaae72c7b58f898735d768c019a02cdb7d7e5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1b09599479010f87e396e6f576c9524651923f9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518579"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280368"
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView-Klasse
 
@@ -51,7 +51,7 @@ Die Ansicht ist eine Formularansicht können Sie direkt mit verbundenen eine `CR
 Sie können die DDX-Funktionen mit `COleDbRecordView` um Daten direkt aus dem Datenbankrecordset abrufen und in einem Dialogfeldsteuerelement anzuzeigen. Verwenden Sie die `DDX_*` Methoden (z. B. `DDX_Text`) und nicht die `DDX_Field*` Funktionen (z. B. `DDX_FieldText`) mit `COleDbRecordView`. `DDX_FieldText` funktioniert nicht mit `COleDbRecordView` da `DDX_FieldText` nimmt ein zusätzliches Argument vom Typ `CRecordset*` (für `CRecordView`) oder `CDaoRecordset*` (für `CDaoRecordView`).
 
 > [!NOTE]
->  Wenn Sie mit den Klassen Datenzugriffsobjekte (DAO) statt der OLE DB-Consumervorlagen-Klassen arbeiten, verwenden Sie die Klasse [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) stattdessen. Weitere Informationen finden Sie im Artikel [Overview: Datenbank-Programmierung](../../data/data-access-programming-mfc-atl.md).
+>  Wenn Sie mit den Klassen Datenzugriffsobjekte (DAO) statt der OLE DB-Consumervorlagen-Klassen arbeiten, verwenden Sie die Klasse [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) stattdessen. Weitere Informationen finden Sie im Artikel [Übersicht: Datenbank-Programmierung](../../data/data-access-programming-mfc-atl.md).
 
 `COleDBRecordView` behält den Überblick Position des Benutzers im Rowset, damit der Datensatzansicht angezeigt, die Benutzeroberfläche aktualisieren kann. Wenn der Benutzer an beiden Enden des Rowsets bewegt, deaktiviert die Datensatzansicht Benutzeroberflächenobjekte – wie z. B. Menüelemente und Symbolleisten-Schaltflächen – für das Verschieben von weiter in die gleiche Richtung.
 
@@ -164,4 +164,3 @@ Wenn Sie hinter dem letzten Datensatz im Recordset verschieben, wird die Datensa
 ## <a name="see-also"></a>Siehe auch
 
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
-

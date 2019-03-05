@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-ms.openlocfilehash: e17284ef8652e5d08b2305dc07d27f080ec64239
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f95efb17b95dc55cb6f6977439760fa7ea1afe9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568046"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264846"
 ---
 # <a name="acceleratorview-class"></a>accelerator_view-Klasse
 
@@ -118,7 +118,7 @@ accelerator_view( const accelerator_view & _Other );
 
 ### <a name="parameters"></a>Parameter
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Das zu kopierende `accelerator_view`-Objekt.
 
 ## <a name="accelerator_view__create_marker"></a> create_marker
@@ -250,14 +250,14 @@ bool operator!= (    const accelerator_view & _Other ) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Die `accelerator_view` Objekt, das mit dieser verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
 **"false"** , wenn die beiden Objekte gleich sind, andernfalls **"true"**.
 
-## <a name="accelerator_view__operator_eq"></a> Operator =
+## <a name="accelerator_view__operator_eq"></a> operator=
 
 Kopiert den Inhalt des Objekts angegebene "accelerator_view" in dieses Objekt.
 
@@ -269,7 +269,7 @@ accelerator_view & operator= (    const accelerator_view & _Other );
 
 ### <a name="parameters"></a>Parameter
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Das `accelerator_view`-Objekt, aus dem kopiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -288,7 +288,7 @@ bool operator= = (    const accelerator_view & _Other ) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Die `accelerator_view` Objekt, das mit dieser verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -333,7 +333,7 @@ Gibt `void`zurück.
 
 Wenn die [Queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode) ist `immediate`, diese Methode wird sofort zurückgegeben, ohne zu blockieren.
 
-##  <a name="dtor"></a> ~ accelerator_view-Objekt
+##  <a name="dtor"></a> ~accelerator_view
 
 Zerstört das Accelerator_view-Objekt.
 

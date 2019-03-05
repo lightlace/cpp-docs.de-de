@@ -90,12 +90,12 @@ f1_keywords:
 - amp_math/Concurrency::precise_math::trunc
 - amp_math/Concurrency::precise_math::truncf
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-ms.openlocfilehash: ccbb9bdda3132626a6bf76161104c9716a9b5c89
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7690c0629e7035d0130f0a7dbdcabf3e959ae7b6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469354"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297345"
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Concurrency:: precise_math Namespace-Funktionen
 
@@ -449,7 +449,7 @@ Gibt zurück, die echte Kubikwurzel des Arguments
 
 ##  <a name="ceil"></a>  ceil-
 
-Berechnet den Höchstwert des Arguments
+Berechnet die Höchstwert des Arguments
 
 ```
 inline float ceil(float _X) restrict(amp);
@@ -468,7 +468,7 @@ Gibt den Höchstwert des Arguments
 
 ##  <a name="ceilf"></a>  ceilf
 
-Berechnet den Höchstwert des Arguments
+Berechnet die Höchstwert des Arguments
 
 ```
 inline float ceilf(float _X) restrict(amp);
@@ -831,7 +831,7 @@ inline double expm1(double exponent) restrict(amp);
 
 ### <a name="parameters"></a>Parameter
 
-*Exponent*<br/>
+*exponent*<br/>
 Der Exponent *n* des mathematischen Ausdrucks `e` <sup>n</sup>, wobei `e` ist die Basis des natürlichen Logarithmus.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -848,7 +848,7 @@ inline float expm1f(float exponent) restrict(amp);
 
 ### <a name="parameters"></a>Parameter
 
-*Exponent*<br/>
+*exponent*<br/>
 Der Exponent *n* des mathematischen Ausdrucks `e` <sup>n</sup>, wobei `e` ist die Basis des natürlichen Logarithmus.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1043,7 +1043,7 @@ Gleitkommawert
 
 Gibt den Tiefstwert des Arguments
 
-## <a name="a-namefma-fma"></a><a name="fma"> FMA
+## <a name="a-namefma-fma"></a><a name="fma"> fma
 
 Berechnet das Produkt des ersten und zweiten angegebenen Arguments, fügt dann das dritte angegebene Argument dem Ergebnis hinzu. Die gesamte Berechnung wird als einzelner Vorgang ausgeführt.
 ```
@@ -1279,7 +1279,7 @@ inline double frexp(
 *_X*<br/>
 Gleitkommawert
 
-*_EXP zurück*<br/>
+*_Exp*<br/>
 Gibt den ganzzahligen Exponenten von _X in Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1301,7 +1301,7 @@ inline float frexpf(
 *_X*<br/>
 Gleitkommawert
 
-*_EXP zurück*<br/>
+*_Exp*<br/>
 Gibt den ganzzahligen Exponenten von _X in Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1487,7 +1487,7 @@ inline double ldexp(
 *_X*<br/>
 Gleitkommawert, Mantisse
 
-*_EXP zurück*<br/>
+*_Exp*<br/>
 Ganze Zahl, Exponent
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1509,7 +1509,7 @@ inline float ldexpf(
 *_X*<br/>
 Gleitkommawert, Mantisse
 
-*_EXP zurück*<br/>
+*_Exp*<br/>
 Ganze Zahl, Exponent
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1535,7 +1535,7 @@ inline double lgamma(
 *_X*<br/>
 Gleitkommawert
 
-*_Signieren*<br/>
+*_Sign*<br/>
 Gibt das Vorzeichen
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1557,7 +1557,7 @@ inline float lgammaf(
 *_X*<br/>
 Gleitkommawert
 
-*_Signieren*<br/>
+*_Sign*<br/>
 Gibt das Vorzeichen
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2086,7 +2086,7 @@ Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt _X REM _Y
+Returns _X REM _Y
 
 ##  <a name="remainderf"></a>  remainderf
 
@@ -2108,7 +2108,7 @@ Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt _X REM _Y
+Returns _X REM _Y
 
 ##  <a name="remquo"></a>  remquo
 
@@ -2263,7 +2263,7 @@ Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt _X \* (FLT_RADIX ^ _Y)
+Returns _X \* (FLT_RADIX ^ _Y)
 
 ##  <a name="scalbf"></a>  scalbf
 
@@ -2285,7 +2285,7 @@ Gleitkommawert
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt _X \* (FLT_RADIX ^ _Y)
+Returns _X \* (FLT_RADIX ^ _Y)
 
 ##  <a name="scalbn"></a>  scalbn
 
@@ -2311,7 +2311,7 @@ Ganzzahliger Wert
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt _X \* (FLT_RADIX ^ _Y)
+Returns _X \* (FLT_RADIX ^ _Y)
 
 ##  <a name="scalbnf"></a>  scalbnf
 
@@ -2333,7 +2333,7 @@ Ganzzahliger Wert
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt _X \* (FLT_RADIX ^ _Y)
+Returns _X \* (FLT_RADIX ^ _Y)
 
 ##  <a name="signbit"></a>  signbit
 

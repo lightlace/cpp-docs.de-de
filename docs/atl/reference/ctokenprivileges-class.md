@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-ms.openlocfilehash: e492ada977527d5c8709dd3afbf390bc678f789e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80302d59d081b7cdf6f29960c3d8f4859b4ecbf4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519794"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280445"
 ---
 # <a name="ctokenprivileges-class"></a>CTokenPrivileges-Klasse
 
@@ -97,7 +97,7 @@ void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 *pszPrivilege*<br/>
 Zeiger auf eine auf Null endende Zeichenfolge, die den Namen der Berechtigung, gibt an, wie in der WINNT definiert. H-Headerdatei.
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 True gibt an, dass die Berechtigung aktiviert ist. Wenn "false" ist die Berechtigung deaktiviert.
 
 *rPrivileges*<br/>
@@ -119,7 +119,7 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 
 ### <a name="parameters"></a>Parameter
 
-*RS*<br/>
+*rhs*<br/>
 Die `CTokenPrivileges` -Objekt, mit dem neuen Objekt zugewiesen.
 
 *rPrivileges*<br/>
@@ -311,7 +311,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 *rPrivileges*<br/>
 Die [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) Struktur zuweisen der `CTokenPrivileges` Objekt.
 
-*RS*<br/>
+*rhs*<br/>
 Die `CTokenPrivileges` Objekt, das das Objekt zugewiesen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -335,6 +335,6 @@ Wandelt einen Wert in einen Zeiger auf die [TOKEN_PRIVILEGES](/windows/desktop/a
 [Beispiel für die Sicherheit](../../visual-cpp-samples.md)<br/>
 [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)<br/>
 [LUID](/windows/desktop/api/winnt/ns-winnt-_luid)<br/>
-["LUID_AND_ATTRIBUTES"](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)<br/>
+[LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)<br/>
 [Globale Sicherheitsfunktionen](../../atl/reference/security-global-functions.md)

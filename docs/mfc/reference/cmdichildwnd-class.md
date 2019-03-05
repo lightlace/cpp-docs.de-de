@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: 50fb7da1a59d35d96f1f65428b3a361e3a226607
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: efcf5057481345c001cc48224f53c666623d0780
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694453"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304989"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd-Klasse
 
@@ -141,7 +141,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parameter
 
-*"lpszclassname"*<br/>
+*lpszClassName*<br/>
 Verweist auf eine Null-terminierte Zeichenfolge, die Namen die Windows-Klasse (ein [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Struktur). Der Klassenname kann einen beliebigen Namen registriert werden die [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) globale Funktion. Sollte NULL sein, für die Standard `CMDIChildWnd`.
 
 *lpszWindowName*<br/>
@@ -150,7 +150,7 @@ Verweist auf eine Null-terminierte Zeichenfolge, die den Fensternamen darstellt.
 *dwStyle*<br/>
 Gibt das Zeitfenster [Stil](../../mfc/reference/styles-used-by-mfc.md#window-styles) Attribute. Das Format WS_CHILD ist erforderlich.
 
-*Rect*<br/>
+*rect*<br/>
 Enthält die Größe und Position des Fensters. Die `rectDefault` Wert ermöglicht Windows zum Angeben der Größe und Position des neuen `CMDIChildWnd`.
 
 *pParentWnd*<br/>

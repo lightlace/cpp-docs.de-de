@@ -1,5 +1,5 @@
 ---
-title: Aufgabenplaner (Concurrency Runtime)
+title: Taskplaner (Concurrency Runtime)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - oversubscription [Concurrency Runtime]
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - scheduler policies [Concurrency Runtime]
 - task scheduler [Concurrency Runtime], wait function
 ms.assetid: 9aba278c-e0c9-4ede-b7c6-fedf7a365d90
-ms.openlocfilehash: 91ef4ed14fa1ddc25ff494f6666a50f5b39b8a54
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5d37d320344d2ebf83be2c939f5a7372d4af306
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676706"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286808"
 ---
-# <a name="task-scheduler-concurrency-runtime"></a>Aufgabenplaner (Concurrency Runtime)
+# <a name="task-scheduler-concurrency-runtime"></a>Taskplaner (Concurrency Runtime)
 
-Die Themen in diesem Teil der Dokumentation beschreiben die wichtigsten Funktionen des Taskplaners der Concurrency Runtime. Der Aufgabenplaner ist hilfreich, wenn Sie die Leistung von vorhandenem Code optimieren möchten, der die Concurrency Runtime verwendet.
+Die Themen in diesem Teil der Dokumentation beschreiben die wichtigsten Features des Taskplaners der Concurrency Runtime. Der Aufgabenplaner ist hilfreich, wenn Sie die Leistung von vorhandenem Code optimieren möchten, der die Concurrency Runtime verwendet.
 
 > [!IMPORTANT]
 >  Der Aufgabenplaner ist nicht verfügbar, über eine app (Universelle Windows Plattform). Weitere Informationen finden Sie unter [Erstellen von asynchronen Vorgängen in C++ für UWP-Apps](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).
@@ -35,9 +35,9 @@ Die Themen in diesem Teil der Dokumentation beschreiben die wichtigsten Funktion
 > [!TIP]
 >  Die Concurrency Runtime stellt einen Standardplaner bereit. Sie müssen daher keinen in Ihrer Anwendung erstellen. Da der Taskplaner die Leistung Ihrer Anwendungen optimieren können, es wird empfohlen, zunächst die [Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) oder [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md) möchten noch nicht mit der Concurrency Runtime.
 
-Der Aufgabenplaner plant und koordiniert die Aufgaben zur Laufzeit. Ein *Aufgabe* ist eine Arbeitseinheit, die einen bestimmten Auftrag ausführt. Eine Aufgabe kann in der Regel parallel mit anderen Aufgaben ausgeführt werden. Die Arbeit, die von Aufgabengruppenelementen ausgeführt wird, parallele Algorithmen und asynchrone Agents sind Beispiele für Aufgaben.
+Der Taskplaner plant und koordiniert die Aufgaben zur Laufzeit. Ein *Aufgabe* ist eine Arbeitseinheit, die einen bestimmten Auftrag ausführt. Eine Aufgabe kann in der Regel parallel mit anderen Aufgaben ausgeführt werden. Die Arbeit, die von Aufgabengruppenelementen ausgeführt wird, parallele Algorithmen und asynchrone Agents sind Beispiele für Aufgaben.
 
-Der Taskplaner verwaltet die Details, die sich auf die effiziente Planung von Aufgaben auf Computern mit mehreren Computerressourcen beziehen. Der Taskplaner verwendet außerdem die neuesten Features des zugrunde liegenden Betriebssystems. Aus diesem Grund skalieren und verbessern Anwendungen, die die Concurrency Runtime automatisch verwenden, jede Hardware, die über erweiterte Funktionen verfügt.
+Der Aufgabenplaner verwaltet die Details, die sich auf die effiziente Planung von Aufgaben auf Computern mit mehreren Computerressourcen beziehen. Der Taskplaner verwendet außerdem die neuesten Features des zugrunde liegenden Betriebssystems. Aus diesem Grund skalieren und verbessern Anwendungen, die die Concurrency Runtime automatisch verwenden, jede Hardware, die über erweiterte Funktionen verfügt.
 
 [Vergleich mit anderen Parallelitätsmodellen](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md) beschreibt die Unterschiede zwischen präemptiven und kooperativen Planungsmechanismen. Der Aufgabenplaner verwendet die kooperative Planung und einen Arbeitsübernahmealgorithmus zusammen mit dem präemptiven Planer des Betriebssystems, um eine maximale Nutzung der Verarbeitungsressourcen zu erreichen.
 
@@ -57,4 +57,3 @@ Die Concurrency Runtime stellt einen Standardplaner bereit, sodass Sie keine Inf
 |[Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Beschreibt, wie Sie verschiedene parallele Muster, z. B. parallele Algorithmen, in Anwendungen verwenden können.|
 |[Asynchrone Agents Library](../../parallel/concrt/asynchronous-agents-library.md)|Beschreibt, wie Sie asynchrone Agents in Ihren Anwendungen verwenden.|
 |[Concurrency Runtime](../../parallel/concrt/concurrency-runtime.md)|Beschreibt die Concurrency Runtime, die die parallele Programmierung vereinfacht, und stellt Links zu verwandten Themen bereit.|
-

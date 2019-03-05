@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: b1cf1dfc623edbb2b6e71aa6476a2fe0cccbc20b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d363de0d787ecc5015093005b39a379acd82e71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677187"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262700"
 ---
 # <a name="cthreadpool-class"></a>CThreadPool-Klasse
 
@@ -53,7 +53,7 @@ Die Klasse der Funktion verwendet, um die Threads im Pool zu erstellen.
 |Name|Beschreibung|
 |----------|-----------------|
 |[CThreadPool::CThreadPool](#cthreadpool)|Der Konstruktor für den Threadpool.|
-|[CThreadPool:: ~ CThreadPool](#dtor)|Der Destruktor für Threadpool der Warteschleife hinzu.|
+|[CThreadPool::~CThreadPool](#dtor)|Der Destruktor für Threadpool der Warteschleife hinzu.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -62,13 +62,13 @@ Die Klasse der Funktion verwendet, um die Threads im Pool zu erstellen.
 |[CThreadPool::AddRef](#addref)|Implementierung von `IUnknown::AddRef`.|
 |[CThreadPool::GetNumThreads](#getnumthreads)|Rufen Sie diese Methode, um die Anzahl der Threads im Pool verfügbar machen.|
 |[CThreadPool::GetQueueHandle](#getqueuehandle)|Rufen Sie diese Methode, um das Handle des e/a-Abschlussport zum Arbeitsaufgaben in die Warteschlange abrufen.|
-|[:: GetSize](#getsize)|Rufen Sie diese Methode, um die Anzahl der Threads im Pool verfügbar machen.|
+|[CThreadPool::GetSize](#getsize)|Rufen Sie diese Methode, um die Anzahl der Threads im Pool verfügbar machen.|
 |[CThreadPool::GetTimeout](#gettimeout)|Rufen Sie diese Methode rufen Sie die maximale Zeit in Millisekunden, die der Threadpool für einen Thread zum Herunterfahren gewartet wird.|
 |[CThreadPool::Initialize](#initialize)|Rufen Sie diese Methode zum Initialisieren der Threadpool der Warteschleife hinzu.|
 |[CThreadPool::QueryInterface](#queryinterface)|Implementierung von `IUnknown::QueryInterface`.|
 |[CThreadPool::QueueRequest](#queuerequest)|Rufen Sie diese Methode, um in die Warteschlange ein Arbeitselement von einem Thread im Pool verarbeitet werden.|
 |[CThreadPool::Release](#release)|Implementierung von `IUnknown::Release`.|
-|[Wurde](#setsize)|Rufen Sie diese Methode, um die Anzahl der Threads im Pool festlegen.|
+|[CThreadPool::SetSize](#setsize)|Rufen Sie diese Methode, um die Anzahl der Threads im Pool festlegen.|
 |[CThreadPool::SetTimeout](#settimeout)|Rufen Sie diese Methode zum Festlegen der maximalen Zeit in Millisekunden, die der Threadpool für einen Thread zum Herunterfahren gewartet wird.|
 |[CThreadPool::Shutdown](#shutdown)|Rufen Sie diese Methode zum Herunterfahren der Threadpool der Warteschleife hinzu.|
 
@@ -94,7 +94,7 @@ Ein Beispiel für eine *Worker* Klasse [CNonStatelessWorker-Klasse](../../atl/re
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** "atlutil.h"
+**Header:** atlutil.h
 
 ##  <a name="addref"></a>  CThreadPool::AddRef
 
@@ -160,7 +160,7 @@ HANDLE GetQueueHandle() throw();
 
 Gibt zurück, der Warteschlangenhandle oder NULL, wenn es sich bei der Threadpool nicht initialisiert wurde.
 
-##  <a name="getsize"></a>  :: GetSize
+##  <a name="getsize"></a>  CThreadPool::GetSize
 
 Rufen Sie diese Methode, um die Anzahl der Threads im Pool verfügbar machen.
 
@@ -254,7 +254,7 @@ BOOL QueueRequest(Worker::RequestType request) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Anforderung*<br/>
+*request*<br/>
 Die Anforderung in die Warteschlange gestellt.
 
 ### <a name="return-value"></a>Rückgabewert

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CGdiObject [MFC], UnrealizeObject
 - CGdiObject [MFC], m_hObject
 ms.assetid: 1cba3ba5-3d49-4e43-8293-209299f2f6f4
-ms.openlocfilehash: 87545d67addb6a1f0931007d8912989968f7a74a
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 1b2b87173bf504455ba314fdd89ffae298cae6a8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177848"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301219"
 ---
 # <a name="cgdiobject-class"></a>CGdiObject-Klasse
 
@@ -68,13 +68,13 @@ class CGdiObject : public CObject
 |[CGdiObject::GetObject](#getobject)|Füllt ein Puffer mit Daten, die beschreibt, das Windows-GDI-Objekt angefügt die `CGdiObject` Objekt.|
 |[CGdiObject::GetObjectType](#getobjecttype)|Ruft den Typ der GDI-Objekt ab.|
 |[CGdiObject::GetSafeHandle](#getsafehandle)|Gibt `m_hObject` , wenn **dies** NULL ist, in dem Groß-/Kleinschreibung NULL zurückgegeben wird.|
-|[CGdiObject:: UnrealizeObject](#unrealizeobject)|Setzt den Ursprung eines Pinsels oder eine logische Palette zurückgesetzt.|
+|[CGdiObject::UnrealizeObject](#unrealizeobject)|Setzt den Ursprung eines Pinsels oder eine logische Palette zurückgesetzt.|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CGdiObject::operator! =](#operator_neq)|Bestimmt, ob zwei GDI-Objekte logisch nicht gleich sind.|
+|[CGdiObject::operator !=](#operator_neq)|Bestimmt, ob zwei GDI-Objekte logisch nicht gleich sind.|
 |[CGdiObject::operator ==](#operator_eq_eq)|Bestimmt, ob zwei GDI-Objekte logisch gleich sind.|
 |[CGdiObject::operator HGDIOBJ](#operator_hgdiobj)|Ruft ein HANDLE für das angefügte Windows-GDI-Objekt ab.|
 
@@ -249,7 +249,7 @@ Die Funktion ruft eine Datenstruktur, die den Typ des grafisches Objekt, dessen 
 |------------|-----------------|
 |`CPen`|[LOGPEN](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen)|
 |`CBrush`|[LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)|
-|`CFont`|["LOGFONT"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)|
+|`CFont`|[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)|
 |`CBitmap`|[BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)|
 |`CPalette`|WORD|
 |`CRgn`|Nicht unterstützt|
@@ -274,7 +274,7 @@ Der Typ des Objekts, wenn erfolgreich; andernfalls 0. Der Wert kann in folgenden
 
 - OBJ_BRUSH Pinsel
 
-- OBJ_FONT Schriftart
+- OBJ_FONT Font
 
 - OBJ_PAL Palette
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - vc.codewiz.class.atl.mts.options
 ms.assetid: 2fbe259c-6be1-4d0e-9cfe-721c75c97cb1
-ms.openlocfilehash: 014193f4017aa47b819558cbd4753e6abcffcaaf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0fa649ba41a684be6ed18bd05d48954503c5db16
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562057"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295973"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, ATL COM+ 1.0-Komponenten-Assistent
 
@@ -30,14 +30,14 @@ Weitere Informationen zu ATL-Projekte und ATL-COM-Klassen finden Sie unter [ATL 
 
    Gibt an, dass Clients auf diese Komponente, die mithilfe von Nachrichtenwarteschlangen asynchron aufrufen können. Fügt die Komponente, die attributiert Custom (TLBATTR_QUEUEABLE-Komponentenattributmakro, 0) der h-Datei (attributierte Projekte) oder der IDL-Datei (nicht attributierte Projekte) hinzu.
 
-- **Unterstützung**
+- **Support**
 
    Gibt zusätzliche Unterstützung für die Behandlung und Objekt-Steuerelement für Fehlermeldungen an.
 
    |Option|Beschreibung|
    |------------|-----------------|
    |**ISupportErrorInfo**|Stellt die Unterstützung der [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) Schnittstelle, damit das Objekt Fehlerinformationen an den Client zurückgeben kann.|
-   |**IObjectControl**|Ermöglicht dem Objektzugriff auf die drei [IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol) Methoden: [aktivieren](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate), [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled), und [deaktivieren](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate).|
+   |**IObjectControl**|Ermöglicht dem Objektzugriff auf die drei [IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol) Methoden: [Aktivieren Sie](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate), [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled), und [deaktivieren](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate).|
    |**IObjectConstruct**|Stellt die Unterstützung der [IObjectConstruct](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectconstruct) Schnittstelle zum Verwalten von in-Parameter von anderen Methoden oder Objekten übergeben.|
 
 - **Transaktion**
@@ -55,4 +55,3 @@ Weitere Informationen zu ATL-Projekte und ATL-COM-Klassen finden Sie unter [ATL 
 
 [ATL COM+ 1.0 Komponenten-Assistent](../../atl/reference/atl-com-plus-1-0-component-wizard.md)<br/>
 [ATL COM+ 1.0-Komponente](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)
-

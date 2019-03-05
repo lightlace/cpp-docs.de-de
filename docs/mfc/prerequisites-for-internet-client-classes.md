@@ -16,12 +16,12 @@ helpviewer_keywords:
 - prerequisites, Internet client classes [MFC]
 - Gopher client applications [MFC]
 ms.assetid: c51d1dfe-260c-4228-8100-e4efd90e9599
-ms.openlocfilehash: b6be476e4b9f7d1aaa09a588e1c06e72032f48c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6246db7dfb2837f5d94fa51f8433b46722c43663
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629878"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267744"
 ---
 # <a name="prerequisites-for-internet-client-classes"></a>Voraussetzungen für Internetclientklassen
 
@@ -57,7 +57,7 @@ Einige Aktionen, die, die von einem Internetclient (z. B. Lesen einer Datei) üb
 |Richten Sie eine HTTP-Verbindung.|Erstellen Sie eine [CInternetSession](../mfc/reference/cinternetsession-class.md) als Grundlage für diese Internet-Clientanwendung. Rufen Sie [CInternetSession:: GetHttpConnection](../mfc/reference/cinternetsession-class.md#gethttpconnection) zum Erstellen einer [CHttpConnection](../mfc/reference/chttpconnection-class.md) Objekt.|
 |Öffnen Sie eine HTTP-Datei.|Richten Sie eine HTTP-Verbindung. Rufen Sie [CHttpConnection:: OpenRequest](../mfc/reference/chttpconnection-class.md#openrequest) zum Erstellen einer [CHttpFile](../mfc/reference/chttpfile-class.md) Objekt. Rufen Sie [CHttpFile:: AddRequestHeaders](../mfc/reference/chttpfile-class.md#addrequestheaders). Rufen Sie [CHttpFile:: SendRequest](../mfc/reference/chttpfile-class.md#sendrequest).|
 |Lesen Sie eine HTTP-Datei.|Öffnen Sie eine HTTP-Datei. Rufen Sie [CInternetFile:: Read](../mfc/reference/cinternetfile-class.md#read).|
-|Abrufen von Informationen über eine HTTP-Anforderung.|Richten Sie eine HTTP-Verbindung. Rufen Sie [CHttpConnection:: OpenRequest](../mfc/reference/chttpconnection-class.md#openrequest) zum Erstellen einer [CHttpFile](../mfc/reference/chttpfile-class.md) Objekt. Rufen Sie [CHttpFile::](../mfc/reference/chttpfile-class.md#queryinfo).|
+|Abrufen von Informationen über eine HTTP-Anforderung.|Richten Sie eine HTTP-Verbindung. Rufen Sie [CHttpConnection:: OpenRequest](../mfc/reference/chttpconnection-class.md#openrequest) zum Erstellen einer [CHttpFile](../mfc/reference/chttpfile-class.md) Objekt. Call [CHttpFile::QueryInfo](../mfc/reference/chttpfile-class.md#queryinfo).|
 
 ### <a name="gopher"></a>Gopher
 

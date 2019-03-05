@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Verwenden von parallel_invoke zum Schreiben einer Runtime für paralleles Sortieren'
+title: 'Vorgehensweise: Parallele Sortierung Schreiben einer mithilfe von parallel_invoke'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - task_handle class, example
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - structured_task_group class, example
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
-ms.openlocfilehash: e72d99cb1b9168e3de1e109d93c163e21cb7fad7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 329cf275f283ba7b57276d06e909905c9a900697
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440156"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284176"
 ---
-# <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Gewusst wie: Verwenden von parallel_invoke zum Schreiben einer Runtime für paralleles Sortieren
+# <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Vorgehensweise: Parallele Sortierung Schreiben einer mithilfe von parallel_invoke
 
 Dieses Dokument beschreibt, wie die [Parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) -Algorithmus die Leistung des bitonischen Sortieralgorithmus verbessert werden kann. Der bitonische Sortieralgorithmus unterteilt die Eingabesequenz rekursiv in kleinere sortierte Partitionen. Der bitonische Sortieralgorithmus kann parallel ausgeführt werden, da alle Partitionsvorgänge von allen anderen Vorgängen unabhängig sind.
 
@@ -48,11 +48,11 @@ In diesem Abschnitt wird beschrieben, wie der bitonischen Sortieralgorithmus mit
 
 ##### <a name="to-perform-the-bitonic-sort-algorithm-in-parallel"></a>So führen Sie den bitonischen Sortieralgorithmus parallel aus
 
-1. Fügen Sie für die Headerdatei ppl.h eine `#include`-Anweisung hinzu.
+1. Fügen Sie für die Headerdatei ppl.h eine `#include`-Direktive hinzu.
 
 [!code-cpp[concrt-parallel-bitonic-sort#10](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_2.cpp)]
 
-1. Fügen Sie eine `using`-Anweisung für den `concurrency`-Namespace hinzu.
+1. Fügen Sie eine `using`-Direktive für den `concurrency`-Namespace hinzu.
 
 [!code-cpp[concrt-parallel-bitonic-sort#11](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_3.cpp)]
 
@@ -105,4 +105,3 @@ Analog zu allen anderen parallelen Algorithmen wird empfohlen, nach Bedarf Profi
 
 [Aufgabenparallelität](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [Parallel_invoke-Funktion](reference/concurrency-namespace-functions.md#parallel_invoke)
-

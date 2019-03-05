@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 3f9afdf18fcaff0d3613b4204d8690f915079e7d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 6366638ebfd5e78ad517a8913e4276d5cd820670
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178940"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264672"
 ---
 # <a name="cwinapp-class"></a>CWinApp-Klasse
 
@@ -221,7 +221,7 @@ class CWinApp : public CWinThread
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CWinApp:: AddDocTemplate](#adddoctemplate)|Fügt eine Dokumentvorlage, die Anwendung die Liste der verfügbaren Dokumentvorlagen.|
+|[CWinApp::AddDocTemplate](#adddoctemplate)|Fügt eine Dokumentvorlage, die Anwendung die Liste der verfügbaren Dokumentvorlagen.|
 |[CWinApp::AddToRecentFileList](#addtorecentfilelist)|Ein Dateiname und die Liste der zuletzt verwendeten (MRU)-Dateien hinzugefügt.|
 |[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)|Vom Framework aufgerufen, wenn die Anwendung unerwartet beendet wird.|
 |[CWinApp::CloseAllDocuments](#closealldocuments)|Schließt alle geöffneten Dokumente.|
@@ -232,7 +232,7 @@ class CWinApp : public CWinThread
 |[CWinApp::EnableD2DSupport](#enabled2dsupport)|Ermöglicht die Anwendung D2D-Unterstützung. Rufen Sie diese Methode vor der Initialisierung des Hauptfensters auf.|
 |[CWinApp::EnableHtmlHelp](#enablehtmlhelp)|Die Anwendung, anstatt WinHelp HTMLHelp implementiert.|
 |[CWinApp::EnableTaskbarInteraction](#enabletaskbarinteraction)|Ermöglicht die Interaktion der Taskleiste.|
-|[CWinApp:: ExitInstance](#exitinstance)|Überschreiben Sie, um eine Bereinigung durchzuführen, wenn Ihre Anwendung beendet wird.|
+|[CWinApp::ExitInstance](#exitinstance)|Überschreiben Sie, um eine Bereinigung durchzuführen, wenn Ihre Anwendung beendet wird.|
 |[CWinApp::GetApplicationRecoveryParameter](#getapplicationrecoveryparameter)|Ruft den Eingabeparameter für die Methode der Anwendung ab.|
 |[CWinApp::GetApplicationRecoveryPingInterval](#getapplicationrecoverypinginterval)|Gibt die Zeitspanne, die der Neustart-Manager wartet, bis die Wiederherstellung Callback-Funktion zurückgegeben.|
 |[CWinApp::GetApplicationRestartFlags](#getapplicationrestartflags)|Gibt die Flags für den Neustart-Manager zurück.|
@@ -248,7 +248,7 @@ class CWinApp : public CWinThread
 |[CWinApp::GetSectionKey](#getsectionkey)|Gibt Schlüssel HKEY_CURRENT_USER\\"Software" \RegistryKey\AppName\lpszSection.|
 |[CWinApp::HideApplication](#hideapplication)|Blendet die Anwendung vor dem schließen alle Dokumente aus.|
 |[CWinApp::HtmlHelp](#htmlhelp)|Ruft die `HTMLHelp` Windows-Funktion.|
-|[CWinApp:: InitInstance](#initinstance)|Außer Kraft setzen Sie, um die Initialisierung des Windows-Instanz, z. B. das Erstellen Ihrer Windows-Objekte auszuführen.|
+|[CWinApp::InitInstance](#initinstance)|Außer Kraft setzen Sie, um die Initialisierung des Windows-Instanz, z. B. das Erstellen Ihrer Windows-Objekte auszuführen.|
 |[CWinApp::IsTaskbarInteractionEnabled](#istaskbarinteractionenabled)|Erfahren Sie, ob Windows 7-Taskleiste Interaktion aktiviert ist.|
 |[CWinApp::LoadCursor](#loadcursor)|Lädt eine Cursorressource.|
 |[CWinApp::LoadIcon](#loadicon)|Lädt die Symbolressource.|
@@ -257,10 +257,10 @@ class CWinApp : public CWinThread
 |[CWinApp::LoadStandardCursor](#loadstandardcursor)|Lädt ein Windows vordefinierten Cursor, die die **IDC_** Konstanten geben an, in WINDOWS. H.|
 |[CWinApp::LoadStandardIcon](#loadstandardicon)|Lädt ein vordefiniertes Windows-Symbol, das die **IDI_** Konstanten geben an, in WINDOWS. H.|
 |[CWinApp::OnDDECommand](#onddecommand)|Wird aufgerufen, durch das Framework als Reaktion auf eine dynamischen Daten Datenaustausch (DDE) Befehl ausführen.|
-|[OnIdle](#onidle)|Überschreiben Sie, um anwendungsspezifische Leerlaufzeit, Verarbeitungsvorgänge auszuführen.|
-|[CWinApp:: OpenDocumentFile](#opendocumentfile)|Vom Framework aufgerufen wird, ein Dokument aus einer Datei zu öffnen.|
+|[CWinApp::OnIdle](#onidle)|Überschreiben Sie, um anwendungsspezifische Leerlaufzeit, Verarbeitungsvorgänge auszuführen.|
+|[CWinApp::OpenDocumentFile](#opendocumentfile)|Vom Framework aufgerufen wird, ein Dokument aus einer Datei zu öffnen.|
 |[CWinApp::ParseCommandLine](#parsecommandline)|Analysiert einzelne Parameter und die Flags in der Befehlszeile an.|
-|[PreTranslateMessage](#pretranslatemessage)|Filtert Nachrichten, bevor sie für die Windows-Funktionen weitergeleitet werden [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).|
+|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Filtert Nachrichten, bevor sie für die Windows-Funktionen weitergeleitet werden [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).|
 |[CWinApp::ProcessMessageFilter](#processmessagefilter)|Bestimmte Nachrichten abfängt, bevor sie die Anwendung erreichen.|
 |[CWinApp::ProcessShellCommand](#processshellcommand)|Behandelt Befehlszeilenargumente und Flags.|
 |[CWinApp::ProcessWndProcException](#processwndprocexception)|Fängt alle nicht behandelte Ausnahmen, die von der Anwendung die Nachricht und befehlshandlern ausgelöst.|
@@ -269,7 +269,7 @@ class CWinApp : public CWinThread
 |[CWinApp::ReopenPreviousFilesAtRestart](#reopenpreviousfilesatrestart)|Bestimmt, ob der Neustart-Manager die Dateien erneut, die geöffnet waren öffnet, wenn die Anwendung wurde unerwartet beendet.|
 |[CWinApp::RestartInstance](#restartinstance)|Behandelt einen Neustart der Anwendung durch den Neustart-Manager initiiert.|
 |[CWinApp::RestoreAutosavedFilesAtRestart](#restoreautosavedfilesatrestart)|Bestimmt, ob es sich bei der Neustart-Manager die automatisch gespeicherte Dateien wiederhergestellt, wenn sie die Anwendung neu gestartet wird.|
-|[CWinApp:: Run](#run)|Führt die Standardnachrichtenschleife an. Überschreiben Sie, um die Meldungsschleife anpassen.|
+|[CWinApp::Run](#run)|Führt die Standardnachrichtenschleife an. Überschreiben Sie, um die Meldungsschleife anpassen.|
 |[CWinApp::RunAutomated](#runautomated)|Testet die Anwendung in der Befehlszeile für die **/Automation** Option. Veraltet. Verwenden Sie stattdessen den Wert in [CCommandLineInfo::m_bRunAutomated](../../mfc/reference/ccommandlineinfo-class.md#m_brunautomated) nach dem Aufruf [ParseCommandLine](#parsecommandline).|
 |[CWinApp::RunEmbedded](#runembedded)|Testet die Anwendung in der Befehlszeile für die **/Embedding** Option. Veraltet. Verwenden Sie stattdessen den Wert in [CCommandLineInfo::m_bRunEmbedded](../../mfc/reference/ccommandlineinfo-class.md#m_brunembedded) nach dem Aufruf [ParseCommandLine](#parsecommandline).|
 |[CWinApp::SaveAllModified](#saveallmodified)|Fordert den Benutzer, alle geänderten Dokumente zu speichern.|
@@ -281,8 +281,8 @@ class CWinApp : public CWinThread
 |[CWinApp::SupportsRestartManager](#supportsrestartmanager)|Bestimmt, ob die Anwendung den Neustart-Manager unterstützt.|
 |[CWinApp::Unregister](#unregister)|Hebt die Registrierung für alle bekannten vom registriert werden die `CWinApp` Objekt.|
 |[CWinApp::WinHelp](#winhelp)|Ruft die `WinHelp` Windows-Funktion.|
-|[CWinApp:: WriteProfileBinary](#writeprofilebinary)|Schreibt binäre Daten in einen Eintrag in der Anwendung. INI-Datei.|
-|[CWinApp:: Writeprofileint](#writeprofileint)|Schreibt eine ganze Zahl auf einen Eintrag in der Anwendung an. INI-Datei.|
+|[CWinApp::WriteProfileBinary](#writeprofilebinary)|Schreibt binäre Daten in einen Eintrag in der Anwendung. INI-Datei.|
+|[CWinApp::WriteProfileInt](#writeprofileint)|Schreibt eine ganze Zahl auf einen Eintrag in der Anwendung an. INI-Datei.|
 |[CWinApp::WriteProfileString](#writeprofilestring)|Schreibt eine Zeichenfolge in einen Eintrag in der Anwendung. INI-Datei.|
 
 ### <a name="protected-methods"></a>Geschützte Methoden
@@ -299,7 +299,7 @@ class CWinApp : public CWinThread
 |[CWinApp::OnHelpFinder](#onhelpfinder)|Verarbeitet die ID_HELP_FINDER und ID_DEFAULT_HELP-Befehle.|
 |[CWinApp::OnHelpIndex](#onhelpindex)|Verarbeitet den ID_HELP_INDEX-Befehl aus, und stellt Sie ein standardmäßiges Hilfethema bereit.|
 |[CWinApp::OnHelpUsing](#onhelpusing)|Verarbeitet die ID_HELP_USING-Befehl.|
-|[CWinApp:: RegisterShellFileTypes](#registershellfiletypes)|Registriert alle für die Anwendung Dokumenttypen mit den Windows-Datei-Manager.|
+|[CWinApp::RegisterShellFileTypes](#registershellfiletypes)|Registriert alle für die Anwendung Dokumenttypen mit den Windows-Datei-Manager.|
 |[CWinApp::SetAppID](#setappid)|Explizit festlegt Anwendungsbenutzer-Modell-ID für die Anwendung ein. Diese Methode sollte aufgerufen werden, bevor eine Benutzeroberfläche für Benutzer angezeigt werden (der beste Ort ist der Anwendungskonstruktor).|
 |[CWinApp::SetRegistryKey](#setregistrykey)|Bewirkt, dass Anwendungseinstellungen in der Registrierung nicht gespeichert werden. INI-Dateien.|
 |[CWinApp::UnregisterShellFileTypes](#unregistershellfiletypes)|Hebt die Registrierung aller Anwendungen Dokumenttypen mit den Windows-Datei-Manager.|
@@ -311,7 +311,7 @@ class CWinApp : public CWinThread
 |[CWinApp::m_bHelpMode](#m_bhelpmode)|Gibt an, ob der Benutzer im Modus der Hilfe-Kontext (in der Regel mit UMSCHALT + F1 aufgerufen).|
 |[CWinApp::m_eHelpType](#m_ehelptype)|Gibt den Typ der Hilfe von der Anwendung verwendet.|
 |[CWinApp::m_hInstance](#m_hinstance)|Gibt die aktuelle Instanz der Anwendung an.|
-|[CWinApp:: M_lpcmdline](#m_lpcmdline)|Verweist auf eine auf Null endende Zeichenfolge, die die Befehlszeile für die Anwendung angibt.|
+|[CWinApp::m_lpCmdLine](#m_lpcmdline)|Verweist auf eine auf Null endende Zeichenfolge, die die Befehlszeile für die Anwendung angibt.|
 |[CWinApp::m_nCmdShow](#m_ncmdshow)|Gibt an, wie das Fenster, zuerst angezeigt werden soll.|
 |[CWinApp::m_pActiveWnd](#m_pactivewnd)|Zeiger auf das Hauptfenster der containeranwendung, wenn ein OLE-Server direkt aktiv ist.|
 |[CWinApp::m_pszAppID](#m_pszappid)|Anwendung Benutzer-Modell-ID.|
@@ -650,7 +650,7 @@ BOOL EnableTaskbarInteraction(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 Gibt an, ob die Interaktion mit Windows 7-Taskleiste (TRUE) aktiviert werden soll, oder deaktiviert (FALSE).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -824,7 +824,7 @@ CDocTemplate* GetNextDocTemplate(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Ein Verweis auf eine Positionswert, der von einem vorherigen Aufruf zurückgegebene `GetNextDocTemplate` oder [GetFirstDocTemplatePosition](#getfirstdoctemplateposition). Der Wert wird durch diesen Aufruf an die nächste Position aktualisiert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1307,15 +1307,15 @@ Um den Neustart-Manager zu aktivieren, legen `m_dwRestartManagerSupportFlags` au
 |-|-|
 |Flag|Beschreibung|
 |AFX_RESTART_MANAGER_SUPPORT_RESTART|Die Anwendung registriert ist, mithilfe von [CWinApp::RegisterWithRestartManager](#registerwithrestartmanager). Der Neustart-Manager ist verantwortlich für die Anwendung neu, wenn es unerwartet beendet wird.|
-|-AFX_RESTART_MANAGER_SUPPORT_RECOVERY|Die Anwendung mit den Neustart-Manager registriert ist, und der Neustart-Manager Ruft die Recovery-Rückruffunktion auf, wenn sie die Anwendung neu gestartet wird. Ist die Standardrückruffunktion für die Wiederherstellung [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
-|-AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|Automatisches Speichern ist aktiviert und den Neustart-Manager speichert alle Dokumente öffnen, wenn die Anwendung neu gestartet wird.|
-|-AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL|Automatisches Speichern ist aktiviert und den Neustart-Manager speichert alle Dokumente öffnen, in regelmäßigen Intervallen. Das Intervall wird definiert, indem [CWinApp::m_nAutosaveInterval](#m_nautosaveinterval).|
-|-AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES|Der Neustart-Manager wird vorher geöffnete Dokumente nach dem Neustart der Anwendung eine unerwartete Beendigung geöffnet. Die [CDataRecoveryHandler-Klasse](../../mfc/reference/cdatarecoveryhandler-class.md) kümmert sich um die Liste der geöffneten Dokumente speichern und wiederherzustellen.|
-|-AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES|Der Neustart-Manager mit der Aufforderung zum Wiederherstellen von automatisch gespeicherte Dateien nach dem Neustart der Anwendungs. Die `CDataRecoveryHandler` -Klasse fragt den Benutzer.|
-|-AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE|Die Union der AFX_RESTART_MANAGER_SUPPORT_RESTART AFX_RESTART_MANAGER_SUPPORT_RECOVER und AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES.|
-|-AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS|Die Union der AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL und AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
-|-AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS|Die Union der AFX_RESTART_MANAGER_SUPPORT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES und AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
-|-AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS|Die union OfAFX_RESTART_MANAGER_SUPPORT_RECOVERY AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES und AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
+|- AFX_RESTART_MANAGER_SUPPORT_RECOVERY|Die Anwendung mit den Neustart-Manager registriert ist, und der Neustart-Manager Ruft die Recovery-Rückruffunktion auf, wenn sie die Anwendung neu gestartet wird. Ist die Standardrückruffunktion für die Wiederherstellung [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
+|- AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|Automatisches Speichern ist aktiviert und den Neustart-Manager speichert alle Dokumente öffnen, wenn die Anwendung neu gestartet wird.|
+|- AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL|Automatisches Speichern ist aktiviert und den Neustart-Manager speichert alle Dokumente öffnen, in regelmäßigen Intervallen. Das Intervall wird definiert, indem [CWinApp::m_nAutosaveInterval](#m_nautosaveinterval).|
+|- AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES|Der Neustart-Manager wird vorher geöffnete Dokumente nach dem Neustart der Anwendung eine unerwartete Beendigung geöffnet. Die [CDataRecoveryHandler-Klasse](../../mfc/reference/cdatarecoveryhandler-class.md) kümmert sich um die Liste der geöffneten Dokumente speichern und wiederherzustellen.|
+|- AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES|Der Neustart-Manager mit der Aufforderung zum Wiederherstellen von automatisch gespeicherte Dateien nach dem Neustart der Anwendungs. Die `CDataRecoveryHandler` -Klasse fragt den Benutzer.|
+|- AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE|Die Union der AFX_RESTART_MANAGER_SUPPORT_RESTART AFX_RESTART_MANAGER_SUPPORT_RECOVER und AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES.|
+|- AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS|Die Union der AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL und AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
+|- AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS|Die Union der AFX_RESTART_MANAGER_SUPPORT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES und AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
+|- AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS|Die union OfAFX_RESTART_MANAGER_SUPPORT_RECOVERY AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES und AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
 
 ##  <a name="m_ehelptype"></a>  CWinApp::m_eHelpType
 
@@ -1508,7 +1508,7 @@ LPCTSTR m_pszRegistryKey;
 
 Dieses Datenelement wird normalerweise als schreibgeschützt behandelt.
 
-- Der Wert wird auf einen Registrierungsschlüssel gespeichert. Der Name für die anwendungseinstellung für das Profil wird für den folgenden Registrierungsschlüssel angefügt: HKEY_CURRENT_USER/Software/LocalAppWizard-generiert /.
+- Der Wert wird auf einen Registrierungsschlüssel gespeichert. Der Name für die anwendungseinstellung für das Profil wird für den folgenden Registrierungsschlüssel angefügt: HKEY_CURRENT_USER/Software/LocalAppWizard-Generated/.
 
 Wenn Sie einen Wert zuzuweisen `m_pszRegistryKey`, es muss dynamisch auf dem Heap zugeordnet werden. Die `CWinApp` Destruktoraufrufe **kostenlose**(), mit dem this-Zeiger. Sie verwenden möchten die `_tcsdup`()-Laufzeitbibliothek-Funktion der zuordnen möchten. Darüber hinaus können freigeben Sie den Speicher, der Zeiger für den aktuellen zugeordnet sind, bevor Sie einen neuen Wert zuweisen. Zum Beispiel:
 
@@ -1782,7 +1782,7 @@ Beachten Sie, die Sie aufrufen können `ParseCommandLine` direkt nach Bedarf.
 
 Eine Beschreibung der Flags, die Befehlszeile finden Sie unter [CCommandLineInfo::m_nShellCommand](../../mfc/reference/ccommandlineinfo-class.md#m_nshellcommand).
 
-##  <a name="pretranslatemessage"></a>  PreTranslateMessage
+##  <a name="pretranslatemessage"></a>  CWinApp::PreTranslateMessage
 
 Außer Kraft setzen diese Funktion fenstermeldungen zu filtern, bevor sie für die Windows-Funktionen weitergeleitet werden [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) die Standardimplementierung nimmt der Zugriffstaste: Übersetzung, damit Sie aufrufen müssen die `CWinApp::PreTranslateMessage` Member-Funktion in Ihrer außer Kraft gesetzte Version.
 
@@ -2120,7 +2120,7 @@ void SelectPrinter(
 *hDevNames*<br/>
 Ein Handle für ein [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) Struktur, die der Treiber, Gerät und Ausgabe-Anschlussnamen, der einen bestimmten Drucker bezeichnet.
 
-*hDevMode-Feld*<br/>
+*hDevMode*<br/>
 Ein Handle für ein [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) -Struktur, die Informationen über die Initialisierung für Grafikgeräte und die Umgebung eines Druckers angibt.
 
 *bFreeOld*<br/>
@@ -2329,7 +2329,7 @@ Zeigt auf eine auf NULL endende Zeichenfolge, die den Abschnitt mit dem Eintrag 
 *lpszEntry*<br/>
 Verweist auf eine auf Null endende Zeichenfolge, die den Eintrag enthält, in dem der Wert geschrieben werden. Wenn der Eintrag nicht im angegebenen Abschnitt vorhanden ist, wird es erstellt.
 
-*nWert*<br/>
+*nValue*<br/>
 Enthält den Wert geschrieben werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2395,4 +2395,4 @@ Gibt an, die Anwendung Benutzer-Modell-ID.
 
 [CWinThread-Klasse](../../mfc/reference/cwinthread-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
-[So wird es gemacht: Hinzufügen von Unterstützung für Neustart-Manager](../../mfc/how-to-add-restart-manager-support.md)
+[Vorgehensweise: Hinzufügen von Unterstützung für Neustart-Manager](../../mfc/how-to-add-restart-manager-support.md)

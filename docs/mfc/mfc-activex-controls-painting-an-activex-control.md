@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], painting
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
-ms.openlocfilehash: 4a7cff57213cf9ba234ead9880207fd93592614f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b90aa331c289caf827785af2eeba037e70f686ab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549525"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281929"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Darstellen eines ActiveX-Steuerelements
 
@@ -31,7 +31,7 @@ Die folgenden Themen werden behandelt:
 
 ##  <a name="_core_the_painting_process_of_an_activex_control"></a> Der Zeichnen-Prozess, der ein ActiveX-Steuerelement
 
-Wenn ActiveX-Steuerelemente zuerst angezeigt werden, oder neu gezeichnet werden, folgen sie einem zeichnen-Prozess, der ähnlich wie für andere Anwendungen, die entwickelt wurden, verwenden von MFC, mit einem wichtigen Unterschied: ActiveX-Steuerelemente in einer aktiven oder inaktiven Status werden können.
+Wenn ActiveX-Steuerelemente zuerst angezeigt werden, oder neu gezeichnet werden, folgen sie einen zeichnen-Prozess ähnlich für andere Anwendungen, die entwickelt wurden, verwenden von MFC, mit einem wichtigen Unterschied: ActiveX-Steuerelemente können in einer aktiven oder inaktiven Status sein.
 
 Ein aktives Steuerelement wird in einem ActiveX-Steuerelement-Container von einem untergeordneten Fenster dargestellt. Wie andere Windows ist es selbst zu zeichnen, wenn eine WM_PAINT-Meldung empfangen wird. Basisklasse des Steuerelements [COleControl](../mfc/reference/colecontrol-class.md), behandelt diese Meldung in die `OnPaint` Funktion. Diese Standardimplementierung Ruft die `OnDraw` Funktion des Steuerelements.
 
@@ -71,7 +71,7 @@ Um sicherzustellen, dass das Steuerelement sowohl Bildschirm- und Metadatei ger�
 
 Da die standardmäßige Implementierung des `OnDrawMetafile` Aufrufe des Steuerelements `OnDraw` funktionieren, verwenden Sie nur Memberfunktionen, die für einen Gerätekontext für den Bildschirm, und einer Metadatei geeignet sind, es sei denn, Sie überschreiben `OnDrawMetafile`. Die folgende Liste enthält die Teilmenge der `CDC` Memberfunktionen, die in einer Metadatei und einen Bildschirm Gerätekontext verwendet werden können. Weitere Informationen zu diesen Funktionen finden Sie unter Klasse [CDC](../mfc/reference/cdc-class.md) in die *MFC-Referenz*.
 
-|Einen Bogen konvertiert.|BibBlt|Tastenkombination|
+|Einen Bogen konvertiert.|BibBlt|Chord|
 |---------|------------|-----------|
 |`Ellipse`|`Escape`|`ExcludeClipRect`|
 |`ExtTextOut`|`FloodFill`|`IntersectClipRect`|
@@ -90,7 +90,7 @@ Da die standardmäßige Implementierung des `OnDrawMetafile` Aufrufe des Steuere
 
 Zusätzlich zu `CDC` Member-Funktionen, es gibt einige andere Funktionen, die in einer Metadatei DC kompatibel sind. Dazu gehören [: CPalette:: AnimatePalette](../mfc/reference/cpalette-class.md#animatepalette), [CFont::CreateFontIndirect](../mfc/reference/cfont-class.md#createfontindirect), und drei Memberfunktionen der `CBrush`: [CreateBrushIndirect](../mfc/reference/cbrush-class.md#createbrushindirect), [CreateDIBPatternBrush](../mfc/reference/cbrush-class.md#createdibpatternbrush), und [CreatePatternBrush](../mfc/reference/cbrush-class.md#createpatternbrush).
 
-Funktionen, die nicht in einer Metadatei aufgezeichnet werden, sind: [DrawFocusRect](../mfc/reference/cdc-class.md#drawfocusrect), [DrawIcon](../mfc/reference/cdc-class.md#drawicon), [DrawText](../mfc/reference/cdc-class.md#drawtext), [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn), [FillRect](../mfc/reference/cdc-class.md#fillrect), [FrameRect](../mfc/reference/cdc-class.md#framerect), [GrayString](../mfc/reference/cdc-class.md#graystring), [InvertRect](../mfc/reference/cdc-class.md#invertrect), [ScrollDC](../mfc/reference/cdc-class.md#scrolldc), und [TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout). Da eine Metadatei DC nicht tatsächlich von einem Gerät zugeordnet ist, können nicht Sie SetDIBits GetDIBits und CreateDIBitmap mit einer Metadatei DC verwenden. Sie können mit einer Metadatei DC SetDIBitsToDevice und StretchDIBits als Ziel verwenden. [CreateCompatibleDC](../mfc/reference/cdc-class.md#createcompatibledc), [CreateCompatibleBitmap](../mfc/reference/cbitmap-class.md#createcompatiblebitmap), und [CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap) sind nicht mit einer Metadatei DC sinnvoll.
+Funktionen, die nicht in einer Metadatei aufgezeichnet werden, sind: [DrawFocusRect](../mfc/reference/cdc-class.md#drawfocusrect), [DrawIcon](../mfc/reference/cdc-class.md#drawicon), [DrawText](../mfc/reference/cdc-class.md#drawtext), [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn), [FillRect](../mfc/reference/cdc-class.md#fillrect), [FrameRect](../mfc/reference/cdc-class.md#framerect), [GrayString](../mfc/reference/cdc-class.md#graystring), [InvertRect](../mfc/reference/cdc-class.md#invertrect), [ScrollDC](../mfc/reference/cdc-class.md#scrolldc), and [TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout). Da eine Metadatei DC nicht tatsächlich von einem Gerät zugeordnet ist, können nicht Sie SetDIBits GetDIBits und CreateDIBitmap mit einer Metadatei DC verwenden. Sie können mit einer Metadatei DC SetDIBitsToDevice und StretchDIBits als Ziel verwenden. [CreateCompatibleDC](../mfc/reference/cdc-class.md#createcompatibledc), [CreateCompatibleBitmap](../mfc/reference/cbitmap-class.md#createcompatiblebitmap), und [CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap) sind nicht mit einer Metadatei DC sinnvoll.
 
 Ein weiterer wichtiger Aspekt bei Verwendung einer Metadatei Domänencontroller ist, dass das Koordinatensystem nicht in Pixel gemessen werden kann. Aus diesem Grund alle in Ihrem Code zum Zeichnen angepasst werden, muss damit er in das Rechteck passt an übergeben `OnDraw` in die *RcBounds* Parameter. Dies verhindert versehentliche Zeichnen außerhalb der Kontrolle, da *RcBounds* die Größe der das Fenster des Steuerelements darstellt.
 
@@ -111,4 +111,3 @@ Nachdem Sie die Metadateirendering für das Steuerelement implementiert haben, v
 ## <a name="see-also"></a>Siehe auch
 
 [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)
-

@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-ms.openlocfilehash: a08cb5049d742a9740361595bd931a2f7a48bd16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f334b159ae39f48006a135c6e36d413b737a7344
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498763"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260945"
 ---
 # <a name="criticalsection-class"></a>critical_section-Klasse
 
@@ -72,7 +72,7 @@ Weitere Informationen finden Sie unter [Synchronisierungsdatenstrukturen](../../
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** concrt.h hinzu
+**Header:** concrt.h
 
 **Namespace:** Parallelität
 
@@ -147,7 +147,7 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
 *_Critical_section*<br/>
 Den kritischen Abschnitt, zu sperren.
 
-##  <a name="critical_section__scoped_lock_dtor"></a> Scoped_lock:: ~ Scoped_lock
+##  <a name="critical_section__scoped_lock_dtor"></a> scoped_lock::~scoped_lock
 
 Zerstört eine `scoped_lock` Objekt und gibt die im Konstruktor bereitgestellte kritischen Abschnitt frei.
 

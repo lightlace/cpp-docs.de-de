@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CRecentFileList [MFC], UpdateMenu
 - CRecentFileList [MFC], WriteList
 ms.assetid: a77f0524-7584-4582-849a-7e97b76d186e
-ms.openlocfilehash: e38f63090e3de2a73c60618a36d25a397d595dac
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 30536d91d057de4e551b5a28200dd903e12713b3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657421"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304833"
 ---
 # <a name="crecentfilelist-class"></a>CRecentFileList-Klasse
 
@@ -112,10 +112,10 @@ Gibt die Anwendungsbenutzer-Modell-ID für die Anwendung an.
 *pItem*<br/>
 Gibt einen Zeiger auf die Shell-Element, das der Liste hinzugefügt werden.
 
-*Sie plink herunter*<br/>
+*pLink*<br/>
 Gibt einen Zeiger auf die Shell-Link zu der Liste hinzugefügt werden.
 
-*PIDL*<br/>
+*pidl*<br/>
 Gibt an, die Zonen für die Shellelement, das die aktuelle Dokumentenordner hinzugefügt werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -137,7 +137,7 @@ CRecentFileList(
 
 ### <a name="parameters"></a>Parameter
 
-*nmit*<br/>
+*nStart*<br/>
 Offset für die Nummerierung in der Menüanzeige im der Dateiliste zuletzt verwendeten Objekte (die zuletzt verwendet).
 
 *lpszSection*<br/>
@@ -250,7 +250,7 @@ virtual void UpdateMenu(CCmdUI* pCmdUI);
 
 ### <a name="parameters"></a>Parameter
 
-*nämlich pCmdUI*<br/>
+*pCmdUI*<br/>
 Ein Zeiger auf die [CCmdUI](../../mfc/reference/ccmdui-class.md) -Objekt für die zuletzt verwendeten (MRU)-Datei Liste-Menü.
 
 ##  <a name="writelist"></a>  CRecentFileList::WriteList
@@ -264,4 +264,3 @@ virtual void WriteList();
 ## <a name="see-also"></a>Siehe auch
 
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
-

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - TN036
 ms.assetid: dd54053f-ae80-4d23-9180-c7d07ddf2290
-ms.openlocfilehash: 10ef4cef4a87ea36634086e802147a6053ff6c19
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 698070340e2f44b908a564bdda2c69ecda227386
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501932"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299334"
 ---
 # <a name="tn036-using-cformview-with-appwizard-and-classwizard"></a>TN036: Verwenden von CFormView mit AppWizard und ClassWizard
 
@@ -21,4 +21,3 @@ Diese technische Hinweis beschrieben, wie Sie eine Anwendung generierten AppWiza
 
 [Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)<br/>
 [Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)
-

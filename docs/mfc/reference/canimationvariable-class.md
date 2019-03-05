@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-ms.openlocfilehash: 1ad14060c7607698cd647ae34fb35b6ea3ae547c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 335d29e1e2e8e5b54ec1434a4c072ff3909b3823
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559561"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269031"
 ---
 # <a name="canimationvariable-class"></a>CAnimationVariable-Klasse
 
@@ -68,7 +68,7 @@ class CAnimationVariable;
 |Name|Beschreibung|
 |----------|-----------------|
 |[CAnimationVariable::CAnimationVariable](#canimationvariable)|Erstellt eine Animation-Variable-Objekt.|
-|[CAnimationVariable:: ~ CAnimationVariable](#canimationvariable__~canimationvariable)|Der Destruktor. Wird aufgerufen, wenn ein CAnimationVariable-Objekt zerstört wird.|
+|[CAnimationVariable::~CAnimationVariable](#canimationvariable__~canimationvariable)|Der Destruktor. Wird aufgerufen, wenn ein CAnimationVariable-Objekt zerstört wird.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -79,7 +79,7 @@ class CAnimationVariable;
 |[CAnimationVariable::ClearTransitions](#cleartransitions)|Löscht die Übergänge.|
 |[CAnimationVariable::Create](#create)|Erstellt das zugrunde liegende Animation Variable-COM-Objekt.|
 |[CAnimationVariable::CreateTransitions](#createtransitions)|Erstellt alle Übergänge, die auf diese Animationsvariable angewendet werden.|
-|[EnableIntegerValueChangedEvent](#enableintegervaluechangedevent)|Aktiviert oder deaktiviert das IntegerValueChanged-Ereignis.|
+|[CAnimationVariable::EnableIntegerValueChangedEvent](#enableintegervaluechangedevent)|Aktiviert oder deaktiviert das IntegerValueChanged-Ereignis.|
 |[CAnimationVariable::EnableValueChangedEvent](#enablevaluechangedevent)|Aktiviert oder deaktiviert das ValueChanged-Ereignis.|
 |[CAnimationVariable::GetDefaultValue](#getdefaultvalue)|Gibt den Standardwert zurück.|
 |[CAnimationVariable::GetParentAnimationObject](#getparentanimationobject)|Gibt das übergeordnete Animationsobjekt.|
@@ -264,7 +264,7 @@ void EnableIntegerValueChangedEvent (
 *pController*<br/>
 Ein Zeiger auf den übergeordneten Controller.
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 Deaktivieren Sie "true" - Ereignis "aktivieren", "false" - Ereignis.
 
 ### <a name="remarks"></a>Hinweise
@@ -286,7 +286,7 @@ void EnableValueChangedEvent (
 *pController*<br/>
 Ein Zeiger auf den übergeordneten Controller.
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 Deaktivieren Sie "true" - Ereignis "aktivieren", "false" - Ereignis.
 
 ### <a name="remarks"></a>Hinweise
@@ -339,7 +339,7 @@ HRESULT GetValue(INT32& nValue);
 *dblValue*<br/>
 Der aktuelle Wert der Animationsvariablen.
 
-*nWert*<br/>
+*nValue*<br/>
 Der aktuelle Wert der Animationsvariablen.
 
 ### <a name="return-value"></a>Rückgabewert

@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_map class
 ms.assetid: b2d879dd-87ef-4af9-a266-a5443fd538b8
-ms.openlocfilehash: 50868d020224e7bade9766f7307bfcc46ce4be47
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 43ad777b0dfb1285a82d662f37329c079410c78d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657590"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284345"
 ---
 # <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map-Klasse
 
@@ -250,7 +250,7 @@ Die Zuweisung für diese ungeordneten Zuordnung.
 *_Begin*<br/>
 Die Position des ersten Elements in dem zu kopierenden Elementbereich.
 
-*_Beenden*<br/>
+*_End*<br/>
 Die Position des ersten Elements nach dem zu kopierenden Elementbereich.
 
 *_Umap*<br/>
@@ -431,7 +431,7 @@ Der Wert eingefügt werden soll.
 *_Where*<br/>
 Die Startposition für eine Einfügemarke zu suchen.
 
-*Erste*<br/>
+*first*<br/>
 Der Anfang des Bereichs, der eingefügt werden soll.
 
 *last*<br/>
@@ -443,7 +443,7 @@ Ein Paar, das ein Iterator und einen booleschen Wert enthält. Finden Sie im Abs
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Memberfunktion bestimmt, ob ein Element X in der Sequenz vorhanden ist, dessen Schlüssel wurde mit entsprechender Sortierung `value`. Wenn nicht der Fall, wird Sie dieses Element X erstellt und initialisiert sie mit `value`. Die Funktion dann bestimmt den Iterator `where` bestimmt, X. Wenn eine Einfügung aufgetreten ist, gibt die Funktion `std::pair(where, true)`. Andernfalls wird `std::pair(where, false)` zurückgegeben.
+Die erste Memberfunktion bestimmt, ob ein Element X in der Sequenz vorhanden ist, dessen Schlüssel wurde mit entsprechender Sortierung `value`. Wenn nicht der Fall, wird Sie dieses Element X erstellt und initialisiert sie mit `value`. Die Funktion dann bestimmt den Iterator `where` bestimmt, X. Wenn eine Einfügung aufgetreten ist, gibt die Funktion `std::pair(where, true)`. Andernfalls wird `std::pair(where, false)`zurückgegeben.
 
 Die zweite Memberfunktion gibt die Einfügung ( `value`), wobei `_Where` als Ausgangspunkt innerhalb der kontrollierten Sequenz ein, um nach der Einfügemarke zu suchen.
 
@@ -538,7 +538,7 @@ Wenn der Argumentschlüsselwert nicht gefunden wird, wird er zusammen mit dem St
 
 Wenn `operator[]` zum Einfügen von Elementen verwendet wird, gibt der zurückgegebene Verweis nicht an, ob eine Einfügung ein bereits vorhandenes Element ändert oder ein neues erstellt. Die Memberfunktionen `find` und [einfügen](#insert) können verwendet werden, um zu bestimmen, ob ein Element mit einem angegebenen Schlüssel bereits vor einer Einfügung vorhanden ist.
 
-##  <a name="operator_eq"></a> Operator =
+##  <a name="operator_eq"></a> operator=
 
 Weist den Inhalt eines anderen `concurrent_unordered_map`-Objekts diesem Objekt zu. Diese Methode ist nicht nebenläufigkeitssicher.
 
@@ -751,7 +751,7 @@ Die Position des Iterators, an der gelöscht werden soll.
 *_Begin*<br/>
 Die Position des ersten Elements im Bereich von Elementen, die gelöscht werden soll.
 
-*_Beenden*<br/>
+*_End*<br/>
 Die Position des ersten Elements außerhalb des Bereichs von Elementen gelöscht werden soll.
 
 *KVal*<br/>
@@ -783,4 +783,3 @@ Die maximale Anzahl von Buckets, die in diesem Container.
 
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
 [Parallele Container und Objekte](../../../parallel/concrt/parallel-containers-and-objects.md)
-

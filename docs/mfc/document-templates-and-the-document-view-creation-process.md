@@ -11,16 +11,16 @@ helpviewer_keywords:
 - CDocTemplate class [MFC]
 - templates [MFC], document templates
 ms.assetid: 311ce4cd-fbdf-4ea1-a51b-5bb043abbcee
-ms.openlocfilehash: 29575166a188b0691465bef0a72810d2e3d97624
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 79d24ef4b6687bce61295a92cdb90f4ce4a0d619
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174882"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290000"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>Dokumentvorlagen und der Erstellungsvorgang für Dokumente und Ansichten
 
-Zum Verwalten komplexen Prozess, der Erstellen von Dokumenten mit ihren zugehörigen Ansichten und Rahmenfenster das Framework verwendet zwei Dokumentvorlagenklassen: [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) für SDI-Anwendungen und [CMultiDocTemplate ](../mfc/reference/cmultidoctemplate-class.md) für MDI-Anwendungen. Ein `CSingleDocTemplate` erstellen und speichern Sie ein Dokument eines bestimmten Typs zu einem Zeitpunkt. Ein `CMultiDocTemplate` behält eine Liste der vielen geöffneten Dokumente eines bestimmten Typs.
+Zum Verwalten komplexen Prozess, der Erstellen von Dokumenten mit ihren zugehörigen Ansichten und Rahmenfenster verwendet das Framework zwei Dokumentvorlagenklassen: [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) für SDI-Anwendungen und [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) für MDI-Anwendungen. Ein `CSingleDocTemplate` erstellen und speichern Sie ein Dokument eines bestimmten Typs zu einem Zeitpunkt. Ein `CMultiDocTemplate` behält eine Liste der vielen geöffneten Dokumente eines bestimmten Typs.
 
 Einige Anwendungen unterstützen mehrere Dokumenttypen. Eine Anwendung kann z. B. Textdokumente und Dokumente mit Grafiken unterstützen. Wenn der Benutzer den neuen Befehl im Menü Datei auswählt, zeigt ein Dialogfeld in einer solchen Anwendung eine Liste der neuen Dokumenttypen zu öffnen. Für jeden unterstützten Dokumenttyp verwendet die Anwendung ein individuelles Dokument Template-Objekt. Die folgende Abbildung veranschaulicht die Konfiguration des MDI-Anwendung, die unterstützt zwei Typen von Dokumenten und mehrere offene Dokumente anzeigt.
 
@@ -42,4 +42,3 @@ Beispielsweise ist eine Dokumentvorlage, die dritte von drei für die Anwendung.
 [Erstellen von Dokument/Ansicht](../mfc/document-view-creation.md)<br/>
 [Beziehungen zwischen MFC-Objekten](../mfc/relationships-among-mfc-objects.md)<br/>
 [Erstellen neuer Dokumente, Fenster und Ansichten](../mfc/creating-new-documents-windows-and-views.md)
-

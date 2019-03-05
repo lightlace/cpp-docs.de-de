@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-ms.openlocfilehash: d33c54e82e9bc228b97bff4802c9231a98f51033
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: e73639ffd11e08edb2fdb03471f2c6c88730f02d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657486"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268468"
 ---
 # <a name="arrayview-class"></a>array_view-Klasse
 
@@ -80,7 +80,7 @@ Der Rang des `array_view`-Objekts.
 |[get_extent](#get_extent)|Gibt das extent-Objekt des array_view-Objekts zurück.|
 |[get_ref](#get_ref)|Gibt einen Verweis auf das indizierte Element zurück.|
 |[get_source_accelerator_view](#get_source_accelerator_view)|Gibt die ["accelerator_view"](accelerator-view-class.md) , in dem die Datenquelle die `array_view` befindet.|
-|[Aktualisieren](#refresh)|Benachrichtigt das `array_view`-Objekt, dass sein gebundener Speicher außerhalb der `array_view`-Schnittstelle geändert wurde. Ein Aufruf dieser Methode führt dazu, dass alle zwischengespeicherten Informationen veraltet sind.|
+|[refresh](#refresh)|Benachrichtigt das `array_view`-Objekt, dass sein gebundener Speicher außerhalb der `array_view`-Schnittstelle geändert wurde. Ein Aufruf dieser Methode führt dazu, dass alle zwischengespeicherten Informationen veraltet sind.|
 |[reinterpret_as](#reinterpret_as)|Gibt ein eindimensionales Array zurück, das alle Elemente im `array_view`-Objekt enthält.|
 |[section](#section)|Gibt einen Unterabschnitt des `array_view`-Objekts zurück, das sich am angegebenen Ursprung befindet und optional den angegebenen Wertebereich hat.|
 |[synchronize](#synchronize)|Synchronisiert alle Änderungen am `array_view`-Objekt wieder mit den entsprechenden Quelldaten.|
@@ -345,10 +345,10 @@ Die unwichtigste Komponente des Umfangs dieses Abschnitts.
 *_Extent*<br/>
 Der Umfang in jeder Dimension dieses `array_view`-Objekts.
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Ein Objekt des Typs `array_view<T,N>`, von dem das neue `array_view`-Objekt initialisiert werden soll.
 
-*_Größe*<br/>
+*_Size*<br/>
 Die Größe eines Arrays im C-Format, von dem Daten angegeben werden.
 
 *_Src*<br/>
@@ -443,7 +443,7 @@ accelerator_view get_source_accelerator_view() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-##  <a name="operator_call"></a> Operator()
+##  <a name="operator_call"></a> operator()
 
 Gibt den Wert des Elements zurück, das durch den Parameter bzw. die Parameter angegeben wird.
 
@@ -512,7 +512,7 @@ Der Index.
 
 Der Wert des Elements am Index oder ein `array_view`-Objekt, das auf der wichtigsten Dimension projiziert wird.
 
-##  <a name="operator_eq"></a> Operator =
+##  <a name="operator_eq"></a> operator=
 
 Kopiert den Inhalt des angegebenen `array_view`-Objekts in dieses Objekt.
 
@@ -526,7 +526,7 @@ array_view& operator= (
 
 ### <a name="parameters"></a>Parameter
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Das `array_view`-Objekt, aus dem kopiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert

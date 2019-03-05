@@ -15,12 +15,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
-ms.openlocfilehash: 10ad0645e873a1a745168be9b839bbf97a1c05a6
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: a33273c46562e8beba12910702d9ddc1a092575d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174870"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262609"
 ---
 # <a name="mfc-activex-controls"></a>MFC-ActiveX-Steuerelemente
 
@@ -92,7 +92,7 @@ Windows-Nachrichtenverarbeitung in einem ActiveX-Steuerelement mit Fenster (sofe
 
 Die Möglichkeit, die Daten zu serialisieren, was manchmal auch als Persistenz bezeichnet wird, ermöglicht es dem Steuerelement, den Wert der Eigenschaften in einen permanenten Speicher zu schreiben. Steuerelemente können neu erstellt werden, indem der Zustand des Objekts aus dem Speicher gelesen wird.
 
-Beachten Sie, dass ein Steuerelement nicht den Zugriff auf das Speichermedium garantiert. Stattdessen ist der Container des Steuerelements für die Bereitstellung des Steuerelements mit einem Speichermedium zuständig, das zu den entsprechenden Zeitpunkten verwendet werden kann. Weitere Informationen zur Serialisierung finden Sie im Artikel [MFC-ActiveX-Steuerelemente: Serialisierung](../mfc/mfc-activex-controls-serializing.md). Informationen zum Optimieren der Serialisierung finden Sie unter [Optimieren von Persistenz und Initialisierung](../mfc/optimizing-persistence-and-initialization.md) in ActiveX-Steuerelemente: Optimierung.
+Beachten Sie, dass ein Steuerelement nicht den Zugriff auf das Speichermedium garantiert. Stattdessen ist der Container des Steuerelements für die Bereitstellung des Steuerelements mit einem Speichermedium zuständig, das zu den entsprechenden Zeitpunkten verwendet werden kann. Weitere Informationen zur Serialisierung finden Sie im Artikel [MFC-ActiveX-Steuerelemente: Serialisieren von](../mfc/mfc-activex-controls-serializing.md). Informationen zum Optimieren der Serialisierung finden Sie unter [Optimieren von Persistenz und Initialisierung](../mfc/optimizing-persistence-and-initialization.md) in ActiveX-Steuerelementen: Die Optimierung.
 
 ##  <a name="_core_installing_activex_control_classes_and_tools"></a> Installieren von ActiveX-Steuerelementklassen und-Werkzeugen
 

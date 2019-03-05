@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CPaneContainerManager [MFC], SetResizeMode
 - CPaneContainerManager [MFC], StoreRecentDockSiteInfo
 ms.assetid: 3d974c15-a62f-4648-bb5b-cc31ab7950af
-ms.openlocfilehash: 598ad7fd3573928d1915d01d889910c13d9cb00c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e0c55981b895540d490e2e38f43eb68abf48e32
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530012"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294654"
 ---
 # <a name="cpanecontainermanager-class"></a>CPaneContainerManager-Klasse
 
@@ -231,7 +231,7 @@ virtual BOOL AddPaneContainerManager(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *SrcManager*<br/>
+[in] *srcManager*<br/>
 [in] *bOuterEdge*<br/>
 [in] *pTargetControlBar*<br/>
 [in] *DwAlignment*<br/>
@@ -252,7 +252,7 @@ virtual BOOL AddPaneContainerManagerToDockablePane(
 ### <a name="parameters"></a>Parameter
 
 [in] *pTargetControlBar*<br/>
-[in] *SrcManager*<br/>
+[in] *srcManager*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -318,11 +318,11 @@ void CalcRects(
 ### <a name="parameters"></a>Parameter
 
 [in] *RectOriginal*<br/>
-[in] *RectInserted*<br/>
-[in] *RectSlider*<br/>
-[in] *DwSliderStyle*<br/>
+[in] *rectInserted*<br/>
+[in] *rectSlider*<br/>
+[in] *dwSliderStyle*<br/>
 [in] *DwAlignment*<br/>
-[in] *SizeMinOriginal*<br/>
+[in] *sizeMinOriginal*<br/>
 [in] *SizeMinInserted*<br/>
 
 ### <a name="remarks"></a>Hinweise
@@ -345,7 +345,7 @@ BOOL CheckAndRemoveNonValidPane(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *aufnehmen*<br/>
+[in] *pWnd*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -361,8 +361,8 @@ virtual BOOL CheckForMiniFrameAndCaption(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *zeigen*<br/>
-[in] *PpTargetControlBar*<br/>
+[in] *point*<br/>
+[in] *ppTargetControlBar*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -458,7 +458,7 @@ virtual void GetAvailableSpace(CRect& rect) const;
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Rect*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -529,7 +529,7 @@ virtual void GetMinSize(CSize& size);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Größe*<br/>
+[in] *size*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -591,7 +591,7 @@ virtual void GetWindowRect(CRect& rect) const;
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Rect*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -619,7 +619,7 @@ virtual BOOL InsertPane(
 [in] *pControlBarToInsert*<br/>
 [in] *pTargetControlBar*<br/>
 [in] *DwAlignment*<br/>
-[in] *LpRect*<br/>
+[in] *lpRect*<br/>
 [in] *DockMethod*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
@@ -679,7 +679,7 @@ virtual int OnPaneDividerMove(
 [in] *pSlider*<br/>
 [in] *uFlags*<br/>
 [in] *nOffset*<br/>
-[in] *Hdwp*<br/>
+[in] *hdwp*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -715,7 +715,7 @@ virtual CDockablePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *zeigen*<br/>
+[in] *point*<br/>
 [in] *nSensitivity*<br/>
 [in] *bExactBar*<br/>
 [in] *bIsTabArea*<br/>
@@ -808,11 +808,11 @@ virtual void ResizePaneContainers(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *n*<br/>
+[in] *nSide*<br/>
 [in] *bExpand*<br/>
 [in] *nOffset*<br/>
-[in] *Hdwp*<br/>
-[in] *Rect*<br/>
+[in] *hdwp*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -824,7 +824,7 @@ void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Ar*<br/>
+[in] *ar*<br/>
 
 ### <a name="remarks"></a>Hinweise
 

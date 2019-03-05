@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CBaseTabbedPane [MFC], SetAutoHideMode
 - CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
-ms.openlocfilehash: 51344a8cd0e5671f81e608b74363ed06c9200324
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7ffaa7274a8ed12944cdbc5dcbbdcb8fd3fd2b9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640894"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259294"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane-Klasse
 
@@ -91,19 +91,19 @@ class CBaseTabbedPane : public CDockablePane
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[Cbasetabbedpane:: addTab](#addtab)|Fügt eine neue Registerkarte zu einem Bereich im Registerkartenformat.|
+|[CBaseTabbedPane::AddTab](#addtab)|Fügt eine neue Registerkarte zu einem Bereich im Registerkartenformat.|
 |[CBaseTabbedPane::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Gibt an, ob es sich bei einem leeren Bereich im Registerkartenformat zerstört werden kann.|
 |[CBaseTabbedPane::ApplyRestoredTabInfo](#applyrestoredtabinfo)|Registerkarte Einstellungen, die aus der Registrierung, um einen Bereich im Registerkartenformat geladen werden angewendet.|
 |[CBaseTabbedPane::CanFloat](#canfloat)|Bestimmt, ob der Bereich wechseln kann. (Überschreibt [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).)|
 |[CBaseTabbedPane::CanSetCaptionTextToTabName](#cansetcaptiontexttotabname)|Bestimmt, ob die Beschriftung für den Bereich im Registerkartenformat den gleichen Text als aktive Registerkarte angezeigt werden soll.|
 |[CBaseTabbedPane::ConvertToTabbedDocument](#converttotabbeddocument)|(Überschreibt [CDockablePane::ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument).)|
-|[Cbasetabbedpane:: Detachpane](#detachpane)|Konvertiert einen oder mehrere andockbare Bereiche im Registerkartenformat MDI-Dokumenten.|
+|[CBaseTabbedPane::DetachPane](#detachpane)|Konvertiert einen oder mehrere andockbare Bereiche im Registerkartenformat MDI-Dokumenten.|
 |[CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname)|Aktiviert oder deaktiviert die Möglichkeit der Bereich im Registerkartenformat, Beschriftungstext mit dem Bezeichnungstext auf der aktiven Registerkarte zu synchronisieren.|
 |[CBaseTabbedPane::FillDefaultTabsOrderArray](#filldefaulttabsorderarray)|Stellt die internen Aktivierreihenfolge zu einem Standardzustand.|
 |[CBaseTabbedPane::FindBarByTabNumber](#findbarbytabnumber)|Gibt einen Bereich, der auf einer Registerkarte befindet, wenn die Registerkarte "durch einen nullbasierten Registerkartenindex identifiziert wird.|
 |||
 |[CBaseTabbedPane::FindPaneByID](#findpanebyid)|Gibt einen Bereich, der durch die im Bereich-ID identifiziert wird|
-|[Cbasetabbedpane:: Floattab](#floattab)|Hebt die Verankerung eines Bereichs auf, aber nur, wenn der Bereich sich auf einer lösbaren Registerkarte befindet.|
+|[CBaseTabbedPane::FloatTab](#floattab)|Hebt die Verankerung eines Bereichs auf, aber nur, wenn der Bereich sich auf einer lösbaren Registerkarte befindet.|
 |[CBaseTabbedPane::GetDefaultTabsOrder](#getdefaulttabsorder)|Gibt die Standardreihenfolge der Registerkarten im Bereich zurück.|
 |[CBaseTabbedPane::GetFirstVisibleTab](#getfirstvisibletab)|Ruft einen Zeiger auf die erste angezeigte Registerkarte ab.|
 |[CBaseTabbedPane::GetMinSize](#getminsize)|Ruft den minimal zulässigen Größe für den Bereich ab. (Überschreibt [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|
@@ -113,7 +113,7 @@ class CBaseTabbedPane : public CDockablePane
 |[CBaseTabbedPane::GetTabsNum](#gettabsnum)|Gibt die Anzahl der Registerkarten in einem Registerkartenfenster zurück.|
 |[CBaseTabbedPane::GetUnderlyingWindow](#getunderlyingwindow)|Ruft die zugrunde liegende Registerkartenfenster (umschlossene) ab.|
 |[CBaseTabbedPane::GetVisibleTabsNum](#getvisibletabsnum)|Gibt die Anzahl der angezeigten Registerkarten zurück.|
-|[Cbasetabbedpane:: Hasautohidemode](#hasautohidemode)|Bestimmt, ob der Bereich im Registerkartenformat zum Modus "automatisch ausblenden" umgeschaltet werden kann.|
+|[CBaseTabbedPane::HasAutoHideMode](#hasautohidemode)|Bestimmt, ob der Bereich im Registerkartenformat zum Modus "automatisch ausblenden" umgeschaltet werden kann.|
 |[CBaseTabbedPane::IsHideSingleTab](#ishidesingletab)|Bestimmt, ob der Bereich im Registerkartenformat ausgeblendet ist, wenn nur eine Registerkarte angezeigt wird.|
 |`CBaseTabbedPane::LoadSiblingPaneIDs`|Wird intern verwendet, während der Serialisierung.|
 |[CBaseTabbedPane::RecalcLayout](#recalclayout)|Berechnet die Layoutinformationen für den Bereich an. (Überschreibt [cpane:: RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|
@@ -129,7 +129,7 @@ class CBaseTabbedPane : public CDockablePane
 
 Diese Klasse ist eine abstrakte Klasse und kann nicht instanziiert werden. Es implementiert die Dienste, die für alle Arten von Seiten im Registerformat gelten.
 
-Die Bibliothek enthält derzeit zwei Bereich im Registerkartenformat an abgeleitete Klassen: [CTabbedPane-Klasse](../../mfc/reference/ctabbedpane-class.md) und [CMFCOutlookBar-Klasse](../../mfc/reference/cmfcoutlookbar-class.md).
+Die Bibliothek umfasst derzeit zwei Bereich im Registerkartenformat an abgeleitete Klassen: [CTabbedPane-Klasse](../../mfc/reference/ctabbedpane-class.md) und [CMFCOutlookBar-Klasse](../../mfc/reference/cmfcoutlookbar-class.md).
 
 Ein `CBaseTabbedPane` Objekt umschließt einen Zeiger auf eine [CMFCBaseTabCtrl-Klasse](../../mfc/reference/cmfcbasetabctrl-class.md) Objekt. [CMFCBaseTabCtrl-Klasse](../../mfc/reference/cmfcbasetabctrl-class.md) dann wird ein untergeordnetes Fenster von der Seite im Registerformat.
 
@@ -263,7 +263,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 *bActiveTabOnly*<br/>
 [in] Wenn Sie einen Bereich im Registerkartenformat konvertieren, geben Sie "true", um nur die aktive Registerkarte zu konvertieren. Geben Sie "false", um alle Registerkarten in den Bereich zu konvertieren.
 
-##  <a name="detachpane"></a>  Cbasetabbedpane:: Detachpane
+##  <a name="detachpane"></a>  CBaseTabbedPane::DetachPane
 
 Trennt einen Bereich von Bereich im Registerkartenformat.
 
@@ -299,7 +299,7 @@ virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] True, um die Beschriftung für die Seite im Registerformat mit der Beschriftung für die aktive Registerkarte zu synchronisieren. andernfalls "false".
 
 ##  <a name="filldefaulttabsorderarray"></a>  CBaseTabbedPane::FillDefaultTabsOrderArray

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComAggObject class
 ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
-ms.openlocfilehash: 3598e625351f80a1a183b3128bf46a72143a02f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 52cdddb1d922ca21e24122422ca14d9c12d13a83
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626836"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301661"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject-Klasse
 
@@ -38,7 +38,7 @@ class CComAggObject : public IUnknown,
 
 #### <a name="parameters"></a>Parameter
 
-*enthalten sind*<br/>
+*contained*<br/>
 Abgeleitet von die Klasse [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oder [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), wie auch über andere Schnittstellen für das Objekt unterstützt werden sollen.
 
 ## <a name="members"></a>Member
@@ -48,7 +48,7 @@ Abgeleitet von die Klasse [CComObjectRoot](../../atl/reference/ccomobjectroot-cl
 |Name|Beschreibung|
 |----------|-----------------|
 |[CComAggObject::CComAggObject](#ccomaggobject)|Der Konstruktor.|
-|[CComAggObject:: ~ CComAggObject](#dtor)|Der Destruktor.|
+|[CComAggObject::~CComAggObject](#dtor)|Der Destruktor.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -109,7 +109,7 @@ CComAggObject(void* pv);
 
 ### <a name="parameters"></a>Parameter
 
-*PV*<br/>
+*pv*<br/>
 [in] Die äußere unbekannte.
 
 ### <a name="remarks"></a>Hinweise
@@ -142,7 +142,7 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>Parameter
 
-*PP*<br/>
+*pp*<br/>
 [out] Ein Zeiger auf eine **CComAggObject\<**<em>enthaltenen</em> **>** Zeiger. Wenn `CreateInstance` nicht erfolgreich ist, ist *pp* auf NULL festgelegt ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -185,7 +185,7 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>Parameter
 
-*enthalten sind*<br/>
+*contained*<br/>
 [in] Abgeleitet von die Klasse [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oder [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), wie auch über andere Schnittstellen für das Objekt unterstützt werden sollen.
 
 ### <a name="remarks"></a>Hinweise
@@ -204,13 +204,13 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>Parameter
 
-*IID*<br/>
+*iid*<br/>
 [in] Der Bezeichner der angeforderten Schnittstelle.
 
 *ppvObject*<br/>
 [out] Ein Zeiger auf den Schnittstellenzeiger vom *Iid*. Wenn das Objekt nicht über diese Schnittstelle unterstützt *PpvObject* auf NULL festgelegt ist.
 
-*PP*<br/>
+*pp*<br/>
 [out] Ein Zeiger auf den Schnittstellenzeiger vom Typ `Q`. Wenn das Objekt nicht über diese Schnittstelle unterstützt *pp* auf NULL festgelegt ist.
 
 ### <a name="return-value"></a>Rückgabewert

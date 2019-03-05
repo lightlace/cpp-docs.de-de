@@ -13,12 +13,12 @@ f1_keywords:
 - amp/Concurrency::global_memory_fence
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-ms.openlocfilehash: 43be1fc3a5df52f6edcc05b501b1463bd5da7e6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7baae51480c273ca023856253af7963ac83d7c92
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481795"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284839"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Concurrency-Namespace-Funktionen (AMP)
 
@@ -79,7 +79,7 @@ Der Speicherort, aus dem einer der zu vergleichenden Werte gelesen wird und an d
 *_Expected_value*<br/>
 Der Speicherort, aus dem der zweite zu vergleichende Wert gelesen wird.
 
-*Wert*<br/>
+*value*<br/>
 Der Wert, der an dem von `_Dest` angegebenen Speicherort abgelegt werden soll, wenn `_Dest` gleich `_Expected_value` ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -112,7 +112,7 @@ inline float atomic_exchange(
 *_Dest*<br/>
 Zeiger auf den Ziel-Speicherort.
 
-*Wert*<br/>
+*value*<br/>
 Der neue Wert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -140,7 +140,7 @@ inline unsigned int atomic_fetch_add(
 *_Dest*<br/>
 Zeiger auf die Speicheradresse.
 
-*Wert*<br/>
+*value*<br/>
 Der hinzuzufügende Wert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -168,7 +168,7 @@ inline unsigned int atomic_fetch_and(
 *_Dest*<br/>
 Zeiger auf die Speicheradresse.
 
-*Wert*<br/>
+*value*<br/>
 Der Wert in die bitweise AND-Berechnung verwendet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -235,7 +235,7 @@ inline unsigned int atomic_fetch_max(
 *_Dest*<br/>
 Der Speicherort, aus dem einer der zu vergleichenden Werte gelesen wird und an dem das Maximum der beiden Werte gespeichert werden soll.
 
-*Wert*<br/>
+*value*<br/>
 Der Wert, der mit dem Wert an der angegebenen Position verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -263,7 +263,7 @@ inline unsigned int atomic_fetch_min(
 *_Dest*<br/>
 Der Speicherort, aus dem einer der zu vergleichenden Werte gelesen wird und an dem das Minimum der beiden Werte gespeichert werden soll.
 
-*Wert*<br/>
+*value*<br/>
 Der Wert, der mit dem Wert an der angegebenen Position verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -291,7 +291,7 @@ inline unsigned int atomic_fetch_or(
 *_Dest*<br/>
 Zeiger auf die Speicheradresse.
 
-*Wert*<br/>
+*value*<br/>
 Der Wert in die bitweise OR-Berechnung verwendet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -319,7 +319,7 @@ inline unsigned int atomic_fetch_sub(
 *_Dest*<br/>
 Zeiger auf den Ziel-Speicherort.
 
-*Wert*<br/>
+*value*<br/>
 Der Wert, der subtrahiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -347,7 +347,7 @@ inline unsigned int atomic_fetch_xor(
 *_Dest*<br/>
 Zeiger auf die Speicheradresse.
 
-*Wert*<br/>
+*value*<br/>
 Der Wert, der bei der XOR-Berechnung verwenden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -546,7 +546,7 @@ Ein `future<void>`-Objekt, auf das gewartet werden kann.
 
 ##  <a name="direct3d_abort"></a>  direct3d_abort
 
-Bricht die Ausführung einer Funktion mit der Einschränkungsklausel `restrict(amp)` ab. Wenn die AMP-Laufzeit den Aufruf erkennt, löst sie eine [runtime_exception](runtime-exception-class.md) -Ausnahme mit der Fehlermeldung „Referenzrasterprogramm: Anweisung zum Abbrechen von Shader ermittelt“ aus.
+Bricht die Ausführung einer Funktion mit der Einschränkungsklausel `restrict(amp)` ab. Wenn die AMP-Laufzeit den Aufruf erkennt, löst es eine [Runtime_exception](runtime-exception-class.md) Ausnahme mit der Fehlermeldung "Referenzrasterprogramm: Abbrechen von Shader Anweisung ermittelt".
 
 ```
 void direct3d_abort() restrict(amp);

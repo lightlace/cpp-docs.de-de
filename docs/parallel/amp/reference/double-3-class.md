@@ -72,12 +72,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::rbg
 - amp_short_vectors/Concurrency::graphics::double_3::get_yxz
 ms.assetid: baeb3ff0-2862-4c81-857e-b1a4c085be25
-ms.openlocfilehash: 169c9ecb0fe68436a05c6c59a75a80a0d02f411c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6423220d8203b0d0fba73a4888f967e159db26de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508913"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326737"
 ---
 # <a name="double3-class"></a>double_3-Klasse
 
@@ -111,12 +111,12 @@ class double_3;
 |double_3::get_xy||
 |double_3::get_xyz||
 |double_3::get_xz||
-|double_3:: get_xzy||
-|double_3:: get_Y||
+|double_3::get_xzy||
+|double_3::get_y||
 |double_3::get_yx||
 |double_3::get_yxz||
 |double_3::get_yz||
-|double_3:: get_yzx||
+|double_3::get_yzx||
 |double_3::get_z||
 |double_3::get_zx||
 |double_3::get_zxy||
@@ -129,19 +129,19 @@ class double_3;
 |double_3::ref_y||
 |double_3::ref_z||
 |double_3::set_x||
-|double_3:: set_xy||
-|double_3:: set_xyz||
+|double_3::set_xy||
+|double_3::set_xyz||
 |double_3::set_xz||
-|double_3:: set_xzy||
-|double_3:: set_y||
+|double_3::set_xzy||
+|double_3::set_y||
 |double_3::set_yx||
 |double_3::set_yxz||
-|double_3:: set_yz||
-|double_3:: set_yzx||
+|double_3::set_yz||
+|double_3::set_yzx||
 |double_3::set_z||
 |double_3::set_zx||
 |double_3::set_zxy||
-|double_3:: set_zy||
+|double_3::set_zy||
 |double_3::set_zyx||
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
@@ -150,12 +150,12 @@ class double_3;
 |----------|-----------------|
 |double_3::operator-||
 |double_3::operator--||
-|double_3:: * =||
+|double_3::operator*=||
 |double_3::operator/=||
 |double_3::operator++||
 |double_3::operator+=||
 |double_3::operator=||
-|double_3:: Operator-=||
+|double_3::operator-=||
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
@@ -182,18 +182,18 @@ class double_3;
 |double_3::rbg||
 |double_3::rg||
 |double_3::rgb||
-|double_3:: x||
+|double_3::x||
 |double_3::xy||
 |double_3::xyz||
 |double_3::xz||
-|double_3:: xzy||
+|double_3::xzy||
 |double_3::y||
 |double_3::yx||
 |double_3::yxz||
 |double_3::yz||
 |double_3::yzx||
 |double_3::z||
-|double_3:: ZX||
+|double_3::zx||
 |double_3::zxy||
 |double_3::zy||
 |double_3::zyx||
@@ -265,7 +265,7 @@ Der Wert 2-Element zu initialisieren.
 *_V*<br/>
 Der Wert für die Initialisierung.
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Das Objekt, das zum Initialisieren verwendet.
 
 ##  <a name="double_3__size"></a> Größe

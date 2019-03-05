@@ -92,12 +92,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerOffice2003 Class [MFC]
 ms.assetid: 115482cd-e349-450a-8dc4-c6023d092aab
-ms.openlocfilehash: 1b811de23b4a049bd462ddbb3f9b96e80ae25be0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c3b0a031db8ff843bb43f7dfa69f046d6ae99a96
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558808"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273269"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003-Klasse
 
@@ -123,7 +123,7 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerOffice2003::GetHighlightMenuItemColor](#gethighlightmenuitemcolor)|Ruft die Farbe der markierten Menüelements ab.|
 |[CMFCVisualManagerOffice2003::GetPropertyGridGroupColor](#getpropertygridgroupcolor)|Das Framework ruft diese Methode, um die Farbe des Hintergrunds einer Eigenschaftenliste zu erhalten. (Überschreibt `CMFCVisualManagerOfficeXP::GetPropertyGridGroupColor`.)|
 |[CMFCVisualManagerOffice2003::GetPropertyGridGroupTextColor](#getpropertygridgrouptextcolor)|Das Framework ruft diese Methode, um die Textfarbe für eine Liste mit Eigenschaften abrufen. (Überschreibt `CMFCVisualManagerOfficeXP::GetPropertyGridGroupTextColor`.)|
-|[CMFCVisualManagerOffice2003::GetShowAllMenuItemsHeight](#getshowallmenuitemsheight)|Gibt die Höhe aller Menüelemente. (Überschreibt [CMFCVisualManager::GetShowAllMenuItemsHeight](../../mfc/reference/cmfcvisualmanager-class.md#getshowallmenuitemsheight).)|
+|[CMFCVisualManagerOffice2003::GetShowAllMenuItemsHeight](#getshowallmenuitemsheight)|Gibt die Höhe aller Menüelemente. (Overrides [CMFCVisualManager::GetShowAllMenuItemsHeight](../../mfc/reference/cmfcvisualmanager-class.md#getshowallmenuitemsheight).)|
 |[CMFCVisualManagerOffice2003::GetSmartDockingBaseGuideColors](#getsmartdockingbaseguidecolors)|Legt die Hintergrundfarbe für die angegebene Gruppe und die Farbe des Rahmens an. (Überschreibt `CMFCVisualManagerOfficeXP::GetSmartDockingBaseGuideColors`.)|
 |[CMFCVisualManagerOffice2003::GetSmartDockingHighlightToneColor](#getsmartdockinghighlighttonecolor)|Ruft die Farbe der Hervorhebung Ton ab. (Überschreibt [CMFCVisualManager::GetSmartDockingHighlightToneColor](../../mfc/reference/cmfcvisualmanager-class.md#getsmartdockinghighlighttonecolor).)|
 |[CMFCVisualManagerOffice2003::GetTabFrameColors](#gettabframecolors)|Das Framework ruft diese Funktion bei der Satz von Farben für das Zeichnen einer "Verwaltung" abrufen. (Überschreibt [CMFCVisualManager::GetTabFrameColors](../../mfc/reference/cmfcvisualmanager-class.md#gettabframecolors).)|
@@ -142,27 +142,27 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerOffice2003::OnDrawBarGripper](#ondrawbargripper)|Vom Framework aufgerufen, wenn es für eine Steuerleiste ziehelements zeichnet. (Überschreibt `CMFCVisualManagerOfficeXP::OnDrawBarGripper`.)|
 |[CMFCVisualManagerOffice2003::OnDrawBrowseButton](#ondrawbrowsebutton)|Das Framework ruft diese Methode auf, wenn es auf die Schaltfläche zum Durchsuchen für ein Bearbeitungssteuerelement zeichnet. (Überschreibt `CMFCVisualManagerOfficeXP::OnDrawBrowseButton`.)|
 |[CMFCVisualManagerOffice2003::OnDrawButtonBorder](#ondrawbuttonborder)|Das Framework ruft diese Methode auf, wenn es sich um den Rahmen einer Symbolleisten-Schaltfläche zeichnet. (Überschreibt `CMFCVisualManagerOfficeXP::OnDrawButtonBorder`.)|
-|[CMFCVisualManagerOffice2003::OnDrawCaptionBarBorder](#ondrawcaptionbarborder)|Das Framework ruft diese Methode auf, wenn es sich um den Rahmen zeichnet eine [CMFCCaptionBar-Klasse](../../mfc/reference/cmfccaptionbar-class.md) Objekt. (Überschreibt [CMFCVisualManager::OnDrawCaptionBarBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcaptionbarborder).)|
+|[CMFCVisualManagerOffice2003::OnDrawCaptionBarBorder](#ondrawcaptionbarborder)|Das Framework ruft diese Methode auf, wenn es sich um den Rahmen zeichnet eine [CMFCCaptionBar-Klasse](../../mfc/reference/cmfccaptionbar-class.md) Objekt. (Overrides [CMFCVisualManager::OnDrawCaptionBarBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcaptionbarborder).)|
 |[CMFCVisualManagerOffice2003::OnDrawCheckBoxEx](#ondrawcheckboxex)|Das Framework ruft diese Methode auf, wenn es ein Kontrollkästchen zeichnet. (Überschreibt [CMFCVisualManager::OnDrawCheckBoxEx](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcheckboxex).)|
 |[CMFCVisualManagerOffice2003::OnDrawComboBorder](#ondrawcomboborder)|Das Framework ruft diese Methode auf, wenn es sich um Rahmens zeichnet eine [CMFCToolBarComboBoxButton-Klasse](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) Objekt. (Überschreibt `CMFCVisualManagerOfficeXP::OnDrawComboBorder`.)|
 |[CMFCVisualManagerOffice2003::OnDrawComboDropButton](#ondrawcombodropbutton)|Das Framework ruft diese Methode auf, wenn es sich um die Dropdown-Schaltfläche der zeichnet eine [CMFCToolBarComboBoxButton-Klasse](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md). (Überschreibt `CMFCVisualManagerOfficeXP::OnDrawComboDropButton`.)|
 |[CMFCVisualManagerOffice2003::OnDrawControlBorder](#ondrawcontrolborder)|Das Framework ruft diese Methode auf, wenn es sich um den Rahmen eines Steuerelements zeichnet. (Überschreibt [CMFCVisualManager::OnDrawControlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcontrolborder).)|
 |[CMFCVisualManagerOffice2003::OnDrawExpandingBox](#ondrawexpandingbox)|Das Framework ruft diese Methode auf, wenn es sich um einen erweiterbaren Feld zeichnet. (Überschreibt [CMFCVisualManager::OnDrawExpandingBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawexpandingbox).)|
-|[CMFCVisualManagerOffice2003::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|Das Framework ruft diese Methode auf, wenn es sich um eine Instanz des Rahmens zeichnet die [CMFCHeaderCtrl-Klasse](../../mfc/reference/cmfcheaderctrl-class.md). (Überschreibt [CMFCVisualManager::OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder).)|
+|[CMFCVisualManagerOffice2003::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|Das Framework ruft diese Methode auf, wenn es sich um eine Instanz des Rahmens zeichnet die [CMFCHeaderCtrl-Klasse](../../mfc/reference/cmfcheaderctrl-class.md). (Overrides [CMFCVisualManager::OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder).)|
 |[CMFCVisualManagerOffice2003::OnDrawMenuBorder](#ondrawmenuborder)|Das Framework ruft diese Methode auf, wenn es sich um den Rahmen zeichnet eine [CMFCPopupMenu-Klasse](../../mfc/reference/cmfcpopupmenu-class.md). (Überschreibt `CMFCVisualManagerOfficeXP::OnDrawMenuBorder`.)|
 |[CMFCVisualManagerOffice2003::OnDrawOutlookBarSplitter](#ondrawoutlookbarsplitter)|Das Framework ruft diese Methode auf, wenn es sich um die Aufteilung für eine Outlook-Leiste zeichnet. (Überschreibt [CMFCVisualManager::OnDrawOutlookBarSplitter](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookbarsplitter).)|
-|[CMFCVisualManagerOffice2003::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Wird vom Framework aufgerufen, wenn es sich um den Rahmen einer Outlook-Seite-Schaltfläche zeichnet. (Überschreibt [CMFCVisualManager::OnDrawOutlookPageButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookpagebuttonborder).)|
+|[CMFCVisualManagerOffice2003::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Wird vom Framework aufgerufen, wenn es sich um den Rahmen einer Outlook-Seite-Schaltfläche zeichnet. (Overrides [CMFCVisualManager::OnDrawOutlookPageButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookpagebuttonborder).)|
 |[CMFCVisualManagerOffice2003::OnDrawPaneBorder](#ondrawpaneborder)|Das Framework ruft diese Methode auf, wenn es sich um den Rahmen zeichnet eine [CPane-Klasse](../../mfc/reference/cpane-class.md) Objekt. (Überschreibt `CMFCVisualManagerOfficeXP::OnDrawPaneBorder`.)|
 |[CMFCVisualManagerOffice2003::OnDrawPaneCaption](#ondrawpanecaption)|Das Framework ruft diese Methode auf, wenn es sich um eine Beschriftung für zeichnet eine [CDockablePane-Klasse](../../mfc/reference/cdockablepane-class.md) Objekt. (Überschreibt `CMFCVisualManagerOfficeXP::OnDrawPaneCaption`.)|
 |[CMFCVisualManagerOffice2003::OnDrawPopupWindowBorder](#ondrawpopupwindowborder)|Das Framework ruft diese Methode auf, wenn es sich um den Rahmen eines Popup-Fensters zeichnet. (Überschreibt `CMFCVisualManagerOfficeXP::OnDrawPopupWindowBorder`.)|
 |[CMFCVisualManagerOffice2003::OnDrawPopupWindowButtonBorder](#ondrawpopupwindowbuttonborder)|Das Framework ruft diese Methode auf, wenn es den Rahmen einer Schaltfläche in einem Popupfenster zeichnet. (Überschreibt `CMFCVisualManagerOfficeXP::OnDrawPopupWindowButtonBorder`.)|
 |[CMFCVisualManagerOffice2003::OnDrawPopupWindowCaption](#ondrawpopupwindowcaption)|Das Framework ruft diese Methode auf, wenn es sich um die Beschriftung des Popup-Fensters zeichnet. (Überschreibt `CMFCVisualManagerOfficeXP::OnDrawPopupWindowCaption`.)|
 |[CMFCVisualManagerOffice2003::OnDrawRibbonButtonsGroup](#ondrawribbonbuttonsgroup)|Das Framework ruft diese Methode auf, wenn es eine Gruppe von Schaltflächen auf dem Menüband zeichnet. (Überschreibt [CMFCVisualManager::OnDrawRibbonButtonsGroup](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonbuttonsgroup).)|
-|[CMFCVisualManagerOffice2003::OnDrawRibbonCategoryCaption](#ondrawribboncategorycaption)|Das Framework ruft diese Methode auf, wenn es auf die Titelleiste für eine Menübandkategorie zeichnet. (Überschreibt [CMFCVisualManager::OnDrawRibbonCategoryCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorycaption).)|
-|[CMFCVisualManagerOffice2003::OnDrawRibbonCategoryTab](#ondrawribboncategorytab)|Das Framework ruft diese Methode auf, wenn es sich um die Registerkarte für eine Menübandkategorie zeichnet. (Überschreibt [CMFCVisualManager::OnDrawRibbonCategoryTab](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorytab).)|
-|[CMFCVisualManagerOffice2003::OnDrawRibbonProgressBar](#ondrawribbonprogressbar)|Das Framework ruft diese Methode auf, wenn es zeichnet eine [CMFCRibbonProgressBar-Klasse](../../mfc/reference/cmfcribbonprogressbar-class.md). (Überschreibt [CMFCVisualManager::OnDrawRibbonProgressBar](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonprogressbar).)|
+|[CMFCVisualManagerOffice2003::OnDrawRibbonCategoryCaption](#ondrawribboncategorycaption)|Das Framework ruft diese Methode auf, wenn es auf die Titelleiste für eine Menübandkategorie zeichnet. (Overrides [CMFCVisualManager::OnDrawRibbonCategoryCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorycaption).)|
+|[CMFCVisualManagerOffice2003::OnDrawRibbonCategoryTab](#ondrawribboncategorytab)|Das Framework ruft diese Methode auf, wenn es sich um die Registerkarte für eine Menübandkategorie zeichnet. (Overrides [CMFCVisualManager::OnDrawRibbonCategoryTab](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorytab).)|
+|[CMFCVisualManagerOffice2003::OnDrawRibbonProgressBar](#ondrawribbonprogressbar)|Das Framework ruft diese Methode auf, wenn es zeichnet eine [CMFCRibbonProgressBar-Klasse](../../mfc/reference/cmfcribbonprogressbar-class.md). (Overrides [CMFCVisualManager::OnDrawRibbonProgressBar](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonprogressbar).)|
 |[CMFCVisualManagerOffice2003::OnDrawRibbonQuickAccessToolBarSeparator](#ondrawribbonquickaccesstoolbarseparator)|Das Framework ruft diese Methode auf, wenn es eine Trennzeichen auf der Symbolleiste für den Schnellzugriff eines Menübands zeichnet. (Überschreibt `CMFCVisualManagerOfficeXP::OnDrawRibbonQuickAccessToolBarSeparator`.)|
-|[CMFCVisualManagerOffice2003::OnDrawRibbonSliderChannel](#ondrawribbonsliderchannel)|Das Framework ruft diese Methode auf, wenn es sich um den Kanal des zeichnet eine [CMFCRibbonSlider-Klasse](../../mfc/reference/cmfcribbonslider-class.md). (Überschreibt [CMFCVisualManager::OnDrawRibbonSliderChannel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderchannel).)|
+|[CMFCVisualManagerOffice2003::OnDrawRibbonSliderChannel](#ondrawribbonsliderchannel)|Das Framework ruft diese Methode auf, wenn es sich um den Kanal des zeichnet eine [CMFCRibbonSlider-Klasse](../../mfc/reference/cmfcribbonslider-class.md). (Overrides [CMFCVisualManager::OnDrawRibbonSliderChannel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderchannel).)|
 |[CMFCVisualManagerOffice2003::OnDrawRibbonSliderThumb](#ondrawribbonsliderthumb)|Das Framework ruft diese Methode auf, wenn es sich um das Thumb-Steuerelement von zeichnet eine [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) Objekt. (Überschreibt [CMFCVisualManager::OnDrawRibbonSliderThumb](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderthumb).)|
 |[CMFCVisualManagerOffice2003::OnDrawRibbonSliderZoomButton](#ondrawribbonsliderzoombutton)|Das Framework ruft diese Methode auf, wenn es sich um den Zoomschaltflächen für zeichnet eine [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) Objekt. (Überschreibt [CMFCVisualManager::OnDrawRibbonSliderZoomButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderzoombutton).)|
 |[CMFCVisualManagerOffice2003::OnDrawRibbonStatusBarPane](#ondrawribbonstatusbarpane)|Das Framework ruft diese Methode auf, wenn es auf der Statusleiste einen Bereich zeichnet. (Überschreibt `CMFCVisualManagerOfficeXP::OnDrawRibbonStatusBarPane`.)|
@@ -186,7 +186,7 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerOffice2003::OnFillBarBackground](#onfillbarbackground)|Das Framework ruft diese Methode aus, wenn es sich um den Hintergrund des ausfüllt eine [CBasePane-Klasse](../../mfc/reference/cbasepane-class.md) Objekt. (Überschreibt `CMFCVisualManagerOfficeXP::OnFillBarBackground`.)|
 |[CMFCVisualManagerOffice2003::OnFillButtonInterior](#onfillbuttoninterior)|Das Framework ruft diese Methode auf, wenn es sich um den Hintergrund einer Symbolleisten-Schaltfläche ausfüllt. (Überschreibt `CMFCVisualManagerOfficeXP::OnFillButtonInterior`.)|
 |[CMFCVisualManagerOffice2003::OnFillCommandsListBackground](#onfillcommandslistbackground)|Das Framework ruft diese Methode auf, wenn es sich um den Hintergrund einer Symbolleisten-Schaltfläche ausfüllt, der eine Befehlsliste angehört. (Überschreibt `CMFCVisualManagerOfficeXP::OnFillCommandsListBackground`.)|
-|[CMFCVisualManagerOffice2003::OnFillHeaderCtrlBackground](#onfillheaderctrlbackground)|Das Framework ruft diese Methode auf, wenn es sich um den Hintergrund von einem Kopfzeilen-Steuerelement ausfüllt. (Überschreibt [CMFCVisualManager::OnFillHeaderCtrlBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillheaderctrlbackground).)|
+|[CMFCVisualManagerOffice2003::OnFillHeaderCtrlBackground](#onfillheaderctrlbackground)|Das Framework ruft diese Methode auf, wenn es sich um den Hintergrund von einem Kopfzeilen-Steuerelement ausfüllt. (Overrides [CMFCVisualManager::OnFillHeaderCtrlBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillheaderctrlbackground).)|
 |[CMFCVisualManagerOffice2003::OnFillHighlightedArea](#onfillhighlightedarea)|Das Framework ruft diese Methode auf, wenn es sich um den markierten Bereich, der eine Symbolleisten-Schaltfläche ausfüllt. (Überschreibt `CMFCVisualManagerOfficeXP::OnFillHighlightedArea`.)|
 |[CMFCVisualManagerOffice2003::OnFillOutlookBarCaption](#onfilloutlookbarcaption)|Das Framework ruft diese Methode auf, wenn es sich um den Hintergrund einer Outlook-Titelleiste ausfüllt. (Überschreibt [CMFCVisualManager::OnFillOutlookBarCaption](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookbarcaption).)|
 |[CMFCVisualManagerOffice2003::OnFillOutlookPageButton](#onfilloutlookpagebutton)|Das Framework ruft diese Methode auf, wenn es sich um das Innere einer Outlook-Seite-Schaltfläche ausfüllt. (Überschreibt [CMFCVisualManager::OnFillOutlookPageButton](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookpagebutton).)|
@@ -245,10 +245,10 @@ virtual BOOL DrawComboBorderWinXP(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Umschließende Rechteck des Rahmen des Kombinationsfelds.
 
-*bDeaktiviert*<br/>
+*bDisabled*<br/>
 [in] Gibt an, ob der Rahmen des Kombinationsfelds deaktiviert ist.
 
 *bIsDropped*<br/>
@@ -281,10 +281,10 @@ virtual BOOL DrawComboDropButtonWinXP(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck von der Dropdown-kombinationsfeldschaltfläche.
 
-*bDeaktiviert*<br/>
+*bDisabled*<br/>
 [in] Gibt an, ob der Dropdown-kombinationsfeldschaltfläche deaktiviert ist.
 
 *bIsDropped*<br/>
@@ -318,7 +318,7 @@ virtual void DrawCustomizeButton(
 *pDC*<br/>
 [in] Zeiger auf einen Anzeigekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck der Schaltfläche
 
 *bIsHorz*<br/>
@@ -352,7 +352,7 @@ virtual BOOL DrawPushButtonWinXP(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck von der Schaltfläche.
 
 *pButton*<br/>
@@ -794,10 +794,10 @@ virtual BOOL OnDrawBrowseButton(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *pEdit*<br/>
 [in] *Zustand*<br/>
-[in] *ClrText*<br/>
+[in] *clrText*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -823,7 +823,7 @@ virtual void OnDrawButtonBorder(
 *pButton*<br/>
 [in] Ein Zeiger auf eine Symbolleisten-Schaltfläche. Das Framework zeichnet den Rahmen dieser Schaltfläche.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Begrenzungen des der Symbolleisten-Schaltfläche angibt.
 
 *state*<br/>
@@ -856,7 +856,7 @@ virtual void OnDrawCaptionBarBorder(
 *pBar*<br/>
 [in] Ein Zeiger auf eine [CMFCCaptionBar-Klasse](../../mfc/reference/cmfccaptionbar-class.md) Objekt. Das Framework zeichnet diese Titelleiste an.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen der Titelleiste angibt.
 
 *clrBarBorder*<br/>
@@ -888,11 +888,11 @@ virtual void OnDrawCheckBoxEx(
 *pDC*<br/>
 [in] Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck des Kontrollkästchens.
 
 *nState*<br/>
-[in] Der Status des Kontrollkästchens: 0, wenn Sie deaktiviert ist, 1, wenn aktiviert, 2, wenn aktiviert, kombiniert.
+[in] Der Status des Kontrollkästchens: 0, wenn Sie deaktiviert ist, 1, wenn dieses Kontrollkästchen aktiviert, 2 Wenn mixed aktiviert.
 
 *bHighlighted*<br/>
 [in] True, wenn das Kontrollkästchen hervorgehobenen bzw. FALSE, wenn nicht.
@@ -900,7 +900,7 @@ virtual void OnDrawCheckBoxEx(
 *bPressed*<br/>
 [in] True, wenn das Kontrollkästchen gedrückt bzw. FALSE, wenn nicht.
 
-*bAktiviert*<br/>
+*bEnabled*<br/>
 [in] True, wenn das Kontrollkästchen aktiviert ist, oder FALSE, wenn nicht.
 
 ### <a name="remarks"></a>Hinweise
@@ -924,10 +924,10 @@ virtual void OnDrawComboBorder(
 *pDC*<br/>
 [in] Ein Zeiger auf den Gerätekontext, der eine Kombinationsfelds-Schaltfläche.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen der kombinationsfeldschaltfläche angibt.
 
-*bDeaktiviert*<br/>
+*bDisabled*<br/>
 [in] Ein boolescher Parameter, der angibt, ob der kombinationsfeldschaltfläche nicht verfügbar ist.
 
 *bIsDropped*<br/>
@@ -962,10 +962,10 @@ virtual void OnDrawComboDropButton(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen der Dropdown-Schaltfläche angibt.
 
-*bDeaktiviert*<br/>
+*bDisabled*<br/>
 [in] Ein boolescher Parameter, der angibt, ob die Dropdown-Schaltfläche nicht verfügbar ist.
 
 *bIsDropped*<br/>
@@ -1013,7 +1013,7 @@ virtual void OnDrawExpandingBox(
 *pDC*<br/>
 [in] Der Zeiger für den Anzeigekontext, in dem das erweiterbare Feld ist, gezeichnet werden soll.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck des erweiterbaren Felds gezeichnet werden soll.
 
 *bIsOpened*<br/>
@@ -1045,7 +1045,7 @@ virtual void OnDrawHeaderCtrlBorder(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen des Headersteuerelements angibt.
 
 [in] *bIsPressed*<br/>
@@ -1075,7 +1075,7 @@ virtual void OnDrawMenuBorder(
 *pMenu*<br/>
 [in] Ein Zeiger auf eine [CMFCPopupMenu-Klasse](../../mfc/reference/cmfcpopupmenu-class.md) Objekt. Das Framework zeichnet einen Rahmen um das Popup-Menü.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen des Popupmenüs angibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -1153,7 +1153,7 @@ virtual void OnDrawPaneBorder(
 *pBar*<br/>
 [in] Ein Zeiger auf einen Bereich. Visuelle Manager zeichnet den Rahmen dieses Bereichs.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen des Bereichs angibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -1211,7 +1211,7 @@ virtual void OnDrawPopupWindowBorder(
 *pDC*<br/>
 [in] Zeiger auf den Gerätekontext, der das Popupfenster.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck des Popup-Fenster.
 
 ### <a name="remarks"></a>Hinweise
@@ -1409,7 +1409,7 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
 *pSeparator*<br/>
 [in] Ein Zeiger auf eine [CMFCRibbonSeparator-Klasse](../../mfc/reference/cmfcribbonseparator-class.md) Objekt. Das Framework zeichnet dieses Menüband-Trennzeichen.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Abmessungen der Trennung angibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -1435,7 +1435,7 @@ virtual void OnDrawRibbonSliderChannel(
 *pSlider*<br/>
 [in] Ein Zeiger auf eine [CMFCRibbonSlider-Klasse](../../mfc/reference/cmfcribbonslider-class.md) Objekt. Das Framework zeichnet den Kanal für dieses Schiebereglers Menüband.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen für den Kanal des Schiebereglers Menüband angibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -1464,7 +1464,7 @@ virtual void OnDrawRibbonSliderThumb(
 *pSlider*<br/>
 [in] Ein Zeiger auf eine [CMFCRibbonSlider-Klasse](../../mfc/reference/cmfcribbonslider-class.md). Das Framework zeichnet das Thumb-Steuerelement für dieses Schiebereglers Menüband.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen des Ziehpunkts für den Schieberegler für die Multifunktionsleiste angibt.
 
 *bIsHighlighted*<br/>
@@ -1503,7 +1503,7 @@ virtual void OnDrawRibbonSliderZoomButton(
 *pSlider*<br/>
 [in] Ein Zeiger auf eine [CMFCRibbonSlider-Klasse](../../mfc/reference/cmfcribbonslider-class.md) Objekt. Das Framework zeichnet dieses Menüband.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Begrenzungen des den Zoomschaltflächen gibt an, auf dem Menüband-Schieberegler.
 
 *bIsZoomOut*<br/>
@@ -1570,7 +1570,7 @@ virtual void OnDrawScrollButtons(
 *pDC*<br/>
 [in] Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck der scrollschaltflächen.
 
 *nBorderSize*<br/>
@@ -1604,7 +1604,7 @@ virtual void OnDrawSeparator(
 *pBar*<br/>
 [in] Ein Zeiger auf einen Bereich, der das Trennzeichen enthält.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Abmessungen der Trennung angibt.
 
 *bIsHoriz*<br/>
@@ -1630,7 +1630,7 @@ virtual void OnDrawShowAllMenuItems(
 *pDC*<br/>
 [in] Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck des Menüs gezeichnet werden soll.
 
 *state*<br/>
@@ -1709,8 +1709,8 @@ virtual void OnDrawStatusBarProgress(
 *clrBar*<br/>
 [in] Die Ausgangsfarbe, für die Statusanzeige. Der Wert ist entweder den Anfang ein Farbverlauf oder die vollständige Farbe der Statusleiste.
 
-[in] *ClrProgressBarDest*<br/>
-[in] *ClrProgressText*<br/>
+[in] *clrProgressBarDest*<br/>
+[in] *clrProgressText*<br/>
 [in] *bProgressText*<br/>
 
 ### <a name="remarks"></a>Hinweise
@@ -1795,7 +1795,7 @@ virtual void OnDrawTabsButtonBorder(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen der Schaltfläche Registerkarte angibt.
 
 *pButton*<br/>
@@ -1862,10 +1862,10 @@ virtual void OnDrawTasksGroupAreaBorder(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen des Gruppenbereichs gibt an, der im Aufgabenbereich.
 
-*bBesondere*<br/>
+*bSpecial*<br/>
 [in] Ein boolescher Parameter, der angibt, ob der Rahmen hervorgehoben ist. Der Wert "true" gibt an, dass der Rahmen hervorgehoben ist.
 
 *bNoTitle*<br/>
@@ -1925,7 +1925,7 @@ virtual void OnDrawTearOffCaption(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen der Beschriftung angibt.
 
 *bIsActive*<br/>
@@ -1977,7 +1977,7 @@ virtual void OnEraseTabsArea(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen des Registerkartenbereichs angibt.
 
 *pTabWnd*<br/>
@@ -2006,7 +2006,7 @@ virtual void OnEraseTabsButton(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen der Schaltfläche Registerkarte angibt.
 
 *pButton*<br/>
@@ -2037,7 +2037,7 @@ virtual BOOL OnEraseTabsFrame(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen des Fensters Registerkarte angibt.
 
 *pTabWnd*<br/>
@@ -2067,7 +2067,7 @@ virtual void OnFillAutoHideButtonBackground(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen der automatisch ausblendbaren Schaltfläche angibt.
 
 *pButton*<br/>
@@ -2133,7 +2133,7 @@ virtual void OnFillButtonInterior(
 *pButton*<br/>
 [in] Ein Zeiger auf die Schaltfläche für die das Framework Hintergrund voll ist.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Begrenzungen des der Symbolleisten-Schaltfläche angibt.
 
 *state*<br/>
@@ -2159,7 +2159,7 @@ virtual COLORREF OnFillCommandsListBackground(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Begrenzungen der Schaltfläche angibt.
 
 *bIsSelected*<br/>
@@ -2192,7 +2192,7 @@ virtual void OnFillHeaderCtrlBackground(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen des Headersteuerelements angibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -2216,7 +2216,7 @@ virtual void OnFillHighlightedArea(
 *pDC*<br/>
 [in] Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck des markierten Bereichs zu füllen.
 
 *pBrush*<br/>
@@ -2273,7 +2273,7 @@ virtual void OnFillOutlookPageButton(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Begrenzungen des Outlook-Seite-Schaltfläche angibt.
 
 *bIsHighlighted*<br/>
@@ -2304,7 +2304,7 @@ virtual void OnFillPopupWindowBackground(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Begrenzungen des Popup-Fenster angibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -2365,10 +2365,10 @@ virtual void OnFillTasksGroupInterior(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen der Aufgabengruppe angibt.
 
-*bBesondere*<br/>
+*bSpecial*<br/>
 [in] Ein boolescher Wert, der angibt, ob das innere durch eine besondere Farbe gefüllt wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -2416,7 +2416,7 @@ virtual void OnHighlightQuickCustomizeMenuButton(
 *pButton*<br/>
 [in] Ein Zeiger auf die Schaltfläche.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck der Schaltfläche.
 
 ### <a name="remarks"></a>Hinweise

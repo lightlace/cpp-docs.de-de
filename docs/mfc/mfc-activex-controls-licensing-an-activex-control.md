@@ -11,12 +11,12 @@ helpviewer_keywords:
 - GetLicenseKey method [MFC]
 - licensing ActiveX controls
 ms.assetid: cacd9e45-701a-4a1f-8f1f-b0b39f6ac303
-ms.openlocfilehash: 35ca5d410f642f2557d9ee797eda2d9529f7f4d1
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: eda2ea08c6bd3526befb71c704aa20eba6935b04
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176357"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304625"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Lizenzieren eines ActiveX-Steuerelements
 
@@ -126,4 +126,3 @@ Weitere Informationen zu ermitteln, finden Sie unter Lizenzierungsprobleme im [U
 
 [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)<br/>
 [MFC-ActiveX-Steuerelement-Assistent](../mfc/reference/mfc-activex-control-wizard.md)
-

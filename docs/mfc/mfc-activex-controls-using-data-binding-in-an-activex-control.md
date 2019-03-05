@@ -14,12 +14,12 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: a5cb73496cd6678e3f45500d9d53c2127b0fb17c
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: e21a31b71e681cdffed555c10079c2598967543f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175807"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265950"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Verwenden der Datenbindung in einem ActiveX-Steuerelement
 
@@ -136,4 +136,3 @@ Sie können jetzt das Projekt erstellen, das das Steuerelement registriert wird.
 ## <a name="see-also"></a>Siehe auch
 
 [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)
-

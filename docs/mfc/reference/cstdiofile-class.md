@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CStdioFile [MFC], WriteString
 - CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
-ms.openlocfilehash: dd1a13e7cef066350f8409782b0efeba11b9d11e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd42934107591905a1bbc273ee9eec4b37e58ea7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456211"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258787"
 ---
 # <a name="cstdiofile-class"></a>CStdioFile-Klasse
 
@@ -199,7 +199,7 @@ virtual BOOL ReadString(CString& rString);
 *lpsz*<br/>
 Gibt einen Zeiger zu einem Benutzer bereitgestellten Puffer, der eine Null-terminierte Zeichenfolge empfangen wird.
 
-*nmax.*<br/>
+*nMax*<br/>
 Gibt an, dass die maximale Anzahl von Zeichen zu lesen, das abschließende Null-Zeichen wird dabei nicht mitgezählt.
 
 *rString*<br/>
@@ -237,7 +237,7 @@ virtual ULONGLONG Seek(
 *lOff*<br/>
 Die Anzahl der Bytes, die den Zeiger bewegen.
 
-*nWenn*<br/>
+*nFrom*<br/>
 Zeiger verschieben-Modus. Dabei muss es sich um einen der folgenden Werte sein:
 
 - `CFile::begin`: Verschieben den Dateizeiger *lOff* Bytes vom Anfang der Datei weiterleiten.

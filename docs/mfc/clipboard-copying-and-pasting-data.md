@@ -1,18 +1,18 @@
 ---
-title: 'Zwischenablage: Daten kopieren und einfügen'
+title: 'Zwischenablage: Kopieren und Einfügen von Daten'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-ms.openlocfilehash: 7f22418b4006bcb9fac1d4430660c8721bc7e903
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da589743e98b2ac020e006aedb0ccc0415998f17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437037"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270734"
 ---
-# <a name="clipboard-copying-and-pasting-data"></a>Zwischenablage: Daten kopieren und einfügen
+# <a name="clipboard-copying-and-pasting-data"></a>Zwischenablage: Kopieren und Einfügen von Daten
 
 Dieses Thema beschreibt die minimale Arbeit erforderlich, zu kopieren und Einfügen aus der Zwischenablage in einer OLE-Anwendung zu implementieren. Es wird empfohlen, die Sie lesen die [Datenobjekte und Datenquellen (OLE)](../mfc/data-objects-and-data-sources-ole.md) Themen, bevor Sie fortfahren.
 
@@ -70,4 +70,3 @@ Behandeln Sie die Option "Inhalte einfügen" auf das Menü "Bearbeiten" finden S
 ## <a name="see-also"></a>Siehe auch
 
 [Zwischenablage: Verwenden des OLE-Zwischenablagemechanismus](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
-

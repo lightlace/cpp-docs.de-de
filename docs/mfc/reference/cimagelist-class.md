@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: 5bcf815fce4123ca1014e1679fd810c1ce321be4
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 3e8c524a95730282d0e35e5f791ebf229725e282
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178589"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298918"
 ---
 # <a name="cimagelist-class"></a>CImageList-Klasse
 
@@ -107,7 +107,7 @@ class CImageList : public CObject
 |[CImageList::Attach](#attach)|Fügt eine Bildliste für eine `CImageList` Objekt.|
 |[CImageList::BeginDrag](#begindrag)|Beginnt, ein Bild zu ziehen.|
 |[CImageList::Copy](#copy)|Kopiert ein Bild innerhalb einer `CImageList` Objekt.|
-|[CImageList:: Create](#create)|Initialisiert eine Bildliste an, und fügt sie an einer `CImageList` Objekt.|
+|[CImageList::Create](#create)|Initialisiert eine Bildliste an, und fügt sie an einer `CImageList` Objekt.|
 |[CImageList::DeleteImageList](#deleteimagelist)|Löscht eine Bildliste.|
 |[CImageList::DeleteTempMap](#deletetempmap)|Wird aufgerufen, indem die [CWinApp](../../mfc/reference/cwinapp-class.md) -leerlaufzeithandler So löschen Sie temporäre `CImageList` von erstelltes Objekt `FromHandle`.|
 |[CImageList::Detach](#detach)|Trennt ein Image List-Objekt aus einem `CImageList` Objekt und gibt ein Handle einer Bildliste zurück.|
@@ -115,7 +115,7 @@ class CImageList : public CObject
 |[CImageList::DragLeave](#dragleave)|Entsperrt das Fenster, und blendet Sie aus dem Ziehbild, damit das Fenster aktualisiert werden kann.|
 |[CImageList::DragMove](#dragmove)|Verschiebt das Bild, das bei einem Drag & Drop-Vorgang gezogen wird.|
 |[CImageList::DragShowNolock](#dragshownolock)|Anzeigen oder Ausblenden der bilddarstellung während eines Ziehvorgangs, ohne Sperren das Fenster.|
-|[Memberfunktion CImageList:: Draw](#draw)|Zeichnet das Bild, das bei einem Drag & Drop-Vorgang gezogen wird.|
+|[CImageList::Draw](#draw)|Zeichnet das Bild, das bei einem Drag & Drop-Vorgang gezogen wird.|
 |[CImageList::DrawEx](#drawex)|Zeichnet ein Bild Listenelement in den angegebenen Gerätekontext. Die Funktion verwendet die angegebene Zeichnungsart und wie das Image mit der angegebenen Farbe.|
 |[CImageList::DrawIndirect](#drawindirect)|Zeichnet ein Bild aus einer Bildliste.|
 |[CImageList::EndDrag](#enddrag)|Beendet einen Ziehvorgang.|
@@ -133,7 +133,7 @@ class CImageList : public CObject
 |[CImageList::SetBkColor](#setbkcolor)|Legt fest, der die Hintergrundfarbe für eine Bildliste.|
 |[CImageList::SetDragCursorImage](#setdragcursorimage)|Erstellt ein neues Drag-Image an.|
 |[CImageList::SetImageCount](#setimagecount)|Setzt die Anzahl der Bilder in einer Bildliste zurück.|
-|[CImageList:: SetOverlayImage](#setoverlayimage)|Fügt den nullbasierten Index eines Bildes zur Liste der Images als Overlaymasken verwendet werden soll.|
+|[CImageList::SetOverlayImage](#setoverlayimage)|Fügt den nullbasierten Index eines Bildes zur Liste der Images als Overlaymasken verwendet werden soll.|
 |[CImageList::Write](#write)|Schreibt eine Bildliste in ein Archiv an.|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
@@ -241,7 +241,7 @@ BOOL BeginDrag(
 
 ### <a name="parameters"></a>Parameter
 
-*Nbild*<br/>
+*nImage*<br/>
 Nullbasierte Index des Bildes, das ziehen.
 
 *ptHotSpot*<br/>
@@ -348,10 +348,10 @@ BOOL Create(CImageList* pImageList);
 
 ### <a name="parameters"></a>Parameter
 
-*CX*<br/>
+*cx*<br/>
 Dimensionen des jedes Bilds in Pixel.
 
-*CY*<br/>
+*cy*<br/>
 Dimensionen des jedes Bilds in Pixel.
 
 *nFlags*<br/>
@@ -383,19 +383,19 @@ Farbe, die zum Generieren einer Maske verwendet werden. Jedes Pixel dieser Farbe
 *lpszBitmapID*<br/>
 Eine Zeichenfolge, die die Ressourcen-IDs der Bilder enthält.
 
-*imageList1*<br/>
+*imagelist1*<br/>
 Ein Verweis auf ein `CImageList`-Objekt.
 
 *nImage1*<br/>
 Der Index des ersten vorhandenen Bilds.
 
-*ImageList2*<br/>
+*imagelist2*<br/>
 Ein Verweis auf ein `CImageList`-Objekt.
 
 *nImage2*<br/>
 Der Index des zweiten vorhandenen Bilds.
 
-*DX*<br/>
+*dx*<br/>
 Offset der x-Achse des das zweite Bild in Beziehung mit der ersten Abbildung in Pixel.
 
 *dy*<br/>
@@ -479,7 +479,7 @@ static BOOL PASCAL DragEnter(
 *pWndLock*<br/>
 Zeiger auf das Fenster, das Ziehbild besitzt.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Position, an der zur Anzeige des Bilds ziehen. Koordinaten sind relativ zur oben links im Fenster (nicht der Clientbereich).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -582,7 +582,7 @@ BOOL Draw(
 *pDC*<br/>
 Zeiger auf den Ziel-Gerätekontext.
 
-*Nbild*<br/>
+*nImage*<br/>
 Nullbasierte Index des Bildes, das gezeichnet werden soll.
 
 *pt*<br/>
@@ -627,7 +627,7 @@ BOOL DrawEx(
 *pDC*<br/>
 Zeiger auf den Ziel-Gerätekontext.
 
-*Nbild*<br/>
+*nImage*<br/>
 Nullbasierte Index des Bildes, das gezeichnet werden soll.
 
 *pt*<br/>
@@ -687,7 +687,7 @@ Ein Zeiger auf ein [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commct
 *pDC*<br/>
 Ein Zeiger auf den Ziel-Gerätekontext. Sie müssen dies löschen [CDC](../../mfc/reference/cdc-class.md) Objekt, wenn Sie damit fertig sind.
 
-*Nbild*<br/>
+*nImage*<br/>
 Der nullbasierte Index des Bilds gezeichnet werden soll.
 
 *pt*<br/>
@@ -715,7 +715,7 @@ Die Hintergrundfarbe Image standardmäßig CLR_DEFAULT. Dieser Parameter kann ei
 |Wert|Bedeutung|
 |-----------|-------------|
 |CLR_DEFAULT|Standard-Hintergrundfarbe. Das Bild gezeichnet wird, mit der Hintergrundfarbe der Image-Liste.|
-|CLR_NONE FÜHRT DAZU|Keine Hintergrundfarbe. Das Bild wird transparent gezeichnet.|
+|CLR_NONE|Keine Hintergrundfarbe. Das Bild wird transparent gezeichnet.|
 
 *rgbFore*<br/>
 Image-Vordergrundfarbe, standardmäßig CLR_DEFAULT. Dieser Parameter kann eine Anwendung definierte RGB-Wert oder eine der folgenden Werte sein:
@@ -723,7 +723,7 @@ Image-Vordergrundfarbe, standardmäßig CLR_DEFAULT. Dieser Parameter kann eine 
 |Wert|Bedeutung|
 |-----------|-------------|
 |CLR_DEFAULT|Die Standardvordergrundfarbe. Das Bild gezeichnet wird, mit der Hervorhebungsfarbe des Systems als Vordergrundfarbe.|
-|CLR_NONE FÜHRT DAZU|Keine Blend-Farbe. Das Bild wird durch die Farbe des Zielgerätekontexts gemischt.|
+|CLR_NONE|Keine Blend-Farbe. Das Bild wird durch die Farbe des Zielgerätekontexts gemischt.|
 
 Dieser Parameter wird verwendet, nur dann, wenn *fStyle* dem ILD_BLEND25 oder ILD_BLEND50-Flag enthält.
 
@@ -780,7 +780,7 @@ HICON ExtractIcon(int nImage);
 
 ### <a name="parameters"></a>Parameter
 
-*Nbild*<br/>
+*nImage*<br/>
 Nullbasierte Index des Bilds.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -911,7 +911,7 @@ BOOL GetImageInfo(
 
 ### <a name="parameters"></a>Parameter
 
-*Nbild*<br/>
+*nImage*<br/>
 Nullbasierte Index des Bilds.
 
 *pImageInfo*<br/>
@@ -1006,7 +1006,7 @@ BOOL Remove(int nImage);
 
 ### <a name="parameters"></a>Parameter
 
-*Nbild*<br/>
+*nImage*<br/>
 Nullbasierte Index des zu entfernenden Bildes.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1038,7 +1038,7 @@ int Replace(
 
 ### <a name="parameters"></a>Parameter
 
-*Nbild*<br/>
+*nImage*<br/>
 Nullbasierte Index des Bildes, das ersetzen.
 
 *pbmImage*<br/>
@@ -1074,7 +1074,7 @@ COLORREF SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parameter
 
-*CR*<br/>
+*cr*<br/>
 Die Hintergrundfarbe festlegen. Es kann CLR_NONE führt dazu, sein. In diesem Fall werden die Bilder gezeichnet transparent mit der Maske.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1097,7 +1097,7 @@ BOOL SetDragCursorImage(
 
 ### <a name="parameters"></a>Parameter
 
-*Nziehen*<br/>
+*nDrag*<br/>
 Der Index des neuen Images mit dem Ziehbild kombiniert werden.
 
 *ptHotSpot*<br/>
@@ -1150,7 +1150,7 @@ BOOL SetOverlayImage(
 
 ### <a name="parameters"></a>Parameter
 
-*Nbild*<br/>
+*nImage*<br/>
 Nullbasierte Index des Bildes, das als eine Overlaymaske verwendet werden.
 
 *nOverlay*<br/>

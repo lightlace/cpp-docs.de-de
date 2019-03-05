@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: 2834de457ce9e2a71537e706f0fdf84463b16a8d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: bdc5f2ebf20949f63b3892ee8e8c6eedf05e2838
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178920"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293861"
 ---
 # <a name="cmenu-class"></a>CMenu-Klasse
 
@@ -119,12 +119,12 @@ class CMenu : public CObject
 |[CMenu::CheckMenuRadioItem](#checkmenuradioitem)|Ein Optionsfeld neben einem Menüelement platziert, und das Optionsfeld aus allen anderen Menüelemente in der Gruppe entfernt.|
 |[CMenu::CreateMenu](#createmenu)|Erstellt ein leeres Menü und fügt sie an einer `CMenu` Objekt.|
 |[CMenu::CreatePopupMenu](#createpopupmenu)|Erstellt ein leeres Popup-Menü und fügt sie an einer `CMenu` Objekt.|
-|[:: DeleteMenu auf](#deletemenu)|Löscht ein angegebenes Element aus dem Menü an. Weist das Menüelement über ein Popup-Menü verknüpft, das Handle für das Popupmenü zerstört, und gibt die von diesem verwendeten Arbeitsspeicher frei.|
+|[CMenu::DeleteMenu](#deletemenu)|Löscht ein angegebenes Element aus dem Menü an. Weist das Menüelement über ein Popup-Menü verknüpft, das Handle für das Popupmenü zerstört, und gibt die von diesem verwendeten Arbeitsspeicher frei.|
 |[CMenu::DeleteTempMap](#deletetempmap)|Löscht temporäre `CMenu` Objekten von erstellt die `FromHandle` Member-Funktion.|
 |[CMenu::DestroyMenu](#destroymenu)|Zerstört das Menü angefügt eine `CMenu` Objekt aus, und Speicher, der belegt Sie im Menü frei.|
 |[CMenu::Detach](#detach)|Trennt ein Windows-Menü-Handle von einem `CMenu` Objekt und gibt das Handle zurück.|
 |[CMenu::DrawItem](#drawitem)|Wird aufgerufen, durch das Framework, wenn sich ein Darstellungsaspekt eines Ownerdrawn-Menü ändert.|
-|[CMenu:: EnableMenuItem](#enablemenuitem)|Aktiviert, deaktiviert oder abgeblendet (grau) eines Menüelements.|
+|[CMenu::EnableMenuItem](#enablemenuitem)|Aktiviert, deaktiviert oder abgeblendet (grau) eines Menüelements.|
 |[CMenu::FromHandle](#fromhandle)|Gibt einen Zeiger auf eine `CMenu` Objekts, dem ein Windows-Menü-Handle.|
 |[CMenu::GetDefaultItem](#getdefaultitem)|Bestimmt das Standardmenüelement auf das angegebene Menü an.|
 |[CMenu::GetMenuContextHelpId](#getmenucontexthelpid)|Ruft die Hilfekontext-ID verknüpft ist, mit dem Menü ab.|
@@ -309,7 +309,7 @@ UINT CheckMenuItem(
 *nIDCheckItem*<br/>
 Das Menüelement aktiviert werden, gibt an, gemäß *nPrüfen*.
 
-*nPrüfen*<br/>
+*nCheck*<br/>
 Gibt an, wie Sie das Menüelement zu überprüfen und Bestimmen der Position des Elements im Menü. Die *nPrüfen* Parameter kann eine Kombination von MF_CHECKED oder MF_UNCHECKED mit Flags MF_BYPOSITION oder MF_BYCOMMAND sein. Diese Flags können mit dem bitweisen OR-Operator kombiniert werden. Sie haben folgende Bedeutung:
 
 - MF_BYCOMMAND gibt an, dass der Parameter die Befehls-ID des vorhandenen Menüelements enthält. Dies ist die Standardeinstellung.
@@ -1186,7 +1186,7 @@ BOOL operator!=(const CMenu& menu) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Menü "*<br/>
+*menu*<br/>
 Ein `CMenu` Objekt für den Vergleich.
 
 ### <a name="remarks"></a>Hinweise
@@ -1203,7 +1203,7 @@ BOOL operator==(const CMenu& menu) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Menü "*<br/>
+*menu*<br/>
 Ein `CMenu` Objekt für den Vergleich.
 
 ### <a name="remarks"></a>Hinweise
@@ -1424,7 +1424,7 @@ Gibt die horizontale Position in Bildschirmkoordinaten, der dem Popup-Menü an. 
 *y*<br/>
 Gibt die vertikale Position in Bildschirmkoordinaten des oberen Rands klicken Sie im Menü auf dem Bildschirm an.
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Gibt das Fenster, das Sie im Popupmenü besitzt. Dieser Parameter darf nicht NULL sein, auch wenn das TPM_NONOTIFY-Flag angegeben wird. In diesem Fenster empfängt alle WM_COMMAND-Meldungen aus dem Menü. In Windows-Versionen 3.1 und höher, das Fenster erhält keine WM_COMMAND-Meldungen bis `TrackPopupMenu` zurückgibt. Windows 3.0 wird das Fenster empfängt WM_COMMAND-Meldungen vor dem `TrackPopupMenu` zurückgibt.
 
 *lpRect*<br/>
@@ -1466,7 +1466,7 @@ Gibt die horizontale Position in Bildschirmkoordinaten, der dem Popup-Menü an.
 *y*<br/>
 Gibt die vertikale Position in Bildschirmkoordinaten des oberen Rands klicken Sie im Menü auf dem Bildschirm an.
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Ein Zeiger auf das Fenster besitzt die Popup-Menü und Empfang der Nachrichten aus dem Menü erstellt werden soll. Dieses Fenster kann einem beliebigen Fenster aus der aktuellen Anwendung jedoch darf nicht NULL sein. Bei Angabe von TPM_NONOTIFY in die *FuFlags* -Parameter die Funktion sendet alle Nachrichten, die keine *aufnehmen*. Die Funktion zurück, für das Fenster zeigt *aufnehmen* zum Empfangen der WM_COMMAND-Meldung.
 
 *lptpm*<br/>

@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 08db42929fb3c6a7feb79abae5110bd88169f11b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cf01f16fe21d0c5bea34bf168c6ea6bff04c195
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594960"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263610"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog-Klasse
 
@@ -140,7 +140,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |Name|Beschreibung|
 |----------|-----------------|
 |[CDHtmlDialog::CDHtmlDialog](#cdhtmldialog)|Erstellt ein CDHtmlDialog-Objekt.|
-|[CDHtmlDialog:: ~ CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|Zerstört ein CDHtmlDialog-Objekt.|
+|[CDHtmlDialog::~CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|Zerstört ein CDHtmlDialog-Objekt.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -370,7 +370,7 @@ Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *szId*<br/>
 Der Wert des Object-Tag-ID-Parameter in der HTML-Quelle für das ActiveX-Steuerelement.
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Dispatch-ID der Eigenschaft mit der Sie die Daten austauschen möchten.
 
 *szPropName*<br/>
@@ -402,7 +402,7 @@ Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *szId*<br/>
 Der Wert, den Sie für die HTML-Steuerelement-ID-Parameter angegeben.
 
-*Wert*<br/>
+*value*<br/>
 Der Wert, die ausgetauscht werden.
 
 ### <a name="example"></a>Beispiel
@@ -465,10 +465,10 @@ Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *szId*<br/>
 Der Wert, den Sie für die HTML-Steuerelement-ID-Parameter angegeben.
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Dispatch-ID des HTML-Elements mit dem Sie die Daten austauschen möchten.
 
-*Wert*<br/>
+*value*<br/>
 Der Wert, die ausgetauscht werden.
 
 ##  <a name="ddx_dhtml_radio"></a>  CDHtmlDialog::DDX_DHtml_Radio
@@ -490,7 +490,7 @@ Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *szId*<br/>
 Der Wert, den Sie für die HTML-Steuerelement-ID-Parameter angegeben.
 
-*Wert*<br/>
+*value*<br/>
 Der Wert, die ausgetauscht werden.
 
 ##  <a name="ddx_dhtml_selectindex"></a>  CDHtmlDialog::DDX_DHtml_SelectIndex
@@ -512,7 +512,7 @@ Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *szId*<br/>
 Der Wert, den Sie für die HTML-Steuerelement-Id-Parameter angegeben.
 
-*Wert*<br/>
+*value*<br/>
 Der Wert, die ausgetauscht werden.
 
 ##  <a name="ddx_dhtml_selectstring"></a>  CDHtmlDialog::DDX_DHtml_SelectString
@@ -534,7 +534,7 @@ Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *szId*<br/>
 Der Wert, den Sie für die HTML-Steuerelement-ID-Parameter angegeben.
 
-*Wert*<br/>
+*value*<br/>
 Der Wert, die ausgetauscht werden.
 
 ##  <a name="ddx_dhtml_selectvalue"></a>  CDHtmlDialog::DDX_DHtml_SelectValue
@@ -556,7 +556,7 @@ Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *szId*<br/>
 Der Wert, den Sie für die HTML-Steuerelement-ID-Parameter angegeben.
 
-*Wert*<br/>
+*value*<br/>
 Der Wert, die ausgetauscht werden.
 
 ### <a name="example"></a>Beispiel
@@ -669,7 +669,7 @@ Der Name einer Eigenschaft in das Standardgebietsschema des aktuellen Benutzers.
 *pdispControl*<br/>
 Die `IDispatch` Zeiger eines ActiveX-Steuerelements.
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Dispatch-ID einer Eigenschaft.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -840,7 +840,7 @@ VARIANT GetElementProperty(
 *szElementId*<br/>
 Die ID eines HTML-Elements.
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Dispatch-ID einer Eigenschaft.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -916,7 +916,7 @@ STDMETHOD(GetHostInfo)(DOCHOSTUIINFO* pInfo);
 
 ### <a name="parameters"></a>Parameter
 
-*"pInfo"*<br/>
+*pInfo*<br/>
 Finden Sie unter *"pInfo"* in [IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx) im Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -942,7 +942,7 @@ STDMETHOD(GetOptionKeyPath)(
 *pchKey*<br/>
 Finden Sie unter *PchKey* in [IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx) im Windows SDK.
 
-*Data Warehouse*<br/>
+*dw*<br/>
 Finden Sie unter *dw* in `IDocHostUIHandler::GetOptionKeyPath` in das Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1264,7 +1264,7 @@ void SetControlProperty(
 *szElementId*<br/>
 Die HTML-ID eines ActiveX-Steuerelements.
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Dispatch-ID der festzulegenden Eigenschaft.
 
 *pVar*<br/>
@@ -1317,7 +1317,7 @@ void SetElementProperty(
 *szElementId*<br/>
 Die ID eines HTML-Elements.
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Dispatch-ID der festzulegenden Eigenschaft.
 
 *pVar*<br/>
@@ -1391,7 +1391,7 @@ STDMETHOD(ShowContextMenu)(
 *dwID*<br/>
 Finden Sie unter *DwID* in [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx) im Windows SDK.
 
-*PPT*<br/>
+*ppt*<br/>
 Finden Sie unter *ppt* in `IDocHostUIHandler::ShowContextMenu` in das Windows SDK.
 
 *pcmdtReserved*<br/>
@@ -1527,4 +1527,3 @@ Diese Memberfunktion ist CDHtmlDialogs-Implementierung von [IDocHostUIHandler::U
 [MFC-Beispiel DHtmlExplore](../../visual-cpp-samples.md)<br/>
 [DDX_DHtml-Hilfsmakros](#ddx_dhtml_helper_macros)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
-

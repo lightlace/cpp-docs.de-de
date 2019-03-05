@@ -1,5 +1,5 @@
 ---
-title: 'TN021: Befehls- und Meldungsrouting'
+title: 'TN021: Befehl und Nachrichtenrouting'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.routing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - command routing [MFC], technical note TN021
 - Windows messages [MFC], routing
 ms.assetid: b5952c8b-123e-406c-a36d-a6ac7c6df307
-ms.openlocfilehash: 4a0774234e6314ff6811bbeafa11403f19cf568e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ce8aa2013c8f2f351ca1028f0d6103135ba5ecd8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635707"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294394"
 ---
-# <a name="tn021-command-and-message-routing"></a>TN021: Befehls- und Meldungsrouting
+# <a name="tn021-command-and-message-routing"></a>TN021: Befehl und Nachrichtenrouting
 
 > [!NOTE]
 >  Der folgende technische Hinweis wurde seit dem ersten Erscheinen in der Onlinedokumentation nicht aktualisiert. Daher können einige Verfahren und Themen veraltet oder falsch sein. Um aktuelle Informationen zu erhalten, wird empfohlen, das gewünschte Thema im Index der Onlinedokumentation zu suchen.

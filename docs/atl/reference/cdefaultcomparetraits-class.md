@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDefaultCompareTraits class
 ms.assetid: a17e2740-e7b4-48f2-aeb7-c80ce84b63f7
-ms.openlocfilehash: b7f51ccd266fce1b5d614dfe2c725e20fde6f297
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5f4ab3737838af11501c4a0f2037b57087939c9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575304"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273594"
 ---
 # <a name="cdefaultcomparetraits-class"></a>CDefaultCompareTraits-Klasse
 
@@ -61,10 +61,10 @@ static bool CompareElements(const T& element1, const T& element2);
 
 ### <a name="parameters"></a>Parameter
 
-*Element1*<br/>
+*element1*<br/>
 Das erste Element.
 
-*Element2*<br/>
+*element2*<br/>
 Das zweite Element.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -85,10 +85,10 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
 
 ### <a name="parameters"></a>Parameter
 
-*Element1*<br/>
+*element1*<br/>
 Das erste Element.
 
-*Element2*<br/>
+*element2*<br/>
 Das zweite Element.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -97,9 +97,9 @@ Gibt eine ganze Zahl, die anhand der folgenden Tabelle:
 
 |Bedingung|Rückgabewert|
 |---------------|------------------|
-|*Element1* < *element2*|<0|
-|*Element1* == *element2*|0|
-|*Element1* > *element2*|>0|
+|*element1* < *element2*|<0|
+|*element1* == *element2*|0|
+|*element1* > *element2*|>0|
 
 ### <a name="remarks"></a>Hinweise
 

@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-ms.openlocfilehash: b4c15be574700730e847bce06aaa4a6f82aed4b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f9bc3708974511506741a35c11676df2b0be592
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539125"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258371"
 ---
 # <a name="cbasetransition-class"></a>CBaseTransition-Klasse
 
@@ -74,7 +74,7 @@ class CBaseTransition : public CObject;
 |Name|Beschreibung|
 |----------|-----------------|
 |[CBaseTransition::CBaseTransition](#cbasetransition)|Erstellt ein Basis-Übergang-Objekt.|
-|[CBaseTransition:: ~ CBaseTransition](#cbasetransition__~cbasetransition)|Der Destruktor. Wird aufgerufen, wenn ein Übergangsobjekt zerstört wird.|
+|[CBaseTransition::~CBaseTransition](#cbasetransition__~cbasetransition)|Der Destruktor. Wird aufgerufen, wenn ein Übergangsobjekt zerstört wird.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -83,14 +83,14 @@ class CBaseTransition : public CObject;
 |[CBaseTransition::AddToStoryboard](#addtostoryboard)|Fügt einen Übergang zu einem Storyboard an.|
 |[CBaseTransition::AddToStoryboardAtKeyframes](#addtostoryboardatkeyframes)|Fügt einen Übergang zu einem Storyboard an.|
 |[CBaseTransition::Clear](#clear)|Releases gekapselt IUIAnimationTransition COM-Objekt.|
-|[CBaseTransition:: Create](#create)|Erstellt einen Übergang von COM.|
+|[CBaseTransition::Create](#create)|Erstellt einen Übergang von COM.|
 |[CBaseTransition::GetEndKeyframe](#getendkeyframe)|Gibt starten Keyframe.|
 |[CBaseTransition::GetRelatedVariable](#getrelatedvariable)|Gibt einen Zeiger auf Verwandte Variable.|
 |[CBaseTransition::GetStartKeyframe](#getstartkeyframe)|Gibt starten Keyframe.|
 |[CBaseTransition::GetTransition](#gettransition)|Überladen. Gibt einen Zeiger auf die zugrunde liegende COM-Übergang-Objekt.|
 |[CBaseTransition::GetType](#gettype)|Gibt die Übergangstyp an.|
 |[CBaseTransition::IsAdded](#isadded)|Erfahren Sie, ob ein Übergang zu einem Storyboard hinzugefügt wurde.|
-|[CBaseTransition:: SetKeyframes](#setkeyframes)|Legt fest, für einen Übergang Keyframes.|
+|[CBaseTransition::SetKeyframes](#setkeyframes)|Legt fest, für einen Übergang Keyframes.|
 |[CBaseTransition::SetRelatedVariable](#setrelatedvariable)|Legt eine Beziehung zwischen der Animationsvariablen und Übergang.|
 
 ### <a name="protected-data-members"></a>Geschützte Datenmember
@@ -385,7 +385,7 @@ void SetKeyframes(
 *pStart*<br/>
 Ein Keyframe, der den Anfang des Übergangs angibt.
 
-*Ausgesetzt*<br/>
+*pEnd*<br/>
 Ein Keyframe, der das Ende des Übergangs angibt.
 
 ### <a name="remarks"></a>Hinweise

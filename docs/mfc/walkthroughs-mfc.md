@@ -4,12 +4,12 @@ ms.date: 09/20/2018
 helpviewer_keywords:
 - MFC Feature Pack, walkthroughs
 ms.assetid: 20d5756f-ad58-46f4-8b6c-c7a1020b72eb
-ms.openlocfilehash: ecd68e04b90a1b130edfc5022c82180b4eff87d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c4b6d507615d991e950897ea07c19c94a5be559
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492141"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286113"
 ---
 # <a name="walkthroughs-mfc"></a>Exemplarische Vorgehensweisen (MFC)
 
@@ -20,7 +20,7 @@ Dieser Abschnitt enthält Artikel, die Sie durch verschiedene Aufgaben im Zusamm
 [Exemplarische Vorgehensweise: Verwenden der neuen MFC-Shell-Steuerelemente](../mfc/walkthrough-using-the-new-mfc-shell-controls.md)<br/>
 In dieser exemplarischen Vorgehensweise erstellen Sie eine Anwendung, die Datei-Explorer ähnelt. Erstellen Sie ein Fenster, das zwei Bereiche enthält. Im linke Bereich verfügt über eine [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) -Objekt, das Ihrem Desktop in einer hierarchischen Ansicht angezeigt wird. Im rechte Bereich verfügt über eine [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) wird, die die Dateien angezeigt, in dem Ordner, der im linken Bereich ausgewählt ist.
 
-[Exemplarische Vorgehensweise: Steuerelemente in eine Symbolleiste einfügen](../mfc/walkthrough-putting-controls-on-toolbars.md)<br/>
+[Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf der Symbolleiste](../mfc/walkthrough-putting-controls-on-toolbars.md)<br/>
 Moderne MFC-Symbolleisten können als Host für andere Steuerelemente als einfache Schaltflächen fungieren. In diesem Artikel wird die entsprechende Vorgehensweise erläutert.
 
 [Exemplarische Vorgehensweise: Hinzufügen eines D2D-Objekts zu einem MFC-Projekt](../mfc/walkthrough-adding-a-d2d-object-to-an-mfc-project.md)<br/>

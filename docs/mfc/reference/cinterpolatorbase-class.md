@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetDuration
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
-ms.openlocfilehash: e428478f2f437654ea2f0890993245afc53c01f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 379aa5607e459ad8acfd99c5899315afb84ac4a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541465"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302285"
 ---
 # <a name="cinterpolatorbase-class"></a>CInterpolatorBase-Klasse
 
@@ -145,7 +145,7 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 
 ### <a name="parameters"></a>Parameter
 
-*Dauer*<br/>
+*duration*<br/>
 Die Ausgabe. Die Dauer des Übergangs, in Sekunden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -162,7 +162,7 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 
 ### <a name="parameters"></a>Parameter
 
-*Wert*<br/>
+*value*<br/>
 Die Ausgabe. Der endgültige Wert einer Variablen am Ende des Übergangs.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -184,7 +184,7 @@ IFACEMETHOD(InterpolateValue)(
 *offset*<br/>
 Der Offset vom Beginn des Übergangs. Der Offset ist immer größer als oder gleich 0 (null) und kleiner als die Dauer des Übergangs. Diese Methode wird nicht aufgerufen, wenn die Dauer des Übergangs 0 (null) ist.
 
-*Wert*<br/>
+*value*<br/>
 Die Ausgabe. Der interpolierten Wert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -206,7 +206,7 @@ IFACEMETHOD(InterpolateVelocity)(
 *offset*<br/>
 Der Offset vom Beginn des Übergangs. Der Offset ist immer größer als oder gleich 0 (null) und kleiner als oder gleich der Dauer des Übergangs. Diese Methode wird nicht aufgerufen, wenn die Dauer des Übergangs 0 (null) ist.
 
-*Geschwindigkeit*<br/>
+*velocity*<br/>
 Die Ausgabe. Die Geschwindigkeit der Variablen mit dem Offset.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -236,7 +236,7 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 
 ### <a name="parameters"></a>Parameter
 
-*Dauer*<br/>
+*duration*<br/>
 Die Dauer des Übergangs.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -255,7 +255,7 @@ IFACEMETHOD(SetInitialValueAndVelocity)(
 
 ### <a name="parameters"></a>Parameter
 
-*"InitialValue"*<br/>
+*initialValue*<br/>
 Der Wert der Variablen zu Beginn des Übergangs.
 
 *initialVelocity*<br/>

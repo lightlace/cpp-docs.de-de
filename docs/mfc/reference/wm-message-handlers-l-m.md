@@ -33,12 +33,12 @@ helpviewer_keywords:
 - ON_WM_LBUTTONUP [MFC]
 - WM_ messages
 ms.assetid: 96ecaaf1-6d13-4e12-a454-535635967489
-ms.openlocfilehash: 395bd7f627fe85b8bb763bdb1e75ae36c91b3061
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ebf5ced1f8e36dc059922b67552b19ca4672443
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550461"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290522"
 ---
 # <a name="wm-message-handlers-l---m"></a>WM_-Meldungshandler: L - M
 
@@ -72,4 +72,3 @@ Die folgenden Einträge der Karte auf der linken Seite entsprechen die Funktions
 
 [Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md)<br/>
 [Handler für WM_-Meldungen](../../mfc/reference/handlers-for-wm-messages.md)
-

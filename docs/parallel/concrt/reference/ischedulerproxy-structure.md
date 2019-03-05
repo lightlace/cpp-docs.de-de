@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - ISchedulerProxy structure
 ms.assetid: af416973-7a1c-4c30-aa3b-4161c2aaea54
-ms.openlocfilehash: a38b931da8ed2191f21d210449c100c410f74e85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0dddd43a5b3e68992e41f0b95893303e57e7c7ff
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523146"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268849"
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy-Struktur
 
@@ -38,7 +38,7 @@ struct ISchedulerProxy;
 |----------|-----------------|
 |[ISchedulerProxy::BindContext](#bindcontext)|Ordnet einen Ausführungskontext ein Threadproxy, wenn es nicht bereits einem zugeordnet ist.|
 |[ISchedulerProxy::CreateOversubscriber](#createoversubscriber)|Erstellt einen neuen virtuellen Prozessorstamm im Hardware-Thread, der eine vorhandene Ausführungsressource zugeordnet.|
-|[ISchedulerProxy:: RequestInitialVirtualProcessors](#requestinitialvirtualprocessors)|Fordert eine anfängliche Zuordnung der Stämme virtueller Prozessoren an. Alle virtuellen Prozessorstamm versteht man die Möglichkeit, einen Thread auszuführen, die Arbeit für den Planer ausführen können.|
+|[ISchedulerProxy::RequestInitialVirtualProcessors](#requestinitialvirtualprocessors)|Fordert eine anfängliche Zuordnung der Stämme virtueller Prozessoren an. Alle virtuellen Prozessorstamm versteht man die Möglichkeit, einen Thread auszuführen, die Arbeit für den Planer ausführen können.|
 |[ISchedulerProxy::Shutdown](#shutdown)|Benachrichtigt den Ressourcen-Manager, dass der Planer beendet wird. Dies bewirkt, dass der Ressourcen-Manager alle Ressourcen, die an den Scheduler gewährt auch sofort manuell freigegeben.|
 |[ISchedulerProxy::SubscribeCurrentThread](#subscribecurrentthread)|Registriert den aktuellen Thread mit der Resource Manager, es diesem Planer zugeordnet.|
 |[ISchedulerProxy::UnbindContext](#unbindcontext)|Hebt die Zuordnung eines Threadproxys aus dem Ausführungskontext, der gemäß der `pContext` Parameter und gibt sie an den Thread des freien Pool-Factory zurück. Diese Methode kann nur auf einem Ausführungskontext, der über gebunden war aufgerufen werden die [BindContext](#bindcontext) Methode und noch nicht über wird gestartet wurde die `pContext` Parameter ein [IThreadProxy:: SwitchTo ](ithreadproxy-structure.md#switchto) Methodenaufruf.|

@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 8cfaef2c8b064cb9faa8c0f6bf65a8868eed7cc7
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 9cedcfbfb662d7d4d635a02b82ea45828c54b958
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178739"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259515"
 ---
 # <a name="cricheditview-class"></a>CRichEditView-Klasse
 
@@ -143,7 +143,7 @@ class CRichEditView : public CCtrlView
 |[CRichEditView::GetParaFormatSelection](#getparaformatselection)|Ruft die absatzformatierung Attribute für die aktuelle Auswahl ab.|
 |[CRichEditView::GetPrintRect](#getprintrect)|Ruft das Drucken Rechteck für diese rich-Edit-Ansicht ab.|
 |[CRichEditView::GetPrintWidth](#getprintwidth)|Ruft die Breite des Druck für diese rich-Edit-Ansicht ab.|
-|[CRichEditView:: GetRichEditCtrl](#getricheditctrl)|Ruft das rich-Edit-Steuerelement ab.|
+|[CRichEditView::GetRichEditCtrl](#getricheditctrl)|Ruft das rich-Edit-Steuerelement ab.|
 |[CRichEditView::GetSelectedItem](#getselecteditem)|Ruft das ausgewählte Element aus der rich-Edit-Ansicht ab.|
 |[CRichEditView::GetTextLength](#gettextlength)|Ruft die Länge des Texts in der rich-Edit-Ansicht ab.|
 |[CRichEditView::GetTextLengthEx](#gettextlengthex)|Ruft die Anzahl von Zeichen oder Bytes in der rich-Edit-Ansicht. Erweiterte Flag-Liste für die Methode zur Bestimmung der Länge.|
@@ -263,7 +263,7 @@ void DoPaste(
 *dataobj*<br/>
 Die [COleDataObject](../../mfc/reference/coledataobject-class.md) mit den Daten zum Einfügen.
 
-*CF*<br/>
+*cf*<br/>
 Das gewünschte Format der Zwischenablage.
 
 *hMetaPict*<br/>
@@ -298,7 +298,7 @@ Gibt an, ob es sich bei der Suche die Groß-/Kleinschreibung beachtet wird.
 *bWord*<br/>
 Gibt an, wenn die Suche nur ganze Wörter nicht Teilen von Wörtern übereinstimmen soll.
 
-*bWeiter*<br/>
+*bNext*<br/>
 Gibt die Richtung für die Suche. Wenn TRUE, ist die suchrichtung zum Ende des Puffers. False gibt an, wird die Suche Richtung am Anfang des Puffers.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -336,7 +336,7 @@ Gibt an, ob es sich bei der Suche die Groß-/Kleinschreibung beachtet wird.
 *bWord*<br/>
 Gibt an, wenn die Suche nur ganze Wörter nicht Teilen von Wörtern übereinstimmen soll.
 
-*bWeiter*<br/>
+*bNext*<br/>
 Gibt die Richtung für die Suche. Wenn TRUE, ist die suchrichtung zum Ende des Puffers. False gibt an, wird die Suche Richtung am Anfang des Puffers.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -683,7 +683,7 @@ static BOOL AFX_CDECL IsRichEditFormat(CLIPFORMAT cf);
 
 ### <a name="parameters"></a>Parameter
 
-*CF*<br/>
+*cf*<br/>
 Das Zwischenablageformat an.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -786,7 +786,7 @@ virtual void OnFindNext(
 *lpszFind*<br/>
 Die zu suchende Zeichenfolge.
 
-*bWeiter*<br/>
+*bNext*<br/>
 Die Richtung zu suchen: TRUE gibt an, nach unten; False gibt an, auf.
 
 *bCase*<br/>
@@ -932,7 +932,7 @@ virtual void OnReplaceSel(
 *lpszFind*<br/>
 Der Text ersetzt werden.
 
-*bWeiter*<br/>
+*bNext*<br/>
 Gibt die Richtung für die Suche an: "True" ist nicht verfügbar; False gibt an, auf.
 
 *bCase*<br/>
@@ -984,7 +984,7 @@ void OnUpdateCharEffect(
 
 ### <a name="parameters"></a>Parameter
 
-*nämlich pCmdUI*<br/>
+*pCmdUI*<br/>
 Zeiger auf eine [CCmdUI](../../mfc/reference/ccmdui-class.md) Objekt.
 
 *dwMask*<br/>
@@ -1015,7 +1015,7 @@ void OnUpdateParaAlign(
 
 ### <a name="parameters"></a>Parameter
 
-*nämlich pCmdUI*<br/>
+*pCmdUI*<br/>
 Zeiger auf eine [CCmdUI](../../mfc/reference/ccmdui-class.md) Objekt.
 
 *wAlign*<br/>
@@ -1159,7 +1159,7 @@ void SetCharFormat(CHARFORMAT2 cf);
 
 ### <a name="parameters"></a>Parameter
 
-*CF*<br/>
+*cf*<br/>
 [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) Struktur, die das neue Standardzeichen Formatierungsattribute enthält.
 
 ### <a name="remarks"></a>Hinweise

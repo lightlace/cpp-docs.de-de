@@ -133,12 +133,12 @@ helpviewer_keywords:
 - CPane [MFC], m_bHandleMinSize
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
-ms.openlocfilehash: 1c485d1b6f2b0557243973774bf9dfb382c2595b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b660d181aada8abeb61b397fb30b097897e74f65
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550435"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326776"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -173,9 +173,9 @@ class CPane : public CBasePane
 |[CPane::CanBeTabbedDocument](#canbetabbeddocument)|Bestimmt, ob der Bereich in ein Dokument im Registerkartenformat konvertiert werden kann.|
 |[CPane::ConvertToTabbedDocument](#converttotabbeddocument)|Konvertiert einen andockbaren Bereich, ein Dokument im Registerkartenformat.|
 |[CPane::CopyState](#copystate)|Kopiert den Status eines Bereichs an. (Überschreibt [CBasePane::CopyState](../../mfc/reference/cbasepane-class.md#copystate).)|
-|[Cpane:: Create](#create)|Erstellt eine Steuerleiste und fügt es der `CPane` Objekt.|
-|[Cpane:: Createdefaultminiframe](#createdefaultminiframe)|Erstellt ein Minirahmenfenster für einen unverankerten Bereichs klicken.|
-|[Cpane:: CreateEx](#createex)|Erstellt eine Steuerleiste und fügt es der `CPane` Objekt.|
+|[CPane::Create](#create)|Erstellt eine Steuerleiste und fügt es der `CPane` Objekt.|
+|[CPane::CreateDefaultMiniframe](#createdefaultminiframe)|Erstellt ein Minirahmenfenster für einen unverankerten Bereichs klicken.|
+|[CPane::CreateEx](#createex)|Erstellt eine Steuerleiste und fügt es der `CPane` Objekt.|
 |`CPane::CreateObject`|Wird vom Framework verwendet, um eine dynamische Instanz dieses Klassentyps zu erstellen.|
 |[CPane::DockByMouse](#dockbymouse)|Dockt einen Bereich mit der Maus docking-Methode an.|
 |[CPane::DockPane](#dockpane)|Dockt das unverankerten Bereichs klicken auf einen Basis-Bereich an.|
@@ -208,12 +208,12 @@ class CPane : public CBasePane
 |[CPane::OnBeforeChangeParent](#onbeforechangeparent)|Vom Framework aufgerufen, wenn das übergeordnete Element des Bereichs geändert wird.|
 |[CPane::OnPressCloseButton](#onpressclosebutton)|Vom Framework aufgerufen, wenn der Benutzer die Schaltfläche "Schließen", auf die Beschriftung für den Bereich auswählt.|
 |`CPane::OnProcessDblClk`|Wird intern verwendet.|
-|[Cpane:: Onshowcontrolbarmenu](#onshowcontrolbarmenu)|Wird von Framework aufgerufen, kurz bevor ein spezielles Bereichsmenü angezeigt wird.|
-|[Cpane:: Onshowcontrolbarmenu](#onshowcontrolbarmenu)|Wird von Framework aufgerufen, kurz bevor ein spezielles Bereichsmenü angezeigt wird.|
+|[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|Wird von Framework aufgerufen, kurz bevor ein spezielles Bereichsmenü angezeigt wird.|
+|[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|Wird von Framework aufgerufen, kurz bevor ein spezielles Bereichsmenü angezeigt wird.|
 |`CPane::PrepareToDock`|Wird intern verwendet.|
-|[Cpane:: RecalcLayout](#recalclayout)|Berechnet die Layoutinformationen für den Bereich an. (Überschreibt [CBasePane::RecalcLayout](../../mfc/reference/cbasepane-class.md#recalclayout).)|
+|[CPane::RecalcLayout](#recalclayout)|Berechnet die Layoutinformationen für den Bereich an. (Überschreibt [CBasePane::RecalcLayout](../../mfc/reference/cbasepane-class.md#recalclayout).)|
 |[CPane::SaveState](#savestate)|Speichert den Zustand des Bereichs in der Registrierung. (Überschreibt [CBasePane::SaveState](../../mfc/reference/cbasepane-class.md#savestate).)|
-|[Cpane:: Setactiveingroup](#setactiveingroup)|Bitflags, die einen Bereich als aktiv.|
+|[CPane::SetActiveInGroup](#setactiveingroup)|Bitflags, die einen Bereich als aktiv.|
 |[CPane::SetBorders](#setborders)|Legt die rahmenwerte der Bereich fest.|
 |[CPane::SetClientHotSpot](#setclienthotspot)|Legt den Hotspot für den Bereich fest.|
 |[CPane::SetDockState](#setdockstate)|Stellt Statusinformationen für den Bereich andocken.|
@@ -240,7 +240,7 @@ class CPane : public CBasePane
 |name|Beschreibung|
 |----------|-----------------|
 |[CPane::m_bHandleMinSize](#m_bhandleminsize)|Ermöglicht die konsistente Behandlung von die minimale Größe für Bereiche.|
-|[Cpane:: M_recentdockinfo](#m_recentdockinfo)|Enthält die aktuellen Informationen zur andocken.|
+|[CPane::m_recentDockInfo](#m_recentdockinfo)|Enthält die aktuellen Informationen zur andocken.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -348,7 +348,7 @@ void CalcInsideRect(
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 [out] Enthält die Größe und den Offset des Clientbereichs des Bereichs.
 
 *bHorz*<br/>
@@ -481,13 +481,13 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parameter
 
-*"lpszclassname"*<br/>
+*lpszClassName*<br/>
 [in] Gibt den Namen der Windows-Klasse.
 
 *dwStyle*<br/>
 [in] Gibt an, der die Stilattribute für Fenster. Weitere Informationen finden Sie unter [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Gibt an, die ursprüngliche Größe und Position der der *pParentWnd* Fenster, in Clientkoordinaten.
 
 *pParentWnd*<br/>
@@ -556,13 +556,13 @@ virtual BOOL CreateEx(
 *dwStyleEx*<br/>
 [in] Gibt Attribute an erweiterten Stil. Weitere Informationen finden Sie unter [erweiterte Fensterstile](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).
 
-*"lpszclassname"*<br/>
+*lpszClassName*<br/>
 [in] Gibt den Namen der Windows-Klasse.
 
 *dwStyle*<br/>
 [in] Gibt die Stilattribute für die Fenster an. Weitere Informationen finden Sie unter [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Gibt an, die ursprüngliche Größe und Position der der *pParentWnd* Fenster, in Clientkoordinaten.
 
 *pParentWnd*<br/>
@@ -976,7 +976,7 @@ bool IsLeftOf(
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein `CRect` -Objekt, das für den Vergleich verwendet wird.
 
 *bWindowRect*<br/>
@@ -1299,7 +1299,7 @@ virtual BOOL OnShowControlBarMenu(CPoint point);
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Gibt den Speicherort im Menü.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1308,7 +1308,7 @@ True, wenn das Menü angezeigt werden kann. andernfalls "false".
 
 ### <a name="remarks"></a>Hinweise
 
-Das Menü enthält mehrere Elemente, die Sie im Bereich des Verhalten, nämlich angeben können: **Unverankert**, **Andocken**, **automatisch im Hintergrund**, und **ausblenden**. Sie können dieses Menü für alle Bereiche aktivieren, durch den Aufruf [CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
+Das Menü enthält mehrere Elemente, die Sie im Bereich des Verhalten, nämlich angeben können: **Unverankerte**, **Andocken**, **automatisch im Hintergrund**, und **ausblenden**. Sie können dieses Menü für alle Bereiche aktivieren, durch den Aufruf [CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
 
 ##  <a name="recalclayout"></a>  Cpane:: RecalcLayout
 
@@ -1494,7 +1494,7 @@ void SetVirtualRect(
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein `CRect` -Objekt, das gibt an, das virtuelle Rechteck festgelegt werden.
 
 *bMapToParent*<br/>

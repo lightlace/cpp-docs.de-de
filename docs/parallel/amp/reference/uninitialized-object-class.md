@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - uninitialized_object class
 ms.assetid: 6ae3c4e8-64a6-4511-a158-03be197b63af
-ms.openlocfilehash: 5dc03964e8ddef0cd1aab785316eabd98c39e59e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1c431364aee0f1d1e75059abdb023ae52cf92155
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544533"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279329"
 ---
 # <a name="uninitializedobject-class"></a>uninitialized_object-Klasse
 
@@ -61,7 +61,7 @@ unsupported_feature() throw();
 
 ### <a name="parameters"></a>Parameter
 
-*_Nachricht*<br/>
+*_Message*<br/>
 Eine Beschreibung des Fehlers.
 
 ### <a name="return-value"></a>Rückgabewert

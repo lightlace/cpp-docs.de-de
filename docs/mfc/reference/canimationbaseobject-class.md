@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CAnimationBaseObject [MFC], m_nObjectID
 - CAnimationBaseObject [MFC], m_pParentController
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
-ms.openlocfilehash: 6527abf5c91cf440bbbe76d0d5fe49ce2c5dbef7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18b2319ea3c51edf79b6a90095b8363db830d66c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430445"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258917"
 ---
 # <a name="canimationbaseobject-class"></a>CAnimationBaseObject-Klasse
 
@@ -74,7 +74,7 @@ class CAnimationBaseObject : public CObject;
 |Name|Beschreibung|
 |----------|-----------------|
 |[CAnimationBaseObject::CAnimationBaseObject](#canimationbaseobject)|Überladen. Erstellt eine Animationsobjekt.|
-|[CAnimationBaseObject:: ~ CAnimationBaseObject](#canimationbaseobject__~canimationbaseobject)|Der Destruktor. Wird aufgerufen, wenn ein Animationsobjekt zerstört wird.|
+|[CAnimationBaseObject::~CAnimationBaseObject](#canimationbaseobject__~canimationbaseobject)|Der Destruktor. Wird aufgerufen, wenn ein Animationsobjekt zerstört wird.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -85,21 +85,21 @@ class CAnimationBaseObject : public CObject;
 |[CAnimationBaseObject::ContainsVariable](#containsvariable)|Bestimmt, ob ein Animationsobjekt eine bestimmte Animationen-Variable enthält.|
 |[CAnimationBaseObject::CreateTransitions](#createtransitions)|Erstellt eine Animationsobjekt zugeordneten Übergänge.|
 |[CAnimationBaseObject::DetachFromController](#detachfromcontroller)|Trennt ein Animationsobjekt von übergeordneten Animationscontroller an.|
-|[CAnimationBaseObject](#enableintegervaluechangedevent)|Legt fest, um Ereignishandler ganzzahligen Wert geändert.|
+|[CAnimationBaseObject::EnableIntegerValueChangedEvent](#enableintegervaluechangedevent)|Legt fest, um Ereignishandler ganzzahligen Wert geändert.|
 |[CAnimationBaseObject::EnableValueChangedEvent](#enablevaluechangedevent)|Legt fest, um Ereignishandler Wert geändert.|
 |[CAnimationBaseObject::GetAutodestroyTransitions](#getautodestroytransitions)|Erfahren Sie, ob verwandter Übergang werden automatisch zerstört.|
 |[CAnimationBaseObject::GetGroupID](#getgroupid)|Gibt aktuelle Gruppen-ID.|
 |[CAnimationBaseObject::GetObjectID](#getobjectid)|Gibt aktuelle Objekt-ID zurück.|
 |[CAnimationBaseObject::GetUserData](#getuserdata)|Gibt benutzerdefinierte Daten zurück.|
 |[CAnimationBaseObject::SetAutodestroyTransitions](#setautodestroytransitions)|Legt ein Flag, der sortiert werden, um Übergänge automatisch zu zerstören.|
-|[CAnimationBaseObject:: SetID](#setid)|Legt neue IDs.|
+|[CAnimationBaseObject::SetID](#setid)|Legt neue IDs.|
 |[CAnimationBaseObject::SetUserData](#setuserdata)|Legt den benutzerdefinierten Daten.|
 
 ### <a name="protected-methods"></a>Geschützte Methoden
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CAnimationBaseObject:: GetAnimationVariableList](#getanimationvariablelist)|Werden Verweise auf enthaltene Animationsvariablen erfasst.|
+|[CAnimationBaseObject::GetAnimationVariableList](#getanimationvariablelist)|Werden Verweise auf enthaltene Animationsvariablen erfasst.|
 |[CAnimationBaseObject::SetParentAnimationObjects](#setparentanimationobjects)|Stellt die Beziehung zwischen Animationsvariablen, die innerhalb eines Animationsobjekts und ihrem Container her.|
 
 ### <a name="protected-data-members"></a>Geschützte Datenmember
@@ -269,7 +269,7 @@ virtual void EnableIntegerValueChangedEvent(
 *pController*<br/>
 Ein Zeiger auf einen übergeordneten Controller.
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 Gibt an, ob aktivieren oder Deaktivieren der ganzzahligen Wert ein Änderungsereignis.
 
 ### <a name="remarks"></a>Hinweise
@@ -291,7 +291,7 @@ virtual void EnableValueChangedEvent(
 *pController*<br/>
 Ein Zeiger auf einen übergeordneten Controller.
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 Gibt an, ob aktivieren oder Deaktivieren der ValueChanged-Ereignis.
 
 ### <a name="remarks"></a>Hinweise

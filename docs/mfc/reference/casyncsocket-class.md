@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: b138c4f84a10823d9c340218baefd530c016027a
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ef486e653eaf78914ea25663e0c1ab744ab30cd4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179031"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260009"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket-Klasse
 
@@ -108,7 +108,7 @@ class CAsyncSocket : public CObject
 |[CAsyncSocket::Attach](#attach)|Fügt ein Sockethandle für ein `CAsyncSocket` Objekt.|
 |[CAsyncSocket::Bind](#bind)|Ordnet eine lokale Adresse den Socket.|
 |[CAsyncSocket::Close](#close)|Schließt den Socket.|
-|[CAsyncSocket:: Connect](#connect)|Herstellen einer Verbindung mit einem Peer-Socket.|
+|[CAsyncSocket::Connect](#connect)|Herstellen einer Verbindung mit einem Peer-Socket.|
 |[CAsyncSocket::Create](#create)|Erstellt einen Socket.|
 |[CAsyncSocket::Detach](#detach)|Trennt ein Sockethandle von einem `CAsyncSocket` Objekt.|
 |[CAsyncSocket::FromHandle](#fromhandle)|Gibt einen Zeiger auf eine `CAsyncSocket` -Objekt, ein Socket-Handle.|
@@ -119,12 +119,12 @@ class CAsyncSocket : public CObject
 |[CAsyncSocket::GetSockNameEx](#getsocknameex)|Ruft ab, der lokale Name für einen Socket (Handles IPv6-Adressen).|
 |[CAsyncSocket::GetSockOpt](#getsockopt)|Ruft einen Socket-Option ab.|
 |[CAsyncSocket::IOCtl](#ioctl)|Steuert den Modus des Sockets.|
-|[CAsyncSocket:: Listen](#listen)|Stellt ein Socket zum Lauschen auf eingehende verbindungsanforderungen her.|
+|[CAsyncSocket::Listen](#listen)|Stellt ein Socket zum Lauschen auf eingehende verbindungsanforderungen her.|
 |[CAsyncSocket::Receive](#receive)|Empfängt Daten von den Socket.|
 |[CAsyncSocket::ReceiveFrom](#receivefrom)|Empfängt ein Datagramm und speichert die Quelladresse.|
 |[CAsyncSocket::ReceiveFromEx](#receivefromex)|Empfängt ein Datagramm und speichert die Quelladresse (Handles IPv6-Adressen).|
 |[CAsyncSocket::Send](#send)|Sendet Daten an einen verbundenen Socket.|
-|[Einsatz](#sendto)|Sendet Daten an ein bestimmtes Ziel.|
+|[CAsyncSocket::SendTo](#sendto)|Sendet Daten an ein bestimmtes Ziel.|
 |[CAsyncSocket::SendToEx](#sendtoex)|Sendet Daten an ein bestimmtes Ziel (Handles IPv6-Adressen).|
 |[CAsyncSocket::SetSockOpt](#setsockopt)|Eine Socketoption festgelegt.|
 |[CAsyncSocket::ShutDown](#shutdown)|Deaktiviert die `Send` und/oder `Receive` Ruft für den Socket.|
@@ -175,7 +175,7 @@ Weitere Informationen finden Sie unter [Windows Sockets: Verwenden der CAsyncSoc
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** Datei afxsock.h
+**Header:** afxsock.h
 
 ##  <a name="accept"></a>  CAsyncSocket::Accept
 
@@ -1755,11 +1755,11 @@ BOOL ShutDown(int nHow = sends);
 *nHow*<br/>
 Ein Flag, das beschreibt, welche Typen von Vorgängen wird nicht mehr zulässig, mit der folgenden Enumerationswerte:
 
-- **empfängt = 0**
+- **receives = 0**
 
-- **sendet = 1**
+- **sends = 1**
 
-- **sowohl = 2**
+- **both = 2**
 
 ### <a name="return-value"></a>Rückgabewert
 

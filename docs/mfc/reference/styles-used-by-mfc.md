@@ -196,12 +196,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: b47fa90fff6753b805d7fd0495050e45bc915d5d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: eb5123c347fdb847cade54f15764f175ee0ab799
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694776"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304898"
 ---
 # <a name="styles-used-by-mfc"></a>Von MFC verwendete Stile
 
@@ -360,11 +360,11 @@ Die folgenden meldungsfeldstile sind verfügbar.
 
 |Stil|Beschreibung|
 |-----------|-----------------|
-|MB_ABORTRETRYIGNORE|Das Meldungsfeld enthält drei Schaltflächen: Abbrechen, wiederholen, und ignorieren.|
+|MB_ABORTRETRYIGNORE|Das Meldungsfeld enthält drei Schaltflächen: Abbrechen, wiederholen und ignorieren.|
 |MB_OK|Das Meldungsfeld enthält ein Pushbutton: OK.|
-|MB_OKCANCEL|Das Meldungsfeld enthält zwei Pushbuttons: OK und Abbrechen.|
-|MB_RETRYCANCEL|Das Meldungsfeld enthält zwei Pushbuttons: Wiederholen und Abbrechen.|
-|MB_YESNO|Das Meldungsfeld enthält zwei Pushbuttons: Ja und Nein.|
+|MB_OKCANCEL|Das Meldungsfeld enthält zwei Schaltflächen: OK und Abbrechen.|
+|MB_RETRYCANCEL|Das Meldungsfeld enthält zwei Schaltflächen: Wiederholen und Abbrechen.|
+|MB_YESNO|Das Meldungsfeld enthält zwei Schaltflächen: Ja und Nein.|
 |MB_YESNOCANCEL|Das Meldungsfeld enthält drei Schaltflächen: Ja, Nein und Abbrechen.|
 
 ### <a name="message-box-modality"></a>MessageBox-Modalität

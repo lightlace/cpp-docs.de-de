@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL projects, COM+ 1.0 support
 ms.assetid: 51fb08ac-d632-4657-a4e0-d3f989f0b6f8
-ms.openlocfilehash: 4bc7683d6121dec748e30c1ea717042b9cf1ecbc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39a3597b8df833d89942e31b361f791b14ceb8c9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562460"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292601"
 ---
 # <a name="com-10-support-in-atl-projects"></a>COM+ 1.0-Unterstützung in ATL-Projekte
 
@@ -21,7 +21,7 @@ COM+ 1.0 wurde entwickelt, für die Entwicklung von verteilten Anwendungen mit K
 
 Bei Auswahl der **COM+ 1.0-Unterstützung** Kontrollkästchen, die der Assistent ändert das Buildskript im Linkschritt. Insbesondere die COM+ 1.0-Projekt enthält Links zu den folgenden Bibliotheken:
 
-- comsvcs.lib hinzu:
+- comsvcs.lib
 
 - Mtxguid.lib
 
@@ -32,4 +32,3 @@ Bei Auswahl der **COM+ 1.0-Unterstützung** , Sie können auch Kontrollkästchen
 [Grundlagen von ARL COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Programmieren mit ATL- und C-Laufzeitcode](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Standardmäßige ATL-Projektkonfigurationen](../../atl/reference/default-atl-project-configurations.md)
-

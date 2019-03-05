@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Hinzufügen von Menüband-Steuerelementen und Ereignishandlern'
+title: 'Vorgehensweise: Hinzufügen von Menübandsteuerelementen und Ereignishandlern'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - event handlers [MFC], adding
 - ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
-ms.openlocfilehash: 356358e5fd5ac4f3f7511f178ca304e9ab7eff86
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8a164101dc42241a2cc76c91a3baa66e02e4dc90
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518397"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291131"
 ---
-# <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Gewusst wie: Hinzufügen von Menüband-Steuerelementen und Ereignishandlern
+# <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Vorgehensweise: Hinzufügen von Menübandsteuerelementen und Ereignishandlern
 
 Menübandsteuerelemente sind Elemente, z. B. Schaltflächen und Kombinationsfelder, die Panels hinzugefügt. Bereiche werden Bereiche der menübandleiste, die eine Gruppe von verwandten Steuerelementen angezeigt werden.
 
@@ -42,4 +42,3 @@ In diesem Thema werden Sie der Menüband-Designer zu öffnen, eine Schaltfläche
 
 [RibbonGadgets-Beispiel: Gadgets Menübandanwendung](../visual-cpp-samples.md)<br/>
 [Menüband-Designer (MFC)](../mfc/ribbon-designer-mfc.md)
-

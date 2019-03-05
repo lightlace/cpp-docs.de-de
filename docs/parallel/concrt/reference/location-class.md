@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-ms.openlocfilehash: ffb469ec5f5542b5037d31bfdb5fd1eaab47ed38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e90dd3b23b33f6699f2df4ce0df9178f95816b8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596535"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273248"
 ---
 # <a name="location-class"></a>location-Klasse
 
@@ -40,7 +40,7 @@ class location;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[Aktuelle](#current)|Gibt eine `location` Objekt, das die spezifischste Stelle, die den aufrufende Thread ausgeführt wird, darstellt.|
+|[current](#current)|Gibt eine `location` Objekt, das die spezifischste Stelle, die den aufrufende Thread ausgeführt wird, darstellt.|
 |[from_numa_node](#from_numa_node)|Gibt eine `location` Objekt, das einen bestimmten NUMA-Knoten darstellt.|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
@@ -57,7 +57,7 @@ class location;
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** concrt.h hinzu
+**Header:** concrt.h
 
 **Namespace:** Parallelität
 
@@ -149,7 +149,7 @@ Operand `location`.
 
 **"true"** Wenn die zwei Orten unterschiedlich sind, **"false"** andernfalls.
 
-##  <a name="operator_eq"></a> Operator =
+##  <a name="operator_eq"></a> operator=
 
 Weist den Inhalt von einem anderen `location` -Objekts in dieses Objekt.
 

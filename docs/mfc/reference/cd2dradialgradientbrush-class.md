@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CD2DRadialGradientBrush [MFC], m_pRadialGradientBrush
 - CD2DRadialGradientBrush [MFC], m_RadialGradientBrushProperties
 ms.assetid: 6c76d84a-d831-4ee2-96f1-82c1f5b0d6a9
-ms.openlocfilehash: fbdc6e6b9e7ffff1f14da79ed207644b518910fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22029ebcf8cf519571e81e11c84de146c9d54b26
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564332"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277273"
 ---
 # <a name="cd2dradialgradientbrush-class"></a>CD2DRadialGradientBrush-Klasse
 
@@ -62,7 +62,7 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
 |Name|Beschreibung|
 |----------|-----------------|
 |[CD2DRadialGradientBrush::CD2DRadialGradientBrush](#cd2dradialgradientbrush)|Erstellt ein CD2DLinearGradientBrush-Objekt.|
-|[CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush](#_dtorcd2dradialgradientbrush)|Der Destruktor. Wird aufgerufen, wenn ein D2D-Pinsel mit strahlenförmigem Farbverlauf-Objekt zerstört wird.|
+|[CD2DRadialGradientBrush::~CD2DRadialGradientBrush](#_dtorcd2dradialgradientbrush)|Der Destruktor. Wird aufgerufen, wenn ein D2D-Pinsel mit strahlenförmigem Farbverlauf-Objekt zerstört wird.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -86,7 +86,7 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CD2DRadialGradientBrush::Operator ID2D1RadialGradientBrush *](#operator_id2d1radialgradientbrush_star)|Gibt die ID2D1RadialGradientBrush-Schnittstelle|
+|[CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush*](#operator_id2d1radialgradientbrush_star)|Gibt die ID2D1RadialGradientBrush-Schnittstelle|
 
 ### <a name="protected-data-members"></a>Geschützte Datenmember
 
@@ -309,7 +309,7 @@ void SetCenter(CD2DPointF point);
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Die Mitte des Farbverlaufs Ellipse im Koordinatenraum des Pinsels
 
 ##  <a name="setgradientoriginoffset"></a>  CD2DRadialGradientBrush::SetGradientOriginOffset

@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: ae3daff2582b9e58cc325304fac449423fb673a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 62d42995a3d1b4a61dbd3ff38c48d9b300177798
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621428"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259541"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl-Klasse
 
@@ -120,7 +120,7 @@ class CTabCtrl : public CWnd
 |[CTabCtrl::GetToolTips](#gettooltips)|Ruft das Handle des ein Registerkarten-Steuerelement zugeordneten QuickInfo-Steuerelements ab.|
 |[CTabCtrl::HighlightItem](#highlightitem)|Legt die Hervorhebung Zustand eines Registerkartenelements fest.|
 |[CTabCtrl::HitTest](#hittest)|Bestimmt, welche Registerkarte ggf. an einer angegebenen Bildschirmposition.|
-|[CTabCtrl:: InsertItem](#insertitem)|Fügt eine neue Registerkarte in einem Registersteuerelement an.|
+|[CTabCtrl::InsertItem](#insertitem)|Fügt eine neue Registerkarte in einem Registersteuerelement an.|
 |[CTabCtrl::RemoveImage](#removeimage)|Entfernt ein Bild aus einer Bildliste für ein Registerkarten-Steuerelement.|
 |[CTabCtrl::SetCurFocus](#setcurfocus)|Setzt den Fokus auf eine angegebene Registerkarte in einem Registersteuerelement an.|
 |[CTabCtrl::SetCurSel](#setcursel)|Wählt eine Registerkarte in einem Registersteuerelement an.|
@@ -193,7 +193,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Gibt das Registerkarten-Steuerelement-Stil. Wenden Sie eine beliebige Kombination von [Registerkarte Stile von Listensteuerelementen](/windows/desktop/Controls/tab-control-styles), die im Windows SDK beschrieben. Finden Sie unter **"Hinweise"** eine Liste der Window-Stile, die Sie auch auf das Steuerelement anwenden können.
 
-*Rect*<br/>
+*rect*<br/>
 Gibt an, Größe und Position des Steuerelements. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.
 
 *pParentWnd*<br/>
@@ -249,7 +249,7 @@ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erwei
 *dwStyle*<br/>
 Gibt das Registerkarten-Steuerelement-Stil. Wenden Sie eine beliebige Kombination von [Registerkarte Stile von Listensteuerelementen](/windows/desktop/Controls/tab-control-styles), die im Windows SDK beschrieben. Finden Sie unter **"Hinweise"** in [erstellen](#create) eine Liste der Window-Stile, die Sie auch auf das Steuerelement anwenden können.
 
-*Rect*<br/>
+*rect*<br/>
 Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -645,7 +645,7 @@ Zeiger auf eine [TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema) -
 *lpszItem*<br/>
 Die Adresse einer Null-terminierte Zeichenfolge mit dem Text der Registerkarte.
 
-*Nbild*<br/>
+*nImage*<br/>
 Der nullbasierte Index eines Bildes zum Einfügen von aus einer Bildliste.
 
 *nMask*<br/>
@@ -664,10 +664,10 @@ Gibt an, welche `TCITEM` Struktur Attribute festlegen. 0 (null) oder eine Kombin
 *lParam*<br/>
 Die Registerkarte zugeordnete anwendungsdefinierte Daten.
 
-*dwState-Datenmember*<br/>
+*dwState*<br/>
 Gibt Werte für das Element-Zustände. Weitere Informationen finden Sie unter [TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema) im Windows SDK.
 
-*den dwStateMask*<br/>
+*dwStateMask*<br/>
 Gibt an, welche Zustände festgelegt werden. Weitere Informationen finden Sie unter [TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema) im Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -688,7 +688,7 @@ void RemoveImage(int nImage);
 
 ### <a name="parameters"></a>Parameter
 
-*Nbild*<br/>
+*nImage*<br/>
 Nullbasierte Index des zu entfernenden Bildes.
 
 ### <a name="remarks"></a>Hinweise
@@ -855,7 +855,7 @@ Die nullbasierte Indexnummer des Elements, für die Zustandsinformationen festge
 *dwMask*<br/>
 Maske, die angeben, welche von der Zustand des Elements flags festgelegt werden. Eine Liste von Werten, finden Sie unter der Mask-Member der [TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema) Struktur, wie im Windows SDK beschrieben.
 
-*dwState-Datenmember*<br/>
+*dwState*<br/>
 Ein Verweis auf einen DWORD-Wert, der die Informationen zum Ansichtszustand enthält. Kann einer der folgenden Werte sein:
 
 |Wert|Beschreibung|
@@ -877,7 +877,7 @@ int SetMinTabWidth(int cx);
 
 ### <a name="parameters"></a>Parameter
 
-*CX*<br/>
+*cx*<br/>
 Minimale Breite für ein Registerkartenelement-Steuerelement festgelegt werden. Wenn dieser Parameter auf-1 festgelegt ist, wird das Steuerelement die Standardbreite für Registerkarte verwenden.
 
 ### <a name="return-value"></a>Rückgabewert

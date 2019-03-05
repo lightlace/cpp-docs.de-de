@@ -7,12 +7,12 @@ helpviewer_keywords:
 - derived classes [MFC], view classes
 - view classes [MFC], derived
 ms.assetid: dba42178-7459-4ccc-b025-f3d9b8a4b737
-ms.openlocfilehash: 9972586bd0cc4059e81d81be954a8cf0cada1f0d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61b38f6147a8bde4f6eb42cd144f9f64dac8dbd8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594496"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269291"
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>In MFC verfügbare abgeleitete Ansichtsklassen
 
@@ -38,9 +38,8 @@ Die folgende Tabelle zeigt die MFC Klassen und deren Beziehungen untereinander. 
 > [!NOTE]
 >  Ab MFC 4.0 `CEditView` ergibt sich aus `CCtrlView`.
 
-Um diese Klassen in Ihrer Anwendung verwenden zu können, werden leiten Sie der Anwendung Klassen von ihnen ab. Weitere Informationen finden Sie unter [Bildlauf und Skalierung von Ansichten](../mfc/scrolling-and-scaling-views.md). Weitere Informationen zu den Datenbankklassen, finden Sie unter [Overview: Programmieren von Datenbank](../data/data-access-programming-mfc-atl.md).
+Um diese Klassen in Ihrer Anwendung verwenden zu können, werden leiten Sie der Anwendung Klassen von ihnen ab. Weitere Informationen finden Sie unter [Bildlauf und Skalierung von Ansichten](../mfc/scrolling-and-scaling-views.md). Weitere Informationen zu den Datenbankklassen, finden Sie unter [Übersicht: Datenbank-Programmierung](../data/data-access-programming-mfc-atl.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 [Verwenden von Ansichten](../mfc/using-views.md)
-

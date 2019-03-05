@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ATL, dual interfaces
 - dual interfaces, about dual interfaces
 ms.assetid: 5a390e89-d2c4-41f0-8538-cab2c5e5d4c8
-ms.openlocfilehash: ebf0da8b86463d2d56d071d1f5d91a170ca743e5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: efa523099aaca77fba06efdaeabd1c7562a372a5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533509"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263467"
 ---
 # <a name="dual-interfaces-and-atl"></a>Duale Schnittstellen und ATL
 
@@ -39,4 +39,3 @@ Enthält Links zu konzeptionellen Themen über die Programmierung mit der Active
 ## <a name="see-also"></a>Siehe auch
 
 [Konzepte](../atl/active-template-library-atl-concepts.md)
-

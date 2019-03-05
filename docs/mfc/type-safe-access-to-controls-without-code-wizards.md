@@ -5,12 +5,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], accessing controls
 - dialog box controls [MFC], accessing
 ms.assetid: 325b4927-d49b-42b4-8e0b-fc84f31fb059
-ms.openlocfilehash: 2b337aa28d5fdf061d1db4b5cf66303688ef5bf3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b4b604bf42a327edf3ac7a83dcfc42a5e0d8c54
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501711"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261114"
 ---
 # <a name="type-safe-access-to-controls-without-code-wizards"></a>Typsicherer Zugriff auf Steuerelemente ohne Code-Assistenten
 
@@ -26,4 +26,3 @@ Sie können diese Member-Funktion klicken Sie dann auf das Steuerelement in eine
 
 [Typsicherer Zugriff auf die Steuerelemente in einem Dialogfeld](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)<br/>
 [Typsicherer Zugriff auf Steuerelemente mit Code-Assistenten](../mfc/type-safe-access-to-controls-with-code-wizards.md)
-

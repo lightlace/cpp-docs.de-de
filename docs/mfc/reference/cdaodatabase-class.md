@@ -58,12 +58,12 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-ms.openlocfilehash: 6bdabafc905b1ae5d6ed9a1fcd83ab1982871c3b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1e9db1ddebe05d42cbb8c4ba242938d6d86cc81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439278"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272897"
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase-Klasse
 
@@ -587,9 +587,9 @@ Optionen, die angeben, welche Informationen das Recordset abrufen. Die verfügba
 
 - AFX_DAO_PRIMARY_INFO (Standard)-Namen, Typ
 
-- Primäre AFX_DAO_SECONDARY_INFO Informationen plus: Erstellungsdatum, Datum der letzten Aktualisierung, gibt Datensätze zurück, aktualisierbar
+- Primäre AFX_DAO_SECONDARY_INFO Informationen plus: Erstellungsdatum, Datum der letzten Aktualisierung Gibt Datensätze zurück, aktualisierbar
 
-- AFX_DAO_ALL_INFO primären und sekundären Informationen plus: SQL, Connect, Timeoutfehlers warten soll.
+- AFX_DAO_ALL_INFO primären und sekundären Informationen plus: SQL, eine Verbindung herstellen, Timeoutfehlers warten soll
 
 *Wert*<br/>
 Eine Zeichenfolge, die mit dem Namen einer Abfrage, die in der Datenbank, für die Suche nach dem Namen definiert.
@@ -744,9 +744,9 @@ Optionen, die angeben, welche Informationen in der Tabelle abgerufen. Die verfü
 
 - AFX_DAO_PRIMARY_INFO (Standard) ein, die aktualisiert werden kann, Attribute
 
-- Primäre AFX_DAO_SECONDARY_INFO Informationen plus: Erstellungsdatum, letzte Aktualisierung, Name der Quelltabelle, verbinden
+- Primäre AFX_DAO_SECONDARY_INFO Informationen plus: Erstellungsdatum, Datum zuletzt aktualisiert: Name der Quelltabelle, eine Verbindung herstellen
 
-- AFX_DAO_ALL_INFO primären und sekundären Informationen plus: Anzahl der Datensätze Validierungsregel Validierung von Text,
+- AFX_DAO_ALL_INFO primären und sekundären Informationen plus: Anzahl der Überprüfung in der Regel Validierung von Text, Datensätze
 
 *Wert*<br/>
 Der Name des Objekts Tabledef, für die Suche anhand des Namens.

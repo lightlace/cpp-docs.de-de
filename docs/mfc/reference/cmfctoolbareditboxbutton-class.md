@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CMFCToolBarEditBoxButton [MFC], SetContextMenuID
 - CMFCToolBarEditBoxButton [MFC], SetFlatMode
 ms.assetid: b21d9b67-6bf7-4ca9-bd62-b237756e0ab3
-ms.openlocfilehash: bf71bb508bf0327a7fdf34b128bdb825323cd3a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac07ff4e6bf97518e2c659a9d6df9bd721b6b806
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525718"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291612"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton-Klasse
 
@@ -127,7 +127,7 @@ Um eine Bearbeiten-Box-Schaltfläche einer Symbolleiste hinzuzufügen, gehen Sie
 
 3. Ersetzen Sie in der Message-Handler, die die AFX_WM_RESETTOOLBAR-Nachricht verarbeitet, die Schaltfläche "dummy" mit der neuen kombinationsfeldschaltfläche mit [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).
 
-Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf Symbolleisten](../../mfc/walkthrough-putting-controls-on-toolbars.md).
+Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf der Symbolleiste](../../mfc/walkthrough-putting-controls-on-toolbars.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -229,7 +229,7 @@ virtual CEdit* CreateEdit(
 *pWndParent*<br/>
 [in] Gibt das übergeordnete Fenster des Edit-Steuerelements an. Es darf nicht NULL sein.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Gibt an, des Steuerelements zum Bearbeiten der Größe und Position.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -463,7 +463,7 @@ virtual BOOL OnClick(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Nicht verwendet.
 
 *bDelay*<br/>
@@ -692,5 +692,4 @@ Diese Methode legt [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbar
 [CMFCToolBarButton-Klasse](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [CEdit-Klasse](../../mfc/reference/cedit-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[Exemplarische Vorgehensweise: Steuerelemente in eine Symbolleiste einfügen](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf der Symbolleiste](../../mfc/walkthrough-putting-controls-on-toolbars.md)

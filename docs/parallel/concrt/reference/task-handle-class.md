@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-ms.openlocfilehash: 060be8614fc3a0a93d446c747b65de82b863ab3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 4193c2d1e08c1b5a43dc728edd24efd19be87268
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518878"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298086"
 ---
 # <a name="taskhandle-class"></a>task_handle-Klasse
 
@@ -68,7 +68,7 @@ Die Common Language Runtime erstellt eine Kopie der Arbeitsfunktion, die Sie zum
 
 **Namespace:** Parallelität
 
-##  <a name="task_handle__operator_call"></a> Operator()
+##  <a name="task_handle__operator_call"></a> operator()
 
 Der Funktionsaufrufoperator, den von der Laufzeit aufgerufen, um die Arbeit des Aufgabenhandles auszuführen.
 
@@ -93,7 +93,7 @@ Die Funktion, die aufgerufen werden, um die Arbeit, dargestellt durch Ausführen
 
 Die Laufzeit erstellt eine Kopie der Arbeitsfunktion, die Sie an den Konstruktor übergeben. Aus diesem Grund Objekt von Zustandsänderungen, die in einer Funktion auftreten, dass Sie zum Übergeben einer `task_handle` Objekt wird nicht angezeigt, in der Kopie des Funktionsobjekts.
 
-##  <a name="dtor"></a> ~ Task_handle
+##  <a name="dtor"></a> ~task_handle
 
 Zerstört das `task_handle`-Objekt.
 
@@ -104,5 +104,5 @@ Zerstört das `task_handle`-Objekt.
 ## <a name="see-also"></a>Siehe auch
 
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
-[Task_group-Klasse](task-group-class.md)<br/>
+[task_group-Klasse](task-group-class.md)<br/>
 [structured_task_group-Klasse](structured-task-group-class.md)

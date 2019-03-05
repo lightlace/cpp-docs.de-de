@@ -12,12 +12,12 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-ms.openlocfilehash: 95606818cf5673ef5d4a70361a8e79a9ed28d11b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d83ba601766f4b6fb84576571239a250169abb1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506079"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278703"
 ---
 # <a name="containers-advanced-features"></a>Container: Erweiterte Funktionen
 
@@ -75,4 +75,3 @@ Das MFC-OLE-Beispiel [OCLIENT](../visual-cpp-samples.md) diese Funktion implemen
 
 [Container](../mfc/containers.md)<br/>
 [Server](../mfc/servers.md)
-

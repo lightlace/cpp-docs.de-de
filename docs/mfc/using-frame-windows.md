@@ -6,12 +6,12 @@ helpviewer_keywords:
 - frame windows [MFC], using
 - MFC, frame windows
 ms.assetid: 4d773238-11f6-4ccf-8114-57310c5aaa2d
-ms.openlocfilehash: 1ce23633310482c52f60a591452e3d20ac10c706
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba304bce5bd0d91f4db8372b087c42c98b9c103d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676381"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259658"
 ---
 # <a name="using-frame-windows"></a>Verwenden von Rahmenfenstern
 
@@ -44,4 +44,3 @@ MFC-Framework erstellt den Dokument-Frame-Fensters, und ihre Ansichten und die D
 ## <a name="see-also"></a>Siehe auch
 
 [Rahmenfenster](../mfc/frame-windows.md)
-

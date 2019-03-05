@@ -5,12 +5,12 @@ helpviewer_keywords:
 - connection points [C++], adding to ATL objects
 - Implement Connection Point ATL wizard
 ms.assetid: 843531be-4a36-4db0-9d54-e029b1a72a8b
-ms.openlocfilehash: bf3819f96821b8794b6bd120d63798b902eb2b9e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39943c1bb071efba4fc3f2b42b227a4516e3856c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473800"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299914"
 ---
 # <a name="adding-connection-points-to-an-object"></a>Hinzufügen von Verbindungspunkten zu einem Objekt
 
@@ -63,4 +63,3 @@ In beiden Fällen verwendet der Assistent zum Implementieren von Verbindungspunk
 ## <a name="see-also"></a>Siehe auch
 
 [Verbindungspunkt](../atl/atl-connection-points.md)
-

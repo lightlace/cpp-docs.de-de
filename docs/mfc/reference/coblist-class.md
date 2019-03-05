@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 80699c93-33d8-4f8b-b8cf-7b58aeab64ca
-ms.openlocfilehash: 66cc4d28e20ced498e4a434efbe41c3f5db59370
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2fc3a3643c675394de555f1411030e278bcee775
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605204"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293731"
 ---
 # <a name="coblist-class"></a>CObList-Klasse
 
@@ -157,8 +157,8 @@ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `COb
 
 |Klasse|Memberfunktion|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION AddHead ("void"** <strong>\*</strong> `newElement` **);**<br /><br /> **"void" AddHead (CPtrList** <strong>\*</strong> `pNewList` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION AddHead (const CString &** `newElement` **);**<br /><br /> **POSITION AddHead (LPCTSTR** `newElement` **);**<br /><br /> **"void" AddHead (CStringList** <strong>\*</strong> `pNewList` **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION AddHead( void** <strong>\*</strong> `newElement` **);**<br /><br /> **void AddHead( CPtrList** <strong>\*</strong> `pNewList` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION AddHead(const CString&** `newElement` **);**<br /><br /> **POSITION AddHead(LPCTSTR** `newElement` **);**<br /><br /> **void AddHead(CStringList** <strong>\*</strong> `pNewList` **);**|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -207,8 +207,8 @@ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `COb
 
 |Klasse|Memberfunktion|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION AddTail ("void"** <strong>\*</strong> `newElement` **);**<br /><br /> **"void" AddTail (CPtrList** <strong>\*</strong> `pNewList` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION AddTail (const CString &** `newElement` **);**<br /><br /> **POSITION AddTail (LPCTSTR** `newElement` **);**<br /><br /> **"void" AddTail (CStringList** <strong>\*</strong> `pNewList` **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION AddTail( void** <strong>\*</strong> `newElement` **);**<br /><br /> **void AddTail( CPtrList** <strong>\*</strong> `pNewList` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION AddTail( const CString&** `newElement` **);**<br /><br /> **POSITION AddTail( LPCTSTR** `newElement` **);**<br /><br /> **void AddTail( CStringList** <strong>\*</strong> `pNewList` **);**|
 
 ### <a name="example"></a>Beispiel
 
@@ -245,8 +245,8 @@ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `COb
 
 |Klasse|Memberfunktion|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**CPtrList (INT_PTR** `nBlockSize` **= 10);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**CStringList (INT_PTR** `nBlockSize` **= 10);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**CPtrList( INT_PTR** `nBlockSize` **= 10 );**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**CStringList( INT_PTR** `nBlockSize` **= 10 );**|
 
 ### <a name="example"></a>Beispiel
 
@@ -270,7 +270,7 @@ POSITION Find(
 
 ### <a name="parameters"></a>Parameter
 
-*Suchwert*<br/>
+*searchValue*<br/>
 Der Objektzeiger in der Liste gefunden werden.
 
 *startAfter*<br/>
@@ -322,8 +322,8 @@ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `COb
 
 |Klasse|Memberfunktion|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION FindIndex (INT_PTR** `nIndex` **) const;**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION FindIndex (INT_PTR** `nIndex` **) const;**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION FindIndex( INT_PTR** `nIndex` **) const;**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION FindIndex( INT_PTR** `nIndex` **) const;**|
 
 ### <a name="example"></a>Beispiel
 
@@ -342,7 +342,7 @@ const CObject*& GetAt(POSITION position) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Position*<br/>
+*position*<br/>
 Eine Positionswert, der von einem vorherigen zurückgegebene `GetHeadPosition` oder `Find` Aufruf der Memberfunktion.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -359,8 +359,8 @@ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `COb
 
 |Klasse|Memberfunktion|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const Void\*& GetAt (POSITION** *Position* **) const;**<br /><br /> **"void"\*& GetAt (POSITION** *Position* **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & GetAt (POSITION** *Position* **) const;**<br /><br /> **CString & GetAt (POSITION** *Position* **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetAt( POSITION** *position* **) const;**<br /><br /> **void\*& GetAt( POSITION** *position* **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & GetAt (POSITION** *Position* **) const;**<br /><br /> **CString& GetAt( POSITION** *position* **);**|
 
 ### <a name="example"></a>Beispiel
 
@@ -414,8 +414,8 @@ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `COb
 
 |Klasse|Memberfunktion|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const Void\*& GetHead () const; "void"\*& GetHead ();**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & GetHead () const; ("CString & GetHead);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetHead( ) const; void\*& GetHead( );**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString& GetHead( ) const; CString& GetHead( );**|
 
 ### <a name="example"></a>Beispiel
 
@@ -441,8 +441,8 @@ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `COb
 
 |Klasse|Memberfunktion|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Positionieren Sie GetHeadPosition (const);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**Positionieren Sie GetHeadPosition (const);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION GetHeadPosition( ) const;**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION GetHeadPosition( ) const;**|
 
 ### <a name="example"></a>Beispiel
 
@@ -461,7 +461,7 @@ const CObject* GetNext(POSITION& rPosition) const;
 
 ### <a name="parameters"></a>Parameter
 
-*rposition zurück*<br/>
+*rPosition*<br/>
 Ein Verweis auf eine Positionswert, der von einem vorherigen zurückgegebene `GetNext`, `GetHeadPosition`, oder anderer Aufruf der Memberfunktion.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -512,7 +512,7 @@ const CObject* GetPrev(POSITION& rPosition) const;
 
 ### <a name="parameters"></a>Parameter
 
-*rposition zurück*<br/>
+*rPosition*<br/>
 Ein Verweis auf eine Positionswert, der von einem vorherigen zurückgegebene `GetPrev` oder anderen Aufruf der Memberfunktion.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -600,8 +600,8 @@ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `COb
 
 |Klasse|Memberfunktion|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const Void\*& GetTail () const; "void"\*& GetTail ();**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & GetTail () const; ("CString & GetTail);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetTail( ) const; void\*& GetTail( );**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString& GetTail( ) const; CString& GetTail( );**|
 
 ### <a name="example"></a>Beispiel
 
@@ -625,8 +625,8 @@ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `COb
 
 |Klasse|Memberfunktion|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Positionieren Sie GetTailPosition (const);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**Positionieren Sie GetTailPosition (const);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION GetTailPosition( ) const;**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION GetTailPosition( ) const;**|
 
 ### <a name="example"></a>Beispiel
 
@@ -646,7 +646,7 @@ POSITION InsertAfter(
 
 ### <a name="parameters"></a>Parameter
 
-*Position*<br/>
+*position*<br/>
 Eine Positionswert, der von einem vorherigen zurückgegebene `GetNext`, `GetPrev`, oder `Find` Aufruf der Memberfunktion.
 
 *newElement*<br/>
@@ -656,8 +656,8 @@ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `COb
 
 |Klasse|Memberfunktion|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION InsertAfter (POSITION** *Position* **, "void"** <strong>\*</strong> `newElement` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION InsertAfter (POSITION** *Position* **, const CString &** `newElement` **);**<br /><br /> **POSITION InsertAfter (POSITION** *Position* **, LPCTSTR** `newElement` **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION InsertAfter( POSITION** *position* **, void** <strong>\*</strong> `newElement` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION InsertAfter( POSITION** *position* **, const CString&** `newElement` **);**<br /><br /> **POSITION InsertAfter( POSITION** *position* **, LPCTSTR** `newElement` **);**|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -690,7 +690,7 @@ POSITION InsertBefore(
 
 ### <a name="parameters"></a>Parameter
 
-*Position*<br/>
+*position*<br/>
 Eine Positionswert, der von einem vorherigen zurückgegebene `GetNext`, `GetPrev`, oder `Find` Aufruf der Memberfunktion.
 
 *newElement*<br/>
@@ -704,8 +704,8 @@ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `COb
 
 |Klasse|Memberfunktion|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION InsertBefore (POSITION** *Position* **, "void"** <strong>\*</strong> `newElement` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION InsertBefore (POSITION** *Position* **, const CString &** `newElement` **);**<br /><br /> **POSITION InsertBefore (POSITION** *Position* **, LPCTSTR** `newElement` **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION InsertBefore( POSITION** *position* **, void** <strong>\*</strong> `newElement` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION InsertBefore( POSITION** *position* **, const CString&** `newElement` **);**<br /><br /> **POSITION InsertBefore( POSITION** *position* **, LPCTSTR** `newElement` **);**|
 
 ### <a name="example"></a>Beispiel
 
@@ -782,7 +782,7 @@ void RemoveAt(POSITION position);
 
 ### <a name="parameters"></a>Parameter
 
-*Position*<br/>
+*position*<br/>
 Die Position des Elements, das aus der Liste entfernt werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -795,8 +795,8 @@ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `COb
 
 |Klasse|Memberfunktion|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**"void" RemoveAt (POSITION** *Position* **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**"void" RemoveAt (POSITION** *Position* **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void RemoveAt( POSITION** *position* **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**void RemoveAt( POSITION** *position* **);**|
 
 ### <a name="example"></a>Beispiel
 
@@ -834,8 +834,8 @@ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `COb
 
 |Klasse|Memberfunktion|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**"void"\* RemoveHead ();**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**CString-RemoveHead ();**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* RemoveHead( );**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**CString RemoveHead( );**|
 
 ### <a name="example"></a>Beispiel
 
@@ -863,8 +863,8 @@ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `COb
 
 |Klasse|Memberfunktion|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**"void"\* RemoveTail ();**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**CString-RemoveTail ();**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* RemoveTail( );**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**CString RemoveTail( );**|
 
 ### <a name="example"></a>Beispiel
 
@@ -884,7 +884,7 @@ void SetAt(
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Die POSITION des Elements festgelegt werden.
 
 *newElement*<br/>
@@ -900,8 +900,8 @@ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `COb
 
 |Klasse|Memberfunktion|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**"void" "SetAt" (POSITION** `pos` **, const CString &** `newElement` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**"void" "SetAt" (POSITION** `pos` **, LPCTSTR** `newElement` **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void SetAt( POSITION** `pos` **, const CString&** `newElement` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**void SetAt( POSITION** `pos` **, LPCTSTR** `newElement` **);**|
 
 ### <a name="example"></a>Beispiel
 
