@@ -7,12 +7,12 @@ helpviewer_keywords:
 - overriding, Overridables comment in MFC source files
 - comments, MFC
 ms.assetid: 8968dea5-0d94-451f-bcb2-991580e65ba2
-ms.openlocfilehash: 9efba74676ba118659601522fc915bf25f607116
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90d6a585f62de589299147edce87332d96c6dbb8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554159"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282044"
 ---
 # <a name="-overridables-comment"></a>// Overridables-Kommentar
 
@@ -37,4 +37,3 @@ In einigen Klassen, Sie sehen möglicherweise auch den Kommentar `// Advanced Ov
 [/ Constructors-Kommentar](../mfc/decrement-constructors-comment.md)<br/>
 [Attributekommentar](../mfc/decrement-attributes-comment.md)<br/>
 [Vorgänge-Kommentar](../mfc/decrement-operations-comment.md)
-

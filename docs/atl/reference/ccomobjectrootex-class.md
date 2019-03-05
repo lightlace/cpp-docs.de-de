@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-ms.openlocfilehash: 63547405791f7f0391138dd2d23020c62c8a4a28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06a0c0e4b650945e10015c3220b926399ec9c6fd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655805"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280640"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx-Klasse
 
@@ -52,8 +52,8 @@ Die Klasse, deren Methoden implementieren Sie das gewünschte Threadingmodell. S
 |[CComObjectRootEx](#ccomobjectrootex)|Konstruktor.|
 |[InternalAddRef](#internaladdref)|Inkrementiert den Verweiszähler für einen zusammengesetzten Objekt.|
 |[InternalRelease](#internalrelease)|Dekrementiert den Verweiszähler für einen zusammengesetzten Objekt.|
-|[Sperre](#lock)|Wenn das Threadmodell Multithreadanwendung ist, ruft den Besitz von einem kritischen Abschnittsobjekt ab.|
-|[Entsperren](#unlock)|Wenn das Threadmodell Multithreadanwendung ist, gibt den Besitz der ein kritisches Abschnittsobjekt.|
+|[Lock](#lock)|Wenn das Threadmodell Multithreadanwendung ist, ruft den Besitz von einem kritischen Abschnittsobjekt ab.|
+|[Unlock](#unlock)|Wenn das Threadmodell Multithreadanwendung ist, gibt den Besitz der ein kritisches Abschnittsobjekt.|
 
 ### <a name="ccomobjectrootbase-methods"></a>CComObjectRootBase-Methoden
 
@@ -201,7 +201,7 @@ static HRESULT InternalQueryInterface(
 *pEntries*<br/>
 [in] Ein Zeiger auf die `_ATL_INTMAP_ENTRY` -Struktur, die eine Übersicht über die verfügbaren Schnittstellen zugreift.
 
-*IID*<br/>
+*iid*<br/>
 [in] Die GUID der Schnittstelle angefordert wird.
 
 *ppvObject*<br/>
@@ -333,7 +333,7 @@ HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parameter
 
-*IID*<br/>
+*iid*<br/>
 [in] Die GUID der Schnittstelle angefordert wird.
 
 *ppvObject*<br/>

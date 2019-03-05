@@ -2,12 +2,12 @@
 title: Grafiken (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: fcc1f11ff716654aadef91d86137b97e93b0a80f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a40575d84c9a0efedcb3c7c9717fc310870b530
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570314"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260880"
 ---
 # <a name="graphics-c-amp"></a>Grafiken (C++ AMP)
 
@@ -57,7 +57,7 @@ Der Vorgang wird für jede Komponente einzeln zwischen der jeweiligen Komponente
 
 ### <a name="swizzling-expressions"></a>Swizzeln von Ausdrücken
 
-Die Kurzvektorbibliothek unterstützt das Zugriffsmethodenkonstrukt `vector_type.identifier`, um auf die Komponenten eines Kurzvektors zuzugreifen. Die `identifier`, dies wird auch bezeichnet als eine *swizzelnder Ausdruck*, gibt die Komponenten des Vektors. Der Ausdruck kann ein l-Wert oder ein r-Wert sein. Einzelne Zeichen des Bezeichners möglicherweise: X, y, Z und w; oder "R", "g", "b", und ein. "X" und "R" bedeutet, dass die nullte Komponente, "y" und "g" die erste Komponente, und So weiter. (Beachten Sie, dass "x" und "r" nicht im gleichen Bezeichner verwendet werden dürfen.) Daher geben "rgba" und "xyzw" dasselbe Ergebnis zurück. Zugriffsmethoden mit einzelnen Komponenten wie „x“ und „y“ sind Skalarwerttypen. Accessoren mit mehreren Komponenten sind Kurzvektortypen. Wenn Sie z. B. einen Vektor `int_4` mit dem Namen `fourInts` und den Werten 2, 4, 6 und 8 erstellen, dann gibt `fourInts.y` die ganze Zahl 4 wieder, und `fourInts.rg` gibt ein `int_2`-Objekt zurück, das die Werte 2 und 4 hat.
+Die Kurzvektorbibliothek unterstützt das Accessorkonstrukt `vector_type.identifier`, um auf die Komponenten eines Kurzvektors zuzugreifen. Die `identifier`, dies wird auch bezeichnet als eine *swizzelnder Ausdruck*, gibt die Komponenten des Vektors. Der Ausdruck kann ein l-Wert oder ein r-Wert sein. Einzelne Zeichen des Bezeichners möglicherweise: X, y, Z und w; oder "R", "g", "b", und ein. "X" und "R" bedeutet, dass die nullte Komponente, "y" und "g" die erste Komponente, und So weiter. (Beachten Sie, dass "x" und "r" nicht im gleichen Bezeichner verwendet werden dürfen.) Daher geben "rgba" und "xyzw" dasselbe Ergebnis zurück. Accessoren mit einzelnen Komponenten wie "x" und "y" sind Skalarwerttypen. Zugriffsmethoden mit mehreren Komponenten sind Kurzvektortypen. Wenn Sie z. B. einen Vektor `int_4` mit dem Namen `fourInts` und den Werten 2, 4, 6 und 8 erstellen, dann gibt `fourInts.y` die ganze Zahl 4 wieder, und `fourInts.rg` gibt ein `int_2`-Objekt zurück, das die Werte 2 und 4 hat.
 
 ## <a name="texture-classes"></a>Texturklassen
 
@@ -277,7 +277,7 @@ Texturansichten sind analog zu arrayansichten, aber nicht bieten der automatisch
 
 Für Visual Studio 2013, führt das C++ AMP bessere Unterstützung für hardwaretexturfunktionen wie Sampling und MipMaps bereit, die von nicht unterstützt werden kann die [Writeonly_texture_view-Klasse](../../parallel/amp/reference/writeonly-texture-view-class.md). Die neu eingeführte `texture_view`-Klasse unterstützt eine Obermenge der Funktionen in `writeonly_texture_view`; daher ist `writeonly_texture_view` veraltet.
 
-Es empfiehlt sich, dass Sie – zumindest für einen Code – `texture_view` für den Zugriff auf Funktionen zu verwenden, die zuvor von `writeonly_texture_view` bereitgestellt wurde. Vergleichen Sie die folgenden beiden Codebeispiele, in denen ein Texturobjekt geschrieben wird, das über zwei Komponenten (int_2) verfügt. Beachten Sie in beiden Fällen, dass die Ansicht, `wo_tv4`, durch den Wert im Lambda-Ausdruck erfasst werden muss. Es folgt ein Beispiel, in dem die neue Klasse `texture_view` verwendet wird:
+Es empfiehlt sich, dass Sie – zumindest für einen Code – `texture_view` für den Zugriff auf Funktionen zu verwenden, die zuvor von `writeonly_texture_view` bereitgestellt wurde. Vergleichen Sie die folgenden beiden Codebeispiele, in denen ein Texturobjekt geschrieben wird, das über zwei Komponenten (int_2) verfügt. Beachten Sie in beiden Fällen, dass die Ansicht, `wo_tv4`, durch den Wert im Lambdaausdruck erfasst werden muss. Es folgt ein Beispiel, in dem die neue Klasse `texture_view` verwendet wird:
 
 ```cpp
 void write2ComponentTexture() {
@@ -342,10 +342,10 @@ Beachten Sie, wie eine Texturansicht mit nicht konstantem Elementtyp und einer K
 
 Der Elementtyp `texture_view` (seine Konstanz sowie die Anzahl der Komponenten) spielt ebenfalls eine Rolle bei der Frage, ob die Ansicht Textursampling unterstützt und wie auf Mipmapebenen zugegriffen werden kann:
 
-|Typ|Komponenten|Lesen|Write|Sampling|Mipmapzugriff|
+|Typ|Komponenten|Thema|Write|Sampling|Mipmapzugriff|
 |----------|----------------|----------|-----------|--------------|-------------------|
 |Texture_view\<const T, N >|1, 2, 4|Ja|Nein (1)|Ja|Ja, kann indexiert werden. Bereich wird bei der Instanziierung bestimmt.|
-|Texture_view\<T, N >|1<br /><br /> 2, 4|Ja<br /><br /> Nein (2)|Ja<br /><br /> Ja|Nein (1)<br /><br /> Nein (1)|Ja, eine Ebene. Ebene wird bei der Instanziierung bestimmt.<br /><br /> Ja, eine Ebene. Ebene wird bei der Instanziierung bestimmt.|
+|Texture_view\<T, N>|1<br /><br /> 2, 4|Ja<br /><br /> Nein (2)|Ja<br /><br /> Ja|Nein (1)<br /><br /> Nein (1)|Ja, eine Ebene. Ebene wird bei der Instanziierung bestimmt.<br /><br /> Ja, eine Ebene. Ebene wird bei der Instanziierung bestimmt.|
 
 In dieser Tabelle sehen Sie, dass schreibgeschützte Texturansichten die neuen Funktionen vollständig unterstützen, aber nicht in die Ansicht schreiben können. Beschreibbare Texturansichten sind insofern beschränkt, als dass sie auf eine Mipmapebene nur zugreifen können. Texturansichten mit Lese-/Schreibzugriff sind sogar spezialisierter als die beschreibbaren Ansichten, da für sie zusätzlich die Anforderung gilt, dass der Elementtyp der Texturansicht nur über eine Komponente verfügt. Beachten Sie, dass das Sampling nicht in beschreibbaren Texturansichten unterstützt wird, da es sich um einen auf das Lesen ausgerichteten Vorgang handelt.
 

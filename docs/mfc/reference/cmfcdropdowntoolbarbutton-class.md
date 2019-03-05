@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMFCDropDownToolbarButton [MFC], SetDefaultCommand
 - CMFCDropDownToolbarButton [MFC], m_uiShowBarDelay
 ms.assetid: bc9d69e6-bd3e-4c15-9368-e80a504a0ba7
-ms.openlocfilehash: 3544bbd65b5e0c754552f93b45263f768b73fe69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b33e50328fd3c8997774515f248780edda6bcc75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625315"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275492"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton-Klasse
 
@@ -177,7 +177,7 @@ BOOL DropDownToolbar(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Das übergeordnete Fenster des Dropdown-Rahmens oder NULL, um das übergeordnete Fenster der Dropdown-Symbolleisten-Schaltfläche zu verwenden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -202,7 +202,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>Parameter
 
-*MenuButton*<br/>
+*menuButton*<br/>
 [in] Ein Verweis auf die Menüschaltfläche Ziel.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -334,7 +334,7 @@ virtual BOOL OnClick(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Das übergeordnete Fenster der Symbolleisten-Schaltfläche.
 
 *bDelay*<br/>
@@ -380,7 +380,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Das übergeordnete Fenster der Symbolleisten-Schaltfläche.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -391,7 +391,7 @@ Ungleich NULL ist, wenn die Schaltfläche mit der auf die Hilfe-Nachricht verarb
 
 Diese Methode erweitert die basisklassenimplementierung ( [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)) durch Aufrufen der [CMFCDropDownToolbarButton::OnClick](#onclick) -Methode mit *bDelay*auf "false" festgelegt. Diese Methode gibt zurück, den Wert, der von zurückgegebene [CMFCDropDownToolbarButton::OnClick](#onclick).
 
-Weitere Informationen zur Meldung WM_HELPHITTEST finden Sie unter [TN028: kontextbezogene Hilfe Support](../../mfc/tn028-context-sensitive-help-support.md).
+Weitere Informationen zur Meldung WM_HELPHITTEST finden Sie unter [TN028: Kontextbezogene Hilfe Support](../../mfc/tn028-context-sensitive-help-support.md).
 
 ##  <a name="oncustomizemenu"></a>  CMFCDropDownToolbarButton::OnCustomizeMenu
 
@@ -447,7 +447,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] Der Gerätekontext, in dem die Schaltfläche angezeigt.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck der Schaltfläche.
 
 *pImages*<br/>
@@ -488,7 +488,7 @@ virtual int OnDrawOnCustomizeList(
 *pDC*<br/>
 [in] Der Gerätekontext, in dem die Schaltfläche angezeigt.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck der Schaltfläche.
 
 *bSelected*<br/>
@@ -545,5 +545,4 @@ Rufen Sie diese Methode, um einen Standardbefehl angeben, den das Framework, das
 [CMFCDropDownToolBar-Klasse](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
 [CMFCToolBar-Klasse](../../mfc/reference/cmfctoolbar-class.md)<br/>
 [CMFCToolBarMenuButton-Klasse](../../mfc/reference/cmfctoolbarmenubutton-class.md)<br/>
-[Exemplarische Vorgehensweise: Steuerelemente in eine Symbolleiste einfügen](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf der Symbolleiste](../../mfc/walkthrough-putting-controls-on-toolbars.md)

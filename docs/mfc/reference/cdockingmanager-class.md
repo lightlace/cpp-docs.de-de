@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: e1cc4a4a0d6841523aaafcc1865173ba5402948c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 268a46e1bdecc1ea468c152fd0ed480873c36591
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519976"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260386"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager-Klasse
 
@@ -318,7 +318,7 @@ BOOL AddDockSite(
 
 ### <a name="parameters"></a>Parameter
 
-*Info*<br/>
+*info*<br/>
 [in] Ein Verweis auf ein Informationsstruktur, die enthält Andocken Bereich Ausrichtung.
 
 *ppDockBar*<br/>
@@ -355,7 +355,7 @@ BOOL AddPane(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in, out] Gibt den Bereich, um die Dock-Manager hinzufügen.
 
 *bTail*<br/>
@@ -400,7 +400,7 @@ virtual BOOL AddMiniFrame(CPaneFrameWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Ein Zeiger auf einen Frame.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -521,7 +521,7 @@ void BuildPanesMenu(
 
 ### <a name="parameters"></a>Parameter
 
-*Menü "*<br/>
+*menu*<br/>
 [in] Ein Menü mit die Namen der andockbare Bereiche und Symbolleisten hinzufügen.
 
 *bToolbarsOnly*<br/>
@@ -542,7 +542,7 @@ void CalcExpectedDockedRect(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Ein Zeiger auf das Fenster angedockt werden soll.
 
 *ptMouse*<br/>
@@ -620,7 +620,7 @@ Der Andockstatus.
 
 Der Andockstatus kann es sich um eine der folgenden Werte sein:
 
-|AFX_CS_STATUS Wert|Bedeutung|
+|AFX_CS_STATUS value|Bedeutung|
 |---------------------------|-------------|
 |CS_NOTHING|Der Zeiger ist nicht über eine docksite. Behalten Sie den Bereich aus diesem Grund Gleitkommazahl.|
 |CS_DOCK_IMMEDIATELY|Der Zeiger ist, über der DockPosition im unmittelbaren Modus (DT_IMMEDIATE-Stil ist aktiviert), damit der Bereich sofort angedockt werden muss.|
@@ -637,7 +637,7 @@ void DisableRestoreDockState(BOOL bDisable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bDeaktivieren*<br/>
+*bDisable*<br/>
 [in] "True" Laden von docking-Layout aus der Registrierung deaktivieren andernfalls "false".
 
 ### <a name="remarks"></a>Hinweise
@@ -732,7 +732,7 @@ static void EnableDockSiteMenu(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] True, um die Dock-Menü "Vorschauwebsite" zu aktivieren. andernfalls "false".
 
 ### <a name="remarks"></a>Hinweise
@@ -763,7 +763,7 @@ void EnablePaneContextMenu(
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] True gibt an, aktiviert die Unterstützung für die automatische Kontextmenü die Bibliothek; bei FALSE wird die Unterstützung für die automatische Kontextmenü die Bibliothek deaktiviert.
 
 *uiCustomizeCmd*<br/>
@@ -1070,7 +1070,7 @@ BOOL InsertDockSite(
 
 ### <a name="parameters"></a>Parameter
 
-*Info*<br/>
+*info*<br/>
 [in] Eine Struktur, die die Ausrichtungsinformationen über die Dockbereich enthält.
 
 *dwAlignToInsertAfter*<br/>
@@ -1102,7 +1102,7 @@ BOOL InsertPane(
 *pTarget*<br/>
 [in] Ein Zeiger auf einen Bereich "Ziel".
 
-*bNach*<br/>
+*bAfter*<br/>
 [in] True, um den Bereich nach der Position des Bereichs Ziel eingefügt werden soll. "False" andernfalls.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1170,7 +1170,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Der angegebene Punkt.
 
 *dwBarAlignment*<br/>
@@ -1346,7 +1346,7 @@ void OnPaneContextMenu(CPoint point);
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Gibt den Speicherort des Menüs.
 
 ##  <a name="panefrompoint"></a>  CDockingManager::PaneFromPoint
@@ -1372,7 +1372,7 @@ virtual CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Gibt den Punkt in Bildschirmkoordinaten, um zu überprüfen.
 
 *nSensitivity*<br/>
@@ -1475,7 +1475,7 @@ virtual BOOL RemoveMiniFrame(CPaneFrameWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Ein Zeiger auf einen Rahmen zu entfernen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1497,7 +1497,7 @@ void RemovePaneFromDockManager(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Ein Zeiger auf einen Bereich entfernt werden soll.
 
 *bDestroy*<br/>
@@ -1584,7 +1584,7 @@ BOOL SendMessageToMiniFrames(
 *uMessage*<br/>
 [in] Die Nachricht gesendet werden.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 [in] Zusätzliche abhängige Nachrichteninformationen.
 
 *lParam*<br/>
@@ -1639,8 +1639,8 @@ static void SetDockingMode(
 *dockMode*<br/>
 Gibt den neuen Andockmodus an. Weitere Informationen finden Sie im Abschnitt "Hinweise".
 
-*Design*<br/>
-Gibt an, das Design für intelligente andockmarker verwendet werden soll. Es kann eine der folgenden Enumerationswerte: AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
+*theme*<br/>
+Gibt an, das Design für intelligente andockmarker verwendet werden soll. Sie können eine der folgenden Enumerationswerte sein: AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1760,7 +1760,7 @@ static AFX_SMARTDOCK_THEME __stdcall GetSmartDockingTheme();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt einen der folgenden Enumerationswerte: AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
+Gibt einen der folgenden Enumerationswerte zurück: AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
 
 ### <a name="remarks"></a>Hinweise
 

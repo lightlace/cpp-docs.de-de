@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCVisualManagerWindows [MFC], SetOfficeStyleMenus
 - CMFCVisualManagerWindows [MFC], m_b3DTabsXPTheme
 ms.assetid: 568b6e9e-8e67-4477-9a3d-2981cbd09861
-ms.openlocfilehash: e9f083f37c2e92172b05b907d733f9dbdb27ce45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3219de7f90d76e18b52efab8d8601b848427fca7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559743"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275960"
 ---
 # <a name="cmfcvisualmanagerwindows-class"></a>CMFCVisualManagerWindows-Klasse
 
@@ -200,12 +200,12 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerWindows::OnDrawEditBorder](#ondraweditborder)|(Überschreibt `CMFCVisualManagerOfficeXP::OnDrawEditBorder`.)|
 |[CMFCVisualManagerWindows::OnDrawExpandingBox](#ondrawexpandingbox)|(Überschreibt [CMFCVisualManager::OnDrawExpandingBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawexpandingbox).)|
 |[CMFCVisualManagerWindows::OnDrawFloatingToolbarBorder](#ondrawfloatingtoolbarborder)|(Überschreibt `CMFCVisualManagerOfficeXP::OnDrawFloatingToolbarBorder`.)|
-|[CMFCVisualManagerWindows::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|Das Framework ruft diese Methode auf, wenn es sich um eine Instanz des Rahmens zeichnet die [CMFCHeaderCtrl-Klasse](../../mfc/reference/cmfcheaderctrl-class.md). (Überschreibt [CMFCVisualManager::OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder).)|
-|[CMFCVisualManagerWindows::OnDrawHeaderCtrlSortArrow](#ondrawheaderctrlsortarrow)|Das Framework ruft diese Funktion auf, wenn es sich um den Sortierpfeil einem Kopfzeilen-Steuerelement zeichnet. (Überschreibt [CMFCVisualManager::OnDrawHeaderCtrlSortArrow](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlsortarrow).)|
+|[CMFCVisualManagerWindows::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|Das Framework ruft diese Methode auf, wenn es sich um eine Instanz des Rahmens zeichnet die [CMFCHeaderCtrl-Klasse](../../mfc/reference/cmfcheaderctrl-class.md). (Overrides [CMFCVisualManager::OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder).)|
+|[CMFCVisualManagerWindows::OnDrawHeaderCtrlSortArrow](#ondrawheaderctrlsortarrow)|Das Framework ruft diese Funktion auf, wenn es sich um den Sortierpfeil einem Kopfzeilen-Steuerelement zeichnet. (Overrides [CMFCVisualManager::OnDrawHeaderCtrlSortArrow](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlsortarrow).)|
 |[CMFCVisualManagerWindows::OnDrawMenuBorder](#ondrawmenuborder)|(Überschreibt `CMFCVisualManagerOfficeXP::OnDrawMenuBorder`.)|
 |[CMFCVisualManagerWindows::OnDrawMenuSystemButton](#ondrawmenusystembutton)|(Überschreibt `CMFCVisualManagerOfficeXP::OnDrawMenuSystemButton`.)|
 |[CMFCVisualManagerWindows::OnDrawMiniFrameBorder](#ondrawminiframeborder)|(Überschreibt `CMFCVisualManagerOfficeXP::OnDrawMiniFrameBorder`.)|
-|[CMFCVisualManagerWindows::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Wird vom Framework aufgerufen, wenn es sich um den Rahmen einer Outlook-Seite-Schaltfläche zeichnet. (Überschreibt [CMFCVisualManager::OnDrawOutlookPageButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookpagebuttonborder).)|
+|[CMFCVisualManagerWindows::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Wird vom Framework aufgerufen, wenn es sich um den Rahmen einer Outlook-Seite-Schaltfläche zeichnet. (Overrides [CMFCVisualManager::OnDrawOutlookPageButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookpagebuttonborder).)|
 |[CMFCVisualManagerWindows::OnDrawPaneBorder](#ondrawpaneborder)|(Überschreibt `CMFCVisualManagerOfficeXP::OnDrawPaneBorder`.)|
 |[CMFCVisualManagerWindows::OnDrawPaneCaption](#ondrawpanecaption)|(Überschreibt `CMFCVisualManagerOfficeXP::OnDrawPaneCaption`.)|
 |[CMFCVisualManagerWindows::OnDrawPopupWindowButtonBorder](#ondrawpopupwindowbuttonborder)|(Überschreibt `CMFCVisualManagerOfficeXP::OnDrawPopupWindowButtonBorder`.)|
@@ -308,7 +308,7 @@ virtual BOOL DrawComboBorderWinXP(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *bDeaktiviert*<br/>
 [in] *bIsDropped*<br/>
 [in] *bIsHighlighted*<br/>
@@ -331,7 +331,7 @@ virtual BOOL DrawComboDropButtonWinXP(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *bDeaktiviert*<br/>
 [in] *bIsDropped*<br/>
 [in] *bIsHighlighted*<br/>
@@ -353,7 +353,7 @@ virtual BOOL DrawPushButtonWinXP(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *pButton*<br/>
 [in] *UiState*<br/>
 
@@ -547,10 +547,10 @@ virtual BOOL OnDrawBrowseButton(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *pEdit*<br/>
 [in] *Zustand*<br/>
-[in] *ClrText*<br/>
+[in] *clrText*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -570,7 +570,7 @@ virtual void OnDrawButtonBorder(
 
 [in] *pDC*<br/>
 [in] *pButton*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *Zustand*<br/>
 
 ### <a name="remarks"></a>Hinweise
@@ -590,7 +590,7 @@ virtual void OnDrawButtonSeparator(
 
 [in] *pDC*<br/>
 [in] *pButton*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *Zustand*<br/>
 [in] *bHorz*<br/>
 
@@ -637,10 +637,10 @@ virtual void OnDrawCaptionButtonIcon(
 
 [in] *pDC*<br/>
 [in] *pButton*<br/>
-[in] *Id*<br/>
+[in] *id*<br/>
 [in] *bActive*<br/>
 [in] *bDeaktiviert*<br/>
-[in] *PtImage*<br/>
+[in] *ptImage*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -659,7 +659,7 @@ virtual void OnDrawCheckBoxEx(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *nState*<br/>
 [in] *bHighlighted*<br/>
 [in] *bPressed*<br/>
@@ -682,7 +682,7 @@ virtual void OnDrawComboBorder(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *bDeaktiviert*<br/>
 [in] *bIsDropped*<br/>
 [in] *bIsHighlighted*<br/>
@@ -705,7 +705,7 @@ virtual void OnDrawComboDropButton(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *bDeaktiviert*<br/>
 [in] *bIsDropped*<br/>
 [in] *bIsHighlighted*<br/>
@@ -739,7 +739,7 @@ virtual void OnDrawEditBorder(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *bDeaktiviert*<br/>
 [in] *bIsHighlighted*<br/>
 [in] *pButton*<br/>
@@ -759,9 +759,9 @@ virtual void OnDrawExpandingBox(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *bIsOpened*<br/>
-[in] *ColorBox*<br/>
+[in] *colorBox*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -779,8 +779,8 @@ virtual void OnDrawFloatingToolbarBorder(
 
 [in] *pDC*<br/>
 [in] *pToolBar*<br/>
-[in] *RectBorder*<br/>
-[in] *RectBorderSize*<br/>
+[in] *rectBorder*<br/>
+[in] *rectBorderSize*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -799,7 +799,7 @@ virtual void OnDrawHeaderCtrlBorder(
 
 [in] *pCtrl*<br/>
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *bIsPressed*<br/>
 [in] *bIsHighlighted*<br/>
 
@@ -819,7 +819,7 @@ virtual void OnDrawHeaderCtrlSortArrow(
 
 [in] *pCtrl*<br/>
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *bIsUp*<br/>
 
 ### <a name="remarks"></a>Hinweise
@@ -837,7 +837,7 @@ virtual void OnDrawMenuBorder(
 
 [in] *pDC*<br/>
 [in] *pMenu*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -855,7 +855,7 @@ virtual void OnDrawMenuSystemButton(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *UiSystemCommand*<br/>
 [in] *nStyle*<br/>
 [in] *bHighlight*<br/>
@@ -876,8 +876,8 @@ virtual void OnDrawMiniFrameBorder(
 
 [in] *pDC*<br/>
 [in] *pFrameWnd*<br/>
-[in] *RectBorder*<br/>
-[in] *RectBorderSize*<br/>
+[in] *rectBorder*<br/>
+[in] *rectBorderSize*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -894,7 +894,7 @@ virtual void OnDrawOutlookPageButtonBorder(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *RectBtn*<br/>
+[in] *rectBtn*<br/>
 [in] *bIsHighlighted*<br/>
 [in] *bIsPressed*<br/>
 
@@ -913,7 +913,7 @@ virtual void OnDrawPaneBorder(
 
 [in] *pDC*<br/>
 [in] *pBar*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -933,7 +933,7 @@ virtual COLORREF OnDrawPaneCaption(
 [in] *pDC*<br/>
 [in] *pBar*<br/>
 [in] *bActive*<br/>
-[in] *RectCaption*<br/>
+[in] *rectCaption*<br/>
 [in] *RectButtons*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
@@ -971,7 +971,7 @@ virtual void OnDrawScrollButtons(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *nBorderSize*<br/>
 [in] *iImage*<br/>
 [in] *bHilited*<br/>
@@ -992,7 +992,7 @@ virtual void OnDrawSeparator(
 
 [in] *pDC*<br/>
 [in] *pBar*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *bIsHoriz*<br/>
 
 ### <a name="remarks"></a>Hinweise
@@ -1011,7 +1011,7 @@ virtual void OnDrawSpinButtons(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *RectSpin*<br/>
+[in] *rectSpin*<br/>
 [in] *nState*<br/>
 [in] *bOrientation*<br/>
 [in] *pSpinCtrl*<br/>
@@ -1034,7 +1034,7 @@ virtual void OnDrawStatusBarPaneBorder(
 [in] *pDC*<br/>
 [in] *pBar*<br/>
 [in] *RectPane*<br/>
-[in] *UiID*<br/>
+[in] *uiID*<br/>
 [in] *nStyle*<br/>
 
 ### <a name="remarks"></a>Hinweise
@@ -1061,9 +1061,9 @@ virtual void OnDrawStatusBarProgress(
 [in] *RectProgress*<br/>
 [in] *nProgressTotal*<br/>
 [in] *nProgressCurr*<br/>
-[in] *ClrBar*<br/>
-[in] *ClrProgressBarDest*<br/>
-[in] *ClrProgressText*<br/>
+[in] *clrBar*<br/>
+[in] *clrProgressBarDest*<br/>
+[in] *clrProgressText*<br/>
 [in] *bProgressText*<br/>
 
 ### <a name="remarks"></a>Hinweise
@@ -1081,7 +1081,7 @@ virtual void OnDrawStatusBarSizeBox(
 
 [in] *pDC*<br/>
 [in] *pStatBar*<br/>
-[in] *RectSizeBox*<br/>
+[in] *rectSizeBox*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1099,7 +1099,7 @@ virtual void OnDrawTab(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *RectTab*<br/>
+[in] *rectTab*<br/>
 [in] *iTab*<br/>
 [in] *bIsActive*<br/>
 [in] *pTabWnd*<br/>
@@ -1121,7 +1121,7 @@ virtual void OnDrawTabCloseButton(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *pTabWnd*<br/>
 [in] *bIsHighlighted*<br/>
 [in] *bIsPressed*<br/>
@@ -1143,7 +1143,7 @@ virtual void OnDrawTabsButtonBorder(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *pButton*<br/>
 [in] *UiState*<br/>
 [in] *pWndTab*<br/>
@@ -1184,8 +1184,8 @@ virtual void OnDrawTasksGroupAreaBorder(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
-[in] *bBesondere*<br/>
+[in] *rect*<br/>
+[in] *bSpecial*<br/>
 [in] *bNoTitle*<br/>
 
 ### <a name="remarks"></a>Hinweise
@@ -1223,7 +1223,7 @@ virtual void OnDrawTearOffCaption(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *bIsActive*<br/>
 
 ### <a name="remarks"></a>Hinweise
@@ -1257,7 +1257,7 @@ virtual void OnEraseTabsArea(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *pTabWnd*<br/>
 
 ### <a name="remarks"></a>Hinweise
@@ -1275,7 +1275,7 @@ virtual void OnEraseTabsButton(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *pButton*<br/>
 [in] *pWndTab*<br/>
 
@@ -1293,7 +1293,7 @@ virtual BOOL OnEraseTabsFrame(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *pTabWnd*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1316,7 +1316,7 @@ virtual void OnFillBarBackground(
 [in] *pDC*<br/>
 [in] *pBar*<br/>
 [in] *RectClient*<br/>
-[in] *RectClip*<br/>
+[in] *rectClip*<br/>
 [in] *bNCArea*<br/>
 
 ### <a name="remarks"></a>Hinweise
@@ -1335,7 +1335,7 @@ virtual void OnFillButtonInterior(
 
 [in] *pDC*<br/>
 [in] *pButton*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *Zustand*<br/>
 
 ### <a name="remarks"></a>Hinweise
@@ -1352,7 +1352,7 @@ virtual COLORREF OnFillCommandsListBackground(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *bIsSelected*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1372,7 +1372,7 @@ virtual COLORREF OnFillMiniFrameCaption(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *RectCaption*<br/>
+[in] *rectCaption*<br/>
 [in] *pFrameWnd*<br/>
 [in] *bActive*<br/>
 
@@ -1394,10 +1394,10 @@ virtual void OnFillOutlookPageButton(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *bIsHighlighted*<br/>
 [in] *bIsPressed*<br/>
-[in] *ClrText*<br/>
+[in] *clrText*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1413,8 +1413,8 @@ virtual void OnFillTasksGroupInterior(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
-[in] *bBesondere*<br/>
+[in] *rect*<br/>
+[in] *bSpecial*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1429,7 +1429,7 @@ virtual void OnFillTasksPaneBackground(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *RectWorkArea*<br/>
+[in] *rectWorkArea*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1447,8 +1447,8 @@ virtual void OnHighlightMenuItem(
 
 [in] *pDC*<br/>
 [in] *pButton*<br/>
-[in] *Rect*<br/>
-[in] *ClrText*<br/>
+[in] *rect*<br/>
+[in] *clrText*<br/>
 
 ### <a name="remarks"></a>Hinweise
 

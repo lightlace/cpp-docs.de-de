@@ -9,12 +9,12 @@ helpviewer_keywords:
 - messages [MFC], MFC
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
-ms.openlocfilehash: 26f6effbafd8136661f0b1dc9a6b22138a23e547
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 029177821d37d5d26abe0b39ea1581e8a5ad602b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639633"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278131"
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024: MFC-definierte Meldungen und Ressourcen
 
@@ -41,11 +41,11 @@ Im seltenen Fall, die eine der folgenden Meldungen behandeln müssen verwenden S
 
 **WM_QUERYAFXWNDPROC**
 
-Diese Nachricht wird in einem Fenster gesendet, der erstellt wird. Dies wird als eine Methode zum Ermitteln, ob der WndProc ist sehr früh im Prozess gesendet **fxWndProc. FxWndProc** gibt 1 zurück.
+Diese Nachricht wird in einem Fenster gesendet, der erstellt wird. Dies wird als eine Methode zum Ermitteln, ob der WndProc ist sehr früh im Prozess gesendet **fxWndProc. AfxWndProc** returns 1.
 
 |||
 |-|-|
-|wParam-Parameter|Nicht verwendet|
+|wParam|Nicht verwendet|
 |lParam|Nicht verwendet|
 |gibt|1, wenn die Verarbeitung durch **fxWndProc**|
 
@@ -55,7 +55,7 @@ Diese Meldung wird durch ein Rahmenfenster an seine unmittelbar untergeordneten 
 
 |||
 |-|-|
-|wParam-Parameter|Nicht verwendet|
+|wParam|Nicht verwendet|
 |lParam|Adresse einer AFX_SIZEPARENTPARAMS-Struktur|
 |gibt|Nicht verwendet (0)|
 
@@ -67,7 +67,7 @@ Diese Nachricht wird zu einem Rahmenfenster gesendet, Fragen sie zum Aktualisier
 
 |||
 |-|-|
-|wParam-Parameter|Zeichenfolgen Sie-ID (oder 0 (null))|
+|wParam|Zeichenfolgen Sie-ID (oder 0 (null))|
 |lParam|LPCSTR für die Zeichenfolge (oder NULL)|
 |gibt|Nicht verwendet (0)|
 
@@ -77,7 +77,7 @@ Diese Nachricht wird in der Zeit im Leerlauf gesendet, die Leerlauf-Ablaufzeitpu
 
 |||
 |-|-|
-|wParam-Parameter|"Bool" bDisableIfNoHandler|
+|wParam|BOOL bDisableIfNoHandler|
 |lParam|Nicht verwendet (0)|
 |gibt|Nicht verwendet (0)|
 
@@ -89,7 +89,7 @@ Diese Nachricht wird gesendet, um eine `CFrameWnd` , beenden Sie kontextbezogene
 
 |||
 |-|-|
-|wParam-Parameter|Nicht verwendet (0)|
+|wParam|Nicht verwendet (0)|
 |lParam|Nicht verwendet (0)|
 |gibt|Nicht verwendet|
 
@@ -99,7 +99,7 @@ Diese Nachricht wird durch die Dokumentvorlage für alle Nachfolger Rand eines R
 
 |||
 |-|-|
-|wParam-Parameter|Nicht verwendet (0)|
+|wParam|Nicht verwendet (0)|
 |lParam|Nicht verwendet (0)|
 |gibt|Nicht verwendet (0)|
 
@@ -111,7 +111,7 @@ Wenn das übergeordnete Fenster diese Nachricht verarbeitet muss "true" zurück 
 
 |||
 |-|-|
-|wParam-Parameter|Nicht verwendet (0)|
+|wParam|Nicht verwendet (0)|
 |lParam|LPRECT-RectClient kann NULL sein.|
 |gibt|TRUE, wenn neue Client-Bildgröße zurückgegeben FALSE hat, andernfalls|
 
@@ -123,7 +123,7 @@ Das neue Rechteck, in Clientkoordinaten relativ zu das Rahmenfenster der Größe
 
 |||
 |-|-|
-|wParam-Parameter|Nicht verwendet (0)|
+|wParam|Nicht verwendet (0)|
 |lParam|LPRECT rectNew|
 |gibt|Nicht verwendet (0)|
 
@@ -135,7 +135,7 @@ Sie können dies verwenden, spezielle Verarbeitung in die Popup-Fenster ausführ
 
 |||
 |-|-|
-|wParam-Parameter|Nicht verwendet (0)|
+|wParam|Nicht verwendet (0)|
 |lParam|Nicht verwendet (0)|
 |gibt|Wert ungleich NULL **nicht** deaktivieren Sie das Fenster, 0 gibt an, das Fenster wird deaktiviert|
 
@@ -145,7 +145,7 @@ Diese Nachricht wird gesendet, um alle Popup-Fenster ein Rahmenfenster Besitz, w
 
 |||
 |-|-|
-|wParam-Parameter|Ist eine der folgenden Werte:<br /><br /> FS_SHOW<br /><br /> FS_HIDE<br /><br /> FS_ACTIVATE<br /><br /> FS_DEACTIVATE<br /><br /> FS_ENABLEFS_DISABLE<br /><br /> FS_SYNCACTIVE|
+|wParam|Ist eine der folgenden Werte:<br /><br /> FS_SHOW<br /><br /> FS_HIDE<br /><br /> FS_ACTIVATE<br /><br /> FS_DEACTIVATE<br /><br /> FS_ENABLEFS_DISABLE<br /><br /> FS_SYNCACTIVE|
 |lParam|Nicht verwendet (0)|
 
 Der Rückgabewert muss ungleich NULL, wenn FS_SYNCACTIVE Satz und die Fenster synchronisiert seine Aktivierung mit übergeordneten Rahmens. `CMiniFrameWnd` ungleich NULL zurück, wenn die Formatvorlage auf MFS_SYNCACTIVE festgelegt ist.
@@ -203,4 +203,3 @@ Dies ist ein sehr Allgemeines Format, können alle Windows-Nachrichten und den D
 
 [Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)<br/>
 [Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)
-

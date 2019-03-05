@@ -31,12 +31,12 @@ helpviewer_keywords:
 - ON_WM_DEVICECHANGE [MFC]
 - WM_ messages [MFC]
 ms.assetid: 56fb89c8-68a8-4adf-883e-a9f63bf677e9
-ms.openlocfilehash: 90076e991667e829a97cb805a32763b6acbfe6d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ae9ff828f342bc4270c3701ced3e670988c7d54
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491051"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277704"
 ---
 # <a name="wm-message-handlers-d---e"></a>WM_-Meldungshandler: D - E
 
@@ -45,7 +45,7 @@ Die folgenden Einträge der Karte auf der linken Seite entsprechen die Funktions
 |Zuordnungseintrag|Funktionsprototyp|
 |---------------|------------------------|
 |ON_WM_DEADCHAR()|die "void" Afx_msg [OnDeadChar](../../mfc/reference/cwnd-class.md#ondeadchar)("uint", "uint", "uint");|
-|ON_WM_DELETEITEM()|die "void" Afx_msg [OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem)(LPDELETEITEMSTRUCT);|
+|ON_WM_DELETEITEM()|afx_msg void [OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem)(LPDELETEITEMSTRUCT);|
 |ON_WM_DESTROY()|die "void" Afx_msg [OnDestroy](../../mfc/reference/cwnd-class.md#ondestroy)();|
 |ON_WM_DESTROYCLIPBOARD()|die "void" Afx_msg [OnDestroyClipboard](../../mfc/reference/cwnd-class.md#ondestroyclipboard)();|
 |ON_WM_DEVICECHANGE()|die "void" Afx_msg [OnDeviceChange](../../mfc/reference/cwnd-class.md#ondevicechange)(UINT, DWORD;)|
@@ -61,11 +61,10 @@ Die folgenden Einträge der Karte auf der linken Seite entsprechen die Funktions
 |ON_WM_ENDSESSION()|die "void" Afx_msg [OnEndSession](../../mfc/reference/cwnd-class.md#onendsession)(BOOL);|
 |ON_WM_ENTERIDLE()|die "void" Afx_msg [OnEnterIdle](../../mfc/reference/cwnd-class.md#onenteridle)(UINT, CWnd *);|
 |ON_WM_ENTERSIZEMOVE()|die "void" Afx_msg [OnEnterSizeMove](../../mfc/reference/cwnd-class.md#onentersizemove)();|
-|ON_WM_ERASEBKGND()|Afx_msg "bool" [OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd)(CDC *);|
+|ON_WM_ERASEBKGND()|afx_msg BOOL [OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd)(CDC*);|
 |ON_WM_EXITSIZEMOVE()|die "void" Afx_msg [OnExitSizeMove](../../mfc/reference/cwnd-class.md#onexitsizemove)();|
 
 ## <a name="see-also"></a>Siehe auch
 
 [Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md)<br/>
 [Handler für WM_-Meldungen](../../mfc/reference/handlers-for-wm-messages.md)
-

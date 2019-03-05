@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-ms.openlocfilehash: e69ea2b7446e784bb643050bd122c93ea53a0676
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 031d72903d72af77f6929072e4605d32d81585a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463777"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270201"
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager-Klasse
 
@@ -51,7 +51,7 @@ class CAtlTransactionManager;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[~ CAtlTransactionManager](#dtor)|CAtlTransactionManager-Destruktor.|
+|[~CAtlTransactionManager](#dtor)|CAtlTransactionManager-Destruktor.|
 |[CAtlTransactionManager](#catltransactionmanager)|CAtlTransactionManager-Konstruktor.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
@@ -69,9 +69,9 @@ class CAtlTransactionManager;
 |[GetHandle](#gethandle)|Gibt das Transaktionshandle zurück.|
 |[IsFallback](#isfallback)|Bestimmt, ob die fallback-Aufrufe aktiviert sind.|
 |[MoveFile](#movefile)|Verschiebt eine vorhandene Datei oder ein Verzeichnis, einschließlich der untergeordneten Elemente, wie ein Transaktiver Vorgang.|
-|["RegCreateKeyEx" dienen](#regcreatekeyex)|Den angegebene Registrierungsschlüssel erstellt und verknüpft es mit einer Transaktion. Wenn der Schlüssel bereits vorhanden ist, wird Sie von die Funktion geöffnet.|
+|[RegCreateKeyEx](#regcreatekeyex)|Den angegebene Registrierungsschlüssel erstellt und verknüpft es mit einer Transaktion. Wenn der Schlüssel bereits vorhanden ist, wird Sie von die Funktion geöffnet.|
 |[RegDeleteKey](#regdeletekey)|Löscht einen Unterschlüssel und ihre Werte aus der angegebenen Clientplattform-spezifische Ansicht der Registrierung als ein Transaktiver Vorgang.|
-|["RegOpenKeyEx"](#regopenkeyex)|Öffnet den angegebenen Registrierungsschlüssel, und ordnet sie einer Transaktion.|
+|[RegOpenKeyEx](#regopenkeyex)|Öffnet den angegebenen Registrierungsschlüssel, und ordnet sie einer Transaktion.|
 |[Rollback](#rollback)|Anforderungen, die die Transaktion ein Rollback ausgeführt werden.|
 |[SetFileAttributes](#setfileattributes)|Legt die Attribute für eine Datei oder ein Verzeichnis als ein Transaktiver Vorgang fest.|
 
@@ -191,16 +191,16 @@ inline HANDLE CreateFile(
 Der Name eines Objekts erstellt oder geöffnet werden.
 
 *dwDesiredAccess*<br/>
-Der Zugriff auf das Objekt, das als lesen, schreiben, beide oder keines von beiden (null) zusammengefasst werden kann. Die am häufigsten verwendeten Werte sind GENERIC_READ und/oder GENERIC_WRITE: GENERIC_READ &#124; GENERIC_WRITE.
+Der Zugriff auf das Objekt, das als lesen, schreiben, beide oder keines von beiden (null) zusammengefasst werden kann. Die am häufigsten verwendeten Werte sind GENERIC_READ, GENERIC_WRITE oder beides: GENERIC_READ &#124; GENERIC_WRITE.
 
 *dwShareMode*<br/>
-Ein Objekt, das kann sein, lesen, schreiben, die beide, zu löschen, alle oder keine der Betriebsmodus: 0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.
+Die ein Objekt, das sein, lesen, schreiben, beide können, löschen, alle oder keine-Betriebsmodus: 0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.
 
 *lpSecurityAttributes*<br/>
 Ein Zeiger auf eine SECURITY_ATTRIBUTES-Struktur, die eine optionale Sicherheitsbeschreibung enthält und legt fest, und zwar unabhängig davon, ob das zurückgegebene Handle von untergeordneten Prozessen geerbt werden kann. Der Parameter kann NULL sein.
 
 *dwCreationDisposition*<br/>
-Eine Aktion auf Dateien angewendet, die vorhanden sein und sind nicht vorhanden. Dieser Parameter muss eines der folgenden Werte, die Kombination nicht möglich sein: CREATE_ALWAYS CREATE_NEW, OPEN_ALWAYS, OPEN_EXISTING oder TRUNCATE_EXISTING.
+Eine Aktion auf Dateien angewendet, die vorhanden sein und sind nicht vorhanden. Dieser Parameter muss eine der folgenden Werte an, die können nicht kombiniert werden: CREATE_ALWAYS CREATE_NEW, OPEN_ALWAYS, OPEN_EXISTING oder TRUNCATE_EXISTING.
 
 *dwFlagsAndAttributes*<br/>
 Die Dateiattribute und Flags. Dieser Parameter kann eine beliebige Kombination der verfügbaren Dateiattribute (FILE_ATTRIBUTE_ *) enthalten. Alle anderen Dateiattribute überschreiben FILE_ATTRIBUTE_NORMAL. Dieser Parameter kann auch Kombinationen von Flags enthalten (FILE_FLAG_\*) Zugriff auf für die Steuerung von Pufferverhalten, Modi und andere spezielle Flags. Diese Anwendungen kombinieren, mit jedem FILE_ATTRIBUTE_\* Werte.
@@ -392,7 +392,7 @@ inline LSTATUS RegCreateKeyEx(
 *hKey*<br/>
 Ein Handle für einen geöffneten Registrierungsschlüssel.
 
-*"lpsubkey"*<br/>
+*lpSubKey*<br/>
 Der Name der Unterschlüssel, den diese Funktion wird geöffnet oder erstellt.
 
 *dwReserved*<br/>
@@ -402,7 +402,7 @@ Dieser Parameter ist reserviert und muss NULL sein.
 Die benutzerdefinierte Klasse dieses Schlüssels. Dieser Parameter kann ignoriert werden. Dieser Parameter kann NULL sein.
 
 *dwOptions*<br/>
-Dieser Parameter kann einen der folgenden Werte sein: REG_OPTION_BACKUP_RESTORE REG_OPTION_NON_VOLATILE oder REG_OPTION_VOLATILE.
+Dieser Parameter kann einen der folgenden Werte sein: REG_OPTION_BACKUP_RESTORE, REG_OPTION_NON_VOLATILE oder REG_OPTION_VOLATILE.
 
 *samDesired*<br/>
 Eine Maske, die die Zugriffsrechte für den Schlüssel angibt.
@@ -437,7 +437,7 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*hKey*|Ein Handle für einen geöffneten Registrierungsschlüssel.|
-|*"lpsubkey"*|Der Name des Schlüssels, der gelöscht werden.|
+|*lpSubKey*|Der Name des Schlüssels, der gelöscht werden.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -465,7 +465,7 @@ inline LSTATUS RegOpenKeyEx(
 *hKey*<br/>
 Ein Handle für einen geöffneten Registrierungsschlüssel.
 
-*"lpsubkey"*<br/>
+*lpSubKey*<br/>
 Der Name des Registrierungsunterschlüssels geöffnet werden.
 
 *ulOptions*<br/>

@@ -14,12 +14,12 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-ms.openlocfilehash: c76f1f9b00ea6e44f69f98286b83d4a84f12cac1
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 0f2b627afa216f03592fe913afece1a80f5bd5a6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657499"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275661"
 ---
 # <a name="textureview-class"></a>texture_view-Klasse
 
@@ -101,7 +101,7 @@ Der Rang des `texture_view`-Objekts.
 
 **Header:** amp_graphics.h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** concurrency::graphics
 
 ##  <a name="dtor"></a> ~ Texture_view
 
@@ -150,7 +150,7 @@ texture_view(// [7] copy constructor
 
 [3, 4] Konstruktor die `texture` auf dem das nicht schreibbare `texture_view` erstellt wird.
 
-*_Sonstige*<br/>
+*_Other*<br/>
 [5]-Kopierkonstruktor der beschreibbare Quelle `texture_view`.
 
 [6, 7] Kopierkonstruktor der Quelle nicht geschrieben werden kann `texture_view`.
@@ -313,7 +313,7 @@ Die MipMap-Ebene, von der der Wert abgerufen werden soll. Der Standardwert 0 ste
 
 Der Wert des Elements.
 
-##  <a name="operator_eq"></a> Operator =
+##  <a name="operator_eq"></a> operator=
 
 Weist dieser `texture_view`-Instanz eine Ansicht der gleichen Textur wie die angegebene `texture_view` zu.
 
@@ -330,7 +330,7 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 
 ### <a name="parameters"></a>Parameter
 
-*_Sonstige*<br/>
+*_Other*<br/>
 [1, 2] Copy-Konstruktor eine beschreibbare `texture_view` Objekt.
 
 [3]-Kopierkonstruktor eine schreibgeschützte `texture_view` Objekt.
@@ -365,7 +365,7 @@ Der eindimensionale Index.
 
 Der durch `_Index` indizierte Elementwert.
 
-##  <a name="operator_call"></a> Operator()
+##  <a name="operator_call"></a> operator()
 
 Gibt den Elementwert durch Index zurück.
 

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CAnimationRect [MFC], m_szInitial
 - CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
-ms.openlocfilehash: 4e782a9325360b69e33dfaf6a3b0649d9368b32b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 84c4cf92894a9ece2021417445c9d7ab94ee6bdf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540178"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259489"
 ---
 # <a name="canimationrect-class"></a>CAnimationRect-Klasse
 
@@ -80,14 +80,14 @@ class CAnimationRect : public CAnimationBaseObject;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CAnimationRect::GetAnimationVariableList](#getanimationvariablelist)|Legt die gekapselten Animationsvariablen in einer Liste an. (Überschreibt [CAnimationBaseObject:: GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
+|[CAnimationRect::GetAnimationVariableList](#getanimationvariablelist)|Legt die gekapselten Animationsvariablen in einer Liste an. (Overrides [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
 |Name|Beschreibung|
 |----------|-----------------|
 |[CAnimationRect::operator RECT](#operator_rect)|Konvertiert einen CAnimationRect in Rect.|
-|[CAnimationRect::operator =](#operator_eq)|CAnimationRect Rect zugewiesen haben.|
+|[CAnimationRect::operator=](#operator_eq)|CAnimationRect Rect zugewiesen haben.|
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
 
@@ -183,7 +183,7 @@ CAnimationRect(
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 Gibt standardmäßige Rechteck.
 
 *nGroupID*<br/>
@@ -322,7 +322,7 @@ BOOL GetValue(CRect& rect);
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 Die Ausgabe. Enthält den aktuellen Wert an, wenn diese Methode zurückgegeben wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -411,7 +411,7 @@ void operator=(const RECT& rect);
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 Der neue Wert der Animation Rechteck.
 
 ### <a name="remarks"></a>Hinweise
@@ -428,7 +428,7 @@ void SetDefaultValue(const CRect& rect);
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 Gibt neue Standardwerte für Links, oben, rechts und unten an.
 
 ### <a name="remarks"></a>Hinweise

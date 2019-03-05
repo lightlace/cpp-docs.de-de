@@ -17,12 +17,12 @@ helpviewer_keywords:
 - CRecordView [MFC], OnMove
 - CRecordView [MFC], OnMove
 ms.assetid: 9b4b0897-bd50-4d48-a0b4-f3323f5ccc55
-ms.openlocfilehash: c7013fb53562fd76744bff19d1d37ce972a52d52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a91a9e320b4221b04bbcf996ffa60f1de4b35ec5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643863"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262466"
 ---
 # <a name="crecordview-class"></a>CRecordView-Klasse
 
@@ -62,7 +62,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 Die Ansicht ist eine Formularansicht können Sie direkt mit verbundenen eine `CRecordset` Objekt. Die Ansicht aus einer Dialogfeldvorlagen-Ressource erstellt wird, und zeigt die Felder an die `CRecordset` Objekt in der Dialogfeldvorlage-Steuerelementen. Die `CRecordView` Objekt verwendet Dialogdatenaustausch (DDX) und die Datensatzfeldaustausch (RFX), um die Verschiebung von Daten zwischen den Steuerelementen im Formular und die Felder des Recordset-Objekts zu automatisieren. `CRecordView` Außerdem stellt eine Standardimplementierung für das Verschieben von mit dem ersten, nächsten, vorherigen oder letzten Datensatz und eine Schnittstelle zum Aktualisieren der aktuell angezeigten Datensatzes.
 
 > [!NOTE]
->  Wenn Sie mit den Klassen Datenzugriffsobjekte (DAO) statt mit der Open Database Connectivity (ODBC)-Klassen arbeiten, verwenden Sie die Klasse [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) stattdessen. Weitere Informationen finden Sie im Artikel [Overview: Datenbank-Programmierung](../../data/data-access-programming-mfc-atl.md).
+>  Wenn Sie mit den Klassen Datenzugriffsobjekte (DAO) statt mit der Open Database Connectivity (ODBC)-Klassen arbeiten, verwenden Sie die Klasse [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) stattdessen. Weitere Informationen finden Sie im Artikel [Übersicht: Datenbank-Programmierung](../../data/data-access-programming-mfc-atl.md).
 
 Die gängigste Methode zum Erstellen der Datensatzansicht ist mit der Anwendungs-Assistenten. Dann-Anwendungs-Assistent erstellt sowohl die datensatzansichtsklasse und ihrer zugehörigen Recordset-Klasse als Teil Ihrer Skelett Starter-Anwendung. Wenn Sie mit der Anwendungs-Assistent die datensatzansichtsklasse erstellen, können Sie es später noch Mal mit Klassen-Assistenten erstellen. Der Anwendungs-Assistent-Ansatz ist einfacher, wenn lediglich ein einzelnes Formular. Klassen-Assistenten können Sie die eine Datensatzansicht später im Entwicklungsprozess verwenden möchten. Mithilfe der Klassen-Assistent zum Erstellen einer Datensatzansicht und ein Recordset getrennt, und verbinden Sie sie dann die flexibelste Herangehensweise ist, denn es Ihnen mehr Kontrolle ermöglicht bei der Benennung der Recordset-Klasse und die zugehörige. H /. CPP-Dateien. Dadurch können auch mehrere Datensatzansichten für die gleiche Recordsetklasse zu haben.
 

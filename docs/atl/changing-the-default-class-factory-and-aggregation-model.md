@@ -12,12 +12,12 @@ helpviewer_keywords:
 - default class factory, ATL
 - defaults [C++], class factory
 ms.assetid: 6e040e95-0f38-4839-8a8b-c9800dd47e8c
-ms.openlocfilehash: 34e838eea201f96acd7dcc647c4410fb244c8424
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94f9ecd85e09cb3916b518d71b904961042142e8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485544"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277377"
 ---
 # <a name="changing-the-default-class-factory-and-aggregation-model"></a>Ändern der Standardklassenfactory und Aggregationmodell
 
@@ -39,4 +39,3 @@ ATL verwendet auch die **Typedef** Mechanismus, um das Standardverhalten zu impl
 
 [Grundlagen von ARL COM-Objekten](../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Aggregation und Klassenfactory-Makros](../atl/reference/aggregation-and-class-factory-macros.md)
-

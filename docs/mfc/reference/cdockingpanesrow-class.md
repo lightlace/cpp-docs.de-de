@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CDockingPanesRow [MFC], ShowPane
 - CDockingPanesRow [MFC], UpdateVisibleState
 ms.assetid: e7a17832-0ebb-4bce-b799-cec9b60f76fe
-ms.openlocfilehash: a2d9c7894327a66c24fae3890856dbb95a6d10e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5720fa2ff8e85092b246002b7961ce3830ee7e3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450127"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277988"
 ---
 # <a name="cdockingpanesrow-class"></a>CDockingPanesRow-Klasse
 
@@ -200,7 +200,7 @@ virtual void AddPane(
 
 [in] *DockMethod*<br/>
 
-[in] *LpRect*<br/>
+[in] *lpRect*<br/>
 
 [in] *bAddLast*<br/>
 
@@ -345,7 +345,7 @@ virtual void GetAvailableSpace(CRect& rect);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Rect*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -357,7 +357,7 @@ void GetClientRect(CRect& rect) const;
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Rect*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -393,7 +393,7 @@ void GetGroupFromPane(
 
 [in] *pBar*<br/>
 
-[in] *Lst*<br/>
+[in] *lst*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -489,7 +489,7 @@ void GetWindowRect(CRect& rect) const;
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Rect*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -589,13 +589,13 @@ void MovePane(
 
 [in] *pControlBar*<br/>
 
-[in] *PtOffset*<br/>
+[in] *ptOffset*<br/>
 
 [in] *bSwapControlBars*<br/>
 
-[in] *Hdwp*<br/>
+[in] *hdwp*<br/>
 
-[in] *RectTarget*<br/>
+[in] *rectTarget*<br/>
 
 [in] *nOffset*<br/>
 
@@ -667,9 +667,9 @@ virtual void RepositionPanes(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *RectNewParentBarArea*<br/>
+[in] *rectNewParentBarArea*<br/>
 
-[in] *n*<br/>
+[in] *nSide*<br/>
 
 [in] *bExpand*<br/>
 
@@ -713,7 +713,7 @@ void ScreenToClient(CRect& rect) const;
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Rect*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -729,7 +729,7 @@ void SetExtra(
 
 [in] *nExtraSpace*<br/>
 
-[in] *RowExtraAlign*<br/>
+[in] *rowExtraAlign*<br/>
 
 ### <a name="remarks"></a>Hinweise
 

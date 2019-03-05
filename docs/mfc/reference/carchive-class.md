@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CArchive [MFC], WriteString
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
-ms.openlocfilehash: f1e5701e95ec080845f3d2422da5d6ce4b9c906b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f169964c6a313f37b5ea50a5105af29af7b59b1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465610"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266327"
 ---
 # <a name="carchive-class"></a>CArchive-Klasse
 
@@ -176,7 +176,7 @@ CArchive(
 
 ### <a name="parameters"></a>Parameter
 
-*pFile-Datei*<br/>
+*pFile*<br/>
 Ein Zeiger auf die `CFile` Objekt, das ist die ultimative Quelle oder das Ziel der permanenten Daten.
 
 *nMode*<br/>
@@ -352,7 +352,7 @@ void MapObject(const CObject* pOb);
 
 ### <a name="parameters"></a>Parameter
 
-*Geschäftssitz*<br/>
+*pOb*<br/>
 Ein konstanter Zeiger auf das Objekt gespeichert wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -552,7 +552,7 @@ UINT Read(void* lpBuf, UINT nMax);
 *lpBuf*<br/>
 Ein Zeiger auf einen Benutzer bereitgestellten Puffer, der zum Empfangen der Daten aus dem Archiv zu lesen ist.
 
-*nmax.*<br/>
+*nMax*<br/>
 Ganze Zahl ohne Vorzeichen, die die Anzahl von Bytes angibt, aus dem Archiv gelesen werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -653,7 +653,7 @@ Ein Verweis auf eine [CString](../../atl-mfc-shared/reference/cstringt-class.md)
 *lpsz*<br/>
 Gibt einen Zeiger zu einem Benutzer bereitgestellten Puffer, der eine Null-terminierte Zeichenfolge empfangen wird.
 
-*nmax.*<br/>
+*nMax*<br/>
 Gibt die maximale Anzahl der zu lesenden Zeichen. Muss eine kleiner als die Größe der *Lpsz* Puffer.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -784,7 +784,7 @@ void Write(const void* lpBuf, INT nMax);
 *lpBuf*<br/>
 Ein Zeiger zu einem Benutzer bereitgestellten Puffer mit den Daten in das Archiv geschrieben werden sollen.
 
-*nmax.*<br/>
+*nMax*<br/>
 Eine ganze Zahl, die angibt, die Anzahl der Bytes in das Archiv geschrieben werden sollen.
 
 ### <a name="remarks"></a>Hinweise
@@ -834,7 +834,7 @@ void WriteObject(const CObject* pOb);
 
 ### <a name="parameters"></a>Parameter
 
-*Geschäftssitz*<br/>
+*pOb*<br/>
 Ein konstanter Zeiger auf das Objekt gespeichert wird.
 
 ### <a name="remarks"></a>Hinweise

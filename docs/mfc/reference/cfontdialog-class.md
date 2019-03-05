@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CFontDialog [MFC], IsUnderline
 - CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
-ms.openlocfilehash: 5c9e3a7de10b6ba0913b02c5f79dcc63c89adce5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3dea0f2ba358582b49de107c234a66a751e8f0b0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525176"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267185"
 ---
 # <a name="cfontdialog-class"></a>CFontDialog-Klasse
 
@@ -145,7 +145,7 @@ CFontDialog(
 *plfInitial*<br/>
 Ein Zeiger auf eine ["LogFont"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) -Datenstruktur, die Sie einige der Schriftmerkmale festlegen kann.
 
-*Zeichenformat*<br/>
+*charFormat*<br/>
 Ein Zeiger auf eine [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) -Datenstruktur, die Ihnen ermöglicht, legen Sie einige der Schriftmerkmale in einem Rich edit-Steuerelement.
 
 *dwFlags*<br/>
@@ -202,7 +202,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
 
 ### <a name="parameters"></a>Parameter
 
-*CF*<br/>
+*cf*<br/>
 Ein [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) Struktur, die Informationen über die zeichenformatierung des dem ausgewählten Schriftart enthält.
 
 ##  <a name="getcolor"></a>  CFontDialog::GetColor
@@ -397,4 +397,3 @@ Nach dem Erstellen einer `CFontDialog` -Objekts verwenden Sie `m_cf` so ändern 
 [MFC-Beispiel HIERSVR](../../visual-cpp-samples.md)<br/>
 [CCommonDialog-Klasse](../../mfc/reference/ccommondialog-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
-

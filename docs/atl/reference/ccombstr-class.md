@@ -29,12 +29,12 @@ helpviewer_keywords:
 - CComBSTR class
 - CComBSTR
 ms.assetid: 8fea1879-a05e-47a5-a803-8dec60eaa534
-ms.openlocfilehash: 52e8472e315932978af38d405c753b0a62fcbe45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48447b9e6a211927d8e729dd761d2e14ecd89615
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475646"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282356"
 ---
 # <a name="ccombstr-class"></a>CComBSTR-Klasse
 
@@ -53,7 +53,7 @@ class CComBSTR
 |Name|Beschreibung|
 |----------|-----------------|
 |[CComBSTR::CComBSTR](#ccombstr)|Der Konstruktor.|
-|[CComBSTR:: ~ CComBSTR](#dtor)|Der Destruktor.|
+|[CComBSTR::~CComBSTR](#dtor)|Der Destruktor.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -84,7 +84,7 @@ class CComBSTR
 |----------|-----------------|
 |[CComBSTR::operator BSTR](#operator_bstr)|Wandelt eine `CComBSTR` Objekt auf ein BSTR.|
 |[CComBSTR::operator!](#operator_not)|Gibt "true" oder "false", je nachdem, ob `m_str`ist NULL.|
-|[CComBSTR::operator! =](#operator_neq)|Vergleicht einen `CComBSTR` mit einer Zeichenfolge.|
+|[CComBSTR::operator !=](#operator_neq)|Vergleicht einen `CComBSTR` mit einer Zeichenfolge.|
 |[CComBSTR::operator &](#operator_amp)|Gibt die Adresse der `m_str`.|
 |[CComBSTR::operator +=](#operator_add_eq)|Fügt eine `CComBSTR` auf das Objekt.|
 |[CComBSTR::operator <](#operator_lt)|Vergleicht einen `CComBSTR` mit einer Zeichenfolge.|
@@ -329,7 +329,7 @@ CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
 *src*<br/>
 [in] Ein `CComBSTR`-Objekt.
 
-*GUID*<br/>
+*guid*<br/>
 [in] Ein Verweis auf eine `GUID` Struktur.
 
 ### <a name="remarks"></a>Hinweise

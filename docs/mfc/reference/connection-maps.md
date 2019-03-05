@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-ms.openlocfilehash: 388b3d1961f9c7cf3598db08a986c2205ac34bc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cbd993e7172ca9a25f25db18d5d0fa042db847b3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624808"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271150"
 ---
 # <a name="connection-maps"></a>Verbindungszuordnungen
 
@@ -93,7 +93,7 @@ CONNECTION_IID(iid)
 
 ### <a name="parameters"></a>Parameter
 
-*IID*<br/>
+*iid*<br/>
 Die Schnittstellen-ID der Schnittstelle wird von den Verbindungspunkt aufgerufen werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -173,7 +173,7 @@ CONNECTION_PART(theClass, iid, localClass)
 *theClass*<br/>
 Gibt an, die Control-Klasse, deren Verbindungspunkt dies, heißt.
 
-*IID*<br/>
+*iid*<br/>
 Die Schnittstellen-ID der Schnittstelle wird von den Verbindungspunkt aufgerufen werden soll.
 
 *localClass*<br/>
@@ -212,7 +212,7 @@ Ein Zeiger auf das Objekt, das die Schnittstelle aufruft.
 *pUnkSink*<br/>
 Ein Zeiger auf das Objekt, das die Schnittstelle implementiert.
 
-*IID*<br/>
+*iid*<br/>
 Die Schnittstellen-ID der Verbindung.
 
 *bRefCount*<br/>
@@ -254,7 +254,7 @@ Ein Zeiger auf das Objekt, das die Schnittstelle aufruft.
 *pUnkSink*<br/>
 Ein Zeiger auf das Objekt, das die Schnittstelle implementiert.
 
-*IID*<br/>
+*iid*<br/>
 Die Schnittstellen-ID, der die Verbindungspunkt-Schnittstelle.
 
 *bRefCount*<br/>

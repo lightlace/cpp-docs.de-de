@@ -9,12 +9,12 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-ms.openlocfilehash: acb7b6c677d03ef1320e24373671a7577c2ccda8
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: e3440530dfe30b6667012c76b2904dbb2786c199
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178433"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262297"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Von MFC verwendete Rückruffunktionen
 
@@ -124,4 +124,3 @@ Der Name muss exportiert werden, wie beschrieben im Abschnitt "Hinweise" des [CD
 [CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects)<br/>
 [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)<br/>
 [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring)
-

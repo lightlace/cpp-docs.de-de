@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CSettingsStore [MFC], Read
 - CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
-ms.openlocfilehash: 7f1ca94423cb1ef269c7556be25b1926fa42d2a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1de26ceedfd29f276693be512bd41f169fb44b94
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614681"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274543"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 
@@ -124,7 +124,7 @@ CSettingsStore(
 
 ### <a name="parameters"></a>Parameter
 
-*bAdminpfad*<br/>
+*bAdmin*<br/>
 [in] Boolescher Parameter, der angibt, ob die `CSettingsStore` Objekt dient, im Administratormodus.
 
 *bReadOnly*<br/>
@@ -153,7 +153,7 @@ virtual BOOL DeleteKey(
 *pszPath*<br/>
 [in] Der Name des Schlüssels, der gelöscht werden soll.
 
-*bAdminpfad*<br/>
+*bAdmin*<br/>
 [in] Der Schalter, der angibt, den Speicherort des Schlüssels zu löschen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -299,7 +299,7 @@ virtual BOOL Read(
 *lpPoint*<br/>
 [out] Verweis auf einen Zeiger auf eine `POINT` -Struktur, den Wert empfängt, aus dem Registrierungsschlüssel zu lesen.
 
-*Rect*<br/>
+*rect*<br/>
 [out] Ein Verweis auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) -Variable, den Wert empfängt, aus dem Registrierungsschlüssel zu lesen.
 
 *ppData*<br/>
@@ -417,7 +417,7 @@ virtual BOOL Write(
 *wcArray*<br/>
 [in] Verweis auf eine 16-Bit-Wort-Array-Variable, die zu speichernden Daten enthält.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Verweis auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Variable, die die zu speichernden Daten enthält.
 
 *lpPoint*<br/>

@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - scheduler_resource_allocation_error class
 ms.assetid: 8b40449a-7abb-4d0a-bb85-c0e9a495ae97
-ms.openlocfilehash: d8b94a17c4d842e97901e97dd2197692252eed43
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f7254306253aabc33f46694f3da16734e6efccf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613160"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276493"
 ---
 # <a name="schedulerresourceallocationerror-class"></a>scheduler_resource_allocation_error-Klasse
 
@@ -52,7 +52,7 @@ Diese Ausnahme wird in der Regel ausgelöst, wenn ein Aufruf an das Betriebssyst
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** concrt.h hinzu
+**Header:** concrt.h
 
 **Namespace:** Parallelität
 
@@ -83,7 +83,7 @@ explicit _CRTIMP scheduler_resource_allocation_error(
 
 ### <a name="parameters"></a>Parameter
 
-*_Nachricht*<br/>
+*_Message*<br/>
 Eine beschreibende Fehlermeldung.
 
 *_Hresult*<br/>

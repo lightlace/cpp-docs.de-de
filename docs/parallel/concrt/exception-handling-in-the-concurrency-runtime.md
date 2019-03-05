@@ -8,12 +8,12 @@ helpviewer_keywords:
 - agents, exception handling [Concurrency Runtime]
 - task groups, exception handling [Concurrency Runtime]
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
-ms.openlocfilehash: 7611e9d3f0bbf961784c9fed23117750a101486f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8239913c369605503134a9ea4c99789528911868
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437868"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272632"
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>Ausnahmebehandlung in der Concurrency Runtime
 
@@ -193,4 +193,3 @@ Weitere Informationen zu asynchronen Agents finden Sie unter [asynchrone Agents]
 [Abbruch in der PPL](cancellation-in-the-ppl.md)<br/>
 [Aufgabenplanung](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Asynchrone Agents](../../parallel/concrt/asynchronous-agents.md)
-

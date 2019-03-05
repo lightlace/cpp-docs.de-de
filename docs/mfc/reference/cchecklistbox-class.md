@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: b1e64e947f798becef32fa4d99f21e61133cc8fc
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: b34891c4f46679e43aea36a9b52d6399e020ef71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177835"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273061"
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox-Klasse
 
@@ -145,7 +145,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Gibt die Art des Felds Prüfliste. Das Format muss LBS_HASSTRINGS und LBS_OWNERDRAWFIXED (alle Elemente in der Liste sind die gleiche Höhe) oder LBS_OWNERDRAWVARIABLE sein (Elemente in der Liste sind unterschiedlicher Höhe). Dieses Format kann kombiniert werden, mit anderen [listenfeldstile](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) außer LBS_USETABSTOPS.
 
-*Rect*<br/>
+*rect*<br/>
 Gibt an, die Prüfliste-Box-Größe und Position. Kann es sich um eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](/windows/desktop/api/windef/ns-windef-tagrect) Struktur.
 
 *pParentWnd*<br/>
@@ -220,7 +220,7 @@ void Enable(
 *nIndex*<br/>
 Der Index des Listenfeldelements Prüfliste aktiviert werden.
 
-*bAktiviert*<br/>
+*bEnabled*<br/>
 Gibt an, ob das Element aktiviert oder deaktiviert ist.
 
 ##  <a name="getcheck"></a>  CCheckListBox::GetCheck
@@ -337,7 +337,7 @@ void SetCheck(
 *nIndex*<br/>
 Nullbasierte Index eines Kontrollkästchens an, die Sie im Listenfeld enthalten ist.
 
-*nPrüfen*<br/>
+*nCheck*<br/>
 Der Schaltflächenzustand für das angegebene Kontrollkästchen. Finden Sie im Abschnitt "Hinweise" Mögliche Werte.
 
 ### <a name="remarks"></a>Hinweise

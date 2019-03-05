@@ -17,12 +17,12 @@ helpviewer_keywords:
 - server applications [MFC], OLE menus and resources
 - OLE initialization failure [MFC]
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
-ms.openlocfilehash: 8b4e7787029fc9401ece02860f09b8159f086afe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0cf5b495ca1e3f6e7b0ae434c09e014a29eadb00
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592590"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281950"
 ---
 # <a name="menus-and-resources-server-additions"></a>Menüs und Ressourcen: Servererweiterungen
 
@@ -44,7 +44,7 @@ In diesem Artikel behandelten Themen umfassen:
 
 Serveranwendungen (Komponente) müssen Menüressourcen hinzugefügt, um OLE visuelle Bearbeitung unterstützen. Die Menüs verwendet, wenn die Anwendung im eigenständigen Modus ausgeführt wird, müssen nicht geändert werden, aber Sie müssen zwei neue Menüressourcen vor dem Erstellen der Anwendung hinzufügen: eines zur Unterstützung der direkten Aktivierung und eine zum unterstützen des Servers vollständig geöffnet wird. Beide Menüressourcen werden von vollständigen und Miniserver Anwendungen verwendet.
 
-- Zur Unterstützung der direkten Aktivierung müssen Sie eine Menüressource erstellen, die die Menüressource verwendet, wenn die Ausführung im eigenständigen Modus sehr ähnlich ist. Der Unterschied in diesem Menü ist, dass die Datei und Fenster-Elemente (und alle anderen Menüelemente, die die Anwendung und nicht die Daten verarbeiten) fehlen. Die Container-Anwendung stellt diesen Menüelementen bereit. Weitere Informationen zu, und ein Beispiel für dieses Verfahren das Zusammenführen von Menüs, finden Sie im Artikel [Menüs und Ressourcen: Menüs schachteln](../mfc/menus-and-resources-menu-merging.md).
+- Zur Unterstützung der direkten Aktivierung müssen Sie eine Menüressource erstellen, die die Menüressource verwendet, wenn die Ausführung im eigenständigen Modus sehr ähnlich ist. Der Unterschied in diesem Menü ist, dass die Datei und Fenster-Elemente (und alle anderen Menüelemente, die die Anwendung und nicht die Daten verarbeiten) fehlen. Die Container-Anwendung stellt diesen Menüelementen bereit. Weitere Informationen zu, und ein Beispiel für dieses Verfahren das Zusammenführen von Menüs, finden Sie im Artikel [Menüs und Ressourcen: Das Zusammenführen von Menüs](../mfc/menus-and-resources-menu-merging.md).
 
 - Um vollständig open Aktivierung zu unterstützen, müssen Sie nahezu identisch mit der verwendeten Ressource eine Ausführung im eigenständigen Modus Menüressource erstellen. Auf diese Menüressource im die einzige Änderung ist, dass einige Elemente-systemintegritätsprüfung werden entsprechend die Tatsache, die der Server ausgeführt wird, auf ein Element in einem Verbunddokument eingebettet.
 
@@ -62,7 +62,7 @@ Ein Beispiel dieser Accelerator Tabelle Änderungen vergleichen Sie die Zugriffs
 
 Die Tabelle außerdem nur eine Zeichenfolge ist in einer Serveranwendung erforderlich – eine Zeichenfolge, um anzugeben, dass der OLE-Initialisierung fehlgeschlagen ist. Als Beispiel ist hier der Zeichenfolgentabelle Eintrag, den der Anwendungs-Assistent generiert:
 
-|Id|Zeichenfolge|
+|ID|Zeichenfolge|
 |--------|------------|
 |IDP_OLE_INIT_FAILED|Fehler bei der OLE-Initialisierung. Stellen Sie sicher, dass die OLE-Bibliotheken der richtigen Version vorliegen.|
 
@@ -73,5 +73,4 @@ Die gleichen Ergänzungen gelten für Miniserver als die oben aufgeführten für
 ## <a name="see-also"></a>Siehe auch
 
 [Menüs und Ressourcen (OLE)](../mfc/menus-and-resources-ole.md)<br/>
-[Menüs und Ressourcen: Menüs schachteln](../mfc/menus-and-resources-menu-merging.md)
-
+[Menüs und Ressourcen: Zusammenführen von Menüs](../mfc/menus-and-resources-menu-merging.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 4f8e56ed4be6bf4c7a5283894493ee46c4ed2ff4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2f75044c7cfbc1f9d2af1d9bda5c108f9afa881
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620908"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269213"
 ---
 # <a name="property-pages-mfc"></a>Eigenschaftenseiten (MFC)
 
@@ -428,7 +428,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 
 ### <a name="parameters"></a>Parameter
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Der Name des der Control-Klasse, die für die Eigenschaft Seiten angegeben werden.
 
 *count*<br/>
@@ -454,7 +454,7 @@ END_PROPPAGEIDS(class_name)
 
 ### <a name="parameters"></a>Parameter
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Der Name der Steuerelement-Klasse, die auf der Seite der besitzt.
 
 ### <a name="requirements"></a>Anforderungen

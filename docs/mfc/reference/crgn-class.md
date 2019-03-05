@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 74ee046e81e0f55e5550220166c957317c2bf6cd
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 54018c3d59fe3d7e3d7a5062cda9b40da4f5d586
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178550"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279363"
 ---
 # <a name="crgn-class"></a>CRgn-Klasse
 
@@ -235,7 +235,7 @@ Gibt die logische y-Koordinate der oberen linken Ecke des umschließenden Rechte
 *x2*<br/>
 Gibt die logische X-Koordinate der unteren rechten Ecke des umschließenden Rechtecks der Ellipse an.
 
-*Y2*<br/>
+*y2*<br/>
 Gibt die logische y-Koordinate der unteren rechten Ecke des umschließenden Rechtecks der Ellipse an.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -457,7 +457,7 @@ Gibt die logische y-Koordinate der oberen linken Ecke des Bereichs an.
 *x2*<br/>
 Gibt die logische X-Koordinate der unteren rechten Ecke des Bereichs an.
 
-*Y2*<br/>
+*y2*<br/>
 Gibt die logische y-Koordinate der unteren rechten Ecke des Bereichs an.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -537,13 +537,13 @@ Gibt die logische y-Koordinate der oberen linken Ecke des Bereichs an.
 *x2*<br/>
 Gibt die logische X-Koordinate der unteren rechten Ecke des Bereichs an.
 
-*Y2*<br/>
+*y2*<br/>
 Gibt die logische y-Koordinate der unteren rechten Ecke des Bereichs an.
 
 *x3*<br/>
 Gibt die Breite der Ellipse verwendet, um die abgerundeten Ecken zu erstellen.
 
-*Y3*<br/>
+*y3*<br/>
 Gibt die Höhe der Ellipse verwendet, um die abgerundeten Ecken zu erstellen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -586,7 +586,7 @@ BOOL EqualRgn(CRgn* pRgn) const;
 
 ### <a name="parameters"></a>Parameter
 
-*PRNG*<br/>
+*pRgn*<br/>
 Identifiziert den Bereich an.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -705,7 +705,7 @@ Gibt die Anzahl der Einheiten, die zum Verschieben von links oder rechts an.
 *y*<br/>
 Gibt die Anzahl der Einheiten nach oben oder unten zu verschieben.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Die X-Koordinate der *zeigen* gibt die Anzahl der Einheiten, die zum Verschieben von links oder rechts. Die y-Koordinate der *zeigen* gibt die Anzahl der Einheiten nach oben oder unten zu verschieben. Die *zeigen* Parameter möglicherweise entweder eine `POINT` Struktur oder ein `CPoint` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -768,7 +768,7 @@ Gibt die logische X-Koordinate des Punktes, der überprüft.
 *y*<br/>
 Gibt die logische y-Koordinate des Punktes, der überprüft.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Die x- und y-Koordinaten der *zeigen* geben die x- und y-Koordinaten des Punkts, der den Wert testen. Die *zeigen* Parameter kann entweder sein. eine `POINT` Struktur oder ein `CPoint` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -826,7 +826,7 @@ Gibt die y-Koordinate von der linken oberen Ecke des rechteckigen Bereichs.
 *x2*<br/>
 Gibt die X-Koordinate von der unteren rechten Ecke des rechteckigen Bereichs.
 
-*Y2*<br/>
+*y2*<br/>
 Gibt die y-Koordinate von der unteren rechten Ecke des rechteckigen Bereichs.
 
 *lpRect*<br/>
@@ -842,4 +842,3 @@ Verwenden Sie diese Funktion statt der `CreateRectRgn` Member-Funktion, um Aufru
 
 [CWnd-Klasse](../../mfc/reference/cwnd-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
-

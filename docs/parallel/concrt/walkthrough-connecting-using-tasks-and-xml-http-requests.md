@@ -6,12 +6,12 @@ helpviewer_keywords:
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-ms.openlocfilehash: dfe4f111e130520f1c4948dc00fdf340e4d3113e
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f78adda7625d3a3def60de968c5e7be97f282a7f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175846"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266509"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Exemplarische Vorgehensweise: Verbinden von Verwendungsaufgaben und XML-HTTP-Anforderungen
 
@@ -24,7 +24,7 @@ Weitere Informationen zu Aufgaben, finden Sie unter [Aufgabenparallelität](../.
 
 Dieses Dokument erläutert zunächst, wie die `HttpRequest`-Klasse und unterstützende Klassen erstellt werden. Anschließend wird veranschaulicht, wie diese Klasse aus einer UWP-app zu verwenden, die C++ und XAML verwendet wird.
 
-Ein Beispiel für die Verwendung `IXMLHTTPRequest2` , aber nicht Aufgaben verwenden, finden Sie unter [Schnellstart: Verbindungsherstellung mithilfe einer XML-HTTP-Anforderung (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\)).
+Ein Beispiel für die Verwendung `IXMLHTTPRequest2` , aber nicht Aufgaben verwenden, finden Sie unter [Schnellstart: Herstellen einer Verbindung mit der XML-HTTP-Anforderung (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\)).
 
 > [!TIP]
 >  `IXMLHTTPRequest2` und `IXMLHTTPRequest2Callback` sind die Schnittstellen, die wir, für die Verwendung in einer UWP-app empfehlen. Darüber hinaus können Sie dieses Beispiel auch für die Verwendung in einer Desktop-App anpassen.
@@ -47,7 +47,7 @@ Um ein Abbrechen zu unterstützen, verwenden die Klassen `HttpRequest`, `HttpReq
 
 1. Fügen Sie dem Projekt eine Headerdatei mit dem Namen "HttpRequest.h" und eine Quelldatei mit dem Namen "HttpRequest.cpp" hinzu.
 
-1. Fügen Sie „pch.h“ diesen Code hinzu:
+1. Fügen Sie "pch.h" diesen Code hinzu:
 
    [!code-cpp[concrt-using-ixhr2#1](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_1.h)]
 
@@ -112,6 +112,6 @@ Hier ist die ausgeführte App:
 [Abbruch in der PPL](cancellation-in-the-ppl.md)<br/>
 [Asynchrone Programmierung in C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)<br/>
 [Erstellen von asynchronen Vorgängen in C++ für UWP-Apps](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)<br/>
-[Schnellstart: Verbindungsherstellung mithilfe einer XML-HTTP-Anforderung (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\))
+[Schnellstart: Herstellen einer Verbindung mit der XML-HTTP-Anforderung (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\))
 [task-Klasse (Concurrency Runtime)](../../parallel/concrt/reference/task-class.md)<br/>
 [task_completion_event-Klasse](../../parallel/concrt/reference/task-completion-event-class.md)

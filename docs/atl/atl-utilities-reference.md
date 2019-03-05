@@ -2,12 +2,12 @@
 title: Referenz zu ATL-Hilfsprogrammen
 ms.date: 11/04/2016
 ms.assetid: dd8a2888-34f4-461e-9bf4-834218f9b95b
-ms.openlocfilehash: 4391f1c93751da30915d5ca0acba1f68028d01b9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b5365ddc2924955fbdcf694065c4d4041a38eb01
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479183"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271943"
 ---
 # <a name="atl-utilities-reference"></a>Referenz zu ATL-Hilfsprogrammen
 

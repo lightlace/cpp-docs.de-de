@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], OLE
 - Insert object
 ms.assetid: 73c41eb8-738a-4d02-9212-d3395bb09a3a
-ms.openlocfilehash: 53e802e973ca78619252fcc4100a7cc50009f2ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1081a831cc2b9fc0ab22e2c80a4f657466534d86
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618506"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270890"
 ---
 # <a name="dialog-boxes-in-ole"></a>Dialogfelder in OLE
 
@@ -30,7 +30,7 @@ Dieses Dialogfeld ermöglicht den Benutzer, das beim Einfügen von Daten in eine
 *Symbol ändern*<br/>
 Dieses Dialogfeld ermöglicht den Benutzer auswählen, welches Symbol angezeigt wird, um das verknüpftes oder eingebettetes Element darstellen. Zeigen Sie dieses Dialogfeld an, wenn der Benutzer wählt aus dem Menü "Bearbeiten" Symbol ändern oder wählt die Schaltfläche "Symbol ändern" in der Inhalte einfügen oder Convert-Dialogfelder. Zeigen Sie an, wenn der Benutzer das Dialogfeld "Objekt einfügen Öffnet" und als Symbol wählt. Verwenden der [COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md) Klasse, um das Dialogfeld anzuzeigen.
 
-*Konvertieren*<br/>
+*Convert*<br/>
 Dieses Dialogfeld ermöglicht den Benutzer, den Typ einer eingebetteten oder verknüpften Elements zu ändern. Wenn Sie eine Metadatei in einem Verbunddokument eingebettet haben und später eine andere Anwendung zu verwenden, um die eingebetteten Metadatei ändern möchten, können Sie z. B. das Dialogfeld "konvertieren" verwenden. Dieses Dialogfeld wird normalerweise angezeigt, indem Sie auf *Konfigurationselementtyp* Objekt auf das Menü "Bearbeiten" und dann auf klicken Sie im Untermenü auf konvertieren. Verwenden der [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md) Klasse, um das Dialogfeld anzuzeigen. Führen Sie ein Beispiel, das MFC-OLE-Beispiel [OCLIENT](../visual-cpp-samples.md).
 
 *Links zum Bearbeiten oder aktualisieren Sie Links*<br/>
@@ -44,4 +44,3 @@ Das Dialogfeld "Server ausgelastet" angezeigt, wenn der Benutzer versucht, ein E
 [Dialogfelder](../mfc/dialog-boxes.md)<br/>
 [Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [OLE](../mfc/ole-in-mfc.md)
-

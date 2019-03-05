@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-ms.openlocfilehash: d12ee07c9e36f52fc176066be0e91ce1a7307858
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af6d866298309f5ddb8eb21a5caeb3d1526b166a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659068"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276285"
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem-Klasse
 
@@ -53,12 +53,12 @@ class COleDocObjectItem : public COleClientItem
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[DoDefaultPrinting](#dodefaultprinting)|Gibt die Container-Anwendung-Dokument mit den Standardeinstellungen für den Drucker aus.|
+|[COleDocObjectItem::DoDefaultPrinting](#dodefaultprinting)|Gibt die Container-Anwendung-Dokument mit den Standardeinstellungen für den Drucker aus.|
 |[COleDocObjectItem::ExecCommand](#execcommand)|Führt den Befehl, der vom Benutzer angegeben wird.|
 |[COleDocObjectItem::GetActiveView](#getactiveview)|Ruft die aktive Ansicht des Dokuments ab.|
 |[COleDocObjectItem::GetPageCount](#getpagecount)|Ruft die Anzahl der Seiten in der containeranwendung Dokument ab.|
-|[COleDocObjectItem:: OnPreparePrinting](#onprepareprinting)|Bereitet die Container-Anwendung-Dokument für den Druck.|
-|[COleDocObjectItem](#onprint)|Gibt die Container-Anwendung-Dokument.|
+|[COleDocObjectItem::OnPreparePrinting](#onprepareprinting)|Bereitet die Container-Anwendung-Dokument für den Druck.|
+|[COleDocObjectItem::OnPrint](#onprint)|Gibt die Container-Anwendung-Dokument.|
 |[COleDocObjectItem::QueryCommand](#querycommand)|Fragt den Status von Befehlen ab, die von Ereignissen auf der Benutzeroberfläche generiert wurden.|
 |[COleDocObjectItem::Release](#release)|Die Verbindung mit einer OLE-Element verknüpfte frei, und geschlossen wird, wenn es geöffnet war. Die Client-Element wird nicht zerstört werden.|
 
@@ -122,7 +122,7 @@ static HRESULT DoDefaultPrinting(
 *pCaller*<br/>
 Ein Zeiger auf eine [CView](../../mfc/reference/cview-class.md) -Objekt, das den Druckbefehl gesendet werden.
 
-*"pInfo"*<br/>
+*pInfo*<br/>
 Ein Zeiger auf eine [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) -Objekt, das beschreibt, den Auftrag gedruckt werden sollen.
 
 ##  <a name="execcommand"></a>  COleDocObjectItem::ExecCommand
@@ -220,7 +220,7 @@ static BOOL OnPreparePrinting(
 *pCaller*<br/>
 Ein Zeiger auf eine [CView](../../mfc/reference/cview-class.md) -Objekt, das den Druckbefehl gesendet werden.
 
-*"pInfo"*<br/>
+*pInfo*<br/>
 Ein Zeiger auf eine [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) -Objekt, das beschreibt, den Auftrag gedruckt werden sollen.
 
 *bPrintAll*<br/>
@@ -246,7 +246,7 @@ static void OnPrint(
 *pCaller*<br/>
 Ein Zeiger auf ein CView-Objekt, das den Druckbefehl gesendet werden.
 
-*"pInfo"*<br/>
+*pInfo*<br/>
 Ein Zeiger auf eine [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) -Objekt, das beschreibt, den Auftrag gedruckt werden sollen.
 
 *bPrintAll*<br/>

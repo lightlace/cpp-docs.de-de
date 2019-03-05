@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_4::bg
 - amp_short_vectors/Concurrency::graphics::int_4::yxz
 ms.assetid: 01768c28-23a8-4965-8267-96834864f4eb
-ms.openlocfilehash: aa1874dee72f7734c690ce9e86998a5120b2974b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7bcdd005ab5f530e08fc6e5326404d19f85faf4b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643702"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273425"
 ---
 # <a name="int4-class"></a>int_4-Klasse
 
@@ -306,14 +306,14 @@ class int_4;
 |int_4::get_w||
 |int_4::get_wx||
 |int_4::get_wxy||
-|int_4:: get_wxyz||
+|int_4::get_wxyz||
 |int_4::get_wxz||
 |int_4::get_wxzy||
-|int_4:: get_wy||
+|int_4::get_wy||
 |int_4::get_wyx||
 |int_4::get_wyxz||
-|int_4:: get_wyz||
-|int_4:: get_wyzx||
+|int_4::get_wyz||
+|int_4::get_wyzx||
 |int_4::get_wz||
 |int_4::get_wzx||
 |int_4::get_wzxy||
@@ -324,33 +324,33 @@ class int_4;
 |int_4::get_xwy||
 |int_4::get_xwyz||
 |int_4::get_xwz||
-|int_4:: get_xwzy||
-|int_4:: get_xy||
-|int_4:: get_xyw||
+|int_4::get_xwzy||
+|int_4::get_xy||
+|int_4::get_xyw||
 |int_4::get_xywz||
-|int_4:: get_xyz||
-|int_4:: get_xyzw||
+|int_4::get_xyz||
+|int_4::get_xyzw||
 |int_4::get_xz||
 |int_4::get_xzw||
 |int_4::get_xzwy||
 |int_4::get_xzy||
 |int_4::get_xzyw||
-|int_4:: get_Y||
-|int_4:: get_yw||
-|int_4:: get_ywx||
-|int_4:: get_ywxz||
-|int_4:: get_ywz||
-|int_4:: get_ywzx||
+|int_4::get_y||
+|int_4::get_yw||
+|int_4::get_ywx||
+|int_4::get_ywxz||
+|int_4::get_ywz||
+|int_4::get_ywzx||
 |int_4::get_yx||
 |int_4::get_yxw||
 |int_4::get_yxwz||
 |int_4::get_yxz||
 |int_4::get_yxzw||
-|int_4:: get_yz||
-|int_4:: get_yzw||
-|int_4:: get_yzwx||
-|int_4:: get_yzx||
-|int_4:: get_yzxw||
+|int_4::get_yz||
+|int_4::get_yzw||
+|int_4::get_yzwx||
+|int_4::get_yzx||
+|int_4::get_yzxw||
 |int_4::get_z||
 |int_4::get_zw||
 |int_4::get_zwx||
@@ -362,8 +362,8 @@ class int_4;
 |int_4::get_zxwy||
 |int_4::get_zxy||
 |int_4::get_zxyw||
-|int_4:: get_zy||
-|int_4:: get_zyw||
+|int_4::get_zy||
+|int_4::get_zyw||
 |int_4::get_zywx||
 |int_4::get_zyx||
 |int_4::get_zyxw||
@@ -375,56 +375,56 @@ class int_4;
 |int_4::ref_x||
 |int_4::ref_y||
 |int_4::ref_z||
-|int_4:: set_w||
+|int_4::set_w||
 |int_4::set_wx||
 |int_4::set_wxy||
-|int_4:: set_wxyz||
+|int_4::set_wxyz||
 |int_4::set_wxz||
 |int_4::set_wxzy||
-|int_4:: set_wy||
-|int_4:: set_wyx||
-|int_4:: set_wyxz||
-|int_4:: set_wyz||
-|int_4:: set_wyzx||
+|int_4::set_wy||
+|int_4::set_wyx||
+|int_4::set_wyxz||
+|int_4::set_wyz||
+|int_4::set_wyzx||
 |int_4::set_wz||
 |int_4::set_wzx||
 |int_4::set_wzxy||
-|int_4:: set_wzy||
+|int_4::set_wzy||
 |int_4::set_wzyx||
 |int_4::set_x||
-|int_4:: set_xw||
-|int_4:: set_xwy||
-|int_4:: set_xwyz||
+|int_4::set_xw||
+|int_4::set_xwy||
+|int_4::set_xwyz||
 |int_4::set_xwz||
-|int_4:: set_xwzy||
-|int_4:: set_xy||
-|int_4:: set_xyw||
-|int_4:: set_xywz||
-|int_4:: set_xyz||
-|int_4:: set_xyzw||
+|int_4::set_xwzy||
+|int_4::set_xy||
+|int_4::set_xyw||
+|int_4::set_xywz||
+|int_4::set_xyz||
+|int_4::set_xyzw||
 |int_4::set_xz||
-|int_4:: set_xzw||
-|int_4:: set_xzwy||
-|int_4:: set_xzy||
-|int_4:: set_xzyw||
-|int_4:: set_y||
-|int_4:: set_yw||
-|int_4:: set_ywx||
-|int_4:: set_ywxz||
-|int_4:: set_ywz||
-|int_4:: set_ywzx||
+|int_4::set_xzw||
+|int_4::set_xzwy||
+|int_4::set_xzy||
+|int_4::set_xzyw||
+|int_4::set_y||
+|int_4::set_yw||
+|int_4::set_ywx||
+|int_4::set_ywxz||
+|int_4::set_ywz||
+|int_4::set_ywzx||
 |int_4::set_yx||
-|int_4:: set_yxw||
+|int_4::set_yxw||
 |int_4::set_yxwz||
 |int_4::set_yxz||
-|int_4:: set_yxzw||
-|int_4:: set_yz||
-|int_4:: set_yzw||
-|int_4:: set_yzwx||
-|int_4:: set_yzx||
-|int_4:: set_yzxw||
+|int_4::set_yxzw||
+|int_4::set_yz||
+|int_4::set_yzw||
+|int_4::set_yzwx||
+|int_4::set_yzx||
+|int_4::set_yzxw||
 |int_4::set_z||
-|int_4:: set_zw||
+|int_4::set_zw||
 |int_4::set_zwx||
 |int_4::set_zwxy||
 |int_4::set_zwy||
@@ -434,9 +434,9 @@ class int_4;
 |int_4::set_zxwy||
 |int_4::set_zxy||
 |int_4::set_zxyw||
-|int_4:: set_zy||
-|int_4:: set_zyw||
-|int_4:: set_zywx||
+|int_4::set_zy||
+|int_4::set_zyw||
+|int_4::set_zywx||
 |int_4::set_zyx||
 |int_4::set_zyxw||
 
@@ -444,21 +444,21 @@ class int_4;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|int_4::-||
-|int_4:::||
+|int_4::operator-||
+|int_4::operator--||
 |int_4::operator%=||
-|int_4:: & =||
+|int_4::operator&=||
 |int_4::operator*=||
 |int_4::operator/=||
 |int_4::operator^=||
-|int_4::&#124;=||
+|int_4::operator&#124;=||
 |int_4::operator~||
-|int_4:: Operator++-||
+|int_4::operator++||
 |int_4::operator+=||
 |int_4::operator<\<=||
 |int_4::operator=||
-|int_4:: Operator-=||
-|int_4:: >> =||
+|int_4::operator-=||
+|int_4::operator>>=||
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
@@ -491,10 +491,10 @@ class int_4;
 |int_4::bag||
 |int_4::bagr||
 |int_4::bar||
-|int_4:: barg||
+|int_4::barg||
 |int_4::bg||
 |int_4::bga||
-|int_4:: bgar||
+|int_4::bgar||
 |int_4::bgr||
 |int_4::bgra||
 |int_4::br||
@@ -507,7 +507,7 @@ class int_4;
 |int_4::gab||
 |int_4::gabr||
 |int_4::gar||
-|int_4:: garb||
+|int_4::garb||
 |int_4::gb||
 |int_4::gba||
 |int_4::gbar||
@@ -544,28 +544,28 @@ class int_4;
 |int_4::wyx||
 |int_4::wyxz||
 |int_4::wyz||
-|int_4:: wyzx||
+|int_4::wyzx||
 |int_4::wz||
 |int_4::wzx||
 |int_4::wzxy||
 |int_4::wzy||
 |int_4::wzyx||
 |int_4::x||
-|int_4:: xw||
-|int_4:: xwy||
-|int_4:: xwyz||
+|int_4::xw||
+|int_4::xwy||
+|int_4::xwyz||
 |int_4::xwz||
-|int_4:: xwzy||
+|int_4::xwzy||
 |int_4::xy||
-|int_4:: xyw||
+|int_4::xyw||
 |int_4::xywz||
-|int_4:: XYZ||
-|int_4:: xyzw||
+|int_4::xyz||
+|int_4::xyzw||
 |int_4::xz||
-|int_4:: xzw||
-|int_4:: xzwy||
-|int_4:: xzy||
-|int_4:: xzyw||
+|int_4::xzw||
+|int_4::xzwy||
+|int_4::xzy||
+|int_4::xzyw||
 |int_4::y||
 |int_4::yw||
 |int_4::ywx||
@@ -578,7 +578,7 @@ class int_4;
 |int_4::yxz||
 |int_4::yxzw||
 |int_4::yz||
-|int_4:: yzw||
+|int_4::yzw||
 |int_4::yzwx||
 |int_4::yzx||
 |int_4::yzxw||
@@ -593,9 +593,9 @@ class int_4;
 |int_4::zxwy||
 |int_4::zxy||
 |int_4::zxyw||
-|int_4:: ZY||
-|int_4:: zyw||
-|int_4:: zywx||
+|int_4::zy||
+|int_4::zyw||
+|int_4::zywx||
 |int_4::zyx||
 |int_4::zyxw||
 
@@ -670,7 +670,7 @@ Der Wert 3-Element zu initialisieren.
 *_V*<br/>
 Der Wert für die Initialisierung.
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Das Objekt, das zum Initialisieren verwendet.
 
 ##  <a name="int_4__size"></a> Größe

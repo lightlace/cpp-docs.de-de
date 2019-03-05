@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: a16d7508f273fc444be65c1e6cc176911fd28e03
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d1f603f8439815c92360af40ccb807446d0e84a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643299"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273282"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl-Klasse
 
@@ -56,7 +56,7 @@ class CMFCEditBrowseCtrl : public CEdit
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[Cmfceditbrowsectrl:: enablebrowsebutton wurde](#enablebrowsebutton)|Aktiviert oder deaktiviert (ausgeblendet) die Schaltfläche zum Durchsuchen.|
+|[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)|Aktiviert oder deaktiviert (ausgeblendet) die Schaltfläche zum Durchsuchen.|
 |[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|Aktiviert die Schaltfläche zum Durchsuchen und fügt Sie in das Bearbeitungssteuerelement und Durchsuchen *Durchsuchen* Modus.|
 |[CMFCEditBrowseCtrl::EnableFolderBrowseButton](#enablefolderbrowsebutton)|Aktiviert die Schaltfläche zum Durchsuchen und fügt Sie in das Bearbeitungssteuerelement und Durchsuchen *Ordnersuche* Modus.|
 |[CMFCEditBrowseCtrl::GetMode](#getmode)|Gibt den aktuellen Durchsuchenmodus zurück.|
@@ -88,7 +88,7 @@ Die `CMFCEditBrowseCtrl` Klasse unterstützt die folgenden Modi.
 
    Klickt der Benutzer die Schaltfläche zum Durchsuchen, wird ein Dialogfeld zur Standardordner angezeigt.
 
-## <a name="how-to-specify-an-edit-browse-control"></a>Gewusst wie: Angeben eines durchsuchen-Bearbeitungssteuerelements
+## <a name="how-to-specify-an-edit-browse-control"></a>Gewusst wie: Geben Sie ein Bearbeitungssteuerelement für das Durchsuchen
 
 Führen Sie die folgenden Schritte aus, um ein Bearbeitungssteuerelement durchsuchen, in Ihrer Anwendung zu integrieren:
 
@@ -141,7 +141,7 @@ void EnableBrowseButton(
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 True, um die Schaltfläche "Durchsuchen" angezeigt. "False" nicht auf die Schaltfläche zum Durchsuchen angezeigt werden. Der Standardwert ist "true".
 
 *szLabel*<br/>
@@ -167,7 +167,7 @@ void EnableFileBrowseButton(
 ### <a name="parameters"></a>Parameter
 
 *lpszDefExt*<br/>
-Gibt die Standard-Dateierweiterung an, die im Dialogfeld zur Dateiauswahl verwendet wird. Der Standardwert ist NULL.
+Gibt die Standard-Dateinamenerweiterung an, die im Dialogfeld zur Dateiauswahl verwendet wird. Der Standardwert ist NULL.
 
 *lpszFilter*<br/>
 Gibt die Standardfilterzeichenfolge an, die im Dialogfeld zur Dateiauswahl verwendet wird. Der Standardwert ist NULL.
@@ -271,7 +271,7 @@ virtual void OnDrawBrowseButton(
 *pDC*<br/>
 Ein Zeiger zu einem Gerätekontext.
 
-*Rect*<br/>
+*Rechteck*<br/>
 Das umschließende Rechteck der Schaltfläche "Durchsuchen".
 
 *bIsButtonPressed*<br/>

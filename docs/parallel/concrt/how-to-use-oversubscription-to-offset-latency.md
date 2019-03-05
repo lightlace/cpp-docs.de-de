@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Verwenden der Überzeichnung zum Kompensieren der Latenz'
+title: 'Vorgehensweise: Verwenden der Überzeichnung zum Versetzen der Latenz'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - oversubscription, using [Concurrency Runtime]
 - using oversubscription [Concurrency Runtime]
 ms.assetid: a1011329-2f0a-4afb-b599-dd4043009a10
-ms.openlocfilehash: fc16fa5cfeddf82b9fcb0164796fb7f4c90aef15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d74a081f71f044cab90a8e6fdc64530eaaf87ed8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653075"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257942"
 ---
-# <a name="how-to-use-oversubscription-to-offset-latency"></a>Gewusst wie: Verwenden der Überzeichnung zum Kompensieren der Latenz
+# <a name="how-to-use-oversubscription-to-offset-latency"></a>Vorgehensweise: Verwenden der Überzeichnung zum Versetzen der Latenz
 
 Bei Anwendungen mit Aufgaben, die eine hohe Latenz aufweisen, lässt sich die allgemeine Effizienz durch die Überzeichnung verbessern. In diesem Thema wird veranschaulicht, wie Überzeichnung zum Kompensieren der Latenz beim Lesen von Daten von einer Netzwerkverbindung verwendet wird.
 
@@ -82,4 +82,3 @@ Im folgenden Beispiel wird der Text der `download`-Methode geändert, sodass RAI
 
 [Kontext](../../parallel/concrt/contexts.md)<br/>
 [Context:: Oversubscribe-Methode](reference/context-class.md#oversubscribe)
-

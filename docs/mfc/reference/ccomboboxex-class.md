@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: 05545051b145f3beb11e4b48e8f93fd7908a783a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: d7a39dd19a51bc5bab0f924d360d594bddf89b44
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694243"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265937"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx-Klasse
 
@@ -72,11 +72,11 @@ class CComboBoxEx : public CComboBox
 |[CComboBoxEx::GetEditCtrl](#geteditctrl)|Ruft das Handle für den Bearbeitungsbereich des Steuerelements von einem `ComboBoxEx` Steuerelement.|
 |[CComboBoxEx::GetExtendedStyle](#getextendedstyle)|Ruft die erweiterten Stile, die in Verwendung sind eine `ComboBoxEx` Steuerelement.|
 |[CComboBoxEx::GetImageList](#getimagelist)|Ruft einen Zeiger auf die Liste der Bilder zugewiesen eine `ComboBoxEx` Steuerelement.|
-|[:: GetItem](#getitem)|Ruft Element zu einem bestimmten `ComboBoxEx` Element.|
+|[CComboBoxEx::GetItem](#getitem)|Ruft Element zu einem bestimmten `ComboBoxEx` Element.|
 |[CComboBoxEx::HasEditChanged](#haseditchanged)|Bestimmt, ob der Benutzer den Inhalt des geändert hat die `ComboBoxEx` Steuerelement bearbeiten, indem Sie eingeben.|
-|[CComboBoxEx:: InsertItem](#insertitem)|Fügt ein neues Element in einem `ComboBoxEx` Steuerelement.|
+|[CComboBoxEx::InsertItem](#insertitem)|Fügt ein neues Element in einem `ComboBoxEx` Steuerelement.|
 |[CComboBoxEx::SetExtendedStyle](#setextendedstyle)|Legt erweiterte Stile in einem `ComboBoxEx` Steuerelement.|
-|[CComboBoxEx:: SetImageList](#setimagelist)|Legt eine Bildliste für eine `ComboBoxEx` Steuerelement.|
+|[CComboBoxEx::SetImageList](#setimagelist)|Legt eine Bildliste für eine `ComboBoxEx` Steuerelement.|
 |[CComboBoxEx::SetItem](#setitem)|Legt die Attribute für ein Element in einem `ComboBoxEx` Steuerelement.|
 |[CComboBoxEx::SetWindowTheme](#setwindowtheme)|Legt den visuellen Stil des erweiterten Kombinationsfeld-Steuerelement fest.|
 
@@ -149,7 +149,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Gibt die Kombination von kombinationsfeldformate angewendet werden, auf das Kombinationsfeld an. Finden Sie unter **"Hinweise"** unten für Weitere Informationen zu Stilen.
 
-*Rect*<br/>
+*rect*<br/>
 Ein Verweis auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die die Position und Größe des Kombinationsfelds ist.
 
 *pParentWnd*<br/>
@@ -209,7 +209,7 @@ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erwei
 *dwStyle*<br/>
 Das Kombinationsfeld-Steuerelement Stil. Finden Sie unter [erstellen](#create) für eine Liste der Formate.
 
-*Rect*<br/>
+*rect*<br/>
 Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
 
 *pParentWnd*<br/>

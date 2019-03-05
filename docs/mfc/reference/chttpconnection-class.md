@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CHttpConnection [MFC], CHttpConnection
 - CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
-ms.openlocfilehash: 7d11420ca48bfcecbd2534123a36364314b9651c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7a91454b9a8619cda155f33391e5d02ae7653b5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611002"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273607"
 ---
 # <a name="chttpconnection-class"></a>CHttpConnection-Klasse
 
@@ -39,7 +39,7 @@ class CHttpConnection : public CInternetConnection
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CHttpConnection:: OpenRequest](#openrequest)|Öffnet eine HTTP-Anforderung an.|
+|[CHttpConnection::OpenRequest](#openrequest)|Öffnet eine HTTP-Anforderung an.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -106,7 +106,7 @@ Ein Zeiger auf eine Zeichenfolge, die den Namen des Servers enthält.
 *dwContext*<br/>
 Der Kontextbezeichner für den `CInternetConnection` Objekt. Finden Sie unter **"Hinweise"** für Weitere Informationen zu *DwContext*.
 
-*%nPort*<br/>
+*nPort*<br/>
 Die Zahl, die den Internet-Port für diese Verbindung identifiziert.
 
 *pstrUserName*<br/>
@@ -119,7 +119,7 @@ Ein Zeiger auf eine auf Null endende Zeichenfolge, die das Kennwort für die Anm
 |--------------------|--------------------|---------------------------------|---------------------------------|
 |NULL oder ""|NULL oder ""|"Anonym"|Die e-Mail-Adresse des Benutzers|
 |Nicht-NULL-Zeichenfolge|NULL oder ""|*pstrUserName*|" "|
-|NULL-nicht-NULL-Zeichenfolge|FEHLER|FEHLER||
+|NULL-nicht-NULL-Zeichenfolge|ERROR|ERROR||
 |Nicht-NULL-Zeichenfolge|Nicht-NULL-Zeichenfolge|*pstrUserName*|*pstrPassword*|
 
 *dwFlags*<br/>

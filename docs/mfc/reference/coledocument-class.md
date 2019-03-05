@@ -52,12 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-ms.openlocfilehash: 2f28178240f7d17e124970d91ec7eb338ef110e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f36557a4a993e8abd3004dc59372cc5a089e044
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452149"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259749"
 ---
 # <a name="coledocument-class"></a>COleDocument-Klasse
 
@@ -166,7 +166,7 @@ BOOL ApplyPrintDevice(const PRINTDLG* ppd);
 *ptd*<br/>
 Zeiger auf eine `DVTARGETDEVICE` Datenstruktur, die Informationen über das neue Gerät für die Print-Ziel enthält. NULL kann sein.
 
-*PPD*<br/>
+*ppd*<br/>
 Zeiger auf eine `PRINTDLG` Datenstruktur, die Informationen über das neue Gerät für die Print-Ziel enthält. NULL kann sein.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -201,7 +201,7 @@ void EnableCompoundFile(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 Gibt an, ob die Verbunddatei-Unterstützung aktiviert oder deaktiviert ist.
 
 ### <a name="remarks"></a>Hinweise
@@ -222,7 +222,7 @@ virtual COleClientItem* GetInPlaceActiveItem(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Zeiger auf das Fenster, in dem das Containerdokument angezeigt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -239,7 +239,7 @@ COleClientItem* GetNextClientItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Ein Verweis auf eine POSITION Wert festgelegt, durch einen vorherigen Aufruf von `GetNextClientItem`; der erste Wert wird zurückgegeben, durch die `GetStartPosition` Member-Funktion.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -264,7 +264,7 @@ virtual CDocItem* GetNextItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Ein Verweis auf eine POSITION Wert festgelegt, durch einen vorherigen Aufruf von `GetNextItem`; der erste Wert wird zurückgegeben, durch die `GetStartPosition` Member-Funktion.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -289,7 +289,7 @@ COleServerItem* GetNextServerItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Ein Verweis auf eine POSITION Wert festgelegt, durch einen vorherigen Aufruf von `GetNextServerItem`; der erste Wert wird zurückgegeben, durch die `GetStartPosition` Member-Funktion.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -438,7 +438,7 @@ afx_msg void OnUpdateEditChangeIcon(CCmdUI* pCmdUI);
 
 ### <a name="parameters"></a>Parameter
 
-*nämlich pCmdUI*<br/>
+*pCmdUI*<br/>
 Ein Zeiger auf eine `CCmdUI` Struktur, die Sie im Menü darstellt, die den Update-Befehl generiert. Ruft das Update der `Enable` Memberfunktion die `CCmdUI` Struktur über *nämlich pCmdUI* zum Aktualisieren der Benutzeroberfläche.
 
 ### <a name="remarks"></a>Hinweise
@@ -455,7 +455,7 @@ afx_msg void OnUpdateEditLinksMenu(CCmdUI* pCmdUI);
 
 ### <a name="parameters"></a>Parameter
 
-*nämlich pCmdUI*<br/>
+*pCmdUI*<br/>
 Ein Zeiger auf eine `CCmdUI` Struktur, die Sie im Menü darstellt, die den Update-Befehl generiert. Ruft das Update der `Enable` Memberfunktion die `CCmdUI` Struktur über *nämlich pCmdUI* zum Aktualisieren der Benutzeroberfläche.
 
 ### <a name="remarks"></a>Hinweise
@@ -472,7 +472,7 @@ afx_msg void OnUpdateObjectVerbMenu(CCmdUI* pCmdUI);
 
 ### <a name="parameters"></a>Parameter
 
-*nämlich pCmdUI*<br/>
+*pCmdUI*<br/>
 Ein Zeiger auf eine `CCmdUI` Struktur, die Sie im Menü darstellt, die den Update-Befehl generiert. Ruft das Update der `Enable` Memberfunktion die `CCmdUI` Struktur über *nämlich pCmdUI* zum Aktualisieren der Benutzeroberfläche.
 
 ### <a name="remarks"></a>Hinweise
@@ -489,7 +489,7 @@ afx_msg void OnUpdatePasteLinkMenu(CCmdUI* pCmdUI);
 
 ### <a name="parameters"></a>Parameter
 
-*nämlich pCmdUI*<br/>
+*pCmdUI*<br/>
 Ein Zeiger auf eine `CCmdUI` Struktur, die Sie im Menü darstellt, die den Update-Befehl generiert. Ruft das Update der `Enable` Memberfunktion die `CCmdUI` Struktur über *nämlich pCmdUI* zum Aktualisieren der Benutzeroberfläche.
 
 ### <a name="remarks"></a>Hinweise
@@ -506,7 +506,7 @@ afx_msg void OnUpdatePasteMenu(CCmdUI* pCmdUI);
 
 ### <a name="parameters"></a>Parameter
 
-*nämlich pCmdUI*<br/>
+*pCmdUI*<br/>
 Ein Zeiger auf eine `CCmdUI` Struktur, die Sie im Menü darstellt, die den Update-Befehl generiert. Ruft das Update der `Enable` Memberfunktion die `CCmdUI` Struktur über *nämlich pCmdUI* zum Aktualisieren der Benutzeroberfläche.
 
 ### <a name="remarks"></a>Hinweise
@@ -548,4 +548,3 @@ Dadurch wird das Framework fordert den Benutzer auf das Dokument zu speichern, b
 [MFC-Beispiel MFCBIND](../../visual-cpp-samples.md)<br/>
 [CDocument-Klasse](../../mfc/reference/cdocument-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
-

@@ -2,12 +2,12 @@
 title: Automatische Parallelisierung und automatische Vektorisierung
 ms.date: 11/04/2016
 ms.assetid: ec71583a-287b-4599-8767-1d255e080fe3
-ms.openlocfilehash: 06ab255e7769bfa56d5a8d22cdbe19d415ce6b31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 018289bc9499aee8d1739ebeed0c1cb847769a08
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618343"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276623"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>Automatische Parallelisierung und automatische Vektorisierung
 
@@ -107,7 +107,7 @@ Wie Sie mit der automatischen Parallelisierung können Sie angeben können die [
 
 Weitere Informationen zu Ursachencodes und Meldungen finden Sie unter [Vectorizer- and Parallelizer-Meldungen](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).
 
-Ein Beispiel dafür, wie die Vektorisierung in der Praxis funktioniert, finden Sie unter [Austin-Projekt Teil 2 von 6: wenden von Seiten](http://blogs.msdn.com/b/vcblog/archive/2012/09/27/10348494.aspx)
+Ein Beispiel dafür, wie die Vektorisierung in der Praxis funktioniert, finden Sie unter [Austin-Projekt Teil 2 von 6: Seite mit dem Curling](http://blogs.msdn.com/b/vcblog/archive/2012/09/27/10348494.aspx)
 
 ## <a name="see-also"></a>Siehe auch
 

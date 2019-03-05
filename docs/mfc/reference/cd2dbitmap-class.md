@@ -51,12 +51,12 @@ helpviewer_keywords:
 - CD2DBitmap [MFC], m_strPath
 - CD2DBitmap [MFC], m_uiResID
 ms.assetid: 2b3686f1-812c-462b-b449-9f0cb6949bf6
-ms.openlocfilehash: 869d8c9cffae1a257de04cf82446025be33ef7de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 288ba5e1503a4e3eefe83624cf9a489274a10823
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605867"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264715"
 ---
 # <a name="cd2dbitmap-class"></a>CD2DBitmap-Klasse
 
@@ -75,7 +75,7 @@ class CD2DBitmap : public CD2DResource;
 |Name|Beschreibung|
 |----------|-----------------|
 |[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|Überladen. Erstellt ein Objekt CD2DBitmap aus HBITMAP.|
-|[CD2DBitmap:: ~ CD2DBitmap](#_dtorcd2dbitmap)|Der Destruktor. Wird aufgerufen, wenn ein D2D-Bitmap-Objekt zerstört wird.|
+|[CD2DBitmap::~CD2DBitmap](#_dtorcd2dbitmap)|Der Destruktor. Wird aufgerufen, wenn ein D2D-Bitmap-Objekt zerstört wird.|
 
 ### <a name="protected-constructors"></a>Geschützte Konstruktoren
 
@@ -260,7 +260,7 @@ HRESULT CopyFromMemory(
 *srcData*<br/>
 Die zu kopierenden Daten.
 
-*Schriftbreite*<br/>
+*pitch*<br/>
 Die Stride oder Tonhöhe, der die Quell-Bitmap, die in SrcData gespeichert. Ein Schritt ist die Byteanzahl des einer Scanzeile (eine Zeile der Pixel im Arbeitsspeicher). Das Segment aus der folgenden Formel berechnet werden kann: Pixelbreite \* Bytes pro Pixel + Speicher Auffüllung.
 
 *destRect*<br/>

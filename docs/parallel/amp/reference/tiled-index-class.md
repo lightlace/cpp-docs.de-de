@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-ms.openlocfilehash: 11faec19160ccc6028bdb294f37a51d7fe26dc15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cea1ac1d500a9cf3bcbdc1f5dde33a0002cbd363
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619829"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257903"
 ---
 # <a name="tiledindex-class"></a>tiled_index-Klasse
 
@@ -133,7 +133,7 @@ tiled_index(
 *_Global*<br/>
 Die globale [Index](index-class.md) des erstellten `tiled_index`.
 
-*_Lokale*<br/>
+*_Local*<br/>
 Die lokale [Index](index-class.md) des erstellten `tiled_index`
 
 *_Tile*<br/>
@@ -145,7 +145,7 @@ Der kachelursprungs [Index](index-class.md) des erstellten `tiled_index`
 *_Barrier*<br/>
 Die [Tile_barrier](tile-barrier-class.md) Objekt des konstruierten `tiled_index`.
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Das `tile_index`-Objekt, das in das erstellte `tiled_index`-Objekt kopiert werden soll.
 
 ## <a name="overloads"></a>Overloads

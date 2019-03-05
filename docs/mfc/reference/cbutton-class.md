@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 26dcf50cc3dc48fec5d6e4957ffd1ef340ad1dbf
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: b1a02d995594f5e079359151167ac970a3d1ab37
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178642"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260139"
 ---
 # <a name="cbutton-class"></a>CButton-Klasse
 
@@ -121,7 +121,7 @@ class CButton : public CWnd
 |[CButton::GetSplitStyle](#getsplitstyle)|Ruft ab, der Split-Button-Stile, die das aktuelle SplitButton-Steuerelement zu definieren.|
 |[CButton::GetState](#getstate)|Ruft ab, der Aktivierungszustand Hervorhebung Zustand und Fokuszustands eines Schaltflächen-Steuerelements.|
 |[CButton::GetTextMargin](#gettextmargin)|Ruft den Textrand des Button-Steuerelements ab.|
-|[CButton:: SetBitmap](#setbitmap)|Gibt an, eine Bitmap, die auf die Schaltfläche angezeigt werden.|
+|[CButton::SetBitmap](#setbitmap)|Gibt an, eine Bitmap, die auf die Schaltfläche angezeigt werden.|
 |[CButton::SetButtonStyle](#setbuttonstyle)|Ändert den Stil einer Schaltfläche an.|
 |[CButton::SetCheck](#setcheck)|Legt den Aktivierungszustand eines Schaltflächen-Steuerelements fest.|
 |[CButton::SetCursor](#setcursor)|Gibt ein Cursorbild auf die Schaltfläche angezeigt werden.|
@@ -219,7 +219,7 @@ Gibt Text an das Schaltflächen-Steuerelement.
 *dwStyle*<br/>
 Gibt das Schaltflächen-Steuerelement-Stil. Wenden Sie eine beliebige Kombination von [Schaltfläche Stile](../../mfc/reference/styles-used-by-mfc.md#button-styles) auf die Schaltfläche.
 
-*Rect*<br/>
+*rect*<br/>
 Gibt an, des Schaltflächen-Steuerelements die Größe und Position. Es kann sein, entweder eine `CRect` Objekt oder ein `RECT` Struktur.
 
 *pParentWnd*<br/>
@@ -508,7 +508,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*"pInfo"*|[out] Zeiger auf eine [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) -Struktur, die Informationen über das aktuelle SplitButton-Steuerelement empfängt. Der Aufrufer ist verantwortlich für die Zuordnung von der Struktur.|
+|*pInfo*|[out] Zeiger auf eine [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) -Struktur, die Informationen über das aktuelle SplitButton-Steuerelement empfängt. Der Aufrufer ist verantwortlich für die Zuordnung von der Struktur.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -696,7 +696,7 @@ void SetCheck(int nCheck);
 
 ### <a name="parameters"></a>Parameter
 
-*nPrüfen*<br/>
+*nCheck*<br/>
 Gibt den Aktivierungszustand an. Dieser Parameter kann einen der folgenden sein:
 
 |Wert|Bedeutung|
@@ -970,7 +970,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*"pInfo"*|[in] Zeiger auf eine [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) Struktur, die das aktuelle SplitButton-Steuerelement definiert.|
+|*pInfo*|[in] Zeiger auf eine [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) Struktur, die das aktuelle SplitButton-Steuerelement definiert.|
 
 ### <a name="return-value"></a>Rückgabewert
 

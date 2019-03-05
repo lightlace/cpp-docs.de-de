@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CFont [MFC], FromHandle
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
-ms.openlocfilehash: f925940f0813e1912be9f2382b676e80db8240c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60a717136f69b29df48dd8f449ddaffe5c15ccbf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607896"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271865"
 ---
 # <a name="cfont-class"></a>CFont-Klasse
 
@@ -49,7 +49,7 @@ class CFont : public CGdiObject
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CFont::](#createfont)|Initialisiert eine `CFont` mit den angegebenen Merkmalen.|
+|[CFont::CreateFont](#createfont)|Initialisiert eine `CFont` mit den angegebenen Merkmalen.|
 |[CFont::CreateFontIndirect](#createfontindirect)|Initialisiert eine `CFont` Objekt mit den Eigenschaften, die im angegebenen ein `LOGFONT` Struktur.|
 |[CFont::CreatePointFont](#createpointfont)|Initialisiert eine `CFont` mit der angegebenen Höhe, gemessen in Zehnteln einer zeigen, und die Schriftart.|
 |[CFont::CreatePointFontIndirect](#createpointfontindirect)|Identisch mit `CreateFontIndirect` mit dem Unterschied, dass die Höhe der Schriftart in Zehntelsekunden ein Punkt anstelle von logischen Einheiten gemessen wird.|
@@ -362,4 +362,3 @@ Weitere Informationen zur Verwendung von Grafikobjekten finden Sie unter [Grafik
 [MFC-Beispiel HIERSVR](../../visual-cpp-samples.md)<br/>
 [CGdiObject-Klasse](../../mfc/reference/cgdiobject-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
-

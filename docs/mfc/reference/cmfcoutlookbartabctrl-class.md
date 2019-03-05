@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-ms.openlocfilehash: e858d5a481add0f3c6e61175a96a5b27133bf125
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01effb8cb1142db0bcae6f9c456e4a3b3abd69e8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559717"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269937"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 
@@ -85,7 +85,7 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 |[CMFCOutlookBarTabCtrl::EnableScrollButtons](#enablescrollbuttons)|Wird aufgerufen, durch das Framework um Schaltflächen zu ermöglichen, die der Benutzer einen Bildlauf durch Schaltflächen in der Outlook-Leistenbereich durchführen kann.|
 |`CMFCOutlookBarTabCtrl::FindTargetWnd`|Identifiziert den Bereich, der einen angegebenen Punkt enthält. (Überschreibt [CMFCBaseTabCtrl::FindTargetWnd](../../mfc/reference/cmfcbasetabctrl-class.md#findtargetwnd).)|
 |[CMFCOutlookBarTabCtrl::GetBorderSize](#getbordersize)|Gibt zurück, die Rahmengröße des Outlook Registerkarten-Steuerelements.|
-|`CMFCOutlookBarTabCtrl::GetTabArea`|Ruft ab, die Größe und Position des Registerkartenbereichs des Registerkarten-Steuerelements. (Überschreibt [CMFCBaseTabCtrl::GetTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#gettabarea).)|
+|`CMFCOutlookBarTabCtrl::GetTabArea`|Ruft ab, die Größe und Position des Registerkartenbereichs des Registerkarten-Steuerelements. (Overrides [CMFCBaseTabCtrl::GetTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#gettabarea).)|
 |`CMFCOutlookBarTabCtrl::GetThisClass`|Durch das Framework verwendet wird, einen Zeiger zum Abrufen der [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das diesem Klassentyp zugeordnet ist.|
 |[CMFCOutlookBarTabCtrl::GetVisiblePageButtons](#getvisiblepagebuttons)||
 |[CMFCOutlookBarTabCtrl::IsAnimation](#isanimation)|Bestimmt, ob die Animation, die während des Wechsels zwischen aktiven Registerkarten tritt auf, aktiviert ist.|
@@ -219,7 +219,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 [in] Gibt an, die ursprüngliche Größe und Position, in Pixel.
 
 *pParentWnd*<br/>
@@ -246,7 +246,7 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] Gibt an, ob die Animation aktiviert oder deaktiviert werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -265,7 +265,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 Bei "true", ermöglichen Sie die direkte Bearbeitung der textbezeichnung. False gibt an, deaktivieren Sie die direkte Bearbeitung aus.
 
 ### <a name="remarks"></a>Hinweise
@@ -285,7 +285,7 @@ void EnableScrollButtons(
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] Bestimmt, ob die Bildlauf-Schaltflächen angezeigt werden.
 
 *bIsUp*<br/>
@@ -476,7 +476,7 @@ BOOL SetToolbarImageList(
 *uiID*<br/>
 [in] Gibt die Ressourcen-ID beim Laden des Bilds an.
 
-*CX*<br/>
+*cx*<br/>
 [in] Gibt die Breite eines Bilds in der Bildliste in Pixel an.
 
 *clrTransp*<br/>

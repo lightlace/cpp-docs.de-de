@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-ms.openlocfilehash: 1d0aa8b3b5409659dee08b4e4365beac1a3a92be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2537ed857651b5210b104a270b3d827246b8339a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492264"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273347"
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry-Klasse
 
@@ -52,7 +52,7 @@ Geben Sie die Blockdaten gespeichert werden, der `network_link_registry`.
 |----------|-----------------|
 |[add](#add)|Ruft beim Überschreiben in einer abgeleiteten Klasse fügt einen Link zu der `network_link_registry` Objekt.|
 |[begin](#begin)|Ruft beim Überschreiben in einer abgeleiteten Klasse, gibt einen Iterator zum ersten Element in der `network_link_registry` Objekt.|
-|[Enthält](#contains)|Sucht beim Überschreiben in einer abgeleiteten Klasse die `network_link_registry` -Objekt für einen angegebenen Block.|
+|[contains](#contains)|Sucht beim Überschreiben in einer abgeleiteten Klasse die `network_link_registry` -Objekt für einen angegebenen Block.|
 |[count](#count)|Ruft beim Überschreiben in einer abgeleiteten Klasse gibt die Anzahl der Elemente in der `network_link_registry` Objekt.|
 |[remove](#remove)|Ruft beim Überschreiben in einer abgeleiteten Klasse entfernt einen angegebenen Block aus der `network_link_registry` Objekt.|
 
@@ -80,7 +80,7 @@ virtual void add(_EType _Link) = 0;
 
 ### <a name="parameters"></a>Parameter
 
-*_Mit verknüpfen*<br/>
+*_Link*<br/>
 Ein Zeiger auf einen Block hinzugefügt werden.
 
 ##  <a name="begin"></a> beginnen
@@ -109,7 +109,7 @@ virtual bool contains(_EType _Link) = 0;
 
 ### <a name="parameters"></a>Parameter
 
-*_Mit verknüpfen*<br/>
+*_Link*<br/>
 Ein Zeiger auf einen Block, der in gesucht wird die `network_link_registry` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -138,7 +138,7 @@ virtual bool remove(_EType _Link) = 0;
 
 ### <a name="parameters"></a>Parameter
 
-*_Mit verknüpfen*<br/>
+*_Link*<br/>
 Ein Zeiger auf einen Block, wenn entfernt wurde gefunden.
 
 ### <a name="return-value"></a>Rückgabewert

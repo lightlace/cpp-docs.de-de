@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CArchive class [MFC], storing and loading objects
 - CArchive class [MFC], operators
 ms.assetid: 56aef326-02dc-4992-8282-f0a4b78a064e
-ms.openlocfilehash: 28396d797d0ca63f110fe4482aba8fe69f0608c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b4192e79b68388e45eb9837e056bbd881de2933
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495471"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259671"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>Verwenden der CArchive &lt; &lt; und &gt; &gt; Operatoren
 
@@ -62,4 +62,3 @@ Die **CArchive <\<**  und **>>** Operatoren jederzeit einen Verweis auf die `CAr
 ## <a name="see-also"></a>Siehe auch
 
 [Serialisierung: Serialisieren eines Objekts](../mfc/serialization-serializing-an-object.md)
-

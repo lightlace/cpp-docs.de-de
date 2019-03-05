@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Agents Library
 - Asynchronous Agents Library
 ms.assetid: d2a72a31-8ba6-4220-ad7a-e403a6acaa42
-ms.openlocfilehash: 8b4e8e6489e98aadb6ea41d32d5a9ba14efe2668
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 39ae785b602b3928f0c32f9fc599527dab5558f5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175859"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268043"
 ---
 # <a name="asynchronous-agents-library"></a>Asynchronous Agents Library
 
@@ -72,10 +72,10 @@ Beschreibt die Implementierung des Producer-Consumer-Musters in der Anwendung.
 [Vorgehensweise: Bereitstellen von Arbeitsfunktionen für die call- und transformer-Klassen](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)<br/>
 Veranschaulicht verschiedene Möglichkeiten zum Bereitstellen von Arbeitsfunktionen der [Concurrency:: Call](../../parallel/concrt/reference/call-class.md) und [Concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md) Klassen.
 
-[Vorgehensweise: Verwenden von transformer in einer Datenpipeline](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)<br/>
+[Vorgehensweise: Verwenden von „transformer“ in einer Datenpipeline](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)<br/>
 Zeigt, wie die [Concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md) Klasse in einer Datenpipeline.
 
-[Vorgehensweise: Auswählen von abgeschlossenen Aufgaben](../../parallel/concrt/how-to-select-among-completed-tasks.md)<br/>
+[Vorgehensweise: Auswählen von abgeschlossenen Tasks](../../parallel/concrt/how-to-select-among-completed-tasks.md)<br/>
 Zeigt, wie die [Choice](../../parallel/concrt/reference/choice-class.md) und [Concurrency:: Join](../../parallel/concrt/reference/join-class.md) Klassen, die erste Aufgabe zum Abschließen eines Suchalgorithmus auszuwählen.
 
 [Vorgehensweise: Senden einer Nachricht in regelmäßigen Intervallen](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)<br/>
@@ -89,4 +89,3 @@ Beschreibt, wie verschiedene parallele Muster wie parallele Algorithmen in den A
 
 [Concurrency Runtime](../../parallel/concrt/concurrency-runtime.md)<br/>
 Beschreibt die Concurrency Runtime, die die parallele Programmierung vereinfacht, und stellt Links zu verwandten Themen bereit.
-

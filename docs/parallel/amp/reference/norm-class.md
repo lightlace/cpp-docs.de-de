@@ -6,12 +6,12 @@ f1_keywords:
 - AMP_SHORT_VECTORS/norm
 - AMP_SHORT_VECTORS/Concurrency::graphics::norm Constructor
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
-ms.openlocfilehash: 2d37dcb430be9941444a90ac0a4ba34f3ee30515
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56f879ef2fc0d3010ab4f64fedaf2570dac565d1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630762"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272424"
 ---
 # <a name="norm-class"></a>norm-Klasse
 
@@ -35,15 +35,15 @@ class norm;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|Norm::Operator-||
-|Norm::Operator:||
+|norm::operator-||
+|norm::operator--||
 |Norm::Operator "float"|Konvertierungsoperator. Die Anzahl der Norm auf einen Gleitkommatyp konvertieren Wert.|
-|Norm::Operator * =||
-|Norm::Operator Operator / =||
-|Norm::Operator ++||
-|Norm::Operator +=||
+|norm::operator*=||
+|norm::operator/=||
+|norm::operator++||
+|norm::operator+=||
 |norm::operator=||
-|Norm::Operator =||
+|norm::operator-=||
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -94,7 +94,7 @@ norm(
 *_V*<br/>
 Der Wert, der zum Initialisieren verwendet wird.
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Das Objekt, das zum Initialisieren verwendet.
 
 ## <a name="see-also"></a>Siehe auch

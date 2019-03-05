@@ -1,5 +1,5 @@
 ---
-title: 'Container: Client-Element-Zustände'
+title: 'Container: Clientelement-Zustände'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE containers [MFC], client-item states
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - lifetime, lifetime states and OLE container client items
 - client items and OLE containers
 ms.assetid: e7021caa-bd07-4adb-976e-f5f3d025bc53
-ms.openlocfilehash: 866aa6f2265abe671ce0028e3be5f1c8ee1762a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1453ba3f96e49cefc9014a93ebcfbcfe5c6bc905
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575343"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273672"
 ---
-# <a name="containers-client-item-states"></a>Container: Client-Element-Zustände
+# <a name="containers-client-item-states"></a>Container: Clientelement-Zustände
 
 Dieser Artikel beschreibt die verschiedenen Zustände, die ein Clientelement, der während seiner Lebensdauer durchläuft.
 
@@ -42,6 +42,6 @@ Wenn ein Element vorhanden aktiviert wurde, übergibt, in der Regel nur kurz ges
 
 [Container](../mfc/containers.md)<br/>
 [Activation (Aktivierung)](../mfc/activation-cpp.md)<br/>
-[Container: Client-Element-Benachrichtigungen](../mfc/containers-client-item-notifications.md)<br/>
+[Container: Clientelement-Benachrichtigungen](../mfc/containers-client-item-notifications.md)<br/>
 [Tracker](../mfc/trackers.md)<br/>
 [CRectTracker-Klasse](../mfc/reference/crecttracker-class.md)

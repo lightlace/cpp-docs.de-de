@@ -34,12 +34,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-ms.openlocfilehash: 615c9a409b66ca0f515b15fbb55fd794102524fd
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 3673b7ae8630a344e640df70a23698247b0ff8ec
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694074"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262635"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc-Klasse
 
@@ -125,7 +125,7 @@ CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
 
 ### <a name="parameters"></a>Parameter
 
-*RS*<br/>
+*rhs*<br/>
 Die `CSecurityDesc` Objekt oder `SECURITY_DESCRIPTOR` Struktur, die dem neuen Server `CSecurityDesc` Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -154,7 +154,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 
 ### <a name="parameters"></a>Parameter
 
-*pStr*<br/>
+*pstr*<br/>
 Zeiger auf eine auf Null endende Zeichenfolge, enthält die [Zeichenfolgenformat Sicherheitsbeschreibung](/windows/desktop/SecAuthZ/security-descriptor-string-format) konvertiert werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -167,7 +167,7 @@ Die Zeichenfolge kann erstellt werden, mithilfe von [CSecurityDesc::ToString](#t
 
 Diese Methode ruft [wurde von ConvertStringSecurityDescriptorToSecurityDescriptor](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora).
 
-##  <a name="getcontrol"></a>  CSecurityDesc:: Getcontrol
+##  <a name="getcontrol"></a>  CSecurityDesc::GetControl
 
 Ruft Informationen aus der Sicherheitsbeschreibung zu steuern.
 
@@ -525,7 +525,7 @@ CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 
 ### <a name="parameters"></a>Parameter
 
-*RS*<br/>
+*rhs*<br/>
 Die `SECURITY_DESCRIPTOR` Struktur oder `CSecurityDesc` Objekt, das Zuweisen der `CSecurityDesc` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -566,7 +566,7 @@ Gibt bei Erfolg true zurück, bei einem Fehler false.
 
 Diese Methode ruft [SetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
 
-##  <a name="setdacl"></a>  CSecurityDesc:: SetDacl
+##  <a name="setdacl"></a>  CSecurityDesc::SetDacl
 
 Legt die Informationen in eine DACL (discretionary Access Control List) fest. Wenn eine DACL bereits in der Sicherheitsbeschreibung vorhanden ist, wird es ersetzt.
 
@@ -609,7 +609,7 @@ bool SetGroup(const CSid& Sid, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>Parameter
 
-*SID*<br/>
+*Sid*<br/>
 Ein Verweis auf eine [CSid](../../atl/reference/csid-class.md) -Objekt für die Sicherheitsbeschreibung neue primäre Gruppe. Dieser Parameter darf nicht NULL sein. Eine Sicherheitsbeschreibung kann gekennzeichnet werden, ohne eine DACL oder eine SACL, jedoch muss eine Gruppe und Besitzer kann es dazu sogar werden die NULL-SID (die eine integrierte SID mit einer speziellen Bedeutung).
 
 *bDefaulted*<br/>
@@ -629,7 +629,7 @@ bool SetOwner(const CSid& Sid, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>Parameter
 
-*SID*<br/>
+*Sid*<br/>
 Die [CSid](../../atl/reference/csid-class.md) -Objekt für die Sicherheitsbeschreibung des neuen primären Besitzer. Dieser Parameter darf nicht NULL sein.
 
 *bDefaulted*<br/>
@@ -639,7 +639,7 @@ Gibt an, ob ein Standardmechanismus für die Informationen zum Besitzer abgeleit
 
 Gibt bei Erfolg true zurück, bei einem Fehler false.
 
-##  <a name="setsacl"></a>  CSecurityDesc:: Setsacl
+##  <a name="setsacl"></a>  CSecurityDesc::SetSacl
 
 Legt die Informationen in eine System Access Control List, (Systemzugriffssteuerungsliste SACL) fest. Wenn eine SACL bereits in der Sicherheitsbeschreibung vorhanden ist, wird es ersetzt.
 
@@ -672,10 +672,10 @@ bool ToString(
 
 ### <a name="parameters"></a>Parameter
 
-*pStr*<br/>
+*pstr*<br/>
 Zeiger auf eine Null-terminierte Zeichenfolge, die erhält die [Zeichenfolgenformat Sicherheitsbeschreibung](/windows/desktop/SecAuthZ/security-descriptor-string-format).
 
-*SI*<br/>
+*si*<br/>
 Gibt eine Kombination von Bitflags SECURITY_INFORMATION, an die Komponenten der Sicherheitsbeschreibung aus, in die Ausgabezeichenfolge einzuschließen.
 
 ### <a name="return-value"></a>Rückgabewert

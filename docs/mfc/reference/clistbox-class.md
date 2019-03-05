@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: ad9f945a91a96c40afe614240a847a028ba5b5d9
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 17ff89fde3ef893c2cfcd8beeb8482722af60358
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178615"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280315"
 ---
 # <a name="clistbox-class"></a>CListBox-Klasse
 
@@ -139,7 +139,7 @@ class CListBox : public CWnd
 |[CListBox::DeleteString](#deletestring)|Löscht eine Zeichenfolge aus einem Listenfeld.|
 |[CListBox::Dir](#dir)|Fügt Dateinamen, Laufwerke oder beides aus dem aktuellen Verzeichnis in ein Listenfeld an.|
 |[CListBox::DrawItem](#drawitem)|Wird aufgerufen, durch das Framework, wenn sich ein Darstellungsaspekt eines Ownerdrawn-Liste im Feld ändert.|
-|[CListBox:: FindString](#findstring)|Sucht nach einer Zeichenfolge in einem Listenfeld.|
+|[CListBox::FindString](#findstring)|Sucht nach einer Zeichenfolge in einem Listenfeld.|
 |[CListBox::FindStringExact](#findstringexact)|Sucht die erste Listenfeld-Zeichenfolge, die einer angegebenen Zeichenfolge übereinstimmt.|
 |[CListBox::GetAnchorIndex](#getanchorindex)|Ruft ab, der nullbasierte Index des aktuellen Elements in einem Listenfeld Anker.|
 |[CListBox::GetCaretIndex](#getcaretindex)|Bestimmt den Index des Elements, das das Fokusrechteck in einem Mehrfachauswahl-Listenfeld hat.|
@@ -169,7 +169,7 @@ class CListBox : public CWnd
 |[CListBox::SetCaretIndex](#setcaretindex)|Legt das Fokusrechteck auf das Element am angegebenen Index in einem Mehrfachauswahl-Listenfeld fest.|
 |[CListBox::SetColumnWidth](#setcolumnwidth)|Wird die Breite der ein mehrspaltiges Listenfeld an.|
 |[CListBox::SetCurSel](#setcursel)|Wählt eine Zeichenfolge im Listenfeld aus.|
-|[CListBox:: SetHorizontalExtent](#sethorizontalextent)|Legt die Breite in Pixel, ein Listenfeld, das ein horizontaler Bildlauf durchgeführt werden kann.|
+|[CListBox::SetHorizontalExtent](#sethorizontalextent)|Legt die Breite in Pixel, ein Listenfeld, das ein horizontaler Bildlauf durchgeführt werden kann.|
 |[CListBox::SetItemData](#setitemdata)|Legt den 32-Bit-Wert, der dem Listenfeld-Element zugeordnet.|
 |[CListBox::SetItemDataPtr](#setitemdataptr)|Legt einen Zeiger auf das Listenfeld-Element fest.|
 |[CListBox::SetItemHeight](#setitemheight)|Legt die Höhe der Elemente in einem Listenfeld fest.|
@@ -374,7 +374,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Gibt die Art des Listenfelds. Wenden Sie eine beliebige Kombination von [listenfeldstile](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) in das Feld.
 
-*Rect*<br/>
+*rect*<br/>
 Gibt an, die im Listenfeld Größe und Position. Kann es sich um eine `CRect` Objekt oder ein `RECT` Struktur.
 
 *pParentWnd*<br/>
@@ -486,8 +486,8 @@ Kann eine beliebige Kombination von werden die **Enum** Werte, die in beschriebe
 |0x0004|Datei ist eine Systemdatei.|
 |0x0010|Den Namen trägt *LpszWildCard* gibt ein Verzeichnis an.|
 |0x0020|Datei wurde archiviert.|
-|0 x 4000|Einschließen aller Laufwerke, die mit den vom angegebenen Namen übereinstimmen *LpszWildCard*.|
-|0 x 8000|Exklusive Flag. Wenn das exclusive-Flag festgelegt ist, werden nur Dateien vom angegebenen Typ aufgeführt. Andernfalls werden Dateien vom angegebenen Typ zusätzlich zu "normal" Dateien aufgeführt.|
+|0x4000|Einschließen aller Laufwerke, die mit den vom angegebenen Namen übereinstimmen *LpszWildCard*.|
+|0x8000|Exklusive Flag. Wenn das exclusive-Flag festgelegt ist, werden nur Dateien vom angegebenen Typ aufgeführt. Andernfalls werden Dateien vom angegebenen Typ zusätzlich zu "normal" Dateien aufgeführt.|
 
 *lpszWildCard*<br/>
 Verweist auf eine Dateispezifikation Zeichenfolge. Die Zeichenfolge kann Platzhalter enthalten (z. B. *.\*).
@@ -1143,7 +1143,7 @@ int SelItemRange(
 
 ### <a name="parameters"></a>Parameter
 
-*bWählen*<br/>
+*bSelect*<br/>
 Gibt an, wie die Auswahl festgelegt. Wenn *bWählen* ist "true", die Zeichenfolge ausgewählt und hervorgehoben ist; False gibt an, die Hervorhebung wird entfernt, und die Zeichenfolge nicht mehr ausgewählt ist.
 
 *nFirstItem*<br/>
@@ -1242,7 +1242,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>Parameter
 
-*. nalles auswählen*<br/>
+*nSelect*<br/>
 Gibt den nullbasierten Index der Zeichenfolge, die ausgewählt werden. Wenn *. nalles auswählen* ist-1 und keine Auswahl im Listenfeld festgelegt ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1412,7 +1412,7 @@ int SetSel(
 *nIndex*<br/>
 Enthält den nullbasierten Index der Zeichenfolge, die festgelegt werden. Wenn-1 und die Auswahl hinzugefügt oder aus allen Zeichenfolgen, abhängig vom Wert entfernt *bWählen*.
 
-*bWählen*<br/>
+*bSelect*<br/>
 Gibt an, wie die Auswahl festgelegt. Wenn *bWählen* ist "true", die Zeichenfolge ausgewählt und hervorgehoben ist; False gibt an, die Hervorhebung wird entfernt, und die Zeichenfolge nicht mehr ausgewählt ist. Die angegebene Zeichenfolge ist aktiviert und standardmäßig markiert.
 
 ### <a name="return-value"></a>Rückgabewert

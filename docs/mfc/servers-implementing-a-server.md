@@ -5,12 +5,12 @@ helpviewer_keywords:
 - servers, implementing
 - OLE server applications [MFC], implementing OLE servers
 ms.assetid: 5bd57e8e-3b23-4f23-9597-496fac2d24b5
-ms.openlocfilehash: a5c89ff1256d557ef417b9e53ce76bbf1b5d6196
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 953d157f4bbad0b460947740a2622074dfc90f4f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518957"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267562"
 ---
 # <a name="servers-implementing-a-server"></a>Server: Implementieren eines Servers
 
@@ -28,11 +28,11 @@ Der Servercode, den der Anwendungs-Assistent bietet fällt in verschiedene Kateg
 
   Weitere Informationen zu diesen Ressourcen finden Sie unter [Menüs und Ressourcen: Servererweiterungen](../mfc/menus-and-resources-server-additions.md).
 
-- Definieren eine Elementklasse abgeleitet `COleServerItem`. Weitere Informationen zu Server-Elemente, finden Sie unter [Server: Serverelemente](../mfc/servers-server-items.md).
+- Definieren eine Elementklasse abgeleitet `COleServerItem`. Weitere Informationen zu Server-Elemente, finden Sie unter [Server: Berichtsserverelemente](../mfc/servers-server-items.md).
 
 - Ändern die Basisklasse der Dokumentklasse `COleServerDoc`. Weitere Informationen finden Sie unter [Server: Implementieren von Serverdokumenten](../mfc/servers-implementing-server-documents.md).
 
-- Definieren einer Rahmenfenster Klasse abgeleitet `COleIPFrameWnd`. Weitere Informationen finden Sie unter [Server: Implementieren von In-Place-Frame Windows](../mfc/servers-implementing-in-place-frame-windows.md).
+- Definieren einer Rahmenfenster Klasse abgeleitet `COleIPFrameWnd`. Weitere Informationen finden Sie unter [Server: Implementieren von Windows für In-Place-Frame-](../mfc/servers-implementing-in-place-frame-windows.md).
 
 - Erstellen in der Datenbank der Windows-Registrierung einen Eintrag für die Serveranwendung aus, und registrieren die neue Instanz des Servers mit dem OLE-System. Weitere Informationen zu diesem Thema finden Sie unter [Registrierung](../mfc/registration.md).
 
@@ -46,4 +46,3 @@ Weitere Informationen finden Sie unter [COleServerItem](../mfc/reference/coleser
 [Container](../mfc/containers.md)<br/>
 [Menüs und Ressourcen (OLE)](../mfc/menus-and-resources-ole.md)<br/>
 [Registrierung](../mfc/registration.md)
-

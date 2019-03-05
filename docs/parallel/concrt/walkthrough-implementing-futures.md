@@ -5,12 +5,12 @@ helpviewer_keywords:
 - implementing futures [Concurrency Runtime]
 - futures, implementing [Concurrency Runtime]
 ms.assetid: 82ea75cc-aaec-4452-b10d-8abce0a87e5b
-ms.openlocfilehash: 4c43719199ef4009433ec65d54fcc238d82ac305
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7164919d649751ac11fefa5be3cb2e5b7798ee4f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525655"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262128"
 ---
 # <a name="walkthrough-implementing-futures"></a>Exemplarische Vorgehensweise: Implementieren von Futures
 
@@ -93,5 +93,5 @@ Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, o
 
 [Exemplarische Vorgehensweisen für die Concurrency Runtime](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [Ausnahmebehandlung](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
-[Task_group-Klasse](reference/task-group-class.md)<br/>
+[task_group-Klasse](reference/task-group-class.md)<br/>
 [single_assignment-Klasse](../../parallel/concrt/reference/single-assignment-class.md)

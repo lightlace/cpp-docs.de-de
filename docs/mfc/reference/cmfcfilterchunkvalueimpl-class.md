@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CMFCFilterChunkValueImpl [MFC], SetTextValue
 - CMFCFilterChunkValueImpl [MFC], SetChunk
 ms.assetid: 3c833f23-5b88-4d08-9e09-ca6a8aec88bf
-ms.openlocfilehash: a59cf087a52bd7b6a2eaa00d3091047e93e14d4d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b883d442342dd9fbbd074d9f8fcab76f81ef9864
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666842"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264442"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl-Klasse
 
@@ -69,7 +69,7 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl](#_dtorcmfcfilterchunkvalueimpl)|Destructs das Objekt an.|
+|[CMFCFilterChunkValueImpl::~CMFCFilterChunkValueImpl](#_dtorcmfcfilterchunkvalueimpl)|Destructs das Objekt an.|
 |[CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl](#cmfcfilterchunkvalueimpl)|Erstellt das Objekt.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
@@ -109,11 +109,11 @@ Beispiel:
 
 CMFCFilterChunkValueImpl-Segment;
 
-HR = Block. SetBoolValue(PKEY_IsAttachment, true);
+hr = chunk.SetBoolValue(PKEY_IsAttachment, true);
 
 oder
 
-HR = Block. SetFileTimeValue (PKEY_ItemDate, FtLastModified);
+hr = chunk.SetFileTimeValue(PKEY_ItemDate, ftLastModified);
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -318,7 +318,7 @@ HRESULT SetBoolValue(
 
 ### <a name="parameters"></a>Parameter
 
-*Primärschlüssel*<br/>
+*pkey*<br/>
 Gibt einen Eigenschaftsschlüssel.
 
 *bVal*<br/>
@@ -361,7 +361,7 @@ HRESULT SetChunk(
 
 ### <a name="parameters"></a>Parameter
 
-*Primärschlüssel*<br/>
+*pkey*<br/>
 Gibt einen Eigenschaftsschlüssel.
 
 *chunkType*<br/>
@@ -402,7 +402,7 @@ HRESULT SetDwordValue(
 
 ### <a name="parameters"></a>Parameter
 
-*Primärschlüssel*<br/>
+*pkey*<br/>
 Gibt einen Eigenschaftsschlüssel.
 
 *dwVal*<br/>
@@ -446,7 +446,7 @@ HRESULT SetFileTimeValue(
 
 ### <a name="parameters"></a>Parameter
 
-*Primärschlüssel*<br/>
+*pkey*<br/>
 Gibt einen Eigenschaftsschlüssel.
 
 *dtVal*<br/>
@@ -490,7 +490,7 @@ HRESULT SetInt64Value(
 
 ### <a name="parameters"></a>Parameter
 
-*Primärschlüssel*<br/>
+*pkey*<br/>
 Gibt einen Eigenschaftsschlüssel.
 
 *nVal*<br/>
@@ -534,7 +534,7 @@ HRESULT SetIntValue(
 
 ### <a name="parameters"></a>Parameter
 
-*Primärschlüssel*<br/>
+*pkey*<br/>
 Gibt einen Eigenschaftsschlüssel.
 
 *nVal*<br/>
@@ -578,7 +578,7 @@ HRESULT SetLongValue(
 
 ### <a name="parameters"></a>Parameter
 
-*Primärschlüssel*<br/>
+*pkey*<br/>
 Gibt einen Eigenschaftsschlüssel.
 
 *lVal*<br/>
@@ -622,7 +622,7 @@ HRESULT SetSystemTimeValue(
 
 ### <a name="parameters"></a>Parameter
 
-*Primärschlüssel*<br/>
+*pkey*<br/>
 Gibt einen Eigenschaftsschlüssel.
 
 *systemTime*<br/>
@@ -666,7 +666,7 @@ HRESULT SetTextValue(
 
 ### <a name="parameters"></a>Parameter
 
-*Primärschlüssel*<br/>
+*pkey*<br/>
 Gibt einen Eigenschaftsschlüssel.
 
 *pszValue*<br/>

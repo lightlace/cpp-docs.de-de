@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
-ms.openlocfilehash: 8d7c96ff047a6340511ee1d67f025db0ad7c5368
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bb599b88671447e219421efacac7a2d8a5f7b06
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452688"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261699"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase-Klasse
 
@@ -46,15 +46,15 @@ Der Objekttyp des intelligenten Zeigers verwiesen werden.
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CComPtrBase:: ~ CComPtrBase](#dtor)|Der Destruktor.|
+|[CComPtrBase::~CComPtrBase](#dtor)|Der Destruktor.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CComPtrBase:: Advise](#advise)|Rufen Sie diese Methode zum Erstellen einer Verbindung zwischen dem `CComPtrBase`Verbindungspunkt und der Senke eines Clients.|
+|[CComPtrBase::Advise](#advise)|Rufen Sie diese Methode zum Erstellen einer Verbindung zwischen dem `CComPtrBase`Verbindungspunkt und der Senke eines Clients.|
 |[CComPtrBase::Attach](#attach)|Rufen Sie diese Methode, um den Besitz eines bestehenden Zeigers zu übernehmen.|
-|[CComPtrBase:: CoCreateInstance](#cocreateinstance)|Rufen Sie diese Methode, um ein Objekt der Klasse eine angegebene Klasse oder Programm-ID zugeordnet zu erstellen.|
+|[CComPtrBase::CoCreateInstance](#cocreateinstance)|Rufen Sie diese Methode, um ein Objekt der Klasse eine angegebene Klasse oder Programm-ID zugeordnet zu erstellen.|
 |[CComPtrBase::CopyTo](#copyto)|Rufen Sie diese Methode kopiert die `CComPtrBase` Zeiger auf einen anderen Zeigervariable.|
 |[CComPtrBase::Detach](#detach)|Rufen Sie diese Methode, um den Besitz eines Zeigers freizugeben.|
 |[CComPtrBase::IsEqualObject](#isequalobject)|Rufen Sie diese Methode überprüft, ob das angegebene `IUnknown` verweist auf das gleiche Objekt zugeordnete der `CComPtrBase` Objekt.|
@@ -66,7 +66,7 @@ Der Objekttyp des intelligenten Zeigers verwiesen werden.
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CComPtrBase::operator T *](#operator_t_star)|Der Cast-Operator.|
+|[CComPtrBase::operator T*](#operator_t_star)|Der Cast-Operator.|
 |[CComPtrBase::operator!](#operator_not)|Der NOT-Operator.|
 |[CComPtrBase::operator &](#operator_amp)|Die & Operator.|
 |[CComPtrBase::operator *](#operator_star)|Der Operator \*.|
@@ -86,7 +86,7 @@ Diese Klasse stellt die Grundlage für andere intelligente Zeiger auf die COM-ar
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** "atlcomcli.h"
+**Header:** atlcomcli.h
 
 ##  <a name="advise"></a>  CComPtrBase:: Advise
 
@@ -104,10 +104,10 @@ HRESULT Advise(
 *pUnk*<br/>
 Ein Zeiger auf des Clients `IUnknown`.
 
-*IID*<br/>
+*iid*<br/>
 Die GUID des Verbindungspunkts. Dies ist normalerweise identisch mit der von den Verbindungspunkt verwalteten Ausgangsschnittstelle.
 
-*PDW*<br/>
+*pdw*<br/>
 Ein Zeiger auf das Cookie, das die Verbindung eindeutig identifiziert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -128,7 +128,7 @@ void Attach(T* p2) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*P2*<br/>
+*p2*<br/>
 Die `CComPtrBase` Objekt übernimmt dann den Besitz des this-Zeigers.
 
 ### <a name="remarks"></a>Hinweise
@@ -369,7 +369,7 @@ template <class Q> HRESULT QueryInterface(Q
 *Q*<br/>
 Der Objekttyp, dessen Schnittstellenzeiger erforderlich ist.
 
-*PP*<br/>
+*pp*<br/>
 Adresse des Output-Variable, die den angeforderten Schnittstellenzeiger empfängt.
 
 ### <a name="return-value"></a>Rückgabewert

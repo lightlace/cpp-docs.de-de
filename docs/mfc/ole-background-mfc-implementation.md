@@ -14,12 +14,12 @@ helpviewer_keywords:
 - OLE IMoniker interface
 - OLE IUnknown
 ms.assetid: 2b67016a-d78e-4d60-925f-c28ec8fb6180
-ms.openlocfilehash: 6372f28c78be99af9e329ff83ef531d18ad2480f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f793c7d7303a49057e46c32eb658ea7eea8e9ccc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476673"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267274"
 ---
 # <a name="ole-background-mfc-implementation"></a>OLE-Hintergrund: MFC-Implementierung
 
@@ -48,4 +48,3 @@ Weitere Informationen dazu, wie die Microsoft Foundation OLE-Klassen für OLE-Sc
 
 [OLE-Hintergrund](../mfc/ole-background.md)<br/>
 [OLE-Hintergrund: Implementierungsstrategien](../mfc/ole-background-implementation-strategies.md)
-

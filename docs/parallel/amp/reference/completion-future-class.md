@@ -13,12 +13,12 @@ f1_keywords:
 - AMPRT/Concurrency::completion_future::wait_for
 - AMPRT/Concurrency::completion_future::wait_until
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-ms.openlocfilehash: d121477cf63236ee40df826a63dd7c7c9880d142
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 663122c2d8cd430e921773e75dfd7975e4a41516
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535290"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272918"
 ---
 # <a name="completionfuture-class"></a>completion_future-Klasse
 
@@ -86,7 +86,7 @@ completion_future(
 
 ### <a name="parameters"></a>Parameter
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Die `completion_future` Objekt kopieren oder verschieben.
 
 ### <a name="overloads-list"></a>Überladungsliste
@@ -121,7 +121,7 @@ operator std::shared_future<void>() const;
 
 Ein `std::shared_future`-Objekt.
 
-## <a name="operator_eq"></a> Operator =
+## <a name="operator_eq"></a> operator=
 
 Kopiert den Inhalt des angegebenen `completion_future`-Objekts in dieses Objekt.
 
@@ -134,7 +134,7 @@ completion_future&  operator= (completion_future&& _Other );
 
 ### <a name="parameters"></a>Parameter
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Das Objekt, das kopiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert

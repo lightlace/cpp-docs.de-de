@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-ms.openlocfilehash: ea4159f8eb60f43f60eacd5831ce148c81aeb572
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad3431f78d3637bcdfdb0266c8abdb43047ca28d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546613"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279337"
 ---
 # <a name="menus-and-resources-container-additions"></a>Menüs und Ressourcen: Containererweiterungen
 
@@ -52,33 +52,33 @@ Sie müssen die folgenden Elemente hinzufügen, um das Menü "Bearbeiten":
 
 Zusätzlich zu den Änderungen, die in diesem Artikel aufgeführt wird muss die Quelldatei AFXOLECL enthalten. RC-Version für die Microsoft Foundation Class Library-Implementierung erforderlich ist. Neues Objekt einfügen, ist das einzige erforderliche Menü hinzufügen. Andere Elemente hinzugefügt werden können, aber die hier aufgeführten sind die häufigsten.
 
-Wenn Sie direkte Aktivierung von enthaltenen Elementen unterstützen möchten, müssen Sie ein neues Menü für Ihre containeranwendung erstellen. Dieses Menü besteht aus den gleichen Menü "Datei" und Fenster-Popup-Menüs verwendet wird, wenn Dateien geöffnet sind, aber sie zwei Trennzeichen dazwischen eingefügt hat. Diese Trennzeichen werden verwendet, um anzugeben, in dem das Element für Server (Komponente) (Anwendung) Menüs bei direkt aktiviert zu platzieren sollten. Weitere Informationen zu diesem Verfahren das Zusammenführen von Menüs, finden Sie unter [Menüs und Ressourcen: Menüs schachteln](../mfc/menus-and-resources-menu-merging.md).
+Wenn Sie direkte Aktivierung von enthaltenen Elementen unterstützen möchten, müssen Sie ein neues Menü für Ihre containeranwendung erstellen. Dieses Menü besteht aus den gleichen Menü "Datei" und Fenster-Popup-Menüs verwendet wird, wenn Dateien geöffnet sind, aber sie zwei Trennzeichen dazwischen eingefügt hat. Diese Trennzeichen werden verwendet, um anzugeben, in dem das Element für Server (Komponente) (Anwendung) Menüs bei direkt aktiviert zu platzieren sollten. Weitere Informationen zu diesem Verfahren das Zusammenführen von Menüs, finden Sie unter [Menüs und Ressourcen: Das Zusammenführen von Menüs](../mfc/menus-and-resources-menu-merging.md).
 
 ##  <a name="_core_container_application_accelerator_table_additions"></a> Anwendung Accelerator Tabelle Containererweiterungen
 
 Kleine Änderungen an einer containeranwendung Accelerator tabellenressourcen sind erforderlich, wenn Sie direkte Aktivierung unterstützen. Die erste Änderung kann der Benutzer die ESC-Taste (ESC), um den direkten Bearbeitungsmodus abzubrechen, drücken Sie EINGABETASTE. Fügen Sie den folgenden Eintrag zu den wichtigsten Zugriffstastentabelle:
 
-|Id|Key|Typ|
+|ID|Key|Typ|
 |--------|---------|----------|
-|ID_CANCEL_EDIT_CNTR|"VK_ESCAPE"|**VIRTKEY**|
+|ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|
 
 Die zweite Änderung ist zum Erstellen einer neuen Accelerator-Tabelle, die die neue Menüressource erstellt haben, für die direkte Aktivierung entspricht. Diese Tabelle enthält Einträge für die Datei und Fenster Menüs neben dem Eintrag "VK_ESCAPE". Im folgende Beispiel wird die Zugriffstastentabelle, die für die direkte Aktivierung im MFC-Beispiel erstellten [CONTAINER](../visual-cpp-samples.md):
 
-|Id|Key|Typ|
+|ID|Key|Typ|
 |--------|---------|----------|
 |ID_FILE_NEW|STRG+N|**VIRTKEY**|
 |ID_FILE_OPEN|STRG+O|**VIRTKEY**|
 |ID_FILE_SAVE|STRG+S|**VIRTKEY**|
 |ID_FILE_PRINT|STRG+P|**VIRTKEY**|
 |ID_NEXT_PANE|VK_F6|**VIRTKEY**|
-|ID_PREV_PANE|UMSCHALT + VK_F6|**VIRTKEY**|
-|ID_CANCEL_EDIT_CNTR|"VK_ESCAPE"|**VIRTKEY**|
+|ID_PREV_PANE|SHIFT+VK_F6|**VIRTKEY**|
+|ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|
 
 ##  <a name="_core_string_table_additions_for_container_applications"></a> Zeichenfolge Tabelle Ergänzungen für Containeranwendungen
 
 Die meisten Änderungen an den Zeichenfolgentabellen für containeranwendungen entsprechen, die zusätzliche Menüelemente in erwähnt [Container Menüerweiterungen](#_core_container_menu_additions). Sie geben den Text in der Statusleiste angezeigt wird, wenn jedes Menüelement im angezeigt wird. Hier sind die Zeichenfolgentabelle Einträge, die die Anwendungs-Assistent erstellt, beispielsweise:
 
-|Id|Zeichenfolge|
+|ID|Zeichenfolge|
 |--------|------------|
 |IDP_OLE_INIT_FAILED|Fehler bei der OLE-Initialisierung. Stellen Sie sicher, dass die OLE-Bibliotheken der richtigen Version vorliegen.|
 |IDP_FAILED_TO_CREATE|Fehler beim Erstellen des Objekts. Stellen Sie sicher, dass das Objekt in der systemregistrierung eingetragen ist.|
@@ -87,4 +87,3 @@ Die meisten Änderungen an den Zeichenfolgentabellen für containeranwendungen e
 
 [Menüs und Ressourcen (OLE)](../mfc/menus-and-resources-ole.md)<br/>
 [Menüs und Ressourcen: Servererweiterungen](../mfc/menus-and-resources-server-additions.md)
-

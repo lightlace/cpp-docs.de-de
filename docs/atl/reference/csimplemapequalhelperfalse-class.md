@@ -1,5 +1,5 @@
 ---
-title: CSimpleMapEqualHelperFalse-Klasse
+title: CSimpleMapEqualHelperFalse Class
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleMapEqualHelperFalse
@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleMapEqualHelperFalse class
 ms.assetid: a873eea3-e130-45cc-a476-61ee79511c3b
-ms.openlocfilehash: 7ccfe59e6741c267aded8f59828947a1d98bfbc3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c4241049ad323047f06c0b29f946521f2c02167
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572691"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268901"
 ---
-# <a name="csimplemapequalhelperfalse-class"></a>CSimpleMapEqualHelperFalse-Klasse
+# <a name="csimplemapequalhelperfalse-class"></a>CSimpleMapEqualHelperFalse Class
 
 Diese Klasse ist eine Hilfsklasse für die [CSimpleMap](../../atl/reference/csimplemap-class.md) Klasse.
 

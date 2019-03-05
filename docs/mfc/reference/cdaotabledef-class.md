@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDAOTableDef
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
-ms.openlocfilehash: b2f431b250da4b791c06a629315d59bbc7935802
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 485fe3533916e5e59bc87084f58acfb37368ac32
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579236"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270227"
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef-Klasse
 
@@ -101,7 +101,7 @@ class CDaoTableDef : public CObject
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CDaoTableDef::](#append)|Fügt eine neue Tabelle in der Datenbank an.|
+|[CDaoTableDef::Append](#append)|Fügt eine neue Tabelle in der Datenbank an.|
 |[CDaoTableDef::CanUpdate](#canupdate)|Gibt ungleich NULL, wenn die Tabelle aktualisiert werden kann (Sie können die Definition von Feldern oder Eigenschaften für die Tabelle ändern).|
 |[CDaoTableDef::Close](#close)|Schließt einen geöffneten Tabledef an.|
 |[CDaoTableDef::Create](#create)|Erstellt eine Tabelle, die mit der Datenbank hinzugefügt werden können [Append](#append).|
@@ -332,7 +332,7 @@ Ein Wert, der den Datentyp des Felds angibt. Die Einstellung kann einen der folg
 |`dbLongBinary`|0|Long-Binärdatei (OLE-Objekt) [CLongBinary](../../mfc/reference/clongbinary-class.md) oder [CByteArray](../../mfc/reference/cbytearray-class.md)|
 |`dbMemo`|0|Memo ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|
 
-*lSize beim Aufruf*<br/>
+*lSize*<br/>
 Ein Wert, der angibt, die maximale Größe in Bytes, der ein Feld, das Text enthält, oder die feste Größe von einem Feld, Text oder numerische Werte enthält. Die *lSize beim Aufruf* Parameter wird ignoriert, für alle bis auf Textfelder.
 
 *lAttributes*<br/>
@@ -346,7 +346,7 @@ Ein Wert, der Eigenschaften des Felds und, kann mithilfe einer bitweisen OR komb
 |`dbUpdatableField`|Der Wert des Felds kann geändert werden.|
 |`dbDescending`|Das Feld wird sortiert in absteigender (Z – A oder 0, 100) Reihenfolge (gilt nur für eine Field-Objekt in einer Fields-Auflistung eines Index-Objekts). Wenn Sie diese Konstante weglassen, wird das Feld in aufsteigender sortiert (A – Z oder 0 - 100) Reihenfolge (Standard).|
 
-*FieldInfo*<br/>
+*fieldinfo*<br/>
 Ein Verweis auf eine [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) Struktur.
 
 ### <a name="remarks"></a>Hinweise
@@ -574,7 +574,7 @@ void GetFieldInfo(
 *nIndex*<br/>
 Der Index des Feldobjekts in der Tabelle nullbasierte Fields-Sammlung, für die Suche nach Index.
 
-*FieldInfo*<br/>
+*fieldinfo*<br/>
 Ein Verweis auf eine [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) Struktur.
 
 *dwInfoOptions*<br/>
@@ -582,9 +582,9 @@ Optionen, die angeben, welche Informationen über das Feld abgerufen. Die verfü
 
 - `AFX_DAO_PRIMARY_INFO` (Standard) Name, Typ, Größe und der Attribute. Verwenden Sie diese Option für die bestmögliche Leistung zu erzielen.
 
-- `AFX_DAO_SECONDARY_INFO` Primäre Informationen sowie: Ordnungszahl ab, die erforderlich sind, ermöglichen Null Länge Reihenfolge sortieren, Fremdschlüssel, Feld "Quelle" Quelle Namenstabelle
+- `AFX_DAO_SECONDARY_INFO` Primäre Informationen plus: Ordnungsposition, die erforderlich sind, ermöglichen die Länge Null, Sortieren der Reihenfolge "," Foreign Name "," Feld "," Quelltabelle
 
-- `AFX_DAO_ALL_INFO` Informationen zu primären und sekundären sowie: Validierungsregel Validierung von Text, Standardwert
+- `AFX_DAO_ALL_INFO` Informationen zu primären und sekundären plus: Überprüfung Überprüfung Text, in der Regel-Standardwert
 
 *Wert*<br/>
 Ein Zeiger auf den Namen der Field-Objekt, für die Suche anhand des Namens. Der Name ist eine Zeichenfolge mit bis zu 64 Zeichen, die das Feld eindeutig bezeichnet.
@@ -644,9 +644,9 @@ Optionen, die angeben, welche Informationen über den Index abrufen. Die verfüg
 
 - `AFX_DAO_PRIMARY_INFO` Name, Feldinformationen, Felder. Verwenden Sie diese Option für die bestmögliche Leistung zu erzielen.
 
-- `AFX_DAO_SECONDARY_INFO` Primäre Informationen sowie: primären, eindeutiger, gruppierter, ignorieren NULL-Werte erforderlich, Fremdschlüssel
+- `AFX_DAO_SECONDARY_INFO` Primäre Informationen plus: Primärer, eindeutiger, ignorieren Sie geclustert ist, NULL-Werte erforderlich, Fremdschlüssel
 
-- `AFX_DAO_ALL_INFO` Informationen zu primären und sekundären sowie: Distinct Count
+- `AFX_DAO_ALL_INFO` Informationen zu primären und sekundären plus: Distinct Count
 
 *Wert*<br/>
 Ein Zeiger auf den Namen des Index-Objekt, für die Suche anhand des Namens.
@@ -832,9 +832,9 @@ Merkmale der Tabelle dargestellt durch die `CDaoTableDef` Objekt und kann eine S
 
 Wenn Sie mehrere Attribute festlegen möchten, können Sie diese durch summieren die entsprechenden Konstanten, die mit dem bitweisen OR-Operator kombinieren. Festlegen von `dbAttachExclusive` erstellt eine Ausnahme für eine Tabelle. Kombinieren die folgenden Werte auch erzeugen eine Ausnahme:
 
-- **DbAttachExclusive &#124; DbAttachedODBC**
+- **dbAttachExclusive &#124; dbAttachedODBC**
 
-- **DbAttachSavePWD &#124; DbAttachedTable**
+- **dbAttachSavePWD &#124; dbAttachedTable**
 
 Verwandte Informationen finden Sie im Thema "Attributes-Eigenschaft" in-DAO-Hilfe.
 
@@ -869,15 +869,15 @@ Die folgende Tabelle zeigt mögliche Datenbanktypen und ihre entsprechenden Date
 |Paradox 3.x|"Paradox 3.x;"|" `drive`:\\\ *Pfad*"|
 |Paradox 4.x|"Paradox 4.x;"|" `drive`:\\\ *Pfad*"|
 |Paradox 5.x|"Paradox 5.x;"|" `drive`:\\\ *Pfad*"|
-|Excel-3.0|"Excel 3.0;"|" `drive`:\\\ *Pfad*\\\ *Filename*. XLS"|
+|Excel 3.0|"Excel 3.0;"|" `drive`:\\\ *Pfad*\\\ *Filename*. XLS"|
 |Excel 4.0|"Excel 4.0;"|" `drive`:\\\ *Pfad*\\\ *Filename*. XLS"|
 |Excel 5.0 oder Excel 95|"Excel 5.0;"|" `drive`:\\\ *Pfad*\\\ *Filename*. XLS"|
 |Excel 97|"Excel 8.0;"|" `drive`:\\\ *Pfad*\ *Filename*. XLS"|
 |Importieren von HTML|"HTML-importieren;"|" `drive`:\\\ *Pfad*\ *Filename*"|
 |Der HTML-Export|"HTML-Export;"|" `drive`:\\\ *Pfad*"|
 |Text|"Text;"|"Laufwerk:\\\path"|
-|ODBC|"ODBC; Datenbank = `database`; UID = *Benutzer*; PWD = *Kennwort*; DSN = *%DataSourceName;* LOGINTIMEOUT = *Sekunden;*" (Dies eventuell nicht möglich, eine vollständige Verbindungszeichenfolge für alle Server, sondern nur ein Beispiel. Es ist sehr wichtig, keine Leerzeichen zwischen den Parametern enthalten.)|Keiner|
-|Exchange|"Exchange;<br /><br /> MAPILEVEL = *"folderPath"*;<br /><br /> [TABLETYPE = {0 &AMP;#124; 1};]<br /><br /> [Profil = *Profil*;]<br /><br /> [PWD = *Kennwort*;]<br /><br /> [DATABASE = `database`;] "|*"Laufwerk*:\\\ *Pfad*\\\ *Filename*. MDB"|
+|ODBC|"ODBC; Datenbank = `database`; UID = *Benutzer*; PWD = *Kennwort*; DSN = *%DataSourceName;* LOGINTIMEOUT = *Sekunden;*" (Dies eventuell nicht möglich, eine vollständige Verbindungszeichenfolge für alle Server, sondern nur ein Beispiel. Es ist sehr wichtig, keine Leerzeichen zwischen den Parametern enthalten.)|Keine|
+|Exchange|"Exchange;<br /><br /> MAPILEVEL = *"folderPath"*;<br /><br /> [TABLETYPE={ 0 &#124; 1 };]<br /><br /> [Profil = *Profil*;]<br /><br /> [PWD = *Kennwort*;]<br /><br /> [DATABASE = `database`;] "|*"Laufwerk*:\\\ *Pfad*\\\ *Filename*. MDB"|
 
 > [!NOTE]
 >  Btrieve wird seit DAO 3.5 nicht mehr unterstützt.

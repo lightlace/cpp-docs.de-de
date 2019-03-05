@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - single_assignment class
 ms.assetid: ccc34728-8de9-4e07-b83d-a36a58d9d2b9
-ms.openlocfilehash: 5a27fb6cdc13fbbd3ceb8a85adacf5491ddc3ce1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 436d0d4cc16ee18449178782b775a25bb1d8592a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593478"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268958"
 ---
 # <a name="singleassignment-class"></a>single_assignment-Klasse
 
@@ -56,7 +56,7 @@ Der Nutzlasttyp der Nachricht gespeichert und vom Puffer weitergegeben.
 |Name|Beschreibung|
 |----------|-----------------|
 |[has_value](#has_value)|Überprüft, ob dies `single_assignment` Meldungsblock noch mit einem Wert initialisiert wurde.|
-|[Wert](#value)|Ruft einen Verweis auf die aktuelle Nutzlast der Nachricht gespeichert werden, der `single_assignment` Meldungsblock.|
+|[value](#value)|Ruft einen Verweis auf die aktuelle Nutzlast der Nachricht gespeichert werden, der `single_assignment` Meldungsblock.|
 
 ### <a name="protected-methods"></a>Geschützte Methoden
 
@@ -69,7 +69,7 @@ Der Nutzlasttyp der Nachricht gespeichert und vom Puffer weitergegeben.
 |[propagate_to_any_targets](#propagate_to_any_targets)|Stellen die `message _PMessage` in diesem `single_assignment` Block messaging und bietet sie alle verknüpften Ziele.|
 |[release_message](#release_message)|Gibt die nachrichtenreservierung einer vorherigen frei. (Überschreibt [source_block:: release_message](source-block-class.md#release_message).)|
 |[reserve_message](#reserve_message)|Reserviert eine Meldung, die zuvor von diesem angebotenen `single_assignment` Meldungsblock. (Überschreibt [source_block:: reserve_message](source-block-class.md#reserve_message).)|
-|[resume_propagation](#resume_propagation)|Weitergabe fortgesetzt, nachdem eine Reservierung freigegeben wurde. (Überschreibt [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|
+|[resume_propagation](#resume_propagation)|Weitergabe fortgesetzt, nachdem eine Reservierung freigegeben wurde. (Overrides [source_block::resume_propagation](source-block-class.md#resume_propagation).)|
 |[send_message](#send_message)|Übergibt synchron eine Nachricht von einem `ISource` Block, um diese `single_assignment` Meldungsblock. Wird aufgerufen, indem die `send` Methode, wenn Sie von einem Quellblock aufgerufen.|
 
 ## <a name="remarks"></a>Hinweise
@@ -332,5 +332,4 @@ Diese Methode wartet, bis eine Meldung eintrifft, wenn derzeit keine Meldung in 
 
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
 [overwrite_buffer-Klasse](overwrite-buffer-class.md)<br/>
-[Unbounded_buffer-Klasse](unbounded-buffer-class.md)
-
+[unbounded_buffer-Klasse](unbounded-buffer-class.md)

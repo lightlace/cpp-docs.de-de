@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 71ae39cb62da7938880973dc48b65ed69b9c8b92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a5adc5ae6b1981d7f8260d684a33d8bd7918e40
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569730"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272840"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl-Klasse
 
@@ -80,8 +80,8 @@ class CStatusBarCtrl : public CWnd
 |[CStatusBarCtrl::GetIcon](#geticon)|Ruft das Symbol für einen Teil (auch bekannt als ein Bereich) in das aktuelle StatusBar-Steuerelement ab.|
 |[CStatusBarCtrl::GetParts](#getparts)|Ruft die Anzahl der Teile in ein Statusleisten-Steuerelement ab.|
 |[CStatusBarCtrl::GetRect](#getrect)|Ruft das umschließende Rechteck eines Parts im ein Statusleisten-Steuerelement ab.|
-|[CStatusBarCtrl:: GetText](#gettext)|Ruft den Text aus den angegebenen Teil ein Statusleisten-Steuerelement ab.|
-|[CStatusBarCtrl:: getTextLength](#gettextlength)|Rufen Sie die Länge in Zeichen des Texts aus dem angegebenen Teil des ein Statusleisten-Steuerelement.|
+|[CStatusBarCtrl::GetText](#gettext)|Ruft den Text aus den angegebenen Teil ein Statusleisten-Steuerelement ab.|
+|[CStatusBarCtrl::GetTextLength](#gettextlength)|Rufen Sie die Länge in Zeichen des Texts aus dem angegebenen Teil des ein Statusleisten-Steuerelement.|
 |[CStatusBarCtrl::GetTipText](#gettiptext)|Ruft den QuickInfo-Text für einen Bereich in einer Statusleiste ab.|
 |[CStatusBarCtrl::IsSimple](#issimple)|Überprüft, um festzustellen, ob es sich im einfachen Modus ist ein Fenster-Steuerelement.|
 |[CStatusBarCtrl::SetBkColor](#setbkcolor)|Legt die Hintergrundfarbe in einer Statusleiste fest.|
@@ -90,7 +90,7 @@ class CStatusBarCtrl : public CWnd
 |[CStatusBarCtrl::SetParts](#setparts)|Legt die Anzahl der Teile in einer Statusleisten-Steuerelement und die Koordinate des rechten Rands der einzelnen Teile fest.|
 |[CStatusBarCtrl::SetSimple](#setsimple)|Gibt an, ob ein Statusleisten-Steuerelement einfachen Text zeigt oder alle Steuerelementteile, die von einem vorherigen Aufruf von festgelegt `SetParts`.|
 |[CStatusBarCtrl::SetText](#settext)|Legt den Text im bestimmten Teil eines Statusleisten-Steuerelements fest.|
-|[CStatusBarCtrl:: setTipText](#settiptext)|Legt die QuickInfo-Text für einen Bereich in einer Statusleiste fest.|
+|[CStatusBarCtrl::SetTipText](#settiptext)|Legt die QuickInfo-Text für einen Bereich in einer Statusleiste fest.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -131,7 +131,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Gibt das StatusBar-Steuerelement Stil. Wenden Sie eine beliebige Kombination der Stile von Listensteuerelementen aufgeführt, die der Statusleiste [allgemeinen Stile von Listensteuerelementen](/windows/desktop/Controls/common-control-styles) im Windows SDK. Dieser Parameter muss das Format WS_CHILD enthalten. Darüber sollte hinaus das WS_VISIBLE-Format enthalten.
 
-*Rect*<br/>
+*rect*<br/>
 Gibt des StatusBar-Steuerelements die Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.
 
 *pParentWnd*<br/>
@@ -177,7 +177,7 @@ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erwei
 *dwStyle*<br/>
 Gibt das StatusBar-Steuerelement Stil. Wenden Sie eine beliebige Kombination der Stile von Listensteuerelementen aufgeführt, die der Statusleiste [allgemeinen Stile von Listensteuerelementen](/windows/desktop/Controls/common-control-styles) im Windows SDK. Dieser Parameter muss das Format WS_CHILD enthalten. Darüber sollte hinaus das WS_VISIBLE-Format enthalten.
 
-*Rect*<br/>
+*rect*<br/>
 Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -244,7 +244,7 @@ Die Adresse eines Arrays von Ganzzahlen durch drei Elemente. Das erste Element e
 *nHorz*<br/>
 Verweis auf eine ganze Zahl, die die Breite des horizontalen Rands empfängt.
 
-*Umwandeln*<br/>
+*nVert*<br/>
 Verweis auf eine ganze Zahl, die die Breite des vertikalen Rands empfängt.
 
 *nSpacing*<br/>
@@ -354,7 +354,7 @@ Ungleich 0, wenn erfolgreich, andernfalls 0.
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#4](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_6.cpp)]
 
-##  <a name="gettext"></a>  CStatusBarCtrl:: GetText
+##  <a name="gettext"></a>  CStatusBarCtrl::GetText
 
 Ruft den Text aus den angegebenen Teil ein Statusleisten-Steuerelement ab.
 
@@ -377,7 +377,7 @@ Die Adresse des Puffers, der den Text empfängt. Dieser Parameter ist ein Null-t
 *nPane*<br/>
 Nullbasierte Index des Teils in der Text abgerufen werden soll.
 
-*PGeben*<br/>
+*pType*<br/>
 Zeiger auf eine ganze Zahl, die die Typinformationen empfängt. Der Typ kann einen der folgenden Werte sein:
 
 - **0** mit einem Rahmen niedriger als die Ebene der Statusleiste angezeigt werden. der Text gezeichnet wird.
@@ -411,7 +411,7 @@ int GetTextLength(
 *nPane*<br/>
 Nullbasierte Index des Teils in der Text abgerufen werden soll.
 
-*PGeben*<br/>
+*pType*<br/>
 Zeiger auf eine ganze Zahl, die die Typinformationen empfängt. Der Typ kann einen der folgenden Werte sein:
 
 - **0** mit einem Rahmen niedriger als die Ebene der Statusleiste angezeigt werden. der Text gezeichnet wird.
@@ -481,7 +481,7 @@ COLORREF SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parameter
 
-*CR*<br/>
+*cr*<br/>
 COLORREF-Wert, der die neue Hintergrundfarbe angibt. Geben Sie den Wert CLR_DEFAULT dazu führen, dass verwenden Sie die Standard-Hintergrundfarbe die Statusleiste an.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -536,7 +536,7 @@ void SetMinHeight(int nMin);
 
 ### <a name="parameters"></a>Parameter
 
-*nmin.*<br/>
+*nMin*<br/>
 Minimale Höhe des Steuerelements in Pixel.
 
 ### <a name="remarks"></a>Hinweise

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CSocket [MFC], IsBlocking
 - CSocket [MFC], OnMessagePending
 ms.assetid: 7f23c081-d24d-42e3-b511-8053ca53d729
-ms.openlocfilehash: 3c5340a8c65f804747fd8d3c8bd31fb20f80c6ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a861e557b7368d13d615aaf796faded93c72b040
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487284"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266561"
 ---
 # <a name="csocket-class"></a>CSocket-Klasse
 
@@ -49,7 +49,7 @@ class CSocket : public CAsyncSocket
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CSocket:: Attach](#attach)|Fügt ein Sockethandle für ein `CSocket` Objekt.|
+|[CSocket::Attach](#attach)|Fügt ein Sockethandle für ein `CSocket` Objekt.|
 |[CSocket::CancelBlockingCall](#cancelblockingcall)|Bricht einen blockierenden Aufruf, der gerade ausgeführt wird.|
 |[CSocket::Create](#create)|Erstellt einen Socket.|
 |[CSocket::FromHandle](#fromhandle)|Gibt einen Zeiger auf eine `CSocket` -Objekt, ein SOCKET-Handle.|
@@ -80,7 +80,7 @@ Im folgenden Beispiel `m_dwExpected` wird die ungefähre Anzahl von Bytes, die d
 > [!NOTE]
 >  Wenn Sie MFC-Sockets in sekundären Threads in einer statisch verknüpften MFC-Anwendung verwenden zu können, müssen Sie aufrufen `AfxSocketInit` in jeder Thread, der Sockets verwendet, um die Socket-Bibliotheken zu initialisieren. In der Standardeinstellung `AfxSocketInit` nur im primären Thread aufgerufen wird.
 
-Weitere Informationen finden Sie unter [Windows-Sockets in MFC](../../mfc/windows-sockets-in-mfc.md), [Windows Sockets: Verwenden von Sockets mit Archiven](../../mfc/windows-sockets-using-sockets-with-archives.md), [Windows Sockets: wie Sockets mit Archiven arbeiten](../../mfc/windows-sockets-how-sockets-with-archives-work.md), [Windows Sockets: Reihenfolge der Operationen](../../mfc/windows-sockets-sequence-of-operations.md), [Windows Sockets: Beispiel für Sockets mithilfe der Archive](../../mfc/windows-sockets-example-of-sockets-using-archives.md).
+Weitere Informationen finden Sie unter [Windows-Sockets in MFC](../../mfc/windows-sockets-in-mfc.md), [Windows Sockets: Verwenden von Sockets mit Archiven](../../mfc/windows-sockets-using-sockets-with-archives.md), [Windows Sockets: Wie Sockets mit Archiven arbeiten](../../mfc/windows-sockets-how-sockets-with-archives-work.md), [Windows Sockets: Reihenfolge der Operationen](../../mfc/windows-sockets-sequence-of-operations.md), [Windows Sockets: Beispiel für Sockets mithilfe der Archive](../../mfc/windows-sockets-example-of-sockets-using-archives.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -92,7 +92,7 @@ Weitere Informationen finden Sie unter [Windows-Sockets in MFC](../../mfc/window
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** Datei afxsock.h
+**Header:** afxsock.h
 
 ##  <a name="attach"></a>  CSocket:: Attach
 
@@ -180,7 +180,7 @@ Ungleich NULL, wenn die Funktion erfolgreich ist; andernfalls 0, und einen besti
     > [!NOTE]
     >  Die `Accept` Member-Funktion akzeptiert einen Verweis auf ein neues, leeres `CSocket` -Objekt als Parameter. Müssen Sie dieses Objekt erstellen, vor dem Aufruf `Accept`. Beachten Sie, dass wenn dieser Socketobjekt des Bereichs, die Verbindung geschlossen wird. Rufen Sie keine `Create` für dieses neuen Socketobjekt.
 
-Weitere Informationen zu Stream und Datagramm-Sockets, finden Sie in den Artikeln [Windows Sockets: Hintergrund](../../mfc/windows-sockets-background.md), [Windows Sockets: Ports und Socketadressen](../../mfc/windows-sockets-ports-and-socket-addresses.md), und [Windows Sockets: verwenden Sockets mit Archiven](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Weitere Informationen zu Stream und Datagramm-Sockets, finden Sie in den Artikeln [Windows Sockets: Hintergrund](../../mfc/windows-sockets-background.md), [Windows Sockets: Ports und Socketadressen](../../mfc/windows-sockets-ports-and-socket-addresses.md), und [Windows Sockets: Verwenden von Sockets mit Archiven](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ##  <a name="csocket"></a>  CSocket::CSocket
 

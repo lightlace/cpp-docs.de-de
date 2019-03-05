@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: 9ec6177b1f2cb071a6aa284c2936f3af4dbe4634
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea95de2bceab290f94bb7c0e7bbc94a90048ee13
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468275"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259255"
 ---
 # <a name="cscrollview-class"></a>CScrollView-Klasse
 
@@ -337,10 +337,10 @@ Die eines Zuordnungsmodus für diese Ansicht. Mögliche Werte:
 |Zuordnungsmodus|Logische Einheit|Positiven y-Achse erweitert...|
 |------------------|------------------|---------------------------------|
 |MM_TEXT|1-pixel|Nach unten|
-|MM_HIMETRIC|0,01 mm|Nach oben|
+|MM_HIMETRIC|0.01 mm|Nach oben|
 |MM_TWIPS|1/1440 in|Nach oben|
 |MM_HIENGLISH|0,001 Zoll|Nach oben|
-|MM_LOMETRIC|0,1 mm|Nach oben|
+|MM_LOMETRIC|0.1 mm|Nach oben|
 |MM_LOENGLISH|0,01 Zoll|Nach oben|
 
 Diese Modi werden durch Windows definiert. Zwei standard-Mapping-Modi, MM_ISOTROPIC und MM_ANISOTROPIC, werden nicht zum `CScrollView`. Stellt die Klassenbibliothek die `SetScaleToFitSize` Memberfunktion für die Skalierung der Ansicht, um die Größe des Fensters. Spalte 3 in der obigen Tabelle beschreibt die Koordinate Ausrichtung.

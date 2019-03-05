@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 56c694283c5143174b0ce7370d98a244c056bc1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a683c877b67f4eae1a7411f5916987c9789b6817
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496017"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261348"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl-Klasse
 
@@ -95,7 +95,7 @@ class CHeaderCtrl : public CWnd
 |----------|-----------------|
 |[CHeaderCtrl::ClearAllFilters](#clearallfilters)|Löscht alle Filter für ein Headersteuerelement.|
 |[CHeaderCtrl::ClearFilter](#clearfilter)|Löscht den Filter für ein Headersteuerelement.|
-|[CHeaderCtrl](#create)|Erstellt ein Kopfzeilen-Steuerelement, und fügt sie an einer `CHeaderCtrl` Objekt.|
+|[CHeaderCtrl::Create](#create)|Erstellt ein Kopfzeilen-Steuerelement, und fügt sie an einer `CHeaderCtrl` Objekt.|
 |[CHeaderCtrl::CreateDragImage](#createdragimage)|Erstellt eine transparente Version eines Elements von Images in einem Kopfzeilen-Steuerelement.|
 |[CHeaderCtrl::CreateEx](#createex)|Erstellt ein Headersteuerelement mit der angegebenen Erweiterte Stile für Windows und fügt sie an einer `CListCtrl` Objekt.|
 |[CHeaderCtrl::DeleteItem](#deleteitem)|Löscht ein Element aus einem Kopfzeilen-Steuerelement.|
@@ -104,21 +104,21 @@ class CHeaderCtrl : public CWnd
 |[CHeaderCtrl::GetBitmapMargin](#getbitmapmargin)|Ruft die Breite des Rands einer Bitmap in einem Kopfzeilen-Steuerelement ab.|
 |[CHeaderCtrl::GetFocusedItem](#getfocuseditem)|Ruft den Bezeichner des Elements im aktuellen Kopfzeilen-Steuerelement, das den den Fokus besitzt.|
 |[CHeaderCtrl::GetImageList](#getimagelist)|Ruft das Handle einer Bildliste, die zum Zeichnen verwendeten Headerelemente in einem Kopfzeilen-Steuerelement ab.|
-|[CHeaderCtrl:: GetItem](#getitem)|Ruft Informationen zu einem Element in einem Kopfzeilen-Steuerelement ab.|
+|[CHeaderCtrl::GetItem](#getitem)|Ruft Informationen zu einem Element in einem Kopfzeilen-Steuerelement ab.|
 |[CHeaderCtrl::GetItemCount](#getitemcount)|Ruft die Anzahl der Elemente in einem Kopfzeilen-Steuerelement ab.|
 |[CHeaderCtrl::GetItemDropDownRect](#getitemdropdownrect)|Ruft das umschließende Rechteck-Informationen für die angegebene Dropdown-Schaltfläche in einem Kopfzeilen-Steuerelement ab.|
 |[CHeaderCtrl::GetItemRect](#getitemrect)|Ruft das umschließende Rechteck für ein bestimmtes Element in einem Kopfzeilen-Steuerelement ab.|
-|[CHeaderCtrl:: GetOrderArray](#getorderarray)|Ruft die links-nach-rechts-Reihenfolge der Elemente in einem Kopfzeilen-Steuerelement ab.|
+|[CHeaderCtrl::GetOrderArray](#getorderarray)|Ruft die links-nach-rechts-Reihenfolge der Elemente in einem Kopfzeilen-Steuerelement ab.|
 |[CHeaderCtrl::GetOverflowRect](#getoverflowrect)|Ruft das umschließende Rechteck des der Überlaufschaltfläche für das aktuelle Kopfzeilen-Steuerelement ab.|
 |[CHeaderCtrl::HitTest](#hittest)|Bestimmt, welche Headerelement, sofern vorhanden, an einem angegebenen Punkt befindet.|
-|[InsertItem](#insertitem)|Fügt ein neues Element in einem Kopfzeilen-Steuerelement.|
-|[CHeaderCtrl:: Layout](#layout)|Ruft ab, die Größe und Position von einem Kopfzeilen-Steuerelement in einem bestimmten Rechteck.|
+|[CHeaderCtrl::InsertItem](#insertitem)|Fügt ein neues Element in einem Kopfzeilen-Steuerelement.|
+|[CHeaderCtrl::Layout](#layout)|Ruft ab, die Größe und Position von einem Kopfzeilen-Steuerelement in einem bestimmten Rechteck.|
 |[CHeaderCtrl::OrderToIndex](#ordertoindex)|Ruft den Indexwert für ein Element basierend auf der Reihenfolge, in dem Kopfzeilen-Steuerelement ab.|
 |[CHeaderCtrl::SetBitmapMargin](#setbitmapmargin)|Legt die Breite des Rands einer Bitmap in einem Kopfzeilen-Steuerelement fest.|
 |[CHeaderCtrl::SetFilterChangeTimeout](#setfilterchangetimeout)|Legt das Timeout-Intervall zwischen dem Zeitpunkt, die eine Änderung in den Filterattributen erfolgt und der Bereitstellung einer `HDN_FILTERCHANGE` Benachrichtigung.|
 |[CHeaderCtrl::SetFocusedItem](#setfocuseditem)|Legt den Fokus zu einem angegebenen Header-Element in der aktuellen Kopfzeilen-Steuerelement fest.|
 |[CHeaderCtrl::SetHotDivider](#sethotdivider)|Ziehen der Unterteiler zwischen Header-Elemente an, dass eine manuelle Änderungen and -Drop ein Headerelement.|
-|[:: SetImageList](#setimagelist)|Weist eine Bildliste einem Kopfzeilen-Steuerelement.|
+|[CHeaderCtrl::SetImageList](#setimagelist)|Weist eine Bildliste einem Kopfzeilen-Steuerelement.|
 |[CHeaderCtrl::SetItem](#setitem)|Legt die Attribute des angegebenen Elements in einem Kopfzeilen-Steuerelement fest.|
 |[CHeaderCtrl::SetOrderArray](#setorderarray)|Legt die links-nach-rechts-Reihenfolge der Elemente in einem Kopfzeilen-Steuerelement fest.|
 
@@ -230,7 +230,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Gibt das Kopfzeilen-Steuerelement-Stil. Eine Beschreibung der Header der Stile von Listensteuerelementen, finden Sie unter [Steuerelementstile Kopfzeile](/windows/desktop/Controls/header-control-styles) im Windows SDK.
 
-*Rect*<br/>
+*rect*<br/>
 Gibt an, des Kopfzeilen-Steuerelements die Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.
 
 *pParentWnd*<br/>
@@ -300,7 +300,7 @@ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erwei
 *dwStyle*<br/>
 Format des Headersteuerelements. Eine Beschreibung der Header der Stile von Listensteuerelementen, finden Sie unter [Steuerelementstile Kopfzeile](/windows/desktop/Controls/header-control-styles) im Windows SDK. Finden Sie unter [erstellen](#create) eine Liste der zusätzlichen Formatvorlagen.
 
-*Rect*<br/>
+*rect*<br/>
 Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -486,7 +486,7 @@ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [HDM_GETIMA
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#9](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_11.cpp)]
 
-##  <a name="getitem"></a>  CHeaderCtrl:: GetItem
+##  <a name="getitem"></a>  CHeaderCtrl::GetItem
 
 Ruft Informationen über ein Headerelement-Steuerelement ab.
 

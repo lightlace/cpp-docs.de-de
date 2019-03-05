@@ -7,12 +7,12 @@ helpviewer_keywords:
 - archives [MFC], and Windows Sockets
 - CSocket class [MFC], programming model
 ms.assetid: 17e71a99-a09e-4e1a-9fda-13d62805c824
-ms.openlocfilehash: 64c5c058404b977254ca54d5595193654b3f4479
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71a7ed1f1b67bed157805328679a18ceabf201d3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615386"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261504"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets: Verwenden von Sockets mit Archiven
 
@@ -21,10 +21,10 @@ Dieser Artikel beschreibt die [CSocket Programmiermodell](#_core_the_csocket_pro
 > [!TIP]
 >  Klasse können `CSocket` sich als praktischer Version `CAsyncSocket`, aber das einfachste Modell für die Programmierung ist die Verwendung `CSocket` mit einer `CArchive` Objekt.
 
-Weitere Informationen dazu, wie die Implementierung von Sockets mit Archiven funktioniert, finden Sie unter [Windows Sockets: wie Sockets mit Archiven arbeiten](../mfc/windows-sockets-how-sockets-with-archives-work.md). Beispielcode, finden Sie unter [Windows Sockets: Reihenfolge der Vorgänge](../mfc/windows-sockets-sequence-of-operations.md) und [Windows Sockets: Beispiel für Sockets mithilfe von Archive](../mfc/windows-sockets-example-of-sockets-using-archives.md). Informationen über einige der Funktionen erhalten Sie durch Ihre eigenen Klassen aus den Socketklassen ableiten, finden Sie unter [Windows Sockets: Ableiten von Socket-Classen](../mfc/windows-sockets-deriving-from-socket-classes.md).
+Weitere Informationen dazu, wie die Implementierung von Sockets mit Archiven funktioniert, finden Sie unter [Windows Sockets: Wie Sockets mit Archiven arbeiten](../mfc/windows-sockets-how-sockets-with-archives-work.md). Beispielcode, finden Sie unter [Windows Sockets: Reihenfolge der Operationen](../mfc/windows-sockets-sequence-of-operations.md) und [Windows Sockets: Beispiel für Sockets mithilfe der Archive](../mfc/windows-sockets-example-of-sockets-using-archives.md). Informationen über einige der Funktionen erhalten Sie durch Ihre eigenen Klassen aus den Socketklassen ableiten, finden Sie unter [Windows Sockets: Ableiten von Socket-Classen](../mfc/windows-sockets-deriving-from-socket-classes.md).
 
 > [!NOTE]
->  Wenn Sie eine MFC-Clientprogramm zur Kommunikation mit Servern mit eingerichteten (MFC-Fremd) schreiben, werden C++-Objekte über das Archiv nicht gesendet werden. Wenn der Server eine MFC-Anwendung, die die Arten von Objekten zu verstehen, die Sie senden möchten ist, ist es nicht möglich zu empfangen und Deserialisieren Ihrer Objekte. Verwandtes Material zu diesem Thema für die Kommunikation mit nicht-MFC-Anwendungen, auch finden Sie im Artikel [Windows Sockets: Bytereihenfolge](../mfc/windows-sockets-byte-ordering.md).
+>  Wenn Sie eine MFC-Clientprogramm zur Kommunikation mit Servern mit eingerichteten (MFC-Fremd) schreiben, werden C++-Objekte über das Archiv nicht gesendet werden. Wenn der Server eine MFC-Anwendung, die die Arten von Objekten zu verstehen, die Sie senden möchten ist, ist es nicht möglich zu empfangen und Deserialisieren Ihrer Objekte. Verwandtes Material zu diesem Thema für die Kommunikation mit nicht-MFC-Anwendungen, auch finden Sie im Artikel [Windows Sockets: Die Bytereihenfolge](../mfc/windows-sockets-byte-ordering.md).
 
 ##  <a name="_core_the_csocket_programming_model"></a> Das Programmiermodell CSocket
 
@@ -70,16 +70,15 @@ Mit einem `CSocket` Objekt umfasst das Erstellen und Zuordnen von mehreren MFC-K
     > [!NOTE]
     >  Klasse `CArchive` liefert die `IsBufferEmpty` Memberfunktion, die speziell zur Verwendung mit der Klasse `CSocket`. Wenn der Puffer mehrere Datennachrichten enthält, müssen Sie z. B. Schleife, bis alle werden gelesen, und der Puffer wird gelöscht. Die nächste Benachrichtigung, dass Daten empfangen werden kann, andernfalls auf unbestimmte Zeit verschoben werden. Verwendung `IsBufferEmpty` um sicherzustellen, dass Sie alle Daten abzurufen.
 
-Der Artikel [Windows Sockets: Reihenfolge der Vorgänge](../mfc/windows-sockets-sequence-of-operations.md) beide Seiten dieses Prozesses mit Beispielcode veranschaulicht.
+Der Artikel [Windows Sockets: Reihenfolge der Operationen](../mfc/windows-sockets-sequence-of-operations.md) beide Seiten dieses Prozesses mit Beispielcode veranschaulicht.
 
 Weitere Informationen finden Sie unter:
 
-- [Windows-Sockets: Blockieren](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: Stream-Sockets](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows-Sockets: Datagrammsockets](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: Datagrammsockets](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Siehe auch
 
 [Windows-Sockets in MFC](../mfc/windows-sockets-in-mfc.md)<br/>
 [CSocket::Create](../mfc/reference/csocket-class.md#create)
-

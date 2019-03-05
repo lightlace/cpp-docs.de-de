@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMultiPaneFrameWnd [MFC], StoreRecentDockSiteInfo
 - CMultiPaneFrameWnd [MFC], StoreRecentTabRelatedInfo
 ms.assetid: 989a548e-0d70-46b7-a513-8cf740e1be3e
-ms.openlocfilehash: edd7fcf24302de8ded4f3adda933c783c6997757
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb420021ec5b9839091c42b5eae6e1d5b9f7f977
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504350"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281238"
 ---
 # <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd-Klasse
 
@@ -114,23 +114,23 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 |[CMultiPaneFrameWnd::CanBeDockedToPane](#canbedockedtopane)|Bestimmt, ob das Minirahmenfenster an einen Bereich angedockt werden kann. (Überschreibt [CPaneFrameWnd::CanBeDockedToPane](../../mfc/reference/cpaneframewnd-class.md#canbedockedtopane).)|
 |[CMultiPaneFrameWnd::CheckGripperVisibility](#checkgrippervisibility)|(Überschreibt [CPaneFrameWnd::CheckGripperVisibility](../../mfc/reference/cpaneframewnd-class.md#checkgrippervisibility).)|
 |[CMultiPaneFrameWnd::CloseMiniFrame](#closeminiframe)|(Überschreibt `CPaneFrameWnd::CloseMiniFrame`.)|
-|[CMultiPaneFrameWnd::ConvertToTabbedDocument](#converttotabbeddocument)|Konvertiert den Bereich in ein Dokument mit Registerkarten. (Überschreibt [CPaneFrameWnd::ConvertToTabbedDocument](../../mfc/reference/cpaneframewnd-class.md#converttotabbeddocument).)|
+|[CMultiPaneFrameWnd::ConvertToTabbedDocument](#converttotabbeddocument)|Konvertiert den Bereich in ein Dokument mit Registerkarten. (Overrides [CPaneFrameWnd::ConvertToTabbedDocument](../../mfc/reference/cpaneframewnd-class.md#converttotabbeddocument).)|
 |[CMultiPaneFrameWnd::DockFrame](#dockframe)||
 |[CMultiPaneFrameWnd::DockPane](#dockpane)|Dockt den Bereich an. (Überschreibt [CPaneFrameWnd::DockPane](../../mfc/reference/cpaneframewnd-class.md#dockpane).)|
 |[CMultiPaneFrameWnd::DockRecentPaneToMainFrame](#dockrecentpanetomainframe)||
-|[CMultiPaneFrameWnd::GetCaptionText](#getcaptiontext)|Gibt den Beschriftungstext zurück. (Überschreibt [CPaneFrameWnd::GetCaptionText](../../mfc/reference/cpaneframewnd-class.md#getcaptiontext).)|
+|[CMultiPaneFrameWnd::GetCaptionText](#getcaptiontext)|Gibt den Beschriftungstext zurück. (Overrides [CPaneFrameWnd::GetCaptionText](../../mfc/reference/cpaneframewnd-class.md#getcaptiontext).)|
 |[CMultiPaneFrameWnd::GetPaneContainerManager](#getpanecontainermanager)|Gibt einen Verweis auf das interne Container-Manager-Objekt zurück.|
-|[CMultiPaneFrameWnd::GetFirstVisiblePane](#getfirstvisiblepane)|Gibt den ersten sichtbaren Bereich zurück, der in einem Minirahmenfenster enthalten ist. (Überschreibt [CPaneFrameWnd::GetFirstVisiblePane](../../mfc/reference/cpaneframewnd-class.md#getfirstvisiblepane).)|
+|[CMultiPaneFrameWnd::GetFirstVisiblePane](#getfirstvisiblepane)|Gibt den ersten sichtbaren Bereich zurück, der in einem Minirahmenfenster enthalten ist. (Overrides [CPaneFrameWnd::GetFirstVisiblePane](../../mfc/reference/cpaneframewnd-class.md#getfirstvisiblepane).)|
 |[CMultiPaneFrameWnd::GetPane](#getpane)|Gibt einen Bereich zurück, der im Minirahmenfenster enthalten ist. (Überschreibt [CPaneFrameWnd::GetPane](../../mfc/reference/cpaneframewnd-class.md#getpane).)|
 |[CMultiPaneFrameWnd::GetPaneCount](#getpanecount)|Gibt die Anzahl der Bereiche zurück, die im Minirahmenfenster enthalten sind. (Überschreibt [CPaneFrameWnd::GetPaneCount](../../mfc/reference/cpaneframewnd-class.md#getpanecount).)|
-|[CMultiPaneFrameWnd::GetVisiblePaneCount](#getvisiblepanecount)|Gibt die Anzahl der sichtbaren Bereiche zurück, die im Minirahmenfenster enthalten sind. (Überschreibt [CPaneFrameWnd::GetVisiblePaneCount](../../mfc/reference/cpaneframewnd-class.md#getvisiblepanecount).)|
+|[CMultiPaneFrameWnd::GetVisiblePaneCount](#getvisiblepanecount)|Gibt die Anzahl der sichtbaren Bereiche zurück, die im Minirahmenfenster enthalten sind. (Overrides [CPaneFrameWnd::GetVisiblePaneCount](../../mfc/reference/cpaneframewnd-class.md#getvisiblepanecount).)|
 |[CMultiPaneFrameWnd::InsertPane](#insertpane)||
 |[CMultiPaneFrameWnd::LoadState](#loadstate)|Lädt den Zustand des Bereichs aus der Registrierung. (Überschreibt [CPaneFrameWnd::LoadState](../../mfc/reference/cpaneframewnd-class.md#loadstate).)|
 |[CMultiPaneFrameWnd::OnDockToRecentPos](#ondocktorecentpos)|Dockt das Minirahmenfenster an der letzten Position an. (Überschreibt [CPaneFrameWnd::OnDockToRecentPos](../../mfc/reference/cpaneframewnd-class.md#ondocktorecentpos).)|
 |[CMultiPaneFrameWnd::OnKillRollUpTimer](#onkillrolluptimer)|Hält den Rolluptimer an. (Überschreibt [CPaneFrameWnd::OnKillRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onkillrolluptimer).)|
 |[CMultiPaneFrameWnd::OnPaneRecalcLayout](#onpanerecalclayout)|Passt das Layout eines Bereichs innerhalb eines Minirahmenfensters. (Überschreibt [CPaneFrameWnd::OnPaneRecalcLayout](../../mfc/reference/cpaneframewnd-class.md#onpanerecalclayout).)|
-|[CMultiPaneFrameWnd::OnSetRollUpTimer](#onsetrolluptimer)|Richtet den Rolluptimer ein. (Überschreibt [CPaneFrameWnd::OnSetRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onsetrolluptimer).)|
-|[CMultiPaneFrameWnd::OnShowPane](#onshowpane)|Wird vom Framework aufgerufen, wenn ein Bereich im Minirahmenfenster angezeigt oder ausgeblendet wird. (Überschreibt [CPaneFrameWnd::OnShowPane](../../mfc/reference/cpaneframewnd-class.md#onshowpane).)|
+|[CMultiPaneFrameWnd::OnSetRollUpTimer](#onsetrolluptimer)|Richtet den Rolluptimer ein. (Overrides [CPaneFrameWnd::OnSetRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onsetrolluptimer).)|
+|[CMultiPaneFrameWnd::OnShowPane](#onshowpane)|Wird vom Framework aufgerufen, wenn ein Bereich im Minirahmenfenster angezeigt oder ausgeblendet wird. (Overrides [CPaneFrameWnd::OnShowPane](../../mfc/reference/cpaneframewnd-class.md#onshowpane).)|
 |[CMultiPaneFrameWnd::PaneFromPoint](#panefrompoint)|Gibt einen Bereich zurück, wenn er einen vom Benutzer angegebenen Punkt innerhalb einer Minirahmenfensters enthält. (Überschreibt [CPaneFrameWnd::PaneFromPoint](../../mfc/reference/cpaneframewnd-class.md#panefrompoint).)|
 |[CMultiPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|Wird vom Framework aufgerufen, um ungültige Bereiche zu entfernen. (Überschreibt [CPaneFrameWnd::RemoveNonValidPanes](../../mfc/reference/cpaneframewnd-class.md#removenonvalidpanes).)|
 |[CMultiPaneFrameWnd::RemovePane](#removepane)|Entfernt einen Bereich aus dem Minirahmenfenster. (Überschreibt [CPaneFrameWnd::RemovePane](../../mfc/reference/cpaneframewnd-class.md#removepane).)|
@@ -141,7 +141,7 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 |[CMultiPaneFrameWnd::SetLastFocusedPane](#setlastfocusedpane)||
 |[CMultiPaneFrameWnd::SetPreDockState](#setpredockstate)|Legt den Zustand andocken. (Überschreibt [CPaneFrameWnd::SetPreDockState](../../mfc/reference/cpaneframewnd-class.md#setpredockstate).)|
 |[CMultiPaneFrameWnd::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)|(Überschreibt [CPaneFrameWnd::StoreRecentDockSiteInfo](../../mfc/reference/cpaneframewnd-class.md#storerecentdocksiteinfo).)|
-|[CMultiPaneFrameWnd::StoreRecentTabRelatedInfo](#storerecenttabrelatedinfo)|(Überschreibt [CPaneFrameWnd::StoreRecentTabRelatedInfo](../../mfc/reference/cpaneframewnd-class.md#storerecenttabrelatedinfo).)|
+|[CMultiPaneFrameWnd::StoreRecentTabRelatedInfo](#storerecenttabrelatedinfo)|(Overrides [CPaneFrameWnd::StoreRecentTabRelatedInfo](../../mfc/reference/cpaneframewnd-class.md#storerecenttabrelatedinfo).)|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -183,7 +183,7 @@ virtual void AddPane(CBasePane* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *aufnehmen*<br/>
+[in] *pWnd*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -231,10 +231,10 @@ virtual void CalcExpectedDockedRect(
 ### <a name="parameters"></a>Parameter
 
 [in] *pWndToDock*<br/>
-[in] *PtMouse*<br/>
+[in] *ptMouse*<br/>
 [in] *RectResult*<br/>
 [in] *bDrawTab*<br/>
-[in] *PpTargetBar*<br/>
+[in] *ppTargetBar*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -408,7 +408,7 @@ virtual BOOL InsertPane(
 
 [in] *pControlBar*<br/>
 [in] *pTarget*<br/>
-[in] *bNach*<br/>
+[in] *bAfter*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -424,8 +424,8 @@ virtual BOOL LoadState(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *LpszProfileName*<br/>
-[in] *UiID*<br/>
+[in] *lpszProfileName*<br/>
+[in] *uiID*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -489,7 +489,7 @@ virtual CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *zeigen*<br/>
+[in] *point*<br/>
 [in] *nSensitivity*<br/>
 [in] *bCheckVisibility*<br/>
 
@@ -547,8 +547,8 @@ virtual BOOL SaveState(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *LpszProfileName*<br/>
-[in] *UiID*<br/>
+[in] *lpszProfileName*<br/>
+[in] *uiID*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -562,7 +562,7 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Ar*<br/>
+[in] *ar*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -586,7 +586,7 @@ void SetLastFocusedPane(HWND hwnd);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Hwnd*<br/>
+[in] *hwnd*<br/>
 
 ### <a name="remarks"></a>Hinweise
 

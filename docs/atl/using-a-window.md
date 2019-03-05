@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CWindow class, about CWindow class
 - windows [C++], ATL
 ms.assetid: b3b9cc8e-4287-486b-b080-38852bc2943a
-ms.openlocfilehash: 7446196e9eec4b9d9236d4ab55afd9fcf859254b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a1843bfedc30e7d3b47c2916af08c8b53aaa965
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568657"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268862"
 ---
 # <a name="using-a-window"></a>Verwenden eines Fensters
 
@@ -24,4 +24,3 @@ Zusätzlich zur Verwendung von `CWindow` direkt, Sie können auch aus dem Hinzuf
 ## <a name="see-also"></a>Siehe auch
 
 [Fensterklassen](../atl/atl-window-classes.md)
-

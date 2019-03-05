@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: 1816e6ee2dc0f358cb2da4c8bab572daa33a29c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef46001e230813afb0abb857b7aee39bf5fba05d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561238"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260750"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage-Klasse
 
@@ -74,7 +74,7 @@ class CPropertyPage : public CDialog
 |[CPropertyPage::GetPSP](#getpsp)|Ruft ab, die Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2) Struktur zugeordnet ist die `CPropertyPage` Objekt.|
 |[CPropertyPage::OnApply](#onapply)|Wird vom Framework aufgerufen, wenn auf die Schaltfläche "jetzt übernehmen" geklickt wird.|
 |[CPropertyPage::OnCancel](#oncancel)|Wird vom Framework aufgerufen, wenn auf die Schaltfläche "Abbrechen" geklickt wird.|
-|[CPropertyPage:: OnKillActive](#onkillactive)|Wird von Framework aufgerufen, wenn die aktuelle Seite nicht mehr zur aktiven Seite wird. Führen Sie die datenvalidierung hier ein.|
+|[CPropertyPage::OnKillActive](#onkillactive)|Wird von Framework aufgerufen, wenn die aktuelle Seite nicht mehr zur aktiven Seite wird. Führen Sie die datenvalidierung hier ein.|
 |[CPropertyPage::OnOK](#onok)|Vom Framework aufgerufen, wenn die OK, jetzt übernehmen oder Schaltfläche "Schließen" geklickt wird.|
 |[CPropertyPage::OnQueryCancel](#onquerycancel)|Wird vom Framework aufgerufen, wenn auf die Schaltfläche "Abbrechen" geklickt wird, und bevor der Abbruchvorgang stattgefunden hat.|
 |[CPropertyPage::OnReset](#onreset)|Wird vom Framework aufgerufen, wenn auf die Schaltfläche "Abbrechen" geklickt wird.|
@@ -529,7 +529,7 @@ LRESULT QuerySiblings(
 
 ### <a name="parameters"></a>Parameter
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 Gibt zusätzliche Nachricht abhängige Informationen.
 
 *lParam*<br/>

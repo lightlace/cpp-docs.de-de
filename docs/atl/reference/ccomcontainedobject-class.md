@@ -14,12 +14,12 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComContainedObject class
 ms.assetid: e8616b41-c200-47b8-bf2c-fb9f713ebdad
-ms.openlocfilehash: 289174fbfc61b0bbca65233fe24d93537627e17d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15ea9be2a3576081901c9e744d89d33688fe838a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492572"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273581"
 ---
 # <a name="ccomcontainedobject-class"></a>CComContainedObject-Klasse
 
@@ -47,7 +47,7 @@ Abgeleitet von die Klasse [CComObjectRoot](../../atl/reference/ccomobjectroot-cl
 |Name|Beschreibung|
 |----------|-----------------|
 |[CComContainedObject::CComContainedObject](#ccomcontainedobject)|Der Konstruktor. Initialisiert den Zeiger Member auf, um den des Besitzerobjekts `IUnknown`.|
-|[CComContainedObject:: ~ CComContainedObject](#dtor)|Der Destruktor.|
+|[CComContainedObject::~CComContainedObject](#dtor)|Der Destruktor.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -94,7 +94,7 @@ CComContainedObject(void* pv);
 
 ### <a name="parameters"></a>Parameter
 
-*PV*<br/>
+*pv*<br/>
 [in] Der des Besitzerobjekts `IUnknown`.
 
 ### <a name="remarks"></a>Hinweise
@@ -141,13 +141,13 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>Parameter
 
-*IID*<br/>
+*iid*<br/>
 [in] Der Bezeichner der angeforderten Schnittstelle.
 
 *ppvObject*<br/>
 [out] Ein Zeiger auf den Schnittstellenzeiger vom *Iid*. Wenn das Objekt nicht über diese Schnittstelle unterstützt *PpvObject* auf NULL festgelegt ist.
 
-*PP*<br/>
+*pp*<br/>
 [out] Ein Zeiger auf den Schnittstellenzeiger vom Typ `Q`. Wenn das Objekt nicht über diese Schnittstelle unterstützt *pp* auf NULL festgelegt ist.
 
 ### <a name="return-value"></a>Rückgabewert

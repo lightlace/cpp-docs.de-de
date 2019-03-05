@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: 428f64dadb91887c4d076693e5dc939b6aff7680
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f58492c6adbb6c183d6498e4a58f3ce639d7d18
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571235"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269382"
 ---
 # <a name="cshellmanager-class"></a>CShellManager-Klasse
 
@@ -218,7 +218,7 @@ void FreeItem(LPITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Parameter
 
-*PIDL*<br/>
+*pidl*<br/>
 [in] Eine Elementliste zu löschen.
 
 ##  <a name="getitemcount"></a>  CShellManager::GetItemCount
@@ -231,7 +231,7 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Parameter
 
-*PIDL*<br/>
+*pidl*<br/>
 [in] Ein Zeiger auf eine Elementliste.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -248,7 +248,7 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Parameter
 
-*PIDL*<br/>
+*pidl*<br/>
 [in] Ein Zeiger auf eine Elementliste.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -265,7 +265,7 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Parameter
 
-*PIDL*<br/>
+*pidl*<br/>
 [in] Die Liste der Elemente, die durchlaufen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -317,7 +317,7 @@ HRESULT ItemFromPath(
 *lpszPath*<br/>
 [in] Eine Zeichenfolge, die den Pfad für das Element angibt.
 
-*PIDL*<br/>
+*pidl*<br/>
 [out] Ein Verweis auf eine PIDL. Die Methode verwendet diesen PIDL zum Speichern des Zeigers auf den Rückgabewert an.
 
 ### <a name="return-value"></a>Rückgabewert

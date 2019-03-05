@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_multiset class
 ms.assetid: 219d7d67-1ff0-45f4-9400-e9cc272991a4
-ms.openlocfilehash: 8b03245790bf011941cabcb18600bbb1e69c37d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7acb79bf5b7c1831027cc47f4da7faa6f1669c21
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543935"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275999"
 ---
 # <a name="concurrentunorderedmultiset-class"></a>concurrent_unordered_multiset-Klasse
 
@@ -213,7 +213,7 @@ Die Vergleichsfunktion des Gleichheit für diese ungeordnete Multimenge.
 *_Allocator*<br/>
 Die Zuweisung für diese ungeordnete Multimenge.
 
-*Erste*<br/>
+*first*<br/>
 *last*<br/>
 *_Uset*<br/>
 Die Quelle `concurrent_unordered_multiset` Objekt Elemente verschoben.
@@ -385,13 +385,13 @@ Der itertatortyp für Einfügung verwendet.
 *V*<br/>
 Der Typ, der der Wert eingefügt werden soll.
 
-*Wert*<br/>
+*value*<br/>
 Der Wert eingefügt werden soll.
 
 *_Where*<br/>
 Die Startposition für eine Einfügemarke zu suchen.
 
-*Erste*<br/>
+*first*<br/>
 Der Anfang des Bereichs, der eingefügt werden soll.
 
 *last*<br/>
@@ -469,7 +469,7 @@ Die maximale Anzahl von Elementen, die in diesen gleichzeitigen Container eingef
 
 Dieser Wert für die obere Grenze möglicherweise tatsächlich größer, was der Container tatsächlich enthalten kann.
 
-##  <a name="operator_eq"></a> Operator =
+##  <a name="operator_eq"></a> operator=
 
 Weist den Inhalt eines anderen `concurrent_unordered_multiset`-Objekts diesem Objekt zu. Diese Methode ist nicht nebenläufigkeitssicher.
 
@@ -679,7 +679,7 @@ size_type unsafe_erase(
 *_Where*<br/>
 Die Position des Iterators, an der gelöscht werden soll.
 
-*Erste*<br/>
+*first*<br/>
 *last*<br/>
 *KVal*<br/>
 Der Schlüsselwert, der gelöscht werden soll.
@@ -710,4 +710,3 @@ Die maximale Anzahl von Buckets, die in diesem Container.
 
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
 [Parallele Container und Objekte](../../../parallel/concrt/parallel-containers-and-objects.md)
-

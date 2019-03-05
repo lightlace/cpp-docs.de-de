@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: 857427c12dd0f763bf88c99a65d5f9cf3eca1270
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a18e235c9f5875a977f740c26b917a3567a678d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429353"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264988"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar-Klasse
 
@@ -192,7 +192,7 @@ Der logische OR-Kombination der Formate Leiste Beschriftung.
 *pParentWnd*<br/>
 Das übergeordnete Fenster des Steuerelements Beschriftung.
 
-*Benutzer-ID*<br/>
+*uID*<br/>
 Die ID der Beschriftung-Steuerelement.
 
 *nHeight*<br/>
@@ -233,7 +233,7 @@ void EnableButton(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] TRUE, wenn die Schaltfläche "false" zu aktivieren, auf um die Schaltfläche zu deaktivieren.
 
 ##  <a name="getalignment"></a>  CMFCCaptionBar::GetAlignment
@@ -246,7 +246,7 @@ BarElementAlignment GetAlignment(BarElement elem);
 
 ### <a name="parameters"></a>Parameter
 
-*Elem*<br/>
+*elem*<br/>
 [in] Ein Caption-Element der Leiste für die Ausrichtung abzurufen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -356,7 +356,7 @@ virtual void OnDrawBackground(
 *pDC*<br/>
 [in] Ein Zeiger auf den Gerätekontext, der der Titelleiste.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck ausgefüllt werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -380,7 +380,7 @@ virtual void OnDrawBorder(
 *pDC*<br/>
 [in] Einen Gerätekontext, der verwendet wird, um die Rahmen anzuzeigen.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck.
 
 ### <a name="remarks"></a>Hinweise
@@ -406,13 +406,13 @@ virtual void OnDrawButton(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext, der zur Anzeige der Schaltfläche verwendet wird.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck der Schaltfläche.
 
 *strButton*<br/>
 [in] Die Beschriftung der Schaltfläche Text.
 
-*bAktiviert*<br/>
+*bEnabled*<br/>
 [in] True, wenn die Schaltfläche aktiviert ist. "False" andernfalls.
 
 ### <a name="remarks"></a>Hinweise
@@ -434,7 +434,7 @@ virtual void OnDrawImage(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext, der zur Anzeige des Bilds verwendet wird.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Gibt das umschließende Rechteck des Bilds an.
 
 ### <a name="remarks"></a>Hinweise
@@ -457,7 +457,7 @@ virtual void OnDrawText(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext, der zur Anzeige der Schaltfläche verwendet wird.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck des Texts.
 
 *strText*<br/>

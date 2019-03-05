@@ -2,12 +2,12 @@
 title: MFC-Assistenten und -Dialogfelder
 ms.date: 11/04/2016
 ms.assetid: 2fae0a2c-d147-4468-a547-f7b85df767a1
-ms.openlocfilehash: a9574b270fdbffc0026d49452adf092fdf87d7cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a82ee0b8eccde65aeffacb05695eed4b1f14cdc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493898"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267471"
 ---
 # <a name="mfc-wizards-and-dialog-boxes"></a>MFC-Assistenten und -Dialogfelder
 
@@ -28,4 +28,3 @@ Die Microsoft Foundation Class (MFC)-Assistenten generieren Standardcode für ve
 |[ATL-Unterstützung in einem MFC-Projekt](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|Header und Makros, die erforderlich sind, indem Sie die Active Template Library (ATL) erstellt.|
 |[MFC-Klassen-Assistent](../../mfc/reference/mfc-class-wizard.md)|Erstellt eine h-Datei und einer CPP-Datei.|
 |[MFC-Desktopanwendungen](../../mfc/mfc-desktop-applications.md)|Enthält Links zu den MFC-Datenbankdokumentation.|
-

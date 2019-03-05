@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-ms.openlocfilehash: 93ef654bb71a342a6215ce5cd60786f36cadedf7
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 16d18d23c370a8a603ab6150fcee18455ae47c48
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657551"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259021"
 ---
 # <a name="array-class"></a>array-Klasse
 
@@ -433,7 +433,7 @@ Ein Anfangsiterator in den Quellcontainer.
 *_Src_last*<br/>
 Ein Endeiterator in den Quellcontainer.
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Andere Datenquelle.
 
 *_Rank*<br/>
@@ -560,7 +560,7 @@ Der Datentyp der Elemente des Vektors.
 
 Ein Objekt des Typs `vector<T>`, das eine Kopie der Daten im Array enthält.
 
-##  <a name="operator_call"></a> Operator()
+##  <a name="operator_call"></a> operator()
 
 Gibt den Elementwert zurück, der von den Parametern angegeben wird.
 
@@ -630,7 +630,7 @@ Der Index.
 
 Das Element am angegebenen Index.
 
-##  <a name="operator_eq"></a> Operator =
+##  <a name="operator_eq"></a> operator=
 
 Kopiert den Inhalt des angegebenen `array` Objekt.
 
@@ -645,7 +645,7 @@ array& operator= (
 
 ### <a name="parameters"></a>Parameter
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Das `array`-Objekt, aus dem kopiert werden soll.
 
 *_Src*<br/>

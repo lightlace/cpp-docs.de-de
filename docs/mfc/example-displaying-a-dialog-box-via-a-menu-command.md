@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: 830ba27945ce8da2abd52c7f29d786d098113151
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c60469747c24b4c295348a14cb569c4118c76d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483485"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260477"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Beispiel: Anzeigen eines Dialogfelds mit einem Menübefehl
 
@@ -31,7 +31,7 @@ Die Verfahren verwenden Sie die folgenden Namen und Werte:
 
 |Element|Namen oder Wert|
 |----------|-------------------|
-|Application|DisplayDialog|
+|Anwendung|DisplayDialog|
 |Kontextmenübefehl von ""|Testbefehl im Menü "Ansicht"; Befehls-ID = ID_VIEW_TEST|
 |Dialogfeld|Dialogfeld "Test"; Klasse = CTestDialog; Headerdatei = TestDialog.h; Variable = Testdlg, Ptestdlg|
 |Befehlshandler|OnViewTest|
@@ -60,7 +60,7 @@ Die Verfahren verwenden Sie die folgenden Namen und Werte:
 
 1. Führen Sie die ersten vier Schritte, um ein modales Dialogfeld, mit der Ausnahme die Ansichtsklasse (CDisplayDialogView) Wählen Sie in Schritt 4 angezeigt.
 
-1. Bearbeiten Sie DisplayDialogView.h:
+1. Edit DisplayDialogView.h:
 
    - Die Dialogfeldklasse, die vor der Deklaration der ersten Klasse zu deklarieren:
 
@@ -70,7 +70,7 @@ Die Verfahren verwenden Sie die folgenden Namen und Werte:
 
          [!code-cpp[NVC_MFCControlLadenDialog#45](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_4.h)]
 
-1. Bearbeiten Sie DisplayDialogView.cpp:
+1. Edit DisplayDialogView.cpp:
 
    - Fügen Sie die folgende Anweisung einschließen, nach den vorhandenen include-Anweisungen hinzu:
 
