@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: 8fe22924039cc0e2547df2cc07b0c4387ad908bd
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f194879cf4a1388fc156fa4e92f4f9bea5056191
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177055"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296006"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl-Klasse
 
@@ -330,7 +330,7 @@ virtual HRESULT accSelect(
 ### <a name="parameters"></a>Parameter
 
 [in] *FlagsSelect*<br/>
-[in] *VarChild*<br/>
+[in] *varChild*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -461,7 +461,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 [in] Eine bitweise Kombination (OR) von [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein umgebendes Rechteck, der angibt, die Größe und Position des Fensters, in die Client-Koordinaten *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -558,7 +558,7 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] True, um den Beschreibungsbereich aktivieren. "False", um den Beschreibungsbereich zu deaktivieren. Der Standardwert ist "true".
 
 ### <a name="remarks"></a>Hinweise
@@ -578,7 +578,7 @@ void EnableHeaderCtrl(
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] "True", um das Kopfzeilen-Steuerelement zu aktivieren; So deaktivieren Sie das Kopfzeilen-Steuerelement wird false ZURÜCKGEGEBEN. Der Standardwert ist "true".
 
 *lpszLeftColumn*<br/>
@@ -675,7 +675,7 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *PcountChildren*<br/>
+[in] *pcountChildren*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -689,7 +689,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *PvarChild*<br/>
+[in] *pvarChild*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -705,8 +705,8 @@ virtual HRESULT get_accHelp(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *VarChild*<br/>
-[in] *PszHelp*<br/>
+[in] *varChild*<br/>
+[in] *pszHelp*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -723,9 +723,9 @@ virtual HRESULT get_accHelpTopic(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *PszHelpFile*<br/>
-[in] *VarChild*<br/>
-[in] *PidTopic*<br/>
+[in] *pszHelpFile*<br/>
+[in] *varChild*<br/>
+[in] *pidTopic*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -741,7 +741,7 @@ virtual HRESULT get_accKeyboardShortcut(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *VarChild*<br/>
+[in] *varChild*<br/>
 [in] *PszKeyboardShortcut*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
@@ -756,7 +756,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *PvarChildren*<br/>
+[in] *pvarChildren*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1272,7 +1272,7 @@ virtual void OnClickButton(CPoint point);
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Ein Punkt in Clientkoordinaten.
 
 ### <a name="remarks"></a>Hinweise
@@ -1309,7 +1309,7 @@ virtual void OnDrawDescription(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das angibt, wo Sie den Beschreibungsbereich zu zeichnen.
 
 ### <a name="remarks"></a>Hinweise
@@ -1608,7 +1608,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Parameter
 
-*Farbe*<br/>
+*color*<br/>
 [in] Ein RGB-Farbwert.
 
 ### <a name="remarks"></a>Hinweise

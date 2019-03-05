@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-ms.openlocfilehash: ad096eea3467346d85ce4249e910915cbd73488d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98ad5f817361d8410e5a60648fb23baec06c42d7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560250"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289142"
 ---
 # <a name="agent-class"></a>agent-Klasse
 
@@ -59,7 +59,7 @@ class agent;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[Fertig](#done)|Versetzt einen Agent in der `agent_done` Zustand, der angibt, dass der Agent abgeschlossen wurde.|
+|[done](#done)|Versetzt einen Agent in der `agent_done` Zustand, der angibt, dass der Agent abgeschlossen wurde.|
 |[run](#run)|Stellt die Hauptaufgabe eines Agents dar. `run` in einer abgeleiteten Klasse überschrieben werden soll, und gibt an, welche Aktion der Agent ausführen soll, nachdem es gestartet wurde.|
 
 ## <a name="remarks"></a>Hinweise
@@ -164,7 +164,7 @@ bool start();
 
 **"true"** Wenn der Agent ordnungsgemäß gestartet **"false"** andernfalls. Ein Agent, der abgebrochen wurde, kann nicht gestartet werden.
 
-##  <a name="status"></a> Status
+##  <a name="status"></a> status
 
 Eine synchrone Informationsquelle Status des Agents.
 

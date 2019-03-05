@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CGopherConnection [MFC], GetAttribute
 - CGopherConnection [MFC], OpenFile
 ms.assetid: b5b96aea-ac99-430e-bd84-d1372b43f78f
-ms.openlocfilehash: f9c2a99c30213a28f4c20ba0f4a2eebea85bef76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d960d566a63531af211592a7a8ae8f1cb35c5958
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519664"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300719"
 ---
 # <a name="cgopherconnection-class"></a>CGopherConnection-Klasse
 
@@ -116,10 +116,10 @@ Ein Zeiger auf eine auf Null endende Zeichenfolge, die das Kennwort für die Anm
 |--------------------|--------------------|---------------------------------|---------------------------------|
 |NULL oder ""|NULL oder ""|"Anonym"|Die e-Mail-Adresse des Benutzers|
 |Nicht-NULL-Zeichenfolge|NULL oder ""|*pstrUserName*|" "|
-|NULL-nicht-NULL-Zeichenfolge|FEHLER|FEHLER||
+|NULL-nicht-NULL-Zeichenfolge|ERROR|ERROR||
 |Nicht-NULL-Zeichenfolge|Nicht-NULL-Zeichenfolge|*pstrUserName*|*pstrPassword*|
 
-*%nPort*<br/>
+*nPort*<br/>
 Eine Zahl, die TCP/IP-Port für die Verwendung auf dem Server identifiziert.
 
 ### <a name="remarks"></a>Hinweise
@@ -163,7 +163,7 @@ Ein Zeiger auf eine Zeichenfolge, die die zu öffnende Datei identifiziert. Dies
 *pstrServerName*<br/>
 Ein Zeiger auf eine Zeichenfolge, die den Namen des Gopher-Servers enthält.
 
-*%nPort*<br/>
+*nPort*<br/>
 Die Anzahl den Internet-Port für diese Verbindung identifiziert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -194,7 +194,7 @@ Ein Verweis auf eine [CGopherLocator](../../mfc/reference/cgopherlocator-class.m
 *strRequestedAttributes*<br/>
 Ein Leerzeichen getrennte Zeichenfolge, der Sie den Namen der erforderlichen Attribute angeben.
 
-*"strResult"*<br/>
+*strResult*<br/>
 Ein Verweis auf eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) , empfängt den Locatortyp.
 
 ### <a name="return-value"></a>Rückgabewert

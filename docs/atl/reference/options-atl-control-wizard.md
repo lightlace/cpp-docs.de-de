@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
-ms.openlocfilehash: e607e35b2b3970f329692ba8d2c612d7f6a6591b
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1dd136739162c72d8064deb9b1498794f1985e1b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522310"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282980"
 ---
 # <a name="options-atl-control-wizard"></a>Optionen, ATL-Steuerelement-Assistent
 
@@ -23,9 +23,9 @@ Mithilfe dieser Seite des Assistenten können Sie um den Typ des Steuerelements 
 
 Die Art des Steuerelements, das Sie erstellen möchten.
 
-- **Standardsteuerelement**: ein ActiveX-Steuerelement.
+- **Standardsteuerelement**: Ein ActiveX-Steuerelement.
 
-- **Zusammengesetztes Steuerelement**: ein ActiveX-Steuerelement, das (ähnlich wie ein Dialogfeld, das) enthalten, kann andere ActiveX-Steuerelemente oder Windows-Steuerelemente. Ein zusammengesetztes Steuerelement umfasst Folgendes:
+- **Zusammengesetztes Steuerelement**: Ein ActiveX-Steuerelement, das (ähnlich wie ein Dialogfeld, das) enthalten, kann andere ActiveX-Steuerelemente oder Windows-Steuerelemente. Ein zusammengesetztes Steuerelement umfasst Folgendes:
 
   - Eine Vorlage für das Dialogfeld, das das zusammengesetzte Steuerelement implementiert werden soll.
 
@@ -39,7 +39,7 @@ Die Art des Steuerelements, das Sie erstellen möchten.
 
     Dieses Steuerelement legt standardmäßig [CComControlBase](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) auf "true", um anzugeben, dass dies ein Steuerelement mit Fenster ist. Eine Zuordnung für die Senke implementiert. Weitere Informationen finden Sie unter [-Unterstützung für DHTML-Steuerelement](../../atl/atl-support-for-dhtml-controls.md).
 
-- **DHTML-Steuerelements**: Gibt an, ein ATL-DHTML-Steuerelement der Benutzeroberfläche mithilfe von HTML. DHTML-UI-Klasse enthält eine COM-Zuordnung. Dieses Steuerelement legt standardmäßig [CComControlBase](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) auf "true", um anzugeben, dass dies ein Steuerelement mit Fenster ist.
+- **DHTML-Steuerelements**: Ein ATL-DHTML-Steuerelement gibt an, die Benutzeroberfläche, die mit HTML. DHTML-UI-Klasse enthält eine COM-Zuordnung. Dieses Steuerelement legt standardmäßig [CComControlBase](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) auf "true", um anzugeben, dass dies ein Steuerelement mit Fenster ist.
 
    Weitere Informationen finden Sie unter [Identifizieren von Elementen des DHTML-Steuerelementprojekts](../../atl/identifying-the-elements-of-the-dhtml-control-project.md).
 
@@ -51,27 +51,27 @@ Unterstützt nur die Schnittstellen, die meisten Container absolut erforderlich 
 
 Fügt die Unterstützung für das Steuerelement, das Sie erstellen. Weitere Informationen finden Sie unter [Aggregation](../../atl/aggregation.md).
 
-- **Ja**: Erstellen eines Steuerelements, die aggregiert werden können.
+- **Ja**: Erstellen Sie ein Steuerelement, das aggregiert werden kann.
 
 - **Keine**: Erstellen Sie ein Steuerelement, das nicht aggregiert werden kann.
 
-- **Nur**: Erstellen Sie ein Steuerelement, das durch die Aggregation nur instanziiert werden kann.
+- **Only**: Erstellen Sie ein Steuerelement, das durch die Aggregation nur instanziiert werden kann.
 
 ### <a name="threading-model"></a>Threadmodell
 
 Gibt an, dass das Threadingmodell vom Steuerelement verwendet.
 
-- **Einzelne**: das Steuerelement wird nur im primären COM-Thread ausgeführt.
+- **Einzelne**: Das Steuerelement wird nur im primären COM-Thread ausgeführt.
 
-- **Apartment**: das Steuerelement kann in jedem Singlethread-Apartment erstellt werden. Der Standardwert.
+- **Apartment**: Das Steuerelement kann in jedem Singlethread-Apartment erstellt werden. Der Standardwert.
 
 ### <a name="interface"></a>Interface
 
 Der Typ der Schnittstelle, die dieses Steuerelement in den Container verfügbar macht.
 
-- **Duale**: erstellt eine Schnittstelle, die Eigenschaften und Methoden über verfügbar macht `IDispatch` und direkt über von der VTBL.
+- **Duale**: Erstellt eine Schnittstelle, die Eigenschaften und Methoden über verfügbar macht `IDispatch` und direkt über von der VTBL.
 
-- **Benutzerdefinierte**: erstellt eine Schnittstelle, die Methoden, die direkt durch eine VTBL verfügbar macht.
+- **Benutzerdefiniert**: Erstellt eine Schnittstelle, die Methoden, die direkt durch eine VTBL verfügbar macht.
 
    Bei Auswahl von **benutzerdefinierte**, können Sie angeben, dass das Steuerelement **Automatisierungskompatibel**. Bei Auswahl von **Automatisierungskompatibel**, fügt der Assistent die [Oleautomation](../../windows/oleautomation.md) -Attribut auf die Schnittstelle in der IDL-Datei, und die Schnittstelle durch den universellen Marshaller in oleaut32.dll gemarshallt werden kann. Finden Sie unter [Marshaling Details](/windows/desktop/com/marshaling-details) im Windows SDK für Weitere Informationen.
 
@@ -81,11 +81,10 @@ Der Typ der Schnittstelle, die dieses Steuerelement in den Container verfügbar 
 
 Legt zusätzliche sonstige Unterstützung für das Steuerelement fest.
 
-- **Verbindungspunkte**: können Sie dazu die Klasse des Objekts abgeleitet Verbindungspunkte für Ihr Objekt [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) und ermöglicht es, eine Schnittstelle verfügbar zu machen.
+- **Verbindungspunkte**: Ermöglicht der Verbindungspunkte für das Objekt, indem Sie machen die Klasse des Objekts abgeleitet [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) und ermöglicht es, eine Schnittstelle verfügbar zu machen.
 
 - **Lizenzierte**: Fügt Unterstützung für das Steuerelement für [Lizenzierung](/windows/desktop/com/licensing). Lizenzierte Steuerelemente können nur gehostet werden, wenn der Client-Computer die richtige Lizenz verfügt.
 
 ## <a name="see-also"></a>Siehe auch
 
 [ATL-Steuerelement-Assistent](../../atl/reference/atl-control-wizard.md)
-

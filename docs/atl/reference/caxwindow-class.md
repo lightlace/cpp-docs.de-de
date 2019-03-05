@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-ms.openlocfilehash: f1a1e7fe00218efe7514fe59ea78ea30b33b878f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 3cf1c773c96a2bf1bc6c67420d72052e68ee2a53
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329565"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297592"
 ---
 # <a name="caxwindow-class"></a>CAxWindow-Klasse
 
@@ -42,7 +42,7 @@ class CAxWindow : public CWindow
 
 |||
 |-|-|
-|["AttachControl"](#attachcontrol)|Fügt ein vorhandenes ActiveX-Steuerelement, das `CAxWindow` Objekt.|
+|[AttachControl](#attachcontrol)|Fügt ein vorhandenes ActiveX-Steuerelement, das `CAxWindow` Objekt.|
 |[CAxWindow](#caxwindow)|Erstellt ein `CAxWindow`-Objekt.|
 |[CreateControl](#createcontrol)|Erstellt ein ActiveX-Steuerelement, initialisiert es und hostet es in der `CAxWindow` Fenster.|
 |[CreateControlEx](#createcontrolex)|Erstellt ein ActiveX-Steuerelement, und ruft einen Schnittstellenzeiger (oder Zeiger) aus dem Steuerelement ab.|
@@ -222,7 +222,7 @@ Ein Zeiger auf eine Zeichenfolge, die das Steuerelement zu erstellen. Muss in ei
 [out] Die Adresse eines Zeigers, der erhält die `IUnknown` des Steuerelements. NULL kann sein.
 
 *iidSink*<br/>
-[in] Der Schnittstellenbezeichner einer ausgehenden Schnittstelle für das enthaltene Objekt. IID_NULL kann sein.
+[in] Der Schnittstellenbezeichner einer ausgehenden Schnittstelle für das enthaltene Objekt. Can be IID_NULL.
 
 *punkSink*<br/>
 [in] Ein Zeiger auf die `IUnknown` -Schnittstelle des Senkenobjekts mit dem Verbindungspunkt am anhand des enthaltenen Objekts verbunden sein, *IidSink*.
@@ -285,7 +285,7 @@ HRESULT QueryControl(Q** ppUnk);
 
 ### <a name="parameters"></a>Parameter
 
-*IID*<br/>
+*iid*<br/>
 [in] Gibt die IID der Schnittstelle des Steuerelements an.
 
 *ppUnk*<br/>
@@ -298,7 +298,7 @@ HRESULT QueryControl(Q** ppUnk);
 
 Ein standard HRESULT-Wert.
 
-##  <a name="queryhost"></a>  CAxWindow:: QueryHost
+##  <a name="queryhost"></a>  CAxWindow::QueryHost
 
 Gibt die angegebene Schnittstelle des Hosts zurück.
 
@@ -310,7 +310,7 @@ HRESULT QueryHost(Q** ppUnk);
 
 ### <a name="parameters"></a>Parameter
 
-*IID*<br/>
+*iid*<br/>
 [in] Gibt die IID der Schnittstelle des Steuerelements an.
 
 *ppUnk*<br/>
@@ -372,4 +372,3 @@ Die externe `IDocHostUIHandlerDispatch` Schnittstelle wird von Steuerelementen, 
 [Grundlagen von zusammengesetzten Steuerelementen](../../atl/atl-composite-control-fundamentals.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)<br/>
 [Steuerelementkapselung – häufig gestellte Fragen](../../atl/atl-control-containment-faq.md)
-

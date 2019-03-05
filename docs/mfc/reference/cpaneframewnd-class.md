@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CPaneFrameWnd [MFC], OnDrawBorder
 - CPaneFrameWnd [MFC], m_bUseSaveBits
 ms.assetid: ea3423a3-2763-482e-b763-817036ded10d
-ms.openlocfilehash: e31b390d9464b3cbe6babd744e987ce7222e58bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3172556b3b12141aaae45992dee36061aebf2a15
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450166"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278820"
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd-Klasse
 
@@ -267,7 +267,7 @@ virtual void AddPane(CBasePane* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Der Bereich hinzufügen können.
 
 ##  <a name="addremovepanefromgloballist"></a>  CPaneFrameWnd::AddRemovePaneFromGlobalList
@@ -282,10 +282,10 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Der Bereich zum Hinzufügen oder entfernen.
 
-*Hinzufügen*<br/>
+*bAdd*<br/>
 [in] Wenn ungleich NULL ist, fügen Sie im Bereich hinzu. Wenn der Wert 0, entfernen Sie im Bereich.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -425,7 +425,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 [in] Gibt den Fensterstil an. Weitere Informationen finden Sie unter [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Gibt an, die anfängliche Größe und Position des Fensters Benutzer.
 
 *pParentWnd*<br/>
@@ -467,7 +467,7 @@ virtual BOOL CreateEx(
 *dwStyle*<br/>
 [in] Gibt den Fensterstil an. Weitere Informationen finden Sie unter [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Gibt an, die anfängliche Größe und Position des Fensters Benutzer.
 
 *pParentWnd*<br/>
@@ -731,7 +731,7 @@ virtual LRESULT HitTest(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Der Punkt, um zu testen.
 
 *bDetectCaption*<br/>
@@ -999,7 +999,7 @@ virtual CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Der Punkt, die der Benutzer geklickt hat, in Bildschirmkoordinaten.
 
 *nSensitivity*<br/>
@@ -1049,7 +1049,7 @@ virtual void RemovePane(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Ein Zeiger auf den Bereich zu entfernen.
 
 *bDestroy*<br/>
@@ -1157,7 +1157,7 @@ void SetDockingTimer(UINT nTimeOut);
 
 ### <a name="parameters"></a>Parameter
 
-*%ntimeout*<br/>
+*nTimeOut*<br/>
 [in] Der Timeoutwert in Millisekunden.
 
 ##  <a name="setdockstate"></a>  CPaneFrameWnd::SetDockState

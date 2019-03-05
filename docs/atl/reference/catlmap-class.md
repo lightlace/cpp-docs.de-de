@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 83ac810538bf189d026c0cb9b2a76ded49fdd86c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80975047b300f270c0ac58c8b8abfc59ff2b17ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499676"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293783"
 ---
 # <a name="catlmap-class"></a>CAtlMap-Klasse
 
@@ -101,7 +101,7 @@ Der Code zum Kopieren oder verschieben Elemente mit dem Wert verwendet.
 |Name|Beschreibung|
 |----------|-----------------|
 |[CAtlMap::CAtlMap](#catlmap)|Der Konstruktor.|
-|[CAtlMap:: ~ CAtlMap](#dtor)|Der Destruktor.|
+|[CAtlMap::~CAtlMap](#dtor)|Der Destruktor.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -288,13 +288,13 @@ CPair* GetAt(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Der Position Zähler, der von einem vorherigen Aufruf zurückgegebene [CAtlMap::GetNextAssoc](#getnextassoc) oder [CAtlMap::GetStartPosition](#getstartposition).
 
 *key*<br/>
 Der Vorlagenparameter, die den Typ des Schlüssels mit der Karte.
 
-*Wert*<br/>
+*value*<br/>
 Der Vorlagenparameter, der den Typ des Werts von der Karte angibt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -343,7 +343,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Der Position Zähler, der von einem vorherigen Aufruf zurückgegebene [CAtlMap::GetNextAssoc](#getnextassoc) oder [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -365,7 +365,7 @@ const CPair* GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Der Position Zähler, der von einem vorherigen Aufruf zurückgegebene [CAtlMap::GetNextAssoc](#getnextassoc) oder [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -385,13 +385,13 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Der Position Zähler, der von einem vorherigen Aufruf zurückgegebene [CAtlMap::GetNextAssoc](#getnextassoc) oder [CAtlMap::GetStartPosition](#getstartposition).
 
 *key*<br/>
 Der Vorlagenparameter, die den Typ des Schlüssels mit der Karte.
 
-*Wert*<br/>
+*value*<br/>
 Der Vorlagenparameter, der den Typ des Werts von der Karte angibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -408,7 +408,7 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Der Position Zähler, der von einem vorherigen Aufruf zurückgegebene [CAtlMap::GetNextAssoc](#getnextassoc) oder [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -430,7 +430,7 @@ const V& GetNextValue(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Der Position Zähler, der von einem vorherigen Aufruf zurückgegebene [CAtlMap::GetNextAssoc](#getnextassoc) oder [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -479,7 +479,7 @@ const V& GetValueAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Der Position Zähler, der von einem vorherigen Aufruf zurückgegebene [CAtlMap::GetNextAssoc](#getnextassoc) oder [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -561,7 +561,7 @@ CPair* Lookup(KINARGTYPE key) throw();
 *key*<br/>
 Gibt den Schlüssel, der identifiziert das Element gesucht werden soll.
 
-*Wert*<br/>
+*value*<br/>
 Variable, die den Wert der nachgeschlagenen empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -632,7 +632,7 @@ void RemoveAtPos(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Der Position Zähler, der von einem vorherigen Aufruf zurückgegebene [CAtlMap::GetNextAssoc](#getnextassoc) oder [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="remarks"></a>Hinweise
@@ -675,7 +675,7 @@ POSITION SetAt(
 *key*<br/>
 Der Schlüsselwert, Hinzufügen der `CAtlMap` Objekt.
 
-*Wert*<br/>
+*value*<br/>
 Der Wert, der zum Hinzufügen der `CAtlMap` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -728,10 +728,10 @@ void SetValueAt(
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Der Position Zähler, der von einem vorherigen Aufruf zurückgegebene [CAtlMap::GetNextAssoc](#getnextassoc) oder [CAtlMap::GetStartPosition](#getstartposition).
 
-*Wert*<br/>
+*value*<br/>
 Der Wert, der zum Hinzufügen der `CAtlMap` Objekt.
 
 ### <a name="remarks"></a>Hinweise

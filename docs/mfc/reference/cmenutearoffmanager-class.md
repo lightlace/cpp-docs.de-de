@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMenuTearOffManager [MFC], SetInUse
 - CMenuTearOffManager [MFC], SetupTearOffMenus
 ms.assetid: ab7ca272-ce42-4678-95f7-6ad75038f5a0
-ms.openlocfilehash: 60e89967d139a3f5bc7b96cc1823b31b98a57fb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6bdbb18c2d1b40423457b4cf07d0a747138b99b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558846"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266197"
 ---
 # <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager-Klasse
 
@@ -96,7 +96,7 @@ void Build(
 
 [in] *UiTearOffBarID*<br/>
 
-[in] *StrText*<br/>
+[in] *strText*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -160,7 +160,7 @@ BOOL IsDynamicID(UINT uiID) const;
 
 ### <a name="parameters"></a>Parameter
 
-[in] *UiID*<br/>
+[in] *uiID*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -188,7 +188,7 @@ void Reset(HMENU hmenu);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Hmenu*<br/>
+[in] *hmenu*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -204,7 +204,7 @@ void SetInUse(
 
 [in] *UiCmdId*<br/>
 
-[in] *bVerwenden*<br/>
+[in] *bUse*<br/>
 
 ### <a name="remarks"></a>Hinweise
 

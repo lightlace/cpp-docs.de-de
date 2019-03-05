@@ -133,12 +133,12 @@ f1_keywords:
 - AMP_MATH/Concurrency::trunc
 - AMP_MATH/Concurrency::truncf
 ms.assetid: ba653308-dc28-4384-b2fd-6cd718a72f91
-ms.openlocfilehash: 6d4f05595f1501fb55938d6875f21b9a9079d043
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc023d1cc27601b7da0a87aee7c3c1ac66479a7c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462334"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288325"
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Concurrency::precise_math-Namespace
 
@@ -174,8 +174,8 @@ namespace precise_math;
 |[atanhf](concurrency-precise-math-namespace-functions.md#atanhf)|Berechnet den umgekehrten hyperbolischen Tangens des Arguments|
 |[cbrt](concurrency-precise-math-namespace-functions.md#cbrt)|Überladen. Berechnet die Kubikwurzel real, des Arguments|
 |[cbrtf](concurrency-precise-math-namespace-functions.md#cbrtf)|Berechnet die Kubikwurzel real, des Arguments|
-|[ceil](concurrency-precise-math-namespace-functions.md#ceil)|Überladen. Berechnet den Höchstwert des Arguments|
-|[ceilf](concurrency-precise-math-namespace-functions.md#ceilf)|Berechnet den Höchstwert des Arguments|
+|[ceil](concurrency-precise-math-namespace-functions.md#ceil)|Überladen. Berechnet die Höchstwert des Arguments|
+|[ceilf](concurrency-precise-math-namespace-functions.md#ceilf)|Berechnet die Höchstwert des Arguments|
 |[copysign](concurrency-precise-math-namespace-functions.md#copysign)|Überladen. Dieser Wert mit die Größe von _X und das Vorzeichen von _Y|
 |[copysignf](concurrency-precise-math-namespace-functions.md#copysignf)|Dieser Wert mit die Größe von _X und das Vorzeichen von _Y|
 |[cos](concurrency-precise-math-namespace-functions.md#cos)|Überladen. Berechnet den Kosinus des Arguments|

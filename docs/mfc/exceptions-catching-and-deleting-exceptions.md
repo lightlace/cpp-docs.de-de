@@ -9,12 +9,12 @@ helpviewer_keywords:
 - catch blocks [MFC], catching and deleting exceptions
 - execution [MFC], returns from within catch block
 ms.assetid: 7c233ff0-89de-4de0-a68a-9e9cdb164311
-ms.openlocfilehash: 370062d3e17127e711f2b4356cbb133a6c1d20b9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 511850c3c17a4eb70529202f4b0c2b36132fc8ff
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625906"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287203"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Ausnahmen: Abfangen und Löschen von Ausnahmen
 
@@ -54,4 +54,3 @@ Weitere Informationen finden Sie unter [Ausnahmen: Umwandeln von MFC-Ausnahmemak
 ## <a name="see-also"></a>Siehe auch
 
 [Ausnahmebehandlung](../mfc/exception-handling-in-mfc.md)
-

@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 9c2b393354f65195e0d0060a08b83e321e3d5b1d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 0e02f123580696519e59d828ec590456cbd2a81c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178420"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270128"
 ---
 # <a name="cwinthread-class"></a>CWinThread-Klasse
 
@@ -79,7 +79,7 @@ class CWinThread : public CCmdTarget
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CWinThread:: CreateThread](#createthread)|Startet die Ausführung einer `CWinThread` Objekt.|
+|[CWinThread::CreateThread](#createthread)|Startet die Ausführung einer `CWinThread` Objekt.|
 |[CWinThread::ExitInstance](#exitinstance)|Überschreiben Sie zum Bereinigen, wenn der Thread beendet wird.|
 |[CWinThread::GetMainWnd](#getmainwnd)|Ruft einen Zeiger auf das Hauptfenster für den Thread ab.|
 |[CWinThread::GetThreadPriority](#getthreadpriority)|Ruft die Priorität des aktuellen Threads ab.|
@@ -91,10 +91,10 @@ class CWinThread : public CCmdTarget
 |[CWinThread::ProcessMessageFilter](#processmessagefilter)|Bestimmte Nachrichten abfängt, bevor sie die Anwendung erreichen.|
 |[CWinThread::ProcessWndProcException](#processwndprocexception)|Fängt alle nicht behandelte Ausnahmen, die von der Thread die Nachricht und befehlshandlern ausgelöst.|
 |[CWinThread::PumpMessage](#pumpmessage)|enthält die Nachrichtenschleife des Threads.|
-|[CWinThread:: ResumeThread](#resumethread)|Wird ein Thread den Unterbrechungszähler.|
-|[Hauptmeldungsschleife](#run)|Die Steuerungsfunktion für Threads mit der eine Meldungsverteilschleife. Überschreiben Sie, um die Standardnachrichtenschleife anpassen.|
+|[CWinThread::ResumeThread](#resumethread)|Wird ein Thread den Unterbrechungszähler.|
+|[CWinThread::Run](#run)|Die Steuerungsfunktion für Threads mit der eine Meldungsverteilschleife. Überschreiben Sie, um die Standardnachrichtenschleife anpassen.|
 |[CWinThread::SetThreadPriority](#setthreadpriority)|Legt die Priorität des aktuellen Threads fest.|
-|[CWinThread:: SuspendThread](#suspendthread)|Schritten ein Thread den Unterbrechungszähler.|
+|[CWinThread::SuspendThread](#suspendthread)|Schritten ein Thread den Unterbrechungszähler.|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
@@ -110,7 +110,7 @@ class CWinThread : public CCmdTarget
 |[CWinThread::m_hThread](#m_hthread)|Handle für den aktuellen Thread.|
 |[CWinThread::m_nThreadID](#m_nthreadid)|Die ID des aktuellen Threads.|
 |[CWinThread::m_pActiveWnd](#m_pactivewnd)|Zeiger auf das Hauptfenster der containeranwendung, wenn ein OLE-Server direkt aktiv ist.|
-|[CWinThread:: M_pmainwnd](#m_pmainwnd)|Enthält einen Zeiger auf das Hauptfenster der Anwendung.|
+|[CWinThread::m_pMainWnd](#m_pmainwnd)|Enthält einen Zeiger auf das Hauptfenster der Anwendung.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -140,7 +140,7 @@ Weitere Informationen zu `CWinThread`, finden Sie in den Artikeln [Multithreadin
 
 **Header:** afxwin.h
 
-##  <a name="createthread"></a>  CWinThread:: CreateThread
+##  <a name="createthread"></a>  CWinThread::CreateThread
 
 Erstellt einen Thread innerhalb des Adressraums des aufrufenden Prozesses ausgeführt.
 
@@ -248,7 +248,7 @@ Der aktuelle Thread Prioritätsstufe innerhalb seiner Prioritätsklasse. Der zur
 
 - THREAD_PRIORITY_BELOW_NORMAL
 
-- THREAD_PRIORITY_LOWEST FEST
+- THREAD_PRIORITY_LOWEST
 
 - THREAD_PRIORITY_IDLE
 
@@ -355,7 +355,7 @@ Die Microsoft Foundation Class-Bibliothek automatisch den Thread beendet, wenn d
 
 In der Regel Sie diese Membervariable festlegen, wenn Sie außer Kraft setzen `InitInstance`. In einem Arbeitsthread wird der Wert dieses Datenelements von seinem übergeordneten Thread geerbt.
 
-##  <a name="m_pmainwnd"></a>  CWinThread:: M_pmainwnd
+##  <a name="m_pmainwnd"></a>  CWinThread::m_pMainWnd
 
 Verwenden Sie dieses Datenelement, um einen Zeiger auf des Threads im Hauptfenster Objekt zu speichern.
 
@@ -430,7 +430,7 @@ BOOL PostThreadMessage(
 *message*<br/>
 Die ID der benutzerdefinierten Meldung.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 Ersten Meldungsparameter.
 
 *lParam*<br/>
@@ -606,7 +606,7 @@ Gibt die neue Prioritätsebene innerhalb seiner Prioritätsklasse an. Dieser Par
 
 - THREAD_PRIORITY_BELOW_NORMAL
 
-- THREAD_PRIORITY_LOWEST FEST
+- THREAD_PRIORITY_LOWEST
 
 - THREAD_PRIORITY_IDLE
 

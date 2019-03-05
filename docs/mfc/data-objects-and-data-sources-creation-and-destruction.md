@@ -1,5 +1,5 @@
 ---
-title: 'Datenobjekte und Datenquellen: Erstellen und Zerstören'
+title: 'Datenobjekte und Datenquellen: Erstellen und zerstören'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - destroying data objects [MFC]
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - destruction [MFC], data objects
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
-ms.openlocfilehash: a46cc15a101618699b9e7fa988155517de673fdb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74119d7ea33eef68f0cb4a67c8419514cbb73c10
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614967"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304435"
 ---
-# <a name="data-objects-and-data-sources-creation-and-destruction"></a>Datenobjekte und Datenquellen: Erstellen und Zerstören
+# <a name="data-objects-and-data-sources-creation-and-destruction"></a>Datenobjekte und Datenquellen: Erstellen und zerstören
 
 In diesem Artikel erläuterten [Datenobjekte und Datenquellen (OLE)](../mfc/data-objects-and-data-sources-ole.md), Datenobjekte und Datenquellen, stellen Sie beide Seiten der Datenübertragung dar. In diesem Artikel wird erläutert, wann diese Objekte und Quellen erstellt und zerstört werden, um die Datenübertragungen ordnungsgemäß durchführen zu können, einschließlich:
 
@@ -38,7 +38,7 @@ In diesem Artikel erläuterten [Datenobjekte und Datenquellen (OLE)](../mfc/data
 
 Datenobjekte werden von der Zielanwendung verwendet, wobei es sich entweder um den Client oder Server handelt. Ein Datenobjekt in der Zielanwendung ist ein Ende der Verbindung zwischen der Quellanwendung und der Zielanwendung. Ein Datenobjekt in der Zielanwendung wird verwendet, um auf die Daten in der Datenquelle zuzugreifen und damit zu interagieren.
 
-Es gibt zwei häufige Situationen, in denen ein Datenobjekt erforderlich ist. Die erste Situation: Daten werden mithilfe von Drag & Drop in Ihrer Anwendung abgelegt. Die zweite Situation: Im Menü „Bearbeiten“ wird die Option „Einfügen“ oder „Inhalte einfügen“ ausgewählt.
+Es gibt zwei häufige Situationen, in denen ein Datenobjekt erforderlich ist. Die erste Situation: Daten werden mithilfe von Drag &amp; Drop in Ihrer Anwendung abgelegt. Die zweite Situation: Im Menü „Bearbeiten“ wird die Option „Einfügen“ oder „Inhalte einfügen“ ausgewählt.
 
 In einer Drag-and-Drop-Situation müssen Sie kein Datenobjekt erstellen. Ein Zeiger auf ein vorhandenes Datenobjekt wird an die `OnDrop`-Funktion übergeben. Dieses Datenobjekt wird vom Framework als Teil des Drag-and-Drop-Vorgangs erstellt und auch durch es zerstört. Dies ist nicht immer der Fall, wenn das Einfügen mit einer anderen Methode erfolgt. Weitere Informationen finden Sie unter [Zerstören von Datenobjekten](#_core_destroying_data_objects).
 

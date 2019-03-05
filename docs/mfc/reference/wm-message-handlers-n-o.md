@@ -37,12 +37,12 @@ helpviewer_keywords:
 - ON_WM_NCMBUTTONUP [MFC]
 - WM_ messages
 ms.assetid: 4efd1cda-b642-4e8b-89e8-73255fa70d77
-ms.openlocfilehash: 21c1ea3dfee864a4e28a0cbadfdfb73744e2d7da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59fd895823ff13039e6f78b8164cd19f3eac2af9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619777"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285359"
 ---
 # <a name="wm-message-handlers-n---o"></a>WM_-Meldungshandler: N - O
 
@@ -52,7 +52,7 @@ Die folgenden Einträge der Karte auf der linken Seite entsprechen die Funktions
 |---------------|------------------------|
 |ON_WM_NCACTIVATE()|Afx_msg "bool" [OnNcActivate](../../mfc/reference/cwnd-class.md#onncactivate)(BOOL);|
 |ON_WM_NCCALCSIZE()|die "void" Afx_msg [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)("bool", NCCALCSIZE_PARAMS weit *);|
-|ON_WM_NCCREATE()|Afx_msg "bool" [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate)(LPCREATESTRUCT);|
+|ON_WM_NCCREATE()|afx_msg BOOL [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate)(LPCREATESTRUCT);|
 |ON_WM_NCDESTROY()|die "void" Afx_msg [OnNcDestroy](../../mfc/reference/cwnd-class.md#onncdestroy)();|
 |ON_WM_NCHITTEST()|Afx_msg LRESULT [OnNcHitTest](../../mfc/reference/cwnd-class.md#onnchittest)(CPoint);|
 |ON_WM_NCLBUTTONDBLCLK()|die "void" Afx_msg [OnNcLButtonDblClk](../../mfc/reference/cwnd-class.md#onnclbuttondblclk)(UINT, CPoint);|
@@ -64,11 +64,11 @@ Die folgenden Einträge der Karte auf der linken Seite entsprechen die Funktions
 |ON_WM_NCMOUSEHOVER()|die "void" Afx_msg [OnNcMouseHover](../../mfc/reference/cwnd-class.md#onncmousehover)(UINT, CPoint);|
 |ON_WM_NCMOUSELEAVE()|die "void" Afx_msg [OnNcMouseLeave](../../mfc/reference/cwnd-class.md#onncmouseleave)();|
 |ON_WM_NCMOUSEMOVE()|die "void" Afx_msg [OnNcMouseMove](../../mfc/reference/cwnd-class.md#onncmousemove)(UINT, CPoint);|
-|ON_WM_NCPAINT()|die "void" Afx_msg [OnNcPaint](../../mfc/reference/cwnd-class.md#onncpaint)();|
+|ON_WM_NCPAINT()|afx_msg void [OnNcPaint](../../mfc/reference/cwnd-class.md#onncpaint)();|
 |ON_WM_NCRBUTTONDBLCLK()|die "void" Afx_msg [OnNcRButtonDblClk](../../mfc/reference/cwnd-class.md#onncrbuttondblclk)(UINT, CPoint);|
 |ON_WM_NCRBUTTONDOWN()|die "void" Afx_msg [OnNcRButtonDown](../../mfc/reference/cwnd-class.md#onncrbuttondown)(UINT, CPoint);|
 |ON_WM_NCRBUTTONUP()|die "void" Afx_msg [OnNcRButtonUp](../../mfc/reference/cwnd-class.md#onncrbuttonup)(UINT, CPoint);|
-|ON_WM_NCXBUTTONDBLCLK()|"void" [OnNcXButtonDblClk](../../mfc/reference/cwnd-class.md#onncxbuttondblclk)(kurz, UINT, CPoint);|
+|ON_WM_NCXBUTTONDBLCLK()|void [OnNcXButtonDblClk](../../mfc/reference/cwnd-class.md#onncxbuttondblclk)(short, UINT, CPoint);|
 |ON_WM_NCXBUTTONDOWN()|die "void" Afx_msg [OnNcXButtonDown](../../mfc/reference/cwnd-class.md#onncxbuttondown)(kurz, UINT, CPoint);|
 |ON_WM_NCXBUTTONUP()|die "void" Afx_msg [OnNcXButtonUp](../../mfc/reference/cwnd-class.md#onncxbuttonup)(kurz, UINT, CPoint);|
 |ON_WM_NEXTMENU()|die "void" Afx_msg [OnNextMenu](../../mfc/reference/cwnd-class.md#onnextmenu)(UINT, LPMDINEXTMENU);|
@@ -78,4 +78,3 @@ Die folgenden Einträge der Karte auf der linken Seite entsprechen die Funktions
 
 [Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md)<br/>
 [Handler für WM_-Meldungen](../../mfc/reference/handlers-for-wm-messages.md)
-

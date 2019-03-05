@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 8d77175b271d144983aecd1168eb0d66eb46d6ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c973d92550469804a5389b84f53005e4f2c154f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526406"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290429"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl-Klasse
 
@@ -72,7 +72,7 @@ class CSpinButtonCtrl : public CWnd
 |[CSpinButtonCtrl::SetBase](#setbase)|Legt die Basis für ein Drehfeld-Steuerelement fest.|
 |[CSpinButtonCtrl::SetBuddy](#setbuddy)|Legt das Buddyfenster für ein Drehfeld-Steuerelement fest.|
 |[CSpinButtonCtrl::SetPos](#setpos)|Legt die aktuelle Position für das Steuerelement fest.|
-|[CSpinButtonCtrl:: SetRange](#setrange)|Legt die obere und untere Grenzwerte (Bereich) für ein Drehfeld-Steuerelement fest.|
+|[CSpinButtonCtrl::SetRange](#setrange)|Legt die obere und untere Grenzwerte (Bereich) für ein Drehfeld-Steuerelement fest.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -119,7 +119,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Gibt das Drehfeld-Steuerelement Stil. Eine beliebige Kombination von Drehfeld-Schaltflächenstile-Steuerelement auf das Steuerelement anzuwenden. Diese Formate werden in beschrieben [auf-ab-Steuerelementstile](/windows/desktop/Controls/up-down-control-styles) im Windows SDK.
 
-*Rect*<br/>
+*rect*<br/>
 Gibt an, des Drehfeld-Steuerelements die Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur
 
 *pParentWnd*<br/>
@@ -159,7 +159,7 @@ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erwei
 *dwStyle*<br/>
 Gibt das Drehfeld-Steuerelement Stil. Eine beliebige Kombination von Drehfeld-Schaltflächenstile-Steuerelement auf das Steuerelement anzuwenden. Diese Formate werden in beschrieben [auf-ab-Steuerelementstile](/windows/desktop/Controls/up-down-control-styles) im Windows SDK.
 
-*Rect*<br/>
+*rect*<br/>
 Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -271,10 +271,10 @@ void GetRange32(
 
 ### <a name="parameters"></a>Parameter
 
-*niedrigere*<br/>
+*lower*<br/>
 Verweis auf eine ganze Zahl, die die untere Grenze des Steuerelements empfängt.
 
-*obere*<br/>
+*upper*<br/>
 Verweis auf eine ganze Zahl, die die Obergrenze für das Steuerelement empfängt.
 
 ### <a name="return-value"></a>Rückgabewert

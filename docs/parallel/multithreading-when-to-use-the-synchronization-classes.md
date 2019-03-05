@@ -11,12 +11,12 @@ helpviewer_keywords:
 - threading [C++], synchronization
 - multithreading [C++], synchronization classes
 ms.assetid: 4914f54e-68ac-438f-93c9-c013455a657e
-ms.openlocfilehash: 63555236ec41ce0a28d82aa676318b53a24169c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 72cf5310704c1ae959cc012146a03dd32cff4068
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502842"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284371"
 ---
 # <a name="multithreading-when-to-use-the-mfc-synchronization-classes"></a>Multithreading: Wenn die MFC-Synchronisierungsklassen
 
@@ -42,13 +42,13 @@ Um welche Synchronisierungsklasse zu ermitteln, sollten Sie verwenden, stellen S
 
 `CSyncObject` wird nie direkt verwendet werden. Es ist die Basisklasse für die anderen vier Synchronisierungsklassen.
 
-## <a name="example-1-using-three-synchronization-classes"></a>Beispiel 1: Verwenden von drei Synchronisierungsklassen
+## <a name="example-1-using-three-synchronization-classes"></a>Beispiel 1: Mithilfe von drei Synchronisierungsklassen
 
 Als Beispiel wird eine Anwendung verwendet, in der eine verknüpfte Liste von Konten verwaltet wird. In dieser Anwendung können drei Konten in verschiedenen Fenstern untersucht werden, es kann jedoch nur jeweils ein Konto aktualisiert werden. Bei der Aktualisierung eines Kontos werden die aktualisierten Daten über das Netzwerk an ein Datenarchiv gesendet.
 
 In dieser Beispielanwendung kommen alle drei Arten von Synchronisierungsklassen zum Einsatz. Da bis zu drei Konten gleichzeitig untersucht werden können, verwendet es `CSemaphore` Zugriff auf drei Ansichtsobjekte beschränkt. Beim Versuch, ein viertes Konto anzuzeigen, wartet die Anwendung entweder, bis eines der ersten drei Fenster geschlossen wird, oder der Versuch schlägt fehl. Wenn ein Konto aktualisiert wird, um die Anwendung verwendet `CCriticalSection` , stellen Sie sicher, dass nur ein Konto zu einem Zeitpunkt aktualisiert wird. Nach erfolgreicher Aktualisierung signalisiert sie `CEvent`, die einen Thread für das Ereignis signalisiert wird, gibt. Dieser Thread sendet die neuen Daten an das Datenarchiv.
 
-## <a name="example-2-using-synchronization-access-classes"></a>Beispiel 2: Verwenden von Synchronisierungszugriffsklassen
+## <a name="example-2-using-synchronization-access-classes"></a>Beispiel 2: Synchronisierungszugriffsklassen verwenden
 
 Auswählen der Synchronisierungsklasse Zugriff verwenden, sogar noch einfacher wird. Wenn Ihre Anwendung mit dem Zugriff auf nur eine einzelne gesteuerte Ressource geht, verwenden Sie `CSingleLock`. Wenn sie Zugriff auf eine beliebige Anzahl von gesteuerten Ressourcen erforderlich ist, verwenden Sie `CMultiLock`. In Beispiel 1 `CSingleLock` verwendet worden wären, da jeweils nur eine Ressource zu einem bestimmten Zeitpunkt erforderlich ist.
 

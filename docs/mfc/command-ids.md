@@ -5,12 +5,12 @@ helpviewer_keywords:
 - command IDs, MFC
 - command IDs
 ms.assetid: e0171a2b-45b9-41fa-945d-ec2f7602ded0
-ms.openlocfilehash: ecec4a7bd705dc74a3f45cc07da4abcdb168f43f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76071105e72f1ca4a851b9cdb76d5f1a96f44edb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445629"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274574"
 ---
 # <a name="command-ids"></a>Befehls-IDs
 
@@ -23,4 +23,3 @@ Wenn Sie Ihre eigenen Menüs Menü-Editor in der Visual C++ erstellen, es ist ei
 ## <a name="see-also"></a>Siehe auch
 
 [Benutzeroberflächenobjekte und Befehls-IDs](../mfc/user-interface-objects-and-command-ids.md)
-

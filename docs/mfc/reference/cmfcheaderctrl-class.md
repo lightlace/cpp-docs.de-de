@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCHeaderCtrl [MFC], OnDrawSortArrow
 - CMFCHeaderCtrl [MFC], OnFillBackground
 ms.assetid: 2f5fbf7b-5c75-42db-9216-640b1628f777
-ms.openlocfilehash: 10d7dda39223e1d6206d2ede96874d9d546c8776
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86674e086da482e59b2711f5ba9154848ff05a6f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538501"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269434"
 ---
 # <a name="cmfcheaderctrl-class"></a>CMFCHeaderCtrl Class
 
@@ -136,7 +136,7 @@ void EnableMultipleSort(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] True, um mehrere Spalten sortieren-Modus zu aktivieren. "False", um mehrere Spalten sortieren-Modus deaktivieren und entfernen Sie alle Spalten aus der Liste der sortierten Spalten. Der Standardwert ist "true".
 
 ### <a name="remarks"></a>Hinweise
@@ -153,7 +153,7 @@ int GetColumnState(int iColumn) const;
 
 ### <a name="parameters"></a>Parameter
 
-*der iColumn*<br/>
+*iColumn*<br/>
 [in] Der nullbasierte Index einer Spalte.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -249,7 +249,7 @@ virtual void OnDrawItem(
 *iItem*<br/>
 [in] Der nullbasierte Index des Elements, das gezeichnet werden soll.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck des Elements, das gezeichnet werden soll.
 
 *bIsPressed*<br/>
@@ -301,7 +301,7 @@ void RemoveSortColumn(int iColumn);
 
 ### <a name="parameters"></a>Parameter
 
-*der iColumn*<br/>
+*iColumn*<br/>
 [in] Der nullbasierte Index des zu entfernenden Spalte.
 
 ##  <a name="setsortcolumn"></a>  CMFCHeaderCtrl::SetSortColumn
@@ -317,13 +317,13 @@ void SetSortColumn(
 
 ### <a name="parameters"></a>Parameter
 
-*der iColumn*<br/>
+*iColumn*<br/>
 [in] Der nullbasierte Index, der eine Header-Steuerelement-Spalte. Wenn dieser Parameter ist kleiner als 0 (null), entfernt diese Methode alle Spalten aus der Liste der Sortierspalten.
 
 *bAscending*<br/>
 [in] Gibt die Sortierreihenfolge der Spalte, die die *der iColumn* angegeben wird. "True" festlegen, aufsteigend; "False" festlegen, absteigend. Der Standardwert ist "true".
 
-*Hinzufügen*<br/>
+*bAdd*<br/>
 [in] True, wenn in der Sortierreihenfolge der Spalte festlegen, die *der iColumn* Parameter gibt an.
 
 Ist das aktuelle Kopfzeilen-Steuerelement in *Sortieren mehrerer Spalten* Modus, diese Methode fügt die angegebene Spalte zur Liste der Sortierspalten. Verwendung [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) mehreren Spalten sortieren-Modus festgelegt.

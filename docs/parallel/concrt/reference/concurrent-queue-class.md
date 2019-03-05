@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-ms.openlocfilehash: 36e4b5956e0739b44481fbabe6114c9648e7b229
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d5bbd361dc2dedc24c2a59050ffa680517186494
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477089"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304690"
 ---
 # <a name="concurrentqueue-class"></a>concurrent_queue-Klasse
 
@@ -62,7 +62,7 @@ Der Typ, der das gespeicherte Zuordnungsobjekt darstellt, das Details zur Zuordn
 |Name|Beschreibung|
 |----------|-----------------|
 |[concurrent_queue](#ctor)|Überladen. Erstellt eine gleichzeitige Warteschlange an.|
-|[~ Concurrent_queue-Destruktor](#dtor)|Zerstört die gleichzeitige Warteschlange an.|
+|[~concurrent_queue Destructor](#dtor)|Zerstört die gleichzeitige Warteschlange an.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -134,7 +134,7 @@ Das `concurrent_queue`-Quellobjekt, aus dem Elemente kopiert oder verschoben wer
 *_Begin*<br/>
 Die Position des ersten Elements in dem zu kopierenden Elementbereich.
 
-*_Beenden*<br/>
+*_End*<br/>
 Die Position des ersten Elements nach dem zu kopierenden Elementbereich.
 
 ### <a name="remarks"></a>Hinweise

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-ms.openlocfilehash: 37a7a6fc443e172f80cc7c30c462ec4d69b3e8de
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: dd11f5db646e172d7ea2c2cc646841249d95ef31
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693294"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303630"
 ---
 # <a name="multithreading-terminating-threads-in-mfc"></a>Multithreading: Beenden von Threads in MFC
 
@@ -32,7 +32,7 @@ In den beiden folgenden Fällen wird die Beendigung eines Threads ordnungsgemä�
 
 ##  <a name="_core_normal_thread_termination"></a> Normale Threadbeendigung
 
-Von einem Arbeitsthread werden bei der normalen Threadbeendigung folgende einfache Schritte ausgeführt: die Steuerungsfunktion wird beendet und es wird ein Wert zurückgegeben, aus dem der Grund für die Beendung hervorgeht. Verwenden Sie entweder die [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) Funktion oder ein **zurückgeben** Anweisung. Normalerweise steht 0 für die erfolgreiche Ausführung; dies ist ganz Ihnen überlassen.
+Für einen Arbeitsthread ist der normale Threadbeendigung einfach: Verlassen der Steuerungsfunktion und einen Wert, der den Grund für Beendigung bezeichnet. Verwenden Sie entweder die [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) Funktion oder ein **zurückgeben** Anweisung. Normalerweise steht 0 für die erfolgreiche Ausführung; dies ist ganz Ihnen überlassen.
 
 Der Prozess für einen UI-Thread ist ebenso einfach: innerhalb von den Benutzeroberflächen-Thread aufgerufen werden [PostQuitMessage](/windows/desktop/api/winuser/nf-winuser-postquitmessage) im Windows SDK. Der einzige Parameter, die `PostQuitMessage` ist der Exitcode des Threads. Bei Arbeitsthreads steht 0 normalerweise für eine erfolgreiche Ausführung.
 

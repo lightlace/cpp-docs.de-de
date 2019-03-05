@@ -1,5 +1,5 @@
 ---
-title: 'OLE-Hintergrund: Verlinken und Einbetten'
+title: 'OLE-Hintergrund: Verlinken und einbetten'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE embedded items [MFC]
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - embedded objects [MFC]
 - OLE items [MFC], types
 ms.assetid: 11107711-eb96-4099-8f5c-7910bb3ecb75
-ms.openlocfilehash: 7595d87ce54b0a34dd4e5f3489dd36e3918fd8a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02607df2a8fa086c5751f2b446e349a3efdbcd20
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465480"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280965"
 ---
-# <a name="ole-background-linking-and-embedding"></a>OLE-Hintergrund: Verlinken und Einbetten
+# <a name="ole-background-linking-and-embedding"></a>OLE-Hintergrund: Verlinken und einbetten
 
 Verwenden den Befehl "Einfügen" in einer containeranwendung kann eine embedded-Komponente oder ein eingebettetes Element erstellt. Die Quelldaten für ein eingebettetes Element werden als Teil des OLE-Dokuments gespeichert, die sie enthält. Auf diese Weise wird eine Dokumentdatei für ein Textverarbeitungsdokument kann Text enthalten, und Sie dürfen auch Bitmaps, Diagramme, Formeln oder einen anderen Typ von Daten.
 
@@ -32,5 +32,4 @@ Alle OLE-Element weist, ob eingebettete oder verknüpfte, den Typ zugeordneten b
 [OLE-Hintergrund](../mfc/ole-background.md)<br/>
 [OLE-Hintergrund: Container und Server](../mfc/ole-background-containers-and-servers.md)<br/>
 [Container: Clientelemente](../mfc/containers-client-items.md)<br/>
-[Server: Serverelemente](../mfc/servers-server-items.md)
-
+[Server: Server-Elemente](../mfc/servers-server-items.md)

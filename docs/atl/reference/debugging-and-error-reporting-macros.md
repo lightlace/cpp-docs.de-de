@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 5de597484db727646b80bd522f11465f442393fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f556e64160c61f2fb15c5f5d6f9e170c2008ac8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522298"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287322"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Debuggen und Fehlerberichterstattungs-Makros
 
@@ -87,7 +87,7 @@ ATLASSERT(booleanExpression);
 
 ### <a name="parameters"></a>Parameter
 
-*boolescher Ausdruck*<br/>
+*booleanExpression*<br/>
 Ausdruck (einschließlich Zeiger), der ungleich NULL oder 0 ergibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -109,10 +109,10 @@ ATLENSURE_THROW(booleanExpression, hr);
 
 ### <a name="parameters"></a>Parameter
 
-*boolescher Ausdruck*<br/>
+*booleanExpression*<br/>
 Gibt einen booleschen Ausdruck getestet werden.
 
-*HR*<br/>
+*hr*<br/>
 Gibt den Fehlercode zurückgegeben.
 
 ### <a name="remarks"></a>Hinweise
@@ -145,7 +145,7 @@ ATLTRACENOTIMPL(funcname);
 
 ### <a name="parameters"></a>Parameter
 
-*Funktionsname*<br/>
+*funcname*<br/>
 [in] Eine Zeichenfolge, die mit dem Namen der Funktion, die nicht implementiert ist.
 
 ### <a name="remarks"></a>Hinweise

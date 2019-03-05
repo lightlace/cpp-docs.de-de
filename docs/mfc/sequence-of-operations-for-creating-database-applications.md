@@ -7,12 +7,12 @@ helpviewer_keywords:
 - database applications [MFC], creating
 - MFC, database applications
 ms.assetid: 9371da59-8536-43cd-8314-706ad320e2ec
-ms.openlocfilehash: 0f512408b54d6aa9cc5c2b44dbd359e31e8bc57f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: efd6b12b186ce0ef1c0caf57f313f6aa50425fec
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624899"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283669"
 ---
 # <a name="sequence-of-operations-for-creating-database-applications"></a>Reihenfolge der Operationen zur Erstellung Datenbankanwendungen
 
@@ -31,7 +31,7 @@ Die folgende Tabelle zeigt Ihre Rolle und des Frameworks zum Schreiben von daten
 |Erstellen Sie nach Bedarf zusätzliche aufzeichnen und Recordset-Klassen.|Verwenden Sie Klassenansicht, um die Klassen und das Dialogfeld-Editor, um die Sichten entwerfen, erstellen.|Klassenansicht erstellt zusätzliche Dateien für die neuen Klassen.|
 |Erstellen Sie Recordset-Objekte nach Bedarf in Ihrem Code. Verwenden Sie jedes Recordsets Datensätze bearbeiten...|Die Recordsets basieren auf die von abgeleiteten Klassen [CRecordset](../mfc/reference/crecordset-class.md) mit den Assistenten.|ODBC verwendet die Datensatzfeldaustausch (RFX) zum Austauschen von Daten zwischen der Datenbank und des Recordset-Felddatenmembern. Bei Verwendung eine Datensatzansicht Datenaustausch Dialogdatenaustausch (DDX) zwischen dem Recordset und die Steuerelemente der Datensatzansicht angezeigt.|
 |... oder erstellen Sie eine explizite [CDatabase](../mfc/reference/cdatabase-class.md) in Ihrem Code für jede Datenbank, die Sie öffnen möchten.|Basieren Sie Ihre Recordset-Objekte, für die Datenbankobjekte.|Das Database-Objekt stellt eine Schnittstelle mit der Datenquelle bereit.|
-|Binden von Datenspalten dynamisch an das Recordset.|Fügen Sie Code hinzu abgeleiteten Recordset-Klasse die Bindung zu verwalten, in ODBC. Finden Sie im Artikel [Recordset: Dynamisches Binden von Spalten (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).||
+|Binden von Datenspalten dynamisch an das Recordset.|Fügen Sie Code hinzu abgeleiteten Recordset-Klasse die Bindung zu verwalten, in ODBC. Finden Sie im Artikel [Recordset: Dynamisches Binden von Datenspalten (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).||
 
 ## <a name="see-also"></a>Siehe auch
 

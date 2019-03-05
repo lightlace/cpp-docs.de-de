@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Register
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
-ms.openlocfilehash: f4294bbbf9563b55f2047f297eac1a33ca55141f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 127245385ebd89e51a1cc77d1efaa16729d73fe7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502894"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300120"
 ---
 # <a name="coledroptarget-class"></a>COleDropTarget-Klasse
 
@@ -108,16 +108,16 @@ virtual DROPEFFECT OnDragEnter(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Verweist auf das Fenster den Cursor wird eingeben.
 
 *pDataObject*<br/>
 Verweist auf das Datenobjekt, das mit den Daten, die gelöscht werden können.
 
 *dwKeyState*<br/>
-Enthält den Status der Modifizierertasten. Eine Kombination aus einer beliebigen Anzahl von Folgendes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON.
+Enthält den Status der Modifizierertasten. Dies ist eine Kombination von eine beliebige Anzahl von Folgendes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON, and MK_RBUTTON.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Enthält die aktuelle Position des Cursors in Clientkoordinaten.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -150,7 +150,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Verweist auf das Fenster den Cursor verlässt.
 
 ### <a name="remarks"></a>Hinweise
@@ -173,16 +173,16 @@ virtual DROPEFFECT OnDragOver(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Verweist auf das Fenster, dem der Cursor über befindet.
 
 *pDataObject*<br/>
 Verweist auf das Datenobjekt, das den Daten, die gelöscht werden sollen.
 
 *dwKeyState*<br/>
-Enthält den Status der Modifizierertasten. Eine Kombination aus einer beliebigen Anzahl von Folgendes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON.
+Enthält den Status der Modifizierertasten. Dies ist eine Kombination von eine beliebige Anzahl von Folgendes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON, and MK_RBUTTON.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Enthält die aktuelle Position des Cursors in Clientkoordinaten.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -222,13 +222,13 @@ virtual DROPEFFECT OnDragScroll(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Verweist auf das Fenster der Cursor befindet sich derzeit über.
 
 *dwKeyState*<br/>
-Enthält den Status der Modifizierertasten. Eine Kombination aus einer beliebigen Anzahl von Folgendes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON.
+Enthält den Status der Modifizierertasten. Dies ist eine Kombination von eine beliebige Anzahl von Folgendes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON, and MK_RBUTTON.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Enthält den Speicherort des Cursors in Pixel relativ zum Bildschirm.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -263,13 +263,13 @@ virtual BOOL OnDrop(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Verweist auf das Fenster der Cursor befindet sich derzeit über.
 
 *pDataObject*<br/>
 Verweist auf das Datenobjekt, das den Daten, die gelöscht werden sollen.
 
-*-DropEffect-*<br/>
+*dropEffect*<br/>
 Der Effekt, den der Benutzer für den Löschvorgang ausgewählt haben. Sie können eine oder mehrere der folgenden sein:
 
 - DROPEFFECT_COPY ein Kopiervorgang würde ausgeführt werden.
@@ -278,7 +278,7 @@ Der Effekt, den der Benutzer für den Löschvorgang ausgewählt haben. Sie könn
 
 - DROPEFFECT_LINK ein Link von der abgelegten Daten auf die ursprünglichen Daten würden hergestellt werden.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Enthält den Speicherort des Cursors in Pixel relativ zum Bildschirm.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -308,7 +308,7 @@ virtual DROPEFFECT OnDropEx(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Verweist auf das Fenster der Cursor befindet sich derzeit über.
 
 *pDataObject*<br/>
@@ -317,10 +317,10 @@ Verweist auf das Datenobjekt, das den Daten, die gelöscht werden sollen.
 *dropDefault*<br/>
 Die Auswirkungen, die der Benutzer für den Standard-Drop-Vorgang basierend auf dem aktuellen Schlüssel Status auswählen. Es kann DROPEFFECT_NONE sein. Drop-Effekte werden im Abschnitt "Hinweise" erläutert.
 
-*Dropdownliste*<br/>
+*dropList*<br/>
 Eine Liste mit der Drop-Effekten, die die Quelle unterstützt. Drop-Effekt-Werte können kombiniert werden, mit dem bitweisen OR (**&#124;**) Vorgang. Drop-Effekte werden im Abschnitt "Hinweise" erläutert.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Enthält den Speicherort des Cursors in Pixel relativ zum Bildschirm.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -357,7 +357,7 @@ BOOL Register(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Verweist auf das Fenster, das als Dropziel registriert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert

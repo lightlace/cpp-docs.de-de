@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetButtonsFont
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
-ms.openlocfilehash: fd865d888a4ebe4504f19282d3c98ce8d7514e2c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be11bcd4cdbcd8448cc54f688d7dab9b61f49a57
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622624"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304079"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar-Klasse
 
@@ -68,16 +68,16 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CMFCOutlookBar::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Gibt an, ob es sich bei einem leeren Bereich im Registerkartenformat zerstört werden kann. (Überschreibt [CBaseTabbedPane::AllowDestroyEmptyTabbedPane](../../mfc/reference/cbasetabbedpane-class.md#allowdestroyemptytabbedpane).)|
+|[CMFCOutlookBar::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Gibt an, ob es sich bei einem leeren Bereich im Registerkartenformat zerstört werden kann. (Overrides [CBaseTabbedPane::AllowDestroyEmptyTabbedPane](../../mfc/reference/cbasetabbedpane-class.md#allowdestroyemptytabbedpane).)|
 |[CMFCOutlookBar::CanAcceptPane](#canacceptpane)|Bestimmt, ob ein weiterer Bereich, um die Outlook-Leistenbereich angedockt werden kann. (Überschreibt CDockablePane::CanAcceptPane.)|
-|[CMFCOutlookBar::CanSetCaptionTextToTabName](#cansetcaptiontexttotabname)|Bestimmt, ob die Beschriftung für die Seite im Registerformat mit den gleichen Text als aktive Registerkarte angezeigt. (Überschreibt [CBaseTabbedPane::CanSetCaptionTextToTabName](../../mfc/reference/cbasetabbedpane-class.md#cansetcaptiontexttotabname).)|
+|[CMFCOutlookBar::CanSetCaptionTextToTabName](#cansetcaptiontexttotabname)|Bestimmt, ob die Beschriftung für die Seite im Registerformat mit den gleichen Text als aktive Registerkarte angezeigt. (Overrides [CBaseTabbedPane::CanSetCaptionTextToTabName](../../mfc/reference/cbasetabbedpane-class.md#cansetcaptiontexttotabname).)|
 |[CMFCOutlookBar::Create](#create)|Die Outlook-Leistensteuerelement wird erstellt.|
 |[CMFCOutlookBar::CreateCustomPage](#createcustompage)|Erstellt eine benutzerdefinierte Registerkarte des Outlook-Leiste.|
 |`CMFCOutlookBar::CreateObject`|Wird vom Framework verwendet, um eine dynamische Instanz dieses Klassentyps zu erstellen.|
 |[CMFCOutlookBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Bestimmt, ob ein Benutzer eine Steuerleiste am äußeren Rand der Outlook-Leiste angedockt werden kann.|
-|[CMFCOutlookBar::FloatTab](#floattab)|Hebt die Verankerung eines Bereichs auf, aber nur, wenn der Bereich sich auf einer lösbaren Registerkarte befindet. (Überschreibt [cbasetabbedpane:: Floattab](../../mfc/reference/cbasetabbedpane-class.md#floattab).)|
+|[CMFCOutlookBar::FloatTab](#floattab)|Hebt die Verankerung eines Bereichs auf, aber nur, wenn der Bereich sich auf einer lösbaren Registerkarte befindet. (Overrides [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).)|
 |[CMFCOutlookBar::GetButtonsFont](#getbuttonsfont)|Gibt die Schriftart des Texts auf den Schaltflächen der Outlook-Leiste zurück.|
-|[CMFCOutlookBar::GetTabArea](#gettabarea)|Gibt die Größe und Position der Bereiche Registerkarte in der Outlook-Leiste zurück. (Überschreibt [CBaseTabbedPane::GetTabArea](../../mfc/reference/cbasetabbedpane-class.md#gettabarea).)|
+|[CMFCOutlookBar::GetTabArea](#gettabarea)|Gibt die Größe und Position der Bereiche Registerkarte in der Outlook-Leiste zurück. (Overrides [CBaseTabbedPane::GetTabArea](../../mfc/reference/cbasetabbedpane-class.md#gettabarea).)|
 |`CMFCOutlookBar::GetThisClass`|Durch das Framework verwendet wird, einen Zeiger zum Abrufen der [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das diesem Klassentyp zugeordnet ist.|
 |[CMFCOutlookBar::IsMode2003](#ismode2003)|Bestimmt, ob das Verhalten der Outlook-Leiste, die von Microsoft Office Outlook 2003 imitiert (siehe Hinweise).|
 |[CMFCOutlookBar::OnAfterAnimation](#onafteranimation)|Wird aufgerufen, indem [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) nachdem die aktive Registerkarte mit der Animation festgelegt wurde.|
@@ -157,7 +157,7 @@ Befolgen Sie folgende Schritte, um das `CMFCOutlookBar`-Steuerelement in Ihrer A
 
 Verwenden Sie dynamisch hinzufügen oder löschen die neue Seiten zur Laufzeit, [CMFCOutlookBar::CreateCustomPage](#createcustompage) und [CMFCOutlookBar::RemoveCustomPage](#removecustompage).
 
-## <a name="outlook-2003-mode"></a>Outlook 2003-Modus
+## <a name="outlook-2003-mode"></a>Outlook 2003 Mode
 
 In Outlook 2003-Modus werden die Schaltflächen auf die Registerkarte am unteren Rand der Outlook-Leistenbereich positioniert. Wenn nicht ausreichend Platz zur Anzeige der Schaltflächen vorhanden ist, werden sie als Symbole in einem Bereich symbolleistenähnlicher am unteren Rand des Bereichs angezeigt.
 
@@ -267,7 +267,7 @@ virtual BOOL Create(
 *pParentWnd*<br/>
 [in] Gibt einen Zeiger auf ein übergeordnetes Fenster. Es darf nicht NULL sein.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Gibt an, die Outlook-Leiste Größe und Position in Pixel.
 
 *nID*<br/>
@@ -458,7 +458,7 @@ virtual void OnAfterAnimation(int nPage);
 
 ### <a name="parameters"></a>Parameter
 
-*. nSeite*<br/>
+*nPage*<br/>
 [in] Der nullbasierte Index der Registerkarte, die aktiven vorgenommen wurde.
 
 ### <a name="remarks"></a>Hinweise
@@ -475,7 +475,7 @@ virtual BOOL OnBeforeAnimation(int nPage);
 
 ### <a name="parameters"></a>Parameter
 
-*. nSeite*<br/>
+*nPage*<br/>
 [in] Der nullbasierte Index der Registerkarte, die aktiv festgelegt wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -511,7 +511,7 @@ BOOL RemoveCustomPage(
 
 ### <a name="parameters"></a>Parameter
 
-*uipage fehlgeschlagen*<br/>
+*uiPage*<br/>
 [in] Nullbasierte Index der Seite in das übergeordnete Outlook-Fenster.
 
 *pTargetWnd*<br/>

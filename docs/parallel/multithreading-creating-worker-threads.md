@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [MFC], worker threads
 - threading [C++], user input not required
 ms.assetid: 670adbfe-041c-4450-a3ed-be14aab15234
-ms.openlocfilehash: 54bea7b42018637bf868dfdd923b94dd75aa2307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f36e02d1ba6074a7ec8203bea761b3528a120162
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559483"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293237"
 ---
 # <a name="multithreading-creating-worker-threads-in-mfc"></a>Multithreading: Erstellen von Arbeitsthreads in MFC
 
@@ -27,7 +27,8 @@ Ein Arbeitsthread wird normalerweise zur Behandlung von Hintergrundaufgaben verw
 
 - [Beispiel](#_core_controlling_function_example)
 
-Die Erstellung eines Arbeitsthreads ist eine verhältnismäßig einfache Aufgabe. Zur Aktivierung des Threads sind lediglich zwei Schritte erforderlich: das Implementieren einer Steuerungsfunktion und das Starten des Threads. Es ist nicht erforderlich, die beim Ableiten einer Klasse von [CWinThread](../mfc/reference/cwinthread-class.md). Sie können eine Klasse ableiten, wenn Sie eine spezielle Version von `CWinThread` benötigen, dies ist jedoch für die meisten einfachen Arbeitsthreads nicht erforderlich. `CWinThread` kann unverändert verwendet werden.
+Die Erstellung eines Arbeitsthreads ist eine verhältnismäßig einfache Aufgabe. Zur Aktivierung des Threads sind lediglich zwei Schritte erforderlich: das Implementieren einer Steuerungsfunktion und das Starten des Threads. Es ist nicht erforderlich, die beim Ableiten einer Klasse von [CWinThread](../mfc/reference/cwinthread-class.md). Sie können eine Klasse ableiten, wenn Sie eine spezielle Version von `CWinThread` benötigen, dies ist jedoch für die meisten einfachen Arbeitsthreads nicht erforderlich. 
+  `CWinThread` kann unverändert verwendet werden.
 
 ##  <a name="_core_starting_the_thread"></a> Starten des Threads
 

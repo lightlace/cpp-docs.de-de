@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_nGroupID
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
-ms.openlocfilehash: b05de00697aa019382014402f7701a8341da5198
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9be0a5b76f91ddf4dc3d1c4ff2816b7ffd5a1986
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512917"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304378"
 ---
 # <a name="canimationgroup-class"></a>CAnimationGroup-Klasse
 
@@ -70,7 +70,7 @@ class CAnimationGroup;
 |Name|Beschreibung|
 |----------|-----------------|
 |[CAnimationGroup::CAnimationGroup](#canimationgroup)|Erstellt eine Animation aus.|
-|[CAnimationGroup:: ~ CAnimationGroup](#canimationgroup__~canimationgroup)|Der Destruktor. Wird aufgerufen, wenn eine Animation aus zerstört wird.|
+|[CAnimationGroup::~CAnimationGroup](#canimationgroup__~canimationgroup)|Der Destruktor. Wird aufgerufen, wenn eine Animation aus zerstört wird.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -98,7 +98,7 @@ class CAnimationGroup;
 |Name|Beschreibung|
 |----------|-----------------|
 |[CAnimationGroup::m_bAutoclearTransitions](#m_bautocleartransitions)|Gibt an, wie Übergänge von Animationsobjekte zu löschen, die zur Gruppe gehören. Wenn dieses Element auf "true" ist, werden Übergänge automatisch entfernt, wenn eine Animation geplant wurde. Andernfalls müssen Sie zum manuellen Entfernen der Übergänge.|
-|[CAnimationGroup:: M_bautodestroyanimationobjects](#m_bautodestroyanimationobjects)|Gibt an, wie Animationsobjekte zerstört werden sollen. Wenn dieser Parameter TRUE ist, werden Animationsobjekte automatisch zerstört werden, wenn die Gruppe gelöscht wird. Andernfalls müssen manuell die Animationsobjekte zerstört werden. Der Standardwert ist "false". Legen Sie diesen Wert auf "true", nur dann, wenn alle Animationsobjekte, die Gruppe angehören, mit dem neuen Operator dynamisch zugewiesen werden.|
+|[CAnimationGroup::m_bAutodestroyAnimationObjects](#m_bautodestroyanimationobjects)|Gibt an, wie Animationsobjekte zerstört werden sollen. Wenn dieser Parameter TRUE ist, werden Animationsobjekte automatisch zerstört werden, wenn die Gruppe gelöscht wird. Andernfalls müssen manuell die Animationsobjekte zerstört werden. Der Standardwert ist "false". Legen Sie diesen Wert auf "true", nur dann, wenn alle Animationsobjekte, die Gruppe angehören, mit dem neuen Operator dynamisch zugewiesen werden.|
 |[CAnimationGroup::m_bAutodestroyKeyframes](#m_bautodestroykeyframes)|Gibt an, wie Keyframes zu zerstören. Wenn dieser Wert TRUE ist, werden alle Keyframes entfernt und zerstört; Andernfalls werden sie nur aus der Liste entfernt. Der Standardwert ist "true".|
 |[CAnimationGroup::m_lstAnimationObjects](#m_lstanimationobjects)|Enthält eine Liste von Animationsobjekten.|
 |[CAnimationGroup::m_lstKeyFrames](#m_lstkeyframes)|Enthält eine Liste von Keyframes.|

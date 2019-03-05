@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCVisualManagerVS2005 [MFC], OnFillMiniFrameCaption
 - CMFCVisualManagerVS2005 [MFC], OnUpdateSystemColors
 ms.assetid: ea39b9ae-327e-4a51-bce7-dc84c78f005b
-ms.openlocfilehash: 0b89757380aa50af5092979c3824d3e15f29ca2a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 212ef69350fbc85e6e0cc76bd505b2a895e75c8e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526807"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279964"
 ---
 # <a name="cmfcvisualmanagervs2005-class"></a>CMFCVisualManagerVS2005-Klasse
 
@@ -160,14 +160,14 @@ virtual void GetTabFrameColors(
 ### <a name="parameters"></a>Parameter
 
 [in] *pTabWnd*<br/>
-[in] *ClrDark*<br/>
-[in] *ClrBlack*<br/>
-[in] *ClrHighlight*<br/>
-[in] *ClrFace*<br/>
-[in] *ClrDarkShadow*<br/>
-[in] *ClrLight*<br/>
-[in] *PbrFace*<br/>
-[in] *PbrBlack*<br/>
+[in] *clrDark*<br/>
+[in] *clrBlack*<br/>
+[in] *clrHighlight*<br/>
+[in] *clrFace*<br/>
+[in] *clrDarkShadow*<br/>
+[in] *clrLight*<br/>
+[in] *pbrFace*<br/>
+[in] *pbrBlack*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -195,7 +195,7 @@ virtual void OnDrawAutoHideButtonBorder(
 
 [in] *pDC*<br/>
 [in] *RectBounds*<br/>
-[in] *RectBorderSize*<br/>
+[in] *rectBorderSize*<br/>
 [in] *pButton*<br/>
 
 ### <a name="remarks"></a>Hinweise
@@ -241,7 +241,7 @@ virtual COLORREF OnDrawPaneCaption(
 [in] *pDC*<br/>
 [in] *pBar*<br/>
 [in] *bActive*<br/>
-[in] *RectCaption*<br/>
+[in] *rectCaption*<br/>
 [in] *RectButtons*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
@@ -262,7 +262,7 @@ virtual void OnDrawSeparator(
 
 [in] *pDC*<br/>
 [in] *pBar*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *bIsHoriz*<br/>
 
 ### <a name="remarks"></a>Hinweise
@@ -281,7 +281,7 @@ virtual void OnDrawTab(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *RectTab*<br/>
+[in] *rectTab*<br/>
 [in] *iTab*<br/>
 [in] *bIsActive*<br/>
 [in] *pTabWnd*<br/>
@@ -299,7 +299,7 @@ virtual void OnDrawToolBoxFrame(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -315,7 +315,7 @@ virtual void OnEraseTabsArea(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *pTabWnd*<br/>
 
 ### <a name="remarks"></a>Hinweise
@@ -332,7 +332,7 @@ virtual void OnFillAutoHideButtonBackground(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *pButton*<br/>
 
 ### <a name="remarks"></a>Hinweise
@@ -350,7 +350,7 @@ virtual void OnFillHighlightedArea(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *pBrush*<br/>
 [in] *pButton*<br/>
 
@@ -369,7 +369,7 @@ virtual COLORREF OnFillMiniFrameCaption(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *RectCaption*<br/>
+[in] *rectCaption*<br/>
 [in] *pFrameWnd*<br/>
 [in] *bActive*<br/>
 

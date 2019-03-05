@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-ms.openlocfilehash: 9e657bbf375a8babf1c03cc7254310956131d62b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: faed99197eb14da8ea095bef81d0d1a9845b18ad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449368"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285502"
 ---
 # <a name="catllist-class"></a>CAtlList-Klasse
 
@@ -76,7 +76,7 @@ Der Code verwendet, um die Elemente kopiert oder verschoben wird. Finden Sie unt
 |Name|Beschreibung|
 |----------|-----------------|
 |[CAtlList::CAtlList](#catllist)|Der Konstruktor.|
-|[CAtlList:: ~ CAtlList](#dtor)|Der Destruktor.|
+|[CAtlList::~CAtlList](#dtor)|Der Destruktor.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -134,7 +134,7 @@ POSITION AddHead(INARGTYPE element);
 
 ### <a name="parameters"></a>Parameter
 
-*Element*<br/>
+*element*<br/>
 Das neue Element.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -181,7 +181,7 @@ POSITION AddTail(INARGTYPE element);
 
 ### <a name="parameters"></a>Parameter
 
-*Element*<br/>
+*element*<br/>
 Das hinzuzufügende Element.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -278,7 +278,7 @@ POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Element*<br/>
+*element*<br/>
 Das Element, in der Liste gefunden werden.
 
 *posStartAfter*<br/>
@@ -306,7 +306,7 @@ POSITION FindIndex(size_t iElement) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*"IElement"*<br/>
+*iElement*<br/>
 Der nullbasierte Index des Listenelements erforderlich.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -334,7 +334,7 @@ const E& GetAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Der Wert der POSITION ein bestimmtes Elements angeben.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -425,7 +425,7 @@ const E& GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Ein Positionswert, von einem vorherigen Aufruf zurückgegebene `GetNext`, [CAtlList::GetHeadPosition](#getheadposition), oder andere `CAtlList` Methode.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -453,7 +453,7 @@ const E& GetPrev(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Ein Positionswert, von einem vorherigen Aufruf zurückgegebene `GetPrev`, [CAtlList::GetTailPosition](#gettailposition), oder andere `CAtlList` Methode.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -533,10 +533,10 @@ POSITION InsertAfter(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Der Wert der POSITION nach dem das neue Element eingefügt wird.
 
-*Element*<br/>
+*element*<br/>
 Das Element eingefügt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -561,10 +561,10 @@ POSITION InsertBefore(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Das neue Element wird in der Liste vor dieser Positionswert eingefügt werden.
 
-*Element*<br/>
+*element*<br/>
 Das Element eingefügt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -605,7 +605,7 @@ void MoveToHead(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Der Wert der POSITION des Elements zu verschieben.
 
 ### <a name="remarks"></a>Hinweise
@@ -626,7 +626,7 @@ void MoveToTail(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Der Wert der POSITION des Elements zu verschieben.
 
 ### <a name="remarks"></a>Hinweise
@@ -663,7 +663,7 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Der Wert der POSITION des zu entfernenden Elements.
 
 ### <a name="remarks"></a>Hinweise
@@ -758,10 +758,10 @@ void SetAt(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Der Wert der POSITION für das Element ändern.
 
-*Element*<br/>
+*element*<br/>
 Der neue Elementwert.
 
 ### <a name="remarks"></a>Hinweise
@@ -782,7 +782,7 @@ void SwapElements(POSITION pos1, POSITION pos2) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*POS1*<br/>
+*pos1*<br/>
 Der erste Wert der POSITION.
 
 *pos2*<br/>

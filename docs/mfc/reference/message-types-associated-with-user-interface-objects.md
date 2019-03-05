@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - message types and user interface objects [MFC]
 ms.assetid: 681ee1a7-f6e6-4ea0-9fc6-1fb53a35516e
-ms.openlocfilehash: 42584a6514a48e7c02d98e1b619c06a11a8f277b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1676edf487d536d75ccd7901c5bdfa827cc143fe
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641687"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326321"
 ---
 # <a name="message-types-associated-with-user-interface-objects"></a>Mit Benutzeroberflächenobjekten verknüpfte Meldungstypen
 
@@ -19,7 +19,7 @@ Die folgende Tabelle zeigt die Typen von Objekten, die mit denen Sie arbeiten, u
 
 ### <a name="user-interface-objects-and-associated-messages"></a>Benutzeroberflächenobjekte und die zugehörigen Meldungen
 
-|Objekt-ID|Mitteilungen|
+|Objekt-ID|Meldungen|
 |---------------|--------------|
 |Klassennamen, die Darstellung des enthaltenden Fensters|Windows-Nachrichten geeignet, um eine [CWnd](../../mfc/reference/cwnd-class.md)-Klasse: ein Dialogfeld, Fenster, untergeordnetes Fenster, untergeordneten MDI-Fensters oder Rahmenfenster der obersten Ebene.|
 |Menü oder die Tastenkombination-Bezeichner|-COMMAND-Nachricht (die Programmfunktion ausgeführt).<br />-Wähle ich UPDATE_COMMAND_UI Nachricht (aktualisiert das Menüelement dynamisch).|

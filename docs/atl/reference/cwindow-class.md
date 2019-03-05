@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: f420715f0e90cbdf811d9a4f731885bd4f382d11
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: b27d6bb01b9e94ebe38be5455ffcc870806ac33b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894457"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298346"
 ---
 # <a name="cwindow-class"></a>CWindow-Klasse
 
@@ -274,7 +274,7 @@ class CWindow
 |[CWindow::KillTimer](#killtimer)|Zerstört ein Zeitgeberereignis.|
 |[CWindow::LockWindowUpdate](#lockwindowupdate)|Deaktiviert oder aktiviert die Zeichnung im Fenster.|
 |[CWindow::MapWindowPoints](#mapwindowpoints)|Konvertiert einen Satz von Punkten aus Koordinatenbereich des Fensters zum Koordinatenbereich des anderen Fensters.|
-|[CWindow::MessageBox](#messagebox)|Zeigt ein Meldungsfenster an.|
+|[CWindow::MessageBox](#messagebox)|Zeigt ein Meldungsfeld an.|
 |[CWindow::ModifyStyle](#modifystyle)|Ändert das Window-Stile.|
 |[CWindow::ModifyStyleEx](#modifystyleex)|Ändert die erweiterten Fensterstile.|
 |[CWindow::MoveWindow](#movewindow)|Ändert, Größe und Position des Fensters.|
@@ -1793,7 +1793,7 @@ Die zweite Version dieser Methode ermöglicht die Koordinaten der Konvertierung 
 
 ##  <a name="messagebox"></a>  CWindow::MessageBox
 
-Zeigt ein Meldungsfenster an.
+Zeigt ein Meldungsfeld an.
 
 ```
 int MessageBox(

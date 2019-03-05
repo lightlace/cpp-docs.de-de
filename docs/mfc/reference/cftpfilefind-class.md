@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], FindNextFile
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
-ms.openlocfilehash: 72d1eb147f8d7387a04f25cc008cc4d4638ba691
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5da739cac1ab852ce64526b24ee2b4f66d40d570
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548225"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284826"
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind-Klasse
 
@@ -43,8 +43,8 @@ class CFtpFileFind : public CFileFind
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CFtpFileFind:: FindFile](#findfile)|Sucht nach einer Datei auf einem FTP-Server.|
-|[CFtpFileFind:: FindNextFile](#findnextfile)|Weiterhin eine Dateisuche in einem vorherigen Aufruf von [FindFile](#findfile).|
+|[CFtpFileFind::FindFile](#findfile)|Sucht nach einer Datei auf einem FTP-Server.|
+|[CFtpFileFind::FindNextFile](#findnextfile)|Weiterhin eine Dateisuche in einem vorherigen Aufruf von [FindFile](#findfile).|
 |[CFtpFileFind::GetFileURL](#getfileurl)|Ruft die URL, einschließlich Pfad, der die gefundene Datei ab.|
 
 ## <a name="remarks"></a>Hinweise

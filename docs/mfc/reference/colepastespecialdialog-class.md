@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-ms.openlocfilehash: 247514c37ef62987baa31be83efc73e05735904a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d135a2a254f71a4123a8bd338e1d6e9f87b74c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530025"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303313"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog-Klasse
 
@@ -122,7 +122,7 @@ void AddFormat(
 
 ### <a name="parameters"></a>Parameter
 
-*FMT*<br/>
+*fmt*<br/>
 Verweis auf den Datentyp hinzufügen.
 
 *lpszFormat*<br/>
@@ -134,10 +134,10 @@ Eine Zeichenfolge, die Beschreibung des Ergebnisses, wenn dieses Format im Dialo
 *flags*<br/>
 Die verschiedenen verlinken und Einbetten für dieses Format verfügbaren Optionen. Dieses Flag ist eine bitweise Kombination eines oder mehrere der anderen Werte in der OLEUIPASTEFLAG Enumerationstyp.
 
-*CF*<br/>
+*cf*<br/>
 Das Zwischenablageformat hinzufügen.
 
-*TYMED*<br/>
+*tymed*<br/>
 Die Typen der Medien, die im folgenden Format zur Verfügung. Dies ist eine bitweise Kombination eines oder mehrere der Werte in der TYMED Enumerationstyp.
 
 *nFormatID*<br/>
@@ -151,7 +151,7 @@ Flag, die bestimmt, ob das Optionsfeld "Link einfügen" aktiviert ist, wenn dies
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Funktion kann aufgerufen werden, zum Hinzufügen von entweder standard-Formate wie z. B. HIERSVR oder CF_TIFF oder benutzerdefinierte Formate, die Ihre Anwendung mit dem System registriert wurden. Weitere Informationen zum Einfügen von Datenobjekten in Ihrer Anwendung, finden Sie im Artikel [Datenobjekte und Datenquellen: Bearbeitung](../../mfc/data-objects-and-data-sources-manipulation.md).
+Diese Funktion kann aufgerufen werden, zum Hinzufügen von entweder standard-Formate wie z. B. HIERSVR oder CF_TIFF oder benutzerdefinierte Formate, die Ihre Anwendung mit dem System registriert wurden. Weitere Informationen zum Einfügen von Datenobjekten in Ihrer Anwendung, finden Sie im Artikel [Datenobjekte und Datenquellen: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Weitere Informationen finden Sie unter den [TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed) Enumerationstyp und [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Struktur im Windows SDK.
 
@@ -167,7 +167,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 
 ### <a name="parameters"></a>Parameter
 
-*CF*<br/>
+*cf*<br/>
 Das Zwischenablageformat hinzufügen.
 
 ### <a name="return-value"></a>Rückgabewert

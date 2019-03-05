@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComCurrency class
 ms.assetid: a1c3d10a-bba6-40cc-8bcf-aed9023c8a9e
-ms.openlocfilehash: 5a619eef33a60dc1a34d31c3d51614de20fc8f28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2c07bc9c0b1e96f34798b20207dc0eb0362e534
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451154"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277718"
 ---
 # <a name="ccomcurrency-class"></a>CComCurrency-Klasse
 
@@ -45,7 +45,7 @@ class CComCurrency
 |Name|Beschreibung|
 |----------|-----------------|
 |[CComCurrency::GetCurrencyPtr](#getcurrencyptr)|Gibt die Adresse eines `m_currency`-Datenmembers zurück.|
-|[CComCurrency:: Getfraction](#getfraction)|Rufen Sie diese Methode auf, um den Nachkommawert eines `CComCurrency`-Objekts zurückzugeben.|
+|[CComCurrency::GetFraction](#getfraction)|Rufen Sie diese Methode auf, um den Nachkommawert eines `CComCurrency`-Objekts zurückzugeben.|
 |[CComCurrency::GetInteger](#getinteger)|Rufen Sie diese Methode auf, um die ganzzahlige Komponente eines `CComCurrency`-Objekts zurückzugeben.|
 |[CComCurrency::Round](#round)|Rufen Sie diese Methode auf, um ein `CComCurrency`-Objekt auf den nächsten ganzzahligen Wert zu runden.|
 |[CComCurrency::SetFraction](#setfraction)|Rufen Sie diese Methode auf, um den Nachkommawert eines `CComCurrency`-Objekts festzulegen.|
@@ -55,22 +55,22 @@ class CComCurrency
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CComCurrency::operator-](#operator_-)|Dieser Operator wird verwendet, um Subtraktion für ein `CComCurrency`-Objekt auszuführen.|
-|[CComCurrency::operator! =](#operator_neq)|Überprüft zwei `CComCurrency`-Objekte auf Ungleichheit.|
+|[CComCurrency::operator -](#operator_-)|Dieser Operator wird verwendet, um Subtraktion für ein `CComCurrency`-Objekt auszuführen.|
+|[CComCurrency::operator !=](#operator_neq)|Überprüft zwei `CComCurrency`-Objekte auf Ungleichheit.|
 |[CComCurrency::operator *](#operator_star)|Dieser Operator wird verwendet, um Multiplikation für ein `CComCurrency`-Objekt auszuführen.|
-|[CComCurrency::operator * =](#operator_star_eq)|Dieser Operator wird verwendet, um Multiplikation für ein `CComCurrency`-Objekt auszuführen und ihm das Ergebnis zuzuweisen.|
+|[CComCurrency::operator *=](#operator_star_eq)|Dieser Operator wird verwendet, um Multiplikation für ein `CComCurrency`-Objekt auszuführen und ihm das Ergebnis zuzuweisen.|
 |[CComCurrency::operator /](#operator_div)|Dieser Operator wird verwendet, um Division für ein `CComCurrency`-Objekt auszuführen.|
-|[CComCurrency::operator / =](#operator_div_eq)|Dieser Operator wird verwendet, um Division für ein `CComCurrency`-Objekt auszuführen und ihm das Ergebnis zuzuweisen.|
+|[CComCurrency::operator /=](#operator_div_eq)|Dieser Operator wird verwendet, um Division für ein `CComCurrency`-Objekt auszuführen und ihm das Ergebnis zuzuweisen.|
 |[CComCurrency::operator +](#operator_add)|Dieser Operator wird verwendet, um Addition für ein `CComCurrency`-Objekt auszuführen.|
 |[CComCurrency::operator +=](#operator_add_eq)|Dieser Operator wird verwendet, um Addition für ein `CComCurrency`-Objekt auszuführen und das Ergebnis dem aktuellen Objekt zuzuweisen.|
 |[CComCurrency::operator <](#operator_lt)|Dieser Operator vergleicht zwei `CComCurrency`-Objekte, um das kleinere zu bestimmen.|
-|[CComCurrency::operator < =](#operator_lt_eq)|Dieser Operator vergleicht zwei `CComCurrency`-Objekte, um zu bestimmen, ob sie gleich sind oder welches kleiner ist.|
+|[CComCurrency::operator <=](#operator_lt_eq)|Dieser Operator vergleicht zwei `CComCurrency`-Objekte, um zu bestimmen, ob sie gleich sind oder welches kleiner ist.|
 |[CComCurrency::operator =](#operator_eq)|Dieser Operator weist dem `CComCurrency`-Objekt einen neuen Wert zu.|
-|[CComCurrency::operator =](#operator_-_eq)|Dieser Operator wird verwendet, um Subtraktion für ein `CComCurrency`-Objekt auszuführen und ihm das Ergebnis zuzuweisen.|
+|[CComCurrency::operator -=](#operator_-_eq)|Dieser Operator wird verwendet, um Subtraktion für ein `CComCurrency`-Objekt auszuführen und ihm das Ergebnis zuzuweisen.|
 |[CComCurrency::operator ==](#operator_eq_eq)|Dieser Operator überprüft zwei `CComCurrency`-Objekte auf Gleichheit.|
 |[CComCurrency::operator >](#operator_gt)|Dieser Operator vergleicht zwei `CComCurrency`-Objekte, um das größere zu bestimmen.|
-|[CComCurrency::operator > =](#operator_gt_eq)|Dieser Operator vergleicht zwei `CComCurrency`-Objekte, um zu bestimmen, ob sie gleich sind oder welches größer ist.|
-|[CComCurrency::operator Währung](#operator_currency)|Wandelt einen CURRENCY-Objekts.|
+|[CComCurrency::operator >=](#operator_gt_eq)|Dieser Operator vergleicht zwei `CComCurrency`-Objekte, um zu bestimmen, ob sie gleich sind oder welches größer ist.|
+|[CComCurrency::operator CURRENCY](#operator_currency)|Wandelt einen CURRENCY-Objekts.|
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
 
@@ -97,7 +97,7 @@ Die Werte CY_MIN_FRACTION CY_MAX_FRACTION und CY_SCALE werden in "atlcur.h" defi
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** "atlcur.h"
+**Header:** atlcur.h
 
 ##  <a name="ccomcurrency"></a>  CComCurrency::CComCurrency
 
@@ -131,7 +131,7 @@ Ein vorhandenes `CComCurrency`-Objekt.
 *cySrc*<br/>
 Eine Variable vom Typ CURRENCY.
 
-*bSrc*, *Bake*, *fSrc*, *lSrc*, *sSrc*, *UlSrc, UsSrc*<br/>
+*bSrc*, *dSrc*, *fSrc*, *lSrc*, *sSrc*, *ulSrc, usSrc*<br/>
 Der Anfangswert der Membervariable `m_currency`.
 
 *cSrc*<br/>
@@ -462,7 +462,7 @@ Ein `CComCurrency`-Objekt.
 *cySrc*<br/>
 Eine Variable vom Typ CURRENCY.
 
-*sSrc*, *fSrc*, *lSrc*, *bSrc*, *UsSrc*, *Bake*, *cSrc* , *UlSrc*, *Bake*<br/>
+*sSrc*, *fSrc*, *lSrc*, *bSrc*, *usSrc*, *dSrc*, *cSrc*, *ulSrc*, *dSrc*<br/>
 Der numerische Wert zuweisen der `CComCurrency` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -642,5 +642,5 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 ## <a name="see-also"></a>Siehe auch
 
 [COleCurrency-Klasse](../../mfc/reference/colecurrency-class.md)<br/>
-[WÄHRUNG](/windows/desktop/api/wtypes/ns-wtypes-tagcy)<br/>
+[CURRENCY](/windows/desktop/api/wtypes/ns-wtypes-tagcy)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)

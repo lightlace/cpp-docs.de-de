@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TN023
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
-ms.openlocfilehash: 04789ba85a9f7c193a88ba1a0d097b3671808e9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4edc00f77152b8d677f3113e0ed6386569b0988
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559912"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277676"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023: MFC-Standardressourcen
 
@@ -37,15 +37,15 @@ ClipArt-Ressourcen sind zusätzliche Ressourcen, die das Framework nicht abhäng
 
 - Indicate.rc: Enthält die Zeichenfolgenressourcen für die Statusleiste-Key-Status-Indikatoren, z. B. "Obergrenze" für die FESTSTELLTASTE aktiviert.
 
-- Prompts.rc: Enthält die Menü-Eingabeaufforderung Zeichenfolgenressourcen für jeden vordefinierten Befehl ein, z. B. "Neues Dokument erstellen" für ID_FILE_NEW.
+- Prompts.rc: Enthält im Menü-Eingabeaufforderung Zeichenfolgenressourcen für jeden vordefinierten Befehl ein, z. B. "Neues Dokument erstellen" für ID_FILE_NEW an.
 
-- COMMDLG.rc: Einer Visual C++ kompatibel RC-Datei, die die standardmäßige COMMDLG Dialogfeldvorlagen enthält.
+- Commdlg.rc: Eine Visual C++ kompatibel RC-Datei, die die standardmäßige COMMDLG Dialogfeldvorlagen enthält.
 
 Standard Frameworkressourcen sind Ressourcen mit AFX definierte-IDs, von denen das Framework für die interne Implementierungen abhängig. Sie müssen nur selten diese AFX definierte Ressourcen zu ändern. Wenn Sie dies tun, sollten Sie das weiter unten in diesem Thema beschriebenen Verfahren befolgen.
 
 Die folgenden Frameworkressourcen sind im Verzeichnis MFC\INCLUDE enthalten:
 
-- AFXRES.rc: Allgemeine Ressourcen vom Framework verwendet.
+- Afxres.rc: Gemeinsame Ressourcen, die vom Framework verwendet werden.
 
 - Afxprint.rc: Spezielle Ressourcen für drucken.
 
@@ -103,4 +103,3 @@ In einigen seltenen Fällen kann der Inhalt der standard-Framework-Ressourcen f�
 
 [Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)<br/>
 [Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)
-

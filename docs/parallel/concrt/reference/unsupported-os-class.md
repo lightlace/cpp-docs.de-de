@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - unsupported_os class
 ms.assetid: 6fa57636-341b-4b51-84cc-261d283ff736
-ms.openlocfilehash: a776daf138b5fa2da0426afd38bdf7f67721c199
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8277827aa8713ef57731a3e0da0898829b9fa9fe
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448268"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289285"
 ---
 # <a name="unsupportedos-class"></a>unsupported_os-Klasse
 
@@ -41,7 +41,7 @@ class unsupported_os : public std::exception;
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** concrt.h hinzu
+**Header:** concrt.h
 
 **Namespace:** Parallelität
 
@@ -57,7 +57,7 @@ unsupported_os() throw();
 
 ### <a name="parameters"></a>Parameter
 
-*_Nachricht*<br/>
+*_Message*<br/>
 Eine beschreibende Fehlermeldung.
 
 ## <a name="see-also"></a>Siehe auch

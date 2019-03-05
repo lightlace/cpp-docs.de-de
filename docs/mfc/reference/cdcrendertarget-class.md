@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDCRenderTarget [MFC], GetDCRenderTarget
 - CDCRenderTarget [MFC], m_pDCRenderTarget
 ms.assetid: aa8059c9-08e6-49e4-9b8c-00fa54077a61
-ms.openlocfilehash: e172d175bba5b4c379f7cd29451d7ad4215d9c68
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70169d2b89d9ea657898f7a96dea27556023d4e2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541712"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268277"
 ---
 # <a name="cdcrendertarget-class"></a>CDCRenderTarget-Klasse
 
@@ -59,7 +59,7 @@ class CDCRenderTarget : public CRenderTarget;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CDCRenderTarget::operator ID2D1DCRenderTarget *](#operator_id2d1dcrendertarget_star)|Gibt die ID2D1DCRenderTarget-Schnittstelle|
+|[CDCRenderTarget::operator ID2D1DCRenderTarget*](#operator_id2d1dcrendertarget_star)|Gibt die ID2D1DCRenderTarget-Schnittstelle|
 
 ### <a name="protected-data-members"></a>Geschützte Datenmember
 
@@ -107,7 +107,7 @@ BOOL BindDC(
 *dc*<br/>
 Der Gerätekontext, die an den das Renderziel zeichnen-Befehle ausgibt
 
-*Rect*<br/>
+*rect*<br/>
 Die Dimensionen des Handles für einen Gerätekontext (HDC) an dem das Renderziel gebunden ist
 
 ### <a name="return-value"></a>Rückgabewert
@@ -132,7 +132,7 @@ BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
 
 ### <a name="parameters"></a>Parameter
 
-*Eigenschaftendatei*<br/>
+*props*<br/>
 Der Renderingmodus, Pixelformat, Remotingoptionen, DPI-Informationen und die minimale DirectX-Unterstützung für das Hardwarerendering erforderlich.
 
 ### <a name="return-value"></a>Rückgabewert

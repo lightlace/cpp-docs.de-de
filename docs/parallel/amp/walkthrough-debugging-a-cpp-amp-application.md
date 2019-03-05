@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 610cf317982204715d55d12ece510cb477543f4d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 5312ba7354c28286cafb092711d66d56a920581a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176691"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286912"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Exemplarische Vorgehensweise: Debuggen einer C++ AMP-Anwendung
 
@@ -220,7 +220,7 @@ In diesem Abschnitt wird gezeigt, wie zum Debuggen von GPU-Code, der enthaltene 
 
 2. In der **Eigenschaftenseiten** Dialogfeld **Konfigurationseigenschaften**, wählen Sie **Debuggen**.
 
-3. In der **zu startender Debugger** Liste **lokaler Windows-Debugger**.
+3. Wählen Sie in der Liste **Zu startender Debugger** die Option **Lokaler Windows-Debugger** aus.
 
 4. In der **Debuggertyp** , ob **automatisch** ausgewählt ist.
 
@@ -387,6 +387,6 @@ Ausführen alle Threads in einer bestimmten Kachel auf die Zeile mit den Cursor 
 
 [Übersicht über C++ AMP](../../parallel/amp/cpp-amp-overview.md)<br/>
 [Debuggen von GPU-Code](/visualstudio/debugger/debugging-gpu-code)<br/>
-[Gewusst wie: Verwenden des Fensters „GPU-Threads“](/visualstudio/debugger/how-to-use-the-gpu-threads-window)<br/>
-[Gewusst wie: Verwenden des parallelen Überwachungsfensters](/visualstudio/debugger/how-to-use-the-parallel-watch-window)<br/>
+[Vorgehensweise: Verwenden des Fensters „GPU-Threads“](/visualstudio/debugger/how-to-use-the-gpu-threads-window)<br/>
+[Vorgehensweise: Verwenden des Fensters „Parallele Überwachung“](/visualstudio/debugger/how-to-use-the-parallel-watch-window)<br/>
 [Analysieren von C++ AMP-Code mit der Nebenläufigkeitsschnellansicht](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)

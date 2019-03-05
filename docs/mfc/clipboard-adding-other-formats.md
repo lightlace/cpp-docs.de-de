@@ -9,16 +9,16 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-ms.openlocfilehash: 991736714d52b4b5fb1a001fb17f1daefed5ddb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16e949973ff621b1e4e36475d95763ac47b4a00d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560562"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280217"
 ---
 # <a name="clipboard-adding-other-formats"></a>Zwischenablage: Hinzufügen anderer Formate
 
-In diesem Thema wird erläutert, wie zum Erweitern der Liste der unterstützten Formate, insbesondere für die Unterstützung von OLE wird. Das Thema [Zwischenablage: Daten kopieren und Einfügen](../mfc/clipboard-copying-and-pasting-data.md) beschreibt die minimale Implementierung, die zum Kopieren und Einfügen aus der Zwischenablage unterstützen. Wenn dies alles Sie implementieren ist, sind die einzigen Formate, die in der Zwischenablage platziert **CF_METAFILEPICT**, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**, und möglicherweise **CF_LINKSOURCE**. Die meisten Anwendungen benötigen Weitere Formate in der Zwischenablage als diese drei.
+In diesem Thema wird erläutert, wie zum Erweitern der Liste der unterstützten Formate, insbesondere für die Unterstützung von OLE wird. Das Thema [Zwischenablage: Das Kopieren und Einfügen von Daten](../mfc/clipboard-copying-and-pasting-data.md) beschreibt die minimale Implementierung, die zum Kopieren und Einfügen aus der Zwischenablage unterstützen. Wenn dies alles Sie implementieren ist, sind die einzigen Formate, die in der Zwischenablage platziert **CF_METAFILEPICT**, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**, und möglicherweise **CF_LINKSOURCE**. Die meisten Anwendungen benötigen Weitere Formate in der Zwischenablage als diese drei.
 
 ##  <a name="_core_registering_custom_formats"></a> Registrieren benutzerdefinierte Formate
 
@@ -49,4 +49,3 @@ Diese Technik wird verwendet, in der MFC-OLE-Beispielprogramm [HIERSVR](../visua
 ## <a name="see-also"></a>Siehe auch
 
 [Zwischenablage: Verwenden des OLE-Zwischenablagemechanismus](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
-

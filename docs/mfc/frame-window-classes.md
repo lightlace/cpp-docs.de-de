@@ -12,12 +12,12 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - classes [MFC], window
 ms.assetid: c27e43a7-8ad0-4759-b1b7-43f4725f4132
-ms.openlocfilehash: ffeb3339eedb9db7108a26ad4a5840e3921df5fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d42fa475fca7c92e4ba46b164a9beda9869231c4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668948"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279171"
 ---
 # <a name="frame-window-classes"></a>Rahmenfensterklassen
 
@@ -42,4 +42,3 @@ Diese Klassen bieten die meisten Rahmenfenster Funktionen, die Sie für Ihre Anw
 ## <a name="see-also"></a>Siehe auch
 
 [Rahmenfenster](../mfc/frame-windows.md)
-

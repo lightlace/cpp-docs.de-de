@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-ms.openlocfilehash: 3b6803b0ddfe09feb37a6e0d3072d8afa422de8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2236b1a1b72f307dae1efa0cfe197e222820c460
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476653"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270188"
 ---
 # <a name="extent-class-c-amp"></a>extent-Klasse (C++ AMP)
 
@@ -53,9 +53,9 @@ Der Rang des `extent`-Objekts.
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[Enthält](#contains)|Überprüft, ob das angegebene `extent`-Objekt über den angegebenen Rang verfügt.|
+|[contains](#contains)|Überprüft, ob das angegebene `extent`-Objekt über den angegebenen Rang verfügt.|
 |[size](#size)|Gibt die lineare Gesamtgröße des Wertebereichs zurück (in der Einheit Elemente).|
-|[Kachel "](#tile)|Erzeugt ein `tiled_extent`-Objekt mit den Kachelwertebereichen, die durch angegebene Dimensionen festgelegt werden.|
+|[tile](#tile)|Erzeugt ein `tiled_extent`-Objekt mit den Kachelwertebereichen, die durch angegebene Dimensionen festgelegt werden.|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
@@ -134,7 +134,7 @@ Die Länge der zweitwichtigsten Dimension.
 *_I2*<br/>
 Die Länge der unwichtigsten Dimension.
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Ein `extent`-Objekt, auf dem das neue `extent`-Objekt basiert.
 
 ## <a name="remarks"></a>Hinweise
@@ -215,7 +215,7 @@ extent<_Rank> operator++(int)restrict(amp,cpu);
 
 Für den Präfixoperator das `extent`-Objekt (`*this`). Für den Suffixoperator ein neues `extent`-Objekt.
 
-##  <a name="operator_add_eq"></a> Operator +=
+##  <a name="operator_add_eq"></a> operator+=
 
 Fügt die angegebene Anzahl auf jedes Element des Objekts "Block".
 
@@ -310,7 +310,7 @@ Die zu subtrahierende Zahl.
 
 Das resultierende `extent`-Objekt.
 
-##  <a name="operator_eq"></a> Operator =
+##  <a name="operator_eq"></a> operator=
 
 Kopiert den Inhalt eines anderen "Block"-Objekts in dieses Objekt.
 
@@ -322,7 +322,7 @@ extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
 
 ### <a name="parameters"></a>Parameter
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Das `extent`-Objekt, aus dem kopiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert

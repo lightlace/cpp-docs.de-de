@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_set class
 ms.assetid: c61f9a9a-4fd9-491a-9251-e300737ecf4b
-ms.openlocfilehash: c7a00cbb68d24cb515384645e943414b29549536
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43bce15f001e0daee817d9dae345b5d0858f2baa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652685"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286204"
 ---
 # <a name="concurrentunorderedset-class"></a>concurrent_unordered_set-Klasse
 
@@ -213,7 +213,7 @@ Die Vergleichsfunktion des Gleichheit für diesen ungeordneten Satz.
 *_Allocator*<br/>
 Die Zuweisung für diesen ungeordneten Satz.
 
-*Erste*<br/>
+*first*<br/>
 *last*<br/>
 *_Uset*<br/>
 Das `concurrent_unordered_set`-Quellobjekt, aus dem Elemente kopiert oder verschoben werden sollen.
@@ -387,13 +387,13 @@ Der itertatortyp für Einfügung verwendet.
 *V*<br/>
 Der Typ des Werts in den Satz eingefügt werden soll.
 
-*Wert*<br/>
+*value*<br/>
 Der Wert eingefügt werden soll.
 
 *_Where*<br/>
 Die Startposition für eine Einfügemarke zu suchen.
 
-*Erste*<br/>
+*first*<br/>
 Der Anfang des Bereichs, der eingefügt werden soll.
 
 *last*<br/>
@@ -405,7 +405,7 @@ Ein Paar, das ein Iterator und einen booleschen Wert enthält. Finden Sie im Abs
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Memberfunktion bestimmt, ob ein Element X in der Sequenz vorhanden ist, dessen Schlüssel wurde mit entsprechender Sortierung `value`. Wenn nicht der Fall, wird Sie dieses Element X erstellt und initialisiert sie mit `value`. Die Funktion dann bestimmt den Iterator `where` bestimmt, X. Wenn eine Einfügung aufgetreten ist, gibt die Funktion `std::pair(where, true)`. Andernfalls wird `std::pair(where, false)` zurückgegeben.
+Die erste Memberfunktion bestimmt, ob ein Element X in der Sequenz vorhanden ist, dessen Schlüssel wurde mit entsprechender Sortierung `value`. Wenn nicht der Fall, wird Sie dieses Element X erstellt und initialisiert sie mit `value`. Die Funktion dann bestimmt den Iterator `where` bestimmt, X. Wenn eine Einfügung aufgetreten ist, gibt die Funktion `std::pair(where, true)`. Andernfalls wird `std::pair(where, false)`zurückgegeben.
 
 Die zweite Memberfunktion gibt die Einfügung ( `value`), wobei `_Where` als Ausgangspunkt innerhalb der kontrollierten Sequenz ein, um nach der Einfügemarke zu suchen.
 
@@ -471,7 +471,7 @@ Die maximale Anzahl von Elementen, die in diesen gleichzeitigen Container eingef
 
 Dieser Wert für die obere Grenze möglicherweise tatsächlich größer, was der Container tatsächlich enthalten kann.
 
-##  <a name="operator_eq"></a> Operator =
+##  <a name="operator_eq"></a> operator=
 
 Weist den Inhalt eines anderen `concurrent_unordered_set`-Objekts diesem Objekt zu. Diese Methode ist nicht nebenläufigkeitssicher.
 
@@ -684,7 +684,7 @@ Die Position des Iterators, an der gelöscht werden soll.
 *KVal*<br/>
 Der Schlüsselwert, der gelöscht werden soll.
 
-*Erste*<br/>
+*first*<br/>
 *last*<br/>
 Iteratoren mit sich.
 
@@ -714,4 +714,3 @@ Die maximale Anzahl von Buckets, die in diesem Container.
 
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
 [Parallele Container und Objekte](../../../parallel/concrt/parallel-containers-and-objects.md)
-

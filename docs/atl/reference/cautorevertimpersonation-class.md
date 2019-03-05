@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoRevertImpersonation class
 ms.assetid: 43732849-1940-4bd4-9d52-7a5698bb8838
-ms.openlocfilehash: 799ec11fd8542a8b30ef3aa95f1a20700c5c9796
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8ab7fed8f1560054eb023cbd4e47c43c4c6f0cc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444914"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299100"
 ---
 # <a name="cautorevertimpersonation-class"></a>CAutoRevertImpersonation-Klasse
 
@@ -35,7 +35,7 @@ class CAutoRevertImpersonation
 |Name|Beschreibung|
 |----------|-----------------|
 |[CAutoRevertImpersonation::CAutoRevertImpersonation](#cautorevertimpersonation)|Erstellt eine `CAutoRevertImpersonation` Objekt|
-|[CAutoRevertImpersonation:: ~ CAutoRevertImpersonation](#dtor)|Zerstört das Objekt, und setzt die Access-token-Identitätswechsel.|
+|[CAutoRevertImpersonation::~CAutoRevertImpersonation](#dtor)|Zerstört das Objekt, und setzt die Access-token-Identitätswechsel.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -67,7 +67,7 @@ void Attach(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*PAT*<br/>
+*pAT*<br/>
 Die Adresse der [CAccessToken](../../atl/reference/caccesstoken-class.md) Objekt, das automatisch rückgängig gemacht werden
 
 ### <a name="remarks"></a>Hinweise
@@ -84,7 +84,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*PAT*<br/>
+*pAT*<br/>
 Die Adresse der [CAccessToken](../../atl/reference/caccesstoken-class.md) Objekt, das automatisch rückgängig gemacht werden.
 
 ### <a name="remarks"></a>Hinweise

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-ms.openlocfilehash: 5d330d8dd423927a3f4abbe6475a8d6219fa9af2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df96d44cefeb15d89653538c3006d109a97a21a7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531247"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298255"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Dialogdatenaustausch-Funktionen für OLE-Steuerelemente
 
@@ -66,10 +66,10 @@ Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt b
 *nIDC*<br/>
 Die ID eines OLE-Steuerelements im Dialogfeld, im Formularansichts- oder Steuerungsansichtsobjekt.
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Verteiler-ID einer Eigenschaft des Steuerelements.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansichts- oder Steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -100,10 +100,10 @@ Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt b
 *nIDC*<br/>
 Die ID eines OLE-Steuerelements im Dialogfeld, im Formularansichts- oder Steuerungsansichtsobjekt.
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Verteiler-ID einer Eigenschaft des Steuerelements.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansichts- oder Steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -134,10 +134,10 @@ Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt b
 *nIDC*<br/>
 Die ID eines OLE-Steuerelements im Dialogfeld, im Formularansichts- oder Steuerungsansichtsobjekt.
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Verteiler-ID einer Eigenschaft des Steuerelements.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansichts- oder Steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -168,10 +168,10 @@ Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt b
 *nIDC*<br/>
 Die ID eines OLE-Steuerelements im Dialogfeld, im Formularansichts- oder Steuerungsansichtsobjekt.
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Verteiler-ID einer Eigenschaft des Steuerelements.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansichts- oder Steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -208,10 +208,10 @@ Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt b
 *nIDC*<br/>
 Die ID eines OLE-Steuerelements im Dialogfeld, im Formularansichts- oder Steuerungsansichtsobjekt.
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Verteiler-ID einer Eigenschaft des Steuerelements.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansichts- oder Steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -248,10 +248,10 @@ Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt b
 *nIDC*<br/>
 Die ID eines OLE-Steuerelements im Dialogfeld, im Formularansichts- oder Steuerungsansichtsobjekt.
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Verteiler-ID einer Eigenschaft des Steuerelements.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansichts- oder Steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -288,10 +288,10 @@ Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt b
 *nIDC*<br/>
 Die ID eines OLE-Steuerelements im Dialogfeld, im Formularansichts- oder Steuerungsansichtsobjekt.
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Verteiler-ID einer Eigenschaft des Steuerelements.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansichts- oder Steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -328,10 +328,10 @@ Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt b
 *nIDC*<br/>
 Die ID eines OLE-Steuerelements im Dialogfeld, im Formularansichts- oder Steuerungsansichtsobjekt.
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Verteiler-ID einer Eigenschaft des Steuerelements.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansichts- oder Steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -362,10 +362,10 @@ Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt b
 *nIDC*<br/>
 Die ID eines OLE-Steuerelements im Dialogfeld, im Formularansichts- oder Steuerungsansichtsobjekt.
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Verteiler-ID einer Eigenschaft des Steuerelements.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansichts- oder Steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -396,10 +396,10 @@ Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt b
 *nIDC*<br/>
 Die ID eines OLE-Steuerelements im Dialogfeld, im Formularansichts- oder Steuerungsansichtsobjekt.
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Verteiler-ID einer Eigenschaft des Steuerelements.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansichts- oder Steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -430,10 +430,10 @@ Ein Zeiger auf eine **CDataExchange** Objekt. Das Framework stellt dieses Objekt
 *nIDC*<br/>
 Die ID eines OLE-Steuerelements im Dialogfeld, im Formularansichts- oder Steuerungsansichtsobjekt.
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Verteiler-ID einer Eigenschaft des Steuerelements.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansichts- oder Steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -464,10 +464,10 @@ Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt b
 *nIDC*<br/>
 Die ID eines OLE-Steuerelements im Dialogfeld, im Formularansichts- oder Steuerungsansichtsobjekt.
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Verteiler-ID einer Eigenschaft des Steuerelements.
 
-*Wert*<br/>
+*value*<br/>
 Ein Verweis auf eine Membervariable des Dialogfelds, Formularansichts- oder Steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.
 
 ### <a name="remarks"></a>Hinweise

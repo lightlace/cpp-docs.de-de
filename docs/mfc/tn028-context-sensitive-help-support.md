@@ -1,5 +1,5 @@
 ---
-title: 'TN028: Bereitstellen kontextbezogener Hilfe'
+title: 'TN028: Kontextbezogene Hilfe Support'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.help
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-ms.openlocfilehash: 580046810243593c17dbf7e1c3ca427b37bd14a8
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: e3ac2742f2c57c01c645c72c933234a96ece773a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520155"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288284"
 ---
-# <a name="tn028-context-sensitive-help-support"></a>TN028: Bereitstellen kontextbezogener Hilfe
+# <a name="tn028-context-sensitive-help-support"></a>TN028: Kontextbezogene Hilfe Support
 
 In diesem Hinweis werden die Regeln für die Zuweisung von Hilfe Kontexten-IDs und andere Probleme Hilfe in MFC beschrieben. Kontextbezogene Hilfe-Support muss es sich um die Hilfe-Compiler, der in Visual C++ verfügbar ist.
 
 > [!NOTE]
->  Zusätzlich zur Implementierung kontextbezogene Hilfe, die WinHelp verwenden, unterstützt MFC auch HTML-Hilfe. Weitere Informationen zu dieser Unterstützung und die Programmierung mit HTML-Hilfe, finden Sie unter [HTML-Hilfe: kontextbezogene Hilfe für Programme](../mfc/html-help-context-sensitive-help-for-your-programs.md).
+>  Zusätzlich zur Implementierung kontextbezogene Hilfe, die WinHelp verwenden, unterstützt MFC auch HTML-Hilfe. Weitere Informationen zu dieser Unterstützung und die Programmierung mit HTML-Hilfe, finden Sie unter [HTML-Hilfe: Kontextbezogene Hilfe für Programme](../mfc/html-help-context-sensitive-help-for-your-programs.md).
 
 ## <a name="types-of-help-supported"></a>Hilfetypen unterstützt
 
@@ -92,7 +92,7 @@ WM_COMMANDHELP ist eine private Windows-MFC-Nachricht, die durch das aktive Fens
 *lParam*<br/>
 Enthält den derzeit verfügbaren Hilfekontext. *lParam* ist 0 (null), wenn keine Hilfekontext ermittelt wurde. Eine Implementierung von `OnCommandHelp` können die Kontext-ID in *lParam* zum Bestimmen von eines anderen Kontexts oder es können nur übergeben `CWinApp::WinHelp`.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 Wird nicht verwendet und ist 0 (null).
 
 Wenn die `OnCommandHelp` Funktionsaufrufe `CWinApp::WinHelp`, sollte zurückgegeben **"true"**. Zurückgeben von **"true"** beendet die Weiterleitung von diesen Befehl aus, für andere Klassen und anderen Fenstern.
@@ -123,7 +123,7 @@ LOWORD(lParam) enthält die x-Gerät-Koordinate, in Bezug auf den Clientbereich 
 
 HIWORD(lParam) enthält die y-Koordinate.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 Wird nicht verwendet und ist 0 (null). Wenn der Rückgabewert ungleich NULL ist, wird die WinHelp mit diesen Kontext aufgerufen. Wenn der Rückgabewert 0 (null) ist, wird das übergeordnete Fenster Hilfe abgefragt.
 
 In vielen Fällen können Sie die Treffertests Code nutzen, die Sie bereits verfügen können. Die Implementierung der `CToolBar::OnHelpHitTest` ein Beispiel Behandlung der WM_HELPHITTEST-Meldung (der Code nutzt den Treffertest-Code, der auf Schaltflächen und QuickInfos im verwendet `CControlBar`).
@@ -180,4 +180,3 @@ Im zweiten Fall ist der Standardwert für nIDHelp-1 und gibt an, dass die Hilfe-
 
 [Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)<br/>
 [Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)
-

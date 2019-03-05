@@ -6,12 +6,12 @@ helpviewer_keywords:
 - asynchronous message blocks
 - greedy join [Concurrency Runtime]
 ms.assetid: 79c456c0-1692-480c-bb67-98f2434c1252
-ms.openlocfilehash: b78b4db4dda33e0a94da3624ea1ffd8748a601f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de6a433ab733207d5c56b46e693837056a0cd8b1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586120"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274162"
 ---
 # <a name="asynchronous-message-blocks"></a>Asynchrone Nachrichtenblöcke
 
@@ -27,7 +27,7 @@ Dieses Thema enthält folgende Abschnitte:
 
 - [Übersicht über Nachrichtenblocktypen](#overview)
 
-- [Unbounded_buffer-Klasse](#unbounded_buffer)
+- [unbounded_buffer-Klasse](#unbounded_buffer)
 
 - [overwrite_buffer-Klasse](#overwrite_buffer)
 
@@ -57,7 +57,7 @@ Die Agents Library verwendet zwei abstrakte Klassen zum Darstellen von Quellen u
 
 ##  <a name="propagation"></a> Nachrichtenweitergabe
 
-*Die Weitergabe* ist der Vorgang des Sendens einer Nachricht von einer Komponente zu einem anderen. Wenn eine Nachricht für einen Nachrichtenblock bereitgestellt wird, kann er diese Nachricht akzeptieren, ablehnen oder verschieben. Jeder Nachrichtenblocktyp speichert und überträgt Nachrichten auf unterschiedliche Weise. Beispielsweise speichert die `unbounded_buffer`-Klasse eine unendliche Anzahl von Nachrichten, die `overwrite_buffer`-Klasse speichert jeweils nur eine Nachricht, und die Transformerklasse speichert eine geänderte Version jeder Nachricht. Diese Nachrichtenblocktypen werden im Folgenden ausführlicher beschrieben.
+*Die Weitergabe* ist der Vorgang des Sendens einer Nachricht von einer Komponente zu einem anderen. Wenn eine Nachricht für einen Nachrichtenblock bereitgestellt wird, kann er diese Nachricht akzeptieren, ablehnen oder verschieben. Jeder Nachrichtenblocktyp speichert und überträgt Nachrichten auf unterschiedliche Weise. Beispielsweise speichert die `unbounded_buffer`-Klasse eine unendliche Anzahl von Nachrichten, die `overwrite_buffer`-Klasse speichert jeweils nur eine Nachricht, und die Transformatorklasse speichert eine geänderte Version jeder Nachricht. Diese Nachrichtenblocktypen werden im Folgenden ausführlicher beschrieben.
 
 Wenn ein Nachrichtenblock eine Meldung akzeptiert, können optionale Arbeiten durchgeführt werden, und wenn es sich bei dem Nachrichtenblock um eine Quelle handelt, kann die resultierende Nachricht an einen anderen Member im Netzwerk weitergegeben werden. Mithilfe einer Filterfunktion können Nachrichtenblöcke einzelne Nachrichten ablehnen, die nicht empfangen werden sollen. Filter werden ausführlich weiter unten in diesem Thema im Abschnitt [Nachrichtenfilterung](#filtering). Ein Nachrichtenblock, der eine Meldung verschiebt, kann sie reservieren und später verarbeiten. Nachrichtenreservierung wird weiter unten in diesem Thema im Abschnitt ausführlicher beschrieben [Nachrichtenreservierung](#reservation).
 
@@ -83,27 +83,27 @@ Speichert eine Nachricht, die ein Mal geschrieben und gelesen werden kann.
 [call](#call)<br/>
 Führt beim Empfang einer Nachricht Arbeiten aus.
 
-[Transformer](#transformer)<br/>
+[transformer](#transformer)<br/>
 Führt Arbeiten aus, wenn Daten empfangen werden, und sendet das Ergebnis dieser Arbeiten an einen anderen Zielblock. Die `transformer`-Klasse kann für unterschiedliche Eingabe- und Ausgabetypen verwendet werden.
 
-[Auswahl](#choice)<br/>
+[choice](#choice)<br/>
 Wählt aus einer Gruppe Quellen die erste verfügbare Nachricht aus.
 
 [Join und multitype join](#join)<br/>
 Warten, bis alle Nachrichten, die von einer Gruppe Quellen empfangen werden sollen, empfangen wurden, und setzen die Nachrichten zu einer Nachricht für einen anderen Nachrichtenblock zusammen.
 
-[Timer](#timer)<br/>
+[timer](#timer)<br/>
 Sendet eine Nachricht in regelmäßigen Intervallen an einen Zielblock.
 
 Diese Nachrichtenblocktypen haben unterschiedliche Eigenschaften, sodass sie für unterschiedliche Situationen nützlich sind. Zu diesen Eigenschaften zählen folgende:
 
-- *Weitergabetyp*: Gibt an, ob der Nachrichtenblock als Quelle für Daten, als Datenempfänger oder beides dient.
+- *Weitergabetyp*: Gibt an, ob die Nachrichtenblock als Quelle für Daten, als Datenempfänger oder beides fungiert.
 
-- *Nachrichtensortierung*: Gibt an, ob die Nachrichtenblock die ursprüngliche Reihenfolge beibehält, in dem Nachrichten gesendet oder empfangen werden. Vordefinierte Nachrichtenblocktypen behalten die ursprüngliche Reihenfolge bei, in der Nachrichten gesendet oder empfangen werden.
+- *Nachrichtensortierung*: Gibt an, ob die Nachrichtenblock die ursprüngliche Reihenfolge beibehält, in der Nachrichten gesendet oder empfangen werden. Vordefinierte Nachrichtenblocktypen behalten die ursprüngliche Reihenfolge bei, in der Nachrichten gesendet oder empfangen werden.
 
-- *Quellenanzahl*: die maximale Anzahl von Quellen, die die Nachrichtenblock gelesen werden kann.
+- *Quellenanzahl*: Die maximale Anzahl von Quellen, denen die Nachrichtenblock gelesen werden kann.
 
-- *Zielanzahl*: die maximale Anzahl von Zielen, die die Nachrichtenblock schreiben kann.
+- *Zielanzahl*: Die maximale Anzahl von Zielen, denen in die der Nachrichtenblock schreiben kann.
 
 In der folgenden Tabelle wird der Bezug dieser Eigenschaften auf die verschiedenen Nachrichtenblocktypen beschrieben.
 
@@ -313,7 +313,7 @@ Dieses Beispiel erzeugt die folgende Beispielausgabe:
 Computing fib(42)..................................................result is 267914296
 ```
 
-Ein vollständiges Beispiel, das zeigt, wie Sie mit der `timer` Klasse, finden Sie unter [wie: Senden einer Nachricht in regelmäßigen Abständen](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md).
+Ein vollständiges Beispiel, das zeigt, wie Sie mit der `timer` Klasse, finden Sie unter [Vorgehensweise: Senden einer Nachricht in regelmäßigen Abständen](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md).
 
 [[Nach oben](#top)]
 
@@ -340,7 +340,7 @@ bool (T const &)
 
 Um das unnötige Kopieren von Daten zu vermeiden, verwenden Sie das zweite Format bei einem aggregierten Typ, der anhand des Werts weitergegeben wird.
 
-Nachrichtenfilterung unterstützt das *Datenfluss* Programmiermodell, das die Komponenten Berechnungen ausgeführt werden, wenn sie Daten empfangen. Beispiele mit Filterfunktionen zum Steuern des Fluss der Daten in einem Netzwerk der Nachricht übergeben, finden Sie unter [Vorgehensweise: Verwenden eines Nachrichtenblockfilters](../../parallel/concrt/how-to-use-a-message-block-filter.md), [Exemplarische Vorgehensweise: Erstellen eines Datenfluss-Agents](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md), und [ Exemplarische Vorgehensweise: Erstellen einer Bildverarbeitungsnetzwerks](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Nachrichtenfilterung unterstützt das *Datenfluss* Programmiermodell, das die Komponenten Berechnungen ausgeführt werden, wenn sie Daten empfangen. Beispiele mit Filterfunktionen zum Steuern des Datenflusses von Daten in einem Nachrichtenübergabenetzwerk, finden Sie unter [Vorgehensweise: Verwenden ein Nachrichtenblockfilters](../../parallel/concrt/how-to-use-a-message-block-filter.md), [Exemplarische Vorgehensweise: Erstellen eines Datenfluss-Agents](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md), und [Exemplarische Vorgehensweise: Erstellen eine Bildverarbeitungsnetzwerks](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 [[Nach oben](#top)]
 
@@ -359,4 +359,3 @@ Sie können die Nachrichtenreservierung verwenden, wenn Sie eigene Nachrichtenbl
 ## <a name="see-also"></a>Siehe auch
 
 [Asynchrone Agents Library](../../parallel/concrt/asynchronous-agents-library.md)
-

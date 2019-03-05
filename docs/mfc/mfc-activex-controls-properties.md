@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC]
 ms.assetid: b678a53c-0d9e-476f-8aa0-23b80baaba46
-ms.openlocfilehash: 3b8d9f32246270a570b09f599f8b05f2a58ecfc6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e01854e7ae7acdc33275351d0d26a76dfeabc9b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648460"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326412"
 ---
 # <a name="mfc-activex-controls-properties"></a>MFC-ActiveX-Steuerelemente: Eigenschaften
 
@@ -21,7 +21,7 @@ Eigenschaften werden auch als Attribute bezeichnet.
 
 Weitere Informationen zu Methoden der ActiveX-Steuerelements, finden Sie im Artikel [MFC-ActiveX-Steuerelemente: Methoden](../mfc/mfc-activex-controls-methods.md).
 
-ActiveX-Steuerelemente können sowohl Kurs- und benutzerdefinierten Methoden und Eigenschaften implementieren. Klasse `COleControl` stellt eine Implementierung für die vordefinierten Eigenschaften. (Eine vollständige Liste der vordefinierten Eigenschaften, finden Sie im Artikel [MFC-ActiveX-Steuerelemente: Hinzufügen von Basiseigenschaften](../mfc/mfc-activex-controls-adding-stock-properties.md).) Benutzerdefinierte Eigenschaften, die vom Entwickler definierten fügen Sie spezielle Funktionen zu einem ActiveX-Steuerelement hinzu. Weitere Informationen finden Sie unter [MFC-ActiveX-Steuerelemente: Hinzufügen von benutzerdefinierten Eigenschaften](../mfc/mfc-activex-controls-adding-custom-properties.md).
+ActiveX-Steuerelemente können sowohl Kurs- und benutzerdefinierten Methoden und Eigenschaften implementieren. Klasse `COleControl` stellt eine Implementierung für die vordefinierten Eigenschaften. (Eine vollständige Liste der vordefinierten Eigenschaften, finden Sie im Artikel [MFC-ActiveX-Steuerelemente: Hinzufügen von vordefinierten Eigenschaften](../mfc/mfc-activex-controls-adding-stock-properties.md).) Benutzerdefinierte Eigenschaften, die vom Entwickler definierten fügen Sie spezielle Funktionen zu einem ActiveX-Steuerelement hinzu. Weitere Informationen finden Sie unter [MFC-ActiveX-Steuerelemente: Hinzufügen von benutzerdefinierten Eigenschaften](../mfc/mfc-activex-controls-adding-custom-properties.md).
 
 Sowohl benutzerdefinierte als auch vordefinierte Eigenschaften, wie Methoden, werden durch einen Mechanismus, der eine Dispatchzuordnung besteht, die Eigenschaften und Methoden und vorhandenen Memberfunktionen von behandelt unterstützt die `COleControl` Klasse. Darüber hinaus können diese Eigenschaften über Parameter verfügen, die der Entwickler verwendet, um zusätzliche Informationen für das Steuerelement zu übergeben.
 
@@ -38,4 +38,3 @@ In den folgenden Artikeln besprechen Sie Eigenschaften von ActiveX-Steuerelement
 ## <a name="see-also"></a>Siehe auch
 
 [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)
-

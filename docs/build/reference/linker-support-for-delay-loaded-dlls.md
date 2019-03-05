@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, linker support
 ms.assetid: b2d7e449-2809-42b1-9c90-2c0ca5e31a14
-ms.openlocfilehash: 248a559735750f912030a37aea85a2cb34156887
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ff5143b8c3850386f73ff713e7986fdc3b59fd1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664541"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301388"
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>Linkerunterstützung für verzögertes Laden von DLLs
 
@@ -17,7 +17,7 @@ Visual C++-Linker unterstützt jetzt das verzögerte Laden von DLLs. So müssen 
 
 Vor Visual C++ 6.0, Bestand die einzige Möglichkeit zum Laden einer DLL zur Laufzeit mithilfe von **LoadLibrary** und **GetProcAddress**; das Betriebssystem lädt die DLL bei der die ausführbare Datei oder DLL mit dem es geladen wurde.
 
-Ab Visual C++ 6.0 wird beim statisch mit einer DLL verknüpfen, enthält den Linker an, dass die Optionen, um die Verzögerung Laden der DLL, bis das Programm die DLL eine Funktion aufruft.
+Ab Visual C++ 6.0 wird beim implizit mit einer DLL verknüpfen, enthält den Linker an, dass die Optionen, um die Verzögerung Laden der DLL, bis das Programm die DLL eine Funktion aufruft.
 
 Eine Anwendung kann verzögert werden Laden einer DLL mithilfe der [/DELAYLOAD (Laden von Import verzögern)](../../build/reference/delayload-delay-load-import.md) Linkeroption mit eine Hilfsfunktion (Standardimplementierung von Visual C++). Die Hilfsfunktion lädt die DLL zur Laufzeit durch Aufrufen von **LoadLibrary** und **GetProcAddress** für Sie.
 

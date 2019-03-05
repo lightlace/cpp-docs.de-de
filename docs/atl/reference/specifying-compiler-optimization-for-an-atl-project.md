@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ATL projects, compiler optimization
 - ATL_NO_VTABLE macro
 ms.assetid: 7f379318-66d5-43dd-a53d-530758d3a228
-ms.openlocfilehash: 18c1f404576a7e011698f0b553a2436bab8089a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e6fe09aaa0726a39aae8b85cb6581c5d0cd24e1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522293"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280016"
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>Festlegen der Compileroptimierung für ein ATL-Projekt
 
@@ -60,4 +60,3 @@ in der Datei stdafx.h sind, bevor alle anderen ATL-Headerdateien enthalten.
 [Grundlagen von ARL COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [novtable](../../cpp/novtable.md)<br/>
 [Standardmäßige ATL-Projektkonfigurationen](../../atl/reference/default-atl-project-configurations.md)
-

@@ -1,5 +1,5 @@
 ---
-title: 'MFC-ActiveX-Steuerelemente: Eigenschaftenseite'
+title: 'MFC-ActiveX-Steuerelemente: Eigenschaftenseiten'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - DDP_ functions [MFC]
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - CPropertyPageDialog class [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
-ms.openlocfilehash: 7027a58960e07903c9d774e07379c8050bc489b8
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3fe092e412cf11f7bf8600e8d0d7d43abb0e11c7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176457"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303897"
 ---
-# <a name="mfc-activex-controls-property-pages"></a>MFC-ActiveX-Steuerelemente: Eigenschaftenseite
+# <a name="mfc-activex-controls-property-pages"></a>MFC-ActiveX-Steuerelemente: Eigenschaftenseiten
 
 Eigenschaftenseiten können die Benutzer eine ActiveX-Steuerelements anzeigen und Ändern der Eigenschaften von ActiveX-Steuerelements. Diese Eigenschaften erfolgt durch den Aufruf ein Dialogfeld der Eigenschaftenseiten für eine oder mehrere enthält, die eine benutzerdefinierte grafische Schnittstelle zum Anzeigen und bearbeiten die Eigenschaften des Steuerelements bereitstellen.
 
@@ -45,7 +45,7 @@ Dieser Artikel behandelt die Themen in Bezug auf die Verwendung von Eigenschafte
 
 Weitere Informationen zur Verwendung von Eigenschaftenseiten in einem ActiveX-Steuerelement finden Sie unter den folgenden Artikeln:
 
-- [MFC-ActiveX-Steuerelemente: Hinzufügen einer weiteren benutzerdefinierten Eigenschaftenseite](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
+- [MFC-ActiveX-Steuerelemente: Hinzufügen einer anderen benutzerdefinierten Eigenschaftenseite](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
 
 - [MFC-ActiveX-Steuerelemente: Verwenden von vordefinierten Eigenschaftenseiten](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
@@ -53,7 +53,7 @@ Informationen zum Verwenden von Eigenschaftenseiten in einer MFC-Anwendung als e
 
 ##  <a name="_core_implementing_the_default_property_page"></a> Implementieren die Standard-Eigenschaftenseite
 
-Wenn Sie den ActiveX-Steuerelement-Assistenten verwenden, um das Projekt zu erstellen, bietet der ActiveX-Steuerelement-Assistent eine Standardklasse für Eigenschaftenseiten für das Steuerelement abgeleitet [COlePropertyPage-Klasse](../mfc/reference/colepropertypage-class.md). Zunächst diese Eigenschaftenseite ist leer, aber Sie können alle Dialogfeld-Steuerelement oder eine Gruppe von Steuerelementen, ihm hinzufügen. Da der ActiveX-Steuerelement-Assistent Page-Klasse nur eine Eigenschaft wird standardmäßig eine zusätzliche Eigenschaft Page-Klassen erstellt (auch abgeleitet `COlePropertyPage`) muss der Klassenansicht erstellt werden. Weitere Informationen zu dieser Vorgehensweise finden Sie unter [MFC-ActiveX-Steuerelemente: Hinzufügen von einem anderen benutzerdefinierten Eigenschaftenseite](../mfc/mfc-activex-controls-adding-another-custom-property-page.md).
+Wenn Sie den ActiveX-Steuerelement-Assistenten verwenden, um das Projekt zu erstellen, bietet der ActiveX-Steuerelement-Assistent eine Standardklasse für Eigenschaftenseiten für das Steuerelement abgeleitet [COlePropertyPage-Klasse](../mfc/reference/colepropertypage-class.md). Zunächst diese Eigenschaftenseite ist leer, aber Sie können alle Dialogfeld-Steuerelement oder eine Gruppe von Steuerelementen, ihm hinzufügen. Da der ActiveX-Steuerelement-Assistent Page-Klasse nur eine Eigenschaft wird standardmäßig eine zusätzliche Eigenschaft Page-Klassen erstellt (auch abgeleitet `COlePropertyPage`) muss der Klassenansicht erstellt werden. Weitere Informationen zu dieser Vorgehensweise finden Sie unter [MFC-ActiveX-Steuerelemente: Hinzufügen einer anderen benutzerdefinierten Eigenschaftenseite](../mfc/mfc-activex-controls-adding-another-custom-property-page.md).
 
 Implementieren einer Eigenschaft Seite (in diesem Fall wird der Standardwert) ist ein dreistufiger Prozess:
 

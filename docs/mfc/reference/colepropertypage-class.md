@@ -38,12 +38,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: 905f92ef7875dac984b6c0d537e4687dcc779f49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55f4b7304d0b50004585b55142804e0bb4234c16
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605711"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271254"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage-Klasse
 
@@ -76,7 +76,7 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 |[COlePropertyPage::OnHelp](#onhelp)|Wird vom Framework aufgerufen, wenn der Benutzer Hilfe aufruft.|
 |[COlePropertyPage::OnInitDialog](#oninitdialog)|Vom Framework aufgerufen, wenn die Eigenschaftenseite initialisiert wird.|
 |[COlePropertyPage::OnObjectsChanged](#onobjectschanged)|Vom Framework aufgerufen, wenn ein anderes OLE-Steuerelement, mit neuen Eigenschaften, ausgewählt wird.|
-|[COlePropertyPage:: OnSetPageSite](#onsetpagesite)|Vom Framework aufgerufen, wenn der Eigenschaftenrahmen die Site der Seite bereitstellt.|
+|[COlePropertyPage::OnSetPageSite](#onsetpagesite)|Vom Framework aufgerufen, wenn der Eigenschaftenrahmen die Site der Seite bereitstellt.|
 |[COlePropertyPage::SetControlStatus](#setcontrolstatus)|Legt ein Flag, der angibt, ob der Benutzer den Wert im Steuerelement geändert wurde.|
 |[COlePropertyPage::SetDialogResource](#setdialogresource)|Legt fest, der Eigenschaftenseite des Dialog-Ressource.|
 |[COlePropertyPage::SetHelpInfo](#sethelpinfo)|Legt fest, die Eigenschaftenseite kurzen Hilfetext, den Namen des seine Hilfedatei sowie die Hilfekontext.|
@@ -222,7 +222,7 @@ virtual BOOL OnEditProperty(DISPID dispid);
 
 ### <a name="parameters"></a>Parameter
 
-*DISPID*<br/>
+*dispid*<br/>
 Dispatch-ID der bearbeiteten Eigenschaft.
 
 ### <a name="return-value"></a>Rückgabewert

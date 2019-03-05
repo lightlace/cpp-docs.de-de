@@ -1,5 +1,5 @@
 ---
-title: 'ActiveX-Steuerelementcontainer: Verwenden von Steuerelementen in Containern, die keine Dialogfelder sind'
+title: 'ActiveX-Steuerelementcontainer: Verwenden von Steuerelementen in einem Container für die keine Dialogfelder sind'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Create method [MFC], ActiveX controls
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ActiveX control containers [MFC], non-dialog containers
 - ActiveX control containers [MFC], inserting controls
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
-ms.openlocfilehash: b31581b77743104a92236336c4db380f1693ea55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70a67a6952d5361177b89e3ba514d7036b5799b6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538787"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284241"
 ---
-# <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX-Steuerelementcontainer: Verwenden von Steuerelementen in Containern, die keine Dialogfelder sind
+# <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX-Steuerelementcontainer: Verwenden von Steuerelementen in einem Container für die keine Dialogfelder sind
 
 In einige Anwendungen, z. B. eine SDI und MDI-Anwendung werden Sie ein Steuerelement in einem Fenster der Anwendung einbetten möchten. Die **erstellen** Memberfunktion der Wrapperklasse, die von Visual C++ eingefügt kann eine Instanz des Steuerelements dynamisch erstellen, ohne ein Dialogfeld.
 
@@ -27,7 +27,7 @@ Ein Zeiger auf den Text in die Eigenschaft des Steuerelements oder Beschriftungs
 *dwStyle*<br/>
 Windows-Formate. Eine vollständige Liste finden Sie unter [CWnd:: CreateControl](../mfc/reference/cwnd-class.md#createcontrol).
 
-*Rect*<br/>
+*rect*<br/>
 Gibt an, die Größe und Position des Steuerelements.
 
 *pParentWnd*<br/>
@@ -64,4 +64,3 @@ Diese Funktion ist ein Prozess mit vier Schritten.
 ## <a name="see-also"></a>Siehe auch
 
 [ActiveX-Steuerelementcontainer](../mfc/activex-control-containers.md)
-

@@ -31,12 +31,12 @@ helpviewer_keywords:
 - IPropertyPage ATL implementation
 - IPropertyPageImpl class
 ms.assetid: f9b7c8b1-7a04-4eab-aa63-63efddb740fa
-ms.openlocfilehash: bf97699917732f8ce94d1541b6a93e00325b28c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3b92e3d2f72ca48238eb22404947d2eafde0378
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605814"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297332"
 ---
 # <a name="ipropertypageimpl-class"></a>IPropertyPageImpl-Klasse
 
@@ -76,7 +76,7 @@ Abgeleitet von die Klasse `IPropertyPageImpl`.
 |[IPropertyPageImpl::Help](#help)|Ruft die Windows-Hilfe für die Eigenschaftenseite.|
 |[IPropertyPageImpl::IsPageDirty](#ispagedirty)|Gibt an, ob die Eigenschaftenseite geändert wurde, da er aktiviert wurde.|
 |[IPropertyPageImpl::Move](#move)|Positioniert, und ändert die Größe der Eigenschaftenseiten-Dialogfeld.|
-|[:: SetDirty](#setdirty)|Kennzeichnet die Eigenschaftenseite-Status, als geändert oder unverändert.|
+|[IPropertyPageImpl::SetDirty](#setdirty)|Kennzeichnet die Eigenschaftenseite-Status, als geändert oder unverändert.|
 |[IPropertyPageImpl::SetObjects](#setobjects)|Bietet eine Reihe von `IUnknown` Entscheidungshilfen für die Auswahl auf der Seite der zugeordneten Objekte. Diese Objekte erhalten, die aktuellen Eigenschaftswerte für die Seite durch einen Aufruf von `Apply`.|
 |[IPropertyPageImpl::SetPageSite](#setpagesite)|Die Eigenschaft auf der Seite mit einer `IPropertyPageSite` -Zeiger ist, über die Eigenschaftenseite, die mit der Eigenschaftenrahmen kommuniziert.|
 |[IPropertyPageImpl::Show](#show)|Macht die Eigenschaftenseiten-Dialogfeld, ein- oder ausgeblendet.|

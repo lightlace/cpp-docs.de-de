@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: a0e6861ecf3a6704ddb31c39f7bb2c44cb75ccd8
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 6ba0c2b5449cb0058c1b274d9d9c0d7ae33bcd7f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179005"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302980"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx-Klasse
 
@@ -209,7 +209,7 @@ class CFrameWndEx : public CFrameWnd
 |[CFrameWndEx::DockPane](#dockpane)|Das Rahmenfenster den angegebenen Bereich angedockt.|
 |[CFrameWndEx::DockPaneLeftOf](#dockpaneleftof)|Dockt einen Bereich auf der linken Seite eines anderen Bereichs an.|
 |[CFrameWndEx::EnableAutoHidePanes](#enableautohidepanes)|Können den automatischen Ausblendemodus für die Bereiche aus, wenn diese an den angegebenen Seiten des Hauptrahmenfenster angedockt sind.|
-|[Cframewndex:: EnableDocking](#enabledocking)|Ermöglicht das Andocken der Bereiche, die zum Rahmenfenster gehören.|
+|[CFrameWndEx::EnableDocking](#enabledocking)|Ermöglicht das Andocken der Bereiche, die zum Rahmenfenster gehören.|
 |[CFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)|Zeigt an, oder blendet Sie aus dem Hauptmenü im Vollbildmodus.|
 |[CFrameWndEx::EnableFullScreenMode](#enablefullscreenmode)|Können den Vollbildmodus für das Rahmenfenster.|
 |[CFrameWndEx::EnableLoadDockState](#enableloaddockstate)|Aktiviert oder deaktiviert das Laden der Andockstatus.|
@@ -538,7 +538,7 @@ void EnableLoadDockState(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] TRUE, um das Laden von den andockzustand, "false" zu aktivieren, um das Laden der Andockstatus zu deaktivieren.
 
 ##  <a name="enablepanemenu"></a>  CFrameWndEx::EnablePaneMenu
@@ -557,7 +557,7 @@ void EnablePaneMenu(
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] True, um die automatische Behandlung von der Steuerleiste Popupmenüs zu aktivieren. So deaktivieren Sie die automatische Behandlung von der Steuerleiste Popupmenüs wird false ZURÜCKGEGEBEN.
 
 *uiCustomizeCmd*<br/>
@@ -715,7 +715,7 @@ Ein Zeiger auf eine Steuerleiste, die in die Liste der Steuerleisten eingefügt 
 *pTarget*<br/>
 Ein Zeiger auf eine Steuerleiste vor oder hinter der der Bereich eingefügt werden soll.
 
-*bNach*<br/>
+*bAfter*<br/>
 TRUE, wenn Sie einfügen möchten *pControlBar* nach *pTarget*"false" andernfalls.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -767,7 +767,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Die Position des Punkts.
 
 *dwBarAlignment*<br/>
@@ -936,7 +936,7 @@ afx_msg LRESULT OnChangeVisualManager(
 
 ### <a name="parameters"></a>Parameter
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 [in] Dieser Parameter wird nicht verwendet.
 
 *lParam*<br/>
@@ -1150,10 +1150,10 @@ afx_msg LRESULT OnDWMCompositionChanged(
 
 ### <a name="parameters"></a>Parameter
 
-*WP*<br/>
+*wp*<br/>
 [in] Dieser Parameter wird nicht verwendet.
 
-*LP*<br/>
+*lp*<br/>
 [in] Dieser Parameter wird nicht verwendet.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1174,10 +1174,10 @@ LRESULT OnExitSizeMove(
 
 ### <a name="parameters"></a>Parameter
 
-*WP*<br/>
+*wp*<br/>
 [in] Dieser Parameter wird nicht verwendet.
 
-*LP*<br/>
+*lp*<br/>
 [in] Dieser Parameter wird nicht verwendet.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1213,7 +1213,7 @@ afx_msg LRESULT OnIdleUpdateCmdUI(
 
 ### <a name="parameters"></a>Parameter
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 [in] Dieser Parameter wird nicht verwendet.
 
 *lParam*<br/>
@@ -1240,7 +1240,7 @@ afx_msg void OnLButtonDown(
 *nFlags*<br/>
 [in] Gibt an, ob der Benutzer der Modifizierertasten gedrückt. Mögliche Werte finden Sie in den Parameter *wParam* in [WM_LBUTTONDOWN Benachrichtigung](/windows/desktop/inputdev/wm-lbuttondown).
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Gibt an, die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.
 
 ### <a name="remarks"></a>Hinweise
@@ -1260,7 +1260,7 @@ afx_msg void OnLButtonUp(
 *nFlags*<br/>
 [in] Gibt an, ob der Benutzer der Modifizierertasten gedrückt. Mögliche Werte finden Sie in den Parameter *wParam* in [WM_LBUTTONUP Benachrichtigung](/windows/desktop/inputdev/wm-lbuttonup).
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Gibt an, die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.
 
 ### <a name="remarks"></a>Hinweise
@@ -1280,7 +1280,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 *pButton*<br/>
 [in] Ein Zeiger auf die Symbolleisten-Schaltfläche.
 
-*PTI*<br/>
+*pTI*<br/>
 [out] Ein Zeiger auf eine Struktur für Tool.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1304,7 +1304,7 @@ afx_msg LRESULT OnMenuChar(
 
 ### <a name="parameters"></a>Parameter
 
-*NChar*<br/>
+*nChar*<br/>
 [in] Zeichencode der gedrückten Taste.
 
 *nFlags*<br/>
@@ -1338,7 +1338,7 @@ afx_msg void OnMouseMove(
 *nFlags*<br/>
 [in] Gibt an, ob ein Benutzer der Modifizierertasten gedrückt. Mögliche Werte finden Sie in den Parameter *wParam* in [WM_MOUSEMOVE-Benachrichtigung](/windows/desktop/inputdev/wm-mousemove).
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Gibt an, die x- und y die Koordinaten des Mauszeigers relativ zu der oberen linken Ecke des Fensters.
 
 ### <a name="remarks"></a>Hinweise
@@ -1411,7 +1411,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Die Position des Mauszeigers in Bildschirmkoordinaten.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1435,7 +1435,7 @@ afx_msg void OnNcMouseMove(
 *nHitTest*<br/>
 [in] Ein Zeiger erreicht Enumerationswert. Eine Liste der möglichen Werte finden Sie unter [eine WM_NCHITTEST-Benachrichtigung](/windows/desktop/inputdev/wm-nchittest).
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Die Position des Mauszeigers in Bildschirmkoordinaten.
 
 ### <a name="remarks"></a>Hinweise
@@ -1481,7 +1481,7 @@ afx_msg LRESULT OnPostPreviewFrame(
 
 ### <a name="parameters"></a>Parameter
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 [in] Dieser Parameter wird nicht verwendet.
 
 *lParam*<br/>
@@ -1505,10 +1505,10 @@ afx_msg LRESULT OnPowerBroadcast(
 
 ### <a name="parameters"></a>Parameter
 
-*WP*<br/>
+*wp*<br/>
 [in] Das Power Management-Ereignis. Eine Liste der möglichen Werte finden Sie unter [WM_POWERBROADCAST-Meldung](/windows/desktop/Power/wm-powerbroadcast).
 
-*LP*<br/>
+*lp*<br/>
 [in] Dieser Parameter wird nicht verwendet.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1531,13 +1531,13 @@ BOOL OnSetMenu(HMENU hmenu);
 
 ### <a name="parameters"></a>Parameter
 
-*WP*<br/>
+*wp*<br/>
 [in] Handle für das neue Menü der Frame-Fensters.
 
-*LP*<br/>
+*lp*<br/>
 [in] Handle für das neue Fenstermenü.
 
-*HMENU*<br/>
+*hmenu*<br/>
 [in] Handle für das neue Menü der Frame-Fensters.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1580,7 +1580,7 @@ afx_msg LRESULT OnSetText(
 
 ### <a name="parameters"></a>Parameter
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 [in] Dieser Parameter wird nicht verwendet.
 
 *lParam*<br/>
@@ -1680,10 +1680,10 @@ afx_msg void OnSize(
 *nType*<br/>
 [in] Der Typ des Ändern der Größe. Mögliche Werte finden Sie in den Parameter *wParam* in [WM_SIZE-Benachrichtigung](/windows/desktop/winmsg/wm-size).
 
-*CX*<br/>
+*cx*<br/>
 [in] Neue Breite des Rahmens in Pixel.
 
-*CY*<br/>
+*cy*<br/>
 [in] Die neue Höhe des Rahmens in Pixel.
 
 ### <a name="remarks"></a>Hinweise
@@ -1758,10 +1758,10 @@ afx_msg LRESULT OnToolbarContextMenu(
 
 ### <a name="parameters"></a>Parameter
 
-*WP*<br/>
+*wp*<br/>
 [in] Dieser Parameter wird nicht verwendet.
 
-*LP*<br/>
+*lp*<br/>
 [in] Dieser Parameter wird nicht verwendet.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1782,10 +1782,10 @@ afx_msg LRESULT OnToolbarCreateNew(
 
 ### <a name="parameters"></a>Parameter
 
-*WP*<br/>
+*wp*<br/>
 [in] Dieser Parameter wird nicht verwendet.
 
-*LP*<br/>
+*lp*<br/>
 [in] Zeiger auf den Text für die Titelleiste der Symbolleiste.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1806,10 +1806,10 @@ afx_msg LRESULT OnToolbarDelete(
 
 ### <a name="parameters"></a>Parameter
 
-*nicht verwendete*<br/>
+*unused*<br/>
 [in] Dieser Parameter wird nicht verwendet.
 
-*LP*<br/>
+*lp*<br/>
 [in] Zeiger auf eine Symbolleiste.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1858,7 +1858,7 @@ afx_msg void OnUpdatePaneMenu(CCmdUI* pCmdUI);
 
 ### <a name="parameters"></a>Parameter
 
-*nämlich pCmdUI*<br/>
+*pCmdUI*<br/>
 [in] Zeiger auf das Bereich User Interface-Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -1898,7 +1898,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Die Bildschirmkoordinaten des Punkts um zu überprüfen.
 
 *nSensitivity*<br/>
@@ -2018,7 +2018,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Zeiger auf ein Rahmenfenster für die Seitenansicht.
 
 ### <a name="remarks"></a>Hinweise
@@ -2036,7 +2036,7 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>Parameter
 
-*Menü "*<br/>
+*menu*<br/>
 [in] Ein `CMenu` Objekt geändert werden.
 
 *uiViewUserToolbarCmdFirst*<br/>

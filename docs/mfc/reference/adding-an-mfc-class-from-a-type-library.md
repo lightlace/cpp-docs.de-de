@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, adding classes from type libraries
 - type libraries, adding MFC classes from
 ms.assetid: aba40476-3cfb-47af-990e-ae2e9e0d79cf
-ms.openlocfilehash: 5cd94ad6d400cf2db60131e822f430f87a129cbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8264de2c717c874da157cb29ad5e336e3ecbd0f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548017"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301584"
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>Hinzufügen einer MFC-Klasse aus einer Typbibliothek
 
@@ -20,7 +20,7 @@ Verwenden Sie diesen Assistenten zum Erstellen einer MFC-Klasse von einer Schnit
 > [!NOTE]
 >  Sie müssen sich nicht zum Erstellen von eines MFC-Projekts mit der Automatisierung aktiviert, um eine Klasse aus einer Typbibliothek hinzufügen.
 
-Eine Typbibliothek enthält eine binäre Beschreibung der Schnittstellen verfügbar gemacht, von einer Komponente, die Methoden zusammen mit ihren Parametern und Rückgabetypen definieren. Die Typbibliothek muss registriert werden, angezeigt in der **Verfügbare Typbibliotheken** Liste im Hinzufügen von Klassen aus Typelib-Assistent. Finden Sie unter "Innerhalb von Distributed COM: Type-Bibliotheken und Language Integration" in der MSDN Library Weitere Informationen.
+Eine Typbibliothek enthält eine binäre Beschreibung der Schnittstellen verfügbar gemacht, von einer Komponente, die Methoden zusammen mit ihren Parametern und Rückgabetypen definieren. Die Typbibliothek muss registriert werden, angezeigt in der **Verfügbare Typbibliotheken** Liste im Hinzufügen von Klassen aus Typelib-Assistent. Finden Sie unter "Inside Distributed COM: Geben Sie Bibliotheken und Sprachintegration"in der MSDN Library Weitere Informationen.
 
 ### <a name="to-add-an-mfc-class-from-a-type-library"></a>Hinzufügen eine MFC-Klasse aus einer Typbibliothek
 
@@ -37,5 +37,4 @@ Der Assistent erstellt eine MFC-Klasse, die von abgeleiteten [COleDispatchDriver
 ## <a name="see-also"></a>Siehe auch
 
 [Automatisierungsclients](../../mfc/automation-clients.md)<br/>
-[Automatisierungsclients: Verwenden von Typbibliotheken](../../mfc/automation-clients-using-type-libraries.md)
-
+[Benutzeroberflächenautomatisierungs-Clients: Verwenden von Typbibliotheken](../../mfc/automation-clients-using-type-libraries.md)

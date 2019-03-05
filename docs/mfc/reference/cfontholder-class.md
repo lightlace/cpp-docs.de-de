@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CFontHolder [MFC], SetFont
 - CFontHolder [MFC], m_pFont
 ms.assetid: 728ab472-0c97-440d-889f-1324c6e1b6b8
-ms.openlocfilehash: 24a33aafa279f47bcfabd1ac3f3ee8d4abd4c731
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 623ce5da46716e3f9a562862fc0375fb8704bb21
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659641"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297878"
 ---
 # <a name="cfontholder-class"></a>CFontHolder-Klasse
 
@@ -111,7 +111,7 @@ BOOL GetDisplayString(CString& strValue);
 
 ### <a name="parameters"></a>Parameter
 
-*strValue gespeichert*<br/>
+*strValue*<br/>
 Ein Verweis auf die [CString](../../atl-mfc-shared/reference/cstringt-class.md) , die die Anzeigezeichenfolge enthalten ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -162,7 +162,7 @@ Ein Handle auf das Objekt für die Schriftart andernfalls NULL.
 
 Das Verhältnis von *CyLogical* und *CyHimetric* wird verwendet, um die ordnungsgemäße Anzeigegröße in logischen Einheiten, die Schriftart, Schriftgrad, MM_HIMETRIC Einheiten ausgedrückt berechnen:
 
-Anzeigegröße = ( *CyLogical* / *CyHimetric*) X Schriftgrad
+Display size = ( *cyLogical* / *cyHimetric*) X font size
 
 Die Version ohne Parameter gibt ein Handle für eine Schriftart für den Bildschirm ordnungsgemäß dimensioniert.
 

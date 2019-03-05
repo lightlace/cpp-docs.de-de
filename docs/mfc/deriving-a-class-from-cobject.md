@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CObject class [MFC], deriving serializable classes
 - CObject class [MFC], deriving from
 ms.assetid: 5ea4ea41-08b5-4bd8-b247-c5de8c152a27
-ms.openlocfilehash: afaddfcb0a75b7e753897768d993df7ab5d876c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2c759dfd308beed0f04b8d8c2868abeeb1cfb45
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566230"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301245"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Ableiten einer Klasse von CObject
 
@@ -28,7 +28,7 @@ In den erläuterungen zu `CObject`, die Begriffe "Schnittstellendatei" und "Impl
 
 Sie können aus vier Ebenen der Funktionalität beim Ableiten einer Klasse von `CObject`:
 
-- Grundlegende Funktionalität: keine Unterstützung für die Laufzeit Klasseninformationen oder Serialisierung enthält jedoch die Diagnose Speicherverwaltung.
+- Grundlegende Funktionalität: Keine Unterstützung für die Laufzeit Klasseninformationen oder Serialisierung enthält jedoch die Diagnose Speicherverwaltung.
 
 - Grundlegende Funktionen sowie Unterstützung für die Laufzeit Klasseninformationen.
 
@@ -44,7 +44,7 @@ Die folgende Tabelle zeigt die Beziehung zwischen den Makros verwendet, um Seria
 
 ### <a name="macros-used-for-serialization-and-run-time-information"></a>Makros für die Serialisierung und Laufzeitinformationen verwendet
 
-|Makro verwendet|CObject:: IsKindOf|CRuntimeClass::<br /><br /> CreateObject|CArchive::operator >><br /><br /> CArchive::operator <<|
+|Makro verwendet|CObject::IsKindOf|CRuntimeClass::<br /><br /> CreateObject|CArchive::operator >><br /><br /> CArchive::operator <<|
 |----------------|-----------------------|--------------------------------------|-------------------------------------------------------|
 |Grundlegende `CObject` Funktionen|Nein|Nein|Nein|
 |`DECLARE_DYNAMIC`|Ja|Nein|Nein|
@@ -59,11 +59,10 @@ Die folgende Tabelle zeigt die Beziehung zwischen den Makros verwendet, um Seria
 
    [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
 
-In der Regel, möchten Sie jedoch möglicherweise einige der überschreiben `CObject`Member-Funktionen, die Einzelheiten der neuen Klasse behandeln. Angenommen, Sie können in der Regel überschreiben möchten die `Dump` Funktion `CObject` Debugausgabe für den Inhalt der Klasse bereitstellen. Weitere Informationen zum Außerkraftsetzen `Dump`, finden Sie im Artikel [Diagnose: Objektdumps](/previous-versions/visualstudio/visual-studio-2010/sc15kz85). Sie sollten auch außer Kraft setzen der `AssertValid` Funktion `CObject` bereitstellen, angepasste testen, um die Konsistenz der Datenmember der Klassenobjekte zu überprüfen. Eine Beschreibung der Außerkraftsetzen `AssertValid`, finden Sie unter [MFC ASSERT_VALID und CObject:: AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa).
+In der Regel, möchten Sie jedoch möglicherweise einige der überschreiben `CObject`Member-Funktionen, die Einzelheiten der neuen Klasse behandeln. Angenommen, Sie können in der Regel überschreiben möchten die `Dump` Funktion `CObject` Debugausgabe für den Inhalt der Klasse bereitstellen. Weitere Informationen zum Außerkraftsetzen `Dump`, finden Sie im Artikel [Diagnose: Sichern von Objektinhalt](/previous-versions/visualstudio/visual-studio-2010/sc15kz85). Sie sollten auch außer Kraft setzen der `AssertValid` Funktion `CObject` bereitstellen, angepasste testen, um die Konsistenz der Datenmember der Klassenobjekte zu überprüfen. Eine Beschreibung der Außerkraftsetzen `AssertValid`, finden Sie unter [MFC ASSERT_VALID und CObject:: AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa).
 
 Der Artikel [Ebenen von Funktionen angeben](../mfc/specifying-levels-of-functionality.md) beschreibt, wie andere Stufen der Funktionalität, einschließlich der Laufzeit Klasseninformationen, dynamische objekterstellung und Serialisierung.
 
 ## <a name="see-also"></a>Siehe auch
 
 [Verwenden von CObject](../mfc/using-cobject.md)
-

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
-ms.openlocfilehash: 5ddafe5dd821fb21eb6dd03d63122fa98a56af51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e0870eb046f1cec091a72d49c94a2fea41484340
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635369"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278690"
 ---
 # <a name="concurrency-namespace-c-amp"></a>Concurrency-Namespace (C++ AMP)
 
@@ -104,7 +104,7 @@ namespace Concurrency;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[HLSL_MAX_NUM_BUFFERS-Konstante](concurrency-namespace-constants-amp.md#hlsl_max_num_buffers)|Die maximale Anzahl der von DirectX zugelassenen Puffer.|
+|[HLSL_MAX_NUM_BUFFERS Constant](concurrency-namespace-constants-amp.md#hlsl_max_num_buffers)|Die maximale Anzahl der von DirectX zugelassenen Puffer.|
 |[MODULENAME_MAX_LENGTH-Konstante](concurrency-namespace-constants-amp.md#modulename_max_length)|Speichert die maximale Länge des Modulnamens. Dieser Wert muss für den Compiler und die Laufzeit identisch sein.|
 
 ## <a name="requirements"></a>Anforderungen
@@ -114,4 +114,3 @@ namespace Concurrency;
 ## <a name="see-also"></a>Siehe auch
 
 [Referenz (C++ AMP)](reference-cpp-amp.md)
-

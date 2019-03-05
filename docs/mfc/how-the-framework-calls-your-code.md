@@ -12,12 +12,12 @@ helpviewer_keywords:
 - application-specific events [MFC]
 - command routing [MFC], MFC
 ms.assetid: 39e68189-a580-40d0-9e35-bf5cd24a8ecf
-ms.openlocfilehash: fd9dbc58c4887a1ad62d5690ec38ed96cf77feac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81b0749167391a841badff5494023a2ca5d3147e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444537"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279704"
 ---
 # <a name="how-the-framework-calls-your-code"></a>Wie das Framework Code aufruft
 
@@ -29,9 +29,8 @@ Diese Anordnung ist Programmierern, die Erfahrung mit herkömmlichen Programmier
 
 Sie werden in verwandten Themen lesen, was das Framework als er initialisiert und führt die Anwendung und dann bereinigt, wenn die Anwendung beendet wird. Es wird auch erläutert, in dem der Code, den Sie schreiben in passt.
 
-Weitere Informationen finden Sie unter [Klasse CWinApp: die Anwendungsklasse](../mfc/cwinapp-the-application-class.md) und [Dokumentvorlagen und der Erstellungsvorgang für Dokumente und Ansichten](../mfc/document-templates-and-the-document-view-creation-process.md).
+Weitere Informationen finden Sie unter [von CWinApp-Klasse: Die Anwendungsklasse](../mfc/cwinapp-the-application-class.md) und [Dokumentvorlagen und der Erstellungsvorgang für Dokumente und Ansichten](../mfc/document-templates-and-the-document-view-creation-process.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 [Erstellen im Framework](../mfc/building-on-the-framework.md)
-

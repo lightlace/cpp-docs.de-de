@@ -6,12 +6,12 @@ helpviewer_keywords:
 - common controls [MFC]
 - controls [MFC]
 ms.assetid: b2842884-6435-4b8f-933b-21671bf8af95
-ms.openlocfilehash: fe427b2330441b5d9d38a8947ded85dedbb4e086
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0738128d20839046e0885e7489b494d84349e4d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472708"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304534"
 ---
 # <a name="controls-mfc"></a>Steuerelemente (MFC)
 
@@ -108,4 +108,3 @@ Informationen zu allgemeinen Windows-Steuerelementen in der Windows-SDK finden S
 
 [Elemente der Benutzeroberfläche](../mfc/user-interface-elements-mfc.md)<br/>
 [Dialog-Editor](../windows/dialog-editor.md)
-

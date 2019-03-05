@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonButton [MFC], SetText
 - CMFCRibbonButton [MFC], OnClick
 ms.assetid: 732e941c-9504-4b83-a691-d18075965d53
-ms.openlocfilehash: 743390955c583a130b53b9e80acd2b01d9742e1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d0d16062f6808cbeb2d3e73fac9f4bbdfd7e69c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550378"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278157"
 ---
 # <a name="cmfcribbonbutton-class"></a>CMFCRibbonButton-Klasse
 
@@ -154,17 +154,17 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
 |[CMFCRibbonButton::DrawRibbonText](#drawribbontext)||
 |[CMFCRibbonButton::FindSubItemIndexByID](#findsubitemindexbyid)|Gibt den Index eines Popupmenü-Elements zurück, das der angegebenen Befehls-ID zugeordnet ist.|
 |[CMFCRibbonButton::GetCommandRect](#getcommandrect)||
-|[Cmfcribbonbutton:: Getcompactsize](#getcompactsize)|Gibt die komprimierte Größe des Menübandelements zurück. (Überschreibt [cmfcribbonbaseelement:: Getcompactsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getcompactsize).)|
+|[CMFCRibbonButton::GetCompactSize](#getcompactsize)|Gibt die komprimierte Größe des Menübandelements zurück. (Overrides [CMFCRibbonBaseElement::GetCompactSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getcompactsize).)|
 |[CMFCRibbonButton::GetIcon](#geticon)||
 |[CMFCRibbonButton::GetImageIndex](#getimageindex)|Gibt den Index des Bilds zurück, das der Schaltfläche zugeordnet ist.|
 |[CMFCRibbonButton::GetImageSize](#getimagesize)|Gibt die Bildgröße des Menübandelements zurück. (Überschreibt [cmfcribbonbaseelement:: Getimagesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize).)|
-|[Cmfcribbonbutton:: Getintermediatesize](#getintermediatesize)|Gibt die Größe des Menübandelements im Zwischenstatus zurück. (Überschreibt [cmfcribbonbaseelement:: Getintermediatesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getintermediatesize).)|
+|[CMFCRibbonButton::GetIntermediateSize](#getintermediatesize)|Gibt die Größe des Menübandelements im Zwischenstatus zurück. (Überschreibt [cmfcribbonbaseelement:: Getintermediatesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getintermediatesize).)|
 |[CMFCRibbonButton::GetMenu](#getmenu)|Gibt ein Handle für ein Windows-Menü zurück, das der Menüband-Schaltfläche zugewiesen ist.|
 |[CMFCRibbonButton::GetMenuRect](#getmenurect)||
-|[Cmfcribbonbutton:: Getregularsize](#getregularsize)|Gibt die reguläre Größe des Menübandelements zurück. (Überschreibt [cmfcribbonbaseelement:: Getregularsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|
+|[CMFCRibbonButton::GetRegularSize](#getregularsize)|Gibt die reguläre Größe des Menübandelements zurück. (Überschreibt [cmfcribbonbaseelement:: Getregularsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|
 |[CMFCRibbonButton::GetSubItems](#getsubitems)||
 |[CMFCRibbonButton::GetTextRowHeight](#gettextrowheight)||
-|[Cmfcribbonbutton:: GetToolTipText](#gettooltiptext)|Gibt den QuickInfo-Text des Menübandelements zurück. (Überschreibt [cmfcribbonbaseelement:: GetToolTipText](../../mfc/reference/cmfcribbonbaseelement-class.md#gettooltiptext).)|
+|[CMFCRibbonButton::GetToolTipText](#gettooltiptext)|Gibt den QuickInfo-Text des Menübandelements zurück. (Overrides [CMFCRibbonBaseElement::GetToolTipText](../../mfc/reference/cmfcribbonbaseelement-class.md#gettooltiptext).)|
 |[CMFCRibbonButton::HasCompactMode](#hascompactmode)|Gibt an, ob das Menübandelement über einen Komprimierungsmodus verfügt. (Überschreibt [cmfcribbonbaseelement:: Hascompactmode](../../mfc/reference/cmfcribbonbaseelement-class.md#hascompactmode).)|
 |[CMFCRibbonButton::HasIntermediateMode](#hasintermediatemode)|Gibt an, ob das Menübandelement über einen Zwischenstatus verfügt (Überschreibt [cmfcribbonbaseelement:: Hasintermediatemode](../../mfc/reference/cmfcribbonbaseelement-class.md#hasintermediatemode).)|
 |[CMFCRibbonButton::HasLargeMode](#haslargemode)|Legt fest, ob das Menübandelement über einen Großbildmodus verfügt. (Überschreibt [cmfcribbonbaseelement:: Haslargemode](../../mfc/reference/cmfcribbonbaseelement-class.md#haslargemode).)|
@@ -184,11 +184,11 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
 |[CMFCRibbonButton::IsSingleLineText](#issinglelinetext)||
 |[CMFCRibbonButton::OnCalcTextSize](#oncalctextsize)|(Überschreibt [cmfcribbonbaseelement:: Oncalctextsize](../../mfc/reference/cmfcribbonbaseelement-class.md#oncalctextsize).)|
 |[CMFCRibbonButton::OnDrawBorder](#ondrawborder)||
-|[Cmfcribbonbutton:: OnDraw](#ondraw)|Wird vom Framework aufgerufen, um das Menübandelement zu zeichnen. (Überschreibt [cmfcribbonbaseelement:: OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|
+|[CMFCRibbonButton::OnDraw](#ondraw)|Wird vom Framework aufgerufen, um das Menübandelement zu zeichnen. (Überschreibt [cmfcribbonbaseelement:: OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|
 |[CMFCRibbonButton::OnFillBackground](#onfillbackground)||
 |[CMFCRibbonButton::RemoveAllSubItems](#removeallsubitems)|Entfernt alle Menüelemente aus dem Popupmenü.|
 |[CMFCRibbonButton::RemoveSubItem](#removesubitem)|Entfernt ein Menüelement aus dem Popupmenü.|
-|[Cmfcribbonbutton:: Setaccdata](#setaccdata)|(Überschreibt [cmfcribbonbaseelement:: Setaccdata](../../mfc/reference/cmfcribbonbaseelement-class.md#setaccdata).)|
+|[CMFCRibbonButton::SetACCData](#setaccdata)|(Überschreibt [cmfcribbonbaseelement:: Setaccdata](../../mfc/reference/cmfcribbonbaseelement-class.md#setaccdata).)|
 |[CMFCRibbonButton::SetAlwaysLargeImage](#setalwayslargeimage)|Gibt an, ob für die Schaltfläche ein großes oder ein kleines Bild angezeigt wird, wenn die Schaltfläche vom Benutzer reduziert wird.|
 |[CMFCRibbonButton::SetDefaultCommand](#setdefaultcommand)|Aktiviert den Standardbefehl für die Menübandschaltfläche.|
 |[CMFCRibbonButton::SetDescription](#setdescription)|Legt die Beschreibung für das Menübandelement fest. (Überschreibt [cmfcribbonbaseelement:: setDescription](../../mfc/reference/cmfcribbonbaseelement-class.md#setdescription).)|
@@ -364,8 +364,8 @@ virtual void DrawImage(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Typ*<br/>
-[in] *RectImage*<br/>
+[in] *type*<br/>
+[in] *rectImage*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -383,10 +383,10 @@ virtual int DrawRibbonText(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *StrText*<br/>
-[in] *RectText*<br/>
+[in] *strText*<br/>
+[in] *rectText*<br/>
 [in] *UiDTFlags*<br/>
-[in] *ClrText*<br/>
+[in] *clrText*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -472,7 +472,7 @@ virtual CSize GetImageSize(RibbonImageType type) const;
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Typ*<br/>
+[in] *type*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -548,7 +548,7 @@ int GetTextRowHeight() const;
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="gettooltiptext"></a>  Cmfcribbonbutton:: GetToolTipText
+##  <a name="gettooltiptext"></a>  CMFCRibbonButton::GetToolTipText
 
 ```
 virtual CString GetToolTipText() const;
@@ -754,7 +754,7 @@ virtual void OnClick(CPoint point);
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Gibt die Position des Mausklicks.
 
 ### <a name="remarks"></a>Hinweise
@@ -886,7 +886,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *LpszText*<br/>
+[in] *lpszText*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -975,7 +975,7 @@ virtual void SetText(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *LpszText*<br/>
+[in] *lpszText*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
