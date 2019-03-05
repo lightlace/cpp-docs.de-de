@@ -1,5 +1,5 @@
 ---
-title: Timer-Klasse
+title: timer-Klasse
 ms.date: 11/04/2016
 f1_keywords:
 - timer
@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - timer class
 ms.assetid: 4f4dea51-de9f-40f9-93f5-dd724c567b49
-ms.openlocfilehash: beb374efe26c25fed490b7407e087e2cc46043c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e36441f53c9b53c9826ee92b2892142a522d7243
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659835"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298151"
 ---
-# <a name="timer-class"></a>Timer-Klasse
+# <a name="timer-class"></a>timer-Klasse
 
 Ein `timer`-Meldungsblock ist ein `source_block` mit einem einzelnen Ziel, der nach Ablauf einer bestimmten Zeitspanne oder in bestimmten Intervallen eine Meldung an sein Ziel senden kann.
 
@@ -47,7 +47,7 @@ Der Nutzlasttyp der ausgabemeldungen dieses Blocks.
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[Timer](#ctor)|Überladen. Erstellt eine `timer` Meldungsblock, die eine bestimmte Nachricht nach einem angegebenen Intervall ausgelöst werden.|
+|[timer](#ctor)|Überladen. Erstellt eine `timer` Meldungsblock, die eine bestimmte Nachricht nach einem angegebenen Intervall ausgelöst werden.|
 |[~ Timer-Destruktor](#dtor)|Zerstört eine `timer` Meldungsblock.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
@@ -68,7 +68,7 @@ Der Nutzlasttyp der ausgabemeldungen dieses Blocks.
 |[propagate_to_any_targets](#propagate_to_any_targets)|Versucht, die Meldung bieten die `timer` Block, um alle verknüpften Ziele.|
 |[release_message](#release_message)|Gibt die nachrichtenreservierung einer vorherigen frei. (Überschreibt [source_block:: release_message](source-block-class.md#release_message).)|
 |[reserve_message](#reserve_message)|Reserviert eine Meldung, die zuvor von diesem angebotenen `timer` Meldungsblock. (Überschreibt [source_block:: reserve_message](source-block-class.md#reserve_message).)|
-|[resume_propagation](#resume_propagation)|Weitergabe fortgesetzt, nachdem eine Reservierung freigegeben wurde. (Überschreibt [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|
+|[resume_propagation](#resume_propagation)|Weitergabe fortgesetzt, nachdem eine Reservierung freigegeben wurde. (Overrides [source_block::resume_propagation](source-block-class.md#resume_propagation).)|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -244,7 +244,7 @@ timer(
 *_Ms*<br/>
 Die Anzahl der Millisekunden, die verstreichen müssen, nach dem Aufruf starten, für die angegebene Nachricht downstream weitergegeben werden.
 
-*Wert*<br/>
+*value*<br/>
 Der Wert, der downstream weitergegeben wird, wenn der Zeitgeber abläuft.
 
 *_PTarget*<br/>

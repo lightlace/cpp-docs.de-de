@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-ms.openlocfilehash: 445e985117929cae2ec9a26a1e148b3eff55c2a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e25011e2466d76c946cc55421ed228c8ea174161
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647694"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285606"
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>Allgemein empfohlene Vorgehensweisen in der Concurrency Runtime
 
@@ -41,9 +41,9 @@ Die Concurrency Runtime stellt viele parallelitätssichere Konstrukte bereit, di
 
 ##  <a name="yield"></a> Vermeiden Sie langwierige Aufgaben, die nicht zurückgehalten werden
 
-Da sich der Aufgabenplaner kooperativ verhält, stellt er keine Fairness zwischen Aufgaben bereit. Daher kann eine Aufgabe das Starten anderer Aufgaben verhindern. Dies ist zwar in manchen Fällen akzeptabel, kann jedoch in anderen Fällen Deadlocks oder Ressourcenmangel verursachen.
+Da sich der Taskplaner kooperativ verhält, stellt er keine Fairness zwischen Aufgaben bereit. Daher kann eine Aufgabe das Starten anderer Aufgaben verhindern. Dies ist zwar in manchen Fällen akzeptabel, kann jedoch in anderen Fällen Deadlocks oder Ressourcenmangel verursachen.
 
-Im folgenden Beispiel übersteigt die Anzahl der ausgeführten Aufgaben die Anzahl der zugeteilten Verarbeitungsressourcen. Die erste Aufgabe wird nicht an den Aufgabenplaner abgetreten, und daher wird die zweite Aufgabe erst gestartet, nachdem die erste Aufgabe beendet wurde.
+Im folgenden Beispiel übersteigt die Anzahl der ausgeführten Aufgaben die Anzahl der zugeteilten Verarbeitungsressourcen. Die erste Aufgabe wird nicht an den Taskplaner abgetreten, und daher wird die zweite Aufgabe erst gestartet, nachdem die erste Aufgabe beendet wurde.
 
 [!code-cpp[concrt-cooperative-tasks#1](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_1.cpp)]
 
@@ -84,7 +84,7 @@ Betrachten Sie die folgende Funktion `download`, mit der die Datei an der angege
 
 [!code-cpp[concrt-download-oversubscription#4](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_3.cpp)]
 
-Da die `GetHttpFile`-Funktion einen Vorgang mit potenzieller Wartezeit ausführt, kann Überzeichnung die Ausführung anderer Aufgaben ermöglichen, während die aktuelle Aufgabe auf Daten wartet. Die vollständige Version dieses Beispiels, finden Sie unter [Vorgehensweise: Verwenden der Überzeichnung Offset Latenz](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Da die `GetHttpFile`-Funktion einen Vorgang mit potenzieller Wartezeit ausführt, kann Überzeichnung die Ausführung anderer Aufgaben ermöglichen, während die aktuelle Aufgabe auf Daten wartet. Die vollständige Version dieses Beispiels, finden Sie unter [Vorgehensweise: Verwenden der Überzeichnung zum Versetzen der Latenz](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
 [[Nach oben](#top)]
 
@@ -92,7 +92,7 @@ Da die `GetHttpFile`-Funktion einen Vorgang mit potenzieller Wartezeit ausführt
 
 Verwenden Sie die Speicherverwaltungsfunktionen [Concurrency:: Alloc](reference/concurrency-namespace-functions.md#alloc) und [Concurrency](reference/concurrency-namespace-functions.md#free), wenn Sie differenzierte Aufgaben verfügen, das häufig kleine Objekte zugewiesen werden, die relativ kurzen Lebensdauer haben. Die Concurrency Runtime verwaltet für jeden ausgeführten Thread einen eigenen Arbeitsspeichercache. Die `Alloc`-Funktion und die `Free`-Funktion reservieren Arbeitsspeicher in diesen Caches und geben Arbeitsspeicher in den Caches frei, ohne Sperren oder Arbeitsspeicherbarrieren zu verwenden.
 
-Weitere Informationen zu diesen Speicherverwaltungsfunktionen finden Sie unter [Taskplaner](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Ein Beispiel, diese Funktionen verwendet, finden Sie unter [Vorgehensweise: verwenden-Alloc und Free zum Verbessern der Arbeitsspeicherleistung](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
+Weitere Informationen zu diesen Speicherverwaltungsfunktionen finden Sie unter [Taskplaner](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Ein Beispiel, diese Funktionen verwendet, finden Sie unter [Vorgehensweise: Mithilfe von Alloc und Free Verbessern der Arbeitsspeicherleistung](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
 
 [[Nach oben](#top)]
 
@@ -124,7 +124,7 @@ Error details:
     negative balance: -76
 ```
 
-Weitere Beispiele, die das RAII-Muster, zum Verwalten der Lebensdauer von Parallelitätsobjekten verwenden finden Sie unter [Exemplarische Vorgehensweise: Entfernen von Arbeit aus einem Benutzeroberflächenthread](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md), [Vorgehensweise: Verwenden der Context-Klasse zum Implementieren eines kooperativen Semaphore](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md), und [Vorgehensweise: Verwenden der Überzeichnung zum Versetzen der Latenz](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Weitere Beispiele, die das RAII-Muster, zum Verwalten der Lebensdauer von Parallelitätsobjekten verwenden finden Sie unter [Exemplarische Vorgehensweise: Entfernen von Arbeit aus einem Benutzeroberflächenthread](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md), [Vorgehensweise: Implementieren einer kooperativen Semaphore mithilfe der Context-Klasse](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md), und [Vorgehensweise: Verwenden der Überzeichnung zum Versetzen der Latenz](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
 [[Nach oben](#top)]
 
@@ -157,8 +157,8 @@ Die Concurrency Runtime unterstützt nicht die Verwendung von Parallelitätsobje
 [Synchronisierungsdatenstrukturen](../../parallel/concrt/synchronization-data-structures.md)<br/>
 [Vergleich der Synchronisierungsdatenstrukturen mit der Windows-API](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)<br/>
 [Vorgehensweise: Verbessern der Arbeitsspeicherleistung mithilfe von Alloc und Free](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)<br/>
-[Vorgehensweise: Verwenden der Überzeichnung zum Versetzen der Latenz](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)<br/>
-[Vorgehensweise: Implementieren einer kooperativen Semaphore mithilfe der Context-Klasse](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
+[Vorgehensweise: Verwenden der Überzeichnung zum Kompensieren der Latenz](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)<br/>
+[Vorgehensweise: Implementieren eines kooperativen Semaphors mithilfe der Context-Klasse](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
 [Exemplarische Vorgehensweise: Entfernen von Arbeit aus einem Benutzeroberflächenthread](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)<br/>
 [Bewährte Methoden in der Parallel Patterns Library](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br/>
 [Bewährte Methoden in der asynchronen Agents Library](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)

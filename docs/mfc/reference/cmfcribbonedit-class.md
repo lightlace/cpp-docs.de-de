@@ -73,12 +73,12 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetTextAlign
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
-ms.openlocfilehash: 094b91bb730f125ee3a159c80626a8724c10f93e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1a8f601c9f5798494ee34d3c3987222c14ecfa7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578905"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292188"
 ---
 # <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit-Klasse
 
@@ -187,7 +187,7 @@ CMFCRibbonEdit();
 *lpszLabel*<br/>
 [in] Die Bezeichnung für die `CMFCRibbonEdit` Steuerelement.
 
-*Nbild*<br/>
+*nImage*<br/>
 [in] Index der kleine Bilder haben die für die Verwendung der `CMFCRibbonEdit` Steuerelement. Die Auflistung der kleinen Bilder wird von der übergeordneten Menübandkategorie verwaltet.
 
 ### <a name="remarks"></a>Hinweise
@@ -283,10 +283,10 @@ void EnableSpinButtons(
 
 ### <a name="parameters"></a>Parameter
 
-*nmin.*<br/>
+*nMin*<br/>
 [in] Der kleinste Wert, der die Schaltfläche "starten".
 
-*nmax.*<br/>
+*nMax*<br/>
 [in] Der maximale Wert, der die Schaltfläche "starten".
 
 ### <a name="remarks"></a>Hinweise
@@ -532,7 +532,7 @@ virtual void OnDrawOnList(
 *nTextOffset*<br/>
 [in] Abstand in Pixel von der linken Seite des Listenfelds auf den anzuzeigenden Text.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das Anzeigerechteck für die `CMFCRibbonEdit` Steuerelement.
 
 *bIsSelected*<br/>
@@ -555,7 +555,7 @@ virtual void OnEnable(BOOL bEnable);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] True, um das Steuerelement zu aktivieren. So deaktivieren Sie das Steuerelement wird false ZURÜCKGEGEBEN.
 
 ### <a name="remarks"></a>Hinweise
@@ -604,7 +604,7 @@ virtual void OnLButtonDown(CPoint point);
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Dieser Parameter wird nicht verwendet.
 
 ### <a name="remarks"></a>Hinweise
@@ -619,7 +619,7 @@ virtual void OnLButtonUp(CPoint point);
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Dieser Parameter wird nicht verwendet.
 
 ### <a name="remarks"></a>Hinweise
