@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CLongBinary class [MFC]
 ms.assetid: f4320059-aeb4-4ee5-bc2b-25f19d898ef5
-ms.openlocfilehash: a7dbb7e38ec01743d994dafd6c7945e306de51ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed3a153ec89785a9c9da43037d20f7d88b5661ff
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656035"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260711"
 ---
 # <a name="clongbinary-class"></a>CLongBinary-Klasse
 
@@ -53,7 +53,7 @@ Verwenden einer `CLongBinary` Objekt deklarieren Sie einen Felddatenmember vom T
 
 Wenn Sie das Recordset, das eingebettete zerstören `CLongBinary` auch-Objekt zerstört wird und dessen Destruktor hebt die Zuordnung der `HGLOBAL` Daten Handle.
 
-Weitere Informationen zu großen Objekten und die Verwendung von `CLongBinary`, finden Sie in den Artikeln [Recordsets (ODBC)](../../data/odbc/recordset-odbc.md) und [Recordset: Arbeiten mit großen von Elementen (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md).
+Weitere Informationen zu großen Objekten und die Verwendung von `CLongBinary`, finden Sie in den Artikeln [Recordsets (ODBC)](../../data/odbc/recordset-odbc.md) und [Recordset: Arbeiten mit großen Datenelementen (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 

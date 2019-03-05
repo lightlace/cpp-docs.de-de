@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: c82b06903f0705a79a15b263b1dbdfc6aee4c8ca
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 1834c378246835314002cdf05fe9a294b609c4e4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176509"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259580"
 ---
 # <a name="crecttracker-class"></a>CRectTracker-Klasse
 
@@ -75,7 +75,7 @@ class CRectTracker
 |[CRectTracker::HitTest](#hittest)|Gibt die aktuelle Position des Cursors im Zusammenhang mit der `CRectTracker` Objekt.|
 |[CRectTracker::NormalizeHit](#normalizehit)|Normalisiert einen Treffertest-Code.|
 |[CRectTracker::OnChangedRect](#onchangedrect)|Wird aufgerufen, wenn das Rechteck geändert oder verschoben wurde.|
-|[CRectTracker:: SetCursor](#setcursor)|Legt den Cursor je nach Position seine über das Rechteck fest.|
+|[CRectTracker::SetCursor](#setcursor)|Legt den Cursor je nach Position seine über das Rechteck fest.|
 |[CRectTracker::Track](#track)|Ermöglicht dem Benutzer das Rechteck zu bearbeiten.|
 |[CRectTracker::TrackRubberBand](#trackrubberband)|Ermöglicht dem Benutzer "Gummiband" die Auswahl.|
 
@@ -210,7 +210,7 @@ Zeiger auf das Fenster, in das Rechteck verwendet.
 *pDC*<br/>
 Zeiger auf den Gerätekontext, in dem gezeichnet werden soll.
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Zeiger auf das Fenster auf dem die Zeichnung ausgeführt wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -270,7 +270,7 @@ int HitTest(CPoint point) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Der Punkt in Gerätekoordinaten, um zu testen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -393,7 +393,7 @@ BOOL SetCursor(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Verweist auf das Fenster, das derzeit den Cursor enthält.
 
 *nHitTest*<br/>
@@ -421,10 +421,10 @@ BOOL Track(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Das Window-Objekt, das das Rechteck enthält.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gerätekoordinaten von der aktuellen Mausposition relativ zum Clientbereich.
 
 *bAllowInvert*<br/>
@@ -458,10 +458,10 @@ BOOL TrackRubberBand(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Das Window-Objekt, das das Rechteck enthält.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gerätekoordinaten von der aktuellen Mausposition relativ zum Clientbereich.
 
 *bAllowInvert*<br/>

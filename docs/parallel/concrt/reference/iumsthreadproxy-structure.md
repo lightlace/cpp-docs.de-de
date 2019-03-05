@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSThreadProxy structure
 ms.assetid: 61c69b7e-5c37-4048-bcb4-e75c536afd86
-ms.openlocfilehash: 9a0fca40f353f64799c4df9001952cb668cd0678
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 258f249aa178b73da2080cca888409dc07f63dbb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657126"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263032"
 ---
 # <a name="iumsthreadproxy-structure"></a>IUMSThreadProxy-Struktur
 
@@ -35,10 +35,10 @@ struct IUMSThreadProxy : public IThreadProxy;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[IUMSThreadProxy:: EnterCriticalRegion](#entercriticalregion)|Wird aufgerufen, um einen kritischen Bereich eingeben. In einem kritischen Bereich, berücksichtigt der Planer nicht asynchronen blockierende Vorgänge, die während des Bereichs stattfinden. Dies bedeutet, dass das Zeitplanungsmodul nicht für Seitenfehler, Threadunterbrechungen, asynchrone Kernelprozeduraufrufe (APCs) und So weiter, ein UMS-Thread erneut geöffnet wird.|
-|[IUMSThreadProxy:: EnterHyperCriticalRegion](#enterhypercriticalregion)|Wird aufgerufen, um eine äußerst wichtigen Region einzugeben. In einem äußerst wichtigen Bereich, berücksichtigt der Planer nicht blockierende Vorgänge, die während des Bereichs stattfinden. Dies bedeutet, dass der Planer nicht erneut geöffnet wird für die Funktionsaufrufe, Sperre Abruf versuchen, welcher Block, Seitenfehlern, thread-Unterbrechungen, asynchrone Kernelprozeduraufrufe (APCs), und so weiter, für eine UMS Thread, blockiert.|
-|[IUMSThreadProxy:: ExitCriticalRegion](#exitcriticalregion)|Wird aufgerufen, um einen kritischen Bereich zu verlassen.|
-|[IUMSThreadProxy:: ExitHyperCriticalRegion](#exithypercriticalregion)|Wird aufgerufen, um einen äußerst wichtigen Bereich zu verlassen.|
+|[IUMSThreadProxy::EnterCriticalRegion](#entercriticalregion)|Wird aufgerufen, um einen kritischen Bereich eingeben. In einem kritischen Bereich, berücksichtigt der Planer nicht asynchronen blockierende Vorgänge, die während des Bereichs stattfinden. Dies bedeutet, dass das Zeitplanungsmodul nicht für Seitenfehler, Threadunterbrechungen, asynchrone Kernelprozeduraufrufe (APCs) und So weiter, ein UMS-Thread erneut geöffnet wird.|
+|[IUMSThreadProxy::EnterHyperCriticalRegion](#enterhypercriticalregion)|Wird aufgerufen, um eine äußerst wichtigen Region einzugeben. In einem äußerst wichtigen Bereich, berücksichtigt der Planer nicht blockierende Vorgänge, die während des Bereichs stattfinden. Dies bedeutet, dass der Planer nicht erneut geöffnet wird für die Funktionsaufrufe, Sperre Abruf versuchen, welcher Block, Seitenfehlern, thread-Unterbrechungen, asynchrone Kernelprozeduraufrufe (APCs), und so weiter, für eine UMS Thread, blockiert.|
+|[IUMSThreadProxy::ExitCriticalRegion](#exitcriticalregion)|Wird aufgerufen, um einen kritischen Bereich zu verlassen.|
+|[IUMSThreadProxy::ExitHyperCriticalRegion](#exithypercriticalregion)|Wird aufgerufen, um einen äußerst wichtigen Bereich zu verlassen.|
 |[IUMSThreadProxy::GetCriticalRegionType](#getcriticalregiontype)|Gibt zurück, welche Art von kritischen Bereich innerhalb der Threadproxy befindet. Da sich wichtige Bereiche eine Obermenge von kritischen Bereich sind, wenn der Code eingegeben hat, einen kritischen Bereich, und klicken Sie dann eine äußerst wichtigen Region `InsideHyperCriticalRegion` zurückgegeben werden.|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie

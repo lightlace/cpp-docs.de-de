@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 2ba2c194-2c6c-40ff-9db4-e9dbe57e1f57
-ms.openlocfilehash: 7c8915b8d82f96ed0bd1fad11e1a4f0687b40493
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c21f89215e08523188eb32490d7b1d5506299fb5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530168"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259450"
 ---
 # <a name="cwordarray-class"></a>CWordArray-Klasse
 
@@ -101,7 +101,7 @@ Beispielsweise übersetzt zu
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CObArray::operator&#91;&#93;](../../mfc/reference/cobarray-class.md#operator_at)|Legt das Element am angegebenen Index fest oder ruft es ab.|
+|[CObArray::operator &#91;&#93;](../../mfc/reference/cobarray-class.md#operator_at)|Legt das Element am angegebenen Index fest oder ruft es ab.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -136,7 +136,7 @@ interface class ICommandSource
 
 Beim Hosten eines Benutzersteuerelements in MFC-Ansicht, [CWinFormsView-Klasse](../../mfc/reference/cwinformsview-class.md) Routen Befehle und Update-Befehl UI-Nachrichten an das Steuerelement, damit Sie die MFC-Befehle (z. B. Frame Menüelemente und Symbolleistenschaltflächen) verarbeiten kann. Durch die Implementierung, Sie geben dem Benutzersteuerelement einen Verweis auf die `ICommandSource` Objekt.
 
-Finden Sie unter [Vorgehensweise: Hinzufügen Befehlsrouting an der Windows Forms-Steuerelement](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) ein Beispiel zur Verwendung für `ICommandTarget`.
+Weitere Informationen finden Sie unter [How to: Hinzufügen von Befehlsrouting an der Windows Forms-Steuerelement](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) ein Beispiel zur Verwendung für `ICommandTarget`.
 
 Weitere Informationen zur Verwendung von Windows Forms finden Sie unter [verwenden ein Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -162,7 +162,7 @@ Ein Handle für die Handlermethode.
 
 Diese Methode fügt den Befehlshandler *CmdHandler* auf das Befehlsquellobjekt und ordnet Sie den Handler, der *CmdID*.
 
-Finden Sie unter [Vorgehensweise: Hinzufügen Befehlsrouting an der Windows Forms-Steuerelement](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) ein Beispiel zur Verwendung für `AddCommandHandler`.
+Weitere Informationen finden Sie unter [How to: Hinzufügen von Befehlsrouting an der Windows Forms-Steuerelement](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) ein Beispiel zur Verwendung für `AddCommandHandler`.
 
 ##  <a name="addcommandrangehandler"></a>  ICommandSource::AddCommandRangeHandler
 
@@ -362,7 +362,7 @@ interface class ICommandTarget
 
 Beim Hosten eines Benutzersteuerelements in MFC-Ansicht, [CWinFormsView](../../mfc/reference/cwinformsview-class.md) Routen Befehle und Update-Befehl UI-Nachrichten an das Steuerelement, damit Sie die MFC-Befehle (z. B. Frame Menüelemente und Symbolleistenschaltflächen) verarbeiten kann. Durch die Implementierung `ICommandTarget`, geben Sie dem Benutzersteuerelement einen Verweis auf das Objekt.
 
-Finden Sie unter [Vorgehensweise: Hinzufügen Befehlsrouting an der Windows Forms-Steuerelement](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) ein Beispiel zur Verwendung für `ICommandTarget`.
+Weitere Informationen finden Sie unter [How to: Hinzufügen von Befehlsrouting an der Windows Forms-Steuerelement](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) ein Beispiel zur Verwendung für `ICommandTarget`.
 
 Weitere Informationen zur Verwendung von Windows Forms finden Sie unter [verwenden ein Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -383,7 +383,7 @@ Ein Handle für das Befehlsquellobjekt.
 
 Beim Hosten eines Benutzersteuerelements in MFC-Ansicht, [CWinFormsView](../../mfc/reference/cwinformsview-class.md) Routen Befehle und Update-Befehl UI-Nachrichten an das Steuerelement, damit Sie die MFC-Befehle verarbeiten kann.
 
-Diese Methode das Zielobjekt für den Befehl initialisiert und das Quellobjekt für den angegebenen Befehl ordnet *CmdSource*. Es sollte in der Implementierung der Benutzer Control-Klasse aufgerufen werden. Bei der Initialisierung, sollten Sie Befehlshandler mit das Befehlsquellobjekt registrieren, durch den Aufruf [ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md) in die `Initialize` Implementierung. Finden Sie unter [Vorgehensweise: Hinzufügen Befehlsrouting an der Windows Forms-Steuerelement](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) ein Beispiel zur Verwendung für `Initialize` dazu.
+Diese Methode das Zielobjekt für den Befehl initialisiert und das Quellobjekt für den angegebenen Befehl ordnet *CmdSource*. Es sollte in der Implementierung der Benutzer Control-Klasse aufgerufen werden. Bei der Initialisierung, sollten Sie Befehlshandler mit das Befehlsquellobjekt registrieren, durch den Aufruf [ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md) in die `Initialize` Implementierung. Weitere Informationen finden Sie unter [How to: Hinzufügen von Befehlsrouting an der Windows Forms-Steuerelement](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) ein Beispiel zur Verwendung für `Initialize` dazu.
 
 ##  <a name="icommandui_interface"></a>  ICommandUI-Schnittstelle
 
@@ -399,7 +399,7 @@ Diese Schnittstelle bietet Methoden und Eigenschaften, die Befehlen der Benutzer
 
 `ICommandUI` wird verwendet, in eine `ON_UPDATE_COMMAND_UI` Handler in einer - abgeleiteten Klasse. Wenn ein Benutzer einer Anwendung (SELECT-Anweisungen oder Klicks) aktiviert wird ein Menü, das jedes Menüelement im angezeigt, als aktiviert oder deaktiviert. Das Ziel der einzelnen Menübefehle im bietet diese Informationen durch die Implementierung einer `ON_UPDATE_COMMAND_UI` Handler. Verwenden Sie das Fenster "Eigenschaften" für jeden Befehl Schnittstelle Benutzerobjekte in Ihrer Anwendung zum Erstellen eines Meldungszuordnungseintrags und Funktionsprototyp für jeden Handler.
 
-Weitere Informationen darüber, wie der `ICommandUI` Schnittstelle wird verwendet, in das Befehlsrouting, finden Sie unter [Vorgehensweise: Hinzufügen Befehlsrouting an der Windows Forms-Steuerelement](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
+Weitere Informationen darüber, wie der `ICommandUI` Schnittstelle wird verwendet, in das Befehlsrouting, finden Sie unter [Vorgehensweise: Befehl "hinzufügen" Routing an das Windows Forms-Steuerelement](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
 
 Weitere Informationen zur Verwendung von Windows Forms finden Sie unter [verwenden ein Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -521,7 +521,7 @@ void OnActivateView(bool activate);
 
 ### <a name="parameters"></a>Parameter
 
-*Aktivieren*<br/>
+*activate*<br/>
 Gibt an, ob die Sicht wird aktiviert oder deaktiviert.
 
 ##  <a name="oninitialupdate"></a>  IView:: OnInitialUpdate
@@ -549,4 +549,3 @@ Diese Funktion kann es sich um die Ansicht seine Anzeige Änderungen entsprechen
 [MFC-Beispiel erfassen](../../visual-cpp-samples.md)<br/>
 [CObject-Klasse](../../mfc/reference/cobject-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
-

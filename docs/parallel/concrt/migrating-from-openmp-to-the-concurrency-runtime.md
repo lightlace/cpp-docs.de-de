@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: 78fa83c30bc55d82ffa5d2ba1e7d65472643f86b
-ms.sourcegitcommit: ee0103752884425843556a19cf418a504dc3cd02
+ms.openlocfilehash: 16b0f175867e18e127997749098cce998674b3d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53737623"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259502"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migrieren von OpenMP zur Concurrency Runtime
 
@@ -48,17 +48,17 @@ Die folgenden Fällen wird beschrieben, wenn es möglicherweise keine entspreche
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-[Vorgehensweise: Konvertieren einer OpenMP-Parallel for-Schleife in der Concurrency Runtime](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
+[Vorgehensweise: Konvertieren einer parallelen for-Schleife in OpenMP zur Verwendung der Concurrency Runtime](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
 
 Eine einfache Schleife, die die OpenMP verwendet [parallele](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) und [für](../../parallel/openmp/reference/for-openmp.md) Anweisungen veranschaulicht die Verwendung der Concurrency Runtime konvertiert [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) Algorithmus.
 
-[Vorgehensweise: Konvertieren einer OpenMP-Schleife, die Abbruch verwendet wird, um die Verwendung der Concurrency Runtime](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
+[Vorgehensweise: Konvertieren einer OpenMP-Schleife mit Abbruch zur Verwendung der Concurrency Runtime](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
 Erhalten eine OpenMP [parallele](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[für](../../parallel/openmp/reference/for-openmp.md) Schleife, die nicht alle Iterationen ausgeführt wird, erfordert wird veranschaulicht, wie die Concurrency Runtime-Abbruchmechanismus konvertiert.
 
-[Vorgehensweise: Konvertieren einer OpenMP-Schleife, die Ausnahmebehandlung verwendet wird, um die Verwendung der Concurrency Runtime](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
+[Vorgehensweise: Konvertieren einer OpenMP-Schleife mit Ausnahmebehandlung zur Verwendung der Concurrency Runtime](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
 Erhalten eine OpenMP [parallele](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[für](../../parallel/openmp/reference/for-openmp.md) Schleife, die zur Behandlung von Ausnahmen wird veranschaulicht, wie der Ausnahmebehandlungsmechanismus von Concurrency Runtime konvertiert.
 
-[Vorgehensweise: Konvertieren einer OpenMP-Schleife, die keine Reduction-Variable verwendet wird, um die Verwendung der Concurrency Runtime](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
+[Vorgehensweise: Konvertieren einer OpenMP-Schleife mit einer reduction-Variable zur Verwendung der Concurrency Runtime](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
 Erhält eine OpenMP [parallele](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[für](../../parallel/openmp/reference/for-openmp.md) -Schleife, verwendet der [Verringerung](../../parallel/openmp/reference/reduction.md) -Klausel wird veranschaulicht, wie sie zur Verwendung der Concurrency Runtime zu konvertieren.
 
 ## <a name="see-also"></a>Siehe auch
@@ -67,4 +67,3 @@ Erhält eine OpenMP [parallele](../../parallel/concrt/how-to-use-parallel-invoke
 [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)<br/>
 [Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 [Asynchrone Agents Library](../../parallel/concrt/asynchronous-agents-library.md)
-

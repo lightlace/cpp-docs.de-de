@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Varbinary data type
 - Varchar data type
 ms.assetid: cf572c35-5275-45b5-83df-5f0e36114f40
-ms.openlocfilehash: 286ef403ec4bd51b035945f3ca268b59fee4d9d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d356f094759775f709838de149769b1671fdf9ba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567036"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260113"
 ---
-# <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045: MFC- und Datenbankunterstützung für LONGVARCHAR und LONGVARBINARY
+# <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045: MFC-und Datenbankunterstützung für Long LONGVARBINARY
 
 > [!NOTE]
 >  Der folgende technische Hinweis wurde seit dem ersten Erscheinen in der Onlinedokumentation nicht aktualisiert. Daher können einige Verfahren und Themen veraltet oder falsch sein. Um aktuelle Informationen zu erhalten, wird empfohlen, das gewünschte Thema im Index der Onlinedokumentation zu suchen.
@@ -101,7 +101,7 @@ Es ist nicht erforderlich, um zu verstehen wie aktualisieren eine `CLongBinary` 
 
 Bei der Aktualisierung einer `CLongBinary` Feld der ODBC-Datenbankklassen verwendet werden **DATA_AT_EXEC** Mechanismus (finden Sie in ODBC-Dokumentation auf `SQLSetPos`des RgbValue-Argument). Wenn bereitet das Framework vor der INSERT- oder Update-Anweisung, anstatt auf die `HGLOBAL` mit den Daten, die *Adresse* von der `CLongBinary` festgelegt ist, als die *Wert* der Spalte Stattdessen, und legen Sie auf den Längenindikator **SQL_DATA_AT_EXEC**. Wenn die Update-Anweisung an die Datenquelle gesendet wird später `SQLExecDirect` zurück **SQL_NEED_DATA**. Dem Framework, dass der Wert von der Parameter für diese Spalte tatsächlich die Adresse des hingewiesen eine `CLongBinary`. Das Framework ruft `SQLGetData` erwartet einmal mit einem kleinen Puffer, den Treiber an, die tatsächliche Länge der Daten zurück. Wenn der Treiber die tatsächliche Länge des binary large Object (das BLOB) zurückgibt, zuordnet MFC so viel Speicherplatz wie erforderlich, um das BLOB abrufen. Wenn die Datenquelle gibt **SQL_NO_TOTAL**, gibt an, dass sie die Größe des BLOBs nicht bestimmen kann, wird MFC kleinere Blöcke erstellt. Die anfängliche Standardgröße ist 64 KB, und nachfolgende Blöcke werden doppelt so groß; Beispielsweise wird die zweite 128 k beträgt, das dritte hingegen ist 256K und So weiter. Die ursprüngliche Größe ist konfigurierbar.
 
-## <a name="not-binding-retrievingsending-data-directly-from-odbc-with-sqlgetdata"></a>Keine Bindung: Abrufen von/Senden von Daten direkt aus ODBC mit SQLGetData
+## <a name="not-binding-retrievingsending-data-directly-from-odbc-with-sqlgetdata"></a>Keine Bindung: Senden/Abrufen von Daten direkt aus ODBC mit SQLGetData
 
 Mit dieser Methode Sie vollständig umgehen die Datenbankklassen und befassen sich mit der Spalte lange Daten selbst.
 
@@ -122,4 +122,3 @@ In diesem Fall muss die long-Daten-Spalte in der select-Liste des Recordset-Obje
 
 [Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)<br/>
 [Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)
-

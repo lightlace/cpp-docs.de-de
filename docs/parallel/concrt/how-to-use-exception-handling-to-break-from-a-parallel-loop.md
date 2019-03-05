@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Verwenden der Ausnahmebehandlung zum Verlassen einer Parallel-Schleife'
+title: 'Vorgehensweise: Verwenden der Ausnahmebehandlung zum Verlassen einer Parallel-Schleife'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - search algorithm, writing [Concurrency Runtime]
 - writing a search algorithm [Concurrency Runtime]
 ms.assetid: 16d7278c-2d10-4014-9f58-f1899e719ff9
-ms.openlocfilehash: a9557f2fc809647215dbb5fd928f5c638af6ed62
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19d732d98f24172471d96cd5e2962b2a99ab0203
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532885"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262310"
 ---
-# <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>Gewusst wie: Verwenden der Ausnahmebehandlung zum Verlassen einer Parallel-Schleife
+# <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>Vorgehensweise: Verwenden der Ausnahmebehandlung zum Verlassen einer Parallel-Schleife
 
 In diesem Thema veranschaulicht das Schreiben ein Suchalgorithmus für eine einfache Struktur.
 
@@ -74,7 +74,6 @@ Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, o
 [Ausnahmebehandlung](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
 [Aufgabenparallelität](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [Parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md)<br/>
-[Task_group-Klasse](reference/task-group-class.md)<br/>
+[task_group-Klasse](reference/task-group-class.md)<br/>
 [structured_task_group-Klasse](../../parallel/concrt/reference/structured-task-group-class.md)<br/>
 [Parallel_for_each-Funktion](reference/concurrency-namespace-functions.md#parallel_for_each)
-
