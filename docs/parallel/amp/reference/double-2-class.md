@@ -28,12 +28,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_2::g
 - amp_short_vectors/Concurrency::graphics::double_2::set_y
 ms.assetid: c19c2d21-3cbf-4ce5-b460-3b8253688f82
-ms.openlocfilehash: 1c23906c3d7bcad0e538cea8484e42ea8e89400e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9482c2839c4963d533eb643fa0ef86a5c66636a4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649071"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289649"
 ---
 # <a name="double2-class"></a>double_2-Klasse
 
@@ -64,16 +64,16 @@ class double_2;
 |Name|Beschreibung|
 |----------|-----------------|
 |double_2::get_x||
-|double_2:: get_xy||
-|double_2:: get_Y||
+|double_2::get_xy||
+|double_2::get_y||
 |double_2::get_yx||
 |double_2::ref_g||
 |double_2::ref_r||
 |double_2::ref_x||
 |double_2::ref_y||
-|double_2:: set_X||
-|double_2:: set_xy||
-|double_2:: set_y||
+|double_2::set_x||
+|double_2::set_xy||
+|double_2::set_y||
 |double_2::set_yx||
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
@@ -81,13 +81,13 @@ class double_2;
 |Name|Beschreibung|
 |----------|-----------------|
 |double_2::operator-||
-|double_2:::||
-|double_2:: * =||
-|double_2:: Operator / =||
-|double_2:: Operator++-||
-|double_2:: Operator +=||
+|double_2::operator--||
+|double_2::operator*=||
+|double_2::operator/=||
+|double_2::operator++||
+|double_2::operator+=||
 |double_2::operator=||
-|double_2:: Operator-=||
+|double_2::operator-=||
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
@@ -103,9 +103,9 @@ class double_2;
 |double_2::gr||
 |double_2::r||
 |double_2::rg||
-|double_2:: x||
+|double_2::x||
 |double_2::xy||
-|double_2:: y||
+|double_2::y||
 |double_2::yx||
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
@@ -171,7 +171,7 @@ Der Wert 1 Element initialisiert werden.
 *_V*<br/>
 Der Wert für die Initialisierung.
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Das Objekt, das zum Initialisieren verwendet.
 
 ##  <a name="double_2__size"></a> Größe

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - contexts [Concurrency Runtime]
 ms.assetid: 10c1d861-8fbb-4ba0-b2ec-61876b11176e
-ms.openlocfilehash: b7d1a5bbc63781e865be8053cb4365d6a8590935
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d511f8fa751d61c3c490a184dae660096dd9f76f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529170"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285905"
 ---
 # <a name="contexts"></a>Kontexte
 
@@ -26,7 +26,7 @@ Die [Concurrency:: wait](reference/concurrency-namespace-functions.md#wait) Funk
 
 ### <a name="example"></a>Beispiel
 
-Ein Beispiel für die Verwendung der `wait` Funktion, um den aktuellen Kontext und bieten daher anderen Kontexten ausführen, finden Sie unter [Vorgehensweise: Verwenden Sie Planungsgruppen Einfluss Reihenfolge der Ausführung](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
+Ein Beispiel für die Verwendung der `wait` Funktion, um den aktuellen Kontext und bieten daher anderen Kontexten ausführen, finden Sie unter [Vorgehensweise: Der Ausführungsreihenfolge mithilfe von Zeitplangruppen](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
 
 ## <a name="the-context-class"></a>Der Context-Klasse
 
@@ -46,7 +46,7 @@ Die [yield](reference/context-class.md#yield) Methode setzt die Ausführung aus,
 
 #### <a name="example"></a>Beispiel
 
-Ein Beispiel für die Verwendung der `Context::Block`, `Context::Unblock`, und `Context::Yield` Methoden zum Implementieren einer kooperativen Semaphore-Klasse, finden Sie unter [Vorgehensweise: Verwenden der Context-Klasse zum Implementieren einer kooperativen Semaphore](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
+Ein Beispiel für die Verwendung der `Context::Block`, `Context::Unblock`, und `Context::Yield` Methoden zum Implementieren einer kooperativen Semaphore-Klasse, finden Sie unter [Vorgehensweise: Implementieren einer kooperativen Semaphore mithilfe der Context-Klasse](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
 
 ##### <a name="oversubscription"></a>Überzeichnung
 
@@ -66,12 +66,11 @@ Rufen Sie zum Aktivieren der Überzeichnung im aktuellen Kontext der [Oversubscr
 
 ###### <a name="example"></a>Beispiel
 
-Ein Beispiel, die Überzeichnung verwendet, um die Latenz zu versetzen, die durch das Lesen von Daten über eine Netzwerkverbindung verursacht wird, finden Sie unter [Vorgehensweise: Verwenden der Überzeichnung Offset Latenz](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Ein Beispiel, die Überzeichnung verwendet, um die Latenz zu versetzen, die durch das Lesen von Daten über eine Netzwerkverbindung verursacht wird, finden Sie unter [Vorgehensweise: Verwenden der Überzeichnung zum Versetzen der Latenz](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 [Aufgabenplanung](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
-[Vorgehensweise: Beeinflussen der Ausführungsreihenfolge mithilfe von Zeitplangruppen](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)<br/>
-[Vorgehensweise: Implementieren einer kooperativen Semaphore mithilfe der Context-Klasse](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
-[Vorgehensweise: Verwenden der Überzeichnung zum Versetzen der Latenz](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)
-
+[Vorgehensweise: Beeinflussen der Ausführungsreihenfolge mithilfe von Planungsgruppen](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)<br/>
+[Vorgehensweise: Implementieren eines kooperativen Semaphors mithilfe der Context-Klasse](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
+[Vorgehensweise: Verwenden der Überzeichnung zum Kompensieren der Latenz](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - runtime [MFC], class information
 - run-time class [MFC], CRuntimeClass structure
 ms.assetid: de62b6ef-90d4-420f-8c70-f58b36976a2b
-ms.openlocfilehash: 83c10d5a87c7d5782505fcd93e46c678a97b8b5d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 92979a10c18d9759e0ecc9f0785e56a97c0f0642
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521957"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274296"
 ---
 # <a name="cruntimeclass-structure"></a>CRuntimeClass-Struktur
 
@@ -33,7 +33,7 @@ struct CRuntimeClass
 |Name|Beschreibung|
 |----------|-----------------|
 |[CRuntimeClass::CreateObject](#createobject)|Erstellt ein Objekt während der Laufzeit.|
-|[CRuntimeClass](#fromname)|Erstellt ein Objekt während der Laufzeit über den vertrauten Klassennamen.|
+|[CRuntimeClass::FromName](#fromname)|Erstellt ein Objekt während der Laufzeit über den vertrauten Klassennamen.|
 |[CRuntimeClass::IsDerivedFrom](#isderivedfrom)|Bestimmt, ob die Klasse aus der angegebenen Klasse abgeleitet ist.|
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
@@ -79,7 +79,7 @@ static CObject* PASCAL CreateObject(LPCWSTR lpszClassName);
 
 ### <a name="parameters"></a>Parameter
 
-*"lpszclassname"*<br/>
+*lpszClassName*<br/>
 Der bekannte Name der Klasse erstellt werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -88,7 +88,7 @@ Ein Zeiger auf die neu erstellte Objekt oder NULL, wenn Sie den Namen der Klasse
 
 ### <a name="remarks"></a>Hinweise
 
-Von abgeleiteten Klassen `CObject` unterstützen dynamic erstellen, über die die Möglichkeit, ein Objekt einer bestimmten Klasse zur Laufzeit zu erstellen ist. Dokument, Ansicht und dem Frameklassen, sollte z. B. die dynamische Erstellung unterstützen. Weitere Informationen zum dynamischen Erstellen und die `CreateObject` Member finden Sie unter [CObject-Klasse](../../mfc/using-cobject.md) und [CObject-Klasse: Ebenen von Funktionen angeben](../../mfc/specifying-levels-of-functionality.md).
+Von abgeleiteten Klassen `CObject` unterstützen dynamic erstellen, über die die Möglichkeit, ein Objekt einer bestimmten Klasse zur Laufzeit zu erstellen ist. Dokument, Ansicht und dem Frameklassen, sollte z. B. die dynamische Erstellung unterstützen. Weitere Informationen zum dynamischen Erstellen und die `CreateObject` Member finden Sie unter [CObject-Klasse](../../mfc/using-cobject.md) und [CObject-Klasse: Festlegen von Funktionalitätsebenen](../../mfc/specifying-levels-of-functionality.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -106,7 +106,7 @@ static CRuntimeClass* PASCAL FromName(LPCWSTR lpszClassName);
 
 ### <a name="parameters"></a>Parameter
 
-*"lpszclassname"*<br/>
+*lpszClassName*<br/>
 Der bekannte Name einer Klasse abgeleitet `CObject`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -219,9 +219,8 @@ Weitere Informationen zum Schema Zahlen, finden Sie unter den [IMPLEMENT_SERIAL]
 
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [CObject::GetRuntimeClass](../../mfc/reference/cobject-class.md#getruntimeclass)<br/>
-[CObject:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof)<br/>
+[CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)<br/>
 [RUNTIME_CLASS](run-time-object-model-services.md#runtime_class)<br/>
 [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)<br/>
 [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate)<br/>
 [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)
-

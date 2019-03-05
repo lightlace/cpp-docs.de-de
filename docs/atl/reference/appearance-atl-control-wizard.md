@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, appearance
 ms.assetid: cc16d7ff-74d7-4c15-9ebd-4b19201ff457
-ms.openlocfilehash: 34c72fa8a2c5108a20065041c5cb7ea461e501a8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 4d3b0519951636fad4175dc35261ba35b3694ffa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330592"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280406"
 ---
 # <a name="appearance-atl-control-wizard"></a>Darstellung, ATL-Steuerelement-Assistent
 
@@ -23,7 +23,7 @@ Verwenden Sie diese Seite des Assistenten, um zusätzliche Benutzer-Element-Opti
 
    Legt fest, die Darstellung des Steuerelements innerhalb des Containers.
 
-   - **Nicht transparente**: setzt das bit im VIEWSTATUS_OPAQUE der [VIEWSTATUS](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) Enumeration und zeichnet das gesamte Steuerelement Rechteck an der [CComControlBase:: OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw) Methode. Das Steuerelement wird vollständig deckend und keines der Container zeigt hinter der Steuerelementgrenzen.
+   - **Nicht transparente**: Legt das bit im VIEWSTATUS_OPAQUE der [VIEWSTATUS](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) Enumeration und zeichnet das gesamte Steuerelement Rechteck an der [CComControlBase:: OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw) Methode. Das Steuerelement wird vollständig deckend und keines der Container zeigt hinter der Steuerelementgrenzen.
 
       Mit dieser Einstellung können den Container schnell das Steuerelement zu zeichnen. Wenn diese Option nicht ausgewählt ist, kann das Steuerelement eine transparente Teile enthalten.
 
@@ -73,9 +73,9 @@ Verwenden Sie diese Seite des Assistenten, um zusätzliche Benutzer-Element-Opti
 
    Zusätzliche Aussehen und Verhalten-Optionen für das Steuerelement fest.
 
-   - **Zur Laufzeit unsichtbar**: Legt fest, das Steuerelement zur Laufzeit nicht sichtbar sein. Sie können Unsichtbare Steuerelemente verwenden, um Vorgänge im Hintergrund, wie z. B. das Auslösen von Ereignissen in festgelegten Intervallen auszuführen.
+   - **Zur Laufzeit unsichtbar**: Legt das Steuerelement zur Laufzeit nicht sichtbar sein. Sie können Unsichtbare Steuerelemente verwenden, um Vorgänge im Hintergrund, wie z. B. das Auslösen von Ereignissen in festgelegten Intervallen auszuführen.
 
-   - **Verhält sich wie Schaltfläche**: setzt das bit im OLEMISC_ACTSLIKEBUTTON der [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) Enumeration, um ein Steuerelement, das Verhalten zu aktivieren, wie eine Schaltfläche. Wenn der Container des Steuerelements Clientstandort als Standardschaltfläche gekennzeichnet wurde, ermöglicht die Auswahl dieser Option das Schaltflächen-Steuerelement selbst als Standardschaltfläche angezeigt, selbst mit einem breiteren Rahmen zu zeichnen. Finden Sie unter [CComControlBase:: GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault) für Weitere Informationen.
+   - **Verhält sich wie Schaltfläche**: Setzt das bit im OLEMISC_ACTSLIKEBUTTON der [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) Enumeration, um ein Steuerelement, das Verhalten zu aktivieren, wie eine Schaltfläche. Wenn der Container des Steuerelements Clientstandort als Standardschaltfläche gekennzeichnet wurde, ermöglicht die Auswahl dieser Option das Schaltflächen-Steuerelement selbst als Standardschaltfläche angezeigt, selbst mit einem breiteren Rahmen zu zeichnen. Finden Sie unter [CComControlBase:: GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault) für Weitere Informationen.
 
    - **Verhält sich wie Bezeichnung**: Legt das OLEMISC_ACTSLIKELABEL bit in der OLEMISC-Enumeration zum Aktivieren eines Steuerelements für die systemeigene Bezeichnung des Containers zu ersetzen. Der Container bestimmt mit diesem Flag, wenn überhaupt.
 
@@ -83,7 +83,7 @@ Verwenden Sie diese Seite des Assistenten, um zusätzliche Benutzer-Element-Opti
 
    Zusätzliches Verhalten-Optionen für das Steuerelement fest.
 
-   - **Normalisiert DC**: Legt fest, das Steuerelement einen normalisierten Gerätekontext zu erstellen, wenn sie aufgerufen wird, um sich selbst zu zeichnen. Diese Aktion standardisiert die Darstellung des Steuerelements, vereinfacht aber Zeichnung weniger effizient.
+   - **Normalisiert DC**: Legt das Steuerelement einen normalisierten Gerätekontext zu erstellen, wenn sie aufgerufen wird, um sich selbst zu zeichnen. Diese Aktion standardisiert die Darstellung des Steuerelements, vereinfacht aber Zeichnung weniger effizient.
 
    - **Nur**: Gibt an, dass das Steuerelement nicht fensterlos sein kann. Wenn Sie diese Option nicht auswählen, das Steuerelement wird automatisch in Containern, die fensterlose Objekte unterstützen fensterlose, und es ist automatisch im Fenstermodus in Containern, die nicht über fensterlose Objekte unterstützen. Diese Option erzwingt, dass das Steuerelement im Fenstermodus, auch in Containern werden, die fensterlose Objekte zu unterstützen.
 
@@ -92,5 +92,4 @@ Verwenden Sie diese Seite des Assistenten, um zusätzliche Benutzer-Element-Opti
 ## <a name="see-also"></a>Siehe auch
 
 [ATL-Steuerelement-Assistent](../../atl/reference/atl-control-wizard.md)<br/>
-[SUBEDIT-Beispiel: Eine übergeordnete Klasse ein Standard-Windows-Steuerelement](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit)
-
+[SUBEDIT-Beispiel: Eine übergeordnete Klasse für ein Standard-Windows-Steuerelement](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit)

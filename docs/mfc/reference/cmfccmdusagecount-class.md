@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-ms.openlocfilehash: af48451bcba9bf0d5f07cd96da99be4c2a6ae99b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4ad9a60831feb6fa1147ea3f8bcfd5c6badd06c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549395"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275362"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount-Klasse
 
@@ -55,7 +55,7 @@ class CMFCCmdUsageCount : public CObject
 |[CMFCCmdUsageCount::AddCmd](#addcmd)|Inkrementiert durch eine der Zähler, der den angegebenen Befehl zugeordnet ist.|
 |[CMFCCmdUsageCount::GetCount](#getcount)|Ruft die Anzahl der Nutzung, die der angegebenen Befehls-ID zugeordnet ist|
 |[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)|Bestimmt, ob dieses Objekt die Mindestmenge an Überwachungsdaten gesammelt wurden.|
-|[:: Isfreqeuntlyusedcmd](#isfreqeuntlyusedcmd)|Bestimmt, ob der angegebene Befehl häufig verwendet wird.|
+|[CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd)|Bestimmt, ob der angegebene Befehl häufig verwendet wird.|
 |[CMFCCmdUsageCount::Reset](#reset)|Löscht die Verwendungsanzahl der aller Befehle.|
 |[CMFCCmdUsageCount::Serialize](#serialize)|Dieses Objekt aus einem Archiv liest oder schreibt dieses in ein Archiv. (Überschreibt [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|
 |[CMFCCmdUsageCount::SetOptions](#setoptions)|Legt die Werte der freigegebenen `CMFCCmdUsageCount` Klassendatenmember.|

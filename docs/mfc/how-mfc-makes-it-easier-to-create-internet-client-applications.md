@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Internet applications [MFC], MFC
 - MFC, Internet applications
 ms.assetid: 94437b3f-f15c-437d-b5fd-264a2efec9ab
-ms.openlocfilehash: b288db54a020b0074766ee69debdb9f397d3bd03
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ffeed3a844fb86acf1bf8c5181c59529824c27f9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573432"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300739"
 ---
 # <a name="how-mfc-makes-it-easier-to-create-internet-client-applications"></a>Vereinfachtes Erstellen von Internetclientanwendungen mit MFC
 
@@ -35,4 +35,3 @@ Darüber hinaus bieten die MFC-WinInet-Klassen die folgenden Vorteile:
 
 [Win32-Interneterweiterungen (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
 [Vereinfachtes Erstellen von Internetclientanwendungen mit WinInet](../mfc/how-wininet-makes-it-easier-to-create-internet-client-applications.md)
-

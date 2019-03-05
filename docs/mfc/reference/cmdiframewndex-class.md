@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: 7ed2d1de2a91f90cd4e7efecac728e66f86d95a6
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 81d227c241adf0ce72ccd4a554134d7d858b4a6d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178629"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275427"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx-Klasse
 
@@ -197,7 +197,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)|Anzeigen oder ausblenden im Hauptmenü in den Vollbildmodus.|
 |[CMDIFrameWndEx::EnableFullScreenMode](#enablefullscreenmode)|Können den Vollbildmodus für das Rahmenfenster.|
 |[CMDIFrameWndEx::EnableLoadDockState](#enableloaddockstate)|Aktiviert oder deaktiviert das Laden der Andockstatus.|
-|[CMDIFrameWndEx:: Enablemditabbedgroups](#enablemditabbedgroups)|Aktiviert oder deaktiviert den MDI-Gruppen im Registerkartenformat.|
+|[CMDIFrameWndEx::EnableMDITabbedGroups](#enablemditabbedgroups)|Aktiviert oder deaktiviert den MDI-Gruppen im Registerkartenformat.|
 |[CMDIFrameWndEx::EnableMDITabs](#enablemditabs)|Aktiviert oder deaktiviert den MDI-Registerkarten. Wenn aktiviert, wird das Rahmenfenster eine Registerkarte für jeden untergeordneten MDI-Fensters angezeigt.|
 |[CMDIFrameWndEx::EnableMDITabsLastActiveActivation](#enablemditabslastactiveactivation)|Gibt an, ob die letzte aktive Registerkarte aktiviert werden soll, wenn der Benutzer als aktuelle Registerkarte geschlossen wird.|
 |[CMDIFrameWndEx::EnablePaneMenu](#enablepanemenu)|Aktiviert oder deaktiviert die automatische Erstellung und Verwaltung von Popup im Menü, das eine Liste von Bereichen der Anwendung angezeigt.  sein.|
@@ -641,7 +641,7 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] TRUE, um das Laden von den andockzustand, "false" zu aktivieren, um das Laden der Andockstatus zu deaktivieren.
 
 ### <a name="remarks"></a>Hinweise
@@ -658,7 +658,7 @@ void EnableMDITabbedGroups(
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] True gibt an, ist das MDI-Gruppen im Registerkartenformat-Feature aktiviert; Wenn "FALSE" ist das MDI-Gruppen im Registerkartenformat Feature deaktiviert.
 
 *params*<br/>
@@ -707,7 +707,7 @@ void EnableMDITabs(
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 Gibt an, ob Registerkarten aktiviert sind.
 
 *bIcons*<br/>
@@ -719,7 +719,7 @@ Gibt den Speicherort der registerkartenbezeichnungen.
 *bTabCloseButton*<br/>
 Gibt an, ob die Registerkarte schließen angezeigt werden sollen.
 
-*Stil*<br/>
+*style*<br/>
 Gibt die Art von Registerkarten. Verwenden Sie STYLE_3D_SCROLLED für normale Registerkarten oder STYLE_3D_ONENOTE für Microsoft OneNote-Registerkarten.
 
 *bTabCustomTooltips*<br/>
@@ -783,7 +783,7 @@ void EnablePaneMenu(
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] Wenn "true", wird die automatische Behandlung von im Menü aktiviert ist; Wenn "FALSE" ist die automatische Behandlung deaktiviert.
 
 *uiCustomizeCmd*<br/>
@@ -1047,7 +1047,7 @@ BOOL InsertPane(
 *pTarget*<br/>
 [in] Ein Zeiger auf den Bereich vor oder nach dem Bereich eingefügt werden soll.
 
-*bNach*<br/>
+*bAfter*<br/>
 [in] True gibt an, *pControlBar* eingefügt wird, nach dem *pTarget*. False gibt an, *pControlBar* eingefügt wird, bevor Sie *pTarget*.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1100,7 +1100,7 @@ BOOL IsMemberOfMDITabGroup(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Ein Zeiger auf Fenster im Registerkartenformat.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1132,7 +1132,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Der angegebene Punkt in Bildschirmkoordinaten.
 
 *dwBarAlignment*<br/>
@@ -1238,7 +1238,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bWeiter*<br/>
+*bNext*<br/>
 [in] True gibt an, verschieben Sie die Registerkarte zur nächsten Gruppe im Registerkartenformat. False gibt an, verschieben Sie sie in der vorherigen Registerkartengruppe an.
 
 ##  <a name="mditabnewgroup"></a>  CMDIFrameWndEx::MDITabNewGroup
@@ -1251,7 +1251,7 @@ void MDITabNewGroup(BOOL bVert=TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bHoriz*<br/>
+*bVert*<br/>
 [in] Gibt die Ausrichtung der neuen Gruppe. Wenn TRUE, wird die neue Gruppe vertikal ausgerichtet. Wenn "FALSE" ist die neue Gruppe horizontal ausgerichtet.
 
 ### <a name="remarks"></a>Hinweise
@@ -1342,7 +1342,7 @@ virtual BOOL OnCloseDockingPane(CDockablePane* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Zeiger auf den Bereich geschlossen wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1365,7 +1365,7 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Zeiger auf das Minirahmenfenster, das geschlossen wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1501,7 +1501,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 *pButton*<br/>
 [in] Die Symbolleisten-Schaltfläche.
 
-*PTI*<br/>
+*pTI*<br/>
 [out] Zeiger auf eine [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1592,7 +1592,7 @@ virtual BOOL OnShowMDITabContextMenu(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Die Position des Menüs in Bildschirmkoordinaten.
 
 *dwAllowedItems*<br/>
@@ -1745,7 +1745,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Der Punkt (in Bildschirmkoordinaten).
 
 *nSensitivity*<br/>
@@ -1870,7 +1870,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Zeiger auf ein Rahmenfenster für die Seitenansicht.
 
 ### <a name="remarks"></a>Hinweise
@@ -1888,7 +1888,7 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>Parameter
 
-*Menü "*<br/>
+*menu*<br/>
 [in] Ein Verweis auf eine [CMenu-Klasse](../../mfc/reference/cmenu-class.md) Objekt geändert werden.
 
 *uiViewUserToolbarCmdFirst*<br/>

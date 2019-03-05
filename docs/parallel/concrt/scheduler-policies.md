@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-ms.openlocfilehash: df045f7df9d0640b96ae1227c65c65aa7e432350
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2acfc199e7ad9edf3965dc8ccb4103eb615a66b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668740"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298131"
 ---
 # <a name="scheduler-policies"></a>Planerrichtlinien
 
@@ -29,7 +29,7 @@ Die [Concurrency:: PolicyElementKey](reference/concurrency-namespace-enums.md#po
 |Richtlinienschlüssel|Beschreibung|Standardwert|
 |----------------|-----------------|-------------------|
 |`SchedulerKind`|Ein [concurrency::SchedulerType](reference/concurrency-namespace-enums.md#schedulertype) -Wert, der den Typ der zum Planen von Aufgaben zu verwendenden Threads angibt.|`ThreadScheduler` (verwenden Sie normale Threads). Dies ist der einzige gültige Wert für diesen Schlüssel.|
-|`MaxConcurrency`|Ein `unsigned int` Wert, der die maximale Anzahl von Parallelitätsressourcen angibt, die der Planer verwendet.|[Concurrency::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|
+|`MaxConcurrency`|Ein `unsigned int` Wert, der die maximale Anzahl von Parallelitätsressourcen angibt, die der Planer verwendet.|[concurrency::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|
 |`MinConcurrency`|Ein `unsigned int` Wert, der die minimale Anzahl von Parallelitätsressourcen angibt, die der Planer verwendet.|`1`|
 |`TargetOversubscriptionFactor`|Ein `unsigned int` Wert, der angibt, wie viele threads jeder Verarbeitungsressource zuzuordnen.|`1`|
 |`LocalContextCacheSize`|Ein `unsigned int` Wert, der die maximale Anzahl von Kontexten, die zwischengespeichert werden, können in der lokalen Warteschlange eines einzelnen virtuellen Prozessoren angibt.|`8`|
@@ -49,11 +49,10 @@ Verwenden der [Concurrency::CurrentScheduler::GetPolicy](reference/currentschedu
 
 ## <a name="example"></a>Beispiel
 
-Um Beispiele zu untersuchen, die bestimmte Planerrichtlinien, zum Steuern des Verhaltens des Zeitplanungsmoduls verwenden, finden Sie unter [Vorgehensweise: Angeben von bestimmten Planerrichtlinien](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md) und [Vorgehensweise: Erstellen von Agents, verwenden Sie bestimmte Planerrichtlinien](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
+Um Beispiele zu untersuchen, die bestimmte Planerrichtlinien, zum Steuern des Verhaltens des Zeitplanungsmoduls verwenden, finden Sie unter [Vorgehensweise: Angeben von bestimmten Planerrichtlinien](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md) und [Vorgehensweise: Erstellen von Agents, die bestimmte Planerrichtlinien verwenden](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 [Aufgabenplanung](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Vorgehensweise: Angeben von bestimmten Planerrichtlinien](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)<br/>
 [Vorgehensweise: Erstellen von Agents, die bestimmte Planerrichtlinien verwenden](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
-

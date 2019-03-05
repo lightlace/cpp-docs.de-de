@@ -17,12 +17,12 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: b4844ed2246b5e700d9dc1895c3292cdde4efe8b
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: f44b7df7f1e4051f3cb07445952620861965f1d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178147"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263415"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl-Klasse
 
@@ -70,7 +70,7 @@ Die Basisklasse der neuen Klasse. Die Standardbasisklasse ist [CWindow](../../at
 
 |||
 |-|-|
-|[DialogProc-Funktion](#dialogproc)|Verarbeitet die Nachrichten gesendet, um das Dialogfeld.|
+|[DialogProc](#dialogproc)|Verarbeitet die Nachrichten gesendet, um das Dialogfeld.|
 |[StartDialogProc](#startdialogproc)|Wird aufgerufen, wenn die erste Nachricht empfangen wird, zum Verarbeiten von Nachrichten gesendet, um das Dialogfeld.|
 
 ## <a name="remarks"></a>Hinweise
@@ -168,7 +168,7 @@ static LRESULT CALLBACK DialogProc(
 *uMsg*<br/>
 [in] Die Nachricht gesendet, um das Dialogfeld.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 [in] Zusätzliche meldungsspezifische Informationen.
 
 *lParam*<br/>
@@ -310,7 +310,7 @@ static LRESULT CALLBACK StartDialogProc(
 *uMsg*<br/>
 [in] Die Nachricht gesendet, um das Dialogfeld.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 [in] Zusätzliche meldungsspezifische Informationen.
 
 *lParam*<br/>

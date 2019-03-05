@@ -28,12 +28,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_2::operator+=
 - amp_short_vectors/Concurrency::graphics::int_2::operator--
 ms.assetid: 258b02e9-f1ee-46c2-8edd-dc9f69184846
-ms.openlocfilehash: e71cc1d253d3c280f6004d99c4906610dc7f98bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c5aefbfd1a4b06274fac0f56c1e1e45ef9dc5bd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603020"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288921"
 ---
 # <a name="int2-class"></a>int_2-Klasse
 
@@ -64,37 +64,37 @@ class int_2;
 |Name|Beschreibung|
 |----------|-----------------|
 |int_2::get_x||
-|int_2:: get_xy||
-|int_2:: get_Y||
+|int_2::get_xy||
+|int_2::get_y||
 |int_2::get_yx||
 |int_2::ref_g||
 |int_2::ref_r||
 |int_2::ref_x||
 |int_2::ref_y||
-|int_2:: set_X||
-|int_2:: set_xy||
-|int_2:: set_y||
+|int_2::set_x||
+|int_2::set_xy||
+|int_2::set_y||
 |int_2::set_yx||
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
 |Name|Beschreibung|
 |----------|-----------------|
-|int_2::-||
-|int_2:::||
+|int_2::operator-||
+|int_2::operator--||
 |int_2::operator%=||
-|int_2:: & =||
+|int_2::operator&=||
 |int_2::operator*=||
 |int_2::operator/=||
 |int_2::operator^=||
-|int_2::&#124;=||
-|int_2:: ~||
-|int_2:: Operator++-||
-|int_2:: Operator +=||
+|int_2::operator&#124;=||
+|int_2::operator~||
+|int_2::operator++||
+|int_2::operator+=||
 |int_2::operator<\<=||
 |int_2::operator=||
-|int_2:: Operator-=||
-|int_2:: >> =||
+|int_2::operator-=||
+|int_2::operator>>=||
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
@@ -111,7 +111,7 @@ class int_2;
 |int_2::r||
 |int_2::rg||
 |int_2::x||
-|int_2:: XY||
+|int_2::xy||
 |int_2::y||
 |int_2::yx||
 
@@ -178,7 +178,7 @@ Der Wert 1 Element initialisiert werden.
 *_V*<br/>
 Der Wert für die Initialisierung.
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Das Objekt, das zum Initialisieren verwendet.
 
 ##  <a name="int_2__size"></a> Größe

@@ -106,12 +106,12 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: 26d0f5e875c4f3982705a2cf571b15cd5bfac985
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 31502f2ecda1c14cb68c83da98cf2b764baba461
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178919"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264130"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite-Klasse
 
@@ -325,7 +325,7 @@ Ein Zeiger auf den Text im Steuerelement angezeigt werden. Legt den Wert der Eig
 *dwStyle*<br/>
 Windows-Formate. Die verfügbaren Formate finden Sie unter den **"Hinweise"** Abschnitt.
 
-*Rect*<br/>
+*rect*<br/>
 Gibt an, die Größe und Position des Steuerelements. Es kann sein, entweder eine `CRect` Objekt oder ein `RECT` Struktur.
 
 *nID*<br/>
@@ -340,7 +340,7 @@ Gibt an, ob die Daten in *pPersist* interpretiert werden soll, als `IStorage` od
 *bstrLicKey*<br/>
 Lizenz-Schlüsseldaten ist optional. Diese Daten ist nur für das Erstellen von Steuerelementen, die erfordern einen Laufzeit-Lizenzschlüssel erforderlich. Wenn das Steuerelement unterstützt die Lizenzierung, müssen Sie einen Lizenzschlüssel für die Erstellung des Steuerelements erfolgreich bereitstellen. Der Standardwert ist NULL.
 
-*PPT*<br/>
+*ppt*<br/>
 Ein Zeiger auf eine `POINT` Struktur, die die linke obere Ecke des Steuerelements enthält. Die Größe des Steuerelements richtet sich nach dem Wert der *Psize*. Die *ppt* und *Psize* Werte sind eine optionale Methode, um die Größe und position Opf des Steuerelements.
 
 *psize*<br/>
@@ -443,7 +443,7 @@ virtual BOOL EnableWindow(BOOL bEnable);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 Gibt an, ob aktivieren oder deaktivieren das Fenster aus: "True", wenn im Fenster Eingaben werden soll, aktiviert ist, andernfalls "false".
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1023,7 +1023,7 @@ void SetDefaultButton(BOOL bDefault);
 
 ### <a name="parameters"></a>Parameter
 
-*bStandardstufe*<br/>
+*bDefault*<br/>
 Ungleich NULL, wenn das Steuerelement die Standardschaltfläche werden soll; andernfalls 0 (null).
 
 ### <a name="remarks"></a>Hinweise
@@ -1148,10 +1148,10 @@ Die neue Position der linken Seite des Fensters.
 *y*<br/>
 Die neue Position des oberen Rand des Fensters.
 
-*CX*<br/>
+*cx*<br/>
 Die neue Breite des Fensters
 
-*CY*<br/>
+*cy*<br/>
 Die neue Höhe des Fensters.
 
 *nFlags*<br/>

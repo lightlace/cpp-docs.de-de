@@ -17,12 +17,12 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-ms.openlocfilehash: 8e427206379f1e7d094362411f074ad9cafb43fd
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: cfcb65fa23fe4593e7dcf11da3b5da4b1785ce71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657538"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279743"
 ---
 # <a name="texture-class"></a>texture-Klasse
 
@@ -216,7 +216,7 @@ unsigned int get_row_pitch() const restrict(cpu);
 
 Die Anzahl von Bytes zwischen jeder Zeile in einer zweidimensionalen Stagingtextur oder zwischen jeder Zeile eines Tiefensegments in einer dreidimensionalen Stagingtextur.
 
-##  <a name="operator_call"></a> Operator()
+##  <a name="operator_call"></a> operator()
 
 Gibt den Elementwert zurück, der von den Parametern angegeben wird.
 
@@ -280,7 +280,7 @@ Der Index.
 
 Das Element am angegebenen Index.
 
-##  <a name="operator_eq"></a> Operator =
+##  <a name="operator_eq"></a> operator=
 
 Kopiert das angegebene [Textur](texture-class.md) -Objekts in dieses Objekt.
 
@@ -294,7 +294,7 @@ texture& operator= (
 
 ### <a name="parameters"></a>Parameter
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Das `texture`-Objekt, aus dem kopiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -573,7 +573,7 @@ Die Anzahl von MipMap-Ebenen in der zugrunde liegenden Textur. Wenn 0 angegeben 
 *_Rank*<br/>
 Der Rang des Wertebereichs.
 
-*_Quelle*<br/>
+*_Source*<br/>
 Ein Zeiger auf einen Hostpuffer.
 
 *_Src*<br/>
@@ -588,7 +588,7 @@ Ein Anfangsiterator in den Quellcontainer.
 *_Src_last*<br/>
 Ein Endeiterator in den Quellcontainer.
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Andere Datenquelle.
 
 *_Rank*<br/>

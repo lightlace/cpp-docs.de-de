@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-ms.openlocfilehash: 96a3351656807fa841661ec9f082bb4255d5136a
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 14ce057c141f22c14361bafd55fce3ccd345d4dd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176613"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279470"
 ---
 # <a name="cmfcribboncategory-class"></a>CMFCRibbonCategory-Klasse
 
@@ -219,7 +219,7 @@ class CMFCRibbonCategory : public CObject
 |[CMFCRibbonCategory::SetData](#setdata)|Speichert die benutzerdefinierten Daten in der Menübandkategorie an.|
 |[CMFCRibbonCategory::SetKeys](#setkeys)|Die Menübandkategorie ein Keytip zugeordnet.|
 |[CMFCRibbonCategory::SetName](#setname)||
-|[CMFCRibbonCategory:: Settabcolor](#settabcolor)|Legt die Farbe der Menübandkategorie fest.|
+|[CMFCRibbonCategory::SetTabColor](#settabcolor)|Legt die Farbe der Menübandkategorie fest.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -605,7 +605,7 @@ void GetItemIDsList(
 
 ### <a name="parameters"></a>Parameter
 
-*Mit*<br/>
+*lstItems*<br/>
 [out] Die Liste der Befehls-IDs für die Menübandelemente in der Menübandkategorie.
 
 *bHiddenOnly*<br/>
@@ -717,7 +717,7 @@ CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -909,7 +909,7 @@ CMFCRibbonPanel* HighlightPanel(
 *pHLPanel*<br/>
 [in] Zeiger zum Menübandbereich zu markieren.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -932,7 +932,7 @@ CMFCRibbonBaseElement* HitTest(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Die x- und y-Koordinaten des Mauszeigers relativ zu der oberen linken Ecke des Fensters.
 
 *bCheckPanelCaption*<br/>
@@ -956,7 +956,7 @@ int HitTestEx(CPoint point) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Die x- und y-Koordinaten des Mauszeigers relativ zu der oberen linken Ecke des Fensters.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -977,7 +977,7 @@ CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Der Punkt, um zu testen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1052,7 +1052,7 @@ virtual BOOL NotifyControlCommand(
 *nNotifyCode*<br/>
 [in] Der Benachrichtigungscode.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 [in] Der WPARAM-Feld der Nachricht.
 
 *lParam*<br/>
@@ -1108,7 +1108,7 @@ virtual BOOL OnDrawImage(
 *pDC*<br/>
 [in] Zeiger auf einen Gerätekontext für das Image.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Rechteck für das Bild wird angezeigt.
 
 *pElement*<br/>
@@ -1161,7 +1161,7 @@ virtual BOOL OnKey(UINT nChar);
 
 ### <a name="parameters"></a>Parameter
 
-*NChar*<br/>
+*nChar*<br/>
 Den virtueller Tastencode für die Schlüssel, den ein Benutzer aufgerufen werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -1176,7 +1176,7 @@ virtual CMFCRibbonBaseElement* OnLButtonDown(CPoint point);
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Die x- und y-Koordinaten des Mauszeigers relativ zu der oberen linken Ecke des Fensters.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1195,7 +1195,7 @@ virtual void OnLButtonUp(CPoint point);
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.
 
 ### <a name="remarks"></a>Hinweise
@@ -1210,7 +1210,7 @@ virtual void OnMouseMove(CPoint point);
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Die x- und y-Koordinaten des Zeigers, relativ zu der oberen linken Ecke des Fensters.
 
 ### <a name="remarks"></a>Hinweise
@@ -1269,7 +1269,7 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="parameters"></a>Parameter
 
-*nämlich pCmdUI*<br/>
+*pCmdUI*<br/>
 [in] Zeiger auf die `CMFCRibbonCmdUI` Objekt, das angibt, die Elemente der Benutzeroberfläche in aktiviert werden und welche deaktiviert werden soll.
 
 *pTarget*<br/>
@@ -1310,7 +1310,7 @@ BOOL RemovePanel(
 *nIndex*<br/>
 [in] Die Indexnummer des zu entfernenden. Durch den Aufruf der [CMFCRibbonCategory::GetPanelIndex](#getpanelindex) Methode.
 
-*bLöschen*<br/>
+*bDelete*<br/>
 [in] "True", um das Panelobjekt aus dem Speicher zu löschen; "False", um das Panelobjekt zu entfernen, ohne ihn zu löschen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1416,7 +1416,7 @@ void SetTabColor(AFX_RibbonCategoryColor color);
 
 ### <a name="parameters"></a>Parameter
 
-*Farbe*<br/>
+*color*<br/>
 [in] Gibt die neue Farbe der Menübandkategorie.
 
 ### <a name="remarks"></a>Hinweise

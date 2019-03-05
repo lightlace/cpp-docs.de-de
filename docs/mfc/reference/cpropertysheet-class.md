@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 8ea466abe153bd31ef15c41b277b57f90cd2b50b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5fd3a682aa649091712a09a9131081c06d29ca6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450933"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300621"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet-Klasse
 
@@ -84,7 +84,7 @@ class CPropertySheet : public CWnd
 |[CPropertySheet::AddPage](#addpage)|Fügt dem Eigenschaftsblatt eine Seite hinzu.|
 |[CPropertySheet::Construct](#construct)|Erstellt ein `CPropertySheet`-Objekt.|
 |[CPropertySheet::Create](#create)|Zeigt die eines nicht modalen Eigenschaftenblatts an.|
-|[CPropertySheet:: DoModal](#domodal)|Zeigt ein modales Eigenschaftsblatt an.|
+|[CPropertySheet::DoModal](#domodal)|Zeigt ein modales Eigenschaftsblatt an.|
 |[CPropertySheet::EnableStackedTabs](#enablestackedtabs)|Gibt an, ob das Eigenschaftenblatt gestapelte oder einen Scrollcursor Registerkarten verwendet.|
 |[CPropertySheet::EndDialog](#enddialog)|Das Eigenschaftenblatt wird beendet.|
 |[CPropertySheet::GetActiveIndex](#getactiveindex)|Ruft den Index der aktiven Seite des Eigenschaftenblatts ab.|
@@ -94,7 +94,7 @@ class CPropertySheet : public CWnd
 |[CPropertySheet::GetPageIndex](#getpageindex)|Ruft den Index der angegebenen Seite des Eigenschaftenblatts ab.|
 |[CPropertySheet::GetTabControl](#gettabcontrol)|Ruft einen Zeiger auf ein Registerkarten-Steuerelement ab.|
 |[CPropertySheet::MapDialogRect](#mapdialogrect)|Konvertiert die Dialogfeld-Einheiten eines Rechtecks Bildschirm Einheiten.|
-|[CPropertySheet:: OnInitDialog](#oninitdialog)|Überschreiben Sie, um das Blatt eigenschafteninitialisierung zu erweitern.|
+|[CPropertySheet::OnInitDialog](#oninitdialog)|Überschreiben Sie, um das Blatt eigenschafteninitialisierung zu erweitern.|
 |[CPropertySheet::PressButton](#pressbutton)|Simuliert die Auswahl der angegebenen Schaltfläche in einem Eigenschaftenblatt.|
 |[CPropertySheet::RemovePage](#removepage)|Entfernt eine Seite aus dem Eigenschaftenblatt.|
 |[CPropertySheet::SetActivePage](#setactivepage)|Programmgesteuert legt die aktive Seite-Objekt fest.|
@@ -171,7 +171,7 @@ void AddPage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parameter
 
-*P_seite*<br/>
+*pPage*<br/>
 Zeigt auf der Seite, um das Eigenschaftenblatt hinzugefügt werden. Darf nicht NULL sein.
 
 ### <a name="remarks"></a>Hinweise
@@ -510,7 +510,7 @@ CPropertyPage* GetPage(int nPage) const;
 
 ### <a name="parameters"></a>Parameter
 
-*. nSeite*<br/>
+*nPage*<br/>
 Der gewünschten Seite bei 0 beginnenden Index. Muss zwischen 0 und kleiner als die Anzahl der Seiten im Eigenschaftenblatt, einschließlich sein.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -547,7 +547,7 @@ int GetPageIndex(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parameter
 
-*P_seite*<br/>
+*pPage*<br/>
 Zeigt auf der Seite mit dem Index gefunden werden. Darf nicht NULL sein.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -647,8 +647,8 @@ void PressButton(int nButton);
 
 ### <a name="parameters"></a>Parameter
 
-*Nschaltfläche*<br/>
-Nschaltfläche: identifiziert die Schaltfläche gedrückt wird. Dieser Parameter kann einen der folgenden Werte sein:
+*nButton*<br/>
+Nschaltfläche: Identifiziert die Schaltfläche gedrückt wird. Dieser Parameter kann einen der folgenden Werte sein:
 
 - PSBTN_BACK wählt die zurück-Taste.
 
@@ -685,10 +685,10 @@ void RemovePage(int nPage);
 
 ### <a name="parameters"></a>Parameter
 
-*P_seite*<br/>
+*pPage*<br/>
 Zeigt auf der Seite aus dem Eigenschaftenblatt entfernt werden soll. Darf nicht NULL sein.
 
-*. nSeite*<br/>
+*nPage*<br/>
 Der Index der Seite entfernt werden soll. Muss zwischen 0 und kleiner als die Anzahl der Seiten im Eigenschaftenblatt, einschließlich sein.
 
 ### <a name="remarks"></a>Hinweise
@@ -706,10 +706,10 @@ BOOL SetActivePage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parameter
 
-*. nSeite*<br/>
+*nPage*<br/>
 Der Index der Seite festlegen. Es muss zwischen 0 und kleiner als die Anzahl der Seiten im Eigenschaftenblatt, einschließlich sein.
 
-*P_seite*<br/>
+*pPage*<br/>
 Zeigt auf der Seite, um Sie im Eigenschaftenfenster festgelegt. Es darf nicht NULL sein.
 
 ### <a name="return-value"></a>Rückgabewert

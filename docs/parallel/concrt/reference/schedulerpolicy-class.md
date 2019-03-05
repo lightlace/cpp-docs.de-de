@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-ms.openlocfilehash: 0d1c28501abc86d09b683b0ed91f831fe8697306
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2eff40b11e4e9a5981ad85c37c8345abefb13fed
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462050"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265534"
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy-Klasse
 
@@ -61,7 +61,7 @@ Weitere Informationen über die Richtlinien, die mithilfe von gesteuert werden k
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** concrt.h hinzu, concrtrm.h
+**Header:** concrt.h, concrtrm.h
 
 **Namespace:** Parallelität
 
@@ -86,7 +86,7 @@ Wenn der Schlüssel, wird angegeben die `key` -Parameter wird unterstützt, der 
 
 Löst die Methode [Invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) für einen Schlüssel für die ungültige Richtlinie.
 
-##  <a name="operator_eq"></a> Operator =
+##  <a name="operator_eq"></a> operator=
 
 Weist die Planerrichtlinie von einer anderen Planerrichtlinie zu.
 
@@ -138,7 +138,7 @@ Der zweite Konstruktor erstellt eine neue Planerrichtlinie, die ein Initialisier
 
 Der dritte Konstruktor ist ein Kopierkonstruktor. Oft ist die zweckmäßigste Art, eine neue Planerrichtlinie zu definieren, das Kopieren einer vorhandenen Richtlinie und das anschließende Bearbeiten mit der `SetPolicyValue`-Methode oder der `SetConcurrencyLimits`-Methode.
 
-##  <a name="dtor"></a> ~ SchedulerPolicy
+##  <a name="dtor"></a> ~SchedulerPolicy
 
 Zerstört eine Planerrichtlinie.
 
@@ -185,7 +185,7 @@ unsigned int SetPolicyValue(
 *key*<br/>
 Der Richtlinienschlüssel für einen Wert festgelegt werden soll.
 
-*Wert*<br/>
+*value*<br/>
 Der Wert auf den Richtlinienschlüssel festgelegt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -207,4 +207,3 @@ Beachten Sie, die diese Methode nicht zulässig ist, Festlegen der `MinConcurren
 [CurrentScheduler-Klasse](currentscheduler-class.md)<br/>
 [Scheduler-Klasse](scheduler-class.md)<br/>
 [Aufgabenplanung](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

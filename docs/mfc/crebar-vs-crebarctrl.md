@@ -9,16 +9,16 @@ helpviewer_keywords:
 - rebar controls [MFC], CReBarCtrl class [MFC]
 - GetReBarCtrl class [MFC]
 ms.assetid: 7f9c1d7e-5d5f-4956-843c-69ed3df688d0
-ms.openlocfilehash: 49a1528e52d140a673d4035c55394ded3656652f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1b5cda729e760246449bf197fdc9b32752b96e8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641410"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279210"
 ---
 # <a name="crebar-vs-crebarctrl"></a>CReBar im Vergleich zu CReBarCtrl
 
-MFC stellt zwei Klassen um Infoleisten zu erstellen: [CReBar](../mfc/reference/crebar-class.md) und [CReBarCtrl](../mfc/reference/crebarctrl-class.md) (die dient als Wrapper für die allgemeine Windows-Steuerungs-API). `CReBar` Stellt die gesamte Funktionalität des allgemeinen Grundleisten-Steuerelements, und viele der erforderlichen steuerelementeinstellungen für allgemeine und Strukturen für Sie verarbeitet.
+MFC bietet zwei Klassen um Infoleisten zu erstellen: [CReBar](../mfc/reference/crebar-class.md) und [CReBarCtrl](../mfc/reference/crebarctrl-class.md) (die dient als Wrapper für die allgemeine Windows-Steuerungs-API). `CReBar` Stellt die gesamte Funktionalität des allgemeinen Grundleisten-Steuerelements, und viele der erforderlichen steuerelementeinstellungen für allgemeine und Strukturen für Sie verarbeitet.
 
 `CReBarCtrl` ist eine Wrapperklasse für die Win32-Grundleisten-Steuerelement, und daher möglicherweise einfacher zu implementieren, wenn Sie nicht beabsichtigen, die die Infoleiste in die MFC-Architektur integriert. Wenn Sie planen, verwenden Sie `CReBarCtrl` und grundleiste in der MFC-Architektur integriert, Sie müssen zusätzliche Sorgfalt Grundleisten-Steuerelement Manipulationen mit MFC zu kommunizieren. Diese Kommunikation ist nicht schwierig. Es ist jedoch zusätzliche Arbeit, die nicht benötigten ist bei Verwendung von `CReBar`.
 
@@ -37,4 +37,3 @@ Beide Methoden erhalten Sie Zugriff auf die Memberfunktionen des Infoleisten-Ste
 
 [Verwenden von CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
 [Steuerelemente](../mfc/controls-mfc.md)
-

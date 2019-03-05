@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CDocument class [MFC], space requirements
 - views [MFC], applications without
 ms.assetid: 2c22f352-a137-45ce-9971-c142173496fb
-ms.openlocfilehash: 7b4da7df691837b47daa35c4b474711062d4e5c7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 98bb4de2f6d1a43fc1958a0fcbaafa1ac0af82a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523168"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282551"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternativen zur Dokument-/Ansichtarchitektur
 
@@ -67,4 +67,3 @@ Der Artikel [MFC: Verwenden von Datenbankklassen ohne Dokumente und Ansichten](.
 ## <a name="see-also"></a>Siehe auch
 
 [Dokument-/Ansichtsarchitektur](../mfc/document-view-architecture.md)
-

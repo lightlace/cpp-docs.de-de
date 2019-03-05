@@ -11,12 +11,12 @@ f1_keywords:
 - atlconv/ATL::DEVMODEW2A
 - atlconv/ATL::TEXTMETRICW2A
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-ms.openlocfilehash: 1cad89fe065c0827169a22cc9699b677323d8594
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 889f8459e81418197420bc2efd410225d4f220bc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544520"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271761"
 ---
 # <a name="string-conversion-macros"></a>Zeichenfolgenkonvertierungs-Makros
 
@@ -24,7 +24,7 @@ Diese Makros stellen Zeichenfolge Konvertierung-Funktionen.
 
 ##  <a name="atl_and_mfc_string_conversion_macros"></a>  ATL und MFC-Zeichenfolgen-Konvertierungsmakros
 
-Die hier besprochenen Zeichenfolgenkonvertierungsmakros sind sowohl für ATL als auch für MFC gültig. Weitere Informationen zu MFC-zeichenfolgenkonvertierung, finden Sie unter [TN059: Verwenden von MFC MBCS/Unicode-Umwandlungsmakros](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) und [MFC-Makros und Globals](../../mfc/reference/mfc-macros-and-globals.md).
+Die hier besprochenen Zeichenfolgenkonvertierungsmakros sind sowohl für ATL als auch für MFC gültig. Weitere Informationen zur MFC-Zeichenfolgenkonvertierung finden Sie unter [TN059: Verwenden von MFC MBCS/Unicode-Umwandlungsmakros](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) und [MFC-Makros und Globals](../../mfc/reference/mfc-macros-and-globals.md).
 
 ##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  DEVMODE und TEXTMETRIC Zeichenfolgen-Konvertierungsmakros
 
@@ -56,7 +56,7 @@ Das Verhalten der `DEVMODE` und `TEXTMETRIC` Zeichenfolgen-konvertierungsmakros 
 
 |Geltende Compiler-Anweisung|T wird zu|OLE wird zu|
 |----------------------------------|---------------|-----------------|
-|Keine|**A**|**W**|
+|none|**A**|**W**|
 |**\_UNICODE**|**W**|**W**|
 |**OLE2ANSI**|**A**|**A**|
 |**\_UNICODE** und **OLE2ANSI**|**W**|**A**|

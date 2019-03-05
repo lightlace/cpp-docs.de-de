@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - transformer class
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
-ms.openlocfilehash: cc35a4e2de2b29bb6d437dfcbf48ef361fefdfa3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c07017539bc0125e9e8c27e208480a50ccc7a719
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618282"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299178"
 ---
 # <a name="transformer-class"></a>transformer-Klasse
 
@@ -42,7 +42,7 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
 *_Input*<br/>
 Der Nutzlasttyp der Nachrichten vom Puffer akzeptiert.
 
-*_Ausgabe*<br/>
+*_Output*<br/>
 Der Nutzlasttyp der Nachrichten gespeichert und vom Puffer übertragen.
 
 ## <a name="members"></a>Member
@@ -51,7 +51,7 @@ Der Nutzlasttyp der Nachrichten gespeichert und vom Puffer übertragen.
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[Transformer](#ctor)|Überladen. Erstellt einen `transformer` -Meldungsblock.|
+|[transformer](#ctor)|Überladen. Erstellt einen `transformer` -Meldungsblock.|
 |[~ Transformer-Destruktor](#dtor)|Zerstört die `transformer` Meldungsblock.|
 
 ### <a name="protected-methods"></a>Geschützte Methoden
@@ -65,7 +65,7 @@ Der Nutzlasttyp der Nachrichten gespeichert und vom Puffer übertragen.
 |[propagate_to_any_targets](#propagate_to_any_targets)|Führt die Transformer-Funktion für die eingehende Nachrichten.|
 |[release_message](#release_message)|Gibt die nachrichtenreservierung einer vorherigen frei. (Überschreibt [source_block:: release_message](source-block-class.md#release_message).)|
 |[reserve_message](#reserve_message)|Reserviert eine Meldung, die zuvor von diesem angebotenen `transformer` Meldungsblock. (Überschreibt [source_block:: reserve_message](source-block-class.md#reserve_message).)|
-|[resume_propagation](#resume_propagation)|Weitergabe fortgesetzt, nachdem eine Reservierung freigegeben wurde. (Überschreibt [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|
+|[resume_propagation](#resume_propagation)|Weitergabe fortgesetzt, nachdem eine Reservierung freigegeben wurde. (Overrides [source_block::resume_propagation](source-block-class.md#resume_propagation).)|
 |[send_message](#send_message)|Übergibt synchron eine Nachricht von einem `ISource` Block, um diese `transformer` Meldungsblock. Wird aufgerufen, indem die `send` Methode, wenn Sie von einem Quellblock aufgerufen.|
 |[supports_anonymous_source](#supports_anonymous_source)|Überschreibt die `supports_anonymous_source` Methode, um anzugeben, dass dieser Block annehmen kann Nachrichten angeboten, von einer Quelle, die nicht verknüpft ist. (Überschreibt [ITarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|
 

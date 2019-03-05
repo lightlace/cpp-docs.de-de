@@ -17,12 +17,12 @@ helpviewer_keywords:
 - CComAutoThreadModule class
 - apartment model modules
 ms.assetid: 13063ea5-a57e-4aac-97d3-227137262811
-ms.openlocfilehash: 805227144887b29d85b1948f62060ffe9eb2d0e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b0fa685bf9a7de94b158bd62b00161c1b58562d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435687"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271995"
 ---
 # <a name="ccomautothreadmodule-class"></a>CComAutoThreadModule-Klasse
 
@@ -52,8 +52,8 @@ class CComAutoThreadModule : public CComModule
 |[CreateInstance](#createinstance)|Wählt einen Thread aus, und erstellt dann ein Objekt im zugeordneten Apartment.|
 |[GetDefaultThreads](#getdefaultthreads)|(Statisch) Dynamisch berechnet die Anzahl der Threads für das Modul, das basierend auf der Anzahl der Prozessoren ein.|
 |[Init](#init)|Erstellt das Modul des Threads.|
-|[Sperre](#lock)|Erhöht die Sperrenanzahl des Moduls und für den aktuellen Thread.|
-|[Entsperren](#unlock)|Verringert die Sperrenanzahl des Moduls und für den aktuellen Thread.|
+|[Lock](#lock)|Erhöht die Sperrenanzahl des Moduls und für den aktuellen Thread.|
+|[Unlock](#unlock)|Verringert die Sperrenanzahl des Moduls und für den aktuellen Thread.|
 
 ### <a name="data-members"></a>Datenmember
 

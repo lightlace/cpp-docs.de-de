@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: c8c8971e467b2b8063bb5bb5d8e953fc48bcc42e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3fcdddd27437f57ba800a602873d9bb3ae26e82f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666101"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283604"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl-Klasse
 
@@ -208,7 +208,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Gibt das Schieberegler-Steuerelement-Stil. Wenden Sie eine beliebige Kombination von [Stile der Schieberegler-Steuerelemente](/windows/desktop/Controls/trackbar-control-styles), in der Windows-SDK verwenden, um das Steuerelement beschrieben.
 
-*Rect*<br/>
+*rect*<br/>
 Gibt an, Größe und Position des Schieberegler-Steuerelements. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.
 
 *pParentWnd*<br/>
@@ -250,7 +250,7 @@ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erwei
 *dwStyle*<br/>
 Gibt das Schieberegler-Steuerelement-Stil. Wenden Sie eine beliebige Kombination von [Stile der Schieberegler-Steuerelemente](/windows/desktop/Controls/trackbar-control-styles), in der Windows-SDK verwenden, um das Steuerelement beschrieben.
 
-*Rect*<br/>
+*rect*<br/>
 Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -385,10 +385,10 @@ void GetRange(
 
 ### <a name="parameters"></a>Parameter
 
-*nmin.*<br/>
+*nMin*<br/>
 Verweis auf eine ganze Zahl, die die minimale Position empfängt.
 
-*nmax.*<br/>
+*nMax*<br/>
 Verweis auf eine ganze Zahl, die die maximale Position empfängt.
 
 ### <a name="remarks"></a>Hinweise
@@ -431,10 +431,10 @@ void GetSelection(
 
 ### <a name="parameters"></a>Parameter
 
-*nmin.*<br/>
+*nMin*<br/>
 Verweis auf eine ganze Zahl, die die Anfangsposition des die aktuelle Auswahl empfängt.
 
-*nmax.*<br/>
+*nMax*<br/>
 Verweis auf eine ganze Zahl, die die Endposition der aktuellen Auswahl empfängt.
 
 ##  <a name="getthumblength"></a>  CSliderCtrl::GetThumbLength
@@ -630,10 +630,10 @@ void SetRange(
 
 ### <a name="parameters"></a>Parameter
 
-*nmin.*<br/>
+*nMin*<br/>
 Minimale Position für den Schieberegler.
 
-*nmax.*<br/>
+*nMax*<br/>
 Maximale Position für den Schieberegler.
 
 *bRedraw*<br/>
@@ -651,7 +651,7 @@ void SetRangeMax(
 
 ### <a name="parameters"></a>Parameter
 
-*nmax.*<br/>
+*nMax*<br/>
 Maximale Position für den Schieberegler.
 
 *bRedraw*<br/>
@@ -669,7 +669,7 @@ void SetRangeMin(
 
 ### <a name="parameters"></a>Parameter
 
-*nmin.*<br/>
+*nMin*<br/>
 Minimale Position für den Schieberegler.
 
 *bRedraw*<br/>
@@ -687,10 +687,10 @@ void SetSelection(
 
 ### <a name="parameters"></a>Parameter
 
-*nmin.*<br/>
+*nMin*<br/>
 Die Anfangsposition für den Schieberegler.
 
-*nmax.*<br/>
+*nMax*<br/>
 Die Endposition für den Schieberegler.
 
 ##  <a name="setthumblength"></a>  CSliderCtrl::SetThumbLength
@@ -771,7 +771,7 @@ int SetTipSide(int nLocation);
 
 ### <a name="parameters"></a>Parameter
 
-*%nspeicherort*<br/>
+*nLocation*<br/>
 Wert, der die Position, an dem das QuickInfo-Steuerelement angezeigt werden sollen darstellt. Finden Sie eine Liste der möglichen Werte, die Win32-Meldung [TBM_SETTIPSIDE](/windows/desktop/Controls/tbm-settipside), wie im Windows SDK beschrieben.
 
 ### <a name="return-value"></a>Rückgabewert

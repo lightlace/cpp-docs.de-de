@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: b37105cf1afdcf966176a2e2615f9c141022088d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2b2d0935380caed8ad9d6741b9107a5f879f7903
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520517"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268059"
 ---
 # <a name="colevariant-class"></a>COleVariant-Klasse
 
@@ -64,7 +64,7 @@ class COleVariant : public tagVARIANT
 |[COleVariant::operator LPVARIANT](#operator_lpvariant)|Konvertiert eine `COleVariant` -Objekt in ein `LPVARIANT`.|
 |[COleVariant::operator =](#operator_eq)|Kopiert ein `COleVariant` Wert.|
 |[COleVariant::operator ==](#operator_eq_eq)|Vergleicht zwei `COleVariant` Werte.|
-|[COleVariant::operator &lt; &lt;, &gt;&gt;](#operator_lt_lt__gt_gt)|Ausgaben eine `COleVariant` Wert `CArchive` oder `CDumpContext` und gibt eine `COleVariant` -Sitzungsobjekts `CArchive`.|
+|[COleVariant::operator &lt;&lt;, &gt;&gt;](#operator_lt_lt__gt_gt)|Ausgaben eine `COleVariant` Wert `CArchive` oder `CDumpContext` und gibt eine `COleVariant` -Sitzungsobjekts `CArchive`.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -157,7 +157,7 @@ Die `VARTYPE` für das neue `COleVariant` Objekt.
 *curSrc*<br/>
 Ein [COleCurrency](../../mfc/reference/colecurrency-class.md) Objekt, das in die neue kopiert werden `COleVariant` Objekt.
 
-*FltSrc*, *DblSrc*<br/>
+*fltSrc*, *dblSrc*<br/>
 Ein in das neue `COleVariant`-Objekt zu kopierender numerischer Wert.
 
 *timeSrc*<br/>
@@ -169,7 +169,7 @@ Ein [CByteArray](../../mfc/reference/cbytearray-class.md) Objekt, das in die neu
 *lbSrc*<br/>
 Ein [CLongBinary](../../mfc/reference/clongbinary-class.md) Objekt, das in die neue kopiert werden `COleVariant` Objekt.
 
-*PIDL*<br/>
+*pidl*<br/>
 Ein Zeiger auf eine [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-_itemidlist) Struktur in die neue kopiert werden `COleVariant` Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -218,7 +218,7 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 
 ### <a name="parameters"></a>Parameter
 
-*VarType*<br/>
+*vartype*<br/>
 Für diese VARTYPE `COleVariant` Objekt.
 
 *pSrc*<br/>
@@ -269,7 +269,7 @@ void GetByteArrayFromVariantArray(CByteArray& bytes);
 
 ### <a name="parameters"></a>Parameter
 
-*Bytes*<br/>
+*bytes*<br/>
 Ein Verweis auf einen vorhandenen [CByteArray](../../mfc/reference/cbytearray-class.md) Objekt.
 
 ##  <a name="operator_lpcvariant"></a>  COleVariant::operator LPCVARIANT
@@ -390,7 +390,7 @@ void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 *lpszSrc*<br/>
 Eine mit Null endende Zeichenfolge, die in die neue kopiert werden `COleVariant` Objekt.
 
-*vtSrc*<br/>
+*VtSrc*<br/>
 Für die neue VARTYPE `COleVariant` Objekt.
 
 ### <a name="remarks"></a>Hinweise

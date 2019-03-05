@@ -1,19 +1,19 @@
 ---
-title: 'Container: Client-Element-Benachrichtigungen'
+title: 'Container: Clientelement-Benachrichtigungen'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - notifications [MFC], container client item
 - OLE containers [MFC], client-item notifications
 - client items and OLE containers
 ms.assetid: e1f1c427-01f5-45f2-b496-c5bce3d76340
-ms.openlocfilehash: b59ba84c27d9ed4c964bd308cf69f9f729eb3c39
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 583c438820c002a4c192d15358ca98424d02889a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528894"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291053"
 ---
-# <a name="containers-client-item-notifications"></a>Container: Client-Element-Benachrichtigungen
+# <a name="containers-client-item-notifications"></a>Container: Clientelement-Benachrichtigungen
 
 Dieser Artikel beschreibt die überschreibbaren-Funktionen, die MFC-Framework aufruft, wenn Server-Anwendungen in der Clientanwendung Dokument Elemente ändern.
 
@@ -40,7 +40,7 @@ Das zweite Argument für diese Funktion gibt an, wie sich das Element geändert 
 |**OLE_CHANGED**|Gibt den Aspekt des OLE-Elements, die geändert wurde.|
 |**OLE_CHANGED_STATE**|Beschreibt den Status, die eingegeben wird (*EmptyState*, *LoadedState*, *OpenState*, *ActiveState*, oder  *ActiveUIState*).|
 
-Weitere Informationen zu den Status einer Client-Element kann davon ausgehen, finden Sie unter [Container: Client-Element-Zustände](../mfc/containers-client-item-states.md).
+Weitere Informationen zu den Status einer Client-Element kann davon ausgehen, finden Sie unter [Container: Clientelement-Zustände](../mfc/containers-client-item-states.md).
 
 Das Framework ruft `COleClientItem::OnGetItemPosition` Wenn ein Element für direktes Editieren aktiviert wird. Implementierung ist für Anwendungen mit Unterstützung für direktes Editieren erforderlich. Der MFC-Anwendung-Assistent bietet eine grundlegende Implementierung, die Koordinaten des Elements weist die `CRect` -Objekt, das als Argument übergeben wird `OnGetItemPosition`.
 
@@ -49,6 +49,5 @@ Wenn ein OLE-Element Position oder Größe während der direkten Bearbeitung än
 ## <a name="see-also"></a>Siehe auch
 
 [Container](../mfc/containers.md)<br/>
-[Container: Client-Element-Zustände](../mfc/containers-client-item-states.md)<br/>
-[COleClientItem:: OnChangeItemPosition auf](../mfc/reference/coleclientitem-class.md#onchangeitemposition)
-
+[Container: Clientelement-Zustände](../mfc/containers-client-item-states.md)<br/>
+[COleClientItem::OnChangeItemPosition](../mfc/reference/coleclientitem-class.md#onchangeitemposition)

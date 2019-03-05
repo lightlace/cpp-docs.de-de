@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-ms.openlocfilehash: 2cc9cfa1886c6ba8e714736e0192b56bf3b154f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e02d5523b894f89aa93c8d2765a128920afa2353
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496420"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284202"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC-ActiveX-Steuerelemente: Hinzufügen von benutzerdefinierten Eigenschaften
 
@@ -22,7 +22,7 @@ In diesem Artikel wird beschrieben, wie eine benutzerdefinierte Eigenschaft hinz
 
 - [Änderungen der Eigenschaft-Assistenten für benutzerdefinierte Eigenschaften hinzuzufügen](#_core_classwizard_changes_for_custom_properties)
 
-Benutzerdefinierte Eigenschaften sind in vier Arten von Implementierung: Member-Variable, eine Membervariable mit Benachrichtigung Get/Set-Methoden und parametrisiert.
+Benutzerdefinierte Eigenschaften sind in vier Arten von Implementierung: Member-Variable, die Member-Variable mit der Benachrichtigung "," Get/Set-Methoden, als auch parametrisierte.
 
 - Implementierung des Schnittstellenmembers Variable
 

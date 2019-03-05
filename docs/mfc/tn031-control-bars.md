@@ -1,5 +1,5 @@
 ---
-title: 'TN031: Schiebeleisten-Steuerelemente'
+title: 'TN031: Steuerleisten'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.controls.bars
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-ms.openlocfilehash: 9029b8c0fb6aa20de62dbdf21aedeae6d8a15994
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07178597e66975a006a0ea5293192ee7ea099e42
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463306"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286464"
 ---
-# <a name="tn031-control-bars"></a>TN031: Schiebeleisten-Steuerelemente
+# <a name="tn031-control-bars"></a>TN031: Steuerleisten
 
 > [!NOTE]
 >  Der folgende technische Hinweis wurde seit dem ersten Erscheinen in der Onlinedokumentation nicht aktualisiert. Daher können einige Verfahren und Themen veraltet oder falsch sein. Um aktuelle Informationen zu erhalten, wird empfohlen, das gewünschte Thema im Index der Onlinedokumentation zu suchen.
@@ -120,7 +120,7 @@ Die Möglichkeit, Indikatoren, in der Regel aktualisiert werden, ist der ON_UPDA
 
 ON_UPDATE_COMMAND_UI-Handler kann Folgendes aufrufen:
 
-- `Enable`: Zum Aktivieren oder Deaktivieren des Bereichs. Ein deaktivierter Bereich sieht genau so aus wie ein aktivierter Bereich, doch der Text ist nicht sichtbar (d. h. der Textindikator ist deaktiviert).
+- `Enable`: So aktivieren oder Deaktivieren des Bereichs. Ein deaktivierter Bereich sieht genau so aus wie ein aktivierter Bereich, doch der Text ist nicht sichtbar (d. h. der Textindikator ist deaktiviert).
 
 - `SetText`: Um den Text zu ändern. Wenden Sie dies mit Vorsicht an, da der Bereich nicht automatisch angepasst wird.
 
@@ -165,11 +165,11 @@ Die Möglichkeit, die Symbolleisten-Schaltflächen immer aktualisiert werden, is
 
 ON_UPDATE_COMMAND_UI-Handler kann Folgendes aufrufen:
 
-- `Enable`: Zum Aktivieren oder deaktivieren Sie die Schaltfläche. Dies funktioniert gleichermaßen für PushButtons und Kontrollkästchen.
+- `Enable`: So aktivieren oder deaktivieren Sie die Schaltfläche. Dies funktioniert gleichermaßen für PushButtons und Kontrollkästchen.
 
 - `SetCheck`: Um den Aktivierungszustand einer Schaltfläche festzulegen. Wenn dies für eine Symbolleisten-Schaltfläche aufgerufen wird, wird sie in ein Kontrollkästchen umgewandelt. `SetCheck` nimmt einen Parameter entgegen, der den Wert 0 (nicht aktiviert), 1 (aktiviert) oder 2 (unbestimmt) haben kann.
 
-- `SetRadio`: Kurzform für `SetCheck`.
+- `SetRadio`: Kurzschreibweise für `SetCheck`.
 
 Die Kontrollkästchen sind „AUTO“-Kontrollkästchen; wenn der Benutzer sie drückt, wechseln sie sofort den Status. „Aktiviert“ ist der „Unten“- bzw. heruntergedrückte Status. Es ist keine Möglichkeit in die Benutzeroberfläche integriert, eine Schaltfläche in den Status „Unbestimmt“ zu setzen; dies muss durch Code erfolgen.
 
@@ -179,13 +179,13 @@ Symbolleisten-Schaltflächen senden WM_COMMAND-Meldungen wie normale Schaltfläc
 
 Es gibt vier Formatvorlagen für Symbolleistenschaltflächen (TBBS_ Werte), die für Anzeigestatus verwendet werden:
 
-- TBBS_CHECKED: Das Kontrollkästchen ist derzeit aktiviert (unten).
+- TBBS_CHECKED:   Aktivieren Sie das Kontrollkästchen ist derzeit aktiviert, (unten).
 
-- TBBS_INDETERMINATE: Das Kontrollkästchen ist derzeit unbestimmt.
+- TBBS_INDETERMINATE:   Aktivieren Sie das Kontrollkästchen ist derzeit unbestimmt.
 
-- TBBS_DISABLED: Die Schaltfläche ist derzeit deaktiviert.
+- TBBS_DISABLED:   Schaltfläche ist derzeit deaktiviert.
 
-- TBBS_PRESSED: Die Schaltfläche ist derzeit gedrückt.
+- TBBS_PRESSED:   Derzeit ist gedrückt.
 
 Die sechs offiziellen Schaltflächen-Formatvorlagen im Windows Interface Application Design Guide werden durch die folgenden TBBS-Werte dargestellt:
 
@@ -197,7 +197,7 @@ Die sechs offiziellen Schaltflächen-Formatvorlagen im Windows Interface Applica
 
 - Unten = TBBS_CHECKED
 
-- Unten deaktiviert = TBBS_CHECKED &#124; TBBS_DISABLED
+- Down Disabled = TBBS_CHECKED &#124; TBBS_DISABLED
 
 - Unbestimmt = TBBS_INDETERMINATE
 
@@ -227,4 +227,3 @@ Anpassung kann über standardmäßige Fenstermanager-APIs erfolgen.
 
 [Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)<br/>
 [Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)
-

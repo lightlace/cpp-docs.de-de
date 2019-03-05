@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: c7295d8003b364b36a84fcb5b2c5921ae9899b51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a729c8d32c851c4401a0af7dd7323912a476530f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465987"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293445"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager-Klasse
 
@@ -159,7 +159,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 |Parameter|Beschreibung|
 |*size*|[in] Ein [CSize](../../atl-mfc-shared/reference/csize-class.md) Parameter, der die Größe der Bitmap angibt.|
 |*pBits*|[out] Ein Zeiger auf einen Datenzeiger, der den Speicherort des DIB empfängt bit-Werten.|
-|*Bitmap*|Ein Handle für die ursprüngliche bitmap|
+|*bitmap*|Ein Handle für die ursprüngliche bitmap|
 |*clrTransparent*|Ein RGB-Wert, transparente Farbe des der ursprünglichen Bitmap angibt.|
 
 ### <a name="return-value"></a>Rückgabewert
@@ -213,7 +213,7 @@ void DrawEllipse(
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck für die Ellipse.
 
 *clrFill*<br/>
@@ -243,7 +243,7 @@ BOOL DrawGradientRing(
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein [CRect](../../atl-mfc-shared/reference/crect-class.md) Parameter, der die Grenze für den Farbverlauf Ring angibt.
 
 *colorStart*<br/>
@@ -300,7 +300,7 @@ void DrawLineA(
 |*x1*|[in] Die X-Koordinate, an der Zeile beginnt.|
 |*y1*|[in] Die y-Koordinate, an der Zeile beginnt.|
 |*x2*|[in] Die X-Koordinate, an dem die Linie endet.|
-|*Y2*|[in] Die y-Koordinate, an dem die Linie endet.|
+|*y2*|[in] Die y-Koordinate, an dem die Linie endet.|
 |*clrLine*|[in] Die Farbe der Linie.|
 
 ### <a name="remarks"></a>Hinweise
@@ -320,7 +320,7 @@ void DrawRect(
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 [in] Die Grenzen für das Rechteck.
 
 *clrFill*<br/>
@@ -351,7 +351,7 @@ BOOL DrawShadow(
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 [in] Eine rechteckige Bereich in Ihrer Anwendung. Der Zeichnen-Manager wird eine Schattenkopie unterhalb dieser Bereich gezeichnet.
 
 *nDepth*<br/>
@@ -410,7 +410,7 @@ void Fill4ColorsGradient(
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 [in] Die zu füllenden Rechtecks.
 
 *colorStart1*<br/>
@@ -453,7 +453,7 @@ void FillGradient(
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 [in] Der rechteckige Bereich, um zu füllen.
 
 *colorStart*<br/>
@@ -491,7 +491,7 @@ void FillGradient2 (
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 [in] Der rechteckige Bereich, um zu füllen.
 
 *colorStart*<br/>
@@ -527,7 +527,7 @@ BOOL GrayRect(
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 [in] Der rechteckige Bereich, um zu füllen.
 
 *nPercentage*<br/>
@@ -564,7 +564,7 @@ BOOL HighlightRect(
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 [in] Eine rechteckige Bereich markieren.
 
 *nPercentage*<br/>
@@ -699,10 +699,10 @@ static BYTE __stdcall HueToRGB(
 
 ### <a name="parameters"></a>Parameter
 
-*M1*<br/>
+*m1*<br/>
 [in] Finden Sie unter "Hinweise".
 
-*M2*<br/>
+*m2*<br/>
 [in] Finden Sie unter "Hinweise".
 
 *h*<br/>
@@ -714,7 +714,7 @@ static BYTE __stdcall HueToRGB(
 *rm2*<br/>
 [in] Finden Sie unter "Hinweise".
 
-*RH*<br/>
+*rh*<br/>
 [in] Finden Sie unter "Hinweise".
 
 ### <a name="return-value"></a>Rückgabewert
@@ -745,7 +745,7 @@ void MirrorRect(
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck des Bereichs gekippt werden soll.
 
 *bHorz*<br/>
@@ -781,7 +781,7 @@ static COLORREF __stdcall PixelAlpha(
 *srcPixel*<br/>
 [in] Die erste Farbe des Pixels.
 
-*Prozent*<br/>
+*percent*<br/>
 [in] Eine Zahl zwischen 0 und 100, die den Prozentsatz der Transparenz darstellt. Ein Wert von 100 gibt an, dass die ursprüngliche Farbe völlig transparent ist.
 
 *percentR*<br/>
@@ -921,7 +921,7 @@ static void __stdcall SetAlphaPixel(
 *pBits*<br/>
 [in] Ein Zeiger auf die Bitwerte für die Bitmap.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Eine rechteckige Bereich in Ihrer Anwendung. Der Zeichnen-Manager zeichnet einen Schatten unterhalb und rechts neben diesem Bereich.
 
 *w*<br/>
@@ -930,7 +930,7 @@ static void __stdcall SetAlphaPixel(
 *y*<br/>
 [in] Die vertikale Koordinate des Pixels Farbe.
 
-*Prozent*<br/>
+*percent*<br/>
 [in] Der Prozentsatz der Transparenz.
 
 *iShadowSize*<br/>
@@ -968,11 +968,11 @@ static void __stdcall SetPixel(
 |-|-|
 |Parameter|Beschreibung|
 |*pBits*|[in] Ein Zeiger auf die Bitwerte der Bitmap.|
-|*CX*|[in] Die gesamte Breite der Bitmap.|
-|*CY*|[in] Die gesamte Höhe der Bitmap.|
+|*cx*|[in] Die gesamte Breite der Bitmap.|
+|*cy*|[in] Die gesamte Höhe der Bitmap.|
 |*w*|[in] Die X-Koordinate des Pixels in der Bitmap ändern.|
 |*y*|[in] Die y-Koordinate des Pixels in der Bitmap ändern.|
-|*Farbe*|[in] Die neue Farbe des Pixels, identifiziert durch den angegebenen Koordinaten.|
+|*color*|[in] Die neue Farbe des Pixels, identifiziert durch den angegebenen Koordinaten.|
 
 ##  <a name="smartmixcolors"></a>  CDrawingManager::SmartMixColors
 
@@ -992,7 +992,7 @@ static COLORREF __stdcall SmartMixColors(
 |||
 |-|-|
 |Parameter|Beschreibung|
-|*"Farbe1"*|[in] Die erste Farbe, zu kombinieren.|
+|*color1*|[in] Die erste Farbe, zu kombinieren.|
 |*color2*|[in] Die zweite Farbe, zu kombinieren.|
 |*dblLumRatio*|[in] Das Verhältnis für die Helligkeit der neuen Farbe. `SmartMixColors` Multipliziert die Helligkeit der gemischten Farbe dieses Verhältnis bevor bestimmt wird, eine endgültige Farbe.|
 |*k1*|[in] Die gewichtete Verhältnis für die erste Farbe.|

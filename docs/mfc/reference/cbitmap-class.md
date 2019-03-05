@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 6722011bf343a391fcc7180558eead5c039afc59
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 97d4561da12492c158673c4cc79c2baefd973c75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178173"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296725"
 ---
 # <a name="cbitmap-class"></a>CBitmap-Klasse
 
@@ -64,14 +64,14 @@ class CBitmap : public CGdiObject
 |Name|Beschreibung|
 |----------|-----------------|
 |[CBitmap::CreateBitmap](#createbitmap)|Initialisiert das Objekt mit einem Gerät geräteabhängige speicherbitmap, die einer angegebenen Breite, Höhe und Bitmuster aufweist.|
-|[CBitmap:: Createbitmapindirect](#createbitmapindirect)|Initialisiert das Objekt mit einer Bitmap mit Breite, Höhe und Bitmuster (sofern vorhanden) im angegebenen ein `BITMAP` Struktur.|
+|[CBitmap::CreateBitmapIndirect](#createbitmapindirect)|Initialisiert das Objekt mit einer Bitmap mit Breite, Höhe und Bitmuster (sofern vorhanden) im angegebenen ein `BITMAP` Struktur.|
 |[CBitmap::CreateCompatibleBitmap](#createcompatiblebitmap)|Initialisiert das Objekt mit einer Bitmap, damit er mit einem angegebenen Gerät kompatibel ist.|
 |[CBitmap::CreateDiscardableBitmap](#creatediscardablebitmap)|Initialisiert das Objekt mit einer entfernbare Bitmap, die mit einem angegebenen Gerät kompatibel ist.|
 |[CBitmap::FromHandle](#fromhandle)|Gibt einen Zeiger auf eine `CBitmap` Objekt, wenn ein Handle auf ein Windows gewährt `HBITMAP` Bitmap.|
 |[CBitmap::GetBitmap](#getbitmap)|Füllt ein `BITMAP` -Struktur mit Informationen über die Bitmap.|
 |[CBitmap::GetBitmapBits](#getbitmapbits)|Kopiert die angegebene Bitmap die Bits in den angegebenen Puffer.|
 |[CBitmap::GetBitmapDimension](#getbitmapdimension)|Gibt die Breite und Höhe der Bitmap. Die Höhe und Breite werden als zuvor festgelegt wurden, indem die [SetBitmapDimension](#setbitmapdimension) Member-Funktion.|
-|[LoadBitmap](#loadbitmap)|Initialisiert das Objekt von einer benannten Bitmap-Ressource aus der ausführbaren Datei der Anwendung geladen und Anfügen der Bitmaps auf das Objekt an.|
+|[CBitmap::LoadBitmap](#loadbitmap)|Initialisiert das Objekt von einer benannten Bitmap-Ressource aus der ausführbaren Datei der Anwendung geladen und Anfügen der Bitmaps auf das Objekt an.|
 |[CBitmap::LoadMappedBitmap](#loadmappedbitmap)|Lädt eine Bitmap und aktuelle Systemfarben Farben zugeordnet.|
 |[CBitmap::LoadOEMBitmap](#loadoembitmap)|Initialisiert das Objekt durch eine vordefinierte Windows-Bitmap zu laden und Anfügen der Bitmaps auf das Objekt an.|
 |[CBitmap::SetBitmapBits](#setbitmapbits)|Legt die Bits einer Bitmap auf die angegebene Bit fest.|
@@ -157,7 +157,7 @@ Wenn Sie mit dem `CBitmap` -Objekt fertig sind, das von der `CreateBitmap` -Funk
 
 Weitere Informationen finden Sie unter der Beschreibung des der `bmBits` -Feld in der `BITMAP` Struktur. Die [BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) -Struktur wird unter der [CBitmap::CreateBitmapIndirect](#createbitmapindirect) -Memberfunktion beschrieben.
 
-##  <a name="createbitmapindirect"></a>  CBitmap:: Createbitmapindirect
+##  <a name="createbitmapindirect"></a>  CBitmap::CreateBitmapIndirect
 
 Initialisiert eine Bitmap, die Breite, Höhe und die Bitmuster (sofern vorhanden), die in der Struktur verweist erhält *LpBitmap*.
 
@@ -524,4 +524,3 @@ Die GDI verwendet diese Werte mit Ausnahme der zum zurücksenden, wenn eine Anwe
 [MDI MFC-Beispiel](../../visual-cpp-samples.md)<br/>
 [CGdiObject-Klasse](../../mfc/reference/cgdiobject-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
-

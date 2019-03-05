@@ -13,12 +13,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
-ms.openlocfilehash: ed1dfd1dc8767b4f198ec6cc8dd626a04800bffd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b9b6ac6dc265378f617e053bc48ac6030425cef4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596767"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297917"
 ---
 # <a name="iatlmemmgr-class"></a>IAtlMemMgr-Klasse
 
@@ -756,7 +756,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 Bei `SetAmbientDispatch` wird aufgerufen, mit einem Zeiger auf eine neue Schnittstelle, die diese neue Schnittstelle verwendet werden, zum Aufrufen von Eigenschaften oder Methoden, die für das gehostete Steuerelement aufgefordert, wenn diese Eigenschaften nicht bereits enthalten sind [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md).
 
-##  <a name="attachcontrol"></a>  IAxWinHostWindow:: AttachControl
+##  <a name="attachcontrol"></a>  IAxWinHostWindow::AttachControl
 
 Fügt einem vorhandenen (und zuvor initialisierten)-Steuerelement auf das Hostobjekt, das Verwenden des Fensters identifizierte *hWnd*.
 
@@ -839,7 +839,7 @@ STDMETHOD(CreateControlEx)(
 [out] Die Adresse eines Zeigers, der erhält die `IUnknown` Schnittstelle des erstellten Steuerelements. NULL kann sein.
 
 *riidAdvise*<br/>
-[in] Der Schnittstellenbezeichner einer ausgehenden Schnittstelle für das enthaltene Objekt. IID_NULL kann sein.
+[in] Der Schnittstellenbezeichner einer ausgehenden Schnittstelle für das enthaltene Objekt. Can be IID_NULL.
 
 *punkAdvise*<br/>
 [in] Ein Zeiger auf die `IUnknown` -Schnittstelle des Senkenobjekts mit dem Verbindungspunkt am anhand des enthaltenen Objekts verbunden sein, `iidSink`.

@@ -10,16 +10,16 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-ms.openlocfilehash: 639c4f7952abcf18c29aa3cb0d9fee45b50430af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3992e6c0cf25925e01858016e4bac93d5552fe8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567465"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266145"
 ---
 # <a name="collection-class-helpers"></a>Hilfsfunktionen für die Auflistungsklasse
 
-Die Auflistungsklassen `CMap`, `CList`, und `CArray` Hilfsvorlage globale Funktionen für Zwecke wie vergleichen, kopieren und Serialisieren von Elementen verwenden. Als Teil der Implementierung von Klassen, die basierend auf `CMap`, `CList`, und `CArray`, Sie müssen diese Funktionen nach Bedarf außer Kraft setzen, mit Versionen, die auf den Typ der in Ihrer Zuordnung, Liste oder Array gespeicherten Daten zugeschnitten sind. Informationen zum Überschreiben von Hilfsfunktionen wie z. B. `SerializeElements`, finden Sie im Artikel [Sammlungen: wie eine typsichere Auflistung](../../mfc/how-to-make-a-type-safe-collection.md). Beachten Sie, dass `ConstructElements` und `DestructElements` sind veraltet.
+Die Auflistungsklassen `CMap`, `CList`, und `CArray` Hilfsvorlage globale Funktionen für Zwecke wie vergleichen, kopieren und Serialisieren von Elementen verwenden. Als Teil der Implementierung von Klassen, die basierend auf `CMap`, `CList`, und `CArray`, Sie müssen diese Funktionen nach Bedarf außer Kraft setzen, mit Versionen, die auf den Typ der in Ihrer Zuordnung, Liste oder Array gespeicherten Daten zugeschnitten sind. Informationen zum Überschreiben von Hilfsfunktionen wie z. B. `SerializeElements`, finden Sie im Artikel [Sammlungen: Wie Sie eine typsichere Auflistung](../../mfc/how-to-make-a-type-safe-collection.md). Beachten Sie, dass `ConstructElements` und `DestructElements` sind veraltet.
 
 Die Microsoft Foundation Class-Bibliothek bietet die folgenden globalen Funktionen in afxtempl.h können Sie Ihre Auflistungsklassen anpassen:
 
@@ -105,7 +105,7 @@ Anzahl der Elemente kopiert werden soll.
 
 Die Standardimplementierung verwendet den einfache Zuweisungsoperator ( **=** ) um den Kopiervorgang auszuführen. Wenn der Typ, der kopiert werden kein überladenen Operators =, und klicken Sie dann die standardmäßige Implementierung eine bitweise Kopie führt.
 
-Informationen zum Implementieren dieses und andere Hilfsfunktionen finden Sie im Artikel [Sammlungen: wie eine typsichere Auflistung](../how-to-make-a-type-safe-collection.md).
+Informationen zum Implementieren dieses und andere Hilfsfunktionen finden Sie im Artikel [Sammlungen: Wie Sie eine typsichere Auflistung](../how-to-make-a-type-safe-collection.md).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -216,11 +216,11 @@ Anzahl der Elemente, die archiviert werden
 
 Die Standardimplementierung ist eine bitweise lesen oder schreiben.
 
-Informationen zum Implementieren dieses und andere Hilfsfunktionen finden Sie im Artikel [Sammlungen: wie eine typsichere Auflistung](../how-to-make-a-type-safe-collection.md).
+Informationen zum Implementieren dieses und andere Hilfsfunktionen finden Sie im Artikel [Sammlungen: Wie Sie eine typsichere Auflistung](../how-to-make-a-type-safe-collection.md).
 
 ### <a name="example"></a>Beispiel
 
-Siehe das Beispiel in diesem Artikel [Sammlungen: wie eine typsichere Auflistung](../how-to-make-a-type-safe-collection.md).
+Siehe das Beispiel in diesem Artikel [Sammlungen: Wie Sie eine typsichere Auflistung](../how-to-make-a-type-safe-collection.md).
 
 ### <a name="requirements"></a>Anforderungen
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CInternetConnection [MFC], GetServerName
 - CInternetConnection [MFC], GetSession
 ms.assetid: 62a5d1c3-8471-4e36-a064-48831829b2a7
-ms.openlocfilehash: da11f62cfb453e31d3cacc1d4bc5b8a26f5b3764
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f17c3ade53ec45ddde654e83c77fe1d817d8495
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564800"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275349"
 ---
 # <a name="cinternetconnection-class"></a>CInternetConnection-Klasse
 
@@ -91,7 +91,7 @@ Ein Zeiger auf eine [CInternetSession](../../mfc/reference/cinternetsession-clas
 *pstrServer*<br/>
 Ein Zeiger auf eine Zeichenfolge, die den Namen des Servers enthält.
 
-*%nPort*<br/>
+*nPort*<br/>
 Die Zahl, die den Internet-Port für diese Verbindung identifiziert.
 
 *dwContext*<br/>
@@ -101,11 +101,11 @@ Der Kontextbezeichner für den `CInternetConnection` Objekt. Finden Sie unter **
 
 Rufen Sie nie `CInternetConnection` müssen Sie selbst rufen Sie stattdessen die [CInternetSession](../../mfc/reference/cinternetsession-class.md) Memberfunktion für die Art der Verbindung, die Sie einrichten möchten:
 
-- [CInternetSession:: GetFTPConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)
+- [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)
 
-- [CInternetSession:: GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection)
+- [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection)
 
-- [CInternetSession:: GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)
+- [CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)
 
 Der Standardwert für *DwContext* wird gesendet, von MFC über die `CInternetConnection`-abgeleitetes Objekt aus der [CInternetSession](../../mfc/reference/cinternetsession-class.md) -Objekt, das erstellt die **InternetConnection**- abgeleitetes Objekt. Der Standardwert ist auf 1 festgelegt. Sie können jedoch explizit zuweisen eine spezifischen Kontext-ID in der [CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession) Konstruktor für die Verbindung. Das Objekt und Arbeit ist, werden diese Kontext-ID zugeordnet werden. Der Kontextbezeichner wird zurückgegeben, um [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zu Status für das Objekt mit dem er identifiziert wird. Finden Sie im Artikel [Internetgrundlagen: WinInet](../../mfc/wininet-basics.md) für Weitere Informationen zu den Kontextbezeichner.
 
@@ -163,4 +163,3 @@ operator HINTERNET() const;
 
 [CObject-Klasse](../../mfc/reference/cobject-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
-

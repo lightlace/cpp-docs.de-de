@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CDocTemplate [MFC], SetPreviewInfo
 - CDocTemplate [MFC], SetServerInfo
 ms.assetid: 14b41a1f-bf9d-4eac-b6a8-4c54ffcc77f6
-ms.openlocfilehash: 8044af41a3176d58c09f2c91c52497fa7f59de05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b2d84af9be8e5c606cde8794b51e12207dcdec9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658587"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289623"
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate-Klasse
 
@@ -87,7 +87,7 @@ class CDocTemplate : public CCmdTarget
 |[CDocTemplate::InitialUpdateFrame](#initialupdateframe)|Initialisiert das Rahmenfenster und optional macht es sichtbar.|
 |[CDocTemplate::LoadTemplate](#loadtemplate)|Lädt die Ressourcen für einen bestimmten `CDocTemplate` oder eine abgeleitete Klasse.|
 |[CDocTemplate::MatchDocType](#matchdoctype)|Bestimmt das Maß an Vertrauen der Übereinstimmung zwischen einem Dokument und diese Vorlage an.|
-|[CDocTemplate:: OpenDocumentFile](#opendocumentfile)|Öffnet eine Datei, die durch ein Pfadname angegeben.|
+|[CDocTemplate::OpenDocumentFile](#opendocumentfile)|Öffnet eine Datei, die durch ein Pfadname angegeben.|
 |[CDocTemplate::RemoveDocument](#removedocument)|Entfernt ein Dokument aus einer Vorlage.|
 |[CDocTemplate::SaveAllModified](#saveallmodified)|Speichert alle Dokumente mit dieser Vorlage verknüpft die geändert wurden.|
 |[CDocTemplate::SetContainerInfo](#setcontainerinfo)|Bestimmt die Ressourcen für OLE-Container an, wenn ein OLE-Element für ein direktes Bearbeiten.|
@@ -353,7 +353,7 @@ Ein Zeiger auf das nächste Dokument in der Liste der Dokumente, die mit dieser 
 
 ### <a name="parameters"></a>Parameter
 
-*RPOs von bis zu*<br/>
+*rPos*<br/>
 Ein Verweis auf eine Positionswert, der von einem vorherigen Aufruf zurückgegebene [GetFirstDocPosition](#getfirstdocposition) oder `GetNextDoc`.
 
 ### <a name="remarks"></a>Hinweise

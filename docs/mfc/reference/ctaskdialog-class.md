@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: 7b95252c830e27a0602f149f880258511ec24e64
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 04c8a60f546700be8eeb2ec8a948e0ea321d12f8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177068"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265014"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -159,7 +159,7 @@ class CTaskDialog : public CObject
 |[CTaskDialog::GetVerificationCheckboxState](#getverificationcheckboxstate)|Ruft den Zustand des Kontrollkästchens Überprüfung ab.|
 |[CTaskDialog::IsCommandControlEnabled](#iscommandcontrolenabled)|Bestimmt, ob ein Befehl Schaltflächen-Steuerelement oder eine allgemeine Schaltfläche aktiviert ist.|
 |[CTaskDialog::IsRadioButtonEnabled](#isradiobuttonenabled)|Bestimmt, ob ein Optionsfeld aktiviert ist.|
-|[IsSupported](#issupported)|Bestimmt, ob der Computer, die die Anwendung ausgeführt wird, unterstützt die `CTaskDialog`.|
+|[CTaskDialog::IsSupported](#issupported)|Bestimmt, ob der Computer, die die Anwendung ausgeführt wird, unterstützt die `CTaskDialog`.|
 |[CTaskDialog::LoadCommandControls](#loadcommandcontrols)|Fügt den Befehl Schaltflächen-Steuerelemente mit Daten aus der Tabelle hinzu.|
 |[CTaskDialog::LoadRadioButtons](#loadradiobuttons)|Fügt den Optionsfelder mit Daten aus der Tabelle hinzu.|
 |[CTaskDialog::NavigateTo](#navigateto)|Überträgt den Fokus auf ein anderes `CTaskDialog`.|
@@ -271,7 +271,7 @@ void AddCommandControl(
 *strCaption*<br/>
 [in] Die Zeichenfolge, die die `CTaskDialog` zeigt dem Benutzer an. Verwenden Sie diese Zeichenfolge, um den Zweck des Befehls zu erläutern.
 
-*bAktiviert*<br/>
+*bEnabled*<br/>
 [in] Ein boolescher Parameter, der angibt, ob die Schaltfläche "neue" aktiviert oder deaktiviert ist.
 
 *bRequiresElevation*<br/>
@@ -306,7 +306,7 @@ void CTaskDialog::AddRadioButton(
 *strCaption*<br/>
 [in] Die Zeichenfolge, die die `CTaskDialog` wird neben das Optionsfeld "angezeigt.
 
-*bAktiviert*<br/>
+*bEnabled*<br/>
 [in] Ein boolescher Parameter, der angibt, ob das Optionsfeld aktiviert ist.
 
 ### <a name="remarks"></a>Hinweise
@@ -966,7 +966,7 @@ void SetCommandControlOptions(
 *nCommandControlID*<br/>
 [in] Die ID des Steuerelements zu aktualisieren.
 
-*bAktiviert*<br/>
+*bEnabled*<br/>
 [in] Ein boolescher Parameter, der angibt, ob der angegebene Befehl Schaltflächen-Steuerelement aktiviert oder deaktiviert ist.
 
 *bRequiresElevation*<br/>
@@ -1320,7 +1320,7 @@ void SetProgressBarMarquee(
 
 ### <a name="parameters"></a>Parameter
 
-*bAktiviert*<br/>
+*bEnabled*<br/>
 [in] True, um die Marquee-Leiste zu aktivieren. "False" zum Deaktivieren der Marquee-Leiste, und entfernen Sie sie aus der `CTaskDialog`.
 
 *nMarqueeSpeed*<br/>
@@ -1435,7 +1435,7 @@ void SetRadioButtonOptions(
 *nRadioButtonID*<br/>
 [in] Die ID der das Optionsfeld-Steuerelement.
 
-*bAktiviert*<br/>
+*bEnabled*<br/>
 [in] True, um das Optionsfeld zu aktivieren. So deaktivieren Sie das Optionsfeld wird false ZURÜCKGEGEBEN.
 
 ### <a name="remarks"></a>Hinweise
@@ -1579,13 +1579,13 @@ HRESULT TaskDialogCallback(
 
 ### <a name="parameters"></a>Parameter
 
-*HWND*<br/>
+*hwnd*<br/>
 [in] Ein Handle für die `m_hWnd` -Struktur für die `CTaskDialog`.
 
 *uNotification*<br/>
 [in] Der Benachrichtigungscode, der angibt, die generierte Nachricht.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 [in] Weitere Informationen zur Meldung.
 
 *lParam*<br/>

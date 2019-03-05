@@ -46,12 +46,12 @@ helpviewer_keywords:
 - OCM_NOTIFY message [MFC]
 - reflected messages
 ms.assetid: 3417ff51-ff9f-458c-bff4-17c200f00d96
-ms.openlocfilehash: 238fafee5201ec01e24be21512c73d1b33b706f1
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 2f6aea30fbf86865b5d42ea8da364685010c95c0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693554"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302090"
 ---
 # <a name="reflected-window-message-ids"></a>Reflektierte Fenstermeldungs-IDs
 
@@ -86,6 +86,5 @@ Die folgende Tabelle zeigt die Nachrichten, die abgefangen werden und die entspr
 
 ## <a name="see-also"></a>Siehe auch
 
-[MFC-ActiveX-Steuerelemente: Erstellen einer Fenstersteuerelement-Unterklasse](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)<br/>
+[MFC-ActiveX-Steuerelemente: Erstellen von Unterklassen für ein Windows-Steuerelement](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)<br/>
 [TN062: Meldungsreflektion für Windows-Steuerelemente](../mfc/tn062-message-reflection-for-windows-controls.md)
-

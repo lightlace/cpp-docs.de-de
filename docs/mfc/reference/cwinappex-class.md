@@ -118,12 +118,12 @@ helpviewer_keywords:
 - CWinAppEx [MFC], StoreWindowPlacement
 - CWinAppEx [MFC], m_bForceImageReset
 ms.assetid: a3d3e053-3e22-463f-9444-c73abb1bb9d7
-ms.openlocfilehash: 57c18ff00cd9e3a1d3156d8214ac78b49ca00c1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c222567703d0e57480c00f6f2bf9e78f16979150
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544416"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288830"
 ---
 # <a name="cwinappex-class"></a>CWinAppEx-Klasse
 
@@ -176,7 +176,7 @@ class CWinAppEx : public CWinApp
 |[CWinAppEx::InitKeyboardManager](#initkeyboardmanager)|Initialisiert das `CKeyboardManager`-Objekt.|
 |[CWinAppEx::InitMouseManager](#initmousemanager)|Initialisiert das `CMouseManager`-Objekt.|
 |[CWinAppEx::InitShellManager](#initshellmanager)|Initialisiert die `CShellManager` Klasse|
-|[CWinAppEx:: Inittooltipmanager](#inittooltipmanager)|Initialisiert die `CTooltipManager` Klasse.|
+|[CWinAppEx::InitTooltipManager](#inittooltipmanager)|Initialisiert die `CTooltipManager` Klasse.|
 |[CWinAppEx::IsResourceSmartUpdate](#isresourcesmartupdate)||
 |[CWinAppEx::IsStateExists](#isstateexists)|Gibt an, ob der angegebene Schlüssel in der Registrierung ist.|
 |[CWinAppEx::LoadState](#loadstate)|Lädt den Anwendungszustand aus der Registrierung.|
@@ -222,7 +222,7 @@ Ein Großteil von MFC-Framework bereitgestellten Funktionen hängt von der `CWin
 
 - Leiten Sie die Klasse der Hauptthread der Anwendung von `CWinAppEx`.
 
-Nachdem Sie integrieren `CWinAppEx` in Ihrer Anwendung, können Sie eines der Anwendungsmanager initialisieren. Bevor Sie einen Anwendungs-Manager verwenden, müssen Sie es durch Aufrufen der entsprechenden Initialisierungsmethode initialisieren. Um einen Zeiger auf einen bestimmten Manager zu erhalten, rufen Sie die zugehörigen Get-Methode. Die `CWinAppEx` Klasse verwaltet die folgenden Application Manager: [CMouseManager-Klasse](../../mfc/reference/cmousemanager-class.md), [CContextMenuManager-Klasse](../../mfc/reference/ccontextmenumanager-class.md), [CKeyboardManager-Klasse](../../mfc/reference/ckeyboardmanager-class.md), [ CUserToolsManager-Klasse](../../mfc/reference/cusertoolsmanager-class.md), und [CMenuTearOffManager-Klasse](../../mfc/reference/cmenutearoffmanager-class.md).
+Nachdem Sie integrieren `CWinAppEx` in Ihrer Anwendung, können Sie eines der Anwendungsmanager initialisieren. Bevor Sie einen Anwendungs-Manager verwenden, müssen Sie es durch Aufrufen der entsprechenden Initialisierungsmethode initialisieren. Um einen Zeiger auf einen bestimmten Manager zu erhalten, rufen Sie die zugehörigen Get-Methode. Die `CWinAppEx` Klasse verwaltet die folgenden Application Manager: [CMouseManager-Klasse](../../mfc/reference/cmousemanager-class.md), [CContextMenuManager-Klasse](../../mfc/reference/ccontextmenumanager-class.md), [CKeyboardManager-Klasse](../../mfc/reference/ckeyboardmanager-class.md), [CUserToolsManager-Klasse](../../mfc/reference/cusertoolsmanager-class.md), und [ CMenuTearOffManager-Klasse](../../mfc/reference/cmenutearoffmanager-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -288,7 +288,7 @@ void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] Gibt an, ob die Anwendung die anfängliche Größe und Position der Hauptrahmenfenster aus der Registrierung geladen wurde.
 
 ### <a name="remarks"></a>Hinweise
@@ -1031,7 +1031,7 @@ virtual void OnAppContextHelp(
 *pWndControl*<br/>
 [in] Ein Zeiger auf ein Window-Objekt, das für das der Benutzer die Hilfe aufgerufen.
 
-*DwHelpIDArray]*<br/>
+*dwHelpIDArray[]*<br/>
 [in] Ein reservierter Wert.
 
 ### <a name="remarks"></a>Hinweise
@@ -1067,7 +1067,7 @@ virtual BOOL OnViewDoubleClick(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Ein Zeiger auf ein Objekt abgeleitet wird, aus der [CView-Klasse](../../mfc/reference/cview-class.md).
 
 *iViewId*<br/>
@@ -1232,10 +1232,10 @@ virtual BOOL ShowPopupMenu(
 *uiMenuResId*<br/>
 [in] Eine Menü-Ressourcen-ID
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , der die Position des Menüs in Bildschirmkoordinaten angibt.
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Ein Zeiger auf das Fenster, das Popupmenü besitzt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1327,7 +1327,7 @@ BOOL WriteInt(
 *lpszEntry*<br/>
 [in] Eine Zeichenfolge, die mit dem Namen eines Registrierungsschlüssels zurück.
 
-*nWert*<br/>
+*nValue*<br/>
 [in] Die zu speichernden Daten.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1421,7 +1421,7 @@ BOOL WriteSectionInt(
 *lpszEntry*<br/>
 [in] Eine Zeichenfolge, die den festzulegenden Wert enthält.
 
-*nWert*<br/>
+*nValue*<br/>
 [in] Die Daten, die in der Registrierung zu schreiben.
 
 ### <a name="return-value"></a>Rückgabewert

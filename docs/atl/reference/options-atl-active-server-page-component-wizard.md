@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Active Server Page Component Wizard, options
 ms.assetid: 54f34e26-53c7-4456-9675-cb86e356bde0
-ms.openlocfilehash: d8d8eaa6190bd04d626b9a23c9d27d1f9daeb003
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e9740a67f265484c349a4df644be882dba30c13
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595636"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280237"
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>Optionen, ATL-Assistent für Active Server Page-Komponenten
 
@@ -29,7 +29,7 @@ Weitere Informationen zu ATL-Projekte und ATL-COM-Klassen finden Sie unter [ATL 
    |------------|-----------------|
    |**Single**|Gibt an, dass das Objekt, das einzelne threading-Modell verwendet. Im einzelnen threading-Modell wird ein Objekt immer im primären COM-Thread ausgeführt. Finden Sie unter [Single-Threaded-Apartments](/windows/desktop/com/single-threaded-apartments) und [InprocServer32](/windows/desktop/com/inprocserver32) für Weitere Informationen.|
    |**Apartment**|Gibt an, dass das Objekt Apartmentthreading für Anwendungen verwendet. Äquivalent zu einzelnen Threadapartment. Jedes Objekt einer Apartmentthread-Komponente wird ein Apartment für den Thread, für die Lebensdauer des Objekts zugewiesen. mehrere Threads können jedoch für mehrere Objekte verwendet werden. Jedes Apartment an einem bestimmten Thread gebunden ist und verfügt über ein Windows-Nachrichtensystem (Standard).<br /><br /> Finden Sie unter [Single-Threaded-Apartments](/windows/desktop/com/single-threaded-apartments) für Weitere Informationen.|
-   |**Beide**|Gibt an, dass das Objekt aus, welche Art von einem Thread Erstellung je Apartment oder freies threading, verwenden kann.|
+   |**Both**|Gibt an, dass das Objekt aus, welche Art von einem Thread Erstellung je Apartment oder freies threading, verwenden kann.|
    |**kostenlos**|Gibt an, dass das Objekt freies threading verwendet. Freies threading ist gleichbedeutend mit einem multithread Apartmentmodell. Finden Sie unter [Multithread-Apartments](/windows/desktop/com/multithreaded-apartments) für Weitere Informationen.|
    |**Neutral**|Gibt an, dass das Objekt den Richtlinien für Multithread-Apartments folgt, jedoch können für jede Art von Thread durchgeführt.|
 
@@ -41,9 +41,9 @@ Weitere Informationen zu ATL-Projekte und ATL-COM-Klassen finden Sie unter [ATL 
    |------------|-----------------|
    |**Ja**|Gibt an, dass das Objekt aggregiert werden kann. Der Standardwert.|
    |**No**|Gibt an, dass das Objekt nicht aggregiert werden.|
-   |**Nur**|Gibt an, dass das Objekt aggregiert werden muss.|
+   |**Only**|Gibt an, dass das Objekt aggregiert werden muss.|
 
-- **Unterstützung**
+- **Support**
 
    Weitere Supportoptionen:
 
@@ -57,4 +57,3 @@ Weitere Informationen zu ATL-Projekte und ATL-COM-Klassen finden Sie unter [ATL 
 
 [ATL-Assistent für Active Server Page-Komponenten](../../atl/reference/atl-active-server-page-component-wizard.md)<br/>
 [ATL Active Server Page-Komponente](../../atl/reference/adding-an-atl-active-server-page-component.md)
-

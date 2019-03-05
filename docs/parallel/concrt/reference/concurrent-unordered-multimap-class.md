@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_multimap class
 ms.assetid: 4dada5d7-15df-4382-b9c9-348e75b2f3c1
-ms.openlocfilehash: e1a477e278de2e8ba0f1af43dfdb6081206d86e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 446060656a79380f85d3faac560bd48910bfb2db
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450907"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294355"
 ---
 # <a name="concurrentunorderedmultimap-class"></a>concurrent_unordered_multimap-Klasse
 
@@ -224,7 +224,7 @@ Die Zuweisung für diese ungeordnete Multimap.
 *_Begin*<br/>
 Die Position des ersten Elements in dem zu kopierenden Elementbereich.
 
-*_Beenden*<br/>
+*_End*<br/>
 Die Position des ersten Elements nach dem zu kopierenden Elementbereich.
 
 *_Umap*<br/>
@@ -397,13 +397,13 @@ Der itertatortyp für Einfügung verwendet.
 *V*<br/>
 Der Typ des Werts in der Zuordnung eingefügt werden soll.
 
-*Wert*<br/>
+*value*<br/>
 Der Wert eingefügt werden soll.
 
 *_Where*<br/>
 Die Startposition für eine Einfügemarke zu suchen.
 
-*Erste*<br/>
+*first*<br/>
 Der Anfang des Bereichs, der eingefügt werden soll.
 
 *last*<br/>
@@ -481,7 +481,7 @@ Die maximale Anzahl von Elementen, die in diesen gleichzeitigen Container eingef
 
 Dieser Wert für die obere Grenze möglicherweise tatsächlich größer, was der Container tatsächlich enthalten kann.
 
-##  <a name="operator_eq"></a> Operator =
+##  <a name="operator_eq"></a> operator=
 
 Weist den Inhalt eines anderen `concurrent_unordered_multimap`-Objekts diesem Objekt zu. Diese Methode ist nicht nebenläufigkeitssicher.
 
@@ -694,7 +694,7 @@ Die Position des Iterators, an der gelöscht werden soll.
 *KVal*<br/>
 Der Schlüsselwert, der gelöscht werden soll.
 
-*Erste*<br/>
+*first*<br/>
 *last*<br/>
 Iteratoren mit sich.
 
@@ -724,4 +724,3 @@ Die maximale Anzahl von Buckets, die in diesem Container.
 
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
 [Parallele Container und Objekte](../../../parallel/concrt/parallel-containers-and-objects.md)
-

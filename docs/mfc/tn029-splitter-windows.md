@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TN029
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
-ms.openlocfilehash: 245ad33dd7bc7d3b6365463d4d2ae9538a12bfdc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c27545c6f425eda952e87c80ed1d37de9e1093a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501984"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294992"
 ---
 # <a name="tn029-splitter-windows"></a>TN029: Splitterfenster
 
@@ -56,7 +56,7 @@ Hier ist eine Liste von Begriffen, die für Splitterfenster spezifisch sind:
 
 `CSplitterWnd`: Ein Fenster, der Steuerelemente im Bereich aufteilen und Bildlaufleisten, die alle Bereiche auf einer Zeile oder Spalte gemeinsam verwendet werden. Sie geben mit nullbasierte Anzahl Zeilen und Spalten (der erste Bereich ist die Zeile = 0 und Spalte = 0).
 
-Bereich: Ein anwendungsspezifische-Fenster, die eine `CSplitterWnd` verwaltet. Ein Bereich ist in der Regel ein Objekt, das von abgeleitet ist die [CView-Klasse](../mfc/reference/cview-class.md), jedoch kann [CWnd](../mfc/reference/cwnd-class.md) -Objekt, das über die ID der entsprechenden untergeordneten Fenster verfügt
+Bereich: Eine anwendungsspezifische-Fenster, die eine `CSplitterWnd` verwaltet. Ein Bereich ist in der Regel ein Objekt, das von abgeleitet ist die [CView-Klasse](../mfc/reference/cview-class.md), jedoch kann [CWnd](../mfc/reference/cwnd-class.md) -Objekt, das über die ID der entsprechenden untergeordneten Fenster verfügt
 
 Verwenden einer `CWnd`-abgeleitete Objekt, und übergeben Sie die RUNTIME_CLASS des Objekts, das die `CreateView` funktionieren wie bei der Verwendung von eine `CView`-abgeleitete Klasse. Die Klasse muss DECLARE_DYNCREATE und IMPLEMENT_DYNCREATE verwenden, da das Framework die dynamische Erstellung zur Laufzeit verwendet. Aber es eine Menge von Code in gibt `CSplitterWnd` ist, die spezifisch für die `CView` -Klasse, [CObject:: IsKindOf](../mfc/reference/cobject-class.md#iskindof) wird immer verwendet werden, bevor diese Aktionen ausgeführt werden.
 
@@ -140,4 +140,3 @@ Die `CView` Klasse verwendet die folgenden Befehle aus auf hoher Ebene für die 
 
 [Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)<br/>
 [Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)
-

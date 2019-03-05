@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSocketFile [MFC], CSocketFile
 ms.assetid: 7924c098-5f72-40d6-989d-42800a47958f
-ms.openlocfilehash: f31bbda1bb6428b6bcca25d6eddce98156fac1d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3fa73320ae34283b0cdac559111a53a879c031c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588837"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274270"
 ---
 # <a name="csocketfile-class"></a>CSocketFile-Klasse
 
@@ -62,7 +62,7 @@ Weitere Informationen finden Sie unter [Windows-Sockets in MFC](../../mfc/window
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** Datei afxsock.h
+**Header:** afxsock.h
 
 ##  <a name="csocketfile"></a>  CSocketFile::CSocketFile
 
@@ -93,7 +93,7 @@ In den Modus "Archive-Compatible" ein `CSocketFile` Objekt bietet eine bessere L
 
 Mit `CSocketFile`, jedoch Daten basiert auf Nachrichten; der Puffer kann mehrere Nachrichten enthalten, erhalten also weniger als die Anzahl der angeforderten Bytes Ende der Datei nicht impliziert. Die Anwendung wird in diesem Fall nicht blockiert, wie sie mit `CFile`, und sie können fortfahren, Lesen von Nachrichten aus dem Puffer, bis der Puffer leer ist. Die [CArchive::IsBufferEmpty](../../mfc/reference/carchive-class.md#isbufferempty) Funktion ist nützlich für das Überwachen des Status des Archivs Puffer in einem solchen Fall.
 
-Weitere Informationen zur Verwendung von `CSocketFile`, finden Sie in den Artikeln [Windows Sockets: Verwenden von Sockets mit Archiven](../../mfc/windows-sockets-using-sockets-with-archives.md) und [Windows Sockets: Beispiel für Sockets mithilfe von Archive](../../mfc/windows-sockets-example-of-sockets-using-archives.md).
+Weitere Informationen zur Verwendung von `CSocketFile`, finden Sie in den Artikeln [Windows Sockets: Verwenden von Sockets mit Archiven](../../mfc/windows-sockets-using-sockets-with-archives.md) und [Windows Sockets: Beispiel für Sockets mithilfe der Archive](../../mfc/windows-sockets-example-of-sockets-using-archives.md).
 
 ## <a name="see-also"></a>Siehe auch
 

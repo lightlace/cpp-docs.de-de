@@ -5,12 +5,12 @@ helpviewer_keywords:
 - common controls (MFC), build requirements
 - common controls (MFC)
 ms.assetid: 025f7d55-55a2-4dcd-8f62-02424e3dcc04
-ms.openlocfilehash: c9a01665339c28b58a5d528cbb9dfaa235e7f1ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a2e79d91a41ea178eeb6f74ec7fa7b22588b277
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637072"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276896"
 ---
 # <a name="build-requirements-for-windows-vista-common-controls"></a>Anforderungen für die Erstellung von Windows Vista-Standardsteuerelementen
 
@@ -59,4 +59,3 @@ Wenn Sie Visual Studio-IDE verwenden, um eine MFC-Anwendung zu erstellen, die al
 [Allgemeine MFC-Themen](../mfc/general-mfc-topics.md)<br/>
 [Hierarchiediagramm](../mfc/hierarchy-chart.md)<br/>
 [Veraltete ANSI-APIs](../mfc/deprecated-ansi-apis.md)
-

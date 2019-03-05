@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Erstellen einer Meldungszuordnung für eine Vorlagenklasse'
+title: 'Vorgehensweise: Erstellen einer Meldungszuordnung für eine Vorlagenklasse'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - template classes [MFC], creating message maps
 - message maps [MFC], template classes
 ms.assetid: 4e7e24f8-06df-4b46-82aa-7435c8650de3
-ms.openlocfilehash: 437fdf59ae9c9d3428654fc412fd78bf1348a701
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 676e698a899327eee8305731b5d609b5b95ece76
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586237"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296773"
 ---
-# <a name="how-to-create-a-message-map-for-a-template-class"></a>Gewusst wie: Erstellen einer Meldungszuordnung für eine Vorlagenklasse
+# <a name="how-to-create-a-message-map-for-a-template-class"></a>Vorgehensweise: Erstellen einer Meldungszuordnung für eine Vorlagenklasse
 
 Nachrichtenzuordnung in MFC bietet eine effiziente Möglichkeit zum Weiterleiten von Windows-Nachrichten an eine geeignete Instanz des C++-Objekt. Beispiele für MFC-Nachricht Zuordnung Ziele sind Anwendungsklassen, Dokument und Anzeigen von Klassen, Steuerelementklassen und So weiter.
 
@@ -64,4 +64,3 @@ Zum Ausführen der Tests, die `StringizeElement` Funktion spezialisiert sein mus
 
 [BEGIN_TEMPLATE_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_template_message_map)<br/>
 [Meldungsbehandlung und Zuordnung](../mfc/message-handling-and-mapping.md)
-

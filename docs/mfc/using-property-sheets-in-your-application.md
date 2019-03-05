@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Create method [MFC], property sheets
 - CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
-ms.openlocfilehash: ac6315d1b450fa41158f1393471d723627ecec24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76acbfa9625fe6cb9a575244b0ed6954eeaaf3f2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509384"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301687"
 ---
 # <a name="using-property-sheets-in-your-application"></a>Verwenden von Eigenschaftenseiten in einer Anwendung
 
@@ -42,7 +42,7 @@ Um ein Eigenschaftenblatt in Ihrer Anwendung verwenden möchten, führen Sie die
 
 1. Erstellen Sie Variablen zum Speichern der Werte für diese Eigenschaftenseite Member. Der Vorgang zum Hinzufügen von Membervariablen auf einer Eigenschaftenseite liegt genau identisch mit dem Hinzufügen von Membervariablen des Typs zu einem Dialogfeld eine Eigenschaftenseite wird geöffnet, ein spezialisiertes Dialogfeld. Weitere Informationen finden Sie unter [Definieren von Membervariablen für Dialogfeld-Steuerelemente](../windows/defining-member-variables-for-dialog-controls.md).
 
-1. Erstellen einer [CPropertySheet](../mfc/reference/cpropertysheet-class.md) Objekt in Ihrem Quellcode. Erstellen Sie in der Regel die `CPropertySheet` Objekt in den Handler für den Befehl, das Eigenschaftenblatt angezeigt. Dieses Objekt darstellt, das gesamte Eigenschaftenblatt. Wenn Sie ein modales Eigenschaftsblatt mit erstellen die [DoModal](../mfc/reference/cpropertysheet-class.md#domodal) Funktion, die das Framework stellt drei Schaltflächen in der Standardeinstellung: OK, "Abbrechen", und übernehmen. Nicht modulare Eigenschaftenblätter mit erstellt, erstellt das Framework keine Befehlsschaltflächen der [erstellen](../mfc/reference/cpropertysheet-class.md#create) Funktion. Sie müssen nicht Ableiten einer Klasse von `CPropertySheet` , wenn Sie weitere Steuerelemente (z. B. ein Vorschaufenster) hinzufügen, oder ein nicht modalen Eigenschaftenblatts anzeigen möchten. Dieser Schritt ist erforderlich für nicht modulare Eigenschaftenblätter, da sie keine Standardsteuerelemente enthalten, die verwendet werden kann, um das Eigenschaftenblatt zu schließen.
+1. Erstellen einer [CPropertySheet](../mfc/reference/cpropertysheet-class.md) Objekt in Ihrem Quellcode. Erstellen Sie in der Regel die `CPropertySheet` Objekt in den Handler für den Befehl, das Eigenschaftenblatt angezeigt. Dieses Objekt darstellt, das gesamte Eigenschaftenblatt. Wenn Sie ein modales Eigenschaftsblatt mit erstellen die [DoModal](../mfc/reference/cpropertysheet-class.md#domodal) Funktion, die das Framework stellt drei Befehlsschaltflächen standardmäßig: OK, Abbrechen, und wenden. Nicht modulare Eigenschaftenblätter mit erstellt, erstellt das Framework keine Befehlsschaltflächen der [erstellen](../mfc/reference/cpropertysheet-class.md#create) Funktion. Sie müssen nicht Ableiten einer Klasse von `CPropertySheet` , wenn Sie weitere Steuerelemente (z. B. ein Vorschaufenster) hinzufügen, oder ein nicht modalen Eigenschaftenblatts anzeigen möchten. Dieser Schritt ist erforderlich für nicht modulare Eigenschaftenblätter, da sie keine Standardsteuerelemente enthalten, die verwendet werden kann, um das Eigenschaftenblatt zu schließen.
 
 1. Führen Sie für jede Seite das Eigenschaftenblatt hinzugefügt werden folgende Schritte aus:
 
@@ -63,4 +63,3 @@ Ein Beispiel zur Verwendung von Eigenschaftenseiten finden Sie im allgemeinen MF
 ## <a name="see-also"></a>Siehe auch
 
 [Eigenschaftenblätter](../mfc/property-sheets-mfc.md)
-

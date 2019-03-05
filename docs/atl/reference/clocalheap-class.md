@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CLocalHeap class
 ms.assetid: 1ffa87a5-5fc8-4f8d-8809-58e87e963bd2
-ms.openlocfilehash: 7f4fa6b6035b9f0dda35a8e989192505ccf126d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 53288bea8a50f62437eab4dd81d5d816abf78f44
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515465"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283084"
 ---
 # <a name="clocalheap-class"></a>CLocalHeap-Klasse
 
@@ -37,10 +37,10 @@ class CLocalHeap : public IAtlMemMgr
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[Clocalheap:: Allocate](#allocate)|Rufen Sie diese Methode auf, um einen Speicherblock zu belegen.|
-|[Clocalheap:: Free](#free)|Rufen Sie diese Methode, um einen Block von diesem Speicher-Manager zugeordneten Arbeitsspeicher freizugeben.|
+|[CLocalHeap::Allocate](#allocate)|Rufen Sie diese Methode auf, um einen Speicherblock zu belegen.|
+|[CLocalHeap::Free](#free)|Rufen Sie diese Methode, um einen Block von diesem Speicher-Manager zugeordneten Arbeitsspeicher freizugeben.|
 |[CLocalHeap::GetSize](#getsize)|Rufen Sie diese Methode zum Abrufen der zugeordneten Größe eines Speicherblocks, der von diesem Speicher-Manager zugeordnet.|
-|[Clocalheap:: ReAllocate](#reallocate)|Rufen Sie diese Methode auf, um den von diesem Speicher-Manager zugeordneten Arbeitsspeicher neu zuzuordnen.|
+|[CLocalHeap::Reallocate](#reallocate)|Rufen Sie diese Methode auf, um den von diesem Speicher-Manager zugeordneten Arbeitsspeicher neu zuzuordnen.|
 
 ## <a name="remarks"></a>Hinweise
 

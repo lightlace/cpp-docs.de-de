@@ -13,12 +13,12 @@ helpviewer_keywords:
 - threading [MFC]
 - user interface threads [C++]
 ms.assetid: 979605f8-3988-44b5-ac9c-b8cce7fcce14
-ms.openlocfilehash: c707c1c117bbc0005b2b3da4ed39f083ae407b27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcffc2964d8e15fd47f437366863748175e12622
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643416"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258345"
 ---
 # <a name="multithreading-with-c-and-mfc"></a>Multithreading mit C++ und MFC
 
@@ -32,7 +32,7 @@ Bei Bedarf können Sie in einer Anwendung zusätzliche Threads erstellen. Dies b
 
 In MFC werden zwei Threadtypen unterschieden: Benutzeroberflächenthreads und Arbeitsthreads. Benutzeroberflächenthreads werden normalerweise verwendet, um Benutzereingaben zu behandeln und um auf vom Benutzer generierte Ereignisse und Meldungen zu reagieren. Arbeitsthreads werden normalerweise verwendet, um Aufgaben durchzuführen, für die keine Benutzereingaben erforderlich sind (z. B. Neuberechnungen). In der Win32-API findet keine Unterscheidung zwischen Threadtypen statt; es muss lediglich die Startadresse des Threads bekannt sein, damit mit dessen Ausführung begonnen werden kann. In MFC wird ein spezielles Verfahren zur Behandlung von Benutzeroberflächenthreads verwendet: es wird eine Meldungsverteilschleife für Ereignisse in der Benutzeroberfläche zur Verfügung gestellt. `CWinApp` ist ein Beispiel für ein Benutzeroberflächenthread-Objekt, da es von `CWinThread` abgeleitet ist und Ereignisse und Meldungen behandelt, die vom Benutzer generiert wurden.
 
-In Fällen, in denen mehrere Threads auf dasselbe Objekt zugreifen müssen, sollten Sie besondere Vorsicht walten lassen. [Multithreading: Tipps für die Programmierung](multithreading-programming-tips.md) Beschreibt Techniken, mit denen Sie Probleme umgehen, die in diesen Situationen auftreten können. [Multithreading: Wie der Synchronisierungsklassen](multithreading-how-to-use-the-synchronization-classes.md) beschreibt, wie die Klassen, die zum Synchronisieren des Zugriffs von mehreren Threads auf ein einzelnes Objekt verfügbar sind.
+In Fällen, in denen mehrere Threads auf dasselbe Objekt zugreifen müssen, sollten Sie besondere Vorsicht walten lassen. [Multithreading: Tipps für die Programmierung](multithreading-programming-tips.md) Beschreibt Techniken, mit denen Sie Probleme umgehen, die in diesen Situationen auftreten können. [Multithreading: Gewusst wie: der Synchronisierungsklassen](multithreading-how-to-use-the-synchronization-classes.md) beschreibt, wie die Klassen, die zum Synchronisieren des Zugriffs von mehreren Threads auf ein einzelnes Objekt verfügbar sind.
 
 Das Schreiben und Debuggen von Multithreadprogrammen ist naturgemäß ein komplexes und schwieriges Unterfangen, da Sie sicherstellen müssen, dass nur jeweils ein Thread auf die Objekte zugreift. In den Themen zu Multithreading werden keine Grundlagen der Multithreadprogrammierung vermittelt. Sie erfahren lediglich, wie MFC in einem Multithreadprogramm verwendet werden kann. In den in Visual C++ enthaltenen MFC-Multithreadbeispielen werden einige Möglichkeiten zum Hinzufügen weiterer Multithreadfunktionen sowie einige Win32-APIs erläutert, die in MFC nicht enthalten sind. Sie sollten diese jedoch lediglich als Ausgangspunkt betrachten.
 
@@ -44,13 +44,13 @@ Weitere Informationen zur Multithreadunterstützung in MFC finden Sie in folgend
 
 - [Multithreading: Erstellen von Arbeitsthreads](multithreading-creating-worker-threads.md)
 
-- [Multithreading: Verwendungsweise der Synchronisierungsklassen](multithreading-how-to-use-the-synchronization-classes.md)
+- [Multithreading: Gewusst wie: der Synchronisierungsklassen](multithreading-how-to-use-the-synchronization-classes.md)
 
 - [Multithreading: Beenden von Threads](multithreading-terminating-threads.md)
 
 - [Multithreading: Tipps für die Programmierung](multithreading-programming-tips.md)
 
-- [Multithreading: Verwendungsmöglichkeiten der Synchronisierungsklassen](multithreading-when-to-use-the-synchronization-classes.md)
+- [Multithreading: Wenn der Synchronisierungsklassen](multithreading-when-to-use-the-synchronization-classes.md)
 
 ## <a name="see-also"></a>Siehe auch
 

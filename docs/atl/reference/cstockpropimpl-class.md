@@ -64,12 +64,12 @@ helpviewer_keywords:
 - controls [ATL], stock properties
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
-ms.openlocfilehash: a22a419018f3f4b2b7e6cee2471bf0f162b65f2e
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 148c9571bb37e2b9063ca9290f51caa1fabb2d21
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894002"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270786"
 ---
 # <a name="cstockpropimpl-class"></a>CStockPropImpl-Klasse
 
@@ -192,7 +192,7 @@ Die folgenden Eigenschaften verfügen, auch ein **Putref** Implementierung:
 
 - MouseIcon
 
-- Bild
+- Picture
 
 Die gleichen drei vordefinierten Eigenschaften erfordern ihre entsprechenden Datenmember des Typs `CComPtr` oder beliebigen anderen Klasse, die richtige Schnittstelle Referenz bietet mithilfe des Zuweisungsoperators zählen.
 

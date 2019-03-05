@@ -10,12 +10,12 @@ helpviewer_keywords:
 - persistent C++ objects [MFC]
 - TN002
 ms.assetid: 553fe01d-c587-4c8d-a181-3244a15c2be9
-ms.openlocfilehash: 5f5bde68d9fd4175ed97a7b61d807887d07e9e12
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d64799dc17b4b3ddc5c455333b10282e4748b09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474385"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282006"
 ---
 # <a name="tn002-persistent-object-data-format"></a>TN002: Persistentes Objektdatenformat
 
@@ -111,4 +111,3 @@ Wie bereits erwähnt, sollten Sie die Version zu codieren und über die Klasse s
 
 [Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)<br/>
 [Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)
-

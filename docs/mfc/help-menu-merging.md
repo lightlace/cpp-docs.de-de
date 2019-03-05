@@ -6,12 +6,12 @@ helpviewer_keywords:
 - merging Help menus [MFC]
 - Help [MFC], for active document containers
 ms.assetid: 9d615999-79ba-471a-9288-718f0c903d49
-ms.openlocfilehash: 3db635cfdc39f9c4166bbf3d6958f52e535d91f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1e8f9af696b6ea4cd485f4215e1c8425098e987
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578528"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296844"
 ---
 # <a name="help-menu-merging"></a>Verschachteln des Hilfemenüs
 
@@ -37,7 +37,7 @@ Beide Menüelemente sind hierarchische Menüs, die unter denen zusätzliche Men�
 
 Zum Erstellen dieses zusammengeführt **Hilfe** Menü, das aktive Dokument Containment-Architektur ändert das normale Verfahren der OLE-Dokumente. Gemäß der OLE-Dokumente, die zusammengeführte Menüleiste haben sechs Gruppen von Menüs, nämlich **Datei**, **bearbeiten**, **Container**, **Objekt**,  **Fenster**, **Hilfe**in dieser Reihenfolge. In jeder Gruppe kann NULL oder mehr Menüs vorhanden sein. Die Gruppen **Datei**, **Container**, und **Fenster** auf den Container und die Gruppen gehören **bearbeiten**, **-Objekt,** und **Hilfe** auf das Objekt gehören. Wenn das Objekt ausführen das Zusammenführen von Menüs möchte, erstellt eine leere Menüleiste und übergibt sie an den Container. Fügt der Container die Menüs, klicken Sie dann durch Aufrufen von `IOleInPlaceFrame::InsertMenus`. Das Objekt auch übergibt eine Struktur, die ein Array von sechs LONG-Werte (**OLEMENUGROUPWIDTHS**). Nach dem Einfügen die Menüs, markiert der Container wie viele Menüs, die sie in den einzelnen Gruppen und dann gibt hinzugefügt. Klicken Sie dann fügt das Objekt über die Menüs, achten auf die Anzahl von Menüs in jeder Containergruppe. Schließlich übergibt das Objekt der zusammengeführten Menüleiste und das Array (enthält die Anzahl der Menüs in jeder Gruppe), OLE, gibt einen Opaque "Deskriptor im Menü" behandelt. Später das Objekt übergibt dieses Handle und die zusammengeführte Menüleiste an den Container über `IOleInPlaceFrame::SetMenu`. Zu diesem Zeitpunkt wird der Container wird in der zusammengeführten Menü und übergibt das Handle auch an OLE, aus, sodass OLE ordnungsgemäße Verteilung von Menü-Nachrichten durchführen kann.
 
-In der geänderten active Document-Prozedur, das Objekt muss zunächst initialisiert die **OLEMENUGROUPWIDTHS** Elemente auf 0 (null), vor der Übergabe an den Container. Der Container eine Einfügung normales Menü mit einer Ausnahme führt: die Container-einfügungen eine **Hilfe** wie das letzte Element im Menü und speichert Sie in den letzten Eintrag des (sechsten) den Wert 1 die **OLEMENUGROUPWIDTHS** Array (d. h. Breite [5], die Hilfe-Gruppe des Objekts gehört). Dies **Hilfe** Menü müssen nur ein Element wird ein Untermenü der "**Container Hilfe** >" Cascade-Menü, die wie oben beschrieben.
+In der geänderten active Document-Prozedur, das Objekt muss zunächst initialisiert die **OLEMENUGROUPWIDTHS** Elemente auf 0 (null), vor der Übergabe an den Container. Der Container führt dann eine Einfügung normales Menü mit einer Ausnahme: Der Container-Fügt ein **helfen** wie das letzte Element im Menü und speichert Sie in den letzten Eintrag des (sechsten) den Wert 1 die **OLEMENUGROUPWIDTHS** Array (d. h. Breite [5], die Hilfe-Gruppe des Objekts gehört). Dies **Hilfe** Menü müssen nur ein Element wird ein Untermenü der "**Container Hilfe** >" Cascade-Menü, die wie oben beschrieben.
 
 Das Objekt führt dann seine normales Menü Einfügen-Code, außer dass vor dem Einfügen der **Hilfe** Menü, überprüft er die sechste Eingabe der **OLEMENUGROUPWIDTHS** Array. Wenn der Wert 1 ist und der Name der das letzte Menü ist **helfen** (oder die entsprechende, lokalisierte Zeichenfolge), und das Objekt fügt seine **Hilfe** Menü als Untermenü des Containers **helfen** ein Menü.
 
@@ -52,4 +52,3 @@ Zum Schluss Zeitpunkt zum disassemblieren des im Menüs ist, das Objekt entfernt
 ## <a name="see-also"></a>Siehe auch
 
 [Aktive Dokumente-Container](../mfc/active-document-containers.md)
-

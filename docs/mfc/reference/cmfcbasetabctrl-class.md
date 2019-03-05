@@ -238,12 +238,12 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
-ms.openlocfilehash: d12c7a8c9363e93baf56d53ad7b8d81401984228
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 889bb9c48899691554a22435ffee71d6f68a6409
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51330397"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261855"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
@@ -317,7 +317,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::GetVisibleTabsNum](#getvisibletabsnum)|Gibt die Anzahl eingeblendeter Registerkarten zurück.|
 |[CMFCBaseTabCtrl::HasImage](#hasimage)||
 |[CMFCBaseTabCtrl::HideSingleTab](#hidesingletab)|Legt eine Option fest, mit der eine Fensterregisterkarte ausgeblendet wird. Dies geschieht jedoch nur, wenn das Fenster im Registerkartenformat nur über eine eingeblendete Registerkarte verfügt.|
-|[Cmfcbasetabctrl:: insertTab](#inserttab)|Fügt eine neue Registerkarte ein.|
+|[CMFCBaseTabCtrl::InsertTab](#inserttab)|Fügt eine neue Registerkarte ein.|
 |[CMFCBaseTabCtrl::InvalidateTab](#invalidatetab)||
 |[CMFCBaseTabCtrl::IsActiveTabCloseButton](#isactivetabclosebutton)||
 |[CMFCBaseTabCtrl::IsAutoColor](#isautocolor)|Gibt einen Wert zurück, der angibt, ob die automatische Färbung für das Fenster im Registerkartenformat aktiviert ist.|
@@ -512,7 +512,7 @@ virtual void CalcRectEdit(CRect& rectEdit);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *RectEdit*<br/>
+[in] *rectEdit*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -618,7 +618,7 @@ void EnableAutoColor(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] Ein boolescher Parameter, der bestimmt, ob das Framework automatische Farben verwendet werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -637,7 +637,7 @@ BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] Ein boolescher Wert, der bestimmt, ob benutzerdefinierte QuickInfos verwendet.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -658,7 +658,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable) = 0;
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] Ein boolescher Parameter, der angibt, ob die registerkartenbezeichnungen direkt bearbeitet werden kann.
 
 ### <a name="remarks"></a>Hinweise
@@ -684,7 +684,7 @@ virtual BOOL EnableTabDetach(
 *iTab*<br/>
 [in] Der nullbasierte Index einer Registerkarte.
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] Ein boolescher Wert, der angibt, ob die Registerkarte entfernbare hergestellt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -701,7 +701,7 @@ void EnableTabSwap(BOOL bEnable);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] Ein boolescher Wert, der angibt, ob die Registerkarte austauschen aktiviert.
 
 ### <a name="remarks"></a>Hinweise
@@ -1068,7 +1068,7 @@ virtual int GetTabFromHwnd(HWND hwnd) const;
 
 ### <a name="parameters"></a>Parameter
 
-*HWND*<br/>
+*hwnd*<br/>
 [in] Ein Handle für ein Fenster.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1204,7 +1204,7 @@ virtual BOOL GetTabRect(
 *iTab*<br/>
 [in] Der nullbasierte Index der Registerkarte.
 
-*Rect*<br/>
+*rect*<br/>
 [out] Ein Verweis auf eine `CRect` Objekt. Diese Methode speichert die Größe und Position der Registerkarte in diesem Parameter.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1241,7 +1241,7 @@ virtual void GetTabsRect(CRect& rect) const;
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Rect*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1611,7 +1611,7 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Der Punkt, um zu testen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1858,9 +1858,9 @@ virtual BOOL OnRenameTab(int, CString&);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Int*<br/>
+[in] *int*<br/>
 
-[in] *CString &*<br/>
+[in] *CString&*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1956,7 +1956,7 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Ar*<br/>
+[in] *ar*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1991,7 +1991,7 @@ virtual void SetActiveTabColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parameter
 
-*CLR*<br/>
+*clr*<br/>
 [in] Die neue Hintergrundfarbe angibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -2008,7 +2008,7 @@ virtual void SetActiveTabTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parameter
 
-*CLR*<br/>
+*clr*<br/>
 [in] Ein [COLORREF](/windows/desktop/gdi/colorref) Parameter, der die neue Farbe des Textes angibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -2091,7 +2091,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 *uiID*<br/>
 [in] Eine Bitmap-Ressourcen-ID `SetImageList` Lädt die Bildliste aus dieser Ressource.
 
-*CX*<br/>
+*cx*<br/>
 [in] Die Breite jedes Bilds in Pixel.
 
 *clrTransp*<br/>
@@ -2120,7 +2120,7 @@ virtual void SetLocation(Location location);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Speicherort*<br/>
+[in] *location*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2139,7 +2139,7 @@ virtual BOOL SetTabBkColor(
 *iTab*<br/>
 [in] Der nullbasierte Index der Registerkarte.
 
-*Farbe*<br/>
+*color*<br/>
 [in] Die Farbe fest.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2304,7 +2304,7 @@ virtual BOOL SetTabTextColor(
 *iTab*<br/>
 [in] Der nullbasierte Index der Registerkarte.
 
-*Farbe*<br/>
+*color*<br/>
 [in] Ein [COLORREF](/windows/desktop/gdi/colorref) Parameter, der die neue Farbe des Textes angibt.
 
 ### <a name="return-value"></a>Rückgabewert

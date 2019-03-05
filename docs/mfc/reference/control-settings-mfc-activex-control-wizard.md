@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control settings
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
-ms.openlocfilehash: 3eedf24fa4b0bb527b374dbc9f538408f20de953
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34cc49fff88399a6c3cf5f7db71410c88e5c9bab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548238"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289636"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Steuerelementeinstellungen, MFC-ActiveX-Steuerelement-Assistent
 
@@ -27,10 +27,10 @@ Weitere Informationen zum Auswählen der Optionen auf dieser Seite, um die Effiz
 
    |Steuerelement|Beschreibung|
    |-------------|-----------------|
-   |**SCHALTFLÄCHE "**|Ein Windows-Schaltflächen-Steuerelement|
-   |**KOMBINATIONSFELD-STEUERELEMENT**|Ein Kombinationsfeld-Steuerelement von Windows|
-   |**BEARBEITEN**|Ein Windows-Bearbeitungssteuerelement|
-   |**LISTBOX-ELEMENT**|Ein Listenfeld-Steuerelement von Windows|
+   |**BUTTON**|Ein Windows-Schaltflächen-Steuerelement|
+   |**COMBOBOX**|Ein Kombinationsfeld-Steuerelement von Windows|
+   |**EDIT**|Ein Windows-Bearbeitungssteuerelement|
+   |**LISTBOX**|Ein Listenfeld-Steuerelement von Windows|
    |**BILDLAUFLEISTE**|Ein Windows Schiebeleisten-Steuerelement|
    |**STATIC**|Ein statisches Steuerelement von Windows|
    |**msctls_hotkey32**|Ein "Hot" Allgemeines Steuerelement|
@@ -98,4 +98,3 @@ Weitere Informationen zum Auswählen der Optionen auf dieser Seite, um die Effiz
 [MFC-ActiveX-Steuerelement-Assistent](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
 [Anwendungseinstellungen, MFC-ActiveX-Steuerelement-Assistent](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)<br/>
 [Steuerelementnamen, MFC-ActiveX-Steuerelement-Assistent](../../mfc/reference/control-names-mfc-activex-control-wizard.md)
-

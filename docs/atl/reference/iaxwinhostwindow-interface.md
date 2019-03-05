@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinHostWindow interface
 ms.assetid: 9821c035-cd52-4c46-b58a-9278064f09b4
-ms.openlocfilehash: 1e389dc253f24eed2fee7e1d552be931a23f5e3f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4bdfdf76b48c1e9f2c06213ee25cd15a113525dd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637319"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290156"
 ---
 # <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow-Schnittstelle
 
@@ -39,7 +39,7 @@ interface IAxWinHostWindow : IUnknown
 
 |||
 |-|-|
-|["AttachControl"](#attachcontrol)|Fügt ein vorhandenes Steuerelement an das Hostobjekt an.|
+|[AttachControl](#attachcontrol)|Fügt ein vorhandenes Steuerelement an das Hostobjekt an.|
 |[CreateControl](#createcontrol)|Erstellt ein Steuerelement, und hängt es an den Hostobjekt.|
 |[CreateControlEx](#createcontrolex)|Erstellt ein Steuerelement, auf das Hostobjekt angefügt und optional ein Ereignishandler eingerichtet.|
 |[QueryControl](#querycontrol)|Gibt einen Schnittstellenzeiger auf das gehostete Steuerelement zurück.|
@@ -59,7 +59,7 @@ Die Definition dieser Schnittstelle ist als IDL oder C++ verfügbar, wie unten d
 |IDL|ATLIFace.idl|
 |C++|Konnte IRegistrar (ebenfalls in ATLBase.h enthalten)|
 
-##  <a name="attachcontrol"></a>  IAxWinHostWindow:: AttachControl
+##  <a name="attachcontrol"></a>  IAxWinHostWindow::AttachControl
 
 Fügt einem vorhandenen (und zuvor initialisierten)-Steuerelement auf das Hostobjekt, das Verwenden des Fensters identifizierte *hWnd*.
 
@@ -142,7 +142,7 @@ STDMETHOD(CreateControlEx)(
 [out] Die Adresse eines Zeigers, der erhält die `IUnknown` Schnittstelle des erstellten Steuerelements. NULL kann sein.
 
 *riidAdvise*<br/>
-[in] Der Schnittstellenbezeichner einer ausgehenden Schnittstelle für das enthaltene Objekt. IID_NULL kann sein.
+[in] Der Schnittstellenbezeichner einer ausgehenden Schnittstelle für das enthaltene Objekt. Can be IID_NULL.
 
 *punkAdvise*<br/>
 [in] Ein Zeiger auf die `IUnknown` -Schnittstelle des Senkenobjekts mit dem Verbindungspunkt am anhand des enthaltenen Objekts verbunden sein, `iidSink`.
@@ -220,6 +220,5 @@ Diese Funktion wird von Steuerelementen (z. B. das Webbrowser-Steuerelement), di
 ## <a name="see-also"></a>Siehe auch
 
 [IAxWinAmbientDispatch-Schnittstelle](../../atl/reference/iaxwinambientdispatch-interface.md)<br/>
-[CAxWindow:: QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
+[CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
 [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
-

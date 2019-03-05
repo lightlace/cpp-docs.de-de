@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCRibbonColorButton [MFC], SetPalette
 - CMFCRibbonColorButton [MFC], UpdateColor
 ms.assetid: 6b4b4ee3-8cc0-41b4-a4eb-93e8847008e1
-ms.openlocfilehash: f0a55fa9cb431900a0454d481a77efc4e63372ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7901619110652423a2ab00d8088d6b9213fe202
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644833"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266275"
 ---
 # <a name="cmfcribboncolorbutton-class"></a>CMFCRibbonColorButton-Klasse
 
@@ -171,7 +171,7 @@ CMFCRibbonColorButton(
 *nSmallImageIndex*<br/>
 [in] Der nullbasierte Index, der das kleine Bild auf die Schaltfläche angezeigt werden soll.
 
-*Farbe*<br/>
+*color*<br/>
 [in] Die Farbe der Schaltfläche (Standardwert ist schwarz).
 
 *bSimpleButtonLook*<br/>
@@ -206,7 +206,7 @@ void EnableAutomaticButton(
 *colorAutomatic*<br/>
 [in] RGB-Wert, der angibt, die **automatische** Standardfarbe der Schaltfläche.
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] TRUE, wenn die **automatische** Schaltfläche aktiviert ist. "False", wenn er deaktiviert ist.
 
 *lpszToolTip*<br/>
@@ -324,7 +324,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Parameter
 
-*Farbe*<br/>
+*color*<br/>
 [in] Eine Farbe festgelegt.
 
 ##  <a name="setcolorboxsize"></a>  CMFCRibbonColorButton::SetColorBoxSize
@@ -352,7 +352,7 @@ static void __stdcall SetColorName(
 
 ### <a name="parameters"></a>Parameter
 
-*Farbe*<br/>
+*color*<br/>
 [in] Eine Farbe der RGB-Wert.
 
 *strName*<br/>
@@ -420,7 +420,7 @@ void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Parameter
 
-*Farbe*<br/>
+*color*<br/>
 [in] Eine Farbe, die vom Benutzer ausgewählt wurde.
 
 ### <a name="remarks"></a>Hinweise

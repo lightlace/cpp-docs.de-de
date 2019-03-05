@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Patterns Library (PPL)
 ms.assetid: 40fd86b2-69fa-45e5-93d8-98a75636c242
-ms.openlocfilehash: deeede132a919084399be54d5559605b99c4e4fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 11440d56b9618d4763e1b7e47a21b365bbdc0c15
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459409"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290715"
 ---
 # <a name="parallel-patterns-library-ppl"></a>Parallel Patterns Library (PPL)
 
@@ -58,4 +58,3 @@ Jede Iteration der Schleife erfordert eine unterschiedliche Zeit zum Beenden. Di
 |[Parallele Container und Objekte](../../parallel/concrt/parallel-containers-and-objects.md)|Beschreibt die verschiedenen parallelen Container und die Objekte, die von der PPL bereitgestellt werden.|
 |[Abbruch in der PPL](cancellation-in-the-ppl.md)|Erläutert, wie die von einem parallelen Algorithmus ausgeführte Verarbeitung abgebrochen wird.|
 |[Concurrency Runtime](../../parallel/concrt/concurrency-runtime.md)|Beschreibt die Concurrency Runtime, die die parallele Programmierung vereinfacht, und stellt Links zu verwandten Themen bereit.|
-

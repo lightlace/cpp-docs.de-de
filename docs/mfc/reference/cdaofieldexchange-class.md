@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_nOperation
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
-ms.openlocfilehash: ef88486d14ade1d5871d614069dc1c202d6ad159
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d28739ced9aedd29106937cb717c87a241993036
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654219"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291027"
 ---
 # <a name="cdaofieldexchange-class"></a>CDaoFieldExchange-Klasse
 
@@ -38,13 +38,13 @@ class CDaoFieldExchange
 |Name|Beschreibung|
 |----------|-----------------|
 |[CDaoFieldExchange::IsValidOperation](#isvalidoperation)|Gibt zurück, die ungleich NULL, wenn der aktuelle Vorgang ist geeignet für den Typ des aktualisierten Felds.|
-|[CDaoFieldExchange:: SetFieldType](#setfieldtype)|Gibt den Typ des Recordset-Datenmember, Spalte oder des Parameters – durch alle nachfolgenden Aufrufe DFX-Funktionen dargestellt wird, bis der nächste Aufruf von `SetFieldType`.|
+|[CDaoFieldExchange::SetFieldType](#setfieldtype)|Gibt den Typ des Recordset-Datenmember, Spalte oder des Parameters – durch alle nachfolgenden Aufrufe DFX-Funktionen dargestellt wird, bis der nächste Aufruf von `SetFieldType`.|
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CDaoFieldExchange::](#m_noperation)|Der DFX-Vorgang ausgeführt wird, durch den aktuellen Aufruf des Recordsets `DoFieldExchange` Member-Funktion.|
+|[CDaoFieldExchange::m_nOperation](#m_noperation)|Der DFX-Vorgang ausgeführt wird, durch den aktuellen Aufruf des Recordsets `DoFieldExchange` Member-Funktion.|
 |[CDaoFieldExchange::m_prs](#m_prs)|Ein Zeiger auf das Recordset, das für die, das DFX Vorgänge ausgeführt werden.|
 
 ## <a name="remarks"></a>Hinweise
@@ -130,7 +130,7 @@ Enthält einen Zeiger auf die [CDaoRecordset](../../mfc/reference/cdaorecordset-
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="setfieldtype"></a>  CDaoFieldExchange:: SetFieldType
+##  <a name="setfieldtype"></a>  CDaoFieldExchange::SetFieldType
 
 Rufen Sie `SetFieldType` in Ihre `CDaoRecordset` Klasse `DoFieldExchange` außer Kraft setzen.
 

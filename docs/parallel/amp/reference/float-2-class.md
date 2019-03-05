@@ -28,12 +28,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_2::y
 - amp_short_vectors/Concurrency::graphics::float_2::g
 ms.assetid: b3ebd48e-f8c8-4f00-a640-357f702f0cae
-ms.openlocfilehash: 61e9f46737e15bf4cb7a7d45b0560fd3e6dea1cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94a0936c1e5630ae53af9d9386d3c9248061ed71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579152"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299889"
 ---
 # <a name="float2-class"></a>float_2-Klasse
 
@@ -63,31 +63,31 @@ class float_2;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|float_2:: get_X||
-|float_2:: get_xy||
-|float_2:: get_Y||
+|float_2::get_x||
+|float_2::get_xy||
+|float_2::get_y||
 |float_2::get_yx||
 |float_2::ref_g||
 |float_2::ref_r||
 |float_2::ref_x||
 |float_2::ref_y||
-|float_2:: set_X||
-|float_2:: set_xy||
-|float_2:: set_y||
-|float_2:: set_yx||
+|float_2::set_x||
+|float_2::set_xy||
+|float_2::set_y||
+|float_2::set_yx||
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
 |Name|Beschreibung|
 |----------|-----------------|
-|float_2::-||
-|float_2:::||
-|float_2:: * =||
-|float_2:: Operator / =||
-|float_2:: Operator++-||
-|float_2:: Operator +=||
+|float_2::operator-||
+|float_2::operator--||
+|float_2::operator*=||
+|float_2::operator/=||
+|float_2::operator++||
+|float_2::operator+=||
 |float_2::operator=||
-|float_2:: Operator-=||
+|float_2::operator-=||
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
@@ -99,12 +99,12 @@ class float_2;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|float_2:: g||
+|float_2::g||
 |float_2::gr||
-|float_2:: r||
-|float_2:: RG||
+|float_2::r||
+|float_2::rg||
 |float_2:: x||
-|float_2:: XY||
+|float_2::xy||
 |float_2:: y||
 |float_2::yx||
 
@@ -171,7 +171,7 @@ Der Wert 1 Element initialisiert werden.
 *_V*<br/>
 Der Wert für die Initialisierung.
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Das Objekt, das zum Initialisieren verwendet.
 
 ##  <a name="float_2__size"></a> Größe

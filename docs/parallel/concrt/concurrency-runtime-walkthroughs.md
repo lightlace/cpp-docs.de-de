@@ -5,12 +5,12 @@ helpviewer_keywords:
 - walkthroughs [Concurrency Runtime]
 - Concurrency Runtime, walkthroughs
 ms.assetid: 7374c5e9-54eb-44bf-9ed9-5e190cfd290b
-ms.openlocfilehash: 2307581dc1cda3ed75ee1cea9fc4ff504a0a98b3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d176049bb3b03ae0f55170e45e20e7c2c0e322ff
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519489"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296409"
 ---
 # <a name="concurrency-runtime-walkthroughs"></a>Exemplarische Vorgehensweisen für die Concurrency Runtime
 
@@ -24,7 +24,7 @@ Zeigt, wie die [IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttp
 [Exemplarische Vorgehensweise: Erstellen einer agentbasierten Anwendung](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br/>
 Beschreibt das Erstellen einer einfachen agentbasierten Anwendung.
 
-[Exemplarische Vorgehensweise: Erstellen eines Datenfluss-Agent](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
+[Exemplarische Vorgehensweise: Erstellen eines Datenfluss-Agents](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
 Veranschaulicht, wie zum Erstellen von Agent-basierten Anwendungen, die auf Datenfluss anstatt auf ablaufsteuerung basieren.
 
 [Exemplarische Vorgehensweise: Erstellen eines Bildverarbeitungsnetzwerks](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
@@ -42,7 +42,7 @@ Veranschaulicht, wie die Leistung einer MFC-Anwendung zu verbessern, die die Man
 [Exemplarische Vorgehensweise: Verwenden der Concurrency Runtime in einer COM-Anwendung](../../parallel/concrt/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application.md)<br/>
 Veranschaulicht, wie die Concurrency Runtime in einer Anwendung, die das Component Object Model (COM) verwendet.
 
-[Exemplarische Vorgehensweise: Anpassen von vorhandenem Code für die Verwendung einfacher Aufgaben](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)<br/>
+[Exemplarische Vorgehensweise: Anpassen von vorhandenem Code für die Verwendung einfacher Tasks](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)<br/>
 Zeigt, wie vorhandenen Code angepasst werden, die mit der Windows-API erstellen und Ausführen eines Threads, um eine einfache Aufgabe zu verwenden.
 
 [Exemplarische Vorgehensweise: Erstellen eines benutzerdefinierten Nachrichtenblocks](../../parallel/concrt/walkthrough-creating-a-custom-message-block.md)<br/>
@@ -52,4 +52,3 @@ Beschreibt, wie einen benutzerdefinierter Nachrichtenblocktyp erstellt wird, der
 
 [Concurrency Runtime](../../parallel/concrt/concurrency-runtime.md)<br/>
 Das Framework zur parallele Programmierung für Visual C++ eingeführt.
-

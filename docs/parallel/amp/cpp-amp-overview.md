@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 26f24e922769a565c88264032373662116eee290
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: da77e2ba93554cb65d4cc92353d05d54467b50d4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176990"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269642"
 ---
 # <a name="c-amp-overview"></a>Übersicht über C++ AMP
 
@@ -56,9 +56,9 @@ Die folgenden Teile des Codes sind wichtig:
 
 - Daten: Die Daten bestehen aus drei Arrays. Alle haben den gleichen Rang (Eins) und die gleiche Länge (Fünf).
 
-- Iteration: Die erste `for`-Schleife stellt einen Mechanismus für das Durchlaufen der Elemente in den Arrays bereit. Der Code, der zur Berechnung der Summen ausgeführt werden soll, befindet sich im ersten `for`-Block.
+- Iteration: Die erste `for` Schleife stellt einen Mechanismus zum Durchlaufen der Elemente in den Arrays bereit. Der Code, der zur Berechnung der Summen ausgeführt werden soll, befindet sich im ersten `for`-Block.
 
-- Index: Über die Variable `idx` wird auf die einzelnen Elemente der Arrays zugegriffen.
+- Index: Die `idx` Variable greift auf die einzelnen Elemente des Arrays.
 
 Bei Verwendung von C++ AMP können Sie stattdessen den folgenden Code schreiben.
 
@@ -98,7 +98,7 @@ void CppAmpMethod() {
 
 Es sind zwar die gleichen grundlegenden Elemente vorhanden, es werden jedoch C++ AMP-Konstrukte verwendet:
 
-- Daten: Verwenden Sie C++-Arrays, um drei C++ AMP erstellen [Array_view](../../parallel/amp/reference/array-view-class.md) Objekte. Sie stellen vier Werte zur Verfügung, um ein `array_view`-Objekt zu erstellen: die Datenwerte, den Rang, den Elementtyp und die Länge des `array_view`-Objekts in jeder Dimension. Der Rang und der Typ werden als Typparameter übergeben. Die Daten und die Länge werden als Konstruktorparameter übergeben. In diesem Beispiel ist das an den Konstruktor übergebene C++-Array eindimensional. Der Rang und die Länge werden verwendet, um die rechteckige Form der Daten im `array_view`-Objekt zu erstellen, und die Datenwerte werden verwendet, um das Array zu füllen. Die Laufzeitbibliothek enthält auch die [array-Klasse](../../parallel/amp/reference/array-class.md), die über eine Schnittstelle, die ähnelt verfügt die `array_view` Klasse und wird weiter unten in diesem Artikel.
+- Daten: Sie verwenden C++-Arrays aus, um drei C++ AMP erstellen [Array_view](../../parallel/amp/reference/array-view-class.md) Objekte. Sie stellen vier Werte zur Verfügung, um ein `array_view`-Objekt zu erstellen: die Datenwerte, den Rang, den Elementtyp und die Länge des `array_view`-Objekts in jeder Dimension. Der Rang und der Typ werden als Typparameter übergeben. Die Daten und die Länge werden als Konstruktorparameter übergeben. In diesem Beispiel ist das an den Konstruktor übergebene C++-Array eindimensional. Der Rang und die Länge werden verwendet, um die rechteckige Form der Daten im `array_view`-Objekt zu erstellen, und die Datenwerte werden verwendet, um das Array zu füllen. Die Laufzeitbibliothek enthält auch die [array-Klasse](../../parallel/amp/reference/array-class.md), die über eine Schnittstelle, die ähnelt verfügt die `array_view` Klasse und wird weiter unten in diesem Artikel.
 
 - Iteration: Die [Parallel_for_each-Funktion (C++-AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each) bietet einen Mechanismus zum Durchlaufen der Datenelemente oder *compute-Domäne*. In diesem Beispiel wird die Compute-Domäne durch `sum.extent` angegeben. Der Code, der ausgeführt werden soll, die in ein Lambda-Ausdruck enthalten ist oder *Kernelfunktion*. Die Anweisung `restrict(amp)` gibt an, dass nur die Teilmenge der Programmiersprache C++ verwendet wird, die mit C++ AMP beschleunigt werden kann.
 
@@ -316,7 +316,7 @@ Die *compute-Domäne* ist ein `extent` Objekt oder ein `tiled_extent` Objekt, da
 
 Die *Lambda-Ausdruck* definiert den Code, der in jedem Thread ausgeführt. Die Erfassungsklausel `[=]`, gibt an, dass der Text des Lambda-Ausdrucks greift auf alle erfassten Variablen nach Wert an, die in diesem Fall sind `a`, `b`, und `sum`. In diesem Beispiel wird in der Parameterliste eine eindimensionale `index`-Variable mit dem Namen `idx` erstellt. Der Wert von `idx[0]` beträgt im ersten Thread null und wird in jedem nachfolgenden Thread um eins erhöht. Die Anweisung `restrict(amp)` gibt an, dass nur die Teilmenge der Programmiersprache C++ verwendet wird, die mit C++ AMP beschleunigt werden kann.  Die Einschränkungen für Funktionen, die den Restrict-Modifizierer aufweisen, werden in beschrieben [einschränken (C++-AMP)](../../cpp/restrict-cpp-amp.md). Weitere Informationen finden Sie unter, [Lambda-Ausdruckssyntax](../../cpp/lambda-expression-syntax.md).
 
-Der Lambda-Ausdruck kann den auszuführenden Code enthalten oder eine separate Kernelfunktion aufrufen. Die Kernelfunktion muss den `restrict(amp)`-Modifizierer enthalten. Das folgende Beispiel entspricht dem vorherigen Beispiel, jedoch wird eine separate Kernelfunktion aufgerufen.
+Der Lambdaausdruck kann den auszuführenden Code enthalten oder eine separate Kernelfunktion aufrufen. Die Kernelfunktion muss den `restrict(amp)`-Modifizierer enthalten. Das folgende Beispiel entspricht dem vorherigen Beispiel, jedoch wird eine separate Kernelfunktion aufgerufen.
 
 ```cpp
 #include <amp.h>
@@ -459,11 +459,11 @@ C++ AMP enthält eine Grafikbibliothek, die für die Programmierung beschleunigt
 
 - [Texture-Klasse](../../parallel/amp/reference/texture-class.md): Sie können die "Texture"-Klasse verwenden, um Texturen aus dem Arbeitsspeicher oder aus einer Datei zu erstellen. Texturen ähneln Arrays, da sie die Daten enthalten, und sie Containern in der C++-Standardbibliothek in Bezug auf die zuweisungs- und kopienkonstruktion ähneln. Weitere Informationen finden Sie unter [C++-Standardbibliothekcontainer](../../standard-library/stl-containers.md). Die Vorlagenparameter für die `texture`-Klasse sind der Elementtyp und der Rang. Der Rang kann 1, 2 oder 3 lauten. Der Elementtyp kann einer der Typen kurzer Vektoren sein, die später in diesem Artikel beschrieben werden.
 
-- [Writeonly_texture_view-Klasse](../../parallel/amp/reference/writeonly-texture-view-class.md): bietet lesegeschützten Zugriff auf jede Textur.
+- [Writeonly_texture_view-Klasse](../../parallel/amp/reference/writeonly-texture-view-class.md): Bietet lesegeschützten Zugriff auf jede Textur.
 
-- Kurzvektorbibliothek: Definiert einen Satz von Typen kurzer Vektoren der Länge 2, 3 und 4 auf der Grundlage von **Int**, `uint`, **"float"**, **doppelte**, [Norm ](../../parallel/amp/reference/norm-class.md), oder [Unorm](../../parallel/amp/reference/unorm-class.md).
+- Die Kurzvektorbibliothek: Definiert einen Satz von Typen kurzer Vektoren der Länge 2, 3 und 4 auf der Grundlage von **Int**, `uint`, **"float"**, **doppelte**, [Norm](../../parallel/amp/reference/norm-class.md), oder [Unorm](../../parallel/amp/reference/unorm-class.md).
 
-## <a name="universal-windows-platform-uwp-apps"></a>Apps der universellen Windows-Plattform (UWP)
+## <a name="universal-windows-platform-uwp-apps"></a>Universelle Windows-Plattform-Apps (UWP)
 
 Wie andere C++-Bibliotheken können Sie C++ AMP in UWP-apps. In diesen Artikeln wird beschrieben, wie C++ AMP-Code in Apps verwendet wird, die mit C++, C#, Visual Basic oder JavaScript erstellt werden:
 

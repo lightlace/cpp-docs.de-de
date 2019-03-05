@@ -1,5 +1,5 @@
 ---
-title: 'MFC-ActiveX-Steuerelemente: Hinzufügen einer weiteren benutzerdefinierten Eigenschaftenseite'
+title: 'MFC-ActiveX-Steuerelemente: Hinzufügen einer anderen benutzerdefinierten Eigenschaftenseite'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - property pages [MFC], MFC ActiveX controls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - ActiveX controls [MFC], property pages
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: fcf7e119-9f29-41a9-908d-e9b1607e08af
-ms.openlocfilehash: ac72258e881d10723a02b5103c602ac5cec6a1f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87b71fdddc5b52f66c34cdbcdb234c83616d0850
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465311"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289546"
 ---
-# <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC-ActiveX-Steuerelemente: Hinzufügen einer weiteren benutzerdefinierten Eigenschaftenseite
+# <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC-ActiveX-Steuerelemente: Hinzufügen einer anderen benutzerdefinierten Eigenschaftenseite
 
 In einigen Fällen hat ein ActiveX-Steuerelement mehr Eigenschaften als angemessen auf einer Eigenschaftenseite eingepasst werden kann. In diesem Fall können Sie die Eigenschaftenseiten an das ActiveX-Steuerelement zum Anzeigen dieser Eigenschaften hinzufügen.
 
@@ -24,7 +24,7 @@ Die folgenden Verfahren verwenden Sie ein Beispiel ActiveX-Steuerelement-Framewo
 
 Weitere Informationen zur Verwendung von Eigenschaftenseiten in einem ActiveX-Steuerelement finden Sie unter den folgenden Artikeln:
 
-- [MFC-ActiveX-Steuerelemente: Eigenschaftenseite](../mfc/mfc-activex-controls-property-pages.md)
+- [MFC-ActiveX-Steuerelemente: Eigenschaftenseiten](../mfc/mfc-activex-controls-property-pages.md)
 
 - [MFC-ActiveX-Steuerelemente: Verwenden von vordefinierten Eigenschaftenseiten](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
@@ -110,4 +110,3 @@ Nachdem Sie die notwendigen Änderungen an Ihrer Projekt neu, und verwenden zum 
 ## <a name="see-also"></a>Siehe auch
 
 [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)
-
