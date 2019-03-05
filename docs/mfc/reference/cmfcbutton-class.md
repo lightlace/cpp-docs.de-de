@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: a82793ce29765bf01e8c52c94257bd3150187505
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 804c3219356d36f6a0a733937c5e354822a4be83
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178459"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269811"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton-Klasse
 
@@ -258,7 +258,7 @@ static void EnableWindowsTheming(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] True, um das aktuelle Windows-Design zum Zeichnen des Rahmens der Schaltfläche zu verwenden. "False", nicht die Windows-Designs zu verwenden. Der Standardwert ist "true".
 
 ### <a name="remarks"></a>Hinweise
@@ -563,7 +563,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Verweis auf ein Rechteck, das die Schaltfläche mit den umschließt.
 
 *uiState*<br/>
@@ -639,7 +639,7 @@ virtual void OnDrawText(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Verweis auf ein Rechteck, das die Schaltfläche mit den umschließt.
 
 *strText*<br/>
@@ -882,7 +882,7 @@ void SetMouseCursor(HCURSOR hcursor);
 
 ### <a name="parameters"></a>Parameter
 
-*hCursor*<br/>
+*hcursor*<br/>
 [in] Das Handle eines Cursors.
 
 ### <a name="remarks"></a>Hinweise

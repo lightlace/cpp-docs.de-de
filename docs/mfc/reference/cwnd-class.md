@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: ebb0d0abcff069deca4597ffb5a3a2d4e67cab9c
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 7427d8b50dadd9694112ad27c2892ee228a93864
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894535"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276545"
 ---
 # <a name="cwnd-class"></a>CWnd-Klasse
 
@@ -1120,7 +1120,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnCreate](#oncreate)|Wird im Rahmen einer Fenstererstellung aufgerufen.|
 |[CWnd::OnCtlColor](#onctlcolor)|Wird aufgerufen, wenn `CWnd` das übergeordnete Element eines Steuerelements ist, wenn das Steuerelement gezeichnet wird.|
 |[CWnd::OnDeadChar](#ondeadchar)|Wird aufgerufen, wenn eine Tastatureingabe in ein systemfremdes, funktionsloses Zeichen (beispielsweise Akzentzeichen) übersetzt wird. |
-|[CWnd::OnDeleteItem](#ondeleteitem)|Wird aufgerufen, wenn ein vom Besitzer gezeichnetes Listen- oder Kombinationsfeld zerstört wird oder wenn Elemente aus dem Steuerelement entfernt werden.|
+|[CWnd::OnDeleteItem](#ondeleteitem)|Wird aufgerufen, wenn ein vom Besitzer gezeichnetes Listen- oder Kombinationsfeld zerstört wird oder wenn Elemente aus dem Steuerelement entfernt werden. |
 |[CWnd::OnDestroy](#ondestroy)|Wird aufgerufen, wenn `CWnd` zerstört wird.|
 |[CWnd::OnDestroyClipboard](#ondestroyclipboard)|Wird aufgerufen, wenn die Zwischenablage, durch einen Aufruf der Windows geleert wird [EmptyClipboard](/windows/desktop/api/winuser/nf-winuser-emptyclipboard) Funktion.|
 |[CWnd::OnDeviceChange](#ondevicechange)|Benachrichtigt eine Anwendung oder einen Gerätetreiber über eine Änderung an der Hardwarekonfiguration eines Geräts oder des Computers.|
@@ -11743,7 +11743,7 @@ UINT_PTR SetTimer(
 ### <a name="parameters"></a>Parameter
 
 *nIDEvent*<br/>
-Gibt einen Timerbezeichner ungleich 0 (null) an. Wenn der Zeitgeberbezeichner eindeutig ist, wird von `SetTimer` der gleiche Wert zurückgegeben. Andernfalls wird von `SetTimer` ein neuer eindeutiger Wert festgelegt und zurückgegeben. Bei einem Fensterzeitgeber (der eine NULL-Rückruffunktion besitzt), muss der Wert nur für andere Fensterzeitgeber eindeutig sein, die dem aktiven Fenster zugeordnet sind. Für einen Rückrufzeitgeber muss der Wert für alle Zeitgeber in allen Prozessen eindeutig sein. Beim Erstellen eines Rückruftimers ist es daher wahrscheinlicher, dass der zurückgegebene Wert von dem von Ihnen angegebenen Wert abweicht.
+Gibt einen Zeitgeberbezeichner ungleich 0 (null) an. Wenn der Zeitgeberbezeichner eindeutig ist, wird von `SetTimer` der gleiche Wert zurückgegeben. Andernfalls wird von `SetTimer` ein neuer eindeutiger Wert festgelegt und zurückgegeben. Bei einem Fenstertimer (der eine NULL-Rückruffunktion besitzt), muss der Wert nur für andere Fenstertimer eindeutig sein, die dem aktiven Fenster zugeordnet sind. Für einen Rückrufzeitgeber muss der Wert für alle Zeitgeber in allen Prozessen eindeutig sein. Beim Erstellen eines Rückruftimers ist es daher wahrscheinlicher, dass der zurückgegebene Wert von dem von Ihnen angegebenen Wert abweicht.
 
 *nElapse*<br/>
 Gibt den Timeoutwert oder Intervall in Millisekunden an.
@@ -11753,7 +11753,7 @@ Gibt die Adresse der Anwendung bereitgestellten `TimerProc` Callback-Funktion, d
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Timerbezeichner des neuen Timers, wenn die Funktion erfolgreich ist. Dieser Wert kann oder möglicherweise nicht gleich dem Wert, der durch Übergeben der *nIDEvent* Parameter. Eine Anwendung sollte stets den Rückgabewert in übergeben die [KillTimer](#killtimer) Memberfunktion versucht, die den Zeitgeber zu beenden. Ungleich 0 (null), wenn erfolgreich, andernfalls 0 (null).
+Der Zeitgeberbezeichner des neuen Zeitgebers, wenn die Funktion erfolgreich ist. Dieser Wert kann oder möglicherweise nicht gleich dem Wert, der durch Übergeben der *nIDEvent* Parameter. Eine Anwendung sollte stets den Rückgabewert in übergeben die [KillTimer](#killtimer) Memberfunktion versucht, die den Zeitgeber zu beenden. Ungleich 0 (null), wenn erfolgreich, andernfalls 0 (null).
 
 ### <a name="remarks"></a>Hinweise
 
