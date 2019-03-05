@@ -98,16 +98,16 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: 072fcec4944088ab087a6a39c7d8b916c3bc80e2
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f1e9c6e4505c67b881d479817ec8b45e4ae5dc8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177029"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304552"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl-Klasse
 
-Kapselt die Funktionalität eines Grundleisten-Steuerelements. Dabei handelt es sich um einen Container für ein untergeordnetes Fenster.
+Kapselt die Funktionalität eines Grundleisten-Steuerelements. Dabei handelt es sich um einen Container für ein untergeordnetes Fenster.
 
 ## <a name="syntax"></a>Syntax
 
@@ -152,7 +152,7 @@ class CReBarCtrl : public CWnd
 |[CReBarCtrl::GetToolTips](#gettooltips)|Ruft das Handle für alle Grundleisten-Steuerelement zugeordneten QuickInfo-Steuerelement ab.|
 |[CReBarCtrl::HitTest](#hittest)|Bestimmt, welcher Teil ein Infoleistenband wird zu einem bestimmten Zeitpunkt auf dem Bildschirm, wenn ein Infoleistenband an diesem Punkt vorhanden ist.|
 |[CReBarCtrl::IDToIndex](#idtoindex)|Konvertiert einen-Band-Bezeichner (ID) in einen Index-Band-in einem Grundleisten-Steuerelement.|
-|[CReBarCtrl:: InsertBand](#insertband)|Fügt ein neues Band in einem Grundleisten-Steuerelement ein.|
+|[CReBarCtrl::InsertBand](#insertband)|Fügt ein neues Band in einem Grundleisten-Steuerelement ein.|
 |[CReBarCtrl::MaximizeBand](#maximizeband)|Wird ein Band in einem Grundleisten-Steuerelement, auf die maximale Größe an.|
 |[CReBarCtrl::MinimizeBand](#minimizeband)|Wird ein Band in einem Grundleisten-Steuerelement, auf die kleinste Größe angepasst.|
 |[CReBarCtrl::MoveBand](#moveband)|Verschiebt ein Band aus einem Index.|
@@ -254,7 +254,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Gibt die Kombination der Grundleisten-Steuerelement-Formate, die auf das Steuerelement angewendet. Finden Sie unter [Stile für Grundleisten-Steuerelemente](/windows/desktop/Controls/rebar-control-styles) im Windows SDK für eine Liste der unterstützten Formate.
 
-*Rect*<br/>
+*rect*<br/>
 Ein Verweis auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die die Position und Größe des Infoleisten-Steuerelements ist.
 
 *pParentWnd*<br/>
@@ -302,7 +302,7 @@ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erwei
 *dwStyle*<br/>
 Gibt die Kombination der Grundleisten-Steuerelement-Formate, die auf das Steuerelement angewendet. Eine Liste der unterstützten Formate, finden Sie unter [Stile für Grundleisten-Steuerelemente](/windows/desktop/Controls/rebar-control-styles) im Windows SDK.
 
-*Rect*<br/>
+*rect*<br/>
 Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -388,7 +388,7 @@ void GetBandBorders(
 *uBand*<br/>
 Nullbasierte Index des dem Band für das die Rahmen abgerufen werden sollen.
 
-*Volksrepublik China*<br/>
+*prc*<br/>
 Ein Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die die Rahmen-Band-erhält. Wenn Infoleisten-Steuerelements styl RBS_BANDBORDERS verfügt, erhält jedes Mitglied dieser Struktur die Anzahl der Pixel, auf der entsprechenden Seite des Bands, die den Rahmen darstellen. Wenn Infoleisten-Steuerelements keinen styl RBS_BANDBORDERS, empfängt nur das linke Element dieser Struktur gültige Informationen. Eine Beschreibung der Stile für Grundleisten-Steuerelemente, finden Sie unter [Steuerelementtypen für die Grundleiste](/windows/desktop/Controls/rebar-control-styles) im Windows SDK.
 
 ##  <a name="getbandcount"></a>  CReBarCtrl::GetBandCount
@@ -493,7 +493,7 @@ BOOL GetColorScheme(COLORSCHEME* lpcs);
 
 ### <a name="parameters"></a>Parameter
 
-*LPCs*<br/>
+*lpcs*<br/>
 Ein Zeiger auf eine [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) Struktur, wie im Windows SDK beschrieben.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -583,7 +583,7 @@ BOOL GetRect(
 *uBand*<br/>
 Nullbasierte Index, der ein Band in der Grundleisten-Steuerelement.
 
-*Volksrepublik China*<br/>
+*prc*<br/>
 Ein Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die die Grenzen des das Infoleistenband erhält.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -776,7 +776,7 @@ BOOL MoveBand(
 *uFrom*<br/>
 Nullbasierte Index des dem Band verschoben werden soll.
 
-*utom*<br/>
+*uTo*<br/>
 Nullbasierte Index, der Position des neuen Band. Wert dieses Parameters muss nie größer als die Anzahl der Bänder minus 1 sein. Rufen Sie zum Abrufen der Anzahl der Bänder [GetBandCount](#getbandcount).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -916,7 +916,7 @@ COLORREF SetBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parameter
 
-*CLR*<br/>
+*clr*<br/>
 Der COLORREF-Wert, der die neue Standard-Hintergrundfarbe darstellt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -937,7 +937,7 @@ void SetColorScheme(const COLORSCHEME* lpcs);
 
 ### <a name="parameters"></a>Parameter
 
-*LPCs*<br/>
+*lpcs*<br/>
 Ein Zeiger auf eine [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) Struktur, wie im Windows SDK beschrieben.
 
 ### <a name="remarks"></a>Hinweise
@@ -958,7 +958,7 @@ DWORD SetExtendedStyle(
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*dwMask*|[in] Eine bitweise Kombination (OR) von Flags, die angeben, welche Flags-Seite in der *DwStyleEx* Parameter angewendet. Verwenden Sie eine oder mehrere der folgenden Werte ein:<br /><br /> RBS_EX_SPLITTER: Standardmäßig an den Splitter im unteren Bereich im horizontalen Modus, und klicken Sie auf der rechten Seite im vertikalen-Modus.<br /><br /> RBS_EX_TRANSPARENT: Weiterleiten die [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) Nachricht für das übergeordnete Fenster.|
+|*dwMask*|[in] Eine bitweise Kombination (OR) von Flags, die angeben, welche Flags-Seite in der *DwStyleEx* Parameter angewendet. Verwenden Sie eine oder mehrere der folgenden Werte ein:<br /><br /> RBS_EX_SPLITTER: Standardmäßig an den Splitter im unteren Bereich im horizontalen Modus, und klicken Sie auf der rechten Seite im vertikalen-Modus.<br /><br /> RBS_EX_TRANSPARENT: Weiterleiten der [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) Nachricht für das übergeordnete Fenster.|
 |*dwStyleEx*|[in] Eine bitweise Kombination (OR) von Flags, die angeben, die Stile angewendet werden. Um einen Stil zu festzulegen, geben Sie das gleiche Flag, das verwendet wird die *DwMask* Parameter. Geben Sie zum Zurücksetzen eines Stils binäre 0 (null).|
 
 ### <a name="return-value"></a>Rückgabewert
@@ -996,7 +996,7 @@ CWnd* SetOwner(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Ein Zeiger auf eine `CWnd` Objekt, das als Besitzer des Infoleisten-Steuerelements festgelegt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1041,7 +1041,7 @@ COLORREF SetTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parameter
 
-*CLR*<br/>
+*clr*<br/>
 Farbe ein COLORREF-Wert, der den neuen Text darstellt, die der `CReBarCtrl` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1122,7 +1122,7 @@ BOOL SizeToRect(CRect& rect);
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 Ein Verweis auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt, das das Rechteck angibt, dessen Größe Infoleisten-Steuerelements geändert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1137,4 +1137,3 @@ Diese Memberfunktion verwendet ein `CRect` Objekt als Parameter anstelle eines `
 
 [CWnd-Klasse](../../mfc/reference/cwnd-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
-

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [C++], hosting
 - controls [ATL]
 ms.assetid: d4bdfbe0-82ca-4f2f-bb95-cb89bdcc9b53
-ms.openlocfilehash: ef175ff83fd641852b27fea8408f1bb7de69f839
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42f9b41b99e13fcfe2fb003acb348c9464e0fd05
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630810"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296565"
 ---
 # <a name="atl-control-containment-faq"></a>Fragen und Antworten zur ATL-Steuerelementkapselung
 
@@ -54,7 +54,7 @@ Rufen Sie die ersten sieben Funktionen [AtlAxWinInit](reference/composite-contro
 > [!NOTE]
 >  Die Steuerelement-hosting-API bildet die Grundlage für ATLs-Unterstützung für ActiveX-Steuerelementcontainern. Es besteht jedoch in der Regel kaum Bedarf, diese Funktionen direkt aufzurufen, wenn Sie nutzen, oder ATLs-Wrapperklassen nutzen. Weitere Informationen finden Sie unter [der ATL-Klassen vereinfachen ActiveX-Steuerelementcontainern](which-atl-classes-facilitate-activex-control-containment-q.md).
 
-## <a name="what-is-atlaxwin100"></a>Was ist AtlAxWin100?
+## <a name="what-is-atlaxwin100"></a>What Is AtlAxWin100?
 
 `AtlAxWin100` ist der Name einer Fenster-Klasse, die ATLs-steuerelementhostings Funktionalität bietet. Wenn Sie eine Instanz dieser Klasse erstellen, verwendet die Fensterprozedur automatisch die Steuerelement-hosting-API erstellen ein Objekt mit dem Fenster verknüpft ist, und laden, mit dem Steuerelement, das Sie als Titel des Fensters angeben.
 

@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CD2DGeometry [MFC], Widen
 - CD2DGeometry [MFC], m_pGeometry
 ms.assetid: 3f95054b-fdb8-4e87-87f2-9fc3df7279ec
-ms.openlocfilehash: 929926129ddee0efdee4f1b02494b503755811d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4549b2e7981d5f8493ddf9f24477e75a94ddde8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610690"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271228"
 ---
 # <a name="cd2dgeometry-class"></a>CD2DGeometry-Klasse
 
@@ -70,7 +70,7 @@ class CD2DGeometry : public CD2DResource;
 |Name|Beschreibung|
 |----------|-----------------|
 |[CD2DGeometry::CD2DGeometry](#cd2dgeometry)|Erstellt ein CD2DGeometry-Objekt.|
-|[CD2DGeometry:: ~ CD2DGeometry](#_dtorcd2dgeometry)|Der Destruktor. Wird aufgerufen, wenn ein D2D-Geometry-Objekt zerstört wird.|
+|[CD2DGeometry::~CD2DGeometry](#_dtorcd2dgeometry)|Der Destruktor. Wird aufgerufen, wenn ein D2D-Geometry-Objekt zerstört wird.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -82,7 +82,7 @@ class CD2DGeometry : public CD2DResource;
 |[CD2DGeometry::ComputeArea](#computearea)|Der Bereich der Geometrie berechnet, nachdem sie wurde von der angegebenen Matrix transformiert und mit der angegebenen Toleranz vereinfacht.|
 |[CD2DGeometry::ComputeLength](#computelength)|Berechnet die Länge der Geometry-Instanz, als ob jedes Segment in eine Zeile nicht entrollten wäre.|
 |[CD2DGeometry::ComputePointAtLength](#computepointatlength)|Den Vektor und Tangentenendpunkte im angegebenen Abstand entlang der Geometrie berechnet, nachdem sie wurde von der angegebenen Matrix transformiert und mit der angegebenen Toleranz vereinfacht.|
-|[CD2DGeometry:: Destroy](#destroy)|Zerstört ein CD2DGeometry-Objekt. (Überschreibt [CD2DResource:: Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
+|[CD2DGeometry::Destroy](#destroy)|Zerstört ein CD2DGeometry-Objekt. (Überschreibt [CD2DResource:: Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
 |[CD2DGeometry::Detach](#detach)|Resource-Schnittstelle aus dem Objekt getrennt|
 |[CD2DGeometry::FillContainsPoint](#fillcontainspoint)|Gibt an, ob der Bereich gefüllt, die durch die Geometrie einen angegebenen Punkt, die angegebene flattening Toleranz enthält.|
 |[CD2DGeometry::Get](#get)|Gibt die ID2D1Geometry-Schnittstelle|
@@ -176,7 +176,7 @@ BOOL CombineWithGeometry(
 *inputGeometry*<br/>
 Die Geometrie, die mit dieser Instanz.
 
-*"CombineMode"*<br/>
+*combineMode*<br/>
 Der Typ des auszuführenden kombinieren-Vorgangs.
 
 *inputGeometryTransform*<br/>
@@ -234,7 +234,7 @@ BOOL ComputeArea(
 *worldTransform*<br/>
 Die Transformation, die auf dieser Geometrie anwenden, bevor seine Fläche berechnen.
 
-*Bereich*<br/>
+*area*<br/>
 Bei der Rückgabe dieser Methode enthält einen Zeiger auf den Bereich der transformierten, vereinfachte Version dieser Geometrie. Sie müssen diesen Parameter Speicher zuweisen.
 
 *flatteningTolerance*<br/>
@@ -291,7 +291,7 @@ Die Entfernung entlang der Geometrie der Punkt und Tangens gefunden. Wenn dieser
 *worldTransform*<br/>
 Die Transformation, vor dem Berechnen des angegebenen Punkt und der Tangens auf die Geometrie angewendet werden soll.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Die Position, an der angegebenen Entfernung entlang der Geometrie werden soll. Wenn die Geometrie leer ist, enthält dieser Punkt NaN als x und y Werte.
 
 *unitTangentVector*<br/>
@@ -338,13 +338,13 @@ BOOL FillContainsPoint(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Der Punkt, um zu testen.
 
 *worldTransform*<br/>
 Die Transformation angewendet auf die Geometrie vor dem Testen, für die Kapselung.
 
-*Enthält*<br/>
+*contains*<br/>
 Bei der Rückgabe dieser Methode enthält einen booleschen Wert, der TRUE ist, wenn die von der Geometrie ausgefüllte Bereich Punkt enthält; andernfalls "false". Sie müssen diesen Parameter Speicher zuweisen.
 
 *flatteningTolerance*<br/>
@@ -377,7 +377,7 @@ CD2DRectF& bounds) const;
 ### <a name="parameters"></a>Parameter
 
 *worldTransform*<br/>
-*Grenzen*
+*bounds*
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -405,7 +405,7 @@ Der Stil der Kontur, die die Geometrie erweitert werden kann.
 *worldTransform*<br/>
 Eine Transformation auf die Geometrie angewendet werden soll, nachdem die Geometrie transformiert und die Geometrie-Element gezeichnet worden ist.
 
-*Grenzen*<br/>
+*bounds*<br/>
 Bei der Rückgabe dieser Methode enthält die Begrenzungen des erweiterten Geometrie. Sie müssen diesen Parameter Speicher zuweisen.
 
 *flatteningTolerance*<br/>
@@ -519,7 +519,7 @@ BOOL StrokeContainsPoint(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Der zu überprüfende Punkt.
 
 *strokeWidth*<br/>
@@ -531,7 +531,7 @@ Der Stil des Strichs angewendet werden soll.
 *worldTransform*<br/>
 Die Transformation auf die Geometrie gestrichelt angewendet.
 
-*Enthält*<br/>
+*contains*<br/>
 Bei der Rückgabe dieser Methode enthält einen booleschen Wert, der auf "true" festgelegt wird, wenn der Strich der Geometrie den angegebenen Punkt enthält. andernfalls "false". Sie müssen diesen Parameter Speicher zuweisen.
 
 *flatteningTolerance*<br/>

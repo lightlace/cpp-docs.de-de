@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
-ms.openlocfilehash: 370f8a3a8fdcc8e1daaee2d3424f939fb719a449
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19bd871857dcef6aaef153798388c0272239fa1f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570169"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301297"
 ---
 # <a name="scheduler-instances"></a>Planerinstanzen
 
@@ -99,7 +99,7 @@ Die folgende Tabelle zeigt die wichtigen Methoden, die von definiert sind die `C
 |[RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent)|Registriert ein Ereignis, das die Laufzeit legt fest, wenn die aktuelle Planer zerstört wird.|
 |[CreateScheduleGroup](reference/currentscheduler-class.md#createschedulegroup)|Erstellt eine [Concurrency:: ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) Objekt im aktuellen Planer.|
 |[ScheduleTask](reference/currentscheduler-class.md#scheduletask)|Eine einfache Aufgabe und der zeitplanwarteschlange des aktuellen Planer hinzugefügt.|
-|[Verarbeitete GetPolicy](reference/currentscheduler-class.md#getpolicy)|Ruft eine Kopie der Richtlinie, die den aktuellen Planer zugeordnet ist.|
+|[GetPolicy](reference/currentscheduler-class.md#getpolicy)|Ruft eine Kopie der Richtlinie, die den aktuellen Planer zugeordnet ist.|
 
 Die folgende Tabelle zeigt die wichtigen Methoden, die von definiert sind die `Scheduler` Klasse.
 
@@ -112,7 +112,7 @@ Die folgende Tabelle zeigt die wichtigen Methoden, die von definiert sind die `S
 |[RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent)|Registriert ein Ereignis, das die Laufzeit festgelegt wird, wenn die `Scheduler` -Objekt zerstört wird.|
 |[CreateScheduleGroup](reference/scheduler-class.md#createschedulegroup)|Erstellt eine [Concurrency:: ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) -Objekt in der `Scheduler` Objekt.|
 |[ScheduleTask](reference/scheduler-class.md#scheduletask)|Plant eine einfache Aufgabe aus der `Scheduler` Objekt.|
-|[Verarbeitete GetPolicy](reference/scheduler-class.md#getpolicy)|Ruft eine Kopie der Richtlinie zugeordnet ist, die die `Scheduler` Objekt.|
+|[GetPolicy](reference/scheduler-class.md#getpolicy)|Ruft eine Kopie der Richtlinie zugeordnet ist, die die `Scheduler` Objekt.|
 |[SetDefaultSchedulerPolicy](reference/scheduler-class.md#setdefaultschedulerpolicy)|Legt die Richtlinie für die Laufzeit verwendet wird, wenn es den Standard-Scheduler erstellt.|
 |[ResetDefaultSchedulerPolicy](reference/scheduler-class.md#resetdefaultschedulerpolicy)|Stellt wieder her, die vor dem Aufruf von aktiv war die Standardrichtlinie `SetDefaultSchedulerPolicy`. Wenn nach dem Aufruf der Standard-Scheduler erstellt wird, verwendet die Runtime die Einstellungen der Standardrichtlinie für den Scheduler zu erstellen.|
 
@@ -128,4 +128,3 @@ Einfache Beispiele für das Erstellen und Verwalten einer Planerinstanz, finden 
 [Vorgehensweise: Verwalten einer Planerinstanz](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>
 [Planerrichtlinien](../../parallel/concrt/scheduler-policies.md)<br/>
 [Planungsgruppen](../../parallel/concrt/schedule-groups.md)
-

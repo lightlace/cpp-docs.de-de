@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE controls [MFC], persistence
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
-ms.openlocfilehash: e510cdb2ae64b5b3ed5f8b69bc8ad9c22800a167
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8bcba63c8e09873fe7f30e4fd07d652850be1f3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609418"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299646"
 ---
 # <a name="persistence-of-ole-controls"></a>Persistenz der OLE-Steuerelemente
 
@@ -111,7 +111,7 @@ Der Name der Eigenschaft, die ausgetauscht werden.
 *bValue*<br/>
 Verweis auf die Variable, in dem die Eigenschaft gespeichert wird (in der Regel eine Membervariable der Klasse).
 
-*bStandardstufe*<br/>
+*bDefault*<br/>
 Der Standardwert für die Eigenschaft.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -294,7 +294,7 @@ Zeiger auf die [CPropExchange](../../mfc/reference/cpropexchange-class.md) Objek
 *pszPropName*<br/>
 Der Name der Eigenschaft, die ausgetauscht werden.
 
-*Schriftart*<br/>
+*font*<br/>
 Ein Verweis auf eine `CFontHolder` -Objekt, das die Schriftarteigenschaft enthält.
 
 *pFontDesc*<br/>
@@ -374,7 +374,7 @@ Der Name der Eigenschaft, die ausgetauscht werden.
 *pUnk*<br/>
 Verweis auf eine Variable, enthält die Schnittstelle des Objekts, das den Wert der Eigenschaft darstellt.
 
-*IID*<br/>
+*iid*<br/>
 Eine Schnittstellen-ID, der angibt, welche Schnittstelle des Eigenschaftenobjekts vom Steuerelement verwendet wird.
 
 *pUnkDefault*<br/>
@@ -413,7 +413,7 @@ Zeiger auf die [CPropExchange](../../mfc/reference/cpropexchange-class.md) Objek
 *pszPropName*<br/>
 Der Name der Eigenschaft, die ausgetauscht werden.
 
-*l-Wert*<br/>
+*lValue*<br/>
 Verweis auf die Variable, in dem die Eigenschaft gespeichert wird (in der Regel eine Membervariable der Klasse).
 
 *lDefault*<br/>
@@ -452,7 +452,7 @@ Zeiger auf die [CPropExchange](../../mfc/reference/cpropexchange-class.md) Objek
 *pszPropName*<br/>
 Der Name der Eigenschaft, die ausgetauscht werden.
 
-*PICT*<br/>
+*pict*<br/>
 Ein Verweis auf eine [CPictureHolder](../../mfc/reference/cpictureholder-class.md) Objekt, in dem die Eigenschaft gespeichert wird (in der Regel eine Membervariable der Klasse).
 
 *pictDefault*<br/>
@@ -608,7 +608,7 @@ Zeiger auf die [CPropExchange](../../mfc/reference/cpropexchange-class.md) Objek
 *pszPropName*<br/>
 Der Name der Eigenschaft, die ausgetauscht werden.
 
-*strValue gespeichert*<br/>
+*strValue*<br/>
 Verweis auf die Variable, in dem die Eigenschaft gespeichert wird (in der Regel eine Membervariable der Klasse).
 
 *strDefault*<br/>
@@ -637,7 +637,7 @@ BOOL PX_VBXFontConvert(
 *pPX*<br/>
 Zeiger auf die [CPropExchange](../../mfc/reference/cpropexchange-class.md) Objekt (i. d. r. als Parameter an übergeben `DoPropExchange`).
 
-*Schriftart*<br/>
+*font*<br/>
 Die Schriftarteigenschaft des OLE-Steuerelements, die die konvertierte VBX Schriftarteigenschaften enthält.
 
 ### <a name="return-value"></a>Rückgabewert

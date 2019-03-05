@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_xValue
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
-ms.openlocfilehash: 15f18a43fcda76bb5531434de84d97a349cb7f39
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15f06d2fa3478570d2f784879a13e7b68515e746
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497199"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271267"
 ---
 # <a name="canimationpoint-class"></a>CAnimationPoint-Klasse
 
@@ -66,14 +66,14 @@ class CAnimationPoint : public CAnimationBaseObject;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CAnimationPoint::GetAnimationVariableList](#getanimationvariablelist)|Legt die gekapselten Animationsvariablen in einer Liste an. (Überschreibt [CAnimationBaseObject:: GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
+|[CAnimationPoint::GetAnimationVariableList](#getanimationvariablelist)|Legt die gekapselten Animationsvariablen in einer Liste an. (Overrides [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
 |Name|Beschreibung|
 |----------|-----------------|
 |[CAnimationPoint::operator CPoint](#operator_cpoint)|Konvertiert einen CAnimationPoint in einen CPoint an.|
-|[CAnimationPoint::operator =](#operator_eq)|CAnimationPoint PtSrc zugewiesen haben.|
+|[CAnimationPoint::operator=](#operator_eq)|CAnimationPoint PtSrc zugewiesen haben.|
 
 ### <a name="protected-data-members"></a>Geschützte Datenmember
 
@@ -191,7 +191,7 @@ BOOL GetValue(CPoint& ptValue);
 
 ### <a name="parameters"></a>Parameter
 
-*ptValue einen*<br/>
+*ptValue*<br/>
 Die Ausgabe. Enthält den aktuellen Wert an, wenn diese Methode zurückgegeben wird.
 
 ### <a name="return-value"></a>Rückgabewert

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - server applications [MFC], vs. client applications on Internet
 - client applications [MFC], vs. server applications on Internet
 ms.assetid: 9b96172c-b4d4-4c69-bfb2-226ce0de6d08
-ms.openlocfilehash: b9b794070d1c4ff4f05f33895a7af5532a524ad1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cdb294e4ab808a7e4cbcec457f6e744eff9f12cb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602929"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302810"
 ---
 # <a name="application-design-choices"></a>Überlegungen zum Anwendungsentwurf
 
@@ -92,4 +92,3 @@ Die folgende Tabelle enthält verschiedene Möglichkeiten der Verwendung von MFC
 [Grundlagen der MFC-Internetprogrammierung](../mfc/mfc-internet-programming-basics.md)<br/>
 [Win32-Interneterweiterungen (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
 [Asynchrone Moniker im Internet](../mfc/asynchronous-monikers-on-the-internet.md)
-

@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: 679cdc5b5a0a85ade09fe1999e8de40300a8ae8e
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: fe9b282fd248f8dd03a6a7f078c03866d1b14b2d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694386"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305015"
 ---
 # <a name="cview-class"></a>CView-Klasse
 
@@ -90,7 +90,7 @@ class AFX_NOVTABLE CView : public CWnd
 |[CView::OnDragScroll](#ondragscroll)|Wird aufgerufen, um festzustellen, ob der Cursor in der Region Scrollen Sie im Fenster gezogen wird.|
 |[CView::OnDrop](#ondrop)|Aufgerufen, wenn ein Element in der Region ziehen und Ablegen einer Ansicht Standardhandler gelöscht wurde.|
 |[CView::OnDropEx](#ondropex)|Aufgerufen, wenn ein Element in der Region ziehen und Ablegen einer Sicht, die primären Ereignishandler gelöscht wurde.|
-|[CView:: OnInitialUpdate](#oninitialupdate)|Wird aufgerufen, nachdem ein Dokument zuerst eine Ansicht zugeordnet ist.|
+|[CView::OnInitialUpdate](#oninitialupdate)|Wird aufgerufen, nachdem ein Dokument zuerst eine Ansicht zugeordnet ist.|
 |[CView::OnPrepareDC](#onpreparedc)|Wird aufgerufen, bevor die `OnDraw` Memberfunktion aufgerufen wird, für die Bildschirmanzeige oder der `OnPrint` für Druck oder den Seitenansichtmodus Memberfunktion aufgerufen wird.|
 |[CView::OnScroll](#onscroll)|Wird aufgerufen, wenn OLE-Elementen, jenseits der Grenzen der Ansicht gezogen werden.|
 |[CView::OnScrollBy](#onscrollby)|Wird aufgerufen, wenn eine Ansicht mit der aktiven direkten OLE-Elemente ein Bildlauf durchgeführt wird.|
@@ -102,7 +102,7 @@ class AFX_NOVTABLE CView : public CWnd
 |[CView::OnActivateFrame](#onactivateframe)|Wird aufgerufen, wenn das Rahmenfenster, das die Sicht aktiviert oder deaktiviert wird.|
 |[CView::OnActivateView](#onactivateview)|Wird aufgerufen, wenn eine Ansicht aktiviert wird.|
 |[CView::OnBeginPrinting](#onbeginprinting)|Wird aufgerufen, wenn ein Auftrag beginnt; Überschreiben Sie, um die Graphics Device Interface (GDI) Ressourcen zuordnen.|
-|[CView:: OnDraw](#ondraw)|Wird aufgerufen, um ein Bild des Dokuments für die Bildschirmanzeige, Drucken und Druckvorschau zu rendern. Die Implementierung erforderlich sind.|
+|[CView::OnDraw](#ondraw)|Wird aufgerufen, um ein Bild des Dokuments für die Bildschirmanzeige, Drucken und Druckvorschau zu rendern. Die Implementierung erforderlich sind.|
 |[CView::OnEndPrinting](#onendprinting)|Wird aufgerufen, wenn ein Auftrag beendet; außer Kraft setzen, um GDI-Ressourcen freizugeben.|
 |[CView::OnEndPrintPreview](#onendprintpreview)|Aufgerufen, wenn Sie den Vorschaumodus beendet wird.|
 |[CView::OnPreparePrinting](#onprepareprinting)|Wird aufgerufen, bevor ein Dokument gedruckt oder in der Vorschau angezeigt wird; außer Kraft setzen Sie, um das Dialogfeld Drucken zu initialisieren.|
@@ -185,7 +185,7 @@ BOOL DoPreparePrinting(CPrintInfo* pInfo);
 
 ### <a name="parameters"></a>Parameter
 
-*"pInfo"*<br/>
+*pInfo*<br/>
 Verweist auf eine [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) -Struktur, die den aktuellen Druckauftrag beschreibt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -308,7 +308,7 @@ virtual void OnBeginPrinting(
 *pDC*<br/>
 Verweist auf den Druckergerätekontext.
 
-*"pInfo"*<br/>
+*pInfo*<br/>
 Verweist auf eine [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) -Struktur, die den aktuellen Druckauftrag beschreibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -334,9 +334,9 @@ virtual DROPEFFECT OnDragEnter(
 Verweist auf die [COleDataObject](../../mfc/reference/coledataobject-class.md) in den Ablagebereich der Ansicht gezogen wird.
 
 *dwKeyState*<br/>
-Enthält den Status der Modifizierertasten. Eine Kombination aus einer beliebigen Anzahl von Folgendes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON.
+Enthält den Status der Modifizierertasten. Dies ist eine Kombination von eine beliebige Anzahl von Folgendes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON, and MK_RBUTTON.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Der aktuellen Position relativ zum Clientbereich der Ansicht.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -357,7 +357,7 @@ Weitere Informationen finden Sie im MFC Advanced Concepts-Beispiel [OCLIENT](../
 
 Standardimplementierung wird keine Aktion durchführen und DROPEFFECT_NONE zurück.
 
-Überschreiben Sie diese Funktion zur Vorbereitung der zukünftiger Aufrufen von der [OnDragOver](#ondragover) Member-Funktion. Alle Daten, die erforderlich sind, aus dem Datenobjekt abgerufen werden soll, zu diesem Zeitpunkt zur späteren Verwendung in der `OnDragOver` Member-Funktion. Die Ansicht sollte ebenfalls aktualisiert werden, zu diesem Zeitpunkt um visuelles Feedback zu geben. Weitere Informationen finden Sie im Artikel [Drag & Drop: Implementieren eines Drop-Ziels](../../mfc/drag-and-drop-implementing-a-drop-target.md).
+Überschreiben Sie diese Funktion zur Vorbereitung der zukünftiger Aufrufen von der [OnDragOver](#ondragover) Member-Funktion. Alle Daten, die erforderlich sind, aus dem Datenobjekt abgerufen werden soll, zu diesem Zeitpunkt zur späteren Verwendung in der `OnDragOver` Member-Funktion. Die Ansicht sollte ebenfalls aktualisiert werden, zu diesem Zeitpunkt um visuelles Feedback zu geben. Weitere Informationen finden Sie im Artikel [Drag & Drop: Implementieren ein Ablageziel](../../mfc/drag-and-drop-implementing-a-drop-target.md).
 
 ##  <a name="ondragleave"></a>  CView::OnDragLeave
 
@@ -388,9 +388,9 @@ virtual DROPEFFECT OnDragOver(
 Verweist auf die [COleDataObject](../../mfc/reference/coledataobject-class.md) über das Ablageziel gezogen wird.
 
 *dwKeyState*<br/>
-Enthält den Status der Modifizierertasten. Eine Kombination aus einer beliebigen Anzahl von Folgendes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON.
+Enthält den Status der Modifizierertasten. Dies ist eine Kombination von eine beliebige Anzahl von Folgendes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON, and MK_RBUTTON.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Der aktuellen Position relativ zum Clientbereich anzeigen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -411,7 +411,7 @@ Weitere Informationen finden Sie im MFC Advanced Concepts-Beispiel [OCLIENT](../
 
 Die Standardimplementierung ist keine Aktion durchführen und DROPEFFECT_NONE zurück.
 
-Überschreiben Sie diese Funktion, um während des Ziehvorgangs visuelles Feedback zu geben. Da diese Funktion kontinuierlich aufgerufen wird, sollten alle darin enthaltenen Code so weit wie möglich optimiert werden. Weitere Informationen finden Sie im Artikel [Drag & Drop: Implementieren eines Drop-Ziels](../../mfc/drag-and-drop-implementing-a-drop-target.md).
+Überschreiben Sie diese Funktion, um während des Ziehvorgangs visuelles Feedback zu geben. Da diese Funktion kontinuierlich aufgerufen wird, sollten alle darin enthaltenen Code so weit wie möglich optimiert werden. Weitere Informationen finden Sie im Artikel [Drag & Drop: Implementieren ein Ablageziel](../../mfc/drag-and-drop-implementing-a-drop-target.md).
 
 ##  <a name="ondragscroll"></a>  CView::OnDragScroll
 
@@ -426,9 +426,9 @@ virtual DROPEFFECT OnDragScroll(
 ### <a name="parameters"></a>Parameter
 
 *dwKeyState*<br/>
-Enthält den Status der Modifizierertasten. Eine Kombination aus einer beliebigen Anzahl von Folgendes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON.
+Enthält den Status der Modifizierertasten. Dies ist eine Kombination von eine beliebige Anzahl von Folgendes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON, and MK_RBUTTON.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Enthält den Speicherort des Cursors in Pixel relativ zum Bildschirm.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -449,7 +449,7 @@ Weitere Informationen finden Sie im MFC Advanced Concepts-Beispiel [OCLIENT](../
 
 ### <a name="remarks"></a>Hinweise
 
-Überschreiben Sie diese Funktion, wenn Sie für dieses Ereignis besonderes Verhalten bereitstellen möchten. Die Standardimplementierung scrollt Windows automatisch, wenn der Cursor in die Standard-Bildlaufbereich in den Rahmen der einzelnen Fenster gezogen wird. Weitere Informationen finden Sie im Artikel [Drag & Drop: Implementieren eines Drop-Ziels](../../mfc/drag-and-drop-implementing-a-drop-target.md).
+Überschreiben Sie diese Funktion, wenn Sie für dieses Ereignis besonderes Verhalten bereitstellen möchten. Die Standardimplementierung scrollt Windows automatisch, wenn der Cursor in die Standard-Bildlaufbereich in den Rahmen der einzelnen Fenster gezogen wird. Weitere Informationen finden Sie im Artikel [Drag & Drop: Implementieren ein Ablageziel](../../mfc/drag-and-drop-implementing-a-drop-target.md).
 
 ##  <a name="ondraw"></a>  CView:: OnDraw
 
@@ -487,7 +487,7 @@ virtual BOOL OnDrop(
 
 "pDataObject * verweist auf die [COleDataObject](../../mfc/reference/coledataobject-class.md) , die in das Ablageziel abgelegt wurde.
 
-*-DropEffect-*<br/>
+*dropEffect*<br/>
 Der Drop-Effekt, den der Benutzer angefordert hat.
 
 - DROPEFFECT_COPY erstellt eine Kopie der Datenobjekt, das gelöscht werden.
@@ -496,7 +496,7 @@ Der Drop-Effekt, den der Benutzer angefordert hat.
 
 - DROPEFFECT_LINK erstellt eine Verknüpfung zwischen einem Datenobjekt und einem Server.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Der aktuellen Position relativ zum Clientbereich anzeigen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -532,10 +532,10 @@ Verweist auf die [COleDataObject](../../mfc/reference/coledataobject-class.md) ,
 *dropDefault*<br/>
 Die Auswirkungen, die der Benutzer für den Standard-Drop-Vorgang basierend auf dem aktuellen Schlüssel Status auswählen. Es kann DROPEFFECT_NONE sein. Drop-Effekte werden im Abschnitt "Hinweise" erläutert.
 
-*Dropdownliste*<br/>
+*dropList*<br/>
 Eine Liste mit der Drop-Effekten, die die Quelle unterstützt. Drop-Effekt-Werte können kombiniert werden, mit dem bitweisen OR ( **&#124;**) Vorgang. Drop-Effekte werden im Abschnitt "Hinweise" erläutert.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Der aktuellen Position relativ zum Clientbereich anzeigen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -591,7 +591,7 @@ virtual void OnEndPrinting(
 *pDC*<br/>
 Verweist auf den Druckergerätekontext.
 
-*"pInfo"*<br/>
+*pInfo*<br/>
 Verweist auf eine [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) -Struktur, die den aktuellen Druckauftrag beschreibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -615,10 +615,10 @@ virtual void OnEndPrintPreview(
 *pDC*<br/>
 Verweist auf den Druckergerätekontext.
 
-*"pInfo"*<br/>
+*pInfo*<br/>
 Verweist auf eine [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) -Struktur, die den aktuellen Druckauftrag beschreibt.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Legt den Punkt auf der Seite, die zuletzt im Vorschaumodus angezeigt wurde.
 
 *pView*<br/>
@@ -630,7 +630,7 @@ Ruft die standardmäßige Implementierung dieser Funktion die [OnEndPrinting](#o
 
 Rufen Sie immer die Basisklassenversion von `OnEndPrintPreview` aus der Außerkraftsetzung, in der Regel am Ende der Funktion.
 
-##  <a name="oninitialupdate"></a>  CView:: OnInitialUpdate
+##  <a name="oninitialupdate"></a>  CView::OnInitialUpdate
 
 Vom Framework aufgerufen, nachdem die Ansicht zuerst auf das Dokument angefügt ist, aber vor die Ansicht angezeigt wird.
 
@@ -657,7 +657,7 @@ virtual void OnPrepareDC(
 *pDC*<br/>
 Verweist auf den Gerätekontext zum Rendern eines Bilds des Dokuments verwendet werden soll.
 
-*"pInfo"*<br/>
+*pInfo*<br/>
 Verweist auf eine [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) Struktur, die den aktuellen Druckauftrag beschreibt, wenn `OnPrepareDC` für Druck oder einer Seitenansicht; aufgerufen wird die `m_nCurPage` -Member gibt an, die Seite gedruckt werden sollen. Dieser Parameter ist NULL, wenn `OnPrepareDC` für die Bildschirmanzeige aufgerufen wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -690,7 +690,7 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 
 ### <a name="parameters"></a>Parameter
 
-*"pInfo"*<br/>
+*pInfo*<br/>
 Verweist auf eine [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) -Struktur, die den aktuellen Druckauftrag beschreibt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -734,7 +734,7 @@ virtual void OnPrint(
 *pDC*<br/>
 Verweist auf den Druckergerätekontext.
 
-*"pInfo"*<br/>
+*pInfo*<br/>
 Verweist auf eine `CPrintInfo` Struktur, die den aktuellen Druckauftrag beschreibt.
 
 ### <a name="remarks"></a>Hinweise

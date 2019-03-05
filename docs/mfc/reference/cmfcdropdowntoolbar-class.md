@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCDropDownToolBar [MFC], OnSendCommand
 - CMFCDropDownToolBar [MFC], OnUpdateCmdUI
 ms.assetid: 78818ec5-83ce-42fa-a0d4-2d9d5ecc8770
-ms.openlocfilehash: 9c5115d2453f21d83eda39950ac45a0290e9bfa8
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 704d48cc546943d818ae8b898060fe0f7e203c53
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176938"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303552"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar-Klasse
 
@@ -72,7 +72,7 @@ So fügen Sie die Dropdown-Symbolleisten in einer übergeordneten Symbolleiste e
 
 3. Ersetzen Sie die Schaltfläche "dummy", mit der `CMFCDropDownToolBarButton` Objekt mit [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).
 
-Weitere Informationen zu den Symbolleisten-Schaltflächen, finden Sie unter [Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf Symbolleisten](../../mfc/walkthrough-putting-controls-on-toolbars.md). Ein Beispiel für eine Dropdown-Symbolleisten finden Sie das Beispielprojekt VisualStudioDemo.
+Weitere Informationen zu den Symbolleisten-Schaltflächen, finden Sie unter [Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf der Symbolleiste](../../mfc/walkthrough-putting-controls-on-toolbars.md). Ein Beispiel für eine Dropdown-Symbolleisten finden Sie das Beispielprojekt VisualStudioDemo.
 
 ## <a name="example"></a>Beispiel
 
@@ -138,7 +138,7 @@ virtual BOOL LoadBitmap(
 *uiMenuResID*<br/>
 [in] Die Ressourcen-ID der Bitmap, die auf die normalen Menübilder verweist.
 
-*Blockiert*<br/>
+*bLocked*<br/>
 [in] True, um die Symbolleiste zu sperren. andernfalls "false".
 
 *uiDisabledResID*<br/>
@@ -172,7 +172,7 @@ virtual BOOL LoadToolBar(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *UiResID*<br/>
+[in] *uiResID*<br/>
 
 [in] *UiColdResID*<br/>
 
@@ -180,11 +180,11 @@ virtual BOOL LoadToolBar(
 
 [in] *"Bool"*<br/>
 
-[in] *UiDisabledResID*<br/>
+[in] *uiDisabledResID*<br/>
 
-[in] *UiMenuDisabledResID*<br/>
+[in] *uiMenuDisabledResID*<br/>
 
-[in] *UiHotResID*<br/>
+[in] *uiHotResID*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -202,7 +202,7 @@ afx_msg void OnLButtonUp(
 
 [in] *nFlags*<br/>
 
-[in] *zeigen*<br/>
+[in] *point*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -218,7 +218,7 @@ afx_msg void OnMouseMove(
 
 [in] *nFlags*<br/>
 
-[in] *zeigen*<br/>
+[in] *point*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -260,5 +260,4 @@ virtual void OnUpdateCmdUI(
 [CMFCToolBar::Create](../../mfc/reference/cmfctoolbar-class.md#create)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [CMFCDropDownToolbarButton-Klasse](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)<br/>
-[Exemplarische Vorgehensweise: Steuerelemente in eine Symbolleiste einfügen](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf der Symbolleiste](../../mfc/walkthrough-putting-controls-on-toolbars.md)

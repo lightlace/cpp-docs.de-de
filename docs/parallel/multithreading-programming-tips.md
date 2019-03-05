@@ -16,12 +16,12 @@ helpviewer_keywords:
 - troubleshooting [C++], multithreading
 - Windows handle maps [C++]
 ms.assetid: ad14cc70-c91c-4c24-942f-13a75e58bf8a
-ms.openlocfilehash: 0fbee2e836c2e898488da348e4dec9ea00ac4370
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e89d0d534638f7216f142bc3f86633a59b8b0ff7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494277"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290798"
 ---
 # <a name="multithreading-mfc-programming-tips"></a>Multithreading: Tipps für die MFC-Programmierung
 
@@ -47,7 +47,7 @@ Wenn Sie eine Multithreadanwendung, die einen Thread auf eine Weise verfügen al
 
 ##  <a name="_core_windows_handle_maps"></a> Windows-Handlezuordnungen
 
-Grundsätzlich kann ein Thread nur auf die von ihm erstellten MFC-Objekte zugreifen. Der Grund hierfür ist, dass temporäre und permanente Windows-Handlezuordnungen im threadlokalen Speicher verwaltet werden. Auf diese Weise soll der gleichzeitige Zugriff von mehreren Threads aus verhindert werden. Ein Arbeitsthread kann z. B. keine Berechnung durchführen und anschließend die `UpdateAllViews`-Memberfunktion eines Dokuments aufrufen, um die Fenster zu ändern, die Ansichten der neuen Daten enthalten. Dies wirkt sich nicht, da die Zuordnung von `CWnd` Objekte HWNDs wird lokal auf dem primären Thread. Dies bedeutet, dass ein bestimmter Thread möglicherweise eine Zuordnung eines Windows-Handles zu einem C++-Objekt aufweist, ein anderer Thread dasselbe Handle jedoch unter Umständen einem anderen C++-Objekt zuordnet. Änderungen, die in einem Thread vorgenommen wurden, werden in einem anderen Thread nicht widergespiegelt.
+Grundsätzlich kann ein Thread nur auf die von ihm erstellten MFC-Objekte zugreifen. Der Grund hierfür ist, dass temporäre und permanente Windows-Handlezuordnungen im lokalen Threadspeicher verwaltet werden. Auf diese Weise soll der gleichzeitige Zugriff von mehreren Threads aus verhindert werden. Ein Arbeitsthread kann z. B. keine Berechnung durchführen und anschließend die `UpdateAllViews`-Memberfunktion eines Dokuments aufrufen, um die Fenster zu ändern, die Ansichten der neuen Daten enthalten. Dies wirkt sich nicht, da die Zuordnung von `CWnd` Objekte HWNDs wird lokal auf dem primären Thread. Dies bedeutet, dass ein bestimmter Thread möglicherweise eine Zuordnung eines Windows-Handles zu einem C++-Objekt aufweist, ein anderer Thread dasselbe Handle jedoch unter Umständen einem anderen C++-Objekt zuordnet. Änderungen, die in einem Thread vorgenommen wurden, werden in einem anderen Thread nicht widergespiegelt.
 
 Es gibt verschiedene Methoden zur Umgehung dieses Problems: Die erste ist Übergabe individuellen Handles (z. B. ein HWND) anstelle der C++-Objekte an den Arbeitsthread. Der Arbeitsthread fügt anschließend diese Objekte seiner temporären Zuordnung hinzu, indem er die entsprechende `FromHandle`-Memberfunktion aufruft. Sie könnten auch das Objekt des Threads permanenten Zuordnung hinzufügen, durch den Aufruf `Attach`, aber dies sollte erfolgen nur, wenn Sie garantiert, dass das Objekt länger als der Thread vorhanden ist.
 

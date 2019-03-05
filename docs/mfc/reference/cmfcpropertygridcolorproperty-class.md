@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCPropertyGridColorProperty [MFC], SetColumnsNumber
 - CMFCPropertyGridColorProperty [MFC], SetOriginalValue
 ms.assetid: af37be93-a91e-40a2-9a65-0f3412c6f0f8
-ms.openlocfilehash: c284906a85ec93c5c5419acb783f6f46ebcf03e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65c2c22c93dc3acb50fc4627c3710a3f0c86aeb0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575734"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303962"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty-Klasse
 
@@ -103,7 +103,7 @@ CMFCPropertyGridColorProperty(
 *strName*<br/>
 [in] Der Name der Eigenschaft.
 
-*Farbe*<br/>
+*color*<br/>
 [in] Der Farbwert der Eigenschaft.
 
 *pPalette*<br/>
@@ -134,7 +134,7 @@ void EnableAutomaticButton(
 *colorAutomatic*<br/>
 [in] Der RGB-Farbwert der Farbe automatisch (Standard).
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] True, um die automatische Schaltfläche zu aktivieren. andernfalls "false". Der Standardwert ist "true".
 
 ### <a name="remarks"></a>Hinweise
@@ -158,7 +158,7 @@ void EnableOtherButton(
 *bAltColorDlg*<br/>
 [in] "True" Anzeige der `CMFCColorDialog` Dialogfeld FALSE, um das Dialogfeld für die Auswahl des Standardfarbe anzuzeigen. Der Standardwert ist "true".
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] TRUE, wenn die anderen Schaltfläche angezeigt werden soll; andernfalls "false".  Der Standardwert ist "true".
 
 ### <a name="remarks"></a>Hinweise
@@ -187,7 +187,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Parameter
 
-*Farbe*<br/>
+*color*<br/>
 [in] Ein RGB-Farbwert.
 
 ### <a name="remarks"></a>Hinweise

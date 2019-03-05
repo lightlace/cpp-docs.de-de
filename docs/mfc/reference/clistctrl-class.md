@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 4bc50a8a77a4964cf92d003ed1e06213398f401c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 850c16420606452414cbe284c5f9f25031859c93
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525547"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304521"
 ---
 # <a name="clistctrl-class"></a>CListCtrl-Klasse
 
@@ -309,7 +309,7 @@ class CListCtrl : public CWnd
 |[CListCtrl::FindItem](#finditem)|Sucht ein Listenansichtselement müssen Eigenschaften angegeben.|
 |[CListCtrl::GetBkColor](#getbkcolor)|Ruft die Hintergrundfarbe des einem Listenansicht-Steuerelement ab.|
 |[CListCtrl::GetBkImage](#getbkimage)|Ruft das aktuelle Hintergrundbild von einem Listenansicht-Steuerelement ab.|
-|[CListCtrl:: GetCallbackMask](#getcallbackmask)|Ruft die Rückrufmaske für eine Listenansicht-Steuerelement ab.|
+|[CListCtrl::GetCallbackMask](#getcallbackmask)|Ruft die Rückrufmaske für eine Listenansicht-Steuerelement ab.|
 |[CListCtrl::GetCheck](#getcheck)|Ruft den aktuellen Anzeigestatus von einem Element zugeordneten statusbilds ab.|
 |[CListCtrl::GetColumn](#getcolumn)|Ruft die Attribute eines Steuerelements Spalte ab.|
 |[CListCtrl::GetColumnOrderArray](#getcolumnorderarray)|Ruft die Reihenfolge der Spalten (von links nach rechts) ein Listenansicht-Steuerelement ab.|
@@ -334,7 +334,7 @@ class CListCtrl : public CWnd
 |[CListCtrl::GetInsertMark](#getinsertmark)|Ruft die aktuelle Position der Einfügemarke ab.|
 |[CListCtrl::GetInsertMarkColor](#getinsertmarkcolor)|Ruft die aktuelle Farbe der Einfügemarke ab.|
 |[CListCtrl::GetInsertMarkRect](#getinsertmarkrect)|Ruft das Rechteck, das die Einfügemarke umschließt.|
-|[CListCtrl:: GetItem](#getitem)|Ruft ein Listenansichtselement Attribute ab.|
+|[CListCtrl::GetItem](#getitem)|Ruft ein Listenansichtselement Attribute ab.|
 |[CListCtrl::GetItemCount](#getitemcount)|Ruft die Anzahl der Elemente in einem Listenansicht-Steuerelement.|
 |[CListCtrl::GetItemData](#getitemdata)|Ruft den anwendungsspezifischen-Wert, der einem Element zugeordnet.|
 |[CListCtrl::GetItemIndexRect](#getitemindexrect)|Ruft das umschließende Rechteck für ganz oder teilweise ein Unterelement im aktuellen Listenansicht-Steuerelement ab.|
@@ -387,7 +387,7 @@ class CListCtrl : public CWnd
 |[CListCtrl::SetColumn](#setcolumn)|Legt fest, die Attribute der Spalte in eine Liste der Sicht.|
 |[CListCtrl::SetColumnOrderArray](#setcolumnorderarray)|Legt die Reihenfolge der Spalten (von links nach rechts) ein Listenansicht-Steuerelement fest.|
 |[CListCtrl::SetColumnWidth](#setcolumnwidth)|Ändert die Breite einer Spalte in der Berichtsansicht oder der Listenansicht angezeigt.|
-|[Wird CListCtrl:: SetExtendedStyle](#setextendedstyle)|Legt die aktuellen erweiterten Stile von einem Listenansicht-Steuerelement fest.|
+|[CListCtrl::SetExtendedStyle](#setextendedstyle)|Legt die aktuellen erweiterten Stile von einem Listenansicht-Steuerelement fest.|
 |[CListCtrl::SetGroupInfo](#setgroupinfo)|Legt fest, die Informationen für die angegebene Gruppe von einem Listenansicht-Steuerelement.|
 |[CListCtrl::SetGroupMetrics](#setgroupmetrics)|Legt fest, die Gruppe Metriken von einem Listenansicht-Steuerelement.|
 |[CListCtrl::SetHotCursor](#sethotcursor)|Legt fest, den Cursor, wenn hot Track für ein Listenansicht-Steuerelement aktiviert ist.|
@@ -398,7 +398,7 @@ class CListCtrl : public CWnd
 |[CListCtrl::SetInfoTip](#setinfotip)|Legt den QuickInfo-Text fest.|
 |[CListCtrl::SetInsertMark](#setinsertmark)|Legt die Einfügemarke auf die definierte Position fest.|
 |[CListCtrl::SetInsertMarkColor](#setinsertmarkcolor)|Legt die Farbe der Einfügemarke.|
-|[CListCtrl:: SetItem](#setitem)|Legt einige oder alle eine Listenansicht Attribute des Elements fest.|
+|[CListCtrl::SetItem](#setitem)|Legt einige oder alle eine Listenansicht Attribute des Elements fest.|
 |[CListCtrl::SetItemCount](#setitemcount)|Bereitet ein Listenansicht-Steuerelement für eine große Anzahl von Elementen hinzufügen.|
 |[CListCtrl::SetItemCountEx](#setitemcountex)|Legt die Anzahl der Elemente für eine virtuelle Listenansicht-Steuerelement fest.|
 |[CListCtrl::SetItemData](#setitemdata)|Legt den Wert des Elements anwendungsspezifische fest.|
@@ -446,9 +446,9 @@ Listenansicht-Steuerelemente können in vier verschiedene Arten, namens "Views".
 
 - Ansicht "Bericht"
 
-   Jedes Element wird in einer eigenen Zeile, mit zusätzlichen Informationen, die in Spalten nach rechts angeordnet. Die am weitesten links stehende Spalte enthält, das kleine Symbol und die Bezeichnung, und nachfolgende Spalten enthalten die Unterelemente darstellen, wie von der Anwendung angegeben. Eine eingebettete Kopfzeilen-Steuerelement (Klasse [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementiert diese Spalten. Weitere Informationen auf dem Kopfzeilen-Steuerelement und die Spalten in einer Berichtsansicht finden Sie unter [Verwenden von CListCtrl: Hinzufügen von Spalten zum Steuerelement (Berichtsansicht)](../../mfc/adding-columns-to-the-control-report-view.md).
+   Jedes Element wird in einer eigenen Zeile, mit zusätzlichen Informationen, die in Spalten nach rechts angeordnet. Die am weitesten links stehende Spalte enthält, das kleine Symbol und die Bezeichnung, und nachfolgende Spalten enthalten die Unterelemente darstellen, wie von der Anwendung angegeben. Eine eingebettete Kopfzeilen-Steuerelement (Klasse [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementiert diese Spalten. Weitere Informationen auf dem Kopfzeilen-Steuerelement und die Spalten in einer Berichtsansicht finden Sie unter [CListCtrl verwenden: Hinzufügen von Spalten zum Steuerelement (Berichtsansicht)](../../mfc/adding-columns-to-the-control-report-view.md).
 
-Das Format der aktuellen Liste-Ansicht des Steuerelements bestimmt die aktuelle Ansicht. Weitere Informationen zu dieser Stile und deren Verwendung, finden Sie unter [Verwenden von CListCtrl: Ändern der Stile von Listensteuerelementen](../../mfc/changing-list-control-styles.md).
+Das Format der aktuellen Liste-Ansicht des Steuerelements bestimmt die aktuelle Ansicht. Weitere Informationen zu dieser Stile und deren Verwendung, finden Sie unter [CListCtrl verwenden: Ändern der Stile von Listensteuerelementen](../../mfc/changing-list-control-styles.md).
 
 ## <a name="extended-styles"></a>Erweiterte Stile
 
@@ -460,7 +460,7 @@ Zusätzlich zu die Stile, die Standardliste Klasse `CListCtrl` unterstützt zahl
 
 - Virtuelle Listenansichten
 
-   Wenn aktiviert, können das Steuerelement, um bis zu DWORD-Elemente zu unterstützen. Dies ist möglich, platzieren Sie den Mehraufwand der Verwaltung von Daten in der Anwendung. Mit Ausnahme von der Auswahl von Listenelementen und den Fokus muss alle Informationen über die Elemente von der Anwendung verwaltet werden. Weitere Informationen finden Sie unter [Verwenden von CListCtrl: Virtuelle Listensteuerelemente](../../mfc/virtual-list-controls.md).
+   Wenn aktiviert, können das Steuerelement, um bis zu DWORD-Elemente zu unterstützen. Dies ist möglich, platzieren Sie den Mehraufwand der Verwaltung von Daten in der Anwendung. Mit Ausnahme von der Auswahl von Listenelementen und den Fokus muss alle Informationen über die Elemente von der Anwendung verwaltet werden. Weitere Informationen finden Sie unter [CListCtrl verwenden: Virtuelle Listensteuerelemente](../../mfc/virtual-list-controls.md).
 
 - Und zwei-einmalklick - Aktivierung
 
@@ -470,7 +470,7 @@ Zusätzlich zu die Stile, die Standardliste Klasse `CListCtrl` unterstützt zahl
 
    Wenn aktiviert, können die Drag & Drop neuanordnung von Spalten in einem Listenansicht-Steuerelement. Nur in der Ansicht "Bericht" verfügbar.
 
-Weitere Informationen zum Verwenden dieser neue Stile erweitert werden, finden Sie unter [Verwenden von CListCtrl: Ändern der Stile von Listensteuerelementen](../../mfc/changing-list-control-styles.md).
+Weitere Informationen zum Verwenden dieser neue Stile erweitert werden, finden Sie unter [CListCtrl verwenden: Ändern der Stile von Listensteuerelementen](../../mfc/changing-list-control-styles.md).
 
 ## <a name="items-and-subitems"></a>Elemente und Unterelemente
 
@@ -478,7 +478,7 @@ Jedes Element in einem Listenansicht-Steuerelement besteht aus einem Symbol (aus
 
 Klasse `CListCtrl` stellt mehrere Funktionen für das Einfügen, löschen, suchen und ändern diese Elemente bereit. Weitere Informationen finden Sie unter [CListCtrl:: GetItem](#getitem), [CListCtrl::InsertItem](#insertitem), und [CListCtrl::FindItem](#finditem), [Hinzufügen von Elementen zum Steuerelement](../adding-items-to-the-control.md), und [für Bildlauf, Anordnung, Sortierung und Suche in Listensteuerelementen](../scrolling-arranging-sorting-and-finding-in-list-controls.md).
 
-Standardmäßig dient das Listenansicht-Steuerelement für die Attribute eines Elements Symbol und Text zu speichern. Zusätzlich zu diesen Element jedoch Klasse `CListCtrl` unterstützt "Rückrufelemente." "Rückrufelement" ist ein Listenansichtselement für die die Anwendung, anstatt das Steuerelement – speichert den Text, Symbol oder beides. Eine Rückrufmaske wird verwendet, um anzugeben, welche Attribute des Elements (Text und/oder ein Symbol), die von der Anwendung bereitgestellt werden. Wenn eine Anwendung Rückrufelemente verwendet, muss die Text und/oder ein Symbol Attribute nach Bedarf bereitstellen können, sein. Rückrufelemente sind hilfreich, wenn die Anwendung bereits einige dieser Informationen verwaltet. Weitere Informationen finden Sie unter [Verwenden von CListCtrl: Rückrufelemente und Rückrufmaske](../callback-items-and-the-callback-mask.md).
+Standardmäßig dient das Listenansicht-Steuerelement für die Attribute eines Elements Symbol und Text zu speichern. Zusätzlich zu diesen Element jedoch Klasse `CListCtrl` unterstützt "Rückrufelemente." "Rückrufelement" ist ein Listenansichtselement für die die Anwendung, anstatt das Steuerelement – speichert den Text, Symbol oder beides. Eine Rückrufmaske wird verwendet, um anzugeben, welche Attribute des Elements (Text und/oder ein Symbol), die von der Anwendung bereitgestellt werden. Wenn eine Anwendung Rückrufelemente verwendet, muss die Text und/oder ein Symbol Attribute nach Bedarf bereitstellen können, sein. Rückrufelemente sind hilfreich, wenn die Anwendung bereits einige dieser Informationen verwaltet. Weitere Informationen finden Sie unter [CListCtrl verwenden: Rückrufelemente und Rückrufmaske](../callback-items-and-the-callback-mask.md).
 
 ## <a name="image-lists"></a>Bilderliste für das
 
@@ -500,7 +500,7 @@ Die Symbole, Bilder der Header-Element und -Anwendung – definiert Zustände f�
 
    Verwendet in der Berichtsansicht für kleine Bilder, die in jedem Headerelement-Steuerelement angezeigt werden.
 
-Standardmäßig Löscht ein Listenansicht-Steuerelement der Bildliste zugewiesen, wenn es zerstört wird; Allerdings kann Entwickler dieses Verhalten anpassen, indem Sie jede Bildliste Wenn es nicht mehr verwendet wird, zerstören, wie von der Anwendung bestimmt. Weitere Informationen finden Sie unter [Verwenden von CListCtrl: Auflisten von Elementen und Bilderlisten](../list-items-and-image-lists.md).
+Standardmäßig Löscht ein Listenansicht-Steuerelement der Bildliste zugewiesen, wenn es zerstört wird; Allerdings kann Entwickler dieses Verhalten anpassen, indem Sie jede Bildliste Wenn es nicht mehr verwendet wird, zerstören, wie von der Anwendung bestimmt. Weitere Informationen finden Sie unter [CListCtrl verwenden: Listenelemente und Bildlisten](../list-items-and-image-lists.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -618,7 +618,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Gibt an, die Listensteuerelement-Stil. Wenden Sie eine beliebige Kombination der Stile von Listensteuerelementen, an das Steuerelement. Finden Sie unter [Liste View Window-Stile](/windows/desktop/Controls/list-view-window-styles) im Windows SDK für eine vollständige Liste dieser Stile. Erweiterte Stile, die spezifisch für ein Steuerelement mithilfe Satz [SetExtendedStyle](#setextendedstyle).
 
-*Rect*<br/>
+*rect*<br/>
 Gibt an, die des Listensteuerelements Größe und Position. Es kann sein, entweder eine `CRect` Objekt oder ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.
 
 *pParentWnd*<br/>
@@ -666,7 +666,7 @@ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erwei
 *dwStyle*<br/>
 Gibt an, die Listensteuerelement-Stil. Wenden Sie eine beliebige Kombination der Stile von Listensteuerelementen, an das Steuerelement. Eine vollständige Liste dieser Stile, finden Sie unter [Liste View Window-Stile](/windows/desktop/Controls/list-view-window-styles) im Windows SDK.
 
-*Rect*<br/>
+*rect*<br/>
 Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -749,7 +749,7 @@ BOOL DeleteColumn(int nCol);
 
 ### <a name="parameters"></a>Parameter
 
-*"ncol"*<br/>
+*nCol*<br/>
 Der Index der Spalte gelöscht werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -930,7 +930,7 @@ int FindItem(
 *pFindInfo*<br/>
 Ein Zeiger auf ein [LVFINDINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvfindinfoa) Struktur mit Informationen über das Element, das gesucht werden sollen.
 
-*nmit*<br/>
+*nStart*<br/>
 Der Index des Elements beginnt die Suche mit oder -1, um von vorn zu beginnen. Das Element am *nmit* wird von der Suche ausgeschlossen, wenn *nmit* ist nicht gleich-1.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1066,7 +1066,7 @@ BOOL GetColumn(
 
 ### <a name="parameters"></a>Parameter
 
-*"ncol"*<br/>
+*nCol*<br/>
 Der Index der Spalte, deren Attribute sind, abgerufen werden sollen.
 
 *pColumn*<br/>
@@ -1159,7 +1159,7 @@ int GetColumnWidth(int nCol) const;
 
 ### <a name="parameters"></a>Parameter
 
-*"ncol"*<br/>
+*nCol*<br/>
 Gibt den Index der Spalte, deren Breite ist, abgerufen werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1333,7 +1333,7 @@ int GetGroupInfo(
 *iGroupId*<br/>
 Der Bezeichner der die Gruppe, zu der Informationen abgerufen werden sollen.
 
-*PGRP*<br/>
+*pgrp*<br/>
 Ein Zeiger auf die [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) mit Informationen über die angegebene Gruppe.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1788,7 +1788,7 @@ BOOL GetItemIndexRect(
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*pItemIndex*|[in] Zeiger auf ein [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) Struktur für das übergeordnete Element des Unterelements ab.<br /><br /> Der Aufrufer ist verantwortlich für das zuordnen und Festlegen der Member, der die [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) Struktur. Dieser Parameter darf nicht NULL sein.|
-|*der iColumn*|[in] Nullbasierte Index der einer Spalte im Steuerelement.|
+|*iColumn*|[in] Nullbasierte Index der einer Spalte im Steuerelement.|
 |*rectType*|[in] Der Teil des Listenansicht-Unterelements für die das umschließende Rechteck abgerufen wird. Geben Sie einen der folgenden Werte an:<br /><br /> LVIR_BOUNDS - gibt das umschließende Rechteck des gesamten Unterelements, einschließlich das Symbol und die Bezeichnung zurück.<br /><br /> LVIR_ICON - gibt das umschließende Rechteck des Symbols oder des Minisymbols des Unterelements ab.<br /><br /> LVIR_LABEL - gibt das umschließende Rechteck für den Text des Unterelements.|
 |*pRect*|[out] Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die Informationen über das umschließende Rechteck des Unterelements empfängt.<br /><br /> Der Aufrufer ist verantwortlich für die Zuordnung der [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur. Dieser Parameter darf nicht NULL sein.|
 
@@ -2116,7 +2116,7 @@ int GetNextSelectedItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Ein Verweis auf eine Positionswert, der von einem vorherigen Aufruf zurückgegebene `GetNextSelectedItem` oder `GetFirstSelectedItemPosition`. Der Wert wird durch diesen Aufruf an die nächste Position aktualisiert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2556,7 +2556,7 @@ void GetWorkAreas(
 *nWorkAreas*<br/>
 Die Anzahl der `RECT` Strukturen, die innerhalb der *Prc* Array.
 
-*Volksrepublik China*<br/>
+*prc*<br/>
 Ein Zeiger auf ein Array von `RECT` Strukturen (oder [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekte), die die Arbeitsbereiche des Listenansicht-Steuerelement zu empfangen. Werte in diesen Strukturen sind in Clientkoordinaten.
 
 ### <a name="remarks"></a>Hinweise
@@ -2662,7 +2662,7 @@ int InsertColumn(
 
 ### <a name="parameters"></a>Parameter
 
-*"ncol"*<br/>
+*nCol*<br/>
 Der Index der neuen Spalte.
 
 *pColumn*<br/>
@@ -2672,7 +2672,7 @@ Adresse von einem `LVCOLUMN` Struktur, die die Attribute der neuen Spalte enthä
 Adresse einer Zeichenfolge, die der Spalte Überschrift enthält.
 
 *nFormat*<br/>
-Ganze Zahl, die Ausrichtung der Spalte angibt. Es kann eine der folgenden Werte: LVCFMT_LEFT LVCFMT_RIGHT oder LVCFMT_CENTER.
+Ganze Zahl, die Ausrichtung der Spalte angibt. Sie können einen der folgenden Werte sein: LVCFMT_LEFT, LVCFMT_RIGHT, or LVCFMT_CENTER.
 
 *nWidth*<br/>
 Die Breite der Spalte in Pixel. Wenn dieser Parameter-1 ist, wird die Spaltenbreite ist nicht festgelegt.
@@ -2705,7 +2705,7 @@ LRESULT InsertGroup(
 *index*<br/>
 Der Index des Elements, in die Gruppe eingefügt werden soll.
 
-*PGRP*<br/>
+*pgrp*<br/>
 Ein Zeiger auf ein [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) Struktur, die mit der Gruppe hinzugefügt werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2774,7 +2774,7 @@ Der Index des Elements eingefügt werden soll.
 *lpszItem*<br/>
 Die Adresse einer Zeichenfolge, enthält die Beschriftung des Elements oder -LPSTR_TEXTCALLBACK, wenn das Element ein Rückrufelement ist. Informationen zu Elementen der Rückruf finden Sie unter [CListCtrl:: GetCallbackMask](#getcallbackmask).
 
-*Nbild*<br/>
+*nImage*<br/>
 Der Index des Image des Elements oder -I_IMAGECALLBACK, wenn das Element ein Rückrufelement ist. Informationen zu Elementen der Rückruf finden Sie unter [CListCtrl:: GetCallbackMask](#getcallbackmask).
 
 *nMask*<br/>
@@ -3040,10 +3040,10 @@ BOOL RedrawItems(
 
 ### <a name="parameters"></a>Parameter
 
-*. Nerster*<br/>
+*nFirst*<br/>
 Der Index des ersten Elements neu gezeichnet wird.
 
-*Nletzter*<br/>
+*nLast*<br/>
 Der Index des letzten Elements neu gezeichnet wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -3114,7 +3114,7 @@ BOOL SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parameter
 
-*CR*<br/>
+*cr*<br/>
 Hintergrundfarbe festlegen, oder der CLR_NONE führt dazu-Wert für die keine Hintergrundfarbe. Listenansicht-Steuerelemente mit Hintergrundfarben neu zu zeichnen sich erheblich schneller als die ohne Hintergrundfarben. Weitere Informationen finden Sie unter [COLORREF](/windows/desktop/gdi/colorref) im Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -3225,7 +3225,7 @@ BOOL SetCheck(
 *nItem*<br/>
 Der nullbasierte Index von einem Steuerelement ein Element.
 
-*Weitere Informationen finden*<br/>
+*fCheck*<br/>
 Gibt an, ob das Zustandsbild des Elements oder nicht sichtbar sein soll. In der Standardeinstellung *besuchen* ist "true" und das Zustandsbild sichtbar. Wenn *besuchen* ist "false", es ist nicht sichtbar.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -3261,7 +3261,7 @@ BOOL SetColumn(
 
 ### <a name="parameters"></a>Parameter
 
-*"ncol"*<br/>
+*nCol*<br/>
 Der Index der Spalte, deren Attribute werden festgelegt werden.
 
 *pColumn*<br/>
@@ -3317,10 +3317,10 @@ BOOL SetColumnWidth(
 
 ### <a name="parameters"></a>Parameter
 
-*"ncol"*<br/>
+*nCol*<br/>
 Der Index der Spalte für die die Breite ist, festgelegt werden. In der Listenansicht muss dieser Parameter 0 sein.
 
-*CX*<br/>
+*cx*<br/>
 Die neue Breite der Spalte. Kann entweder LVSCW_AUTOSIZE oder LVSCW_AUTOSIZE_USEHEADER, siehe [LVM_SETCOLUMNWIDTH](/windows/desktop/Controls/lvm-setcolumnwidth) im Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -3371,7 +3371,7 @@ int SetGroupInfo(
 *iGroupId*<br/>
 Der Bezeichner der Gruppe, deren Informationen festgelegt ist.
 
-*PGRP*<br/>
+*pgrp*<br/>
 Zeiger auf ein [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) -Struktur, die Informationen zum Festlegen enthält. Der Aufrufer ist für diese Struktur zuordnen und Festlegen von Membern verantwortlich.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -3409,7 +3409,7 @@ HCURSOR SetHotCursor(HCURSOR hc);
 
 ### <a name="parameters"></a>Parameter
 
-*hybridverbindung*<br/>
+*hc*<br/>
 Ein Handle für eine Cursorressource verwendet, um den aktiven Cursor darzustellen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -3490,10 +3490,10 @@ CSize SetIconSpacing(CSize size);
 
 ### <a name="parameters"></a>Parameter
 
-*CX*<br/>
+*cx*<br/>
 Der Abstand (in Pixel) zwischen der Symbole auf der x-Achse.
 
-*CY*<br/>
+*cy*<br/>
 Der Abstand (in Pixel) zwischen der Symbole auf der y-Achse.
 
 *size*<br/>
@@ -3598,7 +3598,7 @@ COLORREF SetInsertMarkColor(COLORREF color);
 
 ### <a name="parameters"></a>Parameter
 
-*Farbe*<br/>
+*color*<br/>
 Ein [COLORREF](/windows/desktop/gdi/colorref) -Struktur, die die Farbe zum Festlegen der Einfügemarke angibt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -3655,7 +3655,7 @@ Gibt an, welche Attribute festgelegt werden (siehe die Hinweise).
 *lpszItem*<br/>
 Die Adresse einer Null-terminierte Zeichenfolge, die das Element dort angeben.
 
-*Nbild*<br/>
+*nImage*<br/>
 Index des Elements Bildes in der Bildliste.
 
 *nState*<br/>
@@ -3823,7 +3823,7 @@ BOOL SetItemIndexState(
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*pItemIndex*|[in] Zeiger auf ein [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) Struktur, die ein Element beschreibt. Der Aufrufer ist für diese Struktur zuordnen und Festlegen von Membern verantwortlich.|
-|*dwState-Datenmember*|[in] Der Zustand, der das Element festgelegt. Dies ist eine bitweise Kombination von [Liste anzeigen-Element-Zustände](/windows/desktop/Controls/list-view-item-states). Geben Sie 0 (null), zum Zurücksetzen oder dem einen legen, einen Status.|
+|*dwState*|[in] Der Zustand, der das Element festgelegt. Dies ist eine bitweise Kombination von [Liste anzeigen-Element-Zustände](/windows/desktop/Controls/list-view-item-states). Geben Sie 0 (null), zum Zurücksetzen oder dem einen legen, einen Status.|
 |*dwMask*|[in] Eine Maske, der die gültigen Bits der vom angegebenen Zustand der *dwState-Datenmember* Parameter. Geben Sie eine bitweise Kombination (OR) von [Liste anzeigen-Element-Zustände](/windows/desktop/Controls/list-view-item-states).|
 
 ### <a name="return-value"></a>Rückgabewert
@@ -3955,7 +3955,7 @@ COLORREF SetOutlineColor(COLORREF color);
 
 ### <a name="parameters"></a>Parameter
 
-*Farbe*<br/>
+*color*<br/>
 Die neue [COLORREF](/windows/desktop/gdi/colorref) Struktur, die die Konturfarbe enthält.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -4022,7 +4022,7 @@ BOOL SetTextBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parameter
 
-*CR*<br/>
+*cr*<br/>
 Eine COLORREF, die die neue Hintergrundfarbe des Texts angibt. Weitere Informationen finden Sie unter [COLORREF](/windows/desktop/gdi/colorref) im Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -4048,7 +4048,7 @@ BOOL SetTextColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parameter
 
-*CR*<br/>
+*cr*<br/>
 Eine COLORREF, die die neue Farbe des Textes angibt. Weitere Informationen finden Sie unter [COLORREF](/windows/desktop/gdi/colorref) im Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -4364,7 +4364,7 @@ int SubItemHitTest(LPLVHITTESTINFO pInfo);
 
 ### <a name="parameters"></a>Parameter
 
-*"pInfo"*<br/>
+*pInfo*<br/>
 Ein Zeiger auf die [LVHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvhittestinfo) Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -4426,4 +4426,3 @@ Diese Funktion ordnet den LVS_AUTOARRANGE Stil verfügt auch das Listenansicht-S
 [CWnd-Klasse](cwnd-class.md)<br/>
 [Hierarchiediagramm](../hierarchy-chart.md)<br/>
 [CImageList-Klasse](cimagelist-class.md)
-

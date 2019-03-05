@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleMessageFilter [MFC], SetMessagePendingDelay
 - COleMessageFilter [MFC], SetRetryReply
 ms.assetid: b1fd1639-fac4-4fd0-bf17-15172deba13c
-ms.openlocfilehash: 4e12b4dc41c0e384025a2af567cb118d066aaa72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a06891f9413979895175808e109cc4abb7d75e09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478246"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259099"
 ---
 # <a name="colemessagefilter-class"></a>COleMessageFilter-Klasse
 
@@ -250,7 +250,7 @@ void SetMessagePendingDelay(DWORD nTimeout = 5000);
 
 ### <a name="parameters"></a>Parameter
 
-*%ntimeout*<br/>
+*nTimeout*<br/>
 Anzahl der Millisekunden, für die Nachricht ausstehende Verzögerung.
 
 ### <a name="remarks"></a>Hinweise

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, macros
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
-ms.openlocfilehash: 10965fed5aac2eb037cf9894998688e3e7c2bffa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c6d3e350755ef4a0cf4a84561e34619ab3974be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498976"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299113"
 ---
 # <a name="composite-control-macros"></a>Makros zusammengesetzter Steuerelemente
 
@@ -43,7 +43,7 @@ BEGIN_SINK_MAP(_class)
 
 ### <a name="parameters"></a>Parameter
 
-*_Klasse*<br/>
+*_class*<br/>
 [in] Gibt das Steuerelement.
 
 ### <a name="example"></a>Beispiel
@@ -83,7 +83,7 @@ SINK_ENTRY( id, dispid, fn )
 *ID*<br/>
 [in] Bezeichnet das Steuerelement.
 
-*DISPID*<br/>
+*dispid*<br/>
 [in] Bezeichnet das angegebene Ereignis.
 
 *fn*<br/>
@@ -111,13 +111,13 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 *ID*<br/>
 [in] Bezeichnet das Steuerelement.
 
-*IID*<br/>
+*iid*<br/>
 [in] Identifiziert die Dispatchschnittstelle.
 
 *piid*<br/>
 [in] Zeiger auf die Dispatchschnittstelle.
 
-*DISPID*<br/>
+*dispid*<br/>
 [in] Bezeichnet das angegebene Ereignis.
 
 *fn*<br/>
@@ -145,19 +145,19 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 *ID*<br/>
 [in] Ganzzahl ohne Vorzeichen, die Ereignisquelle identifizieren. Dieser Wert muss übereinstimmen der *nID* Template-Parameter verwendet, die in den zugehörigen [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) Basisklasse.
 
-*IID*<br/>
+*iid*<br/>
 [in] Die IID, die die Dispatchschnittstelle identifiziert.
 
 *piid*<br/>
 [in] Zeiger auf die IID, die die Dispatchschnittstelle identifiziert.
 
-*DISPID*<br/>
+*dispid*<br/>
 [in] DISPID, die das angegebene Ereignis zu identifizieren.
 
 *fn*<br/>
 [in] Name des Ereignishandlerfunktion. Diese Funktion verwenden, muss die `_stdcall` Aufrufkonvention und die Signatur entsprechenden Dispinterface-Format haben.
 
-*Info*<br/>
+*info*<br/>
 [in] Typinformationen Sie für die Ereignishandlerfunktion. Diese Typinformationen erfolgt in Form eines Zeigers auf ein `_ATL_FUNC_INFO` Struktur. CC_CDECL ist die einzige Option, die in Windows CE unterstützt wird, für das Feld CALLCONV, der die `_ATL_FUNC_INFO` Struktur. Jeder andere Wert wird nicht unterstützt somit das Verhalten nicht definiert.
 
 ### <a name="remarks"></a>Hinweise

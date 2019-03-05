@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: 9d0ffba2e8b682a33dc435b0968c59844a858c72
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 22ba71bc0abaefd20cb68d82d4fefe06ab7fa929
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524936"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274575"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver-Klasse
 
@@ -56,12 +56,12 @@ class COleDispatchDriver
 |Name|Beschreibung|
 |----------|-----------------|
 |[COleDispatchDriver::AttachDispatch](#attachdispatch)|Fügt eine `IDispatch` Verbindung mit der `COleDispatchDriver` Objekt.|
-|[COleDispatchDriver:: CreateDispatch](#createdispatch)|Erstellt eine `IDispatch` Verbindung und fügt es der `COleDispatchDriver` Objekt.|
+|[COleDispatchDriver::CreateDispatch](#createdispatch)|Erstellt eine `IDispatch` Verbindung und fügt es der `COleDispatchDriver` Objekt.|
 |[COleDispatchDriver::DetachDispatch](#detachdispatch)|Trennt eine `IDispatch` -Verbindung nicht freigegeben wurde.|
-|[COleDispatchDriver:: GetProperty](#getproperty)|Ruft ein Automatisierungseigenschaft ab.|
-|[COleDispatchDriver:: InvokeHelper](#invokehelper)|Hilfsmethode zum Aufrufen von Automatisierungsmethoden.|
+|[COleDispatchDriver::GetProperty](#getproperty)|Ruft ein Automatisierungseigenschaft ab.|
+|[COleDispatchDriver::InvokeHelper](#invokehelper)|Hilfsmethode zum Aufrufen von Automatisierungsmethoden.|
 |[COleDispatchDriver::ReleaseDispatch](#releasedispatch)|Versionen einer `IDispatch` Verbindung.|
-|[Schlüsselwörter COleDispatchDriver:: SetProperty](#setproperty)|Legt eine Automatisierungseigenschaft fest.|
+|[COleDispatchDriver::SetProperty](#setproperty)|Legt eine Automatisierungseigenschaft fest.|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 

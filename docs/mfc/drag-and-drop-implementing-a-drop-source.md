@@ -1,5 +1,5 @@
 ---
-title: 'Drag & Drop: Implementieren einer Drag & Drop-Quelle'
+title: 'Drag & Drop: Implementieren einer Drop-Quelle'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE drag and drop [MFC], initiating drag operations
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - drag and drop [MFC], initiating drag operations
 - drag and drop [MFC], drop source
 ms.assetid: 0ed2fda0-63fa-4b1e-b398-f1f142f40035
-ms.openlocfilehash: ac925ac83b5ef019e3140dcc93034ccdf221ed7e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cceed8517c7b63588c7b1b90e3306d90f0921b78
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586731"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300747"
 ---
-# <a name="drag-and-drop-implementing-a-drop-source"></a>Drag & Drop: Implementieren einer Drag & Drop-Quelle
+# <a name="drag-and-drop-implementing-a-drop-source"></a>Drag & Drop: Implementieren einer Drop-Quelle
 
 In diesem Artikel wird erläutert, wie Sie Ihre Anwendung für die Bereitstellung von Daten für einen Drag & Drop-Vorgang abrufen.
 
@@ -39,7 +39,6 @@ Weitere Informationen finden Sie unter:
 ## <a name="see-also"></a>Siehe auch
 
 [Drag & Drop (OLE)](../mfc/drag-and-drop-ole.md)<br/>
-[Oledatasource:: DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop)<br/>
+[COleDataSource::DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop)<br/>
 [COleClientItem::DoDragDrop](../mfc/reference/coleclientitem-class.md#dodragdrop)<br/>
 [CView::OnDragLeave](../mfc/reference/cview-class.md#ondragleave)
-

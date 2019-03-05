@@ -15,12 +15,12 @@ f1_keywords:
 - AFXLAYOUT/CMFCDynamicLayout::LoadResource
 - AFXLAYOUT/CMFCDynamicLayout::SetMinSize
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
-ms.openlocfilehash: da512b5e05f3d5ff0229cc44a0a8268148a43f82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40dedbe2737a79b7531b8acd47870ce7cb788604
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640634"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288401"
 ---
 # <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout-Klasse
 
@@ -45,22 +45,22 @@ class CMFCDynamicLayout : public CObject
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[Cmfcdynamiclayout:: AddItem](#additem)|Fügt der Liste von Fenstern, die vom dynamischen Layout-Manager gesteuert werden, ein untergeordnetes Fenster hinzu, in der Regel ein Steuerelement.|
-|[Cmfcdynamiclayout:: Adjust](#adjust)|Fügt der Liste von Fenstern, die vom dynamischen Layout-Manager gesteuert werden, ein untergeordnetes Fenster hinzu, in der Regel ein Steuerelement.|
+|[CMFCDynamicLayout::AddItem](#additem)|Fügt der Liste von Fenstern, die vom dynamischen Layout-Manager gesteuert werden, ein untergeordnetes Fenster hinzu, in der Regel ein Steuerelement.|
+|[CMFCDynamicLayout::Adjust](#adjust)|Fügt der Liste von Fenstern, die vom dynamischen Layout-Manager gesteuert werden, ein untergeordnetes Fenster hinzu, in der Regel ein Steuerelement.|
 |[CMFCDynamicLayout::Create](#create)|Speichert und überprüft das Hostfenster.|
 |[CMFCDynamicLayout::GetHostWnd](#gethostwnd)|Gibt einen Zeiger auf ein Hostfenster zurück.|
 |[CMFCDynamicLayout::GetMinSize](#getminsize)|Gibt die Größe des Fensters zurück, unterhalb derer das Layout nicht angepasst wird.|
 |[CMFCDynamicLayout::GetWindowRect](#getwindowrect)|Ruft das Rechteck für den aktuellen Client-Bereich des Fensters ab.|
-|[Cmfcdynamiclayout:: Hasitem](#hasitem)|Überprüft, ob dem dynamischen Layout ein untergeordnetes Steuerelement hinzugefügt wurde.|
-|[Cmfcdynamiclayout:: IsEmpty](#isempty)|Überprüft, ob einem dynamischen Layout keine untergeordneten Fenster hinzugefügt wurden.|
+|[CMFCDynamicLayout::HasItem](#hasitem)|Überprüft, ob dem dynamischen Layout ein untergeordnetes Steuerelement hinzugefügt wurde.|
+|[CMFCDynamicLayout::IsEmpty](#isempty)|Überprüft, ob einem dynamischen Layout keine untergeordneten Fenster hinzugefügt wurden.|
 |[CMFCDynamicLayout::LoadResource](#loadresource)|Liest das dynamische Layout aus der AFX_DIALOG_LAYOUT-Ressource und wendet das Layout dann auf das Hostfenster an.|
 |statische [CMFCDynamicLayout::MoveHorizontal](#movehorizontal)|Ruft eine [MoveSettings](#movesettings_structure) Wert, der definiert, wie viel ein untergeordnetes Steuerelement horizontal verschoben wird, wenn der Benutzer Größe des hostingfensters ändert.|
-|statische [CMFCDynamicLayout::MoveHorizontalAndVertical](#movehorizontalandvertical)|Ruft eine [MoveSettings](#movesettings_structure) Wert, der definiert, wie viel ein untergeordnetes Steuerelement horizontal verschoben wird, wenn der Benutzer Größe des hostingfensters ändert.|
+|static [CMFCDynamicLayout::MoveHorizontalAndVertical](#movehorizontalandvertical)|Ruft eine [MoveSettings](#movesettings_structure) Wert, der definiert, wie viel ein untergeordnetes Steuerelement horizontal verschoben wird, wenn der Benutzer Größe des hostingfensters ändert.|
 |statische [CMFCDynamicLayout::MoveNone](#movenone)|Ruft eine [MoveSettings](#movesettings_structure) Wert, der keine Bewegung, das eine vertikale oder horizontale für ein untergeordnetes Steuerelement darstellt.|
 |statische [CMFCDynamicLayout::MoveVertical](#movevertical)|Ruft eine [MoveSettings](#movesettings_structure) Wert, der definiert, wie viel ein untergeordnetes Steuerelement vertikal verschoben wird, wenn der Benutzer Größe des hostingfensters ändert.|
 |[CMFCDynamicLayout::SetMinSize](#setminsize)|Legt die Größe des Fensters fest, unterhalb derer das Layout nicht angepasst wird.|
-|statische [CMFCDynamicLayout::SizeHorizontal](#sizehorizontal)|Ruft eine [SizeSettings](#sizesettings_structure) Wert, der definiert, wie viel ein untergeordnetes Steuerelement horizontal angepasst wird, wenn der Benutzer Größe des hostingfensters ändert.|
-|statische [CMFCDynamicLayout::SizeHorizontalAndVertical](#sizehorizontalandvertical)|Ruft eine [SizeSettings](#sizesettings_structure) Wert, der definiert, wie viel ein untergeordnetes Steuerelement horizontal angepasst wird, wenn der Benutzer Größe des hostingfensters ändert.|
+|static [CMFCDynamicLayout::SizeHorizontal](#sizehorizontal)|Ruft eine [SizeSettings](#sizesettings_structure) Wert, der definiert, wie viel ein untergeordnetes Steuerelement horizontal angepasst wird, wenn der Benutzer Größe des hostingfensters ändert.|
+|static [CMFCDynamicLayout::SizeHorizontalAndVertical](#sizehorizontalandvertical)|Ruft eine [SizeSettings](#sizesettings_structure) Wert, der definiert, wie viel ein untergeordnetes Steuerelement horizontal angepasst wird, wenn der Benutzer Größe des hostingfensters ändert.|
 |statische [CMFCDynamicLayout::SizeNone](#sizenone)|Ruft eine [SizeSettings](#sizesettings_structure) -Wert, der keine Änderung der Größe für ein untergeordnetes Steuerelement darstellt.|
 |statische [CMFCDynamicLayout::SizeVertical](#sizevertical)|Ruft eine [SizeSettings](#sizesettings_structure) Wert, der definiert, wie viel ein untergeordnetes Steuerelement vertikal angepasst wird, wenn der Benutzer Größe des hostingfensters ändert.|
 
@@ -68,8 +68,8 @@ class CMFCDynamicLayout : public CObject
 
 |name|Beschreibung|
 |----------|-----------------|
-|[Cmfcdynamiclayout:: Movesettings-Struktur](#movesettings_structure)|Kapselt Daten für die Verschiebung für Steuerelemente in einem dynamischen Layout.|
-|[Cmfcdynamiclayout:: Sizesettings-Struktur](#sizesettings_structure)|Kapselt Daten für die Größenänderung für Steuerelemente in einem dynamischen Layout.|
+|[CMFCDynamicLayout::MoveSettings Structure](#movesettings_structure)|Kapselt Daten für die Verschiebung für Steuerelemente in einem dynamischen Layout.|
+|[CMFCDynamicLayout::SizeSettings Structure](#sizesettings_structure)|Kapselt Daten für die Größenänderung für Steuerelemente in einem dynamischen Layout.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -99,7 +99,7 @@ BOOL AddItem(
 
 ### <a name="parameters"></a>Parameter
 
-*HWND*<br/>
+*hwnd*<br/>
 Das Handle zum hinzuzufügenden Fenster.
 
 *nID*<br/>
@@ -192,7 +192,7 @@ void GetHostWndRect(CRect& rect,);
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 Nach Rückgabe der Funktion enthält dieser Parameter das umschließende Rechteck für den Layoutbereich. Dies ist ein out-Parameter; der Eingabewert wird überschrieben.
 
 ### <a name="remarks"></a>Hinweise
@@ -207,7 +207,7 @@ BOOL HasItem(HWND hwnd);
 
 ### <a name="parameters"></a>Parameter
 
-*HWND*<br/>
+*hwnd*<br/>
 Erstellt ein Handle für das Steuerelement-Fenster.
 
 ### <a name="return-value"></a>Rückgabewert
