@@ -7,12 +7,12 @@ helpviewer_keywords:
 - message maps [MFC], derived
 - derived message maps
 ms.assetid: 21829556-6e64-40c3-8279-fed85d99de77
-ms.openlocfilehash: 2ae536a53a43472a4fb81d30e685fbc3faaa603f
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: fcdff67c57e932e414a2b61b28cd0498ab997c60
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175600"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304235"
 ---
 # <a name="derived-message-maps"></a>Abgeleitete Meldungszuordnungen
 
@@ -38,4 +38,3 @@ Um übereinstimmende meldungszuordnung – zu beschleunigen, speichert das Frame
 ## <a name="see-also"></a>Siehe auch
 
 [So durchsucht das Framework Meldungszuordnungen](../mfc/how-the-framework-searches-message-maps.md)
-

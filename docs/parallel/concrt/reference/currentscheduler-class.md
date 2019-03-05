@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-ms.openlocfilehash: 46bd55c39e79ca01664c3800d10e4efa8cf7d042
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a27ec7c25962b6addd26e61af8f33130d4c653ba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619179"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326789"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler-Klasse
 
@@ -45,7 +45,7 @@ class CurrentScheduler;
 |[Trennen](#detach)|Trennt den aktuellen Planer aus dem aufrufenden Kontext und stellt den zuvor angefügten Planer als aktuellen Planer, wieder her, sofern vorhanden. Nach der Rückgabe dieser Methode wird im aufrufende Kontext dann vom Planer, der an den Kontext, der entweder bereits vorher angefügt wurde verwaltet die `CurrentScheduler::Create` oder `Scheduler::Attach` Methode.|
 |[Get](#get)|Gibt einen Zeiger auf den Planer im aufrufenden Kontext, auch bezeichnet als aktuellen Planer zugeordnet.|
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Gibt die aktuelle Anzahl virtueller Prozessoren für den Planer, der dem aufrufenden Kontext zugeordnet.|
-|[Verarbeitete GetPolicy](#getpolicy)|Gibt eine Kopie der Richtlinie, der mit der aktuelle Planer erstellt wurde.|
+|[GetPolicy](#getpolicy)|Gibt eine Kopie der Richtlinie, der mit der aktuelle Planer erstellt wurde.|
 |[Id](#id)|Gibt einen eindeutigen Bezeichner für den aktuellen Planer zurück.|
 |[IsAvailableLocation](#isavailablelocation)|Bestimmt, ob eine angegebene Position auf dem aktuellen Planer verfügbar ist.|
 |[RegisterShutdownEvent](#registershutdownevent)|Bewirkt, dass das Windows-Ereignishandle zu, in übergeben der `_ShutdownEvent` -Parameter signalisiert wird, wenn der Planer dem aktuellen Kontext zugeordnet heruntergefahren wird, und zerstört. Zu dem Zeitpunkt, der das Ereignis signalisiert wird, ist die gesamte Arbeit, die auf den Planer geplant wurde abgeschlossen. Mehrere Herunterfahrereignisse können mit dieser Methode registriert werden.|
@@ -61,7 +61,7 @@ Wenn kein Planer (finden Sie unter [Scheduler](scheduler-class.md)) verknüpft i
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** concrt.h hinzu
+**Header:** concrt.h
 
 **Namespace:** Parallelität
 
@@ -100,7 +100,7 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
 
 ### <a name="parameters"></a>Parameter
 
-*_Platzierung*<br/>
+*_Placement*<br/>
 Ein Verweis auf einen Speicherort, in dem die Aufgaben innerhalb der Planungsgruppe für Blockcontainer werden werden auf ausführen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -165,7 +165,7 @@ Diese Methode führt nicht in der Scheduler-Anlage, wenn der Kontext des aufrufe
 
 Der Rückgabewert dieser Methode ist eine sofortige Sampling der Anzahl virtueller Prozessoren für den Planer, der dem aufrufenden Kontext zugeordnet. Dieser Wert kann veraltete Moment sein, die, den er zurückgegeben wird.
 
-##  <a name="getpolicy"></a> Verarbeitete GetPolicy
+##  <a name="getpolicy"></a> GetPolicy
 
 Gibt eine Kopie der Richtlinie, der mit der aktuelle Planer erstellt wurde.
 
@@ -181,7 +181,7 @@ Eine Kopie der Richtlinie, der mit der aktuelle Planer erstellt wurde.
 
 Diese Methode führt dazu, dass der Standardplaner des Prozesses erstellt und/oder an den aufrufenden Kontext angefügt wird, wenn derzeit dem aufrufenden Kontext kein Planer zugeordnet ist.
 
-##  <a name="id"></a> ID
+##  <a name="id"></a> Id
 
 Gibt einen eindeutigen Bezeichner für den aktuellen Planer zurück.
 
@@ -207,7 +207,7 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
 
 ### <a name="parameters"></a>Parameter
 
-*_Platzierung*<br/>
+*_Placement*<br/>
 Ein Verweis auf die Position, an den aktuellen Planer zu Fragen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -257,10 +257,10 @@ static void __cdecl ScheduleTask(
 *_Proc*<br/>
 Ein Zeiger auf die Funktion, die ausgeführt werden, um den Text der Aufgabe leicht durchführen.
 
-*"_Data"*<br/>
+*_Data*<br/>
 Ein void-Zeiger auf die Daten, die in den Text der Aufgabe als Parameter übergeben werden.
 
-*_Platzierung*<br/>
+*_Placement*<br/>
 Ein Verweis auf einen Speicherort, in denen die einfache Aufgabe für Blockcontainer werden werden auf ausführen.
 
 ### <a name="remarks"></a>Hinweise
@@ -273,4 +273,3 @@ Diese Methode führt dazu, dass der Standardplaner des Prozesses erstellt und/od
 [Scheduler-Klasse](scheduler-class.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>
 [Aufgabenplanung](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

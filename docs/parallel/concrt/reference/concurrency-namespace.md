@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-ms.openlocfilehash: ccfa168f811b2c357a3760097ca7bbaab4f5ed3a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa2fe7dedd1c7e1a8b5a72e01508b4201bd72a7d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629852"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303390"
 ---
 # <a name="concurrency-namespace"></a>concurrency-Namespace
 
@@ -119,16 +119,16 @@ namespace concurrency;
 |[static_partitioner-Klasse](static-partitioner-class.md)|Die `static_partitioner`-Klasse stellt eine statische Partitionierung des Bereichs dar, der von `parallel_for` durchlaufen wird. Mit dem Partitionierer wird der Bereich in so viele Blöcke unterteilt, wie Worker für den zugrunde liegenden Planer verfügbar sind.|
 |[structured_task_group-Klasse](structured-task-group-class.md)|Die `structured_task_group`-Klasse stellt eine stark strukturierte Auflistung paralleler Arbeit dar. Sie können einzelne parallele Aufgaben mithilfe von `structured_task_group`-Objekten in eine `task_handle` stellen und warten, bis sie abgeschlossen werden, oder Sie können die Aufgabengruppe abbrechen, bevor deren Ausführung beendet wird, wodurch auch alle Aufgaben abgebrochen werden, deren Ausführung nicht gestartet wurde.|
 |[target_block-Klasse](target-block-class.md)|Die `target_block`-Klasse ist eine abstrakte Basisklasse, mit der grundlegende Linkmanagementfunktionalität und Fehlerüberprüfung für Nur-Ziel-Blöcke bereitgestellt werden.|
-|[task-Klasse (Concurrency Runtime)](task-class.md)|Die Parallel Patterns Library (PPL) `task`-Klasse. Ein `task`-Objekt stellt Arbeit dar, die asynchron und übereinstimmend mit anderen Tasks und paralleler Arbeit , die von parallelen Algorithmen in der Concurrency Runtime erzeugt wird, ausgeführt werden kann. Es enthält bei erfolgreichem Abschluss ein Ergebnis vom Typ `_ResultType`. Tasks des Typs `task<void>` führen zu keinem Ergebnis. Ein Task kann erwartet und unabhängig von anderen Tasks abgebrochen werden. Er kann mit anderen Aufgaben mithilfe von Continuations (`then`) sowie Join-Muster (`when_all`) und Choice-Muster (`when_any`) erstellt werden.|
+|[task-Klasse (Concurrency Runtime)](task-class.md)|Die Parallel Patterns Library (PPL) `task`-Klasse. Ein `task`-Objekt stellt Arbeit dar, die asynchron und übereinstimmend mit anderen Tasks und paralleler Arbeit , die von parallelen Algorithmen in der Concurrency Runtime erzeugt wird, ausgeführt werden kann. Es enthält bei erfolgreichem Abschluss ein Ergebnis vom Typ `_ResultType`. Tasks des Typs `task<void>` führen zu keinem Ergebnis. Ein Task kann erwartet und unabhängig von anderen Tasks abgebrochen werden. Er kann mit anderen Tasks mithilfe von Continuations (`then`) sowie Join-Muster (`when_all`) und Choise-Muster (`when_any`) erstellt werden.|
 |[task_canceled-Klasse](task-canceled-class.md)|Diese Klasse beschreibt eine Ausnahme, die von den PPL-Aufgaben ausgelöst wird, um das Abbrechen der aktuellen Aufgabe zu erzwingen. Es wird auch ausgelöst, durch die `get()` Methode [Aufgabe](task-class.md), für eine abgebrochene Aufgabe.|
 |[task_completion_event-Klasse](task-completion-event-class.md)|Mit der `task_completion_event`-Klasse können Sie die Ausführung einer Aufgabe verzögern, bis eine Bedingung erfüllt ist, oder eine Aufgabe als Reaktion auf ein externes Ereignis starten.|
 |[task_continuation_context-Klasse](task-continuation-context-class.md)|Mit der `task_continuation_context`-Klasse können Sie angeben, an welcher Stelle eine Fortsetzung ausgeführt werden soll. Es ist nur hilfreich, diese Klasse von einer UWP-app zu verwenden. Für nicht - Windows-Runtime-apps ist die Ausführungskontext der aufgabenfortsetzung von der Laufzeit bestimmt und kann nicht konfiguriert.|
-|[Task_group-Klasse](task-group-class.md)|Die `task_group`-Klasse stellt eine Auflistung der parallelen Arbeit dar, auf die gewartet oder die abgebrochen werden kann.|
+|[task_group-Klasse](task-group-class.md)|Die `task_group`-Klasse stellt eine Auflistung der parallelen Arbeit dar, auf die gewartet oder die abgebrochen werden kann.|
 |[task_handle-Klasse](task-handle-class.md)|Die `task_handle`-Klasse stellt ein einzelnes paralleles Arbeitselement dar. Sie kapselt die Anweisungen und die zum Ausführen eines Teils der Arbeit erforderlichen Daten.|
 |[task_options-Klasse (Concurrency Runtime)](task-options-class-concurrency-runtime.md)|Stellt die zulässigen Optionen zum Erstellen einer Aufgabe dar|
 |[timer-Klasse](timer-class.md)|Ein `timer`-Meldungsblock ist ein `source_block` mit einem einzelnen Ziel, der nach Ablauf einer bestimmten Zeitspanne oder in bestimmten Intervallen eine Meldung an sein Ziel senden kann.|
 |[transformer-Klasse](transformer-class.md)|Ein `transformer`-Meldungsblock ist ein geordneter `propagator_block` mit einem einzelnen Ziel und mehreren Quellen, der Meldungen eines Typs akzeptieren und eine unbegrenzte Anzahl von Meldungen eines anderen Typs speichern kann.|
-|[Unbounded_buffer-Klasse](unbounded-buffer-class.md)|Ein `unbounded_buffer`-Meldungsblock ist ein geordneter `propagator_block` mit mehreren Zielen und mehreren Quellen, der eine unbegrenzte Anzahl von Meldungen speichern kann.|
+|[unbounded_buffer-Klasse](unbounded-buffer-class.md)|Ein `unbounded_buffer`-Meldungsblock ist ein geordneter `propagator_block` mit mehreren Zielen und mehreren Quellen, der eine unbegrenzte Anzahl von Meldungen speichern kann.|
 |[unsupported_os-Klasse](unsupported-os-class.md)|Diese Klasse beschreibt eine Ausnahme, die ausgelöst wird, wenn ein nicht unterstütztes Betriebssystem verwendet wird.|
 
 ### <a name="structures"></a>Strukturen
@@ -179,13 +179,13 @@ namespace concurrency;
 |[Asend-Funktion](concurrency-namespace-functions.md#asend)|Überladen. Ein asynchroner Sendevorgang, der eine Aufgabe zum Weitergeben der Daten an den Zielblock plant.|
 |[Cancel_current_task-Funktion](concurrency-namespace-functions.md#cancel_current_task)|Bricht die gerade ausgeführte Aufgabe ab. Diese Funktion kann aus dem Text einer Aufgabe aufgerufen werden, um die Ausführung der Aufgabe abzubrechen und ihn dabei in den `canceled` Zustand übergehen zu lassen.<br /><br /> Der Aufruf dieser Funktion, wenn Sie sich nicht innerhalb des Texts von einem `task` befinden, ist kein unterstütztes Szenario. Dies würde zu nicht definiertem Verhalten, wie einem Absturz oder einem Hänger in der Anwendung, führen.|
 |[Create_async-Funktion](concurrency-namespace-functions.md#create_async)|Erstellt ein asynchrones Konstrukt der Windows Runtime auf einem vom Benutzer angegebenes Lambda oder Funktionsobjekt. Der Rückgabetyp von `create_async` ist entweder `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` oder `IAsyncOperationWithProgress<TResult, TProgress>^` auf Grundlage der Signatur des Lambdaausdrucks, der an die Methode übergeben wurde.|
-|[Create_task-Funktion](concurrency-namespace-functions.md#create_task)|Überladen. Erstellt ein PPL- [Aufgabe](task-class.md) Objekt. Das Element `create_task` kann überall dort verwendet werden, wo Sie einen Aufgabenkonstruktor verwendet hätten. Es wird hauptsächlich der Einfachheit halber bereitgestellt, da es beim Erstellen einer Aufgabe die Verwendung des `auto`-Schlüsselwort ermöglicht.|
+|[Create_task-Funktion](concurrency-namespace-functions.md#create_task)|Überladen. Erstellt ein PPL- [Aufgabe](task-class.md) Objekt. Das Element `create_task` kann überall dort verwendet werden, wo Sie einen Aufgabenkonstruktor verwendet hätten. Es wird hauptsächlich der Einfachheit halber bereitgestellt, da es beim Erstellen eines Tasks die Verwendung des `auto`-Schlüsselwort ermöglicht.|
 |[CreateResourceManager-Funktion](concurrency-namespace-functions.md#createresourcemanager)|Gibt eine Schnittstelle zurück, die die Singletoninstanz des Ressourcen-Managers der Concurrency Runtime darstellt. Der Ressourcen-Manager ist für das Zuweisen von Ressourcen für Planer, die miteinander kooperieren möchten, zuständig.|
 |[DisableTracing-Funktion](concurrency-namespace-functions.md#disabletracing)|Deaktiviert die Ablaufverfolgung in der Concurrency Runtime. Diese Funktion ist veraltet, da die Registrierung der ETW-Ablaufverfolgung standardmäßig aufgehoben wird.|
 |[EnableTracing-Funktion](concurrency-namespace-functions.md#enabletracing)|Aktiviert die Ablaufverfolgung in der Concurrency Runtime. Diese Funktion ist veraltet, da die Registrierung der ETW-Ablaufverfolgung jetzt standardmäßig erfolgt.|
 |[Free-Funktion](concurrency-namespace-functions.md#free)|Gibt einen Speicherblock frei, der zuvor mit der `Alloc`-Methode der Unterbelegungsfunktion für die Zwischenspeicherung der Concurrency Runtime reserviert wurde.|
 |[Get_ambient_scheduler-Funktion (Concurrency Runtime)](concurrency-namespace-functions.md#get_ambient_scheduler)||
-|[GetExecutionContextId-Funktion](concurrency-namespace-functions.md#getexecutioncontextid)|Gibt einen eindeutigen Bezeichner zurück, der einem Ausführungskontext zugewiesen werden kann, der die `IExecutionContext`-Schnittstelle implementiert.|
+|[GetExecutionContextId Function](concurrency-namespace-functions.md#getexecutioncontextid)|Gibt einen eindeutigen Bezeichner zurück, der einem Ausführungskontext zugewiesen werden kann, der die `IExecutionContext`-Schnittstelle implementiert.|
 |[GetOSVersion-Funktion](concurrency-namespace-functions.md#getosversion)|Gibt die Betriebssystemversion zurück.|
 |[GetProcessorCount-Funktion](concurrency-namespace-functions.md#getprocessorcount)|Gibt die Anzahl von Hardwarethreads des zugrunde liegenden Systems zurück.|
 |[GetProcessorNodeCount-Funktion](concurrency-namespace-functions.md#getprocessornodecount)|Gibt die Anzahl von NUMA-Knoten oder Prozessorpaketen des zugrunde liegenden Systems zurück.|
@@ -261,4 +261,3 @@ namespace concurrency;
 ## <a name="see-also"></a>Siehe auch
 
 [Verweis](reference-concurrency-runtime.md)
-

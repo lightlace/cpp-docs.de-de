@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - DoClick method [MFC]
 ms.assetid: bc4fad78-cabd-4cc0-a798-464b1a682f0b
-ms.openlocfilehash: 1e47e45efe27c9562cf8500f8941bcf0e259448a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29cb0d6f53d4e8fbbce12a83b2eecb8658c82697
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585028"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305210"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>MFC-ActiveX-Steuerelemente: Hinzufügen von vordefinierten Methoden
 
@@ -20,12 +20,12 @@ Eine vordefinierte Methode unterscheidet sich von einer benutzerdefinierten Meth
 >[!IMPORTANT]
 > ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen zu moderne Technologien, die ActiveX-ablösen, finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
 
-`COleControl` unterstützt zwei vordefinierte Methoden: DoClick und aktualisieren. Aktualisierung wird aufgerufen, durch Benutzer des Steuerelements, um die Darstellung des Steuerelements sofort zu aktualisieren. DoClick wird aufgerufen, um das Auslösen des Steuerelements auf Ereignis.
+`COleControl` unterstützt zwei vordefinierte Methoden: DoClick und aktualisiert werden. Aktualisierung wird aufgerufen, durch Benutzer des Steuerelements, um die Darstellung des Steuerelements sofort zu aktualisieren. DoClick wird aufgerufen, um das Auslösen des Steuerelements auf Ereignis.
 
 |Methode|Dispatch-Zuordnungseintrag|Kommentar|
 |------------|------------------------|-------------|
-|`DoClick`|**DISP_STOCKPROP_DOCLICK)**|Löst ein Click-Ereignis.|
-|`Refresh`|**DISP_STOCKPROP_REFRESH)**|Sofort aktualisiert die Darstellung des Steuerelements.|
+|`DoClick`|**DISP_STOCKPROP_DOCLICK( )**|Löst ein Click-Ereignis.|
+|`Refresh`|**DISP_STOCKPROP_REFRESH( )**|Sofort aktualisiert die Darstellung des Steuerelements.|
 
 ##  <a name="_core_adding_a_stock_method_using_classwizard"></a> Hinzufügen einer Methode mithilfe der Methode Assistent zum Hinzufügen von
 
@@ -64,4 +64,3 @@ Diese Zeile weist der Refresh-Methode zu eine bestimmte ID-Nummer.
 ## <a name="see-also"></a>Siehe auch
 
 [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)
-

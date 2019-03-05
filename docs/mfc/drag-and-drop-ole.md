@@ -1,5 +1,5 @@
 ---
-title: Drag & Drop (OLE)
+title: Drag &amp; Drop (OLE)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE server applications [MFC], drag and drop
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - drag and drop [MFC], about OLE drag and drop
 - OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
-ms.openlocfilehash: 956c746d6eef84edd7be3ab9b6c6d15107269b1c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 277f82874426a008f598c052966ad81f46c45732
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450348"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305041"
 ---
-# <a name="drag-and-drop-ole"></a>Drag & Drop (OLE)
+# <a name="drag-and-drop-ole"></a>Drag &amp; Drop (OLE)
 
 Die Drag & Drop-Funktion von OLE ist in erster Linie eine Verknüpfung zum Kopieren und Einfügen von Daten. Wenn Sie die Zwischenablage kopieren oder Einfügen von Daten verwenden, sind eine Reihe von Schritten erforderlich. Sie wählen Sie die Daten, klicken Sie auf **Ausschneiden** oder **Kopie** aus der **bearbeiten** Menü verschieben in die Zieldatei, Fenster oder einer Anwendung, platzieren Sie den Cursor in den gewünschten Speicherort ein, und klicken Sie auf **Einfügen** aus der **bearbeiten** Menü.
 
@@ -32,14 +32,13 @@ Wenn Sie nicht gelesen haben die [Datenobjekte und Datenquellen (OLE)](../mfc/da
 
 Weitere Informationen zu Drag & Drop finden Sie unter:
 
-- [Drag &Drop: Implementieren einer Drag & Drop-Quelle](../mfc/drag-and-drop-implementing-a-drop-source.md)
+- [Drag & Drop: Implementieren einer Drop-Quelle](../mfc/drag-and-drop-implementing-a-drop-source.md)
 
-- [Drag & Drop: Implementieren eines Drag & Drop-Ziels](../mfc/drag-and-drop-implementing-a-drop-target.md)
+- [Drag & Drop: Implementieren eines Drop-Ziels](../mfc/drag-and-drop-implementing-a-drop-target.md)
 
-- [Drag & Drop: Anpassen](../mfc/drag-and-drop-customizing.md)
+- [Drag & Drop: Anpassen von](../mfc/drag-and-drop-customizing.md)
 
 ## <a name="see-also"></a>Siehe auch
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [Datenobjekte und Datenquellen (OLE)](../mfc/data-objects-and-data-sources-ole.md)
-

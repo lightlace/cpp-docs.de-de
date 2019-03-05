@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: 2dd300e4bbf63ed59554d5722c716f8a3f795570
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fae70e44657023b7a7b93f72599bef4ba6faf307
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561420"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303169"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton-Klasse
 
@@ -132,7 +132,7 @@ Um eine Kombinationsfelds-Schaltfläche einer Symbolleiste hinzuzufügen, gehen 
 
 3. Ersetzen Sie in der Message-Handler, die die AFX_WM_RESETTOOLBAR-Nachricht verarbeitet, die Schaltfläche "dummy" mit der neuen kombinationsfeldschaltfläche mit [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).
 
-Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf Symbolleisten](../../mfc/walkthrough-putting-controls-on-toolbars.md). Ein Beispiel für eine Symbolleiste kombinationsfeldschaltfläche finden Sie das Beispielprojekt VisualStudioDemo.
+Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf der Symbolleiste](../../mfc/walkthrough-putting-controls-on-toolbars.md). Ein Beispiel für eine Symbolleiste kombinationsfeldschaltfläche finden Sie das Beispielprojekt VisualStudioDemo.
 
 ## <a name="example"></a>Beispiel
 
@@ -327,7 +327,7 @@ virtual CComboBox* CreateCombo(
 *pWndParent*<br/>
 [in] Ein Zeiger auf das übergeordnete Fenster der Schaltfläche.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Umschließende Rechteck des Kombinationsfelds.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -350,7 +350,7 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
 *pWndParent*<br/>
 [in] Ein Zeiger auf das übergeordnete Fenster der Schaltfläche.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Umschließende Rechteck des neuen im Bearbeitungsfeld.
 
 *dwEditStyle*<br/>
@@ -413,7 +413,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] True, um die Felder bearbeiten und das Kombinationsfeld zu aktivieren. So deaktivieren Sie die Felder bearbeiten und Kombinationsfeld wird false ZURÜCKGEGEBEN.
 
 ### <a name="remarks"></a>Hinweise
@@ -430,7 +430,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>Parameter
 
-*MenuButton*<br/>
+*menuButton*<br/>
 [out] Verweis auf eine Schaltfläche.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -825,7 +825,7 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 
 ### <a name="parameters"></a>Parameter
 
-*HWND*<br/>
+*hwnd*<br/>
 [in] Ein Fensterhandle.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -936,7 +936,7 @@ virtual BOOL OnClick(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Zeiger auf das übergeordnete Fenster des Kombinationsfelds-Schaltfläche.
 
 *bDelay*<br/>
@@ -990,10 +990,10 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Parameter
 
-*PDC*<br/>
+*Pdc*<br/>
 [in] Der Gerätekontext, in dem die Schaltfläche angezeigt.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck der Schaltfläche.
 
 *pImages*<br/>
@@ -1030,7 +1030,7 @@ virtual int OnDrawOnCustomizeList(
 *pDC*<br/>
 [in] Der Gerätekontext, in dem der kombinationsfeldschaltfläche angezeigt.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck des Kombinationsfelds-Schaltfläche.
 
 *bSelected*<br/>
@@ -1335,5 +1335,4 @@ void SetText(LPCTSTR lpszText);
 [CMFCToolBarButton-Klasse](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [CComboBox-Klasse](../../mfc/reference/ccombobox-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[Exemplarische Vorgehensweise: Steuerelemente in eine Symbolleiste einfügen](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf der Symbolleiste](../../mfc/walkthrough-putting-controls-on-toolbars.md)

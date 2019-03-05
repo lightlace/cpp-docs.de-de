@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: c4891c6bb66fe5e4b737ca9b128a01bcedcf39e7
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 94876dcf6549842a5fedbd96a93ef2cc760225ce
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176574"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326750"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar-Klasse
 
@@ -275,7 +275,7 @@ void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] True gibt an, aktivieren Sie die Verarbeitung der Doppelklick mit der Maus. Andernfalls deaktivieren Sie die Verarbeitung der Doppelklick mit der Maus.
 
 ### <a name="remarks"></a>Hinweise
@@ -301,7 +301,7 @@ void EnablePaneProgressBar(
 *nIndex*<br/>
 [in] Gibt dem Index des Bereichs, dessen Statusanzeige zu aktivieren.
 
-*nGesamte*<br/>
+*nTotal*<br/>
 [in] Gibt den maximalen Wert für die Statusanzeige an.
 
 *bDisplayText*<br/>
@@ -354,7 +354,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Rect*<br/>
+[in] *rect*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -385,7 +385,7 @@ void GetItemRect(
 ### <a name="parameters"></a>Parameter
 
 [in] *nIndex*<br/>
-[in] *LpRect*<br/>
+[in] *lpRect*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -538,7 +538,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Cs*<br/>
+[in] *cs*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -566,7 +566,7 @@ BOOL SetIndicators(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *LpIDArray*<br/>
+[in] *lpIDArray*<br/>
 [in] *nIDCount*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
@@ -739,7 +739,7 @@ virtual BOOL SetPaneText(
 ### <a name="parameters"></a>Parameter
 
 [in] *nIndex*<br/>
-[in] *LpszNewText*<br/>
+[in] *lpszNewText*<br/>
 [in] *bUpdate*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
@@ -783,7 +783,7 @@ void SetPaneWidth(
 *nIndex*<br/>
 [in] Der Index, der dem Statusleistenbereich für die neue Breite festgelegt werden soll.
 
-*CX*<br/>
+*cx*<br/>
 [in] Die neue Breite der dem Statusleistenbereich in Pixel.
 
 ##  <a name="settiptext"></a>  CMFCStatusBar::SetTipText

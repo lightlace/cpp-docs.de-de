@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: d144731d05e861f4b462c4d58022b5155fdeb79b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: c953958b3e0112997423376d42b62953b936049a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694269"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303606"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager-Klasse
 
@@ -69,7 +69,7 @@ class CKeyboardManager : public CObject
 |[CKeyboardManager::LoadState](#loadstate)|Lädt die tastenkombinationstabellen aus der Windows-Registrierung.|
 |[CKeyboardManager::ResetAll](#resetall)|Lädt die tastenkombinationstabellen aus Ressource für die Anwendung erneut.|
 |[CKeyboardManager::SaveState](#savestate)|Speichert die Verknüpfung Tabellen in der Windows-Registrierung.|
-|[Ckeyboardmanager](#showallaccelerators)|Gibt an, ob das Framework alle Tastenkombinationen für alle Befehle oder einer einzelnen Tastenkombination für jeden Befehl angezeigt. Diese Methode wirkt sich nicht auf Befehle aus, die nur einen zugeordneten Tastenkombination verfügen.|
+|[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)|Gibt an, ob das Framework alle Tastenkombinationen für alle Befehle oder einer einzelnen Tastenkombination für jeden Befehl angezeigt. Diese Methode wirkt sich nicht auf Befehle aus, die nur einen zugeordneten Tastenkombination verfügen.|
 |[CKeyboardManager::TranslateCharToUpper](#translatechartoupper)|Konvertiert ein Zeichen in der oberen registrieren.|
 |[CKeyboardManager::UpdateAccelTable](#updateacceltable)|Eine wichtige Verknüpfung-Tabelle aktualisiert mit einer neuen Verknüpfung-Key-Tabelle.|
 
@@ -198,7 +198,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||
 |-|-|
 |Parameter|Beschreibung|
-|*NChar*|[in] Das Zeichen, das diese Methode überprüft.|
+|*nChar*|[in] Das Zeichen, das diese Methode überprüft.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -326,7 +326,7 @@ static UINT TranslateCharToUpper(const UINT nChar);
 
 ### <a name="parameters"></a>Parameter
 
-*NChar*<br/>
+*nChar*<br/>
 [in] Das zu konvertierende Zeichen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -382,4 +382,3 @@ Verwenden Sie diese Funktion, um die vorhandene Verknüpfung-Tabelle mit neuen T
 [CWinAppEx-Klasse](../../mfc/reference/cwinappex-class.md)<br/>
 [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)<br/>
 [Anpassen von Tastatur und Maus](../../mfc/keyboard-and-mouse-customization.md)
-
