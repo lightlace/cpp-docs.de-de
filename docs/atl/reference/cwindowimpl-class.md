@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-ms.openlocfilehash: 3752e8b58560e522aecc3689e2a5c3be2649b1e1
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 2e4a9b585ed653927c87eaf82dfae8ce8f982dfc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694165"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290702"
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl-Klasse
 
@@ -56,7 +56,7 @@ Ein ["traits"-Klasse](../../atl/understanding-window-traits.md) , Formatvorlagen
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CWindowImpl:: Create](#create)|Erstellt ein Fenster.|
+|[CWindowImpl::Create](#create)|Erstellt ein Fenster.|
 
 ### <a name="cwindowimplbaset-methods"></a>CWindowImplBaseT-Methoden
 
@@ -67,7 +67,7 @@ Ein ["traits"-Klasse](../../atl/understanding-window-traits.md) , Formatvorlagen
 |[GetWindowProc](#getwindowproc)|Gibt die aktuelle Fensterprozedur zurück.|
 |[OnFinalMessage](#onfinalmessage)|Wird aufgerufen, nachdem die letzte Nachricht empfangen wird (in der Regel WM_NCDESTROY).|
 |[SubclassWindow](#subclasswindow)|Erstellt Unterklassen eines Fensters.|
-|[UnsubclassWindow auf](#unsubclasswindow)|Stellt ein zuvor untergeordnetes Fenster wieder her.|
+|[UnsubclassWindow](#unsubclasswindow)|Stellt ein zuvor untergeordnetes Fenster wieder her.|
 
 ### <a name="static-methods"></a>Statische Methoden
 
@@ -146,7 +146,7 @@ HWND Create(
 *hWndParent*<br/>
 [in] Das Handle für das übergeordnete Element oder Besitzer-Fenster.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Position des Fensters angeben. Die `RECT` Zeiger oder Verweis übergeben werden kann.
 
 *szWindowName*<br/>
@@ -198,7 +198,7 @@ LRESULT DefWindowProc();
 *uMsg*<br/>
 [in] Die Meldung, die an das Fenster gesendet wird.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 [in] Zusätzliche meldungsspezifische Informationen.
 
 *lParam*<br/>
@@ -333,7 +333,7 @@ HWND UnsubclassWindow();
 
 Das Handle des Fensters, das zuvor in Unterklassen unterteilt.
 
-##  <a name="windowproc"></a>  CWindowImpl:: WindowProc
+##  <a name="windowproc"></a>  CWindowImpl::WindowProc
 
 Diese statischen Funktion implementiert die Fensterprozedur.
 
@@ -353,7 +353,7 @@ static LRESULT CALLBACK WindowProc(
 *uMsg*<br/>
 [in] Die Meldung, die an das Fenster gesendet wird.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 [in] Zusätzliche meldungsspezifische Informationen.
 
 *lParam*<br/>

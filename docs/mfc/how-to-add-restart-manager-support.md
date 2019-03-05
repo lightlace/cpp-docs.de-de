@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Hinzufügen von Unterstützung für den Neustart-Manager'
+title: 'Vorgehensweise: Hinzufügen von Unterstützung für Neustart-Manager'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Restart manager [MFC]
 - C++, application crash support
 ms.assetid: 7f3f5867-d4bc-4ba8-b3c9-dc1e7be93642
-ms.openlocfilehash: 77267cdad1fa976d73381ca798ca5002c09dc7ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23f860c43c63e3153f4b87f8eaf05d61709af82f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565134"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279782"
 ---
-# <a name="how-to-add-restart-manager-support"></a>Gewusst wie: Hinzufügen von Unterstützung für den Neustart-Manager
+# <a name="how-to-add-restart-manager-support"></a>Vorgehensweise: Hinzufügen von Unterstützung für Neustart-Manager
 
 Der Neustart-Manager ist ein Feature, das Visual Studio für Windows Vista oder höher hinzugefügt. Mit dem Neustart-Manager wird der Anwendung Unterstützung hinzugefügt, wenn sie unerwartet geschlossen oder neu gestartet wird. Das Verhalten des Neustart-Managers hängt vom Typ Ihrer Anwendung ab. Ist Ihre Anwendung ein Dokument-Editor, wird der Anwendung durch den Neustart-Manager ermöglicht, den Status und den Inhalt jedes geöffneten Dokuments automatisch zu speichern, und der Neustart-Manager startet Ihre Anwendung nach einem unerwarteten Schließen neu. Ist Ihre Anwendung kein Dokument-Editor, wird die Anwendung vom Neustart-Manager neu gestartet, dieser kann den Status der Anwendung jedoch nicht standardmäßig speichern.
 
@@ -37,7 +37,7 @@ Standardmäßig unterstützen MFC-Anwendungen, die mit der Projekt-Assistent in 
     m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS;
 ```
 
-1. Stellen Sie sicher, dass in der `InitInstance` -Methode Ihrer Anwendung deren übergeordnete `InitInstance` -Methode aufgerufen wird: [CWinApp::InitInstance](../mfc/reference/cwinapp-class.md#initinstance) oder `CWinAppEx::InitInstance`hinzugefügt wurde. Die `InitInstance` Methode ist verantwortlich für die Überprüfung der *M_dwRestartManagerSupportFlags* Parameter.
+1. Stellen Sie sicher, dass die `InitInstance` Methodenaufrufe von Ihrer Anwendung das übergeordnete Element `InitInstance` Methode: [CWinApp:: InitInstance](../mfc/reference/cwinapp-class.md#initinstance) oder `CWinAppEx::InitInstance`. Die `InitInstance` Methode ist verantwortlich für die Überprüfung der *M_dwRestartManagerSupportFlags* Parameter.
 
 1. Kompilieren Sie Ihre Anwendung, und führen Sie sie aus.
 
@@ -48,4 +48,3 @@ Standardmäßig unterstützen MFC-Anwendungen, die mit der Projekt-Assistent in 
 [CWinApp-Klasse](../mfc/reference/cwinapp-class.md)<br/>
 [CWinApp::m_nAutosaveInterval](../mfc/reference/cwinapp-class.md#m_nautosaveinterval)<br/>
 [CDocument::OnDocumentEvent](../mfc/reference/cdocument-class.md#ondocumentevent)
-

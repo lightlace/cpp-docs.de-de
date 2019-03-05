@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CObject [MFC], IsSerializable
 - CObject [MFC], Serialize
 ms.assetid: 95e9acd3-d9eb-4ac0-b52b-ca4a501a7a3a
-ms.openlocfilehash: eb0580f6fef39df29d66e15cfd051a0460cb8d56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 515c4e90ee6ab77a6c7c1ae108393ea1aafb7c17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584014"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304066"
 ---
 # <a name="cobject-class"></a>CObject-Klasse
 
@@ -49,10 +49,10 @@ class AFX_NOVTABLE CObject
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CObject:: AssertValid](#assertvalid)|Überprüft die Integrität von dieses Objekts.|
+|[CObject::AssertValid](#assertvalid)|Überprüft die Integrität von dieses Objekts.|
 |[CObject::Dump](#dump)|Erzeugt ein Speicherabbild zu Diagnosezwecken dieses Objekts.|
 |[CObject::GetRuntimeClass](#getruntimeclass)|Gibt die `CRuntimeClass` Struktur, Klasse des Objekts entspricht.|
-|[CObject:: IsKindOf](#iskindof)|Testet dieses Objekts Beziehung zu einer angegebenen Klasse.|
+|[CObject::IsKindOf](#iskindof)|Testet dieses Objekts Beziehung zu einer angegebenen Klasse.|
 |[CObject::IsSerializable](#isserializable)|Überprüft, ob dieses Objekt serialisiert werden kann.|
 |[CObject:: Serialize](#serialize)|Lädt oder speichert ein Objekt aus dem und in ein Archiv.|
 
@@ -377,4 +377,3 @@ Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist
 ## <a name="see-also"></a>Siehe auch
 
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
-

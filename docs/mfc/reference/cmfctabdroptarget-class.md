@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCTabDropTarget [MFC], OnDropEx
 - CMFCTabDropTarget [MFC], Register
 ms.assetid: 9777b7b6-10da-4c4b-b1d1-7ea795b0f1cb
-ms.openlocfilehash: bd68179be21fec85c0ebb901c2a8c9a4491ff401
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b24d7679edfaab4d4eeb6d59770f30cd4253580
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534825"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303936"
 ---
 # <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget-Klasse
 
@@ -48,8 +48,8 @@ class CMFCTabDropTarget : public COleDropTarget
 |-|-|
 |Name|Beschreibung|
 |[CMFCTabDropTarget::OnDragEnter](#ondragenter)|Vom Framework aufgerufen, wenn der Benutzer ein Objekt in einer Registerkartenfenster zieht. (Überschreibt [COleDropTarget::OnDragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).)|
-|[CMFCTabDropTarget::OnDragLeave](#ondragleave)|Wird von Framework aufgerufen, wenn der Benutzer ein Objekt außerhalb des Fensters Registerkarte zieht, den Fokus besitzt. (Überschreibt [COleDropTarget::OnDragLeave](../../mfc/reference/coledroptarget-class.md#ondragleave).)|
-|[CMFCTabDropTarget::OnDragOver](#ondragover)|Wird von Framework aufgerufen, wenn der Benutzer ein Objekt auf der Registerkarte "-Fenster zieht, den Fokus besitzt. (Überschreibt [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover).)|
+|[CMFCTabDropTarget::OnDragLeave](#ondragleave)|Wird von Framework aufgerufen, wenn der Benutzer ein Objekt außerhalb des Fensters Registerkarte zieht, den Fokus besitzt. (Overrides [COleDropTarget::OnDragLeave](../../mfc/reference/coledroptarget-class.md#ondragleave).)|
+|[CMFCTabDropTarget::OnDragOver](#ondragover)|Wird von Framework aufgerufen, wenn der Benutzer ein Objekt auf der Registerkarte "-Fenster zieht, den Fokus besitzt. (Overrides [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover).)|
 |[CMFCTabDropTarget::OnDropEx](#ondropex)|Vom Framework aufgerufen, wenn der Benutzer die Maustaste loslässt, die am Ende des Ziehvorgangs. (Überschreibt [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).)|
 |[CMFCTabDropTarget::Register](#register)|Registriert das-Steuerelement als eins, das das Ziel eines OLE-Drag & Drop-Vorgangs verwendet werden kann.|
 
@@ -96,10 +96,10 @@ virtual DROPEFFECT OnDragEnter(
 |||
 |-|-|
 |Parameter|Beschreibung|
-|*Aufnehmen*|[in] Nicht verwendet.|
+|*pWnd*|[in] Nicht verwendet.|
 |*pDataObject*|[in] Ein Zeiger auf das Objekt, das der Benutzer zieht.|
-|*dwKeyState*|[in] Enthält den Status der Modifizierertasten. Eine Kombination aus einer beliebigen Anzahl von Folgendes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON.|
-|*Zeigen Sie*|[in] Die Position des Cursors in Clientkoordinaten.|
+|*dwKeyState*|[in] Enthält den Status der Modifizierertasten. Dies ist eine Kombination von eine beliebige Anzahl von Folgendes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON, and MK_RBUTTON.|
+|*point*|[in] Die Position des Cursors in Clientkoordinaten.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -134,7 +134,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 |||
 |-|-|
 |Parameter|Beschreibung|
-|*Aufnehmen*|[in] Nicht verwendet.|
+|*pWnd*|[in] Nicht verwendet.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -157,10 +157,10 @@ virtual DROPEFFECT OnDragOver(
 |||
 |-|-|
 |Parameter|Beschreibung|
-|*Aufnehmen*|[in] Nicht verwendet.|
+|*pWnd*|[in] Nicht verwendet.|
 |*pDataObject*|[in] Ein Zeiger auf das Objekt, das der Benutzer zieht.|
-|*dwKeyState*|[in] Enthält den Status der Modifizierertasten. Eine Kombination aus einer beliebigen Anzahl von Folgendes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON.|
-|*Zeigen Sie*|[in] Die Position des Mauszeigers in Clientkoordinaten.|
+|*dwKeyState*|[in] Enthält den Status der Modifizierertasten. Dies ist eine Kombination von eine beliebige Anzahl von Folgendes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON, and MK_RBUTTON.|
+|*point*|[in] Die Position des Mauszeigers in Clientkoordinaten.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -200,11 +200,11 @@ virtual DROPEFFECT OnDropEx(
 |||
 |-|-|
 |Parameter|Beschreibung|
-|*Aufnehmen*|[in] Nicht verwendet.|
+|*pWnd*|[in] Nicht verwendet.|
 |*pDataObject*|[in] Ein Zeiger auf das Objekt, das der Benutzer zieht.|
-|*-DropEffect-*|[in] Der Standard-Drop-Vorgang.|
-|*Dropdownliste*|[in] Nicht verwendet.|
-|*Zeigen Sie*|[in] Die Position des Mauszeigers in Clientkoordinaten.|
+|*dropEffect*|[in] Der Standard-Drop-Vorgang.|
+|*dropList*|[in] Nicht verwendet.|
+|*point*|[in] Die Position des Mauszeigers in Clientkoordinaten.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -254,4 +254,3 @@ Diese Methode ruft [COleDropTarget::Register](../../mfc/reference/coledroptarget
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [Klassen](../../mfc/reference/mfc-classes.md)<br/>
 [Drag & Drop (OLE)](../../mfc/drag-and-drop-ole.md)
-

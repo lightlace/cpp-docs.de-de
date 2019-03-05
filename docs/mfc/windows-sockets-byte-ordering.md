@@ -1,21 +1,21 @@
 ---
-title: 'Windows Sockets: Bytereihenfolge'
+title: 'Windows Sockets: Die Bytereihenfolge'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - byte order issues in sockets programming
 - sockets [MFC], byte order issues
 - Windows Sockets [MFC], byte order issues
 ms.assetid: 8a787a65-f9f4-4002-a02f-ac25a5dace5d
-ms.openlocfilehash: 74d3b53ae3ab476ef1224caed91f31929fcce1ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca572ad32a9a46756cacf0221d80b2953b710723
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453950"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278092"
 ---
-# <a name="windows-sockets-byte-ordering"></a>Windows Sockets: Bytereihenfolge
+# <a name="windows-sockets-byte-ordering"></a>Windows Sockets: Die Bytereihenfolge
 
-In diesem Artikel und zwei begleitenden Artikel erläutern mehrere Probleme bei der Windows Sockets-Programmierung. Dieser Artikel behandelt die Bytereihenfolge. Die anderen Probleme werden in den Artikeln behandelt: [Windows Sockets: blockieren](../mfc/windows-sockets-blocking.md) und [Windows Sockets: Konvertieren von Zeichenfolgen](../mfc/windows-sockets-converting-strings.md).
+In diesem Artikel und zwei begleitenden Artikel erläutern mehrere Probleme bei der Windows Sockets-Programmierung. Dieser Artikel behandelt die Bytereihenfolge. In den Artikeln werden weitere Aspekte behandelt: [Windows Sockets: Blockierende](../mfc/windows-sockets-blocking.md) und [Windows Sockets: Konvertieren von Zeichenfolgen](../mfc/windows-sockets-converting-strings.md).
 
 Wenn Sie verwenden, oder leiten Sie von der Klasse [CAsyncSocket](../mfc/reference/casyncsocket-class.md), Sie müssen diese Probleme selbst zu verwalten. Wenn Sie verwenden, oder leiten Sie von der Klasse [CSocket](../mfc/reference/csocket-class.md), MFC für Sie verwaltet.
 
@@ -98,15 +98,14 @@ wo `pMsg` ist ein Zeiger auf ein C++-Objekt, das von der Klasse abgeleitet `CObj
 
 Weitere Informationen finden Sie unter:
 
-- [Windows-Sockets: Verwenden der Klasse CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: Verwenden der Klasse CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows-Sockets: Hintergrund](../mfc/windows-sockets-background.md)
+- [Windows Sockets: Hintergrund](../mfc/windows-sockets-background.md)
 
-- [Windows-Sockets: Blockieren](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: Stream-Sockets](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows-Sockets: Datagrammsockets](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: Datagrammsockets](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Siehe auch
 
 [Windows-Sockets in MFC](../mfc/windows-sockets-in-mfc.md)
-

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - property sheets, modeless
 - Create method [MFC], property sheets
 ms.assetid: eafd8a92-cc67-4a69-a5fb-742c920d1ae8
-ms.openlocfilehash: 9012700ef145079cf01ee1eac1cee58449ab5b79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39285927b67091f5b8762dab56009712d806d259
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524899"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302259"
 ---
 # <a name="creating-a-modeless-property-sheet"></a>Erstellen eines nicht modalen Eigenschaftenblatts
 
@@ -32,4 +32,3 @@ Es gibt viele Benutzeroberfläche alternativen, um zu bestimmen, wenn die Einste
 [Eigenschaftenblätter](../mfc/property-sheets-mfc.md)<br/>
 [Datenaustausch](../mfc/exchanging-data.md)<br/>
 [Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)
-

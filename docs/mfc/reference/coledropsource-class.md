@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-ms.openlocfilehash: 51d524054b67a5cecc5aa7791b0aeea0cc076813
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 587aa0730502d5e8f90c4fec57bb87886b79fb3f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457780"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304976"
 ---
 # <a name="coledropsource-class"></a>COleDropSource-Klasse
 
@@ -87,7 +87,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
 
 ### <a name="parameters"></a>Parameter
 
-*-DropEffect-*<br/>
+*dropEffect*<br/>
 Die Auswirkungen, die Sie dem Benutzer anzeigen möchten, in der Regel, der angibt, was geschieht, wenn ein Ablegen an diesem Punkt mit den ausgewählten Daten aufgetreten ist. Dies ist normalerweise der Rückgabewert vom letzten Aufruf von [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) oder [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover). Sie können eine oder mehrere der folgenden sein:
 
 - DROPEFFECT_NONE ein Drop würde nicht zulässig.
@@ -120,7 +120,7 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Verweist auf das Fenster, das die ausgewählten Daten enthält.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -147,7 +147,7 @@ virtual SCODE QueryContinueDrag(
 Gibt an, ob die ESC-Taste seit dem letzten Aufruf von gedrückt wurde `COleDropSource::QueryContinueDrag`.
 
 *dwKeyState*<br/>
-Enthält den Status der Zusatztasten der Tastatur. Eine Kombination aus einer beliebigen Anzahl von Folgendes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON.
+Enthält den Status der Zusatztasten der Tastatur. Dies ist eine Kombination von eine beliebige Anzahl von Folgendes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON, and MK_RBUTTON.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -167,4 +167,3 @@ Da diese Funktion häufig aufgerufen wird, sollten sie so weit wie möglich opti
 [MFC-Beispiel OCLIENT](../../visual-cpp-samples.md)<br/>
 [CCmdTarget-Klasse](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
-

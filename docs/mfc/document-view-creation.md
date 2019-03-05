@@ -12,12 +12,12 @@ helpviewer_keywords:
 - MFC, documents
 - tables [MFC], objects each MFC object creates
 ms.assetid: bda14f41-ed50-439d-af9e-591174e7dd64
-ms.openlocfilehash: eccc65df784d000f8dccc244e295da522658b626
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b5f9b783e8e14744a816fd63b327ed95d9da8e8a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633558"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304946"
 ---
 # <a name="documentview-creation"></a>Erstellen von Dokument/Ansicht
 
@@ -38,4 +38,3 @@ Das Framework stellt Implementierungen von der **neu** und **öffnen** Befehle (
 [Erstellen von Dokumentvorlagen](../mfc/document-template-creation.md)<br/>
 [Beziehungen zwischen MFC-Objekten](../mfc/relationships-among-mfc-objects.md)<br/>
 [Erstellen neuer Dokumente, Fenster und Ansichten](../mfc/creating-new-documents-windows-and-views.md)
-

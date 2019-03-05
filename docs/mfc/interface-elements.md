@@ -5,12 +5,12 @@ helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-ms.openlocfilehash: 9cf38d3d469da181d15a10434525b3aca63969f0
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: fa6dc78c95717f9201e18346f1cbe573fa3c48d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175898"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262882"
 ---
 # <a name="interface-elements"></a>Schnittstellenelemente
 
@@ -46,7 +46,7 @@ Jeder Balken Andocken ist in Dock Zeilen unterteilt. Dock-Zeilen werden durch da
 
 ## <a name="mini-frame-windows"></a>Minirahmenfensters Windows
 
-Ein Gleitkommazahl im Bereich befindet sich in einem Minirahmenfenster. Minirahmenfenster durch zwei Klassen dargestellt werden: [CMDITabInfo-Klasse](../mfc/reference/cmditabinfo-class.md) (das kann nur jeweils ein Bereich enthalten) und [CMultiPaneFrameWnd-Klasse](../mfc/reference/cmultipaneframewnd-class.md) (das kann mehrere Bereiche enthalten). Aufrufen, um einen Bereich in Ihrem Code float, [CBasePane::FloatPane](../mfc/reference/cbasepane-class.md#floatpane). Nachdem ein Bereich wird verschoben, erstellt das Framework automatisch ein Minirahmenfenster und dieser kleinen Rahmenfenster angezeigt wird, der unverankerten Bereichs klicken übergeordnetes Element. Wenn der unverankerten Bereichs klicken dockt an, das Framework wird zurückgesetzt, die das übergeordnete Element und der unverankerten Bereichs klicken wird eine Leiste Dock (für Symbolleisten) oder eine docksite (für in der Größe veränderbaren Fenster).
+Ein Gleitkommazahl im Bereich befindet sich in einem Minirahmenfenster. Minirahmenfenster werden durch zwei Klassen dargestellt: [CMDITabInfo-Klasse](../mfc/reference/cmditabinfo-class.md) (das kann nur jeweils ein Bereich enthalten) und [CMultiPaneFrameWnd-Klasse](../mfc/reference/cmultipaneframewnd-class.md) (das kann mehrere Bereiche enthalten). Aufrufen, um einen Bereich in Ihrem Code float, [CBasePane::FloatPane](../mfc/reference/cbasepane-class.md#floatpane). Nachdem ein Bereich wird verschoben, erstellt das Framework automatisch ein Minirahmenfenster und dieser kleinen Rahmenfenster angezeigt wird, der unverankerten Bereichs klicken übergeordnetes Element. Wenn der unverankerten Bereichs klicken dockt an, das Framework wird zurückgesetzt, die das übergeordnete Element und der unverankerten Bereichs klicken wird eine Leiste Dock (für Symbolleisten) oder eine docksite (für in der Größe veränderbaren Fenster).
 
 ## <a name="pane-dividers"></a>Bereichsteiler
 
@@ -69,4 +69,3 @@ Die Outlook-Leistensteuerelement basiert ebenfalls auf Registerkarten Balken. Di
 ## <a name="see-also"></a>Siehe auch
 
 [Konzepte](../mfc/mfc-concepts.md)
-

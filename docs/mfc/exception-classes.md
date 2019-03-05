@@ -8,12 +8,12 @@ helpviewer_keywords:
 - exception handling [MFC], exception classes
 - MFC, exceptions
 ms.assetid: 1a2caf12-b3e9-4189-86d2-bf7a595bf025
-ms.openlocfilehash: fad88fa36c64bd9d8ca28135c09a3f0ce8fe3c0c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99a2764dcad15267b1aab8a60951f99f21352726
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441937"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286321"
 ---
 # <a name="exception-classes"></a>Ausnahmeklassen
 
@@ -57,4 +57,3 @@ Eine Ausnahme verwendet, um einen vom Benutzer initiierte Vorgang zu beenden. De
 ## <a name="see-also"></a>Siehe auch
 
 [Übersicht über die Klasse](../mfc/class-library-overview.md)
-

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - exception handling [MFC], OLE
 - OLE exceptions [MFC], classes for handling
 ms.assetid: 2f8e0161-b94f-48bb-a5a2-6f644b192527
-ms.openlocfilehash: 2732f571d305fda2b739be02661ab9558f8bc653
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e404005a88398ec909e3043cfa55c7e8fbe2f594
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515415"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297904"
 ---
 # <a name="exceptions-ole-exceptions"></a>Ausnahmen: OLE-Ausnahmen
 
@@ -44,4 +44,3 @@ Zwei globale Funktionen entsprechen den zwei Klassen des OLE-Ausnahme: [AfxThrow
 ## <a name="see-also"></a>Siehe auch
 
 [Ausnahmebehandlung](../mfc/exception-handling-in-mfc.md)
-

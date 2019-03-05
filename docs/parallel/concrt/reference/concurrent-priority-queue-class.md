@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-ms.openlocfilehash: a75d413874056d57f0d474f44e514cf93f273626
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5804675ffdaf6de2e73327103398316566b41627
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492292"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304781"
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue-Klasse
 
@@ -41,7 +41,7 @@ template <typename T,
 *T*<br/>
 Der Datentyp der Elemente in der Prioritätswarteschlange gespeichert werden.
 
-*Verglei_chen*<br/>
+*_Compare*<br/>
 Der Typ des Funktionsobjekts, das zwei Elementwerte als Sortierschlüssel, um deren relative Reihenfolge in der Prioritätswarteschlange zu bestimmen, vergleichen kann. Dieses Argument ist optional, und das binäre Prädikat `less<T>` ist der Standardwert.
 
 *_Ax*<br/>
@@ -155,7 +155,7 @@ Die Anfangskapazität des `concurrent_priority_queue`-Objekts.
 *_Begin*<br/>
 Die Position des ersten Elements in dem zu kopierenden Elementbereich.
 
-*_Beenden*<br/>
+*_End*<br/>
 Die Position des ersten Elements nach dem zu kopierenden Elementbereich.
 
 *_Src*<br/>
@@ -199,7 +199,7 @@ allocator_type get_allocator() const;
 
 Eine Kopie der Zuweisung, die zum Erstellen der `concurrent_priority_queue` Objekt.
 
-##  <a name="operator_eq"></a> Operator =
+##  <a name="operator_eq"></a> operator=
 
 Weist den Inhalt eines anderen `concurrent_priority_queue`-Objekts diesem Objekt zu. Diese Methode ist nicht nebenläufigkeitssicher.
 
@@ -259,7 +259,7 @@ void swap(concurrent_priority_queue& _Queue);
 
 ### <a name="parameters"></a>Parameter
 
-*_Fronty*<br/>
+*_Queue*<br/>
 Die `concurrent_priority_queue` Objekt, das Inhalt getauscht.
 
 ##  <a name="try_pop"></a> try_pop
@@ -283,4 +283,3 @@ Ein Verweis auf eine Variable, die mit dem höchsten Prioritätselement, aufgef�
 
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
 [Parallele Container und Objekte](../../../parallel/concrt/parallel-containers-and-objects.md)
-

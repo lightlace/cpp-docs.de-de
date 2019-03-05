@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CD2DSolidColorBrush [MFC], m_colorSolid
 - CD2DSolidColorBrush [MFC], m_pSolidColorBrush
 ms.assetid: d4506637-acce-4f74-8a9b-f0a45571a735
-ms.openlocfilehash: fa2114df914af07dd9baa140cc96cc94eaea6a91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41d1d1b8c28335ae6207e41d696359295a83e646
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521770"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291235"
 ---
 # <a name="cd2dsolidcolorbrush-class"></a>CD2DSolidColorBrush-Klasse
 
@@ -50,7 +50,7 @@ class CD2DSolidColorBrush : public CD2DBrush;
 |Name|Beschreibung|
 |----------|-----------------|
 |[CD2DSolidColorBrush::CD2DSolidColorBrush](#cd2dsolidcolorbrush)|Überladen. Erstellt ein CD2DSolidColorBrush-Objekt.|
-|[CD2DSolidColorBrush:: ~ CD2DSolidColorBrush](#cd2dsolidcolorbrush__~cd2dsolidcolorbrush)|Der Destruktor. Wird aufgerufen, wenn ein D2D-Pinsels in Volltonfarbe-Objekt zerstört wird.|
+|[CD2DSolidColorBrush::~CD2DSolidColorBrush](#cd2dsolidcolorbrush__~cd2dsolidcolorbrush)|Der Destruktor. Wird aufgerufen, wenn ein D2D-Pinsels in Volltonfarbe-Objekt zerstört wird.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -68,7 +68,7 @@ class CD2DSolidColorBrush : public CD2DBrush;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CD2DSolidColorBrush::Operator ID2D1SolidColorBrush *](#operator_id2d1solidcolorbrush_star)|Gibt die ID2D1SolidColorBrush-Schnittstelle|
+|[CD2DSolidColorBrush::operator ID2D1SolidColorBrush*](#operator_id2d1solidcolorbrush_star)|Gibt die ID2D1SolidColorBrush-Schnittstelle|
 
 ### <a name="protected-data-members"></a>Geschützte Datenmember
 
@@ -136,7 +136,7 @@ CD2DSolidColorBrush(
 *pParentTarget*<br/>
 Ein Zeiger auf das Renderziel.
 
-*Farbe*<br/>
+*color*<br/>
 Die roten, grünen, blauen und alpha-Werte der Farbe des Pinsels.
 
 *pBrushProperties*<br/>
@@ -225,7 +225,7 @@ Speichert einen Zeiger auf ein ID2D1SolidColorBrush-Objekt.
 ID2D1SolidColorBrush* m_pSolidColorBrush;
 ```
 
-##  <a name="operator_id2d1solidcolorbrush_star"></a>  CD2DSolidColorBrush::Operator ID2D1SolidColorBrush *
+##  <a name="operator_id2d1solidcolorbrush_star"></a>  CD2DSolidColorBrush::operator ID2D1SolidColorBrush*
 
 Gibt die ID2D1SolidColorBrush-Schnittstelle
 
@@ -247,7 +247,7 @@ void SetColor(D2D1_COLOR_F color);
 
 ### <a name="parameters"></a>Parameter
 
-*Farbe*<br/>
+*color*<br/>
 Die Farbe des dieser Pinsel mit Volltonfarbe
 
 ## <a name="see-also"></a>Siehe auch

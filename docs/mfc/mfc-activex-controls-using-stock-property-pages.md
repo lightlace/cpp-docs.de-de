@@ -15,12 +15,12 @@ helpviewer_keywords:
 - CLSID_CPicturePropPage [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 22638d86-ff3e-4124-933e-54b7c2a25968
-ms.openlocfilehash: f31bf245e35231b6cc62497e7bbc57ff7f0e6af1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b73a027422cfe9cbf03afece400c1b513cace151
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545391"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304703"
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>MFC-ActiveX-Steuerelemente: Verwenden von vordefinierten Eigenschaftenseiten
 
@@ -31,9 +31,9 @@ Dieser Artikel beschreibt die vordefinierten Eigenschaftenseiten, die für Activ
 
 Weitere Informationen zur Verwendung von Eigenschaftenseiten in einem ActiveX-Steuerelement finden Sie unter den folgenden Artikeln:
 
-- [MFC-ActiveX-Steuerelemente: Eigenschaftenseite](../mfc/mfc-activex-controls-property-pages.md)
+- [MFC-ActiveX-Steuerelemente: Eigenschaftenseiten](../mfc/mfc-activex-controls-property-pages.md)
 
-- [MFC-ActiveX-Steuerelemente: Hinzufügen einer weiteren benutzerdefinierten Eigenschaftenseite](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
+- [MFC-ActiveX-Steuerelemente: Hinzufügen einer anderen benutzerdefinierten Eigenschaftenseite](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
 
 MFC bietet drei vordefinierten Eigenschaftenseiten für die Verwendung von ActiveX-Steuerelementen: `CLSID_CColorPropPage`, `CLSID_CFontPropPage`, und `CLSID_CPicturePropPage`. Diese Seiten wird eine Benutzeroberfläche für die vordefinierten Farbe, Schriftart und Bildeigenschaften, bzw. angezeigt.
 
@@ -55,4 +55,3 @@ Nachdem diese Änderungen vorgenommen wurden, erstellen Sie Ihr Projekt neu. Das
 
 [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)<br/>
 [MFC-ActiveX-Steuerelemente: Hinzufügen von vordefinierten Eigenschaften](../mfc/mfc-activex-controls-adding-stock-properties.md)
-

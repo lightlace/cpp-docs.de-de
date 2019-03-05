@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - amp_math/Concurrency::fast_math
 ms.assetid: 54fed939-9902-49db-9f29-e98fd9821508
-ms.openlocfilehash: 5ca81d056ddf431b502f868f8a76959381b26260
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e774c2d8e4431960e796ee1e6cc87b924d04174b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455977"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287959"
 ---
 # <a name="concurrencyfastmath-namespace"></a>Concurrency::fast_math-Namespace
 
@@ -35,8 +35,8 @@ namespace fast_math;
 |[atan2](concurrency-fast-math-namespace-functions.md#atan2)|Berechnet den Arkustangens von _Y/_X|
 |[atan2f](concurrency-fast-math-namespace-functions.md#atan2f)|Berechnet den Arkustangens von _Y/_X|
 |[atanf](concurrency-fast-math-namespace-functions.md#atanf)|Berechnet den Arkustangens des Arguments|
-|[ceil](concurrency-fast-math-namespace-functions.md#ceil)|Berechnet den Höchstwert des Arguments|
-|[ceilf](concurrency-fast-math-namespace-functions.md#ceilf)|Berechnet den Höchstwert des Arguments|
+|[ceil](concurrency-fast-math-namespace-functions.md#ceil)|Berechnet die Höchstwert des Arguments|
+|[ceilf](concurrency-fast-math-namespace-functions.md#ceilf)|Berechnet die Höchstwert des Arguments|
 |[cos](concurrency-fast-math-namespace-functions.md#cos)|Berechnet den Kosinus des Arguments|
 |[cosf](concurrency-fast-math-namespace-functions.md#cosf)|Berechnet den Kosinus des Arguments|
 |[cosh](concurrency-fast-math-namespace-functions.md#cosh)|Berechnet den Hyperbelkosinuswert des Arguments|
@@ -97,7 +97,7 @@ namespace fast_math;
 
 **Header:** amp_math.h
 
-**Namespace:** Concurrency:: fast_math
+**Namespace:** Concurrency::fast_math
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,5 +1,5 @@
 ---
-title: 'Multithreading: Verwendungsweise der MFC-Synchronisierungsklassen'
+title: 'Multithreading: Gewusst wie: Verwenden Sie die MFC-Synchronisierungsklassen'
 ms.date: 08/27/2018
 helpviewer_keywords:
 - MFC [C++], multithreading
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - multithreading [C++], synchronization classes
 - threading [C++], thread-safe class design
 ms.assetid: f266d4c6-0454-4bda-9758-26157ef74cc5
-ms.openlocfilehash: 0f8304c3b45f87dadc2317de95a0b30b54baffa0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6115d942abc61fbfc9d60ca1ccf97d4b423ff7c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604164"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304651"
 ---
-# <a name="multithreading-how-to-use-the-mfc-synchronization-classes"></a>Multithreading: Verwendungsweise der MFC-Synchronisierungsklassen
+# <a name="multithreading-how-to-use-the-mfc-synchronization-classes"></a>Multithreading: Gewusst wie: Verwenden Sie die MFC-Synchronisierungsklassen
 
 Die Synchronisierung des Zugriffs auf Ressourcen durch Threads ist ein häufiges Problem beim Schreiben von Multithreadanwendungen. Wenn zwei oder mehr Threads gleichzeitig auf dieselben Daten zugreifen, kann dies zu unerwünschten und unvorhersehbaren Ergebnissen führen. Es könnte z. B. vorkommen, dass der eine Thread den Inhalt einer Struktur aktualisiert, während der andere Thread gleichzeitig den Inhalt dieser Struktur liest. Es gibt keine Informationen darüber, welche Daten vom lesenden Thread in einem solchen Fall empfangen werden: die alten Daten, die neu geschriebenen Daten oder möglicherweise eine Kombination aus beidem. MFC enthält eine Reihe von Synchronisierungs- und Synchronisierungszugriffsklassen, die Sie bei der Lösung dieses Problems unterstützen. In diesem Thema werden die verfügbaren Klassen erläutert, und Sie erfahren, wie Sie diese in einer typischen Multithreadanwendung zum Erstellen von threadsicheren Klassen verwenden können.
 
