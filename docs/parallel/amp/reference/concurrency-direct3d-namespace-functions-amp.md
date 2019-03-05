@@ -21,12 +21,12 @@ f1_keywords:
 - amp/Concurrency::direct3d::step
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
-ms.openlocfilehash: b721d19cd51a9eb1d07de8898b18728854decb4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0a2977faf094aafb6290063e39e062ffaeaaec81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519732"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281330"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency:: Direct3D Namespace-Funktionen (AMP)
 
@@ -37,8 +37,8 @@ ms.locfileid: "50519732"
 |[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|[firstbithigh](#firstbithigh)|
 |[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|[get_device](#get_device)|
 |[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|
-|[MAD](#mad)|[make_array](#make_array)|[rauschunterdrückung](#noise)|
-|[Bogenmaß (Radiant)](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|
+|[mad](#mad)|[make_array](#make_array)|[noise](#noise)|
+|[radians](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|
 |[saturate](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|
 |[step](#step)|[umax](#umax)|[umin](#umin)|
 
@@ -156,7 +156,7 @@ Die C++-AMP-Laufzeit stellt detaillierte Fehlerinformationen im Debugmodus mithi
 
 ##  <a name="d3d_access_lock"></a>  d3d_access_lock
 
-Ruft eine Sperre für eine "accelerator_view" ab, um D3D-Vorgänge in Ressourcen, die gemeinsam mit der "accelerator_view" genutzt werden, sicher ausführen zu können. Die "accelerator_view" und alle C++ AMP-Ressourcen, die dieser "accelerator_view" intern zugeordnet sind, werden gesperrt, wenn Vorgänge ausgeführt werden, und blockieren, während ein anderer Thread die D3D-Zugriffssperre inne hat. Diese Sperre ist nicht rekursiv: Es ist nicht definiertes Verhalten, diese Funktion von einem Thread aufzurufen, der bereits die Sperre besitzt. Es ist nicht definiertes Verhalten, Vorgänge für die "accelerator_view" oder Datencontainer auszuführen, die der "accelerator_view" vom Thread zugeordnet sind, der die D3D-Zugriffssperre besitzt. Siehe auch: "scoped_d3d_access_lock", eine RAII-Formatklasse für eine bereichsbasierte D3D-Zugriffssperre.
+Ruft eine Sperre für eine "accelerator_view" ab, um D3D-Vorgänge in Ressourcen, die gemeinsam mit der "accelerator_view" genutzt werden, sicher ausführen zu können. Die "accelerator_view" und alle C++ AMP-Ressourcen, die dieser "accelerator_view" intern zugeordnet sind, werden gesperrt, wenn Vorgänge ausgeführt werden, und blockieren, während ein anderer Thread die D3D-Zugriffssperre inne hat. Diese Sperre ist nicht rekursiv: Es ist nicht definiertes Verhalten, die diese Funktion von einem anderen Thread aufrufen, die bereits die Sperre besitzt. Es ist nicht definiertes Verhalten, Vorgänge für die "accelerator_view" oder Datencontainer auszuführen, die der "accelerator_view" vom Thread zugeordnet sind, der die D3D-Zugriffssperre besitzt. Siehe auch: "scoped_d3d_access_lock", eine RAII-Formatklasse für eine bereichsbasierte D3D-Zugriffssperre.
 
 ```
 void __cdecl d3d_access_lock(accelerator_view& _Av);
@@ -269,7 +269,7 @@ IUnknown* get_device(const accelerator_view Av);
 
 ### <a name="parameters"></a>Parameter
 
-*Zugriffsverletzung*<br/>
+*Av*<br/>
 Die D3D "accelerator_view", für die die zugrunde liegende D3D-Gerät-Schnittstelle zurückgegeben wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -298,7 +298,7 @@ Ganzzahliger Wert
 
 Rückgabe des höchsten numerischen Werts der Argumente
 
-##  <a name="imin"></a>  Imin
+##  <a name="imin"></a>  imin
 
 Festlegung des niedrigsten numerischen Werts der Argumente
 

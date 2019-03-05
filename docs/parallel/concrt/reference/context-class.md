@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
-ms.openlocfilehash: c6b219eabd008114f40401c64465e44607c2ee9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9074dad572a3a74a5b456e9790dc359ddf8b7c60
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555076"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293952"
 ---
 # <a name="context-class"></a>Context-Klasse
 
@@ -59,7 +59,7 @@ class Context;
 |[IsSynchronouslyBlocked](#issynchronouslyblocked)|Bestimmt, ob der Kontext synchron blockiert ist. Ein Kontext wird als synchron blockiert angesehen, wenn er explizit eine zu einer Blockierung führende Aktion ausgeführt hat.|
 |[Überzeichnen](#oversubscribe)|Fügt einen zusätzlichen virtuellen Prozessor für die Dauer eines Codeblocks in einen Planer ein, wenn er für einen Kontext aufgerufen wird, der auf einem der virtuellen Prozessoren in diesem Planer ausgeführt wird.|
 |[ScheduleGroupId](#schedulegroupid)|Gibt einen Bezeichner für die Planungsgruppe zurück, an der der aktuelle Kontext arbeitet.|
-|[Entsperren](#unblock)|Hebt die Blockierung des Kontexts auf und bewirkt, dass er ausführbar wird.|
+|[Unblock](#unblock)|Hebt die Blockierung des Kontexts auf und bewirkt, dass er ausführbar wird.|
 |[VirtualProcessorId](#virtualprocessorid)|Gibt einen Bezeichner für den virtuellen Prozessor zurück, auf dem der aktuelle Kontext ausgeführt wird.|
 |[Yield](#yield)|Setzt die Ausführung aus, damit ein anderer Kontext ausgeführt werden kann. Wenn kein anderer Kontext für eine Übergabe verfügbar ist, kann der Planer ggf. an einen anderen Betriebssystemthread übergeben.|
 
@@ -77,7 +77,7 @@ Der Planer ist grundsätzlich kooperativ, und ein Ausführungskontext kann seine
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** concrt.h hinzu
+**Header:** concrt.h
 
 **Namespace:** Parallelität
 
@@ -99,7 +99,7 @@ Nach der `Block` Methode aufgerufen wurde oder aufgerufen wird, müssen Sie es m
 
 Diese Methode kann eine Vielzahl von Ausnahmen, einschließlich auslösen [Scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md).
 
-##  <a name="dtor"></a> ~ Kontext
+##  <a name="dtor"></a> ~Context
 
 ```
 virtual ~Context();
@@ -165,7 +165,7 @@ Wenn der Kontext zurzeit auf einem virtuellen Prozessor, einen Bezeichner für d
 
 Der Rückgabewert dieser Methode ist eine sofortige Stichprobe für den virtuellen Prozessor, dem den Kontext ausgeführt wird. Dieser Wert kann veraltete Moment sein zurückgegeben wird, und kann nicht als zuverlässig betrachtet werden. In der Regel wird diese Methode zum Debuggen oder Ablaufverfolgung Zwecken verwendet.
 
-##  <a name="id"></a> ID
+##  <a name="id"></a> Id
 
 Gibt einen Bezeichner für den aktuellen Kontext zurück, der innerhalb des Planers eindeutig ist, zu dem der aktuelle Kontext gehört.
 
@@ -308,4 +308,3 @@ Diese Funktion ist neu in Visual Studio 2015 und ist identisch mit der [Yield](#
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
 [Scheduler-Klasse](scheduler-class.md)<br/>
 [Aufgabenplanung](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleCmdUI [MFC], SetCheck
 - COleCmdUI [MFC], SetText
 ms.assetid: a2d5ce08-6657-45d3-8673-2a9f32d50eec
-ms.openlocfilehash: 30caf7b42cf570a5dcd92d48817ef3743cf63811
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5dc4e9504805146a9eff0f5ab937868226e4516e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677434"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270856"
 ---
 # <a name="colecmdui-class"></a>COleCmdUI-Klasse
 
@@ -114,10 +114,10 @@ virtual void SetCheck(int nCheck);
 
 ### <a name="parameters"></a>Parameter
 
-*nPrüfen*<br/>
+*nCheck*<br/>
 Ein Wert, der den Status einer Umschaltfläche ein-und Befehl. Gültige Werte:
 
-|Wert|Beschreibung|
+|Wert|Description|
 |-----------|-----------------|
 |**1**|Legt fest, der Befehl auf.|
 |**2**|Der Befehl festgelegt einem unbestimmten Zustand; der Zustand kann nicht bestimmt werden, da das Attribut mit diesem Befehl sowohl auf und Deaktivieren der Zustände in der entsprechenden Auswahl wird.|
@@ -140,4 +140,3 @@ Ein Zeiger auf den Text, mit dem Befehl verwendet werden.
 
 [CCmdUI-Klasse](../../mfc/reference/ccmdui-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
-

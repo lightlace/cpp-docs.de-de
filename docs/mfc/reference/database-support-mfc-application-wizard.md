@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, database support
 ms.assetid: 9ddf4558-fd41-4ac7-8d9b-c93d9c68ab59
-ms.openlocfilehash: 9635b7e045812cc90c5d6e9662b8475e411a0b48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1e0519e1351a48bbd969168d62f163c9dde7e7e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654206"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259957"
 ---
 # <a name="database-support-mfc-application-wizard"></a>Datenbankunterstützung, MFC-Anwendungs-Assistent
 
@@ -24,7 +24,7 @@ Diese Seite enthält Optionen, die Ihnen die Angabe die Ebene der Datenbank zu e
    |Option|Beschreibung|
    |------------|-----------------|
    |**Keine**|Bietet keine datenbankunterstützung. Dies ist die Standardoption.|
-   |**Nur Headerdateien**|Stellt die Basisebene der datenbankunterstützung für Ihre Anwendung bereit. Bei Auswahl von ODBC-Unterstützung unter **Clienttyp**, MFS-Anwendungsassistenten, der in Ihrem Projekt die Headerdatei AFXDB enthält. H. Linkbibliotheken hinzugefügt, aber alle datenbankspezifische Klassen wird nicht erstellt. Sie können die Recordsets später erstellen und verwenden diese zum Überprüfen und Aktualisieren von Datensätzen. Bei Auswahl von OLE DB-Unterstützung unter **Clienttyp**, die folgenden Headerdateien enthalten sind: ATLBASE. H-AFXOLEDB. H-DATEI ATLPLUS. H|
+   |**Nur Headerdateien**|Stellt die Basisebene der datenbankunterstützung für Ihre Anwendung bereit. Bei Auswahl von ODBC-Unterstützung unter **Clienttyp**, MFS-Anwendungsassistenten, der in Ihrem Projekt die Headerdatei AFXDB enthält. H. Linkbibliotheken hinzugefügt, aber alle datenbankspezifische Klassen wird nicht erstellt. Sie können die Recordsets später erstellen und verwenden diese zum Überprüfen und Aktualisieren von Datensätzen. Bei Auswahl von OLE DB-Unterstützung unter **Clienttyp**, die folgenden Headerdateien enthalten sind: ATLBASE.H AFXOLEDB.H ATLPLUS.H|
    |**Datenbankansicht ohne dateiunterstützung**|Enthält Datenbank-Header-Dateien, DLLs, einer Datensatzansicht und einem Recordset. (Nur für Anwendungen mit der **Unterstützung für die Dokument-/Ansicht** gewählten Option in der [Anwendungstyp](../../mfc/reference/application-type-mfc-application-wizard.md) Seite.) Bei dieser Option sind dokumentunterstützung jedoch keine Serialisierungsunterstützung. Wenn Sie eine Datenbankansicht einschließen möchten, müssen Sie die Quelle der Daten angeben.|
    |**Datenbankansicht mit dateiunterstützung**|Enthält Datenbank-Header-Dateien, DLLs, einer Datensatzansicht und einem Recordset. (Nur für Anwendungen mit der **Unterstützung für die Dokument-/Ansicht** gewählten Option in der **Anwendungstyp** Seite.) Diese Option unterstützt Dokumentserialisierung, die Sie zum Beispiel, verwenden können eine Profildatei aktualisieren. Datenbankanwendungen arbeiten in der Regel individuell für einzelne Datensätze, statt auf einer pro-Datei-Basis und daher keine Serialisierung erforderlich ist. Allerdings müssen Sie eine besondere Verwendung für die Serialisierung. Wenn Sie eine Datenbankansicht einschließen möchten, müssen Sie die Quelle der Daten angeben.|
 

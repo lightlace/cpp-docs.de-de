@@ -12,12 +12,12 @@ helpviewer_keywords:
 - wWinMainCRTStartup method
 - ATL, C Run-Time library (CRT)
 ms.assetid: 650957ae-362c-4ecf-8b03-5d49138e8b5b
-ms.openlocfilehash: fc8c3c591b04d62c6dd7cf72bedde7a668e9f146
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b117165c82e51a59fe691b90f8ef92d0ba802cbc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516452"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287946"
 ---
 # <a name="linking-to-the-crt-in-your-atl-project"></a>Verknüpfen mit der CRT in einem ATL-Projekt
 
@@ -39,4 +39,3 @@ Die Linkeroption NOWIN98 kann weiter ein standardmäßiges ATL-Steuerelement von
 
 [Programmieren mit ATL- und C-Laufzeitcode](../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [DLLs and Visual C++ run-time library behavior (Verhalten der Laufzeitbibliothek für DLLs und Visual C++)](../build/run-time-library-behavior.md)
-

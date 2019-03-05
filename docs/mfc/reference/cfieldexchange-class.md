@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CFieldExchange [MFC], IsFieldType
 - CFieldExchange [MFC], SetFieldType
 ms.assetid: 24c5c0b3-06a6-430e-9b6f-005a2c65e29f
-ms.openlocfilehash: e039a2deaf3372af5daac8fddd8f3a0672719f88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e66b3ed16d4f21d46567c37bfaf7929d32f63b8e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588226"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294979"
 ---
 # <a name="cfieldexchange-class"></a>CFieldExchange-Klasse
 
@@ -34,7 +34,7 @@ class CFieldExchange
 |Name|Beschreibung|
 |----------|-----------------|
 |[CFieldExchange::IsFieldType](#isfieldtype)|Gibt zurück, die ungleich NULL, wenn der aktuelle Vorgang ist geeignet für den Typ des aktualisierten Felds.|
-|[CFieldExchange::](#setfieldtype)|Gibt den Typ des Recordset-Datenmember, Spalte oder des Parameters – durch alle folgenden Aufrufe von RFX-Funktionen dargestellt wird, bis der nächste Aufruf von `SetFieldType`.|
+|[CFieldExchange::SetFieldType](#setfieldtype)|Gibt den Typ des Recordset-Datenmember, Spalte oder des Parameters – durch alle folgenden Aufrufe von RFX-Funktionen dargestellt wird, bis der nächste Aufruf von `SetFieldType`.|
 
 ## <a name="remarks"></a>Hinweise
 

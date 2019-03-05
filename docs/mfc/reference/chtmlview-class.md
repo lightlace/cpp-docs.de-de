@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: b37cff8bd3eb3bd05bc7030c4cc12b9b84568b1f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 69a04b49cf82c2b30ece3a32f76fbb2bc9a65f01
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333640"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295993"
 ---
 # <a name="chtmlview-class"></a>CHtmlView-Klasse
 
@@ -380,7 +380,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parameter
 
-*"lpszclassname"*<br/>
+*lpszClassName*<br/>
 Verweist auf eine Null-terminierte Zeichenfolge, die Namen die Windows-Klasse. Der Klassenname kann einen beliebigen Namen registriert werden die [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) globale Funktion oder die `RegisterClass` Windows-Funktion. Wenn der Wert NULL ist, verwendet den vordefinierten Standardwert [CFrameWnd](../../mfc/reference/cframewnd-class.md) Attribute.
 
 *lpszWindowName*<br/>
@@ -389,7 +389,7 @@ Verweist auf eine Null-terminierte Zeichenfolge, die den Fensternamen darstellt.
 *dwStyle*<br/>
 Gibt an, der die Stilattribute für Fenster. Standardmäßig werden die Stile WS_VISIBLE und WS_CHILD Windows festgelegt.
 
-*Rect*<br/>
+*rect*<br/>
 Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die die Größe und Position des Fensters angibt. Die *RectDefault* Wert ermöglicht Windows die Größe und Position des neuen Fensters an.
 
 *pParentWnd*<br/>
@@ -738,7 +738,7 @@ COleVariant GetProperty(LPCTSTR lpszProperty);
 *lpszProperty*<br/>
 Ein Zeiger auf eine Zeichenfolge, die die abzurufende Eigenschaft enthält.
 
-*strValue gespeichert*<br/>
+*strValue*<br/>
 Ein Verweis auf eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt, das den aktuellen Wert der Eigenschaft empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1171,10 +1171,10 @@ virtual void OnCommandStateChange(
 
 ### <a name="parameters"></a>Parameter
 
-*%nbefehl*<br/>
+*nCommand*<br/>
 Der Bezeichner des Befehls, dessen aktivierte Zustand geändert wurde.
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 Aktivierten Zustand. Dieser Parameter ist ungleich NULL, wenn der Befehl ist aktiviert, oder NULL, wenn er deaktiviert ist.
 
 ##  <a name="ondocumentcomplete"></a>  CHtmlView::OnDocumentComplete
@@ -1375,7 +1375,7 @@ virtual HRESULT OnGetHostInfo(DOCHOSTUIINFO* pInfo);
 
 ### <a name="parameters"></a>Parameter
 
-*"pInfo"*<br/>
+*pInfo*<br/>
 Adresse von einem [DOCHOSTUIINFO](https://msdn.microsoft.com/library/aa770044.aspx) Struktur, die Funktionen des Hosts empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1604,7 +1604,7 @@ virtual HRESULT OnShowContextMenu(
 *dwID*<br/>
 Der Bezeichner des Kontextmenüs angezeigt werden. Finden Sie unter `IDocHostUIHandler::ShowContextMenu` im Windows SDK für eine Liste von Werten.
 
-*PPT*<br/>
+*ppt*<br/>
 Die Bildschirmkoordinaten für das Menü.
 
 *pcmdtReserved*<br/>
@@ -1861,13 +1861,13 @@ Ein Zeiger auf eine Zeichenfolge, die mit dem Namen der festzulegenden Eigenscha
 *dValue*<br/>
 Der neue Wert der Eigenschaft.
 
-*l-Wert*<br/>
+*lValue*<br/>
 Der neue Wert der Eigenschaft.
 
 *lpszValue*<br/>
 Ein Zeiger auf eine Zeichenfolge, enthält den neuen Wert der Eigenschaft.
 
-*nWert*<br/>
+*nValue*<br/>
 Der neue Wert der Eigenschaft.
 
 ### <a name="remarks"></a>Hinweise
@@ -2237,4 +2237,3 @@ Betrifft Internet Explorer und WebBrowser.
 [CFormView-Klasse](../../mfc/reference/cformview-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx)
-

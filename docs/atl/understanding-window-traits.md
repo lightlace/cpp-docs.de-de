@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - window traits
 ms.assetid: c90cf850-9e91-49da-9cf3-ad4efb30347d
-ms.openlocfilehash: 0ab1a3c8f20a8e81304cdae68731bc70fbfc05c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29549e54051405fc3dd4d5d7ae70a382ad7a62ea
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647043"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280939"
 ---
 # <a name="understanding-window-traits"></a>Einführung in Fenstermerkmale
 
@@ -39,4 +39,3 @@ Jede dieser Funktionen wird ein Style-Wert zur Laufzeit übergeben die sie verwe
 ## <a name="see-also"></a>Siehe auch
 
 [Fensterklassen](../atl/atl-window-classes.md)
-

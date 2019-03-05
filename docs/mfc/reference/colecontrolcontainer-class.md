@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: e89096b553814285f61093af81e31b294e3ad2bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e97f7ceafb92098d701cba64b4ec01d26d3991a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603008"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274985"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer-Klasse
 
@@ -173,7 +173,7 @@ void AttachControlSite(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Ein Zeiger auf ein `CWnd` -Objekt.
 
 *nIDC*<br/>
@@ -196,7 +196,7 @@ virtual void BroadcastAmbientPropertyChange(DISPID dispid);
 
 ### <a name="parameters"></a>Parameter
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Dispatch-ID der ambient-Eigenschaft geändert wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -218,7 +218,7 @@ virtual void CheckDlgButton(
 *nIDButton*<br/>
 Die ID der Schaltfläche geändert werden.
 
-*nPrüfen*<br/>
+*nCheck*<br/>
 Gibt den Zustand der Schaltfläche. Einer der folgenden Werte ist möglich:
 
 - BST_CHECKED legt überprüft den Zustand der Schaltfläche auf.
@@ -259,7 +259,7 @@ explicit COleControlContainer(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Ein Zeiger auf das übergeordnete Fenster des Steuerelementcontainers.
 
 ### <a name="remarks"></a>Hinweise
@@ -311,7 +311,7 @@ Ein Zeiger auf den Text im Steuerelement angezeigt werden. Legt den Wert der Bes
 *dwStyle*<br/>
 Windows-Formate. Die verfügbaren Formate finden Sie unter den **"Hinweise"** Abschnitt.
 
-*Rect*<br/>
+*rect*<br/>
 Gibt an, die Größe und Position des Steuerelements. Es kann sein, entweder eine `CRect` Objekt oder ein `RECT` Struktur.
 
 *nID*<br/>
@@ -329,7 +329,7 @@ Lizenz-Schlüsseldaten ist optional. Diese Daten ist nur für das Erstellen von 
 *ppNewSite*<br/>
 Ein Zeiger auf die vorhandene Website des Steuerelements, die als host das Steuerelement erstellt wird. Der Standardwert ist NULL, gibt an, dass eine neue Website des Steuerelements automatisch erstellt und auf das neue Steuerelement angefügt werden.
 
-*PPT*<br/>
+*ppt*<br/>
 Ein Zeiger auf eine `POINT` Struktur, die die linke obere Ecke des Steuerelements enthält. Die Größe des Steuerelements richtet sich nach dem Wert der *Psize*. Die *ppt* und *Psize* Werte sind eine optionale Methode dar, die die Größe und Position des Steuerelements angibt.
 
 *psize*<br/>
@@ -419,7 +419,7 @@ virtual BOOL GetAmbientProp(
 *pSite*<br/>
 Ein Zeiger auf eine Website des Steuerelements aus der die Ambiente-Eigenschaft abgerufen werden wird.
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Dispatch-ID der gewünschte ambient-Eigenschaft.
 
 *pVarResult*<br/>
@@ -546,7 +546,7 @@ virtual BOOL HandleWindowlessMessage(
 *message*<br/>
 Der Bezeichner für die fenstermeldung, die von Windows bereitgestellt.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 Die Parameter der Nachricht. von Windows bereitgestellt. Gibt zusätzliche meldungsspezifische Informationen. Der Inhalt dieses Parameters ist hängt von den Wert des der *Nachricht* Parameter.
 
 *lParam*<br/>
@@ -737,7 +737,7 @@ virtual void ScrollChildren(
 
 ### <a name="parameters"></a>Parameter
 
-*DX*<br/>
+*dx*<br/>
 Das Ausmaß des Bildlaufs auf der x-Achse in Pixel.
 
 *dy*<br/>
@@ -763,7 +763,7 @@ Gibt den Bezeichner des Steuerelements, das die Nachricht empfängt.
 *message*<br/>
 Gibt die Meldung gesendet werden.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 Gibt zusätzliche meldungsspezifische Informationen.
 
 *lParam*<br/>
@@ -785,7 +785,7 @@ virtual void SetDlgItemInt(
 *nID*<br/>
 Der Bezeichner des Steuerelements.
 
-*nWert*<br/>
+*nValue*<br/>
 Der ganzzahlige Wert, der angezeigt werden.
 
 *bSigned*<br/>

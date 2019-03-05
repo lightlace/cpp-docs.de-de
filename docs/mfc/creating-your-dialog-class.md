@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dialog classes [MFC], Add Class Wizard
 - dialog classes [MFC], creating
 ms.assetid: d5321741-da41-47a8-bb1c-6a0e8b28c4c1
-ms.openlocfilehash: 924cf2d79056d958aad775f92a6d0df2d45c8a70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bacedc49fcdabdd5dc7fb0f392a66afd3baadd06
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536578"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326399"
 ---
 # <a name="creating-your-dialog-class"></a>Erstellen eigener Dialogfeldklassen
 
@@ -37,4 +37,3 @@ In der. CPP-Datei:
 
 [Erstellen einer Dialogfeldklasse mit Code-Assistenten](../mfc/creating-a-dialog-class-with-code-wizards.md)<br/>
 [Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)
-

@@ -1,19 +1,19 @@
 ---
-title: 'TN047: Abschwächen der Anforderungen für eine Datenbanktransaktion'
+title: 'TN047: Abschwächen der Anforderungen für die Transaktion'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.data
 helpviewer_keywords:
 - TN047
 ms.assetid: f93c51cf-a8c0-43d0-aa47-7bcb8333d693
-ms.openlocfilehash: d609576c5ffda1a3ba8021e6a459943092c40e98
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 968420658a90c983d8e6c3eaf1e0c61603fc5441
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658834"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276805"
 ---
-# <a name="tn047-relaxing-database-transaction-requirements"></a>TN047: Abschwächen der Anforderungen für eine Datenbanktransaktion
+# <a name="tn047-relaxing-database-transaction-requirements"></a>TN047: Abschwächen der Anforderungen für die Transaktion
 
 Diese technische Hinweise, die die Transaktion an die MFC-ODBC-Datenbankklassen erläutert, ist mittlerweile veraltet. Vor MFC 4.2, die Datenbankklassen erforderlich sind, dass Cursor bei Recordsets nach beibehalten werden eine **CommitTrans** oder **Rollback** Vorgang. Wenn die ODBC-Treiber und das DBMS diese Ebene der Beibehaltung der Cursor nicht unterstützt, die Datenbankklassen nicht Transaktionen aktivieren.
 
@@ -23,4 +23,3 @@ Ab MFC 4.2, haben die Beschränkung der Beibehaltung der Cursor erfordern die Da
 
 [Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)<br/>
 [Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)
-

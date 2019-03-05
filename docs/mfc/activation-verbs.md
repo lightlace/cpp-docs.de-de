@@ -1,5 +1,5 @@
 ---
-title: 'Aktivierung: Verben'
+title: 'Aktivierung: Verbs'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - verbs [MFC]
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Primary verb [MFC]
 - OLE activation {MFC]
 ms.assetid: eb56ff23-1de8-43ad-abeb-dc7346ba7b70
-ms.openlocfilehash: f6774f1de1e7abd318e5cd38fed1a2c805270c15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: baf8e0ac3527407b2e5ba77dfdf3921419217fd7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443328"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267913"
 ---
-# <a name="activation-verbs"></a>Aktivierung: Verben
+# <a name="activation-verbs"></a>Aktivierung: Verbs
 
 In diesem Artikel wird erläutert, die primären und sekundären Verben Rollenspiele in OLE [Aktivierung](../mfc/activation-cpp.md).
 
@@ -38,4 +38,3 @@ Die Verben, die eine Server-Anwendung unterstützt werden in der Datenbank der W
 [Activation (Aktivierung)](../mfc/activation-cpp.md)<br/>
 [Container](../mfc/containers.md)<br/>
 [Server](../mfc/servers.md)
-

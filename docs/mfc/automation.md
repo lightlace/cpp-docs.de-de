@@ -20,12 +20,12 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: de376c6c5ab2be0da5f6b9495c6adb61e19d6622
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b26a08bbe9ef9b9151910871201abe05a44d2f6c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572756"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265561"
 ---
 # <a name="automation"></a>Automatisierung
 
@@ -49,7 +49,7 @@ Viele kommerzielle Anwendungen, wie Microsoft Excel und Microsoft Visual C++, er
 
 ##  <a name="_core_passing_parameters_in_automation"></a> Übergeben von Parametern in Automation
 
-Eine Schwierigkeit bei der Erstellung von Automatisierungsmethoden besteht darin, einen einheitlichen „sicheren“ Mechanismus zum Übergeben von Daten zwischen Automatisierungsservern und -clients bereitzustellen. Automation verwendet den **VARIANT** -Typ, um Daten zu übergeben. Der **VARIANT** -Typ ist eine Union mit Tags. Sie verfügt über ein Datenelement für den Wert (wobei es sich um eine anonyme C++-Union handelt) und ein Datenelement, das den in der Union gespeicherten Informationstyp angibt. Der **VARIANT** -Typ unterstützt eine Reihe von Standarddatentypen: 2- und 4-Byte-Ganzzahlen, 4 und 8-Byte-Gleitkommazahlen, Zeichenfolgen und boolesche Werte. Darüber hinaus unterstützt er die **HRESULT** (OLE-Fehlercodes), **Währung** (ein numerischer fester Punkttyp) und **Datum** (absolutes Datum und Uhrzeit) Typen, sowie Zeiger auf `IUnknown` und `IDispatch` Schnittstellen.
+Eine Schwierigkeit bei der Erstellung von Automatisierungsmethoden besteht darin, einen einheitlichen „sicheren“ Mechanismus zum Übergeben von Daten zwischen Automatisierungsservern und -clients bereitzustellen. Automation verwendet den **VARIANT** -Typ, um Daten zu übergeben. Der **VARIANT** -Typ ist eine Union mit Tags. Sie verfügt über ein Datenelement für den Wert (wobei es sich um eine anonyme C++-Union handelt) und ein Datenelement, das den in der Union gespeicherten Informationstyp angibt. Die **VARIANT** -Typ unterstützt eine Reihe von Standarddatentypen: 2 und 4-Byte-Ganzzahlen, 4 und 8-Byte-Gleitkommazahlen, Zeichenfolgen und boolesche Werte. Darüber hinaus unterstützt er die **HRESULT** (OLE-Fehlercodes), **Währung** (ein numerischer fester Punkttyp) und **Datum** (absolutes Datum und Uhrzeit) Typen, sowie Zeiger auf `IUnknown` und `IDispatch` Schnittstellen.
 
 Der **VARIANT** -Typ ist in der [COleVariant](../mfc/reference/colevariant-class.md) -Klasse gekapselt. Die unterstützenden **CURRENCY** - und **DATE** -Klassen sind in den [COleCurrency](../mfc/reference/colecurrency-class.md) - und [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) -Klassen gekapselt.
 

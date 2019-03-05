@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-ms.openlocfilehash: 1b2b4de2a0aa844f9450af9d853b11ea6f485274
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f27dace61b0764962a78695c2a4c6b180b09d7a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638268"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287898"
 ---
 # <a name="scheduler-class"></a>Scheduler-Klasse
 
@@ -55,7 +55,7 @@ class Scheduler;
 |[Erstellen](#create)|Erstellt einen neuen Planer, deren Verhalten, durch beschrieben wird, die `_Policy` platziert einen anfänglichen Verweis auf den Planer Parameter, und gibt einen Zeiger darauf zurück.|
 |[CreateScheduleGroup](#createschedulegroup)|Überladen. Erstellt eine neue Planungsgruppe innerhalb des Planers an. Die Version, die den Parameter akzeptiert `_Placement` bewirkt, dass Aufgaben innerhalb der Gruppe neu erstellten Zeitpläne Blockcontainer ausführen an der Position, die durch diesen Parameter angegeben werden.|
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Gibt die aktuelle Anzahl virtueller Prozessoren für den Planer zurück.|
-|[Verarbeitete GetPolicy](#getpolicy)|Gibt eine Kopie der Richtlinie, der der Planer erstellt wurde.|
+|[GetPolicy](#getpolicy)|Gibt eine Kopie der Richtlinie, der der Planer erstellt wurde.|
 |[Id](#id)|Gibt einen eindeutigen Bezeichner für den Planer zurück.|
 |[IsAvailableLocation](#isavailablelocation)|Bestimmt, ob eine angegebene Position im Zeitplanungsmodul verfügbar ist.|
 |[Verweis](#reference)|Inkrementiert den Verweiszähler für den Scheduler.|
@@ -77,7 +77,7 @@ Die Concurrency Runtime erstellt einen Standardplaner pro Prozess, um parallele 
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** concrt.h hinzu
+**Header:** concrt.h
 
 **Namespace:** Parallelität
 
@@ -136,7 +136,7 @@ virtual ScheduleGroup* CreateScheduleGroup(location& _Placement) = 0;
 
 ### <a name="parameters"></a>Parameter
 
-*_Platzierung*<br/>
+*_Placement*<br/>
 Ein Verweis auf einen Speicherort, in dem die Aufgaben innerhalb der Planungsgruppe wird für Blockcontainer am ausführen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -161,7 +161,7 @@ virtual unsigned int GetNumberOfVirtualProcessors() const = 0;
 
 Die aktuelle Anzahl virtueller Prozessoren für den Planer.
 
-##  <a name="getpolicy"></a> Verarbeitete GetPolicy
+##  <a name="getpolicy"></a> GetPolicy
 
 Gibt eine Kopie der Richtlinie, der der Planer erstellt wurde.
 
@@ -173,7 +173,7 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 
 Eine Kopie der Richtlinie, der der Planer erstellt wurde.
 
-##  <a name="id"></a> ID
+##  <a name="id"></a> Id
 
 Gibt einen eindeutigen Bezeichner für den Planer zurück.
 
@@ -195,7 +195,7 @@ virtual bool IsAvailableLocation(const location& _Placement) const = 0;
 
 ### <a name="parameters"></a>Parameter
 
-*_Platzierung*<br/>
+*_Placement*<br/>
 Ein Verweis auf die Position, an den Planer zu Fragen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -307,10 +307,10 @@ virtual void ScheduleTask(
 *_Proc*<br/>
 Ein Zeiger auf die Funktion, die ausgeführt werden, um den Text der Aufgabe leicht durchführen.
 
-*"_Data"*<br/>
+*_Data*<br/>
 Ein void-Zeiger auf die Daten, die in den Text der Aufgabe als Parameter übergeben werden.
 
-*_Platzierung*<br/>
+*_Placement*<br/>
 Ein Verweis auf einen Speicherort, in denen die einfache Aufgabe für Blockcontainer werden werden auf ausführen.
 
 ##  <a name="setdefaultschedulerpolicy"></a> SetDefaultSchedulerPolicy
@@ -336,4 +336,3 @@ Wenn die `SetDefaultSchedulerPolicy` Methode wird aufgerufen, wenn ein Standardp
 [Scheduler-Klasse](scheduler-class.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>
 [Aufgabenplanung](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

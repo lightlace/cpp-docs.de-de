@@ -4,14 +4,14 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: a76a0f49e8b0ec7458b781785cd5030d2c523f0b
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: a86393954cdebec59bd2c6a50cd5e547ef06acb7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176470"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267237"
 ---
-# <a name="example-implementing-a-property-page"></a>Beispiel: Das Implementieren einer Eigenschaftenseite
+# <a name="example-implementing-a-property-page"></a>Beispiel: Implementieren einer Eigenschaftenseite
 
 Dieses Beispiel zeigt, wie Sie auf einer Eigenschaftenseite zu erstellen, das Eigenschaften anzeigt (und können Sie ändern) die [Dokumentklassen](../mfc/document-classes.md) Schnittstelle.
 
@@ -45,7 +45,7 @@ Erstellen Sie zunächst ein neues ATL-Projekt für eine DLL-Server namens `ATLPa
 |----------|-----------|
 |Titel|TextDocument|
 |-Dokumentzeichenfolge|VCUE TextDocument-Eigenschaften|
-|HelpFile|*\<leer >*|
+|HelpFile|*\<blank>*|
 
 Die Werte, die Sie, auf dieser Seite des Assistenten festlegen auf der Seite Eigenschaftencontainer zurückgegeben, wenn ruft `IPropertyPage::GetPageInfo`. Was geschieht mit den Zeichenfolgen, nachdem das ist abhängig von den Container, aber sie in der Regel verwendet werden, werden um Ihre Seite für den Benutzer zu identifizieren. Der Titel in der Regel auf einer Registerkarte oberhalb der Seite angezeigt wird, und möglicherweise die Doc-Zeichenfolge in einer Statusleiste oder eine QuickInfo angezeigt (auch wenn der Frame Standardeigenschaft dieser Zeichenfolge überhaupt nicht verwendet).
 

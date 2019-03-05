@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - document classes [MFC]
 ms.assetid: 4bf19b02-0a4f-4319-b68e-cddcba2705cb
-ms.openlocfilehash: eee8cf874230874b519bbd2cb3ebb34c7d4c5c80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7034a99bfefe8f4c11cdf8f99dc4b0c31fac10a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484629"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289714"
 ---
 # <a name="document-classes"></a>Dokumentklassen
 
@@ -22,7 +22,7 @@ Dokument-Klassenobjekten interagieren mit Objekte anzeigen. Ansichtsobjekte den 
 [CDocument](../mfc/reference/cdocument-class.md)<br/>
 Die Basisklasse für anwendungsspezifische Dokumente. Leiten Sie Ihre "Document"-Klasse oder die Klassen aus `CDocument`.
 
-[COleDocument-Klasse](../mfc/reference/coledocument-class.md)<br/>
+[COleDocument](../mfc/reference/coledocument-class.md)<br/>
 Für Verbunddokument-Implementierung als auch einfache Container-Unterstützung verwendet. Dient als Container für Klassen abgeleitet [CDocItem](../mfc/reference/cdocitem-class.md). Diese Klasse kann als Basisklasse verwendet werden, für Container dokumentiert und die Basisklasse für ist `COleServerDoc`.
 
 [COleLinkingDoc](../mfc/reference/colelinkingdoc-class.md)<br/>
@@ -52,4 +52,3 @@ Abstrakte Basisklasse von [COleClientItem](../mfc/reference/coleclientitem-class
 ## <a name="see-also"></a>Siehe auch
 
 [Übersicht über die Klasse](../mfc/class-library-overview.md)
-

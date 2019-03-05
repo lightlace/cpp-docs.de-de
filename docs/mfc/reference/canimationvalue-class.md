@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CAnimationValue [MFC], GetAnimationVariableList
 - CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
-ms.openlocfilehash: 9a43536e3f9f90b70d5d68eb5ce5d277f9b42e00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86a2caa8946bcafeabf85687a24b2430ecefe790
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613797"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283539"
 ---
 # <a name="canimationvalue-class"></a>CAnimationValue-Klasse
 
@@ -58,7 +58,7 @@ class CAnimationValue : public CAnimationBaseObject;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CAnimationValue::GetAnimationVariableList](#getanimationvariablelist)|Legt die gekapselte Animationsvariable in einer Liste an. (Überschreibt [CAnimationBaseObject:: GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
+|[CAnimationValue::GetAnimationVariableList](#getanimationvariablelist)|Legt die gekapselte Animationsvariable in einer Liste an. (Overrides [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
@@ -66,7 +66,7 @@ class CAnimationValue : public CAnimationBaseObject;
 |----------|-----------------|
 |[CAnimationValue::operator DOUBLE](#operator_double)|Stellt die Konvertierung zwischen CAnimationValue und Double-Wert.|
 |[CAnimationValue::operator INT32](#operator_int32)|Stellt die Konvertierung zwischen CAnimationValue und INT32.|
-|[CAnimationValue::operator =](#operator_eq)|Überladen. CAnimationValue wird einen INT32-Wert zugewiesen.|
+|[CAnimationValue::operator=](#operator_eq)|Überladen. CAnimationValue wird einen INT32-Wert zugewiesen.|
 
 ### <a name="protected-data-members"></a>Geschützte Datenmember
 
@@ -168,7 +168,7 @@ BOOL GetValue(INT32& nValue);
 *dblValue*<br/>
 Die Ausgabe. Bei Rückgabe der Funktion enthält es einen aktuellen Wert der Animationsvariablen an.
 
-*nWert*<br/>
+*nValue*<br/>
 Die Ausgabe. Bei Rückgabe der Funktion enthält es einen aktuellen Wert der Animationsvariablen an.
 
 ### <a name="return-value"></a>Rückgabewert

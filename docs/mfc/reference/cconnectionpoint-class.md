@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CConnectionPoint [MFC], OnAdvise
 - CConnectionPoint [MFC], QuerySinkInterface
 ms.assetid: f0f23a1e-5e8c-41a9-aa6c-1a4793b28e8f
-ms.openlocfilehash: efa8a7bf9e14bd93682fcc2d5802a84f1bdb1e96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a75ce23cf55f26505c2584c3a021b654602a6a2b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629930"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288947"
 ---
 # <a name="cconnectionpoint-class"></a>CConnectionPoint-Klasse
 
@@ -53,11 +53,11 @@ class CConnectionPoint : public CCmdTarget
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CConnectionPoint:: GetConnections](#getconnections)|Ruft alle Verbindungspunkte in einer Zuordnung für die Verbindung ab.|
+|[CConnectionPoint::GetConnections](#getconnections)|Ruft alle Verbindungspunkte in einer Zuordnung für die Verbindung ab.|
 |[CConnectionPoint::GetContainer](#getcontainer)|Ruft den Container des Steuerelements, das die Zuordnung für die Verbindung besitzt.|
-|[CConnectionPoint:: GetIID](#getiid)|Ruft die Schnittstellen-ID eines Verbindungspunkts ab.|
+|[CConnectionPoint::GetIID](#getiid)|Ruft die Schnittstellen-ID eines Verbindungspunkts ab.|
 |[CConnectionPoint::GetMaxConnections](#getmaxconnections)|Ruft die maximale Anzahl von Verbindungspunkten, die von einem Steuerelement unterstützt.|
-|[CConnectionPoint:: GetNextConnection](#getnextconnection)|Ruft einen Zeiger auf das Verbindungselement auf *pos*.|
+|[CConnectionPoint::GetNextConnection](#getnextconnection)|Ruft einen Zeiger auf das Verbindungselement auf *pos*.|
 |[CConnectionPoint::GetStartPosition](#getstartposition)|Startet eine Iteration für die Zuordnung durch Rückgabe eines Werts von POSITION, die übergeben werden kann eine `GetNextConnection` aufrufen.|
 |[CConnectionPoint::OnAdvise](#onadvise)|Wird aufgerufen, durch das Framework beim Einrichten oder Unterbrechen von Verbindungen.|
 |[CConnectionPoint::QuerySinkInterface](#querysinkinterface)|Ruft einen Zeiger auf die angeforderte Schnittstelle ab.|
@@ -182,7 +182,7 @@ LPUNKNOWN GetNextConnection(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Gibt einen Verweis auf eine Positionswert, der von einem vorherigen zurückgegebene `GetNextConnection` oder [GetStartPosition](#getstartposition) aufrufen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -262,4 +262,3 @@ Ein standard HRESULT-Wert.
 
 [CCmdTarget-Klasse](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
-

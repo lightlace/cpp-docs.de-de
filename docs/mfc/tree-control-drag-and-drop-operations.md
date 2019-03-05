@@ -1,19 +1,19 @@
 ---
-title: Drag & Drop-Operationen für das Struktursteuerelement
+title: Drag &amp; Drop-Operationen für das Struktursteuerelement
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CTreeCtrl class [MFC], drag and drop operations
 - drag and drop [MFC], CTreeCtrl
 - tree controls [MFC], drag and drop operations
 ms.assetid: 3cf78b4c-4579-4fe1-9bc9-c5ab876e4af1
-ms.openlocfilehash: bf0adce847c514a41389d3c6a0a86651ee9dc486
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: c7febeec513d8004df2bd1cc42e4e97e027e9f17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693307"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286308"
 ---
-# <a name="tree-control-drag-and-drop-operations"></a>Drag & Drop-Operationen für das Struktursteuerelement
+# <a name="tree-control-drag-and-drop-operations"></a>Drag &amp; Drop-Operationen für das Struktursteuerelement
 
 Ein Strukturansicht-Steuerelement ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) sendet eine Benachrichtigung, wenn der Benutzer beginnt, ein Element zu ziehen. Das Steuerelement sendet eine [TVN_BEGINDRAG](/windows/desktop/Controls/tvn-begindrag) Benachrichtigung, wenn der Benutzer beginnt, ziehen ein Element mit die linke Maustaste gedrückt und [TVN_BEGINRDRAG](/windows/desktop/Controls/tvn-beginrdrag) Benachrichtigung, wenn der Benutzer beginnt, ziehen die Rechte Taste. Sie können verhindern, dass ein Strukturansicht-Steuerelement diese Benachrichtigungen senden, ermöglicht der Strukturansicht den TVS_DISABLEDRAGDROP-Stil.
 
@@ -29,4 +29,3 @@ Sie können angeben, dass ein Element das Ziel eines Drag & Drop-Vorgangs durch 
 
 [Verwenden von CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Steuerelemente](../mfc/controls-mfc.md)
-

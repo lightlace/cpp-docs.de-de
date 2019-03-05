@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
-ms.openlocfilehash: c99aba319df6f84dbda7b9cf90a1abebdc3757f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6afbd7b3a3f4280ad658c1cb9d8802cc3251d0ed
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570351"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291333"
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d-Namespace
 
@@ -58,10 +58,10 @@ namespace direct3d;
 |[imax](concurrency-direct3d-namespace-functions-amp.md#imax)|Vergleicht zwei Werte und gibt den größeren Wert zurück.|
 |[imin](concurrency-direct3d-namespace-functions-amp.md#imin)|Vergleicht zwei Werte und gibt den kleineren Wert zurück.|
 |[is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|Gibt ein boolesches Flag zurück, das angibt, ob Timeout für die angegebene "accelerator_view" deaktiviert ist.|
-|[MAD](concurrency-direct3d-namespace-functions-amp.md#mad)|Überladen. Führt eine arithmetische Multiplikation Operation für drei Argumente: _X \* _Y + _Z|
+|[mad](concurrency-direct3d-namespace-functions-amp.md#mad)|Überladen. Führt eine arithmetische Multiplikation Operation für drei Argumente: _X \* _Y + _Z|
 |[make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|Erstellt ein Array aus dem Schnittstellenzeiger eines D3D-Puffers.|
-|[rauschunterdrückung](concurrency-direct3d-namespace-functions-amp.md#noise)|Generiert mithilfe des Perlin-Noise-Algorithmus einen Zufallswert|
-|[Bogenmaß (Radiant)](concurrency-direct3d-namespace-functions-amp.md#radians)|Konvertiert _X von Grad in Bogenmaß|
+|[noise](concurrency-direct3d-namespace-functions-amp.md#noise)|Generiert mithilfe des Perlin-Noise-Algorithmus einen Zufallswert|
+|[radians](concurrency-direct3d-namespace-functions-amp.md#radians)|Konvertiert _X von Grad in Bogenmaß|
 |[rcp](concurrency-direct3d-namespace-functions-amp.md#rcp)|Berechnet einen schnellen, ungefähren Kehrwert des Arguments|
 |[reversebits](concurrency-direct3d-namespace-functions-amp.md#reversebits)|Kehrt die Reihenfolge der Bits in _X um|
 |[saturate](concurrency-direct3d-namespace-functions-amp.md#saturate)|Bindet _X im Bereich zwischen 0 und 1|

@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], PreMultiplyAlpha
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
-ms.openlocfilehash: 21a8e6ed28498756130e6ddb418e93b0e9ad86cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bbd2a2d301646b4d3897d9fe4990bdfd1e48325b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662773"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303339"
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages-Klasse
 
@@ -277,8 +277,8 @@ void AdaptColors(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *ClrBase*<br/>
-[in] *ClrTone*<br/>
+[in] *clrBase*<br/>
+[in] *clrTone*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -326,7 +326,7 @@ int AddImage(
 *bSetBitPerPixel*<br/>
 [in] TRUE, wenn die `CMFCToolBarImages` Objekt wird verwendet, die Farbtiefe (Bits pro Pixel) des neuen Images; FALSE, wenn die `CMFCToolbarImages` -Objekt behält die aktuelle Farbtiefe.
 
-*ImageList*<br/>
+*imageList*<br/>
 [in] Ein Verweis auf eine `CMFCToolbarImages` Objekt, das zu hinzufügenden Bilds enthält.
 
 *nIndex*<br/>
@@ -402,7 +402,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
 
 ### <a name="parameters"></a>Parameter
 
-*ImageList*<br/>
+*imageList*<br/>
 [in] Die Liste der Bilder, die als Quelle für Symbolleistenbilder verwendet werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -423,8 +423,8 @@ static HRGN __stdcall CreateRegionFromImage(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Bmp*<br/>
-[in] *ClrTransparent*<br/>
+[in] *bmp*<br/>
+[in] *clrTransparent*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -482,7 +482,7 @@ BOOL Draw(
 *bHilite*<br/>
 [in] True, wenn das Bild hervorgehoben werden. andernfalls "false".
 
-*bDeaktiviert*<br/>
+*bDisabled*<br/>
 [in] True, wenn das Bild in den deaktivierten Stil gezeichnet wird. andernfalls "false".
 
 *bIndeterminate*<br/>
@@ -517,12 +517,12 @@ BOOL DrawEx(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *iImageIndex*<br/>
 [in] *HorzAlign*<br/>
 [in] *VertAlign*<br/>
-[in] *RectSrc*<br/>
-[in] *AlphaSrc*<br/>
+[in] *rectSrc*<br/>
+[in] *alphaSrc*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -550,7 +550,7 @@ void EndDrawImage(CAfxDrawState& ds);
 
 ### <a name="parameters"></a>Parameter
 
-*DS*<br/>
+*ds*<br/>
 [in] Ein Verweis auf die `CAfxDrawState` -Objekt, das übergeben wurde die `PrepareDrawImage` Methode.
 
 ##  <a name="extracticon"></a>  CMFCToolBarImages::ExtractIcon
@@ -585,7 +585,7 @@ static void FillDitheredRect(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Die Koordinaten eines Rechtecks zu füllen.
 
 ### <a name="remarks"></a>Hinweise
@@ -893,7 +893,7 @@ BOOL Load(
 *hinstRes*<br/>
 [in] Eine Instanz der Ressourcen-DLL.
 
-*Hinzufügen*<br/>
+*bAdd*<br/>
 [in] "True", die geladenen Bitmap zum Ersetzen der vorhandenen Bitmap auf die vorhandenen Bitmap, oder "false" hinzu.
 
 *lpszBmpFileName*<br/>
@@ -923,7 +923,7 @@ BOOL LoadStr(
 
 [in] *LpszResourceName*<br/>
 [in] *HinstRes*<br/>
-[in] *hinzufügen*<br/>
+[in] *bAdd*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -939,7 +939,7 @@ static COLORREF __stdcall MapFromSysColor(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Farbe*<br/>
+[in] *color*<br/>
 [in] *bUseRGBQUAD*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
@@ -958,8 +958,8 @@ BOOL MapTo3dColors(
 ### <a name="parameters"></a>Parameter
 
 [in] *bUseRGBQUAD*<br/>
-[in] *ClrSrc*<br/>
-[in] *ClrDest*<br/>
+[in] *clrSrc*<br/>
+[in] *clrDest*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -975,7 +975,7 @@ static COLORREF __stdcall MapToSysColor(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Farbe*<br/>
+[in] *color*<br/>
 [in] *bUseRGBQUAD*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
@@ -990,7 +990,7 @@ static COLORREF __stdcall MapToSysColorAlpha(COLORREF color);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Farbe*<br/>
+[in] *color*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1048,8 +1048,8 @@ static BOOL __stdcall MirrorBitmapVert(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Hbmp*<br/>
-[in] *CyImage*<br/>
+[in] *hbmp*<br/>
+[in] *cyImage*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1085,7 +1085,7 @@ BOOL PreMultiplyAlpha(HBITMAP hbmp);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Hbmp*<br/>
+[in] *hbmp*<br/>
 [in] *bAutoCheckPremlt*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1120,7 +1120,7 @@ BOOL PrepareDrawImage(
 
 ### <a name="parameters"></a>Parameter
 
-*DS*<br/>
+*ds*<br/>
 [in] Ein Verweis auf `CAfxDrawState` -Struktur, die die zugeordneten Ressourcen zwischen darstellungsphasen Bild speichert.
 
 *sizeImageDest*<br/>
@@ -1180,7 +1180,7 @@ static void SetDisabledImageAlpha(BYTE nValue);
 
 ### <a name="parameters"></a>Parameter
 
-*nWert*<br/>
+*nValue*<br/>
 [in] Der neue Wert, der den alpha-Kanal.
 
 ### <a name="remarks"></a>Hinweise

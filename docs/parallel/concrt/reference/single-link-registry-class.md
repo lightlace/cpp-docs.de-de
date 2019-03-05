@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-ms.openlocfilehash: 4f706b4551d71c77e136e4d65d2d6a3183293d8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 20032f393964c8919d2c1a49ec8545400cd9e392
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454495"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290130"
 ---
 # <a name="singlelinkregistry-class"></a>single_link_registry-Klasse
 
@@ -51,7 +51,7 @@ Geben Sie die Blockdaten gespeichert werden, der `single_link_registry` Objekt.
 |----------|-----------------|
 |[add](#add)|Fügt einen Link zu der `single_link_registry` Objekt. (Überschreibt [network_link_registry:: Add](network-link-registry-class.md#add).)|
 |[begin](#begin)|Gibt einen Iterator zurück, auf das erste Element in der `single_link_registry` Objekt. (Überschreibt [network_link_registry:: Begin](network-link-registry-class.md#begin).)|
-|[Enthält](#contains)|Sucht die `single_link_registry` -Objekt für einen angegebenen Block. (Überschreibt [network_link_registry:: Contains](network-link-registry-class.md#contains).)|
+|[contains](#contains)|Sucht die `single_link_registry` -Objekt für einen angegebenen Block. (Überschreibt [network_link_registry:: Contains](network-link-registry-class.md#contains).)|
 |[count](#count)|Zählt die Anzahl der Elemente in der `single_link_registry` Objekt. (Überschreibt [network_link_registry:: Count](network-link-registry-class.md#count).)|
 |[remove](#remove)|Entfernt einen Link von der `single_link_registry` Objekt. (Überschreibt [network_link_registry:: Remove](network-link-registry-class.md#remove).)|
 
@@ -77,7 +77,7 @@ virtual void add(_EType _Link);
 
 ### <a name="parameters"></a>Parameter
 
-*_Mit verknüpfen*<br/>
+*_Link*<br/>
 Ein Zeiger auf einen Block hinzugefügt werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -110,7 +110,7 @@ virtual bool contains(_EType _Link);
 
 ### <a name="parameters"></a>Parameter
 
-*_Mit verknüpfen*<br/>
+*_Link*<br/>
 Ein Zeiger auf einen Block, der für die gesucht werden soll, in der `single_link_registry` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -139,7 +139,7 @@ virtual bool remove(_EType _Link);
 
 ### <a name="parameters"></a>Parameter
 
-*_Mit verknüpfen*<br/>
+*_Link*<br/>
 Ein Zeiger auf einen Block, wenn entfernt wurde gefunden.
 
 ### <a name="return-value"></a>Rückgabewert

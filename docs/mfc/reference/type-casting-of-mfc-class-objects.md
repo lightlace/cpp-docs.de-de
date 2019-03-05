@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting types [MFC]
 - macros [MFC], casting pointers
 ms.assetid: e138465e-c35f-4e84-b788-bd200ccf2f0e
-ms.openlocfilehash: 42b668287905fc5f6e05a09949d53acc51c79026
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3107b860747bc2434ae9afca39b517d8dcc9eb01
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584144"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299360"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>Typumwandlung von MFC-Klassenobjekten
 
@@ -62,10 +62,10 @@ STATIC_DOWNCAST(class_name, pobject)
 
 ### <a name="parameters"></a>Parameter
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Der Name der Klasse dessen Typ umgewandelt wird.
 
-*pObject*<br/>
+*pobject*<br/>
 Der Zeiger auf einen Zeiger auf umgewandelt werden eine *Class_name* Objekt.
 
 ### <a name="remarks"></a>Hinweise

@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: 80d28aa6a71adb72b8a3e0f5cd997577d61d0a52
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: ec3048e7bd033e5c296b558dd2083c648bc377e7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678586"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295356"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem-Klasse
 
@@ -206,7 +206,7 @@ class COleClientItem : public CDocItem
 |[COleClientItem::CreateCloneFrom](#createclonefrom)|Erstellt ein Duplikat eines vorhandenen Elements.|
 |[COleClientItem::CreateFromClipboard](#createfromclipboard)|Erstellt ein eingebettetes Element aus der Zwischenablage an.|
 |[COleClientItem::CreateFromData](#createfromdata)|Erstellt ein eingebettetes Element von einem Datenobjekt.|
-|[CreateFromFile](#createfromfile)|Erstellt ein eingebettetes Element aus einer Datei an.|
+|[COleClientItem::CreateFromFile](#createfromfile)|Erstellt ein eingebettetes Element aus einer Datei an.|
 |[COleClientItem::CreateLinkFromClipboard](#createlinkfromclipboard)|Erstellt ein verknüpftes Element aus der Zwischenablage an.|
 |[COleClientItem::CreateLinkFromData](#createlinkfromdata)|Erstellt ein verknüpftes Element von einem Datenobjekt.|
 |[COleClientItem::CreateLinkFromFile](#createlinkfromfile)|Erstellt ein verknüpftes Element aus einer Datei an.|
@@ -241,7 +241,7 @@ class COleClientItem : public CDocItem
 |[COleClientItem::IsRunning](#isrunning)|Gibt TRUE zurück, wenn das Element die Serveranwendung ausgeführt wird.|
 |[COleClientItem::OnActivate](#onactivate)|Wird aufgerufen, durch das Framework, um dem Element zu benachrichtigen, dass es aktiviert ist.|
 |[COleClientItem::OnActivateUI](#onactivateui)|Wird aufgerufen, durch das Framework dem Element benachrichtigt, dass es aktiviert wird und die Benutzeroberfläche angezeigt werden sollte.|
-|[COleClientItem:: OnChange](#onchange)|Wird aufgerufen, wenn der Server das OLE-Element geändert wird. Die Implementierung erforderlich sind.|
+|[COleClientItem::OnChange](#onchange)|Wird aufgerufen, wenn der Server das OLE-Element geändert wird. Die Implementierung erforderlich sind.|
 |[COleClientItem::OnDeactivate](#ondeactivate)|Wird vom Framework aufgerufen, wenn ein Element deaktiviert ist.|
 |[COleClientItem::OnDeactivateUI](#ondeactivateui)|Vom Framework aufgerufen, wenn der Server die direkte Benutzeroberfläche entfernt wurde.|
 |[COleClientItem::OnGetClipboardData](#ongetclipboarddata)|Wird aufgerufen, durch das Framework zum Abrufen der Daten in die Zwischenablage kopiert werden sollen.|
@@ -267,12 +267,12 @@ class COleClientItem : public CDocItem
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[COleClientItem:: CanActivate](#canactivate)|Wird aufgerufen, durch das Framework, um zu bestimmen, ob die direkte Aktivierung zulässig ist.|
-|[COleClientItem:: OnChangeItemPosition auf](#onchangeitemposition)|Vom Framework aufgerufen, wenn sich die Position eines Elements ändert.|
+|[COleClientItem::CanActivate](#canactivate)|Wird aufgerufen, durch das Framework, um zu bestimmen, ob die direkte Aktivierung zulässig ist.|
+|[COleClientItem::OnChangeItemPosition](#onchangeitemposition)|Vom Framework aufgerufen, wenn sich die Position eines Elements ändert.|
 |[COleClientItem::OnDeactivateAndUndo](#ondeactivateandundo)|Vom Framework aufgerufen, nach der Aktivierung rückgängig zu machen.|
 |[COleClientItem::OnDiscardUndoState](#ondiscardundostate)|Wird aufgerufen, durch das Framework zum Verwerfen von Rückgängig-Statusinformationen des Elements.|
 |[COleClientItem::OnGetClipRect](#ongetcliprect)|Wird aufgerufen, durch das Framework die Auswahlrechteck Koordinaten des Elements zu erhalten.|
-|[COleClientItem:: OnGetItemPosition auf](#ongetitemposition)|Wird aufgerufen, durch das Framework zum Abrufen der Position des Elements relativ zu der Ansicht.|
+|[COleClientItem::OnGetItemPosition](#ongetitemposition)|Wird aufgerufen, durch das Framework zum Abrufen der Position des Elements relativ zu der Ansicht.|
 |[COleClientItem::OnGetWindowContext](#ongetwindowcontext)|Vom Framework aufgerufen, wenn ein Element direkt aktiviert ist.|
 |[COleClientItem::OnScrollBy](#onscrollby)|Wird aufgerufen, durch das Framework das Element in der Ansicht einen Bildlauf durchführen.|
 |[COleClientItem::OnShowItem](#onshowitem)|Wird aufgerufen, durch das Framework zum Anzeigen des OLE-Elements.|
@@ -627,7 +627,7 @@ BOOL CreateFromClipboard(
 
 ### <a name="parameters"></a>Parameter
 
-*Rendern*<br/>
+*render*<br/>
 Flag, das angibt, wie der Server das OLE-Element gerendert wird. Die möglichen Werte finden Sie unter [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) im Windows SDK.
 
 *cfFormat*<br/>
@@ -663,7 +663,7 @@ BOOL CreateFromData(
 *pDataObject*<br/>
 Zeiger auf die [COleDataObject](../../mfc/reference/coledataobject-class.md) Objekt aus der das OLE-Element erstellt werden.
 
-*Rendern*<br/>
+*render*<br/>
 Flag, das angibt, wie der Server das OLE-Element gerendert wird. Die möglichen Werte finden Sie unter [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) im Windows SDK.
 
 *cfFormat*<br/>
@@ -703,7 +703,7 @@ Zeiger auf den Namen der Datei, aus der das OLE-Element erstellt werden.
 *clsid*<br/>
 Für zukünftige Verwendung reserviert.
 
-*Rendern*<br/>
+*render*<br/>
 Flag, das angibt, wie der Server das OLE-Element gerendert wird. Die möglichen Werte finden Sie unter [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) im Windows SDK.
 
 *cfFormat*<br/>
@@ -735,7 +735,7 @@ BOOL CreateLinkFromClipboard(
 
 ### <a name="parameters"></a>Parameter
 
-*Rendern*<br/>
+*render*<br/>
 Flag, das angibt, wie der Server das OLE-Element gerendert wird. Die möglichen Werte finden Sie unter [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) im Windows SDK.
 
 *cfFormat*<br/>
@@ -771,7 +771,7 @@ BOOL CreateLinkFromData(
 *pDataObject*<br/>
 Zeiger auf die [COleDataObject](../../mfc/reference/coledataobject-class.md) Objekt aus der das OLE-Element erstellt werden.
 
-*Rendern*<br/>
+*render*<br/>
 Flag, das angibt, wie der Server das OLE-Element gerendert wird. Die möglichen Werte finden Sie unter [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) im Windows SDK.
 
 *cfFormat*<br/>
@@ -807,7 +807,7 @@ BOOL CreateLinkFromFile(
 *lpszFileName*<br/>
 Zeiger auf den Namen der Datei, aus der das OLE-Element erstellt werden.
 
-*Rendern*<br/>
+*render*<br/>
 Flag, das angibt, wie der Server das OLE-Element gerendert wird. Die möglichen Werte finden Sie unter [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) im Windows SDK.
 
 *cfFormat*<br/>
@@ -843,7 +843,7 @@ BOOL CreateNewItem(
 *clsid*<br/>
 ID, die den Typ des zu erstellenden OLE-Elements eindeutig identifiziert.
 
-*Rendern*<br/>
+*render*<br/>
 Flag, das angibt, wie der Server das OLE-Element gerendert wird. Die möglichen Werte finden Sie unter [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) im Windows SDK.
 
 *cfFormat*<br/>
@@ -875,7 +875,7 @@ BOOL CreateStaticFromClipboard(
 
 ### <a name="parameters"></a>Parameter
 
-*Rendern*<br/>
+*render*<br/>
 Flag, das angibt, wie der Server das OLE-Element gerendert wird. Die möglichen Werte finden Sie unter [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) im Windows SDK.
 
 *cfFormat*<br/>
@@ -911,7 +911,7 @@ BOOL CreateStaticFromData(
 *pDataObject*<br/>
 Zeiger auf die [COleDataObject](../../mfc/reference/coledataobject-class.md) Objekt aus der das OLE-Element erstellt werden.
 
-*Rendern*<br/>
+*render*<br/>
 Flag, das angibt, wie der Server das OLE-Element gerendert wird. Die möglichen Werte finden Sie unter [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) im Windows SDK.
 
 *cfFormat*<br/>
@@ -1328,13 +1328,13 @@ UINT GetItemState() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein `COleClientItem::ItemState` -Enumerationswert ab, die in der folgenden Werte sind möglich: `emptyState`, `loadedState`, `openState`, `activeState`, `activeUIState`. Informationen zu diesen Statuswerten finden Sie im Artikel [Container: Client-Element-Zustände](../../mfc/containers-client-item-states.md).
+Ein `COleClientItem::ItemState` -Enumerationswert ab, die in der folgenden Werte sind möglich: `emptyState`, `loadedState`, `openState`, `activeState`, `activeUIState`. Informationen zu diesen Statuswerten finden Sie im Artikel [Container: Clientelement-Zustände](../../mfc/containers-client-item-states.md).
 
 ### <a name="remarks"></a>Hinweise
 
 Verwenden, um benachrichtigt zu werden, wenn das OLE-Element-Zustand ändert die [OnChange](#onchange) Member-Funktion.
 
-Weitere Informationen finden Sie im Artikel [Container: Client-Element-Zustände](../../mfc/containers-client-item-states.md).
+Weitere Informationen finden Sie im Artikel [Container: Clientelement-Zustände](../../mfc/containers-client-item-states.md).
 
 ##  <a name="getlaststatus"></a>  COleClientItem::GetLastStatus
 
@@ -1574,7 +1574,7 @@ Für OLE_CHANGED_STATE, der aktuelle Status von zurückgegeben [GetItemState](#g
 
 Überschreiben Sie diese Funktion, um die Reaktion auf Änderungen in den Zustand des OLE-Elements. In der Regel aktualisieren Sie das Element in der Darstellung durch das Ungültigmachen des Bereichs, in dem das Element angezeigt wird. Rufen Sie die basisklassenimplementierung am Anfang der Außerkraftsetzung.
 
-##  <a name="onchangeitemposition"></a>  COleClientItem:: OnChangeItemPosition auf
+##  <a name="onchangeitemposition"></a>  COleClientItem::OnChangeItemPosition
 
 Wird aufgerufen, durch das Framework den Container zu benachrichtigen, den dass das OLE-Element-Block während der Aktivierung des direktes geändert hat.
 
@@ -1719,7 +1719,7 @@ virtual void OnGetItemPosition(CRect& rPosition);
 
 ### <a name="parameters"></a>Parameter
 
-*rposition zurück*<br/>
+*rPosition*<br/>
 Ein Verweis auf die [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das Positionskoordinaten des Elements enthält.
 
 ### <a name="remarks"></a>Hinweise
@@ -1780,7 +1780,7 @@ virtual void OnInsertMenus(
 Verweist auf ein leeres Menü.
 
 *lpMenuWidths*<br/>
-Verweist auf ein Array von sechs LONG-Werte, der angibt, wie viele Menüs in jeder der folgenden Menügruppen sind: Datei, bearbeiten, Container, Fenster Objekt-Hilfe. Die Container-Anwendung ist verantwortlich für die Datei, Container und Fenster im Menügruppen, für die Elemente 0, 2 und 4 dieses Arrays.
+Zeigt auf ein Array von sechs LONG-Werte, der angibt, wie viele Menüs in jeder der folgenden Menügruppen sind: Datei, bearbeiten, Container, Fenster Objekt-Hilfe. Die Container-Anwendung ist verantwortlich für die Datei, Container und Fenster im Menügruppen, für die Elemente 0, 2 und 4 dieses Arrays.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2150,7 +2150,7 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
 *ptd*<br/>
 Zeiger auf eine [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) Datenstruktur, die Informationen über das neue Gerät für die Print-Ziel enthält. NULL kann sein.
 
-*PPD*<br/>
+*ppd*<br/>
 Zeiger auf eine [PRINTDLG](https://msdn.microsoft.com/library/windows/desktop/ms646940) Datenstruktur, die Informationen über das neue Gerät für die Print-Ziel enthält. NULL kann sein.
 
 ### <a name="return-value"></a>Rückgabewert

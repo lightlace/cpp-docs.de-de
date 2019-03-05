@@ -2,12 +2,12 @@
 title: Befehlszuordnungen für DHTML-Bearbeitungsbefehle
 ms.date: 11/04/2016
 ms.assetid: c1b49876-039e-4a26-bb24-ea98ccf254a1
-ms.openlocfilehash: 6c03e8e4a7d84776c3657994c57a72a906046f37
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f84a56876f1108e9b02d44f6ef0dec50f065c57
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558456"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278261"
 ---
 # <a name="dhtml-editing-command-maps"></a>Befehlszuordnungen für DHTML-Bearbeitungsbefehle
 
@@ -19,7 +19,7 @@ Die folgenden Makros können verwendet werden, um die DHTML-Bearbeitungsbefehle 
 |-|-|
 |[DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap)|Deklariert eine Zuordnung DHTML editing-Befehl in einer Klasse.|
 |[BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap)|Startet die Definition einer Zuordnung DHTML editing-Befehl innerhalb einer Klasse.|
-|[BEGIN_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap)|Markiert das Ende einer DHTML-Bearbeitung Befehl Zuordnung.|
+|[END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap)|Markiert das Ende einer DHTML-Bearbeitung Befehl Zuordnung.|
 |[DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry)|Ordnet eine Befehls-ID einen HTML-Befehl.|
 |[DHTMLEDITING_CMD_ENTRY_FUNC](#dhtmlediting_cmd_entry_func)|Ordnet eine Befehls-ID in eine HTML-Bearbeitung-Befehl und die Message-Handler.|
 |[DHTMLEDITING_CMD_ENTRY_TYPE](#dhtmlediting_cmd_entry_type)|Ordnet eine Befehls-ID in eine HTML-Bearbeitung-Befehl und das Element der Debuggerbenutzeroberfläche befindet.|
@@ -35,7 +35,7 @@ DECLARE_DHTMLEDITING_CMDMAP(className)
 
 ### <a name="parameters"></a>Parameter
 
-*Klassenname*<br/>
+*className*<br/>
 Der Name der Klasse.
 
 ### <a name="remarks"></a>Hinweise
@@ -62,7 +62,7 @@ BEGIN_DHTMLEDITING_CMDMAP(className)
 
 ### <a name="parameters"></a>Parameter
 
-*Klassenname*<br/>
+*className*<br/>
 Der Name der Klasse, die die DHTML-Bearbeitung Befehl Zuordnung enthält. Diese Klasse sollte leiten, direkt oder indirekt von [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) und enthalten die [DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap) Makro innerhalb der Klassendefinition.
 
 ### <a name="remarks"></a>Hinweise

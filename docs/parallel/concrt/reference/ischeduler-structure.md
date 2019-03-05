@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
-ms.openlocfilehash: dd280884ab106bcf878b06c94e2ea3d0d99be2e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54db5d664a48f95a952eb1b409839d8ac3421e30
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603215"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274075"
 ---
 # <a name="ischeduler-structure"></a>IScheduler-Struktur
 
@@ -37,13 +37,13 @@ struct IScheduler;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[IScheduler:: AddVirtualProcessors](#addvirtualprocessors)|Stellt einen Zeitplan mit einem Satz der Stämme virtueller Prozessoren für die Verwendung bereit. Jede `IVirtualProcessorRoot` Schnittstelle darstellt, das Recht, einen einzelnen Thread auszuführen, die Aufgaben für den Scheduler ausführen können.|
+|[IScheduler::AddVirtualProcessors](#addvirtualprocessors)|Stellt einen Zeitplan mit einem Satz der Stämme virtueller Prozessoren für die Verwendung bereit. Jede `IVirtualProcessorRoot` Schnittstelle darstellt, das Recht, einen einzelnen Thread auszuführen, die Aufgaben für den Scheduler ausführen können.|
 |[IScheduler::GetId](#getid)|Gibt einen eindeutigen Bezeichner für den Planer zurück.|
-|[IScheduler:: GetPolicy](#getpolicy)|Gibt eine Kopie des Planers-Richtlinie. Weitere Informationen zu Planerrichtlinien, finden Sie unter [SchedulerPolicy](schedulerpolicy-class.md).|
-|[IScheduler:: NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|Benachrichtigt diesen Planer, der die Hardwarethreads durch die Menge der Stämme virtueller Prozessoren im Array dargestellt `ppVirtualProcessorRoots` jetzt von anderen Planern verwendet werden.|
-|[IScheduler:: NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|Benachrichtigt diesen Planer, der die Hardwarethreads durch die Menge der Stämme virtueller Prozessoren im Array dargestellt `ppVirtualProcessorRoots` werden nicht von anderen Planern verwendet wird.|
+|[IScheduler::GetPolicy](#getpolicy)|Gibt eine Kopie des Planers-Richtlinie. Weitere Informationen zu Planerrichtlinien, finden Sie unter [SchedulerPolicy](schedulerpolicy-class.md).|
+|[IScheduler::NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|Benachrichtigt diesen Planer, der die Hardwarethreads durch die Menge der Stämme virtueller Prozessoren im Array dargestellt `ppVirtualProcessorRoots` jetzt von anderen Planern verwendet werden.|
+|[IScheduler::NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|Benachrichtigt diesen Planer, der die Hardwarethreads durch die Menge der Stämme virtueller Prozessoren im Array dargestellt `ppVirtualProcessorRoots` werden nicht von anderen Planern verwendet wird.|
 |[IScheduler::RemoveVirtualProcessors](#removevirtualprocessors)|Initiiert die Entfernung der Stämme virtueller Prozessoren, die zuvor auf diesem Planer zugeordnet wurden.|
-|[IScheduler:: STATISTICS](#statistics)|Enthält Informationen, die im Zusammenhang mit der Aufgabe Eingang und Abschluss von Sätzen, und ändern Sie in der Länge der Warteschlange für einen Planer.|
+|[IScheduler::Statistics](#statistics)|Enthält Informationen, die im Zusammenhang mit der Aufgabe Eingang und Abschluss von Sätzen, und ändern Sie in der Länge der Warteschlange für einen Planer.|
 
 ## <a name="remarks"></a>Hinweise
 

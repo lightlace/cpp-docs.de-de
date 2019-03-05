@@ -7,12 +7,12 @@ helpviewer_keywords:
 - StringRegister method
 - scripts, invoking registry in ATL
 ms.assetid: eabd41ee-586b-4266-9e92-5aaad04b73a4
-ms.openlocfilehash: 170eb4c29571fcec8797727f54630894c9198442
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a604b6105612ad89a12026121c464028535d7df
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650553"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287816"
 ---
 # <a name="invoking-scripts"></a>Aufrufen von Skripts
 
@@ -22,7 +22,7 @@ ms.locfileid: "50650553"
 |------------|-------------------------|
 |**ResourceRegister**|**HRESULT ResourceRegister (LPCOLESTR***ResFileName* **, "uint"** `nID` **, LPCOLESTR** `szType` **);**<br /><br /> Registriert das Skript in der Ressource eines Moduls enthalten. *ResFileName* gibt den UNC-Pfad für das Modul selbst. *nID* und *SzType* enthalten bzw. die ID und den Typ der Ressource.|
 |**ResourceUnregister**|**HRESULT ResourceUnregister (LPCOLESTR***ResFileName* **, "uint"** `nID` **, LPCOLESTR** `szType` **);**<br /><br /> Hebt die Registrierung des Skripts, die in der Ressource eines Moduls enthalten. *ResFileName* gibt den UNC-Pfad für das Modul selbst. *nID* und *SzType* enthalten bzw. die ID und den Typ der Ressource.|
-|**ResourceRegisterSz**|**HRESULT ResourceRegisterSz (LPCOLESTR***ResFileName* **, LPCOLESTR***SzID* **, LPCOLESTR** `szType` **);**<br /><br /> Registriert das Skript in der Ressource eines Moduls enthalten. *ResFileName* gibt den UNC-Pfad für das Modul selbst. *SzID* und *SzType* enthalten bzw. Zeichenfolgenbezeichner und den Typ der Ressource.|
+|**ResourceRegisterSz**|**HRESULT ResourceRegisterSz( LPCOLESTR**  *resFileName* **, LPCOLESTR**  *szID* **, LPCOLESTR**  `szType` **);**<br /><br /> Registriert das Skript in der Ressource eines Moduls enthalten. *ResFileName* gibt den UNC-Pfad für das Modul selbst. *SzID* und *SzType* enthalten bzw. Zeichenfolgenbezeichner und den Typ der Ressource.|
 |**ResourceUnregisterSz**|**HRESULT ResourceUnregisterSz (LPCOLESTR***ResFileName* **, LPCOLESTR***SzID* **, LPCOLESTR** `szType` **);**<br /><br /> Hebt die Registrierung des Skripts, die in der Ressource eines Moduls enthalten. *ResFileName* gibt den UNC-Pfad für das Modul selbst. *SzID* und *SzType* enthalten bzw. Zeichenfolgenbezeichner und den Typ der Ressource.|
 |**FileRegister**|**HRESULT FileRegister (LPCOLESTR***FileName***);**<br /><br /> Registriert das Skript in einer Datei an. *FileName* ist ein UNC-Pfad zu einer Datei, die ein Ressourcenskript enthält (oder ist).|
 |**FileUnregister**|**HRESULT FileUnregister (LPCOLESTR***FileName***);**<br /><br /> Hebt die Registrierung des Skripts in einer Datei. *FileName* ist ein UNC-Pfad zu einer Datei, die ein Ressourcenskript enthält (oder ist).|
@@ -36,4 +36,3 @@ Die Methoden **FileRegister** und **FileUnregister** sind nützlich, wenn Sie ni
 ## <a name="see-also"></a>Siehe auch
 
 [Erstellen von Registrierungsskripts](../atl/creating-registrar-scripts.md)
-

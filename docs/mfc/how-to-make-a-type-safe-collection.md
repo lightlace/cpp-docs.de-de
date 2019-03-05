@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Erstellen einer typsicheren Auflistung'
+title: 'Vorgehensweise: Erstellen einer typsicheren Auflistung'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - type-safe collections [MFC]
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-ms.openlocfilehash: 12ecec7562a9241fab30b859727a22e467e6eeb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4241a77184458f5253b6d8987c310604310683c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581791"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295187"
 ---
-# <a name="how-to-make-a-type-safe-collection"></a>Gewusst wie: Erstellen einer typsicheren Auflistung
+# <a name="how-to-make-a-type-safe-collection"></a>Vorgehensweise: Erstellen einer typsicheren Auflistung
 
 In diesem Artikel wird erläutert, wie Sie typsichere Auflistungen für Ihre eigenen Datentypen. Folgende Themen werden behandelt:
 
@@ -100,4 +100,3 @@ Es gibt zwei Möglichkeiten, typsichere Auflistungen mit den nicht auf Vorlagen 
 ## <a name="see-also"></a>Siehe auch
 
 [Sammlungen](../mfc/collections.md)
-

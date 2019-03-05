@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Fields collection
 - CDaoFieldInfo structure [MFC]
 ms.assetid: 91b13e3f-bdb8-440c-86fc-ba4181ea0182
-ms.openlocfilehash: 80a541028a6ba7daf60a8d1afbd6cf7ba3557202
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5c4013a323c85ad19a3fade20f76852e053362a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629423"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275141"
 ---
 # <a name="cdaofieldinfo-structure"></a>CDaoFieldInfo-Struktur
 
@@ -144,7 +144,7 @@ Der Standardwert eines DAO-Feld-Objekts. Wenn ein neuer Datensatz erstellt wird,
 
 Die Verweise auf die primäre, sekundäre und alle oben angegeben, wie die Informationen zurückgegeben werden, indem die `GetFieldInfo` Memberfunktion in Klassen [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getfieldinfo), [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo), und [ CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getfieldinfo).
 
-Field-Objekte werden nicht durch eine MFC-Klasse dargestellt. Stattdessen die DAO-Objekte, die zugrunde liegende MFC-Objekten, die folgenden Klassen enthalten Auflistungen von Feld-Objekten: [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md), [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md), und [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md). Diese Klassen geben Member-Funktionen für den Zugriff auf einige Elemente Feldinformationen an, oder darauf gleichzeitig mit zugreifen eine `CDaoFieldInfo` -Objekt durch Aufrufen der `GetFieldInfo` Memberfunktion Rand des enthaltenden Objekts.
+Field-Objekte werden nicht durch eine MFC-Klasse dargestellt. Stattdessen enthalten die DAO-Objekte, die zugrunde liegende MFC-Objekten, die folgenden Klassen Auflistungen von Feld-Objekten: [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md), [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md), und [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md). Diese Klassen geben Member-Funktionen für den Zugriff auf einige Elemente Feldinformationen an, oder darauf gleichzeitig mit zugreifen eine `CDaoFieldInfo` -Objekt durch Aufrufen der `GetFieldInfo` Memberfunktion Rand des enthaltenden Objekts.
 
 Neben dem deren Verwendung zum Untersuchen von Objekteigenschaften können Sie auch `CDaoFieldInfo` um einen Eingabeparameter für das Erstellen neuer Felder in einer Tabledef zu erstellen. Für diese Aufgabe einfachere Optionen zur Verfügung, aber wenn Sie eine präzisere Kontrolle wünschen, können Sie die Version des [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield) , akzeptiert eine `CDaoFieldInfo` Parameter.
 
@@ -160,4 +160,3 @@ Informationen, die abgerufen, indem die `GetFieldInfo` Member-Funktion (der Klas
 [CDaoTableDef::GetFieldInfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)<br/>
 [CDaoRecordset::GetFieldInfo](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)<br/>
 [CDaoQueryDef::GetFieldInfo](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)
-

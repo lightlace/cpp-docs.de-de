@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCommandLineInfo [MFC], m_strPrinterName
 - CCommandLineInfo [MFC], m_strRestartIdentifier
 ms.assetid: 3e313ddb-0a82-4991-87ac-a27feff4668c
-ms.openlocfilehash: 60c0ae66234d5fb3be61d9249cf61ee77dff41ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e4b535da00fdcecf4ce52fad696cb5d2bc55efa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481470"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303026"
 ---
 # <a name="ccommandlineinfo-class"></a>CCommandLineInfo-Klasse
 
@@ -85,11 +85,11 @@ Dieses Objekt können Sie um die folgenden Befehlszeilenoptionen und Parameter z
 |*App* Dateiname|Um die Datei zu öffnen.|
 |*App* `/p` Dateiname|Drucken Sie Datei auf dem Standarddrucker.|
 |*App* `/pt` Filename-Druckeranschluss für Treiber|Datei mit dem angegebenen Drucker zu drucken.|
-|*App* `/dde`|Starten und "await" DDE-Befehl.|
-|*App* `/Automation`|Als ein OLE-Automatisierungsserver starten.|
-|*App* `/Embedding`|Starten Sie ein eingebettetes OLE-Element zu bearbeiten.|
-|*App* `/Register`<br /><br /> *App* `/Regserver`|Informiert die Anwendung aus, um alle Registrierungsaufgaben durchzuführen.|
-|*App* `/Unregister`<br /><br /> *App* `/Unregserver`|Informiert die Anwendung aus, um alle Aufgaben für die Aufhebung der Registrierung durchzuführen.|
+|*app* `/dde`|Starten und "await" DDE-Befehl.|
+|*app* `/Automation`|Als ein OLE-Automatisierungsserver starten.|
+|*app* `/Embedding`|Starten Sie ein eingebettetes OLE-Element zu bearbeiten.|
+|*app* `/Register`<br /><br /> *app* `/Regserver`|Informiert die Anwendung aus, um alle Registrierungsaufgaben durchzuführen.|
+|*app* `/Unregister`<br /><br /> *app* `/Unregserver`|Informiert die Anwendung aus, um alle Aufgaben für die Aufhebung der Registrierung durchzuführen.|
 
 Leiten Sie eine neue Klasse von `CCommandLineInfo` anderen Flags und Parameterwerte zu behandeln. Außer Kraft setzen [ParseParam](#parseparam) , behandeln die neuen Flags.
 
@@ -308,11 +308,11 @@ Die Standardimplementierung dieser Funktion erkennt die folgenden Flags: `/p`, `
 |*App* Dateiname|Um die Datei zu öffnen.|
 |*App* `/p` Dateiname|Drucken Sie Datei auf dem Standarddrucker.|
 |*App* `/pt` Filename-Druckeranschluss für Treiber|Datei mit dem angegebenen Drucker zu drucken.|
-|*App* `/dde`|Starten und "await" DDE-Befehl.|
-|*App* `/Automation`|Als ein OLE-Automatisierungsserver starten.|
-|*App* `/Embedding`|Starten Sie ein eingebettetes OLE-Element zu bearbeiten.|
-|*App* `/Register`<br /><br /> *App* `/Regserver`|Informiert die Anwendung aus, um alle Registrierungsaufgaben durchzuführen.|
-|*App* `/Unregister`<br /><br /> *App* `/Unregserver`|Informiert die Anwendung aus, um alle Aufgaben für die Aufhebung der Registrierung durchzuführen.|
+|*app* `/dde`|Starten und "await" DDE-Befehl.|
+|*app* `/Automation`|Als ein OLE-Automatisierungsserver starten.|
+|*app* `/Embedding`|Starten Sie ein eingebettetes OLE-Element zu bearbeiten.|
+|*app* `/Register`<br /><br /> *app* `/Regserver`|Informiert die Anwendung aus, um alle Registrierungsaufgaben durchzuführen.|
+|*app* `/Unregister`<br /><br /> *app* `/Unregserver`|Informiert die Anwendung aus, um alle Aufgaben für die Aufhebung der Registrierung durchzuführen.|
 
 Diese Informationen werden gespeichert, [M_bRunAutomated](#m_brunautomated), [M_bRunEmbedded](#m_brunembedded), und [M_nShellCommand](#m_nshellcommand). Flags werden markiert, entweder einen Schrägstrich ' **/**'oder Bindestrich' **-**".
 
@@ -328,4 +328,3 @@ Die standardmäßige Implementierung setzt auch [M_bShowSplash](#m_bshowsplash) 
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)<br/>
 [CWinApp::ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand)
-

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - tear-off interfaces
 - CComTearOffObject class
 ms.assetid: d974b598-c6b2-42b1-8360-9190d9d0fbf3
-ms.openlocfilehash: 78e9bda9c21ce53fa5b775b83be5c978c3fa1431
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd35b1e9e69c97402dd1ec357fd25fa1dcd5dd49
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555258"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274608"
 ---
 # <a name="ccomtearoffobject-class"></a>CComTearOffObject-Klasse
 
@@ -47,7 +47,7 @@ ATL implementiert die abtrennbare Schnittstellen in zwei Phasen – die `CComTea
 |Name|Beschreibung|
 |----------|-----------------|
 |[CComTearOffObject::CComTearOffObject](#ccomtearoffobject)|Der Konstruktor.|
-|[CComTearOffObject:: ~ CComTearOffObject](#dtor)|Der Destruktor.|
+|[CComTearOffObject::~CComTearOffObject](#dtor)|Der Destruktor.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -113,7 +113,7 @@ CComTearOffObject(void* pv);
 
 ### <a name="parameters"></a>Parameter
 
-*PV*<br/>
+*pv*<br/>
 [in] Zeiger, der auf einen Zeiger auf konvertiert werden, wird eine `CComObject<Owner>` Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -171,7 +171,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parameter
 
-*IID*<br/>
+*iid*<br/>
 [in] Die IID der Schnittstelle angefordert wird.
 
 *ppvObject*<br/>

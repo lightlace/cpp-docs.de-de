@@ -5,12 +5,12 @@ helpviewer_keywords:
 - exception handling, converting from OpenMP to the Concurrency Runtime
 - converting from OpenMP to the Concurrency Runtime, exception handling
 ms.assetid: 03c28196-21ba-439e-8641-afab1c283e1a
-ms.openlocfilehash: 9fa5ff2bcdfa6680dde6e9316d143089bf586671
-ms.sourcegitcommit: ee0103752884425843556a19cf418a504dc3cd02
+ms.openlocfilehash: 118cf3e485fa78ae3eaa5efe34708924b89d6588
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53740498"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285151"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-exception-handling-to-use-the-concurrency-runtime"></a>Vorgehensweise: Konvertieren einer OpenMP-Schleife, die Ausnahmebehandlung verwendet wird, um die Verwendung der Concurrency Runtime
 
@@ -56,11 +56,10 @@ Weitere Informationen zu `parallel_for` und anderen parallelen Algorithmen finde
 
 Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, oder fügen Sie ihn in eine Datei mit dem Namen `concrt-omp-exceptions.cpp` und führen Sie dann den folgenden Befehl in einem Fenster von Visual Studio-Eingabeaufforderung.
 
-**CL.exe/EHsc/OpenMP Concrt-Omp-exceptions.cpp**
+**cl.exe /EHsc /openmp concrt-omp-exceptions.cpp**
 
 ## <a name="see-also"></a>Siehe auch
 
 [Migrieren von OpenMP zur Concurrency Runtime](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [Ausnahmebehandlung](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
 [Parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md)
-

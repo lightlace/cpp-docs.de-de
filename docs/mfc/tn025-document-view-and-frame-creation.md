@@ -1,5 +1,5 @@
 ---
-title: 'TN025: Dokument-, Ansicht- und Frame-Erstellung'
+title: 'TN025: Dokument, Ansicht und dem Frame-Erstellung'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.creation
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - documents [MFC], view and frame creation
 - TN025
 ms.assetid: 09254d72-6e1d-43db-80e9-693887dbeda2
-ms.openlocfilehash: aa8bc305848ce95e0b5bfef1ac6785b18bc84015
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4958e7c4ca2c3cf9eed6420d72d0399fa112098d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50634758"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284683"
 ---
-# <a name="tn025-document-view-and-frame-creation"></a>TN025: Dokument-, Ansicht- und Frame-Erstellung
+# <a name="tn025-document-view-and-frame-creation"></a>TN025: Dokument, Ansicht und dem Frame-Erstellung
 
 > [!NOTE]
 >  Der folgende technische Hinweis wurde seit dem ersten Erscheinen in der Onlinedokumentation nicht aktualisiert. Daher können einige Verfahren und Themen veraltet oder falsch sein. Um aktuelle Informationen zu erhalten, wird empfohlen, das gewünschte Thema im Index der Onlinedokumentation zu suchen.
@@ -71,4 +71,3 @@ Für eine MDI-Rahmenfenster wird der Clientbereich mit dem MDICLIENT-Steuereleme
 
 [Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)<br/>
 [Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)
-

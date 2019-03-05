@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CD2DGeometrySink [MFC], SetSegmentFlags
 - CD2DGeometrySink [MFC], m_pSink
 ms.assetid: e5e07f41-0343-4ab1-9d6b-8c62ed33c04a
-ms.openlocfilehash: ff68cc737f28763e5545b0ccaf2c0122e78cb051
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48c88f0b837b2e49e4c87f07a9aa28c16a66c1e3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654676"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271202"
 ---
 # <a name="cd2dgeometrysink-class"></a>CD2DGeometrySink-Klasse
 
@@ -62,7 +62,7 @@ class CD2DGeometrySink;
 |Name|Beschreibung|
 |----------|-----------------|
 |[CD2DGeometrySink::CD2DGeometrySink](#cd2dgeometrysink)|Erstellt ein Objekt CD2DGeometrySink CD2DPathGeometry-Objekts.|
-|[CD2DGeometrySink:: ~ CD2DGeometrySink](#_dtorcd2dgeometrysink)|Der Destruktor. Wird aufgerufen, wenn Senke D2D Geometry-Objekt zerstört wird.|
+|[CD2DGeometrySink::~CD2DGeometrySink](#_dtorcd2dgeometrysink)|Der Destruktor. Wird aufgerufen, wenn Senke D2D Geometry-Objekt zerstört wird.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -87,7 +87,7 @@ class CD2DGeometrySink;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CD2DGeometrySink::Operator ID2D1GeometrySink *](#operator_id2d1geometrysink_star)|Gibt die ID2D1GeometrySink-Schnittstelle|
+|[CD2DGeometrySink::operator ID2D1GeometrySink*](#operator_id2d1geometrysink_star)|Gibt die ID2D1GeometrySink-Schnittstelle|
 
 ### <a name="protected-data-members"></a>Geschützte Datenmember
 
@@ -121,7 +121,7 @@ void AddArc(const D2D1_ARC_SEGMENT& arc);
 
 ### <a name="parameters"></a>Parameter
 
-*Einen Bogen konvertiert.*<br/>
+*arc*<br/>
 Das Bogensegment in der Abbildung hinzu
 
 ##  <a name="addbezier"></a>  CD2DGeometrySink::AddBezier
@@ -134,7 +134,7 @@ void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 
 ### <a name="parameters"></a>Parameter
 
-*Bezier*<br/>
+*bezier*<br/>
 Eine Struktur, die beschreibt, die Control-Punkte und Endpunkt der Bezier-Kurve hinzufügen.
 
 ##  <a name="addbeziers"></a>  CD2DGeometrySink::AddBeziers
@@ -149,7 +149,7 @@ void AddBeziers(
 
 ### <a name="parameters"></a>Parameter
 
-*Beziers*<br/>
+*beziers*<br/>
 Ein Array von Bezier-Segmente, die beschreibt, die Bezier-Kurven zu erstellen. Eine Kurve gezeichnet wird an den Endpunkt, der das erste Bezier-Segment in das Array vom aktuellen Punkt von der Geometriesenke (der Endpunkt das letzte Segment gezeichnet oder den Speicherort, der durch BeginFigure angegeben). Wenn das Array zusätzliche Bezier-Segmente enthält, verwendet jedes nachfolgende Bezier-Segment der Endpunkt des vorherigen Segments Bezier als Anfangspunkt.
 
 ##  <a name="addline"></a>  CD2DGeometrySink::AddLine
@@ -162,7 +162,7 @@ void AddLine(CD2DPointF point);
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Der Endpunkt der Linie zu zeichnen.
 
 ##  <a name="addlines"></a>  CD2DGeometrySink::AddLines
@@ -177,7 +177,7 @@ void AddLines(
 
 ### <a name="parameters"></a>Parameter
 
-*Punkte*<br/>
+*points*<br/>
 Ein Array von einem oder mehreren Punkten, die beschreiben, die Zeilen, die gezeichnet werden soll. Eine Zeile wird dem ersten Punkt im Array vom aktuellen Punkt von der Geometriesenke (der Endpunkt das letzte Segment gezeichnet oder den Speicherort, der anhand des BeginFigure) gezeichnet. Wenn das Array zusätzliche Punkte enthält, wird eine Linie zwischen dem ersten zum zweiten Punkt im Array, aus der zweiten, zeigen Sie auf der dritten Punkt usw. gezeichnet. Ein Array aus einer Folge von den Endpunkten der Linien zu zeichnen.
 
 ##  <a name="addquadraticbezier"></a>  CD2DGeometrySink::AddQuadraticBezier
@@ -190,7 +190,7 @@ void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 
 ### <a name="parameters"></a>Parameter
 
-*Bezier*<br/>
+*bezier*<br/>
 Eine Struktur, die beschreibt, der Kontrollpunkt und dem Endpunkt der quadratischen Bezier-Kurve hinzufügen.
 
 ##  <a name="addquadraticbeziers"></a>  CD2DGeometrySink::AddQuadraticBeziers
@@ -205,7 +205,7 @@ void AddQuadraticBeziers(
 
 ### <a name="parameters"></a>Parameter
 
-*Beziers*<br/>
+*beziers*<br/>
 Ein Array aus einer Folge von quadratischen Bezier-Segmente.
 
 ##  <a name="beginfigure"></a>  CD2DGeometrySink::BeginFigure

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - serialization [MFC], serializable classes
 - no default constructor
 ms.assetid: 59a14d32-1cc8-4275-9829-99639beee27c
-ms.openlocfilehash: aa9a7f6cb1cb28c701e3954cad27e60cf9f7df4f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 995744381c8f82dc637e4aa0452e37af170b168b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486969"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281459"
 ---
 # <a name="serialization-making-a-serializable-class"></a>Serialisierung: Erstellen einer serialisierbaren Klasse
 
@@ -97,4 +97,3 @@ Nachdem Sie eine serialisierbare Klasse haben, können Sie Objekte der Klasse se
 ## <a name="see-also"></a>Siehe auch
 
 [Serialisierung](../mfc/serialization-in-mfc.md)
-

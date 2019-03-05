@@ -9,12 +9,12 @@ helpviewer_keywords:
 - IServiceProviderImpl class
 - IServiceProvider interface, ATL implementation
 ms.assetid: 251254d3-c4ce-40d7-aee0-3d676d1d72f2
-ms.openlocfilehash: 231c65d92ff287e35d5475109e70d21f5a047baa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e52c28d528e187713d2d0925fed23bd8cd4493d5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609884"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298671"
 ---
 # <a name="iserviceproviderimpl-class"></a>IServiceProviderImpl-Klasse
 
@@ -38,17 +38,17 @@ Abgeleitet von die Klasse `IServiceProviderImpl`.
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[IServiceProviderImpl:: QueryService](#queryservice)|Erstellt oder auf den angegebenen Dienst zugreift, und gibt einen Schnittstellenzeiger zurück, auf die angegebene Schnittstelle für den Dienst.|
+|[IServiceProviderImpl::QueryService](#queryservice)|Erstellt oder auf den angegebenen Dienst zugreift, und gibt einen Schnittstellenzeiger zurück, auf die angegebene Schnittstelle für den Dienst.|
 
 ## <a name="remarks"></a>Hinweise
 
 Die `IServiceProvider` Schnittstelle sucht einen angegebenen Dienst mithilfe der GUID und gibt Sie den Schnittstellenzeiger für die angeforderte Schnittstelle zurück, für den Dienst. Klasse `IServiceProviderImpl` stellt eine Standardimplementierung dieser Schnittstelle bereit.
 
-`IServiceProviderImpl` Gibt an, eine Methode: [QueryService](#queryservice), die erstellt wird, oder den angegebenen Dienst zugreift und gibt einen Schnittstellenzeiger zurück, auf die angegebene Schnittstelle für den Dienst.
+`IServiceProviderImpl` Gibt eine Methode an: ["QueryService"](#queryservice), die erstellt wird, oder den angegebenen Dienst zugreift und gibt einen Schnittstellenzeiger zurück, auf die angegebene Schnittstelle für den Dienst.
 
 `IServiceProviderImpl` verwendet eine dienstzuordnung, beginnend mit [BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map) und endend mit [END_SERVICE_MAP](service-map-macros.md#end_service_map).
 
-Die dienstzuordnung enthält zwei Einträge: [SERVICE_ENTRY](service-map-macros.md#service_entry), die eine vom Objekt unterstützte angegebenen Dienst-Id (SID) angibt und [SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain), welche Aufrufe `QueryService` , eine Verkettung mit einer anderen -Objekt.
+Die dienstzuordnung enthält zwei Einträge: [SERVICE_ENTRY](service-map-macros.md#service_entry), die eine vom Objekt unterstützte angegebenen Dienst-Id (SID) angibt und [SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain), welche Aufrufe `QueryService` , eine Verkettung mit einem anderen Objekt.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -60,7 +60,7 @@ Die dienstzuordnung enthält zwei Einträge: [SERVICE_ENTRY](service-map-macros.
 
 **Header:** atlcom.h
 
-##  <a name="queryservice"></a>  IServiceProviderImpl:: QueryService
+##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService
 
 Erstellt oder auf den angegebenen Dienst zugreift, und gibt einen Schnittstellenzeiger zurück, auf die angegebene Schnittstelle für den Dienst.
 

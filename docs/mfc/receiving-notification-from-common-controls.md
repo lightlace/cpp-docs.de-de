@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Windows common controls [MFC], notifications
 - WM_NOTIFY message
 ms.assetid: 50194592-d60d-44d0-8ab3-338a2a2c63e7
-ms.openlocfilehash: 8813a7f86bde417b48d5ab2d943d296efef5e91c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb923374866aa8348f9b895c9b97915817564883
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542648"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287426"
 ---
 # <a name="receiving-notification-from-common-controls"></a>Empfangen von Benachrichtigungen von Standardsteuerelementen
 
@@ -48,4 +48,3 @@ An diesem Punkt befindet sich die Position des Mauszeigers Cursor in die `cursor
 
 [Erstellen und Verwenden von Steuerelementen](../mfc/making-and-using-controls.md)<br/>
 [Steuerelemente](../mfc/controls-mfc.md)
-

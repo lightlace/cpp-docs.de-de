@@ -1,5 +1,5 @@
 ---
-title: 'MFC-ActiveX-Steuerelemente: Serialisierung'
+title: 'MFC-ActiveX-Steuerelemente: Serialisieren von'
 ms.date: 09/12/2018
 f1_keywords:
 - _wVerMinor
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - versioning ActiveX controls
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
-ms.openlocfilehash: fddd09ad7a3dc7d9211480bb21ac434419a48758
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c1c845640be2dfaa6aeda2defb478afb650b83b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522212"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303346"
 ---
-# <a name="mfc-activex-controls-serializing"></a>MFC-ActiveX-Steuerelemente: Serialisierung
+# <a name="mfc-activex-controls-serializing"></a>MFC-ActiveX-Steuerelemente: Serialisieren von
 
 In diesem Artikel wird erläutert, wie ein ActiveX-Steuerelement serialisiert wird. Serialisierung wird die Variable gelesen oder auf ein persistentes Speichermedium, z. B. eine Datenträgerdatei geschrieben. Die Microsoft Foundation Class (MFC)-Bibliothek bietet integrierte Unterstützung für die Serialisierung in Klasse `CObject`. `COleControl` Diese Unterstützung für ActiveX-Steuerelemente durch die Verwendung einer Eigenschaft Austauschmechanismus erweitert wird.
 
@@ -54,20 +54,20 @@ Die folgende Tabelle enthält die möglichen Eigenschaft Exchange-Funktionen, di
 
 |Exchange-Eigenschaftenfunktionen|Zweck|
 |---------------------------------|-------------|
-|**PX_Blob)**|Serialisiert ein Binary Large Object (BLOB) Data-Eigenschaft.|
-|**PX_Bool)**|Serialisiert eine Eigenschaft vom Typ Boolean.|
-|**PX_Color)**|Serialisiert die Color-Eigenschaft eines Typs.|
-|**PX_Currency)**|Einen Typ serialisiert **CY** (Währung)-Eigenschaft.|
-|**PX_Double)**|Einen Typ serialisiert **doppelte** Eigenschaft.|
-|**PX_Font)**|Serialisiert eine Schriftart-Type-Eigenschaft.|
-|**PX_Float)**|Einen Typ serialisiert **"float"** Eigenschaft.|
-|**PX_IUnknown)**|Serialisiert eine Eigenschaft des Typs `LPUNKNOWN`.|
-|**PX_Long)**|Einen Typ serialisiert **lange** Eigenschaft.|
-|**PX_Picture)**|Serialisiert eine Bildeigenschaft-Typ.|
-|**PX_Short)**|Einen Typ serialisiert **kurze** Eigenschaft.|
-|**PXstring)**|Einen Typ serialisiert `CString` Eigenschaft.|
-|**PX_ULong)**|Einen Typ serialisiert **ULONG** Eigenschaft.|
-|**PX_UShort)**|Einen Typ serialisiert **USHORT** Eigenschaft.|
+|**PX_Blob( )**|Serialisiert ein Binary Large Object (BLOB) Data-Eigenschaft.|
+|**PX_Bool( )**|Serialisiert eine Eigenschaft vom Typ Boolean.|
+|**PX_Color( )**|Serialisiert die Color-Eigenschaft eines Typs.|
+|**PX_Currency( )**|Einen Typ serialisiert **CY** (Währung)-Eigenschaft.|
+|**PX_Double( )**|Einen Typ serialisiert **doppelte** Eigenschaft.|
+|**PX_Font( )**|Serialisiert eine Schriftart-Type-Eigenschaft.|
+|**PX_Float( )**|Einen Typ serialisiert **"float"** Eigenschaft.|
+|**PX_IUnknown( )**|Serialisiert eine Eigenschaft des Typs `LPUNKNOWN`.|
+|**PX_Long( )**|Einen Typ serialisiert **lange** Eigenschaft.|
+|**PX_Picture( )**|Serialisiert eine Bildeigenschaft-Typ.|
+|**PX_Short( )**|Einen Typ serialisiert **kurze** Eigenschaft.|
+|**PXstring( )**|Einen Typ serialisiert `CString` Eigenschaft.|
+|**PX_ULong( )**|Einen Typ serialisiert **ULONG** Eigenschaft.|
+|**PX_UShort( )**|Einen Typ serialisiert **USHORT** Eigenschaft.|
 
 Weitere Informationen zu dieser Eigenschaft Exchange-Funktionen, finden Sie unter [Persistenz der OLE-Steuerelemente](../mfc/reference/persistence-of-ole-controls.md) in die *MFC-Referenz*.
 
@@ -96,4 +96,3 @@ In der Standardeinstellung konvertiert"ein Steuerelement" alte Daten in das aktu
 ## <a name="see-also"></a>Siehe auch
 
 [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)
-

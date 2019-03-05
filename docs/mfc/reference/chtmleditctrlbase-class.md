@@ -220,12 +220,12 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: 11bfa8304b51ed25b934a97109db7da7bb39f49a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebc296c66ee818e5c72207e0ca7b436f386fb68d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590137"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293939"
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase-Klasse
 
@@ -395,10 +395,10 @@ Der Tagname (z. B. "P" oder "Table").
 Die Bild-URL.
 
 *nTagType*<br/>
-Tagtyp: 0 bedeutet, dass das Bild für das Anfangstag nur. 1 bedeutet, dass das Image für das Endtag nur. 2 bedeutet, dass das Image für die öffnenden und schließenden Tags. Einzelne Tags wie Br und Kommentar müssen mit dem Tagtyp, der auf 0 festgelegt hinzugefügt werden.
+Tagtyp: 0 bedeutet, dass das Image für das Anfangstag nur. 1 bedeutet, dass das Image für das Endtag nur. 2 bedeutet, dass das Image für die öffnenden und schließenden Tags. Einzelne Tags wie Br und Kommentar müssen mit dem Tagtyp, der auf 0 festgelegt hinzugefügt werden.
 
 *nAlignment*<br/>
-Ausrichtung (nur rechteckigen Elemente): dieser Parameter gibt an, dass das Bild für ein Element mit dem ein Ausrichtungsattribut. Links = 0, Center = 1, rechts = 2 und undefined = 3. Gelassen wird, müssen rechts oder zentriert Attribute explizit für das Element festgelegt werden.
+Ausrichtung (nur rechteckigen Elemente): Dieser Parameter gibt an, dass das Bild für ein Element mit dem ein Ausrichtungsattribut. Links = 0, Center = 1, rechts = 2 und undefined = 3. Gelassen wird, müssen rechts oder zentriert Attribute explizit für das Element festgelegt werden.
 
 *nPosInfo*<br/>
 Positionierungsinformationen. Bestimmt, welche cascading Positionierung Wert (CSS) Stylesheets das Symbol bezieht, wobei statische Positionierung = 0, absolute Positionierung = 1, relative Positionierung = 2, und alle = 3. Dieses Feld können Sie angeben, ein Symbol für ein Tag, wenn er nicht positioniert ist und ein anderes Symbol einen Ankerpunkt angezeigt, wenn das Tag befindet.
@@ -714,7 +714,7 @@ HRESULT GetBlockFormatNames(CStringArray& sa) const;
 
 ### <a name="parameters"></a>Parameter
 
-*SA*<br/>
+*sa*<br/>
 Die verfügbaren Blockspeicher Format Tags als ein Array von Zeichenfolgen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2566,4 +2566,3 @@ Diese Methode sendet die [IDM UNORDERLIST Befehls-ID](https://msdn.microsoft.com
 
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [HTMLEdit-Beispiel](../../visual-cpp-samples.md)
-

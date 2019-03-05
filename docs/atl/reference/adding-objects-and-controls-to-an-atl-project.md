@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: 0577788e4ab28139943da4b3bd14914799341213
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b442db405ed04c4ebf697089adf3529cd590753a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506131"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57325996"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Hinzufügen von Objekten und Steuerelementen zu einem ATL-Projekt
 
@@ -26,7 +26,7 @@ Sie können eines der ATL-Code-Assistenten verwenden, ein Objekt oder ein Steuer
 |-|-|-|
 |[ATL Simple Object (Einfaches ATL-Objekt)](../../atl/reference/atl-simple-object-wizard.md)|[ATL-Dialogfeld](../../atl/reference/atl-dialog-wizard.md)|[ATL-Steuerelement](../../atl/reference/atl-control-wizard.md)|
 |[ATL-Eigenschaftenseite](../../atl/reference/atl-property-page-wizard.md)|[ATL Active Server Page-Komponente](../../atl/reference/atl-active-server-page-component-wizard.md)|[ATL-OLE DB-Consumers](../../atl/reference/atl-ole-db-consumer-wizard.md)|
-|[ATL-Unterstützung zu MFC hinzufügen](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|[ATL COM+ 1.0 Komponenten-Assistent](../../atl/reference/atl-com-plus-1-0-component-wizard.md)|[ATL-OLE DB-Anbieter](../../atl/reference/atl-ole-db-provider-wizard.md)|
+|[ATL-Unterstützung zu MFC hinzufügen](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|[ATL COM+ 1.0 Komponenten-Assistent](../../atl/reference/atl-com-plus-1-0-component-wizard.md)|[ATL OLE DB Provider](../../atl/reference/atl-ole-db-provider-wizard.md)|
 
 > [!NOTE]
 > Bevor ein ATL-Objekt zu Ihrem Projekt hinzufügen, sollten Sie die Informationen und die Anforderungen für das Objekt in seine Verwandte Hilfethemen überprüfen.
@@ -37,7 +37,7 @@ Sie können eines der ATL-Code-Assistenten verwenden, ein Objekt oder ein Steuer
 
    Die [Klasse hinzufügen](../../ide/add-class-dialog-box.md) Dialogfeld wird angezeigt.
 
-1. Mit der **ATL** im ausgewählten Ordner die **Kategorien** Bereich, wählen Sie ein Objekt zum Einfügen von aus der **Vorlagen** Bereich. Klicken Sie auf **öffnen**. Der Code-Assistenten für das ausgewählte Objekt wird angezeigt.
+1. Mit der **ATL** im ausgewählten Ordner die **Kategorien** Bereich, wählen Sie ein Objekt zum Einfügen von aus der **Vorlagen** Bereich. Klicken Sie auf **Öffnen**. Der Code-Assistenten für das ausgewählte Objekt wird angezeigt.
 
    > [!NOTE]
    > Wenn Sie ein ATL-Objekt zu einem MFC-Projekt hinzufügen möchten, müssen Sie ATL-Unterstützung dem vorhandenen Projekt hinzufügen. Hierzu können Sie die Anweisungen im [ATL-Unterstützung hinzufügen, MFC-Projekt](../../mfc/reference/adding-atl-support-to-your-mfc-project.md).

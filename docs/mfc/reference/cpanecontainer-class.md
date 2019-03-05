@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CPaneContainer [MFC], StoreRecentDockSiteInfo
 - CPaneContainer [MFC], StretchPaneContainer
 ms.assetid: beb79e08-f611-4d66-ba04-053baa79bf86
-ms.openlocfilehash: bd0e238dd936dfff0677e41831c72229171cb656
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 099f1cccd178068f9b96bda6193b5ee9df3b66c3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504376"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274959"
 ---
 # <a name="cpanecontainer-class"></a>CPaneContainer-Klasse
 
@@ -299,7 +299,7 @@ virtual CSize CalcAvailableSpace(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *SizeStretch*<br/>
+[in] *sizeStretch*<br/>
 [in] *bLeftBar*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
@@ -366,7 +366,7 @@ virtual void DeletePane(
 ### <a name="parameters"></a>Parameter
 
 [in] *pBar*<br/>
-[in] *BarType*<br/>
+[in] *barType*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -443,7 +443,7 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Größe*<br/>
+[in] *size*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -455,7 +455,7 @@ virtual void GetMinSizeLeft(CSize& size) const;
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Größe*<br/>
+[in] *size*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -467,7 +467,7 @@ virtual void GetMinSizeRight(CSize& size) const;
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Größe*<br/>
+[in] *size*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -591,7 +591,7 @@ virtual void GetWindowRect(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *bIgnoreVisibility*<br/>
 
 ### <a name="remarks"></a>Hinweise
@@ -686,7 +686,7 @@ virtual void Move(CPoint ptNewLeftTop);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *PtNewLeftTop*<br/>
+[in] *ptNewLeftTop*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -716,7 +716,7 @@ virtual int OnMoveInternalPaneDivider(
 ### <a name="parameters"></a>Parameter
 
 [in] *nOffset*<br/>
-[in] *Hdwp*<br/>
+[in] *hdwp*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -786,8 +786,8 @@ virtual void Resize(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Rect*<br/>
-[in] *Hdwp*<br/>
+[in] *rect*<br/>
+[in] *hdwp*<br/>
 [in] *bRedraw*<br/>
 
 ### <a name="remarks"></a>Hinweise
@@ -811,7 +811,7 @@ virtual void ResizePane(
 [in] *pContainer*<br/>
 [in] *bHorz*<br/>
 [in] *bLeftBar*<br/>
-[in] *Hdwp*<br/>
+[in] *hdwp*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -828,7 +828,7 @@ virtual void ResizePartOfPaneContainer(
 
 [in] *nOffset*<br/>
 [in] *bLeftPart*<br/>
-[in] *Hdwp*<br/>
+[in] *hdwp*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -840,7 +840,7 @@ void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Ar*<br/>
+[in] *ar*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -956,7 +956,7 @@ virtual int StretchPaneContainer(
 [in] *bStretchHorz*<br/>
 [in] *bLeftBar*<br/>
 [in] *bMoveSlider*<br/>
-[in] *Hdwp*<br/>
+[in] *hdwp*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 

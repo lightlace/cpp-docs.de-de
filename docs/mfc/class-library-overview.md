@@ -10,12 +10,12 @@ helpviewer_keywords:
 - class libraries, MFC
 - class libraries
 ms.assetid: 9b0e3152-ac39-4f52-91b4-f20aa3a674aa
-ms.openlocfilehash: 9e2bf534abcacbbb4997971376d3831705ab2310
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aec295ea93868ff1fe6e0d3d1d2370a344e47c73
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468619"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278761"
 ---
 # <a name="class-library-overview"></a>Übersicht über die Klassenbibliothek
 
@@ -23,7 +23,7 @@ Diese Übersicht kategorisiert und beschreibt die Klassen in Version 9.0 der Mic
 
 Die Klassen der Bibliothek werden hier in den folgenden Kategorien aufgeführt:
 
-- [Stammklasse: CObject](../mfc/root-class-cobject.md)
+- [Stammklasse: Von CObject](../mfc/root-class-cobject.md)
 
 - [Klassen der MFC-Anwendungsarchitektur](../mfc/mfc-application-architecture-classes.md)
 
@@ -120,4 +120,3 @@ Zusätzlich zu den Klassen, die in dieser Übersicht aufgeführt sind, enthält 
 ## <a name="see-also"></a>Siehe auch
 
 [MFC-Desktopanwendungen](../mfc/mfc-desktop-applications.md)
-

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CBaseKeyFrame [MFC], m_bIsKeyframeAtOffset
 - CBaseKeyFrame [MFC], m_keyframe
 ms.assetid: 285a2eff-e7c4-43be-b5aa-737727e6866d
-ms.openlocfilehash: 850ce46f524d9069609c1e5809c091c18bd58ee4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d36c924d30bd728fcd54b6cdf6805ade25e20b5c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618243"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296604"
 ---
 # <a name="cbasekeyframe-class"></a>CBaseKeyFrame-Klasse
 
@@ -51,7 +51,7 @@ class CBaseKeyFrame : public CObject;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CBaseKeyFrame:: AddToStoryboard](#addtostoryboard)|Fügt einen Keyframe storyboard hinzu.|
+|[CBaseKeyFrame::AddToStoryboard](#addtostoryboard)|Fügt einen Keyframe storyboard hinzu.|
 |[CBaseKeyFrame::GetAnimationKeyframe](#getanimationkeyframe)|Gibt den zugrunde liegenden Keyframewert zurück.|
 |[CBaseKeyFrame::IsAdded](#isadded)|Erfahren Sie, ob ein Keyframe Storyboard hinzugefügt wurde.|
 |[CBaseKeyFrame::IsKeyframeAtOffset](#iskeyframeatoffset)|Gibt an, ob es sich bei der Keyframe an Offset oder nach der Umstellung Storyboard hinzugefügt werden soll.|
@@ -66,7 +66,7 @@ class CBaseKeyFrame : public CObject;
 
 ## <a name="remarks"></a>Hinweise
 
-Kapselt die UI_ANIMATION_KEYFRAME-Variable. Dient als Basisklasse für eine Keyframeimplementierung. Ein Keyframe stellt einen Zeitpunkt in einem Storyboard dar und kann verwendet werden, um die Start- und Endzeiten der Übergänge angeben. Es gibt zwei Arten von Keyframes - Keyframes, die mit dem angegebenen Offset (in-Time) storyboard hinzugefügt oder Keyframes, die nach einem angegebenen Übergang hinzugefügt. Da die Dauer einiger Übergänge darf nicht vor dem Starten der Animation bekannt sind, werden die tatsächlichen Werte des einige Keyframes nur zur Laufzeit bestimmt. Da Keyframes möglicherweise von Übergängen,, die wiederum von Keyframes abhängen abhängt, ist es wichtig, um unbegrenzte Rekursionen zu verhindern, dass beim Erstellen.
+Encapsulates UI_ANIMATION_KEYFRAME variable. Dient als Basisklasse für eine Keyframeimplementierung. Ein Keyframe stellt einen Zeitpunkt in einem Storyboard dar und kann verwendet werden, um die Start- und Endzeiten der Übergänge angeben. Es gibt zwei Arten von Keyframes - Keyframes, die mit dem angegebenen Offset (in-Time) storyboard hinzugefügt oder Keyframes, die nach einem angegebenen Übergang hinzugefügt. Da die Dauer einiger Übergänge darf nicht vor dem Starten der Animation bekannt sind, werden die tatsächlichen Werte des einige Keyframes nur zur Laufzeit bestimmt. Da Keyframes möglicherweise von Übergängen,, die wiederum von Keyframes abhängen abhängt, ist es wichtig, um unbegrenzte Rekursionen zu verhindern, dass beim Erstellen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 

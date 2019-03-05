@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Windows Sockets [MFC], with archives
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
-ms.openlocfilehash: f6101193c85e41fbf82681b0b2ae1e09e4162f87
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3af94bc881276238f1a8d2dbeeee4dca1f173a4b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174911"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300686"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: Wie Sockets mit Archiven arbeiten
 
 In diesem Artikel wird erläutert, wie eine [CSocket](../mfc/reference/csocket-class.md) Objekt eine [CSocketFile](../mfc/reference/csocketfile-class.md) -Objekt, und ein [CArchive](../mfc/reference/carchive-class.md) Objekt werden kombiniert, um vereinfachen das Senden und Empfangen von Daten über eine Windows Socket.
 
-Der Artikel [Windows Sockets: Beispiel von Sockets mithilfe von Archiven](../mfc/windows-sockets-example-of-sockets-using-archives.md) stellt die `PacketSerialize` Funktion. Das Archivobjekt in der `PacketSerialize` Beispiel funktioniert ähnlich wie ein Archivobjekt, das an einen übergebenen [Serialize](../mfc/reference/cobject-class.md#serialize) Funktion. Der wichtige Unterschied besteht darin, dass für Sockets, das Archiv, nicht auf einen Standard angefügt ist [CFile](../mfc/reference/cfile-class.md) Objekt (i. d. r. eine Datenträgerdatei zugeordneten) in einem `CSocketFile` Objekt. Anstatt eine Datenträgerdatei mit den `CSocketFile` -Objekt eine Verbindung herstellt, um eine `CSocket` Objekt.
+Der Artikel [Windows Sockets: Beispiel für Sockets mithilfe der Archive](../mfc/windows-sockets-example-of-sockets-using-archives.md) stellt die `PacketSerialize` Funktion. Das Archivobjekt in der `PacketSerialize` Beispiel funktioniert ähnlich wie ein Archivobjekt, das an einen übergebenen [Serialize](../mfc/reference/cobject-class.md#serialize) Funktion. Der wichtige Unterschied besteht darin, dass für Sockets, das Archiv, nicht auf einen Standard angefügt ist [CFile](../mfc/reference/cfile-class.md) Objekt (i. d. r. eine Datenträgerdatei zugeordneten) in einem `CSocketFile` Objekt. Anstatt eine Datenträgerdatei mit den `CSocketFile` -Objekt eine Verbindung herstellt, um eine `CSocket` Objekt.
 
 Ein `CArchive` Objekt verwaltet einen Puffer. Wenn der Puffer eines Archivs das Speichern von (senden) voll ist, ein zugeordnetes `CFile` Objekt schreibt Inhalte des Puffers. Das Leeren der Puffer eines Archivs, angefügt an einen Socket entspricht zum Senden einer Nachricht. Wenn der Puffer eines Archivs laden (empfangen) voll ist, ist die `CFile` Objekt lesen beendet, bis der Puffer wieder verfügbar ist.
 

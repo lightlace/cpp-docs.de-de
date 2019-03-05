@@ -10,12 +10,12 @@ helpviewer_keywords:
 - OLE server applications [MFC], server types
 - server applications [MFC]
 ms.assetid: e45172e8-eae3-400a-8139-0fa009a42fdc
-ms.openlocfilehash: d1e0a8ca85055c289d1ef8e1c36fcd35eab61c91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b1eb0df439bcfde3aa295f23a90291e865df3a9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526502"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290799"
 ---
 # <a name="servers"></a>Server
 
@@ -47,9 +47,9 @@ Weitere Informationen zu Servern finden Sie unter:
 
 - [Server: Implementieren von Serverdokumenten](../mfc/servers-implementing-server-documents.md)
 
-- [Server: Implementieren eines In-Place-Frame-Fensters](../mfc/servers-implementing-in-place-frame-windows.md)
+- [Server: Implementieren von In-Place-Frame-Windows](../mfc/servers-implementing-in-place-frame-windows.md)
 
-- [Server: Serverelemente](../mfc/servers-server-items.md)
+- [Server: Server-Elemente](../mfc/servers-server-items.md)
 
 - [Server: Probleme mit der Benutzeroberfläche](../mfc/servers-user-interface-issues.md)
 
@@ -61,4 +61,3 @@ Weitere Informationen zu Servern finden Sie unter:
 [Menüs und Ressourcen (OLE)](../mfc/menus-and-resources-ole.md)<br/>
 [Registrierung](../mfc/registration.md)<br/>
 [Automatisierungsserver](../mfc/automation-servers.md)
-

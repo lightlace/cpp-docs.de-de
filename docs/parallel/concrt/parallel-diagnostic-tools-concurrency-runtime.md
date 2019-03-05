@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
-ms.openlocfilehash: a9d6823a5f82e3d52f82f568d3e3c00b68236fef
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 2af1898312a4f448d618fcfc4e43ea93f5f0bc76
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329214"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302779"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Diagnosetools für die parallele Ausführung (Concurrency Runtime)
 
@@ -17,7 +17,7 @@ Visual Studio bietet umfangreiche Unterstützung für das Debuggen und die Profi
 
 ## <a name="debugging"></a>Debuggen
 
-Der Visual Studio-Debugger beinhaltet die **parallele Stapel** Fenster **Parallele Aufgaben** Fenster und **parallele Überwachung** Fenster. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Debuggen einer Parallelanwendung](/visualstudio/debugger/walkthrough-debugging-a-parallel-application) und [Vorgehensweise: Verwenden des parallelen Überwachungsfensters](/visualstudio/debugger/how-to-use-the-parallel-watch-window).
+Der Visual Studio-Debugger beinhaltet die **parallele Stapel** Fenster **Parallele Aufgaben** Fenster und **parallele Überwachung** Fenster. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Debuggen einer parallelen Anwendung](/visualstudio/debugger/walkthrough-debugging-a-parallel-application) und [Vorgehensweise: Verwenden Sie das parallele Überwachungsfenster](/visualstudio/debugger/how-to-use-the-parallel-watch-window).
 
 ## <a name="profiling"></a>Profilerstellung
 
@@ -35,25 +35,25 @@ Die folgende Tabelle beschreibt die Ereignisse, die von der Laufzeit ausgelöst,
 
 |event|Beschreibung|Wert|
 |-----------|-----------------|-----------|
-|[Concurrency::ConcRT_ProviderGuid](reference/concurrency-namespace-constants1.md#concrt_providerguid)|Der ETW-Anbieter-Bezeichner für die Concurrency Runtime.|`f7b697a3-4db5-4d3b-be71-c4d284e6592f`|
-|[Concurrency::ContextEventGuid](reference/concurrency-namespace-constants1.md#contexteventguid)|Markiert die Ereignisse, die auf Kontexte beziehen.|`5727a00f-50be-4519-8256-f7699871fecb`|
-|[Concurrency::PPLParallelForEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeventguid)|Markiert den Beginn und Ende von Aufrufen der [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) Algorithmus.|`31c8da6b-6165-4042-8b92-949e315f4d84`|
-|[Concurrency::PPLParallelForeachEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeacheventguid)|Markiert den Beginn und Ende von Aufrufen der [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) Algorithmus.|`5cb7d785-9d66-465d-bae1-4611061b5434`|
-|[Concurrency::PPLParallelInvokeEventGuid](reference/concurrency-namespace-constants1.md#pplparallelinvokeeventguid)|Markiert den Beginn und Ende von Aufrufen der [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) Algorithmus.|`d1b5b133-ec3d-49f4-98a3-464d1a9e4682`|
-|[Concurrency::SchedulerEventGuid](reference/concurrency-namespace-constants1.md#schedulereventguid)|Markiert die Ereignisse, die im Zusammenhang mit der [Taskplaner](../../parallel/concrt/task-scheduler-concurrency-runtime.md).|`e2091f8a-1e0a-4731-84a2-0dd57c8a5261`|
-|[Concurrency::VirtualProcessorEventGuid](reference/concurrency-namespace-constants1.md#virtualprocessoreventguid)|Markiert die Ereignisse, die auf virtuelle Prozessoren beziehen.|`2f27805f-1676-4ecc-96fa-7eb09d44302f`|
+|[concurrency::ConcRT_ProviderGuid](reference/concurrency-namespace-constants1.md#concrt_providerguid)|Der ETW-Anbieter-Bezeichner für die Concurrency Runtime.|`f7b697a3-4db5-4d3b-be71-c4d284e6592f`|
+|[concurrency::ContextEventGuid](reference/concurrency-namespace-constants1.md#contexteventguid)|Markiert die Ereignisse, die auf Kontexte beziehen.|`5727a00f-50be-4519-8256-f7699871fecb`|
+|[concurrency::PPLParallelForEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeventguid)|Markiert den Beginn und Ende von Aufrufen der [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) Algorithmus.|`31c8da6b-6165-4042-8b92-949e315f4d84`|
+|[concurrency::PPLParallelForeachEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeacheventguid)|Markiert den Beginn und Ende von Aufrufen der [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) Algorithmus.|`5cb7d785-9d66-465d-bae1-4611061b5434`|
+|[concurrency::PPLParallelInvokeEventGuid](reference/concurrency-namespace-constants1.md#pplparallelinvokeeventguid)|Markiert den Beginn und Ende von Aufrufen der [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) Algorithmus.|`d1b5b133-ec3d-49f4-98a3-464d1a9e4682`|
+|[concurrency::SchedulerEventGuid](reference/concurrency-namespace-constants1.md#schedulereventguid)|Markiert die Ereignisse, die im Zusammenhang mit der [Taskplaner](../../parallel/concrt/task-scheduler-concurrency-runtime.md).|`e2091f8a-1e0a-4731-84a2-0dd57c8a5261`|
+|[concurrency::VirtualProcessorEventGuid](reference/concurrency-namespace-constants1.md#virtualprocessoreventguid)|Markiert die Ereignisse, die auf virtuelle Prozessoren beziehen.|`2f27805f-1676-4ecc-96fa-7eb09d44302f`|
 
 Die Concurrency Runtime definiert, aber derzeit Ereignisse nicht ausgelöst werden, die folgenden. Die Laufzeit sind diese Ereignisse für die zukünftige Verwendung reserviert:
 
-- [Concurrency::ConcRTEventGuid](reference/concurrency-namespace-constants1.md#concrteventguid)
+- [concurrency::ConcRTEventGuid](reference/concurrency-namespace-constants1.md#concrteventguid)
 
-- [Concurrency::ScheduleGroupEventGuid](reference/concurrency-namespace-constants1.md#schedulereventguid)
+- [concurrency::ScheduleGroupEventGuid](reference/concurrency-namespace-constants1.md#schedulereventguid)
 
-- [Concurrency::ChoreEventGuid](reference/concurrency-namespace-constants1.md#choreeventguid)
+- [concurrency::ChoreEventGuid](reference/concurrency-namespace-constants1.md#choreeventguid)
 
-- [Concurrency::LockEventGuid](reference/concurrency-namespace-constants1.md#lockeventguid)
+- [concurrency::LockEventGuid](reference/concurrency-namespace-constants1.md#lockeventguid)
 
-- [Concurrency::ResourceManagerEventGuid](reference/concurrency-namespace-constants1.md#resourcemanagereventguid)
+- [concurrency::ResourceManagerEventGuid](reference/concurrency-namespace-constants1.md#resourcemanagereventguid)
 
 Die [Concurrency:: ConcRT_EventType](reference/concurrency-namespace-enums.md#concrt_eventtype) -Enumeration gibt an, die möglichen Vorgänge, die ein Ereignis nachverfolgt. Z. B. am Eingang der `parallel_for` -Algorithmus, löst die Laufzeit die `PPLParallelForEventGuid` Ereignis sowie `CONCRT_EVENT_START` wie der Vorgang. Vor der `parallel_for` Algorithmus zurückgibt, löst die Laufzeit erneut die `PPLParallelForEventGuid` Ereignis sowie `CONCRT_EVENT_END` als Vorgang.
 
@@ -66,4 +66,3 @@ Die Laufzeit verfolgt die Anzahl der Male, die Sie aufrufen `EnableTracing` und 
 ## <a name="see-also"></a>Siehe auch
 
 [Concurrency Runtime](../../parallel/concrt/concurrency-runtime.md)
-

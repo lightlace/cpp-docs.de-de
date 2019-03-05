@@ -1,21 +1,21 @@
 ---
-title: 'Gewusst wie: Verwenden von transformer in einer Datenpipeline'
+title: 'Vorgehensweise: Verwenden von Transformer in einer Datenpipeline'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - transformer class, example
 - data pipelines, using transformer [Concurrency Runtime]
 - using transformer in data pipelines [Concurrency Runtime]
 ms.assetid: ca49cb3f-4dab-4b09-a9c9-d3a109ae4c29
-ms.openlocfilehash: b94cf3fb7554ba32c03a404fa6616ef1b187e008
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59c4854eea985b3c91fad6e7dc6c47ca9b07d333
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461424"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291469"
 ---
-# <a name="how-to-use-transformer-in-a-data-pipeline"></a>Gewusst wie: Verwenden von transformer in einer Datenpipeline
+# <a name="how-to-use-transformer-in-a-data-pipeline"></a>Vorgehensweise: Verwenden von Transformer in einer Datenpipeline
 
-Dieses Thema enthält ein einfaches Beispiel, das zeigt, wie Sie mit der [Concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md) Klasse in einer Datenpipeline. Ein vollständigeres Beispiel, das eine Datenpipeline verwendet wird, um bildverarbeitung, finden Sie unter [Exemplarische Vorgehensweise: Erstellen einer Bildverarbeitungsnetzwerks](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Dieses Thema enthält ein einfaches Beispiel, das zeigt, wie Sie mit der [Concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md) Klasse in einer Datenpipeline. Ein vollständigeres Beispiel, das eine Datenpipeline verwendet wird, um bildverarbeitung, finden Sie unter [Exemplarische Vorgehensweise: Erstellen eine Bildverarbeitungsnetzwerks](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 *Datenpipelinefunktionen* ist ein gängiges Muster, bei der gleichzeitigen Programmierung. Eine Datenpipeline besteht aus einer Reihe von Phasen, wobei in jeder einzelnen Phase Arbeiten ausführt und das jeweilige Ergebnis dann an die nächste Phase weitergeleitet wird. Die `transformer`-Klasse ist eine Hauptkomponente in Datenpipelines, da sie einen Eingabewert empfängt, Arbeiten für diesen Wert ausführt und dann ein Ergebnis erzeugt, das von einer anderen Komponente verwendet werden kann.
 
@@ -59,4 +59,3 @@ Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, o
 [Asynchrone Agents Library](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Asynchrone Nachrichtenblöcke](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [Exemplarische Vorgehensweise: Erstellen eines Bildverarbeitungsnetzwerks](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)
-

@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: 9e2df5117f6cbb96c69f54fe9e21f85b45218d6d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 61cbcbd2a64e8648c6467ebbc0d86d6f89953442
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178979"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302496"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl-Klasse
 
@@ -284,7 +284,7 @@ class CToolBarCtrl : public CWnd
 |[CToolBarCtrl::SetExtendedStyle](#setextendedstyle)|Legt fest, die erweiterten Stile für eine Symbolleisten-Steuerelement.|
 |[CToolBarCtrl::SetHotImageList](#sethotimagelist)|Legt fest, die Liste der Bilder, die das Symbolleisten-Steuerelement verwenden "heißen" angezeigt werden sollen.|
 |[CToolBarCtrl::SetHotItem](#sethotitem)|Legt das Element in einer Symbolleiste fest.|
-|[CToolBarCtrl:: SetImageList](#setimagelist)|Legt fest, die Liste der Bilder, die die Symbolleiste verwendet werden, um Schaltflächen anzuzeigen, die in ihren Standardzustand zurückgesetzt werden.|
+|[CToolBarCtrl::SetImageList](#setimagelist)|Legt fest, die Liste der Bilder, die die Symbolleiste verwendet werden, um Schaltflächen anzuzeigen, die in ihren Standardzustand zurückgesetzt werden.|
 |[CToolBarCtrl::SetIndent](#setindent)|Legt den Einzug für die erste Schaltfläche in einem Symbolleisten-Steuerelement fest.|
 |[CToolBarCtrl::SetInsertMark](#setinsertmark)|Legt fest, der aktuellen Einfügemarke für die Symbolleiste.|
 |[CToolBarCtrl::SetInsertMarkColor](#setinsertmarkcolor)|Legt die Farbe verwendet, um die Einfügemarke für die Symbolleiste zu zeichnen.|
@@ -579,7 +579,7 @@ BOOL CheckButton(
 *nID*<br/>
 Befehls-ID der Schaltfläche zu aktivieren oder deaktivieren.
 
-*bNeuere suchen*<br/>
+*bCheck*<br/>
 "True" Überprüfen Sie die Schaltfläche "," false ", um sie zu löschen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -626,7 +626,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Gibt das Symbolleisten-Steuerelement-Stil. Symbolleisten müssen immer das WS_CHILD-Format haben. Darüber hinaus können Sie eine beliebige Kombination von Toolbar-Stile und Window-Stile angeben, wie unter beschrieben **"Hinweise"**.
 
-*Rect*<br/>
+*rect*<br/>
 Gibt optional an Größe und Position der Symbolleiste des Steuerelements. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.
 
 *pParentWnd*<br/>
@@ -680,7 +680,7 @@ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erwei
 *dwStyle*<br/>
 Gibt das Symbolleisten-Steuerelement-Stil. Symbolleisten müssen immer das WS_CHILD-Format haben. Darüber hinaus können Sie eine beliebige Kombination von Toolbar-Stile und Window-Stile angeben, unter dem **"Hinweise"** Abschnitt [erstellen](#create).
 
-*Rect*<br/>
+*rect*<br/>
 Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -755,7 +755,7 @@ BOOL EnableButton(
 *nID*<br/>
 Der Befehl Bezeichner der Schaltfläche zum Aktivieren oder deaktivieren.
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 True, um die Schaltfläche zu aktivieren. FALSE, wenn die Schaltfläche zu deaktivieren.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1266,7 +1266,7 @@ int GetString(
 
 ### <a name="parameters"></a>Parameter
 
-*Nzeichenfolge*<br/>
+*nString*<br/>
 Der Index der Zeichenfolge.
 
 *lpstrString*<br/>
@@ -1324,7 +1324,7 @@ int HitTest(LPPOINT ppt) const;
 
 ### <a name="parameters"></a>Parameter
 
-*PPT*<br/>
+*ppt*<br/>
 Ein Zeiger auf eine [Punkt](https://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, die die X-Koordinate des Treffertests in enthält die `x` Element und die y-Koordinate des der Treffer im Testen der `y` Member. Die Koordinaten sind relativ zum Clientbereich für die Sie auf der Symbolleiste.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1427,7 +1427,7 @@ BOOL InsertMarkHitTest(
 
 ### <a name="parameters"></a>Parameter
 
-*PPT*<br/>
+*ppt*<br/>
 Ein Zeiger auf eine [Punkt](https://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, die den Treffertest enthält Koordinaten relativ zum Clientbereich der Symbolleiste.
 
 *ptbim*<br/>
@@ -2206,7 +2206,7 @@ void SetOwner(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Zeiger auf die `CWnd` oder `CWnd`-Objekts, das neue Besitzerfensters für das Symbolleisten-Steuerelement abgeleitet.
 
 ### <a name="remarks"></a>Hinweise

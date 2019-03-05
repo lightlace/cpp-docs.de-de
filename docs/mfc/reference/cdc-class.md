@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 0c8944846e249e4f752183b057bf8d2857022ab5
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179057"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305080"
 ---
 # <a name="cdc-class"></a>CDC-Klasse
 
@@ -894,19 +894,19 @@ Gibt die y-Koordinate von der linken oberen Ecke des umschließenden Rechtecks (
 *x2*<br/>
 Gibt die X-Koordinate der unteren rechten Ecke des umschließenden Rechtecks (in logischen Einheiten) an.
 
-*Y2*<br/>
+*y2*<br/>
 Gibt die y-Koordinate der unteren rechten Ecke des umschließenden Rechtecks (in logischen Einheiten) an.
 
 *x3*<br/>
 Gibt an, dass die X-Koordinate des Punkts, der den Bogen definiert Point (in logischen Einheiten) beginnt der. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen.
 
-*Y3*<br/>
+*y3*<br/>
 Gibt an, der die y-Koordinate des Punkts, der den Bogen definiert (in logischen Einheiten) Anfangspunkt des. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen.
 
-*X4*<br/>
+*x4*<br/>
 Gibt die X-Koordinate des Punkts, der Endpunkt des Bogens, (in logischen Einheiten) definiert. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen.
 
-*Y4*<br/>
+*y4*<br/>
 Gibt die y-Koordinate des Punkts, der Endpunkt des Bogens, (in logischen Einheiten) definiert. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen.
 
 *lpRect*<br/>
@@ -964,19 +964,19 @@ Gibt die y-Koordinate von der linken oberen Ecke des umschließenden Rechtecks (
 *x2*<br/>
 Gibt die X-Koordinate der unteren rechten Ecke des umschließenden Rechtecks (in logischen Einheiten) an.
 
-*Y2*<br/>
+*y2*<br/>
 Gibt die y-Koordinate der unteren rechten Ecke des umschließenden Rechtecks (in logischen Einheiten) an.
 
 *x3*<br/>
 Gibt an, dass die X-Koordinate des Punkts, der den Bogen definiert Point (in logischen Einheiten) beginnt der. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen.
 
-*Y3*<br/>
+*y3*<br/>
 Gibt an, der die y-Koordinate des Punkts, der den Bogen definiert (in logischen Einheiten) Anfangspunkt des. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen.
 
-*X4*<br/>
+*x4*<br/>
 Gibt die X-Koordinate des Punkts, der Endpunkt des Bogens, (in logischen Einheiten) definiert. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen.
 
-*Y4*<br/>
+*y4*<br/>
 Gibt die y-Koordinate des Punkts, der Endpunkt des Bogens, (in logischen Einheiten) definiert. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen.
 
 *lpRect*<br/>
@@ -1147,19 +1147,19 @@ Gibt an, der die y-Koordinate der oberen linken Ecke des Bandes umschließende R
 *x2*<br/>
 Gibt an, dass die X-Koordinate der unteren rechten Ecke des Bandes umschließende Rechteck (in logischen Einheiten).
 
-*Y2*<br/>
+*y2*<br/>
 Gibt an, der die y-Koordinate der unteren rechten Ecke des Bandes umschließende Rechteck (in logischen Einheiten).
 
 *x3*<br/>
 Gibt an, dass die X-Koordinate des Punkts, der die Tastenkombination definiert Point (in logischen Einheiten) beginnt der.
 
-*Y3*<br/>
+*y3*<br/>
 Gibt an, der die y-Koordinate des Punkts, der die Tastenkombination definiert (in logischen Einheiten) Anfangspunkt des.
 
-*X4*<br/>
+*x4*<br/>
 Gibt die X-Koordinate des Punkts, der die Tastenkombination für den Endpunkt (in logischen Einheiten) definiert.
 
-*Y4*<br/>
+*y4*<br/>
 Gibt die y-Koordinate des Punkts, der die Tastenkombination für den Endpunkt (in logischen Einheiten) definiert.
 
 *lpRect*<br/>
@@ -1434,10 +1434,10 @@ Gibt die logische X-Koordinate der oberen linken Ecke des dreidimensionalen Rech
 *y*<br/>
 Gibt die logische y-Koordinate der oberen linken Ecke des dreidimensionalen Rechtecks an.
 
-*CX*<br/>
+*cx*<br/>
 Gibt die Breite des Rechtecks dreidimensionalen.
 
-*CY*<br/>
+*cy*<br/>
 Gibt die Höhe des Rechtecks dreidimensionalen.
 
 ### <a name="remarks"></a>Hinweise
@@ -1674,7 +1674,7 @@ Gibt die logische y-Koordinate der oberen linken Ecke des Symbols an.
 *hIcon*<br/>
 Gibt das Handle des Symbols, das gezeichnet werden soll.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt die logische X - und y-Koordinaten von der linken oberen Ecke des Symbols an. Können Sie übergeben eine [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Struktur oder ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt für diesen Parameter.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1935,7 +1935,7 @@ Gibt die logische y-Koordinate der oberen linken Ecke des umschließenden Rechte
 *x2*<br/>
 Gibt die logische X-Koordinate der unteren rechten Ecke des umschließenden Rechtecks der Ellipse an.
 
-*Y2*<br/>
+*y2*<br/>
 Gibt die logische y-Koordinate der unteren rechten Ecke des umschließenden Rechtecks der Ellipse an.
 
 *lpRect*<br/>
@@ -2171,7 +2171,7 @@ Gibt die logische y-Koordinate der oberen linken Ecke des Rechtecks an.
 *x2*<br/>
 Gibt die logische X-Koordinate der unteren rechten Ecke des Rechtecks an.
 
-*Y2*<br/>
+*y2*<br/>
 Gibt die logische y-Koordinate der unteren rechten Ecke des Rechtecks an.
 
 *lpRect*<br/>
@@ -2203,7 +2203,7 @@ int ExcludeUpdateRgn(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Verweist auf das Window-Objekt, dessen Fenster aktualisiert wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2381,7 +2381,7 @@ BOOL FillRgn(
 
 ### <a name="parameters"></a>Parameter
 
-*PRNG*<br/>
+*pRgn*<br/>
 Ein Zeiger auf die Region gefüllt werden soll. Die Koordinaten für den angegebenen Bereich sind in logischen Einheiten angegeben.
 
 *pBrush*<br/>
@@ -2429,10 +2429,10 @@ Gibt die logische X-Koordinate der oberen linken Ecke des Rechtecks an.
 *y*<br/>
 Gibt die logische y-Koordinate der oberen linken Ecke des Zielrechtecks an.
 
-*CX*<br/>
+*cx*<br/>
 Gibt die Breite des Rechtecks.
 
-*CY*<br/>
+*cy*<br/>
 Gibt die Höhe des Rechtecks.
 
 ### <a name="remarks"></a>Hinweise
@@ -2528,7 +2528,7 @@ BOOL FrameRgn(
 
 ### <a name="parameters"></a>Parameter
 
-*PRNG*<br/>
+*pRgn*<br/>
 Verweist auf die `CRgn` -Objekt, identifiziert die Region, in einem Rahmen eingeschlossen werden. Die Koordinaten für den angegebenen Bereich sind in logischen Einheiten angegeben.
 
 *pBrush*<br/>
@@ -2807,10 +2807,10 @@ BOOL GetCharABCWidthsI(
 *giFirst*<br/>
 Gibt den ersten Glyphen Index in der Gruppe der aufeinander folgenden Symbolindizes aus der aktuellen Schriftart an. Dieser Parameter wird nur verwendet, wenn die *Pgi* Parameter NULL ist.
 
-*CGI*<br/>
+*cgi*<br/>
 Gibt die Anzahl von glyphenindizes.
 
-*PGI*<br/>
+*pgi*<br/>
 Ein Zeiger auf ein Array, die Symbolindizes enthält. Wenn der Wert NULL aufweist, ist die *GiFirst* Parameter wird stattdessen verwendet. Die *Cgi* Parameter gibt die Anzahl von glyphenindizes, die in diesem Array.
 
 *lpabc*<br/>
@@ -2883,10 +2883,10 @@ BOOL GetCharWidthI(
 *giFirst*<br/>
 Gibt den ersten Glyphen Index in der Gruppe der aufeinander folgenden Symbolindizes aus der aktuellen Schriftart an. Dieser Parameter wird nur verwendet, wenn die *Pgi* Parameter NULL ist.
 
-*CGI*<br/>
+*cgi*<br/>
 Gibt die Anzahl von glyphenindizes.
 
-*PGI*<br/>
+*pgi*<br/>
 Ein Zeiger auf ein Array, die Symbolindizes enthält. Wenn der Wert NULL aufweist, ist die *GiFirst* Parameter wird stattdessen verwendet. Die *Cgi* Parameter gibt die Anzahl von glyphenindizes, die in diesem Array.
 
 *lpBuffer*<br/>
@@ -3078,7 +3078,7 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert CLR_INVALID an.
 
 Diese Memberfunktion verwendet die Win32-Funktion [GetDCPenColor](/windows/desktop/api/wingdi/nf-wingdi-getdcpencolor), wie im Windows SDK beschrieben.
 
-##  <a name="getdevicecaps"></a>  GetDeviceCaps
+##  <a name="getdevicecaps"></a>  CDC::GetDeviceCaps
 
 Ruft eine Vielzahl von gerätespezifischen Informationen über das Anzeigegerät ab.
 
@@ -3171,7 +3171,7 @@ DWORD GetGlyphOutline(
 
 ### <a name="parameters"></a>Parameter
 
-*NChar*<br/>
+*nChar*<br/>
 Gibt das Zeichen, die für das Informationen zurückgegeben werden.
 
 *nFormat*<br/>
@@ -3187,7 +3187,7 @@ Wenn der Wert des *nFormat* gleich 0 ist, füllt die Funktion eine [GLYPHMETRICS
 *lpgm*<br/>
 Verweist auf eine GLYPHMETRICS-Struktur, die Platzierung des Symbols im Zeichenzelle beschreibt.
 
-*CbBuffer die*<br/>
+*cbBuffer*<br/>
 Gibt die Größe des Puffers in die die Funktion Informationen über die Gliederung Zeichen kopiert. Wenn dieser Wert 0 ist und die *nFormat* -Parameter ist entweder der GGO_BITMAP oder GGO_NATIVE-Werte, die Funktion gibt die erforderliche Größe des Puffers zurück.
 
 *lpBuffer*<br/>
@@ -3499,7 +3499,7 @@ Verweist auf die [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetri
 
 Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfalls null (0).
 
-##  <a name="getpath"></a>  CDC::getPath
+##  <a name="getpath"></a>  CDC::GetPath
 
 Ruft die Koordinaten, die definieren, die Endpunkte der Zeilen und die Steuerpunkte der Kurven finden Sie in den Pfad, der in den Gerätekontext ausgewählt ist.
 
@@ -3565,7 +3565,7 @@ Gibt die logische X-Koordinate des Punkts, der untersucht werden.
 *y*<br/>
 Gibt die logische y-Koordinate des Punkts, der untersucht werden.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt die logische X - und y-Koordinaten des Punkts, der untersucht werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -3828,7 +3828,7 @@ BOOL GetTextExtentExPointI(
 *pgiIn*<br/>
 Ein Zeiger auf ein Array von glyphenindizes, die für die Blöcke sind, abgerufen werden sollen.
 
-*CGI*<br/>
+*cgi*<br/>
 Gibt die Anzahl der Symbole in das Array verweist *PgiIn*.
 
 *nMaxExtent*<br/>
@@ -3867,7 +3867,7 @@ BOOL GetTextExtentPointI(
 *pgiIn*<br/>
 Ein Zeiger auf ein Array von glyphenindizes, die für die Blöcke sind, abgerufen werden sollen.
 
-*CGI*<br/>
+*cgi*<br/>
 Gibt die Anzahl der Symbole in das Array verweist *PgiIn*.
 
 *lpSize*<br/>
@@ -4180,7 +4180,7 @@ Gibt die logische y-Koordinate der oberen linken Ecke des Rechtecks an.
 *x2*<br/>
 Gibt die logische X-Koordinate der unteren rechten Ecke des Rechtecks an.
 
-*Y2*<br/>
+*y2*<br/>
 Gibt die logische y-Koordinate der unteren rechten Ecke des Rechtecks an.
 
 *lpRect*<br/>
@@ -4235,7 +4235,7 @@ BOOL InvertRgn(CRgn* pRgn);
 
 ### <a name="parameters"></a>Parameter
 
-*PRNG*<br/>
+*pRgn*<br/>
 Identifiziert die Region, die umgekehrt werden soll. Die Koordinaten für die Region werden in logischen Einheiten angegeben.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -4278,7 +4278,7 @@ Gibt die logische X-Koordinate des Endpunkts für die Zeile an.
 *y*<br/>
 Gibt die logische y-Koordinate des Endpunkts für die Zeile an.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt den Endpunkt für die Zeile. Sie können entweder übergeben eine `POINT` Struktur oder ein `CPoint` Objekt für diesen Parameter.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -4485,7 +4485,7 @@ Gibt die logische X-Koordinate der neuen Position an.
 *y*<br/>
 Gibt die logische y-Koordinate der neuen Position an.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt die neue Position. Sie können entweder übergeben eine `POINT` Struktur oder ein `CPoint` Objekt für diesen Parameter.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -4605,7 +4605,7 @@ BOOL PaintRgn(CRgn* pRgn);
 
 ### <a name="parameters"></a>Parameter
 
-*PRNG*<br/>
+*pRgn*<br/>
 Identifiziert die Region gefüllt werden soll. Die Koordinaten für den angegebenen Bereich sind in logischen Einheiten angegeben.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -4694,19 +4694,19 @@ Gibt die y-Koordinate von der linken oberen Ecke des umschließenden Rechtecks (
 *x2*<br/>
 Gibt die X-Koordinate der unteren rechten Ecke des umschließenden Rechtecks (in logischen Einheiten) an.
 
-*Y2*<br/>
+*y2*<br/>
 Gibt die y-Koordinate der unteren rechten Ecke des umschließenden Rechtecks (in logischen Einheiten) an.
 
 *x3*<br/>
 Gibt die X-Koordinate des Startpunkts des Bogens, (in logischen Einheiten) an. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen.
 
-*Y3*<br/>
+*y3*<br/>
 Gibt die y-Koordinate des Startpunkts des Bogens, (in logischen Einheiten) an. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen.
 
-*X4*<br/>
+*x4*<br/>
 Gibt die X-Koordinate des Endpunkts des Bogens (in logischen Einheiten) an. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen.
 
-*Y4*<br/>
+*y4*<br/>
 Gibt die y-Koordinate des Endpunkts des Bogens (in logischen Einheiten) an. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen.
 
 *lpRect*<br/>
@@ -4833,7 +4833,7 @@ Ist das Rechteck Maske kleiner als die Quelle und Ziel Rechtecke, repliziert die
 
 Skalierung, Verschiebung und Reflektion Transformationen in den Quellgerätekontext zulässig. Allerdings sind Drehungs- und reduzierungen Transformationen nicht. Wenn die Maskenbitmap nicht um eine monochrome Bitmap ist, tritt ein Fehler auf. Der streckmodus für Zielgerätekontext wird verwendet, um zu bestimmen, wie gestreckt oder komprimiert der Pixel, wenn dies erforderlich ist. Wenn eine erweiterte Metadatei aufgezeichnet wird, tritt ein Fehler auf, wenn der Quellgerätekontext eine EMF-Gerätekontext identifiziert.
 
-Die Zielkoordinaten werden gemäß dem Zielgerätekontext umgewandelt. Die Quellkoordinaten werden gemäß dem Quellgerätekontext umgewandelt. Verfügt die Quelle Transformation eine Drehung oder Schub, wird ein Fehler zurückgegeben. Wenn die Rechtecke Ziel- und Quellserver nicht dasselbe Farbformat verfügen `PlgBlt` Quellrechtecks Zielrechtecks entsprechend konvertiert. Nicht alle Geräte unterstützen `PlgBlt`. Weitere Informationen finden Sie unter der Beschreibung der Funktion Raster RC_BITBLT in die `CDC::GetDeviceCaps` Member-Funktion.
+Die Zielkoordinaten werden gemäß dem Zielgerätekontext transformiert. Die Quellkoordinaten werden gemäß dem Quellgerätekontext transformiert. Verfügt die Quelle Transformation eine Drehung oder Schub, wird ein Fehler zurückgegeben. Wenn die Rechtecke Ziel- und Quellserver nicht dasselbe Farbformat verfügen `PlgBlt` Quellrechtecks Zielrechtecks entsprechend konvertiert. Nicht alle Geräte unterstützen `PlgBlt`. Weitere Informationen finden Sie unter der Beschreibung der Funktion Raster RC_BITBLT in die `CDC::GetDeviceCaps` Member-Funktion.
 
 Wenn die Quelle und Ziel-Gerätekontexte nicht kompatible Geräte darstellen `PlgBlt` gibt einen Fehler zurück.
 
@@ -5115,7 +5115,7 @@ Gibt die logische X-Koordinate des Punkts an.
 *y*<br/>
 Gibt die logische y-Koordinate des Punkts an.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Legt den Punkt in logischen Koordinaten zu überprüfen. Sie können entweder übergeben eine `POINT` Struktur oder ein `CPoint` Objekt für diesen Parameter.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -5179,7 +5179,7 @@ Gibt die y-Koordinate von der linken oberen Ecke des Rechtecks (in logischen Ein
 *x2*<br/>
 Gibt die X-Koordinate von der unteren rechten Ecke des Rechtecks (in logischen Einheiten) an.
 
-*Y2*<br/>
+*y2*<br/>
 Gibt die y-Koordinate von der unteren rechten Ecke des Rechtecks (in logischen Einheiten) an.
 
 *lpRect*<br/>
@@ -5319,19 +5319,19 @@ Gibt die y-Koordinate von der linken oberen Ecke des Rechtecks (in logischen Ein
 *x2*<br/>
 Gibt die X-Koordinate von der unteren rechten Ecke des Rechtecks (in logischen Einheiten) an.
 
-*Y2*<br/>
+*y2*<br/>
 Gibt die y-Koordinate von der unteren rechten Ecke des Rechtecks (in logischen Einheiten) an.
 
 *x3*<br/>
 Gibt die Breite der Ellipse, die zum Zeichnen der abgerundeten Ecken (in logischen Einheiten) verwendet.
 
-*Y3*<br/>
+*y3*<br/>
 Gibt die Höhe der Ellipse, die zum Zeichnen der abgerundeten Ecken (in logischen Einheiten) verwendet.
 
 *lpRect*<br/>
 Gibt das umschließende Rechteck in logischen Einheiten. Sie können entweder übergeben eine `CRect` Objekt oder ein Zeiger auf eine `RECT` Struktur für diesen Parameter.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Die X-Koordinate der *zeigen* gibt die Breite der Ellipse zum Zeichnen der abgerundeten Ecken (in logischen Einheiten). Die y-Koordinate der *zeigen* gibt die Höhe der Ellipse zum Zeichnen der abgerundeten Ecken (in logischen Einheiten) an. Sie können entweder übergeben eine `POINT` Struktur oder ein `CPoint` Objekt für diesen Parameter.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -5462,7 +5462,7 @@ BOOL ScrollDC(
 
 ### <a name="parameters"></a>Parameter
 
-*DX*<br/>
+*dx*<br/>
 Gibt die Anzahl der Einheiten der horizontalen Bildlaufleiste an.
 
 *dy*<br/>
@@ -5535,7 +5535,7 @@ int SelectClipRgn(
 
 ### <a name="parameters"></a>Parameter
 
-*PRNG*<br/>
+*pRgn*<br/>
 Identifiziert die Region ausgewählt werden.
 
 - Für die erste Version dieser Funktion Wenn dieser Wert NULL ist, der gesamten Clientbereich aktiviert ist und Ausgabe wird an das Fenster immer noch abgeschnitten.
@@ -5602,7 +5602,7 @@ Ein Zeiger auf eine [CFont](../../mfc/reference/cfont-class.md) Objekt ausgewäh
 *pBitmap*<br/>
 Ein Zeiger auf eine [CBitmap](../../mfc/reference/cbitmap-class.md) Objekt ausgewählt werden.
 
-*PRNG*<br/>
+*pRgn*<br/>
 Ein Zeiger auf eine [CRgn](../../mfc/reference/crgn-class.md) Objekt ausgewählt werden.
 
 *pObject*<br/>
@@ -5775,7 +5775,7 @@ Gibt die alte Bogen Richtung an, bei erfolgreicher Ausführung; andernfalls 0.
 
 Die standardrichtung ist gegen den Uhrzeigersinn. Die `SetArcDirection` -Funktion gibt die Richtung, in dem Sie die folgenden Zeichnen-Befehl Funktionen, an:
 
-|Einen Bogen konvertiert.|Segment|
+|Einen Bogen konvertiert.|Kreis|
 |---------|---------|
 |`ArcTo`|`Rectangle`|
 |`Chord`|`RoundRect`|
@@ -5908,7 +5908,7 @@ Gibt die X-Koordinate (in Geräteeinheiten) der neuen Ursprung an. Dieser Wert m
 *y*<br/>
 Gibt die y-Koordinate (in Geräteeinheiten) der neuen Ursprung an. Dieser Wert muss im Bereich von 0 bis 7 sein.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt an, die x- und y-Koordinaten des neuen Ursprungs. Jeder Wert muss im Bereich von 0 bis 7 sein. Sie können entweder übergeben eine `POINT` Struktur oder ein `CPoint` Objekt für diesen Parameter.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -6179,7 +6179,7 @@ Gibt die logische y-Koordinate des Punkts, der festgelegt werden.
 *crColor*<br/>
 Ein COLORREF RGB-Wert, der angibt, die Farbe verwendet, um den Punkt zu zeichnen. Finden Sie unter [COLORREF](/windows/desktop/gdi/colorref) im Windows SDK für eine Beschreibung dieses Werts.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt die logische X - und y-Koordinaten des Punkts, der festgelegt werden. Sie können entweder übergeben eine `POINT` Struktur oder ein `CPoint` Objekt für diesen Parameter.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -6218,7 +6218,7 @@ Gibt die y-Koordinate, in logischen Einheiten des Punkts, der festgelegt werden.
 *crColor*<br/>
 Gibt die Farbe verwendet werden, um den Punkt zu zeichnen.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt die logische X - und y-Koordinaten des Punkts, der festgelegt werden. Sie können entweder übergeben eine [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Datenstruktur oder ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt für diesen Parameter.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -6326,7 +6326,7 @@ Gibt den streckmodus an. Eines der folgenden Werte sind möglich:
 |-----------|-----------------|
 |BLACKONWHITE|Führt eine boolesche AND-Operation mit den Werten für die Farbe für die Pixel entfernt und vorhandene. Wenn die Bitmap eine monochrome Bitmap ist, behält diesen Modus schwarze Pixel auf Kosten der weißen Pixel.|
 |COLORONCOLOR|Löscht die Pixel. In diesem Modus werden alle Zeilen von Pixeln gelöscht, ohne zu versuchen, ihre Informationen zu erhalten.|
-|HALBTON|Ordnet Blöcke der Pixel in das Zielrechteck Pixel vom Quellrechtecks. Die durchschnittliche Farbe der Pixel, den Ziel-Block erfolgt eine Annäherung an die Farbe der Pixel der Quelle.|
+|HALFTONE|Ordnet Blöcke der Pixel in das Zielrechteck Pixel vom Quellrechtecks. Die durchschnittliche Farbe der Pixel, den Ziel-Block erfolgt eine Annäherung an die Farbe der Pixel der Quelle.|
 ||Nach dem Festlegen von HALBTON Strecken Modus, muss eine Anwendung die Win32-Funktion aufrufen [SetBrushOrgEx](/windows/desktop/api/wingdi/nf-wingdi-setbrushorgex) Festlegen des Ursprungs Pinsel. Wenn sie nicht dazu, tritt ein, Pinsel fehlausrichtung.|
 |STRETCH_ANDSCANS|**Windows 95/98**: Identisch mit BLACKONWHITE|
 |STRETCH_DELETESCANS|**Windows 95/98**: Identisch mit COLORONCOLOR|
@@ -6487,10 +6487,10 @@ CSize SetViewportExt(SIZE size);
 
 ### <a name="parameters"></a>Parameter
 
-*CX*<br/>
+*cx*<br/>
 Gibt den X-Umfang des Viewports (in Geräteeinheiten).
 
-*CY*<br/>
+*cy*<br/>
 Gibt den y-Umfang des Viewports (in Geräteeinheiten).
 
 *size*<br/>
@@ -6537,7 +6537,7 @@ Gibt die X-Koordinate (in Geräteeinheiten) des Ursprungs des Viewports an. Der 
 *y*<br/>
 Gibt die y-Koordinate (in Geräteeinheiten) des Ursprungs des Viewports an. Der Wert muss innerhalb des Bereichs von Koordinatensystem des Geräts.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt den Ursprung des Viewports. Die Werte müssen innerhalb des Bereichs von Koordinatensystem des Geräts sein. Sie können entweder übergeben eine `POINT` Struktur oder ein `CPoint` Objekt für diesen Parameter.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -6568,10 +6568,10 @@ CSize SetWindowExt(SIZE size);
 
 ### <a name="parameters"></a>Parameter
 
-*CX*<br/>
+*cx*<br/>
 Gibt den X-Umfang (in logischen Einheiten) des Fensters.
 
-*CY*<br/>
+*cy*<br/>
 Gibt den y-Umfang (in logischen Einheiten) des Fensters.
 
 *size*<br/>
@@ -6625,7 +6625,7 @@ Gibt die logische X-Koordinate der neuen Ursprung des Fensters an.
 *y*<br/>
 Gibt die logische y-Koordinate der neuen Ursprung des Fensters an.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt den logischen Koordinaten des Ursprungs neue Fenster an. Sie können entweder übergeben eine `POINT` Struktur oder ein `CPoint` Objekt für diesen Parameter.
 
 ### <a name="return-value"></a>Rückgabewert

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - server applications [MFC]
 ms.assetid: dafbb31d-096c-4654-b774-12900d832919
-ms.openlocfilehash: 3c696f1e99a73cbce6f1ff749de937297b28d88b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c154562e58cf8f37d77df61556fe25b19ca54c70
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616924"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304820"
 ---
 # <a name="ole-background-containers-and-servers"></a>OLE-Hintergrund: Container und Server
 
@@ -40,5 +40,4 @@ Verwenden diese Art der Kommunikation, muss ein Container nicht wissen, die Impl
 [Container](../mfc/containers.md)<br/>
 [Server](../mfc/servers.md)<br/>
 [Container: Clientelemente](../mfc/containers-client-items.md)<br/>
-[Server: Serverelemente](../mfc/servers-server-items.md)
-
+[Server: Server-Elemente](../mfc/servers-server-items.md)

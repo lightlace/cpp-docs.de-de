@@ -1,5 +1,5 @@
 ---
-title: CRichEditCtrl-Klasse
+title: CRichEditCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CRichEditCtrl
@@ -152,14 +152,14 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: c42f7b77c04b2c94923908fa8b9542bea313b154
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ca6185e7ee41726c7bf583056cb66eeb1be7021c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178992"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303433"
 ---
-# <a name="cricheditctrl-class"></a>CRichEditCtrl-Klasse
+# <a name="cricheditctrl-class"></a>CRichEditCtrl Class
 
 Stellt die Funktionalität des Rich-Edit-Steuerelements bereit.
 
@@ -426,7 +426,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Gibt das Steuerelement zum Bearbeiten des Stils an. Eine Kombination aus den in aufgeführten Window-Stile anwenden der **"Hinweise"** unten, und [Bearbeiten der Stile von Listensteuerelementen](/windows/desktop/Controls/edit-control-styles), die im Windows SDK beschrieben.
 
-*Rect*<br/>
+*rect*<br/>
 Gibt an, des Steuerelements zum Bearbeiten der Größe und Position. Kann eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder [RECT](/windows/desktop/api/windef/ns-windef-tagrect) Struktur.
 
 *pParentWnd*<br/>
@@ -488,7 +488,7 @@ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erwei
 *dwStyle*<br/>
 Gibt das Steuerelement zum Bearbeiten des Stils an. Eine Kombination aus den in aufgeführten Window-Stile anwenden der **"Hinweise"** Abschnitt [erstellen](#create) und [Bearbeiten der Stile von Listensteuerelementen](/windows/desktop/Controls/edit-control-styles), die im Windows SDK beschrieben.
 
-*Rect*<br/>
+*rect*<br/>
 Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -635,7 +635,7 @@ DWORD FindWordBreak(
 *nCode*<br/>
 Gibt die auszuführende Aktion an. Eine Liste der möglichen Werte, finden Sie in der Beschreibung für den Parameter *Code* in EM_FINDWORDBREAK im Windows SDK.
 
-*nmit*<br/>
+*nStart*<br/>
 Die nullbasierte Zeichenposition, ab.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -658,7 +658,7 @@ long FormatRange(
 
 ### <a name="parameters"></a>Parameter
 
-*PFR*<br/>
+*pfr*<br/>
 Zeiger auf die [FORMATRANGE](/windows/desktop/api/richedit/ns-richedit-_formatrange) Struktur enthält Informationen zu im Ausgabegerät. NULL gibt an, dass die zwischengespeicherten Informationen im rich-Edit-Steuerelement freigegeben werden kann.
 
 *bDisplay*<br/>
@@ -711,7 +711,7 @@ DWORD GetDefaultCharFormat(CHARFORMAT& cf) const;  DWORD GetDefaultCharFormat(CH
 
 ### <a name="parameters"></a>Parameter
 
-*CF*<br/>
+*cf*<br/>
 In der ersten Version, ein Zeiger auf eine `CHARFORMAT` Struktur, die das Standardzeichen Formatierungsattribute enthält.
 
 In der zweiten Version, ein Zeiger auf eine `CHARFORMAT2` -Struktur, die eine Erweiterung des Rich Edit 2.0 ist auf die `CHARFORMAT` Struktur, die Formatierungsattribute Standardzeichen.
@@ -1015,7 +1015,7 @@ void GetSel(
 
 ### <a name="parameters"></a>Parameter
 
-*CR*<br/>
+*cr*<br/>
 Ein Verweis auf eine [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) Struktur, das die Begrenzungen des die aktuelle Auswahl zu erhalten.
 
 *nStartChar*<br/>
@@ -1050,7 +1050,7 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
 
 ### <a name="parameters"></a>Parameter
 
-*CF*<br/>
+*cf*<br/>
 In der ersten Version, ein Zeiger auf eine [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) Struktur zum Empfangen von die zeichenformatierung Attribute der aktuellen Auswahl.
 
 In der zweiten Version, ein Zeiger auf eine [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) -Struktur, die eine Erweiterung des Rich Edit 2.0 ist auf die `CHARFORMAT` Struktur zum Empfangen von die zeichenformatierung Attribute der aktuellen Auswahl.
@@ -1201,10 +1201,10 @@ int GetTextRange(
 
 ### <a name="parameters"></a>Parameter
 
-*. Nerster*<br/>
+*nFirst*<br/>
 Die Position des Zeichens indizieren unmittelbar vor das erste Zeichen im Bereich.
 
-*Nletzter*<br/>
+*nLast*<br/>
 Die Position unmittelbar nach dem letzten Zeichen im Bereich.
 
 *refString*<br/>
@@ -1477,7 +1477,7 @@ CPoint PosFromChar(UINT nChar) const;
 
 ### <a name="parameters"></a>Parameter
 
-*NChar*<br/>
+*nChar*<br/>
 Der nullbasierte Index des Zeichens.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1560,7 +1560,7 @@ BOOL SetAutoURLDetect(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 Gibt an, ob das Steuerelement festgelegt ist, um eine URL automatisch zu erkennen. Wenn TRUE, wird es aktiviert. False gibt an, wird es deaktiviert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1589,7 +1589,7 @@ COLORREF SetBackgroundColor(
 *bSysColor*<br/>
 Gibt an, wenn die Farbe des Hintergrunds auf den System-Wert festgelegt werden soll. Wenn dieser Wert "true", *Cr* wird ignoriert.
 
-*CR*<br/>
+*cr*<br/>
 Die angeforderte Hintergrundfarbe. Nur verwendet werden, wenn *bSysColor* ist "false".
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1617,7 +1617,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 
 ### <a name="parameters"></a>Parameter
 
-*CF*<br/>
+*cf*<br/>
 In der ersten Version, ein Zeiger auf eine [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) Struktur, die das neue Standardzeichen Formatierungsattribute enthält.
 
 In der zweiten Version, ein Zeiger auf eine [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) -Struktur, die eine Erweiterung des Rich Edit 2.0 ist auf die `CHARFORMAT` Struktur, die mit dem Standardzeichen, die Formatierungsattribute.
@@ -1887,7 +1887,7 @@ Nullbasierte Index des ersten Zeichens für die Auswahl.
 *nEndChar*<br/>
 Nullbasierte Index des letzten Zeichens für die Auswahl.
 
-*CR*<br/>
+*cr*<br/>
 [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) Struktur, die die Begrenzungen des die aktuelle Auswahl enthält.
 
 ### <a name="remarks"></a>Hinweise
@@ -1919,7 +1919,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 
 ### <a name="parameters"></a>Parameter
 
-*CF*<br/>
+*cf*<br/>
 In der ersten Version, ein Zeiger auf eine [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) Struktur, die die neue zeichenformatierung enthält Attribute, für die aktuelle Auswahl.
 
 In der zweiten Version, ein Zeiger auf eine [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) -Struktur, die eine Erweiterung des Rich Edit 2.0 ist auf die `CHARFORMAT` Struktur, die mit dem neuen Zeichen, die Attribute für die aktuelle Auswahl formatieren.
@@ -2032,7 +2032,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 
 ### <a name="parameters"></a>Parameter
 
-*CF*<br/>
+*cf*<br/>
 In der ersten Version, ein Zeiger auf eine [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) Struktur, die die neue zeichenformatierung enthält Attribute, für das aktuell ausgewählte Wort.
 
 In der zweiten Version, ein Zeiger auf eine [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) -Struktur, die eine Erweiterung des Rich Edit 2.0 ist auf die `CHARFORMAT` Struktur, die mit dem neuen Zeichen, die Formatierung der Attribute für das aktuell ausgewählte Wort.
@@ -2101,7 +2101,7 @@ long StreamIn(
 *nFormat*<br/>
 Flags, die die Eingabedaten-Formate angeben. Weitere Informationen finden Sie im Abschnitt Hinweise.
 
-*Es*<br/>
+*es*<br/>
 [EDITSTREAM](/windows/desktop/api/richedit/ns-richedit-_editstream) -Struktur, die den Eingabedatenstrom angibt. Weitere Informationen finden Sie im Abschnitt Hinweise.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2143,7 +2143,7 @@ long StreamOut(
 *nFormat*<br/>
 Flags, die die Ausgabe-Datenformate angeben. Weitere Informationen finden Sie im Abschnitt Hinweise.
 
-*Es*<br/>
+*es*<br/>
 [EDITSTREAM](/windows/desktop/api/richedit/ns-richedit-_editstream) -Struktur gibt den Ausgabestream. Weitere Informationen finden Sie im Abschnitt Hinweise.
 
 ### <a name="return-value"></a>Rückgabewert

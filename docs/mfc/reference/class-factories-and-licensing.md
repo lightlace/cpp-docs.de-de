@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
-ms.openlocfilehash: bfe4957312a3e1f5c08768af6fe96eb0c2e8b1f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3788d904bf903481d57dd73a28bf6eafadd5f019
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514399"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289574"
 ---
 # <a name="class-factories-and-licensing"></a>Klassenfabriken und Lizenzierung
 
 Um eine Instanz des OLE-Steuerelements zu erstellen, ruft eine Container-Anwendung auf eine Memberfunktion der Klassenfactory des Steuerelements. Da das Steuerelement ein tatsächliches OLE-Objekt ist, ist die Klassenfactory für die Erstellung von Instanzen Ihres Steuerelements verantwortlich. Jede Steuerelementklasse OLE benötigen eine Klassenfactory.
 
-Ein weiteres wichtiges Feature der OLE-Steuerelemente ist ihre Fähigkeit, eine Lizenz zu erzwingen. Assistent ermöglicht Ihnen während der Erstellung der Steuerelementprojekt Lizenzierung zu integrieren. Weitere Informationen zu Lizenzierung, finden Sie im Artikel [ActiveX-Steuerelemente: Lizenzierung ein ActiveX-Steuerelement](../../mfc/mfc-activex-controls-licensing-an-activex-control.md).
+Ein weiteres wichtiges Feature der OLE-Steuerelemente ist ihre Fähigkeit, eine Lizenz zu erzwingen. Assistent ermöglicht Ihnen während der Erstellung der Steuerelementprojekt Lizenzierung zu integrieren. Weitere Informationen zu Lizenzierung, finden Sie im Artikel [ActiveX-Steuerelemente: Lizenzieren eines ActiveX-Steuerelements](../../mfc/mfc-activex-controls-licensing-an-activex-control.md).
 
 Die folgende Tabelle enthält einige Makros und Funktionen, die zum Deklarieren und Implementieren Ihres Steuerelements Klassenfactory und Lizenz des Steuerelements.
 
@@ -41,7 +41,7 @@ DECLARE_OLECREATE_EX(class_name)
 
 ### <a name="parameters"></a>Parameter
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Der Name der Steuerelement-Klasse.
 
 ### <a name="remarks"></a>Hinweise
@@ -79,7 +79,7 @@ IMPLEMENT_OLECREATE_EX(
 
 ### <a name="parameters"></a>Parameter
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Der Name des Steuerelements Eigenschaftenseitenklasse.
 
 *external_name*<br/>
@@ -106,7 +106,7 @@ BEGIN_OLEFACTORY(class_name)
 
 ### <a name="parameters"></a>Parameter
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Gibt den Namen der Steuerelement-Klasse, deren Klassenfactory, dies ist.
 
 ### <a name="remarks"></a>Hinweise
@@ -127,7 +127,7 @@ END_OLEFACTORY(class_name)
 
 ### <a name="parameters"></a>Parameter
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Der Name der Steuerelement-Klasse, deren Klassenfactory, dies ist.
 
 ### <a name="requirements"></a>Anforderungen
@@ -157,7 +157,7 @@ Verweist auf eine Null-terminierte Zeichenfolge, die die Lizenz-Dateinamen enth�
 *pszLicFileContents*<br/>
 Verweist auf eine Bytesequenz, die die Sequenz finden Sie am Anfang der Lizenzdatei übereinstimmen muss.
 
-*CCH*<br/>
+*cch*<br/>
 Anzahl der Zeichen in *PszLicFileContents*.
 
 ### <a name="return-value"></a>Rückgabewert

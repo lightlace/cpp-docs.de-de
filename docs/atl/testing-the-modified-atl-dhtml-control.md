@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing controls
 - DHTML controls, testing
 ms.assetid: 42316118-9433-410f-9d8a-0efcc1eff824
-ms.openlocfilehash: 99f55807a7da647af0961f73c600ae0e31166cdc
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 55cdaba64ccb95ee5695c082a5e146b1e7dc2cf3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330969"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277235"
 ---
 # <a name="testing-the-modified-atl-dhtml-control"></a>Prüfen des geänderten ATL-DHTML-Steuerelements
 
@@ -23,7 +23,7 @@ Testen Sie das neue Steuerelement zu sehen, wie es jetzt funktioniert.
 
    Größe des Steuerelements, um alle Schaltflächen anzuzeigen, die Sie hinzugefügt haben.
 
-1. Überprüfen Sie die zwei Schaltflächen, die Sie durch Ändern des HTML-Codes eingefügt. Jede Schaltfläche trägt die Bezeichnung, die Sie in identifiziert [Ändern des ATL-DHTML-Steuerelements](../atl/modifying-the-atl-dhtml-control.md): **aktualisieren** und **HelloHTML**.
+1. Überprüfen Sie die zwei Schaltflächen, die Sie durch Ändern des HTML-Codes eingefügt. Jede Schaltfläche trägt die Bezeichnung, die Sie in identifiziert [Ändern des ATL-DHTML-Steuerelements](../atl/modifying-the-atl-dhtml-control.md): **Aktualisieren Sie** und **HelloHTML**.
 
 1. Testen Sie die zwei neuen Schaltflächen um anzuzeigen, wie sie funktionieren.
 

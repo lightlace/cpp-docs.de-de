@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - message passing functions
 ms.assetid: 42477c9e-a8a6-4dc4-a98e-93c6dc8c4dd0
-ms.openlocfilehash: e258a73723e78090f61230555748e109c28cf01c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a1790a08403bcc1d016a39e27c7a121c288af4d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476023"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303949"
 ---
 # <a name="message-passing-functions"></a>Funktionen zum Übergeben von Meldungen
 
@@ -55,9 +55,9 @@ Beispiele für die Verwendung der `send` und `asend`, und `receive` -Funktionen 
 
 - [Vorgehensweise: Bereitstellen von Arbeitsfunktionen für die call- und transformer-Klassen](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)
 
-- [Vorgehensweise: Verwenden von transformer in einer Datenpipeline](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)
+- [Vorgehensweise: Verwenden von „transformer“ in einer Datenpipeline](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)
 
-- [Vorgehensweise: Auswählen von abgeschlossenen Aufgaben](../../parallel/concrt/how-to-select-among-completed-tasks.md)
+- [Vorgehensweise: Auswählen von abgeschlossenen Tasks](../../parallel/concrt/how-to-select-among-completed-tasks.md)
 
 - [Vorgehensweise: Senden einer Nachricht in regelmäßigen Intervallen](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)
 
@@ -73,4 +73,3 @@ Beispiele für die Verwendung der `send` und `asend`, und `receive` -Funktionen 
 [Asend-Funktion](reference/concurrency-namespace-functions.md#asend)<br/>
 [Receive-Funktion](reference/concurrency-namespace-functions.md#receive)<br/>
 [Try_receive-Funktion](reference/concurrency-namespace-functions.md#try_receive)
-

@@ -1,5 +1,5 @@
 ---
-title: 'Server: Serverelemente'
+title: 'Server: Server-Elemente'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - server items, implementing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - server items
 - OLE server applications [MFC], server items
 ms.assetid: 28ba81a1-726a-4728-a52d-68bc7efd5a3c
-ms.openlocfilehash: ea04a3eefff0f127873ffbf67ea39ade3a6b9b85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0adaea1c4f1dd0525ead82dfffdf267326ac865c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453689"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262284"
 ---
-# <a name="servers-server-items"></a>Server: Serverelemente
+# <a name="servers-server-items"></a>Server: Server-Elemente
 
 Wenn ein Container einen Server gestartet wird, damit ein Benutzer ein eingebettetes oder verknüpftes OLE-Element bearbeiten kann, erstellt die Serveranwendung ein "Serverelement". Das Element für Server, ein Objekt einer Klasse abgeleitet `COleServerItem`, stellt eine Schnittstelle zwischen dem Serverdokument und die Container-Anwendung bereit.
 
@@ -52,4 +52,3 @@ Weitere Informationen finden Sie unter [CView:: OnDraw](../mfc/reference/cview-c
 ## <a name="see-also"></a>Siehe auch
 
 [Server](../mfc/servers.md)
-

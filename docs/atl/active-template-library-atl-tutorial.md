@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tutorials [ATL]
 - ATL, tutorials
 ms.assetid: f921a121-09c8-4812-9317-e15b2f1471fa
-ms.openlocfilehash: b4a47cd22026663acb1cade6f2b4c098c4887965
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 716818306c751a8d774a8fc6c311694a7932be2c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570572"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270110"
 ---
 # <a name="active-template-library-atl-tutorial"></a>ATL-Lernprogramm (Active Template Library)
 
@@ -30,15 +30,14 @@ Das Tutorial ist in die folgenden sieben Schritte unterteilt. Führen Sie jeden 
 
 - [Schritt 3. Hinzufügen einer Eigenschaft zum Steuerelement](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)
 
-- [Schritt 4: Ändern des Steuerelements-Zeichencodes](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)
+- [Schritt 4: Ändern des Steuerelements Zeichencodes](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)
 
 - [Schritt 5: Hinzufügen eines Ereignisses](../atl/adding-an-event-atl-tutorial-part-5.md)
 
 - [Schritt 6: Hinzufügen einer Eigenschaftenseite](../atl/adding-a-property-page-atl-tutorial-part-6.md)
 
-- [Schritt 7: Ablegen des Steuerelements auf einer Webseite](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)
+- [Schritt 7: Platzieren das Steuerelement auf einer Webseite](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)
 
 ## <a name="see-also"></a>Siehe auch
 
 [Konzepte](../atl/active-template-library-atl-concepts.md)
-

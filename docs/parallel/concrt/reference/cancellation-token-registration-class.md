@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - cancellation_token_registration class
 ms.assetid: 823d63f4-7233-4d65-8976-6152ccf12d0e
-ms.openlocfilehash: ca664d78f80a0c335a8669454b1345955aaefcb2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6ca8061181ec057110282fa297666235e898ff6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644664"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270822"
 ---
 # <a name="cancellationtokenregistration-class"></a>cancellation_token_registration-Klasse
 
@@ -32,7 +32,7 @@ class cancellation_token_registration;
 |Name|Beschreibung|
 |----------|-----------------|
 |[cancellation_token_registration](#ctor)||
-|[~ Cancellation_token_registration-Destruktor](#dtor)||
+|[~cancellation_token_registration Destructor](#dtor)||
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
@@ -86,7 +86,7 @@ Der zu vergleichende `cancellation_token_registration`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-##  <a name="operator_eq"></a> Operator =
+##  <a name="operator_eq"></a> operator=
 
 ```
 cancellation_token_registration& operator= (const cancellation_token_registration& _Src);

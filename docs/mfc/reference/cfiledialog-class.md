@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: 87f99b4f037c8cc881b33e1d07b4f07596ee9a1b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: aaa05fc3e97fe690e8d6a0cd9eba826c482b410d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694542"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262102"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog-Klasse
 
@@ -247,11 +247,11 @@ Sowohl die Darstellung und die Funktionalität der `CFileDialog` mit Windows Vis
 
 Einige `CFileDialog` Methoden werden nicht unterstützt, unter Windows Vista oder höher. Überprüfen Sie die einzelne Methode enthält Informationen zum gibt an, ob die Methode unterstützt wird. Darüber hinaus werden die folgenden geerbten Funktionen unter Windows Vista oder höher nicht unterstützt:
 
-- [CDialog::](../../mfc/reference/cdialog-class.md#oninitdialog)
+- [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)
 
 - [CDialog::OnSetFont](../../mfc/reference/cdialog-class.md#onsetfont)
 
-Die Windows-Meldungen für die `CFileDialog` Klasse variieren, je nachdem auf welches Betriebssystem Sie verwenden. Windows XP unterstützt beispielsweise keine [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) und [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) für die `CFileDialog` Klasse. Allerdings Windows Vista und späteren Betriebssystemen werden unterstützt. Weitere Informationen über die unterschiedlichen Nachrichten, die generiert werden und die Reihenfolge, in dem sie empfangen werden, finden Sie unter [CFileDialog-Beispiel: Protokollierung Ereignisreihenfolge](../../visual-cpp-samples.md).
+Die Windows-Meldungen für die `CFileDialog` Klasse variieren, je nachdem auf welches Betriebssystem Sie verwenden. Windows XP unterstützt beispielsweise keine [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) und [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) für die `CFileDialog` Klasse. Allerdings Windows Vista und späteren Betriebssystemen werden unterstützt. Weitere Informationen über die unterschiedlichen Nachrichten, die generiert werden und die Reihenfolge, in dem sie empfangen werden, finden Sie unter [CFileDialog-Beispiel: Protokollierung der Ereignisse in ihrer Reihenfolge](../../visual-cpp-samples.md).
 
 Verwenden einer `CFileDialog` Objekt, erstellen Sie zuerst mithilfe der `CFileDialog` Konstruktor. Nachdem Sie das Dialogfeld erstellt wurde, können Sie festlegen oder ändern Sie alle Werte in der [CFileDialog::m_ofn](#m_ofn) Struktur, die Werte oder Zustände der Dialogfeld-Steuerelemente initialisieren. Die `m_ofn` Struktur ist vom Typ `OPENFILENAME`. Weitere Informationen finden Sie unter den [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) Struktur im Windows SDK.
 
@@ -427,7 +427,7 @@ Ein Pfad zu dem Ordner für dem Benutzer verfügbar gemacht werden. Dies kann nu
 *fdap*<br/>
 Gibt an, in dem Ordner, in der Liste platziert wird.
 
-*PSI*<br/>
+*psi*<br/>
 Ein Zeiger auf ein IShellItem, die den Ordner darstellt, der dem Benutzer zur Verfügung gestellt werden. Dies kann nur einem Ordner sein.
 
 ### <a name="remarks"></a>Hinweise
@@ -690,7 +690,7 @@ Die ID des Containersteuerelements.
 *dwIDItem*<br/>
 Die ID des Elements.
 
-*dwState-Datenmember*<br/>
+*dwState*<br/>
 Ein Verweis auf eine Variable, die mehrere Werte aus der Enumeration CDCONTROLSTATE empfängt, der den aktuellen Zustand des Steuerelements angibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -710,7 +710,7 @@ HRESULT GetControlState(
 *dwIDCtl*<br/>
 Die ID des Steuerelements.
 
-*dwState-Datenmember*<br/>
+*dwState*<br/>
 Ein Verweis auf eine Variable, die einen oder mehrere Werte aus der Enumeration CDCONTROLSTATE empfängt, der den aktuellen Zustand des Steuerelements angibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -893,7 +893,7 @@ CString GetNextPathName(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Ein Verweis auf eine Positionswert, der von einem vorherigen zurückgegebene `GetNextPathName` oder `GetStartPosition` Funktionsaufruf. NULL, wenn das Ende der Liste erreicht wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1392,7 +1392,7 @@ Die ID des Containersteuerelements.
 *dwIDItem*<br/>
 Die ID des Elements.
 
-*dwState-Datenmember*<br/>
+*dwState*<br/>
 Eine oder mehrere Werte aus der CDCONTROLSTATE-Enumeration, die den neuen Zustand des Steuerelements angeben.
 
 ### <a name="remarks"></a>Hinweise
@@ -1456,7 +1456,7 @@ HRESULT SetControlState(
 *dwIDCtl*<br/>
 Die ID des Steuerelements.
 
-*dwState-Datenmember*<br/>
+*dwState*<br/>
 Eine oder mehrere Werte aus der CDCONTROLSTATE-Enumeration, die den aktuellen Zustand des Steuerelements angeben.
 
 ### <a name="remarks"></a>Hinweise
@@ -1642,4 +1642,3 @@ In diesem Beispiel aktualisiert die `CFileDialog` vor der Anzeige. Vor dem Aktua
 
 [CCommonDialog-Klasse](../../mfc/reference/ccommondialog-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
-

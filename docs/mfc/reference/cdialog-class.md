@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: 9eac0f7efdacc6181d8aaa15398f4d7365c0edd3
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: d3c3bca7932b9e9c7e7723b286c83ca3694a9968
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178498"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305093"
 ---
 # <a name="cdialog-class"></a>CDialog-Klasse
 
@@ -71,14 +71,14 @@ class CDialog : public CWnd
 |----------|-----------------|
 |[CDialog::Create](#create)|Initialisiert das `CDialog`-Objekt. Erstellt ein nicht modales Dialogfeld, und fügt es der `CDialog` Objekt.|
 |[CDialog::CreateIndirect](#createindirect)|Wird ein nicht modales Dialogfeld aus einer Vorlage im Dialogfeld im Arbeitsspeicher (nicht ressourcenbasiert) erstellt.|
-|[Methode CDialog:: DoModal](#domodal)|Ruft ein modales Dialogfeld, und gibt zurück, wenn Sie fertig.|
+|[CDialog::DoModal](#domodal)|Ruft ein modales Dialogfeld, und gibt zurück, wenn Sie fertig.|
 |[CDialog::EndDialog](#enddialog)|Schließt ein modales Dialogfeld an.|
 |[CDialog::GetDefID](#getdefid)|Ruft die ID des das standardmäßige pushbutton-Steuerelement für ein Dialogfeld an.|
 |[CDialog::GotoDlgCtrl](#gotodlgctrl)|Verschiebt den Fokus auf ein im angegebenen Dialogfeld-Steuerelement im Dialogfeld an.|
-|[DLGTEMPL](#initmodalindirect)|Erstellt ein modales Dialogfeld aus einer Vorlage im Dialogfeld im Arbeitsspeicher (nicht ressourcenbasiert) wird. Die Parameter werden gespeichert, bis die Funktion `DoModal` aufgerufen wird.|
+|[CDialog::InitModalIndirect](#initmodalindirect)|Erstellt ein modales Dialogfeld aus einer Vorlage im Dialogfeld im Arbeitsspeicher (nicht ressourcenbasiert) wird. Die Parameter werden gespeichert, bis die Funktion `DoModal` aufgerufen wird.|
 |[CDialog::MapDialogRect](#mapdialogrect)|Konvertiert die Dialogfeld-Einheiten eines Rechtecks Bildschirm Einheiten.|
 |[CDialog::NextDlgCtrl](#nextdlgctrl)|Verschiebt den Fokus auf das nächste Dialogfeld-Steuerelement im Dialogfeld an.|
-|[CDialog::](#oninitdialog)|Außer Kraft setzen Sie, um das Dialogfeld Initialisierung zu erweitern.|
+|[CDialog::OnInitDialog](#oninitdialog)|Außer Kraft setzen Sie, um das Dialogfeld Initialisierung zu erweitern.|
 |[CDialog::OnSetFont](#onsetfont)|Überschreiben Sie, um die Schriftart angeben, die ein Dialogfeld-Steuerelement verwenden, wenn es sich um Text zeichnet.|
 |[CDialog::PrevDlgCtrl](#prevdlgctrl)|Verschiebt den Fokus auf das vorherige Dialogfeld-Steuerelement im Dialogfeld.|
 |[CDialog::SetDefID](#setdefid)|Die standardmäßige pushbutton-Steuerelement für ein Dialogfeld wird in einem angegebenen Pushbutton geändert.|
@@ -266,7 +266,7 @@ Verwenden der `CWnd::DestroyWindow` Funktion zerstört ein Dialogfeld erstellt d
 
 Dialogfelder, die ActiveX-Steuerelemente enthalten erfordern zusätzliche Informationen, die in einer Ressource DLGINIT bereitgestellt.
 
-##  <a name="domodal"></a>  Methode CDialog:: DoModal
+##  <a name="domodal"></a>  CDialog::DoModal
 
 Rufen Sie diese Memberfunktion zum Aufrufen des modalen Dialogfelds sowie zum Zurückgeben des Ergebnisses im Dialogfeld, wenn fertig.
 
@@ -301,7 +301,7 @@ void EndDialog(int nResult);
 
 ### <a name="parameters"></a>Parameter
 
-*%nergebnis*<br/>
+*nResult*<br/>
 Enthält den Wert aus dem Dialogfeld an den Aufrufer der zurückzugebenden `DoModal`.
 
 ### <a name="remarks"></a>Hinweise
@@ -448,7 +448,7 @@ Wenn Sie implementieren die **Abbrechen** Schaltfläche in ein nicht modales Dia
 
 [!code-cpp[NVC_MFCControlLadenDialog#66](../../mfc/codesnippet/cpp/cdialog-class_5.cpp)]
 
-##  <a name="oninitdialog"></a>  CDialog::
+##  <a name="oninitdialog"></a>  CDialog::OnInitDialog
 
 Diese Methode wird aufgerufen, als Reaktion auf die `WM_INITDIALOG` Nachricht.
 
@@ -562,4 +562,3 @@ Gibt an, die kontextbezogene Hilfe-ID.
 [MFC-Beispiel DLGTEMPL](../../visual-cpp-samples.md)<br/>
 [CWnd-Klasse](../../mfc/reference/cwnd-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
-

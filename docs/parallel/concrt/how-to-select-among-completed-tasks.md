@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Auswählen von abgeschlossenen Aufgaben'
+title: 'Vorgehensweise: Auswählen von abgeschlossenen Aufgaben'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - selecting among completed tasks [Concurrency Runtime]
 - completed tasks, selecting among [Concurrency Runtime]
 ms.assetid: c8ccc160-043f-4599-847b-32ed270bb257
-ms.openlocfilehash: c9137c3d1e354a5e3f50f0d281ecbbd247642597
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d31f9bd16aaa70cc773e60e4f1193e66ec520f0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551631"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278027"
 ---
-# <a name="how-to-select-among-completed-tasks"></a>Gewusst wie: Auswählen von abgeschlossenen Aufgaben
+# <a name="how-to-select-among-completed-tasks"></a>Vorgehensweise: Auswählen von abgeschlossenen Aufgaben
 
 Dieses Beispiel zeigt, wie Sie mit der [Choice](../../parallel/concrt/reference/choice-class.md) und [Concurrency:: Join](../../parallel/concrt/reference/join-class.md) Klassen, die erste Aufgabe zum Abschließen eines Suchalgorithmus auszuwählen.
 

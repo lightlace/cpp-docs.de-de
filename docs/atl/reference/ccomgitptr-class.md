@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComGITPtr class
 ms.assetid: af895acb-525a-4555-bb67-b241b7df515b
-ms.openlocfilehash: 36ef105b79da51348a61767117b637992e1f8c47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf509d027833610e4251c009d4e444dad3fdd5ce
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557169"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296032"
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr-Klasse
 
@@ -44,7 +44,7 @@ Der Typ des Schnittstellenzeigers in GIT gespeichert werden.
 |Name|Beschreibung|
 |----------|-----------------|
 |[CComGITPtr::CComGITPtr](#ccomgitptr)|Der Konstruktor.|
-|[CComGITPtr:: ~ CComGITPtr](#dtor)|Der Destruktor.|
+|[CComGITPtr::~CComGITPtr](#dtor)|Der Destruktor.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -123,13 +123,13 @@ CComGITPtr(CComGITPtr&& rv);
 *p*<br/>
 [in] Ein Schnittstellenzeiger in der globalen Schnittstellentabelle (GIT) gespeichert werden.
 
-*Git*<br/>
+*git*<br/>
 [in] Ein Verweis auf einen vorhandenen `CComGITPtr` Objekt.
 
 *dwCookie*<br/>
 [in] Ein Cookie verwendet, um den Schnittstellenzeiger zu identifizieren.
 
-*Rv*<br/>
+*rv*<br/>
 [in] Die Quelle `CComGITPtr` Objekt, das Verschieben von Daten aus.
 
 ### <a name="remarks"></a>Hinweise
@@ -160,7 +160,7 @@ HRESULT CopyTo(T** pp) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*PP*<br/>
+*pp*<br/>
 Der Zeiger handelt es sich um die Schnittstelle zu erhalten.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -231,13 +231,13 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 *p*<br/>
 [in] Ein Zeiger auf eine Schnittstelle.
 
-*Git*<br/>
+*git*<br/>
 [in] Ein Verweis auf eine `CComGITPtr` Objekt.
 
 *dwCookie*<br/>
 [in] Ein Cookie verwendet, um den Schnittstellenzeiger zu identifizieren.
 
-*Rv*<br/>
+*rv*<br/>
 [in] Die `CComGITPtr` zum Verschieben von Daten aus.
 
 ### <a name="return-value"></a>Rückgabewert

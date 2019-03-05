@@ -72,12 +72,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::set_zx
 - amp_short_vectors/Concurrency::graphics::norm_3::bgr
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
-ms.openlocfilehash: f350e5c5707dad93fe2863523e816d309647acd3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cec778e6cdc53871b7987ef5a2faf529eea6d4f3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513801"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288934"
 ---
 # <a name="norm3-class"></a>norm_3-Klasse
 
@@ -112,7 +112,7 @@ class norm_3;
 |norm_3::get_xyz||
 |norm_3::get_xz||
 |norm_3::get_xzy||
-|norm_3:: get_Y||
+|norm_3::get_y||
 |norm_3::get_yx||
 |norm_3::get_yxz||
 |norm_3::get_yz||
@@ -120,7 +120,7 @@ class norm_3;
 |norm_3::get_z||
 |norm_3::get_zx||
 |norm_3::get_zxy||
-|norm_3:: get_zy||
+|norm_3::get_zy||
 |norm_3::get_zyx||
 |norm_3::ref_b||
 |norm_3::ref_g||
@@ -129,33 +129,33 @@ class norm_3;
 |norm_3::ref_y||
 |norm_3::ref_z||
 |norm_3::set_x||
-|norm_3:: set_xy||
-|norm_3:: set_xyz||
+|norm_3::set_xy||
+|norm_3::set_xyz||
 |norm_3::set_xz||
-|norm_3:: set_xzy||
-|norm_3:: set_y||
+|norm_3::set_xzy||
+|norm_3::set_y||
 |norm_3::set_yx||
 |norm_3::set_yxz||
-|norm_3:: set_yz||
-|norm_3:: set_yzx||
+|norm_3::set_yz||
+|norm_3::set_yzx||
 |norm_3::set_z||
 |norm_3::set_zx||
 |norm_3::set_zxy||
-|norm_3:: set_zy||
+|norm_3::set_zy||
 |norm_3::set_zyx||
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
 |Name|Beschreibung|
 |----------|-----------------|
-|norm_3::-||
-|norm_3:::||
+|norm_3::operator-||
+|norm_3::operator--||
 |norm_3::operator*=||
 |norm_3::operator/=||
-|norm_3:: Operator++-||
+|norm_3::operator++||
 |norm_3::operator+=||
 |norm_3::operator=||
-|norm_3:: Operator-=||
+|norm_3::operator-=||
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
@@ -186,7 +186,7 @@ class norm_3;
 |norm_3::xy||
 |norm_3::xyz||
 |norm_3::xz||
-|norm_3:: xzy||
+|norm_3::xzy||
 |norm_3::y||
 |norm_3::yx||
 |norm_3::yxz||
@@ -195,7 +195,7 @@ class norm_3;
 |norm_3::z||
 |norm_3::zx||
 |norm_3::zxy||
-|norm_3:: ZY||
+|norm_3::zy||
 |norm_3::zyx||
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
@@ -271,7 +271,7 @@ Der Wert 2-Element zu initialisieren.
 *_V*<br/>
 Der Wert für die Initialisierung.
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Das Objekt, das zum Initialisieren verwendet.
 
 ## <a name="a-namesize-size-constant"></a><a name="size"> Size-Konstante

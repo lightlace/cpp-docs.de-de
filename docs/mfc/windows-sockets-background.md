@@ -18,12 +18,12 @@ helpviewer_keywords:
 - sequenced data flow
 - stream sockets [MFC]
 ms.assetid: f60d4ed2-bf23-4a0e-98d2-fee77e8473dd
-ms.openlocfilehash: 93342f734d1e475cbae1b7e3025c59e6e6f73284
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ab866609d0b75aaf9d06a01c204433d80e7e3d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468028"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274921"
 ---
 # <a name="windows-sockets-background"></a>Windows Sockets: Hintergrund
 
@@ -44,14 +44,14 @@ Viele Netzwerksoftwareanbieter unterstützen Windows Sockets für Netzwerkprotok
 
 Die Microsoft Foundation Class-Bibliothek (MFC-Bibliothek) unterstützt Programmierung mit der Windows Sockets-API, indem sie zwei Klassen bereitstellt. Eine dieser Klassen, `CSocket`, bietet eine hohe Abstraktionsebene, wodurch die Programmierung der Netzwerkkommunikation vereinfacht wird.
 
-Die Windows Sockets-Spezifikation "Windows Sockets: An Open Interface for Network Computing Under Microsoft Windows" (jetzt in Version 1.1) wurde als offener Netzwerkstandard von einer großen Gruppe von Einzelpersonen und Unternehmen in der TCP/IP-Community entwickelt und kann kostenlos verwendet werden. Das Socket-Programmiermodell unterstützt derzeit eine „Kommunikationsdomäne“ und verwendet dabei die Internetprotokollsammlung. Die Spezifikation ist im Windows SDK verfügbar.
+Der Windows Sockets-Spezifikation Windows Sockets: Eine Schnittstelle zu öffnen, für die Network Computing unter Microsoft Windows, jetzt in Version 1.1, wurde als offener Netzwerkstandard von einer großen Gruppe von Einzelpersonen und Unternehmen in der TCP/IP-Community entwickelt und steht kostenlos zur Verfügung. Das Socket-Programmiermodell unterstützt derzeit eine „Kommunikationsdomäne“ und verwendet dabei die Internetprotokollsammlung. Die Spezifikation ist im Windows SDK verfügbar.
 
 > [!TIP]
 >  Da die Sockets die Internetprotokollsammlung verwenden, werden sie als bevorzugte Route für Anwendungen verwendet, die Internetkommunikation auf der „Datenautobahn“ unterstützen.
 
 ##  <a name="_core_definition_of_a_socket"></a> Definition eines Sockets
 
-Ein Socket ist ein Kommunikationsendpunkt - ein Objekt, durch das eine Windows Socket-Anwendung Datenpakete über ein Netzwerk sendet oder empfängt. Ein Socket hat einen Typ, ist einem laufenden Prozess zugeordnet und einen Namen haben. Derzeit tauschen Sockets im Allgemeinen nur mit anderen Sockets in derselben „Kommunikationsdomäne“ Daten aus, in der die Internetprotokollsammlung verwendet wird.
+Ein Socket ist ein Kommunikationsendpunkt - ein Objekt, durch das eine Windows Socket-Anwendung Datenpakete über ein Netzwerk sendet oder empfängt. Ein Socket hat einen Typ, ist einem laufenden Prozess zugeordnet und einen Namen haben. Derzeit tauschen Sockets Daten im Allgemeinen nur mit anderen Sockets in derselben "Kommunikationsdomäne" aus, in der die Internetprotokollfamilie verwendet wird.
 
 Beide Arten von Sockets sind bidirektional. Es handelt sich um Datenflüsse, die in beide Richtungen gleichzeitig übermittelt werden können (Vollduplex).
 
@@ -89,17 +89,16 @@ Sockets sind in mindestens drei Kommunikationskontexten äußerst nützlich:
 - Remoteprozeduraufrufe (RPC), bei denen die empfangende Anwendung eine Meldung als Funktionsaufruf interpretiert
 
 > [!TIP]
->  Das ideale Argument für die Verwendung von MFC-Sockets ist, wenn Sie beide Enden der Kommunikation schreiben und dabei eine MFC-Bibliothek an beiden Enden verwenden. Weitere Informationen zu diesem Thema, wie Sie die Groß-/Kleinschreibung zu verwalten, wenn Sie eine Kommunikation mit nicht-MFC-Anwendungen sind finden Sie unter [Windows Sockets: Bytereihenfolge](../mfc/windows-sockets-byte-ordering.md).
+>  Das ideale Argument für die Verwendung von MFC-Sockets ist, wenn Sie beide Enden der Kommunikation schreiben und dabei eine MFC-Bibliothek an beiden Enden verwenden. Weitere Informationen zu diesem Thema, wie Sie die Groß-/Kleinschreibung zu verwalten, wenn Sie eine Kommunikation mit nicht-MFC-Anwendungen sind finden Sie unter [Windows Sockets: Die Bytereihenfolge](../mfc/windows-sockets-byte-ordering.md).
 
 Weitere Informationen finden Sie unter Windows Sockets-Spezifikation: **Ntohs**, **Ntohl**, **Htons**, **Htonl**. Informationen finden Sie auch in folgenden Themen:
 
-- [Windows-Sockets: Verwenden von Sockets mit Archiven](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets: Verwenden von Sockets mit Archiven](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows-Sockets: Beispiel für Sockets mithilfe der Archive](../mfc/windows-sockets-example-of-sockets-using-archives.md)
+- [Windows Sockets: Beispiel für Sockets mithilfe der Archive](../mfc/windows-sockets-example-of-sockets-using-archives.md)
 
-- [Windows-Sockets: Verwenden der Klasse CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: Verwenden der Klasse CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
 ## <a name="see-also"></a>Siehe auch
 
 [Windows-Sockets in MFC](../mfc/windows-sockets-in-mfc.md)
-

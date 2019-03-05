@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CList [MFC], RemoveTail
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
-ms.openlocfilehash: 10991745fb5ccdac145f4b1d589e7d59c6ed6f4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 722c38de100f2f1ff00e6589573a76bcdd9f3e84
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513957"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297384"
 ---
 # <a name="clist-class"></a>CList-Klasse
 
@@ -238,7 +238,7 @@ POSITION Find(
 *ARG_TYPE*<br/>
 Vorlagenparameter, der den Typ des Listenelements angibt (kann ein Verweis sein).
 
-*Suchwert*<br/>
+*searchValue*<br/>
 Der Wert, der in der Liste gefunden werden.
 
 *startAfter*<br/>
@@ -291,7 +291,7 @@ const TYPE& GetAt(POSITION position) const;
 *TYPE*<br/>
 Der Vorlagenparameter, den Typ des Objekts in der Liste angibt.
 
-*Position*<br/>
+*position*<br/>
 Die Position in der Liste des abzurufenden Elements.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -387,7 +387,7 @@ const TYPE& GetNext(POSITION& rPosition) const;
 *TYPE*<br/>
 Der Vorlagenparameter, der Typ der Elemente in der Liste angibt.
 
-*rposition zurück*<br/>
+*rPosition*<br/>
 Ein Verweis auf eine Positionswert, der von einem vorherigen zurückgegebene `GetNext`, [GetHeadPosition](#getheadposition), oder anderer Aufruf der Memberfunktion.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -422,7 +422,7 @@ const TYPE& GetPrev(POSITION& rPosition) const;
 *TYPE*<br/>
 Der Vorlagenparameter, der Typ der Elemente in der Liste angibt.
 
-*rposition zurück*<br/>
+*rPosition*<br/>
 Ein Verweis auf eine Positionswert, der von einem vorherigen zurückgegebene `GetPrev` oder anderen Aufruf der Memberfunktion.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -515,7 +515,7 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parameter
 
-*Position*<br/>
+*position*<br/>
 Eine Positionswert, der von einem vorherigen zurückgegebene `GetNext`, `GetPrev`, oder `Find` Aufruf der Memberfunktion.
 
 *ARG_TYPE*<br/>
@@ -542,7 +542,7 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parameter
 
-*Position*<br/>
+*position*<br/>
 Eine Positionswert, der von einem vorherigen zurückgegebene `GetNext`, `GetPrev`, oder `Find` Aufruf der Memberfunktion.
 
 *ARG_TYPE*<br/>
@@ -605,7 +605,7 @@ void RemoveAt(POSITION position);
 
 ### <a name="parameters"></a>Parameter
 
-*Position*<br/>
+*position*<br/>
 Die Position des Elements, das aus der Liste entfernt werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -676,7 +676,7 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Die POSITION des Elements festgelegt werden.
 
 *ARG_TYPE*<br/>

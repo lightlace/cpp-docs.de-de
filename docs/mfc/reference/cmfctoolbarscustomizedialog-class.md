@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: 026c7392c3eb93b37a712059939683e3e0ab852c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4aaede3eb2d5c922c196e2bdfbbe533c4e65e47
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628994"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295031"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog-Klasse
 
 Ein nicht modales Dialogfeld im Registerformat ( [CPropertySheet-Klasse](../../mfc/reference/cpropertysheet-class.md)), die den Benutzer die Symbolleisten, Menüs, Tastenkombinationen in Visual Studio, benutzerdefinierte Tools und visuellen Stil in einer Anwendung anpassen können. In der Regel greift der Benutzer durch Auswählen von **Anpassen** im Menü **Tools** auf dieses Dialogfeld zu.
 
-Die **anpassen** Dialogfeld verfügt über sechs Registerkarten: **Befehle**, **Symbolleisten**, **Tools**, **Tastatur**,  **Menü**, und **Optionen**.
+Die **anpassen** Dialogfeld verfügt über sechs Registerkarten: **Befehle**, **Symbolleisten**, **Tools**, **Tastatur**, **Menü**, und **Optionen**.
 
 ## <a name="syntax"></a>Syntax
 
@@ -71,7 +71,7 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 |[CMFCToolBarsCustomizeDialog::GetFlags](#getflags)|Ruft den Satz von Flags, die das Verhalten des Dialogfelds beeinflussen.|
 |`CMFCToolBarsCustomizeDialog::GetThisClass`|Durch das Framework verwendet wird, einen Zeiger zum Abrufen der [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das diesem Klassentyp zugeordnet ist.|
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::OnEditToolbarMenuImage](#onedittoolbarmenuimage)|Startet Sie einen Bild-Editor, sodass ein Benutzer eine Schaltfläche oder Element Symbol auf der Symbolleiste anpassen kann.|
-|[CMFCToolBarsCustomizeDialog::OnInitDialog](#oninitdialog)|Außerkraftsetzungen, um das Blatt eigenschafteninitialisierung zu erweitern. (Überschreibt [CPropertySheet:: OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|
+|[CMFCToolBarsCustomizeDialog::OnInitDialog](#oninitdialog)|Außerkraftsetzungen, um das Blatt eigenschafteninitialisierung zu erweitern. (Overrides [CPropertySheet::OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|
 |[CMFCToolBarsCustomizeDialog::PostNcDestroy](#postncdestroy)|Vom Framework aufgerufen, nachdem das Fenster zerstört wurde. (Überschreibt `CPropertySheet::PostNcDestroy`.)|
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::RemoveButton](#removebutton)|Entfernt die Schaltfläche mit den angegebenen Befehls-ID aus der angegebenen Kategorie oder aus allen Kategorien.|
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::RenameCategory](#renamecategory)|Benennt eine Kategorie im Listenfeld der Kategorien auf die **Befehle** Registerkarte.|
@@ -137,7 +137,7 @@ void AddButton(
 *uiCategoryId*<br/>
 [in] Gibt die Kategorie-ID, in dem die Schaltfläche eingefügt werden soll.
 
-*Schaltfläche "*<br/>
+*button*<br/>
 [in] Gibt die Schaltfläche zum Einfügen.
 
 *iInsertBefore*<br/>
@@ -357,7 +357,7 @@ void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] True, um die benutzerdefinierten Symbolleisten aktivieren. "False", um Symbolleisten zu deaktivieren.
 
 ### <a name="remarks"></a>Hinweise
@@ -586,7 +586,7 @@ virtual BOOL OnEditToolbarMenuImage(
 *pWndParent*<br/>
 [in] Ein Zeiger auf das übergeordnete Fenster.
 
-*Bitmap*<br/>
+*bitmap*<br/>
 [in] Ein Verweis auf ein Bitmap-Objekt, das bearbeitet werden.
 
 *nBitsPerPixel*<br/>
@@ -716,7 +716,7 @@ void ReplaceButton(
 *uiCmd*<br/>
 [in] Gibt den Befehl an der Schaltfläche ersetzt werden.
 
-*Schaltfläche "*<br/>
+*button*<br/>
 [in] Ein **const** Verweis auf die Symbolleiste Button-Objekt, das die Schaltfläche mit den alten ersetzt.
 
 ### <a name="remarks"></a>Hinweise

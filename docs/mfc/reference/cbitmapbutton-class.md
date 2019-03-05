@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CBitmapButton [MFC], LoadBitmaps
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
-ms.openlocfilehash: 6bff87cd7648e1e5f4e0391a0a7fc1a1455a51f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c800b40fcf2bb3008b35614390e4aafcb43a54f5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599653"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296760"
 ---
 # <a name="cbitmapbutton-class"></a>CBitmapButton-Klasse
 
@@ -43,7 +43,7 @@ class CBitmapButton : public CButton
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CBitmapButton:: AutoLoad](#autoload)|Ordnet eine Schaltfläche in einem Dialogfeld ein Objekt der `CBitmapButton` -Klasse, lädt die Bitmap(s) anhand des Namens und die Größe der Schaltfläche entsprechend die Bitmap.|
+|[CBitmapButton::AutoLoad](#autoload)|Ordnet eine Schaltfläche in einem Dialogfeld ein Objekt der `CBitmapButton` -Klasse, lädt die Bitmap(s) anhand des Namens und die Größe der Schaltfläche entsprechend die Bitmap.|
 |[CBitmapButton::LoadBitmaps](#loadbitmaps)|Laden eine oder mehrere benannte Bitmapressourcen aus der Ressourcendatei der Anwendung und Anfügen von Bitmaps auf das Objekt initialisiert das Objekt.|
 |[CBitmapButton::SizeToContent](#sizetocontent)|Die Größe der Schaltfläche zur Aufnahme die Bitmap.|
 
@@ -57,7 +57,7 @@ Diese Bitmaps können von beliebiger Größe sein, jedoch werden alle behandelt,
 
 Verschiedene Anwendungen erfordern verschiedene Kombinationen von Bitmapbildern:
 
-|Nach oben|Nach unten|Focused (Mit Fokus)|Deaktiviert|Application|
+|Nach oben|Nach unten|Focused|Deaktiviert|Anwendung|
 |--------|----------|-------------|--------------|-----------------|
 |×||||Bitmap|
 |×|×|||Klicken, ohne WS_TABSTOP-Stil|
@@ -227,4 +227,3 @@ void SizeToContent();
 [MFC-Beispiel CTRLTEST](../../visual-cpp-samples.md)<br/>
 [CButton-Klasse](../../mfc/reference/cbutton-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
-

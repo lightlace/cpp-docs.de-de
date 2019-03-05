@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CA2WEX class
 ms.assetid: 317d9ffb-e84f-47e8-beda-57e28fb19124
-ms.openlocfilehash: 96769c0012b1271263d2217fe9b5ea1a36ec8446
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7bfce54253ffcd217bb98345893724a509879abc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629943"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274455"
 ---
 # <a name="ca2wex-class"></a>CA2WEX-Klasse
 
@@ -43,7 +43,7 @@ Die Größe des Puffers, die in der Übersetzungsprozess verwendet werden soll. 
 |Name|Beschreibung|
 |----------|-----------------|
 |[CA2WEX::CA2WEX](#ca2wex)|Der Konstruktor.|
-|[CA2WEX:: ~ CA2WEX](#dtor)|Der Destruktor.|
+|[CA2WEX::~CA2WEX](#dtor)|Der Destruktor.|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 

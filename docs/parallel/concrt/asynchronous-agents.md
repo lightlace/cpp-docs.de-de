@@ -5,12 +5,12 @@ helpviewer_keywords:
 - asynchronous agents
 - agents [Concurrency Runtime]
 ms.assetid: 6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a
-ms.openlocfilehash: a99400e4df49e36e1cddda7068f315485b976cde
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ff6fa851519066c3c399a28557fd8f103d0e94be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176535"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268940"
 ---
 # <a name="asynchronous-agents"></a>Asynchrone Agents
 
@@ -46,7 +46,7 @@ Die folgende Tabelle zeigt einige der wichtigen Methoden, die zu gehören die `a
 |------------|-----------------|
 |[start](reference/agent-class.md#start)|Zeitpläne die `agent` Objekt für die Ausführung und legt es auf die `agent_runnable` Zustand.|
 |[run](reference/agent-class.md#run)|Führt die Aufgabe, die von ausgeführt wird, die die `agent` Objekt.|
-|[Fertig](reference/agent-class.md#done)|Verschiebt einen Agent für die die `agent_done` Zustand.|
+|[done](reference/agent-class.md#done)|Verschiebt einen Agent für die die `agent_done` Zustand.|
 |[cancel](../../parallel/concrt/cancellation-in-the-ppl.md#cancel)|Wenn der Agent nicht gestartet wurde, wird diese Methode bricht die Ausführung des Agents ab und legt es auf die `agent_canceled` Zustand.|
 |[Status](reference/agent-class.md#status)|Ruft den aktuellen Zustand der `agent` Objekt.|
 |[wait](reference/agent-class.md#wait)|Wartet darauf, dass die `agent` Objekt eingeben der `agent_done` oder `agent_canceled` Zustand.|
@@ -64,4 +64,3 @@ Ein Beispiel, das Erstellen einer einfachen agentbasierten Anwendung veranschaul
 ## <a name="see-also"></a>Siehe auch
 
 [Asynchrone Agents Library](../../parallel/concrt/asynchronous-agents-library.md)
-

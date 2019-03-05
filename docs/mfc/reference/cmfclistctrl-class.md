@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCListCtrl [MFC], SetSortColumn
 - CMFCListCtrl [MFC], Sort
 ms.assetid: 50d16aee-138c-4f34-8690-cb75d544ef2e
-ms.openlocfilehash: 7d289dc25dfdb07ae581c4669154517882867f2a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2434671ecdca4e68f3a83c21f1916b42928ffcd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642263"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294229"
 ---
 # <a name="cmfclistctrl-class"></a>CMFCListCtrl-Klasse
 
@@ -122,7 +122,7 @@ void EnableMultipleSort(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] Ein boolescher Wert, der angibt, ob mehrere Spalten sortieren-Modus aktiviert.
 
 ### <a name="remarks"></a>Hinweise
@@ -180,7 +180,7 @@ virtual int OnCompareItems(
 *lParam2*<br/>
 [in] Die zweite zu vergleichende Element.
 
-*der iColumn*<br/>
+*iColumn*<br/>
 [in] Der Index der Spalte, die diese Methode sortiert wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -203,7 +203,7 @@ virtual COLORREF OnGetCellBkColor(
 
 ### <a name="parameters"></a>Parameter
 
-*Funktionen "nrow"*<br/>
+*nRow*<br/>
 [in] Die Zeile der fragliche Zelle.
 
 *nColumn*<br/>
@@ -230,7 +230,7 @@ virtual HFONT OnGetCellFont(
 
 ### <a name="parameters"></a>Parameter
 
-*Funktionen "nrow"*<br/>
+*nRow*<br/>
 [in] Die Zeile der fragliche Zelle.
 
 *nColumn*<br/>
@@ -259,7 +259,7 @@ virtual COLORREF OnGetCellTextColor(
 
 ### <a name="parameters"></a>Parameter
 
-*Funktionen "nrow"*<br/>
+*nRow*<br/>
 [in] Die Zeile der fragliche Zelle.
 
 *nColumn*<br/>
@@ -283,7 +283,7 @@ void RemoveSortColumn(int iColumn);
 
 ### <a name="parameters"></a>Parameter
 
-*der iColumn*<br/>
+*iColumn*<br/>
 [in] Der zu entfernenden Spalte.
 
 ### <a name="remarks"></a>Hinweise
@@ -303,13 +303,13 @@ void SetSortColumn(
 
 ### <a name="parameters"></a>Parameter
 
-*der iColumn*<br/>
+*iColumn*<br/>
 [in] Die zu sortierende Spalte.
 
 *bAscending*<br/>
 [in] Ein boolescher Wert, der die Sortierreihenfolge angibt.
 
-*Hinzufügen*<br/>
+*bAdd*<br/>
 [in] Ein boolescher Wert, der angibt, ob die Methode durch angegebene Spalte hinzufügt *der iColumn* zur Liste der Sortierspalten.
 
 ### <a name="remarks"></a>Hinweise
@@ -329,13 +329,13 @@ virtual void Sort(
 
 ### <a name="parameters"></a>Parameter
 
-*der iColumn*<br/>
+*iColumn*<br/>
 [in] Die zu sortierende Spalte.
 
 *bAscending*<br/>
 [in] Ein boolescher Wert, der die Sortierreihenfolge angibt.
 
-*Hinzufügen*<br/>
+*bAdd*<br/>
 [in] Ein boolescher Wert, der angibt, ob diese Methode fügt hinzu, die durch angegebene Spalte *der iColumn* zur Liste der Sortierspalten.
 
 ## <a name="see-also"></a>Siehe auch

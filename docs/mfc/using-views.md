@@ -13,12 +13,12 @@ helpviewer_keywords:
 - user input [MFC], interpreting through view class [MFC]
 - view classes [MFC], role in displaying application data
 ms.assetid: dc3de6ad-5c64-4317-8f10-8bdcc38cdbd5
-ms.openlocfilehash: 2038f2669d3aa8b5c4bf91b0ba0b38fbec9a1fc8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81668f7409f2b1a4480bde958dc06ce1156e03fe
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605698"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291170"
 ---
 # <a name="using-views"></a>Verwenden von Ansichten
 
@@ -52,4 +52,3 @@ Darüber hinaus müssen möglicherweise andere überschreiben `CView` Member-Fun
 [CFormView-Klasse](../mfc/reference/cformview-class.md)<br/>
 [Datensatzansichten (MFC-Datenzugriff)](../data/record-views-mfc-data-access.md)<br/>
 [Umgehen des Serialisierungsmechanismus](../mfc/bypassing-the-serialization-mechanism.md)
-

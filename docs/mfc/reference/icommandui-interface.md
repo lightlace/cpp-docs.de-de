@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: dd5f79b8ecd65428ce1231777fa6632777859a00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31157ba2445a432af274650011b839fb3df9b3c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467098"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268173"
 ---
 # <a name="icommandui-interface"></a>ICommandUI-Schnittstelle
 
@@ -51,7 +51,7 @@ Diese Schnittstelle bietet Methoden und Eigenschaften, die Befehlen der Benutzer
 
 `ICommandUI` wird verwendet, in einen ON_UPDATE_COMMAND_UI-Handler in einer [ICommandTarget](../../mfc/reference/icommandtarget-interface.md)-abgeleitete Klasse. Wenn ein Benutzer einer Anwendung (SELECT-Anweisungen oder Klicks) aktiviert wird ein Menü, das jedes Menüelement im angezeigt, als aktiviert oder deaktiviert. Das Ziel der einzelnen Menübefehle im enthält diese Informationen durch einen ON_UPDATE_COMMAND_UI-Handler implementieren. Verwenden Sie das Fenster "Eigenschaften" für jeden Befehl Schnittstelle Benutzerobjekte in Ihrer Anwendung zum Erstellen eines Meldungszuordnungseintrags und Funktionsprototyp für jeden Handler.
 
-Weitere Informationen darüber, wie der `ICommandUI` Schnittstelle wird verwendet, in das Befehlsrouting, finden Sie unter [Vorgehensweise: Hinzufügen Befehlsrouting an der Windows Forms-Steuerelement](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
+Weitere Informationen darüber, wie der `ICommandUI` Schnittstelle wird verwendet, in das Befehlsrouting, finden Sie unter [Vorgehensweise: Befehl "hinzufügen" Routing an das Windows Forms-Steuerelement](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
 
 Weitere Informationen zur Verwendung von Windows Forms finden Sie unter [verwenden ein Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 

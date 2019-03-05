@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], SetShutdownByRestartManager
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
-ms.openlocfilehash: 10107d7b815f8a3c479a28de8ff07439b5da2fda
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88cc4a433c774dc7767efaaa62edc71ce8b904d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456042"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273035"
 ---
 # <a name="cdatarecoveryhandler-class"></a>CDataRecoveryHandler-Klasse
 
@@ -146,7 +146,7 @@ Alle Methoden von der `CDataRecoveryHandler` Klasse sind virtuell. Überschreibe
 
 Vor der Verwendung einer `CDataRecoveryHandler` Objekt, rufen Sie [CDataRecoveryHandler::Initialize](#initialize).
 
-Da die `CDataRecoveryHandler` Klasse eng verbunden ist, um den Neustart-Manager, `CDataRecoveryHandler` hängt von der globalen Parameters `m_dwRestartManagerSupportFlags`. Dieser Parameter bestimmt, welche Berechtigungen, die der Neustart-Manager hat und wie sie mit der Anwendung interagiert. Um den Neustart-Manager in einer vorhandenen Anwendung zu integrieren, müssen Sie weisen `m_dwRestartManagerSupportFlags` den entsprechenden Wert im Konstruktor der Ihre hauptanwendung. Weitere Informationen dazu, wie Sie den Neustart-Manager verwenden, finden Sie unter [Vorgehensweise: Unterstützung für Neustart-Manager hinzufügen](../../mfc/how-to-add-restart-manager-support.md).
+Da die `CDataRecoveryHandler` Klasse eng verbunden ist, um den Neustart-Manager, `CDataRecoveryHandler` hängt von der globalen Parameters `m_dwRestartManagerSupportFlags`. Dieser Parameter bestimmt, welche Berechtigungen, die der Neustart-Manager hat und wie sie mit der Anwendung interagiert. Um den Neustart-Manager in einer vorhandenen Anwendung zu integrieren, müssen Sie weisen `m_dwRestartManagerSupportFlags` den entsprechenden Wert im Konstruktor der Ihre hauptanwendung. Weitere Informationen dazu, wie Sie den Neustart-Manager verwenden, finden Sie unter [Vorgehensweise: Hinzufügen von Unterstützung für den Neustart-Manager](../../mfc/how-to-add-restart-manager-support.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -689,5 +689,4 @@ Zur Verwendung dieser Methode AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES nutno na
 [Klassen](../../mfc/reference/mfc-classes.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [CObject-Klasse](../../mfc/reference/cobject-class.md)<br/>
-[Vorgehensweise: Hinzufügen von Unterstützung für den Neustart-Manager](../../mfc/how-to-add-restart-manager-support.md)
-
+[Vorgehensweise: Hinzufügen von Unterstützung für Neustart-Manager](../../mfc/how-to-add-restart-manager-support.md)

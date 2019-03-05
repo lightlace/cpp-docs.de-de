@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-ms.openlocfilehash: e9fba929017edfe547f2cc20105ea4f4bcdc9c33
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ac9ad66a076202113f0c59dafae243b6951ee4c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644391"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291625"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -79,7 +79,7 @@ class CControlBar : public CWnd
 |[CControlBar::DoPaint](#dopaint)|Rendert die Rahmen und das Ziehelement der Steuerleiste.|
 |[CControlBar::DrawBorders](#drawborders)|Rendert die Rahmen der Steuerleiste.|
 |[CControlBar::DrawGripper](#drawgripper)|Rendert das Ziehelement der Steuerleiste.|
-|[CControlBar:: EnableDocking](#enabledocking)|Ermöglicht das Andocken bzw. eine unverankerte Steuerleiste.|
+|[CControlBar::EnableDocking](#enabledocking)|Ermöglicht das Andocken bzw. eine unverankerte Steuerleiste.|
 |[CControlBar::GetBarStyle](#getbarstyle)|Ruft die Formatvorlagen der Steuerleiste ab.|
 |[CControlBar::GetBorders](#getborders)|Ruft die Rahmenwerte der Steuerleiste ab.|
 |[CControlBar::GetCount](#getcount)|Gibt die Anzahl der nicht-HWND-Elemente in der Steuerleiste zurück.|
@@ -206,7 +206,7 @@ virtual void CalcInsideRect(
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 Enthält die aktuellen Maße der Steuerleiste. einschließlich der Rahmen an.
 
 *bHorz*<br/>
@@ -260,7 +260,7 @@ virtual void DrawBorders(
 *pDC*<br/>
 Verweist auf den Gerätekontext für das Rendern der Rahmen der Steuerleiste verwendet werden.
 
-*Rect*<br/>
+*rect*<br/>
 Ein `CRect` -Objekt, das die Abmessungen der Steuerleiste enthält.
 
 ### <a name="remarks"></a>Hinweise
@@ -282,7 +282,7 @@ virtual void DrawGripper(
 *pDC*<br/>
 Verweist auf den Gerätekontext für das Rendern des ziehelements Leiste Steuerelement verwendet werden.
 
-*Rect*<br/>
+*rect*<br/>
 Ein `CRect` -Objekt, das die Abmessungen des ziehelements Leiste Steuerelement enthält.
 
 ### <a name="remarks"></a>Hinweise
@@ -536,7 +536,7 @@ void SetInPlaceOwner(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Ein Zeiger auf ein `CWnd` -Objekt.
 
 ### <a name="remarks"></a>Hinweise

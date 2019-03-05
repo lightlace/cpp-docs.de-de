@@ -1,19 +1,19 @@
 ---
-title: 'Windows Sockets: Blockieren'
+title: 'Windows Sockets: Stream-Sockets'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Windows Sockets [MFC], stream sockets
 - sockets [MFC], stream sockets
 - stream sockets [MFC]
 ms.assetid: 31faaa34-a995-493f-a30b-b8115293d619
-ms.openlocfilehash: 298428bd5e81d11eb62907dfbac39acda24524f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91f06c4a36e76638708edf085987e51418913fd6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560224"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271293"
 ---
-# <a name="windows-sockets-stream-sockets"></a>Windows Sockets: Blockieren
+# <a name="windows-sockets-stream-sockets"></a>Windows Sockets: Stream-Sockets
 
 Dieser Artikel beschreibt Streamsockets, eines der zwei Windows Socket-Typen. (Der andere Typ ist der [Datagrammsocket](../mfc/windows-sockets-datagram-sockets.md).)
 
@@ -43,5 +43,4 @@ Streamsockets kann besser als Anwendungen, die dafür ausgelegt, einen Datagramm
 ## <a name="see-also"></a>Siehe auch
 
 [Windows-Sockets in MFC](../mfc/windows-sockets-in-mfc.md)<br/>
-[Windows-Sockets: Hintergrund](../mfc/windows-sockets-background.md)
-
+[Windows Sockets: Hintergrund](../mfc/windows-sockets-background.md)

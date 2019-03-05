@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: ec5b6692197dc224f503be050a537e6fa265f6d5
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 94d7ba14e01b2965a0fe788162726d1019e847de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694659"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275232"
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton-Klasse
 
@@ -390,7 +390,7 @@ CMFCToolBarButton(
 *bUserButton*<br/>
 [in] Ein boolescher Wert, der bestimmt, ob die Schaltfläche mit der benutzerdefinierten ist. Wenn dieser Parameter TRUE ist, ist die Schaltfläche mit dem benutzerdefinierten. Andernfalls ist das Schaltflächenbild aus einer Ressource geladen werden.
 
-*Blockiert*<br/>
+*bLocked*<br/>
 [in] Ein boolescher Wert, der bestimmt, ob die Schaltfläche mit der angepasst werden kann. Wenn dieser Parameter TRUE ist, kann die Schaltfläche mit der angepasst werden. Andernfalls kann die Schaltfläche mit der angepasst werden.
 
 ##  <a name="comparewith"></a>  CMFCToolBarButton::CompareWith
@@ -462,7 +462,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] Legen Sie diesen Parameter auf "true" Enable-Eingabe, oder auf "false", um Eingaben zu deaktivieren.
 
 ### <a name="remarks"></a>Hinweise
@@ -479,7 +479,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>Parameter
 
-*MenuButton*<br/>
+*menuButton*<br/>
 [in] Ein Verweis auf die Menüschaltfläche Ziel.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -824,7 +824,7 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 
 ### <a name="parameters"></a>Parameter
 
-*HWND*<br/>
+*hwnd*<br/>
 [in] Ein Fensterhandle.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1146,7 +1146,7 @@ virtual BOOL OnClick(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Das übergeordnete Fenster der Symbolleisten-Schaltfläche.
 
 *bDelay*<br/>
@@ -1190,7 +1190,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Das übergeordnete Fenster der Symbolleisten-Schaltfläche.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1201,7 +1201,7 @@ Diese Methode gibt FALSE zurück.
 
 Die Standardimplementierung dieser Methode führt keine Aktion aus und gibt FALSE zurück. Überschreiben Sie diese Methode, um einen Wert ungleich NULL zurück, wenn die Schaltfläche hilfemeldung verarbeitet.
 
-Weitere Informationen zur Meldung WM_HELPHITTEST finden Sie unter [TN028: kontextbezogene Hilfe Support](../../mfc/tn028-context-sensitive-help-support.md).
+Weitere Informationen zur Meldung WM_HELPHITTEST finden Sie unter [TN028: Kontextbezogene Hilfe Support](../../mfc/tn028-context-sensitive-help-support.md).
 
 ##  <a name="onctlcolor"></a>  CMFCToolBarButton::OnCtlColor
 
@@ -1264,7 +1264,7 @@ virtual void OnDblClk(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] - das übergeordnete Fenster der Schaltfläche.
 
 ### <a name="remarks"></a>Hinweise
@@ -1294,7 +1294,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] Der Gerätekontext, in dem die Schaltfläche angezeigt.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck der Schaltfläche.
 
 *pImages*<br/>
@@ -1335,7 +1335,7 @@ virtual int OnDrawOnCustomizeList(
 *pDC*<br/>
 [in] Der Gerätekontext, in dem die Schaltfläche angezeigt.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck der Schaltfläche.
 
 *bSelected*<br/>
@@ -1446,10 +1446,10 @@ virtual BOOL OnToolHitTest(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Das übergeordnete Fenster der Schaltfläche. NULL kann sein.
 
-*PTI*<br/>
+*pTI*<br/>
 [in] Ein `TOOLINFO` -Struktur, die Informationen über ein Tool in ein QuickInfo-Steuerelement enthält.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1689,7 +1689,7 @@ void SetRect(const CRect rect);
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das neue umschließende Rechteck der Schaltfläche.
 
 ### <a name="remarks"></a>Hinweise

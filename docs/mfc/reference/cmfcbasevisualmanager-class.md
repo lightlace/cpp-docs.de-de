@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: a9d3be75331004529ca1bd71a0d9422f45cac40b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c26c0c9c9026f8312218b2ac15f83a50a67be79
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440195"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292210"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager-Klasse
 
@@ -138,7 +138,7 @@ virtual BOOL DrawCheckBox(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck des Kontrollkästchens.
 
 *bHighlighted*<br/>
@@ -149,7 +149,7 @@ virtual BOOL DrawCheckBox(
 
 2 für gemischte Normal.
 
-*bAktiviert*<br/>
+*bEnabled*<br/>
 [in] Gibt an, ob das Kontrollkästchen aktiviert ist.
 
 *bPressed*<br/>
@@ -187,10 +187,10 @@ virtual BOOL DrawComboBorder(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Umschließende Rechteck des Rahmen des Kombinationsfelds.
 
-*bDeaktiviert*<br/>
+*bDisabled*<br/>
 [in] Gibt an, ob der Rahmen des Kombinationsfelds deaktiviert ist.
 
 *bIsDropped*<br/>
@@ -221,8 +221,8 @@ virtual BOOL DrawComboDropButton(
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*pDC*|[in] Ein Zeiger auf einen Gerätekontext.|
-|*Rect*|[in] Das umschließende Rechteck von der Dropdown-kombinationsfeldschaltfläche.|
-|*bDeaktiviert*|[in] Gibt an, ob der Dropdown-kombinationsfeldschaltfläche deaktiviert ist.|
+|*rect*|[in] Das umschließende Rechteck von der Dropdown-kombinationsfeldschaltfläche.|
+|*bDisabled*|[in] Gibt an, ob der Dropdown-kombinationsfeldschaltfläche deaktiviert ist.|
 |*bIsDropped*|[in] Gibt an, ob der Dropdown-kombinationsfeldschaltfläche, nach unten gelöscht wird.|
 |*bIsHighlighted*|[in] Gibt an, ob der Dropdown-kombinationsfeldschaltfläche hervorgehoben ist.|
 
@@ -247,7 +247,7 @@ virtual BOOL DrawPushButton(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck von der Schaltfläche.
 
 *pButton*<br/>
@@ -279,7 +279,7 @@ virtual BOOL DrawRadioButton(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Das umschließende Rechteck des Optionsfelds.
 
 *bHighlighted*<br/>
@@ -288,7 +288,7 @@ virtual BOOL DrawRadioButton(
 *bChecked*<br/>
 [in] Gibt an, ob das Optionsfeld aktiviert ist.
 
-*bAktiviert*<br/>
+*bEnabled*<br/>
 [in] Gibt an, ob das Optionsfeld aktiviert ist.
 
 *bPressed*<br/>

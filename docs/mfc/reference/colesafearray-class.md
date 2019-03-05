@@ -60,12 +60,12 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-ms.openlocfilehash: 07e507f0546849a64625ccd67a0f7463cd510841
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 0833dca9311689063c2ebeadd3942d9f5ce376e2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525404"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267159"
 ---
 # <a name="colesafearray-class"></a>COleSafeArray-Klasse
 
@@ -103,7 +103,7 @@ class COleSafeArray : public tagVARIANT
 |[COleSafeArray::Detach](#detach)|Trennt den VARIANT-Array, aus der `COleSafeArray` Objekt (sodass die Daten nicht freigegeben werden).|
 |[COleSafeArray::GetByteArray](#getbytearray)|Kopiert den Inhalt des sicheren Arrays in ein [CByteArray](../../mfc/reference/cbytearray-class.md).|
 |[COleSafeArray::GetDim](#getdim)|Gibt die Anzahl der Dimensionen des Arrays zurück.|
-|[Colesafearray:: GetElement](#getelement)|Ruft ein einzelnes Element des sicheren Arrays ab.|
+|[COleSafeArray::GetElement](#getelement)|Ruft ein einzelnes Element des sicheren Arrays ab.|
 |[COleSafeArray::GetElemSize](#getelemsize)|Gibt die Größe in Bytes, der ein Element in ein sicheres Array zurück.|
 |[COleSafeArray::GetLBound](#getlbound)|Gibt die untere Grenze für eine bestimmte Dimension eines sicheren Arrays zurück.|
 |[COleSafeArray::GetOneDimSize](#getonedimsize)|Gibt die Anzahl von Elementen im eindimensionalen `COleSafeArray` Objekt.|
@@ -426,7 +426,7 @@ void GetByteArray(CByteArray& bytes);
 
 ### <a name="parameters"></a>Parameter
 
-*Bytes*<br/>
+*bytes*<br/>
 Ein Verweis auf eine [CByteArray](../../mfc/reference/cbytearray-class.md) Objekt.
 
 ##  <a name="getdim"></a>  COleSafeArray::GetDim
@@ -460,7 +460,7 @@ void GetElement(
 *rgIndices*<br/>
 Zeiger auf ein Array von Indizes für jede Dimension des Arrays.
 
-*"pvData"*<br/>
+*pvData*<br/>
 Zeiger auf den Speicherort für das Element des Arrays.
 
 ### <a name="remarks"></a>Hinweise
@@ -669,7 +669,7 @@ void PutElement(
 *rgIndices*<br/>
 Zeiger auf ein Array von Indizes für jede Dimension des Arrays.
 
-*"pvData"*<br/>
+*pvData*<br/>
 Zeiger auf die Daten, die dem Array zuzuweisen sind. VT_BSTR, "VT_DISPATCH" und "VT_UNKNOWN" Variante-Typen sind Zeiger und erfordern kein anderes Maß an Dereferenzierung.
 
 ### <a name="remarks"></a>Hinweise

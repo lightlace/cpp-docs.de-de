@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITopologyNode structure
 ms.assetid: 92e7e032-04f6-4c7c-be36-8f9a35fc4734
-ms.openlocfilehash: 4f880e3c44cd9f301aa65d45500ed7f1d1725bc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 867e0543d1b9f2810a3fe761f038947c4d88da4d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636656"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268628"
 ---
 # <a name="itopologynode-structure"></a>ITopologyNode-Struktur
 
@@ -35,11 +35,11 @@ struct ITopologyNode;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[Itopologynode:: Getexecutionresourcecount](#getexecutionresourcecount)|Gibt die Anzahl der Ressourcen zur Ausführung unter diesem Knoten gruppiert.|
-|[Itopologynode:: Getfirstexecutionresource](#getfirstexecutionresource)|Gibt die erste Ausführungsressource unter diesem Knoten in einer Reihenfolge gruppiert.|
+|[ITopologyNode::GetExecutionResourceCount](#getexecutionresourcecount)|Gibt die Anzahl der Ressourcen zur Ausführung unter diesem Knoten gruppiert.|
+|[ITopologyNode::GetFirstExecutionResource](#getfirstexecutionresource)|Gibt die erste Ausführungsressource unter diesem Knoten in einer Reihenfolge gruppiert.|
 |[ITopologyNode::GetId](#getid)|Gibt zurück, der Ressourcen-Manager, eindeutiger Bezeichner für diesen Knoten.|
-|[Itopologynode:: GetNext](#getnext)|Gibt eine Schnittstelle auf den nächsten topologieknoten in der Reihenfolge der Enumeration zurück.|
-|[Itopologynode:: Getnumanode](#getnumanode)|Gibt die von Windows zugewiesene NUMA-Knotenzahl zurück, zu der dieser Ressource-Manager-Knoten gehört.|
+|[ITopologyNode::GetNext](#getnext)|Gibt eine Schnittstelle auf den nächsten topologieknoten in der Reihenfolge der Enumeration zurück.|
+|[ITopologyNode::GetNumaNode](#getnumanode)|Gibt die von Windows zugewiesene NUMA-Knotenzahl zurück, zu der dieser Ressource-Manager-Knoten gehört.|
 
 ## <a name="remarks"></a>Hinweise
 

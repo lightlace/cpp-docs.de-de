@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 ms.assetid: e20271de-6ffa-4ba0-848b-bafe6c9e510c
-ms.openlocfilehash: 9e8bc35989dc0e933cdb67c2574fb3bf6a4d99de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71c4cdd5ea07b3468b7878a221129a0de5eb4974
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524578"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268407"
 ---
 # <a name="mfc-activex-controls-methods"></a>MFC-ActiveX-Steuerelemente: Methoden
 
@@ -17,7 +17,7 @@ Ein ActiveX-Steuerelement löst Ereignisse für die Kommunikation zwischen sich 
 
 Methoden und Eigenschaften bieten eine exportierte Schnittstelle für die Verwendung von anderen Anwendungen, z. B. Benutzeroberflächenautomatisierungs-Clients und ActiveX-Steuerelementcontainer. Weitere Informationen zu Eigenschaften von ActiveX-Steuerelements, finden Sie im Artikel [MFC-ActiveX-Steuerelemente: Eigenschaften](../mfc/mfc-activex-controls-properties.md).
 
-Methoden ähneln sich und Zweck auf die Memberfunktionen einer C++-Klasse. Es gibt zwei Arten von Methoden, die das Steuerelement implementieren kann: vordefinierte und benutzerdefinierte. Für vordefinierte Ereignisse Kursdiagramme Methoden ähneln diese Methoden für die [COleControl](../mfc/reference/colecontrol-class.md) stellt eine Implementierung bereit. Weitere Informationen zu vordefinierten Methoden, finden Sie im Artikel [MFC-ActiveX-Steuerelemente: Hinzufügen der Stock-Methoden](../mfc/mfc-activex-controls-adding-stock-methods.md). Vom Entwickler definierte benutzerdefinierte Methoden ermöglichen die weitere Anpassung des Steuerelements. Weitere Informationen finden Sie im Artikel [MFC-ActiveX-Steuerelemente: Hinzufügen von benutzerdefinierten Methoden](../mfc/mfc-activex-controls-adding-custom-methods.md).
+Methoden ähneln sich und Zweck auf die Memberfunktionen einer C++-Klasse. Es gibt zwei Arten von Methoden, die das Steuerelement implementieren kann: vordefinierte und benutzerdefinierte. Für vordefinierte Ereignisse Kursdiagramme Methoden ähneln diese Methoden für die [COleControl](../mfc/reference/colecontrol-class.md) stellt eine Implementierung bereit. Weitere Informationen zu vordefinierten Methoden, finden Sie im Artikel [MFC-ActiveX-Steuerelemente: Hinzufügen von vordefinierten Methoden](../mfc/mfc-activex-controls-adding-stock-methods.md). Vom Entwickler definierte benutzerdefinierte Methoden ermöglichen die weitere Anpassung des Steuerelements. Weitere Informationen finden Sie im Artikel [MFC-ActiveX-Steuerelemente: Hinzufügen von benutzerdefinierten Methoden](../mfc/mfc-activex-controls-adding-custom-methods.md).
 
 Die Microsoft Foundation Class-Bibliothek (MFC) implementiert einen Mechanismus, der das Steuerelement, um vordefinierte und benutzerdefinierte Methoden unterstützen kann. Der erste Teil ist die Klasse `COleControl`. Abgeleitet von `CWnd`, `COleControl` Memberfunktionen Unterstützung von vordefinierten Methoden, die für alle ActiveX-Steuerelemente gelten. Im zweiten Teil dieser Mechanismus ist die Dispatchzuordnung. Eine Dispatchzuordnung ähnelt einer meldungszuordnung ist. anstatt die Zuordnung einer Funktion an eine Windows-Nachrichten-ID ist eine Dispatchzuordnung jedoch virtuellen Memberfunktionen IDispatch-IDS zugeordnet.
 
@@ -43,4 +43,3 @@ In den folgenden Artikeln werden die Methoden ausführlich erörtert:
 ## <a name="see-also"></a>Siehe auch
 
 [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)
-

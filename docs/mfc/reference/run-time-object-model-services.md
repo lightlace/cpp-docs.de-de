@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: fce6fb938b501da7bc9251de51c71714e4613fd5
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 45ad85e5b85674be957320ef6fdb7f5a81db6503
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850284"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304677"
 ---
 # <a name="run-time-object-model-services"></a>Objektmodelldienste zur Laufzeit
 
@@ -522,4 +522,3 @@ Die OLE-Klassen-ID ist für das Objekt einen eindeutigen 128-Bit-Bezeichner. Es 
 [Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
 [Isolierung der MFC-Bibliothek für Standardsteuerelemente](../isolation-of-the-mfc-common-controls-library.md)<br/>
 [CLSID-Schlüssel](/windows/desktop/com/clsid-key-hklm)
-

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Apply button in property sheet
 - property sheets, Apply button
 ms.assetid: 7e977015-59b8-406f-b545-aad0bfd8d55b
-ms.openlocfilehash: 7402f99148f20be4ce56c44b5ce7f66f0c24bd36
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb438351d273c872def8c98a67b7010cec0b4d76
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591264"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279444"
 ---
 # <a name="handling-the-apply-button"></a>Verwenden der Schaltfläche „Anwenden“
 
-Eigenschaftenblätter haben eine Funktion, die keine Standarddialogfelder: sie ermöglichen den Benutzern zum Anwenden von Änderungen sie vorgenommen haben, bevor Sie das Eigenschaftenblatt zu schließen. Dies erfolgt mithilfe der Schaltfläche "Übernehmen". Dieser Artikel beschreibt die Methoden, die Sie verwenden können, um diese Funktion ordnungsgemäß zu implementieren.
+Eigenschaftenblätter haben eine Funktion, die keine Standarddialogfelder: Sie ermöglichen den Benutzer, die Änderungen zu übernehmen, die sie vorgenommen haben, bevor Sie das Eigenschaftenblatt zu schließen. Dies erfolgt mithilfe der Schaltfläche "Übernehmen". Dieser Artikel beschreibt die Methoden, die Sie verwenden können, um diese Funktion ordnungsgemäß zu implementieren.
 
 Modale Dialogfelder wenden diese Einstellungen in der Regel auf ein externes Objekt ein, klickt der Benutzer auf OK, um das Dialogfeld zu schließen. Das gleiche gilt für ein Eigenschaftenblatt: Wenn der Benutzer auf "OK" klickt, werden die neuen Einstellungen im Eigenschaftenblatt wirksam.
 
@@ -35,4 +35,3 @@ Ein Beispiel dieses Prozesses finden Sie im allgemeinen MFC-Beispiel [PROPDLG](.
 ## <a name="see-also"></a>Siehe auch
 
 [Eigenschaftenblätter](../mfc/property-sheets-mfc.md)
-

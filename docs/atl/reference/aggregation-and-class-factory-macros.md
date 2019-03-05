@@ -17,12 +17,12 @@ helpviewer_keywords:
 - class factories, ATL macros
 - aggregation [C++], ATL macros
 ms.assetid: d99d379a-0eec-481f-8daa-252dac18f163
-ms.openlocfilehash: c0e3b6903e382ad56be9500792bec895a7641f00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 889ed4bbfc21209a64cfd9e4fee4b2335ce62010
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497185"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274894"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Aggregation und Klassenfactory-Makros
 
@@ -121,7 +121,7 @@ DECLARE_CLASSFACTORY_EX( cf )
 
 ### <a name="parameters"></a>Parameter
 
-*CF*<br/>
+*cf*<br/>
 [in] Der Name der Klasse, die Ihre Klasse-Factoryobjekt implementiert.
 
 ### <a name="remarks"></a>Hinweise
@@ -144,7 +144,7 @@ DECLARE_CLASSFACTORY2( lic )
 
 ### <a name="parameters"></a>Parameter
 
-*LIC*<br/>
+*lic*<br/>
 [in] Eine Klasse, die implementiert `VerifyLicenseKey`, `GetLicenseKey`, und `IsLicenseValid`.
 
 ### <a name="remarks"></a>Hinweise
@@ -168,7 +168,7 @@ class  CComClassFactory2 : public IClassFactory2,
 
 ### <a name="parameters"></a>Parameter
 
-*Lizenz*<br/>
+*license*<br/>
 Eine Klasse, die folgenden statischen Funktionen implementiert:
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`

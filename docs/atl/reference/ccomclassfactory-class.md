@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactory class
 ms.assetid: e56dacf7-d5c4-4c42-aef4-a86d91981a1b
-ms.openlocfilehash: 61dd67a4a34be447807799537971c19c11d09e5e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85ef287a905abc7b3151628c0f5dc29b9050b187
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575226"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326559"
 ---
 # <a name="ccomclassfactory-class"></a>CComClassFactory-Klasse
 
@@ -92,7 +92,7 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ### <a name="parameters"></a>Parameter
 
-*Bestand*<br/>
+*fLock*<br/>
 [in] True gibt an, die Anzahl der Sperren erhöht. Andernfalls ist die Anzahl der Sperren verringert.
 
 ### <a name="return-value"></a>Rückgabewert

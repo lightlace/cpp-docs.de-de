@@ -10,12 +10,12 @@ helpviewer_keywords:
 - map classes [MFC]
 - collection classes [MFC], lists
 ms.assetid: 81a13a7f-0c2c-4efd-b6bb-b4e624a0743d
-ms.openlocfilehash: 0856a9de06d07b3851dc748644e84ba9c4b56c4f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b89b99abb79fe689274f9e0b89a85bb33643d324
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601044"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274374"
 ---
 # <a name="array-list-and-map-classes"></a>Klassen für Arrays, Listen und Zuordnungen
 
@@ -30,4 +30,3 @@ Zuordnungen werden einen Schlüsselwert an einen Datenwert beziehen. Der Schlüs
 ## <a name="see-also"></a>Siehe auch
 
 [Übersicht über die Klasse](../mfc/class-library-overview.md)
-

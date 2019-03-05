@@ -2,12 +2,12 @@
 title: Verwenden von Lambdas, Function-Objekten und eingeschränkten Funktionen
 ms.date: 11/04/2016
 ms.assetid: 25346cc9-869d-4ada-aad3-e2228cad3d6c
-ms.openlocfilehash: 819605eac6408751456479fbc3daa38aac1418ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c72ae6f600fe73405481e34ab05b60f163e44d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629397"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288115"
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>Verwenden von Lambdas, Function-Objekten und eingeschränkten Funktionen
 
@@ -32,7 +32,7 @@ void CpuMethod() {
 }
 ```
 
-## <a name="lambda-expression"></a>Lambda-Ausdruck
+## <a name="lambda-expression"></a>Lambdaausdruck
 
 Das Verwenden eines Lambda-Ausdrucks ist die einfachste Möglichkeit, den Code mit C++ AMP umzuschreiben.
 
@@ -118,7 +118,7 @@ Das Funktionsobjekt muss einen Konstruktor und eine Überladung des Funktionsauf
 
 ## <a name="c-amp-restricted-function"></a>Eingeschränkte C++ AMP-Funktion
 
-Sie können den Code des Beschleunigers weiter zerlegen, indem Sie eine eingeschränkte Funktion erstellen und diese mit einem Lambdaausdruck oder einem Funktionsobjekt aufrufen. Im folgenden Codebeispiel wird veranschaulicht, wie eine eingeschränkte Funktion mit einem Lambdaausdruck aufgerufen wird.
+Sie können den Code des Beschleunigers weiter zerlegen, indem Sie eine eingeschränkte Funktion erstellen und diese mit einem Lambda-Ausdruck oder einem Funktionsobjekt aufrufen. Im folgenden Codebeispiel wird veranschaulicht, wie eine eingeschränkte Funktion mit einem Lambda-Ausdruck aufgerufen wird.
 
 ```cpp
 void AddElementsWithRestrictedFunction(index<1> idx, array_view<int, 1> sum, array_view<int, 1> a, array_view<int, 1> b) restrict(amp)

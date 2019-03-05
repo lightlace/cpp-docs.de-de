@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 3066f3308d0c7e5c9a04f7746585be9a9dd5bc9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 112bd4422a1fa6b9b97239228dc586a0555ddc96
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588642"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259879"
 ---
 # <a name="crendertarget-class"></a>CRenderTarget-Klasse
 
@@ -138,7 +138,7 @@ class CRenderTarget : public CObject;
 |Name|Beschreibung|
 |----------|-----------------|
 |[CRenderTarget::CRenderTarget](#crendertarget)|Erstellt ein CRenderTarget-Objekt.|
-|[CRenderTarget:: ~ CRenderTarget](#crendertarget__~crendertarget)|Der Destruktor. Wird aufgerufen, wenn es sich bei einem Renderingzielobjekt zerstört wird.|
+|[CRenderTarget::~CRenderTarget](#crendertarget__~crendertarget)|Der Destruktor. Wird aufgerufen, wenn es sich bei einem Renderingzielobjekt zerstört wird.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -204,7 +204,7 @@ class CRenderTarget : public CObject;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CRenderTarget::operator ID2D1RenderTarget *](#operator_id2d1rendertarget_star)|Gibt die ID2D1RenderTarget-Schnittstelle|
+|[CRenderTarget::operator ID2D1RenderTarget*](#operator_id2d1rendertarget_star)|Gibt die ID2D1RenderTarget-Schnittstelle|
 
 ### <a name="protected-data-members"></a>Geschützte Datenmember
 
@@ -263,7 +263,7 @@ void Clear(D2D1_COLOR_F color);
 
 ### <a name="parameters"></a>Parameter
 
-*Farbe*<br/>
+*color*<br/>
 Die Farbe, die der Zeichnungsbereich deaktiviert ist.
 
 ##  <a name="colorref_to_d2dcolor"></a>  CRenderTarget::COLORREF_TO_D2DCOLOR
@@ -278,7 +278,7 @@ static D2D1_COLOR_F COLORREF_TO_D2DCOLOR(
 
 ### <a name="parameters"></a>Parameter
 
-*Farbe*<br/>
+*color*<br/>
 RGB-Wert.
 
 *nAlpha*
@@ -311,7 +311,7 @@ Die gewünschte Größe des Renderziels in geräteunabhängige Pixel, wenn es si
 *sizePixelDesired*<br/>
 Die gewünschte Größe des Renderziels in Pixel, wenn es sich von der ursprünglichen neue Renderziel oder NULL. Weitere Informationen finden Sie im Abschnitt "Hinweise".
 
-*desiredformat bereit*<br/>
+*desiredFormat*<br/>
 Die gewünschte Pixelformat und den Alphamodus des neuen Renderziel oder NULL. Wenn das Pixelformat auf DXGI_FORMAT_UNKNOWN festgelegt ist, oder wenn dieser Parameter null ist, verwendet das neue Renderziel das gleiche Format wie die ursprüngliche Renderziel. Wenn der Alphamodus D2D1_ALPHA_MODE_UNKNOWN oder dieser Parameter NULL ist, standardmäßig der Alphamodus des neuen Renderziels D2D1_ALPHA_MODE_PREMULTIPLIED. Informationen zu unterstützten Pixelformate finden Sie unter Unterstützte Pixelformate und Alpha-Modi.
 
 *options*<br/>
@@ -402,7 +402,7 @@ void DrawEllipse(
 
 ### <a name="parameters"></a>Parameter
 
-*Ellipse*<br/>
+*ellipse*<br/>
 Die Position und der Radius der Ellipse in geräteunabhängige Pixel gezeichnet werden soll.
 
 *pBrush*<br/>
@@ -510,7 +510,7 @@ void DrawRectangle(
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 Die Abmessungen des Rechtecks zum Zeichnen in geräteunabhängigen Pixeln
 
 *pBrush*<br/>
@@ -567,13 +567,13 @@ void DrawText(
 *strText*<br/>
 Ein Zeiger auf ein Array von Unicode-Zeichen zu zeichnen.
 
-*Rect*<br/>
+*rect*<br/>
 Die Größe und Position des Bereichs, in dem der Text gezeichnet wird.
 
 *pForegroundBrush*<br/>
 Der Pinsel, der zum Zeichnen des Texts verwendet wird.
 
-*Von "Textformat"*<br/>
+*textFormat*<br/>
 Ein Objekt beschreibt, die Details der zu zeichnende Text, z. B. die Schriftart, Schriftgrad und Richtung des Inhaltsflusses zu formatieren.
 
 *options*<br/>
@@ -632,7 +632,7 @@ void FillEllipse(
 
 ### <a name="parameters"></a>Parameter
 
-*Ellipse*<br/>
+*ellipse*<br/>
 Die Position und der Radius in geräteunabhängige Pixel der Ellipse gezeichnet werden soll.
 
 *pBrush*<br/>
@@ -720,7 +720,7 @@ void FillRectangle(
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 Die Dimension des Rechtecks zum Zeichnen in geräteunabhängigen Pixeln.
 
 *pBrush*<br/>
@@ -756,10 +756,10 @@ void Flush(
 
 ### <a name="parameters"></a>Parameter
 
-*Tag1*<br/>
+*tag1*<br/>
 Enthält das Tag für das Zeichnen von Vorgängen, die Fehler oder 0 verursacht werden, wenn keine Fehler aufgetreten sind. Dieser Parameter wird nicht initialisiert übergeben.
 
-*Tag2*<br/>
+*tag2*<br/>
 Enthält das Tag für das Zeichnen von Vorgängen, die Fehler oder 0 verursacht werden, wenn keine Fehler aufgetreten sind. Dieser Parameter wird nicht initialisiert übergeben.
 
 ##  <a name="getantialiasmode"></a>  CRenderTarget::GetAntialiasMode
@@ -858,10 +858,10 @@ void GetTags(
 
 ### <a name="parameters"></a>Parameter
 
-*Tag1*<br/>
+*tag1*<br/>
 Enthält die erste Bezeichnung für nachfolgende zeichnen-Vorgänge. Dieser Parameter wird nicht initialisiert übergeben. Wenn NULL angegeben wird, wird kein Wert für diesen Parameter abgerufen werden.
 
-*Tag2*<br/>
+*tag2*<br/>
 Enthält die zweite Bezeichnung für nachfolgende zeichnen-Vorgänge. Dieser Parameter wird nicht initialisiert übergeben. Wenn NULL angegeben wird, wird kein Wert für diesen Parameter abgerufen werden.
 
 ##  <a name="gettextantialiasmode"></a>  CRenderTarget::GetTextAntialiasMode
@@ -1016,7 +1016,7 @@ void PushLayer(
 *layerParameters*<br/>
 Der Inhalt Grenzen, geometrische Maske, Deckkraft, Deckkraftmaske und Antialiasingoptionen für die Ebene.
 
-*Ebene*<br/>
+*layer*<br/>
 Die Ebene, die nachfolgende Zeichenvorgänge empfängt.
 
 ##  <a name="restoredrawingstate"></a>  CRenderTarget::RestoreDrawingState
@@ -1083,10 +1083,10 @@ void SetTags(
 
 ### <a name="parameters"></a>Parameter
 
-*Tag1*<br/>
+*tag1*<br/>
 Eine Bezeichnung, die auf nachfolgende zeichnen Vorgänge angewendet werden soll.
 
-*Tag2*<br/>
+*tag2*<br/>
 Eine Bezeichnung, die auf nachfolgende zeichnen Vorgänge angewendet werden soll.
 
 ##  <a name="settextantialiasmode"></a>  CRenderTarget::SetTextAntialiasMode

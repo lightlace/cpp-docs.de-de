@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Erstellen von Agents, die bestimmte Planerrichtlinien verwenden'
+title: 'Vorgehensweise: Erstellen von Agents, die bestimmte Planerrichtlinien verwenden'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler policies, agents [Concurrency Runtime]
 - creating agents that use specific policies [Concurrency Runtime]
 ms.assetid: 46a3e265-0777-4ec3-a142-967bafc49d67
-ms.openlocfilehash: 955b1043800c8c10a24abff71a7764d0878b89d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5aac86801015549b5552b51c06a30f8398346a06
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663371"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257370"
 ---
-# <a name="how-to-create-agents-that-use-specific-scheduler-policies"></a>Gewusst wie: Erstellen von Agents, die bestimmte Planerrichtlinien verwenden
+# <a name="how-to-create-agents-that-use-specific-scheduler-policies"></a>Vorgehensweise: Erstellen von Agents, die bestimmte Planerrichtlinien verwenden
 
 Ein Agent ist eine Anwendungskomponente, die asynchron mit anderen Komponenten arbeitet, um größere Rechenaufgaben zu lösen. Ein Agent hat in der Regel einen festgelegten Lebenszyklus und behält den Zustand bei.
 
@@ -26,7 +26,7 @@ In diesem Thema werden mithilfe der Funktionalität der Asynchronous Agents Libr
 
 Das folgende Beispiel definiert zwei Klassen, die abgeleitet [Concurrency:: Agent](../../parallel/concrt/reference/agent-class.md): `permutor` und `printer`. Die `permutor`-Klasse berechnet alle Permutationen einer gegebenen Eingabezeichenfolge. Die `printer`-Klasse gibt Statusmeldungen an der Konsole aus. Die `permutor`-Klasse führt einen rechenintensiven Vorgang aus, der möglicherweise alle verfügbaren Computerressourcen erfordert. Für eine sinnvolle Nutzung muss die `printer`-Klasse alle Statusmeldungen zeitnah ausgeben.
 
-Bereitstellen der `printer` -Klasse einen fairen Zugriff auf Computerressourcen, dieses Beispiel verwendet die in beschriebenen Schritte [Vorgehensweise: Verwalten einer Planerinstanz](../../parallel/concrt/how-to-manage-a-scheduler-instance.md) um eine Planerinstanz zu erstellen, eine benutzerdefinierte Richtlinie verfügt. Die benutzerdefinierte Richtlinie gibt die Threadpriorität für die höchste Prioritätsklasse an.
+Bereitstellen der `printer` -Klasse einen fairen Zugriff auf Computerressourcen, dieses Beispiel verwendet die Schritte, die in beschriebenen [Vorgehensweise: Verwalten einer Planerinstanz](../../parallel/concrt/how-to-manage-a-scheduler-instance.md) um eine Planerinstanz zu erstellen, eine benutzerdefinierte Richtlinie verfügt. Die benutzerdefinierte Richtlinie gibt die Threadpriorität für die höchste Prioritätsklasse an.
 
 Um die Vorteile der Verwendung eines Planers mit einer benutzerdefinierten Richtlinie aufzuzeigen, wird in diesem Beispiel die gesamte Aufgabe zweimal ausgeführt. Dabei werden im Beispiel zunächst beide Aufgaben mithilfe des Standardplaners geplant. Anschließend werden mithilfe des Standardplaners das `permutor`-Objekt sowie ein Planer geplant, der eine benutzerdefinierte Richtlinie zum Planen des `printer`-Objekts enthält.
 
@@ -50,10 +50,9 @@ Beide Aufgabengruppen führen zum gleichen Ergebnis, aber nur die Version mit ei
 
 Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, oder fügen Sie ihn in eine Datei mit dem Namen `permute-strings.cpp` und führen Sie dann den folgenden Befehl in einem Fenster von Visual Studio-Eingabeaufforderung.
 
-**CL.exe/EHsc permute-strings.cpp**
+**cl.exe /EHsc permute-strings.cpp**
 
 ## <a name="see-also"></a>Siehe auch
 
 [Planerrichtlinien](../../parallel/concrt/scheduler-policies.md)<br/>
 [Asynchrone Agents](../../parallel/concrt/asynchronous-agents.md)
-

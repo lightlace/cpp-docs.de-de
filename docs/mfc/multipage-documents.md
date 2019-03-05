@@ -25,12 +25,12 @@ helpviewer_keywords:
 - printing [MFC], pagination
 - documents [MFC], paginating
 ms.assetid: 69626b86-73ac-4b74-b126-9955034835ef
-ms.openlocfilehash: b4ec9f456443b9cd180f1558946829281bc10a36
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 81e03657977d31827c5c7c3d3272e3d4255a4a8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176379"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295005"
 ---
 # <a name="multipage-documents"></a>Mehrseitige Dokumente
 
@@ -99,7 +99,7 @@ Die [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) Member-Funktion w
 
 Die [OnPrint](../mfc/reference/cview-class.md#onprint) Memberfunktion führt das eigentliche Drucken der Seite. Der Artikel [wie Standard Drucken erfolgt](../mfc/how-default-printing-is-done.md) zeigt, wie das Framework ruft [OnDraw](../mfc/reference/cview-class.md#ondraw) mit einem Drucker-Gerätekontext zum Ausführen von drucken. Genauer gesagt: das Framework ruft `OnPrint` mit einem `CPrintInfo` Struktur und einen Gerätekontext und `OnPrint` übergibt den Gerätekontext zu `OnDraw`. Außer Kraft setzen `OnPrint` kein Rendering ausführen, die nur während des Druckens und nicht für die Bildschirmanzeige ausgeführt werden soll. Beispielsweise, um die Kopf- oder Fußzeilen drucken (finden Sie im Artikel [Kopf- und Fußzeilen](../mfc/headers-and-footers.md) Informationen). Rufen Sie anschließend `OnDraw` aus der Außerkraftsetzung der `OnPrint` , um das Rendering, die sowohl Bildschirmanzeige gemeinsam und drucken.
 
-Die Tatsache, `OnDraw` führt das Rendern, für beide anzeigen Bildschirm und Drucken bedeutet, dass Ihre Anwendung WYSIWYG ist: "Anzeige ist was Sie erhalten." Angenommen Sie jedoch, dass Sie eine WYSIWYG-Anwendung schreiben, werden nicht aus. Angenommen Sie, einen Text-Editor, der fett formatierter Schrift für das Drucken verwendet jedoch Steuercode fett formatierter Text auf dem Bildschirm an. In diesem Fall verwenden Sie `OnDraw` ausschließlich für die Bildschirmanzeige. Wenn Sie außer Kraft setzen `OnPrint`, ersetzen Sie den Aufruf von `OnDraw` durch einen Aufruf an eine separate zeichnen-Funktion. Diese Funktion zeichnet das Dokument die Möglichkeit, auf Papier, mithilfe der Attribute, die auf dem Bildschirm angezeigt werden nicht angezeigt wird.
+Die Tatsache, `OnDraw` führt das Rendern, für beide anzeigen Bildschirm und Drucken bedeutet, dass Ihre Anwendung WYSIWYG ist: "What you see is what you get." Angenommen Sie jedoch, dass Sie eine WYSIWYG-Anwendung schreiben, werden nicht aus. Angenommen Sie, einen Text-Editor, der fett formatierter Schrift für das Drucken verwendet jedoch Steuercode fett formatierter Text auf dem Bildschirm an. In diesem Fall verwenden Sie `OnDraw` ausschließlich für die Bildschirmanzeige. Wenn Sie außer Kraft setzen `OnPrint`, ersetzen Sie den Aufruf von `OnDraw` durch einen Aufruf an eine separate zeichnen-Funktion. Diese Funktion zeichnet das Dokument die Möglichkeit, auf Papier, mithilfe der Attribute, die auf dem Bildschirm angezeigt werden nicht angezeigt wird.
 
 ##  <a name="_core_printer_pages_vs.._document_pages"></a> Drucker-Seiten im Vergleich zu Dokumentseite
 

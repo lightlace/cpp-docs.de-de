@@ -33,12 +33,12 @@ f1_keywords:
 - ppltasks/concurrency::when_all
 - ppltasks/concurrency::when_any
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-ms.openlocfilehash: 7550e6f0ef44abd19b3fab89127ff898c72738f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cb726ccc475d6d08e036229d0d06089e3fac31c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436178"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278209"
 ---
 # <a name="concurrency-namespace-functions"></a>Concurrency-Namespace-Funktionen
 
@@ -105,7 +105,7 @@ Der Typ der Daten, die gesendet werden.
 *_Trg*<br/>
 Ein Zeiger oder Verweis auf das Ziel, an dem Daten gesendet werden.
 
-*"_Data"*<br/>
+*_Data*<br/>
 Ein Verweis auf die Daten gesendet werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -169,7 +169,7 @@ Der Rückgabetyp des Lambdaausdrucks bestimmt, ob das Konstrukt eine Aktion oder
 
 Lambda-Ausdrücke, die "void" zurückgeben, führen zur Erstellung von Aktionen. Lambda-Ausdrücke, die ein Ergebnis vom Typ `TResult` zurückgeben, führen zur Erstellung von TResult-Vorgängen.
 
-Der Lambda-Ausdruck kann auch `task<TResult>` zurückgeben, was die asynchronen Abläufe kapselt, oder die Fortsetzung einer Kette von Aufgaben ist, die die asynchronen Abläufe darstellen. In diesem Fall wird der Lambdaausdruck selbst inline ausgeführt, da die Aufgaben asynchron ausgeführt werden, und der Rückgabetyp des Lambdaausdrucks wird entpackt, um das von `create_async` zurückgegebene asynchrone Konstrukt zu erstellen. Dies bedeutet, dass ein Lambda-Ausdruck, der eine Aufgabe zurückgibt\<"void" > bewirkt, dass die Erstellung von Aktionen und einen Lambda-Ausdruck, der eine Aufgabe zurückgibt\<TResult > bewirkt, dass die Erstellung von TResult-Vorgängen.
+Der Lambda-Ausdruck kann auch `task<TResult>` zurückgeben, was die asynchronen Abläufe kapselt, oder die Fortsetzung einer Kette von Aufgaben ist, die die asynchronen Abläufe darstellen. In diesem Fall wird der Lambda-Ausdruck selbst inline ausgeführt, da die Aufgaben asynchron ausgeführt werden, und der Rückgabetyp des Lambda-Ausdrucks wird entpackt, um das von `create_async` zurückgegebene asynchrone Konstrukt zu erstellen. Dies bedeutet, dass ein Lambda-Ausdruck, der eine Aufgabe zurückgibt\<"void" > bewirkt, dass die Erstellung von Aktionen und einen Lambda-Ausdruck, der eine Aufgabe zurückgibt\<TResult > bewirkt, dass die Erstellung von TResult-Vorgängen.
 
 Der Lambda-Ausdruck akzeptiert null, ein oder zwei Argumente. Die gültigen Argumente sind `progress_reporter<TProgress>` und `cancellation_token` in dieser Reihenfolge, wenn beide verwendet werden. Ein Lambda-Ausdruck ohne Argumente bewirkt die Erstellung eines asynchronen Konstrukts ohne die Möglichkeit der Statusberichterstellung. Ein Lambda-Ausdruck, der eine "progress_reporter" akzeptiert\<TProgress > bewirkt, dass `create_async` ein asynchrones Konstrukt zurückgibt, das den Status des Typs TProgress jedes Mal meldet die `report` -Methode des Objekts "progress_reporter" aufgerufen wird. Ein Lambda-Ausdruck, der ein „cancellation_token“ verwendet, kann dieses Token verwenden, um auf einen Abbruch zu prüfen, oder es an Aufgaben übergeben, die er erstellt, sodass ein Abbruch des asynchronen Konstrukts den Abbruch dieser Aufgaben verursacht.
 
@@ -199,7 +199,7 @@ Mehrere nachfolgende Aufrufe dieser Methode geben die gleiche Instanz des Ressou
 
 ##  <a name="create_task"></a>  create_task
 
-Erstellt ein PPL- [Aufgabe](task-class.md) Objekt. Das Element `create_task` kann überall dort verwendet werden, wo Sie einen Aufgabenkonstruktor verwendet hätten. Es wird hauptsächlich der Einfachheit halber bereitgestellt, da es beim Erstellen einer Aufgabe die Verwendung des `auto`-Schlüsselwort ermöglicht.
+Erstellt ein PPL- [Aufgabe](task-class.md) Objekt. Das Element `create_task` kann überall dort verwendet werden, wo Sie einen Aufgabenkonstruktor verwendet hätten. Es wird hauptsächlich der Einfachheit halber bereitgestellt, da es beim Erstellen eines Tasks die Verwendung des `auto`-Schlüsselwort ermöglicht.
 
 ```
 template<typename T>
@@ -219,7 +219,7 @@ Der Typ des Parameters, von dem die Aufgabe erstellt werden soll.
 Geben Sie ein.
 
 *_Param*<br/>
-Der Parameter, von dem die Aufgabe erstellt werden soll. Dies ist möglicherweise ein Lambda- oder Funktionsobjekt-Objekt, ein `task_completion_event` Objekt, ein anderes `task` Objekt oder eine iasyncinfo-Schnittstelle, die bei Verwendung von Aufgaben in Ihrer UWP-app.
+Der Parameter, von dem der Task erstellt werden soll. Dies ist möglicherweise ein Lambda- oder Funktionsobjekt-Objekt, ein `task_completion_event` Objekt, ein anderes `task` Objekt oder eine iasyncinfo-Schnittstelle, die bei Verwendung von Aufgaben in Ihrer UWP-app.
 
 *_TaskOptions*<br/>
 Die Aufgabenoptionen.
@@ -237,7 +237,7 @@ Die erste Überladung verhält sich wie ein Aufgabenkonstruktor, der einen einze
 
 Die zweite Überladung weist das Abbruchtoken, das der neu erstellten Aufgabe bereitgestellt wird, zu. Wenn Sie diese Überladung verwenden, ist die Übergabe eines anderen `task`-Objekts als erster Parameter nicht zulässig.
 
-Der Typ des zurückgegebenen Tasks wird vom ersten Parameter zur Funktion abgeleitet. Wenn `_Param` ein `task_completion_event<T>`, ein `task<T>` oder ein Funktionselement ist, das entweder den Typ `T` oder `task<T>` zurückgibt, ist der Typ der erstellten Aufgabe `task<T>`.
+Der Typ des zurückgegebenen Tasks wird vom ersten Parameter zur Funktion abgeleitet. Wenn `_Param` ein `task_completion_event<T>`, ein `task<T>` oder ein Funktionselement ist, das entweder den Typ `T` oder `task<T>` zurückgibt, ist der Typ des erstellten Tasks `task<T>`.
 
 In einer UWP-app Wenn `_Param` ist vom Typ iasyncoperation\<T > ^ oder Windows::Foundation::IAsyncOperationWithProgress\<T, P > ^, oder ein Funktionselement ist, das einen dieser Typen zurückgibt, wird die erstellte Aufgabe von Typ `task<T>`. Wenn `_Param` ist vom Typ Windows::Foundation::IAsyncAction ^ oder Windows::Foundation::IAsyncActionWithProgress\<P > ^, oder ein Funktionselement ist, das einen dieser Typen zurückgibt, die erstellte Aufgabe von Typ `task<void>`.
 
@@ -390,7 +390,7 @@ void concurrent_vector<T, _Ax>::internal_assign_iterators(
 
 *_I*<br/>
 
-*Erste*<br/>
+*first*<br/>
 
 *last*<br/>
 
@@ -672,7 +672,7 @@ Der Typ des binären Vergleichsoperator.
 *_Begin*<br/>
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements in dem Bereich adressiert, der sortiert werden soll.
 
-*_Beenden*<br/>
+*_End*<br/>
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements direkt hinter dem letzten Element in dem Bereich adressiert, der sortiert werden soll.
 
 *_Alloc*<br/>
@@ -754,7 +754,7 @@ Der Typ der Funktion, die bei jeder Iteration ausgeführt wird.
 *_Partitioner*<br/>
 Der Typ des Partitionierers, der verwendet wird, um den angegebenen Bereich zu partitionieren.
 
-*Erste*<br/>
+*first*<br/>
 Der erste Index in einer Iteration einbezogen werden.
 
 *last*<br/>
@@ -801,7 +801,7 @@ Der Typ des Iterators, der zum Durchlaufen des Containers verwendet wird.
 Der Typ der Funktion, die auf jedes Element innerhalb des Bereichs angewendet werden.
 
 *_Partitioner*<br/>
-*Erste*<br/>
+*first*<br/>
 Ein Iterator, der die Position des ersten Elements in parallele Iteration einbezogen werden.
 
 *last*<br/>
@@ -1081,7 +1081,7 @@ Der Typ der Projektionsfunktion.
 *_Begin*<br/>
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements in dem Bereich adressiert, der sortiert werden soll.
 
-*_Beenden*<br/>
+*_End*<br/>
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements direkt hinter dem letzten Element in dem Bereich adressiert, der sortiert werden soll.
 
 *_Alloc*<br/>
@@ -1150,7 +1150,7 @@ Der Typ der reduktionsfunktion Bereich. Dies muss ein Funktionstyp mit Signatur 
 *_Begin*<br/>
 Ein eingabeiterator, der das erste Element im Bereich reduziert werden sollen.
 
-*_Beenden*<br/>
+*_End*<br/>
 Ein eingabeiterator, der das Element, das eine Position hinter dem letzten Element im Bereich reduziert werden sollen.
 
 *_Identity*<br/>
@@ -1205,7 +1205,7 @@ Der Typ der binären Vergleich zu kennen.
 *_Begin*<br/>
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements in dem Bereich adressiert, der sortiert werden soll.
 
-*_Beenden*<br/>
+*_End*<br/>
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements direkt hinter dem letzten Element in dem Bereich adressiert, der sortiert werden soll.
 
 *_Func*<br/>
@@ -1315,7 +1315,7 @@ Der Typ der binären kennen, die paarweise auf Elemente aus der beiden Quellbere
 *first1*<br/>
 Ein eingabeiterator, der die Position des ersten Elements in der ersten oder nur Quellbereich verarbeitet werden sollen.
 
-*Last1*<br/>
+*last1*<br/>
 Ein eingabeiterator, der die Position hinter dem letzten Element in der ersten oder den zu verarbeitenden nur Quellbereich adressiert.
 
 *_Result*<br/>
@@ -1447,7 +1447,7 @@ Der Typ der Ereignisnutzlast.
 *_Trg*<br/>
 Ein Zeiger oder Verweis auf das Ziel, an dem Daten gesendet werden.
 
-*"_Data"*<br/>
+*_Data*<br/>
 Ein Verweis auf die Daten gesendet werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1527,7 +1527,7 @@ Der Zuweisungstyp der gleichzeitigen Vektoren.
 *_A*<br/>
 Der gleichzeitigen Vektor, dessen Elemente mit denen des Vektors gleichzeitige ausgetauscht werden sollen `_B`.
 
-*_B HAT*<br/>
+*_B*<br/>
 Den gleichzeitigen Vektor, in dem Elemente ausgetauscht werden sollen, oder der Vektor, dessen Elemente ausgetauscht werden, mit denen der gleichzeitigen Vektor `_A`.
 
 ### <a name="remarks"></a>Hinweise
@@ -1635,7 +1635,7 @@ Der Typ der Ereignisnutzlast
 *_Src*<br/>
 Ein Zeiger oder Verweis auf die von dem Daten erwartet werden.
 
-*"_value"*<br/>
+*_value*<br/>
 Ein Verweis auf einen Speicherort, in dem das Ergebnis platziert werden.
 
 *_Filter_proc*<br/>
@@ -1688,7 +1688,7 @@ Der Typ des Eingabeiterators.
 *_Begin*<br/>
 Die Position des ersten Elements in dem Bereich von Elementen, die mit der resultierenden Aufgabe kombiniert werden sollen.
 
-*_Beenden*<br/>
+*_End*<br/>
 Die Position des ersten Elements hinter dem Bereich von Elementen, die mit der resultierenden Aufgabe kombiniert werden sollen.
 
 *_TaskOptions*<br/>
@@ -1740,7 +1740,7 @@ Der Typ des Eingabeiterators.
 *_Begin*<br/>
 Die Position des ersten Elements in dem Bereich von Elementen, die mit der resultierenden Aufgabe kombiniert werden sollen.
 
-*_Beenden*<br/>
+*_End*<br/>
 Die Position des ersten Elements hinter dem Bereich von Elementen, die mit der resultierenden Aufgabe kombiniert werden sollen.
 
 *_TaskOptions*<br/>

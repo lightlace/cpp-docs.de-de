@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: 6a22c88e1a19cd1aef1bbfacd7f255adc2b19d0e
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 8c8a6d3e83534cd5670e43a9009b8919a2e57f92
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178256"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281372"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl-Klasse
 
@@ -151,7 +151,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Gibt das Animationssteuerelement-Stil. Wenden Sie eine beliebige Kombination der Formate, die im Abschnitt "Hinweise" und der Stile von Listensteuerelementen Animation beschrieben, die in beschriebenen Windows [Stile von Listensteuerelementen Animation](/windows/desktop/Controls/animation-control-styles) im Windows SDK.
 
-*Rect*<br/>
+*rect*<br/>
 Gibt an, Position und Größe des Animationssteuerelements. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](/windows/desktop/api/windef/ns-windef-tagrect) Struktur.
 
 *pParentWnd*<br/>
@@ -205,7 +205,7 @@ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erwei
 *dwStyle*<br/>
 Gibt das Animationssteuerelement-Stil. Wenden Sie eine beliebige Kombination aus dem Fenster und Steuerelement animationsstile beschrieben [Stile von Listensteuerelementen Animation](/windows/desktop/Controls/animation-control-styles) im Windows SDK.
 
-*Rect*<br/>
+*rect*<br/>
 Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -288,10 +288,10 @@ BOOL Play(
 
 ### <a name="parameters"></a>Parameter
 
-*nWenn*<br/>
+*nFrom*<br/>
 Nullbasierte Index des Frames, in dem Wiedergabe beginnt. Wert muss kleiner als 65.536 sein. Der Wert 0 bedeutet, dass mit den ersten Frame des AVI-Clips zu beginnen.
 
-*NUM*<br/>
+*nTo*<br/>
 Nullbasierte Index des Frames, in denen Wiedergabe beendet. Wert muss kleiner als 65.536 sein. Der Wert von - bedeutet 1 mit dem letzten Frame des AVI-Clips enden.
 
 *nRep*<br/>
@@ -319,7 +319,7 @@ BOOL Seek(UINT nTo);
 
 ### <a name="parameters"></a>Parameter
 
-*NUM*<br/>
+*nTo*<br/>
 Nullbasierte Index des anzuzeigenden Rahmens. Wert muss kleiner als 65.536 sein. Der Wert 0 bedeutet, dass den ersten Frame in der AVI-Clips angezeigt. Der Wert-1 bedeutet, dass den letzten Frame in der AVI-Clips angezeigt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -356,4 +356,3 @@ Ungleich 0, wenn erfolgreich, andernfalls 0.
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [CAnimateCtrl::Create](#create)<br/>
 [ON_CONTROL](message-map-macros-mfc.md#on_control)
-

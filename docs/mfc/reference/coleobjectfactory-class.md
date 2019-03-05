@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleObjectFactory [MFC], VerifyLicenseKey
 - COleObjectFactory [MFC], VerifyUserLicense
 ms.assetid: ab179c1e-4af2-44aa-a576-37c48149b427
-ms.openlocfilehash: 4aa6d688de59884c7279b441d12dda9dcdf2ff6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25dce92f49ba9de08fcf33d54db8e97d520f5ea4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476010"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266379"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory-Klasse
 
@@ -68,13 +68,13 @@ class COleObjectFactory : public CCmdTarget
 |[COleObjectFactory::GetClassID](#getclassid)|Gibt die OLE Klassen-ID der Objekte, die diese Factory erstellt.|
 |[COleObjectFactory::IsLicenseValid](#islicensevalid)|Bestimmt, ob die Lizenz für das Steuerelement gültig ist.|
 |[COleObjectFactory::IsRegistered](#isregistered)|Gibt an, ob die Objektfactory für die OLE-System-DLLs registriert ist.|
-|[COleObjectFactory:: Register](#register)|Dieses Objekt-Factory registriert die OLE-System-DLLs.|
+|[COleObjectFactory::Register](#register)|Dieses Objekt-Factory registriert die OLE-System-DLLs.|
 |[COleObjectFactory::RegisterAll](#registerall)|Alle von der Anwendung Objekt Factorys registriert OLE-System-DLLs.|
-|[COleObjectFactory:: Revoke](#revoke)|Hebt die Registrierung dieser Objekt-Factory die OLE-System-DLLs.|
+|[COleObjectFactory::Revoke](#revoke)|Hebt die Registrierung dieser Objekt-Factory die OLE-System-DLLs.|
 |[COleObjectFactory::RevokeAll](#revokeall)|Hebt die Registrierungen Objektfactory einer Anwendung, mit der die OLE-System-DLLs.|
-|[COleObjectFactory:: UnregisterAll](#unregisterall)|Hebt die Registrierung aller Objektfactory für eine Anwendung.|
+|[COleObjectFactory::UnregisterAll](#unregisterall)|Hebt die Registrierung aller Objektfactory für eine Anwendung.|
 |[COleObjectFactory::UpdateRegistry](#updateregistry)|Registriert dieses Objekt-Factory mit der Registrierung des OLE-Systems an.|
-|[COleObjectFactory:: UpdateRegistryAll](#updateregistryall)|Alle von der Anwendung Objekt Factorys registriert der OLE-systemregistrierung.|
+|[COleObjectFactory::UpdateRegistryAll](#updateregistryall)|Alle von der Anwendung Objekt Factorys registriert der OLE-systemregistrierung.|
 
 ### <a name="protected-methods"></a>Geschützte Methoden
 
@@ -327,7 +327,7 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
 *lpszProgID*<br/>
 Zeiger auf eine Zeichenfolge, enthält die lesbare Programm-ID, z. B. "Excel.Document.5."
 
-*bRegistrieren Sie sich*<br/>
+*bRegister*<br/>
 Bestimmt, ob der Steuerelement-Class-Objektfactory registriert werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -350,7 +350,7 @@ static BOOL PASCAL UpdateRegistryAll(BOOL bRegister = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bRegistrieren Sie sich*<br/>
+*bRegister*<br/>
 Bestimmt, ob der Steuerelement-Class-Objektfactory registriert werden.
 
 ### <a name="return-value"></a>Rückgabewert
