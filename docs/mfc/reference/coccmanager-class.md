@@ -30,12 +30,12 @@ helpviewer_keywords:
 - COccManager [MFC], SetDefaultButton
 - COccManager [MFC], SplitDialogTemplate
 ms.assetid: 7d47aeed-d1ab-48e3-b4cf-d429718e370a
-ms.openlocfilehash: 804db7be4ba796a67042e6772ae4cb631c0c232b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a83f58b8de2411577d9fc025f7a8f8dc535ea8b3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440182"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276649"
 ---
 # <a name="coccmanager-class"></a>COccManager-Klasse
 
@@ -90,7 +90,7 @@ virtual COleControlContainer* CreateContainer(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Ein Zeiger auf das Window-Objekt, das die benutzerdefinierte Website-Container zugeordnet.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -168,7 +168,7 @@ static DWORD AFX_CDECL GetDefBtnCode(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Das Window-Objekt, das das Schaltflächen-Steuerelement enthält.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -220,7 +220,7 @@ static BOOL AFX_CDECL IsLabelControl(COleControlSiteOrWnd* pWnd);
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Ein Zeiger auf das Fenster, das das Steuerelement enthält.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -247,7 +247,7 @@ static BOOL AFX_CDECL IsMatchingMnemonic(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Ein Zeiger auf das Fenster, das das Steuerelement enthält.
 
 *lpMsg*<br/>
@@ -352,10 +352,10 @@ static void AFX_CDECL SetDefaultButton(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 Ein Zeiger auf das Fenster, das das Steuerelement enthält.
 
-*bStandardstufe*<br/>
+*bDefault*<br/>
 Ungleich NULL, wenn das Steuerelement die Standardschaltfläche werden soll; andernfalls 0 (null).
 
 ### <a name="return-value"></a>Rückgabewert

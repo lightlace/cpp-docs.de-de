@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactory2 class
 ms.assetid: 19b66fd6-b9ed-47a0-822c-8132184f5a3e
-ms.openlocfilehash: ba5bda2e73964e7195c4955806e897f9496c244a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3b14fa59765aa72a1142e0eef41aa84abea35de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460202"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301848"
 ---
 # <a name="ccomclassfactory2-class"></a>CComClassFactory2-Klasse
 
@@ -34,7 +34,7 @@ class CComClassFactory2 : public IClassFactory2,
 
 #### <a name="parameters"></a>Parameter
 
-*Lizenz*<br/>
+*license*<br/>
 Eine Klasse, die folgenden statischen Funktionen implementiert:
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -132,7 +132,7 @@ STDMETHOD(CreateInstanceLic)(
 [in] Wenn das Objekt dann als Teil eines Aggregats erstellt wird *pUnkOuter* muss die äußere unbekannte sein. Andernfalls *pUnkOuter* muss NULL sein.
 
 *pUnkReserved*<br/>
-[in] Nicht verwendet. NULL muss sein.
+[in] Nicht verwendet. Muss NULL sein.
 
 *riid*<br/>
 [in] Die IID der angeforderten Schnittstelle. Wenn *pUnkOuter* ungleich NULL, *Riid* muss `IID_IUnknown`.
@@ -182,7 +182,7 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ### <a name="parameters"></a>Parameter
 
-*Bestand*<br/>
+*fLock*<br/>
 [in] True gibt an, die Anzahl der Sperren erhöht. Andernfalls ist die Anzahl der Sperren verringert.
 
 ### <a name="return-value"></a>Rückgabewert

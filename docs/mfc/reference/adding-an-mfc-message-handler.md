@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - message handling [MFC], adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
-ms.openlocfilehash: edb48b510be1de73abe3361f9bd409a8fed929d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4b0a4507df7f352355fc95354e1e83aa7b6d0a7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593543"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292398"
 ---
 # <a name="adding-an-mfc-message-handler"></a>Hinzufügen eines MFC-Meldungshandlers
 
@@ -31,4 +31,3 @@ Verwenden Sie das Fenster "Eigenschaften", um Meldung und Ereignisbehandlung Fun
 [Überschreiben einer virtuellen Funktion](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Navigating the Class Structure (Navigieren in der Klassenstruktur)](../../ide/navigating-the-class-structure-visual-cpp.md)<br/>
 [Dialog-Editor](../../windows/dialog-editor.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen von Drag & Drop-Unterstützung für Headerelemente
+title: Bereitstellen von Drag &amp; Drop-Unterstützung für Headerelemente
 ms.date: 11/04/2016
 helpviewer_keywords:
 - HDS_DRAGDROP style
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], drag and drop support
 - HDN_ notifications [MFC]
 ms.assetid: 93a152ec-804f-488f-b260-b3a438d0dc0f
-ms.openlocfilehash: 21ff14982baac93fac1cf3ee441353c079f4f760
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f30ad029742a01280abda85cbd1a81104d01d8cd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602968"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263717"
 ---
-# <a name="providing-drag-and-drop-support-for-header-items"></a>Bereitstellen von Drag & Drop-Unterstützung für Headerelemente
+# <a name="providing-drag-and-drop-support-for-header-items"></a>Bereitstellen von Drag &amp; Drop-Unterstützung für Headerelemente
 
 Drag & Drop-Unterstützung für Headerelemente geben an, um die HDS_DRAGDROP-Stil. Drag & Drop-Unterstützung für Headerelemente bietet dem Benutzer die Möglichkeit, die Headerelemente, die von einem Kopfzeilen-Steuerelement neu anzuordnen. Das Standardverhalten bietet eine halb transparente bilddarstellung des Headerelements, das gezogen wird, und einen visuellen Indikator, der die neue Position, wenn das Headerelement gelöscht wird.
 
@@ -26,4 +26,3 @@ Wie können gemeinsame Drag & Drop-Funktionalität, Sie das Standardverhalten f�
 ## <a name="see-also"></a>Siehe auch
 
 [Verwenden von CHeaderCtrl](../mfc/using-cheaderctrl.md)
-

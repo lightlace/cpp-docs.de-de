@@ -19,12 +19,12 @@ f1_keywords:
 - AGENTS/concurrency::unbounded_buffer::send_message
 - AGENTS/concurrency::unbounded_buffer::supports_anonymous_source
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-ms.openlocfilehash: b4a54e80067c5bc4cea9cd0dac0e24a66e1858e0
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 1474381a2d1c0947b2428ab4cf0b4683198eef84
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694750"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288143"
 ---
 # <a name="unboundedbuffer-class"></a>unbounded_buffer-Klasse
 
@@ -41,7 +41,7 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
 
 #### <a name="parameters"></a>Parameter
 
-*_Typ*<br/>
+*_Type*<br/>
 Der Nutzlasttyp der Nachrichten gespeichert und vom Puffer weitergegeben.
 
 ## <a name="members"></a>Member
@@ -72,7 +72,7 @@ Der Nutzlasttyp der Nachrichten gespeichert und vom Puffer weitergegeben.
 |[propagate_output_messages](#propagate_output_messages)|Stellen die `message` `_PMessage` in diesem `unbounded_buffer` Meldungsblock und versucht, sie alle verknüpften Ziele anzubieten. (Überschreibt [source_block:: propagate_output_messages](source-block-class.md#propagate_output_messages).)|
 |[release_message](#release_message)|Gibt die nachrichtenreservierung einer vorherigen frei. (Überschreibt [source_block:: release_message](source-block-class.md#release_message).)|
 |[reserve_message](#reserve_message)|Reserviert eine Meldung, die zuvor von diesem angebotenen `unbounded_buffer` Meldungsblock. (Überschreibt [source_block:: reserve_message](source-block-class.md#reserve_message).)|
-|[resume_propagation](#resume_propagation)|Weitergabe fortgesetzt, nachdem eine Reservierung freigegeben wurde. (Überschreibt [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|
+|[resume_propagation](#resume_propagation)|Weitergabe fortgesetzt, nachdem eine Reservierung freigegeben wurde. (Overrides [source_block::resume_propagation](source-block-class.md#resume_propagation).)|
 |[send_message](#send_message)|Übergibt synchron eine Nachricht von einem `ISource` Block, um diese `unbounded_buffer` Meldungsblock. Wird aufgerufen, indem die `send` Methode, wenn Sie von einem Quellblock aufgerufen.|
 |[supports_anonymous_source](#supports_anonymous_source)|Überschreibt die `supports_anonymous_source` Methode, um anzugeben, dass dieser Block annehmen kann Nachrichten angeboten, von einer Quelle, die nicht verknüpft ist. (Überschreibt [ITarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|
 
@@ -150,7 +150,7 @@ _Type dequeue();
 
 Die Nutzlast der Nachricht entfernt aus der `unbounded_buffer`.
 
-##  <a name="enqueue"></a> in die Warteschlange eingereiht
+##  <a name="enqueue"></a> enqueue
 
 Fügt ein Element, das die `unbounded_buffer` Meldungsblock.
 
@@ -375,4 +375,3 @@ Zerstört die `unbounded_buffer` Meldungsblock.
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
 [overwrite_buffer-Klasse](overwrite-buffer-class.md)<br/>
 [single_assignment-Klasse](single-assignment-class.md)
-

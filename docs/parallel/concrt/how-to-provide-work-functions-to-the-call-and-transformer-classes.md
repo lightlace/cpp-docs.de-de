@@ -1,19 +1,19 @@
 ---
-title: 'Gewusst wie: Bereitstellen von Arbeitsfunktionen für die call- und transformer-Klassen'
+title: 'Vorgehensweise: Bereitstellen von Arbeitsfunktionen für die Call- und Transformer-Klassen'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - call class, example
 - using the transformer class [Concurrency Runtime]
 - using the call class [Concurrency Runtime]
 ms.assetid: df715ce4-8507-41ca-b204-636d11707a73
-ms.openlocfilehash: d9d472ddd8d5c7baf3cb16e1df33a2bdb74c5381
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c41c29dae277105f268171503e662e2a02e3857e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500999"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277690"
 ---
-# <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>Gewusst wie: Bereitstellen von Arbeitsfunktionen für die call- und transformer-Klassen
+# <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>Vorgehensweise: Bereitstellen von Arbeitsfunktionen für die Call- und Transformer-Klassen
 
 In diesem Thema veranschaulicht verschiedene Möglichkeiten zum Bereitstellen von Arbeitsfunktionen der [Concurrency:: Call](../../parallel/concrt/reference/call-class.md) und [Concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md) Klassen.
 
@@ -61,6 +61,6 @@ Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, o
 
 [Asynchrone Agents Library](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Asynchrone Nachrichtenblöcke](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
-[Vorgehensweise: Verwenden von transformer in einer Datenpipeline](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)<br/>
+[Vorgehensweise: Verwenden von „transformer“ in einer Datenpipeline](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)<br/>
 [call-Klasse](../../parallel/concrt/reference/call-class.md)<br/>
 [transformer-Klasse](../../parallel/concrt/reference/transformer-class.md)

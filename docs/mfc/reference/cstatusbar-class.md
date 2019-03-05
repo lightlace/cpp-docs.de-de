@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-ms.openlocfilehash: 70d700197e3d249812e8b09a2cba744a0fbc9803
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7aa577d237c1800ca9df3f0af4c44acdaae9ae2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649279"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279496"
 ---
 # <a name="cstatusbar-class"></a>CStatusBar-Klasse
 
@@ -67,15 +67,15 @@ class CStatusBar : public CControlBar
 |----------|-----------------|
 |[CStatusBar::CommandToIndex](#commandtoindex)|Ruft Index für einen bestimmten Indikator-ID.|
 |[CStatusBar::Create](#create)|Erstellt der Statusleiste angezeigt wird, fügt es der `CStatusBar` Objekt und legt die anfängliche Höhe der Schriftart und Balken.|
-|[CStatusBar:: CreateEx](#createex)|Erstellt eine `CStatusBar` Objekt mit zusätzlichen Stilen für den eingebetteten `CStatusBarCtrl` Objekt.|
+|[CStatusBar::CreateEx](#createex)|Erstellt eine `CStatusBar` Objekt mit zusätzlichen Stilen für den eingebetteten `CStatusBarCtrl` Objekt.|
 |[CStatusBar::DrawItem](#drawitem)|Wird aufgerufen, wenn ein visueller Aspekt der ein ownerdrawn-Statusleisten-Steuerelements ändert.|
 |[CStatusBar::GetItemID](#getitemid)|Ruft den Indikator-ID für einen bestimmten Index ab.|
 |[CStatusBar::GetItemRect](#getitemrect)|Ruft anzeigen Rechteck für einen bestimmten Index.|
 |[CStatusBar::GetPaneInfo](#getpaneinfo)|Ruft Indicator-ID, Stil und die Breite für einen bestimmten Index ab.|
 |[CStatusBar::GetPaneStyle](#getpanestyle)|Ruft die indikatorart für einen bestimmten Index ab.|
 |[CStatusBar::GetPaneText](#getpanetext)|Ruft den Text fest, der für einen bestimmten Index ab.|
-|[GetStatusBarCtrl](#getstatusbarctrl)|Ermöglicht den direkten Zugriff auf die zugrunde liegende allgemeine-Steuerelement.|
-|[CStatusBar:: SetIndicators](#setindicators)|Legt fest, Indicator-IDs.|
+|[CStatusBar::GetStatusBarCtrl](#getstatusbarctrl)|Ermöglicht den direkten Zugriff auf die zugrunde liegende allgemeine-Steuerelement.|
+|[CStatusBar::SetIndicators](#setindicators)|Legt fest, Indicator-IDs.|
 |[CStatusBar::SetPaneInfo](#setpaneinfo)|Indikator-ID, Stil und Breite für einen bestimmten Index festgelegt.|
 |[CStatusBar::SetPaneStyle](#setpanestyle)|Legt die indikatorart für einen bestimmten Index fest.|
 |[CStatusBar::SetPaneText](#setpanetext)|Legt Text fest, der für einen bestimmten Index fest.|

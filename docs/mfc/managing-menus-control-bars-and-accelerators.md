@@ -12,12 +12,12 @@ helpviewer_keywords:
 - frame windows [MFC], updating
 - status bars [MFC], updating
 ms.assetid: 97ca1997-06df-4373-b023-4f7ecd81047b
-ms.openlocfilehash: 905a015de6a675de80c49991750f72eccf06afaa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a089829658265cd835a8c7344aa5bc45fbc109a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559629"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293809"
 ---
 # <a name="managing-menus-control-bars-and-accelerators"></a>Verwalten von Menüs, Steuerleisten und Zugriffstasten
 
@@ -44,4 +44,3 @@ Jede Rahmenfenster verwaltet eine optionale Accelerator-Tabelle, die Accelerator
 ## <a name="see-also"></a>Siehe auch
 
 [Verwenden von Rahmenfenstern](../mfc/using-frame-windows.md)
-

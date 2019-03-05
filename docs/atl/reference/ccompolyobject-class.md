@@ -17,12 +17,12 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComPolyObject class
 ms.assetid: eaf67c18-e855-48ca-9b15-f1df3106121b
-ms.openlocfilehash: 9f84c022ac1dee34b6dca2931abb349eefb7d690
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a8dbbc06d35d2606cc76e89cc555ba7f8577daa9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495887"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277930"
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject-Klasse
 
@@ -38,7 +38,7 @@ class CComPolyObject : public IUnknown,
 
 #### <a name="parameters"></a>Parameter
 
-*enthalten sind*<br/>
+*contained*<br/>
 Abgeleitet von die Klasse [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oder [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), wie auch über andere Schnittstellen für das Objekt unterstützt werden sollen.
 
 ## <a name="members"></a>Member
@@ -48,7 +48,7 @@ Abgeleitet von die Klasse [CComObjectRoot](../../atl/reference/ccomobjectroot-cl
 |Name|Beschreibung|
 |----------|-----------------|
 |[CComPolyObject::CComPolyObject](#ccompolyobject)|Der Konstruktor.|
-|[CComPolyObject:: ~ CComPolyObject](#dtor)|Der Destruktor.|
+|[CComPolyObject::~CComPolyObject](#dtor)|Der Destruktor.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -117,7 +117,7 @@ CComPolyObject(void* pv);
 
 ### <a name="parameters"></a>Parameter
 
-*PV*<br/>
+*pv*<br/>
 [in] Ein Zeiger auf die äußere unbekannte, wenn das Objekt aggregiert werden, oder NULL, wenn das Objekt, wenn das Objekt nicht aggregiert werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -150,7 +150,7 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>Parameter
 
-*PP*<br/>
+*pp*<br/>
 [out] Ein Zeiger auf eine **CComPolyObject <** `contained` **>** Zeiger. Wenn `CreateInstance` nicht erfolgreich ist, ist *pp* auf NULL festgelegt ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -193,7 +193,7 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>Parameter
 
-*enthalten sind*<br/>
+*contained*<br/>
 [in] Abgeleitet von die Klasse [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oder [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), wie auch über andere Schnittstellen für das Objekt unterstützt werden sollen.
 
 ### <a name="remarks"></a>Hinweise
@@ -215,13 +215,13 @@ HRESULT QueryInterface(Q** pp);
 *Q*<br/>
 Die COM-Schnittstelle.
 
-*IID*<br/>
+*iid*<br/>
 [in] Der Bezeichner der angeforderten Schnittstelle.
 
 *ppvObject*<br/>
 [out] Ein Zeiger auf den Schnittstellenzeiger vom *Iid*. Wenn das Objekt nicht über diese Schnittstelle unterstützt *PpvObject* auf NULL festgelegt ist.
 
-*PP*<br/>
+*pp*<br/>
 [out] Ein Zeiger auf die Schnittstelle identifizierte `__uuidof(Q)`.
 
 ### <a name="return-value"></a>Rückgabewert

@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITarget class
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
-ms.openlocfilehash: fed6f6c9b93869602eb43dabfef4743fbce3a3d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59a0f66a0ba3b10c3307a835ff6ccaa216596538
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430003"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295323"
 ---
 # <a name="itarget-class"></a>ITarget-Klasse
 
@@ -81,7 +81,7 @@ Weitere Informationen finden Sie unter [asynchrone Meldungsblöcke](../../../par
 
 **Namespace:** Parallelität
 
-##  <a name="dtor"></a> ~ ITarget
+##  <a name="dtor"></a> ~ITarget
 
 Zerstört das `ITarget`-Objekt.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: Reihenfolge der Operationen'
+title: 'Windows Sockets: Abfolge der Vorgänge'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Windows Sockets [MFC], operations
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - sockets [MFC], operations
 - stream sockets [MFC]
 ms.assetid: 43ce76f5-aad3-4247-b8a6-16cc7d012796
-ms.openlocfilehash: 98d06e005a09825d53f22330d6b0b58ccb2069fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f9fd339fdbdfee9381ea693568f40473c2397e9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578636"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265547"
 ---
-# <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets: Reihenfolge der Operationen
+# <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets: Abfolge der Vorgänge
 
 Dieser Artikel veranschaulicht, nebeneinander, die Reihenfolge der Vorgänge für einen Serversocket und einem Clientsocket. Da die Sockets verwenden `CArchive` Objekte, sie sind notwendigerweise [streamen Sockets](../mfc/windows-sockets-stream-sockets.md).
 
@@ -56,15 +56,15 @@ Die Reihenfolge der Aufrufe, die in der obigen Tabelle aufgeführten ist für ei
 
 Weitere Informationen finden Sie unter:
 
-- [Windows-Sockets: Verwenden von Sockets mit Archiven](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets: Verwenden von Sockets mit Archiven](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows-Sockets: Verwenden der Klasse CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: Verwenden der Klasse CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows-Sockets: Ports und Socketadressen](../mfc/windows-sockets-ports-and-socket-addresses.md)
+- [Windows Sockets: Ports und Socketadressen](../mfc/windows-sockets-ports-and-socket-addresses.md)
 
-- [Windows-Sockets: Blockieren](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: Stream-Sockets](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows-Sockets: Datagrammsockets](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: Datagrammsockets](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -72,4 +72,3 @@ Weitere Informationen finden Sie unter:
 [CSocket-Klasse](../mfc/reference/csocket-class.md)<br/>
 [CAsyncSocket::Create](../mfc/reference/casyncsocket-class.md#create)<br/>
 [CAsyncSocket::Close](../mfc/reference/casyncsocket-class.md#close)
-

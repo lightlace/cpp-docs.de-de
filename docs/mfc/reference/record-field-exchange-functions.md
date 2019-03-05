@@ -45,12 +45,12 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-ms.openlocfilehash: 2970a722f79e9707f8721c1c8595bfd1d133f898
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 865c67b88c37e32ef33fa410ef178b81b7a6ecac
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525943"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297072"
 ---
 # <a name="record-field-exchange-functions"></a>Funktionen für den Datensatzfeldaustausch
 
@@ -62,9 +62,9 @@ Wenn Sie den Massenzeilenabruf in den ODBC-basierten Klassen implementiert haben
 
 Die Datensatzfeldaustausch-Funktionen übertragen jedes Mal Daten, wenn das Framework `DoFieldExchange` oder `DoBulkFieldExchange`aufruft. Jede Funktion überträgt einen bestimmten Datentyp.
 
-Weitere Informationen über die Verwendung dieser Funktionen finden Sie in den Artikeln [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Weitere Informationen über das gesammelte Abrufen von Zeilen finden Sie im Artikel [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Weitere Informationen zur Verwendung dieser Funktionen finden Sie in den Artikeln [Record Field Exchange: Funktionsweise von RFX (ODBC)](../../data/odbc/record-field-exchange-how-rfx-works.md). Weitere Informationen zu gesammelten Abrufens von Zeilen, finden Sie im Artikel [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-Für Datenspalten, die Sie dynamisch binden, können Sie auch die RFX- oder DFX-Funktionen selbst aufrufen, wie in den Artikeln [Recordset: Dynamisches Binden von Spalten (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)beschrieben. Darüber hinaus können Sie Ihre eigenen benutzerdefinierten RFX- oder DFX-Routinen schreiben, wie im technischen Hinweis [43](../../mfc/tn043-rfx-routines.md) (für ODBC) und im technischen Hinweis [53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) (für DAO) erläutert.
+Für Datenspalten, die Sie dynamisch binden, können Sie auch die RFX- oder DFX-Funktionen selbst aufrufen, wie in den Artikeln erläutert [Recordset: Dynamisches Binden von Datenspalten (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md). Darüber hinaus können Sie Ihre eigenen benutzerdefinierten RFX- oder DFX-Routinen schreiben, wie im technischen Hinweis [43](../../mfc/tn043-rfx-routines.md) (für ODBC) und im technischen Hinweis [53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) (für DAO) erläutert.
 
 Für ein Beispiel für RFX und Bulk-RFX-Funktionen wie in der `DoFieldExchange` und `DoBulkFieldExchange` -Funktionen finden Sie unter [RFX_Text](#rfx_text) und die #Rfx_text_bulk [RFX_Text_Bulk]). DFX-Funktionen sind den RFX-Funktionen sehr ähnlich.
 
@@ -132,12 +132,12 @@ void RFX_Binary(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
-*Wert*<br/>
+*value*<br/>
 Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs [CByteArray](cbytearray-class.md), stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
 
 *nMaxLength*<br/>
@@ -171,12 +171,12 @@ void RFX_Bool(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
-*Wert*<br/>
+*value*<br/>
 Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für eine Übertragung vom Recordset die Datenquelle wird der Wert vom Typ "bool", den angegebenen Datenmember entnommen. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
 
 ### <a name="example"></a>Beispiel
@@ -203,12 +203,12 @@ void RFX_Byte(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
-*Wert*<br/>
+*value*<br/>
 Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für eine Übertragung vom Recordset die Datenquelle wird der Wert, der Typ "BYTE", den angegebenen Datenmember entnommen. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
 
 ### <a name="example"></a>Beispiel
@@ -245,12 +245,12 @@ void RFX_Date(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
-*Wert*<br/>
+*value*<br/>
 Der Wert, der in den angegebenen Datenmember gespeichert; der Wert, der übertragen werden. Die verschiedenen Versionen der Funktion führen Sie unterschiedliche Datentypen für Wert:
 
 Die erste Version der Funktion akzeptiert einen Verweis auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt. Für eine Übertragung vom Recordset die Datenquelle wird der Wert aus den angegebenen Datenmember verwendet. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
@@ -285,12 +285,12 @@ void RFX_Double(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
-*Wert*<br/>
+*value*<br/>
 Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs **doppelte**, stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
 
 ### <a name="example"></a>Beispiel
@@ -317,12 +317,12 @@ void RFX_Int(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
-*Wert*<br/>
+*value*<br/>
 Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs **Int**, stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
 
 ### <a name="example"></a>Beispiel
@@ -350,12 +350,12 @@ value );
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
-*Wert*<br/>
+*value*<br/>
 Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs **lange**, stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
 
 ### <a name="example"></a>Beispiel
@@ -382,12 +382,12 @@ void RFX_LongBinary(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
-*Wert*<br/>
+*value*<br/>
 Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs `CLongBinary`, stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
 
 ### <a name="example"></a>Beispiel
@@ -414,12 +414,12 @@ void RFX_Single(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
-*Wert*<br/>
+*value*<br/>
 Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs **"float"**, stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
 
 ### <a name="example"></a>Beispiel
@@ -449,12 +449,12 @@ void RFX_Text(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse `CFieldExchange`. Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein Objekt der Klasse `CFieldExchange`. Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
-*Wert*<br/>
+*value*<br/>
 Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs `CString`, stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
 
 *nMaxLength*<br/>
@@ -514,7 +514,7 @@ void RFX_Binary_Bulk(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf eine [CFieldExchange](cfieldexchange-class.md) Objekt. Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen finden Sie im Artikel [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf eine [CFieldExchange](cfieldexchange-class.md) Objekt. Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
@@ -564,7 +564,7 @@ void RFX_Bool_Bulk(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf eine [CFieldExchange](cfieldexchange-class.md) Objekt. Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen finden Sie im Artikel [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf eine [CFieldExchange](cfieldexchange-class.md) Objekt. Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
@@ -611,7 +611,7 @@ void RFX_Byte_Bulk(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf eine [CFieldExchange](cfieldexchange-class.md) Objekt. Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen finden Sie im Artikel [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf eine [CFieldExchange](cfieldexchange-class.md) Objekt. Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
@@ -658,7 +658,7 @@ void RFX_Date_Bulk(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf eine [CFieldExchange](cfieldexchange-class.md) Objekt. Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen finden Sie im Artikel [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf eine [CFieldExchange](cfieldexchange-class.md) Objekt. Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
@@ -705,7 +705,7 @@ void RFX_Double_Bulk(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf eine [CFieldExchange](cfieldexchange-class.md) Objekt. Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen finden Sie im Artikel [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf eine [CFieldExchange](cfieldexchange-class.md) Objekt. Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
@@ -751,12 +751,12 @@ void RFX_Int(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf ein Objekt der Klasse [CFieldExchange](cfieldexchange-class.md). Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen zu den Vorgängen eine `CFieldExchange` Objekt angeben kann, finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
 
-*Wert*<br/>
+*value*<br/>
 Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs **Int**, stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
 
 ### <a name="example"></a>Beispiel
@@ -784,7 +784,7 @@ void RFX_Long_Bulk(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf eine [CFieldExchange](cfieldexchange-class.md) Objekt. Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen finden Sie im Artikel [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf eine [CFieldExchange](cfieldexchange-class.md) Objekt. Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
@@ -831,7 +831,7 @@ void RFX_Single_Bulk(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf eine [CFieldExchange](cfieldexchange-class.md) Objekt. Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen finden Sie im Artikel [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf eine [CFieldExchange](cfieldexchange-class.md) Objekt. Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
@@ -879,7 +879,7 @@ void RFX_Text_Bulk(
 ### <a name="parameters"></a>Parameter
 
 *pFX*<br/>
-Ein Zeiger auf eine [CFieldExchange](cfieldexchange-class.md) Objekt. Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen finden Sie im Artikel [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Ein Zeiger auf eine [CFieldExchange](cfieldexchange-class.md) Objekt. Dieses Objekt enthält Informationen, die den Kontext für jeden Aufruf der Funktion definieren. Weitere Informationen finden Sie im Artikel [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Der Name einer Datenspalte.
@@ -950,7 +950,7 @@ Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class
 *szName*<br/>
 Der Name einer Datenspalte.
 
-*Wert*<br/>
+*value*<br/>
 Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs [CByteArray](cbytearray-class.md), stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
 
 *nPreAllocSize*<br/>
@@ -996,7 +996,7 @@ Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class
 *szName*<br/>
 Der Name einer Datenspalte.
 
-*Wert*<br/>
+*value*<br/>
 Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für eine Übertragung vom Recordset die Datenquelle wird der Wert vom Typ "bool", den angegebenen Datenmember entnommen. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
 
 *dwBindOptions*<br/>
@@ -1039,7 +1039,7 @@ Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class
 *szName*<br/>
 Der Name einer Datenspalte.
 
-*Wert*<br/>
+*value*<br/>
 Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für eine Übertragung vom Recordset die Datenquelle wird der Wert, der Typ "BYTE", den angegebenen Datenmember entnommen. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
 
 *dwBindOptions*<br/>
@@ -1082,7 +1082,7 @@ Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class
 *szName*<br/>
 Der Name einer Datenspalte.
 
-*Wert*<br/>
+*value*<br/>
 Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Dieser Wert stammt für eine Übertragung vom Recordset die Datenquelle, aus den angegebenen Datenmember vom Typ [COleCurrency](colecurrency-class.md). Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
 
 *dwBindOptions*<br/>
@@ -1125,7 +1125,7 @@ Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class
 *szName*<br/>
 Der Name einer Datenspalte.
 
-*Wert*<br/>
+*value*<br/>
 Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Die Funktion akzeptiert einen Verweis auf eine [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) Objekt. Für eine Übertragung vom Recordset die Datenquelle wird der Wert aus den angegebenen Datenmember verwendet. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
 
 *dwBindOptions*<br/>
@@ -1171,7 +1171,7 @@ Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class
 *szName*<br/>
 Der Name einer Datenspalte.
 
-*Wert*<br/>
+*value*<br/>
 Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs **doppelte**, stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
 
 *dwBindOptions*<br/>
@@ -1214,7 +1214,7 @@ Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class
 *szName*<br/>
 Der Name einer Datenspalte.
 
-*Wert*<br/>
+*value*<br/>
 Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs **lange**, stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
 
 *dwBindOptions*<br/>
@@ -1258,7 +1258,7 @@ Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class
 *szName*<br/>
 Der Name einer Datenspalte.
 
-*Wert*<br/>
+*value*<br/>
 Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs [CLongBinary](clongbinary-class.md), stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
 
 *dwPreAllocSize*<br/>
@@ -1304,7 +1304,7 @@ Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class
 *szName*<br/>
 Der Name einer Datenspalte.
 
-*Wert*<br/>
+*value*<br/>
 Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs **kurze**, stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
 
 *dwBindOptions*<br/>
@@ -1350,7 +1350,7 @@ Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class
 *szName*<br/>
 Der Name einer Datenspalte.
 
-*Wert*<br/>
+*value*<br/>
 Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs **"float"**, stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
 
 *dwBindOptions*<br/>
@@ -1394,7 +1394,7 @@ Ein Zeiger auf ein Objekt der Klasse [CDaoFieldExchange](cdaofieldexchange-class
 *szName*<br/>
 Der Name einer Datenspalte.
 
-*Wert*<br/>
+*value*<br/>
 Die in den angegebenen Datenmember gespeicherten Wert, der Wert, der übertragen werden. Für die Übertragung vom Recordset zu Datenquelle, die den Wert des Typs [CString](../../atl-mfc-shared/reference/cstringt-class.md), stammt aus den angegebenen Datenmember. Für die Übertragung aus der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.
 
 *nPreAllocSize*<br/>
@@ -1437,7 +1437,6 @@ void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
 ## <a name="see-also"></a>Siehe auch
 
 [Makros und globale Variablen](mfc-macros-and-globals.md)<br/>
-[CRecordset:: DoFieldExchange](crecordset-class.md#dofieldexchange)<br/>
+[CRecordset::DoFieldExchange](crecordset-class.md#dofieldexchange)<br/>
 [CRecordset::DoBulkFieldExchange](crecordset-class.md#dobulkfieldexchange)<br/>
-[CDaoRecordset:: DoFieldExchange](cdaorecordset-class.md#dofieldexchange)
-
+[CDaoRecordset::DoFieldExchange](cdaorecordset-class.md#dofieldexchange)

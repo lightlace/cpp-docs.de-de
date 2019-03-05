@@ -1,5 +1,5 @@
 ---
-title: 'Multithreading: Erstellen von Benutzeroberflächenthreads in MFC'
+title: 'Multithreading: Erstellen von MFC-UI-Threads'
 ms.date: 08/27/2018
 f1_keywords:
 - CREATE_SUSPENDED
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - user interface threads [C++]
 - threading [MFC], user interface threads
 ms.assetid: 446925c1-db59-46ea-ae5b-d5ae5d5b91d8
-ms.openlocfilehash: e618f11e3c574e5f53dff150beeb313d26fd4a6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac22fad95041b07e132d31a2d246e58c3b40d30c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566828"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293315"
 ---
-# <a name="multithreading-creating-mfc-user-interface-threads"></a>Multithreading: Erstellen von Benutzeroberflächenthreads in MFC
+# <a name="multithreading-creating-mfc-user-interface-threads"></a>Multithreading: Erstellen von MFC-UI-Threads
 
 Ein Benutzeroberflächenthread wird normalerweise verwendet, um unabhängig von Threads, die derzeit andere Teile der Anwendung ausführen, Benutzereingaben zu behandeln und um auf vom Benutzer generierte Ereignisse zu reagieren. Der Thread der Hauptanwendung, der in der von `CWinApp` abgeleiteten Klasse enthalten ist, ist bereits erstellt und wird automatisch gestartet. In diesem Thema werden die notwendigen Schritte zur Erstellung zusätzlicher Benutzeroberflächenthreads beschrieben.
 

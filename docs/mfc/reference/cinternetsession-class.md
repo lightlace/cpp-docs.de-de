@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: 216f3bf0ce62eb6e69ad0650289c4c2d91f95159
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 5ad1a1a0dde32358828d58a8f237337c4f62f3e5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178160"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261296"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession-Klasse
 
@@ -62,17 +62,17 @@ class CInternetSession : public CObject
 |Name|Beschreibung|
 |----------|-----------------|
 |[CInternetSession::Close](#close)|Schließt die Internetverbindung, wenn die Internet-Sitzung beendet wird.|
-|[CInternetSession:: EnableStatusCallback](#enablestatuscallback)|Stellt eine Rückrufroutine Status her.|
+|[CInternetSession::EnableStatusCallback](#enablestatuscallback)|Stellt eine Rückrufroutine Status her.|
 |[CInternetSession::GetContext](#getcontext)|Schließt die Internetverbindung, wenn die Internet-Sitzung beendet wird.|
 |[CInternetSession::GetCookie](#getcookie)|Cookies zurückgegeben für die angegebene URL und alle übergeordneten URLs.|
 |[CInternetSession::GetCookieLength](#getcookielength)|Ruft ab, die Variable, die die Länge des Cookies, die im Puffer gespeichert.|
-|[CInternetSession:: GetFTPConnection](#getftpconnection)|Öffnet eine FTP-Sitzung mit einem Server an. Protokolle für den Benutzer.|
-|[CInternetSession:: GetGopherConnection](#getgopherconnection)|Öffnet einen Gopher-Server für eine Anwendung, die versucht, eine Verbindung zu öffnen.|
-|[CInternetSession:: GetHttpConnection](#gethttpconnection)|Öffnet einen HTTP-Server für eine Anwendung, die versucht, eine Verbindung zu öffnen.|
-|[CInternetSession:: OnStatusCallback](#onstatuscallback)|Aktualisiert den Status eines Vorgangs an, wenn Statusrückruf aktiviert ist.|
-|[OpenURL](#openurl)|Analysiert und eine URL geöffnet.|
+|[CInternetSession::GetFtpConnection](#getftpconnection)|Öffnet eine FTP-Sitzung mit einem Server an. Protokolle für den Benutzer.|
+|[CInternetSession::GetGopherConnection](#getgopherconnection)|Öffnet einen Gopher-Server für eine Anwendung, die versucht, eine Verbindung zu öffnen.|
+|[CInternetSession::GetHttpConnection](#gethttpconnection)|Öffnet einen HTTP-Server für eine Anwendung, die versucht, eine Verbindung zu öffnen.|
+|[CInternetSession::OnStatusCallback](#onstatuscallback)|Aktualisiert den Status eines Vorgangs an, wenn Statusrückruf aktiviert ist.|
+|[CInternetSession::OpenURL](#openurl)|Analysiert und eine URL geöffnet.|
 |[CInternetSession::SetCookie](#setcookie)|Erstellt ein Cookie für die angegebene URL.|
-|[CInternetSession:: SetOption](#setoption)|Legt Optionen für die Internet-Sitzung fest.|
+|[CInternetSession::SetOption](#setoption)|Legt Optionen für die Internet-Sitzung fest.|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
@@ -190,7 +190,7 @@ BOOL EnableStatusCallback(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 Gibt an, ob der Rückruf aktiviert oder deaktiviert ist. Der Standardwert ist "true".
 
 ### <a name="return-value"></a>Rückgabewert
@@ -325,7 +325,7 @@ Ein Zeiger auf eine auf Null endende Zeichenfolge, die das Kennwort für die Anm
 |      NULL       | Nicht-NULL-Zeichenfolge |            ERROR            |            ERROR            |
 | Nicht-NULL-Zeichenfolge | Nicht-NULL-Zeichenfolge |       *pstrUserName*        |       *pstrPassword*        |
 
-*%nPort*<br/>
+*nPort*<br/>
 Eine Zahl, die TCP/IP-Port für die Verwendung auf dem Server identifiziert.
 
 *bPassive*<br/>
@@ -366,7 +366,7 @@ Ein Zeiger auf eine Zeichenfolge, die den Benutzernamen enthält.
 *pstrPassword*<br/>
 Ein Zeiger auf eine Zeichenfolge, enthält das Zugriffskennwort.
 
-*%nPort*<br/>
+*nPort*<br/>
 Eine Zahl, die TCP/IP-Port für die Verwendung auf dem Server identifiziert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -401,7 +401,7 @@ CHttpConnection* GetHttpConnection(
 *pstrServer*<br/>
 Ein Zeiger auf eine Zeichenfolge, die mit dem Namen des HTTP-Server.
 
-*%nPort*<br/>
+*nPort*<br/>
 Eine Zahl, die TCP/IP-Port für die Verwendung auf dem Server identifiziert.
 
 *pstrUserName*<br/>
@@ -410,7 +410,7 @@ Ein Zeiger auf eine Zeichenfolge, die den Benutzernamen enthält.
 *pstrPassword*<br/>
 Ein Zeiger auf eine Zeichenfolge, enthält das Zugriffskennwort.
 
-*dwFlags*<br/>
+*dwflags*<br/>
 Eine beliebige Kombination der `INTERNET_FLAG_*` Flags. Finden Sie in der Tabelle in der **"Hinweise"** Abschnitt [CHttpConnection:: OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) eine Beschreibung der *DwFlags* Werte.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -531,8 +531,8 @@ Der Zeiger, `OpenURL` gibt hängt *PstrURL*den Typ des Diensts. In der folgenden
 |--------------|-------------|
 |file://|`CStdioFile*`|
 |http://|`CHttpFile*`|
-|Gopher://|`CGopherFile*`|
-|FTP: / /|`CInternetFile*`|
+|gopher://|`CGopherFile*`|
+|ftp://|`CInternetFile*`|
 
 ### <a name="remarks"></a>Hinweise
 

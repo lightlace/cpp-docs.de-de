@@ -7,12 +7,12 @@ helpviewer_keywords:
 - practices to avoid [Concurrency Runtime]
 - Concurrency Runtime, best practices
 ms.assetid: 7231d4be-d1e3-401d-8b66-94fd51b587c9
-ms.openlocfilehash: 3c68c095587c937aa1af81193839b71b0213023d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21bca441a29e6e152cb912139db1b9f56b988edd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491286"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299854"
 ---
 # <a name="concurrency-runtime-best-practices"></a>Empfohlene Vorgehensweisen im Zusammenhang mit der Concurrency Runtime
 
@@ -44,5 +44,4 @@ Beschreibt, wie Sie asynchrone Agents in Ihren Anwendungen verwenden.
 Beschreibt die verschiedenen Synchronisierungsprimitiven, die die Concurrency Runtime bereitstellt.
 
 [Aufgabenplanung](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
-Beschreibt die Verwendung von Aufgabenplaner zur Anpassung der Leistung Ihrer Anwendungen.
-
+Beschreibt die Verwendung von Taskplaner zur Anpassung der Leistung Ihrer Anwendungen.

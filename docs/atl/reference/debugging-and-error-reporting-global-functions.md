@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
-ms.openlocfilehash: 626da7b2fd52a93602afa08c416bbbb3a4abdbf7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7483b7473383958089b0c88d0b3c2645ddc2a4f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664651"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287569"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>Debuggen und globale Funktionen für die Fehlerberichterstattung
 
@@ -24,7 +24,7 @@ Diese Funktionen bieten nützliche Funktionen zum Debuggen und Ablaufverfolgung.
 |[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)|Gibt eine `GetLastError` in Form eines HRESULT-Fehlercode.|
 |[AtlHresultFromWin32](debugging-and-error-reporting-global-functions.md#atlhresultfromwin32)|Konvertiert einen Win32-Fehlercode in ein HRESULT.|
 |[AtlReportError](debugging-and-error-reporting-global-functions.md#atlreporterror)|Richtet `IErrorInfo` Fehlerdetails an einen Client bereitstellen.|
-|["Atlthrow"](debugging-and-error-reporting-global-functions.md#atlthrow)|Löst eine `CAtlException` aus.|
+|[AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)|Löst eine `CAtlException` aus.|
 |[AtlThrowLastWin32](debugging-and-error-reporting-global-functions.md#atlthrowlastwin32)|Mit dieser Funktion können Sie auf der Grundlage des Ergebnisses der Windows-Funktion `GetLastError` einen Fehler signalisieren.|
 
 ##  <a name="atlhresultfromlasterror"></a>  AtlHresultFromLastError
@@ -41,7 +41,7 @@ HRESULT AtlHresultFromLastError();
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** "atlcomcli.h"
+**Header:** atlcomcli.h
 
 ##  <a name="atlhresultfromwin32"></a>  AtlHresultFromWin32
 
@@ -53,7 +53,7 @@ AtlHresultFromWin32(DWORD error);
 
 ### <a name="parameters"></a>Parameter
 
-*Fehler*<br/>
+*error*<br/>
 Der Wert des Fehlercodes zu konvertieren.
 
 ### <a name="remarks"></a>Hinweise
@@ -65,7 +65,7 @@ Konvertiert einen Win32-Fehlercode in ein HRESULT, das mit dem Makro was zu HRES
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** "atlcomcli.h"
+**Header:** atlcomcli.h
 
 ##  <a name="atlreporterror"></a>  AtlReportError
 
@@ -125,10 +125,10 @@ HRESULT WINAPI AtlReportError(
 *lpszDesc*<br/>
 [in] Die Zeichenfolge, die den Fehler beschreibt. Die Unicode-Versionen angeben, die *LpszDesc* ist vom Typ LPCOLESTR; die ANSI-Version gibt einen Typ LPCSTR.
 
-*IID*<br/>
+*iid*<br/>
 [in] Die IID der Schnittstelle, die den Fehler oder die GUID_NULL definieren, wenn der Fehler vom Betriebssystem definiert ist.
 
-*' hres '*<br/>
+*hRes*<br/>
 [in] Das HRESULT, Sie möchten, die an den Aufrufer zurückgegeben werden.
 
 *nID*<br/>
@@ -172,7 +172,7 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 
 ### <a name="parameters"></a>Parameter
 
-*HR*<br/>
+*hr*<br/>
 Standard-HRESULT-Wert.
 
 ### <a name="remarks"></a>Hinweise
@@ -225,4 +225,3 @@ Wenn _ATL_NO_EXCEPTIONS definiert ist, wird ein Assertionsfehler ausgelöst, ans
 
 [Funktionen](../../atl/reference/atl-functions.md)<br/>
 [Debuggen und Fehlerberichterstattungs-Makros](../../atl/reference/debugging-and-error-reporting-macros.md)
-

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CWinApp class [MFC], ExitInstance
 - ExitInstance method [MFC]
 ms.assetid: 5bb597bd-8dab-4d49-8bcf-9c45aa8be4a2
-ms.openlocfilehash: b1c5b3a20f25f909188023ab1650bc41316d7a9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c76f588b22ad8ffd1d3dae954c5113feffb62a3f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637735"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279431"
 ---
 # <a name="exitinstance-member-function"></a>ExitInstance-Memberfunktion
 
@@ -22,4 +22,4 @@ Außer Kraft setzen `ExitInstance` bei Bedarf spezielle Bereinigung-Verarbeitung
 
 ## <a name="see-also"></a>Siehe auch
 
-[CWinApp: Die Anwendungsklasse](../mfc/cwinapp-the-application-class.md)
+[CWinApp: Die Anwendungsserver-Klasse](../mfc/cwinapp-the-application-class.md)

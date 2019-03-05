@@ -344,12 +344,12 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetMenuShadowDepth
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
-ms.openlocfilehash: 000f5229c14699c80e2ce18e4125d0c2ac6e382b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 594e727a091cbb7b2999e540ae8da7ddec2a7a14
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653049"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294329"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager-Klasse
 
@@ -672,7 +672,7 @@ void DoDrawHeaderSortArrow(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *bIsUp*<br/>
 [in] *bDlgCtrl*<br/>
 
@@ -753,11 +753,11 @@ virtual BOOL DrawTextOnGlass(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *StrText*<br/>
-[in] *Rect*<br/>
+[in] *strText*<br/>
+[in] *rect*<br/>
 [in] *DwFlags*<br/>
 [in] *nGlowSize*<br/>
-[in] *ClrText*<br/>
+[in] *clrText*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1131,8 +1131,8 @@ virtual void GetRibbonSliderColors(
 [in] *bIsHighlighted*<br/>
 [in] *bIsPressed*<br/>
 [in] *bIsDisabled*<br/>
-[in] *ClrLine*<br/>
-[in] *ClrFill*<br/>
+[in] *clrLine*<br/>
+[in] *clrFill*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1178,7 +1178,7 @@ virtual void GetSmartDockingBaseGuideColors(
 ### <a name="parameters"></a>Parameter
 
 [in] *ClrBaseGroupBackground*<br/>
-[in] *ClrBaseGroupBorder*<br/>
+[in] *clrBaseGroupBorder*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1202,7 +1202,7 @@ virtual AFX_SMARTDOCK_THEME GetSmartDockingTheme();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt einen der folgenden Enumerationswerte: AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
+Gibt einen der folgenden Enumerationswerte zurück: AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1299,7 +1299,7 @@ virtual COLORREF GetTabTextColor(
 ### <a name="parameters"></a>Parameter
 
 [in] *CMFCBaseTabCtrl&#42;*<br/>
-[in] *Int*<br/>
+[in] *int*<br/>
 [in] *"Bool"*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1480,7 +1480,7 @@ virtual BOOL GetToolTipInfo(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Params*<br/>
+[in] *params*<br/>
 [in] *nType*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1731,7 +1731,7 @@ virtual void OnActivateApp(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *aufnehmen*<br/>
+[in] *pWnd*<br/>
 [in] *bActive*<br/>
 
 ### <a name="remarks"></a>Hinweise
@@ -1816,7 +1816,7 @@ virtual BOOL OnDrawBrowseButton(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, der angibt, die Grenze für die Schaltfläche zum Durchsuchen.
 
 *pEdit*<br/>
@@ -1856,7 +1856,7 @@ virtual void OnDrawButtonBorder(
 *pButton*<br/>
 [in] Ein Zeiger auf eine Symbolleisten-Schaltfläche. Das Framework zeichnet den Rahmen dieser Schaltfläche.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Begrenzungen des der Symbolleisten-Schaltfläche angibt.
 
 *state*<br/>
@@ -1883,7 +1883,7 @@ virtual void OnDrawButtonSeparator(
 
 [in] *pDC*<br/>
 [in] *pButton*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *Zustand*<br/>
 [in] *bHorz*<br/>
 
@@ -1910,7 +1910,7 @@ virtual void OnDrawCaptionBarBorder(
 *pBar*<br/>
 [in] Ein Zeiger auf eine `CMFCCaptionBar` Objekt. Das Framework zeichnet diese Titelleiste an.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen der Titelleiste angibt.
 
 *clrBarBorder*<br/>
@@ -1941,7 +1941,7 @@ virtual void OnDrawCaptionBarButtonBorder(
 
 [in] *pDC*<br/>
 [in] *pBar*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *bIsPressed*<br/>
 [in] *bIsHighlighted*<br/>
 [in] *bIsDisabled*<br/>
@@ -1963,7 +1963,7 @@ virtual void OnDrawCaptionBarInfoArea(
 
 [in] *pDC*<br/>
 [in] *pBar*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1999,7 +1999,7 @@ virtual void OnDrawCaptionButton (
 *bMaximized*<br/>
 [in] Ein boolescher Parameter, der angibt, ob der übergeordnete Bereich maximiert ist.
 
-*bDeaktiviert*<br/>
+*bDisabled*<br/>
 [in] Ein boolescher Parameter, der angibt, ob die Schaltfläche "Titel" deaktiviert ist.
 
 *nImageID*<br/>
@@ -2025,7 +2025,7 @@ virtual void OnDrawCheckBox(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *bHighlighted*<br/>
 [in] *bChecked*<br/>
 [in] *bAktiviert*<br/>
@@ -2047,7 +2047,7 @@ virtual void OnDrawCheckBoxEx(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *nState*<br/>
 [in] *bHighlighted*<br/>
 [in] *bPressed*<br/>
@@ -2074,10 +2074,10 @@ virtual void OnDrawComboBorder(
 *pDC*<br/>
 [in] Ein Zeiger auf den Gerätekontext, der eine Kombinationsfelds-Schaltfläche.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen der kombinationsfeldschaltfläche angibt.
 
-*bDeaktiviert*<br/>
+*bDisabled*<br/>
 [in] Ein boolescher Parameter, der angibt, ob der kombinationsfeldschaltfläche nicht verfügbar ist.
 
 *bIsDropped*<br/>
@@ -2112,10 +2112,10 @@ virtual void OnDrawComboDropButton(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen der Dropdown-Schaltfläche angibt.
 
-*bDeaktiviert*<br/>
+*bDisabled*<br/>
 [in] Ein boolescher Parameter, der angibt, ob die Dropdown-Schaltfläche nicht verfügbar ist.
 
 *bIsDropped*<br/>
@@ -2195,10 +2195,10 @@ virtual void OnDrawEditBorder(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Begrenzungen des gibt an, die `CMFCToolBarEditBoxButton` Objekt.
 
-*bDeaktiviert*<br/>
+*bDisabled*<br/>
 [in] Ein boolescher Parameter, der angibt, ob die Schaltfläche nicht verfügbar ist.
 
 *bIsHighlighted*<br/>
@@ -2224,9 +2224,9 @@ virtual void OnDrawExpandingBox(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *bIsOpened*<br/>
-[in] *ColorBox*<br/>
+[in] *colorBox*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2285,7 +2285,7 @@ virtual void OnDrawHeaderCtrlBorder(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen des Headersteuerelements angibt.
 
 *bIsPressed*<br/>
@@ -2318,7 +2318,7 @@ virtual void OnDrawHeaderCtrlSortArrow(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen des Pfeils Sortierung angibt.
 
 *bIsUp*<br/>
@@ -2364,7 +2364,7 @@ virtual void OnDrawMenuBorder(
 *pMenu*<br/>
 [in] Ein Zeiger auf eine `CMFCPopupMenu` Objekt. Das Framework zeichnet einen Rahmen um das Popup-Menü.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen des Popupmenüs angibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -2386,7 +2386,7 @@ virtual void OnDrawMenuCheck(
 
 [in] *pDC*<br/>
 [in] *pButton*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *bHighlight*<br/>
 [in] *bIsRadio*<br/>
 
@@ -2407,7 +2407,7 @@ virtual void OnDrawMenuItemButton(
 
 [in] *pDC*<br/>
 [in] *pButton*<br/>
-[in] *RectButton*<br/>
+[in] *rectButton*<br/>
 [in] *bHighlight*<br/>
 [in] *bDeaktiviert*<br/>
 
@@ -2424,7 +2424,7 @@ virtual COLORREF OnDrawMenuLabel(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2442,7 +2442,7 @@ virtual void OnDrawMenuResizeBar(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *nResizeFlags*<br/>
 
 ### <a name="remarks"></a>Hinweise
@@ -2466,7 +2466,7 @@ virtual void OnDrawMenuScrollButton(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen der Bildlaufschaltfläche angibt.
 
 *bIsScrollDown*<br/>
@@ -2532,7 +2532,7 @@ virtual void OnDrawMenuSystemButton(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Begrenzungen der Schaltfläche angibt.
 
 *uiSystemCommand*<br/>
@@ -2564,8 +2564,8 @@ virtual void OnDrawMiniFrameBorder(
 
 [in] *pDC*<br/>
 [in] *pFrameWnd*<br/>
-[in] *RectBorder*<br/>
-[in] *RectBorderSize*<br/>
+[in] *rectBorder*<br/>
+[in] *rectBorderSize*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2640,7 +2640,7 @@ virtual void OnDrawPaneBorder(
 *pBar*<br/>
 [in] Ein Zeiger auf einen Bereich. Visuelle Manager zeichnet den Rahmen dieses Bereichs.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen des Bereichs angibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -2699,7 +2699,7 @@ virtual void OnDrawPaneDivider(
 
 [in] *pDC*<br/>
 [in] *pSlider*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *bAutoHideMode*<br/>
 
 ### <a name="remarks"></a>Hinweise
@@ -2715,7 +2715,7 @@ virtual void OnDrawPopupWindowBorder(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2748,7 +2748,7 @@ virtual COLORREF OnDrawPopupWindowCaption(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *RectCaption*<br/>
+[in] *rectCaption*<br/>
 [in] *pPopupWnd*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2849,7 +2849,7 @@ virtual void OnDrawRibbonCaption(
 *pBar*<br/>
 [in] Ein Zeiger auf eine menübandleiste. Visuelle Manager zeichnet dies menübandleiste.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen der menübandleiste angibt.
 
 *rectText*<br/>
@@ -2995,7 +2995,7 @@ virtual void OnDrawRibbonCheckBoxOnList(
 
 [in] *pDC*<br/>
 [in] *pCheckBox*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *bIsSelected*<br/>
 [in] *bHighlighted*<br/>
 
@@ -3022,8 +3022,8 @@ virtual void OnDrawRibbonColorPaletteBox(
 [in] *pDC*<br/>
 [in] *pColorButton*<br/>
 [in] *pIcon*<br/>
-[in] *Farbe*<br/>
-[in] *Rect*<br/>
+[in] *color*<br/>
+[in] *rect*<br/>
 [in] *bDrawTopEdge*<br/>
 [in] *bDrawBottomEdge*<br/>
 [in] *bIsHighlighted*<br/>
@@ -3086,7 +3086,7 @@ virtual void OnDrawRibbonDefaultPaneButtonIndicator(
 
 [in] *pDC*<br/>
 [in] *pButton*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *bIsSelected*<br/>
 [in] *bHighlighted*<br/>
 
@@ -3105,7 +3105,7 @@ virtual void OnDrawRibbonGalleryBorder(
 
 [in] *pDC*<br/>
 [in] *pButton*<br/>
-[in] *RectBorder*<br/>
+[in] *rectBorder*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -3138,7 +3138,7 @@ virtual void OnDrawRibbonKeyTip(
 
 [in] *pDC*<br/>
 [in] *pElement*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *str*<br/>
 
 ### <a name="remarks"></a>Hinweise
@@ -3162,7 +3162,7 @@ virtual void OnDrawRibbonLabel(
 *pLabel*<br/>
 [in] Ein Zeiger auf eine [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) Objekt. Das Framework zeichnet diese Menüband-Bezeichnung.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Begrenzungen des Menübandbereich angibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -3210,7 +3210,7 @@ virtual void OnDrawRibbonMainPanelFrame(
 *pPanel*<br/>
 [in] Ein Zeiger auf die `CMFCRibbonMainPanel`.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Begrenzungen des gibt an, die `CMFCRibbonMainPanel`.
 
 ### <a name="remarks"></a>Hinweise
@@ -3230,7 +3230,7 @@ virtual void OnDrawRibbonMenuCheckFrame(
 
 [in] *pDC*<br/>
 [in] *pButton*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -3347,7 +3347,7 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
 *pSeparator*<br/>
 [in] Ein Zeiger auf eine [CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md) Objekt. Das Framework zeichnet dieses Menüband-Trennzeichen.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Abmessungen der Trennung angibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -3373,7 +3373,7 @@ virtual void OnDrawRibbonRecentFilesFrame(
 *pPanel*<br/>
 [in] Ein Zeiger auf die **Main** auf dem Menüband.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen des Rahmens für die Liste der zuletzt verwendeten Dateien angibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -3399,7 +3399,7 @@ virtual void OnDrawRibbonSliderChannel(
 *pSlider*<br/>
 [in] Ein Zeiger auf ein CMFCRibbonSlider-Objekt. Das Framework zeichnet den Kanal für dieses Schiebereglers Menüband.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen für den Kanal des Schiebereglers Menüband angibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -3428,7 +3428,7 @@ virtual void OnDrawRibbonSliderThumb(
 *pSlider*<br/>
 [in] Ein Zeiger auf eine `CMFCRibbonSlider`. Das Framework zeichnet das Thumb-Steuerelement für dieses Schiebereglers Menüband.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen des Ziehpunkts für den Schieberegler für die Multifunktionsleiste angibt.
 
 *bIsHighlighted*<br/>
@@ -3467,7 +3467,7 @@ virtual void OnDrawRibbonSliderZoomButton(
 *pSlider*<br/>
 [in] Ein Zeiger auf eine `CMFCRibbonSlider` Objekt. Das Framework zeichnet dieses Menüband.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Begrenzungen des den Zoomschaltflächen gibt an, auf dem Menüband-Schieberegler.
 
 *bIsZoomOut*<br/>
@@ -3560,7 +3560,7 @@ virtual void OnDrawScrollButtons(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *nBorderSize*<br/>
 [in] *iImage*<br/>
 [in] *bHilited*<br/>
@@ -3587,7 +3587,7 @@ virtual void OnDrawSeparator(
 *pBar*<br/>
 [in] Ein Zeiger auf einen Bereich, der das Trennzeichen enthält.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Abmessungen der Trennung angibt.
 
 *bIsHoriz*<br/>
@@ -3609,7 +3609,7 @@ virtual void OnDrawShowAllMenuItems(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *Zustand*<br/>
 
 ### <a name="remarks"></a>Hinweise
@@ -3679,7 +3679,7 @@ virtual void OnDrawSplitterBorder(
 *pSplitterWnd*<br/>
 [in] Ein Zeiger auf ein Teilungsfenster. Das Framework zeichnet den Rahmen für dieses Fenster.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen des Splitterfensters angibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -3705,7 +3705,7 @@ virtual void OnDrawSplitterBox(
 *pSplitterWnd*<br/>
 [in] Ein Zeiger auf ein Teilungsfenster. Das Framework zeichnet das Kontrollkästchen für diese Teilungsfenster.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen des Splitterfensters angibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -3877,7 +3877,7 @@ virtual void OnDrawTabCloseButton(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Begrenzungen des gibt an, die **schließen** Schaltfläche.
 
 *pTabWnd*<br/>
@@ -3952,7 +3952,7 @@ virtual void OnDrawTabsButtonBorder(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen der Schaltfläche Registerkarte angibt.
 
 *pButton*<br/>
@@ -4021,10 +4021,10 @@ virtual void OnDrawTasksGroupAreaBorder(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen des Gruppenbereichs gibt an, der im Aufgabenbereich.
 
-*bBesondere*<br/>
+*bSpecial*<br/>
 [in] Ein boolescher Parameter, der angibt, ob der Rahmen hervorgehoben ist. Der Wert "true" gibt an, dass der Rahmen hervorgehoben ist.
 
 *bNoTitle*<br/>
@@ -4109,7 +4109,7 @@ virtual void OnDrawTearOffCaption(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen der Beschriftung angibt.
 
 *bIsActive*<br/>
@@ -4132,7 +4132,7 @@ virtual void OnDrawToolBoxFrame(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -4195,7 +4195,7 @@ virtual void OnEraseTabsArea(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen des Registerkartenbereichs angibt.
 
 *pTabWnd*<br/>
@@ -4224,7 +4224,7 @@ virtual void OnEraseTabsButton(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen der Schaltfläche Registerkarte angibt.
 
 *pButton*<br/>
@@ -4255,7 +4255,7 @@ virtual BOOL OnEraseTabsFrame(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen des Fensters Registerkarte angibt.
 
 *pTabWnd*<br/>
@@ -4285,7 +4285,7 @@ virtual void OnFillAutoHideButtonBackground(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen der automatisch ausblendbaren Schaltfläche angibt.
 
 *pButton*<br/>
@@ -4355,7 +4355,7 @@ virtual void OnFillButtonInterior(
 *pButton*<br/>
 [in] Ein Zeiger auf eine [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md). Das Framework füllt den Hintergrund für diese Schaltfläche.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Begrenzungen des der Symbolleisten-Schaltfläche angibt.
 
 *state*<br/>
@@ -4385,7 +4385,7 @@ virtual COLORREF OnFillCaptionBarButton(
 
 [in] *pDC*<br/>
 [in] *pBar*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 [in] *bIsPressed*<br/>
 [in] *bIsHighlighted*<br/>
 [in] *bIsDisabled*<br/>
@@ -4412,7 +4412,7 @@ virtual COLORREF OnFillCommandsListBackground(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Begrenzungen der Schaltfläche angibt.
 
 *bIsSelected*<br/>
@@ -4445,7 +4445,7 @@ virtual void OnFillHeaderCtrlBackground(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen des Headersteuerelements angibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -4530,7 +4530,7 @@ virtual void OnFillOutlookPageButton(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Begrenzungen des Outlook-Seite-Schaltfläche angibt.
 
 *bIsHighlighted*<br/>
@@ -4561,7 +4561,7 @@ virtual void OnFillPopupWindowBackground(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Begrenzungen des Popup-Fenster angibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -4619,7 +4619,7 @@ virtual void OnFillRibbonEdit(
 *pEdit*<br/>
 [in] Ein Zeiger auf eine `CMFCRibbonRichEditCtrl` Objekt. Das Framework füllt das Innere dieses Bearbeitungssteuerelement.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Begrenzungen des Bearbeitungssteuerelements angibt.
 
 *bIsHighlighted*<br/>
@@ -4691,7 +4691,7 @@ virtual void OnFillRibbonMenuFrame(
 *pPanel*<br/>
 [in] Ein Zeiger auf eine Instanz von der [CMFCRibbonMainPanel-Klasse](../../mfc/reference/cmfcribbonmainpanel-class.md). Das Framework füllt die Menü-Frame für diesen Menübandbereich.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Begrenzungen des Menü-Frame angibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -4711,7 +4711,7 @@ virtual void OnFillRibbonQuickAccessToolBarPopup(
 
 [in] *pDC*<br/>
 [in] *pMenuBar*<br/>
-[in] *Rect*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -4734,7 +4734,7 @@ virtual void OnFillSplitterBackground(
 *pSplitterWnd*<br/>
 [in] Ein Zeiger auf eine Instanz von der [CSplitterWndEx Klasse](csplitterwndex-class.md). Das Framework füllt den Hintergrund für diese Teilungsfenster.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen des Splitterfensters angibt.
 
 ### <a name="remarks"></a>Hinweise
@@ -4795,10 +4795,10 @@ virtual void OnFillTasksGroupInterior(
 *pDC*<br/>
 [in] Ein Zeiger auf einen Gerätekontext.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen der Aufgabengruppe angibt.
 
-*bBesondere*<br/>
+*bSpecial*<br/>
 [in] Ein boolescher Wert, der angibt, ob das innere durch eine besondere Farbe gefüllt wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -4847,7 +4847,7 @@ virtual void OnHighlightMenuItem(
 *pButton*<br/>
 [in] Ein Zeiger auf eine [CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) Objekt angezeigt. Die Standardimplementierung wird dieser Parameter nicht verwendet werden.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das die Grenzen des Menüelements angibt.
 
 *clrText*<br/>
@@ -4891,7 +4891,7 @@ virtual BOOL OnNcActivate(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *aufnehmen*<br/>
+[in] *pWnd*<br/>
 [in] *bActive*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
@@ -4911,7 +4911,7 @@ virtual BOOL OnNcPaint(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Ein Zeiger auf das Fenster, deren nicht-Clientbereich, das Framework zeichnet.
 
 *lstSysButtons*<br/>
@@ -4940,7 +4940,7 @@ virtual BOOL OnSetWindowRegion(
 
 ### <a name="parameters"></a>Parameter
 
-*Aufnehmen*<br/>
+*pWnd*<br/>
 [in] Ein Zeiger auf das Fenster mit der Region, die sich geändert.
 
 *sizeWindow*<br/>
@@ -4982,7 +4982,7 @@ virtual COLORREF RibbonCategoryColorToRGB(AFX_RibbonCategoryColor color);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Farbe*<br/>
+[in] *color*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -5098,4 +5098,3 @@ Standardmäßig ist dieses Feature deaktiviert.
 [Klassen](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCVisualManager::GetInstance](#getinstance)<br/>
 [Visualisierungs-Manager](../../mfc/visualization-manager.md)
-

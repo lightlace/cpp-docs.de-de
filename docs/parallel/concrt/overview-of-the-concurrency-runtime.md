@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-ms.openlocfilehash: ffaf560361da2fd54febb5e38af121ad5149f012
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 810d77abd37ff2c6f29e980b84645d16526744d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176665"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305236"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Übersicht über die Concurrency Runtime
 
@@ -42,7 +42,7 @@ In Visual Studio 2010 bis 2013 wurde der Concurrency Runtime in msvcr100.dll üb
 
 - concrt140.dll – Concurrency Runtime, Versand über Visual Studio. Erforderlich für parallele Container und Algorithmen wie z. B. `concurrency::parallel_for`. Darüber hinaus muss die STL diese DLL-Datei unter Windows XP Power-Synchronisierungsprimitive, da Windows XP keine Bedingungsvariablen.
 
-In Visual Studio 2015 und höher ist der Concurrency Runtime-Aufgabenplaner nicht mehr der Planer für die Aufgabenklasse und verwandte Typen in „ppltasks.h“. Diese Typen verwenden jetzt den Windows-Threadpool für eine bessere Leistung und Interoperabilität mit Windows-Synchronisierungsprimitiven.
+In Visual Studio 2015 und höher ist der Concurrency Runtime-Taskplaner nicht mehr der Planer für die Aufgabenklasse und verwandte Typen in „ppltasks.h“. Diese Typen verwenden jetzt den Windows-Threadpool für eine bessere Leistung und Interoperabilität mit Windows-Synchronisierungsprimitiven.
 
 ##  <a name="runtime"></a> Warum eine Laufzeit für die Parallelität wichtig ist
 
@@ -56,7 +56,7 @@ Die Concurrency Runtime stellt außerdem Synchronisierungsprimitiven zur Verfüg
 
 ##  <a name="architecture"></a> Architektur
 
-Die Concurrency Runtime ist in vier Komponenten unterteilt: die Parallel Patterns Library (PPL), die Asynchronous Agents Library, der Aufgabenplaner und der Ressourcen-Manager. Diese Komponenten befinden sich zwischen dem Betriebssystem und den Anwendungen. Die folgende Abbildung zeigt, wie die Concurrency Runtime-Komponenten zwischen dem Betriebssystem und den Anwendungen interagieren:
+Die Concurrency Runtime ist in vier Komponenten unterteilt: die Parallel Patterns Library (PPL), die Asynchronous Agents Library, der Taskplaner und der Ressourcen-Manager. Diese Komponenten befinden sich zwischen dem Betriebssystem und den Anwendungen. Die folgende Abbildung zeigt, wie die Concurrency Runtime-Komponenten zwischen dem Betriebssystem und den Anwendungen interagieren:
 
 **Architektur von Concurrency Runtime**
 
@@ -87,7 +87,7 @@ Verwenden Sie die Agents Library, wenn Sie über mehrere Entitäten verfügen, d
 
 Weitere Informationen zur Agents Library finden Sie unter [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md).
 
-### <a name="task-scheduler"></a>Aufgabenplaner
+### <a name="task-scheduler"></a>Taskplaner
 
 Der Taskplaner plant und koordiniert die Aufgaben zur Laufzeit. Der Taskplaner ist kooperativ und verwendet einen Arbeitsübernahme-Algorithmus, um die maximale Auslastung der Verarbeitungsressourcen zu erreichen.
 
@@ -99,7 +99,7 @@ Weitere Informationen zum Aufgabenplaner finden Sie unter [Taskplaner](../../par
 
 Die Aufgabe des Ressourcen-Managers besteht darin, die Computerressourcen, wie beispielsweise Prozessoren und Arbeitsspeicher, zu verwalten. Der Ressourcen-Manager reagiert auf Arbeitslasten, die sich zur Laufzeit ändern, indem die Ressourcen dorthin zugewiesen werden, wo sie am effektivsten sind.
 
-Der Ressourcen-Manager stellt eine Abstraktionsebene für die Computerressourcen dar und interagiert in erster Linie mit dem Taskplaner. Obwohl Sie den Ressourcen-Manager zur Optimierung der Leistung Ihrer Bibliotheken und Anwendungen verwenden können, verwenden Sie in der Regel die Funktionalität, die von der Parallel Patterns Library, der Agents Library und dem Aufgabenplaner bereitgestellt wird. Diese Bibliotheken verwenden den Ressourcen-Manager, um die Ressourcen dynamisch neu zu verteilen, wenn sich die Arbeitslasten ändern.
+Der Ressourcen-Manager stellt eine Abstraktionsebene für die Computerressourcen dar und interagiert in erster Linie mit dem Aufgabenplaner. Obwohl Sie den Ressourcen-Manager zur Optimierung der Leistung Ihrer Bibliotheken und Anwendungen verwenden können, verwenden Sie in der Regel die Funktionalität, die von der Parallel Patterns Library, der Agents Library und dem Aufgabenplaner bereitgestellt wird. Diese Bibliotheken verwenden den Ressourcen-Manager, um die Ressourcen dynamisch neu zu verteilen, wenn sich die Arbeitslasten ändern.
 
 [[Nach oben](#top)]
 
@@ -107,7 +107,7 @@ Der Ressourcen-Manager stellt eine Abstraktionsebene für die Computerressourcen
 
 Viele der Typen und Algorithmen, die von der Concurrency Runtime definiert werden, werden als C++-Vorlagen implementiert. Einige dieser Typen und Algorithmen nehmen als Parameter eine Routine an, die die Arbeit ausführt. Dieser Parameter kann eine Lambda-Funktion, ein Funktionsobjekt oder ein Funktionszeiger sein. Diese Entitäten sind so genannte *Arbeitsfunktionen* oder *Arbeitsroutinen*.
 
-Die Lambdaausdrücke sind eine wichtige neue Sprachfunktion in Visual C++, da sie eine kompakte Art und Weise zum Definieren von Arbeitsfunktionen für die Parallelverarbeitung bieten. Funktionsobjekte und Funktionszeiger ermöglichen Ihnen die Verwendung der Concurrency Runtime mit dem vorhandenen Code. Microsoft empfiehlt jedoch, Lambdaausdrücke beim Schreiben von neuem Code zu verwenden, da diese bezüglich der Sicherheit und Produktivität viele Vorteile bieten.
+Die Lambda-Ausdrücke sind eine wichtige neue Sprachfunktion in Visual C++, da sie eine kompakte Art und Weise zum Definieren von Arbeitsfunktionen für die Parallelverarbeitung bieten. Funktionsobjekte und Funktionszeiger ermöglichen Ihnen die Verwendung der Concurrency Runtime mit dem vorhandenen Code. Microsoft empfiehlt jedoch, Lambdaausdrücke beim Schreiben von neuem Code zu verwenden, da diese bezüglich der Sicherheit und Produktivität viele Vorteile bieten.
 
 Im folgenden Beispiel wird die Syntax von Lambda-Funktionen, Funktionsobjekten und Funktionszeigern in mehreren Aufrufen an die [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) Algorithmus. Jeder Aufruf von `parallel_for_each` verwendet ein anderes Verfahren zum Berechnen der Quadratwurzel jedes Element in einem [Std:: Array](../../standard-library/array-class-stl.md) Objekt.
 
@@ -135,7 +135,7 @@ Die folgende Tabelle zeigt die Headerdateien, die jeder einzelnen Komponente der
 |---------------|------------------|
 |Parallel Patterns Library (PPL)|ppl.h<br /><br /> concurrent_queue.h<br /><br /> concurrent_vector.h|
 |Asynchronous Agents Library|agents.h|
-|Aufgabenplaner|concrt.h|
+|Taskplaner|concrt.h|
 |Ressourcen-Manager|concrtrm.h|
 
 Die Concurrency Runtime wird deklariert, der [Parallelität](../../parallel/concrt/reference/concurrency-namespace.md) Namespace. (Sie können auch [Parallelität](../../parallel/concrt/reference/concurrency-namespace.md), d.h. ein Alias für diesen Namespace.) Der Namespace `concurrency::details` unterstützt das Concurrency Runtime-Framework und ist nicht für die direkte Verwendung im Code vorgesehen.
@@ -143,4 +143,3 @@ Die Concurrency Runtime wird deklariert, der [Parallelität](../../parallel/conc
 Die Concurrency Runtime wird als Teil der C-Laufzeitbibliothek (CRT) bereitgestellt. Weitere Informationen zum Erstellen einer Anwendung, die die CRT nutzt, finden Sie unter [CRT-Bibliotheksfunktionen](../../c-runtime-library/crt-library-features.md).
 
 [[Nach oben](#top)]
-

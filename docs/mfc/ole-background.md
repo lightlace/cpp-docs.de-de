@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
-ms.openlocfilehash: 5006a648729e1fc561855fcb8cba1d658a9c82cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2501373c2ff5904343a6522e4fb18663f5de3843
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619049"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294420"
 ---
 # <a name="ole-background"></a>OLE-Hintergrund
 
@@ -26,7 +26,7 @@ OLE umfasst viele verschiedene Konzepte, dass alle für das Ziel der nahtlose In
 
 - Verlinken und einbetten
 
-   Verlinken und Einbetten sind die beiden Methoden zum Speichern von Elementen, die in ein OLE-Dokument erstellt, die in einer anderen Anwendung erstellt wurden. Allgemeine Informationen zu den Unterschieden zwischen den beiden finden Sie im Artikel [OLE-Hintergrund: verlinken und einbetten](../mfc/ole-background-linking-and-embedding.md). Weitere Informationen finden Sie unter den Artikeln [Container](../mfc/containers.md) und [Server](../mfc/servers.md).
+   Verlinken und Einbetten sind die beiden Methoden zum Speichern von Elementen, die in ein OLE-Dokument erstellt, die in einer anderen Anwendung erstellt wurden. Allgemeine Informationen zu den Unterschieden zwischen den beiden finden Sie im Artikel [OLE-Hintergrund: Verlinken und einbetten](../mfc/ole-background-linking-and-embedding.md). Weitere Informationen finden Sie unter den Artikeln [Container](../mfc/containers.md) und [Server](../mfc/servers.md).
 
 - Direkte Aktivierung (visuelle Bearbeitung)
 
@@ -58,7 +58,7 @@ OLE umfasst viele verschiedene Konzepte, dass alle für das Ziel der nahtlose In
 
 Einige der wichtigeren OLE Themen werden in den folgenden Artikeln behandelt:
 
-- [OLE-Hintergrund: Verlinken und Einbetten](../mfc/ole-background-linking-and-embedding.md)
+- [OLE-Hintergrund: Verlinken und einbetten](../mfc/ole-background-linking-and-embedding.md)
 
 - [OLE-Hintergrund: Container und Server](../mfc/ole-background-containers-and-servers.md)
 
@@ -71,4 +71,3 @@ Allgemeine OLE-Informationen, die in der oben genannten Artikel nicht gefunden s
 ## <a name="see-also"></a>Siehe auch
 
 [OLE](../mfc/ole-in-mfc.md)
-

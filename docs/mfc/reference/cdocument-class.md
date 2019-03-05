@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-ms.openlocfilehash: e84ceb11ad789ef3bd6933292030ef2af6f1d817
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7358c2206c15660b9ffb283802283ee71e57f03
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609312"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299074"
 ---
 # <a name="cdocument-class"></a>CDocument-Klasse
 
@@ -149,7 +149,7 @@ class CDocument : public CCmdTarget
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CDocument:: AddView](#addview)|Fügt eine Ansicht an das Dokument an.|
+|[CDocument::AddView](#addview)|Fügt eine Ansicht an das Dokument an.|
 |[CDocument::BeginReadChunks](#beginreadchunks)|Initialisiert chunk lesen.|
 |[CDocument::CanCloseFrame](#cancloseframe)|Erweiterte überschreibbare; wird aufgerufen, vor dem Schließen eines Rahmenfensters dieses Dokument anzeigen.|
 |[CDocument::ClearChunkList](#clearchunklist)|Löscht die Blockliste an.|
@@ -176,7 +176,7 @@ class CDocument : public CCmdTarget
 |[CDocument::OnDrawThumbnail](#ondrawthumbnail)|Überschreiben Sie diese Methode in einer abgeleiteten Klasse zum Zeichnen der Inhalte der Miniaturansicht an.|
 |[CDocument::OnLoadDocumentFromStream](#onloaddocumentfromstream)|Vom Framework aufgerufen, wenn die Dokumentdaten aus Stream geladen werden muss.|
 |[CDocument::OnNewDocument](#onnewdocument)|Wird aufgerufen, um ein neues Dokument erstellen.|
-|[Funktionen](#onopendocument)|Wird aufgerufen, um ein vorhandenes Dokument zu öffnen.|
+|[CDocument::OnOpenDocument](#onopendocument)|Wird aufgerufen, um ein vorhandenes Dokument zu öffnen.|
 |[CDocument::OnPreviewHandlerQueryFocus](#onpreviewhandlerqueryfocus)|Weist den Vorschauhandler zur Rückgabe des HWND über die GetFocus-Funktion aufrufen.|
 |[CDocument::OnPreviewHandlerTranslateAccelerator](#onpreviewhandlertranslateaccelerator)|Weist den Vorschauhandler verarbeitet eine Tastatureingabe nach oben übergeben wird, aus dem Nachrichtensystem des Prozesses in der der Vorschauhandler ausgeführt wird.|
 |[CDocument::OnRichPreviewBackColorChanged](#onrichpreviewbackcolorchanged)|Aufgerufen, wenn die Hintergrundfarbe für die umfassende Vorschau geändert wurde.|
@@ -191,19 +191,19 @@ class CDocument : public CCmdTarget
 |[CDocument::RemoveChunk](#removechunk)|Entfernt ein Segment mit der angegebenen GUID.|
 |[CDocument::RemoveView](#removeview)|Trennt eine Ansicht aus dem Dokument.|
 |[CDocument::ReportSaveLoadException](#reportsaveloadexception)|Erweiterte überschreibbare; wird aufgerufen, wenn eine offene oder Speichervorgang kann nicht aufgrund einer Ausnahme abgeschlossen werden.|
-|[SaveModified](#savemodified)|Erweiterte überschreibbare; wird aufgerufen, um die Benutzer zu Fragen, ob das Dokument gespeichert werden soll.|
+|[CDocument::SaveModified](#savemodified)|Erweiterte überschreibbare; wird aufgerufen, um die Benutzer zu Fragen, ob das Dokument gespeichert werden soll.|
 |[CDocument::SetChunkValue](#setchunkvalue)|Legt einen Block-Wert.|
 |[CDocument::SetModifiedFlag](#setmodifiedflag)|Legt ein Flag, das angibt, dass Sie das Dokument geändert haben, seit es zuletzt gespeichert wurde.|
 |[CDocument::SetPathName](#setpathname)|Legt den Pfad der Datendatei ein, die das Dokument fest.|
 |[CDocument::SetTitle](#settitle)|Legt den Titel des Dokuments fest.|
-|[UpdateAllViews](#updateallviews)|Benachrichtigt alle Ansichten das Dokument geändert wurde.|
+|[CDocument::UpdateAllViews](#updateallviews)|Benachrichtigt alle Ansichten das Dokument geändert wurde.|
 
 ### <a name="protected-methods"></a>Geschützte Methoden
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CDocument:: OnFileSendMail](#onfilesendmail)|Sendet eine e-Mail-Nachricht mit dem Dokument angefügt.|
-|[CDocument:: OnUpdateFileSendMail](#onupdatefilesendmail)|Können den Befehl Mail senden, wenn e-Mail-Unterstützung vorhanden ist.|
+|[CDocument::OnFileSendMail](#onfilesendmail)|Sendet eine e-Mail-Nachricht mit dem Dokument angefügt.|
+|[CDocument::OnUpdateFileSendMail](#onupdatefilesendmail)|Können den Befehl Mail senden, wenn e-Mail-Unterstützung vorhanden ist.|
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
 
@@ -372,7 +372,7 @@ virtual POSITION FindChunk(
 
 ### <a name="parameters"></a>Parameter
 
-*GUID*<br/>
+*guid*<br/>
 Gibt die GUID eines Blocks gefunden.
 
 *pid*<br/>
@@ -466,7 +466,7 @@ virtual CView* GetNextView(POSITION& rPosition) const;
 
 ### <a name="parameters"></a>Parameter
 
-*rposition zurück*<br/>
+*rPosition*<br/>
 Ein Verweis auf einen Positionswert zurückgegeben wird, durch einen vorherigen Aufruf der `GetNextView` oder [Sie GetFirstViewPosition](#getfirstviewposition) Memberfunktionen. Dieser Wert darf nicht NULL sein.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -506,7 +506,7 @@ virtual BOOL GetThumbnail(
 
 ### <a name="parameters"></a>Parameter
 
-*CX*<br/>
+*cx*<br/>
 Gibt die Breite und Höhe der Bitmap.
 
 *phbmp*<br/>
@@ -985,7 +985,7 @@ void OnUpdateFileSendMail(CCmdUI* pCmdUI);
 
 ### <a name="parameters"></a>Parameter
 
-*nämlich pCmdUI*<br/>
+*pCmdUI*<br/>
 Ein Zeiger auf die [CCmdUI](../../mfc/reference/ccmdui-class.md) Objekt, mit dem Befehl ID_FILE_SEND_MAIL verknüpft ist.
 
 ### <a name="remarks"></a>Hinweise
@@ -1044,7 +1044,7 @@ virtual void ReleaseFile(
 
 ### <a name="parameters"></a>Parameter
 
-*pFile-Datei*<br/>
+*pFile*<br/>
 Ein Zeiger auf das CFile-Objekt, das freigegeben werden.
 
 *bAbort*<br/>
@@ -1073,7 +1073,7 @@ virtual void RemoveChunk(
 *Guid*<br/>
 Gibt die GUID eines Blocks entfernt werden soll.
 
-*PID*<br/>
+*Pid*<br/>
 Gibt an, die PID eines Blocks entfernt werden soll.
 
 ### <a name="remarks"></a>Hinweise

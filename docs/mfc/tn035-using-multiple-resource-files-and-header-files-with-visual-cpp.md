@@ -7,12 +7,12 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 6f89e10c2a05d1352dc2347af0aa0215079ea56c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d97e4536c2a43e7e224e9056aa39df5480daeca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567660"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279916"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Verwenden mehrerer Ressourcendateien und Headerdateien mit Visual C++
 
@@ -107,11 +107,12 @@ Wenn Sie benutzerdefinierte formatierte Ressourcen verwenden, können Sie sie zu
 
 AFXRES.RC und AFXPRINT.RC enthalten die Standardressourcen, die von bestimmten Funktionen des Frameworks benötigt werden. Wie RES\MYAPP.RC2 werden diese zwei vom Framework bereitgestellten Ressourcendateien mit #include am Ende von MYAPP.RC eingebunden. Zudem werden sie in den Kompilierzeitdirektiven des Dialogfelds „Gruppe enthält“ angegeben. So werden diese Frameworkressourcen beim Bearbeiten von MYAPP.RC in Visual C++ nicht direkt angezeigt oder bearbeitet, sie werden jedoch in die binäre RES-Datei der Anwendung und die finale EXE-Datei kompiliert. Weitere Informationen für die standard Frameworkressourcen, einschließlich der Verfahren zum Ändern, finden Sie unter [technischer Hinweis 23](../mfc/tn023-standard-mfc-resources.md).
 
-AFXRES.H definiert Standardsymbole, wie z. B. `ID_FILE_NEW`, die vom Framework und insbesondere in AFXRES.RC verwendet werden. AFXRES.H bindet mit #include auch die Datei WINRES.H ein, die eine Teilmenge von WINDOWS.H enthält. Diese wird von den von Visual C++ generierten RC-Dateien sowie AFXRES.RC benötigt. Die in AFXRES.H definierten Symbole stehen beim Bearbeiten der Anwendungsressourcendatei (MYAPP.RC) zur Verfügung. `ID_FILE_NEW` wird beispielsweise für das Menüelement "Neue Datei" in der Menüressource von MYAPP.RC verwendet. Sie können diese vom Framework definierten Symbole nicht ändern oder löschen.
+AFXRES.H definiert Standardsymbole, wie z. B. `ID_FILE_NEW`, die vom Framework und insbesondere in AFXRES.RC verwendet werden. AFXRES.H bindet mit #include auch die Datei WINRES.H ein, die eine Teilmenge von WINDOWS.H enthält. Diese wird von den von Visual C++ generierten RC-Dateien sowie AFXRES.RC benötigt. Die in AFXRES.H definierten Symbole stehen beim Bearbeiten der Anwendungsressourcendatei (MYAPP.RC) zur Verfügung. 
+  `ID_FILE_NEW` wird beispielsweise für das Menüelement "Neue Datei" in der Menüressource von MYAPP.RC verwendet. Sie können diese vom Framework definierten Symbole nicht ändern oder löschen.
 
 ## <a name="_mfcnotes_tn035_including"></a> Einschließen zusätzlicher Headerdateien
 
-Die von AppWizard erstellte Anwendung bindet nur zwei Headerdateien ein: RESOURCE.H und AFXRES.H. Nur RESOURCE.H ist eine anwendungsspezifische Datei. In folgenden Fällen müssen Sie möglicherweise zusätzliche schreibgeschützte Headerdateien einschließen:
+Die von AppWizard erstellte Anwendung enthält nur zwei Headerdateien: DIE RESSOURCE. H und AFXRES. H. Nur RESOURCE.H ist eine anwendungsspezifische Datei. In folgenden Fällen müssen Sie möglicherweise zusätzliche schreibgeschützte Headerdateien einschließen:
 
 Die Headerdatei wird von einer externen Quelle bereitgestellt, oder Sie möchten die Headerdatei für mehrere Projekte oder mehrere Bereiche desselben Projekts freigeben.
 
@@ -151,7 +152,7 @@ RESOURCE.H     SECOND.H
 
 **Freigeben einer Headerdatei für zwei. RC-Dateien**
 
-Sie können eine Headerdatei für zwei RC-Dateien freigeben, die sich in verschiedenen Projekten oder auch im selben Projekt befinden. Dazu wenden Sie einfach die oben beschriebene Technik für Direktiven für schreibgeschützte Symbole auf beide RC-Dateien an. Wenn die beiden RC-Dateien für unterschiedliche Anwendungen (unterschiedliche Projekte) gedacht sind, sieht das Ergebnis wie im folgenden Diagramm dargestellt aus:
+Sie können eine Headerdatei für zwei RC-Dateien freigeben, die sich in verschiedenen Projekten oder auch im selben Projekt befinden. Dazu wenden Sie einfach die oben beschriebene Technik für Anweisungen für schreibgeschützte Symbole auf beide RC-Dateien an. Wenn die beiden RC-Dateien für unterschiedliche Anwendungen (unterschiedliche Projekte) gedacht sind, sieht das Ergebnis wie im folgenden Diagramm dargestellt aus:
 
 ```
     RESOURCE.H AFXRES.H   RESOURCE.H
@@ -171,7 +172,7 @@ Visual C++ und der Ressourcencompiler unterstützen mehrere RC-Dateien im selben
 
 - Es ist einfacher, eine große Anzahl von Ressourcen für mehrere Projektteammitglieder zu verwalten, wenn Sie die Ressourcen in mehrere RC-Dateien aufteilen. Wenn Sie ein Quellcodeverwaltungs-Paket für das Auschecken von Dateien und das Einchecken von Änderungen verwenden, ermöglicht das Aufteilen der Ressourcen in mehrere RC-Dateien Ihnen eine genauere Steuerung der Verwaltung von Änderungen an den Ressourcen.
 
-- Wenn Sie Präprozessoranweisungen wie "#ifdef", "#endif" und "#define" für Teile der Ressourcen verwenden möchten, müssen Sie sie in schreibgeschützten Ressourcen isolieren, die vom Ressourcencompiler kompiliert werden.
+- Wenn Sie Präprozessordirektiven wie "#ifdef", "#endif" und "#define" für Teile der Ressourcen verwenden möchten, müssen Sie sie in schreibgeschützten Ressourcen isolieren, die vom Ressourcencompiler kompiliert werden.
 
 - RC-Komponentendateien werden in Visual C++ schneller geladen und gespeichert als eine zusammengesetzte RC-Datei.
 
@@ -294,20 +295,20 @@ Wie oben erläutert, können Sie mit dem "Gruppe enthält"-Befehl im Menü "Date
 
 - Symbolheaderdatei
 
-- Anweisungen für schreibgeschützte Symbole
+- Direktiven für schreibgeschützte Symbole
 
-- Kompilierzeitdirektiven
+- Kompilierzeitanweisungen
 
-Im Folgenden wird beschrieben, wie Visual C++ diese Informationen in einer RC-Datei verwaltet. Sie benötigen diese Informationen nicht für die Verwendung von Visual C++. Sie dienen jedoch einem besseren Verständnis, damit Sie im Umgang mit der Funktion "Gruppe enthält" sicherer werden.
+Im Folgenden wird beschrieben, wie Visual C++ diese Informationen in einer RC-Datei verwaltet. Sie benötigen diese Informationen nicht für die Verwendung von Visual C++. Sie dienen jedoch einem besseren Verständnis, damit Sie im Umgang mit der Funktion „Gruppe enthält“ sicherer werden.
 
-Alle drei oben erwähnten Typen von "Gruppe enthält"-Informationen werden in zwei Formen in der RC-Datei gespeichert: (1) als #include- oder andere Anweisungen, die vom Ressourcencompiler interpretiert werden können, und (2) als besondere TEXTINCLUDE-Ressourcen, die nur von Visual C++ interpretiert werden können.
+Jede der drei Arten der Gruppe enthält Informationen befindet sich in der. RC-Datei in zwei Formen: (1) als #include oder andere Anweisungen interpretierbaren vom Ressourcencompiler und (2) als besondere TEXTINCLUDE-Ressourcen interpretierbaren nur von Visual C++.
 
 Der Zweck der TEXTINCLUDE-Ressource ist, legen Sie Daten sicher in einem Formular zu speichern, leicht akzeptabel ist, in Visual C++ sind **Gruppe enthält** Dialogfeld. TEXTINCLUDE ist ein *Ressourcentyp* von Visual C++ definiert. Visual C++ erkennt drei spezifische TEXTINCLUDE-Ressourcen, die die Ressourcen-IDs 1, 2 und 3 aufweisen:
 
 |TEXTINCLUDE-Ressourcen-ID|Typ der "Gruppe enthält"-Informationen|
 |-----------------------------|--------------------------------------|
 |1|Symbolheaderdatei|
-|2|Anweisungen für schreibgeschützte Symbole|
+|2|Direktiven für schreibgeschützte Symbole|
 |3|Kompilierzeitanweisungen|
 
 Alle drei Typen von "Gruppe enthält"-Informationen werden in den von AppWizard erstellten MYAPP.RC- und RESOURCE.H-Standarddateien dargestellt, wie nachfolgend beschrieben. Die zusätzlichen Token \0 und "" zwischen den BEGIN- und END-Blöcken werden von der RC-Syntax benötigt, um mit 0 endende Zeichenfolgen bzw. das doppelte Anführungszeichen anzugeben.
@@ -329,7 +330,7 @@ BEGIN
 END
 ```
 
-## <a name="read-only-symbol-directives"></a>Anweisungen für schreibgeschützte Symbole
+## <a name="read-only-symbol-directives"></a>Direktiven für schreibgeschützte Symbole
 
 Anweisungen für schreibgeschützte Symbole werden oben in der MYAPP.RC in der folgenden vom Ressourcencompiler interpretierbaren Form eingefügt:
 
@@ -364,7 +365,7 @@ Kompilierzeitdirektiven werden am Ende der MYAPP.RC in der folgenden vom Ressour
 #endif  // not APSTUDIO_INVOKED
 ```
 
-Die #ifndef APSTUDIO_INVOKED-Direktive weist Visual C++ an, Kompilierzeitdirektiven zu überspringen.
+Die #ifndef APSTUDIO_INVOKED-Anweisung weist Visual C++ an, Kompilierzeitanweisungen zu überspringen.
 
 Die entsprechende TEXTINCLUDE-Ressource ist:
 
@@ -383,4 +384,3 @@ END
 
 [Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)<br/>
 [Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)
-

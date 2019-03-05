@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CMFCPreviewCtrlImpl [MFC], m_font
 - CMFCPreviewCtrlImpl [MFC], m_pDocument
 ms.assetid: 06257fa0-54c9-478d-9d68-c9698c3f93ed
-ms.openlocfilehash: 3ec1acd1872bc0e51117602ef723116170458afd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f66ed8478023bd42e185da4f21740d1de2536140
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636734"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295746"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>CMFCPreviewCtrlImpl-Klasse
 
@@ -59,7 +59,7 @@ class CMFCPreviewCtrlImpl : public CWnd;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl](#dtor)|Destructs ein Vorschau-Control-Objekt.|
+|[CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl](#dtor)|Destructs ein Vorschau-Control-Objekt.|
 |[CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl](#cmfcpreviewctrlimpl)|Erstellt ein Objekt der Preview-Steuerelement.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
@@ -136,7 +136,7 @@ virtual BOOL Create(
 *hWndParent*<br/>
 Ein Handle für das Hostfenster, die von der Shell for Rich Preview bereitgestellt.
 
-*Volksrepublik China*<br/>
+*prc*<br/>
 Gibt an, die ursprüngliche Größe und Position des Fensters.
 
 *pContext*<br/>
@@ -301,7 +301,7 @@ Hintergrundfarbe des Vorschaufensters.
 *clrText*<br/>
 Textfarbe des Vorschaufensters.
 
-*PLF*<br/>
+*plf*<br/>
 Schriftart für Text in einem Vorschaufenster angezeigt.
 
 ##  <a name="setrect"></a> CMFCPreviewCtrlImpl::SetRect
@@ -319,7 +319,7 @@ virtual void SetRect(
 
 ### <a name="parameters"></a>Parameter
 
-*Volksrepublik China*<br/>
+*prc*<br/>
 Gibt an, die neue Größe und Position des Steuerelements (Vorschau).
 
 *bRedraw*<br/>
@@ -329,7 +329,7 @@ Gibt an, ob das Steuerelement neu gezeichnet werden muss.
 
 In der Regel wird ein neues umschließendes Rechteck festgelegt, wenn es sich bei Steuerelement geändert wird.
 
-## <a name="dtor"></a> CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl
+## <a name="dtor"></a> CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl
 
 Destructs ein Vorschau-Control-Objekt.
 
@@ -338,4 +338,3 @@ Destructs ein Vorschau-Control-Objekt.
 ```
 virtual ~CMFCPreviewCtrlImpl();
 ```
-

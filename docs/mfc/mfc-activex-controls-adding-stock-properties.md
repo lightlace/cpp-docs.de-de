@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreground colors, ActiveX controls
 - foreground colors [MFC]
 ms.assetid: 8b98c8c5-5b69-4366-87bf-0e61e6668ecb
-ms.openlocfilehash: b27979b5492ed03b93aa0d8990c9c0b699242c86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 940f61c9ce6ccb57843333582455e61c1f7ac73b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607830"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289688"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>MFC-ActiveX-Steuerelemente: Hinzufügen von vordefinierten Eigenschaften
 
@@ -75,15 +75,15 @@ Die `COleControl` Klasse stellt neun Basiseigenschaften bereit. Sie können die 
 
 |Eigenschaft|Dispatch-Zuordnungseintrag|Gewusst wie: Zugriff auf Wert|
 |--------------|------------------------|-------------------------|
-|`Appearance`|DISP_STOCKPROP_APPEARANCE)|Wert als `m_sAppearance`.|
-|`BackColor`|DISP_STOCKPROP_BACKCOLOR)|Wert zugegriffen werden kann, durch den Aufruf `GetBackColor`.|
-|`BorderStyle`|DISP_STOCKPROP_BORDERSTYLE)|Wert als `m_sBorderStyle`.|
-|`Caption`|DISP_STOCKPROP_CAPTION)|Wert zugegriffen werden kann, durch den Aufruf `InternalGetText`.|
-|`Enabled`|DISP_STOCKPROP_ENABLED)|Wert als `m_bEnabled`.|
-|`Font`|DISP_STOCKPROP_FONT)|Finden Sie im Artikel [MFC-ActiveX-Steuerelemente: Verwenden von Schriftarten](../mfc/mfc-activex-controls-using-fonts.md) für die Nutzung.|
-|`ForeColor`|DISP_STOCKPROP_FORECOLOR)|Wert zugegriffen werden kann, durch den Aufruf `GetForeColor`.|
-|`hWnd`|DISP_STOCKPROP_HWND)|Wert als `m_hWnd`.|
-|`Text`|DISP_STOCKPROP_TEXT)|Wert zugegriffen werden kann, durch den Aufruf `InternalGetText`. Diese Eigenschaft entspricht dem `Caption`, mit Ausnahme der Eigenschaftenname.|
+|`Appearance`|DISP_STOCKPROP_APPEARANCE( )|Wert als `m_sAppearance`.|
+|`BackColor`|DISP_STOCKPROP_BACKCOLOR( )|Wert zugegriffen werden kann, durch den Aufruf `GetBackColor`.|
+|`BorderStyle`|DISP_STOCKPROP_BORDERSTYLE( )|Wert als `m_sBorderStyle`.|
+|`Caption`|DISP_STOCKPROP_CAPTION( )|Wert zugegriffen werden kann, durch den Aufruf `InternalGetText`.|
+|`Enabled`|DISP_STOCKPROP_ENABLED( )|Wert als `m_bEnabled`.|
+|`Font`|DISP_STOCKPROP_FONT( )|Finden Sie im Artikel [MFC-ActiveX-Steuerelemente: Verwenden von Schriftarten](../mfc/mfc-activex-controls-using-fonts.md) für die Nutzung.|
+|`ForeColor`|DISP_STOCKPROP_FORECOLOR( )|Wert zugegriffen werden kann, durch den Aufruf `GetForeColor`.|
+|`hWnd`|DISP_STOCKPROP_HWND( )|Wert als `m_hWnd`.|
+|`Text`|DISP_STOCKPROP_TEXT( )|Wert zugegriffen werden kann, durch den Aufruf `InternalGetText`. Diese Eigenschaft entspricht dem `Caption`, mit Ausnahme der Eigenschaftenname.|
 |`ReadyState`|DISP_STOCKPROP_READYSTATE()|Wert als `m_lReadyState` oder `GetReadyState`|
 
 ##  <a name="_core_stock_properties_and_notification"></a> Vordefinierte Eigenschaften und Benachrichtigung

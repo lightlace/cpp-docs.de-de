@@ -1,19 +1,19 @@
 ---
-title: 'Gewusst wie: Erhöhen der Effizienz mithilfe von parallelen Containern'
+title: 'Vorgehensweise: Erhöhen der Effizienz mithilfe von parallelen Containern'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - increasing efficiency with parallel containers [Concurrency Runtime]
 - concurrent_queue class, examples
 - concurrent_vector class, examples
 ms.assetid: bd00046d-e9b6-4ae1-b661-3995f671b867
-ms.openlocfilehash: a9c428ee54853fbd8106901434823e69b402eace
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2479915b167ee3dbc2ce43d9c2733efc74818bbe
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439181"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300634"
 ---
-# <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>Gewusst wie: Erhöhen der Effizienz mithilfe von parallelen Containern
+# <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>Vorgehensweise: Erhöhen der Effizienz mithilfe von parallelen Containern
 
 In diesem Thema wird aufgezeigt, wie parallele Container verwendet werden, um Daten effizient zu speichern und parallel auf sie zuzugreifen.
 
@@ -77,4 +77,4 @@ Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, o
 [concurrent_queue-Klasse](../../parallel/concrt/reference/concurrent-queue-class.md)<br/>
 [Parallel_invoke-Funktion](reference/concurrency-namespace-functions.md#parallel_invoke)<br/>
 [Parallel_for-Funktion](reference/concurrency-namespace-functions.md#parallel_for)<br/>
-[Task_group-Klasse](reference/task-group-class.md)
+[task_group-Klasse](reference/task-group-class.md)

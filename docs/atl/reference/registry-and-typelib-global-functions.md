@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-ms.openlocfilehash: 85af8504fffa980d495cef59729ff5fcb145e318
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f94dd1770ff194e47e2e38cc3a9b5cf0cbaebe58
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486585"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301830"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Registrierung und TypeLib globale Funktionen
 
@@ -100,7 +100,7 @@ LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTr
 *hKey*<br/>
 Ein Handle für einen geöffneten Registrierungsschlüssel.
 
-*"lpsubkey"*<br/>
+*lpSubKey*<br/>
 Der Name eines Schlüssels, die diese Funktion wird geöffnet oder erstellt werden soll.
 
 *phkResult*<br/>
@@ -132,7 +132,7 @@ LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager*
 *hKey*<br/>
 Ein Handle für einen geöffneten Registrierungsschlüssel.
 
-*"lpsubkey"*<br/>
+*lpSubKey*<br/>
 Der Name des Schlüssels, der gelöscht werden.
 
 *pTM*<br/>
@@ -214,7 +214,7 @@ LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTran
 *hKey*<br/>
 Ein Handle für einen geöffneten Registrierungsschlüssel.
 
-*"lpsubkey"*<br/>
+*lpSubKey*<br/>
 Der Name eines Schlüssels, die diese Funktion wird geöffnet oder erstellt werden soll.
 
 *phkResult*<br/>
@@ -246,7 +246,7 @@ LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM
 *hKey*<br/>
 Ein Handle für einen geöffneten Registrierungsschlüssel.
 
-*"lpsubkey"*<br/>
+*lpSubKey*<br/>
 Der Name eines Schlüssels, die diese Funktion wird geöffnet oder erstellt werden soll.
 
 *ulOptions*<br/>
@@ -300,7 +300,7 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] TRUE gibt an, dass die Registrierungsinformationen, um geleitet wird die **HKCU** Knoten FALSE gibt an, dass die Anwendung Informationen in der Registrierung auf den Standardknoten schreibt. Der Standardknoten ist **HKEY_CLASSES_ROOT** (**HKCR**).
 
 ### <a name="return-value"></a>Rückgabewert

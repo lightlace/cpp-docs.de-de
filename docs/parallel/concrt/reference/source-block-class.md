@@ -33,12 +33,12 @@ f1_keywords:
 helpviewer_keywords:
 - source_block class
 ms.assetid: fbdd4146-e8d0-42e8-b714-fe633f69ffbf
-ms.openlocfilehash: 609c7d78bdf2f16be4d82add454ef9546ea22588
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ddfd5e139171c7097a793f12ac82767b8773107
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468691"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277364"
 ---
 # <a name="sourceblock-class"></a>source_block-Klasse
 
@@ -80,7 +80,7 @@ Prozessortyp für die Nachrichtenverarbeitung.
 |----------|-----------------|
 |[accept](#accept)|Akzeptiert eine Meldung, die von diesem angeboten wurde `source_block` -Objekt, das Übertragen des Besitzes an den Aufrufer.|
 |[acquire_ref](#acquire_ref)|Eine Verweisanzahl dazu `source_block` Objekt, das Löschen zu verhindern.|
-|[Nutzen](#consume)|Nimmt eine Meldung, die zuvor von diesem angebotenen `source_block` Objekt aus, und vom Ziel übertragen des Besitzes an den Aufrufer erfolgreich reserviert wurde.|
+|[consume](#consume)|Nimmt eine Meldung, die zuvor von diesem angebotenen `source_block` Objekt aus, und vom Ziel übertragen des Besitzes an den Aufrufer erfolgreich reserviert wurde.|
 |[link_target](#link_target)|Verknüpft einen Zielblock mit diesem `source_block` Objekt.|
 |[release](#release)|Gibt die nachrichtenreservierung einer vorherigen erfolgreichen frei.|
 |[release_ref](#release_ref)|Gibt einen Verweiszähler für diese `source_block` Objekt.|

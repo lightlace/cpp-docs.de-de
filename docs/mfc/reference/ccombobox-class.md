@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: e7472b808d8b5d743d884d9e3806df7ffe499836
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 847927a36bac8540dd95307ae3c0259d0adba12a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178778"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304469"
 ---
 # <a name="ccombobox-class"></a>CComboBox-Klasse
 
@@ -147,7 +147,7 @@ class CComboBox : public CWnd
 |[CComboBox::DeleteString](#deletestring)|Löscht eine Zeichenfolge aus dem Listenfeld eines Kombinationsfelds an.|
 |[CComboBox::Dir](#dir)|Fügt eine Liste von Dateinamen in das Listenfeld eines Kombinationsfelds an.|
 |[CComboBox::DrawItem](#drawitem)|Wird aufgerufen, durch das Framework, wenn sich ein Darstellungsaspekt eines Ownerdrawn-Kombinationsfeld Feld ändert.|
-|[CComboBox:: FindString](#findstring)|Sucht die erste Zeichenfolge mit dem angegebenen Präfix in das Listenfeld eines Kombinationsfelds an.|
+|[CComboBox::FindString](#findstring)|Sucht die erste Zeichenfolge mit dem angegebenen Präfix in das Listenfeld eines Kombinationsfelds an.|
 |[CComboBox::FindStringExact](#findstringexact)|Sucht die erste Listenfeld Zeichenfolge (in einem Kombinationsfeld), die der angegebenen Zeichenfolge übereinstimmt.|
 |[CComboBox::GetComboBoxInfo](#getcomboboxinfo)|Ruft Informationen ab, zu der `CComboBox` Objekt.|
 |[CComboBox::GetCount](#getcount)|Ruft die Anzahl der Elemente im Listenfeld eines Kombinationsfelds ab.|
@@ -198,7 +198,7 @@ Die folgende Tabelle vergleicht die drei im Kombinationsfeld [Stile](../../mfc/r
 
 |Stil|Wenn im Listenfeld angezeigt wird|Statische oder Edit-Steuerelement|
 |-----------|-------------------------------|-----------------------------|
-|Einfach|Immer|Bearbeiten|
+|Einfach|Always|Bearbeiten|
 |Drop-down|Wenn Sie gelöscht|Bearbeiten|
 |Dropdownliste|Wenn Sie gelöscht|Statisch|
 
@@ -214,7 +214,7 @@ wo `id` gibt die ID der untergeordneten Fensters mit der im Kombinationsfeld-Ste
 
 Funktionsprototyp des übergeordneten Elements lautet wie folgt aus:
 
-**Afx_msg** `void` `memberFxn` **();**
+**afx_msg** `void` `memberFxn` **( );**
 
 Die Reihenfolge, in der bestimmte Benachrichtigung gesendet werden, kann nicht vorhergesagt werden. Insbesondere kann eine Benachrichtigung CBN_SELCHANGE entweder vor oder nach einer Benachrichtigung CBN_CLOSEUP auftreten.
 
@@ -382,7 +382,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Gibt das Format des Kombinationsfelds. Wenden Sie eine beliebige Kombination von [kombinationsfeldstile](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) in das Feld.
 
-*Rect*<br/>
+*rect*<br/>
 Verweist auf die Position und Größe des Kombinationsfelds. Kann eine [RECT-Struktur](/windows/desktop/api/windef/ns-windef-tagrect) oder `CRect` Objekt.
 
 *pParentWnd*<br/>
@@ -1227,7 +1227,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>Parameter
 
-*. nalles auswählen*<br/>
+*nSelect*<br/>
 Gibt den nullbasierten Index des wählen Sie die Zeichenfolge an. Wenn-1 und aktuelle Auswahl im Listenfeld entfernt wird, und der Edit-Steuerelement deaktiviert ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1312,7 +1312,7 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bDie*<br/>
+*bExtended*<br/>
 Gibt an, ob das Kombinationsfeld die erweiterten Benutzeroberfläche oder die Standardbenutzeroberfläche verwenden möchten. Der Wert "true", werden die erweiterten Benutzeroberfläche markiert. der Wert "false" wählt die Standardbenutzeroberfläche.
 
 ### <a name="return-value"></a>Rückgabewert

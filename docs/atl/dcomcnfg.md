@@ -7,16 +7,16 @@ helpviewer_keywords:
 - DCOMCNFG utility
 - DCOM, configuring in ATL
 ms.assetid: 5a8126e9-ef27-40fb-a66e-9dce8d1a7e80
-ms.openlocfilehash: 8bf85c32093051b124d007a04eed2bbf10a56039
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4845093d3343e899a18c707846145c2630d7ac1d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552645"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261491"
 ---
 # <a name="dcomcnfg"></a>DCOMCNFG
 
-DCOMCNFG ist ein Windows NT 4.0-Hilfsprogramm, das Ihnen ermöglicht, die verschiedene DCOM-spezifischen Einstellungen in der Registrierung zu konfigurieren. Das Fenster "DCOMCNFG" verfügt über drei Seiten: Default Security, Standardeigenschaften und Anwendungen. Unter Windows 2000 ist eine vierte Seite Standardprotokolle, vorhanden.
+DCOMCNFG ist ein Windows NT 4.0-Hilfsprogramm, das Ihnen ermöglicht, die verschiedene DCOM-spezifischen Einstellungen in der Registrierung zu konfigurieren. Das Fenster "DCOMCNFG" verfügt über drei Seiten: Standardsicherheit, Eigenschaften und Anwendungen. Unter Windows 2000 ist eine vierte Seite Standardprotokolle, vorhanden.
 
 ## <a name="default-security-page"></a>Standard-Seite "Sicherheit"
 
@@ -47,4 +47,3 @@ Sie ändern die Einstellungen für ein bestimmtes Objekt der Seite "Anwendungen"
 ## <a name="see-also"></a>Siehe auch
 
 [Dienste](../atl/atl-services.md)
-

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: 4b520072bd0c07e261f2cf4baf51d7ea3d14a5ab
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: cb11a74932e44f94f481a2fdc48b8d6ee359f9e8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694555"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260542"
 ---
 # <a name="exception-handling-in-mfc"></a>Ausnahmebehandlung in MFC
 
@@ -115,7 +115,7 @@ In den folgenden Artikeln wird erläutert, mit der MFC-Bibliothek für die Behan
 
 - [Ausnahmen: Freigeben von Objekten in Ausnahmen](../mfc/exceptions-freeing-objects-in-exceptions.md)
 
-- [Ausnahmen: Ausnahmen in eigenen Funktionen auslösen](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)
+- [Ausnahmen: Auslösen von Ausnahmen in eigenen Funktionen](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)
 
 - [Ausnahmen: Datenbankausnahmen](../mfc/exceptions-database-exceptions.md)
 
@@ -132,5 +132,4 @@ In den folgenden Artikeln vergleichen die MFC-Ausnahmemakros, mit der C++-Ausnah
 ## <a name="see-also"></a>Siehe auch
 
 [C++-Ausnahmebehandlung](../cpp/cpp-exception-handling.md)<br/>
-[Wie erstelle ich meine eigene benutzerdefinierte Ausnahmeklassen](http://go.microsoft.com/fwlink/p/?linkid=128045)
-
+[Gewusst wie: Erstellen Sie eigene benutzerdefinierte Ausnahmeklassen](http://go.microsoft.com/fwlink/p/?linkid=128045)

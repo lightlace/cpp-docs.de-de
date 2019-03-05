@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CComVariant class
 - VARIANT macro, ATL
 ms.assetid: 4d31149c-d005-44b5-a509-10f84afa2b61
-ms.openlocfilehash: 6a6ad49533028dbcb8c45b63c55a51090533137e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6be05b52b96ada7871f955c687036a83b4e0b493
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522485"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281095"
 ---
 # <a name="ccomvariant-class"></a>CComVariant-Klasse
 
@@ -44,7 +44,7 @@ class CComVariant : public tagVARIANT
 |Name|Beschreibung|
 |----------|-----------------|
 |[CComVariant::CComVariant](#ccomvariant)|Der Konstruktor.|
-|[CComVariant:: ~ CComVariant](#dtor)|Der Destruktor.|
+|[CComVariant::~CComVariant](#dtor)|Der Destruktor.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -59,15 +59,15 @@ class CComVariant : public tagVARIANT
 |[CComVariant::GetSize](#getsize)|Gibt die Größe in Anzahl von Bytes des Inhalts der `CComVariant` Objekt.|
 |[CComVariant::ReadFromStream](#readfromstream)|Lädt eine Variante aus einem Stream.|
 |[CComVariant::SetByRef](#setbyref)|Initialisiert die `CComVariant` -Objekt und legt die `vt` VT_BYREF Member.|
-|[CComVariant:: WriteToStream](#writetostream)|Speichert die zugrunde liegende Variante in einem Stream.|
+|[CComVariant::WriteToStream](#writetostream)|Speichert die zugrunde liegende Variante in einem Stream.|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
 |||
 |-|-|
 |[CComVariant <](#operator_lt)|Gibt an, ob die `CComVariant` Objekt ist kleiner als die angegebene Variante.|
-|[CComVariant >](#operator_gt)|Gibt an, ob die `CComVariant` -Quellobjekt ist größer als die angegebene Variante.|
-|[Operator! =](#operator_neq)|Gibt an, ob die `CComVariant` Objekt entspricht nicht die angegebene Variante.|
+|[CComVariant::operator >](#operator_gt)|Gibt an, ob die `CComVariant` -Quellobjekt ist größer als die angegebene Variante.|
+|[operator !=](#operator_neq)|Gibt an, ob die `CComVariant` Objekt entspricht nicht die angegebene Variante.|
 |[operator =](#operator_eq)|Weist einen Wert, der `CComVariant` Objekt.|
 |[operator ==](#operator_eq_eq)|Gibt an, ob die `CComVariant` Objekt gleich die angegebene Variante.|
 
@@ -85,7 +85,7 @@ class CComVariant : public tagVARIANT
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** "atlcomcli.h"
+**Header:** atlcomcli.h
 
 ##  <a name="attach"></a>  CComVariant::Attach
 
@@ -373,7 +373,7 @@ Oder, ein SAFEARRAY-Zeiger zugewiesen werden die `CComVariant` Objekt. Eine Kopi
 *cSrc*<br/>
 [in] Der Zeichenwert zugewiesen werden die `CComVariant` Objekt. Der Typ des der `CComVariant` Objekt werden VT_I1.
 
-##  <a name="operator_eq_eq"></a>  CComVariant ==
+##  <a name="operator_eq_eq"></a>  CComVariant::operator ==
 
 Gibt an, ob die `CComVariant` Objekt gleich die angegebene Variante.
 

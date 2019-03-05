@@ -6,12 +6,12 @@ f1_keywords:
 - AMPRT/scoped_d3d_access_lock
 - AMPRT/concurrency::direct3d::scoped_d3d_access_lock::scoped_d3d_access_lock
 ms.assetid: 0ad333e6-9839-4736-a722-16d95d70c4b1
-ms.openlocfilehash: 08b6edc415d08d6dfb863fb90ff27bac6ce0960a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e36c3c2cfa9d1b617e377a7e340f98875457bdf1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598444"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272463"
 ---
 # <a name="scopedd3daccesslock-class"></a>scoped_d3d_access_lock-Klasse
 
@@ -30,7 +30,7 @@ class scoped_d3d_access_lock;
 |Name|Beschreibung|
 |----------|-----------------|
 |[scoped_d3d_access_lock-Konstruktor](#ctor)|Überladen. Erstellt ein `scoped_d3d_access_lock`-Objekt. Die Sperre wird aufgehoben, wenn dieses Objekt den Gültigkeitsbereich verlässt.|
-|[~ scoped_d3d_access_lock-Destruktor](#dtor)|Gibt die D3D-Zugriffssperre auf dem zugeordneten `accelerator_view`-Objekt frei.|
+|[~scoped_d3d_access_lock Destructor](#dtor)|Gibt die D3D-Zugriffssperre auf dem zugeordneten `accelerator_view`-Objekt frei.|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
@@ -46,7 +46,7 @@ class scoped_d3d_access_lock;
 
 **Header:** amprt.h
 
-**Namespace:** Concurrency:: Direct3D
+**Namespace:** concurrency::direct3d
 
 ##  <a name="ctor"></a> scoped_d3d_access_lock
 
@@ -72,7 +72,7 @@ Das `accelerator_view`-Objekt, für das die Sperre übernommen wird.
 *_T*<br/>
 Das `adopt_d3d_access_lock_t`-Objekt.
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Das `scoped_d3d_access_lock`-Objekt, dessen vorhandene Sperre aufgehoben werden soll.
 
 ## <a name="construction"></a>Konstruktion
@@ -91,7 +91,7 @@ Gibt die D3D-Zugriffssperre auf dem zugeordneten `accelerator_view`-Objekt frei.
 ~scoped_d3d_access_lock();
 ```
 
-## <a name="operator_eq"></a> Operator =
+## <a name="operator_eq"></a> operator=
 
 Übernimmt den Besitz einer D3D-Zugriffssperre eines anderen `scoped_d3d_access_lock`-Objekts und hebt die vorherige Sperre auf.
 
@@ -101,7 +101,7 @@ scoped_d3d_access_lock& operator= (scoped_d3d_access_lock&& _Other);
 
 ### <a name="parameters"></a>Parameter
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Das accelerator_view-Objekt, von dem die D3D-Zugriffssperre verschoben werden soll.
 
 ### <a name="return-value"></a>Rückgabewert

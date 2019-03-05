@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: 8b2d554cb6b4eaeb7ee1ddd884aefb3ab6da0f2e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 75d62eb5ce3d24322d7af5030fb8d723ffa8fedb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523415"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259931"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>MFC-ODBC-Consumer-Assistent
 
@@ -68,7 +68,7 @@ Dieser Assistent richtet eine ODBC-Recordset-Klasse und datenbindungen, die zum 
 
    - **Dynaset**: Gibt an, dass das Recordset ein Dynaset ist. Ein Dynaset ist das Ergebnis einer Abfrage, die eine indizierte Sicht in der abgefragten Datenbank Daten bereitstellt. Ein Dynaset speichert nur ganzzahligen Index für die ursprünglichen Daten, und daher Leistungsvorteile erhalten, über eine Momentaufnahme aus. Die Index-verweist direkt auf jeden Datensatz gefunden, die als Ergebnis einer Abfrage und gibt an, ob ein Eintrag entfernt wird. Sie haben auch Zugriff auf aktualisierte Informationen in den abgefragten Einträgen an. Dies ist die Standardeinstellung.
 
-   - **Momentaufnahme**: Gibt an, dass das Recordset eine Momentaufnahme ist. Eine Momentaufnahme ist das Ergebnis einer Abfrage und einen Einblick in einer Datenbank an einem bestimmten Punkt ist, in Zeit. Alle Datensätze gefunden wurden, als Ergebnis der Abfrage werden zwischengespeichert, sodass keine Änderungen an den ursprünglichen Datensätzen angezeigt wird.
+   - **Snapshot**: Gibt an, dass das Recordset eine Momentaufnahme ist. Eine Momentaufnahme ist das Ergebnis einer Abfrage und einen Einblick in einer Datenbank an einem bestimmten Punkt ist, in Zeit. Alle Datensätze gefunden wurden, als Ergebnis der Abfrage werden zwischengespeichert, sodass keine Änderungen an den ursprünglichen Datensätzen angezeigt wird.
 
 - **Binden Sie alle Spalten**
 
@@ -78,4 +78,3 @@ Dieser Assistent richtet eine ODBC-Recordset-Klasse und datenbindungen, die zum 
 
 [MFC-ODBC-nutzen](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../../ide/adding-functionality-with-code-wizards-cpp.md)
-

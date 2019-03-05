@@ -11,12 +11,12 @@ helpviewer_keywords:
 - sockets [MFC], asynchronous operation
 - Windows Sockets [MFC], converting Unicode and MBCS strings
 ms.assetid: 825dae17-7c1b-4b86-8d6c-da7f1afb5d8d
-ms.openlocfilehash: abce497f49347719af08e71a75afa12cb99507f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51274791393d95517bd8de5ae7248dc634018037
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459292"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263105"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets: Verwenden der Klasse CAsyncSocket
 
@@ -73,7 +73,7 @@ Dieser Artikel behandelt Folgendes:
    Nach dem Akzeptieren einer Verbindungs können Sie Aufgaben wie das Überprüfen von Kennwörtern ausführen.
 
     > [!NOTE]
-    >  Die `Accept` Member-Funktion akzeptiert einen Verweis auf ein neues, leeres `CSocket` -Objekt als Parameter. Müssen Sie dieses Objekt erstellen, vor dem Aufruf `Accept`. Wenn dieser Socketobjekt den Geltungsbereich verlässt, wird die Verbindung. Rufen Sie keine `Create` für dieses neuen Socketobjekt. Ein Beispiel finden Sie im Artikel [Windows Sockets: Reihenfolge der Vorgänge](../mfc/windows-sockets-sequence-of-operations.md).
+    >  Die `Accept` Member-Funktion akzeptiert einen Verweis auf ein neues, leeres `CSocket` -Objekt als Parameter. Müssen Sie dieses Objekt erstellen, vor dem Aufruf `Accept`. Wenn dieser Socketobjekt den Geltungsbereich verlässt, wird die Verbindung. Rufen Sie keine `Create` für dieses neuen Socketobjekt. Ein Beispiel finden Sie im Artikel [Windows Sockets: Reihenfolge der Operationen](../mfc/windows-sockets-sequence-of-operations.md).
 
 1. Tragen Sie die Kommunikation mit anderen Sockets durch Aufrufen der `CAsyncSocket` objektelementfunktionen, die die Windows Sockets-API-Funktionen zu kapseln.
 
@@ -85,7 +85,7 @@ Dieser Artikel behandelt Folgendes:
 
    Der Destruktor ruft die [schließen](../mfc/reference/casyncsocket-class.md#close) Memberfunktion vor dem Zerstören des Objekts.
 
-Ein Beispiel für diese Sequenz im Code (für die tatsächlich eine `CSocket` Objekt), finden Sie unter [Windows Sockets: Reihenfolge der Vorgänge](../mfc/windows-sockets-sequence-of-operations.md).
+Ein Beispiel für diese Sequenz im Code (für die tatsächlich eine `CSocket` Objekt), finden Sie unter [Windows Sockets: Reihenfolge der Operationen](../mfc/windows-sockets-sequence-of-operations.md).
 
 ##  <a name="_core_your_responsibilities_with_casyncsocket"></a> Ihre Zuständigkeiten mit CAsyncSocket
 
@@ -97,19 +97,18 @@ Wenn Sie ein Objekt der Klasse erstellen [CAsyncSocket](../mfc/reference/casyncs
 
 - Legen Sie konvertieren zwischen Unicode- und multibyte-Zeichensätze (MBCS)-Zeichenfolgen.
 
-Definitionen dieser Begriffe und Weitere Informationen finden Sie [Windows Sockets: blockieren](../mfc/windows-sockets-blocking.md), [Windows Sockets: Bytereihenfolge](../mfc/windows-sockets-byte-ordering.md), [Windows Sockets: Konvertieren von Zeichenfolgen](../mfc/windows-sockets-converting-strings.md) .
+Definitionen dieser Begriffe und Weitere Informationen finden Sie [Windows Sockets: Blockierende](../mfc/windows-sockets-blocking.md), [Windows Sockets: Die Bytereihenfolge](../mfc/windows-sockets-byte-ordering.md), [Windows Sockets: Konvertieren von Zeichenfolgen](../mfc/windows-sockets-converting-strings.md).
 
 Trotz dieser Probleme Klasse `CAsycnSocket` kann die richtige Wahl für Sie sein, wenn Ihre Anwendung erfordert, die alle Flexibilität und Kontrolle, die Sie erhalten. Wenn nicht der Fall, sollten Sie erwägen Klasse `CSocket` stattdessen. `CSocket` viele Details, die von Ihnen ausgeblendet: Pumpen Windows während der Aufrufe zum Blockieren von Nachrichten und erhalten Sie Zugriff auf It `CArchive`, Unterschiede in der Bytereihenfolge und zeichenfolgenkonvertierung für Sie verwaltet.
 
 Weitere Informationen finden Sie unter:
 
-- [Windows-Sockets: Hintergrund](../mfc/windows-sockets-background.md)
+- [Windows Sockets: Hintergrund](../mfc/windows-sockets-background.md)
 
-- [Windows-Sockets: Blockieren](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: Stream-Sockets](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows-Sockets: Datagrammsockets](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: Datagrammsockets](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Siehe auch
 
 [Windows-Sockets in MFC](../mfc/windows-sockets-in-mfc.md)
-

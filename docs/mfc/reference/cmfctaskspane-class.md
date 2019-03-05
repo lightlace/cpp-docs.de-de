@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: aaf0e68391dd1273c3f973315ac58fe0d6bd1c24
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 137f30262ce01ad82c075302b6e85bf67ae7b9be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176808"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293770"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane-Klasse
 
@@ -225,19 +225,19 @@ class CMFCTasksPane : public CDockablePane
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[Cmfctaskspane:: addgroup](#addgroup)|Fügt dem Aufgabenbereich-Steuerelement eine neue Gruppe von Aufgaben hinzu.|
-|[Cmfctaskspane:: AddLabel](#addlabel)|Fügt der angegebenen Aufgabengruppe eine neue statische Bezeichnung hinzu.|
-|[Cmfctaskspane:: Addmrufileslist](#addmrufileslist)|Fügt Aufgaben anhand einer Dateiliste zuletzt verwendeter Aufgaben in einer Gruppe hinzu.|
+|[CMFCTasksPane::AddGroup](#addgroup)|Fügt dem Aufgabenbereich-Steuerelement eine neue Gruppe von Aufgaben hinzu.|
+|[CMFCTasksPane::AddLabel](#addlabel)|Fügt der angegebenen Aufgabengruppe eine neue statische Bezeichnung hinzu.|
+|[CMFCTasksPane::AddMRUFilesList](#addmrufileslist)|Fügt Aufgaben anhand einer Dateiliste zuletzt verwendeter Aufgaben in einer Gruppe hinzu.|
 |[CMFCTasksPane::AddPage](#addpage)|Fügt dem Aufgabenbereich eine neue Seite hinzu.|
 |[CMFCTasksPane::AddSeparator](#addseparator)||
-|[Cmfctaskspane:: Addtask](#addtask)|Fügt der angegebenen Aufgabengruppe eine neue Aufgabe hinzu.|
+|[CMFCTasksPane::AddTask](#addtask)|Fügt der angegebenen Aufgabengruppe eine neue Aufgabe hinzu.|
 |[CMFCTasksPane::AddWindow](#addwindow)|Fügt dem Aufgabenbereich ein untergeordnetes Fenster hinzu.|
 |[CMFCTasksPane::CollapseAllGroups](#collapseallgroups)||
 |[CMFCTasksPane::CollapseGroup](#collapsegroup)|Reduziert eine Gruppe programmgesteuert.|
 |[CMFCTasksPane::CreateDefaultMiniframe](#createdefaultminiframe)|(Überschreibt [cpane:: Createdefaultminiframe](../../mfc/reference/cpane-class.md#createdefaultminiframe).)|
 |[CMFCTasksPane::CreateMenu](#createmenu)|Wird aufgerufen, durch das Framework zum Erstellen eines Menüs für die **andere Aufgabenbereiche** Menüschaltfläche.|
 |[CMFCTasksPane::EnableAnimation](#enableanimation)|Aktiviert oder deaktiviert die Animation beim Reduzieren oder Erweitern von Aufgabengruppen.|
-|[Cmfctaskspane:: Enablegroupcollapse](#enablegroupcollapse)|Gibt an, ob Aufgabengruppen reduziert werden können.|
+|[CMFCTasksPane::EnableGroupCollapse](#enablegroupcollapse)|Gibt an, ob Aufgabengruppen reduziert werden können.|
 |[CMFCTasksPane::EnableHistoryMenuButtons](#enablehistorymenubuttons)|Aktiviert oder deaktiviert die Dropdown-Menüs in **Weiter** und **zurück** Navigationsschaltflächen.|
 |[CMFCTasksPane::EnableNavigationToolbar](#enablenavigationtoolbar)|Aktiviert oder deaktiviert die Navigationssymbolleiste.|
 |[CMFCTasksPane::EnableOffsetCustomControls](#enableoffsetcustomcontrols)||
@@ -404,7 +404,7 @@ int AddGroup(
 *bBottomLocation*<br/>
 [in] True, um die Gruppe am unteren Rand der Aufgabenbereich-Steuerelement zu erstellen. andernfalls "false".
 
-*bBesondere*<br/>
+*bSpecial*<br/>
 [in] "True", markieren Sie diese Gruppe als eine *spezielle* Gruppe; andernfalls "false". Weitere Informationen zu besonderen Gruppen finden Sie im Abschnitt "Hinweise" `CMFCTasksPane`.
 
 *hIcon*<br/>
@@ -434,7 +434,7 @@ int AddLabel(
 
 ### <a name="parameters"></a>Parameter
 
-*Ngruppe*<br/>
+*nGroup*<br/>
 [in] Gibt den Index der Gruppe, in dem die Bezeichnung hinzugefügt wird.
 
 *lpszLabelName*<br/>
@@ -466,7 +466,7 @@ int AddMRUFilesList(
 
 ### <a name="parameters"></a>Parameter
 
-*Ngruppe*<br/>
+*nGroup*<br/>
 [in] Gibt den Index einer Gruppe. Diese Methode fügt der Liste der zuletzt verwendeten Dateien von diesem Parameter angegebenen Gruppe.
 
 *nMaxFiles*<br/>
@@ -501,7 +501,7 @@ int AddSeparator(int nGroup);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Ngruppe*<br/>
+[in] *nGroup*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -522,7 +522,7 @@ int AddTask(
 
 ### <a name="parameters"></a>Parameter
 
-*Ngruppe*<br/>
+*nGroup*<br/>
 [in] Gibt an, der gruppenindex, in dem die Aufgabe hinzugefügt wird.
 
 *lpszTaskName*<br/>
@@ -556,7 +556,7 @@ int AddWindow(
 
 ### <a name="parameters"></a>Parameter
 
-*Ngruppe*<br/>
+*nGroup*<br/>
 [in] Gibt an, der gruppenindex, an dem das Fenster hinzugefügt wird.
 
 *hwndTask*<br/>
@@ -626,7 +626,7 @@ BOOL CollapseGroup(
 *bCollapse*<br/>
 [in] True, um die Gruppe zu reduzieren. FALSE, wenn die Gruppe zu erweitern.
 
-*Ngruppe*<br/>
+*nGroup*<br/>
 [in] Gibt an, der nullbasierte Index der Gruppe, die in der internen Liste von Gruppen zu reduzieren.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -645,7 +645,7 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *RectInitial*<br/>
+[in] *rectInitial*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -679,7 +679,7 @@ void EnableAnimation(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] True, um die Animation zu aktivieren, die auftritt, wenn eine Aufgabengruppe, erweitert oder reduziert. andernfalls "false".
 
 ### <a name="remarks"></a>Hinweise
@@ -696,7 +696,7 @@ void EnableGroupCollapse(BOOL bEnable);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] True, wenn Benutzer Aufgabengruppen reduziert werden können. andernfalls "false".
 
 ### <a name="remarks"></a>Hinweise
@@ -713,7 +713,7 @@ void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] "True" Enable Dropdown-Menüs in die **Weiter** und **zurück** Navigationsschaltflächen ist, andernfalls FALSE.
 
 ### <a name="remarks"></a>Hinweise
@@ -738,7 +738,7 @@ void EnableNavigationToolbar(
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] TRUE die Navigationssymbolleiste aktiviert. andernfalls "false".
 
 *uiToolbarBmpRes*<br/>
@@ -778,7 +778,7 @@ void EnableScrollButtons(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] "True", scrollen Sie im Aufgabenbereich statt einer Bildlaufleiste angezeigt werden sollen; andernfalls "false".
 
 ### <a name="remarks"></a>Hinweise
@@ -795,7 +795,7 @@ void EnableWrapLabels(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] "True" Wrap den Text in Bezeichnungen, die im Aufgabenbereich angezeigt werden; andernfalls "false".
 
 ### <a name="remarks"></a>Hinweise
@@ -812,7 +812,7 @@ void EnableWrapTasks(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] "True", um Aufgaben in den Aufgabenbereich zu umschließen; andernfalls "false".
 
 ### <a name="remarks"></a>Hinweise
@@ -898,7 +898,7 @@ BOOL GetGroupLocation(
 *pGroup*<br/>
 [in] Gibt an, die Aufgabengruppe, deren Speicherort abgerufen wird.
 
-*Ngruppe*<br/>
+*nGroup*<br/>
 [out] Enthält den nullbasierten Index der Aufgabengruppe.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -957,10 +957,10 @@ BOOL GetPageByGroup(
 
 ### <a name="parameters"></a>Parameter
 
-*Ngruppe*<br/>
+*nGroup*<br/>
 [in] Gibt den nullbasierten Index der Aufgabengruppe.
 
-*. nSeite*<br/>
+*nPage*<br/>
 [out] Enthält den Seitenindex für die angegebene Gruppe. Wenn die Aufgabengruppe, die nur eine Standardseite enthält, ist der zurückgegebene Wert 0.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1017,7 +1017,7 @@ CMFCTasksPaneTask* GetTask(
 
 ### <a name="parameters"></a>Parameter
 
-*Ngruppe*<br/>
+*nGroup*<br/>
 [in] Gibt an, der nullbasierte Index der Gruppe, die den Task enthält.
 
 *nTask*<br/>
@@ -1037,7 +1037,7 @@ int GetTaskCount(int nGroup) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Ngruppe*<br/>
+*nGroup*<br/>
 [in] Gibt den Index der Aufgabengruppe.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1054,7 +1054,7 @@ CMFCTasksPaneTaskGroup* GetTaskGroup(int nGroup) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Ngruppe*<br/>
+*nGroup*<br/>
 [in] Gibt den nullbasierten Index des abzurufenden Gruppe.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1087,7 +1087,7 @@ BOOL GetTaskLocation(
 *uiCommandID*<br/>
 [in] Gibt an, die Befehls-ID der Aufgabe zu finden.
 
-*Ngruppe*<br/>
+*nGroup*<br/>
 [out] Enthält den gruppenindex der Aufgabe.
 
 *nTask*<br/>
@@ -1296,9 +1296,9 @@ virtual BOOL LoadState(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *LpszProfileName*<br/>
+[in] *lpszProfileName*<br/>
 [in] *nIndex*<br/>
-[in] *UiID*<br/>
+[in] *uiID*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1416,7 +1416,7 @@ virtual void OnPressOtherButton(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Pbtn*<br/>
+[in] *pbtn*<br/>
 [in] *pWndOwner*<br/>
 
 ### <a name="remarks"></a>Hinweise
@@ -1511,7 +1511,7 @@ void RemoveAllTasks(int nGroup);
 
 ### <a name="parameters"></a>Parameter
 
-*Ngruppe*<br/>
+*nGroup*<br/>
 [in] Gibt an, der nullbasierte Index der Gruppe.
 
 ##  <a name="removegroup"></a>  CMFCTasksPane::RemoveGroup
@@ -1524,7 +1524,7 @@ void RemoveGroup(int nGroup);
 
 ### <a name="parameters"></a>Parameter
 
-*Ngruppe*<br/>
+*nGroup*<br/>
 [in] Gibt an, der nullbasierte Index der Gruppe "entfernen".
 
 ### <a name="remarks"></a>Hinweise
@@ -1559,7 +1559,7 @@ BOOL RemoveTask(
 
 ### <a name="parameters"></a>Parameter
 
-*Ngruppe*<br/>
+*nGroup*<br/>
 [in] Gibt den nullbasierten Index der Aufgabengruppe, die die zu entfernende Aufgabe enthält.
 
 *nTask*<br/>
@@ -1583,9 +1583,9 @@ virtual BOOL SaveState(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *LpszProfileName*<br/>
+[in] *lpszProfileName*<br/>
 [in] *nIndex*<br/>
-[in] *UiID*<br/>
+[in] *uiID*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1599,7 +1599,7 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *Ar*<br/>
+[in] *ar*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1694,7 +1694,7 @@ BOOL SetGroupName(
 
 ### <a name="parameters"></a>Parameter
 
-*Ngruppe*<br/>
+*nGroup*<br/>
 [in] Gibt an, der nullbasierte Index der Gruppe.
 
 *lpszGroupName*<br/>
@@ -1717,10 +1717,10 @@ BOOL SetGroupTextColor(
 
 ### <a name="parameters"></a>Parameter
 
-*Ngruppe*<br/>
+*nGroup*<br/>
 [in] Gibt an, der nullbasierte Index der Gruppe.
 
-*Farbe*<br/>
+*color*<br/>
 [in] Gibt die Farbe des Textes an.
 
 *colorHot*<br/>
@@ -1786,7 +1786,7 @@ void SetIconsList(HIMAGELIST hIcons);
 *uiImageListResID*<br/>
 [in] Gibt die Ressourcen-ID der Liste der Bilder an.
 
-*CX*<br/>
+*cx*<br/>
 [in] Gibt die Größe der Symbole in der Bildliste an.
 
 *clrTransparent*<br/>
@@ -1836,7 +1836,7 @@ BOOL SetTaskName(
 
 ### <a name="parameters"></a>Parameter
 
-*Ngruppe*<br/>
+*nGroup*<br/>
 [in] Gibt den nullbasierten Index der Aufgabengruppe.
 
 *nTask*<br/>
@@ -1908,13 +1908,13 @@ BOOL SetTaskTextColor(
 
 ### <a name="parameters"></a>Parameter
 
-*Ngruppe*<br/>
+*nGroup*<br/>
 [in] Gibt den nullbasierten Index des der Aufgabengruppe, die die Aufgabe enthält.
 
 *nTask*<br/>
 [in] Gibt an, der nullbasierte Index der Aufgabe.
 
-*Farbe*<br/>
+*color*<br/>
 [in] Gibt die Textfarbe für die Aufgabe an.
 
 *colorHot*<br/>
@@ -1960,7 +1960,7 @@ BOOL SetWindowHeight(
 
 ### <a name="parameters"></a>Parameter
 
-*Ngruppe*<br/>
+*nGroup*<br/>
 [in] Gibt den nullbasierten Index der Gruppe, die das Window-Steuerelement enthält.
 
 *hwndTask*<br/>
@@ -2003,7 +2003,7 @@ BOOL ShowTask(
 
 ### <a name="parameters"></a>Parameter
 
-*Ngruppe*<br/>
+*nGroup*<br/>
 [in] Gibt an, der nullbasierte Index der Gruppe.
 
 *nTask*<br/>

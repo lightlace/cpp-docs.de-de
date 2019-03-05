@@ -22,12 +22,12 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-ms.openlocfilehash: 96e279e8ab3080c0239f1e41895142ba23c5a7c9
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 7fd9a941210407edc3424454b3375040717a05a2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693972"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261660"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT-Klasse
 
@@ -66,11 +66,11 @@ Eine "traits"-Klasse, die Formatvorlagen für das Fenster definiert. Die Standar
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CContainedWindow:: Create auf](#create)|Erstellt ein Fenster.|
+|[CContainedWindowT::Create](#create)|Erstellt ein Fenster.|
 |[CContainedWindowT::DefWindowProc](#defwindowproc)|Stellt die Standardverarbeitung von Nachrichten bereit.|
 |[CContainedWindowT::GetCurrentMessage](#getcurrentmessage)|Die gibt die aktuelle Nachricht zurück.|
 |[CContainedWindowT::RegisterWndSuperclass](#registerwndsuperclass)|Registriert die Fensterklasse den im Fenster an.|
-|[SubclassWindow](#subclasswindow)|Erstellt Unterklassen eines Fensters.|
+|[CContainedWindowT::SubclassWindow](#subclasswindow)|Erstellt Unterklassen eines Fensters.|
 |[CContainedWindowT::SwitchMessageMap](#switchmessagemap)|Änderungen der meldungszuordnung verwendet wird, um den im Fenster Nachrichten zu verarbeiten.|
 |[CContainedWindowT::UnsubclassWindow](#unsubclasswindow)|Stellt ein zuvor untergeordnetes Fenster wieder her.|
 |[CContainedWindowT::WindowProc](#windowproc)|(Statisch) Verarbeitet die Nachrichten gesendet, um den im Fenster.|
@@ -138,7 +138,7 @@ CContainedWindowT(
 
 ### <a name="parameters"></a>Parameter
 
-*"lpszclassname"*<br/>
+*lpszClassName*<br/>
 [in] Der Name einer vorhandenen Fenster-Klasse, die der im Fenster basiert.
 
 *pObject*<br/>
@@ -201,7 +201,7 @@ HWND Create(
 
 ### <a name="parameters"></a>Parameter
 
-*"lpszclassname"*<br/>
+*lpszClassName*<br/>
 [in] Der Name einer vorhandenen Fenster-Klasse, die der im Fenster basiert.
 
 *pObject*<br/>
@@ -213,7 +213,7 @@ HWND Create(
 *hWndParent*<br/>
 [in] Das Handle für das übergeordnete Element oder Besitzer-Fenster.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Position des Fensters angeben. Die `RECT` Zeiger oder Verweis übergeben werden kann.
 
 *szWindowName*<br/>
@@ -262,7 +262,7 @@ LRESULT DefWindowProc(
 *uMsg*<br/>
 [in] Die Meldung, die an das Fenster gesendet wird.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 [in] Zusätzliche meldungsspezifische Informationen.
 
 *lParam*<br/>
@@ -446,7 +446,7 @@ static LRESULT CALLBACK WindowProc(
 *uMsg*<br/>
 [in] Die Meldung, die an das Fenster gesendet wird.
 
-*wParam-Parameter*<br/>
+*wParam*<br/>
 [in] Zusätzliche meldungsspezifische Informationen.
 
 *lParam*<br/>

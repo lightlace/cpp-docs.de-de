@@ -82,12 +82,12 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: b9d339b11b3e1fa8452c845cfa8a8f41c5194f8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3069c5f53b37984cbeae8bee1379bb8b0c36ccc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604944"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285281"
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc-Klasse
 
@@ -178,7 +178,7 @@ Weitere Informationen zu Servern, finden Sie im Artikel [Server: Implementieren 
 
 [CDocument](../../mfc/reference/cdocument-class.md)
 
-[COleDocument-Klasse](../../mfc/reference/coledocument-class.md)
+[COleDocument](../../mfc/reference/coledocument-class.md)
 
 [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)
 

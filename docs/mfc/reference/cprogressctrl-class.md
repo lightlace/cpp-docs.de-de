@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: ba97dd27fbf70c34461d45755fd008e6ad9099b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6d5d3becfd1c1ee4a032c74eb116ede82c42bc4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585899"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260269"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl-Klasse
 
@@ -71,13 +71,13 @@ class CProgressCtrl : public CWnd
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CProgressCtrl](#create)|Erstellt ein Statusanzeige-Steuerelement, und fügt sie an einer `CProgressCtrl` Objekt.|
+|[CProgressCtrl::Create](#create)|Erstellt ein Statusanzeige-Steuerelement, und fügt sie an einer `CProgressCtrl` Objekt.|
 |[CProgressCtrl::CreateEx](#createex)|Erstellt ein Fortschritt-Steuerelement mit dem angegebenen erweiterten Stile für Windows und fügt sie an einer `CProgressCtrl` Objekt.|
 |[CProgressCtrl::GetBarColor](#getbarcolor)|Ruft die Farbe der Statusleiste Indikator für den aktuellen Statusanzeige-Steuerelements ab.|
 |[CProgressCtrl::GetBkColor](#getbkcolor)|Ruft die Hintergrundfarbe des aktuellen Statusanzeige ab.|
 |[CProgressCtrl::GetPos](#getpos)|Ruft die aktuelle Position der Statusanzeige ab.|
 |[CProgressCtrl::GetRange](#getrange)|Ruft den oberen und unteren Grenzwerten des Bereichs der Statusanzeige-Steuerelements ab.|
-|[CProgressCtrl:: GetState](#getstate)|Ruft den Zustand der aktuellen Statusanzeige-Steuerelements ab.|
+|[CProgressCtrl::GetState](#getstate)|Ruft den Zustand der aktuellen Statusanzeige-Steuerelements ab.|
 |[CProgressCtrl::GetStep](#getstep)|Ruft die Schrittweite für die Statusanzeige des aktuellen Statusanzeige-Steuerelements ab.|
 |[CProgressCtrl::OffsetPos](#offsetpos)|Verschiebt die aktuelle Position der Statusanzeige-Steuerelement, um eine angegebene Schrittweite und zeichnet die Leiste, um die neue Position zu berücksichtigen.|
 |[CProgressCtrl::SetBarColor](#setbarcolor)|Legt die Farbe der Statusleiste Indikator in der aktuellen Statusanzeige-Steuerelements fest.|
@@ -148,7 +148,7 @@ Gibt das Statusanzeige-Steuerelement Stil. Wenden Sie eine beliebige Kombination
 
 - PBS_SMOOTH zeigt allmählichen, smooth das Statusanzeige-Steuerelement ausfüllen. Ohne dieses Flag wird das Steuerelement mit Blöcken füllen.
 
-*Rect*<br/>
+*rect*<br/>
 Gibt an, des Statusanzeige-Steuerelements die Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur. Da das Steuerelement ein untergeordnetes Fenster sein muss, werden die angegebenen Koordinaten relativ zum Clientbereich befinden die *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -190,7 +190,7 @@ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erwei
 *dwStyle*<br/>
 Gibt das Statusanzeige-Steuerelement Stil. Wenden Sie eine beliebige Kombination von Window-Stile, die in beschriebenen [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) im Windows SDK.
 
-*Rect*<br/>
+*rect*<br/>
 Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -442,7 +442,7 @@ BOOL SetMarquee(
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*fMarqueeMode*|[in] "True" Turn Marquee-Modus an, oder "false" zum Marquee-Modus zu deaktivieren.|
-|*Nintervall*|[in] Zeit in Millisekunden zwischen den Updates der Marquee-Animation.|
+|*nInterval*|[in] Zeit in Millisekunden zwischen den Updates der Marquee-Animation.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -607,4 +607,3 @@ Die Schrittweite wird festgelegt, indem die `CProgressCtrl::SetStep` Member-Funk
 [MFC-Beispiel CMNCTRL2](../../visual-cpp-samples.md)<br/>
 [CWnd-Klasse](../../mfc/reference/cwnd-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
-

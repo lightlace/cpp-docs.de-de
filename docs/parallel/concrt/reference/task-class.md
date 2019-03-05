@@ -1,5 +1,5 @@
 ---
-title: Aufgabenklasse (Concurrency Runtime)
+title: task-Klasse (Concurrency Runtime)
 ms.date: 11/04/2016
 f1_keywords:
 - task
@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-ms.openlocfilehash: c2ac1df322a2778356ce8acca90392fc9f6a17f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1dc146f03b4ed5c0d9d82736959df3097f41199
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482077"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289298"
 ---
-# <a name="task-class-concurrency-runtime"></a>Aufgabenklasse (Concurrency Runtime)
+# <a name="task-class-concurrency-runtime"></a>task-Klasse (Concurrency Runtime)
 
 Die Parallel Patterns Library (PPL) `task`-Klasse. Ein `task`-Objekt stellt Arbeit dar, die asynchron und übereinstimmend mit anderen Tasks und paralleler Arbeit , die von parallelen Algorithmen in der Concurrency Runtime erzeugt wird, ausgeführt werden kann. Es enthält bei erfolgreichem Abschluss ein Ergebnis vom Typ `_ResultType`. Tasks des Typs `task<void>` führen zu keinem Ergebnis. Eine Aufgabe kann erwartet und unabhängig von anderen Aufgaben abgebrochen werden. Sie können auch mit anderen Aufgaben, die mithilfe von Fortsetzungen, bestehen ( `then`), und verbinden ( `when_all`) und Auswahl ( `when_any`) Muster.
 
@@ -44,7 +44,7 @@ class task;
 Der Typ des Task-Objekt.
 
 *_ReturnType*<br/>
-Der Ergebnistyp dieser Aufgabe.
+Der Ergebnistyp dieses Tasks.
 
 ## <a name="members"></a>Mitglieder
 
@@ -65,11 +65,11 @@ Der Ergebnistyp dieser Aufgabe.
 |Name|Beschreibung|
 |----------|-----------------|
 |[get](#get)|Überladen. Gibt das von diesem Task erstellte Ergebnis zurück. Wenn sich der Task nicht in einem abschließenden Zustand befindet, wird mit dem `get`-Aufruf gewartet, bis der Task fertig gestellt wurde. Diese Methode gibt bei dem Aufruf einer Aufgabe mit einem `result_type` von `void` keinen Wert zurück.|
-|[is_apartment_aware](#is_apartment_aware)|Bestimmt, ob die Aufgabe eine `IAsyncInfo`-Schnittstelle der Windows Runtime entpackt oder von einer solchen Aufgabe abgeleitet wurde.|
+|[is_apartment_aware](#is_apartment_aware)|Bestimmt, ob der Task eine `IAsyncInfo`-Schnittstelle der Windows Runtime entpackt oder von einem solchen Task abgeleitet wurde.|
 |[is_done](#is_done)|Bestimmt, ob die Aufgabe abgeschlossen wurde.|
-|[scheduler](#scheduler)|Gibt den Planer für diese Aufgabe zurück.|
-|[then](#then)|Überladen. Fügt dieser Aufgabe eine Fortsetzungsaufgabe hinzu.|
-|[wait](#wait)|Erwartet, dass diese Aufgabe einen Terminalzustand erreicht. Es ist möglich, dass das `wait`-Element den Task inline ausführt, wenn alle Taskabhängigkeiten erfüllt sind und er nicht bereits zur Ausführung durch einen Hintergrundworker aufgehoben wurde.|
+|[scheduler](#scheduler)|Gibt den Planer für diesen Task zurück.|
+|[then](#then)|Überladen. Fügt diesem Task einen Fortsetzungstask hinzu.|
+|[wait](#wait)|Erwartet, dass dieser Task einen Terminalzustand erreicht. Es ist möglich, dass das `wait`-Element den Task inline ausführt, wenn alle Taskabhängigkeiten erfüllt sind und er nicht bereits zur Ausführung durch einen Hintergrundworker aufgehoben wurde.|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
@@ -95,7 +95,7 @@ Weitere Informationen finden Sie unter [Aufgabenparallelität](../../../parallel
 
 ##  <a name="get"></a> Erhalten
 
-Gibt das von dieser Aufgabe erstellte Ergebnis zurück. Wenn sich der Task nicht in einem abschließenden Zustand befindet, wird mit dem `get`-Aufruf gewartet, bis der Task fertig gestellt wurde. Diese Methode gibt bei dem Aufruf einer Aufgabe mit einem `result_type` von `void` keinen Wert zurück.
+Gibt das von diesem Task erstellte Ergebnis zurück. Wenn sich der Task nicht in einem abschließenden Zustand befindet, wird mit dem `get`-Aufruf gewartet, bis der Task fertig gestellt wurde. Diese Methode gibt bei dem Aufruf einer Aufgabe mit einem `result_type` von `void` keinen Wert zurück.
 
 ```
 _ReturnType get() const;
@@ -116,7 +116,7 @@ Wenn die Aufgabe abgebrochen wird, einen Aufruf von `get` löst eine [Task_cance
 
 ##  <a name="is_apartment_aware"></a> is_apartment_aware
 
-Bestimmt, ob die Aufgabe eine `IAsyncInfo`-Schnittstelle der Windows Runtime entpackt oder von einer solchen Aufgabe abgeleitet wurde.
+Bestimmt, ob der Task eine `IAsyncInfo`-Schnittstelle der Windows Runtime entpackt oder von einem solchen Task abgeleitet wurde.
 
 ```
 bool is_apartment_aware() const;
@@ -136,11 +136,11 @@ bool is_done() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-TRUE, wenn die Aufgabe abgeschlossen wurde, andernfalls FALSE.
+"True", wenn die Aufgabe abgeschlossen wurde, andernfalls "false".
 
 ### <a name="remarks"></a>Hinweise
 
-Die Funktion gibt TRUE zurück, wenn die Aufgabe abgeschlossen oder abgebrochen wurde (mit oder ohne Benutzerausnahme).
+Die Funktion gibt "true" zurück, wenn die Aufgabe abgeschlossen oder abgebrochen wurde (mit oder ohne Benutzerausnahme).
 
 ##  <a name="operator_neq"></a> Operator! =
 
@@ -161,7 +161,7 @@ Die Aufgabe, die verglichen werden soll.
 
 **"true"** Wenn die Objekte auf unterschiedliche zugrunde liegenden Aufgaben beziehen und **"false"** andernfalls.
 
-##  <a name="operator_eq"></a> Operator =
+##  <a name="operator_eq"></a> operator=
 
 Ersetzt den Inhalt eines `task`-Objekts durch einen anderen.
 
@@ -173,7 +173,7 @@ task& operator= (task&& _Other);
 
 ### <a name="parameters"></a>Parameter
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Das `task`-Quellobjekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -203,7 +203,7 @@ Die Aufgabe, die verglichen werden soll.
 
 ##  <a name="scheduler"></a>  Task:: Scheduler-Methode (Concurrency Runtime)
 
-Gibt den Planer für diese Aufgabe zurück.
+Gibt den Planer für diesen Task zurück.
 
 ```
 scheduler_ptr scheduler() const;
@@ -241,12 +241,12 @@ task(
 Der Typ des Parameters, von dem die Aufgabe erstellt werden soll.
 
 *_Param*<br/>
-Der Parameter, von dem die Aufgabe erstellt werden soll. Ist dies möglicherweise einen Lambda-Ausdruck, der ein Funktionsobjekt, einem `task_completion_event<result_type>` Objekt oder eine iasyncinfo, wenn Sie Aufgaben in Ihrer Windows-Runtime-app verwenden. Lambda-Ausdrucks oder Funktion muss ein Typ wie `std::function<X(void)>`, wobei X eine Variable des Typs sein kann `result_type`, `task<result_type>`, oder eine iasyncinfo in Windows-Runtime-apps.
+Der Parameter, von dem der Task erstellt werden soll. Ist dies möglicherweise einen Lambda-Ausdruck, der ein Funktionsobjekt, einem `task_completion_event<result_type>` Objekt oder eine iasyncinfo, wenn Sie Aufgaben in Ihrer Windows-Runtime-app verwenden. Lambda-Ausdrucks oder Funktion muss ein Typ wie `std::function<X(void)>`, wobei X eine Variable des Typs sein kann `result_type`, `task<result_type>`, oder eine iasyncinfo in Windows-Runtime-apps.
 
 *_TaskOptions*<br/>
 Die Aufgabenoptionen enthalten Abbruchtoken, Planer usw.
 
-*_Sonstige*<br/>
+*_Other*<br/>
 Das `task`-Quellobjekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -267,7 +267,7 @@ Weitere Informationen finden Sie unter [Aufgabenparallelität](../../../parallel
 
 ##  <a name="then"></a> Klicken Sie dann
 
-Fügt dieser Aufgabe eine Fortsetzungsaufgabe hinzu.
+Fügt diesem Task einen Fortsetzungstask hinzu.
 
 ```
 template<typename _Function>
@@ -331,7 +331,7 @@ Weitere Informationen zur Verwendung von aufgabenfortsetzungen für asynchrone A
 
 ##  <a name="wait"></a> Warte
 
-Erwartet, dass diese Aufgabe einen Terminalzustand erreicht. Es ist möglich, dass das `wait`-Element die Aufgabe inline ausführt, wenn alle Aufgabenabhängigkeiten erfüllt sind und er nicht bereits zur Ausführung durch einen Hintergrundworker aufgehoben wurde.
+Erwartet, dass dieser Task einen Terminalzustand erreicht. Es ist möglich, dass das `wait`-Element den Task inline ausführt, wenn alle Taskabhängigkeiten erfüllt sind und er nicht bereits zur Ausführung durch einen Hintergrundworker aufgehoben wurde.
 
 ```
 task_status wait() const;

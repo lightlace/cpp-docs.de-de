@@ -28,12 +28,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: 861fdefe19a0c5b78a7874be3386873d6c253a3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 0262764c950b01acdb610873a995a9a6fd912997
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521413"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280679"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray-Klasse
 
@@ -58,19 +58,19 @@ Der Typ der im Array gespeicherten Daten.
 |Name|Beschreibung|
 |----------|-----------------|
 |[CComSafeArray::CComSafeArray](#ccomsafearray)|Der Konstruktor.|
-|[CComSafeArray:: ~ "CComSafeArray"](#dtor)|Der Destruktor.|
+|[CComSafeArray::~CComSafeArray](#dtor)|Der Destruktor.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CComSafeArray](#add)|Fügt eine oder mehrere Elemente oder ein `SAFEARRAY` -Struktur hinzu eine `CComSafeArray`.|
+|[CComSafeArray::Add](#add)|Fügt eine oder mehrere Elemente oder ein `SAFEARRAY` -Struktur hinzu eine `CComSafeArray`.|
 |[CComSafeArray::Attach](#attach)|Fügt eine `SAFEARRAY` -Struktur in eine `CComSafeArray` Objekt.|
 |[CComSafeArray::CopyFrom](#copyfrom)|Kopiert den Inhalt einer `SAFEARRAY` -Struktur in der `CComSafeArray` Objekt.|
 |[CComSafeArray::CopyTo](#copyto)|Erstellt eine Kopie des `CComSafeArray`-Objekts.|
 |[CComSafeArray::Create](#create)|Erstellt ein `CComSafeArray`-Objekt.|
 |[CComSafeArray::Destroy](#destroy)|Zerstört ein `CComSafeArray`-Objekt.|
-|[CComSafeArray:: Detach](#detach)|Trennt eine `SAFEARRAY` aus einem `CComSafeArray` Objekt.|
+|[CComSafeArray::Detach](#detach)|Trennt eine `SAFEARRAY` aus einem `CComSafeArray` Objekt.|
 |[CComSafeArray::GetAt](#getat)|Ruft ein einzelnes Element aus einem eindimensionalen Array ab.|
 |[CComSafeArray::GetCount](#getcount)|Gibt die Anzahl der Elemente des Arrays zurück.|
 |[CComSafeArray::GetDimensions](#getdimensions)|Gibt die Anzahl der Dimensionen des Arrays zurück.|
@@ -82,7 +82,7 @@ Der Typ der im Array gespeicherten Daten.
 |[CComSafeArray::MultiDimGetAt](#multidimgetat)|Ruft ein einzelnes Element aus einem mehrdimensionalen Array ab.|
 |[CComSafeArray::MultiDimSetAt](#multidimsetat)|Legt den Wert eines Elements in einem mehrdimensionalen Array fest.|
 |[CComSafeArray::Resize](#resize)|Ändert die Größe eines `CComSafeArray` -Objekts.|
-|[CComSafeArray:: SetAt](#setat)|Legt den Wert eines Elements in einem eindimensionalen Array fest.|
+|[CComSafeArray::SetAt](#setat)|Legt den Wert eines Elements in einem eindimensionalen Array fest.|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
@@ -210,7 +210,7 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>Parameter
 
-*Gebunden*<br/>
+*bound*<br/>
 Eine `SAFEARRAYBOUND`-Struktur.
 
 *ulCount*<br/>

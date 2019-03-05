@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-ms.openlocfilehash: 8341061ba6365beb97f4413aab8bfbbfdc25e035
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: ed2b8445a0f13b82338d2904d43fd17688d05b9e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693919"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276376"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY-Makros
 
@@ -118,7 +118,7 @@ COM_INTERFACE_ENTRY_IID(iid, x)
 
 ### <a name="parameters"></a>Parameter
 
-*IID*<br/>
+*iid*<br/>
 [in] Die GUID der Schnittstelle verfügbar gemacht werden.
 
 *w*<br/>
@@ -138,7 +138,7 @@ COM_INTERFACE_ENTRY2_IID(iid, x, x2)
 
 ### <a name="parameters"></a>Parameter
 
-*IID*<br/>
+*iid*<br/>
 [in] Die GUID, die Sie für die Schnittstelle angegeben werden.
 
 *w*<br/>
@@ -157,10 +157,10 @@ COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
 
 ### <a name="parameters"></a>Parameter
 
-*IID*<br/>
+*iid*<br/>
 [in] Die GUID der Schnittstelle abgefragt.
 
-*pUnk*<br/>
+*punk*<br/>
 [in] Der Name des ein `IUnknown` Zeiger.
 
 ### <a name="remarks"></a>Hinweise
@@ -181,7 +181,7 @@ COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
 
 ### <a name="parameters"></a>Parameter
 
-*pUnk*<br/>
+*punk*<br/>
 [in] Der Name des ein `IUnknown` Zeiger.
 
 ### <a name="remarks"></a>Hinweise
@@ -202,10 +202,10 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
 
 ### <a name="parameters"></a>Parameter
 
-*IID*<br/>
+*iid*<br/>
 [in] Die GUID der Schnittstelle abgefragt.
 
-*pUnk*<br/>
+*punk*<br/>
 [in] Der Name des ein `IUnknown` Zeiger. Sie muss ein Member der Klasse, die die COM-Zuordnung enthält.
 
 *clsid*<br/>
@@ -227,7 +227,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 
 ### <a name="parameters"></a>Parameter
 
-*pUnk*<br/>
+*punk*<br/>
 [in] Der Name des ein `IUnknown` Zeiger. Sie muss ein Member der Klasse, die die COM-Zuordnung enthält.
 
 *clsid*<br/>
@@ -268,13 +268,13 @@ COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
 
 ### <a name="parameters"></a>Parameter
 
-*IID*<br/>
+*iid*<br/>
 [in] Die GUID der Schnittstelle abtrennbare.
 
 *w*<br/>
 [in] Der Name der Klasse, die die Schnittstelle implementiert.
 
-*pUnk*<br/>
+*punk*<br/>
 [in] Der Name des ein `IUnknown` Zeiger. Sie muss ein Member der Klasse, die die COM-Zuordnung enthält. Sollte auf NULL im Konstruktor der Klasse des Objekts initialisiert werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -295,7 +295,7 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
 
 ### <a name="parameters"></a>Parameter
 
-*IID*<br/>
+*iid*<br/>
 [in] Die GUID der Schnittstelle abtrennbare.
 
 *w*<br/>
@@ -342,10 +342,10 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 
 ### <a name="parameters"></a>Parameter
 
-*IID*<br/>
+*iid*<br/>
 [in] Die GUID der Schnittstelle verfügbar gemacht werden.
 
-*Data Warehouse*<br/>
+*dw*<br/>
 [in] Ein Parameter übergeben die *Func*.
 
 *func*<br/>
@@ -369,7 +369,7 @@ COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
 
 ### <a name="parameters"></a>Parameter
 
-*Data Warehouse*<br/>
+*dw*<br/>
 [in] Ein Parameter übergeben die *Func*.
 
 *func*<br/>
@@ -397,4 +397,3 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 Sie können dieses Makro verwenden, um zu verhindern, dass eine Schnittstelle, die in einem bestimmten Fall verwendet wird. Beispielsweise können Sie dieses Makro in der COM-Zuordnung direkt vor COM_INTERFACE_ENTRY_AGGREGATE_BLIND, um zu verhindern, dass eine Abfrage für die Schnittstelle des Aggregats innere Unknown weitergeleitet einfügen.
 
 Die Schnittstelle, die IID durch Anfügen erstellt *x* zu `IID_`. Z. B. wenn *x* ist `IPersistStorage`, werden die IID `IID_IPersistStorage`.
-

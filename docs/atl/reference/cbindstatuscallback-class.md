@@ -29,12 +29,12 @@ helpviewer_keywords:
 - data transfer [C++], asynchronous
 - CBindStatusCallback class
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
-ms.openlocfilehash: 16e97b994ad30fdd4c255dac45e8b56fd04f663a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8c8d3f170803a792ca2ea8c7a37a18fd2cebd48
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583312"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259203"
 ---
 # <a name="cbindstatuscallback-class"></a>CBindStatusCallback-Klasse
 
@@ -67,7 +67,7 @@ Gibt an, die Bindungsflags, die von zurückgegeben werden [GetBindInfo](#getbind
 |Name|Beschreibung|
 |----------|-----------------|
 |[CBindStatusCallback::CBindStatusCallback](#cbindstatuscallback)|Der Konstruktor.|
-|[CBindStatusCallback:: ~ CBindStatusCallback](#dtor)|Der Destruktor.|
+|[CBindStatusCallback::~CBindStatusCallback](#dtor)|Der Destruktor.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -82,7 +82,7 @@ Gibt an, die Bindungsflags, die von zurückgegeben werden [GetBindInfo](#getbind
 |[CBindStatusCallback::OnProgress](#onprogress)|Wird aufgerufen, um den Fortschritt einer Datenübertragungsprozesses anzuzeigen. Es gibt S_OK zurück, die ATL-Implementierung.|
 |[CBindStatusCallback::OnStartBinding](#onstartbinding)|Wird aufgerufen, wenn Bindung gestartet wird.|
 |[CBindStatusCallback::OnStopBinding](#onstopbinding)|Wird aufgerufen, wenn die asynchrone Datenübertragung beendet wird.|
-|[CBindStatusCallback:: StartAsyncDownload](#startasyncdownload)|Initialisiert die verfügbaren Bytes und gelesene Bytes 0 (null), einem Push-Type-Stream-Objekt erstellt, über eine URL, und ruft `OnDataAvailable` jedes Mal, wenn Daten verfügbar sind.|
+|[CBindStatusCallback::StartAsyncDownload](#startasyncdownload)|Initialisiert die verfügbaren Bytes und gelesene Bytes 0 (null), einem Push-Type-Stream-Objekt erstellt, über eine URL, und ruft `OnDataAvailable` jedes Mal, wenn Daten verfügbar sind.|
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
 
@@ -357,12 +357,12 @@ STDMETHOD(
 ### <a name="parameters"></a>Parameter
 
 *grfBSCF*<br/>
-[in] Ein Wert für den BSCF-Enumeration. Eine oder mehrere der folgenden: BSCF_FIRSTDATANOTIFICATION BSCF_INTERMEDIARYDATANOTIFICATION oder BSCF_LASTDATANOTIFICATION.
+[in] Ein Wert für den BSCF-Enumeration. Eine oder mehrere der folgenden: BSCF_FIRSTDATANOTIFICATION, BSCF_INTERMEDIARYDATANOTIFICATION oder BSCF_LASTDATANOTIFICATION.
 
 *dwSize*<br/>
 [in] Den kumulativen Zeitraum (in Byte) der Daten, die seit dem Beginn der Bindung zur Verfügung. Kann 0 (null), der angibt, dass die Menge der Daten nicht relevant ist oder keine verfügbar war.
 
-*pFormatEtc*<br/>
+*pformatetc*<br/>
 [in] Zeiger auf die [FORMATETC](/windows/desktop/com/the-formatetc-structure) -Struktur, die das Format der verfügbaren Daten enthält. Wenn kein Format wird kann CF_NULL sein.
 
 *pstgmed*<br/>
@@ -406,7 +406,7 @@ STDMETHOD(OnObjectAvailable)(REFID /* riid */, IUnknown* /* punk */);
 *riid*<br/>
 Der Schnittstellenbezeichner der angeforderten Schnittstelle. Nicht verwendet.
 
-*pUnk*<br/>
+*punk*<br/>
 Die Adresse der IUnknown-Schnittstelle. Nicht verwendet.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -469,7 +469,7 @@ STDMETHOD(OnStopBinding)(HRESULT hresult, LPCWSTR /* szError */);
 
 ### <a name="parameters"></a>Parameter
 
-*HRESULT*<br/>
+*hresult*<br/>
 Statuscode zurückgegeben, aus dem Bindungsvorgang.
 
 *szError*<br/>

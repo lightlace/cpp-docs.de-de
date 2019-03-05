@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CD2DResource [MFC], m_bIsAutoDestroy
 - CD2DResource [MFC], m_pParentTarget
 ms.assetid: 34e3ee18-aab6-4c39-9294-de869e1f7820
-ms.openlocfilehash: a4846fb8ea34a3d6a83ae892eabee74f4a48cd6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04d1fa57e34528f96f505fa20abb9b1131f80689
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586376"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284865"
 ---
 # <a name="cd2dresource-class"></a>CD2DResource-Klasse
 
@@ -46,14 +46,14 @@ class CD2DResource : public CObject;
 |Name|Beschreibung|
 |----------|-----------------|
 |[CD2DResource::CD2DResource](#cd2dresource)|Erstellt ein CD2DResource-Objekt.|
-|[CD2DResource:: ~ CD2DResource](#cd2dresource__~cd2dresource)|Der Destruktor. Wird aufgerufen, wenn ein Ressourcenobjekt auf D2D zerstört wird.|
+|[CD2DResource::~CD2DResource](#cd2dresource__~cd2dresource)|Der Destruktor. Wird aufgerufen, wenn ein Ressourcenobjekt auf D2D zerstört wird.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CD2DResource:: Create](#create)|Erstellt eine CD2DResource an.|
-|[CD2DResource:: Destroy](#destroy)|Zerstört ein CD2DResource-Objekt.|
+|[CD2DResource::Create](#create)|Erstellt eine CD2DResource an.|
+|[CD2DResource::Destroy](#destroy)|Zerstört ein CD2DResource-Objekt.|
 |[CD2DResource::IsValid](#isvalid)|Die Gültigkeit der Überprüfungen-Ressource|
 
 ### <a name="protected-methods"></a>Geschützte Methoden

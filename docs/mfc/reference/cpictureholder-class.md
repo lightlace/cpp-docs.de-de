@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CPictureHolder [MFC], SetPictureDispatch
 - CPictureHolder [MFC], m_pPict
 ms.assetid: a4f59775-704a-41dd-b5bd-2e531c95127a
-ms.openlocfilehash: 14ffcbc043d80bfd296bcf52d125d288039f0501
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5386240114550826e4bf557b63310a91590afb55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509572"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284215"
 ---
 # <a name="cpictureholder-class"></a>CPictureHolder-Klasse
 
@@ -64,7 +64,7 @@ class CPictureHolder
 |[CPictureHolder::GetDisplayString](#getdisplaystring)|Ruft die Zeichenfolge in eine Steuerelementcontainer-Eigenschaftenbrowser angezeigt.|
 |[CPictureHolder::GetPictureDispatch](#getpicturedispatch)|Gibt die `CPictureHolder` des Objekts `IDispatch` Schnittstelle.|
 |[CPictureHolder::GetType](#gettype)|Informiert, ob die `CPictureHolder` Objekt ist eine Bitmap, ein Symbol oder eine Metadatei.|
-|[CPictureHolder](#render)|Rendert das Bild an.|
+|[CPictureHolder::Render](#render)|Rendert das Bild an.|
 |[CPictureHolder::SetPictureDispatch](#setpicturedispatch)|Legt die `CPictureHolder` des Objekts `IDispatch` Schnittstelle.|
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
@@ -202,7 +202,7 @@ BOOL CreateFromMetafile(
 
 ### <a name="parameters"></a>Parameter
 
-*HMF*<br/>
+*hmf*<br/>
 Handle der Metadatei, die zum Erstellen der `CPictureHolder` Objekt.
 
 *xExt*<br/>
@@ -232,7 +232,7 @@ BOOL GetDisplayString(CString& strValue);
 
 ### <a name="parameters"></a>Parameter
 
-*strValue gespeichert*<br/>
+*strValue*<br/>
 Ein Verweis auf die [CString](../../atl-mfc-shared/reference/cstringt-class.md) , die die Anzeigezeichenfolge enthalten ist.
 
 ### <a name="return-value"></a>Rückgabewert

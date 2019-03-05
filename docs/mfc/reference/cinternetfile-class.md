@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetFile [MFC], WriteString
 - CInternetFile [MFC], m_hFile
 ms.assetid: 96935681-ee71-4a8d-9783-5abc7b3e6f10
-ms.openlocfilehash: 309d4210f72f7ecd83ed6a8eb79874a1c8170d59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65bc36856e253d086cc430a600daa9255e21ea75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586874"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279977"
 ---
 # <a name="cinternetfile-class"></a>CInternetFile-Klasse
 
@@ -65,12 +65,12 @@ class CInternetFile : public CStdioFile
 |[CInternetFile::Close](#close)|Schließt eine `CInternetFile` und gibt seine Ressourcen frei.|
 |[CInternetFile::Flush](#flush)|Leert den Schreibpuffer den Inhalt, und stellt sicher, dass die Daten im Arbeitsspeicher auf den Zielcomputer geschrieben werden.|
 |[CInternetFile::GetLength](#getlength)|Gibt die Größe der Datei zurück.|
-|[CInternetFile:: Read](#read)|Liest die Anzahl der angegebenen Bytes.|
+|[CInternetFile::Read](#read)|Liest die Anzahl der angegebenen Bytes.|
 |[CInternetFile::ReadString](#readstring)|Liest einen Datenstrom von Zeichen.|
 |[CInternetFile::Seek](#seek)|Positioniert den Zeiger in einer geöffneten Datei.|
 |[CInternetFile::SetReadBufferSize](#setreadbuffersize)|Legt fest, dass die Größe des Puffers, in dem Daten gelesen werden.|
 |[CInternetFile::SetWriteBufferSize](#setwritebuffersize)|Legt fest, dass die Größe des Puffers, in dem Daten geschrieben werden.|
-|[CInternetFile:: Write](#write)|Schreibt die Anzahl der angegebenen Bytes.|
+|[CInternetFile::Write](#write)|Schreibt die Anzahl der angegebenen Bytes.|
 |[CInternetFile::WriteString](#writestring)|Schreibt eine Null-terminierte Zeichenfolge in eine Datei an.|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
@@ -258,10 +258,10 @@ virtual LPTSTR ReadString(
 
 ### <a name="parameters"></a>Parameter
 
-*pStr*<br/>
+*pstr*<br/>
 Ein Zeiger auf eine Zeichenfolge, die erhält die Zeile, die gelesen wird.
 
-*nmax.*<br/>
+*nMax*<br/>
 Die maximale Anzahl der zu lesenden Zeichen.
 
 *rString*<br/>
@@ -294,7 +294,7 @@ virtual ULONGLONG Seek(
 *lOffset*<br/>
 Der Offset in Bytes, die den Zeiger für die Lese-/Schreibzugriff in der Datei zu verschieben.
 
-*nWenn*<br/>
+*nFrom*<br/>
 Relativer Verweis für den Offset. Dabei muss es sich um einen der folgenden Werte sein:
 
 - `CFile::begin` Verschieben den Dateizeiger *lOff* Bytes vom Anfang der Datei weiterleiten.
@@ -402,7 +402,7 @@ virtual void WriteString(LPCTSTR pstr);
 
 ### <a name="parameters"></a>Parameter
 
-*pStr*<br/>
+*pstr*<br/>
 Ein Zeiger auf eine Zeichenfolge, die mit dem Inhalt geschrieben werden.
 
 ### <a name="remarks"></a>Hinweise

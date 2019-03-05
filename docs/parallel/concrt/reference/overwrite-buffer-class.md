@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - overwrite_buffer class
 ms.assetid: 5cc428fe-3697-419c-9fb2-78f6181c9293
-ms.openlocfilehash: 680c07015538a2eacc9480d3cd22da9a36071e32
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: adac6e220a60a49a2b9bfa9463f16f8956b08d2e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455999"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299308"
 ---
 # <a name="overwritebuffer-class"></a>overwrite_buffer-Klasse
 
@@ -50,14 +50,14 @@ Der Nutzlasttyp der Nachrichten gespeichert und vom Puffer weitergegeben.
 |Name|Beschreibung|
 |----------|-----------------|
 |[overwrite_buffer](#ctor)|Überladen. Erstellt eine `overwrite_buffer` Meldungsblock.|
-|[~ Overwrite_buffer-Destruktor](#dtor)|Zerstört die `overwrite_buffer` Meldungsblock.|
+|[~overwrite_buffer Destructor](#dtor)|Zerstört die `overwrite_buffer` Meldungsblock.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
 |Name|Beschreibung|
 |----------|-----------------|
 |[has_value](#has_value)|Überprüft, ob dies `overwrite_buffer` -Meldungsblock ist einen Wert noch nicht.|
-|[Wert](#value)|Ruft einen Verweis auf die aktuelle Nutzlast der Nachricht gespeichert werden, der `overwrite_buffer` Meldungsblock.|
+|[value](#value)|Ruft einen Verweis auf die aktuelle Nutzlast der Nachricht gespeichert werden, der `overwrite_buffer` Meldungsblock.|
 
 ### <a name="protected-methods"></a>Geschützte Methoden
 
@@ -70,7 +70,7 @@ Der Nutzlasttyp der Nachrichten gespeichert und vom Puffer weitergegeben.
 |[propagate_to_any_targets](#propagate_to_any_targets)|Stellen die `message _PMessage` in diesem `overwrite_buffer` Block messaging und bietet sie alle verknüpften Ziele.|
 |[release_message](#release_message)|Gibt die nachrichtenreservierung einer vorherigen frei. (Überschreibt [source_block:: release_message](source-block-class.md#release_message).)|
 |[reserve_message](#reserve_message)|Reserviert eine Meldung, die zuvor von diesem angebotenen `overwrite_buffer` Meldungsblock. (Überschreibt [source_block:: reserve_message](source-block-class.md#reserve_message).)|
-|[resume_propagation](#resume_propagation)|Weitergabe fortgesetzt, nachdem eine Reservierung freigegeben wurde. (Überschreibt [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|
+|[resume_propagation](#resume_propagation)|Weitergabe fortgesetzt, nachdem eine Reservierung freigegeben wurde. (Overrides [source_block::resume_propagation](source-block-class.md#resume_propagation).)|
 |[send_message](#send_message)|Übergibt synchron eine Nachricht von einem `ISource` Block, um diese `overwrite_buffer` Meldungsblock. Wird aufgerufen, indem die `send` Methode, wenn Sie von einem Quellblock aufgerufen.|
 |[supports_anonymous_source](#supports_anonymous_source)|Überschreibt die `supports_anonymous_source` Methode, um anzugeben, dass dieser Block annehmen kann Nachrichten angeboten, von einer Quelle, die nicht verknüpft ist. (Überschreibt [ITarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|
 
@@ -349,5 +349,5 @@ Gespeicherte Wert in der `overwrite_buffer` können sofort nach dem Beenden dies
 ## <a name="see-also"></a>Siehe auch
 
 [Concurrency-Namespace](concurrency-namespace.md)<br/>
-[Unbounded_buffer-Klasse](unbounded-buffer-class.md)<br/>
+[unbounded_buffer-Klasse](unbounded-buffer-class.md)<br/>
 [single_assignment-Klasse](single-assignment-class.md)

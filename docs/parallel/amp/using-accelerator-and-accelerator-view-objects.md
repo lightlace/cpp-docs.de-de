@@ -2,12 +2,12 @@
 title: Verwenden von accelerator-Objekten und accelerator_view-Objekten
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
-ms.openlocfilehash: 4144adf288ddefd7f7dd00ada91f97aea94e6bce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05ca53d075867fefa43f7471bb795040d075274e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668597"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272898"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Verwenden von accelerator-Objekten und accelerator_view-Objekten
 
@@ -27,7 +27,7 @@ Die C++ AMP-Laufzeit wählt eine Standardzugriffstaste aus, sofern Sie keinen Co
 
 5. Andernfalls ein Gerät, das nicht mit der Anzeige verbunden ist.
 
-Außerdem gibt die Laufzeit den `access_type` `access_type_auto` für die Standardzugriffstaste an. Dies bedeutet, dass die Standardzugriffstaste freigegebenen Arbeitsspeicher verwendet, wenn dieser unterstützt wird und wenn ihre Leistungsmerkmale (Bandbreite und Wartezeit) dem dedizierten (nicht freigegebener) Speicher entsprechen.
+Außerdem gibt die Laufzeit den `access_type``access_type_auto` für die Standardzugriffstaste an. Dies bedeutet, dass die Standardzugriffstaste freigegebenen Arbeitsspeicher verwendet, wenn dieser unterstützt wird und wenn ihre Leistungsmerkmale (Bandbreite und Wartezeit) dem dedizierten (nicht freigegebener) Speicher entsprechen.
 
 Sie können die Eigenschaften der Standardzugriffstaste bestimmen, indem Sie die Standardzugriffstaste erstellen und ihre Eigenschaften überprüfen. Das folgende Codebeispiel legt den Pfad, die Größe des Zugriffstastenspeichers, die Unterstützung des freigegebenen Arbeitsspeichers, die Unterstützung doppelter Genauigkeit und die eingeschränkte Unterstützung doppelter Genauigkeit für die Standardzugriffstaste fest.
 
@@ -170,7 +170,7 @@ Die Gerätepfade von drei speziellen Zugriffstasten sind als Eigenschaften der `
 
 - [Accelerator:: direct3d_ref-Datenmember](reference/accelerator-class.md#direct3d_ref): Diese Singlethread-Zugriffstaste verwendet Software auf der CPU, um eine generische Grafikkarte zu emulieren. Sie wird standardmäßig für das Debuggen verwendet, ist jedoch in der Produktion nicht vorteilhaft, da sie langsamer ist als die Hardwarezugriffstasten. Außerdem ist sie nur im DirectX SDK und im Windows SDK verfügbar und wird mit großer Wahrscheinlichkeit nicht auf den Computern der Kunden installiert. Weitere Informationen finden Sie unter [Debuggen von GPU-Code](/visualstudio/debugger/debugging-gpu-code).
 
-- [Accelerator:: direct3d_warp-Datenmember](reference/accelerator-class.md#direct3d_warp): diese Zugriffstaste stellt eine fallbacklösung für die Ausführung von C++ AMP-Codes auf Multikern-CPUs, die Streaming SIMD Extensions (SSE) verwenden.
+- [Accelerator:: direct3d_warp-Datenmember](reference/accelerator-class.md#direct3d_warp): Dieser Accelerator bietet eine alternative Lösung für die Ausführung von C++ AMP-Codes auf Multikern-CPUs, die Streaming SIMD Extensions (SSE) verwenden.
 
 - [Accelerator:: cpu_accelerator-Datenmember](reference/accelerator-class.md#cpu_accelerator): Sie können diese Zugriffstaste zum Einrichten von stagingarrays verwenden. Sie kann keinen C++ AMP-Code ausführen. Weitere Informationen finden Sie unter den [Staging-Arrays in C++ AMP](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/11/09/staging-arrays-in-c-amp/) Beitrag im Blog zur parallelen Programmierung in systemeigenem Code (Blog).
 

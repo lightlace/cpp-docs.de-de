@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CUrl class
 ms.assetid: b3894d34-47b9-4961-9719-4197153793da
-ms.openlocfilehash: ed42461af50fa83ca142127587d334cc7e75d914
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 913365e2b20015b22480dfd364d75b2be3c6355b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471512"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295655"
 ---
 # <a name="curl-class"></a>CUrl-Klasse
 
@@ -62,7 +62,7 @@ class CUrl
 |Name|Beschreibung|
 |----------|-----------------|
 |[CUrl::CUrl](#curl)|Der Konstruktor.|
-|[CUrl:: ~ CUrl](#dtor)|Der Destruktor.|
+|[CUrl::~CUrl](#dtor)|Der Destruktor.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -106,7 +106,7 @@ class CUrl
 
 `CUrl` können Sie die Felder einer URL, z. B. den Pfad oder Port ändern. `CUrl` versteht URLs im folgenden Format an:
 
-\<Schema > ://\<UserName >:\<Kennwort >\@\<HostName >:\<PortNumber > /\<UrlPath >\<ExtraInfo >
+\<Scheme>://\<UserName>:\<Password>\@\<HostName>:\<PortNumber>/\<UrlPath>\<ExtraInfo>
 
 (Einige Felder sind optional.) Betrachten Sie beispielsweise diese URL ein:
 
@@ -132,7 +132,7 @@ Um die UrlPath-Feld (beispielsweise) zu bearbeiten, verwenden Sie [GetUrlPath](#
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** "atlutil.h"
+**Header:** atlutil.h
 
 ##  <a name="canonicalize"></a>  CUrl::Canonicalize
 
@@ -149,13 +149,13 @@ Die Flags, die Kanonisierung steuern. Wenn keine Flags angegeben werden (*DwFlag
 
 - ATL_URL_BROWSER_MODE: Nicht codieren oder Decodieren von Zeichen nach "#" oder "" und wird nicht entfernt nachgestellte Leerzeichen nach "". Wenn dieser Wert nicht angegeben ist, wird die gesamte URL codiert und nachgestellte Leerzeichen entfernt.
 
-- ATL_URL _DECODE: konvertiert alle % XX Sequenzen in Zeichen, einschließlich der Escape-Sequenzen, bevor die URL analysiert wird.
+- ATL_URL _DECODE: Konvertiert alle % XX Sequenzen in Zeichen, einschließlich der Escape-Sequenzen, bevor die URL analysiert wird.
 
-- ATL_URL _ENCODE_PERCENT: alle gefunden Prozentzeichen codiert. Standardmäßig werden die Prozentzeichen nicht codiert.
+- ATL_URL _ENCODE_PERCENT: Codiert alle Prozentzeichen gefunden. Standardmäßig werden die Prozentzeichen nicht codiert.
 
-- ATL_URL _ENCODE_SPACES_ONLY: codiert nur aus Leerzeichen bestehen.
+- ATL_URL _ENCODE_SPACES_ONLY: Codiert die nur aus Leerzeichen bestehen.
 
-- ATL_URL _NO_ENCODE: nicht unsichere Zeichen in Escapesequenzen konvertiert.
+- ATL_URL _NO_ENCODE: Nicht konvertiert unsichere Zeichen in Escapesequenzen.
 
 - ATL_URL _NO_META: Meta-Sequenzen werden nicht entfernt (wie z. B. "."und"..") aus der URL.
 
@@ -225,7 +225,7 @@ Gibt "true" bei Erfolg bei "false".
 
 Diese Methode fügt die einzelnen Felder, um die vollständige URL-Zeichenfolge, die mithilfe des folgenden Formats zu erstellen:
 
-**\<Schema > ://\<Benutzer >:\<übergeben >\@\<Domäne >:\<Port >\<Pfad >\<zusätzliche >**
+**\<scheme>://\<user>:\<pass>\@\<domain>:\<port>\<path>\<extra>**
 
 Beim Aufrufen dieser Methode, die *PdwMaxLength* -Parameter enthalten die maximale Länge des Zeichenfolgenpuffers verwiesen wird, indem Sie zunächst die *LpszUrl* Parameter. Der Wert des der *PdwMaxLength* Parameter mit der tatsächlichen Länge der URL-Zeichenfolge, aktualisiert werden.
 
@@ -246,7 +246,7 @@ CUrl(const CUrl& urlThat) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*URL*<br/>
+*urlThat*<br/>
 Die `CUrl` Objekt zu kopieren, um die URL zu erstellen.
 
 ##  <a name="dtor"></a>  CUrl:: ~ CUrl
@@ -447,7 +447,7 @@ CUrl& operator= (const CUrl& urlThat) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*URL*<br/>
+*urlThat*<br/>
 Die `CUrl` -Objekt, in das aktuelle Objekt kopiert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -515,7 +515,7 @@ inline BOOL SetPortNumber(ATL_URL_PORT nPrt) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Schnittstellenadresse*<br/>
+*nPrt*<br/>
 Nummer des Ports.
 
 ### <a name="return-value"></a>Rückgabewert

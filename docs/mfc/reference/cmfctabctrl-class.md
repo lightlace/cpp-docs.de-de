@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 8388a79bf7c85f3d603bd4ef234947e872534cba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8dc8c51cc1847d29b76e2017db4c1368b35b9a9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505120"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281680"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -148,7 +148,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::GetFirstVisibleTabNum](#getfirstvisibletabnum)|Ruft den Index der ersten Registerkarte, die im aktuellen Registerkarten-Steuerelement sichtbar ist.|
 |[CMFCTabCtrl::GetResizeMode](#getresizemode)|Ruft einen Wert, der angibt, wie die aktuellen Registerkarten-Steuerelement die Größe geändert werden kann.|
 |[CMFCTabCtrl::GetScrollBar](#getscrollbar)|Ruft einen Zeiger auf das Scroll Bar-Objekt, das das Registerkarten-Steuerelement zugeordnet ist.|
-|[CMFCTabCtrl::GetTabArea](#gettabarea)|Ruft das umschließende Rechteck des Registerkartenbereichs Bezeichnung oben oder unten auf der das Registerkarten-Steuerelement ab. (Überschreibt [CMFCBaseTabCtrl::GetTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#gettabarea).)|
+|[CMFCTabCtrl::GetTabArea](#gettabarea)|Ruft das umschließende Rechteck des Registerkartenbereichs Bezeichnung oben oder unten auf der das Registerkarten-Steuerelement ab. (Overrides [CMFCBaseTabCtrl::GetTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#gettabarea).)|
 |`CMFCTabCtrl::GetTabFromPoint`|Ruft ab, die Registerkarte, die einen angegebenen Punkt enthält. (Überschreibt [CMFCBaseTabCtrl::GetTabFromPoint](../../mfc/reference/cmfcbasetabctrl-class.md#gettabfrompoint).)|
 |[CMFCTabCtrl::GetTabMaxWidth](#gettabmaxwidth)|Ruft die maximale Breite einer Registerkarte ab.|
 |[CMFCTabCtrl::GetTabsHeight](#gettabsheight)|Ruft die Höhe des Registerkartenbereichs des aktuellen Registerkarten-Steuerelements ab.|
@@ -175,7 +175,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::ModifyTabStyle](#modifytabstyle)|Gibt die Darstellung der Registerkarten im aktuellen Registerkarten-Steuerelement an.|
 |`CMFCTabCtrl::MoveTab`|Verschiebt eine Registerkarte in eine andere Registerkarte Position. (Überschreibt [CMFCBaseTabCtrl::MoveTab](../../mfc/reference/cmfcbasetabctrl-class.md#movetab).)|
 |[CMFCTabCtrl::OnDragEnter](#ondragenter)|Vom Framework aufgerufen, wenn der Cursor zuerst in das Fenster des Steuerelements Registerkarte gezogen wird.|
-|[CMFCTabCtrl::OnDragOver](#ondragover)|Wird von Framework während eines Ziehvorgangs aufgerufen, wenn die Maus über dem Drop-Ziel-Fenster verschoben wird. (Überschreibt [CMFCBaseTabCtrl::OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|
+|[CMFCTabCtrl::OnDragOver](#ondragover)|Wird von Framework während eines Ziehvorgangs aufgerufen, wenn die Maus über dem Drop-Ziel-Fenster verschoben wird. (Overrides [CMFCBaseTabCtrl::OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|
 |[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|Ein Popupmenü von Fenstern im Registerkartenformat angezeigt wird, wartet, bis der Benutzer eine Registerkarte wählt, und stellt der ausgewählten Registerkarte auf die aktive Registerkarte.|
 |`CMFCTabCtrl::PreTranslateMessage`|Übersetzt fenstermeldungen, bevor sie um weitergeleitet werden die [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows-Funktionen. (Überschreibt [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|
 |`CMFCTabCtrl::RecalcLayout`|Berechnet das interne Layout des Registerkarten-Steuerelements. (Überschreibt [CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|
@@ -310,10 +310,10 @@ BOOL Create(
 
 ### <a name="parameters"></a>Parameter
 
-*Stil*<br/>
+*style*<br/>
 [in] Der Stil des Registerkarten-Steuerelements. Weitere Informationen finden Sie in den Hinweisen.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ein Rechteck, das Registerkarten-Steuerelement umschließt.
 
 *pParentWnd*<br/>
@@ -387,7 +387,7 @@ void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] True, um die Schaltfläche "Schließen" auf der aktiven Registerkarte angezeigt werden sollen. Zum Anzeigen der Schaltfläche "Schließen" in der oberen rechten Ecke des Registerkartenbereichs wird false ZURÜCKGEGEBEN. Der Standardwert ist "true".
 
 ##  <a name="enableinplaceedit"></a>  CMFCTabCtrl::EnableInPlaceEdit
@@ -400,7 +400,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] True, um bearbeitbare registerkartenbezeichnungen zu aktivieren. "False", um bearbeitbare registerkartenbezeichnungen zu deaktivieren.
 
 ### <a name="remarks"></a>Hinweise
@@ -415,7 +415,7 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] TRUE, um ein Popupmenü Fenster im Registerkartenformat Bezeichnungen anzuzeigen; "False" Vorwärts und rückwärts-scrollschaltflächen angezeigt werden. Der Standardwert ist "true".
 
 ### <a name="remarks"></a>Hinweise
@@ -564,7 +564,7 @@ virtual void GetTabsRect(CRect& rect) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 [out] Bei der Rückgabe dieser Methode die *Rect* Parameter enthält ein Rechteck, das den Registerkartenbereich umschließt.
 
 ##  <a name="getwndarea"></a>  CMFCTabCtrl::GetWndArea
@@ -577,7 +577,7 @@ void GetWndArea(CRect& rect) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 [in, out] Bei der Rückgabe dieser Methode enthält dieser Parameter ein Rechteck, das den aktuellen Registerkarten-Steuerelement umschließt.
 
 ### <a name="remarks"></a>Hinweise
@@ -835,7 +835,7 @@ BOOL ModifyTabStyle(Style style);
 
 ### <a name="parameters"></a>Parameter
 
-*Stil*<br/>
+*style*<br/>
 [in] Einer der Enumerationswerte, der angibt, die Darstellung des Registerkarten-Steuerelements. Weitere Informationen finden Sie in der Tabelle unter "Hinweise".
 
 ### <a name="return-value"></a>Rückgabewert
@@ -874,9 +874,9 @@ virtual DROPEFFECT OnDragEnter(
 [in] Verweist auf ein Objekt, das Daten enthält, die der Benutzer zieht.
 
 *dwKeyState*<br/>
-[in] Enthält den Status der Modifizierertasten. Dieser Parameter ist eine bitweise Kombination (OR) die folgenden Werte: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON. Weitere Informationen finden Sie unter den **Meldungsparameter** Abschnitt [zu Mauseingabe](/windows/desktop/inputdev/about-mouse-input).
+[in] Enthält den Status der Modifizierertasten. Dieser Parameter ist eine bitweise Kombination (OR) die folgenden Werte: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON, and MK_RBUTTON. Weitere Informationen finden Sie unter den **Meldungsparameter** Abschnitt [zu Mauseingabe](/windows/desktop/inputdev/about-mouse-input).
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Enthält die aktuelle Position des Cursors in Clientkoordinaten.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -908,7 +908,7 @@ virtual DROPEFFECT OnDragOver(
 *dwKeyState*<br/>
 [in] Der Zustand der Zusatztasten, der eine bitweise Kombination (OR) von MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON ist. Weitere Informationen finden Sie unter "Meldungsparameter" in [zu Mauseingabe](/windows/desktop/inputdev/about-mouse-input).
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Die aktuelle Mausposition.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -929,7 +929,7 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 [in] Die Koordinaten, an dem das Popupmenü anzuzeigen.
 
 ### <a name="remarks"></a>Hinweise
@@ -1042,7 +1042,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 *uiID*<br/>
 [in] Die ID einer Bitmap-Ressource, die Liste der Bilder enthält.
 
-*CX*<br/>
+*cx*<br/>
 [in] Die Breite des jedes Bilds in Pixel. Der Standardwert ist 15.
 
 *clrTransp*<br/>
@@ -1111,7 +1111,7 @@ void StopResize(BOOL bCancel);
 
 ### <a name="parameters"></a>Parameter
 
-*bAbbrechen*<br/>
+*bCancel*<br/>
 [in] "True", den aktuellen Vorgang der Größenänderung abzubrechen; "False" zum Ausführen der aktuellen Anpassen der Größe ab. In beiden Fällen beendet das Framework an, das Ändern der Größe Rechteck zu zeichnen.
 
 ##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar

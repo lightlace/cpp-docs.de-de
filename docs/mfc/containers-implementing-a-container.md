@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-ms.openlocfilehash: 89bb8b483dba6e635eef5d9857bb558eca8e8fec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ab91316c9ee07296fbc46f9f17b3c46c71ee96f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546704"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271423"
 ---
 # <a name="containers-implementing-a-container"></a>Container: Implementieren eines Containers
 
@@ -60,10 +60,9 @@ Möglicherweise möchten Sie auch einige der folgenden Funktionen in Ihrer Anwen
 
 - Enthält Links zu eingebetteten Objekten oder Kombination aus Container/Server-Anwendungen.
 
-   Weitere Informationen finden Sie unter [Container: Erweiterte Funktionen](../mfc/containers-advanced-features.md).
+   Weitere Informationen finden Sie unter [Container: Erweiterte Features](../mfc/containers-advanced-features.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 [Container](../mfc/containers.md)<br/>
 [Container: Clientelemente](../mfc/containers-client-items.md)
-

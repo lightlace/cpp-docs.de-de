@@ -10,12 +10,12 @@ helpviewer_keywords:
 - OnResetState method [MFC]
 - CLSID_CPicturePropPage [MFC]
 ms.assetid: 2e49735c-21b9-4442-bb3d-c82ef258eec9
-ms.openlocfilehash: fe239f864f4b7730d28372ee3fc9d298131d28d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86e9bd220d06e714030f7d44888b210ba35fd345
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462100"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264559"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Verwenden von Bildern in einem ActiveX-Steuerelement
 
@@ -31,7 +31,7 @@ In diesem Artikel werden der allgemeine Bildtyp und dessen Implementierung in da
 
 Der Bildtyp (Picture) gehört zu einer Gruppe von Datentypen, die für einige ActiveX-Steuerelemente verfügbar sind. Dieser Typ behandelt Metadateien, Bitmaps oder Symbole und ermöglicht dem Benutzer die Festlegung eines Bildes, das in einem ActiveX-Steuerelement angezeigt werden soll. Benutzerdefinierte Bildeigenschaften werden mithilfe eines Bildobjekts und der Get-/Set-Funktionen implementiert, die dem Steuerelementbenutzer den Zugriff auf die Bildeigenschaft ermöglichen. Steuerelementbenutzer greifen über die vordefinierten Bildeeigenschaften auf die benutzerdefinierte Bildeigenschaft zu.
 
-Neben dem Standardbildtyp sind auch Schriftart- und Farbtypen verfügbar. Weitere Informationen zur Verwendung des standardmäßigen Schriftarttyps im ActiveX-Steuerelement finden Sie im Artikel [MFC-ActiveX-Steuerelemente: Verwenden von Schriftarten](../mfc/mfc-activex-controls-using-fonts.md).
+Neben dem Standardbildtyp sind auch Schriftart- und Farbtypen verfügbar. Weitere Informationen unter Verwendung des standardmäßigen Schriftarttyps im ActiveX-Steuerelement finden Sie im Artikel [MFC-ActiveX-Steuerelemente: Verwenden von Schriftarten](../mfc/mfc-activex-controls-using-fonts.md).
 
 Die ActiveX-Steuerelementklassen stellen mehrere Komponenten bereit, die Sie zum Implementieren der Bildeigenschaft im Steuerelement verwenden können. Diese Komponenten umfassen:
 
@@ -41,11 +41,11 @@ Die ActiveX-Steuerelementklassen stellen mehrere Komponenten bereit, die Sie zum
 
 - Unterstützung der Eigenschaften vom Typ **LPPICTUREDISP**, die mit Get-/Set-Funktionen implementiert wurden.
 
-   In der Klassenansicht können Sie schnell eine oder mehrere benutzerdefinierte Eigenschaften hinzufügen, die den Bildtyp unterstützen. Weitere Informationen zum Hinzufügen von ActiveX-Steuerelementeigenschaften in der Klassenansicht finden Sie unter [MFC-ActiveX-Steuerelemente: Eigenschaften](../mfc/mfc-activex-controls-properties.md).
+   In der Klassenansicht können Sie schnell eine oder mehrere benutzerdefinierte Eigenschaften hinzufügen, die den Bildtyp unterstützen. Weitere Informationen zum Hinzufügen von ActiveX-Steuerelementeigenschaften in der Klassenansicht finden Sie im Artikel [MFC-ActiveX-Steuerelemente: Eigenschaften](../mfc/mfc-activex-controls-properties.md).
 
 - Eine Eigenschaftenseite, über die die Bildeigenschaft(en) eines Steuerelements geändert werden.
 
-   Diese Eigenschaftenseite ist Bestandteil einer Reihe vordefinierter Eigenschaftenseiten, die für ActiveX-Steuerelemente verfügbar sind. Weitere Informationen zu Eigenschaftenseiten von ActiveX-Steuerelementen finden Sie im Artikel [MFC-ActiveX-Steuerelemente: Verwenden von vordefinierten Eigenschaftenseiten](../mfc/mfc-activex-controls-using-stock-property-pages.md).
+   Diese Eigenschaftenseite ist Bestandteil einer Reihe vordefinierter Eigenschaftenseiten, die für ActiveX-Steuerelemente verfügbar sind. Weitere Informationen zu Eigenschaftenseiten von ActiveX-Steuerelement, finden Sie im Artikel [MFC-ActiveX-Steuerelemente: Verwenden von vordefinierten Eigenschaftenseiten](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
 ##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> Implementieren einer benutzerdefinierten Bildeigenschaft in das ActiveX-Steuerelement
 
@@ -151,5 +151,4 @@ Nachdem Sie die Änderungen vorgenommen haben, erstellen Sie das Projekt neu, um
 
 [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)<br/>
 [MFC-ActiveX-Steuerelemente: Verwenden von Schriftarten](../mfc/mfc-activex-controls-using-fonts.md)<br/>
-[MFC-ActiveX-Steuerelemente: Eigenschaftenseite](../mfc/mfc-activex-controls-property-pages.md)
-
+[MFC-ActiveX-Steuerelemente: Eigenschaftenseiten](../mfc/mfc-activex-controls-property-pages.md)

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CCustomInterpolator [MFC], m_initialValue
 - CCustomInterpolator [MFC], m_initialVelocity
 ms.assetid: 28d85595-989a-40a3-b003-e0e38437a94d
-ms.openlocfilehash: 49685d079e367449ee5973ab37f0bbc7ea44da14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d3f2ed95cfb9e7e885713252171c98834ae5c0a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431904"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303091"
 ---
 # <a name="ccustominterpolator-class"></a>CCustomInterpolator-Klasse
 
@@ -68,7 +68,7 @@ class CCustomInterpolator;
 |[CCustomInterpolator::GetDependencies](#getdependencies)|Ruft die Interpolators-Abhängigkeiten ab.|
 |[CCustomInterpolator::GetDuration](#getduration)|Ruft die Dauer des Interpolators ab.|
 |[CCustomInterpolator::GetFinalValue](#getfinalvalue)|Ruft ab, der endgültige Wert, der Interpolator führt.|
-|[CCustomInterpolator:: Init](#init)|Initialisiert die Dauer und die endgültigen Wert.|
+|[CCustomInterpolator::Init](#init)|Initialisiert die Dauer und die endgültigen Wert.|
 |[CCustomInterpolator::InterpolateValue](#interpolatevalue)|Führt den Wert am angegebenen Offset.|
 |[CCustomInterpolator::InterpolateVelocity](#interpolatevelocity)|Die Geschwindigkeit an einem angegebenen Offset interpoliert|
 |[CCustomInterpolator::SetDuration](#setduration)|Legt die Dauer des Interpolators fest.|
@@ -111,7 +111,7 @@ CCustomInterpolator(
 
 ### <a name="parameters"></a>Parameter
 
-*Dauer*<br/>
+*duration*<br/>
 Die Dauer des Übergangs.
 
 *finalValue*
@@ -156,7 +156,7 @@ virtual BOOL GetDuration(UI_ANIMATION_SECONDS* duration);
 
 ### <a name="parameters"></a>Parameter
 
-*Dauer*<br/>
+*duration*<br/>
 Die Ausgabe. Die Dauer des Übergangs, in Sekunden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -173,7 +173,7 @@ virtual BOOL GetFinalValue(DOUBLE* value);
 
 ### <a name="parameters"></a>Parameter
 
-*Wert*<br/>
+*value*<br/>
 Die Ausgabe. Der endgültige Wert einer Variablen am Ende des Übergangs.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -192,7 +192,7 @@ void Init(
 
 ### <a name="parameters"></a>Parameter
 
-*Dauer*<br/>
+*duration*<br/>
 Die Dauer des Übergangs.
 
 *finalValue*<br/>
@@ -210,7 +210,7 @@ virtual BOOL InterpolateValue(
 
 ### <a name="parameters"></a>Parameter
 
-*Wert*<br/>
+*value*<br/>
 Die Ausgabe. Der interpolierten Wert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -229,7 +229,7 @@ virtual BOOL InterpolateVelocity(
 
 ### <a name="parameters"></a>Parameter
 
-*Geschwindigkeit*<br/>
+*velocity*<br/>
 Die Ausgabe. Die Geschwindigkeit der Variablen mit dem Offset.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -294,7 +294,7 @@ virtual BOOL SetDuration(UI_ANIMATION_SECONDS duration);
 
 ### <a name="parameters"></a>Parameter
 
-*Dauer*<br/>
+*duration*<br/>
 Die Dauer des Übergangs.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -313,7 +313,7 @@ virtual BOOL SetInitialValueAndVelocity(
 
 ### <a name="parameters"></a>Parameter
 
-*"InitialValue"*<br/>
+*initialValue*<br/>
 Der Wert der Variablen zu Beginn des Übergangs.
 
 *initialVelocity*<br/>

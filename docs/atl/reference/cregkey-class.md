@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: cf2f97c1c3b389d0ee2b3d4bcdd2d9da2dbb3c8d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 56a3289d5546db21c42d22b5e8544913bdaa78cf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694854"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283656"
 ---
 # <a name="cregkey-class"></a>CRegKey-Klasse
 
@@ -69,7 +69,7 @@ class CRegKey
 |Name|Beschreibung|
 |----------|-----------------|
 |[CRegKey::CRegKey](#cregkey)|Der Konstruktor.|
-|[CRegKey:: ~ CRegKey](#dtor)|Der Destruktor.|
+|[CRegKey::~CRegKey](#dtor)|Der Destruktor.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -234,7 +234,7 @@ Zeiger auf CAtlTransactionManager-Objekt
 
 Erstellt ein neues `CRegKey`-Objekt. Das Objekt kann erstellt werden, aus einer vorhandenen `CRegKey` -Objekt, oder aus einem Handle für einen Registrierungsschlüssel.
 
-##  <a name="dtor"></a>  CRegKey:: ~ CRegKey
+##  <a name="dtor"></a>  CRegKey::~CRegKey
 
 Der Destruktor.
 
@@ -359,10 +359,10 @@ LONG GetKeySecurity(
 
 ### <a name="parameters"></a>Parameter
 
-*SI*<br/>
+*si*<br/>
 Die [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) -Wert, der die angeforderten Informationen an.
 
-*PSD*<br/>
+*psd*<br/>
 Ein Zeiger auf einen Puffer, der eine Kopie der angeforderten Sicherheitsbeschreibung erhält.
 
 *pnBytes*<br/>
@@ -726,7 +726,7 @@ Der Wert des Felds numerische Daten.
 *lpszValueName*<br/>
 Gibt das Wertfeld "abgefragt werden.
 
-*szValue einen*<br/>
+*szValue*<br/>
 Zeichenfolgendaten mit dem Wert des Felds.
 
 *pdwCount*<br/>
@@ -884,7 +884,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*SI*<br/>
+*si*<br/>
 Gibt die Komponenten der Sicherheitsbeschreibung fest. Der Wert eine Kombination der folgenden Werte sind möglich:
 
 |Wert|Bedeutung|
@@ -894,7 +894,7 @@ Gibt die Komponenten der Sicherheitsbeschreibung fest. Der Wert eine Kombination
 |OWNER_SECURITY_INFORMATION|Legt fest, Besitzer-SID des Schlüssels. Der Schlüssel muss WRITE_OWNER Zugriff, oder der aufrufende Prozess muss den Besitzer des Objekts oder die Berechtigung zum SE_TAKE_OWNERSHIP_NAME aktiviert.|
 |SACL_SECURITY_INFORMATION|Legt fest, der mit dem Schlüssel System Access Control List (SACL). Der Schlüssel muss es sich um ACCESS_SYSTEM_SECURITY Zugriff haben. Der richtige Weg, um diesen Zugriff zu erhalten ist zum Aktivieren der SE_SECURITY_NAME [Berechtigungen](/windows/desktop/secauthz/privileges) in der aktuellen Zugriffstoken des Aufrufers, öffnen Sie das Handle für den ACCESS_SYSTEM_SECURITY Zugriff, und deaktivieren Sie die Berechtigung.|
 
-*PSD*<br/>
+*psd*<br/>
 Zeiger auf eine [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) Struktur, die Attribute für die Sicherheit für den angegebenen Schlüssel festlegen angibt.
 
 ### <a name="return-value"></a>Rückgabewert

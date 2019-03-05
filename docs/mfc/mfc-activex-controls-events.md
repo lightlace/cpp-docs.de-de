@@ -13,12 +13,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - OLE events [MFC]
 ms.assetid: e1e57e0c-206b-4923-a0b5-682c26564f74
-ms.openlocfilehash: 76557e64b5b53c32a7d7f63134085e86bf0138df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d8a881d07a3e48673c6dc3298816d165273be0d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540672"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276766"
 ---
 # <a name="mfc-activex-controls-events"></a>MFC-ActiveX-Steuerelemente: Ereignisse
 
@@ -26,7 +26,7 @@ ActiveX-Steuerelemente verwenden Ereignisse, um einen Container zu informieren, 
 
 Ereignisse werden auch Nachrichten bezeichnet.
 
-MFC unterstützt zwei Arten von Ereignissen: vordefinierte und benutzerdefinierte. Vordefinierte Ereignisse sind die Ereignisse, die Klasse [COleControl](../mfc/reference/colecontrol-class.md) automatisch behandelt. Eine vollständige Liste der vordefinierten Ereignissen, finden Sie im Artikel [MFC-ActiveX-Steuerelemente: Hinzufügen von Ereignissen](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md). Benutzerdefinierte Ereignisse ermöglichen ein Steuerelement die Möglichkeit, den Container zu benachrichtigen, wenn eine Aktion, die speziell für dieses Steuerelement stattfindet. Einige Beispiele sind eine Änderung in den internen Zustand eines Steuerelements oder der Empfang einer Fensternachricht bestimmte.
+MFC unterstützt zwei Arten von Ereignissen: vordefinierte und benutzerdefinierte. Vordefinierte Ereignisse sind die Ereignisse, die Klasse [COleControl](../mfc/reference/colecontrol-class.md) automatisch behandelt. Eine vollständige Liste der vordefinierten Ereignissen, finden Sie im Artikel [MFC-ActiveX-Steuerelemente: Hinzufügen von vordefinierten Ereignissen](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md). Benutzerdefinierte Ereignisse ermöglichen ein Steuerelement die Möglichkeit, den Container zu benachrichtigen, wenn eine Aktion, die speziell für dieses Steuerelement stattfindet. Einige Beispiele sind eine Änderung in den internen Zustand eines Steuerelements oder der Empfang einer Fensternachricht bestimmte.
 
 Für das Steuerelement, Ereignisse ordnungsgemäß auszulösen muss die Steuerelementklasse jedes Ereignis des Steuerelements auf eine Memberfunktion zuordnen, die aufgerufen werden soll, wenn das zugehörige Ereignis eintritt. Dieser Zuordnungsmechanismus (eine Event-Zuordnung bezeichnet) zeigt Informationen über das Ereignis und durch die Visual Studio ganz einfach aufrufen und bearbeiten die Ereignisse des Steuerelements. Dieses Event-Zuordnung wird deklariert, indem folgendes Makro auf, befindet sich in der Kopfzeile (. H)-Datei von der Klassendeklaration des Steuerelements:
 
