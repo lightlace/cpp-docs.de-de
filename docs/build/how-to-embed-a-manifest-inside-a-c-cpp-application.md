@@ -1,19 +1,19 @@
 ---
-title: 'Gewusst wie: Einbetten eines Manifests in eine C/C++-Anwendung'
+title: 'Vorgehensweise: Einbetten eines Manifests in eine C/C++-Anwendung'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-ms.openlocfilehash: c3557d22f51207687c6c0adde80b4cd5b3293afd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1bff23c91b465d697cc52a2b893ece5be3764b1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624862"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412899"
 ---
-# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Gewusst wie: Einbetten eines Manifests in eine C/C++-Anwendung
+# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Vorgehensweise: Einbetten eines Manifests in eine C/C++-Anwendung
 
 Es wird empfohlen, dass eine C/C++-Anwendung (oder Bibliothek) haben das Manifest in die endgültige Binärdatei eingebettet werden, da so gewährleistet, dass richtige Laufzeitverhalten führen konnte in den meisten Szenarien. Standardmäßig versucht Visual Studio das Manifest eingebettet, wenn es sich um ein Projekt aus Quelldateien erstellt. finden Sie unter [Manifest Generation in Visual Studio](../build/manifest-generation-in-visual-studio.md) für Weitere Informationen. Wenn eine Anwendung mithilfe von Nmake erstellt wird, gibt jedoch einige Änderungen an der vorhandenen Makefile erforderlich. In diesem Abschnitt wird veranschaulicht, wie vorhandene Makefiles zum Einbetten von des Manifests in die endgültige Binärdatei automatisch geändert wird.
 
@@ -23,11 +23,11 @@ Es gibt zwei Möglichkeiten, um das Manifest in eine Anwendung oder Bibliothek e
 
 - Wenn Sie einen inkrementellen Build nicht ausführen können Sie direkt über die Befehlszeile etwa wie folgt einen Postbuildschritt Manifest einbetten:
 
-   **MT.exe-manifest MyApp.exe.manifest-outputresource:MyApp.exe;1**
+   **mt.exe -manifest MyApp.exe.manifest -outputresource:MyApp.exe;1**
 
    oder
 
-   **MT.exe-manifest MyLibrary.dll.manifest-outputresource:MyLibrary.dll;2**
+   **mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2**
 
    (1 für eine EXE-Datei, 2 für eine DLL-Datei).
 

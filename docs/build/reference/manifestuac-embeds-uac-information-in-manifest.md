@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MANIFESTUAC linker option
 - -MANIFESTUAC linker option
 ms.assetid: 2d243c39-fa13-493c-b56f-d0d972a1603a
-ms.openlocfilehash: 702dae41f873218dab0d3fb24e46dacd710bc20f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ae9d18bb0fe2172886ef24250d53cf76851bbba
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625090"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420426"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (bettet UAC-Informationen in Manifest ein)
 
@@ -33,7 +33,7 @@ Gibt an, ob Informationen zur Benutzerkontensteuerung (UAC) in das Programmmanif
 
 ### <a name="parameters"></a>Parameter
 
-*Fragment*<br/>
+*fragment*<br/>
 Eine Zeichenfolge, die den `level`-Wert und den `uiAccess`-Wert enthält. Weitere Informationen finden Sie unter "Hinweise" weiter unten in diesem Thema.
 
 *_level*<br/>
@@ -48,11 +48,11 @@ Wenn Sie mehrere /MANIFESTUAC-Optionen in der Befehlszeile eingeben, erhält die
 
 Für "/MANIFESTUAC:level" gibt es folgende Auswahlmöglichkeiten:
 
-- `asInvoker`: Die Anwendung wird mit den gleichen Berechtigungen wie der Prozess ausgeführt, der sie gestartet hat. Die Anwendung auf eine höhere Berechtigung erweitert werden kann, dazu **als Administrator ausführen**.
+- `asInvoker`: Die Anwendung wird mit den gleichen Berechtigungen wie der Prozess ausgeführt, die sie gestartet hat. Die Anwendung auf eine höhere Berechtigung erweitert werden kann, dazu **als Administrator ausführen**.
 
-- "highestAvailable": Die Anwendung wird auf der höchsten für sie verfügbaren Berechtigungsebene ausgeführt. Wenn der Benutzer, der die Anwendung startet, Mitglied der Gruppe "Administratoren" ist, entspricht diese Option "requireAdministrator". Wenn die höchste verfügbare Berechtigungsebene höher als die Ebene des öffnenden Prozesses ist, fordert das System zur Eingabe von Anmeldeinformationen auf.
+- "highestAvailable": Die Anwendung wird mit der höchsten Berechtigungsstufe ausgeführt werden, die dies möglich. Wenn der Benutzer, der die Anwendung startet, Mitglied der Gruppe "Administratoren" ist, entspricht diese Option "requireAdministrator". Wenn die höchste verfügbare Berechtigungsebene höher als die Ebene des öffnenden Prozesses ist, fordert das System zur Eingabe von Anmeldeinformationen auf.
 
-- "requireAdministrator": Die Anwendung wird mit Administratorrechten ausgeführt. Der Benutzer, der die Anwendung startet, muss ein Mitglied der Gruppe "Administratoren" sein. Wenn der öffnende Prozess nicht mit Administratorrechten ausgeführt wird, fordert das System zur Eingabe von Anmeldeinformationen auf.
+- requireAdministrator: Die Anwendung wird mit Administratorberechtigungen ausgeführt. Der Benutzer, der die Anwendung startet, muss ein Mitglied der Gruppe "Administratoren" sein. Wenn der öffnende Prozess nicht mit Administratorrechten ausgeführt wird, fordert das System zur Eingabe von Anmeldeinformationen auf.
 
 Sie können die Ebene und die uiAccess-Werte in einem Schritt angeben, indem Sie die /MANIFESTUAC:fragment-Option verwenden. Das Fragment muss das folgende Format aufweisen:
 

@@ -22,16 +22,16 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: d05af932d5f531a4dab02e7e0ca171f4484891a3
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: ee206dd6eb44acc23f30aebadb558d4f72bcd8bf
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556321"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421128"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl-Klasse
 
-Stellt eine Implementierung für die [ICommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms714914(v=vs.85)) Schnittstelle.
+Stellt eine Implementierung für die [ICommandText](/previous-versions/windows/desktop/ms714914(v=vs.85)) Schnittstelle.
 
 ## <a name="syntax"></a>Syntax
 
@@ -69,7 +69,7 @@ Die Befehlsklasse abgeleitet `ICommandTextImpl`.
 
 Eine erforderliche Schnittstelle für Befehle.
 
-## <a name="getcommandtext"></a> ICommandTextImpl:: Getcommandtext
+## <a name="getcommandtext"></a> ICommandTextImpl::GetCommandText
 
 Gibt den Textbefehl festlegen, indem dem letzten Aufruf von [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).
 
@@ -82,9 +82,9 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [ICommandText::GetCommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms709825(v=vs.85)) in die *OLE DB-Programmierreferenz*. Die *PguidDialect* Parameter standardmäßig ignoriert.
+Finden Sie unter [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) in die *OLE DB-Programmierreferenz*. Die *PguidDialect* Parameter standardmäßig ignoriert.
 
-## <a name="setcommandtext"></a> ICommandTextImpl:: SetCommandText
+## <a name="setcommandtext"></a> ICommandTextImpl::SetCommandText
 
 Legt den Befehlstext, und Ersetzen Sie dabei die vorhandenen Befehlstext fest.
 
@@ -97,9 +97,9 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [ICommandText:: SetCommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms709757(v=vs.85)) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
-## <a name="strcommandtext"></a> ICommandTextImpl:: M_strcommandtext
+## <a name="strcommandtext"></a> ICommandTextImpl::m_strCommandText
 
 Speichert die Textzeichenfolge für den Befehl.
 

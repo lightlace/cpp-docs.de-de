@@ -29,12 +29,12 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-ms.openlocfilehash: 669f1fc3ef151ee76ab6b057798f33f5b3cc1287
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7727f433ae68f26075645b35ff5edad43159ec67
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464908"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415408"
 ---
 # <a name="bscmake-options"></a>BSCMAKE-Optionen
 
@@ -42,22 +42,22 @@ In diesem Abschnitt werden die Optionen beschrieben, die zur Steuerung von BSCMA
 
 Nur **/nologo** und **/o** stehen in der Visual Studio-Entwicklungsumgebung.  Finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md) Zugriff auf Informationen zu Eigenschaftenseiten des Projekts.
 
-**Ei (** *Filename*... **)**<br/>
+**/Ei (** *filename*...**)**<br/>
 Schließt den Inhalt der angegebenen Includedateien aus der Browserinformationsdatei aus. Bei der Angabe mehrerer Dateien müssen deren Namen durch ein Leerzeichen getrennt und die Liste muss in runde Klammern eingeschlossen werden. Klammern sind nicht erforderlich, wenn Sie nur einen angeben *Filename*. Verwendung **Ei** zusammen mit den **/es einsetzen** Option zum Ausschließen von Dateien, die nicht von ausgeschlossen **/es einsetzen**.
 
-**El**<br/>
+**/El**<br/>
 Schließt lokale Symbole aus. Standardmäßig werden lokale Symbole eingeschlossen. Weitere Informationen über lokale Symbole finden Sie unter [Erstellen einer SBR-Datei](../../build/reference/creating-an-dot-sbr-file.md).
 
-**/ Em**<br/>
+**/Em**<br/>
 Schließt Symbole in Makros aus. Verwendung **/em** um nur die Namen von Makros in der Browserinformationsdatei einzuschließen. Standardmäßig werden Makronamen und das Ergebnis der Makroerweiterungen eingeschlossen.
 
 **/Er (** *Symbol*... **)**<br/>
 Schließt die angegebenen Symbole aus der Browserinformationsdatei aus. Bei der Angabe mehrerer Symbolnamen müssen diese durch ein Leerzeichen getrennt und die Liste in runde Klammern eingeschlossen werden. Klammern sind nicht erforderlich, wenn Sie nur einen angeben *Symbol*.
 
-**/ Es einsetzen**<br/>
+**/Es**<br/>
 Schließt die Includedateien, die mit einem absoluten Pfad angegeben oder in einem absoluten Pfad gefunden werden, der in der INCLUDE-Umgebungsvariablen angegeben ist, aus der Browserinformationsdatei aus. (Gewöhnlich sind dies die Includedateien des Systems, die viele Informationen enthalten, die in der Browserinformationsdatei möglicherweise nicht benötigt werden.) Diese Option schließt keine Dateien aus, die ohne Pfad oder mit einem relativen Pfad angegeben sind oder in einem relativen Pfad in INCLUDE gefunden werden. Sie können die **Ei** -Option zusammen mit **/es einsetzen** um Dateien auszuschließen, **/es einsetzen** nicht ausgeschlossen. Wenn Sie nur einige der Dateien ausschließen möchten, die **/es einsetzen** ausschließt, verwenden Sie **Ei** anstelle von **/es einsetzen** und Auflisten der Dateien, die Sie ausschließen möchten.
 
-**/ errorreport:**[**keine** &#124; **Eingabeaufforderung** &#124; **Warteschlange** &#124; **senden**]<br/>
+**/errorreport:**[**none** &#124; **prompt** &#124; **queue** &#124; **send**]<br/>
 Ermöglicht das Senden von Informationen in Bezug auf interne Fehler in bscmake.exe an Microsoft.
 
 Weitere Informationen zu **/errorreport**, finden Sie unter [/errorreport (interne Compilerfehler Bericht)](../../build/reference/errorreport-report-internal-compiler-errors.md).
@@ -65,10 +65,10 @@ Weitere Informationen zu **/errorreport**, finden Sie unter [/errorreport (inter
 **/HELP**<br/>
 Zeigt eine Zusammenfassung der Befehlszeilensyntax von BSCMAKE an.
 
-**IU**<br/>
+**/Iu**<br/>
 Schließt Symbole ein, auf die nicht verwiesen wird. Standardmäßig zeichnet BSCMAKE keine Symbole auf, die zwar definiert sind, auf die aber nicht verwiesen wird. Wenn eine SBR-Datei komprimiert wurde, hat diese Option für diese Eingabedatei keine Auswirkungen, da der Compiler bereits die Symbole entfernt hat, auf die nicht verwiesen wird.
 
-**/ n**<br/>
+**/n**<br/>
 Erzwingt ein nicht inkrementelles Erstellen. Verwendung **/n** um eine vollständige Erstellung der Browserinformationsdatei zu erzwingen, und zwar unabhängig davon, ob eine BSC-Datei vorhanden ist, und um zu verhindern, dass SBR-Dateien abgeschnitten wird. Finden Sie unter [wie eine BSC-Datei mit BSCMAKE](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md).
 
 **/NOLOGO**<br/>
@@ -78,7 +78,7 @@ Unterdrückt die Copyrightmeldung von BSCMAKE.
 Gibt einen Namen für die Browserinformationsdatei an. Standardmäßig gibt BSCMAKE der Browserinformationsdatei den Basisnamen der ersten SBR-Datei mit der Erweiterung BSC.
 
 **/ S (** *Filename*... **)**<br/>
-Weist BSCMAKE an, die angegebene Includedatei bei deren ersten Auftreten zu verarbeiten und ansonsten auszuschließen. Mit dieser Option kann Verarbeitungszeit eingespart werden, wenn eine Datei, beispielsweise eine Headerdatei (.h-Datei) für eine C- oder CPP-Quelldatei, in verschiedene Quelldateien miteinbezogen, aber jeweils nicht von Präprozessordirektiven geändert wird. Diese Option kann auch verwendet werden, wenn die Änderungen an einer Datei für die zu erstellende Browserinformationsdatei nicht relevant sind. Bei der Angabe mehrerer Dateien müssen deren Namen durch ein Leerzeichen getrennt und die Liste muss in runde Klammern eingeschlossen werden. Klammern sind nicht erforderlich, wenn Sie nur einen angeben *Filename*. Wenn Sie verwenden möchten, schließen Sie die Datei jedes Mal, wenn sie eingeschlossen wird, verwenden Sie die **Ei** oder **/es einsetzen** Option.
+Weist BSCMAKE an, die angegebene Includedatei bei deren ersten Auftreten zu verarbeiten und ansonsten auszuschließen. Mit dieser Option kann Verarbeitungszeit eingespart werden, wenn eine Datei, beispielsweise eine Headerdatei (.h-Datei) für eine C- oder CPP-Quelldatei, in verschiedene Quelldateien miteinbezogen, aber jeweils nicht von Präprozessoranweisungen geändert wird. Diese Option kann auch verwendet werden, wenn die Änderungen an einer Datei für die zu erstellende Browserinformationsdatei nicht relevant sind. Bei der Angabe mehrerer Dateien müssen deren Namen durch ein Leerzeichen getrennt und die Liste muss in runde Klammern eingeschlossen werden. Klammern sind nicht erforderlich, wenn Sie nur einen angeben *Filename*. Wenn Sie verwenden möchten, schließen Sie die Datei jedes Mal, wenn sie eingeschlossen wird, verwenden Sie die **Ei** oder **/es einsetzen** Option.
 
 **/v**<br/>
 Erzeugt eine ausführliche Ausgabe, die den Namen jeder verarbeiteten SBR-Datei sowie Informationen über die gesamte BSCMAKE-Ausführung einschließt.

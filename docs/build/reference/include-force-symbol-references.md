@@ -12,12 +12,12 @@ helpviewer_keywords:
 - symbols, add to symbol table
 - -INCLUDE linker option
 ms.assetid: 4a039677-360a-480f-bd0b-448e239b449c
-ms.openlocfilehash: 418b66cb16954f23036eaa65e07a4abf80fdba79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 389bd16829c2466b02cb879c8bc8d43c9efa6fb4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439337"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421219"
 ---
 # <a name="include-force-symbol-references"></a>/INCLUDE (Symbolverweise erzwingen)
 
@@ -27,7 +27,7 @@ ms.locfileid: "50439337"
 
 ## <a name="parameters"></a>Parameter
 
-*Symbol*<br/>
+*symbol*<br/>
 Gibt ein Symbol der Symboltabelle hinzugefügt werden.
 
 ## <a name="remarks"></a>Hinweise

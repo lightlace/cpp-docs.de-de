@@ -2,12 +2,12 @@
 title: /arch (x64)
 ms.date: 11/04/2016
 ms.assetid: ecda22bf-5bed-43f4-99fb-88aedd83d9d8
-ms.openlocfilehash: d1ee086eff73b0538390764ef26b051919d65bcf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac34a18efbf31787889cc4fe31ebd3d8473df0eb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456796"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421856"
 ---
 # <a name="arch-x64"></a>/arch (x64)
 
@@ -21,10 +21,10 @@ Gibt die Architektur für die Codegenerierung auf x64 an. Siehe auch [/arch (x86
 
 ## <a name="arguments"></a>Argumente
 
-**/ arch: AVX**<br/>
+**/arch:AVX**<br/>
 Aktiviert die Verwendung von Intel Advanced Vector Extensions-Anweisungen.
 
-**/ arch: avx2**<br/>
+**/arch:AVX2**<br/>
 Aktiviert die Verwendung von Intel Advanced Vector Extensions 2-Anweisungen.
 
 ## <a name="remarks"></a>Hinweise

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - environment variables, CL compiler
 ms.assetid: 2606585b-a681-42ee-986e-1c9a2da32108
-ms.openlocfilehash: 4c9643e977c707f7e7fd99ccc48d0475e2dc7837
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 47d6966cdc821cee4bd9ffd61b36c0c79143b6c2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535772"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412457"
 ---
 # <a name="cl-environment-variables"></a>CL-Umgebungsvariablen
 
@@ -46,7 +46,7 @@ Im folgenden finden ein Beispiel für die CL-Umgebungsvariable festlegen:
 
 Wenn diese Umgebungsvariable festgelegt ist, wenn Sie eingeben `CL INPUT.C` in der Befehlszeile, die dies ist der effektive Befehl:
 
-> CL /Zp2/Ox /I\INCLUDE\MYINCLS \LIB\BINMODE. OBJ-EINGABE. C
+> CL /Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE.OBJ INPUT.C
 
 Im folgenden Beispiel wird verursacht, dass ein unformatierter CL-Befehl die Quelldateien „FILE1.c“ und „FILE2.c“ kompiliert. Anschließend werden die Objektdateien „FILE1.obj“, „FILE2.obj“ und „FILE3.obj“ verknüpft.
 

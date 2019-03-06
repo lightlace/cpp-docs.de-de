@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE DB provider templates, notifications
 - OLE DB providers, notifications
 ms.assetid: 76e875fd-2bfd-4e4e-9f43-dbe5a3fa7382
-ms.openlocfilehash: 77344150f5c0d969c1636ac146138242d96ee39f
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 25af1656295606658c62c2c85c1c037a54181527
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556555"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425626"
 ---
 # <a name="supporting-notifications"></a>Unterstützen von Benachrichtigungen
 
@@ -22,7 +22,7 @@ ms.locfileid: "51556555"
 
 Um Benachrichtigungen zu implementieren, muss von eine Klasse erben [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md) und [IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md).
 
-`IRowsetNotifyCP` die Website für die Verbindungspunkt-Schnittstelle implementiert [IRowsetNotify](https://docs.microsoft.com/previous-versions/windows/desktop/ms712959(v=vs.85)). `IRowsetNotifyCP` broadcast-implementiert Funktionen, um den Listener auf dem Verbindungspunkt empfehlen `IID_IRowsetNotify` von Änderungen an den Inhalt des Rowsets.
+`IRowsetNotifyCP` die Website für die Verbindungspunkt-Schnittstelle implementiert [IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85)). `IRowsetNotifyCP` broadcast-implementiert Funktionen, um den Listener auf dem Verbindungspunkt empfehlen `IID_IRowsetNotify` von Änderungen an den Inhalt des Rowsets.
 
 Müssen Sie auch implementieren und registrieren Sie `IRowsetNotify` vom Consumer (auch bekannt als die Senke) mit [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) , damit der Consumer mit Benachrichtigungen behandeln kann. Informationen zur Implementierung der vom Consumer der Verbindungspunkt-Schnittstelle finden Sie unter [empfangen von Benachrichtigungen](../../data/oledb/receiving-notifications.md).
 
@@ -85,15 +85,15 @@ Sie müssen auch die folgenden Eigenschaften an Ihren Anbieter hinzufügen. Sie 
 
 |Eigenschaft|Bei Unterstützung hinzufügen|
 |--------------|------------------------|
-|DBPROP_IConnectionPointContainer|Immer|
-|DBPROP_NOTIFICATIONGRANULARITY|Immer|
-|DBPROP_NOTIFICATIONPHASES|Immer|
+|DBPROP_IConnectionPointContainer|Always|
+|DBPROP_NOTIFICATIONGRANULARITY|Always|
+|DBPROP_NOTIFICATIONPHASES|Always|
 |DBPROP_NOTIFYCOLUMNSET|`IRowsetChange`|
 |DBPROP_NOTIFYROWDELETE|`IRowsetChange`|
 |DBPROP_NOTIFYROWINSERT|`IRowsetChange`|
-|DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE|Immer|
+|DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE|Always|
 |DBPROP_NOTIFYROWFIRSTCHANGE|`IRowsetUpdate`|
-|DBPROP_NOTIFYROWSETRELEASE|Immer|
+|DBPROP_NOTIFYROWSETRELEASE|Always|
 |DBPROP_NOTIFYROWUNDOCHANGE|`IRowsetUpdate`|
 |DBPROP_NOTIFYROWUNDODELETE|`IRowsetUpdate`|
 |DBPROP_NOTIFYROWUNDOINSERT|`IRowsetUpdate`|

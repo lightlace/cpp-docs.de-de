@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - dynamically linked DLLs [C++]
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
-ms.openlocfilehash: 550391d51560ff0beca8252ffb6193dd1e4d89b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 548fbde379937ab4d915f08a43a8b865e071d688
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632387"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413172"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>Dynamisch mit MFC verknüpfte reguläre MFC-DLLs
 
@@ -33,7 +33,7 @@ Eine reguläre MFC-DLL dynamisch mit MFC verknüpfte bietet die folgenden Featur
 
 - Im Gegensatz zu der statisch verknüpften regulären MFC-DLL wird die DLL dynamisch mit der MFC-DLL (auch bekannt als die gemeinsam genutzten MFC-DLL) verknüpft.
 
-- Die MFC-Importbibliothek verknüpft werden, um die DLL ist der gleiche für MFC-Erweiterungs-DLLs oder Anwendungen, die mit der MFC-DLL: lib für MFCxx (D).
+- Die MFC-Importbibliothek verknüpft werden, um die DLL ist der gleiche für MFC-Erweiterungs-DLLs oder Anwendungen, die mit der MFC-DLL: MFCxx(D).lib.
 
 Eine reguläre MFC-DLL dynamisch mit MFC verknüpfte gelten die folgenden Anforderungen:
 
