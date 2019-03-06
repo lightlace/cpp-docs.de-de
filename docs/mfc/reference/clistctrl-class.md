@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 850c16420606452414cbe284c5f9f25031859c93
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fdfc0888e7d6213fb7c04a5257358da8f5dae138
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304521"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425093"
 ---
 # <a name="clistctrl-class"></a>CListCtrl-Klasse
 
@@ -619,7 +619,7 @@ virtual BOOL Create(
 Gibt an, die Listensteuerelement-Stil. Wenden Sie eine beliebige Kombination der Stile von Listensteuerelementen, an das Steuerelement. Finden Sie unter [Liste View Window-Stile](/windows/desktop/Controls/list-view-window-styles) im Windows SDK für eine vollständige Liste dieser Stile. Erweiterte Stile, die spezifisch für ein Steuerelement mithilfe Satz [SetExtendedStyle](#setextendedstyle).
 
 *rect*<br/>
-Gibt an, die des Listensteuerelements Größe und Position. Es kann sein, entweder eine `CRect` Objekt oder ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.
+Gibt an, die des Listensteuerelements Größe und Position. Es kann sein, entweder eine `CRect` Objekt oder ein [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur.
 
 *pParentWnd*<br/>
 Gibt an, das Listensteuerelement übergeordnete Fenster, in der Regel eine `CDialog`. Es darf nicht NULL sein.
@@ -667,7 +667,7 @@ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erwei
 Gibt an, die Listensteuerelement-Stil. Wenden Sie eine beliebige Kombination der Stile von Listensteuerelementen, an das Steuerelement. Eine vollständige Liste dieser Stile, finden Sie unter [Liste View Window-Stile](/windows/desktop/Controls/list-view-window-styles) im Windows SDK.
 
 *rect*<br/>
-Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
+Ein Verweis auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
 
 *pParentWnd*<br/>
 Ein Zeiger auf das Fenster, das übergeordnete Element des Steuerelements ist.
@@ -701,7 +701,7 @@ CImageList* CreateDragImage(
 Der Index des Elements, dessen Drag-Bildliste erstellt werden.
 
 *lpPoint*<br/>
-Adresse von einem [Punkt](https://msdn.microsoft.com/library/windows/desktop/dd162805) koordiniert die Struktur, empfängt die ursprüngliche Position von der linken oberen Ecke des Bilds, in der Ansicht.
+Adresse von einem [Punkt](/previous-versions/dd162805\(v=vs.85\)) koordiniert die Struktur, empfängt die ursprüngliche Position von der linken oberen Ecke des Bilds, in der Ansicht.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1442,7 +1442,7 @@ BOOL GetGroupRect(
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*iGroupId*|[in] Gibt eine Gruppe.|
-|*lpRect*|[in, out] Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur. Wenn diese Methode erfolgreich ist, erhält die Struktur die Rechteck-Koordinaten der Gruppe, die angegebenen *iGroupId*.|
+|*lpRect*|[in, out] Zeiger auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur. Wenn diese Methode erfolgreich ist, erhält die Struktur die Rechteck-Koordinaten der Gruppe, die angegebenen *iGroupId*.|
 |*iCoords*|[in] Gibt die Koordinaten für das Rechteck abgerufen. Verwenden Sie eine der folgenden Werte:<br /><br /> -LVGGR_GROUP - (Standard)-Koordinaten der gesamten Gruppe "Erweitert".<br />-LVGGR_HEADER - Koordinaten der nur den Header (reduzierten Gruppe).<br />-LVGGR_SUBSETLINK - Koordinaten der nur die Teilmenge Hyperlink (Markup Teilmenge).|
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1451,7 +1451,7 @@ True, wenn diese Methode erfolgreich ist. andernfalls "false".
 
 ### <a name="remarks"></a>Hinweise
 
-Der Aufrufer ist verantwortlich für die Zuordnung der [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, um die durch die *pRect* Parameter.
+Der Aufrufer ist verantwortlich für die Zuordnung der [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, um die durch die *pRect* Parameter.
 
 Diese Methode sendet die [LVM_GETGROUPRECT](/windows/desktop/Controls/lvm-getgrouprect) -Nachricht, die im Windows SDK beschrieben wird.
 
@@ -1790,7 +1790,7 @@ BOOL GetItemIndexRect(
 |*pItemIndex*|[in] Zeiger auf ein [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) Struktur für das übergeordnete Element des Unterelements ab.<br /><br /> Der Aufrufer ist verantwortlich für das zuordnen und Festlegen der Member, der die [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) Struktur. Dieser Parameter darf nicht NULL sein.|
 |*iColumn*|[in] Nullbasierte Index der einer Spalte im Steuerelement.|
 |*rectType*|[in] Der Teil des Listenansicht-Unterelements für die das umschließende Rechteck abgerufen wird. Geben Sie einen der folgenden Werte an:<br /><br /> LVIR_BOUNDS - gibt das umschließende Rechteck des gesamten Unterelements, einschließlich das Symbol und die Bezeichnung zurück.<br /><br /> LVIR_ICON - gibt das umschließende Rechteck des Symbols oder des Minisymbols des Unterelements ab.<br /><br /> LVIR_LABEL - gibt das umschließende Rechteck für den Text des Unterelements.|
-|*pRect*|[out] Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die Informationen über das umschließende Rechteck des Unterelements empfängt.<br /><br /> Der Aufrufer ist verantwortlich für die Zuordnung der [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur. Dieser Parameter darf nicht NULL sein.|
+|*pRect*|[out] Zeiger auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die Informationen über das umschließende Rechteck des Unterelements empfängt.<br /><br /> Der Aufrufer ist verantwortlich für die Zuordnung der [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur. Dieser Parameter darf nicht NULL sein.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1844,7 +1844,7 @@ BOOL GetItemPosition(
 Der Index des Elements, dessen Position abgerufen werden sollen.
 
 *lpPoint*<br/>
-Adresse von einem [Punkt](https://msdn.microsoft.com/library/windows/desktop/dd162805) in der Ansicht koordiniert die Struktur, die die Position der linken oberen Ecke des Elements, empfängt.
+Adresse von einem [Punkt](/previous-versions/dd162805\(v=vs.85\)) in der Ansicht koordiniert die Struktur, die die Position der linken oberen Ecke des Elements, empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1883,7 +1883,7 @@ BOOL GetItemRect(
 Der Index des Elements, dessen Position abgerufen werden sollen.
 
 *lpRect*<br/>
-Adresse von einem [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die das umschließende Rechteck empfängt.
+Adresse von einem [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die das umschließende Rechteck empfängt.
 
 *nCode*<br/>
 Teil des Listenansichtselements für das das umschließende Rechteck abgerufen werden. Sie können einen der folgenden Werte sein:
@@ -2220,7 +2220,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 ### <a name="parameters"></a>Parameter
 
 *lpPoint*<br/>
-Adresse von einem [Punkt](https://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, die den Ursprung empfängt.
+Adresse von einem [Punkt](/previous-versions/dd162805\(v=vs.85\)) Struktur, die den Ursprung empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2531,7 +2531,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parameter
 
 *lpRect*<br/>
-Adresse von einem [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.
+Adresse von einem [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2834,7 +2834,7 @@ int InsertMarkHitTest(
 ### <a name="parameters"></a>Parameter
 
 *pPoint*<br/>
-Ein Zeiger auf eine [Punkt](https://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, die den Treffertest enthält Koordinaten relativ zum Clientbereich des Steuerelements.
+Ein Zeiger auf eine [Punkt](/previous-versions/dd162805\(v=vs.85\)) Struktur, die den Treffertest enthält Koordinaten relativ zum Clientbereich des Steuerelements.
 
 *lvim*<br/>
 Ein Zeiger auf ein [LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark) -Struktur, die durch den Punktparameter definierten Koordinaten nächstliegende Einfügemarke angibt.
@@ -3854,7 +3854,7 @@ BOOL SetItemPosition(
 Der Index des Elements, dessen Position festgelegt werden.
 
 *pt*<br/>
-Ein [Punkt](https://msdn.microsoft.com/library/windows/desktop/dd162805) Koordinaten vorliegen-Struktur, die die neue Position in der Sicht angibt, der linke obere Ecke des Elements.
+Ein [Punkt](/previous-versions/dd162805\(v=vs.85\)) Koordinaten vorliegen-Struktur, die die neue Position in der Sicht angibt, der linke obere Ecke des Elements.
 
 ### <a name="return-value"></a>Rückgabewert
 

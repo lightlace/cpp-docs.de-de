@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 0284970d57cf4cde65b4fb77338423cb81d5d54b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8815861e525a2824bb1bc7a7d0e40f96b053c6a4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302272"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426783"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Erstellen von asynchronen Vorgängen in C++ für UWP-Apps
 
@@ -51,7 +51,7 @@ Die Windows-Runtime ist eine Programmierschnittstelle, die Sie verwenden können
 
 Mithilfe der Windows-Runtime zu verwenden, können Sie die besten Funktionen verschiedener Programmiersprachen und sie in einer app kombinieren. Beispielsweise können Sie die Benutzeroberfläche in JavaScript erstellen und die rechenintensive App-Logik in einer C++-Komponente ausführen. Die Fähigkeit, diese rechenintensiven Vorgänge im Hintergrund auszuführen, ist ein Schlüsselfaktor dafür, die Benutzeroberfläche reaktionsfähig zu halten. Da die `task` Klasse C++-spezifisch ist, müssen Sie eine Windows-Runtime-Schnittstelle verwenden, um asynchrone Vorgänge an andere Komponenten zu übergeben (die in anderen Sprachen als C++ geschrieben werden kann). Die Windows-Runtime stellt vier Schnittstellen, die Sie verwenden können, um die Darstellung asynchroner Vorgänge bereit:
 
-[Windows::Foundation::IAsyncAction](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)<br/>
+[Windows::Foundation::IAsyncAction](/uwp/api/windows.foundation.iasyncaction)<br/>
 Stellt eine asynchrone Aktion dar.
 
 [Windows::Foundation::IAsyncActionWithProgress\<TProgress>](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)<br/>
@@ -92,7 +92,7 @@ Das folgende Beispiel zeigt die verschiedenen Möglichkeiten zum Erstellen einer
 
 ##  <a name="example-component"></a> Beispiel: Erstellen einer C++ Windows-Runtime-Komponente und Ihre Verwendung vonC#
 
-Erwägen Sie eine app, die XAML und c# verwendet, um die Benutzeroberfläche und eine C++-Windows-Runtime-Komponente zum Ausführen von rechenintensiven Vorgängen zu definieren. In diesem Beispiel wird von der C++-Komponente berechnet, bei welchen Zahlen in einem angegebenen Bereich es sich um Primzahlen handelt. Um die Unterschiede zwischen den vier Windows-Runtime asynchrone Aufgabe Schnittstellen zu veranschaulichen, erstellen Sie zunächst in Visual Studio eine **leere Projektmappe** und nennen Sie es `Primes`. Fügen Sie der Projektmappe dann ein Projekt für **Windows-Runtime-Komponente** hinzu, und nennen Sie es `PrimesLibrary`. Fügen Sie der generierten C++-Headerdatei folgenden Code hinzu (in diesem Beispiel wird "Class1.h" in "Primes.h" umbenannt). Jede `public` -Methode definiert eine der vier asynchronen Schnittstellen. Die Methoden, die einen Wert zurückgeben Zurückgeben einer [Windows::Foundation::Collections::IVector\<Int >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) Objekt. Die den Status meldenden Methoden generieren `double` -Werte, die den Prozentsatz der abgeschlossenen Gesamtarbeit definieren.
+Erwägen Sie eine app, die XAML und c# verwendet, um die Benutzeroberfläche und eine C++-Windows-Runtime-Komponente zum Ausführen von rechenintensiven Vorgängen zu definieren. In diesem Beispiel wird von der C++-Komponente berechnet, bei welchen Zahlen in einem angegebenen Bereich es sich um Primzahlen handelt. Um die Unterschiede zwischen den vier Windows-Runtime asynchrone Aufgabe Schnittstellen zu veranschaulichen, erstellen Sie zunächst in Visual Studio eine **leere Projektmappe** und nennen Sie es `Primes`. Fügen Sie der Projektmappe dann ein Projekt für **Windows-Runtime-Komponente** hinzu, und nennen Sie es `PrimesLibrary`. Fügen Sie der generierten C++-Headerdatei folgenden Code hinzu (in diesem Beispiel wird "Class1.h" in "Primes.h" umbenannt). Jede `public` -Methode definiert eine der vier asynchronen Schnittstellen. Die Methoden, die einen Wert zurückgeben Zurückgeben einer [Windows::Foundation::Collections::IVector\<Int >](/uwp/api/Windows.Foundation.Collections.IVector_T_) Objekt. Die den Status meldenden Methoden generieren `double` -Werte, die den Prozentsatz der abgeschlossenen Gesamtarbeit definieren.
 
 [!code-cpp[concrt-windowsstore-primes#1](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_2.h)]
 
@@ -117,7 +117,7 @@ Fügen Sie der `MainPage` -Klasse in "MainPage.xaml" den folgenden Code hinzu. D
 
 Von diesen Methoden wird mithilfe des `async` -Schlüsselworts und des `await` -Schlüsselworts die Benutzeroberfläche aktualisiert, nachdem die asynchronen Vorgänge abgeschlossen wurden. Informationen zum asynchronen Schreiben von Code in UWP-apps finden Sie unter [Threading und asynchrone Programmierung](/windows/uwp/threading-async).
 
-Die `getPrimesCancellation` -Methode und die `cancelGetPrimes` -Methode werden zusammen verwendet, damit der Benutzer den Vorgang abbrechen kann. Wenn der Benutzer auswählt der **Abbrechen** Schaltfläche der `cancelGetPrimes` Methodenaufrufe [IAsyncOperationWithProgress\<TResult, TProgress >:: Abbrechen](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel.aspx) , den Vorgang abzubrechen. Die Concurrency Runtime, die den zugrunde liegenden asynchronen Vorgang verwaltet, löst einen internen Ausnahmetyp, der von der Windows-Runtime, mitzuteilen, dass es sich bei Abschluss des Abbrechens abgefangen wird. Weitere Informationen zum Abbruchmodell finden Sie unter [Abbruch](../../parallel/concrt/cancellation-in-the-ppl.md).
+Die `getPrimesCancellation` -Methode und die `cancelGetPrimes` -Methode werden zusammen verwendet, damit der Benutzer den Vorgang abbrechen kann. Wenn der Benutzer auswählt der **Abbrechen** Schaltfläche der `cancelGetPrimes` Methodenaufrufe [IAsyncOperationWithProgress\<TResult, TProgress >:: Abbrechen](/uwp/api/windows.foundation.iasyncinfo.cancel) , den Vorgang abzubrechen. Die Concurrency Runtime, die den zugrunde liegenden asynchronen Vorgang verwaltet, löst einen internen Ausnahmetyp, der von der Windows-Runtime, mitzuteilen, dass es sich bei Abschluss des Abbrechens abgefangen wird. Weitere Informationen zum Abbruchmodell finden Sie unter [Abbruch](../../parallel/concrt/cancellation-in-the-ppl.md).
 
 > [!IMPORTANT]
 >  Zum Aktivieren der PPL, um ordnungsgemäß in die Windows-Runtime zu melden, dass sie den Vorgang abgebrochen wurde, fangen Sie nicht diesen internen Ausnahmetyp. Dies bedeutet auch, dass nicht alle Ausnahmen abgefangen werden sollten(`catch (...)`). Wenn Sie alle abfangen müssen Ausnahmen erneut auslösen die Ausnahme, um sicherzustellen, dass die Windows-Runtime der Abbruchvorgang abgeschlossen werden kann.

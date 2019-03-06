@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-ms.openlocfilehash: e7aa577d237c1800ca9df3f0af4c44acdaae9ae2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cb52f1138ba7ff01c6fbf2f7ec13d5f39e9422d8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279496"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413393"
 ---
 # <a name="cstatusbar-class"></a>CStatusBar-Klasse
 
@@ -283,7 +283,7 @@ void GetItemRect(
 Der Index des Indikators, dessen Rechteckkoordinaten sind, abgerufen werden sollen.
 
 *lpRect*<br/>
-Verweist auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das die Koordinaten des Indikators gemäß erhält *nIndex*.
+Verweist auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das die Koordinaten des Indikators gemäß erhält *nIndex*.
 
 ### <a name="remarks"></a>Hinweise
 

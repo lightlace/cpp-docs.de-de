@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 0042fffb0eaa383909edd6647bcdb4375341d8dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a62919ebd6b2aba54aa8003743b0006571cdedf4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605854"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419669"
 ---
 # <a name="cimage-class"></a>CImage-Klasse
 
@@ -258,7 +258,7 @@ Ein alpha-Transparenz-Wert, auf die gesamte Quell-Bitmap verwendet werden. Der S
 Die Alpha-blending-Funktion für Quelle und Zielbitmaps, eine globale alpha-Wert, auf das gesamte Quell-Bitmap, und der Formatierungsinformationen für die Quell-Bitmap angewendet werden. Die Quelle und Ziel Blend-Funktionen sind derzeit auf AC_SRC_OVER beschränkt.
 
 *pointDest*<br/>
-Ein Verweis auf eine [Punkt](https://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, die die oben links das Zielrechteck, in logischen Einheiten bezeichnet.
+Ein Verweis auf eine [Punkt](/previous-versions/dd162805\(v=vs.85\)) Struktur, die die oben links das Zielrechteck, in logischen Einheiten bezeichnet.
 
 *nDestWidth*<br/>
 Die Breite in logischen Einheiten des Zielrechtecks.
@@ -279,7 +279,7 @@ Die Breite in logischen Einheiten des Quellrechtecks.
 Die Höhe in logischen Einheiten des Quellrechtecks.
 
 *rectDest*<br/>
-Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die das Ziel zu identifizieren.
+Ein Verweis auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die das Ziel zu identifizieren.
 
 *rectSrc*<br/>
 Ein Verweis auf eine `RECT` Struktur, die die Quelle zu identifizieren.
@@ -368,7 +368,7 @@ Die logische y-Koordinate der oberen linken Ecke des Zielrechtecks.
 Der rastervorgang ausgeführt werden. Raster-Operationscodes definieren genau, wie die Bits von der Quelle, Ziel und das Muster kombinieren (gemäß der aktuell ausgewählten Pinsel), um das Ziel bilden. Finden Sie unter [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) im Windows SDK für eine Liste mit anderen rastervorgang Codes und deren Beschreibungen aufgeführt.
 
 *pointDest*<br/>
-Ein [Punkt](https://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, der angibt, in der oberen linken Ecke des Zielrechtecks.
+Ein [Punkt](/previous-versions/dd162805\(v=vs.85\)) Struktur, der angibt, in der oberen linken Ecke des Zielrechtecks.
 
 *nDestWidth*<br/>
 Die Breite in logischen Einheiten des Zielrechtecks.
@@ -383,7 +383,7 @@ Die logische X-Koordinate der oberen linken Ecke des Quellrechtecks.
 Die logische y-Koordinate der oberen linken Ecke des Quellrechtecks.
 
 *rectDest*<br/>
-Ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die das Zielrechteck angibt.
+Ein [RECT](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die das Zielrechteck angibt.
 
 *pointSrc*<br/>
 Ein `POINT` Struktur, der angibt, in der oberen linken Ecke des Quellrechtecks.
@@ -595,13 +595,13 @@ Die Breite in logischen Einheiten des Quellrechtecks.
 Die Höhe in logischen Einheiten des Quellrechtecks.
 
 *rectDest*<br/>
-Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die das Ziel zu identifizieren.
+Ein Verweis auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die das Ziel zu identifizieren.
 
 *rectSrc*<br/>
 Ein Verweis auf eine `RECT` Struktur, die die Quelle zu identifizieren.
 
 *pointDest*<br/>
-Ein Verweis auf eine [Punkt](https://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, die die oben links das Zielrechteck, in logischen Einheiten bezeichnet.
+Ein Verweis auf eine [Punkt](/previous-versions/dd162805\(v=vs.85\)) Struktur, die die oben links das Zielrechteck, in logischen Einheiten bezeichnet.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -763,7 +763,7 @@ Sie können die resultierende Zeichenfolge übergeben, mit Ihrem MFC [CFileDialo
 
 Der Parameter *StrExporter* weist das Format auf:
 
-Datei description0&#124;\*.ext0&#124;filedescription1&#124;\*. erw1&#124;.. .file Beschreibung *n*&#124;\*ext *n*&#124;&#124;
+file description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;...file description *n*&#124;\*.ext *n*&#124;&#124;
 
 wobei "&#124;" wird durch das Trennzeichen angegeben `chSeparator`. Zum Beispiel:
 
@@ -854,7 +854,7 @@ Sie können die resultierende Zeichenfolge übergeben, mit Ihrem MFC [CFileDialo
 
 Der Parameter *StrImporter* weist das Format auf:
 
-Datei description0&#124;\*.ext0&#124;filedescription1&#124;\*. erw1&#124;.. .file Beschreibung *n*&#124;\*ext *n*&#124;&#124;
+file description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;...file description *n*&#124;\*.ext *n*&#124;&#124;
 
 in denen "&#124;" ist das Trennzeichen, anhand des *ChSeparator*. Zum Beispiel:
 
@@ -1259,10 +1259,10 @@ Die X-Koordinate der oberen linken Ecke der monochrome Bitmap.
 Die y-Koordinate der oberen linken Ecke der monochrome Bitmap.
 
 *rectSrc*<br/>
-Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die mit den angegebenen Koordinaten des Quellrechtecks.
+Ein Verweis auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die mit den angegebenen Koordinaten des Quellrechtecks.
 
 *pointMask*<br/>
-Ein [Punkt](https://msdn.microsoft.com/library/windows/desktop/dd162805) -Struktur, die links oben auf der Maskenbitmap für die angibt.
+Ein [Punkt](/previous-versions/dd162805\(v=vs.85\)) -Struktur, die links oben auf der Maskenbitmap für die angibt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1384,7 +1384,7 @@ Die horizontale Position des festzulegenden Pixels.
 *y*<br/>
 Die vertikale Position des festzulegenden Pixels.
 
-*Farbe*<br/>
+*color*<br/>
 Die Farbe, die das Pixel festgelegt werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -1519,7 +1519,7 @@ Die Höhe in logischen Einheiten des Zielrechtecks.
 Der rastervorgang ausgeführt werden. Raster-Operationscodes definieren genau, wie die Bits von der Quelle, Ziel und das Muster kombinieren (gemäß der aktuell ausgewählten Pinsel), um das Ziel bilden. Finden Sie unter [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) im Windows SDK für eine Liste mit anderen rastervorgang Codes und deren Beschreibungen aufgeführt.
 
 *rectDest*<br/>
-Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die das Ziel zu identifizieren.
+Ein Verweis auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die das Ziel zu identifizieren.
 
 *xSrc*<br/>
 Die X-Koordinate in logischen Einheiten der oberen linken Ecke des Quellrechtecks.
@@ -1602,7 +1602,7 @@ Die Höhe in logischen Einheiten des Zielrechtecks.
 Die Farbe in der Quell-Bitmap, als transparent behandelt werden sollen. Standardmäßig CLR_INVALID, sollte die Option gibt an, dass derzeit als transparente Farbe des Bilds der Farbe festlegen verwendet werden.
 
 *rectDest*<br/>
-Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die das Ziel zu identifizieren.
+Ein Verweis auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die das Ziel zu identifizieren.
 
 *xSrc*<br/>
 Die X-Koordinate in logischen Einheiten der oberen linken Ecke des Quellrechtecks.

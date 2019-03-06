@@ -24,12 +24,12 @@ helpviewer_keywords:
 - files [C++], text
 - text files, writing in C++
 ms.assetid: 3296fd59-a83a-40d4-bd4a-6096cc13101b
-ms.openlocfilehash: 8f60ece05443393456693aba3bc674f52822432a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 332e1d6d292e32dcf129b37c8c4a7857f0b5985f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693476"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424313"
 ---
 # <a name="file-handling-and-io-ccli"></a>Dateibehandlung und E/A (C++/CLI)
 
@@ -261,7 +261,7 @@ int main()
 
 Im folgenden Codebeispiel wird das Schreiben von Binärdaten in eine Datei veranschaulicht. Zwei Klassen des <xref:System.IO>-Namespace werden verwendet: <xref:System.IO.FileStream> und <xref:System.IO.BinaryWriter>. <xref:System.IO.FileStream> repräsentiert die eigentliche Datei, während <xref:System.IO.BinaryWriter> eine Schnittstelle zum Stream für den Binärzugriff bereitstellt.
 
-Im folgenden Codebeispiel wird eine Datei erzeugt, die ganze Zahlen im Binärformat enthält. Diese Datei gelesen werden kann, mit dem Code in [wie: Lesen einer Binärdatei (C++ / CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md).
+Im folgenden Codebeispiel wird eine Datei erzeugt, die ganze Zahlen im Binärformat enthält. Diese Datei gelesen werden kann, mit dem Code in [Vorgehensweise: Lesen einer Binärdatei (C++ / CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -338,4 +338,4 @@ int main()
 
 [Datei- und Stream-E/A](/dotnet/standard/io/index)
 
-[System.IO-namespace](https://msdn.microsoft.com/library/system.io.aspx)
+<xref:System.IO>

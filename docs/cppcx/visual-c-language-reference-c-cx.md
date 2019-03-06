@@ -2,21 +2,21 @@
 title: Sprachreferenz zu Visual C++ (C++/CX)
 ms.date: 09/15/2017
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-ms.openlocfilehash: e8d73523a2b9ae577125975726f0072503f0e2e0
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 319374447ba08dbf18fba91e4c24c0874d3b6ce2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330423"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422961"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Sprachreferenz zu Visual C++ (C++/CX)
 
 C++ / CX-ist ein Satz von Erweiterungen der C++-Sprache, mit denen die Erstellung von Windows-apps und Windows-Runtime-Komponenten in einer Ausdrucksweise ermöglicht, so nah wie möglich am modernen C++. C++ / CX verwenden, um das Schreiben von Windows-apps und-Komponenten in systemeigenem Code, die einfache Interaktion mit Visual c#, Visual Basic und JavaScript und anderen Sprachen, die die Windows-Runtime unterstützen. In den seltenen Fällen, die direkter Zugriff auf den unformatierten COM-Schnittstellen oder den normalcode erforderlich ist, können Sie mithilfe der [Windows Runtime C++ Template Library (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
 
 > [!NOTE]
-> **[C++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index) ist die empfohlene Alternative für C++ / CX**. Es ist eine neue "," standard C ++ 17-sprachprojektion für Windows-Runtime-APIs, in das neueste Windows 10 SDK Version 1803 gerechnet verfügbar. C++ / WinRT ist nur in Headerdateien implementiert und bietet Ihnen mit erstklassigen Zugriff auf die moderne Windows-API.
+> **[C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/index) ist die empfohlene Alternative für C++ / CX**. Es ist eine neue "," standard C ++ 17-sprachprojektion für Windows-Runtime-APIs, in das neueste Windows 10 SDK Version 1803 gerechnet verfügbar. C++ / WinRT ist nur in Headerdateien implementiert und bietet Ihnen mit erstklassigen Zugriff auf die moderne Windows-API.
 >
-> Mit C++ / WinRT, können Sie sowohl nutzen und Erstellen von Windows-Runtime-APIs mit einem beliebigen standardkonformen C ++ 17-Compiler. C++ / WinRT in der Regel eine bessere Leistung und erzeugt kleinere Binärdateien als jede andere Sprachoption für die Windows-Runtime. Wir weiterhin zur Unterstützung von C++ / CX- und WRL, jedoch dringend empfohlen, neue Anwendungen C++ mithilfe / WinRT. Weitere Informationen finden Sie unter [C++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
+> Mit C++ / WinRT, können Sie sowohl nutzen und Erstellen von Windows-Runtime-APIs mit einem beliebigen standardkonformen C ++ 17-Compiler. C++ / WinRT in der Regel eine bessere Leistung und erzeugt kleinere Binärdateien als jede andere Sprachoption für die Windows-Runtime. Wir weiterhin zur Unterstützung von C++ / CX- und WRL, jedoch dringend empfohlen, neue Anwendungen C++ mithilfe / WinRT. Weitere Informationen finden Sie unter [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/index).
 
 Mithilfe von C++ / CX werden, die Sie erstellen können:
 
@@ -38,4 +38,4 @@ Mithilfe von C++ / CX werden, die Sie erstellen können:
 |[Namespaceverweis](../cppcx/namespaces-reference-c-cx.md)|Referenzdokumentation für den Standardnamespace, den Plattformnamespace, den Platform::Collections-Namespace und die zugehörigen Namespaces.|
 |[In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|Listet die CRT-Funktionen auf, die nicht für die Verwendung in Windows Runtime-Apps verfügbar sind.|
 |[Anleitungen für Windows 10-Apps](https://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx)|Bietet Anleitung auf hoher Ebene zu Windows 10-Apps und Links zu weiterführenden Informationen.|
-|[C++ / CX Teil 0 von \[n\]: Einführung](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C++ / CX Teil 1 von \[n\]: eine einfache Klasse](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C++ / CX Teil 2 von \[n\]: Typen mit Hut](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C++ / CX Teil 3 von \[n\]: in Bearbeitung](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C++ / CX Teil 4 von \[n\]: statische Memberfunktionen](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|Eine einführende Visual C++-Blog-Reihe an C++ / CX.|
+|[C++ / CX Teil 0 von \[n\]: Eine Einführung in](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C++ / CX Teil 1 von \[n\]: Eine einfache Klasse](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C++ / CX Teil 2 von \[n\]: Typen, die mit Hut](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C++ / CX Teil 3 von \[n\]: Im Bau](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C++ / CX Teil 4 von \[n\]: Statische Memberfunktionen](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|Eine einführende Visual C++-Blog-Reihe an C++ / CX.|

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: bf8ced746b70f64b83733152d845aa0291f07310
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a68f3570f0e8c3315e8b0716cddcd37563894e76
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302504"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422493"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl-Klasse
 
@@ -158,7 +158,7 @@ virtual BOOL Create(
 Gibt die Kombination aus Datum Uhrzeit Stile von Listensteuerelementen an. Finden Sie unter [Datums- und Uhrzeitformate Zeitauswahl-Steuerelement](/windows/desktop/Controls/date-and-time-picker-control-styles) im Windows SDK für Weitere Informationen zu Datums- / Zeitauswahl-Stilen.
 
 *rect*<br/>
-Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die die Position und Größe von den Datums- / Zeitauswahl-Steuerelement ist.
+Ein Verweis auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die die Position und Größe von den Datums- / Zeitauswahl-Steuerelement ist.
 
 *pParentWnd*<br/>
 Ein Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) -Objekt, das das übergeordnete Fenster von der Datums- / Zeitauswahl-Steuerelement ist. Es darf nicht NULL sein.

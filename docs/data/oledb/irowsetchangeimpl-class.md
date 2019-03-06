@@ -32,16 +32,16 @@ helpviewer_keywords:
 - SetData method
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-ms.openlocfilehash: dacf9de0835108ae946e7523472a0adf12e7e222
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 299cebd93a3d54ab747f5c58b22dbbf215a02e4c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556724"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426653"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl-Klasse
 
-Die OLE DB-Vorlagen-Implementierung, der die [IRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715790(v=vs.85)) -Schnittstelle in der OLE DB-Spezifikation.
+Die OLE DB-Vorlagen-Implementierung, der die [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)) -Schnittstelle in der OLE DB-Spezifikation.
 
 ## <a name="syntax"></a>Syntax
 
@@ -109,7 +109,7 @@ Die OLE DB-Vorlagen-Implementierung unterstützt die Basismethoden (`SetData`, `
 
 - Siehe auch die `RUpdateRowset` Klasse wird verwendet, der [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) Beispiel.
 
-## <a name="deleterows"></a> IRowsetChangeImpl:: DeleteRows
+## <a name="deleterows"></a> IRowsetChangeImpl::DeleteRows
 
 Löscht Zeilen aus dem Rowset.
 
@@ -124,9 +124,9 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [IRowsetChange:: DeleteRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [IRowsetChange:: DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)) in die *OLE DB-Programmierreferenz*.
 
-## <a name="insertrow"></a> IRowsetChangeImpl:: InsertRow
+## <a name="insertrow"></a> IRowsetChangeImpl::InsertRow
 
 Erstellt und initialisiert eine neue Zeile im Rowset.
 
@@ -141,9 +141,9 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [IRowsetChange:: InsertRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms716921(v=vs.85)) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [IRowsetChange:: InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
-## <a name="setdata"></a> IRowsetChangeImpl:: SetData
+## <a name="setdata"></a> IRowsetChangeImpl::SetData
 
 Legt Datenwerte in einer oder mehreren Spalten fest.
 
@@ -157,9 +157,9 @@ STDMETHOD (SetData )(HROW hRow,
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [IRowsetChange:: SetData](https://docs.microsoft.com/previous-versions/windows/desktop/ms721232(v=vs.85)) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [IRowsetChange:: SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
-## <a name="flushdata"></a> IRowsetChangeImpl:: FlushData
+## <a name="flushdata"></a> IRowsetChangeImpl::FlushData
 
 Abweichungen vom Anbieter, um Daten in den Speicher zu übernehmen.
 

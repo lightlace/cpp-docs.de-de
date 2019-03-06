@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3099
 ms.assetid: b3dded0f-76c9-42c1-991b-532eb8619661
-ms.openlocfilehash: e9a76fa2e0dc5602a88324cfd2fef85457ad7e99
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: beaa34bb9bed4824383cdad32c6bfd0aea19f6b7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512111"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418573"
 ---
 # <a name="compiler-error-c3099"></a>Compilerfehler C3099
 
@@ -19,7 +19,7 @@ ms.locfileid: "50512111"
 
 Verwendung <xref:System.AttributeUsageAttribute> deklarieren **"/ CLR"** Attribute. Verwendung von `Windows::Foundation::Metadata::AttributeUsageAttribute` zum Deklarieren von Windows-Runtime-Attributen.
 
-Weitere Informationen zu CLR-Attributen finden Sie unter [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md). Unterstützte Attribute in Windows-Runtime, finden Sie unter [Windows.Foundation.Metadata-Namespace](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.aspx)
+Weitere Informationen zu CLR-Attributen finden Sie unter [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md). Unterstützte Attribute in Windows-Runtime, finden Sie unter [Windows.Foundation.Metadata-Namespace](/uwp/api/windows.foundation.metadata)
 
 ## <a name="example"></a>Beispiel
 
