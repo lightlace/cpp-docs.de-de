@@ -23,12 +23,12 @@ helpviewer_keywords:
 - line numbers only compiler option [C++]
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
-ms.openlocfilehash: 43ffbe76092b9675be1610e58c65c0034955634f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8aadca14f52432e3fccb168c213ae566b1baae2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479042"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421436"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (Debuginformationsformat)
 
@@ -42,7 +42,7 @@ Gibt den Typ der Debuginformationen erstellt, die für Ihr Programm und ob diese
 
 Bei der Code wird kompiliert und erstellt im Debugmodus ausgeführt, generiert der Compiler Symbolnamen für Funktionen und Variablen, Typinformationen und Line Number Speicherorte für die Verwendung durch den Debugger an. Diese symbolische Debuginformationen kann entweder in den Objektdateien (OBJ-Dateien), die vom Compiler erzeugten, oder klicken Sie in einer separaten PDB-Datei (PDB-Datei) für die ausführbare Datei enthalten sein.  Die Formatoptionen für Debug-Informationen werden in den folgenden Abschnitten beschrieben.
 
-### <a name="none"></a>Keiner
+### <a name="none"></a>Keine
 
 Standardmäßig Wenn keine Debug Informationen Format-Option angegeben wird, generiert der Compiler keine Debuginformationen, damit die Kompilierung schneller ist.
 
@@ -83,7 +83,7 @@ Die **"/ Zi"** Option erzwingt, dass sowohl die [/Gy (Funktionslevel-Linking akt
 
 1. Öffnen der **Konfigurationseigenschaften** > **C/C++-** > **allgemeine** Eigenschaftenseite.
 
-1. Ändern der **Debuginformationsformat** Eigenschaft. Wählen Sie **OK** zum Speichern der Änderungen.
+1. Ändern der **Debuginformationsformat** Eigenschaft. Klicken Sie auf **OK**, um die Änderungen zu speichern.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
 
@@ -93,4 +93,3 @@ Die **"/ Zi"** Option erzwingt, dass sowohl die [/Gy (Funktionslevel-Linking akt
 
 [Compileroptionen](../../build/reference/compiler-options.md)<br/>
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
-

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - NMAKE program, command modifiers
 - command modifiers
 ms.assetid: b661c432-210f-4f05-bc56-744a46e0fc0b
-ms.openlocfilehash: a9a79364880cf95adca6066b48f0d786391c8ba0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 764b381a057b1cecf85b0bc3c4c5711aa1aac4ec
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431811"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413068"
 ---
 # <a name="command-modifiers"></a>Befehlsmodifizierer
 

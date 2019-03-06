@@ -1072,12 +1072,12 @@ helpviewer_keywords:
 - m_szTableCatalog
 - m_szTableName
 ms.assetid: 4bd881b3-26ca-4bdb-9226-d67560864f29
-ms.openlocfilehash: f6899f6edf87f2d81f31fac40ac78ba5798d8d8c
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 2ba593447b96f8fd5550a5e3ba64c20ca582afb8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557101"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420647"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Schemarowset-Klassen und Typedef-Klassen
 
@@ -1085,42 +1085,42 @@ Ein Schema ist eine Auflistung von Datenbankobjekten, die Besitzer oder von eine
 
 Schemarowsets sind vordefinierte Rowsets, die Metadaten darstellen. Schemarowsets werden in der Regel in der dynamischen Programmierung verwendet, in denen die Struktur der Datenbank nicht zum Zeitpunkt der Kompilierung bekannt. Sie können diese Schemarowsets verwenden, zum Abrufen von Informationen zu einer Datenbank zur Laufzeit.
 
-Verwenden Sie die Typedef-Klassen, um die Schemarowsets zu instanziieren. Die entsprechenden Typedef und Schemarowset-Klassen sind unten aufgeführt. Rufen Sie [CRestrictions:: Open](../../data/oledb/crestrictions-open.md) nach der Erstellung einer Instanz des Schemarowsets. Diese Methode gibt ein Resultset basierend auf den Einschränkungen, die Sie angeben. Finden Sie unter [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) Informationen zur Einschränkungsspalten jedes Schemarowset zugeordnet.
+Verwenden Sie die Typedef-Klassen, um die Schemarowsets zu instanziieren. Die entsprechenden Typedef und Schemarowset-Klassen sind unten aufgeführt. Rufen Sie [CRestrictions:: Open](../../data/oledb/crestrictions-open.md) nach der Erstellung einer Instanz des Schemarowsets. Diese Methode gibt ein Resultset basierend auf den Einschränkungen, die Sie angeben. Finden Sie unter [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) Informationen zur Einschränkungsspalten jedes Schemarowset zugeordnet.
 
 Die folgende Tabelle zeigt die einzelnen OLE DB-Schemarowset und der entsprechenden OLE DB-Vorlagen-typedefklasse und Info-Klasse.
 
 |OLE DB-Schemarowset|-Typedefklasse|Info-Klasse|
 |--------------------------|-------------------|----------------|
-|[ASSERTIONEN](https://docs.microsoft.com/previous-versions/windows/desktop/ms719776(v=vs.85))|[CAssertions](#assertion)|[CAssertionInfo](#assertion)|
-|[KATALOGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms721241(v=vs.85))|[CCatalogs](#catalog)|[CCatalogInfo](#catalog)|
-|[CHARACTER_SETS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722638(v=vs.85))|[CCharacterSets](#characterset)|[CCharacterSetInfo](#characterset)|
-|[SORTIERUNGEN](https://docs.microsoft.com/previous-versions/windows/desktop/ms715783(v=vs.85))|[CCollations](#collation)|[CCollationInfo](#collation)|
-|[COLUMN_PRIVILEGES](https://docs.microsoft.com/previous-versions/windows/desktop/ms715800(v=vs.85))|[CColumnPrivileges](#columnprivilege)|[CColumnPrivilegeInfo](#columnprivilege)|
-|[SPALTEN](https://docs.microsoft.com/previous-versions/windows/desktop/ms723052(v=vs.85))|[CColumns](#columns)|[CColumnsInfo](#columns)|
-|[CONSTRAINT_COLUMN_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms724522(v=vs.85))|[CConstraintColumnUsage](#constraintcolumnusage)|[CConstraintColumnUsageInfo](#constraintcolumnusage)|
-|[CONSTRAINT_TABLE_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms713710(v=vs.85))|[CConstraintTableUsage](#constrainttableusage)|[CConstraintTableUsageInfo](#constrainttableusage)|
-|[CHECK_CONSTRAINTS](https://docs.microsoft.com/previous-versions/windows/desktop/ms712845(v=vs.85))|[CCheckConstraints](#checkconstraint)|[CCheckConstraintInfo](#checkconstraint)|
-|[COLUMN_DOMAIN_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms711240(v=vs.85))|[CColumnDomainUsage](#columndomainusage)|[CColumnDomainUsageInfo](#columndomainusage)|
-|[FOREIGN_KEYS](https://docs.microsoft.com/previous-versions/windows/desktop/ms711276(v=vs.85))|[CForeignKeys](#foreignkeys)|[CForeignKeysInfo](#foreignkeys)|
-|[INDIZES](https://docs.microsoft.com/previous-versions/windows/desktop/ms709712(v=vs.85))|[CIndexes](#index)|[CIndexInfo](#index)|
-|[KEY_COLUMN_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms712990(v=vs.85))|[CKeyColumn](#keycolumn)|[CKeyColumnInfo](#keycolumn)|
-|[PRIMARY_KEYS](https://docs.microsoft.com/previous-versions/windows/desktop/ms714362(v=vs.85))|[CPrimaryKeys](#primarykey)|[CPrimaryKeyInfo](#primarykey)|
-|[VERFAHREN](https://docs.microsoft.com/previous-versions/windows/desktop/ms724021(v=vs.85))|[CProcedures](#procedure)|[CProcedureInfo](#procedure)|
-|[PROCEDURE_COLUMNS](https://docs.microsoft.com/previous-versions/windows/desktop/ms723092(v=vs.85))|[CProcedureColumns](#procedurecolumn)|[CProcedureColumnInfo](#procedurecolumn)|
-|[PROCEDURE_PARAMETERS](https://docs.microsoft.com/previous-versions/windows/desktop/ms713623(v=vs.85))|[CProcedureParameters](#procedureparam)|[CProcedureParameterInfo](#procedureparam)|
-|[PROVIDER_TYPES](https://docs.microsoft.com/previous-versions/windows/desktop/ms709785(v=vs.85))|[CProviderTypes](#provider)|[CProviderInfo](#provider)|
-|[REFERENTIAL_CONSTRAINTS](https://docs.microsoft.com/previous-versions/windows/desktop/ms719737(v=vs.85))|[CReferentialConstraints](#referentialconstraint)|[CReferentialConstraintInfo](#referentialconstraint)|
-|[SCHEMATA](https://docs.microsoft.com/previous-versions/windows/desktop/ms716887(v=vs.85))|[CSchemata](#schemata)|[CSchemataInfo](#schemata)|
-|[SQL_LANGUAGES](https://docs.microsoft.com/previous-versions/windows/desktop/ms714374(v=vs.85))|[CSQLLanguages](#sqllanguage)|[CSQLLanguageInfo](#sqllanguage)|
-|[STATISTICS](https://docs.microsoft.com/previous-versions/windows/desktop/ms715957(v=vs.85))|[CStatistics](#statistic)|[CStatisticInfo](#statistic)|
-|[TABLE_CONSTRAINTS](https://docs.microsoft.com/previous-versions/windows/desktop/ms715921(v=vs.85))|[CTableConstraints](#tableconstraint)|[CTableConstraintInfo](#tableconstraint)|
-|[TABELLEN](https://docs.microsoft.com/previous-versions/windows/desktop/ms716980(v=vs.85))|[CTables](#table)|[CTableInfo](#table)|
-|[TABLE_PRIVILEGES](https://docs.microsoft.com/previous-versions/windows/desktop/ms725428(v=vs.85))|[CTablePrivileges](#tableprivilege)|[CTablePrivilegeInfo](#tableprivilege)|
-|[ÜBERSETZUNGEN](https://docs.microsoft.com/previous-versions/windows/desktop/ms725365(v=vs.85))|[CTranslations](#translation)|[CTranslationInfo](#translation)|
-|[USAGE_PRIVILEGES](https://docs.microsoft.com/previous-versions/windows/desktop/ms722743(v=vs.85))|[CUsagePrivileges](#usageprivilege)|[CUsagePrivilegeInfo](#usageprivilege)|
-|[VIEW_COLUMN_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms714896(v=vs.85))|[CViewColumnUsage](#viewcolumn)|[CViewColumnInfo](#viewcolumn)|
-|[ANSICHTEN](https://docs.microsoft.com/previous-versions/windows/desktop/ms723122(v=vs.85))|[CViews](#view)|[CViewInfo](#view)|
-|[VIEW_TABLE_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms719727(v=vs.85))|[CViewTableUsage](#viewtable)|[CViewTableInfo](#viewtable)|
+|[ASSERTIONEN](/previous-versions/windows/desktop/ms719776(v=vs.85))|[CAssertions](#assertion)|[CAssertionInfo](#assertion)|
+|[CATALOGS](/previous-versions/windows/desktop/ms721241(v=vs.85))|[CCatalogs](#catalog)|[CCatalogInfo](#catalog)|
+|[CHARACTER_SETS](/previous-versions/windows/desktop/ms722638(v=vs.85))|[CCharacterSets](#characterset)|[CCharacterSetInfo](#characterset)|
+|[SORTIERUNGEN](/previous-versions/windows/desktop/ms715783(v=vs.85))|[CCollations](#collation)|[CCollationInfo](#collation)|
+|[COLUMN_PRIVILEGES](/previous-versions/windows/desktop/ms715800(v=vs.85))|[CColumnPrivileges](#columnprivilege)|[CColumnPrivilegeInfo](#columnprivilege)|
+|[COLUMNS](/previous-versions/windows/desktop/ms723052(v=vs.85))|[CColumns](#columns)|[CColumnsInfo](#columns)|
+|[CONSTRAINT_COLUMN_USAGE](/previous-versions/windows/desktop/ms724522(v=vs.85))|[CConstraintColumnUsage](#constraintcolumnusage)|[CConstraintColumnUsageInfo](#constraintcolumnusage)|
+|[CONSTRAINT_TABLE_USAGE](/previous-versions/windows/desktop/ms713710(v=vs.85))|[CConstraintTableUsage](#constrainttableusage)|[CConstraintTableUsageInfo](#constrainttableusage)|
+|[CHECK_CONSTRAINTS](/previous-versions/windows/desktop/ms712845(v=vs.85))|[CCheckConstraints](#checkconstraint)|[CCheckConstraintInfo](#checkconstraint)|
+|[COLUMN_DOMAIN_USAGE](/previous-versions/windows/desktop/ms711240(v=vs.85))|[CColumnDomainUsage](#columndomainusage)|[CColumnDomainUsageInfo](#columndomainusage)|
+|[FOREIGN_KEYS](/previous-versions/windows/desktop/ms711276(v=vs.85))|[CForeignKeys](#foreignkeys)|[CForeignKeysInfo](#foreignkeys)|
+|[INDIZES](/previous-versions/windows/desktop/ms709712(v=vs.85))|[CIndexes](#index)|[CIndexInfo](#index)|
+|[KEY_COLUMN_USAGE](/previous-versions/windows/desktop/ms712990(v=vs.85))|[CKeyColumn](#keycolumn)|[CKeyColumnInfo](#keycolumn)|
+|[PRIMARY_KEYS](/previous-versions/windows/desktop/ms714362(v=vs.85))|[CPrimaryKeys](#primarykey)|[CPrimaryKeyInfo](#primarykey)|
+|[VERFAHREN](/previous-versions/windows/desktop/ms724021(v=vs.85))|[CProcedures](#procedure)|[CProcedureInfo](#procedure)|
+|[PROCEDURE_COLUMNS](/previous-versions/windows/desktop/ms723092(v=vs.85))|[CProcedureColumns](#procedurecolumn)|[CProcedureColumnInfo](#procedurecolumn)|
+|[PROCEDURE_PARAMETERS](/previous-versions/windows/desktop/ms713623(v=vs.85))|[CProcedureParameters](#procedureparam)|[CProcedureParameterInfo](#procedureparam)|
+|[PROVIDER_TYPES](/previous-versions/windows/desktop/ms709785(v=vs.85))|[CProviderTypes](#provider)|[CProviderInfo](#provider)|
+|[REFERENTIAL_CONSTRAINTS](/previous-versions/windows/desktop/ms719737(v=vs.85))|[CReferentialConstraints](#referentialconstraint)|[CReferentialConstraintInfo](#referentialconstraint)|
+|[SCHEMATA](/previous-versions/windows/desktop/ms716887(v=vs.85))|[CSchemata](#schemata)|[CSchemataInfo](#schemata)|
+|[SQL_LANGUAGES](/previous-versions/windows/desktop/ms714374(v=vs.85))|[CSQLLanguages](#sqllanguage)|[CSQLLanguageInfo](#sqllanguage)|
+|[STATISTICS](/previous-versions/windows/desktop/ms715957(v=vs.85))|[CStatistics](#statistic)|[CStatisticInfo](#statistic)|
+|[TABLE_CONSTRAINTS](/previous-versions/windows/desktop/ms715921(v=vs.85))|[CTableConstraints](#tableconstraint)|[CTableConstraintInfo](#tableconstraint)|
+|[TABELLEN](/previous-versions/windows/desktop/ms716980(v=vs.85))|[CTables](#table)|[CTableInfo](#table)|
+|[TABLE_PRIVILEGES](/previous-versions/windows/desktop/ms725428(v=vs.85))|[CTablePrivileges](#tableprivilege)|[CTablePrivilegeInfo](#tableprivilege)|
+|[TRANSLATIONS](/previous-versions/windows/desktop/ms725365(v=vs.85))|[CTranslations](#translation)|[CTranslationInfo](#translation)|
+|[USAGE_PRIVILEGES](/previous-versions/windows/desktop/ms722743(v=vs.85))|[CUsagePrivileges](#usageprivilege)|[CUsagePrivilegeInfo](#usageprivilege)|
+|[VIEW_COLUMN_USAGE](/previous-versions/windows/desktop/ms714896(v=vs.85))|[CViewColumnUsage](#viewcolumn)|[CViewColumnInfo](#viewcolumn)|
+|[VIEWS](/previous-versions/windows/desktop/ms723122(v=vs.85))|[CViews](#view)|[CViewInfo](#view)|
+|[VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727(v=vs.85))|[CViewTableUsage](#viewtable)|[CViewTableInfo](#viewtable)|
 
 ## <a name="assertion"></a> CAssertions, CAssertionInfo
 
@@ -1132,7 +1132,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt die im Katalog definierten Assertionen, die von einem bestimmten Benutzer gehören.
 
-Die folgende Tabelle enthält die Klassendatenmember für `CAssertionInfo` und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [ASSERTIONS-Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms719776(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Klassendatenmember für `CAssertionInfo` und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [ASSERTIONS-Rowset](/previous-versions/windows/desktop/ms719776(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
@@ -1141,7 +1141,7 @@ Die folgende Tabelle enthält die Klassendatenmember für `CAssertionInfo` und i
 |m_szName|CONSTRAINT_NAME|
 |m_bIsDeferrable|IS_DEFERRABLE|
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|BESCHREIBUNG|
 
 ## <a name="catalog"></a> CCatalogs, CCatalogInfo
 
@@ -1153,12 +1153,12 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt die physischen Attribute, die über das DBMS Katalogen zugeordnet sind.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [Kataloge Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms721241(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [Kataloge Rowset](/previous-versions/windows/desktop/ms721241(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
 |m_szName|CATALOG_NAME|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|BESCHREIBUNG|
 
 ## <a name="characterset"></a> CCharacterSets, CCharacterSetInfo
 
@@ -1170,7 +1170,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt die im Katalog definierten Zeichensätze, die für einen bestimmten Benutzer zugänglich sind.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [CHARACTER_SETS Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms722638(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [CHARACTER_SETS Rowset](/previous-versions/windows/desktop/ms722638(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
@@ -1193,7 +1193,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt die Check-Einschränkungen definiert, die im Katalog, die von einem bestimmten Benutzer gehören. Eine Check-Einschränkung gibt an, die Daten oder die Formate, die in einem oder mehreren Spalten in einer Tabelle zulässig sind.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [CHECK_CONSTRAINTS-Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms712845(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [CHECK_CONSTRAINTS-Rowset](/previous-versions/windows/desktop/ms712845(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
@@ -1201,7 +1201,7 @@ Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden
 |m_szSchema|CONSTRAINT_SCHEMA|
 |m_szName|CONSTRAINT_NAME|
 |m_szCheckClause|CHECK_CLAUSE|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|BESCHREIBUNG|
 
 ## <a name="collation"></a> CCollations, CCollationInfo
 
@@ -1213,7 +1213,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt die, definierten Zeichensortierreihenfolgen im Katalog, die für einen bestimmten Benutzer zugänglich sind.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [SORTIERUNGEN Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms715783(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [SORTIERUNGEN Rowset](/previous-versions/windows/desktop/ms715783(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
@@ -1235,7 +1235,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt die Spalten, im Katalog definiert, die einer Domäne, die im Katalog definierten und Eigentümer ein angegebener Benutzer abhängig sind.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [COLUMN_DOMAIN_USAGE-Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711240(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [COLUMN_DOMAIN_USAGE-Rowset](/previous-versions/windows/desktop/ms711240(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
@@ -1259,7 +1259,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt es sich um die Berechtigungen für Spalten von Tabellen, die im Katalog definiert, die verfügbar sind oder von einem bestimmten Benutzer gewährt werden.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [COLUMN_PRIVILEGES-Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms715800(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [COLUMN_PRIVILEGES-Rowset](/previous-versions/windows/desktop/ms715800(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
@@ -1284,7 +1284,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt die Spalten der Tabellen, die im Katalog definierten, die für einen bestimmten Benutzer zugänglich sind.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [COLUMNS-Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms723052(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [COLUMNS-Rowset](/previous-versions/windows/desktop/ms723052(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
@@ -1315,7 +1315,7 @@ Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden
 |m_szDomainCatalog|DOMAIN_CATALOG|
 |m_szDomainSchema|DOMAIN_SCHEMA|
 |m_szDomainName|DOMAIN_NAME|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|BESCHREIBUNG|
 
 ## <a name="constraintcolumnusage"></a> CConstraintColumnUsage, CConstraintColumnUsageInfo
 
@@ -1327,7 +1327,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt die Spalten, die von referenziellen Einschränkungen, unique-Einschränkungen, Check-Einschränkungen und Assertionen verwendet, im Katalog definierten und Eigentümer ein angegebener Benutzer.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [CONSTRAINT_COLUMN_USAGE-Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms724522(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [CONSTRAINT_COLUMN_USAGE-Rowset](/previous-versions/windows/desktop/ms724522(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
@@ -1351,7 +1351,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt die Tabellen, die von referenziellen Einschränkungen, unique-Einschränkungen, Check-Einschränkungen und Assertionen verwendet, die im Katalog definierten und Eigentümer ein angegebener Benutzer.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [CONSTRAINT_TABLE_USAGE-Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms724522(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [CONSTRAINT_TABLE_USAGE-Rowset](/previous-versions/windows/desktop/ms724522(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
@@ -1372,7 +1372,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt die im Katalog von einem angegebenen Benutzer definierten Fremdschlüsselspalten an.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [FOREIGN_KEYS-Rowsets](https://docs.microsoft.com/previous-versions/windows/desktop/ms711276(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [FOREIGN_KEYS-Rowsets](/previous-versions/windows/desktop/ms711276(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
@@ -1402,7 +1402,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt, definierten Indizes im Katalog, die von einem bestimmten Benutzer gehören.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [INDEXES-Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms709712(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [INDEXES-Rowset](/previous-versions/windows/desktop/ms709712(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
@@ -1431,7 +1431,7 @@ Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden
 |m_nPages|PAGES|
 |m_szFilterCondition|FILTER_CONDITION|
 
-## <a name="keycolumn"></a> KeyColumns, CKeyColumnInfo
+## <a name="keycolumn"></a> CKeyColumns, CKeyColumnInfo
 
 Die TypeDef-Klasse aufrufen `CKeyColumns` so implementieren Sie die Parameterklasse `CKeyColumnInfo`.
 
@@ -1441,7 +1441,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt die Spalten, im Katalog definiert, die von einem bestimmten Benutzer als Schlüssel eingeschränkt werden.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [KEY_COLUMN_USAGE-Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms712990(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [KEY_COLUMN_USAGE-Rowset](/previous-versions/windows/desktop/ms712990(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
@@ -1466,7 +1466,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt die im Katalog von einem angegebenen Benutzer definierten Primärschlüsselspalten.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [PRIMARY_KEYS-Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms714362(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [PRIMARY_KEYS-Rowset](/previous-versions/windows/desktop/ms714362(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
@@ -1488,7 +1488,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt Informationen zu den Spalten von Rowsets, die von Prozeduren zurückgegeben.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [PROCEDURE_COLUMNS-Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms723092(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [PROCEDURE_COLUMNS-Rowset](/previous-versions/windows/desktop/ms723092(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
@@ -1507,7 +1507,7 @@ Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden
 |m_nOctetLength|CHARACTER_OCTET_LENGTH|
 |m_nPrecision|NUMERIC_PRECISION|
 |m_nScale|NUMERIC_SCALE|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|BESCHREIBUNG|
 
 ## <a name="procedureparam"></a> CProcedureParameters CProcedureParamInfo
 
@@ -1519,7 +1519,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt Informationen zu den Parametern und Rückgabecodes von Prozeduren zurück.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [PROCEDURE_PARAMETERS-Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713623(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [PROCEDURE_PARAMETERS-Rowset](/previous-versions/windows/desktop/ms713623(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
@@ -1537,7 +1537,7 @@ Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden
 |m_nOctetLength|CHARACTER_OCTET_LENGTH|
 |m_nPrecision|NUMERIC_PRECISION|
 |m_nScale|NUMERIC_SCALE|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|BESCHREIBUNG|
 
 ## <a name="procedure"></a> CProcedures, CProcedureInfo
 
@@ -1549,7 +1549,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt die Prozeduren, im Katalog definiert, die von einem bestimmten Benutzer gehören.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [PROZEDUREN Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms724021(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [PROZEDUREN Rowset](/previous-versions/windows/desktop/ms724021(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
@@ -1558,7 +1558,7 @@ Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden
 |m_szName|PROCEDURE_NAME|
 |m_nType|PROCEDURE_TYPE|
 |m_szDefinition|PROCEDURE_DEFINITION|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|BESCHREIBUNG|
 
 ## <a name="provider"></a> CProviderTypes, CProviderInfo
 
@@ -1570,14 +1570,14 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt die vom Datenanbieter unterstützten (Basis-) Datentypen.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [PROVIDER_TYPES-Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms709785(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [PROVIDER_TYPES-Rowset](/previous-versions/windows/desktop/ms709785(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
 |m_szTypeName|TYPE_NAME|
 |m_nDataType|DATA_TYPE|
 |m_nColumnSize|COLUMN_SIZE|
-|m_szLiteralPrefix|LITERAL_PREFIX-ZEICHEN|
+|m_szLiteralPrefix|LITERAL_PREFIX|
 |m_szLiteralSuffix|LITERAL_SUFFIX|
 |m_szCreateParams|CREATE_PARAMS|
 |m_bIsNullable|IS_NULLABLE|
@@ -1605,7 +1605,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt die referenziellen Einschränkungen, im Katalog definiert, die von einem bestimmten Benutzer gehören.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [REFERENTIAL_CONSTRAINTS-Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms719737(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [REFERENTIAL_CONSTRAINTS-Rowset](/previous-versions/windows/desktop/ms719737(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
@@ -1618,7 +1618,7 @@ Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden
 |m_szMatchOption|MATCH_OPTION|
 |m_szUpdateRule|UPDATE_RULE|
 |m_szDeleteRule|DELETE_RULE|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|BESCHREIBUNG|
 
 ## <a name="schemata"></a> CSchemata, CSchemataInfo
 
@@ -1630,7 +1630,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt die Schemas an, die von einem bestimmten Benutzer gehören.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [SCHEMAS Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716887(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [SCHEMAS Rowset](/previous-versions/windows/desktop/ms716887(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
@@ -1651,7 +1651,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt die Übereinstimmungsebenen, Optionen und Dialekte, die von der SQL-Implementierung Verarbeitung von Daten im Katalog definierten unterstützt werden.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [SQL_LANGUAGES Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms714374(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [SQL_LANGUAGES Rowset](/previous-versions/windows/desktop/ms714374(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
@@ -1673,7 +1673,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt die Statistiken, im Katalog definiert, die von einem bestimmten Benutzer gehören.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [Statistiken Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms715957(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [Statistiken Rowset](/previous-versions/windows/desktop/ms715957(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
@@ -1692,7 +1692,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt die tabelleneinschränkungen definiert, die im Katalog, die von einem bestimmten Benutzer gehören.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [TABLE_CONSTRAINTS-Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms715921(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [TABLE_CONSTRAINTS-Rowset](/previous-versions/windows/desktop/ms715921(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
@@ -1705,7 +1705,7 @@ Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden
 |m_szType|CONSTRAINT_TYPE|
 |m_bIsDeferrable|IS_DEFERRABLE|
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|BESCHREIBUNG|
 
 ## <a name="tableprivilege"></a> CTablePrivileges, CTablePrivilegeInfo
 
@@ -1717,7 +1717,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt die im Katalog definierten Tabellen, die für einen bestimmten Benutzer zugänglich sind.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [TABLE_PRIVILEGES-Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms725428(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [TABLE_PRIVILEGES-Rowset](/previous-versions/windows/desktop/ms725428(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
@@ -1739,7 +1739,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt, die Berechtigungen für Tabellen, die im Katalog definiert, die für verfügbar sind oder von einem bestimmten Benutzer gewährt wird.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [TABLES-Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716980(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [TABLES-Rowset](/previous-versions/windows/desktop/ms716980(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
@@ -1748,7 +1748,7 @@ Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden
 |m_szName|TABLE_NAME|
 |m_szType|TABLE_TYPE|
 |m_guidTable|TABLE_GUID|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|BESCHREIBUNG|
 
 ## <a name="translation"></a> CTranslations, CTranslationInfo
 
@@ -1760,7 +1760,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt die im Katalog definierten Zeichenübersetzungen, die für einen bestimmten Benutzer zugänglich sind.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [ÜBERSETZUNGEN Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms725365(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [ÜBERSETZUNGEN Rowset](/previous-versions/windows/desktop/ms725365(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
@@ -1784,7 +1784,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt die USAGE-Berechtigungen für Objekte, die im Katalog definierten, die für verfügbar sind oder von einem bestimmten Benutzer gewährt.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [USAGE_PRIVILEGES Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms722743(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [USAGE_PRIVILEGES Rowset](/previous-versions/windows/desktop/ms722743(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
@@ -1807,7 +1807,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt die Spalten auf, die im Katalog definierten Tabellen angezeigt, und einen bestimmten Benutzer gehören hängen.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [VIEW_COLUMN_USAGE-Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms714896(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [VIEW_COLUMN_USAGE-Rowset](/previous-versions/windows/desktop/ms714896(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
@@ -1831,7 +1831,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt die Tabellen auf, die im Katalog definierten Tabellen angezeigt, und einen bestimmten Benutzer gehören hängen.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [Ansichten Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms723122(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [Ansichten Rowset](/previous-versions/windows/desktop/ms723122(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|
@@ -1841,7 +1841,7 @@ Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden
 |m_szDefinition|VIEW_DEFINITION|
 |m_bCheckOption|CHECK_OPTION|
 |m_bIsUpdatable|IS_UPDATABLE|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|BESCHREIBUNG|
 
 ## <a name="viewtable"></a> CViewTableUsage, CViewTableInfo
 
@@ -1853,7 +1853,7 @@ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/sch
 
 Diese Klasse gibt die angezeigten Tabellen, im Katalog definiert, die für einen bestimmten Benutzer zugänglich sind.
 
-Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [VIEW_TABLE_USAGE-Rowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms719727(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
+Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [VIEW_TABLE_USAGE-Rowset](/previous-versions/windows/desktop/ms719727(v=vs.85)) in die *OLE DB-Programmierreferenz* für Weitere Informationen zu das Schema und die Spalten.
 
 |Datenmember|OLE DB-Spalten|
 |------------------|--------------------|

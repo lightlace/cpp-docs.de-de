@@ -16,12 +16,12 @@ helpviewer_keywords:
 - listing file type
 - assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
-ms.openlocfilehash: 6bb5e18c5a174c9e48b253031daad195e6132375
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 610c94646b82783a49ca6de6bc443e99a3c137bc
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507301"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420907"
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (Listendatei)
 
@@ -29,7 +29,7 @@ Erstellt eine Listendatei, die Assemblercode enthält.
 
 ## <a name="syntax"></a>Syntax
 
-> **/ FA**[**c**\][**s**\][**u**] **/FA**_Pfadname_
+> **/FA**[**c**\][**s**\][**u**] **/Fa**_pathname_
 
 ## <a name="remarks"></a>Hinweise
 
@@ -39,7 +39,7 @@ Standardmäßig jede Listendatei Ruft den gleichen Basisnamen wie die Quelldatei
 
 ### <a name="fa-arguments"></a>/ FA-Argumente
 
-Keine<br/>
+none<br/>
 Nur die Assembler-Sprache ist in der Auflistung enthalten.
 
 **c**<br/>
@@ -55,22 +55,22 @@ Wenn beide **s** und **u** angegeben werden, und wenn eine Quellcodedatei verwen
 
 ### <a name="fa-argument"></a>/ FA-argument
 
-Keine<br/>
+none<br/>
 Eine *Quelle*ASM-Datei wird für jede Quellcodedatei in der Kompilierung erstellt.
 
 *filename*<br/>
 Eine Listendatei mit dem Namen *Filename*.asm wird im aktuellen Verzeichnis abgelegt. Dies ist nur gültig, beim Kompilieren einer einzelnen Quellcodedatei.
 
-*filename.Extension*<br/>
+*filename.extension*<br/>
 Eine Listendatei mit dem Namen *filename.extension* befindet sich im aktuellen Verzeichnis. Dies ist nur gültig, beim Kompilieren einer einzelnen Quellcodedatei.
 
-*Verzeichnis*__\\__<br/>
+*directory*__\\__<br/>
 Eine *Source_file*ASM-Datei erstellt und platziert Sie in der angegebenen *Directory* für jede Quellcodedatei in der Kompilierung. Beachten Sie den erforderlichen nachgestellten umgekehrten Schrägstrich ein. Nur die Pfade auf dem aktuellen Datenträger sind zulässig.
 
-*Directory*__\\__*Dateiname*<br/>
+*directory*__\\__*filename*<br/>
 Eine Listendatei mit dem Namen *Filename*.asm befindet sich in der angegebenen *Directory*. Dies ist nur gültig, beim Kompilieren einer einzelnen Quellcodedatei.
 
-*Directory*__\\__*filename.extension*<br/>
+*directory*__\\__*filename.extension*<br/>
 Eine Listendatei mit dem Namen *filename.extension* befindet sich in der angegebenen *Directory*. Dies ist nur gültig, beim Kompilieren einer einzelnen Quellcodedatei.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest

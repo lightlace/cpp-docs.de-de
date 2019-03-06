@@ -8,12 +8,12 @@ helpviewer_keywords:
 - output files, compiler options [C++]
 - cl.exe compiler, output files
 ms.assetid: f6367f30-2710-4178-b43a-639eed824acb
-ms.openlocfilehash: e815eff674fbf56806b6c9fc33edd9df41aad3f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1fcc7066c04b347f0d8106ac4bf2088e83de6bc
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590254"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415513"
 ---
 # <a name="output-file-f-options"></a>/F-Optionen (Ausgabedateioptionen)
 
@@ -35,7 +35,7 @@ Die Ausgabedatei Optionen erstellen oder benennen Sie Ausgabedateien. Sie wirken
 
 - [/ Fp (Name der PCH-Datei)](../../build/reference/fp-name-dot-pch-file.md)
 
-- [/ FR, / FR (SBR-Datei erstellen)](../../build/reference/fr-fr-create-dot-sbr-file.md)
+- [/FR, /Fr (Create .sbr File)](../../build/reference/fr-fr-create-dot-sbr-file.md)
 
 - [/FU (Name der erzwungenen #using-Datei)](../../build/reference/fu-name-forced-hash-using-file.md)
 

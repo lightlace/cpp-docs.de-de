@@ -22,12 +22,12 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-ms.openlocfilehash: 7fd9a941210407edc3424454b3375040717a05a2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 660c6c047bb700e531fd941ac8ed19d638866070
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261660"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421570"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT-Klasse
 
@@ -214,7 +214,7 @@ HWND Create(
 [in] Das Handle für das übergeordnete Element oder Besitzer-Fenster.
 
 *rect*<br/>
-[in] Ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Position des Fensters angeben. Die `RECT` Zeiger oder Verweis übergeben werden kann.
+[in] Ein [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die die Position des Fensters angeben. Die `RECT` Zeiger oder Verweis übergeben werden kann.
 
 *szWindowName*<br/>
 [in] Gibt den Namen des Fensters. Der Standardwert ist NULL.

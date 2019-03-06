@@ -7,12 +7,12 @@ helpviewer_keywords:
 - macros, options macros
 - macros, command macros
 ms.assetid: 50dff03c-0dc3-4a8a-9a17-57e0e4ea9bac
-ms.openlocfilehash: f18cfd6ada235485a5fe47bdc94b49631b9abbbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: daf8c243f95f7cc12a3d3b1c5cf16f5a384c9671
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601304"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418297"
 ---
 # <a name="command-macros-and-options-macros"></a>Befehlsmakros und Optionsmakros
 
@@ -20,12 +20,12 @@ Befehlsmakros sind für Microsoft-Produkten vordefiniert. Optionsmakros stellt O
 
 |Microsoft-Produkt|Befehls-Makro|Definiert als|Optionen-Makro|
 |-----------------------|-------------------|----------------|-------------------|
-|Macro Assembler|**ALS**|ml|**AFLAGS**|
-|Basic-Compiler|**BC**|BC|**BFLAGS**|
-|C-Compiler|**CC**|CL|**CFLAGS**|
-|C++ Compiler|**CPP**|CL|**CPPFLAGS**|
-|C++ Compiler|**CXX AUFWEISEN**|CL|**CXXFLAGS**|
-|Ressourcencompiler|**RC**|RC|**RFLAGS**|
+|Macro Assembler|**AS**|ml|**AFLAGS**|
+|Basic-Compiler|**BC**|bc|**BFLAGS**|
+|C-Compiler|**CC**|cl|**CFLAGS**|
+|C++ Compiler|**CPP**|cl|**CPPFLAGS**|
+|C++ Compiler|**CXX**|cl|**CXXFLAGS**|
+|Ressourcencompiler|**RC**|rc|**RFLAGS**|
 
 ## <a name="see-also"></a>Siehe auch
 

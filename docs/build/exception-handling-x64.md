@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: 33206dfb885239839c3a64436b6b540fc7d4e6e5
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 7dab7f3b6593bf4eaed1b8c804deb915677ccf5b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627539"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422974"
 ---
 # <a name="x64-exception-handling"></a>X64 Behandlung von Ausnahmen
 
@@ -45,7 +45,7 @@ Die Entladung-Info-Datenstruktur wird verwendet, um die Auswirkungen zu erfassen
 |UBYTE: 4|Frame-Register|
 |UBYTE: 4|Frame-Register-Offset (skaliert)|
 |USHORT \* n|Entladen Sie Codes array|
-|Variable|Entweder kann der Form (1) oder (2) im folgenden werden|
+|-Variable|Entweder kann der Form (1) oder (2) im folgenden werden|
 
 (1) Ausnahmehandler
 
@@ -182,21 +182,21 @@ Das entladungscode-Vorgang ist eine der folgenden Werte:
 
   |||
   |-|-|
-  |RSP + 32|SS|
-  |RSP + 24|Alte RSP|
-  |RSP + 16|EFLAGS|
-  |RSP + 8|CS|
+  |RSP+32|SS|
+  |RSP+24|Alte RSP|
+  |RSP+16|EFLAGS|
+  |RSP+8|CS|
   |RSP|RIP|
 
   Wenn die Vorgangsinformationen 1 entspricht, wurde dann eine der folgenden Frames abgelegt:
 
   |||
   |-|-|
-  |RSP + 40|SS|
-  |RSP + 32|Alte RSP|
-  |RSP + 24|EFLAGS|
-  |RSP + 16|CS|
-  |RSP + 8|RIP|
+  |RSP+40|SS|
+  |RSP+32|Alte RSP|
+  |RSP+24|EFLAGS|
+  |RSP+16|CS|
+  |RSP+8|RIP|
   |RSP|Fehlercode|
 
   Diese entladungscode wird immer in einen dummy-Prolog, die nie ausgeführt wird, jedoch stattdessen vor der tatsächlichen Einstiegspunkt einer Interruptroutine angezeigt wird, und vorhanden ist, nur um einen Ort zum Simulieren des Push eines Frames für Computer verfügbar zu machen. `UWOP_PUSH_MACHFRAME` Zeichnet die Simulation, die angibt, dass der Computer vom Konzept her dieser Vorgang ausgeführt wurde:
@@ -231,7 +231,7 @@ Die Bedeutung der Bits Informationen Vorgang richtet sich nach dem Vorgangscode.
 |5|RBP|
 |6|RSI|
 |7|RDI|
-|8 bis 15|R8 bis R15|
+|8 bis 15|R8 to R15|
 
 ### <a name="chained-unwind-info-structures"></a>Verkettete Entladeinfostrukturen
 
@@ -330,10 +330,10 @@ Um das Schreiben, gibt es eine Reihe von Pseudo-Vorgänge, die parallel mit den 
 |Pseudo-Vorgang|Beschreibung|
 |-|-|
 |PROC FRAME \[:*Ehandler*]|Bewirkt, dass MASM auf eine Funktion generieren Eintrag im .pdata-Datensatz der Tabelle und Entladeinformationen in .xdata für eine Funktion der strukturierten Ausnahmebehandlung entladen Verhalten.  Wenn *Ehandler* vorhanden ist, wird diese Prozedur im .xdata als sprachspezifischer Handler eingegeben.<br /><br /> Wenn der FRAME-Attribut verwendet wird, muss ihm durch ein. ENDPROLOG-Direktive.  Wenn die Funktion eine blattfunktion ist (gemäß [Funktionstypen](../build/stack-usage.md#function-types)) das FRAME-Attribut ist nicht erforderlich, die übrigen Pseudooperationen.|
-|. PUSHREG *registrieren*|Generiert einen UWOP_PUSH_NONVOL Entladung-Code-Eintrag für die mit dem aktuellen offset im Prolog angegebenen Registernummer an.<br /><br /> Dies sollte nur mit permanenten Ganzzahlregister verwendet werden.  Für Push-Vorgänge von volatile Register, verwendet ein. ALLOCSTACK 8, stattdessen|
-|. SETFRAME *registrieren*, *Offset*|Füllt das Registrieren Feld und den Offset in den Entladeinformationen unter Verwendung des angegebenen Register und Offset. Der Offset muss ein Vielfaches von 16 sein und kleiner als oder gleich 240. Diese Direktive generiert außerdem einen UWOP_SET_FPREG Entladung Code-Eintrag für die angegebene Register, die mit den aktuellen Prologoffset.|
+|.PUSHREG *register*|Generiert einen UWOP_PUSH_NONVOL Entladung-Code-Eintrag für die mit dem aktuellen offset im Prolog angegebenen Registernummer an.<br /><br /> Dies sollte nur mit permanenten Ganzzahlregister verwendet werden.  Für Push-Vorgänge von volatile Register, verwendet ein. ALLOCSTACK 8, stattdessen|
+|.SETFRAME *register*, *offset*|Füllt das Registrieren Feld und den Offset in den Entladeinformationen unter Verwendung des angegebenen Register und Offset. Der Offset muss ein Vielfaches von 16 sein und kleiner als oder gleich 240. Diese Direktive generiert außerdem einen UWOP_SET_FPREG Entladung Code-Eintrag für die angegebene Register, die mit den aktuellen Prologoffset.|
 |. ALLOCSTACK *Größe*|Generiert eine UWOP_ALLOC_SMALL oder einen UWOP_ALLOC_LARGE mit der angegebenen Größe für den aktuellen Offset im Prolog an.<br /><br /> Die *Größe* Operand muss ein Vielfaches von 8 sein.|
-|. SAVEREG *registrieren*, *Offset*|Erzeugt entweder eine UWOP_SAVE_NONVOL oder einen UWOP_SAVE_NONVOL_FAR Entladung Code-Eintrag für das angegebene Register und den Offset den aktuelle Prologoffset verwenden. MASM wählt die effizienteste Codierung.<br /><br /> *Offset* muss positiv und ein Vielfaches von 8 sein. *Offset* ist relativ zum Basis der Prozedur bei der Frame, in der Regel in der RSP oder, wenn der Frame-Pointer, die-Frame-Pointer verwenden.|
+|.SAVEREG *register*, *offset*|Erzeugt entweder eine UWOP_SAVE_NONVOL oder einen UWOP_SAVE_NONVOL_FAR Entladung Code-Eintrag für das angegebene Register und den Offset den aktuelle Prologoffset verwenden. MASM wählt die effizienteste Codierung.<br /><br /> *Offset* muss positiv und ein Vielfaches von 8 sein. *Offset* ist relativ zum Basis der Prozedur bei der Frame, in der Regel in der RSP oder, wenn der Frame-Pointer, die-Frame-Pointer verwenden.|
 |. SAVEXMM128 *registrieren*, *Offset*|Erzeugt entweder eine UWOP_SAVE_XMM128 oder einen UWOP_SAVE_XMM128_FAR Entladung Code-Eintrag für den angegebenen XMM-Register und der aktuelle Prologoffset mit Offset. MASM wählt die effizienteste Codierung.<br /><br /> *Offset* muss positiv und ein Vielfaches von 16 sein.  *Offset* ist relativ zum Basis der Prozedur bei der Frame, in der Regel in der RSP oder, wenn der Frame-Pointer, die-Frame-Pointer verwenden.|
 |. PUSHFRAME \[ *Code*]|Generiert einen UWOP_PUSH_MACHFRAME Entladung Codeeintrag an. Wenn der optionale *Code* angegeben ist, wird der Eintrag der Entladung Code erhält einen Modifizierer von 1. Andernfalls ist der Modifizierer 0.|
 |.ENDPROLOG|Signalisiert das Ende der Prologdeklarationen.  Muss in den ersten 255 Bytes der Funktion erfolgen.|
@@ -394,11 +394,11 @@ Um die Verwendung von vereinfachen die [unformatierte Pseudooperationen](#raw-ps
 |Makro|Beschreibung|
 |-|-|
 |alloc_stack(n)|Weist einen Stapelrahmen von n Bytes (mit `sub rsp, n`), und gibt die entsprechenden Entladeinformationen aus (.allocstack-n)|
-|Save_reg *Reg*, *Loc*|Speichert ein nicht flüchtiges Register *Reg* im Stapel auf RSP offset *Loc*, und gibt die entsprechenden Entladeinformationen. (Reg .savereg, Loc)|
-|Push_reg *Reg*|Legt ein nicht flüchtiges Register *Reg* auf dem Stapel und gibt die entsprechenden Entladeinformationen. (.pushreg Reg)|
+|save_reg *reg*, *loc*|Speichert ein nicht flüchtiges Register *Reg* im Stapel auf RSP offset *Loc*, und gibt die entsprechenden Entladeinformationen. (Reg .savereg, Loc)|
+|push_reg *reg*|Legt ein nicht flüchtiges Register *Reg* auf dem Stapel und gibt die entsprechenden Entladeinformationen. (.pushreg Reg)|
 |Rex_push_reg *Reg*|Ein nicht flüchtiges Register speichern, auf dem Stapel mit einem Push-2-Byte und gibt die entsprechenden Entladeinformationen (.pushreg Reg) dies verwendet werden, sollte Wenn der Push-Vorgang die erste Anweisung in der Funktion ist, um sicherzustellen, dass die Funktion "heiß"-patchfähigen ist.|
 |save_xmm128 *Reg*, *Loc*|Speichert ein nicht flüchtiges XMM-Register *Reg* im Stapel auf RSP offset *Loc*, und gibt die entsprechenden Entladeinformationen aus (savexmm128 Reg, Loc)|
-|Set_frame *Reg*, *Offset*|Legt das Frame-Register *Reg* sollen die RSP + *Offset* (mit einer `mov`, oder ein `lea`), und gibt die entsprechenden Entladeinformationen aus ("set_frame Reg", "Offset")|
+|set_frame *reg*, *offset*|Legt das Frame-Register *Reg* sollen die RSP + *Offset* (mit einer `mov`, oder ein `lea`), und gibt die entsprechenden Entladeinformationen aus ("set_frame Reg", "Offset")|
 |push_eflags|Verschiebt Eflags mit einem `pushfq` -Anweisung, und gibt die entsprechenden Entladeinformationen aus (. alloc_stack 8)|
 
 Hier ist eine Beispiel-Funktionsprologs mit richtiger Verwendung der Makros:
@@ -504,4 +504,4 @@ typedef struct _RUNTIME_FUNCTION {
 
 ## <a name="see-also"></a>Siehe auch
 
-[X64 Softwarekonventionen](../build/x64-software-conventions.md)
+[Softwarekonventionen bei x64-Systemen](../build/x64-software-conventions.md)

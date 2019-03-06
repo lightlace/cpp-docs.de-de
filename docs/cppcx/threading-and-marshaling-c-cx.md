@@ -8,12 +8,12 @@ helpviewer_keywords:
 - agility, C++/CX
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
-ms.openlocfilehash: faf541a0705de3e0e3d1b795d1abbdc2e9707974
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ddf59e8df82b1ec98f4e1fabe9917027bdf0c75b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582635"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426757"
 ---
 # <a name="threading-and-marshaling-ccx"></a>Threading und Marshalling (C++/CX)
 
@@ -61,7 +61,7 @@ Hier ist die Warnung, die ausgegeben wird:
 
 > `Warning 1 warning C4451: 'Platform::Agile<T>::_object' : Usage of ref class 'Windows::Security::Credentials::UI::CredentialPickerOptions' inside this context can lead to invalid marshaling of object across contexts. Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead`
 
-Wenn Sie im Member- oder im globalen Gültigkeitsbereich zu einem Objekt einen Verweis hinzufügen, der das Marshallingverhalten "Standard" hat, gibt der Compiler eine Warnung aus, die Sie auffordert, den Typ stattdessen in `Platform::Agile<T>`: `Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead` zu umschließen. Wenn Sie `Agile<T>`verwenden, können Sie die Klasse wie jede andere agile Klasse nutzen. Verwenden Sie in diesem Fall `Platform::Agile<T>` :
+Wenn Sie einen Verweis hinzufügen – im Memberbereich oder im globalen Gültigkeitsbereich, in ein Objekt, das Marshallingverhalten "Standard" verfügt, gibt der Compiler eine Warnung, die Ihnen dazu rät, umschließen den Typ im `Platform::Agile<T>`: `Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead` Bei Verwendung von `Agile<T>`, Sie können die Klasse wie jede andere agile Klasse nutzen. Verwenden Sie in diesem Fall `Platform::Agile<T>` :
 
 - Die nicht agile Variable wird im globalen Gültigkeitsbereich deklariert.
 
@@ -124,5 +124,5 @@ Die Threading- und Marshallinginformationen, die von einer Drittanbieter-Windows
 
 ## <a name="see-also"></a>Siehe auch
 
-[ThreadingModel](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.threadingmodel.aspx)<br/>
-[MarshallingBehavior](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.marshalingbehaviorattribute.aspx)
+[ThreadingModel](/uwp/api/Windows.Foundation.Metadata.ThreadingModel)<br/>
+[MarshallingBehavior](/uwp/api/windows.foundation.metadata.marshalingbehaviorattribute)

@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: ca6185e7ee41726c7bf583056cb66eeb1be7021c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 634aa4adbe4e7084266be43ef932074373835c10
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303433"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414290"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl Class
 
@@ -489,7 +489,7 @@ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erwei
 Gibt das Steuerelement zum Bearbeiten des Stils an. Eine Kombination aus den in aufgeführten Window-Stile anwenden der **"Hinweise"** Abschnitt [erstellen](#create) und [Bearbeiten der Stile von Listensteuerelementen](/windows/desktop/Controls/edit-control-styles), die im Windows SDK beschrieben.
 
 *rect*<br/>
-Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
+Ein Verweis auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
 
 *pParentWnd*<br/>
 Ein Zeiger auf das Fenster, das übergeordnete Element des Steuerelements ist.

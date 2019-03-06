@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data types [C++], enumerating
 - public members [C++]
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-ms.openlocfilehash: 9d7d2623608d7dab27de78567582c7043468e98f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 769ba87f64a8096ac8c7f14cc091119345177b3b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444017"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426445"
 ---
 # <a name="reflection-ccli"></a>Reflektion (C++/CLI)
 
@@ -31,12 +31,12 @@ Die Reflektion ermöglicht die Überprüfung von bekannten Datentypen zur Laufze
 
 Beachten Sie, dass der angegebene Assemblyname des starken Namens ist (finden Sie unter [erstellen und Assemblys mit starkem Namen](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)), darunter die Assemblyversion, Kultur und Signierungsinformationen. Beachten Sie auch, dass der Name des Namespaces, in dem der Datentyp definiert ist, zusammen mit dem Namen der Basisklasse abgerufen werden kann.
 
-Am häufigsten wird über die <xref:System.Object.GetType%2A>-Methode auf Reflektionsfunktionen zugegriffen. Diese Methode wird bereitgestellt, indem [System:: Object](https://msdn.microsoft.com/library/system.object.aspx), aus der alle Garbage Collection-Klassen abgeleitet werden.
+Am häufigsten wird über die <xref:System.Object.GetType%2A>-Methode auf Reflektionsfunktionen zugegriffen. Diese Methode wird bereitgestellt, indem <xref:System.Object?displayProperty=nameWithType>, aus der alle Garbage Collection-Klassen abgeleitet werden.
 
 > [!NOTE]
 > Reflektion einer mit Visual C++-Compiler erstellte .exe ist nur zulässig, wenn die .exe mit erstellt wurde die **/CLR: pure** oder **/CLR: safe** Compileroptionen. Die **/CLR: pure** und **/CLR: safe** Compileroptionen sind in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht verfügbar. Finden Sie unter [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md) für Weitere Informationen.
 
-Weitere Informationen finden Sie unter [System.Reflection-Namespace](https://msdn.microsoft.com/library/system.reflection.aspx)
+Weitere Informationen finden Sie unter <xref:System.Reflection>
 
 ## <a name="example-gettype"></a>Beispiel: GetType
 
@@ -177,9 +177,9 @@ public:
 
 ## <a name="example-inspection-of-assemblies"></a>Beispiel: Überprüfung von Assemblys
 
-Wenn der obige Code in eine DLL mit dem Namen vcpp_reflection_6.dll kompiliert wird, können Sie mithilfe der Reflektion den Inhalt dieser Assembly überprüfen. Dies umfasst die statische Reflektions-API-Funktion [Reflektions](https://msdn.microsoft.com/library/system.reflection.assembly.load.aspx) zum Laden der Assembly. Diese Funktion gibt die Adresse einer **Assembly** -Objekt, das über die Module und Typen abgefragt werden kann.
+Wenn der obige Code in eine DLL mit dem Namen vcpp_reflection_6.dll kompiliert wird, können Sie mithilfe der Reflektion den Inhalt dieser Assembly überprüfen. Dies umfasst die Verwendung der statischen-API-Funktion xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType, zum Laden der Assembly. Diese Funktion gibt die Adresse einer **Assembly** -Objekt, das über die Module und Typen abgefragt werden kann.
 
-Sobald das Reflektionssystem die Assembly, ein Array von erfolgreich lädt **Typ** Objekte wird abgerufen, mit der [Assembly:: GetTypes](https://msdn.microsoft.com/library/system.reflection.assembly.gettypes.aspx) Funktion. Jedes Arrayelement enthält Informationen zu einem anderen Typ, obwohl in diesem Fall nur eine Klasse definiert ist. Mithilfe einer Schleife jeden **Typ** wird in diesem Array die Typmember mit abgefragt der **GetMembers** Funktion. Diese Funktion gibt ein Array von **MethodInfo** Objekten, jedes Objekt, das Informationen über die Memberfunktion, Datenmember oder Eigenschaft im Typ enthält.
+Sobald das Reflektionssystem die Assembly, ein Array von erfolgreich lädt **Typ** Objekte wird abgerufen, mit der <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> Funktion. Jedes Arrayelement enthält Informationen zu einem anderen Typ, obwohl in diesem Fall nur eine Klasse definiert ist. Mithilfe einer Schleife jeden **Typ** wird in diesem Array die Typmember mit abgefragt der **GetMembers** Funktion. Diese Funktion gibt ein Array von **MethodInfo** Objekten, jedes Objekt, das Informationen über die Memberfunktion, Datenmember oder Eigenschaft im Typ enthält.
 
 Beachten Sie, dass die Liste der Methoden explizit die Funktionen enthält, die in definierten **TestClass** und die Funktionen implizit geerbt wird, von der **System:: Object** Klasse. Bedingt dadurch, dass Eigenschaften in .NET- anstatt in Visual C++-Syntax beschrieben sind, werden sie als die zugrunde liegenden Datenmember angezeigt, auf die von den get-/set-Funktionen zugegriffen wird. Die get-/set-Funktionen werden in dieser Liste als reguläre Methoden angezeigt. Die Reflektion wird durch die Common Language Runtime und nicht durch den Visual C++-Compiler unterstützt.
 
@@ -232,7 +232,7 @@ int main() {
 }
 ```
 
-## <a name="implement"></a> Gewusst wie: Implementieren einer Plug-In-Komponentenarchitektur mit Reflektion
+## <a name="implement"></a> Vorgehensweise: Implementieren einer Plug-In-Komponentenarchitektur mit Reflektion
 
 Die folgenden Codebeispiele veranschaulichen die Verwendung von Reflektion, um eine einfache "plug-in-Architektur zu implementieren. Das erste Codelisting ist der Anwendung, und die zweite ist das plug-in. Die Anwendung ist das Formular in einer multiple-Document an, die sich über alle Form-basierten Klassen finden Sie in der Plug-in-DLL als Befehlszeilenargument auffüllt.
 
@@ -340,7 +340,7 @@ protected:
 };
 ```
 
-## <a name="enumerate"></a> Gewusst wie: Auflisten von Datentypen in Assemblys mit Reflektion
+## <a name="enumerate"></a> Vorgehensweise: Auflisten von Datentypen in Assemblys mit Reflektion
 
 Der folgende Code veranschaulicht die Enumeration von öffentlichen Typen und Member, die mit <xref:System.Reflection>.
 

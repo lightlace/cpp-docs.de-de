@@ -2,12 +2,12 @@
 title: /Qpar-report (Auto-Parallelizer-Berichtsebene)
 ms.date: 11/04/2016
 ms.assetid: 562673b9-02da-4bf8-bb64-70bc25ef4651
-ms.openlocfilehash: 4f3f496deb9f87d4f33f5e36832bd46405a482b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ab14f890d888664b2847f3e3d4b193d7c77da1a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550032"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419906"
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qpar-report (Auto-Parallelizer-Berichtsebene)
 
@@ -21,10 +21,10 @@ Ermöglicht die Berichtsfunktion des Compilers [Auto-Parallelisierer](../../para
 
 ## <a name="remarks"></a>Hinweise
 
-**/ Qpar-Report: 1**<br/>
+**/Qpar-report:1**<br/>
 Gibt eine Informationsmeldung für Schleifen an, die parallel ausgeführt werden.
 
-**/ Qpar-Report: 2**<br/>
+**/Qpar-report:2**<br/>
 Gibt eine Informationsmeldung für Schleifen an, die parallel ausgeführt werden und auch für Schleifen, die nicht, zusammen mit einen Ursachencode parallel ausgeführt werden.
 
 Nachrichten werden an Stdout gesendet. Wenn keine Informationsmeldungen angezeigt werden, enthält der Code keine Schleifen oder die Berichterstellungsebene wurde nicht festgelegt, um Bericht-Schleifen, die nicht parallel ausgeführt werden, zu melden. Weitere Informationen zu Ursachencodes und Meldungen finden Sie unter [Vectorizer- and Parallelizer-Meldungen](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).

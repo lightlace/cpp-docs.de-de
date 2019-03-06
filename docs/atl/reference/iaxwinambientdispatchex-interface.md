@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
-ms.openlocfilehash: ae91921ecd5f53f4551e46e1d03cf027ce3e1f3b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 638152d8c49bd20742a586bc665efcdb662b6f3a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292403"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413887"
 ---
 # <a name="iaxwinambientdispatchex-interface"></a>IAxWinAmbientDispatchEx-Schnittstelle
 
@@ -42,7 +42,7 @@ Schließen Sie diese Schnittstelle in ATL-Anwendungen, die statisch verknüpft s
 
 Diese Schnittstelle wird durch die ATL-ActiveX-Steuerelement hosten von Objekten verfügbar gemacht. Abgeleitet von [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md), `IAxWinAmbientDispatchEx` Fügt eine Methode, die Sie an, um die ambient-Eigenschaft-Schnittstelle, die vom ATL ein eigenes bereitgestellten ergänzen kann.
 
-[AXHost](https://msdn.microsoft.com/library/system.windows.forms.axhost.aspx) wird versucht, Typinformationen zum Laden `IAxWinAmbientDispatch` und `IAxWinAmbientDispatchEx` aus der Typbibliothek, die den Code enthält.
+<xref:System.Windows.Forms.AxHost> versucht, Typinformationen zum Laden `IAxWinAmbientDispatch` und `IAxWinAmbientDispatchEx` aus der Typbibliothek, die den Code enthält.
 
 Wenn Sie ATL90.dll, verknüpfen möchten **AXHost** lädt die Typinformationen aus der Typbibliothek in der DLL.
 

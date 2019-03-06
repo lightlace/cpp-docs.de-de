@@ -52,16 +52,16 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: c5e599b437f7660801a1eb40618eb49bee84a918
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: e1f461cc850a2122af7902babfad8f1e14ac3e33
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556815"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424846"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl-Klasse
 
-Stellt die Implementierung für die [ICommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms709737(v=vs.85)) Schnittstelle.
+Stellt die Implementierung für die [ICommand](/previous-versions/windows/desktop/ms709737(v=vs.85)) Schnittstelle.
 
 ## <a name="syntax"></a>Syntax
 
@@ -107,7 +107,7 @@ Eine Befehlsschnittstelle. Die Standardeinstellung ist `ICommand`.
 
 Eine erforderliche Schnittstelle für das Command-Objekt.
 
-## <a name="cancel"></a> ICommandImpl:: Cancel
+## <a name="cancel"></a> ICommandImpl::Cancel
 
 Bricht die Ausführung des aktuellen Befehls ab.
 
@@ -119,9 +119,9 @@ STDMETHOD(Cancel)();
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [ICommand::Cancel](https://docs.microsoft.com/previous-versions/windows/desktop/ms714402(v=vs.85)) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [ICommand::Cancel](/previous-versions/windows/desktop/ms714402(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
-## <a name="cancelexecution"></a> ICommandImpl:: Cancelexecution
+## <a name="cancelexecution"></a> ICommandImpl::CancelExecution
 
 Bricht die Ausführung des aktuellen Befehls ab.
 
@@ -131,7 +131,7 @@ Bricht die Ausführung des aktuellen Befehls ab.
 HRESULT CancelExecution();
 ```
 
-## <a name="createrowset"></a> ICommandImpl:: CreateRowset
+## <a name="createrowset"></a> ICommandImpl::CreateRowset
 
 Wird aufgerufen, indem [Execute](../../data/oledb/icommandimpl-execute.md) um ein einzelnes Rowset zu erstellen.
 
@@ -178,9 +178,9 @@ Ein standard HRESULT-Wert. Finden Sie unter `ICommand::Execute` eine Liste mit t
 
 Um mehr als ein Rowset zu erstellen, oder geben Sie Ihren eigenen Bedingungen für das Erstellen von anderen Rowsets, platzieren Sie die verschiedenen Aufrufe zum `CreateRowset` aus `Execute`.
 
-Finden Sie unter [ICommand:: Execute](https://docs.microsoft.com/previous-versions/windows/desktop/ms718095(v=vs.85)) in die *OLE DB-Programmierreferenz.*
+Finden Sie unter [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) in die *OLE DB-Programmierreferenz.*
 
-## <a name="execute"></a> ICommandImpl:: Execute
+## <a name="execute"></a> ICommandImpl::Execute
 
 Führt den Befehl.
 
@@ -196,7 +196,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [ICommand:: Execute](https://docs.microsoft.com/previous-versions/windows/desktop/ms718095(v=vs.85)) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -204,7 +204,7 @@ Die Ausgangsschnittstelle angefordert werden, dass eine Schnittstelle, die abger
 
 `Execute` Aufrufe [CreateRowset](../../data/oledb/icommandimpl-createrowset.md). Überschreiben Sie die standardmäßige Implementierung mehr als ein Rowset zu erstellen, oder geben Sie Ihren eigenen Bedingungen für das Erstellen von anderen Rowsets.
 
-## <a name="getdbsession"></a> ICommandImpl:: Getdbsession
+## <a name="getdbsession"></a> ICommandImpl::GetDBSession
 
 Gibt einen Schnittstellenzeiger zurück, mit der Sitzung, die den Befehl erstellt haben.
 
@@ -217,13 +217,13 @@ STDMETHOD (GetDBSession) (REFIID riid,
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [ICommand::GetDBSession](https://docs.microsoft.com/previous-versions/windows/desktop/ms719622(v=vs.85)) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
 ### <a name="remarks"></a>Hinweise
 
 Nützlich zum Abrufen von Eigenschaften aus der Sitzung.
 
-## <a name="icommandimpl"></a> ICommandImpl:: ICommandImpl
+## <a name="icommandimpl"></a> ICommandImpl::ICommandImpl
 
 Der Konstruktor.
 
@@ -233,7 +233,7 @@ Der Konstruktor.
 ICommandImpl();
 ```
 
-## <a name="bcancel"></a> ICommandImpl:: M_bcancel
+## <a name="bcancel"></a> ICommandImpl::m_bCancel
 
 Gibt an, ob der Befehl abgebrochen wird.
 
@@ -247,7 +247,7 @@ unsigned m_bCancel:1;
 
 Sie können diese Variable im Abrufen der `Execute` Methode Ihrer Klasse des Befehls und "Abbrechen", nach Bedarf.
 
-## <a name="bcancelwhenexecuting"></a> ICommandImpl:: M_bcancelwhenexecuting
+## <a name="bcancelwhenexecuting"></a> ICommandImpl::m_bCancelWhenExecuting
 
 Gibt an, ob der Befehl für die Ausführung abgebrochen werden kann.
 
@@ -261,7 +261,7 @@ unsigned m_bCancelWhenExecuting:1;
 
 Standardmäßig **"true"** (kann abgebrochen werden kann).
 
-## <a name="bisexecuting"></a> ICommandImpl:: M_bisexecuting
+## <a name="bisexecuting"></a> ICommandImpl::m_bIsExecuting
 
 Gibt an, ob der Befehl derzeit ausgeführt wird.
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -IDLOUT linker option
 - IDLOUT linker option
 ms.assetid: 10d00a6a-85b4-4de1-8732-e422c6931509
-ms.openlocfilehash: b21e8eb266de9a0baa0512a82acb0ae8a9f650a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91c1a3642f157390e5a0d5c7e2f36d7adf3ca118
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500424"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417631"
 ---
 # <a name="idlout-name-midl-output-files"></a>/IDLOUT (Namen der MIDL-Ausgabedateien)
 
@@ -42,13 +42,13 @@ Der MIDL-Compiler wird durch den Visual C++-Linker aufgerufen, wenn das Verknüp
 
 / IDLOUT gibt auch an die Dateinamen der anderen Ausgabedateien der MIDL-Compiler zugeordnet:
 
-- *FileName*TLB-Datei
+- *filename*.tlb
 
-- *FileName*_p.c
+- *filename*_p.c
 
-- *FileName*_i.c
+- *filename*_i.c
 
-- *FileName*h
+- *filename*.h
 
 *FileName* ist der Parameter, die an/IDLOUT übergeben. Wenn [/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md) angegeben ist, wird die TLB-Datei erhält den Namen von/TLBOUT *Filename*.
 

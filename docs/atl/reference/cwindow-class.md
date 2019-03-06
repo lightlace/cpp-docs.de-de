@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: b27d6bb01b9e94ebe38be5455ffcc870806ac33b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2767770e354c81e5a34a0d6e9105a27ecb361ddc
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298346"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425067"
 ---
 # <a name="cwindow-class"></a>CWindow-Klasse
 
@@ -536,7 +536,7 @@ BOOL ClientToScreen(LPRECT lpRect) const throw();
 
 Finden Sie unter [ClientToScreen](/windows/desktop/api/winuser/nf-winuser-clienttoscreen) in das Windows SDK.
 
-Die zweite Version dieser Methode ermöglicht die Koordinaten der Konvertierung einer [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.
+Die zweite Version dieser Methode ermöglicht die Koordinaten der Konvertierung einer [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur.
 
 ##  <a name="create"></a>  CWindow::Create
 
@@ -1789,7 +1789,7 @@ int MapWindowPoints(
 
 Finden Sie unter [MapWindowPoints](/windows/desktop/api/winuser/nf-winuser-mapwindowpoints) in das Windows SDK.
 
-Die zweite Version dieser Methode ermöglicht die Koordinaten der Konvertierung einer [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.
+Die zweite Version dieser Methode ermöglicht die Koordinaten der Konvertierung einer [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur.
 
 ##  <a name="messagebox"></a>  CWindow::MessageBox
 
@@ -1923,7 +1923,7 @@ BOOL MoveWindow(
 
 Sind für ein Vordergrundfenster-Objekt, der x- und y-Parameter, relativ zu der oberen linken Ecke des Bildschirms. Für ein Objekt des untergeordneten Fensters sind sie relativ zu der oberen linken Ecke des Clientbereichs des übergeordneten Fensters.
 
-Die zweite Version dieser Methode verwendet eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, um neue Position, Breite und Höhe des Fensters festzulegen.
+Die zweite Version dieser Methode verwendet eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, um neue Position, Breite und Höhe des Fensters festzulegen.
 
 ##  <a name="nextdlgctrl"></a>  CWindow::NextDlgCtrl
 
@@ -2134,7 +2134,7 @@ BOOL ScreenToClient(LPRECT lpRect) const throw();
 
 Finden Sie unter [ScreenToClient](/windows/desktop/api/winuser/nf-winuser-screentoclient) in das Windows SDK.
 
-Die zweite Version dieser Methode ermöglicht die Koordinaten der Konvertierung einer [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.
+Die zweite Version dieser Methode ermöglicht die Koordinaten der Konvertierung einer [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur.
 
 ##  <a name="scrollwindow"></a>  CWindow::ScrollWindow
 
@@ -2605,7 +2605,7 @@ BOOL SetWindowPos(
 
 Finden Sie unter [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) in das Windows SDK.
 
-Die zweite Version dieser Methode verwendet eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die neue Position, Breite und Höhe des Fensters festzulegen.
+Die zweite Version dieser Methode verwendet eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die neue Position, Breite und Höhe des Fensters festzulegen.
 
 ##  <a name="setwindowrgn"></a>  CWindow::SetWindowRgn
 

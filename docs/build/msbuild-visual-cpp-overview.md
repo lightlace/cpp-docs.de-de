@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: 0eac756824b3da6352c60ec69e9d6e679732522c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 072bc15cc931c2fd50cf8a2a1ff0c9145da8b7be
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484798"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414693"
 ---
 # <a name="msbuild-visual-c-overview"></a>Übersicht über MSBuild (Visual C++)
 
@@ -27,7 +27,7 @@ Lesen Sie die folgenden Dokumente zu MSBuild.
 
 - [Befehlszeilenreferenz](/visualstudio/msbuild/msbuild-command-line-reference) beschreibt die Befehlszeilenargumente und die Optionen, mit denen Sie mit msbuild.exe.
 
-- [Task Reference](/visualstudio/msbuild/msbuild-task-reference) Beschreibt MSBuild-Aufgaben. Beachten Sie insbesondere diese Aufgaben, die Visual C++-spezifisch sind: [BscMake-Aufgabe](/visualstudio/msbuild/bscmake-task), [CL-Aufgabe](/visualstudio/msbuild/cl-task), [CPPClean-Aufgabe](/visualstudio/msbuild/cppclean-task), [LIB-Aufgabe](/visualstudio/msbuild/lib-task), [Link-Aufgabe](/visualstudio/msbuild/link-task), [MIDL-Aufgabe](/visualstudio/msbuild/midl-task), [MT-Aufgabe](/visualstudio/msbuild/mt-task), [RC-Aufgabe](/visualstudio/msbuild/rc-task), [SetEnv-Aufgabe](/visualstudio/msbuild/setenv-task), [ VCMessage-Aufgabe](/visualstudio/msbuild/vcmessage-task), [XDCMake-Aufgabe](/visualstudio/msbuild/xdcmake-task), [XSD-Aufgabe](/visualstudio/msbuild/xsd-task).
+- [Task Reference](/visualstudio/msbuild/msbuild-task-reference) Beschreibt MSBuild-Aufgaben. Beachten Sie insbesondere diese Aufgaben, die Visual C++-spezifisch sind: [BscMake-Aufgabe](/visualstudio/msbuild/bscmake-task), [CL-Aufgabe](/visualstudio/msbuild/cl-task), [CPPClean-Aufgabe](/visualstudio/msbuild/cppclean-task), [LIB-Aufgabe](/visualstudio/msbuild/lib-task), [Link-Aufgabe](/visualstudio/msbuild/link-task), [MIDL-Aufgabe](/visualstudio/msbuild/midl-task), [MT-Aufgabe](/visualstudio/msbuild/mt-task), [RC-Aufgabe](/visualstudio/msbuild/rc-task), [SetEnv-Aufgabe](/visualstudio/msbuild/setenv-task), [VCMessage-Aufgabe](/visualstudio/msbuild/vcmessage-task), [XDCMake-Aufgabe](/visualstudio/msbuild/xdcmake-task), [XSD-Aufgabe](/visualstudio/msbuild/xsd-task).
 
 ## <a name="msbuild-on-the-command-line"></a>MSBuild in der Befehlszeile
 
@@ -66,8 +66,8 @@ Standardmäßig befinden sich die primären Visual C++-Supportdateien in den fol
 |Verzeichnis|Beschreibung|
 |---------------|-----------------|
 |*Laufwerk*: \Program Files *(x86)* \Microsoft Visual Studio\\*Jahr*\\*Edition*\Common7\IDE\VC\VCTargets\ <br /><br />*Laufwerk*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp (x86) \v4.0\\*Version*\ |Enthält die primären Zieldateien (TARGETS-Format) und Eigenschaftendateien (PROPS-Format), die von den Zielen verwendet werden. Standardmäßig verweist das $ (VCTargetsPath)-Makro auf dieses Verzeichnis.|
-|*Laufwerk*: \Program Files *(x86)* \Microsoft Visual Studio\\*Jahr*\\*Edition*\Common7\IDE\VC\VCTargets\ Plattformen\\*Plattform*\ <br /><br />*Laufwerk*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*Version*\Platforms\\*Plattform*\ |Enthält plattformspezifische Ziel- und Eigenschaftsdateien, die die Ziele und Eigenschaften im übergeordneten Verzeichnis außer Kraft setzen. Dieses Verzeichnis enthält auch eine DLL, die Aufgaben definiert, die von den Zielen in diesem Verzeichnis verwendet werden.<br /><br /> Die *Plattform* steht für die ARM, Win32 oder X64 Unterverzeichnis.|
-|*Laufwerk*: \Program Files *(x86)* \Microsoft Visual Studio\\*Jahr*\\*Edition*\Common7\IDE\VC\VCTargets\ Plattformen\\*Plattform*\PlatformToolsets\\*Toolset*\ <br /><br />*Laufwerk*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*Version*\Platforms\\*Plattform*\ \PlatformToolsets\\*Toolset*\ <br /><br />*Laufwerk*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*Plattform*\PlatformToolsets\\*Toolset*\ |Enthält die Verzeichnisse, mit denen das Build Visual C++-Anwendungen zu generieren, indem Sie mit dem angegebenen *Toolset*.<br /><br /> Die *Jahr* und *Edition* Platzhalter von Visual Studio 2017 und höhere Editionen verwendet werden. Die *Version* Platzhalter ist V110 für Visual Studio 2012, V120 für Visual Studio 2013 oder V140 für Visual Studio 2015. Die *Plattform* steht für die ARM, Win32 oder X64 Unterverzeichnis. Die *Toolset* Platzhalter stellt das Toolsetunterverzeichnis, z. B. v140 zum Erstellen von Windows-apps mit dem Visual Studio 2015-Toolset, v120_xp für Windows XP mit dem Toolset von Visual Studio 2013 oder v110_wp80 zu erstellen. Erstellen von Windows Phone 8.0-apps mit dem Toolset von Visual Studio 2012.<br /><br />Der Pfad, der die Verzeichnisse enthält, mit denen den Build entweder Visual C++ 2008 oder Visual C++ 2010-Anwendungen generieren nicht umfassen die *Version*, und die *Plattform* Platzhalter darstellt. die Itanium, Win32 oder X64 Unterverzeichnis. Die *Toolset* -Platzhalter stellt das Toolsetunterverzeichnis v90 oder v100 dar.|
+|*Laufwerk*: \Program Files *(x86)* \Microsoft Visual Studio\\*Jahr*\\*Edition*\Common7\IDE\VC\VCTargets\ Plattformen\\*Plattform*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*platform*\ |Enthält plattformspezifische Ziel- und Eigenschaftsdateien, die die Ziele und Eigenschaften im übergeordneten Verzeichnis außer Kraft setzen. Dieses Verzeichnis enthält auch eine DLL, die Aufgaben definiert, die von den Zielen in diesem Verzeichnis verwendet werden.<br /><br /> Die *Plattform* steht für die ARM, Win32 oder X64 Unterverzeichnis.|
+|*Laufwerk*: \Program Files *(x86)* \Microsoft Visual Studio\\*Jahr*\\*Edition*\Common7\IDE\VC\VCTargets\ Plattformen\\*Plattform*\PlatformToolsets\\*Toolset*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*platform*\PlatformToolsets\\*toolset*\ <br /><br />*Laufwerk*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*Plattform*\PlatformToolsets\\*Toolset*\ |Enthält die Verzeichnisse, mit denen das Build Visual C++-Anwendungen zu generieren, indem Sie mit dem angegebenen *Toolset*.<br /><br /> Die *Jahr* und *Edition* Platzhalter von Visual Studio 2017 und höhere Editionen verwendet werden. Die *Version* Platzhalter ist V110 für Visual Studio 2012, V120 für Visual Studio 2013 oder V140 für Visual Studio 2015. Die *Plattform* steht für die ARM, Win32 oder X64 Unterverzeichnis. Die *Toolset* Platzhalter stellt das Toolsetunterverzeichnis, z. B. v140 zum Erstellen von Windows-apps mit dem Visual Studio 2015-Toolset, v120_xp für Windows XP mit dem Toolset von Visual Studio 2013 oder v110_wp80 zu erstellen. Erstellen von Windows Phone 8.0-apps mit dem Toolset von Visual Studio 2012.<br /><br />Der Pfad, der die Verzeichnisse enthält, mit denen den Build entweder Visual C++ 2008 oder Visual C++ 2010-Anwendungen generieren nicht umfassen die *Version*, und die *Plattform* Platzhalter darstellt. die Itanium, Win32 oder X64 Unterverzeichnis. Die *Toolset* -Platzhalter stellt das Toolsetunterverzeichnis v90 oder v100 dar.|
 
 ### <a name="support-files"></a>Supportdateien
 

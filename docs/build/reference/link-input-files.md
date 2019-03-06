@@ -14,18 +14,18 @@ helpviewer_keywords:
 - import libraries [C++], linker files
 - command input to linker files [C++]
 ms.assetid: bb26fcc5-509a-4620-bc3e-b6c6e603a412
-ms.openlocfilehash: a5aaf162a16b6989ac1abbcb6a574af1c31b543a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9fb2e6b8ee0f8ddc1512c605373671ae1c93c0b8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550552"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413250"
 ---
 # <a name="link-input-files"></a>LINK-Eingabedateien
 
 Sie bieten den Linker Dateien, die Objekte, Import und standard-Bibliotheken, Ressourcen, Moduldefinitionen und Eingabe-Befehl enthalten. LINK verwendet Dateierweiterungen keine Annahmen zum Inhalt einer Datei. Stattdessen untersucht LINK jede Eingabedatei, um festzustellen, welche Art von Datei vorliegt.
 
-Objektdateien in der Befehlszeile sind in der Reihenfolge verarbeitet, die sie in der Befehlszeile angezeigt werden. Bibliotheken werden in Reihenfolge durchsucht, über die Befehlszeile, mit der folgenden Einschränkung: nicht aufgelöste Symbole, beim Importieren einer Objektdatei aus einer Bibliothek in dieser Bibliothek zuerst gesucht, und klicken Sie dann die folgenden Bibliotheken aus der Befehlszeile und [DEFAULTLIB (Angeben von Standard-Bibliothek)](../../build/reference/defaultlib-specify-default-library.md) Anweisungen, und klicken Sie dann auf die Bibliotheken am Anfang der Befehlszeile aus.
+Objektdateien in der Befehlszeile sind in der Reihenfolge verarbeitet, die sie in der Befehlszeile angezeigt werden. Bibliotheken werden in der Reihenfolge der Befehlszeile, mit der folgenden Einschränkung durchsucht: Symbole, die nicht aufgelöste beim Importieren einer Objektdatei aus einer Bibliothek in dieser Bibliothek zuerst gesucht, und klicken Sie dann die folgenden Bibliotheken über die Befehlszeile und [DEFAULTLIB (Angeben von Standard-Bibliothek)](../../build/reference/defaultlib-specify-default-library.md) Anweisungen, und klicken Sie dann auf Bibliotheken am Anfang der Befehlszeile aus.
 
 > [!NOTE]
 >  LINK akzeptiert eine durch Semikolons (oder jedes andere Zeichen) nicht mehr als Anfang eines Kommentars in Antwortdateien und ordnen Sie Dateien an. Semikolons sind nur als Anfang eines Kommentars in Moduldefinitionsdateien (.def) erkannt.

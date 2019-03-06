@@ -1,15 +1,15 @@
 ---
-title: 'Exemplarische Vorgehensweise: Kompilieren eines C++/CX-Programms in der Befehlszeile'
+title: 'Exemplarische Vorgehensweise: Kompilieren eines C++ / CX-Programms in der Befehlszeile'
 ms.date: 09/24/2018
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: 6acfa707ac64a647e838fd1dbcd5564c79faa1a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f6716b379a11f88adb5c75643e325a9b2856eac
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515140"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413796"
 ---
-# <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Exemplarische Vorgehensweise: Kompilieren eines C++/CX-Programms in der Befehlszeile
+# <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Exemplarische Vorgehensweise: Kompilieren eines C++ / CX-Programms in der Befehlszeile
 
 Sie können Visual C++-Programme erstellen, die auf die Windows Runtime abzielen und diese in der Befehlszeile erstellen. Visual C++ unterstützt Visual C++-Komponentenerweiterungen (C++/CX), die zusätzliche Typen und Operatoren für das Windows-Runtime-Programmiermodell bereitstellen. Sie können C++ / CX verwenden, um apps für universelle Windows-Plattform (UWP), Windows Phone 8.1 und Windows-Desktop zu erstellen. Weitere Informationen finden Sie unter [eine Einführung in c++ / CX](https://msdn.microsoft.com/magazine/dn166929.aspx) und [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md).
 

@@ -4,16 +4,16 @@ ms.date: 10/13/2018
 helpviewer_keywords:
 - OLE DB providers, reading strings into
 ms.assetid: 517f322c-f37e-4eed-bf5e-dd9a412c2f98
-ms.openlocfilehash: 6d8558cce3fc4818d3e6fc8d64a4c682f5ce5b26
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 19fc7b16695ebeff35462aaa2c451ff6459bb7b6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556165"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425223"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Einlesen von Zeichenfolgen in den OLE DB-Anbieter
 
-Die `CCustomRowset::Execute` Funktion eine Datei öffnet und liest Zeichenfolgen. Der Consumer übergibt den Dateinamen an dem Anbieter an, durch den Aufruf [ICommandText:: SetCommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms709757(v=vs.85)). Der Anbieter erhält den Dateinamen und speichert sie in der Membervariablen `m_strCommandText`. `Execute` liest den Dateinamen aus `m_strCommandText`. Wenn der Dateiname ungültig ist, oder die Datei nicht verfügbar ist ist, `Execute` gibt einen Fehler zurück. Sie geöffnet wird, andernfalls die Datei, und Aufrufe `fgets` die Zeichenfolgen ab. Für jede von Zeichenfolgen es liest, legen Sie `Execute` erstellt eine Instanz des Benutzerdatensatzes (geändert `CCustomWindowsFile` aus [Speichern von Zeichenfolgen im OLE DB-Anbieter](../../data/oledb/storing-strings-in-the-ole-db-provider.md)) und setzt es in ein Array.
+Die `CCustomRowset::Execute` Funktion eine Datei öffnet und liest Zeichenfolgen. Der Consumer übergibt den Dateinamen an dem Anbieter an, durch den Aufruf [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)). Der Anbieter erhält den Dateinamen und speichert sie in der Membervariablen `m_strCommandText`. `Execute` liest den Dateinamen aus `m_strCommandText`. Wenn der Dateiname ungültig ist, oder die Datei nicht verfügbar ist ist, `Execute` gibt einen Fehler zurück. Sie geöffnet wird, andernfalls die Datei, und Aufrufe `fgets` die Zeichenfolgen ab. Für jede von Zeichenfolgen es liest, legen Sie `Execute` erstellt eine Instanz des Benutzerdatensatzes (geändert `CCustomWindowsFile` aus [Speichern von Zeichenfolgen im OLE DB-Anbieter](../../data/oledb/storing-strings-in-the-ole-db-provider.md)) und setzt es in ein Array.
 
 Wenn die Datei kann nicht geöffnet werden, `Execute` DB_E_NOTABLE zurückgeben. Wenn sie stattdessen E_FAIL zurückgibt, wird der Anbieter funktioniert nicht mit vielen Consumern und übergeben Sie den OLE DB wird nicht [Konformitätstests](../../data/oledb/testing-your-provider.md).
 

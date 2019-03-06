@@ -2,12 +2,12 @@
 title: Delegaten (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
-ms.openlocfilehash: 8153ac6ffc48b43fc218ee786cdb3f64504d825e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb23c5d1ae35a56a827bc2436dbdd81b53dd1224
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635239"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415278"
 ---
 # <a name="delegates-ccx"></a>Delegaten (C++/CX)
 
@@ -23,7 +23,7 @@ Delegaten werden am häufigsten in Verbindung mit Ereignissen verwendet. Ein Ere
 event PrimeFoundHandler^ primeFoundEvent;
 ```
 
-Verwenden Sie beim Deklarieren von Delegaten, die verfügbar gemacht werden für Clients über die anwendungsbinärdateischnittstelle der Windows-Runtime, [Windows::Foundation::TypedEventHandler\<TSender, TResult >](https://msdn.microsoft.com/library/windows/apps/br225997.aspx). Dieser Delegat besitzt vordefinierte Proxy- und Stubbinärdateien, die es ermöglichen, dass er von JavaScript-Clients verwendet wird.
+Verwenden Sie beim Deklarieren von Delegaten, die verfügbar gemacht werden für Clients über die anwendungsbinärdateischnittstelle der Windows-Runtime, [Windows::Foundation::TypedEventHandler\<TSender, TResult >](/uwp/api/windows.foundation.typedeventhandler). Dieser Delegat besitzt vordefinierte Proxy- und Stubbinärdateien, die es ermöglichen, dass er von JavaScript-Clients verwendet wird.
 
 ## <a name="consuming-delegates"></a>Verwenden von Delegaten
 

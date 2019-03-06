@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __delayLoadHelper2 function
 - helper functions, what's changed
 ms.assetid: 99f0be69-105d-49ba-8dd5-3be7939c0c72
-ms.openlocfilehash: 8d50962bf66e07d6238be4a1a973c9d9ff06a556
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25c59d37b753c80014b566fd925363cae71798be
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613771"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426523"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Änderungen an der Hilfsfunktion für das verzögerte Laden von DLLs seit Visual C++ 6.0
 
@@ -47,7 +47,7 @@ Wenn Sie eine eigene Hilfsfunktion definiert und die aktuelle Version von Visual
 
 - Benennen Sie die Hilfsfunktion zum **__delayLoadHelper2**.
 
-- Da der Zeiger in der Delay-Deskriptor (ImgDelayDescr in delayimp.h), relativen Adresse (RVA) funktioniert in beide 32- und 64-Bit-Programme wie erwartet von absoluten Adressen (VAs) geändert wurden, müssen Sie diese wieder in Zeiger konvertiert. Wurde eine neue Funktion eingeführt: PFromRva, finden Sie im delayhlp.cpp. Sie können diese Funktion auf jedes der Felder im Deskriptor verwenden, an beiden 32- oder 64-Bit-Zeiger konvertieren. Die Standard-Hilfsfunktion Verzögerung Laden ist weiterhin eine gute Vorlage zu verwenden als Beispiel.
+- Da der Zeiger in der Delay-Deskriptor (ImgDelayDescr in delayimp.h), relativen Adresse (RVA) funktioniert in beide 32- und 64-Bit-Programme wie erwartet von absoluten Adressen (VAs) geändert wurden, müssen Sie diese wieder in Zeiger konvertiert. Eine neue Funktion wurde eingeführt: PFromRva, finden Sie im delayhlp.cpp. Sie können diese Funktion auf jedes der Felder im Deskriptor verwenden, an beiden 32- oder 64-Bit-Zeiger konvertieren. Die Standard-Hilfsfunktion Verzögerung Laden ist weiterhin eine gute Vorlage zu verwenden als Beispiel.
 
 ## <a name="load-all-imports-for-a-delay-loaded-dll"></a>Laden Sie aller Importe für eine verzögert geladene DLL
 

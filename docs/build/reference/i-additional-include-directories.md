@@ -14,12 +14,12 @@ helpviewer_keywords:
 - set include directories
 - include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-ms.openlocfilehash: 0dc1769924880d8cb1b5dc173dd614e87584cac9
-ms.sourcegitcommit: 45835842604602a011813d0cd70abc5df91b89ed
+ms.openlocfilehash: 72f871b99602c63e3edaea719faf5de6d4451515
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750391"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412847"
 ---
 # <a name="i-additional-include-directories"></a>/ I (Zusätzliche Includeverzeichnisse)
 
@@ -31,7 +31,7 @@ Fügt ein Verzeichnis zur Liste der Verzeichnisse, die nach Includedateien durch
 
 ### <a name="arguments"></a>Argumente
 
-*Verzeichnis*<br/>
+*directory*<br/>
 Das Verzeichnis in der Liste der Verzeichnisse hinzugefügt werden, die nach Includedateien durchsucht werden.
 
 ## <a name="remarks"></a>Hinweise
@@ -62,7 +62,7 @@ Der Compiler sucht Verzeichnisse, in der folgenden Reihenfolge:
 
 ## <a name="example"></a>Beispiel
 
-Der folgende Befehl sucht die Includedateien, die von MAIN.c angefordert wird, in der folgenden Reihenfolge: zuerst, wenn es sich bei mit doppelten Anführungszeichen angegeben, lokale Dateien werden durchsucht. Als Nächstes Suche wird fortgesetzt, im Verzeichnis \include"-Unterverzeichnis aus, und klicken Sie dann in das Verzeichnis \MY\INCLUDE und zugewiesen schließlich in den Verzeichnissen INCLUDE-Umgebungsvariable.
+Der folgende Befehl sucht nach den Include-Dateien, die von MAIN.c angefordert wird, in der folgenden Reihenfolge: Wenn es sich bei mit doppelten Anführungszeichen angegeben, werden zuerst lokale Dateien durchsucht. Als Nächstes Suche wird fortgesetzt, im Verzeichnis \include"-Unterverzeichnis aus, und klicken Sie dann in das Verzeichnis \MY\INCLUDE und zugewiesen schließlich in den Verzeichnissen INCLUDE-Umgebungsvariable.
 
 ```
 CL /I \INCLUDE /I\MY\INCLUDE MAIN.C

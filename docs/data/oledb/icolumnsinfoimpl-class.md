@@ -27,16 +27,16 @@ helpviewer_keywords:
 - GetColumnInfo method
 - MapColumnIDs method
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
-ms.openlocfilehash: 67052bdc5d49673146c036167c027d1efd882495
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 802c105e7795cdce604e72983f4fda549abcd5fb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556503"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418268"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl-Klasse
 
-Stellt eine Implementierung der [IColumnsInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms724541(v=vs.85)) Schnittstelle.
+Stellt eine Implementierung der [IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85)) Schnittstelle.
 
 ## <a name="syntax"></a>Syntax
 
@@ -69,7 +69,7 @@ Abgeleitet von die Klasse `IColumnsInfoImpl`.
 
 Eine erforderliche Schnittstelle für Rowsets und Befehle. So ändern Sie das Verhalten Ihres Anbieters `IColumnsInfo` Implementierung müssen Sie die Anbieter-Spalte-Zuordnung zu ändern.
 
-## <a name="getcolumninfo"></a> Icolumnsinfoimpl:: GetColumnInfo
+## <a name="getcolumninfo"></a> IColumnsInfoImpl::GetColumnInfo
 
 Gibt die von den meisten Consumern benötigte Spaltenmetadaten zurück.
 
@@ -83,9 +83,9 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [IColumnsInfo:: GetColumnInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.
 
-## <a name="mapcolumnids"></a> Icolumnsinfoimpl:: Mapcolumnids
+## <a name="mapcolumnids"></a> IColumnsInfoImpl::MapColumnIDs
 
 Gibt ein Array von Ordnungszahlen der Spalten in einem Rowset, das durch die angegebenen Spalten-IDs gekennzeichnet sind.
 
@@ -99,7 +99,7 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [IColumnsInfo::MapColumnIDs](https://docs.microsoft.com/previous-versions/windows/desktop/ms714200(v=vs.85)) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
 ## <a name="see-also"></a>Siehe auch
 

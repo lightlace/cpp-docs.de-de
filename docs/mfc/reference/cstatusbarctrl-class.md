@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 5a5adc5ae6b1981d7f8260d684a33d8bd7918e40
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8db2be9b14f9d60f2103ce0b63b772962b079bbe
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272840"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426133"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl-Klasse
 
@@ -132,7 +132,7 @@ virtual BOOL Create(
 Gibt das StatusBar-Steuerelement Stil. Wenden Sie eine beliebige Kombination der Stile von Listensteuerelementen aufgeführt, die der Statusleiste [allgemeinen Stile von Listensteuerelementen](/windows/desktop/Controls/common-control-styles) im Windows SDK. Dieser Parameter muss das Format WS_CHILD enthalten. Darüber sollte hinaus das WS_VISIBLE-Format enthalten.
 
 *rect*<br/>
-Gibt des StatusBar-Steuerelements die Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.
+Gibt des StatusBar-Steuerelements die Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur.
 
 *pParentWnd*<br/>
 Gibt an, der Statusleiste übergeordnete Fenster des Steuerelements, in der Regel eine `CDialog`. Es darf nicht NULL sein.
@@ -178,7 +178,7 @@ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erwei
 Gibt das StatusBar-Steuerelement Stil. Wenden Sie eine beliebige Kombination der Stile von Listensteuerelementen aufgeführt, die der Statusleiste [allgemeinen Stile von Listensteuerelementen](/windows/desktop/Controls/common-control-styles) im Windows SDK. Dieser Parameter muss das Format WS_CHILD enthalten. Darüber sollte hinaus das WS_VISIBLE-Format enthalten.
 
 *rect*<br/>
-Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
+Ein Verweis auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
 
 *pParentWnd*<br/>
 Ein Zeiger auf das Fenster, das übergeordnete Element des Steuerelements ist.
@@ -344,7 +344,7 @@ BOOL GetRect(
 Nullbasierte Index des Teils ist, dessen umschließendes Rechteck abgerufen werden.
 
 *lpRect*<br/>
-Adresse von einem [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die das umschließende Rechteck empfängt.
+Adresse von einem [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die das umschließende Rechteck empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 

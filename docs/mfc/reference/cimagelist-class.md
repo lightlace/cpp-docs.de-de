@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: 3e8c524a95730282d0e35e5f791ebf229725e282
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2fc92858f84826e2b953fcbc9de020741e97b007
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298918"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416006"
 ---
 # <a name="cimagelist-class"></a>CImageList-Klasse
 
@@ -691,13 +691,13 @@ Ein Zeiger auf den Ziel-Gerätekontext. Sie müssen dies löschen [CDC](../../mf
 Der nullbasierte Index des Bilds gezeichnet werden soll.
 
 *pt*<br/>
-Ein [Punkt](https://msdn.microsoft.com/library/windows/desktop/dd162805) -Struktur, enthält der x- und y-Koordinaten, in dem das Bild gezeichnet werden.
+Ein [Punkt](/previous-versions/dd162805\(v=vs.85\)) -Struktur, enthält der x- und y-Koordinaten, in dem das Bild gezeichnet werden.
 
 *sz*<br/>
 Ein [Größe](/windows/desktop/api/windef/ns-windef-tagsize) Struktur, der angibt, der Größe des Bilds gezeichnet werden soll.
 
 *ptOrigin*<br/>
-Ein [Punkt](https://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, die die X - und y-Koordinaten angeben von oben links von den Zeichenvorgang in Bezug auf das Bild selbst enthält. Pixel des Bilds, die auf der linken Seite die X-Koordinate und höher die y-Koordinate sind, werden nicht gezeichnet.
+Ein [Punkt](/previous-versions/dd162805\(v=vs.85\)) Struktur, die die X - und y-Koordinaten angeben von oben links von den Zeichenvorgang in Bezug auf das Bild selbst enthält. Pixel des Bilds, die auf der linken Seite die X-Koordinate und höher die y-Koordinate sind, werden nicht gezeichnet.
 
 *fStyle*<br/>
 Flag, das angibt, die Zeichnungsart und optional das Überlagerungsbild. Finden Sie im Abschnitt "Hinweise" Informationen auf dem Überlagerungsbild. Die MFC-Standardimplementierung ILD_NORMAL, zeichnet das Bild, das mit der Hintergrundfarbe für die Bildliste. Wenn die Farbe des Hintergrunds der CLR_NONE führt dazu-Wert ist, wird das Bild gezeichnet transparent mit einer Maske.
@@ -874,7 +874,7 @@ static CImageList* PASCAL GetDragImage(
 ### <a name="parameters"></a>Parameter
 
 *lpPoint*<br/>
-Adresse von einem [Punkt](https://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, die die aktuelle empfängt ziehen Sie die Position.
+Adresse von einem [Punkt](/previous-versions/dd162805\(v=vs.85\)) Struktur, die die aktuelle empfängt ziehen Sie die Position.
 
 *lpPointHotSpot*<br/>
 Adresse von einem `POINT` -Struktur, den Offset des Bilds ziehen Sie relativ zur Ziehposition empfängt.

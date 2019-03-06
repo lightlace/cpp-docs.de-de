@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditView [MFC], GetDHtmlDocument
 - CHtmlEditView [MFC], GetStartDocument
 ms.assetid: 166c8ba8-3fb5-4dd7-a9ea-5bca662d00f6
-ms.openlocfilehash: 7d1b28e2b3e279bc3b2e3ccb116ab24017c07cd2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c03d580b1b01fd0d0e858278d8b752c3e4b115b9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301258"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413380"
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView-Klasse
 
@@ -106,7 +106,7 @@ Verweist auf eine Null-terminierte Zeichenfolge, die den Fensternamen darstellt.
 Gibt an, der die Stilattribute für Fenster. Standardmäßig werden die Stile WS_VISIBLE und WS_CHILD Windows festgelegt.
 
 *rect*<br/>
-Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die die Größe und Position des Fensters angibt. Die *RectDefault* Wert ermöglicht Windows die Größe und Position des neuen Fensters an.
+Ein Verweis auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die die Größe und Position des Fensters angibt. Die *RectDefault* Wert ermöglicht Windows die Größe und Position des neuen Fensters an.
 
 *pParentWnd*<br/>
 Ein Zeiger auf das übergeordnete Fenster des Steuerelements.
@@ -132,7 +132,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ### <a name="parameters"></a>Parameter
 
 *ppDocument*<br/>
-Die [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) Schnittstelle.
+Die [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) Schnittstelle.
 
 ##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument
 

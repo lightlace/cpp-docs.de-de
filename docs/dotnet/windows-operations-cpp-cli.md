@@ -43,12 +43,12 @@ helpviewer_keywords:
 - registry, writing to
 - Visual C++, writing to Windows Registry
 ms.assetid: b9a75cb4-0589-4d5b-92cb-5e8be42b4ac0
-ms.openlocfilehash: d23eef1d48674751a725e076d1b652b304ad40a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1075c70b10ca8c59272e9a9de8a9a3fd7aa248e6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508393"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415083"
 ---
 # <a name="windows-operations-ccli"></a>Windows-Vorgänge (C++/CLI)
 
@@ -144,7 +144,7 @@ int main( )
 
 Die <xref:Microsoft.Win32.Registry>-Klasse ist lediglich ein Container für statische Instanzen von <xref:Microsoft.Win32.RegistryKey>. Jede Instanz stellt einen Stammregistrierungsknoten dar. Die Instanzen sind <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine> und <xref:Microsoft.Win32.Registry.Users>.
 
-Die Objekte innerhalb der <xref:Microsoft.Win32.Registry>-Klasse sind nicht nur statisch, sondern auch schreibgeschützt. Darüber hinaus sind Instanzen der <xref:Microsoft.Win32.RegistryKey>-Klasse, die für den Zugriff auf den Inhalt der Registrierungsobjekte erstellt wurden, ebenfalls schreibgeschützt. Ein Beispiel zum Überschreiben dieses Verhaltens finden Sie unter [Vorgehensweise: Schreiben von Daten in die Windows-Registrierung (C++ / CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md).
+Die Objekte innerhalb der <xref:Microsoft.Win32.Registry>-Klasse sind nicht nur statisch, sondern auch schreibgeschützt. Darüber hinaus sind Instanzen der <xref:Microsoft.Win32.RegistryKey>-Klasse, die für den Zugriff auf den Inhalt der Registrierungsobjekte erstellt wurden, ebenfalls schreibgeschützt. Ein Beispiel zum Überschreiben dieses Verhaltens finden Sie unter [Vorgehensweise: Schreiben von Daten in der Windows-Registrierung (C++ / CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md).
 
 In der <xref:Microsoft.Win32.Registry>-Klasse stehen zwei weitere Objekte zur Verfügung: <xref:Microsoft.Win32.Registry.DynData> und <xref:Microsoft.Win32.Registry.PerformanceData>. Bei beiden Objekten handelt es sich um Instanzen der <xref:Microsoft.Win32.RegistryKey>-Klasse. Die <xref:Microsoft.Win32.Registry.DynData> -Objekt enthält dynamische Registrierungsinformationen, die nur unter Windows 98 und Windows Me unterstützt wird Das <xref:Microsoft.Win32.Registry.PerformanceData>-Objekt dient dem Zugriff auf Informationen zu Leistungsindikatoren für Anwendungen, die das Leistungsüberwachungssystem von Windows verwenden. Die <xref:Microsoft.Win32.Registry.PerformanceData> Knoten enthält Informationen, die eigentlich nicht in der Registrierung gespeichert und daher nicht mit Regedit.exe angezeigt werden können.
 
@@ -503,7 +503,7 @@ int main()
 
 ### <a name="remarks"></a>Hinweise
 
-Sie können .NET Framework verwenden, um Zugriff auf die Registrierung mit der <xref:Microsoft.Win32.Registry> und [RegistryKey](https://msdn.microsoft.com/library/microsoft.win32.registrykey.aspx) Klassen, die beide sind definiert, der <xref:Microsoft.Win32> Namespace. Die **Registrierung** Klasse ist ein Container für statische Instanzen von der <xref:Microsoft.Win32.RegistryKey> Klasse. Jede Instanz stellt einen Stammregistrierungsknoten dar. Die Instanzen sind <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine> und <xref:Microsoft.Win32.Registry.Users>.
+Sie können .NET Framework verwenden, um Zugriff auf die Registrierung mit der <xref:Microsoft.Win32.Registry> und <xref:Microsoft.Win32.RegistryKey> Klassen, die beide sind definiert, der <xref:Microsoft.Win32> Namespace. Die **Registrierung** Klasse ist ein Container für statische Instanzen von der <xref:Microsoft.Win32.RegistryKey> Klasse. Jede Instanz stellt einen Stammregistrierungsknoten dar. Die Instanzen sind <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine> und <xref:Microsoft.Win32.Registry.Users>.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 

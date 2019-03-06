@@ -3,12 +3,12 @@ title: Compileroptionen alphabetisch sortiert
 ms.date: 08/20/2018
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: fa5ae089e112c147fb5e18b13af2ef5b95a7fda3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73236485026b82895426a2651b48a83fc35ce8b7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646731"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415876"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Compileroptionen alphabetisch sortiert
 
@@ -29,7 +29,7 @@ In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in 
 |[/clr](clr-common-language-runtime-compilation.md)|Erzeugt eine Ausgabedatei, die auf der Common Language Runtime ausgeführt werden kann.|
 |[/constexpr](constexpr-control-constexpr-evaluation.md)|Constexpr-Auswertung zum Zeitpunkt der Kompilierung steuern.|
 |[/D](d-preprocessor-definitions.md)|Definiert Konstanten und Makros.|
-|[/ Diagnostics](diagnostics-compiler-diagnostic-options.md)|Steuert das Format von diagnosemeldungen.|
+|[/diagnostics](diagnostics-compiler-diagnostic-options.md)|Steuert das Format von diagnosemeldungen.|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|Verarbeitet Dokumentationskommentare zu einer XML-Datei.|
 |[/E](e-preprocess-to-stdout.md)|Kopiert die Präprozessorausgabe in die Standardausgabe.|
 |[/EH](eh-exception-handling-model.md)|Gibt das Modell der Ausnahmebehandlung an.|
@@ -79,7 +79,7 @@ In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in 
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|Erstellt ein Hotpatch-fähiges Abbild.|
 |[/I](i-additional-include-directories.md)|Sucht in einem Verzeichnis nach Includedateien.|
 |[/J](j-default-char-type-is-unsigned.md)|Ändert den `char` -Standardtyp.|
-|[/ JMC](jmc.md)|Unterstützt native C++ nur mein Code debuggen.|
+|[/JMC](jmc.md)|Unterstützt native C++ nur mein Code debuggen.|
 |[/kernel](kernel-create-kernel-mode-binary.md)|Der Compiler und der Linker erstellen eine Binärdatei, die im Kernel von Windows ausgeführt werden kann.|
 |[/LD](md-mt-ld-use-run-time-library.md)|Erstellt eine Dynamic Link Library (DLL).|
 |[/LDd](md-mt-ld-use-run-time-library.md)|Erstellt eine Debug-Dynamic Link Library.|

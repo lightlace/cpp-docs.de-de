@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 7750b7335b99bbfaa02c1f310c70bb868ef56573
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6055926e05f8a7f9fbecec113e859d08e6b6e636
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300959"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420842"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -210,7 +210,7 @@ Zeiger auf das Fenster, das Tool enthält.
 ID der Zeichenfolgenressource, die den Text für das Tool enthält.
 
 *lpRectTool*<br/>
-Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur mit der Koordinaten des Tools umschließenden Rechtecks. Die Koordinaten sind relativ zu der oberen linken Ecke des Clientbereichs des Fensters identifizierte *aufnehmen*.
+Zeiger auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) -Struktur mit der Koordinaten des Tools umschließenden Rechtecks. Die Koordinaten sind relativ zu der oberen linken Ecke des Clientbereichs des Fensters identifizierte *aufnehmen*.
 
 *nIDTool*<br/>
 Die ID des Tools.
@@ -248,7 +248,7 @@ BOOL AdjustRect(
 ### <a name="parameters"></a>Parameter
 
 *lprc*<br/>
-Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die entweder ein Tool QuickInfo-Fenster Rechteck oder eine Anzeigerechteck Text enthält.
+Zeiger auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die entweder ein Tool QuickInfo-Fenster Rechteck oder eine Anzeigerechteck Text enthält.
 
 *bLarger*<br/>
 True gibt an, *Lprc* dient zum Angeben eines Rechtecks Anzeigen von Text und das entsprechende fensterrechtecke erhält. False gibt an, *Lprc* dient zum Angeben eines Rechtecks Fenster, und das entsprechende Textfeld Anzeigerechteck erhält.
@@ -453,7 +453,7 @@ void GetMargin(LPRECT lprc) const;
 ### <a name="parameters"></a>Parameter
 
 *lprc*<br/>
-Adresse von einem `RECT` -Struktur, die die Informationen im Indikatorrand erhält. Die Mitglieder der [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur ist kein umschließendes Rechteck definiert. Im Rahmen dieser Meldung sind die Strukturmember wie folgt interpretiert:
+Adresse von einem `RECT` -Struktur, die die Informationen im Indikatorrand erhält. Die Mitglieder der [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur ist kein umschließendes Rechteck definiert. Im Rahmen dieser Meldung sind die Strukturmember wie folgt interpretiert:
 
 |Member|Darstellung|
 |------------|--------------------|
@@ -867,7 +867,7 @@ Zeiger auf das Fenster, das Tool enthält.
 Die ID des Tools.
 
 *lpRect*<br/>
-Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die das neue umschließende Rechteck angibt.
+Zeiger auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die das neue umschließende Rechteck angibt.
 
 ##  <a name="setwindowtheme"></a>  CToolTipCtrl::SetWindowTheme
 

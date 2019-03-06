@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: ec771efcd8fffd1aa1825f2c500404dc0b2a4965
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5fda93951918357de5441022f1cc6ea81a522ef6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638736"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415135"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
@@ -54,7 +54,7 @@ Eine App, die im POSIX-Subsystem in Windows ausgeführt wird.
 **WINDOWS**<br/>
 Eine App, die in der grafischen Umgebung von Windows ausgeführt wird. Dies umfasst desktop-apps und apps der universellen Windows-Plattform (UWP).
 
-**WINDOWS CE**<br/>
+**WINDOWSCE**<br/>
 Das WINDOWSCE-Subsystem gibt an, dass die App dafür vorgesehen ist, auf einem Gerät mit einer Version von Windows CE-Kernels ausgeführt zu werden. Kernelversionen schließen PocketPC, Windows Mobile, Windows Phone 7, Windows CE V1.0-6.0R3 und Windows Embedded Compact 7 ein.
 
 Mit den optionalen `major` und `minor`-Werten werden die Mindestanforderungen in Bezug auf die Version des angegebenen Subsystems festgelegt:

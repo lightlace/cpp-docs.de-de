@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: c6edd8cdd089e24011df41db09f3c1bb5d6465f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a41f2012b4ee5441bcb9aa7d99cd0d0e97b6acc7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481457"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423702"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map-Klasse
 
@@ -93,7 +93,7 @@ Weitere Informationen finden Sie unter [Sammlungen](../cppcx/collections-c-cx.md
 |||
 |-|-|
 |name|Beschreibung|
-|[Map:: mapchanged](#mapchanged-event.md) `event`|Tritt auf, wenn sich die Map ändert.|
+|[Map::MapChanged](#mapchanged-event.md) `event`|Tritt auf, wenn sich die Map ändert.|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -182,7 +182,7 @@ virtual bool Insert(K key, V value);
 *key*<br/>
 Der Schlüsselteil des Schlüssel-Wert-Paars. Der Typ des *Schlüssel* ist der Typname *K*.
 
-*Wert*<br/>
+*value*<br/>
 Der Wertteil des Schlüssel-Wert-Paars. Der Typ des *Wert* ist der Typname *V*.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -240,7 +240,7 @@ Ein Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortier
 *m*<br/>
 Ein Verweis oder [Lvalues und Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) zu einem `map Class` , wird verwendet, um die aktuelle Map zu initialisieren.
 
-*Erste*<br/>
+*first*<br/>
 Der Eingabeiterator des ersten Elements in einem Bereich von Elementen, die verwendet werden, um die aktuelle Map zu initialisieren.
 
 *last*<br/>
@@ -258,7 +258,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert
 
-Ein [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) , enthält Informationen über das Objekt, das ausgelöst wird, das Ereignis, sowie die Art der entstandenen Änderung darstellt. Siehe auch [IMapChangedEventArgs\<K >](https://msdn.microsoft.com/library/windows/apps/br226034.aspx) und [CollectionChange-Enumeration](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
+Ein [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) , enthält Informationen über das Objekt, das ausgelöst wird, das Ereignis, sowie die Art der entstandenen Änderung darstellt. Siehe auch [IMapChangedEventArgs\<K >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) und [CollectionChange-Enumeration](/uwp/api/windows.foundation.collections.collectionchange).
 
 ## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework
 
@@ -281,7 +281,7 @@ Der Schlüsselteil des Schlüssel-Wert-Paars. Der Typ des *Schlüssel* ist der T
 
 ## <a name="size"></a>  Map:: size-Methode
 
-Gibt die Anzahl der [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) Elementen in der Zuordnung.
+Gibt die Anzahl der [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) Elementen in der Zuordnung.
 
 ### <a name="syntax"></a>Syntax
 

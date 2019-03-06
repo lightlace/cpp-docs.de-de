@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditCtrl [MFC], GetDHtmlDocument
 - CHtmlEditCtrl [MFC], GetStartDocument
 ms.assetid: 0fc4a238-b05f-4874-9edc-6a6701f064d9
-ms.openlocfilehash: 6c1447c3157bceb4540007eca5c3eb85e8269bd2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6f5c465a8ec9c8f54af5545e66fb849a08d241af
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285307"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420920"
 ---
 # <a name="chtmleditctrl-class"></a>CHtmlEditCtrl-Klasse
 
@@ -45,7 +45,7 @@ class CHtmlEditCtrl: public CWnd,
 |Name|Beschreibung|
 |----------|-----------------|
 |[CHtmlEditCtrl::Create](#create)|Erstellt ein WebBrowser ActiveX-Steuerelement, und fügt es der `CHtmlEditCtrl` Objekt. Diese Funktion setzt automatisch das WebBrowser ActiveX-Steuerelement in den Bearbeitungsmodus.|
-|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Ruft die [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) Schnittstelle für das Dokument derzeit geladen, im WebBrowser-Steuerelement enthalten.|
+|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Ruft die [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) Schnittstelle für das Dokument derzeit geladen, im WebBrowser-Steuerelement enthalten.|
 |[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|Ruft die URL ab, der ein Standarddokument in der enthaltenen WebBrowser-Steuerelement geladen.|
 
 ## <a name="remarks"></a>Hinweise
@@ -116,7 +116,7 @@ Gibt "true" bei Erfolg bei "false".
 
 ##  <a name="getdhtmldocument"></a>  CHtmlEditCtrl::GetDHtmlDocument
 
-Ruft die [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) Schnittstelle für das Dokument derzeit geladen, im enthaltenen WebBrowser-Steuerelement
+Ruft die [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) Schnittstelle für das Dokument derzeit geladen, im enthaltenen WebBrowser-Steuerelement
 
 ```
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: d7a39dd19a51bc5bab0f924d360d594bddf89b44
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 44943803fdb422ccbf77302e7c81f23c34cc7433
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265937"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420759"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx-Klasse
 
@@ -150,7 +150,7 @@ virtual BOOL Create(
 Gibt die Kombination von kombinationsfeldformate angewendet werden, auf das Kombinationsfeld an. Finden Sie unter **"Hinweise"** unten für Weitere Informationen zu Stilen.
 
 *rect*<br/>
-Ein Verweis auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die die Position und Größe des Kombinationsfelds ist.
+Ein Verweis auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder [RECT](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die die Position und Größe des Kombinationsfelds ist.
 
 *pParentWnd*<br/>
 Ein Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) -Objekt, das das übergeordnete Fenster des Kombinationsfelds ist (in der Regel eine `CDialog`). Es darf nicht NULL sein.
@@ -210,7 +210,7 @@ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erwei
 Das Kombinationsfeld-Steuerelement Stil. Finden Sie unter [erstellen](#create) für eine Liste der Formate.
 
 *rect*<br/>
-Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
+Ein Verweis auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
 
 *pParentWnd*<br/>
 Ein Zeiger auf das Fenster, das übergeordnete Element des Steuerelements ist.

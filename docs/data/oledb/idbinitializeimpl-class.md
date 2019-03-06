@@ -39,16 +39,16 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: 4d9499262d0b4167d7c3941113f49bfa23e0467b
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 18145f3dc9545f79b08d9d92cacdafad0520c992
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556763"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418741"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl-Klasse
 
-Stellt eine Implementierung für die [IDBInitialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms713706(v=vs.85)) Schnittstelle.
+Stellt eine Implementierung für die [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85)) Schnittstelle.
 
 ## <a name="syntax"></a>Syntax
 
@@ -92,7 +92,7 @@ Abgeleitet von die Klasse `IDBInitializeImpl`.
 
 Eine erforderliche Schnittstelle für Datenquellenobjekte und optionale Schnittstelle für Enumeratoren.
 
-## <a name="idbinitializeimpl"></a> Idbinitializeimpl:: Idbinitializeimpl
+## <a name="idbinitializeimpl"></a> IDBInitializeImpl::IDBInitializeImpl
 
 Der Konstruktor.
 
@@ -106,7 +106,7 @@ IDBInitializeImpl();
 
 Initialisiert alle Datenmember.
 
-## <a name="initialize"></a> Idbinitializeimpl:: Initialize
+## <a name="initialize"></a> IDBInitializeImpl::Initialize
 
 Initialisiert das Objekt durch die Unterstützung für die Eigenschaft wird vorbereitet.
 
@@ -118,9 +118,9 @@ STDMETHOD(Initialize)(void);
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [IDBInitialize:: Initialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms718026(v=vs.85)) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [IDBInitialize:: Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
-## <a name="uninitialize"></a> Idbinitializeimpl:: UnInitialize
+## <a name="uninitialize"></a> IDBInitializeImpl::Uninitialize
 
 Stellen Sie die Daten Datenquellenobjekts im nicht initialisierten Zustand freigegeben werden und interne Ressourcen wie z. B. die Unterstützung für die Eigenschaft ein.
 
@@ -132,9 +132,9 @@ STDMETHOD(Uninitialize)(void);
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [IDBInitialize:: UnInitialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms719648(v=vs.85)) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [IDBInitialize:: UnInitialize](/previous-versions/windows/desktop/ms719648(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
-## <a name="dwstatus"></a> Idbinitializeimpl:: M_dwstatus
+## <a name="dwstatus"></a> IDBInitializeImpl::m_dwStatus
 
 Datenquellen-Flags.
 
@@ -162,7 +162,7 @@ enum DATASOURCE_FLAGS {
 |`DSF_PERSIST_DIRTY`|Festlegen Sie, wenn das Datenquellenobjekt Persistenz ist erforderlich (d.h., wenn Änderungen vorgenommen wurden).|
 |`DSF_INITIALIZED`|Festlegen Sie, wenn die Datenquelle initialisiert wurde.|
 
-## <a name="pcutlpropinfo"></a> Idbinitializeimpl:: M_pcutlpropinfo
+## <a name="pcutlpropinfo"></a> IDBInitializeImpl::m_pCUtlPropInfo
 
 Ein Zeiger auf Objekt implementace Datenbankeigenschaften Informationen.
 
