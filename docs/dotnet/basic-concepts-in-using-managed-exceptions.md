@@ -10,12 +10,12 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-ms.openlocfilehash: 45244ace414fc073956684088ac43eb9b92f1e5b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4eb74fe3e485f12ac7f43b0a8a56800ef0535e7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588239"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423845"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>Grundlegende Konzepte zur Verwendung verwalteter Ausnahmen
 
@@ -29,7 +29,7 @@ Dieses Thema beschreibt die Behandlung von Ausnahmen in verwalteten Anwendungen.
 
 ## <a name="remarks"></a>Hinweise
 
-Bei der Kompilierung mit der **"/ CLR"** auswählen, können Sie CLR-Ausnahmen als auch Standard behandeln [C++-Ausnahmebehandlung](../cpp/cpp-exception-handling.md) und [strukturierte Ausnahmebehandlung](../cpp/structured-exception-handling-c-cpp.md) (SEH). Eine CLR-Ausnahme ist eine Ausnahme, die von einem verwalteten Typ ausgelöst. Die [System:: Exception](https://msdn.microsoft.com/library/system.exception.aspx) -Klasse bietet viele nützliche Methoden für die Verarbeitung von CLR-Ausnahmen und wird als eine Basisklasse für benutzerdefinierte Ausnahmeklassen empfohlen.
+Bei der Kompilierung mit der **"/ CLR"** auswählen, können Sie CLR-Ausnahmen als auch Standard behandeln <xref:System.Exception> -Klasse bietet viele nützliche Methoden für die Verarbeitung von CLR-Ausnahmen und wird empfohlen, eine Basisklasse für eine benutzerdefinierte Ausnahme Klassen.
 
 Abfangen von Ausnahmetypen, die von einer Schnittstelle abgeleitet wird unter unterstützt **"/ CLR"**. Darüber hinaus lässt die common Language Runtime nicht zu Stapelüberlauf-Ausnahmen zu erfassen; eine Stapelüberlaufausnahme wird den Prozess beendet.
 
@@ -140,7 +140,7 @@ Die Reihenfolge der Ereignisse für eine ausgelöste Ausnahme lautet wie folgt a
 
 ### <a name="catching-unmanaged-types"></a>Abfangen von nicht verwalteten Typen
 
-Wenn ein Typ nicht verwaltete Objekt ausgelöst wird, wird es mit einer Ausnahme vom Typ umschlossen [System::Runtime.InteropServices::SEHException](https://msdn.microsoft.com/library/system.runtime.interopservices.sehexception.aspx). Bei der Suche nach den entsprechenden **catch** -Klausel, es gibt zwei Möglichkeiten.
+Wenn ein Typ nicht verwaltete Objekt ausgelöst wird, wird es mit einer Ausnahme vom Typ umschlossen <xref:System.Runtime.InteropServices.SEHException>. Bei der Suche nach den entsprechenden **catch** -Klausel, es gibt zwei Möglichkeiten.
 
 - Wenn ein systemeigener C++-Typ gefunden wird, wird die Ausnahme entpackt und im Vergleich zu den gefundenen Typs. Dieser Vergleich kann es sich um einen systemeigenen C++-Typ, der auf die übliche Weise abgefangen werden.
 
@@ -167,5 +167,5 @@ Wenn das Auslösen und Abfangen von Ausnahmen nicht verwaltet, wir empfehlen die
 ## <a name="see-also"></a>Siehe auch
 
 [Ausnahmebehandlung](../windows/exception-handling-cpp-component-extensions.md)<br/>
-["safe_cast"](../windows/safe-cast-cpp-component-extensions.md)<br/>
+[safe_cast](../windows/safe-cast-cpp-component-extensions.md)<br/>
 [Ausnahmebehandlung](../cpp/exception-handling-in-visual-cpp.md)

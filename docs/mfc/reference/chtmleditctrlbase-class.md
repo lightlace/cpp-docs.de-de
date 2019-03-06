@@ -220,12 +220,12 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: ebc296c66ee818e5c72207e0ca7b436f386fb68d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 09d4c4f1fde563d82fa007a96723f078eb31dc1b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293939"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423234"
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase-Klasse
 
@@ -418,9 +418,9 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen zu den Parametern finden Sie unter "Zeichenfolgenformat der Symbol-Tabelle" in [Bearbeiten von Glyphen verwenden](https://msdn.microsoft.com/library/aa969614.aspx).
+Weitere Informationen zu den Parametern finden Sie unter "Zeichenfolgenformat der Symbol-Tabelle" in [Bearbeiten von Glyphen verwenden](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa969614\(v=vs.85\)).
 
-Diese Methode sendet die [IDM_ADDTOGLYPHTABLE Befehls-ID](https://msdn.microsoft.com/library/aa769891.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_ADDTOGLYPHTABLE Befehls-ID](/previous-versions/aa769891\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="bold"></a>  CHtmlEditCtrlBase::Bold
 
@@ -436,7 +436,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_BOLD Befehls-ID](https://msdn.microsoft.com/library/aa769861.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_BOLD Befehls-ID](/previous-versions/aa769861\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="button"></a>  CHtmlEditCtrlBase::Button
 
@@ -457,7 +457,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_BUTTON Befehls-ID](https://msdn.microsoft.com/library/aa769966.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_BUTTON Befehls-ID](/previous-versions/aa769966\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="checkbox"></a>  CHtmlEditCtrlBase::CheckBox
 
@@ -478,7 +478,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_CHECKBOX Befehls-ID](https://msdn.microsoft.com/library/aa769972.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_CHECKBOX Befehls-ID](/previous-versions/aa769972\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="clearselection"></a>  CHtmlEditCtrlBase::ClearSelection
 
@@ -494,7 +494,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_CLEARSELECTION Befehls-ID](https://msdn.microsoft.com/library/aa770038.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_CLEARSELECTION Befehls-ID](/previous-versions/aa770038\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="copy"></a>  CHtmlEditCtrlBase::Copy
 
@@ -510,7 +510,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_COPY Befehls-ID](https://msdn.microsoft.com/library/aa769872.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_COPY Befehls-ID](/previous-versions/aa769872\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="cut"></a>  CHtmlEditCtrlBase::Cut
 
@@ -526,7 +526,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_CUT Befehls-ID](https://msdn.microsoft.com/library/aa769875.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_CUT Befehls-ID](/previous-versions/aa769875\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="delete"></a>  CHtmlEditCtrlBase::Delete
 
@@ -542,7 +542,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_DELETE Befehls-ID](https://msdn.microsoft.com/library/aa769876.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_DELETE Befehls-ID](/previous-versions/aa769876\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="dropdownbox"></a>  CHtmlEditCtrlBase::DropDownBox
 
@@ -563,7 +563,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_DROPDOWNBOX Befehls-ID](https://msdn.microsoft.com/library/aa769984.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_DROPDOWNBOX Befehls-ID](/previous-versions/aa769984\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="emptyglyphtable"></a>  CHtmlEditCtrlBase::EmptyGlyphTable
 
@@ -579,7 +579,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_EMPTYGLYPHTABLE Befehls-ID](https://msdn.microsoft.com/library/aa769907.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_EMPTYGLYPHTABLE Befehls-ID](/previous-versions/aa769907\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="execcommand"></a>  CHtmlEditCtrlBase::ExecCommand
 
@@ -603,7 +603,7 @@ HRESULT ExecCommand(
 ### <a name="parameters"></a>Parameter
 
 *cmdID*<br/>
-Die Befehls-ID, die ausgeführt werden. Eine Liste finden Sie unter [MSHTML Befehlsbezeichner](https://msdn.microsoft.com/library/aa741315.aspx).
+Die Befehls-ID, die ausgeführt werden. Eine Liste finden Sie unter [MSHTML Befehlsbezeichner](/previous-versions/aa741315\(v=vs.85\)).
 
 *cmdExecOpt*<br/>
 Werte aus der [OLECMDEXECOPT](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt) -Enumeration, die beschreiben, wie das Objekt den Befehl ausführen soll.
@@ -639,7 +639,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_FONT Befehls-ID](https://msdn.microsoft.com/library/aa769913.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_FONT Befehls-ID](/previous-versions/aa769913\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="getabsoluteposition"></a>  CHtmlEditCtrlBase::GetAbsolutePosition
 
@@ -660,7 +660,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [IDM_ABSOLUTE_POSITION Befehls-ID](https://msdn.microsoft.com/library/aa769889.aspx).
+Weitere Informationen finden Sie unter [IDM_ABSOLUTE_POSITION Befehls-ID](/previous-versions/aa769889\(v=vs.85\)).
 
 ##  <a name="getbackcolor"></a>  CHtmlEditCtrlBase::GetBackColor
 
@@ -681,7 +681,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_BACKCOLOR Befehls-ID](https://msdn.microsoft.com/library/aa769858.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_BACKCOLOR Befehls-ID](/previous-versions/aa769858\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="getblockformat"></a>  CHtmlEditCtrlBase::GetBlockFormat
 
@@ -702,7 +702,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_BLOCKFMT Befehls-ID](https://msdn.microsoft.com/library/aa769883.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_BLOCKFMT Befehls-ID](/previous-versions/aa769883\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="getblockformatnames"></a>  CHtmlEditCtrlBase::GetBlockFormatNames
 
@@ -723,7 +723,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_GETBLOCKFMTS Befehls-ID](https://msdn.microsoft.com/library/aa769884.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_GETBLOCKFMTS Befehls-ID](/previous-versions/aa769884\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="getbookmark"></a>  CHtmlEditCtrlBase::GetBookMark
 
@@ -744,7 +744,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [IDM_BOOKMARK Befehls-ID](https://msdn.microsoft.com/library/aa769873.aspx).
+Weitere Informationen finden Sie unter [IDM_BOOKMARK Befehls-ID](/previous-versions/aa769873\(v=vs.85\)).
 
 ##  <a name="getdocument"></a>  CHtmlEditCtrlBase::GetDocument
 
@@ -852,7 +852,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 Wenn die aktuelle Auswahl mehrere Schriftarten verwendet *StrFace* wird eine leere Zeichenfolge sein.
 
-Diese Methode sendet die [IDM_FONTNAME Befehls-ID](https://msdn.microsoft.com/library/aa769880.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_FONTNAME Befehls-ID](/previous-versions/aa769880\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="getfontsize"></a>  CHtmlEditCtrlBase::GetFontSize
 
@@ -873,7 +873,7 @@ Gibt den Schriftgrad HTML (1-7) zurück. Gibt 0 zurück, wenn die Auswahl mehrer
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_FONTSIZE Befehls-ID](https://msdn.microsoft.com/library/aa769881.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_FONTSIZE Befehls-ID](/previous-versions/aa769881\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="getforecolor"></a>  CHtmlEditCtrlBase::GetForeColor
 
@@ -894,7 +894,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_FORECOLOR Befehls-ID](https://msdn.microsoft.com/library/aa769882.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_FORECOLOR Befehls-ID](/previous-versions/aa769882\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="getframezone"></a>  CHtmlEditCtrlBase::GetFrameZone
 
@@ -915,7 +915,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_GETFRAMEZONE Befehls-ID](https://msdn.microsoft.com/library/aa769916.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_GETFRAMEZONE Befehls-ID](/previous-versions/aa769916\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="getisdirty"></a>  CHtmlEditCtrlBase::GetIsDirty
 
@@ -948,7 +948,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [IDM_SHOWALIGNEDSITETAGS Befehls-ID](https://msdn.microsoft.com/library/aa769947.aspx).
+Weitere Informationen finden Sie unter [IDM_SHOWALIGNEDSITETAGS Befehls-ID](/previous-versions/aa769947\(v=vs.85\)).
 
 ##  <a name="getshowalltags"></a>  CHtmlEditCtrlBase::GetShowAllTags
 
@@ -969,7 +969,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [IDM_SHOWALLTAGS Befehls-ID](https://msdn.microsoft.com/library/aa769948.aspx).
+Weitere Informationen finden Sie unter [IDM_SHOWALLTAGS Befehls-ID](/previous-versions/aa769948\(v=vs.85\)).
 
 ##  <a name="getshowareatags"></a>  CHtmlEditCtrlBase::GetShowAreaTags
 
@@ -990,7 +990,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [IDM_SHOWAREATAGS Befehls-ID](https://msdn.microsoft.com/library/aa769949.aspx).
+Weitere Informationen finden Sie unter [IDM_SHOWAREATAGS Befehls-ID](/previous-versions/aa769949\(v=vs.85\)).
 
 ##  <a name="getshowbrtags"></a>  CHtmlEditCtrlBase::GetShowBRTags
 
@@ -1011,7 +1011,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [IDM_SHOWWBRTAGS Befehls-ID](https://msdn.microsoft.com/library/aa769956.aspx).
+Weitere Informationen finden Sie unter [IDM_SHOWWBRTAGS Befehls-ID](/previous-versions/aa769956\(v=vs.85\)).
 
 ##  <a name="getshowcommenttags"></a>  CHtmlEditCtrlBase::GetShowCommentTags
 
@@ -1032,7 +1032,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [IDM_SHOWCOMMENTTAGS Befehls-ID](https://msdn.microsoft.com/library/aa769950.aspx).
+Weitere Informationen finden Sie unter [IDM_SHOWCOMMENTTAGS Befehls-ID](/previous-versions/aa769950\(v=vs.85\)).
 
 ##  <a name="getshowmisctags"></a>  CHtmlEditCtrlBase::GetShowMiscTags
 
@@ -1053,7 +1053,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [IDM_SHOWMISCTAGS Befehls-ID](https://msdn.microsoft.com/library/aa769952.aspx).
+Weitere Informationen finden Sie unter [IDM_SHOWMISCTAGS Befehls-ID](/previous-versions/aa769952\(v=vs.85\)).
 
 ##  <a name="getshowscripttags"></a>  CHtmlEditCtrlBase::GetShowScriptTags
 
@@ -1074,7 +1074,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [IDM_SHOWSCRIPTTAGS Befehls-ID](https://msdn.microsoft.com/library/aa769953.aspx).
+Weitere Informationen finden Sie unter [IDM_SHOWSCRIPTTAGS Befehls-ID](/previous-versions/aa769953\(v=vs.85\)).
 
 ##  <a name="getshowstyletags"></a>  CHtmlEditCtrlBase::GetShowStyleTags
 
@@ -1095,7 +1095,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [IDM_SHOWSTYLETAGS Befehls-ID](https://msdn.microsoft.com/library/aa769954.aspx).
+Weitere Informationen finden Sie unter [IDM_SHOWSTYLETAGS Befehls-ID](/previous-versions/aa769954\(v=vs.85\)).
 
 ##  <a name="getshowunknowntags"></a>  CHtmlEditCtrlBase::GetShowUnknownTags
 
@@ -1116,7 +1116,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [IDM_SHOWUNKNOWNTAGS Befehls-ID](https://msdn.microsoft.com/library/aa769955.aspx).
+Weitere Informationen finden Sie unter [IDM_SHOWUNKNOWNTAGS Befehls-ID](/previous-versions/aa769955\(v=vs.85\)).
 
 ##  <a name="horizontalline"></a>  CHtmlEditCtrlBase::HorizontalLine
 
@@ -1137,7 +1137,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_HORIZONTALLINE Befehls-ID](https://msdn.microsoft.com/library/aa769968.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_HORIZONTALLINE Befehls-ID](/previous-versions/aa769968\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="hyperlink"></a>  CHtmlEditCtrlBase::HyperLink
 
@@ -1158,7 +1158,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_HYPERLINK Befehls-ID](https://msdn.microsoft.com/library/aa769874.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_HYPERLINK Befehls-ID](/previous-versions/aa769874\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="ie50paste"></a>  CHtmlEditCtrlBase::IE50Paste
 
@@ -1179,7 +1179,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_IE50_PASTE Befehls-ID](https://msdn.microsoft.com/library/aa769922.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_IE50_PASTE Befehls-ID](/previous-versions/aa769922\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="iframe"></a>  CHtmlEditCtrlBase::Iframe
 
@@ -1200,7 +1200,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_IFRAME Befehls-ID](https://msdn.microsoft.com/library/aa769969.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_IFRAME Befehls-ID](/previous-versions/aa769969\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="image"></a>  CHtmlEditCtrlBase::Image
 
@@ -1221,7 +1221,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_IMAGE Befehls-ID](https://msdn.microsoft.com/library/aa769970.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_IMAGE Befehls-ID](/previous-versions/aa769970\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="indent"></a>  CHtmlEditCtrlBase::Indent
 
@@ -1237,7 +1237,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_INDENT Befehls-ID](https://msdn.microsoft.com/library/aa769963.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_INDENT Befehls-ID](/previous-versions/aa769963\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="insfieldset"></a>  CHtmlEditCtrlBase::InsFieldSet
 
@@ -1258,7 +1258,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_INSFIELDSET Befehls-ID](https://msdn.microsoft.com/library/aa769967.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_INSFIELDSET Befehls-ID](/previous-versions/aa769967\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="insinputbutton"></a>  CHtmlEditCtrlBase::InsInputButton
 
@@ -1279,7 +1279,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_INSINPUTBUTTON Befehls-ID](https://msdn.microsoft.com/library/aa769971.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_INSINPUTBUTTON Befehls-ID](/previous-versions/aa769971\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="insinputhidden"></a>  CHtmlEditCtrlBase::InsInputHidden
 
@@ -1300,7 +1300,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_INSINPUTHIDDEN Befehls-ID](https://msdn.microsoft.com/library/aa769974.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_INSINPUTHIDDEN Befehls-ID](/previous-versions/aa769974\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="insinputimage"></a>  CHtmlEditCtrlBase::InsInputImage
 
@@ -1321,7 +1321,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_INSINPUTIMAGE Befehls-ID](https://msdn.microsoft.com/library/aa769975.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_INSINPUTIMAGE Befehls-ID](/previous-versions/aa769975\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="insinputpassword"></a>  CHtmlEditCtrlBase::InsInputPassword
 
@@ -1342,7 +1342,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_INSINPUTPASSWORD Befehls-ID](https://msdn.microsoft.com/library/aa769976.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_INSINPUTPASSWORD Befehls-ID](/previous-versions/aa769976\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="insinputreset"></a>  CHtmlEditCtrlBase::InsInputReset
 
@@ -1363,7 +1363,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_INSINPUTRESET Befehls-ID](https://msdn.microsoft.com/library/aa769978.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_INSINPUTRESET Befehls-ID](/previous-versions/aa769978\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="insinputsubmit"></a>  CHtmlEditCtrlBase::InsInputSubmit
 
@@ -1384,7 +1384,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_INSINPUTSUBMIT Befehls-ID](https://msdn.microsoft.com/library/aa769979.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_INSINPUTSUBMIT Befehls-ID](/previous-versions/aa769979\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="insinputupload"></a>  CHtmlEditCtrlBase::InsInputUpload
 
@@ -1405,7 +1405,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_INSINPUTUPLOAD Befehls-ID](https://msdn.microsoft.com/library/aa769973.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_INSINPUTUPLOAD Befehls-ID](/previous-versions/aa769973\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="is1delement"></a>  CHtmlEditCtrlBase::Is1DElement
 
@@ -1426,7 +1426,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_1D_ELEMENT Befehls-ID](https://msdn.microsoft.com/library/aa769885.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_1D_ELEMENT Befehls-ID](/previous-versions/aa769885\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="is2delement"></a>  CHtmlEditCtrlBase::Is2DElement
 
@@ -1447,7 +1447,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_2D_ELEMENT Befehls-ID](https://msdn.microsoft.com/library/aa769886.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_2D_ELEMENT Befehls-ID](/previous-versions/aa769886\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="italic"></a>  CHtmlEditCtrlBase::Italic
 
@@ -1463,7 +1463,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_ITALIC Befehls-ID](https://msdn.microsoft.com/library/aa769988.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_ITALIC Befehls-ID](/previous-versions/aa769988\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="justifycenter"></a>  CHtmlEditCtrlBase::JustifyCenter
 
@@ -1479,7 +1479,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_JUSTIFYCENTER Befehls-ID](https://msdn.microsoft.com/library/aa769989.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_JUSTIFYCENTER Befehls-ID](/previous-versions/aa769989\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="justifyleft"></a>  CHtmlEditCtrlBase::JustifyLeft
 
@@ -1495,7 +1495,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_JUSTIFYLEFT Befehls-ID](https://msdn.microsoft.com/library/aa770011.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_JUSTIFYLEFT Befehls-ID](/previous-versions/aa770011\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="justifyright"></a>  CHtmlEditCtrlBase::JustifyRight
 
@@ -1511,7 +1511,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_JUSTIFYRIGHT Befehls-ID](https://msdn.microsoft.com/library/aa770013.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_JUSTIFYRIGHT Befehls-ID](/previous-versions/aa770013\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="listbox"></a>  CHtmlEditCtrlBase::ListBox
 
@@ -1532,7 +1532,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_LISTBOX Befehls-ID](https://msdn.microsoft.com/library/aa769985.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_LISTBOX Befehls-ID](/previous-versions/aa769985\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="marquee"></a>  CHtmlEditCtrlBase::Marquee
 
@@ -1553,7 +1553,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_MARQUEE Befehls-ID](https://msdn.microsoft.com/library/aa769981.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_MARQUEE Befehls-ID](/previous-versions/aa769981\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="newdocument"></a>  CHtmlEditCtrlBase::NewDocument
 
@@ -1586,7 +1586,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_ORDERLIST Befehls-ID](https://msdn.microsoft.com/library/aa769982.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_ORDERLIST Befehls-ID](/previous-versions/aa769982\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="outdent"></a>  CHtmlEditCtrlBase::Outdent
 
@@ -1602,7 +1602,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_OUTDENT Befehls-ID](https://msdn.microsoft.com/library/aa770015.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_OUTDENT Befehls-ID](/previous-versions/aa770015\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="paragraph"></a>  CHtmlEditCtrlBase::Paragraph
 
@@ -1623,7 +1623,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_PARAGRAPH Befehls-ID](https://msdn.microsoft.com/library/aa769983.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_PARAGRAPH Befehls-ID](/previous-versions/aa769983\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="paste"></a>  CHtmlEditCtrlBase::Paste
 
@@ -1639,7 +1639,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_PASTE Befehls-ID](https://msdn.microsoft.com/library/aa770017.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_PASTE Befehls-ID](/previous-versions/aa770017\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="printdocument"></a>  CHtmlEditCtrlBase::PrintDocument
 
@@ -1665,7 +1665,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_PRINT Befehls-ID](https://msdn.microsoft.com/library/aa769937.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_PRINT Befehls-ID](/previous-versions/aa769937\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="printpreview"></a>  CHtmlEditCtrlBase::PrintPreview
 
@@ -1687,7 +1687,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_PRINTPREVIEW Befehls-ID](https://msdn.microsoft.com/library/aa769938.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_PRINTPREVIEW Befehls-ID](/previous-versions/aa769938\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="querystatus"></a>  CHtmlEditCtrlBase::QueryStatus
 
@@ -1725,7 +1725,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_RADIOBUTTON Befehls-ID](https://msdn.microsoft.com/library/aa769977.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_RADIOBUTTON Befehls-ID](/previous-versions/aa769977\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="refreshdocument"></a>  CHtmlEditCtrlBase::RefreshDocument
 
@@ -1741,7 +1741,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_REFRESH Befehls-ID](https://msdn.microsoft.com/library/aa770020.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_REFRESH Befehls-ID](/previous-versions/aa770020\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="removeformat"></a>  CHtmlEditCtrlBase::RemoveFormat
 
@@ -1757,7 +1757,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_REMOVEFORMAT Befehls-ID](https://msdn.microsoft.com/library/aa770021.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_REMOVEFORMAT Befehls-ID](/previous-versions/aa770021\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="saveas"></a>  CHtmlEditCtrlBase::SaveAs
 
@@ -1778,7 +1778,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_SAVEAS Befehls-ID](https://msdn.microsoft.com/library/aa770024.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_SAVEAS Befehls-ID](/previous-versions/aa770024\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="selectall"></a>  CHtmlEditCtrlBase::SelectAll
 
@@ -1794,7 +1794,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_SELECTALL Befehls-ID](https://msdn.microsoft.com/library/aa770025.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_SELECTALL Befehls-ID](/previous-versions/aa770025\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="set2dposition"></a>  CHtmlEditCtrlBase::Set2DPosition
 
@@ -1815,7 +1815,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_2D_POSITION Befehls-ID](https://msdn.microsoft.com/library/aa769887.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_2D_POSITION Befehls-ID](/previous-versions/aa769887\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="setabsoluteposition"></a>  CHtmlEditCtrlBase::SetAbsolutePosition
 
@@ -1836,7 +1836,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_ABSOLUTE_POSITION Befehls-ID](https://msdn.microsoft.com/library/aa769889.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_ABSOLUTE_POSITION Befehls-ID](/previous-versions/aa769889\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="setatomicselection"></a>  CHtmlEditCtrlBase::SetAtomicSelection
 
@@ -1857,7 +1857,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_ATOMICSELECTION Befehls-ID](https://msdn.microsoft.com/library/aa769892.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_ATOMICSELECTION Befehls-ID](/previous-versions/aa769892\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="setautourldetectmode"></a>  CHtmlEditCtrlBase::SetAutoURLDetectMode
 
@@ -1878,7 +1878,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_AUTOURLDETECT_MODE Befehls-ID](https://msdn.microsoft.com/library/aa769893.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_AUTOURLDETECT_MODE Befehls-ID](/previous-versions/aa769893\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="setbackcolor"></a>  CHtmlEditCtrlBase::SetBackColor
 
@@ -1892,10 +1892,10 @@ HRESULT SetBackColor(LPCTSTR szColor) const;
 ### <a name="parameters"></a>Parameter
 
 *nColor*<br/>
-Die Farbe. Finden Sie unter *PvaIn* in [IDM_BACKCOLOR Befehls-ID](https://msdn.microsoft.com/library/aa769858.aspx).
+Die Farbe. Finden Sie unter *PvaIn* in [IDM_BACKCOLOR Befehls-ID](/previous-versions/aa769858\(v=vs.85\)).
 
 *szColor*<br/>
-Die Farbe. Finden Sie unter *PvaIn* in [IDM_BACKCOLOR Befehls-ID](https://msdn.microsoft.com/library/aa769858.aspx).
+Die Farbe. Finden Sie unter *PvaIn* in [IDM_BACKCOLOR Befehls-ID](/previous-versions/aa769858\(v=vs.85\)).
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1903,7 +1903,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_BACKCOLOR_ Befehls-ID](https://msdn.microsoft.com/library/aa769858.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_BACKCOLOR_ Befehls-ID](/previous-versions/aa769858\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="setblockformat"></a>  CHtmlEditCtrlBase::SetBlockFormat
 
@@ -1924,7 +1924,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_BLOCKFMT_command ID](https://msdn.microsoft.com/library/aa769883.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_BLOCKFMT_command ID](/previous-versions/aa769883\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="setbookmark"></a>  CHtmlEditCtrlBase::SetBookMark
 
@@ -1945,7 +1945,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_BOOKMARK Befehls-ID](https://msdn.microsoft.com/library/aa769873.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_BOOKMARK Befehls-ID](/previous-versions/aa769873\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="setcsseditinglevel"></a>  CHtmlEditCtrlBase::SetCSSEditingLevel
 
@@ -1966,7 +1966,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_CSSEDITING_LEVEL Befehls-ID](https://msdn.microsoft.com/library/aa769903.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_CSSEDITING_LEVEL Befehls-ID](/previous-versions/aa769903\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="setdefaultcomposesettings"></a>  CHtmlEditCtrlBase::SetDefaultComposeSettings
 
@@ -2012,7 +2012,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_COMPOSESETTINGS Befehls-ID](https://msdn.microsoft.com/library/aa769901.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_COMPOSESETTINGS Befehls-ID](/previous-versions/aa769901\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="setdesignmode"></a>  CHtmlEditCtrlBase::SetDesignMode
 
@@ -2050,7 +2050,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM_DISABLE_EDITFOCUS_UI Befehls-ID](https://msdn.microsoft.com/library/aa769905.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM_DISABLE_EDITFOCUS_UI Befehls-ID](/previous-versions/aa769905\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="setdocumenthtml"></a>  CHtmlEditCtrlBase::SetDocumentHTML
 
@@ -2088,7 +2088,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM FONTNAME-Befehls-ID](https://msdn.microsoft.com/library/aa769880.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM FONTNAME-Befehls-ID](/previous-versions/aa769880\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="setfontsize"></a>  CHtmlEditCtrlBase::SetFontSize
 
@@ -2109,7 +2109,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM FONTSIZE-Befehls-ID](https://msdn.microsoft.com/library/aa769881.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM FONTSIZE-Befehls-ID](/previous-versions/aa769881\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="setforecolor"></a>  CHtmlEditCtrlBase::SetForeColor
 
@@ -2134,7 +2134,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM FORECOLOR-Befehls-ID](https://msdn.microsoft.com/library/aa769882.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM FORECOLOR-Befehls-ID](/previous-versions/aa769882\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="setie5pastemode"></a>  CHtmlEditCtrlBase::SetIE5PasteMode
 
@@ -2155,7 +2155,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM IE50_PASTE_MODE Befehls-ID](https://msdn.microsoft.com/library/aa769923.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM IE50_PASTE_MODE Befehls-ID](/previous-versions/aa769923\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="setliveresize"></a>  CHtmlEditCtrlBase::SetLiveResize
 
@@ -2176,7 +2176,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM LIVERESIZE Befehls-ID](https://msdn.microsoft.com/library/aa769928.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM LIVERESIZE Befehls-ID](/previous-versions/aa769928\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="setmultiselect"></a>  CHtmlEditCtrlBase::SetMultiSelect
 
@@ -2197,7 +2197,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM MULTIPLESELECTION Befehls-ID](https://msdn.microsoft.com/library/aa769929.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM MULTIPLESELECTION Befehls-ID](/previous-versions/aa769929\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="setoverridecursor"></a>  CHtmlEditCtrlBase::SetOverrideCursor
 
@@ -2218,7 +2218,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM OVERRIDE_CURSOR Befehls-ID](https://msdn.microsoft.com/library/aa769932.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM OVERRIDE_CURSOR Befehls-ID](/previous-versions/aa769932\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="setoverwritemode"></a>  CHtmlEditCtrlBase::SetOverwriteMode
 
@@ -2239,7 +2239,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM ÜBERSCHREIBEN der Befehls-ID](https://msdn.microsoft.com/library/aa770016.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM ÜBERSCHREIBEN der Befehls-ID](/previous-versions/aa770016\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="setrespectvisindesign"></a>  CHtmlEditCtrlBase::SetRespectVisInDesign
 
@@ -2260,7 +2260,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM RESPECTVISIBILITY_INDESIGN Befehls-ID](https://msdn.microsoft.com/library/aa770023.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM RESPECTVISIBILITY_INDESIGN Befehls-ID](/previous-versions/aa770023\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="setshowalignedsitetags"></a>  CHtmlEditCtrlBase::SetShowAlignedSiteTags
 
@@ -2281,7 +2281,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM SHOWALIGNEDSITETAGS Befehls-ID](https://msdn.microsoft.com/library/aa769947.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM SHOWALIGNEDSITETAGS Befehls-ID](/previous-versions/aa769947\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="setshowalltags"></a>  CHtmlEditCtrlBase::SetShowAllTags
 
@@ -2302,7 +2302,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM SHOWALLTAGS Befehls-ID](https://msdn.microsoft.com/library/aa769948.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM SHOWALLTAGS Befehls-ID](/previous-versions/aa769948\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="setshowareatags"></a>  CHtmlEditCtrlBase::SetShowAreaTags
 
@@ -2323,7 +2323,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM SHOWAREATAGS Befehls-ID](https://msdn.microsoft.com/library/aa769949.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM SHOWAREATAGS Befehls-ID](/previous-versions/aa769949\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="setshowbrtags"></a>  CHtmlEditCtrlBase::SetShowBRTags
 
@@ -2344,7 +2344,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM SHOWWBRTAGS Befehls-ID](https://msdn.microsoft.com/library/aa769956.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM SHOWWBRTAGS Befehls-ID](/previous-versions/aa769956\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="setshowcommenttags"></a>  CHtmlEditCtrlBase::SetShowCommentTags
 
@@ -2365,7 +2365,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM SHOWCOMMENTTAGS Befehls-ID](https://msdn.microsoft.com/library/aa769950.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM SHOWCOMMENTTAGS Befehls-ID](/previous-versions/aa769950\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="setshowmisctags"></a>  CHtmlEditCtrlBase::SetShowMiscTags
 
@@ -2386,7 +2386,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM SHOWMISCTAGS Befehls-ID](https://msdn.microsoft.com/library/aa769952.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM SHOWMISCTAGS Befehls-ID](/previous-versions/aa769952\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="setshowscripttags"></a>  CHtmlEditCtrlBase::SetShowScriptTags
 
@@ -2407,7 +2407,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM SHOWSCRIPTTAGS Befehls-ID](https://msdn.microsoft.com/library/aa769953.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM SHOWSCRIPTTAGS Befehls-ID](/previous-versions/aa769953\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="setshowstyletags"></a>  CHtmlEditCtrlBase::SetShowStyleTags
 
@@ -2428,7 +2428,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM SHOWSTYLETAGS Befehls-ID](https://msdn.microsoft.com/library/aa769954.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM SHOWSTYLETAGS Befehls-ID](/previous-versions/aa769954\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="setshowunknowntags"></a>  CHtmlEditCtrlBase::SetShowUnknownTags
 
@@ -2449,7 +2449,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM SHOWUNKNOWNTAGS Befehls-ID](https://msdn.microsoft.com/library/aa769955.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM SHOWUNKNOWNTAGS Befehls-ID](/previous-versions/aa769955\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="textarea"></a>  CHtmlEditCtrlBase::TextArea
 
@@ -2470,7 +2470,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM TEXTAREA-Befehls-ID](https://msdn.microsoft.com/library/aa769986.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM TEXTAREA-Befehls-ID](/previous-versions/aa769986\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="textbox"></a>  CHtmlEditCtrlBase::TextBox
 
@@ -2491,7 +2491,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM TEXTBOX-Befehls-ID](https://msdn.microsoft.com/library/aa769980.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM TEXTBOX-Befehls-ID](/previous-versions/aa769980\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="unbookmark"></a>  CHtmlEditCtrlBase::UnBookmark
 
@@ -2507,7 +2507,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [Befehls-ID IDM UNBOOKMARK](https://msdn.microsoft.com/library/aa770034.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [Befehls-ID IDM UNBOOKMARK](/previous-versions/aa770034\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="underline"></a>  CHtmlEditCtrlBase::Underline
 
@@ -2523,7 +2523,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [Befehls-ID IDM UNTERSTRICHEN](https://msdn.microsoft.com/library/aa770035.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [Befehls-ID IDM UNTERSTRICHEN](/previous-versions/aa770035\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="unlink"></a>  CHtmlEditCtrlBase::Unlink
 
@@ -2539,7 +2539,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM Aufheben der Verknüpfung der Befehls-ID](https://msdn.microsoft.com/library/aa770037.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM Aufheben der Verknüpfung der Befehls-ID](/previous-versions/aa770037\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ##  <a name="unorderlist"></a>  CHtmlEditCtrlBase::UnorderList
 
@@ -2560,7 +2560,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [IDM UNORDERLIST Befehls-ID](https://msdn.microsoft.com/library/aa769987.aspx) für das WebBrowser-Steuerelement.
+Diese Methode sendet die [IDM UNORDERLIST Befehls-ID](/previous-versions/aa769987\(v=vs.85\)) für das WebBrowser-Steuerelement.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,17 +1,17 @@
 ---
-title: 'Gewusst wie: Verwenden von Arrays in C++/CLI'
+title: 'Vorgehensweise: Verwenden von Arrays in C++ / CLI'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - arrays [C++], single-dimension
 ms.assetid: 301cfb3e-199f-42c8-8151-629dce9e87f3
-ms.openlocfilehash: e38e15cffbf623f629f57243923ddae273801bfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b0a13441bc3532884dbbd32f28d57c15e352c3ef
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596247"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414602"
 ---
-# <a name="how-to-use-arrays-in-ccli"></a>Gewusst wie: Verwenden von Arrays in C++/CLI
+# <a name="how-to-use-arrays-in-ccli"></a>Vorgehensweise: Verwenden von Arrays in C++ / CLI
 
 Dieser Artikel beschreibt, wie Arrays in C++ / CLI.
 
@@ -503,7 +503,7 @@ int main() {
 
 Im Gegensatz zum standardmäßigen C++-Arrays sind verwaltete Arrays implizit eine Array-Basisklasse abgeleitet aus denen sie die gemeinsames Verhalten erben. Ein Beispiel ist die `Sort` -Methode, die verwendet werden kann, um die Elemente in jedem Array zu sortieren.
 
-Für Arrays, die grundlegende systeminterne Typen enthalten, können Sie Aufrufen der `Sort` Methode. Sie können die Sortierkriterien überschreiben, und dies so ist erforderlich, wenn für Arrays von komplexen Typen sortiert werden soll. In diesem Fall muss der Elementtyp des Arrays implementieren die [IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx) Methode.
+Für Arrays, die grundlegende systeminterne Typen enthalten, können Sie Aufrufen der `Sort` Methode. Sie können die Sortierkriterien überschreiben, und dies so ist erforderlich, wenn für Arrays von komplexen Typen sortiert werden soll. In diesem Fall muss der Elementtyp des Arrays implementieren die <xref:System.IComparable.CompareTo%2A> Methode.
 
 ```cpp
 // array_sort.cpp
@@ -520,7 +520,7 @@ int main() {
 
 ## <a name="sorting-arrays-by-using-custom-criteria"></a>Sortieren von Arrays anhand benutzerdefinierte Kriterien
 
-Zum Sortieren von Arrays, die grundlegende systeminterne Typen enthalten, rufen Sie einfach die `Array::Sort` Methode. Jedoch an Sort-Arrays, die komplexe Typen enthalten, oder überschreiben die Standard-Sortierkriterien, überschreiben die [IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx) Methode.
+Zum Sortieren von Arrays, die grundlegende systeminterne Typen enthalten, rufen Sie einfach die `Array::Sort` Methode. Jedoch an Sort-Arrays, die komplexe Typen enthalten, oder überschreiben die Standard-Sortierkriterien, überschreiben die <xref:System.IComparable.CompareTo%2A> Methode.
 
 Im folgenden Beispiel ist eine Struktur mit dem Namen `Element` ergibt sich aus <xref:System.IComparable>, und geben Sie einen <xref:System.IComparable.CompareTo%2A> Methode, die den Durchschnitt von zwei ganzen Zahlen als Sortierkriterium verwendet.
 

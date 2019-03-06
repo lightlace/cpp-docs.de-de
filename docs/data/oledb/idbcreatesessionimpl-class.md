@@ -12,16 +12,16 @@ helpviewer_keywords:
 - IDBCreateSessionImpl class
 - CreateSession method
 ms.assetid: 48c02c5c-8362-45ac-af8e-bb119cf8c5c7
-ms.openlocfilehash: ecc06bf5e3514ea87c86de17dbafd59b9da9f8b6
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 36f5a359051dbd5035a73514f84fb2c61ff13176
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556421"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412925"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl-Klasse
 
-Stellt eine Implementierung für die [IDBCreateSession](https://docs.microsoft.com/previous-versions/windows/desktop/ms724076(v=vs.85)) Schnittstelle.
+Stellt eine Implementierung für die [IDBCreateSession](/previous-versions/windows/desktop/ms724076(v=vs.85)) Schnittstelle.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,7 +55,7 @@ Der Session-Objekt.
 
 Eine erforderliche Schnittstelle für Datenquellenobjekte.
 
-## <a name="createsession"></a> Idbcreatesessionimpl:: CreateSession
+## <a name="createsession"></a> IDBCreateSessionImpl::CreateSession
 
 Erstellt eine neue Sitzung über das Datenquellenobjekt, und gibt die angeforderte Schnittstelle zurück, auf die neu erstellte Sitzung.
 
@@ -69,7 +69,7 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [IDBCreateSession:: CreateSession](https://docs.microsoft.com/previous-versions/windows/desktop/ms714942(v=vs.85)) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [IDBCreateSession:: CreateSession](/previous-versions/windows/desktop/ms714942(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
 ## <a name="see-also"></a>Siehe auch
 

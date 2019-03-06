@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], compiling without linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
-ms.openlocfilehash: e071209bd09fea17082379bf3f2486866b52c548
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e65801fcddef739f3fabe88b2b940602fde965a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447202"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412730"
 ---
 # <a name="cl-invokes-the-linker"></a>CL: Starten des Linkers
 
@@ -24,15 +24,15 @@ CL Ruft den Linker automatisch nach dem Kompilieren, es sei denn, die/c-Option v
 |Option|Beschreibung|
 |------------|-----------------|
 |/c|Kompilieren ohne Verknüpfen|
-|/ E/EP, / P|Vorverarbeiten Sie, ohne kompilieren und verknüpfen|
+|/E, /EP, /P|Vorverarbeiten Sie, ohne kompilieren und verknüpfen|
 |/Zg|Funktionsprototypen generieren|
-|/Zs|Überprüfen Sie syntax|
+|/Zs|Überprüfen der Syntax|
 
 Weitere Informationen zum Verknüpfen, finden Sie unter [Optionen des Linkers](../../build/reference/linker-options.md).
 
 ## <a name="example"></a>Beispiel
 
-Angenommen, Sie drei C-Quelldateien kompilieren: MAIN.c MOD1.c und MOD2.c. Jede Datei enthält einen Aufruf einer Funktion, die in einer anderen Datei definiert:
+Nehmen Sie an, dass Sie drei C-Quelldateien kompilieren: MAIN.c MOD1.c und MOD2.c. Jede Datei enthält einen Aufruf einer Funktion, die in einer anderen Datei definiert:
 
 - Ruft die Funktion auf MAIN.c `func1` in MOD1.c und der Funktion `func2` in MOD2.c auf.
 

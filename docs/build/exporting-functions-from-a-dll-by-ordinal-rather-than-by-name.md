@@ -9,12 +9,12 @@ helpviewer_keywords:
 - exporting DLLs [C++], ordinal values
 - NONAME attribute
 ms.assetid: 679719fd-d965-4df3-9f7a-7d86ad831702
-ms.openlocfilehash: 6a5ac13fdc85b3cb1626aefa28b92866a8c856c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe34ec90aa775e7435d4a02b9d77a9cb9c8fdd65
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503415"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423299"
 ---
 # <a name="exporting-functions-from-a-dll-by-ordinal-rather-than-by-name"></a>Exportieren von Funktionen aus einer DLL über die Ordnungszahl statt über den Namen
 
@@ -27,7 +27,7 @@ Die einfachste Möglichkeit zum Exportieren von Funktionen aus einer DLL ist nac
 
 - [Verwenden Sie eine DEF-Datei, sodass ich anhand der Ordinalzahl exportieren können](../build/exporting-from-a-dll-using-def-files.md)
 
-- [Verwenden von "__declspec(dllexport)" "](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Use __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /CLRTHREADATTRIBUTE linker option
 - -CLRTHREADATTRIBUTE linker option
 ms.assetid: 4907e9ef-5031-446c-aecf-0a0b32fae1e8
-ms.openlocfilehash: 3aae02a004226bf1042488d3a654dae9f751e8af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1a637f74cf1da608149779821a25340d35f8739
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668480"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417150"
 ---
 # <a name="clrthreadattribute-set-clr-thread-attribute"></a>/CLRTHREADATTRIBUTE (Festlegen des CLR-Threadattributs)
 
@@ -26,10 +26,10 @@ Geben Sie explizit das Threadingattribut für den Einstiegspunkt des CLR-Program
 
 #### <a name="parameters"></a>Parameter
 
-**DER MTA**<br/>
+**MTA**<br/>
 Wendet das MTAThreadAttribute-Attribut auf den Einstiegspunkt des Programms an.
 
-**KEINE**<br/>
+**NONE**<br/>
 Identisch mit/CLRTHREADATTRIBUTE nicht angegeben.  Können die Common Language Runtime (CLR) die Standardeinstellung Threadingattribut festgelegt.
 
 **STA**<br/>

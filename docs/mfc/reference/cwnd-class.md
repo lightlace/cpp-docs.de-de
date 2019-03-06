@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 7427d8b50dadd9694112ad27c2892ee228a93864
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 493fe04f34f615d9113196e3db8bc744f420d4a2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276545"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426263"
 ---
 # <a name="cwnd-class"></a>CWnd-Klasse
 
@@ -2685,10 +2685,10 @@ BOOL DrawAnimatedRects(
 Gibt den Typ der Animation an. Wenn Sie IDANI_CAPTION angeben, wird die fensterbeschriftung aus der angegebenen Position animieren *LprcFrom* an die Position, die anhand des *LprcTo*. Die Auswirkungen sind vergleichbar mit minimieren oder Maximieren eines Fensters.
 
 *lprcFrom*<br/>
-Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die die Position und Größe des Symbols oder minimierten Fensters angibt.
+Zeiger auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die die Position und Größe des Symbols oder minimierten Fensters angibt.
 
 *lprcTo*<br/>
-Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Position und Größe des Fensters wiederhergestellten angibt.
+Zeiger auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die die Position und Größe des Fensters wiederhergestellten angibt.
 
 ### <a name="return-value"></a>Rückgabewert
 

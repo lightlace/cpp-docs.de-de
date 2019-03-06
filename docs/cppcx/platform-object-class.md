@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 00f2b57bdf63f9f8bcfd9e544bebab2805ff7f65
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 8267d42e67ddf703b4a3a681509b92978e7de8bb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850090"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422781"
 ---
 # <a name="platformobject-class"></a>Platform::Object-Klasse
 
@@ -116,7 +116,7 @@ Ein [Platform:: Type](../cppcx/platform-type-class.md) -Objekt, das den Laufzeit
 
 Die statische [Type:: GetTypeCode](../cppcx/platform-type-class.md#gettypecode) kann zum Abrufen einer [Platform:: TypeCode-Enumeration](../cppcx/platform-typecode-enumeration.md) -Wert, der den aktuellen Typ darstellt. Dies ist besonders für integrierte Typen hilfreich. Der Typencode für eine Verweisklasse außer [Platform:: String](../cppcx/platform-string-class.md) ist Objekt (1).
 
-Die [TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) Klasse wird in den Windows-APIs als sprachenunabhängige Methode für die Übergabe von Typinformationen zwischen Windows-Komponenten und-Apps verwendet. Der Buchstabe T[Platform:: Type Class](../cppcx/platform-type-class.md) verfügt über Operatoren zum Konvertieren zwischen `Type` und `TypeName`.
+Die [TypeName](/uwp/api/windows.ui.xaml.interop.typename) Klasse wird in den Windows-APIs als sprachenunabhängige Methode für die Übergabe von Typinformationen zwischen Windows-Komponenten und-Apps verwendet. Der Buchstabe T[Platform:: Type Class](../cppcx/platform-type-class.md) verfügt über Operatoren zum Konvertieren zwischen `Type` und `TypeName`.
 
 Verwenden der [Typeid](../windows/typeid-cpp-component-extensions.md) Operator, um zurückzugeben eine `Platform::Type` Objekt für einen Klassennamen, zum Beispiel beim Navigieren zwischen XAML-Seiten:
 

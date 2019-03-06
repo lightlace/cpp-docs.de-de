@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: b3d4a1a6f4680579adafec7c1fcf5f4372f9918e
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 98689fc3262cd8fc3bcb29e0bda59b1f40761141
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556711"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422788"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor-Klasse
 
@@ -68,7 +68,7 @@ class CManualAccessor : public CAccessorBase
 
 Mithilfe von `CManualAccessor`, können Sie den Parameter angeben und ausgabebindung Spalte von Run-Time-Funktionsaufrufen.
 
-## <a name="addbindentry"></a> CManualAccessor:: AddBindEntry
+## <a name="addbindentry"></a> CManualAccessor::AddBindEntry
 
 Fügt eine Bindung für den Ausgabespalten.
 
@@ -84,7 +84,7 @@ void AddBindEntry(DBORDINAL nOrdinal,
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
 *nOrdinal*<br/>
 [in] Nummer der Spalte.
@@ -108,7 +108,7 @@ Finden Sie unter [DBBINDING](https://docs.microsoft.com/previous-versions/window
 
 Um diese Funktion verwenden zu können, müssen Sie zuerst Aufrufen [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md). Fügen Sie können nicht mehrere Einträge als die Anzahl der Spalten, die im angegebenen `CreateAccessor`.
 
-## <a name="addparameterentry"></a> CManualAccessor:: AddParameterEntry
+## <a name="addparameterentry"></a> CManualAccessor::AddParameterEntry
 
 Die Parameter-Eintrag-Strukturen wird ein Parametereintrag hinzugefügt.
 
@@ -125,7 +125,7 @@ void AddParameterEntry(DBORDINAL nOrdinal,
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
 *nOrdinal*<br/>
 [in] Parameteranzahl.
@@ -152,7 +152,7 @@ Finden Sie unter [DBBINDING](https://docs.microsoft.com/previous-versions/window
 
 Um diese Funktion verwenden zu können, müssen Sie zuerst Aufrufen [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md).
 
-## <a name="createaccessor"></a> CManualAccessor:: CreateAccessor
+## <a name="createaccessor"></a> CManualAccessor::CreateAccessor
 
 Belegt Speicher für die Spalte binden, Strukturen und der Spaltenelemente für die Daten initialisiert.
 
@@ -183,7 +183,7 @@ Einer der standardmäßigen HRESULT-Werte.
 
 Rufen Sie diese Funktion vor dem Aufruf der `CManualAccessor::AddBindEntry` Funktion.
 
-## <a name="createparameteraccessor"></a> CManualAccessor:: Createparameteraccessor
+## <a name="createparameteraccessor"></a> CManualAccessor::CreateParameterAccessor
 
 Belegt Speicher für den Parameter binden Strukturen und initialisiert die Datenmember des Parameters.
 

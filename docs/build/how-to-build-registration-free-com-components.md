@@ -1,17 +1,17 @@
 ---
-title: 'Gewusst wie: Erstellen von COM-Komponenten ohne Registrierung'
+title: 'Vorgehensweise: Erstellen Sie die Registrierung von COM-Komponenten'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - COM components, registration-free
 ms.assetid: 7e585d6a-0314-45b2-8f1b-cae9ac4df037
-ms.openlocfilehash: 4f4ebf121b761c37969fa3f9788bda52d913f340
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 503c3e4399359d793ce660f36844d2edc6602146
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463530"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416769"
 ---
-# <a name="how-to-build-registration-free-com-components"></a>Gewusst wie: Erstellen von COM-Komponenten ohne Registrierung
+# <a name="how-to-build-registration-free-com-components"></a>Vorgehensweise: Erstellen Sie die Registrierung von COM-Komponenten
 
 COM-Komponenten ohne Registrierung sind COM-Komponenten, die Manifeste, die die DLLs integriert haben.
 

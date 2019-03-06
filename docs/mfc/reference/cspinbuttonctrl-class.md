@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 3c973d92550469804a5389b84f53005e4f2c154f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ff61fb4f918e25d430fc31ae55c3ad8794ce39f1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290429"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425028"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl-Klasse
 
@@ -120,7 +120,7 @@ virtual BOOL Create(
 Gibt das Drehfeld-Steuerelement Stil. Eine beliebige Kombination von Drehfeld-Schaltflächenstile-Steuerelement auf das Steuerelement anzuwenden. Diese Formate werden in beschrieben [auf-ab-Steuerelementstile](/windows/desktop/Controls/up-down-control-styles) im Windows SDK.
 
 *rect*<br/>
-Gibt an, des Drehfeld-Steuerelements die Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur
+Gibt an, des Drehfeld-Steuerelements die Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur
 
 *pParentWnd*<br/>
 Ein Zeiger auf das Drehfeld-Steuerelement des übergeordneten Fensters, in der Regel eine `CDialog`. Es darf nicht NULL sein.
@@ -160,7 +160,7 @@ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erwei
 Gibt das Drehfeld-Steuerelement Stil. Eine beliebige Kombination von Drehfeld-Schaltflächenstile-Steuerelement auf das Steuerelement anzuwenden. Diese Formate werden in beschrieben [auf-ab-Steuerelementstile](/windows/desktop/Controls/up-down-control-styles) im Windows SDK.
 
 *rect*<br/>
-Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
+Ein Verweis auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
 
 *pParentWnd*<br/>
 Ein Zeiger auf das Fenster, das übergeordnete Element des Steuerelements ist.

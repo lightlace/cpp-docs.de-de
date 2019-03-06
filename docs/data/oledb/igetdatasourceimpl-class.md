@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IGetDataSourceImpl class
 - GetDataSource method
 ms.assetid: d63f3178-d663-4f01-8c09-8aab2dd6805a
-ms.openlocfilehash: cd6b56f4281a2fdde77229ec54be6d6289a87148
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: bb4147bda64e86770e133e10a60efa567cee7719
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556568"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414069"
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl-Klasse
 
-Stellt eine Implementierung der [IGetDataSource](https://docs.microsoft.com/previous-versions/windows/desktop/ms709721(v=vs.85)) Objekt.
+Stellt eine Implementierung der [IGetDataSource](/previous-versions/windows/desktop/ms709721(v=vs.85)) Objekt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,7 +53,7 @@ Abgeleitet von die Klasse `IGetDataSourceImpl`.
 
 Dies ist eine erforderliche Schnittstelle für die Sitzung erhalten Sie einen Schnittstellenzeiger auf das Datenquellenobjekt.
 
-## <a name="getdatasource"></a> Igetdatasourceimpl:: GetDatasource
+## <a name="getdatasource"></a> IGetDataSourceImpl::GetDataSource
 
 Gibt einen Schnittstellenzeiger auf das Datenquellenobjekt, das die Sitzung erstellt haben.
 
@@ -66,7 +66,7 @@ STDMETHOD(GetDataSource)(REFIID riid,
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [IGetDataSource::GetDataSource](https://docs.microsoft.com/previous-versions/windows/desktop/ms725443(v=vs.85)) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
 ### <a name="remarks"></a>Hinweise
 

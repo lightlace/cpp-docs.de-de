@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 95517931f3156c4850e07c78910ccbffff424faa
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 3ade541e5418799f525a08d3fc868f07d2bdfe6a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556516"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412821"
 ---
 # <a name="crestrictions-class"></a>CRestrictions-Klasse
 
@@ -55,7 +55,7 @@ Ein Zeiger auf die GUID für das Schema.
 |-|-|
 |[Öffnen](#open)|Gibt ein Resultset, die gemäß den vom Benutzer anzugebende Einschränkungen zurück.|
 
-## <a name="open"></a> CRestrictions:: Open
+## <a name="open"></a> CRestrictions::Open
 
 Gibt ein Resultset, die gemäß den vom Benutzer anzugebende Einschränkungen zurück.
 
@@ -75,7 +75,7 @@ HRESULT Open(const CSession& session,
 
 #### <a name="parameters"></a>Parameter
 
-*Sitzung*<br/>
+*session*<br/>
 [in] Gibt ein vorhandenes Session-Objekt, das für die Verbindung mit der Datenquelle verwendet.
 
 *lpszParam*<br/>
@@ -92,7 +92,7 @@ Einer der standardmäßigen HRESULT-Werte.
 
 Sie können maximal sieben Einschränkungen für ein Schemarowset angeben.
 
-Finden Sie unter [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) für Informationen zu den definierten Einschränkungen für jedes Schemarowset.
+Finden Sie unter [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) für Informationen zu den definierten Einschränkungen für jedes Schemarowset.
 
 ## <a name="see-also"></a>Siehe auch
 

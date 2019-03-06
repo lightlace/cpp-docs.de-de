@@ -30,12 +30,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: 6f870cf6c079786c49846bcf7c3010998ccdbe00
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: dd7156575f551af1643dd3d1f8238ee1e3fe86f4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556469"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420153"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset-Klasse
 
@@ -71,13 +71,13 @@ Eine Rowset-Klasse.
 |[CAccessorRowset](#caccessorrowset)|Konstruktor.|
 |[Schließen](#close)|Schließt das Rowset und alle Accessoren.|
 |[FreeRecordMemory](#freerecordmemory)|Gibt alle Spalten im aktuellen Datensatz, der freigegeben werden müssen frei.|
-|[GetColumnInfo](#getcolumninfo)|Implementiert [IColumnsInfo:: GetColumnInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)).|
+|[GetColumnInfo](#getcolumninfo)|Implementiert [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)).|
 
 ## <a name="remarks"></a>Hinweise
 
 Klasse `TAccessor` verwaltet die Zugriffsmethode. Klasse *TRowset* verwaltet das Rowset.
 
-## <a name="bind"></a> CAccessorRowset:: Bind
+## <a name="bind"></a> CAccessorRowset::Bind
 
 Die Bindungen erstellt, wenn Sie angegeben haben `bBind` als **"false"** in [CCommand:: Open](../../data/oledb/ccommand-open.md).
 
@@ -91,7 +91,7 @@ HRESULT Bind();
 
 Ein standard-HRESULT.
 
-## <a name="caccessorrowset"></a> CAccessorRowset:: CAccessorRowset
+## <a name="caccessorrowset"></a> CAccessorRowset::CAccessorRowset
 
 Initialisiert das `CAccessorRowset`-Objekt.
 
@@ -101,7 +101,7 @@ Initialisiert das `CAccessorRowset`-Objekt.
 CAccessorRowset();
 ```
 
-## <a name="close"></a> CAccessorRowset:: Close
+## <a name="close"></a> CAccessorRowset::Close
 
 Gibt alle aktiven Accessoren und Rowsets frei.
 
@@ -115,7 +115,7 @@ void Close();
 
 Gibt alle zugeordneten Arbeitsspeicher frei.
 
-## <a name="freerecordmemory"></a> CAccessorRowset:: Freerecordmemory
+## <a name="freerecordmemory"></a> CAccessorRowset::FreeRecordMemory
 
 Gibt alle Spalten im aktuellen Datensatz, der freigegeben werden müssen frei.
 
@@ -125,7 +125,7 @@ Gibt alle Spalten im aktuellen Datensatz, der freigegeben werden müssen frei.
 void FreeRecordMemory();
 ```
 
-## <a name="getcolumninfo"></a> CAccessorRowset:: GetColumnInfo
+## <a name="getcolumninfo"></a> CAccessorRowset::GetColumnInfo
 
 Ruft die Spalteninformationen aus dem geöffneten Rowset ab.
 
@@ -142,7 +142,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [IColumnsInfo:: GetColumnInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -152,7 +152,7 @@ Ein standard-HRESULT.
 
 Der Benutzer muss den zurückgegebenen Spalteninformationen und Zeichenfolgenpuffer freigeben. Verwenden Sie die zweite Version dieser Methode, bei der Verwendung [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) und die Bindungen außer Kraft setzen müssen.
 
-Weitere Informationen finden Sie unter [IColumnsInfo:: GetColumnInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) in die *OLE DB-Programmierreferenz*.
+Weitere Informationen finden Sie unter [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.
 
 ## <a name="see-also"></a>Siehe auch
 

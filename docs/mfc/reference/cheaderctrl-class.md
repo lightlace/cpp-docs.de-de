@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: a683c877b67f4eae1a7411f5916987c9789b6817
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 51cdfb481892ba5057d4ca26ff4d6e51665557e5
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261348"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415616"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl-Klasse
 
@@ -231,7 +231,7 @@ virtual BOOL Create(
 Gibt das Kopfzeilen-Steuerelement-Stil. Eine Beschreibung der Header der Stile von Listensteuerelementen, finden Sie unter [Steuerelementstile Kopfzeile](/windows/desktop/Controls/header-control-styles) im Windows SDK.
 
 *rect*<br/>
-Gibt an, des Kopfzeilen-Steuerelements die Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.
+Gibt an, des Kopfzeilen-Steuerelements die Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur.
 
 *pParentWnd*<br/>
 Gibt an, das Kopfzeilen-Steuerelement übergeordnete Fenster, in der Regel eine `CDialog`. Es darf nicht NULL sein.
@@ -301,7 +301,7 @@ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erwei
 Format des Headersteuerelements. Eine Beschreibung der Header der Stile von Listensteuerelementen, finden Sie unter [Steuerelementstile Kopfzeile](/windows/desktop/Controls/header-control-styles) im Windows SDK. Finden Sie unter [erstellen](#create) eine Liste der zusätzlichen Formatvorlagen.
 
 *rect*<br/>
-Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
+Ein Verweis auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
 
 *pParentWnd*<br/>
 Ein Zeiger auf das Fenster, das übergeordnete Element des Steuerelements ist.
@@ -543,7 +543,7 @@ BOOL GetItemDropDownRect(
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*iItem*|[in] Nullbasierte Index des ein Headerelement, dessen Stil HDF_SPLITBUTTON ist. Weitere Informationen finden Sie unter den `fmt` Mitglied der [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) Struktur.|
-|*lpRect*|[out] Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die umgebenden Rechteck Informationen zu erhalten.|
+|*lpRect*|[out] Zeiger auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die umgebenden Rechteck Informationen zu erhalten.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -581,7 +581,7 @@ BOOL GetItemRect(
 Der nullbasierte Index, der das Headerelement-Steuerelement.
 
 *lpRect*<br/>
-Ein Zeiger auf die Adresse einer [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die umschließende Rechteck Informationen empfängt.
+Ein Zeiger auf die Adresse einer [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die die umschließende Rechteck Informationen empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -633,7 +633,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*lpRect*|[out] Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die umschließende Rechteck Informationen empfängt.|
+|*lpRect*|[out] Zeiger auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die die umschließende Rechteck Informationen empfängt.|
 
 ### <a name="return-value"></a>Rückgabewert
 

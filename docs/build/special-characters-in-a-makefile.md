@@ -7,12 +7,12 @@ helpviewer_keywords:
 - special characters, in NMAKE macros
 - macros, special characters
 ms.assetid: 92c34ab5-ca6b-4fc0-bcf4-3172eaeda9f0
-ms.openlocfilehash: 18fa83fcfd0c70ac4e8b9bf5be08ac1922998ecb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2703adbbdba392b1a317e2656c6f3dba30a36b6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443729"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420754"
 ---
 # <a name="special-characters-in-a-makefile"></a>Sonderzeichen in einem Makefile
 
@@ -24,7 +24,7 @@ Ein Caretzeichen (^) in eine Zeichenfolge in Anführungszeichen wird als literal
 
 In Makros, einen umgekehrten Schrägstrich (\\) gefolgt durch eine neue Zeile-Zeichen wird durch ein Leerzeichen ersetzt.
 
-In Befehlen ist ein Prozentzeichen (%) den Dateibezeichner. Um dieses Zeichen in einen Befehl zu repräsentieren, geben Sie ein doppelten Prozentzeichen (%) anstelle einer einzigen Datei aus. In anderen Situationen interpretiert NMAKE ein einzelnes % praktisch, aber es immer einen Double-Wert interpretiert %% als ein einzelnes %. Aus diesem Grund zur Darstellung eines Literals %%, geben Sie entweder drei Prozentzeichen %%%, oder vier Prozentzeichen, %%%.
+In Befehlen ein Prozentzeichen (%) Stellt den Dateibezeichner. Um dieses Zeichen in einen Befehl zu repräsentieren, geben Sie ein doppelten Prozentzeichen (%) anstelle einer einzigen Datei. In anderen Situationen interpretiert NMAKE ein einzelnes % praktisch, aber es immer einen Double-Wert interpretiert %% als ein einzelnes %. Aus diesem Grund zur Darstellung eines Literals %%, geben Sie entweder drei Prozentzeichen %%%, oder vier Prozentzeichen, %%%.
 
 Um das Dollarzeichen ($) als Literalzeichen in einem Befehl zu verwenden, geben Sie zwei Dollarzeichen ($$). Diese Methode kann auch verwendet werden, in anderen Situationen, in dem ^ $ funktioniert.
 

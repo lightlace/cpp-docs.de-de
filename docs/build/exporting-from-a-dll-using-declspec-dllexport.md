@@ -10,12 +10,12 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-ms.openlocfilehash: effefa2c370634c450b03ed18187769e12e40adf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48592fd6162ee354d82e73228e8b144ef0f354ed
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500385"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420583"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Exportieren aus einer DLL mithilfe von "__declspec(dllexport)"
 
@@ -25,7 +25,7 @@ In neueren Compilerversionen können Sie Daten, Funktionen, Klassen oder Memberf
 
 Am deutlichsten zeigt sich diese einfache Handhabung beim Exportieren von ergänzten C++-Funktionsnamen. Da es keine Standardspezifikation für die Namensergänzung gibt, kann der Name einer exportierten Funktion zwischen den einzelnen Compilerversionen variieren. Bei Verwendung von **__declspec(dllexport)**, Neukompilierung der DLL und die abhängigen .exe-Dateien ist nur erforderlich für jede Änderung der Benennung Konvention.
 
-Viele Exportanweisungen, z. B. Ordinalzahlen, NONAME und PRIVATE, können nur in einer DEF-Datei angegeben werden, und es gibt keine Möglichkeit, diese Attribute ohne DEF-Datei festzulegen. Jedoch **__declspec(dllexport)** zusätzlich zu einer DEF Datei löst keine Buildfehler auftreten.
+Viele Exportdirektiven, z. B. Ordinalzahlen, NONAME und PRIVATE, können nur in einer DEF-Datei angegeben werden, und es gibt keine Möglichkeit, diese Attribute ohne DEF-Datei festzulegen. Jedoch **__declspec(dllexport)** zusätzlich zu einer DEF Datei löst keine Buildfehler auftreten.
 
 Zum Exportieren von Funktionen der **__declspec(dllexport)** Schlüsselwort muss auf der linken Seite des Schlüsselworts Aufrufkonvention angezeigt, wenn ein Schlüsselwort angegeben wird. Zum Beispiel:
 

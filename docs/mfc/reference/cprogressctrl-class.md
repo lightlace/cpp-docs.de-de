@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: a6d5d3becfd1c1ee4a032c74eb116ede82c42bc4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 131bee5f9eae1e6e2be4d48941d148edbde68262
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260269"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418762"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl-Klasse
 
@@ -149,7 +149,7 @@ Gibt das Statusanzeige-Steuerelement Stil. Wenden Sie eine beliebige Kombination
 - PBS_SMOOTH zeigt allmählichen, smooth das Statusanzeige-Steuerelement ausfüllen. Ohne dieses Flag wird das Steuerelement mit Blöcken füllen.
 
 *rect*<br/>
-Gibt an, des Statusanzeige-Steuerelements die Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur. Da das Steuerelement ein untergeordnetes Fenster sein muss, werden die angegebenen Koordinaten relativ zum Clientbereich befinden die *pParentWnd*.
+Gibt an, des Statusanzeige-Steuerelements die Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur. Da das Steuerelement ein untergeordnetes Fenster sein muss, werden die angegebenen Koordinaten relativ zum Clientbereich befinden die *pParentWnd*.
 
 *pParentWnd*<br/>
 Gibt an, der Statusanzeige übergeordnete Fenster des Steuerelements, in der Regel eine `CDialog`. Es darf nicht NULL sein.
@@ -191,7 +191,7 @@ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erwei
 Gibt das Statusanzeige-Steuerelement Stil. Wenden Sie eine beliebige Kombination von Window-Stile, die in beschriebenen [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) im Windows SDK.
 
 *rect*<br/>
-Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
+Ein Verweis auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
 
 *pParentWnd*<br/>
 Ein Zeiger auf das Fenster, das übergeordnete Element des Steuerelements ist.

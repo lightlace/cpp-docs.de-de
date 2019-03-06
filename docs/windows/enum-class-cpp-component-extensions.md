@@ -3,12 +3,12 @@ title: Enum-Klasse (C++ / CLI und C++ / CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: 5bc850831e961a500ae71ce90e3ca39b3aabd159
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aee3d4f44c18074ca536ff028565bbbd0e37d04c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592516"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417423"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>Enum-Klasse (C++ / CLI und C++ / CX)
 
@@ -55,7 +55,7 @@ Der Wert jedes Enumerators ist ein konstanter Ausdruck, der entweder implizit vo
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen und Beispiele finden Sie unter [Enums](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx).
+Weitere Informationen und Beispiele finden Sie unter [Enums](../cppcx/enums-c-cx.md).
 
 Beachten Sie, dass der Compiler Fehlermeldungen ausgibt, wenn der konstante Ausdruck, der den Wert eines Enumerators definiert, nicht durch den *underlying-type*dargestellt werden kann.  Der Compiler meldet jedoch keinen Fehler für einen Wert, der für den zugrunde liegenden Typ ungeeignet ist. Zum Beispiel:
 

@@ -16,16 +16,16 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: c6736eac040b2186ddb1b1dc1c5c3a5b6b957d20
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: b9d6c9aab2b12859462abfa2a842754128e72306
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556152"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416656"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl-Klasse
 
-Stellt eine Implementierung der [ICommandProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723044(v=vs.85)) Schnittstelle.
+Stellt eine Implementierung der [ICommandProperties](/previous-versions/windows/desktop/ms723044(v=vs.85)) Schnittstelle.
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,7 +60,7 @@ Ihre Eigenschaftenklasse.
 
 Dies ist obligatorisch einschaltbefehle. Die Implementierung erfolgt durch eine statische Funktion, die definiert, die von der [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) Makro.
 
-## <a name="getproperties"></a> Icommandpropertiesimpl:: GetProperties
+## <a name="getproperties"></a> ICommandPropertiesImpl::GetProperties
 
 Gibt alle angeforderten Eigenschaftensätze, die mithilfe des Befehlsparameters eigenschaftenzuordnung zurück.
 
@@ -75,13 +75,13 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [ICommandProperties:: GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723119(v=vs.85)) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [ICommandProperties:: GetProperties](/previous-versions/windows/desktop/ms723119(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
 ### <a name="remarks"></a>Hinweise
 
 Siehe [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-## <a name="setproperties"></a> Icommandpropertiesimpl:: SetProperties
+## <a name="setproperties"></a> ICommandPropertiesImpl::SetProperties
 
 Stellt Eigenschaften für das Command-Objekt.
 
@@ -94,7 +94,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>Parameter
 
-Finden Sie unter [ICommandProperties:: SetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms711497(v=vs.85)) in die *OLE DB-Programmierreferenz*.
+Finden Sie unter [ICommandProperties:: SetProperties](/previous-versions/windows/desktop/ms711497(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -7,7 +7,6 @@ f1_keywords:
 - C2125
 - C2126
 - C2127
-- C2131
 - C2136
 - C2176
 - C2187
@@ -24,12 +23,12 @@ helpviewer_keywords:
 - C2187
 - C2189
 ms.assetid: 1ccab076-0954-4386-b959-d3112a6793ae
-ms.openlocfilehash: 98e804b7c53eddf239e752f120854439cc3a0b01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31974bb830364b2ef41a7da17cb0ad95d931f771
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546556"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423533"
 ---
 # <a name="compiler-errors-c2100-through-c2199"></a>Compilerfehlers C2100 through C2199
 
@@ -72,7 +71,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerfehler C2128](compiler-error-c2128.md)|"*Funktion*": Alloc_text/Same_seg nur auf Funktionen mit C-Bindung anwendbar|
 |[Compilerfehler C2129](compiler-error-c2129.md)|statische Funktion "*Bezeichner*" deklariert, aber nicht definiert.|
 |[Compilerfehler C2130](compiler-error-c2130.md)|#line erwartet eine Zeichenfolge, die mit dem Dateinamen, die gefunden "*token*"|
-|Compilerfehler Fehler C2131|Ausdruck wurde nicht auf eine Konstante ausgewertet werden.|
+|[Compilerfehler Fehler C2131](compiler-error-c2131.md)|Ausdruck wurde nicht auf eine Konstante ausgewertet werden.|
 |[Compilerfehler C2132](compiler-error-c2132.md)|Syntaxfehler: Bezeichner nicht erwartet|
 |[Compilerfehler C2133](compiler-error-c2133.md)|"*Bezeichner*': Unbekannte Größe|
 |[Compilerfehler C2134](compiler-error-c2134.md)|"*Funktion*": Aufruf ergibt keinen in einem konstanten Ausdruck|

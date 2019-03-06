@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 9bc31cc9cff12146e6f5fe227e0e191d1c555063
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 92666e10d82d96b76ad43b652ed90e0e41b8f853
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271397"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418931"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -315,7 +315,7 @@ virtual BOOL Create(
 Gibt den Strukturansicht-Steuerelement Stil. Anwenden von Window-Stile, die in beschriebenen [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa), und eine beliebige Kombination von [Struktur Ansicht der Stile von Listensteuerelementen](/windows/desktop/Controls/tree-view-control-window-styles) wie beschrieben in das Windows SDK.
 
 *rect*<br/>
-Gibt an, des Strukturansicht-Steuerelements die Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.
+Gibt an, des Strukturansicht-Steuerelements die Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur.
 
 *pParentWnd*<br/>
 Gibt an, dem Strukturansicht-Steuerelement des übergeordneten Fensters, in der Regel eine `CDialog`. Es darf nicht NULL sein.
@@ -361,7 +361,7 @@ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erwei
 Gibt den Strukturansicht-Steuerelement Stil. Anwenden von Window-Stile, die in beschriebenen [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa), und eine beliebige Kombination von [Struktur Ansicht der Stile von Listensteuerelementen](/windows/desktop/Controls/tree-view-control-window-styles) wie beschrieben in das Windows SDK.
 
 *rect*<br/>
-Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
+Ein Verweis auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
 
 *pParentWnd*<br/>
 Ein Zeiger auf das Fenster, das übergeordnete Element des Steuerelements ist.
@@ -887,7 +887,7 @@ BOOL GetItemPartRect(
 |---------------|-----------------|
 |*hItem*|[in] Handle zu einem Baumansicht-Steuerelement ein Element.|
 |*nPart*|[in] Der Bezeichner für das Part. Muss auf TVGIPR_BUTTON festgelegt werden.|
-|*lpRect*|[out] Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur. Wenn diese Methode erfolgreich ist, erhält die Struktur die Rechteckkoordinaten, der die Komponente, *hItem* und *nPart*.|
+|*lpRect*|[out] Zeiger auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur. Wenn diese Methode erfolgreich ist, erhält die Struktur die Rechteckkoordinaten, der die Komponente, *hItem* und *nPart*.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -928,7 +928,7 @@ BOOL GetItemRect(
 Der Handle für ein Strukturansichtselement-Steuerelement.
 
 *lpRect*<br/>
-Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die das umschließende Rechteck empfängt. Die Koordinaten sind relativ zur oberen linken Ecke des Strukturansicht-Steuerelement.
+Zeiger auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die das umschließende Rechteck empfängt. Die Koordinaten sind relativ zur oberen linken Ecke des Strukturansicht-Steuerelement.
 
 *bTextOnly*<br/>
 Wenn dieser Parameter ungleich NULL ist, enthält das umschließende Rechteck nur den Text des Elements an. Andernfalls enthält es die gesamte Zeile, die belegt, das Element in der Strukturansicht-Steuerelement.

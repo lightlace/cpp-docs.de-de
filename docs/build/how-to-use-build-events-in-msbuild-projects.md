@@ -1,19 +1,19 @@
 ---
-title: 'Gewusst wie: Verwenden von Buildereignissen in MSBuild-Projekten'
+title: 'Vorgehensweise: Verwenden von Buildereignissen in MSBuild-Projekten'
 ms.date: 11/04/2016
 f1_keywords:
 - msbuild.cpp.howto.usebuildevents
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: 60e26b5cab77bb56f0574a91ad69a7df4d73fa1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea9ff51066c09e1e4a783b622248d9774a023172
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570273"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417589"
 ---
-# <a name="how-to-use-build-events-in-msbuild-projects"></a>Gewusst wie: Verwenden von Buildereignissen in MSBuild-Projekten
+# <a name="how-to-use-build-events-in-msbuild-projects"></a>Vorgehensweise: Verwenden von Buildereignissen in MSBuild-Projekten
 
 Ein Buildereignis ist ein Befehl, den MSBuild zu einem bestimmten Zeitpunkt im Buildprozess ausführt. Die *vor dem Erstellen* Ereignis tritt auf, bevor der Build gestartet wird; die *Prälinkereignis* Ereignis tritt auf, bevor Sie die Link-Schritt-beginnt; und die *Postbuild* Ereignis tritt auf, nach der Erstellung erfolgreich beendet wurde. Ein Buildereignis tritt nur auf, wenn der zugeordnete Buildschritt tritt ein, an. Z. B. das Prälinkereignis nicht ausgeführt, wenn der Linkschritt nicht ausgeführt werden kann.
 

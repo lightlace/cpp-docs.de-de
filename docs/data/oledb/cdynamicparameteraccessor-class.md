@@ -90,12 +90,12 @@ helpviewer_keywords:
 - SetParamStatus method
 - SetParamString method
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-ms.openlocfilehash: c2cc67e6e837844356a071aa362dcca85eca24e4
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: a655d95cf165ab2c5cba3a391b81d6f420f8322f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556971"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418515"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor-Klasse
 
@@ -139,7 +139,7 @@ Die Parameterinformationen werden in einem Puffer gespeichert, der von dieser Kl
 
 Ein Beispiel veranschaulicht, wie diese Klasse zum Ausführen einer gespeicherten SQL Server-Prozedur und die Ausgabeparameterwerte zu erhalten, finden Sie die [-Beispiel](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer) Beispielcode in die [Microsoft VCSamples](https://github.com/Microsoft/VCSamples) GitHub-Repository.
 
-## <a name="cdynamicparameteraccessor"></a> CDynamicParameterAccessor:: CDynamicParameterAccessor
+## <a name="cdynamicparameteraccessor"></a> CDynamicParameterAccessor::CDynamicParameterAccessor
 
 Der Konstruktor.
 
@@ -165,7 +165,7 @@ Die maximale BLOB-Größe in Byte; Spaltendaten über diesen Wert werden als BLO
 
 Finden Sie unter den [CDynamicAccessor:: CDynamicAccessor](../../data/oledb/cdynamicaccessor-cdynamicaccessor.md) Konstruktor für Weitere Informationen zum BLOB behandeln.
 
-## <a name="getparam"></a> CDynamicParameterAccessor:: GetParam
+## <a name="getparam"></a> CDynamicParameterAccessor::GetParam
 
 Ruft die Zeichenfolgendaten nicht für einen angegebenen Parameter aus dem Parameterpuffer ab.
 
@@ -203,7 +203,7 @@ Auf Vorlagen basierende Versionen verweist auf den Arbeitsspeicher mit den Daten
 
 Verwendung `GetParam` keine Zeichenfolge darstellen Parameterdaten aus dem Puffer abgerufen. Verwendung [GetParamString](../../data/oledb/cdynamicparameteraccessor-getparamstring.md) zum Abrufen von Daten für Zeichenfolge-Parameter aus dem Puffer.
 
-## <a name="getparamcount"></a> CDynamicParameterAccessor:: Getparamcount
+## <a name="getparamcount"></a> CDynamicParameterAccessor::GetParamCount
 
 Ruft die Anzahl von Parametern, die im Puffer gespeichert.
 
@@ -217,7 +217,7 @@ DB_UPARAMS GetParamCount() const throw();
 
 Die Anzahl der Parameter.
 
-## <a name="getparamio"></a> CDynamicParameterAccessor:: Getparamio
+## <a name="getparamio"></a> CDynamicParameterAccessor::GetParamIO
 
 Ermittelt, ob der angegebene Parameter ein Eingabe- oder ein Ausgabeparameter ist.
 
@@ -250,7 +250,7 @@ enum DBPARAMIOENUM {
 
 Gibt **"true"** bei Erfolg oder **"false"** bei einem Fehler.
 
-## <a name="getparamlength"></a> CDynamicParameterAccessor:: Getparamlength
+## <a name="getparamlength"></a> CDynamicParameterAccessor::GetParamLength
 
 Ruft die Länge des angegebenen Parameters ab, der im Puffer gespeichert ist.
 
@@ -275,7 +275,7 @@ DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();
 
 Die erste, außer Kraft setzen gibt **"true"** bei Erfolg oder **"false"** bei einem Fehler. Das zweite Überschreiben verweist auf den Arbeitsspeicher, die die Länge des Parameters enthält.
 
-## <a name="getparamname"></a> CDynamicParameterAccessor:: Getparamname
+## <a name="getparamname"></a> CDynamicParameterAccessor::GetParamName
 
 Ruft den Namen des angegebenen Parameters ab.
 
@@ -294,7 +294,7 @@ LPOLESTR GetParamName(DBORDINAL nParam) const throw();
 
 Der Name des angegebenen Parameters.
 
-## <a name="getparamstatus"></a> CDynamicParameterAccessor:: Getparamstatus
+## <a name="getparamstatus"></a> CDynamicParameterAccessor::GetParamStatus
 
 Ruft den Status des angegebenen Parameters ab, der im Puffer gespeichert ist.
 
@@ -313,13 +313,13 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 [in] Die Anzahl der Parameter (Offset von 1). Parameter 0 ist für Rückgabewerte reserviert. Die Anzahl der Parameter ist der Index des Parameters, die basierend auf der Reihenfolge, in der SQL oder der Aufruf der gespeicherten Prozedur. Finden Sie unter [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) verdeutlicht.
 
 *pStatus*<br/>
-[out] Ein Zeiger auf die Variable mit dem DBSTATUS Status des angegebenen Parameters. Informationen zu DBSTATUS Werten finden Sie unter [Status](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) in die *OLE DB-Programmierreferenz*, oder suchen Sie nach DBSTATUS in der Datei oledb.h.
+[out] Ein Zeiger auf die Variable mit dem DBSTATUS Status des angegebenen Parameters. Informationen zu DBSTATUS Werten finden Sie unter [Status](/previous-versions/windows/desktop/ms722617(v=vs.85)) in die *OLE DB-Programmierreferenz*, oder suchen Sie nach DBSTATUS in der Datei oledb.h.
 
 ### <a name="remarks"></a>Hinweise
 
 Die erste, außer Kraft setzen gibt **"true"** bei Erfolg oder **"false"** bei einem Fehler. Das zweite Überschreiben verweist auf den Arbeitsspeicher, der den Status des angegebenen Parameters enthält.
 
-## <a name="getparamstring"></a> CDynamicParameterAccessor:: Getparamstring
+## <a name="getparamstring"></a> CDynamicParameterAccessor::GetParamString
 
 Ruft die Zeichenfolgendaten Status des angegebenen Parameters ab, der im Puffer gespeichert ist.
 
@@ -367,7 +367,7 @@ Diese Methode schlägt fehl, wenn der Puffer *pBuffer* ist nicht groß genug, um
 
 Verwendung `GetParamString` zum Abrufen von Daten für Zeichenfolge-Parameter aus dem Puffer. Verwendung [GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) keine Zeichenfolge darstellen Parameterdaten aus dem Puffer abgerufen.
 
-## <a name="getparamtype"></a> CDynamicParameterAccessor:: GetParamType
+## <a name="getparamtype"></a> CDynamicParameterAccessor::GetParamType
 
 Ruft den Datentyp eines angegebenen Parameters ab.
 
@@ -383,14 +383,14 @@ bool GetParamType(DBORDINAL nParam,
 *nParam*<br/>
 [in] Die Anzahl der Parameter (Offset von 1). Parameter 0 ist für Rückgabewerte reserviert. Die Anzahl der Parameter ist der Index des Parameters, die basierend auf der Reihenfolge, in der SQL oder der Aufruf der gespeicherten Prozedur. Finden Sie unter [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) verdeutlicht.
 
-*PGeben*<br/>
+*pType*<br/>
 [out] Ein Zeiger auf die Variable, die den Datentyp des angegebenen Parameters enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Gibt **"true"** bei Erfolg oder **"false"** bei einem Fehler.
 
-## <a name="setparam"></a> CDynamicParameterAccessor:: SetParam
+## <a name="setparam"></a> CDynamicParameterAccessor::SetParam
 
 Legt fest, der Parameterpuffer anhand der angegebenen (nicht-Zeichenfolge) Daten.
 
@@ -425,7 +425,7 @@ Ein auf Vorlagen basierenden Parameter, der den Datentyp darstellt.
 [in] Der Zeiger auf den Arbeitsspeicher mit den Daten in den Puffer geschrieben werden sollen.
 
 *Status*<br/>
-[in] Folgender Spaltenstatus DBSTATUS. Informationen zu DBSTATUS Werten finden Sie unter [Status](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) in die *OLE DB-Programmierreferenz*, oder suchen Sie nach DBSTATUS in der Datei oledb.h.
+[in] Folgender Spaltenstatus DBSTATUS. Informationen zu DBSTATUS Werten finden Sie unter [Status](/previous-versions/windows/desktop/ms722617(v=vs.85)) in die *OLE DB-Programmierreferenz*, oder suchen Sie nach DBSTATUS in der Datei oledb.h.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -433,7 +433,7 @@ Gibt **"true"** bei Erfolg oder **"false"** bei einem Fehler.
 
 Verwendung `SetParam` Zeichenfolgendaten nicht Parameter im Puffer festgelegt. Verwendung [SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md) Parameterdaten Zeichenfolge im Puffer festgelegt.
 
-## <a name="setparamlength"></a> CDynamicParameterAccessor:: Setparamlength
+## <a name="setparamlength"></a> CDynamicParameterAccessor::SetParamLength
 
 Legt die Länge des angegebenen Parameters fest, der im Puffer gespeichert ist.
 
@@ -456,7 +456,7 @@ bool SetParamLength(DBORDINAL nParam,
 
 Gibt **"true"** bei Erfolg oder **"false"** bei einem Fehler.
 
-## <a name="setparamstatus"></a> CDynamicParameterAccessor:: Setparamstatus
+## <a name="setparamstatus"></a> CDynamicParameterAccessor::SetParamStatus
 
 Legt den Status des angegebenen Parameters fest, der im Puffer gespeichert ist.
 
@@ -473,13 +473,13 @@ bool SetParamStatus(DBORDINAL nParam,
 [in] Die Anzahl der Parameter (Offset von 1). Parameter 0 ist für Rückgabewerte reserviert. Die Anzahl der Parameter ist der Index des Parameters, die basierend auf der Reihenfolge, in der SQL oder der Aufruf der gespeicherten Prozedur. Finden Sie unter [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) verdeutlicht.
 
 *Status*<br/>
-[in] Der DBSTATUS Status des angegebenen Parameters. Informationen zu DBSTATUS Werten finden Sie unter [Status](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) in die *OLE DB-Programmierreferenz*, oder suchen Sie nach DBSTATUS in der Datei oledb.h.
+[in] Der DBSTATUS Status des angegebenen Parameters. Informationen zu DBSTATUS Werten finden Sie unter [Status](/previous-versions/windows/desktop/ms722617(v=vs.85)) in die *OLE DB-Programmierreferenz*, oder suchen Sie nach DBSTATUS in der Datei oledb.h.
 
 ### <a name="remarks"></a>Hinweise
 
 Gibt **"true"** bei Erfolg oder **"false"** bei einem Fehler.
 
-## <a name="setparamstring"></a> CDynamicParameterAccessor:: Setparamstring
+## <a name="setparamstring"></a> CDynamicParameterAccessor::SetParamString
 
 Legt die Zeichenfolgendaten des angegebenen Parameters fest, der im Puffer gespeichert ist.
 
@@ -502,7 +502,7 @@ bool SetParamString(DBORDINAL nParam,
 [in] Ein Zeiger auf die ANSI (**CHAR**) oder Unicode (**WCHAR**) Zeichenfolgendaten des angegebenen Parameters. Sehen Sie in der Datei oledb.h DBSTATUS.
 
 *Status*<br/>
-[in] Der DBSTATUS Status des angegebenen Parameters. Informationen zu DBSTATUS Werten finden Sie unter [Status](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) in die *OLE DB-Programmierreferenz*, oder suchen Sie nach DBSTATUS in der Datei oledb.h.
+[in] Der DBSTATUS Status des angegebenen Parameters. Informationen zu DBSTATUS Werten finden Sie unter [Status](/previous-versions/windows/desktop/ms722617(v=vs.85)) in die *OLE DB-Programmierreferenz*, oder suchen Sie nach DBSTATUS in der Datei oledb.h.
 
 ### <a name="remarks"></a>Hinweise
 

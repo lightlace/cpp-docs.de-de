@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DEBUGTYPE linker option
 - -DEBUGTYPE linker option
 ms.assetid: 1ddcb718-7fec-4f92-a319-3f70f04fe742
-ms.openlocfilehash: f730e485b7dc29cb8fe98bdcc7ea50f5e8c622d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4a24d79295c1f7dbbe645c4a6e52f58b4a08807
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676992"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423495"
 ---
 # <a name="debugtype-debug-info-options"></a>/ DEBUGTYPE (Debuginformationsoptionen)
 
@@ -25,7 +25,7 @@ Die Option „/DEBUGTYPE“ gibt die Typen der durch die Option „/DEBUG“ gen
 
 ## <a name="arguments"></a>Argumente
 
-**KREUZVALIDIERUNG**<br/>
+**CV**<br/>
 Weist den Linker an, Debuginformationen für Symbole, Zeilennummern und andere Objektkompilierungsinformationen in der PDB-Datei auszugeben. Diese Option ist standardmäßig aktiviert Wenn **/DEBUG** angegeben ist und **/DEBUGTYPE** nicht angegeben ist.
 
 **PDATA**<br/>

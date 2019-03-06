@@ -7,16 +7,16 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-ms.openlocfilehash: 6046bcb1b99e446974a3b4fae11d0021778bf526
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: f8809754cc79d2a8c3d0f7bd32630ad9cab70a43
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556880"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423104"
 ---
 # <a name="supporting-schema-rowsets"></a>Supporting Schema Rowsets
 
-Schemarowsets ermöglichen es Consumern, Informationen zu einem Datenspeicher zu erhalten, ohne zu wissen, die zugrunde liegende Struktur bzw. das Schema. Ein Datenspeicher kann z. B. Tabellen, die in einer benutzerdefinierten Hierarchie organisiert werden, damit es keine Möglichkeit gäbe, um das Schema mit Ausnahme des sicherzustellen, dass in diesem Artikel haben. (Ein weiteres Beispiel: Verwenden der Assistenten von Visual C++-Schemarowsets Accessoren für den Consumer zu generieren.) Um den Consumer zu diesem Zweck zu ermöglichen, des Anbieters Session-Objekt macht Methoden verfügbar, auf die [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) Schnittstelle. In Visual C++-Anwendungen, die Sie verwenden die [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) Klasse implementieren `IDBSchemaRowset`.
+Schemarowsets ermöglichen es Consumern, Informationen zu einem Datenspeicher zu erhalten, ohne zu wissen, die zugrunde liegende Struktur bzw. das Schema. Ein Datenspeicher kann z. B. Tabellen, die in einer benutzerdefinierten Hierarchie organisiert werden, damit es keine Möglichkeit gäbe, um das Schema mit Ausnahme des sicherzustellen, dass in diesem Artikel haben. (Ein weiteres Beispiel: Verwenden der Assistenten von Visual C++-Schemarowsets Accessoren für den Consumer zu generieren.) Um den Consumer zu diesem Zweck zu ermöglichen, des Anbieters Session-Objekt macht Methoden verfügbar, auf die [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) Schnittstelle. In Visual C++-Anwendungen, die Sie verwenden die [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) Klasse implementieren `IDBSchemaRowset`.
 
 `IDBSchemaRowsetImpl` unterstützt die folgenden Methoden:
 
@@ -86,7 +86,7 @@ class CUpdateSessionTRSchemaRowset :
 
 `CUpdateSession` erbt von `IDBSchemaRowsetImpl`, sodass sie die Einschränkung, die für die Behandlung von Methoden hat. Mithilfe von `CSchemaRowsetImpl`, deklarieren Sie die drei untergeordneten Klassen (aufgeführt in der oben gezeigten Schema-Karte): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset`, und `CUpdateSessionPTSchemaRowset`. Jede dieser untergeordneten Klassen verfügt über eine `Execute` Methode, die einen entsprechenden Satz von Einschränkungen (Suchkriterien) behandelt. Jede `Execute` Methode vergleicht die Werte der *cRestrictions* und *RgRestrictions* Parameter. Siehe dazu die Beschreibung dieser Parameter in [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).
 
-Weitere Informationen darüber, welche Einschränkungen einem bestimmten Schemarowset entsprechen, finden Sie unter der Tabelle der Schemarowset-GUIDs in [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) in die **OLE DB-Programmierreferenz** im Windows SDK .
+Weitere Informationen darüber, welche Einschränkungen einem bestimmten Schemarowset entsprechen, finden Sie unter der Tabelle der Schemarowset-GUIDs in [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) in die **OLE DB-Programmierreferenz** im Windows SDK .
 
 Z. B. Wenn Sie die Einschränkung TABLE_NAME auf DBSCHEMA_TABLES unterstützt, würden Sie Folgendes:
 
@@ -105,7 +105,7 @@ Standardmäßig gibt die Implementierung 0 (keine Einschränkungen nicht unterst
 
 ### <a name="example"></a>Beispiel
 
-Dieser Code stammt aus dem [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) Beispiel. `UpdatePv` unterstützt die drei erforderlichen Schemarowsets: DBSCHEMA_TABLES, DBSCHEMA_COLUMNS und DBSCHEMA_PROVIDER_TYPES. Als ein Beispiel zum Implementieren von Unterstützung für das in Ihrem Anbieter gelangen Sie in diesem Thema durch die Implementierung der DBSCHEMA_TABLE Rowset.
+Dieser Code stammt aus dem [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) Beispiel. `UpdatePv` unterstützt die drei erforderlichen Schemarowsets: DBSCHEMA_TABLES DBSCHEMA_COLUMNS und DBSCHEMA_PROVIDER_TYPES. Als ein Beispiel zum Implementieren von Unterstützung für das in Ihrem Anbieter gelangen Sie in diesem Thema durch die Implementierung der DBSCHEMA_TABLE Rowset.
 
 > [!NOTE]
 > Der Beispielcode unterscheiden sich von dem hier aufgeführten ist; den Code sollte wie die aktuelleren Version angesehen werden.
@@ -214,7 +214,7 @@ wcspy_s(trData.m_szDesc, OLESTR("The Directory Table"), 19);
 wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());
 ```
 
-`UpdatePV` setzt nur drei Spalten: TABLE_NAME, TABLE_TYPE und Beschreibung. Notieren Sie sich die Spalten, die für die Informationen zurückgegeben werden, da Sie diese Informationen benötigen, bei der Implementierung `GetDBStatus`:
+`UpdatePV` wird nur die drei Spalten: Tabellenname, TABLE_TYPE und Beschreibung. Notieren Sie sich die Spalten, die für die Informationen zurückgegeben werden, da Sie diese Informationen benötigen, bei der Implementierung `GetDBStatus`:
 
 ```cpp
     _ATLTRY

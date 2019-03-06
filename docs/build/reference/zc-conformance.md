@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: b1f612040eea0078b0f27cf72327db94fe9e2939
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50f3e7a79b80514b6c28bd9aee86c720d6e20cf6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665432"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413913"
 ---
 # <a name="zc-conformance"></a>/Zc (Übereinstimmung)
 
@@ -22,7 +22,7 @@ Sie können die **/Zc** Compileroptionen, standard oder Microsoft-spezifisches C
 
 ## <a name="syntax"></a>Syntax
 
-> **/ Zc:**_Option_{,_Option_}
+> **/Zc:**_option_{,_option_}
 
 ## <a name="remarks"></a>Hinweise
 
@@ -49,7 +49,7 @@ Dies sind die `/Zc` Compileroptionen:
 |[throwingNew\[-\]](zc-throwingnew-assume-operator-new-throws.md)|Angenommen `operator new` löst bei einem Fehler (standardmäßig deaktiviert).|
 |[trigraphs\[-\]](zc-trigraphs-trigraphs-substitution.md)|Trigraphen (veraltet, aus der Standardeinstellung) zu aktivieren.|
 |[twoPhase-](zc-twophase.md)|Verwenden Sie nicht konforme Vorlage Analyseverhalten (in der Standardeinstellung entsprechen).|
-|["wchar_t"\[-\]](zc-wchar-t-wchar-t-is-native-type.md)|`wchar_t` ein systemeigener Typ., nicht Typedef (in der Standardeinstellung).|
+|[wchar_t\[-\]](zc-wchar-t-wchar-t-is-native-type.md)|`wchar_t` ein systemeigener Typ., nicht Typedef (in der Standardeinstellung).|
 
 Weitere Informationen über Konformitätsprobleme in Visual C++ finden Sie unter [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).
 

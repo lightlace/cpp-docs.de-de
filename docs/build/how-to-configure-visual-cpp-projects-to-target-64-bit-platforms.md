@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: c0c734648b084c3f58577cb56984e3ea003a6a8e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 17255a5671880063f030ed0087c1fa839c5a14ef
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523936"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421371"
 ---
 # <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>Vorgehensweise: Konfigurieren von Visual C++-Projekte für 64-Bit-X64 Plattformen
 
@@ -47,9 +47,9 @@ Sie können die Projektkonfigurationen in Visual Studio-IDE verwenden, C++-Anwen
 
   - **Ausgabe registrieren** ist deaktiviert. Weitere Informationen finden Sie unter [Linker Property Pages](../ide/linker-property-pages.md).
 
-  - **Zielumgebung** wird auf **/env x64**festgelegt. Weitere Informationen finden Sie unter [MIDL Property Pages: General](../ide/midl-property-pages-general.md).
+  - **Zielumgebung** wird auf **/env x64**festgelegt. Weitere Informationen finden Sie unter [Eigenschaftenseiten "MIDL": Allgemeine](../ide/midl-property-pages-general.md).
 
-  - **Parameter überprüfen** wird deaktiviert und auf den Standardwert zurückgesetzt. Weitere Informationen finden Sie unter [MIDL Property Pages: Advanced](../ide/midl-property-pages-advanced.md).
+  - **Parameter überprüfen** wird deaktiviert und auf den Standardwert zurückgesetzt. Weitere Informationen finden Sie unter [Eigenschaftenseiten "MIDL": Erweiterte](../ide/midl-property-pages-advanced.md).
 
   - Wenn **Debuginformationsformat** in der Win32-Projektkonfiguration auf **/ZI** festgelegt war, wird der Wert in der 64-Bit-Projektkonfiguration auf **/Zi** festgelegt. Weitere Informationen finden Sie unter [/Z7, /Zi, /ZI (Debuginformationsformat)](../build/reference/z7-zi-zi-debug-information-format.md).
 

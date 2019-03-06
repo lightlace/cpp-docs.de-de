@@ -3,12 +3,12 @@ title: X64 Aufrufkonvention
 description: Details zu den standardmäßigen X64 ABI-Aufrufkonvention.
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: f2a63df878d4eac727f9c697cc326bb1f2981d95
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 02bf4719766366049b600b148ad88fc238f4e54e
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53636213"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415784"
 ---
 # <a name="x64-calling-convention"></a>X64 Aufrufkonvention
 
@@ -199,7 +199,7 @@ Es gibt zwei Ausnahmen auf die Regeln über die Flüchtigkeit der Steuerelement-
 
 Keine Annahmen können über den Status des flüchtigen Teils des MXCSR funktionsübergreifend, vorgenommen werden, es sei denn, insbesondere in der Dokumentation der Funktion beschrieben.
 
-## <a name="setjmplongjmp"></a>"Setjmp/longjmp"
+## <a name="setjmplongjmp"></a>setjmp/longjmp
 
 Wenn Sie die setjmpex.h oder setjmp.h einschließen, alle Aufrufe von [Setjmp](../c-runtime-library/reference/setjmp.md) oder [Longjmp](../c-runtime-library/reference/longjmp.md) führen eine Entladung, die Destruktoren aufruft und `__finally` aufrufen.  Dies unterscheidet sich von X86, in denen führt auch setjmp.h `__finally` Klauseln und -Destruktoren nicht aufgerufen wird.
 
@@ -207,4 +207,4 @@ Ein Aufruf von `setjmp` behält den aktuellen Stack-Pointer, nicht flüchtigen R
 
 ## <a name="see-also"></a>Siehe auch
 
-[X64 Softwarekonventionen](../build/x64-software-conventions.md)
+[Softwarekonventionen bei x64-Systemen](../build/x64-software-conventions.md)

@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: 62d42995a3d1b4a61dbd3ff38c48d9b300177798
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ccf35c7a036a69487d5138baf8c017f9c5995bef
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259541"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425015"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl-Klasse
 
@@ -170,7 +170,7 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 Gibt an, welcher Vorgang ausgeführt. Wenn dieser Parameter auf "true" ist *LpRect* gibt ein Anzeigerechteck und das entsprechende fensterrechtecke empfängt. Wenn dieser Parameter auf "FALSE" ist *LpRect* gibt ein Rechteck Fenster und das entsprechende Anzeigerechteck empfängt.
 
 *lpRect*<br/>
-Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, gibt das angegebene Rechteck und das berechnete Rechteck empfängt.
+Zeiger auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) -Struktur, gibt das angegebene Rechteck und das berechnete Rechteck empfängt.
 
 ### <a name="example"></a>Beispiel
 
@@ -194,7 +194,7 @@ virtual BOOL Create(
 Gibt das Registerkarten-Steuerelement-Stil. Wenden Sie eine beliebige Kombination von [Registerkarte Stile von Listensteuerelementen](/windows/desktop/Controls/tab-control-styles), die im Windows SDK beschrieben. Finden Sie unter **"Hinweise"** eine Liste der Window-Stile, die Sie auch auf das Steuerelement anwenden können.
 
 *rect*<br/>
-Gibt an, Größe und Position des Steuerelements. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.
+Gibt an, Größe und Position des Steuerelements. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur.
 
 *pParentWnd*<br/>
 Gibt an, das Registerkarten-Steuerelement übergeordnete Fenster, in der Regel eine `CDialog`. Es darf nicht NULL sein.
@@ -250,7 +250,7 @@ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erwei
 Gibt das Registerkarten-Steuerelement-Stil. Wenden Sie eine beliebige Kombination von [Registerkarte Stile von Listensteuerelementen](/windows/desktop/Controls/tab-control-styles), die im Windows SDK beschrieben. Finden Sie unter **"Hinweise"** in [erstellen](#create) eine Liste der Window-Stile, die Sie auch auf das Steuerelement anwenden können.
 
 *rect*<br/>
-Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
+Ein Verweis auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
 
 *pParentWnd*<br/>
 Ein Zeiger auf das Fenster, das übergeordnete Element des Steuerelements ist.
@@ -485,7 +485,7 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 Nullbasierte Index des Registerelements.
 
 *lpRect*<br/>
-Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die das umschließende Rechteck der Registerkarte empfängt. Diese Koordinaten verwenden des Ansichtsfensters aktuelle Zuordnungsmodus.
+Zeiger auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die das umschließende Rechteck der Registerkarte empfängt. Diese Koordinaten verwenden des Ansichtsfensters aktuelle Zuordnungsmodus.
 
 ### <a name="return-value"></a>Rückgabewert
 

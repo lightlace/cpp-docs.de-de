@@ -35,12 +35,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: dba86b310dcd9b89026d95732f9ca542e6995146
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: b7284ace73d80eff6337e1d71cafef26094455f0
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556633"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414022"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow-Klasse
 
@@ -78,7 +78,7 @@ class CSimpleRow
 
 Ein Zeilenhandle ist logisch ein eindeutiges Tag für eine Ergebniszeile. `IRowsetImpl` erstellt ein neues `CSimpleRow` für jede Zeile im angeforderten [IRowsetImpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` kann auch durch eine eigene Implementierung von den Zeilenziehpunkt, ersetzt werden, wie ein Standardvorlagenargument zu `IRowsetImpl`. Die einzige Voraussetzung für diese Klasse zu ersetzen ist, damit die äquivalente Klasse einen Konstruktor bereit, der einen einzelnen Parameter vom Typ akzeptiert **lange**.
 
-## <a name="addrefrow"></a> Csimplerow:: Addrefrow
+## <a name="addrefrow"></a> CSimpleRow::AddRefRow
 
 Fügt einen Verweiszähler auf einem vorhandenen Zeilenhandle auf threadsichere Weise.
 
@@ -88,7 +88,7 @@ Fügt einen Verweiszähler auf einem vorhandenen Zeilenhandle auf threadsichere 
 DWORD AddRefRow();
 ```
 
-## <a name="compare"></a> Csimplerow:: Compare
+## <a name="compare"></a> CSimpleRow::Compare
 
 Vergleicht zwei Zeilen, um festzustellen, ob sie auf die gleiche Zeileninstanz verweisen.
 
@@ -105,9 +105,9 @@ Ein Zeiger auf ein `CSimpleRow` -Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein HRESULT-Wert, in der Regel S_OK, der angibt, die zwei Zeilen sind die gleiche Zeileninstanz oder S_FALSE, der angibt, der zwei Zeilen sind unterschiedlich. Finden Sie unter [IRowsetIdentity::IsSameRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms719629(v=vs.85)) in die *OLE DB-Programmierreferenz* für weitere mögliche Rückgabewerte.
+Ein HRESULT-Wert, in der Regel S_OK, der angibt, die zwei Zeilen sind die gleiche Zeileninstanz oder S_FALSE, der angibt, der zwei Zeilen sind unterschiedlich. Finden Sie unter [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) in die *OLE DB-Programmierreferenz* für weitere mögliche Rückgabewerte.
 
-## <a name="csimplerow"></a> Csimplerow:: Csimplerow
+## <a name="csimplerow"></a> CSimpleRow::CSimpleRow
 
 Der Konstruktor.
 
@@ -126,7 +126,7 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 
 Legt [M_iRowset](../../data/oledb/csimplerow-m-irowset.md) zu *iRowsetCur*.
 
-## <a name="releaserow"></a> Csimplerow:: Releaserow
+## <a name="releaserow"></a> CSimpleRow::ReleaseRow
 
 Gibt die Zeilen in einer threadsicheren Weise frei.
 
@@ -136,7 +136,7 @@ Gibt die Zeilen in einer threadsicheren Weise frei.
 DWORD ReleaseRow();
 ```
 
-## <a name="dwref"></a> Csimplerow:: M_dwref
+## <a name="dwref"></a> CSimpleRow::m_dwRef
 
 Der Verweiszähler auf einem vorhandenen Zeilenhandle.
 
@@ -146,7 +146,7 @@ Der Verweiszähler auf einem vorhandenen Zeilenhandle.
 DWORD m_dwRef;
 ```
 
-## <a name="irowset"></a> Csimplerow:: M_irowset
+## <a name="irowset"></a> CSimpleRow::m_iRowset
 
 Indizieren Sie auf das Rowset, der den Cursor darstellt.
 

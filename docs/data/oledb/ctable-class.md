@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: 7605d78a140a0f5353a16b9e22d5d618d29ff327
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: ff2a139c16b6678bedf38c64a16dce28fa53c5fe
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556682"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425197"
 ---
 # <a name="ctable-class"></a>CTable-Klasse
 
@@ -82,7 +82,7 @@ HRESULT Open(const CSession& session,
 
 #### <a name="parameters"></a>Parameter
 
-*Sitzung*<br/>
+*session*<br/>
 [in] Die Sitzung, für die in der Tabelle geöffnet wird.
 
 *wszTableName*<br/>
@@ -95,10 +95,10 @@ HRESULT Open(const CSession& session,
 [in] Die `DBID` der Tabelle zu öffnen.
 
 *pPropSet*<br/>
-[in] Ein Zeiger auf ein Array von [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) Strukturen, die Eigenschaften und Werte festgelegt werden. Finden Sie unter [Eigenschaftensätze und Eigenschaftengruppen](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) in die *OLE DB-Programmierreferenz* in das Windows SDK. Der Standardwert NULL gibt an, keine Eigenschaften.
+[in] Ein Zeiger auf ein Array von [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) Strukturen, die Eigenschaften und Werte festgelegt werden. Finden Sie unter [Eigenschaftensätze und Eigenschaftengruppen](/previous-versions/windows/desktop/ms713696(v=vs.85)) in die *OLE DB-Programmierreferenz* in das Windows SDK. Der Standardwert NULL gibt an, keine Eigenschaften.
 
 *ulPropSets*<br/>
-[in] Die Anzahl der [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) Strukturen zu übergeben, der *DBPROPSET* Argument.
+[in] Die Anzahl der [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) Strukturen zu übergeben, der *DBPROPSET* Argument.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -106,7 +106,7 @@ Ein standard-HRESULT.
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [IOpenRowset:: OPENROWSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) in die *OLE DB-Programmierreferenz*.
+Weitere Informationen finden Sie unter [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
 ## <a name="see-also"></a>Siehe auch
 

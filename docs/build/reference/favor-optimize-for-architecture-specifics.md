@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -favor compiler option [C++]
 - /favor compiler option [C++]
 ms.assetid: ad264df2-e30f-4d68-8bd0-10d6bee71a2a
-ms.openlocfilehash: 63affcced5dfc5bb56b0226021e1c32d93ec5d4f
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 1f76164468375e84380c6f02050c6c7a35b32412
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626746"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418983"
 ---
 # <a name="favor-optimize-for-architecture-specifics"></a>/favor (Optimieren für Besonderheiten der Architektur)
 
@@ -20,20 +20,20 @@ ms.locfileid: "53626746"
 
 ## <a name="syntax"></a>Syntax
 
-> **/ favor:**{**blend** | **ATOM** | **AMD64** | **INTEL64**}
+> **/favor:**{**blend** | **ATOM** | **AMD64** | **INTEL64**}
 
 ## <a name="remarks"></a>Hinweise
 
-**/ favor: Blend**<br/>
+**/favor:blend**<br/>
 (X86- und X64) erzeugt den Code, der für die Einzelheiten der Micro-Architekturen, in der AMD und Intel-Architekturen optimiert ist. Während **/favor: Blend** erhalten möglicherweise nicht die beste Leistung für einen bestimmten Prozessor möglich ist, wurde entwickelt, um die beste Leistung für eine Vielzahl von X86 und X64-Prozessoren zu gewährleisten. In der Standardeinstellung **/favor: Blend** ist aktiviert.
 
-**/favor:Atom**<br/>
+**/favor:ATOM**<br/>
 (X86- und X64) erzeugt den Code, der für die Einzelheiten der Intel Atom-Prozessor und Intel Centrino Atom-Prozessortechnologien optimiert ist. Mithilfe von generierten Code **/favor:ATOM** Intel SSSE3, SSE3, SSE und SSE2-Anweisungen für Intel-Prozessoren kann auch erstellt werden.
 
 **/favor:AMD64**<br/>
 (nur X64) optimiert den generierten Code für AMD Opteron und Athlon-Prozessoren, 64-Bit-Erweiterungen unterstützen. Der optimierte Code kann auf alle X64 kompatible Plattformen ausführen. Mithilfe von generierten Code **/favor:AMD64** möglicherweise unzureichende Leistung auf Intel-Prozessoren, die Intel64 zu unterstützen.
 
-**/favor:Intel64**<br/>
+**/favor:INTEL64**<br/>
 (nur X64) optimiert den generierten Code für Intel-Prozessoren, die Intel64, zu unterstützen, die in der Regel eine bessere Leistung für diese Plattform liefert. Der resultierende Code kann auf alle X64 ausführen Plattform. Mit generierten Code **/favor:INTEL64** möglicherweise unzureichende Leistung auf AMD Opteron und Athlon-Prozessoren, 64-Bit-Erweiterungen unterstützen.
 
 > [!NOTE]

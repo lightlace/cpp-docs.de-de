@@ -30,12 +30,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: db0976ecd3e3af76640a56ebc1e07e9ade2e3815
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1c45e28e0e74d7216023f06ad22896c53c9226b8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556776"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423052"
 ---
 # <a name="cutlprops-class"></a>CUtlProps-Klasse
 
@@ -73,11 +73,11 @@ Die Klasse enthält die `BEGIN_PROPSET_MAP`.
 
 Die meisten dieser Klasse ist ein Implementierungsdetail.
 
-`CUtlProps` enthält zwei Member zum Festlegen von Eigenschaften intern: [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) und [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).
+`CUtlProps` enthält zwei Member zum Festlegen von Eigenschaften intern an: [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) und [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).
 
 Weitere Informationen zu den Makros, die in einer Set-Zuordnung von Eigenschaft verwendet, finden Sie unter [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) und [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).
 
-## <a name="getpropvalue"></a> CUtlProps:: GetPropValue
+## <a name="getpropvalue"></a> CUtlProps::GetPropValue
 
 Ruft eine Eigenschaft aus einem Eigenschaftensatz ab.
 
@@ -104,7 +104,7 @@ OUT_OF_LINE HRESULT GetPropValue(const GUID* pguidPropSet,
 
 `Failure` für Fehler und S_OK, wenn erfolgreich.
 
-## <a name="isvalidvalue"></a> CUtlProps:: IsValidValue
+## <a name="isvalidvalue"></a> CUtlProps::IsValidValue
 
 Verwendet, um einen Wert zu überprüfen, bevor Sie eine Eigenschaft festlegen.
 
@@ -121,7 +121,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 Der Index im Array Eigenschaftensatz; NULL, wenn nur eine Eigenschaft festgelegt ist.
 
 *pDBProp*<br/>
-Die Eigenschafts-ID und den neuen Wert in eine [DBPROP](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85)) Struktur.
+Die Eigenschafts-ID und den neuen Wert in eine [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85)) Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -131,7 +131,7 @@ Ein standard-HRESULT. Der Standardrückgabewert ist S_OK.
 
 Wenn Sie Überprüfungsroutinen, die Sie nach einem Wert ausgeführt wird, die Sie verwenden verfügen, um eine Eigenschaft festlegen möchten, sollten Sie diese Funktion überschreiben. Beispielsweise konnte DBPROP_AUTH_PASSWORD für eine Kennworttabelle, um einen gültigen Wert zu bestimmen, überprüft werden.
 
-## <a name="oninterfacerequested"></a> CUtlProps:: Oninterfacerequested
+## <a name="oninterfacerequested"></a> CUtlProps::OnInterfaceRequested
 
 Behandelt Anforderungen für eine optionale Schnittstelle, wenn ein Consumer eine Methode eines Objekts erstellen Schnittstellen aufruft.
 
@@ -166,7 +166,7 @@ Wenn ein Consumer ein Objekt öffnet, und eine optionale Schnittstelle fordert, 
 
 Wenn Sie andere Schnittstellen zu verarbeiten möchten, überschreiben Sie diese Funktion in Ihrer Datenklasse Quelle "," Sitzung "," Befehl "oder" Rowset, funktioniert. Die Außerkraftsetzung funktionieren über die normalen festlegen/Abrufen von Eigenschaften-Schnittstellen, um sicherzustellen, dass das Festlegen von Eigenschaften auch alle verketteten Eigenschaften legt diese fest (siehe [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)).
 
-## <a name="onpropertychanged"></a> CUtlProps:: OnPropertyChanged
+## <a name="onpropertychanged"></a> CUtlProps::OnPropertyChanged
 
 Wird aufgerufen, nach dem Festlegen einer Eigenschaft für die verkettete Eigenschaften zu behandeln.
 
@@ -183,7 +183,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 Der Index im Array Eigenschaftensatz; NULL, wenn nur eine Eigenschaft festgelegt ist.
 
 *pDBProp*<br/>
-Die Eigenschafts-ID und den neuen Wert in eine [DBPROP](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85)) Struktur.
+Die Eigenschafts-ID und den neuen Wert in eine [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85)) Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -199,7 +199,7 @@ In dieser Funktion erhält der Benutzer die Eigenschafts-ID aus der `DBPROP*` Pa
 
 [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]
 
-## <a name="setpropvalue"></a> CUtlProps:: Setpropvalue
+## <a name="setpropvalue"></a> CUtlProps::SetPropValue
 
 Legt eine Eigenschaft in einem Eigenschaftensatz an.
 

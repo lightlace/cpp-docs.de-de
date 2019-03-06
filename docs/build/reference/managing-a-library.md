@@ -40,12 +40,12 @@ helpviewer_keywords:
 - LIST library manager option
 - /CONVERT library manager option
 ms.assetid: f56a8b85-fbdc-4c09-8d8e-00f0ffe1da53
-ms.openlocfilehash: 69cd03e029d014b9b74a8688f155dfb1f023b55c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb06fdf0298d627f289448930b490fb0660e381d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477063"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419609"
 ---
 # <a name="managing-a-library"></a>Verwalten einer Bibliothek
 
@@ -66,10 +66,10 @@ Die folgenden Optionen gelten für erstellen und Ändern einer Bibliothek:
 **/ LIBPATH:** *Dir*<br/>
 Überschreibt den Bibliothekspfad der Umgebung. Weitere Informationen finden Sie unter der Beschreibung des Links [/LIBPATH](../../build/reference/libpath-additional-libpath.md) Option.
 
-**/ AUFLISTEN**<br/>
+**/LIST**<br/>
 Zeigt Informationen über die Ausgabebibliothek an die Standardausgabe. Die Ausgabe kann in eine Datei umgeleitet werden. Sie können/List / verwenden, um den Inhalt einer vorhandenen Bibliothek zu bestimmen, ohne es zu ändern.
 
-**/ NAME:** *Dateiname*<br/>
+**/NAME:** *filename*<br/>
 Beim Erstellen einer Importbibliothek gibt den Namen der DLL für die die Importbibliothek erstellt wird.
 
 **/NODEFAULTLIB**<br/>

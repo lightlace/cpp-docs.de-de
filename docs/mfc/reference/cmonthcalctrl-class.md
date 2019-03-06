@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 9807d45f12b5336ebbb80ea9718af77cf8d38188
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 440d158774a716db9fba351200f2760783925cc6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303669"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413926"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl-Klasse
 
@@ -227,10 +227,10 @@ virtual BOOL Create(
 Gibt die Kombination von Windows-Formatvorlagen auf den Monatskalender-Steuerelement angewendet. Finden Sie unter [Month Calendar-Steuerelement-Stile](/windows/desktop/Controls/month-calendar-control-styles) im Windows SDK für Weitere Informationen zu den Stilen.
 
 *rect*<br/>
-Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur. Enthält die Position und Größe der im Monatskalender-Steuerelement.
+Ein Verweis auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur. Enthält die Position und Größe der im Monatskalender-Steuerelement.
 
 *pt*<br/>
-Ein Verweis auf eine [Punkt](https://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, die den Speicherort der im Monatskalender-Steuerelement bezeichnet.
+Ein Verweis auf eine [Punkt](/previous-versions/dd162805\(v=vs.85\)) Struktur, die den Speicherort der im Monatskalender-Steuerelement bezeichnet.
 
 *pParentWnd*<br/>
 Ein Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) -Objekt, das das übergeordnete Fenster der im Monatskalender-Steuerelement ist. Es darf nicht NULL sein.
@@ -523,7 +523,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 ### <a name="parameters"></a>Parameter
 
 *pRect*<br/>
-Ein Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die umgebenden Rechteck-Informationen erhält. Dieser Parameter muss eine gültige Adresse sein und darf nicht NULL sein.
+Ein Zeiger auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die umgebenden Rechteck-Informationen erhält. Dieser Parameter muss eine gültige Adresse sein und darf nicht NULL sein.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1290,11 +1290,11 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*lpRect*|[in] Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die ein Rechteck definiert, die die gewünschte Anzahl von Kalendern enthält.|
+|*lpRect*|[in] Zeiger auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die ein Rechteck definiert, die die gewünschte Anzahl von Kalendern enthält.|
 
 ### <a name="return-value"></a>Rückgabewert
 
-Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die ein Rechteck definiert, deren Größe kleiner oder gleich dem Rechteck definiert, durch die *LpRect* Parameter.
+Zeiger auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die ein Rechteck definiert, deren Größe kleiner oder gleich dem Rechteck definiert, durch die *LpRect* Parameter.
 
 ### <a name="remarks"></a>Hinweise
 

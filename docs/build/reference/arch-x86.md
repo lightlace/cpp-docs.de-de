@@ -2,12 +2,12 @@
 title: /arch (x86)
 ms.date: 11/04/2016
 ms.assetid: 9dd5a75d-06e4-4674-aade-33228486078d
-ms.openlocfilehash: fb115d564ca24ff29e120e0d8c25e0dbe28024cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2aba6dc18db621710b5293f9f970fa5f453b8a9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549707"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421806"
 ---
 # <a name="arch-x86"></a>/arch (x86)
 
@@ -24,16 +24,16 @@ Gibt die Architektur für die Codegenerierung auf x86 an. Siehe auch [/arch (x64
 **/arch:IA32**<br/>
 Gibt keine erweiterten Anweisungen an, und gibt außerdem x87 für Gleitkommaberechnungen an.
 
-**neben**<br/>
+**/arch:SSE**<br/>
 Aktiviert die Verwendung von SSE-Anweisungen.
 
-**SSE2**<br/>
+**/arch:SSE2**<br/>
 Aktiviert die Verwendung von SSE2-Anweisungen. Dies ist die standardanweisung auf X86 Plattformen, wenn keine **/arch** angegeben wird.
 
-**/ arch: AVX**<br/>
+**/arch:AVX**<br/>
 Aktiviert die Verwendung von Intel Advanced Vector Extensions-Anweisungen.
 
-**/ arch: avx2**<br/>
+**/arch:AVX2**<br/>
 Aktiviert die Verwendung von Intel Advanced Vector Extensions 2-Anweisungen.
 
 ## <a name="remarks"></a>Hinweise

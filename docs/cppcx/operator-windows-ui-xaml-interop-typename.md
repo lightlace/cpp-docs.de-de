@@ -2,16 +2,16 @@
 title: Operator Windows::UI::Xaml::Interop::TypeName
 ms.date: 12/30/2016
 ms.assetid: a65a105e-7e3a-452f-932f-2cdaf00fbba5
-ms.openlocfilehash: c77655ed7692c4cdccc311bc27c492126d62e54e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7480df474086d78e28d235cc89b05094c648d28b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659212"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415174"
 ---
 # <a name="operator-windowsuixamlinteroptypename"></a>Operator Windows::UI::Xaml::Interop::TypeName
 
-Ermöglicht die Konvertierung von `Platform::Type` in [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx).
+Ermöglicht die Konvertierung von `Platform::Type` in [Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename).
 
 ## <a name="syntax"></a>Syntax
 
@@ -21,11 +21,11 @@ Operator TypeName(Platform::Type^ type);
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt ein [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) zurück, wenn ein `Platform::Type^`angegeben wurde.
+Gibt ein [Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename) zurück, wenn ein `Platform::Type^`angegeben wurde.
 
 ### <a name="remarks"></a>Hinweise
 
-`TypeName` ist die sprachenneutrale Windows Runtime-Struktur für die Darstellung von Typinformationen. [Platform::Type](../cppcx/platform-type-class.md) ist C++-spezifisch und kann nicht über die Anwendungsbinärdateischnittstelle (ABI) übergeben werden. Hier eine Verwendung von `TypeName`in der [Navigate](https://msdn.microsoft.com/library/windows/apps/hh702394.aspx) -Funktion:
+`TypeName` ist die sprachenneutrale Windows Runtime-Struktur für die Darstellung von Typinformationen. [Platform::Type](../cppcx/platform-type-class.md) ist C++-spezifisch und kann nicht über die Anwendungsbinärdateischnittstelle (ABI) übergeben werden. Hier eine Verwendung von `TypeName`in der [Navigate](/uwp/api/windows.ui.xaml.controls.frame.navigate) -Funktion:
 
 ```
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);

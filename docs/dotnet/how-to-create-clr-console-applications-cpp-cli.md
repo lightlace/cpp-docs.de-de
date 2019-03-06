@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Erstellen von CLR-Konsolenanwendungen (C++/CLI)'
+title: 'Vorgehensweise: Erstellen von CLR-Konsolenanwendungen (C++ / CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - console applications, templates
 - CLR console applications, project template
 ms.assetid: e89bce3c-706f-4ae0-8a90-cb1a0f674e70
-ms.openlocfilehash: fa45578b1e773e954fe692bd1c49e311626c35de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ce50266eeb17ad858891149489db85b03855aec
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525660"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426333"
 ---
-# <a name="how-to-create-clr-console-applications-ccli"></a>Gewusst wie: Erstellen von CLR-Konsolenanwendungen (C++/CLI)
+# <a name="how-to-create-clr-console-applications-ccli"></a>Vorgehensweise: Erstellen von CLR-Konsolenanwendungen (C++ / CLI)
 
 Sie können die Vorlage für Konsolenanwendungen zum Erstellen eines Konsolen-App-Projekts verwenden, das bereits wesentliche Projektverweise und Dateien enthält.
 
@@ -22,7 +22,7 @@ Wenn Sie die Vorlage für Konsolenanwendungen zum Erstellen eines Projekts verwe
 
 - Verweise auf diese .NET Framework-Namespaces:
 
-   - [System](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx)– Enthält grundlegende Klassen und Basisklassen zur Definition allgemein verwendeter Werte und Verweisdatentypen, Ereignisse und Ereignishandler, Schnittstellen, Attribute und Verarbeitungsausnahmen.
+   - <xref:System.AppDomainManager>– Enthält grundlegende Klassen und Basisklassen, die häufig verwendete Werte und Verweisdatentypen, Ereignisse und Ereignishandler, Schnittstellen, Attribute und Verarbeitungsausnahmen definieren.
 
    - mscorlib – Assembly-DLL, die die .NET Framework-Entwicklung unterstützt.
 
@@ -50,7 +50,7 @@ Wenn Sie die Vorlage für Konsolenanwendungen zum Erstellen eines Projekts verwe
 
 ## <a name="to-create-a-common-language-runtime-clr-console-app-project"></a>Zum Erstellen eines Common Language Runtime (CLR)-Konsolen-App-Projekts
 
-1. Wählen Sie in der Menüleiste **Datei** > **Neu** > **Projekt** aus.
+1. Wählen Sie in der Menüleiste **Datei**, **Neu**, **Projekt**aus.
 
 1. Wählen Sie im Dialogfeld **Neues Projekt** im Bereich **Installierte Vorlagen**den Knoten **Visual C++** aus. Wählen Sie den Knoten **CLR** und dann die Vorlage für Konsolenanwendungen aus.
 

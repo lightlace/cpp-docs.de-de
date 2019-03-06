@@ -6,18 +6,18 @@ helpviewer_keywords:
 - DLLs [C++], extension
 - DLLs [C++], regular
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
-ms.openlocfilehash: 74945f712fed68548e3853d231a586ec0c70d84b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2d4cc4f3b82bd3082ba3b4eac635ea91c19691f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587524"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421206"
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>Verwenden von Datenbank-, OLE- und Sockets-MFC-Erweiterungs-DLLs in regulären MFC-DLLs
 
 Beim eine MFC-Erweiterungs-DLL aus einer regulären MFC-DLL zu verwenden, wenn die MFC-Erweiterungs-DLL nicht in einer drahtgebundenen der **CDynLinkLibrary** Kette Objekt von der regulären MFC DLL, die Sie in mindestens einer Gruppe von verwandten Problemen ausführen können. Da die Debugversionen der MFC-Datenbank-, OLE- und Sockets unterstützt DLLs werden als MFC-Erweiterungs-DLLs implementiert, werden möglicherweise angezeigt verfügt über ähnliche Probleme, wenn Sie diese MFC verwenden, auch wenn Sie nicht explizit eine eigene MFC-Erweiterungs-DLLs verwenden werden. Einige Symptome sind:
 
-- Wenn in der MFC-Erweiterungs-DLL, die Nachricht definiert ein Objekt eines Typs der Klasse zu deserialisieren versucht, "Warnung: CYourClass kann nicht geladen werden, aus dem Archiv. Klasse nicht definiert". wird im Debugfenster ABLAUFVERFOLGUNG und das Objekt kann nicht serialisiert.
+- Wenn in der MFC-Erweiterungs-DLL, die Nachricht definiert ein Objekt eines Typs der Klasse zu deserialisieren versucht, "Warnung: CYourClass kann nicht aus dem Archiv geladen werden. Klasse nicht definiert". wird im Debugfenster ABLAUFVERFOLGUNG und das Objekt kann nicht serialisiert.
 
 - Eine Ausnahme, die ungültige Klasse kann ausgelöst werden.
 

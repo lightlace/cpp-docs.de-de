@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: f1e9c6e4505c67b881d479817ec8b45e4ae5dc8b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: db72dbab14db69f14d7c3d813562ec661df4b424
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304552"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417657"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl-Klasse
 
@@ -255,7 +255,7 @@ virtual BOOL Create(
 Gibt die Kombination der Grundleisten-Steuerelement-Formate, die auf das Steuerelement angewendet. Finden Sie unter [Stile für Grundleisten-Steuerelemente](/windows/desktop/Controls/rebar-control-styles) im Windows SDK für eine Liste der unterstützten Formate.
 
 *rect*<br/>
-Ein Verweis auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die die Position und Größe des Infoleisten-Steuerelements ist.
+Ein Verweis auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder [RECT](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die die Position und Größe des Infoleisten-Steuerelements ist.
 
 *pParentWnd*<br/>
 Ein Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) -Objekt, das das übergeordnete Fenster des Infoleisten-Steuerelements ist. Es darf nicht NULL sein.
@@ -303,7 +303,7 @@ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erwei
 Gibt die Kombination der Grundleisten-Steuerelement-Formate, die auf das Steuerelement angewendet. Eine Liste der unterstützten Formate, finden Sie unter [Stile für Grundleisten-Steuerelemente](/windows/desktop/Controls/rebar-control-styles) im Windows SDK.
 
 *rect*<br/>
-Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
+Ein Verweis auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
 
 *pParentWnd*<br/>
 Ein Zeiger auf das Fenster, das übergeordnete Element des Steuerelements ist.
@@ -389,7 +389,7 @@ void GetBandBorders(
 Nullbasierte Index des dem Band für das die Rahmen abgerufen werden sollen.
 
 *prc*<br/>
-Ein Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die die Rahmen-Band-erhält. Wenn Infoleisten-Steuerelements styl RBS_BANDBORDERS verfügt, erhält jedes Mitglied dieser Struktur die Anzahl der Pixel, auf der entsprechenden Seite des Bands, die den Rahmen darstellen. Wenn Infoleisten-Steuerelements keinen styl RBS_BANDBORDERS, empfängt nur das linke Element dieser Struktur gültige Informationen. Eine Beschreibung der Stile für Grundleisten-Steuerelemente, finden Sie unter [Steuerelementtypen für die Grundleiste](/windows/desktop/Controls/rebar-control-styles) im Windows SDK.
+Ein Zeiger auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die die Rahmen-Band-erhält. Wenn Infoleisten-Steuerelements styl RBS_BANDBORDERS verfügt, erhält jedes Mitglied dieser Struktur die Anzahl der Pixel, auf der entsprechenden Seite des Bands, die den Rahmen darstellen. Wenn Infoleisten-Steuerelements keinen styl RBS_BANDBORDERS, empfängt nur das linke Element dieser Struktur gültige Informationen. Eine Beschreibung der Stile für Grundleisten-Steuerelemente, finden Sie unter [Steuerelementtypen für die Grundleiste](/windows/desktop/Controls/rebar-control-styles) im Windows SDK.
 
 ##  <a name="getbandcount"></a>  CReBarCtrl::GetBandCount
 
@@ -584,7 +584,7 @@ BOOL GetRect(
 Nullbasierte Index, der ein Band in der Grundleisten-Steuerelement.
 
 *prc*<br/>
-Ein Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die die Grenzen des das Infoleistenband erhält.
+Ein Zeiger auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die die Grenzen des das Infoleistenband erhält.
 
 ### <a name="return-value"></a>Rückgabewert
 

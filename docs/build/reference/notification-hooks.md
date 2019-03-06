@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, notification hooks
 ms.assetid: e9c291ed-2f2d-4319-a171-09800625256f
-ms.openlocfilehash: 9205791995bc113e4f560ab6085fc3acf47c8182
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e4dc6331e2a957c0268e686fff7dbb3f7eb0b24
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549826"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426549"
 ---
 # <a name="notification-hooks"></a>Benachrichtigungshooks
 
@@ -27,7 +27,7 @@ Der Benachrichtigungshook ist aktiviert:
 
 - Durch Bereitstellen einer neuen Definition des Zeigers **__pfnDliNotifyHook2** , um auf Ihre eigene Funktion zu verweisen die Benachrichtigungen empfangenden initialisiert.
 
-   \-oder:
+   \- oder -
 
 - Durch Festlegen des Zeigers **__pfnDliNotifyHook2** auf die Hookfunktion, bevor Aufrufe an die DLL, die das Programm ist laden verzögern.
 

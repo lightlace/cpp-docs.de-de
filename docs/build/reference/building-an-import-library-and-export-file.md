@@ -25,12 +25,12 @@ helpviewer_keywords:
 - .lib files
 - EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-ms.openlocfilehash: e5e7a60bf4607be55525b587df4942875126b50e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31570b1e6680b5af5f0a774c290eba20f3b5fdb0
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556675"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413185"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Erstellen einer Importbibliothek und einer Exportdatei
 
@@ -50,11 +50,11 @@ Dies sind die gleichen Methoden, die Sie zum Festlegen von Exporten, beim Verkn�
 
 Die folgenden Optionen gelten für das Erstellen einer Importbibliothek und -Datei exportieren:
 
-> **/ OUT:** *importieren*
+> **/OUT:** *import*
 
 Überschreibt den Standardnamen der Ausgabe für die *importieren* Bibliothek erstellt wird. Wenn/Out nicht angegeben ist, wird der Standardname ist der Basisname der ersten Objektdatei oder -Bibliothek in der LIB-Befehl und die Erweiterung. Lib. Die Exportdatei erhält den gleichen Basisnamen wie die Importbibliothek und die Erweiterung. "exp".
 
-> **/ EXPORT:** *Eintragsname* \[ **=** *Internalname*]\[,**\@** <em>ordinal</em>\[, **NONAME**]]\[, **Daten**]
+> **/EXPORT:** *entryname*\[**=** *internalname*]\[,**\@**<em>ordinal</em>\[, **NONAME**]]\[, **DATA**]
 
 Exportiert eine Funktion von Ihrem Programm aus, um andere Programme, um die Funktion zu ermöglichen. Sie können auch Daten exportieren (mithilfe der **Daten** Schlüsselwort). Exporte werden in der Regel in eine DLL-Datei definiert.
 

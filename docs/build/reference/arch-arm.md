@@ -2,12 +2,12 @@
 title: /arch (ARM)
 ms.date: 11/04/2016
 ms.assetid: 4f1406ff-f174-487c-a126-8ab06cf447c1
-ms.openlocfilehash: bf12abd140a56b1b914156083ecbbd3e61e7285a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7fd396f4ed9c02daff5363342d7c851d022919ac
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495566"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424989"
 ---
 # <a name="arch-arm"></a>/arch (ARM)
 
@@ -21,10 +21,10 @@ Gibt die Architektur für die Codegenerierung auf ARM an. Siehe auch [/arch (x86
 
 ## <a name="arguments"></a>Argumente
 
-**/ arch: armv7ve**<br/>
+**/arch:ARMv7VE**<br/>
 Ermöglicht die Verwendung von Anweisungen für ARMv7VE-Virtualisierungserweiterungen.
 
-**/ arch: vfpv4**<br/>
+**/arch:VFPv4**<br/>
 Ermöglicht die Verwendung von ARM-VFPv4-Anweisungen. Wenn diese Option nicht angegeben wird, ist VFPv3 die Standardeinstellung.
 
 ## <a name="remarks"></a>Hinweise

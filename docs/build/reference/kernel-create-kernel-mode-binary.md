@@ -5,12 +5,12 @@ f1_keywords:
 - /kernel
 - /kernel-
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
-ms.openlocfilehash: 0df133922af90a91d5c1ae1ad3caebe11d854b8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33a0f4019d8ad278f5850c499ee552ee72279455
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509656"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414754"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (Binary für den Kernelmodus erstellen)
 
@@ -27,7 +27,7 @@ Erstellt eine Binärdatei, die in der Windows-Kernel ausgeführt werden kann.
 **/kernel**<br/>
 Der Code in das aktuelle Projekt wird kompiliert und verknüpft werden anhand eines Satzes von Regeln der C++-Sprache, die auf Code beziehen, die im Kernelmodus ausgeführt werden.
 
-**/Kernel-**<br/>
+**/kernel-**<br/>
 Der Code in das aktuelle Projekt wird kompiliert und verknüpft werden, ohne die Regeln der C++-Sprache, die auf Code beziehen, die im Kernelmodus ausgeführt werden.
 
 ## <a name="remarks"></a>Hinweise
@@ -40,7 +40,7 @@ Die **/Kernel** Option gilt für Compiler und Linker Phasen eines Builds, und au
 
 Die folgende Tabelle enthält die Änderungen im Compilerverhalten beim **/Kernel** angegeben ist.
 
-|Verhaltenstyp|**/ Kernel** Verhalten|
+|Verhaltenstyp|**/kernel** Behavior|
 |-------------------|---------------------------|
 |C++-Ausnahmebehandlung|Deaktiviert. Alle Instanzen der `throw` und `try` Schlüsselwörter ausgeben, einen Compilerfehler (mit Ausnahme der Ausnahmespezifikation `throw()`). Keine **/EH** Optionen sind kompatibel mit **/Kernel**, mit Ausnahme von **/EH-**.|
 |LAUFZEITTYPINFORMATIONEN|Deaktiviert. Alle Instanzen der `dynamic_cast` und `typeid` Schlüsselwörter einen Compilerfehler, ausgeben, es sei denn, `dynamic_cast` statisch verwendet wird.|
@@ -77,10 +77,10 @@ Erstellen von Builds mit **/Kernel** übergibt außerdem **/Kernel** an den Link
 
 - Der Linker überprüft jede Objektdatei (oder alle enthalten Archiv-Member von statischen Bibliotheken), um festzustellen, ob es mit kompiliert wurden konnte die **/Kernel** Option wurde jedoch nicht. Wenn alle Instanzen dieses Kriterium erfüllt, wird der Linker immer noch erfolgreich verknüpft, jedoch möglicherweise eine Warnung aus, geben Sie wie in der folgenden Tabelle gezeigt.
 
-   ||**/ Kernel** Obj|**/Kernel-** Obj, MASM-Obj oder Cvtresed|Kombinieren von **/Kernel** und **/kernel-** OBJ-Dateien|
+   ||**/kernel** obj|**/Kernel-** Obj, MASM-Obj oder Cvtresed|Kombinieren von **/Kernel** und **/kernel-** OBJ-Dateien|
    |-|----------------------|-----------------------------------------------|-------------------------------------------------|
-   |**Link/Kernel**|Ja|Ja|Ja, mit der Warnung LNK4257|
-   |**Link**|Ja|Ja|Ja|
+   |**link /kernel**|Ja|Ja|Ja, mit der Warnung LNK4257|
+   |**link**|Ja|Ja|Ja|
 
    **LNK4257 Verknüpfungsobjekt mit/Kernel nicht kompiliert; Image kann möglicherweise nicht ausgeführt.**
 

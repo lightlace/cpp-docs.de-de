@@ -26,12 +26,12 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-ms.openlocfilehash: 73a259faa57d74fbe535bfa329dfc2a39cb6bbad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fdfeb16d41f51262cbd3a3814699a7b8dbc5fe4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656975"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413328"
 ---
 # <a name="running-lib"></a>Ausführen von LIB
 
@@ -62,7 +62,7 @@ Eine Option besteht aus einem Optionsbezeichner, handelt es sich entweder einem 
 
 Die folgenden Optionen gelten für alle LIB-Modi:
 
-> **/ ERRORREPORT** [**NONE** &AMP;#124; **EINGABEAUFFORDERUNG** &AMP;#124; **WARTESCHLANGE** &AMP;#124; **SENDEN**]
+> **/ERRORREPORT** [**NONE** &#124; **PROMPT** &#124; **QUEUE** &#124; **SEND**]
 
 Wenn lib.exe zur Laufzeit ein Fehler auftritt, können Sie **/errorreport** Informationen zu diesen internen Fehlern an Microsoft zu senden.
 
@@ -88,7 +88,7 @@ Unterdrückt die Anzeige der LIB Copyrightmeldung und der Versionsnummer, und ve
 
 Zeigt Details zu den Status der Sitzung, einschließlich Namen OBJ-Dateien hinzugefügt wird. Die Informationen werden an die Standardausgabe gesendet und können in eine Datei umgeleitet werden.
 
-> **/ WX**[**: NO**]
+> **/WX**[**:NO**]
 
 Behandeln Sie Warnungen als Fehler. Finden Sie unter [/WX (Linkerwarnungen als Fehler behandeln)](../../build/reference/wx-treat-linker-warnings-as-errors.md) für Weitere Informationen.
 

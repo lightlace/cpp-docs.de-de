@@ -11,12 +11,12 @@ helpviewer_keywords:
 - assemblies [C++], linking resource files
 - /ASSEMBLYRESOURCE linker option
 ms.assetid: 0ce6e1fb-921b-4b1b-a59c-d35388d789f2
-ms.openlocfilehash: 566a667ababaa67c7aff71861b111416abbbd878
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c18a014ca645cceb3196fb7efefd227e96f8e1fa
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486605"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416215"
 ---
 # <a name="assemblyresource-embed-a-managed-resource"></a>/ASSEMBLYRESOURCE (Verwaltete Ressource einbetten)
 
@@ -40,7 +40,7 @@ Verwenden Sie die Assemblylinkressource-Option, um eine Ressource in einer Assem
 
 Ressourcen sind öffentlich in der Assembly, wenn der Linker erstellt. Der Linker lässt nicht zu, dass Sie die Ressource in der Assembly umbenennen.
 
-Wenn *Filename* ist eine .NET Framework-Ressourcendatei (.resources)-Datei erstellt, z. B. durch die [Resource File Generator (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator) oder in der Entwicklungsumgebung, können sie Zugriff mit Membern in der **System.Resources** Namespace (finden Sie unter [System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx) Informationen). Verwenden Sie für alle anderen Ressourcen die **GetManifestResource** \* Methoden in **System.Reflection.Assembly** Klasse, um Zugriff auf die Ressource zur Laufzeit.
+Wenn *Filename* ist eine .NET Framework-Ressourcendatei (.resources)-Datei erstellt, z. B. durch die [Resource File Generator (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator) oder in der Entwicklungsumgebung, können sie Zugriff mit Membern in der **System.Resources** Namespace (finden Sie unter [System.Resources.ResourceManager](/dotnet/api/system.resources.resourcemanager) Informationen). Verwenden Sie für alle anderen Ressourcen die **GetManifestResource** \* Methoden in **System.Reflection.Assembly** Klasse, um Zugriff auf die Ressource zur Laufzeit.
 
 Andere Optionen des Linkers, die Generierung der Zielassembly betreffen sind:
 

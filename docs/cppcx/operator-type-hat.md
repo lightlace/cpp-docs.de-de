@@ -2,16 +2,16 @@
 title: Operator Type^
 ms.date: 12/30/2016
 ms.assetid: b24ffc83-0780-4f9a-8ee0-f5725db339d1
-ms.openlocfilehash: fca53abb9dc17588695591d496b7db2a76e319f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b2c0b83533af62aa96fdc4b53f5762c6ca748a4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553659"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422168"
 ---
 # <a name="operator-type"></a>Operator Type^
 
-Ermöglicht die Konvertierung von [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) in `Platform::Type`.
+Ermöglicht die Konvertierung von [Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename) in `Platform::Type`.
 
 ## <a name="syntax"></a>Syntax
 
@@ -21,11 +21,11 @@ Operator Type^(Windows::UI::Xaml::Interop::TypeName typeName);
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt einen `Platform::Type` zurück, wenn ein [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)angegeben wurde.
+Gibt einen `Platform::Type` zurück, wenn ein [Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename)angegeben wurde.
 
 ### <a name="remarks"></a>Hinweise
 
-`TypeName` ist die sprachenneutrale Windows Runtime-Struktur für die Darstellung von Typinformationen. [Platform::Type](../cppcx/platform-type-class.md) ist C++-spezifisch und kann nicht über die Anwendungsbinärdateischnittstelle (ABI) übergeben werden. Hier eine Verwendung von `TypeName`in der [Navigate](https://msdn.microsoft.com/library/windows/apps/hh702394.aspx) -Funktion:
+`TypeName` ist die sprachenneutrale Windows Runtime-Struktur für die Darstellung von Typinformationen. [Platform::Type](../cppcx/platform-type-class.md) ist C++-spezifisch und kann nicht über die Anwendungsbinärdateischnittstelle (ABI) übergeben werden. Hier eine Verwendung von `TypeName`in der [Navigate](/uwp/api/windows.ui.xaml.controls.frame.navigate) -Funktion:
 
 ```
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);

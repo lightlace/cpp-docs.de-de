@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
-ms.openlocfilehash: 75f8fcae2a51e4e8296f6f3c252888b6ca55ad20
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69e1868990358aeb4d790366b3a0bfa8d8999823
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520353"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414746"
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Manifestgenerierung in Visual Studio
 
@@ -31,7 +31,7 @@ Das Manifest in die endgültige Binärdatei als Textressource eingebettet ist, u
 
 ## <a name="see-also"></a>Siehe auch
 
-[Vorgehensweise: Einbetten eines Manifests in eine C/C++-Anwendung](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md)<br/>
+[Vorgehensweise: Einbetten eines Manifests in eine C- bzw. C++-Anwendung](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md)<br/>
 [Über Private Assemblys](/windows/desktop/SbsCs/about-private-assemblies-)<br/>
 [Manifesttool](/windows/desktop/SbsCs/mt-exe)<br/>
 [Manifestgenerierung für C/C++-Programme](../build/understanding-manifest-generation-for-c-cpp-programs.md)
