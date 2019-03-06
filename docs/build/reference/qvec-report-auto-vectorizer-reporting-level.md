@@ -2,12 +2,12 @@
 title: /Qvec-report (Auto-Vectorizer-Berichtsebene)
 ms.date: 11/04/2016
 ms.assetid: 4778c9a3-0692-4085-9b05-1bfeadf4c74a
-ms.openlocfilehash: dc8c1d3bc65b0160fd489f1cdebe06e4fc9a0992
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6fc4e129a908b5347c85794d369856873dac9180
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590228"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417995"
 ---
 # <a name="qvec-report-auto-vectorizer-reporting-level"></a>/Qvec-report (Auto-Vectorizer-Berichtsebene)
 
@@ -21,10 +21,10 @@ Ermöglicht die Berichtsfunktion des Compilers [Auto-Vektorisierer](../../parall
 
 ## <a name="remarks"></a>Hinweise
 
-**/ Qvec-Report: 1**<br/>
+**/Qvec-report:1**<br/>
 Gibt eine informationsmeldung für Schleifen an, die vektorisiert werden.
 
-**/ Qvec-Report: 2**<br/>
+**/Qvec-report:2**<br/>
 Gibt eine informationsmeldung für Schleifen an, die vektorisiert werden und für Schleifen an, die nicht, zusammen mit einen Ursachencode vektorisiert werden.
 
 Weitere Informationen zu Ursachencodes und Meldungen, finden Sie unter [Vectorizer- and Parallelizer-Meldungen](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).

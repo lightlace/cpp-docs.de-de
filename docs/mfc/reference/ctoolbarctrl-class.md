@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: 61cbcbd2a64e8648c6467ebbc0d86d6f89953442
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 97854a554be729b75d50f09b0627ffc94b1b093f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302496"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424482"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl-Klasse
 
@@ -627,7 +627,7 @@ virtual BOOL Create(
 Gibt das Symbolleisten-Steuerelement-Stil. Symbolleisten müssen immer das WS_CHILD-Format haben. Darüber hinaus können Sie eine beliebige Kombination von Toolbar-Stile und Window-Stile angeben, wie unter beschrieben **"Hinweise"**.
 
 *rect*<br/>
-Gibt optional an Größe und Position der Symbolleiste des Steuerelements. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.
+Gibt optional an Größe und Position der Symbolleiste des Steuerelements. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur.
 
 *pParentWnd*<br/>
 Gibt an, die übergeordnete Fenster des Symbolleisten-Steuerelements. Es darf nicht NULL sein.
@@ -681,7 +681,7 @@ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erwei
 Gibt das Symbolleisten-Steuerelement-Stil. Symbolleisten müssen immer das WS_CHILD-Format haben. Darüber hinaus können Sie eine beliebige Kombination von Toolbar-Stile und Window-Stile angeben, unter dem **"Hinweise"** Abschnitt [erstellen](#create).
 
 *rect*<br/>
-Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
+Ein Verweis auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
 
 *pParentWnd*<br/>
 Ein Zeiger auf das Fenster, das übergeordnete Element des Steuerelements ist.
@@ -1085,7 +1085,7 @@ BOOL GetItemRect(
 Nullbasierte Index der Schaltfläche für das Abrufen von Informationen.
 
 *lpRect*<br/>
-Adresse von einem [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt, das die Koordinaten des umgebenden Rechtecks empfängt.
+Adresse von einem [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt, das die Koordinaten des umgebenden Rechtecks empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1202,7 +1202,7 @@ BOOL GetRect(
 Der Bezeichner der Schaltfläche.
 
 *lpRect*<br/>
-Ein Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die umgebenden Rechteck Informationen zu erhalten.
+Ein Zeiger auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die umgebenden Rechteck Informationen zu erhalten.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1325,7 +1325,7 @@ int HitTest(LPPOINT ppt) const;
 ### <a name="parameters"></a>Parameter
 
 *ppt*<br/>
-Ein Zeiger auf eine [Punkt](https://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, die die X-Koordinate des Treffertests in enthält die `x` Element und die y-Koordinate des der Treffer im Testen der `y` Member. Die Koordinaten sind relativ zum Clientbereich für die Sie auf der Symbolleiste.
+Ein Zeiger auf eine [Punkt](/previous-versions/dd162805\(v=vs.85\)) Struktur, die die X-Koordinate des Treffertests in enthält die `x` Element und die y-Koordinate des der Treffer im Testen der `y` Member. Die Koordinaten sind relativ zum Clientbereich für die Sie auf der Symbolleiste.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1428,7 +1428,7 @@ BOOL InsertMarkHitTest(
 ### <a name="parameters"></a>Parameter
 
 *ppt*<br/>
-Ein Zeiger auf eine [Punkt](https://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, die den Treffertest enthält Koordinaten relativ zum Clientbereich der Symbolleiste.
+Ein Zeiger auf eine [Punkt](/previous-versions/dd162805\(v=vs.85\)) Struktur, die den Treffertest enthält Koordinaten relativ zum Clientbereich der Symbolleiste.
 
 *ptbim*<br/>
 Ein Zeiger auf eine [TBINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark) -Struktur, die die Einfügemarke Mark-Informationen erhält.
@@ -2295,7 +2295,7 @@ Angeforderte Anzahl von Zeilen.
 Gibt an, ob weitere Zeilen oder weniger Zeilen verwendet werden, wenn auf die Symbolleiste auf die angeforderte Anzahl der Zeilen nicht verändert werden kann.
 
 *lpRect*<br/>
-Verweist auf die [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die das neue umschließende Rechteck der Symbolleiste erhält.
+Verweist auf die [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder [RECT](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die das neue umschließende Rechteck der Symbolleiste erhält.
 
 ### <a name="remarks"></a>Hinweise
 

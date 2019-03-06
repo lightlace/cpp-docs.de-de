@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-ms.openlocfilehash: e569829c100a581e24b5ce05df2f90ac7088024b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5abcf838308d8965f3c55dc7d85dbac974825394
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266292"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426393"
 ---
 # <a name="cipaddressctrl-class"></a>CIPAddressCtrl-Klasse
 
@@ -122,7 +122,7 @@ virtual BOOL Create(
 Format des IP-Adresse-Steuerelements. Wenden Sie eine Kombination von Window-Stile. Sie müssen das Format WS_CHILD einschließen, da das Steuerelement ein untergeordnetes Fenster sein muss. Finden Sie unter [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) im Windows SDK für eine Liste der Windows-Formate.
 
 *rect*<br/>
-Ein Verweis auf die IP-Adresse des Steuerelements Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.
+Ein Verweis auf die IP-Adresse des Steuerelements Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur.
 
 *pParentWnd*<br/>
 Ein Zeiger auf die IP-Adresse des Steuerelements übergeordnete Fenster. Es darf nicht NULL sein.
@@ -166,7 +166,7 @@ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erwei
 Format des IP-Adresse-Steuerelements. Wenden Sie eine Kombination von Window-Stile. Sie müssen das Format WS_CHILD einschließen, da das Steuerelement ein untergeordnetes Fenster sein muss. Finden Sie unter [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) im Windows SDK für eine Liste der Windows-Formate.
 
 *rect*<br/>
-Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
+Ein Verweis auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
 
 *pParentWnd*<br/>
 Ein Zeiger auf das Fenster, das übergeordnete Element des Steuerelements ist.

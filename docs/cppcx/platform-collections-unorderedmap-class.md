@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: d3e6069f4bf7b0c23d5db5844821524ee80589da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7790b363ef3f30b0ad0602568190ab443a2c1401
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648330"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423611"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap-Klasse
 
@@ -69,9 +69,9 @@ Weitere Informationen finden Sie unter [Sammlungen](../cppcx/collections-c-cx.md
 |Name|Beschreibung|
 |----------|-----------------|
 |[UnorderedMap::Clear](#clear)|Entfernt alle Schlüssel-Wert-Paare aus dem derzeitigen Map-Objekt.|
-|[Unorderedmap:: First](#first)|Gibt einen Iterator zurück, der das erste Element in der Zuordnung angibt.|
+|[UnorderedMap::First](#first)|Gibt einen Iterator zurück, der das erste Element in der Zuordnung angibt.|
 |[UnorderedMap::GetView](#getview)|Gibt eine schreibgeschützte Ansicht der aktuellen Zuordnung zurück; das heißt, eine Platform::Collections::UnorderedMapView-Klasse.|
-|[Unorderedmap:: Haskey](#haskey)|Ermittelt, ob die aktuelle Map den angegebenen Schlüssel enthält.|
+|[UnorderedMap::HasKey](#haskey)|Ermittelt, ob die aktuelle Map den angegebenen Schlüssel enthält.|
 |[UnorderedMap::Insert](#insert)|Fügt das angegebene Schlüssel-Wert-Paar dem aktuellen Map-Objekt hinzu.|
 |[UnorderedMap::Lookup](#lookup)|Ruft das Element am angegebenen Schlüssel im aktuellen Map-Objekt ab.|
 |[UnorderedMap::Remove](#remove)|Löscht das angegebene Schlüssel-Wert-Paar vom aktuellen Map-Objekt.|
@@ -106,7 +106,7 @@ virtual void Clear();
 
 ## <a name="first"></a>  Unorderedmap:: First-Methode
 
-Gibt einen Iterator, der angibt, die erste [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) Element in der ungeordneten Zuordnung.
+Gibt einen Iterator, der angibt, die erste [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) Element in der ungeordneten Zuordnung.
 
 ### <a name="syntax"></a>Syntax
 
@@ -177,7 +177,7 @@ virtual bool Insert(
 *key*<br/>
 Der Schlüsselteil des Schlüssel-Wert-Paars. Der Typ des *Schlüssel* ist der Typname *K*.
 
-*Wert*<br/>
+*value*<br/>
 Der Wertteil des Schlüssel-Wert-Paars. Der Typ des *Wert* ist der Typname *V*.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -217,7 +217,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert
 
-Ein [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) , enthält Informationen über das Objekt, das ausgelöst wird, das Ereignis, sowie die Art der entstandenen Änderung darstellt. Siehe auch [IMapChangedEventArgs\<K >](https://msdn.microsoft.com/library/windows/apps/br226034.aspx) und [CollectionChange-Enumeration](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
+Ein [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) , enthält Informationen über das Objekt, das ausgelöst wird, das Ereignis, sowie die Art der entstandenen Änderung darstellt. Siehe auch [IMapChangedEventArgs\<K >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) und [CollectionChange-Enumeration](/uwp/api/windows.foundation.collections.collectionchange).
 
 ## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework
 
@@ -241,7 +241,7 @@ Der Schlüsselteil des Schlüssel-Wert-Paars. Der Typ des *Schlüssel* ist der T
 
 ## <a name="size"></a>  Unorderedmap:: size-Methode
 
-Gibt die Anzahl der [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) Elemente in der unorderedmap zurück.
+Gibt die Anzahl der [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) Elemente in der unorderedmap zurück.
 
 ### <a name="syntax"></a>Syntax
 
@@ -355,7 +355,7 @@ Ein Verweis oder [Lvalues und Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)
 *il*<br/>
 Ein [Std:: initializer_list](../standard-library/initializer-list-class.md) von [Std:: Pair](../standard-library/pair-structure.md) Objekte, die zum Initialisieren der Zuordnung verwendet wird.
 
-*Erste*<br/>
+*first*<br/>
 Der Eingabeiterator des ersten Elements in einem Bereich von Elementen, die verwendet werden, um die aktuelle UnorderedMap zu initialisieren.
 
 *last*<br/>

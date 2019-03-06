@@ -25,12 +25,12 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: 77dc97ee07499b7df37a115dafafddd71acb7bb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ac70904332f5f05463b317f02a2ab8d3bfc7bb3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655000"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424612"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (Laufzeitfehlerüberprüfungen)
 
@@ -95,7 +95,7 @@ Wenn eine Variable initialisiert wurden kann, es nicht gemeldet werden zur Laufz
 
 ## <a name="remarks"></a>Hinweise
 
-Laufzeitfehler-Überprüfungen sind eine Möglichkeit, um Probleme in Ihrem ausgeführten Code zu ermitteln. Weitere Informationen finden Sie unter [Vorgehensweise: verwenden systemeigene Laufzeitüberprüfungen](/visualstudio/debugger/how-to-use-native-run-time-checks).
+Laufzeitfehler-Überprüfungen sind eine Möglichkeit, um Probleme in Ihrem ausgeführten Code zu ermitteln. Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden von systemeigenen Laufzeitprüfungen](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
 Wenn Sie das Programm in der Befehlszeile, die mit einer der Kompilieren der **/RTC** Compileroptionen, treten bei allen [optimieren](../../preprocessor/optimize.md) Anweisungen in Ihrem Code im Hintergrund fehl. Dies ist da fehlerprüfung zur Laufzeit in einem Releasebuild (optimiert) ungültig sind.
 
@@ -111,7 +111,7 @@ Die Präprozessordirektive __MSVC_RUNTIME_CHECKS wird definiert werden, wenn Sie
 
 1. Klicken Sie auf die **Codegenerierung** Eigenschaftenseite.
 
-1. Ändern Sie eine oder beide der folgenden Eigenschaften: **vollständige Laufzeitüberprüfungen** oder **kleinere Typüberprüfung**.
+1. Ändern Sie eine oder beide der folgenden Eigenschaften: **Vollständige Laufzeitüberprüfungen** oder **Geben Sie kleiner Kontrollkästchen**.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
 
@@ -121,4 +121,4 @@ Die Präprozessordirektive __MSVC_RUNTIME_CHECKS wird definiert werden, wenn Sie
 
 [Compileroptionen](../../build/reference/compiler-options.md)<br/>
 [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
-[Gewusst wie: Verwenden von nativen Laufzeitprüfungen](/visualstudio/debugger/how-to-use-native-run-time-checks)
+[Vorgehensweise: Verwenden von nativen Laufzeitüberprüfungen](/visualstudio/debugger/how-to-use-native-run-time-checks)

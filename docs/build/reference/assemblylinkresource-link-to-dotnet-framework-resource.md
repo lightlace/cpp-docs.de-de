@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ASSEMBLYLINKRESOURCE linker option
 - /ASSEMBLYLINKRESOURCE linker option
 ms.assetid: 8b6ad184-1b33-47a4-8513-4803cf915b64
-ms.openlocfilehash: 7c1d78758e43bf8e0c2c281c495c81e9f62b36e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2970f4e6d94cfa2e6315eeff85eb71a30dc032a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473904"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422428"
 ---
 # <a name="assemblylinkresource-link-to-net-framework-resource"></a>/ASSEMBLYLINKRESOURCE (Mit .NET Framework-Ressource verknüpfen)
 
@@ -35,7 +35,7 @@ Verknüpfte Ressourcen sind öffentlich in der Assembly, wenn der Linker erstell
 
 / ASSEMBLYLINKRESOURCE erfordert, dass die Kompilierung ["/ CLR"](../../build/reference/clr-common-language-runtime-compilation.md); [/Ln](../../build/reference/ln-create-msil-module.md) oder [/noAssembly](../../build/reference/noassembly-create-a-msil-module.md) ist mit/ASSEMBLYLINKRESOURCE nicht zulässig.
 
-Wenn *Filename* ist eine .NET Framework-Ressourcendatei erstellt haben, z. B. durch [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) oder in der Entwicklungsumgebung, können sie Zugriff mit Membern in der **System.Resources** Namespace. Weitere Informationen finden Sie unter [System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx). Verwenden Sie für alle anderen Ressourcen die **GetManifestResource** \* Methoden in der **System.Reflection.Assembly** Klasse, um Zugriff auf die Ressource zur Laufzeit.
+Wenn *Filename* ist eine .NET Framework-Ressourcendatei erstellt haben, z. B. durch [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) oder in der Entwicklungsumgebung, können sie Zugriff mit Membern in der **System.Resources** Namespace. Weitere Informationen finden Sie unter [System.Resources.ResourceManager](/dotnet/api/system.resources.resourcemanager). Verwenden Sie für alle anderen Ressourcen die **GetManifestResource** \* Methoden in der **System.Reflection.Assembly** Klasse, um Zugriff auf die Ressource zur Laufzeit.
 
 *FileName* kann einem beliebigen Dateiformat sein. Beispielsweise empfiehlt es sich um eine systemeigene DLL Teil der Assembly zu machen, damit es im globalen Assemblycache installiert und aus verwaltetem Code in der Assembly zugegriffen werden kann.
 

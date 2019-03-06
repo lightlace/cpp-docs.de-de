@@ -5,12 +5,12 @@ helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION macro
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-ms.openlocfilehash: 4898ff7893ec327495e757f2ffa0eb37ae051875
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fea928fc293ef916d560e51ecb27aee452b6a4c3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551332"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414628"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>Unterschiede im Ausnahmebehandlungsverhalten unter /CLR
 
@@ -97,7 +97,7 @@ We should execute this handler if compiled to native
 
 ##  <a name="vccondisassociatedrethrows"></a> Erneutes Auslösen mit aufgehobener
 
-**"/ CLR"** unterstützt nicht das erneute Auslösen einer Ausnahme außerhalb eines Catch-Handlers (bekannt als eine Auslösen mit aufgehobener Zuordnung). Behandelt Ausnahmen dieses Typs als standard C++ Rethrow. Wenn ein nicht verbundenes Rethrow gefunden wird, wenn eine aktive verwaltete Ausnahme vorhanden ist, wird die Ausnahme als C++-Ausnahme umschlossen und dann erneut ausgelöst. Ausnahmen dieses Typs können nur als eine Ausnahme des Typs abgefangen werden [System:: SEHException](https://msdn.microsoft.com/library/system.runtime.interopservices.sehexception.aspx).
+**"/ CLR"** unterstützt nicht das erneute Auslösen einer Ausnahme außerhalb eines Catch-Handlers (bekannt als eine Auslösen mit aufgehobener Zuordnung). Behandelt Ausnahmen dieses Typs als standard C++ Rethrow. Wenn ein nicht verbundenes Rethrow gefunden wird, wenn eine aktive verwaltete Ausnahme vorhanden ist, wird die Ausnahme als C++-Ausnahme umschlossen und dann erneut ausgelöst. Ausnahmen dieses Typs können nur als eine Ausnahme des Typs abgefangen werden <xref:System.Runtime.InteropServices.SEHException>.
 
 Im folgende Beispiel wird veranschaulicht, eine verwaltete Ausnahme, die als C++-Ausnahme erneut ausgelöst wird:
 
@@ -278,5 +278,5 @@ Caught an SEH exception with exception code: e0000101
 ## <a name="see-also"></a>Siehe auch
 
 [Ausnahmebehandlung](../windows/exception-handling-cpp-component-extensions.md)<br/>
-["safe_cast"](../windows/safe-cast-cpp-component-extensions.md)<br/>
+[safe_cast](../windows/safe-cast-cpp-component-extensions.md)<br/>
 [Ausnahmebehandlung](../cpp/exception-handling-in-visual-cpp.md)
