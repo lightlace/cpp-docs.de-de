@@ -5,18 +5,18 @@ helpviewer_keywords:
 - symbols [C++], ATL predefined
 - ATL symbols
 ms.assetid: 60d8f4e6-6ed9-47f3-9051-e4bf34384456
-ms.openlocfilehash: 16991746c5c858310466f7eebd91a8478d2dcc5c
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: 2abbfb83f6d9b09a1c5dcc2afe1c48a6d2dff79a
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954847"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562873"
 ---
 # <a name="atl-predefined-symbols"></a>Vordefinierte ATL-Symbole
 
 Diese Symbole sind in der ATL-Headerdateien definiert, aber sie die Standardfunktionen für Windows-Anwendung und Aktionen unterstützen. Diese Symbole werden hauptsächlich mit Dialogfeldern verwendet werden.
 
-Wenn Sie mit der Dialogfelder und Steuerelemente arbeiten in der [Dialog-Editor](../windows/dialog-editor.md), diese Symbole werden angezeigt, der **Eigenschaften** Standardsteuerelementen zugeordnete Fenster. Beispielsweise verfügt das Dialogfeld ein **Abbrechen** Schaltfläche, dass der Befehl mit dem Symbol IDCANCEL verknüpft werden, wird in der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window).
+Wenn Sie mit der Dialogfelder und Steuerelemente arbeiten in der [Dialog-Editor](../windows/dialog-editor.md), diese Symbole werden angezeigt, der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window) Standardsteuerelementen zugeordnet. Beispielsweise verfügt das Dialogfeld ein **Abbrechen** Schaltfläche, dass der Befehl mit dem Symbol IDCANCEL verknüpft werden in der **Eigenschaften** Fenster.
 
 |||
 |-|-|

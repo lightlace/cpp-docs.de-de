@@ -8,19 +8,19 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 604f97edc8e4e49bad477d76e0e46334b8cf726b
-ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
+ms.openlocfilehash: 0b29f435ab91b10e010e956d26fb8d2d116edc6e
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56336537"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563120"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>Zugriffstasten (Bildbearbeitung für Symbole C++)
 
-Unten sind die Zugriffstasten für den Bild-Editor-Befehlen, die standardmäßig auf Schlüssel gebunden sind. Um Zugriffstasten zu ändern, klicken Sie auf **Optionen** auf die **Tools** Menü, und wählen Sie dann **Tastatur** unter der **Umgebung** Ordner. Weitere Informationen finden Sie unter [Identifizieren und Anpassen von Tastenkombinationen in Visual Studio](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
+Unten sind die Zugriffstasten für den Bild-Editor-Befehlen, die standardmäßig auf Schlüssel gebunden sind. Um Zugriffstasten zu ändern, wechseln Sie zum Menü **Tools** > **Optionen** , und wählen Sie **Tastatur** unter der **Umgebung** Ordner. Weitere Informationen finden Sie unter [Identifizieren und Anpassen von Tastenkombinationen in Visual Studio](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 
 > [!NOTE]
-> Die in einem Dialogfeld verfügbaren Optionen sowie die Namen und Positionen der angezeigten Menübefehle können sich je nach den persönlichen aktiven Einstellungen oder der verwendeten Version von den in der Hilfe beschriebenen Optionen unterscheiden. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).
+> Die in einem Dialogfeld verfügbaren Optionen sowie die Namen und Positionen der angezeigten Menübefehle können sich je nach den persönlichen aktiven Einstellungen oder der verwendeten Version von den in der Hilfe beschriebenen Optionen unterscheiden. Um Ihre Einstellungen zu ändern, wechseln Sie zum Menü **Tools** > **Einstellungen importieren und exportieren**. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
 |Befehl|Tasten|Beschreibung|
 |-------------|----------|-----------------|
@@ -68,4 +68,8 @@ Keine
 
 ## <a name="see-also"></a>Siehe auch
 
-[Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)
+[Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)<br/>
+[Vorgehensweise: Erstellen eines Symbols oder anderen Bilds](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[Vorgehensweise: Bearbeiten eines Bilds](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Vorgehensweise: Verwenden eines Zeichentools](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Vorgehensweise: Arbeiten mit Farben](../windows/working-with-color-image-editor-for-icons.md)<br/>

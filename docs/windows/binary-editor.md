@@ -21,23 +21,23 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: 420c5ecf44f8e8b264d9eafd93de58c0db3bedf4
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: df693e87bc9a370409eb43155d3f976a9f00cdac
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210717"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562860"
 ---
 # <a name="binary-editor-c"></a>Binär-Editor (C++)
 
 > [!CAUTION]
 > Bearbeiten von Ressourcen wie z. B. Dialogfeldern, Bildern oder Menüs in die **Binär-Editor** ist riskant. Eine falsche Bearbeitung kann zu einer Beschädigung der Ressource führen, sodass sie anschließend im systemeigenen Editor nicht mehr einsetzbar ist.
 
-Die **Binär-Editor** können Sie beliebige Ressourcen auf Binärebene im hexadezimalen Format oder im ASCII-Format bearbeiten. Außerdem können Sie mit dem [Suchbefehl](/visualstudio/ide/reference/find-command) ASCII-Zeichenfolgen oder hexadezimale Bytes suchen. Verwenden der **Binär-Editor** nur wenn Sie anzeigen oder geringfügige vornehmen müssen, benutzerdefinierte Ressourcen oder Ressourcentypen, die von Visual Studio-Umgebung nicht unterstützt wird geändert.
+Die **Binär-Editor** können Sie beliebige Ressourcen auf Binärebene im hexadezimalen Format oder im ASCII-Format bearbeiten. Außerdem können Sie mit dem [Suchbefehl](/visualstudio/ide/reference/find-command) ASCII-Zeichenfolgen oder hexadezimale Bytes suchen. Verwenden der **Binär-Editor** nur wenn Sie anzeigen oder geringfügige vornehmen müssen, benutzerdefinierte Ressourcen oder Ressourcentypen, die von Visual Studio-Umgebung nicht unterstützt wird geändert. Die **Binär-Editor** ist in Express-Editionen nicht verfügbar.
 
-Zum Öffnen der **Binär-Editor** auf eine neue Datei, wechseln Sie zum Menü **Datei** > **neu** > **Datei**, wählen Sie den Typ der Datei, die Sie bearbeiten möchten, und dann aktivieren Sie den Dropdownpfeil neben der **öffnen** , und wählen **Öffnen mit** > **Binär-Editor**.
+- Zum Öffnen der **Binär-Editor** auf eine neue Datei, wechseln Sie zum Menü **Datei** > **neu** > **Datei**, wählen Sie den Typ der Datei, die Sie bearbeiten möchten, und dann aktivieren Sie den Dropdownpfeil neben der **öffnen** , und wählen **Öffnen mit** > **Binär-Editor**.
 
-Zum Öffnen der **Binär-Editor** auf einer vorhandenen Datei, wechseln Sie zum Menü **Datei** > **öffnen** > **Datei**, wählen die Datei, die Sie bearbeiten möchten, und dann aktivieren Sie den Dropdownpfeil neben der **öffnen** , und wählen **Öffnen mit** > **Binär-Editor**.
+- Zum Öffnen der **Binär-Editor** auf einer vorhandenen Datei, wechseln Sie zum Menü **Datei** > **öffnen** > **Datei**, wählen die Datei, die Sie bearbeiten möchten, und dann aktivieren Sie den Dropdownpfeil neben der **öffnen** , und wählen **Öffnen mit** > **Binär-Editor**.
 
    ![Binär-Editor](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
    Binärdaten für ein Dialogfeld angezeigt, der **Binär-Editor**
@@ -45,9 +45,7 @@ Zum Öffnen der **Binär-Editor** auf einer vorhandenen Datei, wechseln Sie zum 
 Nur bestimmte ASCII-Werte dargestellt werden, der **Binär-Editor** (0 x 20 bis 0x7E). Erweiterte Zeichen werden als Punkte angezeigt, in im rechten Bereich ASCII-Wert-Abschnitt, der die **Binär-Editor**. Die druckbaren Zeichen sind ASCII-Werte 32 bis 126.
 
 > [!TIP]
-> Bei der Verwendung der **Binär-Editor**, können Sie in vielen Fällen mit der rechten Maustaste ein Kontextmenü mit ressourcenspezifische Befehle angezeigt. Welche Befehle verfügbar sind, hängt von dem Element ab, auf das Sie mit dem Cursor zeigen. Angenommen, Sie klicken können, während Sie auf die **Binär-Editor** mit Hexadezimalwerte markiert sind, zeigt das Kontextmenü der **Ausschneiden**, **Kopie**, und **einfügen**  Befehle.
-
-Die **Binär-Editor** ist in Express-Editionen nicht verfügbar.
+> Bei der Verwendung der **Binär-Editor**, können Sie in vielen Fällen mit der rechten Maustaste ein Kontextmenü mit ressourcenspezifische Befehle angezeigt. Welche Befehle verfügbar sind, hängt von dem Element ab, auf das Sie mit dem Cursor zeigen. Angenommen, Sie mit der rechten Maustaste beim Zeigen auf die die **Binär-Editor** mit Hexadezimalwerte markiert sind, zeigt das Kontextmenü der **Ausschneiden**, **Kopie**, und **Einfügen** Befehle.
 
 ## <a name="how-to"></a>Gewusst wie
 
@@ -55,12 +53,12 @@ Die **Binär-Editor** können Sie:
 
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>So öffnen Sie eine Windows-Desktopressource zur Binärbearbeitung
 
-1. Wählen Sie in der [Ressourcenansicht](../windows/resource-view-window.md)die bestimmte Ressourcendatei aus, die Sie bearbeiten möchten.
+1. Wählen Sie in der [Ressourcenansicht](/windows/how-to-create-a-resource-script-file#create-resources)die bestimmte Ressourcendatei aus, die Sie bearbeiten möchten.
 
 1. Mit der rechten Maustaste in der Ressource, und wählen Sie **Binärdaten öffnen**.
 
 > [!NOTE]
-> Bei Verwendung der [Ressourcenansicht](../windows/resource-view-window.md) Fenster aus, um eine Ressource in einem Format zu öffnen, die Visual Studio nicht erkannt werden, etwa eine RCDATA- oder eine benutzerdefinierte Ressource, die Ressource automatisch im geöffnet ist die **Binär-Editor**.
+> Bei Verwendung der **Ressourcenansicht** Fenster aus, um eine Ressource in einem Format zu öffnen, die Visual Studio nicht erkannt werden, etwa eine RCDATA- oder eine benutzerdefinierte Ressource, die Ressource automatisch im geöffnet ist die **Binär-Editor**.
 
 ### <a name="to-open-a-managed-resource-for-binary-editing"></a>So öffnen Sie eine verwaltete Ressource für die Binärbearbeitung
 
@@ -75,8 +73,7 @@ Die **Binär-Editor** können Sie:
 
 ### <a name="to-edit-a-resource"></a>So bearbeiten Sie eine Ressource
 
-> [!NOTE]
-> Wenn Sie verwenden möchten. die **Binär-Editor** für eine Ressource, die bereits in einem anderen Editorfenster bearbeitet wird, zuerst das andere Editorfenster schließen.
+Wenn Sie verwenden möchten. die **Binär-Editor** für eine Ressource, die bereits in einem anderen Editorfenster bearbeitet wird, zuerst das andere Editorfenster schließen.
 
 1. Wählen Sie das Byte, die, das Sie bearbeiten möchten.
 
@@ -93,7 +90,7 @@ Die **Binär-Editor** können Sie:
 
 Sie können für ASCII-Zeichenfolgen oder hexadezimale Bytes suchen. Beispielsweise, um suchen *Hello*, Suche nach können Sie entweder die Zeichenfolge *Hello* oder seinem Hexadezimalwert, *48 65 6 c 6 C 6F*.
 
-1. Von der **bearbeiten** Menü wählen [finden](/visualstudio/ide/reference/find-command).
+1. Wechseln Sie zum Menü **bearbeiten** > [finden](/visualstudio/ide/reference/find-command).
 
 1. In der **Suchen nach** Feld, wählen Sie einen früheren Suchbegriff aus der Dropdown-Liste aus, oder geben Sie die Daten, die Sie suchen möchten.
 

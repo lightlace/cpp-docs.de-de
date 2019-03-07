@@ -9,12 +9,12 @@ helpviewer_keywords:
 - databases [C++], MFC programming model
 - Windows programming MFC symbols [C++]
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-ms.openlocfilehash: 329d56f4a8e0e9992cb78987c559f74c7349f681
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: c60c75275ca565b332c33848d27c134deb90a5c6
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954951"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563204"
 ---
 # <a name="mfc-predefined-symbols"></a>Vordefinierte MFC-Symbole
 
@@ -236,7 +236,7 @@ Die Symbole in dieser Tabelle werden nur in einem MFC-Projekt angezeigt, wenn da
 
 Diese Symbole stellen ebenfalls einen Teil der MFC-Unterstützungsdateien, aber sie die Standardfunktionen für Windows-Anwendung und Aktionen unterstützen. Diese Symbole werden mit Menüs verwendet.
 
-Beim Arbeiten mit Menüs in die **Menü-Editor**, diese Symbole werden angezeigt, der **Eigenschaftenfenster** allgemeine Menübefehle zugeordnet. Z. B. wenn die Anwendung verfügt eine **Datei** Menü mit einer **beenden** Befehl ",", mit dem Befehl mit dem Symbol ID_APP_EXIT verknüpft werden in der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window).
+Beim Arbeiten mit Menüs in die **Menü-Editor**, diese Symbole werden angezeigt, der **Eigenschaft** zugeordnete allgemeine Befehle im Menü Fenster. Z. B. wenn die Anwendung verfügt eine **Datei** Menü mit einer **beenden** Befehl ",", mit dem Befehl mit dem Symbol ID_APP_EXIT verknüpft werden in der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window).
 
 ||||
 |-|-|-|
