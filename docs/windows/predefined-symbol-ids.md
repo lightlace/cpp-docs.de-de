@@ -5,12 +5,12 @@ helpviewer_keywords:
 - symbols [C++], predefined IDs
 - predefined symbol IDs
 ms.assetid: 91a5d610-1a04-47e8-b8a4-63ad650a90df
-ms.openlocfilehash: 7d3581a9f6f2a2080f72634a01d3417ffecf82a4
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: 22337e812936a90f8d7c4ead33989e1e0c4d39f0
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954912"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562756"
 ---
 # <a name="predefined-symbol-ids"></a>Vordefinierte Symbol-IDs
 
@@ -18,7 +18,7 @@ Wenn Sie ein neues Projekt beginnen sind je nach Projekttyp einige Symbol-IDs f�
 
 Diese Symbol-IDs gewinnen bei der Arbeit mit Ressourcen an Bedeutung. Sie sind verfügbar, wenn das Bearbeiten von Zugriffstastentabellen und einige davon bereits mit virtuellen Tasten verknüpft sind. Sie sind auch verfügbar, die Ihnen mit der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window). Sie können vordefinierte Symbol-IDs neuen Ressourcen zuweisen, oder Sie können Tastenkombinationen zuweisen, auf sie und die Funktionalität, die der Symbol-ID automatisch mit der Tastenkombination verknüpft wird.
 
-Diese Bibliotheken verfügen über vordefinierte Symbole, die als Teil des Projekts angezeigt werden:
+Bibliotheken verfügen über vordefinierte Symbole, die als Teil des Projekts angezeigt werden:
 
 - [Vordefinierte ATL-Symbole](../windows/atl-predefined-symbols.md)
 

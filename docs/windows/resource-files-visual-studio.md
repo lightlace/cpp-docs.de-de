@@ -24,12 +24,12 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: bd73db481659573d51e4abd56da9689e2e8ade25
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 3de2010cca04d007bf61bf8c139cbc69d790e579
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676434"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563003"
 ---
 # <a name="resource-files-c"></a>Ressourcendateien (C++)
 
@@ -121,9 +121,9 @@ Zum Anzeigen der Version, und geben Sie in einer Manifestressource enthaltenen I
 
 1. Erweitern Sie die **Ressourcendateien** Ordner, klicken Sie dann:
 
-   - Um im Text-Editor zu öffnen, doppelklicken Sie auf die .manifest-Datei.
+   - Um im Text-Editor zu öffnen, doppelklicken Sie auf die *". manifest"* Datei.
 
-   - Um in einem anderen Editor zu öffnen, mit der rechten Maustaste der .manifest-Datei, und wählen Sie **Öffnen mit...** . Geben Sie den Editor, und wählen **öffnen**.
+   - Um in einem anderen Editor zu öffnen, mit der Maustaste der *". manifest"* und wählen Sie **Öffnen mit**. Geben Sie den Editor, und aktivieren das **öffnen**.
 
 ## <a name="requirements"></a>Anforderungen
 

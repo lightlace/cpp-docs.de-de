@@ -30,20 +30,14 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: ce1cf1f6d0010475192ecf7ef3ce2416fac51dfd
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 28127ea89fdba1b70988ced1d6004c0f914c66e2
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676408"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563042"
 ---
 # <a name="how-to-manage-resources-c"></a>Vorgehensweise: Verwalten von Ressourcen (C++)
-
-Sie können Ressourcen für das Projekt durch verwalten:
-
-- Kopieren und Bearbeiten von Ressourcen.
-
-- Importieren und Exportieren von Ressourcen.
 
 ## <a name="copy-and-edit-resources"></a>Kopieren und Bearbeiten von Ressourcen
 
@@ -54,7 +48,7 @@ Sie können Ressourcen problemlos aus einer vorhandenen Ressource oder die ausf�
 > [!NOTE]
 > Visual C++ enthält Beispiel-Ressourcendateien, die Sie in Ihrer eigenen Anwendung verwenden können. Weitere Informationen finden Sie unter [CLIPART: Allgemeine Ressourcen](https://github.com/Microsoft/VCSamples).
 
-Sie können die Drag & Drop-Methode RC-Dateien verwenden, die außerhalb des Projekts geöffnet sind.
+Sie können keine drag und drop, kopieren, Ausschneiden, oder fügen Sie zwischen Ressourcendateien im Projekt (**Ressourcenansicht**) und eigenständige RC-Dateien im Dokumentfenster zu öffnen. In früheren Versionen des Produkts können Sie dazu. Verwenden Sie die Drag & Drop-Methode nur RC-Dateien, die außerhalb des Projekts geöffnet sind.
 
 ### <a name="to-copy-resources"></a>So kopieren Sie Ressourcen
 
@@ -78,9 +72,6 @@ Sie können die Drag & Drop-Methode RC-Dateien verwenden, die außerhalb des Pro
       1. Mit der rechten Maustaste in der Ressourcendatei in die Sie die Ressource einfügen möchten (z. B. *Source2.rc*), und wählen Sie **einfügen**.
 
 > [!NOTE]
-> Sie können keine drag und drop, kopieren, Ausschneiden, oder fügen Sie zwischen Ressourcendateien im Projekt (**Ressourcenansicht**) und eigenständige RC-Dateien (die im Dokumentfenster geöffnet). In früheren Versionen des Produkts können Sie dazu.
-
-> [!NOTE]
 > Um Konflikte mit Symbolnamen oder Werten in die vorhandene Datei zu vermeiden, kann Visual C++ Symbolwert der übertragenen Ressource oder Symbolnamens und-Werts ändern, wenn Sie ihn in die neue Datei kopieren.
 
 Beim Kopieren in eine Ressource können Sie ihre Sprachen- und/oder Bedingungseigenschaft ändern.
@@ -95,13 +86,13 @@ Die Sprache und Bedingung einer Ressource in Klammern angezeigt, nach dem Namen 
 IDD_AboutBox (Finnish - XX33)
 ```
 
-So kopieren Sie eine vorhandene Ressource und ändern die Sprache oder Bedingung
+### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>So kopieren Sie eine vorhandene Ressource und ändern die Sprache oder Bedingung
 
-1. In der RC-Datei oder in der [Ressourcenansicht](../windows/resource-view-window.md) Fenster mit der rechten Maustaste in der Ressource, die Sie verwenden möchten, kopieren, und wählen **Kopie einfügen**. Legen Sie Sie dann die folgenden Schritte aus:
+In der *RC* Datei oder in der [Ressourcenansicht](../windows/resource-view-window.md) Fenster mit der rechten Maustaste in der Ressource, die Sie verwenden möchten, kopieren, und wählen **Kopie einfügen**. Legen Sie Sie dann die folgenden Schritte aus:
 
-   - Für die **Sprache** Listenfeld, wählen Sie die Sprache.
+- Für die **Sprache** Listenfeld, wählen Sie die Sprache.
 
-   - In der **Bedingung** geben die Bedingung.
+- In der **Bedingung** geben die Bedingung.
 
 ### <a name="to-edit-resources"></a>Bearbeiten von Ressourcen
 

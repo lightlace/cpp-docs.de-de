@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: 5aadb00e6e010467ee9c70dc357916d3c4f81853
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: a138eb5aa40429696ca2efa4a67e1a1c5490f4fa
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211081"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563250"
 ---
 # <a name="toolbar-editor-c"></a>Symbolleisten-Editor (C++)
 
@@ -103,7 +103,7 @@ Die **Symbolleisten-Editor** können Sie:
 
 ### <a name="to-create-new-toolbars"></a>Zum Erstellen neuer Symbolleisten
 
-1. In **Ressource** anzeigen, mit der rechten Maustaste in der RC-Datei, und wählen Sie **Ressource hinzufügen**. Wenn Sie eine vorhandene Symbolleiste in der RC-Datei verfügen, Sie können mit der rechten Maustaste die **Symbolleiste** Ordner, und wählen **Toolbar einfügen**.
+1. In **Ressourcenansicht**, mit der rechten Maustaste Ihre *RC* Datei, und wählen **Ressource hinzufügen**. Wenn Sie in einer vorhandenen Symbolleiste haben Ihre *RC* -Datei, Sie können mit der rechten Maustaste die **Symbolleiste** Ordner, und wählen **Toolbar einfügen**.
 
 1. In der **Ressource hinzufügen** wählen Sie im Dialogfeld **Symbolleiste** in die **Ressourcentyp** Liste aus, und wählen Sie dann **neu**.
 
@@ -111,7 +111,7 @@ Die **Symbolleisten-Editor** können Sie:
 
 ### <a name="to-convert-bitmaps-to-toolbar-resources"></a>Zum Konvertieren von Bitmaps in Symbolleistenressourcen
 
-1. Öffnen Sie eine vorhandene Bitmapressource in der [Bildbearbeitung](../windows/image-editor-for-icons.md). Wenn die Bitmap nicht bereits in der RC-Datei, mit der rechten Maustaste in der RC-Datei, und wählen Sie **Import**, navigieren Sie dann auf die Bitmap, die Sie verwenden möchten, fügen Sie auf die RC-Datei hinzu, und wählen Sie **öffnen**.
+1. Öffnen Sie eine vorhandene Bitmapressource in der [Bildbearbeitung](../windows/image-editor-for-icons.md). Wenn die Bitmap nicht bereits in Ihrer *RC* Datei, mit der rechten Maustaste die *RC* Datei, und wählen **Import**, navigieren Sie dann auf die Bitmap, die Sie hinzufügen möchten Ihre *RC*  und wählen Sie **öffnen**.
 
 1. Wechseln Sie zum Menü **Image** > **Symbolleisten-Editor**.
 
@@ -126,7 +126,7 @@ Die **Symbolleisten-Editor** können Sie:
 
 ### <a name="to-manage-toolbar-buttons"></a>Zum Verwalten von Symbolleisten-Schaltflächen
 
-So erstellen Sie eine neue Symbolleisten-Schaltfläche:
+#### <a name="to-create-a-new-toolbar-button"></a>Erstellen Sie eine neue Symbolleisten-Schaltfläche
 
 1. In [Ressourcenansicht](../windows/resource-view-window.md) erweitern Sie den Ressourcenordner (z. B. *Projekt1.rc*).
 
@@ -134,36 +134,34 @@ So erstellen Sie eine neue Symbolleisten-Schaltfläche:
 
    - Weisen Sie eine ID, auf die leere Schaltfläche am rechten Ende der Symbolleiste. Bearbeiten Sie dazu die **ID** -Eigenschaft in der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window). Beispielsweise empfiehlt es sich um einer Symbolleisten-Schaltfläche, die gleiche ID wie eine Menüoption gewähren. In diesem Fall verwenden Sie im Dropdown-Listenfeld auswählen der **ID** der Menüoption.
 
-   - Wählen Sie die leere Schaltfläche am rechten Ende der Symbolleiste (in der **Symbolleiste anzeigen** Bereich) und Zeichnen zu beginnen. Die Befehls-ID eine Standard-Schaltfläche zugewiesen ist (ID_BUTTON\<n >).
+   - Wählen Sie die leere Schaltfläche ganz rechts auf der Symbolleiste in der **Symbolleiste anzeigen** Bereich und die Zeichnung zu beginnen. Die Befehls-ID eine Standard-Schaltfläche zugewiesen ist (ID_BUTTON\<n >).
 
-Sie können auch kopieren und fügen Sie ein Image auf einer Symbolleiste als neue Schaltfläche.
-
-So fügen Sie ein Bild als Schaltfläche zu einer Symbolleiste hinzu:
+#### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Hinzufügen eines Bilds zu einer Symbolleiste als Schaltfläche
 
 1. In [Ressourcenansicht](../windows/resource-view-window.md), öffnen Sie die Symbolleiste, indem Sie darauf doppelklicken.
 
 1. Öffnen Sie als Nächstes das Bild, das Sie hinzufügen, klicken Sie auf der Symbolleiste möchten.
 
    > [!NOTE]
-   > Wenn Sie das Bild in Visual Studio öffnen, öffnen sie in der **Image** Editor. Sie können das Bild auch in anderen Grafikprogrammen öffnen.
+   > Wenn Sie das Bild in Visual Studio öffnen, öffnen sie in der **Bildbearbeitung**. Sie können das Bild auch in anderen Grafikprogrammen öffnen.
 
-1. Von der **bearbeiten** Menü wählen **Kopie**.
+1. Wechseln Sie zum Menü **bearbeiten** > **Kopie**.
 
 1. Wechseln Sie durch Auswahl einer Registerkarte am oberen Rand der Datenquellen-Fenster auf der Symbolleiste.
 
-1. Von der **bearbeiten** Menü wählen **einfügen**.
+1. Wechseln Sie zum Menü **bearbeiten** > **einfügen**.
 
    Das Bild wird auf der Symbolleiste als neue Schaltfläche angezeigt.
 
-So verschieben Sie eine Symbolleisten-Schaltfläche:
+#### <a name="to-move-a-toolbar-button"></a>Verschieben eine Symbolleisten-Schaltfläche
 
 In der **Symbolleiste anzeigen** Bereich, ziehen Sie die Schaltfläche, die Sie auf der Symbolleiste am neuen Speicherort verschieben möchten.
 
-Halten Sie zum Kopieren von Schaltflächen von einer Symbolleiste die **STRG** Schlüssel und klicken Sie in der **Symbolleiste anzeigen** Bereich, ziehen Sie die Schaltfläche mit den neuen Speicherort auf der Symbolleiste oder an einem Speicherort auf einer anderen Symbolleiste.
+- Halten Sie zum Kopieren von Schaltflächen von einer Symbolleiste die **STRG** Schlüssel und klicken Sie in der **Symbolleiste anzeigen** Bereich, ziehen Sie die Schaltfläche mit den neuen Speicherort auf der Symbolleiste oder an einem Speicherort auf einer anderen Symbolleiste.
 
-Löschen einer Symbolleisten-Schaltfläche, wählen Sie die Symbolleisten-Schaltfläche, und ziehen es aus der Symbolleiste.
+- Löschen einer Symbolleisten-Schaltfläche, wählen Sie die Symbolleisten-Schaltfläche, und ziehen es aus der Symbolleiste.
 
-Zum Einfügen, oder Entfernen von Leerzeichen zwischen den Schaltflächen einer Symbolleiste aus, entweder ziehen Sie sie aus, oder auf anderen auf der Symbolleiste.
+- Zum Einfügen, oder Entfernen von Leerzeichen zwischen den Schaltflächen einer Symbolleiste aus, entweder ziehen Sie sie aus, oder auf anderen auf der Symbolleiste.
 
 |Aktion|Schritt|
 |------|------|
@@ -175,19 +173,19 @@ Zum Einfügen, oder Entfernen von Leerzeichen zwischen den Schaltflächen einer 
 > [!NOTE]
 > Wenn kein Platz im Zweifelsfall die Schaltfläche, die Sie ist aus ziehen und Sie ziehen Sie die Schaltfläche hinter die benachbarte Schaltfläche mehr als zur Hälfte der **Symbolleisten-Editor** Fügt ein Leerzeichen auf der entgegengesetzten Seite der Schaltfläche, die Sie ziehen können.
 
-So ändern die Eigenschaften einer Symbolleisten-Schaltfläche:
+#### <a name="to-change-the-properties-of-a-toolbar-button"></a>Zum Ändern der Eigenschaften einer Symbolleisten-Schaltfläche
 
 1. Wählen Sie die Symbolleisten-Schaltfläche in einem C++-Projekt.
 
 1. Geben Sie die neue ID in der **ID** -Eigenschaft in der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window), oder verwenden Sie die Dropdownliste, wählen Sie ein neues **ID**.
 
-So erstellen Sie eine QuickInfo für eine Symbolleisten-Schaltfläche:
+#### <a name="to-create-a-tool-tip-for-a-toolbar-button"></a>Um eine QuickInfo für eine Symbolleisten-Schaltfläche zu erstellen.
 
 1. Wählen Sie die Symbolleisten-Schaltfläche.
 
 1. In der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window)in die **Eingabeaufforderung** Feld, eine Beschreibung der Schaltfläche für die Statusleiste und nach der Nachricht hinzufügen, das Hinzufügen von `\n` und den Namen des Tools Tipp.
 
-Beispielsweise sehen die QuickInfo für die **Drucken** Schaltfläche **WordPad**:
+Beispielsweise, um die QuickInfo für finden Sie unter den **Drucken** Schaltfläche **WordPad**:
 
 1. Open **WordPad**.
 

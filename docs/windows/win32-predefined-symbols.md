@@ -6,33 +6,33 @@ helpviewer_keywords:
 - symbols [C++], Win32 predefined
 - Windows API [C++], predefined symbols
 ms.assetid: 45c8e193-ee2a-4024-bfc2-34d1ec9c9239
-ms.openlocfilehash: 2b282db2680b2459fdbece41d3c0e0d15f523e44
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: c7d1250eef52164054f8181fff2384d6a12f0b99
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320444"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562899"
 ---
 # <a name="win32-predefined-symbols"></a>Vordefinierte Win32-Symbole
 
-Diese Symbole werden in den Win32-Headerdateien definiert und Standardfunktionen für Windows-Anwendung und Aktionen unterstützen. Diese Symbole werden hauptsächlich mit allgemeine Elemente der Benutzeroberfläche verwendet. Wenn Sie mit Steuerelementen im Ressourcen-Editor arbeiten, erscheint diese Symbole der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window) Standardsteuerelementen zugeordnet. Z. B. wenn eine Symbolleiste das Symbol der Anwendung angezeigt werden soll, das Symbol zugeordnet werden dem Symbol IDI_SMALL in die **Eigenschaftenfenster**.
+Diese Symbole werden in den Win32-Headerdateien definiert, und Funktionen der standardmäßigen Windows-Anwendung und Aktionen unterstützen. Diese Symbole werden hauptsächlich mit allgemeine Elemente der Benutzeroberfläche verwendet. Wenn Sie mit Steuerelementen im Ressourcen-Editor arbeiten, erscheint diese Symbole der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window) Standardsteuerelementen zugeordnet. Z. B. wenn eine Symbolleiste das Symbol der Anwendung angezeigt werden soll, das Symbol zugeordnet werden dem Symbol IDI_SMALL in die **Eigenschaft** Fenster.
 
 |||
 |-|-|
-|IDABORT|Steuerung: Dialogfeld Abbrechen-Schaltfläche|
-|IDC_STATIC|Steuerung: Statischer Text in einem Dialogfeld|
-|IDCANCEL|Steuerung: Dialogfeld-Schaltfläche "Abbrechen"|
-|IDD_ABOUTBOX|Dialogfeld ": Das Produkt zum Dialogfeld|
-|IDI_PROJECTNAME|Symbol: Projektsymbol für aktuellen|
-|IDI_SMALL|Symbol: Kleines Symbol für aktuellen Projekt|
-|IDIGNORE|Steuerung: Mit der Schaltfläche "ignorieren" auf Dialogfelder verwendet|
-|IDM_ABOUT|Menübefehl: Wird mit Hilfe... Informationen zu...|
-|IDM_EXIT|Menübefehl: Wird mit der Datei... Beenden...|
-|IDNO|Steuerung: Das Dialogfeld keine Schaltfläche "|
-|IDOK|Steuerung: Dialogfeld OK-Schaltfläche|
-|IDRETRY|Steuerung: Dialogfeld "Wiederholen"-Schaltfläche|
-|IDS_APP_TITLE|Zeichenfolge: Name der aktuellen Anwendung|
-|IDYES|Steuerung: Dialogfeld "Ja"-Schaltfläche|
+|IDABORT|(Steuerelement) Klicken Sie im Dialogfeld Abbrechen-Schaltfläche|
+|IDC_STATIC|(Steuerelement) Statischer Text in einem Dialogfeld|
+|IDCANCEL|(Steuerelement) Das Dialogfeld, Schaltfläche "Abbrechen"|
+|IDD_ABOUTBOX|(Dialogfeld) Das Produkt zum Dialogfeld|
+|IDI_PROJECTNAME|(Symbol) Projektsymbol für aktuellen|
+|IDI_SMALL|(Symbol) Kleines Symbol für aktuellen Projekt|
+|IDIGNORE|(Steuerelement) Mit der Schaltfläche "ignorieren" auf Dialogfelder verwendet|
+|IDM_ABOUT|(Menüelement) Wird mit Hilfe... Informationen zu...|
+|IDM_EXIT|(Menüelement) Wird mit der Datei... Beenden...|
+|IDNO|(Steuerelement) Klicken Sie im Dialogfeld keine Schaltfläche "|
+|IDOK|(Steuerelement) Das Dialogfeld, Schaltfläche "OK"|
+|IDRETRY|(Steuerelement) Klicken Sie im Dialogfeld "Wiederholen"-Schaltfläche|
+|IDS_APP_TITLE|(String) Name der aktuellen Anwendung|
+|IDYES|(Steuerelement) Klicken Sie im Dialogfeld "Ja"|
 
 ## <a name="requirements"></a>Anforderungen
 

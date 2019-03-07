@@ -19,16 +19,19 @@ helpviewer_keywords:
 - View Use button
 - resource editors [C++], resource symbols
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-ms.openlocfilehash: 7dda3dc04b055226a0ae9788e6a98f6261256e7f
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: 91092b29d7265904e69b093310daa72b673d8745
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954886"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563380"
 ---
 # <a name="how-to-create-symbols-c"></a>Vorgehensweise: Erstellen Sie die Symbole (C++)
 
 Wenn Sie ein neues Projekt beginnen, kann es zweckmäßig sein, Symbolnamen zuzuordnen, die Sie vor dem Erstellen der Ressourcen, die sie zugewiesen werden, müssen.
+
+> [!NOTE]
+> Wenn Ihr Projekt noch keine RC-Datei enthält, finden Sie unter [Vorgehensweise: Erstellen von Ressourcen](../windows/how-to-create-a-resource-script-file.md).
 
 Die **Ressourcensymbole** Dialogfeld können Sie neue Ressourcensymbole hinzufügen, ändern die Symbole, die angezeigt werden, oder fahren Sie mit der Position im Quellcode, in denen ein Symbol verwendet wird.
 
@@ -36,18 +39,18 @@ Das Dialogfeld enthält die folgenden Eigenschaften:
 
 |Eigenschaft|Beschreibung|
 |--------------------------|------------------------------------------|
-|**Name**|Zeigt den Namen des Symbols an. Weitere Informationen finden Sie unter [Beschränkungen bei Symbolnamen](../windows/symbol-name-restrictions.md).|
-|**Wert**|Zeigt den numerischen Wert des Symbols an. Weitere Informationen finden Sie unter [Beschränkungen für Symbolwerte](../windows/symbol-value-restrictions.md).|
-|**In Verwendung**|Bei Auswahl dieser Option wird angegeben, dass das Symbol von einer oder mehreren Ressourcen verwendet wird. Die Ressourcen sind im Feld „Verwendet von aufgeführt“.|
-|**Schreibgeschützte Symbole anzeigen**|Bei Auswahl dieser Option werden schreibgeschützte Ressourcen angezeigt. In der Standardeinstellung die **Ressourcensymbol** im Dialogfeld werden nur die änderbaren Ressourcen in Ihrer Ressourcenskriptdatei angezeigt, aber diese Option ausgewählt ist, werden änderbare Ressourcen fett und schreibgeschützte Ressourcen werden im nur-Text angezeigt.|
-|**Verwendet von**|Zeigt die Ressource bzw. Ressourcen an, in der/denen das in der Symbolliste markierte Symbol verwendet wird. Um in den Editor für eine bestimmte Ressource verschieben möchten, wählen Sie die Ressource in der **verwendet von** und **Verwendung anzeigen**.|
+|**Name**|Zeigt den Namen des Symbols an.<br/><br/>Weitere Informationen finden Sie unter [Beschränkungen bei Symbolnamen](../windows/symbol-name-restrictions.md).|
+|**Wert**|Zeigt den numerischen Wert des Symbols an.<br/><br/>Weitere Informationen finden Sie unter [Beschränkungen für Symbolwerte](../windows/symbol-value-restrictions.md).|
+|**In Verwendung**|Bei Auswahl dieser Option wird angegeben, dass das Symbol von einer oder mehreren Ressourcen verwendet wird.<br/><br/>Die Ressource bzw. Ressourcen finden Sie in der **von verwendeten** Feld.|
+|**Schreibgeschützte Symbole anzeigen**|Bei Auswahl dieser Option werden schreibgeschützte Ressourcen angezeigt.<br/><br/>In der Standardeinstellung die **Ressourcensymbol** im Dialogfeld werden nur die änderbaren Ressourcen in Ihrer Ressourcenskriptdatei angezeigt, aber diese Option ausgewählt ist, werden änderbare Ressourcen fett und schreibgeschützte Ressourcen werden im nur-Text angezeigt.|
+|**Verwendet von**|Zeigt die Ressource bzw. Ressourcen an, in der/denen das in der Symbolliste markierte Symbol verwendet wird.<br/><br/>Um in den Editor für eine bestimmte Ressource verschieben möchten, wählen Sie die Ressource in der **ein, die** und **Verwendung anzeigen**.|
 |**Neu**|Öffnet die **neues Symbol** Dialogfeld, das Ihnen ermöglicht, definieren den Namen und, falls erforderlich, einen Wert für einen neuen symbolischen Ressourcenbezeichner.|
-|**Änderung**|Öffnet die **Symbol ändern** im Dialogfeld, in dem Sie den Namen oder Wert eines Symbols ändern kann. Wenn das Symbol für ein Steuerelement oder eine Ressource in Gebrauch ist, kann das Symbol nur im entsprechenden Ressourcen-Editor geändert werden. Weitere Informationen finden Sie unter [verwalten Symbole](../windows/changing-unassigned-symbols.md).|
+|**Änderung**|Öffnet die **Symbol ändern** Dialogfeld, das Ihnen ermöglicht, den Namen oder Wert eines Symbols zu ändern.<br/><br/>Wenn das Symbol für ein Steuerelement oder eine Ressource in Gebrauch ist, kann das Symbol nur im entsprechenden Ressourcen-Editor geändert werden. Weitere Informationen finden Sie unter [verwalten Symbole](../windows/changing-unassigned-symbols.md).|
 |**Verwendung anzeigen**|Öffnet die Ressource, die das Symbol enthält, im entsprechenden Ressourcen-Editor.|
 
 ## <a name="create-symbols"></a>Erstellen von Symbolen
 
-So erstellen Sie ein neues Symbol:
+### <a name="to-create-a-new-symbol"></a>Erstellen Sie ein neues symbol
 
 1. In der **Ressourcensymbole** Dialogfeld wählen **neu**.
 
@@ -60,23 +63,18 @@ So erstellen Sie ein neues Symbol:
 > [!NOTE]
 > Wenn Sie einen bereits vorhandenen Symbolnamen eingeben, wird eine Meldung angezeigt, aus der hervorgeht, dass ein Symbol mit diesem Namen bereits definiert ist. Sie können nicht zwei oder mehr Symbole mit demselben Namen definieren, aber Sie können unterschiedliche Symbole mit demselben numerischen Wert definieren.
 
-So zeigen Sie Ressourcensymbole an
+## <a name="to-view-resource-symbols"></a>So zeigen Sie Ressourcensymbole an
 
-1. In [Ressourcenansicht](../windows/resource-view-window.md), mit der rechten Maustaste in der RC-Datei.
+In [Ressourcenansicht](/windows/how-to-create-a-resource-script-file#create-resources), mit der rechten Maustaste Ihre *RC* und wählen Sie **Ressourcensymbole** anzeigen eine Ressourcensymboltabelle im der **Ressourcensymbole**Dialogfeld.
 
-   > [!NOTE]
-   > Wenn Ihr Projekt noch keine RC-Datei enthält, finden Sie unter [Vorgehensweise: Erstellen von Ressourcen](../windows/how-to-create-a-resource-script-file.md).
+> [!NOTE]
+> Vordefinierte Symbole sehen Sie die **schreibgeschützte Symbole anzeigen** Kontrollkästchen.
 
-1. Wählen Sie **Ressourcensymbole** aus dem Kontextmenü zum Anzeigen einer Ressourcensymboltabelle im der **Ressourcensymbole** Dialogfeld.
-
-   > [!NOTE]
-   > Vordefinierte Symbole sehen Sie die **schreibgeschützte Symbole anzeigen** Kontrollkästchen.
-
-So öffnen Sie die Ressourcen-Editor für ein bestimmtes Symbol:
+### <a name="to-open-the-resource-editor-for-a-given-symbol"></a>Öffnen des Ressourcen-Editors für ein bestimmtes symbol
 
 Wenn Sie Symbole im Durchsuchen der **Ressourcensymbole**, sollten Sie weitere Informationen zur Verwendung ein bestimmtes Symbols. Die **Verwendung anzeigen** Schaltfläche bietet eine schnelle Möglichkeit zum Abrufen dieser Informationen.
 
-1. Wählen Sie ein Symbol in der **Namen** im Feld der **Ressourcensymbole** Dialogfeld.
+1. In der **Ressourcensymbole** im Dialogfeld die **Namen** wählen ein Symbol.
 
 1. In der **verwendet von** wählen den Ressourcentyp aus, die Sie interessieren.
 

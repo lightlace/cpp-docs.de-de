@@ -6,19 +6,19 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 71a76da9f4eadfdca0d69873b821f4ea8eb8fc05
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 8edc860db453c4ee9e0dd3fdacb18bbde662accb
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676421"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562964"
 ---
 # <a name="working-with-resource-files"></a>Arbeiten mit Ressourcendateien
 
 > [!WARNING]
 > Dieser Abschnitt gilt für in C++ erstellte Windows-Desktopanwendungen.
 >
-> Informationen zu Ressourcen in die universelle Windows-Plattform-apps, die in C++ geschrieben wurden, finden Sie unter [Definieren von App-Ressourcen](/windows/uwp/app-resources/), oder zum Hinzufügen von Ressourcen für C++ / CLI (verwaltet)-Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*.
+> Informationen zu Ressourcen in die universelle Windows-Plattform-apps, die in C++ geschrieben wurden, finden Sie unter [Definieren von App-Ressourcen](/windows/uwp/app-resources/), oder zum Hinzufügen von Ressourcen für C++ / CLI (verwaltet)-Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in .NET Framework Developer's Guide.
 
 Ressourcen können aus einer Vielzahl von Elementen, wie bestehen:
 
@@ -28,6 +28,9 @@ Ressourcen können aus einer Vielzahl von Elementen, wie bestehen:
 - Menü- und Dialogfeldressourcen.
 
 Sie können Ihrem Projekt neue Ressourcen hinzufügen und diese mit dem entsprechenden Ressourcen-Editor ändern. Die meisten Visual C++-Assistenten generieren automatisch ein RC-Datei für Ihr Projekt.
+
+> [!NOTE]
+> Die **Ressourcen-Editoren** und **Ressourcenansicht** sind in Express-Editionen nicht verfügbar.
 
 Um das manuelle Hinzufügen von Ressourcendateien zu verwalteten Projekten finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Dieser Artikel enthält, wie Sie Zugriff auf Ressourcen anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften.
 
