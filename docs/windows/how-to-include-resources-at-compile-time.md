@@ -23,16 +23,16 @@ helpviewer_keywords:
 - symbols [C++], finding
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: 5768347c32b1856da16310f29e7a4257e18b6a93
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 74c70db5c04a6b56ec7bb2630c8d829151ec4225
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676460"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562834"
 ---
 # <a name="how-to-include-resources-at-compile-time-c"></a>Vorgehensweise: Einfügen von Ressourcen zur Kompilierungszeit (C++)
 
-Befinden sich standardmäßig alle Ressourcen in einer Ressourcenskriptdatei (.rc) Ressourcendatei, es gibt jedoch viele Gründe, um Ressourcen in einer Datei, die wichtigsten RC-Datei erstellt werden:
+Standardmäßig alle Ressourcen in einer Ressourcenskriptdatei (.rc) befinden, aber es gibt viele Gründe, um Ressourcen in einer Datei, die wichtigsten RC-Datei erstellt werden:
 
 - Kommentare zu hinzufügen, das wird nicht gelöscht werden, wenn Sie die RC-Datei speichern.
 
@@ -48,32 +48,32 @@ Wenn Sie über Abschnitte in Ihren vorhandenen RC-Dateien, die eine der folgende
 
 Sie können Ressourcen hinzufügen von anderen Dateien zu Ihrem Projekt zum Zeitpunkt der Kompilierung durch Auflisten der in der **Kompilierzeitdirektiven** im Feld der **Ressourcenincludes** Dialogfeld. Verwenden der **Ressourcenincludes** Dialogfeld so ändern Sie die normale arbeitsanordnung der Umgebung des Projekts zum Speichern aller Ressourcen in der RC-Datei des Projekts und alle [Symbole](../windows/symbols-resource-identifiers.md) in `Resource.h`.
 
-Öffnen Sie zum Einstieg die **Ressourcenincludes** mit der rechten Maustaste einer RC-Datei in das Dialogfeld [Ressourcenansicht](../windows/resource-view-window.md), wählen **Ressourcenincludes** und notieren Sie die folgenden Eigenschaften:
+Öffnen Sie zum Einstieg die **Ressourcenincludes** mit der rechten Maustaste einer RC-Datei in das Dialogfeld [Ressourcenansicht](/windows/how-to-create-a-resource-script-file#create-resources), wählen **Ressourcenincludes** und notieren Sie die folgenden Eigenschaften:
 
 | Eigenschaft | Beschreibung |
 |---|---|
 | **Symbolheaderdatei** | Können Sie den Namen der Headerdatei ändern, wo die Symboldefinitionen für Ihre Ressourcendateien gespeichert werden.<br/><br/>Weitere Informationen finden Sie unter [ändern die Namen von Symbolheaderdateien](../windows/changing-the-names-of-symbol-header-files.md). |
-| **Anweisungen für schreibgeschützte Symbole** | Ermöglicht Ihnen, Headerdateien einzufügen, die Symbole enthalten, die sollte nicht geändert werden. Beispielsweise Symboldateien für andere Projekte freigegeben werden. Dies kann auch die MFC h-Dateien enthalten.<br/><br/>Weitere Informationen finden Sie unter [einschließlich gemeinsam genutzter (schreibgeschützter) oder berechneter Symbole](../windows/including-shared-read-only-or-calculated-symbols.md). |
-| **Kompilierzeitdirektiven** | Können Sie Ressourcendateien einschließen, die erstellt und bearbeitet, separat von den Ressourcen in der Hauptressourcendatei, kompilierzeitanweisungen (z. B. diese Anweisungen, die bedingt Ressourcen einfügen) enthalten oder Ressourcen in einem benutzerdefinierten Format enthalten. Sie können auch der **Kompilierung Feld kompilierzeitanweisungen** zum standard-MFC-Ressourcendateien einzufügen. |
+| **Anweisungen für schreibgeschützte Symbole** | Ermöglicht Ihnen, Headerdateien einzufügen, die Symbole enthalten, die sollte nicht geändert werden.<br/><br/>Beispielsweise Symboldateien für andere Projekte freigegeben werden. Dies kann auch die MFC h-Dateien enthalten. Weitere Informationen finden Sie unter [einschließlich gemeinsam genutzter (schreibgeschützter) oder berechneter Symbole](../windows/including-shared-read-only-or-calculated-symbols.md). |
+| **Kompilierzeitdirektiven** | Können Sie Ressourcendateien einschließen, die erstellt und bearbeitet, separat von den Ressourcen in der Hauptressourcendatei, kompilierzeitanweisungen (z. B. diese Anweisungen, die bedingt Ressourcen einfügen) enthalten oder Ressourcen in einem benutzerdefinierten Format enthalten.<br/><br/>Sie können auch der **Kompilierung Feld kompilierzeitanweisungen** zum standard-MFC-Ressourcendateien einzufügen. |
 
 > [!NOTE]
 > Einträge in diesen Textfeldern angezeigt werden, in der RC-Datei markiert `TEXTINCLUDE 1`, `TEXTINCLUDE 2`, und `TEXTINCLUDE 3` bzw. Weitere Informationen finden Sie unter [TN035: Verwenden mehrerer Ressourcendateien und Headerdateien mit Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md).
 
-Sobald an Ihrer Ressourcendatei mithilfe Änderungen der **Ressourcenincludes** Dialogfeld schließen, und öffnen Sie die RC-Datei, damit die Änderungen wirksam werden.
+Sobald Änderungen an Ihrer Ressourcendatei mithilfe vorgenommen werden die **Ressourcenincludes** (Dialogfeld), müssen Sie schließen und erneut die *RC* -Datei für die Änderungen wirksam werden.
 
 ### <a name="to-include-resources-in-your-project-at-compile-time"></a>So beziehen Sie Ressourcen In Ihr Projekt zum Zeitpunkt der Kompilierung ein
 
-1. Platzieren Sie die Ressourcen in einer Ressourcenskriptdatei mit einem eindeutigen Dateinamen. Verwenden Sie keine *Projectname*RC, da dies der Name der für die Haupt-Ressourcenskriptdatei verwendeten Datei ist.
+1. Platzieren Sie die Ressourcen in einer Ressourcenskriptdatei mit einem eindeutigen Dateinamen. Verwenden Sie keine *projectname.rc*, da dies der Name der für die Haupt-Ressourcenskriptdatei verwendeten Datei ist.
 
-1. Mit der rechten Maustaste in der RC-Datei [Ressourcenansicht](../windows/resource-view-window.md) , und wählen Sie **Ressourcenincludes** aus dem Kontextmenü.
+1. Mit der rechten Maustaste die *RC* Datei [Ressourcenansicht](/windows/how-to-create-a-resource-script-file#create-resources) , und wählen Sie **Ressourcenincludes**.
 
 1. In der **Kompilierzeitdirektiven** hinzu, und die [#include](../preprocessor/hash-include-directive-c-cpp.md) Compilerdirektive, um die neue Ressourcendatei in der Hauptressourcendatei in der Entwicklungsumgebung enthalten.
 
-   Die Ressourcen in Dateien auf diese Weise erfolgen nur Teil der ausführbaren Datei zum Zeitpunkt der Kompilierung und nicht zur Verfügung, für die Bearbeitung oder Änderung, wenn Sie auf die RC-Hauptdatei Datei des Projekts arbeiten. Einbezogene RC-Dateien müssen separat geöffnet werden, und alle Dateien enthalten, ohne die RC-Erweiterung werden nicht auf der Ressourcen-Editor bearbeitet werden.
+Die Ressourcen in Dateien auf diese Weise erfolgen nur Teil der ausführbaren Datei zum Zeitpunkt der Kompilierung und nicht zur Verfügung, für die Bearbeitung oder Änderung, wenn Sie auf die RC-Hauptdatei Datei des Projekts arbeiten. Einbezogene RC-Dateien müssen separat geöffnet werden, und alle Dateien enthalten, ohne die RC-Erweiterung werden nicht auf der Ressourcen-Editor bearbeitet werden.
 
-### <a name="to-specify-include-directories-for-a-specific-resource-rc-file"></a>Angeben der Includeverzeichnisse für eine bestimmte Ressource (RC-Datei)
+### <a name="to-specify-include-directories-for-a-specific-resource-rc-file"></a>Angeben der Includeverzeichnisse für eine bestimmte Ressourcendatei (.rc)
 
-1. Mit der rechten Maustaste in der RC-Datei **Projektmappen-Explorer** , und wählen Sie **Eigenschaften**.
+1. Mit der rechten Maustaste die *RC* Datei **Projektmappen-Explorer** , und wählen Sie **Eigenschaften**.
 
 1. Wählen Sie die **Ressourcen** im linken Bereich den Knoten, und geben Sie Zusätzliche Includeverzeichnisse der **Zusätzliche Includeverzeichnisse** Eigenschaft.
 
@@ -84,7 +84,7 @@ Sobald an Ihrer Ressourcendatei mithilfe Änderungen der **Ressourcenincludes** 
    > [!TIP]
    > Mit [reguläre Ausdrücke](/visualstudio/ide/using-regular-expressions-in-visual-studio) wählen Sie in den Suchergebnissen [in Dateien suchen](/visualstudio/ide/reference/find-command) in die **bearbeiten** Menü anstelle von **Suchsymbol**. Wählen Sie die **verwenden: Reguläre Ausdrücke** Kontrollkästchen in der [suchen (Dialogfeld)](/visualstudio/ide/finding-and-replacing-text) und klicken Sie in der **Suchen nach** Feld können Sie einen Suche mit regulären Ausdruck aus der Dropdown-Liste. Wenn Sie einen Ausdruck aus dieser Liste auswählen, wird dieser als Suchtext im der **Suchen nach** Feld.
 
-1. In der **Suchen nach** Feld, wählen Sie einen früheren Suchbegriff aus der Dropdown-Liste aus, oder geben Sie die Zugriffstaste, die Sie suchen möchten (z. B. `ID_ACCEL1`).
+1. In der **Suchen nach** Feld, wählen Sie einen früheren Suchbegriff aus der Dropdown-Liste aus, oder geben Sie die Zugriffstaste, die Sie suchen z. B., möchten `ID_ACCEL1`.
 
 1. Aktivieren Sie keines der **finden** "Optionen", und wählen Sie **Weitersuchen**.
 
