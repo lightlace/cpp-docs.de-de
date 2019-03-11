@@ -9,16 +9,16 @@ helpviewer_keywords:
 - calling native functions from managed code
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
-ms.openlocfilehash: 97b0221a4ec73be41bb5ba052607dfb5ced233c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 285bfabbd5935df303a39ada11c388713ae24f34
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462037"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743251"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Aufrufen systemeigener Funktionen aus verwaltetem Code
 
-Die Common Language Runtime stellt Platform Invocation Services, oder PInvoke, zur Verfügung, wodurch verwalteter Code Funktionen in C-Format in systemeigenen DLLs (Dynamic Link Libraries) aufrufen kann. Hierbei wird das gleiche Datenmarshalling verwendet wie für die COM-Interoperabilität mit der Laufzeit und für den IJW („It Just Works“)-Mechanismus.
+Die Common Language Runtime stellt Platform Invocation Services, oder PInvoke, zur Verfügung, wodurch verwalteter Code Funktionen in C-Format in systemeigenen DLLs (Dynamic Link Libraries) aufrufen kann. Hierbei wird das gleiche Datenmarshalling verwendet wie für die COM-Interoperabilität mit der Laufzeit und für den IJW ("It Just Works")-Mechanismus.
 
 Weitere Informationen finden Sie unter:
 
@@ -134,7 +134,7 @@ Die Schwierigkeit dabei ist, dass wir den Speicher für die nicht verwaltete Zei
 
 ## <a name="limitations-of-pinvoke"></a>Beschränkungen von PInvoke
 
-Sie dürfen nicht den gleichen exakten Zeiger von einer systemeigenen Funktion zurückgeben lassen, den Sie als Parameter verwendet haben. Gibt eine systemeigene Funktion den Zeiger zurück, der mit PInvoke für sie gemarshallt wurde, kann dies Speicherschäden und Ausnahmen zur Folge haben.
+Sie dürfen nicht den gleichen exakten Zeiger von einer systemeigenen Funktion zurückgeben lassen, den Sie als Parameter verwendet haben. Gibt eine native Funktion den Zeiger zurück, der mit PInvoke für sie gemarshallt wurde, kann dies Speicherschäden und Ausnahmen zur Folge haben.
 
 ```cpp
 __declspec(dllexport)

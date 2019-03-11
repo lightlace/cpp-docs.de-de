@@ -7,12 +7,12 @@ helpviewer_keywords:
 - template libraries
 - libraries, Standard C++
 ms.assetid: a37d3ba3-58af-47c7-9ee2-441ccd7b77ee
-ms.openlocfilehash: b6886f87aefdf57706a1850595986b779c1f2357
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea8bae08def17093a2e663bb21dfe617ae851651
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575950"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752297"
 ---
 # <a name="c-standard-library-reference"></a>C++-Standardbibliotheksreferenz
 
@@ -30,4 +30,3 @@ Bietet eine Übersicht der Implementierung von Microsoft für die C++-Standardbi
 
 [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
 Bietet Links zu Referenzthemen, in denen die Headerdateien der C++-Standardbibliothek mit Codebeispielen erörtert werden.
-

@@ -1,19 +1,19 @@
 ---
-title: 'Gewusst wie: Kapseln einer systemeigenen Klasse zur Verwendung in C#'
+title: 'Vorgehensweise: Kapseln einer systemeigenen Klasse zur Verwendung durchC#'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - native code [C++], Visual C# and
 - classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
-ms.openlocfilehash: dc61c9749492f2f0dbe0c6b60abc2a9030cab4d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e58530577fdcc87f4ca168b6976a848cba29b372
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588096"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751634"
 ---
-# <a name="how-to-wrap-native-class-for-use-by-c"></a>Gewusst wie: Kapseln einer systemeigenen Klasse zur Verwendung in C#
+# <a name="how-to-wrap-native-class-for-use-by-c"></a>Vorgehensweise: Kapseln einer systemeigenen Klasse zur Verwendung durchC#
 
 Dieses Beispiel zeigt, wie Sie eine systemeigene C++-Klasse zu umschließen, damit sie von Code in c# oder anderen genutzt werden kann.
 

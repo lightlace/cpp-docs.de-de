@@ -1,23 +1,23 @@
 ---
-title: 'Gewusst wie: Erstellen von leeren CLR-Projekten'
+title: 'Vorgehensweise: Erstellen von leeren CLR-Projekten'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CLR empty projects
 - CLR empty projects, creating
 ms.assetid: edb4574f-fea7-426d-9b5c-fa4ecad2befb
-ms.openlocfilehash: 0acfa073d0aa11dec63ad26f1fac4ec206cda6c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3779887a91b69848d767c15af4a53ff2e87b760c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612133"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740481"
 ---
-# <a name="how-to-create-clr-empty-projects"></a>Gewusst wie: Erstellen von leeren CLR-Projekten
+# <a name="how-to-create-clr-empty-projects"></a>Vorgehensweise: Erstellen von leeren CLR-Projekten
 
 Verwenden Sie zum Erstellen einer leeren CLR-Projekts die **leeres CLR-Projekt** Vorlage, die in der **neues Projekt** im Dialogfeld.
 
 > [!NOTE]
->  Die in der IDE dargestellten Funktionen können sich je nach den aktiven Einstellungen oder der verwendeten Version von den in der Hilfe beschriebenen Funktionen unterscheiden. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).
+>  Die in der IDE dargestellten Features können sich je nach den aktiven Einstellungen oder der verwendeten Version von den in der Hilfe beschriebenen Features unterscheiden. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
 ### <a name="to-create-a-clr-empty-project"></a>Zum Erstellen eines leeren CLR-Projekts
 

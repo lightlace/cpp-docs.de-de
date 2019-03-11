@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Laden von nicht verwalteten Ressourcen in ein Byte-Array'
+title: 'Vorgehensweise: Laden von nicht verwalteten Ressourcen in ein Byte-Array'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - unmanaged resources, loading into Byte array
 - native resources
 ms.assetid: cdada6cd-6d42-437a-a90f-44a0b18d6a93
-ms.openlocfilehash: d7d35af462a2d598995f222221a4023d09c73ff3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 641bdf4429bca35800e3fbbbb7622f2651bb3fee
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579881"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751569"
 ---
-# <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>Gewusst wie: Laden von nicht verwalteten Ressourcen in ein Byte-Array
+# <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>Vorgehensweise: Laden von nicht verwalteten Ressourcen in ein Byte-Array
 
 In diesem Thema wird erläutert, verschiedene Möglichkeiten zum Laden von nicht verwalteter Ressourcen in einem <xref:System.Byte> Array.
 

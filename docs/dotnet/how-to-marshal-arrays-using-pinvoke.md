@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Marshallen von Arrays mit PInvoke'
+title: 'Vorgehensweise: Marshallen von Arrays mit PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - interop [C++], arrays
 - data marshaling [C++], arrays
 ms.assetid: a1237797-a2da-4df4-984a-6333ed3af406
-ms.openlocfilehash: bd349fb1eca63fc336a30f4f23ae337d1191bb26
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60b49135928e3dadffc2a3c7a422646d2f3a768d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628513"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752310"
 ---
-# <a name="how-to-marshal-arrays-using-pinvoke"></a>Gewusst wie: Marshallen von Arrays mit PInvoke
+# <a name="how-to-marshal-arrays-using-pinvoke"></a>Vorgehensweise: Marshallen von Arrays mit PInvoke
 
 In diesem Thema wird erläutert, wie native Funktionen, akzeptieren die Zeichenfolgen im C-Stil können aufgerufen werden, mit dem CLR-String-Datentyp <xref:System.String> mit Plattformaufruf von .NET Framework-Unterstützung. Visual C++-Programmierer werden empfohlen, stattdessen die C++-Interop-Funktionen (wenn möglich), da der P/Invoke bietet wenig Fehler während der Kompilierung, berichterstellung, ist nicht typsicher, und kann einfacher zu implementieren. Wenn die nicht verwaltete API wird als DLL verpackt, und der Quellcode nicht verfügbar ist, wird P/Invoke ist die einzige Option (andernfalls finden Sie unter [mithilfe C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)).
 

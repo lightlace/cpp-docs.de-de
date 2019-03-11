@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Marshallen von Rückrufen und Delegaten mit C++-Interop'
+title: 'Vorgehensweise: Marshallen von Rückrufen und Delegaten mit C++-Interop'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - marshaling [C++], callbacks and delegates
 - callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
-ms.openlocfilehash: b72b99798a2c719f1ba919478132c7133fd71ca1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d3814ffbcd23168a9727b1b1d73e2c825639a9c5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615721"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739217"
 ---
-# <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Gewusst wie: Marshallen von Rückrufen und Delegaten mit C++-Interop
+# <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Vorgehensweise: Marshallen von Rückrufen und Delegaten mit C++-Interop
 
 In diesem Thema wird veranschaulicht, das Marshallen von Rückrufen und Delegaten (die verwaltete Version eines Rückrufs) zwischen verwaltetem und nicht verwaltetem Code mithilfe von Visual C++.
 

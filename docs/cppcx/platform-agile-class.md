@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-ms.openlocfilehash: 9350d94fdff615056fca193d654b2bb001d78d72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86a535bc106e17b276dc5f42a59773aa0de8c361
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471200"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749273"
 ---
 # <a name="platformagile-class"></a>Platform::Agile-Klasse
 
@@ -78,7 +78,7 @@ Die `Agile<T>` -Klasse ist eine systemeigene C++-Standardklasse und erfordert `a
 
 **Unterstützter Server (Min.):** Windows Server 2012
 
-**Namespace:** Platform
+**Namespace:** Plattform
 
 **Header:** agile.h
 
@@ -234,7 +234,7 @@ Der durch den Vorlagentypnamen spezifizierte Typ.
 *object*<br/>
 Das Objekt oder das Handle für ein Objekt, das auf das aktuelle Agile-Objekt kopiert oder verschoben wird.
 
-*LP*<br/>
+*lp*<br/>
 Der IUnknown-Schnittstellenzeiger eines Objekts.
 
 ### <a name="return-value"></a>Rückgabewert

@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-ms.openlocfilehash: ef9838fa8a6a34eac1d2d3531ff93fb124c81d4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac9ee843f5f11d4a42377b16ec77b266238fc461
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607037"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746187"
 ---
 # <a name="platformstring-class"></a>Platform::String-Klasse
 
@@ -66,12 +66,12 @@ Die Zeichenfolgenklasse erbt die Methoden Equals(), Finalize(), GetHashCode(), G
 
 |Methode|Beschreibung|
 |------------|-----------------|
-|[String:: begin](#begin)|Gibt einen Zeiger auf den Anfang der aktuellen Zeichenfolge zurück.|
+|[String::Begin](#begin)|Gibt einen Zeiger auf den Anfang der aktuellen Zeichenfolge zurück.|
 |[String::CompareOrdinal](#compareordinal)|Vergleicht zwei `String` -Objekte durch Auswertung der numerischen Werte der entsprechenden Zeichen in den beiden Zeichenfolgenwerten, die durch die Objekte dargestellt werden.|
 |[String::Concat](#concat)|Verkettet die Werte von zwei Zeichenfolgenobjekten.|
-|[String:: Data](#data)|Gibt einen Zeiger auf den Anfang der aktuellen Zeichenfolge zurück.|
-|[String:: Dispose](#dispose)|Gibt Ressourcen frei.|
-|[String:: End](#end)|Gibt einen Zeiger nach dem Ende der aktuellen Zeichenfolge zurück.|
+|[String::Data](#data)|Gibt einen Zeiger auf den Anfang der aktuellen Zeichenfolge zurück.|
+|[String::Dispose](#dispose)|Gibt Ressourcen frei.|
+|[String::End](#end)|Gibt einen Zeiger nach dem Ende der aktuellen Zeichenfolge zurück.|
 |[String::Equals](#equals)|Gibt an, ob das angegebene Objekt gleich dem aktuellen Objekt ist.|
 |[String::GetHashCode](#gethashcode)|Gibt den Hashcode für diese Instanz zurück.|
 |[String::IsEmpty](#isempty)|Gibt an, ob das aktuelle String-Objekt leer ist.|
@@ -98,7 +98,7 @@ Die Zeichenfolgenklasse hat die folgenden Operatoren.
 
 **Unterstützter Server (Min.):** Windows Server 2012
 
-**Namespace:** Platform
+**Namespace:** Plattform
 
 **Header** vccorlib.h (standardmäßig eingeschlossen)
 
@@ -166,7 +166,7 @@ Das zweite Zeichenfolgenobjekt oder `null`.
 
 Ein neues Zeichenfolgen^-Objekt, dessen Wert die Verkettung der Werte von `str1` und `str2` ist.
 
-Wenn `str1` `null` und `str2` ungleich null ist, wird `str1` zurückgegeben. Wenn `str2` `null` und `str1` ungleich null ist, wird `str2` zurückgegeben. Wenn `str1` und `str2` beide `null` sind, wird die leere Zeichenfolge (L "") zurückgegeben.
+Wenn `str1``null` und `str2` ungleich null ist, wird `str1` zurückgegeben. Wenn `str2``null` und `str1` ungleich null ist, wird `str2` zurückgegeben. Wenn `str1` und `str2` beide `null` sind, wird die leere Zeichenfolge (L "") zurückgegeben.
 
 ## <a name="data"></a>  String:: Data-Methode
 
@@ -387,7 +387,7 @@ Das zweite `String`-Objekt.
 
 Dieser Operator entspricht beim expliziten Aufruf [String:: CompareOrdinal](#compareordinal) und erhalten ein Ergebnis größer als 0 (null).
 
-## <a name="operator-greater-than-or-equals"></a> String:: Operator&gt;=
+## <a name="operator-greater-than-or-equals"></a> String::operator&gt;=
 
 Gibt an, ob der Wert eines `String` Objekt ist größer als oder gleich dem Wert eines zweiten `String` Objekt.
 
@@ -431,7 +431,7 @@ Das zweite zu vergleichende `String`-Objekt.
 
 **"true"** Wenn `str1` ist nicht gleich `str2`ist, andernfalls **"false"**.
 
-## <a name="operator-less-than"></a> String:: Operator&lt;
+## <a name="operator-less-than"></a> String::operator&lt;
 
 Gibt an, ob der Wert eines `String` Objekt ist kleiner als der Wert eines zweiten `String` Objekt.
 
@@ -482,7 +482,7 @@ Wenn Leistung wichtig ist, und Sie die Lebensdauer der Quellzeichenfolge steuern
 String^ s = L"Hello!";
 ```
 
-## <a name="tostring"></a> String:: ToString
+## <a name="tostring"></a> String::ToString
 
 Gibt eine `String` Objekt, dessen Wert der aktuellen Zeichenfolge identisch.
 

@@ -4,12 +4,12 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 63b621bf99a1aeada10706badfe19cde417d7233
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 128b477a2c4252c841990e2a2462029abe5a3bbb
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676499"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746968"
 ---
 # <a name="compiler-options-listed-by-category"></a>Compileroptionen nach Kategorien sortiert
 
@@ -118,9 +118,9 @@ Dieser Artikel enthält eine nach Kategorien sortierte Liste der Compileroptione
 |[/vms](vmm-vms-vmv-general-purpose-representation.md)|Deklariert einfache Vererbung.|
 |[/vmv](vmm-vms-vmv-general-purpose-representation.md)|Deklariert virtuelle Vererbung.|
 |[/Z7](z7-zi-zi-debug-information-format.md)|Generiert C# 7.0-kompatible Debuginformationen.|
-|[/Za](za-ze-disable-language-extensions.md)|Deaktiviert Spracherweiterungen.|
+|[/Za](za-ze-disable-language-extensions.md)|Deaktiviert spracherweiterungen C89.|
 |[/Zc](zc-conformance.md)|Legt Standardverhalten unter [/Ze](za-ze-disable-language-extensions.md)fest.|
-|[/Ze](za-ze-disable-language-extensions.md)|Veraltet. Aktiviert Spracherweiterungen.|
+|[/Ze](za-ze-disable-language-extensions.md)|Veraltet. Aktiviert spracherweiterungen C89.|
 |[/Zf](zf.md)|Verbessert die PDB-Datei Zeitpunkt der Generierung in parallele Builds.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Fügt Debuginformationen in eine Programmdatenbank ein, die mit Bearbeiten und Fortfahren kompatibel ist. (nur x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Erzeugt vollständige Debuginformationen.|

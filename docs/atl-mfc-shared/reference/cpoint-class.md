@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: 4f6ab15f80ac448b4e7383e2db92f22262c20d08
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: cab7aef6fab025174dedb0bf75ee43c49ead0d88
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178068"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740389"
 ---
 # <a name="cpoint-class"></a>CPoint-Klasse
 
@@ -47,10 +47,10 @@ class CPoint : public tagPOINT
 |Name|Beschreibung|
 |----------|-----------------|
 |[CPoint::operator-](#operator_-)|Gibt die Differenz zwischen einer `CPoint` und eine Größe oder die Negation der einen Punkt oder die Differenz der Größe zwischen zwei Punkten der Erde oder den Offset von einer negativen Größe.|
-|[CPoint::operator! =](#operator_neq)|Prüft auf Ungleichheit zwischen zwei Punkten.|
+|[CPoint::operator !=](#operator_neq)|Prüft auf Ungleichheit zwischen zwei Punkten.|
 |[CPoint::operator +](#operator_add)|Gibt die Summe der ein `CPoint` und eine Größe oder ein Punkt oder ein `CRect` um eine Größe verringert.|
 |[CPoint::operator +=](#operator_add_eq)|Offsets `CPoint` einen Größe oder den Punkt hinzufügen.|
-|[CPoint::operator =](#operator_-_eq)|Offsets `CPoint` durch Subtrahieren eine Größe oder den Punkt.|
+|[CPoint::operator -=](#operator_-_eq)|Offsets `CPoint` durch Subtrahieren eine Größe oder den Punkt.|
 |[CPoint::operator ==](#operator_eq_eq)|Prüft auf Gleichheit zwischen zwei Punkten.|
 
 ## <a name="remarks"></a>Hinweise
@@ -153,7 +153,7 @@ Gibt an, der Betrag, um die `x` Mitglied der `CPoint`.
 *yOffset*<br/>
 Gibt an, der Betrag, um die `y` Mitglied der `CPoint`.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt an, wie ( [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) oder `CPoint`) für den offset der `CPoint`.
 
 *size*<br/>
@@ -173,7 +173,7 @@ BOOL operator==(POINT point) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Enthält eine [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Struktur oder `CPoint` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -194,7 +194,7 @@ BOOL operator!=(POINT point) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Enthält eine [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Struktur oder `CPoint` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -219,7 +219,7 @@ void operator+=(POINT point) throw();
 *size*<br/>
 Enthält eine [Größe](/windows/desktop/api/windef/ns-windef-tagsize) Struktur oder [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Enthält eine [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Struktur oder [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -248,7 +248,7 @@ void operator-=(POINT point) throw();
 *size*<br/>
 Enthält eine [Größe](/windows/desktop/api/windef/ns-windef-tagsize) Struktur oder [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Enthält eine [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Struktur oder [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -278,7 +278,7 @@ CRect operator+(const RECT* lpRect) const throw();
 *size*<br/>
 Enthält eine [Größe](/windows/desktop/api/windef/ns-windef-tagsize) Struktur oder [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Enthält eine [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Struktur oder [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt.
 
 *lpRect*<br/>
@@ -311,7 +311,7 @@ CPoint operator-() const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Ein [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Struktur oder [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt.
 
 *size*<br/>
@@ -347,4 +347,3 @@ Verwenden Sie den unäroperator, um einen Punkt zu negieren. Verwenden Sie beisp
 [POINT-Struktur](/windows/desktop/api/windef/ns-windef-tagpoint)<br/>
 [CRect-Klasse](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CSize-Klasse](../../atl-mfc-shared/reference/csize-class.md)
-

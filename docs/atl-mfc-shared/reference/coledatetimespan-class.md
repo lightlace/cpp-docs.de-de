@@ -26,12 +26,12 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: 7bcf4c50577cf7211f90415143edac9fd0df1d5b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: feef238be96d9a04c2c41e6955efec8b23cf6a89
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509330"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748488"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan-Klasse
 
@@ -72,10 +72,10 @@ class COleDateTimeSpan
 
 |||
 |-|-|
-|[Operator +, -](#operator_add_-)|Hinzufügen, subtrahiert werden soll, und ändern Sie das Zeichen für `COleDateTimeSpan` Werte.|
-|[Operator +=, =](#operator_add_eq_-_eq)|Addition und Subtraktion ein `COleDateTimeSpan` Wert aus diesem `COleDateTimeSpan` Wert.|
+|[operator +, -](#operator_add_-)|Hinzufügen, subtrahiert werden soll, und ändern Sie das Zeichen für `COleDateTimeSpan` Werte.|
+|[operator +=, -=](#operator_add_eq_-_eq)|Addition und Subtraktion ein `COleDateTimeSpan` Wert aus diesem `COleDateTimeSpan` Wert.|
 |[operator =](#operator_eq)|Kopiert ein `COleDateTimeSpan` Wert.|
-|[Operator ==, <, < =](#coledatetimespan_relational_operators)|Vergleichen Sie zwei `COleDateTimeSpan` Werte.|
+|[operator ==, <, <=](#coledatetimespan_relational_operators)|Vergleichen Sie zwei `COleDateTimeSpan` Werte.|
 |[Operator double](#operator_double)|Konvertiert diese `COleDateTimeSpan` -Werts in einen **doppelte**.|
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
@@ -97,7 +97,7 @@ Weitere Informationen zu den `COleDateTime` und `COleDateTimeSpan` Klassen finde
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** "atlcomtime.h"
+**Header:** ATLComTime.h
 
 ##  <a name="coledatetimespan_relational_operators"></a>  COleDateTimeSpan-Operatoren (Relational)
 
@@ -207,10 +207,10 @@ Rufen Sie diese Funktionen um eine formatierte Darstellung des Werts Zeitspanne 
 
 Eine kurze Beschreibung der Formate für diese Funktion folgt:
 
-**Format (** *pFormat* **)**<br/>
+**Format(** *pFormat* **)**<br/>
 Dieses Formular formatiert den Wert, der mit der Formatzeichenfolge, die spezielle Formatierungscodes enthält, die ein Prozentzeichen (%) vorangestellt werden, wie in `printf`. Die Formatierungszeichenfolge wird als Parameter an die Funktion übergeben.
 
-**Format (** *nID* **)**<br/>
+**Format(** *nID* **)**<br/>
 Dieses Formular formatiert den Wert, der mit der Formatzeichenfolge, die spezielle Formatierungscodes enthält, die ein Prozentzeichen (%) vorangestellt werden, wie in `printf`. Die Formatierungszeichenfolge ist eine Ressource. Die ID der Ressource, diese Zeichenfolge wird als Parameter übergeben.
 
 ### <a name="example"></a>Beispiel
@@ -641,7 +641,7 @@ Weitere Informationen zu den gültigen, Ungültiger und null-Status-Werte, finde
 
 [!code-cpp[NVC_ATLMFC_Utilities#23](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_10.cpp)]
 
-##  <a name="operator_add_eq_-_eq"></a>  COleDateTimeSpan::operator +=, =
+##  <a name="operator_add_eq_-_eq"></a>  COleDateTimeSpan::operator +=, -=
 
 Addition und Subtraktion ein `COleDateTimeSpan` Wert aus diesem `COleDateTimeSpan` Wert.
 
@@ -758,4 +758,3 @@ Eine kurze Beschreibung dieser Status-Werte finden Sie in der folgenden Liste:
 [CTimeSpan-Klasse](../../atl-mfc-shared/reference/ctimespan-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [Freigegebene ATL-/MFC-Klassen](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

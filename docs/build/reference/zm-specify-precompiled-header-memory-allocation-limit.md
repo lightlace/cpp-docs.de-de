@@ -1,6 +1,6 @@
 ---
 title: /Zm (Begrenzung der Speicherzuweisung für vorkompilierten Header festlegen)
-ms.date: 11/04/2016
+ms.date: 03/08/2019
 f1_keywords:
 - /zm
 helpviewer_keywords:
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - memory allocation, Memory Allocation Limit compiler option
 - -Zm compiler option [C++]
 ms.assetid: 94c77d5e-6672-46a7-92e0-3f69e277727d
-ms.openlocfilehash: d0f79ed1b38401abbc65898193f2305bd432bb28
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3c1362479b2068ee8fb527a4ecaac6e203e83cb0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419919"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751985"
 ---
 # <a name="zm-specify-precompiled-header-memory-allocation-limit"></a>/Zm (Begrenzung der Speicherzuweisung für vorkompilierten Header festlegen)
 
@@ -40,9 +40,11 @@ Die *Faktor* Argument ist ein Prozentsatz der Standardgröße eines Compiler def
 
 ## <a name="remarks"></a>Hinweise
 
-In früheren Versionen von Visual C++ verwendete der Compiler eine Reihe von eigenständigen Heaps, die jeweils über eine feste Begrenzung verfügten. Derzeit werden die Heaps bei Bedarf vom Compiler dynamisch bis zu einem Grenzwert für die Heapgesamtgröße vergrößert; nur zum Erstellen vorkompilierter Header ist ein Puffer mit fester Größe erforderlich. Daher die **/Zm** Compiler-Option ist nur selten notwendig.
+In Versionen vor Visual Studio 2015 der C++-Compiler verwendet die Reihe von eigenständigen Heaps, und jede wurde eine feste Begrenzung. Derzeit der Compiler dynamisch die Heaps bei Bedarf bis zu eine Beschränkung für die Heapgesamtgröße vergrößert, und ermöglicht der vorkompilierten Headerdatei mehrere Adressbereiche enthalten sollen. Daher die **/Zm** Compiler-Option ist nur selten notwendig.
 
-Wenn der Compiler nicht mehr Heapspeicher verfügbar genügend ist, und gibt die [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) Fehlermeldung bei Verwendung der **/Zm** -Compileroption verwenden, Sie haben möglicherweise zu viel Arbeitsspeicher reserviert. Entfernen Sie ggf. die **/Zm** Option. Wenn der Compiler gibt die [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md) Fehlermeldung, die eine zugehörige [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) Nachricht gibt an, der *Faktor* Argument zu verwenden, wenn Sie mit der erneutkompilieren **/Zm** -Compileroption.
+Wenn der Compiler nicht mehr Heapspeicher verfügbar genügend ist, und gibt die [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) Fehlermeldung bei Verwendung der **/Zm** -Compileroption verwenden, Sie haben möglicherweise zu viel Arbeitsspeicher reserviert. Entfernen Sie ggf. die **/Zm** Option.
+
+Wenn der Compiler gibt die [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md) Fehlermeldung, die eine zugehörige [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) Nachricht gibt an, der *Faktor* Argument zu verwenden, wenn Sie mit der erneutkompilieren **/Zm** -Compileroption. Diese Meldung dient nur erheblich, wenn ein vorkompilierter Header verwendet `#pragma hdrstop`. In anderen Fällen ist es ein vermeidbare Fehler aufgrund von Problemen der Windows virtuellen Speichers Druck und die Empfehlung, verwenden die **/Zm** Option ignoriert werden sollen. Erwägen Sie stattdessen die Anzahl der parallelen Prozessen reduziert, bei Verwendung der **maxcpucount** Option aus, um MSBUILD. EXE-Datei in Verbindung mit der **/MP** Option aus, um CL. EXE-DATEI. Weitere Informationen finden Sie unter [Probleme für vorkompilierte Header (PCH) und Empfehlungen](https://devblogs.microsoft.com/cppblog/precompiled-header-pch-issues-and-recommendations/).
 
 Die folgende Tabelle zeigt, wie die *Faktor* Argument wirkt sich auf die Begrenzung der speicherzuweisung aus, wenn Sie davon ausgehen, die Größe des Puffers für den vorkompilierten Header ist 75 MB.
 
@@ -56,15 +58,15 @@ Die folgende Tabelle zeigt, wie die *Faktor* Argument wirkt sich auf die Begrenz
 
 ## <a name="other-ways-to-set-the-memory-allocation-limit"></a>Weitere Möglichkeiten zur Festlegung der maximalen Speicherbelegung
 
-#### <a name="to-set-the-zm-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie die Compileroption "/Zm" in der Visual Studio-Entwicklungsumgebung fest
+### <a name="to-set-the-zm-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie die Compileroption "/Zm" in der Visual Studio-Entwicklungsumgebung fest
 
 1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
 
-1. Wählen Sie im Navigationsbereich **Konfigurationseigenschaften**, **C/C++-**, **Befehlszeile**.
+1. Wählen Sie im Navigationsbereich **Konfigurationseigenschaften** > **C/C++-** > **Befehlszeile**.
 
 1. Geben Sie die **/Zm** -Compileroption in der **zusätzliche Optionen** Feld.
 
-#### <a name="to-set-the-zm-compiler-option-programmatically"></a>So legen Sie die Compileroption "/Zm" programmgesteuert fest
+### <a name="to-set-the-zm-compiler-option-programmatically"></a>So legen Sie die Compileroption "/Zm" programmgesteuert fest
 
 - Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
