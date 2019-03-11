@@ -2,12 +2,12 @@
 title: Typsystem (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-ms.openlocfilehash: 9c8e09dded3743d5928fd1a4db797c6e647ec465
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fbc7a178621624e396c80509703ce1b5b4c19162
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445981"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745953"
 ---
 # <a name="type-system-ccx"></a>Typsystem (C++/CX)
 
@@ -17,15 +17,15 @@ Microsoft entwickelt, um Unterstützung für die Windows-Runtime in einem modern
 
 Eine ausführliche Diskussion der C++/CX-Sprachprojektion und ihrer Funktionsweise finden Sie in folgenden Blogbeiträgen:
 
-1. [C++ / CX Teil 0 von \[n\]: Einführung](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)
+1. [C++ / CX Teil 0 von \[n\]: Eine Einführung in](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)
 
-1. [C++ / CX Teil 1 von \[n\]: eine einfache Klasse](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)
+1. [C++ / CX Teil 1 von \[n\]: Eine einfache Klasse](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)
 
-1. [C++ / CX Teil 2 von \[n\]: Typen mit Hut](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)
+1. [C++ / CX Teil 2 von \[n\]: Typen, die mit Hut](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)
 
-1. [C++ / CX Teil 3 von \[n\]: in Bearbeitung](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)
+1. [C++ / CX Teil 3 von \[n\]: Im Bau](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)
 
-1. [C++ / CX Teil 4 von \[n\]: statische Memberfunktionen](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)
+1. [C++ / CX Teil 4 von \[n\]: Statische Memberfunktionen](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)
 
 ## <a name="windows-metadata-winmd-files"></a>Windows-Metadatendateien (.winmd)
 

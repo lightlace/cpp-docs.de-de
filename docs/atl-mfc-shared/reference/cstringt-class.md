@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: bd8fefd3424ab5ec422adb352972ba846e45139d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9566830de4d3af8f34e8efa5e5ef468acae1fba5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525495"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750870"
 ---
 # <a name="cstringt-class"></a>CStringT-Klasse
 
@@ -114,19 +114,19 @@ Der Zeichentyp der String-Klasse. Einer der folgenden Werte ist möglich:
 *StringTraits*<br/>
 Bestimmt, ob die Zeichenfolgenklasse benötigt Unterstützung für C-Laufzeit (CRT)-Klassenbibliotheken und, wo die Zeichenfolgenressourcen gespeichert sind. Einer der folgenden Werte ist möglich:
 
-- **StrTraitATL < Wchar_t** &#124; **Char** &#124; **TCHAR, ChTraitsCRT < Wchar_t** &#124; **Char** &#124;  **TCHAR >>**
+- **StrTraitATL< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT< wchar_t** &#124; **char** &#124; **TCHAR > >**
 
    Die Klasse erfordert, CRT-Unterstützung und sucht nach Ressourcenzeichenfolgen im Modul gemäß `m_hInstResource` (ein Mitglied der Anwendung Module-Klasse).
 
-- **StrTraitATL < Wchar_t** &#124; **Char** &#124; **TCHAR, ChTraitsOS < Wchar_t** &#124; **Char** &#124;  **TCHAR >>**
+- **StrTraitATL< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS< wchar_t** &#124; **char** &#124; **TCHAR > >**
 
    Die Klasse erfordert keine CRT-Unterstützung und sucht nach Ressourcenzeichenfolgen im Modul gemäß `m_hInstResource` (ein Mitglied der Anwendung Module-Klasse).
 
-- **StrTraitMFC < Wchar_t** &#124; **Char** &#124; **TCHAR, ChTraitsCRT < Wchar_t** &#124; **Char** &#124;  **TCHAR >>**
+- **StrTraitMFC< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT< wchar_t** &#124; **char** &#124; **TCHAR > >**
 
    Die Klasse erfordert CRT-Unterstützung und sucht mithilfe der standardmäßigen MFC Suchalgorithmus Ressourcenzeichenfolgen.
 
-- **StrTraitMFC < Wchar_t** &#124; **Char** &#124; **TCHAR, ChTraitsOS < Wchar_t** &#124; **Char** &#124;  **TCHAR >>**
+- **StrTraitMFC< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS< wchar_t** &#124; **char** &#124; **TCHAR > >**
 
    Die Klasse ist keine CRT-Unterstützung und sucht nach Ressourcenzeichenfolgen, die mithilfe der standardmäßigen MFC Suchalgorithmus erforderlich.
 
@@ -137,7 +137,7 @@ Bestimmt, ob die Zeichenfolgenklasse benötigt Unterstützung für C-Laufzeit (C
 |Name|Beschreibung|
 |----------|-----------------|
 |[CStringT::CStringT](#cstringt)|Erstellt eine `CStringT` Objekts auf verschiedene Weise.|
-|[CStringT:: ~ CStringT](#_dtorcstringt)|Zerstört ein `CStringT`-Objekt.|
+|[CStringT::~CStringT](#_dtorcstringt)|Zerstört ein `CStringT`-Objekt.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -186,7 +186,7 @@ Bestimmt, ob die Zeichenfolgenklasse benötigt Unterstützung für C-Laufzeit (C
 |[CStringT::operator +](#operator_add)|Verkettet zwei Zeichenfolgen oder ein Zeichen und eine Zeichenfolge.|
 |[CStringT::operator +=](#operator_add_eq)|Verkettet eine neue Zeichenfolge am Ende einer vorhandenen Zeichenfolge.|
 |[CStringT::operator ==](#operator_eq_eq)|Bestimmt, ob zwei Zeichenfolgen logisch gleich sind.|
-|[CStringT::operator! =](#operator_neq)|Bestimmt, ob zwei Zeichenfolgen logisch nicht gleich sind.|
+|[CStringT::operator !=](#operator_neq)|Bestimmt, ob zwei Zeichenfolgen logisch nicht gleich sind.|
 |[CStringT::operator &lt;](#operator_lt)|Bestimmt, ob die Zeichenfolge auf der linken Seite des Operators kleiner als die Zeichenfolge auf der rechten Seite.|
 |[CStringT::operator &gt;](#operator_gt)|Bestimmt, ob die Zeichenfolge links vom Operator größer als die Zeichenfolge auf der rechten Seite ist.|
 |[CStringT::operator &lt;=](#operator_lt_eq)|Bestimmt, ob die Zeichenfolge links vom Operator kleiner als oder gleich der Zeichenfolge auf der rechten Seite ist.|
@@ -273,7 +273,7 @@ Da `CStringT` verwendet eine Template-Argument, um den Zeichentyp zu definieren 
 
 |Header|Verwenden Sie für|
 |------------|-------------|
-|CStringT.h|Nur MFC-String-Objekte|
+|cstringt.h|Nur MFC-String-Objekte|
 |atlstr.h|MFC-fremde String-Objekte|
 
 ##  <a name="allocsysstring"></a>  CStringT::AllocSysString
@@ -335,7 +335,7 @@ Eine Zeichenfolge Steuerelement formatieren.
 *nFormatID*<br/>
 Der Ressourcenbezeichner für die Zeichenfolge, die die Format-Zeichenfolge enthält.
 
-*Argument*<br/>
+*argument*<br/>
 Optionale Argumente.
 
 ### <a name="remarks"></a>Hinweise
@@ -525,7 +525,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 
 ### <a name="parameters"></a>Parameter
 
-*PCH*<br/>
+*pch*<br/>
 Ein Zeiger auf ein Array von Zeichen Länge *nLength*, enden nicht auf Null.
 
 *nLength*<br/>
@@ -572,7 +572,7 @@ Da die Konstruktoren der Eingabedaten in den neuen zugeordneten Speicher kopiere
 
 - `CStringT(` `LPCWSTR` `lpsz` ): Erstellt eine `CStringT` aus einer Unicodezeichenfolge.
 
-- `CStringT`( `const unsigned char*` `psz` ): Ermöglicht das Erstellen einer `CStringT` von einem Zeiger auf **unsigned Char**.
+- `CStringT`( `const unsigned char*` `psz` ): Ermöglicht es Ihnen, erstellen Sie eine `CStringT` von einem Zeiger auf **unsigned Char**.
 
 > [!NOTE]
 >  Definieren Sie das Makro _CSTRING_DISABLE_NARROW_WIDE_CONVERSION implizite zeichenfolgenkonvertierung zwischen ANSI- und Unicode-Zeichenfolgen zu deaktivieren. Das Makro schließt von Kompilierung-Konstruktoren, die Unterstützung der Konvertierung.
@@ -709,7 +709,7 @@ Der Ressourcenbezeichner für die Zeichenfolge, die die Format-Zeichenfolge enth
 *pszFormat*<br/>
 Eine Zeichenfolge Steuerelement formatieren.
 
-*Argument*<br/>
+*argument*<br/>
 Optionale Argumente.
 
 ### <a name="remarks"></a>Hinweise
@@ -743,7 +743,7 @@ Der Ressourcenbezeichner für die Zeichenfolge, die den Nachrichtentext nicht fo
 *pszFormat*<br/>
 Verweist auf die formatsteuerzeichenfolge. Für einfügungen überprüft wird und entsprechend formatiert. Die Formatzeichenfolge wird-Laufzeitfunktion ähnelt *Printf*-Formatzeichenfolgen formatieren, mit der Ausnahme für die Parameter in beliebiger Reihenfolge eingefügt werden können.
 
-*Argument*<br/>
+*argument*<br/>
 Optionale Argumente.
 
 ### <a name="remarks"></a>Hinweise
@@ -1040,10 +1040,10 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 
 ### <a name="parameters"></a>Parameter
 
-*Kapitel 1*<br/>
+*ch1*<br/>
 Eine ANSI- oder Unicode-Zeichen mit einer Zeichenfolge verketten.
 
-*Ch2*<br/>
+*ch2*<br/>
 Eine ANSI- oder Unicode-Zeichen mit einer Zeichenfolge verketten.
 
 *str1*<br/>
@@ -1141,10 +1141,10 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Kapitel 1*<br/>
+*ch1*<br/>
 Eine ANSI- oder Unicode-Zeichen für den Vergleich.
 
-*Ch2*<br/>
+*ch2*<br/>
 Eine ANSI- oder Unicode-Zeichen für den Vergleich.
 
 *str1*<br/>
@@ -1183,10 +1183,10 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Kapitel 1*<br/>
+*ch1*<br/>
 Eine ANSI- oder Unicode-Zeichen mit einer Zeichenfolge verketten.
 
-*Ch2*<br/>
+*ch2*<br/>
 Eine ANSI- oder Unicode-Zeichen mit einer Zeichenfolge verketten.
 
 *str1*<br/>
@@ -1733,4 +1733,3 @@ Die `CStringT& TrimRight()` Version sind keine Parameter erforderlich. Es entfer
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [Freigegebene ATL-/MFC-Klassen](../../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 [CSimpleStringT-Klasse](../../atl-mfc-shared/reference/csimplestringt-class.md)
-

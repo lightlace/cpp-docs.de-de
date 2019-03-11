@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CStringT class, using
 ms.assetid: 3a9fffb1-6f90-482a-ab69-4003e6084cb5
-ms.openlocfilehash: 60c741ec71e8637650a75d03322e98dc7c361c90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49b21d8a267eb2e8cf8c806ef21b4dd8ab36a1ff
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554286"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740862"
 ---
 # <a name="using-cstringt"></a>Verwenden von CStringT
 
@@ -31,4 +31,3 @@ Enthält Referenzinformationen zu den freigegebenen `CStringT` Klasse.
 ## <a name="see-also"></a>Siehe auch
 
 [Zeichenfolgen (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)
-

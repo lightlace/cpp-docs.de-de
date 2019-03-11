@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Marshallen von Arrays mit C++-Interop'
+title: 'Vorgehensweise: Marshallen von Arrays mithilfe C++-Interop'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - C++ Interop, arrays
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-ms.openlocfilehash: 10cf89d0f14a072318e6b1ef743f386e6ba914cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b27fd65b7d42bff2a009b14c39d9547d8a4a919
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441664"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739995"
 ---
-# <a name="how-to-marshal-arrays-using-c-interop"></a>Gewusst wie: Marshallen von Arrays mit C++-Interop
+# <a name="how-to-marshal-arrays-using-c-interop"></a>Vorgehensweise: Marshallen von Arrays mithilfe C++-Interop
 
 In diesem Thema wird veranschaulicht, einen Aspekt der Visual C++-Interoperabilität. Weitere Informationen finden Sie unter [mithilfe C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 

@@ -6,14 +6,14 @@ helpviewer_keywords:
 - compilation, native types in /clr
 - /clr compiler option [C++], using native types
 ms.assetid: 3a505c90-4adb-4942-9cf9-7d1fdcbc01e7
-ms.openlocfilehash: 0079be21b474858684e1abaaeb363820764a701d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9979113ac4ffc062ddfe8654279af03036984f38
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459952"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746031"
 ---
-# <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>Gewusst wie: Verwenden eines systemeigenen Typs in einer /clr-Kompilierung
+# <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>Vorgehensweise: Verwenden eines nativen Typs in einer/CLR-Kompilierung
 
 Sie können definieren, einen systemeigenen Typ in eine **"/ CLR"** Kompilierung und jede Verwendung dieses nativen Typs von innerhalb der Assembly ist gültig. Allerdings werden systemeigene Typen für die Verwendung von Metadaten verwiesen wird nicht verfügbar.
 

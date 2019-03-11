@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: fb03f7a00dfabe9d082ca761552af99e552d3190
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5466f1d1c8987724aa0768cd8915e06b62b031ad
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499868"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747124"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector-Klasse
 
@@ -71,32 +71,32 @@ Wenn Sie versuchen, eine **Vektor** Typ in einem öffentlichen Rückgabewert ode
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[Vector:: Vector](#ctor)|Initialisiert eine neue Instanz der Vector-Klasse.|
+|[Vector::Vector](#ctor)|Initialisiert eine neue Instanz der Vector-Klasse.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
 |Name|Beschreibung|
 |----------|-----------------|
 |[Vector:: Append](#append)|Fügt das angegebene Element nach dem letzten Element im aktuellen Vektor ein.|
-|[Vector:: Clear](#clear)|Löscht alle Elemente im aktuellen Vector.|
-|[Vector:: First](#first)|Gibt einen Iterator zurück, der das erste Element im Vektor angibt.|
-|[Vector:: GetAt](#getat)|Ruft das Element des aktuellen Vector ab, das durch den angegebenen Index bezeichnet wird.|
-|[Vector:: getmany](#getmany)|Ruft eine Sequenz von Elementen vom aktuellen Vektor ab, die am angegebenen Index beginnt.|
+|[Vector::Clear](#clear)|Löscht alle Elemente im aktuellen Vector.|
+|[Vector::First](#first)|Gibt einen Iterator zurück, der das erste Element im Vektor angibt.|
+|[Vector::GetAt](#getat)|Ruft das Element des aktuellen Vector ab, das durch den angegebenen Index bezeichnet wird.|
+|[Vector::GetMany](#getmany)|Ruft eine Sequenz von Elementen vom aktuellen Vektor ab, die am angegebenen Index beginnt.|
 |[Vector::GetView](#getview)|Gibt eine schreibgeschützte Ansicht eines Vektors zurück; also [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md).|
 |[Vector::IndexOf](#indexof)|Sucht das angegebene Element im aktuellen Vector und gibt, wenn es gefunden wurde, den Index des Elements zurück.|
 |[Vector::InsertAt](#insertat)|Fügt das angegebene Element in den aktuellen Vector nach dem Element ein, das durch den angegebenen Index identifiziert wird.|
-|[Vector:: ReplaceAll](#replaceall)|Löscht die Elemente im aktuellen Vektor und fügt dann die Elemente aus dem angegebenen Array ein.|
+|[Vector::ReplaceAll](#replaceall)|Löscht die Elemente im aktuellen Vektor und fügt dann die Elemente aus dem angegebenen Array ein.|
 |[Vector::RemoveAt](#removeat)|Löscht das Element, das durch den angegebenen Index von dem aktuellen Vektor identifiziert wird.|
 |[Vector::RemoveAtEnd](#removeatend)|Löscht das Element am Ende des aktuellen Vektors.|
-|[Vector:: SetAt](#setat)|Weist den angegebenen Wert dem Element im aktuellen Vektor zu, der vom angegebenen Index identifiziert wird.|
-|[Vector:: Size](#size)|Gibt die Anzahl von Elementen im aktuellen Vector-Objekt zurück.|
+|[Vector::SetAt](#setat)|Weist den angegebenen Wert dem Element im aktuellen Vektor zu, der vom angegebenen Index identifiziert wird.|
+|[Vector::Size](#size)|Gibt die Anzahl von Elementen im aktuellen Vector-Objekt zurück.|
 
 ### <a name="events"></a>Ereignisse
 
 |||
 |-|-|
 |name|Beschreibung|
-|Ereignis [Windows::Foundation::Collection::VectorChangedEventHandler\<T > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Tritt auf, wenn sich der Vektor ändert.|
+|event [Windows::Foundation::Collection::VectorChangedEventHandler\<T>^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Tritt auf, wenn sich der Vektor ändert.|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -226,7 +226,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>Parameter
 
-*Wert*<br/>
+*value*<br/>
 Das Element, das gesucht werden soll.
 
 *index*<br/>
@@ -375,7 +375,7 @@ Die Anzahl von Elementen in einer Auflistung von Objekten, die verwendet wird, u
 *size*<br/>
 Die Anzahl von Elementen im Vector.
 
-*Wert*<br/>
+*value*<br/>
 Ein Wert, der verwendet wird, um die einzelnen Elemente im aktuellen Vector zu initialisieren.
 
 *v*<br/>
@@ -384,7 +384,7 @@ Ein [Lvalues und Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) zu einem [St
 *ptr*<br/>
 Zeiger zu `std::vector`, der verwendet wird, um den aktuellen Vector zu initialisieren.
 
-*Erste*<br/>
+*first*<br/>
 Das erste Element in einer Sequenz von Objekten, die verwendet werden, um den aktuellen Vector zu initialisieren. Der Typ des *erste* übergeben wird, mithilfe von *eine perfekte Weiterleitung*. Weitere Informationen finden Sie unter [RValue-Verweisdeklarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 *last*<br/>

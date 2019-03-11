@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: ff339bc2b144e22d7177638424dd8e617eecfb3b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: fb582106fe2f18e939f11180048a125c683ca2f6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330611"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744393"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray-Klasse
 
@@ -39,12 +39,12 @@ Diese Methoden verfügen über interne Zugreifbarkeit, das heißt, sie sind nur 
 
 |name|Beschreibung|
 |----------|-----------------|
-|[Writeonlyarray:: begin](#begin)|Ein Iterator, der auf das erste Element des Arrays zeigt.|
-|[Writeonlyarray:: Data](#data)|Ein Zeiger auf den Datenpuffer.|
-|[Writeonlyarray:: End](#end)|Ein Iterator, der auf einen Punkt hinter dem letzten Element im Array zeigt.|
-|[Writeonlyarray:: Fastpass](#fastpass)|Gibt an, ob das Array den FastPass-Mechanismus verwenden kann. Dieser stellt eine Optimierung dar, die transparent vom System ausgeführt wird. Verwenden Sie dies nicht in Ihrem Code|
-|[Writeonlyarray:: Length](#length)|Gibt die Anzahl der Elemente des Arrays zurück.|
-|[Writeonlyarray:: Set](#set)|Legt das angegebene Element auf den angegebenen Wert fest.|
+|[WriteOnlyArray::begin](#begin)|Ein Iterator, der auf das erste Element des Arrays zeigt.|
+|[WriteOnlyArray::Data](#data)|Ein Zeiger auf den Datenpuffer.|
+|[WriteOnlyArray::end](#end)|Ein Iterator, der auf einen Punkt hinter dem letzten Element im Array zeigt.|
+|[WriteOnlyArray::FastPass](#fastpass)|Gibt an, ob das Array den FastPass-Mechanismus verwenden kann. Dieser stellt eine Optimierung dar, die transparent vom System ausgeführt wird. Verwenden Sie dies nicht in Ihrem Code|
+|[WriteOnlyArray::Length](#length)|Gibt die Anzahl der Elemente des Arrays zurück.|
+|[WriteOnlyArray::set](#set)|Legt das angegebene Element auf den angegebenen Wert fest.|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -54,9 +54,9 @@ Diese Methoden verfügen über interne Zugreifbarkeit, das heißt, sie sind nur 
 
 Compileroption: **/ZW**
 
-**Metadaten:** platform.winmd
+**Metadaten:** Platform.winmd
 
-**Namespace:** Platform
+**Namespace:** Plattform
 
 ## <a name="begin"></a>  WriteOnlyArray::begin-Methode
 

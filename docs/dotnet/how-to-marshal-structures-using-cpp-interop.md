@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Marshallen von Strukturen mit C++-Interop'
+title: 'Vorgehensweise: Marshallen von Strukturen mit C++-Interop'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: c2080200-f983-4d6e-a557-cd870f060a54
-ms.openlocfilehash: c44b23bf0f73191b86b4970c57313d9bc38c8b7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93aeabc3fe984bee8a9281281320d61dccd182bf
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521328"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739383"
 ---
-# <a name="how-to-marshal-structures-using-c-interop"></a>Gewusst wie: Marshallen von Strukturen mit C++-Interop
+# <a name="how-to-marshal-structures-using-c-interop"></a>Vorgehensweise: Marshallen von Strukturen mit C++-Interop
 
 In diesem Thema wird veranschaulicht, einen Aspekt der Visual C++-Interoperabilität. Weitere Informationen finden Sie unter [mithilfe C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
@@ -24,7 +24,7 @@ Im folgenden code, Beispiele für die Verwendung der [verwaltete, unverwaltete](
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt eine Struktur an eine nicht verwaltete Funktion, von einer verwalteten übergeben, sowohl als Wert und als Verweis. Da die Struktur in diesem Beispiel nur einfache, systeminterne Datentypen enthält (finden Sie unter [blitfähige und nicht blitfähige Typen](/dotnet/framework/interop/blittable-and-non-blittable-types)), kein besonderes Marshalling ist erforderlich. Marshallen von nicht blitfähigen Strukturen, z. B. die, die Zeiger enthalten finden Sie unter [Vorgehensweise: Marshallen eingebetteter Zeiger mithilfe C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
+Das folgende Beispiel zeigt eine Struktur an eine nicht verwaltete Funktion, von einer verwalteten übergeben, sowohl als Wert und als Verweis. Da die Struktur in diesem Beispiel nur einfache, systeminterne Datentypen enthält (finden Sie unter [blitfähige und nicht blitfähige Typen](/dotnet/framework/interop/blittable-and-non-blittable-types)), kein besonderes Marshalling ist erforderlich. Marshallen von nicht blitfähigen Strukturen, z. B. die, die Zeiger enthalten finden Sie unter [Vorgehensweise: Marshallen von eingebetteten Zeigern mit C++-Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
 
 ```
 // PassStruct1.cpp
@@ -82,7 +82,7 @@ int main() {
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel veranschaulicht das Übergeben einer Struktur aus einer nicht verwalteten für eine verwaltete Funktion, ein, nach Wert und Verweis. Da die Struktur in diesem Beispiel nur einfache, systeminterne Datentypen enthält (finden Sie unter [blitfähige und nicht blitfähige Typen](/dotnet/framework/interop/blittable-and-non-blittable-types)), kein besonderes marshalling ist erforderlich. Marshallen von nicht blitfähigen Strukturen, z. B. die, die Zeiger enthalten finden Sie unter [Vorgehensweise: Marshallen eingebetteter Zeiger mithilfe C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
+Das folgende Beispiel veranschaulicht das Übergeben einer Struktur aus einer nicht verwalteten für eine verwaltete Funktion, ein, nach Wert und Verweis. Da die Struktur in diesem Beispiel nur einfache, systeminterne Datentypen enthält (finden Sie unter [blitfähige und nicht blitfähige Typen](/dotnet/framework/interop/blittable-and-non-blittable-types)), kein besonderes marshalling ist erforderlich. Marshallen von nicht blitfähigen Strukturen, z. B. die, die Zeiger enthalten finden Sie unter [Vorgehensweise: Marshallen von eingebetteten Zeigern mit C++-Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
 
 ```
 // PassStruct2.cpp

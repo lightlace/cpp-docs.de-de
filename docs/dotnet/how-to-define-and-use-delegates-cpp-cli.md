@@ -1,17 +1,17 @@
 ---
-title: 'Gewusst wie: Definieren und Verwenden von Delegaten (C++/CLI)'
+title: 'Vorgehensweise: Definieren und Verwenden von Delegaten (C++ / CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
-ms.openlocfilehash: 3254f01a2d6399626ad78bb742a2cfd861d095ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4f6b13d2adf9acb17d97876ae2fe5b693f682a5b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484759"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748709"
 ---
-# <a name="how-to-define-and-use-delegates-ccli"></a>Gewusst wie: Definieren und Verwenden von Delegaten (C++/CLI)
+# <a name="how-to-define-and-use-delegates-ccli"></a>Vorgehensweise: Definieren und Verwenden von Delegaten (C++ / CLI)
 
 In diesem Artikel zeigt, wie zum Definieren und Verarbeiten von Delegaten in C++ / CLI.
 

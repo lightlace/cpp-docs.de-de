@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C++ Support Library, marshaling
 - marshaling, about marshaling
 ms.assetid: 997dd4bc-5f98-408f-b890-f35de9ce3bb8
-ms.openlocfilehash: 9b4bdcb8a6e691d8f9f0f0f0c2e7d852b4885ea6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e3b8f561ce6609eb2afedb527a16c4803f69c53
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486280"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746824"
 ---
 # <a name="overview-of-marshaling-in-c"></a>Übersicht über das Marshalling in C++
 
@@ -54,14 +54,14 @@ Sie können die Marshallingbibliothek mit oder ohne eine [Marshal_context-Klasse
 |std::string|System::String^|marshal_as|marshal_cppstd.h|
 |System::String^|std::wstring|marshal_as|marshal_cppstd.h|
 |std::wstring|System::String^|marshal_as|marshal_cppstd.h|
-|System::String^|CStringT\<Char >|marshal_as|marshal_atl.h|
-|CStringT\<Char >|System::String^|marshal_as|marshal_atl.h|
+|System::String^|CStringT\<char>|marshal_as|marshal_atl.h|
+|CStringT\<char>|System::String^|marshal_as|marshal_atl.h|
 |System::String^|CStringT<wchar_t>|marshal_as|marshal_atl.h|
 |CStringT<wchar_t>|System::String^|marshal_as|marshal_atl.h|
 |System::String^|CComBSTR|marshal_as|marshal_atl.h|
 |CComBSTR|System::String^|marshal_as|marshal_atl.h|
 
-Marshalling erfordert nur einen Kontext, wenn Sie von verwalteten in systemeigene Datentypen marshallen und der systemeigene Typ, den Sie konvertieren, keinen Destruktor zur automatischen Bereinigung besitzt. Der Marshallingkontext zerstört den zugeordneten systemeigenen Datentyp in seinem Destruktor. Daher sind Konvertierungen, die einen Kontext erfordern, nur gültig, bis der Kontext gelöscht wird. Um alle gemarshallten Werte zu speichern, müssen Sie die Werte in Ihre eigenen Variablen kopieren.
+Marshalling erfordert nur einen Kontext, wenn Sie von verwalteten in systemeigene Datentypen marshallen und der systemeigene Typ, den Sie konvertieren, keinen Destruktor zur automatischen Bereinigung besitzt. Der Marshallingkontext zerstört den zugeordneten nativen Datentyp in seinem Destruktor. Daher sind Konvertierungen, die einen Kontext erfordern, nur gültig, bis der Kontext gelöscht wird. Um alle gemarshallten Werte zu speichern, müssen Sie die Werte in Ihre eigenen Variablen kopieren.
 
 > [!NOTE]
 >  Wenn Sie `NULL` in die Zeichenfolge eingebettet haben, ist das Ergebnis des Marshallens der Zeichenfolge nicht garantiert. Durch eine eingebettete `NULL` kann die Zeichenfolge abgeschnitten oder beibehalten werden.

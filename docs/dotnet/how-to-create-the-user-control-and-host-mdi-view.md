@@ -1,19 +1,19 @@
 ---
-title: 'Gewusst wie: Erstellen des Benutzersteuerelements und Hosten der MDI-Ansicht'
+title: 'Vorgehensweise: Erstellen des Benutzersteuerelements und Hosten MDI-Ansicht'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], Windows Forms Controls
 - Windows Forms [C++], MFC support
 ms.assetid: 625b5821-f923-4701-aca0-c1a4ceca4f63
-ms.openlocfilehash: c2705ef1938684d8521316436fccaae367629584
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d535fce47be5504f6f521cda1267344206287da
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509121"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738772"
 ---
-# <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Gewusst wie: Erstellen des Benutzersteuerelements und Hosten der MDI-Ansicht
+# <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Vorgehensweise: Erstellen des Benutzersteuerelements und Hosten MDI-Ansicht
 
 In den folgenden Schritten wird das Erstellen eines .NET Framework-Benutzersteuerelements und das Erstellen des Steuerelements in einer Steuerelementklassenbibliothek (speziell in einem Projekt einer Windows-Steuerelementbibliothek) sowie das Kompilieren des Projekts in eine Assembly veranschaulicht. Das Steuerelement kann dann verwendet werden, aus einer MFC_Anwendung, die von abgeleitete Klassen verwendet [CView-Klasse](../mfc/reference/cview-class.md) und [CWinFormsView-Klasse](../mfc/reference/cwinformsview-class.md).
 

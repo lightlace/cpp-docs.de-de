@@ -1,19 +1,19 @@
 ---
-title: 'Vorgehensweise: DDX-/ DDV-Datenbindung mit Windows Forms'
+title: 'Vorgehensweise: Führen Sie DDX / DDV-Datenbindung mit Windows Forms'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: b2957370-cf1f-4779-94ac-228cd393686c
-ms.openlocfilehash: 793d6728c7726028c02b885784f122792d84dd2e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 558c763fd18cd1569ff23435bf6156b3117f117d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456433"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740948"
 ---
-# <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>Gewusst wie: DDX-/DDV-Datenbindung mit Windows Forms
+# <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>Vorgehensweise: Führen Sie DDX/DDV-Datenbindung mit Windows Forms
 
 [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol) Aufrufe [CWinFormsControl::CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol) zum Erstellen eines Steuerelements mit der Resource-Steuerelement-ID übereinstimmt. Bei Verwendung von `DDX_ManagedControl` für eine `CWinFormsControl` Control (im Assistenten generierte Code), sollten Sie nicht aufrufen `CreateManagedControl` explizit für das Steuerelement.
 

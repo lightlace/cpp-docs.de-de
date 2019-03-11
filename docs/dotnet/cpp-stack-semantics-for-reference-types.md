@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: b2d2d5991f7b52727b366214b8ca9ed4d8e14956
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ba17a56c5274295c44cdc5aa651380d1e6c83d3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607859"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740928"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>C++-Stack-Semantik für Referenztypen
 
@@ -27,7 +27,7 @@ Nicht generiert der Compiler einen Kopierkonstruktor für einen Verweistyp hande
 
 Der Compiler generiert einen standardzuweisungsoperator für einen Verweistyp nicht. Ein Zuweisungsoperator, können Sie ein Objekt, das mithilfe von Stapelsemantik erstellen und initialisieren Sie es mit einem vorhandenen Objekt, das mithilfe von Stapelsemantik erstellt. Ein Zuweisungsoperator für einen Verweistyp hat eine Signatur mit dem folgenden Format: `void operator=( R% ){}`.
 
-Wenn der Destruktor des Typs kritische Ressourcen frei, und Sie Stapelsemantik für Referenztypen verwenden, müssen Sie nicht den Destruktor explizit aufruft (oder rufen Sie `delete`). Weitere Informationen zu Destruktoren in Verweistypen, finden Sie unter [Destruktoren und Finalizer in der Vorgehensweise: definieren und Verarbeiten von Klassen und Strukturen (C++ / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Wenn der Destruktor des Typs kritische Ressourcen frei, und Sie Stapelsemantik für Referenztypen verwenden, müssen Sie nicht den Destruktor explizit aufruft (oder rufen Sie `delete`). Weitere Informationen zu Destruktoren in Verweistypen, finden Sie unter [Destruktoren und Finalizer unter How to: Definieren und Verarbeiten von Klassen und Strukturen (C++ / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 Ein vom Compiler generierten Zuweisungsoperator führen Sie die üblichen standard C++-Regeln mit den folgenden Ergänzungen:
 

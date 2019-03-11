@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CFixedStringT class, using a custom string manager
 ms.assetid: 1cf11fd7-51b8-4b94-87af-02bc25f47dd6
-ms.openlocfilehash: d35c4c998a6e5913cd972312c511b2a102480c81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b6da5d4166b220ef63500d0154ab32dc72b40f4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663161"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740703"
 ---
 # <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT: Beispiel eines benutzerdefinierten Zeichenfolgenmanagers
 
@@ -17,11 +17,11 @@ Die ATL-Bibliothek implementiert ein Beispiel eines benutzerdefinierten zeichenf
 
 Der Konstruktor für `CFixedStringMgr` akzeptiert drei Parameter:
 
-- *pData:* einen Zeiger an den festen `CStringData` Struktur verwendet werden.
+- *pData:* Ein Zeiger auf den festen `CStringData` Struktur verwendet werden.
 
-- *nChars:* die maximale Anzahl von Zeichen der `CStringData` Struktur enthalten kann.
+- *nChars:* Die maximale Anzahl von Zeichen der `CStringData` Struktur enthalten kann.
 
-- *pMgr:* ein Zeiger auf die `IAtlStringMgr` Schnittstelle "backup Zeichenfolge Manager".
+- *pMgr:* Ein Zeiger auf die `IAtlStringMgr` Schnittstelle "backup Zeichenfolge Manager".
 
 Der Konstruktor speichert die Werte der *pData* und *pMgr* in den entsprechenden Membervariablen (`m_pData` und `m_pMgr`). Klicken Sie dann festgelegt die Länge des Puffers zum gleich NULL ist, werden die verfügbaren Länge gleich der maximalen Größe der Puffer mit fester Größe, und der Verweiszähler auf-1. Die Verweisanzahl den Wert gibt an, der Puffer ist gesperrt, und verwenden diese Instanz von `CFixedStringMgr` als Zeichenfolge-Manager.
 
@@ -64,4 +64,3 @@ Wenn der Puffer mit feste Größe nicht verwendet werden, ist `CFixedStringMgr` 
 ## <a name="see-also"></a>Siehe auch
 
 [Speicherverwaltung mit CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
-
