@@ -1,19 +1,19 @@
 ---
-title: 'Gewusst wie: Definieren eines statischen Schnittstellenkonstruktors (C++/CLI)'
+title: 'Vorgehensweise: Definieren ein statischen Schnittstellenkonstruktors (C++ / CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - constructors [C++]
 - static constructors, interface
 - interface static constructor
 ms.assetid: 1f031cb2-e94f-43dc-819b-44cf2faaaa49
-ms.openlocfilehash: 0617454e0957dccc7e28a5172a40273b5d93bede
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc1ef81bdefa5ed5d6418325bb250b7954d87268
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566386"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748608"
 ---
-# <a name="how-to-define-an-interface-static-constructor-ccli"></a>Gewusst wie: Definieren eines statischen Schnittstellenkonstruktors (C++/CLI)
+# <a name="how-to-define-an-interface-static-constructor-ccli"></a>Vorgehensweise: Definieren ein statischen Schnittstellenkonstruktors (C++ / CLI)
 
 Eine Schnittstelle kann einen statischen Konstruktor besitzen, die zum Initialisieren von statischen Datenmembern verwendet werden kann.  Ein statischer Konstruktor wird höchstens einmal aufgerufen werden und wird vor dem beim ersten Zugriff auf Member einer statischen Schnittstelle aufgerufen werden.
 

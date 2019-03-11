@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::SizeT Struct
 ms.assetid: 0803612c-8ba1-430c-9b7b-1bebae88608d
-ms.openlocfilehash: 02fe62165ce40d267f156eaeb3ad93f636c9ab73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f81cb9e1fc2ef7a74cb3878c369e4d7d14e3d90
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604216"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751556"
 ---
 # <a name="platformsizet-value-class"></a>Platform::SizeT-Wertklasse
 
@@ -36,7 +36,7 @@ public ref class SizeT sealed : ValueType
 
 **Unterstützter Server (Min.):** Windows Server 2012
 
-**Namespace:** Platform
+**Namespace:** Plattform
 
 **Metadaten:** platform.winmd
 
@@ -52,10 +52,10 @@ SizeT( uint32 value1 );   SizeT( void* value2 );
 
 ### <a name="parameters"></a>Parameter
 
-*Wert1*<br/>
+*value1*<br/>
 Ein nicht signierter 32-Bit-Wert.
 
-*Wert2*<br/>
+*value2*<br/>
 Zeiger auf einen nicht signierten 32-Bit-Wert.
 
 ## <a name="see-also"></a>Siehe auch

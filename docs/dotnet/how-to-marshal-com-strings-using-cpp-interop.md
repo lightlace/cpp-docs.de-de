@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Marshallen von COM-Zeichenfolgen mit C++-Interop'
+title: 'Vorgehensweise: Marshallen von COM-Zeichenfolgen mit C++-Interop'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-ms.openlocfilehash: 664c9ed973e2dff4467d13742390da8a944eb87a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: baf3a2e6720cd2f72606cf5089e0409df602fee6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559119"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751514"
 ---
-# <a name="how-to-marshal-com-strings-using-c-interop"></a>Gewusst wie: Marshallen von COM-Zeichenfolgen mit C++-Interop
+# <a name="how-to-marshal-com-strings-using-c-interop"></a>Vorgehensweise: Marshallen von COM-Zeichenfolgen mit C++-Interop
 
 In diesem Thema wird veranschaulicht, wie ein BSTR (das grundlegende Zeichenfolgenformat bevorzugt wird in COM-Programmierung) werden kann von einer verwalteten übergeben werden, um eine nicht verwaltete Funktion (und umgekehrt). Für die Interoperation mit anderen Zeichenfolgen-Datentypen, finden Sie unter den folgenden Themen:
 

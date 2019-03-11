@@ -1,19 +1,19 @@
 ---
-title: 'Gewusst wie: Ändern der Verweisklasse in einer systemeigenen Funktion'
+title: 'Vorgehensweise: Ändern der Verweisklasse in einer systemeigenen Funktion'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - platform invoke, reference class
 - reference types, modifying in a C++ native function
 ms.assetid: c701145b-62a0-4c4b-b32a-db8d69a59720
-ms.openlocfilehash: 20ebf23cf97eb6232698e8c5f59f2f0531beb55b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c24bca5269cc924482c727d921fd24310f016824
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528062"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738129"
 ---
-# <a name="how-to-modify-reference-class-in-a-native-function"></a>Gewusst wie: Ändern der Verweisklasse in einer systemeigenen Funktion
+# <a name="how-to-modify-reference-class-in-a-native-function"></a>Vorgehensweise: Ändern der Verweisklasse in einer systemeigenen Funktion
 
 Sie können eine Verweisklasse mit einem CLR-Array an eine native Funktion übergeben, und ändern Sie die Klasse, auf die mithilfe von PInvoke-Dienste.
 

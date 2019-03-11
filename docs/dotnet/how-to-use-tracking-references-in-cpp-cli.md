@@ -1,17 +1,17 @@
 ---
-title: 'Gewusst wie: Verwenden von Nachverfolgungsverweisen in C++/CLI'
+title: 'Vorgehensweise: Verwenden von Nachverfolgungsverweisen in C++ / CLI'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
-ms.openlocfilehash: 8b95f6e3a5d98676134622e5c8805c6c031a1a80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf4d528fe23ee6959b770bfce859d24d2f3403cf
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454785"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746239"
 ---
-# <a name="how-to-use-tracking-references-in-ccli"></a>Gewusst wie: Verwenden von Nachverfolgungsverweisen in C++/CLI
+# <a name="how-to-use-tracking-references-in-ccli"></a>Vorgehensweise: Verwenden von Nachverfolgungsverweisen in C++ / CLI
 
 In diesem Artikel veranschaulicht, wie einen Nachverfolgungsverweis (%) in C++ / CLI für die common Language Runtime (CLR)-Typen als Verweis zu übergeben.
 

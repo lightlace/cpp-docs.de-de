@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-ms.openlocfilehash: 8579b3506d727f5c4faeb56a9c1f3ea88b7a4b6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d37d55c56e3c23d8d9129c985cb4272d2e3ee47a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464960"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743419"
 ---
 # <a name="platformexception-class"></a>Platform::Exception-Klasse
 
@@ -37,7 +37,7 @@ Die `Exception` -Klasse verfügt auch über die folgenden Arten von Membern.
 
 |Member|Beschreibung|
 |------------|-----------------|
-|[Exception:: Exception](#ctor)|Initialisiert eine neue Instanz der `Exception`-Klasse.|
+|[Exception::Exception](#ctor)|Initialisiert eine neue Instanz der `Exception`-Klasse.|
 
 ### <a name="methods"></a>Methoden
 
@@ -53,7 +53,7 @@ Die Ausnahmeklasse verfügt auch über die folgenden Eigenschaften:
 
 |Member|Beschreibung|
 |------------|-----------------|
-|[Exception:: HRESULT](#hresult)|Das HRESULT, das der Ausnahme entspricht.|
+|[Exception::HResult](#hresult)|Das HRESULT, das der Ausnahme entspricht.|
 |[Exception::Message](#message)|Eine Meldung, in der die Ausnahme beschrieben wird. Dieser Wert ist schreibgeschützt und kann nicht geändert werden, nachdem `Exception` erstellt wurde.|
 
 ### <a name="requirements"></a>Anforderungen
@@ -62,7 +62,7 @@ Die Ausnahmeklasse verfügt auch über die folgenden Eigenschaften:
 
 **Unterstützter Server (Min.):** Windows Server 2012
 
-**Namespace:** Platform
+**Namespace:** Plattform
 
 **Metadaten:** platform.winmd
 
@@ -79,7 +79,7 @@ Exception^ CreateException(int32 hr, Platform::String^ message);
 
 ### <a name="parameters"></a>Parameter
 
-*HR*<br/>
+*hr*<br/>
 Ein HRESULT-Wert, den Sie in der Regel aus einem Aufruf an eine COM-Methode erhalten. Wenn der Wert 0 (null) die identisch mit S_OK ist ist, löst diese Methode [Platform:: InvalidArgumentException](../cppcx/platform-invalidargumentexception-class.md) da COM-Methoden keine Ausnahmen auslösen sollen.
 
 *message*<br/>
@@ -108,7 +108,7 @@ Exception(int32 hresult, ::Platform::String^ message);
 
 ### <a name="parameters"></a>Parameter
 
-*HRESULT*<br/>
+*hresult*<br/>
 Der Fehler HRESULT, der durch die Ausnahme repräsentiert wird.
 
 *message*<br/>

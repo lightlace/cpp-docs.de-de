@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Auffangen von Windows Forms-Ereignissen aus systemeigenen C++-Klassen'
+title: 'Vorgehensweise: Auffangen von Windows Forms-Ereignissen aus systemeigenen C++-Klassen'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - event handling, .NET/native interop
 - event handling, Windows Forms in C++
 ms.assetid: 6e30ddee-d058-4c8d-9956-2a43d86f19d5
-ms.openlocfilehash: 1bc601a4dbd7a51695b6964ab4d0ee47531c1b2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d02bcea4efce03c8fb11650d344468236737cfbd
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555908"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738780"
 ---
-# <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>Gewusst wie: Auffangen von Windows Forms-Ereignissen aus systemeigenen C++-Klassen
+# <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>Vorgehensweise: Auffangen von Windows Forms-Ereignissen aus systemeigenen C++-Klassen
 
 Sie können native C++-Klassen zum Empfangen von Rückrufen von verwalteten Ereignissen in Windows Forms-Steuerelemente oder andere Formen mit das Format der MFC-Makros aktivieren. Auffangen von Ereignissen in Ansichten und Dialogfelder ist ähnlich wie die gleiche Aufgabe für Steuerelemente.
 
@@ -25,7 +25,7 @@ Zu diesem Zweck müssen Sie:
 
 - Erstellen Sie ein Delegat-Zuordnung mit [BEGIN_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#begin_delegate_map), [END_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#end_delegate_map), und [EVENT_DELEGATE_ENTRY](../mfc/reference/delegate-and-interface-maps.md#event_delegate_entry).
 
-In diesem Beispiel wird die Arbeit aus weiterhin [wie: tun DDX-/DDV-Datenbindung mit Windows Forms](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
+In diesem Beispiel wird die Arbeit aus weiterhin [Vorgehensweise: DDX/DDV-Datenbindung mit Windows Forms](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
 
 Nun, verknüpfen Sie Ihr MFC-Steuerelement (`m_MyControl`) mit einem verwalteten Ereignishandlerdelegaten aufgerufen `OnClick` für den verwalteten <xref:System.Windows.Forms.Control.Click> Ereignis.
 

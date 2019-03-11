@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Umwandeln von char * String nach System::Byte Array'
+title: 'Vorgehensweise: Umwandeln von Char * String nach System:: Byte Array'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - character arrays, converting to System::Byte arrays
 - examples [C++], arrays
 ms.assetid: de9bc4eb-773c-4796-a496-9b90ca986503
-ms.openlocfilehash: 26ef83533e7da1d272c31a54165626f513a5508a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ef84e31ee3db703857e3b28ef70dda8d5d01229
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594726"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741712"
 ---
-# <a name="how-to-convert-char--string-to-systembyte-array"></a>Gewusst wie: Umwandeln von Char \* String nach System:: Byte Array
+# <a name="how-to-convert-char--string-to-systembyte-array"></a>Vorgehensweise: Umwandeln von Char \* String nach System:: Byte Array
 
 Die effizienteste Umwandlung einer `char *`-Zeichenfolge in ein <xref:System.Byte>-Array verwendet die <xref:System.Runtime.InteropServices.Marshal>-Klasse.
 

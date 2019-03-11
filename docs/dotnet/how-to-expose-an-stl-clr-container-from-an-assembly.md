@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Einen STL/CLR-Container einer Assembly verfügbar machen'
+title: 'Vorgehensweise: Machen Sie einen STL/CLR-Container aus einer Assembly verfügbar'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 - STL/CLR, cross-assembly issues
 ms.assetid: 87efb41b-3db3-4498-a2e7-f3ef8a99f04d
-ms.openlocfilehash: ba881210f7ee48acd0e92dce3432cae92f3072ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 206a95cbaa808f54d7ae0e500b5a2bea272d974b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590085"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748436"
 ---
-# <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>Gewusst wie: Einen STL/CLR-Container einer Assembly verfügbar machen
+# <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>Vorgehensweise: Machen Sie einen STL/CLR-Container aus einer Assembly verfügbar
 
 STL/CLR-Container, z. B. `list` und `map` werden als vorlagenverweisklassen implementiert. Da C++-Vorlagen zum Zeitpunkt der Kompilierung instanziiert werden, sind zwei Vorlagenklassen, die genau die gleiche Signatur haben, aber in verschiedenen Assemblys sind tatsächlich verschiedene Typen. Dies bedeutet, dass Vorlagenklassen können nicht über assemblygrenzen hinweg verwendet werden.
 
@@ -26,7 +26,7 @@ Da dieser Typdefinitionen im C++-Headerdateien deklariert werden, können keine 
 
 Die folgende Tabelle enthält die generische Schnittstelle, die jeder STL/CLR-Container implementiert:
 
-|STL/CLR-container|Generische Schnittstelle|
+|STL/CLR container|Generische Schnittstelle|
 |------------------------|-----------------------|
 |`deque<T>`|`ICollection<T>`|
 |`hash_map<K, V>`|`IDictionary<K, V>`|
@@ -195,7 +195,7 @@ namespace StlClrClassLibrary
 }
 ```
 
-## <a name="example-3"></a>Beispiel 3
+## <a name="example-3"></a>Beispiel 3
 
 ### <a name="description"></a>Beschreibung
 

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: 5e9d4b5c28adceb52078c13dbf18170e7a2b19e5
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: fadb430d570e516d915d520f06e4c247b131c3db
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178752"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739422"
 ---
 # <a name="crect-class"></a>CRect-Klasse
 
@@ -76,7 +76,7 @@ class CRect : public tagRECT
 |[CRect::MoveToX](#movetox)|Verschiebt `CRect` an der angegebenen X-Koordinate.|
 |[CRect::MoveToXY](#movetoxy)|Verschiebt `CRect` auf den angegebenen x- und y-Koordinaten.|
 |[CRect::MoveToY](#movetoy)|Verschiebt `CRect` auf den angegebenen y-Koordinate.|
-|[CRect:: NormalizeRect](#normalizerect)|Standardisiert die Höhe und Breite des `CRect`.|
+|[CRect::NormalizeRect](#normalizerect)|Standardisiert die Höhe und Breite des `CRect`.|
 |[CRect::OffsetRect](#offsetrect)|Verschiebt `CRect` durch die angegebenen Offsets.|
 |[CRect::PtInRect](#ptinrect)|Bestimmt, ob der angegebene Punkt innerhalb liegt `CRect`.|
 |[CRect::SetRect](#setrect)|Gibt die Abmessungen des `CRect`.|
@@ -94,15 +94,15 @@ class CRect : public tagRECT
 |[CRect::operator-](#operator_-)|Subtrahiert den angegebenen Offsets von `CRect` oder entleert `CRect` und gibt das resultierende `CRect`.|
 |[CRect::operator LPCRECT](#operator_lpcrect)|Konvertiert ein `CRect`-Element in ein `LPCRECT`-Element.|
 |[CRect::operator LPRECT](#operator_lprect)|Konvertiert ein `CRect`-Element in ein `LPRECT`-Element.|
-|[CRect::operator! =](#operator_neq)|Bestimmt, ob `CRect` entspricht keinem Rechteck.|
+|[CRect::operator !=](#operator_neq)|Bestimmt, ob `CRect` entspricht keinem Rechteck.|
 |[CRect::operator &amp;](#operator_amp)|Erstellt die Schnittmenge der `CRect` und ein Rechteck und gibt das resultierende `CRect`.|
 |[CRect::operator &amp;=](#operator_amp_eq)|Legt `CRect` gleich für die Schnittmenge der `CRect` und ein Rechteck.|
-|[CRect::operator&#124;](#operator_or)|Erstellt die Union der `CRect` und ein Rechteck und gibt das resultierende `CRect`.|
+|[CRect::operator &#124;](#operator_or)|Erstellt die Union der `CRect` und ein Rechteck und gibt das resultierende `CRect`.|
 |[CRect::operator &#124;=](#operator_or_eq)|Legt `CRect` bezüglich ihrer Gesamtmenge gleich `CRect` und ein Rechteck.|
 |[CRect::operator +](#operator_add)|Fügt die angegebenen Offsets zu ILS der `CRect` oder vergrößert `CRect` und gibt das resultierende `CRect`.|
 |[CRect::operator +=](#operator_add_eq)|Fügt die angegebenen Offsets `CRect` oder vergrößert `CRect`.|
 |[CRect::operator =](#operator_eq)|Kopiert die Abmessungen eines Rechtecks an `CRect`.|
-|[CRect::operator =](#operator_-_eq)|Subtrahiert den angegebenen Offsets von `CRect` oder entleert `CRect`.|
+|[CRect::operator -=](#operator_-_eq)|Subtrahiert den angegebenen Offsets von `CRect` oder entleert `CRect`.|
 |[CRect::operator ==](#operator_eq_eq)|Bestimmt, ob `CRect` entspricht einem Rechteck.|
 
 ## <a name="remarks"></a>Hinweise
@@ -306,7 +306,7 @@ Bezieht sich auf die [RECT](/windows/desktop/api/windef/ns-windef-tagrect) Struk
 *lpSrcRect*<br/>
 Verweist auf die `RECT` Struktur mit den Koordinaten für `CRect`.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Gibt den Ausgangspunkt für das Rechteck erstellt werden soll. Entspricht der linken oberen Ecke.
 
 *size*<br/>
@@ -696,7 +696,7 @@ Die absolute X-Koordinate für die linke obere Ecke des Rechtecks.
 *y*<br/>
 Die absolute y-Koordinate für die linke obere Ecke des Rechtecks.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Ein `POINT` -Struktur, die die absolute linke obere Ecke des Rechtecks angibt.
 
 ### <a name="example"></a>Beispiel
@@ -733,7 +733,7 @@ Die absolute y-Koordinate für die linke obere Ecke des Rechtecks.
    ASSERT(rect == CRect(0, 10, 100, 110));
 ```
 
-##  <a name="normalizerect"></a>  CRect:: NormalizeRect
+##  <a name="normalizerect"></a>  CRect::NormalizeRect
 
 Normalisiert `CRect` , damit die Höhe und Breite nicht sicher sind.
 
@@ -776,7 +776,7 @@ Gibt die Menge, die zum Verschieben von links oder rechts. Sie müssen nach link
 *y*<br/>
 Gibt an, der Betrag, um nach oben oder unten zu verschieben. Es muss negativen nach oben zu verschieben.
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Enthält eine [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Struktur oder [CPoint](cpoint-class.md) Objekt, das beide Dimensionen, um die verschoben angibt.
 
 *size*<br/>
@@ -855,7 +855,7 @@ BOOL operator==(const RECT& rect) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 Bezieht sich auf einem Quellrechteck. Kann eine [RECT](/windows/desktop/api/windef/ns-windef-tagrect) oder `CRect`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -895,7 +895,7 @@ BOOL operator!=(const RECT& rect) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 Bezieht sich auf einem Quellrechteck. Kann eine [RECT](/windows/desktop/api/windef/ns-windef-tagrect) oder `CRect`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -937,7 +937,7 @@ void operator+=(LPCRECT lpRect) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Ein [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Struktur oder [CPoint](cpoint-class.md) Objekt, das die Anzahl der Einheiten, um das Rechteck verschieben angibt.
 
 *size*<br/>
@@ -975,7 +975,7 @@ void operator-=(LPCRECT lpRect) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Ein [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Struktur oder [CPoint](cpoint-class.md) Objekt, das die Anzahl der Einheiten, um das Rechteck verschieben angibt.
 
 *size*<br/>
@@ -1011,7 +1011,7 @@ void operator&=(const RECT& rect) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 Enthält eine [RECT](/windows/desktop/api/windef/ns-windef-tagrect) oder `CRect`.
 
 ### <a name="remarks"></a>Hinweise
@@ -1035,7 +1035,7 @@ void operator|=(const RECT& rect) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Rect*<br/>
+*rect*<br/>
 Enthält eine `CRect` oder [RECT](/windows/desktop/api/windef/ns-windef-tagrect).
 
 ### <a name="remarks"></a>Hinweise
@@ -1068,7 +1068,7 @@ CRect operator+(SIZE size) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Ein [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Struktur oder [CPoint](cpoint-class.md) Objekt, das die Anzahl der Einheiten, verschieben Sie den Rückgabewert angibt.
 
 *size*<br/>
@@ -1111,7 +1111,7 @@ CRect operator-(LPCRECT lpRect) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Ein [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Struktur oder `CPoint` Objekt, das die Anzahl der Einheiten, verschieben Sie den Rückgabewert angibt.
 
 *size*<br/>
@@ -1225,7 +1225,7 @@ BOOL PtInRect(POINT point) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*Zeigen Sie*<br/>
+*point*<br/>
 Enthält eine [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Struktur oder [CPoint](cpoint-class.md) Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1286,7 +1286,7 @@ Gibt die y-Koordinate der oberen linken Ecke an.
 *x2*<br/>
 Gibt die X-Koordinate der unteren rechten Ecke.
 
-*Y2*<br/>
+*y2*<br/>
 Gibt die y-Koordinate der unteren rechten Ecke.
 
 ### <a name="example"></a>Beispiel
@@ -1504,4 +1504,3 @@ Die Breite kann negativ sein.
 [CPoint-Klasse](cpoint-class.md)<br/>
 [CSize-Klasse](csize-class.md)<br/>
 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)
-

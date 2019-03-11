@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Verwenden von Eigenschaften in C++/CLI'
+title: 'Vorgehensweise: Verwenden von Eigenschaften in C++ / CLI'
 ms.date: 07/21/2017
 helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: 546c729245fb0c941f07e9222b71670278c44fde
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f29bf419ca19ce1bbe45e36adb08d7f4e5629f5a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617489"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739283"
 ---
-# <a name="how-to-use-properties-in-ccli"></a>Gewusst wie: Verwenden von Eigenschaften in C++/CLI
+# <a name="how-to-use-properties-in-ccli"></a>Vorgehensweise: Verwenden von Eigenschaften in C++ / CLI
 
 In diesem Artikel veranschaulicht, wie Eigenschaften in C++ / CLI.
 
@@ -88,7 +88,7 @@ Eine indizierte Eigenschaft macht in der Regel eine Datenstruktur, die mit einem
 
 Bei Verwendung eine indizierte Standardeigenschaft, können Sie die Datenstruktur nur durch einen Verweis auf den Namen der Klasse zugreifen, aber wenn Sie eine benutzerdefinierte indizierte Eigenschaft verwenden, müssen Sie zum Angeben der Eigenschaftenname, der die Datenstruktur zuzugreifen.
 
-Informationen dazu, wie Sie einen Indexer zu verwenden, die in c# geschrieben ist, finden Sie unter [Vorgehensweise: Verwenden eines c#-Indexers (C++ / CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).
+Informationen dazu, wie Sie einen Indexer zu verwenden, die geschrieben wird, im C#, finden Sie unter [Vorgehensweise: Nutzen einer C# Indexers (C++ / CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).
 
 In diesem Codebeispiel wird veranschaulicht die Verwendung von standardmäßigen und benutzerdefinierten indizierte Eigenschaften:
 

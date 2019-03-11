@@ -1,19 +1,19 @@
 ---
-title: 'Gewusst wie: Abfangen von Ausnahmen, die von der MSIL ausgelöst wurden, in nativem Code'
+title: 'Vorgehensweise: Abfangen von Ausnahmen in nativem Code, die von der MSIL ausgelöst'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exceptions, catching
 - catching exceptions, thrown from MSIL
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-ms.openlocfilehash: 73c9a9af66a6e292c76b96ec47a5853684e602f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: acb3ba1ab6d10decba10b899861007abfff03359
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635611"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748722"
 ---
-# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Gewusst wie: Abfangen von Ausnahmen, die von der MSIL ausgelöst wurden, in nativem Code
+# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Vorgehensweise: Abfangen von Ausnahmen in nativem Code, die von der MSIL ausgelöst
 
 In nativem Code können Sie native C++-Ausnahme von der MSIL abfangen.  Sie können auch mit CLR-Ausnahmen abfangen `__try` und `__except`.
 

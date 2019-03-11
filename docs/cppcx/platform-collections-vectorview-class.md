@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: 4f4a5cbd2f1b6c06b339950307dbb333fc6392ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02b5e15a816ec057bfb0a8201b7591e628c3ea2c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658184"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745287"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView-Klasse
 
@@ -154,7 +154,7 @@ virtual bool IndexOf(
 
 ### <a name="parameters"></a>Parameter
 
-*Wert*<br/>
+*value*<br/>
 Das Element, das gesucht werden soll.
 
 *index*<br/>
@@ -253,7 +253,7 @@ Die Anzahl von Elementen in einer Auflistung von Objekten, die verwendet wird, u
 *size*<br/>
 Die Anzahl von Elementen in der VectorView.
 
-*Wert*<br/>
+*value*<br/>
 Ein Wert, der verwendet wird, um die einzelnen Elemente in der aktuellen VectorView zu initialisieren.
 
 *v*<br/>
@@ -268,7 +268,7 @@ Ein [Platform:: Array](../cppcx/platform-array-class.md) -Objekt, das verwendet 
 *a*<br/>
 Ein [Std:: Array](../standard-library/array-class-stl.md) -Objekt, das verwendet wird, um die aktuelle vectorview zu initialisieren.
 
-*Erste*<br/>
+*first*<br/>
 Das erste Element in einer Sequenz von Objekten, die verwendet werden, um die aktuelle VectorView zu initialisieren. Der Typ des `first` übergeben wird, mithilfe von *eine perfekte Weiterleitung*. Weitere Informationen finden Sie unter [RValue-Verweisdeklarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 *last*<br/>
