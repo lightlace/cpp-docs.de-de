@@ -8,12 +8,12 @@ helpviewer_keywords:
 - string manipulation
 - manipulating strings
 ms.assetid: 6545861a-59e7-408d-9d29-2ec9134fc91a
-ms.openlocfilehash: 4e172cba7128655b43fba10163284a10a1a9f710
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 7ea66c38f73e32a99981f331249362e8e0a789c1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329578"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742832"
 ---
 # <a name="string-manipulation-crt"></a>Zeichenfolgenbearbeitung (CRT)
 
@@ -21,7 +21,7 @@ Diese Routinen werden auf mit NULL endenden Einzelbytezeichenfolgen, Breitzeiche
 
 ## <a name="string-manipulation-routines"></a>Zeichenfolgen-Manipulationsroutinen
 
-|-Routine zurückgegebener Wert|Mit|
+|-Routine zurückgegebener Wert|Verwendung|
 |-------------|---------|
 |[strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md), [_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md), [_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md), [_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|Vergleichen von zwei Zeichenfolgen mithilfe von Codepageinformationen (**_mbsicoll** und **_mbsnicoll** ignorieren die Groß-/Kleinschreibung)|
 |[_strdec, _wcsdec, _mbsdec, _mbsdec_l](../c-runtime-library/reference/strdec-wcsdec-mbsdec-mbsdec-l.md)|Zeichenfolgenzeiger um ein Zeichen zurücksetzen|

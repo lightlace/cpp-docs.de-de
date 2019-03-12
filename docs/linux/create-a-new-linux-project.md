@@ -2,12 +2,12 @@
 title: Erstellen eines neuen C++ Projekts unter Linux in Visual Studio
 ms.date: 09/12/2018
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
-ms.openlocfilehash: 394fc5727035dd5a65b67ebf26a925fd3484582e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd5ab1d2bc1077f366082bf8767f8f690173ac8b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623027"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745162"
 ---
 # <a name="create-a-new-linux-project"></a>Erstellen eines neuen Linux-Projekts
 
@@ -22,10 +22,9 @@ Um ein neues Linux-Projekt in Visual Studio zu erstellen, führen Sie folgende S
 
    ![Neues Linux-Projekt](media/newproject.png)
 
-   | Projekttyp | Beschreibung 
+   | Projekttyp | Beschreibung
    | ------------ | ---
    | **Blink (Raspberry)**           | Projekt für ein Raspberry Pi-Gerät mit Beispielcode für das Aufblinken einer LED
    | **Konsolenanwendung (Linux)** | Projekt für alle Linux-Computer mit Beispielcode für die Ausgabe von Text an die Konsole
    | **Leeres Projekt (Linux)**       | Projekt für alle Linux-Computer ohne Beispielcode
    | **Makefile-Projekt (Linux)**    | Projekt für alle Linux-Computer, die mithilfe eines Standard-Makefile-Buildsystems erstellt werden
-

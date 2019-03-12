@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-ms.openlocfilehash: fdca832810312d2f36697da8fbaac539c5ce951c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee81fb1560133b2777a33e80d32c0e2e55c01bf4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452597"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749086"
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>Ermitteln der neu zu verteilenden DLLs
 
@@ -37,7 +37,7 @@ Sie können nicht alle Dateien weiterverteilen, die in Visual Studio enthalten s
 
 In der folgenden Tabelle werden einige der Visual C++-DLLs beschrieben, von denen Ihre Anwendung möglicherweise abhängig ist.
 
-|Visual C++-Bibliothek|Beschreibung |Betrifft|
+|Visual C++-Bibliothek|Beschreibung|Betrifft|
 |--------------------------|-----------------|----------------|
 |vcruntime*version*.dll|Laufzeitbibliothek für nativen Code.|Anwendungen, die die normalen C- und C++-Sprachdienste zum Starten und Beenden verwenden.|
 |vccorlib*version*.dll|Laufzeitbibliothek für verwalteten Code.|Anwendungen, die die C++-Sprachdienste für verwalteten Code verwenden.|

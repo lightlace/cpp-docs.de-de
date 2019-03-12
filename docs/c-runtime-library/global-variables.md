@@ -8,18 +8,18 @@ helpviewer_keywords:
 - variables, global
 - global variables, Microsoft run-time library
 ms.assetid: 01d1551c-2f0c-4f72-935c-6442caccf84f
-ms.openlocfilehash: b66d77285cb601b30a89a313fa21b815f42775b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dfa78bd2c7aae7cc6059443066cbef58512755ce
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522537"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744369"
 ---
 # <a name="global-variables"></a>Globale Variablen
 
 Die Microsoft C-Laufzeitbibliothek bietet die folgenden globalen Variablen oder Makros. Mehrere dieser globalen Variablen oder Makros sind veraltet und wurden durch sicherere, funktionsbereite Versionen ersetzt, die Sie anstelle der globalen Variablen verwenden sollten.
 
-|Variable|Beschreibung |
+|Variable|Beschreibung|
 |--------------|-----------------|
 |[__argc, \__argv, \__wargv](../c-runtime-library/argc-argv-wargv.md)|Enthält die Befehlszeilenargumente.|
 |[_daylight, _dstbias, _timezone, and _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)|Veraltet. Verwenden Sie stattdessen `_get_daylight`, `_get_dstbias`, `_get_timezone` und `_get_tzname`.<br /><br /> Wird an die lokale Zeit angepasst und in einigen Datums- und Zeitfunktionen verwendet.|

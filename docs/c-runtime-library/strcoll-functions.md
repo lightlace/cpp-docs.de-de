@@ -17,12 +17,12 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: c09eeff3-8aba-4cfb-a524-752436d85573
-ms.openlocfilehash: c6b4b45184ea4cc3320f3de069884ac084c7cfcd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2acfaafbe15f065dbac924ce72a5ca3a5275537b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450231"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751387"
 ---
 # <a name="strcoll-functions"></a>strcoll-Funktionen
 
@@ -30,14 +30,14 @@ Jede der `strcoll`- und `wcscoll`-Funktionen vergleicht zwei Zeichenfolgen gemä
 
 ### <a name="strcoll-functions"></a>strcoll-Funktionen
 
-|SBCS|Unicode|MBCS|Beschreibung |
+|SBCS|Unicode|MBCS|Beschreibung|
 |----------|-------------|----------|-----------------|
 |[strcoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[wcscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[_mbscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|Sortieren von zwei Zeichenfolgen|
 |[_stricoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_wcsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_mbsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|Sortieren von zwei Zeichenfolgen (ohne Berücksichtigung von Groß-/Kleinschreibung)|
 |[_strncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[_wcsncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[_mbsncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|Sortieren der ersten `count` Zeichen von zwei Zeichenfolgen|
 |[_strnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[_wcsnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[_mbsnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|Sortieren der ersten `count` Zeichen zweier Zeichenfolgen (ohne Berücksichtigung von Groß-/Kleinschreibung)|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Die Versionen dieser Funktionen im Einzelbyte-Zeichensatz (Single-Byte Character Set, SBCS) (`strcoll`, `stricoll`, `_strncoll` und `_strnicoll`) vergleichen `string1` und `string2` gemäß der Kategorieneinstellung `LC_COLLATE` des aktuellen Gebietsschemas. Diese Funktionen unterscheiden sich von den entsprechenden `strcmp`-Funktionen dahingehend, dass die `strcoll`-Funktionen Gebietsschemacodepageinformationen mit Sortierreihenfolgen verwenden. Für Zeichenfolgenvergleiche in Gebietsschemas, in denen die Reihenfolge des Zeichensatzes und die lexikografische Zeichenreihenfolge abweichen, sollten die `strcoll`-Funktionen statt der entsprechenden `strcmp`-Funktionen verwendet werden. Weitere Informationen zu `LC_COLLATE` finden Sie unter [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - fmode function
 - _fmode function
 ms.assetid: ac6df9eb-e5cc-4c54-aff3-373c21983118
-ms.openlocfilehash: c462b8f848a34993e01232039d608b627c05961f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a41d665eab50203fc3bb176f8bb1bbc30737e844
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430536"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741937"
 ---
 # <a name="fmode"></a>_fmode
 
@@ -26,7 +26,7 @@ Die Variable `_fmode` legt den standardmäßigen Dateiübersetzungsmodus für di
 extern int _fmode;
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Die Standardeinstellung von `_fmode` für die Textmodusübersetzung ist `_O_TEXT`. `_O_BINARY` ist die Einstellung für den Binärmodus.
 

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - tzname function
 - time-zone variables
 ms.assetid: d06c7292-6b99-4aba-b284-16a96570c856
-ms.openlocfilehash: ad28ce701a4c6aa60208ed0cefe8f7dc06ef55a7
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 3f9f78d0798140399960cade7ead408f958450ba
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51325904"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748254"
 ---
 # <a name="daylight-dstbias-timezone-and-tzname"></a>_daylight, _dstbias, _timezone und _tzname
 
@@ -50,7 +50,7 @@ extern long _timezone;
 extern char *_tzname[2];
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Bei einem Aufruf von `_ftime`, `localtime` oder `_tzset` werden die Werte von `_daylight`, `_dstbias`, `_timezone` und `_tzname` aus dem Wert der Umgebungsvariablen `TZ` ermittelt. Wenn der Wert von `TZ` nicht explizit festgelegt wird, weisen `_tzname[0]` und `_tzname[1]` die Standardeinstellungen „PST“ bzw. „PDT“ auf.  Mit den Funktionen zur Verarbeitung von Zeitangaben ([_tzset](../c-runtime-library/reference/tzset.md), [_ftime](../c-runtime-library/reference/ftime-ftime32-ftime64.md) und [localtime](../c-runtime-library/reference/localtime-localtime32-localtime64.md)) wird der Wert von `_daylight`, `_dstbias` und `_timezone` festgelegt, indem das Betriebssystem nach dem Standardwert für die einzelnen Variablen abgefragt wird. Die Werte für die globalen Zeitzonenvariablen werden in der folgenden Tabelle aufgeführt.
 

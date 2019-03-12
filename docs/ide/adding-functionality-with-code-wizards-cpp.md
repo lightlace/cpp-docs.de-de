@@ -10,12 +10,12 @@ helpviewer_keywords:
 - projects [C++], adding functionality
 - class wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: d96b02317f88abd426ceaca4a239e59b2c88b585
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 028434d7404cc02121e9fd961d6566c28f458a0c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629865"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739802"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Hinzufügen neuer Funktionen mit Code-Assistenten (C++)
 
@@ -63,7 +63,7 @@ Es gibt drei Orte, über die Sie auf Visual C++-Code-Assistenten zugreifen könn
 
    Weitere Informationen finden Sie unter [Implementing an Interface (Implementieren einer Schnittstelle)](../ide/implementing-an-interface-visual-cpp.md) und [Adding Objects and Controls to an ATL Project (Hinzufügen von Objekten und Steuerelementen zu einem ATL-Projekt)](../atl/reference/adding-objects-and-controls-to-an-atl-project.md).
 
-   |Zugriff auf den Code-Assistenten über|Beschreibung |
+   |Zugriff auf den Code-Assistenten über|Beschreibung|
    |-----------------------------|-----------------|
    |Neues Element hinzufügen|Die Code-Assistenten zum Hinzufügen neuer Elemente fügen Quelldateien zu Ihrem Projekt hinzu. Bei Bedarf werden zusätzliche Verzeichnisse erstellt, die die Dateien dort enthalten, wo die Build-Engine des Projekts diese erwartet. Folgende Code-Assistenten sind über das Symbol „Element hinzufügen“ verfügbar:<br /><br />– C++-Quelldateien hinzufügen (.cpp, .h, .idl, .rc, .srf, .def, .rgs)<br />– Webentwicklungsdateien hinzufügen (.html, .asp, .css, .xml)<br />– Hilfsprogrammdateien und Ressourcendateien hinzufügen (.bmp, .cur, .ico, .rct, .sql, .txt)<br /><br />Diese Code-Assistenten fordern in der Regel keine Informationen von Ihnen an, sondern fügen eine Datei zur Entwicklungsstruktur hinzu. Sie können die Datei im Eigenschaftenfenster neu benennen.|
    |Projektmappen-Explorer|Die Code-Assistenten, die über den Projektmappen-Explorer verfügbar sind, hängen davon ab, wo sich der Fokus Ihres Cursors befindet, wenn Sie mit der rechten Maustaste auf ein Element klicken. Wenn die Option **Hinzufügen** nicht angezeigt wird, wenn Sie mit der rechten Maustaste auf ein Element klicken, bewegen Sie Ihren Cursor in der Entwicklungsstruktur eine Ebene nach oben, und wiederholen Sie den Vorgang. Der Code-Assistent fügt zusätzlichen Code unabhängig davon, wo Ihr Cursor sich befindet, immer an der entsprechenden Stelle in der Entwicklungsstruktur ein. Folgende Code-Assistenten sind über den Projektmappen-Explorer verfügbar:<br /><br />– Klasse hinzufügen (öffnet das Dialogfeld **Klasse hinzufügen**, das die neuen Code-Assistenten enthält)<br />– Ressource hinzufügen (Optionen: „Neu“, „Importieren“ oder „Benutzerdefiniert“)<br />– Webverweis hinzufügen|

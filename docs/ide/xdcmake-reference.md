@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - xdcmake program
 ms.assetid: 14e65747-d000-4343-854b-8393bf01cbac
-ms.openlocfilehash: 85c7ef351e6e91bfd51a7f1e87ecec4186986505
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: adbb06b5100850aac0cfd191a530d5c98b380738
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450270"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740449"
 ---
 # <a name="xdcmake-reference"></a>XDCMake-Verweis
 
@@ -40,14 +40,14 @@ Der Dateiname der XDC-Dateien wird als Eingabe für „xdcmake.exe“ verwendet.
 *options*<br/>
 0 (null) oder mehrere der Folgenden:
 
-|Option|Beschreibung |
+|Option|Beschreibung|
 |------------|-----------------|
 |/?, /help|Zeigt Hilfe für die Datei „xdcmake.exe“ an.|
 |/assembly:*Dateiname*|Ermöglicht die Angabe des Werts des \<assembly>-Tags in der XML-Datei.  Der Wert des \<assembly>-Tags ist standardmäßig identisch mit dem Dateinamen der XML-Datei.|
 |/nologo|Copyrightmeldung unterdrücken|
 |/out:*Dateiname*|Ermöglicht die Angabe des Namens der XML-Datei.  Der Name der XML-Datei ist standardmäßig der Dateiname der ersten XDC-Datei, die von der „xdcmake.exe“ verarbeitet wird.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Visual Studio ruft „xdcmake.exe“ automatisch auf, wenn ein Projekt erstellt wird. Sie können „xdcmake.exe“ auch von der Befehlszeile aus aufrufen.
 

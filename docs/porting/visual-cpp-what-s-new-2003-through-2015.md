@@ -2,12 +2,12 @@
 title: 'Visual C++: Neuerungen von 2003 bis 2015'
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: bc0092aeb8910f960befc174c1f71ce05c4eb131
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: fdd1d2c2183d06defe413340b8aef05c5bd61750
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894353"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749151"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++: Neuerungen von 2003 bis 2015
 
@@ -1743,7 +1743,7 @@ Neben den Fenstern **Parallele Aufgaben** und **Parallele Stapel** ist in Visual
 
 **Markieren von Verweisen.** Wenn Sie ein Symbol auswählen, werden jetzt alle Instanzen des Symbols in der aktuellen Datei angezeigt. Drücken Sie **STRG**+**UMSCHALT**+**NACH-OBEN** oder **STRG**+**UMSCHALT**+**NACH-UNTEN**, um zwischen den markierten Verweisen zu wechseln. Sie können diese Funktion im Dialogfeld **Optionen** unter **Text-Editor** > **C/C++** > **Erweitert** deaktivieren.
 
-### <a name="application-lifecycle-management-tools"></a>Application Lifecycle Management-Tools
+### <a name="application-lifecycle-management-tools"></a>Anwendungslebenszyklus-Verwaltungstools
 
 #### <a name="static-code-analysis"></a>Statische Codeanalyse
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - file handles [C++]
 - file handles [C++], I/O functions
 ms.assetid: 53e11bdd-6720-481c-8b2b-3a3a569ed534
-ms.openlocfilehash: 25a61fd7bd033accbbae11fafbd44a0282649e8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7812656bdcb3f58866f91009b6ad3de9fd67cebe
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656923"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740139"
 ---
 # <a name="low-level-io"></a>E/A auf niedriger Ebene
 
@@ -33,7 +33,7 @@ E/A-Routinen auf niedriger Ebene legen die globale Variable [errno](../c-runtime
 
 ## <a name="low-level-io-functions"></a>E/A-Funktionen auf niedriger Ebene
 
-|Funktion|Mit|
+|Funktion|Verwendung|
 |--------------|---------|
 |[_close](../c-runtime-library/reference/close.md)|Datei schließen|
 |[_commit](../c-runtime-library/reference/commit.md)|Datei auf Datenträger leeren|

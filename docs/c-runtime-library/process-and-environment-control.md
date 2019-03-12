@@ -11,12 +11,12 @@ helpviewer_keywords:
 - environment control routines
 - process control routines
 ms.assetid: 7fde74c3-c2a6-4d15-84b8-092160d60c3e
-ms.openlocfilehash: df080d1ed8c5a00711468a159acb07159ad31930
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c837739d4954c65d45a590bd5c7f904e2375102e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329409"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742117"
 ---
 # <a name="process-and-environment-control"></a>Prozess- und Umgebungssteuerung
 
@@ -24,7 +24,7 @@ Verwenden Sie die Prozesssteuerungsroutinen, um Prozesse aus einem Programm hera
 
 ## <a name="process-and-environment-control-functions"></a>Funktionen der Prozess- und Umgebungssteuerung
 
-|-Routine zurückgegebener Wert|Mit|
+|-Routine zurückgegebener Wert|Verwendung|
 |-------------|---------|
 |[abort](../c-runtime-library/reference/abort.md)|Bricht einen Prozess ab, ohne Puffer zu leeren oder von **atexit** und **_onexit** registrierte Funktionen aufzurufen.|
 |[assert](../c-runtime-library/reference/assert-macro-assert-wassert.md)|Prüft auf Logikfehler.|

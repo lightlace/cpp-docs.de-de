@@ -22,12 +22,12 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-ms.openlocfilehash: c93624b8b56fb53eb15263dbd0d203cd9130eacf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41c39914964de74401dcdef847b2c44f623af249
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528192"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742128"
 ---
 # <a name="heapset"></a>_heapset
 
@@ -62,7 +62,7 @@ Füllzeichen.
 
 Wenn ein Fehler auftritt, setzt `_heapset``errno` zudem auf `ENOSYS`.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Die Funktion `_heapset` zeigt freie Speicherpositionen oder Knoten an, die unabsichtlich überschrieben wurden.
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], MFC source and header
 ms.assetid: f61419a8-bf69-4bbb-8f7c-1734be5e6db6
-ms.openlocfilehash: c60c00772005efc0402cdeba9d710548c6412b15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c49a17802e0c7c43cae58153a6df6c4f70f69980
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639152"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743842"
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>MFC-Programm oder Steuern von Quell- und Headerdateien
 
@@ -17,7 +17,7 @@ Folgende Dateien werden abhängig von den ausgewählten Optionen für das Projek
 
 Diese Dateien befinden Sich alle im Verzeichnis *Projname*. Im Projektmappen-Explorer befinden diese sich entweder im Ordner „Headerdateien“ (H-Dateien) oder im Ordner „Quelldateien“ (CPP-Dateien).
 
-|Dateiname|Beschreibung |
+|Dateiname|Beschreibung|
 |---------------|-----------------|
 |*Projname*.h|Die Hauptincludedatei für das Programm oder die DLL. Diese enthält alle globalen Symbole und `#include`-Direktiven für andere Headerdateien. Sie leitet die `CPrjnameApp`-Klasse von `CWinApp` ab und deklariert eine `InitInstance`-Memberfunktion. Für ein Steuerelement wird die `CPrjnameApp`-Klasse von `COleControlModule` abgeleitet.|
 |*Projname*.cpp|Die Quelldatei des Hauptprogramms. Diese erstellt ein Objekt der Klasse `CPrjnameApp`, die von `CWinApp` abgeleitet wird, und überschreibt die `InitInstance`-Memberfunktion.<br /><br /> Für ausführbare Dateien führt die Funktion `CPrjnameApp::InitInstance` mehrere Aktionen durch. Sie registriert Dokumentvorlagen, die als Verbindung zwischen Dokumenten und Ansichten fungieren und erstellt ein Hauptrahmenfenster und ein leeres Dokument (oder öffnet ein Dokument, wenn eines in einem Befehlszeilenargument der Anwendung angegeben ist).<br /><br /> Für DLLs und ActiveX-Steuerelemente (früher OLE) registriert `CProjNameApp::InitInstance` die Objektfactory des Steuerelements mit OLE, indem die Funktion `COleObjectFactory::RegisterAll` aufgerufen wird, die einen Aufruf von `AfxOLEInit` durchführt. Zusätzlich wird die Memberfunktion `CProjNameApp::ExitInstance` verwendet, um das Steuerelement mithilfe eines Aufrufs von **AfxOleTerm** aus dem Arbeitsspeicher zu entladen.<br /><br /> Diese Datei registriert das Steuerelement durch die Implementierung der Funktionen `DllRegisterServer` und `DllUnregisterServer` ebenfalls in der Windows-Registrierungsdatenbank oder hebt dessen Registrierung auf.|

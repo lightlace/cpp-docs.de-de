@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows [C++], system calls
 - system calls
 ms.assetid: 0255f2ec-a5a0-487e-8b09-9dad001d81ed
-ms.openlocfilehash: b4b56fb0d61675aada1e8c8ba37d3382853da32c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d86a35718ab6c1aab941149c9707004b1532d24
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511837"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749203"
 ---
 # <a name="system-calls"></a>Systemaufrufe
 
@@ -20,7 +20,7 @@ Die folgenden Funktionen sind Aufrufe des Windows-Betriebssystems.
 
 ## <a name="system-call-functions"></a>Aufruffunktionen des Betriebssystems
 
-|Funktion|Mit|
+|Funktion|Verwendung|
 |--------------|---------|
 |[_findclose](../c-runtime-library/reference/findclose.md)|Gibt Ressourcen aus vorherigen Suchvorgängen frei.|
 |[_findfirst, _findfirst32, _findfirst64, _findfirsti64, _findfirst32i64, _findfirst64i32, _wfindfirst, _wfindfirst32, _wfindfirst64, _wfindfirsti64, _wfindfirst32i64, _wfindfirst64i32](../c-runtime-library/reference/findfirst-functions.md)|Sucht Datei mit angegebenen Attributen.|

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - translation, modes
 - translation modes (file I/O)
 ms.assetid: a5993bf4-7e7a-47f9-83c3-e46332b85579
-ms.openlocfilehash: 9ac318c25b317d783e7fd7e287666bf85bb45b26
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 18e0ad8615bbe89c265247041729027f661915fe
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220529"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746694"
 ---
 # <a name="translation-mode-constants"></a>Übersetzungsmoduskonstanten
 
@@ -32,7 +32,7 @@ ms.locfileid: "54220529"
 #include <fcntl.h>
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Die Manifestkonstanten `_O_BINARY` und `_O_TEXT` geben den Übersetzungsmodus von Dateien (`_open` und `_sopen`) oder von Streams (`_setmode`) an.
 

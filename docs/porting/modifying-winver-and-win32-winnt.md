@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WINVER in an upgraded Visual C++ project
 - _WIN32_WINNT in an upgraded Visual C++ project
 ms.assetid: 6a1f1d66-ae0e-48a7-81c3-524d8e8f3447
-ms.openlocfilehash: 3381b6657f78144e7804112135c437824d8555fe
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: a936a54620590d4dc21f43acd50abdc49d77ffa8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332244"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748735"
 ---
 # <a name="modifying-winver-and-win32winnt"></a>Ändern von WINVER und _WIN32_WINNT
 
 Visual C++ unterstützt nicht mehr die Zielversionen Windows 95, Windows 98, Windows ME, Windows NT oder Windows 2000. Wenn das **WINVER** - oder **_WIN32_WINNT** -Makro einer dieser Versionen von Windows zugewiesen ist, müssen Sie die Makros ändern. Wenn Sie ein Projekt aktualisieren, das mit einer früheren Version von Visual C++ erstellt wurde, werden möglicherweise Kompilierungsfehler im Zusammenhang mit dem **WINVER** - oder **_WIN32_WINNT** -Makro angezeigt, wenn dieses einer Version von Windows zugewiesen ist, die nicht mehr unterstützt wird.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Um die Makros in einer Headerdatei (z. B. targetver.h, die enthalten ist, wenn Sie ein Projekt für Windowns erstellen) zu ändern, fügen Sie die folgenden Zeilen hinzu.
 

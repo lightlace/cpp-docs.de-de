@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: dd508095508cf9d0d04778b06d6296296649f710
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85ebe9052d9e8bd18dfc9b3b123871e2e5acda4e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565320"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740476"
 ---
 # <a name="standard-types"></a>Standardtypen
 
@@ -189,7 +189,7 @@ Die Microsoft-Laufzeitbibliothek definiert die folgenden Standardtypen und TypeD
 |int_fast64_t, uint_fast64_t|long long, unsigned long long|
 |intmax_t, uintmax_t|long long, unsigned long long|
 
-|Typ|Beschreibung |Deklariert in|
+|Typ|Beschreibung|Deklariert in|
 |----------|-----------------|-----------------|
 |`clock_t` (lang)|Speichert Zeitwerte, die von [clock](../c-runtime-library/reference/clock.md) verwendet werden.|TIME.H|
 |`_complex`-Struktur|Speicher tatsächliche und imaginäre Teile komplexer Zahlen, die von [_cabs](../c-runtime-library/reference/cabs.md) verwendet werden.|MATH.H|

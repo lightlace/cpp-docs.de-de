@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [C++], opening
 - files [C++], manipulating
 ms.assetid: 48119e2e-e94f-4602-b08b-b72440f731d8
-ms.openlocfilehash: 085fc03677b4353aeb515a2f25dd0734935be442
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9bbd64b27a760969635d70ae7689d09afed2d729
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511877"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740436"
 ---
 # <a name="file-handling"></a>Dateibehandlung
 
@@ -40,7 +40,7 @@ Diese Routinen werden auf Dateien ausgeführt, die durch einen Dateideskriptor f
 
 Diese Routinen werden auf Dateien ausgeführt, die durch einen Pfad oder einen Dateinamen angegeben sind.
 
-|-Routine zurückgegebener Wert|Mit|
+|-Routine zurückgegebener Wert|Verwendung|
 |-------------|---------|
 |[_access, _waccess](../c-runtime-library/reference/access-waccess.md), [_access_s, _waccess_s](../c-runtime-library/reference/access-s-waccess-s.md)|Dateiberechtigungseinstellung überprüfen|
 |[_chmod, _wchmod](../c-runtime-library/reference/chmod-wchmod.md)|Dateiberechtigungseinstellung ändern|
@@ -58,7 +58,7 @@ Diese Routinen werden auf Dateien ausgeführt, die durch einen Pfad oder einen D
 
 Diese Routinen öffnen Dateien.
 
-|-Routine zurückgegebener Wert|Mit|
+|-Routine zurückgegebener Wert|Verwendung|
 |-------------|---------|
 |[fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md), [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)|Öffnet eine Datei und gibt einen Zeiger an die geöffnete Datei zurück.|
 |[_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)|Öffnet einen Stream mit Dateifreigabe und gibt einen Zeiger an die geöffnete Datei zurück.|
@@ -69,7 +69,7 @@ Diese Routinen öffnen Dateien.
 
 Diese Routinen bieten eine Möglichkeit, die Darstellung der Datei zwischen einer `FILE`-Struktur, einem Dateideskriptor und einem Win32-Dateihandle zu ändern.
 
-|-Routine zurückgegebener Wert|Mit|
+|-Routine zurückgegebener Wert|Verwendung|
 |-------------|---------|
 |[_fdopen, _wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)|Ordnet einen Stream einer Datei zu, die zuvor für E/A-Unterstützung auf niedriger Ebene geöffnet wurde, und gibt einen Zeiger an den geöffneten Stream zurück.|
 |[_fileno](../c-runtime-library/reference/fileno.md)|Ruft den Dateideskriptor ab, der einem Stream zugeordnet ist.|

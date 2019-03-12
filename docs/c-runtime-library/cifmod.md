@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CIfmod intrinsic
 - _CIfmod intrinsic
 ms.assetid: 7c050653-7ec6-4810-b3a7-7a0057ea65ed
-ms.openlocfilehash: e0e6b2f846de77d27b1826e1f24cd364c0d76a64
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: b3f667c24a4b02a23d045a5061b41ac4acc4095b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703076"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746837"
 ---
 # <a name="cifmod"></a>_CIfmod
 
@@ -37,7 +37,7 @@ Berechnet den Gleitkommarest für die beiden obersten Werte im Stapel.
 void __cdecl _CIfmod();
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Diese Version der `fmod`-Funktion verfügt über eine spezielle Aufrufkonvention, die der Compiler versteht. Sie beschleunigt die Ausführung, da sie das Generieren von Kopien verhindert und bei der Registerzuweisung hilft.
 

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - shared classes, CTimeSpan
 - time, elapsed
 ms.assetid: ee1e42f6-1839-477a-8435-fb26ad475140
-ms.openlocfilehash: 6ab22b9a093a1aa9c8ae0249c036ea2bf89065f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c80260c1f57e49a34b4e9f3331f4d0d69ab30ce
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641871"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752323"
 ---
 # <a name="ctimespan-class"></a>CTimeSpan-Klasse
 
@@ -67,9 +67,9 @@ class CTimeSpan
 
 |||
 |-|-|
-|[Operator + -](#operator_add_-)|Fügt und subtrahiert `CTimeSpan` Objekte.|
-|[Operator += =](#operator_add_eq_-_eq)|Fügt und subtrahiert einen `CTimeSpan` Objekt auf und aus diesem `CTimeSpan`.|
-|[Operator == < usw.](#ctimespan_comparison_operators)|Vergleicht zwei Werte für relative Zeit.|
+|[operator + -](#operator_add_-)|Fügt und subtrahiert `CTimeSpan` Objekte.|
+|[operator += -=](#operator_add_eq_-_eq)|Fügt und subtrahiert einen `CTimeSpan` Objekt auf und aus diesem `CTimeSpan`.|
+|[operator == < etc.](#ctimespan_comparison_operators)|Vergleicht zwei Werte für relative Zeit.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -104,7 +104,7 @@ bool operator>=(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*umfassen*<br/>
+*span*<br/>
 Das zu vergleichende Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -178,7 +178,7 @@ CString Format(UINT nID) const;
 
 ### <a name="parameters"></a>Parameter
 
-*pFormat*, *PszFormat*<br/>
+*pFormat*, *pszFormat*<br/>
 Eine Formatierungszeichenfolge ähnelt der `printf` Formatierungszeichenfolge. Formatierungscodes Prozentsatz vorangestellt (`%`) anmelden, werden mit den entsprechenden ersetzt `CTimeSpan` Komponente. Andere Zeichen in der Formatierungszeichenfolge werden auf die zurückgegebene Zeichenfolge unverändert kopiert. Der Wert und die Bedeutung der Formatierungscodes für `Format` sind nachfolgend aufgeführt:
 
 - **%D** Tage in diesem gesamt `CTimeSpan`
@@ -345,7 +345,7 @@ CTimeSpan operator-(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parameter
 
-*umfassen*<br/>
+*span*<br/>
 Der Wert, der zum Hinzufügen der `CTimeSpan` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -360,7 +360,7 @@ Diese beiden Operatoren können Sie von Addition und Subtraktion `CTimeSpan` Obj
 
 [!code-cpp[NVC_ATLMFC_Utilities#167](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_7.cpp)]
 
-##  <a name="operator_add_eq_-_eq"></a>  CTimeSpan::operator +=, =
+##  <a name="operator_add_eq_-_eq"></a>  CTimeSpan::operator +=, -=
 
 Fügt und subtrahiert einen `CTimeSpan` Objekt auf und aus diesem `CTimeSpan`.
 
@@ -371,7 +371,7 @@ CTimeSpan& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*umfassen*<br/>
+*span*<br/>
 Der Wert, der zum Hinzufügen der `CTimeSpan` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -416,4 +416,3 @@ Die aktualisierte `CArchive` Objekt.
 [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [Freigegebene ATL-/MFC-Klassen](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [C++], directory
 - directory control routines
 ms.assetid: a72dcf6f-f366-4d20-8850-0e19cc53ca18
-ms.openlocfilehash: b7a6eb9a74467932dcb8743d31e934d551de4246
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 327647ee2eee7e149ec0e9ebfc71883a8a3643d5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546434"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748579"
 ---
 # <a name="directory-control"></a>Verzeichnissteuerung
 
@@ -20,7 +20,7 @@ Diese Routinen greifen auf die Verzeichnisstruktur zu, ändern sie und rufen Inf
 
 ## <a name="directory-control-routines"></a>Routinen für die Verzeichnissteuerung
 
-|-Routine zurückgegebener Wert|Mit|
+|-Routine zurückgegebener Wert|Verwendung|
 |-------------|---------|
 |[_chdir, _wchdir](../c-runtime-library/reference/chdir-wchdir.md)|Ändert das aktuelle Arbeitsverzeichnis.|
 |[_chdrive](../c-runtime-library/reference/chdrive.md)|Ändert das aktuelle Laufwerk.|

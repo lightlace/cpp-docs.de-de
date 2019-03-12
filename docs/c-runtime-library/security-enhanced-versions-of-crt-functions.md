@@ -6,12 +6,12 @@ helpviewer_keywords:
 - security-enhanced CRT
 - CRT, security enhancements
 ms.assetid: f87e5a01-4cb2-4379-9e8f-d4693828c55a
-ms.openlocfilehash: 8372bf6284f7974e68ed8beb62888d56b2b49254
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5d804b93e491799e65de6338611612eed21e163
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50433617"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745966"
 ---
 # <a name="security-enhanced-versions-of-crt-functions"></a>CRT-Funktionsversionen mit erweiterter Sicherheit
 
@@ -19,7 +19,7 @@ Sicherere Versionen von Laufzeitbibliotheksroutinen sind verfügbar. Weitere Inf
 
 ## <a name="secure-functions"></a>Sichere Funktionen
 
-|CRT-Funktion|Funktion mit erhöhter Sicherheit|Mit|
+|CRT-Funktion|Funktion mit erhöhter Sicherheit|Verwendung|
 |------------------|--------------------------------|---------|
 |[_access, _waccess](../c-runtime-library/reference/access-waccess.md)|[_access_s, _waccess_s](../c-runtime-library/reference/access-s-waccess-s.md)|Bestimmen der Dateizugriffsberechtigung|
 |[_alloca](../c-runtime-library/reference/alloca.md)|[_malloca](../c-runtime-library/reference/malloca.md)|Zuordnen von Speicher auf dem Stapel|

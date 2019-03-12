@@ -29,12 +29,12 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-ms.openlocfilehash: 56587455b1b5246be361afc131786d85dbc9a1a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0915b7a98b10137b37025eb59161bc98c27ae7b3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469857"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748345"
 ---
 # <a name="inp-inpw-inpd"></a>_inp, _inpw, _inpd
 
@@ -69,7 +69,7 @@ E/A-Portnummer.
 
 Die Funktionen geben das aus `port`gelesene Byte, Wort oder Doppelwort zurück. Es gibt keine Fehlerrückgabe.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Die Funktionen `_inp`, `_inpw`und `_inpd` lesen aus dem angegebenen Eingangsport jeweils ein Byte, ein Wort und ein Doppelwort. Der Eingabewert kann jede beliebige kurze ganze Zahl ohne Vorzeichen im Bereich von 0 bis 65.535 sein.
 
@@ -87,7 +87,7 @@ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../
 
 ## <a name="libraries"></a>Bibliotheken
 
-Alle Versionen der [C-Laufzeitbibliotheken](../c-runtime-library/crt-library-features.md).
+Alle Versionen [C-Laufzeitbibliotheken](../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Siehe auch
 
