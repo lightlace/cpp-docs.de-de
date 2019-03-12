@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _set_output_format function
 - set_output_format function
 ms.assetid: 1cb48df8-44b4-4400-bd27-287831d6b3ff
-ms.openlocfilehash: 3c4e4de7dc7161c033f07cfb02ef90ad5db559c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 173c1bbae3009ffb4ee10b7b32ec7751f47c56c8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492156"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749229"
 ---
 # <a name="setoutputformat"></a>_set_output_format
 
@@ -53,7 +53,7 @@ unsigned int _set_output_format(
 
 Das vorherige Ausgabeformat.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 `_set_output_format` wird verwendet, um die Ausgabe von formatierten E/A-Funktionen, wie z.B. [printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md), zu konfigurieren. Zurzeit ist die einzige Formatierungskonvention, die von dieser Funktion geändert werden kann, die Anzahl der Stellen, die in Exponenten in der Ausgabe von Gleitkommazahlen angezeigt werden.
 

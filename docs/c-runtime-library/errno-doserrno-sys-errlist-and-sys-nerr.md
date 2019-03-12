@@ -21,12 +21,12 @@ helpviewer_keywords:
 - _sys_nerr global variable
 - sys_nerr global variable
 ms.assetid: adbec641-6d91-4e19-8398-9a34046bd369
-ms.openlocfilehash: 50b44c659aac66dbaddad711cceef635f277d2c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57d04fe5867c6a969b6aeca40f26b18b5dcd7a61
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487724"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750779"
 ---
 # <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno, _doserrno, _sys_errlist und _sys_nerr
 
@@ -41,7 +41,7 @@ Globale Makros, die während der Programmausführung festgelegte Fehlercodes und
 #define _sys_nerr (*__sys_nerr())
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Sowohl `errno` als auch `_doserrno` werden von der Laufzeit während des Programmstarts auf 0 festgelegt. `errno` wird bei einem Fehler bei einem Aufruf auf Systemebene festgelegt. Weil `errno` den Wert für den letzten Aufruf enthält, der ihn festlegte, wird dieser Wert möglicherweise durch darauffolgende Aufrufe geändert. Laufzeit-Bibliothekaufrufe, die bei einem Fehler `errno` festlegen, löschen `errno` bei Erfolg nicht. Löschen Sie `errno` immer sofort vor einem Aufruf, der es möglicherweise festlegt, durch Aufrufen von `_set_errno(0)`, und überprüfen Sie es sofort nach dem Aufruf.
 

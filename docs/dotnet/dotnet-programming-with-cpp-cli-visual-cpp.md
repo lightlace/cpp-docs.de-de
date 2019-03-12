@@ -7,18 +7,18 @@ helpviewer_keywords:
 - .NET applications [C++]
 - Visual C++, .NET programming
 ms.assetid: 2c7f3b0f-a266-4f0e-b318-d6f1371e04a9
-ms.openlocfilehash: 40978bff010fbb1640398c3248c595b3ae04289f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21a45dbff2b02ccce5444706c158e5bdcc6e6cc2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470147"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749814"
 ---
 # <a name="net-programming-with-ccli-visual-c"></a>.NET-Programmierung mit C++/CLI (Visual C++)
 
-**Visual Studio 2015**: standardmäßig mit Visual Studio 2015 erstellte CLR-Projekte als Ziel .NET Framework 4.5.2. Damit beim Erstellen eines neuen Projekts eine Ausrichtung auf .NET Framework 4.6 erfolgt, ändern Sie im Dialogfeld **Neues Projekt** das Zielframework in der Dropdownliste, die sich oben in der Mitte des Dialogfelds befindet. Wenn Sie das Zielframework für ein vorhandenes Projekt ändern möchten, schließen Sie das Projekt, bearbeiten Sie die Projektdatei (.vcxproj), und ändern Sie den Wert der Framework-Zielversion in „4.6“. Beim nächsten Öffnen des Projekts werden die Einstellungen wirksam.
+**Visual Studio 2015**: Standardmäßig sind mit Visual Studio 2015 erstellte CLR-Projekte auf das .NET Framework 4.5.2 ausgerichtet. Damit beim Erstellen eines neuen Projekts eine Ausrichtung auf .NET Framework 4.6 erfolgt, ändern Sie im Dialogfeld **Neues Projekt** das Zielframework in der Dropdownliste, die sich oben in der Mitte des Dialogfelds befindet. Wenn Sie das Zielframework für ein vorhandenes Projekt ändern möchten, schließen Sie das Projekt, bearbeiten Sie die Projektdatei (.vcxproj), und ändern Sie den Wert der Framework-Zielversion in „4.6“. Beim nächsten Öffnen des Projekts werden die Einstellungen wirksam.
 
-**Visual Studio 2017**: In Visual Studio 2017 zum Standard-Framework 4.6.1 und die Auswahl der Framework-Version ist am unteren Rand der **Dialogfeld "Neues Projekt"**. C++ / CLI selbst wird nicht standardmäßig installiert. Um die Komponente zu installieren, öffnen Sie Visual Studio-Installer, und wählen C++ / CLI-Komponente unter Visual C++.
+**Visual Studio 2017**: In Visual Studio 2017 ist der Standard-Framework 4.6.1 und die Auswahl der Framework-Version wird am unteren Rand der **Dialogfeld "Neues Projekt"**. C++ / CLI selbst wird nicht standardmäßig installiert. Um die Komponente zu installieren, öffnen Sie Visual Studio-Installer, und wählen C++ / CLI-Komponente unter Visual C++.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

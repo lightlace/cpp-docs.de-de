@@ -36,12 +36,12 @@ helpviewer_keywords:
 - strings [C++], ATL class
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
-ms.openlocfilehash: 93cb3ae0b2f358f64f0d6de26899d1b08f275b7b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ec28ed5b2f5428cabcf7570c7ac53904e9a64f0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579282"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748228"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT-Klasse
 
@@ -79,7 +79,7 @@ Der Zeichentyp der String-Klasse. Einer der folgenden Werte ist möglich:
 |Name|Beschreibung|
 |----------|-----------------|
 |[CSimpleStringT::CSimpleStringT](#ctor)|Erstellt `CSimpleStringT` Objekte auf unterschiedliche Weise.|
-|[CSimpleStringT:: ~ CSimpleStringT](#dtor)|Destruktor.|
+|[CSimpleStringT::~CSimpleStringT](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 

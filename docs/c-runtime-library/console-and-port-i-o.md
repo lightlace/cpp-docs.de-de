@@ -11,12 +11,12 @@ helpviewer_keywords:
 - I/O [CRT], port
 - I/O routines, console and port I/O
 ms.assetid: 0eee1c92-9b3d-41e0-a43a-257e546eeec8
-ms.openlocfilehash: 728ff6fa36d21e869c65db705b25bbe7c9d711ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55f97a70f2ce12f6363d234e9bbc9384d7ee9fe1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446760"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752375"
 ---
 # <a name="console-and-port-io"></a>Konsole und Port-E/A
 
@@ -24,7 +24,7 @@ Diese Routinen lesen und schreiben Daten in Ihre Konsole oder an den angegebenen
 
 ## <a name="console-and-port-io-routines"></a>Konsolen- und Port-E/A-Routinen
 
-|-Routine zurückgegebener Wert|Mit|
+|-Routine zurückgegebener Wert|Verwendung|
 |-------------|---------|
 |[_cgets, _cgetws](../c-runtime-library/cgets-cgetws.md), [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|Zeichenfolge aus der Konsole lesen|
 |[_cprintf, _cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md), [_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l](../c-runtime-library/reference/cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)|Formatierte Daten in Konsole schreiben|

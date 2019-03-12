@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CIsqrt intrinsic
 - _CIsqrt intrinsic
 ms.assetid: 663548ea-398c-48ee-8397-a787c6ebb937
-ms.openlocfilehash: 4e76136935aba4e7fa3968e84d3ca2702a12f26e
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 5042be822df7789d30d2b4ea2d5be6cf8a081ef9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703232"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749385"
 ---
 # <a name="cisqrt"></a>_CIsqrt
 
@@ -37,7 +37,7 @@ Berechnet die Quadratwurzel des obersten Werts im Stapel.
 void __cdecl _CIsqrt();
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Diese Version der `sqrt`-Funktion verfügt über eine spezielle Aufrufkonvention, die der Compiler versteht. Sie beschleunigt die Ausführung, da sie das Generieren von Kopien verhindert und bei der Registerzuweisung hilft.
 

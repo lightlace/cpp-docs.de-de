@@ -15,12 +15,12 @@ helpviewer_keywords:
 - strings [C++], class CString
 - casting CString objects
 ms.assetid: 5048de8a-5298-4891-b8a0-c554b5a3ac1b
-ms.openlocfilehash: f68f021d16de7ad701ce20c3be59ed6958aa6893
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eee23296d9aac40849dacf58c3b3d9bdf583d1df
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528400"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743276"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>CString-Vorgänge bei Zeichenfolgen im C-Format
 
@@ -50,7 +50,8 @@ char myString[256];
 strcpy(myString, (LPCTSTR)aCString);
 ```
 
-Sie können `CString`-Methoden, z. B. `SetAt`, verwenden, um einzelne Zeichen im Zeichenfolgenobjekt zu ändern. Allerdings der LPCTSTR-Zeiger ist temporär und wird ungültig, wenn eine Änderung, um vorgenommen wird `CString`. `CString` kann auch den gültigen Bereich verlassen und automatisch gelöscht werden. Es wird empfohlen, Sie einen neuen LPCTSTR Zeiger von erhalten einem `CString` Objekt jedes Mal, mit dem Sie eine.
+Sie können `CString`-Methoden, z. B. `SetAt`, verwenden, um einzelne Zeichen im Zeichenfolgenobjekt zu ändern. Allerdings der LPCTSTR-Zeiger ist temporär und wird ungültig, wenn eine Änderung, um vorgenommen wird `CString`. 
+  `CString` kann auch den gültigen Bereich verlassen und automatisch gelöscht werden. Es wird empfohlen, Sie einen neuen LPCTSTR Zeiger von erhalten einem `CString` Objekt jedes Mal, mit dem Sie eine.
 
 Gelegentlich benötigen Sie eine Kopie der `CString`-Daten, um direkte Änderungen vorzunehmen. Verwenden Sie die sicherere Funktion `strcpy_s` (oder die Unicode/MBCS-portable Funktion `_tcscpy_s`), um das `CString`-Objekt in einen eigenen Puffer zu kopieren. Dort können die Zeichen sicher geändert werden, wie im folgenden Beispiel gezeigt.
 

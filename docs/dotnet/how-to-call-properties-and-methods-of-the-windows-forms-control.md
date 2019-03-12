@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Aufrufen von Ereignissen und Methoden des Windows Forms-Steuerelements'
+title: 'Vorgehensweise: Aufrufen von Ereignissen und Methoden des Windows Forms-Steuerelements'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - calling properties
 - Windows Forms controls [C++], properties
 ms.assetid: 6e647d8a-fdaa-4aa1-b3fe-04f15cff8eb3
-ms.openlocfilehash: 809fa428172dffb5f53e7339e04882b451c8562f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61b565839b3f3c24670819fdcf2dde558e3461ac
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561485"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743767"
 ---
-# <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>Gewusst wie: Aufrufen von Ereignissen und Methoden des Windows Forms-Steuerelements
+# <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>Vorgehensweise: Aufrufen von Ereignissen und Methoden des Windows Forms-Steuerelements
 
 Da [CWinFormsView::](../mfc/reference/cwinformsview-class.md#getcontrol) gibt einen Zeiger auf <xref:System.Windows.Forms.Control?displayProperty=fullName>, und nicht auf einen Zeiger auf `WindowsControlLibrary1::UserControl1`, ist es ratsam, ein Mitglied des Steuerelementtyps Benutzer hinzufügen und initialisieren Sie es in [iView:: OnInitialUpdate ](../mfc/reference/iview-interface.md#oninitialupdate). Nachdem Sie die Methoden und Eigenschaften, die mit aufrufen können `m_ViewControl`.
 
-In diesem Thema wird vorausgesetzt, Sie haben zuvor [Vorgehensweise: Erstellen des Benutzersteuerelements und Hosten in einem Dialogfeld](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) und [Vorgehensweise: Erstellen des Benutzersteuerelements und Hosten der MDI-Ansicht](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
+In diesem Thema wird vorausgesetzt, Sie haben zuvor [Vorgehensweise: Erstellen des Benutzersteuerelements und Hosten in einem Dialogfeld](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) und [Vorgehensweise: Erstellen des Benutzersteuerelements und Hosten MDI-Ansicht](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
 
 ### <a name="to-create-the-mfc-host-application"></a>So erstellen Sie die MFC-Hostanwendung
 
-1. Öffnen Sie die MFC-Anwendung, die Sie erstellt, im haben [Vorgehensweise: Erstellen des Benutzersteuerelements und Hosten der MDI-Ansicht](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
+1. Öffnen Sie die MFC-Anwendung, die Sie erstellt, im haben [Vorgehensweise: Erstellen des Benutzersteuerelements und Hosten MDI-Ansicht](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
 
 1. Fügen Sie die folgende Zeile Abschnitt Öffentliche Außerkraftsetzungen der `CMFC02View` -Klassendeklaration in MFC02View.h.
 

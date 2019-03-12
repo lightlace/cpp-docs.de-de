@@ -8,12 +8,12 @@ helpviewer_keywords:
 - value C++ XML tag
 - <value> C++ XML tag
 ms.assetid: 0ba0a0d5-bcd7-4862-a169-83f2721ad80e
-ms.openlocfilehash: 84a19c96e3e7024dbb891c6bde91646d4731b2be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6add2d7fb6676d631a03d5f6e1764ebf221b4c52
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599289"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742511"
 ---
 # <a name="ltvaluegt-visual-c"></a>&lt;value&gt; (Visual C++)
 
@@ -30,7 +30,7 @@ Mit dem Tag \<value> können Sie Eigenschaften und Eigenschaftenaccessormethoden
 *property-description*<br/>
 Eine Beschreibung der Eigenschaft
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.
 

@@ -53,12 +53,12 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: 4974571764c22b26e84e93c68d679afc8a1cea73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 72300f754015e54daf14863ca2ae677bde8f7d1a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573367"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746200"
 ---
 # <a name="exec-wexec-functions"></a>_exec- und _wexec-Funktionen
 
@@ -73,14 +73,14 @@ Jede Funktion in dieser Familie lädt einen neuen Prozess und führt ihn aus:
 
 Der Buchstabe am Ende des Funktionsnamens bestimmt die Variante.
 
-|_exec-Funktionssuffix|Beschreibung |
+|_exec-Funktionssuffix|Beschreibung|
 |----------------------------|-----------------|
 |`e`|`envp`: Array von Zeigern zu Umgebungseinstellungen, wird an den neuen Prozess übergeben.|
 |`l`|Befehlszeilenargumente werden einzeln an die `_exec`-Funktion übergeben. Wird normalerweise verwendet, wenn die Anzahl der Parameter im neuen Prozess im Voraus bekannt ist.|
 |`p`|Die `PATH`-Umgebungsvariable wird verwendet, um die auszuführende Datei zu suchen.|
 |`v`|`argv`: Array von Zeigern zu Befehlszeilenargumenten, wird an die `_exec`-Funktion übergeben. Wird normalerweise verwendet, wenn die Anzahl der Parameter im neuen Prozess variabel ist.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Jede `_exec`-Funktion lädt einen neuen Prozess und führt ihn aus. Alle `_exec`-Funktionen verwenden die gleiche Betriebssystemfunktion ([CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)). Die `_exec`-Funktionen behandeln ggf. automatisch Argumente mit Multibyte-Zeichenfolgen, wobei Multibyte-Zeichensequenzen entsprechend der derzeit verwendeten Multibyte-Codepage erkannt werden. Die `_wexec`-Funktionen sind Breitzeichenversionen der `_exec`-Funktionen. Die `_wexec`-Funktionen verhalten sich genauso wie ihre entsprechenden `_exec`-Familien, allerdings behandeln sie keine Multibyte-Zeichenfolgen.
 

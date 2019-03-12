@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CRT_DISABLE_PERFCRIT_LOCKS constant
 - _CRT_DISABLE_PERFCRIT_LOCKS constant
 ms.assetid: 36cc2d86-cdb1-4b2b-a03c-c0d3818e7c6f
-ms.openlocfilehash: 475cc57b5b47f5abf8c268db3acf9e727ce6a743
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b6f4d8dee5577e88aa59af9bff017aab0c7eef89
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593461"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740263"
 ---
 # <a name="crtdisableperfcritlocks"></a>_CRT_DISABLE_PERFCRIT_LOCKS
 
@@ -25,7 +25,7 @@ Deaktiviert die leistungskritische Sperre bei E/A-Vorgängen.
 #define _CRT_DISABLE_PERFCRIT_LOCKS
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Durch die Definition dieses Symbols kann die Leistung in Singlethread-E/A-gebundenen Programmen verbessert werden, indem bei allen E/A-Vorgängen die Annahme eines Singlethread-E/A-Modells erzwungen wird. Weitere Informationen finden Sie unter [Leistung von Multithreadbibliotheken](../c-runtime-library/multithreaded-libraries-performance.md).
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-ms.openlocfilehash: 94e55f08e4ff427aef0c93bf74c711a6fd935d0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 20e6d45c088fe92fa736539e485d6807802b368a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631027"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750545"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>C++-Entwickler-Leitfaden für spekulative Ausführung dienstseitige Kanäle
 
@@ -310,7 +310,7 @@ Ein *spekulationsbarriere* manuell von einem Entwickler, um zu verhindern, dass 
 
 |Architektur|Systeminterne für CVE-2017-5753 spekulationsbarriere|Systeminterne für CVE-2018-3639 spekulationsbarriere|
 |----------------|----------------|----------------|
-|X86/x64|_mm_lfence()|_mm_lfence()|
+|x86/x64|_mm_lfence()|_mm_lfence()|
 |ARM|aktuell nicht verfügbar|__dsb(0)|
 |ARM64|aktuell nicht verfügbar|__dsb(0)|
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TRUNCATE constant
 - _TRUNCATE constant
 ms.assetid: ad093dbf-1aa5-4bd2-9268-efc68afd8434
-ms.openlocfilehash: 69dc495083bc7fffd925e42163473c64452cb402
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5a341f1828bad9f5562c10036779245ac88c79e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544260"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743204"
 ---
 # <a name="truncate"></a>_TRUNCATE
 
@@ -25,7 +25,7 @@ Gibt das Abschneideverhalten von Zeichenfolgen an.
 #include <stdlib.h>
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 `_TRUNCATE` aktiviert das Abschneideverhalten, wenn es als `count`-Parameter an folgende Funktionen übergeben wird:
 

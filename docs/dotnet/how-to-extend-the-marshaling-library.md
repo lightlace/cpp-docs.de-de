@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Erweitern der Marshallingbibliothek'
+title: 'Vorgehensweise: Erweitern der Marshallingbibliothek'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-ms.openlocfilehash: 697a246012544e6be1189b6cc40d6185e5ec26d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f289539807b1e9499cef51427d3f6a494545cc60
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569847"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750362"
 ---
-# <a name="how-to-extend-the-marshaling-library"></a>Gewusst wie: Erweitern der Marshallingbibliothek
+# <a name="how-to-extend-the-marshaling-library"></a>Vorgehensweise: Erweitern der Marshallingbibliothek
 
 In diesem Thema wird erläutert, das Erweitern der Marshallingbibliothek, um weitere Umwandlungen zwischen Datentypen bereitzustellen. Benutzer können die Marshallingbibliothek für alle derzeit nicht unterstützt, von der Bibliothek datenkonvertierungen erweitern.
 

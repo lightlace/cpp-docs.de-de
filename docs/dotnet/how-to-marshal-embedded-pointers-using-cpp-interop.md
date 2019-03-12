@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Marshallen von eingebetteten Zeigern mit C++-Interop'
+title: 'Vorgehensweise: Marshallen von eingebetteten Zeigern mit C++-Interop'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pointers [C++], marshaling
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-ms.openlocfilehash: d48297118fde98889acc0fd5f4abd29ee177cd8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89194dabb4b124aa7cbd4d1d34a74de491fba66f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493731"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738481"
 ---
-# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Gewusst wie: Marshallen von eingebetteten Zeigern mit C++-Interop
+# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Vorgehensweise: Marshallen von eingebetteten Zeigern mit C++-Interop
 
 Im folgenden code, Beispiele für die Verwendung der [verwaltete, unverwaltete](../preprocessor/managed-unmanaged.md) #pragma-Anweisungen zum Implementieren verwaltet und nicht verwaltete Funktionen in der gleichen Datei, aber diese Funktionen auf die gleiche Weise interagieren, wenn in separaten Dateien definiert. Dateien, die ausschließlich nicht verwaltete Funktionen müssen nicht für die Kompilierung mit [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md).
 

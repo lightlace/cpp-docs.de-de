@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Input Method Editor [C++]
 - MBCS [C++], enabling
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
-ms.openlocfilehash: 0108068f15132fea38189e17371490a7c0dd5d8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b292bb12888ce0c08f96d3c46e27297f61bc428d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465233"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750493"
 ---
 # <a name="mbcs-support-in-visual-c"></a>MBCS-Unterstützung in Visual C++
 
@@ -47,7 +47,7 @@ Der IME aktiviert, indem die ALT-Taste +\` Tastenkombination, die als eine Reihe
 
 Wenn Sie die Benutzer der Anwendung, um die Möglichkeit haben, Kanji Zeichen eingeben möchten, muss die Anwendung Windows IME behandeln. Weitere Informationen zu IME-Programmierung, finden Sie unter [Eingabe-Methodenmanager](/windows/desktop/intl/input-method-manager).
 
-## <a name="visual-c-debugger"></a>Visual C++-Debugger
+## <a name="visual-c-debugger"></a>Visual C++ Debugger
 
 Visual C++-Debugger ermöglicht das Festlegen von Haltepunkten für den IME-Nachrichten. Darüber hinaus kann das Fenster "Arbeitsspeicher" Double-Byte-Zeichen anzeigen.
 

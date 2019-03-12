@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Marshallen von Zeichenfolgen mit PInvoke'
+title: 'Vorgehensweise: Marshallen von Zeichenfolgen mit PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-ms.openlocfilehash: 86ce065da5c214c0da803ad53d19eaec3de5efb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f316e33f1711ea0053fb68c0af7e89f90b793e05
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598119"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739246"
 ---
-# <a name="how-to-marshal-strings-using-pinvoke"></a>Gewusst wie: Marshallen von Zeichenfolgen mit PInvoke
+# <a name="how-to-marshal-strings-using-pinvoke"></a>Vorgehensweise: Marshallen von Zeichenfolgen mit PInvoke
 
 In diesem Thema wird erläutert, wie native Funktionen, akzeptieren die Zeichenfolgen im C-Stil können aufgerufen werden, mithilfe der CLR-Zeichenfolge, mit Unterstützung für .NET Framework Plattformaufrufe System:: String zu geben. Visual C++-Programmierer werden empfohlen, stattdessen die C++-Interop-Funktionen (wenn möglich), da der P/Invoke bietet wenig Fehler während der Kompilierung, berichterstellung, ist nicht typsicher, und kann einfacher zu implementieren. Wenn die nicht verwaltete API als DLL verpackt wird und der Quellcode nicht verfügbar ist, anschließend P/Invoke ist die einzige Option, aber andernfalls [mithilfe C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 

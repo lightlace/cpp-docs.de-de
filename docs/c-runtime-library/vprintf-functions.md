@@ -15,12 +15,12 @@ helpviewer_keywords:
 - vprintf function
 - formatted text [C++]
 ms.assetid: 02ac7c51-eab1-4bf0-bf4c-77065e3fa744
-ms.openlocfilehash: da4f2c8586085e57925d277c452d6ed28db467d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c45197c9008c2d0b6a0519d947ca75f55a7960fd
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573237"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747845"
 ---
 # <a name="vprintf-functions"></a>vprintf-Funktionen
 
@@ -35,7 +35,7 @@ Jede dieser `vprintf`-Funktionen verwendet einen Zeiger auf eine Argumentliste u
 |[_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l](../c-runtime-library/reference/vsprintf-p-vsprintf-p-l-vswprintf-p-vswprintf-p-l.md)|[vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)|
 |[_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|[_vsnprintf, _vsnwprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Die `vprintf`-Funktionen verhalten sich ähnlich wie die entsprechenden Funktionen, die in der folgenden Tabelle aufgeführt werden. Allerdings akzeptiert jede `vprintf`-Funktion einen Zeiger auf eine Argumentliste, während jede der entsprechenden Funktionen eine Argumentliste akzeptiert.
 

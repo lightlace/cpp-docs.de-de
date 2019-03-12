@@ -10,12 +10,12 @@ helpviewer_keywords:
 - setlocale function
 - locale routines
 ms.assetid: 442f8112-9288-44d7-be3c-15d22652093a
-ms.openlocfilehash: b5096d0b0f0990a89789993a12f383d060b91b3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89ff4b694137c7002ecb5f6a844c75ab403e6e2f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571482"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744377"
 ---
 # <a name="locale"></a>Gebietsschema
 
@@ -29,7 +29,7 @@ Von den Funktionen in der folgenden Tabelle sind sicherere Versionen verfügbar,
 
 ## <a name="locale-dependent-routines"></a>Gebietsschemaabhängige Routinen
 
-|-Routine zurückgegebener Wert|Mit|Abhängigkeit von der **setlocale**-Kategorieeinstellung|
+|-Routine zurückgegebener Wert|Verwendung|Abhängigkeit von der **setlocale**-Kategorieeinstellung|
 |-------------|---------|---------------------------------------------|
 |[atof, _atof_l, _wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Konvertieren von Zeichen in Gleitkommawert|**LC_NUMERIC**|
 |[atoi, _atoi_l, _wtoi, _wtoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|Konvertieren von Zeichen in ganzzahligen Wert|**LC_NUMERIC**|

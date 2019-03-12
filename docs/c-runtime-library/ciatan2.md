@@ -20,12 +20,12 @@ helpviewer_keywords:
 - _CIatan2 intrinsic
 - CIatan2 intrinsic
 ms.assetid: 31f8cc78-b79f-4576-b73b-8add18e08680
-ms.openlocfilehash: a09bc8af5ab6ef6d99efea8448098d1a2f03d580
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 914af27921d5fe023a101c4aeec3a808241dcb79
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703258"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749177"
 ---
 # <a name="ciatan2"></a>_CIatan2
 
@@ -37,7 +37,7 @@ Berechnet den Arkustangens von *x* / *y*, wobei *x* und *y* die obersten Werte d
 void __cdecl _CIatan2();
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Diese Version der `atan2`-Funktion verfügt über eine spezielle Aufrufkonvention, die der Compiler versteht. Sie beschleunigt die Ausführung, da sie das Generieren von Kopien verhindert und bei der Registerzuweisung hilft.
 

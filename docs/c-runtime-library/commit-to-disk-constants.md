@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - commit-to-disk constants
 ms.assetid: 0b903b23-b4fa-431e-a937-51d95f695ecf
-ms.openlocfilehash: f4da66c913cd8a046257158e837e5bdb20ed71c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c02b18e5a4a731957a7c74cc45e6e181fe23fad8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581393"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750610"
 ---
 # <a name="commit-to-disk-constants"></a>Commit-To-Disk-Konstanten
 
@@ -23,7 +23,7 @@ ms.locfileid: "50581393"
 #include <stdio.h>
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Diese Microsoft-spezifischen Konstanten geben an, ob der mit der geöffneten Datei verknüpfte Puffer in Betriebssystempuffer oder auf Datenträger geleert wird. Der Modus ist in der Zeichenfolge enthalten, die den Typ des Lese-/Schreibzugriffs angibt (**"r"**, **"w"**, **"a"**, **"r+"**, **"w+"**, **"a+"**).
 

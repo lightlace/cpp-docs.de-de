@@ -4,12 +4,12 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 7758905f6db537260ec9e8b6e516bfa409e97ad2
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: 4b64f79ea5a9566d2ad28216fbc5e736b622fe00
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809736"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740244"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Melden eines Problems mit dem Visual C++-Toolset oder der -Dokumentation
 
@@ -398,4 +398,3 @@ Wenn Sie Ihre Privatsphäre schützen und Ihre vertraulichen Daten nicht veröff
 Wir verwenden GitHub-Tickets, um Fehler in unserer Dokumentation zu erfassen. Sie können GitHub-Tickets jetzt direkt von einer Inhaltsseite aus erstellen. So können Sie besser mit Autoren und Produktteams kommunizieren. Wenn Ihnen ein Fehler (ein falsches Codebeispiel, eine verwirrende Erklärung, eine schwerwiegende Auslassung oder auch nur ein Tippfehler) in einer Dokumentation auffällt, können Sie uns ganz leicht darüber informieren. Scrollen Sie auf der Seite ganz nach unten, und klicken Sie auf **Sign in to give documentation feedback** (Anmelden und Feedback zur Dokumentation geben). Sie müssen ein GitHub-Konto erstellen, wenn Sie nicht bereits über ein Konto verfügen. Sobald Sie über ein Konto verfügen, können Sie sich alle Tickets zur Dokumentation und deren Status ansehen und Benachrichtigungen erhalten, wenn ein von Ihnen gemeldetes Problem bearbeitet wurde. Weitere Informationen erhalten Sie unter [A New Feedback System Is Coming to docs.microsoft.com](/teamblog/a-new-feedback-system-is-coming-to-docs) (Neues Feedbacksystem auf docs.microsoft.com).
 
 Wenn Sie ein GitHub-Ticket zur Dokumentation über die Feedbackschaltfläche in der Dokumentation erstellen, wird das Ticket automatisch mit Informationen zur Seite aufgefüllt, für die Sie das Ticket erstellen möchten, damit wir wissen, wo das Problem besteht. Bearbeiten Sie diese Informationen nicht. Fügen Sie nur Angaben zu dem Problem hinzu. Wenn Sie möchten, können Sie auch einen Änderungsvorschlag machen. [Unsere Dokumentation ist Open Source](https://github.com/MicrosoftDocs/cpp-docs/). Wenn Sie also einen Fehler beheben und eine Änderung vorschlagen möchten, können Sie dies selbst tun. Weitere Informationen zum Beitragen zur Dokumentation finden Sie im [Leitfaden für Mitwirkende](https://github.com/MicrosoftDocs/cpp-docs/blob/master/CONTRIBUTING.md) auf GitHub.
-

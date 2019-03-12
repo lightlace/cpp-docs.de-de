@@ -10,16 +10,16 @@ helpviewer_keywords:
 - applications [C++], projects
 - Visual C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: 456fdb5ec2025b3085332eced3a0c7f33e117918
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a81d73100ef52b61f834f7bffe4467bd296c079
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658015"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744556"
 ---
 # <a name="visual-c-project-types"></a>Visual C++-Projekttypen
 
-Sie können eine Projektvorlage verwenden, um eine grundlegende Programmstruktur, Menüs, Symbolleisten, Symbole, Verweise und `#include`-Anweisungen zu erstellen, die für das gewünschte Projekt angemessen sind. Visual Studio umfasst verschiedene Arten von Visual C++-Projektvorlagen und bietet für viele von ihnen Assistenten, sodass Sie Ihre Projekte beim Erstellen anpassen können. Sie können die Anwendung unmittelbar nach dem Erstellen eines Projekts erstellen und ausführen. Es ist empfehlenswert, den Buildprozess in Abständen durchzuführen, während Sie Ihre Anwendung entwickeln.
+Sie können eine Projektvorlage verwenden, um eine grundlegende Programmstruktur, Menüs, Symbolleisten, Symbole, Verweise und `#include` -Anweisungen zu erstellen, die für das gewünschte Projekt angemessen sind. Visual Studio umfasst verschiedene Arten von Visual C++-Projektvorlagen und bietet für viele von ihnen Assistenten, sodass Sie Ihre Projekte beim Erstellen anpassen können. Sie können die Anwendung unmittelbar nach dem Erstellen eines Projekts erstellen und ausführen. Es ist empfehlenswert, den Buildprozess in Abständen durchzuführen, während Sie Ihre Anwendung entwickeln.
 
 Sie müssen keine Vorlage verwenden, um ein Projekt zu erstellen, doch in den meisten Fällen ist es effizienter dies zu tun, da es einfacher ist, die bereitgestellten Projektdateien und die Struktur zu ändern, anstatt sie von Grund auf neu zu erstellen.
 
@@ -32,7 +32,7 @@ Die in Visual Studio enthaltenen Projektvorlagen hängen von der Produktversion 
 
 ### <a name="windows-desktop"></a>Windows-Desktop
 
-|Projektvorlage|Beschreibung |
+|Projektvorlage|Beschreibung|
 |----------------------|-----------------------------|
 |[Windows-Konsolenanwendung](../windows/creating-a-console-application.md)|Ein Projekt zum Erstellen einer Windows-Konsolenanwendung|
 |[Windows-Desktopanwendung](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|Ein Projekt zum Erstellen einer Windows-Desktopanwendung (Win32)|
@@ -42,7 +42,7 @@ Die in Visual Studio enthaltenen Projektvorlagen hängen von der Produktversion 
 
 ### <a name="general"></a>Allgemein
 
-|Projektvorlage|Beschreibung |
+|Projektvorlage|Beschreibung|
 |----------------------|-----------------------------|
 |Leeres Projekt|Ein leeres Projekt zum Erstellen einer Anwendung, Bibliothek oder DLL. Sie müssen erforderlichen Code oder Ressourcen hinzufügen.|
 |[Makefile-Projekt](../ide/creating-a-makefile-project.md)|Ein Projekt zum Verwenden eines externen Buildsystems|
@@ -50,13 +50,13 @@ Die in Visual Studio enthaltenen Projektvorlagen hängen von der Produktversion 
 
 ### <a name="atl"></a>ATL
 
-|Projektvorlage|Beschreibung |
+|Projektvorlage|Beschreibung|
 |----------------------|-----------------------------|
 |[ATL-Projekt](../atl/reference/creating-an-atl-project.md)|Ein Projekt, das die Active Template Library (ATL) verwendet|
 
 ### <a name="test"></a>Test
 
-|Projektvorlage|Beschreibung |
+|Projektvorlage|Beschreibung|
 |----------------------|-----------------------------|
 |[Natives Komponententestprojekt](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)|Ein Projekt, das native C++-Komponententests enthält|
 
@@ -64,7 +64,7 @@ Die in Visual Studio enthaltenen Projektvorlagen hängen von der Produktversion 
 
 Wenn Sie Ihrer Visual Studio-Installation die Komponente für die MFC- und ATL-Unterstützung hinzufügen, werden die folgenden Projektvorlagen in Visual Studio hinzugefügt.
 
-|Projektvorlage|Beschreibung |
+|Projektvorlage|Beschreibung|
 |----------------------|-----------------------------|
 |[MFC-Anwendung](../mfc/reference/creating-an-mfc-application.md)|Ein Projekt zum Erstellen einer Anwendung, die die MFC-Bibliothek verwendet.|
 |[MFC-ActiveX-Steuerelement](../mfc/reference/creating-an-mfc-activex-control.md)|Ein Projekt zum Erstellen eines ActiveX-Steuerelements, das die MFC-Bibliothek verwendet.|
@@ -76,7 +76,7 @@ Wenn Sie Ihrer Visual Studio-Installation die Komponente für C++-Tools für die
 
 Einen Überblick über Universelle Windows-Apps in C++ finden Sie unter [Universal Windows Apps (C++) (Universelle Windows-Apps (C++))](../windows/universal-windows-apps-cpp.md).
 
-|Projektvorlage|Beschreibung |
+|Projektvorlage|Beschreibung|
 |----------------------|-----------------------------|
 |Leere App|Ein Projekt für eine einseitige UWP-App ohne vordefinierte Steuerelemente oder Layouts.|
 |DirectX 11-App|Ein Projekt für eine UWP-App, die DirectX 11 verwendet.|

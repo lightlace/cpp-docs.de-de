@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, date and time
 - hour values representation
 ms.assetid: 695853ed-b614-4575-b793-b8c287372038
-ms.openlocfilehash: b8460d50a0c6cbd4b213e45c62d8d6cadae68544
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd63b400cad6efc3b3899c17a3bf835596b4008c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548186"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750389"
 ---
 # <a name="date-type"></a>DATE-Typ
 
@@ -24,7 +24,7 @@ Der DATE-Datentyp wird über eine 8-Byte-Gleitkommazahl implementiert. Tage werd
 
 |Datum und Uhrzeit|Darstellung|
 |-------------------|--------------------|
-|Am 30. Dezember 1899 Mitternacht|0,00|
+|Am 30. Dezember 1899 Mitternacht|0.00|
 |1. Januar 1900, Mitternacht|2.00|
 |4. Januar 1900, Mitternacht|5.00|
 |4. Januar 1900, 6 Uhr morgens|5.25|
@@ -50,7 +50,7 @@ Folgendes sollte geachtet werden, bei der Arbeit mit diesen Datums- und Uhrzeitf
 |Am 30. Dezember 1899 18: 00 Uhr|-0.75|
 |Am 30. Dezember 1899 Mittag|-0.50|
 |Am 30. Dezember 1899 6 Uhr morgens|-0.25|
-|Am 30. Dezember 1899 Mitternacht|0,00|
+|Am 30. Dezember 1899 Mitternacht|0.00|
 |Am 30. Dezember 1899 6 Uhr morgens|0.25|
 |Am 30. Dezember 1899 Mittag|0.50|
 |Am 30. Dezember 1899 18: 00 Uhr|0.75|
@@ -68,4 +68,3 @@ Weitere Informationen zu Problemen im Zusammenhang mit der das Datum und `COleDa
 
 [Datum und Uhrzeit](../atl-mfc-shared/date-and-time.md)<br/>
 [COleDateTime-Klasse](../atl-mfc-shared/reference/coledatetime-class.md)
-

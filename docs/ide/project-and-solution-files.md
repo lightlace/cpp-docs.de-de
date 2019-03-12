@@ -11,18 +11,18 @@ helpviewer_keywords:
 - browsing database file, .sdf
 - file types [C++], project files
 ms.assetid: 5823b954-36cf-42d3-8fd5-25bab3ef63d9
-ms.openlocfilehash: ea7fc0fa7ea57de9f12f30804ace2cecccaa4bff
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: f09c9912fa3c7de96f18458bc9823e6302ebe418
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330891"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743729"
 ---
 # <a name="project-and-solution-files"></a>Projekt- und Projektmappendateien
 
 Die folgenden Dateien werden erstellt, wenn Sie ein Projekt in Visual Studio erstellen. Sie werden verwendet, um die Projektdateien in der Projektmappe zu verwalten.
 
-|Dateiname|Speicherort für das Verzeichnis|Speicherort für den Projektmappen-Explorer|Beschreibung |
+|Dateiname|Speicherort für das Verzeichnis|Speicherort für den Projektmappen-Explorer|Beschreibung|
 |--------------|------------------------|--------------------------------|-----------------|
 |*Solname*.sln|*Projname*|Wird im Projektmappen-Explorer nicht angezeigt.|Die *Projektmappendatei*. Es werden alle Elemente eines Projekts oder mehrerer Projekte in einer einzigen Projektmappe organisiert.|
 |*Projname*.suo|*Projname*|Wird im Projektmappen-Explorer nicht angezeigt.|Die Datei mit den *Projektmappenoptionen*. Darin werden die Anpassungen für die Projektmappe gespeichert, damit jedes Mal, wenn Sie ein Projekt oder eine Datei in der Projektmappe öffnen, die gewünschte Darstellung und das gewünschte Verhalten vorhanden ist.|

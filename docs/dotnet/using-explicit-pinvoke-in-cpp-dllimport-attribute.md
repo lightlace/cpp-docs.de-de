@@ -8,16 +8,16 @@ helpviewer_keywords:
 - platform invoke [C++], marshaling in C++
 - data marshaling [C++], platform invoke
 ms.assetid: 18e5218c-6916-48a1-a127-f66e22ef15fc
-ms.openlocfilehash: 8ac9dac3ea90062b632358ade2cd99e9c67e446f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee9d77920f04f7eba5112c66a906b02b7fc4a658
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588707"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740537"
 ---
 # <a name="using-explicit-pinvoke-in-c-dllimport-attribute"></a>Verwenden von explizitem PInvoke in C++ (DllImport-Attribut)
 
-.NET Framework verfügt über explizite PInvoke-Funktionen (Platform Invoke) mit dem `Dllimport`-Attribut, um das Aufrufen von in DLLs verpackten, nicht verwalteten Funktionen durch verwaltete Funktionen zu ermöglichen. Explizites PInvoke ist in Situationen erforderlich, in denen nicht verwaltete APIs als DLLs verpackt sind und der Quellcode nicht verfügbar ist. Beispielsweise ist PInvoke beim Aufrufen von Win32-Funktionen erforderlich. Verwenden Sie andernfalls implizites P\ {Invoke; Siehe [mithilfe C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md) für Weitere Informationen.
+.NET Framework verfügt über explizite PInvoke-Features (Platform Invoke) mit dem `Dllimport`-Attribut, um das Aufrufen von in DLLs verpackten, nicht verwalteten Funktionen durch verwaltete Funktionen zu ermöglichen. Explizites PInvoke ist in Situationen erforderlich, in denen nicht verwaltete APIs als DLLs verpackt sind und der Quellcode nicht verfügbar ist. Beispielsweise ist PInvoke beim Aufrufen von Win32-Funktionen erforderlich. Verwenden Sie andernfalls implizites P\ {Invoke; Siehe [mithilfe C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md) für Weitere Informationen.
 
 PInvoke funktioniert auf Grundlage des <xref:System.Runtime.InteropServices.DllImportAttribute>. Dieses Attribut, das den Namen der DLL als erstes Argument behandelt, wird vor die Funktionsdeklaration jedes verwendeten DLL-Einstiegspunkts gesetzt. Die Signatur der Funktion muss dem Namen einer von der DLL exportierten Funktion entsprechen (ein gewisses Maß an Typkonvertierung kann jedoch implizit durch das Definieren der `DllImport`-Deklarationen als verwaltete Typen erfolgen).
 

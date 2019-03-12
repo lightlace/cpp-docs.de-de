@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: 61ddf4f8dd4042f7be0b892b4fe239caa932a85e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5ee72e557c62e3db2eeb5dac4811133719183f6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532748"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746309"
 ---
 # <a name="for-each-in"></a>for each, in
 
@@ -37,10 +37,10 @@ Der `identifier`-Typ.
 *identifier*<br/>
 Die Iterationsvariable, die das Auflistungselement darstellt.  Wenn `identifier` ist eine [Verweisoperator nachverfolgung](../windows/tracking-reference-operator-cpp-component-extensions.md), können Sie das Element ändern.
 
-*Ausdruck*<br/>
+*expression*<br/>
 Ein Arrayausdruck oder eine Auflistung. Das Auflistungselement muss zulassen, dass der Compiler es in den Typ `identifier` konvertieren kann.
 
-*Anweisungen*<br/>
+*statements*<br/>
 Eine oder mehrere auszuführende Anweisungen.
 
 ### <a name="remarks"></a>Hinweise
@@ -55,11 +55,11 @@ Weitere Informationen finden Sie unter:
 
 - [Eine C++-Standardbibliotheksauflistung mit der for-each-Klausel durchlaufen](../dotnet/iterating-over-stl-collection-by-using-for-each.md)
 
-- [Vorgehensweise: Durchlaufen von Arrays mit der for-each-Klausel](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
+- [Vorgehensweise: Durchlaufen von Arrays mit für die einzelnen](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
 
-- [Vorgehensweise: Durchlaufen einer generischen Auflistung mit der for-each-Klausel](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
+- [Vorgehensweise: Durchlaufen einer generischen Auflistung mit für die einzelnen](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
 
-- [Vorgehensweise: Durchlaufen einer benutzerdefinierten Auflistung mit der for-each-Klausel](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)
+- [Vorgehensweise: Durchlaufen einer benutzerdefinierten Sammlung mit für die einzelnen](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)
 
 ## <a name="windows-runtime"></a>Windows-Runtime
 
@@ -111,7 +111,7 @@ Testing
 
 Die CLR-Syntax ist identisch mit der **alle Laufzeiten** Syntax, mit Ausnahme der wie folgt.
 
-*Ausdruck*<br/>
+*expression*<br/>
 Ein verwalteter Arrayausdruck oder eine Auflistung. Das Auflistungselement muss zulassen, so, dass der Compiler von konvertieren kann <xref:System.Object> auf die *Bezeichner* Typ.
 
 *Ausdruck* ergibt ein Typ, der implementiert <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, oder ein Typ, definiert ein `GetEnumerator` Methode, die entweder einen Typ zurückgibt, implementiert <xref:System.Collections.IEnumerator> oder alle Methoden, die in definiertendeklariert`IEnumerator`.

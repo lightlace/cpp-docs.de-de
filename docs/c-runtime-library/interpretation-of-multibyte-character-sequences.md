@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MBCS [C++], locale code page
 ms.assetid: da9150de-70ea-4d2f-90e6-ddb9202dd80b
-ms.openlocfilehash: 79d053029edcb357f791dade1ec20f562dce3c16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68a0fdf0bdb573b40d347e05a7449affda55d8e5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614990"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738833"
 ---
 # <a name="interpretation-of-multibyte-character-sequences"></a>Interpretation von Mehrbytezeichensequenzen
 
@@ -19,7 +19,7 @@ Die meisten Multibytezeichen-Routinen in der Microsoft-Laufzeitbibliothek erkenn
 
 ## <a name="locale-dependent-multibyte-routines"></a>Vom Gebietsschema abhängige Multibyteroutinen
 
-|-Routine zurückgegebener Wert|Mit|
+|-Routine zurückgegebener Wert|Verwendung|
 |-------------|---------|
 |[_mbclen, mblen, _mblen_l](../c-runtime-library/reference/mbclen-mblen-mblen-l.md)|Überprüfen und Zurückgeben einer Anzahl von Bytes in Multibytezeichen|
 |[strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)|Bei Multibyte-Zeichenfolgen: Überprüfen jedes Zeichens in der Zeichenfolge; Zurückgeben der Zeichenfolgenlänge. Für die Breitzeichen-Zeichenfolgen: Zurückgeben der Zeichenfolgenlänge.|

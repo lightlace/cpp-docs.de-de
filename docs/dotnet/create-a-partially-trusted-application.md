@@ -10,14 +10,14 @@ helpviewer_keywords:
 - interop [C++], partially trusted applications
 - /clr compiler option [C++], partially trusted applications
 ms.assetid: 4760cd0c-4227-4f23-a7fb-d25b51bf246e
-ms.openlocfilehash: fb65c8ff3dc4c3b03fa319fd1e7a6eb95f11bef2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: afdfb8ca11753d7def9d7da6f431082b1a90c345
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445967"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743763"
 ---
-# <a name="how-to-create-a-partially-trusted-application-by-removing-dependency-on-the-crt-library-dll"></a>Gewusst wie: Erstellen einer teilweise vertrauenswürdigen Anwendung durch Entfernen der Abhängigkeit der CRT-Bibliotheks-DLL
+# <a name="how-to-create-a-partially-trusted-application-by-removing-dependency-on-the-crt-library-dll"></a>Vorgehensweise: Erstellen Sie eine teilweise vertrauenswürdige Anwendung durch Entfernen der Abhängigkeit der CRT-Bibliotheks-DLL
 
 In diesem Thema wird erläutert, wie zum Erstellen einer teilweise vertrauenswürdigen Common Language Runtime-Anwendung mit Visual C++ von der Abhängigkeit von msvcm90.dll aufgehoben wird.
 

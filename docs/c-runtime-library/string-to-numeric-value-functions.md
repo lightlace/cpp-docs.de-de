@@ -16,12 +16,12 @@ helpviewer_keywords:
 - parsing, numeric strings
 - string conversion, to numeric values
 ms.assetid: 11cbd9ce-033b-4914-bf66-029070e7e385
-ms.openlocfilehash: d3e53c665378efdd63a373027f4edd6b7fb90ad3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f24b75c2fdb3aa0d84b16874d2d01f1cb96d4b9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544572"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743885"
 ---
 # <a name="string-to-numeric-value-functions"></a>Funktionen zur Konvertierung von Zeichenfolgen in numerische Werte
 
@@ -35,11 +35,11 @@ ms.locfileid: "50544572"
 
 - [_strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l](../c-runtime-library/reference/strtoui64-wcstoui64-strtoui64-l-wcstoui64-l.md)
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Jede Funktion in der **strtod**-Familie konvertiert eine mit NULL endende Zeichenfolge in einen numerischen Wert. In der folgenden Tabelle sind die verfügbaren Funktionen aufgeführt.
 
-|Funktion|Beschreibung |
+|Funktion|Beschreibung|
 |--------------|-----------------|
 |`strtod`|Konvertiert eine Zeichenfolge in einen Gleitkommawert mit doppelter Genauigkeit|
 |`strtol`|Konvertiert eine Zeichenfolge in eine lange ganze Zahl|

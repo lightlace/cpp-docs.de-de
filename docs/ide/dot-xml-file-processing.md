@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
-ms.openlocfilehash: bc9aa57ffd68630d0a4209f8f8611882f8f36fc3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 75b58b7ce2b5c96e853c99f0827ee4de605a6f3d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524169"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748475"
 ---
 # <a name="xml-file-processing"></a>Verarbeiten der XML-Datei
 
@@ -23,11 +23,11 @@ Der Compiler beachtet beim Generieren der ID-Zeichenfolgen die folgenden Regeln:
 
 - Der erste Teil der ID-Zeichenfolge kennzeichnet die Art des zu identifizierenden Members durch ein einzelnes Zeichen, gefolgt von einem Doppelpunkt. Die folgenden Membertypen werden verwendet:
 
-  | Zeichen | Beschreibung  |
+  | Zeichen | Beschreibung |
   |---------------|-----------------|
   | N | namespace<br /><br /> Einem Namespace können keine Dokumentationskommentare hinzugefügt werden. Allerdings sind cref-Verweise auf einen Namespace möglich. |
   | T | Typ: Klasse, Schnittstelle, Struktur, Enumeration, Delegat |
-  | D | typedef |
+  | D | Typedef |
   | F | Feld |
   | P | Eigenschaft (einschließlich von Indexern oder anderen indizierten Eigenschaften) |
   | M | Methode (einschließlich spezieller Methoden wie Konstruktoren, Operatoren usw.) |
