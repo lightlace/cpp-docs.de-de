@@ -4,12 +4,12 @@ ms.date: 09/17/2018
 helpviewer_keywords:
 - walkthrough, deploying a Visual C++ application by using the redistributable package
 ms.assetid: e59becbf-b8c6-4c8e-bab3-b69cc1ed3e5e
-ms.openlocfilehash: 6de94ac300c5d50be67ede24cfcc3d03bc966fed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccf6b74096894c2e48258e6e0a60b807c7c6c5b4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436427"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743795"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>Exemplarische Vorgehensweise: Bereitstellen einer Visual C++-Anwendung mithilfe von Visual C++ Redistributable Package
 
@@ -25,7 +25,7 @@ Sie benötigen folgende Komponenten, um diese exemplarische Vorgehensweise abzus
 
 ### <a name="to-use-the-visual-c-redistributable-package-to-deploy-an-application"></a>Verwenden des Visual C++ Redistributable Package zum Bereitstellen einer Anwendung
 
-1.  Erstellen Sie eine MFC-Anwendung, indem Sie die folgenden Schritte unter [Exemplarische Vorgehensweise: Bereitstellen einer Visual C++-Anwendung mithilfe eines Setup-Projekts](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md) befolgen.
+1.  Erstellen Sie eine MFC-Anwendung mithilfe der Schritte in [Exemplarische Vorgehensweise: Bereitstellen einer Visual C++-Anwendung mithilfe eines Setupprojekts](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
 
 1. Erstellen Sie eine Datei, nennen Sie diese „setup.bat“, und fügen Sie dieser folgende Befehle hinzu. Ändern Sie `MyMFCApplication` in den Namen Ihres Projekts.
 

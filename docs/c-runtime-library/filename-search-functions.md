@@ -17,12 +17,12 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-ms.openlocfilehash: f5f0629b97c3f3731e3916af36c9c8e40176462a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aebdf2e5aaf6d59e5ee39af05540604206ec6c23
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621649"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740552"
 ---
 # <a name="filename-search-functions"></a>Dateinamen-Suchfunktionen
 
@@ -34,7 +34,7 @@ Diese Funktionen suchen nach angegebenen Dateinamen und schließen die Suche ab:
 
 - [_findclose](../c-runtime-library/reference/findclose.md)
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Die `_findfirst` -Funktion stellt Informationen über das erste Vorkommen eines Dateinamens zur Verfügung, der mit der im Argument `filespec` angegebenen Datei übereinstimmt. Sie können in `filespec` beliebige Kombinationen von Platzhalterzeichen verwenden, die vom Hostbetriebssystem unterstützt werden.
 

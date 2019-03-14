@@ -6,12 +6,12 @@ helpviewer_keywords:
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-ms.openlocfilehash: 85753e4842ab2377aa64384bb75e0c2dafd3f858
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4cd0f81ccf768938d585c206d5f50b20f6a0ae19
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581947"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741352"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>Exemplarische Vorgehensweise: Debuggen eines Projekts (C++)
 

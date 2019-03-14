@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: e930702862149de4dae65aab2f880f35850e0687
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6522461cf1f08eee9187a8f739cb21fe01e755f5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597547"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747007"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Einführung in Visual C++ für UNIX-Benutzer
 
@@ -19,7 +19,7 @@ Dieses Thema enthält Informationen für UNIX-Benutzer, die noch keine Erfahrung
 
 Sie können den C++-Compiler von der Befehlszeile aus auf ähnliche Weise wie eine Befehlszeilenumgebung unter UNIX verwenden. Die Kompilierung erfolgt mithilfe der Eingabeaufforderung mit dem C/C++-Befehlszeilencompiler (CL.EXE), dem Linker (LINK.EXE) und weiteren Tools, darunter NMAKE.EXE, der Microsoft-Version des UNIX-Dienstprogramms Make.
 
-Unter UNIX werden Befehle in einem gemeinsam genutzten Ordner, z. B. /usr/bin, installiert. In Visual Studio werden die Befehlszeilentools in Ihrem Visual Studio-Installationsverzeichnis im Unterverzeichnis „VC\bin“ und seinen Unterverzeichnissen installiert. Im Gegensatz zu UNIX sind diese Tools nicht in einem einfachen Eingabeaufforderungsfenster verfügbar. Um die Befehlszeilentools zu verwenden, verwenden Sie einen Eingabeaufforderungskurzbefehl für Entwickler, oder führen Sie eine Entwicklerbefehlsdatei wie „vcvarsall.bat“ aus. Dadurch werden der Pfad und andere Umgebungsvariablen festgelegt, die erforderlich sind, um C++-Programme von der Befehlszeile aus zu kompilieren. Weitere Informationen finden Sie unter [Erstellen von C/C++-Code über die Befehlszeile](../build/building-on-the-command-line.md) und unter [Exemplarische Vorgehensweise: Kompilieren eines nativen C++-Programms in der Befehlszeile](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).
+Unter UNIX werden Befehle in einem gemeinsam genutzten Ordner, z. B. /usr/bin, installiert. In Visual Studio werden die Befehlszeilentools in Ihrem Visual Studio-Installationsverzeichnis im Unterverzeichnis „VC\bin“ und seinen Unterverzeichnissen installiert. Im Gegensatz zu UNIX sind diese Tools nicht in einem einfachen Eingabeaufforderungsfenster verfügbar. Um die Befehlszeilentools zu verwenden, verwenden Sie einen Eingabeaufforderungskurzbefehl für Entwickler, oder führen Sie eine Entwicklerbefehlsdatei wie „vcvarsall.bat“ aus. Dadurch werden der Pfad und andere Umgebungsvariablen festgelegt, die erforderlich sind, um C++-Programme von der Befehlszeile aus zu kompilieren. Weitere Informationen finden Sie unter [Build C/C++ code on the command line (Erstellen von C- oder C++-Code in der Befehlszeile)](../build/building-on-the-command-line.md) und [Walkthrough: Compiling a Native C++ Program on the Command Line (Exemplarische Vorgehensweise: Kompilieren eines nativen C++-Programms in der Befehlszeile)](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).
 
 Um einen Eingabeaufforderungskurzbefehl für Entwickler zu öffnen, geben Sie *Entwicklereingabeaufforderung* in das Desktopsuchsteuerelement ein, und wählen Sie das Ergebnis **Entwicklereingabeaufforderung** für Ihre Version von Visual Studio aus. Um eine Entwicklereingabeaufforderung auszuwählen, die für einen bestimmten Host und eine Zielarchitektur vorkonfiguriert ist, öffnen Sie das Menü **Start** (das Windows-Symbol in der Ecke des Desktops), und scrollen Sie dann zu dem Ordner für Ihre Visual Studio-Version, z. B. **Visual Studio 2017**. Öffnen Sie den Ordner, und wählen Sie den Eingabeaufforderungskurzbefehl für Ihren bevorzugten Host und eine Zielarchitektur aus.
 

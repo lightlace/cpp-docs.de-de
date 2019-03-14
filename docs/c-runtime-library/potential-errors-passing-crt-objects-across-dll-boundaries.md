@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - DLL conflicts [C++]
 ms.assetid: c217ffd2-5d9a-4678-a1df-62a637a96460
-ms.openlocfilehash: c90303db63724bbcf584340147555814d9a92f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31f9d9aceba167b516c9d37724e240f1bc4586e1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562772"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749898"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Potenzielle Fehler bei der Übergabe von CRT-Objekten über DLL-Grenzen
 
@@ -19,7 +19,7 @@ Ein ähnliches Problem kann auftreten, wenn Sie Speicher belegen (entweder expli
 
 Ein anderes Symptom dieses Problems kann ein Fehler sein, der während des Debuggens im Ausgabefenster auftritt, wie z.B. der folgende:
 
-HEAP[]: Ungültige Adresse angegeben für RtlValidateHeap(#,#)
+HEAP[]: Invalid Address specified to RtlValidateHeap(#,#) (HEAP[]: Ungültige Adresse für RtlValidateHeap(#,#) angegeben)
 
 ## <a name="causes"></a>Ursachen
 
@@ -29,7 +29,7 @@ Und da jede Kopie der CRT-Bibliothek einen eigenen Heap-Manager aufweist, ist da
 
 ## <a name="example"></a>Beispiel
 
-### <a name="description"></a>Beschreibung 
+### <a name="description"></a>Beschreibung
 
 Dieses Beispiel übergibt ein Dateihandle über eine DLL-Grenze.
 
@@ -71,7 +71,7 @@ this is a string
 
 ## <a name="example"></a>Beispiel
 
-### <a name="description"></a>Beschreibung 
+### <a name="description"></a>Beschreibung
 
 Dieses Beispiel übergibt Umgebungsvariablen über eine DLL-Grenze hinweg.
 

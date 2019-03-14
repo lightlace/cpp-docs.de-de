@@ -1,18 +1,22 @@
 ---
 title: Installieren der C++-Workload unter Linux in Visual Studio
 description: Informationen zum Herunterladen, Installieren und Einrichten der Linux-Workload für C++ in Visual Studio
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: c01c8ddeeb8439a7610c0f6c7c11b608ab3675d8
-ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
+ms.openlocfilehash: 74155724abb3a0e02cc27dd8a8d144f142ee4b6f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55763884"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747721"
 ---
-# <a name="download-install-and-setup-the-linux-workload"></a>Herunterladen, Installieren und Einrichten der Linux-Workload
+# <a name="download-install-and-set-up-the-linux-workload"></a>Herunterladen, Installieren und Einrichten der Linux-Workload
 
-Sie können die Visual Studio-IDE unter Windows verwenden, um C++-Projekte zu erstellen, zu bearbeiten und zu debuggen, die auf einem physischen Linux-Computer, einem virtuellen Computer oder dem [Windows-Subsystem für Linux](/windows/wsl/about) ausgeführt werden. Für jedes dieser Szenarien installieren Sie zunächst die Workload **Linux-Entwicklung mit C++**.
+Sie können die Visual Studio 2017-IDE unter Windows verwenden, um C++-Projekte zu erstellen, zu bearbeiten und zu debuggen, die auf einem physischen Linux-Computer, einem virtuellen Computer oder dem [Windows-Subsystem für Linux](/windows/wsl/about) ausgeführt werden. 
+
+Sie können an Ihrer bestehenden Codebasis arbeiten, die CMake oder ein anderes Buildsystem verwendet, ohne sie in ein Visual Studio-Projekt konvertieren zu müssen. Wenn Ihre Codebasis plattformübergreifend ist, können Sie sowohl Windows als auch Linux in Visual Studio als Ziel verwenden. Sie können zum Beispiel Ihren Code unter Windows mit Visual Studio bearbeiten, debuggen und ein Profil dafür erstellen und dann das Projekt schnell für weitere Tests neu auf Linux ausrichten. Die Linux-Headerdateien werden automatisch auf Ihren lokalen Computer kopiert. Dort werden sie von Visual Studio verwendet, um vollständige IntelliSense-Unterstützung bereitzustellen (Anweisungsvervollständigung, Gehe zu Definition usw.).
+ 
+Für jedes dieser Szenarios ist die Workload **Linux-Entwicklung mit C++** erforderlich. 
 
 ## <a name="visual-studio-setup"></a>Setup von Visual Studio
 
@@ -22,6 +26,8 @@ Sie können die Visual Studio-IDE unter Windows verwenden, um C++-Projekte zu er
    ![Workload „Visual C++ für Linux-Entwicklung“](media/linuxworkload.png)
 
 1. Wenn Sie CMake verwenden oder IoT- oder eingebettete Zielplattformen nutzen möchten, navigieren Sie auf der rechten Seite zum Bereich **Installationsdetails**, und erweitern Sie **Optionale Komponenten** unter **Linux-Entwicklung mit C++**. Wählen Sie dann die gewünschten Komponenten aus.
+
+    **Visual Studio 2017, Version 15.4 und höher**<br/>: Wenn Sie unter Linux die C++-Workload für Visual Studio installieren, ist standardmäßig CMake-Unterstützung für Linux aktiviert.
 
 1. Klicken Sie auf **Ändern**, um mit der Installation fortzufahren.
 
@@ -63,3 +69,6 @@ Der Zielcomputer, auf dem Fedora ausgeführt wird, verwendet den **Dnf**-Paket-I
 
    Damit wird der Dienst im Hintergrund gestartet und ausgeführt, sodass Verbindungen akzeptiert werden können.
 
+## <a name="ensure-you-have-cmake-38-on-the-remote-linux-machine"></a>Sicherstellen, dass Sie auf dem Linux-Remotecomputer über CMake 3.8 verfügen
+
+Ihre Linux-Distribution enthält möglicherweise eine ältere Version von CMake. Die CMake-Unterstützung in Visual Studio erfordert die Servermodusunterstützung, die in CMake 3.8 eingeführt wurde. Laden Sie für eine von Microsoft bereitgestellte CMake-Variante unter [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) die aktuellsten vordefinierten Binärdateien auf Ihren Linux-Computer herunter.

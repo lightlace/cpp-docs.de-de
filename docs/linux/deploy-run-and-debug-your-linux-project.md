@@ -3,16 +3,16 @@ title: Bereitstellen, Ausführen und Debuggen Ihres C++-Projekts unter Linux in 
 description: Informationen zum Kompilieren, Ausführen und Debuggen von Code auf dem Remoteziel in einem C++-Projekt unter Linux in Visual Studio.
 ms.date: 09/12/2018
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 413f0b089b3b1398093073bcd6f49358143121c8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: cdafb064f8a6269c5ccae938e280b5f47bff3b00
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328395"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562886"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Bereitstellen, Ausführen und Debuggen eines Linux-Projekts
 
-Nachdem Sie ein C++-Projekt in Visual Studio unter Linux erstellt haben und mit dem [Verbindungs-Manager von Linux](../linux/connect-to-your-remote-linux-computer.md) eine Verbindung mit dem Projekt hergestellt haben, können Sie das Projekt ausführen und debuggen. Die Kompilierung, die Ausführung und das Debuggen des Codes erfolgen auf dem Remoteziel.
+Nachdem Sie ein C++-Projekt in Visual Studio unter Linux erstellt haben und mit dem [Verbindungs-Manager von Linux](connect-to-your-remote-linux-computer.md) eine Verbindung mit dem Projekt hergestellt haben, können Sie das Projekt ausführen und debuggen. Die Kompilierung, die Ausführung und das Debuggen des Codes erfolgen auf dem Remoteziel.
 
 Es gibt mehrere Möglichkeiten für den Umgang mit dem Linux-Projekt sowie zum Debuggen des Projekts.
 
@@ -24,16 +24,16 @@ Es gibt mehrere Möglichkeiten für den Umgang mit dem Linux-Projekt sowie zum D
 
 1. Wählen Sie den Debugmodus auf der Eigenschaftenseite **Debuggen** aus.
 
-   GDB wird zum Debuggen von Anwendungen verwendet, die unter Linux ausgeführt werden.  Für die Ausführung stehen zwei Modi zur Verfügung, die über die Option **Debugmodus** auf der Eigenschaftenseite **Debugging** des Projekts ausgewählt werden können:
+   GDB wird zum Debuggen von Anwendungen verwendet, die unter Linux ausgeführt werden. Für die Ausführung stehen GDB zwei verschiedene Modi zur Verfügung, die über die Option **Debugging Mode** (Debugmodus) auf der Eigenschaftenseite **Debugging** (Debuggen) des Projekts ausgewählt werden können:
 
    ![GDB-Optionen](media/settings_debugger.png)
 
-   - Im **gdbserver**-Modus wird GDB lokal ausgeführt und stellt eine Verbindung mit gdbserver her, der auf dem Remotesystem ausgeführt wird.  Dies ist der einzige Modus, der vom Linux-Konsolenfenster unterstützt wird.
+   - Im **gdbserver**-Modus wird GDB lokal ausgeführt und stellt eine Verbindung mit gdbserver auf dem Remotesystem aus.  Dies ist der einzige Modus, der vom Linux-Konsolenfenster unterstützt wird.
 
-   - Im **gdb**-Modus unterstützt der Visual Studio-Debugger GDB auf dem Remotesystem. Dies ist besser kompatibel, falls die lokale Version von GDB nicht mit der auf dem Zielcomputer installierten Version kompatibel ist. |
+   - Im **GDB**-Modus steuert der Visual Studio-Debugger GDB auf dem Remotesystem. Diese Option eignet sich besser, wenn die lokale Version von GDB nicht mit der Version kompatibel ist, die auf dem Zielcomputer installiert ist. |
 
    > [!NOTE]
-   > Wenn Sie im gdbserver-Debugmodus keine Haltepunkte treffen können, versuchen Sie es im gdb-Modus. GDB muss zunächst auf dem Remoteziel [installiert](../linux/download-install-and-setup-the-linux-development-workload.md) werden.
+   > Wenn Sie im gdbserver-Debugmodus keine Haltepunkte treffen können, versuchen Sie es im gdb-Modus. GDB muss zunächst auf dem Remoteziel [installiert](download-install-and-setup-the-linux-development-workload.md) werden.
 
 1. Wählen Sie das Remoteziel mit der Standardsymbolleiste **Debuggen** in Visual Studio aus.
 
@@ -41,7 +41,7 @@ Es gibt mehrere Möglichkeiten für den Umgang mit dem Linux-Projekt sowie zum D
 
    ![Remoteziel](media/remote_target.png)
 
-   Wenn Sie noch keine Verbindung mit dem Remoteziel hergestellt haben, wird eine Anweisung angezeigt, mit dem [Verbindungs-Manager von Linux](../linux/connect-to-your-remote-linux-computer.md) eine Verbindung mit dem Remoteziel herzustellen.
+   Wenn Sie noch keine Verbindung mit dem Remoteziel hergestellt haben, wird eine Anweisung angezeigt, mit dem [Verbindungs-Manager von Linux](connect-to-your-remote-linux-computer.md) eine Verbindung mit dem Remoteziel herzustellen.
 
    ![Remotearchitektur](media/architecture.png)
 
@@ -69,7 +69,7 @@ Es gibt mehrere Möglichkeiten für den Umgang mit dem Linux-Projekt sowie zum D
 
 ## <a name="configure-other-debugging-options"></a>Konfigurieren anderer Debugoptionen
 
-- Befehlszeilenargumente können mit dem Element **Programmargumente** auf der Eigenschaftenseite **Debugging** des Projekts an die ausführbare Datei übergeben werden.
+- Befehlszeilenargumente können mit dem Element **Programmargumente** auf der Eigenschaftenseite **Debugging** (Debuggen) des Projekts an die ausführbare Datei übergeben werden.
 
    ![Programmargumente](media/settings_programarguments.png)
 
@@ -79,10 +79,10 @@ Es gibt mehrere Möglichkeiten für den Umgang mit dem Linux-Projekt sowie zum D
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- Informationen zum Debuggen von ARM-Geräten unter Linux finden Sie in folgendem Blogbeitrag: [Debugging an embedded ARM device in Visual Studio (Debuggen eines eingebetteten ARM-Geräts in Visual Studio)](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
+- Informationen zum Debuggen von ARM-Geräten unter Linux finden Sie im folgenden Blogbeitrag: [Debugging an embedded ARM device in Visual Studio (Debuggen eines eingebetteten ARM-Geräts in Visual Studio)](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
 
-- Wenn Sie mithilfe des Befehls **An den Prozess anhängen** einen Debugvorgang ausführen möchten, lesen Sie diesen Blogbeitrag: [Linux C++ Workload improvements to the Project System, Linux Console Window, rsync and Attach to Process (Verbesserungen der Linux C++-Workload für das Projektsystem, die Linux-Konsole, Windows, rsync und „An den Prozess anhängen“)](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/)
+- Informationen zum Debuggen mithilfe des Befehls **An den Prozess anhängen** finden Sie im folgenden Blogbeitrag: [Linux C++ Workload improvements to the Project System, Linux Console Window, rsync and Attach to Process (Verbesserungen der Linux-C++-Workload für das Projektsystem, das Linux-Konsolenfenster, rsync und „An den Prozess anhängen“)](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/).
 
 ## <a name="see-also"></a>Siehe auch
 
-[C++-Debugeigenschaften (Linux C++)](../linux/prop-pages/debugging-linux.md)
+[C++-Debugeigenschaften (Linux C++)](prop-pages/debugging-linux.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-ms.openlocfilehash: a604d8ef0b44db04d9a6da8fdc959d08384f1bf3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e93236f9bd08741bb757e43309cd59281f828da1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437309"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744604"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Exemplarische Vorgehensweise: Testen eines Projekts (C++)
 
@@ -51,7 +51,7 @@ In dieser exemplarischen Vorgehensweise überwachen Sie während der Programmaus
 
 1. Öffnen Sie das Kontextmenü der Anweisung `return 0;`, und klicken Sie dann auf **Ausführen bis Cursor**. Der gelbe Pfeil links vom Code zeigt auf die Anweisung, die als Nächstes ausgeführt wird.
 
-1. Die Anzahl von `Cardgame::totalParticipants` sollte abnehmen, wenn ein `Cardgame` beendet wird. An diesem Punkt sollte `Cardgame::totalParticipants` gleich „0“ sein, da alle `Cardgame`-Instanzen gelöscht wurden. Im Fenster **Überwachen 1** wird jedoch angegeben, dass `Cardgame::totalparticipants` gleich **18** ist. Durch diese Differenz wird ein Fehler im Code deutlich, den Sie erkennen und beheben können, indem Sie die folgende exemplarische Vorgehensweise durchführen: [Exemplarische Vorgehensweise: Debuggen eines Projekts (C++)](../ide/walkthrough-debugging-a-project-cpp.md).
+1. Die Anzahl von `Cardgame::totalParticipants` sollte abnehmen, wenn ein `Cardgame` beendet wird. An diesem Punkt sollte `Cardgame::totalParticipants` gleich „0“ sein, da alle `Cardgame`-Instanzen gelöscht wurden. Im Fenster **Überwachen 1** wird jedoch angegeben, dass `Cardgame::totalparticipants` gleich **18** ist. Durch diese Differenz wird ein Fehler im Code deutlich, den Sie erkennen und beheben können, indem Sie die folgende exemplarische Vorgehensweise durchführen: [Exemplarische Vorgehensweise: Debuggen eines Projekts (C++)](../ide/walkthrough-debugging-a-project-cpp.md)
 
 1. Klicken Sie zum Beenden des Programms in der Menüleiste auf **Debuggen** > **Debuggen beenden**, oder drücken Sie die Tastenkombination **UMSCHALT**+**F5**.
 

@@ -3,12 +3,12 @@ title: Herstellen einer Verbindung mit Ihrem Linux-Remotecomputer in Visual Stud
 description: Informationen zum Herstellen einer Verbindung mit einem Linux-Remotecomputer über ein C++-Projekt in Visual Studio
 ms.date: 07/20/2018
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: ce6a3c02846586dbc46b0c9bc0db0d579878c814
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e20714308448349ee5dac8951a7b5d7bfd2f29ef
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575239"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562847"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>Herstellen einer Verbindung mit Ihrem Linux-Remotecomputer
 
@@ -24,7 +24,7 @@ Beim Erstellen eines C++-Linux-Projekts in Visual Studio wird Linux-Code auf Ihr
 
 1. Geben Sie die folgenden Informationen ein:
 
-   | Eingabe | Beschreibung 
+   | Eingabe | Beschreibung
    | ----- | ---
    | **Hostname**           | Name oder IP-Adresse des Zielgeräts
    | **Port**                | Port, auf dem der SSH-Dienst ausgeführt wird, in der Regel Port 22

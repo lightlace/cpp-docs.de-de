@@ -7,22 +7,22 @@ helpviewer_keywords:
 - run-time error checking
 - run-time errors, checking
 ms.assetid: c965dd01-57ad-4a3c-b1d6-5aa04f920501
-ms.openlocfilehash: 348698faa1f91e4d98acc762538fc1cbdb798e0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec07b9b0c6aa52187c3c24bff4cc51712dbf9fc8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435646"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746460"
 ---
 # <a name="run-time-error-checking"></a>Laufzeitfehlerüberprüfung
 
-Die C-Laufzeitbibliothek enthält die Funktionen, die Laufzeitfehlerüberprüfungen (Run-Time Error Checks, RTC) unterstützen. Mit der Laufzeitfehlerüberprüfung können Sie Ihr Programm so erstellen, dass bestimmte Arten von Laufzeitfehlern gemeldet werden. Sie geben an, welche Arten von Fehlern gemeldet werden sollen und wie die Meldung erfolgen soll. Weitere Informationen finden Sie unter [Gewusst wie: Verwenden von systemeigenen Laufzeitprüfungen](/visualstudio/debugger/how-to-use-native-run-time-checks).
+Die C-Laufzeitbibliothek enthält die Funktionen, die Laufzeitfehlerüberprüfungen (Run-Time Error Checks, RTC) unterstützen. Mit der Laufzeitfehlerüberprüfung können Sie Ihr Programm so erstellen, dass bestimmte Arten von Laufzeitfehlern gemeldet werden. Sie geben an, welche Arten von Fehlern gemeldet werden sollen und wie die Meldung erfolgen soll. Weitere Informationen finden Sie unter [Vorgehensweise: Use Native Run-Time Checks (Verwenden von nativen Laufzeitüberprüfungen)](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
 Verwenden Sie die folgenden Funktionen, um die Art und Weise anzupassen, in der Ihr Programm die Laufzeitfehlerüberprüfung ausführt.
 
 ## <a name="run-time-error-checking-functions"></a>Funktionen der Laufzeitfehlerüberprüfung
 
-|Funktion|Mit|
+|Funktion|Verwendung|
 |--------------|---------|
 |[_RTC_GetErrDesc](../c-runtime-library/reference/rtc-geterrdesc.md)|Gibt eine kurze Beschreibung des Typs einer Laufzeitfehlerüberprüfung zurück.|
 |[_RTC_NumErrors](../c-runtime-library/reference/rtc-numerrors.md)|Gibt die Gesamtzahl der Fehler zurück, die durch die Laufzeitfehlerüberprüfungen erkannt werden können.|

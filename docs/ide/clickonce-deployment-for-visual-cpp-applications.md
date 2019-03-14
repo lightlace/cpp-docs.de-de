@@ -6,16 +6,16 @@ helpviewer_keywords:
 - application deployment [C++], ClickOnce
 - ClickOnce deployment [C++], C++ applications
 ms.assetid: 9988c546-0936-452c-932f-9c76daa42157
-ms.openlocfilehash: 29395e5d7e4ba9e2c582d9e5c081a4f667dcaafa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1460f13226291e76d297b628d3542a1e147900f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467808"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742155"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>ClickOnce-Bereitstellung für Visual C++-Anwendungen
 
-Visual Studio verfügt über zwei verschiedene Technologien zum Bereitstellen von Windows-Anwendungen: ClickOnce-Bereitstellung oder [Windows Installer](/windows/desktop/Msi/windows-installer-portal)-Bereitstellung.
+Visual Studio bietet zwei verschiedene Technologien für die Bereitstellung von Windows-Anwendungen: Die Bereitstellung mit ClickOnce oder dem [Windows Installer](/windows/desktop/Msi/windows-installer-portal).
 
 ## <a name="clickonce-deployment-in-c"></a>ClickOnce-Bereitstellung in C++
 
@@ -36,7 +36,7 @@ Im Rahmen der Bereitstellung müssen alle Visual C++-Bibliotheken installiert we
 
 Möglicherweise müssen Sie für die Anwendung einen Bootstrapper (Programm zum Installieren erforderlicher Komponenten) erstellen, um die erforderlichen Komponenten bereitzustellen. Informationen zum Bootstrapper finden Sie unter [Creating Bootstrapper Packages (Erstellen von Bootstrapperpaketen)](/visualstudio/deployment/creating-bootstrapper-packages).
 
-Eine ausführlichere Beschreibung der Technologie finden Sie unter [ClickOnce Security and Deployment (ClickOnce-Sicherheit und Bereitstellung)](/visualstudio/deployment/clickonce-security-and-deployment). Ein ausführliches Beispiel für die ClickOnce-Bereitstellung finden Sie unter [Walkthrough: Manually Deploying a ClickOnce Application (Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung)](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).
+Eine ausführlichere Beschreibung der Technologie finden Sie unter [ClickOnce Security and Deployment (ClickOnce-Sicherheit und Bereitstellung)](/visualstudio/deployment/clickonce-security-and-deployment). Ein ausführliches Beispiel der ClickOnce-Bereitstellung finden Sie unter [Walkthrough: Manually Deploying a ClickOnce Application (Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung)](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).
 
 ## <a name="see-also"></a>Siehe auch
 

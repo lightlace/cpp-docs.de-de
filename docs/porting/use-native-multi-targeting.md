@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ native multi-targeting
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
-ms.openlocfilehash: a4bb059b13f2001c6691e8d051106aa5e11eccbd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57f7450537f7609cbc66f8adf0bc868631e15f3a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429144"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740822"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Verwenden von nativen Zielversionen in Visual Studio, um alte Projekte zu erstellen
 
@@ -52,7 +52,7 @@ Als Nächstes müssen Sie Ihre Visual Studio 2008-Projektmappen und -Projekte au
 
 Wenn das Upgrade abgeschlossen ist und der Protokollbericht Fehler oder Warnungen für Ihre Projekte ausgibt, überprüfen Sie diese sorgfältig. Die Konvertierung von **VCBuild** in **MSBuild** kann Probleme verursachen. Stellen Sie sicher, dass Sie alle Aktionselemente verstehen und implementieren, die im Bericht aufgeführt sind. Weitere Informationen zum Upgradeprotokollbericht und zu Problemen, die womöglich bei der Konvertierung von **VCBuild** in **MSBuild** auftreten, finden Sie im Blogpost: [C++ Native Multi-Targeting (Native Festlegung von Zielversionen für C++)](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/).
 
-Wenn das Projektupgrade abgeschlossen ist, und Sie alle Probleme in der Protokolldatei behoben haben, ist Ihre Lösung tatsächlich auf das neueste Toolset ausgerichtet. Als letzten Schritt ändern Sie die Eigenschaften für jedes Projekt in der Projektmappe, um das Toolset von Visual Studio 2008 zu verwenden. Öffnen Sie mithilfe der Lösung, die in der aktuellen Visual Studio-Version geladen ist, für jedes Projekt das Dialogfeld **Eigenschaftenseiten** des Projekts: Klicken Sie mit der rechten Maustaste auf das Projekt im **Projektmappen-Explorer**, und wählen Sie anschließend **Eigenschaften** aus. Ändern Sie im Dialogfeld **Eigenschaftenseiten** den Wert der Dropdownliste **Konfiguration** in **Alle Konfigurationen**. Wählen Sie unter **Konfigurationseigenschaften**die Option **Allgemein** aus, und ändern Sie dann **Plattformtoolset** in **Visual Studio 2008 (v90)**.
+Wenn das Projektupgrade abgeschlossen ist, und Sie alle Probleme in der Protokolldatei behoben haben, ist Ihre Lösung tatsächlich auf das neueste Toolset ausgerichtet. Als letzten Schritt ändern Sie die Eigenschaften für jedes Projekt in der Projektmappe, um das Toolset von Visual Studio 2008 zu verwenden. Laden Sie die Projektmappe in der aktuellen Version von Visual Studio, und öffnen Sie für jedes Projekt in der Projektmappe die **Eigenschaftenseiten** des Projekts: Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und klicken Sie anschließend auf **Eigenschaften**. Ändern Sie im Dialogfeld **Eigenschaftenseiten** den Wert der Dropdownliste **Konfiguration** in **Alle Konfigurationen**. Wählen Sie unter **Konfigurationseigenschaften**die Option **Allgemein** aus, und ändern Sie dann **Plattformtoolset** in **Visual Studio 2008 (v90)**.
 
 Nach dieser Änderung wird der Visual Studio 2008-Compiler und die -Bibliotheken zum Generieren von Projektbinärdateien verwendet, wenn Sie die Projektmappe in der aktuellen Version von Visual Studio erstellen.
 
