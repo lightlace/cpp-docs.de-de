@@ -4,14 +4,14 @@ ms.date: 09/17/2018
 helpviewer_keywords:
 - deployment for Visual C++
 ms.assetid: 66735cda-8fe3-4211-a19a-2cf717a12a3f
-ms.openlocfilehash: 3dc607ea082e31ba73f34ce1ca8acd3ebc78292a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2d83d45f1369e250b24708edd17f4004e030a17
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565593"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749125"
 ---
-# <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>Exemplarische Vorgehensweise: Bereitstellen einer Visual C++-Anwendung mithilfe eines Setup-Projekts
+# <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>Exemplarische Vorgehensweise: Bereitstellen einer Visual C++-Anwendung mithilfe eines Setupprojekts
 
 In diesem Artikel wird beschrieben, wie Sie ein Setup-Projekt verwenden, um eine Visual C++-Anwendung bereitzustellen.
 
@@ -32,7 +32,7 @@ Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgend
    > [!NOTE]
    > Wenn der Typ **MFC-Anwendung** nicht vorhanden ist:<br/>
    > **Visual Studio 2017**: Wählen Sie im Dialogfeld **Neues Projekt** im linken Bereich **Visual Studio-Installer öffnen** aus. Installieren Sie die Option unter **Desktopentwicklung mit C++** im Abschnitt **Optionale Komponenten** mit dem Namen **Visual C++ MFC für x86 und x64**.<br/>
-   > **Visual Studio 2015**: Klicken Sie auf die Windows-Schaltfläche „Start“, und geben Sie **Software** ein. Öffnen Sie das Programm aus der Ergebnisliste, und suchen Sie dann Ihre Microsoft Visual Studio 2015-Installation in der Liste der installierten Programme. Doppelklicken Sie darauf, und wählen Sie dann **Ändern** und die Komponente **Microsoft Foundation Classes** unter **Visual C++** aus.
+   > **Visual Studio 2015**: Klicken Sie auf die Windows-Schaltfläche „Start“, und geben Sie **Programme hinzufügen oder entfernen** ein. Öffnen Sie das Programm aus der Ergebnisliste, und suchen Sie dann Ihre Microsoft Visual Studio 2015-Installation in der Liste der installierten Programme. Doppelklicken Sie darauf, und wählen Sie dann **Ändern** und die Komponente **Microsoft Foundation Classes** unter **Visual C++** aus.
 
 1. Ändern Sie die aktive Projektmappenkonfiguration in **Release**. Klicken Sie im Menü **Build** auf **Konfigurations-Manager**. Wählen Sie im Dialogfeld **Konfigurations-Manager** im Dropdownfeld **Aktive Projektmappenkonfiguration** die Option **Release** aus. Klicken Sie auf **Schließen**.
 

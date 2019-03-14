@@ -17,12 +17,12 @@ helpviewer_keywords:
 - ismbb routines
 - _ismbb routines
 ms.assetid: d63c232e-3fe4-4844-aafd-2133846ece4b
-ms.openlocfilehash: 6e1dd62f45eed4ec1d8e89a746d01ca1984022ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d70604ce71d74bd73a3fea1b99beaf93f052e344
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481405"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750506"
 ---
 # <a name="ismbb-routines"></a>_ismbb-Routinen
 
@@ -37,7 +37,7 @@ Testet den angegebenen ganzzahligen Wert `c` unter Verwendung des aktuellen Gebi
 |[_ismbbkalnum, _ismbbkalnum_l](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|[_ismbbpunct, _ismbbpunct_l](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md)|
 |[_ismbbkana, _ismbbkana_l](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|[_ismbbtrail, _ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Jede Routine in der `_ismbb` -Gruppe testet den angegebenen ganzzahligen Wert `c` auf eine bestimmte Bedingung. Das Testergebnis hängt von der gültigen Multibyte-Codepage ab. Standardmäßig wird die Multibyte-Codepage auf die Standard-ANSI-Codepage festgelegt, die vom Betriebssystem beim Programmstart abgerufen wird. Sie können die verwendete Multibyte-Codepage mit [_getmbcp](../c-runtime-library/reference/getmbcp.md) abfragen oder mit [_setmbcp](../c-runtime-library/reference/setmbcp.md) ändern.
 

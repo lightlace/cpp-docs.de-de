@@ -1,17 +1,17 @@
 ---
 title: Konfigurieren eines C++ Projekts unter Linux in Visual Studio
-ms.date: 09/18/2018
+ms.date: 11/12/2018
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: fd87b3d60e6625fb86ad1b494fd878b9b5ca031b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d0825a3aca8ca03759d7f7b42db90ce9700c10b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622494"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745182"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurieren eines Linux-Projekts
 
-In diesem Artikel wird das Konfigurieren eines C++-Projekts unter Linux in Visual Studio beschrieben. Informationen zu Linux CMake-Projekten finden Sie unter [Konfigurieren eines Linux CMake-Projekts](cmake-linux-project.md).
+In diesem Thema wird das Konfigurieren eines C++-Projekts, das auf einer Linux-Projektvorlage basiert, unter Linux in Visual Studio beschrieben. Informationen zu Linux CMake-Projekten finden Sie unter [Konfigurieren eines Linux CMake-Projekts](cmake-linux-project.md).
 
 ## <a name="general-settings"></a>Allgemeine Einstellungen
 
@@ -90,7 +90,7 @@ Navigieren Sie zum Verwalten Ihres Header-Caches zu **Extras > Optionen > Plattf
 ## <a name="see-also"></a>Siehe auch
 
 [Arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md)<br/>
-[Allgemeine C++-Eigenschaften (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
-[VC++-Verzeichnisse (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
-[Kopieren von Quellprojekteigenschaften (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
-[Buildereigniseigenschaften (Linux C++)](../linux/prop-pages/build-events-linux.md)
+[Allgemeine C++-Eigenschaften (Linux C++)](prop-pages/general-linux.md)<br/>
+[VC++-Verzeichnisse (Linux C++)](prop-pages/directories-linux.md)<br/>
+[Kopieren von Quellprojekteigenschaften (Linux C++)](prop-pages/copy-sources-project.md)<br/>
+[Buildereigniseigenschaften (Linux C++)](prop-pages/build-events-linux.md)

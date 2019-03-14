@@ -2,12 +2,12 @@
 title: 'Leitfaden zum Portieren: Spy++'
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 5bd69853b13d58ff79910eafcc601b0507d5a9ad
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: b28de2396ba94578a8d06038a1191be42dce49ea
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177003"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751373"
 ---
 # <a name="porting-guide-spy"></a>Leitfaden zum Portieren: Spy++
 
@@ -280,7 +280,7 @@ Beim Wechseln zur Definition des Makros kann festgestellt werden, dass es auf di
 (static_cast< LRESULT (AFX_MSG_CALL CWnd::*)(CPoint) > (&ThisClass :: OnNcHitTest)) },
 ```
 
-Die Ursache des Problems liegt in der Nichtübereinstimmung des Zeigers auf die Memberfunktionstypen. Das Problem stellt nicht die Konvertierung von `CHotLinkCtrl` als Klassentyp in `CWnd` als Klassentyp dar, da dies eine gültige Konvertierung von einer Basisklasse in eine abgeleitete Klasse ist. Das Problem ist der Rückgabetyp: UINT in LRESULT. LRESULT wird zu LONG_PTR aufgelöst, der je nach binärem Zieltyp ein 64-Bit- oder ein 32-Bit-Zeiger ist. Daher kann UINT nicht in diesen Typ konvertiert werden. Dies ist nach einem Upgrade des vor 2005 geschriebenen Codes nicht ungewöhnlich, da es im Rahmen von 64-Bit-Kompatibilitätsänderungen bei vielen Meldungszuordnungsmethoden zur Änderung des Rückgabetyps von UINT zu LRESULT in Visual Studio 2005 gekommen ist. Im folgenden Code wird der Rückgabetyp von UINT zu LRESULT geändert:
+Die Ursache des Problems liegt in der Nichtübereinstimmung des Zeigers auf die Memberfunktionstypen. Das Problem stellt nicht die Konvertierung von `CHotLinkCtrl` als Klassentyp in `CWnd` als Klassentyp dar, da dies eine gültige Konvertierung von einer Basisklasse in eine abgeleitete Klasse ist. Das Problem ist der Rückgabetyp: UINT im Vergleich zu LRESULT. LRESULT wird zu LONG_PTR aufgelöst, der je nach binärem Zieltyp ein 64-Bit- oder ein 32-Bit-Zeiger ist. Daher kann UINT nicht in diesen Typ konvertiert werden. Dies ist nach einem Upgrade des vor 2005 geschriebenen Codes nicht ungewöhnlich, da es im Rahmen von 64-Bit-Kompatibilitätsänderungen bei vielen Meldungszuordnungsmethoden zur Änderung des Rückgabetyps von UINT zu LRESULT in Visual Studio 2005 gekommen ist. Im folgenden Code wird der Rückgabetyp von UINT zu LRESULT geändert:
 
 ```cpp
 afx_msg UINT OnNcHitTest(CPoint point);
@@ -292,7 +292,7 @@ Nach dieser Änderung erhalten wir den folgenden Code:
 afx_msg LRESULT OnNcHitTest(CPoint point);
 ```
 
-Da diese Funktion etwa zehnmal in verschiedenen von CWnd abgeleiteten Klassen vorkommt, können Sie, wenn der Cursor auf die Funktion im Editor zeigt, **Gehe zu Definition** (Tastatur: **F12**) und **Gehe zu Deklaration** (Tastatur: **STRG**+**F12**) auswählen, um nach dieser zu suchen und über das Toolfenster **Symbol suchen** zu dieser zu navigieren. Die Option **Gehe zu Definition** ist in der Regel nützlicher. Mit der Option **Gehe zu Deklaration** wird nach anderen Deklarationen als Definitionsklassendeklarationen gesucht, u. a. Friend-Klassendeklarationen oder Vorwärtsverweise.
+Da diese Funktion etwa zehn Mal in verschiedenen von CWnd abgeleiteten Klassen vorkommt, können Sie **Gehe zu Definition** (Tastatur: **F12**) und **Gehe zu Deklaration** (Tastatur: **STRG**+**F12**) auswählen, wenn der Cursor auf die Funktion im Editor zeigt, um nach dieser zu suchen und über das Toolfenster **Symbol suchen** zu dieser zu navigieren. Die Option **Gehe zu Definition** ist in der Regel nützlicher. Mit der Option **Gehe zu Deklaration** wird nach anderen Deklarationen als Definitionsklassendeklarationen gesucht, u. a. Friend-Klassendeklarationen oder Vorwärtsverweise.
 
 ##  <a name="mfc_changes"></a> Schritt 9. MFC-Änderungen
 
@@ -542,7 +542,7 @@ Umschließen Sie zur Behebung dieses Fehlers das Zeichenfolgenliteral mit \_T.
 wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
 ```
 
-Mit dem \_T-Makro wird ein Zeichenfolgenliteral entsprechend der Einstellung von MBCS oder UNICODE als **char**-Zeichenfolge oder als **wchar_t**-Zeichenfolge kompiliert. Öffnen Sie zum Ersetzen aller Zeichenfolgen durch \_T in Visual Studio zunächst das Feld **Schnellersetzung** (**STRG**+**F**) oder **In Dateien ersetzen** (**STRG**+**UMSCHALT**+**H**), und aktivieren Sie anschließend das Kontrollkästchen **Reguläre Ausdrücke verwenden**. Geben Sie `((\".*?\")|('.+?'))` als zu suchenden Text und `_T($1)` als Text ein, mit dem dieser ersetzt werden soll. Wenn einige Zeichenfolgen bereits vom \_T-Makro eingeschlossen sind, wird es mit diesem Verfahren erneut hinzugefügt, und es werden möglicherweise Suchergebnisse angezeigt, wo das \_T nicht gewünscht ist, wenn Sie beispielsweise `#include` verwenden. Daher wird empfohlen, **Nächstes ersetzen** anstelle von **Alle ersetzen** zu verwenden.
+Mit dem \_T-Makro wird ein Zeichenfolgenliteral entsprechend der Einstellung von MBCS oder UNICODE als **char**-Zeichenfolge oder als **wchar_t**-Zeichenfolge kompiliert. Öffnen Sie zum Ersetzen aller Zeichenfolgen durch \_T in Visual Studio zunächst das Feld **Schnellersetzung** (Tastatur: **STRG**+**F**) oder **In Dateien ersetzen** (Tastatur: **STRG**+**UMSCHALT**+**H**), und aktivieren Sie anschließend das Kontrollkästchen **Reguläre Ausdrücke verwenden**. Geben Sie `((\".*?\")|('.+?'))` als zu suchenden Text und `_T($1)` als Text ein, mit dem dieser ersetzt werden soll. Wenn einige Zeichenfolgen bereits vom \_T-Makro eingeschlossen sind, wird es mit diesem Verfahren erneut hinzugefügt, und es werden möglicherweise Suchergebnisse angezeigt, wo das \_T nicht gewünscht ist, wenn Sie beispielsweise `#include` verwenden. Daher wird empfohlen, **Nächstes ersetzen** anstelle von **Alle ersetzen** zu verwenden.
 
 Diese bestimmte Funktion, [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa), ist in den Windows-Headern definiert, und laut Dokumentation wird ihre Verwendung aufgrund möglichem Pufferüberlauf nicht empfohlen. Für den `szTmp`-Puffer ist keine Größe angegeben. Die Funktion kann somit nicht prüfen, ob der Puffer alle Daten aufnehmen kann, die in diesen geschrieben werden sollen. Informationen zum Portieren in Secure CRT finden Sie im folgenden Abschnitt, in dem die Behebung weiterer ähnlichen Probleme erläutert wird. Das Ersetzen mit [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) ist abgeschlossen.
 
@@ -674,4 +674,4 @@ Das Portieren von Spy++ aus dem ursprünglichen Visual C++ 6.0-Code in den aktue
 ## <a name="see-also"></a>Siehe auch
 
 [Portieren und Aktualisieren: Beispiele und Fallstudien](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
-[Vorherige Fallstudie: COM Spy](../porting/porting-guide-com-spy.md)
+[Leitfaden zum Portieren: COM Spy](../porting/porting-guide-com-spy.md)

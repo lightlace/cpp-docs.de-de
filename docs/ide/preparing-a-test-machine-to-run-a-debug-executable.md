@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-ms.openlocfilehash: 95633a9b6b04be7e551934744868e10f60d51fb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ae5e0007105cfda233f808bf52d2d81068524be
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509104"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744858"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Vorbereiten eines Testcomputers zum Ausführen einer ausführbaren Debugdatei
 
@@ -20,7 +20,7 @@ Um einen Computer zum Testen der Debugversion einer Anwendung vorzubereiten, die
 
 Es gibt drei Möglichkeiten, Debugversionen von DLLs für Visual C++-Bibliotheken zusammen mit der Debugversion einer Anwendung bereitzustellen.
 
-- Verwenden Sie zum Installieren der Debugversion einer bestimmten Visual C++-DLL im %windir%\system32\-Verzeichnis eine zentrale Bereitstellung, indem Sie ein Setup-Projekt mit Mergemodulen für die richtige Bibliotheksversion und Architektur der Anwendung verwenden. Mergemodule befinden sich im Verzeichnis „Programme“ oder „Programme (x86)“ unter „\Gemeinsame Dateien\Mergemodule\\\“. Bei der Debugversion eines Mergemoduls ist „Debug“ Bestandteil des Namens, z. B. Microsoft_VC110_DebugCRT_x86.msm. Ein Beispiel dieser Bereitstellung finden Sie unter [Walkthrough: Deploying a Visual C++ Application By Using a Setup Project (Exemplarische Vorgehensweise: Bereitstellen einer Visual C++-Anwendung mithilfe eines Setup-Projekts)](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
+- Verwenden Sie zum Installieren der Debugversion einer bestimmten Visual C++-DLL im %windir%\system32\-Verzeichnis eine zentrale Bereitstellung, indem Sie ein Setup-Projekt mit Mergemodulen für die richtige Bibliotheksversion und Architektur der Anwendung verwenden. Mergemodule befinden sich im Verzeichnis „Programme“ oder „Programme (x86)“ unter „\Gemeinsame Dateien\Mergemodule\\\“. Bei der Debugversion eines Mergemoduls ist „Debug“ Bestandteil des Namens, z. B. Microsoft_VC110_DebugCRT_x86.msm. Ein Beispiel dieser Bereitstellung finden Sie unter [Exemplarische Vorgehensweise: Bereitstellen einer Visual C++-Anwendung mithilfe eines Setupprojekts](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
 
 - Verwenden Sie eine lokale Bereitstellung, um die Debugversion einer bestimmten Visual C++-DLL im Installationsverzeichnis der Anwendung zu installieren, indem Sie die im Verzeichnis „Programme“ oder „Programme (x86)“ unter „\Microsoft Visual Studio \<Version>\VC\redist\Debug_NonRedist\\“ bereitgestellten Dateien verwenden.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, versions
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 7f40e59ae3e5e883827a212a16d1dd19822dc136
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d3c6e25594eb3bb01ad3fc995a24cdc723d5726
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463751"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751894"
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Visual C++-Tools und -Features in Visual Studio-Editionen
 
@@ -96,7 +96,7 @@ Die folgenden Tabellen zeigen die Visual C++-Funktionen, die in Visual Studio ve
 |Aktualisieren von VCBuild-VCPROJ-Projekten auf MSBuild (VCUpgrade.exe)|X|X|X|X|
 |Profilgesteuerte Optimierungen (PGO)|||X|X|
 
-## <a name="debugging-features"></a>Debugfeatures
+## <a name="debugging-features"></a>Debugfunktionen
 
 |Debugfunktion|Visual Studio Express für Windows|Visual Studio Express für Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
 |-----------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
@@ -106,7 +106,7 @@ Die folgenden Tabellen zeigen die Visual C++-Funktionen, die in Visual Studio ve
 |Verwaltetes Debuggen||X|X|X|
 |GPU-Nutzung|X||X|X|
 |Speicherauslastung|X||X|X|
-|Remotedebugging|X|X|X|X|
+|Remote Debugging|X|X|X|X|
 |SQL-Debugging|||X|X|
 |Statische Codeanalyse|Eingeschränkt|Eingeschränkt|X|X|
 
@@ -119,15 +119,15 @@ Die folgenden Tabellen zeigen die Visual C++-Funktionen, die in Visual Studio ve
 |HTML-Designer/Editor|X|X|X|X|
 |XML-Editor|X|X|X|X|
 |Quellcode-Editor|X|X|X|X|
-|Produktivitätsfeatures: Umgestaltung, IntelliSense, C++-Codeformatierung|X|X|X|X|
-|Windows Forms-Designer||X|X|X|
+|Features zur Steigerung der Produktivität: Refactoring, IntelliSense, C++-Codeformatierung|X|X|X|X|
+|Windows Forms-Designer||X|X|X|
 |Daten-Designer|||X|X|
 |Systemeigener Ressourcen-Editor (RC-Dateien)|||X|X|
 |Ressourcen-Editor|X|X|X|X|
 |Modell-Editor|X||X|X|
 |Shader-Designer|X||X|X|
 
-## <a name="data-features"></a>Datenfeatures
+## <a name="data-features"></a>Datenfunktionen
 
 |Datenfunktion|Visual Studio Express für Windows|Visual Studio Express für Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
 |------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
@@ -163,8 +163,8 @@ Die folgenden Tabellen zeigen die Visual C++-Funktionen, die in Visual Studio ve
 ||||||
 |-|-|-|-|-|
 |Tool|Visual Studio Express für Windows|Visual Studio Express für Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
-|Komponententests (systemeigenes Framework)|X|X|X|X|
-|Komponententests (verwaltetes Framework)||X|X|X|
+|Unittests (natives Framework)|X|X|X|X|
+|Unittests (verwaltetes Framework)||X|X|X|
 |Codeabdeckung||||X|
 |Manuelle Tests||||X|
 |Explorative Tests||||X|

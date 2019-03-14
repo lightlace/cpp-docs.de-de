@@ -27,18 +27,18 @@ helpviewer_keywords:
 - UNICODE constant
 - _T type
 ms.assetid: 2848121c-e51f-4b9b-a2e6-833ece4b0cb3
-ms.openlocfilehash: b39e8563797ca0b57b54d2c85f851c8c45b29905
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa6827607430bf8f0db37997bac0223833fcd171
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471447"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747929"
 ---
 # <a name="using-generic-text-mappings"></a>Verwenden von Zuordnungen für generischen Text
 
 **Microsoft-spezifisch**
 
-Um die Codeentwicklung für internationale Märkte zu vereinfachen, stellt die Microsoft-Laufzeitbibliothek für viele Datentypen, Routinen und andere Objekte Microsoft-spezifische Zuordnungen für generischen Text zur Verfügung. Diese Zuordnungen werden in TCHAR.H definiert. Sie können mithilfe dieser Namenszuordnungen generischen Code schreiben, der für die folgenden drei Arten von Zeichensätzen kompiliert werden kann: ASCII (SBCS), MBCS oder Unicode. Dies hängt von der Manifestkonstante ab, die Sie mit einer `#define`-Anweisung definieren. Generische Textzuordnungen sind Microsoft-Erweiterungen, die nicht mit ANSI kompatibel sind.
+Um die Codeentwicklung für internationale Märkte zu vereinfachen, stellt die Microsoft-Laufzeitbibliothek für viele Datentypen, Routinen und andere Objekte Microsoft-spezifische Zuordnungen für generischen Text zur Verfügung. Diese Zuordnungen werden in TCHAR.H definiert. Sie können diese Namenszuordnungen verwenden, um generischen Code zu schreiben, der für jede der drei Arten von Zeichensätzen kompiliert werden kann: ASCII (SBCS), MBCS oder Unicode, abhängig von einer eindeutigen Konstante, die Sie mit einer `#define`-Anweisung definieren. Generische Textzuordnungen sind Microsoft-Erweiterungen, die nicht mit ANSI kompatibel sind.
 
 ### <a name="preprocessor-directives-for-generic-text-mappings"></a>Präprozessordirektiven zum Zuordnen von generischem Text
 

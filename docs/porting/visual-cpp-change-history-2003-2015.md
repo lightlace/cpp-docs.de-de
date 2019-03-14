@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: b1070a330e40c0bf73f3713783b3f126d0848cbc
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: dcae15ade3bd155e16149cc56981f79abb245e16
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525521"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740377"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Änderungsverlauf von Visual C++ von 2003 bis 2015
 
@@ -141,11 +141,11 @@ Darüber hinaus können fortlaufende Verbesserungen der Übereinstimmung des Com
 
   - Unendlich: 1.#INF
 
-  - Stiller NaN: 1. #QNAN
+  - Stiller NaN: 1.#QNAN
 
-  - Signaling-NaN: 1.#SNAN
+  - Signalisierender NaN: 1.#SNAN
 
-  - Unbestimmter NaN: 1. #IND
+  - Unbestimmter NaN: 1.#IND
 
   Allen diesen Werte konnte ein Vorzeichen vorangestellt werden und sie wurden möglicherweise je nach Feldbreite und Genauigkeit unterschiedlich formatiert (z.B. mit ungewöhnlichen Effekten, z.B. würde die Funktion `printf("%.2f\n", INFINITY)` „1.#J“ ausgeben, da #INF auf zwei Stellen „gerundet“ werden würde). In C99 wurden neue Anforderungen an die Formatierung von unendlichen und NaN-Werten eingeführt. Die MSVC-Implementierung entspricht nun diesen Anforderungen. Die neuen Zeichenfolgen lauten wie folgt:
 
@@ -289,7 +289,7 @@ Darüber hinaus können fortlaufende Verbesserungen der Übereinstimmung des Com
 
 - **asctime**
 
-   In früheren Versionen hat die [asctime](../c-runtime-library/reference/asctime-wasctime.md)-Funktion einstellige Tagesangaben mit einer führenden 0 aufgefüllt, z.B. Freitag, 06 Juni 08:00:00 2014. Die Spezifikation erfordert, dass diese Tage mit einem führenden Leerzeichen aufgefüllt werden, z. B. Freitag, 6 Juni 08:00:00 2014. Dies wurde korrigiert.
+   In früheren Versionen hat die [asctime](../c-runtime-library/reference/asctime-wasctime.md)-Funktion einstellige Tagesangaben mit einer führenden 0 aufgefüllt, z.B.: Fri Jun 06 08:00:00 2014 (Freitag, 06. Juni 08:00:00 2014). Die Spezifikation erfordert, dass diese Tage mit einem führenden Leerzeichen aufgefüllt werden, z. B. Freitag, 6 Juni 08:00:00 2014. Dies wurde korrigiert.
 
 - **strftime und wcsftime**
 
@@ -1047,7 +1047,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
 - **Mehrdeutige Aufrufe überladener Funktionen**
 
-   Der folgende Code erzeugt nun C266: „N::bind“: Mehrdeutiger Aufruf einer überladenen Funktion
+   Mit dem folgenden Code wird nun C266 generiert: 'N::bind': Mehrdeutiger Aufruf einer überladenen Funktion
 
     ```cpp
     template<typename R, typename T, typename T1, typename A1>
@@ -1190,7 +1190,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
 - **MFC-Ausnahmen können nicht nach Wert abgefangen werden, da sie nicht kopierbar sind**
 
-   Der folgende Code in einer MFC-Anwendung verursacht jetzt Fehler C2316: „D“: Kann nicht aufgefangen werden, da Destruktor und/oder copy-Konstruktor nicht verfügbar sind oder gelöscht wurden
+   Der folgende Code in einer MFC-Anwendung verursacht nun den Fehler C2316: 'D': cannot be caught as the destructor and/or copy constructor are inaccessible or deleted („D“: Kann nicht aufgefangen werden, da auf den Destruktor und/oder den Kopierkonstruktor nicht zugegriffen werden kann oder diese gelöscht wurden).
 
     ```cpp
     struct B {
@@ -1336,7 +1336,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
 - **Korrigieren ungültiger Kopierinitialisierung in nicht statischer Datenmemberinitialisierung**
 
-   Der folgende Code erzeugt nun den Fehler C2664: „S1::S1(S1 &&)“: Konvertierung von Argument 1 von „bool“ zu „const S1 &“ nicht möglich:
+   Mit dem folgenden Code wird nun Fehler C2664 generiert: 'S1::S1(S1 &&)': Argument 1 kann nicht von „bool“ in „const S1 &“ konvertiert werden:
 
     ```cpp
     struct S1 {
@@ -1358,7 +1358,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
 - **Zugreifen auf Konstruktoren in „decltype“-Anweisungen**
 
-   Der folgende Code erzeugt nun C2248: „S::S“: Zugriff auf in der Klasse „S“ deklarierten privaten Member nicht möglich:
+   Mit dem folgenden Code wird nun C2248 generiert: 'S::S': Kein Zugriff auf die in der Klasse „S“ deklarierten privaten Member möglich:
 
     ```cpp
     class S {
@@ -1480,7 +1480,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
 - **Geschützter Basiskonstruktor kann nicht im Text eines abgeleiteten Konstruktors aufgerufen werden**
 
-   Der folgende Code erzeugt nun den Fehler C2248: „S1::S1“: Zugriff auf in der Klasse „S1“ deklarierten geschützten Member nicht möglich
+   Mit dem folgenden Code wird nun Fehler C2248 generiert: 'S1::S1': Kein Zugriff auf das geschützte Member möglich, das in der Klasse „S1“ deklariert ist
 
     ```cpp
     struct S1 {
@@ -2584,7 +2584,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     };
     ```
 
-   Erstellen Sie zunächst die IDL-Datei. Die generierte Datei „vc140.idl“ kann zum Abrufen einer „\*.idl“-Datei verwendet werden, die die Schnittstellen und Anmerkungen enthält.
+   Erstellen Sie zunächst die *idl-Datei. Die generierte Datei vc140.idl kann zum Abrufen einer \*.idl-Datei verwendet werden, die die Schnittstellen und Anmerkungen enthält.
 
    Fügen Sie als Nächstes Ihrem Build einen MIDL-Schritt hinzu, um sicherzustellen, dass die C++-Schnittstellendefinitionen generiert werden.
 
@@ -2884,7 +2884,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     };
     ```
 
-   Um Stellen im Code zu suchen, die in einer früheren Version optimiert worden wären, verwenden Sie einen Compiler dieser Version zusammen mit der `/W3`-Compileroption und aktivieren Sie die Warnung 4370. Zum Beispiel:
+   Um Stellen im Code zu suchen, die in einer früheren Version optimiert worden wären, verwenden Sie einen Compiler dieser Version zusammen mit der `/W3`-Compileroption und aktivieren Sie die Warnung 4370. Beispiel:
 
     ```cpp
     #pragma warning(default:4370)
@@ -2899,7 +2899,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     };
     ```
 
-   Vor Visual Studio 2013 gab dieser Code diese Meldung aus: Warnung C4370: 'S2' : Durch bessere Verpackung wurde das Klassenlayout geändert, das vorher eine andere Compilerversion hatte.
+   Vor Visual Studio 2013 gab dieser Code diese Meldung aus: „warning C4370: 'S2' : layout of class has changed from a previous version of the compiler due to better packing“ (Warnung C4370: ‚S2‘: Durch bessere Verpackung wurde das Klassenlayout geändert, das vorher eine andere Compilerversion hatte).
 
    Der x86-Compiler weist in allen Versionen des Compilers dasselbe Problem aufgrund eines nicht optimalen Layouts auf. Wenn dieser Code beispielsweise für x86 kompiliert wird:
 
@@ -3091,7 +3091,7 @@ Die `SchedulerType`-Enumeration von `UmsThreadDefault` ist veraltet. Bei Angabe 
 
 - Es wurde ein Parameter zu dem `CFolderPickerDialog`-Konstruktor hinzugefügt. (Dies ist ein Standardparameter, weshalb kein Eingriff in den Quellcode erforderlich ist.)
 
-- Die Größe der `CFileStatus`-Struktur wurde geändert: Der `m_attribute`-Member wurde von BYTE in DWORD geändert (entsprechend dem Wert, der von `GetFileAttributes` zurückgegeben wird).
+- Die Größe der Struktur `CFileStatus` wurde geändert: Der `m_attribute`-Member wurde von BYTE in DWORD geändert (entsprechend dem Wert, der von `GetFileAttributes` zurückgegeben wird).
 
 - `CRichEditCtrl` und `CRichEditView` nutzen in Unicode-Builds MSFTEDIT_CLASS (RichEdit 4.1-Steuerelement) anstelle von RICHEDIT_CLASS (RichEdit 3.0-Steuerelement).
 
@@ -3413,11 +3413,11 @@ Die `SchedulerType`-Enumeration von `UmsThreadDefault` ist veraltet. Bei Angabe 
 
 - `CFileDialog`-Klasse: Benutzerdefinierte Vorlagen für die `CFileDialog`-Klasse können nicht automatisch zu Windows Vista portiert werden. Sie sind immer noch verwendbar ist, verfügen jedoch nicht über die zusätzliche Funktionalität oder das Aussehen von Dialogfeldern im Windows Vista-Stil.
 
-- `CWnd`-Klasse und `CFrameWnd`-Klasse: Die Methode `CWnd::GetMenuBarInfo` wurde entfernt.
+- `CWnd`-Klasse und `CFrameWnd`-Klasse: Die `CWnd::GetMenuBarInfo`-Methode wurde entfernt.
 
    Die Methode `CFrameWnd::GetMenuBarInfo` ist jetzt eine nicht virtuelle Methode. Weitere Informationen finden Sie unter **Funktion „GetMenuBarInfo“** im Windows SDK.
 
-- MFC ISAPI-Unterstützung: MFC unterstützt das Erstellen von Anwendungen mit der ISAPI (Internet Server Application Programming Interface) nicht mehr. Wenn Sie eine ISAPI-Anwendung erstellen möchten, rufen Sie die ISAPI-Erweiterungen direkt auf.
+- MFC-ISAPI-Unterstützung: MFC unterstützt das Erstellen von Anwendungen mit der ISAPI (Internet Server Application Programming Interface) nicht mehr. Wenn Sie eine ISAPI-Anwendung erstellen möchten, rufen Sie die ISAPI-Erweiterungen direkt auf.
 
 - Veraltete ANSI-APIs: Die ANSI-Versionen mehrerer MFC-Methoden sind veraltet. Verwenden Sie in Ihren künftigen Anwendungen die Unicode-Versionen dieser Methoden. Weitere Informationen finden Sie unter **Anforderungen für die Erstellung von Windows Vista-Standardsteuerelementen**.
 
