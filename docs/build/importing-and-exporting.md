@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++], exporting from
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
-ms.openlocfilehash: 1aaf18003f831ca94ecd90dafb472ecb894b8a60
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 882010cd28c291e9f49ca0f7dd9d646c70130184
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424794"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815826"
 ---
 # <a name="importing-and-exporting"></a>Importieren und Exportieren
 
@@ -27,7 +27,7 @@ Sie können Öffentliche Symbole in eine Anwendung importieren oder Exportieren 
 
 Eine Moduldefinitionsdatei (.def) ist eine Textdatei mit einer oder mehreren Modulanweisungen, die verschiedene Attribute einer DLL beschreiben. Wenn Sie nicht verwenden **von "__declspec(dllimport)" "** oder **__declspec(dllexport)** zum Exportieren DLLs-Funktionen benötigt die DLL eine DEF-Datei.
 
-DEF-Dateien können [importieren in eine Anwendung](../build/importing-using-def-files.md) oder [exportieren aus einer DLL](../build/exporting-from-a-dll-using-def-files.md).
+DEF-Dateien können [importieren in eine Anwendung](importing-using-def-files.md) oder [exportieren aus einer DLL](exporting-from-a-dll-using-def-files.md).
 
 ## <a name="using-declspec"></a>__Declspec verwenden
 
@@ -41,10 +41,10 @@ Das Format Portable Win32-Anwendung soll die Anzahl der Seiten zu minimieren, di
 
 ## <a name="what-do-you-want-to-do"></a>Wie möchten Sie vorgehen?
 
-- [Importieren in eine Anwendung](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Importieren in eine Anwendung](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Exportieren aus einer DLL](../build/exporting-from-a-dll.md)
+- [Exportieren aus einer DLL](exporting-from-a-dll.md)
 
 ## <a name="see-also"></a>Siehe auch
 
-[DLLs in Visual C++](../build/dlls-in-visual-cpp.md)
+[DLLs in Visual C++](dlls-in-visual-cpp.md)

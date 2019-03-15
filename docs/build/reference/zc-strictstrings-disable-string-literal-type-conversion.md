@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: b7eb3f3b-82c1-48a2-8e63-66bad7397b46
-ms.openlocfilehash: d0fe7a7aa956ebc7662754b039389983d75ff590
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 954088955a3f1530bb298aadbc35c7dd74150b7a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668714"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822307"
 ---
 # <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>/Zc:strictStrings (Zeichenfolgenliteral-Typkonvertierung deaktivieren)
 
@@ -64,7 +64,7 @@ Weitere Informationen über Konformitätsprobleme in Visual C++ finden Sie unter
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **Befehlszeile** Eigenschaftenseite.
 
@@ -72,4 +72,4 @@ Weitere Informationen über Konformitätsprobleme in Visual C++ finden Sie unter
 
 ## <a name="see-also"></a>Siehe auch
 
-[/Zc (Übereinstimmung)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (Übereinstimmung)](zc-conformance.md)<br/>
