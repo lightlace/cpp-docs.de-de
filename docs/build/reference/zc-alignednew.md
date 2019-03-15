@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /Zc:alignedNew
 - Zc:alignedNew
 - -Zc:alignedNew
-ms.openlocfilehash: 0e6cf408e56dd6e5bc262c39dda460253a32dfc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e0d850d54611579288b81a334af4abdfab6e411c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662461"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820337"
 ---
 # <a name="zcalignednew-c17-over-aligned-allocation"></a>/ Zc: alignednew (C ++ 17 ausgerichtete-Zuteilung)
 
@@ -20,7 +20,7 @@ Aktivieren der Unterstützung für C ++ 17-über-ausgerichtete **neue**, dynamis
 
 ## <a name="syntax"></a>Syntax
 
-> **/ Zc: alignednew**[-]
+> **/Zc:alignedNew**[-]
 
 ## <a name="remarks"></a>Hinweise
 
@@ -97,7 +97,7 @@ Weitere Informationen über Konformitätsprobleme in Visual C++ finden Sie unter
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **Befehlszeile** Eigenschaftenseite.
 
@@ -105,4 +105,4 @@ Weitere Informationen über Konformitätsprobleme in Visual C++ finden Sie unter
 
 ## <a name="see-also"></a>Siehe auch
 
-[/Zc (Übereinstimmung)](../../build/reference/zc-conformance.md)
+[/Zc (Übereinstimmung)](zc-conformance.md)

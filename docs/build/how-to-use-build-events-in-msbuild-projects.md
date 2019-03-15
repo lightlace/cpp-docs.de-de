@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: ea9ff51066c09e1e4a783b622248d9774a023172
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7678b975558b245fb730bff35fb156bf21d7f895
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417589"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814116"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Vorgehensweise: Verwenden von Buildereignissen in MSBuild-Projekten
 
@@ -39,7 +39,7 @@ Die folgende Tabelle führt jede *in Buildvorgang verwenden* Element:
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel hinzugefügt werden kann, innerhalb des Project-Elements der Datei "MyProject.vcxproj" im erstellten [Exemplarische Vorgehensweise: Verwenden von MSBuild zum Erstellen eines Visual C++-Projekts](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). Ein *vor dem Erstellen* Ereignis ist eine Kopie von "Main.cpp"; eine *Prälinkereignis* Ereignis ist eine Kopie des main.obj; und ein *nach der Erstellung* Ereignis erstellt eine Kopie des myproject.exe. Wenn das Projekt mit einer Releasekonfiguration erstellt wird, werden die Buildereignisse ausgeführt. Wenn das Projekt erstellt wird, eine Debugkonfiguration verwenden, werden die Buildereignisse nicht ausgeführt.
+Im folgende Beispiel hinzugefügt werden kann, innerhalb des Project-Elements der Datei "MyProject.vcxproj" im erstellten [Exemplarische Vorgehensweise: Verwenden von MSBuild zum Erstellen eines Visual C++-Projekts](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). Ein *vor dem Erstellen* Ereignis ist eine Kopie von "Main.cpp"; eine *Prälinkereignis* Ereignis ist eine Kopie des main.obj; und ein *nach der Erstellung* Ereignis erstellt eine Kopie des myproject.exe. Wenn das Projekt mit einer Releasekonfiguration erstellt wird, werden die Buildereignisse ausgeführt. Wenn das Projekt erstellt wird, eine Debugkonfiguration verwenden, werden die Buildereignisse nicht ausgeführt.
 
 ```
 <ItemDefinitionGroup>
@@ -72,5 +72,5 @@ Im folgende Beispiel hinzugefügt werden kann, innerhalb des Project-Elements de
 
 ## <a name="see-also"></a>Siehe auch
 
-[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)<br/>
-[Exemplarische Vorgehensweise: Verwenden von MSBuild zum Erstellen eines Visual C++-Projekts](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+[MSBuild in der Befehlszeile – C++](msbuild-visual-cpp.md)<br/>
+[Exemplarische Vorgehensweise: Verwenden von MSBuild zum Erstellen eines Visual C++-Projekts](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - environment variables, CL compiler
 ms.assetid: 2606585b-a681-42ee-986e-1c9a2da32108
-ms.openlocfilehash: 47d6966cdc821cee4bd9ffd61b36c0c79143b6c2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a15bedc0a5aa8215356a98c3635a2edd1f3cfc5f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412457"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807961"
 ---
 # <a name="cl-environment-variables"></a>CL-Umgebungsvariablen
 
@@ -30,13 +30,13 @@ Sie können festlegen, den CL oder \_CL\_ Umgebungsvariable, die mit der folgend
 
 > Legen Sie CL = [[*Option*]... [*Datei*]...] [/ link *Link-opt* ...] Legen Sie \_CL\_= [[*Option*]... [*Datei*]...] [/ link *Link-opt* ...]
 
-Weitere Informationen zu den Argumenten der CL und \_CL\_ Umgebungsvariablen finden Sie unter [Compiler Command-Line Syntax](../../build/reference/compiler-command-line-syntax.md).
+Weitere Informationen zu den Argumenten der CL und \_CL\_ Umgebungsvariablen finden Sie unter [MSVC-Compiler Command-Line Syntax](compiler-command-line-syntax.md).
 
 Sie können diese Umgebungsvariablen verwenden, um die Dateien und Optionen zu definieren, die Sie am häufigsten verwenden. Zudem können Sie die Befehlszeile verwenden, um bestimmte Dateien und Optionen für bestimmte Zwecke zu definieren. Die CL und \_CL\_ Umgebungsvariablen sind auf 1024 Zeichen (die Begrenzung für die Befehlszeileneingabe) beschränkt.
 
 Sie können nicht die Option „/D“ zum Definieren eines Symbols verwenden, welches das Gleichheitszeichen (=) verwendet. Sie können das Nummernzeichen (#) für ein Gleichheitszeichen ersetzen. Auf diese Weise können Sie die CL oder \_CL\_ Umgebungsvariablen zum Definieren von Präprozessorkonstanten mit expliziten Werten – z. B. `/DDEBUG#1` definieren `DEBUG=1`.
 
-Weitere Informationen finden Sie unter [Festlegen von Umgebungsvariablen](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md).
+Weitere Informationen finden Sie unter [Festlegen von Umgebungsvariablen](../setting-the-path-and-environment-variables-for-command-line-builds.md).
 
 ## <a name="examples"></a>Beispiele
 
@@ -58,5 +58,5 @@ Dies hat den gleichen Effekt wie der Code in der folgenden Befehlszeile:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
-[Compileroptionen](../../build/reference/compiler-options.md)
+[Festlegen von Compileroptionen](compiler-command-line-syntax.md)<br/>
+[MSVC-Compiler-Optionen](compiler-options.md)

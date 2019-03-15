@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /SYMBOLS dumpbin option
 - -SYMBOLS dumpbin option
 ms.assetid: 34bcae90-4561-4c77-a80c-065508dec39a
-ms.openlocfilehash: 4aa6702cfa13523d64553041af4a18270d9babb3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a47b7da9f0b01353ef15e8b5c070c19e7c521c37
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421473"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822547"
 ---
 # <a name="symbols"></a>/SYMBOLS
 
@@ -66,8 +66,8 @@ Die folgende Beschreibung für die Zeilen, die beginnen mit einer Zahl Symbol, w
 
 Die letzte Spalte in einer nummerierten Zeile den Symbolnamen, beide versehen und nicht ergänzten Form.
 
-Nur die [/Headers](../../build/reference/headers.md) DUMPBIN-Option ist verfügbar für die Verwendung in Dateien mit der ["/ GL"](../../build/reference/gl-whole-program-optimization.md) -Compileroption.
+Nur die [/Headers](headers.md) DUMPBIN-Option ist verfügbar für die Verwendung in Dateien mit der ["/ GL"](gl-whole-program-optimization.md) -Compileroption.
 
 ## <a name="see-also"></a>Siehe auch
 
-[DUMPBIN-Optionen](../../build/reference/dumpbin-options.md)
+[DUMPBIN-Optionen](dumpbin-options.md)

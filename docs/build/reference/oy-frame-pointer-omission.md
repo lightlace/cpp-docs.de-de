@@ -13,12 +13,12 @@ helpviewer_keywords:
 - suppress frame pointer creation
 - /Oy compiler option [C++]
 ms.assetid: c451da86-5297-4c5a-92bc-561d41379853
-ms.openlocfilehash: 7eb30a758f6888aa866620e8b419c9b4124475b0
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7884f52cc22766c6b1a864fc01abcd73f92cfabb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418114"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817958"
 ---
 # <a name="oy-frame-pointer-omission"></a>/Oy (Framezeiger unterdrücken)
 
@@ -36,13 +36,13 @@ Durch diese Option werden Funktionsaufrufe beschleunigt, da keine Framezeiger ei
 
 Wenn Ihr Code die Frame-basierte Adressierung erfordert, können Sie angeben der **/Oy-** option die **/Ox** oder verwenden Sie [optimieren](../../preprocessor/optimize.md) mit der "**y**"und **aus** Argumente für die maximale Optimierung für die Frame-basierte Adressierung zu erhalten. Der Compiler erkennt die meisten Situationen, in dem Frame-basierte Adressierung erforderlich ist (z. B. mit der `_alloca` und `setjmp` Funktionen sowie bei strukturierter Ausnahmebehandlung).
 
-Die [/Ox (ermöglichen die meisten Geschwindigkeitsoptimierungen)](../../build/reference/ox-full-optimization.md) und [/O1, / O2 (Größe minimieren, Geschwindigkeit maximieren)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) implizieren **/Oy**. Angeben von **/Oy-** nach der **/Ox**, **"/ O1"**, oder **"/ O2"** deaktiviert **/Oy**, ob es sich handelt explizit oder implizit.
+Die [/Ox (ermöglichen die meisten Geschwindigkeitsoptimierungen)](ox-full-optimization.md) und [/O1, / O2 (Größe minimieren, Geschwindigkeit maximieren)](o1-o2-minimize-size-maximize-speed.md) implizieren **/Oy**. Angeben von **/Oy-** nach der **/Ox**, **"/ O1"**, oder **"/ O2"** deaktiviert **/Oy**, ob es sich handelt explizit oder implizit.
 
-Die **/Oy** -Compileroption erschwert die Verwendung des Debuggers, da der Compiler hierdurch Framezeigerinformationen unterdrückt. Wenn Sie eine Debug-Compileroption angeben ([/Z7, / Zi, / Zi](../../build/reference/z7-zi-zi-debug-information-format.md)), es wird empfohlen, die Sie angeben, die **/Oy-** wurde festgelegt, nachdem alle anderen Optimierungsoptionen.
+Die **/Oy** -Compileroption erschwert die Verwendung des Debuggers, da der Compiler hierdurch Framezeigerinformationen unterdrückt. Wenn Sie eine Debug-Compileroption angeben ([/Z7, / Zi, / Zi](z7-zi-zi-debug-information-format.md)), es wird empfohlen, die Sie angeben, die **/Oy-** wurde festgelegt, nachdem alle anderen Optimierungsoptionen.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **Optimierung** Eigenschaftenseite.
 
@@ -54,6 +54,6 @@ Die **/Oy** -Compileroption erschwert die Verwendung des Debuggers, da der Compi
 
 ## <a name="see-also"></a>Siehe auch
 
-[/O-Optionen (Code optimieren)](../../build/reference/o-options-optimize-code.md)<br/>
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
+[/O-Optionen (Code optimieren)](o-options-optimize-code.md)<br/>
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)<br/>

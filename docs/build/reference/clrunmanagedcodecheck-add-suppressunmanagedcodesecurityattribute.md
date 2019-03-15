@@ -1,5 +1,5 @@
 ---
-title: / CLRUNMANAGEDCODECHECK (Entfernen Sie SuppressUnmanagedCodeSecurityAttribute)
+title: /CLRUNMANAGEDCODECHECK (Remove SuppressUnmanagedCodeSecurityAttribute)
 ms.date: 09/27/2018
 ms.topic: reference
 f1_keywords:
@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: 73abc426-dab0-45e2-be85-0f9a14206cc2
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 3cefe34eef1a30274ba2e9e362e2f61458f10e38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb23106648e3325755a857d0b962112e9bdcfac4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565918"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822599"
 ---
-# <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/ CLRUNMANAGEDCODECHECK (Entfernen Sie SuppressUnmanagedCodeSecurityAttribute)
+# <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (Remove SuppressUnmanagedCodeSecurityAttribute)
 
 **/ CLRUNMANAGEDCODECHECK** gibt an, dass der Linker nicht anwendbar ist <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> auf vom Linker generierte `PInvoke` Anrufe von verwaltetem Code aus systemeigene DLLs.
 
 ## <a name="syntax"></a>Syntax
 
-> **/ CLRUNMANAGEDCODECHECK**[**: NO**]
+> **/CLRUNMANAGEDCODECHECK**[**:NO**]
 
 ## <a name="remarks"></a>Hinweise
 
@@ -39,7 +39,7 @@ Finden Sie unter [Secure Coding Guidelines für nicht verwalteten Code](/dotnet/
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Erweitern Sie den Knoten **Konfigurationseigenschaften**.
 
@@ -55,5 +55,5 @@ Finden Sie unter [Secure Coding Guidelines für nicht verwalteten Code](/dotnet/
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)
-- [Linkeroptionen](../../build/reference/linker-options.md)
+- [MSVC-Linker-Referenz](linking.md)
+- [MSVC-Linkeroptionen](linker-options.md)

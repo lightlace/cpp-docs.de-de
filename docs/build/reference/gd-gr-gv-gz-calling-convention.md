@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-ms.openlocfilehash: 8eba665e34fc3b949283557461e33348106fd532
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c4f7e6edb020f5c8d2abf80f14df33e18a915c5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451512"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817464"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (Aufrufkonvention)
 
@@ -51,14 +51,14 @@ Mit diesen Optionen wird festgelegt, in welcher Reihenfolge die Funktionsargumen
 
 Funktionen, die eine variable Anzahl von Argumenten akzeptieren, müssen mit `__cdecl` gekennzeichnet sein.
 
-**/ GD**, **/Gr**, **/GV** und **/GZ** sind nicht kompatibel mit [/CLR: safe](../../build/reference/clr-common-language-runtime-compilation.md) oder   **/CLR: pure**. Die **/CLR: pure** und **/CLR: safe** Compileroptionen in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt werden.
+**/ GD**, **/Gr**, **/GV** und **/GZ** sind nicht kompatibel mit [/CLR: safe](clr-common-language-runtime-compilation.md) oder   **/CLR: pure**. Die **/CLR: pure** und **/CLR: safe** Compileroptionen in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt werden.
 
 > [!NOTE]
 > Standardmäßig für X86 Prozessoren C++-Memberfunktionen verwenden [__thiscall](../../cpp/thiscall.md).
 
 Für alle Prozessoren verwendet eine Memberfunktion, die explizit als `__cdecl`, `__fastcall`, `__vectorcall` oder `__stdcall` gekennzeichnet ist, die angegebene Aufrufkonvention, wenn diese nicht auf dieser Architektur ignoriert wird. Eine Memberfunktion, die eine variable Anzahl von Argumenten zulässt, verwendet immer die Aufrufkonvention `__cdecl`.
 
-Diese Compileroptionen haben keine Auswirkungen auf die Namensergänzung von C++-Methoden und -Funktionen. Sofern sie nicht als `extern "C"` deklariert sind, kommt für C++-Methoden und -Funktionen ein anderes Schema für Namensergänzungen zur Anwendung. Weitere Informationen finden Sie unter [ergänzte Namen](../../build/reference/decorated-names.md).
+Diese Compileroptionen haben keine Auswirkungen auf die Namensergänzung von C++-Methoden und -Funktionen. Sofern sie nicht als `extern "C"` deklariert sind, kommt für C++-Methoden und -Funktionen ein anderes Schema für Namensergänzungen zur Anwendung. Weitere Informationen finden Sie unter [ergänzte Namen](decorated-names.md).
 
 Weitere Informationen zu Aufrufkonventionen finden Sie unter [Aufrufkonventionen](../../cpp/calling-conventions.md).
 
@@ -66,7 +66,7 @@ Weitere Informationen zu Aufrufkonventionen finden Sie unter [Aufrufkonventionen
 
 Auf x86-Prozessoren werden alle Funktionsargumente auf dem Stapel von rechts nach links übergeben. Auf ARM- und x64-Architekturen werden einige Argumente nach Register übergeben und der Rest wird auf dem Stapel von rechts nach links übergeben. Die Aufrufroutine ruft die Argumente vom Stapel auf.
 
-Für C verwendet die `__cdecl`-Benennungskonvention den Funktionsnamen mit einem führenden Unterstrich (`_`); Groß-/Kleinbuchstaben werden nicht umgewandelt. Sofern sie nicht als `extern "C"` deklariert sind, kommt für C++-Funktionen ein anderes Schema für Namensergänzungen zur Anwendung. Weitere Informationen finden Sie unter [ergänzte Namen](../../build/reference/decorated-names.md).
+Für C verwendet die `__cdecl`-Benennungskonvention den Funktionsnamen mit einem führenden Unterstrich (`_`); Groß-/Kleinbuchstaben werden nicht umgewandelt. Sofern sie nicht als `extern "C"` deklariert sind, kommt für C++-Funktionen ein anderes Schema für Namensergänzungen zur Anwendung. Weitere Informationen finden Sie unter [ergänzte Namen](decorated-names.md).
 
 ## <a name="fastcall-specifics"></a>__fastcall-Besonderheiten
 
@@ -99,7 +99,7 @@ Für C die `__vectorcall` -Benennungskonvention den Funktionsnamen, gefolgt von 
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **C/C++-** > **erweitert** Eigenschaftenseite.
 
@@ -111,5 +111,5 @@ Für C die `__vectorcall` -Benennungskonvention den Funktionsnamen, gefolgt von 
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Compileroptionen](../../build/reference/compiler-options.md)
-- [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+- [MSVC-Compiler-Optionen](compiler-options.md)
+- [MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)

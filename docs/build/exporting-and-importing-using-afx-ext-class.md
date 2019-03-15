@@ -11,16 +11,16 @@ helpviewer_keywords:
 - executable files [C++], importing classes
 - exporting DLLs [C++], AFX_EXT_CLASS macro
 ms.assetid: 6b72cb2b-e92e-4ecd-bcab-c335e1d1cfde
-ms.openlocfilehash: 1451b452c5e2dc62e83e5b8f473248fa7c231877
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bcfdc94e8db80daec227d77c20ecec6b14d5af11
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421193"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821221"
 ---
 # <a name="exporting-and-importing-using-afxextclass"></a>Exportieren und Importieren mithilfe von AFX_EXT_CLASS
 
-[MFC-Erweiterungs-DLLs](../build/extension-dlls-overview.md) verwenden Sie das Makro **AFX_EXT_CLASS** zum Exportieren von Klassen, die ausführbaren Dateien, die mit der MFC-Erweiterungs-DLL verknüpft wird das Makro verwenden, um Klassen zu importieren. Mit der **AFX_EXT_CLASS** Makro, das die gleichen Headerdateien, die verwendet werden, erstellen Sie die MFC-Erweiterungs-DLL mit der ausführbaren Dateien, die mit der DLL verwendet werden kann.
+[MFC-Erweiterungs-DLLs](extension-dlls-overview.md) verwenden Sie das Makro **AFX_EXT_CLASS** zum Exportieren von Klassen, die ausführbaren Dateien, die mit der MFC-Erweiterungs-DLL verknüpft wird das Makro verwenden, um Klassen zu importieren. Mit der **AFX_EXT_CLASS** Makro, das die gleichen Headerdateien, die verwendet werden, erstellen Sie die MFC-Erweiterungs-DLL mit der ausführbaren Dateien, die mit der DLL verwendet werden kann.
 
 Fügen Sie in der Headerdatei für die DLL der **AFX_EXT_CLASS** Schlüsselwort, um die Deklaration der Klasse wie folgt:
 
@@ -104,28 +104,28 @@ MFC verwendet stets die `AFX_DATA` Symbol für Datenelemente, die sie innerhalb 
 
 ### <a name="what-do-you-want-to-do"></a>Wie möchten Sie vorgehen?
 
-- [Exportieren Sie aus einer DLL mithilfe von DEF-Dateien](../build/exporting-from-a-dll-using-def-files.md)
+- [Exportieren Sie aus einer DLL mithilfe von DEF-Dateien](exporting-from-a-dll-using-def-files.md)
 
-- [Exportieren Sie aus einer DLL mithilfe von __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Exportieren Sie aus einer DLL mithilfe von __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Exportieren von C++-Funktionen für die Verwendung in ausführbaren c-Dateien](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Exportieren von C++-Funktionen für die Verwendung in ausführbaren c-Dateien](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Exportieren von C-Funktionen für die Verwendung in ausführbaren C oder C++-Dateien](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Exportieren von C-Funktionen für die Verwendung in ausführbaren C oder C++-Dateien](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Bestimmen Sie die Exportmethode verwendet werden](../build/determining-which-exporting-method-to-use.md)
+- [Bestimmen Sie die Exportmethode verwendet werden](determining-which-exporting-method-to-use.md)
 
-- [Importieren Sie in eine Anwendung mithilfe von "__declspec(dllimport)" "](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Importieren Sie in eine Anwendung mithilfe von "__declspec(dllimport)" "](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Initialisieren einer DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Initialisieren einer DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?
 
-- [Ergänzte Namen](../build/reference/decorated-names.md)
+- [Ergänzte Namen](reference/decorated-names.md)
 
-- [Importieren und Exportieren von Inlinefunktionen](../build/importing-and-exporting-inline-functions.md)
+- [Importieren und Exportieren von Inlinefunktionen](importing-and-exporting-inline-functions.md)
 
-- [Gegenseitige Importe](../build/mutual-imports.md)
+- [Gegenseitige Importe](mutual-imports.md)
 
 ## <a name="see-also"></a>Siehe auch
 
-[Exportieren aus einer DLL](../build/exporting-from-a-dll.md)
+[Exportieren aus einer DLL](exporting-from-a-dll.md)

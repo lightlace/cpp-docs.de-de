@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0030
 ms.assetid: c48b3727-e166-46e7-bcd7-3e5b2ac5c1d4
-ms.openlocfilehash: 2a6cde4ca48acb9aadfe3109084483dbb554e1e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa1c8539247287f7644742857c3cb7de321a20a2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488074"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811475"
 ---
 # <a name="project-build-error-prj0030"></a>Projektbuildfehler PRJ0030
 
 Makrofehler-Erweiterung. Werten Sie Überprüfungsrekursion überschritt 32 Ebenen für $(Makro) ein.
 
-Dieser Fehler wird durch die Rekursion in Makros verursacht. Wenn Sie festlegen, z. B. die **Zwischenverzeichnis** Eigenschaft (finden Sie unter [Eigenschaftenseite "Allgemein" (Projekt)](../../ide/general-property-page-project.md)) auf $(intdir), werden Sie Rekursion haben.
+Dieser Fehler wird durch die Rekursion in Makros verursacht. Wenn Sie festlegen, z. B. die **Zwischenverzeichnis** Eigenschaft (finden Sie unter [Eigenschaftenseite "Allgemein" (Projekt)](../../build/reference/general-property-page-project.md)) auf $(intdir), werden Sie Rekursion haben.
 
 Um diesen Fehler zu beheben, ist nicht definiert, Makros oder Eigenschaften in Bezug auf die Makros, die sie verwendet werden, um zu definieren.

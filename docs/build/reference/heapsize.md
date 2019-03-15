@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - HEAPSIZE .def file statement
 ms.assetid: 3c4d3117-491d-41e6-a693-648b3a35eeb9
-ms.openlocfilehash: 834a7c2125acd53475ce526470c9b903c8558f43
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 71baa6558ec3ffe9db009c7d264f5e4c1a72f92d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421531"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816892"
 ---
 # <a name="heapsize"></a>HEAPSIZE
 
-Stellt die gleiche Funktionalität wie die [/HEAP](../../build/reference/heap-set-heap-size.md) -Linkeroption.
+Stellt die gleiche Funktionalität wie die [/HEAP](heap-set-heap-size.md) -Linkeroption.
 
 ```
 /HEAP:reserve[,commit]
@@ -23,4 +23,4 @@ Stellt die gleiche Funktionalität wie die [/HEAP](../../build/reference/heap-se
 
 ## <a name="see-also"></a>Siehe auch
 
-[Regeln für Moduldefinitionsanweisungen](../../build/reference/rules-for-module-definition-statements.md)
+[Regeln für Moduldefinitionsanweisungen](rules-for-module-definition-statements.md)

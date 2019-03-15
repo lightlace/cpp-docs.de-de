@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /OUT C++ linker option
 - linker [C++], output files
 ms.assetid: 976210a4-e51f-4cfb-af5e-c16344455834
-ms.openlocfilehash: 395a2475ec572476f80b17cc5ffab7c2724e6b02
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: be5fe929bdcf52be19955a5bc2d7aa093e194f45
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418047"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812420"
 ---
 # <a name="out-output-file-name"></a>/OUT (Ausgabedateiname)
 
@@ -35,11 +35,11 @@ Die Option/Out überschreibt den Standardnamen und den Speicherort des Programms
 
 In der Standardeinstellung bildet der Linker den Dateinamen mithilfe der Basisname der zuerst angegebenen OBJ-Datei und der geeigneten Erweiterung (.exe oder .dll).
 
-Standardbasisname für eine Bibliothek Standardbasisname oder importieren Sie diese option. Weitere Informationen finden Sie unter [Zuordnungsdatei generieren](../../build/reference/map-generate-mapfile.md) (/ MAP) und [/IMPLIB](../../build/reference/implib-name-import-library.md).
+Standardbasisname für eine Bibliothek Standardbasisname oder importieren Sie diese option. Weitere Informationen finden Sie unter [Zuordnungsdatei generieren](map-generate-mapfile.md) (/ MAP) und [/IMPLIB](implib-name-import-library.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf die **Linker** Ordner.
 
@@ -53,5 +53,5 @@ Standardbasisname für eine Bibliothek Standardbasisname oder importieren Sie di
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)
+[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)

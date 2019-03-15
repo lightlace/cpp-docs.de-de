@@ -11,12 +11,12 @@ helpviewer_keywords:
 - .pch files, use existing
 - precompiled header files, use existing
 ms.assetid: 24f1bd0e-b624-4296-a17e-d4b53e374e1f
-ms.openlocfilehash: 49cc7a67a8b25e515d352d481b6ede8d521e51e1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c0dcb045450d6e6eca31b8c76a92726e62400656
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424118"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810116"
 ---
 # <a name="yu-use-precompiled-header-file"></a>/Yu (Vorkompilierte Headerdatei verwenden)
 
@@ -45,7 +45,7 @@ Der Compiler behandelt alle Code vor der h-Datei als vorkompiliert. Er überspri
 
 In der Befehlszeile darf kein Leerzeichen zwischen **"/ Yu"** und `filename`.
 
-Bei Angabe der **"/ Yu"** Option ohne einen Dateinamen ein, die Quellcode-Verwaltungsprogramm darf eine [#pragma Hdrstop](../../preprocessor/hdrstop.md) Pragma, das den Dateinamen der vorkompilierten Headerdatei, PCH-Datei angibt. In diesem Fall verwendet der Compiler die vorkompilierte Headerdatei (PCH-Datei) von  [ /fp (Name. PCH-Datei)](../../build/reference/fp-name-dot-pch-file.md). Der Compiler auf den Speicherort der diesem Pragma wird übersprungen, wird von der kompilierte Zustand aus der vorkompilierten Header-Datei, die durch das Pragma angegeben und kompiliert anschließend nur Code, der dem Pragma folgt. Wenn **#pragma Hdrstop** gibt keinen Dateinamen ein, der Compiler sucht nach einer Datei mit einem Namen, die von der Basisname der Quelldatei mit einer .pch-Erweiterung abgeleitet. Sie können auch die **/fp** Option aus, um eine andere PCH-Datei angeben.
+Bei Angabe der **"/ Yu"** Option ohne einen Dateinamen ein, die Quellcode-Verwaltungsprogramm darf eine [#pragma Hdrstop](../../preprocessor/hdrstop.md) Pragma, das den Dateinamen der vorkompilierten Headerdatei, PCH-Datei angibt. In diesem Fall verwendet der Compiler die vorkompilierte Headerdatei (PCH-Datei) von  [ /fp (Name. PCH-Datei)](fp-name-dot-pch-file.md). Der Compiler auf den Speicherort der diesem Pragma wird übersprungen, wird von der kompilierte Zustand aus der vorkompilierten Header-Datei, die durch das Pragma angegeben und kompiliert anschließend nur Code, der dem Pragma folgt. Wenn **#pragma Hdrstop** gibt keinen Dateinamen ein, der Compiler sucht nach einer Datei mit einem Namen, die von der Basisname der Quelldatei mit einer .pch-Erweiterung abgeleitet. Sie können auch die **/fp** Option aus, um eine andere PCH-Datei angeben.
 
 Bei Angabe der **"/ Yu"** option ohne einen Dateinamen und Angeben einer **Hdrstop** Pragma, wird eine Fehlermeldung generiert und die Kompilierung schlägt fehl.
 
@@ -55,15 +55,15 @@ Da PCH-Dateien mit Informationen über die computerumgebung sowie die Arbeitsspe
 
 Weitere Informationen zu vorkompilierten Headern finden Sie unter:
 
-- [/Y (Vorkompilierte Header)](../../build/reference/y-precompiled-headers.md)
+- [/Y (Vorkompilierte Header)](y-precompiled-headers.md)
 
-- [Erstellen vorkompilierter Headerdateien](../../build/reference/creating-precompiled-header-files.md)
+- [Vorkompilierte Headerdateien](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Geben Sie ["/ Yc" (Erstellen vorkompilierter Headerdatei)](../../build/reference/yc-create-precompiled-header-file.md) für eine CPP-Datei in Ihrem Projekt.
+1. Geben Sie ["/ Yc" (Erstellen vorkompilierter Headerdatei)](yc-create-precompiled-header-file.md) für eine CPP-Datei in Ihrem Projekt.
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf den Ordner **C/C++** .
 
@@ -88,7 +88,7 @@ Wenn der folgende Code:
 
 wird mit der Befehlszeile kompiliert `CL /YuMYAPP.H PROG.CPP`, verarbeitet der Compiler nicht die drei Anweisungen jedoch Code verwendet, die vorkompilierte MYAPP.pch, wodurch spart die Zeit, die bei der vorverarbeitung alle drei Dateien (und alle Dateien, die sie möglicherweise enthalten) enthalten.
 
-Sie können die  [ /fp (Name. PCH-Datei)](../../build/reference/fp-name-dot-pch-file.md) -Option mit der **"/ Yu"** der Name der PCH-Datei angeben, wenn der Name entweder der Dateinamenargument für unterscheidet **"/ Yc"** oder der Basisname der Quelldatei, wie in der folgende:
+Sie können die  [ /fp (Name. PCH-Datei)](fp-name-dot-pch-file.md) -Option mit der **"/ Yu"** der Name der PCH-Datei angeben, wenn der Name entweder der Dateinamenargument für unterscheidet **"/ Yc"** oder der Basisname der Quelldatei, wie in der folgende:
 
 ```
 CL /YuMYAPP.H /FpMYPCH.pch PROG.CPP
@@ -98,5 +98,5 @@ Dieser Befehl gibt eine vorkompilierte Headerdatei mit dem Namen MYPCH.pch. Der 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)

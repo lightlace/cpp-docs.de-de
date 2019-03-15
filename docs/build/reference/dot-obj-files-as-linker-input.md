@@ -9,12 +9,12 @@ helpviewer_keywords:
 - COFF files
 - OBJ files as linker input
 - .obj files as linker input
-ms.openlocfilehash: 17a8ea51c41fb2c17d8feb223253cf9eed722675
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c55c3181c2ddfabddce882a473e56d952a7e5d81
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616150"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816398"
 ---
 # <a name="obj-files-as-linker-input"></a>.OBJ-Dateien als Linkereingabe
 
@@ -26,15 +26,15 @@ Microsoft bietet eine vollständige Beschreibung des allgemeinen Objekts-Dateifo
 
 ## <a name="unicode-support"></a>Unterstützung für Unicode
 
-Ab Visual Studio 2005, Microsoft Visual C++-Compiler wird Unicode-Zeichen in Bezeichnern gemäß ISO/IEC C- und C++-Standards unterstützt. Frühere Versionen des Compilers unterstützt nur ASCII-Zeichen in Bezeichnern. Verwenden zur Unterstützung von Unicode in die Namen der Funktionen, Klassen und statische Variablen Compiler und Linker die Unicode UTF-8-Codierung für COFF-Symbole in OBJ-Dateien. UTF-8-Codierung ist kompatibel mit der ASCII-Codierung, die von früheren Versionen von Visual Studio verwendet.
+Visual Studio 2005 ab, der Microsoft-MSVC-Compiler wird Unicode-Zeichen in Bezeichnern gemäß ISO/IEC C- und C++-Standards unterstützt. Frühere Versionen des Compilers unterstützt nur ASCII-Zeichen in Bezeichnern. Verwenden zur Unterstützung von Unicode in die Namen der Funktionen, Klassen und statische Variablen Compiler und Linker die Unicode UTF-8-Codierung für COFF-Symbole in OBJ-Dateien. UTF-8-Codierung ist kompatibel mit der ASCII-Codierung, die von früheren Versionen von Visual Studio verwendet.
 
-Weitere Informationen zu den Compiler und Linker finden Sie unter [Unicode-Unterstützung im Compiler und Linker](../../build/reference/unicode-support-in-the-compiler-and-linker.md). Weitere Informationen zu den Unicode-Standard, finden Sie unter den [Unicode](http://www.unicode.org/) Organisation.
+Weitere Informationen zu den Compiler und Linker finden Sie unter [Unicode-Unterstützung im Compiler und Linker](unicode-support-in-the-compiler-and-linker.md). Weitere Informationen zu den Unicode-Standard, finden Sie unter den [Unicode](http://www.unicode.org/) Organisation.
 
 ## <a name="see-also"></a>Siehe auch
 
-[LINK-Eingabedateien](../../build/reference/link-input-files.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)<br/>
+[LINK-Eingabedateien](link-input-files.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)<br/>
 [Unterstützung für Unicode](../../text/support-for-unicode.md)<br/>
-[Unicode-Unterstützung im Compiler und Linker](../../build/reference/unicode-support-in-the-compiler-and-linker.md)<br/>
+[Unicode-Unterstützung im Compiler und Linker](unicode-support-in-the-compiler-and-linker.md)<br/>
 [Unicode-standard](http://www.unicode.org/)<br/>
 [PE-Format](/windows/desktop/Debug/pe-format)

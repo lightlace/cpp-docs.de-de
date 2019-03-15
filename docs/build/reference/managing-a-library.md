@@ -40,12 +40,12 @@ helpviewer_keywords:
 - LIST library manager option
 - /CONVERT library manager option
 ms.assetid: f56a8b85-fbdc-4c09-8d8e-00f0ffe1da53
-ms.openlocfilehash: fb06fdf0298d627f289448930b490fb0660e381d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 74b8cf198d46f83de327c68ac5f883bd75e5db80
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419609"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812043"
 ---
 # <a name="managing-a-library"></a>Verwalten einer Bibliothek
 
@@ -64,7 +64,7 @@ In der Standardeinstellung benennt LIB Ausgabedatei mit dem Basisnamen der erste
 Die folgenden Optionen gelten für erstellen und Ändern einer Bibliothek:
 
 **/ LIBPATH:** *Dir*<br/>
-Überschreibt den Bibliothekspfad der Umgebung. Weitere Informationen finden Sie unter der Beschreibung des Links [/LIBPATH](../../build/reference/libpath-additional-libpath.md) Option.
+Überschreibt den Bibliothekspfad der Umgebung. Weitere Informationen finden Sie unter der Beschreibung des Links [/LIBPATH](libpath-additional-libpath.md) Option.
 
 **/LIST**<br/>
 Zeigt Informationen über die Ausgabebibliothek an die Standardausgabe. Die Ausgabe kann in eine Datei umgeleitet werden. Sie können/List / verwenden, um den Inhalt einer vorhandenen Bibliothek zu bestimmen, ohne es zu ändern.
@@ -73,7 +73,7 @@ Zeigt Informationen über die Ausgabebibliothek an die Standardausgabe. Die Ausg
 Beim Erstellen einer Importbibliothek gibt den Namen der DLL für die die Importbibliothek erstellt wird.
 
 **/NODEFAULTLIB**<br/>
-Entfernt eine oder mehrere Standardbibliotheken aus der Liste der Bibliotheken, die beim Auflösen externer Verweise durchsucht. Finden Sie unter [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) für Weitere Informationen.
+Entfernt eine oder mehrere Standardbibliotheken aus der Liste der Bibliotheken, die beim Auflösen externer Verweise durchsucht. Finden Sie unter [/NODEFAULTLIB](nodefaultlib-ignore-libraries.md) für Weitere Informationen.
 
 **/ OUT:** *Dateiname*<br/>
 Überschreibt den standardmäßigen Ausgabedateinamen. Standardmäßig wird die Ausgabebibliothek im aktuellen Verzeichnis, mit dem Basisnamen der ersten Datei Bibliothek oder Objektdatei in der Befehlszeile und die Erweiterung erstellt. Lib.
@@ -82,7 +82,7 @@ Entfernt eine oder mehrere Standardbibliotheken aus der Liste der Bibliotheken, 
 Unterdrückt das angegebene *Objekt* in der Ausgabebibliothek. LIB erstellt eine Ausgabebibliothek durch Kombinieren aller Objekte (in Objektdateien und Bibliotheken) und anschließendes Löschen aller mithilfe von/Remove angegeben.
 
 **/ SUBSYSTEM:**{**KONSOLE** &AMP;#124; **EFI_APPLICATION** &AMP;#124; **EFI_BOOT_SERVICE_DRIVER** &AMP;#124; **EFI_ROM** &AMP;#124; **EFI_RUNTIME_DRIVER** &AMP;#124; **NATIVE** &AMP;#124; **POSIX** &AMP;#124; **WINDOWS** &AMP;#124; **WINDOWSCE**} [, #[. ##]]<br/>
-Teilt dem Betriebssystem Gewusst wie: Ausführen eines Programms erstellt, indem Sie mit der Ausgabebibliothek verknüpfen. Weitere Informationen finden Sie unter der Beschreibung des Links [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) Option.
+Teilt dem Betriebssystem Gewusst wie: Ausführen eines Programms erstellt, indem Sie mit der Ausgabebibliothek verknüpfen. Weitere Informationen finden Sie unter der Beschreibung des Links [/Subsystem](subsystem-specify-subsystem.md) Option.
 
 LIB-Optionen, die in der Befehlszeile angegeben sind nicht in der Groß-/Kleinschreibung beachtet.
 
@@ -101,4 +101,4 @@ LIB können Sie die folgenden Bibliothek-Management-Aufgaben ausführen:
 
 ## <a name="see-also"></a>Siehe auch
 
-[LIB-Referenz](../../build/reference/lib-reference.md)
+[LIB-Referenz](lib-reference.md)

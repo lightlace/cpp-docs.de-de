@@ -10,12 +10,12 @@ helpviewer_keywords:
 - external names
 - -H compiler option [C++]
 ms.assetid: de701dd3-ed04-4c88-8195-960d2520ec2e
-ms.openlocfilehash: bb7821587d6c0bbe06eb6baa02227955582eb76d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bdd3da8d3a5165262c00bc3475122e31f5770726
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420413"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811263"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (Länge externer Namen beschränken)
 
@@ -68,13 +68,13 @@ void func2(void) {}
 
 Sie müssen auch vorsichtig mit der **/h** Option aufgrund vordefinierter. Wenn die maximale Bezeichnerlänge zu klein ist, werden bestimmte vordefinierte Bezeichner nicht aufgelöste sowie bestimmte Bibliothek Funktionsaufrufe. Z. B. wenn die `printf` Funktion wird verwendet, und die Option **/H5** angegeben wird, zum Zeitpunkt der Kompilierung auf das Symbol **_prin als** erstellt werden, um verweisen `printf`, und dies wird nicht gefunden in der Bibliothek.
 
-Verwenden von **/h** ist nicht kompatibel mit [/GL (Whole Program Optimization)](../../build/reference/gl-whole-program-optimization.md).
+Verwenden von **/h** ist nicht kompatibel mit [/GL (Whole Program Optimization)](gl-whole-program-optimization.md).
 
-Die **/h** Option ist seit Visual Studio 2005 als veraltet markiert; die maximale Länge wurde erhöht und **/h** wird nicht mehr benötigt. Eine Liste der Ersetzte Compileroptionen, finden Sie unter **veraltete und entfernte Compileroptionen** in [Compiler Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md).
+Die **/h** Option ist seit Visual Studio 2005 als veraltet markiert; die maximale Länge wurde erhöht und **/h** wird nicht mehr benötigt. Eine Liste der Ersetzte Compileroptionen, finden Sie unter **veraltete und entfernte Compileroptionen** in [Compiler Options Listed by Category](compiler-options-listed-by-category.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **Befehlszeile** Eigenschaftenseite.
 
@@ -86,5 +86,5 @@ Die **/h** Option ist seit Visual Studio 2005 als veraltet markiert; die maximal
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)

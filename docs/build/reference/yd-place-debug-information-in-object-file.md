@@ -9,16 +9,16 @@ helpviewer_keywords:
 - debugging [C++], debug information files
 - Yd compiler option [C++]
 ms.assetid: c5a699fe-65ce-461e-964c-7f5eb2a8320a
-ms.openlocfilehash: 55bb8197cd15243f65c90d7fbd2724f91fce23b4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e6719226d28088d10da6c4f0e6caf3bdb78bea27
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414875"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820155"
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (Debuginformationen in Objektdatei ablegen)
 
-Überprüfen Sie alle Funktionen vollständige Debuginformationen in allen Objektdateien erstellt aus einer vorkompilierten Headerdatei (.pch)-Datei bei der Verwendung mit der ["/ Yc"](../../build/reference/yc-create-precompiled-header-file.md) und ["/ Z7"](../../build/reference/z7-zi-zi-debug-information-format.md) Optionen. Veraltet.
+Überprüfen Sie alle Funktionen vollständige Debuginformationen in allen Objektdateien erstellt aus einer vorkompilierten Headerdatei (.pch)-Datei bei der Verwendung mit der ["/ Yc"](yc-create-precompiled-header-file.md) und ["/ Z7"](z7-zi-zi-debug-information-format.md) Optionen. Veraltet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,9 +28,9 @@ ms.locfileid: "57414875"
 
 ## <a name="remarks"></a>Hinweise
 
-**/ Yd ablegen** ist veraltet. Visual C++ unterstützt jetzt mehrere Objekte, die in eine einzelne PDB-Datei schreiben, verwenden Sie **"/ Zi"** stattdessen. Eine Liste der Ersetzte Compileroptionen, finden Sie unter **veraltete und entfernte Compileroptionen** in [Compiler Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md).
+**/ Yd ablegen** ist veraltet. Visual C++ unterstützt jetzt mehrere Objekte, die in eine einzelne PDB-Datei schreiben, verwenden Sie **"/ Zi"** stattdessen. Eine Liste der Ersetzte Compileroptionen, finden Sie unter **veraltete und entfernte Compileroptionen** in [Compiler Options Listed by Category](compiler-options-listed-by-category.md).
 
-Verwenden, es sei denn, Sie eine Bibliothek mit debugging-Informationen zu verteilen müssen, die ["/ Zi"](../../build/reference/z7-zi-zi-debug-information-format.md) Option statt **"/ Z7"** und **/Yd ablegen**.
+Verwenden, es sei denn, Sie eine Bibliothek mit debugging-Informationen zu verteilen müssen, die ["/ Zi"](z7-zi-zi-debug-information-format.md) Option statt **"/ Z7"** und **/Yd ablegen**.
 
 Speichern vollständige Debuginformationen in jeder OBJ-Datei ist nur erforderlich, um Bibliotheken zu verteilen, die Debuginformationen enthalten. Sie verlangsamt die Kompilierung und viel Speicherplatz benötigt. Wenn **"/ Yc"** und **"/ Z7"** werden verwendet, ohne **/Yd ablegen**, speichert der Compiler allgemeine Debuginformationen in der ersten OBJ-Datei, die aus der PCH-Datei erstellt. Der Compiler fügt diese Informationen nicht in OBJ-Dateien, die anschließend von PCH-Datei erstellt ein; Es fügt Querverweise auf die Informationen ein. Unabhängig davon, wie viele OBJ-Dateien die PCH-Datei verwenden enthält nur eine OBJ-Datei die allgemeine Debuginformationen.
 
@@ -38,13 +38,13 @@ Obwohl diese standardmäßige Verhalten führt zu Builds schneller und verringer
 
 Weitere Informationen zu vorkompilierten Headern finden Sie unter:
 
-- [/Y (Vorkompilierte Header)](../../build/reference/y-precompiled-headers.md)
+- [/Y (Vorkompilierte Header)](y-precompiled-headers.md)
 
-- [Erstellen vorkompilierter Headerdateien](../../build/reference/creating-precompiled-header-files.md)
+- [Vorkompilierte Headerdateien](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf den Ordner **C/C++** .
 
@@ -83,5 +83,5 @@ Wenn der vorkompilierte Header nicht mit kompiliert wurde **"/ Z7"**, noch könn
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)

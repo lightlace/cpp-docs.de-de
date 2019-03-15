@@ -12,12 +12,12 @@ helpviewer_keywords:
 - LINK tool [C++], swap tuning
 - paging, optimizing
 ms.assetid: ecf5eb3e-e404-4e86-9a91-4e5ec157261a
-ms.openlocfilehash: 5429876d9bfae7d8b317d52d69f0b21c720b002a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b1927ffd2efc923157fe1956fe905c939bc62719
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418073"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807883"
 ---
 # <a name="order-put-functions-in-order"></a>/ORDER (Reihenfolge von Funktionen festlegen)
 
@@ -36,11 +36,11 @@ Eine Textdatei, die angibt, die Verknüpfungsreihenfolge für COMDAT-Funktionen.
 
 Die **/ORDER** Compileroption können Sie zum Optimieren Ihres Programms auslagerungsverhalten durch Gruppieren von einer Funktion zusammen mit den Funktionen aufgerufen. Sie können auch häufig aufgerufene Funktionen gruppieren. Diese Verfahren, bekannt als *Auslagerungsdatei optimieren* oder *Paging Optimierung*, erhöhen die Wahrscheinlichkeit, die eine aufgerufene Funktion im Arbeitsspeicher ist, wenn es erforderlich ist, und muss nicht vom Datenträger ausgelagert werden.
 
-Wenn Sie Ihren Quellcode in einer Objektdatei kompilieren, Sie können den Compiler anweisen, platzieren jede Funktion in einen eigenen Abschnitt an, dem Namen einer *COMDAT*, mit der [/Gy (Funktionslevel-linking aktivieren)](../../build/reference/gy-enable-function-level-linking.md) Compiler -Option. Die **/ORDER** Linkeroption weist den Linker COMDATs in das ausführbare Image in der Reihenfolge positioniert Sie angeben.
+Wenn Sie Ihren Quellcode in einer Objektdatei kompilieren, Sie können den Compiler anweisen, platzieren jede Funktion in einen eigenen Abschnitt an, dem Namen einer *COMDAT*, mit der [/Gy (Funktionslevel-linking aktivieren)](gy-enable-function-level-linking.md) Compiler -Option. Die **/ORDER** Linkeroption weist den Linker COMDATs in das ausführbare Image in der Reihenfolge positioniert Sie angeben.
 
-Um die COMDAT-Reihenfolge anzugeben, erstellen eine *Antwortdatei*, eine Textdatei, die jede COMDAT auflistet, anhand des Namens, eines pro Zeile, in der Reihenfolge diese durch den Linker platziert werden sollen. Übergeben Sie den Namen der Datei als die *Filename* Parameter, der die **/ORDER** Option. Bei C++-Funktionen ist der Name der COMDAT den ergänzten Namen der Funktion. Verwenden Sie den nicht ergänzten Namen für die C-Funktionen, `main`, und geben Sie für C++-Funktionen als deklariert `extern "C"`. Funktionsnamen und ergänzte Namen werden Groß-/Kleinschreibung beachtet. Weitere Informationen zu ergänzten Namen, finden Sie unter [ergänzte Namen](../../build/reference/decorated-names.md).
+Um die COMDAT-Reihenfolge anzugeben, erstellen eine *Antwortdatei*, eine Textdatei, die jede COMDAT auflistet, anhand des Namens, eines pro Zeile, in der Reihenfolge diese durch den Linker platziert werden sollen. Übergeben Sie den Namen der Datei als die *Filename* Parameter, der die **/ORDER** Option. Bei C++-Funktionen ist der Name der COMDAT den ergänzten Namen der Funktion. Verwenden Sie den nicht ergänzten Namen für die C-Funktionen, `main`, und geben Sie für C++-Funktionen als deklariert `extern "C"`. Funktionsnamen und ergänzte Namen werden Groß-/Kleinschreibung beachtet. Weitere Informationen zu ergänzten Namen, finden Sie unter [ergänzte Namen](decorated-names.md).
 
-Um Ihre COMDATs die ergänzten Namen zu suchen, verwenden die [DUMPBIN](../../build/reference/dumpbin-reference.md) des Tools [& gt; SYMBOLE](../../build/reference/symbols.md) Option in der Objektdatei. Der Linker automatisch voran, einen Unterstrich (**\_**)-Funktion, wenn der Name, mit einem Fragezeichen beginnt in der Antwort Dateinamen (**?**) oder bei der Registrierung ( **\@**). Wenn eine Quelldatei enthält example.cpp, z. B. Funktionen `int cpp_func(int)`, `extern "C" int c_func(int)` und `int main(void)`, den Befehl `DUMPBIN /SYMBOLS example.obj` diese ergänzten Namen aufgeführt:
+Um Ihre COMDATs die ergänzten Namen zu suchen, verwenden die [DUMPBIN](dumpbin-reference.md) des Tools [& gt; SYMBOLE](symbols.md) Option in der Objektdatei. Der Linker automatisch voran, einen Unterstrich (**\_**)-Funktion, wenn der Name, mit einem Fragezeichen beginnt in der Antwort Dateinamen (**?**) oder bei der Registrierung ( **\@**). Wenn eine Quelldatei enthält example.cpp, z. B. Funktionen `int cpp_func(int)`, `extern "C" int c_func(int)` und `int main(void)`, den Befehl `DUMPBIN /SYMBOLS example.obj` diese ergänzten Namen aufgeführt:
 
 ```Output
 ...
@@ -54,14 +54,14 @@ In diesem Fall geben die Namen als `?cpp_func@@YAHH@Z`, `c_func`, und `main` in 
 
 Wenn mehr als ein **/ORDER** Option wird angezeigt, in den Optionen des Linkers, der letzte Suchvorgang angegeben wird wirksam.
 
-Die **/ORDER** Option deaktiviert die inkrementelle Verknüpfung. Möglicherweise angezeigt, zu unterdrückenden linkerwarnungen [LNK4075](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md) Wenn Sie diese Option angeben, wenn inkrementelles Verknüpfen aktiviert ist, oder wenn Sie angegeben haben die ["/ Zi" (inkrementelle PDB)](../../build/reference/z7-zi-zi-debug-information-format.md) -Compileroption. Um diese Warnung unterdrücken möchten, können Sie die [/INCREMENTAL: No](../../build/reference/incremental-link-incrementally.md) Linkeroption, um die inkrementelle Verknüpfung deaktivieren, und Verwenden der ["/ Zi" (Generieren von PDB)](../../build/reference/z7-zi-zi-debug-information-format.md) -Compileroption verwenden, um eine PDB-Datei ohne die inkrementelle Verknüpfung zu generieren.
+Die **/ORDER** Option deaktiviert die inkrementelle Verknüpfung. Möglicherweise angezeigt, zu unterdrückenden linkerwarnungen [LNK4075](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md) Wenn Sie diese Option angeben, wenn inkrementelles Verknüpfen aktiviert ist, oder wenn Sie angegeben haben die ["/ Zi" (inkrementelle PDB)](z7-zi-zi-debug-information-format.md) -Compileroption. Um diese Warnung unterdrücken möchten, können Sie die [/INCREMENTAL: No](incremental-link-incrementally.md) Linkeroption, um die inkrementelle Verknüpfung deaktivieren, und Verwenden der ["/ Zi" (Generieren von PDB)](z7-zi-zi-debug-information-format.md) -Compileroption verwenden, um eine PDB-Datei ohne die inkrementelle Verknüpfung zu generieren.
 
 > [!NOTE]
 > LINK kann nicht statische Funktionen sortieren, da statische Funktionsnamen nicht öffentlichen Symbolnamen sind. Wenn **/ORDER** angegeben wird, zu unterdrückenden linkerwarnungen [LNK4037](../../error-messages/tool-errors/linker-tools-warning-lnk4037.md) generiert für jedes Symbol in der Order-Antwortdatei, die entweder statisch oder nicht gefunden.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **Optimierung** Eigenschaftenseite.
 
@@ -73,5 +73,5 @@ Die **/ORDER** Option deaktiviert die inkrementelle Verknüpfung. Möglicherweis
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)
+[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -Y- compiler option [C++]
 - /Y- compiler option [C++]
 ms.assetid: cfaecb36-58db-46b8-b04d-cca6072b1b7a
-ms.openlocfilehash: 7a823457b0d372527488e646f0d2fa83bd7a4740
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c56c25d587d84e599718d2e1a74d469def3501f7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421518"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812355"
 ---
 # <a name="y--ignore-precompiled-header-options"></a>/Y- (Vorkompilierte Headeroptionen ignorieren)
 
@@ -29,13 +29,13 @@ Bewirkt, dass alle anderen `/Y` Compiler ignoriert werden (und kann nicht sich s
 
 Weitere Informationen zu vorkompilierten Headern finden Sie unter:
 
-- [/Y (Vorkompilierte Header)](../../build/reference/y-precompiled-headers.md)
+- [/Y (Vorkompilierte Header)](y-precompiled-headers.md)
 
-- [Erstellen vorkompilierter Headerdateien](../../build/reference/creating-precompiled-header-files.md)
+- [Vorkompilierte Headerdateien](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf den Ordner **C/C++** .
 
@@ -49,5 +49,5 @@ Weitere Informationen zu vorkompilierten Headern finden Sie unter:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)

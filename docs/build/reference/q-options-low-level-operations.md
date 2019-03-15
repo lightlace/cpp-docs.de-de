@@ -7,34 +7,34 @@ helpviewer_keywords:
 - Q compiler option [C++]
 - -Q compiler option [C++]
 - /Q compiler option [C++]
-ms.openlocfilehash: a6dcbd256fa3510955884d3adba4855b23cdbfab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bbb63b4f437f8aefd5c84c1c1c4bd20bdb965cb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514252"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819908"
 ---
 # <a name="q-options-low-level-operations"></a>/Q-Optionen (Operationen auf niedriger Ebene)
 
 Sie können die **/q /** Compileroptionen, die zum Ausführen der folgenden Compilervorgänge:
 
-- [/ Qfast_transcendentals (Erzwingen von schnellen transzendenten)](../../build/reference/qfast-transcendentals-force-fast-transcendentals.md): generiert schnelle Transzendente.
+- [/ Qfast_transcendentals (Erzwingen von schnellen transzendenten)](qfast-transcendentals-force-fast-transcendentals.md): Generiert schnelle Transzendente.
 
-- [/ QIfist (_ftol unterdrücken)](../../build/reference/qifist-suppress-ftol.md): unterdrückt `_ftol` Wenn eine Konvertierung von einem Gleitkommatyp in Ganzzahltyp ist erforderlich (nur X86).
+- [/QIfist (Suppress _ftol)](qifist-suppress-ftol.md): Unterdrückt die `_ftol` Wenn eine Konvertierung von einem Gleitkommatyp in Ganzzahltyp ist erforderlich (nur X86).
 
-- [/ Qimprecise_fwaits (Entfernen von Fwaits in Try-Blöcken)](../../build/reference/qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): entfernt `fwait` -Befehle in `try` Blöcke.
+- [/ Qimprecise_fwaits (Entfernen von Fwaits in Try-Blöcken)](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): Entfernt `fwait` -Befehle in `try` -Blöcken.
 
-- [/ Qpar (automatische Parallelisierung)](../../build/reference/qpar-auto-parallelizer.md): ermöglicht automatische Parallelisierung von Schleifen, die mit markierten Felder der [#pragma loop()](../../preprocessor/loop.md) Richtlinie.
+- [/ Qpar (automatische Parallelisierung)](qpar-auto-parallelizer.md): Ermöglicht automatische Parallelisierung von Schleifen, die mit der [#pragma loop()](../../preprocessor/loop.md) -Direktive gekennzeichnet sind.
 
-- [/ Qpar-Report (Auto-Parallelizer-Berichtsebene)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md): aktiviert die Berichterstellungsebenen für die automatische Parallelisierung.
+- [/ Qpar-Report-(Auto-Parallelizer-Berichtsebene)](qpar-report-auto-parallelizer-reporting-level.md): Aktiviert die Berichterstellungsebenen für die automatische Parallelisierung.
 
-- [/ Qsafe_fp_loads](../../build/reference/qsafe-fp-loads.md): unterdrückt Optimierungen aus, für die Gleitkommaregister lädt und für Verschiebungen zwischen Arbeitsspeicher und MMX registriert wird.
+- [/Qsafe_fp_loads](qsafe-fp-loads.md): Unterdrückt Optimierungen beim Laden von Gleitkommaregistern und für Verschiebungen zwischen Arbeitsspeicher und MMX-Registern.
 
-- [/ Qspectre](../../build/reference/qspectre.md): generiert Anweisungen, um bestimmte Spectre-Sicherheitsrisiken zu verringern.
+- [/Qspectre](qspectre.md): Generiert die Anweisungen, um bestimmte Spectre-Sicherheitsrisiken zu verringern.
 
-- [/ Qvec-Report (Auto-Vektorisierer Berichtsebene)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md): aktiviert die Berichterstellungsebenen für die automatische Vektorisierung.
+- [/ Qvec-Report (Auto-Vektorisierer Berichtebene)](qvec-report-auto-vectorizer-reporting-level.md): Aktiviert die Berichterstellungsebenen für die automatische Vektorisierung.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)

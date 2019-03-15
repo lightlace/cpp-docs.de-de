@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SECTION linker option
 - section attributes
 - /SECTION linker option
-ms.openlocfilehash: d86dca297940da4978fe42270f444acc5f11fd82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fb73043c9c185adee0859bb81098eab022430c2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543697"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816554"
 ---
 # <a name="section-specify-section-attributes"></a>/SECTION (Abschnittsattribute festlegen)
 
@@ -37,9 +37,9 @@ Verwenden Sie die folgenden Namen nicht aus, wie sie mit standard-Namen in Konfl
 
 - .edata
 
-- .iData
+- .idata
 
-- .pdata-Datensatz
+- .pdata
 
 - .rdata
 
@@ -53,9 +53,9 @@ Verwenden Sie die folgenden Namen nicht aus, wie sie mit standard-Namen in Konfl
 
 - .srdata
 
-- .Text
+- .text
 
-- .XData
+- .xdata
 
 Geben Sie einen oder mehrere Attribute für den Abschnitt. Die Attributzeichen, die unten aufgeführten sind nicht in der Groß-/Kleinschreibung beachtet. Sie müssen alle Attribute angeben, die den Abschnitt zugewiesen werden soll. ein Attributzeichen für die ausgelassenen bewirkt, dass dieses Attribut Bit deaktiviert ist. Wenn Sie nicht, dass R, W oder E, Lese-, Schreib-angeben oder ausführbaren Status unverändert bleibt.
 
@@ -64,22 +64,22 @@ Um ein Attribut zu negieren, stehen Sie das Zeichen mit einem Ausrufezeichen (!)
 |Zeichen|Attribut|Bedeutung|
 |---------------|---------------|-------------|
 |E|Ausführen|Der Abschnitt ist ausführbar.|
-|R|Lesen|Ermöglicht Lesevorgänge für Daten|
+|R|Thema|Ermöglicht Lesevorgänge für Daten|
 |W|Write|Ermöglicht Schreibvorgänge für Daten|
-|S|Freigegeben|Teilt den Abschnitt für alle Prozesse, die das Bild zu laden|
+|S|Shared|Teilt den Abschnitt für alle Prozesse, die das Bild zu laden|
 |D|Entfernbare|Markiert den Abschnitt als entfernbar|
 |K|Zwischengespeichert werden können|Markiert den Abschnitt als nicht zwischenspeicherbar|
 |P|Auslagerbarer|Markiert den Abschnitt als nicht auslagerbar|
 
-K "und" P sind ungewöhnlich, dass die Abschnitt-Flags, die sie entsprechen, im negativen Sinn verwendet werden. Wenn eines der im Abschnitt ".text" Sie über geben die **/Section:.Text, K** option, gibt es keinen Unterschied in den Abschnitt Flags beim Ausführen von [DUMPBIN](../../build/reference/dumpbin-options.md) mit der  [ /Headers](../../build/reference/headers.md)-Option Der Abschnitt wurde bereits implizit zwischengespeichert. Um die Standardeinstellung zu entfernen, geben   **/Section:.Text,! K** stattdessen. DUMPBIN zeigt Abschnittsmerkmale, einschließlich "Nicht zwischengespeichert."
+K "und" P sind ungewöhnlich, dass die Abschnitt-Flags, die sie entsprechen, im negativen Sinn verwendet werden. Wenn eines der im Abschnitt ".text" Sie über geben die **/Section:.Text, K** option, gibt es keinen Unterschied in den Abschnitt Flags beim Ausführen von [DUMPBIN](dumpbin-options.md) mit der  [ /Headers](headers.md)-Option Der Abschnitt wurde bereits implizit zwischengespeichert. Um die Standardeinstellung zu entfernen, geben   **/Section:.Text,! K** stattdessen. DUMPBIN zeigt Abschnittsmerkmale, einschließlich "Nicht zwischengespeichert."
 
 Ein Abschnitt in der PE-Datei, die nicht E, R oder W ist wahrscheinlich ungültig.
 
-Die **ALIGN =**_Anzahl_ Argument können Sie angeben, einen Ausrichtungswert für einen bestimmten Abschnitt. Die _Anzahl_ Argument in Bytes und muss eine Potenz von zwei sein. Finden Sie unter [/ALIGN](../../build/reference/align-section-alignment.md) für Weitere Informationen.
+Die **ALIGN =**_Anzahl_ Argument können Sie angeben, einen Ausrichtungswert für einen bestimmten Abschnitt. Die _Anzahl_ Argument in Bytes und muss eine Potenz von zwei sein. Finden Sie unter [/ALIGN](align-section-alignment.md) für Weitere Informationen.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **Befehlszeile** Eigenschaftenseite.
 
@@ -91,5 +91,5 @@ Die **ALIGN =**_Anzahl_ Argument können Sie angeben, einen Ausrichtungswert fü
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)
+[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)

@@ -14,22 +14,22 @@ helpviewer_keywords:
 - defaults [C++], libraries
 - .lib files
 ms.assetid: dc5d2b1c-2487-41fa-aa71-ad1e0647958b
-ms.openlocfilehash: f3b2ae0d82e682cc89243b7b527ee6e0b51d4c3d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 02f719b3101b04ad6b219bf882a50a994061af0c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426770"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822612"
 ---
 # <a name="lib-files-as-linker-input"></a>.LIB-Dateien als Linkereingabe
 
-LINK akzeptiert COFF-Standardbibliotheken und COFF-Bibliotheken, die in der Regel die Erweiterung jeweils. Lib. Standard-Bibliotheken Objekte enthalten und werden durch die LIB-Tool erstellt. Importbibliotheken enthalten Informationen über die Exporte in andere Programme, und es werden entweder durch LINK erstellt, wenn es sich um ein Programm erstellt, das Exporte enthält, oder durch die LIB-Tool. Weitere Informationen zur Verwendung von LIB standard erstellen oder importieren Sie die Bibliotheken, finden Sie unter [LIB-Referenz](../../build/reference/lib-reference.md). Weitere Informationen zur Verwendung von LINK zum Erstellen einer Importbibliothek finden Sie unter den [/DLL](../../build/reference/dll-build-a-dll.md) Option.
+LINK akzeptiert COFF-Standardbibliotheken und COFF-Bibliotheken, die in der Regel die Erweiterung jeweils. Lib. Standard-Bibliotheken Objekte enthalten und werden durch die LIB-Tool erstellt. Importbibliotheken enthalten Informationen über die Exporte in andere Programme, und es werden entweder durch LINK erstellt, wenn es sich um ein Programm erstellt, das Exporte enthält, oder durch die LIB-Tool. Weitere Informationen zur Verwendung von LIB standard erstellen oder importieren Sie die Bibliotheken, finden Sie unter [LIB-Referenz](lib-reference.md). Weitere Informationen zur Verwendung von LINK zum Erstellen einer Importbibliothek finden Sie unter den [/DLL](dll-build-a-dll.md) Option.
 
-Eine Bibliothek ist als ein Dateiname als Argument oder eine Standardbibliothek Link angegeben. LINK externe Verweise aufgelöst, indem suchen, zuerst in Bibliotheken, die in der Befehlszeile angegeben, und klicken Sie dann in Bibliotheken angegeben, mit der [DEFAULTLIB](../../build/reference/defaultlib-specify-default-library.md) Option, und klicken Sie dann in Bibliotheken mit dem Namen OBJ-Dateien. Wenn ein Pfad mit dem Namen der Typbibliothek angegeben ist, sucht LINK für die Bibliothek in diesem Verzeichnis aus. Wenn kein Pfad angegeben ist, sucht LINK zuerst im Verzeichnis, aus dem ist, und klicken Sie dann in den Verzeichnissen in der LIB-Umgebungsvariablen angegeben.
+Eine Bibliothek ist als ein Dateiname als Argument oder eine Standardbibliothek Link angegeben. LINK externe Verweise aufgelöst, indem suchen, zuerst in Bibliotheken, die in der Befehlszeile angegeben, und klicken Sie dann in Bibliotheken angegeben, mit der [DEFAULTLIB](defaultlib-specify-default-library.md) Option, und klicken Sie dann in Bibliotheken mit dem Namen OBJ-Dateien. Wenn ein Pfad mit dem Namen der Typbibliothek angegeben ist, sucht LINK für die Bibliothek in diesem Verzeichnis aus. Wenn kein Pfad angegeben ist, sucht LINK zuerst im Verzeichnis, aus dem ist, und klicken Sie dann in den Verzeichnissen in der LIB-Umgebungsvariablen angegeben.
 
 ## <a name="to-add-lib-files-as-linker-input-in-the-development-environment"></a>LIB-Dateien als Linkereingabe in der Entwicklungsumgebung hinzufügen
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Eingabe** Eigenschaftenseite in der **Linker** Ordner.
 
@@ -69,5 +69,5 @@ int main() {
 
 ## <a name="see-also"></a>Siehe auch
 
-[LINK-Eingabedateien](../../build/reference/link-input-files.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)
+[LINK-Eingabedateien](link-input-files.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)

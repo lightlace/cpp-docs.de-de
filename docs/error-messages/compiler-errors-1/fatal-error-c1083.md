@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-ms.openlocfilehash: ae4c6a9f6c41d94aa1e36ba4a79226b49df08b49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 522bc4a36be59d4e2c9425e50b1238eb9f4aba61
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628006"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822196"
 ---
 # <a name="fatal-error-c1083"></a>Schwerwiegender Fehler C1083
 
@@ -71,7 +71,7 @@ Auch wenn Headerdateien in aufgeführt sind **Projektmappen-Explorer** als Teil 
 
 Korrigieren Sie zur Behebung dieses Problems den Pfad, den der Compiler für die Suche nach der eingeschlossenen oder importierten Datei verwendet. Ein neuen Projekt verwendet, Standardwert include-Suchpfade. Sie müssen möglicherweise den Includesuchpfad zum Hinzufügen eines Verzeichnisses für Ihr Projekt zu ändern. Wenn Sie in der Befehlszeile kompilieren, fügen Sie den Pfad zu der **EINSCHLIEßEN** Umgebungsvariable oder **/i** -Compileroption verwenden, um den Pfad zur Datei angeben.
 
-Öffnen Sie zum Festlegen des includeverzeichnispfads in Visual Studio des Projekts das **Eigenschaftenseiten** Dialogfeld. Wählen Sie **VC++-Verzeichnisse** unter **Konfigurationseigenschaften** im linken Bereich, und bearbeiten Sie dann die **Includeverzeichnisse** Eigenschaft. Weitere Informationen zu den pro Benutzer und pro Projekt Verzeichnisse, die vom Compiler in Visual Studio durchsucht, finden Sie unter [VC++ Directories Property Page](../../ide/vcpp-directories-property-page.md). Weitere Informationen zu den **/i** -Compileroption verwenden, finden Sie unter [/i (Zusätzliche Includeverzeichnisse)](../../build/reference/i-additional-include-directories.md).
+Öffnen Sie zum Festlegen des includeverzeichnispfads in Visual Studio des Projekts das **Eigenschaftenseiten** Dialogfeld. Wählen Sie **VC++-Verzeichnisse** unter **Konfigurationseigenschaften** im linken Bereich, und bearbeiten Sie dann die **Includeverzeichnisse** Eigenschaft. Weitere Informationen zu den pro Benutzer und pro Projekt Verzeichnisse, die vom Compiler in Visual Studio durchsucht, finden Sie unter [VC++ Directories Property Page](../../build/reference/vcpp-directories-property-page.md). Weitere Informationen zu den **/i** -Compileroption verwenden, finden Sie unter [/i (Zusätzliche Includeverzeichnisse)](../../build/reference/i-additional-include-directories.md).
 
 ## <a name="the-command-line-include-or-lib-environment-is-not-set"></a>Die Befehlszeile EINSCHLIEßEN oder LIB-Umgebung ist nicht festgelegt.
 
@@ -87,7 +87,7 @@ Ein Fehler C1083 kann auch darauf hinweisen, dass die falsche Version einer Date
 
 ## <a name="the-precompiled-headers-are-not-yet-precompiled"></a>Die vorkompilierten Header sind noch nicht vorkompiliert
 
-Wenn ein Projekt zur Verwendung vorkompilierter Header konfiguriert ist, müssen die entsprechenden PCH-Dateien erstellt werden, damit Dateien, die den Headerinhalt verwenden, kompiliert werden können. Die Datei "stdafx.cpp" wird beispielsweise automatisch im Projektverzeichnis für neue Projekte erstellt werden. Kompilieren Sie diese Datei zuerst, um die vorkompilierten Headerdateien zu erstellen. In der typischen buildprozessentwurf wird dieser automatisch durchgeführt. Weitere Informationen finden Sie unter [Erstellen vorkompilierter Headerdateien](../../build/reference/creating-precompiled-header-files.md).
+Wenn ein Projekt zur Verwendung vorkompilierter Header konfiguriert ist, müssen die entsprechenden PCH-Dateien erstellt werden, damit Dateien, die den Headerinhalt verwenden, kompiliert werden können. Die Datei "stdafx.cpp" wird beispielsweise automatisch im Projektverzeichnis für neue Projekte erstellt werden. Kompilieren Sie diese Datei zuerst, um die vorkompilierten Headerdateien zu erstellen. In der typischen buildprozessentwurf wird dieser automatisch durchgeführt. Weitere Informationen finden Sie unter [Erstellen vorkompilierter Headerdateien](../../build/creating-precompiled-header-files.md).
 
 ## <a name="additional-causes"></a>Weitere Ursachen
 
@@ -116,7 +116,7 @@ Im folgende Beispiel wird ein Fehler C1083 generiert. wenn die Headerdatei `"tes
 #include "stdio.h"  // OK
 ```
 
-Informationen zum Erstellen von C/C++-Projekten in der IDE oder über die Befehlszeile und Informationen zum Festlegen von Umgebungsvariablen finden Sie unter [Erstellen von C/C++-Programmen](../../build/building-c-cpp-programs.md).
+Weitere Informationen zum Erstellen von C/C++-Projekten in der IDE oder über die Befehlszeile und Informationen zum Festlegen von Umgebungsvariablen finden Sie unter [Projekte und Buildsysteme](../../build/projects-and-build-systems-cpp.md).
 
 ## <a name="see-also"></a>Siehe auch
 

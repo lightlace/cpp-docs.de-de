@@ -14,16 +14,16 @@ helpviewer_keywords:
 - .pdb files, creating
 - FD compiler option [C++]
 ms.assetid: 3977a9ed-f0ac-45df-bf06-01cedd2ba85a
-ms.openlocfilehash: 2c64a4ec0d7799d7bad698808e959d11e87cdc85
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c686de7dc9c9c20c404240db558d2ff66078ceb7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422441"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808988"
 ---
 # <a name="fd-program-database-file-name"></a>/Fd (Programmdatenbank-Dateiname)
 
-Gibt einen Dateinamen für die von erstellten Programmdatenbankdatei (PDB) [/Z7, / Zi, / Zi (Debuginformationsformat)](../../build/reference/z7-zi-zi-debug-information-format.md).
+Gibt einen Dateinamen für die von erstellten Programmdatenbankdatei (PDB) [/Z7, / Zi, / Zi (Debuginformationsformat)](z7-zi-zi-debug-information-format.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ Diese Option dient auch als Name die (IDB)-Statusdatei, die für die minimale Ne
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf den Ordner **C/C++** .
 
@@ -65,7 +65,7 @@ CL /DDEBUG /Zi /FdPROG.PDB PROG.CPP
 
 ## <a name="see-also"></a>Siehe auch
 
-[Ausgabedatei (/F) Optionen](../../build/reference/output-file-f-options.md)<br/>
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
-[Festlegen des Pfadnamens](../../build/reference/specifying-the-pathname.md)
+[Ausgabedatei (/F) Optionen](output-file-f-options.md)<br/>
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)<br/>
+[Festlegen des Pfadnamens](specifying-the-pathname.md)

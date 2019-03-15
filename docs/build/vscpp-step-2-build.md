@@ -4,14 +4,14 @@ description: Erstellen Sie und führen Sie eine Hello World-Konsolenanwendung in
 ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: tutorial
-ms.devlang: C++
+ms.devlang: cpp
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
-ms.openlocfilehash: 89681b4f6b2ff2780cc8dc1947e2ad758d294b48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59813a553a9034503d8bf432400db31e6e3d9478
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467833"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813545"
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Erstellen Sie und führen Sie einer C++-Konsolen-app-Projekts aus
 
@@ -19,29 +19,29 @@ Wenn Sie eine C++-Konsolen-app-Projekts erstellt und Ihr Code eingegeben haben, 
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-- Haben Sie Visual Studio mit der Desktopentwicklung mit C++-Arbeitslast installiert und auf Ihrem Computer ausgeführt. Wenn sie noch nicht installiert ist, führen Sie die Schritte in [Installieren von C++-Unterstützung in Visual Studio](../build/vscpp-step-0-installation.md).
+- Visual Studio mit der Workload „Desktopentwicklung mit C++“ muss auf Ihrem Computer installiert sein und ausgeführt werden. Wenn sie noch nicht installiert ist, führen Sie die Schritte in [Installieren von C++-Unterstützung in Visual Studio](vscpp-step-0-installation.md).
 
-- Erstellen einer "Hello, World!" Projekt aus, und geben Sie deren Quellcode. Wenn Sie dies noch nicht geschehen, führen Sie die Schritte in [erstellen Sie eine C++-Konsolen-app-Projekts](../build/vscpp-step-1-create.md).
+- Erstellen einer "Hello, World!" Projekt aus, und geben Sie deren Quellcode. Wenn Sie dies noch nicht geschehen, führen Sie die Schritte in [erstellen Sie eine C++-Konsolen-app-Projekts](vscpp-step-1-create.md).
 
 Wenn Visual Studio wie folgt aussieht, sind Sie bereit zum Erstellen und Ausführen Ihrer app:
 
-   ![Erstellen Sie das neue Projekt](../build/media/vscpp-ready-to-build.png "bereit, um das neue Projekt zu erstellen.")
+   ![Erstellen Sie das neue Projekt](media/vscpp-ready-to-build.png "bereit, um das neue Projekt zu erstellen.")
 
 ## <a name="build-and-run-your-code-in-visual-studio"></a>Erstellen und Ausführen von Code in Visual Studio
 
-1. Wählen Sie zum Erstellen des Projekts **Projektmappe** aus der **erstellen** Menü. Die **Ausgabe** Fenster zeigt die Ergebnisse des Buildprozesses.
+1. Wählen Sie zum Erstellen Ihres Projekts aus dem Menü **Erstellen** die Option **Projektmappe erstellen** aus. Im Fenster **Ausgabe** wird das Ergebnis des Erstellungsprozess angezeigt.
 
-   ![Erstellen Sie das Projekt](../build/media/vscpp-build-solution.gif "erstellen Sie das Projekt")
+   ![Erstellen des Projekts](media/vscpp-build-solution.gif "Erstellen des Projekts")
 
-1. Wählen Sie zum Ausführen des Codes in der Menüleiste **Debuggen**, **Starten ohne debugging**.
+1. Klicken Sie zum Ausführen des Codes auf der Menüleiste auf **Debuggen** > **Ohne Debuggen starten**.
 
-   ![Starten Sie das Projekt](../build/media/vscpp-start-without-debugging.gif "starten Sie das Projekt")
+   ![Starten des Projekts](media/vscpp-start-without-debugging.gif "Starten des Projekts")
 
-   Ein Konsolenfenster wird geöffnet, und klicken Sie dann wird die app ausgeführt. Wenn Sie eine Konsolen-app in Visual Studio starten, es den Code ausführt, gibt "drücken Sie dann eine beliebige Taste, um den Vorgang fortzusetzen. sein. ." dass Sie die Möglichkeit, die die Ausgabe angezeigt werden können.
+   Ein Konsolenfenster wird geöffnet, und Ihre App daraufhin ausgeführt. Wenn Sie eine Konsolen-App in Visual Studio starten, führt diese Ihren Code aus und gibt dann „Press any key to continue sein. .“ (Beliebige Taste zum Fortfahren drücken) zurück, damit Sie sich die Ausgabe ansehen können.
 
-Herzlichen Glückwunsch! Sie erstellt haben, Ihre erste "Hello, World!" Konsolen-app in Visual Studio! Drücken Sie das Konsolenfenster zu schließen und zurück zu Visual Studio an.
+Herzlichen Glückwunsch! Sie haben Ihre erste „Hallo, Welt!“- Konsolen-App in Visual Studio erstellt! Drücken Sie eine Taste, um das Konsolenfenster zu schließen, und kehren Sie zu Visual Studio zurück.
 
-[Ich führte ein Problem aufgetreten.](#build-and-run-your-code-in-visual-studio-issues)
+[Ein Problem ist aufgetreten.](#build-and-run-your-code-in-visual-studio-issues)
 
 ## <a name="run-your-code-in-a-command-window"></a>Führen Sie den Code in einem Befehlsfenster
 
@@ -55,11 +55,11 @@ Normalerweise führen Sie an der Eingabeaufforderung ein, nicht in Visual Studio
 
 1. Klicken Sie im Eingabeaufforderungsfenster Befehl mit der rechten Maustaste den Pfad zu Ihrer app in der Befehlszeile einfügen. Drücken Sie die EINGABETASTE, um die Anwendung auszuführen.
 
-   ![Führen Sie die app an der Eingabeaufforderung](../build/media/vscpp-run-in-cmd.gif "führen Sie die app an der Eingabeaufforderung")
+   ![Führen Sie die app an der Eingabeaufforderung](media/vscpp-run-in-cmd.gif "führen Sie die app an der Eingabeaufforderung")
 
 Herzlichen Glückwunsch, Sie erstellt haben, und führen Sie eine Konsolen-app in Visual Studio!
 
-[Ich führte ein Problem aufgetreten.](#run-your-code-in-a-command-window-issues)
+[Ein Problem ist aufgetreten.](#run-your-code-in-a-command-window-issues)
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - bsc files, building
 - BSCMAKE
 ms.assetid: b97ad994-1355-4809-98db-6abc12c6fb13
-ms.openlocfilehash: 1dd89047b8fa6a415e7e19dd69ca3f499887299f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4303e48e3d02f0f69b177e8a888157a6f90aaa89
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416250"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822352"
 ---
 # <a name="bscmake-reference"></a>BSCMAKE-Referenz
 
@@ -33,18 +33,18 @@ Wenn Sie ein Programm außerhalb der Entwicklungsumgebung erstellen, können Sie
 
 Dieser Abschnitt schließt folgende Themen ein:
 
-- [Erstellen von Browseinformationsdateien: Übersicht](../../build/reference/building-browse-information-files-overview.md)
+- [Erstellen von Browseinformationsdateien: Übersicht](building-browse-information-files-overview.md)
 
-- [Erstellen einer BSC-Datei](../../build/reference/building-a-dot-bsc-file.md)
+- [Erstellen einer BSC-Datei](building-a-dot-bsc-file.md)
 
-- [BSCMAKE-Befehlszeile](../../build/reference/bscmake-command-line.md)
+- [BSCMAKE-Befehlszeile](bscmake-command-line.md)
 
-- [BSCMAKE-Befehlszeile](../../build/reference/bscmake-command-file-response-file.md)
+- [BSCMAKE-Befehlszeile](bscmake-command-file-response-file.md)
 
-- [BSCMAKE-Optionen](../../build/reference/bscmake-options.md)
+- [BSCMAKE-Optionen](bscmake-options.md)
 
-- [BSCMAKE-Exitcodes](../../build/reference/bscmake-exit-codes.md)
+- [BSCMAKE-Exitcodes](bscmake-exit-codes.md)
 
 ## <a name="see-also"></a>Siehe auch
 
-[C/C++-Buildtools](../../build/reference/c-cpp-build-tools.md)
+[Zusätzliche MSVC-Buildtools](c-cpp-build-tools.md)

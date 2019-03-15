@@ -8,18 +8,18 @@ helpviewer_keywords:
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-ms.openlocfilehash: 756e0fa820806142f05ba45a52735692298f80d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54f5810e60cdaada6a99651a732570c88ea883ce
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656871"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822222"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Exemplarische Vorgehensweise: Kompilieren eines C-Programms in der Befehlszeile
 
 Visual C++ enthält einen C-Compiler, mit denen Sie alles von grundlegenden Konsolenprogrammen vollständige Windows-desktopanwendungen und mobilen apps zu erstellen.
 
-Diese exemplarische Vorgehensweise zeigt, wie zum Erstellen einer einfachen, "Hello, World"-Stil C-Programm mit einem Text-Editor und kompilieren es dann in der Befehlszeile aus. Wenn Sie lieber in C++ in der Befehlszeile arbeiten, finden Sie unter [Exemplarische Vorgehensweise: Kompilieren eines nativen C++-Programms in der Befehlszeile](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md). Wenn Sie möchten, um zu versuchen der Visual Studio-IDE, anstatt über die Befehlszeile finden Sie unter [Exemplarische Vorgehensweise: Arbeiten mit Projekten und Lösungen (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) oder [mithilfe von Visual Studio-IDE für C++-Desktopentwicklung](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+Diese exemplarische Vorgehensweise zeigt, wie zum Erstellen einer einfachen, "Hello, World"-Stil C-Programm mit einem Text-Editor und kompilieren es dann in der Befehlszeile aus. Wenn Sie lieber in C++ in der Befehlszeile arbeiten, finden Sie unter [Exemplarische Vorgehensweise: Compiling a Native C++ Program on the Command Line (Exemplarische Vorgehensweise: Kompilieren eines nativen C++-Programms in der Befehlszeile)](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md). Wenn Sie möchten, um zu versuchen der Visual Studio-IDE, anstatt über die Befehlszeile finden Sie unter [Exemplarische Vorgehensweise: Arbeiten mit Projekten und Lösungen (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) oder [mithilfe von Visual Studio-IDE für C++-Desktopentwicklung](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
@@ -32,7 +32,7 @@ Die Build-Tools für Visual Studio-Version von Visual Studio installiert nur das
 Bevor Sie ein C- oder C++-Programm in der Befehlszeile erstellen können, müssen Sie überprüfen, dass die Tools installiert sind und Sie sie über die Befehlszeile zugreifen können. Visual C++ verfügt über komplexe Anforderungen für die Befehlszeilen-Umgebung finden Sie Tools, Header und Bibliotheken, die sie verwendet. **Sie können Visual C++ in einem einfachen Eingabeaufforderungsfenster verwenden** ohne einige Vorbereitungsschritte ausführen. Sie müssen eine *Developer-Eingabeaufforderung* Fenster, das eine normale Eingabeaufforderung-Fenster ist, die alle erforderlichen Umgebungsvariablen, die festgelegt wurde. Visual C++ installiert Glücklicherweise Tastenkombinationen für die Sie zum Starten von eingabeaufforderungen für Entwickler, die die Umgebung, die für Befehlszeilenbuilds eingerichtet haben. Leider sind die Namen von der Developer-Eingabeaufforderung Tastenkombinationen und, wo sie sich befinden sich in fast jeder Version von Visual C++ und in verschiedenen Versionen von Windows. Ihre erste Aufgabe der exemplarischen Vorgehensweise ist, suchen die richtige Verknüpfung verwenden.
 
 > [!NOTE]
-> Eine Developer-eingabeaufforderungsverknüpfung legt automatisch die richtigen Pfade für den Compiler und Tools, und für alle erforderlichen Header und Bibliotheken. Einige dieser Werte unterscheiden sich für jede Buildkonfiguration. Sie müssen diese Umgebungswerte selbst festlegen, wenn Sie eine der Verknüpfungen nicht verwenden. Weitere Informationen finden Sie unter [Festlegen der Pfad- und Umgebungsvariablen für Befehlszeilenbuilds](../build/setting-the-path-and-environment-variables-for-command-line-builds.md). Da die Buildumgebung komplex ist, wird dringend empfohlen, dass Sie eine Developer-eingabeaufforderungsverknüpfung verwenden, anstatt Ihre eigenen erstellen.
+> Eine Developer-eingabeaufforderungsverknüpfung legt automatisch die richtigen Pfade für den Compiler und Tools, und für alle erforderlichen Header und Bibliotheken. Einige dieser Werte unterscheiden sich für jede Buildkonfiguration. Sie müssen diese Umgebungswerte selbst festlegen, wenn Sie eine der Verknüpfungen nicht verwenden. Weitere Informationen finden Sie unter [Festlegen der Pfad- und Umgebungsvariablen für Befehlszeilenbuilds](setting-the-path-and-environment-variables-for-command-line-builds.md). Da die Buildumgebung komplex ist, wird dringend empfohlen, dass Sie eine Developer-eingabeaufforderungsverknüpfung verwenden, anstatt Ihre eigenen erstellen.
 
 ## <a name="open-a-developer-command-prompt"></a>Eine Developer-Eingabeaufforderung öffnen
 
@@ -57,7 +57,7 @@ Bevor Sie ein C- oder C++-Programm in der Befehlszeile erstellen können, müsse
    > [!NOTE]
    > Wenn Sie eine Fehlermeldung erhalten, wie z. B. "'cl' nicht als interner oder externer Befehl, ausführbares Programm oder Batchdatei erkannt", Fehler C1034 oder Fehler LNK1104 erhalten Sie beim Ausführen der **cl** Befehl, und klicken Sie dann entweder Sie eine Developer-Eingabeaufforderung nicht verwenden oder Es gibt es Probleme bei der Installation von Visual C++. Sie müssen dieses Problem beheben, bevor Sie fortfahren können.
 
-   Wenn Sie die Developer-eingabeaufforderungsverknüpfung nicht finden oder wenn Sie eine Fehlermeldung erhalten, bei der Eingabe `cl`, und klicken Sie dann Visual C++-Installation ein Fehler vorliegt. Wenn Sie Visual Studio 2017 verwenden, installieren Sie erneut die **Desktopentwicklung mit C++** Workload im Visual Studio-Installer. Weitere Informationen finden Sie unter [Installieren von C++-Unterstützung in Visual Studio](../build/vscpp-step-0-installation.md). Oder Installieren der [Build-Tools für Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=875721). Gehen Sie nicht auf mit dem nächsten Abschnitt bis dies funktioniert. Weitere Informationen zur Installation und Problembehandlung bei Visual Studio finden Sie unter [Installieren von Visual Studio](/visualstudio/install/install-visual-studio).
+   Wenn Sie die Developer-eingabeaufforderungsverknüpfung nicht finden oder wenn Sie eine Fehlermeldung erhalten, bei der Eingabe `cl`, und klicken Sie dann Visual C++-Installation ein Fehler vorliegt. Wenn Sie Visual Studio 2017 verwenden, installieren Sie erneut die **Desktopentwicklung mit C++** Workload im Visual Studio-Installer. Weitere Informationen finden Sie unter [Installieren von C++-Unterstützung in Visual Studio](vscpp-step-0-installation.md). Oder Installieren der [Build-Tools für Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=875721). Gehen Sie nicht auf mit dem nächsten Abschnitt bis dies funktioniert. Weitere Informationen zur Installation und Problembehandlung bei Visual Studio finden Sie unter [Installieren von Visual Studio](/visualstudio/install/install-visual-studio).
 
    > [!NOTE]
    > Abhängig von der Version von Windows auf dem Computer und der Systemsicherheitskonfiguration müssen Sie möglicherweise ein mit der rechten Maustaste das Kontextmenü für die Verknüpfung der Developer-Eingabeaufforderung öffnen, und wählen Sie dann **als Administrator ausführen** auf erfolgreich zu erstellen Sie, und führen Sie das Programm, das Sie anhand dieser exemplarischen Vorgehensweise erstellen.
@@ -142,25 +142,25 @@ Sie können die Schritte in dieser exemplarischen Vorgehensweise verwenden, um I
 
 `cl file1.c file2.c file3.c`
 
-Der Compiler gibt ein Programm namens file1.exe. Um den Namen in program1.exe zu ändern, Hinzufügen einer [/out](../build/reference/out-output-file-name.md) (Linkeroption):
+Der Compiler gibt ein Programm namens file1.exe. Um den Namen in program1.exe zu ändern, Hinzufügen einer [/out](reference/out-output-file-name.md) (Linkeroption):
 
 `cl file1.c file2.c file3.c /link /out:program1.exe`
 
-Um weitere Programmierfehler automatisch abzufangen, sollten Sie kompilieren, indem Sie entweder die [/w3](../build/reference/compiler-option-warning-level.md) oder [/W4](../build/reference/compiler-option-warning-level.md) aus:
+Um weitere Programmierfehler automatisch abzufangen, sollten Sie kompilieren, indem Sie entweder die [/w3](reference/compiler-option-warning-level.md) oder [/W4](reference/compiler-option-warning-level.md) aus:
 
 `cl /W4 file1.c file2.c file3.c /link /out:program1.exe`
 
-Der Compiler, die cl.exe, verfügt über viele weitere Optionen, die Sie anwenden, um das Erstellen, zu optimieren, Debuggen und Analysieren von Code können. Geben Sie für eine kurze Liste `cl /?` an der Developer-Eingabeaufforderung. Sie können auch kompilieren und separat zu verknüpfen und Optionen des Linkers in komplexere Buildszenarios anwenden. Weitere Informationen für Compiler und Optionen des Linkers und Verwendung finden Sie unter [Referenz zur C/C++-Erstellung](../build/reference/c-cpp-building-reference.md).
+Der Compiler, die cl.exe, verfügt über viele weitere Optionen, die Sie anwenden, um das Erstellen, zu optimieren, Debuggen und Analysieren von Code können. Geben Sie für eine kurze Liste `cl /?` an der Developer-Eingabeaufforderung. Sie können auch kompilieren und separat zu verknüpfen und Optionen des Linkers in komplexere Buildszenarios anwenden. Weitere Informationen für Compiler und Optionen des Linkers und Verwendung finden Sie unter [Referenz zur C/C++-Erstellung](reference/c-cpp-building-reference.md).
 
-Sie können MSBuild und Projektdateien und Makefiles oder NMAKE verwenden, konfigurieren und komplexere Projekte in der Befehlszeile erstellen. Weitere Informationen zur Verwendung dieser Tools finden Sie unter [NMAKE-Referenz](../build/nmake-reference.md) und [MSBuild](../build/msbuild-visual-cpp.md).
+Sie können MSBuild und Projektdateien und Makefiles oder NMAKE verwenden, konfigurieren und komplexere Projekte in der Befehlszeile erstellen. Weitere Informationen zur Verwendung dieser Tools finden Sie unter [NMAKE-Referenz](reference/nmake-reference.md) und [MSBuild](msbuild-visual-cpp.md).
 
-Die Programmiersprachen C und C++ sind ähnlich, jedoch nicht identisch. Visual C++-Compiler verwendet eine einfache Regel, um zu bestimmen, welche Sprache verwendet, wenn sie Ihren Code kompiliert wird. Standardmäßig behandelt der Visual C++-Compiler alle auf .c endenden Dateien als C-Quellcode und alle auf .cpp endenden Dateien als C++-Quellcode. Verwenden Sie zum Erzwingen des Compilers alle Dateien als C unabhängige der Dateinamenerweiterung behandelt die [/TC](../build/reference/tc-tp-tc-tp-specify-source-file-type.md) -Compileroption.
+Die Programmiersprachen C und C++ sind ähnlich, jedoch nicht identisch. Der MSVC-Compiler verwendet eine einfache Regel, um zu bestimmen, welche Sprache verwendet, wenn sie Ihren Code kompiliert wird. Standardmäßig behandelt der MSVC-Compiler alle Dateien, die in c als C-Quellcode zu beenden und alle Dateien, die in cpp als C++-Quellcode enden. Verwenden Sie zum Erzwingen des Compilers alle Dateien als C unabhängige der Dateinamenerweiterung behandelt die [/TC](reference/tc-tp-tc-tp-specify-source-file-type.md) -Compileroption.
 
-Der Visual C++-C-Compiler ist mit dem ISO C99-Standard kompatibel ist, aber nicht unbedingt kompatibel. In den meisten Fällen portablen C++-Code kompiliert und wie erwartet ausgeführt werden. Visual C++ unterstützt nicht die meisten der Änderungen im ISO C11. Bestimmte Bibliotheksfunktionen und POSIX-Funktionsnamen werden vom Visual C++-Compiler als veraltet markiert. Die Funktionen werden unterstützt, aber die Namen der bevorzugten wurden geändert. Weitere Informationen finden Sie unter [Sicherheitsfunktionen in CRT](../c-runtime-library/security-features-in-the-crt.md) und [Compilerwarnung (Stufe 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
+Der Visual C++-C-Compiler ist mit dem ISO C99-Standard kompatibel ist, aber nicht unbedingt kompatibel. In den meisten Fällen portablen C++-Code kompiliert und wie erwartet ausgeführt werden. Visual C++ unterstützt nicht die meisten der Änderungen im ISO C11. Bestimmte Bibliotheksfunktionen und POSIX-Funktionsnamen werden der MSVC-Compiler als veraltet markiert. Die Funktionen werden unterstützt, aber die Namen der bevorzugten wurden geändert. Weitere Informationen finden Sie unter [Sicherheitsfunktionen in CRT](../c-runtime-library/security-features-in-the-crt.md) und [Compilerwarnung (Stufe 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Exemplarische Vorgehensweise: Erstellen eines Standard C++-Konsolenprogramms (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)<br/>
+[Exemplarische Vorgehensweise: Erstellen eines Standard C++-Programms (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)<br/>
 [C-Sprachreferenz](../c-language/c-language-reference.md)<br/>
-[Erstellen von C/C++-Programmen](../build/building-c-cpp-programs.md)<br/>
+[Projekte und Buildsysteme](projects-and-build-systems-cpp.md)<br/>
 [Kompatibilität](../c-runtime-library/compatibility.md)

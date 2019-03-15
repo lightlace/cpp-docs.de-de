@@ -10,16 +10,16 @@ helpviewer_keywords:
 - GZ compiler option [C++]
 - debug builds, catch release-build errors
 ms.assetid: b3efeeff-d5e3-4057-91c9-f6fc73d0270c
-ms.openlocfilehash: 35475b87b8f59fbb0fb24e62690f8fc24c7cb4e9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3e6ffce487cc8183e45f3a911e7060ea22b28216
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423468"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810496"
 ---
 # <a name="gz-enable-stack-frame-run-time-error-checking"></a>/GZ (Laufzeitfehlerüberprüfung für Stapelrahmen aktivieren)
 
-Führt die gleichen Vorgänge wie das [/RTC (Run-Time Error Checks)](../../build/reference/rtc-run-time-error-checks.md) Option. Veraltet.
+Führt die gleichen Vorgänge wie das [/RTC (Run-Time Error Checks)](rtc-run-time-error-checks.md) Option. Veraltet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,13 +29,13 @@ Führt die gleichen Vorgänge wie das [/RTC (Run-Time Error Checks)](../../build
 
 ## <a name="remarks"></a>Hinweise
 
-**/ GZ** ist nur für die Verwendung in einem optimierten ([/Od (deaktivieren (Debuggen))](../../build/reference/od-disable-debug.md)) erstellen.
+**/ GZ** ist nur für die Verwendung in einem optimierten ([/Od (deaktivieren (Debuggen))](od-disable-debug.md)) erstellen.
 
-**/ GZ** ist veraltet, da Visual Studio 2005; verwenden Sie [/RTC (Run-Time Error Checks)](../../build/reference/rtc-run-time-error-checks.md) stattdessen. Eine Liste der Ersetzte Compileroptionen, finden Sie unter **veraltete und entfernte Compileroptionen** in [Compiler Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md).
+**/ GZ** ist veraltet, da Visual Studio 2005; verwenden Sie [/RTC (Run-Time Error Checks)](rtc-run-time-error-checks.md) stattdessen. Eine Liste der Ersetzte Compileroptionen, finden Sie unter **veraltete und entfernte Compileroptionen** in [Compiler Options Listed by Category](compiler-options-listed-by-category.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf den Ordner **C/C++** .
 
@@ -49,5 +49,5 @@ Führt die gleichen Vorgänge wie das [/RTC (Run-Time Error Checks)](../../build
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)

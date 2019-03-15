@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SAFESEH linker option
 - SAFESEH linker option
 ms.assetid: 7722ff99-b833-4c65-a855-aaca902ffcb7
-ms.openlocfilehash: ee0d01ef43cae4128180e0c32c8dc6d00d4c2400
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 62784933cbecd4f312c52ae98cab7d232b893f35
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425691"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822339"
 ---
 # <a name="safeseh-image-has-safe-exception-handlers"></a>/SAFESEH (Abbild verfügt über sichere Ausnahmehandler)
 
@@ -25,7 +25,7 @@ Wenn **/SAFESEH** angegeben ist, wird der Linker nur ein Image, wenn auch eine T
 
 **/ SAFESEH** ist nur gültig, beim Verknüpfen von X86 Ziele. **/ SAFESEH** wird für Plattformen, die bereits die Ausnahmehandler bereits erwähnt werden nicht unterstützt. Auf X64 "und" ARM ", werden beispielsweise alle Ausnahmehandler in PDATA aufgeführt. ML64.exe unterstützt das Hinzufügen von Anmerkungen, die SEH-Informationen (XDATA und PDATA) an das Image ausgeben, sodass Entladung mithilfe von ml64-Funktionen möglich ist. Finden Sie unter [MASM für X64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) für Weitere Informationen.
 
-Wenn **/SAFESEH** nicht angegeben ist, wird der Linker ein Image mit einer Tabelle sicherer Ausnahmehandler, wenn alle Module mit der Funktion für die sichere Ausnahmebehandlung kompatibel sind. Falls einige Module nicht mit der Funktion für die sichere Ausnahmebehandlung kompatibel sind, enthält das resultierende Image keine Tabelle mit sicheren Ausnahmehandlern. Wenn [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) WINDOWSCE oder eine der EFI_ * Optionen der Linker keinen Versuch, ein Image mit einer Tabelle sicherer Ausnahmehandler, wie dieser Subsysteme genutzt werden können die Informationen.
+Wenn **/SAFESEH** nicht angegeben ist, wird der Linker ein Image mit einer Tabelle sicherer Ausnahmehandler, wenn alle Module mit der Funktion für die sichere Ausnahmebehandlung kompatibel sind. Falls einige Module nicht mit der Funktion für die sichere Ausnahmebehandlung kompatibel sind, enthält das resultierende Image keine Tabelle mit sicheren Ausnahmehandlern. Wenn [/Subsystem](subsystem-specify-subsystem.md) WINDOWSCE oder eine der EFI_ * Optionen der Linker keinen Versuch, ein Image mit einer Tabelle sicherer Ausnahmehandler, wie dieser Subsysteme genutzt werden können die Informationen.
 
 Wenn **/SAFESEH:NO** angegeben ist, wird der Linker kein Image mit einer Tabelle sicherer Ausnahmehandler, auch wenn alle Module mit dem Feature für sichere Ausnahmebehandlung kompatibel sind.
 
@@ -35,7 +35,7 @@ Sie können auch eine Funktion als strukturierte Ausnahmehandler registrieren, m
 
 Es ist nicht möglich, vorhandene Binärdateien als sichere (oder keine) Ausnahmehandler besitzend zu markieren. Informationen zur sicheren Ausnahmebehandlung müssen beim Erstellen hinzugefügt werden.
 
-Ob der Linker in der Lage ist, eine Tabelle sicherer Ausnahmehandler zu generieren, richtet sich nach der Anwendung, von der die C-Laufzeitbibliothek verwendet wird. Wenn Sie mit [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) eine Tabelle mit sicheren ausnahmehandlern möchten, müssen Sie eine Ladekonfigurationsstruktur (z. B. in loadcfg.c enthalten ist, CRT-Quelldatei gefunden werden kann) angeben, die alle für Visual C++ definierten Einträge enthält. Zum Beispiel:
+Ob der Linker in der Lage ist, eine Tabelle sicherer Ausnahmehandler zu generieren, richtet sich nach der Anwendung, von der die C-Laufzeitbibliothek verwendet wird. Wenn Sie mit [/NODEFAULTLIB](nodefaultlib-ignore-libraries.md) eine Tabelle mit sicheren ausnahmehandlern möchten, müssen Sie eine Ladekonfigurationsstruktur (z. B. in loadcfg.c enthalten ist, CRT-Quelldatei gefunden werden kann) angeben, die alle für Visual C++ definierten Einträge enthält. Zum Beispiel:
 
 ```
 #include <windows.h>
@@ -98,7 +98,7 @@ const IMAGE_LOAD_CONFIG_DIRECTORY32_2 _load_config_used = {
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Linker** Ordner.
 
@@ -112,5 +112,5 @@ const IMAGE_LOAD_CONFIG_DIRECTORY32_2 _load_config_used = {
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)
+[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)

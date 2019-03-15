@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: 4a37542bd69926572e44322c406862117560affe
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f9d339860e9d2bdb8d66f6b7f8f49d3993b2d5cf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175768"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820740"
 ---
 # <a name="c-attributes-for-com-and-net"></a>C++-Attribute für COM und .NET
 
@@ -49,7 +49,7 @@ Anschließend können Sie festlegen, um die `CMyReceiver` Methoden `handler1` un
 
 ## <a name="basic-mechanics-of-attributes"></a>Grundlegende Funktionsweise der Attribute
 
-Es gibt drei Möglichkeiten zum Einfügen von Attributen in Ihr Projekt. Erstens können Sie sie manuell in Ihren Quellcode einfügen. Zweitens können Sie sie mit dem Eigenschaftenraster eines Objekts in Ihrem Projekt einfügen. Schließlich können Sie mithilfe der verschiedenen Assistenten einfügen. Weitere Informationen zur Verwendung der **Eigenschaften** Fenster und die verschiedenen Assistenten, finden Sie unter [erstellen und Verwalten von Visual C++-Projekte](../../ide/creating-and-managing-visual-cpp-projects.md).
+Es gibt drei Möglichkeiten zum Einfügen von Attributen in Ihr Projekt. Erstens können Sie sie manuell in Ihren Quellcode einfügen. Zweitens können Sie sie mit dem Eigenschaftenraster eines Objekts in Ihrem Projekt einfügen. Schließlich können Sie mithilfe der verschiedenen Assistenten einfügen. Weitere Informationen zur Verwendung der **Eigenschaften** Fenster und die verschiedenen Assistenten, finden Sie unter [erstellen und Verwalten von Visual C++-Projekte](../../build/creating-and-managing-visual-cpp-projects.md).
 
 Als wenn das Projekt erstellt wird, analysiert, der Compiler jede C++-Quelldatei, erzeugt eine Objektdatei. Allerdings ist es, wenn der Compiler ein Attribut trifft, analysiert und syntaktisch überprüft. Der Compiler ruft dann dynamisch ein Attributanbieters zum Einfügen von Code oder andere Änderungen vornehmen, zum Zeitpunkt der Kompilierung. Die-Implementierung des Anbieters, hängt von den Typ des Attributs ab. ATL-bezogene Attribute werden beispielsweise durch Atlprov.dll implementiert.
 

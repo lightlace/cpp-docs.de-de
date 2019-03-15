@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GF compiler option [C++]
 - strings [C++], pooling
 ms.assetid: bb7b5d1c-8e1f-453b-9298-8fcebf37d16c
-ms.openlocfilehash: c85379cf1a514cafcd2f840673fc9c7b2d415ba4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2f2bec446fcec522857b4c05a34311e6c26c9b75
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425665"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812316"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (Doppelte Zeichenfolgen beseitigen)
 
@@ -45,16 +45,16 @@ char *t = "This is a character buffer";
 ```
 
 > [!NOTE]
->  Die ["/ Zi"](../../build/reference/z7-zi-zi-debug-information-format.md) -Option zum Bearbeiten und fortfahren, setzt automatisch das **/GF** Option.
+>  Die ["/ Zi"](z7-zi-zi-debug-information-format.md) -Option zum Bearbeiten und fortfahren, setzt automatisch das **/GF** Option.
 
 > [!NOTE]
->  Die **/GF** Compileroption erstellt einen adressierbaren Abschnitt für jede eindeutige Zeichenfolge. Und in der Standardeinstellung kann eine Objektdatei bis zu 65.536 adressierbare Abschnitte enthalten. Wenn Ihr Programm mehr als 65.536 Zeichenfolgen enthält, verwenden Sie die [/bigobj](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md) -Compileroption verwenden, um mehr Abschnitte zu erstellen.
+>  Die **/GF** Compileroption erstellt einen adressierbaren Abschnitt für jede eindeutige Zeichenfolge. Und in der Standardeinstellung kann eine Objektdatei bis zu 65.536 adressierbare Abschnitte enthalten. Wenn Ihr Programm mehr als 65.536 Zeichenfolgen enthält, verwenden Sie die [/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md) -Compileroption verwenden, um mehr Abschnitte zu erstellen.
 
-**/ GF** ist gültig, wenn ["/ O1"](../../build/reference/o1-o2-minimize-size-maximize-speed.md) oder **"/ O2"** verwendet wird.
+**/ GF** ist gültig, wenn ["/ O1"](o1-o2-minimize-size-maximize-speed.md) oder **"/ O2"** verwendet wird.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf den Ordner **C/C++** .
 
@@ -68,5 +68,5 @@ char *t = "This is a character buffer";
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)

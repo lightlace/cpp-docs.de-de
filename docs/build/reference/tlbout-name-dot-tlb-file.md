@@ -11,12 +11,12 @@ helpviewer_keywords:
 - .tlb files, renaming
 - -TLBOUT linker option
 ms.assetid: 0df6d078-2e48-46c9-a1a5-02674d85dce8
-ms.openlocfilehash: 3eaf4305c58ca70619e032f80e661b9c768f7813
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4e04514933a521bbf9d927fa6b47bacb87896353
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425522"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822261"
 ---
 # <a name="tlbout-name-tlb-file"></a>/TLBOUT (TLB-Datei benennen)
 
@@ -36,13 +36,13 @@ Gibt den Namen der TLB-Datei, die vom MIDL-Compiler erstellt. Keine Dateierweite
 
 Die/TLBOUT-Option gibt den Namen und die Erweiterung der TLB-Datei.
 
-Der MIDL-Compiler wird durch den Visual C++-Linker aufgerufen, wenn das Verknüpfen von Projekten, die die [Modul](../../windows/module-cpp.md) Attribut.
+Der MIDL-Compiler wird vom Linker MSVC aufgerufen, wenn das Verknüpfen von Projekten, die die [Modul](../../windows/module-cpp.md) Attribut.
 
-Wenn/TLBOUT nicht angegeben ist, erhalten die TLB-Datei den Namen [/IDLOUT](../../build/reference/idlout-name-midl-output-files.md) *Filename*. Wenn die/IDLOUT nicht angegeben ist, wird die TLB-Datei vc70.tlb aufgerufen werden.
+Wenn/TLBOUT nicht angegeben ist, erhalten die TLB-Datei den Namen [/IDLOUT](idlout-name-midl-output-files.md) *Filename*. Wenn die/IDLOUT nicht angegeben ist, wird die TLB-Datei vc70.tlb aufgerufen werden.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf die **Linker** Ordner.
 
@@ -56,8 +56,8 @@ Wenn/TLBOUT nicht angegeben ist, erhalten die TLB-Datei den Namen [/IDLOUT](../.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)<br/>
-[/IGNOREIDL (Attribute nicht in MIDL verarbeiten)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)<br/>
-[/MIDL (MIDL-Befehlszeilenoptionen angeben)](../../build/reference/midl-specify-midl-command-line-options.md)<br/>
+[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)<br/>
+[/IGNOREIDL (Attribute nicht in MIDL verarbeiten)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
+[/MIDL (MIDL-Befehlszeilenoptionen angeben)](midl-specify-midl-command-line-options.md)<br/>
 [Erstellen eines attributierten Programms](../../windows/building-an-attributed-program.md)

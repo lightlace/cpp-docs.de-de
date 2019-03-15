@@ -1,17 +1,17 @@
 ---
-title: 'Gewusst wie: Erstellen überprüfbarer C++-Projekte (C++/CLI)'
+title: 'Vorgehensweise: Erstellen überprüfbarer C++-Projekte (C++ / CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - verifiable assemblies [C++], creating
 - conversions, C++ projects
 - Visual C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
-ms.openlocfilehash: acd37469f0702b73cdb1386fcf43091c8d27aebb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de3742717bf55c53ab4007aaed18b6ce687fbede
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630437"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817375"
 ---
 # <a name="how-to-create-verifiable-c-projects-ccli"></a>Gewusst wie: Erstellen überprüfbarer C++-Projekte (C++ / CLI)
 
@@ -28,7 +28,7 @@ In der Standardeinstellung .NET-Projekte das Compilerflag "/ CLR" verwenden und 
 
 ### <a name="to-change-the-compiler-and-linker-settings"></a>Zum Ändern der Einstellungen für Compiler und linker
 
-1. Zeigen Sie die Eigenschaftenseite des Projekts. Weitere Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../ide/working-with-project-properties.md).
+1. Zeigen Sie die Eigenschaftenseite des Projekts. Weitere Informationen finden Sie unter [Compiler festgelegt und Buildeigenschaften](../build/working-with-project-properties.md).
 
 1. Auf der **allgemeine** Seite die **Konfigurationseigenschaften** Knotengruppe, die **Common Language Runtime-Unterstützung** Eigenschaft **Sichere MSIL Common Language Runtime-Unterstützung (/ CLR: safe)**.
 
@@ -56,7 +56,7 @@ Da C-Laufzeitbibliotheken (CRT) nicht überprüfbare Anwendungen verwenden könn
 
 1. Ändern Sie _tmain () in Main() im Haupt-cpp-Datei des Projekts an.
 
-1. Zeigen Sie die Eigenschaftenseite des Projekts. Weitere Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../ide/working-with-project-properties.md).
+1. Zeigen Sie die Eigenschaftenseite des Projekts. Weitere Informationen finden Sie unter [Compiler festgelegt und Buildeigenschaften](../build/working-with-project-properties.md).
 
 1. Auf der **erweitert** Seite die **Linker** Knoten geben Sie `Main` als die **Einstiegspunkt** -Eigenschaftswert.
 

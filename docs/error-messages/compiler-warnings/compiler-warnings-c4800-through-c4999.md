@@ -97,13 +97,12 @@ f1_keywords:
 - C5043
 - C5044
 - C5045
-- C5046
-ms.openlocfilehash: 672aa1b0e298be3b6754b1706e721ad6798230ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70a0eee4e0a7774c1c92a44ad1e8eaa480ce84d3
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642857"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816346"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Compilerwarnungen C4800 durch C5999
 
@@ -144,7 +143,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerwarnung (Stufe 4) C4840](compiler-warning-level-4-c4840.md)|nicht Portable Verwendung der Klasse*Typ*"als Argument an eine Variadic-Funktion|
 |Compilerwarnung (Stufe 4) C4841|nicht standardmäßige Erweiterung verwendet: zusammengesetzter memberkennzeichner in Offsetof verwendeter Bezeichner|
 |Compilerwarnung (Stufe 4) C4842|Das Ergebnis von 'Offsetof' wird auf einen Typ mit mehrfacher Vererbung ist nicht garantiert konsistent Compiler-Versionen|
-|Compilerwarnung C4843|"*type1*": ein Ausnahmehandler des Verweises zum Array oder Funktionstypen ist nicht erreichbar ist, verwenden Sie '*Typ2*"stattdessen|
+|Compilerwarnung C4843|'*type1*': Ein Ausnahmehandler des Verweises zum Array oder Funktionstypen ist nicht erreichbar ist, verwenden Sie '*Typ2*"stattdessen|
 |Compilerwarnung C4844|"export Module *Module_name*;" ist jetzt die bevorzugte Syntax zum Deklarieren einer Modulschnittstelle|
 |[Compilerwarnung (Stufe 4) C4866](c4866.md)| Erzwingen Compiler möglicherweise nicht die Reihenfolge der Auswertung von links nach rechts für Aufruf *Operatorname*|
 |[Compilerwarnung C4867 (Fehler)](compiler-warning-c4867.md)|"*Funktion*': Funktionsaufruf fehlt die Argumentliste; verwenden Sie '*Aufrufen*" um einen Zeiger auf Member zu erstellen.|
@@ -154,8 +153,10 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Compilerwarnung (Stufe 4) C4881|der Konstruktor und/oder der Destruktor wird nicht aufgerufen werden, für die Tile_static-Variable '*Variable*"|
 |Compilerwarnung (Stufe 1) C4882|Übergeben von functor-Objekten mit nicht Konstanten aufrufoperatoren an Concurrency:: parallel_for_each ist veraltet.|
 |Compilerwarnung C4900|Konflikt zwischen "*tool1*'Version'*version1*'und'*tool2*'Version'*version2*"|
-|[Compilerwarnung (Ebene 1) C4905](compiler-warning-level-1-c4905.md)|Breites Zeichenfolgenliteral umgewandelt zu "LPSTR"|
-|[Compilerwarnung (Ebene 1) C4906](compiler-warning-level-1-c4906.md)|Zeichenfolgenliteral umgewandelt zu "LPWSTR"|
+|[Compilerwarnung (Ebene 1) C4905](compiler-warning-level-1-c4905.md)|
+  Breites Zeichenfolgenliteral umgewandelt zu "LPSTR"|
+|[Compilerwarnung (Ebene 1) C4906](compiler-warning-level-1-c4906.md)|
+  Zeichenfolgenliteral umgewandelt zu "LPWSTR"|
 |Compilerwarnung (Stufe 1) C4910|"\<Bezeichner >:"__declspec(dllexport)"und"Extern"bei einer expliziten Instanziierung nicht miteinander kompatibel sind|
 |Compilerwarnung (Stufe 1) C4912|"*Attribut*": Attribut wurde ein nicht definiertes Verhalten für ein geschachteltes UDT|
 |Compilerwarnung (Stufe 4) C4913|Benutzerdefinierter binärer Operator "," ist vorhanden, die Überladung konnte aber alle Operanden nicht konvertieren. Es wurde der standardmäßig enthaltene binäre Operator "," verwendet.|
@@ -176,8 +177,8 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Compilerwarnung (Stufe 1) C4935|Assembly-Zugriffsspezifizierer wurde von geändert "*Zugriff*"|
 |Compilerwarnung (Ebene 1, Fehler) C4936|__declspec wird nur bei einer Kompilierung mit /clr oder /clr:pure unterstützt.|
 |Compilerwarnung (Stufe 4) C4937|"*text1*'und'*" Text2 "*"sind nicht differenzierbar. als Argumente für"*Richtlinie*"|
-|Compilerwarnung (Stufe 4) C4938|"*Var*': Reduction-Gleitkommavariable kann dazu führen, dass inkonsistente Ergebnissen bei/fp: strict oder #pragma fenv_access führen|
-|Compilerwarnung C4939|#pragma vtordisp ist veraltet und wird in einem der nächsten Releases von Visual C++ entfernt.|
+|Compilerwarnung (Stufe 4) C4938|"*Var*": Reduction-Gleitkommavariable kann dazu führen, dass inkonsistente Ergebnissen bei/fp: strict oder #pragma fenv_access führen|
+|Compilerwarnung C4939|#pragma vtordisp ist veraltet und wird in einer der nächsten Versionen von Visual C++ entfernt.|
 |Compilerwarnung (Stufe 1) C4944|"*Symbol*": Symbol aus kann nicht importiert "*assembly1*': als*Symbol*' ist im aktuellen Bereich bereits vorhanden.|
 |[Compilerwarnung (Ebene 1) C4945](compiler-warning-level-1-c4945.md)|"*Symbol*": Symbol aus kann nicht importiert werden kann '*assembly1*": unter*Symbol*'wurde bereits importiert aus einer anderen Assembly'*assembly2* '|
 |[Compilerwarnung (Ebene 1) C4946](compiler-warning-level-1-c4946.md)|Reinterpret_cast wird zwischen verknüpften Klassen verwendet: "*class1*'und'*Klasse2*"|
@@ -196,7 +197,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Compilerwarnung (Ebene 1, Fehler) C4959|keine nicht verwalteten Typ definieren '*Typ*"in/CLR: safe da Zugriff auf seine Member nicht überprüfbaren Code ausgegeben wird|
 |Compilerwarnung (Stufe 4) C4960|"*Funktion*' ist zu groß für die profilerstellung|
 |Compilerwarnung (Stufe 1) C4961|In 'PGD-Datei' wurden keine Profildaten zusammengeführt, profilgesteuerte Optimierungen werden deaktiviert.|
-|Compilerwarnung (Stufe 4) C4962|"*Funktion*': Profilgesteuerte Optimierungen wurden deaktiviert, da die Optimierungen eine Inkonsistenz zwischen den Profildaten verursacht wurde.|
+|Compilerwarnung (Stufe 4) C4962|"*Funktion*": Profilgesteuerte Optimierungen wurden deaktiviert, da die Optimierungen eine Inkonsistenz zwischen den Profildaten verursacht wurde.|
 |Compilerwarnung (Stufe 1) C4963|"*Beschreibung*": keine Profildaten gefunden; verschiedene Compileroptionen wurden im instrumentierten Build verwendet.|
 |[Compilerwarnung (Ebene 1) C4964](compiler-warning-level-1-c4964.md)|Es wurden keine Optimierungsoptionen angegeben. Informationen zum Unternehmensprofil werden nicht gesammelt werden|
 |[Compilerwarnung (Ebene 1) C4965](compiler-warning-level-1-c4965.md)|Implizites Boxing mit ganzer Zahl 0.; Verwenden Sie "nullptr" oder eine explizite Umwandlung|
@@ -216,7 +217,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Compilerwarnung (Stufe 3) C4991|Warbird: Funktion "*Funktion*" als __forceinline markierte nicht inline da Schutzstufe des Inlinees größer als das übergeordnete Element ist|
 |Compilerwarnung (Stufe 3) C4992|Warbird: Funktion "*Funktion*" als __forceinline markierte nicht inline, da es sich um Inlineassembly enthält, die nicht geschützt werden können|
 |[Compilerwarnung (Ebene 3) C4995](compiler-warning-level-3-c4995.md)|"*Funktion*": Name wurde als #pragma als veraltet markiert|
-|[Compilerwarnung (Ebene 3) C4996](compiler-warning-level-3-c4996.md)|"*Beschreibung*': *Nachricht*|
+|[Compilerwarnung (Ebene 3) C4996](compiler-warning-level-3-c4996.md)|'*description*': *message*|
 |Compilerwarnung (Stufe 1) C4997|"*Klasse*': Co-Klasse implementiert keine COM- oder Pseudoschnittstelle|
 |Compilerwarnung (Stufe 1) C4998|Erwartung fehlgeschlagen: *Erwartung*(*Wert*)|
 |Compilerwarnung C4999|Unbekannte Warnung wählen Sie den technischen Supportbefehl im Visual C++-Hilfemenü, oder öffnen die Hilfedatei für technischen Support für Weitere Informationen|
@@ -226,11 +227,11 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Compilerwarnung (Stufe 4) C5025|"*Typ*': Verschieben der Zuweisungsoperator wurde implizit als gelöscht definiert.|
 |Compilerwarnung (Stufe 1 und Stufe 4) C5026|"*Typ*": Konstruktor wurde implizit als gelöscht definiert.|
 |Compilerwarnung (Stufe 1 und Stufe 4) C5027|"*Typ*': Verschieben der Zuweisungsoperator wurde implizit als gelöscht definiert.|
-|Compilerwarnung (Stufe 1) C5028|"*Namen*': Ausrichtung angegeben wird, in vorheriger Deklaration (*Anzahl*) nicht in Definition angegeben.|
+|Compilerwarnung (Stufe 1) C5028|"*Namen*": In vorheriger Deklaration angegebene Ausrichtung (*Anzahl*) nicht in Definition angegeben.|
 |Compilerwarnung (Stufe 4) C5029|nicht dem Standard entsprechende Erweiterung: Ausrichtungsattribute in C++, die auf Variablen, Datenmember und Tagtypen nur anwenden|
 |Compilerwarnung (Stufe 3) C5030|Attribut "*Attribut*" wird nicht erkannt.|
 |Compilerwarnung (Stufe 4) C5031|#pragma warning"(POP): wahrscheinlich fehlzuordnung, POP-Warnstatus in anderen Datei mithilfe von Push übertragen|
-|Compilerwarnung (Stufe 4) C5032|#pragma warning"(Push) ohne entsprechende #pragma warning"(POP) erkannt|
+|Compilerwarnung (Stufe 4) C5032|detected #pragma warning(push) with no corresponding #pragma warning(pop)|
 |Compilerwarnung (Stufe 1) C5033|"*Speicherklassen-*' ist nicht mehr unterstützte Speicherklasse|
 |Warnung C5034|Verwenden der systeminternen "*systeminterne*' bewirkt, dass Funktion *Funktion* als gastcode kompiliert.|
 |Compilerwarnung C5035|Verwenden des Features "*Feature*' bewirkt, dass Funktion *Funktion* als gastcode kompiliert.|
@@ -244,4 +245,4 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Compilerwarnung (Stufe 2) C5043|"*Spezifikation*': Ausnahmespezifikation stimmt nicht mit der vorherigen Deklaration überein|
 |Compilerwarnung (Stufe 4) C5044|Ein Argument für die Befehlszeilenoption *Option* zeigt auf einen Pfad "*Pfad*' nicht vorhanden|
 |[Compilerwarnung C5045](c5045.md)|Compilerfehler fügt Spectre-Entschärfung, Auslastung des Arbeitsspeichers angegeben, wenn "/ qspectre" wechseln|
-|[Compilerwarnung (Stufe 2) C5046](c5046.md)|"*Funktion*": Symbol, die im Zusammenhang mit Datentyp mit interner Verknüpfung nicht definiert|
+|[Compilerwarnung (Stufe 2) C5046](c5046.md)|"*Funktion*": Im Zusammenhang mit sprachsymboltyps mit interner Verknüpfung nicht definiert|

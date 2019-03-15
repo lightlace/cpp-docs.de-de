@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - PRJ0049
 ms.assetid: 8b38afa1-e080-4efd-ae89-776cfd044413
-ms.openlocfilehash: a451b7fe7b2f7cd89f8898232badf0d3b7e9f138
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fba3de0be764aa56b56ed22c6a9fde9366295456
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447215"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816229"
 ---
 # <a name="project-build-warning-prj0049"></a>Projektbuildwarnung PRJ0049
 
@@ -21,7 +21,7 @@ Mithilfe von Visual Studio 2008 erstellte Anwendungen können angeben, welche Ve
 
 1. Wählen Sie eine der folgenden Optionen aus:
 
-   - Ändern Sie das Zielframework des Projekts **Eigenschaftenseiten** Dialogfeld, sodass sie später als oder gleich dem minimalen Frameworkversion alle referenzierten Assemblys und Projekte ist. Weitere Informationen finden Sie unter [Hinzufügen von verweisen](../../ide/adding-references-in-visual-cpp-projects.md).
+   - Ändern Sie das Zielframework des Projekts **Eigenschaftenseiten** Dialogfeld, sodass sie später als oder gleich dem minimalen Frameworkversion alle referenzierten Assemblys und Projekte ist. Weitere Informationen finden Sie unter [Hinzufügen von verweisen](../../build/adding-references-in-visual-cpp-projects.md).
 
    - Entfernen Sie den Verweis auf die Assembly oder das Projekt mit einer minimalen Framework-Version, die älter ist als die Zielversion von .NET Framework. Diese Elemente werden mit einem Warnsymbol des Projekts markiert werden **Eigenschaftenseiten**.
 

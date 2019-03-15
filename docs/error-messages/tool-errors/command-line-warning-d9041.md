@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - D9041
 ms.assetid: ada8815f-4246-4e25-b57d-a7f16fa107cc
-ms.openlocfilehash: 79bdafcd4ed6af061b9c0ee27aae6eed6bc981a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2311c61c4d661d58302308f06b08971f94cdacab
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513918"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816307"
 ---
 # <a name="command-line-warning-d9041"></a>Befehlszeilenwarnung D9041
 
@@ -32,4 +32,4 @@ Um die Warnung zu beheben, fügen die **/ analyze** -Befehlszeilenoption. Wenn *
 ## <a name="see-also"></a>Siehe auch
 
 [Befehlszeilenfehler D8000 bis D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)<br/>
-[Compileroptionen](../../build/reference/compiler-options.md)
+[MSVC-Compiler-Optionen](../../build/reference/compiler-options.md)

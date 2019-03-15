@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -SUBSYSTEM linker option
 - subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
-ms.openlocfilehash: 0b6a8a841cefcd519cbeeae9f3355d72e1bbf286
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ecda3443d0422af4d5ceec9282d86590c53af2f5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417007"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821260"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (Subsystem angeben)
 
@@ -42,7 +42,7 @@ Win32-Zeichenmodusanwendung. Im Betriebssystem wird eine Konsole für Konsolenan
 Die Extensible Firmware Interface-Subsysteme. Weitere Informationen finden Sie in der EFI-Spezifikation. Beispiele finden Sie unter der Intel-Website. Die erforderliche Mindest- und Standardversion ist Version 1.0.
 
 **NATIVE**<br/>
-Kernelmodustreiber für Windows NT. Diese Option ist üblicherweise für Windows-Systemkomponenten reserviert. Wenn [/Driver: WDM](../../build/reference/driver-windows-nt-kernel-mode-driver.md) angegeben ist, ist NATIVE der Standardwert ist.
+Kernelmodustreiber für Windows NT. Diese Option ist üblicherweise für Windows-Systemkomponenten reserviert. Wenn [/Driver: WDM](driver-windows-nt-kernel-mode-driver.md) angegeben ist, ist NATIVE der Standardwert ist.
 
 **POSIX**<br/>
 Anwendung, die mit dem POSIX-Subsystem unter Windows NT ausgeführt wird.
@@ -73,7 +73,7 @@ Die optionalen Minimum- und Standardversionsnummern *wichtigen* und *kleinere* V
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie den Ordner Linker aus.
 
@@ -87,5 +87,5 @@ Die optionalen Minimum- und Standardversionsnummern *wichtigen* und *kleinere* V
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)
+[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)

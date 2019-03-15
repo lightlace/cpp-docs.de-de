@@ -1,12 +1,12 @@
 ---
 title: Übersicht über die ARM64-ABI-Konventionen
 ms.date: 07/11/2018
-ms.openlocfilehash: c5c928dcb77729f5b79433d3be1b552664a0d211
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 537f8cf5bb8db61854bea7f4624e3dd3176c6a59
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599783"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816541"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Übersicht über die ARM64-ABI-Konventionen
 
@@ -57,14 +57,14 @@ Die Architektur der AArch64 unterstützt 32 Ganzzahlregister, die im folgenden z
 
 |Register|Volatil?|Rolle|
 |-|-|-|
-X0|Volatil|Parameter/neu registrieren, 1, Ergebnis registrieren
-X1-x7|Volatil|Parameter/neu registrieren 2 bis 8
-X8-x15|Volatil|Scratch-Register
-X16-x17|Volatil|Intra-Procedure-Call/Scratch-Register
+x0|Volatil|Parameter/neu registrieren, 1, Ergebnis registrieren
+x1-x7|Volatil|Parameter/neu registrieren 2 bis 8
+x8-x15|Volatil|Scratch-Register
+x16-x17|Volatil|Intra-Procedure-Call/Scratch-Register
 x18|Nicht volatil|Registrieren Sie Plattform: im Kernelmodus verweist auf KPCR für den aktuellen Prozessor; im Benutzermodus verweist auf TEB
-X19-x28|Nicht volatil|Scratch-Register
-X29/fp|Nicht volatil|Frame-Pointer
-X30/lr|Nicht volatil|Link-Register
+x19-x28|Nicht volatil|Scratch-Register
+x29/fp|Nicht volatil|Frame-Pointer
+x30/lr|Nicht volatil|Link-Register
 
 Jedes Register kann als 64-Bit-Wert (über X0-X30) oder als 32-Bit-Wert (über w0-w30) zugegriffen werden. 32-Bit-Betrieb erweitern 0 (null)-ihre Ergebnisse bis zu 64 Bits.
 
@@ -81,9 +81,9 @@ Die Architektur der AArch64 unterstützt auch 32 Gleitkomma-point/SIMD-Register,
 Register|Volatil?|Rolle
 |-|-|-|
 v0|Volatil|Parameter/neu registrieren, 1, Ergebnis registrieren
-V1-v7|Volatil|Parameter/neu registriert 2 bis 8
+v1-v7|Volatil|Parameter/neu registriert 2 bis 8
 v8-v15|Nicht volatil|Scratch-Register (Beachten Sie, dass nur die unteren 64 Bits nicht flüchtigen)
-V16-v31|Volatil|Scratch-Register
+v16-v31|Volatil|Scratch-Register
 
 Jedes Register kann als ein vollständiger 128-Bit-Wert (per v0-v31 oder q0-F31) als 64-Bit-Wert (über d0-d31), als 32-Bit-Wert (über s0-s31), als ein 16-Bit-Wert (über h0-h31) oder als ein 8-Bit-Wert (über b0-b31) zugegriffen werden. Greift auf weniger als 128 Bits verwenden Sie nur die unteren Bits des Registers 128-Bit- und die verbleibenden Bits unverändert lassen, sofern nicht anders angegeben. (Beachten Sie, dass dies unterscheidet sich deutlich von AArch32, ist, in denen die kleinere Register auf größere Register gepackt wurden.)
 
@@ -95,7 +95,7 @@ Bits|Bedeutung|Volatil?|Rolle
 25|DN|Nicht flüchtigen|Standardmäßige NaN-Modussteuerung
 24|FZ|Nicht volatil|Flush-to-Zero-Modussteuerung
 23-22|RMode|Nicht volatil|Rounding-Modussteuerung
-15,12-8|IDE, IXE usw.|Nicht flüchtigen|Ausnahme-Trap-Aktivierungsbits, muss immer 0 sein
+15,12-8|IDE/IXE/etc|Nicht flüchtigen|Ausnahme-Trap-Aktivierungsbits, muss immer 0 sein
 
 ## <a name="system-registers"></a>System-Register
 
@@ -203,7 +203,7 @@ Der Kernel-Modus-Standardstapel in Windows ist sechs Seiten (24 KB). Achten Sie 
 
 ## <a name="stack-walking"></a>Durchlaufen von Stapeln
 
-Code in Windows wird mit aktivierten Frame-Pointern kompiliert ([/Oy-](../build/reference/oy-frame-pointer-omission.md)) zum schnellen Stackwalk zu ermöglichen. Das Fazit dieser lautet X29 (fp) im Allgemeinen auf den nächsten Link in der Kette, verweist ein {fp, Lr} handelt, der angibt, des Zeigers zum vorherigen Frame im Stack und die Rückgabeadresse Paar. Code von Drittanbietern wird empfohlen, auf Frame-Pointer auch aktivieren, um verbesserte profilerstellung und Ablaufverfolgung zu ermöglichen.
+Code in Windows wird mit aktivierten Frame-Pointern kompiliert ([/Oy-](reference/oy-frame-pointer-omission.md)) zum schnellen Stackwalk zu ermöglichen. Das Fazit dieser lautet X29 (fp) im Allgemeinen auf den nächsten Link in der Kette, verweist ein {fp, Lr} handelt, der angibt, des Zeigers zum vorherigen Frame im Stack und die Rückgabeadresse Paar. Code von Drittanbietern wird empfohlen, auf Frame-Pointer auch aktivieren, um verbesserte profilerstellung und Ablaufverfolgung zu ermöglichen.
 
 ## <a name="exception-unwinding"></a>Ausnahmeentladung
 
@@ -221,5 +221,5 @@ Beachten Sie, dass der Zyklus-Counter hier ein wahrer Zyklus-Counter, keine Wall
 
 ## <a name="see-also"></a>Siehe auch
 
-[Häufig auftretende ARM-Migrationsprobleme bei Visual C++](../build/common-visual-cpp-arm-migration-issues.md)<br/>
-[ARM64-Ausnahmebehandlung](../build/arm64-exception-handling.md)
+[Häufig auftretende ARM-Migrationsprobleme bei Visual C++](common-visual-cpp-arm-migration-issues.md)<br/>
+[ARM64-Ausnahmebehandlung](arm64-exception-handling.md)

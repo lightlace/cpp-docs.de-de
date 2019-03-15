@@ -4,7 +4,7 @@
 # [Erstellen eines neuen Linux-Projekts](create-a-new-linux-project.md)
 # [Herstellen einer Verbindung mit Ihrem Linux-Remotecomputer](connect-to-your-remote-linux-computer.md)
 # [Bereitstellen, Ausführen und Debuggen Ihres Linux-Projekts](deploy-run-and-debug-your-linux-project.md)
-# [Tutorial: Erstellen von plattformübergreifenden C++-Projekten in Visual Studio](../ide/get-started-linux-cmake.md)
+# [Tutorial: Erstellen von plattformübergreifenden C++-Projekten in Visual Studio](../build/get-started-linux-cmake.md)
 # [Referenz zur Linux-Projekteigenschaftenseite](prop-pages-linux.md)
 ## [Allgemeine Eigenschaften (Linux)](prop-pages/general-linux.md)
 ## [Debugeigenschaften (Linux)](prop-pages/debugging-linux.md)

@@ -1,16 +1,16 @@
 ---
-title: 'Gewusst wie: Verwenden des Windows 10-SDKs in einer Windows-Desktopanwendung'
+title: 'Vorgehensweise: Verwenden des Windows 10 SDK in einer Windows-Desktopanwendung'
 ms.custom: get-started-article
 ms.date: 07/12/2018
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-ms.openlocfilehash: ed860a229866991b01266093058b71cc2ae84986
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25ef3674a7ab741f20a07d6e65d1b5524fb88d5f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669117"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809924"
 ---
-# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Gewusst wie: Verwenden des Windows 10-SDKs in einer Windows-Desktopanwendung
+# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Vorgehensweise: Verwenden des Windows 10 SDK in einer Windows-Desktopanwendung
 
 Wenn Sie ein klassisches Windows-desktop-Projekt in Visual Studio 2017 erstellen, ist es wird standardmäßig eingerichtet, mit der Version von Windows 10 SDK zu erstellen, die installiert wurde, wenn die C++-Desktop-Workload installiert oder zuletzt aktualisiert wurde. Diese Version des Windows SDK ist kompatibel, mit Windows 7 und höher. Finden Sie unter [verwenden der Windows-Header](/windows/desktop/WinProg/using-the-windows-headers) Informationen für bestimmte Versionen von Windows.
 
@@ -24,7 +24,7 @@ Ab Visual Studio 2015 und Windows 10-SDKS, wurde die CRT-Bibliothek getrennt, in
 
 2. Öffnen Sie das Kontextmenü für den Projektknoten, und wählen Sie **SDK-Version neu zuweisen**aus.
 
-   ![Neuzuweisen von SDK-Version](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")
+   ![Retarget SDK Version](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")
 
    Das Dialogfeld **Projektmappenaktionen überprüfen** wird angezeigt.
 
@@ -38,7 +38,7 @@ Ab Visual Studio 2015 und Windows 10-SDKS, wurde die CRT-Bibliothek getrennt, in
 
    `Retargeting End: 1 completed, 0 failed, 0 skipped`
 
-4. Öffnen Sie die Projekteigenschaften, und achten Sie im Abschnitt **Konfigurationseigenschaften, Allgemein** auf die Werte für **Version der Windows-Zielplattform**. Wenn Sie den Wert hier ändern, hat dies die gleichen Auswirkungen wie dieses Verfahren. Siehe [General Property Page (Project)](../ide/general-property-page-project.md).
+4. Öffnen Sie die Projekteigenschaften, und achten Sie im Abschnitt **Konfigurationseigenschaften, Allgemein** auf die Werte für **Version der Windows-Zielplattform**. Wenn Sie den Wert hier ändern, hat dies die gleichen Auswirkungen wie dieses Verfahren. Siehe [General Property Page (Project)](../build/reference/general-property-page-project.md).
 
    ![Version der Zielplattform](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")
 

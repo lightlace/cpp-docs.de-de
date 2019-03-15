@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - 'msbuild (c++), howto: integrate custom tools'
 ms.assetid: f32d91a4-44e9-4de3-aa9a-1c7f709ad2ee
-ms.openlocfilehash: 3464bfb04211969a6d4209ca45a277100a99883d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a959eddb36a2de90ebd5b5b1b9eb5e2f4e67c03a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416396"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810158"
 ---
 # <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Vorgehensweise: Integrieren von benutzerdefinierte Tools in den Projekteigenschaften
 
@@ -39,4 +39,4 @@ In diesem Dokument wird erläutert, wie Sie eine Datei in einem Set-Verzeichnis 
 
 ## <a name="see-also"></a>Siehe auch
 
-[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)
+[MSBuild in der Befehlszeile – C++](msbuild-visual-cpp.md)

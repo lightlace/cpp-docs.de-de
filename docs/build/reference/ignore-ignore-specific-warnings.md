@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - /IGNORE linker option
 ms.assetid: 37e77387-8838-4697-898f-d376ac641124
-ms.openlocfilehash: 4826ecae1f16cd3834cb6d47850fc686b3682614
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b374e0e73f9fc14fa32ea4f63fa71039a5cf3c7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479690"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815839"
 ---
 # <a name="ignore-ignore-specific-warnings"></a>/IGNORE (Bestimmte Warnungen ignorieren)
 
@@ -54,7 +54,7 @@ Im Allgemeinen repräsentieren Linkerwarnungen, die nicht ignoriert werden könn
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. In der **Linker** Ordner, wählen die **Befehlszeile** Eigenschaftenseite.
 

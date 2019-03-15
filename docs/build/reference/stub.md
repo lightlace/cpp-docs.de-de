@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - STUB .def file statement
 ms.assetid: 0a3b9643-19ed-47e9-8173-ee16bc8ed056
-ms.openlocfilehash: fd2e7c4a3bd9fa09b88f4c3caa9b7d5b73c1ad98
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5224fdaa2a03dc615c9e7e7bb7f7ba822a40807e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412938"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822118"
 ---
 # <a name="stub"></a>STUB
 
@@ -23,10 +23,10 @@ STUB:filename
 
 ## <a name="remarks"></a>Hinweise
 
-Eine entsprechende Möglichkeit zum angeben *Filename* ist mit der [/STUB](../../build/reference/stub-ms-dos-stub-file-name.md) -Linkeroption.
+Eine entsprechende Möglichkeit zum angeben *Filename* ist mit der [/STUB](stub-ms-dos-stub-file-name.md) -Linkeroption.
 
 STUB gilt in eine Moduldefinitionsdatei, nur, wenn Sie einen VxD zu erstellen.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Regeln für Moduldefinitionsanweisungen](../../build/reference/rules-for-module-definition-statements.md)
+[Regeln für Moduldefinitionsanweisungen](rules-for-module-definition-statements.md)

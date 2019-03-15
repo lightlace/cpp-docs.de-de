@@ -12,12 +12,12 @@ helpviewer_keywords:
 - output files, preprocessor
 - preprocessing output files
 ms.assetid: 123ee54f-8219-4a6f-9876-4227023d83fc
-ms.openlocfilehash: 5e1280b404668cebb64afa5a810d769a97bdbf85
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5e6302d90647bce7e37c47a619e814cab300aaee
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418060"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813759"
 ---
 # <a name="p-preprocess-to-a-file"></a>/P (Vorverarbeitung in eine Datei)
 
@@ -31,15 +31,15 @@ C- und C++-Quelldateien vorverarbeitet, und schreibt die vorverarbeitete Ausgabe
 
 ## <a name="remarks"></a>Hinweise
 
-Die Datei hat den gleichen Basisnamen wie die Quelldatei und die Erweiterung fügen. Im Prozess alle Präprozessordirektiven durchgeführt werden, makroerweiterungen werden ausgeführt und Kommentare werden entfernt. Um Kommentare in die vorverarbeitete Ausgabe beizubehalten, verwenden Sie die [/c (beibehalten der bei der Vorverarbeitung Kommentare)](../../build/reference/c-preserve-comments-during-preprocessing.md) -Option zusammen mit **/p**.
+Die Datei hat den gleichen Basisnamen wie die Quelldatei und die Erweiterung fügen. Im Prozess alle Präprozessordirektiven durchgeführt werden, makroerweiterungen werden ausgeführt und Kommentare werden entfernt. Um Kommentare in die vorverarbeitete Ausgabe beizubehalten, verwenden Sie die [/c (beibehalten der bei der Vorverarbeitung Kommentare)](c-preserve-comments-during-preprocessing.md) -Option zusammen mit **/p**.
 
-**/ P** fügt `#line` Anweisungen für die Ausgabe am Anfang und Ende jeder Datei enthalten und um Linien, die von präprozessoranweisungen für die bedingte Kompilierung entfernt. Diese Direktiven nummerieren Sie die Zeilen der vorverarbeiteten Datei neu. Daher finden Sie Fehler, die in späteren Phasen der Verarbeitung generiert die Zeilennummern der ursprünglichen Quelldatei anstelle von Zeilen in der vorverarbeiteten Datei. Unterdrückt die Generierung von `#line` -Anweisungen verwenden [/EP (Vorverarbeitung an "stdout" ohne #line-Anweisungen)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) sowie **/p**.
+**/ P** fügt `#line` Anweisungen für die Ausgabe am Anfang und Ende jeder Datei enthalten und um Linien, die von präprozessoranweisungen für die bedingte Kompilierung entfernt. Diese Direktiven nummerieren Sie die Zeilen der vorverarbeiteten Datei neu. Daher finden Sie Fehler, die in späteren Phasen der Verarbeitung generiert die Zeilennummern der ursprünglichen Quelldatei anstelle von Zeilen in der vorverarbeiteten Datei. Unterdrückt die Generierung von `#line` -Anweisungen verwenden [/EP (Vorverarbeitung an "stdout" ohne #line-Anweisungen)](ep-preprocess-to-stdout-without-hash-line-directives.md) sowie **/p**.
 
-Die **/p** Option unterdrückt die Kompilierung. Er wird keine OBJ-Datei erzeugt, auch wenn Sie [/Fo (Name der Objektdatei)](../../build/reference/fo-object-file-name.md). Sie müssen die vorverarbeitete Datei für die Kompilierung erneut. **/ P** unterdrückt auch die Ausgabedateien von dem **/FA**, **/FA**, und **/FM** Optionen. Weitere Informationen finden Sie unter [/FA, / FA (Listendatei)](../../build/reference/fa-fa-listing-file.md) und [/FM (Name der Zuordnungsdatei)](../../build/reference/fm-name-mapfile.md).
+Die **/p** Option unterdrückt die Kompilierung. Er wird keine OBJ-Datei erzeugt, auch wenn Sie [/Fo (Name der Objektdatei)](fo-object-file-name.md). Sie müssen die vorverarbeitete Datei für die Kompilierung erneut. **/ P** unterdrückt auch die Ausgabedateien von dem **/FA**, **/FA**, und **/FM** Optionen. Weitere Informationen finden Sie unter [/FA, / FA (Listendatei)](fa-fa-listing-file.md) und [/FM (Name der Zuordnungsdatei)](fm-name-mapfile.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf den Ordner **C/C++** .
 
@@ -61,6 +61,6 @@ CL /P /C ADD.C
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
-[/Fi (Ausgabedateinamen vorverarbeiten)](../../build/reference/fi-preprocess-output-file-name.md)
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)<br/>
+[/Fi (Ausgabedateinamen vorverarbeiten)](fi-preprocess-output-file-name.md)

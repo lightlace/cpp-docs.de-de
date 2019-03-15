@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-ms.openlocfilehash: fe31763c5da21a724f0c9242e6eb8429a2379ecd
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f6ed6184f8ae4b3a0f9db3c1f962a2918a185138
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421492"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816944"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (Terminalserverfähige Anwendung erstellen)
 
@@ -34,15 +34,15 @@ Wenn eine Anwendung Terminal Server kompatibel ist, es sind weder INI-Dateien no
 
 Wenn Sie/TSAWARE und Ihre Anwendung weiterhin INI-Dateien verwendet, werden die Dateien von allen Benutzern des Systems freigegeben werden. Wenn dies zulässig ist, können Sie weiterhin Ihre Anwendung mit/TSAWARE verknüpfen; Andernfalls müssen Sie: NO verwenden.
 
-Die/TSAWARE-Option ist standardmäßig aktiviert, für Windows und konsolenanwendungen. Finden Sie unter [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) und [/Version](../../build/reference/version-version-information.md) Informationen.
+Die/TSAWARE-Option ist standardmäßig aktiviert, für Windows und konsolenanwendungen. Finden Sie unter [/Subsystem](subsystem-specify-subsystem.md) und [/Version](version-version-information.md) Informationen.
 
 / TSAWARE gilt nicht für die Treiber, VxDs oder DLLs.
 
-Wenn eine Anwendung mit/TSAWARE, DUMPBIN verknüpft wurde [/Headers](../../build/reference/headers.md) zeigt Informationen zu diesem Zweck an.
+Wenn eine Anwendung mit/TSAWARE, DUMPBIN verknüpft wurde [/Headers](headers.md) zeigt Informationen zu diesem Zweck an.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf die **Linker** Ordner.
 
@@ -56,7 +56,7 @@ Wenn eine Anwendung mit/TSAWARE, DUMPBIN verknüpft wurde [/Headers](../../build
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)<br/>
+[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)<br/>
 [Das Speichern von benutzerspezifischen Informationen](/windows/desktop/TermServ/storing-user-specific-information)<br/>
 [Ältere Anwendungen in einer Terminaldienstumgebung](https://msdn.microsoft.com/library/aa382957.aspx)

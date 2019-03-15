@@ -5,12 +5,12 @@ f1_keywords:
 - /guard
 - VC.Project.VCCLCompilerTool.ControlFlowGuard
 ms.assetid: be495323-f59f-4cf3-a6b6-8ee69e6a19dd
-ms.openlocfilehash: 1d79f4b20499d964d407af61fa498b4579b6794d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e6a8a1545b97976cbe82d1c81b0e70c3dac3a266
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424079"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807402"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard (Ablaufsteuerungsschutz aktivieren)
 
@@ -26,21 +26,21 @@ Aktivieren der Compilergenerierung von Ablaufsteuerungsschutz-Sicherheitsüberpr
 
 Die Option **/guard:cf** veranlasst den Compiler, die Ablaufsteuerung für indirekte Aufrufziele zum Zeitpunkt der Kompilierung zu analysieren und dann Code einzufügen, um die Ziele zur Laufzeit zu überprüfen. Standardmäßig ist **/guard:cf** deaktiviert und muss explizit aktiviert werden. Um diese Option explizit zu deaktivieren, verwenden Sie **/guard:cf-**.
 
-**Visual Studio 2017 und höher**: Diese Option fügt schützt für **wechseln** -Anweisungen, die generiert Tabellen zu wechseln.
+**Visual Studio 2017 und höher:** Diese Option fügt schützt für **wechseln** -Anweisungen, die generiert Tabellen zu wechseln.
 
 Wenn die **/guard:cf** Ablaufsteuerungsschutz-Option (Control Flow Guard, CFG) angegeben wurde, fügen der Compiler und der Linker zusätzliche Laufzeitsicherheitsüberprüfungen zum Erkennen von Versuchen, den Code zu beschädigen, ein. Beim Kompilieren und Verknüpfen werden alle indirekten Aufrufe im Code analysiert, um jede Stelle zu finden, die der Code erreichen kann, wenn er ordnungsgemäß ausgeführt wird. Diese Informationen werden in zusätzlichen Strukturen in den Headern der Binärdateien gespeichert. Der Compiler fügt auch eine Überprüfung vor jedem indirekten Aufruf in Ihren Code ein, um sicherzustellen, dass das Ziel eine der überprüften Positionen ist. Wenn die Überprüfung zur Laufzeit auf einem CFG-fähigen Betriebssystem fehlschlägt, schließt das Betriebssystem das Programm.
 
-Eine häufige Form des Angriffs auf Software nutzt die Vorteile von Fehlern bei der Verarbeitung extremer oder unerwarteter Eingaben. Sorgfältig ausgearbeitete Eingaben in die Anwendung können eine Position mit einem Zeiger auf den ausführbaren Code überschreiben. Dies kann verwendet werden, um die Ablaufsteuerung an Code umzuleiten, der durch den Angreifer gesteuert werden. Die CFG-Laufzeitüberprüfungen korrigieren nicht die Datenbeschädigungsfehler in der ausführbaren Datei. Sie erschweren stattdessen einem Angreifer das Verwenden dieser Überprüfungen, um beliebigen Code auszuführen. CFG ist ein Minimierungstool, das Aufrufe an andere Positionen als Funktionseinstiegspunkte in Ihrem Code verhindert. Es ähnelt der Art und Weise, in der die Datenausführungsverhinderung (Data Execution Prevention, DEP)  [/GS](../../build/reference/gs-buffer-security-check.md) -Stapelüberprüfungen und [/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md) sowie [/HIGHENTROPYVA](../../build/reference/highentropyva-support-64-bit-aslr.md) Address Space Layout Randomization (ASLR) die Wahrscheinlichkeit verringern, dass der Code zu einem Angriffsvektor wird.
+Eine häufige Form des Angriffs auf Software nutzt die Vorteile von Fehlern bei der Verarbeitung extremer oder unerwarteter Eingaben. Sorgfältig ausgearbeitete Eingaben in die Anwendung können eine Position mit einem Zeiger auf den ausführbaren Code überschreiben. Dies kann verwendet werden, um die Ablaufsteuerung an Code umzuleiten, der durch den Angreifer gesteuert werden. Die CFG-Laufzeitüberprüfungen korrigieren nicht die Datenbeschädigungsfehler in der ausführbaren Datei. Sie erschweren stattdessen einem Angreifer das Verwenden dieser Überprüfungen, um beliebigen Code auszuführen. CFG ist ein Minimierungstool, das Aufrufe an andere Positionen als Funktionseinstiegspunkte in Ihrem Code verhindert. Es ähnelt der Art und Weise, in der die Datenausführungsverhinderung (Data Execution Prevention, DEP)  [/GS](gs-buffer-security-check.md) -Stapelüberprüfungen und [/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md) sowie [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md) Address Space Layout Randomization (ASLR) die Wahrscheinlichkeit verringern, dass der Code zu einem Angriffsvektor wird.
 
 Die **/guard:cf** -Option muss an den Compiler und den Linker übergeben werden, um Code zu erstellen, der die CFG-Angriffsminimierungstechnik verwendet. Wenn die Binärdatei mit einem einzigen `cl` -Befehl erstellt wird, übergibt der Compiler die Option an den Linker. Wenn Sie separat kompilieren und verknüpfen, muss die Option für die Compiler- und Linkerbefehle festgelegt werden. Die Linkeroption /DYNAMICBASE ist ebenfalls erforderlich. Um zu überprüfen, ob die Binärdatei CFG-Daten enthält, verwenden Sie den Befehl `dumpbin /headers /loadconfig` . CFG-fähige Binärdateien haben `Guard` in der Liste der EXE- oder DLL-Merkmale, und Wächterflags enthalten `CF Instrumented` sowie `FID table present`.
 
-Die **/guard:cf** -Option ist nicht kompatibel mit [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md) (Bearbeiten- und Fortfahren-Debuginformationen) oder [/clr](../../build/reference/clr-common-language-runtime-compilation.md) (Common Language Runtime-Kompilierung).
+Die **/guard:cf** -Option ist nicht kompatibel mit [/ZI](z7-zi-zi-debug-information-format.md) (Bearbeiten- und Fortfahren-Debuginformationen) oder [/clr](clr-common-language-runtime-compilation.md) (Common Language Runtime-Kompilierung).
 
 Code, der mithilfe von **/guard:cf** kompiliert wird, kann mit Bibliotheken und Objektdateien verknüpft werden, die nicht mit dieser Option kompiliert werden. Nur dieser Code, wenn er auch mit der **/guard:cf** -Option verknüpft und auf einem CFG-fähigen Betriebssystem ausgeführt wird, verfügt über CFG-Schutz. Da Code, der ohne die Option kompiliert wurde, keinen Angriff aufhalten kann, sollten Sie die Option im gesamten Code verwenden, den Sie kompilieren. Für CFG-Überprüfungen fallen geringe Laufzeitkosten an, aber die Compileranalyse versucht, die Überprüfungen auf indirekte Sprünge zu optimieren, die nachweislich sicher sind.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie **Konfigurationseigenschaften**, **C/C++**, **Codegenerierung**aus.
 
@@ -50,5 +50,5 @@ Code, der mithilfe von **/guard:cf** kompiliert wird, kann mit Bibliotheken und 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
-ms.openlocfilehash: 69e1868990358aeb4d790366b3a0bfa8d8999823
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: eabd488e581357ec1386b20597c1987e4c8b2c19
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414746"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809729"
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Manifestgenerierung in Visual Studio
 
@@ -27,11 +27,8 @@ Das Buildsystem von Visual Studio ermöglicht das Manifest in die endgültige Bi
 
 1. Wenn in der Binärdatei eingebettetes Manifest generiert, die für das Manifesttool identisch ist, wird der Build mit dem nächsten Schritt fortgesetzt.
 
-Das Manifest in die endgültige Binärdatei als Textressource eingebettet ist, und es kann angezeigt werden, indem Sie die endgültige Binärdatei als Datei in Visual Studio öffnen. Um sicherzustellen, dass das Manifest auf die richtigen Bibliotheken verweist, die Schritte [Grundlegendes zu den Abhängigkeiten einer Visual C++-Anwendung](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md) oder führen Sie die Vorschläge in beschrieben die [Problembehandlung](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) Abschnitt.
+Das Manifest in die endgültige Binärdatei als Textressource eingebettet ist, und es kann angezeigt werden, indem Sie die endgültige Binärdatei als Datei in Visual Studio öffnen. Um sicherzustellen, dass das Manifest auf die richtigen Bibliotheken verweist, die Schritte [Grundlegendes zu den Abhängigkeiten einer Visual C++-Anwendung](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md) oder führen Sie die Vorschläge in beschrieben die [Problembehandlung](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) Abschnitt.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Vorgehensweise: Einbetten eines Manifests in eine C- bzw. C++-Anwendung](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md)<br/>
-[Über Private Assemblys](/windows/desktop/SbsCs/about-private-assemblies-)<br/>
-[Manifesttool](/windows/desktop/SbsCs/mt-exe)<br/>
-[Manifestgenerierung für C/C++-Programme](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+[Manifestgenerierung für C/C++-Programme](understanding-manifest-generation-for-c-cpp-programs.md)

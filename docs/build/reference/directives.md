@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DIRECTIVES dumpbin option
 - -DIRECTIVES dumpbin option
 ms.assetid: cb85d679-6d20-4244-ba0b-6f495228e970
-ms.openlocfilehash: b508d4a622f4d8745cd8980a6f4895ce3dd40103
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: df25ca2c57cd15883b8ba1a9e2254b57a2c24a5d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423650"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817568"
 ---
 # <a name="directives"></a>/DIRECTIVES
 
@@ -25,8 +25,8 @@ ms.locfileid: "57423650"
 
 Diese Option gibt die vom Compiler generierter .drective-Abschnitt eines Bilds.
 
-Nur die [/Headers](../../build/reference/headers.md) DUMPBIN-Option ist verfügbar für die Verwendung in Dateien mit der ["/ GL"](../../build/reference/gl-whole-program-optimization.md) -Compileroption.
+Nur die [/Headers](headers.md) DUMPBIN-Option ist verfügbar für die Verwendung in Dateien mit der ["/ GL"](gl-whole-program-optimization.md) -Compileroption.
 
 ## <a name="see-also"></a>Siehe auch
 
-[DUMPBIN-Optionen](../../build/reference/dumpbin-options.md)
+[DUMPBIN-Optionen](dumpbin-options.md)

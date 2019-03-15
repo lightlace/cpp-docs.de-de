@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - EXPORTS .def file statement
 ms.assetid: dbcd7579-b855-44c4-bd27-931e157657f7
-ms.openlocfilehash: b12548bafa9a0c580c5976cd7c4c54d8726e5ace
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33b70c680bfc3db24f5326a2027fa9ec4740e3f2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435674"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814136"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -51,9 +51,9 @@ EXPORTS
    func2=other_module.#42
 ```
 
-Da Visual C++-Compiler die namensergänzung für C++-Funktionen verwendet, müssen Sie entweder die ergänzten Namen verwenden *Internal_name* oder definieren Sie die exportierten Funktionen mithilfe von `extern "C"` im Quellcode. Der Compiler ergänzt auch C-Funktionen, mit denen die [__stdcall](../../cpp/stdcall.md) -Aufrufkonvention mit einem Unterstrich (\_) Präfix und einem Suffix bestehen die at-Zeichen (\@) gefolgt von der Anzahl von Bytes (als Dezimalzahl) in der Argumentliste.
+Da der MSVC-Compiler die namensergänzung für C++-Funktionen verwendet, müssen Sie entweder den ergänzten Namen verwenden *Internal_name* oder definieren Sie die exportierten Funktionen mithilfe von `extern "C"` im Quellcode. Der Compiler ergänzt auch C-Funktionen, mit denen die [__stdcall](../../cpp/stdcall.md) -Aufrufkonvention mit einem Unterstrich (\_) Präfix und einem Suffix bestehen die at-Zeichen (\@) gefolgt von der Anzahl von Bytes (als Dezimalzahl) in der Argumentliste.
 
-Um die vom Compiler erzeugten, ergänzten Namen zu suchen, verwenden die [DUMPBIN](../../build/reference/dumpbin-reference.md) Tool oder den Linker [/MAP](../../build/reference/map-generate-mapfile.md) Option. Die ergänzten Namen sind compilerspezifisch. Wenn Sie die ergänzten Namen in der .DEF-Datei exportieren, müssen die ausführbaren Dateien, die zur DLL verknüpfen, ebenfalls mit derselben Version des Compilers erstellt werden. Damit wird sichergestellt, dass die ergänzten Namen im Aufrufer den exportierten Namen in der .DEF-Datei entsprechen.
+Um die vom Compiler erzeugten, ergänzten Namen zu suchen, verwenden die [DUMPBIN](dumpbin-reference.md) Tool oder den Linker [/MAP](map-generate-mapfile.md) Option. Die ergänzten Namen sind compilerspezifisch. Wenn Sie die ergänzten Namen in der .DEF-Datei exportieren, müssen die ausführbaren Dateien, die zur DLL verknüpfen, ebenfalls mit derselben Version des Compilers erstellt werden. Damit wird sichergestellt, dass die ergänzten Namen im Aufrufer den exportierten Namen in der .DEF-Datei entsprechen.
 
 Sie können \@ *ordinal* um anzugeben, dass eine Zahl und nicht der Funktionsname wird in der Exporttabelle der. Viele Windows-DLLs exportieren Ordinalzahlen, um Legacycode zu unterstützen. Es war üblich, Ordinalzahlen in 16-Bit-Windows-Code zu verwenden, weil das dazu beitragen kann, die Größe einer DLL zu minimieren. Es wird nicht empfohlen, Funktionen anhand der Ordinalzahl zu exportieren, es sei denn, die Clients Ihrer DLL benötigen sie zur Legacyunterstützung. Da die .LIB-Datei die Zuordnung zwischen der Ordinalzahl und der Funktion enthält, können Sie den Funktionsnamen verwenden, wie Sie es normalerweise in Projekten tun würden, die die DLL verwenden.
 
@@ -74,7 +74,7 @@ Es gibt vier Möglichkeiten für das Exportieren einer Definition, aufgelistet i
 
 1. Eine `EXPORTS`-Anweisung in einer .DEF-Datei
 
-1. Ein [/EXPORT](../../build/reference/export-exports-a-function.md) Spezifikation in einem LINK-Befehl
+1. Ein [/EXPORT](export-exports-a-function.md) Spezifikation in einem LINK-Befehl
 
 1. Ein [Kommentar](../../preprocessor/comment-c-cpp.md) -Anweisung im Quellcode, der das Formular `#pragma comment(linker, "/export: definition ")`. Das folgende Beispiel zeigt eine #pragma Comment-Anweisung vor der Deklaration einer Funktion, in denen `PlainFuncName` ist von der nicht ergänzte Namen, und `_PlainFuncName@4` ist der ergänzte Name der Funktion:
 
@@ -102,4 +102,4 @@ Wenn Sie eine Variable aus einer DLL über dien .DEF-Datei exportieren, müssen 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Regeln für Moduldefinitionsanweisungen](../../build/reference/rules-for-module-definition-statements.md)
+[Regeln für Moduldefinitionsanweisungen](rules-for-module-definition-statements.md)

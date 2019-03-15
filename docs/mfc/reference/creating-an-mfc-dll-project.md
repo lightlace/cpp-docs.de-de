@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [MFC], creating
 - DLLs [MFC], creating
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
-ms.openlocfilehash: 21173582f68b1d50fefbe22250546fcce63730b4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6ddc32ac3a2de5993e6755df0cd9fc7d3546094e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278833"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814149"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Erstellen eines MFC-DLL-Projekts
 
@@ -25,7 +25,7 @@ Eine MFC-DLL ist eine Binärdatei und fungiert als gemeinsam genutzte Funktionsb
 
 ### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>So erstellen Sie ein MFC-DLL-Projekt mit dem MFC-DLL-Assistenten
 
-1. Führen Sie die Anweisungen im Artikel [Creating a Project with a Visual C++ Application Wizard (Erstellen eines Projekts mit einem Visual C++-Anwendungs-Assistenten)](../../ide/creating-desktop-projects-by-using-application-wizards.md) durch.
+1. Befolgen Sie die Anweisungen im Hilfethema [erstellen Sie eine C++-Konsolen-app-Projekts](../../get-started/tutorial-console-cpp.md).
 
 **Beachten Sie** In die **neues Projekt** wählen Sie im Dialogfeld die `MFC DLL` Symbol im Bereich "Vorlagen" auf die MFC-DLL-Assistenten zu öffnen.
 
@@ -36,10 +36,11 @@ Eine MFC-DLL ist eine Binärdatei und fungiert als gemeinsam genutzte Funktionsb
 
 1. Klicken Sie auf **Fertig stellen** den Assistenten zu schließen, und öffnen das neue Projekt in **Projektmappen-Explorer**.
 
-Nachdem das Projekt erstellt wurde, sehen Sie die Dateien im **Projektmappen-Explorer**. Weitere Informationen zu den vom Assistenten erstellten Dateien im Projekt finden Sie in der projekteigenen Datei "Readme.txt". Weitere Informationen zu den Dateitypen finden Sie unter [für Visual C++-Projekte erstellte Dateitypen](../../ide/file-types-created-for-visual-cpp-projects.md).
+Nachdem das Projekt erstellt wurde, sehen Sie die Dateien im **Projektmappen-Explorer**. Weitere Informationen zu den vom Assistenten erstellten Dateien im Projekt finden Sie in der projekteigenen Datei "Readme.txt". Weitere Informationen zu den Dateitypen finden Sie unter [für Visual C++-Projekte erstellte Dateitypen](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 [Visual C++-Projekttypen](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
 [Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Eigenschaftenseiten](../../ide/property-pages-visual-cpp.md)
+[Eigenschaftenseiten](../../build/reference/property-pages-visual-cpp.md)
+

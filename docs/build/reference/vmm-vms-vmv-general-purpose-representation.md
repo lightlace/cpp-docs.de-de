@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Single Inheritance compiler option
 - -vmv compiler option [C++]
 ms.assetid: 0fcd7ae0-3031-4c62-a2a8-e154c8685dae
-ms.openlocfilehash: 3c11572880a0b58a1ba82f2e794c9dbfbd521c44
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7a46cecdbf96ad891ce218df4769a60590e562a9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425210"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810041"
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms, /vmv (Immer allgemeiner Zweck)
 
-Wird verwendet, wenn [/vmb, / vmg (Darstellungsmethode)](../../build/reference/vmb-vmg-representation-method.md) ausgewählt ist, als die [Darstellungsmethode](../../build/reference/vmb-vmg-representation-method.md). Diese Optionen geben an, das Vererbungsmodell, das der Definition der Klasse, aber nicht gefunden werden.
+Wird verwendet, wenn [/vmb, / vmg (Darstellungsmethode)](vmb-vmg-representation-method.md) ausgewählt ist, als die [Darstellungsmethode](vmb-vmg-representation-method.md). Diese Optionen geben an, das Vererbungsmodell, das der Definition der Klasse, aber nicht gefunden werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,7 +52,7 @@ Wenn Sie eine der folgenden Vererbungsmodell Optionen angeben, wird das Modell f
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf den Ordner **C/C++** .
 
@@ -66,6 +66,6 @@ Wenn Sie eine der folgenden Vererbungsmodell Optionen angeben, wird das Modell f
 
 ## <a name="see-also"></a>Siehe auch
 
-[/vmb, /vmg (Darstellungsmethode)](../../build/reference/vmb-vmg-representation-method.md)<br/>
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+[/vmb, /vmg (Darstellungsmethode)](vmb-vmg-representation-method.md)<br/>
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)

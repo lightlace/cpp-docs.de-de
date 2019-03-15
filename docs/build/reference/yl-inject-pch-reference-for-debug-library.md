@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Yl compiler option [C++]
 - /Yl compiler option [C++]
 ms.assetid: 8e4a396a-6790-4a9f-8387-df015a3220e7
-ms.openlocfilehash: c6828fb602c7c1c0aaa7732292604706ffd45230
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 92e47836e0fdae077defa0fe35b515ab4ca20a66
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587033"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810288"
 ---
 # <a name="yl-inject-pch-reference-for-debug-library"></a>/Yl (PCH-Verweis für Debugbibliothek einfügen)
 
@@ -35,7 +35,7 @@ Deaktiviert ein Bindestrich (-) explizit die **/Yl** -Compileroption.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **/Yl** Compileroption erstellt eine eindeutige Symboldefinition in einer vorkompilierten Headerdatei erstellt mithilfe der ["/ Yc"](../../build/reference/yc-create-precompiled-header-file.md) Option. Verweise auf dieses Symbol werden automatisch eingefügt, in allen Dateien, die durch die Verwendung des vorkompilierten Headers einbeziehen der ["/ Yu"](../../build/reference/yu-use-precompiled-header-file.md) -Compileroption. Die **/Yl** Option ist standardmäßig aktiviert, wenn **"/ Yc"** wird verwendet, um eine vorkompilierte Headerdatei erstellen.
+Die **/Yl** Compileroption erstellt eine eindeutige Symboldefinition in einer vorkompilierten Headerdatei erstellt mithilfe der ["/ Yc"](yc-create-precompiled-header-file.md) Option. Verweise auf dieses Symbol werden automatisch eingefügt, in allen Dateien, die durch die Verwendung des vorkompilierten Headers einbeziehen der ["/ Yu"](yu-use-precompiled-header-file.md) -Compileroption. Die **/Yl** Option ist standardmäßig aktiviert, wenn **"/ Yc"** wird verwendet, um eine vorkompilierte Headerdatei erstellen.
 
 Die **/Yl**_Namen_ Option wird verwendet, um ein identifizierbaren Symbol in der vorkompilierten Headerdatei zu erstellen. Der Compiler verwendet die *Namen* Argument als Teil des ergänzten Symbolnamens erstellt, ähnlich wie `__@@_PchSym_@00@...@name`, wobei die Auslassungspunkte (...) dar, die einen eindeutigen vom Compiler generierter Zeichenfolge Zeichen. Wenn die *Namen* Argument ausgelassen wird, generiert der Compiler einen Symbolnamen automatisch. In der Regel müssen Sie nicht den Namen des Symbols kennen. Wenn Ihr Projekt verwendet jedoch mehr als eine vorkompilierte Headerdatei, die **/Yl**_Namen_ Option ist möglicherweise nützlich, um zu ermitteln, welches Objekt verwenden sollen, die vorkompilierte Header. Sie können *Namen* als Suchzeichenfolge So suchen Sie die Symbolverweis in einer Dumpdatei.
 
@@ -43,21 +43,21 @@ Die **/Yl**_Namen_ Option wird verwendet, um ein identifizierbaren Symbol in der
 
 Wenn **"/ Yc"** nicht angegeben ist, alle **/Yl** Option hat keine Auswirkungen, aber wenn angegeben, muss dieser entsprechen alle **/Yl** Option übergeben wird, wenn **"/ Yc"** ist angegeben.
 
-Bei Verwendung von **/Yl-**, **"/ Yc"** und ["/ Z7"](../../build/reference/z7-zi-zi-debug-information-format.md) Optionen zum Erstellen einer vorkompilierten Headerdatei, die Debuginformationen befindet sich in der Objektdatei, die für die Quelldatei, die zum Erstellen der vorkompilierten Header, anstatt eine separate PDB-Datei. Wenn die Objektdatei Teil einer Bibliothek, klicken Sie dann erfolgt [LNK1211](../../error-messages/tool-errors/linker-tools-error-lnk1211.md) Fehler oder [LNK4206](../../error-messages/tool-errors/linker-tools-warning-lnk4206.md) Warnungen können in Builds, die diese Bibliothek und die vorkompilierte Headerdatei verwenden auftreten, wenn die Quelldatei, die zum Erstellen verwendet das vorkompilierte Headerdatei werden keine Symbole selbst definiert. Der Linker kann die Objektdatei über den Link, zusammen mit den zugehörigen Debuginformationen, ausschließen, wenn es sich bei "nothing" in der Objektdatei in der bibliothekclient verwiesen wird. Um dieses Problem zu beheben, geben Sie **/Yl** (oder entfernen Sie die **/Yl-** Option) bei Verwendung von **"/ Yc"** zum Erstellen der vorkompilierten Header-Datei. Dadurch wird sichergestellt, dass die Objektdatei, aus der Bibliothek, die die Debuginformationen enthält, die in Ihrem Build verknüpft ruft.
+Bei Verwendung von **/Yl-**, **"/ Yc"** und ["/ Z7"](z7-zi-zi-debug-information-format.md) Optionen zum Erstellen einer vorkompilierten Headerdatei, die Debuginformationen befindet sich in der Objektdatei, die für die Quelldatei, die zum Erstellen der vorkompilierten Header, anstatt eine separate PDB-Datei. Wenn die Objektdatei Teil einer Bibliothek, klicken Sie dann erfolgt [LNK1211](../../error-messages/tool-errors/linker-tools-error-lnk1211.md) Fehler oder [LNK4206](../../error-messages/tool-errors/linker-tools-warning-lnk4206.md) Warnungen können in Builds, die diese Bibliothek und die vorkompilierte Headerdatei verwenden auftreten, wenn die Quelldatei, die zum Erstellen verwendet das vorkompilierte Headerdatei werden keine Symbole selbst definiert. Der Linker kann die Objektdatei über den Link, zusammen mit den zugehörigen Debuginformationen, ausschließen, wenn es sich bei "nothing" in der Objektdatei in der bibliothekclient verwiesen wird. Um dieses Problem zu beheben, geben Sie **/Yl** (oder entfernen Sie die **/Yl-** Option) bei Verwendung von **"/ Yc"** zum Erstellen der vorkompilierten Header-Datei. Dadurch wird sichergestellt, dass die Objektdatei, aus der Bibliothek, die die Debuginformationen enthält, die in Ihrem Build verknüpft ruft.
 
 Weitere Informationen zu vorkompilierten Headern finden Sie unter:
 
-- [/Y (Vorkompilierte Header)](../../build/reference/y-precompiled-headers.md)
+- [/Y (Vorkompilierte Header)](y-precompiled-headers.md)
 
-- [Erstellen vorkompilierter Headerdateien](../../build/reference/creating-precompiled-header-files.md)
+- [Vorkompilierte Headerdateien](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **Befehlszeile** Eigenschaftenseite.
 
-1. Hinzufügen der **/Yl**_Namen_ -Compileroption in der **zusätzliche Optionen** Feld. Wählen Sie **OK** zum Speichern der Änderungen.
+1. Hinzufügen der **/Yl**_Namen_ -Compileroption in der **zusätzliche Optionen** Feld. Klicken Sie auf **OK**, um die Änderungen zu speichern.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
 
@@ -65,5 +65,5 @@ Weitere Informationen zu vorkompilierten Headern finden Sie unter:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)

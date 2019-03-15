@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -LARGEADDRESSAWARE linker option
 - /LARGEADDRESSAWARE linker option
 ms.assetid: a29756c8-e893-47a9-9750-1f0d25359385
-ms.openlocfilehash: 9ea26a87ce85f71188ca77345e4af055d3ffbf0e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 81a560ebf083e2f93d9bb514fc401186291d7f41
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413744"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808117"
 ---
 # <a name="largeaddressaware-handle-large-addresses"></a>/LARGEADDRESSAWARE (Umfangreiche Adressen verarbeiten)
 
@@ -26,11 +26,11 @@ ms.locfileid: "57413744"
 
 Die/LARGEADDRESSAWARE-Option weist den Linker, dass die Anwendung Adressen, die größer als 2 Gigabyte verarbeiten kann. In der 64-Bit-Compiler ist diese Option standardmäßig aktiviert. In der 32-Bit-Compiler ist/LARGEADDRESSAWARE: No aktiviert, wenn/LARGEADDRESSAWARE nicht anderweitig in der Linkerzeile angegeben ist.
 
-Wenn eine Anwendung mit/LARGEADDRESSAWARE, DUMPBIN verknüpft wurde [/Headers](../../build/reference/headers.md) zeigt Informationen zu diesem Zweck an.
+Wenn eine Anwendung mit/LARGEADDRESSAWARE, DUMPBIN verknüpft wurde [/Headers](headers.md) zeigt Informationen zu diesem Zweck an.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf die **Linker** Ordner.
 
@@ -44,5 +44,5 @@ Wenn eine Anwendung mit/LARGEADDRESSAWARE, DUMPBIN verknüpft wurde [/Headers](.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)
+[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)

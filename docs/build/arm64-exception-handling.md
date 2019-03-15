@@ -1,16 +1,16 @@
 ---
 title: ARM64-Ausnahmebehandlung
 ms.date: 11/19/2018
-ms.openlocfilehash: a4d4adcc365c1e9caf7faa0e225fabe133d0a6eb
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 921029704e4bf5adabfbe0a82387dadc911b9036
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176678"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816151"
 ---
 # <a name="arm64-exception-handling"></a>ARM64-Ausnahmebehandlung
 
-Windows auf ARM64 verwendet das gleiche strukturierte Ausnahmebehandlung Mechanismus für die asynchrone Hardware generierten – Ausnahmen als auch synchrone Software generierte Ausnahmen. Sprachspezifische Ausnahmehandler werden auf von Windows strukturierter Ausnahmebehandlung mithilfe von Sprachhilfsfunktionen erstellt. Dieses Dokument beschreibt die Behandlung von Ausnahmen in Windows auf ARM64 und die sprachhilfen, die von Code, der von der Microsoft-ARM-Assembler- und Visual C++-Compiler generiert wird verwendet.
+Windows auf ARM64 verwendet das gleiche strukturierte Ausnahmebehandlung Mechanismus für die asynchrone Hardware generierten – Ausnahmen als auch synchrone Software generierte Ausnahmen. Sprachspezifische Ausnahmehandler werden auf von Windows strukturierter Ausnahmebehandlung mithilfe von Sprachhilfsfunktionen erstellt. Dieses Dokument beschreibt die Behandlung von Ausnahmen in Windows auf ARM64 und die sprachhilfen, die von Code, der von der Microsoft-ARM-Assembler und der MSVC-Compiler generiert wird verwendet.
 
 ## <a name="goals-and-motivation"></a>Ziele und motivation
 
@@ -44,7 +44,7 @@ Hierbei handelt es sich um die Annahmen, die in der Beschreibung für die Ausnah
 
 1. Es ist keine bedingter Code in epilogen.
 
-1. Dedizierte Framezeigerregister: Wenn die sp in einem anderen Register (R29 entwickelt bei) im Prolog gespeichert wird, registrieren, die bleibt unverändert, während die Funktion, sodass der ursprüngliche sp jederzeit wiederhergestellt werden kann.
+1. Dedizierte Framezeigerregister: Wenn die sp gespeichert wird, in einem anderen Register (R29 entwickelt bei) im Prolog, die registriert bleibt unverändert, während die Funktion, damit der ursprüngliche sp jederzeit wiederhergestellt werden kann.
 
 1. Es sei denn, der gespeicherten Prozedur in einem anderen Register gespeichert wird, tritt ein, alle Manipulation des Stapelzeigers ausschließlich innerhalb der Prolog und Epilog.
 
@@ -52,11 +52,11 @@ Hierbei handelt es sich um die Annahmen, die in der Beschreibung für die Ausnah
 
 ## <a name="arm64-stack-frame-layout"></a>Stapelrahmenlayout bei ARM64
 
-![stapelrahmenlayout](../build/media/arm64-exception-handling-stack-frame.png "stapelrahmenlayout")
+![stapelrahmenlayout](media/arm64-exception-handling-stack-frame.png "stapelrahmenlayout")
 
 Für Funktionen der Frame verkettet kann das fp-Lr-Paar an beliebiger Position in der lokalen Variablen Bereich je nach der Optimierung Überlegungen gespeichert werden. Das Ziel ist, um die Anzahl der lokalen Variablen zu maximieren, die von einer einzelnen Anweisung, die basierend auf Frame-Pointer (R29 entwickelt bei) oder der Stapelzeiger (sp) erreicht werden kann. Jedoch für `alloca` Funktionen, er verkettet werden muss und R29 entwickelt bei muss am Ende Stack verweisen. Für eine bessere Abdeckung von Register-Paar-Adressierung-Modus nicht flüchtig registrieren, damit Aave, Bereiche am oberen Rand der LAN-Stack positioniert werden. Hier sind Beispiele, die einige der am effizientesten Prolog Sequenzen zu veranschaulichen. Aus Gründen der Übersichtlichkeit und besseren Ort des Caches aufweist die Reihenfolge der aufgerufenen gespeicherten Register speichern, in dem alle kanonischen Prologe "immer größer werdenden einrichten" Reihenfolge. `#framesz` unten können Sie die Größe des gesamten Stapels (außer ' Alloca-Bereich) darstellt. `#localsz` und `#outsz` LAN-Größe zu kennzeichnen (einschließlich des Speichervorgangs Bereich für die \<R29 entwickelt bei, Lr > Paar) und der Parametergröße bzw. ausgehende.
 
-1. Verkettet, #localsz \<= 512
+1. Chained, #localsz \<= 512
 
     ```asm
         stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -131,7 +131,7 @@ Für Funktionen der Frame verkettet kann das fp-Lr-Paar an beliebiger Position i
 
    Alle lokalen erfolgt basierend auf SP. \<R29 entwickelt bei > verweist auf den vorherigen Frame.
 
-1. Verkettet, #framesz \<= 512, #outsz = 0
+1. Chained, #framesz \<= 512, #outsz = 0
 
     ```asm
         stp    r29, lr, [sp, -#framesz]!    // pre-indexed, save <r29,lr>
@@ -187,7 +187,7 @@ Die .pdata-Datensätze sind ein geordnetes Array von Elementen mit fester Länge
 
 Jeder .pdata-Datensatz für ARM64 ist 8 Byte lang. Das allgemeine Format für jeden Datensatz stellen die 32-Bit-RVA der Funktion zu starten, in das erste Wort, gefolgt von einer Sekunde, enthält entweder einen Zeiger auf eine Variable Länge .xdata-Block oder ein gepacktes Wort, das eine Funktion (kanonisch) entladen Sequenz zu beschreiben.
 
-![.pdata-Datensatzlayout](../build/media/arm64-exception-handling-pdata-record.png ".pdata-Datensatz-Layout")
+![.pdata-Datensatzlayout](media/arm64-exception-handling-pdata-record.png ".pdata-Datensatz-Layout")
 
 Die Felder sind wie folgt aus:
 
@@ -203,7 +203,7 @@ Die Felder sind wie folgt aus:
 
 Wenn das gepackte Entladeformat nicht zur Beschreibung der Entladung einer Funktion ausreicht, muss ein .xdata-Datensatz mit variabler Länge erstellt werden. Die Adresse dieses Datensatzes wird im zweiten Wort des .pdata-Datensatzes gespeichert. Das Format von .xdata ist eine gepackte variabler Länge, die Gruppe von Wörtern an:
 
-![.XData-Datensatzlayout](../build/media/arm64-exception-handling-xdata-record.png ".xdata-Datensatz-Layout")
+![.XData-Datensatzlayout](media/arm64-exception-handling-xdata-record.png ".xdata-Datensatz-Layout")
 
 Diese Daten ist in vier Abschnitte unterteilt:
 
@@ -307,15 +307,15 @@ Gemäß der folgenden Tabelle werden die entladungscodes codiert wird. Alle entl
 |`end_c`|        11100101: Ende entladungscode im aktuellen verketteten Bereich. |
 |`save_next`|        11100110: Speichern des nächsten nicht flüchtigen Int oder FP registrieren Paar. |
 |`arithmetic(add)`|    11100111' 000zxxxx: Lr Cookie reg(z) hinzugefügt (0 = X28, 1 = sp); Hinzufügen von Lr, Lr, reg(z) |
-|`arithmetic(sub)`|    11100111' 001zxxxx: sub-Cookie reg(z) von Lr (0 = X28, 1 = sp); Sub-Lr "," Lr "," reg(z) |
+|`arithmetic(sub)`|    11100111'001zxxxx: sub cookie reg(z) from lr (0=x28, 1=sp); sub lr, lr, reg(z) |
 |`arithmetic(eor)`|    11100111' 010zxxxx: Eor Lr mit Cookie reg(z) (0 = X28, 1 = sp); Eor Lr, Lr, reg(z) |
 |`arithmetic(rol)`|    11100111' 0110xxxx: simulierten Rol von Lr mit Cookie Reg (x28); xip0 = Neg X28; Ror Lr, xip0 |
 |`arithmetic(ror)`|    11100111' 100zxxxx: Ror Lr mit Cookie reg(z) (0 = X28, 1 = sp); Ror Lr, Lr, reg(z) |
 | |            11100111: Xxxz---: – reserviert |
 | |              11101xxx: reserviert für benutzerdefinierte Stack folgenden Anwendungsfälle generiert nur für Asm-Routinen |
-| |              11101001: benutzerdefinierte Stack für MSFT_OP_TRAP_FRAME |
-| |              11101010: benutzerdefinierte Stack für MSFT_OP_MACHINE_FRAME |
-| |              11101011: benutzerdefinierte Stack für MSFT_OP_CONTEXT |
+| |              11101001: Benutzerdefinierte Stapel für MSFT_OP_TRAP_FRAME |
+| |              11101010: Benutzerdefinierte Stapel für MSFT_OP_MACHINE_FRAME |
+| |              11101011: Benutzerdefinierte Stapel für MSFT_OP_CONTEXT |
 | |              1111xxxx: reservierte |
 
 In Anweisungen mit großen Werten umfassen mehrere Bytes werden die höchstwertigen Bits zuerst gespeichert werden. Die oben genannten entladungscodes sind so entworfen, dass durch das erste Byte des Codes einfach überprüfen, kennen die Gesamtgröße in Bytes des entladungscodes möglich ist. Angesichts der Tatsache, dass jede entladungscode genau eine Anweisung in Prolog-und Epilogcode zugeordnet ist, um die Größe der Prolog oder Epilog berechnen muss erfolgen lediglich, ab dem Anfang der Sequenz durchlaufen, bis zum Ende, eine Nachschlagetabelle oder ähnliches Gerät verwenden, um zu bestimmen, wie lange der cor reagiert Opcode ist.
@@ -334,7 +334,7 @@ Für Funktionen, deren prologen und epilogen folgen, die die kanonische Form im 
 
 Das Format eines .pdata-Datensatzes mit gepackte Entladedaten Daten sieht wie folgt aus:
 
-![.pdata-Datensatz mit gepackte Entladedaten](../build/media/arm64-exception-handling-packed-unwind-data.png ".pdata-Datensatz mit gepackte Entladedaten")
+![.pdata-Datensatz mit gepackte Entladedaten](media/arm64-exception-handling-packed-unwind-data.png ".pdata-Datensatz mit gepackte Entladedaten")
 
 Die Felder sind wie folgt aus:
 
@@ -359,28 +359,28 @@ Kanonischen Prologe, die in Kategorien 1, 2 (ohne ausgehenden Eingabeaufforderun
 
 Dies ist Schritt 0: Führen Sie die erforderliche Berechnung der Größe der einzelnen Bereiche.
 
-Schritt 1: Speichern Sie Int aufgerufenen gespeicherten Register.
+Schritt 1: Int aufgerufenen gespeicherten Register zu speichern.
 
 Schritt 2: Dieser Schritt ist für Typ 4 in den frühen Abschnitten. LR wird am Ende der Int-Bereich gespeichert.
 
-Schritt 3: Speichern Sie FP aufgerufenen gespeicherten Register.
+Schritt 3: FP aufgerufenen gespeicherten Register zu speichern.
 
-Schritt 4: Speichern Sie input-Argumente in der private Bereich.
+Schritt 4: Speichern Sie im Bereich home input-Argumente.
 
-Schritt 5: Zuordnen der verbleibenden Stapel, einschließlich LAN, \<R29 entwickelt bei, Lr > Kopplung und der ausgehende Eingabeaufforderungsbereich für Parameter. 5a entspricht kanonischen Typs 1. 5 und 5c sind für kanonische Typ 2. 5D und 5e für beide Typ 3 und 4 geben.
+Schritt 5: Ordnen Sie die verbleibenden Stapel, einschließlich LAN, \<R29 entwickelt bei, Lr > Kopplung und der ausgehende Eingabeaufforderungsbereich für Parameter. 5a entspricht kanonischen Typs 1. 5 und 5c sind für kanonische Typ 2. 5D und 5e für beide Typ 3 und 4 geben.
 
 Schritt #|Flagwerte|Anzahl von Anweisungen|Opcode|Entladungscode
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
-1|0 < **regI** < = 10|RegI / 2 + **RegI** % 2|`stp r19,r20,[sp,#savsz]!`<br/>`stp r21,r22,[sp,16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
-2|**CR**== 01 *|1|`str lr,[sp, #intsz-8]`\*|`save_reg`
-3|0 < **RegF** < = 7|(RegF + 1) / 2 +<br/>(RegF + 1) % 2).|`stp d8,d9,[sp, #intsz]`\*\*<br/>`stp d10,d11,[sp, #intsz+16]`<br/>`...`<br/>`str d(8+RegF),[sp, #intsz+#fpsz-8]`|`save_fregp`<br/>`...`<br/>`save_freg`
+1|0 < **RegI** <= 10|RegI / 2 + **RegI** % 2|`stp r19,r20,[sp,#savsz]!`<br/>`stp r21,r22,[sp,16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
+2|**CR**==01*|1|`str lr,[sp, #intsz-8]`\*|`save_reg`
+3|0 < **RegF** <=7|(RegF + 1) / 2 +<br/>(RegF + 1) % 2).|`stp d8,d9,[sp, #intsz]`\*\*<br/>`stp d10,d11,[sp, #intsz+16]`<br/>`...`<br/>`str d(8+RegF),[sp, #intsz+#fpsz-8]`|`save_fregp`<br/>`...`<br/>`save_freg`
 4|**H** == 1|4|`stp r0,r1,[sp, #intsz+#fpsz]`<br/>`stp r2,r3,[sp, #intsz+#fpsz+16]`<br/>`stp r4,r5,[sp, #intsz+#fpsz+32]`<br/>`stp r6,r7,[sp, #intsz+#fpsz+48]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
-5a|**CR** == 11 & & #locsz<br/> < = 512|2|`stp r29,lr,[sp,-#locsz]!`<br/>`mov r29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
-5 b|**CR** == 11 &AMP; &AMP;<br/>512 < #locsz < = 4088|3|`sub sp,sp, #locsz`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5c|**CR** == 11 & & #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5D|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz < = 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
-5e|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
+5a|**CR** == 11 && #locsz<br/> <= 512|2|`stp r29,lr,[sp,-#locsz]!`<br/>`mov r29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
+5 b|**CR** == 11 &&<br/>512 < #locsz <= 4088|3|`sub sp,sp, #locsz`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5c|**CR** == 11 && #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5D|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz <= 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
+5e|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
 \* Wenn **CR** == 01 und **RegI** eine ungerade Zahl ist, Schritt2 und letzten Save_rep in Schritt 1 in einem Save_regp zusammengeführt werden.
 
@@ -531,7 +531,7 @@ Wenn ein Fragment keinen Prolog und keine Epilog hat, erfordert er dennoch einen
 
 ## <a name="examples"></a>Beispiele
 
-### <a name="example-1-frame-chained-compact-form"></a>Beispiel 1: Frame verkettet, Compact-Formular
+### <a name="example-1-frame-chained-compact-form"></a>Beispiel 1: Frame-verkettet, Compact-Formular
 
 ```asm
 |Foo|     PROC
@@ -549,7 +549,7 @@ Wenn ein Fragment keinen Prolog und keine Epilog hat, erfordert er dennoch einen
     ;Flags[SingleProEpi] functionLength[492] RegF[0] RegI[1] H[0] frameChainReturn[Chained] frameSize[2080]
 ```
 
-### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>Beispiel 2: Frame verkettet, Full Form mit Spiegelung Prolog und Epilog
+### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>Beispiel 2: Frame-verkettet, Full Form mit Spiegelung Prolog und Epilog
 
 ```asm
 |Bar|     PROC
@@ -583,7 +583,7 @@ Wenn ein Fragment keinen Prolog und keine Epilog hat, erfordert er dennoch einen
 
 Beachten Sie, dass die gleiche Sequenz von Prolog-entladungscodes EpilogStart Index [0] verweist.
 
-### <a name="example-3-variadic-unchained-function"></a>Beispiel 3: Variadic nicht die Funktion verkettet.
+### <a name="example-3-variadic-unchained-function"></a>Beispiel 3: Variadic nicht Funktion verkettet.
 
 ```asm
 |Delegate| PROC
@@ -622,9 +622,9 @@ Beachten Sie, dass die gleiche Sequenz von Prolog-entladungscodes EpilogStart In
     ;end
 ```
 
-Hinweis: EpilogStart Index [4] verweist, in die Mitte des Prolog-entladungscodes (teilweise Wiederverwendung Entladung Array).
+Hinweis: EpilogStart Index [4] verweist auf die Mitte der Prolog-entladungscodes (teilweise Wiederverwendung Entladung Array).
 
 ## <a name="see-also"></a>Siehe auch
 
 [Übersicht über die ARM64-ABI-Konventionen](arm64-windows-abi-conventions.md)<br/>
-[ARM-Ausnahmebehandlung](../build/arm-exception-handling.md)
+[ARM-Ausnahmebehandlung](arm-exception-handling.md)

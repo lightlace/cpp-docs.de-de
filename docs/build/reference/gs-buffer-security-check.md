@@ -14,12 +14,12 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - buffers [C++], avoiding overruns
 ms.assetid: 8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e
-ms.openlocfilehash: 6681ff09b846011af1b500f88a535c208d0bc1c1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 10afa874092eb563903ba5f49c6add136afc869c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417585"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820233"
 ---
 # <a name="gs-buffer-security-check"></a>/GS (Puffer-Sicherheitsüberprüfung)
 
@@ -96,7 +96,7 @@ Der Compiler erstellt keine Kopien verwundbarer Parameter, wenn folgende Bedingu
 
 - Funktionen enthalten keinen GS-Puffer.
 
-- Optimierungen ([/o-Optionen](../../build/reference/o-options-optimize-code.md)) sind nicht aktiviert.
+- Optimierungen ([/o-Optionen](o-options-optimize-code.md)) sind nicht aktiviert.
 
 - Funktionen verfügen über eine variable Argumentliste (...).
 
@@ -116,7 +116,7 @@ Auch wenn Sie **/GS**, versuchen immer, sicheren Code zu schreiben, der keine Pu
 
 1. In **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt, und klicken Sie dann auf **Eigenschaften**.
 
-   Weitere Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+   Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. In der **Eigenschaftenseiten** Dialogfeld klicken Sie auf die **C/C++-** Ordner.
 
@@ -157,5 +157,5 @@ int main() {
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)

@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, failure hooks
 ms.assetid: 12bb303b-ffe6-4471-bffe-9ef4f8bb2d30
-ms.openlocfilehash: 2cd691ed4514ac4073f90691ed731670fbd22477
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2fc22ae77d729868adbf8c37d40e450e35a8e866
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417943"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811991"
 ---
 # <a name="failure-hooks"></a>Fehlerhooks
 
-Der Fehlerhook aktiviert ist, auf die gleiche Weise wie die [Benachrichtigungshook](../../build/reference/notification-hooks.md). Der Hook routinemäßige muss einen geeigneten Wert zurück, sodass die Verarbeitung können weiterhin (HINSTANCE oder FARPROC) oder 0, um anzugeben, dass eine Ausnahme ausgelöst werden soll.
+Der Fehlerhook aktiviert ist, auf die gleiche Weise wie die [Benachrichtigungshook](notification-hooks.md). Der Hook routinemäßige muss einen geeigneten Wert zurück, sodass die Verarbeitung können weiterhin (HINSTANCE oder FARPROC) oder 0, um anzugeben, dass eine Ausnahme ausgelöst werden soll.
 
 Die Zeigervariable, die auf die benutzerdefinierte Funktion verweist ist:
 
@@ -39,4 +39,4 @@ Wenn die Benachrichtigung ist **DliFailGetProc**, kann die Hookfunktion zurückg
 
 ## <a name="see-also"></a>Siehe auch
 
-[Fehlerbehandlung und Benachrichtigung](../../build/reference/error-handling-and-notification.md)
+[Fehlerbehandlung und Benachrichtigung](error-handling-and-notification.md)

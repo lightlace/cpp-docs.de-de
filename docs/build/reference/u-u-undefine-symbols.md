@@ -13,12 +13,12 @@ helpviewer_keywords:
 - /U compiler option [C++]
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
-ms.openlocfilehash: 59522b462f2393dd3fd4d8afefe9cbbe0e519203
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bfc03ebd5c900bf8bf81b4a50eed02111baf85ee
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413042"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822485"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (Symboldefinitionen aufheben)
 
@@ -46,18 +46,18 @@ Standardmäßig definiert der Compiler die folgenden Microsoft-spezifische Symbo
 
 |Symbol|Funktion|
 |------------|--------------|
-|_CHAR_UNSIGNED|Standardzeichentyp ist vorzeichenlos. Definiert, wenn die [/j](../../build/reference/j-default-char-type-is-unsigned.md) angegeben wird.|
-|_CPPRTTI|Definiert für Code mit kompiliert die [/Gr](../../build/reference/gr-enable-run-time-type-information.md) Option.|
-|_CPPUNWIND|Definiert für Code mit kompiliert die [/EHsc](../../build/reference/eh-exception-handling-model.md) Option.|
-|_DLL|Definiert, wenn die [/MD](../../build/reference/md-mt-ld-use-run-time-library.md) angegeben wird.|
+|_CHAR_UNSIGNED|Standardzeichentyp ist vorzeichenlos. Definiert, wenn die [/j](j-default-char-type-is-unsigned.md) angegeben wird.|
+|_CPPRTTI|Definiert für Code mit kompiliert die [/Gr](gr-enable-run-time-type-information.md) Option.|
+|_CPPUNWIND|Definiert für Code mit kompiliert die [/EHsc](eh-exception-handling-model.md) Option.|
+|_DLL|Definiert, wenn die [/MD](md-mt-ld-use-run-time-library.md) angegeben wird.|
 |_M_IX86|Standardmäßig auf 600 für X86 definierte Ziele.|
 |_MSC_VER|Weitere Informationen finden Sie unter [Predefined Macros](../../preprocessor/predefined-macros.md).|
 |_WIN32|Für WIN32-Anwendungen definiert. Immer definiert.|
-|_MT|Definiert, wenn die [/MD oder/MT](../../build/reference/md-mt-ld-use-run-time-library.md) angegeben wird.|
+|_MT|Definiert, wenn die [/MD oder/MT](md-mt-ld-use-run-time-library.md) angegeben wird.|
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf den Ordner **C/C++** .
 
@@ -71,9 +71,9 @@ Standardmäßig definiert der Compiler die folgenden Microsoft-spezifische Symbo
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
-[/J (Standardzeichentyp ist „unsigned“)](../../build/reference/j-default-char-type-is-unsigned.md)<br/>
-[/GR (Laufzeittypinfo aktivieren)](../../build/reference/gr-enable-run-time-type-information.md)<br/>
-[/EH (Ausnahmebehandlungsmodell)](../../build/reference/eh-exception-handling-model.md)<br/>
-[/MD, /MT, /LD (Laufzeitbibliothek verwenden)](../../build/reference/md-mt-ld-use-run-time-library.md)
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)<br/>
+[/J (Standardzeichentyp ist „unsigned“)](j-default-char-type-is-unsigned.md)<br/>
+[/GR (Laufzeittypinfo aktivieren)](gr-enable-run-time-type-information.md)<br/>
+[/EH (Ausnahmebehandlungsmodell)](eh-exception-handling-model.md)<br/>
+[/MD, /MT, /LD (Laufzeitbibliothek verwenden)](md-mt-ld-use-run-time-library.md)

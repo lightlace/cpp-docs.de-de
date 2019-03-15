@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stack checking calls
 - Ge compiler option [C++]
 ms.assetid: 4b54deae-4e3c-4bfa-95f3-ba23590f7258
-ms.openlocfilehash: 34799529517e0263f71ce4f6f29537bf4b59056f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a785ec041370e0bcbb2ce8b698bfba89235a0a0c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415421"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812134"
 ---
 # <a name="ge-enable-stack-probes"></a>/Ge (Stapelüberprüfungen aktivieren)
 
@@ -31,15 +31,15 @@ Aktiviert stapelüberprüfungen für jeden Funktionsaufruf, der Speicher für lo
 
 ## <a name="remarks"></a>Hinweise
 
-Dieser Mechanismus ist nützlich, wenn Sie die Funktionalität des Prüfpunkts Stack neu schreiben. Es wird empfohlen, die Verwendung von [/GH (aktivieren _penter-Hookfunktion)](../../build/reference/gh-enable-penter-hook-function.md) statt die stapelüberprüfung umschreiben.
+Dieser Mechanismus ist nützlich, wenn Sie die Funktionalität des Prüfpunkts Stack neu schreiben. Es wird empfohlen, die Verwendung von [/GH (aktivieren _penter-Hookfunktion)](gh-enable-penter-hook-function.md) statt die stapelüberprüfung umschreiben.
 
-[/ GS (Steuerelement Stack überprüft Aufrufe)](../../build/reference/gs-control-stack-checking-calls.md) hat dieselbe Wirkung.
+[/ GS (Steuerelement Stack überprüft Aufrufe)](gs-control-stack-checking-calls.md) hat dieselbe Wirkung.
 
-**/ Ge** ist veraltet; in Visual Studio 2005 generiert der Compiler automatisch stapelüberprüfung. Eine Liste der Ersetzte Compileroptionen, finden Sie unter **veraltete und entfernte Compileroptionen** in [Compiler Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md).
+**/ Ge** ist veraltet; in Visual Studio 2005 generiert der Compiler automatisch stapelüberprüfung. Eine Liste der Ersetzte Compileroptionen, finden Sie unter **veraltete und entfernte Compileroptionen** in [Compiler Options Listed by Category](compiler-options-listed-by-category.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf den Ordner **C/C++** .
 
@@ -53,5 +53,5 @@ Dieser Mechanismus ist nützlich, wenn Sie die Funktionalität des Prüfpunkts S
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)

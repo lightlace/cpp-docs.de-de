@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -QIfist compiler option [C++]
 - /QIfist compiler option [C++]
 ms.assetid: 1afd32a5-f658-4b66-85f4-e0ce4cb955bd
-ms.openlocfilehash: 0b0dba0fec21b3c0ab03555ae90497f212ab6315
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7af88c91793688d23cf35177ae7a5250b04832a8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422207"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816593"
 ---
 # <a name="qifist-suppress-ftol"></a>/QIfist (_ftol unterdrücken)
 
@@ -42,16 +42,16 @@ Durch die `_ftol`-Funktion wird nicht nur ein Gleitkommatyp in einen ganzzahlige
 
 Sie können die [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) C Run-Time-Funktion, um das Rundungsverhalten der FPU ändern. Die Standardeinstellung der FPU ist "Runden auf die nächste Maschinenzahl". Mithilfe von **/QIfist** kann die Leistung Ihrer Anwendung, aber nicht ohne das Risiko erhöht. Die Teile des Codes, die Rundungsmodi, bevor der vertrauenden Seite, auf Code mit erstellt sind, sollten gründlich getestet **/QIfist** in produktionsumgebungen.
 
-[/ arch (x86)](../../build/reference/arch-x86.md) und **/QIfist** kann nicht in derselben Kompiliereinheit verwendet werden.
+[/ arch (x86)](arch-x86.md) und **/QIfist** kann nicht in derselben Kompiliereinheit verwendet werden.
 
 > [!NOTE]
 >  **/ QIfist** ist nicht wirksam standardmäßig, da die gerundeten bits auch das Gleitkomma auf Gleitkomma beeinflussen Punkt runden (Dies geschieht, nachdem jeder Berechnung), wenn Sie die Flags für die Rundung von C-Format (gegen Null) festlegen, die gleitkommaberechnungen Berechnungen können unterschiedlich sein. **/ QIfist** sollte nicht verwendet werden, wenn der Code auf das erwartete Verhalten des Bruchteils der Gleitkommazahl aufbaut. Wenn Sie nicht sicher sind, verwenden Sie keine **/QIfist**.
 
-Die **/QIfist** Option ist ab Visual Studio 2005 veraltet. Für den Compiler wurde die Geschwindigkeit der Konvertierung von Gleitkommatyp in ganzzahligen Typ deutlich erhöht. Eine Liste der Ersetzte Compileroptionen, finden Sie unter **veraltete und entfernte Compileroptionen** in [Compiler Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md).
+Die **/QIfist** Option ist ab Visual Studio 2005 veraltet. Für den Compiler wurde die Geschwindigkeit der Konvertierung von Gleitkommatyp in ganzzahligen Typ deutlich erhöht. Eine Liste der Ersetzte Compileroptionen, finden Sie unter **veraltete und entfernte Compileroptionen** in [Compiler Options Listed by Category](compiler-options-listed-by-category.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf den Ordner **C/C++** .
 
@@ -65,6 +65,6 @@ Die **/QIfist** Option ist ab Visual Studio 2005 veraltet. Für den Compiler wur
 
 ## <a name="see-also"></a>Siehe auch
 
-[/Q-Optionen (Vorgänge auf niedriger Ebene)](../../build/reference/q-options-low-level-operations.md)<br/>
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+[/Q-Optionen (Vorgänge auf niedriger Ebene)](q-options-low-level-operations.md)<br/>
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)
