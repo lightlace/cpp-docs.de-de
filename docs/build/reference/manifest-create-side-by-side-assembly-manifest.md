@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MANIFEST linker option
 - MANIFEST linker option
 ms.assetid: 98c52e1e-712c-4f49-b149-4d0a3501b600
-ms.openlocfilehash: 685d98d166a94f2c17feae7bfafbd64b77786e8d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9a3ca3980a9cdff4e67885b2ad47ffa2385b0774
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418775"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807818"
 ---
 # <a name="manifest-create-side-by-side-assembly-manifest"></a>/MANIFEST (Erstellen eines Manifests für eine parallele Assembly)
 
@@ -29,7 +29,7 @@ Die Standardeinstellung ist "/MANIFEST".
 
 Die /MANIFEST:EMBED-Option gibt an, dass der Linker die Manifestdatei im Image als Ressource vom Typ "RT_MANIFEST" einbetten soll. Der optionale `ID`-Parameter ist die Ressourcen-ID, die für das Manifest verwendet werden soll. Verwenden Sie den Wert 1 für eine ausführbare Datei. Verwenden Sie den Wert 2 für eine DLL, damit diese private Abhängigkeiten angeben kann. Wenn der `ID`-Parameter nicht angegeben wird, ist der Standardwert 2, wenn die /DLL-Option festgelegt wird; andernfalls ist der Standardwert 1.
 
-Ab Visual Studio 2008 enthalten Manifestdateien für ausführbare Dateien einen Abschnitt, der Informationen zur Benutzerkontensteuerung (UAC) angibt. Wenn Sie "/ manifest", aber keines von beiden angeben [/MANIFESTUAC](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md) noch [/DLL](../../build/reference/dll-build-a-dll.md), standardmäßige UAC-Fragment, das auf die UAC-Ebene-festgelegt ist *"asInvoker"* in das Manifest eingefügt wird. Weitere Informationen über UAC-Ebenen finden Sie unter [/MANIFESTUAC (bettet UAC-Informationen in Manifest)](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md).
+Ab Visual Studio 2008 enthalten Manifestdateien für ausführbare Dateien einen Abschnitt, der Informationen zur Benutzerkontensteuerung (UAC) angibt. Wenn Sie "/ manifest", aber keines von beiden angeben [/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md) noch [/DLL](dll-build-a-dll.md), standardmäßige UAC-Fragment, das auf die UAC-Ebene-festgelegt ist *"asInvoker"* in das Manifest eingefügt wird. Weitere Informationen über UAC-Ebenen finden Sie unter [/MANIFESTUAC (bettet UAC-Informationen in Manifest)](manifestuac-embeds-uac-information-in-manifest.md).
 
 Um das UAC-Standardverhalten zu ändern, führen Sie einen der folgenden Schritte aus:
 
@@ -37,13 +37,13 @@ Um das UAC-Standardverhalten zu ändern, führen Sie einen der folgenden Schritt
 
 - Oder geben Sie die /MANIFESTUAC:NO-Option an, wenn Sie im Manifest kein UAC-Fragment generieren möchten.
 
-Wenn Sie nicht "/ manifest" angeben, aber geben Sie [Linkerkommentar](../../build/reference/manifestdependency-specify-manifest-dependencies.md) Kommentare, wird eine Manifestdatei erstellt. Wenn Sie "/MANIFEST:NO" angeben, wird keine Manifestdatei erstellt.
+Wenn Sie nicht "/ manifest" angeben, aber geben Sie [Linkerkommentar](manifestdependency-specify-manifest-dependencies.md) Kommentare, wird eine Manifestdatei erstellt. Wenn Sie "/MANIFEST:NO" angeben, wird keine Manifestdatei erstellt.
 
 Wenn Sie "/MANIFEST" angeben, wird der Name der Manifestdatei aus dem Namen der Ausgabedatei und der Endung .MANIFEST zusammengesetzt. Wenn die Ausgabedatei beispielsweise "MyFile.exe" heißt, hat die Manifestdatei den Namen "MyFile.exe.manifest".  Wenn Sie/ManifestFile:*Namen*, der Name des Manifests ist angeben *Namen*.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Erweitern Sie den Knoten **Konfigurationseigenschaften**.
 
@@ -59,5 +59,5 @@ Wenn Sie "/MANIFEST" angeben, wird der Name der Manifestdatei aus dem Namen der 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)
+[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)

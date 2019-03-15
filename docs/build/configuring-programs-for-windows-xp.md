@@ -2,16 +2,16 @@
 title: Konfigurieren von Programmen für Windows XP
 ms.date: 02/02/2018
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 73fc66c358f2bfa390177557da2f114f225cec1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 989a4e2c7e91c05498902bf1c5cb9d838ee47c3b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582740"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814292"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Konfigurieren von Programmen für Windows XP
 
-Da Visual Studio mehrere Plattformtoolsets unterstützt, können Sie abzielen, Betriebssysteme und Laufzeitbibliotheken, die die vom Standardtoolset nicht unterstützt werden. Beispielsweise durch den Wechsel des Plattformtoolsets, können Sie die C ++ 11, C ++ 14 und C ++ 17-spracherweiterungen von Visual C++-Compiler in Visual Studio unterstützt werden zum Erstellen von apps, die auf Windows XP und Windows Server 2003 ausgerichtet. Sie können auch ältere Plattformtoolsets verwenden, um binärkompatiblen Legacycode zu verwalten und dennoch von den neuesten Features von Visual Studio-IDE profitieren.
+Da Visual Studio mehrere Plattformtoolsets unterstützt, können Sie abzielen, Betriebssysteme und Laufzeitbibliotheken, die die vom Standardtoolset nicht unterstützt werden. Beispielsweise durch den Wechsel des Plattformtoolsets, können Sie die C ++ 11, C ++ 14 und C ++ 17 sprachverbesserungen, die von der MSVC-Compiler in Visual Studio unterstützt werden zum Erstellen von apps, die auf Windows XP und Windows Server 2003 ausgerichtet. Sie können auch ältere Plattformtoolsets verwenden, um binärkompatiblen Legacycode zu verwalten und dennoch von den neuesten Features von Visual Studio-IDE profitieren.
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Installieren Sie das Windows XP-Plattformtoolset
 
@@ -65,6 +65,6 @@ Aufgrund von Unterschieden bei Plattform-und bibliotheksunterstützung ist die E
 
    Da der Grafikdebugger die Direct3D 9-API nicht unterstützt, kann es zum Debuggen von apps, die Direct3D unter Windows XP oder Windows Server 2003 verwenden verwendet werden. Wenn die App jedoch einen alternative Renderer implementiert, der die Direct3D 10- oder Direct3D 11-API verwendet, kann der Grafikdebugger verwendet werden, um Probleme mit der Verwendung dieser APIs zu diagnostizieren.
 
-- **Erstellen von HLSL**
+- **Building HLSL**
 
    Standardmäßig kompiliert das Windows XP-Toolset keine HLSL-Quellcodedateien. Zur Kompilierung von HLSL-Dateien laden Sie das June 2010 DirectX SDK herunter und installieren es und legen dann die VC-Verzeichnisse des Projekts so fest, dass es eingeschlossen ist. Weitere Informationen finden Sie unter der "DirectX-SDK registriert keine Include/Library-Pfade bei Visual Studio 2010" im Abschnitt der [June 2010 DirectX SDK-Downloadseite](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).

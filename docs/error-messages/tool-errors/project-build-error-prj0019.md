@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0019
 ms.assetid: 5390a62b-aacf-4bc8-b9d7-08f1e0233423
-ms.openlocfilehash: d99750efcfc400cc85a865ebd30a8c2a3da1d07e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e97d9488df0eeb666cb78354d0363c2a359a159d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620792"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808091"
 ---
 # <a name="project-build-error-prj0019"></a>Projektbuildfehler PRJ0019
 
@@ -21,6 +21,6 @@ Eine Fehlerstufe erreicht, die für einen benutzerdefinierten Buildschritt oder 
 
 Sie werden PRJ0019, wenn ein Tool einen Fehlercode aber keine Fehlermeldung zurückgegeben. Dies kann beispielsweise vorkommen, wenn Sie die Ausgabe von MIDL an NUL umleiten.
 
-Finden Sie unter [Problembehandlung benutzerdefinierter Buildschritte und Buildereignisse](../../ide/troubleshooting-build-customizations.md) für Weitere Informationen.
+Finden Sie unter [Problembehandlung benutzerdefinierter Buildschritte und Buildereignisse](../../build/troubleshooting-build-customizations.md) für Weitere Informationen.
 
 Dieser Fehler kann auch auftreten, wenn Sie als Mitglied der Gruppe der Benutzer ausgeführt werden, und administrativer Zugriff erforderlich ist. Weitere Informationen finden Sie unter [Ausführen als Mitglied der Gruppe Benutzer](../../security/running-as-a-member-of-the-users-group.md).

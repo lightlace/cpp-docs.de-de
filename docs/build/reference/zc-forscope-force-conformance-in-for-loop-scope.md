@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: 3031f02d-3b14-4ad0-869e-22b0110c3aed
-ms.openlocfilehash: b800bdcc36c82dabe13418244782e82737ad9171
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f98667d3a771994d1b4e54b429f42cb566c102c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502023"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810250"
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope (Übereinstimmung in for-Schleifenbereich erzwingen)
 
-Verwendet zum Implementieren von Standard-C++-Verhalten für [for](../../cpp/for-statement-cpp.md) -Schleifen mit Microsoft-Erweiterungen([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).
+Verwendet zum Implementieren von Standard-C++-Verhalten für [for](../../cpp/for-statement-cpp.md) -Schleifen mit Microsoft-Erweiterungen([/Ze](za-ze-disable-language-extensions.md)).
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,7 +28,7 @@ Verwendet zum Implementieren von Standard-C++-Verhalten für [for](../../cpp/for
 
 ## <a name="remarks"></a>Hinweise
 
-Standardverhalten bedeutet, den Initialisierer einer **for** -Schleife nach der **for** -Schleife den Gültigkeitsbereich verlassen zu lassen. Unter **/Zc:forScope-** und [/Ze](../../build/reference/za-ze-disable-language-extensions.md)bleibt der Initialisierer der **for** -Schleife im Gültigkeitsbereich, bis der lokale Gültigkeitsbereich endet.
+Standardverhalten bedeutet, den Initialisierer einer **for** -Schleife nach der **for** -Schleife den Gültigkeitsbereich verlassen zu lassen. Unter **/Zc:forScope-** und [/Ze](za-ze-disable-language-extensions.md)bleibt der Initialisierer der **for** -Schleife im Gültigkeitsbereich, bis der lokale Gültigkeitsbereich endet.
 
 Die **/Zc: forScope** Option ist standardmäßig aktiviert. **/ Zc: forScope** hat keine Auswirkungen, wenn die [/ PERMISSIVE--](permissive-standards-conformance.md) angegeben wird.
 
@@ -55,13 +55,13 @@ Wenn Sie **/Zc:forScope-** verwenden, wird die Warnmeldung C4288 (standardmäßi
 
 Sie können das Laufzeitverhalten von **/Zc:forScope** ändern, indem Sie das [conform](../../preprocessor/conform.md) -Pragma verwenden.
 
-Wenn Sie **/Zc:forScope-** in einem Projekt verwenden, für das es eine vorhandene PCH-Datei gibt, wird eine Warnung generiert, wird **/Zc:forScope-** ignoriert, und wird die Kompilierung mit der vorhandenen PCH-Dateien fortgesetzt. Wenn Sie eine neue PCH-Datei erstellen möchten, verwenden Sie ["/ Yc" (Erstellen vorkompilierter Headerdatei)](../../build/reference/yc-create-precompiled-header-file.md).
+Wenn Sie **/Zc:forScope-** in einem Projekt verwenden, für das es eine vorhandene PCH-Datei gibt, wird eine Warnung generiert, wird **/Zc:forScope-** ignoriert, und wird die Kompilierung mit der vorhandenen PCH-Dateien fortgesetzt. Wenn Sie eine neue PCH-Datei erstellen möchten, verwenden Sie ["/ Yc" (Erstellen vorkompilierter Headerdatei)](yc-create-precompiled-header-file.md).
 
 Weitere Informationen über Konformitätsprobleme in Visual C++ finden Sie unter [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **Sprache** Eigenschaftenseite.
 
@@ -73,5 +73,5 @@ Weitere Informationen über Konformitätsprobleme in Visual C++ finden Sie unter
 
 ## <a name="see-also"></a>Siehe auch
 
-[/Zc (Übereinstimmung)](../../build/reference/zc-conformance.md)<br/>
-[/Za, /Ze (Spracherweiterungen deaktivieren)](../../build/reference/za-ze-disable-language-extensions.md)<br/>
+[/Zc (Übereinstimmung)](zc-conformance.md)<br/>
+[/Za, /Ze (Spracherweiterungen deaktivieren)](za-ze-disable-language-extensions.md)<br/>

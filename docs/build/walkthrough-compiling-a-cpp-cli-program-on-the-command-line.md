@@ -1,22 +1,19 @@
 ---
-title: 'Exemplarische Vorgehensweise: Kompilieren eines C++/CLI-Programms in der Befehlszeile'
+title: 'Exemplarische Vorgehensweise: Kompilieren eines C++ / CLI-Programms in der Befehlszeile'
 ms.date: 09/24/2018
 ms.assetid: cef41c88-faf9-439d-8423-25aa3f5674dd
-ms.openlocfilehash: e8841600fd61aacfe5b942ac4a4305619dff7e90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c90d2c915db7264dc1b4e4807803e063c2a24fc7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451024"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811926"
 ---
-# <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Exemplarische Vorgehensweise: Kompilieren eines C++/CLI-Programms in der Befehlszeile
+# <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Exemplarische Vorgehensweise: Kompilieren eines C++ / CLI-Programms in der Befehlszeile
 
 Sie können Visual C++-Programme erstellen, die auf die Common Language Runtime (CLR) abzielen und .NET Framework verwenden, und diese in der Befehlszeile erstellen. Visual C++ unterstützt die the C++/CLI-Programmiersprache, die über zusätzliche Typen und Operatoren für das .NET-Programmiermodell verfügt. Allgemeine Informationen zu C++ / CLI-Sprache finden Sie unter [.NET-Programmierung mit C++ / CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
 
 In dieser exemplarischen Vorgehensweise verwenden Sie einen Texteditor zur Erstellung eines grundlegenden C++/CLI-Programms und kompilieren es dann auf der Befehlszeile. (Sie können Sie Ihr C++/CLI-Programm verwenden, statt das gezeigte einzugeben, oder Sie können ein C++/CLI-Codebeispiel aus einem anderen Hilfeartikel verwenden. Dieses Verfahren ist nützlich zum Erstellen und Testen von kleinen Modulen, die keine Benutzeroberflächenelemente verfügen.)
-
-> [!NOTE]
-> Sie können auch die Visual Studio IDE für die Kompilierung von C++/CLI-Programmen verwenden. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Kompilieren eines C++-Programms, die die CLR in Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md).
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
@@ -26,11 +23,11 @@ Sie kennen die Grundlagen der Programmiersprache C++.
 
 Die folgenden Schritte zeigen, wie Sie eine C++/CLI-Konsolenanwendung kompilieren, die .NET Framework-Klassen verwendet.
 
-Zur Aktivierung der Kompilierung für C++ / CLI, verwenden Sie die ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md) -Compileroption. Der Visual C++-Compiler generiert eine .exe-Datei, die MSIL-Code oder gemischten MSIL- oder nativen Code sowie Links zu den erforderlichen .NET-Framework-Bibliotheken enthält.
+Zur Aktivierung der Kompilierung für C++ / CLI, verwenden Sie die ["/ CLR"](reference/clr-common-language-runtime-compilation.md) -Compileroption. Der MSVC-Compiler generiert eine .exe-Datei, die MSIL-Code enthält, oder gemischten MSIL- oder systemeigenen Code, und Links zu den erforderlichen .NET Framework-Bibliotheken.
 
 ### <a name="to-compile-a-ccli-application-on-the-command-line"></a>So kompilieren Sie eine C++/CLI-Anwendung in der Befehlszeile
 
-1. Öffnen einer **Developer-Eingabeaufforderung** Fenster. Ausführliche Anweisungen finden Sie unter [, öffnen Sie ein Developer-Eingabeaufforderungsfenster](../build/building-on-the-command-line.md#developer_command_prompt).
+1. Öffnen einer **Developer-Eingabeaufforderung** Fenster. Ausführliche Anweisungen finden Sie unter [, öffnen Sie ein Developer-Eingabeaufforderungsfenster](building-on-the-command-line.md#developer_command_prompt).
 
    Administratoranmeldeinformationen sind möglicherweise erforderlich, um den Code abhängig vom Betriebssystem und der Konfiguration des Computers zu kompilieren. Führen Sie im Eingabeaufforderungsfenster als Administrator mit der rechten Maustaste das Kontextmenü für die Eingabeaufforderung zu öffnen, und wählen Sie dann **weitere** > **als Administrator ausführen**.
 
@@ -64,5 +61,5 @@ Zur Aktivierung der Kompilierung für C++ / CLI, verwenden Sie die ["/ CLR"](../
 ## <a name="see-also"></a>Siehe auch
 
 [C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)<br/>
-[Erstellen von C/C++-Programmen](../build/building-c-cpp-programs.md)<br/>
-[Compileroptionen](../build/reference/compiler-options.md)
+[Projekte und Buildsysteme](projects-and-build-systems-cpp.md)<br/>
+[MSVC-Compiler-Optionen](reference/compiler-options.md)

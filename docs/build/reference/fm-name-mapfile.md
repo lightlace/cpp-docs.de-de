@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Fm compiler option [C++]
 - /Fm compiler option [C++]
 ms.assetid: 8154448a-93a7-4546-8e4c-5c44d0aff45d
-ms.openlocfilehash: 9f6290d3dfa4aaadfc9247fd8453d378851328a1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: eebb1bc0c553dba1934aea75e2e63edc0f222fff
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418730"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815401"
 ---
 # <a name="fm-name-mapfile"></a>/Fm (Name der Zuordnungsdatei)
 
@@ -31,15 +31,15 @@ Weist den Linker erstellen eine Zuordnungsdatei mit der eine Liste der Segmente 
 
 Standardmäßig erhält die Map-Name der Basisname der entsprechenden C- oder C++-Quelldatei mit ein. Zuordnungs-Erweiterung.
 
-Angeben von **/FM** hat denselben Effekt, als ob Sie angegeben haben die [/Map (Zuordnungsdatei generieren)](../../build/reference/map-generate-mapfile.md) -Linkeroption.
+Angeben von **/FM** hat denselben Effekt, als ob Sie angegeben haben die [/Map (Zuordnungsdatei generieren)](map-generate-mapfile.md) -Linkeroption.
 
-Bei Angabe von [/c (Kompilieren ohne Verknüpfen)](../../build/reference/c-compile-without-linking.md) zu unterdrücken, verknüpfen, **/FM** hat keine Auswirkungen.
+Bei Angabe von [/c (Kompilieren ohne Verknüpfen)](c-compile-without-linking.md) zu unterdrücken, verknüpfen, **/FM** hat keine Auswirkungen.
 
 Globale Symbole in einer Zuordnungsdatei haben in der Regel eine oder mehrere führende Unterstriche, da der Compiler einen führenden Unterstrich Variablennamen hinzugefügt wird. Viele globale Symbole, die in der Map-Datei angezeigt werden, werden intern vom Compiler und die standard-Bibliotheken verwendet.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf den Ordner **C/C++** .
 
@@ -53,7 +53,7 @@ Globale Symbole in einer Zuordnungsdatei haben in der Regel eine oder mehrere f�
 
 ## <a name="see-also"></a>Siehe auch
 
-[Ausgabedatei (/F) Optionen](../../build/reference/output-file-f-options.md)<br/>
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
-[Festlegen des Pfadnamens](../../build/reference/specifying-the-pathname.md)
+[Ausgabedatei (/F) Optionen](output-file-f-options.md)<br/>
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)<br/>
+[Festlegen des Pfadnamens](specifying-the-pathname.md)

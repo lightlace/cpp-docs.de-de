@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /FI compiler option [C++]
 - preprocess header file compiler option [C++]
 ms.assetid: 07e79577-8152-4df9-a64c-aae08c603397
-ms.openlocfilehash: b91ca1ba6cc97157be0ab16fc18e065dc501d5fd
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2e85706a0266696b83fe1a1a6cdc45ba3399fc21
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422467"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809222"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI (Name der expliziten Includedatei)
 
@@ -35,7 +35,7 @@ Diese Option hat dieselbe Wirkung wie die Datei angeben, in doppelte Anführungs
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf den Ordner **C/C++** .
 
@@ -49,7 +49,7 @@ Diese Option hat dieselbe Wirkung wie die Datei angeben, in doppelte Anführungs
 
 ## <a name="see-also"></a>Siehe auch
 
-[Ausgabedatei (/F) Optionen](../../build/reference/output-file-f-options.md)<br/>
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
-[Festlegen des Pfadnamens](../../build/reference/specifying-the-pathname.md)
+[Ausgabedatei (/F) Optionen](output-file-f-options.md)<br/>
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)<br/>
+[Festlegen des Pfadnamens](specifying-the-pathname.md)

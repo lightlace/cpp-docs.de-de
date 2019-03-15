@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows API [C++], attaching MS-DOS stub program
 - -STUB linker option
 ms.assetid: 65221ffe-4f9a-4a14-ac69-3cfb79b40b5f
-ms.openlocfilehash: d349151654d9699bcf00aa3848798acb5104ba53
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7150d4ff8f35b00d96caa21fd5ea3754fec76030
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421544"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822404"
 ---
 # <a name="stub-ms-dos-stub-file-name"></a>/STUB (Name der MS-DOS-Stubdatei)
 
@@ -48,7 +48,7 @@ Beim Erstellen eines virtuellen Gerätetreibers *Filename* ermöglicht dem Benut
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf die **Linker** Ordner.
 
@@ -62,5 +62,5 @@ Beim Erstellen eines virtuellen Gerätetreibers *Filename* ermöglicht dem Benut
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)
+[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)

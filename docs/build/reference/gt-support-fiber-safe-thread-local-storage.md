@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -GT compiler option [C++]
 - fiber-safe static thread-local storage compiler option [C++]
 ms.assetid: 071fec79-c701-432b-9970-457344133159
-ms.openlocfilehash: 14d2f66401b7b7ed324b79b12b6de26c7ee450b2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 417ac00a446f773a424553e42478a4f0cf58efc6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420257"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822515"
 ---
 # <a name="gt-support-fiber-safe-thread-local-storage"></a>/GT (Fiber-sicheren lokalen Thread-Speicher unterstützen)
 
@@ -33,11 +33,11 @@ Unterstützt Fiber-Sicherheit für Daten, die mithilfe statischer lokaler Thread
 
 Daten, die mit deklariert `__declspec(thread)` durch ein Array von lokalen Threadspeicher (TLS) verwiesen wird. Das TLS-Array ist, ein Array von Adressen, die für die einzelnen Threads vom System verwaltet wird. Jede Adresse in dieses Array gibt den Speicherort der lokalen Thread-Speicher.
 
-Eine Fiber ist ein einfaches Objekt, das besteht aus einem Stapel und einem Registerkontext und kann in verschiedenen Threads geplant werden. Eine Fiber kann auf jedem Thread ausgeführt. Da eine Fiber ausgelagert abrufen kann und höher auf einen anderen Thread neu gestartet, die Adresse des TLS-Arrays muss nicht zwischengespeichert oder optimiert werden als eine allgemeine Teilausdruck auf ein Funktionsaufruf (finden Sie unter den [/Og (globale Optimierungen)](../../build/reference/og-global-optimizations.md) option Details). **/ Gt** wird verhindert, dass solche Optimierungen.
+Eine Fiber ist ein einfaches Objekt, das besteht aus einem Stapel und einem Registerkontext und kann in verschiedenen Threads geplant werden. Eine Fiber kann auf jedem Thread ausgeführt. Da eine Fiber ausgelagert abrufen kann und höher auf einen anderen Thread neu gestartet, die Adresse des TLS-Arrays muss nicht zwischengespeichert oder optimiert werden als eine allgemeine Teilausdruck auf ein Funktionsaufruf (finden Sie unter den [/Og (globale Optimierungen)](og-global-optimizations.md) option Details). **/ Gt** wird verhindert, dass solche Optimierungen.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf den Ordner **C/C++** .
 
@@ -51,5 +51,5 @@ Eine Fiber ist ein einfaches Objekt, das besteht aus einem Stapel und einem Regi
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)

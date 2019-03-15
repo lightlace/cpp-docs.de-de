@@ -10,12 +10,12 @@ helpviewer_keywords:
 - FU compiler option [C++]
 - /FU compiler option [C++]
 ms.assetid: 698f8603-457f-435a-baff-5ac9243d6ca1
-ms.openlocfilehash: 1a035be2080d9fe407799122f804668e0fc3ce76
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c47a45208ac5b5c7e0000516ed114c008feda7ca
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413159"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807514"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (Name der expliziten #using-Datei)
 
@@ -36,11 +36,11 @@ Der Schalter/fu dauert nur einen Dateinamen an. Um mehrere Dateien anzugeben, ve
 
 Wenn Sie C++ verwenden c++ / CLI und verweisen auf Metadaten mit den [Friend-Assemblys](../../dotnet/friend-assemblies-cpp.md) Funktion können keine **/FU**. Sie müssen die Metadaten im Code mithilfe von verweisen `#using`– zusammen mit den `[as friend]` Attribut. Friend-Assemblys werden nicht unterstützt, in Visual C++-komponentenerweiterungen C++ / CX.
 
-Informationen dazu, wie Sie eine Assembly oder ein Modul für die common Language Runtime (CLR) zu erstellen, finden Sie unter [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md). Informationen zur Verwendung für die Erstellung in C++ / CX, finden Sie unter [Erstellen von apps und Bibliotheken](../../cppcx/building-apps-and-libraries-c-cx.md).
+Informationen dazu, wie Sie eine Assembly oder ein Modul für die common Language Runtime (CLR) zu erstellen, finden Sie unter [/CLR (Common Language Runtime Compilation)](clr-common-language-runtime-compilation.md). Informationen zur Verwendung für die Erstellung in C++ / CX, finden Sie unter [Erstellen von apps und Bibliotheken](../../cppcx/building-apps-and-libraries-c-cx.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **erweitert** Eigenschaftenseite.
 
@@ -52,6 +52,6 @@ Informationen dazu, wie Sie eine Assembly oder ein Modul für die common Languag
 
 ## <a name="see-also"></a>Siehe auch
 
-[Ausgabedatei (/F) Optionen](../../build/reference/output-file-f-options.md)<br/>
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+[Ausgabedatei (/F) Optionen](output-file-f-options.md)<br/>
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)

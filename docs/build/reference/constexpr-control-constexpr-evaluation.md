@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -constexpr control constexpr evaluation [C++]
 - constexpr control constexpr evaluation [C++]
 ms.assetid: 76d56784-f5ad-401d-841d-09d1059e8b8c
-ms.openlocfilehash: 49a9566ec0725b63330af3a41afb871c3be3cc27
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 178acc548fb9c89dcfde104d2a12d85637440e28
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414649"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810184"
 ---
 # <a name="constexpr-control-constexpr-evaluation"></a>/ constexpr (Constexpr-Auswertung steuern)
 
@@ -54,5 +54,5 @@ Die **/constexpr** Optionen sind verfügbar ab der in Visual Studio 2015.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)

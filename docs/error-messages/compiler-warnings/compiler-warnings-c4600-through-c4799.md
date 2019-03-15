@@ -57,14 +57,13 @@ f1_keywords:
 - C4767
 - C4770
 - C4792
-- C4794
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
-ms.openlocfilehash: 02b679e3cfb91b09db381b014ba2f3d3d0e5b02a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4acc36fcf7508bdcfcc1bd936110df4c32c47ae2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553153"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810080"
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>Compilerwarnungen C4600 durch C4799
 
@@ -147,12 +146,12 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Compilerwarnung (Stufe 4) C4681|'Klasse': Co-Klasse gibt eine Standardschnittstelle, die eine Ereignisquelle ist keine|
 |Compilerwarnung (Stufe 4) C4682|'Parameter': kein direktionales Parameterattribut angegeben, Standardwert [in]|
 |[Compilerwarnung (Ebene 1) C4683](../../error-messages/compiler-warnings/compiler-warning-level-1-c4683.md)|'Funktion': Ereignisquelle hat einen "Out"-Parameter enthalten. Seien Sie vorsichtig, wenn mehrere Ereignishandler eine Hookfunktion erstellen|
-|[Compilerwarnung (Ebene 1) C4684](../../error-messages/compiler-warnings/compiler-warning-level-1-c4684.md)|'Attribut': Warnung!! Attribut kann zu Ungültiger codegenerierung führen: Verwenden Sie mit Vorsicht|
+|[Compilerwarnung (Ebene 1) C4684](../../error-messages/compiler-warnings/compiler-warning-level-1-c4684.md)|'attribute': WARNUNG!! Attribut kann zu Ungültiger codegenerierung führen: Verwenden Sie mit Vorsicht|
 |Compilerwarnung (Stufe 1) C4685|"> >" erwartet. ">>" wurde beim Verarbeiten der Vorlagenparameter gefunden|
-|[Compilerwarnung (Ebene 3) C4686](../../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)|„benutzerdefinierter Typ“: mögliche Verhaltensänderung, Änderung in der UDT gibt Aufrufkonvention zurück|
+|[Compilerwarnung (Ebene 3) C4686](../../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)|'benutzerdefinierter Typ': mögliche Verhaltensänderung, Änderung in der UDT gibt Aufrufkonvention zurück|
 |[Compilerwarnung C4687 (Fehler)](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|'Klasse': eine versiegelte abstrakte Klasse kann eine Schnittstelle "Schnittstelle" nicht implementieren|
 |[Compilerwarnung (Stufe 1) C4688](../../error-messages/compiler-warnings/compiler-warning-level-1-c4688.md)|"constraint": Die Einschränkungsliste enthält den privaten Assemblytyp "type".|
-|Compilerwarnung (Stufe 1) C4689|"%c": nicht unterstütztes Zeichen in #pragma Detect_mismatch; #pragma ignoriert|
+|Compilerwarnung (Stufe 1) C4689|'%c': unsupported character in #pragma detect_mismatch; #pragma ignored|
 |[Compilerwarnung (Stufe 4) C4690](../../error-messages/compiler-warnings/compiler-warning-level-4-c4690.md)|\[ Emitidl (Pop)]: mehr POP-als Push-Vorgänge|
 |[Compilerwarnung (Ebene 1) C4691](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md)|'Typ': Typ verwiesen wurde erwartet, in der nicht referenzierte Assembly "File", Typ, der in der aktuellen Übersetzungseinheit, die stattdessen verwendet|
 |[Compilerwarnung (Ebene 1) C4692](../../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)|'Funktion': Die Signatur des nicht privaten Members enthält den privaten systemeigenen Assemblytyp 'systemeigener_Typ'|
@@ -194,7 +193,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerwarnung (Ebene 1) C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|'Typ' hat eine unterschiedliche Größe in "Datei1" und "Datei2": Anzahl und die Anzahl der Bytes|
 |[Compilerwarnung (Ebene 1) C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|'Var' hat einen anderen Typ in "Datei1" und "Datei2": "Typ1" und "Typ2"|
 |[Compilerwarnung C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|flüchtiger Zugriff auf "*Ausdruck*" unterliegt/volatile:\<Iso&#124;ms > festlegen; in Betracht __iso_volatile_load/Store systeminterne Funktionen|
-|[Compilerwarnung (Ebene 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|Aufrufen von verwalteten "Entrypoint": verwalteter Code kann nicht ausgeführt werden, unter der Loadersperre, einschließlich des DLL-Einstiegspunkts und Aufrufen von DLL-Einstiegspunkt eingehen|
+|[Compilerwarnung (Ebene 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|Aufrufen von verwalteten "Entrypoint": Verwalteter Code kann nicht unter der Loadersperre, einschließlich des DLL-Einstiegspunkts und Aufrufen von DLL-Einstiegspunkt eingehen ausgeführt werden|
 |Compilerwarnung (Stufe 4) C4749|bedingt unterstützt: Offsetof auf nicht-standardmäßigen Layouttyp '*Typ*"|
 |Compilerwarnung (Stufe 1) C4750|'Bezeichner': Funktion mit „_alloca()“ „inline“ in einer Schleife|
 |Compilerwarnung (Stufe 4) C4751|/ arch: AVX gilt nicht für die Intel(R) Streaming SIMD Extensions, die in der Inline-ASM befinden.|

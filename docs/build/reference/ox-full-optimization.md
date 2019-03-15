@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Ox compiler option [C++]
 - -Ox compiler option [C++]
 ms.assetid: 3ad7c30b-c615-428c-b1d0-2e024f81c760
-ms.openlocfilehash: 9f93d67a24f254dff1604c11635c9fa2da7e4557
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e39905608087425fe5a445f4ef88434d73bb2ded
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414537"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811276"
 ---
 # <a name="ox-enable-most-speed-optimizations"></a>/ Ox (die meisten Geschwindigkeitsoptimierungen aktivieren)
 
@@ -28,35 +28,35 @@ Die **/Ox** -Compileroption ermöglicht es, eine Kombination verschiedener Optim
 
 ## <a name="remarks"></a>Hinweise
 
-Die **/Ox** Compiler-Option ermöglicht die **/o** Compileroptionen, Geschwindigkeit bevorzugen. Die **/Ox** Compileroption schließt nicht die zusätzlichen [/GF (Doppelte Zeichenfolgen beseitigen)](../../build/reference/gf-eliminate-duplicate-strings.md) und [/Gy (Funktionslevel-Linking aktivieren)](../../build/reference/gy-enable-function-level-linking.md) Optionen aktiviert, indem ["/ O1" oder "/ O2" (Größe minimieren, Geschwindigkeit maximieren)](../../build/reference/o1-o2-minimize-size-maximize-speed.md). Die zusätzlichen Optionen angewendet, indem **"/ O1"** und **"/ O2"** kann dazu führen, dass Zeiger auf Zeichenfolgen und Funktionen für die eine Zieladresse, was Debuggen beeinträchtigen kann und die strikte Konformität. Die **/Ox** Option ist eine einfache Möglichkeit zum Aktivieren von den meisten Optimierungen ohne **/GF** und **/Gy**. Weitere Informationen finden Sie unter der Beschreibung der Argumente der [/GF](../../build/reference/gf-eliminate-duplicate-strings.md) und [/Gy](../../build/reference/gy-enable-function-level-linking.md) Optionen.
+Die **/Ox** Compiler-Option ermöglicht die **/o** Compileroptionen, Geschwindigkeit bevorzugen. Die **/Ox** Compileroption schließt nicht die zusätzlichen [/GF (Doppelte Zeichenfolgen beseitigen)](gf-eliminate-duplicate-strings.md) und [/Gy (Funktionslevel-Linking aktivieren)](gy-enable-function-level-linking.md) Optionen aktiviert, indem ["/ O1" oder "/ O2" (Größe minimieren, Geschwindigkeit maximieren)](o1-o2-minimize-size-maximize-speed.md). Die zusätzlichen Optionen angewendet, indem **"/ O1"** und **"/ O2"** kann dazu führen, dass Zeiger auf Zeichenfolgen und Funktionen für die eine Zieladresse, was Debuggen beeinträchtigen kann und die strikte Konformität. Die **/Ox** Option ist eine einfache Möglichkeit zum Aktivieren von den meisten Optimierungen ohne **/GF** und **/Gy**. Weitere Informationen finden Sie unter der Beschreibung der Argumente der [/GF](gf-eliminate-duplicate-strings.md) und [/Gy](gy-enable-function-level-linking.md) Optionen.
 
 Die **/Ox** Compileroption ist identisch mit den folgenden Optionen zusammen:
 
-- [/ Ob (Inlinefunktionserweiterung)](../../build/reference/ob-inline-function-expansion.md), wobei die Option-Parameter 2 ist (**/Ob2**)
+- [/ Ob (Inlinefunktionserweiterung)](ob-inline-function-expansion.md), wobei die Option-Parameter 2 ist (**/Ob2**)
 
-- [/Og (Globale Optimierungen)](../../build/reference/og-global-optimizations.md)
+- [/Og (Globale Optimierungen)](og-global-optimizations.md)
 
-- [/Oi (Intrinsische Funktionen generieren)](../../build/reference/oi-generate-intrinsic-functions.md)
+- [/Oi (Intrinsische Funktionen generieren)](oi-generate-intrinsic-functions.md)
 
-- [/ Ot (schnellen Code bevorzugen)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)
+- [/ Ot (schnellen Code bevorzugen)](os-ot-favor-small-code-favor-fast-code.md)
 
-- [/ Oy (Framezeiger unterdrücken)](../../build/reference/oy-frame-pointer-omission.md)
+- [/ Oy (Framezeiger unterdrücken)](oy-frame-pointer-omission.md)
 
 **/ Ox** ist gegenseitig aus:
 
-- [/ O1 (Größe minimieren)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)
+- [/ O1 (Größe minimieren)](o1-o2-minimize-size-maximize-speed.md)
 
-- [/ O2 (Geschwindigkeit maximieren)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)
+- [/ O2 (Geschwindigkeit maximieren)](o1-o2-minimize-size-maximize-speed.md)
 
-- [/Od (Deaktivieren (Debuggen))](../../build/reference/od-disable-debug.md)
+- [/Od (Deaktivieren (Debuggen))](od-disable-debug.md)
 
-Können Sie die Verschiebung in Richtung der Geschwindigkeit der Abbrechen der **/Ox** Compileroption, wenn Sie angeben, **/Oxs**, welche kombiniert die **/Ox** Compileroption mit  [ /OS (so klein Code)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md). Die Kombination beider Optionen Codegröße kleinere.  Die **/Oxs** Option ist genau derselbe, als wenn **/Ox** **/OS** Wenn die Optionen in dieser Reihenfolge angezeigt werden.
+Können Sie die Verschiebung in Richtung der Geschwindigkeit der Abbrechen der **/Ox** Compileroption, wenn Sie angeben, **/Oxs**, welche kombiniert die **/Ox** Compileroption mit  [ /OS (so klein Code)](os-ot-favor-small-code-favor-fast-code.md). Die Kombination beider Optionen Codegröße kleinere.  Die **/Oxs** Option ist genau derselbe, als wenn **/Ox** **/OS** Wenn die Optionen in dieser Reihenfolge angezeigt werden.
 
-Um alle verfügbaren auf Dateiebene Optimierungen für Releasebuilds anzuwenden, die Sie angeben, sollten ["/ O2" (Geschwindigkeit maximieren)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) anstelle von **/Ox**, und [/O1 (Größe minimieren)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) stattdessen der **/Oxs**. Für noch mehr Optimierung in Version erstellt wurde, berücksichtigen Sie auch die [/GL (Whole Program Optimization)](../../build/reference/gl-whole-program-optimization.md) Compileroption und [/LTCG (Link-Time Code Generation)](../../build/reference/ltcg-link-time-code-generation.md) -Linkeroption.
+Um alle verfügbaren auf Dateiebene Optimierungen für Releasebuilds anzuwenden, die Sie angeben, sollten ["/ O2" (Geschwindigkeit maximieren)](o1-o2-minimize-size-maximize-speed.md) anstelle von **/Ox**, und [/O1 (Größe minimieren)](o1-o2-minimize-size-maximize-speed.md) stattdessen der **/Oxs**. Für noch mehr Optimierung in Version erstellt wurde, berücksichtigen Sie auch die [/GL (Whole Program Optimization)](gl-whole-program-optimization.md) Compileroption und [/LTCG (Link-Time Code Generation)](ltcg-link-time-code-generation.md) -Linkeroption.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie unter **Konfigurationseigenschaften**öffnen **C/C++-** und wählen Sie dann die **Optimierung** Eigenschaftenseite.
 
@@ -68,6 +68,6 @@ Um alle verfügbaren auf Dateiebene Optimierungen für Releasebuilds anzuwenden,
 
 ## <a name="see-also"></a>Siehe auch
 
-[/O-Optionen (Code optimieren)](../../build/reference/o-options-optimize-code.md)<br/>
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+[/O-Optionen (Code optimieren)](o-options-optimize-code.md)<br/>
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)

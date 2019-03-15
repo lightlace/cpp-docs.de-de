@@ -10,12 +10,12 @@ helpviewer_keywords:
 - delayimp.h
 - helper functions
 ms.assetid: 6279c12c-d908-4967-b0b3-cabfc3e91d3d
-ms.openlocfilehash: 955ae0ed8feac22da19eb13218e2332849477e29
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3ad193d0101507f43145c6af9f8e6200ab6fcdb5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421380"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817990"
 ---
 # <a name="understanding-the-helper-function"></a>Die Hilfsfunktion
 
@@ -53,16 +53,16 @@ Der Hilfscode standardmäßigen finden Sie in Delayhlp.cpp und Delayimp.h (in Vc
 
 Die folgenden Themen beschreiben die Hilfsfunktion:
 
-- [Änderungen an der Hilfsfunktion für das verzögerte Laden von DLLs seit Visual C++ 6.0](../../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)
+- [Änderungen an der Hilfsfunktion für das verzögerte Laden von DLLs seit Visual C++ 6.0](changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)
 
-- [Aufrufkonventionen, Parameter und Rückgabetyp](../../build/reference/calling-conventions-parameters-and-return-type.md)
+- [Aufrufkonventionen, Parameter und Rückgabetyp](calling-conventions-parameters-and-return-type.md)
 
-- [Struktur- und Konstantendefinitionen](../../build/reference/structure-and-constant-definitions.md)
+- [Struktur- und Konstantendefinitionen](structure-and-constant-definitions.md)
 
-- [Berechnen der erforderlichen Werte](../../build/reference/calculating-necessary-values.md)
+- [Berechnen der erforderlichen Werte](calculating-necessary-values.md)
 
-- [Entladen einer verzögert geladenen DLL](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)
+- [Entladen einer verzögert geladenen DLL](explicitly-unloading-a-delay-loaded-dll.md)
 
 ## <a name="see-also"></a>Siehe auch
 
-[Linkerunterstützung für verzögertes Laden von DLLs](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+[Linkerunterstützung für verzögertes Laden von DLLs](linker-support-for-delay-loaded-dlls.md)

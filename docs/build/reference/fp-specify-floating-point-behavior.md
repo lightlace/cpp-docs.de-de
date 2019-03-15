@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: c571bf104fd7e8f6a287c3dd35c444d904b4b7e8
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 616efc0980c6ddadfee078dbe7a382372c5636ec
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894093"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818166"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/ fp (Gleitkommaverhalten festlegen)
 
@@ -51,7 +51,7 @@ Klicken Sie unter **/fp: strict**, generiert der Compiler Code, der die Anwendun
 
 #### <a name="fast"></a>Schnelle
 
-Die **fast** Option ermöglicht dem Compiler, neu anordnen, kombinieren und vereinfachen von Gleitkommaoperationen um gleitkommacode für Geschwindigkeit und den Speicherplatz zu optimieren. Der Compiler möglicherweise weglassen Rundung am zuweisungsanweisungen, typenumwandlungen oder Funktionsaufrufe. Es kann neu anordnen Vorgänge oder durchführen algebraische Transformationen, z. B. durch Verwendung von assoziative und distributive Gesetze, auch wenn diese Transformationen zu Funktionsmember verschiedene Rundungsverhalten führen. Dank dieser erweiterten Optimierung, das Ergebnis des einige gleitkommaberechnungen unterscheiden sich möglicherweise von solchen, die in anderen **/fp** Optionen. Spezielle Werte (NaN, + unendlich, – unendlich,-0.0) möglicherweise nicht weitergegeben werden, oder Verhalten sich genau entsprechend dem IEEE-754-Standard. Gleitkomma Kontraktionen werden generiert, die unter **fast**. Der Compiler ist noch gebunden, von der zugrunde liegenden Architektur unter **fast**, und weitere Optimierungen zur Verfügung, durch die Verwendung von der [/arch](../../build/reference/arch-minimum-cpu-architecture.md) Option.
+Die **fast** Option ermöglicht dem Compiler, neu anordnen, kombinieren und vereinfachen von Gleitkommaoperationen um gleitkommacode für Geschwindigkeit und den Speicherplatz zu optimieren. Der Compiler möglicherweise weglassen Rundung am zuweisungsanweisungen, typenumwandlungen oder Funktionsaufrufe. Es kann neu anordnen Vorgänge oder durchführen algebraische Transformationen, z. B. durch Verwendung von assoziative und distributive Gesetze, auch wenn diese Transformationen zu Funktionsmember verschiedene Rundungsverhalten führen. Dank dieser erweiterten Optimierung, das Ergebnis des einige gleitkommaberechnungen unterscheiden sich möglicherweise von solchen, die in anderen **/fp** Optionen. Spezielle Werte (NaN, + unendlich, – unendlich,-0.0) möglicherweise nicht weitergegeben werden, oder Verhalten sich genau entsprechend dem IEEE-754-Standard. Gleitkomma Kontraktionen werden generiert, die unter **fast**. Der Compiler ist noch gebunden, von der zugrunde liegenden Architektur unter **fast**, und weitere Optimierungen zur Verfügung, durch die Verwendung von der [/arch](arch-minimum-cpu-architecture.md) Option.
 
 Klicken Sie unter **fast**, der Compiler generiert Code für die direkte Verwendung in der Standard-Gleitkomma-Umgebung ausgeführt und wird davon ausgegangen, dass die gleitkommaumgebung nicht zugegriffen oder zur Laufzeit geändert werden. Das heißt, nimmt es, dass der Code nicht durch Aufheben der Maskierung Gleitkommaausnahmen, lesen oder gleitkommastatus registriert schreiben oder Rundungsmodi zu ändern.
 
@@ -67,7 +67,7 @@ Beachten Sie, dass **/fp: mit Ausnahme von** aktiviert Gleitkommaausnahmen nicht
 
 Mehrere **/fp** -Optionen können in der gleichen Compiler-Befehlszeile angegeben werden. Nur einer der **/fp: strict**, **fast**, und **/fp: präzise** Optionen können zu einem Zeitpunkt gültig sein. Wenn mehr als eine der folgenden Optionen in der Befehlszeile angegeben wird, die höhere Option hat Vorrang vor, und der Compiler generiert eine Warnung. Die **/fp: strict** und **/fp: mit Ausnahme von** Optionen sind nicht kompatibel mit **"/ CLR"**.
 
-Die [/Za](../../build/reference/za-ze-disable-language-extensions.md) (ANSI-Kompatibilität) Option ist nicht kompatibel mit **/fp**.
+Die [/Za](za-ze-disable-language-extensions.md) (ANSI-Kompatibilität) Option ist nicht kompatibel mit **/fp**.
 
 ### <a name="using-pragmas-to-control-floating-point-behavior"></a>Mithilfe des Pragmas Steuerelement Gleitkomma-Verhalten
 
@@ -256,7 +256,7 @@ Klicken Sie unter **"/ O2"** **fast** der generierte Code vereinfacht, da alle T
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **Codegenerierung** Eigenschaftenseite.
 
@@ -268,6 +268,6 @@ Klicken Sie unter **"/ O2"** **fast** der generierte Code vereinfacht, da alle T
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](compiler-options.md)<br/>
-[Festlegen von Compileroptionen](setting-compiler-options.md)<br/>
-[Microsoft Visual C++-Gleitkommaoptimierung](floating-point-optimization.md)<br/>
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)<br/>
+[MSVC floating-Point-Optimierung](floating-point-optimization.md)<br/>

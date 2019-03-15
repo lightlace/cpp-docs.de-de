@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -PGD linker option
 - /PGD linker option
 ms.assetid: 9f312498-493b-461f-886f-92652257e443
-ms.openlocfilehash: 68d112c0a40289ba62e3fe5c37ae23f8f55f9209
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1d7c9fcb94a9351ce94b66e04b4bfc523248f4e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601291"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812199"
 ---
 # <a name="pgd-specify-database-for-profile-guided-optimizations"></a>/PGD (Angeben einer Datenbank für die profilgesteuerte Optimierungen)
 
@@ -20,7 +20,7 @@ ms.locfileid: "50601291"
 
 ## <a name="syntax"></a>Syntax
 
-> **/ PGD:**_Dateiname_
+> **/PGD:**_filename_
 
 ## <a name="argument"></a>Argument
 
@@ -29,19 +29,19 @@ Gibt den Namen der PGD-Datei, die zum Speichern von Informationen zum ausgeführ
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn es sich bei den veralteten [/LTCG: PGINSTRUMENT](../../build/reference/ltcg-link-time-code-generation.md) option können Sie **/PGD** einen nicht standardmäßigen Namen oder Speicherort für die PGD-Datei an. Wenn Sie keinen angeben **/PGD**, der Basisnamen für die PGD-Datei ist der Name der Ausgabedatei (.exe oder .dll) Basis identisch und wird im gleichen Verzeichnis aus dem auf der Link aufgerufen wurde erstellt.
+Wenn es sich bei den veralteten [/LTCG: PGINSTRUMENT](ltcg-link-time-code-generation.md) option können Sie **/PGD** einen nicht standardmäßigen Namen oder Speicherort für die PGD-Datei an. Wenn Sie keinen angeben **/PGD**, der Basisnamen für die PGD-Datei ist der Name der Ausgabedatei (.exe oder .dll) Basis identisch und wird im gleichen Verzeichnis aus dem auf der Link aufgerufen wurde erstellt.
 
 Wenn es sich bei den veralteten **/LTCG: PGOPTIMIZE** option können Sie die **/PGD** Option aus, um den Namen der PGD-Datei verwenden Sie zum Erstellen des optimierten Images angeben. Die *Filename* Argument sollte übereinstimmen. die *Filename* angegebenen **/LTCG: PGINSTRUMENT**.
 
-Weitere Informationen finden Sie unter [Profilgesteuerte Optimierung](../../build/reference/profile-guided-optimizations.md).
+Weitere Informationen finden Sie unter [Profile-Guided Optimizations](../profile-guided-optimizations.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **Optimierung** Eigenschaftenseite.
 
-1. Ändern der **Profilgesteuerte Datenbank** Eigenschaft. Wählen Sie **OK** zum Speichern der Änderungen.
+1. Ändern der **Profilgesteuerte Datenbank** Eigenschaft. Klicken Sie auf **OK**, um die Änderungen zu speichern.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest
 
@@ -49,5 +49,5 @@ Weitere Informationen finden Sie unter [Profilgesteuerte Optimierung](../../buil
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)<br/>
+[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)<br/>

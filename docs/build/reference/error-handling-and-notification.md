@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - error handling, and notification
 ms.assetid: b621cf60-d869-451a-b05e-dc86d78addaa
-ms.openlocfilehash: 7aae4d68b272a6c12233f283d4b263648062b7c1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 29fe46e15712609ec0c4f268749aaefed103117e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418944"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812940"
 ---
 # <a name="error-handling-and-notification"></a>Fehlerbehandlung und Benachrichtigung
 
 Weitere Informationen zu Fehlerbehandlung und Benachrichtigung zu erhalten, finden Sie unter [die Hilfsfunktion](understanding-the-helper-function.md).
 
-Weitere Informationen zu Hookfunktionen finden Sie unter [Struktur- und Konstantendefinitionen](../../build/reference/structure-and-constant-definitions.md).
+Weitere Informationen zu Hookfunktionen finden Sie unter [Struktur- und Konstantendefinitionen](structure-and-constant-definitions.md).
 
 Wenn Ihr Programm verzögert geladenen DLLs verwendet, müssen sie Laufzeitausnahmen da Fehler auftreten, während der Ausführung des Programms nicht behandelte Ausnahmen führen werden. Fehlerbehandlung besteht aus zwei Teilen:
 
@@ -27,12 +27,12 @@ Wenn alle, die für die Behandlung des Fehlers erforderlich ist, den Vorgang abz
 
 Die folgenden Themen wird erläutert, Fehlerbehandlung und Benachrichtigung:
 
-- [Benachrichtigungshooks](../../build/reference/notification-hooks.md)
+- [Benachrichtigungshooks](notification-hooks.md)
 
-- [Fehlerhooks](../../build/reference/failure-hooks.md)
+- [Fehlerhooks](failure-hooks.md)
 
-- [Ausnahmen](../../build/reference/exceptions-c-cpp.md)
+- [Ausnahmen](exceptions-c-cpp.md)
 
 ## <a name="see-also"></a>Siehe auch
 
-[Linkerunterstützung für verzögertes Laden von DLLs](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+[Linkerunterstützung für verzögertes Laden von DLLs](linker-support-for-delay-loaded-dlls.md)

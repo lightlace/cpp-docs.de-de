@@ -31,14 +31,13 @@ f1_keywords:
 - C4380
 - C4387
 - C4388
-- C4396
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-ms.openlocfilehash: 02340234fc504773a29b3d83ae606cd1eb4e09f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cca32973ead1d7d88e37c4745491c8d5f181e0b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455993"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810509"
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>Compilerwarnungs C4200 durch C4399
 
@@ -52,7 +51,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |-------------|-------------|
 |[Compilerwarnung (Ebenen 2 und 4) C4200](../../error-messages/compiler-warnings/compiler-warning-levels-2-and-4-c4200.md)|nicht dem Standard entsprechende Erweiterung: Null-Array in Struktur/Union|
 |[Compilerwarnung (Ebene 4) C4201](../../error-messages/compiler-warnings/compiler-warning-level-4-c4201.md)|nicht dem Standard entsprechende Erweiterung: namenlosen Struktur/Union|
-|[Compilerwarnung (Ebene 4) C4202](../../error-messages/compiler-warnings/compiler-warning-level-4-c4202.md)|nicht dem Standard entsprechende Erweiterung: "...": Prototypparameter in der Namensliste ist unzulässig|
+|[Compilerwarnung (Ebene 4) C4202](../../error-messages/compiler-warnings/compiler-warning-level-4-c4202.md)|nonstandard extension used: '...': prototype parameter in name list illegal|
 |Compilerwarnung C4203 generiert|nicht dem Standard entsprechende Erweiterung: union mit statischem Datenelement|
 |[Compilerwarnung (Ebene 4) C4204](../../error-messages/compiler-warnings/compiler-warning-level-4-c4204.md)|nicht dem Standard entsprechende Erweiterung: nicht konstanter aggregierter Initialisierer|
 |[Compilerwarnung (Ebene 4) C4205](../../error-messages/compiler-warnings/compiler-warning-level-4-c4205.md)|nicht dem Standard entsprechende Erweiterung: Deklaration einer statischen Funktion im Gültigkeitsbereich der Funktion|
@@ -104,7 +103,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerwarnung (Ebene 1) C4269](../../error-messages/compiler-warnings/compiler-warning-level-1-c4269.md)|"*Bezeichner*': 'const' Automatische Daten, die mit dem vom Compiler generierten Standardkonstruktor initialisiert, verursachen unzuverlässige Ergebnisse|
 |[Compilerwarnung (Ebene 1) C4272](../../error-messages/compiler-warnings/compiler-warning-level-1-c4272.md)|"*Funktion*": ist als __declspec(dllimport) markiert; systemeigene Aufrufkonvention muss angegeben werden, beim Importieren einer Funktion.|
 |[Compilerwarnung (Ebene 1) C4273](../../error-messages/compiler-warnings/compiler-warning-level-1-c4273.md)|"*Funktion*": inkonsistente Dll-Bindung|
-|Compilerwarnung (Stufe 1) C4274|#ident ignoriert. finden Sie in der Dokumentation zu #pragma Comment (Exestr, "String")|
+|Compilerwarnung (Stufe 1) C4274|#ident ignored; see documentation for #pragma comment(exestr, 'string')|
 |[Compilerwarnung (Ebene 2) C4275](../../error-messages/compiler-warnings/compiler-warning-level-2-c4275.md)|keine Dll-Schnittstelle '*Classkey*' '*Bezeichner1*'verwendet als Basis für die Dll-Schnittstelle'*Classkey*' '*Bezeichner2*"|
 |[Compilerwarnung (Ebene 1) C4276](../../error-messages/compiler-warnings/compiler-warning-level-1-c4276.md)|"*Funktion*': kein Prototyp gegeben; Annahme: keine Parameter|
 |Compilerwarnung (Stufe 1) C4277|importierte Element "*Classname*::*Member*" vorhanden ist, als Datenmember und Funktionsmember; Datenmember wird ignoriert|
@@ -175,7 +174,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerwarnung (Ebene 2) C4356](../../error-messages/compiler-warnings/compiler-warning-level-2-c4356.md)|"*Member*": statische Datenmember kann nicht über eine abgeleitete Klasse initialisiert werden|
 |[Compilerwarnung (Ebene 3) C4357](../../error-messages/compiler-warnings/compiler-warning-level-3-c4357.md)|ParamArray-Argument gefunden wird, in der formalen Argumentliste für Delegat '*Delegieren*"ignoriert beim Generieren von"*Funktion*"|
 |[Compilerwarnung (Ebene 1) C4358](../../error-messages/compiler-warnings/compiler-warning-level-1-c4358.md)|"*Operator*": Rückgabetyp von kombinierten Delegaten ist nicht "void"; der zurückgegebene Wert ist nicht definiert|
-|[Compilerwarnung (Ebene 3) C4359](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)|"*Typ*': ausrichtungsspezifizierer ist kleiner als die tatsächliche Ausrichtung ("*Ausrichtung*"), und werden ignoriert.|
+|[Compilerwarnung (Ebene 3) C4359](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)|"*Typ*": Ausrichtungsspezifizierer ist kleiner als die tatsächliche Ausrichtung ("*Ausrichtung*"), und werden ignoriert.|
 |Compilerwarnung (Stufe 2) C4362|"*Typ*': Ausrichtung, die mehr als 8 Bytes wird von der CLR nicht unterstützt|
 |[Compilerwarnung (Ebene 1) C4364](../../error-messages/compiler-warnings/compiler-warning-level-1-c4364.md)|#using für Assembly "*Assembly*"zuvor finden Sie unter"*Speicherort*' ('*Line_number*") ohne als\_Friend-Attribut; als\_Friend nicht angewendet|
 |[Compilerwarnung (Ebene 4) C4365](../../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md)|"*Ausdruck*': Konvertierung von '*type1*'to'*Typ2*", signed/unsigned-Konflikt|
@@ -192,7 +191,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerwarnung (Ebene 1) C4377](../../error-messages/compiler-warnings/compiler-warning-level-1-c4377.md)|systemeigene Typen sind standardmäßig privat. -d1PrivateNativeTypes ist veraltet.|
 |[Compilerwarnung (Ebene 1) C4378](../../error-messages/compiler-warnings/compiler-warning-level-1-c4378.md)|Sie benötigen Funktionszeiger zum Ausführen von Initialisierungen; ModuleHandle:: ResolveMethodHandle|
 |[Compilerwarnung (Ebene 1) C4379](../../error-messages/compiler-warnings/compiler-warning-level-1-c4379.md)|Version "*Version_number*" von der common Language Runtime nicht von diesem Compiler unterstützt wird. Mit dieser Version kann zu unerwarteten Ergebnissen führen|
-|Compilerwarnung (Ebene 1, Fehler) C4380|"*Klasse*": ein Standardkonstruktor kann nicht als veraltet markiert|
+|Compilerwarnung (Ebene 1, Fehler) C4380|"*Klasse*": Ein Standardkonstruktor kann nicht als veraltet markiert|
 |[Compilerwarnung (Ebene 1) C4381](../../error-messages/compiler-warnings/compiler-warning-level-1-c4381.md)|"*function1*": Schnittstellenmethode wird von nicht öffentlichen Methode nicht implementiert '*Funktion2*"|
 |[Compilerwarnung (Ebene 1) C4382](../../error-messages/compiler-warnings/compiler-warning-level-1-c4382.md)|Auslösen von "*Typ*": ein Typ mit __clrcall-Destruktor oder Kopierkonstruktor kann nur in "/ CLR" abgefangen werden: pure-Modul|
 |[Compilerwarnung (Ebene 1) C4383](../../error-messages/compiler-warnings/compiler-warning-level-1-c4383.md)|"*Instanzendereferenzierungsoperator*': die Bedeutung der Dereferenzierung eines Handles kann sich ändern, wenn ein benutzerdefinierter Operator '*Instanzendereferenzierungsoperator*'-Operator vorhanden ist; schreiben Sie den Operator als statisch Funktion, damit der Operand explizit|

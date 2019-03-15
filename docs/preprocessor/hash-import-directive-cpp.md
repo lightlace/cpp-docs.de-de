@@ -12,12 +12,12 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: 8029adfd5b4f27e097df693c85ee0d711a13dc4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7dc30d3e5869e9b0f534a4769d4517a0514c144
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612367"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822625"
 ---
 # <a name="import-directive-c"></a>#import-Anweisung (C++)
 
@@ -72,7 +72,7 @@ Eine oder mehrere [#import-Attribute](#_predir_the_23import_directive_import_att
 #import "..\drawctl\drawctl.tlb" no_namespace, raw_interfaces_only
 ```
 
-\-oder:
+\- oder -
 
 ```cpp
 #import "..\drawctl\drawctl.tlb" no_namespace raw_interfaces_only
@@ -121,16 +121,16 @@ Die folgenden compileroptimierungen sind in der **#import** Richtlinie:
 
 - Wenn **#import** wird verarbeitet, der Compiler überprüft zuerst, ob der Header vorhanden ist und auf dem neuesten Stand ist. Wenn ja, muss er nicht neu erstellt werden.
 
-Die **#import** Richtlinie auch minimalen Neuerstellung beteiligt und in eine vorkompilierte Headerdatei eingefügt werden können. Finden Sie unter [Erstellen vorkompilierter Headerdateien](../build/reference/creating-precompiled-header-files.md) für Weitere Informationen.
+Die **#import** Richtlinie auch minimalen Neuerstellung beteiligt und in eine vorkompilierte Headerdatei eingefügt werden können. Finden Sie unter [Erstellen vorkompilierter Headerdateien](../build/creating-precompiled-header-files.md) für Weitere Informationen.
 
 ###  <a name="_predir_the_primary_type_library_header_file"></a> Primäre Typbibliotheks-Headerdatei
 Die primäre Headerdatei der Typbibliothek umfasst sieben Abschnitte:
 
-- Textbaustein für Überschrift: Besteht aus Kommentaren, der `#include`-Anweisung für COMDEF.H (das mehrere Standardmakros definiert, die im Header verwendet werden) und weiteren verschiedenen Setupinformationen.
+- Textbaustein für Überschrift: Besteht aus Kommentaren, `#include` -Anweisung für COMDEF. H (der Standardmakros verwendet in der Kopfzeile definiert), und weiteren verschiedenen Setupinformationen.
 
-- Vorwärtsverweise und Typdefinitionen: Bestehen aus Strukturdeklarationen wie `struct IMyInterface` und Typdefinitionen.
+- Vorwärtsverweise und Typdefinitionen: Bestehen aus Strukturdeklarationen wie z. B. `struct IMyInterface` Vorlagen und Typdefinitionen.
 
-- Deklarationen für intelligente Zeiger: die Vorlagenklasse `_com_ptr_t` ist eine Implementierung des intelligenten Zeigers, die Schnittstellenzeiger kapselt und entfällt die Notwendigkeit, rufen Sie `AddRef`, `Release`, `QueryInterface` Funktionen. Darüber hinaus blendet es den `CoCreateInstance`-Aufruf aus, wenn ein neues COM-Objekt erstellt wird. In diesem Abschnitt wird die makroanweisung `_COM_SMARTPTR_TYPEDEF` herstellen Typdefinitionen von COM-Schnittstellen für die vorlagenspezialisierungen der werden die [_com_ptr_t](../cpp/com-ptr-t-class.md) Vorlagenklasse. Z. B. für Schnittstelle `IMyInterface`,. TLH-Datei enthält Folgendes:
+- Intelligenter Zeiger-Deklarationen: Die Vorlagenklasse `_com_ptr_t` ist eine Implementierung des intelligenten Zeigers, die Schnittstellenzeiger kapselt und entfällt die Notwendigkeit, rufen Sie `AddRef`, `Release`, `QueryInterface` Funktionen. Darüber hinaus blendet es den `CoCreateInstance`-Aufruf aus, wenn ein neues COM-Objekt erstellt wird. In diesem Abschnitt wird die makroanweisung `_COM_SMARTPTR_TYPEDEF` herstellen Typdefinitionen von COM-Schnittstellen für die vorlagenspezialisierungen der werden die [_com_ptr_t](../cpp/com-ptr-t-class.md) Vorlagenklasse. Z. B. für Schnittstelle `IMyInterface`,. TLH-Datei enthält Folgendes:
 
     ```TLH
     _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
@@ -144,13 +144,13 @@ Die primäre Headerdatei der Typbibliothek umfasst sieben Abschnitte:
 
    Typ `IMyInterfacePtr` kann dann anstelle des nicht formatierten Schnittstellenzeigers `IMyInterface*` verwendet werden. Daher besteht keine Notwendigkeit zum Aufrufen der verschiedenen `IUnknown` Memberfunktionen
 
-- Typinformationsdeklarationen: bestehen hauptsächlich aus Klassendefinitionen und anderen Elemente verfügbar machen die einzelnen Typeinfo-Elemente, die vom `ITypeLib:GetTypeInfo`. In diesem Abschnitt wird jede Typinformation aus der Typbibliothek im Header in einem Format wiedergegeben, das von den `TYPEKIND`-Informationen abhängt.
+- Typinformationsdeklarationen: Bestehen hauptsächlich aus Klassendefinitionen und anderen Elemente verfügbar machen die einzelnen Typeinfo-Elemente, die vom `ITypeLib:GetTypeInfo`. In diesem Abschnitt wird jede Typinformation aus der Typbibliothek im Header in einem Format wiedergegeben, das von den `TYPEKIND`-Informationen abhängt.
 
-- Definition der optionalen GUID im alten Format: Enthält Initialisierungen der benannten GUID-Konstanten. Hierbei handelt es sich um Namen im Format `CLSID_CoClass` und `IID_Interface`, vergleichbar mit denen vom MIDL-Compiler generiert.
+- Optionale alten GUID-Definition: Enthält Initialisierungen der benannten GUID-Konstanten. Hierbei handelt es sich um Namen im Format `CLSID_CoClass` und `IID_Interface`, vergleichbar mit denen vom MIDL-Compiler generiert.
 
 - `#include`-Anweisung für den sekundären Header der Typbibliothek.
 
-- Textbaustein für Footer: Schließt aktuell `#pragma pack(pop)` ein.
+- Textbaustein für Footer: Derzeit enthält `#pragma pack(pop)`.
 
 Alle Bereiche, außer den Codebausteinen und Fußzeile Codebausteine Kopfzeilenbereich, in einem Namespace eingeschlossen sind, mit dem Namen gemäß der `library` -Anweisung in der ursprünglichen IDL-Datei. Sie können die Namen des Typbibliotheksheaders entweder über eine explizite Qualifizierung mit dem Namespacenamen verwenden oder indem Sie die Anweisung
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /Fe compiler option [C++]
 - Fe compiler option [C++]
 ms.assetid: 49f594fd-5e94-45fe-a1bf-7c9f2abb6437
-ms.openlocfilehash: cac4dc0908c86574ef5b57c4436f734f94c0bb49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5901ef1997cfea84c97b6d91b30335ff7dbc1d9f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473410"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818049"
 ---
 # <a name="fe-name-exe-file"></a>/Fe (Name der EXE-Datei)
 
@@ -23,11 +23,11 @@ Gibt einen Namen und ein Verzeichnis für die .exe-Datei oder DLL, die vom Compi
 
 ## <a name="syntax"></a>Syntax
 
-> **/ FE**[_Pfadnamen_] **/FE:** _Pfadname_
+> **/Fe**[_pathname_] **/Fe:** _pathname_
 
 ### <a name="arguments"></a>Argumente
 
-*Pfadname*<br/>
+*pathname*<br/>
 Der relativer oder absoluter Pfad und ein Basisdateiname oder ein relativer oder absoluter Pfad zu einem Verzeichnis oder den Basisdateinamen für die generierte ausführbare Datei verwenden.
 
 ## <a name="remarks"></a>Hinweise
@@ -40,11 +40,11 @@ Bei Angabe der [/c (Kompilieren ohne Verknüpfen)](c-compile-without-linking.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Öffnen der **Konfigurationseigenschaften** > **Linker** > **allgemeine** Eigenschaftenseite.
 
-1. Ändern der **Ausgabedatei** Eigenschaft. Wählen Sie **OK** zum Speichern der Änderungen.
+1. Ändern der **Ausgabedatei** Eigenschaft. Klicken Sie auf **OK**, um die Änderungen zu speichern.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
 
@@ -68,7 +68,7 @@ CL /FeC:\BIN\ *.C
 
 ## <a name="see-also"></a>Siehe auch
 
-[Ausgabedatei (/F) Optionen](../../build/reference/output-file-f-options.md)<br/>
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
-[Festlegen des Pfadnamens](../../build/reference/specifying-the-pathname.md)<br/>
+[Ausgabedatei (/F) Optionen](output-file-f-options.md)<br/>
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)<br/>
+[Festlegen des Pfadnamens](specifying-the-pathname.md)<br/>

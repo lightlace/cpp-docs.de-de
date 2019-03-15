@@ -29,18 +29,18 @@ helpviewer_keywords:
 - extensions
 - compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
-ms.openlocfilehash: b4025413fcf6389249fc011da020c0cd7c6f4519
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dab8ac23be8b66ca84c57514c6c04e94dddebaae
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447436"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813889"
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>Microsoft-Erweiterungen für C und C++
 
 Visual C++ erweitert die ANSI C- und ANSI C++ Standards wie folgt.
 
-## <a name="keywords"></a>Stichwörter
+## <a name="keywords"></a>Schlüsselwörter
 
 Es werden mehrere Schlüsselwörter hinzugefügt. In der Liste im [Schlüsselwörter](../../cpp/keywords-cpp.md), die Schlüsselwörter, die zwei führenden unterstrichen sind, Visual C++-Erweiterungen.
 
@@ -278,7 +278,7 @@ Klicken Sie unter **/Ze**, müssen Sie iso646.h einschließen, wenn Sie die Text
 
 - &#124;&#124;(oder)
 
-- &#124;= (Or_eq)
+- &#124;= (or_eq)
 
 - ^ (xor)
 
@@ -300,6 +300,6 @@ int main()
 
 ## <a name="see-also"></a>Siehe auch
 
-- [/Za, /Ze (Spracherweiterungen deaktivieren)](../../build/reference/za-ze-disable-language-extensions.md)
-- [Compileroptionen](../../build/reference/compiler-options.md)
-- [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+- [/Za, /Ze (Spracherweiterungen deaktivieren)](za-ze-disable-language-extensions.md)
+- [MSVC-Compiler-Optionen](compiler-options.md)
+- [MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - at sign symbol for base address
 ms.assetid: 00b9f6fe-0bd2-4772-a69c-7365eb199069
-ms.openlocfilehash: 87fdceea4ac71fe4bf0a53d7ae8e473bc97a01d7
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: dc6380903af0be2e6696ca3589813c249f71dd05
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416747"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812277"
 ---
 # <a name="base-base-address"></a>/BASE (Basisadresse)
 
@@ -38,9 +38,9 @@ Gibt die Basisadresse für ein Programm an.
 ## <a name="remarks"></a>Hinweise
 
 > [!NOTE]
-> Aus Sicherheitsgründen empfiehlt Microsoft Sie verwenden die [/DynamicBase](../../build/reference/dynamicbase-use-address-space-layout-randomization.md) Option anstelle von Basisadressen für Ihre ausführbaren Dateien. Dadurch wird ein ausführbares Image, das nach dem Zufallsprinzip zur Ladezeit ein REBASE ausgeführt werden kann mithilfe der Address Space Layout Randomization (ASLR)-Funktion von Windows generiert. Der/DynamicBase-Option ist standardmäßig aktiviert.
+> Aus Sicherheitsgründen empfiehlt Microsoft Sie verwenden die [/DynamicBase](dynamicbase-use-address-space-layout-randomization.md) Option anstelle von Basisadressen für Ihre ausführbaren Dateien. Dadurch wird ein ausführbares Image, das nach dem Zufallsprinzip zur Ladezeit ein REBASE ausgeführt werden kann mithilfe der Address Space Layout Randomization (ASLR)-Funktion von Windows generiert. Der/DynamicBase-Option ist standardmäßig aktiviert.
 
-Der/BASE-Option legt eine Basisadresse für das Programm, das Überschreiben des Standardspeicherort für eine .exe oder DLL-Datei fest. Die Standard-Basisadresse für eine .exe-Datei ist 0 x 400000 für 32-Bit-Images oder 0x140000000 für 64-Bit-Images. Für eine DLL ist die Standard-Basisadresse 0 x 10000000 für 32-Bit-Images oder 0x180000000 für 64-Bit-Images. Bei Betriebssystemen, die Adresse Space Layout Randomization (ASLR) nicht unterstützen, oder die /DYNAMICBASE:NO-Option wurde festgelegt, wenn, versucht das Betriebssystem zuerst, um ein Programm an seine angegebene oder die Standard-Basisadresse zu laden. Wenn Sie über genügend Speicherplatz vorhanden nicht verfügbar ist, verschiebt das System das Programm. Verwenden, um zu verhindern, dass die Verschiebung der [/FIXED](../../build/reference/fixed-fixed-base-address.md) Option.
+Der/BASE-Option legt eine Basisadresse für das Programm, das Überschreiben des Standardspeicherort für eine .exe oder DLL-Datei fest. Die Standard-Basisadresse für eine .exe-Datei ist 0 x 400000 für 32-Bit-Images oder 0x140000000 für 64-Bit-Images. Für eine DLL ist die Standard-Basisadresse 0 x 10000000 für 32-Bit-Images oder 0x180000000 für 64-Bit-Images. Bei Betriebssystemen, die Adresse Space Layout Randomization (ASLR) nicht unterstützen, oder die /DYNAMICBASE:NO-Option wurde festgelegt, wenn, versucht das Betriebssystem zuerst, um ein Programm an seine angegebene oder die Standard-Basisadresse zu laden. Wenn Sie über genügend Speicherplatz vorhanden nicht verfügbar ist, verschiebt das System das Programm. Verwenden, um zu verhindern, dass die Verschiebung der [/FIXED](fixed-fixed-base-address.md) Option.
 
 Der Linker gibt einen Fehler aus, wenn *Adresse* ist kein Vielfaches von 64 KB. Sie können optional auch die Größe des Programms angeben. der Linker gibt eine Warnung aus, wenn die Anwendung nicht in der Größe passen, die Sie angegeben haben.
 
@@ -62,11 +62,11 @@ Wenn die Datei, die folgenden Zeilen enthält DLLS.txt aufgerufen wird, werden d
 link dlltwo.obj /dll /base:@dlls.txt,two
 ```
 
-Eine weitere Möglichkeit zum Festlegen der Basisadresse ist die Verwendung der *Basis* -Argument in einem [Namen](../../build/reference/name-c-cpp.md) oder [Bibliothek](../../build/reference/library.md) Anweisung. Der/Base und [/DLL](../../build/reference/dll-build-a-dll.md) Optionen zusammen entsprechen den **Bibliothek** Anweisung.
+Eine weitere Möglichkeit zum Festlegen der Basisadresse ist die Verwendung der *Basis* -Argument in einem [Namen](name-c-cpp.md) oder [Bibliothek](library.md) Anweisung. Der/Base und [/DLL](dll-build-a-dll.md) Optionen zusammen entsprechen den **Bibliothek** Anweisung.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **erweitert** Eigenschaftenseite.
 
@@ -78,5 +78,5 @@ Eine weitere Möglichkeit zum Festlegen der Basisadresse ist die Verwendung der 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)
+[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)

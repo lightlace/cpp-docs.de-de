@@ -1,31 +1,50 @@
 ---
-title: Kompilieren eines C/C++-Programms
-ms.date: 11/04/2016
+title: MSVC C-/C++ compilerreferenz – Visual Studio
+description: MSVC-Compiler-Toolset-Optionen.
+ms.date: 12/10/2018
 helpviewer_keywords:
 - cl.exe compiler
 - cl.exe compiler, setting options
 ms.assetid: f3eef5ab-d0be-4fb2-90f9-927e6ed58736
-ms.openlocfilehash: 3e3767739c1f08403829c7e9840b51c0b5a19c79
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2269ba69cea2702ff190c791eb6753acb3619f7d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414511"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810301"
 ---
-# <a name="compiling-a-cc-program"></a>Kompilieren eines C/C++-Programms
+# <a name="compiling-a-cc-project"></a>Kompilieren eines C/C++-Projekts
 
-Informationen zur Verwendung des Compilers finden Sie in den folgenden Abschnitten:
+C- und C++-Compileroptionen können entweder in Visual Studio-IDE oder über die Befehlszeile festgelegt werden. 
 
-- [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+## <a name="in-visual-studio"></a>In Visual Studio
 
-- [Compileroptionen](../../build/reference/compiler-options.md)
+Sie können Compileroptionen für jedes Projekt in der Visual Studio festlegen **Eigenschaftenseiten** Dialogfeld. Wählen Sie im linken Bereich **Konfigurationseigenschaften**, **C/C++-** und wählen Sie dann die Kategorie der Compiler-Option. In den Themen zu den einzelnen Compileroptionen wird erläutert, wo die jeweilige Option in der Entwicklungsumgebung zu finden ist und wie sie eingestellt werden kann. Finden Sie unter [MSVC-Compiler-Optionen](compiler-options.md) für eine vollständige Liste.
 
-- [Erstellen vorkompilierter Headerdateien](../../build/reference/creating-precompiled-header-files.md)
+## <a name="from-the-command-line"></a>Über die Befehlszeile
 
-- [Unicode-Unterstützung im Compiler und Linker](../../build/reference/unicode-support-in-the-compiler-and-linker.md)
+Sie können die Optionen für den Compiler (CL.exe) an folgenden Stellen festlegen:
 
-Informationen zum Auswählen der Compiler Hostserver und-Zielserver-Architektur finden Sie unter [Konfigurieren von Visual C++ für 64-Bit-X64 Ziele](../../build/configuring-programs-for-64-bit-visual-cpp.md).
+- [In der Befehlszeile](compiler-command-line-syntax.md)
+
+- [In Befehlsdateien](cl-command-files.md)
+
+- [In der CL-Umgebungsvariablen](cl-environment-variables.md)
+
+Die in der CL-Umgebungsvariablen festgelegten Optionen werden bei jedem Aufrufen von CL.EXE verwendet. Wenn eine Befehlsdatei in der CL-Umgebungsvariablen oder in der Befehlszeile angegeben wird, werden die in der Befehlsdatei festgelegten Optionen verwendet. Anders als in der Befehlszeile oder in der CL-Umgebungsvariablen können Sie in einer Befehlsdatei mehrzeilige Optionen und Dateinamen verwenden.
+
+Compileroptionen werden "von links nach rechts" verarbeitet. Wird ein Konflikt erkannt, überwiegt die letzte Option (ganz rechts). Die CL-Umgebungsvariable wird vor der Befehlszeile verarbeitet. Sollte es also zu Konflikten zwischen CL und der Befehlszeile kommen, so hat die Befehlszeile Vorrang.
+
+## <a name="additional-compiler-topics"></a>Weitere Themen zum Compiler
+
+- [MSVC-Compiler-Optionen](compiler-options.md)
+
+- [Vorkompilierte Headerdateien](../creating-precompiled-header-files.md)
+
+- [CL: Starten des Linkers](cl-invokes-the-linker.md)
+
+Informationen zum Auswählen der Compiler Hostserver und-Zielserver-Architektur finden Sie unter [Konfigurieren von C++-Projekte für 64-Bit, X64 Ziele](../configuring-programs-for-64-bit-visual-cpp.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Referenz zur C/C++-Erstellung](../../build/reference/c-cpp-building-reference.md)
+[Referenz zur C/C++-Erstellung](c-cpp-building-reference.md)
