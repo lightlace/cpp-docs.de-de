@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -analyze compiler option [C++]
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
-ms.openlocfilehash: 057fabe9612f84af07649d7a4f7bbf6d83e01f6c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 63cfd2bd206a361301c75110a684e1d2c642a1f2
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426211"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57819505"
 ---
 # <a name="analyze-code-analysis"></a>/analyze (Codeanalyse)
 
@@ -32,7 +32,7 @@ Aktiviert Codeanalyse- und Steueroptionen.
 
 / analyze-wird auf der Analyse im Standardmodus. Analyseausgabe erfolgt auf die **Ausgabe** Fenster wie andere Fehlermeldungen. Verwendung **/ analyze-** Analyse explizit zu deaktivieren.
 
-/ analyze: WX-Angabe **/ analyze: WX-** bedeutet, die codeanalysewarnungen nicht als Fehler behandelt werden, wenn Sie bei der Kompilierung **/WX**. Weitere Informationen finden Sie unter [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Warnstufe)](../../build/reference/compiler-option-warning-level.md).
+/ analyze: WX-Angabe **/ analyze: WX-** bedeutet, die codeanalysewarnungen nicht als Fehler behandelt werden, wenn Sie bei der Kompilierung **/WX**. Weitere Informationen finden Sie unter [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Warnstufe)](compiler-option-warning-level.md).
 
 / analyze: Log `filename` ausführliche analysergebnisse werden als XML geschrieben, um die Datei, die angegeben wird `filename`.
 
@@ -79,7 +79,7 @@ Weitere Informationen finden Sie unter [Codeanalyse für C/C++-Übersicht](/visu
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Erweitern Sie den Knoten **Konfigurationseigenschaften**.
 
@@ -95,5 +95,5 @@ Weitere Informationen finden Sie unter [Codeanalyse für C/C++-Übersicht](/visu
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Compileroptionen](../../build/reference/compiler-options.md)
-- [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+- [MSVC-Compiler-Optionen](compiler-options.md)
+- [MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)

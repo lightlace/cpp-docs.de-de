@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -ALIGN linker option
 - section alignment
 - sections
-ms.openlocfilehash: b68ec42db9c927fe8f56dad8f5670059359a1843
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8d2e6a859c68af473d49dc04b76f0a15056aa56
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665789"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57809469"
 ---
 # <a name="align-section-alignment"></a>/ALIGN (Abschnittsausrichtung)
 
@@ -35,13 +35,13 @@ Die **/ALIGN** Option gibt die Ausrichtung der einzelnen Abschnitten im linearen
 
 Wenn Sie eine Anwendung z. B. einen Gerätetreiber schreiben, sollten Sie nicht die Ausrichtung ändern möchten.
 
-Es ist möglich, ändern Sie die Ausrichtung eines bestimmten Abschnitts mit dem Ausrichtungsparameter, um die [/SECTION](../../build/reference/section-specify-section-attributes.md) Option.
+Es ist möglich, ändern Sie die Ausrichtung eines bestimmten Abschnitts mit dem Ausrichtungsparameter, um die [/SECTION](section-specify-section-attributes.md) Option.
 
 Der Ausrichtungswert, die Sie angeben, darf nicht kleiner als die größte abschnittsausrichtung sein.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **Befehlszeile** Eigenschaftenseite.
 
@@ -53,5 +53,5 @@ Der Ausrichtungswert, die Sie angeben, darf nicht kleiner als die größte absch
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)
+[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: 3b29b2e8b00aa436d1687cdbbd5f299f4787c71b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9586244c9e2293ba6b484efb158fc3a2529c0ea
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432357"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57814487"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>Komponentenerweiterungen für .NET- und UWP
 
@@ -39,7 +39,7 @@ In der folgenden Tabelle sind Schlüsselwörter in der C++-Spracherweiterung auf
 
 |Stichwort|Kontextbezogen|Zweck|Referenz|
 |-------------|-----------------------|-------------|---------------|
-|**REF-Klasse**<br /><br /> **Referenzstruktur**|Nein|Deklariert eine Klasse.|[Klassen und Strukturen](../windows/classes-and-structs-cpp-component-extensions.md)|
+|**REF-Klasse**<br /><br /> **ref struct**|Nein|Deklariert eine Klasse.|[Klassen und Strukturen](../windows/classes-and-structs-cpp-component-extensions.md)|
 |**Wertklasse**<br /><br /> **wertstruktur**|Nein|Deklariert eine Wertklasse.|[Klassen und Strukturen](../windows/classes-and-structs-cpp-component-extensions.md)|
 |**Schnittstellenklasse**<br /><br /> **Interface-Struktur**|Nein|Deklariert eine Schnittstelle.|[Schnittstellenklasse](../windows/interface-class-cpp-component-extensions.md)|
 |**Enumerationsklasse**<br /><br /> **Enum-Struktur**|Nein|Deklariert eine Enumeration.|[Enumerationsklasse](../windows/enum-class-cpp-component-extensions.md)|
@@ -49,7 +49,7 @@ In der folgenden Tabelle sind Schlüsselwörter in der C++-Spracherweiterung auf
 
 ## <a name="override-specifiers"></a>Überschreibungsspezifizierer
 
-Sie können die folgenden Schlüsselwörter verwenden, um das Überschreibungsverhalten für Ableitung zu qualifizieren. Obwohl die **neue** Schlüsselwort stellt keine Erweiterung von C++, die es hier aufgeführt, da es in einem zusätzlichen Kontext verwendet werden kann. Einige Bezeichner sind auch für die systemeigene Programmierung gültig. Weitere Informationen finden Sie unter [wie: Deklarieren Sie Überschreibungsspezifizierer in nativen Kompilierungen (C++ / CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
+Sie können die folgenden Schlüsselwörter verwenden, um das Überschreibungsverhalten für Ableitung zu qualifizieren. Obwohl die **neue** Schlüsselwort stellt keine Erweiterung von C++, die es hier aufgeführt, da es in einem zusätzlichen Kontext verwendet werden kann. Einige Bezeichner sind auch für die systemeigene Programmierung gültig. Weitere Informationen finden Sie unter [Vorgehensweise: Deklarieren von Überschreibungsbezeichnern in nativen Kompilierungen (C++ / CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
 |Stichwort|Kontextbezogen|Zweck|Referenz|
 |-------------|-----------------------|-------------|---------------|
@@ -64,7 +64,7 @@ Die folgenden Schlüsselwörter wurden hinzugefügt, um generische Typen zu unte
 
 |Stichwort|Kontextbezogen|Zweck|
 |-------------|-----------------------|-------------|
-|**Generische**|Nein|Definiert einen generischen Typ.|
+|**generic**|Nein|Definiert einen generischen Typ.|
 |**where**|Ja|Gibt die Einschränkungen an, die für einen generischen Typparameter angewendet werden.|
 
 ## <a name="miscellaneous-keywords"></a>Sonstige Schlüsselwörter
@@ -75,8 +75,8 @@ Die folgenden Schlüsselwörter wurden den C++-Erweiterungen hinzugefügt.
 |-------------|-----------------------|-------------|---------------|
 |**finally**|Ja|Gibt das Standardausnahmebehandlungsverhalten an.|[Ausnahmebehandlung](../windows/exception-handling-cpp-component-extensions.md)|
 |**for each in**|Nein|Listet die Elemente einer Auflistung auf.|[for each in](../dotnet/for-each-in.md)|
-|**gcnew**|Nein|Ordnet Typen auf dem Heap der Garbage Collection zu. Verwenden Sie anstelle von **neue** und **löschen**.|[neue Gcnew ref](../windows/ref-new-gcnew-cpp-component-extensions.md)|
-|**neue ref**|Ja|Ordnet einen Windows-Runtime-Typ. Verwenden Sie anstelle von **neue** und **löschen**.|[neue Gcnew ref](../windows/ref-new-gcnew-cpp-component-extensions.md)|
+|**gcnew**|Nein|Ordnet Typen auf dem Heap der Garbage Collection zu. Verwenden Sie anstelle von **neue** und **löschen**.|[ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
+|**neue ref**|Ja|Ordnet einen Windows-Runtime-Typ. Verwenden Sie anstelle von **neue** und **löschen**.|[ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
 |**initonly**|Ja|Gibt an, dass ein Member nur in der Deklaration oder in einem statischen Konstruktor initialisiert werden kann.|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
 |**literal**|Ja|Erstellt eine literale Variable.|[literal](../windows/literal-cpp-component-extensions.md)|
 |**nullptr**|Nein|Gibt an, dass ein Handle oder ein Zeiger nicht auf ein Objekt zeigt.|[nullptr](../windows/nullptr-cpp-component-extensions.md)|
@@ -90,7 +90,7 @@ Die folgenden Sprachkonstrukte werden nicht als Schlüsselwörter, sondern als V
 |**array**|Deklariert einen Array.|[Arrays](../windows/arrays-cpp-component-extensions.md)|
 |**interior_ptr**|(Nur CLR:) Zeigt auf Daten in einem Referenztyp.|[interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)|
 |**pin_ptr**|(Nur CLR:) Zeigt auf CLR-Referenztypen, um das Garbage Collection-System vorübergehend zu unterdrücken.|[pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)|
-|**"safe_cast"**|Bestimmt die optimale Umwandlungsmethode für einen Laufzeittyp und führt diese aus.|["safe_cast"](../windows/safe-cast-cpp-component-extensions.md)|
+|**safe_cast**|Bestimmt die optimale Umwandlungsmethode für einen Laufzeittyp und führt diese aus.|[safe_cast](../windows/safe-cast-cpp-component-extensions.md)|
 |**typeid**|(Nur CLR:) Ruft ein <xref:System.Type?displayProperty=fullName>-Objekt ab, das den angegebenen Typ oder das angegebene Objekt beschreibt.|[typeid](../windows/typeid-cpp-component-extensions.md)|
 
 ## <a name="declarators"></a>Deklaratoren
@@ -111,7 +111,7 @@ In diesem Abschnitt werden weitere Programmierungskonstrukte sowie Themen aufgef
 |[__identifier (C++/CLI)](../windows/identifier-cpp-cli.md)|(Windows-Runtime und CLR) Ermöglicht die Verwendung von Schlüsselwörtern als Bezeichner.|
 |[Variable Argumentlisten (...) (C++/CLI)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Windows-Runtime und CLR) Aktiviert eine Funktion, die eine Variable Anzahl von Argumenten akzeptieren.|
 |[.NET Framework-Entsprechungen der nativen Typen in C++ (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)|Listet die CLR-Typen auf, die anstelle von ganzzahligen C++-Typen verwendet werden.|
-|[AppDomain](../cpp/appdomain.md) **__declspec** Modifizierer|**__declspec** Modifizierer, der vorgibt, dass die statische und globale Variablen vorhanden sind.|
+|[appdomain](../cpp/appdomain.md) **__declspec** modifier|**__declspec** Modifizierer, der vorgibt, dass die statische und globale Variablen vorhanden sind.|
 |[C-stilartige Umwandlungen mit/CLR (C++ / CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)|Beschreibt, wie Umwandlungen im C-Stil interpretiert werden.|
 |[__clrcall](../cpp/clrcall.md) Aufrufkonvention|Gibt die CLR-kompatible Aufrufkonvention an.|
 |`__cplusplus_cli`|[Vordefinierte Makros](../preprocessor/predefined-macros.md)|
@@ -128,7 +128,7 @@ In diesem Abschnitt werden weitere Programmierungskonstrukte sowie Themen aufgef
 |[Typweiterleitung (C++/CLI)](../windows/type-forwarding-cpp-cli.md)|Ermöglicht das Verschieben eines Typs aus einer bereits bereitgestellten Assembly in eine andere Assembly, sodass Clientcode nicht neu kompiliert werden muss.|
 |[Benutzerdefinierte Attribute](../windows/user-defined-attributes-cpp-component-extensions.md)|Veranschaulicht benutzerdefinierte Attribute.|
 |[#using-Direktive](../preprocessor/hash-using-directive-cpp.md)|Importiert externe Assemblys.|
-|[XML-Dokumentation](../ide/xml-documentation-visual-cpp.md)|Erläutert, XML-basierte Codedokumentation mithilfe von  [ /doc (Verarbeiten von Dokumentationskommentaren) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md)|
+|[XML-Dokumentation](../build/reference/xml-documentation-visual-cpp.md)|Erläutert, XML-basierte Codedokumentation mithilfe von  [ /doc (Verarbeiten von Dokumentationskommentaren) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md)|
 
 ## <a name="see-also"></a>Siehe auch
 
