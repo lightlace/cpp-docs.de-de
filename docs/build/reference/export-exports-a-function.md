@@ -9,12 +9,12 @@ helpviewer_keywords:
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-ms.openlocfilehash: 86e2dadbfcdc31d5d5f5fe3121c33f9011c14ab5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7c4f4621bbccd4285bcf4eca07d2544d53d14f6c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414382"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819852"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (Funktion exportieren)
 
@@ -36,7 +36,7 @@ Es gibt vier Möglichkeiten für das Exportieren einer Definition, aufgelistet i
 
 1. [__declspec(dllexport)](../../cpp/dllexport-dllimport.md) im Quellcode
 
-1. Ein [EXPORTE](../../build/reference/exports.md) -Anweisung in DEF-Datei
+1. Ein [EXPORTE](exports.md) -Anweisung in DEF-Datei
 
 1. Eine/Export-Spezifikation in einem Linkbefehl
 
@@ -44,7 +44,7 @@ Es gibt vier Möglichkeiten für das Exportieren einer Definition, aufgelistet i
 
 Alle diese Methoden können im selben Programm verwendet werden. Wenn der LINK ein Programm erstellt, das Exporte enthält, wird auch eine Importbibliothek, es sei denn, eine .exp-Datei in den Build verwendet wird.
 
-LINK-verwendet die ergänzten Formen von Bezeichnern. Der Compiler ergänzt einen Bezeichner, wenn es sich um die OBJ-Datei erstellt. Wenn *Eintragsname* wird angegeben, um dem Linker in seiner nicht ergänzten form (im Quellcode angezeigt), LINK versucht, mit dem Namen übereinstimmen. Wenn sie eine eindeutige Übereinstimmung finden kann, wird links eine Fehlermeldung ausgegeben. Verwenden der [DUMPBIN](../../build/reference/dumpbin-reference.md) Tool zum Abrufen der [ergänzten Namen](../../build/reference/decorated-names.md) Form eines Bezeichners, wenn Sie es dem Linker angeben möchten.
+LINK-verwendet die ergänzten Formen von Bezeichnern. Der Compiler ergänzt einen Bezeichner, wenn es sich um die OBJ-Datei erstellt. Wenn *Eintragsname* wird angegeben, um dem Linker in seiner nicht ergänzten form (im Quellcode angezeigt), LINK versucht, mit dem Namen übereinstimmen. Wenn sie eine eindeutige Übereinstimmung finden kann, wird links eine Fehlermeldung ausgegeben. Verwenden der [DUMPBIN](dumpbin-reference.md) Tool zum Abrufen der [ergänzten Namen](decorated-names.md) Form eines Bezeichners, wenn Sie es dem Linker angeben möchten.
 
 > [!NOTE]
 > Geben Sie die ergänzte Form des C-Bezeichner, die deklariert werden keine `__cdecl` oder `__stdcall`.
@@ -58,7 +58,7 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **Befehlszeile** Eigenschaftenseite.
 
@@ -70,5 +70,5 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)
+[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)

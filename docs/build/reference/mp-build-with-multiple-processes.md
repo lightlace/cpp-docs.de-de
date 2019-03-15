@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MP compiler option (C++)
 - MP compiler option (C++)
 - cl.exe compiler, multi-process build
-ms.openlocfilehash: d0a3e50ca75535d505e46c0e454a8e0902b1ffb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a66f6f6f1f4ce77e33df992b915be9ca5dcce70
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562083"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808455"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (Erstellen mit mehreren Prozessen)
 
@@ -50,10 +50,10 @@ Die folgende Tabelle enthält die Compileroptionen und Sprachfunktionen, die nic
 |Option oder Sprachfunktion|Beschreibung|
 |--------------------------------|-----------------|
 |[#import](../../preprocessor/hash-import-directive-cpp.md) Präprozessordirektive|Konvertiert die Typen in einer Typbibliothek in C++-Klassen und schreibt diese Klassen dann in eine Headerdatei.|
-|[/E](../../build/reference/e-preprocess-to-stdout.md), [/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)|Kopiert die Präprozessorausgabe in die Standardausgabe (**stdout**).|
-|[/Gm](../../build/reference/gm-enable-minimal-rebuild.md)|Ermöglicht eine inkrementelle erneute Erstellung.|
-|[/showIncludes](../../build/reference/showincludes-list-include-files.md)|Schreibt eine Liste von Includedateien in den Standardfehler (**stderr**).|
-|[/Yc](../../build/reference/yc-create-precompiled-header-file.md)|Schreibt eine vorkompilierte Headerdatei.|
+|[/E](e-preprocess-to-stdout.md), [/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Kopiert die Präprozessorausgabe in die Standardausgabe (**stdout**).|
+|[/Gm](gm-enable-minimal-rebuild.md)|Ermöglicht eine inkrementelle erneute Erstellung.|
+|[/showIncludes](showincludes-list-include-files.md)|Schreibt eine Liste von Includedateien in den Standardfehler (**stderr**).|
+|[/Yc](yc-create-precompiled-header-file.md)|Schreibt eine vorkompilierte Headerdatei.|
 
 ## <a name="diagnostic-messages"></a>Diagnosemeldungen
 
@@ -61,7 +61,7 @@ Wenn Sie eine Option oder Sprachfunktion angeben, die nicht mit der Option **/MP
 
 |Diagnosemeldung|Beschreibung|Compilerverhalten|
 |------------------------|-----------------|-----------------------|
-|**C2813**|Die **#import** Direktive ist nicht kompatibel mit der Option **/MP** Option.|Die Kompilierung endet, sofern keine Option für [Compilerwarnstufen](../../build/reference/compiler-option-warning-level.md) etwas anderes angibt.|
+|**C2813**|Die **#import** Direktive ist nicht kompatibel mit der Option **/MP** Option.|Die Kompilierung endet, sofern keine Option für [Compilerwarnstufen](compiler-option-warning-level.md) etwas anderes angibt.|
 |**D9014**|Ein ungültiger Wert angegeben ist, für die *ProcessMax* Argument.|Der Compiler ignoriert den ungültigen Wert und nimmt den Wert 1 an.|
 |**D9030**|Die angegebene Option ist nicht kompatibel mit **/MP**.|Der Compiler ignoriert die Option **/MP** .|
 
@@ -99,7 +99,7 @@ Die Quelldateien werden möglicherweise nicht in der gleichen Reihenfolge kompil
 
 Eine Quelldatei wird kompiliert, wenn ein Prozess für ihre Kompilierung verfügbar ist. Wenn mehr Dateien als Prozesse vorhanden sind, wird der erste Satz von Dateien von den verfügbaren Prozessen kompiliert. Die restlichen Dateien werden verarbeitet, wenn ein Prozess die Behandlung einer vorherigen Datei beendet und für die Verarbeitung einer der verbleibenden Dateien bereitsteht.
 
-Geben Sie die gleiche Quelldatei nicht mehrmals in einer Befehlszeile an. Dies kann zum Beispiel passieren, wenn ein Tool automatisch eine [Makefile](../../build/contents-of-a-makefile.md) erstellt, die auf Abhängigkeitsinformationen in einem Projekt basiert. Wenn Sie die Option **/MP** nicht angeben, verarbeitet der Compiler die Liste der Dateien sequenziell und kompiliert jedes Vorkommen der Datei neu. Wenn Sie jedoch die Option **/MP** angeben, wird die gleiche Datei möglicherweise von verschiedenen Compilern zur gleichen Zeit kompiliert. Aus diesem Grund versuchen die verschiedenen Compiler zur gleichen Zeit in die gleiche Ausgabedatei zu schreiben. Ein Compiler wird exklusiven Schreibzugriff auf die Ausgabedatei erhalten und die anderen Compiler werden einen Dateizugriffsfehler melden.
+Geben Sie die gleiche Quelldatei nicht mehrmals in einer Befehlszeile an. Dies kann zum Beispiel passieren, wenn ein Tool automatisch eine [Makefile](contents-of-a-makefile.md) erstellt, die auf Abhängigkeitsinformationen in einem Projekt basiert. Wenn Sie die Option **/MP** nicht angeben, verarbeitet der Compiler die Liste der Dateien sequenziell und kompiliert jedes Vorkommen der Datei neu. Wenn Sie jedoch die Option **/MP** angeben, wird die gleiche Datei möglicherweise von verschiedenen Compilern zur gleichen Zeit kompiliert. Aus diesem Grund versuchen die verschiedenen Compiler zur gleichen Zeit in die gleiche Ausgabedatei zu schreiben. Ein Compiler wird exklusiven Schreibzugriff auf die Ausgabedatei erhalten und die anderen Compiler werden einen Dateizugriffsfehler melden.
 
 ### <a name="using-type-libraries-import"></a>Verwenden von Typbibliotheken (#import)
 

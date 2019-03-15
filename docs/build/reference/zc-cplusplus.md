@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - -Zc:__cplusplus compiler option (C++)
 - __cplusplus macro (C++)
-ms.openlocfilehash: 8e73d93ae0618a04bdcc8476fadb6cc2aab595b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89545f541f32374a47dce7f87958e61873c1b47c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623989"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810093"
 ---
 # <a name="zccplusplus-enable-updated-cplusplus-macro"></a>Kompilierung (Aktivieren der aktualisierten __cplusplus-Makro)
 
@@ -19,7 +19,7 @@ Die **Kompilierung** Compiler-Option ermöglicht die  **\_ \_Cplusplus** Präpro
 
 ## <a name="syntax"></a>Syntax
 
-> **Kompilierung**[**-**]
+> **/Zc:__cplusplus**[**-**]
 
 ## <a name="remarks"></a>Hinweise
 
@@ -27,11 +27,11 @@ Die  **\_ \_Cplusplus** Präprozessor-Makro wird häufig verwendet, die Unterst�
 
 Wenn die **Kompilierung** Option aktiviert ist, von gemeldeten Wert handelt es die  **\_ \_Cplusplus** Makro hängt von der [/Std](std-specify-language-standard-version.md) Version wechseln die Einstellung. Diese Tabelle zeigt die möglichen Werte für das Makro:
 
-|Kompilierung|/Std:c++ switch|__cplusplus-Wert|
+|/Zc:__cplusplus switch|/std:c++ switch|__cplusplus-Wert|
 |-|-|-|
 Zc:__cplusplus|/ Std: c ++ 14 (Standard)|201402L
-Zc:__cplusplus|/ Std: c ++ 17|201703L
-Zc:__cplusplus|/ Std: c ++ neueste|201704L
+Zc:__cplusplus|/std:c++17|201703L
+Zc:__cplusplus|/std:c++latest|201704L
 Zc:__cplusplus-(deaktiviert)|Beliebiger Wert|199711L
 Nicht angegeben|Beliebiger Wert|199711L
 
@@ -41,7 +41,7 @@ Verwenden Sie für die eine umfassendere Erkennung von Änderungen an den Compil
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>So legen Sie diese Compileroption in Visual Studio fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **Befehlszeile** Eigenschaftenseite.
 

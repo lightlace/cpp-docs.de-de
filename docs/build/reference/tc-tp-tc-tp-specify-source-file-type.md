@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Tc compiler option [C++]
 - /Tp compiler option [C++]
 - -Tp compiler option [C++]
-ms.openlocfilehash: e435b48359a708408ff8659e53c9e7c4f7e80261
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7ee51c858c9f90440cf0c2b21799ef7473cf6da
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619114"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813863"
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>/Tc, /Tp, /TC, /TP (Typ der Quelldatei angeben)
 
@@ -29,9 +29,9 @@ Die **/TC** Option gibt an, dass das Filename-Argument eine C-Quelldatei, auch w
 
 ## <a name="syntax"></a>Syntax
 
-> **/ TC** _Filename_
->  **/TP** _Filename_
->  **/TC** 
+> **/Tc** _filename_
+>  **/Tp** _filename_
+>  **/TC**
 >  **/TP**
 
 ## <a name="arguments"></a>Argumente
@@ -43,11 +43,11 @@ Eine C- oder C++-Quelldatei.
 
 In der Standardeinstellung **CL** wird davon ausgegangen, dass Dateien mit der Erweiterung .c C-Quelldateien und Dateien mit der .cpp oder .cxx C++-Quelldateien sind.
 
-Wenn entweder die **TC** oder **Tc** angegeben wird, eine Angabe in der [/Zc: wchar_t (Wchar_t ist der systemeigene Typ)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Option wird ignoriert.
+Wenn entweder die **TC** oder **Tc** angegeben wird, eine Angabe in der [/Zc: wchar_t (Wchar_t ist der systemeigene Typ)](zc-wchar-t-wchar-t-is-native-type.md) Option wird ignoriert.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **erweitert** Eigenschaftenseite.
 
@@ -69,5 +69,5 @@ Diese Befehlszeile CL gibt an, dass TEST1.c, TEST2.cxx, TEST3.huh und TEST4.o we
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)

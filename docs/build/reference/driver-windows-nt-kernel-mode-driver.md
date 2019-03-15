@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DRIVER linker option
 - /DRIVER linker option
 ms.assetid: aeee8e28-5d97-40f5-ba16-9f370fe8a1b8
-ms.openlocfilehash: 596566c357dd78d656e5e564a9b0f9097d20637e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ab7253d7e386bf385bcb3a586c5e0e1c1e860694
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423910"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811679"
 ---
 # <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER (Treiber für den Kernelmodus von Windows NT)
 
@@ -33,13 +33,13 @@ Wenn **/Driver** nicht angegeben ist, werden diese Komponenten sind nicht vom Li
 
 Wenn **/Driver** angegeben wird:
 
-- **/ Fixed: No** ist aktiviert. Weitere Informationen finden Sie unter [/FIXED (Feste Basisadresse)](../../build/reference/fixed-fixed-base-address.md).
+- **/ Fixed: No** ist aktiviert. Weitere Informationen finden Sie unter [/FIXED (Feste Basisadresse)](fixed-fixed-base-address.md).
 
-- Die Erweiterung der Ausgabedatei wird auf .sys festgelegt. Verwendung **/OUT** so ändern Sie den Standarddateinamen und die Erweiterung. Weitere Informationen finden Sie unter [/OUT (Ausgabedateiname)](../../build/reference/out-output-file-name.md).
+- Die Erweiterung der Ausgabedatei wird auf .sys festgelegt. Verwendung **/OUT** so ändern Sie den Standarddateinamen und die Erweiterung. Weitere Informationen finden Sie unter [/OUT (Ausgabedateiname)](out-output-file-name.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf die **Linker** Ordner.
 
@@ -53,5 +53,5 @@ Wenn **/Driver** angegeben wird:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)
+[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)

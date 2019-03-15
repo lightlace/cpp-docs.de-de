@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - dynamically linked DLLs [C++]
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
-ms.openlocfilehash: 548fbde379937ab4d915f08a43a8b865e071d688
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3bfed5f75dab4c501708950fdb99f53c40ec142c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413172"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821299"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>Dynamisch mit MFC verknüpfte reguläre MFC-DLLs
 
@@ -83,18 +83,18 @@ Ein Beispiel zum Schreiben, erstellen und Verwenden einer regulären MFC DLL fin
 
 ## <a name="what-do-you-want-to-do"></a>Wie möchten Sie vorgehen?
 
-- [Reguläre MFC-DLLs initialisieren](../build/run-time-library-behavior.md#initializing-regular-dlls)
+- [Reguläre MFC-DLLs initialisieren](run-time-library-behavior.md#initializing-regular-dlls)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?
 
-- [Modulzustände einer regulären MFC DLL verknüpften dynamisch mit MFC](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)
+- [Modulzustände einer regulären MFC DLL verknüpften dynamisch mit MFC](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)
 
 - [Verwalten der Statusdaten von MFC-Modulen](../mfc/managing-the-state-data-of-mfc-modules.md)
 
-- [Using Database, OLE, and Sockets MFC extension DLLs in regular MFC DLLs (Verwenden von Datenbank-, OLE- und Sockets-MFC-Erweiterungs-DLLs in regulären MFC-DLLs)](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+- [Using Database, OLE, and Sockets MFC extension DLLs in regular MFC DLLs (Verwenden von Datenbank-, OLE- und Sockets-MFC-Erweiterungs-DLLs in regulären MFC-DLLs)](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
 - [Verwenden von MFC als Teil einer DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
 ## <a name="see-also"></a>Siehe auch
 
-[Arten von DLLs](../build/kinds-of-dlls.md)
+[Arten von DLLs](kinds-of-dlls.md)

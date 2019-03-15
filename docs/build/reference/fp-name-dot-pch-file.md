@@ -15,12 +15,12 @@ helpviewer_keywords:
 - precompiled header files, naming
 - /Fp compiler option [C++]
 ms.assetid: 0fcd9cbd-e09f-44d3-9715-b41efb5d0be2
-ms.openlocfilehash: 8384aa1ee27fee0bc42e023b78b948d9acd384e8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 95506e17dff47e51cb7a3d83b629880f63422d26
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414095"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820389"
 ---
 # <a name="fp-name-pch-file"></a>/Fp (Name der PCH-Datei)
 
@@ -32,7 +32,7 @@ Stellt einen Pfadnamen für einen vorkompilierten Header anstelle des Standardpf
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Option mit ["/ Yc" (Erstellen vorkompilierter Headerdatei)](../../build/reference/yc-create-precompiled-header-file.md) oder [/Yu (vorkompilierte Headerdatei verwenden)](../../build/reference/yu-use-precompiled-header-file.md) um einen Pfadnamen für einen vorkompilierten Header anstelle des Standardpfadnamens bereitzustellen. Sie können auch **/fp** mit **"/ Yc"** die Verwendung einer vorkompilierten Headerdatei an, die von unterscheidet der **"/ Yc"**<em>Dateiname</em> Argument und von der Basisname der Quelldatei.
+Verwenden Sie diese Option mit ["/ Yc" (Erstellen vorkompilierter Headerdatei)](yc-create-precompiled-header-file.md) oder [/Yu (vorkompilierte Headerdatei verwenden)](yu-use-precompiled-header-file.md) um einen Pfadnamen für einen vorkompilierten Header anstelle des Standardpfadnamens bereitzustellen. Sie können auch **/fp** mit **"/ Yc"** die Verwendung einer vorkompilierten Headerdatei an, die von unterscheidet der **"/ Yc"**<em>Dateiname</em> Argument und von der Basisname der Quelldatei.
 
 Wenn Sie eine Erweiterung nicht als Teil des Pfadnamens angeben, wird davon ausgegangen, dass eine Erweiterung des PCH. Wenn Sie ein Verzeichnis ohne einen Dateinamen angeben, wird der Standarddateiname VC*x*0.pch, wobei *x* ist die Hauptversion von Visual C++ verwendet.
 
@@ -40,7 +40,7 @@ Sie können auch die **/fp** mit option **"/ Yu"**.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf den Ordner **C/C++** .
 
@@ -70,7 +70,7 @@ CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP
 
 ## <a name="see-also"></a>Siehe auch
 
-[Ausgabedatei (/F) Optionen](../../build/reference/output-file-f-options.md)<br/>
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
-[Festlegen des Pfadnamens](../../build/reference/specifying-the-pathname.md)
+[Ausgabedatei (/F) Optionen](output-file-f-options.md)<br/>
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)<br/>
+[Festlegen des Pfadnamens](specifying-the-pathname.md)

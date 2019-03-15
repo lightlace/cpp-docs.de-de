@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ERROR_SEVERITY_ERROR exception
 - ERROR_MOD_NOT_FOUND exception
 ms.assetid: c03be05d-1c39-4f35-84cf-00c9af3bae9a
-ms.openlocfilehash: 9c86d99b365994870b991967b6cab6e6ee5c5088
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f80b99943b103dcf90c05d59df3169e0e05d79f4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422987"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811666"
 ---
 # <a name="exceptions-cc"></a>Ausnahmen (C/C++)
 
@@ -41,8 +41,8 @@ Ausgelösten Ausnahmecodes sind die Standardwerte VcppException (ERROR_SEVERITY_
 
 Wenn die falschen Bits im Feld GrAttrs festgelegt sind, wird die Ausnahme darüber hinaus zusätzlich ausgelöst. Diese Ausnahme ist für praktisch, schwerwiegender.
 
-Finden Sie unter [Struktur- und Konstantendefinitionen](../../build/reference/structure-and-constant-definitions.md) für Weitere Informationen.
+Finden Sie unter [Struktur- und Konstantendefinitionen](structure-and-constant-definitions.md) für Weitere Informationen.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Fehlerbehandlung und Benachrichtigung](../../build/reference/error-handling-and-notification.md)
+[Fehlerbehandlung und Benachrichtigung](error-handling-and-notification.md)

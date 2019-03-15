@@ -160,14 +160,13 @@ helpviewer_keywords:
 - C1852
 - C1901
 - C1903
-- C1904
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: edf2227bd0a542ce9ca5e8a6a3f908347bd816e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1159a635f0c7a61e591b4d96c4e55bd2baf44782
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677330"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814448"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Schwerwiegende Compilerfehler C999 bis C1999
 
@@ -224,7 +223,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Schwerwiegender Fehler C1063|Compilerlimit: Stapelüberlauf des Compilers|
 |[Schwerwiegender Fehler C1064](../../error-messages/compiler-errors-1/fatal-error-c1064.md)|Compilerlimit: Überlauf des internen Puffers durch Token|
 |[Schwerwiegender Fehler C1065](../../error-messages/compiler-errors-1/fatal-error-c1065.md)|Compilerlimit: keine weiteren Tags|
-|[Schwerwiegender Fehler C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|Compilerlimit: Die Größenbeschränkung von 64 KB für Typeneinträge wurde überschritten.|
+|[Schwerwiegender Fehler C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|Compilergrenze erreicht: 64 KB für Typeneinträge Größe wurde überschritten|
 |Schwerwiegender Fehler C1068|Die Datei „*file*“ kann nicht geöffnet werden.|
 |Schwerwiegender Fehler C1069|Compilerbefehlszeile kann nicht gelesen werden|
 |Schwerwiegender Fehler C1070|Fehlende Zuordnung von #if und #endif in Datei „*file*“.|
@@ -234,7 +233,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Schwerwiegender Fehler C1075](../../error-messages/compiler-errors-1/fatal-error-c1075.md)|Keine Entsprechung für das linke Element *token* am Dateiende gefunden.|
 |[Schwerwiegender Fehler C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md)|Compilerlimit: Interne Heapgrenze erreicht; Verwenden Sie /Zm, um eine höhere Grenze anzugeben|
 |Schwerwiegender Fehler C1077|Compilerlimit: Es können nicht mehr als *number* Befehlszeilenoptionen angegeben werden.|
-|[Schwerwiegender Fehler C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|Compilerlimit: maximale Größe für PCH-Datei überschritten|
+|[Schwerwiegender Fehler C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|Compilergrenze erreicht: PCH-Dateigröße überschritten|
 |[Schwerwiegender Fehler C1080](../../error-messages/compiler-errors-1/fatal-error-c1080.md)|Compilerlimit: Befehlszeilenoption überschreitet die Grenze von *number* Zeichen.|
 |[Schwerwiegender Fehler C1081](../../error-messages/compiler-errors-1/fatal-error-c1081.md)|„*file*“: Dateiname zu lang.|
 |Schwerwiegender Fehler C1082|Die *type* -Datei kann nicht geschlossen werden: „*file*“: *message*.|
@@ -265,7 +264,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Schwerwiegender Fehler C1111|Zu viele geschachtelte Vorlagen-/generische Parameter.|
 |Schwerwiegender Fehler C1112|Compilerlimit: `'number`“ Makroargumente zu viel; nur *number* sind zulässig.|
 |[Schwerwiegender Fehler C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#using-Fehler bei „*file*“.|
-|Schwerwiegender Fehler C1114|„*file*“: WinRT unterstützt nicht #using von einer verwalteten Assembly.|
+|Schwerwiegender Fehler C1114|"*Datei*": WinRT unterstützt nicht #using von einer verwalteten Assembly using|
 |[Schwerwiegender Fehler C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|Fehler bei Aufruf von GetProcAddress für „*function*“.|
 |[Schwerwiegender Fehler C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|Fehler beim Aufruf von CryptoAPI.|
 |[Schwerwiegender Fehler C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|Automatische Speicherbelegung überschreitet *size*.|

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-ms.openlocfilehash: 205345a4261f5db8eb80b3bda6e5ea55544a33d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2205740aea5a2e557b8d93c3c60045435c4b71d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639345"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816099"
 ---
 # <a name="clr-restrictions"></a>Einschränkungen für "/clr"
 
@@ -17,7 +17,7 @@ Beachten Sie die folgenden Einschränkungen für die Verwendung von **"/ CLR"**:
 
 - In einem strukturierten Ausnahmehandler, es gibt Einschränkungen bei der Verwendung `_alloca` beim Kompilieren mit **"/ CLR"**. Weitere Informationen finden Sie unter [_alloca](../../c-runtime-library/reference/alloca.md).
 
-- Die Verwendung der fehlerprüfung zur Laufzeit ist nicht gültig sein und **"/ CLR"**. Weitere Informationen finden Sie unter [Gewusst wie: Verwenden von systemeigenen Laufzeitprüfungen](/visualstudio/debugger/how-to-use-native-run-time-checks).
+- Die Verwendung der fehlerprüfung zur Laufzeit ist nicht gültig sein und **"/ CLR"**. Weitere Informationen finden Sie unter [Vorgehensweise: Use Native Run-Time Checks (Verwenden von nativen Laufzeitüberprüfungen)](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
 - Wenn **"/ CLR"** wird verwendet, um ein Programm zu kompilieren, das nur C++-Standardsyntax verwendet, die folgenden Richtlinien gelten für die Verwendung von Inlineassembly:
 
@@ -37,36 +37,36 @@ Beachten Sie die folgenden Einschränkungen für die Verwendung von **"/ CLR"**:
 
 - Die folgenden Compileroptionen werden nicht unterstützt, mit **"/ CLR"**:
 
-  - **/ EHsc** und **/EHs** (**"/ CLR"** impliziert **/EHa** (finden Sie unter [/EH (Ausnahmebehandlungsmodell)](../../build/reference/eh-exception-handling-model.md))
+  - **/ EHsc** und **/EHs** (**"/ CLR"** impliziert **/EHa** (finden Sie unter [/EH (Ausnahmebehandlungsmodell)](eh-exception-handling-model.md))
 
-  - **/ fp: strict** und **/fp: mit Ausnahme von** (finden Sie unter [/fp (Festlegen des Gleitkommaverhaltens)](../../build/reference/fp-specify-floating-point-behavior.md))
+  - **/ fp: strict** und **/fp: mit Ausnahme von** (finden Sie unter [/fp (Festlegen des Gleitkommaverhaltens)](fp-specify-floating-point-behavior.md))
 
-  - [/Zd](../../build/reference/z7-zi-zi-debug-information-format.md)
+  - [/Zd](z7-zi-zi-debug-information-format.md)
 
-  - [/Gm](../../build/reference/gm-enable-minimal-rebuild.md)
+  - [/Gm](gm-enable-minimal-rebuild.md)
 
-  - [/MT](../../build/reference/md-mt-ld-use-run-time-library.md)
+  - [/MT](md-mt-ld-use-run-time-library.md)
 
-  - [/RTC](../../build/reference/rtc-run-time-error-checks.md)
+  - [/RTC](rtc-run-time-error-checks.md)
 
-  - [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)
+  - [/ZI](z7-zi-zi-debug-information-format.md)
 
-- Die Kombination der `_STATIC_CPPLIB` Präprozessordefinition (`/D_STATIC_CPPLIB`) und die **"/ CLR"** Compileroption wird nicht unterstützt. Dies rührt daher, dass die Definition würde Ihre Anwendung verknüpfen Sie mit der statische Multithread C++-Standardbibliothek, die nicht unterstützt wird. Weitere Informationen finden Sie unter den [/MD, / MT, / ld (Laufzeitbibliothek verwenden)](../../build/reference/md-mt-ld-use-run-time-library.md) Thema.
+- Die Kombination der `_STATIC_CPPLIB` Präprozessordefinition (`/D_STATIC_CPPLIB`) und die **"/ CLR"** Compileroption wird nicht unterstützt. Dies rührt daher, dass die Definition würde Ihre Anwendung verknüpfen Sie mit der statische Multithread C++-Standardbibliothek, die nicht unterstützt wird. Weitere Informationen finden Sie unter den [/MD, / MT, / ld (Laufzeitbibliothek verwenden)](md-mt-ld-use-run-time-library.md) Thema.
 
-- Bei Verwendung **"/ Zi"** mit **"/ CLR"**, stehen Sie auf die Leistung auswirken. Weitere Informationen finden Sie unter ["/ Zi"](../../build/reference/z7-zi-zi-debug-information-format.md).
+- Bei Verwendung **"/ Zi"** mit **"/ CLR"**, stehen Sie auf die Leistung auswirken. Weitere Informationen finden Sie unter ["/ Zi"](z7-zi-zi-debug-information-format.md).
 
-- Ein Breitzeichen an einen .NET Framework übergeben Routine ausgeben, ohne auch [/Zc: wchar_t](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) oder ohne Umwandlung des Zeichens in `__wchar_t` bewirkt, dass die Ausgabe als eine `unsigned short int`. Zum Beispiel:
+- Ein Breitzeichen an einen .NET Framework übergeben Routine ausgeben, ohne auch [/Zc: wchar_t](zc-wchar-t-wchar-t-is-native-type.md) oder ohne Umwandlung des Zeichens in `__wchar_t` bewirkt, dass die Ausgabe als eine `unsigned short int`. Zum Beispiel:
 
     ```cpp
     Console::WriteLine(L' ')              // Will output 32.
     Console::WriteLine((__wchar_t)L' ')   // Will output a space.
     ```
 
-- [/ GS](../../build/reference/gs-buffer-security-check.md) wird ignoriert, wenn die Kompilierung mit **"/ CLR"**, wenn eine Funktion unter `#pragma` [nicht verwalteten](../../preprocessor/managed-unmanaged.md) oder die Funktion in systemeigenen Code kompiliert werden muss, in diesem Fall generiert der Compiler Warnung C4793, die standardmäßig deaktiviert ist.
+- [/ GS](gs-buffer-security-check.md) wird ignoriert, wenn die Kompilierung mit **"/ CLR"**, wenn eine Funktion unter `#pragma` [nicht verwalteten](../../preprocessor/managed-unmanaged.md) oder die Funktion in systemeigenen Code kompiliert werden muss, in diesem Fall generiert der Compiler Warnung C4793, die standardmäßig deaktiviert ist.
 
-- Finden Sie unter [/Entry](../../build/reference/entry-entry-point-symbol.md) Funktion Signatur Anforderungen einer verwalteten Anwendung.
+- Finden Sie unter [/Entry](entry-entry-point-symbol.md) Funktion Signatur Anforderungen einer verwalteten Anwendung.
 
-- Anwendungen mit kompiliert **/OpenMP** und **"/ CLR"** kann nur in eine einzelne Appdomain-Prozess ausgeführt werden.  Finden Sie unter [/OpenMP (Aktivieren der OpenMP 2.0-Unterstützung)](../../build/reference/openmp-enable-openmp-2-0-support.md) für Weitere Informationen.
+- Anwendungen mit kompiliert **/OpenMP** und **"/ CLR"** kann nur in eine einzelne Appdomain-Prozess ausgeführt werden.  Finden Sie unter [/OpenMP (Aktivieren der OpenMP 2.0-Unterstützung)](openmp-enable-openmp-2-0-support.md) für Weitere Informationen.
 
 - Funktionen, die eine Variable Anzahl von Argumenten (Varargs) verwenden, werden als native Funktionen generiert werden. Alle verwalteten Datentypen in die Variable Argumentlisten Position werden in native Typen gemarshallt werden. Beachten Sie, dass <xref:System.String?displayProperty=fullName> tatsächlich ein Breitzeichen-Zeichenfolgen sind, aber sie Einzelbyte-Zeichenfolgen gemarshallt werden. Daher ist ein Printf-Spezifizierer %S (Wchar_t *), wird er in eine Zeichenfolge %s stattdessen gemarshallt.
 
@@ -88,4 +88,4 @@ Beachten Sie die folgenden Einschränkungen für die Verwendung von **"/ CLR"**:
 
 ## <a name="see-also"></a>Siehe auch
 
-- [/clr (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md)
+- [/clr (Common Language Runtime-Kompilierung)](clr-common-language-runtime-compilation.md)

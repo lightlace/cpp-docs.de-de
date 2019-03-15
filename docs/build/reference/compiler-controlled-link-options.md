@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], features that affect linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: e4c03896-c99c-4599-8502-e0f4bebe69d0
-ms.openlocfilehash: 3fed75b18ead80b8367eb1254793d632629efeff
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bc7a6cc596f138daa373042abca51642c24cf737
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426705"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822326"
 ---
 # <a name="compiler-controlled-link-options"></a>Compiler-Controlled LINK Options
 
@@ -40,9 +40,9 @@ Der CL-Compiler ruft automatisch LINK aus, es sei denn, Sie geben die Option. CL
 |"/ Zi" oder "/ Z7"|Übergibt "/ Debug"|
 |/Zl|Lässt Standardbibliotheksname in OBJ-Datei|
 
-Weitere Informationen finden Sie unter [Compileroptionen](../../build/reference/compiler-options.md).
+Weitere Informationen finden Sie unter [MSVC-Compiler-Optionen](compiler-options.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)
+[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)

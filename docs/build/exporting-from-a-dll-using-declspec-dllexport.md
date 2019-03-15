@@ -10,12 +10,12 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-ms.openlocfilehash: 48592fd6162ee354d82e73228e8b144ef0f354ed
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3b6b9733776f30fc8dcbfeee709b7d24e0f0187b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420583"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810236"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Exportieren aus einer DLL mithilfe von "__declspec(dllexport)"
 
@@ -49,7 +49,7 @@ Beim Erstellen der DLL, erstellen Sie in der Regel eine Headerdatei mit den Funk
 #define DllExport   __declspec( dllexport )
 ```
 
-**__declspec(dllexport)** speichert Funktionsnamen in der Exporttabelle der DLL. Wenn Sie die Größe der Tabelle optimieren möchten, finden Sie unter [Exportieren von Funktionen aus einer DLL über die Ordnungszahl statt über Namen](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
+**__declspec(dllexport)** speichert Funktionsnamen in der Exporttabelle der DLL. Wenn Sie die Größe der Tabelle optimieren möchten, finden Sie unter [Exportieren von Funktionen aus einer DLL über die Ordnungszahl statt über Namen](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
 
 > [!NOTE]
 >  Wenn Sie DLL-Quellcode von Win16 auf Win32 zu portieren, ersetzen Sie jede Instanz von **__export** mit **__declspec(dllexport)**.
@@ -58,28 +58,28 @@ Zu Referenzzwecken können Sie die Win32-Headerdatei Winbase.h durchsuchen. Es e
 
 ## <a name="what-do-you-want-to-do"></a>Wie möchten Sie vorgehen?
 
-- [Exportieren Sie aus einer DLL mithilfe von DEF-Dateien](../build/exporting-from-a-dll-using-def-files.md)
+- [Exportieren Sie aus einer DLL mithilfe von DEF-Dateien](exporting-from-a-dll-using-def-files.md)
 
-- [Exportieren Sie und importieren Sie mithilfe von AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [Exportieren Sie und importieren Sie mithilfe von AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Exportieren von C++-Funktionen für die Verwendung in ausführbaren c-Dateien](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Exportieren von C++-Funktionen für die Verwendung in ausführbaren c-Dateien](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Exportieren von C-Funktionen für die Verwendung in ausführbaren C oder C++-Dateien](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Exportieren von C-Funktionen für die Verwendung in ausführbaren C oder C++-Dateien](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Bestimmen Sie die Exportmethode verwendet werden](../build/determining-which-exporting-method-to-use.md)
+- [Bestimmen Sie die Exportmethode verwendet werden](determining-which-exporting-method-to-use.md)
 
-- [Importieren Sie in eine Anwendung mithilfe von "__declspec(dllimport)" "](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Importieren Sie in eine Anwendung mithilfe von "__declspec(dllimport)" "](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Initialisieren einer DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Initialisieren einer DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?
 
 - [Der __declspec-Schlüsselwort](../cpp/declspec.md)
 
-- [Importieren und Exportieren von Inlinefunktionen](../build/importing-and-exporting-inline-functions.md)
+- [Importieren und Exportieren von Inlinefunktionen](importing-and-exporting-inline-functions.md)
 
-- [Gegenseitige Importe](../build/mutual-imports.md)
+- [Gegenseitige Importe](mutual-imports.md)
 
 ## <a name="see-also"></a>Siehe auch
 
-[Exportieren aus einer DLL](../build/exporting-from-a-dll.md)
+[Exportieren aus einer DLL](exporting-from-a-dll.md)

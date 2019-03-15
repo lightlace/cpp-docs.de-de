@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exporting functions [C++], C++ functions in C executables
 - functions [C++], exporting
 ms.assetid: 80b9e982-f52d-4312-a891-f73cc69f3c2b
-ms.openlocfilehash: 86d771f8dcb9ee1ef137b7766f249a1dda7257db
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a694b77e3730ab82ec1698076cc66729ff115cdc
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426484"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814019"
 ---
 # <a name="exporting-c-functions-for-use-in-c-language-executables"></a>Exportieren von C++-Funktionen zur Verwendung in ausführbaren C-Dateien
 
@@ -26,26 +26,26 @@ extern "C" __declspec( dllexport ) int MyFunc(long parm1);
 
 ## <a name="what-do-you-want-to-do"></a>Wie möchten Sie vorgehen?
 
-- [Exportieren Sie aus einer DLL mithilfe von DEF-Dateien](../build/exporting-from-a-dll-using-def-files.md)
+- [Exportieren Sie aus einer DLL mithilfe von DEF-Dateien](exporting-from-a-dll-using-def-files.md)
 
-- [Exportieren Sie aus einer DLL mithilfe von __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Exportieren Sie aus einer DLL mithilfe von __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Exportieren Sie und importieren Sie mithilfe von AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [Exportieren Sie und importieren Sie mithilfe von AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Exportieren von C-Funktionen für die Verwendung in ausführbaren C oder C++-Dateien](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Exportieren von C-Funktionen für die Verwendung in ausführbaren C oder C++-Dateien](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Bestimmen Sie die Exportmethode verwendet werden](../build/determining-which-exporting-method-to-use.md)
+- [Bestimmen Sie die Exportmethode verwendet werden](determining-which-exporting-method-to-use.md)
 
-- [Importieren Sie in eine Anwendung mithilfe von "__declspec(dllimport)" "](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Importieren Sie in eine Anwendung mithilfe von "__declspec(dllimport)" "](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Initialisieren einer DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Initialisieren einer DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?
 
-- [Ergänzte Namen](../build/reference/decorated-names.md)
+- [Ergänzte Namen](reference/decorated-names.md)
 
 - [Verwenden von "extern" zur Angabe der Verknüpfung](../cpp/using-extern-to-specify-linkage.md)
 
 ## <a name="see-also"></a>Siehe auch
 
-[Exportieren aus einer DLL](../build/exporting-from-a-dll.md)
+[Exportieren aus einer DLL](exporting-from-a-dll.md)

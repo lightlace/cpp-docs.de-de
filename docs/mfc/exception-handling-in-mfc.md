@@ -33,12 +33,12 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: cb11a74932e44f94f481a2fdc48b8d6ee359f9e8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: afa49a4d54397cf79a3bd0af28e4a0f0a4c7639e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260542"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818634"
 ---
 # <a name="exception-handling-in-mfc"></a>Ausnahmebehandlung in MFC
 
@@ -55,7 +55,7 @@ Sie können leicht vorhandenen Code anpassen und Verwenden von C++-Ausnahmen sta
 Wenn Sie bereits eine Anwendung mit der MFC-Ausnahmemakros entwickelt haben, können Sie weiterhin verwenden dieser Makros im vorhandenen Code, bei der Verwendung von C++-Ausnahmen im neuen Code. Der Artikel [Ausnahmen: Änderungen an Ausnahmemakros in Version 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) stellt Richtlinien für die auf diese Weise.
 
 > [!NOTE]
->  Um C++-Ausnahmebehandlung in Ihrem Code zu aktivieren, wählen Sie auf den C++-Ausnahmen aktivieren, auf der Seite der Generierung von Code im C/C++-Ordner des Projekts [Eigenschaftenseiten](../ide/property-pages-visual-cpp.md) (Dialogfeld), oder verwenden Sie die [/EHsc](../build/reference/eh-exception-handling-model.md) -Compileroption.
+>  Um C++-Ausnahmebehandlung in Ihrem Code zu aktivieren, wählen Sie auf den C++-Ausnahmen aktivieren, auf der Seite der Generierung von Code im C/C++-Ordner des Projekts [Eigenschaftenseiten](../build/reference/property-pages-visual-cpp.md) (Dialogfeld), oder verwenden Sie die [/EHsc](../build/reference/eh-exception-handling-model.md) -Compileroption.
 
 In diesem Artikel werden die folgenden Themen behandelt:
 

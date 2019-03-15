@@ -8,16 +8,16 @@ helpviewer_keywords:
 - '#include directive'
 - include directive (#include)
 ms.assetid: 17067dc0-8db1-4f2d-b43e-ec12ecf83238
-ms.openlocfilehash: da68f71d2a3830cdd86870d8ef072c3fb04933db
-ms.sourcegitcommit: 45835842604602a011813d0cd70abc5df91b89ed
+ms.openlocfilehash: 67a44574a5a72a7b7addc0ed3d7b51cd3eb5b984
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750404"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821387"
 ---
 # <a name="include-directive-cc"></a>#include-Anweisung (C/C++)
 
-Weist den Präprozessor an, den Inhalt einer angegebenen Datei so zu behandeln, als ob dieser im Quellprogramm an demselben Punkt wie die Anweisung auftreten würde.
+Weist den Präprozessor an, den Inhalt einer angegebenen Datei so zu behandeln, als ob dieser im Quellprogramm an demselben Punkt wie die Direktive auftreten würde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,7 +34,7 @@ Die *Path-Spec* ist der Name einer Datei, die optional eine Verzeichnisangabe vo
 
 Informationen dazu, wie Sie Assemblys in einer C++-Anwendung verweisen, die kompiliert wird ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md), finden Sie unter [#using](../preprocessor/hash-using-directive-cpp.md).
 
-Beide Syntaxformate führen dazu, dass diese Anweisung durch den gesamten Inhalt der angegebenen Includedatei ersetzt werden kann. Der Unterschied zwischen den beiden Formaten liegt in der Reihenfolge, in der der Präprozessor nach den Headerdateien sucht, wenn der Pfad unvollständig angegeben wurde. In der folgenden Tabelle wird der Unterschied zwischen den beiden Syntaxformaten gezeigt.
+Beide Syntaxformate führen dazu, dass diese Direktive durch den gesamten Inhalt der angegebenen Includedatei ersetzt werden kann. Der Unterschied zwischen den beiden Formaten liegt in der Reihenfolge, in der der Präprozessor nach den Headerdateien sucht, wenn der Pfad unvollständig angegeben wurde. In der folgenden Tabelle wird der Unterschied zwischen den beiden Syntaxformaten gezeigt.
 
 |Syntaxformat|Aktion|
 |---|------------|
@@ -49,7 +49,7 @@ Includedateien Sie "geschachtelt werden können"; d. h. eine **#include** Richtl
 
 Wenn Includedateien geschachtelt sind und die Kompilierung von der Befehlszeile erfolgt, beginnt die Suche in den Verzeichnissen der übergeordneten Datei. Danach werden die Verzeichnisse aller Dateien der zweiten übergeordneten Ebene durchsucht. Dies bedeutet, dass die Suche relativ zum Verzeichnis beginnt, das die Quelldatei enthält, die gerade verarbeitet wird. Wenn die Datei nicht gefunden wird, wird die Suche in Verzeichnissen mit den vom angegebenen fortgesetzt der [/i (Zusätzliche Includeverzeichnisse)](../build/reference/i-additional-include-directories.md) -Compileroption. Zuletzt werden die durch die INCLUDE-Umgebungsvariablen angegebenen Verzeichnisse durchsucht.
 
-In der Visual Studio-Entwicklungsumgebung wird die INCLUDE-Umgebungsvariable ignoriert. Informationen zum Festlegen der Verzeichnisse, die nach Includedateien durchsucht werden – dies gilt auch für die LIB-Umgebungsvariable – finden Sie unter [VC++ Directories Property Page](../ide/vcpp-directories-property-page.md).
+In der Visual Studio-Entwicklungsumgebung wird die INCLUDE-Umgebungsvariable ignoriert. Informationen zum Festlegen der Verzeichnisse, die nach Includedateien durchsucht werden – dies gilt auch für die LIB-Umgebungsvariable – finden Sie unter [VC++ Directories Property Page](../build/reference/vcpp-directories-property-page.md).
 
 In diesem Beispiel sehen Sie, wie mithilfe der spitzen Klammern Dateien in die Suche einbezogen werden:
 

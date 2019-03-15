@@ -2,12 +2,12 @@
 title: 'Exemplarische Vorgehensweise: Kompilieren eines C++ / CX-Programms in der Befehlszeile'
 ms.date: 09/24/2018
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: 7f6716b379a11f88adb5c75643e325a9b2856eac
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ad718a2eb876430d7721d0cd20cfd5b952750f8b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413796"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809508"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Exemplarische Vorgehensweise: Kompilieren eines C++ / CX-Programms in der Befehlszeile
 
@@ -24,11 +24,11 @@ Sie kennen die Grundlagen der Programmiersprache C++.
 
 ## <a name="compiling-a-ccx-program"></a>Kompilieren eines C++/CX-Programms
 
-Zur Aktivierung der Kompilierung für C++ / CX verwenden, müssen Sie verwenden die [/Zw](../build/reference/zw-windows-runtime-compilation.md) -Compileroption. Der Visual C++-Compiler generiert eine .exe-Datei, die auf die Windows Runtime abzielt und mit den erforderlichen Bibliotheken verknüpft wird.
+Zur Aktivierung der Kompilierung für C++ / CX verwenden, müssen Sie verwenden die [/Zw](reference/zw-windows-runtime-compilation.md) -Compileroption. Der MSVC-Compiler generiert eine .exe-Datei, die auf die Windows-Runtime abzielt und enthält links zu den erforderlichen Bibliotheken.
 
 #### <a name="to-compile-a-ccx-application-on-the-command-line"></a>So kompilieren Sie eine C++/CX-Anwendung in der Befehlszeile
 
-1. Öffnen einer **Developer-Eingabeaufforderung** Fenster. (Auf der **starten** geöffnete Fenster **Apps**. Öffnen der **Visual Studio-Tools** Ordner unter Ihrer Version von Visual Studio, und wählen Sie dann die **Developer-Eingabeaufforderung** Tastenkombination.) Weitere Informationen dazu, wie Sie ein Developer-Eingabeaufforderungsfenster zu öffnen, finden Sie unter [Erstellen von C/C++-Code, in der Befehlszeile](../build/building-on-the-command-line.md).
+1. Öffnen einer **Developer-Eingabeaufforderung** Fenster. (Auf der **starten** geöffnete Fenster **Apps**. Öffnen der **Visual Studio-Tools** Ordner unter Ihrer Version von Visual Studio, und wählen Sie dann die **Developer-Eingabeaufforderung** Tastenkombination.) Weitere Informationen dazu, wie Sie ein Developer-Eingabeaufforderungsfenster zu öffnen, finden Sie unter [verwenden Sie das MSVC-Toolset, über die Befehlszeile](building-on-the-command-line.md).
 
    Administratoranmeldeinformationen sind möglicherweise erforderlich, um den Code abhängig vom Betriebssystem und der Konfiguration des Computers zu kompilieren. Führen Sie im Eingabeaufforderungsfenster als Administrator öffnen Sie das Kontextmenü für **Developer-Eingabeaufforderung** und wählen Sie dann **als Administrator ausführen**.
 
@@ -51,7 +51,7 @@ Zur Aktivierung der Kompilierung für C++ / CX verwenden, müssen Sie verwenden 
 
    Sie haben eine Visual C++-Quelldatei mit der Windows-Runtime wird erstellt [plattformnamespace](../cppcx/platform-namespace-c-cx.md) Namespace.
 
-1. Geben Sie an der Eingabeaufforderung den Befehl **cl/EHsc/Zw basiccx.cpp/Link / Subsystem: Console**. Der cl.exe-Compiler kompiliert den Quellcode in eine .obj-Datei und führt dann den Linker aus, um ein ausführbares Programm namens basiccx.exe zu generieren. (Die [/EHsc](../build/reference/eh-exception-handling-model.md) Compiler-Option gibt an, die C++-Ausnahmebehandlungsmodell und das [/link](../build/reference/link-pass-options-to-linker.md) -Flag gibt an, eine Konsolenanwendung.)
+1. Geben Sie an der Eingabeaufforderung den Befehl **cl/EHsc/Zw basiccx.cpp/Link / Subsystem: Console**. Der cl.exe-Compiler kompiliert den Quellcode in eine .obj-Datei und führt dann den Linker aus, um ein ausführbares Programm namens basiccx.exe zu generieren. (Die [/EHsc](reference/eh-exception-handling-model.md) Compiler-Option gibt an, die C++-Ausnahmebehandlungsmodell und das [/link](reference/link-pass-options-to-linker.md) -Flag gibt an, eine Konsolenanwendung.)
 
 1. Geben Sie zum Ausführen des basiccx.exe-Programms an der Eingabeaufforderung **basiccx ein**.
 
@@ -63,6 +63,5 @@ Zur Aktivierung der Kompilierung für C++ / CX verwenden, müssen Sie verwenden 
 
 ## <a name="see-also"></a>Siehe auch
 
-[C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)<br/>
-[Erstellen von C/C++-Programmen](../build/building-c-cpp-programs.md)<br/>
-[Compileroptionen](../build/reference/compiler-options.md)
+[Projekte und Buildsysteme](projects-and-build-systems-cpp.md)<br/>
+[MSVC-Compiler-Optionen](reference/compiler-options.md)

@@ -2,16 +2,16 @@
 title: ARM-Ausnahmebehandlung
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: f6df8afd453f7e71d1ecc2ebb188c079a3aad02a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: cbbec3f40df2765fa76399ce667ae30f4533b018
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694347"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814539"
 ---
 # <a name="arm-exception-handling"></a>ARM-Ausnahmebehandlung
 
-Windows auf ARM verwendet denselben strukturierten Mechanismus für die Ausnahmebehandlung bei asynchronen – von der Hardware generierten – und synchronen – von der Software generierten – Ausnahmen. Sprachspezifische Ausnahmehandler werden auf von Windows strukturierter Ausnahmebehandlung mithilfe von Sprachhilfsfunktionen erstellt. Dieses Dokument beschreibt die Behandlung von Ausnahmen in Windows auf ARM und die sprachhilfen, die von Code, der von der Microsoft-ARM-Assembler- und Visual C++-Compiler generiert wird verwendet.
+Windows auf ARM verwendet denselben strukturierten Mechanismus für die Ausnahmebehandlung bei asynchronen – von der Hardware generierten – und synchronen – von der Software generierten – Ausnahmen. Sprachspezifische Ausnahmehandler werden auf von Windows strukturierter Ausnahmebehandlung mithilfe von Sprachhilfsfunktionen erstellt. Dieses Dokument beschreibt die Behandlung von Ausnahmen in Windows auf ARM und die sprachhilfen, die von Code, der von der Microsoft-ARM-Assembler und der MSVC-Compiler generiert wird verwendet.
 
 ## <a name="arm-exception-handling"></a>ARM-Ausnahmebehandlung
 
@@ -21,7 +21,7 @@ Das ARM EABI (Embedded Application Binary Interface) legt ein Ausnahmeentladungs
 
 ### <a name="assumptions"></a>Annahmen
 
-Ausführbare Images für Windows auf ARM verwenden das portierbare ausführbare Format (Portable Executable, PE). Weitere Informationen finden Sie unter [Microsoft PE- und COFF-Spezifikation](http://go.microsoft.com/fwlink/p/?linkid=84140). Ausnahmebehandlungsinformationen werden in den Abschnitten .pdata und .xdata des Bilds gespeichert.
+Ausführbare Dateien für Windows auf ARM verwenden das portierbare ausführbare Format (Portable Executable, PE). Weitere Informationen finden Sie unter [Microsoft PE- und COFF-Spezifikation](http://go.microsoft.com/fwlink/p/?linkid=84140). Ausnahmebehandlungsinformationen werden in den Abschnitten .pdata und .xdata des Bilds gespeichert.
 
 Der Ausnahmebehandlungsmechanismus geht von bestimmten Annahmen über den Code aus, der ABI für Windows auf ARM folgt:
 
@@ -104,7 +104,7 @@ Prologe für nicht kanonische Funktionen können bis zu 5 Anweisungen haben (bea
 
 |Anweisung|Es wird davon ausgegangen, dass Opcode vorhanden ist, wenn:|Größe|Opcode|Entladungscodes|
 |-----------------|-----------------------------------|----------|------------|------------------|
-|1|*H*== 1|16|`push {r0-r3}`|04|
+|1|*H*==1|16|`push {r0-r3}`|04|
 |2|*C*== 1 oder *L*== 1 oder *R*== 0 oder PF == 1|16/32|`push {registers}`|80-BF/D0-DF/EC-ED|
 |3a|*C*== 1 und (*L*== 0 und *R*== 1 und PF == 0)|16|`mov r11,sp`|C0-CF/FB|
 |3b|*C*== 1 und (*L*== 1 oder *R*== 0 oder PF == 1)|32|`add r11,sp,#xx`|FC|
@@ -121,22 +121,22 @@ Die Anweisungen 2 und 4 werden abhängig davon festgelegt, ob eine Pushübertagu
 
 |C|L|R|PF|Ganzzahlregister per Push abgelegt|VFP-Register per Push abgelegt|
 |-------|-------|-------|--------|------------------------------|--------------------------|
-|0|0|0|0|R4-R*N*|none|
+|0|0|0|0|r4-r*N*|none|
 |0|0|0|1|R*S*- R*N*|none|
-|0|0|1|0|none|D8-d*E*|
-|0|0|1|1|R*S*-r3|D8-d*E*|
-|0|1|0|0|R4-R*N*, LR|none|
-|0|1|0|1|R*S*- R*N*, LR|none|
-|0|1|1|0|LR|D8-d*E*|
-|0|1|1|1|R*S*-r3, LR|D8-d*E*|
-|1|0|0|0|R4-R*N*, r11|none|
-|1|0|0|1|R*S*- R*N*, r11|none|
-|1|0|1|0|r11|D8-d*E*|
-|1|0|1|1|R*S*-r3 r11|D8-d*E*|
-|1|1|0|0|R4-R*N*, r11, LR|none|
-|1|1|0|1|R*S*- R*N*, r11, LR|none|
-|1|1|1|0|r11, LR|D8-d*E*|
-|1|1|1|1|R*S*-r3, r11, LR|D8-d*E*|
+|0|0|1|0|none|d8-d*E*|
+|0|0|1|1|r*S*-r3|d8-d*E*|
+|0|1|0|0|r4-r*N*, LR|none|
+|0|1|0|1|r*S*-r*N*, LR|none|
+|0|1|1|0|LR|d8-d*E*|
+|0|1|1|1|r*S*-r3, LR|d8-d*E*|
+|1|0|0|0|r4-r*N*, r11|none|
+|1|0|0|1|r*S*-r*N*, r11|none|
+|1|0|1|0|r11|d8-d*E*|
+|1|0|1|1|r*S*-r3, r11|d8-d*E*|
+|1|1|0|0|r4-r*N*, r11, LR|none|
+|1|1|0|1|r*S*-r*N*, r11, LR|none|
+|1|1|1|0|r11, LR|d8-d*E*|
+|1|1|1|1|r*S*-r3, r11, LR|d8-d*E*|
 
 Die Epiloge für kanonische Funktionen ermöglichen es, einer ähnlichen Form zu folgen, doch rückwärts und mit ein paar zusätzlichen Optionen. Der Epiloge kann bis zu 5 Anweisungen lang sein und seine Form wird streng durch das Format des Prologs diktiert.
 
@@ -147,7 +147,7 @@ Die Epiloge für kanonische Funktionen ermöglichen es, einer ähnlichen Form zu
 |8|*C*== 1 oder (*L*== 1 und *H*== 0) oder *R*== 0 oder *EF*== 1|16/32|`pop   {registers}`|
 |9a|*H*== 1 und *L*== 0|16|`add   sp,sp,#0x10`|
 |9b|*H*== 1 und *L*== 1|32|`ldr   pc,[sp],#0x14`|
-|10a|*Ret*== 1|16|`bx    reg`|
+|10a|*Ret*==1|16|`bx    reg`|
 |10b|*Ret*== 2|32|`b     address`|
 
 Anweisung 6 ist die ausdrückliche Stapelanpassung, wenn eine nicht gefaltete Anpassung festgelegt wurde. Da *PF* ist unabhängig von *EF*, es ist möglich, dass Anweisung 5 ohne 6 vorhanden, oder umgekehrt.
@@ -190,7 +190,7 @@ Wenn das gepackte Entladeformat nicht zur Beschreibung der Entladung einer Funkt
 
 1. Wenn die *X* -Feld im Header 1 ist, folgt den entladungscodebytes die ausnahmehandlerinformationen. Dies besteht aus einem *Ausnahme-Handler RVA* , enthält die Adresse des ausnahmehandlers, unmittelbar gefolgt von der (mit variabler Länge) Datenmenge, die vom Ausnahmehandler erforderlich.
 
-Der Datensatz „.xdata“ ist so gestaltet, dass es möglich ist, die ersten 8 Bytes abzurufen und die volle Größe des Datensatzes zu berechnen, ausgenommen die Länge der folgenden Ausnahmedaten mit variabler Größe. Dieser Codeausschnitt berechnet die Datensatzgröße:
+Der .xdata-Datensatz ist so gestaltet, dass es möglich ist, die ersten 8 Bytes abzurufen und die volle Größe des Datensatzes zu berechnen, ausgenommen die Länge der folgenden Ausnahmedaten mit variabler Größe. Dieser Codeausschnitt berechnet die Datensatzgröße:
 
 ```cpp
 ULONG ComputeXdataSize(PULONG *Xdata)
@@ -410,7 +410,7 @@ Wenn nach dem Ignorieren von Epilogen mit nur einer Anweisung keine Epiloge verb
 
 In diesen Beispielen ist die Abbildbasis bei 0x00400000.
 
-### <a name="example-1-leaf-function-no-locals"></a>Beispiel 1: Blattfunktion, kein lokal
+### <a name="example-1-leaf-function-no-locals"></a>Beispiel 1: Blattfunktion, kein Lokal
 
 ```asm
 Prologue:
@@ -514,7 +514,7 @@ Epilogue:
 
    - *Passen Sie Stack* = 0, gibt keine stapelanpassungen gibt
 
-### <a name="example-4-function-with-multiple-epilogues"></a>Beispiel 4: Funktionen mit mehreren epilogen
+### <a name="example-4-function-with-multiple-epilogues"></a>Beispiel 4: Funktionen mit mehreren Epilogen
 
 ```asm
 Prologue:
@@ -626,7 +626,7 @@ Epilogue:
 
    - *Code Wörter* = 0 x 01, der angibt, eine 32-Bit-Wort mit entladungscodes
 
-- Wort 1: Epilogbereich bei einem Offset von 0xC6 (= 0x18C/2), starten entladungscodeindex bei 0 x 00, und klicken Sie mit der Bedingung 0x0E (immer)
+- Wort 1: Epilogbereich bei einem Offset von 0xC6 (= 0x18C/2), beginnt den Entladungscodeindex bei 0x00 und mit der Bedingung 0x0E (immer)
 
 - Entladungscodes, beginnend bei Wort 2: (gemeinsam von Prolog und Epilog genutzt)
 
@@ -739,5 +739,5 @@ Function:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Übersicht über ARM-ABI-Konventionen](../build/overview-of-arm-abi-conventions.md)<br/>
-[Häufig auftretende ARM-Migrationsprobleme bei Visual C++](../build/common-visual-cpp-arm-migration-issues.md)
+[Übersicht über ARM-ABI-Konventionen](overview-of-arm-abi-conventions.md)<br/>
+[Häufig auftretende ARM-Migrationsprobleme bei Visual C++](common-visual-cpp-arm-migration-issues.md)

@@ -13,16 +13,16 @@ helpviewer_keywords:
 - common subexpression elimination
 - Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
-ms.openlocfilehash: e8032d7dbd771ca1527c6515a779b0f532a2c658
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5e45273b6b609f1bf78504a519c1fb98e2147f76
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420868"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818530"
 ---
 # <a name="og-global-optimizations"></a>/Og (Globale Optimierungen)
 
-Veraltet. Enthält lokale und globale Optimierungen, automatische Registrierung Zuordnung und Optimierung einer Schleife. Es wird empfohlen, entweder [/O1 (Größe minimieren)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) oder ["/ O2" (Geschwindigkeit maximieren)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) stattdessen.
+Veraltet. Enthält lokale und globale Optimierungen, automatische Registrierung Zuordnung und Optimierung einer Schleife. Es wird empfohlen, entweder [/O1 (Größe minimieren)](o1-o2-minimize-size-maximize-speed.md) oder ["/ O2" (Geschwindigkeit maximieren)](o1-o2-minimize-size-maximize-speed.md) stattdessen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,7 +30,7 @@ Veraltet. Enthält lokale und globale Optimierungen, automatische Registrierung 
 
 ## <a name="remarks"></a>Hinweise
 
-**"/ Og"** ist veraltet. Diese Optimierungen sind jetzt in der Regel standardmäßig aktiviert. Weitere Informationen zur Optimierung finden Sie unter [/O1, / O2 (Größe minimieren, Geschwindigkeit maximieren)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) oder [/Ox (ermöglichen die meisten Geschwindigkeitsoptimierungen)](../../build/reference/ox-full-optimization.md).
+**"/ Og"** ist veraltet. Diese Optimierungen sind jetzt in der Regel standardmäßig aktiviert. Weitere Informationen zur Optimierung finden Sie unter [/O1, / O2 (Größe minimieren, Geschwindigkeit maximieren)](o1-o2-minimize-size-maximize-speed.md) oder [/Ox (ermöglichen die meisten Geschwindigkeitsoptimierungen)](ox-full-optimization.md).
 
 Die folgenden Optimierungen sind verfügbar unter **"/ Og"**:
 
@@ -76,11 +76,11 @@ Die folgenden Optimierungen sind verfügbar unter **"/ Og"**:
    > [!NOTE]
    > Können Sie aktivieren oder deaktivieren Sie globale Optimierung für eine Funktion-von-Funktion mithilfe der `optimize` Pragma zusammen mit den `g` Option.
 
-Weitere Informationen finden Sie unter [/Oi (systeminterne Funktionen erstellen)](../../build/reference/oi-generate-intrinsic-functions.md) und [/Ox (ermöglichen die meisten Geschwindigkeitsoptimierungen)](../../build/reference/ox-full-optimization.md).
+Weitere Informationen finden Sie unter [/Oi (systeminterne Funktionen erstellen)](oi-generate-intrinsic-functions.md) und [/Ox (ermöglichen die meisten Geschwindigkeitsoptimierungen)](ox-full-optimization.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf den Ordner **C/C++** .
 
@@ -94,8 +94,4 @@ Weitere Informationen finden Sie unter [/Oi (systeminterne Funktionen erstellen)
 
 ## <a name="see-also"></a>Siehe auch
 
-[/O-Optionen (Code optimieren)](../../build/reference/o-options-optimize-code.md)
-
-[Compileroptionen](../../build/reference/compiler-options.md)
-
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)

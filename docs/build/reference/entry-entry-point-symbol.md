@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /ENTRY linker option
 - ENTRY linker option
 ms.assetid: 26c62ba2-4f52-4882-a7bd-7046a0abf445
-ms.openlocfilehash: 5ebc18d6d895928b1deec392cbb0bd91f48a96ed
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0f3604ef75ce10928463c088e423615886555eda
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425704"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807857"
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY (Symbol für Einstiegspunkt)
 
@@ -42,17 +42,17 @@ Standardmäßig ist die Startadresse für den Namen einer Funktion aus der C-Lau
 |**WinMainCRTStartup** (oder **wWinMainCRTStartup**)|Eine Anwendung, die/Subsystem:**WINDOWS**; Aufrufe `WinMain` (oder `wWinMain`), die muss definiert werden, verwenden `__stdcall`|
 |**_DllMainCRTStartup**|EINE DLL; IGNORIERT Aufrufe `DllMain` , wenn er vorhanden ist, muss der Verwendung definiert werden `__stdcall`|
 
-Wenn die [/DLL](../../build/reference/dll-build-a-dll.md) oder [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) Option nicht angegeben ist, wählt der Linker einen Punkt Subsystem und einen Einstiegspunkt, je nachdem, ob `main` oder `WinMain` definiert ist.
+Wenn die [/DLL](dll-build-a-dll.md) oder [/Subsystem](subsystem-specify-subsystem.md) Option nicht angegeben ist, wählt der Linker einen Punkt Subsystem und einen Einstiegspunkt, je nachdem, ob `main` oder `WinMain` definiert ist.
 
 Die Funktionen `main`, `WinMain`, und `DllMain` sind die drei Formen des benutzerdefinierten Einstiegspunkts.
 
 Wenn Sie ein verwaltetes Image zu erstellen, der Funktion angegeben, um/Entry müssen eine Signatur der (LPVOID *var1*, DWORD *var2*, LPVOID *var3*).
 
-Informationen zum Definieren Sie eigene `DllMain` Einstiegspunkt, finden Sie unter [DLLs und Visual C++-Laufzeitbibliothek Verhalten](../../build/run-time-library-behavior.md) .
+Informationen zum Definieren Sie eigene `DllMain` Einstiegspunkt, finden Sie unter [DLLs und Visual C++-Laufzeitbibliothek Verhalten](../run-time-library-behavior.md) .
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf die **Linker** Ordner.
 
@@ -66,5 +66,5 @@ Informationen zum Definieren Sie eigene `DllMain` Einstiegspunkt, finden Sie unt
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)
+[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)

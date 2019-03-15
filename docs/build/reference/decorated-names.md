@@ -6,12 +6,12 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-ms.openlocfilehash: d9d3db9a3db1943581e5fd603ba85777cb49b863
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3fae232e6ca886195315002f4e65063d8a23ddc8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423312"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815423"
 ---
 # <a name="decorated-names"></a>Ergänzte Namen
 
@@ -67,7 +67,7 @@ Sie erhalten das ergänzte Format eines Symbolnamens, wenn Sie die Quelldatei mi
 
 #### <a name="to-use-a-listing-to-view-decorated-names"></a>Verwenden einer Auflistung zum Anzeigen ergänzter Namen
 
-1. Generieren Sie durch das Kompilieren der Quelldatei, die die Daten, Objekt oder Funktionsdefinition oder Prototyp mit enthält eine Liste der [Dateityp auflisten](../../build/reference/fa-fa-listing-file.md) legen Sie auf die Assembly mit Quellcode-Compileroption (**/FAS**).
+1. Generieren Sie durch das Kompilieren der Quelldatei, die die Daten, Objekt oder Funktionsdefinition oder Prototyp mit enthält eine Liste der [Dateityp auflisten](fa-fa-listing-file.md) legen Sie auf die Assembly mit Quellcode-Compileroption (**/FAS**).
 
    Geben Sie z. B. `cl /c /FAs example.cpp` an einer Developer-Eingabeaufforderung, um eine Auflistungsdatei generieren example.asm.
 
@@ -94,5 +94,5 @@ is :- "private: void __thiscall a::func1(int)"
 
 ## <a name="see-also"></a>Siehe auch
 
-[C/C++-Buildtools](../../build/reference/c-cpp-build-tools.md)<br/>
+[Zusätzliche MSVC-Buildtools](c-cpp-build-tools.md)<br/>
 [Verwenden von "extern" zur Angabe der Verknüpfung](../../cpp/using-extern-to-specify-linkage.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4210
 ms.assetid: db48cff8-a2be-4a77-8d03-552b42c228fa
-ms.openlocfilehash: ac36330bbbec2cea5b7fcf2c3e13ff8cb3dca85a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75376129ce0033c717a4da3074cee9de132d357d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555780"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816268"
 ---
 # <a name="linker-tools-warning-lnk4210"></a>Linkertoolwarnung LNK4210
 
@@ -41,4 +41,4 @@ Die [/GS](../../build/reference/gs-buffer-security-check.md) -Compileroption erf
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)
+- [Festlegen von Linkeroptionen](../../build/reference/linking.md)
