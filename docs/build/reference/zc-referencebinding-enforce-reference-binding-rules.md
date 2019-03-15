@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 0c6cfaac-9c2a-41a3-aa94-64ca8ef261fc
-ms.openlocfilehash: baf2106f015a4e8557cb8469d300709694e06d84
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9dfe8f5b4713d9567f6e98af6685c552fb51160e
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428326"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57822157"
 ---
 # <a name="zcreferencebinding-enforce-reference-binding-rules"></a>/ Zc: referencebinding (verweisbindungsregeln erzwingen)
 
@@ -59,7 +59,7 @@ Weitere Informationen über Konformitätsprobleme in Visual C++ finden Sie unter
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **Befehlszeile** Eigenschaftenseite.
 
@@ -67,6 +67,6 @@ Weitere Informationen über Konformitätsprobleme in Visual C++ finden Sie unter
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
-[/Zc (Übereinstimmung)](../../build/reference/zc-conformance.md)<br/>
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)<br/>
+[/Zc (Übereinstimmung)](zc-conformance.md)<br/>

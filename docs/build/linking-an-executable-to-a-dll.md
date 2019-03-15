@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: 998ec23d2d0f16069783529aebafc8b91bb15834
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: fc7a676059af17e7a42189c7c15ca157a081e08a
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418806"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57818361"
 ---
 # <a name="link-an-executable-to-a-dll"></a>Eine ausführbare Datei mit einer DLL verknüpfen
 
@@ -30,7 +30,7 @@ Eine ausführbare Datei kann beide Verknüpfungsmethoden verwenden, um mit derse
 
 <a name="determining-which-linking-method-to-use"></a>
 
-## <a name="determine-which-linking-method-to-use"></a>Ermitteln, welche Verknüpfungsmethode verwendet werden soll
+## <a name="link-an-executable-to-a-dll"></a>Eine ausführbare Datei mit einer DLL verknüpfen
 
 Angibt, ob implizite Verknüpfung oder explizite Verknüpfung verwenden, ist Bestandteil der architekturbezogenen Entscheidung, die Sie für Ihre Anwendung vornehmen müssen. Es gibt vor- und Nachteile jeder Methode.
 
@@ -70,13 +70,13 @@ Beachten Sie die beiden folgenden Schwachstellen im Zusammenhang mit der explizi
 
 <a name="linking-implicitly"></a>
 
-## <a name="how-to-link-implicitly-to-a-dll"></a>Implizit mit einer DLL verknüpfen
+## <a name="link-an-executable-to-a-dll"></a>Eine ausführbare Datei mit einer DLL verknüpfen
 
 Um eine DLL-Datei werden durch die implizite Verknüpfung verwenden, müssen die ausführbaren Clientdateien diese Dateien vom Anbieter der DLL abrufen:
 
 - Eine oder mehrere Headerdateien (.h-Dateien), die die Deklarationen der exportierten Daten, die Funktionen und/oder C++-Klassen in der DLL enthalten. Die Klassen, Funktionen und Daten, die von der DLL exportierten müssen alle gekennzeichnet werden `__declspec(dllimport)` in der Headerdatei. Weitere Informationen finden Sie unter [Dllexport, Dllimport](../cpp/dllexport-dllimport.md).
 
-- Eine Importbibliothek in der ausführbaren Datei zu verknüpfen. Der Linker erstellt die Importbibliothek, wenn die DLL erstellt wird. Weitere Informationen finden Sie unter [. LIB-Dateien](../build/reference/dot-lib-files-as-linker-input.md).
+- Eine Importbibliothek in der ausführbaren Datei zu verknüpfen. Der Linker erstellt die Importbibliothek, wenn die DLL erstellt wird. Weitere Informationen finden Sie unter [. LIB-Dateien](reference/dot-lib-files-as-linker-input.md).
 
 - Die tatsächliche DLL-Datei.
 
@@ -139,10 +139,10 @@ Im Gegensatz zu in diesem Beispiel in den meisten Fällen Sie sollten Aufrufen `
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?
 
-- [Arbeiten mit Importbibliotheken und Exportdateien](../build/reference/working-with-import-libraries-and-export-files.md)
+- [Arbeiten mit Importbibliotheken und Exportdateien](reference/working-with-import-libraries-and-export-files.md)
 
 - [Dynamic Link Library Search Order](/windows/desktop/Dlls/dynamic-link-library-search-order)
 
 ## <a name="see-also"></a>Siehe auch
 
-[DLLs in Visual C++](../build/dlls-in-visual-cpp.md)
+[DLLs in Visual C++](dlls-in-visual-cpp.md)

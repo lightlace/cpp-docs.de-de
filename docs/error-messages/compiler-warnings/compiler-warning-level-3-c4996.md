@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-ms.openlocfilehash: cbb93bdba5853ed47bc3326d47bbb3c65ad7ce41
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef1bc46b64ccbe1374fd795a9b5d56e091b47f48
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472175"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57816424"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Compilerwarnung (Stufe 3) C4996
 
@@ -45,7 +45,7 @@ Sie können die Warnung Global in Befehlszeilenbuilds über Deaktivieren der **/
 
 So deaktivieren die Warnung für ein gesamtes Projekt in Visual Studio-IDE:
 
-- Öffnen der **Eigenschaftenseiten** -Dialogfeld für Ihr Projekt. Informationen zur Verwendung der Eigenschaftenseiten (Dialogfeld), finden Sie unter [Eigenschaftenseiten](../../ide/property-pages-visual-cpp.md).
+- Öffnen der **Eigenschaftenseiten** -Dialogfeld für Ihr Projekt. Informationen zur Verwendung der Eigenschaftenseiten (Dialogfeld), finden Sie unter [Eigenschaftenseiten](../../build/reference/property-pages-visual-cpp.md).
 - Wählen Sie die **Konfigurationseigenschaften**, **C/C++-**, **erweitert** Seite.
 - Bearbeiten der **bestimmte Warnungen deaktivieren** hinzuzufügende Eigenschaft `4996`. Wählen Sie **OK** zum Übernehmen der Änderungen.
 
@@ -53,7 +53,7 @@ Sie können Präprozessormakros auch verwenden, deaktivieren Sie bestimmte besti
 
 So definieren Sie eine Präprozessor-Makro in Visual Studio
 
-- Öffnen der **Eigenschaftenseiten** -Dialogfeld für Ihr Projekt. Informationen zur Verwendung der Eigenschaftenseiten (Dialogfeld), finden Sie unter [Eigenschaftenseiten](../../ide/property-pages-visual-cpp.md).
+- Öffnen der **Eigenschaftenseiten** -Dialogfeld für Ihr Projekt. Informationen zur Verwendung der Eigenschaftenseiten (Dialogfeld), finden Sie unter [Eigenschaftenseiten](../../build/reference/property-pages-visual-cpp.md).
 - Erweitern Sie **Konfigurationseigenschaften > C/C++ > Präprozessor**.
 - In der **Präprozessordefinitionen** -Eigenschaft, fügen Sie den Makronamen. Wählen Sie **OK** aus, um Ihre Änderung zu speichern, und erstellen Sie das Projekt anschließend neu.
 
@@ -279,7 +279,7 @@ int main() {
 }
 ```
 
-## <a name="example-user-defined-deprecated-function"></a>Beispiel: Eine benutzerdefinierte als veraltet markierte Funktion
+## <a name="example-user-defined-deprecated-function"></a>Beispiel: User-defined Function, als veraltet markierte
 
 Sie können das veraltete Attribut in Ihrem eigenen Code verwenden, um Aufrufer zu warnen, wenn Sie bestimmte Funktionen nicht mehr wird empfohlen. In diesem Beispiel wird C4996 generiert, für die Zeile, in dem die veraltete Funktion deklariert ist und für die Zeile, die auf der die Funktion verwendet wird.
 

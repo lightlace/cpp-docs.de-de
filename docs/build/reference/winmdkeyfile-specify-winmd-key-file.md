@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.WINMDKeyFile
 ms.assetid: 65d88fdc-fff9-49ea-8cfc-b2f408741734
-ms.openlocfilehash: 33481033267d6470db38f0b64e76f5be7b4cbe2f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4b0c847bc5be6c73b78af4aa15b0074c712cc840
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425405"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57820402"
 ---
 # <a name="winmdkeyfile-specify-winmd-key-file"></a>/WINMDKEYFILE (winmd-Schlüsseldatei angeben)
 
@@ -21,11 +21,11 @@ Gibt an, einen Schlüssel oder ein Schlüsselpaar zum Signieren einer Windows-Ru
 
 ## <a name="remarks"></a>Hinweise
 
-Ähnelt der [/keyfile](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) -Linkeroption, die in einer winmd-Datei angewendet wird.
+Ähnelt der [/keyfile](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) -Linkeroption, die in einer winmd-Datei angewendet wird.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Linker** Ordner.
 
@@ -35,5 +35,5 @@ Gibt an, einen Schlüssel oder ein Schlüsselpaar zum Signieren einer Windows-Ru
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)
+[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)

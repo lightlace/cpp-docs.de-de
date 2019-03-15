@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /Gr compiler option [C++]
 - enable run-time type information compiler option [C++]
 ms.assetid: d1f9f850-dcec-49fd-96ef-e72d01148906
-ms.openlocfilehash: 3d40b2c9348e886cb6cfd9312daf316ce9cdc487
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 15ad453b10fd31de97bbc25f8062e628129076f5
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415343"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57820611"
 ---
 # <a name="gr-enable-run-time-type-information"></a>/GR (Laufzeit-Typeninformation aktivieren)
 
@@ -39,7 +39,7 @@ Weitere Informationen zum Laufzeittyp zu überprüfen, finden Sie unter [Laufzei
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf den Ordner **C/C++** .
 
@@ -53,5 +53,5 @@ Weitere Informationen zum Laufzeittyp zu überprüfen, finden Sie unter [Laufzei
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)

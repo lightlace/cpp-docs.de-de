@@ -26,12 +26,12 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-ms.openlocfilehash: 8fdfeb16d41f51262cbd3a3814699a7b8dbc5fe4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e95427b571cd14ad39a7ba4f368b90e806f13862
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413328"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57820363"
 ---
 # <a name="running-lib"></a>Ausführen von LIB
 
@@ -66,7 +66,7 @@ Die folgenden Optionen gelten für alle LIB-Modi:
 
 Wenn lib.exe zur Laufzeit ein Fehler auftritt, können Sie **/errorreport** Informationen zu diesen internen Fehlern an Microsoft zu senden.
 
-Weitere Informationen zu **/errorreport**, finden Sie unter [/errorreport (interne Compilerfehler Bericht)](../../build/reference/errorreport-report-internal-compiler-errors.md).
+Weitere Informationen zu **/errorreport**, finden Sie unter [/errorreport (interne Compilerfehler Bericht)](errorreport-report-internal-compiler-errors.md).
 
 > **/LTCG**
 
@@ -90,10 +90,10 @@ Zeigt Details zu den Status der Sitzung, einschließlich Namen OBJ-Dateien hinzu
 
 > **/WX**[**:NO**]
 
-Behandeln Sie Warnungen als Fehler. Finden Sie unter [/WX (Linkerwarnungen als Fehler behandeln)](../../build/reference/wx-treat-linker-warnings-as-errors.md) für Weitere Informationen.
+Behandeln Sie Warnungen als Fehler. Finden Sie unter [/WX (Linkerwarnungen als Fehler behandeln)](wx-treat-linker-warnings-as-errors.md) für Weitere Informationen.
 
 Andere Optionen gelten nur für bestimmte LIB-Modi. Diese Optionen werden in den Abschnitten, die Beschreibung der einzelnen Modi erläutert.
 
 ## <a name="see-also"></a>Siehe auch
 
-[LIB-Referenz](../../build/reference/lib-reference.md)
+[LIB-Referenz](lib-reference.md)

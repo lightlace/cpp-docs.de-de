@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 6bdcf97c921dc45939ab9ddf18f1d624c2fd83b8
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 78b9ae467d3504f3922c540a3e4cd100322d8f4e
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850297"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57808390"
 ---
 # <a name="application-information-and-management"></a>Anwendungsinformationen und Anwendungsverwaltung
 
@@ -711,7 +711,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 
 Vor Windows Vista Anwendungen, die die Registrierung in der Regel verwendet, Zugriff auf die **HKEY_CLASSES_ROOT** Knoten. Mit Windows Vista oder höher, müssen Sie jedoch eine Anwendung im erweiterten Modus, in HKCR schreiben ausführen.
 
-Diese Methode ermöglicht Ihrer Anwendung zu lesen und Schreiben in die Registrierung ohne im Modus mit erhöhten Rechten ausgeführt werden, indem Sie Zugriff auf die Registrierung von HKCR auf HKCU umleiten. Weitere Informationen finden Sie unter [Linker Property Pages](../../ide/linker-property-pages.md).
+Diese Methode ermöglicht Ihrer Anwendung zu lesen und Schreiben in die Registrierung ohne im Modus mit erhöhten Rechten ausgeführt werden, indem Sie Zugriff auf die Registrierung von HKCR auf HKCU umleiten. Weitere Informationen finden Sie unter [Linker Property Pages](../../build/reference/linker-property-pages.md).
 
 Wenn Sie den registrierungsumleitung aktivieren, leitet das Framework den Zugriff von HKCR geschriebenen Daten in **HKEY_CURRENT_USER\Software\Classes**. Nur die MFC und ATL-Frameworks sind von der Umleitung betroffen.
 
